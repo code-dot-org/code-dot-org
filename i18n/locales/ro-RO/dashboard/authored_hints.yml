@@ -396,18 +396,280 @@ ro:
         Course_4_Artist_9_a: "Trebuie să știi cât de mult să te întorci? \n\nCât este 360 ​​împărțit la 10?"
       Course 4 Artist Binary Free Play 2b_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: Acest cod folosește două bucle imbricate`pentru`. Una numără în ordine crescătoare de la 1 la 8, cealaltă în ordine descrescătoare de la 8 la 1.
+        Course_4_Artist_Binary_Free_Play_2b_b: Fiecare 'buclă pentru' are trei repetări.  Prima desenează cel mai din stânga set de numere 1, al doilea desenează zerouri la mijloc si al treilea desenează numere 1 în dreapta.
+        Course_4_Artist_Binary_Free_Play_2b_c: În fiecare repetare aveți nevoie de 'numărător' pentru cifrele 1 şi '16-(2 x numărător)' pentru zerouri.
+        Course_4_Artist_Binary_Free_Play_2b_d: |-
+          **Soluție:**
+          
+          <xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">1</title></block></value><value name="TO"><block type="math_number"><title name="NUM">8</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">numărător</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">MINUS</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">ORI</title><value name="A"><block type="variables_get"><title name="VAR">numărător</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">numărător</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">8</title></block></value><value name="TO"><block type="math_number"><title name="NUM">1</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">numărător</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">MINUS</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">ORI</title><value name="A"><block type="variables_get"><title name="VAR">numărător</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">numărător</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>
+      Course 4 Artist For Loops 11_authored_hint:
+        Course_4_Artist_For_Loops_11_a: "Unghiul de viraj se va schimba cu fiecare formă! \n\nUtilizați blocul matematic pentru a introduce 360 împărțit la numărul de laturi pe care forma le are pentru a obține valoarea corectă a unghiului. "
       Course 4 Artist For Loops 11a_authored_hint:
+        Course_4_Artist_For_Loops_11a_a: '360 împărțit la numărul de laturi ale unei forme dă numărul de grade la care va trebui să virați. '
         Course_4_Artist_For_Loops_11a_b: 'De fiecare dată, va trebui să vă deplasați înainte cu de 10 ori lungimea numărului actual de laturi. '
       Course 4 Artist For Loops 3_authored_hint:
         Course_4_Artist_For_Loops_3_a: Pentru ca bucla imbricată`for`să vă conducă mișcarea, asigurați-vă că utilizați`numărătorul` drept distanță.
       Course 4 Artist For Loops 4_authored_hint:
         Course_4_Artist_For_Loops_4_a: "**Care este cel mai mic număr de care aveți nevoie? \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru a completa spațiile goale din interiorul  buclei imbricate `pentru`."
       Course 4 Artist For Loops Challenge_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: Forma cea mai mare are 19 laturi. Cea mai mică are doar două.
         Course_4_Artist_For_Loops_Challenge_b: Bucla "pentru" numără în ordine crescătoare din doi în doi de fiecare dată.
+      Course 4 Artist For Loops Challenge_a_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: Cel mai mare poligon a 19 laturi.
+        Course_4_Artist_For_Loops_Challenge_b: Fiecare poligon este incomplet, cu o latură mai puţin decât ar trebui să aibă.
       Course 4 Artist For Loops inspire_authored_hint:
+        Course_4_Artist_For_Loops_inspire_a: Structura de bază a acestui cod este aceeaşi ca și cea a puzzle-ului din provocarea anterioară... cu vreo două schimbări.
         Course_4_Artist_For_Loops_inspire_b: Încercați o buclă imbricată care merge de la 3 la 10 cu un increment de 1.
         Course_4_Artist_For_Loops_inspire_c: Există două iterații ale aceleiași bucle de repetare în interiorul buclei-`pentru`, dar cea de-a doua repetare întoarce în direcția opusă.
-        Course_4_Artist_For_Loops_inspire_d: "**Soluție:**  \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        Course_4_Artist_For_Loops_inspire_d: "**Soluție:** \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">numărător</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">mutăÎnainte</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">întoarceDreapta</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">ÎMPARTE</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">numărător</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">numărător</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">mutăÎnainte</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">întoarceStânga</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ÎMPARTE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">numărător</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+      Course 4 Artist Functions Inspiration_authored_hint:
+        Course_4_Artist_Functions_Inspiration_a: Începeți cu codul din ultimul puzzle și adăugați un extra "întoarce la dreapta" de trei grade în bucla repetitivă.
+        Course_4_Artist_Functions_Inspiration_b: Încercați să vă întoarceți cu mai mult de 90 de grade în afara "buclei repetă", dar încă în interiorul `buclei pentru '.
+        Course_4_Artist_Functions_Inspiration_c: |-
+          **Soluție:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">14</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_random"/>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">numărător</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="procedures_callnoreturn">
+          <mutation name="draw a square 20"></mutation>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">săriÎnainte</title>
+          <title name="VALUE">20</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">întoarceDreapta</title>
+          <title name="VALUE">3</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">întoarceStânga</title>
+          <title name="VALUE">100</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
+      Course 4 Artist Functions challenge_authored_hint:
+        Course_4_Artist_Functions_challenge_a: O parte a înțelegerii modului de utilizare a funcțiilor constă în identificarea celor de care aveți nevoie și a celor de care nu aveți nevoie.
+        Course_4_Artist_Functions_challenge_b: Folosiți o `buclă pentru ', apoi folosiți variabila numărătoare în interiorul unei bucle`repetă` imbricate.
+        Course_4_Artist_Functions_challenge_c: La fiecare iterație, ar trebui să desenați un pătrat apoi săriți înainte.
+        Course_4_Artist_Functions_challenge_d: Va trebui să întoarceți la stânga cu 90 de grade în afara repetării dvs., dar totuși în interiorul casetei `buclă pentru`.
+      Course 4 Artist Inspire_authored_hint:
+        Course_4_Artist_Inspire_a: După ce ați terminat un pătrat, încercați să săriți înainte cu jumătate din lungimea laturii acestuia înainte de a vă întoarce și a face altul.
+        Course_4_Artist_Inspire_d: |-
+          **Soluție:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#843179</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">laturi</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">lungime</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">200</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">mutăÎnainte</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">lungime</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">săriÎnainte</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">lungime</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceStânga</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">săriÎnainte</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">lungime</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Play Labs For Loops 2_authored_hint:
         Course_4_Play_Labs_For_Loops_2_a: Ce ați adăuga la bucla dvs. `pentru` de fiecare dată ca aceasta să sară peste numerele pare?
       Course 4 SCFL 1_authored_hint:
@@ -416,8 +678,632 @@ ro:
       Course 4 SCFL 7_authored_hint:
         Course_4_SCFL_7_b: 'Acest desen este realizat folosind două "bucle pentru" similare. Una merge de la 5 la 200 cu 2, celalaltă merge de la 200 la 5 cu 2. '
         Course_4_SCFL_7_d: Va trebui să întoarceți la stânga cu 225 de grade între cele două "bucle pentru".
+      Course 4 SCV 1_authored_hint:
+        Course_4_SCV_1_d: |-
+          **Soluție:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">lungime</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">500</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">laturi</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">0</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_random"/>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">laturi</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADUNĂ</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">mutăÎnainte</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">lungime</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceStânga</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      Course 4 SCV 2_authored_hint:
+        Course_4_SCV_2_e: |-
+          **Soluție:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">lungime</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">400</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">laturi</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#ff0000</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">mutăÎnainte</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">lungime</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceStânga</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">săriÎnainte</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">lungime</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">ÎntoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 4_authored_hint:
         Course_4_SCV_4_b: 'Va fi foarte util să folosiți trei bucle în interiorul buclei dvs. principale. Una pentru mersul înainte, una pentru colectarea nectarului și una pentru a face miere. '
+      Course 4 SCV 6_authored_hint:
+        Course_4_SCV_6_f: |-
+          **Soluție:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">roșu1</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">0</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">verde1</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">175</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">albastru1</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">200</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">roșu2</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">100</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">verde2</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">albastru2</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">150</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">lungime</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">70</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">laturi</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎNMULȚEȘTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="variables_get">
+          <title name="VAR">roșu1</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">verde1</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="variables_get">
+          <title name="VAR">albastru1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">mutăÎnainte</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">lungime</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceStânga</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="variables_get">
+          <title name="VAR">roșu2</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">verde2</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="variables_get">
+          <title name="VAR">albastru2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">mutăÎnainte</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">lungime</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ÎMPARTE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">180</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">laturi</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       D_Frozen_nested3_authored_hint:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.  \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n- Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       Inspirational Artwork_authored_hint:
@@ -1155,6 +2041,10 @@ ro:
         courseF_artist_for4_a: "**Care este cel mai mic număr de care aveți nevoie? \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru a completa spațiile goale din interiorul  buclei imbricate `pentru`."
       courseF_artist_for4_2018_authored_hint:
         courseF_artist_for4_a: "**Care este cel mai mic număr de care aveți nevoie? \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru a completa spațiile goale din interiorul  buclei imbricate `pentru`."
+      courseF_bee_conditionals5_authored_hint:
+        courseF_bee_conditionals5_c: 'Exista 3 laturi ale dreptunghiului cu flori, Deci, codul trebuie să se "repete de 3 ori". La fiecare repetare, albina va trebui să continue drumul, "în timp ce există o cale înainte". '
+      courseF_bee_conditionals5_2018_authored_hint:
+        courseF_bee_conditionals5_c: 'Exista 3 laturi ale dreptunghiului cu flori, Deci, codul trebuie să se "repete de 3 ori". La fiecare repetare, albina va trebui să continue drumul, "în timp ce există o cale înainte". '
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional (\"dacă\" sau \"dacă/altfel\") pentru a rezolva provocarea."
       courseF_bee_conditionals8_2018_authored_hint:
@@ -1194,6 +2084,8 @@ ro:
         courseF_maze_ramp6_a: Există două metode de a rezolva acest puzzle!
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Există două metode de a rezolva acest puzzle!
+      drawings!_authored_hint:
+        triangle_geometry_hint: 'Amintiţi-vă: un triunghi echilateral are trei laturi, cu o întoarcere de 60 de grade între fiecare din ele!'
       grade1_adventurer_loops7_challenge_authored_hint:
         grade1_adventurer_loops7_challenge_a: 'Dacă nu vă puteți da seama unde să puneți buclele de repetare, scrieți programul pas cu pas și căutați un model. '
       grade1_artist_loops2_authored_hint:
@@ -1357,11 +2249,20 @@ ro:
         2-3_Bee_Loops_4_a: Ar trebui să aveți la final cinci blocuri în interiorul buclei dvs.
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: Acest cod folosește două bucle imbricate`pentru`. Una numără în ordine crescătoare de la 1 la 8, cealaltă în ordine descrescătoare de la 8 la 1.
+        Course_4_Artist_Binary_Free_Play_2b_b: Fiecare 'buclă pentru' are trei repetări.  Prima desenează cel mai din stânga set de numere 1, al doilea desenează zerouri la mijloc si al treilea desenează numere 1 în dreapta.
+        Course_4_Artist_Binary_Free_Play_2b_c: În fiecare repetare aveți nevoie de 'numărător' pentru cifrele 1 şi '16-(2 x numărător)' pentru zerouri.
+      grade5_artist_for_loops10_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: Cel mai mare poligon a 19 laturi.
+        Course_4_Artist_For_Loops_Challenge_b: Fiecare poligon este incomplet, cu o latură mai puţin decât ar trebui să aibă.
       grade5_artist_for_loops4_authored_hint:
         Course_4_Artist_For_Loops_4_a: "**Care este cel mai mic număr de care aveți nevoie? \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru a completa spațiile goale din interiorul  buclei imbricate `pentru`."
+      grade5_artist_for_loops8_authored_hint:
+        Course_4_Artist_For_Loops_11_a: "Unghiul de viraj se va schimba cu fiecare formă! \n\nUtilizați blocul matematic pentru a introduce 360 împărțit la numărul de laturi pe care forma le are pentru a obține valoarea corectă a unghiului. "
       grade5_artist_for_loops9_authored_hint:
+        Course_4_Artist_For_Loops_11a_a: '360 împărțit la numărul de laturi ale unei forme dă numărul de grade la care va trebui să virați. '
         Course_4_Artist_For_Loops_11a_b: 'De fiecare dată, va trebui să vă deplasați înainte cu de 10 ori lungimea numărului actual de laturi. '
       grade5_artist_for_loopsfreeplay11_authored_hint:
+        Course_4_Artist_For_Loops_inspire_a: Structura de bază a acestui cod este aceeaşi ca și cea a puzzle-ului din provocarea anterioară... cu vreo două schimbări.
         Course_4_Artist_For_Loops_inspire_b: Încercați o buclă imbricată care merge de la 3 la 10 cu un increment de 1.
         Course_4_Artist_For_Loops_inspire_c: Există două iterații ale aceleiași bucle de repetare în interiorul buclei-`pentru`, dar cea de-a doua repetare întoarce în direcția opusă.
       grade5_artist_functionparameters10_authored_hint:
@@ -1369,6 +2270,8 @@ ro:
         double_loop: Încercați să puneți o buclă "pentru" în interiorul unei bucle "repetă".
         specifics: "Bucla \"pentru\" rulează de la trei la șaptesprezece pentru fiecare dintre cele șase \"petale\" înainte de a trece la următoarea, desenând forme doar cu un număr impar de laturi.\n        \nBlocul `setează alfa` folosește diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine mai mare."
         after: După ce ați terminat cu fiecare "petală", asigurați-vă că "mutați înainte" cu 20 de pixeli înainte de a efectua o rotație de 60 de grade.
+      grade5_artist_variables_freeplay15_authored_hint:
+        Course_4_Artist_Inspire_a: După ce ați terminat un pătrat, încercați să săriți înainte cu jumătate din lungimea laturii acestuia înainte de a vă întoarce și a face altul.
       gradek_adventurer_loops4_authored_hint:
         gradek_adventurer_loops4_a: Dacă nu reușiți să găsiți răspunsul imediat, încercați să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea nevoie și căutați un model structural.
       gradek_artist_loops6_authored_hint:
