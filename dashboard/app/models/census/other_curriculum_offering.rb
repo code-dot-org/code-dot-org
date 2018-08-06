@@ -66,7 +66,7 @@ class Census::OtherCurriculumOffering < ApplicationRecord
         lookup_school_id = input_school_id.length == 12 ? input_school_id.sub(/^0/, "") : input_school_id
         courses = get_courses(provider_code, row_hash)
         school = School.find_by(id: lookup_school_id)
-        if school && lookup_school_id
+        if school
           courses.each do |course|
             find_or_create_by!(
               curriculum_provider_name: provider_code,
