@@ -1,0 +1,14 @@
+{
+  "category": "Behaviors",
+  "config": {
+    "func": "mapXvol2",
+    "blockText": "mapping x to volume (v2)",
+    "args": [
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      }
+    ],
+    "returnType": "Behavior"
+  }
+}
