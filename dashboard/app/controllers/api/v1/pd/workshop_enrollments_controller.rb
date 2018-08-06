@@ -68,7 +68,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 
         render json: {
-          submission_status: RESPONSE_MESSAGES[:SUCCESS],
+          workshop_enrollment_status: RESPONSE_MESSAGES[:SUCCESS],
           account_exists: enrollment.resolve_user.present?,
           sign_up_url: url_for('/users/sign_up'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
@@ -127,7 +127,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   end
 
   def render_unsuccessful(error_message, options={})
-    render json: options.merge({submission_status: error_message}),
+    render json: options.merge({workshop_enrollment_status: error_message}),
       status: 409
   end
 
