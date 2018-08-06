@@ -3,7 +3,7 @@ km:
     script:
       category:
         hoc_category_name: ពេលវេលា​នៃ​កូដ
-        math_category_name: គណិតវិទ្យា
+        math_category_name: គណិត​វិទ្យា
       name:
         course2:
           stages:
@@ -18,7 +18,7 @@ km:
         usability:
           stages:
             Variables:
-              name: អថេរ
+              name: អ​ថេរ
         algebra:
           stages:
             'Eval: Conditionals':
@@ -38,7 +38,7 @@ km:
             Conditionals:
               name: លក្ខខណ្ឌ
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
             Introduction to Computer Science:
               name: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
             The Artist:
@@ -99,6 +99,10 @@ km:
           stages:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសំរាប់គ្រូបង្រៀន
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
         algebraPD2:
           stages:
             Teacher Dashboard:
@@ -117,7 +121,7 @@ km:
         CSDU3-Draft:
           stages:
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
         algebraFacilitator:
           stages:
             Teacher Dashboard:
@@ -141,9 +145,9 @@ km:
         csd3-2017:
           stages:
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
             Variables:
-              name: អថេរ
+              name: អ​ថេរ
             Conditionals:
               name: លក្ខខណ្ឌ
         k5concepts:
@@ -153,11 +157,11 @@ km:
             Events:
               name: ព្រឹត្តិការណ៍
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
             Loops:
               name: រង្វិល​ជុំ
             Variables:
-              name: អថេរ
+              name: អ​ថេរ
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -193,15 +197,15 @@ km:
         csd3-draft:
           stages:
             Variables:
-              name: អថេរ
+              name: អ​ថេរ
             Conditionals:
               name: លក្ខខណ្ឌ
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
         csd3-old:
           stages:
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
         csd2-draft:
           stages:
             Lists:
@@ -209,11 +213,11 @@ km:
         csd3-chapters:
           stages:
             Variables:
-              name: អថេរ
+              name: អ​ថេរ
             Conditionals:
               name: លក្ខខណ្ឌ
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
             'null':
               name: 'ទទេ'
         artist-and-bb8:
@@ -248,19 +252,19 @@ km:
         csd3-1819draft:
           stages:
             Variables:
-              name: អថេរ
+              name: អ​ថេរ
             Conditionals:
               name: លក្ខខណ្ឌ
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
         csd3-2018:
           stages:
             Variables:
-              name: អថេរ
+              name: អ​ថេរ
             Conditionals:
               name: លក្ខខណ្ឌ
             Functions:
-              name: អនុគមន៍
+              name: អនុ​គមន៍
         csd2-2018:
           stages:
             Lists:
