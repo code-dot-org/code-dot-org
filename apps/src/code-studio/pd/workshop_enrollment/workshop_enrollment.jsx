@@ -36,8 +36,18 @@ export default class WorkshopEnrollment extends React.Component {
     };
   }
 
-  onSubmissionComplete = (data) => {
-    this.setState(data);
+  onSubmissionComplete = (result) => {
+    if (result.responseJSON) {
+      this.setState({
+        workshopEnrollmentStatus: result.responseJSON.workshop_enrollment_status,
+        cancelUrl: result.responseJSON.cancel_url,
+        accountExists: result.responseJSON.account_exists,
+        signUpUrl: result.responseJSON.sign_up_url,
+        workshopUrl: result.responseJSON.workshop_url
+      });
+    } else {
+      this.setState({workshopEnrollmentStatus: SUBMISSION_STATUSES.UNKNOWN_ERROR});
+    }
   };
 
   renderDuplicate() {
