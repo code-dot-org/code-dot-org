@@ -13,7 +13,7 @@ lt:
       user:
         name: 'Tavo vardas'
         name_example: 'Tavo vardas<br/>(jį matys tavo mokytoja(-s))'
-        email: 'El. pašto adresas'
+        email: 'El. paštas'
         username: 'Naudotojo vardas'
         password: 'Slaptažodis'
         password_confirmation: 'Slaptažodžio patvirtinimas'
@@ -131,7 +131,7 @@ lt:
     school_organization_zip: 'Mokyklos ar organizacijos pašto indeksas'
   signin_form:
     title: 'Jau registravotės? Prisijunkite'
-    login: 'El. pašto adresas'
+    login: 'El. paštas'
     login_username: 'El. paštas arba naudotojo vardas'
     password: 'Slaptažodis'
     remember: 'Prisiminti mane'
@@ -175,7 +175,7 @@ lt:
   section:
     type:
       word: 'Slaptas pasaulis'
-      email: 'El. pašto adresas'
+      email: 'El. paštas'
   follower:
     invite_sent: 'Pakvietimas išsiųstas'
     added_teacher: '%{name} pridėtas(-a) kaip tavo mokytojas(-a)'
@@ -434,7 +434,7 @@ lt:
       title: 'Klasikinis labirintas'
       body: 'Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.'
     flappy:
-      title: 'Flappy kodas'
+      title: 'Flappy Kodas'
       body: 'Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!'
     20-hour:
       title: 'Pagreitintas kursas'
@@ -465,7 +465,7 @@ lt:
       body: "Tyrinėk Minecraft pasaulį koduodamas."
     minecraft2016:
       title: "Minecraft"
-      body: "Suprogramuok gyvūnus ir kitas Minecraft būtybes savo paties Minecraft versijoje."
+      body: "Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje Minecraft versijoje."
     hero:
       title: "Minecraft"
     sports:
@@ -561,22 +561,14 @@ lt:
   race_interstitial:
     message: "Nurodykite savo rasę (pažymėkite visus tinkamus variantus)"
     races:
-      - 
-        white: "Baltasis"
-      - 
-        black: "Juodasis arba Afroamerikietis"
-      - 
-        hispanic: "Ispanas arba Latino"
-      - 
-        asian: "Azijietis"
-      - 
-        hawaiian: "Havajų arba kitų Ramiojo vandenyno salų gyventojas"
-      - 
-        american_indian: "Amerikos indėnas/Aliaskos gyventojas"
-      - 
-        other: "Kita"
-      - 
-        opt_out: "Nenoriu sakyti"
+      white: "Baltasis"
+      black: "Juodasis arba Afroamerikietis"
+      hispanic: "Ispanas arba Latino"
+      asian: "Azijietis"
+      hawaiian: "Havajų arba kitų Ramiojo vandenyno salų gyventojas"
+      american_indian: "Amerikos indėnas/Aliaskos gyventojas"
+      other: "Kita"
+      opt_out: "Nenoriu sakyti"
     submit: "Pateikti"
     decline: "Užverti"
   zendesk_too_young_message: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org"> support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'
@@ -674,7 +666,7 @@ lt:
   return_course_overview: 'Eiti į skyriaus apžvalgą'
   pd:
     form_labels:
-      email: 'El. pašto adresas'
+      email: 'El. paštas'
       school_name: 'Mokyklos pavadinimas'
     form_entries:
       gender:
