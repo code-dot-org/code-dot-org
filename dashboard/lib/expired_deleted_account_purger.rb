@@ -52,9 +52,8 @@ class ExpiredDeletedAccountPurger
     expired_soft_deleted_accounts.each do |account|
       account_purger.purge_data_for_account account
       num_accounts_purged += 1
-    rescue StandardError
-      say "unable to purge account #{account}, moving to manual review queue"
-      # TODO: Move to manual review queue
+    rescue StandardError => err
+      QueuedAccountPurge.create user: account, reason_for_review: err.message
     end
     say "Done - Purged #{num_accounts_purged} expired deleted accounts"
     say "#{manual_review_queue_depth} accounts require review" if manual_review_queue_depth > 0
@@ -93,7 +92,7 @@ class ExpiredDeletedAccountPurger
   end
 
   private def manual_review_queue_depth
-    0 #TODO
+    QueuedAccountPurge.all.count
   end
 
   # Send messages to Slack #cron-daily room.
