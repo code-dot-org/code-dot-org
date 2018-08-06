@@ -105,9 +105,9 @@ ku:
       student: قوتابی
   home:
     online: سەرهێڵ
-    trynow: ئێستا تاقیبکەوە
+    trynow: زیاتر فێرببە
     announcement_learn_more_button: زیاتر فێرببە
-    announcement_try_now_button: ئێستا تاقیبکەوە
+    announcement_try_now_button: زیاتر فێرببە
   gender:
     male: نێر
     female: مێ
@@ -115,7 +115,7 @@ ku:
     student: قوتابی
     teacher: مامۆستا
   footer:
-    support: پاڵپشتی
+    support: یارمەتی و کۆمەڵگا
     support_url: http://support.code.org
     tos: بڕگەکان
   reference_area:
