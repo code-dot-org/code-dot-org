@@ -20,14 +20,14 @@ hu:
       2-3 Artist 9_instruction: Fejezd be a sárkányt
       2-3 Artist Assessment 1_instruction: 'Értékelés: Fejezd be az utolsó fog megrajzolását: 25 pixel széles és 25 pixel magas.'
       2-3 Artist Debugging 1_instruction: Meg tudod csinálni ezt a kalapot úgy, hogy a felső részének hossza 100 legyen?
-      2-3 Artist Debugging 10_instruction: "Túl szűk az irányító a játékvezérlőmön. Tipp: Készítsd 10 pixellel szélesebbre."
+      2-3 Artist Debugging 10_instruction: "Az iránytópad a játékban túl szűk. \\r \\r Ki tudod szélesíteni 10 képponttal? \\r \\r először próbál a kódot lefuttatni, hogy lásd mi lehet rossz."
       2-3 Artist Debugging 11_instruction: |-
         Segíts befejeznem a csodálatos hópelyhemet. Hányszor kell megismételnem a befejezéshez?
       2-3 Artist Debugging 12_instruction: Egy hullámot szeretnék hozzáadni a képhez. Tudsz segíteni nekem?
       2-3 Artist Debugging 2_instruction: "A három darukar rajzolásához írt kód láthatóan rossz. Tipp: minden kar 75 pixel hosszú. Javítsd ki a kódot a darukarok megrajzolásához."
       2-3 Artist Debugging 3_instruction: "A hajómon van egy lék! Meg tudod javítani a szakaszok által bezárt szögek javításával? Tipp: az utolsó szögnél 15° az eltérés."
       2-3 Artist Debugging 4_instruction: Mit próbáltunk meg rajzolni? Kösd össze a pontokat vonalak és szögek használatával.
-      2-3 Artist Debugging 5_instruction: "A láb megrajzolására szolgáló kód rossz. Tipp: A láb túl hosszú, szükségünk van egy lépés törlésére."
+      2-3 Artist Debugging 5_instruction: "A kódot, a lábhoz és a talphoz rossz. \\r \\r Ki tudod javítani?"
       2-3 Artist Debugging 6_instruction: |-
         Úgy néz ki, egy olyan székre ültem, aminek hiányzik az egyik lába. Szerkeszd össze a blokkokat egy székláb megrajzolásához.
       2-3 Artist Debugging 7_instruction: |-
@@ -68,7 +68,7 @@ hu:
       2-3 Artist Loops New 1_instruction: Rajzoljuk meg a robot fejét! Tudnál rajzolni egy négyzetet, aminek az oldalai 100 pixel hosszúak?
       2-3 Artist Loops New 10_instruction: Most kössük össze ezt a sok V alakot! Rajzold őket egy ciklusban!
       2-3 Artist Loops New 11_instruction: Ezúttal 24-szer rajzold meg! A kód végéhez rakj hozzá egy 30 fokos balra fordulást, és tedd az egészet egy ismétlő elembe! 
-      2-3 Artist Loops New 12_instruction: "Rajzold meg a gyémántot 100 pixel hosszú oldalakkal.\n"
+      2-3 Artist Loops New 12_instruction: 'Rajzold meg a gyémántot 100 pixel hosszú oldalakkal. '
       2-3 Artist Loops New 13_instruction: "Most rajzold le a gyémántot háromszor egy ciklusban."
       2-3 Artist Loops New 14_instruction: Most rajzold le a gyémántot tízszer, de minden alkalommal forgasd el 90 fokkal.
       2-3 Artist Loops New 15_instruction: Rajzolj valami érdekeset.
@@ -80,9 +80,9 @@ hu:
       2-3 Artist Match Sq Pic_instruction: 'Párosítsd össze: Egészítsd ki a hiányzó kódot'
       2-3 Artist Match Tri pic_instruction: 'Párosítsd össze: Pótold a hiányzó kódot.'
       2-3 Artist Nested Loops 1_instruction: "Már használtál ciklusokat ezelőtt, de azt tudtad, hogy egymásba is lehet rakni a ciklusokat? \\r\nRakd ciklusba ezt az egész kódot háromszor, hogy kirajzolódjon a minta."
-      2-3 Artist Nested Loops 10_instruction: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát!
+      2-3 Artist Nested Loops 10_instruction: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát.
       2-3 Artist Nested Loops 11_instruction: Ismételd 4-szer a kódot, hogy elkészítsd a mintát. Minden kör után fordulj 90 fokot.
-      2-3 Artist Nested Loops 12_instruction: Ismételd a kódot 12-szer hogy elkészítsd a köröket.
+      2-3 Artist Nested Loops 12_instruction: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát.
       2-3 Artist Nested Loops 2_instruction: "Ismételd a háromszög rajzolást 6-szor. Minden háromszög után el kell fordulnod 60 fokot, mielőtt nekikezdesz a következő rajzolásának."
       2-3 Artist Nested Loops 3_instruction: "A háromszög rajzolását 12-szer kell ismételned ennek a mintának a megrajzolásához. Oszd el a teljes körfordulat fokszámát (360) a rajzolni kívánt formák számával (12), hogy kiszámold, hány fokot kell fordulni az egyes formák rajzolása után."
       2-3 Artist Nested Loops 4_instruction: "Ismételd 12 alkalommal a gyémánt rajzolást a virág megrajzolásához. Tipp: a 12 gyémánt hasonló, mint a korábban rajzolt 12 háromszög - mennyit kell fordulni egy-egy forma megrajzolása után?"
@@ -164,8 +164,8 @@ hu:
       2-3 Maze 1_instruction: 'Tudsz segíteni nekem elkapni azt a rossz disznót? Pakolj egymás alá néhány "előrelépni" blokkot, és kattints a "Futtatás"-ra. '
       2-3 Maze 10_instruction: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
       2-3 Maze 11_instruction: Juttass el a virágig, éhes vagyok! Hányszor kell ismételni a blokkot?
-      2-3 Maze 12 (copy 1)_instruction: 'Helyettesíteni tudod az előző megoldást csak két blokkal? (Tipp: készíts ciklust az "ismételd alkalommal" blokkal.)'
-      2-3 Maze 12 (copy 2)_instruction: 'Helyettesíteni tudod az előző megoldást csak két blokkal? (Tipp: készíts ciklust az "ismételd alkalommal" blokkal.)'
+      2-3 Maze 12 (copy 1)_instruction: 'Helyettesíteni tudod az előző megoldást csak két blokkal? (Tipp: készíts ciklust az ismételd blokk használatával!)'
+      2-3 Maze 12 (copy 2)_instruction: 'Helyettesíteni tudod az előző megoldást csak két blokkal? (Tipp: készíts ciklust az ismételd blokk használatával!)'
       2-3 Maze 12 (old)_instruction: Juttass el a malacig, most az Ismételd alkalommal blokkal!
       2-3 Maze 12 - One Move Block_instruction: "Juss el a malachoz! Ezúttal azonban\ncsak egyetlen `lépj előre` blokkot használhatsz. Látsz még olyan blokkot, amely\nsegítségedre lehet?"
       2-3 Maze 12_instruction: 'Helyettesíteni tudod ezt az öt blokkot csak két blokkal? (Tipp: készíts ciklust az "ismételd alkalommal" blokkal.)'
@@ -190,7 +190,7 @@ hu:
       2-3 Maze Loops 17_instruction: Juttass el a napraforgóhoz!
       2-3 Maze Loops 18_instruction: "Juttass el a napraforgóhoz!"
       2-3 Maze Loops 19_instruction: "Juttass el a napraforgóhoz!"
-      2-3 Maze Loops 20_instruction: Juttass el a napraforgóhoz!
+      2-3 Maze Loops 20_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk felhasználásával?
       2-3 Maze Loops 21_instruction: Juttass el a napraforgóhoz!
       2-3 Maze Loops Assessment 1_instruction: 'Értékelés: juttass el a napraforgóhoz csak 5 blokk felhasználásával! '
       2-3 Maze sq10_instruction: Juttass el a malachoz! melyik blokkokat kell ismételni?
@@ -228,7 +228,7 @@ hu:
       20hr_maze_stage2_16_instruction: Napraforgót szeretnék! Használj egy "ha" blokkot, hogy a legkevesebb lépésből eljussak odáig.
       20hr_maze_stage2_17_instruction: Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló a feladat, de vigyázz a húsevő növényekre!
       20hr_maze_stage2_18_instruction: A "ha-különben" blokk ellenőriz egy feltételt és aszerint tesz meg valamit VAGY valami mást. Próbálj meg eljuttatni a napraforgóhoz úgy, hogy ezt az új blokkot használod.
-      20hr_maze_stage2_19_instruction: Még egy gyakorlat az „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
+      20hr_maze_stage2_19_instruction: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
       20hr_maze_stage2_2_instruction: Ez a malac bosszantó. Segíts megtalálni!
       20hr_maze_stage2_20_instruction: Tudsz segíteni kijutni ebből az összetett útvesztőből mindössze 3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen kacskaringós utat be tudok járni annak hosszától függetlenül.
       20hr_maze_stage2_3_instruction: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp, vagy repülsz!
@@ -302,6 +302,7 @@ hu:
       4-5 Artist Patterns Free Play_instruction: Szabad játék! Rajzolj amit szeretnél!
       4-5 Bee Conditionals - FC Test_instruction: A méhecske csak nektárt szeretne most. Nem minden tárgy virág, tehát vizsgálj meg minden felhőt, hogy van-e alatta virág. Ha igen, tudsz belőle nektárt gyűjteni.
       4-5 Bee Conditionals 1_instruction: A méh nem tudja előre, hogy ez virág vagy lép. Nektárt csak virágról tud gyűjteni, így először ellenőrizni kell, hogy a felhő alatt virág vagy lép van-e.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: A méh most csak nektárt akar gyűjteni. Emlékezz rá, hogy nem minden elrejtett objektum virág, így először ellenőrizni kell, mert csak virágról tud nektárt gyűjteni.
       4-5 Bee Conditionals 2_instruction: "A méh most csak nektárt akar gyűjteni. Emlékezz rá, hogy nem minden elrejtett objektum virág, így először ellenőrizni kell, mert csak virágról tud nektárt gyűjteni."
       4-5 Bee Conditionals 3_instruction: A méh most csak mézet akar készíteni. Ellenőrizd, hogy csak lépnél próbálkozzon méz készítéssel.
       4-5 Bee Conditionals 4_instruction: 'Az ismeretlen dolog vagy egy virág, vagy egy méhsejt. Használd a ha/különben blokkot: gyűjts nektárt, ha ez virág, különben pedig készíts mézet (mert ez egy méhsejt).'
@@ -409,6 +410,7 @@ hu:
       Bergeron Robot Maze1_instruction: 'Tudsz segíteni nekem elkapni azt a rossz disznót? Pakolj egymás alá néhány "előrelépni" blokkot, és kattints a "Futtatás"-ra. '
       Brad Spooky House Copy_instruction: "Szabad játék: Itt vannak az általad írt függvények, és még néhány másik, amikkel játszhatsz. Rajzolj valami nagyszerűt!\nJátssz a tollvastagsággal, és nézd meg, hogyan néznek ki a különböző rajzok!"
       Brad Spooky House_instruction: "Szabad játék: Itt vannak az általad írt függvények, és még néhány másik, amikkel játszhatsz. Rajzolj valami nagyszerűt!\nJátssz a tollvastagsággal, és nézd meg, hogyan néznek ki a különböző rajzok!"
+      Building a Foundation Assessment_instruction: Építsd meg a három emeletes piramist! Nincs más utasítás, csak játssz az elemekkel, amíg sikerrel nem jársz!
       Busy Bee 2_instruction: Ennek a méhnek nagyon sok munkája van! Észreveszel valamilyen mintázatot, amivel egyszerűsítheted a kódodat?
       Busy Bee_instruction: Ennek a méhnek nagyon sok munkája van! Észreveszel valamilyen mintázatot, amivel egyszerűsítheted a kódodat?
       C3-Farmer While Loops 1_instruction: Vigyél el a lyukig, és töltsd fel két lapát földdel. Használd a "töltsd fel" blokkot!
@@ -416,10 +418,10 @@ hu:
       C3-Farmer While Loops 3_instruction: 'Vigyél el a földkupacig, és távolítsd el az egészet, aztán vigyél a lyukhoz, és töltsd azt fel teljesen. Tipp: A lehető legkevesebb blokkot használd fel!'
       C3-Farmer While Loops 4_instruction: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
       C3-Farmer While Loops 5_instruction: Hoppá, most már két mély lyuk van! Tudsz olyan programot írni, ami mindkettőt feltölti?
-      C3-Farmer While Loops 6_instruction: Hoppá, most egy nagy földkupac van itt! Tudsz olyan programot írni, ami az egészet eltávolítja, és a föld színével teszi egyenlővé?
+      C3-Farmer While Loops 6_instruction: Hoppá, most egy nagy földkupac van itt! Tudsz olyan programot írni, ami az egészet eltávolítja?
       C3-Farmer While Loops 7_instruction: Upsz, most már három földkupacunk van! Tudsz olyan programot írni, ami mindhármat a földdel teszi egyenlővé?
       C3-Farmer While Loops 8_instruction: "Egy valóban mély lyuk és egy tényleg nagy földkupac van itt. Hány lapáttal tudod őket elegyengetni? Tipp: Használd mindkét esetben az \"amíg van\" ciklust!"
-      C3-Farmer While Loops Assessment 1_instruction: Sok lyuk és sok kupac van. Segíts nekem ezeket elegyengetnem!
+      C3-Farmer While Loops Assessment 1_instruction: Sok lyuk és sok kupac van. Segíts nekem ezeket elegyengetnem.
       CSD U5 black white images pixelation 2_instruction: Rajzolj egy mosolygós arcot (kattints ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 2_2018_instruction: Rajzolj egy mosolygós arcot (kattints ide a kép megtekintéséhez)
       CSD U5 black white images pixelation 3_instruction: Módosítsd a szélesség és magasság csúszkákat a kép megtalálásához (kattints ide, és tudj meg többet)
@@ -430,10 +432,19 @@ hu:
       CSD U5 black white images pixelation 5_2018_instruction: Rajzold bármit, amit szeretnél
       CSD U5 black white images pixelation_instruction: Egészítsd ki az X alakot nullák és egyesek begépelésével
       CSD U5 black white images pixelation_2018_instruction: Egészítsd ki az X alakot nullák és egyesek begépelésével
+      CSDU6 - Arrays - indexPractice_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSDU6 - for loop - color buttons with for_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
+      CSDU6 - for loop - color buttons_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
+      CSDU6 - for loop - why for_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
+      CSDU6 arrays rainbow_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
+      CSDU6 arrays select rainbow_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
+      CSDU6 arrays select rainbow_2018_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSP student contact info_instruction: Kérlek, add meg az e-mail címedet.
+      CSPU5_U3 - Arrays - indexPractice_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
+      CSPU5_U3 - Arrays - indexPractice_2018_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       CSPU5_U3 - Loops - 4_instruction: Használd a Hibakereső parancsokat egy olyan lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
       CSPU5_U3 - Loops - 4_2018_instruction: Használd a Hibakereső parancsokat egy olyan lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide az összes utasításhoz)
+      Course 2 Bee Loops 1_instruction: 'Szia, én egy méh vagyok. Segítesz nekem összegyűjteni a nektárt ezekről a virágokról? '
       Course 2 Bee Loops 3_instruction: Most használd az ismételd blokkot, hogy összegyűjtsük a nektárt és elkészítsük az összes mézet.
       Course 2 Bee Loops 3__instruction: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
       Course 2 Maze Loops 1_instruction: El tudsz juttatni a malacig 5 blokk felhasználásával?
@@ -545,14 +556,14 @@ hu:
       Course 4 Bee 2_instruction: Használd a "ha/különben" blokkot, és ellenőrizd, hogy egy virágnál vagy egy lépnél állsz-e. Ha virágnál állsz, akkor gyűjts egy nektárt, különben pedig készíts mézet!
       Course 4 Bee 3_instruction: Az ismeretlen objektum vagy virág vagy lép. Használd a ha/különben blokkot nektár gyűjtéséhez, ha ez virág, különben pedig készíts mézet (mert ez egy lép).
       Course 4 Bee 4_instruction: Ennek a lila virágnak 3, 2 vagy 1 nektárja lehet. Használj "ismételd" ciklust és "ha...csináld" elágazást!
-      Course 4 Bee For Loops 1_instruction: Használj ciklust, hogy minden virágból összegyűjtsük a nektárt.
+      Course 4 Bee For Loops 1_instruction: Használj ciklust, hogy minden virágról összegyűjtsd a nektárt.
       Course 4 Bee For Loops 10_instruction: A for ciklus lefelé számol, és a lépésköz minden ciklusban levonódik a számláló változóból. Mi a megfelelő lépésköz, ha 9, 6, és 3 nektárt kell összegyűjteni?
       Course 4 Bee For Loops 2_instruction: Itt van egy újfajta ciklus, a "for" ciklus. Ez az adott for ciklus 1-től 5-ig fog számolni egyesével, és a ciklus tartalmát minden egyes számolásnál le fogja futtatni. Segíts a méhnek eljutni a nektárhoz.
       Course 4 Bee For Loops 3_instruction: A feladványt egy olyan for ciklussal tudod megoldani, ami 1-től 3-ig számol egyesével. Most menjünk, gyűjtsünk egy kis nektárt!
       Course 4 Bee For Loops 4_instruction: Gyűjtsük össze a nektárt ezekről a virágokról. Gondolkodom, hogy van-e erre egyszerűbb módszer...
       Course 4 Bee For Loops 5_instruction: 'Ó, a for ciklussal sokkal könnyebben megy! Használjuk a for ciklus "számláló" változóját, hogy annyiszor ismételjük a "gyűjts nektárt" blokkot, ahányszor a ciklusban szerepel. Hűha! ez rengeteg ciklus! Minden kód a helyén van már, csak nézd meg, hogy épül fel, majd kattints a Futtatás-ra és figyeld meg, hogy működik. '
       Course 4 Bee For Loops 6_instruction: A for ciklust lefelé számlálásra is használhatod. Próbáld összegyűjteni a nektárt 5-től 1-ig lefelé számlálva.
-      Course 4 Bee For Loops 8_instruction: A ciklus változójával tudod szabályozni a mozgást és a nektár gyűjtést?
+      Course 4 Bee For Loops 8_instruction: Fel tudod használni a ciklus változót, hogy szabályozd a mozgást és a nektár gyűjtést?
       Course 4 Bee For Loops 9_instruction: A for ciklusban lévő utolsó számot lépésköznek hívják. A ciklus számlálójának értéke minden ismétléskor ezzel a lépésközzel módosul. Próbáld meg összegyűjteni ezeket a virágokat 2 lépésközt használva.
       Course 4 Bee Loops 5 NEW_instruction: Itt van három virág. Megtalálod a megfelelő utasításmintát, amelyet háromszor ismételve begyűjtheted a nektárt úgy, hogy minél kevesebb blokkot használsz?
       Course 4 Bee Loops 5a NEW_instruction: Most használj ciklust, hogy a méh begyűjtse az összes nektárt a léphez vezető úton. Használj olyan kevés blokkot, amennyit csak lehetséges. Amikor odaérsz, ne felejts el mézet készíteni!
@@ -673,10 +684,15 @@ hu:
       Farmer for Authored Hint testing_instruction: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
       Farmer for TTS testing_instruction: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
       Find the Wizard_instruction: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra példa!
+      Find the Wizard_2018_instruction: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra példa!
       Food Fight!_instruction: "Létrehoztunk számodra még egy utolsó függvényt.\\r\n\\r\nHasználd a \"Ha\" utasítást a \"szintlépés\" (level up) függvény meghívására, amikor a játékos pontszáma (player_score) nagyobb lesz egy adott számnál.\\r\n\\r\nPéldául: \"player_score\" > 6\\r\n\\r\nIndítsd el a játékot, és juss el a harmadik szintre a következő feladványra ugráshoz. "
       FoodFight_instruction: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
       FoodFight_2018_instruction: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
       Function intro Ryan_instruction: Az út szabaddá tételéhez a fáklyához használd a "híd építése" funkciót.
+      Get To The Goal_instruction: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra példa!
+      Guess The Number 2_instruction: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra példa!
+      Guess The Number_instruction: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra példa!
+      Guess The Number_2018_instruction: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra példa!
       Infinity_catch_instruction: Tudsz segíteni Elzának (2. szereplő) utolérni Annát a nyíl gombokat használva?
       Infinity_finale_instruction: Alkoss bármit, amit csak szeretnél, és oszd meg másokkal!
       Infinity_move_collide_instruction: Hiro az 1. szereplő. Mozgasd jobbra Baymaxhoz, és játsszunk le egy hangot, amikor találkoznak.
@@ -926,6 +942,7 @@ hu:
       NEW Course 4 Play Lab Vars 4 5_instruction: "\"Mit gondol ez a kód fog tenni? Kattints a \"Futtatás\" gombra, hogy megtudd."
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Szabad játék! Csinálj bármit a rendelkezésre álló blokkokkal. '
       New Artist Project_instruction: Rajzolj valami nagyszerűt! A kódod projektként kerül elmentésre, és bármikor visszatérhetsz hozzá.
+      New Bounce Project_instruction: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjukon.
       New Course 4 Artist Functions Level 4_instruction: Használd a a "rajzolj négyzetet" függvényt ennek a mintának a kirajzolásához!
       New Gumball Project_instruction: Alkoss bármit, amit csak szeretnél, és oszd meg másokkal!
       New Ice Age Project_instruction: Alkoss bármit, amit csak szeretnél, és oszd meg másokkal!
@@ -952,9 +969,12 @@ hu:
       Overworld Powered Minecart_2018_instruction: Szép munka! Nagyon sok nyersanyagot gyűjtöttél, és építettél egy kis házat is. Most fektess le egy vasútvonalat a pálya szélétől a házad bejáratáig.
       Overworld Shear Sheep_instruction: Itt a birkanyírás ideje! Használd a nyír parancsot, hogy gyapjút gyűjts a két báránytól.
       Overworld Shear Sheep_2018_instruction: Itt a birkanyírás ideje! Használd a nyír parancsot, hogy gyapjút gyűjts a két báránytól.
+      PDK5 Conditionals 1_instruction: A lila virágokban 1 vagy 0 nektár lehet, de pontosan nem tudjuk. Vigyázz, ne gyűjts nektárt a lila virágból, ha nincs benne nektár! A "ha" blokkal ellenőrizd, hogy a nektárok száma egyenlő-e 1.
       PDK5 Functions 2_instruction: A függvények segítségével új blokkokat határozhatsz meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól.
       PS - test - pixelation_instruction: Egészítsd ki az X alakot nullák és egyesek begépelésével
       PS copy 2-3 Bee Conditionals 5_instruction: "A lila virágokban 1 vagy 0 nektár lehet, de pontosan nem tudjuk. Vigyázz, ne gyűjts nektárt a lila virágból, ha nincs benne nektár! A \"ha\" blokkal ellenőrizd, hogy a nektárok száma egyenlő-e 1."
+      Prompt Test_instruction: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra példa!
+      Quantum Bee_instruction: A lila virágokban 1 vagy 0 nektár lehet, de pontosan nem tudjuk. Vigyázz, ne gyűjts nektárt a lila virágból, ha nincs benne nektár! A "ha" blokkal ellenőrizd, hogy a nektárok száma egyenlő-e 1.
       Ryan - 4-5 Bee Conditionals 2_instruction: A méhecske csak nektárt szeretne most. Nem minden tárgy virág, tehát vizsgálj meg minden felhőt, hogy van-e alatta virág. Ha igen, tudsz belőle nektárt gyűjteni.
       Ryan - Bee Conditionals_instruction: A méhecske csak nektárt szeretne most. Nem minden tárgy virág, tehát vizsgálj meg minden felhőt, hogy van-e alatta virág. Ha igen, tudsz belőle nektárt gyűjteni.
       SpecialFrozenLevel_instruction: "Hivatalosan is egy mester művész lettél!\nHozz létre egy téli csodaországot!"
@@ -975,6 +995,7 @@ hu:
       U2 frequency caesar_instruction: Utasítások
       U2 frequency random sub_instruction: Utasítások
       U2 vigenere cipher_instruction: Utasítások
+      U3 - Arrays - indexPractice_instruction: Írd ki a képernyőre a tömb tartalmát növekvő számsorrendben (kattints ide a bővebb információkhoz)
       U4 vigenere cipher 2_instruction: Utasítások
       U4L02 - Objects - Template1_instruction: Sablon
       U4L02 - Objects - Template1_2018_instruction: Sablon
@@ -996,6 +1017,7 @@ hu:
       bounce_11_instruction: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret, vagy az ütő és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az ellenfél két pontot szerez.
       bounce_11_2018_instruction: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret, vagy az ütő és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az ellenfél két pontot szerez.
       bounce_12_instruction: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjukon.
+      bounce_12_2018_instruction: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjukon.
       bounce_1_2018_instruction: Csatolj egy blokkot a "balra nyíl esetén" blokkhoz, majd nyomd meg a "Futtatás" gombot. Mozgasd az ütőt a bal nyíllal, hogy elérd a célt.
       bounce_2_instruction: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl esetén" blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
       bounce_2_2018_instruction: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl esetén" blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
@@ -1049,6 +1071,7 @@ hu:
       courseD_bee_nestedLoops8_2018_instruction: 'Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!'
       courseD_bounce_events10_instruction: A kapu most fönt van. Kapcsold össze a  "pontszám" és a "pontot szerez az ellenfél" blokkokat a "ha a labda célba ér" és a "ha a labda nem találja el az ütőt" blokkal, hogy elkészüljön a játék. Próbáld ki, hány pontot gyűjtesz, mielőtt az ellenfél két pontot szerez.
       courseD_bounce_events11_instruction: Most csatolni tudsz blokkokat a "futtatáskor" blokkhoz. Csatolj "indíts új labdát" blokkot több helyen is. Próbáld meg módosítani a hátteret, vagy az ütő és a labda sebességét, és lássuk, hány pontod lesz, mielőtt az ellenfél két pontot szerez.
+      courseD_bounce_events12_instruction: Hozd létre saját Visszapattanós játékodat. Módosíthatod a kinézetet és a szabályokat. Ha elkészültél, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjukon.
       courseD_bounce_events2_instruction: Csatolj egy blokkot  a "jobbra nyíl esetén" és a "balra nyíl esetén" blokkokhoz. Mozgasd az ütőt, hogy mindkét célt elérd.
       courseD_bounce_events3_instruction: Most próbálj meg valami hasonlót  a "felfelé nyílnál" blokkal.  Mozgasd az ütőt, hogy elérd a fenti célt.
       courseD_bounce_events3s_instruction: Most próbálj meg valami hasonlót  a "felfelé nyílnál" blokkal.  Mozgasd az ütőt, hogy elérd a fenti célt.
@@ -1116,7 +1139,7 @@ hu:
       frozen diamond mini snowflake_instruction: 'Tudtad, hogy minden hópehelynek másmilyen a formája? Készítsünk most egy hópelyhet egy második "ismételd" blokkal: rajzoljuk meg a parallelogrammát négyszer, a parallelogrammák között pedig mindig forduljunk el 90 fokot.'
       frozen diamond snowflake_instruction: Most készítsünk hópelyhet úgy, hogy 10 parallelogrammát rajzolunk, és mindegyik után 36 fokot fordulunk jobbra.
       frozen diamond_instruction: "Rajzolj paralelogrammát! Használj ismétlést a blokkok körül!\nA paralelogramma olyan, mint a téglalap, de nem csak 90 fokos szögei lehetnek. Ennek például 120 és 60 fokos szögei vannak."
-      frozen freeplay_instruction: Hivatalos művész mesterré váltál! Készíts egy téli csodaországot.
+      frozen freeplay_instruction: "Hivatalosan is egy mester művész lettél!\nHozz létre egy téli csodaországot!"
       frozen line_instruction: Szia! Elza vagyok Arendelle-ből. Segíts nekem létrehozni egy vonalat.
       frozen perpendicular_instruction: Most lássuk, sikerül-e két olyan vonalat létrehozni, amelyek 90 fokos szöget zárnak be? Használnod kell majd a fordulj és a mozgasd blokkokat.
       frozen snowflake branch_instruction: Próbáld használni a "hozz létre egy hópehely ágat" blokkot, hogy létrehozz három ágat. Ez már kezd úgy kinézni, mint egy hópehely.
@@ -1267,7 +1290,7 @@ hu:
       grade4_bee_nestedLoops1_instruction: Gyűjtsd össze az összes nektárt az összes virágról! Használj egymásba ágyazott ciklusokat!
       grade4_bee_nestedLoops3_instruction: Gyűjtasd össze az összes nektárt beágyazott ciklus készítésével.
       grade4_bee_nestedLoops4_instruction: 'Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!'
-      grade4_frozen_freeplay_instruction: Hivatalos művész mesterré váltál! Készíts egy téli csodaországot.
+      grade4_frozen_freeplay_instruction: "Hivatalosan is egy mester művész lettél!\nHozz létre egy téli csodaországot!"
       grade4_frozen_functions0_instruction: Ki tudod találni, melyik számot kell a kérdőjelek helyére írni, hogy rajzoljon egy kört?
       grade4_frozen_functions1a_instruction: Használd a "készíts kört" blokkot, hogy 10 egymást átfedő kör készüljön. Ne felejts el ugrani a körök között!
       grade4_frozen_functions2_instruction: Most rajzoljunk 20 egymást átfedő kört! 18 fokot kell fordulni minden kör rajzolása után.
@@ -1307,6 +1330,10 @@ hu:
         \r
         Nézd mi történik, amikor elkezdünk játszani a bitekkel!
       grade5_artist_for_loops1_instruction: 'Rajzold ki ezt a háromszöget, aminek az oldalai 50 pixel hosszúak. Tipp: használd az "ismételd" blokkot!'
+      grade5_artist_for_loops10_instruction: |-
+        Vajon hogyan lehet megrajzolni az eddigi tudásoddal ezt a képet?\r
+        \r
+        Szükséged van egy tippre? Kattints ide.
       grade5_artist_for_loops5_instruction: |-
         Egyetlen kis módosítás az előző kódon ezt az ábrát eredményezi. Kitalálod, hogy mit kell módosítani?\r
         \r
@@ -1398,9 +1425,11 @@ hu:
       level 'grade3_Loops_8_instruction: Használj egy ciklust, hogy összegyűjtsd a nektárt és elkészítsd a mézet.
       level 'grade3_Loops_9_instruction: Minden virágról gyűjtsd össze a nektárt, és minden méhsejtnél készíts mézet.
       level grade3_Loops_2_instruction: Meg tudod csinálni ugyanezt a feladatot egyszerűbben, egy ciklussal?
+      scrat 16 (copy 1)_instruction: Makk! Makk! Makk! Használd a "ha"blokkot, hogy eljuttass hozzájuk a lehető legkevesebb blokk felhasználásával.
       scrat 16_instruction: Makk! Makk! Makk! Használd a "ha"blokkot, hogy eljuttass hozzájuk a lehető legkevesebb blokk felhasználásával.
       scrat 17_instruction: Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló a feladat, de vigyázz a falra!
+      scrat 18 (copy 1)_instruction: A "ha-különben" blokk ellenőriz egy feltételt, és az alapján végzi el az egyik VAGY a másik utasítást. Próbáld használni azt az új blokkot, hogy eljuttass a makkhoz.
       scrat 18_instruction: A "ha-különben" blokk ellenőriz egy feltételt, és az alapján végzi el az egyik VAGY a másik utasítást. Próbáld használni azt az új blokkot, hogy eljuttass a makkhoz.
-      scrat 19 (copy 1)_instruction: Még egy gyakorlat az „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
+      scrat 19 (copy 1)_instruction: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
       scrat 19_instruction: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
       scrat 20_instruction: Tudnál nekem segíteni kijutni ebből az útvesztőből mindössze 3 elem hozzáadásával? Ha jól csinálod, bármilyen kacskaringós utat be tudok járni hosszától függetlenül. Siess! Olvad a jég!
