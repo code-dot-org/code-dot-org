@@ -426,16 +426,6 @@ class RegistrationsControllerTest < ActionController::TestCase
       assigns(:user).errors.full_messages
   end
 
-  test 'deleting sets deleted at on a user' do
-    user = create :user
-    sign_in user
-
-    delete :destroy
-
-    user = user.reload
-    assert user.deleted?
-  end
-
   test "display name edit field absent for picture account" do
     picture_student = create(:student_in_picture_section)
     sign_in picture_student

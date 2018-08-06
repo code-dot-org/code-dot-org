@@ -52,6 +52,8 @@ module RegistrationsControllerTests
         delete '/users', params: {password_confirmation: 'password'}
       end
       assert_response :success
+      user.reload
+      assert user.deleted?
     end
 
     test "destroys the user if password is not required" do
