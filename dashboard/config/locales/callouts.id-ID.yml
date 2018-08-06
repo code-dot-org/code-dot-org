@@ -192,7 +192,7 @@ id:
           pengaturan "bendera". Bendera ini dapat menandakan fungsi kami dengan arah
           yang harus dilalui lebah kami untuk pergi.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Klik "Jalankan program" untuk mencoba program Anda
+        Course 4 Maze 1_callout1: Klik "Run" untuk mencoba program kamu
         Course 4 Maze 1_callout2: Seret blok "gerak" dan pasangkan di bawah blok lain
           di ruang kerja
       Course 4 Maze 4_callout:
@@ -357,10 +357,10 @@ id:
         craft_callout_preplaced_house: Kode ini akan mulai membangun rumah kamu. Dapatkah
           kamu menyelesaikannya?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Klik "Jalankan program" untuk mencoba program Anda
+        craft_run_button_callout: Klik "Run" untuk mencoba program kamu
         craft_drag_block_callout: Seret blok "gerak" dan pasang di bawah blok lain
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Klik "Jalankan program" untuk mencoba program Anda
+        craft_run_button_callout: Klik "Run" untuk mencoba program kamu
         craft_drag_block_callout: Seret blok "gerak" dan pasang di bawah blok lain
       Overworld Place Wall_callout:
         craft_inside_repeat: Ulangi tindakan dengan menempatkan balok di dalam sini
@@ -977,6 +977,10 @@ id:
       courseE_farmer_functions13_2018_callout:
         courseE_farmer_functions1a_1: Sayuran ini tidak dikenal. Dia berubah setiap
           kali kamu menjalankan program.
+      courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: Kali ini kotak peralatan disusun agak sedikit
+          berbeda! Klik pada kategori-kategori yang berbeda untuk melihat blok apa
+          yang kamu miliki.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: Sayuran ini tidak dikenal. Dia berubah setiap
           kali kamu menjalankan program.
