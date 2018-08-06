@@ -201,13 +201,25 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user][:user_type].nil?
 
     successfully_updated =
-      if forbidden_change?(current_user, params)
-        false
-      elsif needs_password?(current_user, params)
-        # Guaranteed to fail, but sets appropriate user errors for response
-        current_user.update_with_password(set_user_type_params)
+      if current_user.migrated?
+        if forbidden_change?(current_user, params)
+          false
+        else
+          current_user.set_user_type(
+            set_user_type_params[:user_type],
+            set_user_type_params[:email],
+            email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
+          )
+        end
       else
-        current_user.update_without_password(set_user_type_params)
+        if forbidden_change?(current_user, params)
+          false
+        elsif needs_password?(current_user, params)
+          # Guaranteed to fail, but sets appropriate user errors for response
+          current_user.update_with_password(set_user_type_params)
+        else
+          current_user.update_without_password(set_user_type_params)
+        end
       end
 
     if successfully_updated
