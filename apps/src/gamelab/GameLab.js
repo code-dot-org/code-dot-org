@@ -792,7 +792,7 @@ GameLab.prototype.runButtonClick = function () {
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
-  if (shareCell && !this.level.validationCode) {
+  if (shareCell && (!this.level.validationCode || this.level.edit_blocks)) {
     shareCell.className = 'share-cell-enabled';
 
     // Adding completion button changes layout.  Force a resize.
