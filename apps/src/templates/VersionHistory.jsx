@@ -1,72 +1,75 @@
 import React, {PropTypes} from 'react';
-var VersionRow = require('./VersionRow');
-var sourcesApi = require('../clientApi').sources;
-var filesApi = require('../clientApi').files;
+import VersionRow from './VersionRow';
+import {sources as sourcesApi, files as filesApi} from '../clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import * as utils from '../utils';
 
 /**
  * A component for viewing project version history.
  */
-var VersionHistory = React.createClass({
-  propTypes: {
+export default class VersionHistory extends React.Component {
+  static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
     useFilesApi: PropTypes.bool.isRequired
-  },
+  };
 
   /**
-   * @returns {{statusMessage: string, versions: (null|{
-   *   lastModified: Date,
-   *   isLatest: boolean,
-   *   versionId: string
-   * }[])}}
+   * {
+   *   statusMessage: string,
+   *   versions: (null|{
+   *     lastModified: Date,
+   *     isLatest: boolean,
+   *     versionId: string
+   *   }[]),
+   *   showSpinner: boolean,
+   *   confirmingClearPuzzle: boolean,
+   * }
    */
-  getInitialState: function () {
-    return {
-      versions: null,
-      statusMessage: '',
-      showSpinner: true,
-      confirmingClearPuzzle: false
-    };
-  },
+  state = {
+    versions: null,
+    statusMessage: '',
+    showSpinner: true,
+    confirmingClearPuzzle: false
+  };
 
-  componentWillMount: function () {
+  componentWillMount() {
     if (this.props.useFilesApi) {
       filesApi.getVersionHistory(this.onVersionListReceived, this.onAjaxFailure);
     } else {
       // TODO: Use Dave's client api when it's finished.
       sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onAjaxFailure);
     }
-  },
+  }
 
   /**
    * Called after the component mounts, when the server responds with the
    * current list of versions.
    * @param xhr
    */
-  onVersionListReceived: function (xhr) {
+  onVersionListReceived = (xhr) => {
     this.setState({versions: JSON.parse(xhr.responseText), showSpinner: false});
-  },
+  };
 
   /**
    * Called if the server responds with an error when loading an API request.
    */
-  onAjaxFailure: function () {
+  onAjaxFailure = () => {
     this.setState({statusMessage: 'An error occurred.'});
-  },
+  };
 
   /**
    * Called when the server responds to a request to restore a previous version.
    */
-  onRestoreSuccess: function () {
-    location.reload();
-  },
+  onRestoreSuccess = () => {
+    utils.reload();
+  };
 
   /**
    * Called when the user chooses a previous version to restore.
    * @param versionId
    */
-  onChooseVersion: function (versionId) {
+  onChooseVersion = (versionId) => {
     if (this.props.useFilesApi) {
       filesApi.restorePreviousVersion(versionId, this.onRestoreSuccess, this.onAjaxFailure);
     } else {
@@ -75,17 +78,17 @@ var VersionHistory = React.createClass({
 
     // Show the spinner.
     this.setState({showSpinner: true});
-  },
+  };
 
-  onConfirmClearPuzzle: function () {
+  onConfirmClearPuzzle = () => {
     this.setState({confirmingClearPuzzle: true});
-  },
+  };
 
-  onCancelClearPuzzle: function () {
+  onCancelClearPuzzle = () => {
     this.setState({confirmingClearPuzzle: false});
-  },
+  };
 
-  onClearPuzzle: function () {
+  onClearPuzzle = () => {
     this.setState({showSpinner: true});
     firehoseClient.putRecord(
       {
@@ -105,15 +108,15 @@ var VersionHistory = React.createClass({
 
     this.props.handleClearPuzzle()
       .then(() => project.save(true))
-      .then(() => location.reload());
-  },
+      .then(() => utils.reload());
+  };
 
-  render: function () {
-    var body;
+  render() {
+    let body;
     if (this.state.showSpinner) {
       body = (
           <div style={{margin: '1em 0', textAlign: 'center'}}>
-            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}></i>
+            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}}/>
           </div>
       );
     } else if (this.state.confirmingClearPuzzle) {
@@ -125,7 +128,7 @@ var VersionHistory = React.createClass({
         </div>
       );
     } else {
-      var rows = this.state.versions.map(function (version) {
+      const rows = this.state.versions.map(function (version) {
         return (
           <VersionRow
             key={version.versionId}
@@ -168,5 +171,4 @@ var VersionHistory = React.createClass({
       </div>
     );
   }
-});
-module.exports = VersionHistory;
+}

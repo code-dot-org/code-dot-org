@@ -12,7 +12,7 @@ We're on a mission to give every student the opportunity to learn computer scien
 ***
 
 ## Statistics at a glance
-Code.org partners with researchers on a variety of studies. Want more? [View our in-depth research using Code.org data.](/research) 
+Code.org partners with researchers on a variety of studies. Want more? <a href="https://code.org/research" target=_"blank">View Code.org's in-depth research and data.</a>
 
 ### Teachers are taking on computer science
 Over 800,000 teachers have taken steps to bring computer science to their schools. 
@@ -23,7 +23,7 @@ Does your local school teach computer science? [Encourage them to start today](/
 
 ### The Hour of Code goes global
 With over [200 partners](https://hourofcode.com/partners), since 2013, the [Hour of Code](https://hourofcode.com) has reached 10% of students around the world.
-<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E57&headers=1", width: 1000, height: 500 %>
+<%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E58&headers=1", width: 1000, height: 500 %>
 
 ## What we're doing
 Tracking the work of thousands of teachers and millions of students.
@@ -51,16 +51,17 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="/images/statistics/distribution.png"><img src="/images/statistics/fit-250/distribution.png"></a>
+<a href="https://twitter.com/codeorg/status/959441286397751299" target="_blank"><img src="/images/statistics/fit-250/student-proficient.png"></a>
+
 <br>
 
-Code.org teachers <a href="https://medium.com/@codeorg/code-org-reaches-us-rural-students-for-the-first-time-7193905d8b2a">match the distribution of teachers across the United States</a>.
+And over 800,000 of those students are female.
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="https://twitter.com/codeorg/status/964571108627300352"><img src="/images/statistics/fit-250/double-enrollment.png"></a>
+<a href="https://twitter.com/codeorg/status/964571108627300352" target="_blank"><img src="/images/statistics/fit-250/double-enrollment.png"></a>
 <br>
 
 And this double enrollment means more girls and underrepresented minorities are taking AP Computer Science than ever before!
@@ -69,10 +70,10 @@ And this double enrollment means more girls and underrepresented minorities are 
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="https://twitter.com/codeorg/status/983763631711154177"><img src="/images/statistics/fit-250/balance.png"></a>
+<a href="https://twitter.com/codeorg/status/983763631711154177" target="_blank"><img src="/images/statistics/fit-250/balance.png"></a>
 <br>
 
-We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de">change this way before then</a>.
+We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de" target="_blank">change this way before then</a>.
 
 </div>
 
@@ -82,19 +83,19 @@ We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computi
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="https://twitter.com/codeorg/status/903629740640149505"><img src="/images/statistics/fit-250/less-cs.png"></a>
+<a href="https://twitter.com/codeorg/status/903629740640149505" target="_blank"><img src="/images/statistics/fit-250/less-cs.png"></a>
 <br>
 
-We've prepared more teachers to teach computer science <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa">than universities have</a>.
+Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa" target="_blank">computer science teachers</a> to fill the growing demand.
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="https://twitter.com/codeorg/status/959441286397751299"><img src="/images/statistics/fit-250/student-proficient.png"></a>
+
 <br>
 
-And over 800,000 of those students are female.
+
 
 </div>
 

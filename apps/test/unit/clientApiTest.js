@@ -87,5 +87,16 @@ describe('clientApi module', () => {
       expect(requests[0].method).to.equal('POST');
       expect(requests[0].url).to.equal('/v3/copy-assets/some-project?src_channel=some-source-project&src_files=%5B%22some-file.png%22%5D');
     });
+
+    it('puts an audio asset to the correct url', () => {
+      clientApi.assets.putAsset(
+        'some-source-project',
+        ['some-audio.mp3']
+      );
+
+      expect(requests).to.have.length(1);
+      expect(requests[0].method).to.equal('PUT');
+      expect(requests[0].url).to.equal('/v3/assets/some-project/some-source-project');
+    });
   });
 });

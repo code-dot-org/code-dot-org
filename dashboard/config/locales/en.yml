@@ -31,6 +31,7 @@ en:
       messages:
         blank: "is required"
         blank_plural: "are required"
+        invalid: "is invalid"
         invalid_plural: "are invalid"
     attributes:
       user:

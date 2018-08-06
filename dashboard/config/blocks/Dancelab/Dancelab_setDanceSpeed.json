@@ -1,0 +1,30 @@
+{
+  "category": "",
+  "config": {
+    "func": "setDanceSpeed",
+    "blockText": "change {SPRITE} dance speed to {SPEED}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "SPEED",
+        "options": [
+          [
+            "Fast",
+            "1"
+          ],
+          [
+            "Normal",
+            "2"
+          ],
+          [
+            "Slow",
+            "4"
+          ]
+        ]
+      }
+    ]
+  }
+}
