@@ -28,12 +28,12 @@ es:
         personal_email: Dirección de email personal <a href="%{url}">(haz click aquí
           si no tienes una dirección email)</a>
         username: nombre de usuario
-        password: contraseña
+        password: Contraseña
         password_confirmation: Confirmación de la contraseña
         current_password: Contraseña actual
         locale: Idioma
         age: Edad
-        gender: Género
+        gender: Sexo
         edit_header: Editar información de la cuenta
         error:
           future: No puede ser en el futuro
@@ -321,19 +321,19 @@ es:
       home: Inicio
       my_dashboard: Mi Panel de Control
       courses: Cursos
-      course_catalog: Catálogo de cursos
+      course_catalog: Catalogo de cursos
       project_gallery: Proyectos
       sections: Secciones
       help_support: Ayuda y soporte
-      report_bug: Reportar un error
+      report_bug: Reporte los errores
       teacher_community: Comunidad de profesores
       professional_learning: Aprendizaje Profesional
-      documentation: Documentación
+      documentation: Documentacion
       tutorials: Tutoriales
       educate_overview: Resumen del docente
-      educate_elementary: Primaria
-      educate_middle: Secundaria
-      educate_high: Escuela Secundaria
+      educate_elementary: Escuela primaria
+      educate_middle: Escuela Secundaria
+      educate_high: Instituto
       educate_hoc: Hora del Código
       educate_partner: Asociese con nosotros
       educate_beyond: Más allá de Code.org
@@ -493,7 +493,7 @@ es:
     20hour_overview: 'Este curso de 20 horas introduce los principios de la informática
       y los conceptos de programación. El curso está diseñado para su uso en aulas
       para los grados K-8, pero es divertido para todas las edades.  '
-    test_videos_help: Prueba nuestro nuevo reproductor de vídeo en tu escuela
+    test_videos_help: Pruebe nuestro nuevo reproductor de vídeo en su escuela
     try_beta_courses: "¡Nuevo! Prueba nuestros cursos en beta para estudiantes de
       6 a 11 años K-5"
     use_as_teacher: Utilizar sitio como profesor
@@ -647,7 +647,7 @@ es:
       y gráficos con Code.
     try_hour_of_code: "¡Prueba una Hora de Code!"
   gender:
-    male: Varón
+    male: Hombre
     female: Mujer
     non_binary: No binario
     not_listed: Término preferido no listado
@@ -696,7 +696,7 @@ es:
     privacy: Política de Privacidad
     secure: Versión segura
     report_abuse: Reportar Abuso
-    built_on_code_studio: Construye en Code Studio
+    built_on_code_studio: Construido en Code Studio
     make_my_own_app: Haz tu propia aplicación
     how_it_works: Cómo funciona
     try_hour_of_code: "¡Prueba una Hora de Code!"
@@ -750,7 +750,7 @@ es:
     bounce_og_title: Revisa mi juego Bounce
     flappy_og_title: Échale un vistazo a mi juego Flappy Bird
     studio_og_title: Échale un vistazo a mi aplicación Play Lab
-    check_out_what_i_made: Mira lo que hice
+    check_out_what_i_made: Comprueba lo que hice
     og_description: Yo escribí el código con Code.org
     phone_number_not_allowed: Parece que hay un número de teléfono en el texto. Trata
       de cambiarlo.
@@ -830,8 +830,8 @@ es:
       body: Explora un mundo de Minecraft, a través de Code.
     minecraft2016:
       title: Minecraft
-      body: Construye tu propia versión de Minecraft. Crea tus propias versiones de
-        las gallinas, ovejas, Creepers, zombis y más.
+      body: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas,
+        ovejas, Creepers, zombis y más.
     hero:
       title: Minecraft
     sports:
@@ -892,13 +892,13 @@ es:
     support_url: "//support.code.org"
     help_resources: Ayuda y Recursos
     help_support: Ayuda y soporte
-    documentation: Documentación
+    documentation: Documentacion
     tutorials: Tutoriales
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. ¡Inténtalo de nuevo!
     correct_title: Correcto
-    correct_body: Esta respuesta es la correcta.
+    correct_body: Esa respuesta es la correcta.
   multi-submittable:
     wrong_title: Gracias
     wrong_body: Gracias por enviarnos su respuesta.
@@ -949,7 +949,7 @@ es:
     open_response_title: Gracias
     open_response_body: "¡Gracias por tu respuesta!"
     correct_title: Correcto
-    correct_body: Esta respuesta es la correcta.
+    correct_body: Esa respuesta es la correcta.
   dialog:
     ok: OK
     startover_title: "¿Seguro que quieres empezar de nuevo?"
@@ -1011,14 +1011,7 @@ es:
       en informática'
     message: Por favor díganos su raza (marque todo lo que aplique)
     races:
-      white: Blanco
-      black: Negro o Afroamericano
-      hispanic: Hispano o Latino
-      asian: Asiático
-      hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
-      american_indian: Indio Americano/Nativo de Alaska
       other: Otros
-      opt_out: Prefiero no decir
     submit: Enviar
     decline: Cerrar
   zendesk_too_young_message: Lo sentimos, los usuarios más jóvenes no pueden registrarse
@@ -1277,7 +1270,7 @@ es:
       school_country: País de escuela
     form_entries:
       gender:
-        male: Varón
+        male: Hombre
         female: Mujer
         non_binary: No binario
         not_listed: Término preferido no listado
@@ -1306,8 +1299,8 @@ es:
     accept: De acuerdo
   gdpr_dialog:
     heading: "¿Aceptas utilizar un sitio web con sede en los Estados Unidos?"
-    message: Datos de tu uso de este sitio podrán ser enviados, almacenados o procesados
-      en Estados Unidos.
+    message: Los datos de su uso de este sitio pueden ser enviados y almacenados o
+      procesados en los Estados Unidos.
     link_intro: Para más información, mira nuestra
     privacy_policy: política de privacidad
     logout: Cerrar sesión
