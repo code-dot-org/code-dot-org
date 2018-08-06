@@ -71,7 +71,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 30.days.ago,
       deleted_before: 28.days.ago
-    ).send :expired_deleted_accounts
+    ).send :expired_soft_deleted_accounts
 
     assert_includes picked_users, soft_deleted_account
     refute_includes picked_users, active_account
@@ -84,7 +84,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 30.days.ago,
       deleted_before: 28.days.ago
-    ).send :expired_deleted_accounts
+    ).send :expired_soft_deleted_accounts
 
     assert_includes picked_users, unpurged_account
     refute_includes picked_users, purged_account
@@ -97,7 +97,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 30.days.ago,
       deleted_before: 28.days.ago
-    ).send :expired_deleted_accounts
+    ).send :expired_soft_deleted_accounts
 
     assert_includes picked_users, account_deleted_after_cutoff
     refute_includes picked_users, account_deleted_before_cutoff
@@ -110,7 +110,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 30.days.ago,
       deleted_before: 28.days.ago
-    ).send :expired_deleted_accounts
+    ).send :expired_soft_deleted_accounts
 
     assert_includes picked_users, account_deleted_long_enough
     refute_includes picked_users, account_deleted_too_recently
@@ -124,7 +124,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 25.days.ago,
       deleted_before: 15.days.ago
-    ).send :expired_deleted_accounts
+    ).send :expired_soft_deleted_accounts
 
     refute_includes picked_users, deleted_10_days_ago
     assert_includes picked_users, deleted_20_days_ago
@@ -139,7 +139,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 15.days.ago,
       deleted_before: 25.days.ago
-    ).send :expired_deleted_accounts
+    ).send :expired_soft_deleted_accounts
 
     refute_includes picked_users, deleted_10_days_ago
     refute_includes picked_users, deleted_20_days_ago

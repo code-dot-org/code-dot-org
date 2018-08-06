@@ -17,7 +17,7 @@ require 'cdo/chat_client'
 # https://docs.google.com/document/d/1l2kB4COz8-NwZfNCGufj7RfdSm-B3waBmLenc6msWVs/edit
 #
 class ExpiredDeletedAccountPurger
-  class SafetyConstraintViolation < StandardError; end
+  class SafetyConstraintViolation < RuntimeError; end
 
   attr_reader :dry_run
   alias :dry_run? :dry_run
@@ -49,7 +49,7 @@ class ExpiredDeletedAccountPurger
     num_accounts_purged = 0
     check_constraints
     account_purger = AccountPurger.new dry_run: @dry_run
-    expired_deleted_accounts.each do |account|
+    expired_soft_deleted_accounts.each do |account|
       account_purger.purge_data_for_account account
       num_accounts_purged += 1
     rescue StandardError
@@ -66,8 +66,8 @@ class ExpiredDeletedAccountPurger
   end
 
   private def check_constraints
-    if expired_deleted_accounts.count > @max_accounts_to_purge
-      raise SafetyConstraintViolation.new "Found #{expired_deleted_accounts.count} " \
+    if expired_soft_deleted_accounts.count > @max_accounts_to_purge
+      raise SafetyConstraintViolation, "Found #{expired_soft_deleted_accounts.count} " \
         "accounts to purge, which exceeds the configured limit of " \
         "#{@max_accounts_to_purge}. Abandoning run."
     end
@@ -86,7 +86,7 @@ class ExpiredDeletedAccountPurger
     User.with_deleted.where(purged_at: nil).where.not(deleted_at: nil)
   end
 
-  private def expired_deleted_accounts
+  private def expired_soft_deleted_accounts
     soft_deleted_accounts.where 'deleted_at BETWEEN :start_date AND :end_date',
       start_date: @deleted_after,
       end_date: @deleted_before
