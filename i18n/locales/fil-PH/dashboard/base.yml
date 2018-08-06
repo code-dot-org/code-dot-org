@@ -473,7 +473,7 @@ fil:
     more: 'More'
     feedback: 'Magbigay ng feedback'
     translate: 'Magboluntaryo na magsali ng ating nilalaman'
-    support: 'Suporta'
+    support: 'Tulong at Komunidad'
     support_url: 'http://support.code.org/'
     tos_short: 'Mga Alituntunin'
     tos: 'Mga Palatuntunan'
@@ -585,7 +585,7 @@ fil:
       body: "Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan ng mga karakter sa Disney Infinity."
     minecraft:
       title: "Minecraft"
-      body: "Tuklasin ang mundo ng Minecraft sa pamamagitan ng code."
+      body: "Tuklasin ang mundo ng Minecraft sa pamamagitan ng code"
     minecraft2016:
       title: "Minecraft"
       body: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
@@ -716,22 +716,7 @@ fil:
     title: "Opsyonal: Tulungan niyo kaming subaybayan ang ating pag-unlad tungo sa pagpapabuti ng pagkakaiba-iba sa computer science"
     message: "Mangyaring sabihan niyo kami sa iyong lahi (lagyan ng tsek ang angkop sa iyo)"
     races:
-      - 
-        white: "Puti"
-      - 
-        black: "Itim o Aprikano-Amerikano"
-      - 
-        hispanic: "Hispano o Latino"
-      - 
-        asian: "Asyano"
-      - 
-        hawaiian: "Katutubong Hawayano o ibang pang nasa Pasipiko"
-      - 
-        american_indian: "Amerikanong-Indiyano/Katutubong Alaska"
-      - 
-        other: "Iba"
-      - 
-        opt_out: "Mas gustong hindi sabihin"
+      other: "Iba"
     submit: "Ipasa"
     decline: "Isara"
   zendesk_too_young_message: 'Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi maaring mag-sign in sa aming support na site. Maari kang mag-browse sa <a href="http://support.code.org">support.code.org</a> kahit hindi naka-sign in o magpatulong sa iyong magulang o guro para makipag-ugnayan sa amin para sa iyo.'
