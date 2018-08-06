@@ -53,7 +53,8 @@ el:
         edit_get_nectar: Χρησιμοποίησε αυτό το πλήκτρο για να διορθώσεις τη συνάρτηση
           και άλλαξε την κατεύθυνση της Μέλισσας να γυρίσει να πάρει το νέκταρ.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Πάτα "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
+        Course 4 Maze 1_callout1: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά
+          σου
       Course 4 Maze 4_callout:
         repeat: Βάλτε το μπλοκ μέσα στο βρόχο για να επαναλάβει τις εντολές
       Course 4 Play Lab Params 3_callout:
@@ -152,9 +153,11 @@ el:
         craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
           σου. Μπορείς να τον ολοκληρώσεις;
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Πάτα "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
+        craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά
+          σου
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Πάτα "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
+        craft_run_button_callout: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά
+          σου
       Overworld Place Wall_callout:
         craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       Overworld Place Wall_2018_callout:
