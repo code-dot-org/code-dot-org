@@ -46,7 +46,7 @@ ar:
         edit_get_nectar: استخدم هذا الزر لتحرير المهمة وتغيير اتجاه النحلة سوف تتحول
           إلى الحصول على الرحيق.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: انقر على "نفذ" لتجربة برنامجك
+        Course 4 Maze 1_callout1: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
       Course 4 Maze 4_callout:
         repeat: ضع مربعات برمجة داخل الحلقة لتكرار الأوامر
       Course 4 Play Lab Params 3_callout:
@@ -108,9 +108,9 @@ ar:
         craft_callout_preplaced_house: ستساعدك هذه التعليمة البرمجية في البدء في بناء
           منزلك. هل يمكنك الانتهاء من ذلك؟
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: انقر على "نفذ" لتجربة برنامجك
+        craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: انقر على "نفذ" لتجربة برنامجك
+        craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
       Overworld Place Wall_callout:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
       Overworld Place Wall_2018_callout:
