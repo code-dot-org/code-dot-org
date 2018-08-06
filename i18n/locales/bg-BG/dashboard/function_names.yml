@@ -11,18 +11,18 @@ bg:
       draw a triangle: чертае триъгълник
       draw a house: рисува къща
       draw a star: рисува звезда
-      do something: върши нещо
+      do something: изпълнява нещо
       jump: скок
-      set score: задай резултат
+      set score: задава резултат
       get nectar: вземи нектар
       test: тест
       diamond: диамант
       move: Премести
-      move right: премести надясно
-      move up: премести нагоре
-      move down: премести надолу
+      move right: Премести надясно
+      move up: Премести нагоре
+      move down: Премести надолу
       move left: премести наляво
       collect: събери
-      turn left: завърти наляво
+      turn left: завий наляво
       move forward: върви напред
-      turn right: завърти надясно
+      turn right: завий надясно
