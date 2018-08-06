@@ -224,10 +224,16 @@ class Level < ActiveRecord::Base
 
   def write_custom_level_file
     if should_write_custom_level_file?
-      file_path = LevelLoader.level_file_path(name)
+      file_path = Level.level_file_path(name)
       File.write(file_path, to_xml)
       file_path
     end
+  end
+
+  def self.level_file_path(level_name)
+    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
+    raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
+    level_paths.first || Rails.root.join("config/scripts/levels/#{level_name}.level")
   end
 
   def to_xml(options = {})
