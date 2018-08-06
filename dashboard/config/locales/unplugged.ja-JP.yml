@@ -83,6 +83,8 @@ ja:
       FunctionalSuncatchers:
         title: 関数サンキャッチャー
         desc: 生徒たちは変数と関数（何度も繰り返し使いたいコードの一部）を使ったアルゴリズムを作って、ひもとビーズでサンキャッチャーを作成します。
+      SongwritingParameters:
+        title: 作詞作曲
       Internet:
         title: インターネット
       Crowdsourcing:
@@ -98,15 +100,15 @@ ja:
       CollisionDetection:
         title: 衝突検出とピタゴラスの定理
       courseB_unplugged_MRF:
-        title: コンピューターを使わない活動
+        title: アンプラグド　アクティビティ
       courseB_unplugged_loopyMRF:
-        title: コンピューターを使わない活動
+        title: アンプラグド　アクティビティ
       courseC_Unplugged_ScreenOutTheMean:
-        title: コンピューターを使わない活動
+        title: アンプラグド　アクティビティ
       courseD_unplugged_digitalCitizenship:
-        title: コンピューターを使わない活動
+        title: アンプラグド　アクティビティ
       courseF_unplugged_powerOfWords:
-        title: コンピューターを使わない活動
+        title: アンプラグド　アクティビティ
       courseAB_unplugged_plantASeed:
         title: 現実のアルゴリズム：種を植えましょう
         desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
@@ -131,7 +133,7 @@ ja:
         title: バイナリブレスレット
         desc: 生徒たちは各自の名前の最初の一文字を2進数（バイナリ）で表現したブレスレットを作成します。データの表現や格納方法は一つでないことを学びます。
       courseD_unplugged_graphPaperProgramming:
-        title: プログラミングのグラフ用紙
+        title: グラフ用紙のプログラミング
         desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
       courseD_unplugged_relayProgramming:
         title: プログラミングをリレーする
@@ -146,6 +148,8 @@ ja:
         title: インターネット
       courseE_unplugged_crowdsourcing:
         title: クラウドソーシング
+      courseE_unplugged_songwriting:
+        title: 作詞作曲
       courseF_unplugged_songwritingParameters:
         title: パラメーターで作詞作曲
       courseB_unplugged_MRF_2018:
@@ -162,12 +166,12 @@ ja:
       BigEvent_2018:
         desc: ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。
       GraphPaperProgramming_2018:
-        title: プログラミングのグラフ用紙
+        title: グラフ用紙のプログラミング
         desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
       courseD_unplugged_digitalCitizenship_2018:
-        title: コンピューターを使わない活動
+        title: アンプラグド　アクティビティ
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: コンピューターを使わない活動
+        title: アンプラグド　アクティビティ
       Conditionals_2018:
         title: 条件
         desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。
