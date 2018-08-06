@@ -98,7 +98,7 @@
   "setSpeed": "গতির সেট করুন",
   "setSpeedTooltip": "গতি স্তর নির্ধারণ করে।",
   "shareFlappyTwitter": "আমি তৈরি Flappy খেলা দেখুন। আমি এটা নিজে codeorg সাথে লিখেছে",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareFlappyTwitterDonor": "",
   "shareGame": "আপনার খেলা শেয়ার করুন:",
   "soundRandom": "এলোমেলো",
   "soundBounce": "লাফিয়ে ওঠা",

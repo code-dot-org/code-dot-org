@@ -2,6 +2,9 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
 import { Galleries } from './projectConstants';
+import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
+import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
+import {channels as channelsApi} from '../../clientApi';
 
 // Action types
 
@@ -10,6 +13,15 @@ const APPEND_PROJECTS = 'projects/APPEND_PROJECTS';
 const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
+const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
+
+const UNPUBLISH_REQUEST  = 'projects/UNPUBLISH_REQUEST';
+const UNPUBLISH_SUCCESS  = 'projects/UNPUBLISH_SUCCESS';
+const UNPUBLISH_FAILURE  = 'projects/UNPUBLISH_FAILURE';
+
+const START_RENAMING_PROJECT = 'projects/START_RENAMING_PROJECT';
+const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
+const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 
 // Reducers
 
@@ -82,10 +94,119 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
   }
 }
 
+const initialPersonalProjectsList = [];
+
+function personalProjectsList(state = initialPersonalProjectsList, action) {
+  switch (action.type) {
+    case SET_PERSONAL_PROJECTS_LIST:
+      return {
+        ...state,
+        projects: action.personalProjectsList,
+      };
+    case PUBLISH_SUCCESS:
+      var publishedChannel = action.lastPublishedProjectData.channel;
+
+      var publishedProjectIndex = state.projects.findIndex(project => project.channel === publishedChannel);
+
+      var updatedProjects = [...state.projects];
+      updatedProjects[publishedProjectIndex].publishedAt = action.lastPublishedAt;
+
+      return {
+        ...state,
+        projects: updatedProjects
+      };
+    case UNPUBLISH_REQUEST:
+      return {
+        ...state,
+        isUnpublishPending: true,
+      };
+    case UNPUBLISH_SUCCESS:
+      var unpublishedChannel = action.projectId;
+
+      var unpublishedProjectIndex = state.projects.findIndex(project => project.channel === unpublishedChannel);
+
+      var newProjects = [...state.projects];
+      newProjects[unpublishedProjectIndex].publishedAt = null;
+
+      return {
+        ...state,
+        projects: newProjects
+      };
+    case UNPUBLISH_FAILURE:
+      return {
+        ...state,
+        isUnpublishPending: false,
+      };
+    case DELETE_SUCCESS:
+      var deletedChannel = action.projectId;
+
+      var deletedProjectIndex = state.projects.findIndex(project => project.channel === deletedChannel);
+
+      var projects = [...state.projects];
+      projects.splice(deletedProjectIndex, 1);
+
+      return {
+        ...state,
+        projects: projects,
+      };
+    case START_RENAMING_PROJECT:
+      var projectToRename = action.projectId;
+
+      var projectToRenameIndex = state.projects.findIndex(project => project.channel === projectToRename);
+
+      var updatedEditing = [...state.projects];
+
+      updatedEditing[projectToRenameIndex] = {
+        ...updatedEditing[projectToRenameIndex],
+        isEditing: true,
+      };
+
+      return {
+        ...state,
+        projects: updatedEditing,
+      };
+    case UPDATE_PROJECT_NAME:
+      var projectBeingRenamed = action.projectId;
+
+      var projectBeingRenamedIndex = state.projects.findIndex(project => project.channel === projectBeingRenamed);
+
+      var projectsWithRename = [...state.projects];
+
+      projectsWithRename[projectBeingRenamedIndex] = {
+        ...projectsWithRename[projectBeingRenamedIndex],
+        updatedName: action.updatedName
+      };
+
+      return {
+        ...state,
+        projects: projectsWithRename,
+      };
+    case CANCEL_RENAMING_PROJECT:
+      var projectNoLongerBeingRenamed = action.projectId;
+
+      var projectNoLongerBeingRenamedIndex = state.projects.findIndex(project => project.channel === projectNoLongerBeingRenamed);
+
+      var updatedNotEditing = [...state.projects];
+
+      updatedNotEditing[projectNoLongerBeingRenamedIndex] = {
+        ...updatedNotEditing[projectNoLongerBeingRenamedIndex],
+        isEditing: false,
+      };
+
+      return {
+        ...state,
+        projects: updatedNotEditing ,
+      };
+    default:
+      return state;
+  }
+}
+
 const reducer = combineReducers({
   selectedGallery,
   projectLists,
   hasOlderProjects,
+  personalProjectsList
 });
 export default reducer;
 
@@ -130,4 +251,57 @@ export function setProjectLists(projectLists) {
 
 export function setHasOlderProjects(hasOlderProjects, projectType) {
   return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
+}
+
+export function setPersonalProjectsList(personalProjectsList) {
+  return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
+}
+
+export function unpublishProject(projectId) {
+  return dispatch => {
+    dispatch({type: UNPUBLISH_REQUEST});
+    return new Promise((resolve, reject) => {
+      channelsApi.withProjectId(projectId).ajax(
+        'POST',
+        'unpublish',
+        () => {
+          dispatch({
+            type: UNPUBLISH_SUCCESS,
+            projectId: projectId,
+          });
+          resolve();
+        },
+        err => {
+          dispatch({type: UNPUBLISH_FAILURE});
+          reject(err);
+        },
+        null
+      );
+    });
+  };
+}
+
+export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
+  return {type: PUBLISH_SUCCESS, lastPublishedAt,
+  lastPublishedProjectData};
+}
+
+export function unpublishSuccess(projectId) {
+  return {type: UNPUBLISH_SUCCESS, projectId};
+}
+
+export function deleteSuccess(projectId) {
+  return {type: DELETE_SUCCESS, projectId};
+}
+
+export function startRenamingProject(projectId) {
+  return {type: START_RENAMING_PROJECT, projectId};
+}
+
+export function updateProjectName(projectId, updatedName) {
+  return {type: UPDATE_PROJECT_NAME, projectId, updatedName};
+}
+
+export function cancelRenamingProject(projectId) {
+  return {type: CANCEL_RENAMING_PROJECT, projectId};
 }

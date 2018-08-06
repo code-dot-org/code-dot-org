@@ -52,7 +52,6 @@ bs:
         kako bi vaša nova e-mail adresa bila potvrđena.
       updated: Uspješno ste ažurirali svoj račun.
     sessions:
-      signed_in: ''
       signed_out: Uspješno ste odjavljeni.
     unlocks:
       send_instructions: Za nekoliko minuta primiti ćete e-mail sa uputama kako da

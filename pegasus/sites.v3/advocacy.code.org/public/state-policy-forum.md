@@ -14,9 +14,9 @@ The annual State Policy Forum brings together legislators, education officials, 
 
 The forum is composed of two experiences, a pre-forum for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) immediately followed by a main forum for all participants. Join us for lively discussions on policy and implementation, hands-on workshops, flash talks, and unique networking opportunities. The forum takes place at the [JW Marriott Denver Cherry Creek](http://www.jwmarriottdenver.com/").
 
-The **pre-forum** begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon.
+The **pre-forum** begins at 8:30 am on Thursday, September 27 as a prelude to the opening session of the main forum later that afternoon.
 
-The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 4:00 pm on Friday, September 28.
+The **main forum** begins at 2:00 pm on Thursday, September 27 and concludes at 2:30 pm on Friday, September 28.
 
 ## Application Details
 
@@ -52,7 +52,7 @@ The **main forum** begins at 3:00 pm on Thursday, September 27 and concludes at 
   <br>
 ### Pre-Forum Workshop (Code.org Advocacy Coalition members)
 
-The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. Sessions include:
+The pre-forum begins at 8:30 am on Thursday, September 27 as a prelude to the opening session of the main forum that begins that afternoon. Sessions include:
 
 * The Advocacy Year in Review and Year Ahead
 * State of Your State
@@ -70,7 +70,7 @@ The pre-forum begins at 9:00 am on Thursday, September 27 as a prelude to the op
   <br>
 ### Main Forum (All Participants)
 
-The main forum begins at 3:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 4:00 pm on Friday, September 28. Sessions include:
+The main forum begins at 2:00 pm on Thursday, September 27 following the pre-forum for Advocacy Coalition members and concludes at 2:30 pm on Friday, September 28. Sessions include:
 
 * The State of K-12 CS
 * Flash Talks: Data and Accountability, Reaching Rural Areas, Certification, Managing Grant Programs, State and Local Boards, Legislative Successes/Failures

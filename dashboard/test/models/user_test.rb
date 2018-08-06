@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 require 'timecop'
 
@@ -402,6 +401,43 @@ class UserTest < ActiveSupport::TestCase
     User.expects(:find_by_hashed_email).never
     user.authentication_options.first.data = 'unrelated change'
     user.valid?
+  end
+
+  test "saving non-migrated teacher does not remove cleartext email addresses" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    teacher = create :teacher, email: 'teacher@email.com'
+    teacher.reload
+    assert_equal 'teacher@email.com', teacher.email
+  end
+
+  test "saving migrated teacher does not remove cleartext email addresses" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'teacher@email.com'
+    teacher.reload
+    assert_equal 1, teacher.authentication_options.count
+    assert_equal 'teacher@email.com', teacher.authentication_options.first.email
+  end
+
+  test "saving non-migrated student does not call remove_cleartext_emails" do
+    User.any_instance.expects(:remove_cleartext_emails).never
+    create :student, email: 'student@email.com'
+  end
+
+  test "saving migrated student that was previously a teacher removes cleartext email addresses" do
+    user = create :teacher, :with_migrated_email_authentication_option, email: 'example@email.com'
+    user.authentication_options << create(:authentication_option, email: 'another@email.com')
+    user.authentication_options.last.destroy
+
+    # Change user to student to make sure any previous cleartext emails are empty
+    # (including deleted ones and those created when user was a teacher)
+    user.update!(user_type: User::TYPE_STUDENT)
+    user.authentication_options << create(:authentication_option, email: 'third@email.com')
+    user.reload
+    all_auth_options = user.authentication_options.with_deleted
+    assert_equal 3, all_auth_options.count
+    all_auth_options.each do |ao|
+      assert_empty ao.email
+    end
   end
 
   test "can create a user with age" do
@@ -1421,14 +1457,24 @@ class UserTest < ActiveSupport::TestCase
     assert student.sponsored?
   end
 
-  test 'can_edit_password? is true for user with password' do
-    assert @student.can_edit_password?
+  test 'can_edit_password? is true for user with or without a password' do
+    student1 = create :student
+    refute_empty student1.encrypted_password
+    assert student1.can_edit_password?
+
+    student1 = create :student, encrypted_password: ''
+    assert_empty student1.encrypted_password
+    assert student1.can_edit_password?
   end
 
-  test 'can_edit_password? is false for user without password' do
-    user = create :student
-    user.update_attribute(:encrypted_password, '')
-    refute user.can_edit_password?
+  test 'can_edit_password? is false for a sponsored student' do
+    student1 = create :student_in_picture_section
+    assert student1.sponsored?
+    refute student1.can_edit_password?
+
+    student2 = create :student_in_word_section
+    assert student2.sponsored?
+    refute student2.can_edit_password?
   end
 
   test 'can_edit_password? is true for migrated student without a password' do
@@ -1584,6 +1630,64 @@ class UserTest < ActiveSupport::TestCase
       student_without_password.reload
       assert student_without_password.teacher_managed_account?
     end
+  end
+
+  test 'roster_managed_account? is false for teacher' do
+    teacher = create :teacher
+    refute teacher.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student with more than one authentication option' do
+    student = create :student, :with_migrated_google_authentication_option
+    student.authentication_options << create(:authentication_option)
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student not in an externally rostered section' do
+    student = create :student, :with_migrated_google_authentication_option
+    section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is true for migrated student in an externally rostered section' do
+    student = create :student, :with_migrated_google_authentication_option
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    assert student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for unmigrated student in an externally rostered section with a password' do
+    student = create :student, :unmigrated_google_sso, encrypted_password: 'abcdef'
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for unmigrated student not in an externally rostered section' do
+    student = create :student, :unmigrated_google_sso
+    section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is true for unmigrated student in an externally rostered section without a password' do
+    student = create :student, :unmigrated_google_sso, encrypted_password: nil
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    assert student.roster_managed_account?
   end
 
   test 'update_with_password does not require current password for users without passwords' do
@@ -1773,6 +1877,45 @@ class UserTest < ActiveSupport::TestCase
 
     user.reload
     assert_equal original_primary_contact_info, user.primary_contact_info
+  end
+
+  test 'downgrade_to_student sets user_type to student and clears cleartext emails' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    assert user.downgrade_to_student
+    user.reload
+    assert_equal User::TYPE_STUDENT, user.user_type
+    assert_empty user.email
+  end
+
+  test 'upgrade_to_teacher is false if matching authentication option is not found' do
+    user = create :student, :with_migrated_google_authentication_option
+    refute user.upgrade_to_teacher('some_fake@email.com', {})
+    user.reload
+    assert_equal ["Email is invalid"], user.errors.full_messages
+  end
+
+  test 'upgrade_to_teacher is true if matching authentication option is found' do
+    user = create :student, :with_migrated_google_authentication_option
+    auth_option = create :authentication_option, user: user, email: 'example@email.com'
+    email_preference_params = {
+      email_preference_opt_in: 'yes',
+      email_preference_request_ip: '127.0.0.1',
+      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
+      email_preference_form_kind: '0',
+    }
+    assert_empty auth_option.email
+
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
+    user.reload
+    auth_option.reload
+    assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal auth_option, user.primary_contact_info
+    assert_equal 'example@email.com', auth_option.email
+    email_preference = EmailPreference.find_by_email('example@email.com')
+    assert email_preference.opt_in
+    assert_equal '127.0.0.1', email_preference.ip_address
+    assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, email_preference.source
+    assert_equal '0', email_preference.form_kind
   end
 
   test 'google_classroom_student? is true if user belongs to a google classroom section as a student' do
@@ -2571,14 +2714,17 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'assign_script does not overwrite assigned_at if pre-existing' do
+  test 'assign_script does overwrite assigned_at if pre-existing' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
       UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
     end
-    assert_does_not_create(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
-      assert_equal '2017-01-02 12:00:00 UTC', user_script.assigned_at.to_s
+
+    Timecop.travel(2018, 3, 4, 12, 0, 0) do
+      assert_does_not_create(UserScript) do
+        user_script = @student.assign_script(Script.first)
+        assert_equal Script.first.id, user_script.script_id
+        assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
+      end
     end
   end
 
@@ -3323,6 +3469,44 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user, User.find_by_email_or_hashed_email(email)
   end
 
+  test 'find_by_email returns nil when no user is found' do
+    assert_nil User.find_by_email 'fake_email'
+  end
+
+  test 'find_by_email returns nil when input is blank' do
+    create :student_in_picture_section
+    assert_nil User.find_by_email nil
+    assert_nil User.find_by_email ''
+  end
+
+  test 'find_by_email locates a single-auth teacher by email' do
+    teacher = create :teacher
+    assert_equal teacher, User.find_by_email(teacher.email)
+  end
+
+  test 'find_by_email does not locate a single-auth student by email' do
+    email = 'student@example.org'
+    create :student, email: email
+    assert_nil User.find_by_email email
+  end
+
+  test 'find_by_email locates a multi-auth teacher by email' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
+    assert_equal teacher, User.find_by_email(teacher.email)
+  end
+
+  test 'find_by_email locates a multi-auth teacher by non-primary email' do
+    teacher = create :teacher, :with_migrated_email_authentication_option
+    second_option = create :email_authentication_option, user: teacher
+    assert_equal teacher, User.find_by_email(second_option.email)
+  end
+
+  test 'find_by_email does not locate a multi-auth student by email' do
+    email = 'student@example.org'
+    create :student, :with_migrated_email_authentication_option, email: email
+    assert_nil User.find_by_email email
+  end
+
   test 'find_by_hashed_email returns nil when no user is found' do
     assert_nil User.find_by_hashed_email 'fake_hash'
   end
@@ -3415,5 +3599,15 @@ class UserTest < ActiveSupport::TestCase
     section.students << student
 
     assert teacher.depended_upon_for_login?
+  end
+
+  test 'depended_upon_for_login? if teacher has a roster-managed student with no other teachers' do
+    student = create :student, :unmigrated_google_sso
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    another_section = create :section, user: section.teacher, login_type: Section::LOGIN_TYPE_EMAIL
+    another_section.students << student
+
+    assert section.teacher.depended_upon_for_login?
   end
 end

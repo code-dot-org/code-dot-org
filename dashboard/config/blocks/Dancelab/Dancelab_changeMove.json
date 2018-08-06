@@ -1,0 +1,42 @@
+{
+  "category": "Moves",
+  "config": {
+    "func": "changeMove",
+    "blockText": "change {SPRITE} dance move to {MOVE}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "MOVE",
+        "options": [
+          [
+            "Standing",
+            "0"
+          ],
+          [
+            "Clap",
+            "1"
+          ],
+          [
+            "Spin",
+            "2"
+          ],
+          [
+            "Uprock",
+            "3"
+          ],
+          [
+            "Bboy",
+            "4"
+          ],
+          [
+            "Random",
+            "randomNumber(1, 4)"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -5,21 +5,16 @@
     = javascript_include_tag "js/en_us/common_locale"
     = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
 
+= render partial: 'levels/editors/authored_hints', locals: {f: f}
 .field
-  = f.label :edit_code, @level.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
+  = f.label :edit_code,'Blockly level'
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
 .field
   = f.label :skin
   = f.select :skin, options_for_select(@level.class.skins, @level.skin)
 .field
-  = f.label :thumbnail_url, 'Optional thumbnail URL (overrides default thumbnail)'
-  = f.text_field :thumbnail_url
-.field
   = f.label :is_k1, 'Is K1 level'
   = boolean_check_box f, :is_k1
-.field
-  = f.label :skip_instructions_popup, 'Skip instructions popup'
-  = boolean_check_box f, :skip_instructions_popup
 .field
   = f.label :never_autoplay_video, 'Never autoplay video'
   = boolean_check_box f, :never_autoplay_video
@@ -87,17 +82,14 @@
   = f.label :include_shared_functions, 'Make shared functions and behaviors available'
   = boolean_check_box f, :include_shared_functions
 
-- if @level.uses_droplet?
-  .field
-    = f.label :code_functions, 'Edit Droplet Palette'
-    = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
-- else
-  .field
-    = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-    .row
-      .span8
-        ~ f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
-      #toolbox-preview.span4
+
+
+.field
+  = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
+  .row
+    .span8
+      ~ f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
+    #toolbox-preview.span4
 
 .field
   - if @level.uses_droplet?
@@ -111,7 +103,7 @@
 
 .field
   - if @level.uses_droplet?
-    = f.label :required_blocks, 'Edit Required Blocks'
+    = f.label :required_blocks,'Edit Required Blocks'
   - else
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
   .row
@@ -147,39 +139,7 @@
   = f.label :step_speed, 'Step speed'
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
-- if @level.respond_to? :free_play
-  .field
-    = f.label :free_play, 'Free Play'
-    %p Free Play levels are not checked for correctness (any solution is accepted), can be shared, and can be saved to the public and private gallery
-    = boolean_check_box f, :free_play
-- if @level.respond_to? :disable_sharing
-  .field
-    = f.label :disable_sharing, 'Disable sharing'
-    %p If set, this level cannot be shared or saved to galleries even if it's free play.
-    = boolean_check_box f, :disable_sharing
-- if @level.respond_to? :free_play
-  .field
-    = f.label :embed, 'Embed'
-    %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
-    = boolean_check_box f, :embed
-- if @level.respond_to? :coordinate_grid_background
-  .field
-    = f.label :coordinate_grid_background, 'Coordinate grid background'
-    = boolean_check_box f, :coordinate_grid_background
-= render partial: 'levels/editors/hide_share_and_remix', locals: {f: f}
-.field
-  = f.label :project_template_level_name, 'Project Template Level Name'
-  %p What this does:
-  %ul
-    %li if start_blocks are defined in the project template level, use those instead of the start blocks for this level
-    %li if toolbox_blocks are defined in the project template level, use those instead of the toolbox blocks for this level
-    %li autocreate a project that is shared with all levels with the same project template level
-  %p (Leave blank if you do not want all of this)
-  = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
-.field
-  = f.label :failure_message_override, 'Failure Message Override'
-  %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
-  = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
+
 -if @level.respond_to? :input_output_table
   = f.label :input_output_table, 'Input/Output Table'
   %p An array of tuples where each tuple is [input, output].
@@ -195,24 +155,6 @@
       .span8
         ~ f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
       #solution-preview.span4
--if @level.uses_droplet?
-  .field
-    = f.label :palette_category_at_start
-    = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
-  .field
-    = f.label :droplet_tooltips_disabled, "Hide droplet documentation tooltips"
-    = boolean_check_box f, :droplet_tooltips_disabled
-  .field
-    = f.label :lock_zero_param_functions, "Don't allow parameters to be added to user-defined functions with no parameters"
-    = boolean_check_box f, :lock_zero_param_functions
-.field
-  = f.label :contained_level_names, 'Contained Level Names'
-  %p Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
-  - @level.contained_level_names = [''] unless @level.contained_level_names.try(:present?)
-  - @level.contained_level_names.each do |level_name|
-    = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
-  #plusAnswerContainedLevel
-    %i.fa.fa-plus-circle
 
 :ruby
   script_data = {

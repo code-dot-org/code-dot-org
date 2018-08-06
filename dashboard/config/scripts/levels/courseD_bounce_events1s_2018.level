@@ -15,7 +15,7 @@
     ],
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,0]]",
     "instructions": "Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the net.",
-    "markdown_instructions": "Get to the hoop!     \r\n\r\nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net.  \r\n\r\n---",
+    "markdown_instructions": "Get to the hoop!     \r\n\r\nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

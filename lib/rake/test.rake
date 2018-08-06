@@ -6,6 +6,7 @@ require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require 'parallel'
+require 'aws-sdk-s3'
 
 namespace :test do
   desc 'Runs apps tests.'
@@ -194,7 +195,15 @@ namespace :test do
   namespace :changed do
     desc 'Runs apps tests if apps might have changed from staging.'
     task :apps do
-      run_tests_if_changed('apps', ['apps/**/*', 'shared/**/*.js', 'shared/**/*.css']) do
+      run_tests_if_changed(
+        'apps',
+        [
+          'apps/**/*',
+          'dashboard/config/libraries/*.interpreted.js',
+          'shared/**/*.js',
+          'shared/**/*.css',
+        ]
+      ) do
         TestRunUtils.run_apps_tests
       end
     end

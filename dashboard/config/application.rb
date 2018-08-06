@@ -15,6 +15,7 @@ require 'animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
+require 'cdo/i18n_backend'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -80,9 +81,10 @@ module Dashboard
 
     # By default, config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = ['en-US']
-    config.i18n.fallbacks = {}
+    config.i18n.fallbacks[:defaults] = ['en-US']
     config.i18n.default_locale = 'en-US'
     LOCALES = YAML.load_file("#{Rails.root}/config/locales.yml")
     LOCALES.each do |locale, data|

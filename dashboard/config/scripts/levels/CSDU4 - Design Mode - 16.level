@@ -23,7 +23,7 @@
     "encrypted_examples": "rekFzZUJd6xk+soKqRLxkkGXuqBxi0o1wHmJkDYN354EDO2i915c95r96j1r\ne3cr\n",
     "embed": "false",
     "instructions": "Add an event handler for the button using the \"Insert and show\" link in the Design Mode Events tab. (Click to see full instructions).",
-    "markdown_instructions": "# Activate Your Button\r\nIn the last lesson you focused on laying out a page of your app in Design Mode. This is a great, quick way to get the visual side of an app figured out, but it's not very functional. If you click any of the buttons you added, nothing happens. Now you're work towards adding some basic functionality by making the buttons in your app actually _do_ something!\r\n\r\n**Goal:** Add code using Design Mode to make the button respond to a click.\r\n\r\n# Do This\r\nYour starter app has two elements, a _label_ with the id `titleLabel` and a _button_ with the id `changeTitleButton`. To start with, you're going to make the button log a message to the console when it's clicked.\r\n\r\n* In Design Mode, **click on the provided button to edit its properties**\r\n* Click on the **Events** tab\r\n* Insert an `onEvent` from Design Mode by clicking **Insert and show code** under the **Events Tab**.\r\n* Take a look at the block that was added to the **Code Mode** tab.\r\n* Run the program, click your button and **look for the output in the *Debug Console* **below the workspace instead of the app window. We will discuss the *Debug Console* on the next level.",
+    "markdown_instructions": "# Activate Your Button\r\nIn the last lesson you focused on laying out a page of your app in Design Mode. This is a great, quick way to get the visual side of an app figured out, but it's not very functional. If you click any of the buttons you added, nothing happens. Now you're work towards adding some basic functionality by making the buttons in your app actually _do_ something!\r\n\r\n**Goal:** Add code using Design Mode to make the button respond to a click.\r\n\r\n# Do This\r\nYour starter app has two elements, a _label_ with the id `titleLabel` and a _button_ with the id `changeTitleButton`. To start with, you're going to make the button log a message to the console when it's clicked.\r\n\r\n* In Design Mode, **click on the provided button to edit its properties**\r\n* Click on the **Events** tab\r\n* Insert an `onEvent` from Design Mode by clicking **Insert and show code** under the **Events Tab**.\r\n* Take a look at the block that was added to the **Code Mode** tab.\r\n* Run the program, click your button and **look for the output in the _Debug Console_** below the workspace instead of the app window. We will discuss the *Debug Console* on the next level.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -57,10 +57,18 @@
     "instructions_important": "false",
     "makerlab_enabled": "false",
     "show_debug_watch": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-24 23:56:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

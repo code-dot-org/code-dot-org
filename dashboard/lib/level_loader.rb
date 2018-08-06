@@ -46,7 +46,7 @@ class LevelLoader
 
   def self.update_unplugged
     # Unplugged level data is specified in 'unplugged.en.yml' file
-    unplugged = I18n.t('data.unplugged')
+    unplugged = YAML.load_file(Rails.root.join('config/locales/unplugged.en.yml'))['en']['data']['unplugged'].keys
     unplugged_game = Game.find_by(name: 'Unplugged')
     unplugged.map do |name, _|
       Level.where(name: name).first_or_create.update(

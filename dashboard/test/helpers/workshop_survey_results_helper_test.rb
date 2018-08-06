@@ -60,6 +60,14 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         name: 'sampleFacilitatorText',
         text: 'How was the facilitator?',
         type: TYPE_TEXTBOX
+      ),
+      Pd::JotForm::ScaleQuestion.new(
+        id: 2,
+        name: 'sampleFacilitatorScale',
+        text: 'How confident do you feel about teaching CS?',
+        options: %w(Weak Amazing),
+        values: (1..5).to_a,
+        type: TYPE_SCALE
       )
     ]
 
@@ -112,6 +120,13 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         'sampleFacilitatorText' => {
           text: 'How was the facilitator?',
           answer_type: ANSWER_TEXT
+        },
+        'sampleFacilitatorScale' => {
+          text: 'How confident do you feel about teaching CS?',
+          answer_type: ANSWER_SCALE,
+          min_value: 1,
+          max_value: 5,
+          options: ['1 - Weak', '2', '3', '4', '5 - Amazing']
         }
       }
     }
