@@ -189,8 +189,8 @@ pt:
       2-3 Maze 1_instruction: "Consegues ajudar-me a apanhar o porquinho malvado?\nEmpilha alguns blocos `mover para a frente` por baixo do bloco `quando executar` e depois clica em \"Executar\". "
       2-3 Maze 10_instruction: Guia-me até à maldade verde! (Cuidado com a dinamite)
       2-3 Maze 11_instruction: "Estou com fome, leve-me até a flor! Quantas vezes\nvocê precisa repetir um bloco?"
-      2-3 Maze 12 (copy 1)_instruction: "Você pode substituir a resposta anterior por\napenas dois blocos? (Dica: crie um laço usando um bloco \"repita vezes\")"
-      2-3 Maze 12 (copy 2)_instruction: "Você pode substituir a resposta anterior por\napenas dois blocos? (Dica: crie um laço usando um bloco \"repita vezes\")"
+      2-3 Maze 12 (copy 1)_instruction: "Você pode substituir a resposta anterior por apenas dois\nblocos? (Dica: crie um laço usando um bloco \"repita vezes\")"
+      2-3 Maze 12 (copy 2)_instruction: "Você pode substituir a resposta anterior por apenas dois\nblocos? (Dica: crie um laço usando um bloco \"repita vezes\")"
       2-3 Maze 12 (old)_instruction: "Leve-me até o porco, agora com o bloco repita\nvezes!"
       2-3 Maze 12 - One Move Block_instruction: Vá para o porco! Mas desta vez, você só pode usar um bloco 'Avançar'. Você vê quaisquer outros blocos que poderiam ajudá-lo?
       2-3 Maze 12_instruction: "Você pode substituir esses cinco blocos por apenas dois blocos?\n(Dica: crie um laço usando um bloco \"repita vezes\")"
@@ -215,7 +215,7 @@ pt:
       2-3 Maze Loops 17_instruction: Leve-me até o girassol!
       2-3 Maze Loops 18_instruction: "Leve-me até o girassol!"
       2-3 Maze Loops 19_instruction: "Leve-me até o girassol!"
-      2-3 Maze Loops 20_instruction: Leve-me até o girassol!
+      2-3 Maze Loops 20_instruction: "Você pode resolver esse desafio usando o menor número\npossível de blocos?"
       2-3 Maze Loops 21_instruction: Leve-me até o girassol!
       2-3 Maze Loops Assessment 1_instruction: "Avaliação: Leve-me até o girassol\nusando apenas 5 blocos!"
       2-3 Maze sq10_instruction: Leve-me até o porco! Que blocos foram repetidos?
@@ -318,7 +318,7 @@ pt:
       4-5 Artist Patterns 2_instruction: "Se você colocar seu laço do quadrado dentro\nde outro laço, o chamamos de laço aninhado. O que você precisa adicionar ao seu laço externo\npara garantir que todos os 15 quadrados fiquem alinhados?"
       4-5 Artist Patterns 3_instruction: "Agora, vamos nos aprofundar mais um nível!\nAninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o\nartista no lugar para desenhar a próxima reta. Qual desses blocos de código você\npode colocar no final do laço mais externo para desenhar toda a grade?"
       4-5 Artist Patterns 4_instruction: "Esse diamante tem lados de 50 pixels e ângulos\nde 120 e 60 graus. Use um laço para desenhá-lo."
-      4-5 Artist Patterns 5.5_instruction: "Quantas vezes você precisa repetir\nesse bloco para desenhar toda a grade de diamantes?"
+      4-5 Artist Patterns 5.5_instruction: "Quantas vezes você precisa repetir esse\nbloco para desenhar toda a grade de diamantes?"
       4-5 Artist Patterns 5_instruction: "Vamos repetir isso para fazer uma fileira de 6 diamantes.\nPerceba que alteramos nosso código do diamante para repetir 3 vezes ao invés de 2 - por que\nvocê acha que fizemos isso?"
       4-5 Artist Patterns 6_instruction: "Quantas vezes você precisa repetir esse\nbloco para desenhar toda a grade de diamantes?"
       4-5 Artist Patterns 7_instruction: "Vamos modificar o código do último desafio\npara fazer esse padrão mais complexo. Perceba como os diamantes se sobrepõem agora. Tente\nalterar o primeiro \"pule para trás\" de 100 para 50 (metade da distância) - agora, quão\nlonge o artista deve ir no segundo \"pule para trás\"?"
@@ -328,6 +328,7 @@ pt:
       4-5 Artist Patterns Free Play_instruction: "Atividade livre - experimente criar\nseu próprio padrão!"
       4-5 Bee Conditionals - FC Test_instruction: A abelha só quer néctar agora. Nem todos os objetos são flores, portanto procura debaixo de cada nuvem para ver se ela esconde uma. Se estiver, então podes recolher o néctar.
       4-5 Bee Conditionals 1_instruction: "A abelha não sabe se isso é uma flor ou\numa colmeia. Colete néctar apenas das flores, mas primeiro verifique se o objeto é\numa flor ou uma colmeia."
+      4-5 Bee Conditionals 2 (copy 1)_instruction: "Agora a abelha só quer néctar. Lembre-se, nem\ntodos os objetos são flores, então faça a verificação para coletar néctar apenas das flores."
       4-5 Bee Conditionals 2_instruction: "Agora a abelha só quer néctar. Lembre-se,\nnem todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores."
       4-5 Bee Conditionals 3_instruction: "Agora a abelha só quer produzir mel.\nFaça a verificação para produzir mel apenas nas colmeias."
       4-5 Bee Conditionals 4_instruction: "O objeto desconhecido pode ser uma flor\nou uma colmeia. Use o bloco se/senão para coletar néctar se ele for uma flor,\nsenão para produzir mel (porque ele é, então, uma colmeia)."
@@ -363,21 +364,21 @@ pt:
       4-5 Bee Nested Loops Assessment 1_instruction: "Avaliação - colete todo o\nnéctar e produza todo o mel usando laços."
       4-5 Bee Nested Loops Rows_instruction: "Colete o néctar das fileiras de flores!\nUse um laço aninhado."
       4-5 Maze 1 (copy 1)_instruction: "Querida pessoa. Mim zumbi. Precisa... chegar...\ngirassol."
-      4-5 Maze 1_instruction: Querida pessoa. Mim zumbi. Deve... chegar... girassol.
+      4-5 Maze 1_instruction: "Querida pessoa. Mim zumbi. Precisa... chegar...\ngirassol."
       4-5 Maze 10_instruction: Você pode chegar até o girassol usando apenas quatro blocos?
       4-5 Maze 11_instruction: Você pode chegar até o girassol usando apenas seis blocos?
       4-5 Maze 12_instruction: "Ok, isso é um pouco diferente. Você pode fazer isso em\napenas seis blocos?"
       4-5 Maze 13_instruction: Leve-me até o porco!
       4-5 Maze 14_instruction: Leve-me até o porco! Use o bloco repita até.
       4-5 Maze 2 (copy 1)_instruction: "Leve o zumbi até o girassol, mas desvie\nda carnívora!"
-      4-5 Maze 2_instruction: Leve o zumbi até o girassol, mas desvie da carnívora!
+      4-5 Maze 2_instruction: "Leve o zumbi até o girassol, mas desvie\nda carnívora!"
       4-5 Maze 3 (copy 1)_instruction: Precisa... chegar... girassol.
       4-5 Maze 3_instruction: Precisa... chegar... girassol.
       4-5 Maze 4 (copy 1)_instruction: Experimente o bloco "repita" para usar menos blocos...
       4-5 Maze 4_instruction: Experimente o bloco "repita" para usar menos blocos...
-      4-5 Maze 5 (copy 1)_instruction: "Você pode resolver esse desafio usando o menor\nnúmero possível de blocos?"
+      4-5 Maze 5 (copy 1)_instruction: "Você pode resolver esse desafio usando o menor número\npossível de blocos?"
       4-5 Maze 5_instruction: "Você pode resolver esse desafio usando o menor número\npossível de blocos?"
-      4-5 Maze 6 (copy 1)_instruction: "Você pode resolver esse desafio usando o menor\nnúmero possível de blocos?"
+      4-5 Maze 6 (copy 1)_instruction: "Você pode resolver esse desafio usando o menor número\npossível de blocos?"
       4-5 Maze 6_instruction: "Você pode resolver esse desafio usando o menor número\npossível de blocos?"
       4-5 Maze 7_instruction: Querida pessoa. Mim zumbi. Deve... chegar... girassol.
       4-5 Maze 8_instruction: "Use o bloco \"repita\" para levar o zumbi até o\ngirassol. (Desvie das carnívoras!)"
@@ -423,14 +424,27 @@ pt:
       4-5 While Loops 8_instruction: " Há um buraco realmente fundo e um monte de terra\nrealmente grande. Quantas pás de terra são necessárias para\ntornar o solo plano? Dica: use o laço enquanto para ambos."
       4-5 While Loops Assessment 1_instruction: "Há um monte de buracos e\nmontes. Ajude-me a preenchê-los e removê-los para tornar o solo plano."
       App Lab test_instruction: teste
+      Artist - Nested Loops 1_instruction: "Complete o código para desenhar esses triângulos. O\nprimeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus."
+      Artist - Nested Loops 10_instruction: "Desenhe a última linha de estrelas nessa bandeira\nrepetindo os blocos fornecidos. As estrelas estão separadas por 50 pixels, mas lembre-se\nque elas têm 30 pixels de largura."
+      Artist - Nested Loops 11_instruction: "Você pode desenhar esses 10 quadrados dessa\ncalçada usando um laço aninhado? Cada quadrado tem 30 pixels."
+      Artist - Nested Loops 12_instruction: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
+      Artist - Nested Loops 5_instruction: Repita o código dado para criar um moinho de vento.
+      Artist - Nested Loops 6_instruction: "Você pode desenhar um hexágono repetindo o\ncódigo do triângulo?"
+      Artist - Nested Loops 9_instruction: Desenhe o dente na boca do crocodilo!
       Artist - Nested Loops Assessment 1_instruction: "Use um laço aninhado para completar\no design."
       Artist Inspiration_instruction: "Atividade livre - Inspiração: agora você\naprendeu tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\r\n \\r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530 para ver a solução."
       Auto Open Function Editor_instruction: "Você pode chamar funções de dentro\nde outras funções! Usando sua função \"forma\" como base, crie 3 formas\nde casa, cada uma 20 pixels maior que a anterior, começando com um comprimento de 50 pixels. Usar\num laço com contador pode ser útil."
       Bergeron Robot Maze1_instruction: "Consegues ajudar-me a apanhar o porquinho malvado?\nEmpilha alguns blocos `mover para a frente` por baixo do bloco `quando executar` e depois clica em \"Executar\". "
       Brad Spooky House Copy_instruction: "Atividade livre: aqui estão as funções\nque você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!"
       Brad Spooky House_instruction: "Atividade livre: aqui estão as funções\nque você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!"
+      Building a Foundation Assessment_instruction: "Construa uma pirâmide de três níveis.\nNão há outras instruções, então simplesmente brinque com as peças até\nconseguir!"
       Busy Bee 2_instruction: Esta abelha tem um muito trabalho para fazer! Reparaste em algum padrão que possas usar para simplificar o teu código?
       Busy Bee_instruction: Esta abelha tem um muito trabalho para fazer! Reparaste em algum padrão que possas usar para simplificar o teu código?
+      C3-Farmer While Loops 5_instruction: "Uau, agora há dois buracos profundos! Você\npode escrever um programa que os preencha até o que o solo fique nivelado?"
+      C3-Farmer While Loops 6_instruction: "Uau, agora há um grande monte de terra!\nVocê pode escrever um programa que remova a terra até que o solo fique nivelado?"
+      C3-Farmer While Loops 7_instruction: "Uau, agora há três grandes montes de terra!\nVocê pode escrever um programa que remova cada um deles até que o solo fique nivelado?"
+      C3-Farmer While Loops Assessment 1_instruction: "Há um monte de buracos e\nmontes. Ajude-me a preenchê-los e removê-los para tornar o solo plano."
+      Course 2 Bee Loops 1_instruction: "Olá, eu sou uma abelha. Você pode me ajudar a coletar\no néctar dessas flores?"
       Course 2 Maze Loops 1_instruction: Consegues levar-me até ao porquinho com 5 blocos?
       Course 4 2_instruction: "Agora a abelha só quer néctar. Lembre-se, nem\ntodos os objetos são flores, então faça a verificação para coletar néctar apenas das flores."
       Course 4 Artist 1_instruction: "Ajude-me a terminar de desenhar minha caixa. (Cada linha tem\n200 pixels de comprimento)"
@@ -573,7 +587,7 @@ pt:
       Course 4 Bee 5_instruction: "Essa flor roxa pode ter 1, 2 ou 3\nnéctares. Adicione um bloco se-senão para criar um bloco se, senão-se, senão. Complete\na solução para coletar a quantidade desconhecida de néctar."
       Course 4 Bee 6_instruction: "Essa flor roxa pode ter 1, 2 ou 3\nnéctares. Crie um bloco se, senão-se, senão para coletar a quantidade desconhecida de\nnéctar."
       Course 4 Bee 7_instruction: "Use tudo o que você aprendeu até agora para coletar\ntodo o néctar. A flor roxa pode ter 1, 2 ou 3 néctares."
-      Course 4 Bee For Loops 1_instruction: "Use um laço para coletar o néctar de\ntodas as flores."
+      Course 4 Bee For Loops 1_instruction: "Use um laço para coletar o néctar\nde cada flor."
       Course 4 Bee For Loops 10_instruction: "Se seu laço está fazendo contagem regressiva, o\nincremento é subtraído da sua variável contador a cada repetição. Qual deve ser\nseu incremento para coletar 9, então 6, e então 3 néctares?"
       Course 4 Bee For Loops 11_instruction: "O que está errado nesse laço? Veja se\nvocê consegue arrumá-lo e fazer a abelha coletar todo o néctar."
       Course 4 Bee For Loops 2_instruction: "Temos aqui um novo tipo de laço, chamado de\nlaço \"para\". Esse laço para em particular vai contar de 1 até 5, de 1 em 1, e executar\no conteúdo do laço a cada contagem. Ajude a abelha a chegar até o néctar."
@@ -582,7 +596,7 @@ pt:
       Course 4 Bee For Loops 5_instruction: "Ah, o laço para deixa isso muito mais fácil!\nEstamos usando a variável \"contador\" do laço \"para\" para repetir o bloco \"obtenha néctar\"\no mesmo número de vezes que o laço se repete. Ufa! São muitas repetições.\nTodo o código que você precisa está aqui, dê uma olhada nele e então\nclique em Executar para ver como ele funciona."
       Course 4 Bee For Loops 6_instruction: "Você também pode usar um laço \"para\" para fazer contagem\nregressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1."
       Course 4 Bee For Loops 7_instruction: "Use a variável \"contador\" do seu laço \"para\"\npara controlar a distância do movimento horizontal."
-      Course 4 Bee For Loops 8_instruction: "Você pode usar a variável do laço para controlar\no movimento e a coleta de néctar?"
+      Course 4 Bee For Loops 8_instruction: "Você pode usar a variável do laço para\ncontrolar o movimento e a coleta de néctar?"
       Course 4 Bee For Loops 9_instruction: "O último número em seu laço para é\nchamado de \"incremento\" e, a cada execução do laço, a variável contador\né alterada de acordo com o incremento. Tente coletar essas flores usando um incremento\nde 2."
       Course 4 Bee Loops 5 NEW_instruction: Aqui estão três flores. Você consegue encontrar o padrão de instruções que você precisa repetir 3 vezes para coletar o néctar com o menor número de blocos?
       Course 4 Bee Loops 5a NEW_instruction: Agora, use os loops para ajudar a abelha a recolher todo o néctar em seu caminho ao favo de mel com tão poucos blocos quanto possível.  Quando você chegar lá, não se esqueça de fazer mel!
@@ -594,27 +608,27 @@ pt:
       Course 4 Bee Params 4 backup_instruction: "Não seria legal se pudéssemos\ncoletar todo o néctar com uma única função? Tente adicionar um novo\nparâmetro à função chamado \"néctares\" para controlar a quantidade de néctar\na coletar. Você provavelmente vai querer renomear a função também!"
       Course 4 Bee Params 4_instruction: "Tente usar sua nova função para coletar\ntodas as flores. Lembre-se de usar as variáveis esquerda e direita."
       Course 4 Bee Params 5_instruction: "Vamos começar do princípio - você pode criar\numa nova função chamada \"obtenha 5 néctares\" com um parâmetro de direção?"
-      Course 4 Bee Params 6 (copy 1)_instruction: "Tente usar sua nova função para\ncoletar todo o néctar."
+      Course 4 Bee Params 6 (copy 1)_instruction: "Tente usar sua nova função para coletar\ntodo o néctar."
       Course 4 Bee Params 6_instruction: "Não seria legal se pudéssemos coletar\ntodo o néctar com uma única função? Tente adicionar um novo parâmetro\nà função chamado \"néctares\" para controlar a quantidade de néctar a coletar.\nVocê provavelmente vai querer renomear a função também!"
-      Course 4 Bee Params 7 (copy 1)_instruction: "Tente usar sua nova função para\ncoletar todo o néctar."
+      Course 4 Bee Params 7 (copy 1)_instruction: "Tente usar sua nova função para coletar\ntodo o néctar."
       Course 4 Bee Params 7_instruction: "Tente usar sua nova função para coletar\ntodo o néctar."
       Course 4 Bee Params 8_instruction: "Ah, agora também precisamos lidar com o mel!\nComo você poderia atualizar sua função para coletar néctar ou produzir mel?"
-      Course 4 Bee Params Ex_instruction: "Tente usar sua nova função para\ncoletar todo o néctar."
+      Course 4 Bee Params Ex_instruction: "Tente usar sua nova função para coletar\ntodo o néctar."
       Course 4 Binary 1_instruction: "Temos aqui uma função que recebe uma string binária\nde 1's e 0's e instrui a fazendeira a se mover da esquerda para a direita,\nde cima para baixo, passando pelos quadrados nos quais o número tem um zero. Execute o\ncódigo fornecido para ver como a fazendeira usa números binários para desenhar uma imagem."
       Course 4 Binary 2_instruction: "Qual string binária você poderia repetir 8 vezes para\ndesenhar essa imagem? Dica o número \"1\" preenche um buraco."
       Course 4 Binary 3_instruction: "Você pode desenhar esse padrão repetindo uma única\nstring binária?"
-      Course 4 Binary 5 (copy 1)_instruction: "Qual string binária, repetida 10 vezes,\nvai desenhar essa imagem?"
+      Course 4 Binary 5 (copy 1)_instruction: "Qual string binária, repetida 10 vezes, vai\ndesenhar essa imagem?"
       Course 4 Binary 5_instruction: "Qual string binária, repetida 10 vezes, vai\ndesenhar essa imagem?"
-      Course 4 Binary 6 (copy 1)_instruction: "Qual string binária, repetida 10 vezes,\nvai desenhar essa imagem?"
-      Course 4 Binary 6_instruction: "Qual string binária, repetida 10 vezes,\nvai desenhar essa imagem?"
-      Course 4 Binary 7_instruction: "Qual string binária, repetida 10 vezes,\nvai desenhar essa imagem?"
+      Course 4 Binary 6 (copy 1)_instruction: "Qual string binária, repetida 10 vezes, vai\ndesenhar essa imagem?"
+      Course 4 Binary 6_instruction: "Qual string binária, repetida 10 vezes, vai\ndesenhar essa imagem?"
+      Course 4 Binary 7_instruction: "Qual string binária, repetida 10 vezes, vai\ndesenhar essa imagem?"
       Course 4 Binary 8_instruction: "Você pode completar a maior parte dessa imagem\nrepetindo um número binário de 5 bits - então você vai precisar de mais um número de 4 bits\npara completar o canto inferior direito."
       Course 4 Maze 1_instruction: Leve o Angry Bird até o porco!
       Course 4 Maze 2_instruction: Desvie do TNT!
       Course 4 Maze 3_instruction: 'Programe o Angry Bird para chegar até o porco. '
       Course 4 Maze 4_instruction: Experimente o bloco "repita" para usar menos blocos...
-      Course 4 Maze 5_instruction: "Você pode resolver esse desafio usando o menor\nnúmero possível de blocos?"
-      Course 4 Maze 6_instruction: "Você pode resolver esse desafio usando o menor\nnúmero possível de blocos?"
+      Course 4 Maze 5_instruction: "Você pode resolver esse desafio usando o menor número\npossível de blocos?"
+      Course 4 Maze 6_instruction: "Você pode resolver esse desafio usando o menor número\npossível de blocos?"
       Course 4 Play Lab For Loops 2_instruction: "Dessa vez, vamos tentar contar\nos números ímpares de 1 até 100."
       Course 4 Play Lab Params 1_instruction: "Aqui temos uma função chamada \"pule\"\nque faz seu personagem principal pular 100 pixels. Use a função pule\npara coletar todas as bandeiras."
       Course 4 Play Lab Params 10_instruction: "Adicionamos uma última função para\nque você use. Programe seu jogo para chamar a função \"suba de nível\" se \"pontos_jogador\"\n> 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio."
@@ -712,7 +726,7 @@ pt:
       K-1 Artist1 5_instruction: Desenhe o caule desta flor com duas retas!
       K-1 Artist1 6_instruction: Termine a imagem usando um bloco pule!
       K-1 Artist1 7_instruction: "Use o bloco pule para se mover sem desenhar. Pule\ne desenhe uma reta."
-      K-1 Artist1 8_instruction: "Desenhe linhas tracejadas usando os blocos pule e\ndesenhe"
+      K-1 Artist1 8_instruction: Desenhe as linhas tracejadas usando os blocos pule e desenhe
       K-1 Artist1 9_instruction: Desenhe e pule para fazer a reta tracejada
       K-1 Artist1 Assessment 1_instruction: Desenhe as retas pequenas e grandes!
       K-1 Artist1 Assessment 2_instruction: Desenhe as retas pequenas tracejadas!
@@ -797,7 +811,7 @@ pt:
       K-1 artist 1 level 10_instruction: Desenhe as linhas tracejadas usando os blocos pule e desenhe
       K-1 artist 1 level 9_instruction: Faça o desenho usando três retas
       K-1 maze debug 1_instruction: Altere o código para me levar até o porco!
-      K-1 maze debug 10_instruction: "Depure esse nível reorganizando e adicionando\nblocos para me levar até o porco!"
+      K-1 maze debug 10_instruction: "Depure esse nível reorganizando e adicionando blocos\npara me levar até o porco!"
       K-1 maze debug 11_instruction: |-
         Isso é um teste!\r
         Depure esse nível reorganizando
@@ -806,20 +820,20 @@ pt:
       K-1 maze debug 3_instruction: "Descubra o que está faltando e então REMOVA blocos\npara me levar até o porco!"
       K-1 maze debug 4_instruction: "Passe por esses blocos e conserte-os! Eu acho\nque estou indo na direção errada."
       K-1 maze debug 5_instruction: "Depure esse nível reorganizando e adicionando blocos\npara me levar até o porco!"
-      K-1 maze debug 6_instruction: "Depure esse nível reorganizando e adicionando\nblocos para me levar até o porco!"
-      K-1 maze debug 7_instruction: "Depure esse nível reorganizando e adicionando\nblocos para me levar até o porco!"
+      K-1 maze debug 6_instruction: "Depure esse nível reorganizando e adicionando blocos\npara me levar até o porco!"
+      K-1 maze debug 7_instruction: "Depure esse nível reorganizando e adicionando blocos\npara me levar até o porco!"
       K-1 maze debug 8_instruction: "Depure esse nível reorganizando e adicionando blocos\npara me levar até o porco!"
-      K-1 maze debug 9_instruction: "Depure esse nível reorganizando e adicionando\nblocos para me levar até o porco!"
+      K-1 maze debug 9_instruction: "Depure esse nível reorganizando e adicionando blocos\npara me levar até o porco!"
       K2.0 sequence 1_instruction: Altere o código para me levar até o porco!
       K2.0 sequence 2_instruction: Altere o código para me levar até o porco!
       K2.0 sequence 5_instruction: Mova-me por um caminho, e então por outro para me levar até o porco!
       K2.0 sequence 6_instruction: "Descubra o que está faltando e então adicione blocos\npara me levar até o porco!"
       K2.0 sequence 9_instruction: 'Desvie do TNT para me levar até o porco! '
       KTest2_instruction: Traça o caminho e leva-me até ao porquinho tonto. Não choques com as dinamites, se não ficas sem penas!
-      Kiki_StarWars_Test_3_instruction: Texto
-      Kiki_StarWars_Test_4_instruction: Texto
-      Kiki_StarWars_Test_5_instruction: Texto
-      Kiki_StarWars_Test_5_Example_instruction: Texto
+      Kiki_StarWars_Test_3_instruction: texto
+      Kiki_StarWars_Test_4_instruction: texto
+      Kiki_StarWars_Test_5_instruction: texto
+      Kiki_StarWars_Test_5_Example_instruction: texto
       MC Agent Freeplay_instruction: "**Jogo livre:**  É hora de explorar sozinho!"
       MC HOC 2016 Level 10_instruction: Está na hora de criares o teu próprio Minecraft! Gera criaturas e depois faz com que elas façam o que tu quiseres. Diverte-te!
       MC HOC 2016 Level 2-2_instruction: A galinha não se mexe. Coloca blocos de "mover" e "virar" na vaga de "quando gerado" para conseguires que ela se mova.
@@ -942,6 +956,7 @@ pt:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "É hora da atividade livre,\ndivirta-se com todos os blocos da sua caixa de ferramentas."
       NEW Course 4 Play Labs For Loops 8a_instruction: "Desafio: como você\nusaria o \"laço para\" para fazer cada ator andar e dizer seu número de ator,\ne então sumir da tela? "
       New Artist Project_instruction: "Desenhe algo incrível! Seu código é salvo\ncomo um projeto e você pode retornar a ele a qualquer momento."
+      New Bounce Project_instruction: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual e todas as regras. Quando terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus celulares.
       New Course 4 Artist Functions Level 4_instruction: "Use a função \"desenhe um quadrado\"\npara desenhar esse padrão."
       New Gumball Project_instruction: Crie o que quiser e compartilhe!
       New Ice Age Project_instruction: Crie o que quiser e compartilhe!
@@ -1012,6 +1027,7 @@ pt:
       bounce_11_instruction: Agora você pode conectar blocos ao bloco "quando o jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e veja quantos pontos você pode marcar antes de seu oponente marcar duas vezes.
       bounce_11_2018_instruction: Agora você pode conectar blocos ao bloco "quando o jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e veja quantos pontos você pode marcar antes de seu oponente marcar duas vezes.
       bounce_12_instruction: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual e todas as regras. Quando terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus celulares.
+      bounce_12_2018_instruction: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual e todas as regras. Quando terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus celulares.
       bounce_1_2018_instruction: Conecte um bloco ao bloco "quando clicar na seta para a esquerda" e clique em "Executar". Mova a raquete usando a seta para a esquerda para alcançar o objetivo final.
       bounce_2_instruction: Conecte um bloco aos blocos "quando clicar na seta para a direita" e "quando clicar na seta para a esquerda". Mova a raquete para alcançar ambos os objetivos finais.
       bounce_2_2018_instruction: Conecte um bloco aos blocos "quando clicar na seta para a direita" e "quando clicar na seta para a esquerda". Mova a raquete para alcançar ambos os objetivos finais.
@@ -1062,6 +1078,7 @@ pt:
       courseD_bee_nestedLoops8_2018_instruction: "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado."
       courseD_bounce_events10_instruction: Agora há um alvo na parte de cima. Conecte os blocos "marque um ponto" e "marque um ponto para o oponente" aos blocos "quando a bola atingir o alvo" e "quando a bola não acertar a raquete" para fazer um jogo. Veja quantos pontos você consegue marcar antes que seu oponente marque duas vezes.
       courseD_bounce_events11_instruction: Agora você pode conectar blocos ao bloco "quando o jogo começa". Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar. Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e veja quantos pontos você pode marcar antes de seu oponente marcar duas vezes.
+      courseD_bounce_events12_instruction: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual e todas as regras. Quando terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus celulares.
       courseD_bounce_events2_instruction: Conecte um bloco aos blocos "quando clicar na seta para a direita" e "quando clicar na seta para a esquerda". Mova a raquete para alcançar ambos os objetivos finais.
       courseD_bounce_events3_instruction: Agora, tente algo semelhante com o bloco "quando clicar na seta para cima". Mova a raquete o objetivo final no topo.
       courseD_bounce_events3s_instruction: Agora, tente algo semelhante com o bloco "quando clicar na seta para cima". Mova a raquete o objetivo final no topo.
@@ -1120,7 +1137,7 @@ pt:
       frozen diamond mini snowflake_instruction: "Você sabia que cada floco de neve tem\numa forma diferente? Vamos criar um novo floco de neve usando o bloco \"repita\"\npara repetir um paralelogramo 4 vezes, virando 90 graus à direita entre cada\nparalelogramo."
       frozen diamond snowflake_instruction: "Agora, vamos criar um novo floco de neve\nusando o bloco repita para repetir um paralelogramo 10 vezes, virando 36 graus\nà direita entre cada um."
       frozen diamond_instruction: Use uma repetição em torno desses blocos para criar um paralelogramo. É como um retângulo mas tem ângulos diferentes. Este tem ângulos de 60 graus e 120 graus em vez de todos os ângulos de 90 graus.
-      frozen freeplay_instruction: "Você se tornou oficialmente um artista mestre! Crie\num país das maravilhas de gelo."
+      frozen freeplay_instruction: "Você se tornou oficialmente um artista mestre!\nCrie um país das maravilhas de gelo."
       frozen line_instruction: Olá! Chamo-me Elsa Arendelle. Podes ajudar-me a criar uma reta?
       frozen perpendicular_instruction: "Agora, vamos ver se podemos criar duas retas\nque formam um ângulo de 90 graus entre si. Você vai precisar usar o bloco \"vire\"\ne também o bloco \"mova\"."
       frozen snowflake branch_instruction: "Tente usar o bloco \"crie um floco de neve do tipo ramificado”\npara criar três ramificações, o que começa a parecer um floco de neve."
@@ -1240,13 +1257,18 @@ pt:
       grade3_robotFarmer_ConditionalsIntro_6_instruction: Remove todos os montes de terra, usando o mínimo de blocos quanto possível. As novas opções no menu pendente do bloco "enquanto" dizem-me se estou em cima do monte ou do buraco.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Ajuda-me a tapar estes buracos com 5 pazadas de terra. Dica: Podes colocar um bloco "repetir" dentro de um bloco "enquanto".'
       grade4_arist_nested_loop_circles1_instruction: "Use um laço aninhado para completar\no design."
+      grade4_arist_nested_loop_flags1_instruction: Repita o código dado para criar um moinho de vento.
       grade4_arist_nested_loop_polygons1_instruction: "Repita esse design 10 vezes. Quanto\nvocê precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)"
       grade4_arist_nested_loop_polygons2_instruction: "Repita esse design 6 vezes. Quanto\nvocê precisa virar a cada repetição? (Dica: quanto é 360 dividido por 6?)"
+      grade4_arist_nested_loop_squares1_instruction: "Você pode desenhar esses 10 quadrados dessa\ncalçada usando um laço aninhado? Cada quadrado tem 30 pixels."
       grade4_arist_nested_loop_triangles2_instruction: "Agora, aninhe esse laço dentro de outro laço para desenhar\n10 triângulos. Isso se chama laço aninhado. Dica: todos os 10 triângulos completam\numa rotação de 360 graus."
+      grade4_arist_nested_loop_triangles3_instruction: "Você pode desenhar um hexágono repetindo o\ncódigo do triângulo?"
+      grade4_arist_nested_loop_triangles4_instruction: Desenhe o dente na boca do crocodilo!
       grade4_arist_nested_loop_triangles5_instruction: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
         
+      grade4_arist_nested_loop_triangles6_instruction: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_functions1_instruction: "Olá. Mim artista zumbi. Mim ama desenhar!\nMe ajude a desenhar os óculos quadrados. Dica: a haste entre as lentes é\n25 pixels menor que o comprimento do quadrado."
       grade4_artist_functions2_instruction: "As funções permitem que você defina novos blocos! Movemos\nos blocos para desenhar um quadrado para dentro de uma função chamada \"desenhe um quadrado\".\nVocê consegue usar a função \"desenhe um quadrado\" para criar os óculos? Os quadrados são separados\npor 75 pixels."
       grade4_artist_nestedLoops_challenge_instruction: |-
@@ -1254,11 +1276,15 @@ pt:
         o que quiser.
       grade4_artist_nestedLoops_challenge2_instruction: "Agora um desafio!  Temos aqui um design que\nusa apenas blocos que já foram mostrados. Você consegue descobrir como\nrecriá-lo sem usar qualquer informação extra? Dica: fique à vontade para usar tentativa\ne erro. Não esperamos que você seja perfeito na primeira vez."
       grade4_artist_nested_loop_circles1_instruction: "Use um laço aninhado para completar\no design."
+      grade4_artist_nested_loop_flags1_instruction: Repita o código dado para criar um moinho de vento.
       grade4_artist_nested_loop_polygons1_instruction: "Repita esse design 10 vezes. Quanto\nvocê precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)"
+      grade4_artist_nested_loop_squares1_instruction: "Você pode desenhar esses 10 quadrados dessa\ncalçada usando um laço aninhado? Cada quadrado tem 30 pixels."
+      grade4_artist_nested_loop_triangles1_instruction: "Complete o código para desenhar esses triângulos. O\nprimeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus."
       grade4_artist_nested_loop_triangles5_instruction: |-
         Crie um sol aninhando o código inicial
         dentro de outro laço. Chamamos isso de laço aninhado.\r
         
+      grade4_artist_nested_loop_triangles6_instruction: "Você pode desenhar esses 36 triângulos usando\num laço aninhado?"
       grade4_artist_parameters_squares1_instruction: "Clique em \"editar\" para preencher a definição\nda função \"desenhe um quadrado\" e adicionar um parâmetro. Ela deve receber um parâmetro\ncomprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75\npixels de comprimento e separados por 100 pixels cada."
       grade4_artist_parameters_triangles2_instruction: "Você percebe algo diferente\nsobre esses blocos de função? Clique em \"Executar\" para ver o que acontece."
       grade4_artist_parameters_triangles2b_instruction: "Você consegue completar este desenho? Dica:\ncada triângulo é 25 pixels maior que o anterior. O primeiro triângulo tem 25\npixels."
@@ -1280,7 +1306,7 @@ pt:
       grade4_bee_nestedLoops1_instruction: "Colete todo o néctar de cada flor.\nUse um laço aninhado."
       grade4_bee_nestedLoops3_instruction: "Colete todo o néctar criando\num laço aninhado."
       grade4_bee_nestedLoops4_instruction: "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado."
-      grade4_frozen_freeplay_instruction: "Você se tornou oficialmente um artista mestre! Crie\num país das maravilhas de gelo."
+      grade4_frozen_freeplay_instruction: "Você se tornou oficialmente um artista mestre!\nCrie um país das maravilhas de gelo."
       grade4_frozen_functions0_instruction: Consegues descobrir qual o número que substitui os pontos de interrogação para que possas desenhar um círculo?
       grade4_frozen_functions1a_instruction: "Use o novo bloco \"crie um círculo\" para\ncriar 10 círculos sobrepostos. Não se esqueça de avançar entre os círculos."
       grade4_frozen_functions2_instruction: "Agora vamos criar 20 círculos\nsobrepostos, virando 18 graus entre cada círculo."
@@ -1421,8 +1447,10 @@ pt:
       level 'grade3_Loops_8_instruction: "Use um laço para coletar o néctar e produzir o\nmel."
       level 'grade3_Loops_9_instruction: "Colete o néctar de cada flor e produza mel\nem cada colmeia."
       level grade3_Loops_2_instruction: "Você consegue realizar a mesma tarefa mais facilmente\ncom um laço?"
+      scrat 16 (copy 1)_instruction: "Bolota! Bolota! Bolota! Use um bloco \"se\" para me levar até lá\ncom o menor número de blocos."
       scrat 16_instruction: "Bolota! Bolota! Bolota! Use um bloco \"se\" para me levar até lá\ncom o menor número de blocos."
       scrat 17_instruction: "Ok, vamos fazer novamente para pegar a prática - este não é\nmuito diferente, mas cuidado com a parede!"
+      scrat 18 (copy 1)_instruction: "Os blocos \"se-senão\" verificam uma condição e, em seguida,\nfazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco."
       scrat 18_instruction: "Os blocos \"se-senão\" verificam uma condição e, em seguida,\nfazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco."
       scrat 19 (copy 1)_instruction: Pratica mais uma vez o bloco "se-senão", consegues à primeira tentativa?
       scrat 19_instruction: "Vamos praticar o uso do bloco \"se-senão\" mais uma vez. Você consegue\nacertar na primeira tentativa?"
