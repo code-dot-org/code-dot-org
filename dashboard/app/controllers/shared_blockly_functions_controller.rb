@@ -26,8 +26,7 @@ class SharedBlocklyFunctionsController < ApplicationController
   private
 
   def load_block_pool
-    @@level ||= Level.find_by_key('New Sprite Lab Project')
-    @block_pool = @@level.shared_blocks
+    @block_pool = Block.for('Gamelab', 'Dancelab', 'Vanilla')
   end
 
   def create_params
