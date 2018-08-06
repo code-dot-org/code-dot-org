@@ -26,7 +26,7 @@ class AccountPurger
 
   # Purge information for an individual user account.
   def purge_data_for_account(_user)
-    raise StandardError.new('Not implemented') unless @dry_run
+    raise 'Not implemented' unless @dry_run
   end
 
   # Purge all information associated with an email address.
@@ -34,6 +34,6 @@ class AccountPurger
   # associate with that email address, along with some additional logic to
   # ensure the email is removed from mailing lists, etc.
   def purge_data_for_email(_email)
-    raise StandardError.new('Not implemented') unless @dry_run
+    raise 'Not implemented' unless @dry_run
   end
 end
