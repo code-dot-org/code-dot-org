@@ -113,6 +113,7 @@ km:
     field_is_required: "ត្រូវការ"
     accept_terms: "អ្នកត្រូវតែយល់ព្រមជាមុនដើម្បីបង្កើតគណនេយ្យមួយ"
     error: "មានកំហុសមួយ"
+    email_preference_privacy: "(សូមមើលគោលនយោបាយឯកភាពរបស់យើងខ្ញុំ)"
     email_preference_yes: "យល់ព្រម"
     email_preference_no: "ទេ"
   school_info:
@@ -357,9 +358,9 @@ km:
     online: ប្រព័ន្ធអ៊ីនធើណែត
     see_details: មើលសេចក្តីលម្អិត
     view_course: មើលបន្ថែមអំពីមុខវិជ្ជា
-    trynow: 'សាកល្បង​ឥឡូវ'
+    trynow: 'រៀនបន្ថែមទៀត'
     announcement_learn_more_button: "សិក្សាបន្ថែម"
-    announcement_try_now_button: "សាកល្បង​ឥឡូវ"
+    announcement_try_now_button: "រៀនបន្ថែមទៀត"
     announcement_watch_video_button: "មើលវីដេអូ"
     announcement_petition_button: "ដាក់បញ្ចូលឈ្មោះរបស់អ្នក"
     announcement_apply_now: "ចូលរួមឥលូវនេះ"
@@ -462,24 +463,18 @@ km:
     save: "រក្សា​ទុក"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "ផ្សេងៗ"
-      - 
+      other: "ផ្សេងៗ"
     submit: "ដាក់ស្នើរ"
   project:
+    projects: "គម្រោង"
     save: "រក្សា​ទុក"
     delete: "លុប"
-    import: "ទាញយក"
+    import: "នាំចូល"
     share_link_import_bad_link_header: "អត់ស្គាល់តំណដែលបានចែកចាយ"
     share_link_import_bad_link_body: "យើងមិនអាចទាញយកតំណដែលបានចែកចាយទេ។ ប្រាកដថាអ្នកបានប្រើប្រាស់តំណចេញពីហ្គេម Minecraft: Agent puzzle ហើយត្រូវច្បាស់ថាតំណពេញលេញ។"
     share_link_import_error_header: "មានកំហុសមួយចំនួន។"
     share_link_import_error_body: "មានបញ្ហាក្នុងការទាញយកតំណដែលបានចែកចាយ។ សូមព្យាយាមម្តងទៀត។"
+    project_gallery: "គម្រោង"
     share: "ចែក​រំលែក"
     more: "ផ្សេង​ទៀត"
     name: "ឈ្មោះ"
@@ -505,7 +500,7 @@ km:
         none: 'សម្រេច​ចិត្ត​មិន​ឆ្លើយ'
       subjects:
         cs: 'វិទ្យាសាស្ត្រ​កុំព្យូទ័រ'
-        math: 'គណិតវិទ្យា'
+        math: 'គណិត​វិទ្យា'
         science: 'វិទ្យាសាស្រ្ត'
         la: 'អក្សរសាស្រ្ត'
       email_opt_in:
