@@ -52,9 +52,9 @@ pt-BR:
     placeholder: 'Digite sua dica aqui'
     submit: 'Adicionar dica'
   appname: "Code.org"
-  stage: "fase"
+  stage: "Fase"
   stage_number: "Fase %{number}"
-  puzzle: "Quebra-cabeça"
+  puzzle: "Desafio"
   trophies: "troféus"
   courses: 'percursos'
   courses_page:
@@ -108,7 +108,7 @@ pt-BR:
     birthday: 'Aniversário (opcional)'
     age: 'Idade'
     user_type: 'Você é um aluno ou professor?'
-    submit: 'Inscreva-se'
+    submit: 'Registrar'
     teacher: 'Você é um professor?'
     valid_username: "Disponível!"
     invalid_username: "O nome de usuário deve ter ao menos 5 caracteres"
@@ -180,7 +180,7 @@ pt-BR:
     reset_form:
       title: 'Esqueceu sua senha?'
       instructions: "Insira seu endereço de e-mail abaixo para enviarmos as instruções de redefinição de senha."
-      email: 'Endereço de email'
+      email: 'Endereço de e-mail'
       submit: 'Enviar'
     reset_errors:
       captcha_required: 'Por favor, preencha o CAPTCHA para redefinir sua senha.'
@@ -204,6 +204,7 @@ pt-BR:
     student_associated_subject: 'Informações de login para Code.org'
   teacher_mailer:
     new_teacher_subject: 'Bem-vindo à Code.org!'
+    delete_teacher_subject: 'Notificação Code.org: Sua conta foi deletada'
   section:
     your_section:
       one: 'Sua turma:'
@@ -380,6 +381,8 @@ pt-BR:
     create_personal_login_email_note: "Nota: Os endereços de E-mail não são armazenados de forma que nos permita permita entrar em contato com os alunos. Os alunos nunca irão receber e-mails do Code.org exceto para recuperação de senha. Consulte nossa <a href='%{privacy_policy_url}', target='_blank'>política de privacidade</a> para obter mais informações."
     enter_new_login_info: 'Digite sua nova conta individual'
     confirm_secret_words: 'Confirme que é você ao digitar suas palavras secretas atuais'
+    parent_email_label: "Email do Pai/guardião (opcional)"
+    parent_email_hint: "(isto pode ser usado para recuperar a senha)"
     enter_parent_email: "Insira o E-Mail dos pais ou responsável legal (para recuperação de senha)"
     update: "Atualizar Conta"
     account_successfully_updated: "Conta atualizada com sucesso."
@@ -402,7 +405,7 @@ pt-BR:
     teacher_student_count: Você tem %{count} alunos.
     teacher_averages: Em média, seus alunos ganharam %{trophy_average} dos %{trophy_max} troféus de "Domínio de Conceito" existentes.
     teacher_print_certificates: 'Imprima certificados para os alunos que terminarem esse curso'
-    teacher_read_blog: Leia sobre notícias e atualizações nos materiais disponíveis em nosso Blog do Professor
+    teacher_read_blog: Leia sobre notícias e atualizações em nossos materiais no nosso Blog do Professor
     classroom: Sua turma
     student_progress: Seu progresso de aprendizagem
     student_stats: Você ganhou %{trophy_count} dos %{trophy_max} troféus de "Domínio de Conceitos" disponíveis.
@@ -735,22 +738,7 @@ pt-BR:
     title: "Opcional: Ajude-nos a acompanhar nosso progresso no aumento de diversidade na ciência da computação"
     message: "Diga-nos qual é sua raça (marque todas as opções aplicáveis)"
     races:
-      - 
-        white: "Branco"
-      - 
-        black: "Negro ou Afro-americano"
-      - 
-        hispanic: "Hispânico ou Latino"
-      - 
-        asian: "Asiático"
-      - 
-        hawaiian: "Nativo do Havaí ou de outra ilha do Pacífico"
-      - 
-        american_indian: "Índio Americano/Nativo do Alaska"
-      - 
-        other: "Outros"
-      - 
-        opt_out: "Prefiro não responder"
+      other: "Outros"
     submit: "Enviar"
     decline: "Fechar"
   zendesk_too_young_message: 'Desculpe, usuários mais jovens não podem se inscrever em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a> sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em contato conosco.'

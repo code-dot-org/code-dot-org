@@ -113,7 +113,7 @@ pt-BR:
         title: Caça-sóis funcionais
         desc: Os alunos criam um algoritmo com variáveis e funções (trechos de código que você usa várias vezes) para criar caça-sóis usando fios e contas.
       SongwritingParameters:
-        title: Composição de música com parâmetros
+        title: Composição
         desc: Os alunos usam o conceito de refrão em uma música para aprender sobre a passagem de parâmetros (os quais personalizam uma função sem a necessidade de reescrevê-la).
       DiceRace:
         title: 'Algoritmos da via real: jogo de dados'
@@ -214,10 +214,10 @@ pt-BR:
         title: Pulseiras binárias
         desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
       courseD_unplugged_graphPaperProgramming:
-        title: Programação em Papel Quadriculado
+        title: Programação em papel quadriculado
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
       courseD_unplugged_relayProgramming:
-        title: Programação Relay
+        title: Programação por revezamento
         desc: Os alunos participam de uma corrida de revezamento na qual devem atravessar o pátio para escrever um algoritmo baseado em uma imagem em "papel quadriculado de programação". Eles só podem escrever uma instrução por vez, e, se houver um erro em algum lugar, eles têm que apagar e refazer os passos a partir daquele ponto.
       courseD_unplugged_conditionalsCards:
         title: Condicionais com cartas
@@ -238,7 +238,7 @@ pt-BR:
         title: Crowdsourcing
         desc: Os alunos usam o crowdsourcing, uma técnica comum de resolução de problemas em ciência da computação, para concluir uma tarefa juntos, em sala de aula, de maneira mais eficiente do que se um aluno tentasse resolver sozinho.
       courseE_unplugged_songwriting:
-        title: Composição de música com parâmetros
+        title: Composição
         desc: Os alunos usam o conceito de refrão em uma música para aprender sobre a passagem de parâmetros (os quais personalizam uma função sem a necessidade de reescrevê-la).
       courseF_unplugged_tangrams:
         title: Algoritmos do tangram
@@ -271,13 +271,13 @@ pt-BR:
         title: Navegando com segurança
         desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram como navegar em segurança pela Internet.
       courseA_unplugged_loops_2018:
-        title: Repetições off-line
+        title: Loops off-line
         desc: Nesta aula, você vai aprender mais sobre os laços!
       BigEvent_2018:
         title: O grande evento
         desc: Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.
       GraphPaperProgramming_2018:
-        title: Programação em Papel Quadriculado
+        title: Programação em papel quadriculado
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
       courseD_unplugged_digitalCitizenship_2018:
         title: Atividade off-line
@@ -306,4 +306,4 @@ pt-BR:
       MoveItMoveIt_2018:
         title: Criando caminhos
       RelayProgramming_2018:
-        title: Programação Relay
+        title: Programação por revezamento

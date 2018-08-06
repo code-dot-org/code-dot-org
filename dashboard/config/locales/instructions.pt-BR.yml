@@ -11,8 +11,8 @@ pt-BR:
       2-3 Artist 12_instruction: "Crie um círculo para terminar o globo ocular!\r\n\r\nSe\no
         artista virar 1 grau com cada laço, quantas vezes você precisará repetir\no
         código para desenhar um círculo? 180? 360? 500?"
-      2-3 Artist 2 new_instruction: "Esta casa tem uma parede inacabada. Cada lado\ntem
-        100 pixels de comprimento, mas a parede inacabada tem apenas 50. Complete
+      2-3 Artist 2 new_instruction: "Esta casa tem uma parede inacabada. Cada lado
+        tem\n100 pixels de comprimento, mas a parede inacabada tem apenas 50. Complete
         a parede. "
       2-3 Artist 2_instruction: "Esta casa tem uma parede inacabada. Cada lado tem\n100
         pixels de comprimento, mas a parede inacabada tem apenas 50. Complete a parede. "
@@ -414,11 +414,11 @@ pt-BR:
         Estou com fome, leve-me até a flor! Quantas vezes
         você precisa repetir um bloco?
       2-3 Maze 12 (copy 1)_instruction: |-
-        Você pode substituir a resposta anterior por
-        apenas dois blocos? (Dica: crie um laço usando um bloco "repita vezes")
+        Você pode substituir a resposta anterior por apenas dois
+        blocos? (Dica: crie um laço usando um bloco "repita vezes")
       2-3 Maze 12 (copy 2)_instruction: |-
-        Você pode substituir a resposta anterior por
-        apenas dois blocos? (Dica: crie um laço usando um bloco "repita vezes")
+        Você pode substituir a resposta anterior por apenas dois
+        blocos? (Dica: crie um laço usando um bloco "repita vezes")
       2-3 Maze 12 (old)_instruction: |-
         Leve-me até o porco, agora com o bloco repita
         vezes!
@@ -471,8 +471,8 @@ pt-BR:
       2-3 Maze Loops 19_instruction: "Vamos subir o nível! \r\nUse\nlaços para me
         levar até o girassol com o menor número de laços possível."
       2-3 Maze Loops 20_instruction: |-
-        Leve-me até o girassol usando o menor número
-        possível de blocos!
+        Você pode resolver esse desafio usando o menor número
+        possível de blocos?
       2-3 Maze Loops 21_instruction: |-
         Leve-me até o girassol usando o menor número possível
         de blocos!
@@ -505,8 +505,8 @@ pt-BR:
       2-3 maze sq13_instruction: |-
         Querida pessoa. Mim zumbi. Deve... chegar... girassol.
         Crie um laço com o bloco "repita até".
-      2-3 maze sq14_instruction: Você pode chegar até o girassol usando apenas quatro
-        blocos?
+      2-3 maze sq14_instruction: Você consegue chegar até o girassol usando apenas
+        quatro blocos?
       2-3 maze sq15_instruction: Você pode chegar até o girassol usando apenas blocos?
       2-3 maze sq16_instruction: |-
         Ok, isso é parecido, mas um pouco diferente. Você pode
@@ -557,8 +557,9 @@ pt-BR:
       20hr_maze_stage2_18_instruction: O bloco "se-senão" verifica uma condição e,
         em seguida, faz uma coisa OU outra. Para me levar ao girassol, tente usar
         esse novo bloco.
-      20hr_maze_stage2_19_instruction: Vamos praticar o uso do bloco "se-senão" mais
-        uma vez, você consegue na primeira tentativa?
+      20hr_maze_stage2_19_instruction: |-
+        Vamos praticar o uso do bloco "se-senão" mais uma vez. Você consegue
+        acertar na primeira tentativa?
       20hr_maze_stage2_2_instruction: Esse porco está me deixando nervoso. Me ajude
         a encontrá-lo!
       20hr_maze_stage2_20_instruction: Você consegue usar apenas 3 blocos para me
@@ -767,8 +768,8 @@ pt-BR:
         Esse diamante tem lados de 50 pixels e ângulos
         de 120 e 60 graus. Use um laço para desenhá-lo.
       4-5 Artist Patterns 5.5_instruction: |-
-        Quantas vezes você precisa repetir
-        esse bloco para desenhar toda a grade de diamantes?
+        Quantas vezes você precisa repetir esse
+        bloco para desenhar toda a grade de diamantes?
       4-5 Artist Patterns 5_instruction: "Repita este código para fazer uma fileira
         de 6 diamantes.\n\r\n\r\nPerceba que alteramos nosso código do diamante para
         repetir 3 vezes ao invés\nde 2 - por que você acha que fizemos isso?\r\n"
@@ -805,9 +806,8 @@ pt-BR:
         se há uma flor atrás da nuvem, e só colete néctar se houver
         uma flor. Cuidado, isso pode mudar!
       4-5 Bee Conditionals 2 (copy 1)_instruction: |-
-        Agora a abelha só quer néctar.
-        Lembre-se, nem todos os objetos são flores, então faça a verificação para coletar néctar apenas
-        das flores.
+        Agora a abelha só quer néctar. Lembre-se, nem
+        todos os objetos são flores, então faça a verificação para coletar néctar apenas das flores.
       4-5 Bee Conditionals 2_instruction: "Mais nuvens! \r\n\r\nProcure atrás\nde
         todas as nuvens para ver se elas escondem alguma flor antes de coletar o néctar.
         \ \r\n\r\nLembre-se:\nNem todas as nuvens escondem alguma coisa!"
@@ -892,7 +892,9 @@ pt-BR:
       4-5 Maze 1 (copy 1)_instruction: |-
         Querida pessoa. Mim zumbi. Precisa... chegar...
         girassol.
-      4-5 Maze 1_instruction: Querida pessoa. Mim zumbi. Deve... chegar... girassol.
+      4-5 Maze 1_instruction: |-
+        Querida pessoa. Mim zumbi. Precisa... chegar...
+        girassol.
       4-5 Maze 10_instruction: Você consegue chegar até o girassol usando apenas quatro
         blocos?
       4-5 Maze 11_instruction: Você pode chegar até o girassol usando apenas seis
@@ -905,21 +907,23 @@ pt-BR:
       4-5 Maze 2 (copy 1)_instruction: |-
         Leve o zumbi até o girassol, mas desvie
         da carnívora!
-      4-5 Maze 2_instruction: Leve o zumbi até o girassol, mas desvie da carnívora!
+      4-5 Maze 2_instruction: |-
+        Leve o zumbi até o girassol, mas desvie
+        da carnívora!
       4-5 Maze 3 (copy 1)_instruction: Precisa... chegar... girassol.
       4-5 Maze 3_instruction: Precisa... chegar... girassol.
       4-5 Maze 4 (copy 1)_instruction: Experimente o bloco "repita" para usar menos
         blocos...
       4-5 Maze 4_instruction: Experimente o bloco "repita" para usar menos blocos...
       4-5 Maze 5 (copy 1)_instruction: |-
-        Você pode resolver esse desafio usando o menor
-        número possível de blocos?
+        Você pode resolver esse desafio usando o menor número
+        possível de blocos?
       4-5 Maze 5_instruction: |-
         Você pode resolver esse desafio usando o menor número
         possível de blocos?
       4-5 Maze 6 (copy 1)_instruction: |-
-        Você pode resolver esse desafio usando o menor
-        número possível de blocos?
+        Você pode resolver esse desafio usando o menor número
+        possível de blocos?
       4-5 Maze 6_instruction: |-
         Você pode resolver esse desafio usando o menor número
         possível de blocos?
@@ -1190,11 +1194,10 @@ pt-BR:
         Uma demonstração do projeto Grande Jogo da Álgebra em CC
         completo
       Big Game Vars 1 (copy 1)_instruction: |-
-        Vamos começar o seu Grande Jogo!
-        Aqui você vai ver um monte de trechos de código para reservar espaço que você eventualmente
-        vai substituir pelo seu próprio código, mas por enquanto vamos nos preocupar somente
-        em definir as variáveis. Clique em "Executar" para ver como é o jogo com os
-        valores-padrão.
+        Vamos começar o seu Grande Jogo! Aqui você vai
+        ver um monte de trechos de código para reservar espaço que você eventualmente vai substituir
+        pelo seu próprio código, mas por enquanto vamos nos preocupar somente em definir as variáveis.
+        Clique em "Executar" para ver como é o jogo com os valores-padrão.
       Big Game Vars 1_instruction: |-
         Vamos começar o seu Grande Jogo! Aqui você vai
         ver um monte de trechos de código para reservar espaço que você eventualmente vai substituir
@@ -1572,8 +1575,8 @@ pt-BR:
         Também podemos definir variáveis usando outras variáveis.
         Vamos supor que você tenha um irmão que é dois anos mais novo que você - você pode
         definir uma nova variável "idade-irmão" usando sua variável "idade"?
-      Code Studio Puzzle Challenge 1 - Artist_instruction: "Desenhe a reta. Ela tem\n200
-        pixels de comprimento. "
+      Code Studio Puzzle Challenge 1 - Artist_instruction: "Desenhe a reta. Ela tem
+        200\npixels de comprimento. "
       Code Studio Puzzle Challenge 1 Artist1_instruction: "Desenhe a reta. Ela tem
         200\npixels de comprimento. "
       Code Studio Puzzle Challenge 10 - Bee (copy 1)_instruction: |-
@@ -1589,8 +1592,8 @@ pt-BR:
         Desenhe essa reta usando
         a variável "comprimento". Cada segmento de reta tem 75 pixels de comprimento.
       Code Studio Puzzle Challenge 11b - Artist_instruction: |-
-        Desenhe um quadrado usando
-        a variável comprimento fornecida.
+        Desenhe um quadrado
+        usando a variável comprimento fornecida.
       Code Studio Puzzle Challenge 12 - Artist_instruction: |-
         O código fornecido desenha
         um triângulo. Faça uma adição para que ele desenhe triângulos em um padrão de hexágono.
@@ -1613,8 +1616,8 @@ pt-BR:
         Desenhe o octógono. Cada
         lado tem 100 pixels de comprimento.
       Code Studio Puzzle Challenge 5 - Bee (copy 1)_instruction: |-
-        Mova a abelha até
-        a flor e colete o néctar.
+        Mova a abelha até a flor
+        e colete o néctar.
       Code Studio Puzzle Challenge 5 - Bee_instruction: |-
         As flores contêm uma quantidade
         específica de néctar. Mova a abelha até a flor e colete o néctar com o bloco
@@ -1635,8 +1638,8 @@ pt-BR:
         reta. Cada segmento tem 100 pixels de comprimento. "
       Code Studio Puzzle Challenge Artist Screencast 2_instruction: "Complete o\ncódigo
         para desenhar a reta. Cada segmento tem 100 pixels de comprimento. "
-      Code Studio Puzzle Challenge Artist Screencast_instruction: "Desenhe a reta.\nCada
-        segmento tem 100 pixels. "
+      Code Studio Puzzle Challenge Artist Screencast_instruction: "Desenhe\na reta.
+        Cada segmento tem 100 pixels de comprimento. "
       Code Studio Puzzle Challenge Bee Screencast_instruction: |-
         Mova a abelha até as
         flores e pegue todo o néctar.
@@ -2114,8 +2117,8 @@ pt-BR:
         Use a variável "contador" do seu laço "para"
         para controlar a distância do movimento horizontal.
       Course 4 Bee For Loops 8_instruction: |-
-        Você pode usar a variável do laço para controlar
-        o movimento e a coleta de néctar?
+        Você pode usar a variável do laço para
+        controlar o movimento e a coleta de néctar?
       Course 4 Bee For Loops 9_instruction: |-
         O último número em seu laço para é
         chamado de "incremento" e, a cada execução do laço, a variável contador
@@ -2165,31 +2168,28 @@ pt-BR:
         Vamos começar do princípio - você pode criar
         uma nova função chamada "obtenha 5 néctares" com um parâmetro de direção?
       Course 4 Bee Params 6 (copy 1)_instruction: |-
-        Tente usar sua nova função para
-        coletar todo o néctar.
+        Tente usar sua nova função para coletar
+        todo o néctar.
       Course 4 Bee Params 6_instruction: |-
         Não seria legal se pudéssemos coletar
         todo o néctar com uma única função? Tente adicionar um novo parâmetro
         à função chamado "unidades de néctar" para controlar a quantidade de néctar a coletar.
         Você provavelmente vai querer renomear a função também!
       Course 4 Bee Params 7 (copy 1)_instruction: |-
-        Tente usar sua nova função para
-        coletar todo o néctar.
+        Tente usar sua nova função para coletar
+        todo o néctar.
       Course 4 Bee Params 7_instruction: |-
         Tente usar sua nova função para coletar
         todo o néctar.
       Course 4 Bee Params 8 Clone 2_instruction: |-
-        Ah, agora também precisamos lidar
-        com mel! Como você poderia atualizar sua função para coletar néctar ou produzir
-        mel?
+        Ah, agora também é preciso lidar com o
+        mel! Como você poderia atualizar sua função para coletar néctar ou produzir mel?
       Course 4 Bee Params 8 Clone_instruction: |-
-        Ah, agora também precisamos lidar
-        com mel! Como você poderia atualizar sua função para coletar néctar ou produzir
-        mel?
+        Ah, agora também é preciso lidar com o
+        mel! Como você poderia atualizar sua função para coletar néctar ou produzir mel?
       Course 4 Bee Params 8 clone 3_instruction: |-
-        Ah, agora também precisamos lidar
-        com mel! Como você poderia atualizar sua função para coletar néctar ou produzir
-        mel?
+        Ah, agora também é preciso lidar com o
+        mel! Como você poderia atualizar sua função para coletar néctar ou produzir mel?
       Course 4 Bee Params 8 new_instruction: |-
         Ah, agora também é preciso lidar com o
         mel! Como você poderia atualizar sua função para coletar néctar ou produzir mel?
@@ -2199,8 +2199,8 @@ pt-BR:
         número de unidades de néctar. Como você usaria esses números para decidir o que
         fazer?
       Course 4 Bee Params Ex_instruction: |-
-        Tente usar sua nova função para
-        coletar todo o néctar.
+        Tente usar sua nova função para coletar
+        todo o néctar.
       Course 4 Binary 1_instruction: |-
         Temos aqui uma função que recebe uma string binária
         de 1's e 0's e instrui a fazendeira a se mover da esquerda para a direita,
@@ -2213,20 +2213,20 @@ pt-BR:
         Você pode desenhar esse padrão repetindo uma única
         string binária?
       Course 4 Binary 5 (copy 1)_instruction: |-
-        Qual string binária, repetida 10 vezes,
-        vai desenhar essa imagem?
+        Qual string binária, repetida 10 vezes, vai
+        desenhar essa imagem?
       Course 4 Binary 5_instruction: |-
         Qual string binária, repetida 10 vezes, vai
         desenhar essa imagem?
       Course 4 Binary 6 (copy 1)_instruction: |-
-        Qual string binária, repetida 10 vezes,
-        vai desenhar essa imagem?
+        Qual string binária, repetida 10 vezes, vai
+        desenhar essa imagem?
       Course 4 Binary 6_instruction: |-
-        Qual string binária, repetida 10 vezes,
-        vai desenhar essa imagem?
+        Qual string binária, repetida 10 vezes, vai
+        desenhar essa imagem?
       Course 4 Binary 7_instruction: |-
-        Qual string binária, repetida 10 vezes,
-        vai desenhar essa imagem?
+        Qual string binária, repetida 10 vezes, vai
+        desenhar essa imagem?
       Course 4 Binary 8_instruction: |-
         Você pode completar a maior parte dessa imagem
         repetindo um número binário de 5 bits - então você vai precisar de mais um número de 4 bits
@@ -2238,8 +2238,9 @@ pt-BR:
       Course 4 EC 2b_instruction: Sem regras. Sem pistas. Só o desafio!
       Course 4 EC 2c_instruction: Sem regras. Sem pistas. Só o desafio!
       Course 4 EC 2d_instruction: Sem regras. Sem pistas. Só o desafio!
-      Course 4 EC 3_instruction: "Use o que você aprendeu no nível anterior para desenhar\numa
-        imagem como esta. Nota: O código se torna mais simples se você incorporar\nparâmetros. "
+      Course 4 EC 3_instruction: "Use o que você aprendeu no nível anterior\npara
+        desenhar uma imagem como esta. Nota: O código se torna mais simples se você
+        incorporar\nparâmetros. "
       Course 4 EC 3a_instruction: 'Desafio Extremo: Sem regras. Sem pistas. Só o desafio!'
       Course 4 Maze 1_instruction: Leve o Angry Bird até o porco!
       Course 4 Maze 2_instruction: Desvie do TNT!
@@ -2248,11 +2249,11 @@ pt-BR:
         Experimente o bloco "repita" para usar menos blocos
         na resolução deste desafio...
       Course 4 Maze 5_instruction: |-
-        Você pode resolver esse desafio usando o menor
-        número possível de blocos?
+        Você pode resolver esse desafio usando o menor número
+        possível de blocos?
       Course 4 Maze 6_instruction: |-
-        Você pode resolver esse desafio usando o menor
-        número possível de blocos?
+        Você pode resolver esse desafio usando o menor número
+        possível de blocos?
       Course 4 Play Lab For Loops 2_instruction: |-
         Dessa vez, vamos tentar contar
         os números ímpares de 1 até 100.
@@ -2450,8 +2451,8 @@ pt-BR:
         incorporar\nparâmetros. "
       Course 4 SCF 3 Fail 1_instruction: Você consegue descobrir como...
       Course 4 SCF 3 Fail 2_instruction: Você consegue descobrir como...
-      Course 4 SCF 3_instruction: "Use o que você aprendeu no nível anterior para
-        desenhar\numa imagem como esta. Nota: O código se torna mais simples se você
+      Course 4 SCF 3_instruction: "Use o que você aprendeu no nível anterior\npara
+        desenhar uma imagem como esta. Nota: O código se torna mais simples se você
         incorporar\nparâmetros. "
       Course 4 SCFL 1_instruction: |-
         Resolva este desafio usando o menor número
@@ -2604,19 +2605,19 @@ pt-BR:
         "verdadeiro", ele executa o bloco da parte inferior. Atualize a variável "temperatura" para
         que esse bloco retorne "Está certo".
       Eval Cond 2 (copy 1)_instruction: |-
-        Essa condição retorna uma forma diferente
-        com base no valor da variável "lados" - altere o valor de "lados"
-        para que a condição retorne um triângulo.
+        Essa condição retorna uma forma diferente com base no
+        valor da variável "lados" - altere o valor de "lados" para que
+        a condição retorne um triângulo.
       Eval Cond 2_instruction: |-
         Essa condição retorna uma forma diferente com base no
         valor da variável "lados" - altere o valor de "lados" para que
         a condição retorne um triângulo.
       Eval Cond 3 (copy 1)_instruction: |-
-        Você consegue escrever uma condição que verifica
-        a variável "idade" e retorna "idade suficiente para votar e dirigir" se idade >
-        17, "idade suficiente para votar" se idade > 15 e "idade insuficiente para dirigir ou votar" se
-        nenhuma das condições for verdadeira? Dica: a primeira condição a retornar "verdadeiro" ganha
-        - lembre-se de colocar as condições na ordem certa.
+        Você pode escrever uma condição que verifica a variável
+        "idade" e retorna "idade suficiente para votar e dirigir" se idade > 17, "idade suficiente
+        para votar" se idade > 15 e "idade insuficiente para dirigir ou votar" se nenhuma das condições
+        for verdadeira? Dica: a primeira condição a retornar "verdadeiro" ganha - lembre-se de
+        colocar as condições na ordem certa.
       Eval Cond 3_instruction: |-
         Você pode escrever uma condição que verifica a variável
         "idade" e retorna "idade suficiente para votar e dirigir" se idade > 17, "idade suficiente
@@ -2733,9 +2734,9 @@ pt-BR:
         string de números -> imagem, escreva um exemplo - desenhe um retângulo verde sólido que
         tenha altura de 100 pixels.
       Eval Design Recipe 2 (copy 1)_instruction: |-
-        Vamos fazer mais um exemplo antes de
-        escrever a definição da função - dessa vez, desenhe um retângulo vermelho sólido com
-        uma altura de 75 pixels.
+        Vamos fazer mais um exemplo antes de escrever
+        a definição da função - dessa vez, desenhe um retângulo vermelho sólido com uma altura
+        de 75 pixels.
       Eval Design Recipe 2_instruction: |-
         Vamos fazer mais um exemplo antes de escrever
         a definição da função - dessa vez, desenhe um retângulo vermelho sólido com uma altura
@@ -2911,8 +2912,7 @@ pt-BR:
       K-1 Artist1 7_instruction: |-
         Use o bloco pule para se mover sem desenhar. Pule
         e desenhe uma reta.
-      K-1 Artist1 8_instruction: |-
-        Desenhe linhas tracejadas usando os blocos pule e
+      K-1 Artist1 8_instruction: Desenhe linhas tracejadas usando os blocos pule e
         desenhe
       K-1 Artist1 9_instruction: Desenhe e pule para fazer a reta tracejada
       K-1 Artist1 Assessment 1_instruction: Desenhe as retas pequenas e grandes!
@@ -3031,7 +3031,7 @@ pt-BR:
         Leve-me até o porco! O laço "repita" vai
         facilitar as coisas.
       K-1 Maze Loops 2_instruction: Use o bloco "repita" para me levar até o porco!
-      K-1 Maze Loops 3_instruction: Leve-me até o porco! Não deixe de usar laços "repita".
+      K-1 Maze Loops 3_instruction: Leve-me até o porco! Use laços "repita".
       K-1 Maze Loops 4_instruction: Leve-me até o porco!
       K-1 Maze Loops 5_instruction: Leve-me até o porco! Use laços "repita".
       K-1 Maze Loops 6_instruction: Leve-me até o porco! Use laços "repita".
@@ -3058,8 +3058,8 @@ pt-BR:
       K-1 artist 1 level 9_instruction: Faça o desenho usando três retas
       K-1 maze debug 1_instruction: Altere o código para me levar até o porco!
       K-1 maze debug 10_instruction: |-
-        Depure esse nível reorganizando e trocando
-        blocos para me levar até o porco!
+        Depure esse nível reorganizando e trocando blocos
+        para me levar até o porco!
       K-1 maze debug 11_instruction: "Isso é um teste!\r\nDepure esse nível reorganizando\ne
         trocando blocos para me levar até o porco"
       K-1 maze debug 2_instruction: |-
@@ -3076,18 +3076,18 @@ pt-BR:
         Depure esse nível reorganizando e trocando blocos
         para me levar até o porco!
       K-1 maze debug 6_instruction: |-
-        Depure esse nível reorganizando e trocando
-        blocos para me levar até o porco!
+        Depure esse nível reorganizando e trocando blocos
+        para me levar até o porco!
       K-1 maze debug 7_instruction: |-
-        Depure esse nível reorganizando e trocando
-        blocos para me levar até o porco!
+        Depure esse nível reorganizando e trocando blocos
+        para me levar até o porco!
       K-1 maze debug 8_instruction: |-
         Depure esse nível reorganizando e adicionando
         blocos
         para me levar até o porco!
       K-1 maze debug 9_instruction: |-
-        Depure esse nível reorganizando e trocando
-        blocos para me levar até o porco!
+        Depure esse nível reorganizando e trocando blocos
+        para me levar até o porco!
       K2.0 sequence 1_instruction: Altere o código para me levar até o porco!
       K2.0 sequence 2_instruction: Altere o código para me levar até o porco!
       K2.0 sequence 5_instruction: Mova-me por um caminho, e então por outro para
@@ -3261,6 +3261,9 @@ pt-BR:
         Na caixa de ferramentas de variáveis você vai ver diversas
         variáveis que definem a aparência dos personagens do seu jogo e como eles se movem e
         interagem
+      MSM Defining Vars 1 (copy 1)_instruction: |-
+        Escreva um programa que produz um triângulo
+        verde sólido de 50 pixels.
       MSM Defining Vars 1_instruction: |-
         Escreva um programa que produz um triângulo
         verde sólido de 50 pixels.
@@ -3545,6 +3548,12 @@ pt-BR:
       New Artist Project_instruction: |-
         Desenhe algo incrível! Seu código é salvo
         como um projeto e você pode retornar a ele a qualquer momento.
+      New Basketball Project_instruction: Crie seu próprio jogo de basquete. Você
+        pode mudar todas as regras. Quando terminar, clique em Concluir para permitir
+        que seus amigos possam testar seu jogo em seus smartphones.
+      New Bounce Project_instruction: Crie seu próprio jogo de Pingue-pongue. Você
+        pode mudar o visual e todas as regras. Quando terminar, clique em Concluir
+        para que seus amigos possam jogar seu jogo em seus celulares.
       New Course 4 Artist Functions Level 4_instruction: |-
         Use a função "desenhe um quadrado"
         para desenhar esse padrão.
@@ -3841,9 +3850,9 @@ pt-BR:
         E "direita-segura?" E "superior-segura?" são todas verdadeiras. Quando você consertar a
         função, tente sair do quintal pela direita, pela esquerda e por cima.
       Sam the Butterfly 7_instruction: |-
-        Agora temos apenas uma única direção com a qual nos preocupar! Crie
-        uma função "inferior-segura?" e atualize a função "na-tela?" para que ela
-        verifique as partes de cima, de baixo, esquerda e direita.
+        Agora temos apenas uma única direção com a qual nos preocupar!
+        Crie uma função "inferior-segura?" e atualize a função "na-tela?" para
+        que ela verifique as partes de cima, de baixo, esquerda e direita.
       Sam the Butterfly Complete_instruction: |-
         Agora temos apenas uma única direção com a qual nos preocupar!
         Crie uma função "inferior-segura?" e atualize a função "na-tela?" para
@@ -4320,6 +4329,9 @@ pt-BR:
       bounce_12_instruction: Crie seu próprio jogo de Pingue-pongue. Você pode mudar
         o visual e todas as regras. Quando terminar, clique em Concluir para que seus
         amigos possam jogar seu jogo em seus celulares.
+      bounce_12_2018_instruction: Crie seu próprio jogo de Pingue-pongue. Você pode
+        mudar o visual e todas as regras. Quando terminar, clique em Concluir para
+        que seus amigos possam jogar seu jogo em seus celulares.
       bounce_12_basketball_instruction: Crie seu próprio jogo de basquete. Você pode
         mudar todas as regras. Quando terminar, clique em Concluir para permitir que
         seus amigos possam testar seu jogo em seus smartphones.
@@ -4385,6 +4397,8 @@ pt-BR:
         Faça a bola quicar até que ela atinja a bandeira.
       course1_artist_loops_challenge3_instruction: '"Você pode me ajudar a fazer duas
         casas de pássaros?"'
+      course1_artist_loops_challenge4_instruction: '"É hora de jogar os dados! Você
+        consegue me ajudar a desenhar estes?"'
       course1_collector_loops_challenge1_instruction: '"Você pode me ajudar encontrar
         alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo
         dar."'
@@ -4435,8 +4449,9 @@ pt-BR:
       course3_playlab_stage16_5_instruction: |-
         Você pode adicionar um bloco para deixar o polvo
         feliz?
-      course3_playlab_stage16_6_instruction: Crie sua própria história. Quando tiver
-        terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
+      course3_playlab_stage16_6_instruction: |-
+        Crie sua própria história. Quando terminar,
+        clique em "Concluir" para que seus amigos testem sua história em seus celulares.
       course3_playlab_stage17_1_instruction: |-
         Você pode escrever um programa para fazer
         o polvo dizer "Olá" quando clicarem nele?
@@ -4458,8 +4473,9 @@ pt-BR:
       course3_playlab_stage17_6_instruction: |-
         Você pode adicionar blocos para mudar o plano de fundo
         e a velocidade de Valfredo, e então movê-lo com as setas do teclado até marcar pontos?
-      course3_playlab_stage17_7_instruction: Crie sua própria história. Quando tiver
-        terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
+      course3_playlab_stage17_7_instruction: |-
+        Crie sua própria história. Quando terminar,
+        clique em "Concluir" para que seus amigos testem sua história em seus celulares.
       course4_artist_fwp_challenge1_instruction: Execute este programa e faça alterações
         para ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o
         e substitua-o por algo totalmente diferente)
@@ -4560,6 +4576,10 @@ pt-BR:
         do tesouro para passar este nível.
       courseA_collector_loops_challenge2kp_2018_instruction: Colete pelo menos **3**
         peças do tesouro para passar este nível.
+      courseA_collector_preLoops1_instruction: |-
+        Esta é Laurel, a Aventureira!
+
+        Pressione "Run" para vê-la andar até o tesouro e pegá-lo
       courseA_collector_preLoops2_instruction: "Ótimo! Agora você pode adicionar o
         código você mesmo! \n\nEncaixe um bloco `pegar tesouro` na parte inferior
         do programa e clique em \"Executar \"."
@@ -4625,6 +4645,7 @@ pt-BR:
         outros blocos para terminar este código, depois clique em "▶ Executar".
       courseA_maze_ramp3b_2018_instruction: Adicione um bloco `Norte` ao final dos
         outros blocos para terminar este código, depois clique em "Executar".
+      courseA_maze_ramp4_2018_instruction: Evite a(s) TNT(s) ou penas irão voar!
       courseA_maze_ramp4a_2018_instruction: Você consegue descobrir qual bloco você
         precisa adicionar aos outros blocos para terminar este código?
       courseA_maze_ramp5_2018_instruction: Desvie da TNT.
@@ -4718,10 +4739,24 @@ pt-BR:
         "Artista". Brinque com o nível e desenhe algo divertido.
       courseB_artist_loops1_2018_instruction: Este é um novo tipo de quebra-cabeça
         chamado "Artista". Brinque com o nível e desenhe algo divertido.
+      courseB_artist_loops2_instruction: O Artista está tentando desenhar uma linha
+        **6** vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
+      courseB_artist_loops2_2018_instruction: O Artista está tentando desenhar uma
+        linha **6** vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
+      courseB_artist_loops5_instruction: Hora de consertar as escadas! Repita este
+        padrão **5** vezes para o artista conseguir atingir o topo dos arbustos.
+      courseB_artist_loops5_2018_instruction: Hora de consertar as escadas! Repita
+        este padrão **5** vezes para o artista conseguir atingir o topo dos arbustos.
       courseB_artist_loops8_instruction: Hora de voltar para casa. Você pode consertar
         esta escada usando apenas um bloco para ajudar a artista a descer?
       courseB_artist_loops8_2018_instruction: Hora de voltar para casa. Você pode
         consertar esta escada usando apenas um bloco para ajudar a artista a descer?
+      courseB_artist_loops_challenge1_instruction: '"É hora de jogar os dados! Você
+        consegue me ajudar a desenhar estes?"'
+      courseB_artist_loops_challenge1_2018_instruction: '"É hora de jogar os dados!
+        Você consegue me ajudar a desenhar estes?"'
+      courseB_collector_loops1_instruction: Esta é a Laurel a aventureira!  Você consegue
+        movê-la por aí e pegar o tesouro?
       courseB_collector_loops10_instruction: Ajude Laurel a pegar todos os tesouros
         dessa caverna.
       courseB_collector_loops10_2018_instruction: Ajude Laurel a pegar todos os tesouros
@@ -4729,6 +4764,12 @@ pt-BR:
       courseB_collector_loops11_instruction: Eureka! Pegue quanto tesouro você puder!
       courseB_collector_loops11_2018_instruction: Eureka! Pegue quanto tesouro você
         puder!
+      courseB_collector_loops1_2018_instruction: Pegue pelo menos uma peça do tesouro
+        sem cometer erros para passar!
+      courseB_collector_loops2_instruction: Pegue todas as quatro pilhas para passar
+        esse nível.
+      courseB_collector_loops2_2018_instruction: Pegue todas as quatro pilhas para
+        passar esse nível.
       courseB_collector_loops7_instruction: Escreva o código para pegar todo este
         tesouro.
       courseB_collector_loops7_2018_instruction: Escreva o código para pegar todo
@@ -4737,12 +4778,17 @@ pt-BR:
         das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
       courseB_collector_loops8_2018_instruction: "**Desafio:** O tesouro vai até o
         final das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
+      courseB_iceage_loops12_instruction: Pegue a noz da maneira que você conseguir!
       courseB_iceage_loops2_instruction: Uso dois blocos de movimento diferentes para
         chegar até a noz!
+      courseB_iceage_loops3_instruction: Você consegue pegar a noz com apenas um bloco
+        `W`?
       courseB_iceage_loops7_instruction: 'Scrat realmente quer aquela noz! '
       courseB_iceage_loops8_instruction: 'Você consegue corrigir este código? '
       courseB_maze_seq11_2018_instruction: É com você!  Leve o Scrat até a noz.
       courseB_maze_seq12_instruction: Agora, pegue o porco da maneira que você conseguir!
+      courseB_maze_seq12_2018_instruction: Agora, pegue a noz da maneira que você
+        conseguir!
       courseB_maze_seq3_instruction: '"Conserte o código para me levar até o porco!"'
       courseB_maze_seq5_2018_instruction: Este enigma é um pouco complicado!
       courseB_maze_seq6_instruction: Mova-me por um caminho, e então por outro para
@@ -4757,6 +4803,10 @@ pt-BR:
         Scrat até a noz?
       courseB_maze_seq9_instruction: 'Desafio: Dê a volta na TNT para levar o pássaro
         até o porco.'
+      courseB_maze_seq9_2018_instruction: 'Desafio: Mova-se ao redor do gelo quebrado
+        para levar Scrat até a noz.'
+      courseB_maze_seqCold_instruction: 'Desafio: Analise este nível adicionando blocos
+        para levar o pássaro até o porco!'
       courseB_maze_seqOld_instruction: 'Dê a volta na TNT para levar o pássaro até
         o porco! '
       courseB_playLab_events1_instruction: Veja se você pode descobrir o que cada
@@ -4787,6 +4837,15 @@ pt-BR:
       courseB_starWars_prog6_2018_instruction: Pegue todos os pedaços de metal
       courseB_starWars_prog7_instruction: Vai pegar!
       courseB_starWars_prog7_2018_instruction: Vai pegar!
+      courseC_PlayLab_events1_instruction: Faça Jorge o Cachorro (ator 1) dizer "Olá."
+      courseC_PlayLab_events1_2018_instruction: Faça Jorge o Cachorro (ator 1) dizer
+        "Olá."
+      courseC_PlayLab_events2_instruction: |-
+        Você pode fazer o cachorro Jorge (personagem 1) dizer alguma coisa, e
+        depois, fazer a gata Olívia (personagem 2) dizer alguma coisa?
+      courseC_PlayLab_events2_2018_instruction: |-
+        Você pode fazer o cachorro Jorge (personagem 1) dizer alguma coisa, e
+        depois, fazer a gata Olívia (personagem 2) dizer alguma coisa?
       courseC_PlayLab_events3_instruction: |-
         Você consegue escrever um programa para fazer Jorge
         (personagem 1) se mover em direção à gata Olívia?
@@ -4807,6 +4866,15 @@ pt-BR:
         do tesouro!
       courseC_collector_loops_challenge2_2018_instruction: Pegue pelo menos **5**
         peças do tesouro!
+      courseC_collector_prog9_instruction: '*"Vamos pegar todo o tesouro!"*'
+      courseC_collector_prog9_2018_instruction: '*"Vamos pegar todo o tesouro!"*'
+      courseC_collector_progA_instruction: Ajude Laurel a coletar todo o tesouro.
+      courseC_collector_progB_instruction: Colete quantas moedas você conseguir para
+        terminar esta fase!
+      courseC_collector_prog_challenge2_instruction: Colete pelo menos **10** peças
+        do tesouro para finalizar este desafio!
+      courseC_collector_prog_challenge2_2018_instruction: Colete pelo menos **10**
+        peças do tesouro para finalizar este desafio!
       courseC_harvester_loops3_instruction: Colete todas as abóboras.
       courseC_harvester_loops3_2018_instruction: Colete todas as abóboras.
       courseC_maze_debugging10_instruction: |-
@@ -4814,6 +4882,9 @@ pt-BR:
         blocos para me levar até o porco!
       courseC_maze_loops10_instruction: Você está indo bem! Continuem assim!
       courseC_maze_loops9_instruction: Você está indo bem! Continuem assim!
+      courseC_maze_programming4_instruction: Evite a(s) TNT(s) ou penas irão voar!
+      courseC_maze_programming4_2018_instruction: Evite a(s) TNT(s) ou penas irão
+        voar!
       courseC_maze_programming5_instruction: Desvie da TNT.
       courseC_maze_programming5_2018_instruction: Desvie da TNT.
       courseC_maze_programming7_instruction: "**Desafio:** Este código tem um monte
@@ -4871,6 +4942,10 @@ pt-BR:
         produza mel na colmeia. \r\n\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops6_2018_instruction: "Vamos subir o nível! \r\nUse\nlaços
         para me levar até o girassol com o menor número de laços possível."
+      courseD_bee_nestedLoops7_instruction: 'Desafio: Descubra como pegar todo o nectar
+        usando apenas os blocos disponíveis.'
+      courseD_bee_nestedLoops7_2018_instruction: 'Desafio: Descubra como pegar todo
+        o nectar usando apenas os blocos disponíveis.'
       courseD_bee_nestedLoops8_instruction: "Colete todo o néctar de cada flor\ne
         produza mel na colmeia. \r\n\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2018_instruction: "Colete todo o néctar de cada flor\ne
@@ -4885,6 +4960,9 @@ pt-BR:
         em mais de um lugar. Além disso, tente mudar o cenário ou a velocidade da
         raquete e da bola e veja quantos pontos você pode marcar antes de seu oponente
         marcar duas vezes.
+      courseD_bounce_events12_instruction: Crie seu próprio jogo de Pingue-pongue.
+        Você pode mudar o visual e todas as regras. Quando terminar, clique em Concluir
+        para que seus amigos possam jogar seu jogo em seus celulares.
       courseD_bounce_events2_instruction: Conecte um bloco aos blocos "quando clicar
         na seta para a direita" e "quando clicar na seta para a esquerda". Mova a
         raquete para alcançar ambos os objetivos finais.
@@ -4906,6 +4984,9 @@ pt-BR:
         desafio.
       courseD_bounce_events7_instruction: Conecte os blocos a cada um dos blocos "quando".
         Faça a bola quicar até que ela atinja o alvo.
+      courseD_collector_ramp10_instruction: Ajude Laurel a coletar todo o tesouro.
+      courseD_collector_ramp8_instruction: Ajude Laurel a coletar todo o tesouro.
+      courseD_collector_ramp9_instruction: Ajude Laurel a coletar todo o tesouro.
       courseD_debugging_3_instruction: |-
         Corrija o(s) erro(s) para coletar todo o néctar
         e produzir todo o mel.
@@ -4913,6 +4994,7 @@ pt-BR:
         e o alface do campo.
       courseD_farmer_condLoops2_2018_instruction: Ajude a colheitadeira coletar o
         milho e o alface do campo.
+      courseD_iceage_loops12_instruction: Pegue a noz da maneira que você conseguir!
       courseD_iceage_loops7_instruction: 'Scrat realmente quer aquela noz! '
       courseD_iceage_loops8_instruction: 'Você consegue corrigir este código? '
       courseD_maze_nestedLoops4_instruction: "Leve-me até o girassol usando o menor
@@ -4921,10 +5003,18 @@ pt-BR:
       courseD_maze_nestedLoops4_2018_instruction: "Leve-me até o girassol usando o
         menor número de blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro de
         outro para diminuir\na quantidade de códigos que você precisa."
+      courseD_maze_nestedLoops5_instruction: |-
+        Leve o zumbi até o girassol usando o menor número
+        possível de blocos!
+      courseD_maze_nestedLoops5_2018_instruction: |-
+        Leve o zumbi até o girassol usando o menor número
+        possível de blocos!
       courseD_maze_nestedLoops6_instruction: "Vamos subir o nível! \r\nUse\nlaços
         para me levar até o girassol com o menor número de laços possível."
       courseD_maze_nestedLoops6_2018_instruction: "Vamos subir o nível! \r\nUse\nlaços
         para me levar até o girassol com o menor número de laços possível."
+      courseD_maze_ramp4_instruction: Evite a(s) TNT(s) ou penas irão voar!
+      courseD_maze_ramp4_2018_instruction: Evite a(s) TNT(s) ou penas irão voar!
       courseD_maze_ramp5_instruction: Desvie da TNT.
       courseD_maze_ramp5_2018_instruction: Desvie da TNT.
       courseD_maze_ramp5d_instruction: Leve o pássaro até o porco.
@@ -4965,6 +5055,9 @@ pt-BR:
       courseE_bee_functions4_2018_instruction: "A função \"mova e obtenha néctar\"
         vira\na abelha, coleta néctar, e então retorna a abelha para onde ela começou.
         \r\n\r\nUse\na função para coletar todo o néctar."
+      courseE_collector_ramp10_instruction: Ajude Laurel a coletar todo o tesouro.
+      courseE_collector_ramp8_instruction: Ajude Laurel a coletar todo o tesouro.
+      courseE_collector_ramp9_instruction: Ajude Laurel a coletar todo o tesouro.
       courseE_farmer_concept2_instruction: Colete todas as abóboras.
       courseE_farmer_concept2_2018_instruction: Colete todas as abóboras.
       courseE_farmer_concept4_instruction: |-
@@ -4976,6 +5069,8 @@ pt-BR:
         e as abóboras.
       courseE_farmer_functions2b_2018_instruction: Ajude a colheitadeira a pegar os
         milhos e as abóboras.
+      courseE_maze_ramp4_instruction: Evite a(s) TNT(s) ou penas irão voar!
+      courseE_maze_ramp4_2018_instruction: Evite a(s) TNT(s) ou penas irão voar!
       courseE_maze_ramp5_instruction: Desvie da TNT.
       courseE_maze_ramp5_2018_instruction: Desvie da TNT.
       courseE_multi_maze_ramp5_instruction: Desvie da TNT.
@@ -5051,6 +5146,8 @@ pt-BR:
         O que você precisa para resolvê-lo?
       courseF_bee_variables_8_2018_instruction: Quantos néctares a abelha irá coletar
         desta flor?
+      courseF_maze_ramp4_instruction: Evite a(s) TNT(s) ou penas irão voar!
+      courseF_maze_ramp4_2018_instruction: Evite a(s) TNT(s) ou penas irão voar!
       courseF_maze_ramp5_instruction: Desvie da TNT.
       courseF_maze_ramp5_2018_instruction: Desvie da TNT.
       courseF_playlab_variables0_instruction: Esta é uma Perna de Pirata. Ele é muito
@@ -5167,8 +5264,8 @@ pt-BR:
         É como um retângulo mas tem ângulos diferentes. Este tem ângulos de 60 graus
         e 120 graus em vez de todos os ângulos terem 90 graus.
       frozen freeplay_instruction: |-
-        Você se tornou oficialmente um artista mestre! Crie
-        um país das maravilhas de gelo.
+        Você se tornou oficialmente um artista mestre!
+        Crie um país das maravilhas de gelo.
       frozen line_instruction: |-
         Oi! Eu sou Elsa de Arendelle. Ajude-me a criar uma
         reta.
@@ -5242,6 +5339,8 @@ pt-BR:
       grade2_PuppyLoops_9_instruction: "Parece que o C no código está desenhado ao
         contrário!\r\n\r\nVocê\nconsegue fazê-lo parecer com um C de novo?"
       grade2_collector_9_instruction: '*"Vamos pegar todas as moedas!"*'
+      grade2_collector_A_instruction: Ajude Laurel a coletar todo o tesouro.
+      grade2_collector_A_2018_instruction: Ajude Laurel a coletar todo o tesouro.
       grade2_playlab_project_1_instruction: |-
         Agora escreva um programa que faça Valfredo
         se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos!
@@ -5557,8 +5656,8 @@ pt-BR:
       grade4_bee_nestedLoops4_instruction: "Colete todo o néctar de cada flor\ne produza
         mel na colmeia. \r\n\r\nUse um laço aninhado. "
       grade4_frozen_freeplay_instruction: |-
-        Você se tornou oficialmente um artista mestre! Crie
-        um país das maravilhas de gelo.
+        Você se tornou oficialmente um artista mestre!
+        Crie um país das maravilhas de gelo.
       grade4_frozen_functions0_instruction: Você consegue descobrir qual número precisa
         usar para substituir os pontos de interrogação e desenhar um círculo?
       grade4_frozen_functions1a_instruction: |-
@@ -5669,6 +5768,9 @@ pt-BR:
       grade5_artist_for_loops1_instruction: |-
         Use um bloco "repita" para desenhar este triângulo
         que tem 50 pixels de largura.
+      grade5_artist_for_loops10_instruction: "Você consegue descobrir como\nusar todas
+        as coisas que você aprendeu para criar esta imagem?\r\n\r\nPrecisa de uma\ndica?
+        Clique aqui."
       grade5_artist_for_loops5_instruction: "Apenas uma pequena alteração no código\nda
         última imagem pode criar este desenho. Você consegue descobrir qual é\nessa
         alteração?\r\n\r\nDica: algo precisa ser removido!"
@@ -5910,17 +6012,24 @@ pt-BR:
         néctar.
       ramp_artist_loops9_instruction: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2018_instruction: Resolva este enigma desenhando um quadrado.
+      scrat 16 (copy 1)_instruction: |-
+        Bolota! Bolota! Bolota! Use um bloco "se" para me levar até lá
+        com o menor número de blocos.
       scrat 16_instruction: |-
         Bolota! Bolota! Bolota! Use um bloco "se" para me levar até lá
         com o menor número de blocos.
       scrat 17_instruction: |-
         Ok, vamos fazer novamente para pegar a prática - este não é
         muito diferente, mas cuidado com a parede!
+      scrat 18 (copy 1)_instruction: |-
+        Os blocos "se-senão" verificam uma condição e, em seguida,
+        fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.
       scrat 18_instruction: |-
         Os blocos "se-senão" verificam uma condição e, em seguida,
         fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.
-      scrat 19 (copy 1)_instruction: Vamos praticar o uso do bloco "se-senão" mais
-        uma vez, você consegue na primeira tentativa?
+      scrat 19 (copy 1)_instruction: |-
+        Vamos praticar o uso do bloco "se-senão" mais uma vez. Você consegue
+        acertar na primeira tentativa?
       scrat 19_instruction: |-
         Vamos praticar o uso do bloco "se-senão" mais uma vez. Você consegue
         acertar na primeira tentativa?
