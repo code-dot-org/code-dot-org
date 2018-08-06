@@ -42,7 +42,7 @@
     "CONTROLS_FOREACH_TOOLTIP": "For kvart element i ei liste, sett variabelen '%1' til elementet, og utfør deretter nokre setningar.",
     "CONTROLS_FOR_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#count_with",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "frå %1 til %2 med %3",
-    "CONTROLS_FOR_INPUT_WITH": "tell med",
+    "CONTROLS_FOR_INPUT_WITH": "for",
     "CONTROLS_FOR_TOOLTIP": "La variabel %1 ta verdiane frå startverdien til sluttverdien, tell med spesifisert intervall, og utfør dei angitte blokkene.",
     "CONTROLS_IF_ELSEIF_TOOLTIP": "Legg til eit vilkår til viss-blokka.",
     "CONTROLS_IF_ELSE_TOOLTIP": "Legg til kva som skal skje dersom dei andre ikkje slår til.",

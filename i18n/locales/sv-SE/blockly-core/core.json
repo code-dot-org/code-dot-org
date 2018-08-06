@@ -296,7 +296,7 @@
     "PROCEDURES_CREATE_DO": "Skapa '%1'",
     "PROCEDURES_DEFNORETURN_DO": "",
     "PROCEDURES_DEFNORETURN_HELPURL": "http://sv.wikipedia.org/wiki/Funktion_%28programmering%29",
-    "PROCEDURES_DEFNORETURN_PROCEDURE": "gör något",
+    "PROCEDURES_DEFNORETURN_PROCEDURE": "gör någonting",
     "PROCEDURES_DEFNORETURN_TITLE": "till",
     "PROCEDURES_DEFNORETURN_TOOLTIP": "Skapar en funktion utan resultat.",
     "PROCEDURES_DEFRETURN_DO": "",
