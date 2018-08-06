@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
       # Authorize the mini profiler when the rack_mini_profiler_enabled setting is enabled and
       # the ?pp query param is present, and this is development or a signed-in admin user
       # in production (or another environment)
-      if CDO.rack_mini_profiler_enabled && request.key?(:pp) && (Rails.env.development? || current_user&.admin?)
+      if CDO.rack_mini_profiler_enabled && params.key?(:pp) && (Rails.env.development? || current_user&.admin?)
         Rack::MiniProfiler.authorize_request
       end
     end
@@ -83,7 +83,7 @@ class ApplicationController < ActionController::Base
 
   def render_404
     respond_to do |format|
-      format.html {render file: 'pblic/404.html', layout: 'layouts/application', status: :not_found}
+      format.html {render file: 'public/404.html', layout: 'layouts/application', status: :not_found}
       format.all {head :not_found}
     end
   end
