@@ -1,32 +1,27 @@
 {
-  "category": "Events",
+  "category": "Music",
   "config": {
-    "func": "whenPeak",
-    "blockText": "when {RANGE} peak",
+    "func": "getEnergy",
+    "blockText": "get {RANGE} energy",
     "args": [
       {
         "name": "RANGE",
         "options": [
           [
             "low",
-            "0"
+            "\"low\""
           ],
           [
             "mid",
-            "1"
+            "\"mid\""
           ],
           [
             "high",
-            "2"
+            "\"high\""
           ]
         ]
       }
     ],
-    "eventBlock": true,
-    "color": [
-      140,
-      1,
-      0.74
-    ]
+    "returnType": "Number"
   }
 }
