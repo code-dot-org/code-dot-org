@@ -16,7 +16,7 @@ is:
         Artist3: Listamaðurinn 3
         Unplug7: Lagasmíð
         Farmer2: Bóndinn 2
-        Unplug8: Greining kjarna
+        Unplug8: Útdráttur
         Artist4: Listamaðurinn 4
         Unplug9: Boðhlaupsforritun
         Farmer3: Bóndinn 3
@@ -74,7 +74,7 @@ is:
         maze_2_15: Ég vilja sólblóm! Notaðu "ef" kubb til að koma mér þangað með sem fæstum kubbum.
         maze_2_16: Nú skulum við æfa þetta aftur - þessi þraut er ekki svo ólík, en gættu þín á kjömsurunum!
         maze_2_17: '"Ef-annars" kubburinn athugar skilyrði og gerir svo annaðhvort eitt eða eitthvað annað. Prófaðu að nota þennan nýja kubb til að koma mér til sólblómsins.'
-        maze_2_18: Ein æfing í viðbót með "ef-annars" kubbinn. Geturðu leyst þrautina í fyrstu tilraun?
+        maze_2_18: Enn ein æfing með "ef-annars" kubbinn. Geturðu leyst þetta í fyrstu tilraun?
         maze_2_19: Getur þú bætt við bara 3 kubbum til að hjálpa mér að rata flóknari leið? Ef þú gerir það rétt, get ég gengið hvaða slóð sem er alveg sama hvað hún er löng.
         turtle_1_1: Hæ, ég er listamaður. Þú getur skrifað forrit sem lætur mig teikna nánast hvað sem er. Notaðu nokkra kubba til að láta mig teikna yfir gráu strikin á myndinni.
         turtle_1_2: 'Teiknaðu nú ferning. ATHUGAÐU: Notaðu uppáhaldslitinn þinn með því að velja hann í nýja litakubbnum.'
@@ -97,11 +97,11 @@ is:
         turtle_4_9: Hér er lausnin á síðustu þraut. Um hve margar gráður ætti að snúa til að ljúka teikningunni? (Þú verður líklega að giska nokkrum sinnum)
         turtle_4_10: Hér er lausnin á síðustu þraut. Hve oft ætti að endurtaka til að ljúka teikningunni?
         turtle_4_11: Prófaðu að breyta tölunum í "snúa" og "endurtaka" kubbunum til að búa til mismunandi mynstur. Eða gerðu tilraunir með aðra hluta kóðans til að teikna hvað sem þú vilt.
-        maze_karel_1_1: Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta túnið á jörðinni minni. Færðu mig að moldarhaugnum og notaðu "fjarlægja" kubbinn til að fjarlægja hauginn.
+        maze_karel_1_1: Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta túnið á jörðinni minni svo að ég geti ræktað það. Færðu mig að moldarhaugnum og notaðu "fjarlægja" kubbinn til að fjarlægja hauginn.
         maze_karel_1_2: Færðu mig svo að holunni og fylltu hana með TVEIMUR skóflum af mold með því að nota "fylla" kubbinn.
         maze_karel_1_3: Færðu mig að moldarhaugnum og segðu mér hve margar skóflur á að fjarlægja en notaðu eins fáa kubba og hægt er.
         maze_karel_1_4: 'Getur þú hjálpað mér að fjarlægja alla fjóra moldarhaugana? Vísbending: Notaðu endurtekningarkubb ef þú getur.'
-        maze_karel_1_5: 'Hjálpaðu mér að fylla allar þessar holur með 5 skóflum af mold. Vísbending: Þú getur sett "endurtaka" blokk innan í "meðan" blokk.'
+        maze_karel_1_5: 'Hjálpaðu mér að fylla allar þessar holur með 5 skóflum af mold. Vísbending: Þú getur sett "endurtaka" kubb innan í "meðan" kubb.'
         maze_karel_1_6: Fjarlægðu alla moldarhaugana með sem fæstum kubbum. Nýju valkostirnir í fellilistanum á "meðan" kubbnum segja mér hvort ég standi á haug eða holu.
         maze_karel_1_7: Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur þarf til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til yfirborðið er slétt?
         maze_karel_1_8: Hjálpaðu mér að fylla holuna við endann á túninu og með sem fæstum kubbum.
@@ -181,12 +181,12 @@ is:
         studio_c2_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
         studio_c2_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
         studio_c2_4: Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?
-        studio_c2_5: Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ" þegar smellt er á hann?
-        studio_c2_6: Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?
+        studio_c2_5: Getur þú skrifað forrit sem lætur kolkrabbann segja "hæ" þegar smellt er á hann?
+        studio_c2_6: Getur þú skrifað forrit sem lætur Waddles hreyfast með því að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?
         studio_c2_7: Með kubbnum "endurtaka endalaust" getur þú látið kóða keyra án þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan hreyfist stanslaust upp og niður?
-        studio_c2_8: Getur þú látið mörgæsina segja "Ááá!" og spilað viðeigandi hljóð þegar hún rekst á risaeðluna og notað örvarlykla til að færa hana svo það geti orðið árekstur?
-        studio_c2_9: Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_c2_10: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar og síðan fært hana með örvarlyklunum þar til þú skorar?
+        studio_c2_8: Getur þú látið Waddles segja "Æ!" og spilað snertihljóð þegar hann rekst á risaeðluna og síðan notað örvarlykla til að færa hann svo það geti orðið árekstur?
+        studio_c2_9: Getur þú bætt við kubbi til að skora stig þegar Waddles rekst á kolkrabbann og síðan fært hann með örvarlyklunum þar til þú skorar?
+        studio_c2_10: Getur þú bætt við kubbum til að breyta bakgrunni og hraða Waddles og síðan fært hann með örvarlyklunum þar til þú skorar?
         studio_c2_11: Búðu til sögu eftir eigin höfði. Smelltu svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum.
         studio_c3_story_1: Getur þú látið hundinn segja "Halló heimur"?
         studio_c3_story_2: Getur þú látið hundinn segja eitthvað og síðan látið köttinn segja eitthvað?
@@ -291,10 +291,10 @@ is:
         C1_bee_level_intro: Býflugnaborð - kynning
         C1_artist_intro: Kynning á listamanni
         C1_spelling_bee_intro: Stafsetning - kynning
-        C1_zuck_repeat_loop: Völundarhús - lykkjur
+        C1_zuck_repeat_loop: Lykkjur völundarhúss
         C1_bee_loops: Býfluga - lykkjur
         C1_maze_loops: Lykkjur völundarhúss
-        C1_playlab_storytelling: Leikjasmiðja - Búa til sögu
+        C1_playlab_storytelling: Leikjasmiðja - búa til sögu
         C1_planting_seed: Fræsáning
         C1_building_foundation: Að byggja grunn
         C1_going_places_safely: Ferðast í öryggi
@@ -305,7 +305,7 @@ is:
         C2_artist_debugging: Villuleit listamanns
         C2_bee_loops: Býfluga - lykkjur
         C2_bee_debugging: Býfluga - villuleit
-        C2_bee_conditionals: Skilyrði býflugu
+        C2_bee_conditionals: Býfluga - skilyrði
         C2_playlab_createstory: Leikjasmiðja - búa til sögu
         C2_graph_paper: Forritun rúðublaða
         C2_conditionals_with_cards: Skilyrði
@@ -314,7 +314,7 @@ is:
         C2_paper_airplanes: Pappírsflaugar
         C2_digital_footprint: Stafræna fótsporið þitt
         C2_digital_footprint_v2: Stafræna fótsporið þitt
-        C3_maze_level_4: Völundarhús - lykkjur
+        C3_maze_level_4: Lykkjur völundarhúss
         C3_artist_intro: Kynning á listamanni
         C3_artist_functions: Listamaður - föll
         C3_bee_functions: Býfluga - föll
@@ -334,7 +334,7 @@ is:
         C3_songwriting_with_parameters: Lagasmíð með stikum
         C4_intro: Kynning
         C4_loops_zombie: Lykkjur
-        C4_bee_conditional: Skilyrði býflugu
+        C4_bee_conditional: Býfluga - skilyrði
         C4_variables_artist: Breytur - Listamaður
         C4_variables_playlab: Breytur - Leikjasmiðja
         C4_for_loops: Frá lykkjur
@@ -395,6 +395,7 @@ is:
         csd_weblab_css_1: Kynning á tölvunarfræði - 1. hluti
         csd_weblab_css_2: Kynning á tölvunarfræði - 2. hluti
         csd_weblab_intro_3: Kynning á Vefsmiðju - 3. hluti
+        csp_applab_conditionals_1: Kynning á skilyrðingum - 1. hluti
         csp_applab_functions: Kynning á föllum
         csp_applab_functions_parameters: Föll með stikum
         csp_applab_loops: Lykkjur

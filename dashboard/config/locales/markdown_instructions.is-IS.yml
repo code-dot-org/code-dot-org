@@ -256,7 +256,7 @@ is:
         til að safna öllum blómasafanum úr þessum blómum."
       2-3 Maze 1_markdown_instruction: "Getur þú hjálpað mér að ná óþekka svíninu?
         \r\n\r\nSmelltu saman tveimur `færa áfram` kubbum fyrir neðan `þegar keyrt`
-        kubbinn og ýttu svo á \"Keyra\".\n"
+        kubbinn og ýttu svo á \"Keyra\". "
       2-3 Maze 12 - One Move Block_markdown_instruction: "Náðu þessu illa svíni! En
         í þetta sinn máttu bara nota einn `færa áfram` kubb...\r\n\r\nGáðu vel - sérðu
         einhverja aðra kubba sem gætu komið þér þangað?"
@@ -700,17 +700,17 @@ is:
         sé auðlesnari.\r\n*\nGerðu kóðann auðlesnari með því að bæta inn auðum línum
         og inndrætti.\r\n* Lagaðu allar villurnar svo síðan þín verði eins og <a href=\"https://codeprojects.org/kh6WWXr6rbDWuSBzsug7CRIZ2eo-EwPgV4D0M6pvhF8/\"\ntarget=\"_blank\">
         fyrirmyndin</a>\n"
-      CSD U2 Debugging comments_markdown_instruction: "# Villuleit\r\n\r\nÞessi síða
-        hefur myndir. Það gerir villuleit svolítið flóknari. Getur þú aflúsað þessa
-        síðu?\r\n\r\nVið villuleitina tekur þú kannske eftir nýjum táknum sem líta
-        einhvern veginn svona út:\r\n<pre>\r\n&lt;!-- þetta er athugasemd --&gt;\r\n</pre>\r\n\r\nÞetta
-        er dæmi um **athugasemd**. Þeir sem búa til vefsíður skrifa athugasemdir fyrir
-        sjálfa sig og aðra sem gætu þurft að lesa HTML kóðann. Með athugasemdum er
-        hægt að útskýra hvað hinir ýmsu hlutar kóðans gera og hver útkoman á að vera.
-        Athugasemdir geta verið hjálplegar við villuleit.\r\n\r\n# Gerðu þetta\r\n\r\n*
-        Finndu og lagaðu allar villur í upphaflega HTML kóðanum\r\n* Þú veist að þú
-        hefur fundið allar villurnar þegar síðan þín lítur út eins og þessi <a href=\"https://thimbleprojects.org/danimcavoy/103295/\"
-        target=\"_blank\">\nfyrirmynd</a>."
+      CSD U2 Debugging comments_markdown_instruction: "# Villuleit\r\n\r\nÞað eru
+        myndir á þessari síðu. Myndirnar gera villuleitina aðeins flóknari. Getur
+        þú aflúsað þessa síðu?\r\n\r\nÞú tekur kannske eftir nýjum táknum sem líta
+        út einhvern veginn svona:\r\n<pre>\r\n&lt;!-- þetta er athugasemd --&gt;\r\n</pre>\r\n\r\nÞetta
+        er **athugasemd**. Athugasemdir eru skrifaðar af höfundum vefsíðna ýmist fyrir
+        þá sjálfa eða fyrir aðra sem gætu þurft að lesa HTML skjalið og skilja það.
+        Athugasemdir útskýra hvað kóðinn er að gera og hvað hann á að búa til. Athugasemdir
+        gætu hjálpað þér að villuleita.\r\n\r\n# Gerðu þetta\r\n\r\n* Finndu og lagaðu
+        allar villur í upphaflega HTML kóðanum\r\n* Þú veist að þú hefur fundið allar
+        villur þegar síðan þín lítur út eins og <a href=\"https://thimbleprojects.org/danimcavoy/103295/\"
+        target=\"_blank\">\nfyrirmyndin</a>."
       CSD U2 HTML Add Content_markdown_instruction: "# Innihaldi bætt við\r\n\r\nByrjaðu
         að búa til fyrstu vefsíðuna þína! Reyndu að búa til síðu með fyrirsögn og
         tveimur efnisgreinum.\r\n\r\n#\nGerðu þetta\r\n\r\n* Skrifaðu setningu um
@@ -1839,6 +1839,11 @@ is:
         allar eignunarupplýsingar sem þú þarft að hafa.\r\n* Hladdu öllum myndunum
         upp í verkefnið þitt.  \n[Kennslustund 8 þraut 6](/s/csd2/stage/8/puzzle/6)
         er með hjálp ef þú þarft.\r\n\r\n"
+      CSD U3 - conditionals - arrows and gears_markdown_instruction: "# Tannhjól með
+        skilyrðum\r\n\r\nVið skulum láta tannhjólin snúast en bara ef bilslánni er
+        haldið niðri.\r\n\r\n# Gerðu þetta\r\n\r\n* Bættu við `ef` yrðingu.\r\n* Notaðu
+        `keyDown` sem inntak í `ef` yrðingunni til að athuga hvort ýtt er á bilslána.\r\n*
+        Færðu kóðann, sem lætur tannhjólin snúast, inn í `ef` yrðinguna."
       CSD U3 Conditionals Apple 2_markdown_instruction: "# Grænkun\r\n\r\nNú þegar
         við kunnum að nota _ef_ yrðingar, getur þú ekki bara athugað hvort eplið hafi
         náð stærðinni 2 heldur líka litað það rautt þegar það gerist. Notaðu skilyrðingu
@@ -2035,6 +2040,11 @@ is:
         Gerðu þetta\r\n\r\n* Bættu við `ef` yrðingu.\r\n* Notaðu `keyDown` sem inntak
         í `ef` yrðingunni til að athuga hvort ýtt er á bilslána.\r\n* Færðu kóðann,
         sem lætur tannhjólin snúast, inn í `ef` yrðinguna."
+      CSD U3 Input Gears_2018_markdown_instruction: "# Tannhjól með skilyrðum\r\n\r\nVið
+        skulum láta tannhjólin snúast en bara ef bilslánni er haldið niðri.\r\n\r\n#
+        Gerðu þetta\r\n\r\n* Bættu við `ef` yrðingu.\r\n* Notaðu `keyDown` sem inntak
+        í `ef` yrðingunni til að athuga hvort ýtt er á bilslána.\r\n* Færðu kóðann,
+        sem lætur tannhjólin snúast, inn í `ef` yrðinguna."
       CSD U3 Keyboard Input Challenge-2018_markdown_instruction: "# Áskorun\r\n_Ráðfærðu
         þig við kennarann áður en þú reynir við þessa áskorun._\r\n\r\nHér er pödduforritið
         sem þú hefur verið að vinna að í síðustu áföngum. Veldu eina eða fleiri af
@@ -2092,12 +2102,12 @@ is:
         sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er
         lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L11 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L12 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það
         sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er
         lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
@@ -2107,57 +2117,57 @@ is:
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L13 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það
         sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er
         lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L13 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L15 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það
         sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er
         lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L15 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L16 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það
         sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er
         lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L16 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L17 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það
         sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er
         lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L17 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L18 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það
         sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er
         lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L18 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L19 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það
         sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er
         lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
@@ -2167,7 +2177,7 @@ is:
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L3 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það sem
         þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið
         getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
@@ -2177,37 +2187,37 @@ is:
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L4 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það sem
         þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið
         getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L4 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L5 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það sem
         þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið
         getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L5 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L6 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það sem
         þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið
         getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L6 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r\n"
+        til að senda það í Verkefnagalleríið þitt.\n"
       CSD U3 L7 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það sem
         þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið
         getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
@@ -2217,17 +2227,17 @@ is:
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L9 Freeplay_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu það sem
         þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið
         getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 L9 Freeplay_2018_markdown_instruction: "# Frjáls æfing\r\n\r\nNotaðu
         það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því
         er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png)
         \ til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png)
-        til að senda það í Verkefnagalleríið þitt.\r"
+        til að senda það í Verkefnagalleríið þitt."
       CSD U3 Mouse Input Bee 1_markdown_instruction: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\r\n\r\n#
         Mouse X og Y\r\n\r\nEin af einföldustu aðferðunum við að lesa inntak er einfaldlega
         að láta kvika elta stað músarinnar.\n**Þú getur fundið út x og y stað músarinnar
@@ -3011,10 +3021,10 @@ is:
         hæð og breidd myndarinnar eins og þér sýnist."
       CSD U5 black white images pixelation_markdown_instruction: "# Gerðu þetta\r\n\r\nLjúktu
         við \"X\" formið með því að skrifa stafina 0 og 1. Þú getur alltaf smellt
-        á \"Readable Format\" ef þú vilt hreinsa til."
+        á \"Læsilegt snið\" ef þú vilt hreinsa til."
       CSD U5 black white images pixelation_2018_markdown_instruction: "# Gerðu þetta\r\n\r\nLjúktu
         við \"X\" formið með því að skrifa stafina 0 og 1. Þú getur alltaf smellt
-        á \"Readable Format\" ef þú vilt hreinsa til."
+        á \"Læsilegt snið\" ef þú vilt hreinsa til."
       CSD U6 analog challenge_markdown_instruction: "# Áskorun\r\n\r\n_Ráðfærðu þig
         við kennarann áður en þú byrjar þessa áskorun_\r\n\r\nNú hefur þú æft að taka
         inntak frá ýmsum hliðrænum nemum og breyta því eftir þörfum. Getur þú látið
@@ -3110,6 +3120,14 @@ is:
         kannt nú þegar að nota alla kubbana sem þarf til að smíða svona leik og það
         er einmitt það sem þú átt að gera í þessari kennslustund.\r\n\r\nÞú getur
         séð önnur dæmi um pallastökkvara í næstu tveimur áföngum."
+      CSDU2 - First-Weblab_markdown_instruction: "# Innihaldi bætt við\r\n\r\nByrjaðu
+        að búa til fyrstu vefsíðuna þína! Reyndu að búa til síðu með fyrirsögn og
+        tveimur efnisgreinum.\r\n\r\n#\nGerðu þetta\r\n\r\n* Skrifaðu setningu um
+        uppáhaldsdýrið þitt\r\n* Skrifaðu aðra setningu um það dýr sem þér líkar síst
+        við\r\n* Settu fyrirsögn fyrir ofan setningarnar sem les \"Besta og versta
+        dýrið\"\r\n* Ekki gleyma að smella á \n<img src=\"https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12\nPM.png\"
+        style=\"width:100px\">\r\n* **Eftir hverju tekurðu hvað varðar uppbyggingu
+        innihaldsins?**"
       CSDU2 - PW - Class Style Personal Site - OLD_markdown_instruction: "# Frjáls
         æfing í útlitsmótun\r\n\r\nNú er komið að þér að ákveða hverju þú vilt gefa
         útlit! Leiktu þér með stíla og RGB liti til að bæta útlit þinnar persónulegu
@@ -3336,11 +3354,11 @@ is:
         samsvari þessari formúlu.
       Calc Circles of Eval 4_markdown_instruction: Í þennan kóða vantar tvo matskubba.
         Gættu þess að hafa allt í réttri röð.
-      Calc Circles of Eval 7_markdown_instruction: Ljúktu við matskubbinn svo hann
+      Calc Circles of Eval 7_markdown_instruction: Ljúktu við matskubbana svo þeir
         samsvari þessari formúlu.
-      Calc Circles of Eval 8_markdown_instruction: Ljúktu við matskubbinn svo hann
+      Calc Circles of Eval 8_markdown_instruction: Ljúktu við matskubbana svo þeir
         samsvari þessari formúlu.
-      Calc Circles of Eval 9_markdown_instruction: Ljúktu við matskubbinn svo hann
+      Calc Circles of Eval 9_markdown_instruction: Ljúktu við matskubbana svo þeir
         samsvari þessari formúlu.
       Calc Circles of Eval Free Play_markdown_instruction: 'Frjáls æfing: Reyndu að
         nota matskubbana til að skrifa eigin jöfnur. Hvernig breytir það matinu að
@@ -3918,7 +3936,7 @@ is:
         ætlarðu að bæta við stigum þegar Hundur klukkar Kött eða Mörgæs?  \r\n- Hvernig
         ætlarðu að draga frá stig þegar Köttur og Mörgæs snertast?\r\n</strong>\r\n\r\n<hr/>\r\n\r\n"
       Course 4 SCV 4_markdown_instruction: "**Ofuráskorun með breytur:** Leystu þessa
-        þraut með eins fáum kubbum og mögulegt er.\r\n"
+        þraut með eins fáum kubbum og mögulegt er.\r\n\r\n"
       Course 4 SCV 5_markdown_instruction: "**Ofuráskorun með breytur:** Leystu þessa
         þraut með eins fáum kubbum og mögulegt er.\r\n\r\n"
       Course 4 SCV 6_markdown_instruction: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"\nwidth=\"250px\"/>\r\n\r\n**Ofuráskorun
@@ -4024,6 +4042,8 @@ is:
         hann kalli á fallið `næsta_borð` aðeins ef `stig_leikmanns` fer upp fyrir
         tiltekna tölu.<br/><br/>\r\n</h4>\r\n<i>Til dæmis `stig_leikmanns` > 6</i>\r\n\r\n\r\n<hr/>\r\n<i>Spilaðu
         leikinn og náðu að ljúka borði 3 til að fara í næstu þraut. </i>"
+      Formative versus Summative Assessment_markdown_instruction: 'Eftirfarandi tengill
+        vísar í skilgreiningar á og dæmi um matsaðferðir, bæði mótandi símat og lokamat:'
       GLJr_Forever_5_markdown_instruction: Nú höfum við tvo kvika! Notaðu lykkju til
         að láta hundinn vera órólegan og kötturinn ráfa um
       Geometric Pattern_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynstur
@@ -4067,8 +4087,8 @@ is:
         `endurtaka` lykkju til að auðvelda það."
       K-1 Maze Loops 11_markdown_instruction: "Komdu mér til svínsins! \r \nÞað er
         auðveldara með `endurtaka` lykkju."
-      K-1 Maze Loops 12_markdown_instruction: "Komdu mér til svínsins! \r Það er auðveldara
-        með \"endurtaka\" lykkju."
+      K-1 Maze Loops 12_markdown_instruction: "Komdu mér til svínsins! \r \nÞað er
+        auðveldara með `endurtaka` lykkju."
       K-1 Maze Loops 2_markdown_instruction: Notaðu `endurtaka` kubbinn til að koma
         mér til svínsins!
       K-1 Maze Loops 3_markdown_instruction: "Komdu mér til svínsins! \r\nGættu þess
@@ -4087,6 +4107,11 @@ is:
         vandlega. Hvað heldur þú að flugvélin muni gera þegar þú smellir á \"Keyra\"?\r\n"
       LaurelDebugging4Video1_markdown_instruction: "Þetta er Laurel ævintýrahetja!\r\n\r\nFærðu
         hana og safnaðu eins miklu gulli og þú getur."
+      MC_HOC_2017_01_Cole_markdown_instruction: Þú þarft að safna verkfærum í þessari
+        ferð. Notaðu **örvarlyklana** til að hreyfast og ná til kistunnar í húsinu
+        til að vinna.
+      MC_HOC_2017_04_markdown_instruction: Breyttu lykkjunni úr síðustu þraut til
+        að hjálpa Umbanum að gera slóð yfir breiðari hluta þessarar ár.
       MSM Defining Vars 1_markdown_instruction: Skrifaðu forrit sem býr til 50 díla
         gegnheilan grænan þríhyrning.
       Mike Test Bee Conditionals 1_markdown_instruction: "Þetta ský skyggir á! \n\r\n\r\nGáðu
@@ -4280,6 +4305,32 @@ is:
         stig í dílamynstrum sýnir notkun valkostsins \"Fela sleða\". Taktu eftir að
         sleðarnir fyrir breidd og hæð eru þá ekki tiltækir og reitirnir fyrir breidd
         og hæð eru læstir."
+      Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction: "#\nDílamynstur:
+        Verkefni 3\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right
+        width=200 hspace=20>\r\n**Leiðbeiningar:**\r\nÞú byrjar með 4x4 myndina sem
+        Maddie bjó til í myndbandinu.\r\n\r\nVerkefni þitt er að fylla 4x4 með litum
+        með því að nota *12 bita í hverjum díl*. Útkoman ætti að vera í líkingu við
+        myndina hér til hægri.  \r\n\r\nHér eru kröfurnar:\r\n\r\n\n* Röð 1 - fylla
+        með litbrigðum af rauðu. \r\n * Röð 2 - græn litbrigði. \r\n *\nRöð 3 - blá
+        litbrigði. \r\n * Röð 4 - grá litbrigði.\r\n"
+      Pixelation - Lesson 15 - Color Shades 4x4_2018_markdown_instruction: "#\nDílamynstur:
+        Verkefni 3\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right
+        width=200 hspace=20>\r\n**Leiðbeiningar:**\r\nÞú byrjar með 4x4 myndina sem
+        Maddie bjó til í myndbandinu.\r\n\r\nVerkefni þitt er að fylla 4x4 með litum
+        með því að nota *12 bita í hverjum díl*. Útkoman ætti að vera í líkingu við
+        myndina hér til hægri.  \r\n\r\nHér eru kröfurnar:\r\n\r\n\n* Röð 1 - fylla
+        með litbrigðum af rauðu. \r\n * Röð 2 - græn litbrigði. \r\n *\nRöð 3 - blá
+        litbrigði. \r\n * Röð 4 - grá litbrigði.\r\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "#\nDílamynstur
+        í lit: Verkefni 1\n**Leiðbeiningar:**\n\n* Þú byrjar með 4x4 myndina sem Maddie
+        var að búa til, en við höfum sleppt síðustu tveimur reitunum. \n* Ljúktu við
+        myndina með því að finna út hvaða liti vantar og kóða þá.\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_2018_markdown_instruction: "#\nDílamynstur
+        í lit: Verkefni 1\n**Leiðbeiningar:**\n\n* Þú byrjar með 4x4 myndina sem Maddie
+        var að búa til, en við höfum sleppt síðustu tveimur reitunum. \n* Ljúktu við
+        myndina með því að finna út hvaða liti vantar og kóða þá.\n"
+      Pizza on a Plate_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynd
+        af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Play Lab Rocket 3_markdown_instruction: Frábært. Getur þú nú uppfært fallið
         þitt svo að flaugin hreyfist hraðar? Gættu þess að uppfæra tilgangstextann,
         dæmin og skilgreiningu fallsins svo það skjóti eldflaug á hraðanum 40 m/s.
@@ -4318,8 +4369,43 @@ is:
         verkefni í App-smiðjunni til að þetta sé hægt).\r\n</li>\r\n<li>Þú getur líka
         notað <code>getTime()</code> í upphafi og lok kóðans til að reikna út hvað
         leikurinn stóð í langan tíma og notað það til að stilla af skorið.</li>\r\n</ul>\r\n</details>\r\n"
+      'Project: Finish Color Sleuth_2018_markdown_instruction': "# Áskorun - Veldu
+        hvernig leikurinn á að enda og útfærðu það\r\n\r\nÁskorunin nú felst í að
+        þú bætir við kóða sem kemur alveg frá þér.   Notaðu það sem þú hefur lært.
+        Spjall Alexis og Michael getur líka hjálpað.\r\n\r\n**Þetta er síðasti forritunaráfanginn**\r\n\r\n*
+        Settu inn allar breytingar og viðbætur við forritið\r\n* Smelltu svo á **Senda**\r\n\r\n**Markmið:**
+        Bæta við kóða sem lætur leikinn enda og sem:\r\n* Skiptir yfir í skjámyndina
+        `gameOver_screen`\r\n*\nSýnir hvaða spilari vann leikinn með því að birta
+        textana `player1Win_label` eða `player2Win_label`\r\n\r\n*Við höfum lagt til
+        `gameOver_screen` skjámynd í sniðmátinu fyrir þetta verkefni -- Skiptu yfir
+        í Hönnunarstöðu til að sjá hvað er þar*\r\n\r\n**Tillögur**\r\n*\nEf þér dettur
+        ekkert í hug, gætir þú reynt að láta leikslok byggjast á skilyrðinu \"fyrstur
+        í 10\" - fyrsti spilari sem fær 10 stig vinnur.\r\n* Þú ættir að nota tillöguna
+        sem kom fram í spjallinu og bæta við falli eins og `checkGameOver()` og kalla
+        á það frá `checkCorrect`\r\n\r\n<details><summary><strong>Umfram og aukalega:\nHér
+        eru fleiri kostir sem þú getur bætt við að vild [Smelltu til að útvíkka]</strong></summary>\r\n\r\n<p>\r\nHér
+        eru nokkrar hugmyndir um viðbætur eða útvíkkun verkefnisins:\r\n\r\n</p>\r\n<ul>\r\n\r\n\r\n<li>Setja\n\"Byrja
+        aftur\" hnapp á síðasta skjáinn. Hann ætti að núllstilla allt og birta leiksviðið
+        aftur\r\n</li>\r\n<li>Bæta við upphafsskjá sem útskýrir reglur leiksins og
+        býður spilara að hefja leikinn (það ætti að vera sjálfvalið)\r\n</li>\r\n<li>Gera
+        leikinn erfiðari:</li>\r\n<uL>\r\n<li>Gera litina líkari hvor öðrum (við höfum
+        bætt 20 við hvert RGB gildi, prófaðu 15 eða 10).</li>\r\n    <li>Eða hafa
+        erfiðleikann breytilegan - þú gætir notað slembitölu á bilinu 5 til 20 og
+        bætt henni við RGB gildin. </li>\r\n    <li>Eða látið leikinn verða smám saman
+        erfiðari - notað breytu fyrir það hve miklu á að bæta við hvert RGB gildi
+        og minnkað innihald breytunnar með tímanum.</li>\r\n\\t<li>Eða bjóða spilara
+        á upphafsskjánum að velja erfiðleikastig: auðvelt, miðlungs eða erfitt.</li>\r\n</uL>\r\n\r\n<li>Bæta
+        við tímatakmörkun - flettu upp lesningunni um setTimeout sem kallar á fall
+        eftir vissan tíma. (Athugaðu: þú gætir þurft að 'remixa' verkefnið sem frjálst
+        verkefni í App-smiðjunni til að þetta sé hægt).\r\n</li>\r\n<li>Þú getur líka
+        notað <code>getTime()</code> í upphafi og lok kóðans til að reikna út hvað
+        leikurinn stóð í langan tíma og notað það til að stilla af skorið.</li>\r\n</ul>\r\n</details>\r\n"
       Repeat Predict Contained_markdown_instruction: "# Spá\r\n\r\nHve oft mun `frá`
         lykkjan hér fyrir neðan keyra?"
+      Robot Doodle_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynd af
+        einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
+      Robot Doodle_2018_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynd
+        af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Robot Drawing_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynd
         af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Robot_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynd af einhverju
@@ -4482,12 +4568,51 @@ is:
         textakubbinn sem þú vilt fyrir undirmarkmið."
       Testing Quantum Farmer_markdown_instruction: "Vá, ég fann mjög djúpa holu! \r\n\r\nÉg
         veit ekki hve mörg skóflufylli af mold þarf. \r\nGetur þú skrifað forrit sem
-        heldur áfram að nota `fylla` kubbinn þar til holan er full?  "
+        notar `fylla` kubbinn þar til hún er sléttfull?  "
       U1L9 Free Response Assessment_markdown_instruction: 'Veldu hvaða efni þér fannst
         mest gaman að læra í dag. Segðu hvað þú lærðir nýtt og hvernig það tengist
         því hvernig við búum til og notum talnakerfi.
 
 '
+      U3 - Simple Drawing - Personal Drawing_markdown_instruction: "# Þín eigin teikning\r\n\r\nNú
+        er komið að þér að búa til eigin teikningu. Þú ættir að hafa teiknað hugmynd
+        á blað fyrst.\r\n\r\n# Gerðu þetta\r\nVertu viss um að þú hafir uppfyllt öll
+        þessi markmið áður:\r\n\r\n* Býr til þekkjanlegan, nefndan hlut eða hönnun
+        (þ.e. ekki handahófskennd form)\r\n* Notar minnst 10 form eða texta (rect,
+        ellipse, regularPolygon,\ntext)\r\n* Notar minnst 4 mismunandi litaðar fyllingar\r\n*
+        Notar minnst 3 mismunandi litaðar útlínur\r\n* Notar minnst 3 mismunandi kóðakubba
+        með athugasemdum\r\n"
+      U5 ColorSleuth implement end game_markdown_instruction: "# Áskorun - Veldu hvernig
+        leikurinn á að enda og útfærðu það\r\n\r\nÁskorunin nú felst í að þú bætir
+        við kóða sem kemur alveg frá þér.   Notaðu það sem þú hefur lært. Spjall Alexis
+        og Michael getur líka hjálpað.\r\n\r\n**Þetta er síðasti forritunaráfanginn**\r\n\r\n*
+        Settu inn allar breytingar og viðbætur við forritið\r\n* Smelltu svo á **Senda**\r\n\r\n**Markmið:**
+        Bæta við kóða sem lætur leikinn enda og sem:\r\n* Skiptir yfir í skjámyndina
+        `gameOver_screen`\r\n*\nSýnir hvaða spilari vann leikinn með því að birta
+        textana `player1Win_label` eða `player2Win_label`\r\n\r\n*Við höfum lagt til
+        `gameOver_screen` skjámynd í sniðmátinu fyrir þetta verkefni -- Skiptu yfir
+        í Hönnunarstöðu til að sjá hvað er þar*\r\n\r\n**Tillögur**\r\n*\nEf þér dettur
+        ekkert í hug, gætir þú reynt að láta leikslok byggjast á skilyrðinu \"fyrstur
+        í 10\" - fyrsti spilari sem fær 10 stig vinnur.\r\n* Þú ættir að nota tillöguna
+        sem kom fram í spjallinu og bæta við falli eins og `checkGameOver()` og kalla
+        á það frá `checkCorrect`\r\n\r\n<details><summary><strong>Umfram og aukalega:\nHér
+        eru fleiri kostir sem þú getur bætt við að vild [Smelltu til að útvíkka]</strong></summary>\r\n\r\n<p>\r\nHér
+        eru nokkrar hugmyndir um viðbætur eða útvíkkun verkefnisins:\r\n\r\n</p>\r\n<ul>\r\n\r\n\r\n<li>Setja\n\"Byrja
+        aftur\" hnapp á síðasta skjáinn. Hann ætti að núllstilla allt og birta leiksviðið
+        aftur\r\n</li>\r\n<li>Bæta við upphafsskjá sem útskýrir reglur leiksins og
+        býður spilara að hefja leikinn (það ætti að vera sjálfvalið)\r\n</li>\r\n<li>Gera
+        leikinn erfiðari:</li>\r\n<uL>\r\n<li>Gera litina líkari hvor öðrum (við höfum
+        bætt 20 við hvert RGB gildi, prófaðu 15 eða 10).</li>\r\n    <li>Eða hafa
+        erfiðleikann breytilegan - þú gætir notað slembitölu á bilinu 5 til 20 og
+        bætt henni við RGB gildin. </li>\r\n    <li>Eða látið leikinn verða smám saman
+        erfiðari - notað breytu fyrir það hve miklu á að bæta við hvert RGB gildi
+        og minnkað innihald breytunnar með tímanum.</li>\r\n\\t<li>Eða bjóða spilara
+        á upphafsskjánum að velja erfiðleikastig: auðvelt, miðlungs eða erfitt.</li>\r\n</uL>\r\n\r\n<li>Bæta
+        við tímatakmörkun - flettu upp lesningunni um setTimeout sem kallar á fall
+        eftir vissan tíma. (Athugaðu: þú gætir þurft að 'remixa' verkefnið sem frjálst
+        verkefni í App-smiðjunni til að þetta sé hægt).\r\n</li>\r\n<li>Þú getur líka
+        notað <code>getTime()</code> í upphafi og lok kóðans til að reikna út hvað
+        leikurinn stóð í langan tíma og notað það til að stilla af skorið.</li>\r\n</ul>\r\n</details>\r\n"
       What is the difference between formative and summative assessment?_markdown_instruction: 'Eftirfarandi
         tengill vísar í skilgreiningar á og dæmi um matsaðferðir, bæði mótandi símat
         og lokamat:'
@@ -4597,6 +4722,8 @@ is:
       collectorSkinVideo2_markdown_instruction: "Færðu Laurel að fjársjóðnum og notaðu
         `taka` til að taka hann upp.\r\n\r\nTaktu eina fjársjóðshrúgu til að ljúka
         áfanganum."
+      conditionals_forvideo_harvester_markdown_instruction: Safnaðu öllum maís og
+        káli og taktu svo graskerið.
       course1_artist_loops_challenge2_markdown_instruction: Komum í leik! Teiknaðu
         eins mörg X og þú getur! Nærðu að hafa 3 í röð?
       course1_artist_loops_challenge3_markdown_instruction: Tíst tíst! Getur þú hjálpað
@@ -4630,8 +4757,8 @@ is:
         innri lykkjan á að búa til ferning."
       course2_artist_prog_challenge1_markdown_instruction: Teiknaðu klefa fyrir hvert
         dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
-      course2_artist_prog_challenge2_markdown_instruction: "*Teiknum skínandi stjörnu
-        á næturhimni!*"
+      course2_artist_prog_challenge2_markdown_instruction: "*Hjálpaðu mér að teikna
+        gulu línurnar á þessum vegi!*"
       course2_bee_conditionals_challenge1_markdown_instruction: Safnaðu öllum blómasafanum
         eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til
         hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
@@ -4645,7 +4772,7 @@ is:
         þú safnað öllum **10** fjársjóðunum?*"
       course2_collector_prog_challenge2_markdown_instruction: "*Hér má finna **20**
         fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*"
-      course2_harvester_loops_challenge1_markdown_instruction: Safnaðu öllum maísnum.
+      course2_harvester_loops_challenge1_markdown_instruction: Safnaðu öllu korninu.
       course2_harvester_loops_challenge2_markdown_instruction: |-
         Safnaðu öllu kálinu.
         Forðastu tré og tún!
@@ -4682,6 +4809,9 @@ is:
         kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r\n<xml>\r\n
         \ <block\ntype=\"jump_to_xy\">\r\n    <title name=\"XPOS\">???</title>\r\n
         \   <title\nname=\"YPOS\">???</title>\r\n    </block></xml>\n"
+      course3_bee_debugging_challenge1_markdown_instruction: Taktu eftir hvernig býflugan
+        nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til
+        allt hunangið?
       course3_bee_functions_challenge1_markdown_instruction: Þú þarft að leysa þessa
         þraut á eigin spýtur. Hún gæti leynt á sér!
       course3_bee_functions_challenge2_markdown_instruction: Þú þarft að leysa þessa
@@ -4827,6 +4957,8 @@ is:
         fimm fjársjóðshrúgunum með því að nota bara einn `[A-->]` kubb?
       courseA_collector_loops3_2018_markdown_instruction: Hvernig getur Laurel náð
         öllum fimm fjársjóðshrúgunum með því að nota bara einn `[A-->]` kubb?
+      courseA_collector_preLoops1_markdown_instruction: "Þetta er Lára ævintýramær!\r\n\r\nÝttu
+        á \"Keyra\" til að sjá hana ganga að fjársjóðnum og grípa hann."
       courseA_collector_preLoops7_markdown_instruction: "Færðu Laurel að fjársjóðnum
         og notaðu svo \r\n![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png)
         til að taka hann upp.\r\n\r\nNáðu öllum þremur hrúgunum til að ljúka áfanganum.\r\n\r"
@@ -4855,8 +4987,12 @@ is:
       courseA_maze_ramp3_2018_markdown_instruction: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\r\n\r\nÞað
         er einn aukakubbur sem mun láta fuglinn hrapa. \r\nHentu kubbnum með því að
         draga hann aftur í verkfærakassann."
+      courseA_maze_ramp4_2018_markdown_instruction: "*\"Færðu mig eftir slóðinni að
+        kjánalega svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseA_maze_ramp4a_2018_markdown_instruction: Sérðu hvaða kubb þarf að setja
         neðan við hina kubbana til að ljúka við þennan kóða?
+      courseA_maze_ramp5_2018_markdown_instruction: "*\"Fylgdu þessari slóð til að
+        koma mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
       courseA_maze_seq1_markdown_instruction: '*"Leiktu þér með þessa kubba og komdu
         mér til vonda svínsins!"*'
       courseA_maze_seq10_markdown_instruction: "**Áskorun:** Farðu í kringum TNT sprengiefnið
@@ -4951,6 +5087,12 @@ is:
         kom heim.\r\n\r\n___\r\n###Hugmyndir\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
       courseB_artist_loops6_markdown_instruction: Fyrir aftan runnana er falleg vafningsjurt
         þakin blómum. Getur þú klifið vafninginn og séð hvert hann liggur?
+      courseB_artist_loops6_2018_markdown_instruction: Fyrir aftan runnana er falleg
+        vafningsjurt þakin blómum. Getur þú klifið vafninginn og séð hvert hann liggur?
+      courseB_artist_loops7_markdown_instruction: "**Áskorun:** Þetta er falinn garður!
+        Göngum í kringum hann."
+      courseB_artist_loops7_2018_markdown_instruction: "**Áskorun:** Þetta er falinn
+        garður! Göngum í kringum hann."
       courseB_artist_loops_challenge1_markdown_instruction: |-
         Kominn tími til að varpa teningunum!
         Getur þú hjálpað mér að teikna þá?
@@ -5063,10 +5205,10 @@ is:
         leiðina, þarf að hjálpa honum að grafa **25 díla langar** holur á slóðinni
         til að planta fleiri blómum!\r\n- Hver hola á að vera 25 díla löng\r\n- Bilið
         á milli hola er 25 dílar"
-      courseC_artist_loops2a_markdown_instruction: "Notaðu nú lykkju til að snúa fuglinum
-        12 sinnum um 30 gráður.\r\n___\r\n\r\n![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)"
-      courseC_artist_loops2a_2018_markdown_instruction: "Notaðu nú lykkju til að snúa
-        fuglinum 12 sinnum um 30 gráður.\r\n___\r\n\r\n![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)"
+      courseC_artist_loops2a_markdown_instruction: Notaðu nú lykkju til að snúa fuglinum
+        um 30 gráður 12 sinnum.
+      courseC_artist_loops2a_2018_markdown_instruction: Notaðu nú lykkju til að snúa
+        fuglinum um 30 gráður 12 sinnum.
       courseC_artist_loops3a_markdown_instruction: "Þetta er skemmtilegt!  \r\n\r\nBættu
         nú við límmiða með leðurblöku rétt á eftir fuglinum til að búa til mynd eins
         og þá hér fyrir neðan.\r\n___\r\n\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
@@ -5144,8 +5286,8 @@ is:
         dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
       courseC_artist_prog_challenge1_2018_markdown_instruction: Teiknaðu klefa fyrir
         hvert dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
-      courseC_artist_prog_challenge2_markdown_instruction: "*Teiknum skínandi stjörnu
-        á næturhimni!*"
+      courseC_artist_prog_challenge2_markdown_instruction: "*Hjálpaðu mér að teikna
+        gulu línurnar á þessum vegi!*"
       courseC_collector_loops_challenge2_markdown_instruction: Leitum að fjársjóði
         - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða.
         Náðu öllum fjársjóðunum!
@@ -5159,7 +5301,17 @@ is:
       courseC_collector_prog_challenge2_2018_markdown_instruction: "*Hér má finna
         **20** fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari
         áskorun!*"
-      courseC_harvester_loops_challenge1_markdown_instruction: Safnaðu öllum maísnum.
+      courseC_flappy_events7_markdown_instruction: Prófaðu svo að breyta umhverfinu
+        með því að tengja kubb við `þegar keyrt` kubbinn.
+      courseC_flappy_events7_2018_markdown_instruction: Prófaðu svo að breyta umhverfinu
+        með því að tengja kubb við `þegar keyrt` kubbinn.
+      courseC_flappy_events9_markdown_instruction: Breyttu þessu nú þannig að í stað
+        þess að leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið aftur
+        á 0.
+      courseC_flappy_events9_2018_markdown_instruction: Breyttu þessu nú þannig að
+        í stað þess að leikurinn endi þegar Flappy rekst á hindrun þá stillist skorið
+        aftur á 0.
+      courseC_harvester_loops_challenge1_markdown_instruction: Safnaðu öllu korninu.
       courseC_harvester_loops_challenge2_markdown_instruction: |-
         Safnaðu öllu kálinu.
         Forðastu tré og tún!
@@ -5178,9 +5330,27 @@ is:
         sem notar bara einn `færa áfram` kubb innan í `endurtaka` kubbi?"
       courseC_maze_loops_challenge2_markdown_instruction: Leitum að fjársjóði - með
         lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu
-        öllum fjársjóðunum!
+        öllum fjársjóðnum!
+      courseC_maze_programming1_markdown_instruction: 'Í þessari þraut: Dragðu alla
+        kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseC_maze_programming1_2018_markdown_instruction: 'Í þessari þraut: Dragðu
+        alla kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseC_maze_programming4_markdown_instruction: "*\"Færðu mig eftir slóðinni
+        að kjánalega svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseC_maze_programming4_2018_markdown_instruction: "*\"Færðu mig eftir slóðinni
+        að kjánalega svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseC_maze_programming5_markdown_instruction: "*\"Fylgdu þessari slóð til
+        að koma mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
+      courseC_maze_programming5_2018_markdown_instruction: "*\"Fylgdu þessari slóð
+        til að koma mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
+      courseC_maze_programming8_markdown_instruction: '*"Haltu ró þinni og hjálpaðu
+        mér að finna vonda svínið."*'
+      courseC_maze_programming8_2018_markdown_instruction: '*"Haltu ró þinni og hjálpaðu
+        mér að finna vonda svínið."*'
       courseC_maze_programming8_predict1_markdown_instruction: '*"Haltu ró þinni og
         hjálpaðu mér að finna vonda svínið."*'
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '*"Haltu ró þinni
+        og hjálpaðu mér að finna vonda svínið."*'
       courseC_maze_programming_challenge1_markdown_instruction: '*"Svínið er í felum!
         Getur þú hjálpað mér að finna leið?"*'
       courseC_maze_programming_challenge1_2018_markdown_instruction: '*"Svínið er
@@ -5370,9 +5540,14 @@ is:
         að teikna þennan þríhyrning innan í ferningi.\r\n<hr/>\r\nHver hlið er 200
         dílar. Þú þarft að snúa um 90 gráður til að búa til ferninginn og 120 gráður
         fyrir þríhyrninginn."
+      courseD_bee_conditionals1_markdown_instruction: "*\"Þetta ský er fyrir mér!\"\r\n\r\nAthugaðu
+        hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er."
       courseD_bee_conditionals1_predict1_markdown_instruction: "*\"Þetta ský er fyrir
         mér!\"\r\n\r\nAthugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa ef
         svo er."
+      courseD_bee_conditionals1_predict1_2018_markdown_instruction: "*\"Þetta ský
+        er fyrir mér!\"\r\n\r\nAthugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa
+        ef svo er."
       courseD_bee_conditionals7_predict2_markdown_instruction: "Stundum hylur ský
         blóm en stundum hylur það býkúpu!\r\n\r\nNotaðu `ef/annars` kubb til að safna
         blómasafa við blóm og búa til hunang í býkúpum. Mundu: það er aldrei nema
@@ -5409,20 +5584,33 @@ is:
       courseD_bee_debugging_challenge2_markdown_instruction: Taktu eftir hvernig býflugan
         nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni að búa til
         allt hunangið?
+      courseD_bee_nestedLoops2_markdown_instruction: Nú áttu að hjálpa býflugunni
+        að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
+      courseD_bee_nestedLoops2_2018_markdown_instruction: Nú áttu að hjálpa býflugunni
+        að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
       courseD_bee_nestedLoops2_predict1_markdown_instruction: Nú áttu að hjálpa býflugunni
         að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
+      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: Nú áttu að hjálpa
+        býflugunni að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
       courseD_bee_nestedLoops5_markdown_instruction: "Safnaðu öllum blómasafanum úr
         hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. "
       courseD_bee_nestedLoops8_markdown_instruction: "Safnaðu öllum blómasafanum úr
         hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. "
       courseD_bee_nestedLoops8_2018_markdown_instruction: "Safnaðu öllum blómasafanum
         úr hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. "
-      courseD_bee_nested_loops_challenge1_markdown_instruction: Komum í fjársjóðsleit
+      courseD_bee_nested_loops_challenge1_markdown_instruction: Komum í fjársjóðaleit
         - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en
         aðeins með kubbunum í verkfærakassanum.
-      courseD_bee_nested_loops_challenge2_markdown_instruction: Komum í fjársjóðsleit
+      courseD_bee_nested_loops_challenge2_markdown_instruction: Komum í fjársjóðaleit
         - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en
         aðeins með kubbunum í verkfærakassanum.
+      courseD_bounce_events1_markdown_instruction: Náðu til flaggsins! Festu kubb
+        við "þegar vinstri ör" kubbinn og ýttu á "Keyra" til að færa leikmanninn að
+        flagginu.
+      courseD_bounce_events2s_markdown_instruction: Tengdu nú kubb við atburðinn `þegar
+        til hægri` svo að höndin komist að báðum körfunum.
+      courseD_bounce_events2s_2018_markdown_instruction: Tengdu nú kubb við atburðinn
+        `þegar til hægri` svo að höndin komist að báðum körfunum.
       courseD_collector_debugging1_markdown_instruction: "*\"Ó nei! Ég er í vandræðum.\"*\r\n\r\nLagaðu
         villu/r til að safna öllum fjársjóðnum."
       courseD_collector_debugging10_predict1_markdown_instruction: "*\"Fjársjóðseyja!\"*\r\n\r\nHjálpaðu
@@ -5479,6 +5667,10 @@ is:
       courseD_collector_debugging6_2018_markdown_instruction: "**Áskorun:** Allar
         skipanir sem þú þarft eru þegar komnar...notaðu nú villuleitarhæfileika þína
         til að laga villur og safna öllum fjársjóðnum."
+      courseD_collector_debugging6a_markdown_instruction: 'Áskorun: Notaðu kóðann
+        á vinnusvæðinu til að safna minnst **6** gersemum!'
+      courseD_collector_debugging6a_2018_markdown_instruction: 'Áskorun: Notaðu kóðann
+        á vinnusvæðinu til að safna minnst **6** gersemum!'
       courseD_collector_debugging7_markdown_instruction: "**Áskorun**: Hér eru allar
         skipanir sem þú þarft...notaðu nú færni þína í villuleit til að finna lausn
         á þessari þraut."
@@ -5527,8 +5719,18 @@ is:
       courseD_farmer_condLoops4a_markdown_instruction: "*\"Vá! Nú vaxa jurtirnar í
         þyrpingum!\"* \r\n\r\nBóndinn á að taka upp allt kálið í hverri þyrpingu og
         fara svo á næstu. Og ekki hætta fyrr en við graskerið!"
+      courseD_farmer_condLoops8_markdown_instruction: Safnaðu öllum maís og káli og
+        taktu svo graskerið.
+      courseD_farmer_condLoops8_2018_markdown_instruction: Safnaðu öllum maís og káli
+        og taktu svo graskerið.
+      courseD_farmer_condLoops9_markdown_instruction: Safnaðu öllum maís og káli og
+        taktu svo graskerið.
+      courseD_farmer_condLoops9_2018_markdown_instruction: Safnaðu öllum maís og káli
+        og taktu svo graskerið.
       courseD_farmer_condLoops9_predict1_markdown_instruction: Safnaðu öllum maís
         og káli og taktu svo graskerið.
+      courseD_farmer_condLoops9_predict1_2018_markdown_instruction: Safnaðu öllum
+        maís og káli og taktu svo graskerið.
       courseD_farmer_condLoops_challenge1_markdown_instruction: "Graskerin sýna hvar
         þú ættir að snúa. *Snúðu til hægri við graskerin.* Haltu annars áfram, en
         mundu að safna öllu káli eða maís á leiðinni. \r\n\r\n**Hver falin planta
@@ -5550,6 +5752,9 @@ is:
         hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"*
         \r\n\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja
         hauginn."
+      courseD_farmer_conditionals4_markdown_instruction: "*\"Ég veit ekki hve mikil
+        mold er í þessum haug!\"*\r\n\r\nHjálpaðu bóndanum að fjarlægja hauginn með
+        `meðan` lykkju."
       courseD_farmer_until_challenge2_markdown_instruction: Notaðu `ef/annars` kubba
         til að fylgja krókóttum stígnum. Notaðu `fjarlægja 1` kubbinn í lykkju á hverju
         horni til að fjarlægja haugana.
@@ -5559,9 +5764,22 @@ is:
       courseD_farmer_while1_markdown_instruction: "*\"Hæ, ég er bóndi. Ég þarf hjálp
         þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"* \r\n\r\nFærðu
         mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja hann."
+      courseD_farmer_while1_2018_markdown_instruction: "*\"Hæ, ég er bóndi. Ég þarf
+        hjálp þína við að slétta akurinn á jörðinni minni svo ég geti sáð í hann!\"*
+        \r\n\r\nFærðu mig að moldarhaugnum og notaðu `fjarlægja` kubbinn til að fjarlægja
+        hauginn."
+      courseD_farmer_while4_markdown_instruction: "*\"Ég veit ekki hve mikil mold
+        er í þessum haug!\"*\r\n\r\nHjálpaðu bóndanum að fjarlægja hauginn með `meðan`
+        lykkju."
+      courseD_farmer_while4_2018_markdown_instruction: "*\"Ég veit ekki hve mikil
+        mold er í þessum haug!\"*\r\n\r\nHjálpaðu bóndanum að fjarlægja hauginn með
+        `meðan` lykkju."
       courseD_farmer_while4_predict1_markdown_instruction: "*\"Ég veit ekki hve mikil
         mold er í þessum haug!\"*\r\n\r\nHjálpaðu bóndanum að fjarlægja hauginn með
         `meðan` lykkju."
+      courseD_farmer_while4_predict1_2018_markdown_instruction: "*\"Ég veit ekki hve
+        mikil mold er í þessum haug!\"*\r\n\r\nHjálpaðu bóndanum að fjarlægja hauginn
+        með `meðan` lykkju."
       courseD_farmer_while_challenge1_markdown_instruction: Fylltu allar holurnar
         og fjarlægðu alla haugana.
       courseD_farmer_while_challenge1_2018_markdown_instruction: Fylltu allar holurnar
@@ -5605,8 +5823,8 @@ is:
         saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_maze_ramp2_markdown_instruction: Dragðu annan `færa áfram` kubb úr verkfærakassanum
         og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
-      courseD_maze_ramp2_2018_markdown_instruction: Dragðu annan "færa áfram" kubb
-        úr verkfærakassanum og festu svo alla kubbana við "þegar keyrt" kubbinn til
+      courseD_maze_ramp2_2018_markdown_instruction: Dragðu annan `færa áfram` kubb
+        úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til
         að ljúka við kóðann.
       courseD_maze_ramp3_markdown_instruction: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\r\n\r\nÞað
         er einn aukakubbur sem mun láta fuglinn hrapa. \r\nHentu kubbnum með því að
@@ -5616,16 +5834,42 @@ is:
         draga hann aftur í verkfærakassann."
       courseD_maze_ramp4_markdown_instruction: "*\"Færðu mig eftir slóðinni að kjánalega
         svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseD_maze_ramp4_2018_markdown_instruction: "*\"Færðu mig eftir slóðinni að
+        kjánalega svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
       courseD_maze_ramp5_markdown_instruction: "*\"Fylgdu þessari slóð til að koma
         mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
+      courseD_maze_ramp5_2018_markdown_instruction: "*\"Fylgdu þessari slóð til að
+        koma mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
+      courseD_maze_ramp5a_markdown_instruction: Taktu eftir röð kubbanna og reyndu
+        að finna út hvernig á að komast til svínsins!
+      courseD_maze_ramp5a_2018_markdown_instruction: Taktu eftir röð kubbanna og reyndu
+        að finna út hvernig á að komast til svínsins!
       courseD_maze_ramp6_markdown_instruction: "*\"Slakaðu á og hjálpaðu mér að finna
         vonda svínið. Annars gæti ég reiðst!\"*\r\n\r\nÞegar þú hefur marga eins kubba
         í röð, geturðu í staðinn sett bara einn þeirra í `endurtaka` lykkju. Þetta
         gerir það sama en með minni kóða!"
       courseD_maze_ramp7_markdown_instruction: "*\"Nú er ég sko reiður!\"* \r\n\r\n\r\nNotaðu
         það sem þú hefur lært til að koma fuglinum til svínsins!"
+      courseD_maze_until10_markdown_instruction: Hjálpaðu uppvakningum að komast til
+        sólblómsins.
+      courseD_maze_until10_2018_markdown_instruction: Hjálpaðu uppvakningum að komast
+        til sólblómsins.
       courseD_maze_until10_predict2_markdown_instruction: Hjálpaðu uppvakningum að
         komast til sólblómsins.
+      courseD_maze_until10_predict2_2018_markdown_instruction: Hjálpaðu uppvakningum
+        að komast til sólblómsins.
+      courseD_maze_until6_markdown_instruction: Hjálpaðu uppvakningum að komast til
+        sólblómsins.
+      courseD_maze_until6_2018_markdown_instruction: Hjálpaðu uppvakningum að komast
+        til sólblómsins.
+      courseD_maze_until7_markdown_instruction: Hjálpaðu uppvakningum að komast til
+        sólblómsins.
+      courseD_maze_until7_2018_markdown_instruction: Hjálpaðu uppvakningum að komast
+        til sólblómsins.
+      courseD_maze_until8_markdown_instruction: Hjálpaðu uppvakningum að komast til
+        sólblómsins.
+      courseD_maze_until8_2018_markdown_instruction: Hjálpaðu uppvakningum að komast
+        til sólblómsins.
       courseD_maze_until_challenge_markdown_instruction: "Engar vísbendingar, bara
         áskorun.\nKomdu dauðyflinu til sólblómsins.\r\nMarkdown leiðbeiningar"
       courseD_maze_until_challenge1-delete-this-copy_markdown_instruction: "Engar
@@ -5650,11 +5894,11 @@ is:
         saman og smelltu á "Keyra" til að sjá hvað gerist!'
       courseD_scrat_ramp1_2018_markdown_instruction: 'Í þessari þraut: Festu alla
         kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
-      courseD_scrat_ramp2_markdown_instruction: Dragðu annan "færa áfram" kubb úr
-        verkfærakassanum og festu svo alla kubbana við "þegar keyrt" kubbinn til að
+      courseD_scrat_ramp2_markdown_instruction: Dragðu annan `færa áfram` kubb úr
+        verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að
         ljúka við kóðann.
-      courseD_scrat_ramp2_2018_markdown_instruction: Dragðu annan "færa áfram" kubb
-        úr verkfærakassanum og festu svo alla kubbana við "þegar keyrt" kubbinn til
+      courseD_scrat_ramp2_2018_markdown_instruction: Dragðu annan `færa áfram` kubb
+        úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til
         að ljúka við kóðann.
       courseD_scrat_ramp3_markdown_instruction: "Það er einn aukakubbur sem mun setja
         Skrat út af sporinu. \r\nHentu honum með því að losa hann og draga hann aftur
@@ -5795,6 +6039,10 @@ is:
         kóðinn er faldaður í annarri lykkju, en við þurfum að koma listamanninum aftur
         á sama stað til að teikna næstu línu. Hvaða kóða vantar í endann á ytri lykkjunni
         til að teikna alla grindina?
+      courseE_farmer_functions4b_markdown_instruction: Notaðu nýja fallið til að leysa
+        þessa þraut.
+      courseE_farmer_functions4b_2018_markdown_instruction: Notaðu nýja fallið til
+        að leysa þessa þraut.
       courseE_farmer_predict1_markdown_instruction: "Nú er bóndinn að rækta meira
         en bara kál!  \r\n\r\nÍ þessari þraut er bóndinn annaðhvort að rækta kál eða
         að rækta maís.  Notaðu kubbinn `ef við kál / annars` til að taka upp kál á
@@ -5850,14 +6098,27 @@ is:
       courseE_maze_ramp13_markdown_instruction: "Hér er enn ein þraut til að draga
         þetta allt saman!\r\n\r\nNotaðu faldaðar lykkjur til að koma fuglinum til
         svínsins."
-      courseE_maze_ramp2_markdown_instruction: Dragðu annan "færa áfram" kubb úr verkfærakassanum
-        og festu svo alla kubbana við "þegar keyrt" kubbinn til að ljúka við kóðann.
-      courseE_maze_ramp2_2018_markdown_instruction: Dragðu annan "færa áfram" kubb
-        úr verkfærakassanum og festu svo alla kubbana við "þegar keyrt" kubbinn til
+      courseE_maze_ramp1_2018_markdown_instruction: 'Í þessari þraut: Dragðu alla
+        kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseE_maze_ramp2_markdown_instruction: Dragðu annan `færa áfram` kubb úr verkfærakassanum
+        og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
+      courseE_maze_ramp2_2018_markdown_instruction: Dragðu annan `færa áfram` kubb
+        úr verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til
         að ljúka við kóðann.
       courseE_maze_ramp3_markdown_instruction: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\r\n\r\nÞað
         er einn aukakubbur sem mun láta fuglinn hrapa. \r\nHentu kubbnum með því að
         draga hann aftur í verkfærakassann."
+      courseE_maze_ramp3_2018_markdown_instruction: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\r\n\r\nÞað
+        er einn aukakubbur sem mun láta fuglinn hrapa. \r\nHentu kubbnum með því að
+        draga hann aftur í verkfærakassann."
+      courseE_maze_ramp4_markdown_instruction: "*\"Færðu mig eftir slóðinni að kjánalega
+        svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseE_maze_ramp4_2018_markdown_instruction: "*\"Færðu mig eftir slóðinni að
+        kjánalega svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseE_maze_ramp5_markdown_instruction: "*\"Fylgdu þessari slóð til að koma
+        mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
+      courseE_maze_ramp5_2018_markdown_instruction: "*\"Fylgdu þessari slóð til að
+        koma mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
       courseE_maze_ramp6_markdown_instruction: "*\"Slakaðu á og hjálpaðu mér að finna
         vonda svínið. Annars gæti ég reiðst!\"*\r\n\r\nÞegar þú hefur marga eins kubba
         í röð, geturðu í staðinn sett bara einn þeirra í `endurtaka` lykkju. Þetta
@@ -5870,6 +6131,8 @@ is:
         það sem þú hefur lært til að koma fuglinum til svínsins!"
       courseE_maze_ramp7_2018_markdown_instruction: "*\"Nú er ég sko reiður!\"* \r\n\r\n**Áskorun:**\nNotaðu
         það sem þú hefur lært til að koma fuglinum til svínsins!"
+      courseE_multi_maze_ramp5_markdown_instruction: "*\"Fylgdu þessari slóð til að
+        koma mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
       courseE_playLab_challenge1_markdown_instruction: "*Nú eru **íkornarnir** skelfingu
         lostnir yfir því að það er **risaeðla** mætt á svæðið! Getur hugrakki **riddarinn**
         komið í veg fyrir að þeir hlaupi í burtu?*\r\n\r\nHér er öðruvísi leikur sem
@@ -5905,8 +6168,8 @@ is:
         að honum þyki vænt um hana. \n \r\n\r\nNotaðu `leikari varpar` skipunina til
         láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2)! \r\nBreyttu skapi
         Granny í gleði þegar hjörtun lenda á henni."
-      courseF_IceAge_3_markdown_instruction: Skrat er að leita að akarninu (nema hvað)!
-        Getur þú hjálpað honum að komast síðustu 200 dílana?
+      courseF_IceAge_3_markdown_instruction: Skrat er að leita að akarninu! Getur
+        þú hjálpað honum að komast síðustu 200 dílana?
       courseF_IceAge_6_markdown_instruction: "Getur þú hjálpað Sid að kalla á vini
         sína þegar þú smellir á hann?\r\n\r\nSmelltu svo á \"Keyra\" til að spila.
         Smelltu á Sid til að sjá kóðann þinn virka!"
@@ -5919,6 +6182,10 @@ is:
         við hvert atvik svo að hægt sé að stjórna stefnunni með örvarlyklunum. \r\nSmelltu
         svo á \"Keyra\" og reyndu að safna öllum akörnunum."
       courseF_artist_for_Template_markdown_instruction: "Ef þú snýrð aðeins meira
+        eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið
+        skemmtilega á óvart. \r\n\r\nPrófaðu að nota eitthvað af kóðanum úr síðasta
+        áfanga, en snúa um 89 gráður til að búa til þennan snúna spíral úr ferningum."
+      courseF_artist_for_Template_2018_markdown_instruction: "Ef þú snýrð aðeins meira
         eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið
         skemmtilega á óvart. \r\n\r\nPrófaðu að nota eitthvað af kóðanum úr síðasta
         áfanga, en snúa um 89 gráður til að búa til þennan snúna spíral úr ferningum."
@@ -5946,6 +6213,10 @@ is:
         taki stika með heitinu `lengd`.\r\n\r\nHver ferningur ætti að hafa 25 lengri
         hliðar en næsti á undan. Sá fyrsti hefur 25 díla hliðar. Skiptu '???' út fyrir
         réttu gildunum til að teikna myndina."
+      courseF_artist_fwp2_predict1_2018_markdown_instruction: "Breyttu fallinu svo
+        að það taki stika með heitinu `lengd`.\r\n\r\nHver ferningur ætti að hafa
+        25 lengri hliðar en næsti á undan. Sá fyrsti hefur 25 díla hliðar. Skiptu
+        '???' út fyrir réttu gildunum til að teikna myndina."
       courseF_artist_fwp3_markdown_instruction: "Prófaðu nú að búa til fall frá grunni!\r\n\r\nBúðu
         til fall sem heitir `teikna ferning` og notaðu það til að teikna útlínur þessara
         fjögurra kassa. \r\nGættu þess að hafa stika fyrir `lengd`!\r\n\r\n<hr/>\r\nTalið
@@ -5956,6 +6227,9 @@ is:
         `lengd`!\r\n\r\n<hr/>\r\nTalið frá efra hægra horni eru breiddir kassanna
         50, 100, 150 og 200."
       courseF_artist_fwp4_markdown_instruction: "Vel gert! Breyttu nú þessu falli
+        og bættu í það stika fyrir fjölda hliða í fjölhyrningnum.\r\n\r\nHliðar allra
+        formanna eru 100 dílar á lengd."
+      courseF_artist_fwp4_2018_markdown_instruction: "Vel gert! Breyttu nú þessu falli
         og bættu í það stika fyrir fjölda hliða í fjölhyrningnum.\r\n\r\nHliðar allra
         formanna eru 100 dílar á lengd."
       courseF_artist_fwp5_markdown_instruction: "Notaðu fallið úr síðustu þraut til
@@ -5979,6 +6253,10 @@ is:
         form.\r\n\r\n- Ferningurinn fer frá 3 upp í 90 díla.\r\n- Sexhyrningurinn
         fer frá 3 upp í 100 díla.\r\n- Þríhyrningurinn fer frá 3 upp í 105 díla."
       courseF_artist_fwp7_markdown_instruction: "Ljúktu við `teikna spíral` fallið
+        svo að það biðji líka um lágmarkslengd fyrir miðju spíralsins.\r\n\r\n- Stysta
+        hliðin í miðju þessa fernings er 50 dílar á lengd\r\n- Lengsta hliðin yst
+        í spíralnum er 200 dílar á lengd\r"
+      courseF_artist_fwp7_2018_markdown_instruction: "Ljúktu við `teikna spíral` fallið
         svo að það biðji líka um lágmarkslengd fyrir miðju spíralsins.\r\n\r\n- Stysta
         hliðin í miðju þessa fernings er 50 dílar á lengd\r\n- Lengsta hliðin yst
         í spíralnum er 200 dílar á lengd\r"
@@ -6047,6 +6325,12 @@ is:
       courseF_artist_variables_challenge2_2018_markdown_instruction: "<img src=\"https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png\"\nwidth=\"250px\"/>\r\n\r\nÞú
         hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut
         er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?"
+      courseF_bee_conditionals1_predict1_markdown_instruction: "*\"Þetta ský er fyrir
+        mér!\"\r\n\r\nAthugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa ef
+        svo er."
+      courseF_bee_conditionals1_predict1_2018_markdown_instruction: "*\"Þetta ský
+        er fyrir mér!\"\r\n\r\nAthugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa
+        ef svo er."
       courseF_bee_conditionals2_markdown_instruction: "*\"Það er of skýjað til að
         sjá blóm!\"*\r\n\r\nAthugaðu undir hvert ský til að sjá hvort það feli blóm.
         Safnaðu blómasafa ef það er. \r\n\r\nMundu: Skýin fela ekki öll það sama!"
@@ -6075,7 +6359,7 @@ is:
       courseF_bee_for_challenge2_markdown_instruction: Leystu þessa þraut með eins
         fáum kubbum og mögulegt er.
       courseF_bee_for_challenge2_2018_markdown_instruction: Leystu þessa þraut með
-        sem allra fæstum kubbum.
+        eins fáum kubbum og mögulegt er.
       courseF_bee_for_challenge3_markdown_instruction: "**Ofuráskorun með `frá` lykkjur:**
         Leystu þessa þraut með eins fáum kubbum og mögulegt er."
       courseF_bee_functions2_markdown_instruction: "Til að auðvelda hlutina er kominn
@@ -6164,7 +6448,13 @@ is:
         núna en mun fljótlega reynast mjög hjálplegt!"
       courseF_bee_fwp3_markdown_instruction: "Tími til að láta reyna á fallið!\n\r\n\r\nAthugum
         hvort það auðveldar að safna blómasafa í þessum þremur beðum."
+      courseF_bee_fwp3_2018_markdown_instruction: "Tími til að láta reyna á fallið!\n\r\n\r\nAthugum
+        hvort það auðveldar að safna blómasafa í þessum þremur beðum."
       courseF_bee_fwp4_markdown_instruction: "*\"Hvernig er fallið þitt að reynast?\"*
+        \  \r\n\r\nVið þurfum að fínstilla það nánar hér. Smelltu á \"breyta\" til
+        að bæta við  `length` stika í fallið svo þú getir notað það fyrir mismunandi
+        löng beð."
+      courseF_bee_fwp4_2018_markdown_instruction: "*\"Hvernig er fallið þitt að reynast?\"*
         \  \r\n\r\nVið þurfum að fínstilla það nánar hér. Smelltu á \"breyta\" til
         að bæta við  `length` stika í fallið svo þú getir notað það fyrir mismunandi
         löng beð."
@@ -6219,6 +6509,14 @@ is:
       courseF_maze_ramp2_2018_markdown_instruction: "Dragðu `endurtaka` kubb úr verkfærakassanum
         og tengdu hann við `þegar keyrt` atburðinn. \r\n\r\nSettu `færa áfram` kubb
         innan í til að ljúka kóðanum."
+      courseF_maze_ramp4_markdown_instruction: "*\"Færðu mig eftir slóðinni að kjánalega
+        svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseF_maze_ramp4_2018_markdown_instruction: "*\"Færðu mig eftir slóðinni að
+        kjánalega svíninu.\"*\r\n\r\nTNT sprengiefnið gæti valdið fjaðrafoki!"
+      courseF_maze_ramp5_markdown_instruction: "*\"Fylgdu þessari slóð til að koma
+        mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
+      courseF_maze_ramp5_2018_markdown_instruction: "*\"Fylgdu þessari slóð til að
+        koma mér til svínsins!\"*\r\n\r\nGættu þín á TNT."
       courseF_maze_ramp6_markdown_instruction: "*\"Slakaðu á og hjálpaðu mér að finna
         vonda svínið. Annars gæti ég reiðst!\"*\r\n\r\nÞegar þú hefur marga eins kubba
         í röð, geturðu í staðinn sett bara einn þeirra í `endurtaka` lykkju. Þetta
@@ -6251,6 +6549,14 @@ is:
         ætti að vera \"a\" \r\n- \"ye\" ætti að vera \"e\"\r\n\r\n"
       courseF_playlab_variables2b RYAN CLONE_markdown_instruction: "Við getum gert
         yrðingar forrits áhugaverðari með því að blanda saman textabútum og breytum.\r\n\r\nSettu
+        breytuna `litur` inn í miðja setningu með því að setja hana í auða reitinn
+        í `tengja` kubbnum."
+      courseF_playlab_variables2b_markdown_instruction: "Við getum gert yrðingar forrits
+        áhugaverðari með því að blanda saman textabútum og breytum.\r\n\r\nSettu breytuna
+        `litur` inn í miðja setningu með því að setja hana í auða reitinn í `tengja`
+        kubbnum."
+      courseF_playlab_variables2b_2018_markdown_instruction: "Við getum gert yrðingar
+        forrits áhugaverðari með því að blanda saman textabútum og breytum.\r\n\r\nSettu
         breytuna `litur` inn í miðja setningu með því að setja hana í auða reitinn
         í `tengja` kubbnum."
       courseF_playlab_variables3bEdit_markdown_instruction: 'Hjálpaðu Kiki að eiga
@@ -6333,6 +6639,12 @@ is:
       course_playlab_variables3_markdown_instruction: "Túlkaðu nú tal Pegleg sjóræningja
         með því að breyta gildum breytnanna bara á tveimur stöðum!   \r\n-\n\"arrrg\"
         ætti að vera \"a\" \r\n- \"ye\" ætti að vera \"e\"\r\n\r\n"
+      coursef_maze_ramp3_markdown_instruction: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\r\n\r\nÞað
+        er einn aukakubbur sem mun láta fuglinn hrapa. \r\nHentu kubbnum með því að
+        draga hann aftur í verkfærakassann."
+      coursef_maze_ramp3_2018_markdown_instruction: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\r\n\r\nÞað
+        er einn aukakubbur sem mun láta fuglinn hrapa. \r\nHentu kubbnum með því að
+        draga hann aftur í verkfærakassann."
       csd-thursday-facilitation_markdown_instruction: "# Fimmtudagar - þankar um námseflingu\r\n\r\n##\nLotur
         byggðar á umræðum\r\n\r\nÞú hefur nú séð nokkrar lotur sem byggjast mikið
         á umræðum. Dæmi um það eru loturnar Samfélag (á miðvikudag) og Nýliðun/Þarfir
@@ -6454,16 +6766,30 @@ is:
       frozen square snowflake_markdown_instruction: Getur þú búið til snjókorn með
         því að láta `endurtaka` kubbinn búa til ferning 10 sinnum og láta `snúa` kubb
         snúa um 36 gráður á milli ferninga?
-      grade2_MakeDogTag_8_markdown_instruction: Nú skulum við tengja saman nokkur
-        V með því að teikna þau í lykkju.
+      grade1_adventurer_loops2_markdown_instruction: Hvernig getur Laurel safnað öllum
+        fimm gullhrúgunum með aðeins einum `E->` kubbi?
+      grade1_artist_loops6_markdown_instruction: "**Áskorun:** Þetta er falinn garður!
+        Göngum í kringum hann."
+      grade2_CaringForNewPet_0_markdown_instruction: 'Í þessari þraut: Dragðu alla
+        kubbana saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      grade2_CaringForNewPet_11_markdown_instruction: '*"Haltu ró þinni og hjálpaðu
+        mér að finna vonda svínið."*'
+      grade2_CaringForNewPet_2_markdown_instruction: "*\"Þetta svín ýfir á mér fjaðrirnar.\"*\r\n\r\nÞað
+        er einn aukakubbur sem mun láta fuglinn hrapa. \r\nHentu kubbnum með því að
+        draga hann aftur í verkfærakassann."
+      grade2_CaringForNewPet_2courseC_maze_programming3_markdown_instruction: "*\"Þetta
+        svín ýfir á mér fjaðrirnar.\"*\r\n\r\nÞað er einn aukakubbur sem mun láta
+        fuglinn hrapa. \r\nHentu kubbnum með því að draga hann aftur í verkfærakassann."
+      grade2_MakeDogTag_8_markdown_instruction: Nú skulum við tengja nokkur V saman
+        í lykkju.
       grade2_MakeDogTag_9_markdown_instruction: "Tími til að gera eitthvað spennandi!\n\r\n\r\nSmíðaðu
         kóðann úr síðustu þraut, en bættu við vinstri snúningi um 30 gráður innan
         í lykkjunni. Og endurtaktu hana 24 sinnum í stað 8."
       grade2_MakeDogTag_BFP_markdown_instruction: "*\"Hæ, ég er listamaður. Þú getur
         skrifað kóða til að láta mig teikna næstum hvað sem er.\"*\r\n\r\nLeiktu þér
         með kubbana í verkfærakassanum til að sjá hvað þeir gera!"
-      grade2_PuppyLoops_10_markdown_instruction: "Kennarinn segir að ég eigi að klára
-        það sem ég byrja á!\r\n\r\nHjálpaðu mér að ljúka hjólinu. Getur þú fundið
+      grade2_PuppyLoops_10_markdown_instruction: "Kennarinn segir að ég eigi að ljúka
+        því sem ég byrja á!\r\n\r\nHjálpaðu mér að ljúka hjólinu. Getur þú fundið
         út hvað er að?"
       grade2_PuppyLoops_2_markdown_instruction: "Nú færðu töfrakubb til að nota! Með
         `endurtaka` kubbnum getur þú endurtekið kóða aftur og aftur í lykkju.\r\n\r\nGetur
@@ -6497,9 +6823,9 @@ is:
         blóm eða býflugnabú! \r\n\r\nNotaðu `ef/annars` kubbinn til að safna blómasafa
         ef um blóm er að ræða.\r\nAnnars búa til hunang (því þá er það bú)."
       grade3_ConditionalsElse_6_markdown_instruction: "Þetta blóm gæti innihaldið
-        1, 2 eða 3 af blómasafa. \r\n\r\nHér eru skilyrðiskubbar (`ef` og/eða `ef-annars`)
-        notaðir saman til að safna nákvæmlega þeim safa sem blóm hefur. \r\n\r\nMundu
-        að magn blómasafans getur breyst í hvert sinn sem þrautin er keyrð!"
+        1, 2 eða 3 af blómasafa. \r\n\r\nNotaðu skilyrðiskubba (`ef` og/eða `ef-annars`)
+        saman til að safna nákvæmlega þeim safa sem blóm hefur. \r\n\r\nMundu að magn
+        blómasafans getur breyst í hvert sinn sem þrautin er keyrð!"
       grade3_ConditionalsElse_7_markdown_instruction: "Þessi blóm geta haft 3, 2 eða
         1 af blómasafa. \r\n\r\nLjúktu við fallið `athuga fjólublátt blóm` og notaðu
         það til að safna öllum safa úr blómunum."
@@ -6543,7 +6869,7 @@ is:
       grade3_Debugging_5_markdown_instruction: "Þetta blóm virðist sætt!\r\n\r\nLagaðu
         villu(r) til að safna öllum blómasafanum.\r\nÞú getur nú keyrt forritið í
         þrepum."
-      grade3_Debugging_6_markdown_instruction: "Þessi þraut er sykursæt!\r\n\rLagaðu
+      grade3_Debugging_6_markdown_instruction: "Það verður sætt að leysa þessa þraut!\r\n\r\nLagaðu
         villu(r) til að safna öllum blómasafanum."
       grade3_Debugging_9_markdown_instruction: "Hunang er æði en þarf þolinmæði!\r\n\r\nÞú
         þarft að lagfæra ýmislegt til að geta safnað öllum blómasafanum og búið til
@@ -6555,8 +6881,8 @@ is:
         þú safnað öllum blómasafanum með sem allra fæstum kubbum?"
       grade3_Loops_3_markdown_instruction: Notaðu `endurtaka` lykkju til að safna
         öllum blómasafanum.
-      grade3_Loops_4_markdown_instruction: Notaðu nú nýja `endurtaka` kubbinn til
-        að safna öllum blómasafanum og búa til allt hunangið.
+      grade3_Loops_4_markdown_instruction: Notaðu nú `endurtaka` kubbinn til að safna
+        öllum blómasafanum og búa til allt hunangið.
       grade3_Loops_6_markdown_instruction: "Hve oft geta lykkjur hjálpað þér í þessari
         þraut?\r\n\r\nLykkjur eru vinir þínir! Notaðu nokkrar til að leysa þessa þraut
         með sem allra fæstum kubbum."
@@ -6564,9 +6890,16 @@ is:
         safa úr hverju blómi með sem fæstum kubbum."
       grade3_Loops_TeacherIDo_markdown_instruction: "Þessi blóm virðast ljúffeng!\r\n\r\nSafnaðu
         safa úr hverju blómi með sem fæstum kubbum."
+      grade3_RunningFarm_10_markdown_instruction: Safnaðu öllum maís og káli og taktu
+        svo graskerið.
+      grade3_RunningFarm_11a_markdown_instruction: Safnaðu öllum maís og káli og taktu
+        svo graskerið.
       grade3_RunningFarm_9_markdown_instruction: |-
         Getur þú hjálpað mér einu sinni enn?
         Ég vil taka upp eins mikið af uppskeru og ég get áður en illgresið tekur yfir. Hvað heldur þú að við getum náð miklu?
+      grade3_bee_conditionals_quantum1_markdown_instruction: "*\"Þetta ský er fyrir
+        mér!\"\r\n\r\nAthugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa ef
+        svo er."
       grade3_bee_conditionals_quantum2_markdown_instruction: "Fleiri ský!\r\n\r\nÞað
         verður að skoða undir hvert ský til að sjá hvort þar sé falið blóm áður þú
         safnar blómasafa. \r\n\r\nMundu: Skýin fela ekki öll það sama!"
@@ -6606,9 +6939,9 @@ is:
       grade4_arist_nested_loop_triangles6_markdown_instruction: Getur þú teiknað þessa
         36 þríhyrninga með faldaðri lykkju?
       grade4_artist_functions2_markdown_instruction: "Með föllum getur þú búið til
-        nýja kubba! \r\n\r\nVið höfum fært kubbana sem teikna ferning inn í fall,
-        sem heitir `teikna ferning`. Getur þú notað `teikna ferning` fallið til að
-        búa til gleraugun? \r\n\r\nÞað eru 75 dílar á milli ferninganna."
+        nýja kubba! \r\n\r\nVið höfum fært kubbana sem þarf til að teikna ferning
+        inn í fall, sem heitir `teikna ferning`. Getur þú notað `teikna ferning` fallið
+        til að búa til gleraugun? \r\n\r\nÞað eru 75 dílar á milli ferninganna."
       grade4_artist_functions_challenge_markdown_instruction: "**Ofuráskorun með föll:**
         Notaðu gefin föll til að teikna fjórar raðir af sexhyrningum. Sérðu hvernig
         röðum með jafna tölu er hliðrað til hægri?"
@@ -6662,8 +6995,25 @@ is:
         hol þarft þú að stökkva áfram um lengd þríhyrningsins áður en þú snýrð."
       grade4_artist_nested_loop_triangles6_markdown_instruction: Getur þú teiknað
         þessa 36 þríhyrninga með faldaðri lykkju?
+      grade4_artist_parameters_squares1_markdown_instruction: "Smelltu á \"breyta\"
+        til að ganga frá skilgreiningu fallsins `teikna ferning` og bættu við stika.
+        \r\nFallið á að hafa stika fyrir lengd, eins og þríhyrningurinn. \r\n\r\n**Teiknaðu
+        nú 3 ferninga:** 25, 50 og 75 díla á lengd. Það er 100 dílar á milli vinstri
+        horna ferninganna."
       grade4_artist_parameters_triangles2_markdown_instruction: Sérðu eitthvað öðruvísi
         við þessa fallkubba? Smelltu á "Keyra" til að sjá hvað gerist.
+      grade4_artist_parameters_triangles2b_markdown_instruction: "Getur þú lokið við
+        þessa teikningu? \r\n\r\nHver þríhyrningur er með 25 díla lengri hliðar en
+        sá á undan. \r\nFyrsti þríhyrningurinn er með 25 díla hliðar."
+      grade4_artist_parameters_triangles3_markdown_instruction: "Getur þú lokið við
+        þessa teikningu? \r\n\r\nHver þríhyrningur er með 25 díla lengri hliðar en
+        sá á undan. \r\nFyrsti þríhyrningurinn er með 25 díla hliðar."
+      grade4_artist_parameters_triangles4_markdown_instruction: "Kóðinn fyrir þennan
+        þrihyrning er bilaður.\r\n\r\nGetur þú breytt fallinu til að laga það og síðan
+        búið til þríhyrninga með lengdir 25, 50 og 75?"
+      grade4_artist_parameters_trianglesx_markdown_instruction: "Getur þú lokið við
+        þessa teikningu? \r\n\r\nHver þríhyrningur er með 25 díla lengri hliðar en
+        sá á undan. \r\nFyrsti þríhyrningurinn er með 25 díla hliðar."
       grade4_bee_conditionals_nested_loops_markdown_instruction: "**Mat:** Safnaðu
         öllum blómasafanum.\r\nGættu þess að safna ekki blómasafa úr fjólubláu blómi
         sem hefur engan safa."
@@ -6690,17 +7040,16 @@ is:
         hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. "
       grade4_frozen_freeplay_markdown_instruction: Þú ert hér með orðin meistari í
         ísteikningu! Búðu nú til ævintýralegt vetrarríki.
-      grade4_frozen_functions0_markdown_instruction: Hringur er sérstakt form. Getur
-        þú fundið út hvaða tölu á að setja í stað spurningarmerkjanna til að teikna
+      grade4_frozen_functions0_markdown_instruction: Hringur er sérstakt form. Geturðu
+        fundið út hvaða tölu þarf að setja í stað spurningarmerkjanna til að teikna
         hring?
-      grade4_frozen_functions1a_markdown_instruction: Notaðu nýja "búa til hring"
-        kubbinn til að búa til 10 hringi sem skarast. Ekki gleyma að hoppa fram eftir
-        hvern hring.
+      grade4_frozen_functions1a_markdown_instruction: Notaðu nýja `gera hring` kubbinn
+        til að búa til 10 hringa sem skarast. Ekki gleyma að hoppa áfram milli hringa.
       grade4_frozen_functions2_markdown_instruction: Gerum nú 20 hringi sem skarast
         og snúum um 18 gráður eftir hvern hring.
-      grade4_frozen_functions3_markdown_instruction: Hér er "búa til hring" kubbur
-        sem getur búið til mismunandi stóra hringi. Getur þú notað hann til að búa
-        til lítinn hring í stærð 5 og annan stærri í stærð 10?
+      grade4_frozen_functions3_markdown_instruction: Hér er kubburinn `gera hring`
+        sem getur teiknað hringa í mismunandi stærðum. Getur þú notað hann til að
+        teikna lítinn hring í stærð 5 og annan í stærð 10?
       grade4_frozen_functions4_markdown_instruction: Flókin mynstur geta verið búin
         til úr mjög einföldum formum. Getur þú búið mynstur með því að endurtaka 5
         hringi í stærð 5 og 5 hringi í stærð 10?
@@ -6708,20 +7057,32 @@ is:
         engin tvö snjókorn eins? Búum til nýtt snjókorn með því að nota "endurtaka"
         kubbinn til að teikna samsíðung 4 sinnum, með snúning um 90 gráður eftir hvern
         samsíðung.
-      grade4_frozen_nested_loop_diamonds3_markdown_instruction: Búum til nýtt snjókorn
-        með því að láta "endurtaka" kubbinn endurtaka samsíðung 10 sinnum og snúa
-        til hægri um 36 gráður eftir hvern.
-      grade4_frozen_square_markdown_instruction: Hæ, ég er Anna frá Arendelle! Búum
-        til ferning með "endurtaka" kubbnum, sem notar færri kubba. Hve oft (???)
-        ætti "endurtaka" kubburinn að endurtaka innihald sitt til að búa til ferning?
-      grade4_frozen_square_loop1_markdown_instruction: Hæ, ég er Anna frá Arendelle!
-        Búum til ferning með "endurtaka" kubbnum, sem notar færri kubba. Hve oft (???)
-        ætti "endurtaka" kubburinn að endurtaka innihald sitt til að búa til ferning?
+      grade4_frozen_nested_loop_diamonds3_markdown_instruction: Nú skulum við nota
+        `endurtaka` kubbinn til að búa til öðruvísi snjókorn með því að endurtaka
+        samsíðunginn 10 sinnum og snúa um 36 gráður eftir hvern.
+      grade4_frozen_square_markdown_instruction: Hæ. Ég heiti Anna frá Arendelle!
+        Ef við notum `endurtaka` kubbinn til að teikna ferning, getum við haft færri
+        kubba. Hve oft (???) ætti `endurtaka` kubburinn að endurtaka innri kubbana
+        svo til verði ferningur?
+      grade4_frozen_square_loop1_markdown_instruction: Hæ. Ég heiti Anna frá Arendelle!
+        Ef við notum `endurtaka` kubbinn til að teikna ferning, getum við haft færri
+        kubba. Hve oft (???) ætti `endurtaka` kubburinn að endurtaka innri kubbana
+        svo til verði ferningur?
       grade4_frozen_square_loop2_markdown_instruction: Búum til þrjá ferninga með
         snúningi eftir hvern. Gættu þess að snúa um 120 gráður á milli ferninga.
       grade4_frozen_square_loop3_markdown_instruction: Getur þú búið til snjókorn
-        með því að nota "endurtaka" kubbinn til að búa til ferning 10 sinnum og "snúa"
-        kubbinn til að snúa um 36 gráður eftir hvern ferning?
+        með því að láta `endurtaka` kubbinn búa til ferning 10 sinnum og láta `snúa`
+        kubb snúa um 36 gráður á milli ferninga?
+      grade4_playlab_freeplay_markdown_instruction: "Frjáls tími!\nLeiktu þér með
+        kubbana í verkfærakassanum.  \r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary><b>Vantar
+        þig hugmyndir?</b></summary>\r\n\\t<br/>\r\n\\t<h5>\r\n\\t\\t<ul>\r\n        \\t<li><strong>Klukk</strong>\n-
+        Láttu leikmann 2 rása og notaðu örvarnar til að láta leikmann 1 elta þar til
+        þeir rekast á. </li>\r\n            <li><strong>Flugnaspaði</strong>\n- Láttu
+        leikmann skjóta upp kolli hingað og þangað af handahófi. Gefðu stig fyrir
+        að smella á kvikann áður en hann hverfur. </li>\r\n            <li><strong>Besta
+        ágiskun</strong> - Láttu báða leikmenn hverfa, breyttu stað af handahófi,
+        og láttu þá birtast sem persóna valin af handahófi. Smellur á þann fyrri gefur
+        stig, smellur á annan TAPAR stigi! </li>\r\n        </ul>\r\n\\t</h5>\r\n</details>\r\n</h5>\r\n"
       grade4_playlab_test_markdown_instruction: "<h5><b>\r\nHvernig gætum við skorað
         stig í þessum leik? \r\n</b></h5> \r\n<br/>\r\n\r\n1. Bættu 1 við `stig`breytuna
         í hvert sinn sem Hundur hittir Kött með kökusneið.  <br/>    <br/> \r\n2.\nNotaðu
@@ -6742,8 +7103,8 @@ is:
       grade4_review_artist3_markdown_instruction: Kubburinn `hoppa` færir listamanninn
         án þess að teikna. Teiknaðu þankastrikin með því að nota bæði `hoppa áfram`
         og `færa áfram` kubbana. Hver lína er 50 díla löng.
-      grade4_review_bee1_markdown_instruction: Notaðu nú nýja `endurtaka` kubbinn
-        til að safna öllum blómasafanum og búa til allt hunangið.
+      grade4_review_bee1_markdown_instruction: Notaðu nú `endurtaka` kubbinn til að
+        safna öllum blómasafanum og búa til allt hunangið.
       grade4_review_bee3_markdown_instruction: "Þetta er býsna duglegt bý!\r\n\r\nHjálpaðu
         býflugunni að safna öllum blómasafanum og búa til allt hunangið með sem fæstum
         kubbum."
@@ -6765,6 +7126,10 @@ is:
       grade5_artist_for_loops5_markdown_instruction: "Með einni lítilli breytingu
         á kóðanum úr síðustu þraut getur þú búið til þessa mynd. Geturðu fundið út
         hver sú breyting er?\r\n\r\nVísbending: Þú þarft að fjarlægja eitthvað!"
+      grade5_artist_for_loops6_markdown_instruction: "Ef þú snýrð aðeins meira eða
+        minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið
+        skemmtilega á óvart. \r\n\r\nPrófaðu að nota eitthvað af kóðanum úr síðasta
+        áfanga, en snúa um 89 gráður til að búa til þennan snúna spíral úr ferningum."
       grade5_artist_for_loops8_markdown_instruction: "Manstu eftir því frá fyrri áfanga
         þegar við notuðum breytu til að stjórna fjölda hliða á formi?? Við ætlum að
         gera það sama nú með breytunni `teljari`.  \r\n\r\nÞetta mynstur byrjar á
@@ -6788,8 +7153,30 @@ is:
         reynt að gera eitthvað svipað. Eða búið til eitthvað sem er alfarið þitt eigið.\r\n\r\nAthugaðu:\nVið
         höfum notað `stilla alfa` kubbinn til að láta lit krónublaðanna dofna þegar
         utar dregur."
+      grade5_artist_functionparameters9a_markdown_instruction: "Ljúktu við `teikna
+        spíral` fallið svo að það biðji líka um lágmarkslengd fyrir miðju spíralsins.\r\n\r\n-
+        Stysta hliðin í miðju þessa fernings er 50 dílar á lengd\r\n- Lengsta hliðin
+        yst í spíralnum er 200 dílar á lengd\r\n"
+      grade5_artist_functionparameters_6_markdown_instruction: "Vel gert! Breyttu
+        nú þessu falli og bættu í það stika fyrir fjölda hliða í fjölhyrningnum.\r\n\r\nHliðar
+        allra formanna eru 100 dílar á lengd."
+      grade5_artist_parameters_squares1_markdown_instruction: "Smelltu á \"breyta\"
+        til að ganga frá skilgreiningu fallsins `teikna ferning` og bættu við stika.
+        \r\nFallið á að hafa stika fyrir lengd, eins og þríhyrningurinn. \r\n\r\n**Teiknaðu
+        nú 3 ferninga:** 25, 50 og 75 díla á lengd. Það er 100 dílar á milli vinstri
+        horna ferninganna."
+      grade5_artist_parameters_squares2a_markdown_instruction: "Breyttu fallinu svo
+        að það taki stika með heitinu `lengd`.\r\n\r\nHver ferningur ætti að hafa
+        25 lengri hliðar en næsti á undan. Sá fyrsti hefur 25 díla hliðar. Skiptu
+        '???' út fyrir réttu gildunum til að teikna myndina."
+      grade5_artist_parameters_triangles2_markdown_instruction: "Getur þú lokið við
+        þessa teikningu? \r\n\r\nHver þríhyrningur er með 25 díla lengri hliðar en
+        sá á undan. \r\nFyrsti þríhyrningurinn er með 25 díla hliðar."
       grade5_artist_parameters_triangles2a_markdown_instruction: Sérðu eitthvað öðruvísi
         við þessa fallkubba? Smelltu á "Keyra" til að sjá hvað gerist.
+      grade5_artist_parameters_triangles4_markdown_instruction: "Kóðinn fyrir þennan
+        þrihyrning er bilaður.\r\n\r\nGetur þú breytt fallinu til að laga það og síðan
+        búið til þríhyrninga með lengdir 25, 50 og 75?"
       grade5_artist_variables_freeplay10_markdown_instruction: "**Frjáls æfing:**
         Gerðu tilraunir með fjölda hliða á þessu formi. Getur þú breytt algríminu
         þannig að heildarstærð formins haldist óbreytt alveg sama hvað hliðarnar eru
@@ -6845,6 +7232,35 @@ is:
       grade5_artist_variables_triangles2_markdown_instruction: Í stað þess að `færa
         áfram um 150` er `færa` kubburinn nú að lesa úr breytunni `lengd`. Getur þú
         stillt `lengd` á 150 og teiknað þennan nýja þríhyrning?
+      grade5_artist_variables_triangles3_markdown_instruction: 'Dragðu talnakubb í
+        `stilla lengd` kubbinn og í `endurtaka _ sinnum` kubbinn og teiknaðu 50 díla
+        þríhyrninga. '
+      grade5_bee_for_loops5_markdown_instruction: Nú þurfum við að færa áfram `teljari`
+        sinnum og svo `safna blómasafa` `teljari` sinnum. Getur þú notað tvær `endurtaka`
+        lykkjur til að leysa þessa þraut?
+      grade5_bee_for_loops6_markdown_instruction: Þú getur líka látið lykkju telja
+        niður. Prófaðu að safna þessum blómasafa með því að telja niður frá 5 til
+        1 um 1.
+      grade5_bee_parameters_new3_markdown_instruction: "Tími til að láta reyna á fallið!\n\r\n\r\nAthugum
+        hvort það auðveldar að safna blómasafa í þessum þremur beðum."
+      grade5_bee_parameters_new4_markdown_instruction: "*\"Hvernig er fallið þitt
+        að reynast?\"*   \r\n\r\nVið þurfum að fínstilla það nánar hér. Smelltu á
+        \"breyta\" til að bæta við  `length` stika í fallið svo þú getir notað það
+        fyrir mismunandi löng beð."
+      grade5_bee_parameters_new8a_markdown_instruction: Notaðu nýja fallið til að
+        teikna þennan spiral.
+      grade5_bee_parameters_new9a_markdown_instruction: Notaðu nýja fallið til að
+        teikna þennan spiral.
+      grade5_playlab_freeplay_markdown_instruction: "Frjáls tími!\nLeiktu þér með
+        kubbana í verkfærakassanum.  \r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary><b>Vantar
+        þig hugmyndir?</b></summary>\r\n\\t<br/>\r\n\\t<h5>\r\n\\t\\t<ul>\r\n        \\t<li><strong>Klukk</strong>\n-
+        Láttu leikmann 2 rása og notaðu örvarnar til að láta leikmann 1 elta þar til
+        þeir rekast á. </li>\r\n            <li><strong>Flugnaspaði</strong>\n- Láttu
+        leikmann skjóta upp kolli hingað og þangað af handahófi. Gefðu stig fyrir
+        að smella á kvikann áður en hann hverfur. </li>\r\n            <li><strong>Besta
+        ágiskun</strong> - Láttu báða leikmenn hverfa, breyttu stað af handahófi,
+        og láttu þá birtast sem persóna valin af handahófi. Smellur á þann fyrri gefur
+        stig, smellur á annan TAPAR stigi! </li>\r\n        </ul>\r\n\\t</h5>\r\n</details>\r\n</h5>\r\n"
       grade5_playlab_variables1_markdown_instruction: "Í þetta sinn þarft þú ekki
         að búa til neinn kóða heldur bara ýta á `Keyra` til að spila leikinn! \r\n\r\n<br/>\r\nÍ
         leiknum ert þú hundurinn sem reynir að safna fleiri flöggum en kötturinn.
@@ -6864,6 +7280,16 @@ is:
       grade5_playlab_variables13_markdown_instruction: Notaðu kubbinn `þegar leikmaður
         snertir` til að senda Hund aftur efst til vinstri en AÐEINS ef Hundur snertir
         einhvern annan leikmann.
+      grade5_playlab_variables14_markdown_instruction: "Frjáls tími!\nLeiktu þér með
+        kubbana í verkfærakassanum.  \r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary><b>Vantar
+        þig hugmyndir?</b></summary>\r\n\\t<br/>\r\n\\t<h5>\r\n\\t\\t<ul>\r\n        \\t<li><strong>Klukk</strong>\n-
+        Láttu leikmann 2 rása og notaðu örvarnar til að láta leikmann 1 elta þar til
+        þeir rekast á. </li>\r\n            <li><strong>Flugnaspaði</strong>\n- Láttu
+        leikmann skjóta upp kolli hingað og þangað af handahófi. Gefðu stig fyrir
+        að smella á kvikann áður en hann hverfur. </li>\r\n            <li><strong>Besta
+        ágiskun</strong> - Láttu báða leikmenn hverfa, breyttu stað af handahófi,
+        og láttu þá birtast sem persóna valin af handahófi. Smellur á þann fyrri gefur
+        stig, smellur á annan TAPAR stigi! </li>\r\n        </ul>\r\n\\t</h5>\r\n</details>\r\n</h5>\r\n"
       grade5_playlab_variables2_markdown_instruction: Keppnin í síðustu þraut var
         ekki sanngjörn! Breyttu breytunni `hraði_hunds` til að tryggja að þú náir
         að safna fleiri flöggum en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!
@@ -6896,6 +7322,8 @@ is:
         skoða hvað þú hefur. Búðu svo til leik eða sögu með endurtekningum, breytum
         og atvikum.\r\n\r\n*Vísbending: Flettu niður til að sjá allar skipanirnar
         á vinnusvæðinu.*"
+      gradek_playlab_events1c_markdown_instruction: Hundurinn Jorge vill segja "Hæ."
+        Geturðu hjálpað honum?
       iceage_click_hello_markdown_instruction: "Getur þú hjálpað Sid að kalla á vini
         sína þegar þú smellir á hann?\r\nSmelltu svo á \"Keyra\" til að spila. Smelltu
         á Sid til að sjá kóðann þinn virka!"
@@ -6912,8 +7340,8 @@ is:
         svo á \"Keyra\" og reyndu að safna öllum akörnunum."
       iceage_move_to_flag_markdown_instruction: Skrat er að leita að akarninu! Getur
         þú hjálpað honum að komast síðustu 200 dílana?
-      iceage_move_to_flag_2018_markdown_instruction: Skrat er að leita að akarninu
-        (nema hvað)! Getur þú hjálpað honum að komast síðustu 200 dílana?
+      iceage_move_to_flag_2018_markdown_instruction: Skrat er að leita að akarninu!
+        Getur þú hjálpað honum að komast síðustu 200 dílana?
       iceage_throw_hearts_markdown_instruction: "Sid vill láta ömmu sína, Granny,
         vita að honum þyki vænt um hana. \n \r\n\r\nNotaðu `leikari varpar` skipunina
         til láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2)! \r\nBreyttu
@@ -6929,8 +7357,8 @@ is:
         þú safnað öllum blómasafanum með sem allra fæstum kubbum?"
       level 'grade3_Loops_3_markdown_instruction: Notaðu `endurtaka` lykkju til að
         safna öllum blómasafanum.
-      level 'grade3_Loops_4_markdown_instruction: Notaðu nú nýja `endurtaka` kubbinn
-        til að safna öllum blómasafanum og búa til allt hunangið.
+      level 'grade3_Loops_4_markdown_instruction: Notaðu nú `endurtaka` kubbinn til
+        að safna öllum blómasafanum og búa til allt hunangið.
       level 'grade3_Loops_5_markdown_instruction: "En fallegt blómaengi! \r\n\r\nHjálpaðu
         býflugunni að heimsækja hvert blóm.\r\n\r\nGeturðu gert það með færri en 7
         kubbum?"
@@ -6976,6 +7404,14 @@ is:
       post-assessment survey q37_markdown_instruction: "(Val) Ef þú tókst ekki AP
         prófið, er þá eitthvað sem hefði orðið til þess að þú hefðir frekar tekið
         prófið?"
+      ramp_artist_loops4_markdown_instruction: Hvað gerist þegar þú bætir við 72 gráðu
+        hægri snúningi sem síðasta kubbi í lykkjunni?
+      ramp_artist_loops4_2018_markdown_instruction: Hvað gerist þegar þú bætir við
+        72 gráðu hægri snúningi sem síðasta kubbi í lykkjunni?
+      ramp_artist_loops7_markdown_instruction: Leitaðu að endurtekningu og styttu
+        þennan kóða með því að nota lykkjur!
+      ramp_artist_loops7_2018_markdown_instruction: Leitaðu að endurtekningu og styttu
+        þennan kóða með því að nota lykkjur!
       u3-old-drawing-view_markdown_instruction: "# Þín eigin teikning\r\n\r\nNú er
         komið að þér að búa til eigin teikningu. Þú ættir að hafa teiknað hugmynd
         á blað fyrst.\r\n\r\n# Gerðu þetta\r\nVertu viss um að þú hafir uppfyllt öll
