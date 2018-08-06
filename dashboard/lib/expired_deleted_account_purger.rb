@@ -17,6 +17,8 @@ require 'cdo/chat_client'
 # https://docs.google.com/document/d/1l2kB4COz8-NwZfNCGufj7RfdSm-B3waBmLenc6msWVs/edit
 #
 class ExpiredDeletedAccountPurger
+  class SafetyConstraintViolation < StandardError; end
+
   attr_reader :dry_run
   alias :dry_run? :dry_run
   attr_reader :deleted_after
@@ -45,50 +47,66 @@ class ExpiredDeletedAccountPurger
 
   def purge_expired_deleted_accounts!
     num_accounts_purged = 0
-
-    say "Purging expired deleted accounts#{@dry_run ? ' (dry-run)' : ''}"
-
-    accounts_to_purge = expired_deleted_accounts.to_a
-    if accounts_to_purge.size > @max_accounts_to_purge
-      raise StandardError.new "Found #{num_accounts_to_delete} accounts to " \
-        "purge, which exceeds the configured limit of #{@max_accounts_to_purge}. " \
-        "Abandoning run."
-    end
-
+    check_constraints
     account_purger = AccountPurger.new dry_run: @dry_run
-    accounts_to_purge.each do |account|
+    expired_deleted_accounts.each do |account|
       account_purger.purge_data_for_account account
       num_accounts_purged += 1
     rescue StandardError
       say "unable to purge account #{account}, moving to manual review queue"
       # TODO: Move to manual review queue
     end
-    say 'done'
+    say "Done - Purged #{num_accounts_purged} expired deleted accounts"
+    say "#{manual_review_queue_depth} accounts require review" if manual_review_queue_depth > 0
+  rescue StandardError => err
+    yell err.message
+    raise
   ensure
-    record_metrics num_accounts_purged
+    record_metrics num_accounts_purged unless @dry_run
   end
 
-  def record_metrics(num_accounts_purged)
-    # Number of soft-deleted accounts in system
+  private def check_constraints
+    if expired_deleted_accounts.count > @max_accounts_to_purge
+      raise SafetyConstraintViolation.new "Found #{expired_deleted_accounts.count} " \
+        "accounts to purge, which exceeds the configured limit of " \
+        "#{@max_accounts_to_purge}. Abandoning run."
+    end
+  end
+
+  private def record_metrics(num_accounts_purged)
+    # Number of soft-deleted accounts in system after this run
     NewRelic::Agent.record_metric("Custom/DeletedAccountPurger/SoftDeletedAccounts", soft_deleted_accounts.count)
-    # Number of accounts purged
+    # Number of accounts purged during this run
     NewRelic::Agent.record_metric("Custom/DeletedAccountPurger/AccountsPurged", num_accounts_purged)
-    # Depth of manual review queue
-    NewRelic::Agent.record_metric("Custom/DeletedAccountPurger/ManualReviewQueueDepth", 0) # TODO
+    # Depth of manual review queue after this run
+    NewRelic::Agent.record_metric("Custom/DeletedAccountPurger/ManualReviewQueueDepth", manual_review_queue_depth)
   end
 
-  def soft_deleted_accounts
+  private def soft_deleted_accounts
     User.with_deleted.where(purged_at: nil).where.not(deleted_at: nil)
   end
 
-  def expired_deleted_accounts
+  private def expired_deleted_accounts
     soft_deleted_accounts.where 'deleted_at BETWEEN :start_date AND :end_date',
       start_date: @deleted_after,
       end_date: @deleted_before
   end
 
+  private def manual_review_queue_depth
+    0 #TODO
+  end
+
   # Send messages to Slack #cron-daily room.
-  private def say(message)
-    ChatClient.message 'cron-daily', message
+  private def say(message, options = {})
+    ChatClient.message 'cron-daily', prefixed(message), options
+  end
+
+  # Send error messages to #cron-daily and #server-operations
+  private def yell(message)
+    say message, color: 'red', notify: 1
+  end
+
+  private def prefixed(message)
+    "ExpiredDeletedAccountPurger#{@dry_run ? ' (dry-run)' : ''}: #{message}"
   end
 end
