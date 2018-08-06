@@ -102,7 +102,7 @@ const NoClassroomsFound = ({provider}) => {
             {locale.noClassroomsFound()}
           </p>
           <a href="https://classroom.google.com/">
-              {locale.addRemoveGoogleClassrooms()}
+            {locale.addRemoveGoogleClassrooms()}
           </a>
         </div>
       );
