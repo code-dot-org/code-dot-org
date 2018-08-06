@@ -10,59 +10,80 @@ var game_over = false;
 var show_score = false;
 var title = '';
 var subTitle = '';
+var bg_sprite = createSprite(200, 200, 400, 400);
+bg_sprite.shapeColor = "white";
+bg_sprite.tint = "white";
+bg_sprite.visible = false;
+
 var dancers = {
   circle: [
-    loadAnimation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/standing/standing01.png"),
-    loadAnimation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap01.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap02.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap03.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap04.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap05.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap06.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap07.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap08.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap09.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap10.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap11.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap12.png"),
-    loadAnimation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy01.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy02.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy03.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy04.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy05.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy06.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy07.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy08.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy09.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy10.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy11.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy12.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy13.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy14.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy15.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy16.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy17.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy18.png"),
-    loadAnimation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock01.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock02.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock03.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock04.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock05.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock06.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock07.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock08.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock09.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock10.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock11.png",
-                  "https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock12.png")
-  ]
+  	loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/standing/standing", 1),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/clap/clap", 12),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/spin/spin", 12),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock", 12),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy", 18),
+    ]
 };
 
-var beat_detectors = {
-  low: Dance.fft.createPeakDetect(20, 200, 0.8, 16),
-  mid: Dance.fft.createPeakDetect(400, 2600, 0.4, 16),
-  high: Dance.fft.createPeakDetect(2700, 4000, 0.5, 16)
+var bg_effects = {
+  none: {
+    draw: function() {
+      background(World.background_color || "white");
+    }
+  },
+  rainbow: {
+    color: color('hsb(0, 100%, 50%)'),
+    update: function () {
+      push();
+      colorMode(HSB);
+      this.color = color(this.color._getHue() + 10, 100, 100);
+      pop();
+    },
+    draw: function () {
+      if (Dance.fft.isPeak()) this.update();
+      background(this.color);
+    }
+  },
+  disco: {
+    colors: [],
+    update: function () {
+      push();
+      colorMode(HSB);
+      if (this.colors.length < 1) {
+        for (var i=0; i<64; i++) {
+          this.colors.push(color(randomNumber(0, 359), 100, 100));
+        }
+      } else {
+        for (var j=randomNumber(5, 10); j>0; j--) {
+          this.colors[randomNumber(0, this.colors.length - 1)] = color(randomNumber(0, 359), 100, 100);
+        }
+      }
+      pop();
+    },
+    draw: function () {
+      if (Dance.fft.isPeak() || World.frameCount == 1) this.update();
+      push();
+      noStroke();
+      for (var i=0; i<64; i++) {
+        fill(this.colors[i]);
+        rect((i % 8) * 50, Math.floor(i / 8) * 50, 50, 50);
+      }
+    }
+  }
 };
+
+World.bg_effect = bg_effects.none;
+function loadS3Animation(base_url, count) {
+  var args = [];
+  for (var i=0; i< count; i++) {
+    args.push(base_url + i + ".png");
+  }
+  return loadAnimation.apply(null, args);
+}
+
+Dance.fft.createPeakDetect(20, 200, 0.8, 48);
+Dance.fft.createPeakDetect(400, 2600, 0.4, 48);
+Dance.fft.createPeakDetect(2700, 4000, 0.5, 48);
 
 function initialize(setupHandler) {
   setupHandler();
@@ -70,17 +91,7 @@ function initialize(setupHandler) {
 
 // Behaviors
 
-function addBehavior(sprite, behavior) {
-  if (!sprite || !behavior) {
-    return;
-  }
-  behavior = normalizeBehavior(behavior);
 
-  if (findBehavior(sprite, behavior) !== -1) {
-    return;
-  }
-  sprite.behaviors.push(behavior);
-}
 
 function removeBehavior(sprite, behavior) {
   if (!sprite || !behavior) {
@@ -234,67 +245,6 @@ function makeNewSpriteLocation(animation, loc) {
   return makeNewSprite(animation, loc.x, loc.y);
 }
 
-function makeNewSprite(animation, x, y) {
-  var sprite = createSprite(x, y);
-
-  if (animation) {
-    sprite.setAnimation(animation);
-  }
-  sprites.push(sprite);
-  sprite.speed = 10;
-  sprite.patrolling = false;
-  sprite.things_to_say = [];
-  sprite.behaviors = [];
-
-  sprite.setSpeed = function (speed) {
-    sprite.speed = speed;
-  };
-
-  sprite.moveUp = function () {
-    sprite.y = sprite.y - sprite.speed;
-  };
-  sprite.moveDown = function () {
-    sprite.y = sprite.y + sprite.speed;
-  };
-  sprite.moveLeft = function () {
-    sprite.x = sprite.x - sprite.speed;
-  };
-  sprite.moveRight = function () {
-    sprite.x = sprite.x + sprite.speed;
-  };
-  sprite.jump = function () {
-    sprite.velocityY = -7;
-  };
-  sprite.setTint = function (color) {
-    sprite.tint = color;
-  };
-  sprite.removeTint = function () {
-    sprite.tint = null;
-  };
-
-  sprite.setPosition = function (position) {
-    if (position === "random") {
-      sprite.x = randomNumber(50, 350);
-      sprite.y = randomNumber(50, 350);
-    } else {
-      sprite.x = position.x;
-      sprite.y = position.y;
-    }
-  };
-  sprite.setScale = function (scale) {
-    sprite.scale = scale;
-  };
-
-  sprite.say = function (text, time) {
-    time = time || 50;
-    sprite.things_to_say.push([text, time]);
-  };
-  sprite.stop_say = function () {
-    sprite.things_to_say = [];
-  };
-  return sprite;
-}
-
 function makeNewGroup() {
   var group = createGroup();
   group.addBehaviorEach = function (behavior) {
@@ -310,10 +260,6 @@ function makeNewGroup() {
 
 function randomLoc() {
   return randomNumber(50, 350);
-}
-
-function setBackground(color) {
-  World.background_color = color;
 }
 
 function showScore() {
@@ -345,9 +291,13 @@ function shouldUpdate() {
 
 function draw() {
   Dance.fft.analyze();
-  
-  background(World.background_color || "white");
-  
+
+  if (World.bg_effect) {
+    World.bg_effect.draw();
+  } else {
+    bg_effects.none.draw();
+  }
+
   callbacks.forEach(function (callback) {
     callback();
   });
