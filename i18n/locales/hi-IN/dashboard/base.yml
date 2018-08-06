@@ -173,10 +173,10 @@ hi:
     completed: 'पूरा हो गया'
     tried: 'कोशिश की'
   home:
-    trynow: 'अब कोशिश करे'
+    trynow: 'अधिक जानें'
     announcement_title: "घोषणाएँ"
     announcement_learn_more_button: "अधिक जानें"
-    announcement_try_now_button: "अब कोशिश करे"
+    announcement_try_now_button: "अधिक जानें"
   gender:
     male: 'पुरूष'
     female: 'महिला'
@@ -186,6 +186,8 @@ hi:
     upgrade:
       link: "अधिक जानें"
   upsell:
+    minecraft:
+      body: "कोड के जरिए Minecraft की दुनिया का पता लगाएँ"
     unplugged_conditionals:
       title: "शर्तें"
   landing:
