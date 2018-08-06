@@ -164,7 +164,13 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       distance_query = Sequel.function(:ST_Distance_Sphere,
         Sequel.function(:ST_PointFromText, "POINT (#{coordinates.split(',').reverse.join(' ')})", 4326),
         Sequel.function(:ST_PointFromText,
-          Sequel.function(:concat, 'POINT (', Sequel.function(:replace, Forms.json('processed_data.location_p'), ',', ' '), ')'),
+          Sequel.function(:concat,
+            'POINT (',
+            Sequel.function(:substring_index, Forms.json('processed_data.location_p'), ',', -1),
+            ' ',
+            Sequel.function(:substring_index, Forms.json('processed_data.location_p'), ',', 1),
+            ')'
+          ),
           4326
         )
       ) / 1000
