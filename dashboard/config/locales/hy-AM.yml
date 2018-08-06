@@ -377,7 +377,7 @@ hy:
     more: More
     feedback: ապահովել հետադարձ կապը
     translate: Օգնեք մեզ թարգմանել Ձեր լեզվով
-    support: աջակցություն
+    support: Help and Community
     tos_short: Պայմաններ
     tos: Ծառայությունների մատուցման պայմաններ
     privacy: Գաղտնիության քաղաքականություն
@@ -485,7 +485,7 @@ hy:
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: Minecraft
-      body: 'Հետազոտել է Minecraft աշխարհը կոդը:'
+      body: Explore a Minecraft world through code
     minecraft2016:
       title: Minecraft
     hero:
