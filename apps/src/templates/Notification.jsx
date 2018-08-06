@@ -64,6 +64,8 @@ const styles = {
     float: 'left',
   },
   contentBox: {
+    // The subtracted 100px leaves room for both the icon column on the left and
+    // the dismiss X icon column on the right.
     width: 'calc(100% - 100px)',
     display: 'flex',
     flexFlow: 'wrap'
