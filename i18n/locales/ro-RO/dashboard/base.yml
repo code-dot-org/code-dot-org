@@ -19,7 +19,7 @@ ro:
         parent_email: 'E-mail părinte/tutore'
         personal_email: "Adresa de e-mail personal <a href=\"%{url}\"> (click aici dacă nu aveţi o adresă de e-mail)</a>"
         username: 'nume de utilizator'
-        password: 'parolă'
+        password: 'Parolă'
         password_confirmation: 'Confirmarea parolei'
         current_password: 'Parolă curentă'
         locale: 'Limbă'
@@ -37,7 +37,7 @@ ro:
   previous_page: Pagina anterioară
   next_page: Pagina următoare
   next_resource: Următoarea resursă
-  cancel: "Anulează"
+  cancel: "Revocare"
   okay: "Bine"
   heading_x_of_y: "%{heading} (pagina%{x} din %{y})"
   add_teacher_form:
@@ -50,7 +50,7 @@ ro:
     placeholder: 'Te rugăm să introduci indiciul tău aici'
     submit: 'Adaugă sugestie'
   appname: "Code.org"
-  stage: "etapă"
+  stage: "Etapă"
   stage_number: "Etapa %{number}"
   puzzle: "Puzzle"
   trophies: "trofee"
@@ -100,7 +100,7 @@ ro:
     birthday: 'Ziua de naştere (opţional)'
     age: 'Vârsta'
     user_type: 'Ești student sau profesor?'
-    submit: 'Inregistrează-te'
+    submit: 'Înregistrează-te'
     teacher: 'Ești profesor?'
     valid_username: "Disponibil!"
     invalid_username: "Numele de utilizator trebuie să aibe cel puțin 5 caractere"
@@ -116,7 +116,7 @@ ro:
     additional_information: "Mai avem nevoie de câteva informaţii adiționale pentru a te putea înscrie."
     user_type_label: "Tipul contului"
     user_type_teacher: "Profesor"
-    user_type_student: "elev"
+    user_type_student: "Elev"
     field_is_required: "este necesar"
     accept_terms: "Trebuie să fii de acord pentru a crea un cont"
     error: "S-a produs o eroare."
@@ -219,7 +219,7 @@ ro:
       classroom: 'Pagina de Start a Profesorilor'
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'
       label: 'Salut %{username}'
-      stats: 'Atelierul de programare'
+      stats: 'Studio-ul Code'
       settings: 'Contul meu'
       logout: 'Deloghează-te'
       signin: 'Loghează-te'
@@ -255,7 +255,7 @@ ro:
     student_teacher_disassociated: 'Ai eliminat pe %{teacher_name} ca profesor.'
     panel:
       answer_viewer: 'Panoul profesorului'
-      student: 'elev'
+      student: 'Elev'
       viewing_solution: 'Indicator soluție'
       try_it_yourself: 'Încearcă-l și tu'
       section: 'Secţiune'
@@ -309,10 +309,10 @@ ro:
     view_course: Vizualizare curs
     prize_info: 'Premii pentru participare (doar pentru profesorii americani din sistemul public de învățământ): până la 1.000 dolari în recompense pentru clasă.'
     tryfirst: 'Sau, poţi încerca prima dată, urmând să te înscrii mai târziu:'
-    trynow: 'Încearcă acum'
+    trynow: 'Află mai mult'
     add_hint_help: 'Ajută-ne să adăugăm sugestii inteligente pentru tutorialele Code.org'
     20hour_overview: 'Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.'
-    test_videos_help: 'Testează noul nostru video player la şcoala ta'
+    test_videos_help: 'Încearcă noul nostru video player la şcoala ta'
     try_beta_courses: 'Nou! Încearcă cursurile noastre beta pentru elevi de clasele 1-5'
     use_as_teacher: 'Foloseşte acest site în calitate de profesor'
     heading_hoc2014: "<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>"
@@ -327,7 +327,7 @@ ro:
     announcement_title: "Anunțuri"
     announcement_message_fall2016_features: "Ne-am petrecut vara transformând feedback-ul vostru în noi caracteristici. Acum, puteţi <a href=\"%{pp_url}\" target=\"_blank\"> urmări progresul Mai multor elevi </a> chiar dacă aceștia programeaza in pereche pe un singur dispozitiv. Utilizaţi <a href=\"%{csp_widgets_url}\" target=\"_blank\"> cele mai bune instrumente interactive</a> la cursul nostru de CS Principles în <i>orice</i> clasă. Şi elevii pot <a href=\"%{unused_code_url}\" target=\"_blank\"> păstra codul meutilizat </a> în spaţiul lor de lucru pentru a încuraja experimentarea! Încearcă toate caracteristicile noastre noi şi spuneţi-ne ce credeţi."
     announcement_learn_more_button: "Află mai mult"
-    announcement_try_now_button: "Încearcă acum"
+    announcement_try_now_button: "Află mai mult"
     announcement_host_an_hour_button: "Organizeaza o ora"
     announcement_watch_video_button: "Urmăriţi videoclipul"
     announcement_petition: "Ca profesor, sunteți liderul miscarii pentru a oferi fiecarui student din fiecare şcoală oportunitatea de a învăţa informatică. Acum, este timpul să lăsaţi reprezentanţii dumneavoastră sa auda de la dumneavoastra. În această săptămână, liderii de educaţie, 28 guvernatori şi Directorii celor mai mari companii din America s-au alăturat într-o scrisoare deschisă catre Congresul SUA pentru a finanta calculatorul de stiinta si educaţie k-12."
@@ -353,7 +353,7 @@ ro:
     female: 'De sex feminin'
     none: 'Prefer să nu răspund'
   user_type:
-    student: 'elev'
+    student: 'Elev'
     teacher: 'Profesor'
   footer:
     thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Atelierului de programare.'
@@ -368,7 +368,7 @@ ro:
     more: 'Mai mult'
     feedback: 'Oferă feedback'
     translate: 'Ajută-ne să  traducem în limba ta'
-    support: 'Suport'
+    support: 'Ajutor şi comunitate'
     support_url: 'http://support.code.org/'
     tos_short: 'Termeni'
     tos: 'Termeni şi condiţii de utilizare'
@@ -446,8 +446,8 @@ ro:
       body: 'Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.'
       body_short: 'Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor 2-4.'
     hoc2014:
-      try_new_tutorial: 'Încearcă noul nostru tutorial Ora de Programare în versiune beta'
-      try_frozen: 'Artist cu Anna și Elsa, din Frozen'
+      try_new_tutorial: 'Încearcă noul nostru tutorial Hour of Code în versiune beta'
+      try_frozen: 'Artist cu Anna și Elsa din Frozen'
     gallery:
       title: "Galerie"
       body: "Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri"
@@ -558,7 +558,7 @@ ro:
     startover_title: "Ești sigur că vrei să începi din nou?"
     startover_body: "Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge tot ce ai adăugat sau modificat."
     startover_ok: "Reîncepe"
-    startover_cancel: "Anulează"
+    startover_cancel: "Revocare"
   time:
     hour: '1 oră'
     day: 'zi'
@@ -586,22 +586,7 @@ ro:
     title: "Optional: Ajuta-ne sa urmarim progresul fata de imbunatatirea nivelului diversitatii in domeniu."
     message: "Va rog sa ne spuneti rasa dvs"
     races:
-      - 
-        white: "Alb"
-      - 
-        black: "Negru sau afro-americani"
-      - 
-        hispanic: "Hispanic sau Latino"
-      - 
-        asian: "Asiatic"
-      - 
-        hawaiian: "Nativ hawaian sau din zona Pacificului"
-      - 
-        american_indian: "American Indian/Nativ Alaska"
-      - 
-        other: "Alte"
-      - 
-        opt_out: "Prefer să nu răspund"
+      other: "Alte"
     submit: "Trimite"
     decline: "Închide"
   zendesk_too_young_message: 'Ne pare rău, însă utilizatorii mai tineri nu au voie să intre pe site-ul nostru de suport. Poți naviga pe <a href="http://support.code.org">support.code.org</a> fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze în numele tău.'
@@ -647,7 +632,7 @@ ro:
     delete_no: 'Nu'
     saved: "Salvat"
     not_saved: "Nesalvat"
-    cancel: 'Anulează'
+    cancel: 'Revocare'
     delete_confirm_title: Sigur ștergeți aceast proiect?
     delete_confirm_text: "Ștergerea proiectului tău îl va elimina definitiv pe acesta din propria listă Proiectele Mele. Orice persoană căreia i-ai distribuit link-ul nu va mai putea vedea proiectul tău."
     view_all: 'Vizualizează proiectele mele'
@@ -783,4 +768,5 @@ ro:
   cookie_banner:
     accept: 'Sunt de acord'
   gdpr_dialog:
+    message: 'Datele obținute în urma utilizării de către dumneavoastră a acestui site pot fi trimise și stocate sau prelucrate în Statele Unite.'
     yes: 'Da'
