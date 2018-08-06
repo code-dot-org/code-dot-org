@@ -23,13 +23,13 @@ require_relative '../../lib/cdo/only_one'
 options = {}
 OptionParser.new do |opts|
   opts.banner = <<~BANNER
-  Usage: #{File.basename(__FILE__)} [options]
+    Usage: #{File.basename(__FILE__)} [options]
 
-  This script locates accounts that were soft-deleted more than 28 days ago and
-  performs a hard-delete on those accounts, permanently removing the account
-  data from our system.
+    This script locates accounts that were soft-deleted more than 28 days ago and
+    performs a hard-delete on those accounts, permanently removing the account
+    data from our system.
 
-  Options:
+    Options:
   BANNER
 
   opts.on('--dry-run', 'Report expected results without deleting anything') do |dry_run|
