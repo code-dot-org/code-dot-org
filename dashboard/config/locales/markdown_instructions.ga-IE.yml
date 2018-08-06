@@ -44,11 +44,11 @@ ga:
         na plandaí 100 picteilín ó chéile.
       2-3 Artist Functions 12 a_markdown_instruction: Tá feidhmeanna an-áisiúil nuair
         is gá rud éigin casta a tharraingt arís is arís eile. An féidir leat an fheidhm
-        `draw a flower` a úsáid chun an soitheach plandaí a líonadh? Tá na plandaí
+        "draw a flower" a úsáid chun an soitheach plandaí a líonadh? Tá na plandaí
         100 picteilín ó chéile.
       2-3 Artist Functions 12_markdown_instruction: Tá feidhmeanna an-áisiúil nuair
         is gá rud éigin casta a tharraingt arís is arís eile. An féidir leat an fheidhm
-        `draw a flower` a úsáid chun an soitheach plandaí a líonadh? Tá na plandaí
+        "draw a flower" a úsáid chun an soitheach plandaí a líonadh? Tá na plandaí
         100 picteilín ó chéile.
       2-3 Artist Functions 2_markdown_instruction: Is féidir leat blocanna nua a chruthú
         le feidhmeanna! Chuireamar na blocanna a theastaíonn uait chun cearnóg a tharraingt
@@ -255,11 +255,15 @@ ga:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: '**Measúnú:** Úsáid
         blocanna "athdhéan go dtí" agus "má... i ngach cás eile" chun cabhrú liom
         an lus gréine a shroicheadh leis an líon is lú blocanna agus is féidir.'
+      4-5 Nested Loops 12_markdown_instruction: An féidir leat na 36 triantán seo
+        a tharraingt le lúb neadaithe?
       4-5 Nested Loops 3_markdown_instruction: Cuir an cód atá ann isteach i lúb chun
         an ghrian a tharraingt. Leis an dearadh iontach seo a dhéanamh le lár folamh,
         caithfidh tú léim ar aghaidh fad an triantáin sula gcasfaidh tú.
       4-5 Nested Loops 5_markdown_instruction: Cuir an cód atá ann isteach i lúb chun
         muileann gaoithe a dhéanamh.
+      4-5 Nested Loops 6_markdown_instruction: An féidir leat an cód a dhéanann triantán
+        a chur isteach i lúb chun heicseagán a tharraingt?
       4-5 Nested Loops 7_markdown_instruction: Athdhéan an dearadh seo 10 n-uaire.
         Cad é an uillinn le casadh tar éis gach lúb?
       4-5 Nested Loops 8_markdown_instruction: 'Athdhéan an cruth seo 6 huaire. Cad
@@ -373,13 +377,23 @@ ga:
       Testing Quantum Farmer_markdown_instruction: 'Féach sin anois! Níl a fhios agam
         cé mhéad sluasaid atá de dhíth. An féidir leat an bloc "líon" a úsáid go dtí
         go mbeidh an talamh réidh?  '
+      conditionals_forvideo_harvester_markdown_instruction: Bailigh an t-arbhar agus
+        an leitís go léir, ansin bain an puimcín.
       course1_maze_debugging_challenge2_markdown_instruction: Dífhabhtaigh an leibhéal
         seo. Tá na blocanna cearta agat, ach tá siad san ord mícheart!
+      course2_artist_prog_challenge2_markdown_instruction: "*Cabhraigh liom na línte
+        buí a phéinteáil ar an mbóthar seo!*"
       course2_collector_prog_challenge1_markdown_instruction: Caith súil ghéar air!
         An féidir leat na **10** seoid atá ann a bhailiú?
+      course2_harvester_loops_challenge1_markdown_instruction: Bailigh an t-arbhar
+        go léir.
+      course2_harvester_loops_challenge2_markdown_instruction: Bailigh an leitís go
+        léir. Seachain na crainn agus na páirceanna!
       course3_collector_debugging_challenge2_markdown_instruction: An bhfuil tú i
         do shaineolaí ar lúba neadaithe? Úsáid ar fhoghlaim tú go dtí seo chun an
         taisce a bhailiú!
+      course3_maze_until_challenge1_markdown_instruction: Gan leideanna, dúshlán amháin.
+        Treoraigh an zombaí go dtí an lus gréine.
       course4_artist_fwp_challenge1_markdown_instruction: Bain triail as an gclár
         seo, déan athruithe, agus féach cad a tharlóidh. An féidir leat déanamh amach
         conas a oibríonn sé? (Nó scrios é agus scríobh rud éigin go hiomlán difriúil
@@ -412,8 +426,16 @@ ga:
         eile, chun cabhrú leis an éan an mhuc a shroicheadh!
       courseA_maze_seq8_2018_markdown_instruction: Réitigh an dúshlán seo agus cabhraigh
         leis an éan an mhuc a shroicheadh!
+      courseB_artist_loops7_markdown_instruction: "**Dúshlán:** Garraí faoi cheilt
+        atá ann! Siúlaimis thart."
+      courseB_artist_loops7_2018_markdown_instruction: "**Dúshlán:** Garraí faoi cheilt
+        atá ann! Siúlaimis thart."
       courseB_iceage_loops10_markdown_instruction: Cabhraigh le Scrat an dearcán a
         fháil!
+      courseB_iceage_loops11_markdown_instruction: Cabhraigh le Scrat an dearcán a
+        fháil!
+      courseB_iceage_loops11_forVideo_markdown_instruction: Cabhraigh le Scrat an
+        dearcán a fháil!
       courseB_iceage_loops12_markdown_instruction: Faigh an dearcán cibé slí is féidir
         leat!
       courseB_iceage_loops5_markdown_instruction: An féidir leat lúb amháin eile a
@@ -425,6 +447,10 @@ ga:
         An féidir leat lúba a úsáid chun cabhrú le Scrat é a fháil?
       courseB_maze_seq3_markdown_instruction: '*"Deisigh an cód agus treoraigh go
         dtí an mhuc mé!"*'
+      courseB_maze_seq9_challenge1_markdown_instruction: "*Cá bhfuil an mhuc sin ina
+        folach anois?*"
+      courseC_artist_prog_challenge2_markdown_instruction: "*Cabhraigh liom na línte
+        buí a phéinteáil ar an mbóthar seo!*"
       courseC_collector_prog8_markdown_instruction: '*"Nár lagaí Dia thú! Cabhraigh
         liom na seoda go léir a bhailiú."*'
       courseC_collector_prog8_2018_markdown_instruction: '*"Nár lagaí Dia thú! Cabhraigh
@@ -463,11 +489,21 @@ ga:
         go léir.
       courseC_harvester_loops9_2018_markdown_instruction: Bailigh an t-arbhar agus
         na puimcíní go léir.
+      courseC_harvester_loops_challenge1_markdown_instruction: Bailigh an t-arbhar
+        go léir.
+      courseC_harvester_loops_challenge2_markdown_instruction: Bailigh an leitís go
+        léir. Seachain na crainn agus na páirceanna!
+      courseC_harvester_loops_challenge2_2018_markdown_instruction: Bailigh an leitís
+        go léir. Seachain na crainn agus na páirceanna!
       courseC_harvester_loops_forVid_markdown_instruction: Bailigh an t-arbhar agus
         na puimcíní go léir.
       courseC_maze_loops4_markdown_instruction: Sa dúshlán seo, is féidir leat dhá
         bhloc "athdhéan" a úsáid chun cabhrú leis an éan an mhuc a shroicheadh leis
         an líon is lú blocanna agus is féidir!
+      courseC_maze_programming1_markdown_instruction: Sa dúshlán seo, tarraing na
+        blocanna go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
+      courseC_maze_programming1_2018_markdown_instruction: Sa dúshlán seo, tarraing
+        na blocanna go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
       courseC_maze_programming8_markdown_instruction: '*"Tóg go bog é agus cabhraigh
         liom an mhuc dhána a aimsiú."*'
       courseC_maze_programming8_2018_markdown_instruction: '*"Tóg go bog é agus cabhraigh
@@ -503,7 +539,30 @@ ga:
       courseD_bee_nestedLoops9_predict2_markdown_instruction: Déan an mhil go léir.
       courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Déan an mhil go
         léir.
+      courseD_bee_nested_loops_challenge1_markdown_instruction: Téimis ag tóraíocht
+        taisce - le lúba! Cabhraigh leis an mbailitheoir ar a laghad dhá charn maoine
+        a shroicheadh gan ach na blocanna sa mbosca uirlisí a úsáid.
+      courseD_bee_nested_loops_challenge2_markdown_instruction: Téimis ag tóraíocht
+        taisce - le lúba! Cabhraigh leis an mbailitheoir ar a laghad dhá charn maoine
+        a shroicheadh gan ach na blocanna sa mbosca uirlisí a úsáid.
+      courseD_bounce_events1_markdown_instruction: Sroich an bhratach! Ceangail bloc
+        feiliúnach leis an mbloc "nuair a bhrúitear an tsaighead chlé" agus cliceáil
+        "Rith" chun cabhrú leis an imreoir an bhratach a bhaint amach.
+      courseD_farmer_condLoops8_markdown_instruction: Bailigh an t-arbhar agus an
+        leitís go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops8_2018_markdown_instruction: Bailigh an t-arbhar agus
+        an leitís go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops9_markdown_instruction: Bailigh an t-arbhar agus an
+        leitís go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops9_2018_markdown_instruction: Bailigh an t-arbhar agus
+        an leitís go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops9_predict1_markdown_instruction: Bailigh an t-arbhar
+        agus an leitís go léir, ansin bain an puimcín.
+      courseD_farmer_condLoops9_predict1_2018_markdown_instruction: Bailigh an t-arbhar
+        agus an leitís go léir, ansin bain an puimcín.
       courseD_iceage_loops10_markdown_instruction: Cabhraigh le Scrat an dearcán a
+        fháil!
+      courseD_iceage_loops11_markdown_instruction: Cabhraigh le Scrat an dearcán a
         fháil!
       courseD_iceage_loops12_markdown_instruction: Faigh an dearcán cibé slí is féidir
         leat!
@@ -512,12 +571,23 @@ ga:
       courseD_iceage_loops8_markdown_instruction: 'An féidir leat an cód seo a dheisiú? '
       courseD_iceage_loops9_markdown_instruction: Tá an dearcán i bhfad bhfad ar siúl!
         An féidir leat lúba a úsáid chun cabhrú le Scrat é a fháil?
+      courseD_maze_loops_challenge1_markdown_instruction: Téimis ag tóraíocht taisce
+        - le lúba! Cabhraigh leis an mbailitheoir ar a laghad dhá charn maoine a shroicheadh
+        gan ach na blocanna sa mbosca uirlisí a úsáid.
       courseD_maze_nestedLoops4_markdown_instruction: Treoraigh go dtí an lus gréine
         mé leis an líon is lú blocanna agus is féidir! Déan iarracht bloc "athdhéan"
         amháín a chur isteach i gceann eile, chun an méid cóid a laghdú.
       courseD_maze_nestedLoops4_2018_markdown_instruction: Treoraigh go dtí an lus
         gréine mé leis an líon is lú blocanna agus is féidir! Déan iarracht bloc "athdhéan"
         amháín a chur isteach i gceann eile, chun an méid cóid a laghdú.
+      courseD_maze_ramp1_markdown_instruction: Sa dúshlán seo, ceangail na blocanna
+        go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
+      courseD_maze_ramp1_2018_markdown_instruction: Sa dúshlán seo, ceangail na blocanna
+        go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
+      courseD_maze_ramp5c_markdown_instruction: Cabhraigh leis an éan an mhuc a bhaint
+        amach.
+      courseD_maze_ramp5c_2018_markdown_instruction: Cabhraigh leis an éan an mhuc
+        a bhaint amach.
       courseD_maze_ramp5d_markdown_instruction: Cabhraigh leis an éan an mhuc a bhaint
         amach.
       courseD_maze_ramp5d_2018_markdown_instruction: Cabhraigh leis an éan an mhuc
@@ -546,6 +616,17 @@ ga:
         cabhraigh leis an zombaí an lus gréine a fháil."
       courseD_maze_until9_2018_markdown_instruction: "**Dúshlán:** Seachain na fiacla
         agus cabhraigh leis an zombaí an lus gréine a fháil."
+      courseD_maze_until_challenge1_markdown_instruction: Gan leideanna, dúshlán amháin.
+        Treoraigh an zombaí go dtí an lus gréine.
+      courseD_maze_until_challenge1_2018_markdown_instruction: Gan leideanna, dúshlán
+        amháin. Treoraigh an zombaí go dtí an lus gréine.
+      courseD_scrat_ramp1_markdown_instruction: Sa dúshlán seo, ceangail na blocanna
+        go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
+      courseD_scrat_ramp1_2018_markdown_instruction: Sa dúshlán seo, ceangail na blocanna
+        go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
+      courseD_scrat_ramp7_markdown_instruction: Cabhraigh le Scrat an dearcán a fháil!
+      courseD_scrat_ramp7_2018_markdown_instruction: Cabhraigh le Scrat an dearcán
+        a fháil!
       courseE_bee_functions3_markdown_instruction: Is éard is feidhm ann ná bailiúchán
         blocanna a dhéanann tasc ar leith. Úsáid an fheidhm "get 5" le cúig neachtar
         a bhailiú sa turas.
@@ -561,6 +642,10 @@ ga:
         seo chun an dúshlán seo a réiteach.
       courseE_farmer_functions4b_2018_markdown_instruction: Bain úsáid as an bhfeidhm
         nua seo chun an dúshlán seo a réiteach.
+      courseE_maze_ramp1_markdown_instruction: Sa dúshlán seo, tarraing na blocanna
+        go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
+      courseE_maze_ramp1_2018_markdown_instruction: Sa dúshlán seo, tarraing na blocanna
+        go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
       courseF_artist_variablesFP_markdown_instruction: "**Saorimirt:** Úsáid ar fhoghlaim
         tú go dtí seo chun do phictiúr féin a dhéanamh. \n\nConas is féidir leat athróga
         a úsáid le cearnóga, peinteagáin, nó heicseagáin?"
@@ -627,6 +712,10 @@ ga:
       frozen square snowflake_markdown_instruction: An féidir leat calóg shneachta
         a chruthú? Bain úsáid as an mbloc "athdhéan" chun deich gcearnóg a tharraingt,
         agus an bloc "cas" le casadh 36 céim tar éis gach cearnóg.
+      grade1_artist_loops6_markdown_instruction: "**Dúshlán:** Garraí faoi cheilt
+        atá ann! Siúlaimis thart."
+      grade2_CaringForNewPet_0_markdown_instruction: Sa dúshlán seo, tarraing na blocanna
+        go léir le chéile agus cliceáil "Rith" lena chur ar siúl!
       grade2_CaringForNewPet_1_markdown_instruction: An féidir leat cabhrú liom greim
         a fháil ar an muc dhána sin? Ceangail cúpla bloc "téigh ar aghaidh" leis an
         mbloc "nuair a ritear é" agus cliceáil "Rith".
@@ -638,7 +727,7 @@ ga:
         na rudaí a thosaím a chur i gcrích! Cabhraigh liom mo roth pionnaí a chríochnú.
         An bhfeiceann tú an fhadhb?
       grade2_PuppyLoops_4_markdown_instruction: Sa dúshlán seo, is féidir leat dhá
-        bhloc `athdhéan` a úsáid chun cabhrú leat an mhuc a shroicheadh leis an líon
+        bhloc "athdhéan" a úsáid chun cabhrú leat an mhuc a shroicheadh leis an líon
         is lú blocanna agus is féidir!
       grade2_PuppyLoops_8_markdown_instruction: Tá an cód a dhéanann guairí an chait
         mícheart. Ceartaigh an cód sa chaoi go mbeidh na guairí ar comhfhad.
@@ -654,7 +743,7 @@ ga:
       grade2_maze_debuggingFP_markdown_instruction: '*"Anois, cabhraigh liom teacht
         aniar aduaidh ar an muc ar do rogha bealach!"*'
       grade2_puppy_loops4_markdown_instruction: Sa dúshlán seo, is féidir leat dhá
-        bhloc `athdhéan` a úsáid chun cabhrú leat an mhuc a shroicheadh leis an líon
+        bhloc "athdhéan" a úsáid chun cabhrú leat an mhuc a shroicheadh leis an líon
         is lú blocanna agus is féidir!
       grade3_ConditionalsElse_2_markdown_instruction: Tuilleadh scamall! Féach an
         bhfuil bláthanna i bhfolach faoi na scamaill sula ndéanann tú iarracht neachtar
@@ -717,6 +806,10 @@ ga:
       grade3_Loops_TeacherIDo_markdown_instruction: Cuma bhlasta ar na bláthanna sin!
         Bailigh neachtar ó gach ceann de na bláthanna leis an líon is lú blocanna
         agus is féidir.
+      grade3_RunningFarm_10_markdown_instruction: Bailigh an t-arbhar agus an leitís
+        go léir, ansin bain an puimcín.
+      grade3_RunningFarm_11a_markdown_instruction: Bailigh an t-arbhar agus an leitís
+        go léir, ansin bain an puimcín.
       grade3_bee_conditionals_quantum2_markdown_instruction: Tuilleadh scamall! Féach
         an bhfuil bláthanna i bhfolach faoi na scamaill sula ndéanann tú iarracht
         neachtar a bhailiú. Níl an rud céanna faoi gach scamall!
@@ -724,7 +817,7 @@ ga:
         an líon is lú blocanna agus is féidir! Déan iarracht bloc "athdhéan" amháín
         a chur isteach i gceann eile, chun an méid cóid a laghdú.
       grade3_maze_nestedLoops4_markdown_instruction: Sa dúshlán seo, is féidir leat
-        dhá bhloc `athdhéan` a úsáid chun cabhrú leat an mhuc a shroicheadh leis an
+        dhá bhloc "athdhéan" a úsáid chun cabhrú leat an mhuc a shroicheadh leis an
         líon is lú blocanna agus is féidir!
       grade4_arist_nested_loop_flags1_markdown_instruction: Cuir an cód atá ann isteach
         i lúb chun muileann gaoithe a dhéanamh.
@@ -732,15 +825,19 @@ ga:
         seo 10 n-uaire. Cad é an uillinn le casadh tar éis gach lúb?
       grade4_arist_nested_loop_polygons2_markdown_instruction: 'Athdhéan an cruth
         seo 6 huaire. Cad é an uillinn le casadh tar éis gach lúb? '
+      grade4_arist_nested_loop_triangles3_markdown_instruction: An féidir leat an
+        cód a dhéanann triantán a chur isteach i lúb chun heicseagán a tharraingt?
       grade4_arist_nested_loop_triangles4_markdown_instruction: Tarraing na fiacla
         i mbéal an ailigéadair!
       grade4_arist_nested_loop_triangles5_markdown_instruction: Cuir an cód atá ann
         isteach i lúb chun an ghrian a tharraingt. Leis an dearadh iontach seo a dhéanamh
         le lár folamh, caithfidh tú léim ar aghaidh fad an triantáin sula gcasfaidh
         tú.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: An féidir leat na
+        36 triantán seo a tharraingt le lúb neadaithe?
       grade4_artist_functions2_markdown_instruction: Is féidir leat blocanna nua a
         chruthú le feidhmeanna! Chuireamar na blocanna a theastaíonn uait chun cearnóg
-        a tharraingt isteach i bhfeidhm nua darb ainm `draw a square`. Anois, bain
+        a tharraingt isteach i bhfeidhm nua darb ainm "draw a square". Anois, bain
         úsáid as an bhfeidhm nua seo chun na spéaclaí a chruthú. Tá na cearnóga 75
         picteilín ó chéile.
       grade4_artist_nested_loop_flags1_markdown_instruction: Cuir an cód atá ann isteach
@@ -751,6 +848,8 @@ ga:
         isteach i lúb chun an ghrian a tharraingt. Leis an dearadh iontach seo a dhéanamh
         le lár folamh, caithfidh tú léim ar aghaidh fad an triantáin sula gcasfaidh
         tú.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: An féidir leat na
+        36 triantán seo a tharraingt le lúb neadaithe?
       grade4_artist_parameters_triangles2_markdown_instruction: Ar thug tú aon rud
         difriúil faoi deara sna feidhmeanna seo? Cliceáil "Rith" le feiceáil cad a
         tharlóidh.
@@ -783,8 +882,8 @@ ga:
         chiorcal bheaga (méid 5) agus cúig chiorcal níos mó (méid 10)?
       grade4_frozen_nested_loop_diamonds2_markdown_instruction: An bhfuil a fhios
         agat go bhfuil cruth uathúil ar gach calóg shneachta? Déanaimis calóg shneachta
-        úrnua! Bain úsáid as bloc "athdhéan" eile chun ceithre chomhthreomharán a
-        tharraingt, ag casadh 90 céim eatarthu.
+        úrnua! Bain úsáid bloc "athdhéan" eile chun ceithre chomhthreomharán a tharraingt,
+        ag casadh 90 céim idir gach ceann.
       grade4_frozen_nested_loop_diamonds3_markdown_instruction: Anois, déanaimis calóg
         shneachta nua! Bain úsáid as an mbloc "athdhéan" chun deich gcomhthreomharán
         a tharraingt, ag casadh 36 céim tar éis gach ceann.
@@ -797,14 +896,14 @@ ga:
         lú blocanna. Cé mhéad uair (???) ar chóir na blocanna laistigh den bhloc bándearg
         a athdhéanamh chun cearnóg a dhéanamh?
       grade4_frozen_square_loop2_markdown_instruction: Déanaimis trí chearnóg anois,
-        ag casadh tar éis gach ceann. Ní mór duit casadh 120 céim sula dtosóidh tú
-        gach cearnóg nua.
+        ag casadh tar éis gach ceann. Ní mór duit casadh trí 120 céim sula dtosóidh
+        tú ar an chéad chearnóg eile.
       grade4_frozen_square_loop3_markdown_instruction: An féidir leat calóg shneachta
         a chruthú? Bain úsáid as an mbloc "athdhéan" chun deich gcearnóg a tharraingt,
         agus an bloc "cas" le casadh 36 céim tar éis gach cearnóg.
       grade4_review_artist3_markdown_instruction: Aistríonn an bloc "léim" an t-ealaíontóir
         gan aon rud a tharraingt ar an scáileán. Tarraing an líne bhriste leis na
-        blocanna `léim ar aghaidh` agus `téigh ar aghaidh`. Tá gach líne 50 picteilín
+        blocanna "léim ar aghaidh" agus "téigh ar aghaidh". Tá gach líne 50 picteilín
         ar fad.
       grade4_review_bee1_markdown_instruction: Anois bain úsáid as an mbloc "athdhéan"
         chun an neachtar go léir a bhailiú agus an mhil go léir a dhéanamh.
@@ -830,8 +929,12 @@ ga:
         "length", agus an athróg a chur sna háiteanna cearta sa chód. Ní gá duit an
         athróg a shocrú ach uair amháin, agus úsáidfidh an cód an luach ceart i ngach
         uile áit.
-      grade5_bee_for_loops4_markdown_instruction: Cuir an líon is mó neachtar a bhaileoidh
-        an beach in áit ??? sa lúb "do gach".
+      grade5_bee_for_loops4_markdown_instruction: Cabhraigh leis an mbeach an neachtar
+        go léir a bhailiú.
+      grade5_bee_parameters_new8a_markdown_instruction: Bain úsáid as an bhfeidhm
+        nua seo chun an bhís seo a dhéanamh.
+      grade5_bee_parameters_new9a_markdown_instruction: Bain úsáid as an bhfeidhm
+        nua seo chun an bhís seo a dhéanamh.
       grade5_playlab_variables13_markdown_instruction: Úsáid an bloc "nuair a theagmhaíonn
         aisteoir..." chun an madra a chur ar ais ar bharr an scáileán ar chlé MÁ theagmhaíonn
         sé le haon aisteoir eile.
@@ -841,6 +944,8 @@ ga:
         an bua!
       grade5_playlab_variables9_markdown_instruction: Seo é feidhm darb ainm "patrol".
         Cuir in eagar í chun an cat a aistriú suas 400 picteilín ansin síos 400 picteilín.
+      gradek_playlab_events1c_markdown_instruction: Ba mhaith le Jorge an Madra "Dia
+        dhaoibh." a rá. An féidir leat cabhrú leis?
       level 'grade3_Loops_3_markdown_instruction: Bain úsáid as lúb "athdhéan" chun
         an neachtar go léir a bhailiú.
       level 'grade3_Loops_4_markdown_instruction: Anois bain úsáid as an mbloc "athdhéan"
