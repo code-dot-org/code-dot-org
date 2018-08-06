@@ -203,7 +203,7 @@ If a Student belongs to a Teacher’s section, we will share Student account inf
 
 ### We may share Student achievement data with your school or school district
 
-We may allow your school or school district to access the same Student progress report that is also shared with your Teacher(s). If teachers choose to give students feedback on courework and projects through Code.org, we may also share this with school or district administrators upon request.
+We may allow your school or school district to access the same Student progress report that is also shared with your Teacher(s). If teachers choose to give students feedback on coursework and projects through Code.org, we may also share this with school or district administrators upon request.
 
 ### We may share teacher information with the teacher's training facilitators, Regional Partner, and school district, as well as other partners
 
