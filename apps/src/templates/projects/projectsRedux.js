@@ -204,11 +204,16 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       var recentlySavedProjectIndex = state.projects.findIndex(project => project.channel === recentlySavedProjectId);
 
       var savedProjects = [...state.projects];
-      savedProjects[recentlySavedProjectIndex].name =
-      savedProjects[recentlySavedProjectIndex].updatedName;
-      savedProjects[recentlySavedProjectIndex].isSaving = false;
-      savedProjects[recentlySavedProjectIndex].isEditing = false;
 
+      var recentlySavedProject =
+        savedProjects[recentlySavedProjectIndex];
+
+      savedProjects[recentlySavedProjectIndex] = {
+        ...recentlySavedProject,
+        name: recentlySavedProject.updatedName,
+        isSaving: false,
+        isEditing: false,
+      };
       return {
         ...state,
         projects: savedProjects,
