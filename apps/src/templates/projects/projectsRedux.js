@@ -22,6 +22,8 @@ const UNPUBLISH_FAILURE  = 'projects/UNPUBLISH_FAILURE';
 const START_RENAMING_PROJECT = 'projects/START_RENAMING_PROJECT';
 const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
 const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
+const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
+const SAVE_FAILURE = 'project/SAVE_FAILURE';
 
 // Reducers
 
@@ -192,10 +194,28 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         ...updatedNotEditing[projectNoLongerBeingRenamedIndex],
         isEditing: false,
       };
+    return {
+      ...state,
+      projects: updatedNotEditing,
+    };
+    case SAVE_SUCCESS:
+      var recentlySavedProjectId = action.projectId;
+
+      var recentlySavedProjectIndex = state.projects.findIndex(project => project.channel === recentlySavedProjectId);
+
+      var savedProjects = [...state.projects];
+      savedProjects[recentlySavedProjectIndex].name =
+      savedProjects[recentlySavedProjectIndex].updatedName;
+      savedProjects[recentlySavedProjectIndex].isSaving = false;
+      savedProjects[recentlySavedProjectIndex].isEditing = false;
 
       return {
         ...state,
-        projects: updatedNotEditing ,
+        projects: savedProjects,
+      };
+    case SAVE_FAILURE:
+      return {
+        ...state,
       };
     default:
       return state;
@@ -301,6 +321,57 @@ export function startRenamingProject(projectId) {
 export function updateProjectName(projectId, updatedName) {
   return {type: UPDATE_PROJECT_NAME, projectId, updatedName};
 }
+
+export function saveSuccess(projectId) {
+  return {type: SAVE_SUCCESS, projectId};
+}
+
+export function saveFailure(projectId) {
+  return {type: SAVE_FAILURE, projectId};
+}
+
+const fetchProjectToUpdate = (projectId, onComplete) => {
+  $.ajax({
+    url: `/v3/channels/${projectId}`,
+    method: 'GET',
+    type: 'json',
+    contentType: 'application/json;charset=UTF-8',
+  }).done((data) => {
+    onComplete(null, data);
+  }).fail((jqXhr, status) => {
+    onComplete(status, jqXhr.responseJSON);
+  });
+};
+
+const updateProjectNameOnServer = (project) => {
+  return (dispatch) => {
+    $.ajax({
+      url: `/v3/channels/${project.id}`,
+      method: 'POST',
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(project)
+    }).done((data) => {
+      dispatch(saveSuccess(project.id));
+    }).fail((jqXhr, status) => {
+      dispatch(saveFailure(project.id));
+    });
+  };
+};
+
+export const saveProjectName = (projectId, updatedName) => {
+  return (dispatch) => {
+    fetchProjectToUpdate(projectId,
+    (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        data.name = updatedName;
+        dispatch(updateProjectNameOnServer(data));
+      }
+    });
+  };
+};
 
 export function cancelRenamingProject(projectId) {
   return {type: CANCEL_RENAMING_PROJECT, projectId};
