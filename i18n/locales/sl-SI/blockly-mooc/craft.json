@@ -288,7 +288,7 @@
   "timeShort": "kratko",
   "timeVeryLong": "zelo dolgo",
   "timeVeryShort": "zelo kratko",
-  "to": "k",
+  "to": "na",
   "toSlotNumber": "",
   "tooManyBlocksFail": "Uganka {puzzleNumber} je končana. Čestitamo! Prav tako jo je mogoče rešiti z {numBlocks, plural, one {1 block} other {# blocks}}.",
   "turnRandom": "obrni se nakjučno",

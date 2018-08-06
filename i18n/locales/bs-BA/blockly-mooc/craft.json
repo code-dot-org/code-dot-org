@@ -51,7 +51,7 @@
   "blockActionWith": "sa",
   "blockData": "",
   "blockDestroyBlock": "uništi blok",
-  "blockIf": "ako (jos jedna uslovna naredba koriscena u vise programskih jezika i ako se koristi kao iste nikako je ne prevoditi)",
+  "blockIf": "ako",
   "blockIfLavaAhead": "ako je lava ispred",
   "blockIs": "",
   "blockMove": "pomakni",

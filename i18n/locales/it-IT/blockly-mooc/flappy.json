@@ -33,7 +33,7 @@
   "playSoundSplash": "riproduci il suono di un tuffo nell'acqua",
   "playSoundLaser": "riproduci il suono di un raggio laser",
   "playSoundTooltip": "Riproduce il suono scelto.",
-  "reinfFeedbackMsg": "Clicca su \"Riprova\" per tornare a giocare.",
+  "reinfFeedbackMsg": "Premi \"Riprova\" per ricominciare a giocare la tua partita.",
   "scoreText": "Punteggio: {playerScore}",
   "setBackground": "imposta la scena",
   "setBackgroundRandom": "imposta una scena scelta a caso",
@@ -127,7 +127,7 @@
   "whenCollideObstacleTooltip": "Esegue le azioni attaccate a questo blocco quando Flappy colpisce un ostacolo.",
   "whenEnterObstacle": "quando supera un ostacolo",
   "whenEnterObstacleTooltip": "Esegue le azioni attaccate a questo blocco quando Flappy incontra un ostacolo.",
-  "whenRunButtonClick": "quando si clicca su \"Esegui\"",
-  "whenRunButtonClickTooltip": "Esegue le azioni attaccate a questo blocco quando si clicca su \"Esegui\".",
+  "whenRunButtonClick": "quando inizia il gioco",
+  "whenRunButtonClickTooltip": "Esegue le azioni qua sotto quando si clicca su \"Esegui\".",
   "yes": "Sì"
 }

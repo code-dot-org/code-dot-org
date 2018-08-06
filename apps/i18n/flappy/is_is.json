@@ -43,7 +43,7 @@
   "setBackgroundUnderwater": "umhverfi - neðansjávar",
   "setBackgroundCave": "umhverfi - hellir",
   "setBackgroundSanta": "umhverfi - jól",
-  "setBackgroundTooltip": "Stillir bakgrunninn",
+  "setBackgroundTooltip": "Stillir bakgrunnsmynd",
   "setGapRandom": "op af handahófi",
   "setGapVerySmall": "mjög lítið op",
   "setGapSmall": "lítið op",
@@ -128,6 +128,6 @@
   "whenEnterObstacle": "þegar gegnum hindrun",
   "whenEnterObstacleTooltip": "Gera aðgerðirnar hér fyrir neðan þegar Flappy fer inn í hindrun.",
   "whenRunButtonClick": "þegar leikur byrjar",
-  "whenRunButtonClickTooltip": "Gera aðgerðirnar fyrir neðan þegar leikurinn byrjar.",
+  "whenRunButtonClickTooltip": "Gera aðgerðirnar hér fyrir neðan þegar leikurinn byrjar.",
   "yes": "Já"
 }

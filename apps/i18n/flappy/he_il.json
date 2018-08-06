@@ -34,7 +34,7 @@
   "playSoundLaser": "השמע צליל לייזר",
   "playSoundTooltip": "נגן את הצליל שנבחר.",
   "reinfFeedbackMsg": "באפשרותך להקיש על לחצן 'נסה שוב' כדי לחזור ולשחק את המשחק שלך.",
-  "scoreText": "ניקוד: {playerScore}",
+  "scoreText": "ציון: {playerScore}",
   "setBackground": "קבע רקע",
   "setBackgroundRandom": "קבע רקע אקראית",
   "setBackgroundFlappy": "קבע רקע עיר (יום)",

@@ -91,7 +91,7 @@
   "dropletBlock_moveRight_description": "ড্রয়েড ডানে সরান।",
   "dropletBlock_moveUp_description": "ড্রয়েডটি উপরে উঠবে।",
   "dropletBlock_moveDown_description": "ড্রয়েড নিচে সরান।",
-  "dropletBlock_moveLeft_description": "ড্রয়েড নিচের দিকে সরান।",
+  "dropletBlock_moveLeft_description": "ড্রয়েড বামে সরান।",
   "dropletBlock_moveSlow_description": "অক্ষরগুচ্ছ পরিবর্তন করুন এবং ধীরে ধীরে সরান।",
   "dropletBlock_moveSlow_param0": "প্রকার",
   "dropletBlock_moveSlow_param0_description": "এই বৈশিষ্ট্যগুলো যোগ করতে হবে (\"random', 'Stormtrooper', 'RebelPilot', 'PufferPig', 'Mynock', 'MouseDroid', 'Tauntaun' বা 'Probot') ।",
