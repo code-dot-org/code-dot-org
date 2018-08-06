@@ -126,9 +126,9 @@ ar:
             Bounce:
               name: الارتداد
             Computational Thinking:
-              name: التفكير الحاسوبي
+              name: التفكير الحسابي
             Crowdsourcing:
-              name: التعهيد الجماعي
+              name: حشد المصادر
             Dice Race:
               name: سباق الزهر
             Digital Citizenship:
@@ -144,7 +144,7 @@ ar:
             'Maze: Conditionals':
               name: 'المتاهة : الجمل الشرطية'
             Songwriting:
-              name: تأليف الأغاني مع المعلمات
+              name: تأليف الأغاني
             'Studio: Create a Game':
               name: 'مختبر اللعب : أنشئ لعبة'
             'Studio: Create a Story':
@@ -314,15 +314,15 @@ ar:
             Algorithms:
               name: الخوارزميات
             Computational Thinking:
-              name: التفكير الحاسوبي
+              name: التفكير الحسابي
             Conditionals:
               name: الجمل الشرطية
             Functions:
-              name: الدوال
+              name: دوال
             Graph Paper Programming:
               name: برمجة ورقة الرسم البياني
             Introduction to Computer Science:
-              name: مقدمة في علوم الكمبيوتر
+              name: مقدمة لعلوم الحاسب الآلي
             Relay Programming:
               name: برمجة السباق
             Song Writing:
@@ -395,6 +395,8 @@ ar:
           stages:
             Hour of Code 2013:
               name: ساعة من البرمجة 2013
+        cspunit1:
+          description_short: البرمجة
         algebraPD:
           stages:
             Teacher Dashboard:
@@ -404,6 +406,7 @@ ar:
             Booleans:
               name: القيم المنطقية
         cspunit3:
+          description_short: البرمجة
           stages:
             Creating Functions:
               name: إضافة الدوال
@@ -430,6 +433,7 @@ ar:
             Wrap-Up:
               name: الجلسة الختامية
         cspunit2:
+          description_short: البرمجة
           stages:
             The Internet:
               name: الانترنت
@@ -556,7 +560,7 @@ ar:
             'Real-life Algorithms: Plant a Seed':
               name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
             Songwriting:
-              name: تأليف الأغاني مع المعلمات
+              name: تأليف الأغاني
             The Big Event:
               name: الحدث الكبير
         ScienceP3OLPT2:
@@ -613,6 +617,10 @@ ar:
               name: مرحبا !
             Wrap-Up:
               name: الجلسة الختامية
+        cspunit5:
+          description_short: البرمجة
+        cspunit4:
+          description_short: البرمجة
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -672,7 +680,7 @@ ar:
           description_short: البرمجة
           stages:
             Functions:
-              name: الدوال
+              name: دوال
         TEMP CSD Unit 3:
           description_short: البرمجة
         CSF_Secret_Sample:
@@ -708,7 +716,7 @@ ar:
             Digital Citizenship:
               name: المواطنة الرقمية
             Songwriting:
-              name: تأليف الأغاني مع المعلمات
+              name: تأليف الأغاني
         grade1:
           stages:
             Events:
@@ -767,7 +775,7 @@ ar:
           description_short: البرمجة
           stages:
             Functions:
-              name: الدوال
+              name: دوال
             Variables:
               name: المتغيرات
             Conditionals:
@@ -793,7 +801,7 @@ ar:
             For Loops:
               name: للحلقات
             Functions:
-              name: الدوال
+              name: دوال
             Functions with Parameters:
               name: الدوال والمعاملات
             Loops:
@@ -883,7 +891,7 @@ ar:
             Internet:
               name: الإنترنت
             Crowdsourcing:
-              name: التعهيد الجماعي
+              name: حشد المصادر
             Introduction:
               name: مقدمة
             Conditionals:
@@ -987,11 +995,11 @@ ar:
             Conditionals:
               name: الجمل الشرطية
             Functions:
-              name: الدوال
+              name: دوال
         csd3-old:
           stages:
             Functions:
-              name: الدوال
+              name: دوال
         csd2-draft:
           stages:
             Lists:
@@ -1003,7 +1011,7 @@ ar:
             Conditionals:
               name: الجمل الشرطية
             Functions:
-              name: الدوال
+              name: دوال
             'null':
               name: خالي
         coursef-ramp:
@@ -1092,7 +1100,7 @@ ar:
             Internet:
               name: الإنترنت
             Crowdsourcing:
-              name: التعهيد الجماعي
+              name: حشد المصادر
         new-d:
           stages:
             Introduction:
@@ -1126,7 +1134,7 @@ ar:
             Internet:
               name: الإنترنت
             Crowdsourcing:
-              name: التعهيد الجماعي
+              name: حشد المصادر
         new-f:
           stages:
             Building a Foundation:
@@ -1158,7 +1166,7 @@ ar:
             Internet:
               name: الإنترنت
             Crowdsourcing:
-              name: التعهيد الجماعي
+              name: حشد المصادر
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1184,7 +1192,7 @@ ar:
             Conditionals:
               name: الجمل الشرطية
             Functions:
-              name: الدوال
+              name: دوال
           description_short: البرمجة
         csd3-2018:
           description_short: البرمجة
@@ -1194,7 +1202,7 @@ ar:
             Conditionals:
               name: الجمل الشرطية
             Functions:
-              name: الدوال
+              name: دوال
         csd2-2018:
           stages:
             Lists:
@@ -1222,7 +1230,7 @@ ar:
             Conditionals with Cards:
               name: الشرطية مع بطاقات
             'Functions: Songwriting':
-              name: تأليف الأغاني مع المعلمات
+              name: تأليف الأغاني
             Envelope Variables:
               name: المتغيرات المغلف
             For Loop Fun:
@@ -1236,7 +1244,7 @@ ar:
             Internet:
               name: الانترنت
             Crowdsourcing:
-              name: التعهيد الجماعي
+              name: حشد المصادر
             Relay Programming:
               name: برمجة السباق
         courseb-2018:
@@ -1290,11 +1298,11 @@ ar:
             Introduction:
               name: مقدمة
             'Functions: Songwriting':
-              name: تأليف الأغاني مع المعلمات
+              name: تأليف الأغاني
             Internet:
               name: الانترنت
             Crowdsourcing:
-              name: التعهيد الجماعي
+              name: حشد المصادر
             Conditionals with Cards:
               name: الشرطية مع بطاقات
             Minecraft Hour of Code:

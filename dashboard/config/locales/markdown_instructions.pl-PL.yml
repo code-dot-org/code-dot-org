@@ -352,6 +352,8 @@ pl:
       4-5 Nested Loops 11_markdown_instruction: "Czy potrafisz narysować te 10 kwadratów
         na tym chodniku przy użyciu zagnieżdżonej pętli? \r\rKażdy kwadrat ma bok
         długości 30 pikseli."
+      4-5 Nested Loops 12_markdown_instruction: Czy potrafisz narysować tych 36 trójkątów
+        za pomocą zagnieżdżonej pętli?
       4-5 Nested Loops 2_markdown_instruction: "Teraz umieść tę pętlę wewnątrz innej
         pętli, by narysować 10 trójkątów. \r To się nazywa \"zagnieżdżona\" pętla.
         \ "
@@ -518,13 +520,13 @@ pl:
         gracza\nużywając klawiszy strzałek. \r\n\r\nBy przejść ten poziom, będziesz
         musiał\ndostać się do drzwi i je otworzyć (używając spacji) tak, by dostać
         się do\npomarańczowego kwadratu wewnątrz."
-      MC_HOC_2017_01_markdown_instruction: "Kliknij przycisk \"Uruchom\", aby poruszać
-        graczem przy użyciu klawiszy strzałek.  \r\n\r\nAby przejść ten poziom, dostań
-        się do drzwi i otwórz je (używając spacji). W taki sposób dotrzesz do znajdującego
-        się w środku pomarańczowego kwadratu."
-      MC_HOC_2017_01_Cole_markdown_instruction: Podczas tej podróży zbieraj wszystkie
-        narzędzia. Poruszaj się, używając klawiszy strzałek. i dojdź do skrzyni na
-        drodze do zwycięstwa
+      MC_HOC_2017_01_markdown_instruction: "Kliknij \"Uruchom\", by przesunąć gracza\nużywając
+        klawiszy strzałek. \r\n\r\nBy przejść ten poziom, będziesz musiał\ndostać
+        się do drzwi i je otworzyć (używając spacji) tak, by dostać się do\npomarańczowego
+        kwadratu wewnątrz."
+      MC_HOC_2017_01_Cole_markdown_instruction: |-
+        Musisz zbierać narzędzia podczas podróży.
+        Poruszaj się używając klawiszy strzałek i dostań się do skrzyni wewnątrz domu, aby wygrać
       MC_HOC_2017_01_Kiki_markdown_instruction: 'Aby zagrać na tym poziomie, naciśnij
         przycisk "Uruchom" znajdujący się pod polem gry, a następnie poruszaj graczem
         używając klawiszy strzałek.  '
@@ -646,8 +648,10 @@ pl:
       MC_HOC_2017_Ali_markdown_instruction: 'Spójrz na funkcje poniżej.  Jak je użyjesz,
         aby uniknąć Ghasts i pomóc {currentPlayerName}, by bezpiecznie dotarł do Zaklętej
         Księgi  [book_enchanted]?  '
-      MC_HOC_2017_FP10x10_markdown_instruction: 'Czas na zabawę: Czy podejmiesz wyzwanie
-        i zbierzesz wszystkie diamenty znajdujące się na tym poziomie? '
+      MC_HOC_2017_FP10x10_markdown_instruction: 'Czas na zabawę: Czy podejmiesz wyzwanie,
+        by zebrać wszystkie diamenty znajdujące się na tym poziomie?
+
+'
       MC_HOC_2017_FP10x10_RE_markdown_instruction: 'Czas na zabawę: Czy podejmiesz
         wyzwanie, by zebrać wszystkie diamenty znajdujące się na tym poziomie?
 
@@ -728,6 +732,8 @@ pl:
       course2_artist_prog_challenge1_markdown_instruction: Narysuj pomieszczenia dla
         każdego ze zwierząt. Istnieje wiele sposobów, aby rozwiązać tę zagadkę, więc
         pobaw się!
+      course2_artist_prog_challenge2_markdown_instruction: "*Pomóż mi narysować żółte
+        linie na tej drodze!*"
       course2_collector_loops_challenge2_markdown_instruction: "*Zapolujmy na skarb
         - używając pętli!*\r\r\nPomóż zbieraczowi poprzez debugowanie tego kodu. Zbierz
         cały skarb!"
@@ -736,17 +742,25 @@ pl:
       course2_collector_prog_challenge2_markdown_instruction: W tej jaskini znajduje
         się **20** części skarbu. Zbierz przynajmniej połowę aby ukończyć to wyzwanie!
       course2_harvester_loops_challenge1_markdown_instruction: Zbierz całą kukurydzę.
+      course2_harvester_loops_challenge2_markdown_instruction: Zbierz wszystkie sałaty.
+        Unikaj drzew i pól!
       course2_maze_programming_challenge2_markdown_instruction: Czasami jest więcej
         sposobów na rozwiązanie tego samego problemu. Czasami szybciej jest się cofnąć
         niż iść na przód!
       course3_bee_debugging_challenge1_markdown_instruction: Patrz jak pszczoły zbierają
         nektar. Czy możesz wykorzystać ten sam wzorzec, aby pomóc pszczołom zrobić
         cały miód?
+      course3_bee_functions_challenge2_markdown_instruction: Rozwiąż to wyzwanie na
+        własną rękę!
       course3_bee_functions_challenge4_markdown_instruction: Wykorzystaj wszystko
         czego się nauczyłeś, aby rozwiązać tą zagadkę!
       course3_collector_debugging_challenge2_markdown_instruction: Czy jesteś ekspertem
         od zagnieżdżonych pętli? Pokaż czego nauczyłeś się do tej pory i zbierz cały
         skarb!
+      course3_maze_debugging_challenge1_markdown_instruction: '*"Czy ja właśnie chodzę
+        w kółko?"*'
+      course3_maze_until_challenge1_markdown_instruction: Bez podpowiedzi, po prostu
+        wyzwanie. Doprowadź zombie do słonecznika.
       course4_artist_binary_challenge1_markdown_instruction: Możesz użyć tylko binarnych
         wartości (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       course4_artist_fwp_challenge1_markdown_instruction: Uruchom ten program i wprowadzaj
@@ -769,6 +783,8 @@ pl:
         kod aby pokazać również resztę postaci?\r\n\r\nW tej zagadce, koniecznie używaj
         podpowiedzi! Podpowiedzi pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
       courseB_artist_loops6_markdown_instruction: Za krzakami jest piękna winorośl
+        pełna kwiatów. Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
+      courseB_artist_loops6_2018_markdown_instruction: Za krzakami jest piękna winorośl
         pełna kwiatów. Czy możesz wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops_challenge2_markdown_instruction: |-
         Zagrajmy w grę!
@@ -810,6 +826,8 @@ pl:
       courseC_artist_prog_challenge1_2018_markdown_instruction: Narysuj pomieszczenia
         dla każdego ze zwierząt. Istnieje wiele sposobów, aby rozwiązać tą zagadkę,
         więc zabaw się! Każdy kwadrat ma bok o długości 100 pikseli.
+      courseC_artist_prog_challenge2_markdown_instruction: "*Pomóż mi narysować żółte
+        linie na tej drodze!*"
       courseC_collector_prog9_markdown_instruction: '*"Zbierzmy cały skarb!"*'
       courseC_collector_prog9_2018_markdown_instruction: '*"Zbierzmy cały skarb!"*'
       courseC_collector_prog_challenge2_markdown_instruction: W tej jaskini znajduje
@@ -817,14 +835,42 @@ pl:
       courseC_collector_prog_challenge2_2018_markdown_instruction: W tej jaskini znajduje
         się 20 części skarbu. Zbierz przynajmniej **10** aby ukończyć to wyzwanie!
       courseC_flappy_events7_markdown_instruction: Następnie, spróbuj zmienić scenę
-        dołączając blok do wydarzenia `when run`.
+        dołączając inny blok do bloku "po uruchomieniu".
       courseC_flappy_events7_2018_markdown_instruction: Następnie, spróbuj zmienić
-        scenę dołączając blok do wydarzenia `when run`.
+        scenę dołączając inny blok do bloku "po uruchomieniu".
       courseC_flappy_events9_markdown_instruction: Po uderzeniu w przeszkodę, zamiast
         kończyć grę, spróbuj ustawić wynik z powrotem na 0.
       courseC_flappy_events9_2018_markdown_instruction: Po uderzeniu w przeszkodę,
         zamiast kończyć grę, spróbuj ustawić wynik z powrotem na 0.
+      courseC_harvester_loops10_markdown_instruction: Zbierz całą kukurydzę o wszystkie
+        dynie.
+      courseC_harvester_loops10_2018_markdown_instruction: Zbierz całą kukurydzę o
+        wszystkie dynie.
+      courseC_harvester_loops11_markdown_instruction: Zbierz całą kukurydzę o wszystkie
+        dynie.
+      courseC_harvester_loops11_2018_markdown_instruction: Zbierz całą kukurydzę o
+        wszystkie dynie.
+      courseC_harvester_loops5_markdown_instruction: Zbierz całą kukurydzę o wszystkie
+        dynie.
+      courseC_harvester_loops5_2018_markdown_instruction: Zbierz całą kukurydzę o
+        wszystkie dynie.
+      courseC_harvester_loops6_markdown_instruction: Zbierz całą kukurydzę o wszystkie
+        dynie.
+      courseC_harvester_loops6_2018_markdown_instruction: Zbierz całą kukurydzę o
+        wszystkie dynie.
+      courseC_harvester_loops7_markdown_instruction: Zbierz całą kukurydzę o wszystkie
+        dynie.
+      courseC_harvester_loops7_2018_markdown_instruction: Zbierz całą kukurydzę o
+        wszystkie dynie.
+      courseC_harvester_loops9_markdown_instruction: Zbierz całą kukurydzę o wszystkie
+        dynie.
+      courseC_harvester_loops9_2018_markdown_instruction: Zbierz całą kukurydzę o
+        wszystkie dynie.
       courseC_harvester_loops_challenge1_markdown_instruction: Zbierz całą kukurydzę.
+      courseC_harvester_loops_challenge2_markdown_instruction: Zbierz wszystkie sałaty.
+        Unikaj drzew i pól!
+      courseC_harvester_loops_challenge2_2018_markdown_instruction: Zbierz wszystkie
+        sałaty. Unikaj drzew i pól!
       courseC_harvester_loops_forVid_markdown_instruction: Zbierz całą kukurydzę o
         wszystkie dynie.
       courseC_maze_loops_challenge2_markdown_instruction: Zapolujmy na skarb - używając
@@ -848,20 +894,26 @@ pl:
         zakrywa kwiatka, a czasami zakrywa plaster miodu! \r\n\r\nUżyj bloku `if/else`
         aby zebrać nektar z kwiatków i miód z plastrów miodu. Pamiętaj:\nza każdą
         chmurą będzie tylko *jeden* plaster miodu lub *jeden* kwiat."
-      courseD_bee_debugging_challenge1_markdown_instruction: Patrz jak pszczoły zbierają
-        nektar. Czy możesz wykorzystać ten sam wzorzec aby pomóc pszczołom zrobić
-        cały miód?
-      courseD_bee_debugging_challenge1_2018_markdown_instruction: Patrz jak pszczoły
-        zbierają nektar. Czy możesz wykorzystać ten sam wzorzec aby pomóc pszczołom
+      courseD_bee_debugging_challenge1_markdown_instruction: Zobacz, jak pszczółka
+        zbiera nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce
+        zrobić cały miód?
+      courseD_bee_debugging_challenge1_2018_markdown_instruction: Zobacz, jak pszczółka
+        zbiera nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce
         zrobić cały miód?
       courseD_bee_debugging_challenge1a_markdown_instruction: Patrz jak pszczoły zbierają
         nektar. Czy możesz wykorzystać ten sam wzorzec aby pomóc pszczołom zrobić
         cały miód?
-      courseD_bee_debugging_challenge2_markdown_instruction: Zobacz, jak pszczółki
-        zbierają nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce
+      courseD_bee_debugging_challenge2_markdown_instruction: Zobacz, jak pszczółka
+        zbiera nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce
         zrobić cały miód?
+      courseD_bee_nestedLoops2_markdown_instruction: Tym raze, pomóż pszczołom zebrać
+        cały nektar używając jak najmniejszej liczby bloków.
+      courseD_bee_nestedLoops2_2018_markdown_instruction: Tym raze, pomóż pszczołom
+        zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_predict1_markdown_instruction: Tym raze, pomóż pszczołom
         zebrać cały nektar używając jak najmniejszej liczby bloków.
+      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: Tym raze, pomóż
+        pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops5_markdown_instruction: "Zbierz cały nektar z każdego
         kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
       courseD_bee_nestedLoops8_markdown_instruction: "Zbierz cały nektar z każdego
@@ -869,7 +921,8 @@ pl:
       courseD_bee_nestedLoops8_2018_markdown_instruction: "Zbierz cały nektar z każdego
         kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
       courseD_bounce_events1_markdown_instruction: Osiągnij flagę! Dołącz blok do
-        bloku "when left arrow" i naciśnij "Run", aby przesunąć gracza ku fladze.
+        bloku "kiedy strzałka w lewo" i naciśnij "Uruchom", aby przesunąć gracza ku
+        fladze.
       courseD_collector_debugging1_markdown_instruction: "*\"O nie! Zauważyłem błąd.\"*\r\n\r\nNapraw
         błąd(błędy) aby zebrać cały skarb."
       courseD_collector_debugging1_2018_markdown_instruction: "*\"O nie! Zauważyłem
@@ -884,15 +937,35 @@ pl:
       courseD_collector_debugging6_2018_markdown_instruction: "**Wyzwanie:** Wszystkie
         bloki których potrzebujesz już tutaj są...Wykorzystaj swoje umiejętności debugowania
         aby naprawić błąd i zebrać cały skarb."
-      courseD_collector_until_challenge1_markdown_instruction: Zobacz, jak pszczółki
-        zbierają nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce
+      courseD_collector_debugging6a_markdown_instruction: 'Wyzwanie: Użyj kodu w obszarze
+        roboczym, aby uzyskać co najmniej **6** części skarbu!'
+      courseD_collector_debugging6a_2018_markdown_instruction: 'Wyzwanie: Użyj kodu
+        w obszarze roboczym, aby uzyskać co najmniej **6** części skarbu!'
+      courseD_collector_until_challenge1_markdown_instruction: Zobacz, jak pszczółka
+        zbiera nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce
         zrobić cały miód?
+      courseD_farmer_while_challenge1_markdown_instruction: Wypełnij wszystkie dziury
+        i usuń wszystkie stosy.
+      courseD_farmer_while_challenge1_2018_markdown_instruction: Wypełnij wszystkie
+        dziury i usuń wszystkie stosy.
+      courseD_farmer_while_challenge2_markdown_instruction: Wypełnij wszystkie dziury
+        i usuń wszystkie stosy.
+      courseD_farmer_while_challenge2_2018_markdown_instruction: Wypełnij wszystkie
+        dziury i usuń wszystkie stosy.
       courseD_maze_nestedLoops4_markdown_instruction: "Doprowadź mnie do słonecznika
         używając możliwie najmniejszej liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\"
         wewnątrz innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
       courseD_maze_nestedLoops4_2018_markdown_instruction: "Doprowadź mnie do słonecznika
         używając możliwie najmniejszej liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\"
         wewnątrz innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
+      courseD_maze_until_challenge1_markdown_instruction: Bez podpowiedzi, po prostu
+        wyzwanie. Doprowadź zombie do słonecznika.
+      courseD_maze_until_challenge1_2018_markdown_instruction: Bez podpowiedzi, po
+        prostu wyzwanie. Doprowadź zombie do słonecznika.
+      courseD_scrat_ramp4_markdown_instruction: Unikaj nadpękniętego lodu, aby Scratowi
+        nic się nie stało!
+      courseD_scrat_ramp4_2018_markdown_instruction: Unikaj nadpękniętego lodu, aby
+        Scratowi nic się nie stało!
       courseE_bee_functions2_markdown_instruction: "Funkcje są blokami kodu, które
         wykonują określone zadanie. \r\r\nUżyj funkcji `get 2 nectar`, aby zebrać
         nektar z każdego kwiatka."
@@ -908,6 +981,10 @@ pl:
         z powrotem do miejsca, w którym narysuje następną linię. Które z tych bloków
         kodu możesz umieścić na końcu najbardziej zewnętrznej pętli, aby narysować
         całą siatkę?
+      courseE_farmer_functions4b_markdown_instruction: Użyj swojej nowej funkcji,
+        by rozwiązać tę zagadkę.
+      courseE_farmer_functions4b_2018_markdown_instruction: Użyj swojej nowej funkcji,
+        by rozwiązać tę zagadkę.
       courseF_bee_for_challenge2_markdown_instruction: Rozwiąż tę łamigłówkę używając
         jak najmniejszej liczby bloków.
       courseF_bee_for_challenge2_2018_markdown_instruction: Rozwiąż tę łamigłówkę
@@ -980,6 +1057,8 @@ pl:
       frozen square snowflake_markdown_instruction: Czy potrafisz narysować śnieżynkę
         używając bloku "powtórz", powtarzając tworzenie kwadratu 10 razy i bloku "skręć"
         aby obrócić się o 36 stopni po każdym kwadracie?
+      grade1_adventurer_loops2_markdown_instruction: W jaki sposób Laurel może zebrać
+        wszystkie pięć stosów złota używając tylko bloku `E-->`?
       grade2_MakeDogTag_8_markdown_instruction: Teraz połączmy kilka V rysując je
         w pętli.
       grade2_MakeDogTag_9_markdown_instruction: "Czas zrobić coś odlotowego!\n\r\n\r\nPrzebuduj
@@ -1084,6 +1163,8 @@ pl:
         "powtórz" pomogą Ci dotrzeć do świnki za pomocą najmniejszej liczby bloków!
       grade4_arist_nested_loop_circles1_markdown_instruction: "**Sprawdzian:** Użyj
         zagnieżdżonej pętli, aby ukończyć wzór."
+      grade4_arist_nested_loop_flags1_markdown_instruction: Umieść w pętli dany kod,
+        aby utworzyć wiatrak.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Powtórz ten wzór 10
         razy. \r \r O ile trzeba skręcić w każdym obrocie pętli?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Powtórz ten wzór 6
@@ -1094,16 +1175,24 @@ pl:
       grade4_arist_nested_loop_triangles2_markdown_instruction: "Teraz umieść tę pętlę
         wewnątrz innej pętli, by narysować 10 trójkątów. \r To się nazywa \"zagnieżdżona\"
         pętla.  "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Czy potrafisz narysować
+        sześciokąt powtarzając kod trójkąta?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Narysuj zęby w paszczy
+        aligatora!
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Utwórz słońce zagnieżdżając
         początkowy kod w innej pętli. \r \r Aby utworzyć ten fajny wzór z pustym środkiem,
         będziesz musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem
         skrętu."
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Czy potrafisz narysować
+        tych 36 trójkątów za pomocą zagnieżdżonej pętli?
       grade4_artist_functions2_markdown_instruction: "Funkcje umożliwiają definiowanie
         nowych bloków! \r \r Przenieśliśmy bloki służące do rysowania kwadratu do
         funkcji o nazwie \"draw a square\" (rysuj kwadrat). Tym razem, użyj tej funkcji,
         aby narysować okulary. \r \r Kwadraty są oddalone od siebie o 75 pikseli."
       grade4_artist_nested_loop_circles1_markdown_instruction: "**Sprawdzian:** Użyj
         zagnieżdżonej pętli, aby ukończyć wzór."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Umieść w pętli dany kod,
+        aby utworzyć wiatrak.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Powtórz ten wzór
         10 razy. \r \r O ile trzeba skręcić w każdym obrocie pętli?"
       grade4_artist_nested_loop_squares1_markdown_instruction: "Czy potrafisz narysować
@@ -1116,6 +1205,8 @@ pl:
         początkowy kod w innej pętli. \r \r Aby utworzyć ten fajny wzór z pustym środkiem,
         będziesz musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem
         skrętu."
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Czy potrafisz narysować
+        tych 36 trójkątów za pomocą zagnieżdżonej pętli?
       grade4_artist_parameters_triangles2_markdown_instruction: Czy zauważyłeś jakieś
         różnice w tych blokach funkcji? Kliknij przycisk "Uruchom", aby zobaczyć co
         się dzieje.
@@ -1139,8 +1230,8 @@ pl:
         5), aby użyć jej w tej łamigłówce.
       grade4_bee_nestedLoops4_markdown_instruction: "Zbierz cały nektar z każdego
         kwiatka i zrób miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
-      grade4_frozen_freeplay_markdown_instruction: Zostałeś oficjalnie mistrzem sztuki!
-        Stwórz zimową krainę cudów.
+      grade4_frozen_freeplay_markdown_instruction: Oficjalnie stałeś się mistrzem
+        artystą! Utwórz zimową krainę cudów.
       grade4_frozen_functions0_markdown_instruction: Okrąg ma specjalny kształt. Czy
         domyślisz się, jaką liczbą należy zastąpić znak zapytania w bloku "powtórz"?
       grade4_frozen_functions1a_markdown_instruction: Użyj nowego bloku "utwórz okrąg",
@@ -1206,6 +1297,10 @@ pl:
         i umieszczając tę zmienną w odpowiednich miejscach. \r \r Zauważ, że tylko
         raz musisz ustalić wartość tej zmiennej, a kod wszędzie używa odpowiedniej
         wartości."
+      grade5_bee_parameters_new8a_markdown_instruction: Użyj swej nowej funkcji do
+        rozwiązania spirali.
+      grade5_bee_parameters_new9a_markdown_instruction: Użyj swej nowej funkcji do
+        rozwiązania spirali.
       grade5_playlab_variables13_markdown_instruction: Użyj bloku "kiedy postać dotyka",
         by wysłać Psa z powrotem do góry po lewej tylko wtedy, kiedy dotknie on jakąkolwiek
         inną postać.

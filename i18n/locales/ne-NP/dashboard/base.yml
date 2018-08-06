@@ -454,7 +454,7 @@ ne:
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
     minecraft:
       title: "Minecraft"
-      body: "Explore a Minecraft world through code."
+      body: "Explore a Minecraft world through code"
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
@@ -568,22 +568,7 @@ ne:
     title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
-      - 
-        white: "White"
-      - 
-        black: "Black or African American"
-      - 
-        hispanic: "Hispanic or Latino"
-      - 
-        asian: "Asian"
-      - 
-        hawaiian: "Native Hawaiian or other Pacific Islander"
-      - 
-        american_indian: "American Indian/Alaska Native"
-      - 
-        other: "अन्य"
-      - 
-        opt_out: "Prefer not to say"
+      other: "अन्य"
     submit: "Submit"
     decline: "बन्द गर्नुहोस्"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'

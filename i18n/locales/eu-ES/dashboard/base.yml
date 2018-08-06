@@ -22,7 +22,7 @@ eu:
         edit_header: 'Aldatu kontuaren xehetasunak'
         error:
           future: ezin du izan etorkizunean
-  hello: "Kaixo mundua"
+  hello: "Kaixo, mundua"
   welcome_back: "Ongi etorria berriro, %{name}"
   submit: Bidali
   unsubmit: Bidalketa ezeztatu
@@ -40,7 +40,7 @@ eu:
   appname: "Code.org"
   stage: "Maila"
   stage_number: "Maila %{number}"
-  puzzle: "Puzzlea"
+  puzzle: "Ariketa"
   trophies: "garaikurrak"
   courses: 'Mailak'
   courses_page:
@@ -475,15 +475,7 @@ eu:
     save: "Gorde"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Beste bat"
-      - 
+      other: "Beste bat"
     submit: "Bidali"
     decline: "Itxi"
   zendesk_too_young_message: 'Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen lekura. <a href="http://support.code.org">support.code.org</a> webgunean nabigatu dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan jartzeko.'

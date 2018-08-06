@@ -155,7 +155,7 @@ eu:
           erabil nahi ditugunak behin eta berriz) kristalezko apaingarriak sortzeko
           kateak eta aleak erabiliz.
       SongwritingParameters:
-        title: Abestiak idazten parametroekin
+        title: Musika idazten
         desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena
           ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea
           ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
@@ -304,7 +304,7 @@ eu:
           era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
           ikasten dute honela.
       courseD_unplugged_graphPaperProgramming:
-        title: Paperean marraztuz programatu
+        title: Paper grafiko programazioa
         desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
           bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
       courseD_unplugged_relayProgramming:
@@ -344,7 +344,7 @@ eu:
           bat da informatikan. Ekintza bat klasekoekin burutzea ekintza askoz ere
           eraginkorragoa bihurtzen du, lana banaka burutu ordez.
       courseE_unplugged_songwriting:
-        title: Abestiak idazten parametroekin
+        title: Musika idazten
         desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena
           ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea
           ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
@@ -393,7 +393,7 @@ eu:
           botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
           dituzte.
       GraphPaperProgramming_2018:
-        title: Paperean marraztuz programatu
+        title: Paper grafiko programazioa
         desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
           bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
       courseD_unplugged_digitalCitizenship_2018:

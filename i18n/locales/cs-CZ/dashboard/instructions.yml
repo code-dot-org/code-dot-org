@@ -179,7 +179,7 @@ cs:
       2-3 Maze 16 before_instruction: Dostaň mne k prasátku.
       2-3 Maze 16_instruction: Dostaň mne ke slunečnici. Cykluj posloupnost!
       2-3 Maze 2_instruction: Toto prasátko mne štve. Pomoz mi se dostat k němu!
-      2-3 Maze 3_instruction: Najdi cestu a veď mne k tomu hloupému prasátku. Vyhni se TNT nebo bude peří létat!
+      2-3 Maze 3_instruction: Sleduj cestu a veď mne k tomu hloupému prasátku. Vyhni se TNT nebo bude peří létat!
       2-3 Maze 4_instruction: Naveď mě k zelenému zlu! (Pozor na TNT)
       2-3 Maze 5_instruction: Naveď mě k zelenému zlu! (Pozor na TNT)
       2-3 Maze 6_instruction: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl rozzlobit!
@@ -190,7 +190,7 @@ cs:
       2-3 Maze Loops 17_instruction: Dostaň mě ke slunečnici!
       2-3 Maze Loops 18_instruction: "Dostaň mě ke slunečnici!"
       2-3 Maze Loops 19_instruction: "Dostaň mě ke slunečnici!"
-      2-3 Maze Loops 20_instruction: Dostaň mě ke slunečnici!
+      2-3 Maze Loops 20_instruction: "Dokážeš vyřešit tuto hádanku s využitím\nco nejmenšího počtu bloků?"
       2-3 Maze Loops 21_instruction: Dostaň mě ke slunečnici!
       2-3 Maze Loops Assessment 1_instruction: 'Hodnocení: Dostaň mě ke slunečnici s jen 5 bloky! '
       2-3 Maze sq10_instruction: Dostaň mě k prasátku! Jaké bloky mám opakovat?
@@ -300,8 +300,9 @@ cs:
       4-5 Artist Patterns 9.5_instruction: Zopakujme tento kód k nakreslení dvou řádek šestiúhelníků. Všimni si, jak se naše druhá řada posouvá napravo.
       4-5 Artist Patterns 9_instruction: "Zopakuj nyní tento kód 3 krát k nakreslení celé řádky. Rada: Každý šestiúhelník je 80 pixelů široký od nejvzdálenějších bodů zleva doprava."
       4-5 Artist Patterns Free Play_instruction: Zdarma si pohraj - zkus si od ruky udělat vlastní vzor!
-      4-5 Bee Conditionals - FC Test_instruction: Včela chce právě teď jen nektar. Ne všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM se zjistí, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
+      4-5 Bee Conditionals - FC Test_instruction: Včela chce právě teď jen nektar. Ne všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjistětei, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
       4-5 Bee Conditionals 1_instruction: Včele nelze říct, zda je to květina nebo plástev. Sbírej nektar z květů, ale nejprve zkontrolujte, zda je to květina nebo plástev.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Včela chce teď právě jen nektar. Pamatuj si, že ne všechny objekty jsou květiny, takže sbírat nektar lze jen na květinách.
       4-5 Bee Conditionals 2_instruction: "Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar."
       4-5 Bee Conditionals 3_instruction: Teď včela chce jen dělat med. Zkontroluj med pouze na plástvích.
       4-5 Bee Conditionals 4_instruction: Neznámý objekt je květina nebo plástev. Použij if/else bloku ke sbírání nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
@@ -392,6 +393,13 @@ cs:
       4-5 While Loops 8_instruction: " Jsou opravdu hluboké díry a opravdu velká hromada kompostu.  Kolik lopat špíny je třeba přemístit, aby byla půda rovná?  Rada: Použij cyklus while pro obě strany."
       4-5 While Loops Assessment 1_instruction: Existuje mnoho děr a hromad.  Pomoz mi vyplnit a odstranit je aby země plochá.
       App Lab test_instruction: otestuj
+      Artist - Nested Loops 1_instruction: 'Dokonči kód k nakreslení těchto trojúhelníků.  První z nich jsme udělali za tebe.  Rada: 3 trojúhelníky v otáčení 360 stupňů.'
+      Artist - Nested Loops 10_instruction: Nakresli poslední řadu hvězd na této vlajce opakováním zadaných bloků. Hvězdy jsou od sebe 50 pixelů, ale nezapomeň, že samotné hvězdy jsou široké 30 pixelů.
+      Artist - Nested Loops 11_instruction: Umíš nakreslit těchto 10 čtverců na tomto chodníku pomocí vnořených cyklů? Každý čtverec je 30 pixelů.
+      Artist - Nested Loops 12_instruction: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
+      Artist - Nested Loops 5_instruction: Zacykluj daný kód k vytvoření větrného mlýnu.
+      Artist - Nested Loops 6_instruction: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
+      Artist - Nested Loops 9_instruction: Nakresli zuby v tlamě aligátora!
       Artist - Nested Loops Assessment 1_instruction: Použij vnořené cykly k dokončení návrhu.
       Artist Inspiration_instruction: "Volná hra inspirace: Nyní už víš vše, co potřebuješ vědět, abys udělal tento vzor! Pokud tento obrázek tě inspiruje, pokus se provést něco podobného. Jinak, vytvoř něco, co všechny vlastníš. \\r \\r Chtěj vědět, jak náš vzor byl udělán pro inspiraci? "
       Auto Open Function Editor_instruction: 'Můžeš volat funkci uvnitř jiné funkce! Pomocí funkce "tvar" jako základ, vytvoř 3 tvary domu každý o 20 pixelů větší než poslední, začíná se na délce 50 pixelů. Použití čítače cyklu mohlo by být užitečné. '
@@ -399,8 +407,13 @@ cs:
       Bergeron Robot Maze1_instruction: 'Můžeš mi pomoci chytit zlobivé prase? Sklož dohromady několik bloků "posun vpřed" a stiskni tlačítko "Run". '
       Brad Spooky House Copy_instruction: 'Volná hra: Zde jsou funkce, které jste napsali a ještě víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys viděl, jak odlišně vypadají tvoje kresby!'
       Brad Spooky House_instruction: 'Volná hra: Zde jsou funkce, které jste napsali a ještě víc pro vás k zahrání. Nakresli něco super! Zaraj si se šířkou pera, abys viděl, jak odlišně vypadají tvoje kresby!'
+      Building a Foundation Assessment_instruction: Vytvoř tříúrovňovou pyramidu, neexistují žádné pokyny, takže si hraj s kousky, které si dostal až dosud!
       Busy Bee 2_instruction: Tato včela má spoustu práce! Všiml si některých vzorů, které lze použít pro zjednodušení kódu?
       Busy Bee_instruction: Tato včela má spoustu práce! Všiml si některých vzorů, které lze použít pro zjednodušení kódu?
+      C3-Farmer While Loops 5_instruction: Wow, teď tam jsou dvě hluboké díry! Umíš napsat program, který obě vyplní úplně?
+      C3-Farmer While Loops 6_instruction: Wow teď tam je velká hromada špíny! Umíš napsat program, který odstraní všechno?
+      C3-Farmer While Loops 7_instruction: Wow, nyní jsou tři hromady špíny! Umíš napsat program, který odstraní každou z nich?
+      C3-Farmer While Loops Assessment 1_instruction: Existuje mnoho děr a hromad.  Pomoz mi vyplnit a odstranit je aby země plochá.
       CSD U5 black white images pixelation 2_instruction: Namaluj usměváka (klikni sem pro zobrazení obrázku)
       CSD U5 black white images pixelation 2_2018_instruction: Namaluj usměváka (klikni sem pro zobrazení obrázku)
       CSD U5 black white images pixelation 3_instruction: Změň slidery pro šířku a výšku abys našel obrázek (klikni sem pro více informací)
@@ -420,6 +433,7 @@ cs:
       Calc Circles of Eval 7_instruction: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 8_instruction: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 9_instruction: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
+      Course 2 Bee Loops 1_instruction: 'Ahoj já jsem včela. Pomůžeš mi sesbírat nektar z těchto květin? '
       Course 2 Maze Loops 1_instruction: Můžeš mě dostat k prasátku pomocí 5 bloků?
       Course 4 2_instruction: Včela chce teď právě jen nektar. Pamatuj si, že ne všechny objekty jsou květiny, takže sbírat nektar lze jen na květinách.
       Course 4 Artist 1_instruction: "Pomoz mi dokreslit mou krabičku. (Každá čára je dlouhá 300\npixelů) "
@@ -589,12 +603,12 @@ cs:
       Course 4 Binary 6_instruction: Který binární řetězec zopakovaný 10 krát nakreslí tento obrázek?
       Course 4 Binary 7_instruction: Který binární řetězec zopakovaný 10 krát nakreslí tento obrázek?
       Course 4 Binary 8_instruction: Můžeš dokončit většinu z tohoto obrázku opakováním 5 bitového binární čísla - pak budete potřebovat jedno 4 bitové číslo dostat do pravého dolního rohu.
-      Course 4 EC 1a_instruction: Žádná pravidla. Žádné záhady. Jen výzva!
-      Course 4 EC 1b_instruction: Žádná pravidla. Žádné záhady. Jen výzva!
+      Course 4 EC 1a_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady. Jen výzva!'
+      Course 4 EC 1b_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady. Jen výzva!'
       Course 4 EC 2a_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady. Jen výzva!'
-      Course 4 EC 2b_instruction: Žádná pravidla. Žádné záhady. Jen výzva!
-      Course 4 EC 2c_instruction: Žádná pravidla. Žádné záhady. Jen výzva!
-      Course 4 EC 2d_instruction: Žádná pravidla. Žádné záhady. Jen výzva!
+      Course 4 EC 2b_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady. Jen výzva!'
+      Course 4 EC 2c_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady. Jen výzva!'
+      Course 4 EC 2d_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady. Jen výzva!'
       Course 4 EC 3_instruction: 'Používej to, co jsi se naučil v předchozí úrovni k nakreslení obrázku, jako je tento. Poznámka: Kód se stává jednodušší, pokud zahrneš parametry. '
       Course 4 EC 3a_instruction: 'Extrémní výzva: ** žádná pravidla. Žádné záhady. Jen výzva!'
       Course 4 Maze 1_instruction: Dostaň rozhněvaného ptáka k prasátku!
@@ -691,10 +705,15 @@ cs:
       Eval Define Funcs 2_instruction: Pojďme se podívat dovnitř funkce "zelený trojúhelník" abychom viděli, jak funguje. Můžete ji upravit tak, aby funkce "zelený trojúhelník" vždy nakreslila obrys zeleného trojúhelníku?
       Eval Strings Images 3_instruction: Některé funkce pracují pouze s omezenou sadou řetězců, jako třeba druhý argument funkce kruh, který určuje jeho styl. Nakreslete oranžový obrys kruhu pomocí bloku pro řetězec s rozevírací nabídkou která zajistí že používáte pouze platné styly.
       Find the Wizard_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
+      Find the Wizard_2018_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       Food Fight!_instruction: "Přidali jsme pro tebe jednu poslední funkci. \\r \\r použij \"If\" příkaz k naprogramování tvé hry, která volat funkci \"úroveň_výš\" jen tehdy, když \"hráče_skóre\" se stane větší než jisté číslo. \\r \\r, Např.: \"hráče_skóre\" > 6\\r \\r si zahraje hru a udělá ji přes úroveň 4 k posunu na další puzzle. "
       FoodFight_instruction: Toto je příklad hry jakou můžete vytvořit v play lab.
       FoodFight_2018_instruction: Toto je příklad hry jakou můžete vytvořit v play lab.
       Function intro Ryan_instruction: Použijte dvakrát funkci „postavit most“ a udělejte cestu k pochodni.
+      Get To The Goal_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
+      Guess The Number 2_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
+      Guess The Number_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
+      Guess The Number_2018_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       Infinity_catch_instruction: "Dokážeš s Elzou (\"herec 2\")  chytit Annu\npomocí šipek na klávesnici?"
       Infinity_finale_instruction: Vytvoř cokoli chceš a sdílej to!
       Infinity_move_collide_instruction: "Hiro je \"herec 1\".  Přesuň ho přímo na \nBaymaxe a zahraj zvuk, když se dotknou."
@@ -728,7 +747,7 @@ cs:
       K-1 Artist1 5_instruction: Nakresli kmen květiny dvěma čarami!
       K-1 Artist1 6_instruction: Dokonči obrázek pomocí skokového bloku!
       K-1 Artist1 7_instruction: Použij blok skoku bez kresby. Přeskoč a nakresli čáru.
-      K-1 Artist1 8_instruction: Nakresli přerušovanou čáru pomocí skoku a kreslících bloků
+      K-1 Artist1 8_instruction: Nakreslit přerušovanou čáru pomocí skoku a kreslících bloků
       K-1 Artist1 9_instruction: Kreslením a skokem vytvoř přerušovanou čáru
       K-1 Artist1 Assessment 1_instruction: Nakresli čáry krátké a dlouhé!
       K-1 Artist1 Assessment 2_instruction: Nakresli krátké přerušované čáry!
@@ -953,11 +972,14 @@ cs:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Volný čas hraní! Pobab se se všemi bloky ve tvém panelu nástrojů. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Výzva: Jak bys použil "for cyklus" dostat každého aktéra chodit kolem a říkat číslo herce, poté zmizet z obrazovky? '
       New Artist Project_instruction: Nakresli něco super! Tvůj kód je uložen jako projekt, ke kterému se můžeš kdykoli vrátit.
+      New Basketball Project_instruction: Vytvořte si vlastní basketbalovou hru. Můžete změnit všechna pravidla. Až budete hotovi, klepněte na tlačítko Dokončit a nechte vaše kamarády vyzkoušet hru na jejich telefonech.
+      New Bounce Project_instruction: Vytvoř si vlastní hru Bounce. Můžeš měnit všechny vizuální efekty a pravidla. Až budeš hotov, klepni na tlačítko Finish, abys nechal přátele zkusit tvou hru na svých telefonech.
       New Course 4 Artist Functions Level 4_instruction: Použij funkci "nakreslit čtverec" k nakreslení tohoto vzoru.
       New Gumball Project_instruction: Vytvoř cokoli chceš a sdílej to!
       New Ice Age Project_instruction: Vytvoř cokoli chceš a sdílej to!
       New Infinity Project_instruction: Vytvoř cokoli chceš a sdílej to!
       New Minecraft Hero Project_instruction: "**Volná hra:** A teď můžete objevovat na vlastní pěst!"
+      New Sports Project_instruction: 'Vytvoř si vlastní hru! Můžeš měnit všechny pravidla, míchat sporty.. Buď kreativní! Až budeš hotov, klepni na tlačítko dokončit, abys nechal přátele zkusit tvou hru na svých telefonech.'
       Overworld Avoid Monsters_instruction: Vběhnutí ke Creeperovi je špatný nápad. Opatrně se pohybuj kolem Creeperů, abys ses dostal do bezpečí domova.
       Overworld Avoid Monsters_2018_instruction: Vběhnutí ke Creeperovi je špatný nápad. Opatrně se pohybuj kolem Creeperů, abys ses dostal do bezpečí domova.
       Overworld Chop Tree - allthethings_instruction: Dřevo je velmi důležitá surovina. Vyrábí se z něj mnoho věcí. Jdi ke stromu a příkazem "znič blok" jej pokácej.
@@ -979,11 +1001,13 @@ cs:
       Overworld Powered Minecart_2018_instruction: Skvělá práce! Shromáždil jsi spoustu zdrojů a postavil skromný dům. Nyní polož železnici od okraje mapy ke dveřím tvého domu.
       Overworld Shear Sheep_instruction: Čas stříhání ovcí! Použij povel "ostříhej" k získání vlny z obou ovcí.
       Overworld Shear Sheep_2018_instruction: Čas stříhání ovcí! Použij povel "ostříhej" k získání vlny z obou ovcí.
+      PDK5 Conditionals 1_instruction: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš, který z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li jej. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
       PDK5 Functions 2_instruction: Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané "nakreslit čtverec". Můžeš použít funkci "nakreslit čtverec" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů.
       PS - test - pixelation_instruction: Dokonči tvar X vepsáním nul a jedniček
       PS copy 2-3 Bee Conditionals 5_instruction: "Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš, který je z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li. Zkontroluj, zda nektar je roven 1 pomocí if blok."
+      Prompt Test_instruction: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       Quantum Bee_instruction: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš, který z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li jej. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
-      Ryan - 4-5 Bee Conditionals 2_instruction: Včela chce právě teď jen nektar. Ne všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM se zjistí, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: Včela chce právě teď jen nektar. Ne všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjistětei, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
       Ryan - Bee Conditionals_instruction: Včela chce právě teď jen nektar. Ne všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjistětei, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
       Ryan Test Locked Blocks_instruction: Zde je funkce nazvaná "hlídka." Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů.
       SG U3L07 - introSquare_instruction: Použijte smyčku k nakreslení čtverce. Pak přidejte další smyčky k nakreslení dalších čtverců, každý o kousek pootočený. (Kliknutím zobrazíte plné pokyny)
@@ -991,6 +1015,7 @@ cs:
       SG U3L07 - sunBeams_instruction: Doplňte do obrázku 100 slunečních paprsků použitím přikazu drawAllSunbeams ve smyčce. (Kliknutím zobrazíte plný pokyny)
       SG U3L07 - topDownDesign_instruction: Seznamte se se strukturou tohoto programu, pak přejděte k dalšímu cvičení. (Kliknutím zobrazíte plný pokyny)
       SG U3L08 - fish_instruction: Doplňte parametr k funkci drawFish tak, aby se změnila velikost nakreslené ryby. (Kliknutím zobrazíte plný pokyny)
+      SG U3L08 - introUnderTheSea - recovery_instruction: Přidejte další rybu, hvězdici a kus trávy do obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím zobrazíte plný pokyny)
       SG U3L08 - introUnderTheSea_instruction: Přidejte další rybu, hvězdici a kus trávy do obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím zobrazíte plný pokyny)
       SG U3L2_TurtleSquare_right_instruction: Nakreslete čtverec dopředu a vpravo od počátečního umístění. (Klepnutím zobrazíte podrobné pokyny)
       SpecialFrozenLevel_instruction: "Oficiálně se stáváš mistrovským umělcem! Vytvoř\nledové království."
@@ -1013,6 +1038,22 @@ cs:
       U2 frequency caesar_instruction: Pokyny
       U2 frequency random sub_instruction: Pokyny
       U2 vigenere cipher_instruction: Pokyny
+      U3L07 - introSquare_instruction: Použijte smyčku k nakreslení čtverce. Pak přidejte další smyčky k nakreslení dalších čtverců, každý o kousek pootočený. (Kliknutím zobrazíte plné pokyny)
+      U3L07 - introSquare_2018_instruction: Použijte smyčku k nakreslení čtverce. Pak přidejte další smyčky k nakreslení dalších čtverců, každý o kousek pootočený. (Kliknutím zobrazíte plné pokyny)
+      U3L07 - loopsWithRandom_instruction: Zvyšte počet iterací aby se celá obrazovka vyplnila bílou brvou. (Kliknutím zobrazíte plný pokyny)
+      U3L07 - loopsWithRandom_2018_instruction: Zvyšte počet iterací aby se celá obrazovka vyplnila bílou brvou. (Kliknutím zobrazíte plný pokyny)
+      U3L07 - sunBeams_instruction: Doplňte do obrázku 100 slunečních paprsků použitím přikazu drawAllSunbeams ve smyčce. (Kliknutím zobrazíte plný pokyny)
+      U3L07 - sunBeams_2018_instruction: Doplňte do obrázku 100 slunečních paprsků použitím přikazu drawAllSunbeams ve smyčce. (Kliknutím zobrazíte plný pokyny)
+      U3L07 - topDownDesign_instruction: Seznamte se se strukturou tohoto programu, pak přejděte k dalšímu cvičení. (Kliknutím zobrazíte plný pokyny)
+      U3L07 - topDownDesign_2018_instruction: Seznamte se se strukturou tohoto programu, pak přejděte k dalšímu cvičení. (Kliknutím zobrazíte plný pokyny)
+      U3L08 - fish_instruction: Doplňte parametr k funkci drawFish tak, aby se změnila velikost nakreslené ryby. (Kliknutím zobrazíte plný pokyny)
+      U3L08 - fish_2018_instruction: Doplňte parametr k funkci drawFish tak, aby se změnila velikost nakreslené ryby. (Kliknutím zobrazíte plný pokyny)
+      U3L08 - introUnderTheSea with comments_instruction: Přidejte další rybu, hvězdici a kus trávy do obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím zobrazíte plný pokyny)
+      U3L08 - introUnderTheSea_instruction: Přidejte další rybu, hvězdici a kus trávy do obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím zobrazíte plný pokyny)
+      U3L08 - introUnderTheSea_2018_instruction: Přidejte další rybu, hvězdici a kus trávy do obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím zobrazíte plný pokyny)
+      U3L08 - starFish_instruction: Přidejte další rybu, hvězdici a kus trávy do obrázku. Podívejte se na, ale neneměňte, funkce, které je vytvářejí. (Kliknutím zobrazíte plný pokyny)
+      U3L2_TurtleSquare_right_instruction: Nakreslete čtverec dopředu a vpravo od počátečního umístění. (Klepnutím zobrazíte podrobné pokyny)
+      U3L2_TurtleSquare_right_2018_instruction: Nakreslete čtverec dopředu a vpravo od počátečního umístění. (Klepnutím zobrazíte podrobné pokyny)
       U4 vigenere cipher 2_instruction: Pokyny
       U4L02 - Objects - Template1_instruction: Předloha
       U4L02 - Objects - Template1_2018_instruction: Předloha
@@ -1037,6 +1078,7 @@ cs:
       bounce_11_instruction: Nyní můžeš připojit bloky k bloku "při spuštění". Musíš připojit nové "spuštění nového míče" bloku do více míst než jednom. Také zkus změnit scénu nebo rychlost pádla a míče, abys viděl kolik bodů můžeš skórovat než tvůj soupeř skóruje dvakrát.
       bounce_11_2018_instruction: Nyní můžeš připojit bloky k bloku "při spuštění". Musíš připojit nové "spuštění nového míče" bloku do více míst než jednom. Také zkus změnit scénu nebo rychlost pádla a míče, abys viděl kolik bodů můžeš skórovat než tvůj soupeř skóruje dvakrát.
       bounce_12_instruction: Vytvoř si vlastní hru Bounce. Můžeš měnit všechny vizuální efekty a pravidla. Až budeš hotov, klepni na tlačítko Finish, abys nechal přátele zkusit tvou hru na svých telefonech.
+      bounce_12_2018_instruction: Vytvoř si vlastní hru Bounce. Můžeš měnit všechny vizuální efekty a pravidla. Až budeš hotov, klepni na tlačítko Finish, abys nechal přátele zkusit tvou hru na svých telefonech.
       bounce_12_basketball_instruction: Vytvořte si vlastní basketbalovou hru. Můžete změnit všechna pravidla. Až budete hotovi, klepněte na tlačítko Dokončit a nechte vaše kamarády vyzkoušet hru na jejich telefonech.
       bounce_12_sports_instruction: 'Vytvoř si vlastní hru! Můžeš měnit všechny pravidla, míchat sporty.. Buď kreativní! Až budeš hotov, klepni na tlačítko dokončit, abys nechal přátele zkusit tvou hru na svých telefonech.'
       bounce_1_2018_instruction: Připoj blok k bloku "šipka vlevo" a stiskni tlačítko "Run". Přesuň pálku pomocí levé šipky k dosažení cíle.
@@ -1057,6 +1099,7 @@ cs:
       bounce_6_sports_instruction: Teď je vlajka nahoře. Musíte připojit bloky k oběma blokům "když puk zasáhne", abyste vyřešili tuto hádanku.
       bounce_7_instruction: Připoj bloky ke každému bloku "když". Odrážej míč dokud nenarazí do konečného terče.
       bounce_7_2018_instruction: Připoj bloky ke každému bloku "když". Odrážej míč dokud nenarazí do konečného terče.
+      collector example_instruction: Seřaď bloky tak, abys posbíral všechno zlato a vyřešil hádanku.
       collectorDebugVideo2_instruction: Seřaď bloky tak, abys posbíral všechno zlato a vyřešil hádanku.
       course2_maze_seq_challenge1_instruction: Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT, nebo bude peří létat!
       course2_playlab_stage17_1_instruction: Dokážeš zařídit, aby pes Jirka (herec 1) řekl "ahoj"?
@@ -1076,6 +1119,10 @@ cs:
       course3_playlab_stage17_6_instruction: Dokážeš přidat blok, který změní pozadí a Waddlesovu rychlost, a pak s ním pohybovat dokud nezískáš bod?
       course3_playlab_stage17_7_instruction: Vytvoř vlastní příběh. Až budeš hotov, klepni na tlačítko Finish, abys nechal přátele si vyzkoušet tvůj příběh na svých telefonech.
       course4_artist_fwp_challenge1_instruction: Zkus spouštět tento program, provádět změny a sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď něčím naprosto jiným)
+      courseA_artist_loops7_instruction: Pomocí cyklu "repeat" přidej do vody vlny.
+      courseA_artist_loops7_2018_instruction: Pomocí cyklu "repeat" přidej do vody vlny.
+      courseA_artist_loops7_forVideo_instruction: Pomocí cyklu "repeat" přidej do vody vlny.
+      courseA_forVideoTest_artist_instruction: Pomocí cyklu "repeat" přidej do vody vlny.
       courseA_maze_seq2_instruction: Změň kód, abys mne dostal k prasátku!
       courseA_maze_seq2_2018_instruction: Změň kód, abys mne dostal k prasátku!
       courseC_PlayLab_events3_instruction: Můžete napsat program, aby se Jorge (pes) posunul směrem k Olivii (kočka)?
@@ -1101,6 +1148,7 @@ cs:
       courseD_bee_nestedLoops8_2018_instruction: 'Sesbírat všechen nektar z každého květu a udělat med na každé plástvi. Použij vnořené cykly. '
       courseD_bounce_events10_instruction: Nyní je cíl na vrcholu. Spoj bloky "skóre" a "skóre protihráče" s bloky "když je míč v cíli" a "když míč mine pálku", abys vytvořil hru. Podívej se, kolik bodů můžeš získat předtím, než tvůj protihráč skóruje dvakrát.
       courseD_bounce_events11_instruction: Nyní můžeš připojit bloky k bloku "při spuštění". Musíš připojit nové "spuštění nového míče" bloku do více míst než jednom. Také zkus změnit scénu nebo rychlost pádla a míče, abys viděl kolik bodů můžeš skórovat než tvůj soupeř skóruje dvakrát.
+      courseD_bounce_events12_instruction: Vytvoř si vlastní hru Bounce. Můžeš měnit všechny vizuální efekty a pravidla. Až budeš hotov, klepni na tlačítko Finish, abys nechal přátele zkusit tvou hru na svých telefonech.
       courseD_bounce_events2_instruction: Připoj blok k blokům "šipka vpravo" a "šipka vpravo". Přesunuj pálku k dosažení obou cílů.
       courseD_bounce_events3_instruction: Teď zkus něco podobného s blokem "šipka nahoru". Přesunuj pálku k dokončení úkolu nahoře.
       courseD_bounce_events3s_instruction: Teď zkus něco podobného s blokem "šipka nahoru". Přesunuj pálku k dokončení úkolu nahoře.
@@ -1203,6 +1251,7 @@ cs:
       grade2_PuppyLoops_8_instruction: "Kód pro tři vousy, které vidíš, je špatný. Rada: každý vous je dlouhý 75 pixelů. Oprav kód k nakreslení vousů."
       grade2_PuppyLoops_9_instruction: |-
         Vypadá to, že C v kódu je nakresleno pozpátku. Můžeš to udělat, aby to vypadalo jako C?
+      grade2_collector_3_instruction: Seřaď bloky tak, abys posbíral všechno zlato a vyřešil hádanku.
       grade2_puppy_loops2_instruction: 'Můžeš nahradit těchto pět bloků jen dvěma bloky? (Rada: vytvoř cyklus pomocí bloku "opakuj několikrát".)'
       grade2_puppy_loops4_instruction: Použij dva cykly se dostat k prasátku pomocí méně bloků.
       grade3_ConditionalsElse_1_instruction: Včele nelze říct, zda je to květina nebo plástev. Sbírej nektar z květů, ale nejprve zkontrolujte, zda je to květina nebo plástev.
@@ -1273,12 +1322,17 @@ cs:
       grade3_robotFarmer_ConditionalsIntro_6_instruction: Odstraň všechny hromádky hlíny použitím co nejmenšího počtu bloků. Nová možnost v rozbalovacím menu bloku "dokud" mi řekne, stojím-li na hromádce nebo v díře.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Pomoz mi vyplnit všechny tyto díry pěti lopatami hlíny. Tip: můžeš vložit blok "opakovat" dovnitř bloku "dokud".'
       grade4_arist_nested_loop_circles1_instruction: 'Použij vnořené cykly k dokončení návrhu.'
+      grade4_arist_nested_loop_flags1_instruction: Zacykluj daný kód k vytvoření větrného mlýnu.
       grade4_arist_nested_loop_polygons1_instruction: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
       grade4_arist_nested_loop_polygons2_instruction: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co dává 360 děleno 10?)"
+      grade4_arist_nested_loop_squares1_instruction: Umíš nakreslit těchto 10 čtverců na tomto chodníku pomocí vnořených cyklů? Každý čtverec je 30 pixelů.
       grade4_arist_nested_loop_triangles2_instruction: 'Nyní vnoř tento cyklus dovnitř dalšího cyklu k nakreslení 10 trojúhelníků.  Tomu se říká vnořené cykly.  Rada: Všech 10 trojúhelníků vytváří 360 stupňů otáčení.  '
+      grade4_arist_nested_loop_triangles3_instruction: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
+      grade4_arist_nested_loop_triangles4_instruction: Nakresli zuby v tlamě aligátora!
       grade4_arist_nested_loop_triangles5_instruction: |-
         Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
         
+      grade4_arist_nested_loop_triangles6_instruction: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       grade4_artist_functions1_instruction: "Nazdar. Já jsem zombie umělec. Mám rád kreslení! Pomoz mi nakreslit hranaté brýle.  Rada: můstek mezi skly je kratší o 25 pixelů než strana čtverce."
       grade4_artist_functions2_instruction: "Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané \"nakreslit čtverec\". Můžeš použít funkci \"nakreslit čtverec\" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů."
       grade4_artist_functions_challenge_instruction: Používej navrhované funkce k nakreslení čtyř řád šestiúhelníků. Všimni si, jak naše i číslované řádky jsou posunuté doprava?
@@ -1287,10 +1341,14 @@ cs:
         Chceš-li vidět znova  pokyny! \r \r zde je kód pro zajímavé tvary.  Co se stane, když je opakuješ?   Všimni si, že se střídavě v tomto tvaru přidává až 420 stupňů, což znamená, že když tvůj umělec dodělá kreslení, bude čelem jiným směrem, než když jste začali.  Tento nový směr je přesně o 60 stupňů vpravo od toho,  kde jste začali.
       grade4_artist_nestedLoops_challenge2_instruction: Nyní výzva!  Tady je návrh, který využívá pouze bloky, které se již ukázaly.  Umíš zjistit, jak je znovu vytvořit?  Bez obav zkoušej metodou pokus a omyl. Neočekává se, že to bude perfektní napoprvé.  Chceš vidět další pokyny?  Klepni zde!
       grade4_artist_nested_loop_circles1_instruction: 'Použij vnořené cykly k dokončení návrhu.'
+      grade4_artist_nested_loop_flags1_instruction: Zacykluj daný kód k vytvoření větrného mlýnu.
       grade4_artist_nested_loop_polygons1_instruction: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
+      grade4_artist_nested_loop_squares1_instruction: Umíš nakreslit těchto 10 čtverců na tomto chodníku pomocí vnořených cyklů? Každý čtverec je 30 pixelů.
+      grade4_artist_nested_loop_triangles1_instruction: 'Dokonči kód k nakreslení těchto trojúhelníků.  První z nich jsme udělali za tebe.  Rada: 3 trojúhelníky v otáčení 360 stupňů.'
       grade4_artist_nested_loop_triangles5_instruction: |-
         Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
         
+      grade4_artist_nested_loop_triangles6_instruction: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       grade4_artist_parameters_squares1_instruction: 'Klepni na tlačítko "upravit" definice funkce "nakreslit čtverec" a přidej parametr. Mělo by to být délkový parametr, právě jako trojúhelník. Tentokrát akresli 3 čtverce délky: 25, 50 a 75 pixelů, každý od sebe 100 pixelů.'
       grade4_artist_parameters_triangles2_instruction: Všiml jsi si něčeho neobvyklého na těchto funkčních blocích? Klepni na "Run", abys vidělco se stane.
       grade4_artist_parameters_triangles2b_instruction: 'Umíš dokončit tuto kresbu? Rada: Strany každého trojúhelníku jsou větší než ten předcházející o 25 pixelů.  První trojúhelník má stranu 25 pixelů.'
@@ -1346,6 +1404,10 @@ cs:
       grade5_artist_binary9_instruction: |-
         Zde je vyšší rozlišení plátna na - 16 x 16 pixelů! \r \r je vidět, co se stane, když začneme být kreativní s bity?
       grade5_artist_for_loops1_instruction: 'Nakresli tento trojúhelník, který je široký 50 pixelů. Rada: použij blok opakování.'
+      grade5_artist_for_loops10_instruction: |-
+        Příjdeš na to, jak použít věci, co ses naučil, abys nakreslil takovýto obrázek?\r
+        \r
+        Potřebuješ radu? Klikni sem.
       grade5_artist_for_loops5_instruction: |-
         Jen jedna malá změna kódu z posledního obrázku může vytvořit tuto kresbu. Můžeš zjistit, jaká je to změna? \r \r Rada: musíš něco odstranit!
       grade5_artist_for_loops6_instruction: Pokud otočíte ještě trochu více či méně, než byste normálně pro tvar, vytváří se pěkný efekt. Zkus použít kód z poslední úrovně, ale obracení o 89 stupňů vytváří zkroucenou čtvercovou spirálu.
@@ -1408,6 +1470,7 @@ cs:
       grade5_playlab_variables81_instruction: "Přidali jsme pro tebe jednu poslední funkci. \\r \\r použij \"If\" příkaz k naprogramování tvé hry, která volat funkci \"úroveň_výš\" jen tehdy, když \"hráče_skóre\" se stane větší než jisté číslo. \\r \\r, Např.: \"hráče_skóre\" > 6\\r \\r si zahraje hru a udělá ji přes úroveň 4 k posunu na další puzzle. "
       grade5_playlab_variables9_instruction: "Zde je funkce nazvaná \"hlídka.\" Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů."
       grade5_playlab_variables_freeplay_instruction: "Čas k volnému hraní! Zde jsou všechny proměnné, se kterými jsme hráli až dosud v této fázi, stejně jako pár dalších v případě, že je chcete. \\r \\r Všimni si, že zde nyní máme tolik bloků v našem panelu nástrojů, které potřebují být zorganizované!  Zde si dáme každý kus do příslušné kategorie.  Věnuj nějaký čas k prozkoumání všeho, co je k dispozici. Až budeš hotov s průzkumem, udělej hru nebo příběh  s pomocí opakování, proměnných a událostí.  \\r \\r Rada: Přejdi dolů, abys viděl všechny příkazy v pracovním prostoru."
+      gradek_artist_loops6_instruction: Pomocí cyklu "repeat" přidej do vody vlny.
       k-1 maze 1_instruction: Dokážeš mne přesunout na západ k prasátku?
       level 'grade3_Loops_10_instruction: |-
         Použij podobný cyklus jako v poslední puzzlu, ale zapracuj do něj otočku.
@@ -1423,9 +1486,12 @@ cs:
       level 'grade3_Loops_8_instruction: Použij cyklus pro sběr nektaru a udělat med.
       level 'grade3_Loops_9_instruction: Sesbírat nektar z každého květu a udělat med v každé plástvi.
       level grade3_Loops_2_instruction: Můžeš udělat stejný úkol s pomocí cyklu?
+      scrat 16 (copy 1)_instruction: "Žalud! Žalud! Žalud! Použij blok \"Když\", aby mě tam dostal\ns pomocí co nejnižšího počtu bloků."
       scrat 16_instruction: "Žalud! Žalud! Žalud! Použij blok \"Když\", aby mě tam dostal\ns pomocí co nejnižšího počtu bloků."
       scrat 17_instruction: "Dobrá, pro jistotu to uděláme znovu - toto se moc\nneliší, ale pozor na stěny!"
+      scrat 18 (copy 1)_instruction: "Blok \"když-jinak\" vyhodnotí podmínku a pak provede \njednu věc NEBO druhou. Abys mě dostal k žaludu, zkus využít tento nový blok."
       scrat 18_instruction: "Blok \"když-jinak\" vyhodnotí podmínku a pak provede \njednu věc NEBO druhou. Abys mě dostal k žaludu, zkus využít tento nový blok."
       scrat 19 (copy 1)_instruction: Další cvičení pro blok "pokud-jinak". Zvládneš to na první pokus?
       scrat 19_instruction: "Ještě jeden příklad s blokem \"když-jinak\". Dokážeš\nto udělat správně na první pokus?"
       scrat 20_instruction: "Zvládneš přidat jen 3 bloky, abys mi pomohl vyřešit složitější\nbludiště? Když to uděláš správně, dokážu projít libovolně klikatou cestu\nbez ohledu na délku. Rychle! Led už taje!"
+      subgoalU3L2_TurtleSquare_right_instruction: Nakreslete čtverec dopředu a vpravo od počátečního umístění. (Klepnutím zobrazíte podrobné pokyny)

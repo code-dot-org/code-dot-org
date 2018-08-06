@@ -332,10 +332,10 @@ eu:
       2-3 Maze 10_instruction: Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)
       2-3 Maze 11_instruction: Eraman nazazu "Gose naiz" loreraino! Zenbat aldiz errepikatu
         behar duzu bloke bat?
-      2-3 Maze 12 (copy 1)_instruction: 'Aurreko erantzuna ordezkatu dezakezu bi bloke
-        bakarrik erabiliz? (Aholkua: Sortu begizta bat "errepikatu aldiz" blokea.)'
-      2-3 Maze 12 (copy 2)_instruction: 'Aurreko erantzuna ordezkatu dezakezu bi bloke
-        bakarrik erabiliz? (Aholkua: Sortu begizta bat "errepikatu aldiz" blokea.)'
+      2-3 Maze 12 (copy 1)_instruction: 'Ordeztu al dezakezu aurreko erantzuna soilik
+        2 blokerekin? (Pista: Sortu begizta bat "errepika aldiz" blokearekin)'
+      2-3 Maze 12 (copy 2)_instruction: 'Ordeztu al dezakezu aurreko erantzuna soilik
+        2 blokerekin? (Pista: Sortu begizta bat "errepika aldiz" blokearekin)'
       2-3 Maze 12 (old)_instruction: Eraman nazazu zerriraino, oraingoan "Errepikatu
         Aldiz" blokearekin!
       2-3 Maze 12 - One Move Block_instruction: Joan txerria dagoen tokira! Oraingoan
@@ -369,7 +369,8 @@ eu:
       2-3 Maze Loops 17_instruction: Eraman nazazu ekiloreraino!
       2-3 Maze Loops 18_instruction: Eraman nazazu ekiloreraino!
       2-3 Maze Loops 19_instruction: Eraman nazazu ekiloreraino!
-      2-3 Maze Loops 20_instruction: Eraman nazazu ekiloreraino!
+      2-3 Maze Loops 20_instruction: Ebatz dezakezu puzle hau ahal den bloke kopuru
+        txikiena erabiliz?
       2-3 Maze Loops 21_instruction: Eraman nazazu ekiloreraino!
       2-3 Maze Loops Assessment 1_instruction: 'Ebaluazioa: Eraman nazazu ekiloreraino
         soilik 5 bloke erabiliz! '
@@ -634,10 +635,13 @@ eu:
         patroi bat egiten!
       4-5 Bee Conditionals - FC Test_instruction: Erleak orain nektarra baino ez du
         nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore
-        bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
+        bat izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
       4-5 Bee Conditionals 1_instruction: Erleak esan dezake hau lorea edo abaraska
         den. Nektarra bildu loreetatik soilik, baina lehenengo egiaztatu lorea edo
         abaraska den.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Erleak orain nektarra baino ez
+        du nahi. Gogoratu, objektu guztiak ez dira loreak, beraz egiaztatu nektarra
+        loreetatik soilik biltzen duzula.
       4-5 Bee Conditionals 2_instruction: Erleak orain nektarra baino ez du nahi.
         Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat
         izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
@@ -701,7 +705,7 @@ eu:
         begizta kabiatu bat.
       4-5 Maze 1 (copy 1)_instruction: Pertsona agurgarria. Ni zombia. Joan... behar...
         lorera.
-      4-5 Maze 1_instruction: Pertsona agurgarria. Ni zonbia. Joan... behar... ekilorera.
+      4-5 Maze 1_instruction: Pertsona agurgarria. Ni zombia. Joan... behar... lorera.
       4-5 Maze 10_instruction: Iritsi al zaitezke ekiloreraino soilik 4 bloke erabiliz?
       4-5 Maze 11_instruction: Iritsi al zaitezke ekilorera bakarrik sei bloke erabiliz?
       4-5 Maze 12_instruction: Tira ba, hau pixka bat ezberdina da. Egin al dezakezu
@@ -801,6 +805,20 @@ eu:
       4-5 While Loops Assessment 1_instruction: Zulo eta lur-meta piloa dago. Lagun
         iezadazu zuloak betetzen eta lur-metak kentzen lurzorua laua egiteko.
       App Lab test_instruction: proba
+      Artist - Nested Loops 1_instruction: 'Osatu kodea triangelu hauek marrazteko.
+        Lehenengoa jadanik egina dago. Pista: 3 triangelu 360 graduko biraketan.'
+      Artist - Nested Loops 10_instruction: Marraztu bandera honetako izarren azkeneko
+        lerroa emandako blokeak errepikatuz. Izarren artean 50 pixeleko tartea dago,
+        baina gogoratu izarrak 30 pixeleko zabalerakoak direla.
+      Artist - Nested Loops 11_instruction: Marraztu ditzakezu espaloi honetako 10
+        karratuak begizta kabiatu bat erabiliz? Karratu bakoitza 30 pixelekoa da.
+      Artist - Nested Loops 12_instruction: Marraztu ditzakezu 36 triangelu hauek
+        begizta kabiatu bat erabiliz?
+      Artist - Nested Loops 5_instruction: Errepikatu emandako kodea haize-errota
+        bat sortzeko.
+      Artist - Nested Loops 6_instruction: Marraztu dezakezu hexagono bat triangeluaren
+        kodea errepikatuz?
+      Artist - Nested Loops 9_instruction: Marraztu krokodiloaren ahoko hortzak!
       Artist - Nested Loops Assessment 1_instruction: Erabili kabiatutako begizta
         bat diseinua osatzeko.
       Artist Inspiration_instruction: "Jolas librea: Era honetakoak egiteko jakin
@@ -824,12 +842,24 @@ eu:
       Brad Spooky House_instruction: 'Joku askea: Hemen daude zuk idatzitako funtzioak
         eta jolasteko beste funtzio batzuk. Zerbait izugarria marraztu! Jolastu arkatzaren
         zabalararekin zein irudi izugarriak marraztu ditzakezun ikusteko!'
+      Building a Foundation Assessment_instruction: Eraiki hiru mailako piramidea.
+        Ez dago beste jarraibiderik, beraz, egin probak piezekin lortu arte!
       Busy Bee 2_instruction: Erle honek lan handia dauka egiteko! Kodea sinplifikatzeko
         erabil dezakezun patroirik antzematen al duzu?
       Busy Bee_instruction: Erle honek lan handia dauka egiteko! Kodea sinplifikatzeko
         erabil dezakezun patroirik antzematen al duzu?
+      C3-Farmer While Loops 5_instruction: Hara, orain bi zulo sakon daude! Programa
+        bat idatz dezakezu bi zuloak betetzeko gainazala laua izan arte?
+      C3-Farmer While Loops 6_instruction: Hara, orain lur-meta asko dago! Idatzi
+        dezakezu programa bat lur-metak ezabatuko dituena lurzorua laua izan arte?
+      C3-Farmer While Loops 7_instruction: Hara, oran hiru lur-meta daude! Idatz dezakezu
+        programa bat lur-metak ezabatuko dituena lurzorua laua izan arte?
+      C3-Farmer While Loops Assessment 1_instruction: Zulo eta lur-meta piloa dago.
+        Lagun iezadazu zuloak betetzen eta lur-metak kentzen lurzorua laua egiteko.
       CSD U5 black white images pixelation 5_instruction: Marraztu nahi duzuna
       CSD U5 black white images pixelation 5_2018_instruction: Marraztu nahi duzuna
+      Course 2 Bee Loops 1_instruction: 'Kaixo, erle bat naiz. Lore hauetako nektarra
+        biltzen laguntzerik? '
       Course 2 Maze Loops 1_instruction: Zerriraino eraman nazakezu 5 bloke erabiliz?
       Course 4 2_instruction: Erleak orain nektarra baino ez du nahi. Gogoratu, objektu
         guztiak ez dira loreak, beraz egiaztatu nektarra loreetatik soilik biltzen
@@ -1189,8 +1219,8 @@ eu:
         biltzeko.
       Course 4 Bee 7_instruction: Erabili orain arte ikasitakoa nektar guztia biltzeko.
         Lore moreak 3, 2 edo nektar 1 izan ditzake.
-      Course 4 Bee For Loops 1_instruction: Erabili begizta bat lore bakoitzaren nektarra
-        biltzeko.
+      Course 4 Bee For Loops 1_instruction: Begizta bat erabil ezazu loreen nektarra
+        jasotzeko.
       Course 4 Bee For Loops 10_instruction: Zure begiztak beheraka zenbatzen badu,
         zure kontagailuaren aldagaiari inkrementua kentzen zaio begizta bakoitzean.
         Zein izan behar da inkrementua 9, ondoren 6 eta ondoren 3 nektar biltzeko?
@@ -1213,8 +1243,8 @@ eu:
         begizta bat. Saia zaitez nektar hauek biltzen 5etk 1era zenbatzen banaka.
       Course 4 Bee For Loops 7_instruction: Erabili zuren begiztaren "kontagailua"
         aldagaia mugimendu horizontalaren irismena kontrolatzeko.
-      Course 4 Bee For Loops 8_instruction: Erabil dezakezu begiztako aldagaia mugimendua
-        eta nektarra biltzea kontrolatzeko?
+      Course 4 Bee For Loops 8_instruction: Erabil al dezakezu begizta aldagaia mugimendua
+        eta nektarraren bilketa kontrolatzeko?
       Course 4 Bee For Loops 9_instruction: Zure "for" begiztako azken zenbakiari
         "inkrementua" deritzo, eta begizta exekutatzen den bakoitzean kontagailuaren
         aldagaia inkrementuaren arabera aldatzen da. Saia zaitez lore hauek biltzen
@@ -1255,14 +1285,14 @@ eu:
         gogoratu.
       Course 4 Bee Params 5_instruction: Hasiera-hasieratik has gaitezen - "norabide"
         parametroa duela "bildu 5 nektar" izeneko funtzio berria sor al dezakezu?
-      Course 4 Bee Params 6 (copy 1)_instruction: Saia zaitez zure funtzio berria
-        erabiltzen nektar guztia biltzeko.
+      Course 4 Bee Params 6 (copy 1)_instruction: Saiatu zure funtzio berria erabiltzen
+        nektar guzti hau biltzeko.
       Course 4 Bee Params 6_instruction: Ez al litzateke ederra izango nektar guzti
         hau funtzio bakarrarekin biltzerik bagenu? Saiatu zure funtzioari "nektar
         unitateak" izeneko parametro berri bat gehitzen, biltzeko dugun nektar kantitatea
         kontrolatzeko. Seguruenez, funtzioari ere izena aldatu nahiko diozu!
-      Course 4 Bee Params 7 (copy 1)_instruction: Saia zaitez zure funtzio berria
-        erabiltzen nektar guztia biltzeko.
+      Course 4 Bee Params 7 (copy 1)_instruction: Saiatu zure funtzio berria erabiltzen
+        nektar guzti hau biltzeko.
       Course 4 Bee Params 7_instruction: Saiatu zure funtzio berria erabiltzen nektar
         guzti hau biltzeko.
       Course 4 Bee Params 8 Clone 2_instruction: Arranopola, orain eztiaz ere arduratu
@@ -1280,8 +1310,8 @@ eu:
       Course 4 Bee Params 8_instruction: 'Erronka: Orain eztiaz ere arduratu beharra
         dago! Berridatzi zure funtzioa, bai ezti unitate kopurua eta bai nektar unitate
         kopurua erabiltzeko.  Nola erabil zenitzake kopuru horiek zer egin erabakitzeko?'
-      Course 4 Bee Params Ex_instruction: Saia zaitez zure funtzio berria erabiltzen
-        nektar guztia biltzeko.
+      Course 4 Bee Params Ex_instruction: Saiatu zure funtzio berria erabiltzen nektar
+        guzti hau biltzeko.
       Course 4 Binary 1_instruction: Hona hemen funtzio bat, 1ez eta 0z osatutako
         kate bitar bat hartu eta baserritarrari ezkerretik eskuinera, goitik behera
         biratzeko agintzen diona, zenbakiak zero bat duen karratuetan biratuz. Abiarazi
@@ -1304,16 +1334,20 @@ eu:
       Course 4 Binary 8_instruction: Irudi honen gehiengoa 5 biteko zenbaki bitar
         bat errepikatuz osa dezakezu - ondoren, 4 biteko beste zenbaki bat beharko
         duzu beheko eskuineko erpina lortzeko.
-      Course 4 EC 1a_instruction: Araurik ez. Pistarik ez. Lehiaketa besterik ez!
-      Course 4 EC 1b_instruction: Araurik ez. Pistarik ez. Lehiaketa besterik ez!
+      Course 4 EC 1a_instruction: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez.
+        Lehiaketa besterik ez!"
+      Course 4 EC 1b_instruction: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez.
+        Lehiaketa besterik ez!"
       Course 4 EC 2a_instruction: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez.
         Lehiaketa besterik ez!"
-      Course 4 EC 2b_instruction: Araurik ez. Pistarik ez. Lehiaketa besterik ez!
-      Course 4 EC 2c_instruction: Araurik ez. Pistarik ez. Lehiaketa besterik ez!
-      Course 4 EC 2d_instruction: Araurik ez. Pistarik ez. Lehiaketa besterik ez!
-      Course 4 EC 3_instruction: 'Erabil ezazu aurreko mailan ikasi duzuna hau bezalako
-        irudi bat marrazteko. Oharra: Kodea sinpleagoa izango da parametroak erabiltzen
-        badituzu.'
+      Course 4 EC 2b_instruction: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez.
+        Lehiaketa besterik ez!"
+      Course 4 EC 2c_instruction: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez.
+        Lehiaketa besterik ez!"
+      Course 4 EC 2d_instruction: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez.
+        Lehiaketa besterik ez!"
+      Course 4 EC 3_instruction: 'Erabili aurreko mailan ikasitakoa honelako irudia
+        marrazteko. Oharra: kodea erraztu egiten da parametroak erabiltzen badituzu. '
       Course 4 EC 3a_instruction: 'Sekulako Lehiaketa: Araurik ez. Pistarik ez. Lehiaketa
         besterik ez!'
       Course 4 Maze 1_instruction: Bidali txori haserrea zerriarengana!
@@ -1481,9 +1515,8 @@ eu:
         marrazteko. Oharra: kodea erraztu egiten da parametroak erabiltzen badituzu. '
       Course 4 SCF 3 Fail 1_instruction: Badakizu nola...
       Course 4 SCF 3 Fail 2_instruction: Badakizu nola...
-      Course 4 SCF 3_instruction: 'Erabil ezazu aurreko mailan ikasi duzuna hau bezalako
-        irudi bat marrazteko. Oharra: Kodea sinpleagoa izango da parametroak erabiltzen
-        badituzu.'
+      Course 4 SCF 3_instruction: 'Erabili aurreko mailan ikasitakoa honelako irudia
+        marrazteko. Oharra: kodea erraztu egiten da parametroak erabiltzen badituzu. '
       Course 4 SCFL 1_instruction: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       Course 4 SCFL 1a_instruction: Eraman dezakezu Skrat ezkur honetaraino ahalik
         eta bloke gutxien erabiliz?
@@ -1626,7 +1659,7 @@ eu:
       K-1 Artist1 6_instruction: Bukatu marrazkia salto blokea erabiliz!
       K-1 Artist1 7_instruction: Erabili salto blokea marraztu gabe mugitzeko. Egin
         salto goranzka eta marraztu lerro bat.
-      K-1 Artist1 8_instruction: Marraztu lerro marratua salto eta marraztu blokeak
+      K-1 Artist1 8_instruction: Marraztu marratutako lerroa salto eta marraztu blokeak
         erabiliz
       K-1 Artist1 9_instruction: Marraztu eta Salto lerro marratua osatzeko
       K-1 Artist1 Assessment 1_instruction: Marraztu lerro motzak eta luzeak!
@@ -1957,11 +1990,20 @@ eu:
       New Artist Project_instruction: Zerbait ziragarria marraz ezazu! Zure kodea
         proiektu bezala gordeta dago, edozein momentutan berreskuratu dezakezun proiektu
         bezala.
+      New Basketball Project_instruction: Sor ezazu zure Saskibaloi joko propioa.
+        Arau guztiak alda ditzakezu. Prest daukazunean, klik egin Amaitu zure lagunek
+        probatu ahal izan dezaten zure jokoa haien telefonoetan.
+      New Bounce Project_instruction: Sor ezazu zure Errebote joko propioa. Ikuste-efektu
+        eta arau guztiak alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek
+        probatu ahal izan dezaten zure jokoa haien telefonoetan.
       New Course 4 Artist Functions Level 4_instruction: '"Marraztu karratua" funtzioa
         erabili eredu hau marrazteko.'
       New Gumball Project_instruction: Sortu nahi duzuna eta partekatu!
       New Ice Age Project_instruction: Sortu nahi duzuna eta partekatu!
       New Infinity Project_instruction: Sortu nahi duzuna eta partekatu!
+      New Sports Project_instruction: Sor ezazu zure joko propioa! Arau guztiak alda
+        ditzakezu eta kirolak nahastu. Izan zaitez sortzaile! Prest daukazunean, klik
+        egin Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
       Overworld Avoid Monsters_instruction: Landare igokari baten kontra jotzea ez
         da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz
         eta iritsi zure etxeko segurtasunera.
@@ -2013,6 +2055,10 @@ eu:
         moztu" agindua bi ardietatik lana eskuratzeko.
       Overworld Shear Sheep_2018_instruction: Ardiei ilea mozteko garaia! Erabili
         "ilea moztu" agindua bi ardietatik lana eskuratzeko.
+      PDK5 Conditionals 1_instruction: Lore moreek 1 edo 0 nektar izan dezakete, baina
+        ez dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen
+        nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea
+        erabiliz.
       PDK5 Functions 2_instruction: Funtzioak ahalbidetzen zaitu bloke berriak definitzen.
         Karratu bat definitzeko blokeak "marraztu karratua" izeneko funtzio bat definitzeko
         mugitu ditugu. Erabiliko duzu "marraztu karratua" funtzioa erabiliz betaurrekoak
@@ -2020,9 +2066,13 @@ eu:
       PS copy 2-3 Bee Conditionals 5_instruction: Lore moreek nektar 1 edo 0 izan
         ditzakete, baina ez dakizu zein! Kontuz ibili nektarrik ez daukan lore moretik
         nektarra biltzen. Egiaztatu nektarra 1en berdina den if blokea erabiliz.
+      Quantum Bee_instruction: Lore moreek 1 edo 0 nektar izan dezakete, baina ez
+        dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen
+        nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea
+        erabiliz.
       Ryan - 4-5 Bee Conditionals 2_instruction: Erleak orain nektarra baino ez du
         nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore
-        bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
+        bat izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
       Ryan - Bee Conditionals_instruction: Erleak orain nektarra baino ez du nahi.
         Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat
         izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
@@ -2159,6 +2209,9 @@ eu:
         bi tanto eskuratu aurretik!
       bounce_12_instruction: Sor ezazu zure Errebote joko propioa. Ikuste-efektu eta
         arau guztiak alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek
+        probatu ahal izan dezaten zure jokoa haien telefonoetan.
+      bounce_12_2018_instruction: Sor ezazu zure Errebote joko propioa. Ikuste-efektu
+        eta arau guztiak alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek
         probatu ahal izan dezaten zure jokoa haien telefonoetan.
       bounce_12_basketball_instruction: Sor ezazu zure Saskibaloi joko propioa. Arau
         guztiak alda ditzakezu. Prest daukazunean, klik egin Amaitu zure lagunek probatu
@@ -2312,6 +2365,9 @@ eu:
         toki batean baino gehiagotan. Era berean, saia zaitez eszena aldatzen, edo
         erraketaren eta pilotaren abiadura, eta ikusi ea zenbat tanto eskura ditzakezun
         zure aurkariak bi tanto eskuratu aurretik.
+      courseD_bounce_events12_instruction: Sor ezazu zure Errebote joko propioa. Ikuste-efektu
+        eta arau guztiak alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek
+        probatu ahal izan dezaten zure jokoa haien telefonoetan.
       courseD_bounce_events2_instruction: Itsatsi bloke bat "eskuinerako gezia sakatzean"
         eta "ezkerrerako gezia sakatzean" blokei. Mugitu erraketa bukaerako bi helburuetara
         iristeko.
@@ -2480,8 +2536,8 @@ eu:
       frozen diamond_instruction: Erabili "Errepikatu" bloke hauen inguruan paralelogramo
         bat sortzeko. Laukizuzena bezalakoa da baina angelu desberdinekin. Honek 60
         eta 120 graduko angeluak ditu guztiak 90 gradukoak eduki ordez.
-      frozen freeplay_instruction: Artista zoragarri batean bihurtu zara! Sortu neguko
-        mundu magikoa.
+      frozen freeplay_instruction: Ofizialki, artista bihurtu zara! Sor ezazu neguko
+        herrialdi miragarri bat.
       frozen line_instruction: Kaixo! Arendelleko Elsa naiz. Lagun iezadazu lerro
         bat sortzen.
       frozen perpendicular_instruction: Ikus dezagun orain elkarrekin 90 graduko angelua
@@ -2668,17 +2724,27 @@ eu:
         bat sar dezakezu "bitartean" blokearen barruan.'
       grade4_arist_nested_loop_circles1_instruction: Erabili begizta kabiatu bat irudia
         amaitzeko.
+      grade4_arist_nested_loop_flags1_instruction: Errepikatu emandako kodea haize-errota
+        bat sortzeko.
       grade4_arist_nested_loop_polygons1_instruction: 'Errepikatu diseinu hau 10 aldiz.
         Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati
         10?)'
       grade4_arist_nested_loop_polygons2_instruction: 'Errepikatu diseinu hau 6 aldiz.
         Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati
         6?)'
+      grade4_arist_nested_loop_squares1_instruction: Marraztu ditzakezu espaloi honetako
+        10 karratuak begizta kabiatu bat erabiliz? Karratu bakoitza 30 pixelekoa da.
       grade4_arist_nested_loop_triangles2_instruction: 'Orain sartu begizta hau beste
         begizta baten barnean 10 triangelu marrazteko. Honi begizta kabiatua deitzen
         zaio. Pista: 10 triangeluek 360 graduko biraketa osatzen dute.  '
+      grade4_arist_nested_loop_triangles3_instruction: Marraztu dezakezu hexagono
+        bat triangeluaren kodea errepikatuz?
+      grade4_arist_nested_loop_triangles4_instruction: Marraztu krokodiloaren ahoko
+        hortzak!
       grade4_arist_nested_loop_triangles5_instruction: "Sortu eguzki bat emandako
         kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r"
+      grade4_arist_nested_loop_triangles6_instruction: Marraztu ditzakezu 36 triangelu
+        hauek begizta kabiatu bat erabiliz?
       grade4_artist_functions1_instruction: |-
         Kaixo. Ni zombie artista. Marraztea maite dugu!
         Lagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da.
@@ -2706,11 +2772,20 @@ eu:
         Iradokizun gehiago ikusi nahi? Hemen klikatu!
       grade4_artist_nested_loop_circles1_instruction: Erabili begizta kabiatu bat
         irudia amaitzeko.
+      grade4_artist_nested_loop_flags1_instruction: Errepikatu emandako kodea haize-errota
+        bat sortzeko.
       grade4_artist_nested_loop_polygons1_instruction: 'Errepikatu diseinu hau 10
         aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da
         360 zati 10?)'
+      grade4_artist_nested_loop_squares1_instruction: Marraztu ditzakezu espaloi honetako
+        10 karratuak begizta kabiatu bat erabiliz? Karratu bakoitza 30 pixelekoa da.
+      grade4_artist_nested_loop_triangles1_instruction: 'Osatu kodea triangelu hauek
+        marrazteko. Lehenengoa jadanik egina dago. Pista: 3 triangelu 360 graduko
+        biraketan.'
       grade4_artist_nested_loop_triangles5_instruction: "Sortu eguzki bat emandako
         kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r"
+      grade4_artist_nested_loop_triangles6_instruction: Marraztu ditzakezu 36 triangelu
+        hauek begizta kabiatu bat erabiliz?
       grade4_artist_parameters_squares1_instruction: 'Klikatu "editatu", "karratu
         bat marraztu" funtzioaren definizioa betetzeko, bertan parametro bat gehituz.
         Luzera parametro bat izan beharko luke, triangeluak bezala. Oraingoan, 3 karratu
@@ -2758,8 +2833,8 @@ eu:
         sortuz.
       grade4_bee_nestedLoops4_instruction: 'Bildu lore bakoitzeko nektar guztia, eta
         egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
-      grade4_frozen_freeplay_instruction: Artista zoragarri batean bihurtu zara! Sortu
-        neguko mundu magikoa.
+      grade4_frozen_freeplay_instruction: Ofizialki, artista bihurtu zara! Sor ezazu
+        neguko herrialdi miragarri bat.
       grade4_frozen_functions0_instruction: Asmatuko zenuke zein zenbaki jarri beharko
         litzatekeen galdera ikurren ordez zirkulua marrazteko?
       grade4_frozen_functions1a_instruction: Erabili "Sortu zirkulua" bloke berria
@@ -3056,10 +3131,15 @@ eu:
         eztia abaraska bakoitzean.
       level grade3_Loops_2_instruction: Egin al dezakezu ataza bera modu errazagoan
         begizta bat erabiliz?
+      scrat 16 (copy 1)_instruction: Ezkurra! Ezkurra! Ezkurra! erabili "if" bloke
+        bat ni hona ekartzeko ahalik eta bloke gutxien baliatuta.
       scrat 16_instruction: Ezkurra! Ezkurra! Ezkurra! erabili "if" bloke bat ni hona
         ekartzeko ahalik eta bloke gutxien baliatuta.
       scrat 17_instruction: Ongi da, egin dezagun berriro hobetzeko. Hau ez da oso
         ezberdina, baina kontuz paretarekin!
+      scrat 18 (copy 1)_instruction: '"if-else" blokeak baldintza bat ziurtatzen du,
+        eta gero gauza bat EDO beste egiten du. Erabili bloke berri hau ni ezkurreraino
+        eramateko.'
       scrat 18_instruction: '"if-else" blokeak baldintza bat ziurtatzen du, eta gero
         gauza bat EDO beste egiten du. Erabili bloke berri hau ni ezkurreraino eramateko.'
       scrat 19 (copy 1)_instruction: Beste ariketa bat gehiago "baldin-bestela" blokearekin.

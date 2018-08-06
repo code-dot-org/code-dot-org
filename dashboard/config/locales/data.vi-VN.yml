@@ -100,8 +100,8 @@ vi:
         maze_2_17: Các khối "Nếu-khác" kiểm tra một điều kiện, để làm một việc này
           hay một việc khác. Để tôi có được hoa hướng dương, hãy thử sử dụng khối
           mới.
-        maze_2_18: Thêm một bài thực hành nữa với khối "nếu-khác" nào, bạn có thể
-          sử dụng khối "nếu-khác" ngay được không?
+        maze_2_18: Một sự luyện tập nữa với khối "nếu-không thì", bạn có thể làm đúng
+          ngay lần đầu cố gắng?
         maze_2_19: Bạn có thể thêm chỉ 3 khối để giúp tôi giải quyết một mê cung phức
           tạp hơn được không? Nếu bạn làm điều đó đúng, tôi có thể đi bộ trên con
           đường cong và không có vấn đề với chiều dài.
@@ -587,7 +587,7 @@ vi:
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác
-        run: Nhấn "Chạy" để thử chương trình của bạn
+        run: Nhấn "Run" để thử chương trình của bạn
         watch_again: Click vào đây để xem lại video
         gray_block_explanation: Khối có màu xám không thể bị xóa. Hãy giải câu đố
           dùng khối xám đó!

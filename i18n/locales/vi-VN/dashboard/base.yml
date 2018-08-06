@@ -15,11 +15,11 @@ vi:
       user:
         name: 'Tên hiển thị'
         name_example: 'Tên hiển thị<br/>(ví dụ như Cool Coder hoặc Jane S.)'
-        email: 'Địa chỉ email'
+        email: 'Thư điện tử'
         parent_email: 'Email của phụ huynh/người giám hộ'
         personal_email: "Địa chỉ email cá nhân <a href=\"%{url}\">(nhấp vào đây nếu bạn không có địa chỉ email)</a>"
         username: 'tài khoản'
-        password: 'mật khẩu'
+        password: 'Mật khẩu'
         password_confirmation: 'Xác nhận mật khẩu'
         current_password: 'Mật khẩu hiện tại'
         locale: 'Ngôn ngữ'
@@ -58,7 +58,7 @@ vi:
   courses: 'Các khóa học'
   courses_page:
     title_student: "Học Khoa học Máy tính"
-    title_teacher: "Dạy Khoa học Máy tính"
+    title_teacher: "Giảng dạy với Code Studio"
   unplugged_activity: 'Hoạt động không dùng máy'
   of: "của"
   more: "NHIỀU HƠN"
@@ -153,7 +153,7 @@ vi:
     school_organization_zip: 'Zip Code của trường/tổ chức'
   signin_form:
     title: 'Đã có một tài khoản? Đăng nhập'
-    login: 'Địa chỉ email'
+    login: 'Thư điện tử'
     login_username: 'Email hoặc tên tài khoản'
     password: 'Mật khẩu'
     remember: 'Nhớ mật khẩu'
@@ -210,7 +210,7 @@ vi:
     type:
       picture: 'Mật khẩu bằng ảnh'
       word: 'Mật khẩu bằng từ ngữ'
-      email: 'Địa chỉ email'
+      email: 'Thư điện tử'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
   follower:
@@ -472,7 +472,7 @@ vi:
     more: 'Nhiều hơn'
     feedback: 'Cung cấp thông tin phản hồi'
     translate: 'Giúp chúng tôi dịch sang ngôn ngữ của bạn'
-    support: 'Hỗ trợ'
+    support: 'Trợ giúp và Cộng đồng'
     tos_short: 'Các điều khoản của Code.org'
     tos: 'Các điều khoản của Code.org'
     privacy: 'Chính sách riêng tư'
@@ -581,7 +581,7 @@ vi:
       body: "Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng."
     minecraft:
       title: "Minecraft"
-      body: "Khám phá thế giới Minecraft thông qua mã."
+      body: "Hãy khám phá thế giới Minecraft qua những đoạn mã"
     minecraft2016:
       title: "Minecraft"
       body: "Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft của riêng bạn."
@@ -709,22 +709,7 @@ vi:
     title: "Tùy chọn: Giúp chúng tôi theo dõi tiến trình của chúng tôi hướng tới việc cải thiện tính đa dạng trong khoa học máy tính"
     message: "Vui lòng cho chúng tôi biết chủng tộc của bạn (hãy đánh dấu vào tất cả các mục thích hợp)"
     races:
-      - 
-        white: "Màu trắng"
-      - 
-        black: "Người da đen hoặc người Mỹ gốc Phi"
-      - 
-        hispanic: "Người Hispanic hoặc Latino"
-      - 
-        asian: "Châu á"
-      - 
-        hawaiian: "Người bản địa hoặc người Đảo Thái Bình Dương khác"
-      - 
-        american_indian: "Thổ Dân Mỹ Da Đỏ/Alaska"
-      - 
-        other: "Khác"
-      - 
-        opt_out: "Không thích nói"
+      other: "Khác"
     submit: "Gửi"
     decline: "Đóng"
   zendesk_too_young_message: 'Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a> mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên hệ với chúng tôi .'
@@ -873,7 +858,7 @@ vi:
   hidden_stage: "Giáo viên của bạn đã không mong đợi bạn ở đây. Hãy hỏi giáo viên của bạn về bài học nào bạn nên vào."
   pd:
     form_labels:
-      email: 'Địa chỉ email'
+      email: 'Thư điện tử'
       school_name: 'Tên trường'
       school_city: 'Thành phố của trường'
       school_country: 'Quốc gia'
@@ -893,4 +878,5 @@ vi:
   cookie_banner:
     accept: 'Tôi đồng ý'
   gdpr_dialog:
+    message: 'Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ.'
     yes: 'Đồng ý'

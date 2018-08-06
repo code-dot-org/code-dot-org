@@ -19,7 +19,7 @@ ko:
         parent_email: '부모/보호자 이메일'
         personal_email: "개인 이메일 주소 <a href=\"%{url}\">(만약 이메일 주소가 없다면 여기를 클릭하십시오)</a>"
         username: 'username'
-        password: 'password'
+        password: '비밀번호'
         password_confirmation: '비밀번호 재확인'
         current_password: '현재 비밀번호'
         locale: '언어'
@@ -408,7 +408,7 @@ ko:
     trynow: '지금 해보기'
     add_hint_help: 'Code.org 튜토리얼을 위해 참신한 도움 내용을 만드는 것을 도와주세요.'
     20hour_overview: '본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.'
-    test_videos_help: '새로운 동영상 플레이어를 학교에서 사용해보세요.'
+    test_videos_help: '새로 만든 비디오 플레이어를 테스트해 보세요.'
     try_beta_courses: 'K-5(~초등5학년) 학생들을 위한 새로운 시범 코스들을 경험해 보세요.'
     use_as_teacher: '선생님으로 사이트 사용하기'
     heading_hoc2014: "<h1>어떠한 나이에도 가능한</h1> <h2>Hour of Code</h2>"
@@ -574,7 +574,7 @@ ko:
       body: "코드를 이용해 마인크래프트 월드를 탐험해보세요."
     minecraft2016:
       title: "마인크래프트"
-      body: "자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요."
+      body: "Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요."
     hero:
       title: "마인크래프트"
     unplugged:
@@ -583,7 +583,7 @@ ko:
       body: "수업에서 활용할 수 있는 언플러그드 활동을 준비했습니다. 교실에 컴퓨터들이 없어도 컴퓨터과학의 기초/개념/원리들을 교육할 수 있습니다! 이 언플러그드레슨들은 별도 과정 또는 다른 컴퓨터과학 과정의 추가 과정으로 사용해보세요."
       body_short: "컴퓨터가 없다면, 이 언플러그드 수업을 시도해보세요!"
     unplugged_conditionals:
-      title: "조건/선택"
+      title: "조건"
       body: "여기에 있는 카드덱을 활용한 \"언플러그\" 활동으로 알고리즘과 조건문에 대해서 배워보세요."
     widgets:
       cta: "방법 알아보기"
@@ -697,22 +697,7 @@ ko:
     title: "선택사항: 컴퓨터과학의 다양성 개선에 대한 우리의 진행 상황을 추적하도록 도와주세요."
     message: "당신의 민족을 알려주세요 (해당사항에 모두 체크)"
     races:
-      - 
-        white: "백인"
-      - 
-        black: "흑인 또는 아프리카계 미국인"
-      - 
-        hispanic: "히스패닉 또는 라틴계"
-      - 
-        asian: "동양인"
-      - 
-        hawaiian: "하와이 태생 또는 다른 태평양제도 태생"
-      - 
-        american_indian: "아메리칸 인디언/알래스카 원주민"
-      - 
-        other: "기타"
-      - 
-        opt_out: "말하지 않는 것을 선호한다"
+      other: "기타"
     submit: "제출하기"
     decline: "닫기"
   zendesk_too_young_message: '어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.'
@@ -916,4 +901,5 @@ ko:
   cookie_banner:
     accept: '동의합니다'
   gdpr_dialog:
+    message: '귀하의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.'
     yes: '예'

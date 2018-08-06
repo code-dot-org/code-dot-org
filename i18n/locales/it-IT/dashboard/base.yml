@@ -19,10 +19,10 @@ it:
         parent_email: 'E-mail del genitore/tutore'
         personal_email: "E-mail personale<a href=\"%{url}\">(clicca qui se non hai un indirizzo e-mail)</a>"
         username: 'Nome utente'
-        password: 'Password'
+        password: 'password'
         password_confirmation: 'Conferma della password'
         current_password: 'Password attuale'
-        locale: 'Lingua'
+        locale: 'Linguaggio'
         age: 'Età'
         gender: 'Sesso'
         edit_header: 'Modifica i dettagli dell''account'
@@ -59,7 +59,7 @@ it:
   courses_page:
     title_student: "Impara su Code Studio"
     title_teacher: "Insegna Informatica"
-  unplugged_activity: 'Attività Tradizionale'
+  unplugged_activity: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
   of: "di"
   more: "DI PIÙ"
   less: "DI MENO"
@@ -129,7 +129,7 @@ it:
     field_is_required: "è un dato obbligatorio"
     accept_terms: "Devi accettare le condizioni per creare un account"
     error: "Si è verificato un errore."
-    email_preference_question: "Consenti l’invio di aggiornamenti sui nostri corsi, opportunità a livello locale o altre notizie informatiche?"
+    email_preference_question: "Possiamo inviarti email sulle novità dei nostri corsi o su altre notizie legate all'informatica?"
     email_preference_privacy: "(Vedi la nostra informativa sulla privacy)"
     email_preference_yes: "Sì"
     email_preference_no: "No"
@@ -203,6 +203,7 @@ it:
     student_associated_subject: 'Informazioni di login per Code.org'
   teacher_mailer:
     new_teacher_subject: 'Benvenuto su Code.org!'
+    delete_teacher_subject: 'Notifica di Code.org: il tuo account è stato eliminato'
   section:
     your_section:
       one: 'La tua classe:'
@@ -307,7 +308,7 @@ it:
       classroom: 'Cruscotto di Controllo dell''insegnante'
       district_dashboard: 'Dashboard'
       label: 'Ciao %{username}'
-      stats: 'Code Studio'
+      stats: 'Officina del Codice'
       settings: 'Il mio account'
       logout: 'Esci'
       signin: 'Accedi'
@@ -378,6 +379,8 @@ it:
     create_personal_login_email_note: "Nota: Gli indirizzi email non sono memorizzati in una forma tale da permetterci di contattare gli studenti. Gli studenti non riceveranno mai email da Code.org tranne per il recupero della password. Consulta le nostre <a href='%{privacy_policy_url}', target='_blank'>politiche per il rispetto della privacy</a> per ulteriori informazioni."
     enter_new_login_info: 'Inserisci le nuove informazioni di accesso'
     confirm_secret_words: 'Conferma la tua identità inserendo le tue parole segrete'
+    parent_email_label: "Email del genitore o tutore (facoltativo)"
+    parent_email_hint: "(può essere utile per il recupero della password)"
     enter_parent_email: "Inserisci l'email del tuo genitore o tutore (per il recupero della password)"
     update: "Aggiorna Account"
     account_successfully_updated: "Account aggiornato con successo."
@@ -487,7 +490,7 @@ it:
     more: 'Di più'
     feedback: 'Facci sapere che ne pensi'
     translate: 'Aiutaci a tradurre nella tua lingua'
-    support: 'Supporto'
+    support: 'Help and Community'
     support_url: 'http://programmailfuturo.it/aiuto'
     tos_short: 'Condizioni'
     tos: 'Termini di servizio'
@@ -650,7 +653,7 @@ it:
   multi:
     wrong_title: "Risposta non corretta"
     wrong_body: "La risposta che hai scelto non è corretta.  Per favore riprova!"
-    correct_title: "Molto bene!"
+    correct_title: "Corretta"
     correct_body: "Questa è la risposta corretta."
   multi-submittable:
     wrong_title: "Grazie!"
@@ -678,7 +681,7 @@ it:
   match:
     wrong_title: "Riprova!"
     wrong_body: "La risposta che hai scelto non è corretta.  Per favore riprova!"
-    correct_title: "Molto bene!"
+    correct_title: "Corretta"
     correct_body: "Questa è la risposta corretta."
   contract_match:
     wrong_title: "Risposta non corretta"
@@ -692,7 +695,7 @@ it:
     placeholder: "Inserisci qui la tua risposta"
     open_response_title: "Grazie"
     open_response_body: "Grazie per la risposta!"
-    correct_title: "Molto bene!"
+    correct_title: "Corretta"
     correct_body: "Questa è la risposta corretta."
   dialog:
     ok: "Ok"
@@ -730,22 +733,7 @@ it:
     title: "Optionale: Aiutaci a tracciare i vostri progressi per superare le diversità in informatica"
     message: "Si prega di riferirci la gara (controllare che tutti partecipino)"
     races:
-      - 
-        white: "Bianco"
-      - 
-        black: "Neri o afroamericani"
-      - 
-        hispanic: "Ispano o Latino"
-      - 
-        asian: "Asiatico"
-      - 
-        hawaiian: "Nativi hawaiani o altre isole del Pacifico"
-      - 
-        american_indian: "Nativo Americano Indiano/Alaska"
-      - 
-        other: "Altro"
-      - 
-        opt_out: "Preferisco non dirlo"
+      other: "Altro"
     submit: "Invia"
     decline: "Chiudi"
   zendesk_too_young_message: 'Siamo spiacenti, gli utenti più giovani non possono accedere al nostro sito di supporto.<a href="http://support.code.org"></a> Contattaci su <a href="http://programmailfuturo.it">programmailfuturo.it</a> oppure chiedi ai tuoi genitori o insegnanti di contattarci al posto tuo.'
@@ -1032,7 +1020,7 @@ it:
     accept: 'Accetto'
   gdpr_dialog:
     heading: 'Accetti di utilizzare un sito web con sede negli Stati Uniti?'
-    message: 'I dati del tuo utilizzo di questo sito possono essere inviati e memorizzati o elaborati negli Stati Uniti.'
+    message: 'I dati relativi al tuo utilizzo di questo sito Web possono essere inviati e archiviati o elaborati negli Stati Uniti.'
     link_intro: 'Per ulteriori informazioni vedi la nostra'
     privacy_policy: 'informativa sulla privacy'
     logout: 'Esci'

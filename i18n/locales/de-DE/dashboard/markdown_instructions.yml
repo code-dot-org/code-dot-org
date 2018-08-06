@@ -132,10 +132,14 @@ de:
       4-5 Maze Conditionals 9_markdown_instruction: |-
         Noch eine Übung mit dem „Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "Benutze einen „Wiederholen bis\"- und einen „Wenn-Ansonsten\"- Baustein und bringe mich so mit der geringstmöglichen Anzahl an Bausteinen zur Sonnenblume."
+      4-5 Nested Loops 12_markdown_instruction: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife zeichnen?
       4-5 Nested Loops 3_markdown_instruction: |-
         Male eine Sonne indem Du den Startbefehl in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+      4-5 Nested Loops 5_markdown_instruction: Benutze den angegebenen Code in einer Schleife, um eine Windmühle zu erstellen.
+      4-5 Nested Loops 6_markdown_instruction: Kannst Du ein Sechseck zeichnen, indem Du den Dreieck-Code in einer Schleife verwendest?
       4-5 Nested Loops 7_markdown_instruction: "Führe dieses Design 10 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 10?)"
       4-5 Nested Loops 8_markdown_instruction: "Führe dieses Design 6 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 6?)"
+      4-5 Nested Loops 9_markdown_instruction: Zeichne die Zähne im Mund des Alligators!
       4-5 While Loops 1_markdown_instruction: Bewege mich zu dem Loch und fülle es mit zwei Schaufeln voll Erde, indem du den „Füllen"-Baustein benutzt.
       4-5 While Loops 2_markdown_instruction: Bewege mich zu dem Erdhaufen und entferne ihn mit fünf Schöpfern mit der Schaufel. Benutze dazu den „Entfernen"-Baustein.
       4-5 While Loops 3_markdown_instruction: "Bewege mich zum Haufen und entferne ihn vollständig, dann bewege mich zum Loch und fülle es komplett auf.  Hinweis:  Verwende so wenig Bausteine wie möglich."
@@ -263,18 +267,23 @@ de:
       Overworld Move to Sheep_markdown_instruction: Füge einen zweiten „Vorwärts“-Befehl hinzu, um zu den Schafen zu gelangen.
       Overworld Move to Sheep_2018_markdown_instruction: Füge einen zweiten „Vorwärts“-Befehl hinzu, um zu den Schafen zu gelangen.
       Testing Quantum Farmer_markdown_instruction: "Wow, ich habe ein richtig tiefes Loch gefunden! Ich weiß nicht, wie viele Schaufeln Erde ich brauche.  Kannst du ein Programm schreiben, mit dem das Loch gefüllt wird, bis der Boden eben ist?  Hinweis:  Versuche es diesmal mit der Solange-Schleife."
-      course4_artist_fwp_challenge1_markdown_instruction: Führe dieses Programm aus und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
+      course4_artist_fwp_challenge1_markdown_instruction: Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
       courseA_maze_seq6_2018_markdown_instruction: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq8_2018_markdown_instruction: Löse dieses Level und bring den Vogel zum Schwein!
+      courseB_artist_loops7_markdown_instruction: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
+      courseB_artist_loops7_2018_markdown_instruction: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
       courseB_maze_seq3_markdown_instruction: '*"Repariere den Code, damit ich das Schwein bekomme!*"'
       courseD_bee_nestedLoops5_markdown_instruction: 'Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.'
       courseD_bee_nestedLoops8_markdown_instruction: 'Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.'
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.'
+      courseD_bounce_events1_markdown_instruction: "Berühre die Fahne. \\r\nHänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und starte das Programm mit „Ausführen“ \\r\n\\r\nKlicke mit der Maus auf den Linkspfeil, um den Spieler zur Fahne zu bewegen."
       courseD_maze_nestedLoops4_markdown_instruction: "Bring mich zu der Sonnenblume!\n(Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen."
       courseD_maze_nestedLoops4_2018_markdown_instruction: "Bring mich zu der Sonnenblume!\n(Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen."
       courseE_bee_functions3_markdown_instruction: Funktionen sind Programm-Bausteine, die eine Aufgabe ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale Blockzählung ermöglicht.
       courseE_bee_functions3_2018_markdown_instruction: Funktionen sind Programm-Bausteine, die eine Aufgabe ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale Blockzählung ermöglicht.
       courseE_farmer_concept4_markdown_instruction: Wir gehen jetzt eine Ebene nach unten. Wir haben den ganzen Code- Baustein in eine andere Schleife geschachtelt, aber du musst den Künstler wieder zurückholen, damit er die nächste Zeile zeichnet. Welchen dieser Code- Bausteine kannst du am Schluss der äußeren Schleife einfügen, damit das ganze Gitternetz gezeichnet wird?
+      courseE_farmer_functions4b_markdown_instruction: Benutze deine neue Funktion um dieses Puzzle zu lösen.
+      courseE_farmer_functions4b_2018_markdown_instruction: Benutze deine neue Funktion um dieses Puzzle zu lösen.
       courseF_bee_for_challenge2_markdown_instruction: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_for_challenge2_2018_markdown_instruction: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       frozen circle function in circle_markdown_instruction: Jetzt erstellen wir 20 überschneidende Kreise und drehen die einzelnen Kreise um 18 Grad.
@@ -296,6 +305,7 @@ de:
       frozen square loop 3x_markdown_instruction: Lass uns drei Quadrate erstellen und nach jedem Quadrat drehen. Stell sicher, dass du vor jedem neuen Quadrat um 120° drehst.
       frozen square loop_markdown_instruction: Hallo, ich bin Anna von Arendelle! Lass uns ein Quadrat mit dem „Wiederholen“-Baustein zeichnen, dadurch brauchen wir weniger Blöcke. Wie oft (???) muss der „Wiederholen“-Baustein die inneren Bausteine durchlaufen, damit ein Quadrat entsteht?
       frozen square snowflake_markdown_instruction: Kannst du eine Schneeflocke erstellen, indem du den „Wiederholen"-Baustein 10 mal benutzt, um ein Quadrat zu erstellen und nach jedem Quadrat den „Drehen"-Baustein mit 36° benutzt?
+      grade1_artist_loops6_markdown_instruction: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
       grade2_MakeDogTag_8_markdown_instruction: Jetzt lass uns einen Haufen V's miteinander verbinden, sie in einer Schleife zeichnen.
       grade2_PuppyLoops_10_markdown_instruction: |-
         Mein Windrad ist noch nicht fertig. Wie oft muss ich es „wiederholen“, um es zu beenden?
@@ -333,14 +343,20 @@ de:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Die Biene will jetzt nur Nektar. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst du Nektar sammeln."
       grade3_maze_loops2_markdown_instruction: "Bring mich zu der Sonnenblume!\n(Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen."
       grade3_maze_nestedLoops4_markdown_instruction: Verwende zwei „Wiederholen“-Schleifen, um das Schwein mit der geringsten Anzahl von Bausteinen zu schaffen.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Benutze den angegebenen Code in einer Schleife, um eine Windmühle zu erstellen.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Führe dieses Design 10 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 10?)"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Führe dieses Design 6 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 6?)"
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Kannst Du ein Sechseck zeichnen, indem Du den Dreieck-Code in einer Schleife verwendest?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Zeichne die Zähne im Mund des Alligators!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Male eine Sonne indem Du den Startbefehl in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife zeichnen?
       grade4_artist_functions2_markdown_instruction: "Funktionen erlauben dir, neue Blöcke zu definieren! Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben, um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen, um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Benutze den angegebenen Code in einer Schleife, um eine Windmühle zu erstellen.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Führe dieses Design 10 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 10?)"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Male eine Sonne indem Du den Startbefehl in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife zeichnen?
       grade4_artist_parameters_triangles2_markdown_instruction: Fällt dir irgendetwas Neues an diesen Funktionsbausteinen auf? Klicke „Ausführen“, um zu sehen, was passiert.
       grade4_bee_conditionals_quantum2_markdown_instruction: "Die Biene will jetzt nur Nektar. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst du Nektar sammeln."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-
@@ -372,6 +388,8 @@ de:
       grade5_artist_variables_hexagons1_markdown_instruction: "Probieren wir es noch einmal. Kannst du die Variable „Länge“ so einstellen, dass dieses coole Design aus Sechsecken entsteht? Hinweis: Es ist ein Vielfaches von 10."
       grade5_artist_variables_pentagon9_markdown_instruction: Schreib den Algorithmus vom letzten Level noch mal hin und erstelle ein Fünfeck mit einer Seitenlänge von 150.
       grade5_artist_variables_pentagons1_markdown_instruction: "Zeichne dieses Muster, indem du die Längenvariable an die richtigen Stellen setzt und dann den richtigen Wert für die Länge eingibst. (Hinweis: Es ist ein Vielfaches von 10).\n\nSo braucht man die Länge nur an einer Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!"
+      grade5_bee_parameters_new8a_markdown_instruction: Benutze deine neue Funktion um die Spirale zu lösen.
+      grade5_bee_parameters_new9a_markdown_instruction: Benutze deine neue Funktion um die Spirale zu lösen.
       grade5_playlab_variables13_markdown_instruction: Verwende den „Wenn Figur berührt"-Baustein, um den Hund nach links-oben zurückzuschicken; aber NUR wenn der Hund eine andere Figur berührt.
       grade5_playlab_variables2_markdown_instruction: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       grade5_playlab_variables9_markdown_instruction: "Hier ist eine Funktion namens „Patrouille“. Ändere sie so, dass die Katze sich 400 Pixel auf- und abwärts bewegt."

@@ -31,7 +31,7 @@ ja:
         edit_header: アカウント詳細を編集する
         error:
           future: 現在までの日付にする
-  hello: 世界の皆さん、こんにちは
+  hello: Hello world
   welcome_back: Welcome Back, %{name}
   your_professional_learning_plan: プロフェッショナル学習計画
   see_your_learning_plan: 学習計画を参照してください。
@@ -62,7 +62,7 @@ ja:
   courses_page:
     title_student: コード スタジオで学ぶ
     title_teacher: コード スタジオで教えよう
-  unplugged_activity: コンピューターを使わない活動
+  unplugged_activity: アンプラグド　アクティビティ
   of: の
   more: くわしく
   less: かくす
@@ -292,7 +292,7 @@ ja:
       educate_elementary: 小学校
       educate_middle: 中学校
       educate_high: 高校
-      educate_hoc: Hour of Code
+      educate_hoc: Hour of Code（アワー オブ コード）
       educate_partner: 私達のパートナー
       educate_beyond: Code.org を超えて
       educate_inspire: 生徒を応援する
@@ -413,8 +413,8 @@ ja:
     teacher_student_count_one: あなたには %{count} 人の生徒がいます
     teacher_student_count: あなたには %{count} 人の生徒がいます
     teacher_averages: 平均であなたの学生は %{trophy_max}のうち%{trophy_average}　"コンセプト習得"のトロフィーを獲得しています
-    teacher_print_certificates: このコースを終了した生徒の証明書を印刷する
-    teacher_read_blog: ニュースと更新（教師用ブログ）を読む
+    teacher_print_certificates: このコースを終了した生徒の証明書を印刷します。
+    teacher_read_blog: ニュースと更新（教師用ブログ）を読みます
     classroom: あなたの教室
     student_progress: 進捗状況
     student_stats: '%{trophy_max}このうち%{trophy_count} の"コンセプト"習得のトロフィーを獲得しました'
@@ -430,7 +430,7 @@ ja:
     trynow: 今すぐ試す
     add_hint_help: Code.org のチュートリアルに、気の利いたヒントを充実させるため、ご協力をお願いします。
     20hour_overview: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
-    test_videos_help: 新しいビデオプレイヤーをテストする。
+    test_videos_help: 学校で新しいビデオプレイヤーを試す
     try_beta_courses: New! K-5生徒用のベータコースを試してみましょう
     use_as_teacher: このサイトを教師として使用
     heading_hoc2014: "<h2>Hour of Code（アワー オブ コード）</h2> <h1>全ねんれい向け</h1>"
@@ -551,7 +551,7 @@ ja:
     more: 見る
     feedback: フィードバックする
     translate: 翻訳にご協力ください
-    support: サポート
+    support: ヘルプとコミュニティ
     tos_short: 利用規約
     tos: 利用規約
     privacy: プライバシー ポリシー
@@ -626,15 +626,15 @@ ja:
       title: 古典的な迷路
       body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
     flappy:
-      title: Flappy Code
+      title: フラッピー コード
       body: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
     20-hour:
       title: 上級コース
       body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
       body_short: コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。
     hoc2014:
-      try_new_tutorial: 動作試験中の新しい Hour of Code チュートリアルをお試しください。
-      try_frozen: "「アナと雪の女王」から、アナとエルザとアーティスト"
+      try_new_tutorial: ベータ版の新しいHour of Codeのチュートリアルを試す
+      try_frozen: "「アナと雪の女王」から、アナとエルザと一緒のアーティスト"
     gallery:
       title: ギャラリー
       body: ユーザーが作成したアプリやアーティストの画像のギャラリーを見る
@@ -795,14 +795,7 @@ ja:
     title: 'オプション: コンピュータ ・ サイエンスにおける多様性の向上の取り組みのため、ご協力ください'
     message: あなたの人種 (該当するものすべてチェック) を教えてください。
     races:
-      white: 白人
-      black: 黒人、またはアフリカ系アメリカ人
-      hispanic: ヒスパニックまたはラテン系
-      asian: アジア系
-      hawaiian: ハワイおよび他の太平洋諸島系
-      american_indian: アメリカインディアン/アラスカ ネイティブ
       other: その他
-      opt_out: 答えたくない
     submit: 送信
     decline: 閉じる
   zendesk_too_young_message: ご迷惑致しますが、若い方はこのサポートサイトのサインインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をサインインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。
@@ -1021,6 +1014,7 @@ ja:
   cookie_banner:
     accept: 賛成する
   gdpr_dialog:
+    message: 当サイトの利用に関するあなたの情報は、米国に送信され、米国にて保管または処理される場合があります。
     privacy_policy: プライバシーポリシー
     logout: ログアウト
     true: はい

@@ -276,7 +276,7 @@ az-AZ:
     dünyasında bir macəra yaşadın.
   mc_shortdescription: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft
     dünyasında bir macəra yaşadın.
-  mc_gradelevel: 4-104 yaş
+  mc_gradelevel: 6+ yaş
   minecraft_agent_button: Başlayın
   minecraft_designer_button: Başlayın
   minecraft_adventurer_button: Başlayın
@@ -429,13 +429,13 @@ az-AZ:
   kodable_gradelevel: İbtidai
   tynkerapp_gradelevel: 5-13 yaş
   robomindnl_gradelevel: 8-13 yaş
-  flappy_gradelevel: 4-104 yaş
+  flappy_gradelevel: 6+ yaş
   bitsbox_gradelevel: İbtidai
   blockly_gradelevel: Bütün yaşlar
   thinkersmith2_gradelevel: 8+ yaş
   kodableunplugged_gradelevel: 8-13 yaş
   projguts_gradelevel: 10-13 yaş
-  hourofcode_gradelevel: 4-104 yaş
+  hourofcode_gradelevel: 6+ yaş
   frozen_gradelevel: 8+ yaş
   starwars_gradelevel: 6+ yaş
   playlab_gradelevel: 4-104 yaş

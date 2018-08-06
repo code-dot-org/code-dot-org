@@ -158,7 +158,7 @@
   learn_online: "Skúste iné online kurzy"
   learn_classes: "Nájsť miestne triedy"
   learn_back_to_minecraft: "Neprestávajte sa učiť vďaka Minecraftu"
-  just_did_hoc: 'Prave som spravil #HourOfCode - Pozri sa na to! @codeorg'
+  just_did_hoc: 'Prave som dokončil/a Hodinu kódu #HourOfCode - Pozri sa na to! @codeorg'
   just_did_course1: "Práve som dokončil/a Kurz 1 - Pozri @codeorg"
   just_did_course2: "Práve som dokončil/a Kurz 2 - Pozri @codeorg"
   just_did_course3: "Práve som dokončil/a Kurz 3 - Pozri @codeorg"
@@ -301,6 +301,7 @@
   homepage_header_donors: "Code.org ďakuje za podporu"
   homepage_donors_seall: "Zobraziť všetky"
   homepage_donors_donate: "Darovať"
+  homepage_below_hero_announcement_text: "Dbáme o Vaše súkromie a preto aktualizujeme naše Zásady ochrany osobných údajov s platnosťou od 25. mája."
   homepage_below_hero_announcement_link_text: "Dozvedieť sa viac"
   contact_form_topic_student: "som študent"
   contact_form_topic_parent: "Som rodič"
@@ -518,7 +519,7 @@
   dashboard_navigation_view_progress: "Pokrok"
   dashboard_navigation_add_students: "Pridať Študentov"
   dashboard_navigation_manage_students: "Správa Študentov"
-  dashboard_navigation_lesson_plans_resources: "Plány hodín a Materiály"
+  dashboard_navigation_lesson_plans_resources: "Plány hodín"
   dashboard_navigation_view_stats: "Štatistiky"
   dashboard_navigation_section: 'Sekcia: %{section_name}'
   dashboard_navigation_student: 'Študent: %{student_name}'
@@ -726,7 +727,7 @@
   classicmaze_name: "Klasické bludisko"
   iceage_name: "Doba ľadová"
   minecraft_name: "Minecraft"
-  math_category_name: "Matematika"
+  math_category_name: "Matematické"
   hoc_category_name: "Hodina kódovania"
   applab_name: "Laboratórium aplikácií"
   gamelab_name: "Herné laboratórium"

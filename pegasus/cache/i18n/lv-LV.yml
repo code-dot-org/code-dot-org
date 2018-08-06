@@ -155,7 +155,7 @@ lv-LV:
   studiobar_title_nolink: Izpēti Kodu studiju
   studiobar_elementary_title: Vienkāršākie kursi
   studiobar_elementary_body: Mūsu trīs  jaunie kursi priekš K&#8209;5
-  studiobar_hoc_title: '"Programmēšanas stunda"'
+  studiobar_hoc_title: Programmēšanas stunda
   studiobar_hoc_body: Apgūsti programmēšanu ar Angry Birds
   studiobar_flappy_title: Flappy kods
   studiobar_flappy_body: Izveido un dalies ar savu Flappy spēli
@@ -612,7 +612,7 @@ lv-LV:
   course1_name: Kurss 1
   course2_name: Kurss 2
   course3_name: Kurss 3
-  course4_name: Kurss 4
+  course4_name: 4. kurss
   math_category_name: Matemātika
   hoc_category_name: Programmēšanas stunda
   applab_name: Aplikāciju laborotorija

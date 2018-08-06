@@ -107,11 +107,15 @@ kk:
       4-5 Maze Conditionals 9_markdown_instruction: |-
         «Егер/әйтпесе» блогына тағы тапсырмалар, орындап көр?
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "\"Дейін қайтала\" және \"егер-әйтпесе\" блоктарымен азғантай блок қолданып мені күнбағысқа апар."
+      4-5 Nested Loops 12_markdown_instruction: Осы 36 үшбұрышты ішкі циклмен жасай аласын ба?
       4-5 Nested Loops 3_markdown_instruction: |-
         Күнін көзін ішкі циклды қолданып жаса. Бұл ішкі цикл деп аталады.\r
         
+      4-5 Nested Loops 5_markdown_instruction: Бұл кодтан жел диірменін жасауға циклды қолдан.
+      4-5 Nested Loops 6_markdown_instruction: Үшбұрыштың кодымен алты бұрыш сыза аласын ба?
       4-5 Nested Loops 7_markdown_instruction: "Бұл кодты 10 рет циклдан өткіз. Әрбір циклдан кейін қанша градусқа бұрдын? (Кеңес: 360 -ты 10-ға бөлгенде канша болады?)"
       4-5 Nested Loops 8_markdown_instruction: "Осыны 6 рет циклдан өткіз. Әрбір циклдан кейін қанша градусқа бұрдын? (Кеңес: 360 -ты 6-ға бөлгенде канша болады?)"
+      4-5 Nested Loops 9_markdown_instruction: Алигатордын аузындағы тісін боя!
       4-5 While Loops 1_markdown_instruction: Мені үңгірге дейін апарып, оны екі топырақ күрекпен толтыр.
       4-5 While Loops 2_markdown_instruction: Мені топырақтарға апарып оны 5 курекпен жою блогымен жой.
       4-5 While Loops 3_markdown_instruction: "Мені үйінге апарып оны жой, кейін үнгірге апарып соны толтыр.  Кеңес:  Азғантай блок қолдан."
@@ -162,6 +166,7 @@ kk:
       courseD_bee_nestedLoops5_markdown_instruction: 'Барлық шәрінді гүлдерден жинап алып, әр бал ұясында бал жаса. Ішкі цикл істе. '
       courseD_bee_nestedLoops8_markdown_instruction: 'Барлық шәрінді гүлдерден жинап алып, әр бал ұясында бал жаса. Ішкі цикл істе. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Барлық шәрінді гүлдерден жинап алып, әр бал ұясында бал жаса. Ішкі цикл істе. '
+      courseD_bounce_events1_markdown_instruction: Жалауды алыңыз. Ойыншыны жалауға қозғалту үшін блокке "солға бұру бағдары" блогін және "Жіберуді" тіркеңіз.
       courseD_maze_nestedLoops4_markdown_instruction: 'Мені күнбағысқа дейін апаршы!'
       courseD_maze_nestedLoops4_2018_markdown_instruction: 'Мені күнбағысқа дейін апаршы!'
       courseE_bee_functions3_markdown_instruction: Функция бірнеше блокты іске қосады. "5 шәрін жина " функциясы арқылы әрбір сәтте 5 гүлден шәрін жина. Циклды қолданып идеалды санау блогын ал.
@@ -227,23 +232,29 @@ kk:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Араға қазір шәрін керек. Барлық объекттар гүл емес екенін есінде сақта. Сол үшін шәрін жинар алдында гүл екендігін тексеріп ал."
       grade3_maze_loops2_markdown_instruction: 'Мені күнбағысқа дейін апаршы!'
       grade3_maze_nestedLoops4_markdown_instruction: Екі циклмен және бірнеше блокты қолданып дыңызға дейін апар.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Бұл кодтан жел диірменін жасауға циклды қолдан.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Бұл кодты 10 рет циклдан өткіз. Әрбір циклдан кейін қанша градусқа бұрдын? (Кеңес: 360 -ты 10-ға бөлгенде канша болады?)"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Осыны 6 рет циклдан өткіз. Әрбір циклдан кейін қанша градусқа бұрдын? (Кеңес: 360 -ты 6-ға бөлгенде канша болады?)"
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Үшбұрыштың кодымен алты бұрыш сыза аласын ба?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Алигатордын аузындағы тісін боя!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Күнін көзін ішкі циклды қолданып жаса. Бұл ішкі цикл деп аталады.\r
         
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Осы 36 үшбұрышты ішкі циклмен жасай аласын ба?
       grade4_artist_functions2_markdown_instruction: "Функциялармен жаңа блоктар құрастыруға болады!\nБіз шаршылар салу блоктарын \"шаршы салу\" функциясына енгіздік.\n\"Шаршы салу\" функциясын қолданып көзілдірік сала аласыз ба? Шаршы қабырғасы 75 пиксель."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Бұл кодтан жел диірменін жасауға циклды қолдан.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Бұл кодты 10 рет циклдан өткіз. Әрбір циклдан кейін қанша градусқа бұрдын? (Кеңес: 360 -ты 10-ға бөлгенде канша болады?)"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Күнін көзін ішкі циклды қолданып жаса. Бұл ішкі цикл деп аталады.\r
         
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Осы 36 үшбұрышты ішкі циклмен жасай аласын ба?
       grade4_artist_parameters_triangles2_markdown_instruction: Осы функция блоктарында нені байқадыңыз? Өзгерісті көру үшін « Іске қосу » батырмасын басыңыз.
       grade4_bee_conditionals_quantum2_markdown_instruction: "Араға қазір шәрін керек. Барлық объекттар гүл емес екенін есінде сақта. Сол үшін шәрін жинар алдында гүл екендігін тексеріп ал."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-
         Бұлта астындағы белгісіз объект гүл немесе бал ұясы. Осы жолы, егер/әйтпесе блогын қолданып шәрін жина егер гүл болса, әйтпесе бал істе. (себебі басқа жағдадйда бұл бал).
       grade4_bee_functions3_markdown_instruction: Функция бірнеше блокты іске қосады. "5 шәрін жина " функциясы арқылы әрбір сәтте 5 гүлден шәрін жина. Циклды қолданып идеалды санау блогын ал.
       grade4_bee_nestedLoops4_markdown_instruction: 'Барлық шәрінді гүлдерден жинап алып, әр бал ұясында бал жаса. Ішкі цикл істе. '
-      grade4_frozen_freeplay_markdown_instruction: Сіз ресми шеберлік суретші болдым! Қысқы кереметі жасаңыз.
+      grade4_frozen_freeplay_markdown_instruction: Сіз ресми шебер суретші болдыңыз! Қысқы керемет жасаңыз.
       grade4_frozen_functions0_markdown_instruction: Шеңбер арнайы пішіні болып табылады. Сіз шеңбер сызу үшін бар мәселе белгілерін ауыстыру қандай сан анықтау мүмкін бе?
       grade4_frozen_functions1a_markdown_instruction: 10 шарасыз шеңбер жасау үшін жаңа «шеңбер жасау» блогын пайдаланыңыз. Топтары арасындағы алға секіруге ұмытпаңыз.
       grade4_frozen_functions2_markdown_instruction: Енді әр шеңбердің арасында 18 градусқа бұрап, 20 қабаттасатын шеңберді жасауға мүмкіндік береді.

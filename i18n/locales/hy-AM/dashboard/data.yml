@@ -18,7 +18,7 @@ hy:
         Farmer2: Ագարակատեր 2
         Unplug8: աբստրակցիա
         Artist4: Նկարիչը 4
-        Unplug9: Relay Ծրագրավորում
+        Unplug9: Relay programming
         Farmer3: Ագարակատեր 3
         Unplug10: Համացանց
         Artist5: The Artist 5
@@ -73,7 +73,7 @@ hy:
         maze_2_15: Ինձ ուզում արեւածաղկի! Օգտագործեք «Եթե« արգելափակել ինձ այնտեղ fewest շարք բլոկների.
         maze_2_16: Ok, lets do that again for practice - this isnt very different, but watch out for the chompers!
         maze_2_17: '«Եթե-ուրիշը» բլոկների ստուգում է վիճակը, եւ ապա կատարում է մեկ բան, կամ մյուսը: Է հասնել ինձ արեւածաղկի փորձում է օգտագործել այս նոր բլոկ.'
-        maze_2_18: Եվս մեկ պրակտիկան «եթե-ուրիշը» բլոկի, դուք կարող եք ստանալ այն ճիշտ ձեր առաջին փորձեք.
+        maze_2_18: "One more practice of the \"if-else\" block, can you\nget it right on your first try?"
         maze_2_19: 'Կարող եք ավելացնել միայն 3 նյութից է օգնել ինձ լուծել ավելի բարդ լաբիրինթոս. Եթե ​​դուք դա անել ճիշտ, ես կարող եմ քայլել Ցանկացած Մեծ ուղին, անկախ նրանից, երկարությունը:'
         turtle_1_1: Hi, Im an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture.
         turtle_1_2: 'Հիմա, ոչ ոքի մի հրապարակ: Նշում: «օգտագործել ձեր սիրած գույնը ջոկելը այն նոր« սահմանված գունավոր »բլոկում.'
@@ -309,7 +309,7 @@ hy:
         C2_graph_paper: Գրաֆիկի Թուղթ Ծրագրավորում
         C2_conditionals_with_cards: conditionals
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Ծրագրավորում
+        C2_relay_programming: Relay programming
         C2_paper_airplanes: Թղթե ինքնաթիռներ
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint

@@ -149,7 +149,7 @@ et:
             'Maze: Conditionals':
               name: 'Labürint: tingimuslaused'
             Songwriting:
-              name: Laulukirjutamine parameetritega
+              name: Laulude kirjutamine
             'Studio: Create a Game':
               name: 'Play Lab: Loo mäng'
             'Studio: Create a Story':
@@ -281,6 +281,7 @@ et:
             Variables:
               name: Muutujad
         algebra:
+          title: Arvutiteadus algebras
           stages:
             'Eval: Conditionals':
               name: Tingimuslaused
@@ -350,7 +351,7 @@ et:
             Introduction to Computer Science:
               name: Sissejuhatus arvutiõpetusse
             Relay Programming:
-              name: Relee Programmeerimine
+              name: Relee programmeerimine
             Song Writing:
               name: Laulu kirjutamine
             The Artist:
@@ -740,7 +741,7 @@ et:
             'Real-life Algorithms: Plant a Seed':
               name: 'Päris elu algoritmid: Seemenda'
             Songwriting:
-              name: Laulukirjutamine parameetritega
+              name: Laulude kirjutamine
             The Big Event:
               name: Suursündmus
         sciencePD3_pre1:
@@ -801,18 +802,18 @@ et:
               name: Gumballi Play Lab
         starwars:
           title: 'Star Wars: galaktika loomine koodiga'
-          description: Õpi programmeerima droide ja loo oma Star Wars’i mäng kauges,
+          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
             kauges galaktikas.
-          description_short: Õpi programmeerima droide ja loo oma Star Wars’i mäng
+          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
             kauges, kauges galaktikas.
           stages:
             Hour of Code 2015:
               name: Kooditund 2015
         starwarsblocks:
           title: 'Star Wars: galaktika loomine koodiga'
-          description: Õpi programmeerima droide ja loo oma Star Wars’i mäng kauges,
+          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
             kauges galaktikas.
-          description_short: Õpi programmeerima droide ja loo oma Star Wars’i mäng
+          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
             kauges, kauges galaktikas.
           stages:
             Hour of Code 2015:
@@ -950,7 +951,7 @@ et:
             Digital Citizenship:
               name: Digitaalne kodakondsus
             Songwriting:
-              name: Laulukirjutamine parameetritega
+              name: Laulude kirjutamine
         grade1:
           stages:
             Events:
@@ -1086,9 +1087,9 @@ et:
             Welcome!:
               name: Tere tulemast!
         basketball:
-          title: Vali meeskond ja tee korvpallimäng
+          title: Vali oma meeskond ja tee korvpallimäng
           description_short: Vali oma meeskond ja tee korvpallimäng
-          description: Vali meeskond ja tee korvpallimäng
+          description: Vali oma meeskond ja tee korvpallimäng
           stages:
             Bounce:
               name: Põrkama
@@ -1107,7 +1108,7 @@ et:
               name: Loendid
         minecraft:
           title: KoodiTund Minecraft Designer
-          description_short: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
+          description_short: Programmeri loomi ja teisi Minecrafti olendeid sinu enda
             Minecrafti versioonis.
           description: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti
             versioonis.
@@ -1543,7 +1544,7 @@ et:
             Conditionals with Cards:
               name: Tingimuslaused kaartidel
             'Functions: Songwriting':
-              name: Laulukirjutamine parameetritega
+              name: Laulude kirjutamine
             Envelope Variables:
               name: Ümbriku muutujad
             For Loop Fun:
@@ -1559,7 +1560,7 @@ et:
             Crowdsourcing:
               name: Ühistegevused
             Relay Programming:
-              name: Relee Programmeerimine
+              name: Relee programmeerimine
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1587,7 +1588,7 @@ et:
             Graph Paper Programming:
               name: Millimeetripaberi programmeerimine
             Relay Programming:
-              name: Relee Programmeerimine
+              name: Relee programmeerimine
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1611,7 +1612,7 @@ et:
             Introduction:
               name: Sissejuhatus
             'Functions: Songwriting':
-              name: Laulukirjutamine parameetritega
+              name: Laulude kirjutamine
             Internet:
               name: Internet
             Crowdsourcing:

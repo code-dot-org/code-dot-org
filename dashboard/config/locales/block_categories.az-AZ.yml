@@ -3,12 +3,12 @@ az:
   data:
     block_categories:
       Actions: Əmrlər
-      Loops: Dövlər
-      Functions: Funksiyalar
+      Loops: dövrlər
+      Functions: funksiyalar
       Color: Rəng
       Math: Riyaziyyat
       Logic: Məntiq
-      Variables: Dəyişənlər
+      Variables: dəyişənlər
       Number: Ədəd
       Image: Şəkil
       Conditionals: Şərti ifadələr

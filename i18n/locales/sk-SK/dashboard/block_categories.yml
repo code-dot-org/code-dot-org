@@ -2,11 +2,11 @@ sk:
   data:
     block_categories:
       Actions: Akcie
-      Loops: Cykly
+      Loops: Slučky
       Functions: Funkcie
       Color: Farba
       Brushes: Štetky
-      Math: Matematika
+      Math: Matematické
       Logic: Logické
       Variables: Premenné
       Number: Číslo

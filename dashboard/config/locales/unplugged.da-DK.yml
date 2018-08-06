@@ -159,7 +159,7 @@ da:
           som du vil bruge igen og igen) til at oprette solfangere ved hjælp af snor
           og perler.
       SongwritingParameters:
-        title: Sangskrivning med parametre
+        title: Sangskrivning
         desc: Studerende bruger begrebet omkvædet i en sang for at lære om bestået
           parametre (som tilpasser en funktion uden at omskrive den hel funktion).
       DiceRace:
@@ -351,7 +351,7 @@ da:
           at fuldføre en opgave sammen som et klasse, mere effektivt end hvis en studerende
           forsøger det alene.
       courseE_unplugged_songwriting:
-        title: Sangskrivning med parametre
+        title: Sangskrivning
         desc: Studerende bruger begrebet omkvædet i en sang for at lære om bestået
           parametre (som tilpasser en funktion uden at omskrive den hel funktion).
       courseF_unplugged_tangrams:

@@ -235,15 +235,15 @@ ca:
         juntes, dibuixant-les amb un bucle.
       grade2_PuppyLoops_10_markdown_instruction: El meu molinet de vent no està acabat.
         Quantes vegades he de repetir per acabar-lo?
-      grade2_PuppyLoops_4_markdown_instruction: Ara, dos bucles "repeteix" t'ajudaran
-        a arribar al porc amb el menor nombre possible de blocs!
+      grade2_PuppyLoops_4_markdown_instruction: Utilitza dos bucles per arribar al
+        porc utilitzant menys blocs.
       grade2_PuppyLoops_8_markdown_instruction: 'El codi dels tres bigotis que veus
         és incorrecte. Pista: cada bigoti fa 75 píxels de llarg. Arregla el codi per
         dibuixar els bigotis.'
       grade2_PuppyLoops_9_markdown_instruction: Sembla que la C al codi està dibuixada
         al revés. Pots fer que sembli una C?
-      grade2_puppy_loops4_markdown_instruction: Ara, dos bucles "repeteix" t'ajudaran
-        a arribar al porc amb el menor nombre possible de blocs!
+      grade2_puppy_loops4_markdown_instruction: Utilitza dos bucles per arribar al
+        porc utilitzant menys blocs.
       grade3_ConditionalsElse_5_markdown_instruction: |-
         Hi pot haver una flor o una bresca
         sota aquests núvols. Utilitza els blocs "if/else" per recollir nèctar "if" si hi ha una flor, o "else" fer mel (si hi ha una bresca).
@@ -277,8 +277,8 @@ ca:
       grade3_Loops_TeacherIDo_markdown_instruction: 'Cada flor conté una unitat de
         nèctar. Recull el nèctar de cada flor. '
       grade3_maze_loops2_markdown_instruction: Porta'm fins al girasol!
-      grade3_maze_nestedLoops4_markdown_instruction: Ara, dos bucles "repeteix" t'ajudaran
-        a arribar al porc amb el menor nombre possible de blocs!
+      grade3_maze_nestedLoops4_markdown_instruction: Utilitza dos bucles per arribar
+        al porc utilitzant menys blocs.
       grade4_artist_functions2_markdown_instruction: Les funcions et permeten definir
         nous blocs! Hem mogut els blocs per dibuixar un quadrat a una funció anomenada
         "dibuixa un quadrat". Pots usar la funció "dibuixa un quadrat" per crear les
@@ -327,7 +327,7 @@ ca:
         que giri 36 graus entre cada quadrat?
       grade4_review_artist3_markdown_instruction: El bloc de salt mou l'artista sense
         que dibuixi. Dibuixa la línia de ratlles usant tant els blocs de saltar com
-        els de dibuixar. Cada línia fa 50 píxels de llarg.
+        els de dibuixar.
       grade4_review_bee1_markdown_instruction: Ara usa el nou bloc repeteix per recollir
         tot el nèctar i fer tota la mel.
       level 'grade3_Loops_3_markdown_instruction: Pots usar un bucle per recollir

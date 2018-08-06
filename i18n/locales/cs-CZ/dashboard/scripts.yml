@@ -81,7 +81,7 @@ cs:
             Getting Loopy:
               name: Bláznit
             Graph Paper Programming:
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             'Maze: Loops':
               name: 'Bludiště: cykly'
             'Maze: Sequence':
@@ -139,7 +139,7 @@ cs:
             'Maze: Conditionals':
               name: 'Bludiště: podmínky'
             Songwriting:
-              name: Psaní písniček s parametry
+              name: Skládání písniček
             'Studio: Create a Game':
               name: 'Play Lab: Vytvoření hry'
             'Studio: Create a Story':
@@ -307,11 +307,11 @@ cs:
             Functions:
               name: Funkce
             Graph Paper Programming:
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Introduction to Computer Science:
               name: Úvod do počítačové vědy
             Relay Programming:
-              name: Štafetové programování
+              name: Relay programování
             Song Writing:
               name: Psaní Písně
             The Artist:
@@ -392,6 +392,8 @@ cs:
           stages:
             Puzzles:
               name: Hádanky
+        cspunit1:
+          description_short: Programování
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -407,6 +409,7 @@ cs:
             Strings and Images:
               name: Řetězce a obrázky
         cspunit3:
+          description_short: Programování
           stages:
             Creating Functions:
               name: Vytvářející funkce
@@ -443,6 +446,7 @@ cs:
             Wrap-Up:
               name: Rekapitulace
         cspunit2:
+          description_short: Programování
           stages:
             The Internet:
               name: Internet je pro všechny
@@ -595,7 +599,7 @@ cs:
             Getting Loopy:
               name: Bláznit
             Graph Paper Programming:
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Happy Maps:
               name: Šťastné mapy
             Move it, Move it:
@@ -603,7 +607,7 @@ cs:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy ze života: Zasadit semínko'
             Songwriting:
-              name: Psaní písniček s parametry
+              name: Skládání písniček
             The Big Event:
               name: Velká událost
         ScienceP3OLPT2:
@@ -637,20 +641,20 @@ cs:
               name: Žvýkačka Play Lab
         starwars:
           title: 'Hvězdné války: Budování galaxie s kódem'
-          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
-          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
+          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
+          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
           stages:
             Hour of Code 2015:
               name: Hodina kódu 2013
         starwarsblocks:
           title: 'Hvězdné války: Budování galaxie s kódem'
-          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
-          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars v galaxii daleko, daleko pryč.
+          description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
+          description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
           stages:
             Hour of Code 2015:
               name: Hodina kódu 2013
         mc:
-          title: Hodina kódu s Minecraftem
+          title: Hodina kódu Minecraftu
           description: Používej bloky kódu, abys vzal Steva nebo Alex na dobrodružství ve světě Minecraftu
           description_short: Prozkoumej svět Minecraftu pomocí kódu
           stages:
@@ -662,6 +666,10 @@ cs:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+        cspunit5:
+          description_short: Programování
+        cspunit4:
+          description_short: Programování
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -770,7 +778,7 @@ cs:
             Digital Citizenship:
               name: Digitální občanství
             Songwriting:
-              name: Psaní písniček s parametry
+              name: Skládání písniček
         grade1:
           stages:
             Events:
@@ -875,9 +883,9 @@ cs:
             Welcome!:
               name: Vítejte!
         basketball:
-          title: Vyberte si svůj tým a vytvořte basketbalovou hru
+          title: Vytvoř basketbalovou hru
           description_short: Vytvoř basketbalovou hru
-          description: Vyberte si svůj tým a vytvořte basketbalovou hru
+          description: Vytvoř basketbalovou hru
           stages:
             Bounce:
               name: Odraz
@@ -981,6 +989,8 @@ cs:
           stages:
             Hour of Code 2013:
               name: Hodina kódu 2013
+        sports:
+          title: Naprogramuj svoji vlastní sportovní hru
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
@@ -1241,7 +1251,7 @@ cs:
         hero:
           stages:
             Minecraft Hour of Code:
-              name: Hodina kódu s Minecraftem
+              name: Hodina kódu Minecraftu
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1308,7 +1318,7 @@ cs:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Introduction:
               name: Úvod
             Building a Foundation:
@@ -1322,7 +1332,7 @@ cs:
             Conditionals with Cards:
               name: Podmínky s kartami
             'Functions: Songwriting':
-              name: Psaní písniček s parametry
+              name: Skládání písniček
             Envelope Variables:
               name: Obálkové proměnné
             For Loop Fun:
@@ -1338,7 +1348,7 @@ cs:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Štafetové programování
+              name: Relay programování
         courseb-2018:
           assignment_family_title: Kurz B
           stages:
@@ -1352,7 +1362,7 @@ cs:
           assignment_family_title: Kurz D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Introduction:
               name: Úvod
             Building a Foundation:
@@ -1366,9 +1376,9 @@ cs:
             Artist Binary:
               name: Umělecké binární
             Graph Paper Programming:
-              name: Programování na milimetrovém papíru
+              name: Programování Na Milimetrovém Papíru
             Relay Programming:
-              name: Štafetové programování
+              name: Relay programování
         coursec-2018:
           assignment_family_title: Kurz C
           stages:
@@ -1394,7 +1404,7 @@ cs:
             Introduction:
               name: Úvod
             'Functions: Songwriting':
-              name: Psaní písniček s parametry
+              name: Skládání písniček
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1402,7 +1412,7 @@ cs:
             Conditionals with Cards:
               name: Podmínky s kartami
             Minecraft Hour of Code:
-              name: Hodina kódu s Minecraftem
+              name: Hodina kódu Minecraftu
         coursef-2018:
           assignment_family_title: Kurz F
           stages:

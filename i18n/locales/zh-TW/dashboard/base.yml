@@ -59,7 +59,7 @@ zh-TW:
   courses_page:
     title_student: "在 Code Studio 上學習"
     title_teacher: "使用 Code Studio 教學"
-  unplugged_activity: '不插電活動'
+  unplugged_activity: '不插電的活動'
   of: "／"
   more: "更多"
   less: "更少"
@@ -84,7 +84,7 @@ zh-TW:
     facebook: 'Facebook'
     windowslive: '微軟帳戶'
     clever: 'Clever 帳號'
-    forgot_password: '忘了密碼？'
+    forgot_password: '忘記了您的密碼嗎？'
     need_confirmation: "沒有收到確認說明嗎？"
     need_unlock: "沒有收到解鎖說明嗎？"
     not_linked: "抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。"
@@ -174,7 +174,7 @@ zh-TW:
     reset_form:
       title: '忘記了您的密碼嗎？'
       instructions: "請在下方輸入您的電子郵件，我們發送重設密碼的指引給您"
-      email: '電子信箱地址'
+      email: '電子信箱'
       submit: '提交'
     reset_errors:
       invalid_email: '你註冊用的信箱似乎無效，請電郵 support@code.org 以取得密碼恢復的連結。'
@@ -390,8 +390,8 @@ zh-TW:
     teacher_student_count_one: 您有 %{count} 個學生。
     teacher_student_count: 您有 %{count} 個學生。
     teacher_averages: 你的學生平均下來獲得了 %{trophy_average} / %{trophy_max} 的概念通（Concept Mastery）獎盃。
-    teacher_print_certificates: '為完成此課程的所有學生列印證書'
-    teacher_read_blog: 在 Educator Blog 上閱讀關於我們的新消息和教材更新訊息
+    teacher_print_certificates: '為完成此課程的學生列印證書'
+    teacher_read_blog: 在Educator Blog閱讀我們的最新資訊
     classroom: 你的教室
     student_progress: 你的學習進度
     student_stats: 你已經獲得了 %{trophy_count}/%{trophy_max} 的「概念通」獎盃了。
@@ -406,7 +406,7 @@ zh-TW:
     trynow: '快來試試'
     add_hint_help: '請協助我們添加小提示到 Code.org 的教程'
     20hour_overview: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
-    test_videos_help: '在學校試試我們的新影片播放器'
+    test_videos_help: '在你的學校測試我們新的影片播放器'
     try_beta_courses: '新課程！試試我們為 K-5 學生設計的課程（測試版）。'
     use_as_teacher: '以教師身份使用此站'
     heading_hoc2014: "<h2>一小時玩程式</h2> - <h1>所有年齡</h1>"
@@ -421,7 +421,7 @@ zh-TW:
     announcement_title: "公告"
     announcement_message_fall2016_features: "我們花了整個夏天設法將來各地的建議功能實踐，從現在起，你可以<a href=\"%{pp_url}\" target=\"_blank\">追蹤學生們的進度</a>，即使他們在同一台設備編程。你可以在計算機科學原理課程中使用<a href=\"%{csp_widgets_url}\" target=\"_blank\">最棒的互動工具</a>。同時，爲了鼓勵動手實驗，你的學生們可以在他們的工作區上<a href=\"%{unused_code_url}\" target=\"_blank\">保存未使用的代碼</a>。檢視所有的新功能，並且讓我們瞭解你的想法。"
     announcement_csp_widgets_message: "想找些有趣的方式來指導你的班級嗎？像是網際網路是怎麼運作的、讓資料變得安全的密碼學…我們已經從我們的計算機科學原理課程中使用了最棒的互動工具，並釋出了獨立的小工具方便你隨時使用！"
-    announcement_learn_more_button: "繼續學習"
+    announcement_learn_more_button: "進一步了解"
     announcement_try_now_button: "快來試試"
     announcement_host_an_hour_button: "舉辦一小時活動"
     announcement_watch_video_button: "觀看影片"
@@ -487,7 +487,7 @@ zh-TW:
     how_it_works: '它是如何運作的（檢視程式碼）'
     try_hour_of_code: '試試「一小時玩程式」！'
   reference_area:
-    title: '需要幫忙嗎？'
+    title: '需要幫忙？'
     subtitle: '看看這些影片和提示'
     teacher: '觀看解決方案'
     teacher_no_solution: '停止觀看解法'
@@ -505,7 +505,7 @@ zh-TW:
   compatibility:
     upgrade:
       unsupported_message: "您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}', target='_blank'>支援的瀏覽器版本之一</a>。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。"
-      link: "繼續學習"
+      link: "進一步了解"
       applab_unsupported_tablet: "在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       gamelab_unsupported_tablet: "在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       weblab_unsupported_browser: "很抱歉，在這個瀏覽器上讀取 Web Lab 時發生了一些問題，請換個瀏覽器試試，造成不便請見諒。"
@@ -525,7 +525,7 @@ zh-TW:
     bounce_og_title: "看看我的彈跳遊戲"
     flappy_og_title: "看看我的像素鳥遊戲"
     studio_og_title: "看看我的 Play Lab App"
-    check_out_what_i_made: "看看我的作品"
+    check_out_what_i_made: "看看我做的"
     og_description: "我在 Code.org 自己寫了個程式"
     phone_number_not_allowed: "看起來裡面有一組電話號碼。請試著改變文字。"
     address_not_allowed: "看起來裡面有一組地址。請試著改變文字。"
@@ -560,12 +560,13 @@ zh-TW:
       body: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
       body_short: '在速成課程的課程 2-4 中學習基本的計算機科學。'
     hoc2014:
-      try_new_tutorial: '試試我們新的一小時玩程式教程（測試版）'
+      try_new_tutorial: '試試我們新的、測試的一小時玩程式課程'
       try_frozen: '來自冰雪奇緣的安娜及艾莎。'
     gallery:
       title: "藝廊"
       body: "觀看由用戶建立的應用程式及藝術畫作"
     gamelab:
+      title: "Game Lab"
       audience: "年齡 13+"
       cta: "學習如何做"
     hoc-encryption:
@@ -578,11 +579,11 @@ zh-TW:
     starwars:
       title: "星際大戰"
     infinity:
-      title: "迪士尼無限 Play Lab"
-      body: "用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。"
+      title: "Infinity Play Lab"
+      body: "用 Play Lab 來創造一個由《迪士尼無限世界》中的角色所主演的故事或遊戲。"
     minecraft:
       title: "Minecraft"
-      body: "從代碼的角度來探索 Minecraft 世界。"
+      body: "透過程式碼探索 Minecraft 世界。"
     minecraft2016:
       title: "Minecraft"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
@@ -706,29 +707,14 @@ zh-TW:
     title: "非必填：幫助我們追蹤我們的進展以改善在計算機科學的多樣性"
     message: "請告訴我們你的種族（選擇）"
     races:
-      - 
-        white: "白人"
-      - 
-        black: "黑人/非裔美國人"
-      - 
-        hispanic: "西班牙裔或拉丁裔"
-      - 
-        asian: "亞裔"
-      - 
-        hawaiian: "夏威夷原住民或其他太平洋群島原住民"
-      - 
-        american_indian: "美國印地安人/阿拉斯加原住民"
-      - 
-        other: "其它"
-      - 
-        opt_out: "不想說"
+      other: "其它"
     submit: "提交"
     decline: "關閉"
   zendesk_too_young_message: '抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。'
   progress:
     not_started: 未開始
     in_progress: 正在進行
-    completed_too_many_blocks: 完成，過多積木
+    completed_too_many_blocks: 已完成，但用了太多的積木
     completed_perfect: 完成，非常完美
     furthest_level_attempted: 最高級別嘗試
     assessment: 評量
@@ -936,4 +922,5 @@ zh-TW:
   cookie_banner:
     accept: '我同意'
   gdpr_dialog:
+    message: '您在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。'
     yes: '是'

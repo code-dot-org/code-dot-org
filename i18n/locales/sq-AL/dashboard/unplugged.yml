@@ -69,7 +69,7 @@ sq:
         video: Unplug11
       UnplugHappyMaps:
         title: Hartat e Gëzuara
-        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur një personazh midis një labirinti duke përdorur një komandë të vetme.
+        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       MoveIt:
         title: Lëvize, Lëvize
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
@@ -113,7 +113,7 @@ sq:
         title: Suncatchers-at Funksionalë
         desc: Studentët krijojnë një algoritëm me variabla dhe funksione (pjesë kodi që ti dëshiron ti përdorësh herë pas here) për të krijuar suncatchers duke përdorur varg dhe rruaza.
       SongwritingParameters:
-        title: kompozim
+        title: Të shkruarit e Këngëve
         desc: Studentët përdorin konceptin e refrenit në një këngë për të mësuar rreth kalimit të parametrave (që rregullojnë një funksion pa rishkruajtur të gjithë funksionin).
       DiceRace:
         title: 'Algoritmet e jetës reale: Dice Race'
@@ -178,7 +178,7 @@ sq:
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
       courseA_unplugged_happyMaps:
         title: Hartat e Gëzuara
-        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur një personazh midis një labirinti duke përdorur një komandë të vetme.
+        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       courseA_unplugged_goingPlacesSafely:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit prezantojnë si të qëndrojmë të sigurtë ndërsa navigojmë në Internet.
@@ -201,10 +201,10 @@ sq:
         title: Byzylykët Binarë
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
       courseD_unplugged_graphPaperProgramming:
-        title: Programimi me grafikë
+        title: Programimi Grafik me Letër
         desc: Studentët shkruajnë një algoritëm (grup instruksionesh) duke përdorur një grup komandash të paracaktuara për të drejtuar shokët e tyre të klasës që të ribëjnë një vizatim.
       courseD_unplugged_relayProgramming:
-        title: Programimi transmetues
+        title: Programimi i Besuar
         desc: Studentët vrapojnë në garë të besueshme, ku ata ndeshen mes për mes kopshtit për të shkruar një algoritëm bazuar në një imazh "Programimi i Letrës Grafike". Ata mund të shkruajnë një udhëzim në kohë dhe nëse ka ndonjë gabim diku, ata duhet të fshijnë gjithçka për tu kthyer tek ajo pikë.
       courseD_unplugged_conditionalsCards:
         title: Kushtoret me Karta
@@ -224,7 +224,7 @@ sq:
         title: Crowdsourcing
         desc: Studentët përdorin crowdsourcing, një teknikë zgjidhje-problemesh, e zakonshme në shkencën kompjuterike, për të përfunduar një detyrë bashkë si një klasë, më efiçente se sa një student të përpiqej vetë.
       courseE_unplugged_songwriting:
-        title: kompozim
+        title: Të shkruarit e Këngëve
         desc: Studentët përdorin konceptin e refrenit në një këngë për të mësuar rreth kalimit të parametrave (që rregullojnë një funksion pa rishkruajtur të gjithë funksionin).
       courseF_unplugged_tangrams:
         title: Algoritmat Tangram
@@ -245,7 +245,7 @@ sq:
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
       UnplugHappyMaps_2018:
         title: Hartat e Gëzuara
-        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur një personazh midis një labirinti duke përdorur një komandë të vetme.
+        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       GoingPlacesSafely_2018:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit prezantojnë si të qëndrojmë të sigurtë ndërsa navigojmë në Internet.
@@ -253,14 +253,14 @@ sq:
         title: Eventi i Madh
         desc: Studentët janë prezantuar me konceptet e programimit të "eventeve", të cilat janë veprime që monitoron një kompjuter në mënyrë të vazhdueshme. Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë në varësi të butonit që është shtypur.
       GraphPaperProgramming_2018:
-        title: Programimi me grafikë
+        title: Programimi Grafik me Letër
         desc: Studentët shkruajnë një algoritëm (grup instruksionesh) duke përdorur një grup komandash të paracaktuara për të drejtuar shokët e tyre të klasës që të ribëjnë një vizatim.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktiviteti Unplugged
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktiviteti Unplugged
       Conditionals_2018:
-        title: Kushtoret
+        title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."
       DigitalFootprint_2018:
         title: Gjurmët e Tua Dixhitale
@@ -280,4 +280,4 @@ sq:
       MoveItMoveIt_2018:
         title: Lëvize atë, lëvize atë
       RelayProgramming_2018:
-        title: Programimi transmetues
+        title: Programimi i Besuar

@@ -59,7 +59,7 @@ es-MX:
   courses_page:
     title_student: "Aprender en Code Studio"
     title_teacher: "Enseñar ciencias de la computación"
-  unplugged_activity: 'Actividad fuera de línea'
+  unplugged_activity: 'Actividad desconectada'
   of: "de"
   more: "MÁS"
   less: "MENOS"
@@ -274,8 +274,8 @@ es-MX:
       tutorials: "Tutoriales"
       educate_overview: "Resumen del Educador"
       educate_elementary: "Escuela primaria"
-      educate_middle: "Escuela Secundaria"
-      educate_high: "Preparatoria"
+      educate_middle: "Secundaria"
+      educate_high: "Escuela secundaria"
       educate_hoc: "Hora del código"
       educate_partner: "Colabora con nosotros"
       educate_beyond: "Más allá de Code.org"
@@ -482,7 +482,7 @@ es-MX:
     more: 'Más'
     feedback: 'Enviar comentarios'
     translate: 'Ayúdanos a traducir a tu idioma'
-    support: 'Soporte'
+    support: 'Ayuda y Comunidad'
     support_url: 'http://support.code.org'
     tos_short: 'Términos'
     tos: 'Términos de uso'
@@ -573,8 +573,8 @@ es-MX:
       title: "Galería"
       body: "Ver una galería de aplicaciones y de imágenes de artistas creadas por nuestros usuarios"
     gamelab:
-      title: "Game Lab"
-      body: "Game Lab es un ambiente de programación en donde puedes hacer animaciones sencillas y juegos con objetos y personajes que interactúan entre ellos."
+      title: "Laboratorio de juegos"
+      body: "Game Lab es un entorno de programación en donde puedes hacer animaciones simples y juegos con objetos y personajes que interactúan entre ellos."
       audience: "Mayores de 13 años"
       cta: "Aprende cómo"
     hoc-encryption:
@@ -582,7 +582,7 @@ es-MX:
       body: "Los estudiantes aprenderán técnicas para crear y modificar mensajes cifrados."
     weblab:
       title: "Web Lab (beta)"
-      body: "Web Lab es un entorno de programación donde se pueden hacer páginas web sencillas utilizando HTML y CSS. Diseña páginas web y comparte tu sitio en segundos."
+      body: "Web Lab es un entorno de programación dónde usted puede hacer páginas web simples usando HTML y CSS. Diseñe sus páginas web y comparta su sitio en segundos."
       audience: "Mayores de 13 años"
       cta: "Aprende cómo"
     frozen:
@@ -597,7 +597,7 @@ es-MX:
       body: "Explora un mundo de Minecraft, a través de código."
     minecraft2016:
       title: "Minecraft"
-      body: "Diseña un juego Minecraft."
+      body: "Diseña un juego Minecraft. Crea tus propias versiones de gallinas, ovejas, Creepers, zombis y muchos más personajes."
     hero:
       title: "Minecraft"
     sports:
@@ -726,22 +726,7 @@ es-MX:
     title: "Opcional: Ayúdanos a seguir nuestro avance hacia la mejora de la diversidad en ciencias de la computación"
     message: "Por favor dinos tu raza (marca todo lo que aplique)"
     races:
-      - 
-        white: "Blanco"
-      - 
-        black: "Negro o Afroamericano"
-      - 
-        hispanic: "Hispano o Latino"
-      - 
-        asian: "Asiático"
-      - 
-        hawaiian: "Nativo Hawaiano o de otra Isla del Pacífico"
-      - 
-        american_indian: "Indígena Americano/Nativo de Alaska"
-      - 
-        other: "Otros"
-      - 
-        opt_out: "Prefiero no contestar"
+      other: "Otros"
     submit: "Enviar"
     decline: "Cerrar"
   zendesk_too_young_message: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar <a href="http://support.code.org">support.code.org</a> sin registrarte o pedir a tus padres o maestros que nos contacten en tu nombre.'
@@ -981,7 +966,7 @@ es-MX:
     accept: 'De acuerdo'
   gdpr_dialog:
     heading: '¿Aceptas utilizar un sitio web con sede en los Estados Unidos?'
-    message: 'Datos de tu uso de este sitio podrán ser enviados, almacenados o procesados en Estados Unidos.'
+    message: 'Es posible que los datos de su utilización de este sitio web se envíen y almacenen en Estados Unidos.'
     link_intro: 'Para más información, mira nuestra'
     privacy_policy: 'política de privacidad'
     logout: 'Cerrar sesión'
