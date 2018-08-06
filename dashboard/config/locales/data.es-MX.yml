@@ -19,7 +19,7 @@ es-MX:
         Farmer2: El granjero 2
         Unplug8: Liberación abstracta
         Artist4: El artista 4
-        Unplug9: Programación bajo presión
+        Unplug9: Programación de relevos
         Farmer3: El granjero 3
         Unplug10: Internet
         Artist5: El artista 5
@@ -38,7 +38,7 @@ es-MX:
         NetSim: Simulador de Internet
         Custom: Artista
         CustomStudio: Laboratorio de juegos
-        Gamelab: Game Lab
+        Gamelab: Laboratorio de juegos
     trophy:
       name:
         Bronze: Bronce
@@ -584,7 +584,7 @@ es-MX:
         C2_graph_paper: Programación de hoja cuadriculada
         C2_conditionals_with_cards: Condicionales
         C2_binary_bracelets: Pulseras binarias
-        C2_relay_programming: Programación bajo presión
+        C2_relay_programming: Programación de relevos
         C2_paper_airplanes: Aviones de Papel
         C2_digital_footprint: Tu huella dactilar
         C2_digital_footprint_v2: Tu huella dactilar
@@ -637,7 +637,7 @@ es-MX:
         CSF_EF_cs_matters: Importancia de las Ciencias de la Computación
         CSF_maze_intro_k1_blocks: Introducción a Code Studio
         CSF_maze_intro_text_blocks: Introducción a Code Studio
-        CSF_my_robotic_friends: Mis amigos robóticos
+        CSF_my_robotic_friends: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         CSF_Power_of_Words: Poder de las palabras
         CSF_Super_Digital_Citizen: Super ciudadano digital
         CSF_stevie_big_project: Stevie y el gran proyecto
@@ -680,6 +680,8 @@ es-MX:
         csp_applab_functions_parameters: Funciones con parámetros
         csp_applab_loops: Bucles
         csp_concept_rgb: Un poco más de píxeles
+        csp_cs_is_changing_everything: Las Ciencias de la Computación están cambiando
+          todo
         csp_pixelation_color_1: Reproductor Color pixelación - parte 1
         csp_pixelation_color_2: Reproductor Color pixelación - parte 2
         csp_pixelation_color_3: Reproductor Color pixelación - parte 3
@@ -780,7 +782,7 @@ es-MX:
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
-        run: Haz clic en "Ejecutar" para probar tu programa
+        run: Dale a "Ejecutar" para probar el programa.
         watch_again: Haz clic aquí para ver el video otra vez
         gray_block_explanation: Los bloques que están de color gris no se pueden eliminar.
           ¿Puedes resolver el rompecabezas de todas formas?
