@@ -57,5 +57,6 @@ end.parse!
 # Make sure we're the only copy of this script running.
 exit(1) unless only_one_running?(__FILE__)
 
+require_relative '../../dashboard/config/environment'
 require_relative '../../dashboard/lib/expired_deleted_account_purger'
 ExpiredDeletedAccountPurger.new(options).purge_expired_deleted_accounts!
