@@ -27,7 +27,6 @@ import Instructions from './Instructions';
 import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
@@ -129,8 +128,7 @@ class TopInstructions extends Component {
   };
 
   state = {
-    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
-      experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) ? TabType.COMMENTS : TabType.INSTRUCTIONS,
+    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace ? TabType.COMMENTS : TabType.INSTRUCTIONS,
     feedbacks: []
   };
 
@@ -146,7 +144,7 @@ class TopInstructions extends Component {
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
 
-    if (this.props.viewAs === ViewType.Student && experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB)) {
+    if (this.props.viewAs === ViewType.Student) {
       $.ajax({
         url: '/api/v1/teacher_feedbacks/get_feedbacks?student_id='+this.props.user+'&level_id='+this.props.serverLevelId,
         method: 'GET',
@@ -272,18 +270,11 @@ class TopInstructions extends Component {
 
     const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
 
-    const displayFeedbackStable = experiments.isEnabled(experiments.COMMENT_BOX_TAB) &&
-      teacherViewingStudentWork;
+    const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
 
-    const displayFeedbackDevTeacher = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
-      teacherViewingStudentWork;
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && teacherViewingStudentWork;
 
-    const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
-      this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
-
-    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && (displayFeedbackDevTeacher || displayFeedbackStable);
-
-    const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
+    const displayFeedback = teacherViewingStudentWork || displayFeedbackStudent;
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -370,7 +361,6 @@ class TopInstructions extends Component {
                 {this.props.viewAs === ViewType.Teacher &&
                   <TeacherFeedback
                     ref="commentTab"
-                    withUnreleasedFeatures={displayFeedbackDevTeacher}
                   />
                 }
                 {this.props.viewAs === ViewType.Student &&
