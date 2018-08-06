@@ -95,7 +95,7 @@ vi:
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Sử dụng nút này để chỉnh sửa các hàm và thay đổi hướng của ong để nó rẽ và lấy mật hoa.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Nhấn "Chạy" để thử chương trình của bạn
+        Course 4 Maze 1_callout1: Nhấn "Run" để thử chương trình của bạn
       Course 4 Maze 4_callout:
         repeat: Đặt khối bên trong vòng lặp để lặp lại lệnh
       Course 4 Play Lab Params 3_callout:
@@ -181,9 +181,9 @@ vi:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Nhấn "Chạy" để thử chương trình của bạn
+        craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Nhấn "Chạy" để thử chương trình của bạn
+        craft_run_button_callout: Nhấn "Run" để thử chương trình của bạn
       Overworld Place Wall_callout:
         craft_inside_repeat: Lặp lại các hành động bằng cách đặt các khối gỗ vào đây
       Overworld Place Wall_2018_callout:
