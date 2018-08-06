@@ -261,7 +261,7 @@ et:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
       label: Tere, %{username}
-      stats: Koodistuudio
+      stats: Code Studio
       settings: Minu konto
       logout: Logi välja
       signin: Logi sisse
@@ -364,7 +364,7 @@ et:
     prize_info: 'Auhinnad osalemise eest (ainult Ameerika Ühendriikide avalike koolide
       õpetajatele): Kuni $1,000 eest koolitarbeid.'
     tryfirst: 'Või võite proovida ja hiljem registreerida:'
-    trynow: Proovi nüüd
+    trynow: Lisateave
     add_hint_help: Palun aidake meil lisada kasulikke vihjeid Code.org õpetusvideotesse
     20hour_overview: See 20-tunnine kursus tutvustab arvutiteaduse ja programmeerimise
       põhilisi aspekte ja mõisteid. Kursus on mõeldud õpilastele kuni 8, klassini,
@@ -384,7 +384,7 @@ et:
     print_certificate: Prindi tunnistus
     announcement_title: Teated
     announcement_learn_more_button: Lisateave
-    announcement_try_now_button: Proovi nüüd
+    announcement_try_now_button: Lisateave
     announcement_host_an_hour_button: Vii läbi KoodiTund
     announcement_watch_video_button: Vaata videot
     announcement_petition: Õpetajana oled sa teejuht liikumises, mis annab igale õpilasele
@@ -468,7 +468,7 @@ et:
     more: Veel
     feedback: Tagasiside
     translate: Tule vabatahtlikuks ja aita meil tõlkida
-    support: Tugi
+    support: Abi ja kogukond
     tos_short: Tingimused
     tos: Teenuse tingimused
     privacy: Privaatsuspoliitika
@@ -583,7 +583,7 @@ et:
       body: Uuri Minecrafti maailma koodi kaudu.
     minecraft2016:
       title: Minecraft
-      body: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis.
+      body: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis.
     hero:
       title: Minecraft
       body: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti
