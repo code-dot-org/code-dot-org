@@ -100,7 +100,7 @@ zh-TW:
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: 設置這些變數成 0 或是 1，並命為 flag，這個 flag 可以發信號給我們的函式，告訴我們蜜蜂該往哪個方向前進。
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: 點擊「運行」以試試你的程式
+        Course 4 Maze 1_callout1: 點擊「運行」按鈕，看看程式的結果
         Course 4 Maze 1_callout2: 拖曳「移動」積木到工作區上，貼到其它的積木下方。
       Course 4 Maze 4_callout:
         repeat: 將程式積木放在迴圈中來重複執行指令
@@ -204,6 +204,8 @@ zh-TW:
         New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
         New Play Lab Project_callout2: 點擊「運行」以儲存並運行你的程式
         sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
+      Ninjacat Demo B_callout:
+        Ninjacat Demo B: 點擊`運行`來試試這個遊戲
       Ninjacat Demo No Animate_callout:
         Ninjacat Demo B: 點擊`運行`來試試這個遊戲
       Overworld Chop Trees_callout:
@@ -215,10 +217,10 @@ zh-TW:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: 此代碼會開始建造你的房屋。你能完成嗎？
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: 點擊「運行」以試試你的程式
+        craft_run_button_callout: 點擊「運行」按鈕，看看程式的結果
         craft_drag_block_callout: 拖曳一個「移動-向前」積木並將色貼合到其它積木下方
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: 點擊「運行」以試試你的程式
+        craft_run_button_callout: 點擊「運行」按鈕，看看程式的結果
         craft_drag_block_callout: 拖曳一個「移動-向前」積木並將色貼合到其它積木下方
       Overworld Place Wall_callout:
         craft_inside_repeat: 將積木放在這裡可以重複執行程式

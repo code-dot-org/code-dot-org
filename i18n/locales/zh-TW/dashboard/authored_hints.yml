@@ -709,6 +709,7 @@ zh-TW:
         mc_6_c: 您可以在“重複”循環中放入多個程式積木。
       Overworld House Frame Chosen_2018_authored_hint:
         mc_6_a: 單擊“位置”程式積木的箭頭，選擇要放置的內容。
+        mc_6_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
         mc_6_c: 您可以在“重複”循環中放入多個程式積木。
       Overworld Move to Sheep_authored_hint:
         mc_1_a: '“前進”程式積木在工具箱的頂部。'
@@ -723,6 +724,7 @@ zh-TW:
       Overworld Place Wall_2018_authored_hint:
         mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
         mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
+        mc_5_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Overworld Plant Crops_authored_hint:
         mc_7_a: 使用“植物作物”程式積木在你站立的地方種植作物。
         mc_7_b: 兩條帶深棕色的土地都需要種滿莊稼。
@@ -780,6 +782,7 @@ zh-TW:
       Underground Iron_2018_authored_hint:
         mc_10_a: 鐵塊是火炬背後的斑點空間！你打算怎麼去那兒？
         mc_10_b: 當你站在熔岩邊緣的時候，用“將鵝卵石放在前面”就能使路線安全。然後，你就可以走過去了。
+        mc_10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Underground Mining Coal_authored_hint:
         mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
         mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
@@ -1244,16 +1247,19 @@ zh-TW:
       courseA_artist_loops6_2018_authored_hint:
         courseA_artist_loops6_b: 你將會需要兩個不同方向的程式積木來過這一關。
       courseA_artist_loops7_authored_hint:
+        courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
         courseA_artist_loops7_c: |-
           記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml>迴圈裡。
       courseA_artist_loops7_2018_authored_hint:
+        courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
         courseA_artist_loops7_c: |-
           記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
           </block></xml>迴圈裡。
       courseA_artist_loops7_forVideo_authored_hint:
+        courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
         courseA_artist_loops7_c: |-
           記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
           <title name="TIMES">???</title>
@@ -1275,8 +1281,12 @@ zh-TW:
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: 你可以利用 `跳躍` 積木移動到其它的空格。
       courseA_collector_loops1_authored_hint:
+        courseA_collector_loops1_a: |-
+          當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
         courseA_collector_loops1_b: 向東移動兩次來得到寶物會是一個簡單的解決之道。
       courseA_collector_loops1_2018_authored_hint:
+        courseA_collector_loops1_a: |-
+          當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
         courseA_collector_loops1_b: 向東移動兩次來得到寶物會是一個簡單的解決之道。
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: 在你可以搜集寶物之前，你得要移動
@@ -1284,6 +1294,8 @@ zh-TW:
           當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: 在你可以搜集寶物之前，你得要移動
+        courseA_collector_loops2_b: |-
+          當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
       courseA_collector_loops3_authored_hint:
         courseA_collector_loops3_a: "試試用一個 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>迴圈來完成！"
         courseA_collector_loops3_b: 記得在一個 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>迴圈裡你可以用多於一塊程式積木。
@@ -1301,6 +1313,9 @@ zh-TW:
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: 只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) 積木就可以解決囉！
         courseA_collector_loops_challenge2_a: "在往南移動之前，你可以重複移動到相同路徑。\n\n![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)"
+      courseA_collector_preLoops7_authored_hint:
+        courseA_collector_loops2_b: |-
+          當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -1418,7 +1433,102 @@ zh-TW:
           你知道嗎？點擊積木，你就可以修改方向鍵囉！
           
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018_authored_hint:
+        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1a_authored_hint:
+        courseA_playlab_events_challenge1_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: |-
+          你可以製造一個憤怒的怪物咆哮。
+          
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">咆哮!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          你可以製造一個憤怒的怪物咆哮。
+          
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">咆哮!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_2018_authored_hint:
+        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          你可以製造一個憤怒的怪物咆哮。
+          
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">咆哮!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
+        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "最後，當您單擊Spiff時，讓Wendel成為嚮導！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
@@ -1520,6 +1630,10 @@ zh-TW:
         courseB_artist_loops7_a: 這個挑戰用了 4 個迴圈，一個接著一個！
       courseB_artist_loops7_2018_authored_hint:
         courseB_artist_loops7_a: 這個挑戰用了 4 個迴圈，一個接著一個！
+      courseB_artist_loops9_authored_hint:
+        courseB_artist_loops9_c: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
+      courseB_artist_loops9_2018_authored_hint:
+        courseB_artist_loops9_c: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
       courseB_artist_loops_challenge1_authored_hint:
         courseB_artist_loops_challenge1_a: '像這樣的積木：<xml>  <block type="simple_move_up_right"/></xml> 能讓你的角色斜向移動！'
         courseB_artist_loops_challenge1_b: 當你完成了一個骰子時，`跳躍`到下一個！
@@ -1838,6 +1952,10 @@ zh-TW:
           <title name="TIMES">3</title>
           </block>
           </xml>
+      courseB_starWars_prog9_authored_hint:
+        courseB_starWars_prog9_a: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
@@ -1987,6 +2105,18 @@ zh-TW:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
+      courseC_starWars_loops1_authored_hint:
+        courseC_starWars_loops1_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseC_starWars_loops10_authored_hint:
+        courseC_starWars_loops10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseC_starWars_loops10_2018_authored_hint:
+        courseC_starWars_loops10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseC_starWars_loops7_authored_hint:
+        courseC_starWars_loops7_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+      courseC_starWars_loops7_2018_authored_hint:
+        courseC_starWars_loops7_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       courseC_starWars_loops9_authored_hint:
         course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
       courseC_starWars_loops9_2018_authored_hint:
@@ -2551,6 +2681,8 @@ zh-TW:
         artistLoopsK2_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
       gradek_artist_loops4_authored_hint:
         artistLoopsK3_a: 試著用你學到的重複積木來完成這個關卡！
+      gradek_artist_loops6_authored_hint:
+        gradek_artist_loops6_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
       gradek_artist_loops9_authored_hint:
         artistLoopsKA_a: 使用跳躍積木可以向前移動但不會畫線。
       harvey_tictactoe_authored_hint:
