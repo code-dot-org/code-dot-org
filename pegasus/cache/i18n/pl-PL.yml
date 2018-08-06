@@ -561,7 +561,7 @@ pl-PL:
   minecraft_og_agent: Minecraft powraca na Godzinę Kodowania, a ty jesteś bohaterem!
     Napisz kod, by podróżować poprzez biomy Minecrafu.
   sports_page_title: Sporty Godziny Kodowania
-  sports_og_title: Przekonaj się. Każdy może się nauczyć.
+  sports_og_title: Zmuś się. Każdy może się uczyć.
   sports_og_description: Mistrzowie i złoci medaliści zachęcaj Was do wzięcia udziały
     w Godzinie kodowania (the Hour of Code). Zakoduj własną grę sportową.
   sports_title: Zakoduj własną grę sportową
@@ -853,7 +853,7 @@ pl-PL:
   dashboard_navigation_view_assessments_surveys: Oceny/ankiety
   dashboard_navigation_add_students: Dodaj uczniów
   dashboard_navigation_manage_students: Zarządzaj uczniami
-  dashboard_navigation_lesson_plans_resources: Plany lekcji i zasoby
+  dashboard_navigation_lesson_plans_resources: 'Standardy nauczania '
   dashboard_navigation_view_stats: Statystyki
   dashboard_navigation_section: 'Sekcja: %{section_name}'
   dashboard_navigation_student: 'Uczeń: %{student_name}'
@@ -957,7 +957,7 @@ pl-PL:
   dashboard_students_reset_picture: Możesz zresetować tajny obrazek ucznia w dowolnym
     momencie wybierając <b>Pokaż sekret</b>, a następnie <b>Resetuj sekret</b>. Nowy
     tajny obrazek zostanie wygenerowane dla tego ucznia, gdy będzie się logował.
-  dashboard_students_secret_word_title: Tajne Słowo
+  dashboard_students_secret_word_title: Tajne słowa
   dashboard_students_secret_word: W tej sekcji <b>słowo</b> jest użyte jako tajny
     typ.  Oznacza to, że każdy Twój uczeń ma parę tajnych słów użytych zamiast hasła
     do logowania.  Do zalogowania się, uczniowie powinni używać adresu strony logowania,
@@ -1163,7 +1163,7 @@ pl-PL:
   thinkersmith_name: Moi przyjaciele wśród robotów
   condcards_name: Warunkowe z kartami
   lightbotintl_name: LightBot
-  codehs_name: Naucz się kodować z Psem Karelem
+  codehs_name: Naucz się kodować z Psem Karele
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
@@ -1262,7 +1262,7 @@ pl-PL:
   applab_name: App Lab
   gamelab_name: Laboratorium Gier (Game Lab)
   basketball_name: Utwórz grę w koszykówkę
-  sports_name: Zakoduj własne zawody
+  sports_name: Zakoduj własną grę sportową
   applab_gradelevel: Wiek 13+
   applab_shortdescription_congrats: App Lab jest środowiskiem programistycznym, w
     którym możesz tworzyć proste aplikacje. Zaprojektuj aplikację, zakoduj ją za pomocą
@@ -1344,13 +1344,13 @@ pl-PL:
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   thinkersmithspanish_platformtext: Odłączony (unplugged)/Bez komputera
-  khan_platformtext: Nowoczesne przeglądarki sieci
-  khanes_platformtext: Nowoczesne przeglądarki sieci
-  khanpt_platformtext: Nowoczesne przeglądarki sieci
-  khanhe_platformtext: Nowoczesne przeglądarki sieci
-  khanfr_platformtext: Nowoczesne przeglądarki sieci
-  khanpl_platformtext: Nowoczesne przeglądarki sieci
-  tynker_platformtext: Nowoczesne przeglądarki sieci
+  khan_platformtext: Nowoczesne przeglądarki sieci web
+  khanes_platformtext: Nowoczesne przeglądarki sieci web
+  khanpt_platformtext: Nowoczesne przeglądarki sieci web
+  khanhe_platformtext: Nowoczesne przeglądarki sieci web
+  khanfr_platformtext: Nowoczesne przeglądarki sieci web
+  khanpl_platformtext: Nowoczesne przeglądarki sieci web
+  tynker_platformtext: Nowoczesne przeglądarki sieci web
   scratch_platformtext: Przeglądarki tylko na komputery stacjonarne (nie na tablety)
   lightbot_platformtext: WSZYSTKIE przeglądarki i iOS, Android lub konsola do gier
   thinkersmith_platformtext: Odłączony (unplugged)/Bez komputera
@@ -1385,9 +1385,9 @@ pl-PL:
   playlab_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   monstercoding_platformtext: Nowoczesne przeglądarki, iOS, Android
   allcancode_platformtext: Nowoczesne przeglądarki, iOS
-  csfirst_platformtext: Nowoczesne przeglądarki sieci
+  csfirst_platformtext: Nowoczesne przeglądarki sieci web
   boxisland_platformtext: Android, iOS
-  codesters_platformtext: Nowoczesne przeglądarki sieci
+  codesters_platformtext: Nowoczesne przeglądarki sieci web
   texasinstruments_platformtext: Kalkulatory TI
   teacherled_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeorg_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
@@ -1409,7 +1409,8 @@ pl-PL:
   thinkersmith_shortdescription: Samouczek dla niepodłączonych (unplugged), czyli
     dla grupy uczniów bez urządzeń komputerowych
   condcards_shortdescription: Poznawaj algorytmy z użyciem talii kart
-  lightbotintl_shortdescription: Gra służąca do nauki pojęć związanych z kodowanie
+  lightbotintl_shortdescription: Gra służąca do nauki pojęć związanych z kodowaniem
+    (programowaniem)
   codehs_shortdescription: Rozpocznij kodowanie z Psem Karelem, zabawne i wizualne
     wprowadzenie do programowania!
   codecademy_shortdescription: Naucz się programować w JavaScript w przeglądarce sieci
@@ -1439,7 +1440,7 @@ pl-PL:
     potwora nowych ruchów!
   touchdevelop_shortdescription: 'Rozwiązuj zagadki, twórz gry i ucz się kodować,
     a wszystko na swoim telefonie. '
-  appinventor_shortdescription: Utwórz swoją własna aplikację! (tylko dla systemu
+  appinventor_shortdescription: Utwórz swoją własną aplikację! (tylko dla systemu
     Android)
   blockly_shortdescription: Pobierz plik ZIP, aby uczyć się w trybie offline
   thinkersmith2_shortdescription: Dowiedz się, jak informacje są reprezentowane w
@@ -1546,8 +1547,8 @@ pl-PL:
     do uczniów, a nauczyciele mogą się zarejestrować, aby uzyskać dostęp do narzędzi
     nauczyciela i śledzić postępy i sukcesy uczniów!
   codecademy_longdescription: Codecademy jest interaktywnym, prowadzonym przez uczniów
-    wprowadzeniem do podstaw informatyki (CS) z wykorzystaniem JavaScript, używanym
-    przez dziesiątki milionów uczniów i studentów z całego świata. Przygotowaliśmy
+    wprowadzeniem do podstaw informatyki (CS) z wykorzystaniem JavaScript, języka
+    używanego przez dziesiątki milionów uczniów i studentów z całego świata. Przygotowaliśmy
     prostą Godzinę Kodowania, której towarzyszą quizy, slajdy a na koniec - uczniowski
     projekt.
   codecombat_longdescription: Pokonaj ogry w tej epickiej grze, by poznać język programowania
@@ -1565,10 +1566,10 @@ pl-PL:
     przy użyciu języka programowania Processing. Krótkie lekcje wideo wprowadzają
     ćwiczenia kodowania, które prowadzą do zaprojektowania interaktywnego programu
     do rysowania
-  robomind_longdescription: 'Uczniowie poznają podstawy programowania sterując własnymi
-    wirtualnymi robotami. Kurs jest online i całkowicie samowystarczalny, zawiera
-    krótkie prezentacje, filmy, quizy i automatyczne wskazówki, które pomagają przy
-    wykonywaniu ćwiczeń z programowania. '
+  robomind_longdescription: 'Uczniowie poznają podstawy programowania kontrolując
+    swoje własne wirtualne roboty. Kurs jest online i całkowicie samowystarczalny,
+    zawiera krótkie prezentacje, filmy, quizy i automatyczne wskazówki, które pomagają
+    przy wykonywaniu ćwiczeń z programowania. '
   groklearning_longdescription: Posługując się językiem programowania Pyton zbuduj
     chatbot o nazwie Eliza do działania jako robot psychoterapeuta. Nauczysz Elizę,
     jak rozmawiać i odpowiednio mówić. Czy może ona nabrać Twoich znajomych, że jest
@@ -1726,7 +1727,7 @@ pl-PL:
   teachingtree_beyond_gradelevel: Uniwersytet
   kodu_beyond_gradelevel: W wieku 8+
   cargobot_beyond_gradelevel: W wieku 8+
-  kidsruby_beyond_gradelevel: W wieku 12 +
+  kidsruby_beyond_gradelevel: W wieku 12+
   w3schools_beyond_gradelevel: W wieku 12+
   codeavengers_beyond_gradelevel: Gimnazjum +
   mozilla_beyond_gradelevel: W wieku 12+
@@ -1742,16 +1743,16 @@ pl-PL:
   khan_beyond_platformtext: Nowoczesne przeglądarki sieci
   tynker_beyond_platformtext: Nowoczesne przeglądarki ($$ wymagane)
   scratch_beyond_platformtext: Jakakolwiek przeglądarka
-  lightbot_beyond_platformtext: iOS, Android (lub przeglądarka sieci)
+  lightbot_beyond_platformtext: iOS, Android (lub przeglądarki sieci)
   codecademy_beyond_platformtext: Nowoczesne przeglądarki. Aplikacje w systemach iOS
     i Android
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobilna aplikacja
-  groklearning_beyond_platformtext: Nowoczesne przeglądarki sieci
-  hacketyhack_beyond_platformtext: Pulpit instalacji
-  robomind_beyond_platformtext: Nowoczesne przeglądarki, mobilne sieci
+  groklearning_beyond_platformtext: Nowoczesne przeglądarki sieci web
+  hacketyhack_beyond_platformtext: Zainstaluj na pulpicie
+  robomind_beyond_platformtext: Nowoczesne przeglądarki, Mobilne sieci
   makeschool_beyond_platformtext: Nowoczesne przeglądarki sieci web
   appinventor_beyond_platformtext: Nowoczesne przeglądarki + Android
   touchdevelop_beyond_platformtext: Nowoczesne przeglądarki, smartfony, wszystkie
@@ -1774,7 +1775,7 @@ pl-PL:
   lego_beyond_platformtext: Zakup robota
   finch_beyond_platformtext: Zakup robota
   arduino_beyond_platformtext: Przeglądarka sieci, następnie zakup zestawu
-  processing_beyond_platformtext: Nowoczesne przeglądarki sieci
+  processing_beyond_platformtext: Nowoczesne przeglądarki sieci web
   alice_beyond_platformtext: Windows lub Mac (wymagana instalacja)
   sphero_beyond_platformtext: Zakup robota
   codeorg_beyond_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem

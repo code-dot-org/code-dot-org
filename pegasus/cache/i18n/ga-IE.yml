@@ -30,7 +30,7 @@ ga-IE:
     eile.'
   petition_join_others: 'Téir le # eile'
   name: Ainm
-  email: Seoladh ríomhphoist
+  email: Ríomhphost
   zipcode: Cód poist nó tír
   submit: Seol
   twentyhours_heading: Bain triail as ár gcúrsa Buntús na Ríomheolaíochta
@@ -1403,6 +1403,7 @@ ga-IE:
   groklearning_platformtext: Brabhsálaithe nua-aimseartha
   quorum_platformtext: Brabhsálaithe nua-aimseartha. Tacaíocht do léitheoirí scáileáin
   codespark_platformtext: iOS, Android (nó brabhsálaí)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: Táibléid iPad, Android
   robomindnl_platformtext: Brabhsálaithe nua-aimseartha, Gréasán soghluaiste
   flappy_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -1524,12 +1525,16 @@ ga-IE:
   coursef_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
     agus cruthaigh ealaín, scéal, nó cluiche.
   coursea-2017_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  coursec-2017_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus
+    cruthaigh ealaín, scéalta, agus cluichí.
   coursed-2017_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
     ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
     tuilleadh.
   coursef-2017_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús
     na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
   coursea-2018_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  coursec-2018_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus
+    cruthaigh ealaín, scéalta, agus cluichí.
   coursed-2018_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
     ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
     tuilleadh.
@@ -1798,6 +1803,9 @@ ga-IE:
   scratch_beyond_platformtext: Aon bhrabhsálaí
   lightbot_beyond_platformtext: iOS, Android (nó brabhsálaí)
   codecademy_beyond_platformtext: Brabhsálaithe nua-aimseartha. Aipeanna iOS, Android
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Aip Shoghluaiste
   groklearning_beyond_platformtext: Brabhsálaithe nua-aimseartha
   hacketyhack_beyond_platformtext: Suiteáil ar an ríomhaire
