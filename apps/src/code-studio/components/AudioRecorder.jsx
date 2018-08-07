@@ -68,27 +68,23 @@ export default class AudioRecorder extends React.Component {
     this.recorder.onstop = (e) => {
       const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
       this.slices = [];
-      this.saveAudio(blob)
-        .then(() => console.log('Audio Saved'));
+      this.saveAudio(blob);
     };
   };
 
   saveAudio = (blob) => {
-    return new Promise((resolve, reject) => {
-      assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-      (xhr) => {
-        this.setState({error: ErrorType.NONE});
-        this.props.onUploadDone(JSON.parse(xhr.response));
-        resolve();
-      }, error => {
-        this.setState({error: ErrorType.SAVE});
-        reject(`Audio Failed to Save: ${error}`);
-      });
+    assetsApi.putAsset(this.state.audioName + ".mp3", blob,
+    (xhr) => {
+      this.setState({error: ErrorType.NONE});
+      this.props.onUploadDone(JSON.parse(xhr.response));
+    }, error => {
+      this.setState({error: ErrorType.SAVE});
+      console.error(`Audio Failed to Save: ${error}`);
     });
   };
 
   recordInitializationError = (err) => {
-    console.error('Audio Initializing Error: ' + err);
+    console.error('Audio Recorder Failed to Initialize: ' + err);
     this.setState({error: ErrorType.INITIALIZE});
   };
 
