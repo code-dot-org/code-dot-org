@@ -140,6 +140,20 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     refute_includes picked_users, deleted_30_days_ago
   end
 
+  test 'does not locate accounts already queued for manual review' do
+    autodeleteable = create :student, deleted_at: 3.days.ago
+    needs_manual_review = create :student, deleted_at: 3.days.ago
+    create :queued_account_purge, user: needs_manual_review
+
+    picked_users = ExpiredDeletedAccountPurger.new(
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago
+    ).send :expired_soft_deleted_accounts
+
+    assert_includes picked_users, autodeleteable
+    refute_includes picked_users, needs_manual_review
+  end
+
   test 'with two eligible and two ineligible accounts' do
     student_a = create :student, deleted_at: 1.day.ago
     student_b = create :student, deleted_at: 3.days.ago
