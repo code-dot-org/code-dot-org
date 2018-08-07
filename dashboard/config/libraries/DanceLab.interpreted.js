@@ -6,6 +6,7 @@ var callbacks = [];
 var setupCallbacks = [];
 var loops = [];
 var sprites = [];
+var bpm = 120;
 var score = 0;
 var game_over = false;
 var show_score = false;
@@ -19,6 +20,7 @@ bg_sprite.visible = false;
 
 function preload() {
   Dance.song.load('https://s3.amazonaws.com/cdo-curriculum/media/uploads/chu.mp3');
+  bpm = 146;
   //Dance.song.load('/api/v1/sound-library/category_background/jazzy_beats.mp3');
 }
 
