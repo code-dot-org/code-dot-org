@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
@@ -27,6 +27,10 @@ const styles = {
 };
 
 export default class AudioRecorder extends React.Component {
+  static propTypes = {
+    onUploadDone: PropTypes.func,
+  };
+
   constructor(props) {
     super(props);
     this.recorder = null;
@@ -72,8 +76,9 @@ export default class AudioRecorder extends React.Component {
   saveAudio = (blob) => {
     return new Promise((resolve, reject) => {
       assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-      () => {
+      (xhr) => {
         this.setState({error: ErrorType.NONE});
+        this.props.onUploadDone(JSON.parse(xhr.response));
         resolve();
       }, error => {
         this.setState({error: ErrorType.SAVE});
