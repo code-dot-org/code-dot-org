@@ -1,3 +1,3 @@
 function startSong() {
-  Dance.song.start();
+  //Dance.song.start();
 }
