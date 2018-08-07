@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "**Make a prediction:** Here’s a sprite called `alien1`!   \r\n\r\nWhat do you think will happen when you click on it?  ",
+    "markdown_instructions": "**What do you think?** \r\n\r\nHere’s a sprite called `alien1`!   \r\n\r\nWhen you click on it, what will it do?  ",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -18,6 +18,8 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-06-13 19:51:22 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-06-13 19:51:22 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-07 20:38:38 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>
