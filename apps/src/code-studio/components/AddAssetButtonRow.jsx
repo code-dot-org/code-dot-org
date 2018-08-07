@@ -4,7 +4,7 @@ import AssetUploader from './AssetUploader';
 import experiments from '@cdo/apps/util/experiments';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+import {assetButtonStyles} from "./AssetManager";
 
 const RecordButton = ({onSelectRecord}) => (
   <Button
@@ -13,30 +13,13 @@ const RecordButton = ({onSelectRecord}) => (
     className="share"
     text={i18n.recordAudio()}
     icon="microphone"
-    style={styles.buttonStyle}
+    style={assetButtonStyles.button}
     size="large"
   />
 );
 
 RecordButton.propTypes = {
   onSelectRecord: PropTypes.func,
-};
-
-const styles = {
-  buttonRow: {
-    display: 'flex',
-    flexFlow: 'row',
-  },
-  buttonStyle: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 5,
-    borderRadius: 4,
-    fontSize: 'large',
-    fontWeight: 'lighter',
-    boxShadow: 'none',
-    borderColor: color.orange
-  }
 };
 
 /**
@@ -56,7 +39,7 @@ export default class AddAssetButtonRow extends React.Component {
 
   render() {
     return (
-      <div style={styles.buttonRow}>
+      <div style={assetButtonStyles.buttonRow}>
         <div>
           <AssetUploader
             uploadsEnabled={this.props.uploadsEnabled}
