@@ -36,6 +36,7 @@ class Census::StateCsOffering < ApplicationRecord
     LA
     MA
     MI
+    MO
     MS
     NC
     NY
@@ -95,6 +96,8 @@ class Census::StateCsOffering < ApplicationRecord
       row_hash['State_School_ID']
     when 'MA'
       School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
+    when 'MO'
+      row_hash['STATE_SCHOOL_ID']
     when 'MS'
       School.find_by(id: row_hash['NCES School ID'])&.state_school_id
     when 'MI'
@@ -294,6 +297,14 @@ class Census::StateCsOffering < ApplicationRecord
     10197
   ).freeze
 
+  MO_COURSE_CODES = %w(
+    034355
+    991105
+    100415
+    991195
+    991196
+  ).freeze
+
   MS_COURSE_CODES = %w(
     561005
     000283
@@ -440,6 +451,8 @@ class Census::StateCsOffering < ApplicationRecord
       end
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
+    when 'MO'
+      MO_COURSE_CODES.select {|course| course == row_hash['COURSE']}
     when 'MS'
       MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'NC'
