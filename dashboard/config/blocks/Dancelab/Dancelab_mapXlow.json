@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "mapXlow",
+    "blockText": "mapping x to volume",
+    "args": [
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      }
+    ],
+    "returnType": "Behavior"
+  }
+}

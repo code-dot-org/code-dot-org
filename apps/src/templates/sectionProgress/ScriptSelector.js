@@ -6,7 +6,6 @@ import _ from 'lodash';
 
 export const dropdownStyles = {
   dropdown: {
-    width: 250,
     display: 'block',
     boxSizing: 'border-box',
     fontSize: 'medium',
