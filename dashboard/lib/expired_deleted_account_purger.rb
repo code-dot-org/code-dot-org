@@ -86,9 +86,14 @@ class ExpiredDeletedAccountPurger
   end
 
   private def expired_soft_deleted_accounts
-    soft_deleted_accounts.where 'deleted_at BETWEEN :start_date AND :end_date',
-      start_date: @deleted_after,
-      end_date: @deleted_before
+    user_ids_needing_manual_review = QueuedAccountPurge.all.map(&:user_id)
+    soft_deleted_accounts.
+      where(
+        'deleted_at BETWEEN :start_date AND :end_date',
+        start_date: @deleted_after,
+        end_date: @deleted_before
+      ).
+      where.not(id: user_ids_needing_manual_review)
   end
 
   private def manual_review_queue_depth
