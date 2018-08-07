@@ -339,6 +339,7 @@ uz-UZ:
     bloklaridan foydalaning.
   mc_shortdescription: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod
     bloklaridan foydalaning.
+  mc_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   minecraft_agent_button: Boshlash
   minecraft_designer_button: Boshlash
   minecraft_adventurer_button: Boshlash
@@ -518,6 +519,12 @@ uz-UZ:
   touchdevelop_gradelevel: Yuqori sinflar
   blockly_gradelevel: Barcha yoshdagilar uchun
   boxisland_gradelevel: Boshlang‘ich sinflar
+  codeorg_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  codeintl_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  flappy_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  hourofcode_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  playlab_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
+  teacherled_platformtext: Zamonaviy brauzerlar, smartfonlar, planshetlar
   w3schools_beyond_name: HTML bilib oling
   lightbot_beyond_gradelevel: Barcha yoshdagilar uchun
   codecademy_beyond_gradelevel: Yuqori sinflar
