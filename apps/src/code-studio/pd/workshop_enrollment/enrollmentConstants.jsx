@@ -49,6 +49,13 @@ const SCHOOL_TYPES = {
   OTHER: "Other"
 };
 
+const SCHOOL_TYPES_MAPPING = {
+  "Public school": "public",
+  "Private school": "private",
+  "Charter school": "charter",
+  "Other": "other"
+};
+
 const WorkshopPropType = PropTypes.shape({
   id: PropTypes.number,
   course: PropTypes.string,
@@ -81,6 +88,7 @@ export {
   ERROR,
   SUBMISSION_STATUSES,
   SCHOOL_TYPES,
+  SCHOOL_TYPES_MAPPING,
   WorkshopPropType,
   FacilitatorPropType
 };
