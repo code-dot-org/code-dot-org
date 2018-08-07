@@ -290,7 +290,6 @@ Craft.init = function (config) {
           },
           earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(config.level.puzzle_number),
         });
-        Craft.gameController.game.input.touch.preventDefault = false;
 
         if (!config.level.showPopupOnLoad) {
           Craft.initializeAppLevel(config.level);
@@ -636,6 +635,7 @@ Craft.runButtonClick = function () {
   if (Craft.level.usePlayer) {
     Craft.showSoftButtons();
   }
+  Craft.gameController.game.input.touch.preventDefault = false;
 
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');

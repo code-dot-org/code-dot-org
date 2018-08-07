@@ -3,7 +3,7 @@ function getProp(sprite, property) {
     return undefined;
   }
   if (property=="scale") {
-    return sprite.scale*100;
+    return sprite.getScale() * 100;
   } else if (property=="costume") {
    	return sprite.getAnimationLabel();
   } else if (property=="direction") {
