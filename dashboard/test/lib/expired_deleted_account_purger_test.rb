@@ -5,6 +5,11 @@ require_relative '../../../shared/test/spy_newrelic_agent'
 class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   freeze_time
 
+  def setup
+    CDO.hip_chat_logging = false
+    CDO.slack_endpoint = nil
+  end
+
   test 'can construct with no arguments - all defaults' do
     edap = ExpiredDeletedAccountPurger.new
     assert_equal false, edap.dry_run?
