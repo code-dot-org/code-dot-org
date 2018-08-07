@@ -3,6 +3,7 @@ var inputEvents = [];
 var touchEvents = [];
 var collisionEvents = [];
 var callbacks = [];
+var setupCallbacks = [];
 var loops = [];
 var sprites = [];
 var score = 0;
@@ -10,10 +11,29 @@ var game_over = false;
 var show_score = false;
 var title = '';
 var subTitle = '';
+var processed_peaks;
 var bg_sprite = createSprite(200, 200, 400, 400);
 bg_sprite.shapeColor = "white";
 bg_sprite.tint = "white";
 bg_sprite.visible = false;
+
+function preload() {
+  Dance.song.load('https://s3.amazonaws.com/cdo-curriculum/media/uploads/chu.mp3');
+  //Dance.song.load('/api/v1/sound-library/category_background/jazzy_beats.mp3');
+}
+
+function setup() {
+  setupCallbacks.forEach(function (callback) {
+    callback();
+  });
+  /*
+  Dance.song.processPeaks(0, function(peaks) {
+    console.log(peaks);
+    processed_peaks = peaks;
+  });
+  */
+  Dance.song.start();
+}
 
 var dancers = {
   circle: [
@@ -32,11 +52,11 @@ var bg_effects = {
     }
   },
   rainbow: {
-    color: color('hsb(0, 100%, 50%)'),
+    color: color('hsl(0, 100%, 80%)'),
     update: function () {
       push();
-      colorMode(HSB);
-      this.color = color(this.color._getHue() + 10, 100, 100);
+      colorMode(HSL);
+      this.color = color(this.color._getHue() + 10, 100, 80);
       pop();
     },
     draw: function () {
@@ -91,21 +111,6 @@ function initialize(setupHandler) {
 
 // Behaviors
 
-
-
-function removeBehavior(sprite, behavior) {
-  if (!sprite || !behavior) {
-    return;
-  }
-  behavior = normalizeBehavior(behavior);
-
-  var index = findBehavior(sprite, behavior);
-  if (index === -1) {
-    return;
-  }
-  sprite.behaviors.splice(index, 1);
-}
-
 function Behavior(func, extraArgs) {
   if (!extraArgs) {
     extraArgs = [];
@@ -154,73 +159,8 @@ function behaviorsEqual(behavior1, behavior2) {
 
 //Events
 
-function whenUpArrow(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'up'});
-}
-
-function whenDownArrow(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'down'});
-}
-
-function whenLeftArrow(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'left'});
-}
-
-function whenRightArrow(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'right'});
-}
-
-function whenSpace(event) {
-  inputEvents.push({type: keyWentDown, event: event, param: 'space'});
-}
-
-function whileUpArrow(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'up'});
-}
-
-function whileDownArrow(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'down'});
-}
-
-function whileLeftArrow(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'left'});
-}
-
-function whileRightArrow(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'right'});
-}
-
-function whileSpace(event) {
-  inputEvents.push({type: keyDown, event: event, param: 'space'});
-}
-
-function whenMouseClicked(event) {
-  touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
-}
-
-function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
-  touchEvents.push({type: keyWentDown, event: pressedHandler, param: direction});
-  touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
-}
-
-function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
-}
-
 function spriteDestroyed(sprite, event) {
   inputEvents.push({type: isDestroyed, event: event, param: sprite});
-}
-
-function whenTouching(a, b, event) {
-  collisionEvents.push({a: a, b: b, event: event});
-}
-
-function whileTouching(a, b, event) {
-  collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
-}
-
-function whenStartAndStopTouching(a, b, startHandler, stopHandler) {
-  collisionEvents.push({a: a, b: b, event: startHandler, eventEnd: stopHandler});
 }
 
 // Loops
@@ -237,6 +177,10 @@ function forever(loop) {
 
 function register(callback) {
   callbacks.push(callback);
+}
+
+function registerSetup(callback) {
+  setupCallbacks.push(callback);
 }
 
 // Sprite and Group creation
@@ -258,17 +202,7 @@ function makeNewGroup() {
 
 // Helper functions
 
-function randomLoc() {
-  return randomNumber(50, 350);
-}
 
-function showScore() {
-  show_score = true;
-}
-
-function endGame() {
-  game_over = true;
-}
 
 function isDestroyed(sprite) {
   return World.allSprites.indexOf(sprite) === -1;
@@ -374,24 +308,8 @@ function draw() {
   }
 
   drawSprites();
-
-  if (show_score) {
-    fill("black");
-    textAlign(CENTER);
-    textSize(20);
-    text("Score: " + score, 0, 20, 400, 20);
-  }
-  if (game_over) {
-    fill("black");
-    textAlign(CENTER);
-    textSize(50);
-    text("Game Over", 200, 200);
-  } else if (title) {
-    fill("black");
-    textAlign(CENTER);
-    textSize(50);
-    text(title, 200, 150);
-    textSize(35);
-    text(subTitle, 200, 250);
-  }
+  
+  fill("black");
+  //textStyle(BOLD);
+  text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);
 }
