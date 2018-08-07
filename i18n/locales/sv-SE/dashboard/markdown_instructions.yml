@@ -106,11 +106,15 @@ sv:
       4-5 Maze Conditionals 9_markdown_instruction: |-
         En övning till med "Om/annars"-blocket, kan du få det rätt på första försöket?
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "Använd blocket \"upprepa-tills\" och blocket \"om-annars\" för att ta mig till solrosen med så få block som möjligt."
+      4-5 Nested Loops 12_markdown_instruction: Kan du rita dessa 36 trianglar med en nästlad slinga?
       4-5 Nested Loops 3_markdown_instruction: |-
         Skapa en sol genom att nästla in startkoden i en annan slinga. Detta kallas en nästlad slinga. \r
         
+      4-5 Nested Loops 5_markdown_instruction: Repetera den givna koden för att skapa en väderkvarn.
+      4-5 Nested Loops 6_markdown_instruction: Kan du rita en hexagon genom att upprepa triangelkoden?
       4-5 Nested Loops 7_markdown_instruction: "Upprepa denna design 10 gånger. Hur många grader måste du vända varje gång du upprepar? (Ledtråd: Vad är 360 dividerat med 10?)"
       4-5 Nested Loops 8_markdown_instruction: "Upprepa denna design 6 gånger. Hur många grader måste du rotera varje gång du upprepar? (Ledtråd: Vad är 360 dividerat med 6?)"
+      4-5 Nested Loops 9_markdown_instruction: Rita tänderna i alligatorns mun!
       4-5 While Loops 1_markdown_instruction: Flytta mig till hålet och fyll det med två spadtag med jord, använd blocket "fyll".
       4-5 While Loops 2_markdown_instruction: Flytta mig till jordhögen och ta bort den med 5 spadtag, använd blocket "ta bort".
       4-5 While Loops 3_markdown_instruction: "Flytta mig till högen och ta bort hela, gå sedan till hålet och fyll det helt.  Tips: Använd så få block som möjligt."
@@ -305,16 +309,22 @@ sv:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Biet vill bara ha nektar just nu. Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma. Om det är en blomma kan du samla nektar."
       grade3_maze_loops2_markdown_instruction: 'Få mig till Solrosen!'
       grade3_maze_nestedLoops4_markdown_instruction: Använd två slingor för att komma till  grisen med färre block.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Repetera den givna koden för att skapa en väderkvarn.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Upprepa denna design 10 gånger. Hur många grader måste du vända varje gång du upprepar? (Ledtråd: Vad är 360 dividerat med 10?)"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Upprepa denna design 6 gånger. Hur många grader måste du rotera varje gång du upprepar? (Ledtråd: Vad är 360 dividerat med 6?)"
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Kan du rita en hexagon genom att upprepa triangelkoden?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Rita tänderna i alligatorns mun!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Skapa en sol genom att nästla in startkoden i en annan slinga. Detta kallas en nästlad slinga. \r
         
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Kan du rita dessa 36 trianglar med en nästlad slinga?
       grade4_artist_functions2_markdown_instruction: "Med funktioner kan du definiera nya block! Vi har flyttat blocken för att rita en kvadrat till en funktion som kallas \"Rita en kvadrat\". Kan du använda funktionen \"Rita en kvadrat\" för att skapa glasögonen? kvadraterna är 75 pixlar isär."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Repetera den givna koden för att skapa en väderkvarn.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Upprepa denna design 10 gånger. Hur många grader måste du vända varje gång du upprepar? (Ledtråd: Vad är 360 dividerat med 10?)"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Skapa en sol genom att nästla in startkoden i en annan slinga. Detta kallas en nästlad slinga. \r
         
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Kan du rita dessa 36 trianglar med en nästlad slinga?
       grade4_artist_parameters_triangles2_markdown_instruction: Märker du något annorlunda med dessa funktionsblock? Klicka på "Kör" för att se vad som händer.
       grade4_bee_conditionals_quantum2_markdown_instruction: "Biet vill bara ha nektar just nu. Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en blomma. Om det är en blomma kan du samla nektar."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-

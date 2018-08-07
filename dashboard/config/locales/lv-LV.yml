@@ -192,7 +192,7 @@ lv:
     user:
       classroom: Skolotāju mājas lapa
       label: Sveiki, %{username}
-      stats: Mans progress
+      stats: Kodu studija
       settings: Mans konts
       logout: Izrakstīties
       signin: Pierakstīties
@@ -398,6 +398,8 @@ lv:
       body: Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji
     frozen:
       title: Ledus sirds
+    minecraft:
+      body: Iepazīsti Minecraft pasauli, izmantojot kodu
     unplugged_conditionals:
       title: Sazarojumi
   gallery:

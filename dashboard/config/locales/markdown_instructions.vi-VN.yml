@@ -88,10 +88,10 @@ vi:
         Sử dụng hàm để vẽ nhiều vật giống nhau cùng một lúc là cựu kỳ tiện lợi.
         Bạn có thể cùng hàm "vẽ bông hoa" để vẽ hết những cây còn lại trong chậu cây không?
         (Gợi ý: các bông hoa cách nhau 100 pixel)
-      2-3 Artist Functions 12 a_markdown_instruction: |-
-        Sử dụng hàm để vẽ nhiều vật giống nhau cùng một lúc là cựu kỳ tiện lợi.
-        Bạn có thể cùng hàm "vẽ bông hoa" để vẽ hết những cây còn lại trong chậu cây không?
-        (Gợi ý: các bông hoa cách nhau 100 pixel)
+      2-3 Artist Functions 12 a_markdown_instruction: "Hàm có thể vẽ những vật phức
+        tạp nhiều lần một cách tiện lợi. \r\n\r\nBạn có thể dùng hàm \"vẽ bông hoa\"
+        để vẽ hết những cây còn lại trong chậu không? \r\nCác bông hoa cách nhau 100
+        pixel."
       2-3 Artist Functions 12_markdown_instruction: "Hàm có thể vẽ những vật phức
         tạp nhiều lần một cách tiện lợi. \r\n\r\nBạn có thể dùng hàm \"vẽ bông hoa\"
         để vẽ hết những cây còn lại trong chậu không? \r\nCác bông hoa cách nhau 100
@@ -207,9 +207,8 @@ vi:
         ong!
       K-1 Bee Loops 6_markdown_instruction: Sử dụng vòng lặp để lấy mật hoa, mật ong,
         và di chuyển!
-      MC Agent Freeplay_markdown_instruction: 'Chơi tự do: Bây giờ bạn có thể thỏa
-        sức sáng tạo theo ý mình! Hãy sử dụng các lệnh lập trình cho nhân vật đặc
-        vụ để khám phá thế giới này.'
+      MC Agent Freeplay_markdown_instruction: "**Chơi tự do:** Bây giờ bạn có thể
+        thỏa sức sáng tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_2017_Ryan_02_markdown_instruction: "Mã lệnh như thế này có thể được rút gọn
         bằng cách sử dụng vòng lặp! \r \n\r \nBây giờ đưa Đặc vụ đến các tấm áp lực
         bằng cách sử dụng vòng lặp 'lặp lại' để giúp Đặc vụ di chuyển về phía trước."
@@ -221,9 +220,9 @@ vi:
         bằng cách sử dụng các ** phím mũi tên **.  \r \r Để vượt qua cấp độ này, bạn
         cần đi được đến cánh cửa và mở nó ra (sử dụng phím **cách**) sau đó, bạn có
         thể tới được hình vuông màu cam phía trong."
-      MC_HOC_2017_01_Cole_markdown_instruction: Bạn cần phải thu thập tất cả các công
-        cụ trên cuộc hành trình này. Di chuyển xung quanh bằng cách sử dụng các **
-        phím mũi tên **, và đi đến thùng kho báu trên con đường để giành chiến thắng
+      MC_HOC_2017_01_Cole_markdown_instruction: Bạn cần thu thập tất cả các công cụ
+        trong hành trình này. Di chuyển nhân vật xung quanh bằng cách sử dụng các
+        phím mũi tên và di chuyển đến trung tâm của con đường để dành chiến thắng
       MC_HOC_2017_01_Kiki_markdown_instruction: 'Để chơi cấp độ này, nhấp vào nút
         "Chạy" màu da cam bên dưới khu vực chơi, sau đó di chuyển người chơi xung
         quanh bằng cách sử dụng các ** phím mũi tên **.  '
@@ -257,7 +256,7 @@ vi:
         bắt đầu đằng sau cánh cửa bị khóa, bên trong khu rừng bí mật!  \r \r \r \nGiúp
         đỡ Đặc vụ mở cửa bằng cách viết mã lệnh để đưa Đặc vụ đi đến tấm áp lực."
       MC_HOC_2017_04_markdown_instruction: Thay đổi vòng lặp từ câu đố trước để giúp
-        Đặcvụ tạo ra một con đường trên khu vực rộng hơn của con sông này.
+        Đặc vụ tạo ra một con đường đi qua phần rộng hơn của con sông.
       MC_HOC_2017_04POINT5_Cole_markdown_instruction: "Bạn đã thoát khỏi đầm lầy thành
         công! Bây giờ, đưa người chơi đến ô vuông màu cam an toàn. \r \r \nGiúp đỡ
         Đặc vụ dọn sạch con đường bằng cách tìm kiếm một mô hình đơn giản và sử dụng
@@ -347,9 +346,8 @@ vi:
         và giúp người chơi đi đến ô vuông màu da cam.
       MC_HOC_2017_11_Kiki_markdown_instruction: Bây giờ bạn có thể sáng tạo theo ý
         mình! Hãy xem bạn có thể tạo được những gì xung quanh hồ băng này.
-      MC_HOC_2017_13_Cole_markdown_instruction: 'Chơi tự do: Bây giờ bạn có thể thỏa
-        sức sáng tạo theo ý mình! Hãy sử dụng các lệnh lập trình cho nhân vật đặc
-        vụ để khám phá thế giới này.'
+      MC_HOC_2017_13_Cole_markdown_instruction: "**Chơi tự do:** Bây giờ bạn có thể
+        thỏa sức sáng tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_4.5v2_markdown_instruction: "Bạn đã thoát khỏi đầm lầy thành công!
         Bây giờ, đưa người chơi đến ô vuông màu cam an toàn. \r \r \nGiúp đỡ Đặc vụ
         dọn sạch con đường bằng cách tìm kiếm một mô hình đơn giản và sử dụng các
@@ -358,14 +356,13 @@ vi:
         đây.  Làm thế nào bạn có thể sử dụng chúng để tránh các Ghasts và giúp {currentPlayerName}  **lấy
         được quyển sách** [book_enchanted] một cách an toàn?  '
       MC_HOC_2017_FP10x10_markdown_instruction: "**Chơi tự do:** Bây giờ bạn có thể
-        thỏa sức sáng tạo! \nBạn có thể thử thách bản thân thu thập tất cả các viên
-        kim cương trong cấp độ này không? "
+        thỏa sức sáng tạo! Bạn có thể thử thách bản thân thu thập hết các viên kim
+        cương trong cấp độ này không?\n"
       MC_HOC_2017_FP10x10_RE_markdown_instruction: "**Chơi tự do:** Bây giờ bạn có
         thể thỏa sức sáng tạo! Bạn có thể thử thách bản thân thu thập hết các viên
         kim cương trong cấp độ này không?\n"
-      MC_HOC_2017_FP20x20_markdown_instruction: 'Chơi tự do: Bây giờ bạn có thể thỏa
-        sức sáng tạo theo ý mình! Hãy sử dụng các lệnh lập trình cho nhân vật đặc
-        vụ để khám phá thế giới này.'
+      MC_HOC_2017_FP20x20_markdown_instruction: "**Chơi tự do:** Bây giờ bạn có thể
+        thỏa sức sáng tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_Ryan_03_markdown_instruction: "Bạn có biết rằng bạn có thể thêm
         nhiều hơn một câu lệnh vào trong vòng lặp? \r \r Sử dụng một vòng lặp`lặp
         lại` để giúp Đặc vụ xây một cây cầu bắc qua dòng sông bằng cách đặt các khối
@@ -443,17 +440,18 @@ vi:
       frozen square snowflake_markdown_instruction: Bạn có thể tạo một bông tuyết
         sử dụng khối "Lặp lại" để làm một hình vuông 10 lần, và khối "Xoay" để xoay
         36 độ giữa mỗi hình?
-      grade2_MakeDogTag_8_markdown_instruction: Bây giờ bạn hãy kết nối các cụm của
-        V với nhau để tạo thành 1 vòng lặp.
+      grade2_MakeDogTag_8_markdown_instruction: Giờ hãy nối các chữ V lại với nhau
+        trong một vòng lặp.
       grade2_MakeDogTag_9_markdown_instruction: "Hãy làm một thứ gì đó lộng lẫy!\n\r\n\r\nSửa
         lại lệnh của màn chơi trước, lần này thêm lệnh rẽ trái 30 độ vào vòng lặp,
         và lặp các lệnh 24 lần thay vì 8."
-      grade2_PuppyLoops_10_markdown_instruction: Chong chóng của tôi chưa hoàn thành.
-        Tôi cần lặp lại bao nhiêu lần để hoàn thành nó?
-      grade2_PuppyLoops_8_markdown_instruction: 'Mã cho ba bộ râu mà bạn nhìn thấy
-        là sai. Gợi ý: Mỗi bộ râu dài 75 pixels. Sửa mã này để vẽ bộ râu.'
-      grade2_PuppyLoops_9_markdown_instruction: Hình như C trong mã vẽ ngược. Bạn
-        có thể làm cho nó trông giống C?
+      grade2_PuppyLoops_10_markdown_instruction: "Giáo viên của tôi nói tôi phải hoàn
+        tất những gì mình bắt đầu! \r\n\r\nHãy giúp tôi hoàn tất cái chong chóng.
+        Bạn có thấy nó bị sai chỗ nào không?"
+      grade2_PuppyLoops_8_markdown_instruction: "Dòng lệnh vẽ ria cho mèo bị sai.
+        \r\n\r Hãy sửa lại để mỗi chiếc ria dài bằng nhau."
+      grade2_PuppyLoops_9_markdown_instruction: "Có vẻ như chữ C trong từ \"code\"
+        bị viết ngược \r\n\r\nBạn có thể sửa lại nó không?"
       grade3_Conditionals_10_markdown_instruction: |
         Hút mật hoa để làm mật ong.
         Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
@@ -481,9 +479,10 @@ vi:
       grade3_Loops_TeacherIDo_markdown_instruction: "Những bông hoa trông thật hấp
         dẫn! \r \r Hãy thu thập mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất
         các lệnh có thể."
-      grade4_artist_functions2_markdown_instruction: |-
-        Hàm giúp bạn định nghĩa khối mới! Chúng tôi đã chuyển các khối để vẽ một hình vuông vào một hàm gọi là "vẽ hình vuông".
-        Bạn có thể dùng hàm "vẽ hình vuông" để tạo ra chiếc kính không? Các hình vuông các nhau 75 điểm ảnh.
+      grade4_artist_functions2_markdown_instruction: "Hàm giúp bạn tạo ra khối lệnh
+        mới! \r\n\r\nChúng ta đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang
+        tên \"vẽ hình vuông\". Hãy dùng hàm, này để vẽ một khung cửa kính. \r\n\r\nCác
+        hình vuông cách nhau 75 pixel."
       grade4_bee_functions3_markdown_instruction: "Hàm là khối lệnh thực hiện một
         nhiệm vụ.  \r \r sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       grade4_frozen_freeplay_markdown_instruction: Bạn đã chính thức trở thành một

@@ -88,7 +88,7 @@ zh-CN:
             Getting Loopy:
               name: 越来越糊涂
             Graph Paper Programming:
-              name: 图纸上编程
+              name: 方格纸编程
             'Maze: Loops':
               name: 迷宫： 循环
             'Maze: Sequence':
@@ -126,7 +126,7 @@ zh-CN:
             'Bee: Nested Loops':
               name: 蜜蜂：嵌套循环
             Bounce:
-              name: 弹跳
+              name: 跳
             Computational Thinking:
               name: 计算式思维技巧
             Crowdsourcing:
@@ -180,7 +180,7 @@ zh-CN:
             Artist:
               name: 小艺术家
         course4:
-          title: 第4课
+          title: 课程 4
           description: 课程4是为已经通过课程2和课程3的同学们准备的。这节课里同学们将学习怎样结合几种概念解决更复杂的问题。当这节课结束的时候，同学们将得以真正地编写程序来展现他们所学会的多种技能，包括用于循环的函数与带有参数的函数。建议4-8年级同学学习。
           description_short: 通过计数循环和带有参数的函数等新概念来建立更复杂的程序。这是课程3的后续。
           description_audience: 10-18 岁
@@ -404,13 +404,13 @@ zh-CN:
             Functions:
               name: 函数
             Graph Paper Programming:
-              name: 图纸上编程
+              name: 方格纸编程
             Introduction to Computer Science:
-              name: 计算机科学导论
+              name: 计算机概论
             Relay Programming:
               name: 编程接力
             Song Writing:
-              name: 歌曲创作
+              name: 歌曲写作
             The Artist:
               name: 小艺术家
             The Artist 2:
@@ -454,7 +454,7 @@ zh-CN:
           description_short: 事件
           stages:
             Bounce:
-              name: 弹跳
+              name: 跳
             Calc:
               name: 计算
             Eval:
@@ -462,12 +462,12 @@ zh-CN:
             Studio:
               name: 工作室
         flappy:
-          title: 像素鸟编程
+          title: 飞扬的代码
           description: 想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！
           description_short: 写一个自己的Flappy游戏！
           stages:
             Flappy Code:
-              name: 像素鸟编程
+              name: 飞扬的代码
         jigsaw:
           title: 拼图
           description: 试试拼图教程
@@ -498,6 +498,7 @@ zh-CN:
             Puzzles:
               name: 关卡
         cspunit1:
+          description_short: 这个单元是试用版，讲不再支持或更新。你可以在 code.org/educate/csp 中找到新的单元。
           stages:
             Binary Numbers:
               name: 二进制数
@@ -640,6 +641,8 @@ zh-CN:
             PDK5 Intro:
               name: PDK5 介绍
         cspunit3:
+          description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
+          description_short: 这个单元是试用版，讲不再支持或更新。你可以在 code.org/educate/csp 中找到新的单元。
           stages:
             APIs and Function Parameters:
               name: 编程接口和函数参数
@@ -851,7 +854,15 @@ zh-CN:
               name: 神秘的模型
             Welcome Back!:
               name: 欢迎回来！
+        Testing:
+          title: 正在测试
+          description: 正在测试
+          description_short: 正在测试
+          stages:
+            Testing:
+              name: 正在测试
         cspunit2:
+          description_short: 这个单元是试用版，讲不再支持或更新。你可以在 code.org/educate/csp 中找到新的单元。
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: 困难的问题 - 销售员旅行问题
@@ -938,7 +949,7 @@ zh-CN:
             Bee:
               name: 蜜蜂
             Bounce:
-              name: 弹跳
+              name: 跳
             CSinA:
               name: CSinA
             Farmer:
@@ -1256,7 +1267,7 @@ zh-CN:
             Getting Loopy:
               name: 越来越糊涂
             Graph Paper Programming:
-              name: 图纸上编程
+              name: 方格纸编程
             Happy Maps:
               name: 快乐地图
             Move it, Move it:
@@ -1520,6 +1531,7 @@ zh-CN:
             Unit 3 Overview:
               name: 第3单元概述
         cspunit3temp:
+          description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
           description_short: 这个单元是试用版，讲不再支持或更新。你可以在 code.org/educate/csp 中找到新的单元。
           stages:
             Canvas and Arrays in Apps:
@@ -1601,6 +1613,7 @@ zh-CN:
             Wrap-Up:
               name: 总结
         cspunit5:
+          description_short: 这个单元是试用版，讲不再支持或更新。你可以在 code.org/educate/csp 中找到新的单元。
           stages:
             Create PT:
               name: 创建表演任务
@@ -1611,6 +1624,7 @@ zh-CN:
             Explore PT Prep:
               name: 探索表演任务的准备工作
         cspunit4:
+          description_short: 这个单元是试用版，讲不再支持或更新。你可以在 code.org/educate/csp 中找到新的单元。
           stages:
             Check Your Assumptions:
               name: 检查您的假设
@@ -2743,7 +2757,7 @@ zh-CN:
             Bee Debugging:
               name: 蜜蜂调试
             Bounce:
-              name: 弹跳
+              name: 跳
             Build a Game:
               name: 建立游戏
             Farmer Conditional with Cards:
@@ -3251,7 +3265,7 @@ zh-CN:
           description: 选择你的球队进行一场篮球比赛
           stages:
             Bounce:
-              name: 弹跳
+              name: 跳
         sample-csp5:
           stages:
             Controlling Memory with Variables:
@@ -3590,7 +3604,7 @@ zh-CN:
               name: 计算机科学发现课后问卷
         minecraft:
           title: 我的世界 编码时间设计师
-          description_short: 在你自己的《我的世界》中编写各种动物和其他生物。
+          description_short: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
           description: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
           stages:
             Minecraft Hour of Code Designer:
@@ -3600,7 +3614,7 @@ zh-CN:
             Pre Hour of Code Survey:
               name: 编程一小时预调查
             Flappy Code:
-              name: 像素鸟编程
+              name: 飞扬的代码
             Post Hour of Code Survey:
               name: 编程一小时事后调查
         coursea-draft:
@@ -3711,6 +3725,7 @@ zh-CN:
             Loops in Harvester:
               name: 收割者中的循环
         coursed-draft:
+          title: 计算机科学基础：课程D
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3868,7 +3883,7 @@ zh-CN:
             Post Hour of Code Survey:
               name: 编程一小时事后调查
         sports:
-          title: 用代码编写你自己的体育比赛。
+          title: 用代码编写你自己的体育赛事
           description_short: 为你自己的运动编写代码
           description: 为你自己的运动编写代码
           stages:
@@ -4965,7 +4980,7 @@ zh-CN:
             Ice Age Play Lab:
               name: 冰川时代实验室
             Bounce:
-              name: 弹跳
+              name: 跳
             NewBounce:
               name: NewBounce
             F PlayLab Variables:
@@ -5828,6 +5843,7 @@ zh-CN:
               name: 请完成计算机科学原理中期课程调查
           title: 计算机科学原理单元3：介绍编程（子目标）
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
+          description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
         csd4-draft:
           stages:
             Analysis of Design:
@@ -7008,7 +7024,7 @@ zh-CN:
               name: 没有斑点的Bug
               description_teacher: 这一个会引导学生完成调试的步骤。学生会学习到这个咒语：“发生什么了？应该发生什么？这告诉了你什么？”
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 杰拉德和大项目
+              name: 斯蒂夫和大项目
               description_teacher: "当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\r\n\r\n这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。"
             'Real-life Algorithms: Plant a Seed':
               name: 种下一颗种子
@@ -7057,7 +7073,7 @@ zh-CN:
           description_audience: 年龄：9-18
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 图纸上编程
+              name: 方格纸编程
             Introduction:
               name: 介绍
             Building a Foundation:
@@ -7244,7 +7260,7 @@ zh-CN:
           description_audience: 年龄：7-11
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 图纸上编程
+              name: 方格纸编程
             Introduction:
               name: 介绍
             Building a Foundation:
@@ -7288,7 +7304,7 @@ zh-CN:
             Conditionals & Loops in Harvester:
               name: 收割者里的条件和循环
             Graph Paper Programming:
-              name: 图纸上编程
+              name: 方格纸编程
             Relay Programming:
               name: 编程接力
             Introduction to Online Puzzles:
@@ -7422,7 +7438,7 @@ zh-CN:
             Binary Bracelets:
               name: 二进制的手镯
             Looking Ahead:
-              name: 展望未来
+              name: 与《我的世界》往前看
         csd6-2018:
           title: CSD 6 单元- 物理计算
           description: 单元6探讨了硬件平台在计算中的作用, 以及不同的传感器如何能够提供比传统键盘、鼠标和显示器更有效的输入和输出。使用应用程序实验室和
@@ -8554,7 +8570,7 @@ zh-CN:
             'Debugging: Unspotted Bugs':
               name: 没有斑点的Bug
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 杰拉德和大项目
+              name: 斯蒂夫和大项目
             'Real-life Algorithms: Plant a Seed':
               name: 真实算法： 播种一颗种子
             Learn to Drag and Drop:

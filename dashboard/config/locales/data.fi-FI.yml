@@ -6,7 +6,7 @@ fi:
         Unplug1: Johdanto tietojenkäsittelyyn
         Maze: Sokkelo
         Multi: Monivalintajuttuja
-        Unplug2: Automatisointiajattelu
+        Unplug2: Laskennallinen ajattelu
         Unplug3: Ruutupaperiohjelmointi
         Artist: Taiteilija
         Unplug4: Algoritmit
@@ -701,7 +701,7 @@ fi:
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan
-        run: Paina "Suorita" kokeillaksesi ohjelmaa
+        run: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
         watch_again: Klikkaa tästä jos haluat katsella videon uudelleen
         gray_block_explanation: Harmaita lohkoja ei voi poistaa. Pystytkö silti ratkaisemaan
           tehtävän?

@@ -106,11 +106,15 @@ cs:
       4-5 Maze Conditionals 9_markdown_instruction: |-
         Další cvičení pro blok "if-else". Zvládneš to na první pokus?
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "Použij bloky \"opakovat až do\" a \"if-else\" dostat mne ke slunečnici pokud možná několika bloky."
+      4-5 Nested Loops 12_markdown_instruction: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       4-5 Nested Loops 3_markdown_instruction: |-
         Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
         
+      4-5 Nested Loops 5_markdown_instruction: Zacykluj daný kód k vytvoření větrného mlýnu.
+      4-5 Nested Loops 6_markdown_instruction: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
       4-5 Nested Loops 7_markdown_instruction: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
       4-5 Nested Loops 8_markdown_instruction: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co dává 360 děleno 10?)"
+      4-5 Nested Loops 9_markdown_instruction: Nakresli zuby v tlamě aligátora!
       4-5 While Loops 1_markdown_instruction: Přesuň mě do díry a naplň ji s dvěma lopatami špíny pomocí bloku "výplň".
       4-5 While Loops 2_markdown_instruction: Přesuň mě na hromadu kompostu a odstraň ji 5 lopatami na kopečky pomocí bloku 'odstranit'.
       4-5 While Loops 3_markdown_instruction: "Přesuň mě na hromadu a odstraň všechno přesunutím do díry a vyplň ji zcela.  Rada: Použij pokud možno  pár bloků."
@@ -248,6 +252,7 @@ cs:
       courseD_bee_nestedLoops5_markdown_instruction: 'Sesbírat všechen nektar z každého květu a udělat med na každé plástvi. Použij vnořené cykly. '
       courseD_bee_nestedLoops8_markdown_instruction: 'Sesbírat všechen nektar z každého květu a udělat med na každé plástvi. Použij vnořené cykly. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Sesbírat všechen nektar z každého květu a udělat med na každé plástvi. Použij vnořené cykly. '
+      courseD_bounce_events1_markdown_instruction: Dostaňte se k vlajce! Připojte blok k bloku "když vlevo šipka"a stiskněte tlačítko "Spustit", aby se hráč dostal k vlajce.
       courseD_maze_nestedLoops4_markdown_instruction: 'Dostaň mě ke slunečnici!'
       courseD_maze_nestedLoops4_2018_markdown_instruction: 'Dostaň mě ke slunečnici!'
       courseE_bee_functions3_markdown_instruction: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
@@ -310,16 +315,22 @@ cs:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar."
       grade3_maze_loops2_markdown_instruction: 'Dostaň mě ke slunečnici!'
       grade3_maze_nestedLoops4_markdown_instruction: Použij dva cykly se dostat k prasátku pomocí méně bloků.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Zacykluj daný kód k vytvoření větrného mlýnu.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co dává 360 děleno 10?)"
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Nakresli zuby v tlamě aligátora!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
         
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       grade4_artist_functions2_markdown_instruction: "Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané \"nakreslit čtverec\". Můžeš použít funkci \"nakreslit čtverec\" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Zacykluj daný kód k vytvoření větrného mlýnu.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
         
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       grade4_artist_parameters_triangles2_markdown_instruction: Všiml jsi si něčeho neobvyklého na těchto funkčních blocích? Klepni na "Run", abys vidělco se stane.
       grade4_bee_conditionals_quantum2_markdown_instruction: "Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-

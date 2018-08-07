@@ -12,16 +12,16 @@ ar:
       draw a house: رسم منزل
       draw a star: رسم نجمة
       do something: القيام بشيء ما
-      jump: إقفز
+      jump: قفز
       set score: تعيين النتيجة
       get nectar: الحصول على الرحيق
       test: اختبار
       diamond: ماسة
       move: تحريك
-      move right: تحريك إلى اليمين
+      move right: تحريك لليمين
       move up: تحريك لأعلى
       move down: تحريك لأسفل
-      move left: تحريك إلى اليسار
+      move left: تحرك لليسار
       collect: جمع
       turn left: اتجه إلى اليسار
       move forward: تحريك إلى الأمام

@@ -14580,6 +14580,9 @@ en:
         triangle_geometry_hint: 'Remember: an equilateral triangle has three sides, with a 60 degree turn between each!'
         repeat_pointer: You have to draw a side and turn 3 times...what block can you use to run the same instructions many times?
         repeat_bottom_out: Use a `repeat 3 times` block!
+      farmer-test-lb_authored_hint:
+        hint_1: Testing 123
+        hint_2: Pointing 123
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: You'll need three `repeat` loops to solve this puzzle.
       grade1_adventurer_loops2_authored_hint:

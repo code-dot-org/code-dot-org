@@ -2,13 +2,13 @@
 ja:
   data:
     block_categories:
-      Actions: うごき
+      Actions: 操作
       Loops: くりかえし
       Functions: 関数(かんすう)
       Color: 色
       Brushes: ブラシ
       Math: 計算(けいさん)
-      Logic: ロジック
+      Logic: ロジック（論理）
       Variables: 変数
       Number: 数（かず）
       String: 文字列（もじれつ）
@@ -20,7 +20,7 @@ ja:
       Comments: コメント
       Category: カテゴリー
       Prebuilt: あらかじめつくられた
-      Text: テキスト（文字列）
+      Text: テキスト
       Picker: ピッカー
       Comment: コメント
       'Variables ': '変数(へんすう) '

@@ -9,8 +9,14 @@ ky:
         кодунда ката бар. Сүрөтчүгө сабакты тартуунун туура жолун таап бере аласыңбы?"
       NEW Course 4 Artist Params 2_markdown_instruction: Жактарынын узундугу 50 пиксел
         болгон "үч бурчтук тарт" функциясын жаңыдан түзгүлө.
+      courseA_maze_ramp4a_2018_markdown_instruction: Кодду аякташ үчүн кайсы блокту
+        башка блоктун алдына кошушуңар керегин таба аласыңарбы?
+      courseB_Scrat_ramp4a_2018_markdown_instruction: Кодду аякташ үчүн кайсы блокту
+        башка блоктун алдына кошушуңар керегин таба аласыңарбы?
       courseB_iceage_loops10_markdown_instruction: Скрат бүт жолду өтүп, жаңгакка
         жеткенге жардам бергиле!
+      courseB_iceage_loops11_markdown_instruction: Скратты жаңгакка жеткиргиле!
+      courseB_iceage_loops11_forVideo_markdown_instruction: Скратты жаңгакка жеткиргиле!
       courseB_iceage_loops4_markdown_instruction: Бир же көп блок кошуп, Скратты жаңгакка
         жеткиргиле!
       courseB_iceage_loops7_markdown_instruction: 'Скрат тигил жаңгакты каалап турат! '
@@ -18,11 +24,49 @@ ky:
         Скратты ага жеткизе аласыңбы?
       courseD_iceage_loops10_markdown_instruction: Скрат бүт жолду өтүп, жаңгакка
         жеткенге жардам бергиле!
+      courseD_iceage_loops11_markdown_instruction: Скратты жаңгакка жеткиргиле!
       courseD_iceage_loops4_markdown_instruction: Бир же көп блок кошуп, Скратты жаңгакка
         жеткиргиле!
       courseD_iceage_loops7_markdown_instruction: 'Скрат тигил жаңгакты каалап турат! '
       courseD_iceage_loops9_markdown_instruction: Жаңгакка чейин алыс! Циклдарды колдонуп
         Скратты ага жеткизе аласыңбы?
+      courseD_maze_ramp1_markdown_instruction: Бул башкатырмада анын басканын көрүш
+        үчүн блокторду бириктиргиле дагы "Аткарууну" баскыла!
+      courseD_maze_ramp1_2018_markdown_instruction: Бул башкатырмада анын басканын
+        көрүш үчүн блокторду бириктиргиле дагы "Аткарууну" баскыла!
+      courseD_maze_ramp2_markdown_instruction: Кодуңарды аякташ үчүн куралтактадан
+        жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун
+        алдына кошкула.
+      courseD_maze_ramp2_2018_markdown_instruction: Кодуңарды аякташ үчүн куралтактадан
+        жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун
+        алдына кошкула.
+      courseD_scrat_ramp1_markdown_instruction: Бул башкатырмада анын басканын көрүш
+        үчүн блокторду бириктиргиле дагы "Аткарууну" баскыла!
+      courseD_scrat_ramp1_2018_markdown_instruction: Бул башкатырмада анын басканын
+        көрүш үчүн блокторду бириктиргиле дагы "Аткарууну" баскыла!
+      courseD_scrat_ramp2_markdown_instruction: Кодуңарды аякташ үчүн куралтактадан
+        жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун
+        алдына кошкула.
+      courseD_scrat_ramp2_2018_markdown_instruction: Кодуңарды аякташ үчүн куралтактадан
+        жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун
+        алдына кошкула.
+      courseD_scrat_ramp4_markdown_instruction: Жарылган музду баспагыла, Скратты
+        сактагыла!
+      courseD_scrat_ramp4_2018_markdown_instruction: Жарылган музду баспагыла, Скратты
+        сактагыла!
+      courseD_scrat_ramp6_markdown_instruction: Циклдар менен Скратты жаңгакка жеткиргиле!
+      courseD_scrat_ramp6_2018_markdown_instruction: Циклдар менен Скратты жаңгакка
+        жеткиргиле!
+      courseD_scrat_ramp7_markdown_instruction: Скратты жаңгакка жеткиргиле!
+      courseD_scrat_ramp7_2018_markdown_instruction: Скратты жаңгакка жеткиргиле!
+      courseE_maze_ramp2_markdown_instruction: Кодуңарды аякташ үчүн куралтактадан
+        жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун
+        алдына кошкула.
+      courseE_maze_ramp2_2018_markdown_instruction: Кодуңарды аякташ үчүн куралтактадан
+        жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун
+        алдына кошкула.
+      courseF_IceAge_3_markdown_instruction: Скрат жаңгагын издөөдө! Ал акыркы 200
+        пикселди өткөнгө жардам бере аласыңбы?
       frozen circle function in circle_markdown_instruction: Ар тегеректен кийин 18
         градуска буруп, кесилишкен 20 тегерек түзгүлө.
       frozen circle function with parameter_markdown_instruction: '"Тегерек түзүү"
@@ -105,3 +149,7 @@ ky:
       grade4_review_artist3_markdown_instruction: Секирүү блогу сүрөтчүнү тарттырбай
         жылдырат. "Алдыга секир" жана "алдыга жыл" блокторун колдонуп үзүндү сызык
         тарткыла. Ар бир сызыкчанын узундугу 50 пиксел болсун.
+      iceage_move_to_flag_markdown_instruction: Скрат жаңгагын издөөдө! Ал акыркы
+        200 пикселди өткөнгө жардам бере аласыңбы?
+      iceage_move_to_flag_2018_markdown_instruction: Скрат жаңгагын издөөдө! Ал акыркы
+        200 пикселди өткөнгө жардам бере аласыңбы?

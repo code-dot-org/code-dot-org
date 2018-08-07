@@ -208,6 +208,7 @@ he:
         יאללה, עוד חידה אחת כדי לתרגל את הבלוק "אם/אחרת"!
         
         עקוב אחר הדרך עם האצבע כדי לראות אם תוכל למצוא את הפתרון בניסיון הראשון שלך.
+      4-5 Nested Loops 9_markdown_instruction: צייר את השיניים בפה של התנין!
       4-5 Nested Loops Assessment 1_markdown_instruction: "**הערכה:** השתמש בלולאה מקוננת כדי להשלים את העיצוב."
       AWS applab_markdown_instruction: |-
         # עשה את הדברים הללו
@@ -593,6 +594,7 @@ he:
       grade3_maze_nestedLoops3_markdown_instruction: הבא אותי אל החזיר! תוכל להשתמש רק בבלוק יחיד של "זוז קדימה" בכל פעם
       grade3_maze_nestedLoops4_markdown_instruction: השתמש בשתי לולאות כדי להגיע לחזיר עם פחות בלוקים.
       grade4_arist_nested_loop_circles1_markdown_instruction: "**הערכה:** השתמש בלולאה מקוננת כדי להשלים את העיצוב."
+      grade4_arist_nested_loop_triangles4_markdown_instruction: צייר את השיניים בפה של התנין!
       grade4_artist_functions2_markdown_instruction: "פונקציות מאפשרות לך ליצור בלוקים חדשים!\nהעברנו את הבלוקים המציירים ריבוע לתוך פונקציה הנקראת \"צייר ריבוע\".\nתוכל להשתמש ב \"צייר ריבוע\"רי ליצור את המשקפיים ? \nהריבועים מרוחקים 75 פיקסלים אחד מהשני."
       grade4_artist_nested_loop_circles1_markdown_instruction: "**הערכה:** השתמש בלולאה מקוננת כדי להשלים את העיצוב."
       grade4_bee_conditionals_nested_loops_markdown_instruction: "**המטלה:** לאסוף את כל הצוף. \nהזהר לא לאסוף צוף מפרחים סגולים אשר אין להם צוף."
@@ -605,7 +607,7 @@ he:
         אחרת, צור דבש (מכיוון שיש כוורת).
       grade4_bee_functions2_markdown_instruction: "פונקציות הם בלוקים של קוד המבצעות משימה. \n\nהשתמש בפונקציה \"הבא 2 צופים\" כדי לאסוף את הצוף מכל פרח."
       grade4_bee_functions3_markdown_instruction: "פונקציות הן בלוקים של קוד המבצעים משימה.\nהשתמש בפונקציה \"קבל 5\" כדי לקבל 5 יחידות צוף בבת אחת.\nהשתמש בלולאה כדי לקבל מספר אידיאלי של בלוקים."
-      grade4_frozen_freeplay_markdown_instruction: רשמית הפכתם כעת לרב -אמן! צרו ארץ פלאים חורפית.
+      grade4_frozen_freeplay_markdown_instruction: הפכתם רשמית לרבי-אמנים! צרו את ארץ החורף הפלאית שלכם.
       grade4_frozen_functions0_markdown_instruction: עיגול הוא צורה מיוחדת. האם תוכלו להבין באיזה מספר יש להחליף את סימן השאלה כדי לצייר עיגול?
       grade4_frozen_functions1a_markdown_instruction: השתמשו בבלוק "צור עיגול" החדש כדי ליצור 10 עיגולים חופפים. אל תשכחו לבצע קפיצה קדימה בין העיגולים.
       grade4_frozen_functions2_markdown_instruction: עכשיו בואו ניצור 20 עיגולים חופפים, עם זווית של 18 מעלות בין כל עיגול.

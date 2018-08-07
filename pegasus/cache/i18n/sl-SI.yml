@@ -11,7 +11,7 @@ sl-SI:
     Explorer 8, 9 in 10. Prosimo, nadgradite s sodobnim brskalnikom.
   upgrade_ie_link: Več o tem
   en: računalniška znanost, računalništvo
-  computer_science_edweek: Computer Science Education Week
+  computer_science_edweek: Ura za kodo je tu
   csedweek_dates: 8. - 14. december 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Ura za kodo</a> prihaja. Pozivamo vse učitelje in organizatorje,
@@ -203,7 +203,7 @@ sl-SI:
   studiobar_teacher_body: Vpeljite Code Studio v svoj razred
   studiobar_frozen_title: Ura kode
   studiobar_frozen_body: Ustvari čudežni svet z Anno in Elso
-  studiobar_donate_title: Doniraj
+  studiobar_donate_title: Prispevaj
   studiobar_donate_body: En otrok se nauči programirati za vsak doniran dolar
   studiobar_shop_title: trgovina
   studiobar_shop_body: Razbij stereotipe. Ponosno nosi naš logo.
@@ -308,7 +308,7 @@ sl-SI:
   homepage_header_codestudio: Izdelki učencev v Code Studio
   homepage_header_donors: Code.org se zahvaljuje podpornikom
   homepage_donors_seall: Oglejte si vse
-  homepage_donors_donate: Doniraj
+  homepage_donors_donate: Prispevaj
   homepage_below_hero_announcement_link_text: Več o tem
   contact_form_topic_student: Sem študent
   contact_form_topic_parent: Sem starš
@@ -369,10 +369,10 @@ sl-SI:
   starwars_platform_text: Sodobni brskalniki, pametni telefoni, tablice
   mc_name: Minecraft Ura za kodo
   mc_longdescription: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
-    v svet Minecraft-a.
+    v svet Minecraft-a
   mc_shortdescription: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
-    v svet Minecraft-a.
-  mc_gradelevel: Starost 4-104
+    v svet Minecraft-a
+  mc_gradelevel: Starost 6+
   mc_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   mc_specs: Več jezikov / Sodobni brskalniki in tablice / Starost 6-106
   minecraft_designer: Minecraft Oblikovalec
@@ -380,6 +380,8 @@ sl-SI:
   minecraft_tutorials: Minecraft Ura za kodo vadnice
   minecraft_specs: Več jezikov | Sodobni brskalniki in tablice | Starost 2+
   minecraft_agent_button: Začni
+  minecraft_designer_description: Sprogramiraj živali in druga Minecraft bitja v svoji
+    lastni različici Minecrafta.
   minecraft_designer_button: Začni
   minecraft_adventurer_description: Uporabi kodo, da popelješ Alexa ali Steva na pustolovščino.
   minecraft_adventurer_button: Začni
@@ -785,7 +787,7 @@ sl-SI:
   kodable_gradelevel: Osnovna šola
   tynkerapp_gradelevel: Starost 5-13
   robomindnl_gradelevel: Starost 8-13
-  flappy_gradelevel: Starost 4-104
+  flappy_gradelevel: Starost 6+
   bitsbox_gradelevel: Osnovna šola
   makeschool_gradelevel: Srednja šola
   touchdevelop_gradelevel: Srednja šola
@@ -794,7 +796,7 @@ sl-SI:
   thinkersmith2_gradelevel: Starost 8 +
   kodableunplugged_gradelevel: Starost 8-13
   projguts_gradelevel: Starost 10-13
-  hourofcode_gradelevel: Starost 4-104
+  hourofcode_gradelevel: Starost 6+
   frozen_gradelevel: Starost 8 +
   starwars_gradelevel: Starost 6+
   playlab_gradelevel: Starost 4-104
@@ -820,7 +822,7 @@ sl-SI:
   accelerated_gradelevel: Starost 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
-  thinkersmithspanish_platformtext: Brez prijave
+  thinkersmithspanish_platformtext: Izštekano
   khan_platformtext: Sodobni brskalniki
   khanes_platformtext: Sodobni brskalniki
   khanpt_platformtext: Sodobni brskalniki
@@ -830,7 +832,7 @@ sl-SI:
   tynker_platformtext: Sodobni brskalniki
   scratch_platformtext: Samo namizni spletni brskalniki (ne tablice)
   lightbot_platformtext: VSI brskalniki in iOS, Android ali igralne konzole
-  thinkersmith_platformtext: Brez prijave
+  thinkersmith_platformtext: Izštekano
   condcards_platformtext: Izštekano
   lightbotintl_platformtext: iOS, Android (ali spletni brskalnik)
   codehs_platformtext: Sodobni brskalniki. (Nadaljevalni tečaj zahteva $$)
@@ -851,9 +853,9 @@ sl-SI:
   touchdevelop_platformtext: Sodobni brskalniki, pametni telefoni, vse naprave
   appinventor_platformtext: Sodobni brskalniki + Android
   blockly_platformtext: Le sodobni brskalniki
-  thinkersmith2_platformtext: Brez prijave
-  kodableunplugged_platformtext: Brez prijave
-  projguts_platformtext: Brez prijave
+  thinkersmith2_platformtext: Izštekano
+  kodableunplugged_platformtext: Izštekano
+  projguts_platformtext: Izštekano
   hourofcode_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   frozen_platformtext: Sodobni brskalniki + tablica
   starwars_platformtext: Sodobni brskalniki + tablica
@@ -1073,7 +1075,7 @@ sl-SI:
   lynda_beyond_name: Spletni tečaji programiranja
   edx_beyond_name: Harvard CS50 razred
   coursera_beyond_name: Stanford CS 101 razred
-  teachingtree_beyond_name: Univerzitetni tečaje na spletu
+  teachingtree_beyond_name: Univerzitetni tečaji na spletu
   w3schools_beyond_name: Nauči se HTML
   codeavengers_beyond_name: Nauči se kodirati spletne strani
   arduino_beyond_name: Arduino s Sparkfun

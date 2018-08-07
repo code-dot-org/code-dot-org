@@ -435,7 +435,7 @@ ko-KR:
   minecraft_tutorials: Minecraft Hour of Code 튜토리얼
   minecraft_specs: 여러 언어 | 최신 웹브라우저, 태블릿 | 초등학교 2학년 이상
   minecraft_agent_button: '시작:'
-  minecraft_designer_description: 자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요.
+  minecraft_designer_description: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
   minecraft_designer_button: '시작:'
   minecraft_adventurer_description: 코드를 사용하여 Alex나 Steve와 함께 모험에 도전해보세요.
   minecraft_adventurer_button: '시작:'
@@ -682,7 +682,7 @@ ko-KR:
   dashboard_navigation_view_assessments_surveys: 평가/조사
   dashboard_navigation_add_students: 학생 추가
   dashboard_navigation_manage_students: 학생 관리
-  dashboard_navigation_lesson_plans_resources: 수업 계획 및 자료
+  dashboard_navigation_lesson_plans_resources: 표준 및 프레임워크
   dashboard_navigation_view_stats: 통계
   dashboard_navigation_section: '섹션: %{section_name}'
   dashboard_navigation_student: '학생: %{student_name}'
@@ -1110,7 +1110,7 @@ ko-KR:
   kodableunplugged_platformtext: 언플러그드
   projguts_platformtext: 언플러그드
   hourofcode_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
-  frozen_platformtext: 최신 웹 브라우져 + 태블릿
+  frozen_platformtext: 최신 웹브라우져 + 태블릿
   starwars_platformtext: 최신 웹브라우져 + 태블릿
   playlab_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   monstercoding_platformtext: 최신 웹브라우져, iOS, 안드로이드
@@ -1319,7 +1319,7 @@ ko-KR:
   lynda_beyond_name: 온라인 프로그래밍 과정
   edx_beyond_name: 하버드 대학 CS50 강의
   coursera_beyond_name: 스탠포드 대학 CS 101 과정
-  teachingtree_beyond_name: 대학 온라인 과정
+  teachingtree_beyond_name: 온라인 대학 강좌들
   w3schools_beyond_name: HTML 배우기
   codeavengers_beyond_name: 웹 사이트 제작 코드 배우기
   arduino_beyond_name: 스파크펀(Sparkfun)과 함께하는 아두이노(Arduino)
@@ -1539,6 +1539,7 @@ ko-KR:
   compatibility_unsupported_browser: 브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}',
     target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지
     않을 수 있습니다.
+  starwars_shortcode: 별
   flappy_shortcode: 펄럭이기
   header_home: 홈
   header_my_dashboard: 대시보드

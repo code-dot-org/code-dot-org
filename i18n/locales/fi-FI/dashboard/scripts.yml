@@ -116,7 +116,7 @@ fi:
             Bounce:
               name: Bounce
             Computational Thinking:
-              name: Automatisointiajattelu
+              name: Laskennallinen ajattelu
             Crowdsourcing:
               name: Joukkoistaminen
             Dice Race:
@@ -134,7 +134,7 @@ fi:
             'Maze: Conditionals':
               name: 'Sokkelo: ehtolauseet'
             Songwriting:
-              name: Parametroitu sävellys
+              name: Säveltäminen
             'Studio: Create a Game':
               name: 'Pelilabra: Luo peli'
             'Studio: Create a Story':
@@ -335,7 +335,7 @@ fi:
             Algorithms:
               name: Algoritmit
             Computational Thinking:
-              name: Automatisointiajattelu
+              name: Laskennallinen ajattelu
             Conditionals:
               name: Ehtolausekkeet
             Functions:
@@ -578,6 +578,10 @@ fi:
               name: Internet simulaattori
             Welcome!:
               name: Tervetuloa!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Tietojenkäsittelyn Perusteet
         ECSPD2:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -671,7 +675,7 @@ fi:
             'Real-life Algorithms: Plant a Seed':
               name: 'Tosielämän algoritmit: kylvä siemen'
             Songwriting:
-              name: Parametroitu sävellys
+              name: Säveltäminen
             The Big Event:
               name: Suuri tapahtuma
         ScienceP3OLPT2:
@@ -845,7 +849,7 @@ fi:
             Digital Citizenship:
               name: Digitaalinen kansalaisuus
             Songwriting:
-              name: Parametroitu sävellys
+              name: Säveltäminen
         grade1:
           stages:
             Events:
@@ -1381,7 +1385,7 @@ fi:
             Conditionals with Cards:
               name: Ehtolauseet pelikorteilla
             'Functions: Songwriting':
-              name: Parametroitu sävellys
+              name: Säveltäminen
             Envelope Variables:
               name: Kirjekuorimuuttujat
             For Loop Fun:
@@ -1449,7 +1453,7 @@ fi:
             Introduction:
               name: Johdanto
             'Functions: Songwriting':
-              name: Parametroitu sävellys
+              name: Säveltäminen
             Internet:
               name: Internetti
             Crowdsourcing:

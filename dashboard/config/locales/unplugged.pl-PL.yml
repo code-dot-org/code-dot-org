@@ -150,7 +150,7 @@ pl:
           i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam
           punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'
       BigEvent:
-        title: Wielkie Wydarzenie
+        title: Wielkie wydarzenie
         desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
           są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
           przyciski na papierze a uczniowie będą reagować w zależności od tego, który
@@ -322,7 +322,7 @@ pl:
         desc: Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Nauczyciele
           przedstawiają, jak bezpiecznie nawigować po Internecie.
       courseABC_unplugged_bigEvent:
-        title: Wielkie Wydarzenie
+        title: Wielkie wydarzenie
         desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
           są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
           przyciski na papierze a uczniowie będą reagować w zależności od tego, który
@@ -356,7 +356,7 @@ pl:
         desc: Uczniowie piszą algorytm (zestaw instrukcji) korzystając ze zbioru wcześniej
           zdefiniowanych poleceń, aby kierować innymi uczniami przy odtworzeniu rysunku.
       courseD_unplugged_relayProgramming:
-        title: Programowanie przekaźnika
+        title: Sztafeta programowania
         desc: Uczniowie tworzą sztafetę, w której biegną przez trawnik, aby zapisać
           algorytm oparty na obrazie pochodzącym z "Programowania na papierze". Każdy
           uczeń może zapisywać tylko jedną instrukcję i jeśli w jakimś punkcie pojawia
@@ -442,7 +442,7 @@ pl:
         title: Pętle bez komputera
         desc: W tej lekcji dowiesz się, jak używać pętli!
       BigEvent_2018:
-        title: Wielkie Wydarzenie
+        title: Wielkie wydarzenie
         desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
           są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
           przyciski na papierze a uczniowie będą reagować w zależności od tego, który
@@ -491,4 +491,4 @@ pl:
       MoveItMoveIt_2018:
         title: Przenieść go, przenieść go
       RelayProgramming_2018:
-        title: Programowanie przekaźnika
+        title: Sztafeta programowania

@@ -134,7 +134,7 @@ gl:
             'Maze: Conditionals':
               name: 'Labirinto: Condicionais'
             Songwriting:
-              name: Composición de música con parámetros
+              name: Composición
             'Studio: Create a Game':
               name: 'Laboratorio de Xogos: Crear un Xogo'
             'Studio: Create a Story':
@@ -302,7 +302,7 @@ gl:
             Introduction to Computer Science:
               name: Introdución á informática
             Relay Programming:
-              name: Programación baixo presión
+              name: Programación por relevos
             Song Writing:
               name: Escribindo unha Canción
             The Artist:
@@ -475,6 +475,10 @@ gl:
               name: Simulador de internet
             Welcome!:
               name: Benvido!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Fundamentos de Informática
         ECSPD2:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -566,7 +570,7 @@ gl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
             Songwriting:
-              name: Composición de música con parámetros
+              name: Composición
             The Big Event:
               name: O Gran Evento
         ScienceP3OLPT2:
@@ -713,7 +717,7 @@ gl:
             Digital Citizenship:
               name: Cidadanía dixital
             Songwriting:
-              name: Composición de música con parámetros
+              name: Composición
         grade1:
           stages:
             Events:
@@ -1220,7 +1224,7 @@ gl:
             Conditionals with Cards:
               name: Condicionais con cartas
             'Functions: Songwriting':
-              name: Composición de música con parámetros
+              name: Composición
             Envelope Variables:
               name: Variábeis de sobre
             For Loop Fun:
@@ -1236,7 +1240,7 @@ gl:
             Crowdsourcing:
               name: Colaboración Aberta
             Relay Programming:
-              name: Programación baixo presión
+              name: Programación por relevos
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1264,7 +1268,7 @@ gl:
             Graph Paper Programming:
               name: Programación en Papel Cadriculado
             Relay Programming:
-              name: Programación baixo presión
+              name: Programación por relevos
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1288,7 +1292,7 @@ gl:
             Introduction:
               name: Introdución
             'Functions: Songwriting':
-              name: Composición de música con parámetros
+              name: Composición
             Internet:
               name: A Internet
             Crowdsourcing:

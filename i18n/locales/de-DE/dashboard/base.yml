@@ -246,6 +246,7 @@ de:
       home: "Home"
       my_dashboard: "Mein Armaturenbrett"
       courses: "Kurse"
+      course_catalog: "Kurs Katalog"
       project_gallery: "Projekte"
       sections: "Sektionen"
       help_support: "Hilfe und Support"
@@ -257,7 +258,7 @@ de:
       educate_elementary: "Grundschule"
       educate_middle: "Mittelschule"
       educate_high: "High School/Gymnasium"
-      educate_hoc: "Stunde des Codes"
+      educate_hoc: "Hour of Code"
       educate_partner: "Eine Partnerschaft mit uns"
       educate_inspire: "Inspiriere einen Schüler/eine Schülerin"
       educate_community: "Online Community"
@@ -362,8 +363,8 @@ de:
     teacher_student_count_one: Sie haben %{count} Schüler.
     teacher_student_count: Sie haben %{count} Schüler.
     teacher_averages: Im Durchschnitt haben Ihre Schüler %{trophy_average} von %{trophy_max} "Concept Mastery" Trophäen erreicht.
-    teacher_print_certificates: 'Drucken sie Zertifikate für Schüler, die diesen Kurs bestanden haben'
-    teacher_read_blog: Lesen Sie Nachrichten und Neuigkeiten zu unseren Materialien in unserem Lehrer-Blog
+    teacher_print_certificates: 'Drucken sie Zertifikate für Schüler die diesen Kurs bestanden haben'
+    teacher_read_blog: Lese Nachrichten und Neuigkeiten zu unseren Materialien in unserem Lehrer-Blog
     classroom: Ihr Klassenzimmer
     student_progress: Dein Lernfortschritt
     student_stats: Du hast %{trophy_count} von %{trophy_max} "Concept Mastery" Trophäen gewonnen.
@@ -535,11 +536,15 @@ de:
       title: "Galerie"
       body: "Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die von unseren Nutzern erstellt wurden"
     gamelab:
+      title: "Spielelabor"
+      body: "Spielelabor ist eine Programmierumgebung, in der Sie einfache Animationen und Spiele mit Objekten und Charakteren, die miteinander interagieren, erstellen können."
       audience: "Ab 13 Jahren"
       cta: "Lerne wie"
     hoc-encryption:
       title: "Einfache Verschlüsselung"
     weblab:
+      title: "Weblabor (Beta)"
+      body: "Web Lab ist eine Programmierumgebung, in der Sie einfache Webseiten mit HTML und CSS erstellen können. Entwerfen Sie Ihre Webseiten und teilen Sie die in Sekunden."
       audience: "Ab 13 Jahren"
       cta: "Lerne wie"
     frozen:
@@ -551,10 +556,10 @@ de:
       body: "Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen."
     minecraft:
       title: "Minecraft"
-      body: "Erkunde eine Minecraft-Welt mit Hilfe von Code."
+      body: "Erkunde eine Minecraft-Welt durch programmieren"
     minecraft2016:
       title: "Minecraft"
-      body: "Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
+      body: "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
     hero:
       title: "Minecraft"
     unplugged:
@@ -565,6 +570,7 @@ de:
     unplugged_conditionals:
       title: "Bedingungen"
     widgets:
+      title: "Widgets"
       cta: "Lerne wie"
   gallery:
     students_drew_these_with_code: "Schüler haben diese Bilder mit Code gezeichnet!"
@@ -669,22 +675,14 @@ de:
     title: "Optional: Helfen Sie uns, unsere Fortschritte zur Verbesserung der Vielfalt in der Informatik zu besser verfolgen"
     message: "Bitte verrate uns deine Ethnie (Zutreffendes bitte ankreuzen)"
     races:
-      - 
-        white: "Weiß"
-      - 
-        black: "Schwarz"
-      - 
-        hispanic: "Spanisch oder Latino"
-      - 
-        asian: "Asiatisch"
-      - 
-        hawaiian: "Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner"
-      - 
-        american_indian: "Indianer oder eingeborener Alaskaner"
-      - 
-        other: "Andere"
-      - 
-        opt_out: "Das geht Euch nichts an"
+      white: "Weiß"
+      black: "Schwarz"
+      hispanic: "Spanisch oder Latino"
+      asian: "Asiatisch"
+      hawaiian: "Eingeborener Hawaiianer oder anderer Pazifikinsel-Bewohner"
+      american_indian: "Indianer oder eingeborener Alaskaner"
+      other: "Andere"
+      opt_out: "Das geht Euch nichts an"
     submit: "Absenden"
     decline: "Schließen"
   zendesk_too_young_message: 'Tut uns leid, jüngere Benutzer dürfen sich für unsere Hilfeseite nicht anmelden. Du kannst <a href="http://support.code.org">support.code.org</a> durchsuchen, ohne dich anzumelden, oder deine Eltern oder Lehrer bitten, uns zu kontaktieren.'
@@ -872,4 +870,5 @@ de:
   cookie_banner:
     accept: 'Ich stimme zu'
   gdpr_dialog:
+    message: 'Daten aus deiner Nutzung dieser Site können in die USA geschickt werden und dort gespeichert und verarbeitet werden.'
     yes: 'Ja'

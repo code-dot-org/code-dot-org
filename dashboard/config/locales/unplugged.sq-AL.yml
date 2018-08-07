@@ -119,7 +119,7 @@ sq:
       UnplugHappyMaps:
         title: Hartat e Gëzuara
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
-          një personazh midis një labirinti duke përdorur një komandë të vetme.
+          midis një tuneli duke përdorur një komandë të vetme.
       MoveIt:
         title: Lëvize, Lëvize
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
@@ -194,7 +194,7 @@ sq:
           që ti dëshiron ti përdorësh herë pas here) për të krijuar suncatchers duke
           përdorur varg dhe rruaza.
       SongwritingParameters:
-        title: kompozim
+        title: Të shkruarit e Këngëve
         desc: Studentët përdorin konceptin e refrenit në një këngë për të mësuar rreth
           kalimit të parametrave (që rregullojnë një funksion pa rishkruajtur të gjithë
           funksionin).
@@ -309,7 +309,7 @@ sq:
       courseA_unplugged_happyMaps:
         title: Hartat e Gëzuara
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
-          një personazh midis një labirinti duke përdorur një komandë të vetme.
+          midis një tuneli duke përdorur një komandë të vetme.
       courseA_unplugged_goingPlacesSafely:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit
@@ -347,12 +347,12 @@ sq:
           parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen
           dhe të ruhen në më shumë se një mënyrë.
       courseD_unplugged_graphPaperProgramming:
-        title: Programimi me grafikë
+        title: Programimi Grafik me Letër
         desc: Studentët shkruajnë një algoritëm (grup instruksionesh) duke përdorur
           një grup komandash të paracaktuara për të drejtuar shokët e tyre të klasës
           që të ribëjnë një vizatim.
       courseD_unplugged_relayProgramming:
-        title: Programimi transmetues
+        title: Programimi i Besuar
         desc: Studentët vrapojnë në garë të besueshme, ku ata ndeshen mes për mes
           kopshtit për të shkruar një algoritëm bazuar në një imazh "Programimi i
           Letrës Grafike". Ata mund të shkruajnë një udhëzim në kohë dhe nëse ka ndonjë
@@ -389,7 +389,7 @@ sq:
           zakonshme në shkencën kompjuterike, për të përfunduar një detyrë bashkë
           si një klasë, më efiçente se sa një student të përpiqej vetë.
       courseE_unplugged_songwriting:
-        title: kompozim
+        title: Të shkruarit e Këngëve
         desc: Studentët përdorin konceptin e refrenit në një këngë për të mësuar rreth
           kalimit të parametrave (që rregullojnë një funksion pa rishkruajtur të gjithë
           funksionin).
@@ -428,7 +428,7 @@ sq:
       UnplugHappyMaps_2018:
         title: Hartat e Gëzuara
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
-          një personazh midis një labirinti duke përdorur një komandë të vetme.
+          midis një tuneli duke përdorur një komandë të vetme.
       GoingPlacesSafely_2018:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit
@@ -440,7 +440,7 @@ sq:
           Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë
           në varësi të butonit që është shtypur.
       GraphPaperProgramming_2018:
-        title: Programimi me grafikë
+        title: Programimi Grafik me Letër
         desc: Studentët shkruajnë një algoritëm (grup instruksionesh) duke përdorur
           një grup komandash të paracaktuara për të drejtuar shokët e tyre të klasës
           që të ribëjnë një vizatim.
@@ -449,7 +449,7 @@ sq:
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktiviteti Unplugged
       Conditionals_2018:
-        title: Kushtoret
+        title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një
           lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe,
           unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një
@@ -484,4 +484,4 @@ sq:
       MoveItMoveIt_2018:
         title: Lëvize atë, lëvize atë
       RelayProgramming_2018:
-        title: Programimi transmetues
+        title: Programimi i Besuar

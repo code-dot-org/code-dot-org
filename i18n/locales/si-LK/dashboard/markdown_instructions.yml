@@ -78,6 +78,7 @@ si:
       grade3_Loops_3_markdown_instruction: '`repeat` ලූපය භාවිතයෙන් සියලුම මල් පැණි එකතු කරන්න.'
       grade3_Loops_4_markdown_instruction: දැන් `repeat` බ්ලොක් භාවිතා කර සියලුම මල් පැණි එකතු කර මී පැණි සාදන්න.
       grade3_Loops_6_markdown_instruction: "මෙම ප්‍රහේලිකාවෙදී කී වතාවක් ඔබට මෙම ලූපයෙන් උදව් ගත හැකිද?\\r\n\\r\nලූප\nඔබගේ මිතුරන්ද! ඔවුන්ගෙන් කිහිපදෙනෙකු භාවිතා කර සහ අඩුම බ්ලොක්ස් ගණනක් යොදා ගනිමින් මෙමෙ ප්‍රහේලිකාව සම්පූර්ණ කරන්න."
+      grade4_arist_nested_loop_triangles4_markdown_instruction: කිඹුලාගේ කටේ දත් අඳින්න!
       grade4_bee_nestedLoops2_markdown_instruction: "ඔබට අස්ථානගත වී ඇති කොටස් නිශ්චය කළ හැකි ද?"
       grade4_bee_nestedLoops4_markdown_instruction: "සෑම මලකින්ම එහි ඇති මල් පැණි සියල්ලම එකතු කරගෙන මී වදය තුල මී පැණි සාදන්න.\\r\n\\r\nකැදලි ලූපය භාවිතා කරන්න. "
       grade4_review_bee1_markdown_instruction: දැන් `repeat` බ්ලොක් භාවිතා කර සියලුම මල් පැණි එකතු කර මී පැණි සාදන්න.

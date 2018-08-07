@@ -220,7 +220,7 @@ bn:
   footer:
     copyright: 'কপিরাইট'
     more: 'আরো'
-    support: 'সমর্থন'
+    support: 'সম্প্রদায় এবং সহায়তা'
     tos_short: 'শর্তাবলী'
     tos: 'সেবার শর্ত সমূহ'
     privacy: 'গোপনীয়তার নীতি'
@@ -325,15 +325,7 @@ bn:
     save: "সংরক্ষন করন"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "অন্যান্য"
-      - 
+      other: "অন্যান্য"
     submit: "জমা করুন"
     decline: "বন্ধ"
   progress:

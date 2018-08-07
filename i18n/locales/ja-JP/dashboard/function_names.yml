@@ -39,20 +39,20 @@ ja:
       check purple flower: むらさきの 花を チェックする
       draw a star: 星形 を かく
       draw: かく
-      do something: 何かする
+      do something: 何かしてください
       jump: ジャンプ
-      set score: とくてんをセット
+      set score: スコアは
       get nectar: 花のミツをとる
       test: テスト
       diamond: ダイヤモンド
-      move: うごかす
+      move: 移動 (いどう)
       fix long path: 長い道を直す
       fix short path: 短い道を直す
-      move right: 右に移動
-      move up: 上に移動します。
-      move down: 下に移動します。
-      move left: 左に移動
+      move right: 右に うごかす
+      move up: 上に うごかす
+      move down: 下に うごかす
+      move left: 左に うごかす
       collect: あつめる
-      turn left: 左に まがる
-      move forward: 前に すすむ
-      turn right: 右に まがる
+      turn left: 左に回転
+      move forward: 前方に移動します。
+      turn right: 右に回転

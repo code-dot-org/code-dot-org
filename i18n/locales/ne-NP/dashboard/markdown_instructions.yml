@@ -155,12 +155,14 @@ ne:
         Trace it with your finger to see if you can figure it out on
         your first try.
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "**Assessment:** Use a `repeat\nuntil` and an `if/else` block to get me to the sunflower in as few blocks\nas possible."
+      4-5 Nested Loops 12_markdown_instruction: "Can you draw these 36 triangles using a nested\nloop?"
       4-5 Nested Loops 3_markdown_instruction: |-
         Create a sun by nesting the starter code in
         another loop.\r
         \r
         To get this cool design with a hollow center, you'll
         need to jump forward by the length of the triangle before turning.
+      4-5 Nested Loops 6_markdown_instruction: "Can you draw a hexagon by looping the triangle\ncode?"
       4-5 Nested Loops 7_markdown_instruction: "Loop this design 10 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop?"
       4-5 Nested Loops 8_markdown_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop? "
       4-5 While Loops 1_markdown_instruction: "Move me to the hole and fill it with two shovelfuls\nof dirt, using the `fill` block."
@@ -203,6 +205,7 @@ ne:
       Overworld Move to Sheep_2018_markdown_instruction: "Add a second “move forward” command to\nreach the sheep."
       Testing Quantum Farmer_markdown_instruction: "Wow, look at that! \\r\n\\r\nI don't know how\nmany shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps using the `fill` block until the ground is even?  "
       course4_artist_fwp_challenge1_markdown_instruction: Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)
+      courseD_bounce_events1_markdown_instruction: झण्डा सम्म पुग्नुहोस्! Attach a block to the "when left arrow" block and press "Run" to move the player to the flag.
       courseE_farmer_concept4_markdown_instruction: "Now let's go one level deeper! We've\nnested that whole block of code into another loop, but you need to get the\nartist back in place to draw the next line. Which of these code blocks can\nyou place at the end of the outermost loop to draw the whole grid?"
       courseF_bee_for_challenge2_markdown_instruction: "Solve this puzzle with the fewest number of blocks\npossible."
       courseF_bee_for_challenge2_2018_markdown_instruction: "Solve this puzzle with the fewest number of blocks\npossible."
@@ -294,12 +297,14 @@ ne:
       grade3_maze_nestedLoops4_markdown_instruction: "In this puzzle, two `repeat` loops will help you\nget to the pig with the fewest number of blocks!"
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Loop this design 10 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop? "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: "Can you draw a hexagon by looping the triangle\ncode?"
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Create a sun by nesting the starter code in
         another loop.\r
         \r
         To get this cool design with a hollow center, you'll
         need to jump forward by the length of the triangle before turning.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: "Can you draw these 36 triangles using a nested\nloop?"
       grade4_artist_functions2_markdown_instruction: "Functions let you define new blocks! \\r\n\\r\nWe've\nmoved the blocks needed for drawing a square into a function called `draw\na square`. This time, use the `draw a square` function to create the glasses.\n\\r\n\\r\nThe squares are 75 pixels apart."
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Loop this design 10 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop?"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
@@ -308,6 +313,7 @@ ne:
         \r
         To get this cool design with a hollow center, you'll
         need to jump forward by the length of the triangle before turning.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: "Can you draw these 36 triangles using a nested\nloop?"
       grade4_artist_parameters_triangles2_markdown_instruction: "Do you notice anything different\nabout these function blocks? Click “Run” to see what happens."
       grade4_bee_conditionals_quantum2_markdown_instruction: "More clouds! \\r\n\\r\nCheck underneath\nevery cloud to see if it is hiding a flower before you get nectar.  \\r\n\\r\nRemember:\nNot all clouds hide the same thing!"
       grade4_bee_conditionals_quantum5_markdown_instruction: |-
@@ -317,7 +323,7 @@ ne:
         Use the `if/else` block to collect nectar
         if there is a flower.\r
         Otherwise, make honey (because there is a honeycomb).
-      grade4_frozen_freeplay_markdown_instruction: "You've officially become a master artist! Create\na winter wonderland."
+      grade4_frozen_freeplay_markdown_instruction: "You've officially become a master artist!\nCreate a winter wonderland."
       grade4_frozen_functions0_markdown_instruction: "A circle is a special shape. Can you figure out\nwhat number to replace the question marks with to draw a circle?"
       grade4_frozen_functions1a_markdown_instruction: "Use the new “Create a circle” block to\ncreate 10 overlapping circles. Don't forget to jump forward between circles."
       grade4_frozen_functions2_markdown_instruction: "Now let's create 20 overlapping\ncircles, turning 18 degrees between each circle."

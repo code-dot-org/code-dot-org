@@ -22,20 +22,20 @@ nn:
       2-3 Artist 9_instruction: Gjer ferdig denne dragen
       2-3 Artist Assessment 1_instruction: 'Oppgåve: Teikne ferdig den siste tanna, 25 pikslar brei og 25 pikslar høg.'
       2-3 Artist Debugging 1_instruction: Kan du lage denne lua slik at den er 50 pikslar brei?
-      2-3 Artist Debugging 10_instruction: "Retningskontrolleren på spillkontrollen er for smal. \\r\n\\r\nKan du lage den 10 piksler breiare?\\r\n\\r\nPrøv å køyre koden først for å sjå kva som er gale."
+      2-3 Artist Debugging 10_instruction: "Retningskontrollaren på spelkontrollen er for smal. \\r\n\\r\nKan du lage den 10 pikslar breiare?\\r\n\\r\nPrøv å køyre koden først for å sjå kva som er gale."
       2-3 Artist Debugging 11_instruction: |-
         Snøfnugget mitt dett frå kvarandre!\r
         \r
         Kan du skjønne kva som går gale?
       2-3 Artist Debugging 12_instruction: Eg skal legge til ei bølge i denne scena. Kan du hjelpe meg?
-      2-3 Artist Debugging 2_instruction: "Koden for kattens værhår som du ser, er feil. \n\\r\n\\r\nReparer koden slik at alle værhåra er like lange."
+      2-3 Artist Debugging 2_instruction: "Koden for katten sine vêrhår er feil. \\r\n\\r\nFiks koden slik at den teiknar alle vêrhåra like lange."
       2-3 Artist Debugging 3_instruction: "Båten min har eit hol!\\r\n\\r\nKva treng du for å fikse den?"
       2-3 Artist Debugging 4_instruction: Kva for bilete er det vi prøver å teikne? Fullfør ved å binde saman prikkane med rette linjer og vinklar.
       2-3 Artist Debugging 5_instruction: "Koden for beinet og foten du ser er feil. \\r\n\\r\nKan du fikse han?"
       2-3 Artist Debugging 6_instruction: |-
         Det ser ut til at stolen eg sit på manglar eit bein. \r
         \r
-        Rydd i blokkene for å tegne beinet.
+        Rydd i blokkene for å teikne beinet.
       2-3 Artist Debugging 7_instruction: |-
         Det ser ut som C i koden er teikna feil veg.\r
         \r
@@ -47,23 +47,23 @@ nn:
       2-3 Artist Debugging 9_instruction: |-
         Noko er gale!\r
         \r
-        Koden for denne stamma er feil. Korleis kan kunstnaren tegne stamma riktig veg?
+        Koden for denne stamma er feil. Korleis kan kunstnaren teikne stamma riktig veg?
       2-3 Artist Debugging Assessment 1_instruction: "Kvifor ender denne forma med sider som er 75 pikslar for korte på kvar side?\\r\n\\r\nKvar er koden feil?"
-      2-3 Artist Free Play_instruction: Åpent brett! Teikn kva du vil.
+      2-3 Artist Free Play_instruction: Frileik! Teikn kva du vil.
       2-3 Artist Functions 1 a_instruction: "Hallo. Meg zombiekunstner. Meg elske tegning!\\r\n\\r\nHjelp zombien med å teikne firkanta briller.\\r\n\\r\nFirkantane er 100 pikslar breie, og brua i mellom er 25 pikslar lang."
       2-3 Artist Functions 1_instruction: "Hallo. Meg zombiekunstner. Meg elske tegning!\\r\n\\r\nHjelp zombien med å teikne firkanta briller.\\r\n\\r\nFirkantane er 100 pikslar breie, og brua i mellom er 25 pikslar lang."
       2-3 Artist Functions 10_instruction: 'Her er to funksjonar, ein som teiknar eit stort tannhjul og ein som teiknar eit lite tannhjul. Bruk dei til å teikne innsida av ei maskin!'
       2-3 Artist Functions 11 a_instruction: "Me har gitt funksjonen \"teikn eit kvadrat\" nytt namn, no heiter den \"teikn ein seksskant\", men den teiknar framleis berre kvadrat! Kan du endre \"teikn ein sekskant\"-funksjonen slik at den teiknar ein sekskant med 50 pikslar lange sider?\\r\n\\r\nTeikne bildet ferdig med den nye funksjonen!"
-      2-3 Artist Functions 11.5 a_instruction: "Her er den samme \"Tegn ein sekskant\"-funksjonen.\\r\n\\r\nKva skjer om du repeterer 6 gonger og berre snur 60 grader kvar gong?"
-      2-3 Artist Functions 11.5_instruction: "Her er den samme \"Tegn ein sekskant\"-funksjonen.\\r\n\\r\nKva skjer om du repeterer 6 gonger og berre snur 60 grader kvar gong?"
+      2-3 Artist Functions 11.5 a_instruction: "Her er den same \"Teikn ein sekskant\"-funksjonen.\\r\n\\r\nKva skjer om du repeterer 6 gonger og berre snur 60 grader kvar gong?"
+      2-3 Artist Functions 11.5_instruction: "Her er den same \"Teikn ein sekskant\"-funksjonen.\\r\n\\r\nKva skjer om du repeterer 6 gonger og berre snur 60 grader kvar gong?"
       2-3 Artist Functions 11_instruction: "Me har gitt funksjonen \"teikn eit kvadrat\" nytt namn, no heiter den \"teikn ein seksskant\", men den teiknar framleis berre kvadrat! Kan du endre \"teikn ein sekskant\"-funksjonen slik at den teiknar ein sekskant med 50 pikslar lange sider?\\r\n\\r\nTeikne bildet ferdig med den nye funksjonen!"
-      2-3 Artist Functions 12 Mike_instruction: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blome» til å fylla resten av plankteboksen?\\r\nPlantene er åtskilde med 100 pikslars avstand."
-      2-3 Artist Functions 12 a_instruction: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blome» til å fylla resten av plankteboksen?\\r\nPlantene er åtskilde med 100 pikslars avstand."
-      2-3 Artist Functions 12_instruction: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blome» til å fylla resten av plankteboksen?\\r\nPlantene er åtskilde med 100 pikslars avstand."
+      2-3 Artist Functions 12 Mike_instruction: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blom» til å fylla resten av planteboksen?\\r\nPlantene er planta med 100 pikslars avstand."
+      2-3 Artist Functions 12 a_instruction: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blom» til å fylla resten av planteboksen?\\r\nPlantene er planta med 100 pikslars avstand."
+      2-3 Artist Functions 12_instruction: "Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \\r\n\\r\nKan du bruka ein «teikn ein blom» til å fylla resten av planteboksen?\\r\nPlantene er planta med 100 pikslars avstand."
       2-3 Artist Functions 13_instruction: Vi har gitt deg fire funksjonar, Bruk dei slik du vil i ein eller fleire løkker for å lage bilete du kan dele med vennane dine. Trykk kjør for å sjå eit døme.
-      2-3 Artist Functions 2_instruction: "Funksjonar lar deg definere nye blokkar!\\r\n\\r\nVi har flytta blokkar som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa? \n\\r\n\\r\nKvadrata er 75 pikslar frå kvarandre."
-      2-3 Artist Functions 3_instruction: "Rediger kvadratteiknefunksjonen slik at sidelengda er 115. Teikn dei større brillene.\\r\n\\r\nKvadrata er no 45 pikslar frå kvarandre."
-      2-3 Artist Functions 4_instruction: Sett funksjonen inni ei løkke for å teikne desse tre kvadrata.
+      2-3 Artist Functions 2_instruction: "Funksjonar lar deg definere nye blokker!\\r\n\\r\nVi har flytta blokker som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa? \n\\r\n\\r\nKvadrata er 75 pikslar frå kvarandre."
+      2-3 Artist Functions 3_instruction: "Rediger funksjonen slik at den teiknar sider på 115 pikslar. \\r\n\\r\nKvadrata er no 45 pikslar frå kvarandre."
+      2-3 Artist Functions 4_instruction: Sett funksjonen inni ein løkke for å teikne desse tre kvadrata.
       2-3 Artist Functions 7_instruction: 'Bruk "teikn eit hus"-funksjonen til å teikne to hus med to ulike parameter. (Hint: det første huset er 100 pikslar).'
       2-3 Artist Functions 9_instruction: 'Her er ein snøfnugg-funksjon. Prøv deg fram og lag ei vinterscene. Dette er ei frileik-oppgåve, så det er inga oppgåver å løyse. Ha det gøy!'
       2-3 Artist Loops 1_instruction: Kan du lage ein sekskant med sider som er 100 pikslar lange slik at du fullfører cella? Husk, det tyder at du berre treng å snu 60 grader!
@@ -78,10 +78,10 @@ nn:
       2-3 Artist Loops 9_instruction: |-
         Vi skal ha ei løkke med dei same elementa, men nå skal vi legge til avstand mellom dei.\r Bruk same koden som før, men legg til eit steg framover i den ytre løkka.
       2-3 Artist Loops New 1_instruction: La oss tegne hovudet til denne roboten! Kan du lage eit kvadrat der sidene er 100 pikslar lange?
-      2-3 Artist Loops New 10_instruction: Nå skal me koble saman ein haug med V'ar ved å teikne dei med ei løkke.
+      2-3 Artist Loops New 10_instruction: Nå skal me kople saman ein haug med V'ar ved å teikne dei med ei løkke.
       2-3 Artist Loops New 11_instruction: Bygg koden frå forrige oppgåve igjen, men legg til ein 30 graders venstresving inne i løkka. Gjenta 24 gonger i staden for 8.
-      2-3 Artist Loops New 12_instruction: "Tegn ein diamant der kvar av sidene er 100 piksel.\n"
-      2-3 Artist Loops New 13_instruction: "Vi skal starte med litt kode(i grått) som lagar ein diamant!\\r\n\\r\nKjør koden i ei løkke for å lage eit artig mønster!"
+      2-3 Artist Loops New 12_instruction: 'Teikn ein diamant med sider på 100 pikslar. '
+      2-3 Artist Loops New 13_instruction: "Vi skal starte med litt kode (i grått) som lagar ein diamant!\\r\n\\r\nKjør koden i ei løkke for å lage eit artig mønster!"
       2-3 Artist Loops New 14_instruction: Leik litt med diamantkoden og sjå kva for andre mønster du kan lage. Prøv å endre kor mange grader du snur og kor mange gonger du gjentek løkka.
       2-3 Artist Loops New 15_instruction: Teikn noko morosamt!
       2-3 Artist Loops New 2_instruction: |-
@@ -144,7 +144,9 @@ nn:
       2-3 Bee Debugging 8_instruction: |-
         Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
       2-3 Bee Debugging 9_instruction: |-
-        Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
+        Ha tolamot med denne!\r
+        \r
+        Du må reparere noko i programmet for å samle inn all nektaren og lage all honningen.
       2-3 Bee Debugging Assessment 1_instruction: |-
         Oppgåve: Desse blokkane plagar meg. \r
         \r
@@ -187,8 +189,8 @@ nn:
       2-3 Maze 1_instruction: 'Kan du hjelpe meg å fange den slemme grisen? Sett saman eit par "gå framover" blokkar og trykk "Køyr". '
       2-3 Maze 10_instruction: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
       2-3 Maze 11_instruction: Få meg bort til blomen, eg er svolten! Kor mange gongar er du nødt til å gjenta ei blokk?
-      2-3 Maze 12 (copy 1)_instruction: 'Kan du erstatte førre svar med berre to blokkar? (Hint: Lag ei løkke ved å bruke "gjenta gongar" blokken.)'
-      2-3 Maze 12 (copy 2)_instruction: 'Kan du erstatte førre svar med berre to blokkar? (Hint: Lag ei løkke ved å bruke "gjenta gongar" blokken.)'
+      2-3 Maze 12 (copy 1)_instruction: 'Kan du erstatte det forrige svaret med kun to blokker. (Hint: Lag ei løkke ved å bruke ein "gjenta gongar"-blokk.)'
+      2-3 Maze 12 (copy 2)_instruction: 'Kan du erstatte det forrige svaret med kun to blokker. (Hint: Lag ei løkke ved å bruke ein "gjenta gongar"-blokk.)'
       2-3 Maze 12 (old)_instruction: Få meg til grisen ved å bruke "Gjenta gongar" blokken!
       2-3 Maze 12 - One Move Block_instruction: Du skal til grisen! Denne gong kan du berre bruke ein "framover" blokk. Kan du sjå nokre andre blokkar som kan hjelpe deg?
       2-3 Maze 12_instruction: Kan du komme til grisen ved på lage ei løkke som brukar berre ei 'gå framover'-blokk innanfor ein"gjenta"-blokk?
@@ -202,7 +204,7 @@ nn:
       2-3 Maze 16 before_instruction: Få meg til grisen!
       2-3 Maze 16_instruction: Løkker fungerer med fleire enn ei blokk i seg! Kan du lage ei løkke på denne sekvensen for å få zombien til solsikka?
       2-3 Maze 2_instruction: Denne grisen har røska i fjøra mine. Hjelp meg å få tak i han!
-      2-3 Maze 3_instruction: Følg stien og led meg til den dumme grisen. Unngå dynamitten om du ikkje vil at eg skal forsvinne i ei sky av fjør!
+      2-3 Maze 3_instruction: Følg stien og lei meg til den tåpelege grisen. Unngå dynamitt ellers vil fjøra mine fyke!
       2-3 Maze 4_instruction: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
       2-3 Maze 5_instruction: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
       2-3 Maze 6_instruction: Hold deg i ro og hjelp meg med å finne den slemme grisen. Elles blir eg kanskje sinna!
@@ -213,7 +215,7 @@ nn:
       2-3 Maze Loops 17_instruction: Få meg til solsikka!
       2-3 Maze Loops 18_instruction: "Få meg til solsikka ved å bruke så få blokker som mogleg\\r\n\\r\nPrøv å bruke ei 'gjenta'-løkke innan ei anna for å minimere bruk av kode."
       2-3 Maze Loops 19_instruction: "La oss ta dette til eit nytt nivå!\\r\nBruk løkker for å ta meg til solsikka med færrast mogleg løkker."
-      2-3 Maze Loops 20_instruction: Få meg til solsikka ved å bruke så få blokker som mogleg!
+      2-3 Maze Loops 20_instruction: Klarar du å løyse denne oppgåva ved å bruke så få blokker som mogleg?
       2-3 Maze Loops 21_instruction: Få meg til solsikka ved å bruke så få blokker som mogleg!
       2-3 Maze Loops Assessment 1_instruction: 'Oppgåve: Få meg til solsikka med berre 5 blokker! '
       2-3 Maze sq10_instruction: Få meg til grisen! Kva blokker vart gjenteke?
@@ -251,7 +253,7 @@ nn:
       20hr_maze_stage2_16_instruction: Meg vil ha solsikke! Bruk ei "viss"-blokk til å få meg dit med så få blokker du kan.
       20hr_maze_stage2_17_instruction: Ok, la oss gjere det ein gong til - denne er ikkje så ulik, men pass deg for dei kjøttetande plantane!
       20hr_maze_stage2_18_instruction: '"viss-elles"-blokka sjekkar eit vilkår og utfører det eine ELLER det andre. For å få meg til solsikka, prøv å bruke denne blokka.'
-      20hr_maze_stage2_19_instruction: Ei siste øving med "viss-elles"-blokka. Klarer du å få det rett på første forsøk?
+      20hr_maze_stage2_19_instruction: Ei siste øving med "viss-elles"-blokka. Klarar du å gjere det riktig på første forsøk?
       20hr_maze_stage2_2_instruction: Denne grisen rufser til fjørene mine. Hjelp meg med å finne han!
       20hr_maze_stage2_20_instruction: Klarer du å hjelpe meg gjennom ein kompleks labyrint ved å legge til berre 3 blokker? Viss du gjer det rett, så kan eg gå ein vilkårleg kronglete veg uansett kor lang den er.
       20hr_maze_stage2_3_instruction: Følg stien og leid meg til den tåpelege grisen. Unngå TNT ellers vil fjørene mine fyke!
@@ -327,7 +329,8 @@ nn:
       4-5 Artist Patterns Free Play_instruction: Frileik - prøv å lage ditt eige mønster!
       4-5 Bee Conditionals - FC Test_instruction: Bia vil berre ha nektar akkurat nå. Ikkje alle objekta er blomar, så sjekk under KVAR EINASTE SKY for å sjå om det gøymer seg ein blome der. Om det gjer det kan du samle nektar.
       4-5 Bee Conditionals 1_instruction: Skya blokkerer utsikta mi! Ta ein sjekk for å sjå om det er ein blom under skya. Du kan berre få nektar dersom det er ein blom der. Vær på vakt, det kan endre seg!
-      4-5 Bee Conditionals 2_instruction: "Fleire skyer!\\r\n\\r\nSjekk under kvar sky om det skjular seg ein blome der før du henter nektar.\\r\n\\r\nHugs: ikkje alle skyer skjular same ting!"
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Bia vil berre ha nektar akkurat nå. Hugs, ikkje alle er blomar, så sjekk etter at du berre samlar nektar frå blomar.
+      4-5 Bee Conditionals 2_instruction: "Fleire skyer! \\r\n\\r\nSjekk under kvar sky for å sjå om den skjular ein blom før du får tak i nektaren. \\r\n\\r\nHugs, alle skyene skjular ikkje same ting!"
       4-5 Bee Conditionals 3_instruction: Bia vil berre lage honning akkurat no. Nokre av desse skyene kan skjule bikaker- Sjekk under kvar sky!
       4-5 Bee Conditionals 4_instruction: Det ukjende objektet er enten ein blome eller ein bikube. Bruk "viss/elles" blokk til å samle inn nektar om det er ein blome, om ikkje så lagar du honning (fordi det er ein bikube).
       4-5 Bee Conditionals 5_instruction: |-
@@ -338,7 +341,7 @@ nn:
       4-5 Bee Conditionals 6_instruction: "Eg er ikkje sikker på kor mykje nektar denne blomen har, men den har enten 1, 2 eller 3 nektar.\\r\n\\r\nKombinér dei betinga blokkene ('viss' og/eller 'viss/elles') for å berre få så mykje nektar som blomen har.\n\\r\n\\r\nHugs: talet på nektrar kan endre seg for kvar gong du køyrer oppgåva!"
       4-5 Bee Conditionals 7_instruction: "Hugs at lilla blomar kan ha 3, 2 og 1 nektar. \n\\r\n\\r\nFullfør \"kontroller lilla blomar\"-funksjonen og bruk den til å samle inn nektar frå alle blomane."
       4-5 Bee Conditionals 8_instruction: "Skriv ein funksjon som heiter \"Sjekk blom og lag honning\". \\r\n\\r\nFunksjonen din skal sjekke om den lilla blomen har 3, 2 eller 1 nektar og hente all nektaren. \\r\nDeretter skal den bevege seg framover og så lage honning."
-      4-5 Bee Conditionals Assessment 1_instruction: "**Oppgåve**: Denne skya skjular enten ein blom med ein nektar eller ei bikake som treng honning. \\r\n\\r \nFullfør \"hent nektar og lag honning\"-funksjonen, deretter brukar du den til å samle inn all nektar og honning. \\r\n"
+      4-5 Bee Conditionals Assessment 1_instruction: "**Oppgåve** Denne skya gjømmer ein blomst med ein nektar eller ei honningkake som treng ein honning.\n\\r\n\\r\nGjer ferdig \"hent nektar eller lag honning\"-funksjonen og kall den for å sanke nektar eller honning.\\r\n"
       4-5 Bee Debugging 1_instruction: "Desse blokkene plager meg. \\r\n\\r\nFår du til å fikse dei?"
       4-5 Bee Debugging 10_instruction: Finn feila og fiks dei.
       4-5 Bee Debugging 11_instruction: Tel denne riktig?
@@ -381,7 +384,7 @@ nn:
       4-5 Maze 6_instruction: Klarar du å løyse denne oppgåva ved å bruke så få blokker som mogleg?
       4-5 Maze 7_instruction: Kjære person. Meg zombie. Må... komme... til solsikke.
       4-5 Maze 8_instruction: "Bruk \"Gjenta\"-blokka til å få zombien til solsikka. \\r\n(Unngå dei kjøttetande plantene!)"
-      4-5 Maze 9_instruction: "Nu har vi ei blokk som heiter 'gjenta til'.\\r\nDette vil la oss lage løkker til zombien kjem seg til solsikka. \\r\n\\r\nBruk den nye 'gjenta til'-blokka for å løyse denne oppgåva med så få kommandoar som mogleg."
+      4-5 Maze 9_instruction: "Nå har vi ei ny blokk som heiter 'Gjenta til'.  \\r \nDette lar oss bruke løkke-kommandoer heilt til zombien går tak i solsikka. \\r \n\\r \nBruk den nye 'Gjenta til'-blokka for å løyse denne oppgåva i så få kommandoer som mogleg."
       4-5 Maze Assessment 1_instruction: 'Oppgåve: Få meg til solsikka ved å bruke så få blokker som mogleg.'
       4-5 Maze Conditionals 1_instruction: Bruk "Gjenta-til"-blokka for å få zombien til solsikka.
       4-5 Maze Conditionals 10_instruction: "Kan du leggje til kun 3 blokker for hjelpe zombien å løyse ein meir kompleks labyrint? \\r\n\\r\nOm du gjer det riktig, kan han gå kva for ein svingete veg uansett lengde!"
@@ -430,6 +433,16 @@ nn:
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': 'Vi startar med 4x4-bildet Maddie laga i videoen. Oppgåva di er å fylle eit 4x4-grid med fargar med 12 bits per piksel. Her er forutsetningane: Rad 1 - fyll med rødfargar. Rad 2 - grønfargar. Rad 3 - blåfargar. Rad 4 - gråfargar.'
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
       App Lab test_instruction: test
+      Applab AllTheThings ResourcesTab AllResources_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      Applab AllTheThings ResourcesTab MapReference_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      Applab AllTheThings ResourcesTab ReferenceLinks_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      Artist - Nested Loops 1_instruction: 'Fullfør koden for å teikne desse trekantane. Den første er gjort ferdig for deg. Tips: 3 trekantar rotert er til saman 360 grader.'
+      Artist - Nested Loops 10_instruction: Teikn den siste rada med stjerner på flagget ved å køyre ei løkke over dei gitte blokkane. Stjernene er 50 pikslar frå kvarandre, men hugs at stjernene er 30 pikslar i bredde.
+      Artist - Nested Loops 11_instruction: Klarar du å teikne dei 10 kvadratene på fortauet ved å bruke ei løkke i ei løkke? Kvar kvadrat er 30 pikslar.
+      Artist - Nested Loops 12_instruction: Klarar du å teikne desse 36 trekantane ved hjelp av ei løkke i ei løkke?
+      Artist - Nested Loops 5_instruction: Gjenta koden som er gitt til å lage ei vindmølle.
+      Artist - Nested Loops 6_instruction: Klarar du å teikne ein sekskant ved å få trekantkoden i løkke?
+      Artist - Nested Loops 9_instruction: Teikn tennene i munnen til alligatoren!
       Artist - Nested Loops Assessment 1_instruction: Bruk ei løkke i løkke for å fullføre designet.
       Artist Inspiration_instruction: "Inspirasjon til fri oppgåve: No har du lært alt du treng å vite for å lage slike mønster! Viss du blir inspirert av dette biletet, kan du prøve å lage noko liknande. Du kan òg lage noko heilt anna.\\r\\rVil du lære korleis inspirasjonsmønsteret vårt blei laga? "
       Auto Open Function Editor_instruction: 'Du kan kalle funksjonar frå innsida av andre funksjonar. Bruk "Form"-funksjonen din som utgangspunkt, og lag tre husformer. Det første kan vere 50 pikslar langt, medan dei andre aukar med 20 pikslar for kvar gong. Å nytte ei teljeløkke kan vere ein god idé.'
@@ -437,9 +450,27 @@ nn:
       Bergeron Robot Maze1_instruction: 'Kan du hjelpe meg å fange den slemme grisen? Sett saman eit par "gå framover" blokkar og trykk "Køyr". '
       Brad Spooky House Copy_instruction: 'Frileik: Her er funksjonane du har skrive og litt meir å leike med. Teikn eitkvart ageleg! Leik med tjukkleiken til pennen og sjå kva det gjer med teikningane!'
       Brad Spooky House_instruction: 'Frileik: Her er funksjonane du har skrive og litt meir å leike med. Teikn eitkvart ageleg! Leik med tjukkleiken til pennen og sjå kva det gjer med teikningane!'
+      Building a Foundation Assessment_instruction: Bygg ein pyramide med tre nivå. Det er ingen andre reglar, så leik deg med blokkane til du får det til!
       Busy Bee 2_instruction: Denne bia har mykje å gjere! Legg du merke til nokre mønstre som går igjen i koden din og som du kan bruke til å gjere koden enklare?
       Busy Bee_instruction: Denne bia har mykje å gjere! Legg du merke til nokre mønstre som går igjen i koden din og som du kan bruke til å gjere koden enklare?
+      C3-Farmer While Loops 5_instruction: Wow, nå er det to djupe hol. Klarar du å skrive eit program som fyller begge hola til bakken er heilt jamn?
+      C3-Farmer While Loops 6_instruction: Wow, nå er det ein stor jordhaug der! Klarar du å skrive eit program som fjernar heile haugen slik at bakken blir heilt jamn?
+      C3-Farmer While Loops 7_instruction: Wow, nå er det tre haugar med jord. Klarar du til å skrive eit program som fjernar alle saman slik at bakken blir heilt jamn?
+      C3-Farmer While Loops Assessment 1_instruction: Det er mange hol og haugar. Hjelp meg å fylle og fjerne dei slik at bakken blir heilt jamn.
       CSD U3 L5 Freeplay_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 L5 Freeplay_2018_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables TEMPLATE square_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables change circle size_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables change circle size_2018_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables multiple assignments_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables naming rules v2-2018_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables naming rules v2_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables naming rules v2_2018_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables naming rules_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables random assignment_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables random with assignment_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U3 Variables random with assignment_2018_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      CSD U4 - Events Template_instruction: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       CSD U5 black white images pixelation 2_instruction: Teikn eit smilefjes (Klikk her for å sjå bilete)
       CSD U5 black white images pixelation 2_2018_instruction: Teikn eit smilefjes (Klikk her for å sjå bilete)
       CSD U5 black white images pixelation 3_instruction: Endre bredde- og høgde-sliderane for å finne bildet (klikk her for å sjå meir)
@@ -450,17 +481,41 @@ nn:
       CSD U5 black white images pixelation 5_2018_instruction: Teikn det du vil
       CSD U5 black white images pixelation_instruction: Gjer ferdig X-forma ved å skrive nullar og eittal
       CSD U5 black white images pixelation_2018_instruction: Gjer ferdig X-forma ved å skrive nullar og eittal
+      CSDU4 - AppLab - 1_instruction: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
+      CSDU6 - Arrays - expressionsAsIndexes_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 - Arrays - indexPractice_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 - for loop - color buttons with for_instruction: Skriv innhaldet i matrisa på skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 - for loop - color buttons_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 - for loop - why for_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays rainbow_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
       CSDU6 arrays random_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select icons_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select rainbow_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select rainbow_2018_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select random_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select random_2018_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select variable_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays select variable_2018_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSDU6 arrays variable_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
       CSP student contact info_instruction: Skriv inn epostadressa di.
+      CSPU5_U3 - Arrays - expressionsAsIndexes_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Arrays - expressionsAsIndexes_2018_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Arrays - indexPractice_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Arrays - indexPractice_2018_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Canvas - freePlay_instruction: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Canvas - freePlay_2018_instruction: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Design Mode 1_instruction: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Design Mode 1_2018_instruction: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Keys - Final Image Scroller_instruction: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 4_instruction: Bruk debug-kommandoen til å lage ei liste over alle verdiane rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 4_2018_instruction: Bruk debug-kommandoen til å lage ei liste over alle verdiane rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 7_instruction: Utan å leggje til noko linje med kode, ordne koden slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 7_2018_instruction: Utan å leggje til noko linje med kode, ordne koden slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3L15 full clicker app_instruction: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
+      CSPU5_U3L15 full clicker app_2018_instruction: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
       Code Studio Puzzle Challenge 13 - Artist_instruction: 'Dette er akkurat som ei "for"-løkke. Fullfør koden for å teikne seks linjer som veks frå 50, 60, 70, 80, 90 til å bli 100 pikslar lange. '
       Code Studio Puzzle Challenge 2 - Artist_instruction: No kan du legge til ein sving og ei anna linje. Linjene er 200 pikslar lange.
-      Course 2 Bee Loops 1_instruction: 'Hei, jeg er en bie! Kan du hjelpe meg å samle nektar fra disse blomstene? '
+      Course 2 Bee Loops 1_instruction: 'Hei, eg er ei bie. Kan du hjelpe meg med å samle all nektaren frå desse blomane? '
       Course 2 Bee Loops 2_instruction: Kan du gjøre akkurat det samme på en enklere måte med en "gjenta"-løkke?
       Course 2 Maze Loops 1_instruction: Kan du få meg bort til grisen ved å bruke kun 5 blokkar?
       Course 4 2_instruction: Bia vil berre ha nektar akkurat nå. Hugs, ikkje alle er blomar, så sjekk etter at du berre samlar nektar frå blomar.
@@ -529,7 +584,7 @@ nn:
         Tips: Du må fjerne noko!
       Course 4 Artist For Loops 8a_instruction: Berre ei lita endring i koden frå førre bilete kan skape denne teikninga. Kan du finne ut kva endring du må gjere?
       Course 4 Artist For Loops 9_instruction: Kan du lage ein spiral? Flytt framover frå 1 til 75 pikslar, auk med 1 piksel kvar gong.
-      Course 4 Artist For Loops Challenge_instruction: "**Utfordring:** Kan du finne ut korleis du brukar alle tinga du har lært til å lage dette plygonet, alle med sider på 40 pikslar?"
+      Course 4 Artist For Loops Challenge_instruction: "**Utfordring** Kan du finne ut korleis du kan bruke alt du har lært til å lage dette bildet av mangekantar, alle med 40 pixel lange sider?"
       Course 4 Artist For Loops Challenge_a_instruction: |-
         Klarer du å finne ut korleis du kan nytte alt du har lært til å lage dette biletet?\r 
         \r 
@@ -618,7 +673,7 @@ nn:
       Course 4 Bee For Loops 5_instruction: 'Åh, for-løkka gjør dette så mye enklere! Bruk "teller"-variabelen fra for-løkka til å kjøre en løkke over "hent nektar"-blokka samme antall ganger som løkka. Oooh! Det var mange løkker. All koden du trenger er der, ta en titt på hvordan den er satt sammen før du klikker på Kjør og ser hvordan den funker. '
       Course 4 Bee For Loops 6_instruction: Du kan og bruke ei for-løkke til å telje ned. Prøv å samle nektaren ved å telje ned frå 5 til 1 med steg på 1.
       Course 4 Bee For Loops 7_instruction: Bruk for-løkkas teller-variabel til å kontrollere hvor langt du beveger deg vannrett.
-      Course 4 Bee For Loops 8_instruction: Kan du bruke løkke-variabelen til å kontrollere rørsle og innsamling av nektar?
+      Course 4 Bee For Loops 8_instruction: "Kan du bruke løkkevariabelen for å\nkontrollere rørsla og nektarinnsamlinga?"
       Course 4 Bee For Loops 9_instruction: Det siste talet i for-løkka di er kalla "vekst" og kvar gong løkka køyrer blir teljar-variabelen endra med veksten. Prøv å samle desse blomane ved å bruke ein vekst på 2.
       Course 4 Bee Loops 5 NEW_instruction: Her er tre blomar. Kan du finne mønsteret av instruksjonar som du må gjenta 3 gongar for å samle alle nektarane ved å bruke så få blokker som mogleg?
       Course 4 Bee Loops 5a NEW_instruction: Bruk løkker for å hjelpe bia med å samle all nektar på vei til bikuben, med så få blokker som mogleg. Ikkje gløym å lage honning når du kjem fram!
@@ -650,13 +705,13 @@ nn:
       Course 4 Binary 6_instruction: Kva binærstreng, gjenteke 10 gongar, vil teikne dette biletet?
       Course 4 Binary 7_instruction: Kva binærstreng, gjenteke 10 gongar, vil teikne dette biletet?
       Course 4 Binary 8_instruction: Du kan fullføre mesteparten av dette bildet ved å kjøre en løkke over et 5-bits binærtall - så trenger du et til 4-bits binærtall til å få til nedre høyre hjørne.
-      Course 4 EC 1a_instruction: Ingen reglar. Ingen tips. Berre utfordringa!
-      Course 4 EC 1b_instruction: Ingen reglar. Ingen tips. Berre utfordringa!
+      Course 4 EC 1a_instruction: '**Ekstrem utfordring:** Ingen reglar. Ingen tips. Berre utfordringa!'
+      Course 4 EC 1b_instruction: '**Ekstrem utfordring:** Ingen reglar. Ingen tips. Berre utfordringa!'
       Course 4 EC 2a_instruction: '**Ekstrem utfordring:** Ingen reglar. Ingen tips. Berre utfordringa!'
-      Course 4 EC 2b_instruction: Ingen reglar. Ingen tips. Berre utfordringa!
-      Course 4 EC 2c_instruction: Ingen reglar. Ingen tips. Berre utfordringa!
-      Course 4 EC 2d_instruction: Ingen reglar. Ingen tips. Berre utfordringa!
-      Course 4 EC 3_instruction: 'Bruk det du har lært i forrige nivå til å teikne eit bilete som dette. Tips: Koden blir enklare om du bruker parametere. '
+      Course 4 EC 2b_instruction: '**Ekstrem utfordring:** Ingen reglar. Ingen tips. Berre utfordringa!'
+      Course 4 EC 2c_instruction: '**Ekstrem utfordring:** Ingen reglar. Ingen tips. Berre utfordringa!'
+      Course 4 EC 2d_instruction: '**Ekstrem utfordring:** Ingen reglar. Ingen tips. Berre utfordringa!'
+      Course 4 EC 3_instruction: 'Bruk det du lærte i forrige nivå til å lage eit bilete som dette. Tips: Koden blir lettare om du brukar parametre. '
       Course 4 EC 3a_instruction: 'Ekstrem utfordring: Ingen reglar. Ingen tips. Berre utfordringa!'
       Course 4 Maze 1_instruction: Få den sinte fuglen til grisen!
       Course 4 Maze 2_instruction: Hald deg unna dynamitten!
@@ -688,7 +743,7 @@ nn:
       Course 4 Play Lab Vars 7_instruction: Bra! La oss gjere spelet litt vanskelegare å spele. Kvar gong Hund (figur 1) blir truffe av gule hjarter frå Katt (spelar 2) skal du miste eitt poeng. Start med 10 poeng slik at det ikke er for vanskeleg. For å fullføre nivået må poeng-scoren falle frå 10 til 0.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: En siste ting til dette spillet - la oss gjøre så spilleren kan vinne (eller tape). Bruk en for alltid-løkke for å sjekke verdien av poeng - hvis poeng er større enn 20 skal fienden forsvinne. Hvis poeng er mindre enn 0 skal spilleren forsvinne. Trykk "Fullfør" når spillet fungerer sånn som du vil det skal gjøre.
       Course 4 Play Lab Vars 8_instruction: Sett opp spillet sånn at Hund kan vinne (eller tape). Bruk en for alltid-løkke for å sjekke verdien av poeng. Hvis poeng er større en 20 skal fienden (Katten) forsvinne. Hvis poeng er mindre enn 0 skal spilleren (Hunden) forsvinne. Klikk "Fullfør" når spillet fungerer slik du vil det skal gjøre.
-      Course 4 Play Lab Vars 9_instruction: "Tid for fritt spel! Her er alle variablane me har brukt så langt, i tillegg til nokre ekstra om du vil bruke dem.\\r\n\\r\nLegg merke til at det er så mange brikker i verktøykassa vår at dei treng å bli organisert! Her har me lagt kvar brikke inn i ein kategori. Bruk litt tid på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk gjenta-, variablar- og hendingar-brikker. \\r\n\\r\nHint: Bla ned for å sjå alle kommandoane i arbeidsområdet."
+      Course 4 Play Lab Vars 9_instruction: "Tid for fritt spel! Her er alle variablane vi har brukt så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til at det er så mange brikker i verktøykassa vår at dei treng å bli organisert! Her har vi lagt kvar brikke inn i ein kategori. Bruk litt tid på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk gjenta-, variablar- og hendingar-brikker. \n\nHint: Bla ned for å sjå alle kommandoane i arbeidsområdet."
       Course 4 Play Lab Vars_instruction: En siste ting til dette spillet - la oss gjøre så spilleren kan vinne (eller tape). Bruk en for alltid-løkke for å sjekke verdien av poeng. Hvis poeng er større en 20 skal fienden forsvinne. Hvis poeng er mindre enn 0 skal spilleren forsvinne.
       Course 4 Play Labs For Loops 1_instruction: Hunden skal seie alle tala frå 1 til 100. Bruk ei 'for'-løkke og telje-brikke til å seie teljevariabelen kvar gong løkka køyrer.
       Course 4 Play Labs For Loops 2_instruction: Denne gongen skal du hjelpe katten Olive å telje oddetala frå 1 til 101.
@@ -721,7 +776,7 @@ nn:
       Course 4 SCF 2_instruction: 'Bruk det du lærte i forrige nivå til å lage eit bilete som dette. Tips: Koden blir lettare om du brukar parametre. '
       Course 4 SCF 3 Fail 1_instruction: Kan du finne ut hvordan...
       Course 4 SCF 3 Fail 2_instruction: Kan du finne ut hvordan...
-      Course 4 SCF 3_instruction: 'Bruk det du har lært i forrige nivå til å teikne eit bilete som dette. Tips: Koden blir enklare om du bruker parametere. '
+      Course 4 SCF 3_instruction: 'Bruk det du lærte i forrige nivå til å lage eit bilete som dette. Tips: Koden blir lettare om du brukar parametre. '
       Course 4 SCFL 1_instruction: Løys denne oppgåva med færrast mogleg blokker.
       Course 4 SCFL 1a_instruction: Kan du få Skrat bort til eikenøtta si med så få blokker som mogleg?
       Course 4 SCFL 1b_instruction: Kan du få Skrat bort til eikenøtta si med så få blokker som mogleg?
@@ -773,10 +828,15 @@ nn:
       D_Frozen_nested6_instruction: Teikn eit trappetrinnsmønster som brukar svingar mellom 75 og 105 gradar.
       D_Frozen_nested7_instruction: Snu 180 gradar og teikn trappetrinnsmønsteret igjen!
       Find the Wizard_instruction: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
+      Find the Wizard_2018_instruction: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Food Fight!_instruction: "Vi har lagt til ein siste funksjon til\ndeg. \\r\n\\r\nBruk ei \"viss\" setning til å programmere spelet til å kalle funksjonen \"nytt_nivå\" \nnår \"spelar_poeng\" blir høgare enn eit gitt nummer.\\r\n\\r\nTil dømes: \"spelar_poeng\" > 6\\r\n\\r\nPrøv spelet, og kom deg til nivå 3 for å gå vidare til neste oppgåve. "
       FoodFight_instruction: Dette er eit eksempel på eit spel du kan lage i spel-lab.
       FoodFight_2018_instruction: Dette er eit eksempel på eit spel du kan lage i spel-lab.
       Function intro Ryan_instruction: Bruk funksjonen "build bridge"(bygg bru) to gonger for å lage ein bane til redstonefakkelen.
+      Get To The Goal_instruction: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
+      Guess The Number 2_instruction: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
+      Guess The Number_instruction: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
+      Guess The Number_2018_instruction: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
       Infinity_catch_instruction: Kan du få Elsa ("figur 2") til å ta igjen Anna ved å bruke piltastane?
       Infinity_finale_instruction: Lag det du har lyst til og del med andre!
       Infinity_move_collide_instruction: Hiro er "figur 1". Flytt han direkte til Baymax og spill av ein lyd når dei rører ved kvarandre.
@@ -812,7 +872,7 @@ nn:
       K-1 Artist1 5_instruction: Teikn stilken på denne blomen med to linjer!
       K-1 Artist1 6_instruction: Gjer ferdig biletet ved å bruke ei hoppeblokk!
       K-1 Artist1 7_instruction: Bruk hoppeblokka for å flytte utan å teikne. Hopp opp og teikn ei linje.
-      K-1 Artist1 8_instruction: Teikn den stipla linja ved å bruke både hopp- og teikneblokker
+      K-1 Artist1 8_instruction: Teikn den stipla linja ved ved å bruke både hoppe- og teikneblokker
       K-1 Artist1 9_instruction: Teikn og hopp for å lage den stipla linja
       K-1 Artist1 Assessment 1_instruction: Teikn korte og lange linjer!
       K-1 Artist1 Assessment 2_instruction: Teikn korte stipla linjer!
@@ -962,16 +1022,16 @@ nn:
       MC_HOC_2017_07a_Kiki_instruction: Klarér banen til den oransje firkanten.
       MC_HOC_2017_08_Cole_instruction: Forandre funksjonen slik at han verkar for denne biomen.
       MC_HOC_2017_08_Kiki_instruction: Forandre funksjonen slik han verkar for denne oppgåva.
-      MC_HOC_2017_08_RY_instruction: Bruk funksjonane for å finne ein veg over lavaen.
-      MC_HOC_2017_08_Will_instruction: Bruk funksjonane for å finne ein veg over lavaen.
+      MC_HOC_2017_08_RY_instruction: Bruk funksjonane til å finne ein veg over lavaen.
+      MC_HOC_2017_08_Will_instruction: Bruk funksjonane til å finne ein veg over lavaen.
       MC_HOC_2017_09_Cole_instruction: Programmér agenten til å klarere bana til spelaren.
       MC_HOC_2017_09_Kiki_instruction: Programmér agenten til å klarere bana til spelaren slik at han kjem seg til trykkplata.
-      MC_HOC_2017_10_Cole_instruction: Lag ein funksjon for å hjelpe deg med å gjere ferdig denne minevogna.
+      MC_HOC_2017_10_Cole_instruction: Lag ein funksjon som hjelper deg å gjere ferdig denne minevogna.
       MC_HOC_2017_10_Cole_old_instruction: Lag ein funksjon som hjelper deg å gjere ferdig denne minevogna.
-      MC_HOC_2017_10_Kiki_instruction: Lag ein funksjon for å hjelpe deg med å gjere ferdig denne minevogna.
+      MC_HOC_2017_10_Kiki_instruction: Lag ein funksjon som hjelper deg å gjere ferdig denne minevogna.
       MC_HOC_2017_10_RETRY_instruction: Bruk funksjonar for å hjelpe deg med å gjere ferdig denne minevogna.
-      MC_HOC_2017_10_RYAN_instruction: Lag ein funksjon for å hjelpe deg med å gjere ferdig denne minevogna.
-      MC_HOC_2017_10_RYAN2_instruction: Lag ein funksjon for å hjelpe deg med å gjere ferdig denne minevogna.
+      MC_HOC_2017_10_RYAN_instruction: Lag ein funksjon som hjelper deg å gjere ferdig denne minevogna.
+      MC_HOC_2017_10_RYAN2_instruction: Lag ein funksjon som hjelper deg å gjere ferdig denne minevogna.
       MC_HOC_2017_13_Cole_instruction: "**Frileik:** Utforsk på eiga hand!"
       MC_HOC_2017_4.5v2_instruction: Få agenten til trykkplata.
       MC_HOC_2017_Ali_instruction: Bruk funksjonane til å finne ein veg over lavaen.
@@ -1046,14 +1106,14 @@ nn:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Det er fri speletid! Ha det gøy med alle blokkene i verktøykassa di. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Utfordring: Korleis vil du bruke "for"-blokka til å få alle figurane til å gå rundt og seie figurnummeret sitt, for deretter å forsvinne frå skjermen? '
       New Artist Project_instruction: Teikn noko stilig! Koden din er lagra som eit prosjekt som du kan gå tilbake til når som helst.
-      New Basketball Project_instruction: Lag ditt eige basketballspel. Du kan endre på alle reglane. Når du er ferdig, klikk Fullfør for å la vennane dine prøve spelet på telefonane sine.
+      New Basketball Project_instruction: Opprett ditt eget basketball-spel. Du kan endre alle reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på sine telefonar.
       New Bounce Project_instruction: Opprett ditt eiget Sprett-spel. Du kan endre alle bileta og reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på telefonane sine.
       New Course 4 Artist Functions Level 4_instruction: Bruk "tegn eit kvadrat"-funksjonen for å tegne dette mønsteret.
       New Gumball Project_instruction: Lag det du har lyst til og del med andre!
       New Ice Age Project_instruction: Lag det du har lyst til og del med andre!
       New Infinity Project_instruction: Lag det du har lyst til og del med andre!
       New Minecraft Hero Project_instruction: "**Frileik:** Utforsk på eiga hand!"
-      New Sports Project_instruction: 'Lag ditt eiget spel! Du bestemmer: Du kan endre på alle reglane, blande og setje saman ulike idrettar. Vêr kreativ! Når du er ferdig, trykk Fullfør for å la venene dine prøve det på telefonane sine.'
+      New Sports Project_instruction: 'Lag ditt eige spel! Du bestemmer: Du kan endre på alle reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er ferdig, trykk "Fullført" for å dele spelet med venene dine, så dei kan prøve det på sine telefonar!'
       Overworld Avoid Monsters_instruction: Å springe inn i ein kjøttetande plante er ein dårleg ide. Gå forsiktig forbi planten for å komme sikkert heim.
       Overworld Avoid Monsters_2018_instruction: Å springe inn i ein kjøttetande plante er ein dårleg ide. Gå forsiktig forbi planten for å komme sikkert heim.
       Overworld Chop Tree - allthethings_instruction: Tre er ein veldig viktig ressurs. Mange ting blir laga av tre. Gå bort til treet og bruk "øydelegg blokk"-kommandoen for å hogge det ned.
@@ -1075,20 +1135,35 @@ nn:
       Overworld Powered Minecart_2018_instruction: Bra jobba! Du har samla mange ressursar og bygd eit beskjedent hus. Legg skinner frå kanten av kartet og fram til døra på huset ditt.
       Overworld Shear Sheep_instruction: Tid for å klippe sau! Bruk "klypp"-kommandoen for å samle ull frå begge sauene.
       Overworld Shear Sheep_2018_instruction: Tid for å klippe sau! Bruk "klypp"-kommandoen for å samle ull frå begge sauene.
+      PDK5 Conditionals 1_instruction: Lilla blomar har anten 1 eller 0 nektar, men du veit ikkje kva blome? Pass på at du ikkje prøver å samle inn nektar frå blomar som ikkje har nektar. Sjekk om nektar er lik 1 ved å bruke ein "viss" blokk.
       PDK5 Functions 2_instruction: Funksjonar lar deg definere nye blokker! Vi har flytta blokker som teiknar eit kvadrat inn i ein funksjon som heiter "teikn eit kvadrat". Kan du bruke funksjonen "teikn eit kvadrat" til å lage vindauga? Kvadrata er 75 pikslar frå kvarandre.
       PS - test - pixelation_instruction: Gjer ferdig X-forma ved å skrive nullar og eittal
       PS copy 2-3 Bee Conditionals 5_instruction: "Lilla blomer har enten 1 eller 0 nektar, men du veit ikkje svaret! Pass på at du ikkje samlar nektar frå ein lilla blome om han ikkje har noko. Sjekk om nektar er lik 1 ved å bruke ein \"viss\"-blokk."
       Pixelation - AllTheThings 4_instruction: Dette pikselasjonsnivået syner bruken av alternativet 'hide_encoding_controls'.  Legg merke til at nivået viser biletdata i heksadesimal og lar deg ikkje endre det tilbake til binær.
       Pixelation - AllTheThings 5_instruction: Dette pikselasjonsnivået synerer bruken av alternativet "Skjul glidebrytarar". Merk at glidebrytarane for breidde og høgde ikkje er tilgjengelege, og at felta breidde og høgde ikkje kan redigerast.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: 'Lag ein 3x5 bokstav "A". Widgeten er satt opp med feil dimensjonar. Den fyrste oppgåva di er å sette den andre byten til 8-bit kode for 5: 0000 0101. Så kan du begynne å sette inn pikseldata.'
+      Pixelation - Lesson 14 - Make the Letter A_2018_instruction: 'Lag ein 3x5 bokstav "A". Widgeten er satt opp med feil dimensjonar. Den fyrste oppgåva di er å sette den andre byten til 8-bit kode for 5: 0000 0101. Så kan du begynne å sette inn pikseldata.'
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: 'Vi startar med 4x4-bildet Maddie laga i videoen. Oppgåva di er å fylle eit 4x4-grid med fargar med 12 bits per piksel. Her er forutsetningane: Rad 1 - fyll med rødfargar. Rad 2 - grønfargar. Rad 3 - blåfargar. Rad 4 - gråfargar.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2018_instruction: 'Vi startar med 4x4-bildet Maddie laga i videoen. Oppgåva di er å fylle eit 4x4-grid med fargar med 12 bits per piksel. Her er forutsetningane: Rad 1 - fyll med rødfargar. Rad 2 - grønfargar. Rad 3 - blåfargar. Rad 4 - gråfargar.'
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
+      Pixelation - Lesson 15 - Complete 3-bit color_2018_instruction: Vi startar med eit 4x2-bilde som Maddie laga, men vi har tatt ut dei to siste rutene. Gjer ferdig bildet ved å finne ut kva to fargar som manglar og kode dei.
+      Pizza on a Plate_instruction: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
+      Poorva copy U3L2 Using Simple Commands_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
       Project - Final Image Scroller_instruction: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
+      Project - Final Image Scroller_2018_instruction: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
       Project - Finish your canvas app_instruction: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
       Project - Make Your Own Clicker Game_instruction: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
+      Prompt Test_instruction: Bygg kva du vil. Dette er eit eksempel på eit gjett-eit-tal-spel!
+      Quantum Bee_instruction: Lilla blomar har anten 1 eller 0 nektar, men du veit ikkje kva blome? Pass på at du ikkje prøver å samle inn nektar frå blomar som ikkje har nektar. Sjekk om nektar er lik 1 ved å bruke ein "viss" blokk.
+      Robot Doodle_instruction: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
+      Robot Doodle_2018_instruction: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
       Robot Drawing_instruction: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
       Robot_instruction: 'Prosjektidé: Lag eit bilete av noko kjent frå den verkelege verda. Dette krev uthaldenheit og planlegging!'
       Ryan - 4-5 Bee Conditionals 2_instruction: Bia vil berre ha nektar akkurat nå. Ikkje alle objekta er blomar, så sjekk under KVAR EINASTE SKY for å sjå om det gøymer seg ein blome der. Om det gjer det kan du samle nektar.
       Ryan - Bee Conditionals_instruction: Bia vil berre ha nektar akkurat nå. Ikkje alle objekta er blomar, så sjekk under KVAR EINASTE SKY for å sjå om det gøymer seg ein blome der. Om det gjer det kan du samle nektar.
       Ryan Test Locked Blocks_instruction: Her er ein funksjon som heiter "patruljar". Endre han slik at Katt flytter seg 400 pikslar opp og så 400 pikslar ned.
       RyanTest3_instruction: Dette brettet har form-skift aktivert! Oppdatér for å sjå ulike variantar.
+      SG Add Subgoals practice_instruction: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L03 Draw a T using turnAround_instruction: Teikn eit plussteikn som brukar den oppgjevne versjonen av turnAround().  (Trykk for å sjå fullstendige instruksjonar)
       SG U3L03 Three Steps_instruction: Definer ein funksjon kalla drawSide() som teiknar tre steg og flyttar skilpadda for å førebu seg på den neste sida (Trykk for å sjå fullstendige instruksjonar)
       SG U3L03 draw diamond_instruction: Opprett ein funksjon kalla drawDiamond() som brukar det tidlegare arbeidet ditt for å teikne ein fullstendig diamant. (Trykk for å sjå fullstendige instruksjonar)
@@ -1107,14 +1182,18 @@ nn:
       SG U3L07 - randomSquare_instruction: Teikn figuren ved å bruke ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L07 - sunBeams_instruction: Legg til 100 solstråler til bildet ved å skrive drawAllSunbeams med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L07 - topDownDesign_instruction: Bli komfortabel med strukturen i dette programmet før du går vidare til neste oppgave. (Klikk for å sjå fullstendige instruksjonar)
+      SG U3L07 More Subgoals_instruction: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
       SG U3L08 - fish_instruction: Legg til ein parameter til drawFish som endrer størrelsen på fisken som blir teikna. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 - freePlay_instruction: Fortset å bygge på bildet ditt ved å lage fleire kall til dine nye funksjonar med parametre. (Klikk for å sjå fullstendige instruksjonar)
+      SG U3L08 - introUnderTheSea - recovery_instruction: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 - introUnderTheSea_instruction: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 - randomInput_instruction: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 - squareTwoParams_instruction: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 comments_instruction: Bruk randomNumber()-blokker for å teste funksjonane du lagde med tilfeldig input. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L08 how to add comments_instruction: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
+      SG U3L2 Using Simple Commands part 1_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
       SG U3L2 Using Simple Commands_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      SG U3L2_Add-subgoals_instruction: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L2_Turtle3by3Grid_instruction: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
       SG U3L2_TurtleSquare_right_instruction: Tegn ein firkant foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
       SpecialFrozenLevel_instruction: "Du er nå offisielt blitt ein meisterkunstnar! \nLag eit vinterparadis."
@@ -1138,9 +1217,78 @@ nn:
       U2 frequency caesar_instruction: Instruksjonar
       U2 frequency random sub_instruction: Instruksjonar
       U2 vigenere cipher_instruction: Instruksjonar
+      U3 - Arrays - expressionsAsIndexes_instruction: Skriv eit program som viser ein tilfeldig vald farge frå matrisa. (Klikk for å sjå fullstendige instruksjonar)
+      U3 - Arrays - indexPractice_instruction: Skriv innhaldet i matrisa til skjermen i numerisk rekkefølgje. (Klikk for å sjå fullstendige instruksjonar)
+      U3 - Canvas - freePlay_instruction: Utvid funksjonaliteten til ein av effektane eller opprett ein heilt ny effekt på eigahand. (Klikk for å sjå fullstendige instruksjonar)
+      U3 - Design Mode 1_instruction: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      U3 - Keys - Final Image Scroller_instruction: Oppdatér biletskrollaren til å respondere på knappar og tastetrykk. (Klikk for å sjå fullstendige instruksjonar)
       U3 - Loops - 7_instruction: Utan å leggje til noko linje med kode, ordne koden slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige instruksjonar)
+      U3 Variables flower example_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      U3 Variables gray square_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      U3 Variables randomize your square_instruction: "Endre verdien til petalSize fleire gonger. \nKorleis endrar det teikninga di?"
+      U3L03 Draw a T using turnAround_instruction: Teikn eit plussteikn som brukar den oppgjevne versjonen av turnAround().  (Trykk for å sjå fullstendige instruksjonar)
+      U3L03 Draw a T using turnAround_2018_instruction: Teikn eit plussteikn som brukar den oppgjevne versjonen av turnAround().  (Trykk for å sjå fullstendige instruksjonar)
+      U3L03 Three Steps_instruction: Definer ein funksjon kalla drawSide() som teiknar tre steg og flyttar skilpadda for å førebu seg på den neste sida (Trykk for å sjå fullstendige instruksjonar)
+      U3L03 Three Steps_2018_instruction: Definer ein funksjon kalla drawSide() som teiknar tre steg og flyttar skilpadda for å førebu seg på den neste sida (Trykk for å sjå fullstendige instruksjonar)
+      U3L03 draw diamond_instruction: Opprett ein funksjon kalla drawDiamond() som brukar det tidlegare arbeidet ditt for å teikne ein fullstendig diamant. (Trykk for å sjå fullstendige instruksjonar)
+      U3L03 draw diamond_2018_instruction: Opprett ein funksjon kalla drawDiamond() som brukar det tidlegare arbeidet ditt for å teikne ein fullstendig diamant. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 - moveForwardwithParams_instruction: Bruk berre ein kommando for å flytte skilpadda til kanten av skjermen. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 - moveForwardwithParams_2018_instruction: Bruk berre ein kommando for å flytte skilpadda til kanten av skjermen. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 1 triangle_instruction: Bruk dei versjonane av skilpaddekommandoane med parameter for å lage eit triangel med sider på 100 pikslar. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 1 triangle_2018_instruction: Bruk dei versjonane av skilpaddekommandoane med parameter for å lage eit triangel med sider på 100 pikslar. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 2 purple square_instruction: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
+      U3L06 Challenge 2 purple square_2018_instruction: Les dokumentasjonen for penColor() og penWidth() før du brukar dei til å teikne den blå firkanten.
+      U3L06 Challenge 3 fill pink_instruction: Fyll inn skjermbakgrunnen med favorittfargen din. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 3 fill pink_2018_instruction: Fyll inn skjermbakgrunnen med favorittfargen din. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 5 overlapping circles_instruction: 'Dette biletet er laga berre ved å bruke dot() og penColor(), men korleis skal vi få sirklane til å vere gjennomsiktige?  Om du ikkje har tatt hintet enno: sjekk ut dokumentasjonen!'
+      U3L06 Challenge 5 overlapping circles_2018_instruction: 'Dette biletet er laga berre ved å bruke dot() og penColor(), men korleis skal vi få sirklane til å vere gjennomsiktige?  Om du ikkje har tatt hintet enno: sjekk ut dokumentasjonen!'
+      U3L06 Challenge 6 squiggles_instruction: "Les dokumentasjonen for \"arcLeft\" og \"arcRight\"-kommandoane og teikn så kråketær som vist.\n"
+      U3L06 Challenge 6 squiggles_2018_instruction: "Les dokumentasjonen for \"arcLeft\" og \"arcRight\"-kommandoane og teikn så kråketær som vist.\n"
+      U3L06 Challenge 7 smiley face_instruction: Bruk turnTo() og moveTo() for å teikne eit smilefjes. (Trykk for å sjå fullstendige instruksjonar)
+      U3L06 Challenge 7 smiley face_2018_instruction: Bruk turnTo() og moveTo() for å teikne eit smilefjes. (Trykk for å sjå fullstendige instruksjonar)
+      U3L07 - Free Play Loops and Random_instruction: Frileik! Bruk det du lærte om løkker og tilfeller for å lage din eiga scene. Ha det gøy.
+      U3L07 - Free Play Loops and Random_2018_instruction: Frileik! Bruk det du lærte om løkker og tilfeller for å lage din eiga scene. Ha det gøy.
+      U3L07 - allSeaGrass_instruction: Legg til 50 stykk sjøgras på biletet ved å skrive drawAllSeagrass med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - allSeaGrass_2018_instruction: Legg til 50 stykk sjøgras på biletet ved å skrive drawAllSeagrass med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - createTriangleParam_instruction: Definer ein funksjon som tar ein parameter for å matche funksjonskalla og gjer ferdig biletet. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - createTriangleParam_2018_instruction: Definer ein funksjon som tar ein parameter for å matche funksjonskalla og gjer ferdig biletet. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - introSquare_instruction: Bruk ei løkke til å tegne eit kvadrat. Legg til ei løkke til for å teikne mange kvadrat som all er rotert litt. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - introSquare_2018_instruction: Bruk ei løkke til å tegne eit kvadrat. Legg til ei løkke til for å teikne mange kvadrat som all er rotert litt. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - loopsWithRandom_instruction: Auk antallet repetisjonar slik at skjermen blir fylt med kvitt. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - loopsWithRandom_2018_instruction: Auk antallet repetisjonar slik at skjermen blir fylt med kvitt. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - randomSquare_instruction: Teikn figuren ved å bruke ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - randomSquare_2018_instruction: Teikn figuren ved å bruke ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - sunBeams_instruction: Legg til 100 solstråler til bildet ved å skrive drawAllSunbeams med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - sunBeams_2018_instruction: Legg til 100 solstråler til bildet ved å skrive drawAllSunbeams med ei løkke. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - topDownDesign_instruction: Bli komfortabel med strukturen i dette programmet før du går vidare til neste oppgave. (Klikk for å sjå fullstendige instruksjonar)
+      U3L07 - topDownDesign_2018_instruction: Bli komfortabel med strukturen i dette programmet før du går vidare til neste oppgave. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - fish_instruction: Legg til ein parameter til drawFish som endrer størrelsen på fisken som blir teikna. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - fish_2018_instruction: Legg til ein parameter til drawFish som endrer størrelsen på fisken som blir teikna. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - freePlay_instruction: Fortset å bygge på bildet ditt ved å lage fleire kall til dine nye funksjonar med parametre. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - freePlay_2018_instruction: Fortset å bygge på bildet ditt ved å lage fleire kall til dine nye funksjonar med parametre. (Klikk for å sjå fullstendige instruksjonar)
       U3L08 - introUnderTheSea with comments_instruction: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - introUnderTheSea_instruction: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - introUnderTheSea_2018_instruction: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - randomInput_instruction: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - randomInput_2018_instruction: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - squareTwoParams_instruction: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - squareTwoParams_2018_instruction: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - starFish_instruction: Legg til ein ekstrra fisk, sjøstjerne og sjøgras til bildet. Sjå på, men ikkje endre, funksjonane som lagar dei. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 - triangleTwoParams_instruction: Kall drawSquare() for å gjere ferdig tegninga av dei to kvadrata. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 how to add comments_instruction: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
+      U3L08 how to add comments_2018_instruction: Bruk randomNumber()-blokka til å teste funksjonane du laga som har tilfeldig innput. (Klikk for å sjå fullstendige instruksjonar)
+      U3L15 full clicker app_instruction: Gjer ferdig klikkar-spelet ditt! (Trykk for å sjå fullstendige instruksjonar)
+      U3L2 Using Simple Commands (no tooltips)_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      U3L2 Using Simple Commands_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      U3L2 Using Simple Commands_2018_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      U3L2_Turtle3by3Grid_instruction: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
+      U3L2_Turtle3by3Grid_2018_instruction: Tegn eit 3x3 rutenett foran og til høgre for turtle så effektivt som mogleg. Skilpadda skal stoppe der ho starta og ha samme retning som den starta i. (Klikk for å sjå fullstendige instruksjonar)
+      U3L2_TurtleSquare_right_instruction: Tegn ein firkant foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
+      U3L2_TurtleSquare_right_2018_instruction: Tegn ein firkant foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
       U4 Model App_instruction: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      U4 Model App_2018_instruction: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      U4 Model Design 1_instruction: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
+      U4 Model Design 1_2018_instruction: Legg til ein stor raud knapp på skjermen din i design mode. (Klikk for å sjå fullstendige instruksjonar)
       U4 vigenere cipher 2_instruction: Instruksjonar
       U4L02 - Objects - Template1_instruction: Mal
       U4L02 - Objects - Template1_2018_instruction: Mal
@@ -1195,6 +1343,7 @@ nn:
       bounce_7_2018_instruction: Fest blokker til alle «når» blokkene. Sprett ballen heilt til den treff målet.
       bounce_7_basketball_instruction: Fest blokker til alle «når» blokkene. Sprett ballen heilt til den treff flagget.
       bounce_7_sports_instruction: Fest blokker til alle «når» blokkene. Sprett ballen heilt til den treff flagget.
+      collector example_instruction: Sett desse blokkene saman for å samle inn alt gullet og løyse oppgåve.
       collectorDebugVideo2_instruction: Sett desse blokkene saman for å samle inn alt gullet og løyse oppgåve.
       collectorSkinVideo1_instruction: Samle inn alle fire haugane for å klare dette nivået.
       collectorSkinVideo2_instruction: Samle inn ein haug med gull for å klare dette nivået.
@@ -1202,6 +1351,7 @@ nn:
         Du kan bruke ei løkke for å trekke mange linjer i ei rad.\r 
         \r 
         Kan du teikne eit hus? Få det til å sjå ut akkurat slik du likar det!  Prøv å leite etter mønstre som du kan gjenta!
+      course1_artist_loops_challenge2_instruction: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
       course1_artist_loops_challenge3_instruction: '"Kan du hjelpe meg å lage to fuglehus?"'
       course1_artist_loops_challenge4_instruction: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
       course1_collector_loops_challenge1_instruction: '"Kan du hjelpe meg med å finne nokre bugs? Eg veit kor eg skal gå, men eg veit ikkje kor mange steg eg må ta."'
@@ -1217,12 +1367,19 @@ nn:
       course2_artist_nestedLoops_challenge1_instruction: Kan du finne ut korleis du lagar eit slikt bilete?
       course2_artist_nestedLoops_challenge2_instruction: Kan du finne ut korleis du lagar eit slikt bilete?
       course2_artist_prog_challenge1_instruction: Teikn eit rom for kvar av dyra. Det er mange ulike måtar å løyse denne oppgåva på, så ha det gøy. Den kortast moglege løysinga brukar 6 blokkar, men du kan bruke så mange du vil!
+      course2_artist_prog_challenge2_instruction: "*Hjelp meg å måle dei gule linjene på denne vegen! *"
+      course2_bee_conditionals_challenge1_instruction: Få tak i all nektaren og lag honning.
+      course2_bee_conditionals_challenge2_instruction: Få tak i all nektaren og lag honning.
       course2_collector_loops_challenge2_instruction: Få tak i heile skatten!
       course2_collector_prog_challenge1_instruction: Sjå nøye etter! Kan du samle saman alle dei *10* bitane av skatten?
       course2_collector_prog_challenge2_instruction: Skatten er del opp i 20 stykke. Samle saman minst halvparten for å fullføre denne oppgåva!
+      course2_harvester_loops_challenge1_instruction: Samle saman alt kornet.
+      course2_harvester_loops_challenge2_instruction: "Saml all salaten. \nUnngå tre og åkrar!"
       course2_maze_loops_challenge1_instruction: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
       course2_maze_programming_challenge1_instruction: '*"Grisen gøymer seg! Kan du hjelpe med til å finne ein veg rundt?"*'
+      course2_maze_programming_challenge2_instruction: Nokre gongar er det meir enn ein måte å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn å gå framover!
       course2_maze_seq_challenge1_instruction: Følg stien og leid meg til den tåpelege grisen. Unngå TNT ellers vil fjørene mine fyke!
+      course2_maze_seq_challenge2_instruction: "Du kan bare flytte opp til fire gonger \ni kvar retning. Finn du ein bane før du går tom for blokker?"
       course2_playlab_stage17_1_instruction: Kan du få hunden Jorge (figur 1) til å seie "Hei"?
       course2_playlab_stage17_10_instruction: |-
         Legg til blokker til hendinga "når den køyrer" for å endre bakgrunnen og hastigheita til Waddles.\r
@@ -1234,7 +1391,7 @@ nn:
       course2_playlab_stage17_4_instruction: "Kan du lage eit program som får\nJorge (figur 1) til å flytte seg til Katten Olive, og få Olive til å seie \"Hei\" når Jorge\nkjem fram?"
       course2_playlab_stage17_5_instruction: "Kan du lage eit program som får Ocativa til\nå seie \"Hei\" når vi klikker på ho?"
       course2_playlab_stage17_6_instruction: "Kan du lage eit program som får Waddles\ntil å flytte seg rundt når vi bruker tastane opp / ned / venstre / høgre for å treffe alle måla!"
-      course2_playlab_stage17_8_instruction: "Kan du få Waddles (figur 1) til å seie \"Au!\" og spele ein \"treff\"-lyd hvis han går inn i Chomp?\\r\n\\r\nNår du er ferdig, spel spelet og få det til å hende."
+      course2_playlab_stage17_8_instruction: "Kan du få Waddles (figur 1) til å seie \"Au!\" og spele ein \"treffe\"-lyd hvis han går inn i Chomp?\\r\n\\r\nNår du er ferdig, spel spelet og få det til å hende."
       course2_playlab_stage17_9_instruction: "Kan du legge til ei blokk for å skåre poeng når Waddles treff Octacia (figur 3)?\\r\nSpel spelet og flyt Waddles med pilane til du skårar!"
       course3_artist_functions_challenge2_instruction: Prøv denne koden for å sjå korleis den fungerer. Deretter gjer du programmet om til ditt eige!
       course3_bee_debugging_challenge1_instruction: Sjå korleis biene får nektar. Kan du bruke det samme mønsteret til å hjelpe biene å lage all honningen?
@@ -1245,19 +1402,20 @@ nn:
       course3_farmer_until_challenge2_instruction: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       course3_maze_debugging_challenge1_instruction: '*"Går eg berre rundt i sirklar?"*'
       course3_maze_debugging_challenge2_instruction: '*"Om eg snur for ofte, kan eg bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
+      course3_maze_until_challenge1_instruction: Ingen hint, berre utfordringar. Få zombien til solsikka.
       course3_playlab_stage16_1_instruction: Kan du få denne hunden til å seie «hallo verda»?
       course3_playlab_stage16_2_instruction: Kan du få hunden til å seie noko, og deretter få katten til å seie noko etterpå?
       course3_playlab_stage16_3_instruction: Kan du lage eit program som får hunden til å flytte seg til katten?
       course3_playlab_stage16_4_instruction: Kan du lage eit program som får hunden til å flytte seg til katten, og får katten til å seie "Hallo" når hunden kjem bort?
       course3_playlab_stage16_5_instruction: Kan du legge til ei blokk for å få blekkspruten glad?
-      course3_playlab_stage16_6_instruction: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
+      course3_playlab_stage16_6_instruction: Lag di eiga historie. Når du er ferdig klikker du Fullfør for å la vener prøve di historie på telefonane sine.
       course3_playlab_stage17_1_instruction: Kan du lage eit program som får blekkspruten til å seie "Hallo" når ein klikkar på den?
       course3_playlab_stage17_2_instruction: Kan du lage eit program for å få Waddles til å flytte seg rundt ved å bruke piltastane for å treffe alle måla?
       course3_playlab_stage17_3_instruction: '"Gjenta for alltid"-blokka lar deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte dinosauren opp og ned for alltid?'
       course3_playlab_stage17_4_instruction: Kan du få Waddles til å seie "Au!" og spele ein "treffe"-lyd om han kjem borti dinosauren, og så flytte han med pilene for at det skal skje?
       course3_playlab_stage17_5_instruction: Kan du legge til ei blokk for å score eit poeng når Waddles kjem borti blekkspruten, og deretter flytte ham med pilane til du scorar?
       course3_playlab_stage17_6_instruction: Kan du legge til blokker for å endre bakgrunnen og farten til Waddles, og så flytte ham med pilane til du scorar?
-      course3_playlab_stage17_7_instruction: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
+      course3_playlab_stage17_7_instruction: Lag di eiga historie. Når du er ferdig klikker du Fullfør for å la vener prøve di historie på telefonane sine.
       course4_artist_binary_challenge1_instruction: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Præv å bruke løkker for å fullføre denne teikninga.
       course4_artist_functions_challenge2_instruction: Prøv denne koden for å sjå korleis den fungerer. Deretter gjer du programmet om til ditt eige!
       course4_artist_fwp_challenge1_instruction: Prøv å køyre dette programmet, og gjere endringer for å sjå kva som skjer. Kan du finne ut korleis det fungerer? (Eller fjerne det og erstatte det med noko heilt anna?)
@@ -1266,9 +1424,14 @@ nn:
       courseA_artist_loops10_instruction: Hjelp meg leggje ned steinar så eg ikkje fell!
       courseA_artist_loops10_2018_instruction: Hjelp meg leggje ned steinar så eg ikkje fell!
       courseA_artist_loops11_instruction: Hjelp meg å byggje trappar slik at eg kan sjå skipet seile sin veg.
+      courseA_artist_loops11_2018_instruction: Hjelp meg å byggje trappar slik at eg kan sjå skipet seile sin veg.
       courseA_artist_loops12_instruction: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
+      courseA_artist_loops12_2018_instruction: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
       courseA_artist_loops3_instruction: Teikn ei linje framover fem gongar.
       courseA_artist_loops3_2018_instruction: Teikn ei linje framover fem gongar.
+      courseA_artist_loops7_instruction: Bruk "løkka" for å lage bølgjer på vatnet.
+      courseA_artist_loops7_2018_instruction: Bruk "løkka" for å lage bølgjer på vatnet.
+      courseA_artist_loops7_forVideo_instruction: Bruk "løkka" for å lage bølgjer på vatnet.
       courseA_artist_loops9_instruction: 'Utfordring: Fiks trappa.'
       courseA_artist_loops9_2018_instruction: 'Utfordring: Fiks trappa.'
       courseA_artist_loops_challenge2_instruction: '"Kan du hjelpe meg å lage to fuglehus?"'
@@ -1281,8 +1444,8 @@ nn:
       courseA_collector_loops12_instruction: 'Eureka!  Få tak i så mange skattar du berre kan!'
       courseA_collector_loops12_2018_instruction: 'Eureka!  Få tak i så mange skattar du berre kan!'
       courseA_collector_loops1_2018_instruction: Flytt Laurel rundt og få så mykje gull som mogleg!
-      courseA_collector_loops2_instruction: Samle inn alle tre haugane for å klare dette nivået.
-      courseA_collector_loops2_2018_instruction: Samle inn alle tre haugane for å klare dette nivået.
+      courseA_collector_loops2_instruction: Samle inn alle haugane for å klare dette nivået.
+      courseA_collector_loops2_2018_instruction: Samle inn alle haugane for å klare dette nivået.
       courseA_collector_loops4_instruction: Fiks Laurel si bane for å få tak i alle skattane.
       courseA_collector_loops4_2018_instruction: Fiks Laurel si bane for å få tak i alle skattane.
       courseA_collector_loops5_instruction: Bruk det du har lært for å få tak i alle skattane.
@@ -1349,16 +1512,19 @@ nn:
       courseB_artist_loops2_instruction: Kunstnaren prøver å teikne ei linje **6** gongar, men kan ikkje få det riktig. Kan du hjelpe?
       courseB_artist_loops2_2018_instruction: Kunstnaren prøver å teikne ei linje **6** gongar, men kan ikkje få det riktig. Kan du hjelpe?
       courseB_artist_loops3_instruction: Hjelp kunstnaren med å teike ei linje 7 gongar slik at han kan lage ein vegg i hagen.
+      courseB_artist_loops3_2018_instruction: Hjelp kunstnaren med å teike ei linje 7 gongar slik at han kan lage ein vegg i hagen.
       courseB_artist_loops5_instruction: På tide å fikse trappa! Gjenta dette mønsteret **5** gongar slik at kunstnaren kan nå toppen av buskane.
       courseB_artist_loops5_2018_instruction: På tide å fikse trappa! Gjenta dette mønsteret **5** gongar slik at kunstnaren kan nå toppen av buskane.
       courseB_artist_loops6_instruction: Klatr opp slyngplanta og sjå kor det endar?
       courseB_artist_loops6_2018_instruction: Klatr opp slyngplanta og sjå kor det endar?
       courseB_artist_loops7_instruction: "**Utfordring:** Det er en skjult hage! La oss går rundt."
+      courseB_artist_loops7_2018_instruction: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       courseB_artist_loops8_instruction: På tide å dra heim. Kan du fikse denne stigen med berre ei blokk for å hjelpe kunstnaren ned?
       courseB_artist_loops8_2018_instruction: På tide å dra heim. Kan du fikse denne stigen med berre ei blokk for å hjelpe kunstnaren ned?
       courseB_artist_loops_challenge1_instruction: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
       courseB_artist_loops_challenge1_2018_instruction: '"Det er på tide å kaste terningane! Kan du hjelpe meg å trekke desse?"'
       courseB_artist_loops_challenge2_instruction: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
+      courseB_artist_loops_challenge2_2018_instruction: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
       courseB_collector_loops1_instruction: Dette er Laurel, eventyraren!  Kan du flytte henne og få ein skatt?
       courseB_collector_loops10_instruction: Hjelp Laurel til å få tak i alle skattane i grotta.
       courseB_collector_loops10_2018_instruction: Hjelp Laurel til å få tak i alle skattane i grotta.
@@ -1450,6 +1616,7 @@ nn:
       courseC_artist_loops1a_2018_instruction: 'Få kunstnaren til midten av spelområdet, teikn deretter ein fugl ved å bruke eit klistremerke. '
       courseC_artist_loops2_instruction: No som zombie kjenner vegen sin, hjelp han med å grave hol langs banen for å plante fleire blomar!
       courseC_artist_loops2a_instruction: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
+      courseC_artist_loops2a_2018_instruction: No kan du bruke ei løkke for å spinne fuglen din rundt tolv gongar med ein 30 graders sving.
       courseC_artist_loops3_instruction: Nydeleg!  No som blomen spirer, hjelp zombien med å plassere ein ven for kvar 50 piksel for å vakte over dei til dei har vokst ut.
       courseC_artist_loops3a_instruction: Legg til ei flaggermus!
       courseC_artist_loops3a_2018_instruction: Legg til ei flaggermus!
@@ -1509,16 +1676,23 @@ nn:
       courseC_flappy_events6_instruction: Sjå om du framleis kan skåre etter at du har fått Flakse til å flakse meir eller mindre for kvar gong.
       courseC_flappy_events6_2018_instruction: Sjå om du framleis kan skåre etter at du har fått Flakse til å flakse meir eller mindre for kvar gong.
       courseC_flappy_events7_instruction: Prøv å endre scena ved å leggje ei anna blokk til "når køyrt"-hendinga.
+      courseC_flappy_events7_2018_instruction: Prøv å endre scena ved å leggje ei anna blokk til "når køyrt"-hendinga.
       courseC_flappy_events8_instruction: Prøv å sette på ei **tilfeldig** scene når andre hendingar skjer...til dømes når du passerer ei hindring.
       courseC_flappy_events8_2018_instruction: Prøv å sette på ei **tilfeldig** scene når andre hendingar skjer...til dømes når du passerer ei hindring.
       courseC_flappy_events9_instruction: For å gjere ting anleis, kan du sette skårsummen tilbake til 0 når Flakse treff ei hindring.
+      courseC_flappy_events9_2018_instruction: For å gjere ting anleis, kan du sette skårsummen tilbake til 0 når Flakse treff ei hindring.
       courseC_harvester_loops_challenge1_instruction: Samle saman alt kornet.
+      courseC_harvester_loops_challenge1a_instruction: Samle saman alt kornet.
+      courseC_harvester_loops_challenge1a_2018_instruction: Samle saman alt kornet.
       courseC_harvester_loops_challenge2_instruction: "Saml all salaten. \nUnngå tre og åkrar!"
+      courseC_harvester_loops_challenge2_2018_instruction: "Saml all salaten. \nUnngå tre og åkrar!"
       courseC_maze_debugging10_instruction: Rett opp feil i dette nivået ved å flytte rundt på og legge til blokker, slik at eg kjem meg bort til grisen!
       courseC_maze_debugging_challenge1_instruction: '*"Går eg berre rundt i sirklar?"*'
       courseC_maze_debugging_challenge1_2018_instruction: '*"Går eg berre rundt i sirklar?"*'
       courseC_maze_debugging_challenge2_instruction: '*"Om eg snur for ofte, kan eg bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
       courseC_maze_debugging_challenge2_2018_instruction: '*"Om eg snur for ofte, kan eg bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
+      courseC_maze_loops10_instruction: Du er flink! Fortsett med det!
+      courseC_maze_loops9_instruction: Du er flink! Fortsett med det!
       courseC_maze_loops_challenge1_instruction: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
       courseC_maze_loops_challenge1a_instruction: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
       courseC_maze_loops_challenge1a_2018_instruction: 'Scrat ønsker å bruke løkker for å finne eikenøtta! '
@@ -1526,15 +1700,21 @@ nn:
       courseC_maze_programming_challenge1_instruction: '*"Grisen gøymer seg! Kan du hjelpe med til å finne ein veg rundt?"*'
       courseC_maze_programming_challenge1_2018_instruction: '*"Grisen gøymer seg! Kan du hjelpe med til å finne ein veg rundt?"*'
       courseC_maze_programming_challenge2_instruction: Nokre gongar er det meir enn ein måte å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn å gå framover!
+      courseC_maze_programming_challenge2_2018_instruction: Nokre gongar er det meir enn ein måte å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn å gå framover!
       courseC_playLab_embedded_instruction: |-
         Her er eit spel du kan spele! For å vinne, må du bruke piltastane for å få pingvinen til å springe inn i blekkspruten.\r
         \r
         Når du er ferdig, vil du lære deg korleis du kan lage dette spelet!
-      courseC_starWars_loops1_instruction: BB-8 vil plukke opp metallavfall langs banen han beveger seg i. Bruk fem av dei same blokkene til å få BB-8 til å plukke opp skrapmetall i spelområdet.
+      courseC_puppy_loops10_instruction: Du er flink! Fortsett med det!
+      courseC_puppy_loops9_instruction: Du er flink! Fortsett med det!
+      courseC_starWars_loops1_instruction: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
+      courseC_starWars_loops10_instruction: Du er flink! Fortsett med det!
+      courseC_starWars_loops10_2018_instruction: Du er flink! Fortsett med det!
       courseC_starWars_loops10_predict2_instruction: Du er flink! Fortsett med det!
+      courseC_starWars_loops10_predict2_2018_instruction: Du er flink! Fortsett med det!
       courseC_starWars_loops1_2018_instruction: BB-8 vil plukke opp metallavfall langs banen han beveger seg i. Bruk fem av dei same blokkene til å få BB-8 til å plukke opp skrapmetall i spelområdet.
       courseC_starWars_loops1_predict1_instruction: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
-      courseC_starWars_loops1_predict1_2018_instruction: BB-8 vil plukke opp metallavfall langs banen han beveger seg i. Bruk fem av dei same blokkene til å få BB-8 til å plukke opp skrapmetall i spelområdet.
+      courseC_starWars_loops1_predict1_2018_instruction: BB-8 vil plukke opp metallavfall langs vegen han beveger seg. Bruk fem av dei same blokkene for å få BB-8 til plukke opp all skrapmetallet i spelområdet.
       courseC_starWars_loops2_instruction: Prøv å lage ei løkke som bruker berre ei blokk inni for å få tak i alt skrapmetallet.
       courseC_starWars_loops2_2018_instruction: Prøv å lage ei løkke som bruker berre ei blokk inni for å få tak i alt skrapmetallet.
       courseC_starWars_loops4_instruction: I denne oppgava treng du to gjenta-løkker inni kvarandre for å hjelpe BB-8 med å samle skrapmetall ved hjelp av færrest mogleg blokker!
@@ -1560,13 +1740,19 @@ nn:
       courseD_artist_binary6_2018_instruction: Kva 6 sifra binærstreng, repetert 11 gongar, vil teikne dette biletet?
       courseD_artist_binary7_instruction: Kva er den kortaste binærstrengen du kan repetere for å teikne dette biletet?
       courseD_artist_binary7_2018_instruction: Kva er den kortaste binærstrengen du kan repetere for å teikne dette biletet?
+      courseD_artist_binary8_instruction: Gjer ferdig koden for å lage teikninga.
+      courseD_artist_binary8_2018_instruction: Gjer ferdig koden for å lage teikninga.
       courseD_artist_binary8_predict1_instruction: Gjer ferdig koden for å lage teikninga.
+      courseD_artist_binary8_predict1_2018_instruction: Gjer ferdig koden for å lage teikninga.
       courseD_artist_binary_challenge0_instruction: Prøv å bruke løkker for å fullføre teikninga.
       courseD_artist_binary_challenge1_instruction: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Præv å bruke løkker for å fullføre denne teikninga.
       courseD_artist_binary_challenge1_2018_instruction: Du kan berre bruke kvar binærverdi (0 eller 1) ein gong i denne oppgåva. Præv å bruke løkker for å fullføre denne teikninga.
       courseD_artist_embed_frozen_instruction: Trykk Køyr for å sjå eit snøfnugg!
       courseD_artist_embed_frozen2_instruction: Trykk Køyr for å sjå eit snøfnugg.
+      courseD_artist_nestedLoops9_instruction: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
+      courseD_artist_nestedLoops9_2018_instruction: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
       courseD_artist_nestedLoops9_predict1_instruction: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
+      courseD_artist_nestedLoops9_predict1_2018_instruction: "**Utfordring:** Kan du finne ut korleis du lagar eit slikt bilete?"
       courseD_artist_nestedLoops_challenge1_instruction: Kan du finne ut korleis du lagar eit slikt bilete?
       courseD_artist_nestedLoops_challenge1_2018_instruction: Kan du finne ut korleis du lagar eit slikt bilete?
       courseD_artist_nestedLoops_challenge2_instruction: Kan du finne ut korleis du lagar eit slikt bilete?
@@ -1583,15 +1769,23 @@ nn:
       courseD_artist_project5_2018_instruction: Leik med snøflak!
       courseD_artist_project_embedded_instruction: Dette er kva du snart skal gjere!
       courseD_artist_ramp12_instruction: Bruk det du har lært til å teikne denne trekanten inne i firkanten.
+      courseD_bee_conditionals1_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
       courseD_bee_conditionals1_predict1_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
+      courseD_bee_conditionals1_predict1_2018_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
+      courseD_bee_conditionals2_instruction: 'Sjekk under kvar sky for å sjå om det skjular ein blome før du får nektar.  '
+      courseD_bee_conditionals2_2018_instruction: 'Sjekk under kvar sky for å sjå om det skjular ein blome før du får nektar.  '
       courseD_bee_conditionals2_test_instruction: 'Sjekk under kvar sky for å sjå om det skjular ein blome før du får nektar.  '
+      courseD_bee_conditionals9_instruction: Få tak i all nektaren og lag honning.
+      courseD_bee_conditionals9_2018_instruction: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge1_instruction: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge1_2018_instruction: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge2_instruction: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge2_2018_instruction: Få tak i all nektaren og lag honning.
       courseD_bee_conditionals_challenge3_instruction: Få tak i all nektaren og lag honning.
       courseD_bee_debugging3_instruction: Reparer feila og samle inn all nektaren for å lage all honningen.
+      courseD_bee_debugging5_instruction: 'Utfordring: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.'
       courseD_bee_debugging_challenge1_instruction: Sjå korleis biene får nektar. Kan du bruke det same mønsteret til å hjelpe biene å lage honning?
+      courseD_bee_debugging_challenge1_2018_instruction: Sjå korleis biene får nektar. Kan du bruke det same mønsteret til å hjelpe biene å lage honning?
       courseD_bee_debugging_challenge1a_instruction: Sjå korleis biene får nektar. Kan du bruke det same mønsteret til å hjelpe biene å lage honning?
       courseD_bee_debugging_challenge2_instruction: Sjå korleis biene får nektar. Kan du bruke det same mønsteret til å hjelpe biene å lage honning?
       courseD_bee_nestedLoops3_instruction: Samle inn all nektar frå alle blomane. Bruk ei løkke inni ei løkke. 
@@ -1636,6 +1830,7 @@ nn:
       courseD_collector_debugging6_instruction: 'Utfordring: Bruk det du har lært til å fikse feilene og samle saman skatten.'
       courseD_collector_debugging6_2018_instruction: 'Utfordring: Bruk det du har lært til å fikse feilene og samle saman skatten.'
       courseD_collector_debugging6a_instruction: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** deler av skatten!'
+      courseD_collector_debugging6a_2018_instruction: 'Utfordring: Bruk koden i arbeidsområdet til å få tak i minst **6** deler av skatten!'
       courseD_collector_debugging7_instruction: 'Utfordring: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.'
       courseD_collector_debugging_challenge2_instruction: Er du ein ekspert på løkker? Bruk det du har lært så langt for å samle all skatten!
       courseD_collector_debugging_challenge2_2018_instruction: Er du ein ekspert på løkker? Bruk det du har lært så langt for å samle all skatten!
@@ -1644,12 +1839,16 @@ nn:
       courseD_collector_nested_loops_challenge2a_instruction: Hjelp samlaren om å få minst to haugar med skatten ved å berre bruke blokkene i verktøykassa di. Det er mogleg å samle alle fire.
       courseD_collector_until_challenge1_instruction: Er du ein ekspert på løkker? Bruk det du har lært så langt for å samle all skatten!
       courseD_debugging_3_instruction: Reparer feila og samle inn all nektaren for å lage all honningen.
+      courseD_debugging_5_instruction: 'Utfordring: Alle kommandoane du treng er her allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.'
       courseD_farmer_condLoops_challenge2_instruction: Samle alt for å fullføre nivået.
       courseD_farmer_condLoops_challenge2_2018_instruction: Samle alt for å fullføre nivået.
       courseD_farmer_condLoops_challenge2_clone_instruction: Samle alt for å fullføre nivået.
       courseD_farmer_until_challenge2_instruction: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       courseD_farmer_until_challenge2_2018_instruction: Bruk blokken hvis/ellers til å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       courseD_farmer_while_challenge1_instruction: Fyll i alle hulla og fjern alle haugane.
+      courseD_farmer_while_challenge1_2018_instruction: Fyll i alle hulla og fjern alle haugane.
+      courseD_farmer_while_challenge2_instruction: Fyll i alle hulla og fjern alle haugane.
+      courseD_farmer_while_challenge2_2018_instruction: Fyll i alle hulla og fjern alle haugane.
       courseD_harvester_nested_loops_challenge1-broken_instruction: '"Eg treng litt hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
       courseD_harvester_nested_loops_challenge1_instruction: '"Eg treng litt hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
       courseD_harvester_nested_loops_challenge1_2018_instruction: '"Eg treng litt hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
@@ -1660,12 +1859,16 @@ nn:
       courseD_maze_ramp7_instruction: Få fuglen til grisen!
       courseD_maze_until_challenge_instruction: Ingen hint, berre utfordringar. Få zombien til solsikka.
       courseD_maze_until_challenge1-delete-this-copy_instruction: Ingen hint, berre utfordringar. Få zombien til solsikka.
+      courseD_maze_until_challenge1_instruction: Ingen hint, berre utfordringar. Få zombien til solsikka.
+      courseD_maze_until_challenge1_2018_instruction: Ingen hint, berre utfordringar. Få zombien til solsikka.
+      courseD_maze_until_challenge2_instruction: Ingen hint, berre utfordringar. Få zombien til solsikka.
       courseD_playLab_cond3a_instruction: Gjer det slik at når Trebein kjem til dragen, får han 2 poeng om dragen er glad. Ellers får han 1 poeng.
       courseD_playLab_cond3a_2018_instruction: Gjer det slik at når Trebein kjem til dragen, får han 2 poeng om dragen er glad. Ellers får han 1 poeng.
       courseD_playLab_cond3b_instruction: "1) Få dragen til å bytte mellom tilfeldige \nfølelsar kvart sekund. \\r\n2) Gjer det slik at når Trebein kjem til dragen, \nfår han 2 poeng om dragen er glad. Ellers får han 1 poeng."
       courseD_playLab_cond6a_instruction: Om piraten er i sikker sone, vent eit sekund, trekk så eit poeng så lenge han held seg under brekksprutlinja.
       courseD_playLab_cond6a_2018_instruction: Om piraten er i sikker sone, vent eit sekund, trekk så eit poeng så lenge han held seg under brekksprutlinja.
       courseD_scrat_ramp4_instruction: Unngå sprekken i isen for å holde Scrat trygg!
+      courseD_scrat_ramp4_2018_instruction: Unngå sprekken i isen for å holde Scrat trygg!
       courseD_scrat_ramp5_instruction: Unngå sprekker i isen.
       courseD_scrat_ramp5_2018_instruction: Unngå sprekker i isen.
       courseE_artist_functions1_instruction: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \\rMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på firkantane."
@@ -1724,7 +1927,11 @@ nn:
       courseF_artist_ramp10_2018_instruction: Dra koden for den siste trekanten til ei ny løkke slik at det spinn rundt og lagar eit snøfnugg!
       courseF_artist_ramp9_instruction: Bruk det du har lært til å teikne denne trekanten.
       courseF_artist_ramp9_2018_instruction: Bruk det du har lært til å teikne denne trekanten.
+      courseF_artist_variables9_instruction: Sjå kva som skjer når du gjentar koden frå siste oppgåve 30 gongar i staden for berre 3! Lag gjerne mønter eller fargeleg linjene for å krydre oppgåva.
+      courseF_artist_variables9_2018_instruction: Sjå kva som skjer når du gjentar koden frå siste oppgåve 30 gongar i staden for berre 3! Lag gjerne mønter eller fargeleg linjene for å krydre oppgåva.
       courseF_artistembed_variables9_instruction: Sjå kva som skjer når du gjentar koden frå siste oppgåve 30 gongar i staden for berre 3! Lag gjerne mønter eller fargeleg linjene for å krydre oppgåva.
+      courseF_bee_conditionals1_predict1_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
+      courseF_bee_conditionals1_predict1_2018_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
       courseF_bee_for8_instruction: Du kan dette! Kva må auka vere for å samle 3, 6, 9, 12, 15 nektar?
       courseF_bee_for8_2018_instruction: Du kan dette! Kva må auka vere for å samle 3, 6, 9, 12, 15 nektar?
       courseF_bee_for_challenge2_instruction: Løys denne oppgåva med færrast mogleg blokker.
@@ -1764,7 +1971,7 @@ nn:
       frozen diamond mini snowflake_instruction: Visste du at alle snøfnugg har forskjellige former? La oss lage eit nytt snøfnugg ved å bruke enda ei "Gjenta"-blokk for å gjenta mønsteret 4 gongar. Snu 90 grader mellom kvart mønster.
       frozen diamond snowflake_instruction: Nå skal vi lage eit snøfnugg ved å bruke "Gjenta"-blokka til å lage eit parallellogram 10 gongar og snu 36 grader mot høgre mellom kvar.
       frozen diamond_instruction: Bruk ei "Gjenta"-blokk rundt desse blokkene for å lage eit parallellogram. Det er ein firkant der hjørna her ulik vinkel. Denne har vinklar på 60 grader og 120 grader i staden for at alle har 90 graders vinklar.
-      frozen freeplay_instruction: Du har offisielt blitt ein meisterkunstnar! Lag eit vinterparadis.
+      frozen freeplay_instruction: "Du er nå offisielt blitt ein meisterkunstnar! \nLag eit vinterparadis."
       frozen line_instruction: Hei! Eg heiter Elsa av Arendelle. Hjelp meg med å lage ei enkel linje.
       frozen perpendicular_instruction: Nå skal vi prøve å lage to linjer som står 90 grader i forhold til kvarandre. Du må bruke "Snu"-blokka og "Flytt"-blokka.
       frozen snowflake branch_instruction: Prøv å bruke "Lag ei snøfnugg grein"-blokka for å lage tre greiner som begbyrjar å sjå ut som eit snøfnugg.
@@ -1774,10 +1981,14 @@ nn:
       frozen square loop 3x_instruction: La oss lage tre kvadrat med spissen mot kvarandre. Hugs å snu 120 grader før kvart nye kvadrat.
       frozen square loop_instruction: Hei, eg heiter Anna av Arendelle! La oss lage eit kvadrat ved hjelp av "Gjenta"-blokka som brukar færre blokkar. Kor mange gongar (???) treng "Gjenta"-blokka til gå gjennom blokkene inni for å lage eit kvadrat?
       frozen square snowflake_instruction: Får du til å lage et snøfnugg ved å bruke "repeter"-blokka til å lage 10 kvadrat og "Snu"-blokka for å snu deg 36 grader mellom kvart kvadrat?
+      grade1_adventurer_loopsPre_instruction: Dette er Laurel, eventyraren!  Kan du flytte henne og få gull?
+      grade1_artist_loops2_instruction: Hjelp kunstnaren med å teike ei linje 7 gongar slik at han kan lage ein vegg i hagen.
+      grade1_artist_loops6_instruction: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       grade1_maze_sequence1_instruction: Ein feil! Endre denne koden for å få meg bort til grisen.
       grade1_maze_sequence2_instruction: Endre denne koden for å få meg bort til grisen!
       grade1_maze_sequence5_instruction: Flytt meg først ein veg og så ein annan veg for å få meg bort til grisen!
       grade1_maze_sequence6_instruction: Finn ut kva som manglar og legg så til dei manglande blokkene for å få meg bort til grisen!
+      grade1_maze_sequence7_instruction: "Din tur!  Kva treng du å gjere  for å få \nfuglen til grisen?"
       grade1_maze_sequence9_instruction: 'Gå rundt boksane med TNT for å få meg bort til grisen! '
       grade2_CaringForNewPet_10_instruction: Få meg til grisen!
       grade2_CaringForNewPet_5_instruction: Få meg til grisen!
@@ -1787,7 +1998,7 @@ nn:
       grade2_MakeDogTag_4_instruction: |-
         Dette huset treng eit tak! Teikn trekanten. Hint: alle dei tre sidene skal være like lange.
       grade2_MakeDogTag_6_instruction: 'Åpent brett! Teikn kva du vil.'
-      grade2_MakeDogTag_8_instruction: Nå skal me koble saman ein haug med V'ar ved å teikne dei med ei løkke.
+      grade2_MakeDogTag_8_instruction: Nå skal me kople saman ein haug med V'ar ved å teikne dei med ei løkke.
       grade2_MakeDogTag_9_instruction: Bygg koden frå forrige oppgåve igjen, men legg til ein 30 graders venstresving inne i løkka. Gjenta 24 gonger i staden for 8.
       grade2_PuppyLoops_1_instruction: Kan du få meg bort til grisen ved å bruke kun 5 blokkar?
       grade2_PuppyLoops_10_instruction: |-
@@ -1798,11 +2009,12 @@ nn:
       grade2_PuppyLoops_4_instruction: Bruk to løkker for å komme til grisen ved å bruke færre blokkar.
       grade2_PuppyLoops_5_instruction: Få meg til grisen!
       grade2_PuppyLoops_7_instruction: Få meg til solsikka!
-      grade2_PuppyLoops_8_instruction: "Koden for kattens værhår som du ser, er feil. \n\\r\n\\r\nReparer koden slik at alle værhåra er like lange."
+      grade2_PuppyLoops_8_instruction: "Koden for katten sine vêrhår er feil. \\r\n\\r\nFiks koden slik at den teiknar alle vêrhåra like lange."
       grade2_PuppyLoops_9_instruction: |-
         Det ser ut som C i koden er teikna feil veg.\r
         \r
         Kan du få han til å sjå ut som ein C?
+      grade2_collector_3_instruction: Sett desse blokkene saman for å samle inn alt gullet og løyse oppgåve.
       grade2_playlab_project_1_instruction: "Kan du lage eit program som får Waddles\ntil å flytte seg rundt når vi bruker tastane opp / ned / venstre / høgre for å treffe alle måla!"
       grade2_playlab_project_3_instruction: "Kan du få Waddles (figur 1) til å seie \"Au!\" og spele ein \"treffe\"-lyd hvis han går inn i Chomp?\\r\n\\r\nNår du er ferdig, spel spelet og få det til å hende."
       grade2_playlab_project_4_instruction: "Kan du legge til ei blokk for å skåre poeng når Waddles treff Octacia (figur 3)?\\r\nSpel spelet og flyt Waddles med pilane til du skårar!"
@@ -1813,7 +2025,7 @@ nn:
       grade2_puppy_loops2_instruction: Kan du komme til grisen ved på lage ei løkke som brukar berre ei 'gå framover'-blokk innanfor ein"gjenta"-blokk?
       grade2_puppy_loops4_instruction: Bruk to løkker for å komme til grisen ved å bruke færre blokkar.
       grade3_ConditionalsElse_1_instruction: Skya blokkerer utsikta mi! Ta ein sjekk for å sjå om det er ein blom under skya. Du kan berre få nektar dersom det er ein blom der. Vær på vakt, det kan endre seg!
-      grade3_ConditionalsElse_2_instruction: "Fleire skyer!\\r\n\\r\nSjekk under kvar sky om det skjular seg ein blome der før du henter nektar.\\r\n\\r\nHugs: ikkje alle skyer skjular same ting!"
+      grade3_ConditionalsElse_2_instruction: "Fleire skyer! \\r\n\\r\nSjekk under kvar sky for å sjå om den skjular ein blom før du får tak i nektaren. \\r\n\\r\nHugs, alle skyene skjular ikkje same ting!"
       grade3_ConditionalsElse_3_instruction: Bia vil berre lage honning akkurat no. Nokre av desse skyene kan skjule bikaker- Sjekk under kvar sky!
       grade3_ConditionalsElse_4_instruction: Det ukjende objektet er enten ein blome eller ein bikube. Bruk "viss/elles" blokk til å samle inn nektar om det er ein blome, om ikkje så lagar du honning (fordi det er ein bikube).
       grade3_ConditionalsElse_5_instruction: |-
@@ -1859,7 +2071,9 @@ nn:
         Desse blokkane er verkeleg irriterande. Fiks det som er feil for å samle all nektaren.
       grade3_Debugging_7_instruction: Reparer feila og samle inn all nektaren for å lage all honningen.
       grade3_Debugging_9_instruction: |-
-        Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
+        Ha tolamot med denne!\r
+        \r
+        Du må reparere noko i programmet for å samle inn all nektaren og lage all honningen.
       grade3_Debugging_TeacherIDo_instruction: Desse blokkane plagar meg. Reparer feila og samle inn all nektaren for å lage all honningen.
       grade3_Loops_10_instruction: |-
         For ei travel bie!\r
@@ -1878,6 +2092,7 @@ nn:
       grade3_Loops_9_instruction: Samle inn nektar frå alle blomane og lag honning i kvar av bikubane. Bruk så få blokker som mogleg.
       grade3_Loops_TeacherIDo_instruction: |-
         Kvar blome inneheld ein porsjon nektar. Hent nektar frå alle blomane. 
+      grade3_bee_conditionals_quantum1_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
       grade3_bee_conditionals_quantum2_instruction: "Sjekk under kvar sky for å sjå om det skjular ein blom før du får nektar.  \\r\n"
       grade3_maze_Loop1_instruction: 'Oppgåve: Få meg til solsikka med berre 5 blokker! '
       grade3_maze_loops2_instruction: 'Få zombien til solsikka ved å bruke så få blokker som mogleg!  '
@@ -1892,13 +2107,18 @@ nn:
       grade3_robotFarmer_ConditionalsIntro_6_instruction: Fjern alle jordhaugane ved å bruke så få blokker som mulig. Dei nye vala i nedtrekksmenyen til "så lenge"-blokka forteller meg om eg står på ein haug eller over eit hol.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Hjelp meg å fylle alle desse hola med 5 spadetak med jord. Hint: Du kan sette en "gjenta"-blokk inni ei "så lenge"-blokk.'
       grade4_arist_nested_loop_circles1_instruction: 'Bruk ei løkke i løkke for å fullføre designet.'
+      grade4_arist_nested_loop_flags1_instruction: Gjenta koden som er gitt til å lage ei vindmølle.
       grade4_arist_nested_loop_polygons1_instruction: "Gjenta designet 10 gongar. \\r\n\\r\nKor mykje må du rotere i kvar repetisjon?"
       grade4_arist_nested_loop_polygons2_instruction: "Gjenta designet 6 gongar. \\r\n\\r\nKor mykje må du rotere i kvar repetisjon? "
+      grade4_arist_nested_loop_squares1_instruction: Klarar du å teikne dei 10 kvadratene på fortauet ved å bruke ei løkke i ei løkke? Kvar kvadrat er 30 pikslar.
       grade4_arist_nested_loop_triangles2_instruction: 'Nå skal du sette denne løkka inn i ei anna løkke for å teikne 10 trekantar. Dette blir kalla ei løkke i løkke.  '
+      grade4_arist_nested_loop_triangles3_instruction: Klarar du å teikne ein sekskant ved å få trekantkoden i løkke?
+      grade4_arist_nested_loop_triangles4_instruction: Teikn tennene i munnen til alligatoren!
       grade4_arist_nested_loop_triangles5_instruction: |-
         Teikn ei sol ved å sette koden frå startkoden inn i ei anna løkke.\r
         \r
         For å få dette kule designet med eit hult senter, må du hoppe fram med lengda på triangelet før du snur.
+      grade4_arist_nested_loop_triangles6_instruction: Klarar du å teikne desse 36 trekantane ved hjelp av ei løkke i ei løkke?
       grade4_artist_functions1_instruction: "Hjelp zombien med å teikne vindauga med sider på 100 pikslar. \\rMellomrommet mellom vindauga er 25 pikslar kortare enn lengda på firkantane."
       grade4_artist_functions2_instruction: "Funksjonar lar deg definere nye blokkar!\\r\n\\r\nVi har flytta blokkar som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa? \n\\r\n\\r\nKvadrata er 75 pikslar frå kvarandre."
       grade4_artist_functions_challenge_instruction: "Bruk dei foreslåtte funksjonane til å teikne fire rader\nav sekskantar. Legg du merke til korleis partallsradene våre er flytta til høgre?"
@@ -1909,11 +2129,15 @@ nn:
         Her er koden til ein interessant figur. Kva skjer når du gjentar den mange gongar og snur mellom kvar køyring? Legg merke til at vinklane i denne figuren er 420 grader, noko som betyr at når teikninga er ferdig vil den ha ei anna retning enn når du starta. Den nye retninga er nøyaktig 60 grader til høgre for der du begynte.
       grade4_artist_nestedLoops_challenge2_instruction: 'Nå til ei utfordring! Her er eit design som kun brukar blokkar som du allereie har blitt vist. Kan du finne ut korleis du kan lage det uten nokre ekstra informasjon? Tips: Ikkje ver redd for å prøve og feile. Det er ikkje forventa at du får det til perfekt første gongen!'
       grade4_artist_nested_loop_circles1_instruction: 'Bruk ei løkke i løkke for å fullføre designet.'
+      grade4_artist_nested_loop_flags1_instruction: Gjenta koden som er gitt til å lage ei vindmølle.
       grade4_artist_nested_loop_polygons1_instruction: "Gjenta designet 10 gongar. \\r\n\\r\nKor mykje må du rotere i kvar repetisjon?"
+      grade4_artist_nested_loop_squares1_instruction: Klarar du å teikne dei 10 kvadratene på fortauet ved å bruke ei løkke i ei løkke? Kvar kvadrat er 30 pikslar.
+      grade4_artist_nested_loop_triangles1_instruction: 'Fullfør koden for å teikne desse trekantane. Den første er gjort ferdig for deg. Tips: 3 trekantar rotert er til saman 360 grader.'
       grade4_artist_nested_loop_triangles5_instruction: |-
         Teikn ei sol ved å sette koden frå startkoden inn i ei anna løkke.\r
         \r
         For å få dette kule designet med eit hult senter, må du hoppe fram med lengda på triangelet før du snur.
+      grade4_artist_nested_loop_triangles6_instruction: Klarar du å teikne desse 36 trekantane ved hjelp av ei løkke i ei løkke?
       grade4_artist_parameters_squares1_instruction: 'Klikk «Rediger» for å fylle ut funksjonen til «teikn ein firkant» og legg til ein parameter. Det vil kreve ein lengdeparameter, akkurat som i trekanten. Denne gongen skal du teikne 3 kvadrat med sidelengder 25, 50 og 75 pikslar, og det skal vere 100 pikslar mellom dei.'
       grade4_artist_parameters_triangles2_instruction: Ser du noko annleis med desse funksjonsblokkene? Trykk på «Kjør» så ser du kva som skjer.
       grade4_artist_parameters_triangles2b_instruction: Kan du gjere denne teikninga ferdig? Sidene i kvar trekant er 25 pikslar lengre enn i den førre. Sidene i den første trekanten er 25 pixler lange.
@@ -1921,7 +2145,7 @@ nn:
       grade4_artist_parameters_triangles4_instruction: Koden til denne trekantfunksjonen er øydelagt. Kan du gjera om på funksjonen så det blir rett og så lage trekantar som med lengde på 25, 50 og 75 pixlar?
       grade4_artist_parameters_trianglesx_instruction: Kan du gjere denne teikninga ferdig? Sidene i kvar trekant er 25 pikslar lengre enn i den førre. Sidene i den første trekanten er 25 pixler lange.
       grade4_bee_conditionals_quantum1_instruction: Skya blokkerer utsikta mi! Ta ein sjekk for å sjå om det er ein blom under skya. Du kan berre få nektar dersom det er ein blom der. Vær på vakt, det kan endre seg!
-      grade4_bee_conditionals_quantum2_instruction: "Fleire skyer!\\r\n\\r\nSjekk under kvar sky om det skjular seg ein blome der før du henter nektar.\\r\n\\r\nHugs: ikkje alle skyer skjular same ting!"
+      grade4_bee_conditionals_quantum2_instruction: "Fleire skyer! \\r\n\\r\nSjekk under kvar sky for å sjå om den skjular ein blom før du får tak i nektaren. \\r\n\\r\nHugs, alle skyene skjular ikkje same ting!"
       grade4_bee_conditionals_quantum4_instruction: Det ukjende objektet er enten ein blome eller ein bikube. Bruk "viss/elles" blokk til å samle inn nektar om det er ein blome, om ikkje så lagar du honning (fordi det er ein bikube).
       grade4_bee_conditionals_quantum5_instruction: |-
         Det kan vere ein blome eller ein bikube under skyene. \r
@@ -1936,7 +2160,7 @@ nn:
       grade4_bee_nestedLoops1_instruction: Samle inn all nektar frå alle blomane. Bruk ei løkke inni ei løkke. 
       grade4_bee_nestedLoops3_instruction: Saml inn all nektar ved å bruke ei løkke i løkke.
       grade4_bee_nestedLoops4_instruction: 'Saml inn all nektar frå kvar blomst og lag honning i alle bikubene. '
-      grade4_frozen_freeplay_instruction: Du har offisielt blitt ein meisterkunstnar! Lag eit vinterparadis.
+      grade4_frozen_freeplay_instruction: "Du er nå offisielt blitt ein meisterkunstnar! \nLag eit vinterparadis."
       grade4_frozen_functions0_instruction: Ser du kva for tal du må erstatte spørjeteiknet med for å teikne ein sirkel?
       grade4_frozen_functions1a_instruction: Bruk den nye "Lag sirkel"-blokka for å lage 10 overlappande sirklar. Hugs å gå framover mellom sirklane.
       grade4_frozen_functions2_instruction: Nå skal vi lage 20 overlappande sirklar medan vi dreier 18 grader mellom kvar sirkel.
@@ -1978,6 +2202,10 @@ nn:
         \r 
         Sjå kva som skjer når vi blir kreative med bitane!
       grade5_artist_for_loops1_instruction: Bruk ei "for"-løkke til å teikne denne trekanten som 50 piksler breid. Dersom du tel frå 1 til 3 av 1s, kan du bruke dette som en "gjenta"-løkke.
+      grade5_artist_for_loops10_instruction: |-
+        Klarer du å finne ut korleis du kan nytte alt du har lært til å lage dette biletet?\r 
+        \r 
+        Treng du hint? Klikk her.
       grade5_artist_for_loops5_instruction: |-
         Berre ei lita endring i koden frå førre bilete, kan skape denne teikninga. Kan du finne ut kva endring du må gjere?\r
         \r
@@ -2055,7 +2283,12 @@ nn:
       grade5_playlab_variables81_instruction: "Vi har lagt til ein siste funksjon til\ndeg. \\r\n\\r\nBruk ei \"viss\" setning til å programmere spelet til å kalle funksjonen \"nytt_nivå\" \nnår \"spelar_poeng\" blir høgare enn eit gitt nummer.\\r\n\\r\nTil dømes: \"spelar_poeng\" > 6\\r\n\\r\nPrøv spelet, og kom deg til nivå 3 for å gå vidare til neste oppgåve. "
       grade5_playlab_variables9_instruction: "Her er ein funksjon kalla \"patruljer\". \n\\r\n\\r\nEndre den slik at Katt flyttar seg opp 400 pikslar og så ned 400 pikslar."
       grade5_playlab_variables_freeplay_instruction: "Tid for fritt spel! Her er alle variablane vi har brukt så langt, i tillegg til nokre ekstra om du vil bruke dei.\n\nLegg merke til at det er så mange brikker i verktøykassa vår at dei treng å bli organisert! Her har vi lagt kvar brikke inn i ein kategori. Bruk litt tid på å utforske alt som er tilgjengeleg. Lag eit spel eller ei historie og bruk gjenta-, variablar- og hendingar-brikker. \n\nHint: Bla ned for å sjå alle kommandoane i arbeidsområdet."
+      gradek_artist_loops6_instruction: Bruk "løkka" for å lage bølgjer på vatnet.
+      gradek_artist_loopsA_instruction: Hjelp meg å byggje trappar slik at eg kan sjå skipet seile sin veg.
+      gradek_artist_loopsFP_instruction: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
+      harvey_tictactoe_instruction: La oss spele eit spel! Tegn så mange X'ar som du kan! Klarer du tre på rad?
       k-1 maze 1_instruction: Kan du bevege meg til vest for å komme til grisen?
+      k1stickerfreeplay_instruction: Kunstnaren såg noko morosamt i det fjerne. Tegn kva du trur han såg.
       level 'grade3_Loops_10_instruction: |-
         For ei travel bie!\r
         \r
@@ -2081,16 +2314,21 @@ nn:
       ramp_artist_loops6_instruction: Endre løkka for å teikne trappa.
       ramp_artist_loops6_2018_instruction: Endre løkka for å teikne trappa.
       ramp_artist_loops7_instruction: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker!
+      ramp_artist_loops7_2018_instruction: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker!
       ramp_artist_loops8_instruction: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker.
       ramp_artist_loops8_2018_instruction: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker.
       ramp_artist_loops8_clone_instruction: Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker.
       ramp_artist_loops9_instruction: Løys dette puslespelet ved å teikne ein firkant.
       ramp_artist_loops9_2018_instruction: Løys dette puslespelet ved å teikne ein firkant.
+      scrat 16 (copy 1)_instruction: Nøtt! Nøtt! Nøtt! Bruk ei "Viss"-blokk for å få meg dit med så få blokker som mogleg.
       scrat 16_instruction: Nøtt! Nøtt! Nøtt! Bruk ei "Viss"-blokk for å få meg dit med så få blokker som mogleg.
       scrat 17_instruction: Ok, la oss øve på den ein gong til - den er ikkje så ulik, men pass deg for veggen!
+      scrat 18 (copy 1)_instruction: '"Viss-elles"-blokka kontrollerer ein føresetnad og gjer det eine eller det andre. Prøv å bruke den nye blokka for å få meg til nøtta.'
       scrat 18_instruction: '"Viss-elles"-blokka kontrollerer ein føresetnad og gjer det eine eller det andre. Prøv å bruke den nye blokka for å få meg til nøtta.'
-      scrat 19 (copy 1)_instruction: Ei siste øving med "viss-elles"-blokka. Klarer du å få det rett på første forsøk?
+      scrat 19 (copy 1)_instruction: Ei siste øving med "viss-elles"-blokka. Klarar du å gjere det riktig på første forsøk?
       scrat 19_instruction: Ei siste øving med "viss-elles"-blokka. Klarar du å gjere det riktig på første forsøk?
       scrat 20_instruction: Klarar du å hjelpe meg gjennom ein kompleks labyrint ved berre å legge til 3 blokker? Om du gjer det riktig, kan eg gå gjennom kva veg som helst, uansett lengde. Skund deg! Isen smeltar!
       skratDebugVideo1_instruction: Hjelp Scrat til eikenøtta.
+      subgoal U3L2 Using Simple Commands_instruction: Tegn ein 1x1 firkant over og til venstre for turtle's startposisjon. Klikk for å sjå fullstendige instruksjonar.
+      subgoalU3L2_TurtleSquare_right_instruction: Tegn ein firkant foran og til høgre for startposisjonen. (Klikk for å sjå fullstendige instruksjonar)
       valentine_artist_03_instruction: Prøv noko på eiga hand!

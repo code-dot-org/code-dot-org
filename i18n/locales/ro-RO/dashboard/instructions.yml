@@ -176,8 +176,8 @@ ro:
       2-3 Maze 1_instruction: "Mă poți ajuta să prin porcul buclucaș? Stivează două\nblocuri \"mută înainte\" împreună și apasă \"Rulează\". "
       2-3 Maze 10_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze 11_instruction: "Du-mă la floare, mi-e foame! De căte ori\ntrebuie să repeți un bloc?"
-      2-3 Maze 12 (copy 1)_instruction: "Poți înlocui răspunsul anterior cu\ndoar două blocuri? (Sugestie: Creează o buclă folosind un bloc \"repetă ori\".)"
-      2-3 Maze 12 (copy 2)_instruction: "Poți înlocui răspunsul anterior cu\ndoar două blocuri? (Sugestie: Creează o buclă folosind un bloc \"repetă ori\".)"
+      2-3 Maze 12 (copy 1)_instruction: "Poți înlocui răspunsul precedent cu doar două\nblocuri? (Sugestie: Creează o buclă folosind blocul \"repetă ori\".)"
+      2-3 Maze 12 (copy 2)_instruction: "Poți înlocui răspunsul precedent cu doar două\nblocuri? (Sugestie: Creează o buclă folosind blocul \"repetă ori\".)"
       2-3 Maze 12 (old)_instruction: Du-mă la porc, acum cu blocul Repetă ori!
       2-3 Maze 12 - One Move Block_instruction: Mergi catre porc! Dar de data aceasta, poți folosi doar un singur bloc "mergi înainte". Vezi alte blocuri care ar putea să te ajute?
       2-3 Maze 12_instruction: "Poți înlocui aceste cinci blocuri cu doar două blocuri?\n(Sugestie: Creează o buclă folosind un block \"repetă ori\".)"
@@ -202,7 +202,7 @@ ro:
       2-3 Maze Loops 17_instruction: Du-mă la floarea-soarelui!
       2-3 Maze Loops 18_instruction: "Du-mă la floarea-soarelui! Foloseste bucla \"repeta\" pentru a folosi mai putine blocuri."
       2-3 Maze Loops 19_instruction: "Du-mă la floarea-soarelui!"
-      2-3 Maze Loops 20_instruction: Du-mă la floarea-soarelui cu cat mai putine blocuri posibile!
+      2-3 Maze Loops 20_instruction: Poți rezolva acest puzzle folosind cel mai mic număr de blocuri posibil?
       2-3 Maze Loops 21_instruction: Du-mă la floarea-soarelui cu cat mai putine blocuri posibile!
       2-3 Maze Loops Assessment 1_instruction: "Evaluare: Du-mă la floarea-soarelui \nfolosind doar 5 blocuri! "
       2-3 Maze sq10_instruction: Du-mă la porc! Ce blocuri au fost repetate?
@@ -305,7 +305,7 @@ ro:
       4-5 Artist Patterns 2_instruction: Dacă plasezi bucla de repetare a unui pătrat în interiorul altei bucle, noi numim aceasta o buclă imbricată. Ce trebuie să adaugi la bucla din exterior pentru a te asigura că toate cele 15 pătrate se aliniază unul lângă celălalt?
       4-5 Artist Patterns 3_instruction: Acum, hai să mergem încă un nivel în profunzimea problemei?
       4-5 Artist Patterns 4_instruction: Acest diamant are laturi de 50 de pixeli și unghiuri de 120 și 60 de grade. Folosește o buclă pentru a îl desena.
-      4-5 Artist Patterns 5.5_instruction: De câte ori ai nevoie să repeți acest block pentrua desena întreaga grilă de diamante?
+      4-5 Artist Patterns 5.5_instruction: De câte ori trebuie să repeți acest block pentru a desena întreaga grilă de diamante?
       4-5 Artist Patterns 5_instruction: "Hai să repetăm aceasta pentru a face un rând de 6 diamante. Observă ca am schimbat codul nostru pentru diamant să se repete de 3 ori în loc de două - de ce crezi că am procedat așa?"
       4-5 Artist Patterns 6_instruction: De câte ori trebuie să repeți acest block pentru a desena întreaga grilă de diamante?
       4-5 Artist Patterns 7_instruction: Hai să modificăm codul de la ultimul puzzle pentru a face acest model mai complex. Notează cum diamantele se suprapun acum, încearcă să schimbi primul "săritură înapoi" de la 100 la 50 (jumatate din distanță) - cât de departe ar trebui să meargă artistul cu a doua "săritură înapoi"?
@@ -313,8 +313,9 @@ ro:
       4-5 Artist Patterns 9.5_instruction: Hai să buclăm acest cod pentru a desena două rânduri de hexagoane. Notează cum al doilea rând al nostru este întors spre dreapta.
       4-5 Artist Patterns 9_instruction: "Acum repetă acel cod de 3 ori pentru a desena întregul rând. Sugestie, fiecare hexagon are o lățime de 80 de pixeli de la cele mai depărtate puncte de la stînga la dreapta."
       4-5 Artist Patterns Free Play_instruction: Joc la alegere - încearcă-ți mâna și creează pe cont propriu un model al tău!
-      4-5 Bee Conditionals - FC Test_instruction: Albina vrea doar nectar acum. Nu toate obiectele sunt flori, deci verifică sub FIECARE NOR pentru a vedea dacă el ascunde o floare. Dacă este așa, atunci poți aduna nectar.
+      4-5 Bee Conditionals - FC Test_instruction: "Albina vrea doar nectar acum.\nNu toate obiectele sunt flori, așa că verifică FIECARE NOR pentru a vedea\ndacă ascunde o floare. Dacă da, atunci poți aduna nectar."
       4-5 Bee Conditionals 1_instruction: Albina nu-și poate da seama dacă acesta este o floare sau un fagure de miere. Adună nectar doar din flori, dar mai întâi verifică dacă acesta este o floare sau un fagure de miere.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Albina vrea acum doar nectar. Amintiţi-vă, nu toate obiectele sunt flori, deci verifică să colectezi nectar doar din flori.
       4-5 Bee Conditionals 2_instruction: "Albina vrea acum doar nectar. Ia aminte, nu toate obiectele sunt flori, așadar verifică mai întâi pentru a aduna nectarul doar din flori."
       4-5 Bee Conditionals 3_instruction: Acum albina vrea să facă miere. Verifică mai întâi pentru a face miere doar la faguri.
       4-5 Bee Conditionals 4_instruction: Obiectul necunoscut este ori o floare, ori un fagure de miere. Folosește blocul "dacă/altfel" pentru a colecta nectar dacă acesta este o floare, altfel pentru a face miere (deoarece acesta este un fagure).
@@ -405,6 +406,13 @@ ro:
       4-5 While Loops 8_instruction: " Acolo este o gaură într-adevăr adâncă şi o grămadă foarte mare de mizerie. Câte lopeţi pline de mizerie trebuie să fie mutate de la una la alta pentru a nivela solul? Indicaţie: Foloseşte bucla \"în timp ce\" pentru amândouă."
       4-5 While Loops Assessment 1_instruction: Există multe găuri şi grămezi de pământ. Ajută-mă să le umplu şi să le mut pentru a face terenul plat.
       App Lab test_instruction: test
+      Artist - Nested Loops 1_instruction: 'Completează codul astfel încât acesta să deseneze aceste triunghiuri. Primul este deja făcut. Tip: 3 triunghiuri în rotatie de 360 de grade.'
+      Artist - Nested Loops 10_instruction: Desenează ultimul rând de stele pe acest steag prin buclarea blocurilor date. Stelele au o distanță între ele de 50 de pixeli, dar ține minte că stelele însele au o lățime de 30 de pixeli.
+      Artist - Nested Loops 11_instruction: Poți desena aceste 10 pătrate ale trotuarului folosind o buclă imbricată? Fiecare pătrat are 30 de pixeli.
+      Artist - Nested Loops 12_instruction: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
+      Artist - Nested Loops 5_instruction: Buclează codul dat pentru a crea o moară de vânt.
+      Artist - Nested Loops 6_instruction: Poţi desena un hexagon folosind buclarea codului pentru desenarea unui triunghi?
+      Artist - Nested Loops 9_instruction: Desenează dinţii în gura aligatorului!
       Artist - Nested Loops Assessment 1_instruction: Utilizaţi o buclă imbricată pentru a finaliza proiectul.
       Artist Inspiration_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva propriu și personal.\\r\n\\r\nVrei să știi cum a fost făcut modelul nostru de inspirație? "
       Auto Open Function Editor_instruction: 'Poți apela funcții din interiorul altor funcții! Folosind ca bază funcția ta de "formă", creează 3 forme de casă fiecare mai mare cu 20 de pixeli decat precedenta, începând cu 50 de pixeli în lungime. Ar putea fi de ajutor folosirea unei bucle numărătoare. '
@@ -412,8 +420,14 @@ ro:
       Bergeron Robot Maze1_instruction: "Mă poți ajuta să prin porcul buclucaș? Stivează două\nblocuri \"mută înainte\" împreună și apasă \"Rulează\". "
       Brad Spooky House Copy_instruction: "Joc la alegere: Aici sunt funcțiile pe care le-ai scris tu și încă ceva în plus cu care să te joci. Desenează ceva minunat!\nJoacă-te cu lățimea peniței pentru a vedea cât de diferit arată desenele tale!"
       Brad Spooky House_instruction: "Joc la alegere: Aici sunt funcțiile pe care le-ai scris tu și încă ceva în plus cu care să te joci. Desenează ceva minunat!\nJoacă-te cu lățimea peniței pentru a vedea cât de diferit arată desenele tale!"
+      Building a Foundation Assessment_instruction: Construiește o piramidă pe trei nivele, nu ai alte indicaţii, doar joacă-te cu piesele până o realizezi!
       Busy Bee 2_instruction: Această albină are o mulţime de lucruri de facut! Observaţi vreunele modele pe care le puteţi utiliza pentru a simplifica codul?
       Busy Bee_instruction: Această albină are o mulţime de lucruri de facut! Observaţi vreunele modele pe care le puteţi utiliza pentru a simplifica codul?
+      C3-Farmer While Loops 5_instruction: Oau, acum sunt două găuri adânci acolo! Poţi tu să scri un program care să umple ambele găuri până la nivelul solului?
+      C3-Farmer While Loops 6_instruction: Oau, acum este o grămadă mare de pământ acolo! Poţi scrie un program care să o îndepărteze în intregime până se nivelează solul?
+      C3-Farmer While Loops 7_instruction: Oau, acum sunt trei grămezi mari de pământ acolo! Poţi scrie un program care să le îndepărteze pe fiecare dintre ele până la nivelul solului?
+      C3-Farmer While Loops Assessment 1_instruction: Există multe găuri şi grămezi de pământ. Ajută-mă să le umplu şi să le mut pentru a face terenul plat.
+      Course 2 Bee Loops 1_instruction: 'Hei, eu sunt o albină. Mă poţi ajuta să strâng nectarul din aceste flori? '
       Course 2 Maze Loops 1_instruction: Poţi să mă duci la porc din 5 mutări?
       Course 4 2_instruction: Albina vrea acum doar nectar. Amintiţi-vă, nu toate obiectele sunt flori, deci verifică să colectezi nectar doar din flori.
       Course 4 Artist 1_instruction: 'Ajută-mă să desenez o cutie. (Fiecare linie are lungimea de 200 pixeli) '
@@ -594,12 +608,12 @@ ro:
       Course 4 Binary 6_instruction: Care şir binar, repetat de 10 ori va desena această imagine?
       Course 4 Binary 7_instruction: Care şir binar, repetat de 10 ori va desena această imagine?
       Course 4 Binary 8_instruction: Poţi completa cât mai mult din această imagine prin rularea în buclă a unui număr de 5 biţi - apoi vei avea nevoie de încă un număr de 4 biţi pentru a ajunge în colţul din parta dreapta jos.
-      Course 4 EC 1a_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
-      Course 4 EC 1b_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
+      Course 4 EC 1a_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
+      Course 4 EC 1b_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
       Course 4 EC 2a_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
-      Course 4 EC 2b_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
-      Course 4 EC 2c_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
-      Course 4 EC 2d_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
+      Course 4 EC 2b_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
+      Course 4 EC 2c_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
+      Course 4 EC 2d_instruction: '** Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
       Course 4 EC 3_instruction: 'Utilizează ceea ce ai învățat în cadrul nivelului precedent pentru a desena o imagine ca aceasta. Notă: Codul devine mai simplu dacă încorporezi parametri. '
       Course 4 EC 3a_instruction: 'Provocare extremă: ** Nici o regulă. Nici un indiciu. Doar provocare!'
       Course 4 Maze 1_instruction: Du pasărea furioasă la porc!
@@ -743,7 +757,7 @@ ro:
       K-1 Artist1 5_instruction: Desenează tulpina acestei flori din două linii!
       K-1 Artist1 6_instruction: Termină imaginea folosind un bloc de instrucţiuni jump!
       K-1 Artist1 7_instruction: Foloseşte un bloc de instrucţiuni jump pentru a muta fără a desena. Sari sus pentru a desena o linie.
-      K-1 Artist1 8_instruction: Desenează linia întreruptă folosind amândouă blocuri de instrucţiuni "jump" şi "draw"
+      K-1 Artist1 8_instruction: Desenează linia întreruptă folosind amândouă blocuri "sări" şi "desenează"
       K-1 Artist1 9_instruction: Desenează şi sari pentru a realiza linia întreruptă
       K-1 Artist1 Assessment 1_instruction: Desenează linii scurte şi linii lungi!
       K-1 Artist1 Assessment 2_instruction: Desenează linii întrerupte scurte!
@@ -924,10 +938,13 @@ ro:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Este timpul sa va jucati liberi! Distrati-va cu toate blocurile din bara de instrumente. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Provocare: Cum a-ti folosi blocul "pentru bucla" pentru a face fiecare actor sa mearga de jur impresur si sa isi rosteasca numarul, apoi sa dispara de pe ecran? '
       New Artist Project_instruction: Desenează ceva minunat! Liniile tale de cod vor fi salvate ca proiect aşa că tu poţi reveni oricând.
+      New Basketball Project_instruction: Crează propriul tău joc de baschet. Poți modifica toate regulile. Când ai terminat, apasă Finalizeaza pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
+      New Bounce Project_instruction: Crează propriul tău joc Țopăială. Poți modifica toate imaginile şi regulile. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
       New Course 4 Artist Functions Level 4_instruction: Folosește funcţia "desenează un pătrat" pentru a elabora acest model.
       New Gumball Project_instruction: Creează orice vrei tu şi distribuie-l/-o!
       New Ice Age Project_instruction: Creează orice vrei tu şi distribuie-l/-o!
       New Infinity Project_instruction: Creează orice vrei tu şi distribuie-l/-o!
+      New Sports Project_instruction: 'Crează propriul tău joc. Poți modifica toate imaginile şi regulile, mixeaza sporturi, fii creativ. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.'
       Overworld Avoid Monsters_instruction: "Intalnirea unui Vierme nu este o idee buna.\nMergeti cu atentie pe langa ei si ajungeti in siguranta in casa."
       Overworld Avoid Monsters_2018_instruction: "Intalnirea unui Vierme nu este o idee buna.\nMergeti cu atentie pe langa ei si ajungeti in siguranta in casa."
       Overworld Chop Tree - allthethings_instruction: Lemnul este o resursa importanta. Se pot construi multe cu ajutorul lui. Mergeti la copac si utilizati blocul "Distrugeti" pentru a-l taia.
@@ -949,10 +966,11 @@ ro:
       Overworld Powered Minecart_2018_instruction: Buna treaba! Ai adunat suficiente resurse pentru a construi o casa modesta. Acum dezvolta o cale ferata de la marginea hartii pana la usa casei tale.
       Overworld Shear Sheep_instruction: E vremea sa tunzi oile! Foloseste comanda "Tunde" pentru a aduna lana de la oi.
       Overworld Shear Sheep_2018_instruction: E vremea sa tunzi oile! Foloseste comanda "Tunde" pentru a aduna lana de la oi.
+      PDK5 Conditionals 1_instruction: "Florile violete pot avea ori 1 ori 0 \nnectar, dar nu știi exact care din ele! Ai grijă să nu colectezi nectar dintr-o \nfloare violetă dacă aceasta nu are deloc. Verifică dacă nectarul este egal cu 1 \nfolosind blocul - dacă."
       PDK5 Functions 2_instruction: Funcțiile îțî permit să construiești blocuri noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită "desenează un pătrat". Poți folosi această funcție pentru a crea ochelarii? Pătratele au 75 de pixeli între ele.
       PS copy 2-3 Bee Conditionals 5_instruction: "Florile violete pot avea ori 1 ori 0 \nnectar, dar nu știi exact care din ele! Ai grijă să nu colectezi nectar dintr-o \nfloare violetă dacă aceasta nu are deloc. Verifică dacă nectarul este egal cu 1 \nfolosind blocul - dacă."
       Quantum Bee_instruction: "Florile violete pot avea ori 1 ori 0 \nnectar, dar nu știi exact care din ele! Ai grijă să nu colectezi nectar dintr-o \nfloare violetă dacă aceasta nu are deloc. Verifică dacă nectarul este egal cu 1 \nfolosind blocul - dacă."
-      Ryan - 4-5 Bee Conditionals 2_instruction: Albina vrea doar nectar acum. Nu toate obiectele sunt flori, deci verifică sub FIECARE NOR pentru a vedea dacă el ascunde o floare. Dacă este așa, atunci poți aduna nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: "Albina vrea doar nectar acum.\nNu toate obiectele sunt flori, așa că verifică FIECARE NOR pentru a vedea\ndacă ascunde o floare. Dacă da, atunci poți aduna nectar."
       Ryan - Bee Conditionals_instruction: "Albina vrea doar nectar acum.\nNu toate obiectele sunt flori, așa că verifică FIECARE NOR pentru a vedea\ndacă ascunde o floare. Dacă da, atunci poți aduna nectar."
       Ryan Test Locked Blocks_instruction: "Aici este o funcţie numită \"patrol.\"\nEditeaz-o pentru a muta pisica în sus cu 400 pixeli şi apoi în jos cu 400 pixeli."
       SpecialFrozenLevel_instruction: Ai devenit oficial un artist maestru! Creează un paradis de iarnă.
@@ -1000,6 +1018,7 @@ ro:
       bounce_11_basketball_instruction: Acum poți atașa blocuri la blocul "rulează". Trebuie să atașezi noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza mainii și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori!
       bounce_11_sports_instruction: Acum poți atașa blocuri la blocul "rulează". Trebuie să atașezi noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza mainii și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori!
       bounce_12_instruction: Crează propriul tău joc Țopăială. Poți modifica toate imaginile şi regulile. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
+      bounce_12_2018_instruction: Crează propriul tău joc Țopăială. Poți modifica toate imaginile şi regulile. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
       bounce_12_basketball_instruction: Crează propriul tău joc de baschet. Poți modifica toate regulile. Când ai terminat, apasă Finalizeaza pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
       bounce_12_sports_instruction: 'Crează propriul tău joc. Poți modifica toate imaginile şi regulile, mixeaza sporturi, fii creativ. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.'
       bounce_1_2018_instruction: Atașează un bloc la blocul "când săgeată stânga" şi apasă "Rulează programul". Mută paleta folosind săgeata stânga pentru a ajunge la ţinta finală.
@@ -1043,14 +1062,14 @@ ro:
       course3_playlab_stage16_3_instruction: Puteți scrie un program pentru a face acest câine să se miște către pisică?
       course3_playlab_stage16_4_instruction: Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
       course3_playlab_stage16_5_instruction: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
-      course3_playlab_stage16_6_instruction: Creați-vă propria poveste. Când aţi terminat, faceţi clic pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele lor.
+      course3_playlab_stage16_6_instruction: Creați-vă propria poveste. Când ați terminat, faceți click pe Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele lor.
       course3_playlab_stage17_1_instruction: Puteţi scrie un program pentru a face caracatiţa să spună "Bună", atunci când se dă clic pe ea?
       course3_playlab_stage17_2_instruction: Acum, scrie un program care să îl facă pe Waddles să se miște de jur împrejur folosind tastele săgeată sus / jos / stânga / dreapta pentru a atinge toate obiectivele?
       course3_playlab_stage17_3_instruction: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod repetat?
       course3_playlab_stage17_4_instruction: Puteți să îl faceți pe Waddles să spună "Au!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?
       course3_playlab_stage17_5_instruction: Puteţi adăuga un bloc pentru a înscrie un punct când Waddles aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
       course3_playlab_stage17_6_instruction: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza lui Waddles, şi apoi să îl mutaţi cu săgeţile până când marcați?
-      course3_playlab_stage17_7_instruction: Creați-vă propria poveste. Când aţi terminat, faceţi clic pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele lor.
+      course3_playlab_stage17_7_instruction: Creați-vă propria poveste. Când ați terminat, faceți click pe Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele lor.
       course4_artist_fwp_challenge1_instruction: Încearcă să rulezi acest program, şi fă modificări pentru a vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi înlocuiește-l cu ceva total diferit)
       courseA_maze_seq2_instruction: Modifică secvenţa de cod pentru a mă duce la porc!
       courseA_maze_seq2_2018_instruction: Modifică secvenţa de cod pentru a mă duce la porc!
@@ -1077,6 +1096,7 @@ ro:
       courseD_bee_nestedLoops8_2018_instruction: 'Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bounce_events10_instruction: Există un acum un gol în partea de sus. Atașează blocurile "scor" și "scor oponent" la blocurile "când bila este in gaură" și "când bila ratează paleta" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca oponentul tău să înscrie de două ori.
       courseD_bounce_events11_instruction: Acum poți atașa blocuri la blocul "rulează". Trebuie să atașezi noul bloc "lansare minge nouă" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza paletei și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori.
+      courseD_bounce_events12_instruction: Crează propriul tău joc Țopăială. Poți modifica toate imaginile şi regulile. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
       courseD_bounce_events2_instruction: Atașează un bloc la blocurile "când săgeată dreapta" și "când săgeată stânga". Mută paleta pentru a atinge ambele ținte finale.
       courseD_bounce_events3_instruction: Acum, încearcă ceva similar cu blocul "când săgeata în sus". Mută padela până la obiectivul final din partea de sus.
       courseD_bounce_events3s_instruction: Acum, încearcă ceva similar cu blocul "când săgeata în sus". Mută padela până la obiectivul final din partea de sus.
@@ -1259,12 +1279,17 @@ ro:
       grade3_robotFarmer_ConditionalsIntro_6_instruction: Elimină toate grămezile de pământ, folosind cât mai puține blocuri posibile. Noile opțiuni din meniul vertical de pe blocul "în timp ce" îmi spun dacă stau pe un morman sau pe o groapă.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Ajută-mă să umplu aceste gropi cu 5 lopeți pline de pământ. Indiciu: poți pune un bloc "repetă" în interiorul unui bloc "în timp ce".'
       grade4_arist_nested_loop_circles1_instruction: 'Utilizaţi o buclă imbricată pentru a finaliza proiectul.'
+      grade4_arist_nested_loop_flags1_instruction: Buclează codul dat pentru a crea o moară de vânt.
       grade4_arist_nested_loop_polygons1_instruction: "Reia de 10 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)"
       grade4_arist_nested_loop_polygons2_instruction: "Reia de 6 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 6?)"
+      grade4_arist_nested_loop_squares1_instruction: Poți desena aceste 10 pătrate ale trotuarului folosind o buclă imbricată? Fiecare pătrat are 30 de pixeli.
       grade4_arist_nested_loop_triangles2_instruction: 'Acum pune acestă buclă în interiorul unei alte bucle pentru  a desena 10 triunghiuri. Aceasta se numește o buclă imbricată. Sugestie: Toate cele 10 triungiuri completează o rotatie de 360 de grade.  '
+      grade4_arist_nested_loop_triangles3_instruction: Poţi desena un hexagon folosind buclarea codului pentru desenarea unui triunghi?
+      grade4_arist_nested_loop_triangles4_instruction: Desenează dinţii în gura aligatorului!
       grade4_arist_nested_loop_triangles5_instruction: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
         
+      grade4_arist_nested_loop_triangles6_instruction: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       grade4_artist_functions1_instruction: "Ajuta zombieul sa deseneze ochelarii folosind patrate cu laturi de 100 de pixeli. \\r Spatiul dintre ochelari este de 75 de pixeli."
       grade4_artist_functions2_instruction: "Funcțiile îțî permit să construiești blocuri noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită \"desenează un pătrat\". Poți folosi această funcție pentru a crea ochelarii? Pătratele au 75 de pixeli între ele."
       grade4_artist_functions_challenge_instruction: Utilizează funcţiile sugerate pentru a desena patru rânduri de hexagoane. Observi cum rândurile noastre pare sunt întoarse către dreapta?
@@ -1273,10 +1298,14 @@ ro:
         Este timpul să ne jucăm liber! Aici se află codul pentru o formă interesantă. Oare ce se întâmplă când îl repeţi? Distrează-te şi desenează orice îţi place. 
       grade4_artist_nestedLoops_challenge2_instruction: 'Acum, o provocare! Iată un proiect care foloseşte construcţii pe care le cunoşti. Reuşeşti să îl creezi din nou fără informaţii suplimentare? Indicaţie: Esti liber să foloseşti modulul încercare şi eroare. Nu te aştepta să reuşeşti din prima.'
       grade4_artist_nested_loop_circles1_instruction: 'Utilizaţi o buclă imbricată pentru a finaliza proiectul.'
+      grade4_artist_nested_loop_flags1_instruction: Buclează codul dat pentru a crea o moară de vânt.
       grade4_artist_nested_loop_polygons1_instruction: "Reia de 10 ori acest proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii lui 360 la 10?)"
+      grade4_artist_nested_loop_squares1_instruction: Poți desena aceste 10 pătrate ale trotuarului folosind o buclă imbricată? Fiecare pătrat are 30 de pixeli.
+      grade4_artist_nested_loop_triangles1_instruction: 'Completează codul astfel încât acesta să deseneze aceste triunghiuri. Primul este deja făcut. Tip: 3 triunghiuri în rotatie de 360 de grade.'
       grade4_artist_nested_loop_triangles5_instruction: |-
         Creează un soare prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r
         
+      grade4_artist_nested_loop_triangles6_instruction: Poți desena aceste 36 triunghiuri folosind o buclă imbricată?
       grade4_artist_parameters_squares1_instruction: 'Fă clic pe "editare" pentru a completa definiția funcţiei "desenează un pătrat" şi pentru a adăuga un parametru. Ar trebui să ia un parametru de lungime, la fel ca și triunghiul. De această dată, desenează 3 pătrate: cu 25, 50 și 75 de pixeli lungime, fiecare la distanță de 100 de pixeli unul față de celălalt.'
       grade4_artist_parameters_triangles2_instruction: "Observi ceva diferit \nla aceste blocuri de funcţie? Fă clic pe \"Rulează\" pentru a vedea ce se întâmplă."
       grade4_artist_parameters_triangles2b_instruction: 'Poţi termina acest desen? Sfat: fiecare triunghi este cu 25 pixeli mai mare decât ultimul. Primul triunghi are latura de 25 pixeli.'
@@ -1334,6 +1363,12 @@ ro:
       grade5_artist_binary9_instruction: |-
         Aici este o pânză de rezoluţie mai mare pentru a desena - 16 pixeli 16 pixeli! \r \r Vezi ce se întâmplă atunci când începem sa cream cu biţi?
       grade5_artist_for_loops1_instruction: 'Desenează acest triunghi de 50 de pixeli mărime. Tip: folosește un bloc "repetă".'
+      grade5_artist_for_loops10_instruction: |-
+        Poti sa iti dai seama cum
+        sa folosesti toate aceste lucruri pentru a crea imaginea asta?\r
+        \r
+        Vrei 
+        un pont? Apasa aici.
       grade5_artist_for_loops5_instruction: |-
         Latura cea mai mică a acestei spirale pătratică este de 10 pixeli, cea mai mare este de 200 pixeli şi fiecare linie este cu 10 pixeli mai lungă decât ultima. Poţi completa blocul de instrucțiuni lipsă pentru a finaliza această imagine minunată?
       grade5_artist_for_loops6_instruction: Dacă tu roteşti puţin mai mult sau mai puţin decât ar trebui în mod normal pentru o formă, crează o formă îngrijită. Încearcă rotind 89 grade pentru a crea o spirală pătrată răsucită.
@@ -1419,8 +1454,10 @@ ro:
       level 'grade3_Loops_8_instruction: Foloseste o bucla pentru a colecta nectarul si a face miere.
       level 'grade3_Loops_9_instruction: Colecteaza nectarul din fiecare floare si fa miere la fiecare fagure de miere.
       level grade3_Loops_2_instruction: Poti face aceasi sarcina mai usor cu o bucla?
+      scrat 16 (copy 1)_instruction: Ghindă! Ghindă! Ghindă! Utilizaţi un bloc "dacă" pentru a mă acolo cu cel mai mic număr de blocuri.
       scrat 16_instruction: Ghindă! Ghindă! Ghindă! Utilizaţi un bloc "dacă" pentru a mă acolo cu cel mai mic număr de blocuri.
       scrat 17_instruction: Ok, haideți să exersăm din nou - nu este foarte diferit, dar uitați-vă după perete!
+      scrat 18 (copy 1)_instruction: Blocurile "dacă-altfel" verifică o condiţie, şi apoi execută un lucru sau altul. Pentru a mă duce la ghindă încercaţi să utilizaţi acest bloc nou.
       scrat 18_instruction: Blocurile "dacă-altfel" verifică o condiţie, şi apoi execută un lucru sau altul. Pentru a mă duce la ghindă încercaţi să utilizaţi acest bloc nou.
       scrat 19 (copy 1)_instruction: Încă un exercițiu de practică cu blocul "dacă-altfel", poate reușești chiar prima încercare?
       scrat 19_instruction: Încă un exercițiu de practică cu blocul "dacă-altfel", poate reușești chiar prima încercare?

@@ -276,14 +276,23 @@ pt:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: |-
         Use um bloco "repita até" e
         um bloco "se-senão" para me levar até o girassol no menor número de blocos possível.
+      4-5 Nested Loops 12_markdown_instruction: |-
+        Você pode desenhar esses 36 triângulos usando
+        um laço aninhado?
       4-5 Nested Loops 3_markdown_instruction: "Crie um sol aninhando o código inicial\ndentro
         de outro laço. Chamamos isso de laço aninhado.\r"
+      4-5 Nested Loops 5_markdown_instruction: Repita o código dado para criar um
+        moinho de vento.
+      4-5 Nested Loops 6_markdown_instruction: |-
+        Você pode desenhar um hexágono repetindo o
+        código do triângulo?
       4-5 Nested Loops 7_markdown_instruction: |-
         Repita esse design 10 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
       4-5 Nested Loops 8_markdown_instruction: |-
         Repita esse design 6 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 6?)
+      4-5 Nested Loops 9_markdown_instruction: Desenhe o dente na boca do crocodilo!
       4-5 While Loops 1_markdown_instruction: |-
         Mova-me para o buraco e preencha-o com
         duas pás de terra, usando o bloco "preencha".
@@ -754,24 +763,39 @@ pt:
       grade3_maze_loops2_markdown_instruction: Leve-me até o girassol!
       grade3_maze_nestedLoops4_markdown_instruction: Use dois laços para chegar até
         o porco usando menos blocos.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Repita o código dado para
+        criar um moinho de vento.
       grade4_arist_nested_loop_polygons1_markdown_instruction: |-
         Repita esse design 10 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
       grade4_arist_nested_loop_polygons2_markdown_instruction: |-
         Repita esse design 6 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 6?)
+      grade4_arist_nested_loop_triangles3_markdown_instruction: |-
+        Você pode desenhar um hexágono repetindo o
+        código do triângulo?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Desenhe o dente na
+        boca do crocodilo!
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Crie um sol aninhando
         o código inicial\ndentro de outro laço. Chamamos isso de laço aninhado.\r"
+      grade4_arist_nested_loop_triangles6_markdown_instruction: |-
+        Você pode desenhar esses 36 triângulos usando
+        um laço aninhado?
       grade4_artist_functions2_markdown_instruction: |-
         As funções permitem que você defina novos blocos! Movemos
         os blocos para desenhar um quadrado para dentro de uma função chamada "desenhe um quadrado".
         Você consegue usar a função "desenhe um quadrado" para criar os óculos? Os quadrados são separados
         por 75 pixels.
+      grade4_artist_nested_loop_flags1_markdown_instruction: Repita o código dado
+        para criar um moinho de vento.
       grade4_artist_nested_loop_polygons1_markdown_instruction: |-
         Repita esse design 10 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
       grade4_artist_nested_loop_triangles5_markdown_instruction: "Crie um sol aninhando
         o código inicial\ndentro de outro laço. Chamamos isso de laço aninhado.\r"
+      grade4_artist_nested_loop_triangles6_markdown_instruction: |-
+        Você pode desenhar esses 36 triângulos usando
+        um laço aninhado?
       grade4_artist_parameters_triangles2_markdown_instruction: |-
         Você percebe algo diferente
         sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
@@ -790,8 +814,8 @@ pt:
         Colete todo o néctar de cada flor
         e produza mel em cada colmeia. Use um laço aninhado.
       grade4_frozen_freeplay_markdown_instruction: |-
-        Você se tornou oficialmente um artista mestre! Crie
-        um país das maravilhas de gelo.
+        Você se tornou oficialmente um artista mestre!
+        Crie um país das maravilhas de gelo.
       grade4_frozen_functions0_markdown_instruction: |-
         Um círculo é uma forma especial. Você pode descobrir
         que número usar para substituir os pontos de interrogação para desenhar um círculo?

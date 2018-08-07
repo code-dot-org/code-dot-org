@@ -34,7 +34,7 @@ si-LK:
   name: නම
   email: විද්‍යුත් තැපැල
   zipcode: ZIP කේතය හෝ රට
-  submit: යොමු කරන්න
+  submit: යොමුකරන්න
   twentyhours_heading: අප විසින් පිරිනමන පරිගණක විද්‍යා පිවිසුම් පාඨමාලාව උත්සාහ කර
     බලන්න
   twentyhours_text: ඔබගේ පළමු  Hour of Code වැඩසටහන අවසන්ද? මෙම පාඨමාලාවේ පසුවට මූලික
@@ -291,11 +291,11 @@ si-LK:
     තුන
   studiobar_hoc_title: Hour of Code වැඩසටහන
   studiobar_hoc_body: 'Angry Birds සමග කේත ඉගෙන ගන්න '
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: ෆ්ලැපි කේතය
   studiobar_flappy_body: ඔබගේම Flappy ක්‍රීඩාව නිර්මාණය කර මිතුරන් සමග බෙදාගන්න
   studiobar_teacher_title: ගුරුවරුන් වෙනුවෙන්ම
   studiobar_teacher_body: ඔබේ පංති කාමරයට Code Studio වැඩසටහන හඳුන්වාදෙන්න
-  studiobar_frozen_title: පැයේ කේතය
+  studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Anna සහ Elsa සමග ශීත ඍතු මායාලෝකය නිර්මාණය කරන්න
   studiobar_donate_title: පරිත්‍යාග
   studiobar_donate_body: ඔබ පරිත්‍යාග කරන සෑම ඩොලරයකින්ම එක දරුවෙක් ඉගෙනුම ලබයි
@@ -569,7 +569,7 @@ si-LK:
   volunteer_engineer_submission_checkbox_contact: 'ගුරුවරුන් විසින් ස්වේච්ඡා අවස්ථා
     සඳහා මාව සම්බන්ධ කරගත හැකි බවට, මම එකඟ වෙමි. (සැ. යු.: ඔබගේ Email ලිපිනය වෙනත්
     පාර්ශවයන් සමග බෙදාගනු නොලැබේ)'
-  volunteer_engineer_submission_submit: යොමු කරන්න
+  volunteer_engineer_submission_submit: යොමුකරන්න
   volunteer_engineer_submission_thankyou: ස්තූතියි ස්වේච්ඡා සේවකයෙක් ලෙස ඇතුලත් වීම.
     ගුරුවරුන් බාවිතා කරනුයේ <a href="%{url}">මෙම සිතියම </a>ස්වේච්ඡා සේවකයන් සොයාගැනීමට
     හා සම්බන්ද කරගැනීමට.
@@ -687,7 +687,7 @@ si-LK:
     විද්‍යාවේ මූලිකාංග අධ්‍යනය කල හැකි පාඨමාලා නිර්මාණය කර තිබේ.
   dashboard_landing_loading: පූරණය වෙමින්...
   dashboard_action_cancel: අවලංගු කරන්න
-  dashboard_action_delete: මකන්න
+  dashboard_action_delete: මකාදමන්න
   dashboard_action_delete_yes: ඔව්
   dashboard_action_delete_no: නැහැ
   dashboard_action_confirm: මකනවා ද?
@@ -1068,7 +1068,7 @@ si-LK:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (කොටස්)
   math_category_name: ගණිත
-  hoc_category_name: පැයේ කේතය
+  hoc_category_name: Hour of Code
   csf_category_name: පරිගණක විද්‍යාවේ මූලිකාංග
   csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
   csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
@@ -1766,7 +1766,7 @@ si-LK:
   artist_shortcode: කලාව
   header_courses: පාඨමාලාව
   header_project_gallery: ව්යාපෘති
-  header_educate_hoc: පැයේ කේතය
+  header_educate_hoc: Hour of Code
   header_stats: සංඛ්‍යාන
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   user_header_label: ආයුබෝවන් %{username}

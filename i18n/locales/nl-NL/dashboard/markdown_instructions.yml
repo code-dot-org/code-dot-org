@@ -48,7 +48,7 @@ nl:
       2-3 Artist Functions 11.5_markdown_instruction: "Er is een functie om een zeshoek te tekenen. \\r \n\\r\nWat gebeurt er als ik het hoofdprogramma 6 keer herhaal, terwijl het telkens 60 graden draait bij elke herhaling?"
       2-3 Artist Functions 11_markdown_instruction: "We hebben de functie 'teken een vierkant' een nieuwe naam gegeven:'teken een zeshoek', maar het tekent nog steeds vierkanten. \\r \n\\r\nKan je de functie 'teken een zeshoek' aanpassen zodat hij zeshoeken tekent met zijdes van 50 pixels lang.\n\\r \n\\r\nTeken de afbeelding door gebruik te maken van de nieuwe functie!"
       2-3 Artist Functions 12 Mike_markdown_instruction: "Functies zijn echt geweldig om complexe dingen meerdere keren te tekenen. Kun je de functie \"tekenen een bloem\" gebruiken om de rest van de bloembak te vullen? (Tip: Tussen de bloemen zit een afstand van 100 pixels) "
-      2-3 Artist Functions 12 a_markdown_instruction: "Functies zijn echt geweldig om complexe dingen meerdere keren te tekenen. Kun je de functie \"tekenen een bloem\" gebruiken om de rest van de bloembak te vullen? (Tip: Tussen de bloemen zit een afstand van 100 pixels) "
+      2-3 Artist Functions 12 a_markdown_instruction: "Functies zijn echt geweldig om complexe zaken verschillende keren te tekenen. \\r \n\\r\nKan je de functie 'teken een bloem' gebruiker om de plantenbak te vullen? \\r \n\\r\nDe planten zijn elk 100 pixels groot."
       2-3 Artist Functions 12_markdown_instruction: "Functies zijn echt geweldig om complexe zaken verschillende keren te tekenen. \\r \n\\r\nKan je de functie 'teken een bloem' gebruiker om de plantenbak te vullen? \\r \n\\r\nDe planten zijn elk 100 pixels groot."
       2-3 Artist Functions 2_markdown_instruction: "Functies laten je nieuwe blokken definiëren. \\r \n\\r\nWe hebben de blokken nodig voor het tekenen van een vierkant verplaatst naar een functie met naam 'teken een vierkant'. Deze keer, kan je de functie 'teken een vierkant' gebruiken om de brillen te creëren."
       2-3 Artist Functions 3 a_markdown_instruction: "Verander de functie \"teken een vierkant\" zodat je een bril kunt tekenen met glazen van 115 pixels aan elke kant. De vierkanten staan 45 pixels uit elkaar."
@@ -172,11 +172,15 @@ nl:
       4-5 Maze Conditionals 9_markdown_instruction: |-
         Nog een oefening met het "als-anders" blok, kun je het in een keer goed doen?
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "Gebruik een \"herhaal tot\" en een \"als-anders\" blok om me met zo min mogelijk blokken bij de zonnebloem te brengen."
+      4-5 Nested Loops 12_markdown_instruction: Kan je deze 36 driehoeken tekenen met een geneste lus?
       4-5 Nested Loops 3_markdown_instruction: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
         
+      4-5 Nested Loops 5_markdown_instruction: Maak een windmolen met een lus rond de voorbeeldcode.
+      4-5 Nested Loops 6_markdown_instruction: Kan je een zeskant tekenen met een lus rond de driehoek-code?
       4-5 Nested Loops 7_markdown_instruction: "Lus 10 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 10?)"
       4-5 Nested Loops 8_markdown_instruction: "Lus 6 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 6?)"
+      4-5 Nested Loops 9_markdown_instruction: Teken de tanden in de mond van de krokodil!
       4-5 While Loops 1_markdown_instruction: Beweeg me naar het gat en vul het met twee scheppen vuil. Gebruik daarbij het "vul" blok.
       4-5 While Loops 2_markdown_instruction: Beweeg me naar de afvalberg en ruim die op met 5 scheppen. Gebruik daarbij het 'verwijder' blok.
       4-5 While Loops 3_markdown_instruction: "Beweeg me naar de hoop en ruim die helemaal op. Ga dan naar het gat en vul die helemaal. Hint: gebruik zo min mogelijk blokken."
@@ -217,7 +221,7 @@ nl:
       MC Agent Freeplay_markdown_instruction: "**Vrij spel:** Het is nu aan jou! Gebruik de code van de agent om de wereld te verkennen."
       MC_HOC_2017 Agent Test_markdown_instruction: "Klik op 'Uitvoeren' om de speler met de **pijltoetsen** te bewegen.  \\r\n\\r\nOm het level te halen, moet je de deur bereiken en deze openen (met de **spatiebalk**) zodat je het oranje vakje erbinnen kunt bereiken."
       MC_HOC_2017_01_markdown_instruction: "Klik op 'Uitvoeren' om de speler met de **pijltoetsen** te bewegen.  \\r\n\\r\nOm het level te halen, moet je de deur bereiken en deze openen (met de **spatiebalk**) zodat je het oranje vakje erbinnen kunt bereiken."
-      MC_HOC_2017_01_Cole_markdown_instruction: Je moet tijdens deze reis alle hulpmiddelen verzamelen. Loop rond met de **pijltoetsen** en bereik de kist op het pad om te winnen
+      MC_HOC_2017_01_Cole_markdown_instruction: "Je moet tijdens deze reis alle hulpmiddelen verzamelen.\nBeweeg rond met de **pijltjestoetsen**, en bereik de kist op het pad om te winnen"
       MC_HOC_2017_01_Kiki_markdown_instruction: 'Om dit level te spelen, klik je op de oranje knop ''Uitvoeren'' onder de speelruimte en beweeg je de speler met de **pijltoetsen**.  '
       MC_HOC_2017_01_RETRY_markdown_instruction: |2
         {currentPlayerName} is gevangen in het huis, maar de agent is er om te helpen!   \r
@@ -230,7 +234,7 @@ nl:
       MC_HOC_2017_02_Will_markdown_instruction: "Om dit level af te maken, moet de speler in de geheime gaard het oranje vakje bereiken, dat zich achter een gesloten deur bevindt.  \\r\n\\r\nMet de code in werkruimte beweegt de agent twee keer naar voren om de drukplaat te bereiken waardoor de deur voor Alex of Steve wordt geopend."
       MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} gaat verder op avontuur en heeft een **kompas** [compass] nodig om zich voor te bereiden op de tocht.  \\r\n   \\r\nProgrammeer de agent om de poort te openen. "
       MC_HOC_2017_03_Kiki_markdown_instruction: "Het avontuur van de speler begint achter een gesloten deur in de geheime gaard!  \\r\n\\r\n\\r\nHelp de agent de deur te openen door een code te schrijven om hem naar de drukplaat te leiden."
-      MC_HOC_2017_04_markdown_instruction: Verander de lus van de vorige puzzel om de agent te helpen een brug over dit bredere deel van de rivier te bouwen.
+      MC_HOC_2017_04_markdown_instruction: Verander de lus van de vorige puzzel om de Agent te helpen een brug over dit bredere deel van de rivier te bouwen.
       MC_HOC_2017_04POINT5_Cole_markdown_instruction: |-
         Je bent uit het moeras ontsnapt!  Leid de speler nu veilig naar het oranje vakje. 
         
@@ -304,13 +308,45 @@ nl:
       Overworld Move to Sheep_markdown_instruction: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
       Overworld Move to Sheep_2018_markdown_instruction: Voeg een tweede "beweeg vooruit"-commando toe om de schapen te bereiken.
       Testing Quantum Farmer_markdown_instruction: "Wow, ik heb een heel diep gat gevonden! Ik weet niet hoeveel scheppen vuil daarvoor nodig zijn. Kan je een programma schrijven dat het gat vult tot boven vult? Hint: probeer dit keer een zolang-lus."
+      course1_artist_loops_challenge2_markdown_instruction: Laten we een spel spelen! Teken zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       course1_maze_debugging_challenge2_markdown_instruction: Debug dit level. Dit zijn de correct blokken, maar ze staan in de verkeerde volgorde!
+      course1_maze_seq_challenge2_markdown_instruction: Je kan slechts 4 keer bewegen in elke richting. Vind je een pad voordat je blokken op zijn?
+      course2_artist_prog_challenge2_markdown_instruction: "Help me de gele lijnen op deze weg schilderen! *"
       course2_collector_prog_challenge1_markdown_instruction: Kijk aandachtig! Kan jij alle *10* stukken schat verzamelen?
+      course2_harvester_loops_challenge1_markdown_instruction: Verzamel alle maïs.
+      course2_harvester_loops_challenge2_markdown_instruction: "Verzamel alle sla.\nVermijd de bomen en de velden!"
+      course2_maze_programming_challenge1_markdown_instruction: '*" Het varken verstopt zich! Kan jij me helpen een omweg te vinden?"*'
+      course2_maze_programming_challenge2_markdown_instruction: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
+      course2_maze_seq_challenge2_markdown_instruction: Je kan slechts 4 keer bewegen in elke richting. Vind je een pad voordat je blokken op zijn?
+      course3_bee_debugging_challenge1_markdown_instruction: "Bekijk hoe de bijen de nektar verzamelt.\nKan je hetzelfde soort patroon gebruiken om de bij alle honing te laten maken?"
+      course3_maze_debugging_challenge1_markdown_instruction: '*"Ga ik enkel rond in cirkels?"*'
       course4_artist_binary_challenge1_markdown_instruction: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
       course4_artist_fwp_challenge1_markdown_instruction: Probeer dit programma uit te voeren, en verander het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of het verwijder het en vervang het door iets totaal anders)
+      courseA_collector_preLoops1_markdown_instruction: "Dit is Laurel de avonturier! \n\nKlik op\n\"Run\" om haar naar de schat te zien wandelen en het te bemachtigen."
       courseA_maze_seq8_2018_markdown_instruction: Los dit niveau op en krijg de vogel naar het varken!
+      courseB_artist_loops7_markdown_instruction: "**Uitdaging:** Dit is een verborgen tuin!\nLaten we rondwandelen."
+      courseB_artist_loops7_2018_markdown_instruction: "**Uitdaging:** Dit is een verborgen tuin!\nLaten we rondwandelen."
+      courseB_artist_loops_challenge2_markdown_instruction: Laten we een spel spelen! Teken zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
+      courseB_artist_loops_challenge2_2018_markdown_instruction: Laten we een spel spelen! Teken zoveel mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
+      courseB_maze_seq9_challenge1_markdown_instruction: "*Waar verbergt dat varken zich nu?*"
+      courseC_artist_loops2a_markdown_instruction: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
+      courseC_artist_loops2a_2018_markdown_instruction: Gebruik nu een lus om je vogel 12 keer te laten draaien in een hoek van 30 graden.
+      courseC_artist_prog_challenge1-doghouse_markdown_instruction: Laten we een hondenhok voor Jorge bouwen!
+      courseC_artist_prog_challenge2_markdown_instruction: "Help me de gele lijnen op deze weg schilderen! *"
       courseC_collector_prog9_markdown_instruction: '*"Laten we alle schatten verzamelen!"*'
       courseC_collector_prog9_2018_markdown_instruction: '*"Laten we alle schatten verzamelen!"*'
+      courseC_flappy_events7_markdown_instruction: Probeer vervolgens het landschap te veranderen door een blok toe te voegen aan de `als gestart` gebeurtenis.
+      courseC_flappy_events7_2018_markdown_instruction: Probeer vervolgens het landschap te veranderen door een blok toe te voegen aan de `als gestart` gebeurtenis.
+      courseC_flappy_events9_markdown_instruction: "Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,\nlaten we de score opnieuw op 0 zetten."
+      courseC_flappy_events9_2018_markdown_instruction: "Laten we wat dingen dooreen mengen. In de plaats van het spel te beëindigen wanneer Flappy een obstakel raakt,\nlaten we de score opnieuw op 0 zetten."
+      courseC_harvester_loops_challenge1_markdown_instruction: Verzamel alle maïs.
+      courseC_harvester_loops_challenge2_markdown_instruction: "Verzamel alle sla.\nVermijd de bomen en de velden!"
+      courseC_harvester_loops_challenge2_2018_markdown_instruction: "Verzamel alle sla.\nVermijd de bomen en de velden!"
+      courseC_maze_loops_challenge2_markdown_instruction: "Laten we naar schatten zoeken, gebruik makende van loops!\nHelp de verzamelaar door deze code te debuggen.\nVerzamel alle schatten!"
+      courseC_maze_programming1_markdown_instruction: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
+      courseC_maze_programming1_2018_markdown_instruction: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
+      courseC_maze_programming_challenge2_markdown_instruction: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
+      courseC_maze_programming_challenge2_2018_markdown_instruction: Soms is er meer dan één manier om hetzelfde probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
       courseD_artist_binary_challenge1_markdown_instruction: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
       courseD_artist_binary_challenge1_2018_markdown_instruction: Je kan elk van de binaire waardes (0 of 1) slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen om deze tekening te voltooien.
       courseD_artist_project_embedded_markdown_instruction: Hier is wat je zo dadelijk zal maken!
@@ -330,6 +366,8 @@ nl:
       courseE_bee_functions3_markdown_instruction: Functies zijn blokken code die een taak uitvoeren. Gebruik de "neem 5" functies om 5 nektars te verzamelen. Gebruik een lus om het gewenste totaal te krijgen.
       courseE_bee_functions3_2018_markdown_instruction: Functies zijn blokken code die een taak uitvoeren. Gebruik de "neem 5" functies om 5 nektars te verzamelen. Gebruik een lus om het gewenste totaal te krijgen.
       courseE_farmer_concept4_markdown_instruction: Laten we nu één niveau dieper gaan! Wij hebben dat hele codeblok in een andere lus genest, maar jij moet de kunstenaar terug op zijn plaats krijgen om de volgende lijn te tekenen. Welke van deze codeblokken kun je aan het einde van de buitenste lus plaatsen om het gehele raster te tekenen?
+      courseE_maze_ramp1_markdown_instruction: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
+      courseE_maze_ramp1_2018_markdown_instruction: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
       courseE_maze_ramp2_markdown_instruction: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseE_maze_ramp2_2018_markdown_instruction: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist, en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseF_bee_for_challenge2_markdown_instruction: Los deze puzzel op en gebruik zo weinig mogelijk blokken.
@@ -353,14 +391,20 @@ nl:
       frozen square loop 3x_markdown_instruction: Laten we drie vierkanten maken, draai na elk vierkant. Zorg er voor dat je voor elk nieuw vierkant 120 graden draait.
       frozen square loop_markdown_instruction: Hoi, ben ik Anna van Arendelle! Laten we een vierkant maken met het "Herhaal" blok, dat gebruikt minder blokken. Hoeveel keer (???) moet het "Herhaal" blok de blokken binnenin doorlopen om een vierkant te maken?
       frozen square snowflake_markdown_instruction: Kun je een sneeuwvlok maken door met het "Herhaal" blok 10 vierkanten te maken en met het "Draai" blok 36 graden te draaien tussen de vierkanten?
-      grade2_MakeDogTag_8_markdown_instruction: Nu gaan we een aantal V's met elkaar verbinden in een lus.
+      grade1_artist_loops6_markdown_instruction: "**Uitdaging:** Dit is een verborgen tuin!\nLaten we rondwandelen."
+      grade2_CaringForNewPet_0_markdown_instruction: Versleep in deze puzzel alle blokken tezamen en klik op "Start" om het te zien gaan!
+      grade2_MakeDogTag_8_markdown_instruction: Laat ons nu enkele V's aan elkaar vastmaken in een herhaling.
       grade2_MakeDogTag_9_markdown_instruction: "Tijd om iets hip te maken!\n\\r \n\\r\nHerprogrammeer de code van de laatste puzzel, maar voeg deze keer een linkse draai van 30 graden toe aan de herhaling."
       grade2_PuppyLoops_10_markdown_instruction: |-
-        Mijn molentje is niet af. Hoe vaak moet ik herhalen om het af te maken?
+        Mijn leerkracht zegt dat als ik begin, ik het ook moet afwerken. \r 
+        \r
+        Help me om mijn molen af te werken. Kan jij uitvissen wat er mis liep?
       grade2_PuppyLoops_4_markdown_instruction: Gebruik twee lussen om naar het biggetje te gaan met minder blokken.
-      grade2_PuppyLoops_8_markdown_instruction: "De code voor de drie snorharen die je ziet is fout.\nRepareer de code om de snorharen te tekenen.\nTip: Elke snorhaar is 75 pixels lang."
+      grade2_PuppyLoops_8_markdown_instruction: "Deze code voor de snorharen van de kat is verkeerd. \\r \n\\r\nVerbeter de code om snorharen te tekenen die allemaal dezelfde lengte hebben."
       grade2_PuppyLoops_9_markdown_instruction: |-
-        Het lijkt erop dat C in code achteruit wordt getekend. Kun je het eruit laten zien als een C?
+        Het lijkt erop dat de C in de code achterstevoren is getekend. \r 
+        \r
+        Kan je hem er opnieuw als een C doen uitzien?
       grade2_puppy_loops4_markdown_instruction: Gebruik twee lussen om naar het biggetje te gaan met minder blokken.
       grade3_ConditionalsElse_2_markdown_instruction: "De bij wil nu alleen nectar. Vergeet niet dat niet alle objecten bloemen zijn, dus test om alleen bij bloemen nectar verzamelen."
       grade3_ConditionalsElse_5_markdown_instruction: |-
@@ -382,7 +426,7 @@ nl:
         Deze blokken blijven een probleem. Herstel de fout(en) om alle nektar te verzamelen en alle honing te maken. 
       grade3_Debugging_9_markdown_instruction: |-
         Deze blokken blijven een probleem. Herstel de fout(en) om alle nektar te verzamelen en alle honing te maken.
-      grade3_Loops_3_markdown_instruction: Kan je een lus gebruiken om alle nectar te verzamelen?
+      grade3_Loops_3_markdown_instruction: Gebruik een `herhaal` lust om alle nectar te verzamelen.
       grade3_Loops_4_markdown_instruction: Gebruik nu het nieuwe herhaalblok om alle nectar te verzamelen en om alle honing te maken.
       grade3_Loops_6_markdown_instruction: "Wat gebeurt er als je deze reeks driemaal uitvoert in een lus? Vergeet niet om aan het eind de honing te maken!"
       grade3_Loops_7_markdown_instruction: |-
@@ -393,23 +437,29 @@ nl:
       grade3_maze_Loop1_markdown_instruction: "**Opdracht:** Bereik de zonnebloem, gebruik makende van slechts 5 blokken?"
       grade3_maze_loops2_markdown_instruction: 'Help me tot bij de zonnebloem!'
       grade3_maze_nestedLoops4_markdown_instruction: Gebruik twee lussen om naar het biggetje te gaan met minder blokken.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Maak een windmolen met een lus rond de voorbeeldcode.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Lus 10 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 10?)"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Lus 6 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 6?)"
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Kan je een zeskant tekenen met een lus rond de driehoek-code?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Teken de tanden in de mond van de krokodil!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
         
-      grade4_artist_functions2_markdown_instruction: "Met functies kan je nieuwe blokken definiëren! We hebben de blokken om een vierkant te tekenen in een functie met de naam \"teken een vierkant\". Kan je de \"teken een vierkant\" functie gebruiken om de brillenglazen te tekenen? De vierkanten staan 75 pixels uit elkaar."
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Kan je deze 36 driehoeken tekenen met een geneste lus?
+      grade4_artist_functions2_markdown_instruction: "Functies laten je nieuwe blokken definiëren. \\r \n\\r\nWe hebben de blokken nodig voor het tekenen van een vierkant verplaatst naar een functie met naam 'teken een vierkant'. Deze keer, kan je de functie 'teken een vierkant' gebruiken om de brillen te creëren."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Maak een windmolen met een lus rond de voorbeeldcode.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Lus 10 keer met deze tekening. Hoevaak moet je draaien in elke lus? (Hint: wat is 360 gedeeld door 10?)"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Maak een zon door de begincode in een andere lus te nesten. Dit noemen we een geneste lus.\r
         
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Kan je deze 36 driehoeken tekenen met een geneste lus?
       grade4_artist_parameters_triangles2_markdown_instruction: Zie je een verschil tussen deze functie blokken? Druk op "Start" om te zien wat er gebeurt.
       grade4_bee_conditionals_quantum2_markdown_instruction: "De bij wil nu alleen nectar. Vergeet niet dat niet alle objecten bloemen zijn, dus test om alleen bij bloemen nectar verzamelen."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-
         Er kan een bloem of een honingraat onder die wolken zijn. Gebruik het als/anders blok om bij een bloem nectar te verzamelen en om anders honing te maken (omdat het een honigraat is).
       grade4_bee_functions3_markdown_instruction: Functies zijn blokken code die een taak uitvoeren. Gebruik de "neem 5" functies om 5 nektars te verzamelen. Gebruik een lus om het gewenste totaal te krijgen.
       grade4_bee_nestedLoops4_markdown_instruction: 'Verzamel alle nectar van elke bloem en maak honing bij elke honingraat. Gebruik een geneste lus. '
-      grade4_frozen_freeplay_markdown_instruction: Je bent nu officieel een meester kunstenaar geworden! Maak een winter wonderland.
+      grade4_frozen_freeplay_markdown_instruction: Je bent nu officieel een meesterkunstenaar geworden! Maak een winterwonderland.
       grade4_frozen_functions0_markdown_instruction: Een cirkel is een speciale vorm. Kun jij bedenken welk getal op de plaats van de vraagtekens moet komen om een cirkel te tekenen?
       grade4_frozen_functions1a_markdown_instruction: Gebruik het nieuwe "Maak een cirkel" blok om 10 overlappende cirkels te maken. Vergeet niet vooruit te springen tussen de cirkels.
       grade4_frozen_functions2_markdown_instruction: Laten we nu 20 overlappende cirkels maken, draai 18 graden tussen elke cirkel.
@@ -435,7 +485,7 @@ nl:
       grade5_playlab_variables13_markdown_instruction: Gebruik een "wanneer de speler aanraakt"-blok om de hond terug naar de linkerbovenhoek te sturen, maar alleen wanneer hij een van de andere spelers aanraakt.
       grade5_playlab_variables2_markdown_instruction: Die wedstrijd was niet eerlijk! Verander de "hond_snelheid" variabele om er zeker te zijn dat je meer vlaggen kunt verzamelen dan de kat. Wie als eerst 10 vlaggen heeft wint.
       grade5_playlab_variables9_markdown_instruction: "Hier is een functie genaamd \"patrol\". Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen."
-      level 'grade3_Loops_3_markdown_instruction: Kan je een lus gebruiken om alle nectar te verzamelen?
+      level 'grade3_Loops_3_markdown_instruction: Gebruik een `herhaal` lust om alle nectar te verzamelen.
       level 'grade3_Loops_4_markdown_instruction: Gebruik nu het nieuwe herhaalblok om alle nectar te verzamelen en om alle honing te maken.
       level 'grade3_Loops_6_markdown_instruction: "Wat gebeurt er als je deze reeks driemaal uitvoert in een lus? Vergeet niet om aan het eind de honing te maken!"
       level 'grade3_Loops_7_markdown_instruction: |-

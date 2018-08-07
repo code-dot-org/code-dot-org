@@ -92,7 +92,7 @@ es:
             Getting Loopy:
               name: Bucleandose
             Graph Paper Programming:
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             'Maze: Loops':
               name: Bucle
             'Maze: Sequence':
@@ -155,7 +155,7 @@ es:
             'Maze: Conditionals':
               name: 'Laberinto: Condicionales'
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
             'Studio: Create a Game':
               name: 'Laboratorio de juegos: Crear un juego'
             'Studio: Create a Story':
@@ -289,7 +289,7 @@ es:
             Intro:
               name: Intro
             Variables:
-              name: Variables
+              name: variables
         algebra:
           title: Ciencias de la computación en álgebra
           description: Aprender programación funcional a través del álgebra
@@ -436,7 +436,7 @@ es:
           description_audience: Edades de 10 a 18 años
           stages:
             Abstraction:
-              name: Liberación abstracta
+              name: Abstracción
             Algorithms:
               name: Algoritmos
             Computational Thinking:
@@ -444,15 +444,15 @@ es:
             Conditionals:
               name: Condicionales
             Functions:
-              name: Funciones
+              name: funciones
             Graph Paper Programming:
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Introduction to Computer Science:
-              name: Introducción al Arte de las Ciencias de la Computación
+              name: Introducción a la informática
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de Relevos
             Song Writing:
-              name: Escribir canciones
+              name: Escritura de la canción
             The Artist:
               name: El artista
             The Artist 2:
@@ -472,7 +472,7 @@ es:
             The Internet:
               name: Internet
             The Maze:
-              name: El laberinto
+              name: El Laberinto
             Wrap-up:
               name: Cierre
         edit-code:
@@ -487,7 +487,7 @@ es:
             The Artist:
               name: El artista
             The Maze:
-              name: El laberinto
+              name: El Laberinto
         events:
           title: Eventos
           description: Eventos
@@ -551,8 +551,7 @@ es:
           description: Esta unidad explora los desafíos técnicos y las preguntas que
             surgen de la necesidad de representar la información digital en computadoras
             y transferencia entre las personas y los dispositivos computacionales.
-          description_short: Explore como la información digital está representada
-            y transferida
+          description_short: Programación
           stages:
             Binary Numbers:
               name: Números binarios
@@ -692,8 +691,15 @@ es:
             reference:
               name: referencia
         cspunit3:
-          description_short: Explore como la información digital está representada
-            y transferida
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
+          description_short: Programación
           stages:
             APIs and Function Parameters:
               name: Las API y los parámetros de las funciones
@@ -866,8 +872,7 @@ es:
             Welcome Back!:
               name: "¡Bienvenido de nuevo!"
         cspunit2:
-          description_short: Explore como la información digital está representada
-            y transferida
+          description_short: Programación
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Problemas difíciles - El problema del vendedor viajero
@@ -1044,7 +1049,7 @@ es:
             Best Practices for Teaching Computer Science:
               name: Los mejores ejercicios para la enseñanza de la informática
             Computer Science Fundamentals:
-              name: Principios de la informática
+              name: Fundamentos de la informatica
             Getting Started:
               name: Iniciando
             Looking Ahead:
@@ -1200,7 +1205,7 @@ es:
             Getting Loopy:
               name: Bucleandose
             Graph Paper Programming:
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Happy Maps:
               name: Mapas Felices
             Move it, Move it:
@@ -1208,7 +1213,7 @@ es:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
             The Big Event:
               name: El Gran Evento
         algebraPD3a:
@@ -1284,6 +1289,7 @@ es:
             Unit 6 lessons:
               name: Unidad 6 lección
         cspunit4draft:
+          description_short: Datos
           stages:
             Check Your Assumptions:
               name: Verifica tus suposiciones
@@ -1356,6 +1362,14 @@ es:
             Getting Started:
               name: Iniciando
         cspunit3temp:
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
           stages:
             Canvas and Arrays in Apps:
@@ -1412,11 +1426,9 @@ es:
             Wrap-Up:
               name: Cierre
         cspunit5:
-          description_short: Explore como la información digital está representada
-            y transferida
+          description_short: Programación
         cspunit4:
-          description_short: Explore como la información digital está representada
-            y transferida
+          description_short: Programación
           stages:
             Check Your Assumptions:
               name: Verifica tus suposiciones
@@ -1652,7 +1664,7 @@ es:
             Booleans and Conditionals:
               name: Booleanos y condicionales
             Functions:
-              name: Funciones
+              name: funciones
             Velocity:
               name: Velocidad
         2016_sciencePD_phase1:
@@ -1738,6 +1750,8 @@ es:
           stages:
             Peer Review:
               name: Revisión por pares
+        CSDU5-Draft:
+          description_short: Datos
         MikeTest:
           stages:
             Artist Functions:
@@ -1755,7 +1769,7 @@ es:
             'Jigsaw: Learn to drag and drop':
               name: 'Rompecabezas: Aprende a arrastrar y soltar'
             Loops:
-              name: Bucles
+              name: vuelta
             Programming:
               name: Programación
             'Real-life Algorithms: Plant a Seed':
@@ -1767,7 +1781,7 @@ es:
             Digital Citizenship:
               name: Ciudadanía Digital
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
         grade1:
           stages:
             Events:
@@ -1775,7 +1789,7 @@ es:
             'Jigsaw: Learn to drag and drop':
               name: 'Rompecabezas: Aprende a arrastrar y soltar'
             Loops:
-              name: Bucles
+              name: vuelta
             Programming:
               name: Programación
             Unspotted Bugs:
@@ -1933,7 +1947,7 @@ es:
                 que un sprite presione otro en la pantalla antes de practicar con
                 los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotar).
             Functions:
-              name: Funciones
+              name: funciones
             Using the Game Design Process:
               description_student: En esta lección de varios días, la clase usa el
                 proceso de resolución de problemas de la Unidad 1 para crear un juego
@@ -1985,7 +1999,7 @@ es:
                 opcionalmente crean su propia imagen para comunicarse antes de discutir
                 la informacion.
             Variables:
-              name: Variables
+              name: variables
               description_student: Esta lección introduce variables como una forma
                 de etiquetar un número en un programa o guardar un valor generado
                 aleatoriamente. La clase comienza la lección con una descripción muy
@@ -2075,15 +2089,15 @@ es:
             For Loops:
               name: Bucles Para
             Functions:
-              name: Funciones
+              name: funciones
             Functions with Parameters:
               name: Funciones con parámetros
             Loops:
-              name: Bucles
+              name: vuelta
             Nested Loops:
               name: Bucles anidados
             Variables:
-              name: Variables
+              name: variables
             While Loops:
               name: Bucles Mientras
         algebrapdnext:
@@ -2161,9 +2175,9 @@ es:
             Unit 5 Overview:
               name: Unidad 5 visión general
         basketball:
-          title: Elije un equipo y crea un juego de basquetbol
+          title: Crear un juego de baloncesto
           description_short: Crear un juego de baloncesto
-          description: Elije un equipo y crea un juego de basquetbol
+          description: Crear un juego de baloncesto
           stages:
             Bounce:
               name: Rebotar
@@ -2215,8 +2229,8 @@ es:
                 que seleccionaron.
         minecraft:
           title: Diseñador de Minecraft Hora de Código
-          description_short: Construye tu propia versión de Minecraft. Crea tus propias
-            versiones de las gallinas, ovejas, Creepers, zombis y más.
+          description_short: Construye un juego de Minecraft. Crea tus propias versiones
+            de las gallinas, ovejas, Creepers, zombis y más.
           description: Construye un juego de Minecraft. Crea tus propias versiones
             de las gallinas, ovejas, Creepers, zombis y más.
           stages:
@@ -2303,7 +2317,7 @@ es:
             Hour of Code 2013:
               name: La Hora de Code 2013
         sports:
-          title: Crea tu propio Juego de deportes
+          title: Programa tu propio juego de deporte
           description_short: Multideporte
           description: Mezclar y unir deportes
           stages:
@@ -2418,7 +2432,7 @@ es:
         csd3-draft:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Booleans and Conditionals:
               name: Booleanos y condicionales
             Conditionals:
@@ -2426,7 +2440,7 @@ es:
             Velocity:
               name: Velocidad
             Functions:
-              name: Funciones
+              name: funciones
             'Project: Design a Game':
               name: 'Proyecto: Diseñar un juego'
         csd5-2017:
@@ -2453,7 +2467,7 @@ es:
             Velocity:
               name: Velocidad
             Functions:
-              name: Funciones
+              name: funciones
             'Project: Design a Game':
               name: 'Proyecto: Diseñar un juego'
         csd2-draft:
@@ -2463,7 +2477,7 @@ es:
         csd3-chapters:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Booleans and Conditionals:
               name: Booleanos y condicionales
             Conditionals:
@@ -2471,7 +2485,7 @@ es:
             Velocity:
               name: Velocidad
             Functions:
-              name: Funciones
+              name: funciones
             'Project: Design a Game':
               name: 'Proyecto: Diseñar un juego'
             'null':
@@ -2614,6 +2628,14 @@ es:
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
           description_short: Programación
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -2771,13 +2793,13 @@ es:
         csd3-1819draft:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Conditionals:
               name: Condicionales
             Velocity:
               name: Velocidad
             Functions:
-              name: Funciones
+              name: funciones
           description_short: Programación
         csd3-2018:
           description_short: Programación
@@ -2822,7 +2844,7 @@ es:
                 Al final de la lección, los estudiantes podrán programar imágenes
                 como las que hicieron con la herramienta de dibujo en la lección anterior.
             Variables:
-              name: Variables
+              name: variables
               description_student: Esta lección introduce variables como una forma
                 de etiquetar un número en un programa o guardar un valor generado
                 aleatoriamente. La clase comienza la lección con una descripción muy
@@ -2907,7 +2929,7 @@ es:
                 que un sprite presione otro en la pantalla antes de practicar con
                 los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotar).
             Functions:
-              name: Funciones
+              name: funciones
             Using the Game Design Process:
               description_student: En esta lección de varios días, la clase usa el
                 proceso de resolución de problemas de la Unidad 1 para crear un juego
@@ -2967,7 +2989,7 @@ es:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Introduction:
               name: Introducción
             Building a Foundation:
@@ -2985,7 +3007,7 @@ es:
             Conditionals with Cards:
               name: Condicionales con tarjetas
             'Functions: Songwriting':
-              name: Composicion musical con parámetros
+              name: Composición Musical
             Envelope Variables:
               name: Variables de sobre
             For Loop Fun:
@@ -3001,7 +3023,7 @@ es:
             Crowdsourcing:
               name: Colaboración Abierta
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de Relevos
         courseb-2018:
           assignment_family_title: Curso B
           stages:
@@ -3015,7 +3037,7 @@ es:
           assignment_family_title: Curso D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Introduction:
               name: Introducción
             Building a Foundation:
@@ -3031,9 +3053,9 @@ es:
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
             Graph Paper Programming:
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de Relevos
         coursec-2018:
           assignment_family_title: Curso C
           stages:
@@ -3072,7 +3094,7 @@ es:
                 serán guiados a través de eventos, luego le dadas espacio para crear
                 su propio juego.
             'Functions: Songwriting':
-              name: Composicion musical con parámetros
+              name: Composición Musical
             Internet:
               name: Internet
             Crowdsourcing:

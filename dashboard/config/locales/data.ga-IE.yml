@@ -19,7 +19,7 @@ ga:
         Farmer2: An Feirmeoir 2
         Unplug8: Teibíocht
         Artist4: An tEalaíontóir 4
-        Unplug9: Códáil Sealaíochta
+        Unplug9: Códáil sealaíochta
         Farmer3: An Feirmeoir 3
         Unplug10: An tIdirlíon
         Artist5: An tEalaíontóir 5
@@ -369,8 +369,8 @@ ga:
         studio_c3_story_4: An féidir leat ríomhchlár a scríobh a aistríonn an madra
           go dtí an cat, agus a thugann ar an gcat "dia dhuit" a rá nuair a shroicheann
           an madra é?
-        studio_c3_story_5: An féidir leat bloc a chur leis ionas go mbeidh an t-ochtapas
-          sona sásta?
+        studio_c3_story_5: An féidir leat bloc a chur leis an gcód ionas go mbeidh
+          an t-ochtapas sona sásta?
         studio_c3_story_6: Scríobh do scéal féin. Nuair a bheidh tú críochnaithe,
           cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil ar a nguthán.
         studio_c3_game_1: An féidir leat ríomhchlár a scríobh a thugann ar an ochtapas
@@ -512,7 +512,7 @@ ga:
           an cat?
         studio_k1_4: Aistrigh an madra go dtí an cat, ansin tabhair ar an gcat "dia
           dhuit" a rá nuair a shroicheann an madra é.
-        studio_k1_5: An féidir leat bloc a chur leis ionas go mbeidh an t-ochtapas
+        studio_k1_5: An féidir leat bloc a chur leis an gcód ionas go mbeidh an t-ochtapas
           sona sásta?
         studio_k1_6: Inis do scéal féin! Aistrigh an cat agus an madra timpeall an
           scáileáin, agus déan comhrá eatarthu.
@@ -581,7 +581,7 @@ ga:
         C1_zuck_repeat_loop: 'Cathair Ghríobháin: Lúba'
         C1_bee_loops: 'Beach: Lúba'
         C1_maze_loops: 'Cathair Ghríobháin: Lúba'
-        C1_playlab_storytelling: 'Súgradh is Dáiríre: Cruthaigh Scéal'
+        C1_playlab_storytelling: 'Spraotharlann: Cruthaigh Scéal'
         C1_planting_seed: Síol a Chur
         C1_building_foundation: Dúshraith a Leagan
         C1_going_places_safely: Ag Taisteal Slán Sábháilte
@@ -597,7 +597,7 @@ ga:
         C2_graph_paper: Ríomhchlárú ar Ghrafpháipéar
         C2_conditionals_with_cards: Coinníollacha
         C2_binary_bracelets: Bráisléid Dhénártha
-        C2_relay_programming: Códáil Sealaíochta
+        C2_relay_programming: Códáil sealaíochta
         C2_paper_airplanes: Eitleáin Pháipéir
         C2_digital_footprint: Do Lorg Digiteach
         C2_digital_footprint_v2: Do Lorg Digiteach
