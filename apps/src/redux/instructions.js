@@ -296,8 +296,8 @@ export const determineInstructionsConstants = config => {
       !experiments.isEnabled('i18nMarkdownInstructions') &&
       (locale && locale !== ENGLISH_LOCALE)
     ) {
-      // CSF mode - For non-English folks, if we have non-markdown instructions
-      // then use only those (and hide the markdown instructions)
+      // CSF mode - For non-English folks, if we have short instructions then
+      // use only those (and hide the long instructions)
       longInstructions = undefined;
     }
 

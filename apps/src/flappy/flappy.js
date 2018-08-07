@@ -572,7 +572,7 @@ Flappy.init = function (config) {
     config.level.longInstructions &&
     !config.level.shortInstructions
   ) {
-    // if we are an embedded level with markdown instructions but no regular
+    // if we are an embedded level with long instructions but no short
     // instructions, we want to display CSP-style instructions and not be
     // centered
     config.noInstructionsWhenCollapsed = true;
