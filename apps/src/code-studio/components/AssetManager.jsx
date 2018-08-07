@@ -10,7 +10,6 @@ import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -34,13 +33,24 @@ const RecordButton = ({onSelectRecord}) => (
     className="share"
     text={i18n.recordAudio()}
     icon="microphone"
-    style={styles.buttonStyle}
+    style={assetButtonStyles.button}
     size="large"
   />
 );
 
 RecordButton.propTypes = {
   onSelectRecord: PropTypes.func,
+};
+
+export const assetButtonStyles = {
+  button: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 5,
+    borderRadius: 4,
+    fontSize: 'large',
+    fontWeight: 'lighter',
+  }
 };
 
 const styles = {
@@ -52,16 +62,6 @@ const styles = {
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
-  },
-  buttonStyle: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 5,
-    borderRadius: 4,
-    fontSize: 'large',
-    fontWeight: 'lighter',
-    boxShadow: 'none',
-    borderColor: color.orange
   }
 };
 
