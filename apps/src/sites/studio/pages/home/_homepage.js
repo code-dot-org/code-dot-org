@@ -165,6 +165,9 @@ function getTeacherAnnouncement(override) {
     id: "youtube_nocookie"
   };
 
+  // But for now, no announcement (unless there's an override).
+  announcement = null;
+
   // Optional override of teacher announcement (typically via DCDO).
   // Note that teacher_announce_type is optional.
   if (override &&
