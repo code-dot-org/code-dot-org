@@ -11,6 +11,7 @@ import {
   unpublishProject,
   startRenamingProject,
   cancelRenamingProject,
+  saveProjectName,
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 
@@ -29,17 +30,11 @@ class PersonalProjectsTableActionsCell extends Component {
     unpublishProject: PropTypes.func.isRequired,
     showDeleteDialog: PropTypes.func.isRequired,
     isEditing: PropTypes.bool,
+    isSaving: PropTypes.bool,
     startRenamingProject: PropTypes.func.isRequired,
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
-  };
-
-  state = {
-    deleting: false,
-    publishing: false,
-    unpublishing: false,
-    renaming: false,
-    remixing: false
+    saveProjectName: PropTypes.func.isRequired,
   };
 
   onPublish = () => {
@@ -62,8 +57,12 @@ class PersonalProjectsTableActionsCell extends Component {
     this.props.cancelRenamingProject(this.props.projectId);
   };
 
+  onSave = () => {
+    this.props.saveProjectName(this.props.projectId, this.props.updatedName);
+  };
+
   render() {
-    const {isEditing} = this.props;
+    const {isEditing, isSaving} = this.props;
 
     return (
       <div>
@@ -95,7 +94,7 @@ class PersonalProjectsTableActionsCell extends Component {
             )}
             <MenuBreak/>
             <PopUpMenu.Item
-              onClick={() => console.log("Delete was clicked")}
+              onClick={this.onDelete}
               color={color.red}
             >
               <FontAwesome icon="times-circle" style={styles.xIcon}/>
@@ -106,11 +105,11 @@ class PersonalProjectsTableActionsCell extends Component {
         {isEditing &&
           <div>
             <Button
-              onClick={() => console.log("Save was clicked")}
+              onClick={this.onSave}
               color={Button.ButtonColor.orange}
               text={i18n.save()}
               style={styles.saveButton}
-              disabled={true}
+              disabled={isSaving}
             />
             <br/>
             <Button
@@ -140,5 +139,8 @@ export default connect(state => ({}), dispatch => ({
   },
   cancelRenamingProject(projectId) {
     dispatch(cancelRenamingProject(projectId));
+  },
+  saveProjectName(projectId, updatedName) {
+    dispatch(saveProjectName(projectId, updatedName));
   },
 }))(PersonalProjectsTableActionsCell);
