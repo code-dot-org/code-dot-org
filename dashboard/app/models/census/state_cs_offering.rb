@@ -31,6 +31,7 @@ class Census::StateCsOffering < ApplicationRecord
     IA
     ID
     IN
+    KS
     KY
     LA
     MA
@@ -86,6 +87,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'IN'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['NCES'])&.state_school_id
+    when 'KS'
+      row_hash['state_school_id']
     when 'KY'
       row_hash['State School ID']
     when 'LA'
@@ -240,6 +243,16 @@ class Census::StateCsOffering < ApplicationRecord
     4803
     5612
     4586
+  ).freeze
+
+  KS_COURSE_CODES = %w(
+    10152
+    10155
+    10156
+    10153
+    10154
+    10199
+    10197
   ).freeze
 
   KY_COURSE_CODES = %w(
@@ -410,6 +423,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'IN'
       # A column per CS course with a value of 'Y' if the course is offered.
       IN_COURSE_CODES.select {|course| row_hash[course] == 'Y'}
+    when 'KS'
+      KS_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'KY'
       KY_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'LA'
