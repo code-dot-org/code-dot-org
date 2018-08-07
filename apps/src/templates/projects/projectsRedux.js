@@ -24,6 +24,87 @@ const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
 const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
+// Action creators
+
+/**
+ * Select a gallery to display on the projects page.
+ * @param {string} projectType Default: 'PUBLIC'
+ * @returns {{type: string, projectType: string}}
+ */
+export function selectGallery(projectType = Galleries.PUBLIC) {
+  return { type: TOGGLE_GALLERY, projectType };
+}
+
+/**
+ * Takes a list of projects and appends it to the existing list of
+ * projects of the specified type.
+ * @param {Array} projects A list of projects which are all older than the
+ * the current oldest project, newest first.
+ * @param {string} projectType The type of the projects being added.
+ *   Valid values include applab, gamelab, playlab, or artist.
+ */
+export function appendProjects(projects, projectType) {
+  return {type: APPEND_PROJECTS, projects, projectType};
+}
+
+/**
+ * Takes a list of projects and adds it to the front of the list of projects of
+ * the specified type.
+ * @param {Array} projects A list of projects which are all newer than the
+ * the current newest project, newest first.
+ * @param {string} projectType The type of the projects being added.
+ *   Valid values include applab, gamelab, playlab, or artist.
+ */
+export function prependProjects(projects, projectType) {
+  return {type: PREPEND_PROJECTS, projects, projectType};
+}
+
+export function setProjectLists(projectLists) {
+  return {type: SET_PROJECT_LISTS, projectLists};
+}
+
+export function setHasOlderProjects(hasOlderProjects, projectType) {
+  return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
+}
+
+export function setPersonalProjectsList(personalProjectsList) {
+  return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
+}
+
+export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
+  return {type: PUBLISH_SUCCESS, lastPublishedAt,
+  lastPublishedProjectData};
+}
+
+export function unpublishSuccess(projectId) {
+  return {type: UNPUBLISH_SUCCESS, projectId};
+}
+
+export function deleteSuccess(projectId) {
+  return {type: DELETE_SUCCESS, projectId};
+}
+
+export function startRenamingProject(projectId) {
+  return {type: START_RENAMING_PROJECT, projectId};
+}
+
+export function updateProjectName(projectId, updatedName) {
+  return {type: UPDATE_PROJECT_NAME, projectId, updatedName};
+}
+
+export function cancelRenamingProject(projectId) {
+  return {type: CANCEL_RENAMING_PROJECT, projectId};
+}
+
+export function saveSuccess(projectId) {
+  return {type: SAVE_SUCCESS, projectId};
+}
+
+export function saveFailure(projectId) {
+  return {type: SAVE_FAILURE, projectId};
+}
+
+
 
 // Reducers
 
@@ -251,52 +332,18 @@ const reducer = combineReducers({
 });
 export default reducer;
 
-// Action creators
-
-/**
- * Select a gallery to display on the projects page.
- * @param {string} projectType Default: 'PUBLIC'
- * @returns {{type: string, projectType: string}}
- */
-export function selectGallery(projectType = Galleries.PUBLIC) {
-  return { type: TOGGLE_GALLERY, projectType };
-}
-
-/**
- * Takes a list of projects and appends it to the existing list of
- * projects of the specified type.
- * @param {Array} projects A list of projects which are all older than the
- * the current oldest project, newest first.
- * @param {string} projectType The type of the projects being added.
- *   Valid values include applab, gamelab, playlab, or artist.
- */
-export function appendProjects(projects, projectType) {
-  return {type: APPEND_PROJECTS, projects, projectType};
-}
-
-/**
- * Takes a list of projects and adds it to the front of the list of projects of
- * the specified type.
- * @param {Array} projects A list of projects which are all newer than the
- * the current newest project, newest first.
- * @param {string} projectType The type of the projects being added.
- *   Valid values include applab, gamelab, playlab, or artist.
- */
-export function prependProjects(projects, projectType) {
-  return {type: PREPEND_PROJECTS, projects, projectType};
-}
-
-export function setProjectLists(projectLists) {
-  return {type: SET_PROJECT_LISTS, projectLists};
-}
-
-export function setHasOlderProjects(hasOlderProjects, projectType) {
-  return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
-}
-
-export function setPersonalProjectsList(personalProjectsList) {
-  return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
-}
+const fetchProjectToUpdate = (projectId, onComplete) => {
+  $.ajax({
+    url: `/v3/channels/${projectId}`,
+    method: 'GET',
+    type: 'json',
+    contentType: 'application/json;charset=UTF-8',
+  }).done((data) => {
+    onComplete(null, data);
+  }).fail((jqXhr, status) => {
+    onComplete(status, jqXhr.responseJSON);
+  });
+};
 
 export function unpublishProject(projectId) {
   return dispatch => {
@@ -321,48 +368,6 @@ export function unpublishProject(projectId) {
     });
   };
 }
-
-export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
-  return {type: PUBLISH_SUCCESS, lastPublishedAt,
-  lastPublishedProjectData};
-}
-
-export function unpublishSuccess(projectId) {
-  return {type: UNPUBLISH_SUCCESS, projectId};
-}
-
-export function deleteSuccess(projectId) {
-  return {type: DELETE_SUCCESS, projectId};
-}
-
-export function startRenamingProject(projectId) {
-  return {type: START_RENAMING_PROJECT, projectId};
-}
-
-export function updateProjectName(projectId, updatedName) {
-  return {type: UPDATE_PROJECT_NAME, projectId, updatedName};
-}
-
-export function saveSuccess(projectId) {
-  return {type: SAVE_SUCCESS, projectId};
-}
-
-export function saveFailure(projectId) {
-  return {type: SAVE_FAILURE, projectId};
-}
-
-const fetchProjectToUpdate = (projectId, onComplete) => {
-  $.ajax({
-    url: `/v3/channels/${projectId}`,
-    method: 'GET',
-    type: 'json',
-    contentType: 'application/json;charset=UTF-8',
-  }).done((data) => {
-    onComplete(null, data);
-  }).fail((jqXhr, status) => {
-    onComplete(status, jqXhr.responseJSON);
-  });
-};
 
 const updateProjectNameOnServer = (project) => {
   return (dispatch) => {
@@ -393,7 +398,3 @@ export const saveProjectName = (projectId, updatedName) => {
     });
   };
 };
-
-export function cancelRenamingProject(projectId) {
-  return {type: CANCEL_RENAMING_PROJECT, projectId};
-}
