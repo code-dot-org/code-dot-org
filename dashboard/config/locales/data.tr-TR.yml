@@ -3,11 +3,11 @@ tr:
   data:
     game:
       name:
-        Unplug1: Bilgisayar Bilimlerine Giriş
+        Unplug1: Bilgisayar Bilimine Giriş
         Maze: Labirent
         Multi: Çok Seçimli Şeyler
         Unplug2: Sayısal Düşünme
-        Unplug3: Grafikli Kağıdıyla Programlama
+        Unplug3: Grafik Kağıdı Programlama
         Artist: Sanatçı
         Unplug4: Algoritmalar
         Artist2: Sanatçı 2
@@ -15,7 +15,7 @@ tr:
         Farmer: Çiftçi
         Unplug6: Koşullar
         Artist3: Sanatçı 3
-        Unplug7: Şarkı Yazma
+        Unplug7: Şarkı yazma
         Farmer2: Çiftçi 2
         Unplug8: Soyutlama
         Artist4: Sanatçı 4
@@ -93,8 +93,8 @@ tr:
           değil, sadece canavar bitkilere dikkat et!
         maze_2_17: '"Eğer-Değilse" bloğu bir koşulu kontrol eder ve bir şeyi YA DA
           diğerini yapar. Ayçiçeğine ulaşmam için bu yeni bloğu kullanmayı dene.'
-        maze_2_18: '"Eğer -değilse" bloğunun bir örneği daha, ilk denemede doğru yapabilir
-          misin?'
+        maze_2_18: Eğer/değilse bloğu ile bir uygulama daha. İlk denemende doğru yapabilir
+          misin?
         maze_2_19: Daha karmaşık bir labirenti sadece 3 blok ekleyerek çözmeme yardımcı
           olur musun? Eğer doğru yaparsan, uzunluğu ne olursa olsun her kıvrımlı yolda
           yürüyebilirim.
@@ -162,15 +162,15 @@ tr:
         maze_karel_1_5: 'Delikleri 5 kürekdolusu toprakla doldurmam için bana yardım
           et. İpucu: "While" blogunun içine "tekrar" blogunu yerleştirebilirsin.'
         maze_karel_1_6: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak
-          kaldır.Liste menüsündeki yeni secenekler bana bir yığının mı yoksa bir deliğin
-          mi üstünde olduğumu söyler.
-        maze_karel_1_7: Wow,çok derin bir çukur buldum!Kaç kürek dolusu toprağa ihtiyacı
-          olur bilmiyorum.Dolana kadar onu dolduracak bir program yazabilir misin
-          ?
-        maze_karel_1_8: Alanın sonundaki çukuru doldurmama yardım et,kullanabildiğin
+          kaldır. Liste menüsündeki yeni secenekler bana bir yığının mı yoksa bir
+          deliğin mi üstünde olduğumu söyler.
+        maze_karel_1_7: Wow, çok derin bir çukur buldum! Kaç kürek dolusu toprağa
+          ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program yazabilir
+          misin?
+        maze_karel_1_8: Alanın sonundaki çukuru doldurmama yardım et, kullanabildiğin
           kadar az blok kullanarak.
-        maze_karel_1_9: Tüm toprak yığınlarını yok etmememi sağla.Kullanabildiğin
-          kadar az blok kullanmaya çalış.İpucu:"while" bloğunu kullanmaya çalış.
+        maze_karel_1_9: Tüm toprak yığınlarını yok etmememi sağla. Kullanabildiğin
+          kadar az blok kullanmaya çalış. İpucu:"sürece" bloğunu kullanmaya çalış.
         maze_karel_1_10: Geç saatlere kadar çalışıyorum,yani dışarısı karanlık,ve
           yığınların ne kadar geniş olduğunu söyleyemem."while" bloğunda eskiden olduğu
           kadar seçeneğe sahip değilim.Beni alanda hareket ettir,ve bir yığın varsa
@@ -321,29 +321,29 @@ tr:
         studio_c2_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
         studio_c2_2: Köpek bir şey söylesin sonra da kedi bir şey söylesin. Yapabilir
           misin?
-        studio_c2_3: Köpeği kediye doğru hareket ettiren bir program yazabilir misin?
+        studio_c2_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
         studio_c2_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin yanına
           geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir misin?
-        studio_c2_5: Ahtapotun tıklandığında "merhaba" demesini sağlayan program yazabilir
-          misin?
-        studio_c2_6: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak pengueni etrafta
+        studio_c2_5: Ahtapotun tıklandığında "merhaba" demesini sağlayan programı
+          yazabilir misin?
+        studio_c2_6: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak paytağın etrafta
           hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
           misin?
         studio_c2_7: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
           imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
           sağlayan blokları ekleyebilir misin?'
-        studio_c2_8: Pengueni, ok tuşları ile etrafta hareket ettiren kodları yazın.
+        studio_c2_8: Paytağı, ok tuşları ile etrafta hareket ettiren kodları yazın.
           Dinozora çarpınca da "Ouch!" deyip "çarpma" sesi çıkarmasını sağlayın.
-        studio_c2_9: Pengueni oklarla hareket ettirip sayı almasını ve ahtapota değince
+        studio_c2_9: Paytağı oklarla hareket ettirip sayı almasını ve ahtapota değince
           sayı almasını sağlayacak bloğu ekleyebilir misin?
         studio_c2_10: Pengueni oklarla hareket ettirip sayı almasını ve arkaplan ile
-          penguenin hızını değiştirmesini sağlayacak bloğu ekleyebilir misin?
+          paytağın hızını değiştirmesini sağlayacak bloğu ekleyebilir misin?
         studio_c2_11: Kendi hikayeni oluşturabilir misin? Bitirdiğinde "Bitir" düğmesine
           bas, hikayeni arkadaşlarının telefonlarında denemelerine izin ver.
         studio_c3_story_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
         studio_c3_story_2: Köpeğin bir şeyler demesini sonra da kedinin bir şeyler
           demesini sağlayabilir misin?
-        studio_c3_story_3: Köpeği kediye doğru hareket ettiren bir program yazabilir
+        studio_c3_story_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir
           misin?
         studio_c3_story_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin
           yanına geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir
@@ -354,13 +354,13 @@ tr:
           için (Facebook veya Twitter da) hikayenizi paylaşın.
         studio_c3_game_1: Ahtapotun tıklandığında "merhaba" demesini sağlayan programı
           yazabilir misin?
-        studio_c3_game_2: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak pengueni
+        studio_c3_game_2: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak paytağın
           etrafta hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
           misin?
         studio_c3_game_3: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
           imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
           sağlayan blokları ekleyebilir misin?'
-        studio_c3_game_4: Pengueni, ok tuşları ile etrafta hareket ettiren kodları
+        studio_c3_game_4: Paytağı, ok tuşları ile etrafta hareket ettiren kodları
           yazın. Dinozora çarpınca da "Ouch!" deyip "çarpma" sesi çıkarmasını sağlayın.
         studio_c3_game_5: Pengueni, ok tuşları ile etrafta hareket ettirip, ahtapota
           çarpınca "skor puanı" ekleyen bloğu ekleyebilir misin?
@@ -469,7 +469,7 @@ tr:
         studio_k1_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
         studio_k1_2: Köpeğin bir şeyler demesini sonra da kedinin bir şeyler demesini
           sağlayabilir misin?
-        studio_k1_3: Köpeği kediye doğru hareket ettiren bir program yazabilir misin?
+        studio_k1_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
         studio_k1_4: Köpeği, kedinin yanına taşıyın ve kedinin "merhaba" demesini
           sağlayın.
         studio_k1_5: Ahtapotu mutlu edecek bloğu ekleyebilir misin?
@@ -566,7 +566,7 @@ tr:
         C2_digital_footprint_v2: Dijital İziniz
         C3_maze_level_4: Labirent Döngüleri
         C3_artist_intro: 'Ressam: Giriş'
-        C3_artist_functions: Aktör Fonksiyonları
+        C3_artist_functions: 'Sanatçı: Fonksiyonlar'
         C3_bee_functions: Arı Fonksiyonları
         C3_bee_conditionals: Arı Koşullandırmaları
         C3_maze_conditionals: Labirent Koşullandırıcıları
@@ -601,7 +601,7 @@ tr:
         C4_unplugged_forloops: For Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
         C4_unplugged_binary: İkili
-        CSF_a_b_artist_loops: Sanatçıların Döngüleri
+        CSF_a_b_artist_loops: Sanatçı- Döngüler
         CSF_artist_angles: Sanatçı açılarda
         CSF_collector_k1_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
         CSF_collector_repeat_loops: Toplayıcı tekrarlama döngüleri
@@ -651,6 +651,7 @@ tr:
         csp_applab_functions: Fonksiyonlara Giriş
         csp_applab_functions_parameters: Fonksiyon parametreleri
         csp_applab_loops: Döngüler
+        csp_textcompression: Metin sıkıştırma bileşeni
         csp_textcompression_new: Metin sıkıştırma bileşeni
         starwars_intro: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Giriş'
         starwars_typing: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - JavaScript'
@@ -716,7 +717,7 @@ tr:
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
-        run: Programınızı denemek için "Çalıştır" düğmesine basın
+        run: Programınızı denemek içi "Çalıştır"a basın
         watch_again: Videoyu tekrar izlemek için burayı tıklayın
         gray_block_explanation: Gri bloklar silinemezler. Yine de bulmacayı çözebilir
           misin?

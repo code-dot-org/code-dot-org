@@ -24,6 +24,6 @@ hr:
       move down: pomakni dolje
       move left: pomakni lijevo
       collect: prikupiti
-      turn left: okreni lijevo
+      turn left: okreni ulijevo
       move forward: idi naprijed
-      turn right: okreni desno
+      turn right: okreni udesno

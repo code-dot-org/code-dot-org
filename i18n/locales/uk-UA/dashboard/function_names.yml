@@ -11,7 +11,7 @@ uk:
       draw a triangle: намалювати трикутник
       draw a house: намалювати будинок
       draw a star: намалювати зірку
-      do something: робити щось
+      do something: щось зробити
       jump: стрибок
       set score: встановити рахунок
       get nectar: взяти нектар
@@ -20,7 +20,7 @@ uk:
       move: переміститись
       move right: рухатись праворуч
       move up: рухатися вгору
-      move down: рухатись вниз
+      move down: рухатися вниз
       move left: рухатись ліворуч
       collect: збирати
       turn left: повернути ліворуч

@@ -6,8 +6,8 @@ pt-BR:
         Unplug1: Introdução à Ciência da Computação
         Maze: O Labirinto
         Multi: Material de múltipla escolha
-        Unplug2: Pensamento Computacional
-        Unplug3: Programação em Papel Quadriculado
+        Unplug2: Pensamento computacional
+        Unplug3: Programação em papel quadriculado
         Artist: O Artista
         Unplug4: Algoritmos
         Artist2: O Artista 2
@@ -19,7 +19,7 @@ pt-BR:
         Farmer2: A Fazendeira 2
         Unplug8: Abstração
         Artist4: O Artista 4
-        Unplug9: Programação Relay
+        Unplug9: Programação por revezamento
         Farmer3: A Fazendeira 3
         Unplug10: A Internet
         Artist5: O Artista 5
@@ -53,7 +53,7 @@ pt-BR:
         loop_until: Bloco "Repita até que"
         loop_while: Bloco "Enquanto"
         loop_for: Bloco "contador"
-        function: Funções
+        function: funções
         parameters: Funções com parâmetros
     level:
       instructions:
@@ -93,8 +93,9 @@ pt-BR:
           mas fique de olho nos comilões!
         maze_2_17: O bloco "se-senão" verifica uma condição e, em seguida, faz uma
           coisa OU outra. Para me levar ao girassol, tente usar esse novo bloco.
-        maze_2_18: Vamos praticar o uso do bloco "se-senão" mais uma vez, você consegue
-          na primeira tentativa?
+        maze_2_18: |-
+          Vamos praticar o uso do bloco "se-senão" mais uma vez. Você consegue
+          acertar na primeira tentativa?
         maze_2_19: Você consegue usar apenas 3 blocos para me ajudar a percorrer um
           labirinto mais complexo? Se fizer isso direito, eu posso percorrer qualquer
           caminho cheio de curvas, não importa o comprimento.
@@ -332,28 +333,37 @@ pt-BR:
         studio_c2_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
         studio_c2_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer
           o gato dizer alguma coisa?
-        studio_c2_3: Você consegue desenvolver um programa para fazer este cachorro
-          se mover em direção ao gato?
-        studio_c2_4: Você consegue desenvolver um programa que faça com que o cachorro
-          se mova em direção ao gato e que faça com que o gato diga "Olá" quando o
-          cachorro o alcançar?
-        studio_c2_5: Você pode escrever um programa para fazer o polvo dizer "olá"
-          quando clicarem nele?
-        studio_c2_6: Você pode desenvolver um programa que faça o pinguim se mover
-          usando as teclas com as setas para cima / para baixo / à esquerda / à direita,
-          para atingir todos os alvos?
-        studio_c2_7: O bloco "repita infinitamente" possibilita a execução contínua
-          do programa. Você pode anexar blocos para mover esse dinossauro para cima
-          e para baixo repetidamente?
-        studio_c2_8: Você pode fazer com que o pinguim diga "Ai!" e reproduza um som
-          de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas
-          para fazer isso acontecer?
-        studio_c2_9: Você pode adicionar um bloco que some um ponto quando o pinguim
-          se encontra com o polvo, e então movê-lo até que você consiga o ponto?
-        studio_c2_10: Você pode adicionar blocos para mudar o plano de fundo e a velocidade
-          do pinguim, e então movê-lo com as setas até que você pontue?
-        studio_c2_11: Crie sua própria história. Quando tiver terminado, clique em
-          Concluir para que seus amigos possam vê-la em seus celulares.
+        studio_c2_3: |-
+          Você consegue escrever um programa para fazer este
+          cachorro se mover até o gato?
+        studio_c2_4: |-
+          Você consegue escrever um programa que faça
+          o cachorro se mover até o gato e que faça o gato dizer "Olá" quando o cachorro o
+          alcançar?
+        studio_c2_5: |-
+          Você pode escrever um programa para fazer
+          o polvo dizer "Olá" quando clicarem nele?
+        studio_c2_6: |-
+          Você pode escrever um programa que faça Valfredo
+          se mover usando as as setas para cima / para baixo / à esquerda / à direita do teclado, para atingir todos os alvos?
+        studio_c2_7: |-
+          O bloco "repita infinitamente" permite
+          que você execute o código de maneira contínua. Você consegue conectar blocos para mover este dinossauro
+          para cima e para baixo repetidamente?
+        studio_c2_8: |-
+          Você pode fazer Valfredo dizer "Ai!"
+          e reproduzir um som de "batida" se ele encontrar o dinossauro, e então movê-lo com
+          as setas to teclado para fazer isso acontecer?
+        studio_c2_9: |-
+          Você pode adicionar um bloco para marcar um ponto
+          quando Valfredo se encontrar com o polvo, e então movê-lo com as setas do teclado até
+          marcar pontos?
+        studio_c2_10: |-
+          Você pode adicionar blocos para mudar o plano de fundo
+          e a velocidade de Valfredo, e então movê-lo com as setas do teclado até marcar pontos?
+        studio_c2_11: |-
+          Crie sua própria história. Quando terminar,
+          clique em "Concluir" para que seus amigos testem sua história em seus celulares.
         studio_c3_story_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
         studio_c3_story_2: Você pode fazer o cachorro dizer alguma coisa e, depois,
           fazer o gato dizer alguma coisa?
@@ -490,12 +500,15 @@ pt-BR:
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir
           para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
-        studio_k1_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer
-          o gato dizer alguma coisa?
+        studio_k1_2: |-
+          Você pode fazer o cachorro dizer alguma coisa e,
+          depois, fazer a gata dizer alguma coisa?
         studio_k1_3: Você consegue desenvolver um programa para fazer este cachorro
           se mover em direção ao gato?
         studio_k1_4: Faça o cachorro se mover até o gato e dizer "olá" quando chegar.
-        studio_k1_5: Você pode adicionar um bloco para deixar o polvo feliz?
+        studio_k1_5: |-
+          Você pode adicionar um bloco para deixar o polvo
+          feliz?
         studio_k1_6: Crie sua própria história! Movimente o gato e o cachorro, e faça
           com que eles conversem.
         maze_wordsearch_k_1: Faça eu me mover para formar a palavra EAST
@@ -578,7 +591,7 @@ pt-BR:
         C2_graph_paper: Programação em Papel Quadriculado
         C2_conditionals_with_cards: Condições
         C2_binary_bracelets: Pulseiras binárias
-        C2_relay_programming: Programação Relay
+        C2_relay_programming: Programação por revezamento
         C2_paper_airplanes: Aviões de papel
         C2_digital_footprint: Seu rastro digital
         C2_digital_footprint_v2: Seu rastro digital
@@ -601,7 +614,7 @@ pt-BR:
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
         C4_intro: Introdução
-        C4_loops_zombie: Laços
+        C4_loops_zombie: laços
         C4_bee_conditional: Condicionais da abelha
         C4_variables_artist: Variáveis - Artista
         C4_variables_playlab: Variáveis - Laboratório
@@ -668,7 +681,7 @@ pt-BR:
         csd_weblab_intro_3: Introdução ao Web Lab - Parte 3
         csp_applab_functions: Introdução às Funções
         csp_applab_functions_parameters: Funções com Parâmetros
-        csp_applab_loops: Laços
+        csp_applab_loops: laços
         csp_concept_rgb: Um pouco sobre pixels
         csp_pixelation_color_1: Widget de pixelização de cores - Parte 1
         csp_pixelation_color_2: Widget de pixelização de cores - Parte 2
@@ -766,7 +779,7 @@ pt-BR:
         CSF_if_allskins: O Bloco Se
         CSF_ifelse_allskins: Usando Blocos "Se/Senão"
         CSF_ifelseifelse_allskins: Usando Blocos "Se/SenãoSe/Senão"
-        CSF_loops_AB: Laços
+        CSF_loops_AB: laços
         csd_gamelab_booleans: Expressões Booleanas
         csd_gamelab_conditional_statements: Instruções Condicionais
         csd_gamelab_if_else: Instrução Se/Senão
@@ -774,10 +787,11 @@ pt-BR:
         CSF_Spritelab_MakeSprite_CDEF: Como fazer um no Laboratório de Sprite
         CDEF_Video_SpritesInAction: Sprites em Ação
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites em Ação
+        CSF_StarWars_ProjectIntro: Introdução para o Projeto Star Wars
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
-        run: Clique em "Executar" para iniciar seu programa
+        run: Selecione "Executar" para abrir seu programa
         watch_again: Clique aqui para assistir o vídeo novamente
         gray_block_explanation: Os blocos cinza não podem ser excluídos. Você consegue
           resolver o desafio assim mesmo?

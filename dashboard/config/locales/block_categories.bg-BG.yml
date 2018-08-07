@@ -3,7 +3,7 @@ bg:
   data:
     block_categories:
       Actions: Действия
-      Loops: Цикли
+      Loops: Повторения
       Functions: Функции
       Color: Цвят
       Math: Математика

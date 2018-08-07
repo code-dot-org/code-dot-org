@@ -5,6 +5,7 @@ ky:
   okay: Окай
   continue: Улантуу
   signup_form:
+    submit: Катталуу
     email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
     email_preference_yes: Ооба
     email_preference_no: Жок
@@ -19,6 +20,10 @@ ky:
   nav:
     header:
       my_dashboard: Менин тактам
+      educate_hoc: Код сааты
+  teacher:
+    panel:
+      section: Секция
   home:
     announcement_learn_more_button: Дагы кара
   compatibility:
@@ -27,6 +32,10 @@ ky:
   upsell:
     applab:
       title: App Lab
+    hoc:
+      title: Классикалык лабиринт
+    flappy:
+      title: Flappy Code
     gamelab:
       title: Оюн лабы
     infinity:
@@ -54,7 +63,9 @@ ky:
     print: Бастыр
   race_interstitial:
     submit: Кошуу
+    decline: Жабуу
   project:
+    close: Жабуу
     name: Аты
     delete_yes: Ооба
     delete_no: Жок

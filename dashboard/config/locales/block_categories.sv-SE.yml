@@ -2,13 +2,13 @@
 sv:
   data:
     block_categories:
-      Actions: Handlingar
-      Loops: Loopar
-      Functions: Funktioner
+      Actions: Åtgärder
+      Loops: loopar
+      Functions: funktioner
       Color: Färg
       Math: Matte
       Logic: Logik
-      Variables: Variabler
+      Variables: variabler
       Conditionals: Villkor
       Events: Händelser
       Text: text

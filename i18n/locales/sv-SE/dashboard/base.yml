@@ -396,7 +396,7 @@ sv:
     more: 'Mer'
     feedback: 'Ge feedback'
     translate: 'Hjälp oss översätta till ditt språk'
-    support: 'Hjälp'
+    support: 'Hjälp och Community'
     support_url: 'http://support.code.org/'
     tos_short: 'Villkor'
     tos: 'Villkor'
@@ -467,7 +467,7 @@ sv:
       title: 'Klassisk labyrint'
       body: 'Lär dig grunderna i programmering. Miljoner har provat denna.'
     flappy:
-      title: 'Flappy-kod'
+      title: 'Flappy kod'
       body: 'Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!'
     20-hour:
       title: 'Snabbkurs'
@@ -494,10 +494,10 @@ sv:
       body: "Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen ."
     minecraft:
       title: "Minecraft"
-      body: "Utforska en Minecraft värld med kod."
+      body: "Utforska en Minecraft-värld genom kod"
     minecraft2016:
       title: "Minecraft"
-      body: "Programmet djur och andra Minecraft varelser i din egen version av Minecraft."
+      body: "Programmera djur och andra Minecraft varelser i din egen version av Minecraft."
     hero:
       title: "Minecraft"
     sports:
@@ -614,18 +614,10 @@ sv:
   race_interstitial:
     title: "Tillval: Hjälp oss att följa våra framsteg med att förbättra mångfalden inom datavetenskapen"
     races:
-      - 
-        white: "Vit"
-      - 
-        black: "Svart eller afroamerikansk"
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Annat"
-      - 
-        opt_out: "Föredrar att inte svara"
+      white: "Vit"
+      black: "Svart eller afroamerikansk"
+      other: "Annat"
+      opt_out: "Föredrar att inte svara"
     submit: "Skicka in"
     decline: "Avsluta"
   zendesk_too_young_message: 'Tyvärr, yngre användare kan inte logga in på vår supportsida. Du kan besöka<a href="http://support.code.org"> support.code.org</a> utan att logga in eller be din förälder eller lärare att kontakta oss.'
@@ -776,4 +768,5 @@ sv:
   cookie_banner:
     accept: 'Jag håller med'
   gdpr_dialog:
+    message: 'När du använder denna webbplats kan information om detta skickas till och lagras eller bearbetas i USA.'
     yes: 'Ja'

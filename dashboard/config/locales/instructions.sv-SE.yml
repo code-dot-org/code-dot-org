@@ -314,10 +314,10 @@ sv:
       2-3 Maze 10_instruction: Led mig till den gröna elakheten! (Se upp för TNT)
       2-3 Maze 11_instruction: Ge mig att blomman, jag är hungrig! Hur många gånger
         behöver du upprepa ett block?
-      2-3 Maze 12 (copy 1)_instruction: 'Kan du byta ut det tidigare svaret mot endast
-        två block? (Tips: skapa en loop med ett "Upprepa gånger" block.)'
-      2-3 Maze 12 (copy 2)_instruction: 'Kan du byta ut det tidigare svaret mot endast
-        två block? (Tips: skapa en loop med ett "Upprepa gånger" block.)'
+      2-3 Maze 12 (copy 1)_instruction: 'Kan du ersätta det tidigare svaret med endast
+        två block? (Tips: skapa en loop med ett "Upprepa gånger"-block.)'
+      2-3 Maze 12 (copy 2)_instruction: 'Kan du ersätta det tidigare svaret med endast
+        två block? (Tips: skapa en loop med ett "Upprepa gånger"-block.)'
       2-3 Maze 12 (old)_instruction: Hjälp mig till grisen, nu med Upprepa- gånger
         blocket!
       2-3 Maze 12 - One Move Block_instruction: Ta dig till grisen! Men denna gång
@@ -351,7 +351,7 @@ sv:
       2-3 Maze Loops 17_instruction: Få mig till Solrosen!
       2-3 Maze Loops 18_instruction: Få mig till Solrosen!
       2-3 Maze Loops 19_instruction: Få mig till Solrosen!
-      2-3 Maze Loops 20_instruction: Få mig till Solrosen!
+      2-3 Maze Loops 20_instruction: Kan du lösa pusslet med så få block som möjligt?
       2-3 Maze Loops 21_instruction: Få mig till Solrosen!
       2-3 Maze Loops Assessment 1_instruction: 'Bedömning: Få mig till Solrosen med
         bara 5 block! '
@@ -610,11 +610,14 @@ sv:
       4-5 Artist Patterns Free Play_instruction: Lek fritt! Prova att göra ditt eget
         mönster!
       4-5 Bee Conditionals - FC Test_instruction: Biet vill bara ha nektar just nu.
-        Inte alla saker är blommor, så kolla under ALLA MOLN för att se om det döljer
-        en blomma. Om det gör det kan du samla nektar.
+        Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om
+        de döljer en blomma. Om det är en blomma så kan du samla nektar.
       4-5 Bee Conditionals 1_instruction: Biet kan inte avgöra om detta är en blomma
         eller en bivaxkaka. Samla nektar endast från blommor men kolla först om det
         är en blomma eller en bivaxkaka.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Biet vill bara ha nektar just nu.
+        Kom ihåg att alla objekt inte är blommor så se till att du bara samlar nektar
+        vid blommorna.
       4-5 Bee Conditionals 2_instruction: Biet vill bara ha nektar just nu. Alla objekt
         är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer en
         blomma. Om det är en blomma kan du samla nektar.
@@ -687,7 +690,7 @@ sv:
       4-5 Maze 14_instruction: Ta mig till grisen! Använd blocket 'upprepa-tills'.
       4-5 Maze 2 (copy 1)_instruction: Ta zombie till solrosen, men undvik de köttätande
         växterna!
-      4-5 Maze 2_instruction: Ta zombien till solrosen, men undvik de köttätande växterna!
+      4-5 Maze 2_instruction: Ta zombie till solrosen, men undvik de köttätande växterna!
       4-5 Maze 3 (copy 1)_instruction: Måste... ta mig till... solrosen.
       4-5 Maze 3_instruction: Måste... ta mig till... solrosen.
       4-5 Maze 4 (copy 1)_instruction: Försök använda blocket "upprepa" för att använda
@@ -775,6 +778,20 @@ sv:
       4-5 While Loops Assessment 1_instruction: Det finns många hål och högar. Hjälp
         mig att fylla och ta bort dem för att göra marken slät.
       App Lab test_instruction: test
+      Artist - Nested Loops 1_instruction: 'Komplettera koden som ritar dessa trianglar.  Den
+        första är gjord åt dig.  Tips: 3 trianglar med 360 graders rotation.'
+      Artist - Nested Loops 10_instruction: Rita den sista raden med stjärnor på flaggan
+        genom att upprepa de givna blocken. Stjärnorna ligger med 50 pixlar mellanrum,
+        men kom ihåg att stjärnorna själva är 30 pixlar breda.
+      Artist - Nested Loops 11_instruction: Kan du rita dessa 10 kvadraterna på trottoaren
+        med en nästlad slinga? Varje kvadrat är 30 pixlar.
+      Artist - Nested Loops 12_instruction: Kan du rita dessa 36 trianglar med en
+        nästlad slinga?
+      Artist - Nested Loops 5_instruction: Repetera den givna koden för att skapa
+        en väderkvarn.
+      Artist - Nested Loops 6_instruction: Kan du rita en hexagon genom att upprepa
+        triangelkoden?
+      Artist - Nested Loops 9_instruction: Rita tänderna i alligatorns mun!
       Artist - Nested Loops Assessment 1_instruction: Använd en kapslad loop för att
         slutföra designen.
       Artist Inspiration_instruction: "Fritt spel - Inspiration: Du har nu lärt dig
@@ -797,10 +814,23 @@ sv:
       Brad Spooky House_instruction: 'Fritt spel: Här är de funktioner som du har
         skrivit, och några fler för dig att spela med. Rita något fantastiskt! Lek
         med pennbredden och se hur olika dina ritningar ser ut!'
+      Building a Foundation Assessment_instruction: Bygg en pyramid med tre nivåer,
+        det finns inga andra instruktioner, så det är bara lek med bitarna tills du
+        får det rätt!
       Busy Bee 2_instruction: Detta bi har en hel del arbete att utföra! Hittar du
         några mönster som du kan använda för att förenkla din kod?
       Busy Bee_instruction: Detta bi har en hel del arbete att utföra! Hittar du några
         mönster som du kan använda för att förenkla din kod?
+      C3-Farmer While Loops 5_instruction: Wow, nu finns det två djupa hål! Kan du
+        skriva ett program som fyller dem båda tills marken är jämn?
+      C3-Farmer While Loops 6_instruction: Wow, nu finns det en stor hög med jord!
+        Kan du skriva ett program som tar bort allt så att marken blir jämn?
+      C3-Farmer While Loops 7_instruction: Wow, nu finns det tre högar av jord! Kan
+        du skriva ett program som tar bort dem tills marken är jämn?
+      C3-Farmer While Loops Assessment 1_instruction: Det finns många hål och högar.
+        Hjälp mig att fylla och ta bort dem för att göra marken slät.
+      Course 2 Bee Loops 1_instruction: 'Hej, är jag ett bi. Kan du hjälpa mig att
+        samla nektar från blommorna? '
       Course 2 Maze Loops 1_instruction: Kan du få mig att grisen genom att använda
         5 block?
       Course 4 2_instruction: Biet vill bara ha nektar just nu. Kom ihåg att alla
@@ -1021,8 +1051,8 @@ sv:
         igen.
       Course 4 Artist Functions inspire_instruction: Klicka här för att se inspirations-bilden
         igen.
-      Course 4 Artist Inspire_instruction: "Vill du ha en andra titt på design-inspirationerna
-        eller tipsen? Tryck här!\r\n\r\nAnnars kan du skapa en egen design!"
+      Course 4 Artist Inspire_instruction: "Vill du få en andra titt på inspirationsdesignen
+        eller tips?  Klicka här! \r \r  Skapa annars en egen design!"
       Course 4 Artist Params 1_instruction: Låt oss redigera en funktion som ritar
         en kvadrat med 50 pixlar långa sidor
       Course 4 Artist Params 10_instruction: 'Du kan anropa funktioner från inuti
@@ -1209,14 +1239,14 @@ sv:
         med din nya funktion.
       Course 4 Bee Params 7_instruction: Försök för att samla all denna nektar med
         din nya funktion.
-      Course 4 Bee Params 8 Clone 2_instruction: Oooh, nu finns honung för att ta
-        itu med också! Hur kan du uppdatera din funktion att antingen få nektar eller
-        göra honung.
-      Course 4 Bee Params 8 Clone_instruction: Oooh, nu finns honung för att ta itu
+      Course 4 Bee Params 8 Clone 2_instruction: Oooh, nu finns honung att ta itu
         med också! Hur kan du uppdatera din funktion att antingen få nektar eller
         göra honung.
-      Course 4 Bee Params 8 clone 3_instruction: Oooh, nu finns honung för att ta
-        itu med också! Hur kan du uppdatera din funktion att antingen få nektar eller
+      Course 4 Bee Params 8 Clone_instruction: Oooh, nu finns honung att ta itu med
+        också! Hur kan du uppdatera din funktion att antingen få nektar eller göra
+        honung.
+      Course 4 Bee Params 8 clone 3_instruction: Oooh, nu finns honung att ta itu
+        med också! Hur kan du uppdatera din funktion att antingen få nektar eller
         göra honung.
       Course 4 Bee Params 8 new_instruction: Oooh, nu finns honung att ta itu med
         också! Hur kan du uppdatera din funktion att antingen få nektar eller göra
@@ -1248,13 +1278,18 @@ sv:
       Course 4 Binary 8_instruction: Du kan slutföra det mesta av denna bild genom
         att loopa ett 5 bitars binärt nummer - då behöver du ett till 4 bitars nummer
         för att komma till nedre högra hörnet.
-      Course 4 EC 1a_instruction: Inga regler. Inga ledtrådar. Bara utmaningen!
-      Course 4 EC 1b_instruction: Inga regler. Inga ledtrådar. Bara utmaningen!
+      Course 4 EC 1a_instruction: "** Extrem Utmaning: ** inga regler. Inga ledtrådar.
+        Bara utmaningen!"
+      Course 4 EC 1b_instruction: "** Extrem Utmaning: ** inga regler. Inga ledtrådar.
+        Bara utmaningen!"
       Course 4 EC 2a_instruction: "** Extrem Utmaning: ** inga regler. Inga ledtrådar.
         Bara utmaningen!"
-      Course 4 EC 2b_instruction: Inga regler. Inga ledtrådar. Bara utmaningen!
-      Course 4 EC 2c_instruction: Inga regler. Inga ledtrådar. Bara utmaningen!
-      Course 4 EC 2d_instruction: Inga regler. Inga ledtrådar. Bara utmaningen!
+      Course 4 EC 2b_instruction: "** Extrem Utmaning: ** inga regler. Inga ledtrådar.
+        Bara utmaningen!"
+      Course 4 EC 2c_instruction: "** Extrem Utmaning: ** inga regler. Inga ledtrådar.
+        Bara utmaningen!"
+      Course 4 EC 2d_instruction: "** Extrem Utmaning: ** inga regler. Inga ledtrådar.
+        Bara utmaningen!"
       Course 4 EC 3_instruction: 'Använd vad du lärt dig i tidigare nivåer för att
         rita en bild som denna. Obs: Koden blir enklare om du införlivar parametrar. '
       Course 4 EC 3a_instruction: 'Extrem Utmaning: ** inga regler. Inga ledtrådar.
@@ -1582,8 +1617,8 @@ sv:
       K-1 Artist1 6_instruction: Rita färdigt bilden med hopp-block!
       K-1 Artist1 7_instruction: Använd hopp-block för att flytta utan att rita. Hoppa
         upp och rita en linje.
-      K-1 Artist1 8_instruction: Rita den streckade linjen med hjälp av hopp- och
-        rit-block
+      K-1 Artist1 8_instruction: Rita en streckad linje genom att använda blocken
+        hoppa och rita
       K-1 Artist1 9_instruction: Rita och hoppa för att skapa den streckade linjen
       K-1 Artist1 Assessment 1_instruction: Rita de korta och långa linjerna!
       K-1 Artist1 Assessment 2_instruction: Rita de korta streckade linjerna!
@@ -1994,6 +2029,9 @@ sv:
         och sedan försvinna från skärmen? "
       New Artist Project_instruction: Rita något fantastiskt! Din kod sparas som ett
         projekt som du kan återvända till när som helst.
+      New Bounce Project_instruction: Skapa ditt eget Studsa Spel. Du kan ändra alla
+        bilder och regler. När du är klar, klicka på Slutför för att låta dina vänner
+        prova ditt spel på sina telefoner.
       New Course 4 Artist Functions Level 4_instruction: Använd funktionen "Rita en
         fyrkant" för att rita detta mönster.
       New Gumball Project_instruction: Skapa vad du vill och dela det!
@@ -2050,6 +2088,10 @@ sv:
         för att samla ull från båda får.
       Overworld Shear Sheep_2018_instruction: Dags för fårklippning! Använd kommandot
         "klipp" för att samla ull från båda får.
+      PDK5 Conditionals 1_instruction: Lila blommor kan ha antingen 1 eller 0 nektar,
+        men du vet inte vilket det är! Var försiktig med att samla nektar från en
+        lila blomma om den inte har några. Kontrollera om nektar är lika med 1 genom
+        att använda om-blocket.
       PDK5 Functions 2_instruction: Med funktioner kan du definiera nya block! Vi
         har flyttat blocken för att rita en kvadrat till en funktion som kallas "Rita
         en kvadrat". Kan du använda funktionen "Rita en kvadrat" för att skapa glasögonen?
@@ -2058,9 +2100,13 @@ sv:
         0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar
         från en lila blomma om den inte har några. Kontrollera om nektar är lika med
         1 genom att använda om-blocket.
+      Quantum Bee_instruction: Lila blommor kan ha antingen 1 eller 0 nektar, men
+        du vet inte vilket det är! Var försiktig med att samla nektar från en lila
+        blomma om den inte har några. Kontrollera om nektar är lika med 1 genom att
+        använda om-blocket.
       Ryan - 4-5 Bee Conditionals 2_instruction: Biet vill bara ha nektar just nu.
-        Inte alla saker är blommor, så kolla under ALLA MOLN för att se om det döljer
-        en blomma. Om det gör det kan du samla nektar.
+        Alla objekt är inte blommor, så kontrollera under ALLA MOLN för att se om
+        de döljer en blomma. Om det är en blomma så kan du samla nektar.
       Ryan - Bee Conditionals_instruction: Biet vill bara ha nektar just nu. Alla
         objekt är inte blommor, så kontrollera under ALLA MOLN för att se om de döljer
         en blomma. Om det är en blomma så kan du samla nektar.
@@ -2171,6 +2217,9 @@ sv:
       bounce_12_instruction: Skapa ditt eget Studsa Spel. Du kan ändra alla bilder
         och regler. När du är klar, klicka på Slutför för att låta dina vänner prova
         ditt spel på sina telefoner.
+      bounce_12_2018_instruction: Skapa ditt eget Studsa Spel. Du kan ändra alla bilder
+        och regler. När du är klar, klicka på Slutför för att låta dina vänner prova
+        ditt spel på sina telefoner.
       bounce_1_2018_instruction: Lägg till ett block till den "när vänster pile" blocket
         och tryck på "Kör". Flytta paddeln med vänsterpilen för att nå målet.
       bounce_2_instruction: Lägg till ett block till  "när höger pil" och "när vänster
@@ -2239,8 +2288,8 @@ sv:
       course3_playlab_stage16_5_instruction: Kan du lägga till ett block för att göra
         bläckfisken glad?
       course3_playlab_stage16_6_instruction: Skapa din egen berättelse. När du är
-        klar, klicka på Slutför om du vill låta vänner prova din berättelse på sina
-        telefoner.
+        klar, klicka på Slutför/Finish om du vill låta kompisar prova din berättelse
+        på sina telefoner.
       course3_playlab_stage17_1_instruction: Kan du skriva ett program så att bläckfisken
         säger "Hej" när man klickar på den?
       course3_playlab_stage17_2_instruction: Skriv ett program som gör att pingvinen
@@ -2259,8 +2308,8 @@ sv:
         bakgrunden och hastigheten på pingvinen? \nFlytta honom med pilarna tills
         du får poäng!"
       course3_playlab_stage17_7_instruction: Skapa din egen berättelse. När du är
-        klar, klicka på Slutför om du vill låta vänner prova din berättelse på sina
-        telefoner.
+        klar, klicka på Slutför/Finish om du vill låta kompisar prova din berättelse
+        på sina telefoner.
       course4_artist_fwp_challenge1_instruction: Prova att köra det här programmet
         och göra ändringar under tiden för att se vad som händer. Kan du lista ut
         hur det fungerar? (Eller ta bort det och ersätt det med någonting totalt annorlunda)
@@ -2321,6 +2370,9 @@ sv:
         Du måste lägga till det nya "starta ny boll" blocket på mer än ett ställe.
         Prova också att ändra scenen eller hastigheten på paddeln och bollen och se
         hur många poäng du kan få innan din motståndare får två poäng.
+      courseD_bounce_events12_instruction: Skapa ditt eget Studsa Spel. Du kan ändra
+        alla bilder och regler. När du är klar, klicka på Slutför för att låta dina
+        vänner prova ditt spel på sina telefoner.
       courseD_bounce_events2_instruction: Lägg till ett block till  "när höger pil"
         och "när vänster pilen" blocken. Flytta paddeln för att nå båda slutmålen.
       courseD_bounce_events3_instruction: Prova nu något liknande med blocket "när
@@ -2681,17 +2733,27 @@ sv:
         inuti "medan"-blocket.'
       grade4_arist_nested_loop_circles1_instruction: Använd en nästlad loop för att
         slutföra designen.
+      grade4_arist_nested_loop_flags1_instruction: Repetera den givna koden för att
+        skapa en väderkvarn.
       grade4_arist_nested_loop_polygons1_instruction: 'Upprepa denna design 10 gånger.
         Hur många grader måste du vända varje gång du upprepar? (Ledtråd: Vad är 360
         dividerat med 10?)'
       grade4_arist_nested_loop_polygons2_instruction: 'Upprepa denna design 6 gånger.
         Hur många grader måste du rotera varje gång du upprepar? (Ledtråd: Vad är
         360 dividerat med 6?)'
+      grade4_arist_nested_loop_squares1_instruction: Kan du rita dessa 10 kvadraterna
+        på trottoaren med en nästlad slinga? Varje kvadrat är 30 pixlar.
       grade4_arist_nested_loop_triangles2_instruction: 'Sätt nu in denna slinga inuti
         en annan slinga för att rita 10 trianglar.  Detta kallas en nästlad slinga.
         Tips: Alla 10 trianglar slutför en 360 graders rotation.  '
+      grade4_arist_nested_loop_triangles3_instruction: Kan du rita en hexagon genom
+        att upprepa triangelkoden?
+      grade4_arist_nested_loop_triangles4_instruction: Rita tänderna i alligatorns
+        mun!
       grade4_arist_nested_loop_triangles5_instruction: "Skapa en sol genom att nästla
         in startkoden i en annan slinga. Detta kallas en nästlad slinga. \r"
+      grade4_arist_nested_loop_triangles6_instruction: Kan du rita dessa 36 trianglar
+        med en nästlad slinga?
       grade4_artist_functions1_instruction: 'Hej. Jag zombie-konstnär. Mig älskar
         teckning! Hjälp mig att rita de kvadratiska glasögonen. Tips: bron mellan
         glasen är 25 pixlar kortare än längden på kvadraten.'
@@ -2717,11 +2779,20 @@ sv:
         första gången.  Vill du se fler tips?  Klicka här!
       grade4_artist_nested_loop_circles1_instruction: Använd en nästlad loop för att
         slutföra designen.
+      grade4_artist_nested_loop_flags1_instruction: Repetera den givna koden för att
+        skapa en väderkvarn.
       grade4_artist_nested_loop_polygons1_instruction: 'Upprepa denna design 10 gånger.
         Hur många grader måste du vända varje gång du upprepar? (Ledtråd: Vad är 360
         dividerat med 10?)'
+      grade4_artist_nested_loop_squares1_instruction: Kan du rita dessa 10 kvadraterna
+        på trottoaren med en nästlad slinga? Varje kvadrat är 30 pixlar.
+      grade4_artist_nested_loop_triangles1_instruction: 'Komplettera koden som ritar
+        dessa trianglar.  Den första är gjord åt dig.  Tips: 3 trianglar med 360 graders
+        rotation.'
       grade4_artist_nested_loop_triangles5_instruction: "Skapa en sol genom att nästla
         in startkoden i en annan slinga. Detta kallas en nästlad slinga. \r"
+      grade4_artist_nested_loop_triangles6_instruction: Kan du rita dessa 36 trianglar
+        med en nästlad slinga?
       grade4_artist_parameters_squares1_instruction: 'Klicka på "Redigera" för att
         fylla i funktionsdefinitionen för "Rita en kvadrat" och lägga till en parameter.
         Den bör ta en längdparameter, precis som triangeln. Den här gången ska du
@@ -2857,6 +2928,9 @@ sv:
         16 pixlar!\r\n\r\nSe vad som händer när vi börjar bli kreativa med bitar?"
       grade5_artist_for_loops1_instruction: 'Rita denna triangel som är 50 pixlar
         bred. Tips: Använd ett upprepa block.'
+      grade5_artist_for_loops10_instruction: "Kan du lista ut hur du kan använda alla
+        de saker du har lärt dig för att skapa denna bild? \r \r Behöver du en ledtråd?
+        Klicka här."
       grade5_artist_for_loops5_instruction: "En enda liten förändring av koden från
         den sista bilden kan skapa det här mönstret. Kan du lista ut vilken förändringen
         är? \r \r Ledtråd: du måste ta bort något!"
@@ -3062,10 +3136,15 @@ sv:
       level 'grade3_Loops_9_instruction: Samla nektar från varje blomma och gör honung
         vid varje honungskaka.
       level grade3_Loops_2_instruction: Kan du göra samma uppgift lättare med en loop?
+      scrat 16 (copy 1)_instruction: Ekollon! Ekollon! Ekollon! Använd ett "om"-block
+        för att få mig dit med så få block som möjligt.
       scrat 16_instruction: Ekollon! Ekollon! Ekollon! Använd ett "om"-block för att
         få mig dit med så få block som möjligt.
       scrat 17_instruction: Okej, vi tränar lite till – denna omgång är ganska lik
         den förra, men se upp för väggen!
+      scrat 18 (copy 1)_instruction: '"Om-annars"-block kontrollerar ett villkor,
+        och gör sedan en sak ELLER en annan. För att få mig till ekollonet: försök
+        att använda detta nya block.'
       scrat 18_instruction: '"Om-annars"-block kontrollerar ett villkor, och gör sedan
         en sak ELLER en annan. För att få mig till ekollonet: försök att använda detta
         nya block.'

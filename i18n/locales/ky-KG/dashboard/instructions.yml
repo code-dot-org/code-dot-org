@@ -78,6 +78,9 @@ ky:
       XML Scratchpad_instruction: Бул тест деңгээлин модулдук тестке xml түзүү үчүн колдонгула
       course2_maze_loops_challenge1_instruction: 'Азыр Скрат циклдарды колдонуп жаңгагын тапкысы келет! '
       course2_maze_seq_challenge1_instruction: Жол көрсөтүп, тентек торопойго жеткиз. Жардыргычтан алыс бол же жарылып кетесиң!
+      courseA_maze_ramp3a_2018_instruction: Бул кодду аякташ үчүн "Түндүк" блогун башка блоктун алдына койгула, анан "Аткарууну" баскыла.
+      courseA_maze_ramp4a_2018_instruction: Кодду аякташ үчүн кайсы блокту башка блоктун алдына кошушуңар керегин таба аласыңарбы?
+      courseA_maze_ramp5a_2018_instruction: Кушту торопойго жеткиз!
       courseB_Scrat_ramp1_2018_instruction: Бул башкатырмада блокторду бириктиргиле дагы "Аткарууну" баскыла!
       courseB_Scrat_ramp2_2018_instruction: Кодуңарды аякташ үчүн бардык блокторду бириктиргиле, "Аткарууну" баскыла.
       courseB_Scrat_ramp3a_2018_instruction: Бул кодду аякташ үчүн "Түндүк" блогун башка блоктун алдына койгула, анан "Аткарууну" баскыла.
@@ -104,20 +107,20 @@ ky:
       courseC_maze_debugging1_2018_instruction: Кодду оңдоп, Скратты жаңгакка жеткиргиле.
       courseC_maze_debugging2_instruction: Дебаггиң кылгыла, Скратты жаңгакка жеткиргиле.
       courseC_maze_debugging2_2018_instruction: Дебаггиң кылгыла, Скратты жаңгакка жеткиргиле.
-      courseC_maze_debugging3_instruction: Блокторду алып таштагыла, Скратты жаңгакка жеткиргиле!
+      courseC_maze_debugging3_instruction: Блокторду алып ташта, Скратты жаңгакка жеткир!
       courseC_maze_debugging3_2018_instruction: Блокторду алып ташта, Скратты жаңгакка жеткир!
       courseC_maze_debugging6_instruction: Катаны тапкыла, Скратты жаңгакка жеткиргиле.
       courseC_maze_debugging6_2018_instruction: Катаны тапкыла, Скратты жаңгакка жеткиргиле.
-      courseC_maze_debugging8_instruction: Деңгээлди дебаггиң кыл, Скратты жаңгакка жеткир.
+      courseC_maze_debugging8_instruction: Бул деңгээлдин багын оңдо, Скратты жаңгакка жеткир.
       courseC_maze_debugging9_instruction: Бул деңгээлдин багын оңдо, Скратты жаңгакка жеткир.
       courseC_maze_debugging9_2018_instruction: Бул деңгээлдин багын оңдо, Скратты жаңгакка жеткир.
       courseC_maze_debugging_challenge1_instruction: Скрат кайсы жолго салса жаңгакка жетээрин чечкенге жардам бергиле.
       courseC_maze_debugging_challenge1_2018_instruction: Скрат кайсы жолго салса жаңгакка жетээрин чечкенге жардам бергиле.
       courseC_maze_debugging_challenge2_instruction: Скрат төрт эле "бурул" буйругу менен жаңгакка жеткидей кылгыла.
       courseC_maze_debugging_challenge2_2018_instruction: Скрат төрт эле "бурул" буйругу менен жаңгакка жеткидей кылгыла.
-      courseC_maze_loops_challenge1_instruction: 'Азыр Скрат циклдарды колдонуп жаңгакты тапкысы келет! '
-      courseC_maze_loops_challenge1a_instruction: 'Азыр Скрат циклдарды колдонуп жаңгакты тапкысы келет! '
-      courseC_maze_loops_challenge1a_2018_instruction: 'Азыр Скрат циклдарды колдонуп жаңгакты тапкысы келет! '
+      courseC_maze_loops_challenge1_instruction: 'Азыр Скрат циклдарды колдонуп жаңгагын тапкысы келет! '
+      courseC_maze_loops_challenge1a_instruction: 'Азыр Скрат циклдарды колдонуп жаңгагын тапкысы келет! '
+      courseC_maze_loops_challenge1a_2018_instruction: 'Азыр Скрат циклдарды колдонуп жаңгагын тапкысы келет! '
       courseD_artist_embed_frozen_instruction: Күн караманын дизайнын көрүү үчүн Аткарууну баскыла!
       courseD_artist_embed_frozen2_instruction: Кардын дизайнын көрүш үчүн Аткарууну баскыла.
       courseD_iceage_loops1_instruction: Скратка муздан өтүп жаңгакка жеткенге жардам бергиле!
@@ -126,11 +129,16 @@ ky:
       courseD_iceage_loops4_instruction: Бир же көп блок кошуп, Скратты жаңгакка жеткиргиле!
       courseD_iceage_loops7_instruction: 'Скрат тигил жаңгакты каалап турат! '
       courseD_iceage_loops9_instruction: Жаңгакка чейин алыс! Циклдарды колдонуп Скратты ага жеткизе аласыңбы?
+      courseD_maze_ramp1_instruction: Бул башкатырмада анын басканын көрүш үчүн блокторду бириктиргиле дагы "Аткарууну" баскыла!
+      courseD_maze_ramp1_2018_instruction: Бул башкатырмада анын басканын көрүш үчүн блокторду бириктиргиле дагы "Аткарууну" баскыла!
+      courseD_maze_ramp2_instruction: Кодуңарды аякташ үчүн куралтактадан жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун алдына кошкула.
+      courseD_maze_ramp2_2018_instruction: Кодуңарды аякташ үчүн куралтактадан жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун алдына кошкула.
+      courseD_maze_ramp7_instruction: Кушту торопойго жеткиз!
       courseD_scrat_ramp1_instruction: Бул башкатырмада анын басканын көрүш үчүн блокторду бириктиргиле дагы "Аткарууну" баскыла!
       courseD_scrat_ramp1_2018_instruction: Бул башкатырмада анын басканын көрүш үчүн блокторду бириктиргиле дагы "Аткарууну" баскыла!
       courseD_scrat_ramp2_instruction: Кодуңарды аякташ үчүн куралтактадан жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун алдына кошкула.
       courseD_scrat_ramp2_2018_instruction: Кодуңарды аякташ үчүн куралтактадан жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун алдына кошкула.
-      courseD_scrat_ramp3_instruction: Бул жерде Скратты жыдыта турган бир ашык блок бар. Аны кайра куралтактага сүйрөп, бул жерден алып таштагыла.
+      courseD_scrat_ramp3_instruction: Бул жерде Скратты жыдыта турган ашык бир блок бар. Аны кайра куралтактага сүйрөп, бул жерден алып таштагыла.
       courseD_scrat_ramp3_2018_instruction: Бул жерде Скратты жыдыта турган ашык бир блок бар. Аны кайра куралтактага сүйрөп, бул жерден алып таштагыла.
       courseD_scrat_ramp4_instruction: Жарылган музду баспагыла, Скратты сактагыла!
       courseD_scrat_ramp4_2018_instruction: Жарылган музду баспагыла, Скратты сактагыла!
@@ -140,8 +148,10 @@ ky:
       courseD_scrat_ramp6_2018_instruction: Циклдар менен Скратты жаңгакка жеткиргиле!
       courseD_scrat_ramp7_instruction: Скратты жаңгакка жеткиргиле!
       courseD_scrat_ramp7_2018_instruction: Скратты жаңгакка жеткиргиле!
-      courseD_scrat_ramp8_instruction: Үйрөнгөнүңөрдү колдонуп Скратты жаңгакка жеткиргиле!
+      courseD_scrat_ramp8_instruction: Үйрөнгөнүңдү колдонуп Скратты жаңгакка жеткир!
       courseD_scrat_ramp8_2018_instruction: Үйрөнгөнүңдү колдонуп Скратты жаңгакка жеткир!
+      courseE_maze_ramp2_instruction: Кодуңарды аякташ үчүн куралтактадан жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун алдына кошкула.
+      courseE_maze_ramp2_2018_instruction: Кодуңарды аякташ үчүн куралтактадан жаңы "алдыга жыл" блогун алгыла, анан бардык блокторду "аткарганда" блогунун алдына кошкула.
       courseF_IceAge_3_instruction: Скрат жаңгагын издөөдө! Ал акыркы 200 пикселди өткөнгө жардам бере аласыңбы?
       courseF_IceAge_7_instruction: Скрат жаңгактардын баарына жеткидей кылып код жазгыла!
       courseF_IceAge_template_instruction: Скрат жаңгактардын баарына жеткидей кылып код жазгыла!

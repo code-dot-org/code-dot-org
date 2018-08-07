@@ -298,6 +298,8 @@ en-GB:
       App Lab test_instruction: test
       Bergeron Robot Maze1_instruction: "Can you help me catch the naughty pig? Stack
         a couple\nof `move forward` blocks below the `when run` block and press \"Run\". "
+      Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
+        from these flowers? "
       Function intro Ryan_instruction: Use the `build bridge` function twice to make
         a path to the torch.
       K-1 Maze Loops 1_instruction: Get me to the pig!

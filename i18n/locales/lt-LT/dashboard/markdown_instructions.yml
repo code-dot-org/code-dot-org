@@ -48,8 +48,10 @@ lt:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "**Užduotis:** Panaudok blokelius „kartok kol...“ ir „jei...“. Naudojant juos reikės žymiai mažiau blokelių."
       4-5 Nested Loops 3_markdown_instruction: |-
         Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
+      4-5 Nested Loops 5_markdown_instruction: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       4-5 Nested Loops 7_markdown_instruction: "Pakartok šį kodą 10 kartų. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime?"
       4-5 Nested Loops 8_markdown_instruction: "Pakartok šį kodą 6 kartus. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime? "
+      4-5 Nested Loops 9_markdown_instruction: Nupiešk krokodilo dantis!
       K-1 Bee Loops 2_markdown_instruction: Judėjimui panaudok kartojimo blokelį, o po to paimk nektarą ir pagamink medų!
       K-1 Bee Loops 4_markdown_instruction: Naudok kartojimą nektaro gavimui, medaus gamybai ir judėjimui!
       K-1 Bee Loops 6_markdown_instruction: Naudok kartojimą nektaro gavimui, medaus gamybai ir judėjimui!
@@ -60,6 +62,7 @@ lt:
       Overworld Move to Sheep_markdown_instruction: Pridėk antrą "ženk į priekį" komandą, kad pasiektum avį.
       Overworld Move to Sheep_2018_markdown_instruction: Pridėk antrą "ženk į priekį" komandą, kad pasiektum avį.
       course4_artist_fwp_challenge1_markdown_instruction: Pamėgink paleisti šią programą, po to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)
+      courseD_bounce_events1_markdown_instruction: Nusigauk iki vėliavos! Prijunk blokelį prie „kai paspausta rodyklė kairėn“ komandos ir paspausk „Paleisti“, kad nuvestum žaidėją iki vėliavos.
       frozen circle function in circle_markdown_instruction: O dabar sukurkime 20 persidengiančių apskritimų. Tarp kiekvieno apskritimo turi būti 18 laipsnių kampas.
       frozen circle function with parameter_markdown_instruction: Štai tau naujas blokelis „sukurk apskritimą“, su kuriuo galima nubrėžti skirtingų dydžių apskritimus. Pamėgink jį panaudoti ir sukurti apskritimus, kurių dydžiai yra 5 ir 10.
       frozen circle function_markdown_instruction: Panaudok naują blokelį „sukurk apskritimą“. Iš viso bus 10 apskritimų, o tarp jų reikės šuoliuoti su blokeliu „peršok“.
@@ -88,11 +91,14 @@ lt:
         Ar gali ją pakeisti, kad ji būtų panaši į C?
       grade3_Conditionals_12_markdown_instruction: "Surink nektarą iš visų keturių gėlių."
       grade3_Conditionals_8_markdown_instruction: "Rinkti nektarą, kur gėlės turi nektaro."
+      grade4_arist_nested_loop_flags1_markdown_instruction: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Pakartok šį kodą 10 kartų. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Pakartok šį kodą 6 kartus. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime? "
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Nupiešk krokodilo dantis!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
       grade4_artist_functions2_markdown_instruction: "Sudėtinės komandos (arba funkcijos) leidžia susikurti naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk kvadratą“. Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą? Tarp kvadratų yra 75 pikselių atstumas."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Pakartok šį kodą 10 kartų. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime?"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Nupiešk saulę, sukurdama(-s) kartojimą kartojime.

@@ -184,7 +184,7 @@ hr:
       classroom: 'Učiteljeva Početna stranica'
       district_dashboard: 'Regionalna nadzorna ploča'
       label: 'Zdravo, %{username}'
-      stats: 'Moj napredak'
+      stats: 'Code Studio'
       settings: 'Moj račun'
       logout: 'Odjava'
       signin: 'Prijava'
@@ -305,7 +305,7 @@ hr:
     more: 'Više'
     feedback: 'Pošaljite povratne informacije'
     translate: 'Pomozite nam prevesti na vaš jezik'
-    support: 'Podrška'
+    support: 'Pomoć i zajedništvo'
     support_url: 'http://support.code.org'
     tos_short: 'Uvjeti'
     tos: 'Uvjeti'
@@ -392,7 +392,7 @@ hr:
       body: "Koristi Laboratorij igara za stvaranje priče ili igre s likovima iz Disney Infinity."
     minecraft:
       title: "Minecraft"
-      body: "Istražite Minecraft svijet preko koda."
+      body: "Istraži Minecraft svijet pomoću koda"
     minecraft2016:
       title: "Minecraft"
     hero:
@@ -478,15 +478,7 @@ hr:
     save: "Spremi"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Ostalo"
-      - 
+      other: "Ostalo"
     submit: "Pošalji"
     decline: "Zatvori"
   zendesk_too_young_message: 'Nažalost, mlađi korisnici se ne mogu prijaviti na našu stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a> bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto tebe.'

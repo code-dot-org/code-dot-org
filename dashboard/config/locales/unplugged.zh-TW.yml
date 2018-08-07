@@ -71,7 +71,7 @@ zh-TW:
         video: 不插電活動 11
       UnplugHappyMaps:
         title: 快樂地圖
-        desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
+        desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
       MoveIt:
         title: 移動它，移動它
         desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
@@ -166,21 +166,21 @@ zh-TW:
         title: 碰撞檢測和畢氏定理
         desc: 偵測畫面上的物件有沒有碰到一起，是大多數遊戲中很重要的設計環節。在這堂課中，我們將看看畢氏定理和距離公式是怎麼用來測量平面上兩點間的距離，以及判斷這兩點（或遊戲角色）有沒有碰在一起。
       courseB_unplugged_MRF:
-        title: 不插電活動
+        title: 不插電的活動
       courseB_unplugged_loopyMRF:
-        title: 不插電活動
+        title: 不插電的活動
       courseC_Unplugged_ScreenOutTheMean:
-        title: 不插電活動
+        title: 不插電的活動
       courseD_unplugged_digitalCitizenship:
-        title: 不插電活動
+        title: 不插電的活動
       courseF_unplugged_powerOfWords:
-        title: 不插電活動
+        title: 不插電的活動
       courseAB_unplugged_plantASeed:
         title: 生活中的演算法 - 植物種植
         desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
       courseA_unplugged_happyMaps:
         title: 快樂地圖
-        desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
+        desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
       courseA_unplugged_goingPlacesSafely:
         title: 安全的到達地點
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
@@ -203,7 +203,7 @@ zh-TW:
         title: 二進制手環
         desc: 學生用二進制表示法創造一個代表他們名字的第一個字母的手環。學生會學到資料可以用一種以上的方法來呈現和儲存。
       courseD_unplugged_graphPaperProgramming:
-        title: 方格紙編程
+        title: 圖畫紙程式設計
         desc: 學生用一組已經定義好的指令來寫出演算法（一連串的指令）以引導同學重建一個圖案。
       courseD_unplugged_relayProgramming:
         title: 接力編程
@@ -247,7 +247,7 @@ zh-TW:
         desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
       UnplugHappyMaps_2018:
         title: 快樂地圖
-        desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
+        desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
       GoingPlacesSafely_2018:
         title: 安全的到達地點
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
@@ -255,12 +255,12 @@ zh-TW:
         title: 大事件
         desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。
       GraphPaperProgramming_2018:
-        title: 方格紙編程
+        title: 圖畫紙程式設計
         desc: 學生用一組已經定義好的指令來寫出演算法（一連串的指令）以引導同學重建一個圖案。
       courseD_unplugged_digitalCitizenship_2018:
-        title: 不插電活動
+        title: 不插電的活動
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: 不插電活動
+        title: 不插電的活動
       Conditionals_2018:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。

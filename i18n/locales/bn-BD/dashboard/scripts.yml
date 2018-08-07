@@ -68,6 +68,8 @@ bn:
               name: ইন্টারনেট
             Maze:
               name: গোলকধাঁধা
+            Songwriting:
+              name: গান লিখা
         playlab:
           title: প্লে ল্যাব
           stages:
@@ -203,6 +205,8 @@ bn:
           stages:
             Step:
               name: ধাপ
+        cspunit1:
+          description_short: প্রোগ্রামিং
         algebraPD:
           stages:
             Teacher Dashboard:
@@ -212,6 +216,7 @@ bn:
             Booleans:
               name: বুলিয়ান
         cspunit3:
+          description_short: প্রোগ্রামিং
           stages:
             While Loops:
               name: হোয়াইল লুপ
@@ -234,6 +239,7 @@ bn:
             Wrap-Up:
               name: গুটিয়ে ফেলা
         cspunit2:
+          description_short: প্রোগ্রামিং
           stages:
             The Internet:
               name: ইন্টারনেট
@@ -337,6 +343,8 @@ bn:
               name: ছক-কাগজে প্রোগ্রামিং
             Happy Maps:
               name: আনন্দের মানচিত্র
+            Songwriting:
+              name: গান লিখা
             The Big Event:
               name: বড় ঘটনা
         ScienceP3OLPT2:
@@ -354,6 +362,12 @@ bn:
           stages:
             While Loops:
               name: হোয়াইল লুপ
+        starwars:
+          description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
+          description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
+        starwarsblocks:
+          description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
+          description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি। 
         mc:
           title: মাইনক্র্যাফট এক ঘণ্টার কোড
           description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন। 
@@ -363,6 +377,10 @@ bn:
               name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
+        cspunit5:
+          description_short: প্রোগ্রামিং
+        cspunit4:
+          description_short: প্রোগ্রামিং
         algebraPD1:
           stages:
             Teacher Dashboard:
@@ -404,6 +422,10 @@ bn:
               name: চক্র
             Programming:
               name: প্রোগ্রামিং
+        grade4:
+          stages:
+            Songwriting:
+              name: গান লিখা
         grade1:
           stages:
             Events:
@@ -749,6 +771,8 @@ bn:
               name: বড় ঘটনা
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+            'Functions: Songwriting':
+              name: গান লিখা
             'Unplugged: Binary':
               name: দ্বিমিক ছবি
             Artist Binary:
@@ -788,6 +812,8 @@ bn:
               name: আমার রোবোটিক্স বন্ধুরা
             Introduction:
               name: ভূমিকা
+            'Functions: Songwriting':
+              name: গান লিখা
             Internet:
               name: ইন্টারনেট
             Conditionals with Cards:

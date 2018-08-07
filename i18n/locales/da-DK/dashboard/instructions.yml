@@ -166,8 +166,8 @@ da:
       2-3 Maze 1_instruction: 'Kan du hjælpe mig med at fange den frække gris? Sæt nogle "flyt fremad"- blokke sammen og tryk "Kør". '
       2-3 Maze 10_instruction: Før mig til det grønne ondskab! (Men pas på TNT)
       2-3 Maze 11_instruction: Flyt mig hen til blomsten for jeg er sulten! Hvor mange gange skal du gentage blokken?
-      2-3 Maze 12 (copy 1)_instruction: 'Kan du erstatte den tidligere svar med kun to blokke? (Tip: Opret en løkke ved hjælp af en "gentage gange" blok.)'
-      2-3 Maze 12 (copy 2)_instruction: 'Kan du erstatte den tidligere svar med kun to blokke? (Tip: Opret en løkke ved hjælp af en "gentage gange" blok.)'
+      2-3 Maze 12 (copy 1)_instruction: 'Kan du erstatte det tidligere svar med kun to blokke? (Tip: Opret en løkke ved hjælp af en "gentage gange" blok.)'
+      2-3 Maze 12 (copy 2)_instruction: 'Kan du erstatte det tidligere svar med kun to blokke? (Tip: Opret en løkke ved hjælp af en "gentage gange" blok.)'
       2-3 Maze 12 (old)_instruction: Få mig hen til grisen, nu med gentagne gange blok!
       2-3 Maze 12 - One Move Block_instruction: Du skal hen til grisen! Denne gang kan du kun bruge én `fremad` blok. Kan du se nogle andre blokke, der kunne hjælpe dig?
       2-3 Maze 12_instruction: 'Kan du erstatte disse fem blokke med kun to blokke? (Tip: Opret en løkke ved hjælp af en "gentage gange" blok.)'
@@ -337,7 +337,7 @@ da:
       4-5 Bee Nested Loops Assessment 1_instruction: "** Vurdering: ** Saml al nektaren og lav al honningen ved hjælp af løkker."
       4-5 Bee Nested Loops Rows_instruction: Saml nektar fra rækkerne af blomster! Brug en indlejret løkke.
       4-5 Maze 1 (copy 1)_instruction: Kære person. Mig zombie. Skal... hen.. til solsikke.
-      4-5 Maze 1_instruction: Kære person. Mig zombie. Skal... hen... til solsikke.
+      4-5 Maze 1_instruction: Kære person. Mig zombie. Skal... hen.. til solsikke.
       4-5 Maze 10_instruction: Kan du komme hen til solsikken med kun fire blokke?
       4-5 Maze 11_instruction: Kan du komme hen til solsikken ved brug af kun seks blokke?
       4-5 Maze 12_instruction: Ok, denne er lidt anderledes. Kan du gøre det med kun seks blokke?
@@ -353,7 +353,9 @@ da:
       4-5 Maze 6_instruction: Få mig til solsikken!
       4-5 Nested Loops 9_instruction: Tegn tænderne i alligatorens mund!
       App Lab test_instruction: test
+      Artist - Nested Loops 9_instruction: Tegn tænderne i alligatorens mund!
       Bergeron Robot Maze1_instruction: 'Kan du hjælpe mig med at fange den frække gris? Sæt nogle "flyt fremad"- blokke sammen og tryk "Kør". '
+      Course 2 Bee Loops 1_instruction: 'Hej, jeg er en bi. Kan du hjælpe mig med at samle nektar fra blomsterne? '
       Course 2 Bee Loops 13_instruction: 'Test: Brug gentag-blokken til at indsamle al nektaren.'
       Course 2 Bee Loops 2_instruction: Kan du løse samme opgave lettere med en løkke?
       Course 2 Bee Loops 3_instruction: Brug gentag-blokken til både at samle al nektaren og lave honning.
@@ -446,10 +448,10 @@ da:
       K-1 artist 1 level 10_instruction: Tegn den stiplede linje ved brug af både hoppe- og tegneblokke
       K-1 artist 1 level 9_instruction: Tegn dette ved brug af tre streger
       KTest2_instruction: Følg sporet og før mig til den tåbelige gris. Undgå TNT ellers vil fjerene flyve væk!
-      Kiki_StarWars_Test_3_instruction: tekst
-      Kiki_StarWars_Test_4_instruction: tekst
-      Kiki_StarWars_Test_5_instruction: tekst
-      Kiki_StarWars_Test_5_Example_instruction: tekst
+      Kiki_StarWars_Test_3_instruction: Tekst
+      Kiki_StarWars_Test_4_instruction: Tekst
+      Kiki_StarWars_Test_5_instruction: Tekst
+      Kiki_StarWars_Test_5_Example_instruction: Tekst
       MC Agent Freeplay_instruction: "**Fri leg:**  Tid til at udforske på egen hånd!"
       MC_HOC_2017_01_Cole_instruction: Du skal indsamle alt værktøjet på rejsen. Bevæg dig rundt med **piletasterne**, og nå frem til kisten på stien for at vinde
       MC_HOC_2017_01_RETRY_instruction: 'Få agenten hen til trykpladen. Tryk derefter på "Kør", og brug piletasterne til at styre spilleren ud af huset og frem til kisten. '
@@ -496,6 +498,7 @@ da:
       MC_HOC_2017_Ryan_05_instruction: Ødelæg kaktusserne, så spilleren kan nå frem til målet.
       MC_HOC_Kiki_02_instruction: Få agenten hen til trykpladen.
       Mike Test Bee Conditionals 1_instruction: Bien kan ikke fortælle, hvis dette er en blomst eller en honning celle. Samle nektar fra blomster, men tjek først om det er en blomst eller en honning celle.
+      New Bounce Project_instruction: Opret dit eget Hoppe spil. Du kan ændre alle visuelle og reglerne. Når du er færdig, klik på del for at lade venner prøve dit spil på deres telefoner.
       New Gumball Project_instruction: Lav noget du kan lide og del det!
       New Ice Age Project_instruction: Lav noget du kan lide og del det!
       New Infinity Project_instruction: Lav noget du kan lide og del det!
@@ -551,6 +554,7 @@ da:
       bounce_11_instruction: Du kan nu vedhæfte blokke til "Hvornår spillet starter" blokken. Du skal vedhæfte den nye "lancere nye bold" blok i mere end ét sted. Også prøve at ændre scenen eller hastigheden af pagajen og bolden og se, hvor mange point du kan score før din modstander scorer to gange.
       bounce_11_2018_instruction: Du kan nu vedhæfte blokke til "Hvornår spillet starter" blokken. Du skal vedhæfte den nye "lancere nye bold" blok i mere end ét sted. Også prøve at ændre scenen eller hastigheden af pagajen og bolden og se, hvor mange point du kan score før din modstander scorer to gange.
       bounce_12_instruction: Opret dit eget Hoppe spil. Du kan ændre alle visuelle og reglerne. Når du er færdig, klik på del for at lade venner prøve dit spil på deres telefoner.
+      bounce_12_2018_instruction: Opret dit eget Hoppe spil. Du kan ændre alle visuelle og reglerne. Når du er færdig, klik på del for at lade venner prøve dit spil på deres telefoner.
       bounce_1_2018_instruction: Vedhæft en blok til "når venstre pil"-blokken og tryk på "Kør Program". Flyt battet ved hjælp af venstre pil for at nå slut-målet.
       bounce_2_instruction: Vedhæft en blok til "når højre pil" og "når venstre pil" blokkene. Flyt battet for at nå begge slut-mål.
       bounce_2_2018_instruction: Vedhæft en blok til "når højre pil" og "når venstre pil" blokkene. Flyt battet for at nå begge slut-mål.
@@ -592,6 +596,7 @@ da:
       courseD_bee_nestedLoops8_2018_instruction: 'Indsaml al nektar fra alle blomster, og lav honning i alle bikuber. Brug indlejrede løkker. '
       courseD_bounce_events10_instruction: Der er nu et mål på toppen. Vedhæft "score point" og "score modstander-point"-blokke til "når bolden i mål" og "når bolden misser paddel"-blokkene for at gøre et spil klar. Se hvor mange point du kan score før din modstander scorer to gange.
       courseD_bounce_events11_instruction: Du kan nu vedhæfte blokke til "Hvornår spillet starter" blokken. Du skal vedhæfte den nye "lancere nye bold" blok i mere end ét sted. Også prøve at ændre scenen eller hastigheden af pagajen og bolden og se, hvor mange point du kan score før din modstander scorer to gange.
+      courseD_bounce_events12_instruction: Opret dit eget Hoppe spil. Du kan ændre alle visuelle og reglerne. Når du er færdig, klik på del for at lade venner prøve dit spil på deres telefoner.
       courseD_bounce_events2_instruction: Vedhæft en blok til "når højre pil" og "når venstre pil" blokkene. Flyt battet for at nå begge slut-mål.
       courseD_bounce_events3_instruction: Nu prøve noget lignende med "når op pil" blokken. Flyt battet for at nå målet øverst.
       courseD_bounce_events3s_instruction: Nu prøve noget lignende med "når op pil" blokken. Flyt battet for at nå målet øverst.
@@ -747,6 +752,7 @@ da:
       grade3_robotFarmer_ConditionalsIntro_11_instruction: 'Det er stadig mørkt udenfor. Flyt mig hen ad marken. Hvis der er en bunke så fjern den, og hvis der er et hul så fyld det op. Tip: Brug rullemenuen med indstillinger på "hvis"-blokken.'
       grade3_robotFarmer_ConditionalsIntro_6_instruction: Fjern alle bunker jord, ved at bruge så få blokke som muligt. De nye muligheder i dropdown-menuen på "imens" blokken fortæller mig om jeg står på en bunke eller et hul.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Hjælpe mig med at fylde alle disse huller med 5 skovlfulde jord. Tip: du kan sætte en "gentag" blok i en "imens" blok.'
+      grade4_arist_nested_loop_triangles4_instruction: Tegn tænderne i alligatorens mund!
       grade4_artist_functions1_instruction: "Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde."
       grade4_artist_functions2_instruction: "Funktioner lader dig definere nye blokke! Vi har flyttet blokkene for at tegne en firkant til en funktion kaldet \"tegn en firkant\". Kan du bruge \"tegn en firkant\"-funktionen til at lave brillerne? Firkanterne er 75 pixel fra hinanden."
       grade4_bee_conditionals_quantum1_instruction: Bien kan ikke fortælle, hvis dette er en blomst eller en honning celle. Samle nektar fra blomster, men tjek først om det er en blomst eller en honning celle.
@@ -795,8 +801,10 @@ da:
       level 'grade3_Loops_8_instruction: Brug en løkke (gentag-blok) til at hente nektaren og lave honning.
       level 'grade3_Loops_9_instruction: Hent nektar fra alle blomsterne og lav honning på bistaderne.
       level grade3_Loops_2_instruction: Kan du løse samme opgave lettere med en løkke?
+      scrat 16 (copy 1)_instruction: Agern! Agern! Agern! Brug en "hvis" blok til at få mig derhen med færrest mulige blokke.
       scrat 16_instruction: Agern! Agern! Agern! Brug en "hvis" blok til at få mig derhen med færrest mulige blokke.
       scrat 17_instruction: OK, lad os prøve igen for øvelsens skyld - dette er ikke meget anderledes, men pas på væggen!
+      scrat 18 (copy 1)_instruction: '"Hvis-ellers" blokke kontrollerer en betingelse, og udfører derefter én ting eller en anden. Prøv at bruge denne nye blok for at få mig hen til agerne.'
       scrat 18_instruction: '"Hvis-ellers" blokke kontrollerer en betingelse, og udfører derefter én ting eller en anden. Prøv at bruge denne nye blok for at få mig hen til agerne.'
       scrat 19 (copy 1)_instruction: En mere øvelse med "Hvis-Ellers" blokken, kan du løse den i første forsøg?
       scrat 19_instruction: En mere øvelse med "hvis-ellers" blokken, kan du klare den i første forsøg?

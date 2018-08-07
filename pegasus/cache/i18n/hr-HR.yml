@@ -172,7 +172,7 @@ hr-HR:
   studiobar_teacher_body: Predstavite Code Studio (Studio za Kodiranje) u učionici
   studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Stvori zimsku čarobnu zemlju s Annom i Elsom
-  studiobar_donate_title: Doniraj
+  studiobar_donate_title: Donirajte
   studiobar_donate_body: Svaki dolar koji donirate omogućuje da jedno dijete uči
   studiobar_shop_title: Trgovina
   studiobar_shop_body: Razbijmo sterotipe. Nosite naš logo s ponosom.
@@ -266,7 +266,7 @@ hr-HR:
   homepage_header_codestudio: Kode studio, kreacije studenata
   homepage_header_donors: Code.org zahvaljuje na podršci
   homepage_donors_seall: Prikaži sve
-  homepage_donors_donate: Doniraj
+  homepage_donors_donate: Donirajte
   homepage_below_hero_announcement_link_text: Doznaj više
   contact_form_topic_student: Ja sam učenik
   contact_form_topic_parent: Ja sam roditelj
@@ -320,10 +320,10 @@ hr-HR:
   starwars_platform_text: Suvremeni preglednici, mobiteli, tableti
   mc_name: Minecraft Sat Kodiranja
   mc_longdescription: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu
-    kroz ovaj svijet Minecrafta.
+    kroz ovaj svijet Minecrafta
   mc_shortdescription: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu
-    kroz ovaj svijet Minecrafta.
-  mc_gradelevel: Dob 4-104
+    kroz ovaj svijet Minecrafta
+  mc_gradelevel: Dob 6+
   mc_platformtext: Suvremeni preglednici, mobiteli, tableti
   minecraft_agent_button: Početak
   minecraft_designer_button: Početak
@@ -668,7 +668,7 @@ hr-HR:
   kodable_gradelevel: Osnovna škola
   tynkerapp_gradelevel: Dob 5-13
   robomindnl_gradelevel: Dob 8-13
-  flappy_gradelevel: Dob 4-104
+  flappy_gradelevel: Dob 6+
   bitsbox_gradelevel: Osnovna škola
   makeschool_gradelevel: Srednja škola
   touchdevelop_gradelevel: Srednja škola
@@ -677,7 +677,7 @@ hr-HR:
   thinkersmith2_gradelevel: Dob 8+
   kodableunplugged_gradelevel: Dob 8-13
   projguts_gradelevel: Dob 10-13
-  hourofcode_gradelevel: Dob 4-104
+  hourofcode_gradelevel: Dob 6+
   frozen_gradelevel: Dob 8+
   starwars_gradelevel: Dob 6+
   playlab_gradelevel: Dob 4-104
@@ -787,7 +787,7 @@ hr-HR:
   starwars_shortdescription: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
     ratovi u galaksiji daleko, daleko odavde.
   playlab_shortdescription: Napravi priču ili igru pomoću Laboratorija igara!
-  infinity_shortdescription: Koristi Laboratorij igara da napraviš priču ili igru
+  infinity_shortdescription: Koristi Laboratorij igara za stvaranje priče ili igre
     s likovima iz Disney Infinity.
   artist_shortdescription: Nacrtaj cool slike i uzorke pomoću Umjetnika!
   codeorg_longdescription: Nauči osnovne informatičke pojmove pomoću povuci-i-ispusti

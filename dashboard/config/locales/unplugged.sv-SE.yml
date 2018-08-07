@@ -153,7 +153,7 @@ sv:
           av en kod som man kan använda om och om igen) för att skapa solfångare av
           snören och pärlor.
       SongwritingParameters:
-        title: Låtskrivande Med parametrar
+        title: Låtskrivande
         desc: Eleverna använder refrängen i en sång för att lära hur man använder
           parametrar(vilka gör att en funktion kan användas generellt utan att behöva
           skrivas om).
@@ -304,7 +304,7 @@ sv:
         desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
           kommandon så att andra elever kan reproducera en teckning.
       courseD_unplugged_relayProgramming:
-        title: Relä programmering
+        title: Stafettprogrammering
         desc: Eleverna får köra en stafett där de springer en sträcka för att skriva
           en uppsättning instruktioner baserade på en bild från 'rutat papper programmering'.
           Varje elev får bara skriva en instruktion och har det blivit fel i någon
@@ -340,7 +340,7 @@ sv:
           i datorvetenskapen, för att lösa ett problem mer effektivt som klass än
           som individuell elev.
       courseE_unplugged_songwriting:
-        title: Låtskrivande Med parametrar
+        title: Låtskrivande
         desc: Eleverna använder refrängen i en sång för att lära hur man använder
           parametrar(vilka gör att en funktion kan användas generellt utan att behöva
           skrivas om).
@@ -430,4 +430,4 @@ sv:
       MoveItMoveIt_2018:
         title: Flytta det, flytta den
       RelayProgramming_2018:
-        title: Relä programmering
+        title: Stafettprogrammering

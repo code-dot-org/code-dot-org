@@ -303,7 +303,9 @@ si:
       4-5 Maze 3_instruction: අවශ්‍යයි.... ලගාවීමට... සුරියකාන්ත මලට.
       4-5 Maze 6_instruction: "හැකිතරම් අඩු බ්ලොක් ගණනක් යොදාගනිමින් මාව \nසූරියකාන්ත
         මල ළඟට ගෙනියන්න!"
+      4-5 Nested Loops 9_instruction: කිඹුලාගේ කටේ දත් අඳින්න!
       App Lab test_instruction: පරීක්ෂාව
+      Artist - Nested Loops 9_instruction: කිඹුලාගේ කටේ දත් අඳින්න!
       Artist - Nested Loops Assessment 1_instruction: සැලසුම සම්පූර්ණ කිරීමට කැදැලි
         ලූපයක් භාවිතා කරන්න.
       CSD Hackathon Pt 1_instruction: "(පූර්ණ උපදෙස් බැලීමට මෙහි ක්ලික් කරන්න)"
@@ -321,6 +323,8 @@ si:
         ප්‍රකාශන භාවිතා කරන්න
       Calc Circles of Eval 2_instruction: මෙම කේතය සම්පූර්ණ කිරීමට ගුණ කිරීමේ කොටසක්
         භාවිතා කරන්න.
+      Course 2 Bee Loops 1_instruction: "හායි, මම බඹරේක්. ඔබට පුළුවන් ද මට උදව් කරන්න
+        \nමේ මල් වලින් මල් පැණි එකතු කරන්න? "
       Course 2 Maze Loops 1_instruction: ඔබට පුලුවන්ද මාව ඌරා වෙත යොමු කරවන්න බ්ලොක්
         5 භාවිතා කරමින්?
       Course 4 Artist 1_instruction: 'මට කොටුවක් අඳින්න උදවු කරන්න. (එක් එක් පේළිය
@@ -457,6 +461,8 @@ si:
       NEW Course 4 Artist Functions 14_instruction: 'නිදහසේ සෙල්ලම් කල හැකි වේලාව! '
       NEW Course 4 Artist Functions 9_instruction: "ඔබට මේය විසදන්න පුලුවන්ද තව බ්ලොක්
         \nඑකක් පමණක් භාවිතා කිරීමෙන්?"
+      NEW Course 4 Artist Functions inspire_instruction: ප්‍රබෝධමත් කරවීමේ පින්තූරය
+        නැවත බැලීමට මෙතැන ක්ලික් කරන්න.
       New Gumball Project_instruction: ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!
       New Ice Age Project_instruction: ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!
       New Infinity Project_instruction: ඔබ කැමති ඕනෑම දෙයක් සාදා එය බෙදා ගන්න!

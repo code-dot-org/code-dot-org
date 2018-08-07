@@ -53,7 +53,7 @@ id:
       2-3 Artist Functions 11.5_markdown_instruction: "Ini sama saja dengan fungsi ' menggambar sebuah segienam'. \\r\n\\r\napa yang terjadi jika anda mengulang program sebanyak 6 kali,\nmengubang 60 derajat setiap anda mengulang?"
       2-3 Artist Functions 11_markdown_instruction: "Kami telah mengganti nama fungsi ' menggambar sebuah persegi empat '\nke ' menggambar sebuah persegi enam ', tetapi masi memberi kita persegi empat! \\r\n\\r\ndapatkah\nkamu memodifikasi fungsi ' menggambar sebuah segi enam ' untuk menggambar segi enam   dengan sisinya berukuran 50 piksel?\n\\r\n\\r\nmenggambar sebuah gambar menggunakan fungsi baru!"
       2-3 Artist Functions 12 Mike_markdown_instruction: "Fungsi sangat baik untuk menggambar hal yang rumit berulang kali. Dapatkah Anda menggunakan fungsi \"menggambar bunga\" untuk mengisi seluruh kotak perkebunan? (Petunjuk: semua tanaman dipisahkan dengan jarak 100 piksel)  "
-      2-3 Artist Functions 12 a_markdown_instruction: "Fungsi sangat baik untuk menggambar hal yang rumit berulang kali. Dapatkah Anda menggunakan fungsi \"menggambar bunga\" untuk mengisi seluruh kotak perkebunan? (Petunjuk: semua tanaman dipisahkan dengan jarak 100 piksel)  "
+      2-3 Artist Functions 12 a_markdown_instruction: "Fungsi yang benar-benar bagus untuk\ngambar beberapa hal yang rumit. \\r\n\\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi untuk sisa fill planter box?\\r\nTanaman semua 100 piksel terpisah."
       2-3 Artist Functions 12_markdown_instruction: "Fungsi yang benar-benar bagus untuk\ngambar beberapa hal yang rumit. \\r\n\\r\nAnda bisa menggunakan `gambar sebuah bunga`\nfungsi untuk sisa fill planter box?\\r\nTanaman semua 100 piksel terpisah."
       2-3 Artist Functions 2_markdown_instruction: "Fungsi membiarkan anda mendefinisikan blok baru! \\r\n\\r\nKami sudah memindahkan blok yang diperlukan untuk menggambar persegi menjadi\nfungsi yang disebut `menggambar persegi`. Kali ini, gunakan fungsi `menggambar persegi`\nuntuk membuat kacamata. \\r\n\\r\nPersegi itu berjauhan 75 piksel."
       2-3 Artist Functions 3_markdown_instruction: "Mengubah fungsi menggambar sebuah persegi empat\ndengan panjang sisi 115 untuk gambar gelas besar. \\r\n\\r\nKotak\nyang sekarang 45 piksel yang terpisah."
@@ -227,7 +227,7 @@ id:
       4-5 Maze 9_markdown_instruction: "Sekarang kita mempunyai balok yang disebut 'ulangi hingga' \\r\nBalok itu akan membantu kita untuk mengiterasi perintah hingga si zombie mendapatkan bunga matahari \\r\n\\r\nGunakan balok baru ini untuk memecahkan teka-teki dengan perintah seminimal mungkin."
       4-5 Maze Conditionals 1_markdown_instruction: "Gunakan blok `repeat until`\nuntuk mendapatkan zombie untuk bunga matahari."
       4-5 Maze Conditionals 10_markdown_instruction: "Anda dapat menambahkan hanya 3 blok untuk\nmembantu zombie memecahkan sebuah masalah labirin yang lebih lengkap? \\r\n\\r\nJika anda melakukannya dengan benar, dia\ndapat berjalan melengkung yang tidak peduli masalah panjang!"
-      4-5 Maze Conditionals 2_markdown_instruction: Gunakan blok 'repeat until' untuk membuat zombie ke Bunga matahari.
+      4-5 Maze Conditionals 2_markdown_instruction: "Gunakan blok `repeat until`\nuntuk mendapatkan zombie untuk bunga matahari."
       4-5 Maze Conditionals 3_markdown_instruction: "Gunakan `jika` block untuk membantu saya\nmemutuskan kapan untuk berbalik. \\r\n"
       4-5 Maze Conditionals 4_markdown_instruction: "Oke, selesaikan yang ini seperti\nteka-teki terakhir, tapi Anda harus mengingat bagaimana menggunakan blok 'jika' dan 'ulangi sampai'\nbersama-sama."
       4-5 Maze Conditionals 5_markdown_instruction: "\"Saya ingin sunflower!\"  \\r \\r menggunakan pernyataan 'jika' untuk mendapatkan zombie sunflower dengan paling sedikit jumlah blok."
@@ -243,13 +243,16 @@ id:
         pada percobaan pertama anda.
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "** Penilaian: ** menggunakan 'ulangi sampai' dan blok ' jika/lain' untuk mendapatkan saya ke sunflower dalam blok sesedikit mungkin."
       4-5 Nested Loops 1_markdown_instruction: "Lengkapi kode untuk menggambar segitiga ini. Yang\npertama adalah selesaikan satu untuk anda. Tips: 3 sebuah segitiga dalam rotasi 360 derajat.\\r\n\\r\n"
+      4-5 Nested Loops 12_markdown_instruction: Anda dapat menarik 36 segitiga ini menggunakan sebuah lingkaran bersarang?
       4-5 Nested Loops 3_markdown_instruction: |-
         Buat sebuah matahari dengan sarang kode permulaan di putaran lain.\r
         \r
         Untuk mendapatkan desain keren ini dengan pusat berlubang, Anda harus melompat maju dengan panjang segitiga sebelum berputar.
+      4-5 Nested Loops 5_markdown_instruction: Lingkaran yang diberikan kode untuk membuat sebuah kincir angin.
       4-5 Nested Loops 6_markdown_instruction: Bisakah Anda menggambar sebuah segi enam dengan loop kode segitiga?
       4-5 Nested Loops 7_markdown_instruction: "Loop desain ini 10 kali. \\ r \n\\ r \nBerapa banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
       4-5 Nested Loops 8_markdown_instruction: "Loop bentuk ini sebanyak 6 kali. \\r\n\\r\nBerapa banyak\nAnda harus memutar tiap kali melakukan loop? "
+      4-5 Nested Loops 9_markdown_instruction: Gambarkan gigi di mulut buaya!
       4-5 While Loops 1_markdown_instruction: "Memindahkan saya ke lubang dan mengisinya dengan\ndua sekop tanah, menggunakan `isi` blok."
       4-5 While Loops 2_markdown_instruction: Pindahkan saya ke tumpukan sampah dan menghapus itu dengan mengaut sendok 5, menggunakan `hapus ` blok.
       4-5 While Loops 3_markdown_instruction: "Gunakan beberapa blok untuk menyelesaikan\nteka-teki ini! \\r\n\\r\nMemindahkan saya ke tumpukan dan menghapus semua tanah, kemudian pindahkan ke lubang dan isi sepenuhnya."
@@ -296,7 +299,7 @@ id:
         Klik "Run" dan kemudian "Finish" untuk berpindah
         dan mulai menambahkan ke layar anda.
       AppLab Intro 2 - Try Cat Commander_markdown_instruction: "Inilah kode seperti untuk Kucing Komandan. Luangkan waktu satu menit untuk membaca kode\ndan melihat jika anda dapat memahami cara kerjanya. Berbicara tentang hal itu dengan pasangan programer.\nPola kerjakan apa yang anda ihat? \\r\n\\r\nSetelah anda selesai, lanjutkan dengan mengklik \"Run\"\nlalu \"Finish\", untuk belajar membangun petualangan anda sendiri."
-      AppLab Intro 4 - Video share your work_markdown_instruction: "# Buat dan Bagikan Aplikasi Anda!"
+      AppLab Intro 4 - Video share your work_markdown_instruction: "# buat dan bagikan aplikasi anda!"
       AppLab Intro 4 - Video share_markdown_instruction: "# buat dan bagikan aplikasi anda!"
       Bergeron Robot Maze1_markdown_instruction: "Dapatkah Anda membantu saya menangkap babi nakal ? \\ r \n\\ r \nStack \nsebuah beberapa ` langkah forward` blok  bawah yang` ketika run` blok dan tekan \"Run\".\n \n"
       CSD U3 Keypress Watchers Predict_markdown_instruction: |-
@@ -448,6 +451,7 @@ id:
       CSD U6 params starchaser template_markdown_instruction: Tingkat templat.
       CSD U6 params starchaser template_2018_markdown_instruction: Tingkat templat.
       CSD-Arrays_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      CSD-Arrays_2018_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       CSDU6 frequency template_markdown_instruction: Lakukan sesuatu!
       CSDU6 frequency template_2018_markdown_instruction: Lakukan sesuatu!
       Course 4 Artist 13_markdown_instruction: "Masih bermain? Ini ada kanvas kosong di mana\nAnda dapat mendesain apa saja yang Anda inginkan!"
@@ -463,9 +467,11 @@ id:
       Course 4 Play Lab Params 4_markdown_instruction: "Di sini adalah fungsi disebut 'patroli'. \\r \\r mengedit 'patroli' untuk memindahkan kucing 400 piksel dan kemudian turun 400 piksel."
       Course 4 Play Lab Params 8_markdown_instruction: Menggunakan blok 'Kapan aktor menyentuh' untuk mengirim anjing kembali ke atas-kiri hanya jika anjing menyentuh salah satu aktor lain.
       Course 4 Play Lab Vars 2_markdown_instruction: "Perlombaan dalam teka-teki terakhir itu sangat tidak\nadil! Ubah variabel `dog_speed` untuk memastikan Anda dapat mengumpulkan lebih banyak\nbendera dari Kucing. Yang pertama mengumpulkan 10 bendera yang menang!"
+      Course 4 Play Lab Vars 7_markdown_instruction: "Bagus, sekarang mari kita pastikan permainan ini tidak terlalu mudah untuk bermain! \\r\n\\r\nSetiap kali Anjing ( pemeran1) tertabrak sebua sandwich dari Kucing (pemeran 2), anda harus kehilangan poin. \\r\n\\r\nMulai dengan\n10 poin jadi itu tidak terlalu susah. Biarkan skor anda turun dari 10 menjadi 0 untuk lulus tingkat."
       Course 4 Play Labs For Loops 1_markdown_instruction: Mari kita membuat anjing berbicara setiap nomor dari 1 hingga 100. Menggunakan loop 'untuk' dan blok counter untuk berbicara variabel counter setiap kali loop dijalankan.
       Course 4 Playlab For Loops 5b_markdown_instruction: Sesuaikan rentang waktu pada loop `for` tersebut supaya dua karakter berakhir di tempat yang sama persis.
       Course 4 SCFP 1_markdown_instruction: "Membuat fungsi dengan parameter yang\nmemungkinkan seniman untuk melompat mundur dan maju dengan piksel x, dan juga naik dan\nke bawah oleh piksel y (menggunakan nomor-nomor positif dan negatif)."
+      Course 4 SCVP 1_markdown_instruction: "Membuat fungsi dengan parameter yang\nmemungkinkan seniman untuk melompat mundur dan maju dengan piksel x, dan juga naik dan\nke bawah oleh piksel y (menggunakan nomor-nomor positif dan negatif)."
       CourseF_PlayLab_vars2_markdown_instruction: "Perlombaan dalam teka-teki terakhir itu sangat tidak\nadil! Ubah variabel `dog_speed` untuk memastikan Anda dapat mengumpulkan lebih banyak\nbendera dari Kucing. Yang pertama mengumpulkan 10 bendera yang menang!"
       CourseF_PlayLab_vars9_markdown_instruction: "Bagus, sekarang mari kita pastikan permainan ini tidak terlalu mudah untuk bermain! \\r\n\\r\nSetiap kali Anjing ( pemeran1) tertabrak sebua sandwich dari Kucing (pemeran 2), anda harus kehilangan poin. \\r\n\\r\nMulai dengan\n10 poin jadi itu tidak terlalu susah. Biarkan skor anda turun dari 10 menjadi 0 untuk lulus tingkat."
       Function intro Ryan_markdown_instruction: "**Fungsi** bernama `bangun jembatan` ada di ruang kerjamu.  Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia! \\r\n \\r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki jalur dan bawa {currentPlayerName} ke Obor Batu Merah [redstone_torch]."
@@ -552,6 +558,8 @@ id:
       MC_HOC_2017_Ryan_03_markdown_instruction: "Tahukah kamu bahwa kamu bisa memasukkan lebih dari satu bagian kode ke dalam loop?  \\r\n\\r\nGunakan loop `ulangi` untuk membantu Agent membangun jembatan di atas sungai dengan menempatkan blok di air."
       MC_HOC_2017_Ryan_05_markdown_instruction: "Terkadang kamu perlu merobohkan benda yang menghalangi pemainmu.  \\r\nGunakan blok `hancurkan` untuk membersihkan semua kaktus antara Agent dan pelat tekanan."
       MC_HOC_Kiki_02_markdown_instruction: Seseorang harus berada di pelat tekanan agar pintu samping terbuka.  Bantu Agent mencapai pelat sehingga pemain bisa meninggalkan rumah.
+      Making Music_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      Making Music_2018_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Mike Test Bee Conditionals 1_markdown_instruction: "Awan ini menghalangi pandangan saya!\n\\r\n\\r\nperiksa untuk melihat apakah ada bunga di bawah awan, dan hanya mengambil madu bunga\npada bunga itu. \\r\nhati-hati, itu bisa berubah!"
       Mike Test Bee Conditionals 2_markdown_instruction: "** Penilaian : ** Kumpulkan semua nektar.  \\ r \nHati-hati untuk tidak mencoba untuk mengumpulkan nektar dari sebuah bunga ungu jika itu tidak memiliki."
       NEW Course 4 Artist Functions 3_markdown_instruction: "Berikut ini adalah Blok jenis baru. Ini disebut blok \"Fungsi\". Klik \"Sunting\" kemudian isi dengan kode untuk menggambar persegi dengan sisi 100 piksel. Setelah selesai, klik \"Tutup\" untuk kembali ke program Anda."
@@ -561,18 +569,25 @@ id:
       Overworld Move to Sheep_markdown_instruction: Tambahkan perintah "bergerak maju" kedua untuk mencapai domba
       Overworld Move to Sheep_2018_markdown_instruction: Tambahkan perintah "bergerak maju" kedua untuk mencapai domba
       PS copy 2-3 Bee Conditionals 5_markdown_instruction: "Ini perubahan sihir bunga-bunga ungu!\\r\n\\r\nSetiap\nsaat anda mencoba teka-teki, bunga ungu dapat memiliki 1 nektar atau tidak sama sekali...tapi anda tidak akan tahu jumlahnya sampai anda menjalankan kode! \\r\n\\r\nBerhati-hati jangan sampai pertamamengumpulkan nektar dari bunga ungu jika itu tidak memiliki apapun. \\r\nPertama Anda harus terlebih dahulu memeriksa apakah nektar sama dengan 1 `jika...`menggunakan blok."
+      Revisiting the Counter Pattern_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      Revisiting the Counter Pattern_2018_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       Testing Quantum Farmer_markdown_instruction: "Wow, lihat itu! \\r\n\\r\nSaya tidak tahu berapa banyak \nsekop tanah yang dibutuhkan lubang ini. \\r \nDapatkah Anda menulis sebuah program yang \nterus menggunakan `isi` blok sampai tanah merata?  "
+      The Accelerometer_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      The Accelerometer_2018_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      Using Accelerometer Events_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
+      Using Accelerometer Events_2018_markdown_instruction: "Hari ini anda akan belajar bagaimana menggunakan dan\nMembuat **fungsi**.\\r\n\\r\nMenbuat sebuah fungsi yang memungkinkan Anda untuk membuat blok anda sendiri!\nAda dua bagian untuk sebuah fungsi: \\r\n\\r\nMembuat nama blok baru yang memiliki semua kode yang ingin anda jalankan di dalamnya. \\r\n-xml dari definisi fungsi-\n\\r\n\\r\nBlok hijau tunggal itu yang anda gunakan, atau panggilan, untuk menjalankan fungsi yang anda buat.\\r\n-xml dari pemanggilan fungsi-\\r\n\\r\nBersiaplah untuk terbiasa dengan fungsinya, pelajari cara mengubahnya, dan anda buat sendiri!"
       course4_artist_fwp_challenge1_markdown_instruction: Cobalah jalankan program ini, dan buatlah perubahan untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus dan ganti dengan komposisi yang berbeda)
       courseD_bee_nestedLoops5_markdown_instruction: 'Kumpulkan semua nektar dari setiap bunga dan buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bee_nestedLoops8_markdown_instruction: 'Kumpulkan semua nektar dari setiap bunga dan buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Kumpulkan semua nektar dari setiap bunga dan buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
+      courseD_bounce_events1_markdown_instruction: Mendapatkan ke bendera! Melampirkan blok ke "ketika panah kiri" blok dan tekan "Run" untuk memindahkan pemain ke bendera.
       courseD_maze_nestedLoops4_markdown_instruction: 'Bawa aku ke bunga matahari!'
       courseD_maze_nestedLoops4_2018_markdown_instruction: 'Bawa aku ke bunga matahari!'
       courseE_bee_functions2_markdown_instruction: "Fungsi adalah blok kode yang melakukan suatu tugas.  \\ r \n\\ r \nGunakan `mendapatkan 2 nectar` fungsi untuk mengumpulkan nektar dari bunga masing-masing."
       courseE_bee_functions2_2018_markdown_instruction: "Fungsi adalah blok kode yang melakukan suatu tugas.  \\ r \n\\ r \nGunakan `mendapatkan 2 nectar` fungsi untuk mengumpulkan nektar dari bunga masing-masing."
       courseE_bee_functions3_markdown_instruction: Fungsi adalah blok kode yang melakukan suatu tugas. Gunakan fungsi "dapatkan 5" untuk mendapatkan 5 madu pada satu waktu. Pastikan juga untuk menggunakan pengulangan untuk mendapatkan jumlah blok yang ideal.
       courseE_bee_functions3_2018_markdown_instruction: Fungsi adalah blok kode yang melakukan suatu tugas. Gunakan fungsi "dapatkan 5" untuk mendapatkan 5 madu pada satu waktu. Pastikan juga untuk menggunakan pengulangan untuk mendapatkan jumlah blok yang ideal.
-      courseE_farmer_concept4_markdown_instruction: Sekarang mari kita pergi satu tingkat lebih dalam! Kita sudah memasangkan seluruh blok kode tersebut ke dalam perulangan lain, tetapi kami perlu membawa si seniman kembali ke tempat asal untuk menggambar garis berikutnya. Di antara blok kode ini, manakah yang dapat kamu tempatkan di akhir perulangan terluar untuk menggambar seluruh kisi-kisi?
+      courseE_farmer_concept4_markdown_instruction: "Sekarang mari kita pergi satu tingkat lebih dalam lagi!\nKami telah menemukan seluruh blok dari kode ke loop lain, tetapi anda perlu untuk\ndapatkan artis kembali untuk menggambar garis berikutnya. Yang ini kode blok\nanda dapat menempatkan di ujung paling luar loop untuk menarik seluruh grid?"
       courseF_bee_for_challenge2_markdown_instruction: Selesaikan teka-teki ini dengan menggunakan blok sesedikit mungkin.
       courseF_bee_for_challenge2_2018_markdown_instruction: Selesaikan teka-teki ini dengan menggunakan blok sesedikit mungkin.
       frozen circle function in circle_markdown_instruction: Sekarang, mari kita membuat 20 lingkaran yang tumpang tindih, berbelok 18 derajat antara setiap lingkaran.
@@ -597,16 +612,22 @@ id:
       grade2_MakeDogTag_8_markdown_instruction: "Sekarang mari kita hubungkan beberapa V secara bersamaan,\ndengan menggambar mereka di dalam perulangan."
       grade2_MakeDogTag_9_markdown_instruction: "Waktunya untuk membuat sesuatu yang hebat!\n\\r\n\\r\nbuat kembali kode dari teka-teki terakhir, tapi kali ini, tambahkan belok ke kiri\n30 derajat didalam lingkaran. sekarang, ulangi 24 kali bukan 8 kali."
       grade2_PuppyLoops_10_markdown_instruction: |-
-        Pinwheel saya belum selesai. Berapa kali saya harus mengulangi untuk menyelesaikannya?
+        Guru saya berkata saya harus menyelesaikan
+        apa yang sudah saya mulai!\r
+        \r
+        bantu saya untuk menyelesaikan pinwheel saya. bisakah kamu mencari tahu 
+        apa yang salah?
       grade2_PuppyLoops_2_markdown_instruction: |-
         Tiba-tiba, sebuah blok magis muncul! Dengan blok `repeat` , Anda bisa mengulang kode berulang-ulang. \ r 
         r \ 
         Bisakah Anda mendapatkan ke babi dengan menciptakan  sebuah  lingkaran yang menggunakan hanya satu ` bergerak forward` blok dalam sebuah ` repeat`?
       grade2_PuppyLoops_4_markdown_instruction: Gunakan dua perulangan untuk menuju ke si babi dengan menggunakan blok lebih sedikit.
-      grade2_PuppyLoops_8_markdown_instruction: "Kode untuk tiga kumis yang Anda\nlihat adalah salah. Petunjuk: setiap kumis panjangnya 75 piksel. Perbaiki kode ini untuk menggambar kumisnya."
+      grade2_PuppyLoops_8_markdown_instruction: "Kode ini untuk kumis kucing\nsalah. \\r\n\\r\nperbaiki kode ini agar gambar kumisnya sama panjang."
       grade2_PuppyLoops_9_markdown_instruction: |-
-        Tampaknya C dalam kode ditarik mundur.
-        Dapatkah Anda membuatnya terlihat seperti C?
+        Terlihar seperti C pada kode dalam gambar
+        terbalik!\r
+        \r
+        Bisakah anda membuatnya terlihat seperti C lagi?
       grade2_puppy_loops2_markdown_instruction: |-
         Tiba-tiba, sebuah blok magis muncul! Dengan blok `repeat` , Anda bisa mengulang kode berulang-ulang. \ r 
         r \ 
@@ -617,9 +638,9 @@ id:
       grade3_ConditionalsElse_4_markdown_instruction: "Terkadang awan ini mencakup sebuah\nbunga, dan terkadang mencakup sarang lebah! \\r\n\\r\nGunakan `jika/jika tidak` blok\nuntuk mengumpulkan nektar jika hanya itu sebuah bunga. \\r\nJika tidak, membuat madu (karena itu sebuah sarang lebah)."
       grade3_ConditionalsElse_5_markdown_instruction: |-
         Mungkin ada bunga atau sarang lebah di bawah awan itu. Gunakan blok jika/jika tidak untuk mengumpulkan nektar jika ada bunga, lain untuk membuat madu (karena ada sarang lebah).
-      grade3_ConditionalsElse_6_markdown_instruction: "Bunga ungu ini mungkin memiliki 3, 2, atau 1 nektar. Di sini sebuah blok jika/jika tidak dikombinasikan dengan blok jika/lain untuk membuat sebuah blok jika, lain-jika, lain. Lengkapi solusi untuk mengumpulkan jumlah nektar yang tidak diketahui."
-      grade3_ConditionalsElse_7_markdown_instruction: "Ingat bahwa bunga-bunga ungu dapat memiliki 3, 2 atau 1 madu. Selesaikan fungsi \"periksa bunga ungu\" dan gunakan untuk mengumpulkan semua nektar di bunga-bunga."
-      grade3_ConditionalsElse_8_markdown_instruction: "Tuliskan di dalam fungsi \"periksa bunga membuat madu\". Fungsi Anda harus memeriksa apakah bunga ungu memiliki 1, 2 atau 3 nektar dan mengumpulkan semua nektar. Kemudian, gerak maju dan buatlah madu."
+      grade3_ConditionalsElse_6_markdown_instruction: "Saya tidak yakin memiliki beberapa banyak nektar\nbunga ini, tapi aku tahu itu baik 1, 2, atau 3 menit jalan kaki. \\r\n\\r\nMenggabungkan blok bersyarat (`jika` dan/atau `jika/jika tidak`) hanya untuk mendapatkan nektar sebanyak banyaknya seperti bunga itu. \\r\n\\r\nIngat, jumlah nektar yang dapat mengubah masing-masing\nsaat anda menjalankan teka-teki!"
+      grade3_ConditionalsElse_7_markdown_instruction: "Bunga ini bisa memiliki 3, 2,\natau 1 madu bunga. \\r\n\\r\nlengkapi fungsi ' periksa bunga ungu ' dan gunakan itu\nuntuk mengumpulkan semua madu bunga pada bunga."
+      grade3_ConditionalsElse_8_markdown_instruction: "Tuliskan fungsi untuk `check flower make honey`. \\ r \n\\ r \nAnda fungsi harus memeriksa apakah bunga ungu memiliki 3, 2, atau 1 nektar dan mendapatkan semua nektar. \\ r \nKemudian, bergerak maju dan\n membuat madu."
       grade3_ConditionalsElse_9_markdown_instruction: "Penilaian: Kode ini salah. Selesaikan fungsi \"mendapatkan nektar atau membuat madu\", lalu panggilkan untuk mengumpulkan semua nektar dan madu. Ingat bahwa bunga-bunga ungu dapat memiliki 3, 2 atau 1 nektar."
       grade3_ConditionalsElse_TeacherIDo_markdown_instruction: |-
         Mungkin ada bunga atau sarang lebah di bawah awan itu. Gunakan blok jika/jika tidak untuk mengumpulkan nektar jika ada bunga, lain untuk membuat madu (karena ada sarang lebah).
@@ -628,7 +649,7 @@ id:
         Kumpulkan nektar dan buatlah madu. Petunjuk: Apa yang terjadi jika Anda menggunakan syarat "jika nektar" pada bunga merah? Anda dapat menyelesaikan hal ini dengan pengulangan?
       grade3_Conditionals_11 BAD_markdown_instruction: "** Penilaian : ** Gunakan sebuah ` sementara `\n lingkaran untuk mengumpulkan semua nektar dari bunga-bunga ini."
       grade3_Conditionals_11_markdown_instruction: "Mari kita menggabungkan semuanya! \\ r \n\\ r \nGunakan apa yang telah Anda pelajari untuk membantu saya mengumpulkan nektar hanya dari bunga yang memilikinya, menggunakan sebagai beberapa blok mungkin.  \\ r \n\\ r \nJangan lupa untuk membuat madu di akhir."
-      grade3_Conditionals_12_markdown_instruction: "Kumpulkan nektar dari keempat bunga."
+      grade3_Conditionals_12_markdown_instruction: "Pola langkah tangga ini seharusnya terlihat familier.  \\ r \nr \\ \nDapatkah Anda mengumpulkan nektar hanya dari bunga-bunga yang memiliki beberapa , menggunakan sebagai beberapa blok mungkin?"
       grade3_Conditionals_13_markdown_instruction: "** Penilaian : ** Kumpulkan semua nektar.  \\ r \nHati-hati untuk tidak mencoba untuk mengumpulkan nektar dari sebuah bunga ungu jika itu tidak memiliki."
       grade3_Conditionals_2_markdown_instruction: "Bantu saya kumpulkan nektar dari bunga-bunga ini dan buatlah madu. Gunakan pengulangan."
       grade3_Conditionals_3_markdown_instruction: "Ini perubahan sihir bunga-bunga ungu!\\r\n\\r\nSetiap\nsaat anda mencoba teka-teki, bunga ungu dapat memiliki 1 nektar atau tidak sama sekali...tapi anda tidak akan tahu jumlahnya sampai anda menjalankan kode! \\r\n\\r\nBerhati-hati jangan sampai pertamamengumpulkan nektar dari bunga ungu jika itu tidak memiliki apapun. \\r\nPertama Anda harus terlebih dahulu memeriksa apakah nektar sama dengan 1 `jika...`menggunakan blok."
@@ -638,8 +659,12 @@ id:
         \ r 
         Perbaiki kesalahan (s) untuk mengumpulkan semua nektar.
       grade3_Debugging_5_markdown_instruction: "Bunga itu terlihat lezat! \\ r \n\\ r \nPerbaiki \nkesalahan (s) untuk mengumpulkan semua nektar.  \\ r \nAnda sekarang dapat menggunakan kedua run dan langkah.\n "
-      grade3_Debugging_6_markdown_instruction: |-
-        Blok ini benar-benar menggangguku. Perbaiki yang salah untuk mengumpulkan semua nektar dan membuat madu.
+      grade3_Debugging_6_markdown_instruction: |2
+        Apa yang tantangan yang manis! \ r 
+        \ r 
+        Perbaiki 
+        kesalahan (s) untuk mengumpulkan semua nektar.
+         
       grade3_Debugging_9_markdown_instruction: |-
         Blok ini benar-benar menggangguku. Perbaiki yang salah untuk mengumpulkan semua nektar dan membuat madu.
       grade3_Loops_10_markdown_instruction: |2
@@ -649,9 +674,9 @@ id:
          
         
       grade3_Loops_11_markdown_instruction: "Bentuk jalan ini berbeda dengan yang lain. \\ r \nr \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan sebagai beberapa blok \nmungkin?"
-      grade3_Loops_3_markdown_instruction: Bisakah Anda menggunakan perulangan untuk mengumpulkan semua nektar itu?
-      grade3_Loops_4_markdown_instruction: Sekarang gunakan blok ulangi yang baru untuk mengumpulkan semua nektar dan membuat semua madu.
-      grade3_Loops_6_markdown_instruction: "Apa yang terjadi jika Anda mengulangi urutan ini 3 kali? Jangan lupa untuk membuat madu di akhir!"
+      grade3_Loops_3_markdown_instruction: Gunakan sebuah `repeat` lingkaran untuk mengumpulkan semua nektar.
+      grade3_Loops_4_markdown_instruction: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar dan buatlah semua madu.
+      grade3_Loops_6_markdown_instruction: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?  \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n \n"
       grade3_Loops_7_markdown_instruction: |-
         Setiap bunga berisi satu unit nektar. Kumpulkan nektar dari masing-masing bunga. 
       grade3_Loops_TeacherIDo_markdown_instruction: |-
@@ -665,19 +690,25 @@ id:
         Bisakah Anda mendapatkan ke babi dengan menciptakan  sebuah  lingkaran yang menggunakan hanya satu ` bergerak forward` blok dalam sebuah ` repeat`?
       grade3_maze_nestedLoops3_markdown_instruction: Bawa aku ke babi ! Anda hanya bisa menggunakan satu blok ` move forward` kali ini
       grade3_maze_nestedLoops4_markdown_instruction: Gunakan dua perulangan untuk menuju ke si babi dengan menggunakan blok lebih sedikit.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Lingkaran yang diberikan kode untuk membuat sebuah kincir angin.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Loop desain ini 10 kali. \\ r \n\\ r \nBerapa banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Loop bentuk ini sebanyak 6 kali. \\r\n\\r\nBerapa banyak\nAnda harus memutar tiap kali melakukan loop? "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Bisakah Anda menggambar sebuah segi enam dengan loop kode segitiga?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Gambarkan gigi di mulut buaya!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Buat sebuah matahari dengan sarang kode permulaan di putaran lain.\r
         \r
         Untuk mendapatkan desain keren ini dengan pusat berlubang, Anda harus melompat maju dengan panjang segitiga sebelum berputar.
-      grade4_artist_functions2_markdown_instruction: "Fungsi membiarkan Anda mendefinisikan blok baru! Kami sudah\nmemindahkan blok untuk menggambar persegi menjadi fungsi yang disebut dengan \"menggambar persegi\".\nDapatkah Anda gunakan fungsi \"menggambar persegi\" untuk membuat kacamata? Masing-masing kotak terpisah sejauh 75 piksel."
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Anda dapat menarik 36 segitiga ini menggunakan sebuah lingkaran bersarang?
+      grade4_artist_functions2_markdown_instruction: "Fungsi membiarkan anda mendefinisikan blok baru! \\r\n\\r\nKami sudah memindahkan blok yang diperlukan untuk menggambar persegi menjadi\nfungsi yang disebut `menggambar persegi`. Kali ini, gunakan fungsi `menggambar persegi`\nuntuk membuat kacamata. \\r\n\\r\nPersegi itu berjauhan 75 piksel."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Lingkaran yang diberikan kode untuk membuat sebuah kincir angin.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Loop desain ini 10 kali. \\ r \n\\ r \nBerapa banyak\n yang Anda harus mengubah setiap kali lingkaran anda?"
       grade4_artist_nested_loop_triangles1_markdown_instruction: "Lengkapi kode untuk menggambar segitiga ini. Yang\npertama adalah selesaikan satu untuk anda. Tips: 3 sebuah segitiga dalam rotasi 360 derajat.\\r\n\\r\n"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Buat sebuah matahari dengan sarang kode permulaan di putaran lain.\r
         \r
         Untuk mendapatkan desain keren ini dengan pusat berlubang, Anda harus melompat maju dengan panjang segitiga sebelum berputar.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Anda dapat menarik 36 segitiga ini menggunakan sebuah lingkaran bersarang?
       grade4_bee_conditionals_nested_loops_markdown_instruction: "** Penilaian : ** Kumpulkan semua nektar.  \\ r \nHati-hati untuk tidak mencoba untuk mengumpulkan nektar dari sebuah bunga ungu jika itu tidak memiliki."
       grade4_bee_conditionals_new1_markdown_instruction: "** Penilaian : ** Kumpulkan semua nektar.  \\ r \nHati-hati untuk tidak mencoba untuk mengumpulkan nektar dari sebuah bunga ungu jika itu tidak memiliki."
       grade4_bee_conditionals_quantum1_markdown_instruction: "Awan ini menghalangi pandangan saya!\n\\r\n\\r\nperiksa untuk melihat apakah ada bunga di bawah awan, dan hanya mengambil madu bunga\npada bunga itu. \\r\nhati-hati, itu bisa berubah!"
@@ -702,7 +733,7 @@ id:
       grade4_frozen_square_loop3_markdown_instruction: Dapatkah kamu membuat sebuah kepingan salju dengan menggunakan blok "Ulangi" untuk membuat sebuah persegi sebanyak 10 kali, dan blok "Belok" untuk berbelok 36 derajat antara setiap persegi?
       grade4_review_artist2_markdown_instruction: "Rumah ini membutuhkan atap! gambar segitiga. \\r\n\\r\nnasehat:\nketiga sisinya sama panjang.\\r\n\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3_markdown_instruction: "Blok lompatan memindahkan seniman tanpa menggambar.\nGambarkan garis putus-putus dengan menggunakan kedua blok melompat dan menggambar."
-      grade4_review_bee1_markdown_instruction: Sekarang gunakan blok ulangi yang baru untuk mengumpulkan semua nektar dan membuat semua madu.
+      grade4_review_bee1_markdown_instruction: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar dan buatlah semua madu.
       grade4_review_bee3_markdown_instruction: |2
         Seperti sebuah lebah sibuk! \ r 
         \ r 
@@ -727,9 +758,9 @@ id:
          
         
       level 'grade3_Loops_11_markdown_instruction: "Bentuk jalan ini berbeda dengan yang lain. \\ r \nr \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan sebagai beberapa blok \nmungkin?"
-      level 'grade3_Loops_3_markdown_instruction: Bisakah Anda menggunakan perulangan untuk mengumpulkan semua nektar itu?
-      level 'grade3_Loops_4_markdown_instruction: Sekarang gunakan blok ulangi yang baru untuk mengumpulkan semua nektar dan membuat semua madu.
+      level 'grade3_Loops_3_markdown_instruction: Gunakan sebuah `repeat` lingkaran untuk mengumpulkan semua nektar.
+      level 'grade3_Loops_4_markdown_instruction: Sekarang gunakan blok `repeat` untuk mengumpulkan semua nektar dan buatlah semua madu.
       level 'grade3_Loops_5_markdown_instruction: "Apa yang indah bidang bunga!   \\ r \n\\ r \nBantuan kunjungan lebah masing-masing. \\ r \n\\ r \nDapatkah Anda menemukan  sebuah cara untuk melakukan itu dengan kurang dari 7 blok ?\n \n"
-      level 'grade3_Loops_6_markdown_instruction: "Apa yang terjadi jika Anda mengulangi urutan ini 3 kali? Jangan lupa untuk membuat madu di akhir!"
+      level 'grade3_Loops_6_markdown_instruction: "Berapa kali loop bisa membantu Anda dalam teka-teki ini ?  \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa dari mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n \n"
       level 'grade3_Loops_7_markdown_instruction: |-
         Setiap bunga berisi satu unit nektar. Kumpulkan nektar dari masing-masing bunga. 

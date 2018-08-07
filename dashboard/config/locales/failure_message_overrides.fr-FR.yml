@@ -78,10 +78,10 @@ fr:
         moins deux nouveaux acteurs au jeu et les programmer pour bouger.
       grade4_scaffolded_project3_failure_message_override: Tu dois ajouter au moins
         deux nouveaux acteurs qui bougent à ton jeu.
-      kikiTesta_failure_message_override: Félicitations! Tu as réuni X pièces!
-      sample1_failure_message_override: Félicitations! Tu as réuni X pièces!
-      sample4_failure_message_override: Félicitations! Tu as réuni X pièces!
+      kikiTesta_failure_message_override: Félicitations! Tu as collecté X pièces!
+      sample1_failure_message_override: Félicitations! Tu as collecté X pièces!
+      sample4_failure_message_override: Félicitations! Tu as collecté X pièces!
       sample6_failure_message_override: |-
         Pas assez. Continue d'essayer!  [Move to Play
         Zone]
-      sample8_failure_message_override: Félicitations! Tu as réuni X pièces!
+      sample8_failure_message_override: Félicitations! Tu as collecté X pièces!

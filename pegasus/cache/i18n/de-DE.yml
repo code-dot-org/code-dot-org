@@ -271,7 +271,7 @@ de-DE:
   studiobar_flappy_body: Eigenes Flappy-Spiel erstellen und teilen
   studiobar_teacher_title: Für Lehrer gemacht
   studiobar_teacher_body: Code-Studio im Unterricht verwenden
-  studiobar_frozen_title: Stunde des Codes
+  studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Wintermärchen mit Anna und Elsa erstellen
   studiobar_donate_title: Spenden
   studiobar_donate_body: Für jeden gespendeten Dollar ermöglichen Sie eine Hour of
@@ -439,8 +439,8 @@ de-DE:
   mc_specs: 'Viele Sprachen | Moderne Browser, Tablets | Alter: 6-106'
   minecraft_adventurer: Minecraft Abenteurer
   minecraft_agent_button: Start
-  minecraft_designer_description: Baue dein eigene Minecraft-Version. Erschaffe deine
-    eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
+  minecraft_designer_description: Baue ein Minecraft-Spiel. Erschaffe deine eigene
+    Version von Hühnern, Schafen, Creepern, Zombies und mehr.
   minecraft_designer_button: Start
   minecraft_adventurer_button: Start
   minecraft_no_internet: Sie haben kein Internet?
@@ -955,7 +955,7 @@ de-DE:
   robomindnl_name: Programmiere einen virtuellen Roboter
   flappy_name: Erstelle ein Flappy-Spiel
   bitsbox_name: Bitsbox - baue ein Spiel
-  makeschool_name: Bau ein iPhone-Spiel in deinem Browser!
+  makeschool_name: Erstelle ein iPhone Spiel in deinem Browser!
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
   projguts_name: Schere, Stein, Papier
@@ -995,13 +995,14 @@ de-DE:
   starwarsblocks_name: Star Wars (Bausteine)
   hoc-encryption_name: Einfache Verschlüsselung
   math_category_name: Mathematik
-  hoc_category_name: Stunde des Codes
+  hoc_category_name: Hour of Code
   csf_category_name: Einführung in Informatik und Programmieren
   csf_international_category_name: Informatik Grundlagen international
   csf2_draft_category_name: 'In der Entwicklung: Kurse A - F'
   csp17_category_name: Informatik Grundprinzipien
   cspexams_category_name: Praxistest Grundlagen der Informatik
   applab_name: App-Labor
+  gamelab_name: Spielelabor
   basketball_name: Baue ein Basketball-Spiel
   sports_name: Programmiere Dein eigenes Sport-Spiel
   applab_gradelevel: Ab 13 Jahren
@@ -1383,7 +1384,7 @@ de-DE:
   lynda_beyond_name: Online Programmierkurse
   edx_beyond_name: Harvard CS50 Kurs
   coursera_beyond_name: Stanford CS 101 Kurs
-  teachingtree_beyond_name: Online Universitätskurse
+  teachingtree_beyond_name: Universitätskurse online
   w3schools_beyond_name: Lerne HTML
   codeavengers_beyond_name: Lerne, Webseiten zu erstellen
   arduino_beyond_name: Arduino mit Sparkfun
@@ -1684,13 +1685,14 @@ de-DE:
   header_home: Home
   header_my_dashboard: Mein Armaturenbrett
   header_courses: Kurse
+  header_course_catalog: Kurs Katalog
   header_project_gallery: Projekte
   header_sections: Sektionen
   header_professional_learning: Professionelles Lernen
   header_educate_elementary: Grundschule
   header_educate_middle: Mittelschule
   header_educate_high: High School/Gymnasium
-  header_educate_hoc: Stunde des Codes
+  header_educate_hoc: Hour of Code
   header_educate_partner: Eine Partnerschaft mit uns
   header_educate_inspire: Inspiriere einen Schüler/eine Schülerin
   header_educate_community: Online Community

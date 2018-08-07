@@ -211,12 +211,16 @@ ko:
         \r
         손가락으로 따라가 보세요. 한 번에 성공할 수 있겠어요?
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "**형성평가:** \"~할 때까지 반복\" 블록과 \"만약/아니면\" 블록을 사용하고 가능한 적은 블록으로 저를 해바라기로 보내주세요."
+      4-5 Nested Loops 12_markdown_instruction: 중첩 반복을 이용해서 36개의 삼각형들을 그려주세요.
       4-5 Nested Loops 3_markdown_instruction: |-
         다른 반복 안에 시작 코드를 중첩시켜 넣어서 해를 만들어 주세요. \r
         \r
         이렇게 가운데가 빈 멋진 디자인을 얻기 위해서는 회전하기 전에 삼각형의 길이만큼 앞으로 점프해야 합니다.
+      4-5 Nested Loops 5_markdown_instruction: 주어진 코드를 반복시켜서 풍차를 만들어 주세요.
+      4-5 Nested Loops 6_markdown_instruction: 삼각형 코드를 반복시켜서 육각형을 그려 주세요.
       4-5 Nested Loops 7_markdown_instruction: "이 디자인을 10번 반복시켜주세요. \\r\n\\r \n한 번 반복하고나서 얼마나 회전해야 할까요? (힌트: 360을 10으로 나누면 얼마일까요?)"
       4-5 Nested Loops 8_markdown_instruction: "이 디자인을 6번 반복시켜주세요. \\r\n\\r\n한 번 반복하고나서 얼마나 회전해야 할까요? (힌트: 360을 6으로 나누면 얼마일까요?) "
+      4-5 Nested Loops 9_markdown_instruction: 악어 입 안에 이빨을 그려주세요!
       4-5 While Loops 1_markdown_instruction: 구덩이로 이동해서 "메우기" 블록으로 흙을 2번 메우기 해주세요.
       4-5 While Loops 2_markdown_instruction: 흙더미로 이동하고 "치우기 1" 블록으로 흙을 5번 치우기 해주세요.
       4-5 While Loops 3_markdown_instruction: "블록을 가능한 적게 사용해서 퍼즐을 해결하세요. \\r\n\\r\n흙더미로 이동해서 흙을 모두 치우고, 구덩이로 이동해서 흙을 모두 메워 주세요."
@@ -350,6 +354,7 @@ ko:
       courseD_bee_nestedLoops5_markdown_instruction: "각 꽃의 꽃꿀들을 모두 모아서\n벌집에서 꿀을 만들어 보세요. \\r\n\\r\n중첩 반복을 사용하면 됩니다. "
       courseD_bee_nestedLoops8_markdown_instruction: "각 꽃의 꽃꿀들을 모두 모아서\n벌집에서 꿀을 만들어 보세요. \\r\n\\r\n중첩 반복을 사용하면 됩니다. "
       courseD_bee_nestedLoops8_2018_markdown_instruction: "각 꽃의 꽃꿀들을 모두 모아서\n벌집에서 꿀을 만들어 보세요. \\r\n\\r\n중첩 반복을 사용하면 됩니다. "
+      courseD_bounce_events1_markdown_instruction: 깃발을 잡으세요! "왼쪽 방향키를 누르면" 블록에 다른 블록을 붙이고, "실행하기"를 눌러 깃발로 이동시키세요.
       courseD_maze_nestedLoops4_markdown_instruction: "블록들을 최소한으로 사용해서 해바라기로 이동시켜주세요!\\r\n\\r\n반복 실행 구조 안에 1개의 반복 실행 구조를 넣어서 필요한 코드량을 줄여주세요."
       courseD_maze_nestedLoops4_2018_markdown_instruction: "블록들을 최소한으로 사용해서 해바라기로 이동시켜주세요!\\r\n\\r\n반복 실행 구조 안에 1개의 반복 실행 구조를 넣어서 필요한 코드량을 줄여주세요."
       courseE_bee_functions2_markdown_instruction: "함수들은 어떤 작업을 수행할 때 사용하는 블럭들의 모임이라고 할 수 있습니다.\\r\n\\r\n\"꽃꿀 2번 모으기\" 를 이용해서 각 꽃들에서 꽃꿀을 모아보세요."
@@ -449,18 +454,24 @@ ko:
       grade3_bee_conditionals_quantum2_markdown_instruction: "구름들이 더 많습니다! \\r\n\\r\n모든 구름 아래에 꽃들이 있는 것은 아니기 때문에 구름 아래에 꽃이 숨어있는지 살펴보고 꽃꿀을 모아야 합니다. \\r\n\\r\n기억하세요: 모든 구름들 아래에 똑같은 것들이 숨겨진 것은 아닙니다!"
       grade3_maze_loops2_markdown_instruction: "블록들을 최소한으로 사용해서 해바라기로 이동시켜주세요!\\r\n\\r\n반복 실행 구조 안에 1개의 반복 실행 구조를 넣어서 필요한 코드량을 줄여주세요."
       grade3_maze_nestedLoops4_markdown_instruction: 이 퍼즐에서는 두 개의 반복(횟수) 블록을 이용하면 블록들을 최소한으로 사용할 수 있습니다.
+      grade4_arist_nested_loop_flags1_markdown_instruction: 주어진 코드를 반복시켜서 풍차를 만들어 주세요.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "이 디자인을 10번 반복시켜주세요. \\r\n\\r \n한 번 반복하고나서 얼마나 회전해야 할까요? (힌트: 360을 10으로 나누면 얼마일까요?)"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "이 디자인을 6번 반복시켜주세요. \\r\n\\r\n한 번 반복하고나서 얼마나 회전해야 할까요? (힌트: 360을 6으로 나누면 얼마일까요?) "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: 삼각형 코드를 반복시켜서 육각형을 그려 주세요.
+      grade4_arist_nested_loop_triangles4_markdown_instruction: 악어 입 안에 이빨을 그려주세요!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         다른 반복 안에 시작 코드를 중첩시켜 넣어서 해를 만들어 주세요. \r
         \r
         이렇게 가운데가 빈 멋진 디자인을 얻기 위해서는 회전하기 전에 삼각형의 길이만큼 앞으로 점프해야 합니다.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: 중첩 반복을 이용해서 36개의 삼각형들을 그려주세요.
       grade4_artist_functions2_markdown_instruction: "함수들로 새로운 블록들을 만들어낼 수 있습니다! \\r\n\\r\n\"사각형 그리기\" 라는 함수에 사각형 1개를 그리는 블록들을 넣었습니다.\n\"사각형 그리기\" 함수를 이용해서 안경을 그려보세요. \n\\r\n\\r\n사각형들은 75 픽셀 만큼 떨어져 있습니다."
+      grade4_artist_nested_loop_flags1_markdown_instruction: 주어진 코드를 반복시켜서 풍차를 만들어 주세요.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "이 디자인을 10번 반복시켜주세요. \\r\n\\r \n한 번 반복하고나서 얼마나 회전해야 할까요? (힌트: 360을 10으로 나누면 얼마일까요?)"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         다른 반복 안에 시작 코드를 중첩시켜 넣어서 해를 만들어 주세요. \r
         \r
         이렇게 가운데가 빈 멋진 디자인을 얻기 위해서는 회전하기 전에 삼각형의 길이만큼 앞으로 점프해야 합니다.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: 중첩 반복을 이용해서 36개의 삼각형들을 그려주세요.
       grade4_artist_parameters_triangles2_markdown_instruction: "이 함수 블록들이 뭔가 다르다는 것을 알아차리셨나요?\n\"실행\"을 눌러 어떤 일이 일어나나 살펴보세요."
       grade4_bee_conditionals_nested_loops_markdown_instruction: "형성평가: 꽃꿀을 모두 모아주세요.\\r\n자주색 꽃에 꽃꿀이 없으면 꽃꿀을 뽑지 않도록 주의하세요."
       grade4_bee_conditionals_new1_markdown_instruction: "형성평가: 꽃꿀을 모두 모아주세요.\\r\n자주색 꽃에 꽃꿀이 없으면 꽃꿀을 뽑지 않도록 주의하세요."

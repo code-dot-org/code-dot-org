@@ -2,15 +2,15 @@ pt:
   data:
     block_categories:
       Actions: Ações
-      Loops: Ciclos
+      Loops: ciclos
       Functions: Funções
       Color: Cor
       Math: Matemática
       Logic: Lógica
-      Variables: Variáveis
+      Variables: variáveis
       Conditionals: Condicionais
       Events: Eventos
-      Text: Texto
+      Text: texto
       Start: Começar
       Booleans: Booleanos
       test: teste
