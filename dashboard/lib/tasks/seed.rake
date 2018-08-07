@@ -224,6 +224,11 @@ namespace :seed do
     Census::StateCsOffering.seed
   end
 
+  # Seed school course offering data where the courses are taught by outside curriculum providers, such as TEALS.
+  task other_curriculum_offerings: :environment do
+    Census::OtherCurriculumOffering.seed
+  end
+
   task sample_data: :environment do
     SampleData.seed
   end
