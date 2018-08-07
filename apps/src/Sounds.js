@@ -51,14 +51,44 @@ export default function Sounds() {
 
   /**
    * Detect whether audio system is "unlocked" - it usually works immediately
-   * on dekstop, but mobile usually restricts audio until triggered by user.
+   * on desktop, but mobile usually restricts audio until triggered by user.
    * @private {boolean}
    */
   this.audioUnlocked_ = false;
 
+  this.soundsById = {};
+
+  /** @private {function[]} */
+  this.whenAudioUnlockedCallbacks_ = [];
+
+  this.unlockAudioWhenVisible_();
+}
+
+/**
+ * Wait until the page exits the "prerender" visibility state before
+ * attempting to unlock audio.
+ * @private
+ */
+Sounds.prototype.unlockAudioWhenVisible_ = function () {
+  if (document.visibilityState !== "prerender") {
+    this.tryUnlockAudio_();
+  } else {
+    let handleVisibilityChange = function () {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      this.tryUnlockAudio_();
+    }.bind(this);
+    document.addEventListener("visibilitychange", handleVisibilityChange, false);
+  }
+};
+
+/**
+ * Try unlocking audio if `AudioContext` is available,
+ * otherwise fall-back to the `window.Audio` method.
+ * @private
+ */
+Sounds.prototype.tryUnlockAudio_ = function () {
   if (window.AudioContext) {
     try {
-      this.audioContext = new AudioContext();
       this.initializeAudioUnlockState_();
     } catch (e) {
       /**
@@ -69,14 +99,12 @@ export default function Sounds() {
        *
        * In the Chrome case, this will fall-back to the `window.Audio` method
        */
+      this.audioUnlocked_ = true;
     }
+  } else {
+    this.audioUnlocked_ = true;
   }
-
-  this.soundsById = {};
-
-  /** @private {function[]} */
-  this.whenAudioUnlockedCallbacks_ = [];
-}
+};
 
 let singleton;
 Sounds.getSingleton = function () {
@@ -120,7 +148,7 @@ Sounds.prototype.initializeAudioUnlockState_ = function () {
  */
 Sounds.prototype.isAudioUnlocked = function () {
   // Audio unlock doesn't make sense for the fallback player as used here.
-  return this.audioUnlocked_ || !this.audioContext;
+  return this.audioUnlocked_;
 };
 
 /**
@@ -149,6 +177,8 @@ Sounds.prototype.whenAudioUnlocked = function (callback) {
  *        audio was unlocked successfully.
  */
 Sounds.prototype.unlockAudio = function (onComplete) {
+  this.audioContext = new AudioContext();
+
   if (this.isAudioUnlocked()) {
     return;
   }
@@ -243,7 +273,10 @@ Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
 Sounds.prototype.register = function (config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
-  sound.preload();
+  this.whenAudioUnlocked(function () {
+    sound.audioContext = this.audioContext;
+    sound.preload();
+  }.bind(this));
   return sound;
 };
 
