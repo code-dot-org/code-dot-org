@@ -189,7 +189,7 @@ export default class AssetManager extends React.Component {
     const buttons = (
       <div>
         {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
-          <AudioRecorder/>
+          <AudioRecorder onUploadDone={this.onUploadDone}/>
         }
         <span style={styles.buttonRow}>
           {uploadButton}
