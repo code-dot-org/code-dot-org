@@ -37,6 +37,7 @@ class Census::StateCsOffering < ApplicationRecord
     MI
     MS
     NC
+    NY
     OH
     OK
     SC
@@ -104,6 +105,8 @@ class Census::StateCsOffering < ApplicationRecord
       # Remove district code prefix from school code.
       school_code.slice!(district_code)
       School.construct_state_school_id('NC', district_code, school_code)
+    when 'NY'
+      row_hash['state_school_id']
     when 'OH'
       row_hash['State School ID']
     when 'OK'
@@ -312,6 +315,17 @@ class Census::StateCsOffering < ApplicationRecord
     WC22
   ).freeze
 
+  NY_COURSE_CODES = %w(
+    10152
+    10157
+    10155
+    10154
+    10153
+    10159
+    10156
+    2156
+  ).freeze
+
   OH_COURSE_CODES = %w(
     031700
     145060
@@ -415,6 +429,8 @@ class Census::StateCsOffering < ApplicationRecord
       MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
+    when 'NY'
+      NY_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'OH'
       OH_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'OK'

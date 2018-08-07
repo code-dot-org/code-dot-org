@@ -18,22 +18,6 @@ When(/^I open my eyes to test "([^"]*)"( except in circle)?$/) do |test_name, ex
   next if CDO.disable_all_eyes_running || (except_in_circle && ENV['IS_CIRCLE'] == 'true')
   ensure_eyes_available
 
-  batch = Applitools::BatchInfo.new(ENV['BATCH_NAME'])
-  batch.id = ENV['BATCH_ID']
-  @eyes.batch = batch
-
-  @eyes.branch_name = GitUtils.current_branch
-
-  pr_base = GitUtils.circle_pr_branch_base_no_origin
-  if pr_base
-    puts "Branch is #{pr_base}"
-    @eyes.parent_branch_name = pr_base
-  else
-    fallback_branch = GitUtils.current_branch_base_no_origin
-    puts "No PR for eyes branch: #{GitUtils.current_branch}, using fallback parent branch #{fallback_branch}"
-    @eyes.parent_branch_name = fallback_branch
-  end
-
   @original_browser = @browser
   config = {app_name: 'Code.org', test_name: test_name, driver: @browser}
   if @original_browser.capabilities.browser_name == 'chrome'
@@ -77,4 +61,8 @@ def ensure_eyes_available
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   @eyes.host_os = ENV['APPLITOOLS_HOST_OS']
   @eyes.log_handler = Logger.new('../../log/eyes.log')
+  # Assign all Eyes test to an Applitools Batch identified by the current commit hash.
+  batch = Applitools::BatchInfo.new
+  batch.id = ENV['APPLITOOLS_BATCH_ID']
+  @eyes.batch = batch
 end
