@@ -33,7 +33,7 @@ class DialogInstructions extends React.Component {
             stage_total: this.props.stageTotal,
             puzzle_number: this.props.puzzleNumber
           })}
-        instructions={showInstructions ?  this.props.shortInstructions : undefined}
+        shortInstructions={showInstructions ?  this.props.shortInstructions : undefined}
         instructions2={showInstructions ?  this.props.shortInstructions2 : undefined}
         renderedMarkdown={showInstructions ?  renderedMarkdown : undefined}
         imgURL={showImg ? this.props.imgURL : undefined}
