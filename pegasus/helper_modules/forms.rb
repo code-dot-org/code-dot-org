@@ -69,8 +69,6 @@ module Forms
       review_approved: false,
       city_column: json('processed_data.location_city_s')
     )
-      where[state_column] = state if state
-
       FORMS.
         select(
           json('data.organization_name_s').as(:name),
@@ -80,7 +78,7 @@ module Forms
           kind: kind,
           country_column => country
         ).
-        where(state ? {state_column => state} : {}).
+        where(state ? {state_column => state.upcase} : {}).
         where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
         where(review_approved ? {review: 'approved'} : {}).
         order_by(:city, :name).
