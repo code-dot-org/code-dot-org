@@ -15,6 +15,7 @@ const styles = {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center'
   }
 };
 
@@ -106,7 +107,7 @@ export default class AudioRecorder extends React.Component {
               <Button
                 onClick={this.toggleRecord}
                 id="start-stop-record"
-                style={assetButtonStyles.button}
+                style={{...assetButtonStyles.button, ...{marginRight: 10}}}
                 color={Button.ButtonColor.blue}
                 icon={this.state.recording ? "stop" : "circle"}
                 text={this.state.recording ? i18n.stop() : i18n.record()}
