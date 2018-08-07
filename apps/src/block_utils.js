@@ -740,6 +740,7 @@ exports.createJsWrapperBlockCreator = function (
    *   should contain '{THIS}' in order to create an input for the instance
    * @params {string} opts.objectType Type used for the 'THIS' input in a method
    *   call block.
+   * @param {string} opts.thisObject Specify an explicit `this` for method call.
    * @param {boolean} opts.eventBlock Generate an event block, which is just a
    *   block without a previous statement connector.
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
@@ -762,6 +763,7 @@ exports.createJsWrapperBlockCreator = function (
     strictOutput,
     methodCall,
     objectType,
+    thisObject,
     eventBlock,
     eventLoopBlock,
     inline,
@@ -814,7 +816,7 @@ exports.createJsWrapperBlockCreator = function (
       });
     }
     const inputs = [...args];
-    if (methodCall) {
+    if (methodCall && !thisObject) {
       const thisType = objectType ||
         defaultObjectType ||
         Blockly.BlockValueType.NONE;
@@ -898,7 +900,7 @@ exports.createJsWrapperBlockCreator = function (
       }
 
       if (methodCall) {
-        const object =
+        const object = thisObject ||
           Blockly.JavaScript.valueToCode(this, 'THIS', ORDER_MEMBER);
         prefix += `${object}.`;
       }
