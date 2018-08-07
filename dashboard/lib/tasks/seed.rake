@@ -167,10 +167,6 @@ namespace :seed do
     end
   end
 
-  task import_custom_levels: :environment do
-    LevelLoader.load_custom_levels
-  end
-
   task blocks: :environment do
     Block.load_records
   end
@@ -226,6 +222,11 @@ namespace :seed do
 
   task state_cs_offerings: :environment do
     Census::StateCsOffering.seed
+  end
+
+  # Seed school course offering data where the courses are taught by outside curriculum providers, such as TEALS.
+  task other_curriculum_offerings: :environment do
+    Census::OtherCurriculumOffering.seed
   end
 
   task sample_data: :environment do
