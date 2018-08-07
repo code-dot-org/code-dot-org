@@ -12,6 +12,7 @@ import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
+  remix,
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 
@@ -35,6 +36,7 @@ class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
+    remix: PropTypes.func.isRequired,
   };
 
   onPublish = () => {
@@ -61,6 +63,10 @@ class PersonalProjectsTableActionsCell extends Component {
     this.props.saveProjectName(this.props.projectId, this.props.updatedName);
   };
 
+  onRemix = () => {
+    this.props.remix(this.props.projectId);
+  };
+
   render() {
     const {isEditing, isSaving} = this.props;
 
@@ -74,7 +80,7 @@ class PersonalProjectsTableActionsCell extends Component {
               {i18n.rename()}
             </PopUpMenu.Item>
             <PopUpMenu.Item
-              onClick={() => console.log("Remix was clicked")}
+              onClick={this.onRemix}
             >
               {i18n.remix()}
             </PopUpMenu.Item>
@@ -142,5 +148,8 @@ export default connect(state => ({}), dispatch => ({
   },
   saveProjectName(projectId, updatedName) {
     dispatch(saveProjectName(projectId, updatedName));
+  },
+  remix(projectId) {
+    dispatch(remix(projectId));
   },
 }))(PersonalProjectsTableActionsCell);

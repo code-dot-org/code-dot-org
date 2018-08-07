@@ -24,6 +24,9 @@ const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
 const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
+
+const REMIX_FAILURE = 'projects/REMIX_FAILURE';
+
 // Action creators
 
 /**
@@ -104,6 +107,9 @@ export function saveFailure(projectId) {
   return {type: SAVE_FAILURE, projectId};
 }
 
+export function remixFailure(projectId) {
+  return {type: REMIX_FAILURE, projectId};
+}
 
 
 // Reducers
@@ -319,6 +325,10 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         ...state,
         projects: unsavedProjects,
       };
+    case REMIX_FAILURE:
+      return {
+        ...state,
+      };
     default:
       return state;
   }
@@ -385,6 +395,21 @@ const updateProjectNameOnServer = (project) => {
   };
 };
 
+const remixProjectOnServer = (project) => {
+  return (dispatch) => {
+    $.ajax({
+      url: `projects/${project.projectType}/${project.id}/remix`,
+      method: 'GET',
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(project)
+    }).done((data) => {
+    }).fail((jqXhr, status) => {
+      dispatch(remixFailure(project.id));
+    });
+  };
+};
+
 export const saveProjectName = (projectId, updatedName) => {
   return (dispatch) => {
     fetchProjectToUpdate(projectId,
@@ -394,6 +419,19 @@ export const saveProjectName = (projectId, updatedName) => {
       } else {
         data.name = updatedName;
         dispatch(updateProjectNameOnServer(data));
+      }
+    });
+  };
+};
+
+export const remix = (projectId) => {
+  return (dispatch) => {
+    fetchProjectToUpdate(projectId,
+    (error, data) => {
+      if (error) {
+        console.error(error);
+      } else {
+        dispatch(remixProjectOnServer(data));
       }
     });
   };
