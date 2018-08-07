@@ -53,9 +53,13 @@ gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
 
+# Allow profiling in all environments (including production). It will only be enabled when
+# CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
+gem 'memory_profiler'
+gem 'rack-mini-profiler'
+
 group :development do
   gem 'annotate'
-  gem 'rack-mini-profiler'
   gem 'ruby-progressbar', require: false
   gem 'thin'
   gem 'web-console'

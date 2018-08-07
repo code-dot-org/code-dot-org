@@ -1,0 +1,17 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "pointToward",
+    "blockText": "point {SPRITE} toward {LOCATION}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}
