@@ -738,6 +738,9 @@ pt-BR:
       MC_HOC_Kiki_02_markdown_instruction: Alguém precisa estar na placa de pressão
         antes que a porta lateral abra. Ajude o Agent a chegar até a placa para que
         o jogador possa sair da casa.
+      MSM Defining Vars 1_markdown_instruction: |-
+        Escreva um programa que produz um triângulo
+        verde sólido de 50 pixels.
       NEW Course 4 Artist Functions 10.1_markdown_instruction: |-
         Use as funções dos desafios
         anteriores para desenhar esse padrão.
@@ -952,6 +955,25 @@ pt-BR:
         * * Jogo gratuito: * * Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
+      courseA_collector_loops2_markdown_instruction: "Pegue todas as três pilhas!
+        Mova Laurel para cada peça do tesouro, e então use esse block: \n<xml><block
+        type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2018_markdown_instruction: "Pegue todas as três pilhas!
+        Mova Laurel para cada peça do tesouro, e então use esse block: \n<xml><block
+        type=\"collector_collect\"/></xml>"
+      courseA_collector_loops_challenge1_markdown_instruction: '"Você pode me ajudar
+        encontrar alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos
+        devo dar."'
+      courseA_collector_loops_challenge1_2018_markdown_instruction: '"Você pode me
+        ajudar encontrar alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos
+        passos devo dar."'
+      courseA_collector_preLoops1_markdown_instruction: |-
+        Esta é Laurel, a Aventureira!
+
+        Pressione "Run" para vê-la andar até o tesouro e pegá-lo
+      courseA_collector_preLoops7_markdown_instruction: "Pegue todas as três pilhas!
+        Mova Laurel para cada peça do tesouro, e então use esse block: \n<xml><block
+        type=\"collector_collect\"/></xml>"
       courseA_harvester_forVideo_markdown_instruction: Você consegue pegar todo o
         milho usando apenas ** um ** bloco de movimento?
       courseA_harvester_loops1_markdown_instruction: Ajude a colheitadeira a pegar
@@ -986,8 +1008,14 @@ pt-BR:
         * * Jogo gratuito: * * Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
+      courseB_iceage_loops12_markdown_instruction: Pegue a noz da maneira que você
+        conseguir!
       courseB_iceage_loops7_markdown_instruction: 'Scrat realmente quer aquela noz! '
       courseB_iceage_loops8_markdown_instruction: 'Você consegue corrigir este código? '
+      courseC_collector_prog9_markdown_instruction: '*"Vamos pegar todo o tesouro!"*'
+      courseC_collector_prog9_2018_markdown_instruction: '*"Vamos pegar todo o tesouro!"*'
+      courseC_collector_progA_markdown_instruction: Ajude Laurel a coletar todo o
+        tesouro.
       courseC_harvester_loops3_markdown_instruction: Colete todas as abóboras.
       courseC_harvester_loops3_2018_markdown_instruction: Colete todas as abóboras.
       courseC_maze_programming_challenge1_markdown_instruction: 'O pássaro precisa
@@ -1008,6 +1036,11 @@ pt-BR:
         flor\ne produza mel na colmeia. \r\n\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2018_markdown_instruction: "Colete todo o néctar de
         cada flor\ne produza mel na colmeia. \r\n\r\nUse um laço aninhado. "
+      courseD_bounce_events1_markdown_instruction: Vá até a bandeira! Anexe um bloco
+        ao bloco "quando seta para esquerda" e clique em "Executar" para mover o jogador
+        até a bandeira.
+      courseD_iceage_loops12_markdown_instruction: Pegue a noz da maneira que você
+        conseguir!
       courseD_iceage_loops7_markdown_instruction: 'Scrat realmente quer aquela noz! '
       courseD_iceage_loops8_markdown_instruction: 'Você consegue corrigir este código? '
       courseD_maze_nestedLoops4_markdown_instruction: "Leve-me até o girassol usando
@@ -1188,6 +1221,9 @@ pt-BR:
       grade2_PuppyLoops_9_markdown_instruction: "Parece que o C no código está desenhado
         ao contrário!\r\n\r\nVocê\nconsegue fazê-lo parecer com um C de novo?"
       grade2_collector_9_markdown_instruction: '*"Vamos pegar todas as moedas!"*'
+      grade2_collector_A_markdown_instruction: Ajude Laurel a coletar todo o tesouro.
+      grade2_collector_A_2018_markdown_instruction: Ajude Laurel a coletar todo o
+        tesouro.
       grade2_puppy_loops4_markdown_instruction: |-
         Neste desafio, dois laços "repita" ajudarão você
         a pegar o porco com o menor número possível de blocos!
@@ -1311,8 +1347,8 @@ pt-BR:
       grade4_bee_nestedLoops4_markdown_instruction: "Colete todo o néctar de cada
         flor\ne produza mel na colmeia. \r\n\r\nUse um laço aninhado. "
       grade4_frozen_freeplay_markdown_instruction: |-
-        Você se tornou oficialmente um artista mestre! Crie
-        um país das maravilhas de gelo.
+        Você se tornou oficialmente um artista mestre!
+        Crie um país das maravilhas de gelo.
       grade4_frozen_functions0_markdown_instruction: |-
         Um círculo é uma forma especial. Você pode descobrir
         que número usar para substituir os pontos de interrogação para desenhar um círculo?

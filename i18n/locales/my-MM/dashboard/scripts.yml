@@ -40,6 +40,10 @@ my:
           stages:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
         algebraPD2:
           stages:
             Teacher Dashboard:

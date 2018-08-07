@@ -12,7 +12,7 @@ lt:
       draw a triangle: nubrėžk trikampį
       draw a house: namas
       draw a star: nupiešk žvaigždę
-      do something: nauja komanda
+      do something: daryk kažką
       jump: šok
       set score: taškai =
       get nectar: gauk nektarą
@@ -22,8 +22,8 @@ lt:
       move right: judėk dešinėn
       move up: judėk aukštyn
       move down: judėk žemyn
-      move left: judėk kairėn
+      move left: judėk į kairę
       collect: surink
       turn left: pasisuk į kairę
-      move forward: ženk į priekį
+      move forward: judėk į priekį
       turn right: pasisuk į dešinę

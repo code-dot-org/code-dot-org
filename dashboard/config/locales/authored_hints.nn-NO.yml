@@ -3065,12 +3065,12 @@ nn:
       MC_HOC_2017_08_RY_authored_hint:
         MC_HOC_2017_08_RY_a: Trykk "Køyr agent"! Sjølv om det ikkje er riktig, kan
           du køyre koden. Køyr og tilbakestill koden igjen og igjen, heilt til du
-          finn ut kva som går gale.
+          finn ut kva som går feil.
         MC_HOC_2017_08_RY_b: Det er mange måtar å løyse oppgåva på. Prøv nokre ulike!
       MC_HOC_2017_08_Will_authored_hint:
         MC_HOC_2017_08_RY_a: Trykk "Køyr agent"! Sjølv om det ikkje er riktig, kan
           du køyre koden. Køyr og tilbakestill koden igjen og igjen, heilt til du
-          finn ut kva som går gale.
+          finn ut kva som går feil.
         MC_HOC_2017_08_RY_b: Det er mange måtar å løyse oppgåva på. Prøv nokre ulike!
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: Bruk funksjonane til å løyse denne oppgåva enklare!
@@ -3713,6 +3713,14 @@ nn:
           kvar gong du prøver ein ny.
         4-5_Artist_Patterns_3_b: Viss det blir altfor forvirrande kode, kan du alltid
           klikke "Start på nytt" og prøve ein gong til!
+      courseE_farmer_functions1_authored_hint:
+        courseE_farmer_functions1_a: Verktøykassa er organisert litt annerledes denne
+          gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du
+          har tilgjengelig.
+      courseE_farmer_functions1_2018_authored_hint:
+        courseE_farmer_functions1_a: Verktøykassa er organisert litt annerledes denne
+          gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du
+          har tilgjengelig.
       courseE_farmer_predict1_authored_hint:
         courseE_farmer_ramp12a: Gå gjerne tilbake til den forrige oppgave hvis du
           trenger en påminnelse om hvordan man skal plukke vekster bare hvis det finnes

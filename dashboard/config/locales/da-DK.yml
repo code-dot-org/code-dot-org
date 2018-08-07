@@ -526,7 +526,7 @@ da:
         Disneys Infinity
     minecraft:
       title: Minecraft
-      body: Udforsk en Minecraft-verden gennem kode.
+      body: Udforsk en Minecraft-verden gennem kode
     minecraft2016:
       title: Minecraft
     hero:
@@ -743,4 +743,6 @@ da:
   cookie_banner:
     accept: Jeg er enig
   gdpr_dialog:
+    message: Data fra din brug af dette websted kan sendes til og gemmes eller behandles
+      i USA.
     true: Ja

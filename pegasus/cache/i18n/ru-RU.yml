@@ -490,8 +490,8 @@ ru-RU:
   minecraft_agent_description: Майнкрафт возвращается с новыми заданиями для Часа
     Кода! Путешествуй и программируй с Майнкрафт.
   minecraft_agent_button: Начать
-  minecraft_designer_description: Запрограммируй поведение животных и существ своего
-    мира Minecraft.
+  minecraft_designer_description: Создайте игру Minecraft. Придумайте собственные
+    варианты курицы, овцы, криперов, зомби и других существ.
   minecraft_designer_button: Начать
   minecraft_adventurer_description: Используй язык кода, чтобы помочь Алекс и Стиву
     отправиться в приключение.
@@ -536,7 +536,7 @@ ru-RU:
   minecraft_og_agent: Майнкрафт снова с вами на Часе Кода, и вы - главный герой! Напишите
     код для путешествия по природным зонам Майнкрафт.
   sports_page_title: Часа Кода Спорт
-  sports_og_title: Часа Кода Спорт Руководство
+  sports_og_title: Попробуй сам. Каждый может научиться.
   sports_og_description: Выбери между игрой в баскетбол и сочетанием различных спортивных
     игр.
   sports_title: Создай свою спортивную игру
@@ -833,7 +833,7 @@ ru-RU:
   dashboard_navigation_view_assessments_surveys: Тесты/Опросы
   dashboard_navigation_add_students: Добавить учеников
   dashboard_navigation_manage_students: Управление учениками
-  dashboard_navigation_lesson_plans_resources: Планы уроков и ресурсы
+  dashboard_navigation_lesson_plans_resources: Стандарты и рамки
   dashboard_navigation_view_stats: Посмотреть статистику
   dashboard_navigation_section: 'Раздел: %{section_name}'
   dashboard_navigation_student: 'Ученик: %{student_name}'
@@ -934,7 +934,7 @@ ru-RU:
     ученика, выбрав опцию <b>«Показать секретное изображение»</b>, а затем <b>«Поменять
     секретное изображение»</b>. Будет сгенерировано новое секретное изображение для
     использования учеником при входе.
-  dashboard_students_secret_word_title: Секретное слово
+  dashboard_students_secret_word_title: Тайные слова
   dashboard_students_secret_word: В данном разделе в качестве секретного параметра
     используется <b>слово</b>. Это значит, что у каждого из ваших учеников есть секретная
     пара слов, используемая для входа вместо пароля. Для входа ученики должны использовать
@@ -1939,6 +1939,7 @@ ru-RU:
     готовы к тому, что функциональность может быть нарушена.
   flappy_shortcode: взмах крыльев
   header_home: На главную
+  header_my_dashboard: Моя доска
   header_courses: курсы
   header_course_catalog: Каталог курсов
   header_project_gallery: Проекты

@@ -19,7 +19,7 @@ is:
         parent_email: 'Netfang foreldris/forráðamanns'
         personal_email: "Einkanetfang <a href=\"%{url}\">(smelltu hér ef þú hefur ekki netfang)</a>"
         username: 'notandanafn'
-        password: 'lykilorð'
+        password: 'Lykilorð'
         password_confirmation: 'Staðfesting lykilorðs'
         current_password: 'Núverandi lykilorð'
         locale: 'Tungumál'
@@ -51,7 +51,7 @@ is:
     placeholder: 'Færðu vísbendingu þína inn hér'
     submit: 'Bæta við vísbendingu'
   appname: "Code.org"
-  stage: "áfangi"
+  stage: "Áfangi"
   stage_number: "Áfangi %{number}"
   puzzle: "Þraut"
   trophies: "bikarar"
@@ -84,7 +84,7 @@ is:
     facebook: 'Facebook'
     windowslive: 'Microsoft reikning'
     clever: 'Clever aðgangur'
-    forgot_password: 'Gleymt lykilorð?'
+    forgot_password: 'Gleymdir þú lykilorðinu þínu ?'
     need_confirmation: "Fékkstu ekki sendar leiðbeiningar um staðfestingu?"
     need_unlock: "Fékkstu ekki leiðbeiningar um opnun?"
     not_linked: "Því miður er Code.org aðgangur þinn ekki tengur við %{provider}. Þú þarft því að skrá þig inn með því að rita lykilorð hér fyrir neðan."
@@ -118,7 +118,7 @@ is:
     additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
     user_type_label: "Tegund aðgangs"
     user_type_teacher: "Kennari"
-    user_type_student: "nemandi"
+    user_type_student: "Nemandi"
     field_is_required: "er nauðsynlegt"
     accept_terms: "Þú verður að samþykkja að stofna aðgang"
     error: "Villa kom upp."
@@ -333,7 +333,7 @@ is:
     student_teacher_disassociated: 'Þú hefur fjarlægt %{teacher_name} sem kennara þinn.'
     panel:
       answer_viewer: 'Kennaraborðið'
-      student: 'nemandi'
+      student: 'Nemandi'
       viewing_solution: 'Skoðun lausnar'
       try_it_yourself: 'Prófaðu þetta'
       section: 'Hópur'
@@ -399,7 +399,7 @@ is:
     view_course: Skoða námskeið
     prize_info: 'Verðlaun fyrir þátttöku (aðeins kennarar í opinberum skólum í USA): Allt að $1.000 bekkjarverðlaun.'
     tryfirst: 'Eða þú getur prófað fyrst og skráð þig seinna:'
-    trynow: 'Prófa núna'
+    trynow: 'Prófaðu núna'
     add_hint_help: 'Vinsamlegast hjálpaðu okkur að bæta gagnlegum vísbendingum við kennsluna á Code.org'
     20hour_overview: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
     test_videos_help: 'Prófaðu nýja myndbandaspilarann okkar í skólanum þínum'
@@ -418,7 +418,7 @@ is:
     announcement_message_fall2016_features: "Við eyddum sumrinu í að búa til nýjungar úr endurgjöfinni frá ykkur notendunum. Nú er hægt að <a href=\"%{pp_url}\" target=\"_blank\">fylgjast með framvindu margra nemenda</a> jafnvel þó þeir séu í félagaforritun á einu tæki. Einnig nota <a href=\"%{csp_widgets_url}\" target=\"_blank\">bestu gagnvirku tækin</a> af námskeiðinu CS Principles með <i>hvaða bekk sem er</i>. Og nemendur þína geta <a href=\"%{unused_code_url}\" target=\"_blank\">geymt ónotaðan kóða</a> á vinnusvæði sínu til að ýta undir að þeir geri tilraunir! Kannaðu allar þessar nýjungar og láttu okkur vita hvað þér finnst."
     announcement_csp_widgets_message: "Ertu að leita að skemmtilegu efni til að kenna bekknum þínum hvernig Internetið virkar, hvernig dulkóðun verndar gögn og önnur hugtök? Við höfum tekið bestu gagnvirku verkfærin í námsefni okkar Grunnhugtök tölvunarfræði og útbúið sjálfstæð örforrit sem þú getur notað hvenær sem er!"
     announcement_learn_more_button: "Læra meira"
-    announcement_try_now_button: "Prófa núna"
+    announcement_try_now_button: "Prófaðu núna"
     announcement_host_an_hour_button: "Sjá um Klukkustund"
     announcement_watch_video_button: "Horfa á myndband"
     announcement_petition: "Sem kennari ert þú í fararbroddi hreyfingar sem vill gefa öllum nemendum í öllum skólum tækifæri til að læra tölvunarfræði. Nú er kominn tími til að kjörnir fulltrúar þínir heyri frá þér. Í Bandaríkjunum hafa skólastjórar, 28 fylkisstjórar og forstjórar stærstu fyrirtækja í Bandaríkjunum ritað opið bréf sem fer þess á leit við Bandaríkjaþing að fjármagna kennslu tölvunarfræði í grunnskólum."
@@ -458,7 +458,7 @@ is:
     female: 'Kvenkyns'
     none: 'Kýs að svara ekki'
   user_type:
-    student: 'nemandi'
+    student: 'Nemandi'
     teacher: 'Kennari'
   footer:
     thank_you: 'Þakkir til <a href="https://code.org/about/donors">stuðningsaðila</a>, <a href="https://code.org/about/partners">samstarfsaðila</a>, <a href="https://code.org/about/team">allra í vinnuteyminu</a>, þeirra sem koma fram í myndböndum og <a href="https://code.org/about/advisors">fræðsluráðgjafa</a> fyrir stuðninginn við gerð Kóðastúdíósins.'
@@ -473,7 +473,7 @@ is:
     more: 'Meira'
     feedback: 'Gefðu endurgjöf'
     translate: 'Hjálpaðu okkur að þýða yfir á þitt tungumál'
-    support: 'Aðstoð'
+    support: 'Stuðningur'
     support_url: 'http://support.code.org'
     tos_short: 'Skilmálar'
     tos: 'Skilmálar'
@@ -585,7 +585,7 @@ is:
       body: "Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum."
     minecraft:
       title: "Minecraft"
-      body: "Kannaðu Minecraft heim með kóða."
+      body: "Kannaðu Minecraft heim með kóða"
     minecraft2016:
       title: "Minecraft"
       body: "Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft."
@@ -717,22 +717,14 @@ is:
     title: "Ef vill: Hjálpaðu okkur að fylgjast með viðleitni okkar til að fá sem flesta hópa með í tölvunarfræði"
     message: "Segðu okkur frá kynþætti þínum (merktu við allt sem á við)"
     races:
-      - 
-        white: "Hvít/ur"
-      - 
-        black: "Svartur/svört eða afrísk-amerísk/ur"
-      - 
-        hispanic: "Latnesk-amerísk/ur"
-      - 
-        asian: "Asísk/ur"
-      - 
-        hawaiian: "Hawaii frumbyggi eða af annarri Kyrrahafsþjóð"
-      - 
-        american_indian: "Amerískur indíáni / Alaska frumbyggi"
-      - 
-        other: "Annað"
-      - 
-        opt_out: "Vil ekki gefa upp"
+      white: "Hvít/ur"
+      black: "Svartur/svört eða afrísk-amerísk/ur"
+      hispanic: "Latnesk-amerísk/ur"
+      asian: "Asísk/ur"
+      hawaiian: "Hawaii frumbyggi eða af annarri Kyrrahafsþjóð"
+      american_indian: "Amerískur indíáni / Alaska frumbyggi"
+      other: "Annað"
+      opt_out: "Vil ekki gefa upp"
     submit: "Senda inn"
     decline: "Loka"
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
@@ -741,7 +733,7 @@ is:
     in_progress: í vinnslu
     completed_too_many_blocks: lokið, of margir kubbar
     completed_perfect: lokið, fullkomið
-    furthest_level_attempted: hæsti unninn áfangi
+    furthest_level_attempted: hæsta prófað borð
     assessment: mat
     submitted: sent inn
   studio:

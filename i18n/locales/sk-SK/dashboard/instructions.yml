@@ -371,6 +371,7 @@ sk:
       CSD U5 black white images pixelation_instruction: Dokončite tvar X písaním núl a jednotiek
       CSD U5 black white images pixelation_2018_instruction: Dokončite tvar X písaním núl a jednotiek
       CSP student contact info_instruction: Zadajte svoju e-mailovú adresu.
+      Course 2 Bee Loops 1_instruction: 'Ahoj, ja som včielka. Pomôžeš mi pozbierať nektár z týchto kvetov? '
       Course 2 Maze Loops 1_instruction: Viete ma dostať k prasiatku použitím 5 blokov?
       Course 4 Artist 1_instruction: 'Pomôžte mi nakresliť krabicu (každá čiara je 200 pixelov dlhá) '
       Course 4 Artist Binary 7_instruction: Dokončite túto kresbu.
@@ -523,6 +524,7 @@ sk:
       MC_HOC_Kiki_02_instruction: Dostaňte agenta na prítlačnú dosku.
       Mike Test Bee Conditionals 1_instruction: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       NEW Course 4 Bee For Loops 1_instruction: Použite slučku pre pozbieranie nektáru z každej kvetinky.
+      New Basketball Project_instruction: Vytvor si svoju vlastnú basketbalovú hru. Môžeš zmeniť pravidlá. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
       New Gumball Project_instruction: Vytvorte čo len chcete a zdieľajte to!
       New Ice Age Project_instruction: Vytvorte čo len chcete a zdieľajte to!
       New Infinity Project_instruction: Vytvorte čo len chcete a zdieľajte to!
@@ -530,7 +532,7 @@ sk:
       Overworld Avoid Monsters_instruction: "Bežať ku \"Creeperovi\" nie je dobrý nápad.\nOpatrne prebehnite poza neho a dostante sa do bezpečia svojho domova."
       Overworld Avoid Monsters_2018_instruction: "Bežať ku \"Creeperovi\" nie je dobrý nápad.\nOpatrne prebehnite poza neho a dostante sa do bezpečia svojho domova."
       Overworld Chop Tree - allthethings_instruction: "Drevo je veľmi dôležitý zdroj. \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby si ho vyrúbal."
-      Overworld Chop Tree_instruction: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi "destroy block" na to aby si ho vyrúbal.
+      Overworld Chop Tree_instruction: "Drevo je veľmi dôležitý zdroj. \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby si ho vyrúbal."
       Overworld Chop Tree_2018_instruction: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi "destroy block" na to aby si ho vyrúbal.
       Overworld Chop Trees_instruction: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.
       Overworld Chop Trees_2018_instruction: Potrebujeme postaviť dom pred tým, než slnko zapadne. Domy vyžadujú veľa dreva. Vysekaj všetky 3 stromy.

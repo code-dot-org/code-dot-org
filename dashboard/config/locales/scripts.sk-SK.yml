@@ -4,7 +4,7 @@ sk:
     script:
       category:
         hoc_category_name: Hodina kódovania
-        math_category_name: Matematika
+        math_category_name: Matematické
       name:
         course1:
           title: Kurz 1
@@ -145,7 +145,7 @@ sk:
             Maze:
               name: Bludisko
         frozen:
-          title: Kódujte s Annou a Elsou
+          title: Programuj s Annou a Elsou
           description: Použime kódovanie pre pridanie sa sa k Anne a Else k ich skúmaniu
             krás a čarov ľadu. Vytvoríte snehové vločky a vzory počas korčuľovania
             a spravte zimnú krajinu zázrakov, ktorú môžete následne zdieľať s Vašimi
@@ -478,7 +478,7 @@ sk:
             'Jigsaw: Learn to drag and drop':
               name: 'Skladačky: Naučiť sa "presunutie a pustenie"'
             Loops:
-              name: Cykly
+              name: Slučky
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmus z reálneho života: Zasaď semienko'
         grade4:
@@ -494,7 +494,7 @@ sk:
             'Jigsaw: Learn to drag and drop':
               name: 'Skladačky: Naučiť sa "presunutie a pustenie"'
             Loops:
-              name: Cykly
+              name: Slučky
             Unspotted Bugs:
               name: Nenájdené chyby
         grade5:
@@ -558,7 +558,7 @@ sk:
             Functions with Parameters:
               name: Funkcie s parametrami
             Loops:
-              name: Cykly
+              name: Slučky
             Nested Loops:
               name: Vnorené slučky
             Variables:

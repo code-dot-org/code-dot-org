@@ -155,7 +155,7 @@ es:
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: Ajuste estas variables a "0" ó "1" esto es llamado establecer una "bandera". Esta bandera puede señalar a nuestra función cuál es la dirección en que la abeja tiene que ir.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Haz clic en "Ejecutar" para probar tu programa
+        Course 4 Maze 1_callout1: Dale a "Ejecutar" para probar el programa.
         Course 4 Maze 1_callout2: Usa el bloque de "Repetir" y ponlo alrededor de los bloques del espacio de trabajo
       Course 4 Maze 4_callout:
         repeat: Coloca bloques dentro del bucle para repetir comandos
@@ -272,10 +272,10 @@ es:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes acabarlo?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Haz clic en "Ejecutar" para probar tu programa
+        craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
         craft_drag_block_callout: Arrastra un bloque "avanzar" y ajústalo debajo del otro bloque
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Haz clic en "Ejecutar" para probar tu programa
+        craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
         craft_drag_block_callout: Arrastra un bloque "avanzar" y ajústalo debajo del otro bloque
       Overworld Place Wall_callout:
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.

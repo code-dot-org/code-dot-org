@@ -109,9 +109,9 @@
   "uncheckedCloudError": "确认检查所有的云，看看他们是否是花或者是蜂巢",
   "uncheckedPurpleError": "确认检查所有紫色的花，看看是否有花蜜",
   "whileMsg": "当",
-  "whileTooltip": "重复所包含的操作直到完成。",
+  "whileTooltip": "重复块所包含的操作直到完成。",
   "word": "找到一个单词",
   "wrongCropError": "我不能从这里的收获庄稼 。",
-  "yes": "是",
+  "yes": "对",
   "youSpelled": "你拼写的"
 }

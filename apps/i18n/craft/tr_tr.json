@@ -288,7 +288,7 @@
   "timeShort": "kısa",
   "timeVeryLong": "çok uzun",
   "timeVeryShort": "çok kısa",
-  "to": "e",
+  "to": "Şunu yapmak için:",
   "toSlotNumber": "yuva numarasına",
   "tooManyBlocksFail": "Yapboz {puzzleNumber} tamamlandı. Tebrikler! Bunu ayrıca {numBlocks, plural, one {1 block} other {# blocks}} ile de tamamlayabilirsiniz.",
   "turnRandom": "rastgele dön",

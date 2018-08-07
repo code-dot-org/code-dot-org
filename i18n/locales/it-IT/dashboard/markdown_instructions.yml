@@ -212,6 +212,7 @@ it:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "Questo è un esercizio di riepilogo -- Usa i blocchi `ripeti fino a che` e `se-altrimenti` per arrivare al girasole utilizzando il minor numero possibile di blocchi."
       4-5 Nested Loops 1_markdown_instruction: "Completa il codice per disegnare questi triangoli. Le istruzioni per disegnare il primo sono già pronte. Suggerimento: il disegno dei 3 triangoli richiede in totale una rotazione complessiva di 360 gradi."
       4-5 Nested Loops 11_markdown_instruction: "Riesci a disegnare i 10 quadrati di questo marciapiede utilizzando un ciclo annidato? Ogni quadrato ha il lato di 30 pixel."
+      4-5 Nested Loops 12_markdown_instruction: Riesci a disegnare questi 36 triangoli utilizzando un ciclo annidato?
       4-5 Nested Loops 2_markdown_instruction: "Ora inserisci le istruzioni già presenti (che contengono un ciclo) all'interno di un altro ciclo, in modo da disegnare 10 triangoli. Un ciclo inserito all'interno di un altro ciclo viene detto \"ciclo annidato\".<br>\n<b>Suggerimento</b>: il disegno dei 10 triangoli richiede in totale una rotazione complessiva di 360 gradi.<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-11#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       4-5 Nested Loops 3_markdown_instruction: |-
         Disegna un sole inserendo in un ciclo il codice (che è un ciclo) che trovi già pronto. <br><br>
@@ -561,7 +562,7 @@ it:
         
         Aiuta l'Agent a liberare il sentiero trovando uno schema semplice e usando i cicli per passare sulle prime due pedane a pressione.
       MC_HOC_2017_Ali_markdown_instruction: "Guarda queste funzioni.  Come puoi usarle per evitare i Ghast e aiutare {currentPlayerName} a raggiungere sano e salvo il **Libro incantato** [book_enchanted]? \n\\r\n`build short bridge` = *costruisci un ponte corto* `build long bridge` = *costruisci un ponte lungo* "
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Gioco:** ora tocca a te! Sei pronto a sfidare te stesso e a raccogliere tutti i diamanti presenti in questo livello? "
+      MC_HOC_2017_FP10x10_markdown_instruction: "**Tempo di giocare:** ora tocca a te! Riesci a superare te stesso raccogliendo tutti i diamanti di questo livello?"
       MC_HOC_2017_FP10x10_RE_markdown_instruction: "**Tempo di giocare:** ora tocca a te! Riesci a superare te stesso raccogliendo tutti i diamanti di questo livello?"
       MC_HOC_2017_FP20x20_markdown_instruction: "**Tempo di giocare:** ora tocca a te! Programma l'Agente per farti aiutare ad esplorare questo mondo."
       MC_HOC_2017_Ryan_03_markdown_instruction: "Sapevi che puoi mettere più pezzi di codice in un ciclo?  \\r\n\\r\nUsa un ciclo \"ripetizione\" per aiutare l'Agent a costruire un ponte sul fiume posizionando dei blocchi nell'acqua."
@@ -637,7 +638,7 @@ it:
       Standalone_Artist_7_markdown_instruction: "Una funzione è un altro strumento di programmazione che aiuta ad evitare inutili ripetizioni. Questa funzione disegna un fiore, e puoi usarla ogni volta che vuoi disegnare un fiore. Usala insieme al nuovo blocco \"salta\" per disegnare questi fiori. Suggerimento: i fiori sono distanti tra loro 150 pixel."
       Standalone_Artist_8_markdown_instruction: "Qui trovi la funzione \"draw a shape\" (<i>disegna una forma</i>) che è stata costruita in modo che disegni degli esagoni. Clicca su \"Esegui\" per vedere cosa fa il codice che trovi già pronto e poi fai degli esperimenti per vedere cosa succede. Puoi variare la funzione in modo che disegni una composizione di quadrati, triangoli o ottagoni? Cosa succede se vari anche altri valori?"
       Standalone_Artist_9_markdown_instruction: "Ora continua e realizza qualsiasi figura desideri! Hai anche una funzione vuota che puoi riempire a tuo piacere!"
-      Testing Quantum Farmer_markdown_instruction: "Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>\n<br>\n<b>Suggerimento</b>: usa le opzioni nel menù a discesa del blocco `mentre`."
+      Testing Quantum Farmer_markdown_instruction: "Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>\n<br>\n<b>Suggerimento</b>: usa le opzioni nel menu a discesa del blocco `mentre`."
       Underground Avoiding Lava_markdown_instruction: Sotto alcuni di questi blocchi c'è la lava, che devi coprire per poter andare avanti. L'istruzione `se` ti è utile in questi casi. Aggiungi un istruzione `vai avanti` nel posto giusto per estrarre tutte le risorse disponibili.
       Underground Avoiding Lava_2018_markdown_instruction: Sotto alcuni di questi blocchi c'è la lava, che devi coprire per poter andare avanti. L'istruzione `se` ti è utile in questi casi. Aggiungi un istruzione `vai avanti` nel posto giusto per estrarre tutte le risorse disponibili.
       Underground If Statements_markdown_instruction: Ora la situazione si fa un po' più difficile. Estrai tre blocchi di pietrarossa, ma non cadere nella lava. Usa un'istruzione `se` per posizionare dei ciottoli se scopri la lava.
@@ -647,6 +648,7 @@ it:
       course1_artist_loops_challenge4_markdown_instruction: '*"È il momento di lanciare i dadi! Mi aiuti a disegnarli?"*'
       course1_maze_debugging_challenge1_markdown_instruction: Correggi gli errori in questo programma. Togli i blocchi di troppo e aggiungi quelli che mancano. Fai arrivare l'uccellino fino al maialino!
       course1_maze_debugging_challenge2_markdown_instruction: Correggi questo esercizio. Ci sono già tutti i blocchi giusti, ma sono nell'ordine sbagliato!
+      course2_maze_programming_challenge2_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
       course3_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/><br>\n<br>\nE ora una piccola sfida!<br>\n<br>\nPer ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br>\n<br>\n<b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href=\"https://studio.code.org/s/course4/stage/3/puzzle/11\" target=\"_blank\">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti di lunghezza leggermente diversa."
       course3_artist_functions_challenge1_markdown_instruction: Dopo aver definito una funzione, la puoi richiamare più e più volte - quando e dove vuoi! Prova questo codice per scoprire come funziona, dopo di che modificalo per creare un disegno tutto tuo!
       course3_artist_functions_challenge2_markdown_instruction: |-
@@ -823,10 +825,10 @@ it:
         
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops2_markdown_instruction: |2
-        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
+        Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
          <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_markdown_instruction: |2
-        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
+        Raccogli tutte e tre le perle! Muovi Laurel su ogni pezzo del tesoro e poi usa questo blocco:\r
          <xml><block type="collector_collect"/></xml>
       courseA_collector_loops3_markdown_instruction: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
       courseA_collector_loops3_2018_markdown_instruction: "Come può Laura raccogliere tutti e cinque i diamanti usando un solo blocco?\n<xml><block type=\"maze_moveEast\"/></xml>"
@@ -1407,6 +1409,8 @@ it:
       courseC_maze_programming8_predict1_2018_markdown_instruction: '*"Mantieni la calma e aiutami a trovare il maialino cattivo."*'
       courseC_maze_programming9_markdown_instruction: '*"Ora aiutami a sorprendere il maiale nel modo che preferisci!"*'
       courseC_maze_programming9_2018_markdown_instruction: '*"Ora aiutami a sorprendere il maiale nel modo che preferisci!"*'
+      courseC_maze_programming_challenge2_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
+      courseC_maze_programming_challenge2_2018_markdown_instruction: Alcune volte ci sono diversi modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro, piuttosto che muoversi in avanti!
       courseC_puppy_loops8_markdown_instruction: "**Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello."
       courseC_puppy_loops8courseC_maze_loops8_markdown_instruction: "**Sfida:** Metti a frutto ciò che hai imparato negli ultimi esercizi per completare questo livello."
       courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Vai a recuperare i rottami metallici, BB-8!\"_ \n\nUsa cinque blocchi uguali per recuperare i rottami metallici che brillano come questo: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
@@ -1479,7 +1483,7 @@ it:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continua!"_
         
         Sfrutta ciò che hai imparato per recuperare tutti i rottami metallici!
-      courseD_Frozen_nested1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
+      courseD_Frozen_nested1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
       courseD_Frozen_nested2_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Ora, ne disegniamo più di una.\"_\n\nOra parti dalla tua figura e disegnane due o tre di fila saltando in avanti un certo numero di pixel.\n\n- Se salti in avanti **meno** della larghezza della tua figura, le immagini potrebbero sovrapporsi.\n- Se salti in avanti **più** della larghezza della tua figura, otterrai uno spazio vuoto.\n\n<hr/>\n\nLa tua fila potrebbe venire come una di queste:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>  <br/>\n\nOppure, le tue figure potrebbero distribuirsi come una di queste:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
       courseD_Frozen_nested3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Trasformiamo la figura in un fiocco di neve.\"_\n\nOra usa il blocco `salta a 200 avanti 200 in basso` per far saltare di nuovo Elsa al centro e farla girare intorno per disegnare la fila di figure in diverse direzioni.\n\nChe fiocchi spettacolari che puoi realizzare!\n<hr/>\nGuarda questi esempi con diversi poligoni:\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nDelle forme astratte potrebbero rendere il fiocco di neve più simile a uno di questi:\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
       courseD_Frozen_nested4_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Cosa succede se disegniamo i fiocchi di neve uno sopra l'altro?\"_\n\nProva a sovrapporre due diverse figure di fiocchi di neve una sopra l'altra con una piccola rotazione tra le due - guarda cosa ottieni!"
@@ -1619,7 +1623,7 @@ it:
         ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
         ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
         ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
-      courseD_artist_project1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
+      courseD_artist_project1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\n"
       courseD_artist_project1_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)\n\n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Proviamo qualcosa di nuovo. Questa volta, pattina a  zig-zag\"_\n\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\nDisegna uno schema a scalinata che utilizza angoli compresi tra 75 e 105 gradi -- ma assicurati che le curve a sinistra e a destra utilizzino lo stesso angolo.\n(Dopo scoprirai perché.)"
       courseD_artist_project1a_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"Proviamo qualcosa di nuovo. Questa volta, pattina a  zig-zag\"_\n\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\nDisegna uno schema a scalinata che utilizza angoli compresi tra 75 e 105 gradi -- ma assicurati che le curve a sinistra e a destra utilizzino lo stesso angolo.\n(Dopo scoprirai perché.)"
@@ -1719,19 +1723,19 @@ it:
       courseD_bee_conditionals_challenge1_markdown_instruction: Raccogli tutto il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo.
       courseD_bee_conditionals_challenge1_2018_markdown_instruction: Raccogli tutto il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo.
       courseD_bee_nestedLoops1_markdown_instruction: |-
-        *`Ora facciamo qualcosa di grandioso!`*
+        *"Ora facciamo qualcosa di grandioso!"*
         
         Aiuta l'ape a raccogliere tutto il nettare.
       courseD_bee_nestedLoops1_2018_markdown_instruction: |-
-        *`Ora facciamo qualcosa di grandioso!`*
+        *"Ora facciamo qualcosa di grandioso!"*
         
         Aiuta l'ape a raccogliere tutto il nettare.
       courseD_bee_nestedLoops1a_markdown_instruction: |-
-        *`Ora facciamo qualcosa di grandioso!`*
+        *"Ora facciamo qualcosa di grandioso!"*
         
         Aiuta l'ape a raccogliere tutto il nettare.
       courseD_bee_nestedLoops1a_2018_markdown_instruction: |-
-        *`Ora facciamo qualcosa di grandioso!`*
+        *"Ora facciamo qualcosa di grandioso!"*
         
         Aiuta l'ape a raccogliere tutto il nettare.
       courseD_bee_nestedLoops2_markdown_instruction: Questa volta, aiuta l'ape a raccogliere tutto il nettare usando il minor numero possibile di blocchi.
@@ -1752,6 +1756,7 @@ it:
       courseD_bee_nestedLoops9_2018_markdown_instruction: Fai tutto il miele.
       courseD_bee_nestedLoops9_predict2_markdown_instruction: Fai tutto il miele.
       courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Fai tutto il miele.
+      courseD_bounce_events1_markdown_instruction: "Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi \"Esegui\". <br>\nPoi sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina."
       courseD_collector_debugging1_markdown_instruction: |-
         *"Oh no! C'è un problema."*
         
@@ -1936,6 +1941,10 @@ it:
       courseD_farmer_while6_2018_markdown_instruction: "Guarda tutte queste buche!  Ognuna ha bisogno di una diversa quantità di terra.\n\nÈ possibile usare il ciclo `mentre` per riempirle tutte facilmente!"
       courseD_farmer_while8_markdown_instruction: "**Sfida:** Riempi tutte queste buche usando il minor numero possibile di blocchi."
       courseD_farmer_while8_2018_markdown_instruction: "**Sfida:** Riempi tutte queste buche usando il minor numero possibile di blocchi."
+      courseD_farmer_while_challenge1_markdown_instruction: Riempi tutte le buche e rimuovi tutti i mucchi.
+      courseD_farmer_while_challenge1_2018_markdown_instruction: Riempi tutte le buche e rimuovi tutti i mucchi.
+      courseD_farmer_while_challenge2_markdown_instruction: Riempi tutte le buche e rimuovi tutti i mucchi.
+      courseD_farmer_while_challenge2_2018_markdown_instruction: Riempi tutte le buche e rimuovi tutti i mucchi.
       courseD_iceage_loops1_markdown_instruction: Aiuta Scrat a raggiungere la ghianda attraversando queste lastre di ghiaccio!
       courseD_iceage_loops10_markdown_instruction: Aiuta Scrat a percorrere tutto il tragitto fino alla ghianda!
       courseD_iceage_loops11_markdown_instruction: Aiuta Scrat a raggiungere la ghianda!
@@ -2321,6 +2330,38 @@ it:
       courseF_IceAge_8_markdown_instruction: "Qui trovi il codice del precedente esercizio unito a quello per muovere la Nonnina a destra e sinistra. Puoi completare questo codice per fare in modo che si riproduca un suono e si guadagni un punto quando Sid e la Nonnina si scontrano? Clicca su \"Esegui\" per lanciare il gioco."
       courseF_IceAge_9_markdown_instruction: "Tutti devono muoversi più velocemente perché l'era glaciale sta arrivando! Cambia lo sfondo impostandone uno con ghiaccio e imposta la velocità di Sid (personaggio 1) a veloce, quindi premi \"Esegui\" per farlo correre da Diego ad avvertirlo."
       courseF_IceAge_template_markdown_instruction: "Scrat è ancora alla ricerca di ghiande! Aiutalo a scorrazzare in giro attaccando il blocco `sposta ...` a ciascuno degli eventi e cambiando la direzione di marcia in base al tasto freccia. Quando hai finito, clicca su \"Esegui\" per raccogliere tutte le ghiande."
+      courseF_artist_for1_markdown_instruction: "**Tempo di giocare:** Sperimenta con il *ciclo con contatore*  e la variabile `countrer` (*contatore*).  \n\nTrascina qualche blocco e vedi cosa succede.  \n"
+      courseF_artist_for10_markdown_instruction: |-
+        **Tempo di giocare:** Prova ad usare la variabile `counter` (*contatore*) con altri elementi grafici per creare immagini magiche come questa.
+        
+        ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
+      courseF_artist_for10_2018_markdown_instruction: |-
+        **Tempo di giocare:** Prova ad usare la variabile `counter` (*contatore*) con altri elementi grafici per creare immagini magiche come questa.
+        
+        ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
+      courseF_artist_for1_2018_markdown_instruction: "**Tempo di giocare:** Sperimenta con il *ciclo con contatore*  e la variabile `countrer` (*contatore*).  \n\nTrascina qualche blocco e vedi cosa succede.  \n"
+      courseF_artist_for2_markdown_instruction: Usa un ciclo `ripeti ... volte` all'interno di un il *ciclo con contatore* per creare questa pila di triangoli, i lati misurano da 50 a 100 pixel.
+      courseF_artist_for2_2018_markdown_instruction: Usa un ciclo `ripeti ... volte` all'interno di un il *ciclo con contatore* per creare questa pila di triangoli, i lati misurano da 50 a 100 pixel.
+      courseF_artist_for3_markdown_instruction: Crea questi triangoli i cui lati misurano da 20 a 200 pixel e ogni triangolo è largo 20 pixel più del precedente.
+      courseF_artist_for3_2018_markdown_instruction: Crea questi triangoli i cui lati misurano da 20 a 200 pixel e ogni triangolo è largo 20 pixel più del precedente.
+      courseF_artist_for5_markdown_instruction: |-
+        Per disegnare questa figura devi fare solo un piccolo cambiamento al codice del precedente esercizio. Riesci a capire di quale cambiamento si tratta?
+        ___
+        Suggerimento: devi eliminare qualcosa!
+      courseF_artist_for5_2018_markdown_instruction: |-
+        Per disegnare questa figura devi fare solo un piccolo cambiamento al codice del precedente esercizio. Riesci a capire di quale cambiamento si tratta?
+        ___
+        Suggerimento: devi eliminare qualcosa!
+      courseF_artist_for6_markdown_instruction: |-
+        Se ruoti un po' di più, o un po' di meno, di quanto fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando di 89 gradi.
+      courseF_artist_for6_2018_markdown_instruction: |-
+        Se ruoti un po' di più, o un po' di meno, di quanto fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando di 89 gradi.
+      courseF_artist_for7_markdown_instruction: 'Per ottenere questo disegno bastano solo tre piccole modifiche al codice del precedente esercizio!'
+      courseF_artist_for7_2018_markdown_instruction: 'Per ottenere questo disegno bastano solo tre piccole modifiche al codice del precedente esercizio!'
+      courseF_artist_for_challenge1_markdown_instruction: "Riesci a ricreare questo disegno?\n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>"
+      courseF_artist_for_challenge1_2018_markdown_instruction: "Riesci a ricreare questo disegno?\n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>"
+      courseF_artist_for_challenge2_markdown_instruction: "Riesci a ricreare questo disegno usando un solo ciclo?\n\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\" width=\"350px\"/>"
+      courseF_artist_for_challenge2_2018_markdown_instruction: "Riesci a ricreare questo disegno usando un solo ciclo?\n\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\" width=\"350px\"/>"
       courseF_artist_ramp9_markdown_instruction: |-
         Usa ciò che hai imparato per disegnare questo triangolo.
         ___
@@ -2432,6 +2473,28 @@ it:
         In questo esercizio, sappiamo che ogni fiore ha esattamente una dose di nettare, ma i fiori non sono distanziati in modo uniforme.
         
         Raccogli tutto il nettare usando il minor numero possibile di blocchi.
+      courseF_bee_for10_markdown_instruction: "**Sfida:** Usa ciò che hai imparato sui `cicli con contatore` e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente avrai bisogno di più tentativi prima di riuscire a capire tutti i passaggi necessari."
+      courseF_bee_for10_2018_markdown_instruction: "**Sfida:** Usa ciò che hai imparato sui `cicli con contatore` e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente avrai bisogno di più tentativi prima di riuscire a capire tutti i passaggi necessari."
+      courseF_bee_for11_markdown_instruction: "Se il tuo ciclo conta alla rovescia, il valore del passo viene **sottratto** dalla variabile `counter` (*contatore*) ogni volta. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
+      courseF_bee_for11_2018_markdown_instruction: "Se il tuo ciclo conta alla rovescia, il valore del passo viene **sottratto** dalla variabile `counter` (*contatore*) ogni volta. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
+      courseF_bee_for2_markdown_instruction: |-
+        Scrivi il codice per aiutare l'ape a raccogliere tutto il nettare.
+        
+        Avrai bisogno di molti blocchi per questa sfida, ma imparerai un modo più semplice nel prossimo esercizio.
+      courseF_bee_for2_2018_markdown_instruction: |-
+        Scrivi il codice per aiutare l'ape a raccogliere tutto il nettare.
+        
+        Avrai bisogno di molti blocchi per questa sfida, ma imparerai un modo più semplice nel prossimo esercizio.
+      courseF_bee_for6_markdown_instruction: "Puoi usare un `ciclo con contatore` anche per contare alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da **5** a **1** a passi di **1**."
+      courseF_bee_for6_2018_markdown_instruction: "Puoi usare un `ciclo con contatore` anche per contare alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da **5** a **1** a passi di **1**."
+      courseF_bee_for7_markdown_instruction: |-
+        L'ultimo numero del  `ciclo con contatore` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (*contatore*) si modifica del valore indicato  dal  **"passo"**.
+        
+        Prova a raccogliere questi fiori usando un  **"passo"** di 2.
+      courseF_bee_for7_2018_markdown_instruction: |-
+        L'ultimo numero del  `ciclo con contatore` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (*contatore*) si modifica del valore indicato  dal  **"passo"**.
+        
+        Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for8_markdown_instruction: "Questo codice è da completare!\n\nQuale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?"
       courseF_bee_for8_2018_markdown_instruction: "Questo codice è da completare!\n\nQuale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?"
       courseF_bee_for_challenge2_markdown_instruction: <b>Super Sfida sulle variabili:</b> risolvi questo esercizio con il minore numero possibile di blocchi!
@@ -2504,6 +2567,7 @@ it:
         
       grade1_playlab_eventsFP_markdown_instruction: "Usa la tua immaginazione. Come puoi rendere questo gioco ancora più divertente?<br/>\n\n<h5>\n<details>\n<summary><b>Ti serve qualche idea?</b></summary>\n\\t<br/>\n\\t<h5>\n\\t\\t<ul>\n        \\t<li><strong>Quattro chiacchiere</strong> - Aggiungi dei blocchi per far dire \"Ciao!\" ai due personaggi quando si scontrano.</li>\n\n            <li><strong>Dov'è la Draghetta?</strong> - Fai svanire la draghetta quando si preme la freccia in su.</li>\n            <li><strong>Super Draghetta</strong> - Fai muovere la draghetta ad una velocità maggiore e cerca di fare in modo che il cavaliere la raggiunga. </li>\n        </ul>\n\\t</h5>\n</details>\n</h5>"
       grade2_CaringForNewPet_0_markdown_instruction: Per risolvere questo esercizio, collega tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
+      grade2_CaringForNewPet_1_markdown_instruction: Per completare il programma, trascina ancora un blocco `vai avanti` fuori dalla cassetta degli attrezzi.
       grade2_CaringForNewPet_11_markdown_instruction: '*"Mantieni la calma e aiutami a trovare il maialino cattivo."*'
       grade2_CaringForNewPet_4_markdown_instruction: '"Mantieni la calma e aiutami a trovare quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!"'
       grade2_MakeDogTag_1_markdown_instruction: "*\"Fammi costruire una gabbia per il mio mostriciattolo domestico!\"*\n\nTrascina i blocchi dalla cassetta degli attrezzi per far in modo che l'artista disegni lungo le linee grige della figura. (Ogni linea è lunga 100 pixel.)"
@@ -2567,10 +2631,10 @@ it:
         Usa ciò che hai imparato per raccogliere tutto il nettare e poi fare il miele.<br><br>
         <b>Suggerimenti</b><br>
         - Cosa succede se usi un blocco condizionale `se nettare` su un fiore rosso?<br>
-        - Puoi risolvere questo esercizio usando il <i>ciclo</i> `ripeti ... volte`?
+        - Puoi risolvere questo esercizio usando il <i>ciclo</i>`ripeti ... volte`?
       grade3_Conditionals_11 BAD_markdown_instruction: "Questo è un esercizio di riepilogo -- Usa un ciclo `mentre` per raccogliere tutto il nettare da questi fiori."
       grade3_Conditionals_11_markdown_instruction: "Metti insieme tutto ciò che hai imparato!<br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi. Non dimenticarti di fare il miele alla fine."
-      grade3_Conditionals_12_markdown_instruction: "Questo percorso a gradini ormai dovrebbe essere familiare.<br><br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi."
+      grade3_Conditionals_12_markdown_instruction: "Questo percorso a gradini ormai dovrebbe essere familiare.<br>\nRaccogli il nettare solo dai fiori che ne hanno, usando il minor numero possibile di blocchi."
       grade3_Conditionals_13_markdown_instruction: "Questo è un esercizio di riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il nettare dai fiori viola se non ne hanno."
       grade3_Conditionals_2_markdown_instruction: "Aiutami a raccogliere tutto il nettare dai fiori e a produrre tutto il miele, usando il minor numero possibile di blocchi.<br><br>\n<b>Suggerimento</b>: usa il blocco `ripeti ... volte` (<i>ciclo</i>)."
       grade3_Conditionals_3_markdown_instruction: "I fiori viola possono avere una quantità di nettare pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere nettare da un fiore viola se ne ha una quantità pari a 0.<br>\nUsa il blocco `se` per controllare se la quantità è 0 oppure 1.<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-13#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
@@ -2635,15 +2699,18 @@ it:
       grade3_maze_nestedLoops3_markdown_instruction: Fammi arrivare al maialino! Questa volta puoi usare un solo blocco`vai avanti`.
       grade3_maze_nestedLoops4_markdown_instruction: Usa due blocchi `ripeti ... volte` (detti anche <i>cicli</i>) per arrivare al maialino usando meno blocchi possibile.
       grade4_arist_nested_loop_circles1_markdown_instruction: "Questo è un esercizio di riepilogo -- Usa un ciclo annidato per completare il disegno."
+      grade4_arist_nested_loop_flags1_markdown_instruction: Inserisci in un ciclo il codice che trovi già pronto, così da disegnare un mulino a vento.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Ripeti 10 volte la figura disegnata dal codice che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Ripeti 6 volte la figura disegnata dal codice che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?\n"
       grade4_arist_nested_loop_squares1_markdown_instruction: "Riesci a disegnare i 10 quadrati di questo marciapiede utilizzando un ciclo annidato? Ogni quadrato ha il lato di 30 pixel."
       grade4_arist_nested_loop_triangles2_markdown_instruction: "Ora inserisci le istruzioni già presenti (che contengono un ciclo) all'interno di un altro ciclo, in modo da disegnare 10 triangoli. Un ciclo inserito all'interno di un altro ciclo viene detto \"ciclo annidato\".<br>\n<b>Suggerimento</b>: il disegno dei 10 triangoli richiede in totale una rotazione complessiva di 360 gradi.<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-11#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Riesci a disegnare un esagono inserendo in un ciclo le istruzioni per disegnare un triangolo?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Finisci di disegnare i denti del coccodrillo!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Disegna un sole inserendo in un ciclo il codice (che è un ciclo) che trovi già pronto. <br><br>
         Un ciclo inserito in un altro ciclo si chiama "ciclo annidato".<br><br>
         <b>Suggerimento</b>: al termine del disegno di ogni triangolo ti devi spostare PRIMA di girare.
-        
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Riesci a disegnare questi 36 triangoli utilizzando un ciclo annidato?
       grade4_artist_functions1_markdown_instruction: "*\"Io zombie artista. Io amare disegnare!\"*\n\nAiuta lo zombie a disegnare questi occhiali usando dei quadrati con i lati di 100 pixel.\nL'asta tra le lenti è lunga 75 pixel."
       grade4_artist_functions2_markdown_instruction: "Le funzioni ti permettono di definire nuovi blocchi!<br>\n<br>\nAbbiamo spostato i blocchi per disegnare un quadrato all'interno di una funzione chiamata `draw a square` (<i>disegna un quadrato</i>). Puoi usare la funzione `draw a square` per creare gli occhiali?<br>\n<br>\nI quadrati sono distanti 75 pixel."
       grade4_artist_functions2a_markdown_instruction: |-
@@ -2672,6 +2739,7 @@ it:
       grade4_artist_nestedLoops_challenge_markdown_instruction: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"\nwidth=\"150px;\" style=\"mix-blend-mode: multiply;\" /><br>\nEcco il codice per una figura interessante.<br>\n<br>\nChe cosa succede se la ripeti più volte? Nota che il codice per disegnarla fa ruotare l'artista di <i>420 gradi</i> in totale. Ciò significa che, una volta completata la figura, l'artista sarà rivolto in una direzione differente rispetto a quando ha iniziato. Questa nuova direzione sarà esattamente <i>60 gradi a destra</i> rispetto alla direzione iniziale.<br>\n<br>\nSe ripeti per 6 volte questo codice così com'è, ottieni una rotazione totale pari a 6x60, ossia un giro completo di 360 gradi.<br>\n<img\nsrc=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode:\nmultiply;\" /><br>\n<a href=\"https://studio.code.org/c/105644852\" target=\"_blank\">Vedi la soluzione</a>.<br>\n<br>\nSe vuoi fare un giro completo con solo 4 ripetizioni, l'artista deve ruotare di 360 gradi/4 = 90 gradi ogni volta. Puoi farlo aggiungendo un blocco `gira a destra di 30 gradi` prima di ripetere la figura (dato che 60+30 = 90).<br>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-a.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" /><br>\n<a href=\"https://studio.code.org/c/120106816\" target=\"_blank\">Vedi la soluzione</a>.<br>\n<br>\nSe vuoi invece ripetere la figura 12 volte, l'artista deve effettuare una rotazione di 360 gradi/12 = 30 gradi ad ogni ripetizione. Ciò significa che, prima di ripetere la figura, l'artista deve tornare un po' indietro con un blocco `gira a sinistra di 30 gradi` (infatti 60-30 = 30).<br>\n<img src=\"https://programmailfuturo.it/images/codeorg/4-3-11-b.png\"\nwidth=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br>\n<a href=\"https://studio.code.org/c/120106805\" target=\"_blank\">Vedi la soluzione</a>."
       grade4_artist_nestedLoops_challenge2_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/><br>\n<br>\nE ora una piccola sfida!<br>\n<br>\nPer ottenere la figura che vedi devi usare solo blocchi che ti sono già stati mostrati. Riesci a capire come ricrearla? Sentiti libero di fare più tentativi e di commettere errori. Nessuno si aspetta che tu ci riesca perfettamente al primo tentativo. <br>\n<br>\n<b>Suggerimento</b>: La figura che viene ripetuta è quasi identica a quella del <a href=\"https://studio.code.org/s/course4/stage/3/puzzle/11\" target=\"_blank\">precedente esercizio</a>, l'unica differenza consiste nel fatto che il primo ciclo disegna tratti di lunghezza leggermente diversa."
       grade4_artist_nested_loop_circles1_markdown_instruction: "Questo è un esercizio di riepilogo -- Usa un ciclo annidato per completare il disegno."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Inserisci in un ciclo il codice che trovi già pronto, così da disegnare un mulino a vento.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Ripeti 10 volte la figura disegnata dal codice che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione?"
       grade4_artist_nested_loop_squares1_markdown_instruction: "Riesci a disegnare i 10 quadrati di questo marciapiede utilizzando un ciclo annidato? Ogni quadrato ha il lato di 30 pixel."
       grade4_artist_nested_loop_triangles1_markdown_instruction: "Completa il codice per disegnare questi triangoli. Le istruzioni per disegnare il primo sono già pronte. Suggerimento: il disegno dei 3 triangoli richiede in totale una rotazione complessiva di 360 gradi."
@@ -2679,8 +2747,13 @@ it:
         Disegna un sole inserendo in un ciclo il codice (che è un ciclo) che trovi già pronto. <br><br>
         Un ciclo inserito in un altro ciclo si chiama "ciclo annidato".<br><br>
         <b>Suggerimento</b>: al termine del disegno di ogni triangolo ti devi spostare PRIMA di girare.
-        
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Riesci a disegnare questi 36 triangoli utilizzando un ciclo annidato?
+      grade4_artist_parameters_squares1_markdown_instruction: "Clicca su \"modifica\" per completare la definizione della funzione `draw a square` (<i>disegna un quadrato</i>) ed aggiungere un parametro alla sua definizione. Come per il triangolo, il parametro da aggiungere rappresenta la lunghezza dei lati: puoi dargli il nome che preferisci (devi cliccare sul triangolino con la punta verso il basso) e puoi cambiare anche il nome della funzione.<br>\n<br>\nPoi usa la funzione così definita per disegnare 3 quadrati con i lati di 25, 50 e 75 pixel: in ognuno di essi l'angolo in basso a sinistra è a distanza di 100 pixel da quello del precedente.<br>\n<br>\n<b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 15 blocchi in totale?"
       grade4_artist_parameters_triangles2_markdown_instruction: "Cosa c'è di diverso in questi blocchi funzione? Clicca su \"Esegui\" per vedere cosa succede.<br>\n<br>\n<b>Nota</b>: `draw a triangle with length` = <i>disegna un triangolo con lunghezza</i>."
+      grade4_artist_parameters_triangles2b_markdown_instruction: "Riesci a completare questo disegno?<br>\n<br>\nOgni triangolo ha i lati di 25 pixel più lunghi rispetto al precedente. Il primo triangolo ha i lati di 25 pixel."
+      grade4_artist_parameters_triangles3_markdown_instruction: "Riesci a completare questo disegno?<br>\n<br>\nOgni triangolo ha i lati di 25 pixel più lunghi rispetto al precedente. Il primo triangolo ha i lati di 25 pixel."
+      grade4_artist_parameters_triangles4_markdown_instruction: "In questo esercizio il codice della funzione `draw a triangle with length` (<i>disegna un triangolo con lunghezza</i>) non è corretto.<br>\nRiesci a modificarlo per risolvere il problema e quindi disegnare dei triangoli con i lati di lunghezza pari a 25, 50 e 75 pixel?<br>\n<b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 16 blocchi in totale?\n<br><a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+      grade4_artist_parameters_trianglesx_markdown_instruction: "Riesci a completare questo disegno?<br>\n<br>\nOgni triangolo ha i lati di 25 pixel più lunghi rispetto al precedente. Il primo triangolo ha i lati di 25 pixel."
       grade4_bee_conditionals_nested_loops_markdown_instruction: "Questo è un esercizio di riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il nettare dai fiori viola se non ne hanno."
       grade4_bee_conditionals_new1_markdown_instruction: "Questo è un esercizio di riepilogo -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il nettare dai fiori viola se non ne hanno."
       grade4_bee_conditionals_quantum1_markdown_instruction: "La nuvola impedisce all'ape di sapere se dietro c'è un fiore oppure no. Verifica se c'è un fiore e solo in questo caso raccogli il nettare. Attenzione, ciò che trovi dietro la nuvola può cambiare di volta in volta!<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
@@ -2707,6 +2780,7 @@ it:
       grade4_frozen_square_loop1_markdown_instruction: Ciao, sono Anna di Arendelle! Disegniamo un quadrato usando il blocco "ripeti ... volte", così da utilizzare il minor numero possibile di blocchi. Quante volte il blocco "ripeti ... volte" deve ripetere i blocchi al suo interno per ottenere il quadrato?
       grade4_frozen_square_loop2_markdown_instruction: Disegniamo tre quadrati, girando dopo ognuno di essi. Assicurati di girare di 120 gradi ogni volta.
       grade4_frozen_square_loop3_markdown_instruction: Riesci a creare un fiocco di neve usando il blocco "ripeti ... volte" per disegnare 10 volte un quadrato, e il blocco "gira a ..." per girare di 36 gradi tra un quadrato e l'altro?
+      grade4_playlab_freeplay_markdown_instruction: "Tempo di giocare: divertiti a creare il gioco che preferisci. Ecco <a href=\"http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15\" target=\"_blank\">alcune idee</a>. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi."
       grade4_playlab_test_markdown_instruction: "Utilizza la freccia verso destra per far lanciare al cane una fetta di torta.<br>\n<br>\nCome vengono assegnati i punti? <br>\nBisogna aggiungere 1 alla variabile `points` (<i>punteggio</i>) ogni volta che il cane (personaggio 1) colpisce il gatto (personaggio 2) con una fetta di torta.<br>\n<br>\nPer ottenere questo risultato, usa l'evento `quando il personaggio 2 tocca una cosa qualunque` così da attivare un aggiornamento del tuo punteggio ogni volta che l'evento accade. Per incrementare il <i>punteggio</i>, `imposta points a points + 1`<br>\n<br>\nFai salire il tuo punteggio fino a 10 (un punto alla volta!) per risolvere l'esercizio."
       grade4_playlab_test2_markdown_instruction: "In questo esercizio c'è una funzione chiamata `jump` (<i>salta</i>) che consente al cane di saltare in alto di 100 pixel.<br>\n<br>\nClicca su \"Esegui\" ed utilizza questa nuova funzione per raccogliere tutte le bandierine muovendo il cane con i tasti freccia."
       grade4_review_artist2_markdown_instruction: "Questa casa ha bisogno di un tetto! Disegna un triangolo.<br>\n<b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.<br>\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
@@ -2724,11 +2798,15 @@ it:
       grade5_artist_for_loops5_markdown_instruction: |-
         Per disegnare questa figura devi fare solo un piccolo cambiamento al codice del precedente esercizio. Riesci a capire di quale cambiamento si tratta?<br>
         <b>Suggerimento</b>: devi eliminare qualcosa!
+      grade5_artist_for_loops7a_markdown_instruction: Riduci l'angolo a 72 gradi per ottenere questa spirale pentagonale.
       grade5_artist_for_loops8_markdown_instruction: "Ricordi che nella lezione 6 (<a href=\"https://studio.code.org/s/course4/stage/6/puzzle/10\" target=\"_blank\">esercizio 10</a> e seguenti) abbiamo usato la variabile `sides` (<i>lati</i>) per rappresentare il numero dei lati di un poligono? Ora devi fare la stessa cosa con la variabile `counter` (<i>contatore</i>). La figura di questo esercizio inizia con un triangolo ed aggiunge un lato per volta fino ad arrivare a disegnare un decagono (poligono con 10 lati). Ogni lato è lungo 100 pixel. Come puoi usare la variabile `counter` (<i>contatore</i>) presente nel <i>ciclo con contatore</i> per disegnare questa figura?"
       grade5_artist_for_loops9_markdown_instruction: "Cerchiamo di mettere tutto insieme!  Usando le conoscenze che hai acquisito sui <i>cicli con contatore</i> e sulla variabile `counter` (<i>contatore</i>), prova a creare questo disegno in cui ogni figura ha due lati in più della precedente. Accertati che ogni lato sia 10 volte più lungo del numero di lati del poligono."
       grade5_artist_for_loopsfreeplay11_markdown_instruction: "<img\nsrc=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\"\nwidth=\"250px\"/><br>\nOra hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo."
       grade5_artist_functionparameters10_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/><br>\nOra hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo."
+      grade5_artist_parameters_squares1_markdown_instruction: "Clicca su \"modifica\" per completare la definizione della funzione `draw a square` (<i>disegna un quadrato</i>) ed aggiungere un parametro alla sua definizione. Come per il triangolo, il parametro da aggiungere rappresenta la lunghezza dei lati: puoi dargli il nome che preferisci (devi cliccare sul triangolino con la punta verso il basso) e puoi cambiare anche il nome della funzione.<br>\n<br>\nPoi usa la funzione così definita per disegnare 3 quadrati con i lati di 25, 50 e 75 pixel: in ognuno di essi l'angolo in basso a sinistra è a distanza di 100 pixel da quello del precedente.<br>\n<br>\n<b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 15 blocchi in totale?"
+      grade5_artist_parameters_triangles2_markdown_instruction: "Riesci a completare questo disegno?<br>\n<br>\nOgni triangolo ha i lati di 25 pixel più lunghi rispetto al precedente. Il primo triangolo ha i lati di 25 pixel."
       grade5_artist_parameters_triangles2a_markdown_instruction: "Cosa c'è di diverso in questi blocchi funzione? Clicca su \"Esegui\" per vedere cosa succede.<br>\n<br>\n<b>Nota</b>: `draw a triangle with length` = <i>disegna un triangolo con lunghezza</i>."
+      grade5_artist_parameters_triangles4_markdown_instruction: "In questo esercizio il codice della funzione `draw a triangle with length` (<i>disegna un triangolo con lunghezza</i>) non è corretto.<br>\nRiesci a modificarlo per risolvere il problema e quindi disegnare dei triangoli con i lati di lunghezza pari a 25, 50 e 75 pixel?<br>\n<b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 16 blocchi in totale?\n<br><a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       grade5_artist_variables_freeplay10_markdown_instruction: "Tempo di giocare: facciamo un esperimento con il numero di `sides`(<i>lati</i>) delle figure. Riesci a modificare l'algoritmo affinché la dimensione complessiva della figura disegnata rimanga la stessa, indipendentemente dal numero dei suoi lati?"
       grade5_artist_variables_freeplay14_markdown_instruction: |-
         Tempo di giocare: Guarda! Ora l'algoritmo precedente è annidato all'interno di un altro ciclo. Fai degli esperimenti modificando i valori delle due variabili per disegnare delle figure fantastiche.<br><br>
@@ -2749,12 +2827,18 @@ it:
       grade5_artist_variables_triangles1_markdown_instruction: "Disegniamo un triangolo equilatero.\n\nOgni lato deve essere lungo esattamente 50 pixel."
       grade5_artist_variables_triangles1_2018_markdown_instruction: "Disegniamo un triangolo equilatero.\n\nOgni lato deve essere lungo esattamente 50 pixel."
       grade5_artist_variables_triangles2_markdown_instruction: "Adesso nel blocco `vai avanti ...`, invece di usare un valore esplicito di pixel, si fa riferimento ad una variabile di nome `length` (<i>lunghezza</i>). Puoi impostare la variabile `length` a 150 per disegnare questo nuovo triangolo?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-6#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+      grade5_artist_variables_triangles3_markdown_instruction: 'Inserisci il blocco numerico `???` nei blocchi `imposta length a` (<i>imposta lunghezza a</i>) e `ripeti ... volte` e scrivi al posto dei punti interrogativi i valori necessari per disegnare questo insieme di triangoli equilateri aventi i lati lunghi 50 pixel.'
+      grade5_bee_for_loops10_markdown_instruction: "Se il tuo ciclo conta alla rovescia, il valore del passo viene **sottratto** dalla variabile `counter` (*contatore*) ogni volta. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
+      grade5_bee_for_loops5_markdown_instruction: Ora bisogna spostarsi in avanti di `counter` (<i>contatore</i>) volte, e poi raccogliere il nettare `counter` volte. Riesci a svolgere questo compito usando due cicli?
+      grade5_bee_for_loops6_markdown_instruction: Puoi usare un <i>ciclo con contatore</i> anche per contare all'indietro. In questo esercizio, prova a raccogliere il nettare contando all'indietro da 5 ad 1 a passi di 1.
       grade5_bee_for_loops8_markdown_instruction: "Questo codice è da completare! Quale deve essere il passo in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?"
+      grade5_playlab_freeplay_markdown_instruction: "Tempo di giocare: divertiti a creare il gioco che preferisci. Ecco <a href=\"http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15\" target=\"_blank\">alcune idee</a>. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi."
       grade5_playlab_variables1_markdown_instruction: "In questo esercizio non devi scrivere alcun codice. Devi solo premere \"Esegui\" per giocare! <br> <br> Qui sei il cane che sta cercando di raccogliere più bandierine del gatto. Utilizza la freccia verso il basso per muovere il cane. Premi \"Termina\" quando hai finito di giocare."
       grade5_playlab_variables10_markdown_instruction: "Modifica la funzione `patrol` (<i>pattuglia</i>) aggiungendo un parametro `actor` (<i>personaggio</i>), in modo tale da poterla eseguire per i diversi personaggi. Ricorda che sono identificati dai numeri 1, 2 e 3.<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-14#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       grade5_playlab_variables11_markdown_instruction: "Aggiungi un altro parametro chiamato `speed` (<i>velocità</i>)\nalla funzione `patrol` (<i>pattuglia</i>). Prova ad utilizzare il blocco `imposta il personaggio ... velocità ...` con il nuovo parametro `speed` (<i>velocità</i>) per aiutare il pinguino (personaggio 2) a prendere entrambe le bandierine prima che gli altri prendano la loro."
       grade5_playlab_variables12_markdown_instruction: "Esamina il codice che trovi già pronto per vedere se riesci a capire cosa fa ogni blocco.<br>\n<br>\nQuando hai finito, utilizza i tasti freccia per far muovere il cane e raccogliere tutte le bandierine.<br>\n<br>\n<b>Nota</b>: non è necessario modificare il codice."
       grade5_playlab_variables13_markdown_instruction: Utilizza il blocco `quando il personaggio ... tocca ...` per collocare il cane (personaggio 1) in alto a sinistra SOLO quando tocca uno qualunque degli altri personaggi.
+      grade5_playlab_variables14_markdown_instruction: "Tempo di giocare: divertiti a creare il gioco che preferisci. Ecco <a href=\"http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15\" target=\"_blank\">alcune idee</a>. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi."
       grade5_playlab_variables2_markdown_instruction: "Quella del precedente esercizio non è stata un bella gara! Modifica la variabile denominata `dog_speed` (<i>velocità del cane</i>) per essere sicuro di poter raccogliere più bandierine del gatto. Il primo che raccoglie 10 bandierine, vince!\n<br><a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-7#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       grade5_playlab_variables3_markdown_instruction: "Ecco un nuovo tipo di gioco!<br><br>Non devi modificare niente in questo esercizio.<br><br>Utilizza le frecce verso sinistra e verso destra per muoverti, e la freccia verso l'alto per saltare. Riesci a raccogliere tutte le bandierine?"
       grade5_playlab_variables4_markdown_instruction: "Ora c'è una nuova variabile chiamata `height` (<i>altezza</i>) che serve a controllare quanto in alto il cane può arrivare con un salto. Modifica il valore a cui viene impostata `height`, in modo che il cane possa saltare abbastanza in alto da arrivare a raggiungere tutte le bandierine."

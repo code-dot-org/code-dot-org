@@ -3,13 +3,13 @@ es:
   data:
     block_categories:
       Actions: Acciones
-      Loops: Bucles
-      Functions: Funciones
+      Loops: vuelta
+      Functions: funciones
       Color: Color
       Brushes: Pinceles
       Math: Matemáticas
       Logic: Lógica
-      Variables: Variables
+      Variables: variables
       Number: Número
       String: Cadena
       Image: Imagen

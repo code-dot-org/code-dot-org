@@ -69,7 +69,7 @@ nl:
   courses_page:
     title_student: Leer meer op Code Studio
     title_teacher: Leren met Code Studio
-  unplugged_activity: Losgekoppelde activiteit
+  unplugged_activity: UNPLUGGED ACTIVITEIT
   of: van
   more: MEER
   less: MINDER
@@ -143,7 +143,7 @@ nl:
     additional_information: We hebben aanvullende informatie nodig om door te kunnen
       gaan met uw registratie.
     user_type_label: Account type
-    user_type_teacher: Leerkracht
+    user_type_teacher: Leraar
     user_type_student: Leerling
     field_is_required: is vereist
     accept_terms: Je moet akkoord gaan om een account aan te maken
@@ -520,7 +520,7 @@ nl:
     more: Meer
     feedback: Geef feedback
     translate: Help ons te vertalen naar uw taal
-    support: Ondersteuning
+    support: Help en Gemeenschap
     support_url: http://support.code.org
     tos_short: Voorwaarden
     tos: Gebruiksvoorwaarden
@@ -638,9 +638,11 @@ nl:
         in de hoofdrol.
     minecraft:
       title: Minecraft
-      body: Ontdek een Minecraft-wereld met code.
+      body: Ontdek een Minecraft-wereld met code
     minecraft2016:
       title: Minecraft
+      body: Ga dieren en andere Minecraft wezens programmeren in je eigen Minecraft
+        omgeving.
     hero:
       title: Minecraft
     unplugged:
@@ -793,7 +795,7 @@ nl:
     completed_courses: Voltooide cursussen
     all_courses: Alle cursussen
   project:
-    projects: Projecten
+    projects: Projecten overzicht
     create: Project aanmaken
     create_a_project: 'Maak een nieuw project aan:'
     new: Nieuwe maken
@@ -810,7 +812,7 @@ nl:
       deelbare koppeling. Probeer het opnieuw.
     exit: Terug naar de Cursus
     my_projects: Mijn Projecten
-    project_gallery: Projecten
+    project_gallery: Projecten overzicht
     publish: Publiceren
     unpublish: Depubliceren
     share: Delen
@@ -925,7 +927,7 @@ nl:
         none: Wil ik liever niet zeggen
       subjects:
         cs: informatica
-        math: Wiskunde
+        math: wiskundige
         science: Wetenschap
         la: Taalvaardigheden
       resources:
@@ -942,4 +944,6 @@ nl:
   cookie_banner:
     accept: Ik ga akkoord
   gdpr_dialog:
+    message: Gegevens over uw gebruik van deze site kunnen worden verzonden naar en
+      opgeslagen of verwerkt worden in de Verenigde Staten.
     true: Ja

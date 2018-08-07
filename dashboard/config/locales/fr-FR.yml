@@ -29,7 +29,7 @@ fr:
         personal_email: Email personnel <a href="%{url}">(click here if you don't
           have an email address)</a>
         username: nom d'utilisateur
-        password: mot de passe
+        password: Mot de passe
         password_confirmation: Confirmation du mot de passe
         current_password: Mot de passe actuel
         locale: Langue
@@ -98,7 +98,7 @@ fr:
     windowslive: Compte Microsoft
     clever: Compte Clever
     powerschool: Compte Powerschool
-    forgot_password: Mot de passe oublié?
+    forgot_password: Mot de passe oublié ?
     need_confirmation: Pas reçu les instructions de confirmation ?
     need_unlock: Pas reçu les instructions de déverrouillage?
     not_linked: Désolé, ton compte Code.org n'est pas lié à ton %{provider}. Tu dois
@@ -169,7 +169,7 @@ fr:
       pour continuer l’inscription.
     user_type_button: Mise à jour du type de compte
     user_type_label: Type de compte
-    user_type_teacher: Enseignant
+    user_type_teacher: Professeur
     user_type_student: Élève
     field_is_required: est obligatoire
     accept_terms: Vous devez accepter les conditions d'utilisation pour créer un compte
@@ -190,7 +190,7 @@ fr:
     public: Public
     homeschool: École à domicile
     after_school: Après l’école
-    other: Autres
+    other: Autre
     state: État
     district: Quartier
     other_district_not_listed: Autre quartier, non listé ci-dessus
@@ -372,7 +372,7 @@ fr:
       stats: Code Studio
       settings: Mon compte
       logout: Déconnexion
-      signin: Authentification
+      signin: Connexion
       signup: Créer un compte
       already_registered: Déjà enregistré ?
       pair_programming: Programmation en Binôme
@@ -484,8 +484,8 @@ fr:
     teacher_averages: En moyenne, vos élèves ont gagné  %{trophy_average} sur %{trophy_max}
       trophées «Maîtrise du Concept».
     teacher_print_certificates: Imprimer les certificats pour les élèves ayant terminé
-      ce cours.
-    teacher_read_blog: Lisez l'actualité et les mises à jour de nos matériels sur
+      ce cours
+    teacher_read_blog: Lisez l'actualité et les mises à jour de notre matériel sur
       notre Blog Enseignant
     classroom: Votre classe
     student_progress: Les progrès d’apprentissage
@@ -668,7 +668,7 @@ fr:
     try_hour_of_code: Essaie une Heure du Code !
   gender:
     male: Masculin
-    female: Femme
+    female: Féminin
     non_binary: Non binaire
     none: Préfère ne pas répondre
   user_type:
@@ -856,8 +856,8 @@ fr:
       body: Explore un monde Minecraft à travers son code.
     minecraft2016:
       title: Minecraft
-      body: Programmez des animaux et d'autres créatures Minecraft dans votre propre
-        version de Minecraft.
+      body: Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons,
+        des creepers, des zombies et bien d'autres encore.
     hero:
       title: Minecraft
       body: Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité!
@@ -928,8 +928,10 @@ fr:
   multi:
     wrong_title: Réponse incorrecte
     wrong_body: La réponse que tu as saisie est incorrecte.  Merci de réessayer !
-    correct_title: Correcte
+    correct_title: Correct
     correct_body: C'est la bonne réponse.
+    toofew_title: Trop peu de réponses.
+    toofew_body: S’il vous plaît sélectionnez deux réponses avant d'envoyer.
   multi-submittable:
     wrong_title: Merci
     wrong_body: Merci d'avoir envoyé une réponse.
@@ -956,7 +958,7 @@ fr:
     unsubmit-title: Retirer ton évaluation
     unsubmit-body: Retirer ton évaluation va réinitialiser l'heure et la date d'envoi.
       Es-tu sûr ?
-    submit-incomplete-title: Envoyer ton évaluation
+    submit-incomplete-title: Envoyer une évaluation
     submit-incomplete-body: Tu as laissé quelques questions sans réponse. Tu ne pourras
       plus modifier ton évaluation après l'avoir envoyée. Es-tu sûr ?
     submit-complete-title: Envoyer une évaluation
@@ -981,7 +983,7 @@ fr:
     placeholder: Entre ta réponse ici
     open_response_title: Merci
     open_response_body: Merci pour ta réponse !
-    correct_title: Correcte
+    correct_title: Correct
     correct_body: C'est la bonne réponse.
   dialog:
     ok: OK
@@ -1049,7 +1051,7 @@ fr:
       asian: Asiatique
       hawaiian: Hawaïen indigène ou autres îles du Pacifique
       american_indian: Indien d'Amérique ou Alaska
-      other: Autres
+      other: Autre
       opt_out: Préfère ne pas le dire
     submit: Envoyer
     decline: Fermer
@@ -1160,7 +1162,7 @@ fr:
           harassment: Menaces, cyber-intimidation, harcèlement
           offensive: Contenu offensant
           infringement: Violation du droit d'auteur
-          other: Autres
+          other: Autre
         detail: Merci de fournir autant de détails que possible au sujet du contenu
           que tu signales.
         acknowledge: En envoyant ces informations, tu reconnais qu'elles seront traitées
@@ -1326,12 +1328,12 @@ fr:
     form_entries:
       gender:
         male: Masculin
-        female: Femme
+        female: Féminin
         non_binary: Non binaire
         none: Préfère ne pas répondre
       subjects:
         cs: Informatique/Sciences informatiques
-        math: Calculs
+        math: Math
         science: Sciences
         la: Langues
       resources:
@@ -1350,8 +1352,8 @@ fr:
   gdpr_dialog:
     heading: Etes-vous d'accord pour utiliser un site internet situé aux Etats-Unis
       ?
-    message: Vos données de connexion sur ce site peuvent être envoyées et stockées
-      ou traitées aux Etats-Unis.
+    message: Des informations sur votre utilisation de ce site peuvent être envoyées
+      et enregistrées ou traitées aux États-Unis.
     link_intro: Pour plus de détails consultez notre
     privacy_policy: politique de confidentialité
     logout: Déconnexion

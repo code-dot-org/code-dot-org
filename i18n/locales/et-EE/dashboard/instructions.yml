@@ -176,8 +176,8 @@ et:
       2-3 Maze 1_instruction: 'Kas aitad mul ulaka põrsa kinni püüda? Liiguta mõned "liigu edasi" plokid käskluse "kui käivitatakse" alla kokku ja vajuta "Käivita". '
       2-3 Maze 10_instruction: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
       2-3 Maze 11_instruction: Juhata mind lilleni, ma olen näljane! Mitu korda sa pead "korda" plokki kasutama?
-      2-3 Maze 12 (copy 1)_instruction: 'Kas saad asendada eelmise vastuse ainult kahe plokiga? (Vihje: Loo kordus kasutades "korda x korda" plokki.)'
-      2-3 Maze 12 (copy 2)_instruction: 'Kas saad asendada eelmise vastuse ainult kahe plokiga? (Vihje: Loo kordus kasutades "korda x korda" plokki.)'
+      2-3 Maze 12 (copy 1)_instruction: 'Kas saad asendada eelmise vastuse ainult kahe plokiga? (Vihje: loo kordus kasutades "korda x korda" plokki)'
+      2-3 Maze 12 (copy 2)_instruction: 'Kas saad asendada eelmise vastuse ainult kahe plokiga? (Vihje: loo kordus kasutades "korda x korda" plokki)'
       2-3 Maze 12 (old)_instruction: Juhata mind põrsa juurde, nüüd kasuta korda x korda plokki!
       2-3 Maze 12 - One Move Block_instruction: Mine sea juurde! Aga see kord saad ainult ühte 'liigu edasi' plokki kasutada. Kas sa näed teisi plokke, mis sind aitavad?
       2-3 Maze 12_instruction: Mine sea juurde nii, et teed tsükli, milles kasutad ainult ühte 'liigu edasi' plokki 'korda' tsükli sees!
@@ -202,7 +202,7 @@ et:
       2-3 Maze Loops 17_instruction: Kasuta seda, mida õppisid, et mind päevalilleni aidata!
       2-3 Maze Loops 18_instruction: "Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\r\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi."
       2-3 Maze Loops 19_instruction: "Teeme asja keerulisemaks!\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia."
-      2-3 Maze Loops 20_instruction: Aita mind päevalilleni, kasutades võimalikult vähe plokke!
+      2-3 Maze Loops 20_instruction: Kas oskad lahendada selle mõistatuse kasutades võimalikult vähe plokke?
       2-3 Maze Loops 21_instruction: Aita mind päevalilleni, kasutades võimalikult vähe plokke!
       2-3 Maze Loops Assessment 1_instruction: 'Ülesanne: Vii mind päevalilleni, kuid kasuta ainult 5 plokki! '
       2-3 Maze sq10_instruction: Aita mind seani! Milliseid plokke korrati?
@@ -240,7 +240,7 @@ et:
       20hr_maze_stage2_16_instruction: Ma tahan päevalille! Kasuta "kui" plokki, et saada mind vähima plokkide arvuga sinna.
       20hr_maze_stage2_17_instruction: Hea küll, teeme seda harjutamiseks uuesti - see ei ole väga erinev, kuid hoidu taimede eest!
       20hr_maze_stage2_18_instruction: '"Kui-teine" plokid kontrollivad tingimust ja teeb vastavalt ühte või teist asja. Et saada mind päevalilleni, kasuta seda uut plokki.'
-      20hr_maze_stage2_19_instruction: Üks harjutamine veel "kui-teine" plokiga, kas saad esimese korraga õigesti?
+      20hr_maze_stage2_19_instruction: Üks harjutus veel, kas sa saad esimese korraga õigesti?
       20hr_maze_stage2_2_instruction: See siga ajab mu suled turri. Aita mul ta leida!
       20hr_maze_stage2_20_instruction: Kas sa saad lisada 3 plokki, et aidata mul lahendada veel keerulisem labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu, ükskõik kui pikk see on.
       20hr_maze_stage2_3_instruction: Jälgi rada ja juhi mind tobeda sea juurde. Väldi dünamiiti või suled lendavad!
@@ -314,6 +314,7 @@ et:
       4-5 Artist Patterns Free Play_instruction: Vaba mäng - proovi luua oma muster!
       4-5 Bee Conditionals - FC Test_instruction: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
       4-5 Bee Conditionals 1_instruction: See pilv takistab minu vaadet! Vaata, kas pilve all on lill ja korja nektarit ainult siis kui seal on lill. Ole ettevaatlik, see võib muutuda!
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Mesilane tahab praegu ainult nektarit. Pea meeles, et kõik objektid pole lilled, seega jälgi, et nektarit kogutaks vaid lilledest.
       4-5 Bee Conditionals 2_instruction: "Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!"
       4-5 Bee Conditionals 3_instruction: Nüüd tahan ma mett teha. Mõne pilve all võib olla meekärg. Kontrolli igat pilve!
       4-5 Bee Conditionals 4_instruction: Mõnikord katab pilv lille ja mõnikord meekärge! Kasuta kui/muidu plokki, et nektarit koguda kui seal on lill, muidu tee mett (sest seal on meekärg).
@@ -405,6 +406,13 @@ et:
       Alien Defender_instruction: 'Projekti idee: Tee kaitsmäng Play Lab''is!'
       Alien Defender_2018_instruction: 'Projekti idee: Tee kaitsmäng Play Lab''is!'
       App Lab test_instruction: test
+      Artist - Nested Loops 1_instruction: 'Lõpeta kood nende kolmnurkade joonistamiseks. Esimene on juba valmis. Vihje: kolm kolmnurka 360-kraadises pöördes.'
+      Artist - Nested Loops 10_instruction: Joonista selle lipu viimane tähtede rida, korrates antud plokke. Tähtede vahekaugus on 50 pikslit, kuid pea meeles, et tähtede laius on 30 pikslit.
+      Artist - Nested Loops 11_instruction: Kas oskad joonistada need kõnnitee 10 ruutu, kasutades pesastatud tsüklit? Iga ruudu pikkus on 30 pikslit.
+      Artist - Nested Loops 12_instruction: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
+      Artist - Nested Loops 5_instruction: Korda antud koodi, et teha tuuleveski.
+      Artist - Nested Loops 6_instruction: Kas oskad joonistada kuusnurga, korrates kolmnurga koodi?
+      Artist - Nested Loops 9_instruction: Joonista alligaatori suhu hambad!
       Artist - Nested Loops Assessment 1_instruction: Kasuta projekti lõpetamiseks pesastatud tsüklit.
       Artist Inspiration_instruction: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? "
       Auto Open Function Editor_instruction: 'Saad kutsuda funktsioone teiste funktsioonide seest! Võta aluseks oma funktsioon „kujund“ ja loo 3 majakujundit, millest esimene on 50 piksli suurune ja igaüks on eelmisest 20 pikslit suurem. Abiks võib olla loenduri tsükli kasutamine. '
@@ -412,11 +420,17 @@ et:
       Bergeron Robot Maze1_instruction: 'Kas aitad mul ulaka põrsa kinni püüda? Liiguta mõned "liigu edasi" plokid käskluse "kui käivitatakse" alla kokku ja vajuta "Käivita". '
       Brad Spooky House Copy_instruction: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud ning veel mõned, millega saad mängida. Joonista midagi ägedat! Katseta pliiatsijoone laiusega, et näha, kuidas see sinu joonistusi muudab!'
       Brad Spooky House_instruction: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud ning veel mõned, millega saad mängida. Joonista midagi ägedat! Katseta pliiatsijoone laiusega, et näha, kuidas see sinu joonistusi muudab!'
+      Building a Foundation Assessment_instruction: Ehita kolmeastmeline püramiid. Muid juhiseid pole, nii et katseta lihtsalt tükkidega, kuni saad selle valmis!
       Busy Bee 2_instruction: Sel mesilasel on vaja palju tööd teha! Kas märkad mingeid mustreid, mida saaksid kasutada oma koodi lihtsustamiseks?
       Busy Bee_instruction: Sel mesilasel on vaja palju tööd teha! Kas märkad mingeid mustreid, mida saaksid kasutada oma koodi lihtsustamiseks?
+      C3-Farmer While Loops 5_instruction: Ohoh, nüüd on meil kaks sügavat auku! Kas oskad kirjutada programmi, mis täidab need mõlemad, kuni maapind on tasane?
+      C3-Farmer While Loops 6_instruction: Ohoh, nüüd on meil suur mullahunnik! Kas oskad kirjutada programmi, mis selle täielikult eemaldab, kuni maapind on tasane?
+      C3-Farmer While Loops 7_instruction: Ohoh, nüüd on meil kolm mullahunnikut! Kas oskad kirjutada programmi, mis need täielikult eemaldab, kuni maapind on tasane?
+      C3-Farmer While Loops Assessment 1_instruction: Siin on palju auke ja hunnikuid. Aita mul neid täita ja eemaldada, et saada maapind tasaseks.
       CSD U5 black white images pixelation 5_instruction: Joonista nüüd ükskõik mida soovid
       CSD U5 black white images pixelation 5_2018_instruction: Joonista nüüd ükskõik mida soovid
       CSP student contact info_instruction: Palun sisestage e-posti aadress.
+      Course 2 Bee Loops 1_instruction: 'Tere, mina olen mesilane. Kas sa aitad mul koguda nektarit nendelt lilledelt? '
       Course 2 Maze Loops 1_instruction: Kas oskad mind viit plokki kasutades põrsa juurde viia?
       Course 4 2_instruction: Mesilane tahab praegu ainult nektarit. Pea meeles, et kõik objektid pole lilled, seega jälgi, et nektarit kogutaks vaid lilledest.
       Course 4 Artist 1_instruction: 'Aita mul joonistada kast. (Iga joon on 200 piksli pikkune) '
@@ -681,6 +695,7 @@ et:
       Crack a Caesar Cipher_instruction: Juhised
       Crack a Caesar Cipher_2018_instruction: Juhised
       Food Fight!_instruction: "Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. "
+      Frequency Analysis_instruction: Test
       Function intro Ryan_instruction: Kasutage funktsiooni "ehitada sild" kaks korda, et teha tee Redstone Torchini.
       Infinity_catch_instruction: Kas oskad aidata Elsal („tegelane 2“) Annale järele jõuda, kasutades nooleklahve?
       Infinity_finale_instruction: Loo midagi vabal valikul ning jaga seda!
@@ -715,7 +730,7 @@ et:
       K-1 Artist1 5_instruction: Joonista selle lille vars kahe joonega!
       K-1 Artist1 6_instruction: Lõpeta pilt, kasutades plokki „hüppa“!
       K-1 Artist1 7_instruction: Kasuta hüppamise plokki, et liikuda ilma joonistamata. Hüppa üles ja joonista üks joon.
-      K-1 Artist1 8_instruction: Joonista katkendjoon, kasutades nii hüppamise kui ka joonistamise plokke
+      K-1 Artist1 8_instruction: Joonista katkendjoon kasutades nii hüppa kui ka joonista plokke
       K-1 Artist1 9_instruction: Joonista ja hüppa, et teha punktiirjoon
       K-1 Artist1 Assessment 1_instruction: Joonista lühikesed ja pikad jooned!
       K-1 Artist1 Assessment 2_instruction: Joonista lühikesed kriipsjooned!
@@ -949,6 +964,7 @@ et:
       New Ice Age Project_instruction: Loo midagi vabal valikul ning jaga seda!
       New Infinity Project_instruction: Loo midagi vabal valikul ning jaga seda!
       New Minecraft Hero Project_instruction: "** Vabamäng: ** Aeg uurida ise edasi!"
+      New Sports Project_instruction: 'Loo oma mäng! Sina otsustad: sa võid kõiki reegleid muuta, spordialasid omavahel siduda, ole loov! Kui lõpetad, klõpsa "Lõpeta" ja lase sõpradel oma mängu nende telefonis proovida.'
       Overworld Avoid Monsters_instruction: Kreeperiga ei tasu kokku põrgata. Liigu kollidest ettevaatlikult mööda, et jõuda oma turvalisse koju.
       Overworld Avoid Monsters_2018_instruction: Kreeperiga ei tasu kokku põrgata. Liigu kollidest ettevaatlikult mööda, et jõuda oma turvalisse koju.
       Overworld Chop Tree - allthethings_instruction: Puit on väga oluline materjal. Paljud asjad on sellest tehtud. Kõnni puu juurde ja kasuta „purusta plokki“, et see maha raiuda.
@@ -970,9 +986,11 @@ et:
       Overworld Powered Minecart_2018_instruction: Tubli töö! Kogusid hulga ehitusmaterjali ja ehitasid tagasihoidliku maja. Nüüd pane kaardi servast oma maja ukseni maha rööpad.
       Overworld Shear Sheep_instruction: Aeg lambaid pügada! Kasuta käsku „püga“, et koguda mõlemalt lambalt villa.
       Overworld Shear Sheep_2018_instruction: Aeg lambaid pügada! Kasuta käsku „püga“, et koguda mõlemalt lambalt villa.
+      PDK5 Conditionals 1_instruction: Lilladel õitel on kas 1 või 0 väärtuses nektarit, kuid sa ei tea, kumb väärtus parasjagu kehtib! Ole tähelepanelik, et mitte koguda nektarit lillalt õielt, kui seal seda ei ole. Kontrolli, kas nektari arv võrdub 1, kasutades plokki „kui“.
       PDK5 Functions 2_instruction: Funktsioonide abil saate määrata uued plokid! Me liigutasime plokke, et joonistada ruutfunktsiooni nimega "joonista ruut". Kas te saate kasutada "joonista ruut" funktsiooni ja teha prillid? Ruudud on üksteisest 75 piksli kaugusel.
       PS copy 2-3 Bee Conditionals 5_instruction: "Ole ettevaatik ja ära korja nektarit lillat värvi õielt kui seal ei ole nektarit.\\r Esmalt pead kontrollima, et õiel oleks vähemalt 1 nektar. Selleks kasuta 'kui on nektarit' plokki."
       Play Lab Rocket 4 (copy 1)_instruction: Päris rakettide starikiirus on üsna aeglane, alles hiljem hakkavad nad kiirust koguma- paneme enda oma ka! Kirjuta astmeline funktsioon mis kirjeldab seda raketti mis liigub "sekundeid" ruudus meetrit sekundis.
+      Quantum Bee_instruction: Lilladel õitel on kas 1 või 0 väärtuses nektarit, kuid sa ei tea, kumb väärtus parasjagu kehtib! Ole tähelepanelik, et mitte koguda nektarit lillalt õielt, kui seal seda ei ole. Kontrolli, kas nektari arv võrdub 1, kasutades plokki „kui“.
       Ryan - 4-5 Bee Conditionals 2_instruction: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
       Ryan - Bee Conditionals_instruction: Mesilane tahab ainult nektarit praegu. Kõik asjad ei ole lilled, nii et vaata IGA PILVE alla, et näha kas see peidab lille. Kui peidab, siis saad sa nektarit koguda.
       Ryan Test Locked Blocks_instruction: Siin on funktsioon nimega „patrull“. Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
@@ -993,9 +1011,11 @@ et:
       The Vigenere Cipher Widget_2018_instruction: Juhised
       The Vigenere Cipher_instruction: Juhised
       Total Artist Clone Me_instruction: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud ning veel mõned, millega saad mängida. Joonista midagi ägedat! Katseta pliiatsijoone laiusega, et näha, kuidas see sinu joonistusi muudab!'
+      U2 Vigenere_instruction: Test
       U2 frequency caesar_instruction: Juhised
       U2 frequency random sub_instruction: Juhised
       U2 vigenere cipher_instruction: Juhised
+      U2L14 frequency random_instruction: Test
       U4 vigenere cipher 2_instruction: Juhised
       U4L02 - Objects - Template1_instruction: Šabloon
       U4L02 - Objects - Template1_2018_instruction: Šabloon
@@ -1068,14 +1088,14 @@ et:
       course3_playlab_stage16_3_instruction: Kas oskad kirjutada programmi, mille abil see koer liigub kassi juurde?
       course3_playlab_stage16_4_instruction: Kas sa saaksid kirjutada programmi, mille abil koer liigub kassi juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
       course3_playlab_stage16_5_instruction: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks teha?
-      course3_playlab_stage16_6_instruction: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja lase sõpradel telefonis lugu proovida.
+      course3_playlab_stage16_6_instruction: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja lase sõpradel nende telefonis oma lugu proovida.
       course3_playlab_stage17_1_instruction: Kas saaksid kirjutada programmi, mille abil kaheksajalg ütleb „tere“, kui temal klikitakse?
       course3_playlab_stage17_2_instruction: Kas sa saaksid kirjutada programmi, mille abil liigutada pingviini üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks kõigi sihtmärkideni?
       course3_playlab_stage17_3_instruction: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada. Kas oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
       course3_playlab_stage17_4_instruction: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja teha nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja kõlab heli „löök“?
       course3_playlab_stage17_5_instruction: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni saad punkti?
       course3_playlab_stage17_6_instruction: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta pingviini kiirust ja liigutada teda nooltega kuni punkti saad?
-      course3_playlab_stage17_7_instruction: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja lase sõpradel telefonis lugu proovida.
+      course3_playlab_stage17_7_instruction: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja lase sõpradel nende telefonis oma lugu proovida.
       course4_artist_fwp_challenge1_instruction: Proovi see programm käivitada, tee muudatused ja vaata, mis juhtub. Kas saad aru, kuidas see toimib? (Või kustuta see ja lisa selle asemel hoopis midagi muud)
       courseA_collector_loops8_instruction: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops8_2018_instruction: Kirjutage kood, et saada kätte kõik aare.
@@ -1299,11 +1319,16 @@ et:
       grade3_robotFarmer_ConditionalsIntro_6_instruction: Eemalda kõik mullahunnikud, kasutades võimalikult vähe plokke. Uued valikud ploki „tingimusel“ rippmenüüs ütlevad mulle, kas ma seisan hunniku või augu kohal.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Aita mul täita kõik need augud 5 labidatäie mullaga. Vihje: sa võid ploki „tingimusel“ sisse lisada ploki „korda“.'
       grade4_arist_nested_loop_circles1_instruction: 'Ülesanne: Kasuta projekti lõpetamiseks pesastatud tsüklit.'
+      grade4_arist_nested_loop_flags1_instruction: Korda antud koodi, et teha tuuleveski.
       grade4_arist_nested_loop_polygons1_instruction: "Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?"
       grade4_arist_nested_loop_polygons2_instruction: "Korda seda disaini 6 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama? "
+      grade4_arist_nested_loop_squares1_instruction: Kas oskad joonistada need kõnnitee 10 ruutu, kasutades pesastatud tsüklit? Iga ruudu pikkus on 30 pikslit.
       grade4_arist_nested_loop_triangles2_instruction: 'Nüüd istuta see korduse tsükkel teise korduse tsükli sisse, et joonistada 10 kolmnurka. Seda nimetatakse "pesaga"tsükliks.  '
+      grade4_arist_nested_loop_triangles3_instruction: Kas oskad joonistada kuusnurga, korrates kolmnurga koodi?
+      grade4_arist_nested_loop_triangles4_instruction: Joonista alligaatori suhu hambad!
       grade4_arist_nested_loop_triangles5_instruction: |-
         Tee päike, asetades alguskood teise tsüklisse.\r\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
+      grade4_arist_nested_loop_triangles6_instruction: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
       grade4_artist_functions1_instruction: "Aita zombile joonistada prilid, kasutades 100 piksli pikkuste külgedega ruute.\\r\nKaar klaaside vahel on 75 piksli pikkune."
       grade4_artist_functions2_instruction: "Funktsioonide abil saate uusi plokke määratleda! \\r\\r Me liigutasime ruudu joonistamiseks vajalikud plokid funktsiooni nimega \"joonista ruut\". Kas te saate kasutada \"joonista ruut\" funktsiooni ja teha prillid?\\r\\r Ruudud on üksteisest 75 piksli kaugusel."
       grade4_artist_functions_challenge_instruction: Kasuta soovitatud funktsioone nelja kuusnurkade rea joonistamiseks. Pane tähele, kuidas meie paariarvulised read nihkuvad paremale?
@@ -1312,9 +1337,13 @@ et:
         Klõpsa siia, et uuesti vihjeid vaadata!\r \r Siin on kood huvitava kuju tegemiseks.  Mis juhtub, kui kordad seda mitu korda, pöörates iga korduse järel?   Arvesta sellega, et selle kujundi pöörded annavad kokku 420 kraadi, nii et kunstnik on joonistamist lõpetades näoga teise suunda kui alguses.  See uus suund on täpselt 60 kraadi algsuunast paremale.
       grade4_artist_nestedLoops_challenge2_instruction: Nüüd aga väljakutse! Kasuta katse-eksitus meetodit. Sa ei pea kohe esimesel korral ideaalset tulemust saama. Tahad rohkem vihjeid näha? Klõpsa siia!
       grade4_artist_nested_loop_circles1_instruction: 'Ülesanne: Kasuta projekti lõpetamiseks pesastatud tsüklit.'
+      grade4_artist_nested_loop_flags1_instruction: Korda antud koodi, et teha tuuleveski.
       grade4_artist_nested_loop_polygons1_instruction: "Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?"
+      grade4_artist_nested_loop_squares1_instruction: Kas oskad joonistada need kõnnitee 10 ruutu, kasutades pesastatud tsüklit? Iga ruudu pikkus on 30 pikslit.
+      grade4_artist_nested_loop_triangles1_instruction: 'Lõpeta kood nende kolmnurkade joonistamiseks. Esimene on juba valmis. Vihje: kolm kolmnurka 360-kraadises pöördes.'
       grade4_artist_nested_loop_triangles5_instruction: |-
         Tee päike, asetades alguskood teise tsüklisse.\r\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
+      grade4_artist_nested_loop_triangles6_instruction: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
       grade4_artist_parameters_squares1_instruction: 'Klõpsa käsku „redigeeri“, et täita funktsiooni „joonista ruut“ määratlus ja lisada üks parameeter. Selleks on vaja pikkuse parameetrit, just nagu kolmnurga puhul. See kord joonista kolm ruutu küljepikkusega 25, 50 ja 75, vahekaugus 100 pikslit.'
       grade4_artist_parameters_triangles2_instruction: Kas märkad nende funktsiooniplokkide juures mingit erinevust? Klõpsa käsku „Käivita“ ja vaata, mis juhtub.
       grade4_artist_parameters_triangles2b_instruction: 'Kas oskad selle joonistuse lõpetada? Vihje: iga kolmnurga küljed on eelmisest 25 pikslit pikemad. Esimese kolmnurga küljepikkus on 25 pikslit.'
@@ -1370,6 +1399,10 @@ et:
       grade5_artist_binary9_instruction: |-
         Siin on joonistamiseks suurema eraldusvõimega lõuend – 16 korda 16 pikslit!\r \r Kas näed, mis juhtub, kui hakkame bittidesse loominguliselt suhtuma?
       grade5_artist_for_loops1_instruction: Kasuta 'korduste arvu' tsüklit 50 piksli laiuse kolmnurga joonistamiseks. Kui sa oskad ühe kaupa 1st 3ni loendada võid seda kasutada nagu 'korda' tsüklit.
+      grade5_artist_for_loops10_instruction: |-
+        Mõtled välja, kuidas kasutada kõiki neid asju, et selline pilt luua! \r
+        \r
+        Soovid vihjet? Kliki siia.
       grade5_artist_for_loops5_instruction: |-
         Selle joonistuse saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?\r \r Vihje: sa pead midagi eemaldama!
       grade5_artist_for_loops6_instruction: Kui pöörate kujundit tehes natuke rohkem või vähem, saad kena efekti. Proovi kasutada osa eelmise taseme koodi, kuid pööra 89 kraadi, et luua see väänatud ruuduspiraal.
@@ -1448,9 +1481,11 @@ et:
       level 'grade3_Loops_8_instruction: Kogu kokku kogu nektar ja valmist kogu mesi, kasutades võimalikult vähe plokke.
       level 'grade3_Loops_9_instruction: Kogu nektarit igalt lillelt ning tee mett igas kärjes, kasutades võimalikult vähe plokke.
       level grade3_Loops_2_instruction: Seekord kasuta kogu nektari kokku kogumiseks tsüklit.
+      scrat 16 (copy 1)_instruction: Tammetõru! Tammetõru! Tammetõru! Kasuta "kui" plokki et saada mind sinna vähimate liigutustega.
       scrat 16_instruction: Tammetõru! Tammetõru! Tammetõru! Kasuta "kui" plokki et saada mind sinna vähimate liigutustega.
       scrat 17_instruction: Okei, teeme seda praktika mõttes uuesti- see ei ole väga erinev aga hoidu seinast!
+      scrat 18 (copy 1)_instruction: '"If-else" plokid kontrollivad tingimusi ja siis teevad vastavalt asju. Et saada mind tõruni, kasuta seda uut plokki.'
       scrat 18_instruction: '"If-else" plokid kontrollivad tingimusi ja siis teevad vastavalt asju. Et saada mind tõruni, kasuta seda uut plokki.'
-      scrat 19 (copy 1)_instruction: Üks harjutamine veel "kui-teine" plokiga, kas saad esimese korraga õigesti?
+      scrat 19 (copy 1)_instruction: Üks harjutus veel, kas sa saad esimese korraga õigesti?
       scrat 19_instruction: Üks harjutus veel, kas sa saad esimese korraga õigesti?
       scrat 20_instruction: Kas saad lisada ainult 3 plokki et aidata mul lahendada veel raskem pusle? Kui sa seda õigesti teed, saan ma kõndida ükskõik millisel käänulisel rajal, vahet pole kui pikk see on. Kiirusta! Jää sulab!

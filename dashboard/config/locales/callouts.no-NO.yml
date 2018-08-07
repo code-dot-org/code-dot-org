@@ -183,7 +183,7 @@
           et "flagg". Dette flagget kan signalisere til vår funksjon retningen våre
           bier må gå.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Trykk "Kjør" for å prøve programmet
+        Course 4 Maze 1_callout1: Trykk på "Kjør" for å prøve programme
         Course 4 Maze 1_callout2: Dra "Flytt" blokken og fest den under de andre blokkene
           i arbeidsområdet
       Course 4 Maze 4_callout:
@@ -339,11 +339,11 @@
         craft_callout_preplaced_house: Denne koden starter byggingen av huset ditt.
           Kan du fullføre det?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Trykk "Kjør" for å prøve programmet
+        craft_run_button_callout: Trykk på "Kjør" for å prøve programme
         craft_drag_block_callout: Dra en "flytt fremover"-blokk og plasser den under
           den andre blokken
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Trykk "Kjør" for å prøve programmet
+        craft_run_button_callout: Trykk på "Kjør" for å prøve programme
         craft_drag_block_callout: Dra en "flytt fremover"-blokk og plasser den under
           den andre blokken
       Overworld Place Wall_callout:
@@ -516,6 +516,18 @@
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det
           helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
+      courseA_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseA_maze_ramp2a_2018_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Klikk på lyspæren når du trenger hjelp!
       courseA_maze_seq1_2018_callout:
@@ -546,6 +558,9 @@
       courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Dette lar deg velge en "tilfeldig" lyd, som betyr
           at du ikke vet hvilken lyd du får før du hører den!
+      courseB_Scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan
           vil du bruke den?
@@ -621,10 +636,37 @@
         courseC_maze_debugging5_1: Disse blokkene er låste og kan ikke bli slettet!
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: Du har kun en av disse blokkene igjen i denne oppgaven.
+      courseC_maze_programming1_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseC_maze_programming1_2018_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseC_maze_programming2_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseC_maze_programming2_2018_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseC_maze_programming3_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      courseC_maze_programming4_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
       courseC_starWars_loops2_2018_callout:
         courseC_starWars_loops2: Du har kun en av disse blokkene igjen i denne oppgaven.
+      courseD_artist_ramp11_callout:
+        courseD_artist_ramp11_2: Klikk her for å skrive inn antall ganger du vil gjenta
+          koden.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger
           ikke å se etter bikaker i det hele tatt.
@@ -634,7 +676,69 @@
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Husk, sjekk om HVER sky har en BLOMST. Du trenger
           ikke å se etter bikaker i det hele tatt.
+      courseD_collector_ramp8_callout:
+        courseD_collector_ramp8_1: 'Bruk denne blokken til å samle en enkelt skatt.  '
+      courseD_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseD_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseD_maze_ramp2_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseD_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseD_maze_ramp3_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      courseD_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      courseD_maze_ramp4_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
+      courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
+      courseD_scrat_ramp1_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseD_scrat_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseD_scrat_ramp2_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseD_scrat_ramp2_2018_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseD_scrat_ramp3_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      courseD_scrat_ramp3_2018_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      courseD_scrat_ramp4_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
+      courseD_scrat_ramp4_2018_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
+      courseE_artist_ramp11_callout:
+        courseD_artist_ramp11_2: Klikk her for å skrive inn antall ganger du vil gjenta
+          koden.
+      courseE_artist_ramp8_callout:
+        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
+          koden.
       courseE_artist_ramp8_2_callout:
+        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
+          koden.
+      courseE_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
+          koden.
+      courseE_artist_ramp8_2_2018_callout:
         courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
           koden.
       courseE_collector_ramp8_callout:
@@ -646,6 +750,10 @@
       courseE_farmer_functions13_2018_callout:
         courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
           gang du kjører programmet.
+      courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: Verktøykassa er organisert litt annerledes denne
+          gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du
+          har tilgjengelig.
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: Denne grønnsaken er ukjent. Den endrer seg hver
           gang du kjører programmet.
@@ -670,13 +778,25 @@
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
           på "Kjør" for å starte programmet.
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
           blokker for å fullføre oppgavene.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
           hvis du trenger å kaste dem.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
       courseE_maze_ramp4_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
+      courseE_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
           deg hvor mange av disse blokkene du har igjen å bruke.
       courseE_playLab_challenge1_callout:
@@ -685,6 +805,30 @@
       courseE_playLab_challenge1_2018_callout:
         courseC_PlayLab_events_challenge1_1: Denne blokka lar deg flytte figurer til
           forskjellige deler av spillet.
+      courseF_artist_ramp8_callout:
+        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
+          koden.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
+          koden.
+      courseF_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseF_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseF_maze_ramp2_2018_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      courseF_maze_ramp4_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Klikk kategoriene for å se blokkene i verktøykassa!
           Dra blokker til arbeidsområdet for å legge dem til programmet
@@ -699,6 +843,12 @@
           teksten koblet til denne blokken for å endre innholdet i variabelen.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Slik angir du verdien for variabelen.
+      coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      coursef_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Bruk "Lag en sirkel"-blokken
           og endre størrelsen.
@@ -735,6 +885,21 @@
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: Det er kun en av disse blokkene i verktøykassa. Hvordan
           vil du bruke den?
+      grade2_CaringForNewPet_0_callout:
+        grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk
+          på "Kjør" for å starte programmet.
+      grade2_CaringForNewPet_1_callout:
+        grade2_CaringForNewPet_1_1: Dette er verktøykassa. Der vil du finne ekstra
+          blokker for å fullføre oppgavene.
+      grade2_CaringForNewPet_2_callout:
+        grade2_CaringForNewPet_2_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      grade2_CaringForNewPet_2courseC_maze_programming3_callout:
+        courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa
+          hvis du trenger å kaste dem.
+      grade2_CaringForNewPet_3_callout:
+        grade2_CaringForNewPet_3_1: Dette er grensen på antall blokker. Den forteller
+          deg hvor mange av disse blokkene du har igjen å bruke.
       grade2_collector_7_callout:
         grade2_collector_7_1: Du kan bruke flere blokker fra verktøykassa hvis du
           trenger dem!

@@ -102,13 +102,13 @@ fil:
         para makagalaw.
       grade4_scaffolded_project3_failure_message_override: Dapat kang magdagdag nang
         dalawa o higit pa na mga bagong akto na gumagalaw sa iyong laro.
-      kikiTesta_failure_message_override: Maligayang bati!  Nakatipon ka ng X na mga
+      kikiTesta_failure_message_override: Maligayang bati! Nakatipon ka nang X na
+        mga barya!
+      sample1_failure_message_override: Maligayang bati! Nakatipon ka nang X na mga
         barya!
-      sample1_failure_message_override: Maligayang bati!  Nakatipon ka ng X na mga
-        barya!
-      sample4_failure_message_override: Maligayang bati!  Nakatipon ka ng X na mga
+      sample4_failure_message_override: Maligayang bati! Nakatipon ka nang X na mga
         barya!
       sample6_failure_message_override: Hindi pa. Manatiling magsikap! (Lumipat sa
         Play Zone)
-      sample8_failure_message_override: Maligayang bati!  Nakatipon ka ng X na mga
+      sample8_failure_message_override: Maligayang bati! Nakatipon ka nang X na mga
         barya!

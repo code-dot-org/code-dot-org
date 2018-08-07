@@ -15,7 +15,7 @@ pl:
       user:
         name: 'Wyświetl Nazwisko'
         name_example: 'Wyświetlane Imię<br/>(np. Super Koder albo Ania S.)'
-        email: 'Email'
+        email: 'e-mail'
         parent_email: 'Adres e-mail rodzica/opiekuna'
         personal_email: "Osobisty adres e-mail <a href=\"%{url}\">(kliknij tutaj jeśli nie masz adresu e-mail)</a>"
         username: 'Nazwa użytkownika'
@@ -84,7 +84,7 @@ pl:
     facebook: 'Facebooka'
     windowslive: 'Konto Microsoft'
     clever: 'Konto Clever'
-    forgot_password: 'Nie pamiętasz swojego hasła?'
+    forgot_password: 'Nie pamiętasz hasła?'
     need_confirmation: "Czy nie otrzymałeś instrukcji potwierdzającej?"
     need_unlock: "Czy nie otrzymałeś instrukcji, jak odblokować?"
     not_linked: "Przepraszamy, ale twoje konto Code.org nie jest połączone z Twoim %{provider}. Będziesz musiał się zalogować, wpisując swoje hasło poniżej."
@@ -152,7 +152,7 @@ pl:
     school_organization_zip: 'Kod pocztowy szkoły/organizacji'
   signin_form:
     title: 'Masz już konto? Zaloguj się'
-    login: 'Email'
+    login: 'e-mail'
     login_username: 'Adres e-mail lub nazwa użytkownika'
     password: 'Hasło'
     remember: 'Zapamiętaj mnie'
@@ -208,7 +208,7 @@ pl:
     type:
       picture: 'Hasło obrazkowe'
       word: 'Tajne słowa'
-      email: 'Email'
+      email: 'e-mail'
       google_classroom: 'Klasa Google'
       clever: 'Clever'
   follower:
@@ -391,8 +391,8 @@ pl:
     teacher_student_count_one: Masz %{count} uczniów.
     teacher_student_count: Masz %{count} uczniów.
     teacher_averages: Średnio Twoi uczniowie zdobyli %{trophy_average} z %{trophy_max} trofeów "Concept Mastery".
-    teacher_print_certificates: 'Wydrukuj certyfikaty dla uczniów, którzy ukończyli ten kurs'
-    teacher_read_blog: Przeczytaj o nowościach i aktualizacjach materiałów na naszym Blogu Pedagogicznym
+    teacher_print_certificates: 'Drukowanie certyfikatów dla uczniów, którzy ukończyli ten kurs'
+    teacher_read_blog: Przeczytaj o nowościach i aktualizacjach materiałów na naszym blogu pedagogicznym
     classroom: Twoja klasa
     student_progress: Twoje postępy w nauce
     student_stats: Zdobyłeś %{trophy_count} z %{trophy_max} trofeów "Concept Mastery".
@@ -563,7 +563,7 @@ pl:
       body: 'Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!'
       body_short: 'Poznaj podstawy informatyki w przyspieszonej wersji kursów 2-4.'
     hoc2014:
-      try_new_tutorial: 'Wypróbuj nasz nowy samouczek Godziny Kodowania (Hour of Code) w wersji beta'
+      try_new_tutorial: 'Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji beta'
       try_frozen: 'Artysta z Anną i Elsą, z Frozen'
     gallery:
       title: "Galeria"
@@ -722,22 +722,14 @@ pl:
     title: "Opcjonalnie: Pomóż nam śledzić nasze postępy na drodze do poprawy różnorodności w informatyce"
     message: "Określ swoja przynależność rasową (zaznacz wszystko, co dotyczy Ciebie)"
     races:
-      - 
-        white: "Biały"
-      - 
-        black: "Murzyn lub Afroamerykanin"
-      - 
-        hispanic: "Hiszpanie lub Latynosi"
-      - 
-        asian: "Azjata"
-      - 
-        hawaiian: "Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku"
-      - 
-        american_indian: "Native American Indian/Alaska"
-      - 
-        other: "Inni/inne"
-      - 
-        opt_out: "Wolę nie mówić"
+      white: "Biały"
+      black: "Murzyn lub Afroamerykanin"
+      hispanic: "Hiszpanie lub Latynosi"
+      asian: "Azjata"
+      hawaiian: "Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku"
+      american_indian: "Native American Indian/Alaska"
+      other: "Inni/inne"
+      opt_out: "Wolę nie mówić"
     submit: "Wyślij"
     decline: "Zamknij"
   zendesk_too_young_message: 'Przepraszamy, młodsi użytkownicy nie mogą logować się na naszej stronie pomocy. Możesz przejrzeć <a href="http://support.code.org"> support.code.org</a> bez logowania się lub poprosić rodziców lub nauczyciela, by skontaktowali się z nami  w Twoim imieniu.'
@@ -938,7 +930,7 @@ pl:
   view_all_units: 'Zobacz wszystkie jednostki'
   pd:
     form_labels:
-      email: 'Email'
+      email: 'e-mail'
       school_name: 'Nazwa szkoły'
       school_city: 'Miasto Szkoły'
       school_country: 'Kraj'
@@ -966,4 +958,5 @@ pl:
   cookie_banner:
     accept: 'Zgadzam się'
   gdpr_dialog:
+    message: 'Dane gromadzone podczas korzystania przez Ciebie z tej witryny mogą być wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.'
     yes: 'Tak'

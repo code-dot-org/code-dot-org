@@ -94,6 +94,7 @@ da:
       4-5 Bee Debugging 6_markdown_instruction: "Den lilla blomst har en ukendt mængde nektar. Reparere blokkene for at få alt nektaren fra blomsten."
       4-5 Bee Nested Loops 4_markdown_instruction: "Indsaml al nektar fra alle blomster, og lav honning i alle bikuber. Brug indlejrede løkker. "
       4-5 Bee Nested Loops Assessment 1_markdown_instruction: "** Vurdering: ** Saml al nektaren og lav al honningen ved hjælp af løkker."
+      4-5 Nested Loops 9_markdown_instruction: Tegn tænderne i alligatorens mund!
       Function intro Ryan_markdown_instruction: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over floden! \\r\n \\r\nKlik den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
       K-1 Maze Loops 11_markdown_instruction: "Få mig hen til grisen! Brug gentag-blokken."
       K-1 Maze Loops 12_markdown_instruction: "Få mig hen til grisen! Brug gentag-blokken."
@@ -244,6 +245,7 @@ da:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar."
       grade3_maze_loops2_markdown_instruction: 'Få mig til solsikken!'
       grade3_maze_nestedLoops4_markdown_instruction: Bruge to løkker til at komme hen til grisen med færre blokke.
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Tegn tænderne i alligatorens mund!
       grade4_artist_functions2_markdown_instruction: "Funktioner lader dig definere nye blokke! Vi har flyttet blokkene for at tegne en firkant til en funktion kaldet \"tegn en firkant\". Kan du bruge \"tegn en firkant\"-funktionen til at lave brillerne? Firkanterne er 75 pixel fra hinanden."
       grade4_bee_conditionals_quantum2_markdown_instruction: "Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-

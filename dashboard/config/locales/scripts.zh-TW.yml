@@ -84,7 +84,7 @@ zh-TW:
             Getting Loopy:
               name: 學習迴圈
             Graph Paper Programming:
-              name: 方格紙編程
+              name: 圖畫紙程式設計
             'Maze: Loops':
               name: 迷宮 - 迴圈（Loops）
             'Maze: Sequence':
@@ -125,7 +125,7 @@ zh-TW:
             Bounce:
               name: 彈跳
             Computational Thinking:
-              name: 計算機式思維
+              name: 電腦計算式思維
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
             Dice Race:
@@ -157,8 +157,8 @@ zh-TW:
               name: Play Lab
         artist:
           title: 藝術家
-          description: 和小藝術家一起畫出酷炫的圖案！
-          description_short: 和小藝術家一起畫出酷炫的圖案！
+          description: 和小畫家一起畫圖和設計！
+          description_short: 和小畫家一起畫圖和設計！
           stages:
             Artist:
               name: 藝術家
@@ -170,7 +170,7 @@ zh-TW:
             Maze:
               name: 迷宮
         frozen:
-          title: 和安娜與艾莎一同玩程式
+          title: 與安娜與艾莎一同玩程式
           description: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。你可以利用在雪上溜冰製造出雪花等圖案，然後打造一個冬季仙境並分享給你的朋友！
           description_short: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。
           stages:
@@ -301,8 +301,8 @@ zh-TW:
               name: 不插電活動 - 電視遊戲和座標平面
         infinity:
           title: 迪士尼無限 Play Lab
-          description: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
-          description_short: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
+          description: 用 Play Lab 來創造一個由《迪士尼無限世界》中的角色所主演的故事或遊戲。
+          description_short: 用 Play Lab 來創造一個由《迪士尼無限世界》中的角色所主演的故事或遊戲。
           stages:
             Infinity:
               name: 無限
@@ -391,15 +391,15 @@ zh-TW:
             Algorithms:
               name: 演算法
             Computational Thinking:
-              name: 計算機式思維
+              name: 電腦計算式思維
             Conditionals:
               name: 條件判斷（Conditionals）
             Functions:
               name: 函式
             Graph Paper Programming:
-              name: 方格紙編程
+              name: 圖畫紙程式設計
             Introduction to Computer Science:
-              name: 計算機科學介紹
+              name: 電腦科學導論
             Relay Programming:
               name: 接力編程
             Song Writing:
@@ -835,7 +835,7 @@ zh-TW:
             Best Practices for Teaching Computer Science:
               name: 資訊工程的最佳實踐
             Computer Science Fundamentals:
-              name: 資訊工程基礎
+              name: 計算機科學基礎
             Getting Started:
               name: 開始步驟
             'Mastering the Basics: Conditionals':
@@ -1000,7 +1000,7 @@ zh-TW:
             Getting Loopy:
               name: 學習迴圈
             Graph Paper Programming:
-              name: 方格紙編程
+              name: 圖畫紙程式設計
             Happy Maps:
               name: 快樂地圖
             Move it, Move it:
@@ -1093,6 +1093,7 @@ zh-TW:
               name: 單元 6 教學內容
         cspunit4draft:
           title: 計算機科學原理 單元 4 - 數據
+          description_short: 數據
           stages:
             Cleaning Data:
               name: 數據的清理
@@ -1450,6 +1451,7 @@ zh-TW:
               name: 創建一個 App - 帆布畫家
         CSDU3-Draft:
           title: " TEMP CSD 單元 3 - 互動遊戲與動畫"
+          description_short: 程式設計
           stages:
             Collisions:
               name: 碰撞
@@ -1530,6 +1532,9 @@ zh-TW:
               name: 二進位訊息的發送
         allthehiddenthings:
           title: 所有隱藏的東西！
+          stages:
+            Game Lab:
+              name: Game Lab
         cspunit1-support-test:
           stages:
             Unit 1 Overview:
@@ -1634,6 +1639,7 @@ zh-TW:
               name: 同儕審查
         CSDU5-Draft:
           title: " TEMP CSD 單元 5"
+          description_short: 數據
         CSDU6-Draft:
           title: " TEMP CSD 單元 6 "
         CSF_Secret_Sample_Story:
@@ -1662,6 +1668,8 @@ zh-TW:
               name: 迴圈
             Loops Intro:
               name: 迴圈介紹
+            Programming:
+              name: 程式設計
             'Real-life Algorithms: Plant a Seed':
               name: 生活中的演算法 - 植物種植
         grade4:
@@ -1692,6 +1700,8 @@ zh-TW:
               name: 迴圈
             Loops Intro:
               name: 迴圈介紹
+            Programming:
+              name: 程式設計
         grade5:
           description_audience: 年齡 10-110
           stages:
@@ -2112,6 +2122,7 @@ zh-TW:
             Building a Foundation:
               name: 打好基礎
         coursed-draft:
+          title: CS 基本原理：課程 D
           stages:
             Nested Loops in Maze:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
@@ -3202,7 +3213,7 @@ zh-TW:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 方格紙編程
+              name: 圖畫紙程式設計
             Introduction:
               name: 介紹
             Building a Foundation:
@@ -3264,7 +3275,7 @@ zh-TW:
           assignment_family_title: 課程 D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 方格紙編程
+              name: 圖畫紙程式設計
             Introduction:
               name: 介紹
             Building a Foundation:
@@ -3282,7 +3293,7 @@ zh-TW:
             Artist Binary:
               name: 小藝術家 - 二進制（Binary）
             Graph Paper Programming:
-              name: 方格紙編程
+              name: 圖畫紙程式設計
             Relay Programming:
               name: 接力編程
         coursec-2018:

@@ -252,13 +252,21 @@ hy:
         **Assessment:** Use a `repeat
         until` and an `if/else` block to get me to the sunflower in as few blocks
         as possible.
+      4-5 Nested Loops 12_markdown_instruction: |-
+        Can you draw these 36 triangles using a nested
+        loop?
       4-5 Nested Loops 3_markdown_instruction: "Create a sun by nesting the starter
         code in\nanother loop.\\\r\n\\\r\nTo get this cool design with a hollow center,
         you'll\nneed to jump forward by the length of the triangle before turning."
+      4-5 Nested Loops 5_markdown_instruction: Loop the given code to create a windmill.
+      4-5 Nested Loops 6_markdown_instruction: |-
+        Can you draw a hexagon by looping the triangle
+        code?
       4-5 Nested Loops 7_markdown_instruction: "Loop this design 10 times. \r\n\r\nHow
         much\ndo you have to turn each time you loop?"
       4-5 Nested Loops 8_markdown_instruction: "Loop this shape 6 times. \r\n\r\nHow
         much\ndo you have to turn each time you loop? "
+      4-5 Nested Loops 9_markdown_instruction: Draw the teeth in the alligator's mouth!
       4-5 While Loops 1_markdown_instruction: |-
         Move me to the hole and fill it with two shovelfuls
         of dirt, using the `fill` block.
@@ -584,24 +592,39 @@ hy:
       grade3_maze_nestedLoops4_markdown_instruction: |-
         In this puzzle, two `repeat` loops will help you
         get to the pig with the fewest number of blocks!
+      grade4_arist_nested_loop_flags1_markdown_instruction: Loop the given code to
+        create a windmill.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Loop this design 10
         times. \r\n\r\nHow much\ndo you have to turn each time you loop?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Loop this shape 6
         times. \r\n\r\nHow much\ndo you have to turn each time you loop? "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: |-
+        Can you draw a hexagon by looping the triangle
+        code?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Draw the teeth in
+        the alligator's mouth!
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Create a sun by nesting
         the starter code in\nanother loop.\\\r\n\\\r\nTo get this cool design with
         a hollow center, you'll\nneed to jump forward by the length of the triangle
         before turning."
+      grade4_arist_nested_loop_triangles6_markdown_instruction: |-
+        Can you draw these 36 triangles using a nested
+        loop?
       grade4_artist_functions2_markdown_instruction: "Functions let you define new
         blocks! \r\n\r\nWe've\nmoved the blocks needed for drawing a square into a
         function called `draw\na square`. This time, use the `draw a square` function
         to create the glasses.\n\r\n\r\nThe squares are 75 pixels apart."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Loop the given code to
+        create a windmill.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Loop this design
         10 times. \r\n\r\nHow much\ndo you have to turn each time you loop?"
       grade4_artist_nested_loop_triangles5_markdown_instruction: "Create a sun by
         nesting the starter code in\nanother loop.\\\r\n\\\r\nTo get this cool design
         with a hollow center, you'll\nneed to jump forward by the length of the triangle
         before turning."
+      grade4_artist_nested_loop_triangles6_markdown_instruction: |-
+        Can you draw these 36 triangles using a nested
+        loop?
       grade4_artist_parameters_triangles2_markdown_instruction: |-
         Do you notice anything different
         about these function blocks? Click “Run” to see what happens.
@@ -618,8 +641,8 @@ hy:
       grade4_bee_nestedLoops4_markdown_instruction: "Collect all of the nectar from
         each flower\nand make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. "
       grade4_frozen_freeplay_markdown_instruction: |-
-        You've officially become a master artist! Create
-        a winter wonderland.
+        You've officially become a master artist!
+        Create a winter wonderland.
       grade4_frozen_functions0_markdown_instruction: |-
         A circle is a special shape. Can you figure out
         what number to replace the question marks with to draw a circle?

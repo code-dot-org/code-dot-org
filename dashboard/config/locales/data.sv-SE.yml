@@ -19,7 +19,7 @@ sv:
         Farmer2: Bonden 2
         Unplug8: Abstraktion
         Artist4: Konstnären 4
-        Unplug9: Relä programmering
+        Unplug9: Stafettprogrammering
         Farmer3: Bonden 3
         Unplug10: Internet
         Artist5: Konstnären 5
@@ -52,7 +52,7 @@ sv:
         loop_until: '"Upprepa tills"-Block'
         loop_while: '"Medan"-block'
         loop_for: '"Räknar"-block'
-        function: Funktioner
+        function: funktioner
         parameters: Funktioner med parametrar
     level:
       instructions:
@@ -325,51 +325,53 @@ sv:
         mazestep_4: Labyrint steg beskrivning här
         mazestep_5: Labyrint steg beskrivning här
         studio_c2_1: Kan du göra så att hunden säger "hello world"?
-        studio_c2_2: Kan du göra så att hunden säger något och så att katten säger
-          något efteråt?
-        studio_c2_3: Kan du skriva ett program som gör att hunden flyttar till katten?
-        studio_c2_4: Kan du skriva ett program som gör att hunden flyttar till katten
+        studio_c2_2: Kan du å hunden att hunden att säga något och sen få katten att
+          säga något efteråt?
+        studio_c2_3: Kan du skriva ett program som gör att hunden rör sig till katten?
+        studio_c2_4: Kan du skriva ett program som gör att hunden rör sig till katten
           och så att katten säger "Hej" när hunden når honom?
         studio_c2_5: Kan du skriva ett program så att bläckfisken säger "Hej" när
-          den  klickas på?
-        studio_c2_6: Kan du skriva ett program som gör att denna pingvin flyttar runt
-          med hjälp av upp / ner / vänster/höger pil och träffar alla mål?
-        studio_c2_7: Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt.
-          Kan du lägga till block för att flytta denna dinosaurie upp och ner om och
-          om igen?
-        studio_c2_8: Kan du få pingvinen att säga "AJ!" och spela ett "hit" ljud om
-          han kör in i dinosaurien, och så flytta honom med pilarna för att få det
-          att hända?
-        studio_c2_9: Kan du lägga till ett block för att en poäng när pingvinen kör
-          in i bläckfisken, och sedan flytta honom med pilarna tills du får poäng?
-        studio_c2_10: Kan du lägga till block för att ändra bakgrunden och hastigheten
-          på pingvinen och så flytta honom med pilarna tills du får poäng?
-        studio_c2_11: Skapa din egen berättelse. När du är klar, klicka på Slutför
-          om du vill låta vänner prova din berättelse på sina telefoner.
-        studio_c3_story_1: Kan du göra så att hunden säger "hello world"?
-        studio_c3_story_2: Kan du göra så att hunden säger något och så att katten
-          säger något efteråt?
-        studio_c3_story_3: Kan du skriva ett program som gör att hunden flyttar till
-          katten?
-        studio_c3_story_4: Kan du skriva ett program som gör att hunden flyttar till
-          katten och så att katten säger "Hej" när hunden når honom?
-        studio_c3_story_5: Kan du lägga till ett block för att göra bläckfisken lycklig?
-        studio_c3_story_6: Skapa din egen berättelse. När du är klar, klicka på Slutför
-          om du vill låta vänner prova din berättelse på sina telefoner.
-        studio_c3_game_1: Kan du skriva ett program så att bläckfisken säger "Hej"
-          när den  klickas på?
-        studio_c3_game_2: Kan du skriva ett program som gör att denna pingvin flyttar
-          runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål?
-        studio_c3_game_3: Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt.
-          Kan du lägga till block för att flytta denna dinosaurie upp och ner om och
-          om igen?
-        studio_c3_game_4: Kan du få pingvinen att säga "AJ!" och spela ett "hit" ljud
+          man klickar på den?
+        studio_c2_6: Skriv ett program som gör att pingvinen Waddles rör sig runt
+          med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
+        studio_c2_7: Med "Upprepa för alltid" (repeat forever) blocket kan du köra
+          kod oavbrutet. Kan du lägga till block för att flytta den här dinosaurien
+          upp och ner om och om igen?
+        studio_c2_8: Kan du få pingvinen att säga "AJ!" och spela ett "träffad" ljud
           om han kör in i dinosaurien, och så flytta honom med pilarna för att få
           det att hända?
-        studio_c3_game_5: Kan du lägga till ett block för att en poäng när pingvinen
-          kör in i bläckfisken, och sedan flytta honom med pilarna tills du får poäng?
-        studio_c3_game_6: Kan du lägga till block för att ändra bakgrunden och hastigheten
-          på pingvinen och så flytta honom med pilarna tills du får poäng?
+        studio_c2_9: "Kan du lägga till ett block för att räkna poäng när pingvinen
+          krockar med Octavia (actor 3)? \r \nSpela spelet och flytta pingvinen med
+          pilarna tills du får poäng!"
+        studio_c2_10: "Kan du lägga till block för att ändra bakgrunden och hastigheten
+          på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
+        studio_c2_11: Skapa din egen berättelse. När du är klar, klicka på Slutför/Finish
+          om du vill låta kompisar prova din berättelse på sina telefoner.
+        studio_c3_story_1: Kan du göra så att hunden säger "hello world"?
+        studio_c3_story_2: Kan du å hunden att hunden att säga något och sen få katten
+          att säga något efteråt?
+        studio_c3_story_3: Kan du skriva ett program som gör att hunden rör sig till
+          katten?
+        studio_c3_story_4: Kan du skriva ett program som gör att hunden rör sig till
+          katten och så att katten säger "Hej" när hunden når honom?
+        studio_c3_story_5: Kan du lägga till ett block för att göra bläckfisken glad?
+        studio_c3_story_6: Skapa din egen berättelse. När du är klar, klicka på Slutför/Finish
+          om du vill låta kompisar prova din berättelse på sina telefoner.
+        studio_c3_game_1: Kan du skriva ett program så att bläckfisken säger "Hej"
+          när man klickar på den?
+        studio_c3_game_2: Skriv ett program som gör att pingvinen Waddles rör sig
+          runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
+        studio_c3_game_3: Med "Upprepa för alltid" (repeat forever) blocket kan du
+          köra kod oavbrutet. Kan du lägga till block för att flytta den här dinosaurien
+          upp och ner om och om igen?
+        studio_c3_game_4: Kan du få pingvinen att säga "AJ!" och spela ett "träffad"
+          ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att
+          få det att hända?
+        studio_c3_game_5: "Kan du lägga till ett block för att räkna poäng när pingvinen
+          krockar med Octavia (actor 3)? \r \nSpela spelet och flytta pingvinen med
+          pilarna tills du får poäng!"
+        studio_c3_game_6: "Kan du lägga till block för att ändra bakgrunden och hastigheten
+          på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
         studio_c3_game_7: Skapa ditt eget spel. När du är klar, klicka på Slutför
           för att låta vänner prova ditt spel på sina telefoner.
         studio_playlab_1: Pingvinen vill säga "Hej" - kan du hjälpa honom?
@@ -475,12 +477,12 @@ sv:
         studio_full_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför
           för att låta vänner prova ditt spel på sina telefoner.
         studio_k1_1: Kan du göra så att hunden säger "hello world"?
-        studio_k1_2: Kan du göra så att hunden säger något och så att katten säger
-          något efteråt?
-        studio_k1_3: Kan du skriva ett program som gör att hunden flyttar till katten?
+        studio_k1_2: Kan du å hunden att hunden att säga något och sen få katten att
+          säga något efteråt?
+        studio_k1_3: Kan du skriva ett program som gör att hunden rör sig till katten?
         studio_k1_4: Gör så att hunden flyttar till katten och så att katten säger
           "Hej" när han kommer dit.
-        studio_k1_5: Kan du lägga till ett block för att göra bläckfisken lycklig?
+        studio_k1_5: Kan du lägga till ett block för att göra bläckfisken glad?
         studio_k1_6: Skapa din egen berättelse! Flytta runt katten och hunden och
           få dem att säga saker.
         maze_wordsearch_k_1: Flytta mig för att stava ordet EAST(öst)
@@ -563,7 +565,7 @@ sv:
         C2_graph_paper: Kalkyleringsprogrammering
         C2_conditionals_with_cards: Villkor
         C2_binary_bracelets: Binära armband
-        C2_relay_programming: Relä programmering
+        C2_relay_programming: Stafettprogrammering
         C2_paper_airplanes: Pappersflygplan
         C2_digital_footprint: Ditt digitala fotavtryck
         C2_digital_footprint_v2: Ditt digitala fotavtryck
@@ -586,7 +588,7 @@ sv:
         C3_functional_suncatchers: Funktionella Solfångare
         C3_songwriting_with_parameters: Låtskrivande med parametrar
         C4_intro: Introduktion
-        C4_loops_zombie: Loopar
+        C4_loops_zombie: loopar
         C4_bee_conditional: 'Bi: Villkor'
         C4_variables_artist: Variabler - Konstnär
         C4_variables_playlab: Variabler - Play Lab
@@ -622,7 +624,7 @@ sv:
         csd_weblab_intro_3: Intro till Web Lab - Del 3
         csp_applab_functions: Introduktion till funktioner
         csp_applab_functions_parameters: Funktioner med parametrar
-        csp_applab_loops: Loopar
+        csp_applab_loops: loopar
         csp_concept_rgb: Lite om pixlar
         csp_pixelation_color_1: Färg pixelerings widget - Del1
         csp_pixelation_color_2: Färg pixelerings widget - Del2
@@ -647,11 +649,11 @@ sv:
         iceage_intro: Ice Age timme av kod - introduktion
         iceage_events: Ice Age Kodtimmen - händelser
         iceage_repeat: Ice Age timme av kod - upprepa påståeenden
-        CSF_loops_AB: Loopar
+        CSF_loops_AB: loopar
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
-        run: Klicka på "Kör" för att prova ditt program
+        run: Tryck på "Kör" för att prova programmet
         watch_again: Klicka här för att titta på videon igen
         gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet
           ändå?

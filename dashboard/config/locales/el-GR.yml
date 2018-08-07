@@ -30,7 +30,7 @@ el:
         personal_email: Προσωπική διεύθυνση ηλεκτρονικού ταχυδρομείου <a href="%{url}">(κάντε
           κλικ εδώ αν δεν έχετε διεύθυνση ηλεκτρονικού ταχυδρομείου)</a>
         username: 'όνομα χρήστη '
-        password: κωδικός
+        password: Κωδικός πρόσβασης
         password_confirmation: Επιβεβαίωση κωδικού
         current_password: Τρέχων κωδικός
         locale: Γλώσσα
@@ -283,12 +283,12 @@ el:
         applab: Δημιουργήστε μια εφαρμογή
       courses: Τες
       project_gallery: Έργα
-      educate_hoc: Ώρα του Κώδικα
+      educate_hoc: Η Ώρα του Κώδικα
     user:
       classroom: Αρχική Σελίδα Εκπαιδευτή
       district_dashboard: Περιοχή Ταμπλό
       label: Γεια σου %{username}
-      stats: Η πρόοδός μου
+      stats: Στούντιο Κώδικα
       settings: Ο λογαριασμός μου
       logout: Αποσύνδεση
       signin: Σύνδεση
@@ -472,7 +472,7 @@ el:
     more: Περισσότερα
     feedback: Πες τη γνώμη σου
     translate: Βοηθήστε μας να μεταφράσουμε στη γλώσσα σας
-    support: Υποστήριξη
+    support: Βοήθεια και Κοινότητα
     support_url: http://support.code.org/
     tos_short: Όροι
     tos: Όροι
@@ -587,9 +587,11 @@ el:
         με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
     minecraft:
       title: Minecraft
-      body: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα.
+      body: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
     minecraft2016:
       title: Minecraft
+      body: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση
+        του Minecraft.
     hero:
       title: Minecraft
     unplugged:
@@ -602,7 +604,7 @@ el:
       body_short: Αν δεν έχετε υπολογιστές, δοκιμάστε αυτά τα αυτόνομα μαθήματα στην
         τάξη σας.
     unplugged_conditionals:
-      title: Έλεγχοι
+      title: Συνθήκες
     widgets:
       cta: Μάθε πώς
   gallery:

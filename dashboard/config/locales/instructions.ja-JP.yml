@@ -189,8 +189,8 @@ ja:
       2-3 Maze 1_instruction: 'いじわるなぶたを捕まえるのを手伝ってくれる? 「前に進む」をふたつ一緒に重ねて「実行」を押してみましょう。 '
       2-3 Maze 10_instruction: 緑の悪者のところにつれていって！(ばくだんに気をつけて)
       2-3 Maze 11_instruction: お腹がすいたよ、お花を取って！ひとつのブロックを何度繰り返し利用すればいいでしょうか？
-      2-3 Maze 12 (copy 1)_instruction: さっきと同じ答えを２つのブロックだけで作ってみましょう。(ヒント：〜回繰り返すのブロックを使って、繰り返しましょう)
-      2-3 Maze 12 (copy 2)_instruction: さっきと同じ答えを２つのブロックだけで作ってみましょう。(ヒント：〜回繰り返すのブロックを使って、繰り返しましょう)
+      2-3 Maze 12 (copy 1)_instruction: 'ブロックを2つだけ使うように先ほどの答えを書きかえられますか？ (ヒント: 「繰り返す」ブロックを使ってループを作ってみましょう。)'
+      2-3 Maze 12 (copy 2)_instruction: 'ブロックを2つだけ使うように先ほどの答えを書きかえられますか？ (ヒント: 「繰り返す」ブロックを使ってループを作ってみましょう。)'
       2-3 Maze 12 (old)_instruction: ぶたを捕まえて、今度は〜回繰り返すブロック！
       2-3 Maze 12 - One Move Block_instruction: ブタのところに行ってください！しかし今回は、「まえにすすむ」ブロックを１つしか使えません。あなたを助ける、他のブロックがわかりますか？
       2-3 Maze 12_instruction: この５つのブロックの動きを２つのブロックで置き換えられる？ (ヒント：「〜回繰り返す」ブロックを使って繰り返しの作業を作りましょう)
@@ -204,7 +204,9 @@ ja:
       2-3 Maze 16 before_instruction: ブタを捕まえよう。
       2-3 Maze 16_instruction: ひまわりまで連れて行って。ブロックの組み合わせをループさせよう。
       2-3 Maze 2_instruction: このブタにはイライラさせられるワ。彼を捕まえるのを手伝って！
-      2-3 Maze 3_instruction: 足あとをたどってお調子者のブタまで連れて行って。でも、TNTの箱には注意してね。
+      2-3 Maze 3_instruction: |-
+        道をたどってお調子者のブタまで連れて行って。
+        でも、TNTの箱には注意してね。羽が飛ばされちゃうよ。
       2-3 Maze 4_instruction: 緑の悪者のところにつれていって！(ばくだんに気をつけて)
       2-3 Maze 5_instruction: 緑の悪者のところにつれていって！(ばくだんに気をつけて)
       2-3 Maze 6_instruction: 落ち着いてブタを一緒に探そう。手伝ってくれなかったら怒るよ！
@@ -215,7 +217,7 @@ ja:
       2-3 Maze Loops 17_instruction: ひまわりまで行きたい！
       2-3 Maze Loops 18_instruction: ひまわりまで行きたい！
       2-3 Maze Loops 19_instruction: ひまわりまで行きたい！
-      2-3 Maze Loops 20_instruction: ひまわりまで行きたい！
+      2-3 Maze Loops 20_instruction: 出来るだけ少ない数のブロックを使って、このパズルをクリアしよう。
       2-3 Maze Loops 21_instruction: ひまわりまで行きたい！
       2-3 Maze Loops Assessment 1_instruction: '課題：5ブロックだけ使ってひまわりまで連れていってください。 '
       2-3 Maze sq10_instruction: ブタまで連れって。どのブロックが繰り返されているかな？
@@ -257,7 +259,7 @@ ja:
       20hr_maze_stage2_16_instruction: ヒマワリがほしい！"もし"ブロックを使って最小限のブロック数で私をそこまで連れていってください。
       20hr_maze_stage2_17_instruction: OK 練習のためにもう一度。 ー　それほど違いはないけれど、 チャンパーたちに気をつけて！
       20hr_maze_stage2_18_instruction: '"もし/でなければ"ブロックは条件を確かめて、あること、あるいは別のあることをします。ヒマワリをとってくるためにこの新しいブロックを試しましょう。'
-      20hr_maze_stage2_19_instruction: '"もし/でなければ"ブロックをもう一度練習。一度でちゃんとできるでしょうか？'
+      20hr_maze_stage2_19_instruction: "”もし○○でなければ××”ブロックの練習をもう一回やりましょう。一度でクリアできるかな？"
       20hr_maze_stage2_2_instruction: このブタはわたしの羽をぐちゃぐちゃにします。ブタをみつけるのを手伝って！
       20hr_maze_stage2_20_instruction: ブロックをあと3つ足して、難しい迷路を解くのをたすけてくれますか？もしそれができれば、どんな長くカーブした道でも歩けるようになります
       20hr_maze_stage2_3_instruction: 道を通って、おばかなブタまで連れてってね。ばくだんにきをつけて、羽がふきとびます！
@@ -350,7 +352,7 @@ ja:
         横一列を書き終えたら、アーティストのいちをもどして、それから次の一列を書くようにします。
         これらのブロックたちの、どれかを、くりかえしで使います。
       4-5 Artist Patterns 4_instruction: この、ひし形は1辺50ピクセルで、角度は120度と60度です。くりかえしを使って、書いてください。
-      4-5 Artist Patterns 5.5_instruction: ひし形の格子全体を描くには、このブロックを何回繰り返さなければいけないでしょうか?
+      4-5 Artist Patterns 5.5_instruction: くりかえしを上手く使って、この図形を仕上げてください。
       4-5 Artist Patterns 5_instruction: これを繰り返して、1列にひし形を6個並べてみましょう。ダイヤモンドのプログラムを2回ではなく3回繰り返すように変えたことに注意してください。なぜだと思いますか?
       4-5 Artist Patterns 6_instruction: くりかえしを上手く使って、この図形を仕上げてください。
       4-5 Artist Patterns 7_instruction: さっきのパズルのコードをいじって、もっと複雑なパターンを作ってみましょう。今ひし形がどれぐらい重複しているか確認してから、最初の「うしろへジャンプする」を100から半分の50に変えてみてください。さて今度は、アーティストは2番目の「うしろにジャンプする」でどれぐらいジャンプしないといけないでしょう?
@@ -361,6 +363,7 @@ ja:
       4-5 Artist Patterns Free Play_instruction: 自由時間です。オリジナルのパターンを作ってみましょう！
       4-5 Bee Conditionals - FC Test_instruction: ミツバチは今すぐ蜜が欲しいのです。すべての物が花ではありません。花が隠れているかもしれないので、すべての雲の下をチェックましょう。そうすればあなたは蜜を集められます。
       4-5 Bee Conditionals 1_instruction: ハチは花と蜂の巣を見分けることができません。花から蜜を集めるために、まず花か蜂の巣かを確認しましょう。
+      4-5 Bee Conditionals 2 (copy 1)_instruction: ハチは今のところ花のみつだけを探しています。注意する事があります。配置されたもの全てが花とは限りませんので、花に対してだけに花のみつを集めるようにしてみましょう。
       4-5 Bee Conditionals 2_instruction: ハチはいま蜜だけを探しています。蜜を集めようとする前に、それが花かどうかを確認しましょう。
       4-5 Bee Conditionals 3_instruction: 今度はハチミツを作ります。蜂の巣かどうかを確認してハチミツを作りましょう。
       4-5 Bee Conditionals 4_instruction: "？は花か蜂の巣です。「もし 実行/他」ブロックを使って、花なら蜜を集め、それ以外
@@ -405,7 +408,7 @@ ja:
       4-5 Bee Nested Loops Assessment 1_instruction: 課題。「繰り返し（ループ）」を使って、すべての花のみつとすべてのハチミツを集めてください。
       4-5 Bee Nested Loops Rows_instruction: 並んでいる花から花のみつを集めてください。入れ子の繰り返し（ループ）を使ってみてください。
       4-5 Maze 1 (copy 1)_instruction: にんげんさん。おで、ゾンビだぞ。ひまわり食べる、ぜったい。
-      4-5 Maze 1_instruction: 人間さん。ゾンビです。ひまわりのところへどうしても行きたいのです。
+      4-5 Maze 1_instruction: にんげんさん。おで、ゾンビだぞ。ひまわり食べる、ぜったい。
       4-5 Maze 10_instruction: 4ブロックだけ使ってひまわりにたどり着けますか？
       4-5 Maze 11_instruction: ブロックを6つだけ使ってひまわりにたどり着けますか？
       4-5 Maze 12_instruction: オーケー、これはちょっとだけ違います。６つのブロックだけでやれますか？
@@ -462,6 +465,13 @@ ja:
       Alien Defender_instruction: 'プロジェクトのアイデア: Play Labでディフェンダーゲームを作ろう！'
       Alien Defender_2018_instruction: 'プロジェクトのアイデア: Play Labでディフェンダーゲームを作ろう！'
       App Lab test_instruction: テスト
+      Artist - Nested Loops 1_instruction: これらの三角形を描くためのコードを完成させてください。最初の１つは用意されています。ヒント：３つの三角形を描くのに３６０度回転します。
+      Artist - Nested Loops 10_instruction: 与えられたブロックをループさせて、この旗の上で星の絵の最後の一列を描きましょう。この星たちは５０ピクセル離れていますが、星たち自身は３０ピクセルの幅だったことを思い出してください。
+      Artist - Nested Loops 11_instruction: 入れ子型の「繰り返し（ループ）」を使って、１０個の四角形でできたこの歩道を描く事ができますか？それぞれの四角形は３０ピクセルです。
+      Artist - Nested Loops 12_instruction: 入れ子型の「繰り返し（ループ）」を使って、これらの３６個の三角形を描けますか？
+      Artist - Nested Loops 5_instruction: 風車（かざぐるま）を作るために、与えられたコードを繰り返しにしましょう。
+      Artist - Nested Loops 6_instruction: 三角形のコードを繰り返す事で六角形を描けますか？
+      Artist - Nested Loops 9_instruction: ワニの歯を書いてください！
       Artist - Nested Loops Assessment 1_instruction: 入れ子型の繰り返しを使ってこの絵を完成させてください。
       Artist Inspiration_instruction: "自由に作ってみよう！あなたは、このようなパターンの作りかたを、すべて学びました。この絵が気に入ったら、にたデザインを作ってみて。自分のすきなように、作り直してもいいよ。\nヒントがほしいときは、ランプをクリックしてね。 "
       Bee Recommended Blocks test_instruction: 紫の花の蜜は、1（ある）か 0（ない） かのどちらかですが、どのお花に蜜がある（1である）のかは分かりません！蜜のない花から蜜を集めないように気をつけてください。蜜が
@@ -469,8 +479,13 @@ ja:
       Bergeron Robot Maze1_instruction: 'いじわるなぶたを捕まえるのを手伝ってくれる? 「前に進む」をふたつ一緒に重ねて「実行」を押してみましょう。 '
       Brad Spooky House Copy_instruction: 'フリープレイ: あなたが作った関数と、おまけのブロックがあります。カッコイイのを、書いてみよう！'
       Brad Spooky House_instruction: 'フリープレイ: あなたが作った関数と、おまけのブロックがあります。カッコイイのを、書いてみよう！'
+      Building a Foundation Assessment_instruction: 三階建てのピラミッドを作ってください、他に指示はありませんので、ピースを使っていろいろ試してみましょう。
       Busy Bee 2_instruction: この蜂は、やるべき仕事の多くを持っています! コードを簡単するため、使用できるパターンが分かりますか。
       Busy Bee_instruction: この蜂は、やるべき仕事の多くを持っています! コードを簡単するため、使用できるパターンが分かりますか。
+      C3-Farmer While Loops 5_instruction: ２つも大穴があるわ。両方の穴を完全に埋（う）めるプログラムをあなたは作れますか？
+      C3-Farmer While Loops 6_instruction: あらまあ、大きな土の山が１つあるわよ。平らな地面になるまですべての土をなくすプログラムをあなたは作れますか？
+      C3-Farmer While Loops 7_instruction: 今そこに３つの土の山を見つけたわよ！地面と同じくらい平らになるまであれらの山をなくすプログラムをあなはた作れるかしら？
+      C3-Farmer While Loops Assessment 1_instruction: たくさんの穴と土で盛り上がった所があります。平たい地面にするために土を埋めたり、取り除いたりするのを手伝ってください。
       CSD U5 black white images pixelation 2_instruction: スマイリーフェイスを描く (画像を表示するにはここをクリック)
       CSD U5 black white images pixelation 2_2018_instruction: スマイリーフェイスを描く (画像を表示するにはここをクリック)
       CSD U5 black white images pixelation 3_instruction: イメージを検索するスライダーの幅と高さを変更します(詳細はこちら)
@@ -481,10 +496,19 @@ ja:
       CSD U5 black white images pixelation 5_2018_instruction: 好きなものをかく
       CSD U5 black white images pixelation_instruction: 0 と 1 を入力して X の形を完成させる
       CSD U5 black white images pixelation_2018_instruction: 0 と 1 を入力して X の形を完成させる
+      CSDU6 - Arrays - indexPractice_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
       CSDU6 - for loop - color buttons with for_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
+      CSDU6 - for loop - color buttons_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
+      CSDU6 - for loop - why for_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
+      CSDU6 arrays rainbow_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
+      CSDU6 arrays select rainbow_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
+      CSDU6 arrays select rainbow_2018_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
       CSP student contact info_instruction: Eメールアドレスを入力してください。
+      CSPU5_U3 - Arrays - indexPractice_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
+      CSPU5_U3 - Arrays - indexPractice_2018_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
       CSPU5_U3 - Loops - 4_instruction: デバッグ コマンドを使って、6 の前のすべての値のリストを作成します。(クリックして完全な指示を表示)
       CSPU5_U3 - Loops - 4_2018_instruction: デバッグ コマンドを使って、6 の前のすべての値のリストを作成します。(クリックして完全な指示を表示)
+      Course 2 Bee Loops 1_instruction: 'こんにちは、ハチです！花から蜜を集めるのを手伝ってください。 '
       Course 2 Maze Loops 1_instruction: ５つのブロックを使ってわたしをブタの所へ連れて行くことができますか？
       Course 4 2_instruction: ハチは今のところ花のみつだけを探しています。注意する事があります。配置されたもの全てが花とは限りませんので、花に対してだけに花のみつを集めるようにしてみましょう。
       Course 4 Artist 1_instruction: '四角形を書いてください。(それぞれの辺は、200ピクセルの長さです) '
@@ -592,7 +616,7 @@ ja:
       Course 4 Artist Functions 8_instruction: '関数ブロックのつかいかたを、マスターした？この正方形を200 ピクセルのサイズに、かえてみよう。ヒント:
         サイズをかえるには、「正方形をかく」関数エディタで、「edit」をクリックします。関数エディターから、もどるときは、「save and close」をクリックします。 '
       Course 4 Artist Functions Inspiration_instruction: この図形を書いてください。すきな図形を書いてもよいです。ヒントを見たい場合は、ランプをクリックしてください。
-      Course 4 Artist Functions challenge_instruction: この図形を書いてください。ヒントを見たい場合は、ランプをクリックしてください。
+      Course 4 Artist Functions challenge_instruction: この図形を書いてください。すきな図形を書いてもよいです。ヒントを見たい場合は、ランプをクリックしてください。
       Course 4 Artist Inspire_instruction: もっとカッコいいデザインを作るヒントを見たかったら、ランプをクリックして！自分のすきなデザインを、自由に書いても良いよ！
       Course 4 Artist Params 13_instruction: 'フリープレイ: あなたが作った関数と、おまけ もあります。すごいものを、かいてみよう！'
       Course 4 Artist Params 3_instruction: 'すばらしい！新しい関数で、それぞれの三角形をかけますか？始めは 25 、2
@@ -779,7 +803,9 @@ ja:
       Course 4 SCF 2_instruction: '前のレベルで学んだことを使って、こんな絵を書いてみよう。ヒント：パラメーターを合体させると、コードはもっと見やすくなるよ。 '
       Course 4 SCF 3_instruction: '前のレベルで学んだことを使って、こんな絵を書いてみよう。ヒント：パラメーターを合体させると、コードはもっと見やすくなるよ。 '
       Course 4 SCFL 1_instruction: 出来るだけ少ない数のブロックを使って、このパズルをクリアしよう。
-      Course 4 SCFL 1a_instruction: スクラットを、ドングリのところまで つれて行って下さい。使うブロックは、出来るだけ少なくしてみてね。
+      Course 4 SCFL 1a_instruction: |-
+        スクラットを、ドングリのところまで つれて行って下さい。使うブロックは、出来るだけ少なくしてみてね。
+        それと、氷にヒビが入っているから、気をつけて。
       Course 4 SCFL 1b_instruction: |-
         スクラットを、ドングリのところまで つれて行って下さい。使うブロックは、出来るだけ少なくしてみてね。
         それと、氷にヒビが入っているから、気をつけて。
@@ -791,7 +817,11 @@ ja:
       Course 4 SCFL 7_instruction: アーティストは波にのります！この図形を書いて下さい！
       Course 4 SCV 1_instruction: |-
         この図形を書いて下さい。
-        この中には、五角形が5コ、十角形が10コ書かれています。
+        この中には、ギザギザの線で書かれた五角形が、10コ書かれています。
+        ギザギザ線の書き方：
+        14ピクセルの直線を引き、左に72度まがります。
+        そのあと、14ピクセルの直線を引き、右に72度まがります。
+        これを5回くりかえします。
         はじめに「太さは1」プロックを追加して、線の太さを1にしてください。
         ヒントが ほしいときは、ランプをクリックしてね。
       Course 4 SCV 2_instruction: |-
@@ -979,26 +1009,26 @@ ja:
       K-1 artist 1 level 10_instruction: ジャンプのブロックと描くブロックの両方を使って、点線を描きます。
       K-1 artist 1 level 9_instruction: 三本の線を使ってこれを描いてください。
       K-1 maze debug 1_instruction: プログラムで、ぼくがブタさんのところに、いけるようにして！
-      K-1 maze debug 10_instruction: ブロックを並べ替えたり足したりして、僕をブタのところに連れていってください!
+      K-1 maze debug 10_instruction: ブロックを並び替えたり足したりして、僕をブタのところに連れていってください!
       K-1 maze debug 11_instruction: "これはテストです!\r\nブロックを並べ替えたり足したりして、ブタのところに連れていってください!"
       K-1 maze debug 2_instruction: 足りないブロックを追加して、僕をブタのところに連れていってください!
       K-1 maze debug 3_instruction: 僕がブタに会えるように、間違いを探して、いらないブロックを消してください!
       K-1 maze debug 4_instruction: ブロックを実行してみましょう。そして正しく動くように直してください！間違った方向に進んでいるよ。
       K-1 maze debug 5_instruction: ブロックを並び替えたり足したりして、僕をブタのところに連れていってください!
-      K-1 maze debug 6_instruction: ブロックを並べ替えたり足したりして、僕をブタのところに連れていってください!
-      K-1 maze debug 7_instruction: ブロックを並べ替えたり足したりして、僕をブタのところに連れていってください!
+      K-1 maze debug 6_instruction: ブロックを並び替えたり足したりして、僕をブタのところに連れていってください!
+      K-1 maze debug 7_instruction: ブロックを並び替えたり足したりして、僕をブタのところに連れていってください!
       K-1 maze debug 8_instruction: ブロックを並び替えたり足したりして、僕をブタのところに連れていってください!
-      K-1 maze debug 9_instruction: ブロックを並べ替えたり足したりして、僕をブタのところに連れていってください!
+      K-1 maze debug 9_instruction: ブロックを並び替えたり足したりして、僕をブタのところに連れていってください!
       K2.0 sequence 1_instruction: プログラムで、ぼくがブタさんのところに、いけるようにして！
       K2.0 sequence 2_instruction: プログラムで、ぼくがブタさんのところに、いけるようにして！
       K2.0 sequence 5_instruction: 豚さんのところまで連れていってください！2種類のブロックを使う必要があるよ。
       K2.0 sequence 6_instruction: 足りないブロックを追加して、僕をブタのところに連れていってください!
       K2.0 sequence 9_instruction: TNT の箱をよけつつ、豚さんのところまで連れていってください！
       KTest2_instruction: 道を通って、おばかなブタまで連れてってね。ばくだんにきをつけて、羽がふきとびます！
-      Kiki_StarWars_Test_3_instruction: テキスト（文字列）
-      Kiki_StarWars_Test_4_instruction: テキスト（文字列）
-      Kiki_StarWars_Test_5_instruction: テキスト（文字列）
-      Kiki_StarWars_Test_5_Example_instruction: テキスト（文字列）
+      Kiki_StarWars_Test_3_instruction: テキスト
+      Kiki_StarWars_Test_4_instruction: テキスト
+      Kiki_StarWars_Test_5_instruction: テキスト
+      Kiki_StarWars_Test_5_Example_instruction: テキスト
       MC Agent Freeplay_instruction: "**自由にプレイ:**  自分の好きなようにプログラミングしてみましょう!"
       MC HOC 2016 Level 10_instruction: 自分だけの Minecraft を作ろう！羊やクリーパーをスポーンさせて、思い通りの動きさせよう！
       MC HOC 2016 Level 2-2_instruction: ニワトリが凍っています。「まえにすすむ」と「まがる」ブロックを「出現した時」のスロットに追加して、動かしましょう。
@@ -1148,11 +1178,14 @@ ja:
       NEW Course 4 Play Lab Vars 4 5_instruction: "「このコードはどんなことができるでしょうか？」「Run」を押して何が起こるか見てみてください。"
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: フリープレイの時間です。あなたのツールボックスの中にあるブロックで楽しんで見てください。
       New Artist Project_instruction: カッコイイのを書いてみよう！プログラムは、マイプロジェクトに もどる時に書きこまれるから安心だよ。
+      New Basketball Project_instruction: 君のバスケットボール ゲームを作ろう。ルールは自由に変更できるよ。完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。
+      New Bounce Project_instruction: バウンス ゲームを作成してください。デザインやルールは自由に変更できます。終了したら、完了ボタンをクリックしてください。作成したゲームは、他のユーザが携帯電話からアクセスして遊ぶことができます。
       New Course 4 Artist Functions Level 4_instruction: "「正方形（せいほうけい）を描く」関数（かんすう）を使って描いてください。"
       New Gumball Project_instruction: すきなものをつくってきょうゆうしましょう！
       New Ice Age Project_instruction: すきなものをつくってきょうゆうしましょう！
       New Infinity Project_instruction: すきなものをつくってきょうゆうしましょう！
       New Minecraft Hero Project_instruction: "**自由にプレイ:**  自分の好きなようにプログラミングしてみましょう!"
+      New Sports Project_instruction: 君の ゲームを作ろう。あなたが全部きめてください。ルールは自由に変更できるし、スポーツをミックスしたり、自由にやろう！完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。
       Overworld Avoid Monsters_instruction: Creeperに出くわすとやっかいです。慎重にやり過ごし、安全な家に戻りましょう。
       Overworld Avoid Monsters_2018_instruction: Creeperに出くわすとやっかいです。慎重にやり過ごし、安全な家に戻りましょう。
       Overworld Chop Tree - allthethings_instruction: 木はいろいろな物の材料になります。木を切り倒すには、近づいて“ブロックを破壊”コマンドを使います。
@@ -1178,12 +1211,16 @@ ja:
       Overworld Powered Minecart_2018_instruction: 上出来です！資源をたくさん集め、それなりの家ができました。次はマップの端からドアまでレールを敷きましょう。
       Overworld Shear Sheep_instruction: '"刈る"コマンドを使って両方の羊から羊毛を集めましょう。'
       Overworld Shear Sheep_2018_instruction: '"刈る"コマンドを使って両方の羊から羊毛を集めましょう。'
+      PDK5 Conditionals 1_instruction: 紫の花の蜜は、1（ある）か 0（ない） かのどちらかですが、どのお花に蜜がある（1である）のかは分かりません！蜜のない花から蜜を集めないように気をつけてください。蜜が
+        1 かどうかは、「もし」ブロックを使って確認しましょう。
       PDK5 Functions 2_instruction: 関数を使えば新しいブロックを作ることができます！ここでは、正方形を描くためのブロックを "draw
         a square" という名前の関数の中に移動しました。"draw a square" を使って、メガネを作ってみましょう。正方形と正方形の間は 75
         ピクセル空いています。
       PS - test - pixelation_instruction: 0 と 1 を入力して X の形を完成させる
       PS copy 2-3 Bee Conditionals 5_instruction: ムラサキ色の花にはミツが、あるのか、ないのか、わかりません。さいしょに「花のミツ」が
         1 かどうか「もし」ブロックを使ってかくにんし、ミツがあったら、とってください。
+      Quantum Bee_instruction: 紫の花の蜜は、1（ある）か 0（ない） かのどちらかですが、どのお花に蜜がある（1である）のかは分かりません！蜜のない花から蜜を集めないように気をつけてください。蜜が
+        1 かどうかは、「もし」ブロックを使って確認しましょう。
       Ryan - 4-5 Bee Conditionals 2_instruction: ミツバチは今すぐ蜜が欲しいのです。すべての物が花ではありません。花が隠れているかもしれないので、すべての雲の下をチェックましょう。そうすればあなたは蜜を集められます。
       Ryan - Bee Conditionals_instruction: ミツバチは今すぐ蜜が欲しいのです。すべての物が花ではありません。花が隠れているかもしれないので、すべての雲の下をチェックましょう。そうすればあなたは蜜を集められます。
       SpecialFrozenLevel_instruction: あなたは もう、マスター アーティストよ！じゆうにブロックをつかって、冬のワンダーランドをつくってね。
@@ -1212,6 +1249,7 @@ ja:
       U2 frequency caesar_instruction: 'やり方:'
       U2 frequency random sub_instruction: 'やり方:'
       U2 vigenere cipher_instruction: 'やり方:'
+      U3 - Arrays - indexPractice_instruction: 配列の内容を順に画面に書き込みます。(クリックして完全な指示を表示)
       U4 vigenere cipher 2_instruction: 'やり方:'
       U4L02 - Objects - Template1_instruction: テンプレート
       U4L02 - Objects - Template1_2018_instruction: テンプレート
@@ -1242,6 +1280,7 @@ ja:
       bounce_11_basketball_instruction: さあ、「実行した時」ブロックに、ブロックをつなげて行きましょう。「新しいボールを投げる」ブロックを、どこかに使う必要があります。手やボールの、画像やスピードを変えたりして、相手が二回スコアを決める前に、何ポイント得点できるか見てみましょう！
       bounce_11_sports_instruction: さあ、「実行した時」ブロックに、ブロックをつなげて行きましょう。「新しいボールを投げる」ブロックを、どこかに使う必要があります。手やボールの、画像やスピードを変えたりして、相手が二回スコアを決める前に、何ポイント得点できるか見てみましょう！
       bounce_12_instruction: バウンス ゲームを作成してください。デザインやルールは自由に変更できます。終了したら、完了ボタンをクリックしてください。作成したゲームは、他のユーザが携帯電話からアクセスして遊ぶことができます。
+      bounce_12_2018_instruction: バウンス ゲームを作成してください。デザインやルールは自由に変更できます。終了したら、完了ボタンをクリックしてください。作成したゲームは、他のユーザが携帯電話からアクセスして遊ぶことができます。
       bounce_12_basketball_instruction: 君のバスケットボール ゲームを作ろう。ルールは自由に変更できるよ。完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。
       bounce_12_sports_instruction: 君の ゲームを作ろう。あなたが全部きめてください。ルールは自由に変更できるし、スポーツをミックスしたり、自由にやろう！完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。
       bounce_1_2018_instruction: "「左向きのブロックが押されたとき」のブロックにべつのブロックをつなげて、「実行」ボタンを押してください。左向き矢印を押してパドルをゴールまで動かしましょう"
@@ -1268,6 +1307,7 @@ ja:
       bounce_7_2018_instruction: "「〜のとき」ブロックにブロックを接続します。最終目標にヒットするまでボールをバウンドさせます"
       bounce_7_basketball_instruction: それぞれの「〜の場合」ブロックに、ブロックをつなげます。ボールが旗に当たるまで、ボールをバウンドします。
       bounce_7_sports_instruction: それぞれの「〜の場合」ブロックに、ブロックをつなげます。ボールが旗に当たるまで、ボールをバウンドします。
+      collector example_instruction: 金のカタマリを全部集めてパズルを解くため、これらのブロックを置きましょう。
       collectorDebugVideo2_instruction: 金のカタマリを全部集めてパズルを解くため、これらのブロックを置きましょう。
       collectorSkinVideo1_instruction: ４つの山をすべて集め、このレベルをクリアしましょう。
       collectorSkinVideo2_instruction: 金の山を一つ集めて、このレベルをクリアしましょう。
@@ -1290,9 +1330,13 @@ ja:
       course4_artist_fwp_challenge1_instruction: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
       course4_artist_variables_challenge1_instruction: あなたは、このようなパターンの作りかたを、すべて学びました。そんなに難しくないから、どうすれば良いか、考えてみよう。
       course4_artist_variables_challenge2_instruction: あなたは、このようなパターンの作りかたを、すべて学びました。そんなに難しくないから、どうすれば良いか、考えてみよう。
+      courseA_artist_loops7_instruction: "「リピート」ループを使用して、水を波立たせることができます。"
+      courseA_artist_loops7_2018_instruction: "「リピート」ループを使用して、水を波立たせることができます。"
+      courseA_artist_loops7_forVideo_instruction: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_bee_seq4_instruction: 自分でやってみよう！
       courseA_bee_seq5_instruction: 自分でやってみよう！
       courseA_collector_loops_challenge2_instruction: '宝を全部ゲットしよう！ '
+      courseA_forVideoTest_artist_instruction: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_harvester_seq6_instruction: 自分でやってみよう！
       courseA_harvester_seq7_instruction: 自分でやってみよう！
       courseA_maze_seq2_instruction: プログラムで、ぼくがブタさんのところに、いけるようにして！
@@ -1331,6 +1375,7 @@ ja:
       courseD_bee_nestedLoops8_2018_instruction: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bounce_events10_instruction: 一番上にゴールがあります。ゲームを作るには、「得点」と「敵の得点」ブロックを「ボールがゴールにあるとき」と「ボールがラケットに当たらなかったとき」ブロックに接続します。相手が2回得点する前に自分がどれだけ得点するか見てみましょう
       courseD_bounce_events11_instruction: "「実行」ブロックにブロックを足していきましょう。「新しいボールを発射する」ブロックを一箇所以上使いましょう。背景を変更したり、ラケットやボールのスピードを変えてみましょう。対戦相手が二回スコアを決める前に何ポイント得点できるでしょうか？"
+      courseD_bounce_events12_instruction: バウンス ゲームを作成してください。デザインやルールは自由に変更できます。終了したら、完了ボタンをクリックしてください。作成したゲームは、他のユーザが携帯電話からアクセスして遊ぶことができます。
       courseD_bounce_events2_instruction: "「右矢印のとき」と「左矢印のとき」ブロックにブロックを接続します。両方の最終目標に到達するためにラケットを移動します"
       courseD_bounce_events3_instruction: "「上矢印のとき」ブロックと似たことを試しましょう。頂上の最終目標にラケットを移動します"
       courseD_bounce_events3s_instruction: "「上矢印のとき」ブロックと似たことを試しましょう。頂上の最終目標にラケットを移動します"
@@ -1479,6 +1524,7 @@ ja:
       grade2_PuppyLoops_7_instruction: ひまわりまで行きたい！
       grade2_PuppyLoops_8_instruction: "このねこのヒゲのコードはまちがっています。\n\r\n\r\nぜんぶのヒゲを同じ長さにかくように、コードを直してください。"
       grade2_PuppyLoops_9_instruction: C のコードが逆さまに描かれているようですね。C に見えるように直せますか？
+      grade2_collector_3_instruction: 金のカタマリを全部集めてパズルを解くため、これらのブロックを置きましょう。
       grade2_puppy_loops2_instruction: この５つのブロックの動きを２つのブロックで置き換えられる？ (ヒント：「〜回繰り返す」ブロックを使って繰り返しの作業を作りましょう)
       grade2_puppy_loops4_instruction: ループを2つ使って少ない数のブロックでブタを捕まえてみよう。
       grade3_ConditionalsElse_1_instruction: ハチは花と蜂の巣を見分けることができません。花から蜜を集めるために、まず花か蜂の巣かを確認しましょう。
@@ -1561,10 +1607,15 @@ ja:
         ・ メニューの新規オプションで、私が山の上に立っているか穴に立っているか教えてください
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: ５杯分のシャベルでこれらすべての穴を埋めるのを手伝ってください。ヒント:"while"ブロックの中に「繰り返し」ブロックを置く事ができます
       grade4_arist_nested_loop_circles1_instruction: 入れ子型の繰り返しを使ってこの絵を完成させてください。
+      grade4_arist_nested_loop_flags1_instruction: 風車（かざぐるま）を作るために、与えられたコードを繰り返しにしましょう。
       grade4_arist_nested_loop_polygons1_instruction: このデザインを１０回ループさせましょう。ループする度にどのくらい回転させる必要がありますか？（ヒント：３６０を１０で割ると？）
       grade4_arist_nested_loop_polygons2_instruction: このデザインを６回繰り返しましょう。繰り返す毎にどれくらい回転する必要があるでしょうか。（ヒント：３６０割る６は？）
+      grade4_arist_nested_loop_squares1_instruction: 入れ子型の「繰り返し（ループ）」を使って、１０個の四角形でできたこの歩道を描く事ができますか？それぞれの四角形は３０ピクセルです。
       grade4_arist_nested_loop_triangles2_instruction: '10回、三角形を書きます。そのためには「くりかえし」ブロックを追加（ついか）し、その中に灰色（はいいろ）のブロックを全部入れます。「くりかえし」のなかに「くりかえし」を入れることを「入れ子」と言います。  '
+      grade4_arist_nested_loop_triangles3_instruction: 三角形のコードを繰り返す事で六角形を描けますか？
+      grade4_arist_nested_loop_triangles4_instruction: ワニの歯を書いてください！
       grade4_arist_nested_loop_triangles5_instruction: 最初から置かれていたコードを別のループの中に入れることで、太陽を作りましょう。これは入れ子型の「繰り返し（ループ）」と言います。
+      grade4_arist_nested_loop_triangles6_instruction: 入れ子型の「繰り返し（ループ）」を使って、これらの３６個の三角形を描けますか？
       grade4_artist_functions1_instruction: |-
         こんにちは！ゾンビアーティストです。お絵かき大好き！
         四角いメガネを描くので手伝ってください。ヒント：メガネのつなぎ部分は、レンズの四角より25ピクセル短く描きましょう。
@@ -1576,8 +1627,12 @@ ja:
       grade4_artist_nestedLoops_challenge_instruction: 面白い形を書くプログラムです。これを、入れ子でくりかえすと、どうなるでしょうか？くりかえす度に、少しまがると、どうなるでしょう？あなたの、すきな絵を書いて楽しんでください。
       grade4_artist_nestedLoops_challenge2_instruction: これは、むずかしいよ！1回じゃムリだから、色々、やって見てください。ヒントを見たいときは、ランプをクリック。
       grade4_artist_nested_loop_circles1_instruction: 入れ子型の繰り返しを使ってこの絵を完成させてください。
+      grade4_artist_nested_loop_flags1_instruction: 風車（かざぐるま）を作るために、与えられたコードを繰り返しにしましょう。
       grade4_artist_nested_loop_polygons1_instruction: このデザインを１０回ループさせましょう。ループする度にどのくらい回転させる必要がありますか？（ヒント：３６０を１０で割ると？）
+      grade4_artist_nested_loop_squares1_instruction: 入れ子型の「繰り返し（ループ）」を使って、１０個の四角形でできたこの歩道を描く事ができますか？それぞれの四角形は３０ピクセルです。
+      grade4_artist_nested_loop_triangles1_instruction: これらの三角形を描くためのコードを完成させてください。最初の１つは用意されています。ヒント：３つの三角形を描くのに３６０度回転します。
       grade4_artist_nested_loop_triangles5_instruction: 最初から置かれていたコードを別のループの中に入れることで、太陽を作りましょう。これは入れ子型の「繰り返し（ループ）」と言います。
+      grade4_artist_nested_loop_triangles6_instruction: 入れ子型の「繰り返し（ループ）」を使って、これらの３６個の三角形を描けますか？
       grade4_artist_parameters_squares1_instruction: |-
         `draw a square`関数の「編集」をクリックして、`length` パラメータを追加します。「パラメータを追加（ついか）」ボタンの左のボックスに `length` と入れてから、ボタンをおして下さい。
         そして、正方形を三つ書きます。大きさは、25、50、75ピクセルで、それぞれ100ピクセルはなれています。
@@ -1667,6 +1722,8 @@ ja:
       grade5_artist_binary8_instruction: このイメージを完成（かんせい）させてください。
       grade5_artist_binary9_instruction: "もっと細かいキャンバスがあります - 16 ピクセル × 16 ピクセルです!
         \r \rこのビットで何ができるか、見てください。"
+      grade5_artist_for_loops10_instruction: "あなたが学んだことをすべて使って、このイメージを作る事ができますか？ \r
+        \r ヒントがほしい？ここをクリックします。"
       grade5_artist_for_loops5_instruction: |-
         さっきのプログラムを、1ヵ所かえるだけで、この絵を書くことが出来ます！
         ヒント：ブロックを１つ消します。
@@ -1792,6 +1849,7 @@ ja:
         このステージに出てきたブロックや変数だけじゃなく、その他にも、いろいろなブロックがあります。まずは、使えるブロックをすべて見てみましょう。
         そのあとで、 くりかえし、変数、イベントを使って、ゲームやお話を作りましょう。
         ヒント: ワークスペース内のすべてのプログラムを見るにはスクロールして下さい。
+      gradek_artist_loops6_instruction: "「リピート」ループを使用して、水を波立たせることができます。"
       k-1 maze 1_instruction: 西に動かして、豚さんのところまで連れていってあげましょう。
       level 'grade3_Loops_10_instruction: 先ほどのパズルと同じように繰り返しブロックを使いますが、今度は曲がるブロックも利用してみましょう。
       level 'grade3_Loops_11_instruction: 繰り返しブロックを使って階段を降り、はなのみつを集めましょう。
@@ -1807,9 +1865,11 @@ ja:
       level 'grade3_Loops_8_instruction: ループを使ってはちみつを作るための蜜を集めましょう。
       level 'grade3_Loops_9_instruction: それぞれのお花から蜜を集めて、蜂の巣ではちみつを作りましょう。
       level grade3_Loops_2_instruction: ループを使えば同じ作業をもっと簡単に行えるかな？
+      scrat 16 (copy 1)_instruction: ドングリ ！ドングリ ！ドングリ ！いちばんすくないブロックでぼくをあそこまでつれていくには、"もしも"ブロックをつかってね。
       scrat 16_instruction: ドングリ ！ドングリ ！ドングリ ！いちばんすくないブロックでぼくをあそこまでつれていくには、"もしも"ブロックをつかってね。
       scrat 17_instruction: よし、練習のためにもう一度やってみよう。さっきとそんなにかわらないけど、壁にきをつけてね。
+      scrat 18 (copy 1)_instruction: '"もし○○そうでなければ××"ブロックは、”もし"の結果によって、○○をするか、××をするかが変わってきます。この新しいブロックをつかって、ぼくをドングリまでつれていってね！'
       scrat 18_instruction: '"もし○○そうでなければ××"ブロックは、”もし"の結果によって、○○をするか、××をするかが変わってきます。この新しいブロックをつかって、ぼくをドングリまでつれていってね！'
-      scrat 19 (copy 1)_instruction: '"もし/でなければ"ブロックをもう一度練習。一度でちゃんとできるでしょうか？'
+      scrat 19 (copy 1)_instruction: "”もし○○でなければ××”ブロックの練習をもう一回やりましょう。一度でクリアできるかな？"
       scrat 19_instruction: "”もし○○でなければ××”ブロックの練習をもう一回やりましょう。一度でクリアできるかな？"
       scrat 20_instruction: ブロックをあと3つだけ足して、難しい迷路をクリアしてみよう。もしこの迷路をクリアできたら、どんなに長くてクネクネした道でも、ぼくはドングリまで歩くことができるよ。いそいで！氷がとけてきた！

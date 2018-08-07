@@ -308,7 +308,7 @@ fi:
       classroom: Opettajan kotisivu
       district_dashboard: Koulupiirin hallintapaneeli
       label: Hei %{username}
-      stats: Minun edistymiseni
+      stats: Code Studio
       settings: Tilini
       logout: Kirjaudu ulos
       signin: Kirjaudu sisään
@@ -588,7 +588,7 @@ fi:
       body: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat Disneyn Infinity-hahmot.
     minecraft:
       title: Minecraft
-      body: Tutki Minecraft-maailmaa koodin kautta.
+      body: Tutki Minecraft-maailmaa koodin kautta
     minecraft2016:
       title: Minecraft
       body: Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft versiollasi.

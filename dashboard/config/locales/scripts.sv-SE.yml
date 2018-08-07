@@ -146,7 +146,7 @@ sv:
             'Maze: Conditionals':
               name: 'Labyrint: Villkorssatser'
             Songwriting:
-              name: Låtskrivande Med parametrar
+              name: Låtskrivande
             'Studio: Create a Game':
               name: 'Spel-labbet: skapa ett spel'
             'Studio: Create a Story':
@@ -175,10 +175,10 @@ sv:
               name: Labyrint
         frozen:
           title: Koda med Anna och Elsa
-          description: Låt oss använda kod för att följa med Anna och Elsa när de
-            utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster
-            medan du åker skridskor och skapa ett underbart vinterlandskap som du
-            kan dela med dina vänner!
+          description: Vi kan använda kod för att följa Anna och Elsa när de utforskar
+            isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom
+            skridskoåkning och skapa ett underbart vinterland som du kan dela med
+            dina vänner!
           description_short: Vi kan använda kod för att följa Anna och Elsa när de
             utforskar isens magi och skönhet.
           stages:
@@ -277,7 +277,7 @@ sv:
             Intro:
               name: Introduktion
             Variables:
-              name: Variabler
+              name: variabler
         algebra:
           title: Datavetenskap i Algebra
           description: Lär dig funktionell programmering genom algebra
@@ -391,13 +391,13 @@ sv:
             Conditionals:
               name: Villkor
             Functions:
-              name: Funktioner
+              name: funktioner
             Graph Paper Programming:
               name: Kalkyleringsprogrammering
             Introduction to Computer Science:
               name: Introduktion till Datavetenskap
             Relay Programming:
-              name: Relä programmering
+              name: Stafettprogrammering
             Song Writing:
               name: Sångskrivande
             The Artist:
@@ -449,13 +449,13 @@ sv:
             Studio:
               name: Studio
         flappy:
-          title: Flappy-kod
+          title: Flappy kod
           description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
             vår Flappy Code övning!
           description_short: Skriv ditt eget Flappy spel på mindre än 10 minuter!
           stages:
             Flappy Code:
-              name: Flappy-kod
+              name: Flappy kod
         jigsaw:
           title: Pussel
           description: Prova vår Jigsaw handledning
@@ -854,7 +854,7 @@ sv:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
             Songwriting:
-              name: Låtskrivande Med parametrar
+              name: Låtskrivande
             The Big Event:
               name: Den stora händelsen
         algebraPD3a:
@@ -912,7 +912,7 @@ sv:
             Hour of Code 2015:
               name: Hour of Code 2015
         mc:
-          title: Minecraft-kodtimmen
+          title: Minecraft Hour of Code
           description: Använd block med kod för att ta med Steve eller Alex på ett
             äventyr genom denna Minecraft-värld
           description_short: Utforska en Minecraft-värld genom kod
@@ -1018,7 +1018,7 @@ sv:
         CSDU3-Draft:
           stages:
             Functions:
-              name: Funktioner
+              name: funktioner
         2016_sciencePD_phase1:
           stages:
             Introduction to PD:
@@ -1067,7 +1067,7 @@ sv:
             'Jigsaw: Learn to drag and drop':
               name: 'Pussel: Lär dig dra och släpp'
             Loops:
-              name: Loopar
+              name: loopar
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
         grade4:
@@ -1075,7 +1075,7 @@ sv:
             Digital Citizenship:
               name: Digitalt medborgarskap
             Songwriting:
-              name: Låtskrivande Med parametrar
+              name: Låtskrivande
         grade1:
           stages:
             Events:
@@ -1083,7 +1083,7 @@ sv:
             'Jigsaw: Learn to drag and drop':
               name: 'Pussel: Lär dig dra och släpp'
             Loops:
-              name: Loopar
+              name: loopar
         grade5:
           stages:
             'Artist: For Loops':
@@ -1131,9 +1131,9 @@ sv:
         csd3-2017:
           stages:
             Functions:
-              name: Funktioner
+              name: funktioner
             Variables:
-              name: Variabler
+              name: variabler
             Conditionals:
               name: Villkor
         grade2:
@@ -1157,15 +1157,15 @@ sv:
             For Loops:
               name: "'För' loopar"
             Functions:
-              name: Funktioner
+              name: funktioner
             Functions with Parameters:
               name: Funktioner med parametrar
             Loops:
-              name: Loopar
+              name: loopar
             Nested Loops:
               name: Kapslade slingor(loopar)
             Variables:
-              name: Variabler
+              name: variabler
             While Loops:
               name: "'Medan' loopar(slingor)"
         algebrapdnext:
@@ -1199,7 +1199,7 @@ sv:
               name: Listor
         minecraft:
           title: Minecraft Hour of Code Designer
-          description_short: Programmet djur och andra Minecraft varelser i din egen
+          description_short: Programmera djur och andra Minecraft varelser i din egen
             version av Minecraft.
           description: Programmera djur och andra Minecraft varelser i din egen version
             av Minecraft.
@@ -1209,7 +1209,7 @@ sv:
         flappy-impact-study:
           stages:
             Flappy Code:
-              name: Flappy-kod
+              name: Flappy kod
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1377,11 +1377,11 @@ sv:
           description_short: Animationer och spel
           stages:
             Variables:
-              name: Variabler
+              name: variabler
             Conditionals:
               name: Villkor
             Functions:
-              name: Funktioner
+              name: funktioner
         csd5-2017:
           stages:
             Representing Images:
@@ -1395,7 +1395,7 @@ sv:
         csd3-old:
           stages:
             Functions:
-              name: Funktioner
+              name: funktioner
         csd2-draft:
           stages:
             Images:
@@ -1405,11 +1405,11 @@ sv:
         csd3-chapters:
           stages:
             Variables:
-              name: Variabler
+              name: variabler
             Conditionals:
               name: Villkor
             Functions:
-              name: Funktioner
+              name: funktioner
             'null':
               name: 'null'
             temp:
@@ -1591,7 +1591,7 @@ sv:
         hero:
           stages:
             Minecraft Hour of Code:
-              name: Minecraft-kodtimmen
+              name: Minecraft Hour of Code
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1629,19 +1629,19 @@ sv:
         csd3-1819draft:
           stages:
             Variables:
-              name: Variabler
+              name: variabler
             Conditionals:
               name: Villkor
             Functions:
-              name: Funktioner
+              name: funktioner
         csd3-2018:
           stages:
             Variables:
-              name: Variabler
+              name: variabler
             Conditionals:
               name: Villkor
             Functions:
-              name: Funktioner
+              name: funktioner
         csd2-2018:
           stages:
             Lists:
@@ -1670,7 +1670,7 @@ sv:
             Conditionals with Cards:
               name: Villkorssatser med kort
             'Functions: Songwriting':
-              name: Låtskrivande Med parametrar
+              name: Låtskrivande
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
@@ -1686,7 +1686,7 @@ sv:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Relä programmering
+              name: Stafettprogrammering
         courseb-2018:
           assignment_family_title: Kurs B
           stages:
@@ -1716,7 +1716,7 @@ sv:
             Graph Paper Programming:
               name: Kalkyleringsprogrammering
             Relay Programming:
-              name: Relä programmering
+              name: Stafettprogrammering
         coursec-2018:
           assignment_family_title: Kurs C
           stages:
@@ -1742,7 +1742,7 @@ sv:
             Introduction:
               name: Introduktion
             'Functions: Songwriting':
-              name: Låtskrivande Med parametrar
+              name: Låtskrivande
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1750,7 +1750,7 @@ sv:
             Conditionals with Cards:
               name: Villkorssatser med kort
             Minecraft Hour of Code:
-              name: Minecraft-kodtimmen
+              name: Minecraft Hour of Code
         coursef-2018:
           assignment_family_title: Kurs F
           stages:
