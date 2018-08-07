@@ -16,6 +16,6 @@
 FactoryGirl.define do
   factory :queued_account_purge do
     user
-    review_reason "MyText"
+    reason_for_review "Fake reason."
   end
 end
