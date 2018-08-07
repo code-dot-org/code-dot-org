@@ -15,8 +15,13 @@ import {
   GRADES_TEACHING,
   OTHER_SCHOOL_VALUE,
   CSF,
-  ERROR
+  SCHOOL_TYPES_MAPPING,
+  ERROR,
 } from './enrollmentConstants';
+
+const OTHER = "Other";
+const NOT_TEACHING = "I'm not teaching this year";
+const EXPLAIN = "(Please Explain):";
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
@@ -110,6 +115,39 @@ export default class EnrollForm extends React.Component {
     }
   };
 
+  gradesTeaching() {
+    if (!this.state.grades_teaching) {
+      return null;
+    }
+    let processedGrades = [];
+    this.state.grades_teaching.forEach((g) => {
+      if (g === `${OTHER} ${EXPLAIN}`) {
+        if (this.state.explain_teaching_other) {
+          processedGrades.push(`${OTHER}: ${this.state.explain_teaching_other}`);
+        } else {
+          processedGrades.push(OTHER);
+        }
+      } else if (g === `${NOT_TEACHING} ${EXPLAIN}`) {
+        if (this.state.explain_not_teaching) {
+          processedGrades.push(`${NOT_TEACHING}: ${this.state.explain_not_teaching}`);
+        } else {
+          processedGrades.push(NOT_TEACHING);
+        }
+      } else {
+        processedGrades.push(g);
+      }
+    });
+    return processedGrades;
+  }
+
+  schoolType() {
+    if (this.state.school_id === OTHER_SCHOOL_VALUE) {
+      return SCHOOL_TYPES_MAPPING[this.state.school_info.school_type];
+    } else {
+      return this.state.school_info.school_type;
+    }
+  }
+
   submit() {
     let params = {
       first_name: this.state.first_name,
@@ -122,10 +160,10 @@ export default class EnrollForm extends React.Component {
         school_name: this.state.school_info.school_name,
         school_state: this.state.school_info.school_state,
         school_zip: this.state.school_info.school_zip,
-        school_type: this.state.school_info.school_type,
+        school_type: this.schoolType(),
       },
       role: this.state.role,
-      grades_teaching: this.state.grades_teaching,
+      grades_teaching: this.gradesTeaching(),
       explain_teaching_other: this.state.explain_teaching_other,
       explain_not_teaching: this.state.explain_not_teaching
     };
@@ -165,12 +203,12 @@ export default class EnrollForm extends React.Component {
     );
     let gradesTeaching = GRADES_TEACHING.concat([
       {
-        answerText: "I'm not teaching this year (Please Explain):",
+        answerText: `${NOT_TEACHING} ${EXPLAIN}`,
         inputValue: this.state.explain_not_teaching,
         onInputChange: this.handleNotTeachingChange
       },
       {
-        answerText: "Other (Please Explain):",
+        answerText: `${OTHER} ${EXPLAIN}`,
         inputValue: this.state.explain_teaching_other,
         onInputChange: this.handleTeachingOtherChange
       }

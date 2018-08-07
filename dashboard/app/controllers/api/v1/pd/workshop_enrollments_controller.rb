@@ -3,10 +3,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include ::Pd::WorkshopConstants
   load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: 'create'
 
-  OTHER = "Other"
-  NOT_TEACHING = "I'm not teaching this year"
-  EXPLAIN = "(Please Explain):"
-
   RESPONSE_MESSAGES = {
     SUCCESS: "success".freeze,
     DUPLICATE: "duplicate".freeze,
@@ -89,23 +85,18 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   private
 
   def enrollment_params
-    enrollment_data = {
+    {
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
       role: params[:role],
+      grades_teaching: params[:grades_teaching]
     }
-
-    if TEACHING_ROLES.include? params[:role]
-      enrollment_data[:grades_teaching] = params[:grades_teaching] ? params[:grades_teaching].map {|g| process_grade(g)}.join(", ") : nil
-    end
-
-    enrollment_data
   end
 
   def school_info_params
     {
-      school_type: params[:school_info][:school_type] ? params[:school_info][:school_type].split.first.downcase : nil,
+      school_type: params[:school_info][:school_type],
       school_state: params[:school_info][:school_state],
       school_zip: params[:school_info][:school_zip],
       school_district_name: params[:school_info][:school_district_name],
@@ -114,16 +105,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       school_name: params[:school_info][:school_name],
       country: "US" # we currently only support enrollment in pd for US schools
     }
-  end
-
-  def process_grade(g)
-    if g == "#{OTHER} #{EXPLAIN}"
-      params[:explain_teaching_other].present? ? "#{OTHER}: #{params[:explain_teaching_other]}" : OTHER
-    elsif g == "#{NOT_TEACHING} #{EXPLAIN}"
-      params[:explain_not_teaching].present? ? "#{NOT_TEACHING}: #{params[:explain_not_teaching]}" : NOT_TEACHING
-    else
-      g
-    end
   end
 
   def render_unsuccessful(error_message, options={})
