@@ -4,6 +4,7 @@ import HiddenUploader from './HiddenUploader.jsx';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import Button from "../../templates/Button";
 import {assetButtonStyles} from "./AssetManager";
+import i18n from '@cdo/locale';
 
 /**
  * A file upload component.
@@ -46,7 +47,7 @@ export default class AssetUploader extends React.Component {
           id="upload-asset"
           disabled={!this.props.uploadsEnabled}
           icon="upload"
-          text="Upload File"
+          text={i18n.uploadFile()}
           style={assetButtonStyles.button}
           size="large"
         />
