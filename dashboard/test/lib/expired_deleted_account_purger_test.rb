@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'expired_deleted_account_purger'
+require_relative '../../../shared/test/spy_newrelic_agent'
 
 class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   freeze_time
