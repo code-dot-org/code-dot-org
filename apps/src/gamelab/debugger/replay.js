@@ -1,8 +1,9 @@
 const trackedProps = ['x', 'y', 'tint'];
 const log = [];
+let original;
 
 export default function wrap(p5) {
-  const original = p5.createSprite;
+  original = original || p5.createSprite;
   log.length = 0;
 
   p5.createSprite = function () {
