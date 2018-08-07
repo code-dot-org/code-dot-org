@@ -63,7 +63,7 @@ sq-AL:
   csedweek_map_legend_cs_tech_jam: Ngjarje speciale
   cded_sign_up: Rregjistrohu
   cded_try_it: Provoje
-  try_now: Provo tani
+  try_now: Mëso më Shumë
   california_heading: Kerkoj shkollës tënde që të të mësojë shkencën kompjuterike
   california_text: Çdo mësues mund të ofrojë <a href='http://studio.code.org/'> kurset
     tona falas</a>. Çdo shkollë fillore mund <a href='http://code.org/educate/k5'>
@@ -238,7 +238,7 @@ sq-AL:
   get_started: Fillo
   i_agree: Pranoj
   participant_select: "- Zgjidh -"
-  participant_student: student
+  participant_student: Student
   participant_parent: Prindi
   participant_educator: Mësues
   participant_engineer: Inxhinier Softuerik
@@ -313,7 +313,7 @@ sq-AL:
   studiobar_frozen_body: Krijo një botë imagjinare dimërore me Anën dhe Elsën
   studiobar_donate_title: Dhuro
   studiobar_donate_body: Një fëmijë mëson për çdo dollar që ti dhuron
-  studiobar_shop_title: Dyqani
+  studiobar_shop_title: Bli
   studiobar_shop_body: Anashkalo stereotipet. Vishni logon tonë me krenari.
   homepage_hero_text_malala: "&ldquo; Sfidoj vajzat në mbarëbotën të mësojnë të kodojnë
     për një orë &rdquo; \nMalala, Fituese e Çmimit Nobel për Paqen"
@@ -369,9 +369,9 @@ sq-AL:
   homepage_action_text_sign_up: Rregjistrohu
   homepage_action_text_try_it: Provoje
   homepage_action_text_volunteers: Kërkohen vullnetarë teknik
-  homepage_action_text_codevideo: Shiko videon
+  homepage_action_text_codevideo: Ndiq videon
   homepage_action_text_teachervideo: Ndiq videon
-  homepage_action_text_watchvideo: Shiko videon
+  homepage_action_text_watchvideo: Ndiq videon
   homepage_action_text_girlvideo: Frymëzo një vajzë
   homepage_action_text_learn: Fillo të mësosh
   homepage_action_text_signpetition: Nënshkruaj peticionin
@@ -413,7 +413,7 @@ sq-AL:
   homepage_slot_text_blurb_educators: Mëso studentët e tu
   homepage_slot_text_link_elementary: Shkollë fillore
   homepage_slot_text_link_middle: Shkolla fillore
-  homepage_slot_text_link_high: Shkolla mesme
+  homepage_slot_text_link_high: Shkolla e mesme
   homepage_slot_text_link_k5: Kurse për klasat K-5
   homepage_slot_text_link_fullcurriculum: Shiko planin tonë të plotë mësimor
   homepage_slot_text_link_pd: Zhvillim profesional
@@ -434,7 +434,7 @@ sq-AL:
   contact_form_topic_outside_us: Unë jam jashtë SH.B.A.
   contact_form_topic_contribution: Kontributi bamirësisë
   contact_form_topic_partner: Unë do të doja të bëhesha partner
-  contact_form_topic_other: Tjetër
+  contact_form_topic_other: Të tjera/ë
   contact_form_label_topic: Temë
   contact_form_label_email: Adresa juaj e email-it
   contact_form_label_message: Mesazhi
@@ -464,7 +464,7 @@ sq-AL:
   class_submission_level_preschool: Parashkollor
   class_submission_level_elementary: Shkolla fillore
   class_submission_level_middle_school: Shkolla fillore
-  class_submission_level_high_school: Shkolla mesme
+  class_submission_level_high_school: Shkolla e mesme
   class_submission_level_college: Fakulteti
   class_submission_level_vocational: Profesionale
   class_submission_languages_other: Gjuhë të tjera
@@ -485,14 +485,14 @@ sq-AL:
   starwars_blocks_description: Përdor blloqet me tërheqje-lëshim.
   starwars_blocks_specs: Shumë gjuhë | Browserët modern, telefonat e mençur, tableta
     | Moshat 6-106
-  starwars_platform_text: Shfletuesit modern, telefonat e mençur, tabletat
+  starwars_platform_text: Browserat e kohës, smartphones, tableta
   mc_name: Ora e Kodimit Minecraft
   mc_longdescription: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë
     nëpër këtë botë Minecraft.
   mc_shortdescription: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një
     aventurë nëpër këtë botë Minecraft.
   mc_gradelevel: Moshat 4-104
-  mc_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
+  mc_platformtext: Browserat e kohës, smartphones, tableta
   mc_specs: Shumë gjuhë | Browserët modern dhe tabletat | Moshat 6-106
   minecraft_designer: Dizenjuesi i Minecraft
   minecraft_adventurer: Aventurieri Minecraft
@@ -511,7 +511,7 @@ sq-AL:
   sports_og_description: Kampionët dhe medalistët e arit ju enkurajojnë të provoni
     Orën e Kodit. Kodoni lojrat e juaja sportive.
   sports_title: Krijo lojën tënde sportive
-  sports_watch_video: Shiko videon
+  sports_watch_video: Ndiq videon
   sports_video_title: Nxit vetveten. Çdokush mund të mësoj.
   sports_basketball_title: Realizo një lojë basketbolli
   sports_all_sports_title: Përziej dhe përshtat sportet
@@ -696,7 +696,7 @@ sq-AL:
   dashboard_navigation_section_community: Ndihma dhe Komuniteti
   dashboard_navigation_section_pd: Zhvillimi Profesional
   dashboard_navigation_section_speakers: Shkenca Kompjuterike <br/> Folësit
-  dashboard_navigation_all_sections: Llogaritë dhe Ecuritë e Studentëve
+  dashboard_navigation_all_sections: Llogaritë dhe Ecuria e Studentit
   dashboard_navigation_view_progress: Ecuri
   dashboard_navigation_add_students: Shto Studentë
   dashboard_navigation_manage_students: Menaxho Studentët
@@ -934,7 +934,7 @@ sq-AL:
   codeorg_gradelevel: Moshat 4-104
   codeintl_gradelevel: Moshat 4-104
   thinkersmithspanish_gradelevel: Për të gjithë
-  khan_gradelevel: Shkolla 9-vjeçare +
+  khan_gradelevel: Shkolla tetë vjeçare +
   khanes_gradelevel: Shkolla tetë vjeçare +
   khanpt_gradelevel: Shkolla tetë vjeçare +
   khanhe_gradelevel: Shkolla tetë vjeçare +
@@ -954,14 +954,14 @@ sq-AL:
   processing_gradelevel: Shkolla e mesme
   robomind_gradelevel: Moshat 8-13
   groklearning_gradelevel: Shkolla tetë vjeçare +
-  quorum_gradelevel: Shkolla 9-vjeçare +
+  quorum_gradelevel: Shkolla tetë vjeçare +
   codespark_gradelevel: Shkolla fillore
   kodable_gradelevel: Shkolla Fillore
   tynkerapp_gradelevel: Moshat 5-13
   robomindnl_gradelevel: Moshat 8-13
   flappy_gradelevel: Moshat 4-104
   bitsbox_gradelevel: Shkolla Fillore
-  makeschool_gradelevel: Shkolla mesme
+  makeschool_gradelevel: Shkolla e mesme
   touchdevelop_gradelevel: Shkolla e mesme
   appinventor_gradelevel: Shkolla tetë vjeçare +
   blockly_gradelevel: Të gjitha moshat
@@ -987,7 +987,7 @@ sq-AL:
   coursed-2018_gradelevel: Klasat 8+
   coursee-2018_gradelevel: Moshat 8-12
   accelerated_gradelevel: Moshat 10-18
-  codeorg_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
+  codeorg_platformtext: Browserat e kohës, smartphones, tableta
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
   thinkersmithspanish_platformtext: Unplugged
   khan_platformtext: Browserat modern të webit
@@ -1025,13 +1025,13 @@ sq-AL:
   thinkersmith2_platformtext: Unplugged
   kodableunplugged_platformtext: Unplugged
   projguts_platformtext: Unplugged
-  hourofcode_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
+  hourofcode_platformtext: Browserat e kohës, smartphones, tableta
   frozen_platformtext: Shfletuesit modernë + tabletat
   starwars_platformtext: Shfletuesit modernë + tabletat
   playlab_platformtext: Browserat e kohës, smartphones, tableta
-  csfirst_platformtext: Shfletuesit modern të web-it
-  codesters_platformtext: Shfletuesit modern të web-it
-  teacherled_platformtext: Shfletuesit modern, telefonat e mençur, tabletat
+  csfirst_platformtext: Browserat modern të webit
+  codesters_platformtext: Browserat modern të webit
+  teacherled_platformtext: Browserat e kohës, smartphones, tableta
   codeorg_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   codeintl_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial për një grup pa kompjutera
@@ -1091,7 +1091,7 @@ sq-AL:
   codeorg_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
     drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
     në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
-    Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar në 34 gjuhë.
+    Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar ne 34 gjuhë.
   codeintl_longdescription: Mëso konceptet bazë të Shkencës Kompjuterike me programimin
     drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione
     në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies.
@@ -1101,8 +1101,8 @@ sq-AL:
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke
-    krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  khan_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon vizatime
+    argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
   khanes_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon vizatime
     argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
   khanpt_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që je duke
@@ -1248,7 +1248,7 @@ sq-AL:
   edx_beyond_name: Klasa CS50 e Harvardi-t
   coursera_beyond_name: Klasa Stanford CS 101
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: Kurset online të universitetit
+  teachingtree_beyond_name: Kurse online të universitetit
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -1264,7 +1264,7 @@ sq-AL:
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Moshat 4-104
-  khan_beyond_gradelevel: Shkolla 9-vjeçare +
+  khan_beyond_gradelevel: Shkolla tetë vjeçare +
   tynker_beyond_gradelevel: Moshat 5-13
   scratch_beyond_gradelevel: Moshat 8+
   lightbot_beyond_gradelevel: Të gjitha moshat
@@ -1272,12 +1272,12 @@ sq-AL:
   kodable_beyond_gradelevel: Shkolla fillore
   scratchjr_beyond_gradelevel: Shkolla fillore
   hopscotch_beyond_gradelevel: Shkolla tetë vjeçare +
-  pocketcode_beyond_gradelevel: Shkolla 9-vjeçare +
-  groklearning_beyond_gradelevel: Shkolla 9-vjeçare +
-  hacketyhack_beyond_gradelevel: Shkolla mesme
+  pocketcode_beyond_gradelevel: Shkolla tetë vjeçare +
+  groklearning_beyond_gradelevel: Shkolla tetë vjeçare +
+  hacketyhack_beyond_gradelevel: Shkolla e mesme
   robomind_beyond_gradelevel: Moshat 8-13
-  makeschool_beyond_gradelevel: Shkolla mesme
-  appinventor_beyond_gradelevel: Shkolla 9-vjeçare +
+  makeschool_beyond_gradelevel: Shkolla e mesme
+  appinventor_beyond_gradelevel: Shkolla tetë vjeçare +
   touchdevelop_beyond_gradelevel: Shkollia mesme
   codehs_beyond_gradelevel: Shkolla mesme
   udemy_beyond_gradelevel: Shkolla e mesme +
@@ -1304,23 +1304,23 @@ sq-AL:
   khan_beyond_platformtext: Shfletuesit modern të web-it
   tynker_beyond_platformtext: Shfletuesit modern të web-it ($$ kërkohet)
   scratch_beyond_platformtext: Çdo shfletues
-  lightbot_beyond_platformtext: iOS, Android (ose shfletues web-i)
-  codecademy_beyond_platformtext: Shfletues modern të web-it. iOS, aplikacione Android
+  lightbot_beyond_platformtext: iOS, Android (ose browser webi)
+  codecademy_beyond_platformtext: Browserat modern të webit. iOS, aplikacione Android
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Aplikacion Telefoni
-  groklearning_beyond_platformtext: Shfletuesit modern të web-it
+  groklearning_beyond_platformtext: Browserat modern të webit
   hacketyhack_beyond_platformtext: Instalim desktopi
-  robomind_beyond_platformtext: Shfletuesit modern të web-it, web-i i pajisjeve mobile
+  robomind_beyond_platformtext: Browserat modern të webit, webi i pajisjeve mobile
   makeschool_beyond_platformtext: Shfletuesit modern të web-it
   appinventor_beyond_platformtext: Shfletuesit Modern + Android
-  touchdevelop_beyond_platformtext: Shfletuesit modern, telefonat e mençur, të gjitha
+  touchdevelop_beyond_platformtext: Browserat modern të webit, smartphones, gjithë
     pajisjet
   codehs_beyond_platformtext: Shfletuesit modern ($$ kërkohet)
   udemy_beyond_platformtext: Bazuar në Web
   lynda_beyond_platformtext: Bazuar në web ($$ kërkohet)
-  edx_beyond_platformtext: Shfletuesit modern
+  edx_beyond_platformtext: Browserat modern
   coursera_beyond_platformtext: Browserat modern
   udacity_beyond_platformtext: Browserat modern
   teachingtree_beyond_platformtext: Bazuar në Web
@@ -1335,7 +1335,7 @@ sq-AL:
   lego_beyond_platformtext: Blerje roboti
   finch_beyond_platformtext: Blerje roboti
   arduino_beyond_platformtext: Shfletues i faqeve të internetit, më pas bli Kit
-  processing_beyond_platformtext: Shfletuesit modern të web-it
+  processing_beyond_platformtext: Browserat modern të webit
   alice_beyond_platformtext: Windows ose Mac (kërkohet instalim)
   sphero_beyond_platformtext: Blerje roboti
   codeorg_beyond_shortdescription: Mëso të kodosh me Marc Zuckerberg dhe Angry Birds!
@@ -1387,8 +1387,8 @@ sq-AL:
     udhëhequra duke paraqitur video leksionesh nga Bill Gates, Mark Zuckerberg, Angry
     Birds dhe Plants vs. Zombies. Mëso ciklet përsëritëse, kushtet, algoritmet bazë,
     funksionet dhe variablat.
-  khan_beyond_longdescription: Mëso bazat e programimit në JavaScript ndërkohë që
-    je duke krijuar vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
+  khan_beyond_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon
+    vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
   tynker_beyond_longdescription: Tynker e bën të lehtë dhe argëtues mësimin e programimit.
     Fëmijët ndërtojnë lojra dhe aplikacione për telefona duke rregulluar blloqet e
     kodit. Zhduk nevojën për të ditur sintaksën e programimit. Fëmijët transformojnë

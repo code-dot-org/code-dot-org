@@ -11,7 +11,7 @@ is-IS:
     Explorer 8, 9 og 10. Vinsamlegast uppfærðu í nýlegan vafra.
   upgrade_ie_link: Læra meira
   en: Tölvunarfræði
-  computer_science_edweek: Vika tölvunarfræði
+  computer_science_edweek: Klukkustund kóðunar er nú
   csedweek_dates: 8.-14. desember 2014
   csedweek_banner_hoc: 'Nú styttist í <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Klukkustund kóðunar</a>. Kennarar
@@ -66,7 +66,7 @@ is-IS:
   csedweek_map_legend_cs_tech_jam: Sérstakur viðburður
   cded_sign_up: Skráning
   cded_try_it: Prófið hana
-  try_now: Prófa núna
+  try_now: Prófaðu núna
   california_heading: Biddu skólann þinn að kenna tölvunarfræði
   california_text: Hvaða kennari sem er getur boðið <a href='http://studio.code.org/'>ókeypis
     námskeiðin okkar</a>.  Hvaða grunnskóli sem er getur <a href='http://code.org/educate/k5'>kennt
@@ -235,7 +235,7 @@ is-IS:
   get_started: Byrja
   i_agree: Sammála
   participant_select: "- Velja -"
-  participant_student: nemandi
+  participant_student: Nemandi
   participant_parent: foreldri
   participant_educator: fræðari
   participant_engineer: tölvunarfræðingur
@@ -522,7 +522,7 @@ is-IS:
   minecraft_host_event: Skipuleggðu Klukkustund kóðunar í Minecraft
   minecraft_teach_resources: Tilföng kennara og kennsluáætlun.
   sports_page_title: Klukkustund kóðunar - íþróttir
-  sports_og_title: Láttu reyna á þig. Allir geta lært.
+  sports_og_title: Láttu reyna á þig. Það geta allir lært.
   sports_og_description: Meistarar og gullverðlaunarhafar hvetja þig til að prófa
     Klukkustund kóðunar. Forritaðu þinn eigin íþróttaleik.
   sports_title: Kóðaðu þinn eigin íþróttaleik
@@ -801,14 +801,14 @@ is-IS:
   dashboard_navigation_section_speakers: |-
     Gestafyrirlesarar<br/>
     í Tölvunarfræði
-  dashboard_navigation_all_sections: Reikningar og árangur nemenda
+  dashboard_navigation_all_sections: Reikningar og framvinda nemenda
   dashboard_navigation_view_progress: Framvinda
   dashboard_navigation_view_text_responses: Svör sem texti
   dashboard_navigation_view_assessments: Mat
   dashboard_navigation_view_assessments_surveys: Mat/Kannanir
   dashboard_navigation_add_students: Bæta við nemendum
   dashboard_navigation_manage_students: Umsjón nemenda
-  dashboard_navigation_lesson_plans_resources: Viðmið námskrár
+  dashboard_navigation_lesson_plans_resources: 'Námskrárviðmið '
   dashboard_navigation_view_stats: Tölfræði
   dashboard_navigation_section: 'Hópur: %{section_name}'
   dashboard_navigation_student: 'Nemandi: %{student_name}'
@@ -1199,7 +1199,7 @@ is-IS:
   applab_name: Appsmiðja
   gamelab_name: Leikjasmiðjan
   basketball_name: Búa til körfuboltaleik
-  sports_name: Kóðaðu íþróttaleik eftir þínu höfði
+  sports_name: Kóðaðu þinn eigin íþróttaleik
   applab_gradelevel: Aldur 13+
   applab_shortdescription_congrats: App Lab smiðjan er forritunarumhverfi þar sem
     þú getur búið til einföld öpp. Hannaðu app og forritaðu það með kubbum eða JavaScript
@@ -1244,7 +1244,7 @@ is-IS:
   hourofcode_gradelevel: 6-106 ára
   frozen_gradelevel: 8-108 ára
   starwars_gradelevel: 6-106 ára
-  playlab_gradelevel: 6-14 ára
+  playlab_gradelevel: 4-104 ára
   infinity_gradelevel: 4-104 ára
   artist_gradelevel: 8-108 ára
   monstercoding_gradelevel: 5-13 ára
@@ -1277,7 +1277,7 @@ is-IS:
   coursee-2018_gradelevel: 8 - 12 ára
   coursef-2018_gradelevel: Bekkur 10+
   accelerated_gradelevel: Fyrir 10-18 ára
-  codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
+  codeorg_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   thinkersmithspanish_platformtext: Án tölvu
   khan_platformtext: Fyrir nýjustu vafra
@@ -1319,11 +1319,11 @@ is-IS:
   playlab_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   monstercoding_platformtext: Nýjustu vafrar, iOS, Android
   allcancode_platformtext: Nýjustu vafrar, iOS
-  csfirst_platformtext: Nýjustu vafrar
+  csfirst_platformtext: Fyrir nýjustu vafra
   boxisland_platformtext: Android, iOS
-  codesters_platformtext: Nýjustu vafrar
+  codesters_platformtext: Fyrir nýjustu vafra
   texasinstruments_platformtext: TI Reiknivélar
-  teacherled_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
+  teacherled_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   codeorg_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   codeintl_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
   khan_shortdescription: Lærðu að teikna með JavaScript
@@ -1490,7 +1490,7 @@ is-IS:
     að fá aðgang að kennaravef og fylgjast með árangri nemenda!
   codecademy_longdescription: Codeacademy er gagnvirk, nemendastýrð kynning á grunnatriðum
     tölvunarfræði sem nýtir JavaScript og er notuð af tugum miljóna nemenda um allan
-    heim. Við höfum gert okkar Klukkustund kóðunar að aðgengilegri upplifun  ásamt
+    heim. Við höfum gert okkar Klukkustund kóðunar að aðgengilegri upplifun ásamt
     meðfylgjandi spurningum, skyggnum og lokaverkefni fyrir nemendur að enda á.
   codecombat_longdescription: Sigraðu tröll og lærðu um leið Python eða JavaScript
     í þessum hetjulega forritunarleik!
@@ -1668,22 +1668,22 @@ is-IS:
   alice_beyond_gradelevel: Miðskóli +
   sphero_beyond_gradelevel: 8+ ára
   codeorg_beyond_platformtext: Nýjustu vafrar, spjaldtölvur
-  khan_beyond_platformtext: Nýjustu vafrar
+  khan_beyond_platformtext: Fyrir nýjustu vafra
   tynker_beyond_platformtext: Fyrir nýjustu vafra (ekki frítt)
   scratch_beyond_platformtext: Einhver vafri
   lightbot_beyond_platformtext: iOS, Android (eða vefvafri)
   codecademy_beyond_platformtext: Öpp fyrir nýjustu vafra, iOS, Android
   pocketcode_beyond_platformtext: Símaapp
-  groklearning_beyond_platformtext: Nýjustu vafrar
-  hacketyhack_beyond_platformtext: Uppsetning á skjáborðstölvu
-  robomind_beyond_platformtext: Nýjustu vafrar, líka í farsímum
+  groklearning_beyond_platformtext: Fyrir nýjustu vafra
+  hacketyhack_beyond_platformtext: Uppsetning á borðtölvu
+  robomind_beyond_platformtext: Fyrir nýjustu vafraa, líka í farsímum
   makeschool_beyond_platformtext: Fyrir nýjustu vafra
   appinventor_beyond_platformtext: Nýlegur vafri + Android
   touchdevelop_beyond_platformtext: Nýjustu vafrar, snjallsímar, öll tæki
   codehs_beyond_platformtext: Fyrir nýjustu vafra (ekki frítt)
   udemy_beyond_platformtext: Fyrir vefsíðu
   lynda_beyond_platformtext: Fyrir vefsíður (ekki frítt)
-  edx_beyond_platformtext: Nýjustu vafrar
+  edx_beyond_platformtext: Fyrir nýjustu vafra
   coursera_beyond_platformtext: Fyrir nýjustu vafra
   udacity_beyond_platformtext: Fyrir nýjustu vafra
   teachingtree_beyond_platformtext: Fyrir vefsíðu
@@ -1905,6 +1905,7 @@ is-IS:
     í <a href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum sem
     við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að eitthvað
     virki ekki.
+  starwars_shortcode: stjarna
   flappy_shortcode: blaka
   header_home: Forsíða
   header_my_dashboard: Stjórnborðið mitt

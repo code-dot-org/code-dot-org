@@ -445,9 +445,9 @@ fi-FI:
   starwars_platform_text: Nykyaikaiset selaimet, älypuhelimet, tabletit
   mc_name: Minecraft Koodaustunti
   mc_longdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
-    läpi Minecraft-maailman.
+    läpi Minecraft-maailman
   mc_shortdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
-    läpi Minecraft-maailman.
+    läpi Minecraft-maailman
   mc_gradelevel: 4-104-vuotiaille
   mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
@@ -551,7 +551,7 @@ fi-FI:
   volunteer_engineer_submission_num_volunteers_50: 50 vapaaehtoistyöntekijää
   petition_age: Ikä
   dashboard_announce_learn_more_button: Lue lisää
-  dashboard_landing_title: Opettajan päänäyttö
+  dashboard_landing_title: Opettajan kotisivu
   dashboard_landing_welcome: Tervetuloa uuteen ja parempaan opettajan päänäyttöön.
   dashboard_landing_video: Katso tämä video
   dashboard_landing_watch_video: esittelykierros uusiin ominaisuuksiin!

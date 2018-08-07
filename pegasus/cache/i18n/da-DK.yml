@@ -816,7 +816,7 @@ da-DK:
   robomindnl_name: Programmer en virtuel robot
   flappy_name: Lav et Flappy spil
   bitsbox_name: Bitsbox - lav et spil
-  makeschool_name: Opbygge et iPhone spil i din browser!
+  makeschool_name: Lav et iPhone spil i din browser!
   appinventor_name: AppInventor Hour of Code
   blockly_name: Blockly
   projguts_name: Sten, saks, papir
@@ -852,7 +852,7 @@ da-DK:
   khanfr_gradelevel: Mellemskolen +
   khanpl_gradelevel: Mellemskolen +
   tynker_gradelevel: I alderen 5-13
-  scratch_gradelevel: Alder 8+
+  scratch_gradelevel: Fra 8 år
   lightbot_gradelevel: Alle aldre
   thinkersmith_gradelevel: Alle aldre
   condcards_gradelevel: Alder 8-12
@@ -870,7 +870,7 @@ da-DK:
   kodable_gradelevel: Folkeskole
   tynkerapp_gradelevel: I alderen 5-13
   robomindnl_gradelevel: Alder 8-13
-  flappy_gradelevel: For 4-104-årige
+  flappy_gradelevel: Alder 6+
   bitsbox_gradelevel: Folkeskole
   makeschool_gradelevel: Gymnasium
   touchdevelop_gradelevel: Gymnasium
@@ -880,7 +880,7 @@ da-DK:
   kodableunplugged_gradelevel: Alder 8-13
   projguts_gradelevel: Alder 10-13
   hourofcode_gradelevel: For 4-104-årige
-  frozen_gradelevel: Fra 8 år
+  frozen_gradelevel: For 4-104-årige
   starwars_gradelevel: Alder 6+
   playlab_gradelevel: For 4-104-årige
   infinity_gradelevel: For 4-104-årige

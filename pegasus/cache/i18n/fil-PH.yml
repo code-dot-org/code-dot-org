@@ -345,7 +345,7 @@ fil-PH:
   studiobar_teacher_body: Ipakilala ang Code Studio sa iyong classroom
   studiobar_frozen_title: Hour of Code
   studiobar_frozen_body: Lumikha ng winter wonderland kasama sina Anna at Elsa
-  studiobar_donate_title: Mag-donate
+  studiobar_donate_title: Magbigay ng donasyon
   studiobar_donate_body: Isang bata ang natututo sa bawat dolyar na inaabuloy ninyo
   studiobar_shop_title: Tindahan
   studiobar_shop_body: Gibain ang mga stereotype. Mapagmalaking suotin ang aming logo.
@@ -480,7 +480,7 @@ fil-PH:
   homepage_header_codestudio: Code Studio mga gawa ng estudyante
   homepage_header_donors: Pinasasalamatan ng Code.org ang mag tagasuporta nito
   homepage_donors_seall: Tingnan lahat
-  homepage_donors_donate: Mag-donate
+  homepage_donors_donate: Magbigay ng donasyon
   homepage_below_hero_announcement_link_text: Matuto nang higit pa
   contact_form_topic_student: Ako ay estudyante
   contact_form_topic_parent: Ako ay magulang
@@ -1029,7 +1029,7 @@ fil-PH:
     estudyante kahit anong oras sa pagpili sa <b>Ipakita ang sekreto</b> at saka <b>I-reset
     ang sekreto</b>. May bagong sekretong picture ang ipapakita upang magamit ito
     ng estudyante upang makapag-sign in.
-  dashboard_students_secret_word_title: Sekretong Salita
+  dashboard_students_secret_word_title: Secret Words
   dashboard_students_secret_word: Sekretong Salita
   dashboard_students_reset_word: 'Maaari mong i-reset ang sikretong salita isang mag-aaral
     sa anumang oras sa pamamagitan ng pagpili ng <b> Ipakita ang secret</b> at pagkatapos
@@ -1316,6 +1316,14 @@ fil-PH:
   cspexam1-mWU7ilDYM9_name: Pagsubok Parte 1 - 25 na mga tanong
   cspexam2-AKwgAh1ac5_name: Pagsubok na Parte 2 - 25 na mga tanong
   cspunit3_gradelevel: Mga Baitang na 9-12
+  cspunit3_shortdescription_congrats: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal
+    na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad
+    na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit
+    ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program
+    para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling
+    ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\r\n\r\nAng
+    yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol
+    sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
   20-hour_name: Pinabilis na Kurso
   algebra_name: CS sa Algebra
   AlgebraA_name: CS sa Algebra na Kursong A
@@ -1355,7 +1363,7 @@ fil-PH:
   scratch_gradelevel: Edad 8+
   lightbot_gradelevel: Lahat ng edad
   thinkersmith_gradelevel: Lahat ng edad
-  condcards_gradelevel: Edad 8-12
+  condcards_gradelevel: Baitang 9+
   lightbotintl_gradelevel: Lahat ng edad
   codehs_gradelevel: High school
   codecademy_gradelevel: High school
@@ -1406,18 +1414,18 @@ fil-PH:
   courseb-2017_gradelevel: Baitang 6+
   coursec-2017_gradelevel: Baitang 7+
   coursed-2017_gradelevel: Baitang 8+
-  coursee-2017_gradelevel: Edad 8-12
+  coursee-2017_gradelevel: Baitang 9+
   coursef-2017_gradelevel: Baitang 10+
   coursea-2018_gradelevel: Baitang 5+
   courseb-2018_gradelevel: Baitang 6+
   coursec-2018_gradelevel: Baitang 7+
   coursed-2018_gradelevel: Baitang 8+
-  coursee-2018_gradelevel: Edad 8-12
+  coursee-2018_gradelevel: Baitang 9+
   coursef-2018_gradelevel: Baitang 10+
   accelerated_gradelevel: Mga edad na 10-18
   codeorg_platformtext: Makabagong mga browser, smartphone, at mga tablet
   codeintl_platformtext: Makabagong mga browser, smartphone, at mga tablet
-  thinkersmithspanish_platformtext: Unplugged
+  thinkersmithspanish_platformtext: Unuplugged
   khan_platformtext: Modernong mga web browsers
   khanes_platformtext: Modernong mga web browsers
   khanpt_platformtext: Modernong mga web browsers
@@ -1427,7 +1435,7 @@ fil-PH:
   tynker_platformtext: Modernong mga web browsers
   scratch_platformtext: Mga web browser sa Desktop lang (hindi tablet)
   lightbot_platformtext: Lahat ng mga browser at iOS, Android o Game Console
-  thinkersmith_platformtext: Unplugged
+  thinkersmith_platformtext: Unuplugged
   condcards_platformtext: Unuplugged
   lightbotintl_platformtext: iOS, Android (o web browser)
   codehs_platformtext: Mga modernong mga browser. (Ang follow-on ng mga kurso ay nangangailangan
@@ -1450,9 +1458,9 @@ fil-PH:
   touchdevelop_platformtext: Mondernong mga browser, smartphone, lahat ng mga devices
   appinventor_platformtext: Makabagong mga browser + Android
   blockly_platformtext: Mga modernong panginain (browser) lamang
-  thinkersmith2_platformtext: Unplugged
-  kodableunplugged_platformtext: Unplugged
-  projguts_platformtext: Unplugged
+  thinkersmith2_platformtext: Unuplugged
+  kodableunplugged_platformtext: Unuplugged
+  projguts_platformtext: Unuplugged
   hourofcode_platformtext: Makabagong mga browser, smartphone, at mga tablet
   frozen_platformtext: Makabagong mga browser + mga tablet
   starwars_platformtext: Makabagong mga browser + mga tablet
@@ -1831,7 +1839,7 @@ fil-PH:
   lynda_beyond_name: Online na Pang-Program ng mga Kurso
   edx_beyond_name: Harvard CS50 na klase
   coursera_beyond_name: Stanford CS 101 na klase
-  teachingtree_beyond_name: Online na mga kurso ng Unibersidad
+  teachingtree_beyond_name: Mga kurso ng unibersidad na online
   w3schools_beyond_name: Matuto ng HTML
   codeavengers_beyond_name: Matutong mag-code ng mga Websites
   arduino_beyond_name: Arduine sa Sparkfun
