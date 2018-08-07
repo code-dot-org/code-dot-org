@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import NewProjectButtons from './NewProjectButtons.jsx';
+import NewProjectButtons from './NewProjectButtons';
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import color from '../../util/color';
@@ -68,38 +68,38 @@ export default class StartNewProject extends React.Component {
         <div style={{clear: 'both'}}/>
 
         {showFullList &&
-        <div>
-          <NewProjectButtons
-            description={i18n.projectGroupPlaylab()}
-            projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
-          />
-          <NewProjectButtons
-            description={i18n.projectGroupEvents()}
-            projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
-          />
-          <NewProjectButtons
-            description={i18n.projectGroupArtist()}
-            projectTypes={['artist', 'frozen']}
-          />
-          <NewProjectButtons
-            description={i18n.projectGroupMinecraft()}
-            projectTypes={['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
-          />
-          {canViewAdvancedTools &&
+          <div>
             <NewProjectButtons
-              description={i18n.projectGroupAdvancedTools()}
-              projectTypes={['applab', 'gamelab', 'weblab']}
+              description={i18n.projectGroupPlaylab()}
+              projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
             />
-          }
-          <NewProjectButtons
-            description={i18n.projectGroupPreReader()}
-            projectTypes={['playlab_k1', 'artist_k1']}
-          />
-          <NewProjectButtons
-            description={i18n.projectGroupMath()}
-            projectTypes={['calc', 'eval']}
-          />
-        </div>
+            <NewProjectButtons
+              description={i18n.projectGroupEvents()}
+              projectTypes={['flappy', 'starwarsblocks', 'starwars', 'bounce', 'sports', 'basketball']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupArtist()}
+              projectTypes={['artist', 'frozen']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupMinecraft()}
+              projectTypes={['minecraft_hero', 'minecraft_designer', 'minecraft_adventurer']}
+            />
+            {canViewAdvancedTools &&
+              <NewProjectButtons
+                description={i18n.projectGroupAdvancedTools()}
+                projectTypes={['applab', 'gamelab', 'weblab']}
+              />
+            }
+            <NewProjectButtons
+              description={i18n.projectGroupPreReader()}
+              projectTypes={['playlab_k1', 'artist_k1']}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupMath()}
+              projectTypes={['calc', 'eval']}
+            />
+          </div>
         }
         <div style={styles.spacer}/>
       </div>
