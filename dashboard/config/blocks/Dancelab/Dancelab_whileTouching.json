@@ -1,0 +1,25 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whileTouching",
+    "blockText": "while {SPRITE1} is touching {SPRITE2}",
+    "args": [
+      {
+        "name": "SPRITE1",
+        "type": "Sprite",
+        "defer": true
+      },
+      {
+        "name": "SPRITE2",
+        "type": "Sprite",
+        "defer": true
+      }
+    ],
+    "eventBlock": true
+  }
+}
