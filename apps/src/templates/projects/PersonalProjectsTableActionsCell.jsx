@@ -94,7 +94,7 @@ class PersonalProjectsTableActionsCell extends Component {
             )}
             <MenuBreak/>
             <PopUpMenu.Item
-              onClick={() => console.log("Delete was clicked")}
+              onClick={this.onDelete}
               color={color.red}
             >
               <FontAwesome icon="times-circle" style={styles.xIcon}/>
