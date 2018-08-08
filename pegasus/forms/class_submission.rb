@@ -147,9 +147,38 @@ class ClassSubmission < Form
     {}.tap do |results|
       location = search_for_address(data['school_address_s'])
       results.merge! location.to_solr if location
+
+      # Add additional data that was previously only used for indexing.
+      results.merge! additional_data(data)
     end
   end
 
+  # This is essentially identical to the below function, but it's called by
+  # process_with_ip which is called by process_forms' process_batch_of_forms
+  # which writes to the database's processed_data column in the forms table.
+  # The fields stored by this function were previously only written to Solr.
+  def self.additional_data(data)
+    new_data = {}
+
+    ['in_school', 'out_of_school', 'online'].each do |prefix|
+      class_format = data['class_format_s']
+      if class_format =~ /^#{prefix}_/
+        new_data['class_format_category_s'] = prefix
+        new_data['class_format_subcategory_s'] = class_format.sub(/^#{prefix}_/, '')
+      end
+    end
+
+    new_data['class_languages_all_ss'] = data['class_languages_ss'] - ['Other']
+    new_data['class_languages_all_ss'].concat(data['class_languages_other_ss'] || []).sort.uniq
+
+    # Create a case-insensitive version of the name for sorting.
+    new_data['school_name_sort_s'] = data['school_name_s'].downcase
+
+    new_data
+  end
+
+  # This function adds additional fields to the data.  It's called by
+  # process_forms' index_batch_of_forms which writes them to Solr.
   def self.index(data)
     ['in_school', 'out_of_school', 'online'].each do |prefix|
       class_format = data['class_format_s']
@@ -177,12 +206,12 @@ class ClassSubmission < Form
         }
       ).
       exclude(
-        Sequel.function(:coalesce, Forms.json('data.class_format_category_s'), '') => "online"
+        Sequel.function(:coalesce, Forms.json('processed_data.class_format_category_s'), '') => "online"
       )
 
     unless params['class_format_category_s'].nil_or_empty?
       query = query.where(
-        Forms.json('data.class_format_category_s') => params['class_format_category_s']
+        Forms.json('processed_data.class_format_category_s') => params['class_format_category_s']
       )
     end
 
@@ -212,8 +241,12 @@ class ClassSubmission < Form
       end
     end
 
-    fl = 'location_p,school_name_s,school_address_s,class_format_s,class_format_category_s,school_tuition_s,school_level_ss,class_languages_all_ss,school_website_s,class_description_s'.split(',').map do |field|
+    fl = 'location_p,school_name_s,school_address_s,class_format_s,school_tuition_s,school_level_ss,school_website_s,class_description_s'.split(',').map do |field|
       Forms.json("data.#{field}").as(field)
+    end
+
+    fl += 'class_format_category_s,class_format_subcategory_s,class_languages_all_ss,school_name_sort_s'.split(',').map do |field|
+      Forms.json("processed_data.#{field}").as(field)
     end
 
     if coordinates && distance
@@ -241,6 +274,7 @@ class ClassSubmission < Form
     ).limit(rows).to_a
     docs.each do |doc|
       doc[:school_level_ss] = JSON.parse(doc[:school_level_ss])
+      doc[:class_languages_all_ss] = JSON.parse(doc[:class_languages_all_ss])
     end
     {
       facet_counts: {facet_fields: {}},
