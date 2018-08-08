@@ -1,9 +1,12 @@
+require 'cdo/aws/s3'
+
 class PurgedAccountLog
   VALID_REASONS = [
     SOFT_DELETE_28_DAYS_AGO = 'soft delete 28 days ago',
     REQUESTED_BY_USER = 'requested by user',
   ]
 
+  attr_reader :user_id, :hashed_email
   attr_accessor :pardot_ids, :poste_contact_ids, :purged_at, :confirmed_at
 
   def initialize(user, reason:)
@@ -13,7 +16,7 @@ class PurgedAccountLog
     raise ArgumentError, 'Invalid reason for purge' unless VALID_REASONS.include? reason
 
     # users.id still matchable against a purged row in our DB
-    @id = user.id
+    @user_id = user.id
 
     # to be kept in the 28-day delete case
     @hashed_email = user.hashed_email unless reason == REQUESTED_BY_USER
@@ -32,15 +35,22 @@ class PurgedAccountLog
     @confirmed_at = nil
   end
 
-  def to_yaml
+  def to_hash
     {
-      id: @id,
+      user_id: @user_id,
       hashed_email: @hashed_email,
       pardot_ids: @pardot_ids,
       poste_contact_ids: @poste_contact_ids,
       reason: @reason,
       purged_at: @purged_at,
       confirmed_at: @confirmed_at,
-    }.to_yaml
+    }
+  end
+
+  def upload
+    raise 'A purged_at date is required before upload' if @purged_at.nil?
+    AWS::S3::LogUploader.
+      new('cdo-audit-logs', "purged-users/#{CDO.rack_env}/#{@purged_at.strftime('%Y-%m-%d')}").
+      upload_log(@user_id.to_s, to_json)
   end
 end
