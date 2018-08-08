@@ -69,13 +69,13 @@ fa:
             Binary Bracelets:
               name: دستبند دودویی
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Flappy:
               name: فلاپی
             Getting Loopy:
               name: سر گیجه گرفتن
             Graph Paper Programming:
-              name: برنامه نویسی روی کاغذ شطرنجی 
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             'Maze: Loops':
               name: 'هزارتو: حلقه ها'
             'Maze: Sequence':
@@ -132,7 +132,7 @@ fa:
             'Maze: Conditionals':
               name: 'هزارتو: شرطی ها'
             Songwriting:
-              name: ترانه نویسی با پارامترها
+              name: ترانه سرایی
             'Studio: Create a Game':
               name: 'آزمایشگاه بازی: یک بازی بساز'
             'Studio: Create a Story':
@@ -257,7 +257,7 @@ fa:
           description_short: یادگیری برنامه نویسی تابعی از طریق جبر
           stages:
             'Eval: Conditionals':
-              name: مشروط
+              name: شرطی ها
             'Eval: Strings and Images':
               name: رشته ها و تصاویر
             'Unplugged: Conditionals and Piecewise Functions':
@@ -301,19 +301,19 @@ fa:
             Abstraction:
               name: انتزاع
             Algorithms:
-              name: الگوریتم
+              name: الگوریتم ها
             Computational Thinking:
               name: تفکر محاسباتی
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Functions:
               name: توابع
             Graph Paper Programming:
-              name: برنامه نویسی روی کاغذ شطرنجی 
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Introduction to Computer Science:
               name: آشنایی با علوم کامپیوتر
             Relay Programming:
-              name: برنامه نویسی رله
+              name: برنامه نویسی دست به دست
             Song Writing:
               name: آهنگ سازی
             The Artist:
@@ -335,7 +335,7 @@ fa:
             The Internet:
               name: اینترنت
             The Maze:
-              name: پیچ و خم
+              name: مارپیچ
             Wrap-up:
               name: خلاصه
         edit-code:
@@ -348,7 +348,7 @@ fa:
             The Artist:
               name: هنرمند
             The Maze:
-              name: پیچ و خم
+              name: مارپیچ
         events:
           title: رویدادها
           description: رویدادها
@@ -384,6 +384,8 @@ fa:
           stages:
             Hour of Code 2013:
               name: ساعت کد نویسی سال 2013
+        cspunit1:
+          description_short: برنامه نویسی
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -419,6 +421,7 @@ fa:
             Introduction to PD:
               name: آشنايي با پیشرفت حرفه ای
         cspunit3:
+          description_short: برنامه نویسی
           stages:
             Creating Functions:
               name: ساختن تابع ها
@@ -473,6 +476,7 @@ fa:
             Wrap-Up:
               name: جمع و جور کن
         cspunit2:
+          description_short: برنامه نویسی
           stages:
             The Internet:
               name: اینترنت
@@ -621,7 +625,7 @@ fa:
             Getting Loopy:
               name: سر گیجه گرفتن
             Graph Paper Programming:
-              name: برنامه نویسی روی کاغذ شطرنجی 
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Happy Maps:
               name: نقشه های شاد
             Move it, Move it:
@@ -629,7 +633,7 @@ fa:
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             Songwriting:
-              name: ترانه نویسی با پارامترها
+              name: ترانه سرایی
             The Big Event:
               name: رویداد بزرگ
         ScienceP3OLPT2:
@@ -681,6 +685,10 @@ fa:
               name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
+        cspunit5:
+          description_short: برنامه نویسی
+        cspunit4:
+          description_short: برنامه نویسی
         AlgebraA:
           description: یادگیری برنامه نویسی تابعی از طریق جبر
           description_short: یادگیری برنامه نویسی تابعی از طریق جبر
@@ -788,7 +796,7 @@ fa:
             'Jigsaw: Learn to drag and drop':
               name: 'پازل: یاد بگیر که بکشی و رها کنی'
             Loops:
-              name: حلقه ها
+              name: حلقه‌ها
             Programming:
               name: برنامه نویسی
             'Real-life Algorithms: Plant a Seed':
@@ -798,7 +806,7 @@ fa:
             Digital Citizenship:
               name: شهروندی دیجیتالی
             Songwriting:
-              name: ترانه نویسی با پارامترها
+              name: ترانه سرایی
         grade1:
           stages:
             Events:
@@ -806,7 +814,7 @@ fa:
             'Jigsaw: Learn to drag and drop':
               name: 'پازل: یاد بگیر که بکشی و رها کنی'
             Loops:
-              name: حلقه ها
+              name: حلقه‌ها
             Programming:
               name: برنامه نویسی
         grade5:
@@ -861,7 +869,7 @@ fa:
             Variables:
               name: متغیرها
             Conditionals:
-              name: مشروط
+              name: شرطی ها
         grade2:
           stages:
             Flappy:
@@ -877,7 +885,7 @@ fa:
             Binary:
               name: دو دویی
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Events:
               name: رویدادها
             For Loops:
@@ -887,7 +895,7 @@ fa:
             Functions with Parameters:
               name: معادله با پارامترها
             Loops:
-              name: حلقه ها
+              name: حلقه‌ها
             Nested Loops:
               name: حلقه های تو در تو
             Variables:
@@ -966,7 +974,7 @@ fa:
             Introduction:
               name: مقدمه
             Conditionals:
-              name: مشروط
+              name: شرطی ها
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1046,7 +1054,7 @@ fa:
             Introduction:
               name: مقدمه
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             'Real Life Algorithms: Dice Race':
               name: 'الگوریتم های زندگی واقعی: مسابقۀ تاس انداختن'
         csd6-2017:
@@ -1064,7 +1072,7 @@ fa:
             Variables:
               name: متغیرها
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Functions:
               name: توابع
         csd3-old:
@@ -1080,7 +1088,7 @@ fa:
             Variables:
               name: متغیرها
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Functions:
               name: توابع
             'null':
@@ -1173,7 +1181,7 @@ fa:
             Nested Loops:
               name: حلقه های تو در تو
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Internet:
               name: اینترنت
             Crowdsourcing:
@@ -1207,7 +1215,7 @@ fa:
             Building a Foundation:
               name: ساختن بنیان
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Internet:
               name: اینترنت
             Crowdsourcing:
@@ -1237,7 +1245,7 @@ fa:
             Introduction:
               name: مقدمه
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Internet:
               name: اینترنت
             Crowdsourcing:
@@ -1267,7 +1275,7 @@ fa:
             Variables:
               name: متغیرها
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Functions:
               name: توابع
           description_short: "برنامه نویسی"
@@ -1277,7 +1285,7 @@ fa:
             Variables:
               name: متغیرها
             Conditionals:
-              name: مشروط
+              name: شرطی ها
             Functions:
               name: توابع
         csd2-2018:
@@ -1293,7 +1301,7 @@ fa:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: برنامه نویسی روی کاغذ شطرنجی 
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Introduction:
               name: مقدمه
             Building a Foundation:
@@ -1307,7 +1315,7 @@ fa:
             Conditionals with Cards:
               name: شرطی ها با کارتها
             'Functions: Songwriting':
-              name: ترانه نویسی با پارامترها
+              name: ترانه سرایی
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
@@ -1323,7 +1331,7 @@ fa:
             Crowdsourcing:
               name: کمک گیری جمعی
             Relay Programming:
-              name: برنامه نویسی رله
+              name: برنامه نویسی دست به دست
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1335,7 +1343,7 @@ fa:
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: برنامه نویسی روی کاغذ شطرنجی 
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Introduction:
               name: مقدمه
             Building a Foundation:
@@ -1349,9 +1357,9 @@ fa:
             Artist Binary:
               name: دودویی هنرمند
             Graph Paper Programming:
-              name: برنامه نویسی روی کاغذ شطرنجی 
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
-              name: برنامه نویسی رله
+              name: برنامه نویسی دست به دست
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1375,7 +1383,7 @@ fa:
             Introduction:
               name: مقدمه
             'Functions: Songwriting':
-              name: ترانه نویسی با پارامترها
+              name: ترانه سرایی
             Internet:
               name: اینترنت
             Crowdsourcing:

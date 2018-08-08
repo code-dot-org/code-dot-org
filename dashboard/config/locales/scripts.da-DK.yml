@@ -145,7 +145,7 @@ da:
             'Maze: Conditionals':
               name: 'Labyrint: Betingelser'
             Songwriting:
-              name: Sangskrivning med parametre
+              name: Sangskrivning
             'Studio: Create a Game':
               name: 'Play Lab: Opret et spil'
             'Studio: Create a Story':
@@ -337,11 +337,11 @@ da:
             Graph Paper Programming:
               name: Programmering på millimeterpapir
             Introduction to Computer Science:
-              name: Introduktion til datalogi
+              name: Introduktion til programmering
             Relay Programming:
               name: Stafet-programmering
             Song Writing:
-              name: Sangskrivning
+              name: Sang Skrivning
             The Artist:
               name: Kunstneren
             The Artist 2:
@@ -427,6 +427,8 @@ da:
           stages:
             Puzzles:
               name: Gåder
+        cspunit1:
+          description_short: Programmering
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -440,6 +442,7 @@ da:
             Strings and Images:
               name: Strenge og billeder
         cspunit3:
+          description_short: Programmering
           stages:
             Creating Functions:
               name: Oprettelse af funktioner
@@ -470,6 +473,7 @@ da:
             Wrap-Up:
               name: Konklusion
         cspunit2:
+          description_short: Programmering
           stages:
             The Internet:
               name: Internettet
@@ -626,7 +630,7 @@ da:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life algoritmer: Plante et frø'
             Songwriting:
-              name: Sangskrivning med parametre
+              name: Sangskrivning
             The Big Event:
               name: Den store begivenhed
         ScienceP3OLPT2:
@@ -690,6 +694,10 @@ da:
               name: Velkommen!
             Wrap-Up:
               name: Konklusion
+        cspunit5:
+          description_short: Programmering
+        cspunit4:
+          description_short: Programmering
         AlgebraA:
           description: Lære funktionel programmering gennem Algebra
           description_short: Lære funktionel programmering gennem Algebra
@@ -780,7 +788,7 @@ da:
             'Jigsaw: Learn to drag and drop':
               name: 'Øvelse: Lær at trække og slippe'
             Loops:
-              name: Sløjfer
+              name: Løkker
             Programming:
               name: Programmering
             'Real-life Algorithms: Plant a Seed':
@@ -790,7 +798,7 @@ da:
             Digital Citizenship:
               name: Digital statsborgerskab
             Songwriting:
-              name: Sangskrivning med parametre
+              name: Sangskrivning
         grade1:
           stages:
             Events:
@@ -798,7 +806,7 @@ da:
             'Jigsaw: Learn to drag and drop':
               name: 'Øvelse: Lær at trække og slippe'
             Loops:
-              name: Sløjfer
+              name: Løkker
             Programming:
               name: Programmering
         grade5:
@@ -879,7 +887,7 @@ da:
             Functions with Parameters:
               name: Funktioner med parametre
             Loops:
-              name: Sløjfer
+              name: Løkker
             Nested Loops:
               name: Indlejret Løkker
             Variables:
@@ -1305,7 +1313,7 @@ da:
             Conditionals with Cards:
               name: Betingelser med kortspil
             'Functions: Songwriting':
-              name: Sangskrivning med parametre
+              name: Sangskrivning
             Envelope Variables:
               name: Omslut variabler
             For Loop Fun:
@@ -1373,7 +1381,7 @@ da:
             Introduction:
               name: Introduktion
             'Functions: Songwriting':
-              name: Sangskrivning med parametre
+              name: Sangskrivning
             Internet:
               name: Internettet
             Crowdsourcing:

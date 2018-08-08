@@ -143,7 +143,7 @@ km:
       MC Agent Freeplay_markdown_instruction: "**លេងដោយសេរី**អ្នកអាចធ្វើអ្វីក៏បាន!\nប្រើកូដរបស់ជំនួយការក្នុងការជួយអ្នកក្នុងការស្វែងយល់ពីពិភពលោកនេះ។"
       MC_HOC_2017 Agent Test_markdown_instruction: "ចុចប៊ូតុង \"Run\" ដើម្បីធ្វើចលនាតួអង្គ\nដោយប្រើ **គ្រាប់ចុចមានសញ្ញាព្រួញ**.  \\r\n\\r\nដើម្បីឆ្លងកាត់វគ្គនេះ, អ្នកនឹងត្រូវទៅកាន់ទ្វារ\nរួចបើកវា (ដោយប្រើ **គ្រាប់ចុចដកឃ្លា**) ដូច្នេះអ្នកអាចទៅកាន់ការ៉េពណ៏ទឹកក្រូចដែលនៅខាងក្នុង។"
       MC_HOC_2017_01_markdown_instruction: "ចុចប៊ូតុង \"Run\" ដើម្បីធ្វើចលនាតួអង្គ\nដោយប្រើ **គ្រាប់ចុចមានសញ្ញាព្រួញ**.  \\r\n\\r\nដើម្បីឆ្លងកាត់វគ្គនេះ, អ្នកនឹងត្រូវទៅកាន់ទ្វារ\nរួចបើកវា (ដោយប្រើ **គ្រាប់ចុចដកឃ្លា**) ដូច្នេះអ្នកអាចទៅកាន់ការ៉េពណ៏ទឹកក្រូចដែលនៅខាងក្នុង។"
-      MC_HOC_2017_01_Cole_markdown_instruction: "អ្នកត្រូវប្រមូលសំភារៈទាំងអស់\nនៅតាមដំណើរផ្លូវនេះ។ បំលាស់ទីជំវិញដោយប្រើ**គ្រាប់ចុចមានសញ្ញាព្រួញ** ហើយទៅកាន់ប្រអប់នៅតាមផ្លូវដើម្បីឈ្នះ"
+      MC_HOC_2017_01_Cole_markdown_instruction: អ្នកត្រូវតែប្រមូលនូវសំភារៈទាំងអស់ក្នុងការផ្សងព្រេងមួយនេះ។ ធ្វើចលនាដោយប្រើ **គ្រាប់ចុចដែលមានសញ្ញាព្រួញ** ហើយស្វែងរកប្រអប់នៅតាមផ្លូវដើម្បីឈ្នះ
       MC_HOC_2017_01_Kiki_markdown_instruction: 'ដើម្បីលេងវគ្គនេះ ត្រូវចុចប៊ូតុង"Run"ពណ៏ទឹកក្រូចក្រោមកន្លែងដែលលេង រួចរំកិលតួអង្គជុំវិញដោយប្រើ**គ្រាប់ចុចមានសញ្ញាព្រួញ**។  '
       MC_HOC_2017_01_RETRY_markdown_instruction: |-
         ទ្វានេះត្រូបានបិទ តែជំនួយការនៅទីនេះដើម្បីជួយ!\r
@@ -156,7 +156,7 @@ km:
       MC_HOC_2017_02_Will_markdown_instruction: "ដើម្បីបញ្ចប់វគ្គនេះ តួអង្គត្រូវទៅកាន់ការ៉េពណ៏ទឹកក្រូចនៅក្នុងព្រៃសំងាត់ដែលនៅក្រោយទ្វារដែលបានចាក់សោរ។\\r\n\\r\nកូដដែលនៅក្នុងកន្លែងសរសេរកូដហ្នឹងធ្វើឲជំនួយការទៅមុខពីរដងដើម្បីសង្កត់បន្ទះក្តារហើយបើកទ្វារសំរាប់ Alex ឬ​ Steve។"
       MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} បន្ត\nដំណើរផ្សងព្រេង ហើយត្រូវការ **ត្រីវិស័យ** [compass] ដើម្បីរៀបចំក្នុងការធ្វើដំណើរ  \\r\n   \\r\nសរសេរកូដ\nដើម្បីឲជំនួយការបើករបង។ "
       MC_HOC_2017_03_Kiki_markdown_instruction: "ដំណើរផ្សងព្រេងរបស់តួអង្គហ្នឹងចាប់ផ្តើម\nនៅក្នុងព្រៃសំងាត់នៅក្រោយទ្វារដែលបានចាក់សោរ!  \\r\n\\r\n\\r\nជួយជំនួយការដើម្បីបើក\nទ្វារដោយសរសេរកូដដើម្បីឲគាត់ទៅសង្កត់បន្ទះក្តារ។"
-      MC_HOC_2017_04_markdown_instruction: "ផ្លាស់ប្តូររង្វិលជុំរបស់រូបផ្គុំចុងក្រោយ\nដើម្បីជួយដល់ជំនួយការក្នុងការបង្កើតផ្លូវនៅលើទន្លេនេះ។"
+      MC_HOC_2017_04_markdown_instruction: ប្តូររង្វិលជុំរបស់រូបផ្គុំចុងក្រោយដើម្បីជាជំនួយដល់ជំនួយការក្នុងការបង្កើតផ្លូវឆ្លងទន្លេ។
       MC_HOC_2017_04POINT5_Cole_markdown_instruction: |-
         អ្នកបានអោយវាចេញពីភក់ហើយ! ឥលូវ,
         យកតួអង្គទៅកាន់ការ៉េពណ៏ទឹកក្រុចដែលមានសុវត្ថភាព។\r
@@ -214,7 +214,7 @@ km:
         \r
         ជួយជំនួយការក្នុងការសំអាតផ្លូវដោយស្វែងរកគំរូធម្មតាមួយហើយប្រើប្រាស់រង្វិលជុំក្នុងការឆ្លងកាត់សង្កត់បន្ទះក្តារពីរដំបូង។
       MC_HOC_2017_Ali_markdown_instruction: "សូមក្រលែកមើលមុខងារខាងក្រោម។ តើអ្នកអាច\nប្រើវាដើម្បីជៀសពី Ghasts រួចជួយ{currentPlayerName} ដើម្បីទទួលបាន**សៀវភៅវេទមន្ត** [book_enchanted] ដោយសុវត្ថិភាព។  "
-      MC_HOC_2017_FP10x10_markdown_instruction: "**លេងដោយសេរី**អ្នកអាចធ្វើអ្វីក៏បាន!\nតើអ្នកអាចយកឈ្នះខ្លួនឯងក្នុងការប្រមូលពេជ្រទាំងអស់នេះនៅក្នុងវគ្គមួយនេះទេ? "
+      MC_HOC_2017_FP10x10_markdown_instruction: "**លេងដោយសេរី**អ្នកអាចធ្វើអ្វីក៏បាន!\nតើអ្នកអាចយកឈ្នះខ្លួនឯងក្នុងការប្រមូលពេជ្រទាំងអស់នេះនៅក្នុងវគ្គមួយនេះទេ?\n"
       MC_HOC_2017_FP10x10_RE_markdown_instruction: "**លេងដោយសេរី**អ្នកអាចធ្វើអ្វីក៏បាន!\nតើអ្នកអាចយកឈ្នះខ្លួនឯងក្នុងការប្រមូលពេជ្រទាំងអស់នេះនៅក្នុងវគ្គមួយនេះទេ?\n"
       MC_HOC_2017_FP20x20_markdown_instruction: "**លេងដោយសេរី**អ្នកអាចធ្វើអ្វីក៏បាន!\nប្រើកូដរបស់ជំនួយការក្នុងការជួយអ្នកក្នុងការស្វែងយល់ពីពិភពលោកនេះ។"
       MC_HOC_2017_Ryan_03_markdown_instruction: "តើអ្នកធ្លាប់បានដឹងទេថាអ្នកអាចដាក់កូដមួយឬច្រើននៅក្នុងរង្វិលជុំមួយ? \\r\n\\r\nប្រើប្រាស់រង្វិលជុំ`repeat`មួយដើម្បីជួយជំនួយការ\nសាងសង់ស្ពាននៅលើទន្លេដោយដាក់ប្លុកទៅក្នុងទឹក។"
@@ -224,6 +224,44 @@ km:
       NEW Course 4 Artist Vars 6_markdown_instruction: "Draw this pattern of pentagons with\n100 pixel sides by setting the right value for `length` and dropping the `length`\nvariable into all of the the correct places. \\r\n\\r\nSee how you only have\nto set the value for `length` once, and the code uses the right value everywhere?"
       New Minecraft Hero Project_markdown_instruction: "**លេងដោយសេរី**អ្នកអាចធ្វើអ្វីក៏បាន!\nប្រើកូដរបស់ជំនួយការក្នុងការជួយអ្នកក្នុងការស្វែងយល់ពីពិភពលោកនេះ។"
       Testing Quantum Farmer_markdown_instruction: "Wow, look at that! \\r\n\\r\nI don't know how\nmany shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps using the `fill` block until the ground is even?  "
+      U3 - Simple Drawing - Personal Drawing_markdown_instruction: |
+        # Your Own Drawing\\r
+        \\r
+        It is
+        your turn to create your own drawing. You should have drawn out your plan
+        on paper first.\\r
+        \\r
+        # Do This\\r
+        As a reminder make sure you hit the objectives:\\r
+        \\r
+        *
+        Creates an identifiable and named object or design (i.e. no random splatters
+        of shapes)\\r
+        * Uses at least 10 shapes or text items (rect, ellipse, regularPolygon,
+        text)\\r
+        * Uses at least 4 different color fills\\r
+        * Uses at least 2 different
+        color outlines\\r
+        * Contains at least 3 different logical blocks of code with
+        comments\\r
+        
+      course3_playlab_challenge2_markdown_instruction: |-
+        Can you figure
+        out how this "Fortune Teller" app works? Try adding some of the following
+        features to this game:\\r
+        \\r
+        * Change the "yes" and "no" answers to something
+        more interesting.\\r
+        * Let the player ask another question after the actor
+        says the fortune.\\r
+        * Give the witch two more things to say when she is in
+        an `angry` or `normal` mood.\\r
+        * Give the wizard his own set of fortunes.\\r
+        *
+        Make each actor change mood randomly.\\r
+        \\r
+        Check the hints if you need help
+        with these challenges!
       course4_artist_variables_challenge2_markdown_instruction: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
         width="250px"/>\\r
@@ -231,6 +269,30 @@ km:
         You've now learned everything you need to know to
         make a pattern like this! This puzzle is meant to be difficult.  Can you stick
         with it until you figure out the solution?
+      course4_playlab_variables_challenge3_markdown_instruction: |-
+        Can you figure
+        out how this "Fortune Teller" app works? Try adding some of the following
+        features to this game:\\r
+        \\r
+        * Change the "yes" and "no" answers to something
+        more interesting.\\r
+        * Let the player ask another question after the actor
+        says the fortune.\\r
+        * Give the witch two more things to say when she is in
+        an `angry` or `normal` mood.\\r
+        * Give the wizard his own set of fortunes.\\r
+        *
+        Make each actor change mood randomly.\\r
+        \\r
+        Check the hints if you need help
+        with these challenges!
+      courseA_collector_preLoops1_markdown_instruction: "This is Laurel the Adventurer! \\r\n\\r\nPress\n\"Run\" to see her walk up to the treasure and grab it."
+      courseA_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseA_maze_ramp5_2018_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
       courseB_playlab_events6_markdown_instruction: |-
         Help your knight get all of the flags!\\r
         \\r
@@ -243,6 +305,165 @@ km:
         To
         do this, you'll need to add events to help the knight move up, down, left,
         and right.
+      courseC_maze_programming4_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseC_maze_programming4_2018_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseC_maze_programming5_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseC_maze_programming5_2018_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseD_bee_conditionals1_markdown_instruction: |-
+        *"This cloud is
+        blocking my view!"*\\r
+        \\r
+        Check to see if there's a flower under the cloud.
+        If there's a flower, get nectar.
+      courseD_bee_conditionals10_markdown_instruction: |-
+        Conditionals can be helpful,
+        even when you know exactly what is in each spot!\\r
+        \\r
+        Collect all of the
+        nectar and make all of the honey.
+      courseD_bee_conditionals10_2018_markdown_instruction: |-
+        Conditionals can be helpful,
+        even when you know exactly what is in each spot!\\r
+        \\r
+        Collect all of the
+        nectar and make all of the honey.
+      courseD_bee_conditionals1_predict1_markdown_instruction: |-
+        *"This cloud is
+        blocking my view!"*\\r
+        \\r
+        Check to see if there's a flower under the cloud.
+        If there's a flower, get nectar.
+      courseD_bee_conditionals1_predict1_2018_markdown_instruction: |-
+        *"This cloud is
+        blocking my view!"*\\r
+        \\r
+        Check to see if there's a flower under the cloud.
+        If there's a flower, get nectar.
+      courseD_bee_conditionals4_markdown_instruction: |-
+        In this puzzle, we know that
+        every flower has exactly one nectar, but the flowers aren't spaced evenly.\\r
+        \\r
+        Get
+        all of the nectar using as few blocks as possible.
+      courseD_bee_conditionals4_2018_markdown_instruction: |-
+        In this puzzle, we know that
+        every flower has exactly one nectar, but the flowers aren't spaced evenly.\\r
+        \\r
+        Get
+        all of the nectar using as few blocks as possible.
+      courseD_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseD_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseD_maze_ramp5_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseD_maze_ramp5_2018_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseE_artist_ramp9_markdown_instruction: |-
+        Use what you've learned to draw
+        this triangle.\\r
+        ___\\r
+        ##### The sides are each 100 pixels long. You will
+        need to turn 120 degrees at each corner.
+      courseE_artist_ramp9_2_markdown_instruction: |-
+        Use what you've learned to draw
+        this triangle.\\r
+        ___\\r
+        ##### The sides are each 100 pixels long. You will
+        need to turn 120 degrees at each corner.
+      courseE_artist_ramp9_2018_markdown_instruction: |-
+        Use what you've learned to draw
+        this triangle.\\r
+        ___\\r
+        ##### The sides are each 100 pixels long. You will
+        need to turn 120 degrees at each corner.
+      courseE_artist_ramp9_2_2018_markdown_instruction: |-
+        Use what you've learned to draw
+        this triangle.\\r
+        ___\\r
+        ##### The sides are each 100 pixels long. You will
+        need to turn 120 degrees at each corner.
+      courseE_maze_ramp3_markdown_instruction: "*\"This\npig is ruffling my feathers.\"*\\r\n\\r\nThere is one extra block that is going\nto cause the bird to crash.  \\r\nThrow it away by dragging it back to the\ntoolbox."
+      courseE_maze_ramp3_2018_markdown_instruction: "*\"This\npig is ruffling my feathers.\"*\\r\n\\r\nThere is one extra block that is going\nto cause the bird to crash.  \\r\nThrow it away by dragging it back to the\ntoolbox."
+      courseE_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseE_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseE_maze_ramp5_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseE_maze_ramp5_2018_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseE_maze_ramp7_markdown_instruction: |-
+        *"It's time to get angry!"*\\r
+        \\r
+        **Challenge:**
+        Use what you've learned to get the bird to the pig!
+      courseE_maze_ramp7_2018_markdown_instruction: |-
+        *"It's time to get angry!"*\\r
+        \\r
+        **Challenge:**
+        Use what you've learned to get the bird to the pig!
+      courseE_multi_maze_ramp5_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseE_playlab_challenge2_markdown_instruction: |-
+        Can you figure
+        out how this "Fortune Teller" app works? Try adding some of the following
+        features to this game:\\r
+        \\r
+        * Change the "yes" and "no" answers to something
+        more interesting.\\r
+        * Let the player ask another question after the actor
+        says the fortune.\\r
+        * Give the witch two more things to say when she is in
+        an `angry` or `normal` mood.\\r
+        * Give the wizard his own set of fortunes.\\r
+        *
+        Make each actor change mood randomly.\\r
+        \\r
+        Check the hints if you need help
+        with these challenges!
+      courseE_playlab_variables_challenge2_markdown_instruction: |-
+        Can you figure
+        out how this "Fortune Teller" app works? Try adding some of the following
+        features to this game:\\r
+        \\r
+        * Change the "yes" and "no" answers to something
+        more interesting.\\r
+        * Let the player ask another question after the actor
+        says the fortune.\\r
+        * Give the witch two more things to say when she is in
+        an `angry` or `normal` mood.\\r
+        * Give the wizard his own set of fortunes.\\r
+        *
+        Make each actor change mood randomly.\\r
+        \\r
+        Check the hints if you need help
+        with these challenges!
+      courseF_IceAge_10_markdown_instruction: "Sid wants to let his grandmother,\nGranny, know that he loves her.   \\r\n\\r\nUse the `actor __ throw` command\nto have Sid (actor 1) throw hearts at Granny (actor 2)! \\r\nSet Granny's\nmood to happy when she gets hit with the hearts."
+      courseF_IceAge_11_markdown_instruction: "Time to create your own game or story!  \\r\n\\r\nWhen\nyou're done, click \"Finish\" to let friends try your game on their phones,\ntablets, or computers!\\r\nDon't know what to make? Click the hints for details."
+      courseF_IceAge_7_markdown_instruction: "Scrat is still looking for acorns!\n\\r\nHelp him scamper around by attaching a `move actor 1` block to each of\nthe events and changing the direction to work for each arrow key. \\r\nWhen\nyou’re done, click \"Run\" and try to collect all of the acorns."
+      courseF_IceAge_8_markdown_instruction: "Here is your code from the last\npuzzle, as well as the code to move Granny left and right. \\r\nCan you finish\nthe program to make it so that you both **play a sound** and **score a point**\nwhen Sid and Granny collide? \\r\nPress \"Run\" to play the game."
+      courseF_IceAge_9_markdown_instruction: "Everyone needs to move faster because\nan ice storm is coming! \\r\nChange the scene to an icy background and set\nSid’s (actor 1) speed to fast.\\r\nPress \"Run\" and move Sid to Diego to warn\nhim."
+      courseF_IceAge_template_markdown_instruction: "Scrat is still looking for acorns!\n\\r\nHelp him scamper around by attaching a `move actor 1` block to each of\nthe events and changing the direction to work for each arrow key. \\r\nWhen\nyou’re done, click \"Run\" and try to collect all of the acorns."
       courseF_artist_ramp8_markdown_instruction: |-
         Great!  Now let's make a square
         using Artist!  The blocks for artist are a little different than other puzzles,
@@ -263,20 +484,26 @@ km:
         ___\\r
         ##### The sides are each 100 pixels long. You will
         need to turn 120 degrees at each corner.
+      courseF_artist_ramp9_2018_markdown_instruction: |-
+        Use what you've learned to draw
+        this triangle.\\r
+        ___\\r
+        ##### The sides are each 100 pixels long. You will
+        need to turn 120 degrees at each corner.
       courseF_artist_variables10_markdown_instruction: "Here's your code from the\nlast puzzle.  Try editing the variable in other ways.  \\r\n-  What happens\nif you start out with `length` less than 150? \\r\n-  What if you multiply\nyour variable by 1.25 each time through?\\r\n-  What will your code do if you\nturn 119 degrees?"
       courseF_artist_variables10_2018_markdown_instruction: "Here's your code from\nthe last puzzle.  Try editing the variable in other ways.  \\r\n-  What happens\nif you start out with `length` less than 150? \\r\n-  What if you multiply\nyour variable by 1.25 each time through?\\r\n-  What will your code do if you\nturn 119 degrees?"
       courseF_artist_variables2_markdown_instruction: "Now use another loop to draw\nthree of those triangles right next to each other.   \\r\n\\r\nYou can nest\nthe code from your last puzzle inside."
       courseF_artist_variables2_2018_markdown_instruction: "Now use another loop\nto draw three of those triangles right next to each other.   \\r\n\\r\nYou can\nnest the code from your last puzzle inside."
       courseF_artist_variables3_markdown_instruction: "Before things get tricky,\ncan you move the length of 50 into a variable so we can use it in the next\nfew puzzles?  \\r\n\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
       courseF_artist_variables3_2018_markdown_instruction: "Before things get tricky,\ncan you move the length of 50 into a variable so we can use it in the next\nfew puzzles?  \\r\n\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
-      courseF_artist_variables6_markdown_instruction: "**OOPS!**  \\r\n\\r\nWe actually\nneed the triangles to be 60 pixels wide, with 60 pixel jumps.  \\r\n\\r\nAren't\nyou glad you're using a variable?"
+      courseF_artist_variables6_markdown_instruction: "**OOPS!**  \\r\n\\r\nWe\nactually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \\r\n\\r\nAren't\nyou glad you're using a variable?"
       courseF_artist_variables6_2018_markdown_instruction: "**OOPS!**  \\r\n\\r\nWe\nactually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \\r\n\\r\nAren't\nyou glad you're using a variable?"
       courseF_artist_variables7_markdown_instruction: "Let's start this section\nby drawing a triangle with 150 pixel sides. \\r\n\\r\nBe sure to use the `length`\nvariable and a repeat loop."
       courseF_artist_variables7_2018_markdown_instruction: "Let's start this section\nby drawing a triangle with 150 pixel sides. \\r\n\\r\nBe sure to use the `length`\nvariable and a repeat loop."
       courseF_artist_variables8_markdown_instruction: |2
-        Rebuild the triangle code
-        from the last puzzle, but this time use the `set length to` block to reset
-        the `length` variable to `length`+10 at the end of each loop iteration.\\r
+        Rebuild the triangle
+        code from the last puzzle, but this time use the `set length to` block to
+        reset the `length` variable to `length`+10 at the end of each loop iteration.\\r
         \\r
         <xml>\\r
         <block
@@ -346,7 +573,7 @@ km:
       courseF_artist_variables9_markdown_instruction: "Time to make some art!  \\r\n\\r\nSee\nwhat happens when you repeat the code from the last puzzle **30** times instead\nof only 3!\\r\n\\r\nFeel free to make your lines any color or pattern for some\nextra zest."
       courseF_artist_variables9_2018_markdown_instruction: "Time to make some art!  \\r\n\\r\nSee\nwhat happens when you repeat the code from the last puzzle **30** times instead\nof only 3!\\r\n\\r\nFeel free to make your lines any color or pattern for some\nextra zest."
       courseF_artist_variablesFP_markdown_instruction: "**Freeplay:** Take what you've\nlearned and make your own drawing. \\r\n\\r\nHow can you use variables with\nsquares, pentagons, or hexagons?"
-      courseF_artist_variablesFP_2018_markdown_instruction: "**Freeplay:** Take what you've learned\nand make your own drawing. \\r\n\\r\nHow can you use variables with squares,\npentagons, or hexagons?"
+      courseF_artist_variablesFP_2018_markdown_instruction: "**Freeplay:** Take what\nyou've learned and make your own drawing. \\r\n\\r\nHow can you use variables\nwith squares, pentagons, or hexagons?"
       courseF_artist_variables_10_markdown_instruction: "Here's your code from the\nlast puzzle.  Try editing the variable in other ways.  \\r\n-  What happens\nif you start out with `length` less than 150? \\r\n-  What if you multiply\nyour variable by 1.25 each time through?\\r\n-  What will your code do if you\nturn 119 degrees?"
       courseF_artist_variables_2_markdown_instruction: "Now use another loop to draw\nthree of those triangles right next to each other.   \\r\n\\r\nYou can nest\nthe code from your last puzzle inside."
       courseF_artist_variables_3_markdown_instruction: "Before things get tricky,\ncan you move the length of 50 into a variable so we can use it in the next\nfew puzzles?  \\r\n<br/>\\r\n\\r\n<img src=\"https://images.code.org/e6eac1f6aeb68a9a7584516e28663c14-image-1477533059853.gif\"\nwidth=\"65%\"/>"
@@ -406,7 +633,7 @@ km:
         \\r
         Check to see if there's a flower under the
         cloud. If there's a flower, get nectar.
-      courseF_bee_conditionals2_markdown_instruction: "*\"It's too cloudy to see\nany flowers!\"*\\r\n\\r\nCheck underneath every cloud to see if it is hiding\na flower before you get nectar. If there is a flower underneath the cloud,\nthe bee will need to get nectar **once**.  \\r\n\\r\nRemember: Not all clouds\nhide the same thing!"
+      courseF_bee_conditionals2_markdown_instruction: "*\"It's too cloudy to\nsee any flowers!\"*\\r\n\\r\nCheck underneath every cloud to see if it is hiding\na flower before you get nectar. If there is a flower underneath the cloud,\nthe bee will need to get nectar **once**.  \\r\n\\r\nRemember: Not all clouds\nhide the same thing!"
       courseF_bee_conditionals2_2018_markdown_instruction: "*\"It's too cloudy to\nsee any flowers!\"*\\r\n\\r\nCheck underneath every cloud to see if it is hiding\na flower before you get nectar. If there is a flower underneath the cloud,\nthe bee will need to get nectar **once**.  \\r\n\\r\nRemember: Not all clouds\nhide the same thing!"
       courseF_bee_conditionals4_markdown_instruction: |-
         In this puzzle, we know that
@@ -414,9 +641,15 @@ km:
         \\r
         Get
         all of the nectar using as few blocks as possible.
+      courseF_bee_conditionals4_2018_markdown_instruction: |-
+        In this puzzle, we know that
+        every flower has exactly one nectar, but the flowers aren't spaced evenly.\\r
+        \\r
+        Get
+        all of the nectar using as few blocks as possible.
       courseF_bee_conditionals7_predict2_markdown_instruction: |-
-        Sometimes a cloud
-        covers a flower, sometimes it covers a honeycomb!\\r
+        Sometimes a
+        cloud covers a flower, sometimes it covers a honeycomb!\\r
         \\r
         Use the `if/else`
         block to collect nectar at flowers and make honey at honeycomb.
@@ -427,8 +660,8 @@ km:
         Use the `if/else`
         block to collect nectar at flowers and make honey at honeycomb.
       courseF_bee_conditionals8_markdown_instruction: |-
-        **Challenge:** There will
-        be either a flower or a honeycomb under each of those clouds!\\r
+        **Challenge:** There
+        will be either a flower or a honeycomb under each of those clouds!\\r
         \\r
         Collect
         nectar once if there is a flower. Otherwise, make honey once (because there
@@ -440,13 +673,13 @@ km:
         Collect
         nectar once if there is a flower. Otherwise, make honey once (because there
         is a honeycomb).
-      courseF_bee_for10_markdown_instruction: "**Challenge:** Take what you've learned\nabout `for` loops and try to solve this problem. \\r\n\\r\nRemember: You may\nhave to run through solutions multiple times before you figure out all of\nthe steps."
+      courseF_bee_for10_markdown_instruction: "**Challenge:** Take what you've\nlearned about `for` loops and try to solve this problem. \\r\n\\r\nRemember:\nYou may have to run through solutions multiple times before you figure out\nall of the steps."
       courseF_bee_for10_2018_markdown_instruction: "**Challenge:** Take what you've\nlearned about `for` loops and try to solve this problem. \\r\n\\r\nRemember:\nYou may have to run through solutions multiple times before you figure out\nall of the steps."
       courseF_bee_for11_markdown_instruction: "If your loop is counting down, the\nincrement is **subtracted** from your counter variable each time through.\n\\r\n\\r\nWhat should your increment be to collect 15, then 12, then 9, 6, 3\nnectar?"
       courseF_bee_for11_2018_markdown_instruction: "If your loop is counting down, the\nincrement is **subtracted** from your counter variable each time through.\n\\r\n\\r\nWhat should your increment be to collect 15, then 12, then 9, 6, 3\nnectar?"
       courseF_bee_for2_markdown_instruction: |-
-        Write the code to help the bee collect
-        all of the nectar.\\r
+        Write the code to help the bee
+        collect all of the nectar.\\r
         \\r
         You will need lots of blocks for this challenge,
         but we'll learn an easier way in the next puzzle.
@@ -457,15 +690,15 @@ km:
         You will need lots of blocks for this challenge,
         but we'll learn an easier way in the next puzzle.
       courseF_bee_for3_markdown_instruction: "Ah, the `for` loop makes this much\neasier!  \\r\n\\r\nTry this puzzle using the `for` loop and the `counter` variable\nto see how much shorter your code becomes."
-      courseF_bee_for6_markdown_instruction: "You can also use a `for` loop to count\ndown. \\r\n\\r\nTry gathering this nectar by counting down from **5** to **1**\nby **1**."
+      courseF_bee_for6_markdown_instruction: "You can also use a `for` loop\nto count down. \\r\n\\r\nTry gathering this nectar by counting down from **5**\nto **1** by **1**."
       courseF_bee_for6_2018_markdown_instruction: "You can also use a `for` loop\nto count down. \\r\n\\r\nTry gathering this nectar by counting down from **5**\nto **1** by **1**."
       courseF_bee_for7_markdown_instruction: |-
-        The last number in your `for` loop
-        is called the **"increment"**.  Each time the loop is run, the counter variable
-        changes by the value of the **increment**.\\r
+        The last number in your `for`
+        loop is called the **"increment"**.  Each time the loop is run, the counter
+        variable changes by the value of the **increment**.\\r
         \\r
-        Try collecting these flowers
-        using an **increment** of 2.
+        Try collecting
+        these flowers using an **increment** of 2.
       courseF_bee_for7_2018_markdown_instruction: |-
         The last number in your `for`
         loop is called the **"increment"**.  Each time the loop is run, the counter
@@ -473,16 +706,16 @@ km:
         \\r
         Try collecting
         these flowers using an **increment** of 2.
-      courseF_bee_for8_markdown_instruction: "You've got this!  \\r\n\\r\nWhat should\nyour **increment** be to collect 3, 6, 9, 12, 15 nectar?\\r\n"
+      courseF_bee_for8_markdown_instruction: "You've got this!  \\r\n\\r\nWhat\nshould your **increment** be to collect 3, 6, 9, 12, 15 nectar?\\r\n"
       courseF_bee_for8_2018_markdown_instruction: "You've got this!  \\r\n\\r\nWhat\nshould your **increment** be to collect 3, 6, 9, 12, 15 nectar?\\r\n"
-      courseF_bee_for9_markdown_instruction: "Now, let's combine the `counter` variable\nwith a `math` block! \\r\n\\r\nHow can you use the `counter` variable to navigate\nthis garden with the fewest number of blocks possible?"
+      courseF_bee_for9_markdown_instruction: "Now, let's combine the `counter`\nvariable with a `math` block! \\r\n\\r\nHow can you use the `counter` variable\nto navigate this garden with the fewest number of blocks possible?"
       courseF_bee_for9_2018_markdown_instruction: "Now, let's combine the `counter`\nvariable with a `math` block! \\r\n\\r\nHow can you use the `counter` variable\nto navigate this garden with the fewest number of blocks possible?"
       courseF_bee_for_challenge1_markdown_instruction: |-
-        You can use this `for loop`
-        to collect all of the nectar. Un-bee-lievable!\\r
+        You can use this `for
+        loop` to collect all of the nectar. Un-bee-lievable!\\r
         \\r
-        There are a few actions
-        that you will want to `repeat 'counter' times`.
+        There are a few
+        actions that you will want to `repeat 'counter' times`.
       courseF_bee_for_challenge1_2018_markdown_instruction: |-
         You can use this `for
         loop` to collect all of the nectar. Un-bee-lievable!\\r
@@ -492,12 +725,12 @@ km:
       courseF_bee_functions2_markdown_instruction: "To make things easier, it's\ntime to learn about functions!\\r\n\\r\nFrom here on out, you will be using\na new *function editor*.  This editor is a separate window that will appear\nwhen you go to edit a function.  You won't see all of the code from your\nfunction while you're coding in the workspace, but don't worry...it's still\nthere!  \\r\n___\\r\n\\r\nLet's practice with this function that gets nectar\nonly if the bee is at a flower.  To see the code inside, click the blue \"edit\"\nbutton!\\r\n\\r\nUse the `get only nectar` function to collect the nectar from\neach flower."
       courseF_bee_functions2_2018_markdown_instruction: "To make things easier, it's\ntime to learn about functions!\\r\n\\r\nFrom here on out, you will be using\na new *function editor*.  This editor is a separate window that will appear\nwhen you go to edit a function.  You won't see all of the code from your\nfunction while you're coding in the workspace, but don't worry...it's still\nthere!  \\r\n___\\r\n\\r\nLet's practice with this function that gets nectar\nonly if the bee is at a flower.  To see the code inside, click the blue \"edit\"\nbutton!\\r\n\\r\nUse the `get only nectar` function to collect the nectar from\neach flower."
       courseF_bee_functions3a_markdown_instruction: |-
-        Each cloud could be hiding either
-        one flower or one honeycomb!  Write a function that gets nectar if the bee
-        is at a flower, otherwise it gets honey.\\r
+        Each cloud could be hiding
+        either one flower or one honeycomb!  Write a function that gets nectar if
+        the bee is at a flower, otherwise it gets honey.\\r
         \\r
-        Use your function to solve
-        the puzzle!
+        Use your function
+        to solve the puzzle!
       courseF_bee_functions3a_2018_markdown_instruction: |-
         Each cloud could be hiding
         either one flower or one honeycomb!  Write a function that gets nectar if
@@ -505,7 +738,7 @@ km:
         \\r
         Use your function
         to solve the puzzle!
-      courseF_bee_functions4_markdown_instruction: "Did you know that you can call\na function from *inside* another function?  \\r\n\\r\nUse your `check nectar\nor honey` function inside the new `move and check` function to help the bee\nturn, go get what's under the cloud, then back-up and turn back around!"
+      courseF_bee_functions4_markdown_instruction: "Did you know that you can\ncall a function from *inside* another function?  \\r\n\\r\nUse your `check nectar\nor honey` function inside the new `move and check` function to help the bee\nturn, go get what's under the cloud, then back-up and turn back around!"
       courseF_bee_functions4_2018_markdown_instruction: "Did you know that you can\ncall a function from *inside* another function?  \\r\n\\r\nUse your `check nectar\nor honey` function inside the new `move and check` function to help the bee\nturn, go get what's under the cloud, then back-up and turn back around!"
       courseF_bee_functions6_markdown_instruction: |-
         *"This field is a-MAZE-ing!"*\\r
@@ -521,20 +754,21 @@ km:
         your own function to help the bee through the maze by turning left at flowers
         and right at honeycomb.  Don't forget to collect nectar and make honey along
         the way!
-      courseF_bee_functions7_markdown_instruction: "Rebuild your function from the\nlast puzzle to solve this maze.\\r\n\\r\nTurn left at the honeycomb and right\nat the flowers.  \\r\n**Note:** Some corners are unmarked!"
+      courseF_bee_functions7_markdown_instruction: "Rebuild your function from\nthe last puzzle to solve this maze.\\r\n\\r\nTurn left at the honeycomb and\nright at the flowers.  \\r\n**Note:** Some corners are unmarked!"
       courseF_bee_functions7_2018_markdown_instruction: "Rebuild your function from\nthe last puzzle to solve this maze.\\r\n\\r\nTurn left at the honeycomb and\nright at the flowers.  \\r\n**Note:** Some corners are unmarked!"
-      courseF_bee_functions8a_markdown_instruction: "Underneath this cloud, there\nmight be a flower with an unknown amount of nectar, or a honeycomb with an\nunknown amount of honey.  \\r\n\\r\nCan you write a program that can handle\neither?"
+      courseF_bee_functions8a_markdown_instruction: "Underneath\nthis cloud, there might be a flower with an unknown amount of nectar, or a\nhoneycomb with an unknown amount of honey.  \\r\n\\r\nCan you write a program\nthat can handle either?"
       courseF_bee_functions8a_2018_markdown_instruction: "Underneath this cloud,\nthere might be a flower with an unknown amount of nectar, or a honeycomb with\nan unknown amount of honey.  \\r\n\\r\nCan you write a program that can handle\neither?"
       courseF_bee_functionsPre7_markdown_instruction: "Now try building a function\nto solve this maze.  How is it different from last time?  \\r\n\\r\nTurn left\nat the honeycomb and right at the flowers.  \\r\n**Note:** Some corners are\nunmarked!"
       courseF_bee_functionsPre7_2018_markdown_instruction: "Now try building a function\nto solve this maze.  How is it different from last time?  \\r\n\\r\nTurn left\nat the honeycomb and right at the flowers.  \\r\n**Note:** Some corners are\nunmarked!"
       courseF_bee_functions_challenge2_recursion_markdown_instruction: "Underneath\nthis cloud, there might be a flower with an unknown amount of nectar, or a\nhoneycomb with an unknown amount of honey.  \\r\n\\r\nCan you write a program\nthat can handle either?"
-      courseF_bee_fwp1_markdown_instruction: "Check beneath the clouds to see if\nthe flowers have any nectar.  \\r\n\\r\nFor this whole stage, each flower will\nhave exactly **one** unit of nectar, and each honeycomb will need exactly\n**one** unit of honey. \\r\n\\r\n\\r\n"
+      courseF_bee_fwp1_markdown_instruction: "Check beneath the clouds to see\nif the flowers have any nectar.  \\r\n\\r\nFor this whole stage, each flower\nwill have exactly **one** unit of nectar, and each honeycomb will need exactly\n**one** unit of honey. \\r\n\\r\n\\r\n"
       courseF_bee_fwp1_2018_markdown_instruction: "Check beneath the clouds to see\nif the flowers have any nectar.  \\r\n\\r\nFor this whole stage, each flower\nwill have exactly **one** unit of nectar, and each honeycomb will need exactly\n**one** unit of honey. \\r\n\\r\n\\r\n"
-      courseF_bee_fwp2_markdown_instruction: "Here's some code that solves the last\npuzzle.  \\r\nLet's pull it into a function, then call the function to check\nthis row for nectar.  \\r\n___\\r\nThis may seem like a strange step now, but\nit will be really helpful soon!"
+      courseF_bee_fwp2_markdown_instruction: "Here's some code that solves\nthe last puzzle.  \\r\nLet's pull it into a function, then call the function\nto check this row for nectar.  \\r\n___\\r\nThis may seem like a strange step\nnow, but it will be really helpful soon!"
       courseF_bee_fwp2_2018_markdown_instruction: "Here's some code that solves\nthe last puzzle.  \\r\nLet's pull it into a function, then call the function\nto check this row for nectar.  \\r\n___\\r\nThis may seem like a strange step\nnow, but it will be really helpful soon!"
       courseF_bee_fwp3_markdown_instruction: "Time to put the function to the test!\n\\r\n\\r\nLet's see if it makes collecting these three rows of nectar any easier."
       courseF_bee_fwp3_2018_markdown_instruction: "Time to put the function to the\ntest! \\r\n\\r\nLet's see if it makes collecting these three rows of nectar\nany easier."
       courseF_bee_fwp4_markdown_instruction: "*\"How is your function holding up?\"*   \\r\n\\r\nWe\nneed to make some adjustments here. Click \"edit\" to add a `length` parameter\nto the function so that it will still work when the row is a different length."
+      courseF_bee_fwp4_2018_markdown_instruction: "*\"How is your function holding up?\"*   \\r\n\\r\nWe\nneed to make some adjustments here. Click \"edit\" to add a `length` parameter\nto the function so that it will still work when the row is a different length."
       courseF_bee_fwp5_markdown_instruction: |-
         *"You're doing great so far!"*\\r
         \\r
@@ -545,11 +779,11 @@ km:
         \\r
         Let's
         use this function to collect the nectar.
-      courseF_bee_fwp6_markdown_instruction: "You can make code shorter and more\nefficient when you combine functions with other programming elements.  \\r\n___\\r\nWhat\nblocks can you use with your function to build a short and sweet solution\nto this puzzle?"
+      courseF_bee_fwp6_markdown_instruction: "You can make code shorter and\nmore efficient when you combine functions with other programming elements.  \\r\n___\\r\nWhat\nblocks can you use with your function to build a short and sweet solution\nto this puzzle?"
       courseF_bee_fwp6_2018_markdown_instruction: "You can make code shorter and\nmore efficient when you combine functions with other programming elements.  \\r\n___\\r\nWhat\nblocks can you use with your function to build a short and sweet solution\nto this puzzle?"
       courseF_bee_fwp_challenge2_markdown_instruction: |-
-        *"**Lettuce** see if you
-        can handle this one final test! Give it everything you've got!"*\\r
+        *"**Lettuce** see if
+        you can handle this one final test! Give it everything you've got!"*\\r
         \\r
         Use
         one `for loop` in a function to collect all of the vegetables in the row.
@@ -594,7 +828,13 @@ km:
         Place the <xml><block
         type="maze_moveForward"/></xml> block inside the loop to finish your code.
       courseF_maze_ramp4_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
+      courseF_maze_ramp4_2018_markdown_instruction: "*\"Trace the path and lead me to\nthe silly pig.\"* \\r\n\\r\nAvoid TNT or feathers will fly!"
       courseF_maze_ramp5_markdown_instruction: |-
+        *"Follow this path to get me to
+        the pig!"*\\r
+        \\r
+        Avoid the TNT.
+      courseF_maze_ramp5_2018_markdown_instruction: |-
         *"Follow this path to get me to
         the pig!"*\\r
         \\r
@@ -621,17 +861,17 @@ km:
         **Challenge:**
         Use what you've learned to get the bird to the pig!
       courseF_playlab_brokenText_markdown_instruction: |-
-        In the rest of this stage,
-        we will use multiple `ask` blocks and multiple `if/else` statements to create
-        a game that **you** control!\\r
+        In the rest of this
+        stage, we will use multiple `ask` blocks and multiple `if/else` statements
+        to create a game that **you** control!\\r
         \\r
-        Start by setting the "codename" variable
-        to a word that you can remember.  Then, use an `ask` block to get a codename
-        from the users.  You will need an `if/else` block to see if the codename entered
-        matches the codename that you have set.
+        Start by setting the "codename"
+        variable to a word that you can remember.  Then, use an `ask` block to get
+        a codename from the users.  You will need an `if/else` block to see if the
+        codename entered matches the codename that you have set.
       courseF_playlab_variables0_markdown_instruction: "This is Pirate Pegleg.  He's\nawfully hard to understand these days!  \\r\n\\r\nDecode his speech by changing\nthese pieces of text in the code:\\r\n- \"arrrg\" should be \"a\" \\r\n- \"ye\"\nshould be \"e\"\\r\n\\r\n"
       courseF_playlab_variables1_markdown_instruction: "This is Pirate Pegleg.  He's\nawfully hard to understand these days!  \\r\n\\r\nDecode his speech by changing\nthese pieces of text in the code:\\r\n- \"arrrg\" should be \"a\" \\r\n- \"ye\"\nshould be \"e\"\\r\n\\r\n"
-      courseF_playlab_variables1a_markdown_instruction: "Variables can be used to\nstore text that you want to use later.  \\r\n\\r\nHave Kiki, the soccer player,  scream\n\"Goal!\" by assigning that text to the `shout` variable."
+      courseF_playlab_variables1a_markdown_instruction: "Variables can be used\nto store text that you want to use later.  \\r\n\\r\nHave Kiki, the soccer player,  scream\n\"Goal!\" by assigning that text to the `shout` variable."
       courseF_playlab_variables1a_2018_markdown_instruction: "Variables can be used\nto store text that you want to use later.  \\r\n\\r\nHave Kiki, the soccer player,  scream\n\"Goal!\" by assigning that text to the `shout` variable."
       courseF_playlab_variables2_markdown_instruction: "Now, decode Pirate Pegleg's\nspeech by changing the value of the variables in just two places!   \\r\n-\n\"arrrg\" should be \"a\" \\r\n- \"ye\" should be \"e\"\\r\n\\r\n"
       courseF_playlab_variables2a_markdown_instruction: "Now, decode Pirate Pegleg's\nspeech by changing the value of the variables in just two places!   \\r\n-\n\"arrrg\" should be \"a\" \\r\n- \"ye\" should be \"e\"\\r\n\\r\n"
@@ -643,22 +883,22 @@ km:
         variable `color` into the middle of a sentence by putting it into the empty
         slot in the `join` block.
       courseF_playlab_variables2b_markdown_instruction: |-
-        We can make sentences more
-        interesting by mixing pieces of text with variables.\\r
+        We can make sentences
+        more interesting by mixing pieces of text with variables.\\r
         \\r
-        Insert the variable
-        `color` into the middle of a sentence by putting it into the empty slot in
-        the `join` block.
+        Insert the
+        variable `color` into the middle of a sentence by putting it into the empty
+        slot in the `join` block.
       courseF_playlab_variables2b_2018_markdown_instruction: |-
-        We can make sentences more
-        interesting by mixing pieces of text with variables.\\r
+        We can make sentences
+        more interesting by mixing pieces of text with variables.\\r
         \\r
-        Insert the variable
-        `color` into the middle of a sentence by putting it into the empty slot in
-        the `join` block.
+        Insert the
+        variable `color` into the middle of a sentence by putting it into the empty
+        slot in the `join` block.
       courseF_playlab_variables3_markdown_instruction: "Great!  Now that you understand\nhow to have a character use a variable to speak, we can introduce the `ask`\nblock.  \\r\n\\r\nThe `ask` block will automatically store whatever the user\nanswers into the variable of your choice.  \\r\n\\r\nRun this program and enter\nsomething for Pegleg to say.\\r\n\\r\n"
       courseF_playlab_variables4_markdown_instruction: "Now we're going to join\na variable to the beginning of Pegleg's next sentence using the `create text\nwith` block. \\r\n\\r\nCan you find the correct variable in the toolbox to fill\nin the slot?\\r\n\\r\n"
-      courseF_playlab_variables4b_markdown_instruction: "Now, Pirate Pegleg has some\nquestions for Brian.\\r\n\\r\nThis code uses an `ask` block, so you can type\nBrian's answers after you click \"Run\". \\r\n\\r\nPut the variables in the\ncorrect places to create this conversation."
+      courseF_playlab_variables4b_markdown_instruction: "Now, Pirate Pegleg\nhas some questions for Brian.\\r\n\\r\nThis code uses an `ask` block, so you\ncan type Brian's answers after you click \"Run\". \\r\n\\r\nPut the variables\nin the correct places to create this conversation."
       courseF_playlab_variables4b_2018_markdown_instruction: "Now, Pirate Pegleg\nhas some questions for Brian.\\r\n\\r\nThis code uses an `ask` block, so you\ncan type Brian's answers after you click \"Run\". \\r\n\\r\nPut the variables\nin the correct places to create this conversation."
       courseF_playlab_variables5_markdown_instruction: "Now we're going to add a\nvariable into the middle of Pegleg's sentence using more than one `create\ntext with` block. \\r\n\\r\nHere is how you link `create text with` blocks together\nto form longer sentences:\\r\n\\r\n![](https://images.code.org/1c9bdc9e73d60b5ed053c3c4e9e1dcd4-image-1476993588379.gif)"
       courseF_playlab_variables5b_markdown_instruction: |-
@@ -676,13 +916,13 @@ km:
         into the conditional for the `if` statement to check whether or not you entered
         the correct color.
       courseF_playlab_variables5c_markdown_instruction: |-
-        Let's combine the `ask`
-        block with an `if/else` statement to have some fun!\\r
+        Let's combine the
+        `ask` block with an `if/else` statement to have some fun!\\r
         \\r
-        Pirate Pegleg is
-        going to ask you a question.  Drag a copy of the `answer` variable into the
-        conditional for the `if` statement to check whether or not you entered the
-        correct color.
+        Pirate Pegleg
+        is going to ask you a question.  Drag a copy of the `answer` variable into
+        the conditional for the `if` statement to check whether or not you entered
+        the correct color.
       courseF_playlab_variables5c_2018_markdown_instruction: |-
         Let's combine the
         `ask` block with an `if/else` statement to have some fun!\\r
@@ -693,14 +933,14 @@ km:
         the correct color.
       courseF_playlab_variables6b_markdown_instruction: "You cannot fit much text\nin an actor's speech bubble, so sometimes you need to make the actor say\nsomething more than once.  \\r\n\\r\nWe have provided some starter questions\nand variables for you. Join them together to make a fun story that takes more\nthan one speech bubble to tell."
       courseF_playlab_variables6c_markdown_instruction: |-
-        In the rest of this stage,
-        we will use multiple `ask` blocks and multiple `if/else` statements to create
-        a game that **you** control!\\r
+        In the rest of this
+        stage, we will use multiple `ask` blocks and multiple `if/else` statements
+        to create a game that **you** control!\\r
         \\r
-        Start by setting the "codename" variable
-        to a word that you can remember.  Then, use an `ask` block to get a codename
-        from the users.  You will need an `if/else` block to see if the codename entered
-        matches the codename that you have set.
+        Start by setting the "codename"
+        variable to a word that you can remember.  Then, use an `ask` block to get
+        a codename from the users.  You will need an `if/else` block to see if the
+        codename entered matches the codename that you have set.
       courseF_playlab_variables6c_2018_markdown_instruction: |-
         In the rest of this
         stage, we will use multiple `ask` blocks and multiple `if/else` statements
@@ -710,7 +950,7 @@ km:
         variable to a word that you can remember.  Then, use an `ask` block to get
         a codename from the users.  You will need an `if/else` block to see if the
         codename entered matches the codename that you have set.
-      courseF_playlab_variables7b_markdown_instruction: "Time to make your own project!  \\r\n\\r\nCreate\nsome questions and weave the answers together into your very own story.\\r\n\\r\nIf\nyou need ideas, click the hints icon."
+      courseF_playlab_variables7b_markdown_instruction: "Time to make your own\nproject!  \\r\n\\r\nCreate some questions and weave the answers together into\nyour very own story.\\r\n\\r\nIf you need ideas, click the hints icon."
       courseF_playlab_variables7b_2018_markdown_instruction: "Time to make your own\nproject!  \\r\n\\r\nCreate some questions and weave the answers together into\nyour very own story.\\r\n\\r\nIf you need ideas, click the hints icon."
       courseF_playlab_variables7c_markdown_instruction: "Add another `ask` block\nto ask the user to guess a color.  \\r\n\\r\nKeep your `if/else` statement such\nthat your codename always wins the game, but every other codename always loses."
       courseF_playlab_variables7c_2018_markdown_instruction: "Add another `ask` block\nto ask the user to guess a color.  \\r\n\\r\nKeep your `if/else` statement such\nthat your codename always wins the game, but every other codename always loses."
@@ -720,7 +960,7 @@ km:
         \\r
         **Improv:** *A scene
         that actors make up on stage using information from the audience.*
-      courseF_playlab_variables_challenge2_markdown_instruction: "Now for a game\nof tag! Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly\n10 points to win!\\r\nBut be careful, when Cat and Penguin tag each other,\nthey take points away.\\r\n\\r\nAdd the blocks necessary to make this game work\nthe way it's been explained.\\r\n- How will you get Dog to move in all directions\nusing the arrow keys?\\r\n- How will you add points when Dog tags Cat or Penguin?\\r\n-\nHow will you subtract points when Cat and Penguin touch?"
+      courseF_playlab_variables_challenge2_markdown_instruction: "Now for a\ngame of tag! Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly\n10 points to win!\\r\nBut be careful, when Cat and Penguin tag each other,\nthey take points away.\\r\n\\r\nAdd the blocks necessary to make this game work\nthe way it's been explained.\\r\n- How will you get Dog to move in all directions\nusing the arrow keys?\\r\n- How will you add points when Dog tags Cat or Penguin?\\r\n-\nHow will you subtract points when Cat and Penguin touch?"
       courseF_playlab_variables_challenge2_2018_markdown_instruction: "Now for a\ngame of tag! Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly\n10 points to win!\\r\nBut be careful, when Cat and Penguin tag each other,\nthey take points away.\\r\n\\r\nAdd the blocks necessary to make this game work\nthe way it's been explained.\\r\n- How will you get Dog to move in all directions\nusing the arrow keys?\\r\n- How will you add points when Dog tags Cat or Penguin?\\r\n-\nHow will you subtract points when Cat and Penguin touch?"
       courseF_playlab_variables_challenge3_markdown_instruction: |-
         Can you figure
@@ -743,6 +983,7 @@ km:
       course_playlab_variables2_markdown_instruction: "Now, decode Pirate Pegleg's\nspeech by changing the value of the variables in just two places!   \\r\n-\n\"arrrg\" should be \"a\" \\r\n- \"ye\" should be \"e\"\\r\n\\r\n"
       course_playlab_variables3_markdown_instruction: "Now, decode Pirate Pegleg's\nspeech by changing the value of the variables in just two places!   \\r\n-\n\"arrrg\" should be \"a\" \\r\n- \"ye\" should be \"e\"\\r\n\\r\n"
       coursef_maze_ramp3_markdown_instruction: "*\"This pig is ruffling my feathers.\"*\\r\n\\r\nThere\nis one extra block that is going to cause the bird to crash.  \\r\nThrow it\naway by dragging it back to the toolbox."
+      coursef_maze_ramp3_2018_markdown_instruction: "*\"This\npig is ruffling my feathers.\"*\\r\n\\r\nThere is one extra block that is going\nto cause the bird to crash.  \\r\nThrow it away by dragging it back to the\ntoolbox."
       csd-thursday-facilitation_markdown_instruction: |
         # Thursday Facilitation Reflection\\r
         \\r
@@ -756,8 +997,7 @@ km:
         \\r
         * What are facilitators doing?\\r
         * What are teachers
-        doing?\\r
-        
+        doing?
       csd-thursday-pedagogy_markdown_instruction: "# Thursday Pedagogy Reflection\nPart 1\\r\n\\r\n## Differentiating Instruction\\r\n\\r\nWhat strategies have you\nlearned about for differentiating instruction to meet diverse learning needs\nof students in CS Discoveries? List at least two ideas. "
       csd-thursday-pedagogy2_markdown_instruction: |
         # Thursday Pedagogy Reflection
@@ -1004,8 +1244,8 @@ km:
       csp_U3_plan_code_FR_markdown_instruction: "<img src=\"https://images.code.org/01d3b0664443216b4363ec31914e592a-image-1506460763004.png\"\nstyle=\"float: right\">\\r\n\\r\n<br>\\r\n\\r\nIn this lesson we talked about\nhow to build up solutions to larger programming problems with functions.  Plan\nthe code that you would use to draw this image (shown at right). Describe\neach of the functions that you would create. You should not write all the\ncode, only the names of the functions that you would create with a brief description\nof what each function would do. \\r\n\\r\nWrite your plan following the format:\\r\n\\r\n<div\nstyle=\"clear: both\"> </div>\\r\n\\r\n    Name of function - description of\nwhat it does\\r\n\\r\n    Name of function 2 - description of what it does\\r\n    ..."
       csp_U3_plan_code_FR_2018_markdown_instruction: "<img src=\"https://images.code.org/01d3b0664443216b4363ec31914e592a-image-1506460763004.png\"\nstyle=\"float: right\">\\r\n\\r\n<br>\\r\n\\r\nIn this lesson we talked about\nhow to build up solutions to larger programming problems with functions.  Plan\nthe code that you would use to draw this image (shown at right). Describe\neach of the functions that you would create. You should not write all the\ncode, only the names of the functions that you would create with a brief description\nof what each function would do. \\r\n\\r\nWrite your plan following the format:\\r\n\\r\n<div\nstyle=\"clear: both\"> </div>\\r\n\\r\n    Name of function - description of\nwhat it does\\r\n\\r\n    Name of function 2 - description of what it does\\r\n    ..."
       csp_affirmation_control_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1060,8 +1300,8 @@ km:
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
       csp_affirmation_control_2018_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1088,8 +1328,8 @@ km:
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
       csp_affirmation_control_2_2018_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1116,8 +1356,8 @@ km:
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
       csp_affirmation_control_3_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1144,8 +1384,8 @@ km:
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
       csp_affirmation_control_3_2018_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1172,8 +1412,8 @@ km:
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
       csp_affirmation_control_4_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1200,8 +1440,8 @@ km:
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
       csp_affirmation_control_4_2018_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1228,8 +1468,8 @@ km:
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
       csp_affirmation_control_5_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1256,8 +1496,8 @@ km:
         a few sentences, focusing on your thoughts and feelings, don't worry about
         how well written it is.*
       csp_affirmation_control_5_2018_markdown_instruction: |-
-        This brief activity allows you
-        to reflect about what you have learned in this course so far. It is provided
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
         to you by your teacher, but *you will not be graded on this.*\\r
         \\r
         Some
@@ -1297,6 +1537,7 @@ km:
       csp_socialBelonging_control_2018_markdown_instruction: "\\r\n## Starting out in Computer\nScience\\r\n\\r\nComputer science has changed the way we communicate with each\nother, make art and movies, grow food, and even treat illnesses. Everyone\ncan learn computer science and make a difference.\\r\n\\r\n***\\r\n\\r\n## Quotes\nfrom students\\r\n\\r\nStill, we understand that taking a computer science course\ncan be difficult at first. Here are a few student quotes describing their\nstrategies and tips for taking this course. **Please read the quotes carefully\nand respond to the prompt below**. \\r\n\\r\n<div style=\"background-color:\n#d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding:\n0.5px 20px 1px 20px;\">\\r\n\\r\n<p style=\"font-size: 70px; margin-bottom:\n-10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\\r\n<p style=\"line-height:\n1.5; margin-left: 10px; margin-right: 30px; \">\\r\nIn the first week of this\nclass I was falling behind quickly. There was a lot of new information to\nlearn. To keep up, I had to find a better way to study. I tried to find connections\nbetween the material and what I already know. That really helped me remember\nthings. I also tried to not overdo it. I started taking small breaks in-between\nlessons and when I came back I checked if I still remembered what I was studying\nbefore. It helped a lot\\r\n </p>\\r\n<p style=\"font-size: 70px; text-align:\nright; margin-right: 5%; margin-top: -10px; opacity: 0.5\">&rdquo;</p>\\r\n<p\nstyle=\"text-align: right; font-size: 125%; font-style: italic; margin-right:\n70px; margin-top: -20px; \">\\r\nSofia P. (age 16)\\r\n</p>\\r\n\\r\n</div>\\r\n<br>\\r\n\\r\n<div\nstyle=\"background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:\n#000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;\">\\r\n\\r\n\\r\n<p\nstyle=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:\n0.5\">&ldquo;</p>\\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:\n30px;\">Some days I felt tired and would drift away in my thoughts. It was\na real problem because I would miss so much of what we were learning. So I\nstarted going to bed a bit earlier and I tried my best to pay attention. At\nthe end of every class our teacher summarized\\r\n what we learned that day\nand that was really helpful. I started taking more notes because that also\nkept my mind from wandering. These little tricks got me through the class\nand I learned more.</p>\\r\n<p style=\"font-size: 70px; text-align: right;\nopacity: 0.5\">&rdquo;</p>\\r\n<p style=\"text-align: right; font-size: 125%;  font-style:\nitalic; margin-right: 30px; margin-top: -20px\">\\r\nJasmin D. (age 17)\\r\n</p>\\r\n</div>\\r\n<br>\\r\n\\r\n<div\nstyle=\"background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:\n#000000; width: 80%; padding: 0.5px 20px 1px 20px;\">\\r\n\\r\n<p style=\"font-size:\n70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\\r\n<p\nstyle=\"line-height: 1.5; margin-left: 10px; margin-right: 30px; \">I\\r\n\ncan be pretty forgetful sometimes and it was a problem in this class. I think\nit's because we did so much on the computer. For my other classes I take\nnotes on paper and read through them again at home. So the trick that I found\nhelpful in this class was to take notes on paper anyway and to test myself\nabout the concepts. I wasn't sure if it would work at first, but I think\nit ended up being a big help.</p>\\r\n\\r\n<p style=\"font-size: 70px; text-align:\nright; opacity: 0.5\">&rdquo;</p>\\r\n<p style=\"text-align: right; font-size:\n125%;  font-style: italic; margin-right: 30px; margin-top: -20px\">\\r\nSam\nJ. (age 17)\\r\n</p>\\r\n</div>\\r\n\\r\n***\\r\n<p style=\"font-size: 125%\">Now\nconsider the strategies and insights for how to learn best that you just read.\n</p>\\r\n\\r\n## Reflect and Summarize: \\r\n\\r\n<p style=\"font-size: 150%;\ncolor: black; font-weight: bolder; line-height: 1.5\">What are your own strategies\nand insights about how to learn best? And, how are they similar or different\nto the ones that you just heard about from other students? </p>\\r\n\\r\n*Please\nwrite a short paragraph. Don't worry about spelling, grammar, or how well\nwritten it is.*"
       csp_socialBelonging_intervention_markdown_instruction: "## Starting out in\nComputer Science\\r\n\\r\nComputer science has changed the way we communicate\nwith each other, make art and movies, grow food, and even treat illnesses.\n**Everyone can learn computer science and make a difference:** It really does\nnot matter how much or little experience you have with computer science already,\nor what age, gender, or skin color you have.\\r\n\\r\n***\\r\n\\r\n## Quotes from\nstudents\\r\n\\r\nStill, we understand that it can be daunting at first to take\na computer science course. So here are a few student quotes describing their\nexperiences. **Please read the quotes carefully and respond to the prompt\nbelow**. \\r\n\\r\n\\r\n<div style=\"background-color: #d9eff7; border-radius:\n40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;\">\\r\n\\r\n<p\nstyle=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:\n0.5\">&ldquo;</p>\\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:\n30px; \">\\r\nAt the start of the class I worried that I was different from\nthe other students. I wasn't sure I fit in – I \\tworried that I couldn’t\ndo it and that the teacher and other students would look down on me. A few\ndays after I started, I realized that almost everyone who takes the class\nisn’t sure if they fit in at first. It's something everyone goes through.\nNow it seems ironic – everybody feels different at first, when really we're\nall going through the same thing.</p>\\r\n<p style=\"font-size: 70px; text-align:\nright; margin-right: 5%; margin-top: -10px; opacity: 0.5\">&rdquo;</p>\\r\n<p\nstyle=\"text-align: right; font-size: 125%; font-style: italic; margin-right:\n70px; margin-top: -20px; \">\\r\nSofia P. (age 16)\\r\n</p>\\r\n\\r\n</div>\\r\n<br>\\r\n\\r\n<div\nstyle=\"background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:\n#000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;\">\\r\n\\r\n\\r\n<p\nstyle=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:\n0.5\">&ldquo;</p>\\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:\n30px;\">I loved this computer science class! I've met some cool people and\nlearned a lot. But it was a difficult transition. The first few days I was\nintimidated and not sure why I should learn computer science. Why would I\nneed it? But then we talked in class about things I’m interested in, like\nmusic and design, and I realized that I can learn how to do cool new things.\nI had the wrong picture in my head about CS, it’s actually very creative!\nI just had to be patient and find ways to connect the class to what I really\ncare about.</p>\\r\n<p style=\"font-size: 70px; text-align: right; opacity:\n0.5\">&rdquo;</p>\\r\n<p style=\"text-align: right; font-size: 125%;  font-style:\nitalic; margin-right: 30px; margin-top: -20px\">\\r\nJasmin D. (age 17)\\r\n</p>\\r\n</div>\\r\n<br>\\r\n\\r\n<div\nstyle=\"background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:\n#000000; width: 80%; padding: 0.5px 20px 1px 20px;\">\\r\n\\r\n<p style=\"font-size:\n70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\\r\n<p\nstyle=\"line-height: 1.5; margin-left: 10px; margin-right: 30px; \">I didn’t\nhave any experience with code, and I worried that I was not prepared for this\nclass. Other students did some programming at home or in summer camps. On\nmy first day, I was so nervous about getting bad grades and looking stupid.\nBut then, I started to feel better – I talked with other students and enjoyed\nthe class more. I became more comfortable asking for help when I had a problem.\nIt turned out that the students with CS experience had the same issues as\nme! Hah, it took some time, but now I really feel like I belong in CS class.</p>\\r\n\\r\n<p\nstyle=\"font-size: 70px; text-align: right; opacity: 0.5\">&rdquo;</p>\\r\n<p\nstyle=\"text-align: right; font-size: 125%;  font-style: italic; margin-right:\n30px; margin-top: -20px\">\\r\nSam J. (age 17)\\r\n</p>\\r\n</div>\\r\n\\r\n***\\r\n<p\nstyle=\"font-size: 125%\"> Each of these students had similar experiences\nand realizations. </p>\\r\n\\r\n## Reflect and Summarize: \\r\n\\r\n\\r\n<p style=\"font-size:\n150%; color: black; font-weight: bolder; line-height: 1.5\">Why do you think\nthe students worry at first about whether they belong in the class? How did\nthey become comfortable with it over time?</p>\\r\n\\r\n*Please write a short\nparagraph. Don't worry about spelling, grammar, or how well written it is.*"
       csp_socialBelonging_intervention_2018_markdown_instruction: "## Starting out in\nComputer Science\\r\n\\r\nComputer science has changed the way we communicate\nwith each other, make art and movies, grow food, and even treat illnesses.\n**Everyone can learn computer science and make a difference:** It really does\nnot matter how much or little experience you have with computer science already,\nor what age, gender, or skin color you have.\\r\n\\r\n***\\r\n\\r\n## Quotes from\nstudents\\r\n\\r\nStill, we understand that it can be daunting at first to take\na computer science course. So here are a few student quotes describing their\nexperiences. **Please read the quotes carefully and respond to the prompt\nbelow**. \\r\n\\r\n\\r\n<div style=\"background-color: #d9eff7; border-radius:\n40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;\">\\r\n\\r\n<p\nstyle=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:\n0.5\">&ldquo;</p>\\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:\n30px; \">\\r\nAt the start of the class I worried that I was different from\nthe other students. I wasn't sure I fit in – I \\tworried that I couldn’t\ndo it and that the teacher and other students would look down on me. A few\ndays after I started, I realized that almost everyone who takes the class\nisn’t sure if they fit in at first. It's something everyone goes through.\nNow it seems ironic – everybody feels different at first, when really we're\nall going through the same thing.</p>\\r\n<p style=\"font-size: 70px; text-align:\nright; margin-right: 5%; margin-top: -10px; opacity: 0.5\">&rdquo;</p>\\r\n<p\nstyle=\"text-align: right; font-size: 125%; font-style: italic; margin-right:\n70px; margin-top: -20px; \">\\r\nSofia P. (age 16)\\r\n</p>\\r\n\\r\n</div>\\r\n<br>\\r\n\\r\n<div\nstyle=\"background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:\n#000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;\">\\r\n\\r\n\\r\n<p\nstyle=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:\n0.5\">&ldquo;</p>\\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:\n30px;\">I loved this computer science class! I've met some cool people and\nlearned a lot. But it was a difficult transition. The first few days I was\nintimidated and not sure why I should learn computer science. Why would I\nneed it? But then we talked in class about things I’m interested in, like\nmusic and design, and I realized that I can learn how to do cool new things.\nI had the wrong picture in my head about CS, it’s actually very creative!\nI just had to be patient and find ways to connect the class to what I really\ncare about.</p>\\r\n<p style=\"font-size: 70px; text-align: right; opacity:\n0.5\">&rdquo;</p>\\r\n<p style=\"text-align: right; font-size: 125%;  font-style:\nitalic; margin-right: 30px; margin-top: -20px\">\\r\nJasmin D. (age 17)\\r\n</p>\\r\n</div>\\r\n<br>\\r\n\\r\n<div\nstyle=\"background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:\n#000000; width: 80%; padding: 0.5px 20px 1px 20px;\">\\r\n\\r\n<p style=\"font-size:\n70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\\r\n<p\nstyle=\"line-height: 1.5; margin-left: 10px; margin-right: 30px; \">I didn’t\nhave any experience with code, and I worried that I was not prepared for this\nclass. Other students did some programming at home or in summer camps. On\nmy first day, I was so nervous about getting bad grades and looking stupid.\nBut then, I started to feel better – I talked with other students and enjoyed\nthe class more. I became more comfortable asking for help when I had a problem.\nIt turned out that the students with CS experience had the same issues as\nme! Hah, it took some time, but now I really feel like I belong in CS class.</p>\\r\n\\r\n<p\nstyle=\"font-size: 70px; text-align: right; opacity: 0.5\">&rdquo;</p>\\r\n<p\nstyle=\"text-align: right; font-size: 125%;  font-style: italic; margin-right:\n30px; margin-top: -20px\">\\r\nSam J. (age 17)\\r\n</p>\\r\n</div>\\r\n\\r\n***\\r\n<p\nstyle=\"font-size: 125%\"> Each of these students had similar experiences\nand realizations. </p>\\r\n\\r\n## Reflect and Summarize: \\r\n\\r\n\\r\n<p style=\"font-size:\n150%; color: black; font-weight: bolder; line-height: 1.5\">Why do you think\nthe students worry at first about whether they belong in the class? How did\nthey become comfortable with it over time?</p>\\r\n\\r\n*Please write a short\nparagraph. Don't worry about spelling, grammar, or how well written it is.*"
+      grade2_CaringForNewPet_2_markdown_instruction: "*\"This\npig is ruffling my feathers.\"*\\r\n\\r\nThere is one extra block that is going\nto cause the bird to crash.  \\r\nThrow it away by dragging it back to the\ntoolbox."
       grade2_CaringForNewPet_2courseC_maze_programming3_markdown_instruction: "*\"This\npig is ruffling my feathers.\"*\\r\n\\r\nThere is one extra block that is going\nto cause the bird to crash.  \\r\nThrow it away by dragging it back to the\ntoolbox."
       grade2_PuppyLoops_10_markdown_instruction: |-
         My teacher says that I should finish what
@@ -1378,6 +1619,24 @@ km:
         \\r
         Collect nectar
         from each of the flowers using the fewest blocks possible.
+      grade3_bee_conditionals_new2a_markdown_instruction: |-
+        In this puzzle, we know that
+        every flower has exactly one nectar, but the flowers aren't spaced evenly.\\r
+        \\r
+        Get
+        all of the nectar using as few blocks as possible.
+      grade3_bee_conditionals_new3b_markdown_instruction: |-
+        Conditionals can be helpful,
+        even when you know exactly what is in each spot!\\r
+        \\r
+        Collect all of the
+        nectar and make all of the honey.
+      grade3_bee_conditionals_quantum1_markdown_instruction: |-
+        *"This cloud is
+        blocking my view!"*\\r
+        \\r
+        Check to see if there's a flower under the cloud.
+        If there's a flower, get nectar.
       grade3_bee_conditionals_quantum2_markdown_instruction: "More clouds! \\r\n\\r\nCheck underneath\nevery cloud to see if it is hiding a flower before you get nectar.  \\r\n\\r\nRemember:\nNot all clouds hide the same thing!"
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Loop this design 10 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop? "
@@ -1411,9 +1670,11 @@ km:
         Hint:  You need to remove something!
       grade5_artist_variables_hexagons1_markdown_instruction: "Let's try it again! \\r\n\\r\nCan you\nset the `length` variable to 60 to make this cool design with hexagons?"
       grade5_artist_variables_pentagons1_markdown_instruction: "Draw this pattern of pentagons with\n100 pixel sides by setting the right value for `length` and dropping the `length`\nvariable into all of the the correct places. \\r\n\\r\nSee how you only have\nto set the value for `length` once, and the code uses the right value everywhere?"
-      grade5_artist_variables_triangles1_markdown_instruction: "Let's draw an equilateral\ntriangle. \\r\n\\r\nIt has to be exactly 50 pixels long on each side.\\r\n\\r\n"
+      grade5_artist_variables_triangles1_markdown_instruction: "Let's draw\nan equilateral triangle. \\r\n\\r\nIt has to be exactly 50 pixels long on each\nside.\\r\n\\r\n"
       grade5_artist_variables_triangles1_2018_markdown_instruction: "Let's draw\nan equilateral triangle. \\r\n\\r\nIt has to be exactly 50 pixels long on each\nside.\\r\n\\r\n"
       grade5_bee_for_loops10_markdown_instruction: "If your loop is counting down, the\nincrement is **subtracted** from your counter variable each time through.\n\\r\n\\r\nWhat should your increment be to collect 15, then 12, then 9, 6, 3\nnectar?"
+      grade5_bee_parameters_new3_markdown_instruction: "Time to put the function to the test!\n\\r\n\\r\nLet's see if it makes collecting these three rows of nectar any easier."
+      grade5_bee_parameters_new4_markdown_instruction: "*\"How is your function holding up?\"*   \\r\n\\r\nWe\nneed to make some adjustments here. Click \"edit\" to add a `length` parameter\nto the function so that it will still work when the row is a different length."
       grade5_playlab_variables9_markdown_instruction: "Here's a function called `patrol`.\n\\r\n\\r\nEdit `patrol` to move Cat up 400 pixels and then down 400 pixels."
       harvester_Kahoot_markdown_instruction: |-
         *"Oooh, veggies are cropping up everywhere!"*\\r
@@ -1446,7 +1707,7 @@ km:
             <block
         type="jump_to"><title name="VALUE">7</title>\\r
             </block></xml>\\r
-            When
+        When
         you are finished, right-click to save the image, then send it to me on <a
         href="https://classroom.google.com">Google Classroom</a>.
       harvey_snowflake_artist2_markdown_instruction: |2
@@ -1473,7 +1734,7 @@ km:
         When
         you are finished, right-click to save the image, then send it to me on <a
         href="https://classroom.google.com">Google Classroom</a>.
-      iceage_click_hello_markdown_instruction: "Can you help Sid call for his friends\nwhen you click on him? \\r\nOnce you're done, press \"Run\" to play.  Click\non Sid to see your code work!"
+      iceage_click_hello_markdown_instruction: "Can you help Sid call for his\nfriends when you click on him? \\r\nOnce you're done, press \"Run\" to play.  Click\non Sid to see your code work!"
       iceage_click_hello_2018_markdown_instruction: "Can you help Sid call for his\nfriends when you click on him? \\r\nOnce you're done, press \"Run\" to play.  Click\non Sid to see your code work!"
       iceage_free_play_markdown_instruction: "Time to create your own game or story!  \\r\n\\r\nWhen\nyou're done, click \"Finish\" to let friends try your game on their phones,\ntablets, or computers!\\r\nDon't know what to make? Click the hints for details."
       iceage_free_play_2018_markdown_instruction: "Time to create your own game or\nstory!  \\r\n\\r\nWhen you're done, click \"Finish\" to let friends try your\ngame on their phones, tablets, or computers!\\r\nDon't know what to make?\nClick the hints for details."
@@ -1481,9 +1742,11 @@ km:
       iceage_hello1_markdown_instruction: "Sid (actor 1) wants to gather everyone\nfor a new adventure. Can you help him say \"Hello!\" by dragging the `say`\nblock out and connecting it to the bottom of the `when run` event?   \\r\n\\r\nDon't\nforget to type \"Hello!\" inside!"
       iceage_hello1_2018_markdown_instruction: "Sid (actor 1) wants to gather everyone\nfor a new adventure. Can you help him say \"Hello!\" by dragging the `say`\nblock out and connecting it to the bottom of the `when run` event?   \\r\n\\r\nDon't\nforget to type \"Hello!\" inside!"
       iceage_move_events_markdown_instruction: "Scrat is still looking for acorns!\n\\r\nHelp him scamper around by attaching a `move actor 1` block to each of\nthe events and changing the direction to work for each arrow key. \\r\nWhen\nyou’re done, click \"Run\" and try to collect all of the acorns."
+      iceage_move_events_2018_markdown_instruction: "Scrat is still looking for acorns!\n\\r\nHelp him scamper around by attaching a `move actor 1` block to each of\nthe events and changing the direction to work for each arrow key. \\r\nWhen\nyou’re done, click \"Run\" and try to collect all of the acorns."
       iceage_sound_and_points_markdown_instruction: "Here is your code from the last\npuzzle, as well as the code to move Granny left and right. \\r\nCan you finish\nthe program to make it so that you both **play a sound** and **score a point**\nwhen Sid and Granny collide? \\r\nPress \"Run\" to play the game."
       iceage_sound_and_points_2018_markdown_instruction: "Here is your code from\nthe last puzzle, as well as the code to move Granny left and right. \\r\nCan\nyou finish the program to make it so that you both **play a sound** and **score\na point** when Sid and Granny collide? \\r\nPress \"Run\" to play the game."
       iceage_throw_hearts_markdown_instruction: "Sid wants to let his grandmother,\nGranny, know that he loves her.   \\r\n\\r\nUse the `actor __ throw` command\nto have Sid (actor 1) throw hearts at Granny (actor 2)! \\r\nSet Granny's\nmood to happy when she gets hit with the hearts."
+      iceage_throw_hearts_2018_markdown_instruction: "Sid wants to let his grandmother,\nGranny, know that he loves her.   \\r\n\\r\nUse the `actor __ throw` command\nto have Sid (actor 1) throw hearts at Granny (actor 2)! \\r\nSet Granny's\nmood to happy when she gets hit with the hearts."
       iceage_warn_ice_age_markdown_instruction: "Everyone needs to move faster because\nan ice storm is coming! \\r\nChange the scene to an icy background and set\nSid’s (actor 1) speed to fast.\\r\nPress \"Run\" and move Sid to Diego to warn\nhim."
       iceage_warn_ice_age_2018_markdown_instruction: "Everyone needs to move faster\nbecause an ice storm is coming! \\r\nChange the scene to an icy background\nand set Sid’s (actor 1) speed to fast.\\r\nPress \"Run\" and move Sid to Diego\nto warn him."
       level 'grade3_Loops_6_markdown_instruction: "How many times can loops help you in this puzzle?  \\r\n\\r\nLoops\nare your friend! Use a few of them to complete this puzzle with the fewest\nblocks possible."
@@ -1539,13 +1802,14 @@ km:
       ramp_artist_loops1_markdown_instruction: "What a lovely day!  \\r\n\\r\nHelp\nthe Artist cover his flowers before the winter by moving forward by 60 pixels."
       ramp_artist_loops1_2018_markdown_instruction: "What a lovely day!  \\r\n\\r\nHelp\nthe Artist cover his flowers before the winter by moving forward by 60 pixels."
       ramp_artist_loops5_markdown_instruction: |-
-        Loops sure make writing code easier!\\r
+        Loops sure make writing code
+        easier!\\r
         \\r
-        Use
-        loops to draw this staircase.\\r
-        - Each stairstep is 50 pixels long and 50
-        pixels tall\\r
-        - You will need to turn 90 degrees in each direction
+        Use loops to draw this staircase.\\r
+        - Each stairstep is 50
+        pixels long and 50 pixels tall\\r
+        - You will need to turn 90 degrees in each
+        direction
       ramp_artist_loops5_2018_markdown_instruction: |-
         Loops sure make writing code
         easier!\\r
@@ -1556,8 +1820,8 @@ km:
         - You will need to turn 90 degrees in each
         direction
       ramp_artist_loops6_markdown_instruction: |-
-        This staircase is much bigger, but
-        it takes the same amount of code as the last puzzle!\\r
+        This staircase is much bigger,
+        but it takes the same amount of code as the last puzzle!\\r
         \\r
         Fix this loop
         to complete the puzzle.

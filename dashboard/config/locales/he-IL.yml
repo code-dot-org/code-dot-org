@@ -34,7 +34,7 @@ he:
         edit_header: שינוי פרטי החשבון
         error:
           future: לא יכול להיות בעתיד
-  hello: שלום עולם
+  hello: הי עולם
   welcome_back: ברוך שובך, %{name}
   your_professional_learning_plan: תוכנית הלמידה המקצועית שלך
   see_your_learning_plan: צפה בתכנית הלמידה שלך
@@ -587,7 +587,7 @@ he:
     more: יותר
     feedback: משוב
     translate: עזרו לנו לתרגם לשפתך
-    support: תמיכה
+    support: עזרה וקהילה
     tos_short: תנאים
     tos: תנאים
     privacy: הצהרת פרטיות
@@ -704,7 +704,7 @@ he:
         של דיסני.
     minecraft:
       title: מיינקראפט
-      body: גלה את העולם של מיינקראפט באמצעות קוד.
+      body: גלה את העולם של מיינקראפט באמצעות קוד
     minecraft2016:
       title: מיינקראפט
       body: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך.

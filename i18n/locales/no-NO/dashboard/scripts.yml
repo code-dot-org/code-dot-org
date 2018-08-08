@@ -141,7 +141,7 @@
             'Maze: Conditionals':
               name: 'Labyrint: Betingelser'
             Songwriting:
-              name: Låtskriving med parametere
+              name: Låtskriving
             'Studio: Create a Game':
               name: 'Spill-Lab: Lag et spill'
             'Studio: Create a Story':
@@ -319,7 +319,7 @@
             Introduction to Computer Science:
               name: Introduksjon til informatikk
             Relay Programming:
-              name: Relé-programmering
+              name: Relé programmering
             Song Writing:
               name: Låtskriving
             The Artist:
@@ -531,6 +531,10 @@
               name: Internett Simulator
             Welcome!:
               name: Velkommen!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Grunnleggende informatikk
         ECSPD2:
           description: 'Lär ut funktionell programmering genom algebra'
           description_short: 'Lär ut funktionell programmering genom algebra'
@@ -624,7 +628,7 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Virkelige algoritmer: Plante et frø'
             Songwriting:
-              name: Låtskriving med parametere
+              name: Låtskriving
             The Big Event:
               name: Den store begivenheten
         ScienceP3OLPT2:
@@ -789,7 +793,7 @@
             Digital Citizenship:
               name: Digitalt statsborgerskap
             Songwriting:
-              name: Låtskriving med parametere
+              name: Låtskriving
         grade1:
           stages:
             Events:
@@ -1392,7 +1396,7 @@
             Conditionals with Cards:
               name: Betingelser med kort
             'Functions: Songwriting':
-              name: Låtskriving med parametere
+              name: Låtskriving
             Envelope Variables:
               name: Konvolutt variabler
             For Loop Fun:
@@ -1408,7 +1412,7 @@
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Relé-programmering
+              name: Relé programmering
         courseb-2018:
           assignment_family_title: Kurs B
           stages:
@@ -1438,7 +1442,7 @@
             Graph Paper Programming:
               name: Millimeterpapirprogrammering
             Relay Programming:
-              name: Relé-programmering
+              name: Relé programmering
         coursec-2018:
           assignment_family_title: Kurs C
           stages:
@@ -1464,7 +1468,7 @@
             Introduction:
               name: Introduksjon
             'Functions: Songwriting':
-              name: Låtskriving med parametere
+              name: Låtskriving
             Internet:
               name: Internett
             Crowdsourcing:

@@ -159,7 +159,7 @@ az:
             Intro:
               name: Giriş
             Variables:
-              name: Dəyişənlər
+              name: dəyişənlər
         algebra:
           stages:
             'Eval: Conditionals':
@@ -183,7 +183,7 @@ az:
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
             Introduction to Computer Science:
@@ -389,7 +389,7 @@ az:
         CSDU3-Draft:
           stages:
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
         CSF_Secret_Sample:
           description_audience: 8+ yaş (Kurs 2-dən sonra)
         ECSPD1:
@@ -411,13 +411,13 @@ az:
             Events:
               name: Hadisələr
             Loops:
-              name: Dövlər
+              name: dövrlər
         grade1:
           stages:
             Events:
               name: Hadisələr
             Loops:
-              name: Dövlər
+              name: dövrlər
         grade5:
           stages:
             'Artist: Functions with Parameters':
@@ -445,9 +445,9 @@ az:
         csd3-2017:
           stages:
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
             Variables:
-              name: Dəyişənlər
+              name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
         grade2:
@@ -463,13 +463,13 @@ az:
             Events:
               name: Hadisələr
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
             Functions with Parameters:
               name: Parametrli funksiyalar
             Loops:
-              name: Dövlər
+              name: dövrlər
             Variables:
-              name: Dəyişənlər
+              name: dəyişənlər
         basketball:
           stages:
             Bounce:
@@ -570,15 +570,15 @@ az:
         csd3-draft:
           stages:
             Variables:
-              name: Dəyişənlər
+              name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
         csd3-old:
           stages:
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
         csd2-draft:
           stages:
             Lists:
@@ -586,11 +586,11 @@ az:
         csd3-chapters:
           stages:
             Variables:
-              name: Dəyişənlər
+              name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
             'null':
               name: 'boş'
         coursef-ramp:
@@ -662,19 +662,19 @@ az:
         csd3-1819draft:
           stages:
             Variables:
-              name: Dəyişənlər
+              name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
         csd3-2018:
           stages:
             Variables:
-              name: Dəyişənlər
+              name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
             Functions:
-              name: Funksiyalar
+              name: funksiyalar
         csd2-2018:
           stages:
             Lists:

@@ -80,7 +80,7 @@ ro:
         title: Prinzători ai Soarelui Funcţionali
         desc: Elevii creează un algoritm cu variabile şi funcţii (bucăţi de cod pe care doriţi să le utilizaţi în mod repetat) pentru a realiza suncatchers folosind ață și mărgele.
       SongwritingParameters:
-        title: Compoziții muzicale cu parametri
+        title: Compunând Cântece
         desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre transmiterea parametrilor (care personalizează o funcție fără a trebui să rescrie întreaga funcție).
       DiceRace:
         title: 'Algoritmi din viaţa reală: cursa de zaruri'
@@ -193,7 +193,7 @@ ro:
         title: Obţinând Informaţii/Critici
         desc: Elevii folosesc crowdsourcing, o tehnica uzuală de rezolvare a problemelor din informatică, pentru a finaliza o sarcină împreună ca o modalitate mai eficientă decât rezolvarea individuală.
       courseE_unplugged_songwriting:
-        title: Compoziții muzicale cu parametri
+        title: Compunând Cântece
         desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre transmiterea parametrilor (care personalizează o funcție fără a trebui să rescrie întreaga funcție).
       courseF_unplugged_tangrams:
         title: Algoritmi Tangram

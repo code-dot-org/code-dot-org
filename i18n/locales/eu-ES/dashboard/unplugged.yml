@@ -80,7 +80,7 @@ eu:
         title: Funtzioak aztertzen
         desc: Ikasleek algoritmo bat sortzen dute aldagai eta funtzioekin (kode zatiak erabil nahi ditugunak behin eta berriz) kristalezko apaingarriak sortzeko kateak eta aleak erabiliz.
       SongwritingParameters:
-        title: Abestiak idazten parametroekin
+        title: Musika idazten
         desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
       DiceRace:
         title: 'Benetako algoritmoak: dado lasterketa'
@@ -168,7 +168,7 @@ eu:
         title: Eskumuturreko bitarrak
         desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela ikasten dute honela.
       courseD_unplugged_graphPaperProgramming:
-        title: Paperean marraztuz programatu
+        title: Paper grafiko programazioa
         desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
       courseD_unplugged_relayProgramming:
         title: Txandaka programatzen
@@ -191,7 +191,7 @@ eu:
         title: Crowdsourcing
         desc: Ikasleek talde-lana erabiltzen dute, eta hau oso erabilia den teknika bat da informatikan. Ekintza bat klasekoekin burutzea ekintza askoz ere eraginkorragoa bihurtzen du, lana banaka burutu ordez.
       courseE_unplugged_songwriting:
-        title: Abestiak idazten parametroekin
+        title: Musika idazten
         desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
       courseF_unplugged_tangrams:
         title: Tangram algoritmoak
@@ -220,7 +220,7 @@ eu:
         title: Gertaera Handia
         desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko dituzte.
       GraphPaperProgramming_2018:
-        title: Paperean marraztuz programatu
+        title: Paper grafiko programazioa
         desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
       courseD_unplugged_digitalCitizenship_2018:
         title: Lineaz kanpoko ekintza

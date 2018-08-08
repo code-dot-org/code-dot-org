@@ -1181,9 +1181,9 @@ pt-BR:
         text: "Após minerar a pedra, precisamos verificar se existe lava naquele lugar antes de avançar. Se tiver lava ali, queremos colocar uma pedra na frente de nosso personagem antes de avançar. Assim, podemos avançar em segurança. Hora de minerar mais! E lembre-se de usar o comando \"se\" para andar com cuidado."
     mc_congrats_share:
       1:
-        text: "Parabéns! Você aprendeu os blocos básicos da ciência da computação."
+        text: "Parabéns! Você aprendeu os fundamentos básicos da ciência da computação."
       2:
-        text: "Agora, você pode usar esses blocos para fazer sua própria criação. Não há mais instruções ou quebra-cabeças para resolver. Você pode construir o que quiser. Você escolhe."
+        text: "Agora, você pode usar esses blocos para criar algo seu. Não há mais instruções e desafios para resolver. Você pode construir o que quiser. Você escolhe."
       3:
         text: "[alunos falando] Agora é pra valer. Tosar. Eu fiz um L usando tochas. Eu fiz um A usando tábuas de eucalipto. Deu certo, deu certo. Construímos uma casa de lã!"
       4:

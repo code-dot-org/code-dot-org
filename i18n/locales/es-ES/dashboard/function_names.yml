@@ -29,8 +29,8 @@ es:
       diamond: diamante
       move: mover
       move right: mover hacia la derecha
-      move up: mueva hacia arriba
-      move down: Bajar
+      move up: mover hacia arriba
+      move down: mover hacia abajo
       move left: mover hacia la izquierda
       collect: junta
       turn left: girar a la izquierda

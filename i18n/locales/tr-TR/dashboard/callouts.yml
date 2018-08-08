@@ -220,7 +220,7 @@ tr:
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: Bu değişkenleri "0" veya "1" olarak ayarlamaya "bayrak" denir. Bu bayrak bizim fonksiyonun hangi yöne gitmesini yönlendirir.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Programınızı denemek için "Çalıştır" düğmesine basın
+        Course 4 Maze 1_callout1: Programınızı denemek içi "Çalıştır"a basın
         Course 4 Maze 1_callout2: '"İlerle" bloğunu tutup çalıma alanındaki diğer blokların altına yapıştırın'
       Course 4 Maze 4_callout:
         repeat: Komutları tekrarlamak için blokları döngünün içine sürükleyin
@@ -337,10 +337,10 @@ tr:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Bu kod, evinizi inşa etmeye başlayacak. Bakalım bitirebilecek misiniz?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Programınızı denemek için "Çalıştır" düğmesine basın
+        craft_run_button_callout: Programınızı denemek içi "Çalıştır"a basın
         craft_drag_block_callout: Bir "ileri git" bloğunu sürükleyin ve diğer bloğun altına dayayın
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Programınızı denemek için "Çalıştır" düğmesine basın
+        craft_run_button_callout: Programınızı denemek içi "Çalıştır"a basın
         craft_drag_block_callout: Bir "ileri git" bloğunu sürükleyin ve diğer bloğun altına dayayın
       Overworld Place Wall_callout:
         craft_inside_repeat: Blokları buraya yerleştirerek eylemleri tekrar edin

@@ -794,6 +794,8 @@ nn:
               name: Velkomen!
         K5-OnlinePD:
           stages:
+            Computer Science Fundamentals:
+              name: Grunnleggande informatikk
             Next Steps:
               name: Neste steg
         ECSPD2:

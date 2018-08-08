@@ -164,12 +164,12 @@ id:
           pola, abstrak, algoritma) untuk menemukan bagaimana memainkan permainan
           yang tidak dilengkapi instruksi.
       FunctionalSuncatchers:
-        title: Fungsional Penangakap Matahari
+        title: Fungsional pengkap matahari
         desc: Siswa membuat algoritma dengan variabel dan fungsi (potongan kode yang
           Anda ingin menggunakan lagi) untuk menciptakan suncatchers menggunakan string
           dan manik-manik.
       SongwritingParameters:
-        title: Penulisan lagu dengan Parameter
+        title: Menulis lagu
         desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang
           melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh
           fungsi).
@@ -183,7 +183,7 @@ id:
         desc: Siswa mengirim pesan yang mewakili berbagai metode transmisi internet
           menggunakan potongan-potongan kertas.
       Crowdsourcing:
-        title: Kerumunan
+        title: Sumber kerumunan
         desc: Siswa menggunakan crowdsourcing, teknik pemecahan masalah umum dalam
           ilmu komputer, untuk menyelesaikan tugas bersama sebagai kelas yang lebih
           efisien dibandingkan jika siswa berusaha sendiri.
@@ -346,7 +346,7 @@ id:
           untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah
           gambar.
       courseD_unplugged_relayProgramming:
-        title: Pemrograman relay
+        title: Pemrograman bergiliran
         desc: Siswa menjalankan perlombaan estafet, dimana mereka lari di halaman
           untuk menulis sebuah algoritma yang didasarkan pada sebuah gambar "Pemrograman
           kertas grafik". Mereka hanya dapat menulis satu instruksi pada satu waktu
@@ -378,12 +378,12 @@ id:
         desc: Siswa mengirim pesan yang mewakili berbagai metode transmisi internet
           menggunakan potongan-potongan kertas.
       courseE_unplugged_crowdsourcing:
-        title: Kerumunan
+        title: Sumber kerumunan
         desc: Siswa menggunakan crowdsourcing, teknik pemecahan masalah umum dalam
           ilmu komputer, untuk menyelesaikan tugas bersama sebagai kelas yang lebih
           efisien dibandingkan jika siswa berusaha sendiri.
       courseE_unplugged_songwriting:
-        title: Penulisan lagu dengan Parameter
+        title: Menulis lagu
         desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang
           melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh
           fungsi).
@@ -488,4 +488,4 @@ id:
       MoveItMoveIt_2018:
         title: Gerakkan itu, Gerakkan itu
       RelayProgramming_2018:
-        title: Pemrograman relay
+        title: Pemrograman bergiliran

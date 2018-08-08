@@ -319,9 +319,9 @@ fil:
           sa toolbar na lugar papunta sa workspace at ikonekta ito sa `when run` na
           bloke.
       2-3 Maze 16_authored_hint:
-        2-3_Maze_16_a: Kung ang pattern ay mahirap makita, subukang i-code ang lahat
-          muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo ilagay ang
-          mga loop.
+        2-3_Maze_16_a: Kung ang pattern ay mahirap makita, subukang i-code muna ang
+          lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago mo ilagay
+          ang mga loop.
         2-3_Maze_16_b: "Para makalagay ng maraming mga bloke sa loob ng isang `repeat`
           na loop. Kaladkarin lang ang loop palabas sa workspace, pagkatapos ay kaladkarin
           ang lahat ng mga bloke mula sa panimulang programa sa loob nito.  \n\nIkonekta
@@ -3860,17 +3860,17 @@ fil:
           pang mga bloke mula sa toolbox para matulungan kang lutasin ang palaisipang
           ito.
       MC_HOC_2017_08_RY_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
+        MC_HOC_2017_08_RY_a: |
           Pindutin ang "Run Agent"!
 
-          Maaari mong patakbuhin ang iyong code kahit pa hindi ito tama. Patakbuhin at i-reset ang iyong code nang paulit-ulit hanggang sa matukoy mo kung ano ang mali.
+           Maari mong patakbuhin ang iyong code kahit hindi ito tama. Patakbuhin at i-reset ang iyong code nang paulit-ulit hanggang sa matukoy mo ang pagkakamali.
         MC_HOC_2017_08_RY_b: Mayroong NAPAKARAMING pamamaraan para malutas ang palaisipang
           ito. Subukan ang iilan!
       MC_HOC_2017_08_Will_authored_hint:
-        MC_HOC_2017_08_RY_a: |-
+        MC_HOC_2017_08_RY_a: |
           Pindutin ang "Run Agent"!
 
-          Maaari mong patakbuhin ang iyong code kahit pa hindi ito tama. Patakbuhin at i-reset ang iyong code nang paulit-ulit hanggang sa matukoy mo kung ano ang mali.
+           Maari mong patakbuhin ang iyong code kahit hindi ito tama. Patakbuhin at i-reset ang iyong code nang paulit-ulit hanggang sa matukoy mo ang pagkakamali.
         MC_HOC_2017_08_RY_b: Mayroong NAPAKARAMING pamamaraan para malutas ang palaisipang
           ito. Subukan ang iilan!
       MC_HOC_2017_10_Cole_authored_hint:
@@ -4093,6 +4093,8 @@ fil:
       Overworld House Frame Chosen_2018_authored_hint:
         mc_6_a: Nag-click sa arrow na nasa taas ng `place` ba bloke para makapili
           kung ano ang ilalagay mo.
+        mc_6_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para
+          makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
         mc_6_c: Maaari kang maglagay ng higit sa isang bloke sa loob ng isang `repeat`
           na loop.
       Overworld Move to Sheep_authored_hint:
@@ -4115,6 +4117,8 @@ fil:
           bloke.
         mc_5_b: Siguraduhing ang parehong mga bloke ay nasa loob ng `repeat` na loob
           para mapatakbo ang code nang higit sa isang beses.
+        mc_5_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para
+          makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       Overworld Plant Crops_authored_hint:
         mc_7_a: Gamitin ang `plant crop` na bloke para magtanim ng pananim sa espasyo
           kung saan ka nakatayo.
@@ -4205,6 +4209,8 @@ fil:
         mc_10_b: Kapag ikaw ay nakatayo sa dulo ng laba, gumamit ng `place a cobblestone
           ahead` para makagawa ng ligtas na landas. Pagkatapos, maaari kang maglakad
           dito!
+        mc_10_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para
+          makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       Underground Mining Coal_authored_hint:
         mc_9_a: Ikaw ba ay nakaharap sa tamang landas? Ang `destroy block` ay magmina
           sa bloke sa harap mo.
@@ -4405,6 +4411,9 @@ fil:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+      course1_artist_loops_challenge2_authored_hint:
+        harvey_tictactoe: Maaari kang gumamit ng mga `jump` na bloke para makalipat
+          sa ibang mga puwang.
       course1_artist_loops_challenge3_authored_hint:
         courseA_artist_loops_challenge2_a: 'Ang mga bloke kagaya nito: <xml>  <block
           type="simple_move_up_left"/></xml> ay nagpapagalaw sa iyong artista gamit
@@ -4509,8 +4518,8 @@ fil:
         courseB_maze_seq_challenge2_b: Ayusin uli ang mga bloke at kunin ang landas
           sa gitna.
       course1_maze_seq_challenge1_authored_hint:
-        courseA_maze_seq_challenge2_a: Subukang bilanggin ang mga espasyo sa iyong
-          mga daliri. Tandaan na huwag bilangin ang puwang kung saan ka nagsimula!
+        courseA_maze_seq_challenge2_a: Subukang bilangin ang mga puwang sa iyong daliri.
+          Tandaan na huwang bilangin ang puwang kung saan ka nagsimula!
       course1_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_b: Subukang gumalaw pakanluran para makapagsimula.
       course1_playlab_events_challenge1_authored_hint:
@@ -4874,7 +4883,7 @@ fil:
           para malutas ang palaisipang ito.
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang
-          isulat ang code sa bawat hakbang at maghanap ng pattern.
+          magsulat ng code sa bawat hakbang at maghanap ng pattern.
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos
           ay ulitin iyan para maiguhit ang dalawa pang iba.
         courseA_artist_loops7_c: |-
@@ -4883,7 +4892,7 @@ fil:
           </block></xml> na loop.
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang
-          isulat ang code sa bawat hakbang at maghanap ng pattern.
+          magsulat ng code sa bawat hakbang at maghanap ng pattern.
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos
           ay ulitin iyan para maiguhit ang dalawa pang iba.
         courseA_artist_loops7_c: |-
@@ -4892,7 +4901,7 @@ fil:
           </block></xml> na loop.
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang
-          isulat ang code sa bawat hakbang at maghanap ng pattern.
+          magsulat ng code sa bawat hakbang at maghanap ng pattern.
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos
           ay ulitin iyan para maiguhit ang dalawa pang iba.
         courseA_artist_loops7_c: |-
@@ -5385,11 +5394,11 @@ fil:
       courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: Mayroong dalawang solusyon sa palaisipang ito.
       courseA_maze_seq_challenge2_authored_hint:
-        courseA_maze_seq_challenge2_a: Subukang bilanggin ang mga espasyo sa iyong
-          mga daliri. Tandaan na huwag bilangin ang puwang kung saan ka nagsimula!
+        courseA_maze_seq_challenge2_a: Subukang bilangin ang mga puwang sa iyong daliri.
+          Tandaan na huwang bilangin ang puwang kung saan ka nagsimula!
       courseA_maze_seq_challenge2_2018_authored_hint:
-        courseA_maze_seq_challenge2_a: Subukang bilanggin ang mga espasyo sa iyong
-          mga daliri. Tandaan na huwag bilangin ang puwang kung saan ka nagsimula!
+        courseA_maze_seq_challenge2_a: Subukang bilangin ang mga puwang sa iyong daliri.
+          Tandaan na huwang bilangin ang puwang kung saan ka nagsimula!
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: Maghanap ng isang bloke na nagpapasalita sa aso
           ng isang bagay.
@@ -5422,7 +5431,174 @@ fil:
           </next>
           </block>
           </xml>
+      courseA_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "Ipakita si Waddles ang Pingguwino kapag
+          na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Ipakita si Boo ang Multo kapag na-click
+          mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Ipakita si Jayden ang Fuzzy na Halimaw
+          kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Ipakita si Spiff ang Robot kapag na-click
+          mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018_authored_hint:
+        courseA_playlab_events_challenge1_a: "Ipakita si Waddles ang Pingguwino kapag
+          na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Ipakita si Boo ang Multo kapag na-click
+          mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Ipakita si Jayden ang Fuzzy na Halimaw
+          kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Ipakita si Spiff ang Robot kapag na-click
+          mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1a_authored_hint:
+        courseA_playlab_events_challenge1_a: "Maaari mong mapaawit ang ibon.\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Maaari mong patunogin ang robot.\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_c: |-
+          Maaari mong mapaungol ang galit na halimaw.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Maaari mong patunogin ang robot.\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Maaari mong mapaungol ang galit na halimaw.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_2018_authored_hint:
+        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Maaari mong patunogin ang robot.\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Maaari mong mapaungol ang galit na halimaw.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
+        courseA_playlab_events_challenge1_a: "Ipakita si Waddles ang Pingguwino kapag
+          na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Ipakita si Boo ang Multo kapag na-click
+          mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Ipakita si Jayden ang Fuzzy na Halimaw
+          kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Ipakita si Spiff ang Robot kapag na-click
+          mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Sa wakas, ipakita si Wendel ang Salamangkero
           kapag na-click mo si Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
@@ -5530,10 +5706,10 @@ fil:
           pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
       courseB_artist_loops9_authored_hint:
         courseB_artist_loops9_c: Hindi mo matukoy kung saan ilagay ang loop? Subukang
-          isulat ang code sa bawat hakbang at maghanap ng pattern.
+          magsulat ng code sa bawat hakbang at maghanap ng pattern.
       courseB_artist_loops9_2018_authored_hint:
         courseB_artist_loops9_c: Hindi mo matukoy kung saan ilagay ang loop? Subukang
-          isulat ang code sa bawat hakbang at maghanap ng pattern.
+          magsulat ng code sa bawat hakbang at maghanap ng pattern.
       courseB_collector_loops2_authored_hint:
         courseB_collector_loops2_a: Kailangan mong gumalaw bago ka makakolekta ng
           anumang kayamanan.
@@ -5781,6 +5957,9 @@ fil:
       courseB_collector_loops_challenge2_2018_authored_hint:
         courseB_collector_loops_challenge2_a: Kung mayroong problema, huwag matakot
           na magsimla ulit. Huwat susuko!
+      courseB_collector_prog3_authored_hint:
+        courseB_collector_prog3_a: Subukang gamitin ang `repeat` na bloke para magkolekta
+          ng iyong ginto.
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: Mayroong dalawang mga pamamaraan para malutas ang palaisipang
           ito!
@@ -5793,6 +5972,14 @@ fil:
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: Kung ikaw ay nagkaproblema, subukang isulat muna ang
           mga hakbang sa isang pirasong papel.
+      courseB_starWars_prog9_authored_hint:
+        courseB_starWars_prog9_a: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
+      courseB_starWars_prog9_2018_authored_hint:
+        courseB_starWars_prog9_a: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
       courseC_maze_debugging2_authored_hint:
         courseC_maze_debugging2_c: Matukoy mo ba kung ano ang mali? Subukang patakbuhin
           ang code nang ilang beses para makita kung ano ang nangyayari.
@@ -5812,14 +5999,38 @@ fil:
           nito.  \n\nIkonekta ang lahat ng ito sa `when run` na bloke at pwede na!"
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: Kung ang pattern ay mahirap makita, subukang i-code
-          ang lahat muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo
-          ilagay ang mga loop.
+          muna ang lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago
+          mo ilagay ang mga loop.
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas
           ang palaisipang ito!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas
           ang palaisipang ito!
+      courseC_starWars_loops1_authored_hint:
+        courseC_starWars_loops1_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
+      courseC_starWars_loops10_authored_hint:
+        courseC_starWars_loops10_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
+      courseC_starWars_loops10_2018_authored_hint:
+        courseC_starWars_loops10_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
+      courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
+      courseC_starWars_loops7_authored_hint:
+        courseC_starWars_loops7_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
+      courseC_starWars_loops7_2018_authored_hint:
+        courseC_starWars_loops7_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin
+          ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas
+          ang palaisipan.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
@@ -6772,6 +6983,9 @@ fil:
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Mayroong dalawang mga pamamaraan para malutas ang palaisipang
           ito!
+      grade1_adventurer_loops2_authored_hint:
+        grade1_adventurer_loops2_a: Subukang gamitin ang `repeat` na bloke para magkolekta
+          ng iyong ginto.
       grade1_adventurer_loops5_authored_hint:
         grade1_adventurer_loops5_a: Hindi matukong kung saan nagsimula ang pagkakamali?
           Gamitin ang "Step" na pindutan para magpatakbo sa iyong programa nang paisa-isang
@@ -6828,17 +7042,17 @@ fil:
 
           Saan mo maaaring mapalitan ito sa loob ng programa?
       grade2_PuppyLoops_6_authored_hint:
-        2-3_Maze_16_a: Kung ang pattern ay mahirap makita, subukang i-code ang lahat
-          muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo ilagay ang
-          mga loop.
+        2-3_Maze_16_a: Kung ang pattern ay mahirap makita, subukang i-code muna ang
+          lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago mo ilagay
+          ang mga loop.
         2-3_Maze_16_b: "Para makalagay ng maraming mga bloke sa loob ng isang `repeat`
           na loop. Kaladkarin lang ang loop palabas sa workspace, pagkatapos ay kaladkarin
           ang lahat ng mga bloke mula sa panimulang programa sa loob nito.  \n\nIkonekta
           ang lahat ng ito sa `when run` na bloke at pwede na!"
       grade2_PuppyLoops_7_authored_hint:
-        2-3_Maze_Loops_17_a: Kung ang pattern ay mahirap makita, subukang i-code ang
-          lahat muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo ilagay
-          ang mga loop.
+        2-3_Maze_Loops_17_a: Kung ang pattern ay mahirap makita, subukang i-code muna
+          ang lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago mo
+          ilagay ang mga loop.
         2-3_Maze_Loops_17_b: Nabura ba ang panimulang code? I-click ang `start over`
           para makuha ito pabalik!
       grade2_PuppyLoops_8_authored_hint:
@@ -6848,17 +7062,17 @@ fil:
           na mapagalaw at mapatalon patalikod pagkatapos niyang maiguhit ang unang
           linya?
       grade2_puppy_loops6_authored_hint:
-        2-3_Maze_16_a: Kung ang pattern ay mahirap makita, subukang i-code ang lahat
-          muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo ilagay ang
-          mga loop.
+        2-3_Maze_16_a: Kung ang pattern ay mahirap makita, subukang i-code muna ang
+          lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago mo ilagay
+          ang mga loop.
         2-3_Maze_16_b: "Para makalagay ng maraming mga bloke sa loob ng isang `repeat`
           na loop. Kaladkarin lang ang loop palabas sa workspace, pagkatapos ay kaladkarin
           ang lahat ng mga bloke mula sa panimulang programa sa loob nito.  \n\nIkonekta
           ang lahat ng ito sa `when run` na bloke at pwede na!"
       grade2_puppy_loops7_authored_hint:
-        2-3_Maze_Loops_17_a: Kung ang pattern ay mahirap makita, subukang i-code ang
-          lahat muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo ilagay
-          ang mga loop.
+        2-3_Maze_Loops_17_a: Kung ang pattern ay mahirap makita, subukang i-code muna
+          ang lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago mo
+          ilagay ang mga loop.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "**Tandaan:** Ang palaisipang ito ay nagbabago sa bawat
           beses na ito ay tumatakbo.  \n\nGugustohin mong gumamit ng isang kondisyonal
@@ -6945,8 +7159,8 @@ fil:
           na bloke (`if` o `if/else`) para malutas ang hamon."
       grade3_maze_loops2_authored_hint:
         grade3_maze_loops2_b: Kung ang pattern ay mahirap makita, subukang i-code
-          ang lahat muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo
-          ilagay ang mga loop.
+          muna ang lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago
+          mo ilagay ang mga loop.
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: Kung ikaw ay nagkakaroon ng problema sa paghanap ng hagdanan-hakbang
           na pattern, subukang takpan ang mga hinarangang mga landas gamit ang iyong
@@ -7172,7 +7386,7 @@ fil:
           isa.
       gradek_artist_loops6_authored_hint:
         gradek_artist_loops6_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang
-          isulat ang code sa bawat hakbang at maghanap ng pattern.
+          magsulat ng code sa bawat hakbang at maghanap ng pattern.
       gradek_artist_loops7_authored_hint:
         gradek_artist_loops7_a: Subukang patakbuhin ang code para makita kung ana
           ang naisulat para sa iyo.
@@ -7182,6 +7396,9 @@ fil:
       gradek_artist_loops9_authored_hint:
         artistLoopsKA_a: Gamitin ang pagtalon na bloke para makagalaw pasulong nang
           hindi gumuguhit ng linya.
+      harvey_tictactoe_authored_hint:
+        harvey_tictactoe: Maaari kang gumamit ng mga `jump` na bloke para makalipat
+          sa ibang mga puwang.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Dapat kang hahantong sa limang mga bloke sa loob ng iyong
           loop.

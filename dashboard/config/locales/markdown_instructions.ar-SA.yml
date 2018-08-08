@@ -236,9 +236,13 @@ ar:
         إستخدام  هذا المقطع البرمجي الجديد.
       4-5 Maze Conditionals 9_markdown_instruction: تمرين اخر على قطعة " اذا - والا
         ", هل تقدر اعطاء اجابة صحيحة من أول محاولة ؟
+      4-5 Nested Loops 12_markdown_instruction: هل يمكنك رسم ال 36 مثلث باستخدام ال
+        التكرارات المتداخله؟
       4-5 Nested Loops 3_markdown_instruction: "انشئ شمس بأن تدخل رمز (كود) البداية
         في في حلقة تكرار أخرى-\r \r للحصول على هذا التصميم الرائع الأجوف في المركز،
         ستحتاج للقفز إلى الأمام بطول المثلث قبل الدوران."
+      4-5 Nested Loops 6_markdown_instruction: هل يمكنك رسم شكل سداسي عن طريق تكرار
+        (وضعه في حلقة تكرار) رمز (كود) المثلث؟
       4-5 While Loops 1_markdown_instruction: حرّكني إلى الحفرة، واملأها بحفنتين من
         التراب، استخدم قطعة التعبئة.
       Overworld Move to Sheep_markdown_instruction: أضف أمر "move forward" ثانيًا
@@ -384,15 +388,21 @@ ar:
       grade3_maze_loops2_markdown_instruction: خذني إلى زهرة عباد الشمس!
       grade3_maze_nestedLoops4_markdown_instruction: قم بإستخدام الدورة مرتين للوصول
         إلى الخنزير بإستخدام مربعات برمجية اقل.
+      grade4_arist_nested_loop_triangles3_markdown_instruction: هل يمكنك رسم شكل سداسي
+        عن طريق تكرار (وضعه في حلقة تكرار) رمز (كود) المثلث؟
       grade4_arist_nested_loop_triangles5_markdown_instruction: "انشئ شمس بأن تدخل
         رمز (كود) البداية في في حلقة تكرار أخرى-\r \r للحصول على هذا التصميم الرائع
         الأجوف في المركز، ستحتاج للقفز إلى الأمام بطول المثلث قبل الدوران."
+      grade4_arist_nested_loop_triangles6_markdown_instruction: هل يمكنك رسم ال 36
+        مثلث باستخدام ال التكرارات المتداخله؟
       grade4_artist_functions2_markdown_instruction: الدوال البرمجية تمكنك من تحديد
         كتل جديدة! لقد قمنا بنقل كتل لرسم مربع في دالة تسمى "رسم مربع". هل يمكنك استخدام
         الدالة "رسم مربع" لإنشاء النظارات؟ المربعات 75 بكسل عن بعضها البعض.
       grade4_artist_nested_loop_triangles5_markdown_instruction: "انشئ شمس بأن تدخل
         رمز (كود) البداية في في حلقة تكرار أخرى-\r \r للحصول على هذا التصميم الرائع
         الأجوف في المركز، ستحتاج للقفز إلى الأمام بطول المثلث قبل الدوران."
+      grade4_artist_nested_loop_triangles6_markdown_instruction: هل يمكنك رسم ال 36
+        مثلث باستخدام ال التكرارات المتداخله؟
       grade4_bee_conditionals_quantum2_markdown_instruction: "هُناك المزيدُ مِن الغيوم!
         \r\n\r\nنَحَقّق من أسفل\nكُلّ سحابة لترى إذا كانت تخبِئ زَهْرَة قبل أن تقوم
         بِـجمع الرَحِيق.  \r\n\r\nتذّكر:\nليست كل الغيوم تخبِئ نفس الشيء!"
@@ -407,8 +417,8 @@ ar:
       grade4_bee_nestedLoops4_markdown_instruction: "إجْمَع كُلّ الرَحِيق مِن جَمِيعِ
         الزُهور \nوقم بِـإنْتاج عَسَل عند خلية النحل. \r\n\r\nقُم بِـإسْتِخْدَام \"حَلْقَة
         تِكرارات متداخِلة\". "
-      grade4_frozen_freeplay_markdown_instruction: لقد اصبحت رساماً محترفاً رسمياً!
-        اصنع ارض عجائب الشتاء.
+      grade4_frozen_freeplay_markdown_instruction: لقد أصبحت رسميا فنانا محترفا! قم
+        بإنشاء شكل يمثل "شتاء العجائب"  ثم شاركه مع أصدقائك.
       grade4_frozen_functions0_markdown_instruction: الدائرة شكل مميز. هل يمكنك معرفة
         الرقم الذي يجب نضعه بدل علامات الاستفهام لرسم دائرة؟
       grade4_frozen_functions1a_markdown_instruction: استخدام قطعة "إنشاء دائرة" الجديدة

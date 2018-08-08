@@ -79,13 +79,13 @@ sq:
             Binary Bracelets:
               name: Byzylykët Binarë
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Flappy:
               name: Flappy
             Getting Loopy:
               name: Duke u Çmëndur
             Graph Paper Programming:
-              name: Programimi me grafikë
+              name: Programimi Grafik me Letër
             'Maze: Loops':
               name: 'Maze: Ciklet'
             'Maze: Sequence':
@@ -130,7 +130,7 @@ sq:
             Bounce:
               name: Hidhu
             Computational Thinking:
-              name: Të menduarit kompjuterik
+              name: Te menduarit kompjuterik
             Crowdsourcing:
               name: Crowdsourcing
             Dice Race:
@@ -148,7 +148,7 @@ sq:
             'Maze: Conditionals':
               name: 'Maze: Kushtet'
             Songwriting:
-              name: kompozim
+              name: Të shkruarit e Këngëve
             'Studio: Create a Game':
               name: Play Lab - Krijo një Lojë
             'Studio: Create a Story':
@@ -177,7 +177,7 @@ sq:
             Maze:
               name: Labirint
         frozen:
-          title: Kodo me Anën dhe Elsën
+          title: Kodo me Ann-en dhe Elsa-n
           description: Le të përdorim kodin për të lidhur Anën dhe Elsën ndërsa ato
             eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë dëbore
             dhe modele ndërkohë që bën patinazh në akull dhe bën një magji dimërore
@@ -283,14 +283,14 @@ sq:
             Intro:
               name: Hyrje
             Variables:
-              name: Variabla
+              name: variabla
         algebra:
           title: Shkenëa Kompjuterike në Algjebër
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
           stages:
             'Eval: Conditionals':
-              name: Kushtoret
+              name: Kushtet
             'Eval: Strings and Images':
               name: Stringet dhe Figurat
             'Play Lab: Animation (Big Game)':
@@ -367,23 +367,23 @@ sq:
           description_audience: Moshat 10-18
           stages:
             Abstraction:
-              name: Abstraksion
+              name: Abstraksioni
             Algorithms:
               name: Algoritmet
             Computational Thinking:
-              name: Të menduarit kompjuterik
+              name: Te menduarit kompjuterik
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Functions:
-              name: Funksionet
+              name: funksione
             Graph Paper Programming:
-              name: Programimi me grafikë
+              name: Programimi Grafik me Letër
             Introduction to Computer Science:
-              name: Hyrje në Informatikë
+              name: Hyrje në Shkencë Kompjuterike
             Relay Programming:
-              name: Programimi transmetues
+              name: Programimi i Besuar
             Song Writing:
-              name: Kompozim këngësh
+              name: Të Shkruarit Këngë
             The Artist:
               name: Artisti
             The Artist 2:
@@ -431,13 +431,13 @@ sq:
             Studio:
               name: Studio
         flappy:
-          title: Flappy Code
+          title: Kodi Flappy
           description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo
             tutorialin tonë Flappy Code!
           description_short: Pergatisni lojen tuaj Flappy në më pak se 10 minuta!
           stages:
             Flappy Code:
-              name: Flappy Code
+              name: Kodi Flappy
         jigsaw:
           title: Jigsaw
           description: Provoni tutorialet tona Jigsaw
@@ -736,7 +736,7 @@ sq:
             Getting Loopy:
               name: Duke u Çmëndur
             Graph Paper Programming:
-              name: Programimi me grafikë
+              name: Programimi Grafik me Letër
             Happy Maps:
               name: Hartat e Gëzuara
             Move it, Move it:
@@ -744,9 +744,11 @@ sq:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
             Songwriting:
-              name: kompozim
+              name: Të shkruarit e Këngëve
             The Big Event:
               name: Eventi i Madh
+        cspunit4draft:
+          description_short: të dhëna
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -878,7 +880,7 @@ sq:
         CSDU3-Draft:
           stages:
             Functions:
-              name: Funksionet
+              name: funksione
         2016_sciencePD_phase1:
           stages:
             Introduction to PD:
@@ -901,6 +903,8 @@ sq:
           stages:
             Peer Review:
               name: Rishikimi i ndërsjellë
+        CSDU5-Draft:
+          description_short: të dhëna
         MikeTest:
           stages:
             Artist Functions:
@@ -926,7 +930,7 @@ sq:
             Digital Citizenship:
               name: Shtetësi Dixhitale
             Songwriting:
-              name: kompozim
+              name: Të shkruarit e Këngëve
         grade1:
           stages:
             Events:
@@ -982,11 +986,11 @@ sq:
         csd3-2017:
           stages:
             Functions:
-              name: Funksionet
+              name: funksione
             Variables:
-              name: Variabla
+              name: variabla
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
         grade2:
           stages:
             Flappy:
@@ -1002,13 +1006,13 @@ sq:
             Binary:
               name: Binare
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Events:
               name: Ngjarje
             For Loops:
               name: Për Ciklet
             Functions:
-              name: Funksionet
+              name: funksione
             Functions with Parameters:
               name: Funksionet me parametra
             Loops:
@@ -1016,7 +1020,7 @@ sq:
             Nested Loops:
               name: Përsëritjet e Mbivendosura
             Variables:
-              name: Variabla
+              name: variabla
             While Loops:
               name: Përsëritjet Ndërsa
         algebrapdnext:
@@ -1059,7 +1063,7 @@ sq:
         flappy-impact-study:
           stages:
             Flappy Code:
-              name: Flappy Code
+              name: Kodi Flappy
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1107,7 +1111,7 @@ sq:
             Introduction:
               name: Hyrja
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1193,7 +1197,7 @@ sq:
             Introduction:
               name: Hyrja
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmet e jetës reale: Dice Race'
         csd6-2017:
@@ -1209,15 +1213,15 @@ sq:
         csd3-draft:
           stages:
             Variables:
-              name: Variabla
+              name: variabla
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Functions:
-              name: Funksionet
+              name: funksione
         csd3-old:
           stages:
             Functions:
-              name: Funksionet
+              name: funksione
         csd2-draft:
           stages:
             Lists:
@@ -1225,11 +1229,11 @@ sq:
         csd3-chapters:
           stages:
             Variables:
-              name: Variabla
+              name: variabla
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Functions:
-              name: Funksionet
+              name: funksione
             'null':
               name: pa vlerë
         coursef-ramp:
@@ -1323,7 +1327,7 @@ sq:
             Nested Loops:
               name: Përsëritjet e Mbivendosura
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1357,7 +1361,7 @@ sq:
             Building a Foundation:
               name: Krijimi i një fondacioni
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1395,7 +1399,7 @@ sq:
             Introduction:
               name: Hyrja
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1423,19 +1427,19 @@ sq:
         csd3-1819draft:
           stages:
             Variables:
-              name: Variabla
+              name: variabla
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Functions:
-              name: Funksionet
+              name: funksione
         csd3-2018:
           stages:
             Variables:
-              name: Variabla
+              name: variabla
             Conditionals:
-              name: Kushtoret
+              name: Kushtet
             Functions:
-              name: Funksionet
+              name: funksione
         csd2-2018:
           stages:
             Lists:
@@ -1449,7 +1453,7 @@ sq:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programimi me grafikë
+              name: Programimi Grafik me Letër
             Introduction:
               name: Hyrja
             Building a Foundation:
@@ -1463,7 +1467,7 @@ sq:
             Conditionals with Cards:
               name: Kushtoret me Karta
             'Functions: Songwriting':
-              name: kompozim
+              name: Të shkruarit e Këngëve
             Envelope Variables:
               name: Variablat Zarf
             For Loop Fun:
@@ -1479,7 +1483,7 @@ sq:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Programimi transmetues
+              name: Programimi i Besuar
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1491,7 +1495,7 @@ sq:
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programimi me grafikë
+              name: Programimi Grafik me Letër
             Introduction:
               name: Hyrja
             Building a Foundation:
@@ -1505,9 +1509,9 @@ sq:
             Artist Binary:
               name: Artist Binar
             Graph Paper Programming:
-              name: Programimi me grafikë
+              name: Programimi Grafik me Letër
             Relay Programming:
-              name: Programimi transmetues
+              name: Programimi i Besuar
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1531,7 +1535,7 @@ sq:
             Introduction:
               name: Hyrja
             'Functions: Songwriting':
-              name: kompozim
+              name: Të shkruarit e Këngëve
             Internet:
               name: Interneti
             Crowdsourcing:

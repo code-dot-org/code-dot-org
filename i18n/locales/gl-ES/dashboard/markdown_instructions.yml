@@ -120,12 +120,16 @@ gl:
         Imos praticar o uso do bloque "se-senón" máis unha
         vez, podes facelo correctamente na primeira tentativa?
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "Usa un bloque \"repita até\" e\nun bloque \"se-senón\" para me levar até o xirasol no menor número de bloques posíbel."
+      4-5 Nested Loops 12_markdown_instruction: "Podes debuxar estes 36 triángulos usando\nun bucle aniñado?"
       4-5 Nested Loops 3_markdown_instruction: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
         
+      4-5 Nested Loops 5_markdown_instruction: Repite o código dado para crear un muiño de vento.
+      4-5 Nested Loops 6_markdown_instruction: "Podes debuxar un hexágono repetindo o\ncódigo do triángulo?"
       4-5 Nested Loops 7_markdown_instruction: "Repite este debuxo 10 veces. Canto\nnecesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)"
       4-5 Nested Loops 8_markdown_instruction: "Repita este debuxo 6 veces. Canto\nprecisas virar a cada repetición? (Pista: canto é 360 dividido por 6?)"
+      4-5 Nested Loops 9_markdown_instruction: Debuxa o dente na boca do crocodilo!
       4-5 While Loops 1_markdown_instruction: "Móveme para o buraco e cúbreo con\ndúas pás de terra, usando o bloque \"cubra\"."
       4-5 While Loops 2_markdown_instruction: "Móveme para o monte de terra e remóveo\ncon 5 pás de terra, usando o bloque \"remova\"."
       4-5 While Loops 3_markdown_instruction: "Móveme para o monte e remove toda a\nterra, entón móveme para o buraco e cúbreo completamente. Pista: usa o menor número de bloques posíbel."
@@ -249,18 +253,24 @@ gl:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Agora a abella só quere néctar. Lémbrate,\nnon todos os obxectos son flores, entón mira se o obxecto debaixo da nube é\nunha flor. Se é, entón podes recoller o néctar."
       grade3_maze_loops2_markdown_instruction: 'Lévame até o xirasol!'
       grade3_maze_nestedLoops4_markdown_instruction: Usa dous bucles para chegar até o porco usando menos bloques.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Repite o código dado para crear un muiño de vento.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Repite este debuxo 10 veces. Canto\nnecesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Repita este debuxo 6 veces. Canto\nprecisas virar a cada repetición? (Pista: canto é 360 dividido por 6?)"
+      grade4_arist_nested_loop_triangles3_markdown_instruction: "Podes debuxar un hexágono repetindo o\ncódigo do triángulo?"
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Debuxa o dente na boca do crocodilo!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
         
+      grade4_arist_nested_loop_triangles6_markdown_instruction: "Podes debuxar estes 36 triángulos usando\nun bucle aniñado?"
       grade4_artist_functions2_markdown_instruction: "As funcións permiten que definas novos bloques! Movemos\nos bloques para debuxar un cadrado para dentro dunha función chamada \"debuxa un cadrado\".\nPodes usar a función \"debuxa un cadrado\" para crear os lentes? Os cadrados están separados por 75 pixels."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Repite o código dado para crear un muiño de vento.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Repite este debuxo 10 veces. Canto\nnecesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Crea un sol aniñando o código inicial
         dentro de outro bucle. Chamamos a isto bucle aniñado.\r
         
+      grade4_artist_nested_loop_triangles6_markdown_instruction: "Podes debuxar estes 36 triángulos usando\nun bucle aniñado?"
       grade4_artist_parameters_triangles2_markdown_instruction: "Percibes algo diferente\nsobre estes bloques de función? Clica en \"Executar\" para ver o que acontece."
       grade4_bee_conditionals_quantum2_markdown_instruction: "Agora a abella só quere néctar. Lémbrate,\nnon todos os obxectos son flores, entón mira se o obxecto debaixo da nube é\nunha flor. Se é, entón podes recoller o néctar."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-

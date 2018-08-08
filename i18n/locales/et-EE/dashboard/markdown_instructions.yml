@@ -116,10 +116,14 @@ et:
       4-5 Maze Conditionals 9_markdown_instruction: |-
         Üks harjutus veel „kui/muidu“ plokiga!\r\r Proovi näpuga järge pidada, et näha, kas sul õnnestub see kohe esimesel katsel õigesti lahendada.
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "**Ülesanne** Kasuta plokki „korda kuni“ ja „kui/muidu“, et aidata mind päevalilleni võimalikult vähe plokke kasutades."
+      4-5 Nested Loops 12_markdown_instruction: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
       4-5 Nested Loops 3_markdown_instruction: |-
         Tee päike, asetades alguskood teise tsüklisse.\r\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
+      4-5 Nested Loops 5_markdown_instruction: Korda antud koodi, et teha tuuleveski.
+      4-5 Nested Loops 6_markdown_instruction: Kas oskad joonistada kuusnurga, korrates kolmnurga koodi?
       4-5 Nested Loops 7_markdown_instruction: "Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?"
       4-5 Nested Loops 8_markdown_instruction: "Korda seda disaini 6 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama? "
+      4-5 Nested Loops 9_markdown_instruction: Joonista alligaatori suhu hambad!
       4-5 While Loops 1_markdown_instruction: Liiguta mind augu juurde ja täida see kahe labidatäie mullaga, kasutades plokki „täida“.
       4-5 While Loops 2_markdown_instruction: Liiguta mind mullahunniku juurde ja eemalda see viie labidatäiega, kasutades plokki „eemalda“.
       4-5 While Loops 3_markdown_instruction: "Kasuta võimalikult vähe plokke, et seda ülesannet täita.\\r\\r Liiguta mind hunniku juurde ja eemalda see täielikult, seejärel liigu augu juurde ja täida auk."
@@ -209,7 +213,7 @@ et:
       MC_HOC_2017_4.5v2_markdown_instruction: |-
         Sa said mülkast välja!  Nüüd saada mängija ohutult oranži ruudu juurde. \r \r Aita Agendil puhastada rada leides lihtne muster ja kasutades tsükleid, et ületada kaks esimest surveplaati.
       MC_HOC_2017_Ali_markdown_instruction: 'Vaata funktsioone allpool.  Kuidas saad neid kasutada, et vältida ning Ghasts''e ja aidata {currentPlayerName} ohutult **nõiutud raamatuni** [book_enchanted]?  '
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Vaba mängimine:** kas suudad kokku koguda kõik teemandid sellel mängutasemel? "
+      MC_HOC_2017_FP10x10_markdown_instruction: "**Vaba mängimine:** Kas suudad kokku koguda kõik teemandid sellel mängutasemel?\n"
       MC_HOC_2017_FP10x10_RE_markdown_instruction: "**Vaba mängimine:** Kas suudad kokku koguda kõik teemandid sellel mängutasemel?\n"
       MC_HOC_2017_FP20x20_markdown_instruction: "**Vaba mängimine: ** Nüüd on kõik sinu kätes! Kasuta Agendi koodi maailma avastamiseks."
       MC_HOC_2017_Ryan_03_markdown_instruction: "Kas teadsite, et võite panna rohkem kui ühe tüki koodi tsüklisse?  \\r \\r Kasuta \"korrata\" tsüklikt, et aidata Agendil ehitada sild üle jõe pannes vette plokke."
@@ -230,6 +234,7 @@ et:
       courseD_bee_nestedLoops5_markdown_instruction: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
       courseD_bee_nestedLoops8_markdown_instruction: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
+      courseD_bounce_events1_markdown_instruction: Mine lipu juurde! Lisa ploki külge plokk "kui vasak nool" ja vajuta «Käivita», et mängija lipuni liigutada.
       courseD_maze_nestedLoops4_markdown_instruction: 'Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\r\rProovi kasutada ''korda'' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.'
       courseD_maze_nestedLoops4_2018_markdown_instruction: 'Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\r\rProovi kasutada ''korda'' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.'
       courseE_bee_functions3_markdown_instruction: Ehita 'võta 5' funktsiooni, mida selles ülesandes kasutada.
@@ -296,14 +301,20 @@ et:
       grade3_bee_conditionals_quantum2_markdown_instruction: "Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!"
       grade3_maze_loops2_markdown_instruction: 'Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\r\rProovi kasutada ''korda'' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.'
       grade3_maze_nestedLoops4_markdown_instruction: Selles ülesandes aitavad sind sea juurde kaks 'korda' tsüklit, milles võid kasutada vähe plokke!
+      grade4_arist_nested_loop_flags1_markdown_instruction: Korda antud koodi, et teha tuuleveski.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Korda seda disaini 6 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama? "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Kas oskad joonistada kuusnurga, korrates kolmnurga koodi?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Joonista alligaatori suhu hambad!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Tee päike, asetades alguskood teise tsüklisse.\r\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
       grade4_artist_functions2_markdown_instruction: "Funktsioonide abil saate uusi plokke määratleda! \\r\\r Me liigutasime ruudu joonistamiseks vajalikud plokid funktsiooni nimega \"joonista ruut\". Kas te saate kasutada \"joonista ruut\" funktsiooni ja teha prillid?\\r\\r Ruudud on üksteisest 75 piksli kaugusel."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Korda antud koodi, et teha tuuleveski.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Tee päike, asetades alguskood teise tsüklisse.\r\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
       grade4_artist_parameters_triangles2_markdown_instruction: Kas märkad nende funktsiooniplokkide juures mingit erinevust? Klõpsa käsku „Käivita“ ja vaata, mis juhtub.
       grade4_bee_conditionals_quantum2_markdown_instruction: "Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!"
       grade4_bee_conditionals_quantum5_markdown_instruction: |-

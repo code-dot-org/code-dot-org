@@ -20,38 +20,44 @@ vi:
       2-3 Artist 9_instruction: Hoàn thành diều này
       2-3 Artist Assessment 1_instruction: 'Đánh giá: Hoàn thành bản vẽ chiếc răng cuối, rộng 25 pixels và cao 25 pixels.'
       2-3 Artist Debugging 1_instruction: Bạn có thể làm mũ này với chiều dài 100?
-      2-3 Artist Debugging 10_instruction: "Các phím hướng trên bộ điều khiển trò chơi của tôi là quá hẹp. Gợi ý: Làm cho nó rộng hơn 10 pixels"
+      2-3 Artist Debugging 10_instruction: "Phím mũi tên điều khiển của tôi quá hẹp. \\r\n\\r Bạn có thể làm nó rộng hơn 10 pixel không? \\r\n\\r\nThử chạy mã lệnh trước để thấy lỗi sai."
       2-3 Artist Debugging 11_instruction: |-
         Giúp tôi hoàn thành bông tuyết xinh đẹp này. Tôi cần "lặp lại" bao nhiêu lần để hoàn thành nó?
       2-3 Artist Debugging 12_instruction: Tôi phải thêm một làn sóng ở cảnh này.  Bạn có thể giúp tôi không?
-      2-3 Artist Debugging 2_instruction: "Mã cho ba bộ râu mà bạn nhìn thấy là sai. Gợi ý: Mỗi bộ râu dài 75 pixels. Sửa mã này để vẽ bộ râu."
-      2-3 Artist Debugging 3_instruction: "Thuyền của tôi có một lỗ! Bạn có thể sửa chữa nó bằng cách thay đổi góc của dòng? Gợi ý: góc cuối cùng là 15 độ."
+      2-3 Artist Debugging 2_instruction: "Dòng lệnh vẽ ria cho mèo bị sai. \\r\n\\r Hãy sửa lại để mỗi chiếc ria dài bằng nhau."
+      2-3 Artist Debugging 3_instruction: "Thuyền của tôi có một cái lỗ! \\r\n\\r\nPhải sửa như thế nào để khắc phục việc này?"
       2-3 Artist Debugging 4_instruction: Hình ảnh mà chúng tôi đang cố gắng để vẽ là gì? Nối các dấu chấm còn lại, sử dụng dòng và góc thích hợp. 
-      2-3 Artist Debugging 5_instruction: "Mã cho chân và bàn chân mà bạn nhìn thấy là sai. Gợi ý: Chân quá dài, chúng ta cần phải xóa một bước (ý định chơi chữ)"
+      2-3 Artist Debugging 5_instruction: "Các lệnh để vẽ chân và bàn chân bị sai. \\r\n\\r\nBạn có sửa được không?"
       2-3 Artist Debugging 6_instruction: |-
-        Có vẻ như tôi đang ngồi trên một cái ghế thiếu một chân. Chỉnh sửa khối để vẽ chân.
+        Có vẻ như tôi đang ngồi trên một cái ghế thiếu một chân! \r
+        \r
+        Sửa lại mã lệnh để vẽ nốt chân còn lại.
       2-3 Artist Debugging 7_instruction: |-
-        Hình như C trong mã vẽ ngược. Bạn có thể làm cho nó trông giống C?
+        Có vẻ như chữ C trong từ "code" bị viết ngược \r
+        \r
+        Bạn có thể sửa lại nó không?
       2-3 Artist Debugging 8_instruction: |-
-        Chong chóng của tôi chưa hoàn thành. Tôi cần lặp lại bao nhiêu lần để hoàn thành nó?
+        Giáo viên của tôi nói tôi phải hoàn tất những gì mình bắt đầu! \r
+        \r
+        Hãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó bị sai chỗ nào không?
       2-3 Artist Debugging 9_instruction: |-
-        Mã cho thân này không chính xác. Gợi ý: Góc theo 60 độ
+        Một cái gì đó đã bị tắt!\r\rMã lập trình cho thân cây này đã bị sai rồi. Bạn có thể tìm hiểu làm cách nào để người nghệ sỹ theo dõi thân cây đúng cách được không?
       2-3 Artist Debugging Assessment 1_instruction: "Hình dạng này quá nhỏ. Bạn có thể làm cho nó lớn hơn? Gợi ý: nó nên dài thêm 75 pixels mỗi bên."
-      2-3 Artist Free Play_instruction: Chơi miễn phí! Vẽ bất cứ điều gì bạn muốn.
+      2-3 Artist Free Play_instruction: Tự do sáng tạo! Hãy bất thứ gì bạn thích.
       2-3 Artist Functions 1 a_instruction: "Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn so với độ dài cạnh vuông."
       2-3 Artist Functions 1_instruction: "Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn so với độ dài cạnh vuông."
       2-3 Artist Functions 10_instruction: 'Đây là hai hàm, một để vẽ một chiếc bánh răng to và một vẽ bánh răng nhỏ. Hãy dùng chúng để vẽ bên trong một cỗ máy!'
       2-3 Artist Functions 11 a_instruction: "Chúng ta đã đổi tên hàm \"vẽ hình vuông\" thành \"vẽ hình lục giác\", nhưng nó vẫn vẽ hình vuông. Bạn có thể sửa hàm \"vẽ hình lục giác sao cho nó vẽ ra lục giác với cạnh là 50 pixel không? Hãy vẽ bằng hàm này!"
-      2-3 Artist Functions 11.5 a_instruction: "Đây cũng là hàm \"vẽ hình lục giác\". Nếu sau mỗi vòng lặp cho xoay thêm 60 độ thì sẽ như thế nào?"
-      2-3 Artist Functions 11.5_instruction: "Đây cũng là hàm \"vẽ hình lục giác\". Nếu sau mỗi vòng lặp cho xoay thêm 60 độ thì sẽ như thế nào?"
+      2-3 Artist Functions 11.5 a_instruction: "Đây là hàm vẽ hình lục giác. \\r\n\\r\nChuyện ì sẽ xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
+      2-3 Artist Functions 11.5_instruction: "Đây là hàm vẽ hình lục giác. \\r\n\\r\nChuyện ì sẽ xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
       2-3 Artist Functions 11_instruction: "Chúng ta đã đổi tên hàm \"vẽ hình vuông\" thành \"vẽ hình lục giác\", nhưng nó vẫn vẽ hình vuông. Bạn có thể sửa hàm \"vẽ hình lục giác sao cho nó vẽ ra lục giác với cạnh là 50 pixel không? Hãy vẽ bằng hàm này!"
-      2-3 Artist Functions 12 Mike_instruction: "Sử dụng hàm để vẽ nhiều vật giống nhau cùng một lúc là cựu kỳ tiện lợi.\nBạn có thể cùng hàm \"vẽ bông hoa\" để vẽ hết những cây còn lại trong chậu cây không?\n(Gợi ý: các bông hoa cách nhau 100 pixel)"
-      2-3 Artist Functions 12 a_instruction: "Sử dụng hàm để vẽ nhiều vật giống nhau cùng một lúc là cựu kỳ tiện lợi.\nBạn có thể cùng hàm \"vẽ bông hoa\" để vẽ hết những cây còn lại trong chậu cây không?\n(Gợi ý: các bông hoa cách nhau 100 pixel)"
-      2-3 Artist Functions 12_instruction: "Sử dụng hàm để vẽ nhiều vật giống nhau cùng một lúc là cựu kỳ tiện lợi.\nBạn có thể cùng hàm \"vẽ bông hoa\" để vẽ hết những cây còn lại trong chậu cây không?\n(Gợi ý: các bông hoa cách nhau 100 pixel)"
+      2-3 Artist Functions 12 Mike_instruction: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách tiện lợi. \\r\n\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những cây còn lại trong chậu không? \\r\nCác bông hoa cách nhau 100 pixel."
+      2-3 Artist Functions 12 a_instruction: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách tiện lợi. \\r\n\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những cây còn lại trong chậu không? \\r\nCác bông hoa cách nhau 100 pixel."
+      2-3 Artist Functions 12_instruction: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách tiện lợi. \\r\n\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những cây còn lại trong chậu không? \\r\nCác bông hoa cách nhau 100 pixel."
       2-3 Artist Functions 13_instruction: "Chúng tôi cung cấp cho bạn bốn hàm.\nHãy dùng chúng theo cách bạn thích trong một hoặc nhiều vòng lặp để tạo ra bức tranh bạn có thể chia sẻ với bạn bè. Nhấn chạy để xem ví dụ."
-      2-3 Artist Functions 2_instruction: "Hàm giúp bạn định nghĩa khối mới! Chúng tôi đã chuyển các khối để vẽ một hình vuông vào một hàm gọi là \"vẽ hình vuông\".\nBạn có thể dùng hàm \"vẽ hình vuông\" để tạo ra chiếc kính không? Các hình vuông các nhau 75 điểm ảnh."
-      2-3 Artist Functions 3_instruction: "Sửa hàm để vẽ một hình vuông với cạnh 115 và vẽ hình vuông lớn. Các hình vuông bây giờ cách nhau 45 điểm ảnh."
-      2-3 Artist Functions 4_instruction: Dùng khối "lặp lại" để vẽ 3 hình vuông.
+      2-3 Artist Functions 2_instruction: "Hàm giúp bạn tạo ra khối lệnh mới! \\r\n\\r\nChúng ta đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\". Hãy dùng hàm, này để vẽ một khung cửa kính. \\r\n\\r\nCác hình vuông cách nhau 75 pixel."
+      2-3 Artist Functions 3_instruction: "Chỉnh sửa hàm để vẽ một hình vuông với chiều dài cạnh 115 để vẽ khung kính lớn hơn. \\r \\r các ô vuông có bây giờ cách nhau 45 pixel."
+      2-3 Artist Functions 4_instruction: Bây giờ, đặt hàm vào trong một vòng lặp để vẽ ba hình vuông.
       2-3 Artist Functions 7_instruction: 'Dùng hàm "vẽ ngôi nhà" để vẽ hai ngôi nhà dùng hai tham số khác nhau. (Gợi ý: ngôi nhà đầu tiên là 100 điểm ảnh).'
       2-3 Artist Functions 9_instruction: 'Đây là một hàm hoa tuyết. Thử nghiệm với nó để tạo ra khung cảnh mùa đông! Đây là bàn tự do nên không có câu đố nào để giải. Chúc vui vẻ!'
       2-3 Artist Loops 1_instruction: bạn có thể tạo hình lục giác với các cạnh bên là 100 điểm ảnh đủ để hoàn thành tế bào? hãy nhớ, điều đó có nghĩa là bạn sẽ chỉ cần quay 60 độ!
@@ -66,7 +72,7 @@ vi:
       2-3 Artist Loops 9_instruction: |-
         Chúng ta sẽ để lặp lại tương tự, nhưng bây giờ chúng ta sẽ thêm một số khoảng cách giữa chúng. \r sử dụng cùng một mã như trước, nhưng thêm một bước về phía trước ở phần cuối của vòng ngoài.
       2-3 Artist Loops New 1_instruction: Hãy vẽ đầu của chú robot này nhé. Bạn có thể vẽ 1 hình vuông với các cạnh có 100 điểm ảnh không?
-      2-3 Artist Loops New 10_instruction: Bây giờ bạn hãy kết nối các cụm của V với nhau để tạo thành 1 vòng lặp.
+      2-3 Artist Loops New 10_instruction: Giờ hãy nối các chữ V lại với nhau trong một vòng lặp.
       2-3 Artist Loops New 11_instruction: Bây h bạn hãy vẽ lại nó 24 lần. rồi quay trái góc 30 độ tại điểm Code và đặt tất cả chúng vào trong một khối lặp lại.
       2-3 Artist Loops New 12_instruction: "Vẽ một viên kim cương với các mặt có 100 điểm ảnh.\n"
       2-3 Artist Loops New 13_instruction: "bây giờ bạn hãy vẽ viên kim cương 3 lần trong vòng lặp."
@@ -199,7 +205,7 @@ vi:
       20hr_maze_stage2_16_instruction: Tôi muốn hoa hướng dương! Sử dụng một khối lệnh "nếu như" để làm cho tôi có thể có hoa hướng dương với số khối ít nhất.
       20hr_maze_stage2_17_instruction: Ok. Hãy luyện tập nó thêm lần nữa nào - Có thể đây sẽ rất khác, nhưng hãy coi chừng những con Chomper!
       20hr_maze_stage2_18_instruction: Các khối "Nếu-khác" kiểm tra một điều kiện, để làm một việc này hay một việc khác. Để tôi có được hoa hướng dương, hãy thử sử dụng khối mới.
-      20hr_maze_stage2_19_instruction: Thêm một bài thực hành nữa với khối "nếu-khác" nào, bạn có thể sử dụng khối "nếu-khác" ngay được không?
+      20hr_maze_stage2_19_instruction: Một sự luyện tập nữa với khối "nếu-không thì", bạn có thể làm đúng ngay lần đầu cố gắng?
       20hr_maze_stage2_2_instruction: Chú lợn này đang làm rối lông của tui. Giúp tôi tìm nó!
       20hr_maze_stage2_20_instruction: Bạn có thể thêm chỉ 3 khối để giúp tôi giải quyết một mê cung phức tạp hơn được không? Nếu bạn làm điều đó đúng, tôi có thể đi bộ trên con đường cong và không có vấn đề với chiều dài.
       20hr_maze_stage2_3_instruction: Lần theo con đường và dẫn tôi tới chú heo ngốc. Nhớ tránh TNT không thì bay mất xác!
@@ -232,6 +238,7 @@ vi:
       App Lab test_instruction: kiểm thử
       Auto Open Function Editor_instruction: 'Bạn có thể sử dụng chức năng từ bên trong các chức năng khác! Sử dụng chức năng "hình dạng" làm cơ sở, tạo ra 3 nền nhà mỗi nền rộng 2o điểm ảnh, dài 50 điểm ảnh. Sử dụng một vòng lặp sẽ có ích. '
       Bergeron Robot Maze1_instruction: 'Bạn có thể giúp tôi bắt chú heo nghịch ngợm không? Sử dụng một vài lệch "di chuyển về phía trước" (move forward), nằm dưới lệnh "khi chạy chương trình" (when run), sau đó nhấn vào lệnh "Chạy chương trình" (run). '
+      Course 2 Bee Loops 1_instruction: 'Xin chào, tôi là một chú ong. Bạn có thể giúp tôi thu thập phấn hoa từ những bông hoa này không? '
       Course 4 Artist 12_instruction: |-
         Trò chơi cảm hứng miễn phí: Bạn bây giờ đã học được tất cả mọi thứ bạn cần biết để làm cho một mẫu như thế này! Nếu hình ảnh này truyền cảm hứng cho bạn, cố gắng làm một cái gì đó tương tự. Nếu không, hãy tạo ra thứ của riêng của bạn. \r \r muốn biết mô hình cảm hứng được tạo ra thế nào?  Ghé thăm https://studio.code.org/c/105765376/edit cho các giải pháp.
       Course 4 Artist Functions 2_instruction: 'Bạn có thể vẽ 3 hình vuông 20 điểm ảnh khác nhau? Gợi ý: mỗi ô vuông chứa 100 điểm ảnh'
@@ -350,9 +357,9 @@ vi:
       MC HOC 2016 Village Test_instruction: Ồ không! Thây ma đã khiến bạn bị mắc kẹt bên trong! Lập trình Golem sắt để đuổi theo và tấn công các thây ma!
       MC_2017_Ryan_02_instruction: Giúp nhân vật thoát khỏi bằng cách sử dụng các vòng lặp cho Đặc vụ tới các tấm áp lực.
       MC_HOC_2017 Agent Test_instruction: Nháy chuột vào "Chạy" để bắt đầu di chuyển nhân vật tới ô vuông màu da cam bên trong ngôi nhà.
-      MC_HOC_2017_01_instruction: Nháy chuột vào "Chạy" để di chuyển người chơi đến ô vuông màu da cam bên trong ngôi nhà.
+      MC_HOC_2017_01_instruction: Nháy chuột vào "Chạy" để bắt đầu di chuyển nhân vật tới ô vuông màu da cam bên trong ngôi nhà.
       MC_HOC_2017_01_Cole_instruction: Bạn cần thu thập tất cả các công cụ trong hành trình này. Di chuyển nhân vật xung quanh bằng cách sử dụng các phím mũi tên và di chuyển đến trung tâm của con đường để dành chiến thắng
-      MC_HOC_2017_01_Kiki_instruction: Nháy chuột vào "Chạy" để di chuyển người chơi đến ô vuông màu da cam bên trong ngôi nhà.
+      MC_HOC_2017_01_Kiki_instruction: Nháy chuột vào "Chạy" để bắt đầu di chuyển nhân vật tới ô vuông màu da cam bên trong ngôi nhà.
       MC_HOC_2017_01_RETRY_instruction: 'Viết dòng lệnh để nhân vật đặc vụ tới tấm áp lực, sau đó nhấn vào "Chạy" và sử dụng các phím mũi tên để di chuyển nhân vật ra khỏi ngôi nhà. '
       MC_HOC_2017_02_instruction: Cho Đặc vụ di chuyển đến tấm áp lực.
       MC_HOC_2017_02_Cole_instruction: 'Di chuyển Đặc vụ đến tấm áp lực để cho {currentPlayerName} có thể di chuyển vào và lấy được tấm bản đồ. '
@@ -404,6 +411,7 @@ vi:
       NEW Course 4 Artist Functions 2_instruction: 'Bạn có thể vẽ 3 hình vuông 20 điểm ảnh khác nhau? Gợi ý: mỗi ô vuông chứa 100 điểm ảnh'
       NEW Course 4 Artist Params 7_instruction: 'Bạn có thể hoàn thành bản vẽ này? Gợi ý: Mỗi tam giác có độ phân lớn hơn so với tam giác trước là 25.  Tam giác đầu tiên có độ phân giải là 25.'
       NEW Course 4 Bee For Loops 4 4_instruction: Bạn có thể giúp chú ong tìm kiếm phần còn lại của mật ong bằng cách sử dụng vòng lặp không? 
+      New Bounce Project_instruction: Tạo cho bạn trò chơi di chuyển bóng riêng. Bạn có thể thay đổi tất cả cá hình ảnh và quy tắc. Khi bạn đã làm xong, nhấp vào Kết thúc để bạn vè có thể dùng thử trò chơi trên điện thoại của họ.
       New Gumball Project_instruction: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
       New Ice Age Project_instruction: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
       New Infinity Project_instruction: Tạo ra bất cứ điều gì bạn thích và chia sẻ nó!
@@ -456,6 +464,7 @@ vi:
       bounce_11_instruction: Bạn không thể đính kèm khối với khối "khi chạy". Bạn có thể đính kèm khối mới "bắn quả bóng mới" ở nhiều nơi. Ngoài ra, thử thay đổi cảnh phông hoặc tối độ của quả bóng và chận vịt và nhìn xem bạn cầu bao nhiêu điểm để có thể đứng trước đối thủ của bạn 2 lần.
       bounce_11_2018_instruction: Bạn không thể đính kèm khối với khối "khi chạy". Bạn có thể đính kèm khối mới "bắn quả bóng mới" ở nhiều nơi. Ngoài ra, thử thay đổi cảnh phông hoặc tối độ của quả bóng và chận vịt và nhìn xem bạn cầu bao nhiêu điểm để có thể đứng trước đối thủ của bạn 2 lần.
       bounce_12_instruction: Tạo cho bạn trò chơi di chuyển bóng riêng. Bạn có thể thay đổi tất cả cá hình ảnh và quy tắc. Khi bạn đã làm xong, nhấp vào Kết thúc để bạn vè có thể dùng thử trò chơi trên điện thoại của họ.
+      bounce_12_2018_instruction: Tạo cho bạn trò chơi di chuyển bóng riêng. Bạn có thể thay đổi tất cả cá hình ảnh và quy tắc. Khi bạn đã làm xong, nhấp vào Kết thúc để bạn vè có thể dùng thử trò chơi trên điện thoại của họ.
       bounce_1_2018_instruction: Đính kèm một khối với khối "mũi tên trái" và bấm "chạy". Di chuyển chân vịt sử dụng mũi tên để đến mục tiêu kết thúc.
       bounce_2_instruction: Đính kèm với khối "mũi tên phải" và bấm "chạy" và "mũi tên trái. Di chuyển chân vịt đển tìm mục tiêu kết thúc của cả hai.
       bounce_2_2018_instruction: Đính kèm với khối "mũi tên phải" và bấm "chạy" và "mũi tên trái. Di chuyển chân vịt đển tìm mục tiêu kết thúc của cả hai.
@@ -492,6 +501,7 @@ vi:
       courseD_bee_debugging3_instruction: Sửa tất cả các lỗi để con ong lấy được phấn hoa và tạo mật.
       courseD_bounce_events10_instruction: Đó là một mục tiêu hàng đầu. Đính kèm khối "điểm số" và "điểm đối thủ" với khối "khi quả bóng vào goal" và "khi quả bóng lỡ chân vịt" để chơi trò chơi. Xem xem bạn cần có bao nhiêu điểm để đứng trước đối thủ của mình hai lần.
       courseD_bounce_events11_instruction: Bạn không thể đính kèm khối với khối "khi chạy". Bạn có thể đính kèm khối mới "bắn quả bóng mới" ở nhiều nơi. Ngoài ra, thử thay đổi cảnh phông hoặc tối độ của quả bóng và chận vịt và nhìn xem bạn cầu bao nhiêu điểm để có thể đứng trước đối thủ của bạn 2 lần.
+      courseD_bounce_events12_instruction: Tạo cho bạn trò chơi di chuyển bóng riêng. Bạn có thể thay đổi tất cả cá hình ảnh và quy tắc. Khi bạn đã làm xong, nhấp vào Kết thúc để bạn vè có thể dùng thử trò chơi trên điện thoại của họ.
       courseD_bounce_events2_instruction: Đính kèm với khối "mũi tên phải" và bấm "chạy" và "mũi tên trái. Di chuyển chân vịt đển tìm mục tiêu kết thúc của cả hai.
       courseD_bounce_events3_instruction: Bây giờ thử một cái gì đó tương tự khối "mũi tên trái". Di chuyển chân vịt để đạt mục thiêu kết thúc hàng đầu.
       courseD_bounce_events3s_instruction: Bây giờ thử một cái gì đó tương tự khối "mũi tên trái". Di chuyển chân vịt để đạt mục thiêu kết thúc hàng đầu.
@@ -554,13 +564,17 @@ vi:
       grade2_MakeDogTag_4_instruction: |-
         Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi ý: Cả 3 cạnh đều dài như nhau.
       grade2_MakeDogTag_6_instruction: 'Chơi miễn phí! Vẽ bất cứ điều gì bạn muốn.'
-      grade2_MakeDogTag_8_instruction: Bây giờ bạn hãy kết nối các cụm của V với nhau để tạo thành 1 vòng lặp.
+      grade2_MakeDogTag_8_instruction: Giờ hãy nối các chữ V lại với nhau trong một vòng lặp.
       grade2_MakeDogTag_9_instruction: Bây h bạn hãy vẽ lại nó 24 lần. rồi quay trái góc 30 độ tại điểm Code và đặt tất cả chúng vào trong một khối lặp lại.
       grade2_PuppyLoops_10_instruction: |-
-        Chong chóng của tôi chưa hoàn thành. Tôi cần lặp lại bao nhiêu lần để hoàn thành nó?
-      grade2_PuppyLoops_8_instruction: "Mã cho ba bộ râu mà bạn nhìn thấy là sai. Gợi ý: Mỗi bộ râu dài 75 pixels. Sửa mã này để vẽ bộ râu."
+        Giáo viên của tôi nói tôi phải hoàn tất những gì mình bắt đầu! \r
+        \r
+        Hãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó bị sai chỗ nào không?
+      grade2_PuppyLoops_8_instruction: "Dòng lệnh vẽ ria cho mèo bị sai. \\r\n\\r Hãy sửa lại để mỗi chiếc ria dài bằng nhau."
       grade2_PuppyLoops_9_instruction: |-
-        Hình như C trong mã vẽ ngược. Bạn có thể làm cho nó trông giống C?
+        Có vẻ như chữ C trong từ "code" bị viết ngược \r
+        \r
+        Bạn có thể sửa lại nó không?
       grade3_Conditionals_1_instruction: "Xin chào, tôi là Ong! Hãy giúp tôi thu thập mật hoa từ những bông hoa. Sử dụng hàm Loop."
       grade3_Conditionals_10_instruction: |2
         Hút mật hoa để làm mật ong.
@@ -659,9 +673,11 @@ vi:
       level 'grade3_Loops_8_instruction: Thu thập tất cả mật hoa và làm tất cả trở thành mật ong bằng cách sử dụng ít nhất các lệnh có thể.
       level 'grade3_Loops_9_instruction: Thu thập mật hoa từ mỗi bông hoa và làm mật ong tại mỗi tổ ong và hãy sử dụng ít nhất các lệnh có thể.
       level grade3_Loops_2_instruction: Lần này, dùng một vòng lặp để thu tập tất cả phấn hoa.
+      scrat 16 (copy 1)_instruction: Sồi! Sồi! Sồi! Sử dụng khối "nếu" để đưa tôi đến đó với số khối ít nhất.
       scrat 16_instruction: Sồi! Sồi! Sồi! Sử dụng khối "nếu" để đưa tôi đến đó với số khối ít nhất.
       scrat 17_instruction: OK, chúng ta hãy làm điều đó một lần nữa để luyện tập - nó không quá khác nhau, nhưng hãy cẩn thận với bức tường!
+      scrat 18 (copy 1)_instruction: Khối "Nếu-không thì" kiểm tra một điều kiện, và sau đó làm một điều HOẶC điều còn lại. Để đưa tôi đến quả sồi, cố gắng sử dụng khối mới này.
       scrat 18_instruction: Khối "Nếu-không thì" kiểm tra một điều kiện, và sau đó làm một điều HOẶC điều còn lại. Để đưa tôi đến quả sồi, cố gắng sử dụng khối mới này.
-      scrat 19 (copy 1)_instruction: Thêm một bài thực hành nữa với khối "nếu-khác" nào, bạn có thể sử dụng khối "nếu-khác" ngay được không?
+      scrat 19 (copy 1)_instruction: Một sự luyện tập nữa với khối "nếu-không thì", bạn có thể làm đúng ngay lần đầu cố gắng?
       scrat 19_instruction: Một sự luyện tập nữa với khối "nếu-không thì", bạn có thể làm đúng ngay lần đầu cố gắng?
       scrat 20_instruction: Bạn có thể thêm chỉ 3 khối để giúp tôi giải quyết một mê cung phức tạp hơn? Nếu bạn làm đúng, tôi có thể đi bộ bất kỳ con đường cong nào, mặc cho chiều dài. Nhanh lên! Băng đang tan!

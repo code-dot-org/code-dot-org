@@ -331,12 +331,10 @@ fi:
       2-3 Maze 10_instruction: Auta minut vihreän ilkiön luo! (Varo TNT:tä)
       2-3 Maze 11_instruction: Auta minut kukan luokse. Olen nälkäinen! Kuinka monta
         kertaa sinun täytyy toistaa lohko?
-      2-3 Maze 12 (copy 1)_instruction: 'Pääsetkö samaan tulokseen kuin edellisessä
-        tehtävässä käyttäen vain kahta lohkoa? (Vihje: Tee silmukka käyttäen "toista
-        kertaa" -lohkoa.)'
-      2-3 Maze 12 (copy 2)_instruction: 'Pääsetkö samaan tulokseen kuin edellisessä
-        tehtävässä käyttäen vain kahta lohkoa? (Vihje: Tee silmukka käyttäen "toista
-        kertaa" -lohkoa.)'
+      2-3 Maze 12 (copy 1)_instruction: 'Pystytkö korvaamaan edellisen vastauksen
+        vain kahdella lohkolla? (Vihje: Tee silmukka käyttäen "toista kertaa" -lohkoa.)'
+      2-3 Maze 12 (copy 2)_instruction: 'Pystytkö korvaamaan edellisen vastauksen
+        vain kahdella lohkolla? (Vihje: Tee silmukka käyttäen "toista kertaa" -lohkoa.)'
       2-3 Maze 12 (old)_instruction: Hoida minut possun luo, tällä kertaa käyttäen
         "toista kertaa" -lohkoa!
       2-3 Maze 12 - One Move Block_instruction: Mene sian luokse. Tällä kertaa saat
@@ -375,7 +373,8 @@ fi:
       2-3 Maze Loops 17_instruction: Vie minut auringonkukan luo!
       2-3 Maze Loops 18_instruction: Vie minut auringonkukan luo!
       2-3 Maze Loops 19_instruction: Vie minut auringonkukan luo!
-      2-3 Maze Loops 20_instruction: Vie minut auringonkukan luo!
+      2-3 Maze Loops 20_instruction: Vie minut auringonkukan luo käyttäen pienimmän
+        mahdollisen määrän lohkoja!
       2-3 Maze Loops 21_instruction: Vie minut auringonkukan luo!
       2-3 Maze Loops Assessment 1_instruction: 'Tehtävä: Hoida minut auringonkukan
         luo käyttäen vain viittä lohkoa!'
@@ -609,8 +608,8 @@ fi:
         ulommaisimman silmukan loppuun, jotta saadaan piirrettyä kokonainen ristikko?
       4-5 Artist Patterns 4_instruction: Tällä timantilla on 50 pikselin sivut ja
         120 ja 60 asteen kulmat. Käytä silmukkaa piirtääksesi sen.
-      4-5 Artist Patterns 5.5_instruction: Kuinka monta kertaa sinun tarvitsee toistaa
-        tämä piirtääksesi täyden ruudukon timantteja?
+      4-5 Artist Patterns 5.5_instruction: Kuinka monta kertaa tämä palikka täytyy
+        toistaa, jotta saadaan piirretyksi täysi timanttiruudukko?
       4-5 Artist Patterns 5_instruction: "Toista tämä koodi ja tee 6 timantin rivi.\n\r\n\r\nHuomaa,
         että timanttikoodia on muutettu. Se toistaa 3 kertaa 2 kerran sijaan - minkähän
         takia niin käy?\r\n"
@@ -636,6 +635,9 @@ fi:
       4-5 Bee Conditionals 1_instruction: En näe, koska pilvi on edessä! Katso, onko
         pilven alla kukka. Jos löydät kukan, voit kerätä meden. Ole varovainen, se
         voi muuttua!
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Juuri nyt mehiläinen haluaa vain
+        mettä. Muista, kaikki esineet eivät ole kukkia, joten tarkista, että keräät
+        mettä vain kukista.
       4-5 Bee Conditionals 2_instruction: "Lisää pilviä!\r\n\r\nTarkista jokainen
         pilvi, jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
         pilvet eivät piilottelee samaa asiaa!"
@@ -698,7 +700,7 @@ fi:
       4-5 Bee Nested Loops Rows_instruction: Kerää mesi kukkariveistä! Käytä sisäkkäistä
         silmukkaa.
       4-5 Maze 1 (copy 1)_instruction: Hyvä ihminen. Minä zombi. Täytyy… päästä…auringonkukalle.
-      4-5 Maze 1_instruction: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
+      4-5 Maze 1_instruction: Hyvä ihminen. Minä zombi. Täytyy… päästä…auringonkukalle.
       4-5 Maze 10_instruction: Pääsetkö auringonkukan luo käyttämällä vain neljää
         lohkoa?
       4-5 Maze 11_instruction: Pääsetkö auringonkukan luo käyttämällä vain kuutta
@@ -709,7 +711,7 @@ fi:
       4-5 Maze 14_instruction: Vie minut possun luo! Käytä 'toista kunnes' -palikkaa.
       4-5 Maze 2 (copy 1)_instruction: Saa zombi auringonkukan luokse, mutta vältä
         ahmijaa!
-      4-5 Maze 2_instruction: Vie zombi auringonkukan luo, mutta vältä ahmijaa!
+      4-5 Maze 2_instruction: Saa zombi auringonkukan luokse, mutta vältä ahmijaa!
       4-5 Maze 3 (copy 1)_instruction: Täytyy.. päästä... auringonkukalle.
       4-5 Maze 3_instruction: Täytyy.. päästä... auringonkukalle.
       4-5 Maze 4 (copy 1)_instruction: Kokeile "toista" lohkoa käyttääksesi vähemmän
@@ -794,6 +796,17 @@ fi:
       4-5 While Loops Assessment 1_instruction: Kuoppia ja kasoja on paljon. Auta
         minua täyttämään ja poistamaan ne niin, että maasta tulee tasainen.
       App Lab test_instruction: ehto
+      Artist - Nested Loops 10_instruction: Piirrä tähän lippuun viimeinen tähtirivi
+        toistamalla annettuja palikoita. Tähdet ovat 50 kuvapisteen päässä toisistaan,
+        mutta muista, ett tähdet ovat 30 kuvapistettä leveitä.
+      Artist - Nested Loops 11_instruction: Osaatko piirtää tämän jalkakäytävän 10
+        neliötä käyttäen sisäkkäistä silmukkaa? Jokainen neliö on 30 kuvapistettä.
+      Artist - Nested Loops 12_instruction: Osaatko piirtää nämä 36 kolmiota käyttäen
+        sisäkkäistä silmukkaa?
+      Artist - Nested Loops 5_instruction: Liitä annettu koodi silmukkaan. Tee tuulimylly.
+      Artist - Nested Loops 6_instruction: Osaatko piirtää kuusikulmion kolmiokoodia
+        toistamalla?
+      Artist - Nested Loops 9_instruction: Piirrä alligaattorin suuhun hampaat!
       Artist - Nested Loops Assessment 1_instruction: Tee kuvio valmiiksi. Käytä sisäkkäistä
         silmukkaa.
       Bee Recommended Blocks test_instruction: Violeteilla kukilla on joko 1 tai 0
@@ -805,6 +818,16 @@ fi:
         joiden avulla voi yksinkertaistaa koodia?
       Busy Bee_instruction: Tällä mehiläisellä on paljon puuhaa! Huomaatko malleja,
         joiden avulla voi yksinkertaistaa koodia?
+      C3-Farmer While Loops 5_instruction: Vau, nyt tässä on kaksi syvää kuoppaa!
+        Osaatko kirjoittaa ohjelman, joka täyttää ne molemmat, kunnes maa on tasainen?
+      C3-Farmer While Loops 6_instruction: Vau, nyt edessäsi on iso multakasa. Osaatko
+        kirjoittaa ohjelman, joka poistaa sen kaiken niin, että maasta tulee tasainen?
+      C3-Farmer While Loops 7_instruction: Vau, nyt multakasoja on kolme! Osaatko
+        kirjoittaa ohjelman, joka poistaa niistä jokaisen, kunnes maa on tasainen?
+      C3-Farmer While Loops Assessment 1_instruction: Kuoppia ja kasoja on paljon.
+        Auta minua täyttämään ja poistamaan ne niin, että maasta tulee tasainen.
+      Course 2 Bee Loops 1_instruction: 'Hei, olen mehiläinen. Voitko auttaa minua
+        keräämään mettä näistä kukista? '
       Course 2 Maze Loops 1_instruction: Osaatko viedä minut possun luo käyttämällä
         5 palikkaa?
       Course 4 2_instruction: Juuri nyt mehiläinen haluaa vain mettä. Muista, kaikki
@@ -856,6 +879,8 @@ fi:
       Course 4 Artist For Loops Challenge_instruction: "Keksitkö, kuinka voit käyttää
         kaikkia oppimiasi asioita tämän kuvan luomiseen? \r\n\r\nJos haluat vinkin,
         napsauta tästä."
+      Course 4 Artist Inspire_instruction: "Haluatko kurkistaa uudelleen suunnitteluapuun
+        tai vinkkeihin? Klikkaa tästä!\r\n\r\nJollet, tee kuvio aivan itse!"
       Course 4 Maze 5_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän
         mahdollisen määrän lohkoja?
       Course 4 Maze 6_instruction: Pystytkö selvittämään pulman käyttämällä pienimmän
@@ -978,11 +1003,21 @@ fi:
       Mike Test Bee Conditionals 1_instruction: En näe, koska pilvi on edessä! Katso,
         onko pilven alla kukka. Jos löydät kukan, voit kerätä meden. Ole varovainen,
         se voi muuttua!
+      New Basketball Project_instruction: Luo oma Koripallo-pelisi. Voit muuttaa kaikkia
+        sääntöjä. Kun olet valmis, napsauta Valmis antaaksesi ystäviesi kokeilla peliäsi
+        heidän puhelimissaan.
+      New Bounce Project_instruction: Luo oma Bounce-pelisi. Voi muokata kaikkea ulkonäköön
+        ja sääntöihin liittyvää. Kun olet valmis, napsauta Valmis ja voit jakaa pelisi
+        niin, että kaverisikin voivat pelata sitä omilla älypuhelimillaan.
       New Gumball Project_instruction: Luo mitä tahansa ja jaa se!
       New Ice Age Project_instruction: Luo mitä tahansa ja jaa se!
       New Infinity Project_instruction: Luo mitä tahansa ja jaa se!
       New Minecraft Hero Project_instruction: "**Vapaa peli:** Aika tehdä tutkimustyötä
         itsekseen!"
+      New Sports Project_instruction: 'Luo oma peli! Olet vastuussa täällä: Voi muokata
+        kaikkia sääntöjä, sekoita ja yhdistä urheilulaijeja, ole luova! Kun olet valmis,
+        napsauta Valmis ja voit jakaa pelisi niin, että kaverisikin voivat pelata
+        sitä omilla puhelimillaan.'
       Overworld Avoid Monsters_instruction: Lurkkiin törmääminen on huono juttu. Ohita
         lurkki varovasti ja etene kotiisi turvaan.
       Overworld Avoid Monsters_2018_instruction: Lurkkiin törmääminen on huono juttu.
@@ -1033,6 +1068,9 @@ fi:
         lampaista käyttämällä "keritse"-komentoa.
       Overworld Shear Sheep_2018_instruction: On aika keritä lampaat! Kerää villa
         molemmista lampaista käyttämällä "keritse"-komentoa.
+      PDK5 Conditionals 1_instruction: Violeteilla kukilla on joko 1 tai 0 mettä,
+        mutta sitä ei voi tietää! Varo, ettet kerää mettä violetista kukasta, jos
+        sillä ei ole mettä. Tarkista, että meden määrä on 1 käyttämällä 'jos-palikkaa.
       PDK5 Functions 2_instruction: Funktioilla voit määrittää uusia lohkoja! Olemme
         siirtäneet neliöiden piirtämislohkot funktioon nimeltä "piirrä neliö". Voitko
         käyttää "piirrä neliö"-funktiota lasien luomiseksi? Neliöt ovat 75 kuvapistettä
@@ -1040,6 +1078,9 @@ fi:
       PS copy 2-3 Bee Conditionals 5_instruction: Violeteissa kukissa voi olla 1 tai
         0 mettä, mutta et tiedä kuinka paljon! Varo keräämästä mettä violetista kukasta
         jos sitä ei ole. Tarkista onko meden määrä 1 käyttäen jos-lohkoa.
+      Quantum Bee_instruction: Violeteilla kukilla on joko 1 tai 0 mettä, mutta sitä
+        ei voi tietää! Varo, ettet kerää mettä violetista kukasta, jos sillä ei ole
+        mettä. Tarkista, että meden määrä on 1 käyttämällä 'jos-palikkaa.
       Ryan - 4-5 Bee Conditionals 2_instruction: Mehiläinen haluaa mettä juuri nyt.
         Kaikki kohteet eivat ole kukkkia, tarkistapa siis JOKAISEN PILVEN alta, ettei
         siellä piileskele kukkaa. Jos löydät kukan, voit kerätä meden.
@@ -1131,6 +1172,9 @@ fi:
         katso kuinka monta pistettä pystyt keräämään ennen kuin vastustajasi saa kaksi
         pistettä!
       bounce_12_instruction: Luo oma Bounce-pelisi. Voi muokata kaikkea ulkonäköön
+        ja sääntöihin liittyvää. Kun olet valmis, napsauta Valmis ja voit jakaa pelisi
+        niin, että kaverisikin voivat pelata sitä omilla älypuhelimillaan.
+      bounce_12_2018_instruction: Luo oma Bounce-pelisi. Voi muokata kaikkea ulkonäköön
         ja sääntöihin liittyvää. Kun olet valmis, napsauta Valmis ja voit jakaa pelisi
         niin, että kaverisikin voivat pelata sitä omilla älypuhelimillaan.
       bounce_12_basketball_instruction: Luo oma Koripallo-pelisi. Voit muuttaa kaikkia
@@ -1249,6 +1293,9 @@ fi:
         yhteen paikkaan. Kokeile myös vaihtaa taustaa ja sekä mailan, että pallon
         nopeutta ja katso kuinka monta pistettä pystyt keräämään ennen kuin vastustajasi
         saa kaksi pistettä.
+      courseD_bounce_events12_instruction: Luo oma Bounce-pelisi. Voi muokata kaikkea
+        ulkonäköön ja sääntöihin liittyvää. Kun olet valmis, napsauta Valmis ja voit
+        jakaa pelisi niin, että kaverisikin voivat pelata sitä omilla älypuhelimillaan.
       courseD_bounce_events2_instruction: Liitä lohko "kun nuoli oikealle" -lohkoon
         ja paina Suorita. Liikuta mailaa käyttäen oikeaa nuolta, kunnes se osuu lippuun.
       courseD_bounce_events3_instruction: Yritä nyt jotain vastaavaa "kun nuoli ylös"-lohkon
@@ -1574,12 +1621,22 @@ fi:
         "niin kauan kuin"-lohkon sisään.'
       grade4_arist_nested_loop_circles1_instruction: 'Tehtävä: Piirrä kuvio valmiiksi.
         Käytä sisäkkäistä silmukkaa.'
+      grade4_arist_nested_loop_flags1_instruction: Liitä annettu koodi silmukkaan.
+        Tee tuulimylly.
       grade4_arist_nested_loop_polygons1_instruction: "Toista tämä kuvio 10 kertaa.\r\n\r\nKuinka
         monta astetta sinun on käännyttävä joka toistolla?"
       grade4_arist_nested_loop_polygons2_instruction: "Toista tämä kuvio 6 kertaa.\r\n\r\nKuinka
         monta astetta sinun on käännyttävä joka toistolla? "
+      grade4_arist_nested_loop_squares1_instruction: Osaatko piirtää tämän jalkakäytävän
+        10 neliötä käyttäen sisäkkäistä silmukkaa? Jokainen neliö on 30 kuvapistettä.
       grade4_arist_nested_loop_triangles2_instruction: 'Laita tämä silmukka toisen
         silmukan sisään ja piirrä 10 kolmiota. Tätä kutsutaan sisäkkäiseksi silmukaksi.  '
+      grade4_arist_nested_loop_triangles3_instruction: Osaatko piirtää kuusikulmion
+        kolmiokoodia toistamalla?
+      grade4_arist_nested_loop_triangles4_instruction: Piirrä alligaattorin suuhun
+        hampaat!
+      grade4_arist_nested_loop_triangles6_instruction: Osaatko piirtää nämä 36 kolmiota
+        käyttäen sisäkkäistä silmukkaa?
       grade4_artist_functions1_instruction: 'Moro! Mää zombie taitelija. Mää rakastaa
         piirtämistä!  Auta minua tekemään neliölasit. Vihje: lasien nenäkappale on
         25 kuvapistettä lyhyempi kuin neliön pituus.'
@@ -1592,8 +1649,14 @@ fi:
         ensimmäisellä kerralla. Haluatko nähdä lisää vinkkejä? Klikkaa tästä!
       grade4_artist_nested_loop_circles1_instruction: 'Tehtävä: Piirrä kuvio valmiiksi.
         Käytä sisäkkäistä silmukkaa.'
+      grade4_artist_nested_loop_flags1_instruction: Liitä annettu koodi silmukkaan.
+        Tee tuulimylly.
       grade4_artist_nested_loop_polygons1_instruction: "Toista tämä kuvio 10 kertaa.\r\n\r\nKuinka
         monta astetta sinun on käännyttävä joka toistolla?"
+      grade4_artist_nested_loop_squares1_instruction: Osaatko piirtää tämän jalkakäytävän
+        10 neliötä käyttäen sisäkkäistä silmukkaa? Jokainen neliö on 30 kuvapistettä.
+      grade4_artist_nested_loop_triangles6_instruction: Osaatko piirtää nämä 36 kolmiota
+        käyttäen sisäkkäistä silmukkaa?
       grade4_bee_conditionals_quantum1_instruction: En näe, koska pilvi on edessä!
         Katso, onko pilven alla kukka. Jos löydät kukan, voit kerätä meden. Ole varovainen,
         se voi muuttua!
@@ -1674,6 +1737,9 @@ fi:
       grade5_artist_binary11_instruction: 'Vapaa leikki: Tässä sinulle tyhjä maalauspohja,
         jolle voit piirtää. Pidä hauskaa!'
       grade5_artist_binary8_instruction: Tee tämä piirustus valmiiksi.
+      grade5_artist_variables_freeplay15_instruction: "Haluatko kurkistaa uudelleen
+        suunnitteluapuun tai vinkkeihin? Klikkaa tästä!\r\n\r\nJollet, tee kuvio aivan
+        itse!"
       grade5_artist_variables_freeplay16_instruction: Pelaatko edelleen? Tässä sinulle
         tyhjä maalauspohja, jolle voit luoda, mitä haluat!
       level 'grade3_Loops_10_instruction: Käytä samanlaista silmukkaa kuin edellisessä
@@ -1699,10 +1765,15 @@ fi:
         jokaisessa hunajakennossa.
       level grade3_Loops_2_instruction: Voitko tehdä saman tehtävän helpommin käyttämällä
         loop?
+      scrat 16 (copy 1)_instruction: Tammenterhoni! Käytä "jos"-lohkoa saadaksesi
+        minut sinne mahdollisimman vähillä lohkoilla.
       scrat 16_instruction: Tammenterhoni! Käytä "jos"-lohkoa saadaksesi minut sinne
         mahdollisimman vähillä lohkoilla.
       scrat 17_instruction: Ok, tehdäänpä se vielä uudestaan harjoituksen vuoksi –
         tämä on lähes samanlainen, mutta varo seinää!
+      scrat 18 (copy 1)_instruction: '"Jos - muuten" -lohko tarkistaa jonkin ehdon,
+        ja tekee sitten ainoastaan jomman kumman toiminnoista. Saadaksesi minut tammenterhon
+        luo, kokeile käyttää tätä uutta lohkoa.'
       scrat 18_instruction: '"Jos - muuten" -lohko tarkistaa jonkin ehdon, ja tekee
         sitten ainoastaan jomman kumman toiminnoista. Saadaksesi minut tammenterhon
         luo, kokeile käyttää tätä uutta lohkoa.'

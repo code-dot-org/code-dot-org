@@ -13,7 +13,7 @@ fr:
         csp17_category_name: Principes de CS 16-17
         full_course_category_name: Cours complets
         hoc_category_name: Heure de Code
-        math_category_name: Calculs
+        math_category_name: Math
       name:
         course1:
           title: Cours 1
@@ -124,9 +124,9 @@ fr:
             'Bee: Nested Loops':
               name: 'Abeille: Boucles «Imbriquées»'
             Bounce:
-              name: Casse-briques à rebond
+              name: Rebond
             Computational Thinking:
-              name: Pensée computationnelle
+              name: Algorithmique
             Crowdsourcing:
               name: Financement participatif
             Dice Race:
@@ -144,7 +144,7 @@ fr:
             'Maze: Conditionals':
               name: 'Labyrinthe: Instructions conditionnelles'
             Songwriting:
-              name: La composition de chansons avec des paramètres
+              name: Écriture de chansons
             'Studio: Create a Game':
               name: 'Labo de jeux: Créer un jeu'
             'Studio: Create a Story':
@@ -263,7 +263,7 @@ fr:
             Intro:
               name: Introduction
             Variables:
-              name: Variables
+              name: variables
         algebra:
           title: Informatique en algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -409,19 +409,19 @@ fr:
             Algorithms:
               name: Algorithmes
             Computational Thinking:
-              name: Pensée computationnelle
+              name: Algorithmique
             Conditionals:
               name: Instructions conditionnelles
             Functions:
-              name: Fonctions
+              name: fonctions
             Graph Paper Programming:
               name: Programmation sur papier quadrillé
             Introduction to Computer Science:
-              name: Introduction à l'Informatique
+              name: Introduction à l'informatique
             Relay Programming:
               name: Programmation de relais
             Song Writing:
-              name: Composition de chansons
+              name: Ecriture de chanson
             The Artist:
               name: L'Artiste
             The Artist 2:
@@ -439,11 +439,11 @@ fr:
             The Farmer 3:
               name: Le Fermier 3
             The Internet:
-              name: L’Internet
+              name: Internet et les réseaux connectés
             The Maze:
               name: Le labyrinthe
             Wrap-up:
-              name: Conclusions
+              name: Résumé et ouverture
         edit-code:
           title: Modifier le Code
           description: Modifier le Code
@@ -465,7 +465,7 @@ fr:
           description_short: Événements
           stages:
             Bounce:
-              name: Casse-briques à rebond
+              name: Rebond
             Calc:
               name: Calc
             Eval:
@@ -515,6 +515,7 @@ fr:
             Puzzles:
               name: Enigmes
         cspunit1:
+          description_short: Programmation
           stages:
             Binary Numbers:
               name: Nombres binaires
@@ -627,6 +628,7 @@ fr:
             reference:
               name: référence
         cspunit3:
+          description_short: Programmation
           stages:
             Creating Functions:
               name: Création de fonctions
@@ -747,6 +749,7 @@ fr:
             Welcome Back!:
               name: Bon retour parmi nous !
         cspunit2:
+          description_short: Programmation
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Problèmes difficiles - Le problème du marchant itinérant
@@ -805,7 +808,7 @@ fr:
             Bee:
               name: Abeille
             Bounce:
-              name: Casse-briques à rebond
+              name: Rebond
             Farmer:
               name: Fermier
             Flappy:
@@ -869,6 +872,8 @@ fr:
               name: Bienvenue !
         K5-OnlinePD:
           stages:
+            Computer Science Fundamentals:
+              name: Fondamentaux de l'informatique
             Looking Ahead:
               name: Regarder en avant
             'Mastering the Basics: Conditionals':
@@ -910,7 +915,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-up:
-              name: Conclusions
+              name: Résumé et ouverture
         algebraPD2:
           description: 'Phase 2 en ligne : Études estivales mixtes'
           description_short: 'Phase 2 en ligne : Études estivales mixtes'
@@ -976,7 +981,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-up:
-              name: Conclusions
+              name: Résumé et ouverture
         ECSPD2-NexTech:
           description: 'Phase 2 en ligne : Études estivales mixtes'
           description_short: 'Phase 2 en ligne : Études estivales mixtes'
@@ -1002,7 +1007,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-up:
-              name: Conclusions
+              name: Résumé et ouverture
         CSPPD2:
           stages:
             Lesson Chunk 1- Sending Binary Messages:
@@ -1034,7 +1039,7 @@ fr:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorithmes du monde réel: Planter une graine'
             Songwriting:
-              name: La composition de chansons avec des paramètres
+              name: Écriture de chansons
             The Big Event:
               name: Le Grand Événement
         algebraPD3a:
@@ -1134,6 +1139,10 @@ fr:
               name: Bienvenue !
             Wrap-Up:
               name: Conclusions
+        cspunit5:
+          description_short: Programmation
+        cspunit4:
+          description_short: Programmation
         AlgebraA:
           description: Apprendre la programmation fonctionnelle par l'algèbre
           description_short: Apprendre la programmation fonctionnelle par l'algèbre
@@ -1215,7 +1224,7 @@ fr:
             Sending Numbers:
               name: Envoi de Nombres
             The Internet:
-              name: L’Internet
+              name: Internet et les réseaux connectés
             Post-Course Survey:
               name: Suivi d'après cours
         csp2-2017:
@@ -1279,7 +1288,7 @@ fr:
           description_short: Programmation
           stages:
             Functions:
-              name: Fonctions
+              name: fonctions
             Velocity:
               name: Vitesse
         2016_sciencePD_phase1:
@@ -1342,7 +1351,9 @@ fr:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle : Apprendre à faire un glisser-déposer'
             Loops:
-              name: Boucles
+              name: boucles
+            Loops Unplugged:
+              name: Boucles débranchées
             Programming:
               name: Programmation
             'Real-life Algorithms: Plant a Seed':
@@ -1352,7 +1363,7 @@ fr:
             Digital Citizenship:
               name: Citoyenneté numérique
             Songwriting:
-              name: La composition de chansons avec des paramètres
+              name: Écriture de chansons
         grade1:
           stages:
             Events:
@@ -1360,7 +1371,9 @@ fr:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle : Apprendre à faire un glisser-déposer'
             Loops:
-              name: Boucles
+              name: boucles
+            Loops Unplugged:
+              name: Boucles débranchées
             Programming:
               name: Programmation
             Unspotted Bugs:
@@ -1410,7 +1423,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-up:
-              name: Conclusions
+              name: Résumé et ouverture
         ecs-unit2:
           stages:
             Intro to Unit 2:
@@ -1424,7 +1437,7 @@ fr:
             Bee Debugging:
               name: Abeilles et debugging
             Bounce:
-              name: Casse-briques à rebond
+              name: Rebond
             'Farmer: While Loops':
               name: 'Fermier: Boucles «Tant que»'
         csd3-2017:
@@ -1433,9 +1446,9 @@ fr:
             Velocity:
               name: Vitesse
             Functions:
-              name: Fonctions
+              name: fonctions
             Variables:
-              name: Variables
+              name: variables
             Conditionals:
               name: Instructions conditionnelles
         grade2:
@@ -1459,15 +1472,15 @@ fr:
             For Loops:
               name: Boucles « Pour »
             Functions:
-              name: Fonctions
+              name: fonctions
             Functions with Parameters:
               name: Fonctions avec Paramètres
             Loops:
-              name: Boucles
+              name: boucles
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
             Variables:
-              name: Variables
+              name: variables
             While Loops:
               name: Boucles « Tant que »
         algebrapdnext:
@@ -1487,7 +1500,7 @@ fr:
           description: Choisir une équipe et faite un match de basket
           stages:
             Bounce:
-              name: Casse-briques à rebond
+              name: Rebond
         hoc-encryption:
           stages:
             Simple Encryption:
@@ -1523,7 +1536,7 @@ fr:
               description_teacher: "Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\\r\n"
         minecraft:
           title: Heure de Code Minecraft - Concepteur
-          description_short: Programmez des animaux et d'autres créatures Minecraft dans votre propre version de Minecraft.
+          description_short: Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons, des creepers, des zombies et bien d'autres encore.
           description: Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons, des creepers, des zombies et bien d'autres encore.
           stages:
             Minecraft Hour of Code Designer:
@@ -1545,6 +1558,7 @@ fr:
             Your Digital Footprint:
               name: Ton empreinte numérique
         coursec-draft:
+          description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algorithmes du monde réel: Avions en papier'
@@ -1555,6 +1569,7 @@ fr:
             Building a Foundation:
               name: Construire une fondation
         coursed-draft:
+          description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
             Conditionals with Cards:
               name: Instructions conditionnelles avec des cartes
@@ -1565,10 +1580,11 @@ fr:
             Artist Binary:
               name: Artiste binaire
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
             Introduction:
               name: Introduction
         coursee-draft:
+          description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
             Digital Citizenship:
               name: Citoyenneté numérique
@@ -1581,6 +1597,7 @@ fr:
             Conditionals:
               name: Instructions conditionnelles
         coursef-draft:
+          description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
             Digital Citizenship:
               name: Citoyenneté numérique
@@ -1605,7 +1622,7 @@ fr:
             Hour of Code 2013:
               name: L'Heure de Code 2013
         sports:
-          title: Sports
+          title: Coder ton propre jeu de sports
           description_short: Coder votre propre sport
           description: Coder votre propre sport
           stages:
@@ -1839,19 +1856,19 @@ fr:
         csd3-draft:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Conditionals:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
             Functions:
-              name: Fonctions
+              name: fonctions
         csd3-old:
           stages:
             Velocity:
               name: Vitesse
             Functions:
-              name: Fonctions
+              name: fonctions
         csd2-draft:
           stages:
             Lists:
@@ -1859,13 +1876,13 @@ fr:
         csd3-chapters:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Conditionals:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
             Functions:
-              name: Fonctions
+              name: fonctions
             'null':
               name: 'invalide'
         coursef-ramp:
@@ -1883,7 +1900,7 @@ fr:
             Ice Age Play Lab:
               name: Labo de jeux Âge de Glace
             Bounce:
-              name: Casse-briques à rebond
+              name: Rebond
         coursea-2017:
           stages:
             'Persistence & Frustration: Stevie and the Marbles':
@@ -1906,10 +1923,11 @@ fr:
               name: 'Algorithmes du monde réel: Avions en papier'
           title: Cours C
           assignment_family_title: Cours C
+          description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
         coursed-2017:
           stages:
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
           title: Cours D
           assignment_family_title: Cours D
         coursee-2017:
@@ -1925,7 +1943,7 @@ fr:
             Building a Foundation:
               name: Construire une fondation
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
           title: Cours E
           assignment_family_title: Cours E
         coursef-2017:
@@ -1975,7 +1993,7 @@ fr:
             Building a Foundation:
               name: Construire une fondation
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
           title: Cours Express
           assignment_family_title: Cours Express
         pre-express-2017:
@@ -2004,7 +2022,7 @@ fr:
             Building a Foundation:
               name: Construire une fondation
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
             Conditionals:
               name: Instructions conditionnelles
             Internet:
@@ -2016,7 +2034,7 @@ fr:
             Introduction:
               name: Introduction
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
             Conditionals with Cards:
               name: Instructions conditionnelles avec des cartes
             Digital Citizenship:
@@ -2034,7 +2052,7 @@ fr:
             Building a Foundation:
               name: Construire une fondation
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
         new-e:
           stages:
             Building a Foundation:
@@ -2096,7 +2114,7 @@ fr:
             Building a Foundation:
               name: Construire une fondation
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
             Introduction:
               name: Introduction
             Conditionals:
@@ -2150,25 +2168,25 @@ fr:
         csd3-1819draft:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Conditionals:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
             Functions:
-              name: Fonctions
+              name: fonctions
           description_short: "Programmation"
         csd3-2018:
           description_short: "Programmation"
           stages:
             Variables:
-              name: Variables
+              name: variables
             Conditionals:
               name: Instructions conditionnelles
             Velocity:
               name: Vitesse
             Functions:
-              name: Fonctions
+              name: fonctions
         csd2-2018:
           stages:
             Digital Footprint:
@@ -2210,7 +2228,7 @@ fr:
             Building a Foundation:
               name: Construire une fondation
             Nested Loops:
-              name: Boucles Imbriquées
+              name: Boucles imbriquées
             'Events: The Big Event':
               name: Le Grand Événement
             'Loops: Getting Loopy':
@@ -2218,7 +2236,7 @@ fr:
             Conditionals with Cards:
               name: Instructions conditionnelles avec des cartes
             'Functions: Songwriting':
-              name: La composition de chansons avec des paramètres
+              name: Écriture de chansons
             Envelope Variables:
               name: Les variables de l'enveloppe
             For Loop Fun:
@@ -2230,7 +2248,7 @@ fr:
             Artist Binary:
               name: Artiste binaire
             Internet:
-              name: L’Internet
+              name: Internet et les réseaux connectés
             Crowdsourcing:
               name: Financement participatif
             Relay Programming:
@@ -2267,6 +2285,7 @@ fr:
               name: Programmation de relais
         coursec-2018:
           assignment_family_title: Cours C
+          description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
             Building a Foundation:
               name: Construire une fondation
@@ -2319,9 +2338,9 @@ fr:
             Introduction:
               name: Introduction
             'Functions: Songwriting':
-              name: La composition de chansons avec des paramètres
+              name: Écriture de chansons
             Internet:
-              name: L’Internet
+              name: Internet et les réseaux connectés
             Crowdsourcing:
               name: Financement participatif
             Conditionals with Cards:
@@ -2362,7 +2381,7 @@ fr:
             Sending Numbers:
               name: Envoi de Nombres
             The Internet:
-              name: L’Internet
+              name: Internet et les réseaux connectés
         csd4-2018:
           stages:
             Understanding Your User:

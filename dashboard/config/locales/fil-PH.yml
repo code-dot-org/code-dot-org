@@ -693,7 +693,7 @@ fil:
     more: More
     feedback: Magbigay ng feedback
     translate: Magboluntaryo na magsali ng ating nilalaman
-    support: Suporta
+    support: Tulong at Komunidad
     support_url: http://support.code.org/
     tos_short: Mga Alituntunin
     tos: Mga Palatuntunan
@@ -837,7 +837,7 @@ fil:
         ng mga karakter sa Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code.
+      body: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code
     minecraft2016:
       title: Minecraft
       body: Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong

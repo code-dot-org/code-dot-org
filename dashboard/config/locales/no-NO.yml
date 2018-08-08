@@ -28,7 +28,7 @@
         personal_email: Personlig e-post adresse <a href="%{url}"> (Klikk her hvis
           du ikke har en e-postadresse)</a>
         username: brukernavn
-        password: passord
+        password: Passord
         password_confirmation: Bekreftelse på passord
         current_password: Nåværende passord
         locale: Språk
@@ -1220,4 +1220,6 @@
   cookie_banner:
     accept: Jeg samtykker
   gdpr_dialog:
+    message: Dine data fra bruken av dette nettstedet kan sendes til, lagres eller
+      behandles i USA.
     true: Ja

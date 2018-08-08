@@ -2,19 +2,20 @@ th:
   data:
     script:
       category:
+        csf_category_name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
         hoc_category_name: ช่วงเวลาของ Code
         math_category_name: คำนวณ
       name:
         course1:
           title: คอร์ส 1
-          description: หลักสูตร 1 ได้รับการออกแบบสำหรับผู้ที่เพิ่งเริ่มอ่านออกเขียนได้ นักเรียนจะสร้างโปรแกรมคอมพิวเตอร์ที่จะช่วยให้พวกเขาเรียนรู้ที่จะทำงานร่วมมือกับผู้อื่น พัฒนาทักษะการแก้ปัญหา และมีความอดทนกับงานที่ยากลำบาก เมื่อจบหลักสูตรนี้นักเรียนจะสร้างเกมหรือเรื่องราวที่เป็นของเขาเองขึ้นมา ซึ่งพวกเขาสามารถแชร์ได้ แนะนำสำหรับเด็กชั้นอนุบาลจนถึงชั้นประถมหนึ่ง
+          description: เริ่มด้วยหลักสูตร 1 ที่ได้รับการออกแบบสำหรับผู้ที่เพิ่งเริ่มอ่านออกเขียนได้ นักเรียนจะสร้างโปรแกรมคอมพิวเตอร์ที่ช่วยให้พวกเขาเรียนรู้ที่จะทำงานร่วมกันกับผู้อื่น พัฒนาทักษะการแก้ปัญหา และมีความอดทนกับงานที่ยากลำบาก เมื่อจบหลักสูตรนี้นักเรียนจะสร้างเกมหรือเรื่องราวที่เป็นของเขาเองขึ้นมา ซึ่งพวกเขาสามารถแชร์ได้ แนะนำหลักสูตรนี้สำหรับเด็กชั้นอนุบาลจนถึงชั้นประถมหนึ่ง
           description_short: คอร์ส 1 is designed for early readers.
           description_audience: อายุ 4-6 ปี
           stages:
             'Artist: Loops':
-              name: 'ศิลปิน: Loops'
+              name: 'ศิลปิน: ลูป (Loops)'
             'Artist: Sequence':
-              name: 'ศิลปิน: การจัดลำดับก่อนหลัง'
+              name: 'ศิลปิน: การจัดลำดับ'
             'Artist: Shapes':
               name: 'ศิลปิน: รูปร่างต่างๆ'
             'Bee: Loops':
@@ -30,17 +31,17 @@ th:
             'Jigsaw: Learn to drag and drop':
               name: 'จิ๊กซอว์: เรียนรู้วิธีการลากและวาง'
             'Maze: Debugging':
-              name: 'เขาวงกต: Debugging'
+              name: 'เขาวงกต: การดีบั๊ก (Debugging) จุดบกพร่อง'
             'Maze: Loops':
               name: 'เขาวงกต: ลูป'
             'Maze: Sequence':
               name: 'เขาวงกต: การจัดลำดับ'
             Move it, Move it:
-              name: ขยับมันสิ, ขยับมัน
+              name: ขยับหน่อยสิ ขยับหน่อย
             'Real-life Algorithms: Plant a Seed':
               name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Spelling Bee:
-              name: การแข่งขันสะกดคำ
+              name: ผึ้งนักสะกดคำ
             'Studio: Create a Story':
               name: 'เพลย์แลป: สร้างเรื่อง'
             The Big Event:
@@ -53,11 +54,11 @@ th:
             'Artist: Debugging':
               name: 'ศิลปิน: Debugging'
             'Artist: Loops':
-              name: 'ศิลปิน: Loops'
+              name: 'ศิลปิน: ลูป (Loops)'
             'Artist: Nested Loops':
               name: 'ศิลปิน: ลูปซ้อนลูป'
             'Artist: Sequence':
-              name: 'ศิลปิน: การจัดลำดับก่อนหลัง'
+              name: 'ศิลปิน: การจัดลำดับ'
             'Bee: Conditionals':
               name: 'ผึ้ง: เงื่อนไข'
             'Bee: Debugging':
@@ -137,7 +138,7 @@ th:
             Artist Binary:
               name: ศิลปิน Binary
             'Artist: For Loops':
-              name: 'ศิลปิน: For Loops'
+              name: 'ศิลปิน: ลูปแบบเงื่อนไข (For Loops)'
             'Artist: Functions':
               name: 'ศิลปิน: Functions'
             'Artist: Functions with Parameters':
@@ -145,7 +146,7 @@ th:
             'Artist: Variables':
               name: 'ศิลปิน: Variables'
             'Bee: For Loops':
-              name: 'ผึ้ง: For Loops'
+              name: 'ผึ้ง: ลูป(For Loops)'
             'Bee: Functions with Parameters':
               name: 'ผึ้ง: ฟังก์ชั่นที่มากับพารามิเตอร์'
             Maze and Bee:
@@ -158,11 +159,11 @@ th:
             'Artist: Functions':
               name: 'ศิลปิน: Functions'
             'Artist: Loops':
-              name: 'ศิลปิน: Loops'
+              name: 'ศิลปิน: ลูป (Loops)'
             'Artist: Nested Loops':
               name: 'ศิลปิน: ลูปซ้อนลูป'
             'Artist: Sequence':
-              name: 'ศิลปิน: การจัดลำดับก่อนหลัง'
+              name: 'ศิลปิน: การจัดลำดับ'
             'Bee: Conditionals':
               name: 'ผึ้ง: เงื่อนไข'
             'Bee: Debugging':
@@ -317,6 +318,10 @@ th:
               name: เครื่องจำลองอินเตอร์เน็ต
             Welcome!:
               name: ยินดีต้อนรับ!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
         ECSPD2:
           stages:
             0: |-
@@ -380,7 +385,7 @@ th:
             Happy Maps:
               name: แผนที่แห่งความสุข
             Move it, Move it:
-              name: ขยับมันสิ, ขยับมัน
+              name: ขยับหน่อยสิ ขยับหน่อย
             'Real-life Algorithms: Plant a Seed':
               name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             The Big Event:
@@ -485,7 +490,7 @@ th:
         grade5:
           stages:
             'Artist: For Loops':
-              name: 'ศิลปิน: For Loops'
+              name: 'ศิลปิน: ลูปแบบเงื่อนไข (For Loops)'
             'Artist: Functions with Parameters':
               name: 'ศิลปิน: Functions with Parameters'
             'Artist: Variables':
@@ -511,7 +516,7 @@ th:
             'Artist: Nested Loops':
               name: 'ศิลปิน: ลูปซ้อนลูป'
             Bee Debugging:
-              name: ผึ้ง Debugging
+              name: การดีบั๊ก (Debugging) ผึ้ง
             Bounce:
               name: กระเด้ง
             'Maze: Nested Loops':
@@ -832,7 +837,7 @@ th:
             Loops in Artist:
               name: ลูปกับศิลปิน
             Spelling Bee:
-              name: การแข่งขันสะกดคำ
+              name: ผึ้งนักสะกดคำ
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         e-f-ramp:
           stages:
@@ -927,6 +932,7 @@ th:
             Minecraft Hour of Code:
               name: ชั่วโมงแห่งการโค้ดด้วย Minecraft
           title: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
+          description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ
         course-e-2018:
           stages:
             Sequence in Maze:
@@ -1017,6 +1023,8 @@ th:
               name: เหตุการณ์ใหญ่
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Programming in Maze:
+              name: มาเขียนโค้ดไปกับเจ้านกอารมณ์เสีย (Angry Birds)
             'Loops: Getting Loopy':
               name: มาวนลูปกัน
             Nested Loops in Bee:
@@ -1043,6 +1051,8 @@ th:
               name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
+            Move It, Move It:
+              name: ขยับหน่อยสิ ขยับหน่อย
         coursed-2018:
           assignment_family_title: คอร์ส D
           stages:
@@ -1135,6 +1145,8 @@ th:
             'Real-life Algorithms: Plant a Seed':
               name: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
             Spelling Bee:
-              name: การแข่งขันสะกดคำ
+              name: ผึ้งนักสะกดคำ
+            Move It, Move It:
+              name: ขยับหน่อยสิ ขยับหน่อย
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
