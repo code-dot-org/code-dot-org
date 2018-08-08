@@ -422,7 +422,7 @@ pt-BR:
   homepage_slot_text_link_hoc: Faça uma Hora do Código
   homepage_slot_text_link_about_hoc: Sobre a Hora do Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
-  homepage_slot_text_link_hocserved: "# served"
+  homepage_slot_text_link_hocserved: número de alunos atendidos
   homepage_solot_text_link_volunteer: Voluntário da Hora do Código
   homepage_slot_text_title_students: Alunos
   homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
@@ -916,7 +916,7 @@ pt-BR:
   dashboard_students_reset_picture: Você pode redefinir a imagem secreta de um aluno
     a qualquer hora usando <b>Mostrar segredo</b>, e então <b>Redefinir o segredo</b>.
     Uma nova imagem secreta vai ser gerada para o aluno quando ele entrar.
-  dashboard_students_secret_word_title: Palavra secreta
+  dashboard_students_secret_word_title: Palavras Secretas
   dashboard_students_secret_word: Esta seção usa <b>palavra</b> como seu tipo secreto.
     Isso significa que cada um dos seus alunos tem um par de palavras secretas ao
     invés de uma senha para se conectar. Os alunos devem usar o endereço de acesso
@@ -1217,7 +1217,7 @@ pt-BR:
   applab_name: Laboratório de Aplicativo
   gamelab_name: Laboratório de Jogos
   basketball_name: Fazer um jogo de basquete
-  sports_name: Esportes
+  sports_name: Programe seus próprios jogos esportivos
   applab_gradelevel: A partir de 13 anos
   applab_shortdescription_congrats: O App Lab é um ambiente de programação onde você
     pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou
@@ -1226,7 +1226,7 @@ pt-BR:
   codeorg_gradelevel: De 4 a 104 anos
   codeintl_gradelevel: De 4 a 104 anos
   thinkersmithspanish_gradelevel: Todas as idades
-  khan_gradelevel: Ensino Fundamental II
+  khan_gradelevel: A partir do ensino fundamental II
   khanes_gradelevel: A partir do ensino fundamental II
   khanpt_gradelevel: A partir do ensino fundamental II
   khanhe_gradelevel: A partir do ensino fundamental II
@@ -1251,7 +1251,7 @@ pt-BR:
   kodable_gradelevel: Ensino Fundamental
   tynkerapp_gradelevel: De 5 a 13 anos
   robomindnl_gradelevel: De 8 a 13 anos
-  flappy_gradelevel: De 6 a 106 anos
+  flappy_gradelevel: De 6 a 106 anos de idade
   bitsbox_gradelevel: Ensino Fundamental
   makeschool_gradelevel: Ensino Médio
   touchdevelop_gradelevel: Ensino Médio
@@ -1284,7 +1284,7 @@ pt-BR:
   coursed-2018_gradelevel: Alunos a partir do 8º ano
   coursee-2018_gradelevel: De 8 a 12 anos
   accelerated_gradelevel: 10-18 anos de idade
-  codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
+  codeorg_platformtext: Navegadores modernos, smartphones, tablets
   codeintl_platformtext: Navegadores modernos, smartphones, tablets
   thinkersmithspanish_platformtext: Offline
   khan_platformtext: Navegadores Web modernos
@@ -1331,7 +1331,7 @@ pt-BR:
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Navegadores Web modernos
   texasinstruments_platformtext: Calculadoras de TI
-  teacherled_platformtext: Navegadores Web modernos, smartphones, tablets
+  teacherled_platformtext: Navegadores modernos, smartphones, tablets
   codeorg_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Aprenda a programar com Mark Zuckerberg e Angry Birds!
   khan_shortdescription: Aprenda a desenhar em JavaScript
@@ -1659,7 +1659,7 @@ pt-BR:
   appinventor_beyond_gradelevel: A partir do Ensino Fundamental II
   touchdevelop_beyond_gradelevel: Ensino Médio
   codehs_beyond_gradelevel: Ensino Médio
-  udemy_beyond_gradelevel: A partir do ensino médio
+  udemy_beyond_gradelevel: A partir do Ensino Médio
   lynda_beyond_gradelevel: A partir do ensino médio
   edx_beyond_gradelevel: Universidade
   coursera_beyond_gradelevel: Universidade
@@ -1950,6 +1950,7 @@ pt-BR:
     que algumas funcionalidades não funcionem.
   flappy_shortcode: bata asas
   header_home: Início
+  header_my_dashboard: Meu painel de Controle
   header_courses: percursos
   header_course_catalog: Catálogo do Curso
   header_project_gallery: Projetos
