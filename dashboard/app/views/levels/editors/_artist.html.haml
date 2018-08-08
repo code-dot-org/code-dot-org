@@ -24,7 +24,7 @@
   = f.number_field :permitted_errors, :value => @level.permitted_errors
 .field
   = link_to 'Edit Predraw Blocks', level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
-  = f.text_area :predraw_blocks, placeholder: 'Predraw Blocks', rows: 4, value: @level.pretty_block('predraw')
+  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'predraw'}
   :javascript
     levelbuilder.initializeCodeMirror('level_predraw_blocks', '#{@level.uses_droplet? ? 'javascript' : 'xml'}');
 .field
