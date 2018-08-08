@@ -3,13 +3,11 @@ import React, {PropTypes} from 'react';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 
 import AssetRow from './AssetRow';
-import AssetUploader from './AssetUploader';
 import assetListStore from '../assets/assetListStore';
 import AudioRecorder from './AudioRecorder';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from "../../templates/Button";
-import i18n from '@cdo/locale';
+import AddAssetButtonRow from "./AddAssetButtonRow";
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -25,22 +23,6 @@ const errorUploadDisabled = "This project has been reported for abusive content,
 function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
-
-const RecordButton = ({onSelectRecord}) => (
-  <Button
-    onClick={onSelectRecord}
-    id="record-asset"
-    className="share"
-    text={i18n.recordAudio()}
-    icon="microphone"
-    style={assetButtonStyles.button}
-    size="large"
-  />
-);
-
-RecordButton.propTypes = {
-  onSelectRecord: PropTypes.func,
-};
 
 export const assetButtonStyles = {
   button: {
@@ -174,29 +156,22 @@ export default class AssetManager extends React.Component {
   };
 
   render() {
-    const uploadButton = (<div>
-      <AssetUploader
-        uploadsEnabled={this.props.uploadsEnabled}
-        allowedExtensions={this.props.allowedExtensions}
-        useFilesApi={this.props.useFilesApi}
-        onUploadStart={this.onUploadStart}
-        onUploadDone={this.onUploadDone}
-        onUploadError={this.onUploadError}
-      />
-      <span style={{margin: '0 10px'}} id="manage-asset-status">
-        {this.state.statusMessage}
-      </span>
-    </div>);
-
     const buttons = (
       <div>
         {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
           <AudioRecorder/>
         }
-        <span style={styles.buttonRow}>
-          {uploadButton}
-          {experiments.isEnabled('recordAudio') && <RecordButton onSelectRecord={this.onSelectRecord}/>}
-        </span>
+        <AddAssetButtonRow
+          uploadsEnabled={this.props.uploadsEnabled}
+          allowedExtensions={this.props.allowedExtensions}
+          useFilesApi={this.props.useFilesApi}
+          onUploadStart={this.onUploadStart}
+          onUploadDone={this.onUploadDone}
+          onUploadError={this.onUploadError}
+          onSelectRecord={this.onSelectRecord}
+          statusMessage={this.state.statusMessage}
+          recordEnabled={experiments.isEnabled('recordAudio')}
+        />
       </div>
     );
 
