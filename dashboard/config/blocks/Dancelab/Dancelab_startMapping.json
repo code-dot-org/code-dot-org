@@ -1,0 +1,64 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "startMapping",
+    "blockText": "{SPRITE} begins {PROPERTY} following {RANGE}",
+    "color": [
+      136,
+      0.84,
+      0.8
+    ],
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "x position",
+            "\"x\""
+          ],
+          [
+            "y position",
+            "\"y\""
+          ],
+          [
+            "movement direction",
+            "\"direction\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      },
+      {
+        "name": "RANGE",
+        "options": [
+          [
+            "bass",
+            "\"bass\""
+          ],
+          [
+            "mid",
+            "\"mid\""
+          ],
+          [
+            "treble",
+            "\"treble\""
+          ]
+        ]
+      }
+    ]
+  }
+}

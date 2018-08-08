@@ -23,7 +23,7 @@ const styles = {
 class Instructions extends React.Component {
   static propTypes = {
     puzzleTitle: PropTypes.string,
-    instructions: PropTypes.string,
+    shortInstructions: PropTypes.string,
     instructions2: PropTypes.string,
     renderedMarkdown: PropTypes.string,
     imgURL: PropTypes.string,
@@ -55,12 +55,12 @@ class Instructions extends React.Component {
             inTopPane={this.props.inTopPane}
           />
         }
-        { /* Note: In this case props.instructions might be undefined, but we
+        { /* Note: In this case props.shortInstructions might be undefined, but we
           still want to render NonMarkdownInstructions to get the puzzle title */
         !this.props.renderedMarkdown &&
           <NonMarkdownInstructions
             puzzleTitle={this.props.puzzleTitle}
-            instructions={this.props.instructions}
+            shortInstructions={this.props.shortInstructions}
             instructions2={this.props.instructions2}
           />
         }

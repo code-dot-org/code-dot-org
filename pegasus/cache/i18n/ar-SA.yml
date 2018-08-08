@@ -11,7 +11,7 @@ ar-SA:
     8, 9, and 10. لطفاً قم بتطوير متصفحك لمتصفح حديث.
   upgrade_ie_link: اعرف المزيد
   en: علوم الكمبيوتر
-  computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
+  computer_science_edweek: ساعة من البرمجةهنا مدار للتعليمات البرمجية
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a
@@ -394,7 +394,7 @@ ar-SA:
   contact_form_topic_outside_us: أنا خارج الولايات المتحدة.
   contact_form_topic_contribution: المساهمة الخيرية
   contact_form_topic_partner: أود أن أكون شريك
-  contact_form_topic_other: أخرى
+  contact_form_topic_other: الأخرى
   contact_form_label_topic: الموضوع
   contact_form_label_email: بريدك الإلكتروني
   contact_form_label_message: الرسالة
@@ -968,7 +968,7 @@ ar-SA:
   kodable_gradelevel: المرحلة الابتدائية
   tynkerapp_gradelevel: الذين تتراوح أعمارهم بين 5-13
   robomindnl_gradelevel: الذين تتراوح أعمارهم بين 8-13
-  flappy_gradelevel: الأعمار 4-104
+  flappy_gradelevel: الاعمار 6 +
   bitsbox_gradelevel: المرحلة الابتدائية
   makeschool_gradelevel: المدرسة الثانوية
   touchdevelop_gradelevel: المدرسة الثانوية
@@ -978,7 +978,7 @@ ar-SA:
   kodableunplugged_gradelevel: الذين تتراوح أعمارهم بين 8-13
   projguts_gradelevel: الذين تتراوح أعمارهم بين 10-13
   hourofcode_gradelevel: الأعمار 4-104
-  frozen_gradelevel: الأعمار 8 +
+  frozen_gradelevel: الأعمار 4-104
   starwars_gradelevel: الاعمار 6 +
   playlab_gradelevel: الأعمار 4-104
   infinity_gradelevel: الأعمار 4-104
@@ -1276,7 +1276,7 @@ ar-SA:
   lynda_beyond_name: دورات البرمجة على الإنترنت
   edx_beyond_name: صف CS50 جامعة هارفارد
   coursera_beyond_name: صف CS 101 جامعة ستانفورد
-  teachingtree_beyond_name: دروس جامعية على الإنترنت
+  teachingtree_beyond_name: الدورات الجامعية على الإنترنت
   w3schools_beyond_name: تعلم إتش تي أم ال
   codeavengers_beyond_name: تعلم برمجة المواقع الإلكترونية
   arduino_beyond_name: اردوينو مع Sparkfun
@@ -1539,6 +1539,7 @@ ar-SA:
   compatibility_unsupported_browser: متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى
     <a href='%{supported_browsers_url}', target='_blank'> أحد متصفحاتنا المدعومة.</a>
     يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
+  starwars_shortcode: نجمة
   flappy_shortcode: رفرف
   header_courses: الدروس
   header_project_gallery: المشاريع

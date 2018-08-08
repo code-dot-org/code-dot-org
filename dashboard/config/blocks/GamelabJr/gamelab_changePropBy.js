@@ -3,7 +3,7 @@ function changePropBy(sprite,  property, val) {
     return;
   }
   if (property == "scale") {
-    sprite.scale += val/100;
+    sprite.setScale(sprite.getScale() + val / 100);
     if (sprite.scale < 0) {
       sprite.scale = 0;
     }
