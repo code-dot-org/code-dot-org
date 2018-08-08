@@ -6,8 +6,11 @@ import React, {PropTypes} from 'react';
 import {FormGroup, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import CustomSchoolInfo from './customSchoolInfo';
-import { OTHER_SCHOOL_VALUE, ERROR } from '../workshop_enrollment/enrollmentConstants';
 import {isZipCode} from '@cdo/apps/util/formatValidation';
+
+
+const VALIDATION_STATE_ERROR = "error";
+const OTHER_SCHOOL_VALUE = "-1";
 
 export default class AutocompleteSchoolDropdownWithOtherFields extends React.Component {
   static propTypes = {
@@ -80,7 +83,7 @@ export default class AutocompleteSchoolDropdownWithOtherFields extends React.Com
         {this.state.school_id !== OTHER_SCHOOL_VALUE &&
           <FormGroup
             id="school_id"
-            validationState={this.props.errors.hasOwnProperty("school_id") ? ERROR : null}
+            validationState={this.props.errors.hasOwnProperty("school_id") ? VALIDATION_STATE_ERROR : null}
           >
             <Row>
               <Col md={6}>

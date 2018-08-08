@@ -4,7 +4,15 @@ import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {STATES} from '../../../geographyConstants';
-import {SCHOOL_TYPES, ERROR} from '../workshop_enrollment/enrollmentConstants';
+
+const VALIDATION_STATE_ERROR = "error";
+
+const SCHOOL_TYPES = {
+  PUBLIC: "Public school",
+  PRIVATE: "Private school",
+  CHARTER: "Charter school",
+  OTHER: "Other"
+};
 
 export default class CustomSchoolInfo extends React.Component {
   static propTypes = {
@@ -25,7 +33,7 @@ export default class CustomSchoolInfo extends React.Component {
           type="text"
           required={true}
           onChange={this.props.handleSchoolInfoChange}
-          validationState={this.props.errors.hasOwnProperty("school_name") ? ERROR : null}
+          validationState={this.props.errors.hasOwnProperty("school_name") ? VALIDATION_STATE_ERROR : null}
           errorMessage={this.props.errors.school_name}
         />
         <ButtonList
@@ -35,7 +43,7 @@ export default class CustomSchoolInfo extends React.Component {
           label="My school is a"
           onChange={this.props.handleSchoolTypeChange}
           selectedItems={this.props.schoolInfo ? this.props.schoolInfo.school_type : null}
-          validationState={this.props.errors.hasOwnProperty("school_type") ? ERROR : null}
+          validationState={this.props.errors.hasOwnProperty("school_type") ? VALIDATION_STATE_ERROR : null}
           errorText={this.props.errors.school_type}
           type="radio"
           required={true}
@@ -48,7 +56,7 @@ export default class CustomSchoolInfo extends React.Component {
             type="text"
             required={true}
             onChange={this.props.handleSchoolDistrictChange}
-            validationState={this.props.errors.hasOwnProperty("school_district_name") ? ERROR : null}
+            validationState={this.props.errors.hasOwnProperty("school_district_name") ? VALIDATION_STATE_ERROR : null}
             errorMessage={this.props.errors.school_district}
           />
         }
@@ -57,7 +65,7 @@ export default class CustomSchoolInfo extends React.Component {
           <FormGroup>
             <FormGroup
               id="school_state"
-              validationState={this.props.errors.hasOwnProperty("school_state") ? ERROR : null}
+              validationState={this.props.errors.hasOwnProperty("school_state") ? VALIDATION_STATE_ERROR : null}
             >
               <ControlLabel>School State<span className="form-required-field"> *</span></ControlLabel>
               <Select
@@ -74,7 +82,7 @@ export default class CustomSchoolInfo extends React.Component {
               type="text"
               required={true}
               onChange={this.props.handleSchoolInfoChange}
-              validationState={this.props.errors.hasOwnProperty("school_zip") ? ERROR : null}
+              validationState={this.props.errors.hasOwnProperty("school_zip") ? VALIDATION_STATE_ERROR : null}
               errorMessage={this.props.errors.school_zip}
             />
           </FormGroup>
