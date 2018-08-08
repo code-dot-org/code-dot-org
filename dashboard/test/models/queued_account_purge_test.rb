@@ -24,4 +24,16 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
     qap.resolve!
     assert_nil QueuedAccountPurge.find_by_id(qap.id)
   end
+
+  test "resolve! does not delete the QueuedAccountPurge if purging the user fails" do
+    AccountPurger.any_instance.stubs(:purge_data_for_account).raises('Test failure')
+
+    qap = create :queued_account_purge
+    refute_nil QueuedAccountPurge.find_by_id(qap.id)
+
+    assert_raises RuntimeError do
+      qap.resolve!
+    end
+    refute_nil QueuedAccountPurge.find_by_id(qap.id)
+  end
 end
