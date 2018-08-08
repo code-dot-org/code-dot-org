@@ -6,7 +6,10 @@ var callbacks = [];
 var setupCallbacks = [];
 var loops = [];
 var sprites = [];
-var bpm = 120;
+var song_meta = {
+  bpm: 146,
+  delay: 0.2
+};
 var score = 0;
 var game_over = false;
 var show_score = false;
@@ -20,7 +23,6 @@ bg_sprite.visible = false;
 
 function preload() {
   Dance.song.load('https://s3.amazonaws.com/cdo-curriculum/media/uploads/chu.mp3');
-  bpm = 146;
   //Dance.song.load('/api/v1/sound-library/category_background/jazzy_beats.mp3');
 }
 
@@ -69,27 +71,26 @@ var bg_effects = {
   disco: {
     colors: [],
     update: function () {
-      push();
-      colorMode(HSB);
-      if (this.colors.length < 1) {
+      if (this.colors.length < 64) {
+        this.colors = [];
         for (var i=0; i<64; i++) {
-          this.colors.push(color(randomNumber(0, 359), 100, 100));
+          this.colors.push(color("hsb(" + randomNumber(0, 359) + ", 100%, 100%)"));
         }
       } else {
         for (var j=randomNumber(5, 10); j>0; j--) {
-          this.colors[randomNumber(0, this.colors.length - 1)] = color(randomNumber(0, 359), 100, 100);
+          this.colors[randomNumber(0, this.colors.length - 1)] = color("hsb(" + randomNumber(0, 359) + ", 100%, 100%)");
         }
       }
-      pop();
     },
     draw: function () {
       if (Dance.fft.isPeak() || World.frameCount == 1) this.update();
       push();
       noStroke();
-      for (var i=0; i<64; i++) {
+      for (var i=0; i<this.colors.length; i++) {
         fill(this.colors[i]);
         rect((i % 8) * 50, Math.floor(i / 8) * 50, 50, 50);
       }
+      pop();
     }
   }
 };
@@ -103,9 +104,9 @@ function loadS3Animation(base_url, count) {
   return loadAnimation.apply(null, args);
 }
 
-Dance.fft.createPeakDetect(20, 200, 0.8, 48);
-Dance.fft.createPeakDetect(400, 2600, 0.4, 48);
-Dance.fft.createPeakDetect(2700, 4000, 0.5, 48);
+Dance.fft.createPeakDetect(20, 200, 0.8, Math.round((60 / song_meta.bpm) * World.frameRate));
+Dance.fft.createPeakDetect(400, 2600, 0.4, Math.round((60 / song_meta.bpm) * World.frameRate));
+Dance.fft.createPeakDetect(2700, 4000, 0.5, Math.round((60 / song_meta.bpm) * World.frameRate));
 
 function initialize(setupHandler) {
   setupHandler();
