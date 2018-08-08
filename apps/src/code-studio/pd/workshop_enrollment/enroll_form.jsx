@@ -8,18 +8,46 @@ import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import AutocompleteSchoolDropdownWithOtherFields from '../components/autocompleteSchoolDropdownWithOtherFields';
-import {
-  TEACHING_ROLES,
-  ROLES,
-  GRADES_TEACHING,
-  CSF,
-  SCHOOL_TYPES_MAPPING,
-  ERROR,
-} from './enrollmentConstants';
 
 const OTHER = "Other";
 const NOT_TEACHING = "I'm not teaching this year";
 const EXPLAIN = "(Please Explain):";
+
+const CSF = "CS Fundamentals";
+
+const VALIDATION_STATE_ERROR = "error";
+
+const SCHOOL_TYPES_MAPPING = {
+  "Public school": "public",
+  "Private school": "private",
+  "Charter school": "charter",
+  "Other": "other"
+};
+
+const TEACHING_ROLES = [
+  "Classroom Teacher",
+  "Librarian",
+  "Tech Teacher/Media Specialist"
+];
+
+const ROLES = TEACHING_ROLES.concat([
+  "Parent",
+  "School Administrator",
+  "District Administrator",
+  "Other"
+]);
+
+const GRADES_TEACHING = [
+  "Pre-K",
+  "Kindergarten",
+  "Grade 1",
+  "Grade 2",
+  "Grade 3",
+  "Grade 4",
+  "Grade 5",
+  "Grade 6-8",
+  "Grade 9-12"
+];
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
@@ -183,7 +211,7 @@ export default class EnrollForm extends React.Component {
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.first_name}
-            validationState={this.state.errors.hasOwnProperty("first_name") ? ERROR : null}
+            validationState={this.state.errors.hasOwnProperty("first_name") ? VALIDATION_STATE_ERROR : null}
             errorMessage={this.state.errors.first_name}
           />
           <FieldGroup
@@ -192,7 +220,7 @@ export default class EnrollForm extends React.Component {
             type="text"
             required={true}
             onChange={this.handleChange}
-            validationState={this.state.errors.hasOwnProperty("last_name") ? ERROR : null}
+            validationState={this.state.errors.hasOwnProperty("last_name") ? VALIDATION_STATE_ERROR : null}
             errorMessage={this.state.errors.last_name}
           />
           <FieldGroup
@@ -204,7 +232,7 @@ export default class EnrollForm extends React.Component {
             defaultValue={this.props.email}
             readOnly={!!this.props.email}
             title={this.props.email ? "Email can be changed in account settings" : ""}
-            validationState={this.state.errors.hasOwnProperty("email") ? ERROR : null}
+            validationState={this.state.errors.hasOwnProperty("email") ? VALIDATION_STATE_ERROR : null}
             errorMessage={this.state.errors.email}
           />
           {!this.props.email &&
@@ -214,7 +242,7 @@ export default class EnrollForm extends React.Component {
               type="text"
               required={true}
               onChange={this.handleChange}
-              validationState={this.state.errors.hasOwnProperty("confirm_email") ? ERROR : null}
+              validationState={this.state.errors.hasOwnProperty("confirm_email") ? VALIDATION_STATE_ERROR : null}
               errorMessage={this.state.errors.confirm_email}
             />
           }
@@ -227,7 +255,7 @@ export default class EnrollForm extends React.Component {
         />
         {this.props.workshop_course === CSF &&
           <FormGroup
-            validationState={this.state.errors.hasOwnProperty("role") ? ERROR : null}
+            validationState={this.state.errors.hasOwnProperty("role") ? VALIDATION_STATE_ERROR : null}
           >
             <ControlLabel>What is your current role? (Select the role that best applies)<span className="form-required-field"> *</span></ControlLabel>
             <Select
@@ -248,7 +276,7 @@ export default class EnrollForm extends React.Component {
                 label={roleLabel}
                 onChange={this.handleChange}
                 selectedItems={this.state.grades_teaching}
-                validationState={this.state.errors.hasOwnProperty("grades_teaching") ? ERROR : null}
+                validationState={this.state.errors.hasOwnProperty("grades_teaching") ? VALIDATION_STATE_ERROR : null}
                 errorText={this.state.errors.grades_teaching}
                 type="check"
               />

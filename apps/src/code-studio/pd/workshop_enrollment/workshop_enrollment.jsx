@@ -7,10 +7,20 @@ import FacilitatorBio from './facilitator_bio';
 import SignInPrompt from './sign_in_prompt';
 import EnrollForm from './enroll_form';
 import {
-  SUBMISSION_STATUSES,
   WorkshopPropType,
   FacilitatorPropType
 } from './enrollmentConstants';
+
+const SUBMISSION_STATUSES = {
+  UNSUBMITTED: "unsubmitted",
+  DUPLICATE: "duplicate",
+  OWN: "own",
+  CLOSED: "closed",
+  FULL: "full",
+  NOT_FOUND: "not found",
+  SUCCESS: "success",
+  UNKNOWN_ERROR: "error"
+};
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
