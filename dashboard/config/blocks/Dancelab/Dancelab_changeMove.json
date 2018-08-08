@@ -32,8 +32,12 @@
             "4"
           ],
           [
+            "Next",
+            "\"next\""
+          ],
+          [
             "Random",
-            "randomNumber(1, 4)"
+            "\"rand\""
           ]
         ]
       }
