@@ -157,7 +157,9 @@ end
 def main
   process_batch_of_forms
   receipt_count = send_batch_of_receipts
-  index_batch_of_forms
+
+  # TEMP: Let's try disabling writing anything to Solr and see if all our forms still work.
+  #index_batch_of_forms
 
   system "#{deploy_dir('bin/cron', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end
