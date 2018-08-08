@@ -105,7 +105,23 @@ Dashboard::Application.configure do
       'day_3' => 4,
       'day_4' => 5,
       'day_5' => 6,
-      'facilitator' => 7
+      'facilitator' => 7,
+      'post_workshop' => 6
+    },
+    'local_summer' => {
+      'day_0' => 1,
+      'day_1' => 2,
+      'day_2' => 3,
+      'day_3' => 4,
+      'day_4' => 5,
+      'day_5' => 6,
+      'facilitator' => 7,
+      'post_workshop' => 6
+    },
+    'academic_year_1' => {
+      'day_1' => 10,
+      'facilitator' => 11,
+      'post_workshop' => 12
     }
   }
 end
