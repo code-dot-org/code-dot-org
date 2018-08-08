@@ -70,7 +70,7 @@ ro-RO:
   csedweek_map_legend_cs_tech_jam: Eveniment special
   cded_sign_up: Înregistrează-te
   cded_try_it: Încearcă
-  try_now: Încearcă acum
+  try_now: Află mai mult
   california_heading: Cere şcolii tale să predea informatica
   california_text: Orice profesor poate preda ale noastre <a href='http://studio.code.org/'>cursuri
     gratuite</a>.  Orice şcoală primară poate <a href='http://code.org/educate/k5'>preda
@@ -250,7 +250,7 @@ ro-RO:
   get_started: Începe
   i_agree: Sunt de acord
   participant_select: "-Selectează-"
-  participant_student: elev
+  participant_student: Elev
   participant_parent: Părinte
   participant_educator: Educator
   participant_engineer: Inginer de software
@@ -426,7 +426,7 @@ ro-RO:
   homepage_slot_text_link_hoc: Încearcă Ora de Programare
   homepage_slot_text_link_about_hoc: Despre Ora de Cod
   homepage_slot_text_link_host: Găzduiește o Oră de Cod
-  homepage_slot_text_link_hocserved: "# servit"
+  homepage_slot_text_link_hocserved: "# efectuate"
   homepage_solot_text_link_volunteer: Voluntariaza pentru Ora de Cod
   homepage_slot_text_title_students: Elevi
   homepage_slot_text_blurb_students: Explorează toate tutorialele noastre
@@ -581,7 +581,7 @@ ro-RO:
   minecraft_og_agent: Minecraft revine pentru Ora de Cod iar tu ești eroul principal!
     Scrie codul de călătorie prin biomurile Minecraft.
   sports_page_title: Sporturi la Ora de Cod
-  sports_og_title: Dă-ţi silinţa. Oricine poate învăţa.
+  sports_og_title: Da-ti silinta. Oricine poate învăţa.
   sports_og_description: Campioni şi medaliaţi cu aur vă încurajează să încercaţi
     Ora de cod. Programaţi propriul joc sportiv.
   sports_title: Propgrameaza propriul joc sport
@@ -1191,7 +1191,7 @@ ro-RO:
   khanfr_name: O introducere în JavaScript
   khanpl_name: O introducere în JavaScript
   tynker_name: Costruiește propriul tău joc
-  scratch_name: Fii creativ cu codarea
+  scratch_name: Fii creativ cu programarea
   thinkersmith_name: Amicii mei roboți
   condcards_name: Condiționale cu Carduri
   codehs_name: Învață programare cu Karel, câinele
@@ -1208,7 +1208,7 @@ ro-RO:
   flappy_name: Să facem un joc cu Flappy
   bitsbox_name: Bitsbox - creează un joc
   makeschool_name: Realizeaza un joc pentru iPhone in propriul browser!
-  appinventor_name: Ora de Cod aplicație-inventor
+  appinventor_name: Ora de Pprogramare - Inventatorul de aplicatii
   blockly_name: Blockly
   projguts_name: Piatră, hârtie, foarfece
   hourofcode_name: Labirint Clasic
@@ -1309,7 +1309,7 @@ ro-RO:
   applab_name: Laboratului Aplicației
   gamelab_name: Laborator de jocuri
   basketball_name: Realizeaza un joc de baschet
-  sports_name: Prorgramează propriul joc sportiv
+  sports_name: Propgrameaza propriul joc sport
   applab_gradelevel: Vârste 13 +
   applab_shortdescription_congrats: App Lab este un mediu de programare în care poți
     crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript
@@ -1341,7 +1341,7 @@ ro-RO:
   kodable_gradelevel: Învățământ primar
   tynkerapp_gradelevel: Vârste între 5-13 ani
   robomindnl_gradelevel: Vârste 8-13 ani
-  flappy_gradelevel: Vârste 6-106 ani
+  flappy_gradelevel: 'Varsta: peste 6 ani'
   bitsbox_gradelevel: Învățământ primar
   makeschool_gradelevel: Liceu
   touchdevelop_gradelevel: Liceu
@@ -1351,9 +1351,9 @@ ro-RO:
   kodableunplugged_gradelevel: Vârste 8-13 ani
   projguts_gradelevel: Vârstele 10-13 ani
   hourofcode_gradelevel: Vârste între 4-104 ani
-  frozen_gradelevel: Vârste 8 - 108 ani
+  frozen_gradelevel: Vârste între 4-104 ani
   starwars_gradelevel: 'Varsta: peste 6 ani'
-  playlab_gradelevel: Vârste 6-14 ani
+  playlab_gradelevel: Vârste între 4-104 ani
   infinity_gradelevel: Vârste între 4-104 ani
   artist_gradelevel: Vârste între 4-104 ani
   monstercoding_gradelevel: Vârste între 5-13 ani
@@ -1388,7 +1388,7 @@ ro-RO:
   accelerated_gradelevel: Vârste 10 - 18 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
-  thinkersmithspanish_platformtext: Unplugged
+  thinkersmithspanish_platformtext: Unuplugged (fără calculator)
   khan_platformtext: Browsere web moderne
   khanes_platformtext: Browsere web moderne
   khanpt_platformtext: Browsere web moderne
@@ -1423,7 +1423,7 @@ ro-RO:
   kodableunplugged_platformtext: Unuplugged (fără calculator)
   projguts_platformtext: Unuplugged (fără calculator)
   hourofcode_platformtext: Browsere web moderne, smartphone-uri, tablete
-  frozen_platformtext: Browsere moderne + tablete
+  frozen_platformtext: Browser modern + tableta
   starwars_platformtext: Browser modern + tableta
   playlab_platformtext: Browsere web moderne, smartphone-uri, tablete
   monstercoding_platformtext: Browsere moderne IOS, Android
