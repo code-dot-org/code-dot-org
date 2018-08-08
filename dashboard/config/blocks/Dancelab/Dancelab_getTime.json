@@ -1,0 +1,8 @@
+{
+  "category": "Music",
+  "config": {
+    "func": "getTime",
+    "blockText": "time elapsed",
+    "returnType": "Number"
+  }
+}

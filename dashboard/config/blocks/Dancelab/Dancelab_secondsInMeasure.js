@@ -1,3 +1,3 @@
 function secondsInMeasure() {
-  return bpm / 60;
+  return 240 / song_meta.bpm;
 }
