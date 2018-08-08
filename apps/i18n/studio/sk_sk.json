@@ -165,7 +165,7 @@
   "dropletBlock_whenTouchTauntaun_description": "Tato funkcia sa spustí, keď sa droid dotkne Tauntaun postavy.",
   "dropletBlock_whenTouchProbot_description": "Tato funkcia sa spustí, keď sa droid dotkne Probot postavy.",
   "dropletBlock_whenUp_description": "Táto funkcia sa spustí pri stlačení tlačidla hore.",
-  "elseCode": "ináč",
+  "elseCode": "inak",
   "emotion": "nálada",
   "endGameWin": "ukonči hru ako víťazstvo",
   "endGameLose": "ukonči hru ako prehru",

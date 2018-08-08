@@ -8,6 +8,7 @@ function makeNewDanceSprite(costume, name, location) {
   
   sprite.maxSpeed = 0;
   sprite.style = costume;
+  sprite.current_move = 0;
   for (var i=0; i < dancers[costume].length; i++) {
     sprite.addAnimation("anim" + i, dancers[costume][i]);
   }

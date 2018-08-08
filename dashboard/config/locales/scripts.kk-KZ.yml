@@ -3,7 +3,7 @@ kk:
   data:
     script:
       category:
-        hoc_category_name: Код Жазу Сағаты
+        hoc_category_name: Код жазу Сағаты
         math_category_name: Математика
       name:
         course1:
@@ -145,7 +145,7 @@ kk:
             'Maze: Conditionals':
               name: 'Лабиринт: Шарттар'
             Songwriting:
-              name: Параметрлермен ән жазу
+              name: Ән Жазу
             'Studio: Create a Game':
               name: 'Ойындар Лабораториясы: Ойын Құру'
             'Studio: Create a Story':
@@ -417,6 +417,8 @@ kk:
           stages:
             Puzzles:
               name: Басқатырғыштар
+        cspunit1:
+          description_short: Бағдарламалау
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -430,6 +432,7 @@ kk:
             Strings and Images:
               name: Жолдар және Суреттер
         cspunit3:
+          description_short: Бағдарламалау
           stages:
             Creating Functions:
               name: Функцияларды Құру
@@ -460,6 +463,7 @@ kk:
             Wrap-Up:
               name: Аяқтау
         cspunit2:
+          description_short: Бағдарламалау
           stages:
             The Internet:
               name: Ғаламтор бәрі үшін
@@ -612,7 +616,7 @@ kk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
             Songwriting:
-              name: Параметрлермен ән жазу
+              name: Ән Жазу
             The Big Event:
               name: Үлкен Оқиға
         ScienceP3OLPT2:
@@ -679,6 +683,10 @@ kk:
               name: Қош келдіңіз!
             Wrap-Up:
               name: Аяқтау
+        cspunit5:
+          description_short: Бағдарламалау
+        cspunit4:
+          description_short: Бағдарламалау
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -774,7 +782,7 @@ kk:
             Digital Citizenship:
               name: Сандық Азаматтық
             Songwriting:
-              name: Параметрлермен ән жазу
+              name: Ән Жазу
         grade1:
           stages:
             Events:
@@ -1308,7 +1316,7 @@ kk:
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
             'Functions: Songwriting':
-              name: Параметрлермен ән жазу
+              name: Ән Жазу
             Envelope Variables:
               name: Конверт Айнымалылары
             For Loop Fun:
@@ -1376,7 +1384,7 @@ kk:
             Introduction:
               name: Кіріспе
             'Functions: Songwriting':
-              name: Параметрлермен ән жазу
+              name: Ән Жазу
             Internet:
               name: Ғаламтор
             Crowdsourcing:

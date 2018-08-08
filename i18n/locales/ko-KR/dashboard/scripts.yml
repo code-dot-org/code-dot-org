@@ -75,13 +75,13 @@ ko:
             Binary Bracelets:
               name: 2진 팔찌
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Flappy:
               name: 플래피
             Getting Loopy:
               name: 반복시키기
             Graph Paper Programming:
-              name: 모눈종이 프로그래밍
+              name: 모눈 종이 프로그래밍
             'Maze: Loops':
               name: '미로: 반복'
             'Maze: Sequence':
@@ -121,7 +121,7 @@ ko:
             Bounce:
               name: 바운스
             Computational Thinking:
-              name: 컴퓨터과학적(정보과학적)사고
+              name: 컴퓨터과학(정보과학)적 사고
             Crowdsourcing:
               name: 클라우드소싱
             Dice Race:
@@ -262,7 +262,7 @@ ko:
         algebra:
           stages:
             'Eval: Conditionals':
-              name: 조건/선택
+              name: 조건
             'Eval: Strings and Images':
               name: 문자열과 이미지
             'Unplugged: Conditionals and Piecewise Functions':
@@ -306,15 +306,15 @@ ko:
             Algorithms:
               name: 알고리즘
             Computational Thinking:
-              name: 컴퓨터과학적(정보과학적)사고
+              name: 컴퓨터과학(정보과학)적 사고
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Functions:
               name: 함수
             Graph Paper Programming:
-              name: 모눈종이 프로그래밍
+              name: 모눈 종이 프로그래밍
             Introduction to Computer Science:
-              name: 컴퓨터과학(Computer Science, 정보과학) 소개
+              name: 컴퓨터과학(정보과학) 소개
             Relay Programming:
               name: 릴레이 프로그래밍
             Song Writing:
@@ -401,6 +401,8 @@ ko:
           stages:
             Puzzles:
               name: 퍼즐
+        cspunit1:
+          description_short: 프로그래밍
         algebraPD:
           stages:
             Course Overview:
@@ -437,6 +439,7 @@ ko:
             What to Expect:
               name: 기대 할 것은
         cspunit3:
+          description_short: 프로그래밍
           stages:
             Creating Functions:
               name: 함수 만들기
@@ -489,6 +492,7 @@ ko:
             Wrap-Up:
               name: 마무리
         cspunit2:
+          description_short: 프로그래밍
           stages:
             The Internet:
               name: 모든 사람을 위한 인터넷
@@ -575,6 +579,10 @@ ko:
               name: 인터넷 시뮬레이터
             Welcome!:
               name: 환영합니다!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: 컴퓨터 과학 기초
         ECSPD2:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
@@ -660,7 +668,7 @@ ko:
             Getting Loopy:
               name: 반복시키기
             Graph Paper Programming:
-              name: 모눈종이 프로그래밍
+              name: 모눈 종이 프로그래밍
             Happy Maps:
               name: 즐거운 맵
             Move it, Move it:
@@ -727,6 +735,10 @@ ko:
               name: 환영합니다!
             Wrap-Up:
               name: 마무리
+        cspunit5:
+          description_short: 프로그래밍
+        cspunit4:
+          description_short: 프로그래밍
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -918,7 +930,7 @@ ko:
             Variables:
               name: 변수
             Conditionals:
-              name: 조건/선택
+              name: 조건
         grade2:
           stages:
             Flappy:
@@ -934,7 +946,7 @@ ko:
             Binary:
               name: 2진
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Events:
               name: 이벤트
             For Loops:
@@ -985,7 +997,7 @@ ko:
               name: 리스트
         minecraft:
           title: Minecraft Hour of Code 디자이너
-          description_short: 자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요.
+          description_short: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
           description: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
           stages:
             Minecraft Hour of Code Designer:
@@ -1041,7 +1053,7 @@ ko:
             Introduction:
               name: 소개
             Conditionals:
-              name: 조건/선택
+              name: 조건
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1125,7 +1137,7 @@ ko:
             Introduction:
               name: 소개
             Conditionals:
-              name: 조건/선택
+              name: 조건
             'Real Life Algorithms: Dice Race':
               name: '실생활 알고리즘: 주사위 레이스'
         csd6-2017:
@@ -1143,7 +1155,7 @@ ko:
             Variables:
               name: 변수
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Velocity:
               name: 속도
             Functions:
@@ -1163,7 +1175,7 @@ ko:
             Variables:
               name: 변수
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Velocity:
               name: 속도
             Functions:
@@ -1274,7 +1286,7 @@ ko:
             Nested Loops:
               name: 중첩 반복
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Internet:
               name: 인터넷
             Crowdsourcing:
@@ -1308,7 +1320,7 @@ ko:
             Building a Foundation:
               name: 건물 기초 만들기
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Internet:
               name: 인터넷
             Crowdsourcing:
@@ -1346,7 +1358,7 @@ ko:
             Introduction:
               name: 소개
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Internet:
               name: 인터넷
             Crowdsourcing:
@@ -1376,7 +1388,7 @@ ko:
             Variables:
               name: 변수
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Velocity:
               name: 속도
             Functions:
@@ -1388,7 +1400,7 @@ ko:
             Variables:
               name: 변수
             Conditionals:
-              name: 조건/선택
+              name: 조건
             Velocity:
               name: 속도
             Functions:
@@ -1411,7 +1423,7 @@ ko:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 모눈종이 프로그래밍
+              name: 모눈 종이 프로그래밍
             Introduction:
               name: 소개
             Building a Foundation:
@@ -1455,7 +1467,7 @@ ko:
           assignment_family_title: 과정 D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 모눈종이 프로그래밍
+              name: 모눈 종이 프로그래밍
             Introduction:
               name: 소개
             Building a Foundation:
@@ -1469,7 +1481,7 @@ ko:
             Artist Binary:
               name: 화가 2진
             Graph Paper Programming:
-              name: 모눈종이 프로그래밍
+              name: 모눈 종이 프로그래밍
             Relay Programming:
               name: 릴레이 프로그래밍
         coursec-2018:

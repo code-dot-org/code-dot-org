@@ -82,7 +82,7 @@ es:
             Getting Loopy:
               name: Bucleandose
             Graph Paper Programming:
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             'Maze: Loops':
               name: 'Bucle'
             'Maze: Sequence':
@@ -140,7 +140,7 @@ es:
             'Maze: Conditionals':
               name: 'Laberinto: Condicionales'
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
             'Studio: Create a Game':
               name: 'Laboratorio de juegos: Crear un juego'
             'Studio: Create a Story':
@@ -259,7 +259,7 @@ es:
             Intro:
               name: Intro
             Variables:
-              name: Variables
+              name: variables
         algebra:
           title: Ciencias de la computación en álgebra
           description: Aprender programación funcional a través del álgebra
@@ -399,7 +399,7 @@ es:
           description_audience: Edades de 10 a 18 años
           stages:
             Abstraction:
-              name: Liberación abstracta
+              name: Abstracción
             Algorithms:
               name: Algoritmos
             Computational Thinking:
@@ -407,15 +407,15 @@ es:
             Conditionals:
               name: Condicionales
             Functions:
-              name: Funciones
+              name: funciones
             Graph Paper Programming:
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Introduction to Computer Science:
-              name: Introducción al Arte de las Ciencias de la Computación
+              name: Introducción a la informática
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de Relevos
             Song Writing:
-              name: Escribir canciones
+              name: Escritura de la canción
             The Artist:
               name: El artista
             The Artist 2:
@@ -435,7 +435,7 @@ es:
             The Internet:
               name: Internet
             The Maze:
-              name: El laberinto
+              name: El Laberinto
             Wrap-up:
               name: Cierre
         edit-code:
@@ -450,7 +450,7 @@ es:
             The Artist:
               name: El artista
             The Maze:
-              name: El laberinto
+              name: El Laberinto
         events:
           title: Eventos
           description: Eventos
@@ -509,7 +509,7 @@ es:
         cspunit1:
           title: "CSP Unit 1 - información Digital"
           description: Esta unidad explora los desafíos técnicos y las preguntas que surgen de la necesidad de representar la información digital en computadoras y transferencia entre las personas y los dispositivos computacionales.
-          description_short: Explore como la información digital está representada y transferida
+          description_short: Programación
           stages:
             Binary Numbers:
               name: Números binarios
@@ -647,7 +647,8 @@ es:
             reference:
               name: referencia
         cspunit3:
-          description_short: Explore como la información digital está representada y transferida
+          description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
+          description_short: Programación
           stages:
             APIs and Function Parameters:
               name: Las API y los parámetros de las funciones
@@ -818,7 +819,7 @@ es:
             Welcome Back!:
               name: '¡Bienvenido de nuevo!'
         cspunit2:
-          description_short: Explore como la información digital está representada y transferida
+          description_short: Programación
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Problemas difíciles - El problema del vendedor viajero
@@ -992,7 +993,7 @@ es:
             Best Practices for Teaching Computer Science:
               name: Los mejores ejercicios para la enseñanza de la informática
             Computer Science Fundamentals:
-              name: Principios de la informática
+              name: Fundamentos de la informatica
             Getting Started:
               name: Iniciando
             Looking Ahead:
@@ -1154,7 +1155,7 @@ es:
             Getting Loopy:
               name: Bucleandose
             Graph Paper Programming:
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Happy Maps:
               name: Mapas Felices
             Move it, Move it:
@@ -1162,7 +1163,7 @@ es:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
             The Big Event:
               name: El Gran Evento
         algebraPD3a:
@@ -1235,6 +1236,7 @@ es:
             Unit 6 lessons:
               name: Unidad 6 lección
         cspunit4draft:
+          description_short: Datos
           stages:
             Check Your Assumptions:
               name: Verifica tus suposiciones
@@ -1305,6 +1307,7 @@ es:
             Getting Started:
               name: Iniciando
         cspunit3temp:
+          description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
           stages:
             Canvas and Arrays in Apps:
@@ -1354,9 +1357,9 @@ es:
             Wrap-Up:
               name: Cierre
         cspunit5:
-          description_short: Explore como la información digital está representada y transferida
+          description_short: Programación
         cspunit4:
-          description_short: Explore como la información digital está representada y transferida
+          description_short: Programación
           stages:
             Check Your Assumptions:
               name: Verifica tus suposiciones
@@ -1585,7 +1588,7 @@ es:
             Booleans and Conditionals:
               name: Booleanos y condicionales
             Functions:
-              name: Funciones
+              name: funciones
             Velocity:
               name: Velocidad
         2016_sciencePD_phase1:
@@ -1667,6 +1670,8 @@ es:
           stages:
             Peer Review:
               name: Revisión por pares
+        CSDU5-Draft:
+          description_short: Datos
         MikeTest:
           stages:
             Artist Functions:
@@ -1684,7 +1689,7 @@ es:
             'Jigsaw: Learn to drag and drop':
               name: 'Rompecabezas: Aprende a arrastrar y soltar'
             Loops:
-              name: Bucles
+              name: vuelta
             Programming:
               name: Programación
             'Real-life Algorithms: Plant a Seed':
@@ -1696,7 +1701,7 @@ es:
             Digital Citizenship:
               name: Ciudadanía Digital
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
         grade1:
           stages:
             Events:
@@ -1704,7 +1709,7 @@ es:
             'Jigsaw: Learn to drag and drop':
               name: 'Rompecabezas: Aprende a arrastrar y soltar'
             Loops:
-              name: Bucles
+              name: vuelta
             Programming:
               name: Programación
             Unspotted Bugs:
@@ -1836,7 +1841,7 @@ es:
             Collisions:
               description_student: La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque isTouching, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego usan isTouching para hacer que un sprite presione otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotar).
             Functions:
-              name: Funciones
+              name: funciones
             Using the Game Design Process:
               description_student: En esta lección de varios días, la clase usa el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Después de mirar un juego de muestra, la clase define cómo se verán sus juegos y utiliza un proceso estructurado para construirlos. Finalmente, la clase reflexiona sobre cómo se podrían mejorar los juegos e implementa esos cambios.
               description_teacher: En esta lección de varios días, los estudiantes usan el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Comienzan por mirar un ejemplo de un saltador de plataforma y luego definen cómo se verán sus juegos. A continuación, utilizan un proceso estructurado para planificar los fondos, las variables, los sprites y las funciones que necesitarán para implementar su juego. Después de escribir el código del juego, los estudiantes reflexionarán sobre cómo se puede mejorar el juego e implementarán esos cambios.
@@ -1848,7 +1853,7 @@ es:
               description_student: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
               description_teacher: Los estudiantes exploran los desafíos de comunicación en cómo dibujar con formas y usan una herramienta que introduce la forma de abordar este problema en Game Lab. La actividad de calentamiento demuestra rápidamente los desafíos de comunicar sin algún punto de referencia compartido. En la actividad principal, los estudiantes exploran una herramienta de Game Lab que les permite a los mismo colocar formas interactivamente en la cuadrícula de 400 por 400 de Game Lab. Luego se turnan para instruir a un compañero sobre cómo dibujar una imagen oculta con esta herramienta, lo que representa muchos desafíos que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes opcionalmente crean su propia imagen para comunicarse antes de discutir la informacion.
             Variables:
-              name: Variables
+              name: variables
               description_student: Esta lección introduce variables como una forma de etiquetar un número en un programa o guardar un valor generado aleatoriamente. La clase comienza la lección con una descripción muy básica del propósito de una variable y práctica usando los nuevos bloques. Después, la clase usa variables para guardar un número aleatorio, permitiendo que los programas usen el mismo número aleatorio varias veces.
               description_teacher: En esta lección, los estudiantes aprenden a usar variables para etiqueta un número en su programa o guardar un valor generado aleatoriamente. Los estudiantes comienzan la lección con una descripción muy básica del propósito de una variable. Luego, los estudiantes completan un nivel de progreso que refuerza el modelo de una variable como una forma de etiquetar o nombrar un número. Los estudiantes usan variables para guardar un número aleatorio para ver que las variables realmente almacenan o guardan sus valores, lo que les permite usar el mismo número aleatorio varias veces en sus programas.
             Sprites:
@@ -1893,15 +1898,15 @@ es:
             For Loops:
               name: Bucles Para
             Functions:
-              name: Funciones
+              name: funciones
             Functions with Parameters:
               name: Funciones con parámetros
             Loops:
-              name: Bucles
+              name: vuelta
             Nested Loops:
               name: Bucles anidados
             Variables:
-              name: Variables
+              name: variables
             While Loops:
               name: Bucles Mientras
         algebrapdnext:
@@ -1939,9 +1944,9 @@ es:
             Unit 5 Overview:
               name: Unidad 5 visión general
         basketball:
-          title: Elije un equipo y crea un juego de basquetbol
+          title: Crear un juego de baloncesto
           description_short: Crear un juego de baloncesto
-          description: Elije un equipo y crea un juego de basquetbol
+          description: Crear un juego de baloncesto
           stages:
             Bounce:
               name: Rebotar
@@ -1974,7 +1979,7 @@ es:
               description_teacher: Esta lección guía a los estudiantes a través de una versión resumida del proceso de diseño que verán a lo largo de esta unidad. Los estudiantes primero generan una lluvia de ideas para una lista de usuarios potenciales de ropa inteligente. Como clase, agrupan estas ideas en categorías amplias y cada grupo elegirá una categoría de usuario. Los grupos repiten este proceso para generar una lluvia de ideas sobre las necesidades o inquietudes de sus usuarios, eventualmente categorizar estas necesidades y eligen una para enfocarse. Finalmente, los estudiantes diseñan una pieza de ropa inteligente, usando las necesidades y preocupaciones específicas que cada uno creó para guiar sus decisiones. Al final de la clase, los estudiantes comparten rápidamente su proceso de toma de decisiones y reciben comentarios sobre qué tan bien sus productos abordan las necesidades del usuario que seleccionaron.
         minecraft:
           title: Diseñador de Minecraft Hora de Código
-          description_short: Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
+          description_short: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
           description: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más.
           stages:
             Minecraft Hour of Code Designer:
@@ -2058,7 +2063,7 @@ es:
             Hour of Code 2013:
               name: La Hora de Code 2013
         sports:
-          title: Crea tu propio Juego de deportes
+          title: Programa tu propio juego de deporte
           description_short: Multideporte
           description: Mezclar y unir deportes
           stages:
@@ -2173,7 +2178,7 @@ es:
         csd3-draft:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Booleans and Conditionals:
               name: Booleanos y condicionales
             Conditionals:
@@ -2181,7 +2186,7 @@ es:
             Velocity:
               name: Velocidad
             Functions:
-              name: Funciones
+              name: funciones
             'Project: Design a Game':
               name: 'Proyecto: Diseñar un juego'
         csd5-2017:
@@ -2195,7 +2200,7 @@ es:
             Velocity:
               name: Velocidad
             Functions:
-              name: Funciones
+              name: funciones
             'Project: Design a Game':
               name: 'Proyecto: Diseñar un juego'
         csd2-draft:
@@ -2205,7 +2210,7 @@ es:
         csd3-chapters:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Booleans and Conditionals:
               name: Booleanos y condicionales
             Conditionals:
@@ -2213,7 +2218,7 @@ es:
             Velocity:
               name: Velocidad
             Functions:
-              name: Funciones
+              name: funciones
             'Project: Design a Game':
               name: 'Proyecto: Diseñar un juego'
             'null':
@@ -2351,6 +2356,7 @@ es:
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
           description_short: Programación
+          description: "Esta unidad presenta los conceptos fundamentales de la programación informática, que desbloquea la capacidad de crear aplicaciones ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\\r\n\\r\nEsta unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -2508,13 +2514,13 @@ es:
         csd3-1819draft:
           stages:
             Variables:
-              name: Variables
+              name: variables
             Conditionals:
               name: Condicionales
             Velocity:
               name: Velocidad
             Functions:
-              name: Funciones
+              name: funciones
           description_short: "Programación"
         csd3-2018:
           description_short: "Programación"
@@ -2527,7 +2533,7 @@ es:
             Drawing in Game Lab:
               description_teacher: Se les presenta a los estudiantes el Game Lab, el entorno de programación de esta unidad, y comienzan a usarlo para colocar las formas en la pantalla. Aprenden los conceptos básicos de secuenciación y depuración, así como algunos comandos simples. Al final de la lección, los estudiantes podrán programar imágenes como las que hicieron con la herramienta de dibujo en la lección anterior.
             Variables:
-              name: Variables
+              name: variables
               description_student: Esta lección introduce variables como una forma de etiquetar un número en un programa o guardar un valor generado aleatoriamente. La clase comienza la lección con una descripción muy básica del propósito de una variable y práctica usando los nuevos bloques. Después, la clase usa variables para guardar un número aleatorio, permitiendo que los programas usen el mismo número aleatorio varias veces.
               description_teacher: En esta lección, los estudiantes aprenden a usar variables para etiqueta un número en su programa o guardar un valor generado aleatoriamente. Los estudiantes comienzan la lección con una descripción muy básica del propósito de una variable. Luego, los estudiantes completan un nivel de progreso que refuerza el modelo de una variable como una forma de etiquetar o nombrar un número. Los estudiantes usan variables para guardar un número aleatorio para ver que las variables realmente almacenan o guardan sus valores, lo que les permite usar el mismo número aleatorio varias veces en sus programas.
             Sprites:
@@ -2557,7 +2563,7 @@ es:
             Collisions:
               description_student: La clase programa sus sprites para interactuar de nuevas maneras. Después de una breve revisión de cómo usaron el bloque isTouching, la clase intercambia ideas sobre otras formas en que dos sprites podrían interactuar. Luego usan isTouching para hacer que un sprite presione otro en la pantalla antes de practicar con los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotar).
             Functions:
-              name: Funciones
+              name: funciones
             Using the Game Design Process:
               description_student: En esta lección de varios días, la clase usa el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Después de mirar un juego de muestra, la clase define cómo se verán sus juegos y utiliza un proceso estructurado para construirlos. Finalmente, la clase reflexiona sobre cómo se podrían mejorar los juegos e implementa esos cambios.
               description_teacher: En esta lección de varios días, los estudiantes usan el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Comienzan por mirar un ejemplo de un saltador de plataforma y luego definen cómo se verán sus juegos. A continuación, utilizan un proceso estructurado para planificar los fondos, las variables, los sprites y las funciones que necesitarán para implementar su juego. Después de escribir el código del juego, los estudiantes reflexionarán sobre cómo se puede mejorar el juego e implementarán esos cambios.
@@ -2585,7 +2591,7 @@ es:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Introduction:
               name: Introducción
             Building a Foundation:
@@ -2603,7 +2609,7 @@ es:
             Conditionals with Cards:
               name: Condicionales con tarjetas
             'Functions: Songwriting':
-              name: Composicion musical con parámetros
+              name: Composición Musical
             Envelope Variables:
               name: Variables de sobre
             For Loop Fun:
@@ -2619,7 +2625,7 @@ es:
             Crowdsourcing:
               name: Colaboración Abierta
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de Relevos
         courseb-2018:
           assignment_family_title: Curso B
           stages:
@@ -2633,7 +2639,7 @@ es:
           assignment_family_title: Curso D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Introduction:
               name: Introducción
             Building a Foundation:
@@ -2649,9 +2655,9 @@ es:
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
             Graph Paper Programming:
-              name: Programación de hoja cuadriculada
+              name: Programación en papel cuadriculado
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de Relevos
         coursec-2018:
           assignment_family_title: Curso C
           stages:
@@ -2685,7 +2691,7 @@ es:
               description_student: Siente la fuerza cuando construyes tu propio juego de la Guerra de las Galaxias en esta lección.
               description_teacher: En esta lección, los estudiantes pondrán en práctica utilizando eventos para construir un juego que pueden compartir en línea. Con R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados a través de eventos, luego le dadas espacio para crear su propio juego.
             'Functions: Songwriting':
-              name: Composicion musical con parámetros
+              name: Composición Musical
             Internet:
               name: Internet
             Crowdsourcing:

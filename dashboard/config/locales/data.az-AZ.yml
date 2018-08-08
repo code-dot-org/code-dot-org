@@ -47,7 +47,7 @@ az:
         loop_until: '"Təkrar et, ta ki" bloku'
         loop_while: '"Hələ ki" bloku'
         loop_for: Sayğac bloku
-        function: Funksiyalar
+        function: funksiyalar
         parameters: Parametrli funksiyalar
     level:
       instructions:
@@ -93,8 +93,8 @@ az:
         maze_2_17: '"Əgər-əks halda" bloku şərti yoxlayır, sonra isə bu VƏ YA digər
           işi yerinə yetirir. Məni günəbaxana çatdırmaq üçün bu yeni bloku istifadə
           etməyə çalışın.'
-        maze_2_18: '"Əgər-əks halda" blokunu bir daha təcrübədən keçirin, birinci
-          cəhdinizdən bunu düzgün edə bilərsinizmi?'
+        maze_2_18: "\"Əgər-əks halda\" blokunu bir daha təcrübədən keçirin, \nbirinci
+          cəhdinizdən bunu düzgün edə bilərsinizmi?"
         maze_2_19: Sadəcə 3 blok əlavə etməklə mənə daha çətin labirintdən baş çıxarmaqda
           kömək edə bilərsinizmi? Əgər bunu düzgün etsəniz mən uzunluğundan asılı
           olmayaraq ixtiyari əyri yolla gedə bilərəm.
@@ -378,7 +378,7 @@ az:
         C3_dice_race: Zər Yarışı
         C3_internet: İnternet
         C4_intro: Giriş
-        C4_loops_zombie: Dövlər
+        C4_loops_zombie: dövrlər
         C4_bee_conditional: Arı Şərti ifadələr
         C4_function_parameters: Parametrli funksiyalar
         C4_conditionals: Şərti ifadələr
@@ -389,7 +389,7 @@ az:
         playlab_intro: Oyun Labına giriş
         csp_applab_functions: Funksiyalara giriş
         csp_applab_functions_parameters: Parametrli funksiyalar
-        csp_applab_loops: Dövlər
+        csp_applab_loops: dövrlər
         starwars_intro: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın - Giriş'
         starwars_typing: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın - JavaScript'
         starwars_events: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın - Hadisələr'
@@ -405,7 +405,7 @@ az:
         mc_if_statements: Maynkraft - Əgər ifadəsi
         mc_congrats_share: Maynkraft - Təbriklər
         mc_congrats_no_share: Maynkraft - Təbriklər
-        CSF_loops_AB: Dövlər
+        CSF_loops_AB: dövrlər
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına

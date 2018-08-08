@@ -122,7 +122,7 @@
   "dropletBlock_setSprite_description": "Set utsjånaden til skodespelar",
   "dropletBlock_setSprite_param0": "",
   "dropletBlock_setSprite_param0_description": "Indeksen (startar på 0) viser kva figur som skal endrast.",
-  "dropletBlock_setSprite_param1": "",
+  "dropletBlock_setSprite_param1": "bilete",
   "dropletBlock_setSprite_param1_description": "Namn på bilete av figuren.",
   "dropletBlock_setToChase_description": "Endrar ei gruppe avatarar til å jage droida.",
   "dropletBlock_setToChase_param0": "type",

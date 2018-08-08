@@ -37,7 +37,7 @@ de:
       draw bit: zeichne ein bisschen
       draw a polygon: zeichne ein Vieleck
       draw a shape: zeichne eine Form
-      do something: Funktionsausführung
+      do something: Funktionsblock
       story: Handlung
       jump: springen
       Draw a triangle: Zeichne ein Dreieck
@@ -49,7 +49,7 @@ de:
       triangle: dreieck
       draw an octagon: zeichne einen Oktagon
       draw octagons: zeichne Oktagon
-      set score: Punktestand setzen auf
+      set score: Punktestand setzen
       get nectar: hole Nektar
       Jump: Springen
       test: prüfe

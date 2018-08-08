@@ -28,7 +28,7 @@ export default class FeedbacksList extends Component {
           <div style={styles.content} key={i}>
             <div>
               <span style={styles.header}>{i18n.feedbackFrom({teacher: feedback.teacher_name})}</span>
-              {i18n.fromWhen({when: moment(feedback.created_at).fromNow()})}
+              {i18n.fromWhen({when: moment.min(moment(), moment(feedback.created_at)).fromNow()})}
             </div>
             <div>{feedback.comment}</div>
           </div>

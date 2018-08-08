@@ -53,7 +53,7 @@ pl:
             'Studio: Create a Story':
               name: 'Play Lab: Utwórz opowieść'
             The Big Event:
-              name: Wielkie Wydarzenie
+              name: Wielkie wydarzenie
         course2:
           title: Kurs 2
           description: Kurs 2 jest przeznaczony dla uczniów, którzy umieją czytać, ale nie mają doświadczenia w programowaniu. W tym kursie uczniowie będą tworzyć programy do rozwiązywania problemów oraz interaktywne gry lub historyjki, którymi będą mogli dzielić się z innymi. Zalecane dla klas 2-5.
@@ -95,7 +95,7 @@ pl:
             'Studio: Create a Story':
               name: 'Play Lab: Utwórz opowieść'
             The Big Event:
-              name: Wielkie Wydarzenie
+              name: Wielkie wydarzenie
             Your Digital Footprint:
               name: Twój cyfrowy ślad
         course3:
@@ -169,7 +169,7 @@ pl:
               name: Labirynt
         frozen:
           title: Koduj z Anną i Elsą
-          description: Koduj, by przyłączyć się do Anna i Elsy, które odkrywają magię i piękno lodu. Będziesz tworzyć płatki śniegu i inne wzory jeżdżąc na łyżwach i utworzysz piękną zimową krainę, którą będziesz mógł udostępnić swoim znajomym!
+          description: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas jazdy na łyżwach i przepiękną zimową krainę, którą później możesz udostępnić znajomym!
           description_short: Użyjmy kodu, by przyłączyć się do Anny i Elsy zachwycających się magią i pięknem lodu.
           stages:
             Artist:
@@ -368,13 +368,13 @@ pl:
             Graph Paper Programming:
               name: Programowanie na papierze milimetrowym
             Introduction to Computer Science:
-              name: Wprowadzenie do Informatyki
+              name: Wprowadzenie do informatyki
             Relay Programming:
-              name: Programowanie przekaźnika
+              name: Sztafeta programowania
             Song Writing:
               name: Pisanie piosenek
             The Artist:
-              name: Artysta
+              name: Artysta/Postać
             The Artist 2:
               name: Artysta 2
             The Artist 3:
@@ -405,7 +405,7 @@ pl:
             Play Lab:
               name: Play Lab
             The Artist:
-              name: Artysta
+              name: Artysta/Postać
             The Maze:
               name: Labirynt
         events:
@@ -458,6 +458,7 @@ pl:
             Puzzles:
               name: Łamigłówki
         cspunit1:
+          description_short: Programowanie
           stages:
             Binary Numbers:
               name: Liczby binarne
@@ -570,6 +571,7 @@ pl:
             reference:
               name: referencja
         cspunit3:
+          description_short: Programowanie
           stages:
             APIs and Function Parameters:
               name: API i parametry funkcji
@@ -708,6 +710,7 @@ pl:
             Welcome Back!:
               name: Witaj ponownie!
         cspunit2:
+          description_short: Programowanie
           stages:
             Algorithms Detour - How Routers Learn:
               name: Jak uczą się routery
@@ -1005,7 +1008,7 @@ pl:
             Songwriting:
               name: Pisanie piosenek
             The Big Event:
-              name: Wielkie Wydarzenie
+              name: Wielkie wydarzenie
         algebraPD3a:
           stages:
             Lesson Prep:
@@ -1246,7 +1249,10 @@ pl:
               name: Witamy!
             Wrap-Up:
               name: Podsumowanie
+        cspunit5:
+          description_short: Programowanie
         cspunit4:
+          description_short: Programowanie
           stages:
             Check Your Assumptions:
               name: Sprawdź swoje założenia
@@ -2021,7 +2027,7 @@ pl:
             'Real-life Algorithms: Paper Planes':
               name: 'Rzeczywiste algorytmy: Papierowe samoloty'
             The Big Event:
-              name: Wielkie Wydarzenie
+              name: Wielkie wydarzenie
         transferring-over:
           stages:
             20-hr Stage 2:
@@ -2426,7 +2432,7 @@ pl:
             Hour of Code 2013:
               name: Godzina Kodowania 2013
         sports:
-          title: Zakoduj własne zawody
+          title: Zakoduj własną grę sportową
           description_short: Zakoduj własne zawody
           description: Zakoduj własne zawody
           stages:
@@ -3631,7 +3637,7 @@ pl:
             Nested Loops:
               name: Zagnieżdżające się  pętle
             'Events: The Big Event':
-              name: Wielkie Wydarzenie
+              name: Wielkie wydarzenie
             Events in Star Wars:
               name: Wydarzenia w Star Wars
             Conditional Loops in Maze:
@@ -3687,7 +3693,7 @@ pl:
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
             Relay Programming:
-              name: Programowanie przekaźnika
+              name: Sztafeta programowania
         courseb-2018:
           assignment_family_title: Kurs B
           description_audience: 'W wieku 5-8'
@@ -3728,7 +3734,7 @@ pl:
             Graph Paper Programming:
               name: Programowanie na papierze milimetrowym
             Relay Programming:
-              name: Programowanie przekaźnika
+              name: Sztafeta programowania
             Introduction to Online Puzzles:
               name: Wprowadzenie do puzzli online
         coursec-2018:
@@ -3746,7 +3752,7 @@ pl:
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
             'Events: The Big Event':
-              name: Wielkie Wydarzenie
+              name: Wielkie wydarzenie
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
             Binary Bracelets:

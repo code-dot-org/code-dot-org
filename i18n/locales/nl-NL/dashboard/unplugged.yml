@@ -56,7 +56,7 @@ nl:
         title: Voorwaardelijke instructies
         desc: Om voorwaardelijke instructies te leren gaan leerlingen een kaartspel spelen en regels maken als "als ik een rode kaar trek, krijg ik een punt" en "als ik een zwarte kaart krijg, krijg jij een punt".
       BigEvent:
-        title: De Grote Gebeurtenis
+        title: De grote gebeurtenis
         desc: Leerlingen worden bekend gemaakt met het programmeerconcept van "events", wat acties zijn waar een computer constant naar kijkt. De leraar drukt op knoppen van een papieren afstandsbediening en leerlingen reageren hierop, afhankelijk van welke knop ingedrukt is.
       GoingPlacesSafely:
         title: Veilig Reizen
@@ -77,10 +77,10 @@ nl:
         title: Rekenend Denken
         desc: Leerlingen gebruiken stappen van Computational Thinking(ontleden, patroonherkenning, abstractie, algoritmes) om uit te vinden hoe je een spel speelt zonder het kennen van de instructies.
       FunctionalSuncatchers:
-        title: Werkende Zonnevangers
+        title: Functionele Zonnevangers
         desc: Leerlingen maken een algoritme met variabelen en functies(stukjes code die je vaker wilt gebruiken) om zonnevangers te maken met behulp van snoeren en kralen.
       SongwritingParameters:
-        title: Liedjes schrijven met Parameters
+        title: Songwriting
         desc: Leerlingen gebruiken het idee van het refrein in een liedje om over het doorgeven van parameters te leren (welke een functie aanpassen zonder de hele functie opnieuw te moeten schrijven).
       DiceRace:
         title: 'Algoritmen in het echt: Dobbelstenenrace'
@@ -133,22 +133,22 @@ nl:
       courseA_unplugged_loops:
         desc: In deze les leert je over lussen!
       courseB_unplugged_MRF:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: In deze les 'programmeer' je je vrienden!
       courseB_unplugged_loopyMRF:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Net als in "Mijn Robot vrienden", zal je je vrienden "programmeren", maar deze keer met loops!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       courseD_unplugged_digitalCitizenship:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
       courseE_unplugged_privateInformation:
         title: 'Gezond verstand onderwijs: Privé en persoonlijke informatie '
         desc: Vandaag leert je het verschil tussen privé en persoonlijke informatie!
       courseF_unplugged_powerOfWords:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       deeper learning description:
         desc: 'vertaling ontbreekt: nl-US.data.unplugged.desc'
@@ -162,7 +162,7 @@ nl:
         title: Veilig Reizen
         desc: Het internet is een krachtige, maar soms gevaarlijke plek. Leraren vertellen hoe je het veilig kunt houden wanneer je op internet surft.
       courseABC_unplugged_bigEvent:
-        title: De Grote Gebeurtenis
+        title: De grote gebeurtenis
         desc: Leerlingen worden bekend gemaakt met het programmeerconcept van "events", wat acties zijn waar een computer constant naar kijkt. De leraar drukt op knoppen van een papieren afstandsbediening en leerlingen reageren hierop, afhankelijk van welke knop ingedrukt is.
       courseB_unplugged_digitalFootprint:
         title: Jouw Digitale Voetafdruk
@@ -204,7 +204,7 @@ nl:
         title: Crowdsourcing
         desc: Leerlingen gebruiken crowdsourcing, een probleemoplossende techniek die gangbaar is in de computerkunde, om gezamenlijk als klas een opdracht efficiënter uit te voeren dan wanneer een leerling het alleen zou proberen.
       courseE_unplugged_songwriting:
-        title: Liedjes schrijven met Parameters
+        title: Songwriting
         desc: Leerlingen gebruiken het idee van het refrein in een liedje om over het doorgeven van parameters te leren (welke een functie aanpassen zonder de hele functie opnieuw te moeten schrijven).
       courseF_unplugged_tangrams:
         title: Tangram Algoritmen
@@ -232,16 +232,16 @@ nl:
       courseA_unplugged_loops_2018:
         desc: In deze les leert je over lussen!
       BigEvent_2018:
-        title: De Grote Gebeurtenis
+        title: De grote gebeurtenis
         desc: Leerlingen worden bekend gemaakt met het programmeerconcept van "events", wat acties zijn waar een computer constant naar kijkt. De leraar drukt op knoppen van een papieren afstandsbediening en leerlingen reageren hierop, afhankelijk van welke knop ingedrukt is.
       GraphPaperProgramming_2018:
         title: Programmeren op Ruitjespapier
         desc: Leerlingen schrijven een algoritme (een reeks instructies) waarbij ze een set van vooraf gedefinieerde opdrachten gebruiken om hun klasgenoten aanwijzingen te geven hoe ze een tekening moeten namaken.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       Conditionals_2018:
         title: Voorwaardelijke instructies

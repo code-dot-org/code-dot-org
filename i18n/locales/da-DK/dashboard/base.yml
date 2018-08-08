@@ -470,7 +470,7 @@ da:
       body: "Brug Play Lab til at skabe en historie eller et spil med karakterer fra Disneys Infinity"
     minecraft:
       title: "Minecraft"
-      body: "Udforsk en Minecraft-verden gennem kode."
+      body: "Udforsk en Minecraft-verden gennem kode"
     minecraft2016:
       title: "Minecraft"
     hero:
@@ -554,15 +554,7 @@ da:
     save: "Gem"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Andre"
-      - 
+      other: "Andre"
     submit: "Indsend"
     decline: "Luk"
   zendesk_too_young_message: 'Beklager, yngre brugere kan ikke logge på vores websted. Du kan gennemse <a href="http://support.code.org"> support.code.org</a> uden at logge på eller spørg dine forældre eller lærer om at kontakte os for dig.'
@@ -666,4 +658,5 @@ da:
   cookie_banner:
     accept: 'Jeg er enig'
   gdpr_dialog:
+    message: 'Data fra din brug af dette websted kan sendes til og gemmes eller behandles i USA.'
     yes: 'Ja'

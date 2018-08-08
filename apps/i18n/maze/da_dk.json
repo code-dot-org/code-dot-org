@@ -95,7 +95,7 @@
   "removeSquare": "fjern firkant",
   "removeStack": "fjern stak af {shovelfuls} bunker",
   "repeatCarefullyError": "For at løse dette, tænk omhyggeligt på et mønster af to bevægelser og et drej til at sætte i den \"gentag\" blokken.  Det er okay at have en ekstra tur i slutningen.",
-  "repeatUntil": "gentag indtil",
+  "repeatUntil": "Gentag indtil",
   "repeatUntilBlocked": "mens sti forude",
   "repeatUntilFinish": "gentag indtil færdig",
   "soil": "",

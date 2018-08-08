@@ -2,15 +2,15 @@ uk:
   data:
     block_categories:
       Actions: Дії
-      Loops: Цикли
-      Functions: Функції
+      Loops: петлі
+      Functions: функції
       Color: Колір
       Math: Математика
       Logic: Логіка
-      Variables: Змінні
+      Variables: змінні
       Conditionals: Умови
       Events: Події
-      Text: текст
+      Text: Текст
       Start: Початок
       Booleans: Логічні вирази
       test: тест

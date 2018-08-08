@@ -101,7 +101,7 @@ si:
       FunctionalSuncatchers:
         title: කියාකාරී නිර්මානාත්මක විදුරු කැබැල්ල
       SongwritingParameters:
-        title: පරාමිතීන් සමඟ ගීත ලිවීම
+        title: ගීත ලිවීම
       DiceRace:
         title: 'තත්කාලීන ඇල්ගොරිතම: දාදු කැටය විහිදීම'
       Internet:
@@ -187,7 +187,7 @@ si:
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing වැඩසටහන
       courseE_unplugged_songwriting:
-        title: පරාමිතීන් සමඟ ගීත ලිවීම
+        title: ගීත ලිවීම
       courseF_unplugged_tangrams:
         title: Tangram ඇල්ගොරිතමය
       courseF_unplugged_envelopeVariables:

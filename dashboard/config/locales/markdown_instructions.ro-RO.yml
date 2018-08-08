@@ -265,14 +265,21 @@ ro:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: Folosește "repetă până
         când" și un bloc "Dacă-altfel" pentru a mă duce la floarea-soarelui în cât
         mai puține blocuri posibile.
+      4-5 Nested Loops 12_markdown_instruction: Poți desena aceste 36 triunghiuri
+        folosind o buclă imbricată?
       4-5 Nested Loops 3_markdown_instruction: "Creează un soare prin a cuibări codul
         de început în interiorul altei bucle. Aceasta se numește o buclă imbricată.\r"
+      4-5 Nested Loops 5_markdown_instruction: Buclează codul dat pentru a crea o
+        moară de vânt.
+      4-5 Nested Loops 6_markdown_instruction: Poţi desena un hexagon folosind buclarea
+        codului pentru desenarea unui triunghi?
       4-5 Nested Loops 7_markdown_instruction: 'Reia de 10 ori acest proiect. Cât
         de mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii
         lui 360 la 10?)'
       4-5 Nested Loops 8_markdown_instruction: 'Reia de 6 ori acest proiect. Cât de
         mult te-ai întors la fiecare reluare? (Indiciu: Care este rezultatul împărţirii
         lui 360 la 6?)'
+      4-5 Nested Loops 9_markdown_instruction: Desenează dinţii în gura aligatorului!
       4-5 While Loops 1_markdown_instruction: Mută-mă în gaură şi umple-o două lopeţi
         cu pământ, folosind blocul "umple".
       4-5 While Loops 2_markdown_instruction: Mută-mă la grămada de pământ şi apoi
@@ -411,6 +418,9 @@ ro:
         fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Colectează tot nectarul
         din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '
+      courseD_bounce_events1_markdown_instruction: Trebuie sa ajungi la steag! Ataseaza
+        un bloc "cand sageata stanga" si apasa "Ruleaza" pentru a misca jucatorul
+        catre steag.
       courseD_maze_nestedLoops4_markdown_instruction: Du-mă la floarea-soarelui! Foloseste
         bucla "repeta" pentru a folosi mai putine blocuri.
       courseD_maze_nestedLoops4_2018_markdown_instruction: Du-mă la floarea-soarelui!
@@ -554,25 +564,37 @@ ro:
         bucla "repeta" pentru a folosi mai putine blocuri.
       grade3_maze_nestedLoops4_markdown_instruction: Utilizează două bucle pentru
         a ajunge la porc folosind mai puține blocuri.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Buclează codul dat pentru
+        a crea o moară de vânt.
       grade4_arist_nested_loop_polygons1_markdown_instruction: 'Reia de 10 ori acest
         proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este
         rezultatul împărţirii lui 360 la 10?)'
       grade4_arist_nested_loop_polygons2_markdown_instruction: 'Reia de 6 ori acest
         proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este
         rezultatul împărţirii lui 360 la 6?)'
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Poţi desena un hexagon
+        folosind buclarea codului pentru desenarea unui triunghi?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Desenează dinţii în
+        gura aligatorului!
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Creează un soare
         prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește
         o buclă imbricată.\r"
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Poți desena aceste
+        36 triunghiuri folosind o buclă imbricată?
       grade4_artist_functions2_markdown_instruction: Funcțiile îțî permit să construiești
         blocuri noi! Am mutat blocurile ce deseneaza un pătrat într-o funcție numită
         "desenează un pătrat". Poți folosi această funcție pentru a crea ochelarii?
         Pătratele au 75 de pixeli între ele.
+      grade4_artist_nested_loop_flags1_markdown_instruction: Buclează codul dat pentru
+        a crea o moară de vânt.
       grade4_artist_nested_loop_polygons1_markdown_instruction: 'Reia de 10 ori acest
         proiect. Cât de mult te-ai întors la fiecare reluare? (Indiciu: Care este
         rezultatul împărţirii lui 360 la 10?)'
       grade4_artist_nested_loop_triangles5_markdown_instruction: "Creează un soare
         prin a cuibări codul de început în interiorul altei bucle. Aceasta se numește
         o buclă imbricată.\r"
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Poți desena aceste
+        36 triunghiuri folosind o buclă imbricată?
       grade4_artist_parameters_triangles2_markdown_instruction: "Observi ceva diferit
         \nla aceste blocuri de funcţie? Fă clic pe \"Rulează\" pentru a vedea ce se
         întâmplă."

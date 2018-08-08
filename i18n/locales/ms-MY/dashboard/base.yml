@@ -8,7 +8,7 @@ ms:
         name: 'Nama Paparan'
         email: 'E-mel'
         username: 'nama pengguna'
-        password: 'kata laluan'
+        password: 'Kata laluan'
         password_confirmation: 'Pengesahan kata laluan'
         current_password: 'Kata laluan semasa'
         locale: 'Bahasa'
@@ -230,7 +230,7 @@ ms:
     more: 'Lagi'
     feedback: 'Sediakan maklum balas'
     translate: 'Bantu kami menterjemahkan ke bahasa anda'
-    support: 'Sokongan'
+    support: 'Bantuan dan Komuniti'
     tos: 'Terma'
     privacy: 'Dasar privasi'
     secure: 'Versi Dilindungi'
@@ -311,15 +311,7 @@ ms:
     save: "Simpan"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Lain-lain"
-      - 
+      other: "Lain-lain"
     submit: "Hantar"
   project:
     save: "Simpan"

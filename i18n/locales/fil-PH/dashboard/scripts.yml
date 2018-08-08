@@ -169,7 +169,7 @@ fil:
               name: Maze
         frozen:
           title: Mag-code kasama sina Anna at Elsa
-          description: Gagamit tayo ng code para masamahan sina Anna at Elsa sa kanilang paglalakbay sa mahika at kagandahan ng yelo. Ikaw ay lilikha ng mga niyebe at mga paterno habang ikaw ay nag-ice skate at gumawa ng isang kamangha-manghang lugar sa taglamig na maaari mong ibahagi sa iyong mga kaibigan!
+          description: Gumamit tayo ng code para samahan sina Anna at Elsa sa kanilang pagtuklas sa mahika at kagandahan ng yelo. Ikaw ay lilikha ng mga niyebe at mga paterno habang ikaw ay nag-iceskate at gumawa ng isang kahanga-hangang lugar sa taglamig na maaari mong ibahagi sa iyong mga kaibigan!
           description_short: Gamitin natin ang code para samahan sina Anna at Elsa sa kanilang pagtuklas sa mahika at kagandahan ng yelo.
           stages:
             Artist:
@@ -631,6 +631,7 @@ fil:
             PDK5 Intro:
               name: Panimula sa PDK5
         cspunit3:
+          description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
           stages:
             APIs and Function Parameters:
               name: Mga API at Mga Parameter ng Function
@@ -840,6 +841,13 @@ fil:
               name: Misteryosong Modelo
             Welcome Back!:
               name: Maligayang Pagbabalik!
+        Testing:
+          title: Pagsubok
+          description: Pagsubok
+          description_short: Pagsubok
+          stages:
+            Testing:
+              name: Pagsubok
         cspunit2:
           stages:
             Algorithms Detour - Hard Problems TSP:
@@ -1503,6 +1511,7 @@ fil:
             Unit 3 Overview:
               name: Yunit 3 Buod
         cspunit3temp:
+          description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
           stages:
             Canvas and Arrays in Apps:
               name: Mga Canvas at Mga Array sa Apps
@@ -3433,6 +3442,7 @@ fil:
             Loops in Harvester:
               name: Mga Loops sa Harvester
         coursed-draft:
+          title: 'Mga Pundamental sa CS: Kursong D'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5230,6 +5240,7 @@ fil:
             Please complete the CSP Mid-course survey:
               name: Mangyaring kumpletohin ang CSP Kalagitnaang-kurso na surbey
           title: CSP Yunit 3 - Panimula sa Pag-program (subgoals)
+          description: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
         csd4-draft:
           stages:
             Analysis of Design:

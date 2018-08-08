@@ -259,14 +259,23 @@ gl:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: |-
         Usa un bloque "repita até" e
         un bloque "se-senón" para me levar até o xirasol no menor número de bloques posíbel.
+      4-5 Nested Loops 12_markdown_instruction: |-
+        Podes debuxar estes 36 triángulos usando
+        un bucle aniñado?
       4-5 Nested Loops 3_markdown_instruction: "Crea un sol aniñando o código inicial\ndentro
         de outro bucle. Chamamos a isto bucle aniñado.\r"
+      4-5 Nested Loops 5_markdown_instruction: Repite o código dado para crear un
+        muiño de vento.
+      4-5 Nested Loops 6_markdown_instruction: |-
+        Podes debuxar un hexágono repetindo o
+        código do triángulo?
       4-5 Nested Loops 7_markdown_instruction: |-
         Repite este debuxo 10 veces. Canto
         necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
       4-5 Nested Loops 8_markdown_instruction: |-
         Repita este debuxo 6 veces. Canto
         precisas virar a cada repetición? (Pista: canto é 360 dividido por 6?)
+      4-5 Nested Loops 9_markdown_instruction: Debuxa o dente na boca do crocodilo!
       4-5 While Loops 1_markdown_instruction: |-
         Móveme para o buraco e cúbreo con
         dúas pás de terra, usando o bloque "cubra".
@@ -570,23 +579,38 @@ gl:
       grade3_maze_loops2_markdown_instruction: Lévame até o xirasol!
       grade3_maze_nestedLoops4_markdown_instruction: Usa dous bucles para chegar até
         o porco usando menos bloques.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Repite o código dado para
+        crear un muiño de vento.
       grade4_arist_nested_loop_polygons1_markdown_instruction: |-
         Repite este debuxo 10 veces. Canto
         necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
       grade4_arist_nested_loop_polygons2_markdown_instruction: |-
         Repita este debuxo 6 veces. Canto
         precisas virar a cada repetición? (Pista: canto é 360 dividido por 6?)
+      grade4_arist_nested_loop_triangles3_markdown_instruction: |-
+        Podes debuxar un hexágono repetindo o
+        código do triángulo?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Debuxa o dente na
+        boca do crocodilo!
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Crea un sol aniñando
         o código inicial\ndentro de outro bucle. Chamamos a isto bucle aniñado.\r"
+      grade4_arist_nested_loop_triangles6_markdown_instruction: |-
+        Podes debuxar estes 36 triángulos usando
+        un bucle aniñado?
       grade4_artist_functions2_markdown_instruction: |-
         As funcións permiten que definas novos bloques! Movemos
         os bloques para debuxar un cadrado para dentro dunha función chamada "debuxa un cadrado".
         Podes usar a función "debuxa un cadrado" para crear os lentes? Os cadrados están separados por 75 pixels.
+      grade4_artist_nested_loop_flags1_markdown_instruction: Repite o código dado
+        para crear un muiño de vento.
       grade4_artist_nested_loop_polygons1_markdown_instruction: |-
         Repite este debuxo 10 veces. Canto
         necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
       grade4_artist_nested_loop_triangles5_markdown_instruction: "Crea un sol aniñando
         o código inicial\ndentro de outro bucle. Chamamos a isto bucle aniñado.\r"
+      grade4_artist_nested_loop_triangles6_markdown_instruction: |-
+        Podes debuxar estes 36 triángulos usando
+        un bucle aniñado?
       grade4_artist_parameters_triangles2_markdown_instruction: |-
         Percibes algo diferente
         sobre estes bloques de función? Clica en "Executar" para ver o que acontece.

@@ -49,7 +49,7 @@
       2-3 Artist Functions 11.5_markdown_instruction: "Her er den samme `tegn en sekskant`-funksjonen. \\r\n\\r\nHva skjer hvis du gjentar hovedprogrammet 6 ganger, snur 60 grader hver gang du gjentar?"
       2-3 Artist Functions 11_markdown_instruction: "Vi har gitt funksjonen `tegn en firkant`det nye navnet, `tegn en sekskant`, men de gir oss fortsatt firkanter! \\r\n\\r\nKan du endre `tegn en sekskant`-funksjonen til å tegne en sekskant med sider på 50 piksler?\n\\r\n\\r\nTegn bildet ved å bruke den nye funksjonen!"
       2-3 Artist Functions 12 Mike_markdown_instruction: "Funksjoner er virkelig flott for å tegne komplekse ting flere ganger. Kan du bruke funksjonen \"tegne en blomst\" til å fylle resten av planteboksen? (Hint: planter er atskilt med 100 pikslers avstand)  "
-      2-3 Artist Functions 12 a_markdown_instruction: "Funksjoner er virkelig flott for å tegne komplekse ting flere ganger. Kan du bruke funksjonen \"tegne en blomst\" til å fylle resten av planteboksen? (Hint: planter er atskilt med 100 pikslers avstand)  "
+      2-3 Artist Functions 12 a_markdown_instruction: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
       2-3 Artist Functions 12_markdown_instruction: "Funksjoner er veldig bra når man skal tegne kompliserte ting mange ganger. \\r\n\\r\nKan du bruke funksjonen `tegn en blomst` for å fylle ut resten av blomsterkassa?\\r\nPlantene er alle 100 piksler fra hverandre."
       2-3 Artist Functions 2_markdown_instruction: "Funksjoner lar deg lage nye blokker!\\r\n\\r\nVi har flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \\r\n\\r\nFirkantene er 75 piksler fra hverandre."
       2-3 Artist Functions 3_markdown_instruction: "Endre funksjonen slik at den tegner sider på 115 piksler. \\r\n\\r\nDisse firkantene er nå 45 piksler fra hverandre."
@@ -213,7 +213,7 @@
       4-5 Maze Assessment 1_markdown_instruction: "**Oppgave:** Kom deg bort til solsikken ved å bruke så få blokker som mulig."
       4-5 Maze Conditionals 1_markdown_instruction: Bruk blokke `gjenta til` for å få zombien bort til solsikken.
       4-5 Maze Conditionals 10_markdown_instruction: "Kan du legge til kun 3 blokker for å få zombien til å løse denne kompliserte labyrinten? \\r\n\\r\nHvis du gjør det riktig vil han kunne gå alle svingete veier, uavhengig av hvor lange de er!"
-      4-5 Maze Conditionals 2_markdown_instruction: Bruk "gjenta til" blokk for å få zombien til solsikken.
+      4-5 Maze Conditionals 2_markdown_instruction: Bruk blokke `gjenta til` for å få zombien bort til solsikken.
       4-5 Maze Conditionals 3_markdown_instruction: "Bruk `hvis`-blokken til å hjelpe meg finne ut når jeg skal snu. \\r\n"
       4-5 Maze Conditionals 4_markdown_instruction: Ok, løs denne på samme måte som forrige oppgave, men husk hvordan du brukte `hvis`og `gjenta til`-blokkene sammen med hverandre.
       4-5 Maze Conditionals 5_markdown_instruction: "\"Jeg vil ha solsikke!\" \\r\n\\r\nBruk en `hvis`-setning for å få zombien bort til solsikken og bruk så få blokker som mulig."
@@ -230,6 +230,7 @@
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "**Oppgave:** Bruk en `gjenta til` og en `hvis/ellers` for å få meg bort til solsikken med så få blokker som mulig."
       4-5 Nested Loops 1_markdown_instruction: "Fullfør koden som tegner disse trekantene. Den første er laget for deg. Hint: 3 trekanter i en 360 graders rotasjon.\\r\n\\r\n"
       4-5 Nested Loops 11_markdown_instruction: "Kan du tegne disse 10 kvadratene på fortauet ved å bruke løkke-i-løkke?\\r\n\\r\nHvert kvadrat er 30 piksler."
+      4-5 Nested Loops 12_markdown_instruction: Får du til å tegne disse 36 trianglene ved hjelp av en løkke i løkke?
       4-5 Nested Loops 2_markdown_instruction: "Legg denne løkken inni en annen løkke for å tegne 10 trekanter. \\r\nDette kalles en nøstet løkke eller løkke-i-løkke.  "
       4-5 Nested Loops 3_markdown_instruction: |-
         Lag en sol ved å legge startkoden inni en annen løkke.\r
@@ -281,11 +282,11 @@
       K-1 Maze Loops 12_markdown_instruction: "Få meg bort til grisen! Bruk gjenta-brikken."
       K-1 Maze Loops 2_markdown_instruction: Bruk Gjenta-brikken for å få meg bort til grisen!
       K-1 Maze Loops 8_markdown_instruction: Få meg bort til grisen! Bruk gjenta-brikken.
-      MC Agent Freeplay_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Bruk agentens kode til å utforske verdenen."
+      MC Agent Freeplay_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Bruk agentens kode for å hjelpe deg med å utforske denne verdenen."
       MC_2017_Ryan_02_markdown_instruction: "Kode som dette kan gjøres enda kortere ved å bruke løkker! \\r\n\\r\nFå agenten bort til trykkplaten ved å bruke en `gjenta`-løkke til å hjelpe ham flytte fremover."
       MC_HOC_2017 Agent Test_markdown_instruction: "Klikk \"Kjør\" og flytt spilleren ved å bruke **piltastene*. \\r\n\\r\nFor å fullføre denne oppgaven må du gå bort til døra og åpne den (ved å bruke **mellomromstasten*)  slik at du kan komme deg bort til den oransje ruten på innsiden."
-      MC_HOC_2017_01_markdown_instruction: "Klikk \"Kjør\" for å flytte spilleren ved å bruke **piltastene**.  \\r\n\\r\nFor å fullføre denne oppgaven må du gå bort til døra og åpne den (ved å bruke **mellomromstasten*)  slik at du kan komme deg bort til den oransje ruten på innsiden."
-      MC_HOC_2017_01_Cole_markdown_instruction: Du må samle alle verktøyene på denne reisen. Flytt deg rundt ved å bruke **piltastene** og kom deg til kisten for å vinne
+      MC_HOC_2017_01_markdown_instruction: "Klikk \"Kjør\" og flytt spilleren ved å bruke **piltastene*. \\r\n\\r\nFor å fullføre denne oppgaven må du gå bort til døra og åpne den (ved å bruke **mellomromstasten*)  slik at du kan komme deg bort til den oransje ruten på innsiden."
+      MC_HOC_2017_01_Cole_markdown_instruction: Du må samle alle verktøyene på denne reisen. Beveg deg ved å bruke **piltastene** og vinn ved å komme til skattekisten
       MC_HOC_2017_01_Kiki_markdown_instruction: 'For å spille denne oppgaven, klikk på den oransje "Kjør"-knappen under spilleområdet og flytt spilleren rundt ved å bruke **piltastene**.  '
       MC_HOC_2017_01_RETRY_markdown_instruction: |-
         Denne døra er låst, men agenten er her for å hjelpe!\r
@@ -297,7 +298,7 @@
       MC_HOC_2017_02_Will_markdown_instruction: "For å fullføre denne oppgaven må spilleren komme seg til den oransje ruten inne i det hemmelige skogholtet, som er bak den låste døra. \\r\n\\r\nKoden i arbeidsområdet får agenten til å flytte seg fremover to ganger bort til trykkplaten og åpne døra for Alex eller Steve."
       MC_HOC_2017_03_Cole_markdown_instruction: "{currentPlayerName} fortsetter på sitt eventyr og trenger **kompasset** [compass] for å forberede turen. \\r\n  \\r\nSkrive kode for å få agenten til å åpne porten. "
       MC_HOC_2017_03_Kiki_markdown_instruction: "Spillerens eventyr begynner bak den låste døra, i det hemmelige skogholtet! \\r\n\\r\n\\r\nHjelp agenten med å åpne døra ved å skrive kode som får han bort til trykkplaten."
-      MC_HOC_2017_04_markdown_instruction: Endre løkka fra forrige oppgave for å hjelpe agenten med å lage en vei over den vide delen av denne elva.
+      MC_HOC_2017_04_markdown_instruction: Endre løkka fra forrige oppgave for å hjelpe agenten med å lage en sti over den vide delen av elva.
       MC_HOC_2017_04POINT5_Cole_markdown_instruction: |-
         Du kom deg ut av sumpen! Nå må du få spilleren trygt bort til den oransje ruten.\r
         \r
@@ -341,15 +342,15 @@
       MC_HOC_2017_10_RYAN_markdown_instruction: Prøv å bygge en funksjon som gjør det enklere for agenten å fullføre denne minecarten og få spilleren bort til den oransje ruten.
       MC_HOC_2017_10_RYAN2_markdown_instruction: Prøv å bygge en funksjon som gjør det enklere for agenten å fullføre denne minecarten og få spilleren bort til den oransje ruten.
       MC_HOC_2017_11_Kiki_markdown_instruction: Nå er det opp til deg! Se hva du kan lage rundt denne frosne innsjøen.
-      MC_HOC_2017_13_Cole_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Bruk agentens kode til å utforske verdenen."
+      MC_HOC_2017_13_Cole_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Bruk agentens kode for å hjelpe deg med å utforske denne verdenen."
       MC_HOC_2017_4.5v2_markdown_instruction: |-
         Du kom deg ut av sumpen! Nå må du få spilleren trygt bort til den oransje ruten.\r
         \r
         Hjelp agenten rydde veien ved å bruke løkker til å gå over de to første trykkplatene.
       MC_HOC_2017_Ali_markdown_instruction: 'Se på funksjonene under. Hvordan kan du bruke dem til å unngå Ghastene og få {currentPlayerName} trygt bort til **Enchanted Book** [book_enchanted]?  '
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Kan du utfordre deg selv til å samle alle diamantene? "
+      MC_HOC_2017_FP10x10_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Kan du utfordre deg selv til å samle alle diamantene?\n"
       MC_HOC_2017_FP10x10_RE_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Kan du utfordre deg selv til å samle alle diamantene?\n"
-      MC_HOC_2017_FP20x20_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Bruk agentens kode til å utforske verdenen."
+      MC_HOC_2017_FP20x20_markdown_instruction: "**Fritt spill:** Nå er det opp til deg! Bruk agentens kode for å hjelpe deg med å utforske denne verdenen."
       MC_HOC_2017_Ryan_03_markdown_instruction: "Visste du at du kan putte mer enn én blokk med kode inni en løkke? \\r\n\\r\nBruk en `gjenta`-løkke for å hjelpe agenten bygge en bro over elva ved å plassere planker i vannet."
       MC_HOC_2017_Ryan_05_markdown_instruction: "Noen ganger må du slå ned ting som kommer i veien for spilleren. \\r\nBruk `ødelegg blokk`for å rydde veien for all kaktusen mellom agenten og trykkplaten."
       Mike Test Bee Conditionals 1_markdown_instruction: "Denne skyen blokkerer synet mitt!\n\\r\n\\r\nSe om det er en blomst under skyen, og hent nektar kun hvis det er en blomst der.   \\r\nVær forsiktig, det kan endre seg!"
@@ -366,7 +367,7 @@
       Overworld Move to Sheep_markdown_instruction: Legg til enda en "gå fremover"-kommando for å nå fram til sauen.
       Overworld Move to Sheep_2018_markdown_instruction: Legg til enda en "gå fremover"-kommando for å nå fram til sauen.
       PS copy 2-3 Bee Conditionals 5_markdown_instruction: "Disse magiske lilla blomstene endrer seg!\\r\n\\r\nHver gang du kjører koden kan blomstene enten ha 1 nektar eller ingen... Men du vet ikke antall nektar før du kjører koden!\\r\n\\r\nPass på så du ikke samler nektar fra blomster som ikke har noen. \\r\nDu må først sjekke om nektaren er lik 1 ved å bruke \"hvis nektar\"-blokken."
-      Testing Quantum Farmer_markdown_instruction: "Wow, jeg fant et virkelig dypt hull! Jeg vet ikke hvor mange spadetak med jord det tar å fylle det. Kan du skrive et program som fyller oppi det til bakken er helt jevn? Tips bruk en mens-løkke denne gangen."
+      Testing Quantum Farmer_markdown_instruction: "Wow, se på det! \\r\n\\r\nJeg vet ikke hvor mange spadetak som trengs for å fylle dette hullet. \\r\nKan du skrive et program som fortsetter å  bruke blokka`fyll` helt til bakken er jevn?  "
       Underground If Statements_markdown_instruction: Nå begynner det å bli vanskelig. Utvinn 3 redstone, men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over all lava du kommer over.
       Underground If Statements_2018_markdown_instruction: Nå begynner det å bli vanskelig. Utvinn 3 redstone, men ikke fall i lavaen. Bruk en `hvis`-kommando til å plassere brostein over all lava du kommer over.
       course3_farmer_until_challenge2_markdown_instruction: Bruk blokken hvis/ellers for å følge den svingete veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
@@ -374,15 +375,20 @@
       courseD_bee_nestedLoops5_markdown_instruction: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
       courseD_bee_nestedLoops8_markdown_instruction: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
+      courseD_bounce_events1_markdown_instruction: Kom deg til flagget! Koble en blokk til "når venstre pil"-blokken og trykk "Kjør" for å flytte spillfiguren til flagget.
       courseD_farmer_until_challenge2_markdown_instruction: Bruk blokken hvis/ellers for å følge den svingete veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
       courseD_farmer_until_challenge2_2018_markdown_instruction: Bruk blokken hvis/ellers for å følge den svingete veien. På hvert hjørne, bruk kommandoen `fjern 1` i en løkke for å fjerne haugene.
+      courseD_farmer_while_challenge1_markdown_instruction: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge1_2018_markdown_instruction: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge2_markdown_instruction: Fyll inn alle hullene og fjern alle haugene.
+      courseD_farmer_while_challenge2_2018_markdown_instruction: Fyll inn alle hullene og fjern alle haugene.
       courseD_maze_nestedLoops4_markdown_instruction: 'Få meg til solsikken!'
       courseD_maze_nestedLoops4_2018_markdown_instruction: 'Få meg til solsikken!'
       courseE_bee_functions2_markdown_instruction: "Funksjoner er blokker med kode som utfører en oppgave. \\r\n\\r\nBruk funksjonen 'hent 2 nektar' for å hente nektaren fra hver blomst."
       courseE_bee_functions2_2018_markdown_instruction: "Funksjoner er blokker med kode som utfører en oppgave. \\r\n\\r\nBruk funksjonen 'hent 2 nektar' for å hente nektaren fra hver blomst."
       courseE_bee_functions3_markdown_instruction: Funksjoner er kodeblokker som utfører en bestemt oppgave. Bruk blokken "hent 5" til å samle inn 5 nektar om gangen. Pass på å bruk en løkke for å bruke ideelt antall blokker.
       courseE_bee_functions3_2018_markdown_instruction: Funksjoner er kodeblokker som utfører en bestemt oppgave. Bruk blokken "hent 5" til å samle inn 5 nektar om gangen. Pass på å bruk en løkke for å bruke ideelt antall blokker.
-      courseE_farmer_concept4_markdown_instruction: Nå skal vi ta det et nivå lenger! Vi har nøstet hele kodeblokken inn in annen løkke, men du må få artisten på riktig plass for å tegne den neste linjen. Hvilke av disse kodeblokkene kan du plassere mot slutten av den ytre løkken for å tegne hele mønsteret.
+      courseE_farmer_concept4_markdown_instruction: "La oss ta dette videre!\nVi har nøstet hele kodeblokken inni en annen løkke, men du må få artisten tilbake på plassen sin for å tegne den neste linja. Hvilken av disse kodeblokkene kan du plassere på slutten av den ytterste løkka for å tegne hele mønsteret?"
       courseF_bee_for_challenge2_markdown_instruction: Løs denne oppgaven med færrest mulig brikker.
       courseF_bee_for_challenge2_2018_markdown_instruction: Løs denne oppgaven med færrest mulig brikker.
       frozen circle function in circle_markdown_instruction: Nå skal vi lage 20 overlappende sirkler ved å snu 18 grader mellom hver sirkel.
@@ -404,18 +410,22 @@
       frozen square loop 3x_markdown_instruction: La oss lage tre firkanter med spissen mot hverandre. Husk å snu 120 grader før hvert nytt firkant.
       frozen square loop_markdown_instruction: Hei, jeg heter Anna av Arendelle! La oss lage et kvadrat ved hjelp av "Gjenta" blokken som bruker færre blokker. Hvor mange ganger trenger "Gjenta" blokken gå gjennom blokkene inni for å lage et kvadrat?
       frozen square snowflake_markdown_instruction: Får du til å lage et snøfnugg ved å bruke "repeter"-blokken til å lage 10 kvadrater og "Snu"-blokken for å snu deg 36 grader mellom hvert kvadrat?
-      grade2_MakeDogTag_8_markdown_instruction: Nå skal vi koble sammen en haug med V'er ved å tegne de i en løkke.
+      grade2_MakeDogTag_8_markdown_instruction: La oss koble sammen en haug av V-er ved å bruke en løkke.
       grade2_MakeDogTag_9_markdown_instruction: "Nå skal vi lage noe gøy!\n\\r\n\\r\nGjør det samme som i forrige oppgave, men legg til en blokk for å snu til venstre med 30 grader inni løkka. Gjenta 24 ganger i stedet for 8."
       grade2_PuppyLoops_10_markdown_instruction: |-
-        Hjulet mitt er ikke fullført. Hvor mange ganger må jeg repetere for å fullføre det?
+        Læreren min sier jeg burde fullføre det jeg starter på!\r
+        \r
+        Hjelp meg med å fullføre tegningen. Kan du finne ut hva som er feil i koden?
       grade2_PuppyLoops_2_markdown_instruction: |-
         Plutselig dukket det opp en magisk blokk! Med `gjenta`-blokken kan du gjenta koden om og om igjen.\r
         \r
         Kan du komme deg bort til grisen ved å lage en løkke som bruker kun én `gå framover`-blokk inni en `gjenta`-blokk?
       grade2_PuppyLoops_4_markdown_instruction: Bruk to løkker for å bruke færre blokker for å komme frem til grisen.
-      grade2_PuppyLoops_8_markdown_instruction: "Koden for kattens værhår er feil.\n\\r\n\\r\nHint: Fiks koden slik at alle værhårene har samme lengde."
+      grade2_PuppyLoops_8_markdown_instruction: "Denne koden for kattens værhår er feil. \\r\n\\r\nFiks koden slik at den tegner alle værhårene like lange."
       grade2_PuppyLoops_9_markdown_instruction: |-
-        Ser ut som om C-en i "Code" er tegnet feil vei. Kan du får den til å se ut som en C?
+        Ser ut som om C-en i koden er tegnet feil vei!\r
+        \r
+        Kan du få den til å se ut som en C igjen?
       grade2_puppy_loops2_markdown_instruction: |-
         Plutselig dukket det opp en magisk blokk! Med `gjenta`-blokken kan du gjenta koden om og om igjen.\r
         \r
@@ -426,9 +436,9 @@
       grade3_ConditionalsElse_4_markdown_instruction: "Noen ganger skjuler denne skyen en blomst og noen ganger skjuler den en bikube! \\r\n\\r\nBruk blokken `hvis/ellers` til å samle nektar kun hvis det er en blomst der. \\r\nHvis ikke det er det, lag honning (fordi det er en bikube)."
       grade3_ConditionalsElse_5_markdown_instruction: |-
         Det kan være en blomst eller en bikube under skyene. Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en blomst. Hvis ikke så lager du honning (for da er det en bikube).
-      grade3_ConditionalsElse_6_markdown_instruction: "Denne lilla blomsten kan ha enten 3, 2 eller 1 nektar. Her er en \"hvis/ellers\"-blokk kombinert med en annen \"hvis/ellers\"-blokk for å danne en \"Hvis/ellers hvis, ellers\"-blokk. fullfør løsningen for å samle inn en ukjent mengde med nektar."
-      grade3_ConditionalsElse_7_markdown_instruction: "Husk at lilla blomster kan ha 3,2 eller 1 nektar. Fullfør \"kontroller lilla blomster\" funksjonen og bruk den til å samle inn nektar fra alle blomstene."
-      grade3_ConditionalsElse_8_markdown_instruction: "Skriv en funksjon inni blokken som heter `check flower make\nhoney`. Funksjonen din skal sjekke hvor mye nektar det er i den lilla blomsten og hente den. Deretter skal den bevege seg fremover og så lage honning."
+      grade3_ConditionalsElse_6_markdown_instruction: "Jeg er ikke sikker på hvor mye nektar denne blomsten har, men jeg vet at den har enten 1, 2 eller 3 nektar. \\r\n\\r\nKombiner betingelsene (`hvis` og/eller `hvis/ellers`) for å bare hente mengden nektar som blomsten har. \\r\n\\r\nHusk at mengen nektar kan endre seg hver gang du kjører oppgaven!"
+      grade3_ConditionalsElse_7_markdown_instruction: "Disse blomstene har 3, 2 eller 1 nektar. \\r\n\\r\nFullfør funksjonen `check purple flower` for bruk den for å samle all nektaren i blomstene."
+      grade3_ConditionalsElse_8_markdown_instruction: "Skriv funksjonen check\nflower make honey`. \\r\n\\r\nFunksjonen din burde sjekke om de lilla blomstene har 3, 2 eller 1 nektar og hente all nektaren som er der. \\r\nSå burde den flytte framover og lage honning."
       grade3_ConditionalsElse_9_markdown_instruction: "Lekse: Denne koden er feil.\nFullfør \"hent nektar og lag honning\" funksjonen, deretter bruker du den til å samle inn all nektar og honning. Husk at lilla blomster kan ha 3, 2 eller 1 nektar."
       grade3_ConditionalsElse_TeacherIDo_markdown_instruction: |-
         Det kan være en blomst eller en bikube under skyene. Bruk "hvis/ellers"-blokken til å samle inn nektar dersom det er en blomst. Hvis ikke så lager du honning (for da er det en bikube).
@@ -437,7 +447,7 @@
         Samle inn nektar og lag honning. Tips: hva skjer dersom du bruker "hvis nektar" på en rød blomst? Kan du fullføre dette med en løkke?
       grade3_Conditionals_11 BAD_markdown_instruction: "**Oppgave:** Bruk en 'så lenge'-løkke for å samle all nektaren fra disse blomstene."
       grade3_Conditionals_11_markdown_instruction: "La oss sette alt sammen!\\r\n\\r\nBruk det du har lært for å samle nektar kun fra blomster som har det. Bruk så få blokker som mulig. \\r\n\\r\nIkke glem å lage honning til slutt."
-      grade3_Conditionals_12_markdown_instruction: "Samle inn nektar fra alle fire blomstene."
+      grade3_Conditionals_12_markdown_instruction: "Dette trappe-mønsteret ser kjent ut. \\r\n\\r\nSamle nektar fra kun de blomstene som har det. Bruk så få blokker som mulig."
       grade3_Conditionals_13_markdown_instruction: "**Oppgave:** Samle all nektaren. \\r\nVær forsiktig så du ikke prøver å samle nektar fra lilla blomster som ikke har."
       grade3_Conditionals_2_markdown_instruction: "Hjelp meg å samle inn nektaren fra alle blomstene og lag honning. Bruk en løkke."
       grade3_Conditionals_3_markdown_instruction: "Disse magiske lilla blomstene endrer seg!\\r\n\\r\nHver gang du kjører koden kan blomstene enten ha 1 nektar eller ingen... Men du vet ikke antall nektar før du kjører koden!\\r\n\\r\nPass på så du ikke samler nektar fra blomster som ikke har noen. \\r\nDu må først sjekke om nektaren er lik 1 ved å bruke \"hvis nektar\"-blokken."
@@ -448,7 +458,9 @@
         Fiks feilen(e) for å samle all nektaren.
       grade3_Debugging_5_markdown_instruction: "Den blomsten ser god ut! \\r\n\\r\nFiks feilen(e) i koden for å samle all nektaren. \\r\nDu kan bruke både knappene kjør og trinn."
       grade3_Debugging_6_markdown_instruction: |-
-        Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. 
+        For en fin utfordring!\r
+        \r
+        Fiks feilen(e) for å samle all nektaren.
       grade3_Debugging_9_markdown_instruction: |-
         Disse blokkene plager meg. Fiks feilene og samle inn nektaren for å lage all honningen. 
       grade3_Loops_10_markdown_instruction: |-
@@ -456,9 +468,9 @@
         \r
         Hjelp Bie med å samle all nektaren og lage all honningen ved å bruke så få blokker som mulig.
       grade3_Loops_11_markdown_instruction: "Mønsteret på denne stien er litt annerledes enn de andre.\\r\n\\r\nKan du samle all nektaren ved å bruke så få blokker som mulig?"
-      grade3_Loops_3_markdown_instruction: Kan du bruke en løkke til å samle inn all nektaren?
-      grade3_Loops_4_markdown_instruction: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar og lage honning.
-      grade3_Loops_6_markdown_instruction: "Hva skjer dersom du gjentar dette 3 ganger? \nIkke glem å lage honning til slutt!"
+      grade3_Loops_3_markdown_instruction: Bruk en `gjenta`-løkke for å samle all nektaren.
+      grade3_Loops_4_markdown_instruction: Bruk en `gjenta`-løkke for å samle all nektaren og lage all honningen.
+      grade3_Loops_6_markdown_instruction: "Hvor mange ganger burde du gjenta for å få til denne oppgaven? \\r\n\\r\nGjenta-blokker er din venn! Bruk noen av dem for å fullføre denne oppgaven med så få blokker som mulig."
       grade3_Loops_7_markdown_instruction: |-
         Hver blomst inneholder en enhet med nektar. Samle inn nektar fra alle blomstene. 
       grade3_Loops_TeacherIDo_markdown_instruction: |-
@@ -473,21 +485,29 @@
       grade3_maze_nestedLoops3_markdown_instruction: Få meg bort til grisen! Du kan kun bruke én `gå framover`-blokk denne gangen
       grade3_maze_nestedLoops4_markdown_instruction: Bruk to løkker for å bruke færre blokker for å komme frem til grisen.
       grade4_arist_nested_loop_circles1_markdown_instruction: "**Oppgave:** Bruk løkke-i-løkke for å fullføre mønsteret."
-      grade4_arist_nested_loop_polygons1_markdown_instruction: "Repeter designet 10 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 10?)"
+      grade4_arist_nested_loop_flags1_markdown_instruction: Bruk en løkke rundt denne koden for å lage en vindmølle.
+      grade4_arist_nested_loop_polygons1_markdown_instruction: "Gjenta dette mønsteret 10 ganger. \\r\n\\r\nHvor mye må du snu hver gang du gjentar?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Repeter designet 6 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 6?)"
       grade4_arist_nested_loop_squares1_markdown_instruction: "Kan du tegne disse 10 kvadratene på fortauet ved å bruke løkke-i-løkke?\\r\n\\r\nHvert kvadrat er 30 piksler."
       grade4_arist_nested_loop_triangles2_markdown_instruction: "Legg denne løkken inni en annen løkke for å tegne 10 trekanter. \\r\nDette kalles en nøstet løkke eller løkke-i-løkke.  "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Kan du tegne en sekskant ved å gjenta trekant-koden?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Tegn tennene i alligatoren sin munn!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
-        Tegn en sol ved å legge koden fra utgangspunktet inni en annen løkke. Dette kalles en løkke i løkke.\r
-        
-      grade4_artist_functions2_markdown_instruction: "Funksjoner lar deg definere nye blokker! Vi har flyttet blokker for å tegne et kvadrat i en funksjon kalt \"tegne en firkant\". Kan du bruke funksjonen \"tegne en firkant\" for å opprette vinduer? kvadratene er 75 piksler fra hverandre."
+        Lag en sol ved å legge startkoden inni en annen løkke.\r
+        \r
+        For å få til dette kule mønsteret med et hult senter må du hoppe fremover med den samme lengden som trekanten sin side før du snur deg.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Får du til å tegne disse 36 trianglene ved hjelp av en løkke i løkke?
+      grade4_artist_functions2_markdown_instruction: "Funksjoner lar deg lage nye blokker!\\r\n\\r\nVi har flyttet de nye blokkene du trenger for å lage et kvadrat inn i en funksjon som heter `tegn en firkant`. Bruk denne funksjonen for å lage brillene. \\r\n\\r\nFirkantene er 75 piksler fra hverandre."
       grade4_artist_nested_loop_circles1_markdown_instruction: "**Oppgave:** Bruk løkke-i-løkke for å fullføre mønsteret."
-      grade4_artist_nested_loop_polygons1_markdown_instruction: "Repeter designet 10 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 10?)"
+      grade4_artist_nested_loop_flags1_markdown_instruction: Bruk en løkke rundt denne koden for å lage en vindmølle.
+      grade4_artist_nested_loop_polygons1_markdown_instruction: "Gjenta dette mønsteret 10 ganger. \\r\n\\r\nHvor mye må du snu hver gang du gjentar?"
       grade4_artist_nested_loop_squares1_markdown_instruction: "Kan du tegne disse 10 kvadratene på fortauet ved å bruke løkke-i-løkke?\\r\n\\r\nHvert kvadrat er 30 piksler."
       grade4_artist_nested_loop_triangles1_markdown_instruction: "Fullfør koden som tegner disse trekantene. Den første er laget for deg. Hint: 3 trekanter i en 360 graders rotasjon.\\r\n\\r\n"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
-        Tegn en sol ved å legge koden fra utgangspunktet inni en annen løkke. Dette kalles en løkke i løkke.\r
-        
+        Lag en sol ved å legge startkoden inni en annen løkke.\r
+        \r
+        For å få til dette kule mønsteret med et hult senter må du hoppe fremover med den samme lengden som trekanten sin side før du snur deg.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Får du til å tegne disse 36 trianglene ved hjelp av en løkke i løkke?
       grade4_artist_parameters_triangles2_markdown_instruction: Legger du merke til noe annerledes med disse funksjonsblokkene? Klikk "Kjør" for å se hva som skjer.
       grade4_bee_conditionals_nested_loops_markdown_instruction: "**Oppgave:** Samle all nektaren. \\r\nVær forsiktig så du ikke prøver å samle nektar fra lilla blomster som ikke har."
       grade4_bee_conditionals_new1_markdown_instruction: "**Oppgave:** Samle all nektaren. \\r\nVær forsiktig så du ikke prøver å samle nektar fra lilla blomster som ikke har."
@@ -499,7 +519,7 @@
       grade4_bee_functions2_markdown_instruction: "Funksjoner er blokker med kode som utfører en oppgave. \\r\n\\r\nBruk funksjonen 'hent 2 nektar' for å hente nektaren fra hver blomst."
       grade4_bee_functions3_markdown_instruction: Funksjoner er kodeblokker som utfører en bestemt oppgave. Bruk blokken "hent 5" til å samle inn 5 nektar om gangen. Pass på å bruk en løkke for å bruke ideelt antall blokker.
       grade4_bee_nestedLoops4_markdown_instruction: 'Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.'
-      grade4_frozen_freeplay_markdown_instruction: Du har offisielt blitt en mesterkunstner! Lag et vinterparadis.
+      grade4_frozen_freeplay_markdown_instruction: "Du er nå offisielt blitt en mesterkunstner! \nLag et vinterparadis!"
       grade4_frozen_functions0_markdown_instruction: En sirkel er en spesiell form. Klarer du finne ut hvilket tall som skal erstatte spørsmålstegnene for å tegne en sirkel?
       grade4_frozen_functions1a_markdown_instruction: Bruk "Lag ny sirkel"-blokken for å lage 10 overlappende sirkler. Ikke glem å gå fremover mellom sirklene.
       grade4_frozen_functions2_markdown_instruction: Nå skal vi lage 20 overlappende sirkler ved å snu 18 grader mellom hver sirkel.
@@ -513,7 +533,7 @@
       grade4_frozen_square_loop3_markdown_instruction: Får du til å lage et snøfnugg ved å bruke "repeter"-blokken til å lage 10 kvadrater og "Snu"-blokken for å snu deg 36 grader mellom hvert kvadrat?
       grade4_review_artist2_markdown_instruction: "Dette huset trenger et tak! Tegn triangelet. \\r\n\\r\nHint: Alle tre sider er av samme lengde.\\r\n\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3_markdown_instruction: Blokken `hopp` beveger kunstneren uten å tegne. Tegn den stiplede linjen ved hjelp av både `hopp fremover` og `flytt fremover`-blokker.
-      grade4_review_bee1_markdown_instruction: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar og lage honning.
+      grade4_review_bee1_markdown_instruction: Bruk en `gjenta`-løkke for å samle all nektaren og lage all honningen.
       grade4_review_bee3_markdown_instruction: |-
         For en travel bie!\r
         \r
@@ -534,9 +554,9 @@
         \r
         Hjelp Bie med å samle all nektaren og lage all honningen ved å bruke så få blokker som mulig.
       level 'grade3_Loops_11_markdown_instruction: "Mønsteret på denne stien er litt annerledes enn de andre.\\r\n\\r\nKan du samle all nektaren ved å bruke så få blokker som mulig?"
-      level 'grade3_Loops_3_markdown_instruction: Kan du bruke en løkke til å samle inn all nektaren?
-      level 'grade3_Loops_4_markdown_instruction: Nå kan du bruke den nye gjenta-blokken for å samle inn nektar og lage honning.
+      level 'grade3_Loops_3_markdown_instruction: Bruk en `gjenta`-løkke for å samle all nektaren.
+      level 'grade3_Loops_4_markdown_instruction: Bruk en `gjenta`-løkke for å samle all nektaren og lage all honningen.
       level 'grade3_Loops_5_markdown_instruction: "For en vakker blomstereng! \\r\n\\r\nHjelp bien med å besøke alle blomstene.\\r\n\\r\nKan du få det til ved å bruke færre enn 7 blokker?"
-      level 'grade3_Loops_6_markdown_instruction: "Hva skjer dersom du gjentar dette 3 ganger? \nIkke glem å lage honning til slutt!"
+      level 'grade3_Loops_6_markdown_instruction: "Hvor mange ganger burde du gjenta for å få til denne oppgaven? \\r\n\\r\nGjenta-blokker er din venn! Bruk noen av dem for å fullføre denne oppgaven med så få blokker som mulig."
       level 'grade3_Loops_7_markdown_instruction: |-
         Hver blomst inneholder en enhet med nektar. Samle inn nektar fra alle blomstene. 

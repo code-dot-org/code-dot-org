@@ -72,7 +72,7 @@ ga:
           le cluiche cosúil le Mad Libs, chun cabhrú leo foghlaim faoi cé chomh héifeachtach
           atá an teibiú.
       Unplug9:
-        title: Códáil Sealaíochta
+        title: Códáil sealaíochta
         desc: 'Glacann an ceacht seo smaoineamh ó ghníomhaíocht roimhe seo (4. Ríomhchlárú
           ar Ghrafpháipéar), agus úsáideann sé na scileanna sin chun béim a chur ar
           chúpla bunphrionsabal tábhachtach: ríomhchláir a scríobh a fheidhmíonn de
@@ -296,7 +296,7 @@ ga:
           as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a
           atáirgeadh.
       courseD_unplugged_relayProgramming:
-        title: Códáil Sealaíochta
+        title: Códáil sealaíochta
         desc: Glacfaidh na daltaí páirt i rás sealaíochta, ag rith trasna na páirce
           chun algartam a scríobh, bunaithe ar Ríomhchlárú ar Ghrafpháipéar. Ní féidir
           leo ach treoir amháin a scríobh sa turas, agus má tá botún ann, caithfidh
@@ -423,4 +423,4 @@ ga:
       MoveItMoveIt_2018:
         title: Bog é, Bog é
       RelayProgramming_2018:
-        title: Códáil Sealaíochta
+        title: Códáil sealaíochta

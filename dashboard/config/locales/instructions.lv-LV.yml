@@ -309,6 +309,8 @@ lv:
       Bergeron Robot Maze1_instruction: 'Vai vari man palīdzēt notvert nerātno cūku?
         Saliec vairākus "pārvietot uz priekšu" blokus zem "kad palaists" bloka un
         spied "Palaist". '
+      Course 2 Bee Loops 1_instruction: Sveicināts! Es esmu bite. Vai vari man palīdzēt
+        iegūt nektāru no šiem ziediem?
       Course 2 Maze Loops 1_instruction: Vai vari mani aizvest līdz cūkai, izmantojot
         5 blokus?
       Course 4 Maze 1_instruction: Aizved dusmīgo putnu līdz cūkai!
@@ -375,6 +377,12 @@ lv:
       Mike Test Bee Conditionals 1_instruction: "Mākonis aizsedz man skatu! \nPaņem
         nektāru tikai tad, ja zem mākoņa ir paslēpts zieds.\nUzmanies, jo tas var
         mainīties!"
+      New Basketball Project_instruction: Izveido savu spēli "Basketbols". Vari mainīt
+        visus noteikumus, pielāgot izskatu. Kad pabeigts, spied "Pabeigt" un aicini
+        draugus spēlēt tavu spēli.
+      New Bounce Project_instruction: Izveido savu spēli "Pong". Vari mainīt visus
+        noteikumus, pielāgot izskatu. Kad pabeigts, spied "Gatavs" un aicini draugus
+        spēlēt tavu spēli.
       Overworld Avoid Monsters_instruction: |-
         Ieskriet ložņā ir bīstami.
         Uzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās.
@@ -499,6 +507,9 @@ lv:
         fona attēlu vai rokas un bumbas ātrumu, mēģini savākt cik vien daudz vari
         punktus kamēr pretinieks nav ieguvis 2 punktus!
       bounce_12_instruction: Izveido savu spēli "Pong". Vari mainīt visus noteikumus,
+        pielāgot izskatu. Kad pabeigts, spied "Gatavs" un aicini draugus spēlēt tavu
+        spēli.
+      bounce_12_2018_instruction: Izveido savu spēli "Pong". Vari mainīt visus noteikumus,
         pielāgot izskatu. Kad pabeigts, spied "Gatavs" un aicini draugus spēlēt tavu
         spēli.
       bounce_12_basketball_instruction: Izveido savu spēli "Basketbols". Vari mainīt
@@ -653,6 +664,9 @@ lv:
         bloka. Pievieno jaunu "palaist" bumbu bloku vairākās vietās. Pamēģini arī'mainīt
         fona attēlu vai dēlīša un bumbas ātrumu, un skaties, cik var savākt punktus,
         kamēr pretinieks nav uzvarējis!
+      courseD_bounce_events12_instruction: Izveido savu spēli "Pong". Vari mainīt
+        visus noteikumus, pielāgot izskatu. Kad pabeigts, spied "Gatavs" un aicini
+        draugus spēlēt tavu spēli.
       courseD_bounce_events2_instruction: Pievieno bloku pie "kad labā bulta" un "kad
         kreisā bulta" blokiem. Parvieto dēlīti ar labo bultu lai sasniegtu abus mērķus.
       courseD_bounce_events3_instruction: Tagad izmēģini ko līdzīgu ar "kad bulta
@@ -727,6 +741,8 @@ lv:
         atduries pret šķērsli, iestati punktu skaitu atpakaļ uz 0.
       flappy_9_2018_instruction: Lai pamainītu lietas, tā vietā, lai beigtu spēli,
         kad atduries pret šķērsli, iestati punktu skaitu atpakaļ uz 0.
+      grade1_maze_sequence7_instruction: Tavs gājiens! Kas tev nepieciešams, lai dabūtu
+        putnu līdz cūkai?
       grade2_CaringForNewPet_10_instruction: Palīdzi man tikt līdz cūkai!
       grade2_CaringForNewPet_5_instruction: Palīdzi man tikt līdz cūkai!
       grade2_MakeDogTag_10_instruction: Uzzīmē kaut ko jautru.

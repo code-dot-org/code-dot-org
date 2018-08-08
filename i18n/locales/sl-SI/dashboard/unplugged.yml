@@ -61,6 +61,7 @@ sl:
         title: Funkcionalni lovilci svetlobe
         desc: Učenci sestavijo algoritem s spremenljivkami in funkcijami (kosi kode, ki jih želimo uporabiti večkrat), da sestavijo lovilce svetlobe s pomočjo nitk in koraldic.
       SongwritingParameters:
+        title: Napiši pesem
         desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju in klicanju funkcije.
       DiceRace:
         title: 'Življenjski algoritmi: Igra s kocko'
@@ -139,6 +140,7 @@ sl:
         title: Crowdsourcing
         desc: Učenci uporabljajo "crowdsourcing", tehniko reševanja problemov v računalništvu, da bi dokončali nalogo kot razred, kar je bolj učinkovito kot če bi učenec poskušal nalogo rešiti sam.
       courseE_unplugged_songwriting:
+        title: Napiši pesem
         desc: Študenti uporabijo koncept refrena pesmi, da bi se naučili o definiranju in klicanju funkcije.
       courseF_unplugged_tangrams:
         title: Tangram algoritmi

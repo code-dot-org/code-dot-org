@@ -62,7 +62,7 @@ sv:
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Använd den här knappen om du vill redigera funktionen och ändra den riktning i vilken biet kommer att vända sig för att få nektar.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Klicka på "Kör" för att prova ditt program
+        Course 4 Maze 1_callout1: Tryck på "Kör" för att prova programmet
       Course 4 Maze 4_callout:
         repeat: Sätt block inuti loopen för att upprepa kommandon
       Course 4 Play Lab Params 3_callout:
@@ -137,9 +137,9 @@ sv:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du avsluta det?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Klicka på "Kör" för att prova ditt program
+        craft_run_button_callout: Tryck på "Kör" för att prova programmet
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Klicka på "Kör" för att prova ditt program
+        craft_run_button_callout: Tryck på "Kör" för att prova programmet
       Overworld Place Wall_callout:
         craft_inside_repeat: Upprepa handlingar genom att placera block här
       Overworld Place Wall_2018_callout:

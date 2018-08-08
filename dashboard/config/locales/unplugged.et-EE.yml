@@ -65,7 +65,7 @@ et:
         desc: Selles tegevuses kombineeritakse õpilaste igapäevane rutiin ja Mad-Libi
           stiilis mõttemäng, et õpetada klassile abstraktsiooni tõhusust.
       Unplug9:
-        title: Relee Programmeerimine
+        title: Relee programmeerimine
         desc: Selles õppetunnis võetakse idee ühest varasemast tegevusest (4. Millimeetripaberi
           programmeerimine) ja kasutatakse neid oskusi, et rõhutada, kui tähtis on
           luua programmid, mis töötavad järjekorras ja kontrollida sagedasti, et programmides
@@ -149,7 +149,7 @@ et:
         desc: Õpilased koostavad algoritmi muutujate ja funktsioonidega (koodiosad,
           mida saab uuesti ja uuesti kasutada), et luua nöörist ja helmestest päikesepüüdjad.
       SongwritingParameters:
-        title: Laulukirjutamine parameetritega
+        title: Laulude kirjutamine
         desc: Õpilased kasutavad laulu refrääni põhimõtet, et õppida parameetrite
           edastust (mis kohandab funktsiooni ilma, et oleks vaja kogu funktsioon ümber
           kirjutada).
@@ -309,7 +309,7 @@ et:
         desc: Õpilased kirjutavad eelmääratletud käskude komplekti kasutades algoritmi
           (komplekti juhiseid), mis juhendab klassikaaslasi, kuidas joonistust kopeerida.
       courseD_unplugged_relayProgramming:
-        title: Relee Programmeerimine
+        title: Relee programmeerimine
         desc: Õpilased teevad releeralli, kus nad jooksevad üle õue, et kirjutada
           "Millimeetripaberi programmeerimise" pildi põhjal algoritm. Nad saavad kirjutada
           korraga ainult ühe juhise ja kui kuskil tekib viga, peavad nad kustutama
@@ -346,7 +346,7 @@ et:
           lahendamiseks, et täita ülesanne kogu klassiga palju tõhusamalt kui üks
           õpilane seda ise suudaks.
       courseE_unplugged_songwriting:
-        title: Laulukirjutamine parameetritega
+        title: Laulude kirjutamine
         desc: Õpilased kasutavad laulu refrääni põhimõtet, et õppida parameetrite
           edastust (mis kohandab funktsiooni ilma, et oleks vaja kogu funktsioon ümber
           kirjutada).
@@ -477,4 +477,4 @@ et:
       MoveItMoveIt_2018:
         title: Liiguta, liiguta
       RelayProgramming_2018:
-        title: Relee Programmeerimine
+        title: Relee programmeerimine

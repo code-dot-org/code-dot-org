@@ -13,7 +13,7 @@ hu:
         name_example: 'Megjelenítendő név <br/> (pl. hideg, Coder vagy Jane S.)'
         email: 'Email'
         username: 'felhasználónév'
-        password: 'jelszó'
+        password: 'Jelszó'
         password_confirmation: 'Jelszó megerősítése'
         current_password: 'Jelenlegi jelszó'
         locale: 'Nyelv'
@@ -248,7 +248,7 @@ hu:
       classroom: 'Tanári kezdőlap'
       district_dashboard: 'Tankerületi munkafelület'
       label: 'Üdv %{username}'
-      stats: 'Fejlődésem'
+      stats: 'Kód stúdió'
       settings: 'Profilom'
       logout: 'Kijelentkezés'
       signin: 'Bejelentkezés'
@@ -323,8 +323,8 @@ hu:
     teacher_student_count_one: '%{count} diákod van.'
     teacher_student_count: '%{count} diákod van.'
     teacher_averages: Diákjaid átlagosan   %{trophy_average} trófeát szereztek meg a %{trophy_max}  "Concept Mastery" trófeákból.
-    teacher_print_certificates: 'Nyomtasd ki az okleveleket azoknak a diákoknak, akik befejezték a tanfolyamot'
-    teacher_read_blog: Olvass híreket és értesülj tananyagaink frissítéseiről az Educator blogból
+    teacher_print_certificates: 'Nyomtasa ki a bizonyítványokat a diákoknak, akik befejezték a tanfolyamot'
+    teacher_read_blog: Olvastam a híreket és frissítéseket az anyagokhoz  a Pedagógus Blog-ban
     classroom: A tantermed
     student_progress: Előrehaladásod
     student_stats: Már megszereztél %{trophy_count} trófeát a %{trophy_max} "Concept Mastery" trófeákból.
@@ -478,7 +478,7 @@ hu:
       body: "Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel."
     minecraft:
       title: "Minecraft"
-      body: "Fedezd fel a Minecraft világát kódokkal."
+      body: "Fedezd fel a Minecraft világát kódolással"
     minecraft2016:
       title: "Minecraft"
       body: "Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban."
@@ -578,15 +578,7 @@ hu:
     save: "Mentés"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Egyéb"
-      - 
+      other: "Egyéb"
     submit: "Elküldés"
     decline: "Bezár"
   zendesk_too_young_message: 'Elnézést, de kiskorú felhasználók nem iratkozhatnak fel a támogatói oldalunkra. Megnézheted a <a href="http://support.code.org"> support.code.org</a>oldalakat feliratkozás nélkül, illetve kérd meg a szüleidet vagy tanáraidat, hogy lépjenek kapcsolatba velünk a nevedben.'

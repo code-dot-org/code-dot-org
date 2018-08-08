@@ -130,7 +130,7 @@ nl:
           een "vlag" instellen. Met deze vlag kan onze functie verteld worden in welke
           richting onze honingbij moet vliegen.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Druk op "Uitvoeren" om het programma uit te proberen
+        Course 4 Maze 1_callout1: Klik op "Run" om je programma te proberen
         Course 4 Maze 1_callout2: Sleep een "verplaats" blok en plak het onder het
           andere blok in het werkgebied
       Course 4 Maze 4_callout:
@@ -275,9 +275,9 @@ nl:
         craft_callout_preplaced_house: Met dit programma begin je je huis te bouwen.
           Kun jij het afmaken?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Druk op "Uitvoeren" om het programma uit te proberen
+        craft_run_button_callout: Klik op "Run" om je programma te proberen
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Druk op "Uitvoeren" om het programma uit te proberen
+        craft_run_button_callout: Klik op "Run" om je programma te proberen
       Overworld Place Wall_callout:
         craft_inside_repeat: Herhaal acties door blokken hier in te plaatsen
       Overworld Place Wall_2018_callout:

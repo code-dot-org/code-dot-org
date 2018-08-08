@@ -3,7 +3,7 @@ it:
     game:
       name:
         Unplug1: Cos'è l'informatica
-        Maze: Il labirinto
+        Maze: Il Labirinto
         Multi: Materiale con Risposte Multiple
         Unplug2: Pensiero computazionale
         Unplug3: Programmazione su carta a quadretti
@@ -103,11 +103,11 @@ it:
         maze_karel_1_4: 'Riesci ad aiutarmi a rimuovere tutti e quattro i mucchi di terra? Suggerimento: prova ad usare un blocco "ripeti".'
         maze_karel_1_5: 'Aiutami a riempire ognuna di queste buche con 5 palate di terra. Suggerimento: puoi mettere un blocco "ripeti" all''interno del blocco "mentre".'
         maze_karel_1_6: 'Rimuovi tutti i mucchi di terra, usando il minor numero possibile di blocchi. Nota: la nuova versione del blocco "mentre" permette di sapere se sto sopra un mucchio.'
-        maze_karel_1_7: 'Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato? Suggerimento: usa le opzioni nel menù a discesa del blocco "mentre".'
+        maze_karel_1_7: 'Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato? Suggerimento: usa le opzioni nel menù a discesa (▼) del blocco "mentre".'
         maze_karel_1_8: Aiutami a riempire la buca alla fine del mio terreno, utilizzando il minor numero possibile di blocchi.
         maze_karel_1_9: 'Fammi rimuovere tutti questi mucchi di terra. Prova ad usare il minor numero possibile di blocchi. Ce la fai usando il blocco "mentre" e senza usare il blocco "ripeti"?'
         maze_karel_1_10: Sto lavorando di sera, fuori è buio e non posso dire quanto grandi sono i mucchi. Questa volta non ho a disposizione le opzioni che avevo prima sul blocco "mentre". Spostami lungo il campo e se c'è un mucchio rimuovilo.
-        maze_karel_1_11: 'È ancora buio fuori. Spostami lungo il terreno. Se c''è un mucchio, rimuovilo e se c''è una buca, riempila. Suggerimento: usa il menu a discesa delle opzioni del blocco "se".'
+        maze_karel_1_11: 'È ancora buio fuori. Spostami lungo il terreno. Se c''è un mucchio, rimuovilo e se c''è una buca, riempila. Suggerimento: usa il menù a discesa (▼) delle opzioni del blocco "se".'
         turtle_2_1: 'Ciao. Io artista zombie. Mi piace disegnare! Aiutami a disegnare un quadrato con un colore speciale. Attenzione: ci sono sempre gli stessi blocchi, ma ora sono stati organizzati in categorie.'
         turtle_2_2: Benvenuto all'uso di funzioni che consentono di definire nuovi blocchi! Prova il nuovo blocco "disegna un quadrato", che si trova nella categoria "Funzioni", per disegnare un quadratino verde con 50 pixel per lato.
         turtle_2_3: Usa il blocco di ripetizione "ripeti ... volte" (nella categoria "Ripetizioni") per disegnare 3 quadrati ognuno con 100 pixel per lato, a distanza di 120 gradi tra loro. Prova a farlo anche usando 3 diversi colori scelti a caso.
@@ -178,18 +178,18 @@ it:
         mazestep_4: Qui c'è la descrizione del passo del labirinto
         mazestep_5: Qui c'è la descrizione del passo del labirinto
         studio_c2_1: "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
-        studio_c2_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
+        studio_c2_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
         studio_c2_3: Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
         studio_c2_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
-        studio_c2_5: Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?
+        studio_c2_5: "Riesci a scrivere un programma per far dire \"Ciao\" al polpo quando viene cliccato?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
         studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine?
         studio_c2_7: Il blocco `ripeti per sempre`, aggiunto in fondo all'area di lavoro, permette di eseguire il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il dinosauro (personaggio 2) in continuazione in su e in giù?
         studio_c2_8: Riesci a far dire "Ahi!" al pinguino (personaggio 1) e a `riprodurre il suono di un colpo` se esso sbatte contro il dinosauro (personaggio 2), e poi a spostarlo con i tasti freccia per far sì che questo accada?
         studio_c2_9: Aggiungi un blocco che segna un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3). Poi sposta il pinguino con i tasti freccia fino a che fai un punto.
         studio_c2_10: Aggiungi dei blocchi per cambiare lo sfondo e la velocità del pinguino (personaggio 1). Poi spostalo con i tasti freccia fino a che fai un punto.
         studio_c2_11: Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.
-        studio_c3_story_1: "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
-        studio_c3_story_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
+        studio_c3_story_1: "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+        studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
         studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
         studio_c3_story_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
         studio_c3_story_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
@@ -234,8 +234,8 @@ it:
         studio_gumball_join_food_fight: Unisciti alla battaglia del cibo! Usa l'istruzione "il personaggio lancia l'oggetto a destra" per far buttare a Banana Joe (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore di Anton ad arrabbiato quando viene colpito.
         studio_gumball_free_play: Crea un gioco o una storia per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone, tablet o computer!
         studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_k1_1: "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
-        studio_k1_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
+        studio_k1_1: "Riesci a far dire a questo cane \"Ciao a tutti\"?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+        studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
         studio_k1_3: Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
         studio_k1_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto dica "ciao" quando il cane arriva là.
         studio_k1_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
@@ -256,7 +256,7 @@ it:
         studio_ec_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
     video:
       name:
-        maze_intro: Introduzione a "Il Labirinto"
+        maze_intro: 'Labirinto - Corso 2: Introduzione'
         artist_intro: Artista - Introduzione
         farmer_intro: Introduzione a "La Contadina"
         flappy_intro: Introduzione a "Flappy"
@@ -320,7 +320,7 @@ it:
         C3_bee_functions: 'Ape: Funzioni'
         C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
         C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
-        C3_artist_nested_loops: Cicli Annidati
+        C3_artist_nested_loops: Cicli annidati
         C3_farmer_while: Cicli "Mentre"
         C3_bee_nested_loops: Cicli annidati
         C3_bee_debugging: 'Ape: Correzione di Errori'
@@ -493,6 +493,7 @@ it:
         CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio dei Personaggi
         CDEF_Video_SpritesInAction: Personaggi in Azione
         CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione
+        CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

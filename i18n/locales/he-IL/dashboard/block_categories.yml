@@ -2,12 +2,12 @@ he:
   data:
     block_categories:
       Actions: פעולות
-      Loops: לולאות
+      Loops: חזרות
       Functions: פונקציות
       Color: צבע
       Brushes: מברשות
       Math: מתמטיקה
-      Logic: הגיון
+      Logic: לוגיקה
       Variables: משתנים
       Number: מספר
       String: מחרוזת
