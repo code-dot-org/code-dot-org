@@ -58,7 +58,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def users_to_destroy
     return head :bad_request unless current_user&.can_delete_own_account?
-    render json: get_users_to_destroy(current_user)
+    render json: current_user.dependent_users
   end
 
   def destroy
@@ -382,19 +382,8 @@ class RegistrationsController < Devise::RegistrationsController
       )
   end
 
-  def get_users_to_destroy(user)
-    users = []
-    if user.teacher?
-      user.students.uniq.each do |student|
-        users << student.summarize if student.depends_on_teacher_for_login?
-      end
-    end
-    users << user.summarize
-    users
-  end
-
   def destroy_dependent_users(user)
-    user_ids_to_destroy = get_users_to_destroy(user).pluck(:id)
+    user_ids_to_destroy = user.dependent_users.pluck(:id)
     User.destroy(user_ids_to_destroy)
   end
 end
