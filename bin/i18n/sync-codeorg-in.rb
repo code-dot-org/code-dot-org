@@ -40,10 +40,15 @@ def localize_block_content
 
   Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
     name = File.basename(file, '.*')
-    block = JSON.parse(File.read(file))
+    config = JSON.parse(File.read(file))['config']
     blocks[name] = {
-      'text' => block['config']['blockText'],
+      'text' => config['blockText'],
     }
+
+    next unless config['args']
+    args_with_options = config['args'].map {|arg| arg['options']}.compact.flatten(1)
+    args_with_options = args_with_options.map {|pair| [pair[1].sub(/^"/, '').sub(/"$/, ''), pair[0]]}
+    blocks[name]['options'] = args_with_options.to_h unless args_with_options.empty?
   end
 
   copy_to_yml('blocks', blocks)
