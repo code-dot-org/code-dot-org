@@ -86,48 +86,33 @@
 
 .field
   = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
-  .row
-    .span8
-      ~ f.text_area :toolbox_blocks, placeholder: 'Toolbox Blocks', rows: 4, value: @level.pretty_block('toolbox')
-    #toolbox-preview.span4
+  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'toolbox'}
 
 .field
   - if @level.uses_droplet?
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-  .row
-    .span8
-      ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
-    #start-preview.span4
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'start'}
 
 .field
   - if @level.uses_droplet?
     = f.label :required_blocks,'Edit Required Blocks'
   - else
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
-  .row
-    .span8
-      ~ f.text_area :required_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('required')
-    #required-preview.span4
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
 
 .field
   - if @level.uses_droplet?
     = f.label :recommended_blocks, 'Edit Recommended Blocks'
   - else
     = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
-  .row
-    .span8
-      ~ f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
-    #recommended-preview.span4
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
 
 - unless @level.uses_droplet?
   .field
     = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
-  .row
-    .span8
-      ~ f.text_area :initialization_blocks, placeholder: 'Required Blocks', rows: 4, value: @level.pretty_block('initialization')
-    #initialization-preview.span4
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
 
 .field
   = f.label :ideal, 'Ideal block number'
@@ -151,10 +136,7 @@
       = f.label :solution_blocks, 'Edit Solution Blocks'
     - else
       = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
-    .row
-      .span8
-        ~ f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
-      #solution-preview.span4
+      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'solution'}
 
 :ruby
   script_data = {
