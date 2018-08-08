@@ -107,7 +107,8 @@ jobs:
             dashboard_enable_pegasus: true
             dashboard_workers: 5
             skip_seed_all: true
-            local_summer:
+            jotform_forms:
+              local_summer:
                 day_0: 1
                 day_1: 2
                 day_2: 3
@@ -119,7 +120,7 @@ jobs:
               academic_year_1:
                 day_1: 8
                 facilitator: 9
-                post_workshop: 8
+                post_workshop: 10
             " >> locals.yml
 
       - run:
