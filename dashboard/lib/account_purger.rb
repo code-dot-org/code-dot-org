@@ -25,8 +25,15 @@ class AccountPurger
   end
 
   # Purge information for an individual user account.
-  def purge_data_for_account(_user)
+  def purge_data_for_account(user)
     raise 'Not implemented' unless @dry_run
+    purged_account_log = PurgedAccountLog.new user,
+      reason: PurgedAccountLog::SOFT_DELETE_28_DAYS_AGO
+
+    # Peform delete here
+
+    purged_account_log.purged_at = Time.now
+    purged_account_log.upload unless @dry_run
   end
 
   # Purge all information associated with an email address.
