@@ -1,5 +1,5 @@
 require_dependency 'cdo/shared_constants/pd/teacher_common_application_constants'
 
-module Teacher1819ApplicationConstants
+module Teacher1920ApplicationConstants
   include TeacherCommonApplicationConstants
 end
