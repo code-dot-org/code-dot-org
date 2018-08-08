@@ -47,8 +47,7 @@ def localize_block_content
 
     next unless config['args']
     args_with_options = config['args'].map {|arg| arg['options']}.compact.flatten(1)
-    args_with_options = args_with_options.map {|pair| [pair[1].sub(/^"/, '').sub(/"$/, ''), pair[0]]}
-    blocks[name]['options'] = args_with_options.to_h unless args_with_options.empty?
+    blocks[name]['options'] = args_with_options.map(&:reverse).to_h unless args_with_options.empty?
   end
 
   copy_to_yml('blocks', blocks)
