@@ -2075,6 +2075,17 @@ class User < ActiveRecord::Base
     student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
   end
 
+  # Returns an array of summarized users that depend on this user.
+  # These map to the users that will be deleted if this user deletes their account.
+  def dependent_users
+    dependent_users = []
+    students.uniq.each do |student|
+      dependent_users << student.summarize if student.depends_on_teacher_for_login?
+    end
+    dependent_users << summarize
+    dependent_users
+  end
+
   private
 
   def hidden_stage_ids(sections)
