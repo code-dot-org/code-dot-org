@@ -83,7 +83,7 @@ tr:
             Getting Loopy:
               name: Döngüselleşme
             Graph Paper Programming:
-              name: Grafikli Kağıdıyla Programlama
+              name: Grafik Kağıdı Programlama
             'Maze: Loops':
               name: 'Labirent: Döngüler'
             'Maze: Sequence':
@@ -141,7 +141,7 @@ tr:
             'Maze: Conditionals':
               name: 'Labirent: Koşullar'
             Songwriting:
-              name: Şarkı Yazarlığı
+              name: Şarkı yazma
             'Studio: Create a Game':
               name: 'Oyun Laboratuvarı: Bir Oyun Oluşturun'
             'Studio: Create a Story':
@@ -409,13 +409,13 @@ tr:
             Functions:
               name: Fonksiyonlar
             Graph Paper Programming:
-              name: Grafikli Kağıdıyla Programlama
+              name: Grafik Kağıdı Programlama
             Introduction to Computer Science:
-              name: Bilgisayar Bilimlerine Giriş
+              name: Bilgisayar Bilimine Giriş
             Relay Programming:
               name: Röle Programlama
             Song Writing:
-              name: Şarkı Yazma
+              name: Şarkı yazma
             The Artist:
               name: Sanatçı
             The Artist 2:
@@ -503,6 +503,7 @@ tr:
             Puzzles:
               name: Bulmaca
         cspunit1:
+          description_short: Programlama
           stages:
             Binary Numbers:
               name: İkili Sayılar
@@ -647,6 +648,8 @@ tr:
             PDK5 Intro:
               name: PDK5 giriş
         cspunit3:
+          description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\\r\n\\r\nBu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
+          description_short: Programlama
           stages:
             APIs and Function Parameters:
               name: API'lar ve fonksiyon parametreleri
@@ -861,6 +864,7 @@ tr:
             Welcome Back!:
               name: Tekrar Hoş Geldiniz!
         cspunit2:
+          description_short: Programlama
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Zor problemler - Gezgin Satıcı problemi
@@ -1062,7 +1066,7 @@ tr:
             Best Practices for Teaching Computer Science:
               name: Bilgisayar Bilimleri öğretim için en iyi yöntemler
             Computer Science Fundamentals:
-              name: Bilgisayar bilim temelleri
+              name: Bilgisayar Bilimi Temelleri
             Getting Started:
               name: İlk adım
             Looking Ahead:
@@ -1278,7 +1282,7 @@ tr:
             Getting Loopy:
               name: Döngüselleşme
             Graph Paper Programming:
-              name: Grafikli Kağıdıyla Programlama
+              name: Grafik Kağıdı Programlama
             Happy Maps:
               name: Mutlu Haritalar
             Move it, Move it:
@@ -1286,7 +1290,7 @@ tr:
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
             Songwriting:
-              name: Şarkı Yazarlığı
+              name: Şarkı yazma
             The Big Event:
               name: Büyük Olay
         vigenere:
@@ -1390,6 +1394,7 @@ tr:
             Unit 6 lessons:
               name: Ünite 6 dersleri
         cspunit4draft:
+          description_short: Veri
           stages:
             Check Your Assumptions:
               name: Varsayımlarını kontrol et
@@ -1544,6 +1549,7 @@ tr:
             Unit 3 Overview:
               name: Ünite 3 genel bakış
         cspunit3temp:
+          description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\\r\n\\r\nBu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
           description_short: Programlama
           stages:
             Canvas and Arrays in Apps:
@@ -1625,6 +1631,7 @@ tr:
             Wrap-Up:
               name: Toparlama
         cspunit5:
+          description_short: Programlama
           stages:
             Create PT:
               name: Performans Görevi Oluştur
@@ -1635,6 +1642,7 @@ tr:
             Explore PT Prep:
               name: Performans Görevi Hazırlığı Keşfet
         cspunit4:
+          description_short: Programlama
           stages:
             Check Your Assumptions:
               name: Varsayımlarını kontrol et
@@ -2429,6 +2437,8 @@ tr:
               name: Eş gözden geçirme
             Describing Web Pages:
               name: Web Sayfalarını Tanımlama
+        CSDU5-Draft:
+          description_short: Veri
         CSF_Secret_Sample_Story:
           stages:
             Sample Stage:
@@ -2540,7 +2550,7 @@ tr:
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Proje Sahnesi (Döngüler, Olaylar, Koşullar, Fonksiyonlar)
             Songwriting:
-              name: Şarkı Yazarlığı
+              name: Şarkı yazma
             'Unplugged: Funky Functions':
               name: 'Bağımsız (Unplugged): Acaip (Funky) Fonksiyonlar'
         grade1:
@@ -3140,9 +3150,9 @@ tr:
             AP Preparation and Support:
               name: AP Hazırlık ve Destek
         basketball:
-          title: Takımınızı seçin ve bir basketbol oyunu oynayın
+          title: Besketbol oynayın
           description_short: Besketbol oynayın
-          description: Takımınızı seçin ve bir basketbol oyunu oynayın
+          description: Besketbol oynayın
           stages:
             Bounce:
               name: Sıçrama
@@ -3384,7 +3394,7 @@ tr:
               description_teacher: Bu noktada takımlar, kişisel ve sosyal açıdan önemli olan bir konuyu araştırdılar, hem bir kâğıt ön örneği hem de bir dijital ön örneği geliştirdiler ve test ettiler ve ilk uygulamada yeni özellikleri ve hata düzeltmelerini birleştirmek için yinelediler. Şimdi, yaptıklarını gözden geçirmelerinin ve oluşturma süreçlerini göstermek için elbirliği ile tutarlı bir sunum hazırlamalarının zamanıdır. Takımlar, çözmeye koyuldukları sorunu, testten aldıkları birleştirilmiş geri bildirim yöntemleri ve gelecek planları da dâhil olmak üzere tedarik edilen sunum şablonunu kullanarak uygulama geliştirme süreçleri hakkında sunum yapmak için hazırlanırlar.
         minecraft:
           title: Minecraft Kodlama Saati Tasarımcısı
-          description_short: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde programla.
+          description_short: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde programla.
           description: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde programla.
           stages:
             Minecraft Hour of Code Designer:
@@ -3417,7 +3427,7 @@ tr:
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
@@ -3495,6 +3505,7 @@ tr:
             Debugging in Maze:
               name: Labirentte Hata Ayıklama
         coursed-draft:
+          title: 'CS Temelleri: Ders D'
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3650,7 +3661,7 @@ tr:
             Post Hour of Code Survey:
               name: Kodlama Saati Son Anketi
         sports:
-          title: Spor
+          title: Kendi Spor Oyununu Kodla
           description_short: Kendi sporunu kodla
           description: Kendi sporunu kodla
           stages:
@@ -4584,7 +4595,7 @@ tr:
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
               description_teacher: Döngülere geri dönen öğrenciler, basit talimat dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı olan derste, bir labirentten geçip hazineyi toplamak için ilmekler kullanıldı. Burada, döngüler desenler yaratıyor. Bu aşamanın sonunda öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı verilecek.
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
@@ -4612,7 +4623,7 @@ tr:
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
@@ -4647,7 +4658,7 @@ tr:
             Events in Play Lab:
               name: Play Lab' da Olaylar
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             Loops with Rey and BB-8:
               name: Rey ve BB-8 ile döngüler
           title: Kurs C
@@ -4786,7 +4797,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             Nested Loops:
               name: İç İçe Döngüler
           title: Kurs E
@@ -4880,7 +4891,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
           title: Kurs F
           assignment_family_title: Kurs F
           description_audience: 'Yaş: 9-13'
@@ -5024,7 +5035,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             Nested Loops Project in Artist:
               name: Sanatçı'da İç İçe Döngüler Projesi
             Internet:
@@ -5113,7 +5124,7 @@ tr:
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
@@ -5163,6 +5174,7 @@ tr:
             Unit 3 Chapter 1 Assessment:
               name: Ünite 3 Bölüm 1 değerlendirme
           description_short: Programlama
+          description: "Bu ünite, zengin içerikli etkileşimli uygulamalar yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar tüm programlama dilleri ve araçları için geçerlidir.\\r\n\\r\nBu ünite en son 30 Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha fazla bilgi için: forum.code.org/c/csp/updates."
         csd4-draft:
           stages:
             Analysis of Design:
@@ -5235,7 +5247,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             Nested Loops:
               name: İç İçe Döngüler
             'Algorithms: Dice Race':
@@ -5314,7 +5326,7 @@ tr:
             Building a Foundation:
               name: Bir Temel Oluşturma
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             Nested Loops in Bee:
               name: Arı -içiçe döngüler
           title: Yeni Kurs D Senaryosu
@@ -5339,7 +5351,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             'How it Works: The Internet':
               name: 'How it Works: The Internet'
             'Common Sense Education: Digital Citizenship':
@@ -5393,7 +5405,7 @@ tr:
         new-stages-sept-2017:
           stages:
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             Testing Template:
               name: Test Şablonu
           title: 9/17 için yeni etaplar
@@ -5410,7 +5422,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             'Algorithms: Dice Race':
               name: 'Algoritmalar: Zar yarışı'
             Course E Introduction:
@@ -5459,7 +5471,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             'Algorithms: Tangrams':
               name: 'Algoritmalar: Tangramlar'
             Course E Introduction:
@@ -5732,7 +5744,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             Nested Loops:
               name: İç İçe Döngüler
             'Algorithms: Dice Race':
@@ -5782,7 +5794,7 @@ tr:
             'Loops: My Loopy Robotic Friends':
               name: 'Döngüler: Loopy robot dostlarım'
             Loops in Artist:
-              name: Sanatçıların Döngüleri
+              name: Sanatçı- Döngüler
             'Algorithms: Tangrams':
               name: 'Algoritmalar: Tangramlar'
             Introduction:
@@ -6109,7 +6121,7 @@ tr:
           description_audience: 'Yaş: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Grafikli Kağıdıyla Programlama
+              name: Grafik Kağıdı Programlama
             Introduction:
               name: Giriş
             Building a Foundation:
@@ -6187,7 +6199,7 @@ tr:
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
             'Functions: Songwriting':
-              name: Şarkı Yazarlığı
+              name: Şarkı yazma
             Functions in Artist:
               name: Sanatçı- Fonksiyonlar
             Screen Out the Mean:
@@ -6248,7 +6260,7 @@ tr:
           assignment_family_title: Kurs D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Grafikli Kağıdıyla Programlama
+              name: Grafik Kağıdı Programlama
             Introduction:
               name: Giriş
             Building a Foundation:
@@ -6282,7 +6294,7 @@ tr:
             Nested Loops in Frozen:
               name: Frozen'da İç İçe Döngüler
             Graph Paper Programming:
-              name: Grafikli Kağıdıyla Programlama
+              name: Grafik Kağıdı Programlama
             Relay Programming:
               name: Röle Programlama
             Introduction to Online Puzzles:
@@ -6396,7 +6408,7 @@ tr:
               description_student: Bu derste kendi Star Wars oyununu kurarken gücünü hissedin.
               description_teacher: Bu derste öğrenciler, olayları kullanarak çevrimiçi olarak paylaşabilecekleri bir oyun yapacaklar. R2-D2 ve diğer Star Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
             'Functions: Songwriting':
-              name: Şarkı Yazarlığı
+              name: Şarkı yazma
               description_student: Müzik yıldızı için bile programlama yeteneği gerektirir. Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
               description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.
             Functions in Artist:

@@ -227,10 +227,14 @@ mi:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: '**He aromatawai"**
         Whakamahia ngā paraka ''tōaitia kia'' me te ''kē/ki te'' hei arataki i au
         ki te putiputirā mā ngā paraka rua rua noa iho.'
+      4-5 Nested Loops 12_markdown_instruction: Ka taea rānei e koe ngā tapatoru nei
+        te tā mā te koromeke tauroto?
       4-5 Nested Loops 3_markdown_instruction: "Waihangahia tētahi rā mā te whakanoho
         i te waehere whakataki ki roto i tētahi atu koromeke. \r\n\r\nKia riro i a
         koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua mā te roanga
         o te tapatoru i mua i te huri."
+      4-5 Nested Loops 6_markdown_instruction: Ka taea rānei e koe te tā tapaono mā
+        te koromeke i te waehere tapatoru?
       4-5 Nested Loops 7_markdown_instruction: "Koromekehia tēnei hoahoatanga kia
         10 ngā wā. \r\n\r\nKia hia ngā huri i ia wā e koromekehia ana?"
       4-5 Nested Loops 8_markdown_instruction: "Koromekehia tēnei āhua kia 6 ngā wā.
@@ -257,6 +261,9 @@ mi:
       course4_artist_fwp_challenge1_markdown_instruction: Whakamātauria tēnei papatono,
         ā, panonihia kia kitea ka aha. E mārama ana ki a koe te whakamahinga? (Mukua
         rānei, ā, whakakapia me tētahi mea rerekē noa atu)
+      courseD_bounce_events1_markdown_instruction: Me tae atu ki te haki! Whakapiri
+        i tētahi paraka ki te pakara "ina pere mauī" ka pāwhiritia ai te "Whakahaerehia"
+        ki te neke i te kaitākaro ki te haki.
       courseD_maze_nestedLoops4_markdown_instruction: "Aratakina au ki putiputirā
         mā ngā paraka rua rua noa iho. \r\n\r\nWhakamātauria tētahi koromeke ‘tōai’
         ki roto i tētahi atu kia heke iho mai te nui o te waehere e whakamahia ana."
@@ -353,10 +360,14 @@ mi:
         ana?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Koromekehia tēnei
         āhua kia 6 ngā wā. \r\n\r\nKia hia ngā huri i ia wā e koromekehia ana? "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Ka taea rānei e koe
+        te tā tapaono mā te koromeke i te waehere tapatoru?
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Waihangahia tētahi
         rā mā te whakanoho i te waehere whakataki ki roto i tētahi atu koromeke. \r\n\r\nKia
         riro i a koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua
         mā te roanga o te tapatoru i mua i te huri."
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Ka taea rānei e koe
+        ngā tapatoru nei te tā mā te koromeke tauroto?
       grade4_artist_functions2_markdown_instruction: "Ko tā te taumahi he whakamahuki
         i ngā paraka hou! \r\n\r\nKua nekehia e mātou ētahi paraka tā tapawhā hei
         taumahi ‘tāngia he tapawhā’. I konei, whakamahia te taumahi ‘tāngia he tapawhā’
@@ -368,6 +379,8 @@ mi:
         rā mā te whakanoho i te waehere whakataki ki roto i tētahi atu koromeke. \r\n\r\nKia
         riro i a koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua
         mā te roanga o te tapatoru i mua i te huri."
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Ka taea rānei e koe
+        ngā tapatoru nei te tā mā te koromeke tauroto?
       grade4_bee_conditionals_quantum2_markdown_instruction: "He kapua anō! \r\n\r\nTitiro
         ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \r\n\r\nKia
         maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!"

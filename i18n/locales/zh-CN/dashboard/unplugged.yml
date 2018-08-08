@@ -83,7 +83,7 @@ zh-CN:
         title: 写歌
         desc: 学生会通过副歌的概念，来学习定义和调用函数。
       DiceRace:
-        title: '现实中的算法: 掷骰子比大小'
+        title: '生活中的算法: 掷骰子比赛'
         desc: 这节课展示我们在日常生活中使用的算法。作为其中的一部分，学生将发现并写出掷骰子比大小游戏的算法。
       Internet:
         title: 互联网
@@ -134,22 +134,22 @@ zh-CN:
         title: 线下循环
         desc: 在这节课中，你会学到循环。
       courseB_unplugged_MRF:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 在这节课中，你会给你的朋友“编程”！
       courseB_unplugged_loopyMRF:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 就像在“我的机器人朋友”里一样，你将会给你的朋友“编程”，这次需要用到循环！
       courseC_Unplugged_ScreenOutTheMean:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你会学习到在互联网上意味着什么，能做什么。
       courseD_unplugged_digitalCitizenship:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你将会学到成为一个数字公民意味着什么。
       courseE_unplugged_privateInformation:
         title: '常识教育： 私人和个人信息 '
         desc: 今天，你会学会隐私和个人信息之间的区别！
       courseF_unplugged_powerOfWords:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你会学习到在互联网上意味着什么，能做什么。
       deeper learning description:
         desc: '翻译丢失: en-US.data.unplugged.desc'
@@ -181,7 +181,7 @@ zh-CN:
         title: 二进制的手镯
         desc: 学生制作手镯，以二进制形式表示他们名字的首字母。学生们会学会数据能以多种方式表示和存储。
       courseD_unplugged_graphPaperProgramming:
-        title: 图纸上编程
+        title: 方格纸编程
         desc: 学生们使用一组预定义的命令模块写一个算法 (一组指令) 来指导同学们复制一幅图画。
       courseD_unplugged_relayProgramming:
         title: 编程接力
@@ -247,13 +247,13 @@ zh-CN:
         title: 大事件
         desc: 学生们将学习编程概念中的"事件"，即计算机不断监控时的行动。老师在纸上按遥控按钮而学生们根据不同的按钮做某些动作，作为回应。
       GraphPaperProgramming_2018:
-        title: 图纸上编程
+        title: 方格纸编程
         desc: 学生们使用一组预定义的命令模块写一个算法 (一组指令) 来指导同学们复制一幅图画。
       courseD_unplugged_digitalCitizenship_2018:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你将会学到成为一个数字公民意味着什么。
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你会学习到在互联网上意味着什么，能做什么。
       Conditionals_2018:
         title: 条件语句

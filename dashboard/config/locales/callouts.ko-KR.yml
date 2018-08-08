@@ -79,7 +79,7 @@ ko:
       Course 4 Bee Params 2_callout:
         edit_get_nectar: 이 버튼을 사용해 함수를 수정해서, 꿀벌이 꽃꿀 방향으로 회전할 수 있도록 하세요.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: 만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.
+        Course 4 Maze 1_callout1: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
       Course 4 Maze 4_callout:
         repeat: 루프(loop) 안에 블럭을 넣어 반복하도록 하세요.
       Course 4 Play Lab Params 3_callout:
@@ -166,9 +166,9 @@ ko:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: 이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: 만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.
+        craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: 만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.
+        craft_run_button_callout: '"실행하기"를 눌러 프로그램을 실행시켜보세요'
       Overworld Place Wall_callout:
         craft_inside_repeat: 블록들을 이곳에 놓아서 행동을 반복하세요
       Overworld Place Wall_2018_callout:

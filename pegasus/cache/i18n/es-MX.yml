@@ -53,7 +53,7 @@ es-MX:
     son un aprendizaje fundamental para todos.
   hoc2014_heading: Únete a la <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre
     8 - 14, 2014<br/>
-  hoc2014_students: Alumnos
+  hoc2014_students: Estudiantes
   hoc2014_try: Pruébalo
   hoc2014_teachers: Maestros
   hoc2014_host: Organízalo
@@ -319,7 +319,7 @@ es-MX:
   studiobar_title_nolink: Explora Code Studio
   studiobar_elementary_title: Cursos elementales
   studiobar_elementary_body: Tres nuevos cursos para K‑5
-  studiobar_hoc_title: La Hora de Programación
+  studiobar_hoc_title: La hora de Código
   studiobar_hoc_body: Aprende a programar con Angry Birds
   studiobar_flappy_title: Código Flappy
   studiobar_flappy_body: Crea y comparte tu propio juego Flappy
@@ -519,8 +519,8 @@ es-MX:
     aventura a través del mundo de Minecraft.
   mc_shortdescription: Utiliza bloques de código para llevar a Steve o Alex en una
     aventura a través del mundo de Minecraft.
-  mc_gradelevel: Edad 4-104
-  mc_platformtext: Cualquier navegador moderno, smartphone, tableta
+  mc_gradelevel: Edades 6+
+  mc_platformtext: Navegadores modernos, smartphones, tabletas
   mc_specs: Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106
   minecraft_agent: 'Minecraft: Viaje del héroe'
   minecraft_designer: Diseñador de Minecraft
@@ -528,7 +528,8 @@ es-MX:
   minecraft_tutorials: Tutoriales de Minecraft Hora del Código
   minecraft_specs: Muchos idiomas| Navegadores y tabletas modernos | Grados 2+
   minecraft_agent_button: Inicio
-  minecraft_designer_description: Diseña un juego Minecraft.
+  minecraft_designer_description: Diseña un juego Minecraft. Crea tus propias versiones
+    de gallinas, ovejas, Creepers, zombis y muchos más personajes.
   minecraft_designer_button: Inicio
   minecraft_adventurer_description: Utiliza código para guiar a Alex o a Steve en
     una aventura.
@@ -583,7 +584,7 @@ es-MX:
   sports_og_title: Esfuérzate. Todo el mundo puede aprender.
   sports_og_description: Campeones y medallistas de oro te animan a probar la hora
     del código. Escribe tu propio juego deportivo.
-  sports_title: Crea tu propio Juego de deportes
+  sports_title: Programa tu propio juego de deporte
   sports_watch_video: Mira el Video
   sports_video_title: Esfuérzate. Todo el mundo puede aprender.
   sports_select_theme: Selecciona el tema del tutorial
@@ -621,6 +622,7 @@ es-MX:
   sports_athlete_Harrison: Harrison Barnes, medallista de oro olímpico y campeón de
     la NBA, Dallas Mavericks
   watch_inspirational_videos: Antes de empezar, ve uno de estos videos inspiradores
+  video_title_cs_is_everything: Las Ciencias de la Computación están cambiando todo
   video_title_inspire_girl: Inspira a una chica
   video_title_cs_intro: Introducción a las Ciencias de la Computación
   video_title_schools_dont_teach: "¿Qué no se aprende en colegios e institutos? (5min)"
@@ -921,7 +923,7 @@ es-MX:
   dashboard_sections_table_course: Curso
   dashboard_sections_table_pairing_allowed: Programación de pares
   dashboard_sections_table_stage_extras: Etapa Extra
-  dashboard_sections_table_students: Alumnos
+  dashboard_sections_table_students: Estudiantes
   dashboard_sections_table_code: Código de sección
   dashboard_sections_name: Nombre de la sección
   dashboard_sections_choose_secret: Si quieres proporcionar cuentas a tus alumnos,
@@ -1196,7 +1198,7 @@ es-MX:
   tynker_name: Crea tu propio juego
   scratch_name: Despierta tu creatividad con la programación
   lightbot_name: Lightbot
-  thinkersmith_name: Mis amigos robóticos
+  thinkersmith_name: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
   condcards_name: Condicionales con tarjetas
   lightbotintl_name: Lightbot
   codehs_name: Aprende a programar con Karel, el perro
@@ -1287,6 +1289,13 @@ es-MX:
   cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
   cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
   cspunit3_gradelevel: Grados 9-12
+  cspunit3_shortdescription_congrats: "Esta unidad presenta los conceptos fundamentales
+    de la programación informática, que desbloquea la capacidad de crear aplicaciones
+    ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación
+    y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos
+    aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r\n\r\nEsta
+    unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información
+    sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
   20-hour_name: Curso acelerado
   algebra_name: CS en Álgebra
   AlgebraA_name: CS en Álgebra Curso A
@@ -1306,9 +1315,9 @@ es-MX:
   csp17_category_name: "'16-'17 Principios de CS"
   cspexams_category_name: Prueba de práctica de principios de CS
   applab_name: Laboratorio de App
-  gamelab_name: Game Lab
+  gamelab_name: Laboratorio de juegos
   basketball_name: Crea un juego de baloncesto
-  sports_name: Crea tu propio Juego de deportes
+  sports_name: Programa tu propio juego de deporte
   applab_gradelevel: Mayores de 13 años
   applab_shortdescription_congrats: App Lab es un entorno de programación donde hacer
     aplicaciones simples. Diseña una aplicación, codifica con bloques o JavaScript
@@ -1341,7 +1350,7 @@ es-MX:
   kodable_gradelevel: Escuela primaria
   tynkerapp_gradelevel: Edad 5-13
   robomindnl_gradelevel: Edad 8-13
-  flappy_gradelevel: Edad 4-104
+  flappy_gradelevel: Edades 6+
   bitsbox_gradelevel: Escuela primaria
   makeschool_gradelevel: Preparatoria
   touchdevelop_gradelevel: Preparatoria
@@ -1350,7 +1359,7 @@ es-MX:
   thinkersmith2_gradelevel: Edad 8+
   kodableunplugged_gradelevel: Edad 8-13
   projguts_gradelevel: Edad 10-13
-  hourofcode_gradelevel: Edad 4-104
+  hourofcode_gradelevel: Edades 6+
   frozen_gradelevel: Edad 8+
   starwars_gradelevel: Edades 6+
   playlab_gradelevel: Edad 4-104
@@ -1386,8 +1395,8 @@ es-MX:
   coursee-2018_gradelevel: Edad 8-12
   coursef-2018_gradelevel: 9-13 años
   accelerated_gradelevel: Edades de 10 a 18 años
-  codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
-  codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
+  codeorg_platformtext: Navegadores modernos, smartphones, tabletas
+  codeintl_platformtext: Navegadores modernos, smartphones, tabletas
   thinkersmithspanish_platformtext: Desconectado
   khan_platformtext: Navegadores modernos
   khanes_platformtext: Navegadores modernos
@@ -1415,7 +1424,7 @@ es-MX:
   kodable_platformtext: iPad
   tynkerapp_platformtext: tabletas iPad y Android
   robomindnl_platformtext: Navegador moderno, versión móvil
-  flappy_platformtext: Cualquier navegador moderno, smartphone, tableta
+  flappy_platformtext: Navegadores modernos, smartphones, tabletas
   bitsbox_platformtext: Navegadores modernos
   makeschool_platformtext: Cualquier navegador moderno
   touchdevelop_platformtext: Navegador moderno, teléfonos inteligentes, todos los
@@ -1425,17 +1434,17 @@ es-MX:
   thinkersmith2_platformtext: Desconectado
   kodableunplugged_platformtext: Desconectado
   projguts_platformtext: Desconectado
-  hourofcode_platformtext: Cualquier navegador moderno, smartphone, tableta
-  frozen_platformtext: Navegadores modernos y tabletas
+  hourofcode_platformtext: Navegadores modernos, smartphones, tabletas
+  frozen_platformtext: Navegadores actuales y tabletas
   starwars_platformtext: Navegadores actuales y tabletas
-  playlab_platformtext: Cualquier navegador moderno, smartphone, tableta
+  playlab_platformtext: Navegadores modernos, smartphones, tabletas
   monstercoding_platformtext: Navegadores modernos, iOS, Android
   allcancode_platformtext: Navegadores modernos, iOS
   csfirst_platformtext: Navegadores modernos
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Navegadores modernos
   texasinstruments_platformtext: Calculadoras de TI
-  teacherled_platformtext: Cualquier navegador moderno, smartphone, tableta
+  teacherled_platformtext: Navegadores modernos, smartphones, tabletas
   codeorg_shortdescription: "¡Aprende a programar con Mark Zuckerberg y Angry Birds!"
   codeintl_shortdescription: "¡Aprende a programar con Mark Zuckerberg y Angry Birds!"
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -1712,8 +1721,8 @@ es-MX:
     la magia y la belleza del hielo. ¡Crearás copos de nieve y patrones a medida que
     patinas sobre hielo y crearás un paisaje invernal que luego puedes compartir con
     tus amigos!
-  starwars_longdescription: Aprende a programar droides y crea tu propio juego de
-    Star Wars en una lejana galaxia muy, muy lejana.
+  starwars_longdescription: Aprende a programar droides y crea tu propio juego Star
+    Wars en una galaxia muy, muy lejana.
   playlab_longdescription: "¡Crea una historia o haz un juego con el Laboratorio de
     juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se
     muevan, hagan sonidos, marquen puntos y hasta lancen bolas de fuego!"
@@ -1773,7 +1782,7 @@ es-MX:
   edx_beyond_name: Curso "CS50" de Harvard
   coursera_beyond_name: Curso Standford CS 101
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: Cursos universitarios en línea
+  teachingtree_beyond_name: Cursos de universidades en línea
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -2098,8 +2107,8 @@ es-MX:
   header_professional_learning: Aprendizaje Profesional
   header_educate_overview: Resumen del Educador
   header_educate_elementary: Escuela primaria
-  header_educate_middle: Escuela Secundaria
-  header_educate_high: Preparatoria
+  header_educate_middle: Secundaria
+  header_educate_high: Escuela secundaria
   header_educate_hoc: Hora del código
   header_educate_partner: Colabora con nosotros
   header_educate_beyond: Más allá de Code.org

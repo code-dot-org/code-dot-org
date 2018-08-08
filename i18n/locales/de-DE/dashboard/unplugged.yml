@@ -37,7 +37,7 @@ de:
         desc: Als Abschluss der ersten 20-stündigen Serie durchlebt die Klasse ihre Lieblingsmomente. Außerdem wird darüber gesprochen, wie Schüler bei Interesse ihre Informatikkenntnisse selbstständig weiter ausbauen und vertiefen können.
       UnplugHappyMaps:
         title: Glücklich Karten
-        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
       MoveIt:
         title: Achtung, fertig, LOS
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
@@ -81,7 +81,7 @@ de:
         title: Funktionale Sonnenfänger
         desc: Die Schüler erstellen einen Algorithmus mit Variablen und Funktionen (wiederverwendbarer Code), um ein Fensterbild aus Faden und Perlen zu machen.
       SongwritingParameters:
-        title: Songschreiben mit Parametern
+        title: Songschreiben
         desc: Schüler lernen das Konzept des Refrains in einem Lied, um die Weitergabe von Parametern kennen zu lernen (mit denen eine Funktion angepasst wird, ohne dass die gesamte Funktion neu geschrieben werden muss).
       DiceRace:
         title: 'Algorithmen in der realen Welt: Würfelrennen'
@@ -146,7 +146,7 @@ de:
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
       courseA_unplugged_happyMaps:
         title: Glücklich Karten
-        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
       courseA_unplugged_goingPlacesSafely:
         title: Sicher unterwegs
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer erklären, wie Schüler sicher im Internet navigieren.
@@ -192,7 +192,7 @@ de:
         title: Crowdsourcing
         desc: Schüler nutzen Crowdsourcing, eine Problemlösungstechnik, die häufig in Informatik und Technik angewendet wird, um gemeinsam eine Aufgabe zu lösen, die für einzelne Schüler zu schwierig wäre.
       courseE_unplugged_songwriting:
-        title: Songschreiben mit Parametern
+        title: Songschreiben
         desc: Schüler lernen das Konzept des Refrains in einem Lied, um die Weitergabe von Parametern kennen zu lernen (mit denen eine Funktion angepasst wird, ohne dass die gesamte Funktion neu geschrieben werden muss).
       courseF_unplugged_tangrams:
         title: Tangram-Algorithmen
@@ -213,7 +213,7 @@ de:
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
       UnplugHappyMaps_2018:
         title: Glücklich Karten
-        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
       GoingPlacesSafely_2018:
         title: Sicher unterwegs
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer erklären, wie Schüler sicher im Internet navigieren.

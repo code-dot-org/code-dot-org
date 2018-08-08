@@ -8,16 +8,13 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "GameLabJr"
+      "GameLabJr",
+      "ValidationSetup"
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
     "show_type_hints": "true",
     "include_shared_functions": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -48,13 +45,33 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "false",
-    "auto_run_setup": "DRAW_LOOP"
+    "auto_run_setup": "DRAW_LOOP",
+    "validation_code": "if (keyDown('up')) {\r\n  levelSuccess();\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-06 18:45:01 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-08-06 18:56:08 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-06 18:45:01 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-08-06 18:56:08 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-08-06 19:00:27 +0000\",\"changed\":[\"helper_libraries\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-08-06 19:39:00 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-08-06 19:39:36 +0000\",\"changed\":[],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="gamelab_createNewSprite">
+              <title name="NAME">i</title>
+              <title name="COSTUME">"bear"</title>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <title name="LOCATION">{"x":197,"y":196}</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
 </GamelabJr>

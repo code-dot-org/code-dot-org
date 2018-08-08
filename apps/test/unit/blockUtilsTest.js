@@ -872,6 +872,18 @@ describe('block utils', () => {
 
         valueToCodeStub.restore();
       });
+      it('generates code for a method call with specific this object', () => {
+        createBlock({
+          func: 'sayHi',
+          methodCall: true,
+          thisObject: 'spot',
+          blockText: 'say hi',
+          args: [],
+        }, '', 'test');
+        const code = generator['test_sayHi']();
+
+        expect(code.trim()).to.equal('spot.sayHi();');
+      });
       it('generates code for a object property', () => {
         createBlock({
           name: 'getToy',

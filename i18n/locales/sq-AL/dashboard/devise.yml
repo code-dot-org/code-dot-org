@@ -7,7 +7,7 @@ sq:
     failure:
       already_authenticated: "Ju jeni të loguar tashmë."
       inactive: "Llogaria juaj nuk është aktivizuar akoma."
-      invalid: "Email-i ose fjalëkalimi është i pavlefshëm."
+      invalid: "Email ose fjalëkalim jo i vlefshëm."
       invalid_token: "Shenjë e pasaktë identifikimi."
       locked: "Llogaria juaj është bllokuar."
       not_found_in_database: "Email ose fjalëkalim jo i vlefshëm."

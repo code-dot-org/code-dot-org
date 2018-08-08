@@ -371,7 +371,8 @@ class Blockly < Level
       return unless authored_hints_key
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
-        next if hint['hint_markdown'].nil? || hint['hint_id'].nil?
+        # Skip empty hints, or hints with videos (these aren't translated).
+        next if hint['hint_markdown'].nil? || hint['hint_id'].nil? || hint['hint_video'].present?
 
         translated_text = hint['hint_id'].empty? ? nil :
           I18n.t(hint['hint_id'], scope: authored_hints_key, default: nil)
@@ -384,7 +385,7 @@ class Blockly < Level
 
         hint
       end
-      JSON.generate(localized_hints)
+      JSON.generate(localized_hints.compact)
     else
       hints = JSON.parse(authored_hints).map do |hint|
         if hint['hint_video'].present?

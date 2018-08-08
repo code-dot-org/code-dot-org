@@ -345,7 +345,7 @@ nn:
       classroom: Side for lærarar
       district_dashboard: Distrikt dashboard
       label: Hei %{username}
-      stats: Framgangen min
+      stats: Code Studio
       settings: Kontoinnstillingar
       logout: Logg ut
       signin: Logg inn
@@ -467,7 +467,7 @@ nn:
     prize_info: 'Premier for deltaking (gjeld berre offentleg lærerarar i USA): opp
       til $1000 i klasseromsmidler.'
     tryfirst: 'Eller du kan prøve først og registrere deg seinare:'
-    trynow: Prøv no
+    trynow: Lær meir
     add_hint_help: Ver snill og hjelp oss med å legge inn smarte hint i Code.org-innføringskursa
     20hour_overview: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
       og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse og oppover,
@@ -498,7 +498,7 @@ nn:
       begreper? Vi har tatt de beste interaktive verktøy fra vårt informatikk-prinsipper-kurs,
       og utgitt frittstående moduler du kan bruke når som helst!
     announcement_learn_more_button: Lær meir
-    announcement_try_now_button: Prøv no
+    announcement_try_now_button: Lær meir
     announcement_host_an_hour_button: Ver vert for ein Kodetime
     announcement_watch_video_button: Sjå videoen
     announcement_petition: Som lærar, er du del av ei rørsle som ynskjer å gje alle
@@ -735,8 +735,8 @@ nn:
       body: Sjå eit galleri av app- og artist-bilder laga av brukarane våre
     gamelab:
       title: Spel-lab
-      body: Spill Lab er et programmerings miljø der du kan lage enkle animasjoner
-        og spill med objekter og karakterer som samhandler med hverandre.
+      body: Spel-lab er eit programmeringsmiljø der du kan lage enkle animasjonar
+        og spel med objekter og figurar som samhandlar med kvarandre.
       audience: Alder 13+
       cta: Lær korleis
     hoc-encryption:
@@ -744,8 +744,8 @@ nn:
       body: Studentene lærer teknikker for å lage og knekke krypterte meldinger.
     weblab:
       title: Nett-lab (beta)
-      body: Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med
-        HTML og CSS. Design din webside og del siden din i løpet av sekunder.
+      body: Nett-lab er eit programmeringsmiljø der du kan lage nettsider mer HTML
+        og CSS. Lag ei nettside og del han med andre i løpet av sekunder.
       audience: Alder 13+
       cta: Lær korleis
     frozen:
@@ -757,7 +757,7 @@ nn:
       body: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
     minecraft:
       title: Minecraft
-      body: Utforsk ei Minecraft-verd gjennom kode.
+      body: Utforsk ei Minecraft-verd gjennom kode
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft.
@@ -1212,4 +1212,6 @@ nn:
   cookie_banner:
     accept: Eg er einig
   gdpr_dialog:
+    message: Dine data fra bruken av dette nettstedet kan sendes til, lagres eller
+      behandles i USA.
     true: Ja

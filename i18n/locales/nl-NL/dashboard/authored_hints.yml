@@ -161,7 +161,7 @@ nl:
       2-3 Maze 1_authored_hint:
         2-3_Maze_1_a: Om het "beweeg vooruit" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok "als gestart".
       2-3 Maze 16_authored_hint:
-        2-3_Maze_16_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        2-3_Maze_16_a: Als het patroon moeilijk te zien is, codeer dan eerst alles volledig zonder lussen. Bekijk vervolgens welke dingen zich herhalen en voeg dan de lussen toe.
         2-3_Maze_16_b: "Om meer blokken in een \"Herhaal\" lus te zetten, sleep je eerst het \"herhaal keer\" blok naar de werkplaats en daarna sleep je alle blokken onder het \"als gestart\" blok binnenin de lus. \n\nZet daarna alles weer terug onder het \"als gestart\" blok en je bent klaar!"
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: Er zijn 2 manieren om deze puzzel op te lossen!
@@ -4614,7 +4614,7 @@ nl:
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: "Om meer blokken in een \"Herhaal\" lus te zetten, sleep je eerst het \"herhaal keer\" blok naar de werkplaats en daarna sleep je alle blokken onder het \"als gestart\" blok binnenin de lus. \n\nZet daarna alles weer terug onder het \"als gestart\" blok en je bent klaar!"
       courseC_maze_loops7_authored_hint:
-        courseC_maze_loops7_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        courseC_maze_loops7_a: Als het patroon moeilijk te zien is, codeer dan eerst alles volledig zonder lussen. Bekijk vervolgens welke dingen zich herhalen en voeg dan de lussen toe.
       courseC_maze_programming5_authored_hint:
         courseC_maze_programming5_c: De oplossing bevat twee `beweeg voorwaarts` blokken, één draai en nog eens twee `beweeg voorwaarts` blokken.
       courseC_maze_programming5_2018_authored_hint:
@@ -6798,20 +6798,20 @@ nl:
         2-3_Artist_Debugging_8_a: |-
           Hoeveel keer werd mijn vorm herhaald?
       grade2_PuppyLoops_6_authored_hint:
-        2-3_Maze_16_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        2-3_Maze_16_a: Als het patroon moeilijk te zien is, codeer dan eerst alles volledig zonder lussen. Bekijk vervolgens welke dingen zich herhalen en voeg dan de lussen toe.
         2-3_Maze_16_b: "Om meer blokken in een \"Herhaal\" lus te zetten, sleep je eerst het \"herhaal keer\" blok naar de werkplaats en daarna sleep je alle blokken onder het \"als gestart\" blok binnenin de lus. \n\nZet daarna alles weer terug onder het \"als gestart\" blok en je bent klaar!"
       grade2_PuppyLoops_7_authored_hint:
-        2-3_Maze_Loops_17_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        2-3_Maze_Loops_17_a: Als het patroon moeilijk te zien is, codeer dan eerst alles volledig zonder lussen. Bekijk vervolgens welke dingen zich herhalen en voeg dan de lussen toe.
         2-3_Maze_Loops_17_b: Is de start code verwijderd? Klik dan op `Begin opnieuw` om het terug te krijgen!
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Tip: Elke snorhaar is 75 pixels lang.'
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: Wat gebeurt er als je de kunstenaar naar achteren laat bewegen of springen nadat hij de eerste lijn tekent?
       grade2_puppy_loops6_authored_hint:
-        2-3_Maze_16_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        2-3_Maze_16_a: Als het patroon moeilijk te zien is, codeer dan eerst alles volledig zonder lussen. Bekijk vervolgens welke dingen zich herhalen en voeg dan de lussen toe.
         2-3_Maze_16_b: "Om meer blokken in een \"Herhaal\" lus te zetten, sleep je eerst het \"herhaal keer\" blok naar de werkplaats en daarna sleep je alle blokken onder het \"als gestart\" blok binnenin de lus. \n\nZet daarna alles weer terug onder het \"als gestart\" blok en je bent klaar!"
       grade2_puppy_loops7_authored_hint:
-        2-3_Maze_Loops_17_a: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        2-3_Maze_Loops_17_a: Als het patroon moeilijk te zien is, codeer dan eerst alles volledig zonder lussen. Bekijk vervolgens welke dingen zich herhalen en voeg dan de lussen toe.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
       grade3_ConditionalsElse_5_authored_hint:
@@ -6858,7 +6858,7 @@ nl:
       grade3_bee_conditionals_quantum5_authored_hint:
         remember_quantum: "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
       grade3_maze_loops2_authored_hint:
-        grade3_maze_loops2_b: Als het patroon lastig te zien is, maak dan eerst het hele programma zonder lussen en kijk daarna welke blokken steeds herhaald worden en voeg dan de lussen toe.
+        grade3_maze_loops2_b: Als het patroon moeilijk te zien is, codeer dan eerst alles volledig zonder lussen. Bekijk vervolgens welke dingen zich herhalen en voeg dan de lussen toe.
       grade3_maze_loops5_authored_hint:
         2-3_Maze_Loops_21_a: Als je het lastig vindt om het traptrede patroon te vinden, volg dan eerst het pad met je vinger.
       grade4_arist_nested_loop_polygons1_authored_hint:

@@ -1,7 +1,7 @@
 vi:
   data:
     block_categories:
-      Actions: Các hành động
+      Actions: hành động
       Loops: Vòng lặp
       Functions: Các hàm
       Color: Màu sắc

@@ -155,7 +155,7 @@ es-MX:
             'Maze: Conditionals':
               name: 'Laberinto: Condicionales'
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
             'Studio: Create a Game':
               name: 'Laboratorio de juegos: Crear un juego'
             'Studio: Create a Story':
@@ -454,7 +454,7 @@ es-MX:
             Introduction to Computer Science:
               name: Introducción al Arte de las Ciencias de la Computación
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de relevos
             Song Writing:
               name: Escribir canciones
             The Artist:
@@ -557,8 +557,7 @@ es-MX:
           description: Esta unidad explora los desafíos técnicos y las preguntas que
             surgen de la necesidad de representar la información digital en computadoras
             y transferencia entre las personas y los dispositivos computacionales.
-          description_short: Explore como la información digital está representada
-            y transferida
+          description_short: Programación
           stages:
             Binary Numbers:
               name: Números binarios
@@ -698,8 +697,15 @@ es-MX:
             reference:
               name: referencia
         cspunit3:
-          description_short: Explore como la información digital está representada
-            y transferida
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
+          description_short: Programación
           stages:
             APIs and Function Parameters:
               name: Las API y los parámetros de las funciones
@@ -871,9 +877,15 @@ es-MX:
               name: Modelo misterioso
             Welcome Back!:
               name: "¡Bienvenido de nuevo!"
+        Testing:
+          title: Probando
+          description: Probando
+          description_short: Probando
+          stages:
+            Testing:
+              name: Probando
         cspunit2:
-          description_short: Explore como la información digital está representada
-            y transferida
+          description_short: Programación
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Problemas difíciles - El problema del vendedor viajero
@@ -1050,7 +1062,7 @@ es-MX:
             Best Practices for Teaching Computer Science:
               name: Los mejores ejercicios para la enseñanza de la informática
             Computer Science Fundamentals:
-              name: Principios de la informática
+              name: Fundamentos de la informática
             Getting Started:
               name: Iniciando
             Looking Ahead:
@@ -1214,7 +1226,7 @@ es-MX:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la vida real: Planta una semilla'
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
             The Big Event:
               name: El gran evento
         algebraPD3a:
@@ -1290,6 +1302,7 @@ es-MX:
             Unit 6 lessons:
               name: Unidad 6 lección
         cspunit4draft:
+          description_short: Datos
           stages:
             Check Your Assumptions:
               name: Verifica tus suposiciones
@@ -1362,6 +1375,14 @@ es-MX:
             Getting Started:
               name: Iniciando
         cspunit3temp:
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
           stages:
             Canvas and Arrays in Apps:
@@ -1385,19 +1406,19 @@ es-MX:
               name: Laboratorio de juegos de Gumball
         starwars:
           title: 'Star Wars: Construcción de una galaxia con código'
-          description: Aprende a programar droides y crea tu propio juego de Star
-            Wars en una lejana galaxia muy, muy lejana.
-          description_short: Aprende a programar droides y crea tu propio juego de
-            Star Wars en una lejana galaxia muy, muy lejana.
+          description: Aprende a programar droides y crea tu propio juego Star Wars
+            en una galaxia muy, muy lejana.
+          description_short: Aprende a programar droides y crea tu propio juego Star
+            Wars en una galaxia muy, muy lejana.
           stages:
             Hour of Code 2015:
               name: Hora del código 2015
         starwarsblocks:
           title: 'Star Wars: Construcción de una galaxia con código'
-          description: Aprende a programar droides y crea tu propio juego de Star
-            Wars en una lejana galaxia muy, muy lejana.
-          description_short: Aprende a programar droides y crea tu propio juego de
-            Star Wars en una lejana galaxia muy, muy lejana.
+          description: Aprende a programar droides y crea tu propio juego Star Wars
+            en una galaxia muy, muy lejana.
+          description_short: Aprende a programar droides y crea tu propio juego Star
+            Wars en una galaxia muy, muy lejana.
           stages:
             Hour of Code 2015:
               name: Hora del código 2015
@@ -1418,11 +1439,9 @@ es-MX:
             Wrap-Up:
               name: Cierre
         cspunit5:
-          description_short: Explore como la información digital está representada
-            y transferida
+          description_short: Programación
         cspunit4:
-          description_short: Explore como la información digital está representada
-            y transferida
+          description_short: Programación
           stages:
             Check Your Assumptions:
               name: Verifica tus suposiciones
@@ -1731,7 +1750,7 @@ es-MX:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: Game Lab
+              name: Laboratorio de juegos
         cspassessment:
           stages:
             Participate in a longitudinal study!:
@@ -1744,6 +1763,8 @@ es-MX:
           stages:
             Peer Review:
               name: Revisión por pares
+        CSDU5-Draft:
+          description_short: Datos
         MikeTest:
           stages:
             Artist Functions:
@@ -1777,7 +1798,7 @@ es-MX:
             Digital Citizenship:
               name: Ciudadanía digital
             Songwriting:
-              name: Composicion musical con parámetros
+              name: Composición Musical
         grade1:
           stages:
             Debugging:
@@ -2177,9 +2198,9 @@ es-MX:
             Unit 5 Overview:
               name: Unidad 5 visión general
         basketball:
-          title: Elije un equipo y crea un juego de basquetbol
-          description_short: Elije un equipo y crea un juego de basquetbol
-          description: Elije un equipo y crea un juego de basquetbol
+          title: Crear un juego de baloncesto
+          description_short: Crear un juego de baloncesto
+          description: Crear un juego de baloncesto
           stages:
             Bounce:
               name: Rebotar
@@ -2231,7 +2252,8 @@ es-MX:
                 que seleccionaron.
         minecraft:
           title: 'Minecraft: Hora del Código para diseñar'
-          description_short: Diseña un juego Minecraft.
+          description_short: Diseña un juego Minecraft. Crea tus propias versiones
+            de gallinas, ovejas, Creepers, zombis y muchos más personajes.
           description: Diseña un juego Minecraft. Crea tus propias versiones de gallinas,
             ovejas, Creepers, zombis y muchos más personajes.
           stages:
@@ -2316,6 +2338,7 @@ es-MX:
             Loops in Harvester:
               name: Ciclos en Harvester
         coursed-draft:
+          title: 'Fundamentos de Ciencias de la Computación: Curso D'
           description_short: Aprende los conceptos básicos de las ciencias de la computación
             y crea tu propio arte, historias y juegos.
           stages:
@@ -2464,7 +2487,7 @@ es-MX:
             Hour of Code 2013:
               name: La hora del código 2013
         sports:
-          title: Crea tu propio Juego de deportes
+          title: Programa tu propio juego de deporte
           description_short: Multideporte
           description: Multideporte
           stages:
@@ -3377,6 +3400,14 @@ es-MX:
             Unit 3 Chapter 1 Assessment:
               name: Unidad 3 Capitulo 1 Evaluacion
           description_short: Programación
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -4131,7 +4162,7 @@ es-MX:
             Conditionals & Loops in Harvester:
               name: Condicionales y ciclos en Harvester
             'Functions: Songwriting':
-              name: Composicion musical con parámetros
+              name: Composición Musical
             Functions in Harvester:
               name: Funciones en Harvester
             Functions in Artist:
@@ -4159,7 +4190,7 @@ es-MX:
             Crowdsourcing:
               name: Colaboración abierta
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de relevos
         courseb-2018:
           assignment_family_title: Curso B
           description: Aprende los basicos de las ciencias de la compuación y el internet.
@@ -4236,7 +4267,7 @@ es-MX:
             Graph Paper Programming:
               name: Programación de hoja cuadriculada
             Relay Programming:
-              name: Programación bajo presión
+              name: Programación de relevos
             Introduction to Online Puzzles:
               name: Introducción a los acertijos en línea
         coursec-2018:
@@ -4290,7 +4321,7 @@ es-MX:
           description_audience: Edades de 8 a 12 años
           stages:
             'Programming: My Robotic Friends':
-              name: Mis amigos robóticos
+              name: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
             Sequence in Maze:
               name: Secuencias en Maze
             Building a Foundation:
@@ -4351,7 +4382,7 @@ es-MX:
                 R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados
                 a través de eventos, luego podrán crear su propio juego.
             'Functions: Songwriting':
-              name: Composicion musical con parámetros
+              name: Composición Musical
               description_student: Incluso los rockstars necesita conocimientos de
                 programación. Esta lección le enseñará acerca de las funciones utilizando
                 Letras de canciones.
@@ -4471,7 +4502,7 @@ es-MX:
           description_audience: 9 a 13 años
           stages:
             'Programming: My Robotic Friends':
-              name: Mis amigos robóticos
+              name: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
             Sequence in Maze:
               name: Secuencias en Maze
             Building a Foundation:
@@ -4804,6 +4835,14 @@ es-MX:
             Check Your Assumptions:
               name: Verifica tus suposiciones
         csp3-2018:
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
           description_short: Programación
           stages:
             The Need For Programming Languages:

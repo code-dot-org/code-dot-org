@@ -310,11 +310,10 @@ km:
         \\r
         Need a hint? Click here.
       Course 4 Artist Inspire_instruction: |-
-        Want a second peek at the inspiration
-        design or the hints?  Click here!\\r
+        Want a second peek at the inspiration design
+        or the hints?  Click here!\\r
         \\r
-        Otherwise, make a design all your
-        own!
+        Otherwise, make a design all your own!
       Course 4 Artist Vars 1_instruction: "Let's draw an equilateral triangle. \\r\n\\r\nIt\nhas to be exactly 100 pixels long on each side."
       Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside needs to be shorter if you want the whole pattern to fit on the screen.\n\\r\nLet's recreate the algorithm for this amazing pattern, but instead of\nmanually setting the `length` variable, let's use a math block with the `sides`\nvariable inside to make sure that each shape fits correctly. The perimeter\nof each polygon is 300 pixels.\\r\nNeed some hints?  Click here."
       Course 4 Artist Vars 14_instruction: |-
@@ -454,8 +453,8 @@ km:
       MC_HOC_2017_07a_Kiki_instruction: សំអាតផ្លូវទៅកាន់ការ៉េពណ៏ទឹកក្រូច។
       MC_HOC_2017_08_Cole_instruction: ផ្លាស់ប្តូរមុខងារដែលអោយដើម្បីវាអោយដំណើរការសំរាប់តំបន់ជីវចំរុះ។
       MC_HOC_2017_08_Kiki_instruction: ប្តូរមុខងារដែលដំណើរការចំពោះរូបផ្គុំនេះ។
-      MC_HOC_2017_08_RY_instruction: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែរភ្នំភ្លើង។
-      MC_HOC_2017_08_Will_instruction: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែរភ្នំភ្លើង។
+      MC_HOC_2017_08_RY_instruction: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែភ្នំភ្លើង។
+      MC_HOC_2017_08_Will_instruction: ប្រើមុខងារដើម្បីរកផ្លូវឆ្លងកំអែភ្នំភ្លើង។
       MC_HOC_2017_09_Cole_instruction: សរសេរកម្មវិធីដើម្បីអោយជំនួយការសំអាតផ្លូវអោយតួអង្គ។
       MC_HOC_2017_09_Kiki_instruction: សរសេរកម្មវិធីដើម្បីអោយជំនួយការធ្វើការសំអាតផ្លូវរបស់តួអង្គ និងដើម្បីទៅសង្កត់បន្ទះក្តារ។
       MC_HOC_2017_10_Cole_instruction: បង្កើតមុខងារមួយដើម្បីជួយក្នុងការបញ្ចប់ការធ្វើរទេះដឹករ៉ែ។
@@ -513,7 +512,7 @@ km:
         move Waddles with the arrows until you score.
       course2_playlab_stage17_8_instruction: "Can you have Waddles (actor 1) say\n\"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \\r\n\\r\nWhen you're\ndone, play the game to make that happen."
       course2_playlab_stage17_9_instruction: "Can you add a block to score a point\nwhen Waddles runs into Octavia (actor 3)? \\r\nPlay the game and move Waddles\nwith the arrows until you score!"
-      course3_playLab_challenge1_instruction: "Something should happen when you get\nenough points or when you run out of points. Add some code to the `win game`\nand `lose game` functions to make the game work the way it should. \\r\nClick\nthe hints for ideas!"
+      course3_playLab_challenge1_instruction: "Something should happen when\nyou get enough points or when you run out of points. Add some code to the\n`win game` and `lose game` functions to make the game work the way it should.\n\\r\nClick the hints for ideas!"
       courseA_collector_preLoops1_instruction: "This is Laurel the Adventurer! \\r\n\\r\nPress\n\"Run\" to see her walk up to the treasure and grab it."
       courseA_collector_preLoops2_instruction: "Great!  Now you get to add code yourself!  \\r\n\\r\nSnap\na `get treasure` block to the bottom of the program and click \"Run\"."
       courseB_maze_seq1_instruction: "Play with these blocks to see what they make\nthe bird do! \\r\n\\r\nGet the bird to the pig to complete the level."
@@ -648,6 +647,7 @@ km:
         - What does it look like to draw two snowflakes
         on top of one another?
       courseD_bee_conditionals3_instruction: "Help the bee collect all of the nectar.\n\\r\n\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower."
+      courseD_bee_conditionals3_2018_instruction: "Help the bee collect all of the nectar.\n\\r\n\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower."
       courseD_bee_conditionals8_instruction: |-
         Collect nectar if there is a flower.\\r
         Otherwise,
@@ -661,6 +661,7 @@ km:
       courseD_playLab_cond6_2018_instruction: "1)  Slow the ninja (actor 3) down before\nyou set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto **chase** the pirate.  "
       courseD_playLab_embedded_instruction: "Move Pegleg the Pirate with the arrow\nkeys. Get to the dragon to score points, but avoid the ninja! Standing below\nthe line of octopuses will make the ninja stop chasing you, but beware! The\nlonger you stay there, the more points you lose. \\r\n\\r\nGet 5 points to win!"
       courseE_artist_functions1_instruction: "Help the zombie draw glasses using\nsquares with sides of 100 pixels.  \\r\nThe bridge between the glasses is 75\npixels long."
+      courseE_artist_functions1_2018_instruction: "Help the zombie draw glasses using\nsquares with sides of 100 pixels.  \\r\nThe bridge between the glasses is 75\npixels long."
       courseE_farmer_functions2_instruction: "Now, there will be a different number\nof pumpkins each time you run the program.   \\r\n\\r\nUse the `while` block\nto pick only as many pumpkins as you need."
       courseE_farmer_functions3_instruction: "What happens when the paths to the\npumpkins are all different lengths?   \\r\n\\r\nGet them all with as few blocks\nas possible."
       courseE_farmer_functions4_instruction: |-
@@ -676,17 +677,17 @@ km:
         Here's
         some code to collect all of the lettuce.  Move it into a function so we can
         use it later.
-      courseE_playLab_challenge1_instruction: "Something should happen when you get\nenough points or when you run out of points. Add some code to the `win game`\nand `lose game` functions to make the game work the way it should. \\r\nClick\nthe hints for ideas!"
+      courseE_playLab_challenge1_instruction: "Something should happen when\nyou get enough points or when you run out of points. Add some code to the\n`win game` and `lose game` functions to make the game work the way it should.\n\\r\nClick the hints for ideas!"
       courseE_playLab_challenge1_2018_instruction: "Something should happen when\nyou get enough points or when you run out of points. Add some code to the\n`win game` and `lose game` functions to make the game work the way it should.\n\\r\nClick the hints for ideas!"
       courseF_artist_variables_2_instruction: "Now use another loop to draw three\nof those triangles right next to each other.   \\r\nYou can nest the code from\nyour last puzzle inside.\\r\n"
-      courseF_artist_variables_6_instruction: "OOPS! We actually need the triangles\nto be 60 pixels wide, with 60 pixel jumps.  \\r\nAren't you glad you're using\na variable?"
+      courseF_artist_variables_6_instruction: "OOPS! We actually need the\ntriangles to be 60 pixels wide, with 60 pixel jumps.  \\r\nAren't you glad\nyou're using a variable?"
       courseF_artist_variables_9_instruction: |-
         See what happens when you repeat the
         code from the last puzzle 30 times instead of only 3!\\r
         \\r
         Feel free to
         make your lines any color or pattern for some extra zest.
-      courseF_artist_variables_FP_instruction: "**Freeplay:** Take what you've learned\nand make your own drawing. \\r\n\\r\nHow can you use variables with squares,\npentagons, or hexagons?"
+      courseF_artist_variables_FP_instruction: "**Freeplay:** Take what\nyou've learned and make your own drawing. \\r\n\\r\nHow can you use variables\nwith squares, pentagons, or hexagons?"
       courseF_bee_conditionals8_instruction: |-
         Collect nectar if there is a flower.\\r
         Otherwise,
@@ -697,6 +698,17 @@ km:
         make honey (because there is a honeycomb).
       courseF_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech\nby changing the value of the variables in just two places! \\r\n"
       courseF_playlab_variables2a_instruction: "Now, decode Pirate Pegleg's speech\nby changing the value of the variables in just two places! \\r\n"
+      course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech\nby changing the value of the variables in just two places! \\r\n"
+      course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech\nby changing the value of the variables in just two places! \\r\n"
+      grade2_MakeDogTag_4_instruction: |-
+        Finish this tag by drawing a rectangle around
+        the outside.\\r
+        (The long sides are 200 pixels each and the short sides are
+        each 100 pixels)
+      grade2_MakeDogTag_7_instruction: |-
+        One more tag.  This is a triangle for Pi.\\r
+        (Each
+        side is 150 pixels)
       grade2_PuppyLoops_10_instruction: |-
         My teacher says that I should finish what
         I start!\\r
@@ -781,6 +793,7 @@ km:
         \\r
         Collect nectar
         from each of the flowers using the fewest blocks possible.
+      grade3_bee_conditionals_new1a_instruction: "Help the bee collect all of the nectar.\n\\r\n\\r\nYou can only collect nectar from flowers, but you can check any space\nto see if there is a flower."
       grade4_arist_nested_loop_polygons1_instruction: "Loop this design 10 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop?"
       grade4_arist_nested_loop_polygons2_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo you have to turn each time you loop? "
       grade4_arist_nested_loop_triangles5_instruction: |-
@@ -789,6 +802,7 @@ km:
         \\r
         To get this cool design with a hollow center, you'll
         need to jump forward by the length of the triangle before turning.
+      grade4_artist_functions1_instruction: "Help the zombie draw glasses using\nsquares with sides of 100 pixels.  \\r\nThe bridge between the glasses is 75\npixels long."
       grade4_artist_functions2_instruction: "Functions let you define new blocks! \\r\n\\r\nWe've\nmoved the blocks needed for drawing a square into a function called `draw\na square`. This time, use the `draw a square` function to create the glasses.\n\\r\n\\r\nThe squares are 75 pixels apart."
       grade4_artist_nestedLoops_challenge_instruction: |-
         Click here to see the full instructions again!\\r
@@ -837,6 +851,12 @@ km:
         \\r
         See what happens when we
         start to get creative with the bits?
+      grade5_artist_for_loops10_instruction: |-
+        Can you figure out how
+        to use all of the things you've learned to create this image?\\r
+        \\r
+        Need
+        a hint? Click here.
       grade5_artist_for_loops5_instruction: |-
         Just one little change to the code
         from the last image can create this drawing. Can you figure out what that

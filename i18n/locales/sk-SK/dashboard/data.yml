@@ -331,7 +331,7 @@ sk:
         C3_functional_suncatchers: Dekorácie
         C3_songwriting_with_parameters: Písanie pesničiek s parametrami
         C4_intro: Úvod
-        C4_loops_zombie: Cykly
+        C4_loops_zombie: Slučky
         C4_bee_conditional: Podmienky s včelou
         C4_variables_artist: Premenné - Umelec
         C4_variables_playlab: Premenné - Herné laboratórium
@@ -392,7 +392,7 @@ sk:
         csd_weblab_intro_3: Úvod do webového laboratória - časť š
         csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Funkcie s parametrami
-        csp_applab_loops: Cykly
+        csp_applab_loops: Slučky
         starwars_intro: 'Star Wars: Budovanie Galaxie s kódom - Úvod'
         starwars_typing: 'Star Wars: Budovanie Galaxie s kódom - JavaScript'
         starwars_events: 'Star Wars: Budovanie Galaxie s kódom - Udalosti'
@@ -457,7 +457,7 @@ sk:
         CSF_if_allskins: Blok "If"
         CSF_ifelse_allskins: Používanie blokov If/Else
         CSF_ifelseifelse_allskins: Používanie blokov If/Elseif/Else
-        CSF_loops_AB: Cykly
+        CSF_loops_AB: Slučky
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmieňovacie výroky
         csd_gamelab_if_else: Výroky If/Else
@@ -468,7 +468,7 @@ sk:
     callout:
       text:
         drag_blocks: Presuňte blok "Posunúť" a pripojte ho pod druhý blok
-        run: Stlač "Spustiť" pre vyskúšanie svojho programu
+        run: Stlačte "Spustiť" pre vyskúšanie programu
         watch_again: Pre opätovné prezretie videa klikni sem
         gray_block_explanation: Sivé bloky sa nedajú vymazať. Viete napriek tomu vyriešiť úlohu?
         show_code_explanation: Klikni sem, aby si videl kód programu, ktorý tvoríš

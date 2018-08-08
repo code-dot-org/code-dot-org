@@ -282,7 +282,7 @@ fi:
       classroom: 'Opettajan kotisivu'
       district_dashboard: 'Koulupiirin hallintapaneeli'
       label: 'Hei %{username}'
-      stats: 'Minun edistymiseni'
+      stats: 'Code Studio'
       settings: 'Tilini'
       logout: 'Kirjaudu ulos'
       signin: 'Kirjaudu sisään'
@@ -529,7 +529,7 @@ fi:
       body: "Tee Pelilabrassa tarina tai peli jonka pääosassa ovat Disneyn Infinity-hahmot."
     minecraft:
       title: "Minecraft"
-      body: "Tutki Minecraft-maailmaa koodin kautta."
+      body: "Tutki Minecraft-maailmaa koodin kautta"
     minecraft2016:
       title: "Minecraft"
       body: "Koodaa eläimiä ja muita Minecraft otuksia omalla Minecraft versiollasi."
@@ -642,22 +642,14 @@ fi:
   race_interstitial:
     title: "Valinnainen: Auta meitä seuraamaan edistymistämme kohti monimuotoista tietojenkäsittelyä"
     races:
-      - 
-        white: "Valkoinen"
-      - 
-        black: "Musta tai afroamerikkalainen"
-      - 
-        hispanic: "Hispaano tai Latino"
-      - 
-        asian: "Aasialainen"
-      - 
-        hawaiian: "Havaijilainen tai muilta Tyynenmeren saarilta"
-      - 
-        american_indian: "Amerikan intiaani/Alaskalainen"
-      - 
-        other: "Muut"
-      - 
-        opt_out: "En halua vastata"
+      white: "Valkoinen"
+      black: "Musta tai afroamerikkalainen"
+      hispanic: "Hispaano tai Latino"
+      asian: "Aasialainen"
+      hawaiian: "Havaijilainen tai muilta Tyynenmeren saarilta"
+      american_indian: "Amerikan intiaani/Alaskalainen"
+      other: "Muut"
+      opt_out: "En halua vastata"
     submit: "Jatka"
     decline: "Sulje"
   zendesk_too_young_message: 'Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a> -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin puolestasi.'

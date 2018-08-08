@@ -16,8 +16,8 @@ var NonMarkdownInstructions = function (props) {
   return (
     <div style={styles.main}>
       <p className="dialog-title">{props.puzzleTitle}</p>
-      {props.instructions &&
-        <p className="instructions" dangerouslySetInnerHTML={{ __html: props.instructions }}/>
+      {props.shortInstructions &&
+        <p className="instructions" dangerouslySetInnerHTML={{ __html: props.shortInstructions }}/>
       }
       {props.instructions2 &&
         <p className="instructions2" dangerouslySetInnerHTML={{ __html: props.instructions2 }}/>
@@ -28,7 +28,7 @@ var NonMarkdownInstructions = function (props) {
 
 NonMarkdownInstructions.propTypes = {
   puzzleTitle: PropTypes.string.isRequired,
-  instructions: PropTypes.string,
+  shortInstructions: PropTypes.string,
   instructions2: PropTypes.string
 };
 

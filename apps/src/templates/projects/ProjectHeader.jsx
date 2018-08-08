@@ -1,10 +1,14 @@
-/** @file Header banner and gallery naviation for the project gallery */
-import React from 'react';
+/** @file Header banner and start new project buttons for the project gallery */
+import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
-import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
+import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 export default class ProjectHeader extends React.Component {
+  static propTypes = {
+    canViewAdvancedTools: PropTypes.bool
+  };
+
   render() {
     return (
       <div>
@@ -13,7 +17,10 @@ export default class ProjectHeader extends React.Component {
           headingText={i18n.projects()}
           subHeadingText={i18n.projectsSubHeading()}
         />
-        <GallerySwitcher/>
+        <StartNewProject
+          canViewFullList
+          canViewAdvancedTools={this.props.canViewAdvancedTools}
+        />
       </div>
     );
   }

@@ -772,8 +772,9 @@ hu:
         használni és ügyelj a számlálóra is.
       grade4_bee_nestedLoops4_markdown_instruction: Gyűjtsd össze az összes nektárt
         az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!
-      grade4_frozen_freeplay_markdown_instruction: Hivatalos művész mesterré váltál!
-        Készíts egy téli csodaországot.
+      grade4_frozen_freeplay_markdown_instruction: |-
+        Hivatalosan is egy mester művész lettél!
+        Hozz létre egy téli csodaországot!
       grade4_frozen_functions0_markdown_instruction: A kör egy különleges forma. Ki
         tudod találni, mit kell beírni a kérdőjelek helyére, hogy meg tudjunk rajzolni
         egy kört?

@@ -6,7 +6,7 @@ cs:
         Maze: Bludiště
         Multi: Více voleb
         Unplug2: Aritmetické Myšlení
-        Unplug3: Programování na milimetrovém papíru
+        Unplug3: Programování Na Milimetrovém Papíru
         Artist: Umělec
         Unplug4: Algoritmy
         Artist2: Umělec 2
@@ -18,7 +18,7 @@ cs:
         Farmer2: Farmářka 2
         Unplug8: Abstrakce
         Artist4: Malíř 4
-        Unplug9: Štafetové programování
+        Unplug9: Relay programování
         Farmer3: Farmář 3
         Unplug10: Internet
         Artist5: Umělec 5
@@ -309,7 +309,7 @@ cs:
         C2_graph_paper: Programování Na Milimetrovém Papíru
         C2_conditionals_with_cards: Podmínky
         C2_binary_bracelets: Binární náramky
-        C2_relay_programming: Štafetové programování
+        C2_relay_programming: Relay programování
         C2_paper_airplanes: Papírová letadla
         C2_digital_footprint: Tvé digitální stopy
         C2_digital_footprint_v2: Tvé digitální stopy
@@ -392,7 +392,7 @@ cs:
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok
-        run: Stisknutím tlačítka "Spustit" vyzkoušíš svůj program
+        run: Stisknutím tlačítka "Spustit" si vyzkoušíš program
         watch_again: Klikněte sem, pokud chcete vidět video znova
         gray_block_explanation: Bloky, které jsou šedé, nejde smazat, ani je přesunout nikam jinam. Dokážeš vyřešit hádanku i tak?
         show_code_explanation: Klikněte sem, pokud chcete vidět kód programu, který tvoříte

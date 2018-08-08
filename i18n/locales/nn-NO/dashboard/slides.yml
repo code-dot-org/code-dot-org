@@ -1028,7 +1028,7 @@ nn:
       4:
         text: "Nokre døme på hendingar er å lytte etter museklikk, ein piltast eller eit trykk på skjermen."
       5:
-        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere ein beskjed til ein opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendingar for å få han til å flytte på seg. Når spelaren bruker piltastane opp/ned eller opp/ned-knappene."
+        text: "Her skal vi først få R2-D2 til å bevege seg opp og levere ein beskjed til ein opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendingar for å få han til å flytte på seg. Når spelaren bruker piltastane opp/ned eller opp/ned-knappane."
       6:
         text: "Vi bruker whenUp() hendingblokka og kobler goUp()-blokka til den. Når spelaren trykker pil opp-tasten, køyrer vi koden knytta til whenUp()-blokka. Og vi gjer tilsvarande for å få R2-D2 til å flytte ned."
       7:
