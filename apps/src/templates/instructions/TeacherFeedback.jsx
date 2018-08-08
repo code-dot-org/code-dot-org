@@ -160,7 +160,7 @@ class TeacherFeedback extends Component {
           </div>
           {this.state.latestFeedback.length > 0 &&
             <div style={styles.time} id="ui-test-feedback-time">
-              {i18n.lastUpdated({time: moment(latestFeedback.created_at).fromNow()})}
+              {i18n.lastUpdated({time: moment.min(moment(), moment(latestFeedback.created_at)).fromNow()})}
             </div>
           }
         </div>
