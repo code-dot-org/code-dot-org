@@ -7,9 +7,8 @@ import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
 import codegen from './lib/tools/jsinterpreter/codegen';
-import {installCustomBlocks, appendBlocksByCategory} from '@cdo/apps/block_utils';
+import {installCustomBlocks, appendBlocksByCategory, appendCallers} from '@cdo/apps/block_utils';
 import logToCloud from './logToCloud';
-import xml from './xml';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
@@ -101,7 +100,9 @@ export default function (app, levels, options) {
         }
       }
 
-      level.toolbox = appendBlocksByCategory(level.toolbox, {Behaviors: xml.parseElement(level.sharedCallers)});
+      if (level.sharedCallers) {
+        level.toolbox = appendCallers(level.toolbox, level.sharedCallers);
+      }
     }
 
     Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
