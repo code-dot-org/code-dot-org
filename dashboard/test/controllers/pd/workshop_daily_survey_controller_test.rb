@@ -17,7 +17,7 @@ module Pd
       @summer_enrollment = create :pd_enrollment, :from_user, user: @enrolled_summer_teacher, workshop: @summer_workshop
 
       @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 4, regional_partner: @regional_partner, facilitators: @facilitators
+        num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators
 
       @academic_year_enrollment = create :pd_enrollment, :from_user, user: @enrolled_academic_year_teacher, workshop: @academic_year_workshop
     end
@@ -39,6 +39,7 @@ module Pd
           },
           academic_year_1: {
             day_1: FAKE_ACADEMIC_YEAR_IDS[0],
+            post_workshop: FAKE_ACADEMIC_YEAR_IDS[1],
             facilitator: FAKE_FACILITATOR_FORM_ID
           }
         }.deep_stringify_keys
@@ -423,6 +424,30 @@ module Pd
       assert new_record.placeholder?
       assert_equal @summer_workshop, new_record.pd_workshop
       assert_equal 5, new_record.day
+    end
+
+    test 'post workshop submit redirects to agenda survey for academic year workshops' do
+      sign_in @enrolled_academic_year_teacher
+
+      assert_creates Pd::WorkshopDailySurvey do
+        params = general_submit_redirect_params(
+          day: 1,
+          user: @enrolled_academic_year_teacher,
+          workshop: @academic_year_workshop,
+          enrollment_code: @academic_year_enrollment.code
+        ).merge submission_id: FAKE_SUBMISSION_ID
+
+        params[:key][:formId] = FAKE_ACADEMIC_YEAR_IDS[1]
+        post '/pd/workshop_survey/submit', params: params
+
+        assert_redirected_to action: :new_general, day: 1, enrollment_code: @academic_year_enrollment.code
+      end
+
+      new_record = Pd::WorkshopDailySurvey.last
+      assert new_record.placeholder?
+      assert_equal @academic_year_workshop, new_record.pd_workshop
+      assert_equal 1, new_record.day
+      assert_equal FAKE_ACADEMIC_YEAR_IDS[1], new_record.form_id
     end
 
     test 'thanks displays thanks message' do
