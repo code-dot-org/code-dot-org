@@ -624,6 +624,12 @@ function main() {
     $scope.script_list = sectionsService.validScripts();
     $scope.tab = 'responses';
 
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
+
     $scope.react_text_responses = true;
     $scope.$on('text-responses-table-rendered', () => {
       $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
@@ -665,6 +671,12 @@ function main() {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'assessments';
+
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
 
     $scope.script_list = sectionsService.validScripts();
 
