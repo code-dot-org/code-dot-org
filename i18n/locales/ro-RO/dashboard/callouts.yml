@@ -38,7 +38,7 @@ ro:
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Utilizaţi acest buton pentru a edita funcţia şi pentru a schimba direcţia spre care se va întoarce albina ca să obţină nectarul.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Apasă "Rulează" pentru a încerca programul tău
+        Course 4 Maze 1_callout1: Apasă "Run" pentru a încerca programul tău
       Course 4 Maze 4_callout:
         repeat: Pune blocuri în interiorul buclei pentru a repeta comenzi
       Course 4 Play Lab Params 3_callout:
@@ -95,9 +95,9 @@ ro:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta. Il poti termina?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Apasă "Rulează" pentru a încerca programul tău
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Apasă "Rulează" pentru a încerca programul tău
+        craft_run_button_callout: Apasă "Run" pentru a încerca programul tău
       Overworld Place Wall_callout:
         craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
       Overworld Place Wall_2018_callout:

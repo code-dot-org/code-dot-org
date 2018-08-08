@@ -274,9 +274,9 @@ es:
       2-3 Bee Loops Assessment 1_markdown_instruction: |-
         ** Evaluación: ** Use un bucle `siempre que`
         para recoger todo el néctar de estas flores.
-      2-3 Maze 1_markdown_instruction: "¿Puedes ayudarme a atrapar al cerdo travieso?
-        \r\n\r\nApila un par de bloques `avanzar` debajo del bloque`cuando se ejecuta`
-        y presiona \"ejecutar\".\n"
+      2-3 Maze 1_markdown_instruction: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso?
+        \r\n\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea
+        y presiona \"Ejecutar\". "
       2-3 Maze 12 - One Move Block_markdown_instruction: "Obtén el cerdo malo!\nPero
         esta vez, solo puedes usar un bloque de `avanzar`\r\n\r\nAh observa de cerca\n¿Ves
         algunos otros bloques que puedan ayudarte a llegar allí?"
@@ -470,8 +470,12 @@ es:
       4-5 Nested Loops 11_markdown_instruction: "¿Puedes tu dibujar los 10 cuadrados
         de\nesta acera usando un circuito insertado? \r\n\r\nCada cuadrado tiene 30
         píxeles."
+      4-5 Nested Loops 12_markdown_instruction: "¿Puedes dibujar estos 36 triángulos
+        utilizando un bucle anidado?"
       4-5 Nested Loops 3_markdown_instruction: "Crea un sol anidando el código de
         arranque en otro bucle. Esto se llama un bucle anidado. \r"
+      4-5 Nested Loops 5_markdown_instruction: has un bucle con el código dado para
+        crear un molino de viento.
       4-5 Nested Loops 6_markdown_instruction: |-
         ¿Puedes dibujar un hexágono haciendo un enlace
         con el código triangular?
@@ -605,6 +609,12 @@ es:
       Bergeron Robot Maze1_markdown_instruction: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso?
         \r\n\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea
         y presiona \"Ejecutar\". "
+      CSD U3 - conditionals - arrows and gears_markdown_instruction: "# Engranajes
+        con Condicionales\r\n\r\nVamos a\nhacer girar los engranajes solo cuando la
+        tecla de espacio se mantiene presionada.\r\n\r\n# Hagamos\nEsto\r\n\r\n* Agregar
+        una instrucción `if`.\r\n* Use `Flecha bajando` como entrada para la\ndeclaración
+        if para verificar cuando se presiona la tecla de espacio.\r\n* Mueve el código
+        que\nhace que los engranajes giren dentro del `if`."
       CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: "# Alienígena
         Saltador\r\n\r\nPresiona\n\"Ejecutar\" para jugar el juego de la izquierda.
         Puedes hacer que el alienígena salte con el\nbarra espaciadora, y moverlo
@@ -661,6 +671,12 @@ es:
         presionada hacia abajo.\r\n* Mueva los comandos para mover el\npez dentro
         de la declaración if."
       CSD U3 Input Gears_markdown_instruction: "# Engranajes con Condicionales\r\n\r\nVamos
+        a\nhacer girar los engranajes solo cuando la tecla de espacio se mantiene
+        presionada.\r\n\r\n# Hagamos\nEsto\r\n\r\n* Agregar una instrucción `if`.\r\n*
+        Use `Flecha bajando` como entrada para la\ndeclaración if para verificar cuando
+        se presiona la tecla de espacio.\r\n* Mueve el código que\nhace que los engranajes
+        giren dentro del `if`."
+      CSD U3 Input Gears_2018_markdown_instruction: "# Engranajes con Condicionales\r\n\r\nVamos
         a\nhacer girar los engranajes solo cuando la tecla de espacio se mantiene
         presionada.\r\n\r\n# Hagamos\nEsto\r\n\r\n* Agregar una instrucción `if`.\r\n*
         Use `Flecha bajando` como entrada para la\ndeclaración if para verificar cuando
@@ -1001,9 +1017,9 @@ es:
         jugador utilizando las **flechas direccionales**. \r\n\r\nPara superar este
         nivel, tendrás que llegar a la puerta y abrirla (utilizando la **barra espaciadora**)
         para poder llegar al recuadro naranja del interior."
-      MC_HOC_2017_01_Cole_markdown_instruction: Necesitas hacerte con todas las herramientas
-        en este viaje. Muévete con las **flechas direccionales** y llega al cofre
-        que hay en el camino para ganar.
+      MC_HOC_2017_01_Cole_markdown_instruction: Sellel tekonnal pead koguma kokku
+        kõik tööriistad. Kasuta liikumiseks **nooleklahve** ja liigu võitmiseks rajal
+        oleva kirstuni
       MC_HOC_2017_01_Kiki_markdown_instruction: Para jugar en este nivel, haz clic
         en el botón naranja de "Ejecutar" que hay debajo del área de juego y mueve
         al jugador con las **flechas direccionales**.
@@ -1195,22 +1211,42 @@ es:
         pero no sabrás el número hasta que ejecutes el código! \r\n\r\nTen cuidado
         de no recolectar néctar de una flor púrpura si no tiene. \r\nPrimero deberás
         comprobar si el néctar es igual a 1 usando el bloque `si hay néctar`."
-      Testing Quantum Farmer_markdown_instruction: 'Wow, encontre un agujero realmente
-        profundo! no se cuantas paleadas de tierra necesita. ¿Puedes escribir un programa
-        que llene hasta que el suelo este parejo? Sugerencia: trata usando el bucle
-        mientras.'
+      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: |
+        #
+        Color de Pixelacion: Tarea 1
+        **Direcciones:**
+
+        * Comenzamos con la imagen de 4x2
+        Maddie estaba creando, pero hemos omitido las dos últimas cuadriculas.
+        * Terminar
+        la imagen al descubrir qué dos colores faltan y codificarlos.
+      Pixelation - Lesson 15 - Complete 3-bit color_2018_markdown_instruction: |
+        #
+        Color de Pixelacion: Tarea 1
+        **Direcciones:**
+
+        * Comenzamos con la imagen de 4x2
+        Maddie estaba creando, pero hemos omitido las dos últimas cuadriculas.
+        * Terminar
+        la imagen al descubrir qué dos colores faltan y codificarlos.
+      Testing Quantum Farmer_markdown_instruction: "Wow, mira eso! \r\n\r\nYo no\nse
+        cuántas palas de tierra necesita este hoyo. \r\n¿Puedes tu escribir un programa\nque
+        siga usando el bloque `llenar` hasta que el suelo esté parejo?\n  "
       course1_artist_loops_challenge2_markdown_instruction: |-
         ¡Vamos a jugar un juego!! Dibuja tantas X como tú
         puedas! ¿Puedes obtener 3 en una fila?
-      course4_artist_fwp_challenge1_markdown_instruction: Intenta ejecutar este programa
-        y haz cambios para ver que ocurre. ¿Puedes averiguar cómo funciona? (o elimínalo
-        y reemplázalo con algo totalmente diferente)
+      course4_artist_fwp_challenge1_markdown_instruction: Intente ejecutar este programa
+        y haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo
+        y reemplazalo con algo totalmente diferente)
       courseD_bee_nestedLoops5_markdown_instruction: 'Recolecta todo el néctar de
         cada flor y haz miel en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops8_markdown_instruction: 'Recolecta todo el néctar de
         cada flor y haz miel en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Recolecta todo el néctar
         de cada flor y haz miel en cada panel. Utiliza un bucle anidado. '
+      courseD_bounce_events1_markdown_instruction: ¡Llegar a la bandera! Coloque un
+        bloque en "cuando flecha" bloquear y pulse "Ejecutar" para mover el jugador
+        a la bandera.
       courseD_maze_nestedLoops4_markdown_instruction: "¡Llévame al girasol!"
       courseD_maze_nestedLoops4_2018_markdown_instruction: "¡Llévame al girasol!"
       courseE_bee_functions2_markdown_instruction: "Las funciones son bloques de código
@@ -1375,8 +1411,8 @@ es:
       grade3_Debugging_5_markdown_instruction: "¡Esa flor se ve deliciosa! \r\n\r\nArregle
         el/los error (s) para recoger todo el néctar. \r\nAhora puede usar tanto la
         ejecución como el paso."
-      grade3_Debugging_6_markdown_instruction: "Estos bloques realmente me molestan.
-        Corregir \nel error(s) para recoger todo el néctar y hacer toda la miel. "
+      grade3_Debugging_6_markdown_instruction: "¡Qué desafío tan dulce!\r\n\r\nArregla\nel
+        error(s) para recoger todo el néctar."
       grade3_Debugging_9_markdown_instruction: Estos bloques realmente me molesta.
         Corregir el error(s) para recoger todo el néctar y hacer todo de la miel.
       grade3_Loops_10_markdown_instruction: "¡Una abeja tan ocupada!\n\r\nAyuda a
@@ -1387,9 +1423,8 @@ es:
         de bloques posible?"
       grade3_Loops_3_markdown_instruction: "¿Podrías utilizar un ciclo para recolectar
         todo el néctar?"
-      grade3_Loops_4_markdown_instruction: |-
-        Ahora usa el nuevo bloque repeat para recolectar todo
-        el néctar y hacer toda la miel.
+      grade3_Loops_4_markdown_instruction: Ahora usa el bloque 'repetir' para recolectar
+        todo el néctar y crear toda la miel.
       grade3_Loops_6_markdown_instruction: |-
         ¿Qué pasa si haces un ciclo con esta secuencia 3 veces?
         ¡No olvides hacer la miel al final!
@@ -1412,6 +1447,8 @@ es:
         bloque de `avanzar`en esta oportunidad
       grade3_maze_nestedLoops4_markdown_instruction: Usa dos ciclos para hacer que
         el cerdo use menos bloques.
+      grade4_arist_nested_loop_flags1_markdown_instruction: has un bucle con el código
+        dado para crear un molino de viento.
       grade4_arist_nested_loop_polygons1_markdown_instruction: 'con el bucle repite
         este diseño 10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista:
         ¿Cuanto es 360 dividido por 10?)'
@@ -1421,12 +1458,21 @@ es:
       grade4_arist_nested_loop_squares1_markdown_instruction: "¿Puedes tu dibujar
         los 10 cuadrados de\nesta acera usando un circuito insertado? \r\n\r\nCada
         cuadrado tiene 30 píxeles."
+      grade4_arist_nested_loop_triangles3_markdown_instruction: |-
+        ¿Puedes dibujar un hexágono haciendo un enlace
+        con el código triangular?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Dibujar los dientes
+        en la boca del cocodrilo!
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Crea un sol anidando
         el código de arranque en otro bucle. Esto se llama un bucle anidado. \r"
+      grade4_arist_nested_loop_triangles6_markdown_instruction: "¿Puedes dibujar estos
+        36 triángulos utilizando un bucle anidado?"
       grade4_artist_functions2_markdown_instruction: ¡Las funciones permiten definir
         nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función
         llamada "dibuja un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado"
         para crear los lentes? Los cuadrados están separados por 75 píxeles.
+      grade4_artist_nested_loop_flags1_markdown_instruction: has un bucle con el código
+        dado para crear un molino de viento.
       grade4_artist_nested_loop_polygons1_markdown_instruction: 'con el bucle repite
         este diseño 10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista:
         ¿Cuanto es 360 dividido por 10?)'
@@ -1438,6 +1484,8 @@ es:
         3 triángulos en una rotación de 360 grados.\r\n\r\n"
       grade4_artist_nested_loop_triangles5_markdown_instruction: "Crea un sol anidando
         el código de arranque en otro bucle. Esto se llama un bucle anidado. \r"
+      grade4_artist_nested_loop_triangles6_markdown_instruction: "¿Puedes dibujar
+        estos 36 triángulos utilizando un bucle anidado?"
       grade4_artist_parameters_triangles2_markdown_instruction: ¿Notas algo diferente
         en estos bloques de función? Haz clic en "Ejecutar" para ver qué pasa.
       grade4_bee_conditionals_nested_loops_markdown_instruction: "**Assessment:**
@@ -1510,9 +1558,8 @@ es:
       grade4_review_artist3_markdown_instruction: |-
         El bloque Salta mueve el artista sin dibujar.
         Dibuja la línea punteada utilizando los bloques Salta y Dibuja.
-      grade4_review_bee1_markdown_instruction: |-
-        Ahora usa el nuevo bloque repeat para recolectar todo
-        el néctar y hacer toda la miel.
+      grade4_review_bee1_markdown_instruction: Ahora usa el bloque 'repetir' para
+        recolectar todo el néctar y crear toda la miel.
       grade4_review_bee3_markdown_instruction: "¡Una abeja tan ocupada!\n\r\nAyuda
         a Abeja a recolectar todo el néctar y hacer toda la miel con la menor cantidad
         de bloques posible."
@@ -1553,9 +1600,8 @@ es:
         de bloques posible?"
       level 'grade3_Loops_3_markdown_instruction: "¿Podrías utilizar un ciclo para
         recolectar todo el néctar?"
-      level 'grade3_Loops_4_markdown_instruction: |-
-        Ahora usa el nuevo bloque repeat para recolectar todo
-        el néctar y hacer toda la miel.
+      level 'grade3_Loops_4_markdown_instruction: Ahora usa el bloque 'repetir' para
+        recolectar todo el néctar y crear toda la miel.
       level 'grade3_Loops_5_markdown_instruction: "Que hermoso campo de flores! \r\n\r\nAyuda\na
         la abeja a visitar cada uno.\r\n\r\nPuedes conseguir la manera de hacerlo
         con menos de 7 bloques?"
@@ -1564,3 +1610,7 @@ es:
         ¡No olvides hacer la miel al final!
       level 'grade3_Loops_7_markdown_instruction: 'Cada flor continene una unidad
         de néctar. Recolecta néctar de cada una de las flores. '
+      ramp_artist_loops4_markdown_instruction: "¿Qué sucede cuando agregas un giro
+        a la derecha \nde 72 grados después de todo lo demás dentro de tu bucle?"
+      ramp_artist_loops4_2018_markdown_instruction: "¿Qué sucede cuando agregas un
+        giro a la derecha \nde 72 grados después de todo lo demás dentro de tu bucle?"

@@ -46,7 +46,7 @@ hr:
       Unplug8:
         title: Apstrakcija
       Unplug9:
-        title: Programiranje u smjenama
+        title: Odnosno programiranje
       Unplug10:
         title: Internet
       UnplugHappyMaps:
@@ -87,7 +87,7 @@ hr:
       FunctionalSuncatchers:
         title: Funkcionalni ukrasi
       SongwritingParameters:
-        title: Pisanje pjesama s parametrima
+        title: Pisanje pjesama
       Internet:
         title: Internet
       Crowdsourcing:
@@ -136,7 +136,7 @@ hr:
       courseD_unplugged_graphPaperProgramming:
         title: Grafičko programiranje
       courseD_unplugged_relayProgramming:
-        title: Programiranje u smjenama
+        title: Odnosno programiranje
       courseD_unplugged_conditionalsCards:
         title: Uvjeti s kartama
       courseE_unplugged_songwritingParameters:
@@ -146,7 +146,7 @@ hr:
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
       courseE_unplugged_songwriting:
-        title: Pisanje pjesama s parametrima
+        title: Pisanje pjesama
       courseF_unplugged_forLoopFun:
         title: For Petlja Zabava
       courseF_unplugged_songwritingParameters:
@@ -182,4 +182,4 @@ hr:
       MoveItMoveIt_2018:
         title: Pomakni, pomakni
       RelayProgramming_2018:
-        title: Programiranje u smjenama
+        title: Odnosno programiranje

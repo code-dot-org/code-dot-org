@@ -81,7 +81,7 @@ fi:
         edit_get_nectar: Käytä tätä nappia muokataksesi funktiota. Muuta suuntaa,
           jonne mehiläinen kääntyy keräämään mettä.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Paina "Suorita" kokeillaksesi ohjelmaa
+        Course 4 Maze 1_callout1: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Course 4 Maze 4_callout:
         repeat: Toistaaksesi lohkojen komennot, aseta ne silmukan sisään
       Course 4 Play Lab Params 3_callout:
@@ -167,9 +167,9 @@ fi:
         craft_callout_preplaced_house: Tämä koodi aloittaa talosi rakentamisen. Saatko
           sen viimeisteltyä?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Paina "Suorita" kokeillaksesi ohjelmaa
+        craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Paina "Suorita" kokeillaksesi ohjelmaa
+        craft_run_button_callout: Kokeile ohjelmaa painamalla "Run" ["Suorita"]
       Overworld Place Wall_callout:
         craft_inside_repeat: Toista toimintoja asettamalla palikoita tänne
       Overworld Place Wall_2018_callout:

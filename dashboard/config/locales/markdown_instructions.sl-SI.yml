@@ -217,11 +217,15 @@ sl:
         dokler" in "če/sicer", da me pripelješ do sončnice z najmanj mogočimi bloki.
       4-5 Nested Loops 1_markdown_instruction: 'Dokončaj kodo tako, da izriše te trikotnike.
         Prvi je že narejen. Namig: trije trikotniki v 360 stopinjski rotaciji.'
+      4-5 Nested Loops 12_markdown_instruction: Lahko narišeš 36 trikotnikov z uporabo
+        ugnezdene zanke?
       4-5 Nested Loops 3_markdown_instruction: Ustvari sonce z ugnezdenjem začetne
         kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti naprej
         za dolžino stranice trikotnika, preden se obrneš.
       4-5 Nested Loops 5_markdown_instruction: Zankaj podano kodo tako, da ustvariš
         mlin na veter.
+      4-5 Nested Loops 6_markdown_instruction: Lahko narišeš šestkotnik s pomočjo
+        zanke s kodo za trikotnik?
       4-5 Nested Loops 7_markdown_instruction: Desetkrat ponovi zanko za to obliko.
         Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
       4-5 Nested Loops 8_markdown_instruction: Šestkrat ponovi zanko za to obliko.
@@ -431,6 +435,10 @@ sl:
         malo več, kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi
         uporabiti del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi
         tako zanimivo kvadratno spiralo.
+      courseF_artist_for_Template_2018_markdown_instruction: Če se obrneš malo manj
+        ali malo več, kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi
+        uporabiti del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi
+        tako zanimivo kvadratno spiralo.
       frozen circle function in circle_markdown_instruction: Sedaj ustvarimo 20 prekrivajočih
         se krogov, tako da se med vsakim krogom zasukamo za 18 stopinj.
       frozen circle function with parameter_markdown_instruction: "Tu je kocka \"Ustvari
@@ -549,17 +557,27 @@ sl:
         si: ne skrivajo vsi oblaki iste stvari!'
       grade3_maze_nestedLoops4_markdown_instruction: Uporabi dve zanki, da prideš
         do prašička in da uporabiš čim manj blokov.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Zankaj podano kodo tako,
+        da ustvariš mlin na veter.
       grade4_arist_nested_loop_polygons1_markdown_instruction: Desetkrat ponovi zanko
         za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
       grade4_arist_nested_loop_polygons2_markdown_instruction: Šestkrat ponovi zanko
         za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Lahko narišeš šestkotnik
+        s pomočjo zanke s kodo za trikotnik?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Nariši zobe v krokodilovih
+        ustih!
       grade4_arist_nested_loop_triangles5_markdown_instruction: Ustvari sonce z ugnezdenjem
         začetne kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti
         naprej za dolžino stranice trikotnika, preden se obrneš.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Lahko narišeš 36 trikotnikov
+        z uporabo ugnezdene zanke?
       grade4_artist_functions2_markdown_instruction: Funkcije ti pomagajo pri ustvarjanju
         novih blokov. Premaknili smo blok za risanje kvadrata v funkcijo, imenovano
         "nariši kvadrat". Znaš uporabiti funkcijo, "nariši kvadrat" za risanje očal?
         Očala so razmaknjena za 75 pikslov.
+      grade4_artist_nested_loop_flags1_markdown_instruction: Zankaj podano kodo tako,
+        da ustvariš mlin na veter.
       grade4_artist_nested_loop_polygons1_markdown_instruction: Desetkrat ponovi zanko
         za to obliko. Za koliko stopinj se moraš obniti pri vsaki ponovitvi?
       grade4_artist_nested_loop_triangles1_markdown_instruction: 'Dokončaj kodo tako,
@@ -568,6 +586,8 @@ sl:
       grade4_artist_nested_loop_triangles5_markdown_instruction: Ustvari sonce z ugnezdenjem
         začetne kode v drugo zanko. Da dobiš to zanimivo kreacijo, boš moral skočiti
         naprej za dolžino stranice trikotnika, preden se obrneš.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Lahko narišeš 36
+        trikotnikov z uporabo ugnezdene zanke?
       grade4_bee_conditionals_quantum2_markdown_instruction: 'Še več oblakov! Poglej
         pod oblak in preveri, ali se tam skriva roža, preden pobereš nektar. Zapomni
         si: ne skrivajo vsi oblaki iste stvari!'
@@ -630,6 +650,10 @@ sl:
       grade5_artist_for_loops5_markdown_instruction: "Samo majhna sprememba kode iz
         prejšnje naloge lahko nariše tole sliko. Lahko ugotoviš, kaj je treba spremeniti?
         \r\n\r\nNamig: Nekaj je treba odstraniti!"
+      grade5_artist_for_loops6_markdown_instruction: Če se obrneš malo manj ali malo
+        več, kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti
+        del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi tako zanimivo
+        kvadratno spiralo.
       grade5_artist_for_loops9_markdown_instruction: |-
         Zdaj pa združimo znanje od prej! S poznavanjem zanke "za vsako število", in s poznavanjem spremenjlivke "counter" narišemo te večkotnike, kjer ima vsak večkotnik za dve stranici "sides" več kot prejšnja. Zagotovite, da je dolžina stranice v večkotniku 10 krat daljša od števila stranic.
         Le majhen delček kode smo ti pripravili.

@@ -3,6 +3,8 @@ th:
     callouts:
       2-3 Artist Debugging 1_callout:
         2-3_Artist_Debugging_1_a: ศิลปะไม่มีปุ่ม "Step" แต่คุณสามารถเลื่อนแถบไปด้านซ้ายเพื่อดูโปรแกรมที่่ทำงานอย่างละเอียด
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: กด "รัน" เพื่อลองใช้โปรแกรมของคุณ
       Course 4 Maze 4_callout:
         repeat: ใส่บล็อกไว้ข้างในลูปเพื่อทำซ้ำคำสั่งต่าง ๆ
       Overworld Chop Trees_callout:
@@ -13,6 +15,10 @@ th:
         craft_callout_preplaced_house: โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: กด "รัน" เพื่อลองใช้โปรแกรมของคุณ
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: กด "รัน" เพื่อลองใช้โปรแกรมของคุณ
       Overworld Place Wall_callout:
         craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
       Overworld Place Wall_2018_callout:

@@ -1,0 +1,13 @@
+{
+  "category": "",
+  "config": {
+    "func": "frameRate",
+    "blockText": "set framerate to {RATE}",
+    "args": [
+      {
+        "name": "RATE",
+        "type": "Number"
+      }
+    ]
+  }
+}

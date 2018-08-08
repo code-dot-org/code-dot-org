@@ -512,7 +512,7 @@ tr-TR:
     için kod blokları kullan.
   mc_shortdescription: Steve ya da Alex'i Minecraft dünyasında bir maceraya çıkarmak
     için kod blokları kullan.
-  mc_gradelevel: 4-104 Yaş
+  mc_gradelevel: 6 yaş ve üzeri
   mc_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   mc_specs: Bir çok dil seçeneği | Modern tarayıcılar, akıllı telefonlar, tabletler
     | 6-106 yaş
@@ -524,7 +524,7 @@ tr-TR:
     | 2. sınıf ve üstü
   minecraft_agent_button: Başlayın
   minecraft_designer_description: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın
-    sendeki sürümde programla.
+    sana ait sürümünde programla.
   minecraft_designer_button: Başlayın
   minecraft_adventurer_description: Alex veya Steve'in maceraya katılması için kod
     kullan.
@@ -980,7 +980,7 @@ tr-TR:
   dashboard_grade_other: Diğer
   dashboard_login_word: Kelime
   dashboard_login_picture: Resim
-  dashboard_login_none: E-posta
+  dashboard_login_none: e-posta
   dashboard_stage: kademe
   dashboard_puzzle: Bulmaca
   dashboard_question: Soru
@@ -1192,6 +1192,13 @@ tr-TR:
   cspexam1-mWU7ilDYM9_name: Test Bölüm 1 / 25 soru
   cspexam2-AKwgAh1ac5_name: Test Bölüm 2 / 25 soru
   cspunit3_gradelevel: 9-12. Sınıflar
+  cspunit3_shortdescription_congrats: "Bu ünite, zengin içerikli etkileşimli uygulamalar
+    yapma yeteneğini ortaya çıkaran bilgisayar programlamasının temel kavramlarını
+    öğretir. Bu kurs programlama dili olarak JavaScript ve uygulama yapmak için programlama
+    ortamı olarak Uygulama Laboratuvarını kullanır ancak bu derslerde öğrenilen kavramlar
+    tüm programlama dilleri ve araçları için geçerlidir.\r\n\r\nBu ünite en son 30
+    Ekim 2017 tarihinde güncellenmiştir. Ders planı güncellemeleriyle ilgili daha
+    fazla bilgi için: forum.code.org/c/csp/updates."
   20-hour_name: Hızlandırılmış Kurs
   algebra_name: Bilgisayar biliminde Cebir
   AlgebraA_name: Bilgisayar biliminde Cebir Kurs A
@@ -1214,7 +1221,7 @@ tr-TR:
   applab_name: App Laboratuvarı
   gamelab_name: Oyun Laboratuvarı
   basketball_name: Basketbol oyunu kodla
-  sports_name: Spor
+  sports_name: Kendi Spor Oyununu Kodla
   applab_gradelevel: 13 + Yaş grubu
   applab_shortdescription_congrats: App Lab basit uygulamalar yapabileceğiniz bir
     uygulama geliştirme ortamıdır. Kod blokları ya da JavaScript ile bir uygulama
@@ -1231,7 +1238,7 @@ tr-TR:
   scratch_gradelevel: 8 + Yaş grubu
   lightbot_gradelevel: Her yaş için
   thinkersmith_gradelevel: Her yaş için
-  condcards_gradelevel: 8-12 yaş grubu
+  condcards_gradelevel: 9. ve üzeri Sınıflar
   lightbotintl_gradelevel: Her yaş için
   codehs_gradelevel: Lise
   codecademy_gradelevel: Lise
@@ -1246,7 +1253,7 @@ tr-TR:
   kodable_gradelevel: İlköğretim
   tynkerapp_gradelevel: 5-13 yaş grubu
   robomindnl_gradelevel: 8-13 yaş grubu
-  flappy_gradelevel: 4-104 Yaş
+  flappy_gradelevel: 6 yaş ve üzeri
   bitsbox_gradelevel: İlköğretim
   makeschool_gradelevel: Lise
   touchdevelop_gradelevel: Lise
@@ -1255,7 +1262,7 @@ tr-TR:
   thinkersmith2_gradelevel: 8 + Yaş grubu
   kodableunplugged_gradelevel: 8-13 yaş grubu
   projguts_gradelevel: 10-13 yaş grubu
-  hourofcode_gradelevel: 4-104 Yaş
+  hourofcode_gradelevel: 6 yaş ve üzeri
   frozen_gradelevel: 8 'den 108 yaşa kadar
   starwars_gradelevel: 6 yaş ve üzeri
   playlab_gradelevel: 4-104 Yaş
@@ -1282,13 +1289,13 @@ tr-TR:
   courseb-2017_gradelevel: 6. ve üzeri Sınıflar
   coursec-2017_gradelevel: 7. ve üzeri Sınıflar
   coursed-2017_gradelevel: 8+ sınıfları
-  coursee-2017_gradelevel: 8-12 yaş grubu
+  coursee-2017_gradelevel: 9. ve üzeri Sınıflar
   coursef-2017_gradelevel: 10 ve üzeri Sınıflar
   coursea-2018_gradelevel: 5. ve üzeri Sınıflar
   courseb-2018_gradelevel: 6. ve üzeri Sınıflar
   coursec-2018_gradelevel: 7. ve üzeri Sınıflar
   coursed-2018_gradelevel: 8+ sınıfları
-  coursee-2018_gradelevel: 8-12 yaş grubu
+  coursee-2018_gradelevel: 9. ve üzeri Sınıflar
   coursef-2018_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
@@ -1907,9 +1914,10 @@ tr-TR:
   compatibility_unsupported_browser: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı
     <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan
     birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir.
+  starwars_shortcode: yıldız
   flappy_shortcode: kanat çırp
   header_home: Ana Sayfa
-  header_my_dashboard: Panelim
+  header_my_dashboard: Kontrol panelim
   header_courses: kurslar
   header_course_catalog: Kurs Kataloğu
   header_project_gallery: Projeler

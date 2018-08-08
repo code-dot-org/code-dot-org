@@ -7,7 +7,7 @@ de:
         csf2_draft_category_name: 'In der Entwicklung: Kurse A - F'
         cspexams_category_name: Praxistest Grundlagen der Informatik
         csp17_category_name: Informatik Grundprinzipien
-        hoc_category_name: Stunde des Codes
+        hoc_category_name: Hour of Code
         math_category_name: Mathematik
       name:
         course1:
@@ -139,7 +139,7 @@ de:
             'Maze: Conditionals':
               name: 'Labyrinth: Bedingungen'
             Songwriting:
-              name: Songschreiben mit Parametern
+              name: Songschreiben
             'Studio: Create a Game':
               name: 'Spielelabor: Erstelle ein Spiel'
             'Studio: Create a Story':
@@ -374,7 +374,7 @@ de:
             The Farmer 3:
               name: Der Bauer 3
             The Internet:
-              name: Das Internet
+              name: das Internet
             The Maze:
               name: Das Labyrinth
             Wrap-up:
@@ -440,6 +440,7 @@ de:
             Puzzles:
               name: Aufgabe
         cspunit1:
+          description_short: Programmierung
           stages:
             Binary Numbers:
               name: Binärzahlen
@@ -488,6 +489,7 @@ de:
             What to Expect:
               name: Was Sie erwartet
         cspunit3:
+          description_short: Programmierung
           stages:
             Creating Functions:
               name: Funktionen erstellen
@@ -548,6 +550,7 @@ de:
             Wrap-Up:
               name: Zusammenfassung
         cspunit2:
+          description_short: Programmierung
           stages:
             The Internet:
               name: Das Internet ist für alle da
@@ -629,6 +632,8 @@ de:
               name: Willkommen!
         K5-OnlinePD:
           stages:
+            Computer Science Fundamentals:
+              name: Informatik Grundlagen
             Next Steps:
               name: Nächste Schritte
         ECSPD2:
@@ -728,7 +733,7 @@ de:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
             Songwriting:
-              name: Songschreiben mit Parametern
+              name: Songschreiben
             The Big Event:
               name: Der große Event
         ScienceP3OLPT2:
@@ -791,6 +796,10 @@ de:
               name: Willkommen!
             Wrap-Up:
               name: Zusammenfassung
+        cspunit5:
+          description_short: Programmierung
+        cspunit4:
+          description_short: Programmierung
         AlgebraA:
           description: Lerne funktionales Programmieren mithilfe von Algebra
           description_short: Lerne funktionales Programmieren mithilfe von Algebra
@@ -852,7 +861,7 @@ de:
             Sending Numbers:
               name: Zahlen senden
             The Internet:
-              name: Das Internet
+              name: das Internet
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -909,6 +918,10 @@ de:
           stages:
             Sending Binary Messages:
               name: Binäre Nachrichten senden
+        allthehiddenthings:
+          stages:
+            Game Lab:
+              name: Spielelabor
         CSDU2-Draft:
           stages:
             Peer Review:
@@ -942,7 +955,7 @@ de:
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
             Songwriting:
-              name: Songschreiben mit Parametern
+              name: Songschreiben
         grade1:
           stages:
             Events:
@@ -1074,7 +1087,7 @@ de:
               name: Listen
         minecraft:
           title: 'Mincecraft-Designer: Stunde des Codes'
-          description_short: Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
+          description_short: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
           description: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
           stages:
             Minecraft Hour of Code Designer:
@@ -1495,7 +1508,7 @@ de:
             Conditionals with Cards:
               name: Bedingungen mit Karten
             'Functions: Songwriting':
-              name: Songschreiben mit Parametern
+              name: Songschreiben
             Envelope Variables:
               name: Umschlag-Variablen
             For Loop Fun:
@@ -1507,7 +1520,7 @@ de:
             Artist Binary:
               name: Künstler Binär
             Internet:
-              name: Das Internet
+              name: das Internet
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
@@ -1563,9 +1576,9 @@ de:
             Introduction:
               name: Einführung
             'Functions: Songwriting':
-              name: Songschreiben mit Parametern
+              name: Songschreiben
             Internet:
-              name: Das Internet
+              name: das Internet
             Crowdsourcing:
               name: Crowdsourcing
             Conditionals with Cards:
@@ -1601,7 +1614,7 @@ de:
             Sending Numbers:
               name: Zahlen senden
             The Internet:
-              name: Das Internet
+              name: das Internet
         csp2-2018:
           stages:
             Bytes and File Sizes:

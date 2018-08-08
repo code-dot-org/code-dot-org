@@ -3,12 +3,12 @@ hu:
   data:
     block_categories:
       Actions: Műveletek
-      Loops: Ciklusok
-      Functions: Függvények
+      Loops: hurkok
+      Functions: funkciók
       Color: Szín
       Math: Matematika
       Logic: Logika
-      Variables: Változók
+      Variables: változók
       Conditionals: Feltételek
       Events: Események
       Text: szöveg

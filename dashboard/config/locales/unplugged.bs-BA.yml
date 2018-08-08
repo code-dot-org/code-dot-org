@@ -24,7 +24,7 @@ bs:
       Unplug8:
         title: Apstrakcija
       Unplug9:
-        title: Štafeta Programiranje
+        title: Prijenos programiranja
       Unplug10:
         title: Internet
       UnplugHappyMaps:
@@ -57,6 +57,8 @@ bs:
         title: Računarsko razmišljanje
       FunctionalSuncatchers:
         title: Funkcionalni Vitraži
+      SongwritingParameters:
+        title: Pisanje pjesama
       Internet:
         title: Internet
       Crowdsourcing:
@@ -110,13 +112,15 @@ bs:
       courseD_unplugged_graphPaperProgramming:
         title: Papirno Programiranje Grafikona
       courseD_unplugged_relayProgramming:
-        title: Štafeta Programiranje
+        title: Prijenos programiranja
       courseD_unplugged_conditionalsCards:
         title: Uvjeti s Kartama
       courseE_unplugged_internet:
         title: Internet
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
+      courseE_unplugged_songwriting:
+        title: Pisanje pjesama
       courseF_unplugged_tangrams:
         desc: Ova lekcija nam pokazuje nešto veoma važno o algoritmima. Ako držite
           algoritam jednostavnim postoji mnogo načina da ga koristiš. Ako želiš da
@@ -156,4 +160,4 @@ bs:
       MoveItMoveIt_2018:
         title: Pomakni, Pomakni
       RelayProgramming_2018:
-        title: Štafeta Programiranje
+        title: Prijenos programiranja

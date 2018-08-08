@@ -476,7 +476,7 @@ sv:
     more: Mer
     feedback: Ge feedback
     translate: Hjälp oss översätta till ditt språk
-    support: Hjälp
+    support: Hjälp och Community
     support_url: http://support.code.org/
     tos_short: Villkor
     tos: Villkor
@@ -558,7 +558,7 @@ sv:
       title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
-      title: Flappy-kod
+      title: Flappy kod
       body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy
         Code övning!
     20-hour:
@@ -590,10 +590,10 @@ sv:
         Infinity karaktärer i huvudrollen .
     minecraft:
       title: Minecraft
-      body: Utforska en Minecraft värld med kod.
+      body: Utforska en Minecraft-värld genom kod
     minecraft2016:
       title: Minecraft
-      body: Programmet djur och andra Minecraft varelser i din egen version av Minecraft.
+      body: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
     hero:
       title: Minecraft
     sports:
@@ -927,4 +927,6 @@ sv:
   cookie_banner:
     accept: Jag håller med
   gdpr_dialog:
+    message: När du använder denna webbplats kan information om detta skickas till
+      och lagras eller bearbetas i USA.
     true: Ja

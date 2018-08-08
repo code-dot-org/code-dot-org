@@ -3873,6 +3873,8 @@ es-MX:
       NEW Course 4 Bee For Loops 10a_authored_hint:
         NEW_Course_4_Bee_For_Loops_10a_a: "¿Puedes encontrar un patrón entre el número
           de pasos que necesitas tomar y el numero de nectares a recolectar?"
+        NEW_Course_4_Bee_For_Loops_10a_b: Necesitas 2 repeticiones, una usara un bloque
+          de matmáticas.
       NEW Course 4 Bee For Loops 7_authored_hint:
         NEW_Course_4_Bee_For_Loops_7_a: |-
           Intenta hacer algúnos cálculos con la variable contador.
@@ -4202,7 +4204,7 @@ es-MX:
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
       course1_artist_loops_challenge2_authored_hint:
-        harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
+        harvey_tictactoe: Puede usar bloques `salto` para moverte a otros espacios.
       course1_artist_loops_challenge3_authored_hint:
         courseA_artist_loops_challenge2_a: 'Bloques como este: <xml> <block type="simple_move_up_left"/></xml>
           ¡permitirá que tu artista se mueva de forma inclinada!'
@@ -5304,6 +5306,8 @@ es-MX:
           use un ciclo anidado para pasar de la primera pila de tesoros a la segunda.
           Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor
           de la * cueva completa *!
+        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo
+          el tesoro usa solo un bloque `colectar` y dos turnos.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solución:**
           <xml>
@@ -5960,6 +5964,13 @@ es-MX:
           </next>
           </block>
           </xml>
+      courseA_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_a: Puedes girar a la derecha o a la izquierda desde
+          el punto de vista del pájaro. Si estás mirando hacia la derecha, girar a
+          la derecha te hará apuntar hacia abajo.
+        courseC_maze_programming4_b: Para seguir el camino, avanza y gira en un sentido,
+          luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
+          para alcanzar al cerdo.
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
           Su código debe verse así:
@@ -9195,9 +9206,15 @@ es-MX:
       courseD_artist_binary4_authored_hint:
         courseD_artist_binary4_a: Mira los primeros tres cuadrados en la fila superior.
           ¿Podría repetir estos tres para obtener el patrón completo?
+        courseD_artist_binary4_b: "¡No tengas miedo de cometer un error! Intenta escribir
+          código binario y ejecuta el código para ver qué sucederá, incluso si no
+          crees que ya has resuelto el enigma."
       courseD_artist_binary4_2018_authored_hint:
         courseD_artist_binary4_a: Mira los primeros tres cuadrados en la fila superior.
           ¿Podría repetir estos tres para obtener el patrón completo?
+        courseD_artist_binary4_b: "¡No tengas miedo de cometer un error! Intenta escribir
+          código binario y ejecuta el código para ver qué sucederá, incluso si no
+          crees que ya has resuelto el enigma."
       courseD_artist_binary5_authored_hint:
         courseD_artist_binary5_a: Intenta ejecutar el código primero para ver con
           qué tienes que trabajar.
@@ -9225,6 +9242,9 @@ es-MX:
       courseD_artist_binary7_2018_authored_hint:
         courseD_artist_binary7_a: Comience en la parte superior izquierda. ¿Qué tan
           lejos debe leer antes de que el patrón comience a repetirse?
+        courseD_artist_binary7_b: "¡No tengas miedo de cometer un error! Intenta escribir
+          código binario y ejecuta el código para ver qué sucederá, incluso si no
+          crees que ya has resuelto el enigma."
       courseD_artist_binary8_authored_hint:
         courseD_artist_binary8_a: La espiral puede ser confusa a veces. Aísle cada
           línea horizontal en su mente mientras crea este diseño.
@@ -9580,6 +9600,11 @@ es-MX:
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_hintVid1: "¿Necesita ayuda para comenzar? ¡Ver el
           vídeo!"
+        courseD_bee_conditionals2_a: Algunas veces una flor estará allí, otras no.  Si
+          quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un
+          ` si ` comunicado.
+        courseD_bee_conditionals2_b: Puede usar un bucle 'repetición' o un 'mientras
+          camino por delante' para moverse a través de este laberinto.
         courseD_bee_conditionals2_c: No tienes ningún comprobador para panales, solo
           habrá flores o espacios en blanco debajo de las nubes.
         courseD_bee_conditionals2_hintVid2: Mire este video para ayudar a resolver
@@ -9587,6 +9612,11 @@ es-MX:
       courseD_bee_conditionals2_2018_authored_hint:
         courseD_bee_conditionals2_hintVid1: "¿Necesita ayuda para comenzar? ¡Ver el
           vídeo!"
+        courseD_bee_conditionals2_a: Algunas veces una flor estará allí, otras no.  Si
+          quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un
+          ` si ` comunicado.
+        courseD_bee_conditionals2_b: Puede usar un bucle 'repetición' o un 'mientras
+          camino por delante' para moverse a través de este laberinto.
         courseD_bee_conditionals2_c: No tienes ningún comprobador para panales, solo
           habrá flores o espacios en blanco debajo de las nubes.
         courseD_bee_conditionals2_hintVid2: Mire este video para ayudar a resolver
@@ -9993,6 +10023,8 @@ es-MX:
           use un ciclo anidado para pasar de la primera pila de tesoros a la segunda.
           Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor
           de la * cueva completa *!
+        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo
+          el tesoro usa solo un bloque `colectar` y dos turnos.
       courseD_bee_nested_loops_challenge2_authored_hint:
         courseD_bee_nested_loops_challenge2_a: No olvide que puede `repetir` un solo
           comando o un patrón más largo. Incluso se puede `` repetir` un repetir`
@@ -10487,6 +10519,8 @@ es-MX:
           use un ciclo anidado para pasar de la primera pila de tesoros a la segunda.
           Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor
           de la * cueva completa *!
+        courseD_bee_nested_loops_challenge2_c: El programa más corto que alcanza todo
+          el tesoro usa solo un bloque `colectar` y dos turnos.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solución:**
           <xml>
@@ -10893,6 +10927,8 @@ es-MX:
           use un ciclo anidado para pasar de la primera pila de tesoros a la segunda.
           Si repite el ciclo anidado suficientes veces, el recolector se moverá alrededor
           de la * cueva completa *!
+        courseD_bee_nested_loops_challenge1_c: El programa más corto que alcanza todo
+          el tesoro usa solo un bloque `colectar` y dos turnos.
       courseD_maze_nestedLoops3_authored_hint:
         courseD_maze_nestedLoops3_a: Para resolver este acertijo, deberá anidar un
           ciclo de 'repetición' dentro de otro.
@@ -10955,10 +10991,17 @@ es-MX:
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
       courseD_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_a: Si el pájaro no está llegando al cerdo, asegurate
+          de que los bloques están totalmente juntos, a continuación, y haz clic en
+          "Ejecutar" de nuevo.
         courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
       courseD_maze_ramp2_authored_hint:
+        courseC_maze_programming2_a: Para usar un bloque 'avanzar', arrástralo desde
+          el área de la barra de herramientas al espacio de trabajo y conéctalo al
+          bloque`al ejecutar`.
+      courseD_maze_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: Para usar un bloque 'avanzar', arrástralo desde
           el área de la barra de herramientas al espacio de trabajo y conéctalo al
           bloque`al ejecutar`.
@@ -10977,6 +11020,13 @@ es-MX:
           nuevamente a la caja de herramientas. \n\nFinalmente, coloca los otros bloques
           en su lugar.\n"
       courseD_maze_ramp4_authored_hint:
+        courseC_maze_programming4_a: Puedes girar a la derecha o a la izquierda desde
+          el punto de vista del pájaro. Si estás mirando hacia la derecha, girar a
+          la derecha te hará apuntar hacia abajo.
+        courseC_maze_programming4_b: Para seguir el camino, avanza y gira en un sentido,
+          luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
+          para alcanzar al cerdo.
+      courseD_maze_ramp4_2018_authored_hint:
         courseC_maze_programming4_a: Puedes girar a la derecha o a la izquierda desde
           el punto de vista del pájaro. Si estás mirando hacia la derecha, girar a
           la derecha te hará apuntar hacia abajo.
@@ -11200,9 +11250,15 @@ es-MX:
       courseD_playLab_cond6_authored_hint:
         courseD_playLab_cond6_a: Agrega el bloque ` establecer velocidad de ninja
           enmascarada` al comienzo del programa para ayudar a frenar al ninja.
+        courseD_playLab_cond6_b: Usted tendrá que utilizar un ` si el actor 1 y la
+          posición> 255` bloque dentro de un` repita siempre ` para comprobar siempre
+          si el pirata es por debajo de los pulpos.
       courseD_playLab_cond6_2018_authored_hint:
         courseD_playLab_cond6_a: Agrega el bloque ` establecer velocidad de ninja
           enmascarada` al comienzo del programa para ayudar a frenar al ninja.
+        courseD_playLab_cond6_b: Usted tendrá que utilizar un ` si el actor 1 y la
+          posición> 255` bloque dentro de un` repita siempre ` para comprobar siempre
+          si el pirata es por debajo de los pulpos.
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: Agregar un bloque 'espere 1 segundo' en la parte
           superior del ciclo 'repetir por siempre' que comprueba la posición del pirata
@@ -11238,6 +11294,9 @@ es-MX:
         courseC_maze_programming2_b: Hacer que los tres bloques`movimiento adelante`
           estén unidos al bloque` cuando corra`.
       courseD_scrat_ramp2_2018_authored_hint:
+        courseC_maze_programming2_a: Para usar un bloque 'avanzar', arrástralo desde
+          el área de la barra de herramientas al espacio de trabajo y conéctalo al
+          bloque`al ejecutar`.
         courseC_maze_programming2_b: Hacer que los tres bloques`movimiento adelante`
           se encuentren unidos al bloque`` cuando corra`.
       courseD_scrat_ramp3_authored_hint:
@@ -11411,22 +11470,12 @@ es-MX:
         courseE_artist_functions1_c: Para código más corto, intente usar un ciclo
           de repetición para dibujar los cuadrados de los lentes.
       courseE_artist_functions2_authored_hint:
-        courseD_artist_functions2_b: La función que escribas no deberia contener tu
-          programa completo, solo la parte que dibuja un cuadrado con 100 pixeles.
-        courseD_artist_functions2_c: |-
-          Utilice el bloque verde ` dibujar un square` "llamar" a su función bajo el bloque` cuando ejecuta`. De lo contrario, el código en su función no se ejecutará.
-          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           El programa debe:
           - Usar la función
           - Avanzar 100 + 75 pixeles
           - Usar la función
       courseE_artist_functions2_2018_authored_hint:
-        courseD_artist_functions2_b: La función que escribas no deberia contener tu
-          programa completo, solo la parte que dibuja un cuadrado con 100 pixeles.
-        courseD_artist_functions2_c: |-
-          Utilice el bloque verde ` dibujar un square` "llamar" a su función bajo el bloque` cuando ejecuta`. De lo contrario, el código en su función no se ejecutará.
-          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           El programa debe:
           - Usar la función
@@ -11459,9 +11508,6 @@ es-MX:
           hacia adelante entre cada estrella!
       courseE_artist_functions5_authored_hint:
         courseD_artist_functions5_a: No te rindas! Recuerda lo que has estado aprendiendo.
-        courseD_artist_functions5_c: Comience arrastrando el código de una forma de
-          estrella en la función ` dibujar una estrella de Estados Unidos, a continuación,
-          utilizar esta función para dibujar las tres estrellas!
       courseE_artist_functions5_2018_authored_hint:
         courseD_artist_functions5_a: No te rindas! Recuerda lo que has estado aprendiendo.
         courseD_artist_functions5_c: Comience arrastrando el código de una forma de
@@ -12040,8 +12086,8 @@ es-MX:
         courseE_farmer_functions1a_b: ¡Utiliza un bloque "repetir hasta" para llegar
           a la calabaza!
       courseE_farmer_functions1a_2018_authored_hint:
-        courseE_farmer_functions1a_a: Piensa en las declaraciónes "si/entonces" paso
-          a paso. ¿Que debes hacer si estas parado en una planta de maíz?
+        courseE_farmer_functions1a_a: Asegúrese de que leer a través de la definición
+          de función. ¿Puede decir lo que hace?
         courseE_farmer_functions1a_b: ¡Utiliza un bloque "repetir hasta" para llegar
           a la calabaza!
       courseE_farmer_functions2b_authored_hint:
@@ -12167,14 +12213,8 @@ es-MX:
           recolección de lechugas dentro de otro ciclo (junto con un bloque `avanzar
           ', ¡y lo tendrá!)
       courseE_farmer_ramp11a_authored_hint:
-        courseE_farmer_ramp12_a: 'En lugar de utilizar un ciclo de repetición para
-          decirle al agricultor cuántas veces debe pala de tierra, ahora se puede
-          utilizar un` mientras que hay un montón ` bloque.  '
         courseE_farmer_ramp12_b: Solo necesitas avanzar una vez para llegar a la tierra.
       courseE_farmer_ramp11a_2018_authored_hint:
-        courseE_farmer_ramp12_a: 'En lugar de utilizar un ciclo de repetición para
-          decirle al agricultor cuántas veces debe pala de tierra, ahora se puede
-          utilizar un` mientras que hay un montón ` bloque.  '
         courseE_farmer_ramp12_b: Solo necesitas avanzar una vez para llegar a la tierra.
       courseE_farmer_ramp11b_authored_hint:
         courseE_farmer_ramp11b_a: Puede anidar su ciclo`while` en el interior de un
@@ -12256,6 +12296,8 @@ es-MX:
           así que asegúrese de usar los ciclos`while` para elegirlos a todos!
         courseE_farmer_ramp13_b: Utilizar un ciclo de repetición de modo que usted
           no tiene que escribir una por separado si la declaración de cada cuadrado.
+        courseE_farmer_ramp13_c: Si no se puede averiguar dónde colocar los ciclos,
+          intentar escribir el código paso a paso y buscar para los patrones.
       courseE_farmer_ramp15_authored_hint:
         courseE_farmer_ramp15_a: Usar el bloque de 'repetir hasta en calabaza' para
           llegar al final de la ruta.
@@ -12290,6 +12332,9 @@ es-MX:
         courseD_maze_ramp11_a: Usa bloques repetidos para ejecutar un solo bloque
           o un fragmento de código una y otra vez.
       courseE_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_0: Si el pájaro no está llegando al cerdo, asegurate
+          de que los bloques están totalmente juntos, a continuación, y haz clic en
+          "Ejecutar" de nuevo.
         courseC_maze_programming1_b: "¡No necesitas ningún bloque adicional de la
           caja de herramientas para este rompecabezas!"
       courseE_maze_ramp2_authored_hint:
@@ -12299,6 +12344,9 @@ es-MX:
         courseC_maze_programming2_b: Hacer que los tres bloques`movimiento adelante`
           se encuentren unidos al bloque`` cuando corra`.
       courseE_maze_ramp2_2018_authored_hint:
+        courseC_maze_programming2_a: Para usar un bloque 'avanzar', arrástralo desde
+          el área de la barra de herramientas al espacio de trabajo y conéctalo al
+          bloque`al ejecutar`.
         courseC_maze_programming2_b: Hacer que los tres bloques`movimiento adelante`
           se encuentren unidos al bloque`` cuando corra`.
       courseE_maze_ramp3_authored_hint:
@@ -12330,6 +12378,12 @@ es-MX:
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
       courseE_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_a: Puedes girar a la derecha o a la izquierda desde
+          el punto de vista del pájaro. Si estás mirando hacia la derecha, girar a
+          la derecha te hará apuntar hacia abajo.
+        courseC_maze_programming4_b: Para seguir el camino, avanza y gira en un sentido,
+          luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
+          para alcanzar al cerdo.
         courseC_maze_programming4_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el rompecabezas."
@@ -13439,15 +13493,15 @@ es-MX:
           editor de funciones.
         courseF_artist_fwp1_a: Recuerda, necesitas girar 90 grados para dibujar un
           cuadrado.
-        courseF_artist_fwp1_b: Solo necesitas repetir tantas veces como lados en un
-          cuadro.
+        courseF_artist_fwp1_b: Solo necesitas repetir tantas veces como el número
+          de lados en un cuadrado.
       courseF_artist_fwp1_2018_authored_hint:
         courseF_artist_fwp1_c: Pon todo el código para dibujar un cuadro dentro del
           editor de funciones.
         courseF_artist_fwp1_a: Recuerda, necesitas girar 90 grados para dibujar un
           cuadrado.
-        courseF_artist_fwp1_b: Solo necesitas repetir tantas veces como lados en un
-          cuadro.
+        courseF_artist_fwp1_b: Solo necesitas repetir tantas veces como el número
+          de lados en un cuadrado.
       courseF_artist_fwp2_authored_hint:
         courseF_artist_fwp2_a: Necesitas hacer clic en el boton 'editar' para entrar
           a la función. Una vez que estes ahí, ¡añade un parametro llamado 'longitud'
@@ -13486,17 +13540,11 @@ es-MX:
           las figuras.
       courseF_artist_fwp5_authored_hint:
         courseF_artist_fwp5_d: "¡Un ciclo 'for' te ayudaria mucho!"
-        courseF_artist_fwp5_c: Necesitas editar esta función poco, dado que tu función
-          anterior roto al artista a la derecha después de cada lado, y esta imagen
-          necesita girar a la izquierda.
         courseF_artist_fwp5_a: La longitud de los lados de cada forma es 7 veces el
           número de lados que tiene.
         courseF_artist_fwp5_b: No te olvides de saltar 100 píxeles entre figuras.
       courseF_artist_fwp5_2018_authored_hint:
         courseF_artist_fwp5_d: "¡Un ciclo 'for' te ayudaria mucho!"
-        courseF_artist_fwp5_c: Necesitas editar esta función poco, dado que tu función
-          anterior roto al artista a la derecha después de cada lado, y esta imagen
-          necesita girar a la izquierda.
         courseF_artist_fwp5_a: La longitud de los lados de cada forma es 7 veces el
           número de lados que tiene.
         courseF_artist_fwp5_b: No te olvides de saltar 100 píxeles entre figuras.
@@ -13539,13 +13587,9 @@ es-MX:
           ¡Prueba uno de estos dibujos.
            ! [] (https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
       courseF_artist_fwp_challenge1_authored_hint:
-        courseF_artist_fwp_challenge1_b: Esta es una serie de polígonos con lados
-          que son 'contador' píxeles de largo.
         courseF_artist_fwp_challenge1_c: Cada polígono se llama desde dentro de un
           ciclo que va desde 3 hasta 6 por un incremento de 1. ¿Qué formas está haciendo?
       courseF_artist_fwp_challenge1_2018_authored_hint:
-        courseF_artist_fwp_challenge1_b: Esta es una serie de polígonos con lados
-          que son 'contador' píxeles de largo.
         courseF_artist_fwp_challenge1_c: Cada polígono se llama desde dentro de un
           ciclo que va desde 3 hasta 6 por un incremento de 1. ¿Qué formas está haciendo?
       courseF_artist_fwp_challenge2_authored_hint:
@@ -13604,8 +13648,6 @@ es-MX:
           Para dibujar los 4 lados, pon el bloque <xml><block type="draw_move_by_constant"><title name="DIR">moverHaciaAdelante</title><title name="VALUE">200</title></block></xml> dentro de un ciclo de repetición y asegúrate de que el bucle se dibuja 4.
 
           ¡No olvides girar después!
-        courseF_artist_ramp8_c: Tu turno también irá dentro del ciclo <xml><block
-          type="controls_repeat"><title name="TIMES">3</title></block></xml>.
       courseF_artist_ramp8_2018_authored_hint:
         courseF_artist_ramp8_a: Para dibujar un lado, usa el bloque <xml><block type="draw_move_by_constant"><title
           name="DIR">moverHaciaAdelante</title><title name="VALUE">100</title></block></xml>
@@ -13614,8 +13656,6 @@ es-MX:
           Para dibujar los 4 lados, pon el bloque <xml><block type="draw_move_by_constant"><title name="DIR">moverHaciaAdelante</title><title name="VALUE">200</title></block></xml> dentro de un ciclo de repetición y asegúrate de que el bucle se dibuja 4.
 
           ¡No olvides girar después!
-        courseF_artist_ramp8_c: Tu turno también irá dentro del ciclo <xml><block
-          type="controls_repeat"><title name="TIMES">3</title></block></xml>.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: "¿Cómo es esto similar a un cuadrado? ¿Como es diferente?"
         courseF_artist_ramp9_b: "¡Puedes utilizar el menú desplegable en los bloques
@@ -13986,9 +14026,15 @@ es-MX:
         courseF_bee_conditionals10_c: "¿Ayudaría un ciclo 'mientras' para llegar al
           final de este camino?"
       courseF_bee_conditionals2_authored_hint:
+        courseF_bee_conditionals2_a: Algunas veces una flor estará allí, otras no.  Si
+          quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un
+          ` si ` comunicado.
         courseF_bee_conditionals2_b: Intentar escribir la secuencia para llegar a
           todos los espacios, luego agrega la instrucción 'si'.
       courseF_bee_conditionals2_2018_authored_hint:
+        courseF_bee_conditionals2_a: Algunas veces una flor estará allí, otras no.  Si
+          quieres que tu código se ejecute en ambos casos, asegúrate de utilizar un
+          ` si ` comunicado.
         courseF_bee_conditionals2_b: Intentar escribir la secuencia para llegar a
           todos los espacios, luego agrega la instrucción 'si'.
       courseF_bee_conditionals3_authored_hint:
@@ -14095,6 +14141,7 @@ es-MX:
           **2**. \n\nEn este dibujo, nota que hay **7** cuadros rojos, **5** cuadros
           naranjas, **3** cuadros verdes y **1** bloque azul.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
           Hint Drawing.png)\n\n¿Cómo se relacionan los números?"
+        courseF_bee_for10_d: Necesitas 2 repeticiones, una usara un bloque de matmáticas.
       courseF_bee_for11_authored_hint:
         courseF_bee_for11_a: |-
           ¿Cuánto menos es 12 que 15?
@@ -14137,6 +14184,8 @@ es-MX:
           de 1 para resolver este acertijo.
         courseF_bee_for4_b: Dentro de tu ciclo 'for', querras tener un comando 'mover
           hacia adelante' y un ciclo para recolectar nectar.
+        courseF_bee_for4_c: "¡Asegúrate de usar la variable 'contador' dentro de tu
+          ciclo anidado 'repetir' para conseguir suficiente nectar!"
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_a: Esta vez, tu bloque 'avanzar hacia adelante' y tu bloque
           'obtener nectar' tendrán que estar en ciclos 'repetir' separados, ambos
@@ -15861,6 +15910,9 @@ es-MX:
           bloques y ejecutar el código para ver qué sucederá, incluso si aún no has
           resuelto el rompecabezas."
       courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_a: Puedes girar a la derecha o a la izquierda desde el
+          punto de vista del pájaro. Si estás mirando hacia la derecha, girar a la
+          derecha te hará apuntar hacia abajo.
         courseF_maze_ramp4_b: Para seguir el camino, avanza y gira en un sentido,
           luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
           para alcanzar al cerdo.
@@ -16480,6 +16532,13 @@ es-MX:
       grade1_maze_sequenceC_authored_hint:
         grade1_maze_sequenceC_a: Si tiene problemas, primero intente anotar los pasos
           en una hoja de papel.
+      grade2_CaringForNewPet_0_authored_hint:
+        grade2_CaringForNewPet_0: Si el pájaro no está llegando al cerdo, asegurate
+          de que los bloques están totalmente juntos, a continuación, y haz clic en
+          "Ejecutar" de nuevo.
+      grade2_CaringForNewPet_1_authored_hint:
+        2-3_Maze_1_a: Para usar un bloque 'avanzar', arrástralo desde el área de la
+          barra de herramientas al espacio de trabajo y conéctalo al bloque`al ejecutar`.
       grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
           \n\nPara eliminar un bloque del medio de su código, arrastra todos los bloques
@@ -16487,6 +16546,13 @@ es-MX:
           por un tiempo. \n\nHaz clic en el bloque que desea eliminar y arrástralo
           nuevamente a la caja de herramientas. \n\nFinalmente, coloca los otros bloques
           en su lugar.\n"
+      grade2_CaringForNewPet_3_authored_hint:
+        hint1: Puedes girar a la derecha o a la izquierda desde el punto de vista
+          del pájaro. Si estás mirando hacia la derecha, girar a la derecha te hará
+          apuntar hacia abajo.
+        hint3: Para seguir el camino, avanza y gira en un sentido, luego muévete de
+          nuevo y gira en el sentido opuesto. Avanza una vez más para alcanzar al
+          cerdo.
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: "¡Hay dos formas de resolver este rompecabezas!"
       grade2_CaringForNewPet_7D_authored_hint:
@@ -16710,6 +16776,10 @@ es-MX:
         grade3_bee_conditionals_quantum1_a: Usted tendrá que utilizar un bloque `
           si ` para comprobar si hay una flor debajo de la nube antes de tratar de
           obtener el néctar.
+      grade3_bee_conditionals_quantum2_authored_hint:
+        grade3_bee_conditionals_quantum2_a: Algunas veces una flor estará allí, otras
+          no.  Si quieres que tu código se ejecute en ambos casos, asegúrate de utilizar
+          un ` si ` comunicado.
       grade3_bee_conditionals_quantum3_authored_hint:
         grade3_bee_conditionals_quantum3: Asegúrese de utilizar una declaración` si
           ' para comprobar el nido de abeja debajo de cada nube.
@@ -16887,6 +16957,9 @@ es-MX:
       grade4_bee_functions6_authored_hint:
         grade4_bee_functions6_a: Edite la función para que resuelva el acertijo sin
           tener que cambiar el programa principal.
+        grade4_bee_functions6_b: "Tu función debe hacer que la abeja: \n- gire\n-
+          avanze\n- recoja todo el néctar\n- dé la vuelta\n- retroceda al camino principal\n-
+          vuelva a la dirección desde la que comenzó"
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: "Si el rompecabezas parece desafiante, intente construir
           su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
@@ -17027,7 +17100,7 @@ es-MX:
         grade5_artist_parameters_squares1a_a: Recuerda, necesitas girar 90 grados
           para dibujar un cuadrado.
         grade5_artist_parameters_squares1a_b: Solo necesitas repetir tantas veces
-          como lados en un cuadro.
+          como el número de lados en un cuadrado.
       grade5_artist_parameters_squares2_authored_hint:
         grade5_artist_parameters_squares2_a: Esto se vuelve más sencillo si pones
           todo dentro de un ciclo 'for'.
@@ -17088,6 +17161,8 @@ es-MX:
       grade5_bee_for_loops11_authored_hint:
         NEW_Course_4_Bee_For_Loops_10a_a: "¿Puedes encontrar un patrón entre el número
           de pasos que necesitas tomar y el numero de nectares a recolectar?"
+        NEW_Course_4_Bee_For_Loops_10a_b: Necesitas 2 repeticiones, una usara un bloque
+          de matmáticas.
       grade5_bee_for_loops3_authored_hint:
         grade5_bee_for_loops3_a: 'Utiliza la variable ''contador'' dentro del ciclo
           ''repetir'' donde se recolecta el nectar para resolver este acertijo. '
@@ -17096,6 +17171,8 @@ es-MX:
       grade5_bee_for_loops4_authored_hint:
         grade5_bee_for_loops4_a: Utiliza un ciclo 'for' que vaya de 1 a 7 con un incremento
           de 1 para resolver este acertijo.
+        grade5_bee_for_loops4_b: "¡Asegúrate de usar la variable 'contador' dentro
+          de tu ciclo anidado 'repetir' para conseguir suficiente nectar!"
       grade5_bee_for_loops6_authored_hint:
         grade5_bee_for_loops6_a: No te olvides de utilizar una variable 'contador'
           dentro de tu ciclo 'for'.
@@ -17159,6 +17236,9 @@ es-MX:
         gradek_adventurer_loops7_challenge_a: "¿El código se siente realmente largo?
           Intenta poner dos de tus bucles `repetir` dentro de otro bucle para hacerlo
           mucho más corto!"
+      gradek_adventurer_loops9_authored_hint:
+        gradek_adventurer_loops9_a: Si no se puede averiguar dónde colocar los ciclos,
+          intentar escribir el código paso a paso y buscar para los patrones.
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Si desea que el loop se repita más de 4 veces, puede cambiar
           el número en la parte superior del bloque.
@@ -17179,13 +17259,16 @@ es-MX:
           \  \n¿Qué te dice eso?"
       gradek_artist_loops9_authored_hint:
         artistLoopsKA_a: Use el bloque de salto para avanzar sin dibujar una línea.
+      gradek_playlab_events1c_authored_hint:
+        gradek_playlab_events1c_a: Aquí está el bloque debes conectar al bloque 'al
+          ejecutar':! [] (https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)
       harvester_Kahoot_authored_hint:
         courseE_farmer_functions1a_a: Piensa en las declaraciónes "si/entonces" paso
           a paso. ¿Que debes hacer si estas parado en una planta de maíz?
         courseE_farmer_functions1a_b: ¡Utiliza un bloque "repetir hasta" para llegar
           a la calabaza!
       harvey_tictactoe_authored_hint:
-        harvey_tictactoe: Puedes usar bloques `saltar` para moverte a otros espacios.
+        harvey_tictactoe: Puede usar bloques `salto` para moverte a otros espacios.
       iceage_click_hello_authored_hint:
         iceage_click_hello_a: Añade un bloque 'actor 1 dice' o más al evento 'al hacer
           clic' para completar este acertijo.

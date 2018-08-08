@@ -210,6 +210,7 @@ tr:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "Değerlendirme: Kadar tekrarla ve Eğer/değilse bloklarını kullanarak beni ayçiçeğine ulaştır."
       4-5 Nested Loops 1_markdown_instruction: "Bu üçgenleri çizmek için kodu tamamlayın. İlki sizin için yapıldı. İpucu: 3 üçgeni toplam 360 derece dönerek yapılır."
       4-5 Nested Loops 11_markdown_instruction: "İç içe döngü kullanarak 10 kareyi tamamlayın. Her bir kare 30 pikseldir."
+      4-5 Nested Loops 12_markdown_instruction: İç içe döngü kullanarak 36 tane üçgen çizebilir misin?
       4-5 Nested Loops 2_markdown_instruction: "Bu döngüyü başka bir döngü içine koyarak 10 üçgen çizin. Buna iç içe döngü denir.  "
       4-5 Nested Loops 3_markdown_instruction: |-
         Verilen kodu başka bir döngü içine koyarak bir güneş oluştur. Bu güzel şekli oluşturmak için, her dönüşten önce üçgenin kenar uzunluğu kadar ileri atlamalısın.
@@ -230,7 +231,7 @@ tr:
         *
         adım iki
       AWS link_markdown_instruction: "# Bu aracı bir şeyler için kullanın"
-      Alien Defender_markdown_instruction: "Proje fikri: Bir savunma oyunu yap!"
+      Alien Defender_markdown_instruction: "** Proje Fikri **: Play Lab'da bir savunma oyunu yap!"
       Alien Defender_2018_markdown_instruction: "** Proje Fikri **: Play Lab'da bir savunma oyunu yap!"
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_markdown_instruction': "<img\nalign=\"right\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"\nhspace=\"20\">\\r\n            # Görev 1: 3x5  'A' harfi yap\\r\n            Başla \npikselleme aracını kullanarak resmedilmiş (sağda) 3x5 \"A\" harfini tekrar yapmayı deneyerek.\n \\r\n          \\r\n            Resim başlangıçta \n*doğru olmayan* boyutlarda ayarlanır. Senin ilk görevin ikinci baytı 8 bite \nbinary kodu 5: 0000 0101 atamak. Ondan sonra A harfini yapmak için piksel verisi girmeye başlayabilirsin.\n\\r\n            \n \nContext | Request Context            "
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction': "#\nPikselasyon: Görev 3\\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right width=200 hspace=20>\\r\n**Yol tarifi:**\\r\nSeni videoda oluşturulmuş 4x4 Maddie resmi ile başlatıyoruz.\\r\n\\r\nSenin görevin 4x4 bir ızgarayı *piksel başına12-bit * kullanarak boya ile doldurmak.Sonuç sağda gözüken resime benzemeli (ama aynısı olmak zorunda değil).  \\r\n\\r\nİşte şartlar:\\r\n\\r\n\n * Satır 1 - Kırmızının tonları ile doldur. \\r\n * Satır 2 - Yeşilin tonları. \\r\n *Satır 3 - mavinin tonları. \\r\n * Satır 4 - grinin tonları.\\r\n"
@@ -447,10 +448,9 @@ tr:
         \r
         ![expandable](https://images.code.org/a5081cce1969c5a784b4440369706801-image-1505941723405.gif)
       AppLab Intro 3 - thisOrThat_markdown_instruction: |-
-        Bir Bu veya O uygulaması yapın.
-        Kullanıcılar her bir butona tıkladığında ekrana ve yazıya ne olacak karar verin.\r
+        Bir Bu veya O uygulaması yapın. Kullanıcılar her bir butona tıkladığında ekrana ve yazıya ne olacağına karar verin.\r
         \r
-        Uygulamanız bittiğinde bir arkadaşın oynasın diye ona göndermek için en yukarıdaki "Paylaş"a tıklayın! Nasıl paylaşılacağını görmek için fotoğrafa tıklayın.\r
+        Uygulamanız bittiğinde bir arkadaşınız oynasın diye ona göndermek için en yukarıdaki "Paylaş"a tıklayın! Nasıl paylaşılacağını görmek için fotoğrafa tıklayın.\r
         \r
         ![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)
       AppLab Intro 4 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\\r\n\\t<img\nsrc=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54\nAM.png\" style=\"height:150px\">\\r\n</div>\\r\n\\r\n**Hedef:** Ekranı '\"kırmızı\"' yapın.\\r\n\\r\n**Nasıl:** Bloğu içeri sürükleyin ve \"Çalıştır\"a basın.\\r\n\\r\n**Bana Göster:** ![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif)"
@@ -806,6 +806,11 @@ tr:
         \r
         *Her bir etkinlikte benzersiz bir ses veya şarkı çalmak için buton ile ilgili tüm etkinlikleri kullanın (yukarı, aşağı).\r
         *Daha fazla ses / şarkı çalmak için kullanabileceğiniz başka etkinlikler var mı?
+      CSD U1 - PixFilter FreePlay_markdown_instruction: |-
+        # Serbest Oyun\r
+        \r
+        Yapacağın gibi yap, 
+        harika bir şeyler yap
       CSD U2 CSS explore CSS_markdown_instruction: |2
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"markdown="1"> \r <details>\r
@@ -1962,6 +1967,8 @@ tr:
         [Lesson 8 Level 6](/s/csd2/stage/8/puzzle/6) ziyaret et.\r
         \r
         
+      CSD U3 - conditionals - arrows and gears_markdown_instruction: |-
+        # Koşullar\r \r ile Hadi tekeri sadece boşluk tuşu basıldığında çevirelim. \r \r # Bunu yap\r \r Eğer koşulu ekleyin * 'Aşağı oka basıldığında' eğer koşulu ile boşluk tuşuna basılmış mı kontrol et.. \r * Tekeri döndürme kodunu eğer komutu içine yerleştirin.
       CSD U3 Conditionals Apple 2_markdown_instruction: |-
         # Yeşillenmek\r \r _eğer_ ifadelerinin kullanımını öğrendik, elma 2 ölçeğine ulaştı mı kontrol yapabilirsiniz, bu gerçekleşirse elmayı kırmızı yaparsınız.Döngü içinde eğer ifadesi kullanın ve 'apple.scale' - 2'den büyük olduğunu denetleyin Eğer koşul oluştuysa animasyonu kırmızı yapın. \r \r _Meydan Okuma: kırmızıya dönen elmanın büyümesini durdurun _\r
         
@@ -2255,6 +2262,8 @@ tr:
         # Ok tuşları ile Balık avı\r \r geri balıklar. Sol ok tuşuna basıldığında balığı sola taşıyabiliir misiniz? \r \r # Bunu yap\r \r * Eğer bloğu ekle ve sadece sol ok tuşu basıldığında hareket etsin. * balığı hareket eden komutları eğer bloğu içine taşı.
       CSD U3 Input Gears_markdown_instruction: |-
         # Koşullar\r \r ile Hadi tekeri sadece boşluk tuşu basıldığında çevirelim. \r \r # Bunu yap\r \r Eğer koşulu ekleyin * 'Aşağı oka basıldığında' eğer koşulu ile boşluk tuşuna basılmış mı kontrol et.. \r * Tekeri döndürme kodunu eğer komutu içine yerleştirin.
+      CSD U3 Input Gears_2018_markdown_instruction: |-
+        # Koşullar\r \r ile Hadi tekeri sadece boşluk tuşu basıldığında çevirelim. \r \r # Bunu yap\r \r Eğer koşulu ekleyin * 'Aşağı oka basıldığında' eğer koşulu ile boşluk tuşuna basılmış mı kontrol et.. \r * Tekeri döndürme kodunu eğer komutu içine yerleştirin.
       CSD U3 Keyboard Input Challenge-2018_markdown_instruction: |-
         # Meydan Okuma\r
         _Denemeden önce öğretmeninle birlikte kontrol et._\r
@@ -2301,17 +2310,15 @@ tr:
       CSD U3 L11 Freeplay_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L11 Freeplay_2018_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L12 Freeplay_markdown_instruction: |-
         # Serbest Oyun\r
         \r
@@ -2322,80 +2329,69 @@ tr:
       CSD U3 L12 Freeplay_2018_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L13 Freeplay_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L13 Freeplay_2018_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L15 Freeplay_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L15 Freeplay_2018_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L16 Freeplay_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L16 Freeplay_2018_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L17 Freeplay_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L17 Freeplay_2018_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L18 Freeplay_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L18 Freeplay_2018_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L19 Freeplay_markdown_instruction: |+
         # Serbest Oyun\r
         \r
@@ -2407,10 +2403,9 @@ tr:
       CSD U3 L19 Freeplay_2018_markdown_instruction: |+
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L3 Freeplay_markdown_instruction: |+
         # Serbest Oyun\r
         \r
@@ -2424,52 +2419,45 @@ tr:
       CSD U3 L3 Freeplay_2018_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L4 Freeplay_markdown_instruction: |+
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L4 Freeplay_2018_markdown_instruction: |+
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L5 Freeplay_markdown_instruction: |+
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L5 Freeplay_2018_markdown_instruction: |+
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L6 Freeplay_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L6 Freeplay_2018_markdown_instruction: |
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L7 Freeplay_markdown_instruction: |-
         # Serbest Oyun\r
         \r
@@ -2479,24 +2467,21 @@ tr:
       CSD U3 L7 Freeplay_2018_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L9 Freeplay_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 L9 Freeplay_2018_markdown_instruction: |-
         # Serbest Oyun\r
         \r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, oluşturduğun şeyi bir arkadaşına göndermek için buna tıkla  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png), veya buna tıklayarak ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) oluşturuğun şeyi proje galerisine gönder.\r
-        
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png).
       CSD U3 Mouse Input Bee 1_markdown_instruction: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\r\n\\r\n# Fare X ve Y\\r\n\\r\nGiriş almanın basit yollarından birisi de kullanıcının fare imleci konumudur. **'World.mouseX' ve World.mouseY' özelliklerini kullanarak farenin x ve y konumlarını alabilirsiniz.** Bu kalıpla birlikte hareketli nesnenin özelliklerini öğrendiniz..\\r\n\\r\n#\nBunu Yap\\r\n\\r\nOyun alanı etrafındaki fareyi takip ederek arı nesnesi yapacaksınız.\\r\n\\r\n* Senin için arı resmi zaten animasyon sekmesinde var.\\r\n* Pencerenin ortasına çizen bir arı nesnesi oluştur.\\r\n*\nÇizme döngüsünün içerisinde hareketli nesnenin pozisyonunu farenin pozisyonuna güncelleyin:\\r\n\\t* 'Wordl.MouseX' değerini hareketli nesnenin x konumuna ata.\\r\n    *\n'Wordl.MouseY' değerini hareketli nesnenin y konumuna ata..\\r\n* İşlediğini test etmek için programı çalıştır.\\r\n"
       CSD U3 Mouse Input Bee 1_2018_markdown_instruction: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\r\n\\r\n# Fare X ve Y\\r\n\\r\nGiriş almanın basit yollarından birisi de kullanıcının fare imleci konumudur. **'World.mouseX' ve World.mouseY' özelliklerini kullanarak farenin x ve y konumlarını alabilirsiniz.** Bu kalıpla birlikte hareketli nesnenin özelliklerini öğrendiniz..\\r\n\\r\n#\nBunu Yap\\r\n\\r\nOyun alanı etrafındaki fareyi takip ederek arı nesnesi yapacaksınız.\\r\n\\r\n* Senin için arı resmi zaten animasyon sekmesinde var.\\r\n* Pencerenin ortasına çizen bir arı nesnesi oluştur.\\r\n*\nÇizme döngüsünün içerisinde hareketli nesnenin pozisyonunu farenin pozisyonuna güncelleyin:\\r\n\\t* 'Wordl.MouseX' değerini hareketli nesnenin x konumuna ata.\\r\n    *\n'Wordl.MouseY' değerini hareketli nesnenin y konumuna ata..\\r\n* İşlediğini test etmek için programı çalıştır.\\r\n"
       CSD U3 Mouse Input Bee 2_markdown_instruction: "# Noktanın Etrafında Rastgele\\r\n\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\r\n\\r\nŞimdi arının fareyi takip etmesini sağlayabilirsiniz, sağdaki resimde olduğu gibi arının fare etrafında uçmasını sağlayalım.  Bunu yapmak için, **'mouseX' veya 'mouseY' konumlarına -50 ile 50 arasında rastgele miktarda ekleme yapmalısınız.**\\r\n\\r\n# Bunu Yap\\r\nZaten fareyi takip eden bir arı nesnesine sahipsiniz.\\r\n\\r\n* x ve y konumlarını fareye rastgele yakınlaşacak şekilde güncelleyin.\\r\n\\t* 'World.mouseX' and 'World.mouseY' değerlerine -50 ile 50 arasında rastgele sayı ekleyin.\\r\n* Eğer gerekli ise 'World.frameRate' blokunu kullanarak animasyonu yavaşlatın ve en iyi çerçeve hızını bulun.\\r\n\\r\n_Büyük Zorluk:\nFareyi aynı yönde takip eden arı sürüsü yapmak için **3 arı daha ekleyin**_"
@@ -4116,6 +4101,17 @@ tr:
         # Bunu Yapın\r
         \r
         Renkli LED'lerin her birini farklı bir renge ayarlamak için `.color ()` komutunu kullanın.
+      CSD U6 LEDs color_2018_markdown_instruction: |-
+        # Biraz Renk Ekleme\r
+        \r
+        Muhtemelen, son seviyede `colorLeds[0].on()` kullanıldığında LED'lerin beyaz renkte olduğunu fark ettiniz. 
+        Bir renk belirtmezseniz, beyaz üretmek için `on()` LED'in üç parçasını da (kırmızı, yeşil ve mavi) açacaktır. 
+        Araç kutusunda, "blue" gibi bir dize veya `color()` komutu kullanılarak bir RGB değeri gibi bir renk
+        belirtmenizi sağlayan `colorLeds[0].color()` adlı yeni bir komut görürsünüz.\r
+        \r
+        # Bunu Yapın\r
+        \r
+        Renkli LED'lerin her birini farklı bir renge ayarlamak için `.color ()` komutunu kullanın.
       CSD U6 Pedometer_markdown_instruction: |-
         # Yavaş Koşu Adımsayarı\r
         \r
@@ -4173,17 +4169,15 @@ tr:
       CSD U6 analog challenge_2018_markdown_instruction: |-
         # Meydan Okuma\r
         \r
-        _BU meydan okumayı takip etmeden önce öğretmenin ile birlikte kontrol et_\r
+        _Bu meydan okumadan önce öğretmeninizle birlikte kontrol edin_\r
         \r
-        Şimdiye kadar bir çok analog sensörden giriş aldın ve ihtiyaçlarına göre onları ayarladın, sensör verilerinin ilginç kullanılışı hakkında fikir verebilir misin? Sensörden gelen işlenmemiş sayıları göstermek kolaydır ama daha ilginç olanı veriyi farklı yollarla sunabilmektir.\r
+        Çeşitli analog sensörlerden gelen girdileri almakta ve ölçeklerinizi ihtiyaçlarınızı karşılamak için değiştirdiğinize göre, sensör verileri için ilginç bir kullanım bulabilir misiniz? Bir sensörden gelen ham sayıları görüntülemek kolaydır, ancak bu verileri farklı şekillerde sunmak çok daha ilginçtir.\r
         \r
-        Sensör verileriyle iletişime geçebildiğiniz aşağıdaki yolları düşünün.:\r
+        Sensör verilerini iletişim kurmak için aşağıdaki yolları düşünün:\r
         \r
-        * Kart çıkışlarını kullanın.\r
-        *
-        Arayüz ögelerinin genişliği, yükseliği ve konumunu değiştirin\r
-        * 
-        Sensör değerlerine göre farklı resimler göstermek için koşullu ifadeleri kullanın
+        * Kart çıktılarını kullanın\r
+        * Bir kullanıcı arayüzü öğesinin genişliğini, yüksekliğini veya konumunu değiştirin\r
+        * Sensör değerlerine dayalı farklı görüntüler görüntülemek için koşullu ifadeleri kullanın
       CSD U6 analog change_markdown_instruction: |-
         # Etkinlik Değiştirin\r
         \r
@@ -4890,6 +4884,16 @@ tr:
         \r
         Tüm LED'leri kapayan
         bir fonksiyon oluşturun ve sonra uygulamanıza bir "Kapalı" butonu ekleyin ve tüm renkli LED'leri kapatmasını sağlayın.
+      CSD U6 light pattern off_2018_markdown_instruction: |-
+        # Işığı Kapamak\r
+        \r
+        Bu
+        uygulamayı başlattığınızda ışıklar kapalıdır ama siz bir desen seçer seçmez, ışıkları tekrar kapatmanın imkanı yoktur!\r
+        \r
+        # Bunu Yap\r
+        \r
+        Tüm LED'leri kapayan
+        bir fonksiyon oluşturun ve sonra uygulamanıza bir "Kapalı" butonu ekleyin ve tüm renkli LED'leri kapatmasını sağlayın.
       CSD U6 params starchaser intro_markdown_instruction: |-
         # Yıldız Kovalayan\r
         \r
@@ -4989,6 +4993,19 @@ tr:
         Bunu gibi bir oyunu yapmak için bütün blokları nasıl kullanman gerektiğini biliyorsun ve bu derste kendi zıplama oyununu yapıyor olacaksın.\r
         \r
         Sonraki iki bölümde diğer zıplama oyunu örneklerini görebilirsin.
+      CSDU2 - First-Weblab_markdown_instruction: |-
+        # İçerik Ekleme\r
+        \r
+        ilk web sayfanızı oluşturmaya başlayın! Bir başlık ve iki paragraflık bir sayfa oluşturmayı deneyin.\r
+        \r
+        # Bunu Yap\r
+        \r
+        * Sevdiğiniz hayvan hakkında bir cümle yazın \r
+        * Ayrı bir satıra, en az sevdiğiniz bir hayvan hakkında başka bir cümle yazın. \r
+        * Yukardaki cümleler için "Hayvanlar" başlığını eklemeyi deneyin\r
+        * Tıklamayı unutmayın
+        <img src="https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12 PM.png" style="width:100px"> \r 
+        * ** İçeriğinizin yapısı hakkında ne fark ettiniz? **
       CSDU2 - PW - Class Style Personal Site - OLD_markdown_instruction: |-
         # Serbest Oyun Tasarımı\r
         \r
@@ -5084,17 +5101,15 @@ tr:
       CSDU6 - sensors challenge_markdown_instruction: |-
         # Meydan Okuma\r
         \r
-        _BU meydan okumayı takip etmeden önce öğretmenin ile birlikte kontrol et_\r
+        _Bu meydan okumadan önce öğretmeninizle birlikte kontrol edin_\r
         \r
-        Şimdiye kadar bir çok analog sensörden giriş aldın ve ihtiyaçlarına göre onları ayarladın, sensör verilerinin ilginç kullanılışı hakkında fikir verebilir misin? Sensörden gelen işlenmemiş sayıları göstermek kolaydır ama daha ilginç olanı veriyi farklı yollarla sunabilmektir.\r
+        Çeşitli analog sensörlerden gelen girdileri almakta ve ölçeklerinizi ihtiyaçlarınızı karşılamak için değiştirdiğinize göre, sensör verileri için ilginç bir kullanım bulabilir misiniz? Bir sensörden gelen ham sayıları görüntülemek kolaydır, ancak bu verileri farklı şekillerde sunmak çok daha ilginçtir.\r
         \r
-        Sensör verileriyle iletişime geçebildiğiniz aşağıdaki yolları düşünün.:\r
+        Sensör verilerini iletişim kurmak için aşağıdaki yolları düşünün:\r
         \r
-        * Kart çıkışlarını kullanın.\r
-        *
-        Arayüz ögelerinin genişliği, yükseliği ve konumunu değiştirin\r
-        * 
-        Sensör değerlerine göre farklı resimler göstermek için koşullu ifadeleri kullanın
+        * Kart çıktılarını kullanın\r
+        * Bir kullanıcı arayüzü öğesinin genişliğini, yüksekliğini veya konumunu değiştirin\r
+        * Sensör değerlerine dayalı farklı görüntüler görüntülemek için koşullu ifadeleri kullanın
       CSDU6 - sensors experiment_markdown_instruction: |-
         <Iframe width = "370" height = "620" style = "float: left; margin-right: 25px; border: 0px;" Src = "https://studio.code.org/projects/applab/iCWa6Gsb-W4StwmqFX5TkA/embed"> </ iframe> \ r \ r # sensör Deney sola programı çalıştırın ve Anakartınızla birlikte deneme. Anakartınızla birlikte çeşitli şekillerde karşılaşabileceksiniz. Deneme tamamlandığında, aşağıdaki metin kutusundaki her şey sensure için yanıtlayın. \ R \ r * ne bu sensör ölçmek? \ R * 'maksimum değeri nedir? \ R * 'ın en küçük değeri nedir?
       CSDU6 - sensors light_markdown_instruction: |2
@@ -5301,6 +5316,27 @@ tr:
         Aşağıdaki kodu inceleyin. Ne yapacağınızı düşünüyorsunuz?\r
         \r
         Tahmin edin ve öğrenmek için kodu çalıştırın!
+      CSDU6L06 - lists and colorLeds - light pattern off_markdown_instruction: |-
+        # Işığı Kapamak\r
+        \r
+        Bu
+        uygulamayı başlattığınızda ışıklar kapalıdır ama siz bir desen seçer seçmez, ışıkları tekrar kapatmanın imkanı yoktur!\r
+        \r
+        # Bunu Yap\r
+        \r
+        Tüm LED'leri kapayan
+        bir fonksiyon oluşturun ve sonra uygulamanıza bir "Kapalı" butonu ekleyin ve tüm renkli LED'leri kapatmasını sağlayın.
+      CSDU6L06 - lists and colorLeds - set color_markdown_instruction: |-
+        # Biraz Renk Ekleme\r
+        \r
+        Muhtemelen, son seviyede `colorLeds[0].on()` kullanıldığında LED'lerin beyaz renkte olduğunu fark ettiniz. 
+        Bir renk belirtmezseniz, beyaz üretmek için `on()` LED'in üç parçasını da (kırmızı, yeşil ve mavi) açacaktır. 
+        Araç kutusunda, "blue" gibi bir dize veya `color()` komutu kullanılarak bir RGB değeri gibi bir renk
+        belirtmenizi sağlayan `colorLeds[0].color()` adlı yeni bir komut görürsünüz.\r
+        \r
+        # Bunu Yapın\r
+        \r
+        Renkli LED'lerin her birini farklı bir renge ayarlamak için `.color ()` komutunu kullanın.
       'Challenge: Buzzer and LED_markdown_instruction': |-
         # Meydan Okuma\r
         \r
@@ -5439,10 +5475,10 @@ tr:
       Course 4 Play Lab Params 9_markdown_instruction: "Önceki aşamadaki oyunumuz fakat kodlar saklanmış. Puan al \"score points\" fonksiyonu yeni.\nFonksiyonu düzenle ve puan \"points\" parametresi ekle ve oyuncu puanı \"player_Score\" değişkenine eklensin. player_score değişkeni köpek kediye pasta verdiğinde artsın fakat kedi köpeğe  sandviç verdiğinde azalsın.\nNot: Çalıştır tuşuna bas ve oyna, köpek 6 puan kazandığında sonraki seviyeye geçebilrisin. "
       Course 4 Play Lab Vars 1_markdown_instruction: "Bu sefer kod yazman gerekmiyor. Sadece çalıştır düğmesine bas ve oyunu oyna! Bu oyunda köpek kediden fazla bayrak toplamak istiyor. aşağı tuşu ile köpeği kontrol et. Oyunun bitince bitiş tuşuna bas."
       Course 4 Play Lab Vars 2_markdown_instruction: Önceki oyundaki bulmaca adil değildi. dog_speed değişkeni ile hızı değiştirerek köpeğin kediden fazla bayrak toplamasını sağla. Önce 10 bayrak toplayan kazanır!
-      Course 4 Play Lab Vars 3_markdown_instruction: "İşte yeni bir oyun! Bu düzey. \\r \\r herhangi bir değişiklik gerekmez \\r \\r ** Klavuz ** atlamak için yukarı taşımak için sağ ve sol ok tuşları kullanın. Tüm bayrakları topla."
+      Course 4 Play Lab Vars 3_markdown_instruction: "İşte yeni bir tür oyun!\\r\n\\r\nBu düzeyde bir şey değiştirmenize gerek yoktur.\\r\n\\r\n**Talimatlar:** \nTaşımak için sol ve sağ okları ve atlamak için yukarı oku kullanın. Bütün bayrakları toplayıp toplamayacağınıza bakın."
       Course 4 Play Lab Vars 4_markdown_instruction: "Height yükseklik değişkeni köpeğin ne kadar zıplayacağını kontrol ediyor. Bu değişkeni güncelleyerek köpeğin bayrağa ulaşmasını sağla."
       Course 4 Play Lab Vars 6_markdown_instruction: "<h5><b>\\r bizim oyunda nasıl puan verelim? \\r</b></h5> \\r <br/> \\r \\r 1. 1 kedi köpeği  bir parça turta ile  vurursa 1 puan ekleyin.  <br/> <br/> \\r 2. S 'oyuncu 2 dokunur' olayını kullanın. ' puan = puan + 1.' ile puanınızı artırabilirsiniz<br/> <br/> \\r 3. Düzeyi. \\r \\r geçmek için 10 puan al <br/> <br/> \\r <h4>\\r ** Not: ** pasta atmak için sağ ok tuşunu kullanın! \\r</h4>"
-      Course 4 Play Lab Vars 7_markdown_instruction: "Güzel şimdi bu oyunu zorlaştıralım. Köpek kediden sandviç alırsa puan kaybetsin. 10 puan ile başlayın. Puan 0 olduğunda bir sonraki seviyeye geçebilirsin."
+      Course 4 Play Lab Vars 7_markdown_instruction: "Güzel, şimdi bu oyunu oynamanın kolay olmadığından emin olalım! \\r\n\\r\nKöpek (aktör 1) Cat'den bir sandviç (aktör 2) tarafından vurulduğu zaman, bir noktayı kaybetmelisiniz.\\r\n\\r\n10 puanla başlayın, bu da zor değil. Seviyeyi geçmek için puanınızın 10'dan 0'a düşmesine izin verin."
       Course 4 Play Lab Vars 9_markdown_instruction: "Serbest Oyun zamanı! Bu aşamada kullandığın bütün değişkenler ve birkaç tane exta burada.  \n\\r\n\\r\nAraç kutunda organize etmen gereken çok fazla blok var!  \nHer bir parçayı ilgili kategori içine koyduk. biraz dikkatini verip herşeyi keşvet. İncelemeyi bitirince tekrarla, değişkenler ve olaylar kullanarak hikayeni oluştur.\nİpucu: Çalışma alanındaki tüm komutları görmek için kaydır."
       Course 4 Play Labs For Loops 1_markdown_instruction: Köpeğin 1 den 100 e kadar bütün sayıları saymasını sağlayalım. For döngüsü kullanalım ve köpek her döngüde sayaç "counter" değişkenini söylesin.
       Course 4 Play Labs For Loops 4_markdown_instruction: "Artışı değiştirmek faydalı olabilir. Fakat hala düzenli bir şekilde sayıyoruz. Üstsel saymak istesek ne yapardık? Döngüyü değiştirmeden 1, 4, 9, 16, 25... (sayacın karesi) şeklinde sayabilir miyiz?"
@@ -5470,7 +5506,7 @@ tr:
       Course 4 SCF 3 Fail 1_markdown_instruction: "** Fonksiyonlar süper meydan okuma: 1**\n"
       Course 4 SCF 3 Fail 2_markdown_instruction: "** Fonksiyonlar süper meydan okuma: 1**\n"
       Course 4 SCF 3_markdown_instruction: "** Fonksiyonlar süper meydan okuma: 1**\n böyle resim çizmek için önceki düzeyde öğrendiklerini kullanın. \\r \\r * Not: kod parametreleri kullanarak daha basit hale gelir * \\r \\r <br/> \\r <img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\" width=\"300px\"/> \\r <br/>  "
-      Course 4 SCFL 1_markdown_instruction: "** Şununla say döngüsü- süper meydan okuma: ** En az sayıda blok ile bu bulmacayı çöz. \\r <br/> \\r."
+      Course 4 SCFL 1_markdown_instruction: "** Şununla say döngüsü (for loops)- süper meydan okuma:** \nMümkün olan en az sayıdaki blokla bu bulmacayı çöz."
       Course 4 SCFL 1a_markdown_instruction: "** Şununla say döngüsü- süper meydan okuma: ** En az sayıda blok ile buScaktı pslsmuta götür. \\r <br/> \\r\n"
       Course 4 SCFL 1b_markdown_instruction: "** Şununla say döngüsü- süper meydan okuma: ** En az sayıda blok ile buScaktı pslsmuta götür. \\r <br/> \\r\n"
       Course 4 SCFL 2_markdown_instruction: "** Şununla say döngüsü- süper meydan okuma: ** En az sayıda blok ile bu bulmacayı çöz.  \\r <br/> \\r\n"
@@ -5493,7 +5529,7 @@ tr:
       Course 4 Variables Assessment_markdown_instruction: Be şekli kenarlar için değişken kullanarak yapabilir misin? Her bir kenar 50 piksel uzunluğunda olmalıdır.
       CourseF_PlayLab_vars1_markdown_instruction: "Bu oyunu oynamak için herhangi bir kod yazmak zorunda değilsiniz, sadece \"Çalıştır\" a tıklayın!\\r\n<hr/>\\r\nBurada kediden daha fazla bayrak toplamaya çalışan köpeksiniz.\\r\n_(Use the down arrow\nto move.)_"
       CourseF_PlayLab_vars10_markdown_instruction: "Serbest Oyun zamanı! Bu aşamada kullandığın bütün değişkenler ve birkaç tane exta burada.  \n\\r\n\\r\nAraç kutunda organize etmen gereken çok fazla blok var!  \nHer bir parçayı ilgili kategori içine koyduk. biraz dikkatini verip herşeyi keşvet. İncelemeyi bitirince tekrarla, değişkenler ve olaylar kullanarak hikayeni oluştur.\nİpucu: Çalışma alanındaki tüm komutları görmek için kaydır."
-      CourseF_PlayLab_vars2_markdown_instruction: Önceki oyundaki bulmaca adil değildi. dog_speed değişkeni ile hızı değiştirerek köpeğin kediden fazla bayrak toplamasını sağla. Önce 10 bayrak toplayan kazanır!
+      CourseF_PlayLab_vars2_markdown_instruction: Son bulmacadaki yarış pek adil değildi. Kediden daha fazla bayrak topladığından emin olmak için 'köpel_hızı' değişkenini değiştirin. 10 bayrağı ilk toplayan kazanır!
       CourseF_PlayLab_vars3_markdown_instruction: "İşte yeni bir tür oyun!\\r\n\\r\nBu düzeyde bir şey değiştirmenize gerek yoktur.\\r\n\\r\n**Talimatlar:** \nTaşımak için sol ve sağ okları ve atlamak için yukarı oku kullanın. Bütün bayrakları toplayıp toplamayacağınıza bakın."
       CourseF_PlayLab_vars4_markdown_instruction: 'Şimdi köpeğin atabileceği yüksekliği kontrol etmek için ''yükseklik'' adlı bir değişkeni kullanıyoruz. Köpeğin tüm bayraklara erişmek için yeterince yüksek atlayabilmesi için `height` değişkenini güncelleyin. '
       CourseF_PlayLab_vars6_markdown_instruction: "<h5><b>\\r bizim oyunda nasıl puan verelim? \\r</b></h5> \\r <br/> \\r \\r 1. 1 kedi köpeği  bir parça turta ile  vurursa 1 puan ekleyin.  <br/> <br/> \\r 2. S 'oyuncu 2 dokunur' olayını kullanın. ' puan = puan + 1.' ile puanınızı artırabilirsiniz<br/> <br/> \\r 3. Düzeyi. \\r \\r geçmek için 10 puan al <br/> <br/> \\r <h4>\\r ** Not: ** pasta atmak için sağ ok tuşunu kullanın! \\r</h4>"
@@ -5538,6 +5574,7 @@ tr:
         Sizin için son bir fonksiyon ekledik.
         Eğer bloğu kullan ve oyuncunun puanı belirli bir sayıyı geçince üst seviye "level_up" fonksiyonunu çağır.
         Oyunu oyna ve 4 seviye geçmesini sağla
+      Formative versus Summative Assessment_markdown_instruction: 'Aşağıdaki bağlantı, tanımlama ve geçerli  değerlendirme örnekleri sağlayan bir kaynaktır:'
       Function intro Ryan_markdown_instruction: "Çalışma alanında `köprü inşa et` adlı bir **işlev** var.  Nehrin karşısına geçmek için gereken tüm kodlar orada bulunuyor! \\r\n \\r\nKüçük yeşil bloğu çalışma alanına iki kez tutturarak yolu tamir et ve {currentPlayerName} karakterini Redstone Meşalesine [redstone_torch] ulaştır."
       Geometric Pattern_markdown_instruction: "** Proje fikri: ** geometrik şekiller fikirler kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
       Geometric Sun_markdown_instruction: "** Proje fikri: ** geometrik şekiller fikirler kullanarak bir model oluşturma. Bu sebat ve planlama gerektirir!"
@@ -5553,7 +5590,7 @@ tr:
       K-1 Bee Loops 6_markdown_instruction: '"Tekrarla" bloğu kullanarak ilerleyip nektar ve balı alalım ve ilerleyelim!'
       K-1 Maze Loops 10_markdown_instruction: "Benş domuza ulaştırın!   \\r 'tekrarla' döngüsü kullanarak çok daha kolay yapacaksın."
       K-1 Maze Loops 11_markdown_instruction: "Benş domuza ulaştırın!   \\r 'tekrarla' döngüsü kullanarak çok daha kolay yapacaksın."
-      K-1 Maze Loops 12_markdown_instruction: "Beni domuza götür! Tekrarla döngüsünü kullan."
+      K-1 Maze Loops 12_markdown_instruction: "Benş domuza ulaştırın!   \\r 'tekrarla' döngüsü kullanarak çok daha kolay yapacaksın."
       K-1 Maze Loops 2_markdown_instruction: Tekrar bloğu kullanarak beni domuza götür!
       K-1 Maze Loops 3_markdown_instruction: "Beni domuza ulaştır!  \\r 'Tekrarla' döngüsü kullandığınızdan emin olun."
       K-1 Maze Loops 5_markdown_instruction: "Beni domuza ulaştır!  \\r 'Tekrarla' döngüsü kullandığınızdan emin olun."
@@ -5563,10 +5600,10 @@ tr:
       K-1 Maze Loops Assessment 1_markdown_instruction: "Bak neler öğrendik! Bana domuzcuğa ulaşmak için 'tekrarla' döngüsünü kullanın!"
       LaurelDebugging4Video1_markdown_instruction: |-
         Laurel maceracı! \r \r onu hareket ettirin ve alabildiğiniz kadar altın alın.
-      MC Agent Freeplay_markdown_instruction: "**Serbest Oyun:** Şimdi her şey sana bağlı! Bu dünyayı keşfetmene yardımcı olması için Agent'ın kodunu kullan."
+      MC Agent Freeplay_markdown_instruction: "**Serbest Oyun** Şimdi her şey sana bağlı!\nBu dünyayı keşfetmene yardımcı olması için Ajan'ın kodunu kullan."
       MC_2017_Ryan_02_markdown_instruction: "Bu gibi kodlar ilmekleri kullanarak daha kısa yapılabilir!\\r\n\\r\nŞimdi Ajan'ı baskı plakasına ilerletmesine yardımcı olması için bir 'tekrar' döngüsü kullanın."
       MC_HOC_2017 Agent Test_markdown_instruction: "Oynatıcıyı ** ok tuşlarını ** kullanarak taşımak için \"Çalıştır\"a tıklayın.\\r\n\\r\nBu seviyeyi geçmek için kapının yanına gitmeniz (** boşluk çubuğunu ** kullanarak) açmanız gerekiyor, böylece içteki turuncu kareye ulaşırsınız."
-      MC_HOC_2017_01_markdown_instruction: "**Ok tuşlarını** kullanarak kullanıcıyı hareket ettirmek için \"Çalıştır\" düğmesine tıkla.  \\r\n\\r\nBu seviyeyi geçmek için kapıya ulaşarak kapıyı açman (**boşluk çubuğunu** kullanarak) ve böylece turuncu karenin içine ulaşman gerekiyor."
+      MC_HOC_2017_01_markdown_instruction: "Oynatıcıyı ** ok tuşlarını ** kullanarak taşımak için \"Çalıştır\"a tıklayın.\\r\n\\r\nBu seviyeyi geçmek için kapının yanına gitmeniz (** boşluk çubuğunu ** kullanarak) açmanız gerekiyor, böylece içteki turuncu kareye ulaşırsınız."
       MC_HOC_2017_01_Cole_markdown_instruction: Bu yolculukta tüm aletleri toplaman gerekiyor. **Ok tuşlarını** kullanarak etrafta dolaş ve kazanmak için yol üzerindeki sandığa ulaş
       MC_HOC_2017_01_Kiki_markdown_instruction: 'Bu seviyeyi oynamak için, oyun alanının altındaki turuncu "Çalıştır" düğmesine tıkla ve sonra **ok tuşlarını** kullanarak oyuncuyu hareket ettir.  '
       MC_HOC_2017_01_RETRY_markdown_instruction: |2
@@ -5629,16 +5666,16 @@ tr:
       MC_HOC_2017_10_RYAN_markdown_instruction: Agent'ın bu maden arabasını tamamlayıp oyuncuyu turuncu kareye ulaştırmasını kolaylaştıracak işlevleri baştan oluşturmayı dene.
       MC_HOC_2017_10_RYAN2_markdown_instruction: Agent'ın bu maden arabasını tamamlayıp oyuncuyu turuncu kareye ulaştırmasını kolaylaştıracak işlevleri baştan oluşturmayı dene.
       MC_HOC_2017_11_Kiki_markdown_instruction: Şimdi her şey sana bağlı! Bu donmuş gölün çevresinde neler oluşturabildiğini gör.
-      MC_HOC_2017_13_Cole_markdown_instruction: "**Serbest Oyun:** Şimdi her şey sana bağlı! Bu dünyayı keşfetmene yardımcı olması için Agent'ın kodunu kullan."
+      MC_HOC_2017_13_Cole_markdown_instruction: "**Serbest Oyun** Şimdi her şey sana bağlı!\nBu dünyayı keşfetmene yardımcı olması için Ajan'ın kodunu kullan."
       MC_HOC_2017_4.5v2_markdown_instruction: |-
         Bataklıktan kurtuldun!  Şimdi oyuncuyu güvenli bir şekilde turuncu kareye ulaştır. 
         
         
         Basit bir desen bulup ilk iki baskı plakasından geçmek için döngüleri kullanarak, Agent'ın yolu temizlemesine yardımcı ol.
       MC_HOC_2017_Ali_markdown_instruction: 'Aşağıdaki işlevlere bak.  Ghast''lardan uzak durmak ve {currentPlayerName} karakterinin güvenli bir şekilde **Büyülü Kitaba** [book_enchanted] ulaşmasına yardımcı olmak için bu işlevleri nasıl kullanabilirsin?  '
-      MC_HOC_2017_FP10x10_markdown_instruction: "**Serbest Oyun:** Şimdi her şey sana bağlı! Bu seviyedeki tüm elmasları toplamayı başarabilir misin? "
+      MC_HOC_2017_FP10x10_markdown_instruction: "**Serbest Oyun:** Artık size kalmış! \nBu seviyedeki tüm elmasları toplamak için kendinize meydan okuyabilir misiniz?\n"
       MC_HOC_2017_FP10x10_RE_markdown_instruction: "**Serbest Oyun:** Artık size kalmış! \nBu seviyedeki tüm elmasları toplamak için kendinize meydan okuyabilir misiniz?\n"
-      MC_HOC_2017_FP20x20_markdown_instruction: "**Serbest Oyun:** Şimdi her şey sana bağlı! Bu dünyayı keşfetmene yardımcı olması için Agent'ın kodunu kullan."
+      MC_HOC_2017_FP20x20_markdown_instruction: "**Serbest Oyun** Şimdi her şey sana bağlı!\nBu dünyayı keşfetmene yardımcı olması için Ajan'ın kodunu kullan."
       MC_HOC_2017_Ryan_03_markdown_instruction: "Bir döngünün içine birden fazla kod yerleştirebileceğini biliyor muydun?  \\r\n\\r\nAgent'ın suya bloklar yerleştirerek bir köprü inşa etmesine yardımcı olmak için bir `tekrarla` döngüsü kullan."
       MC_HOC_2017_Ryan_05_markdown_instruction: "Bazen oyuncunun yoluna çıkan şeyleri devirmen gerekir.  \\r\nAgent ile baskı plakası arasındaki tüm kaktüsleri temizlemek için `yok et` bloğunu kullan."
       MC_HOC_Kiki_02_markdown_instruction: Yan kapının açılabilmesi için baskı plakasının üzerinde duran biri olmalıdır.  Oyuncunun evden çıkabilmesi için Agent'ın plakaya ulaşmasına yardımcı ol.
@@ -5738,13 +5775,21 @@ tr:
         # Pikselleme: Her Şey
         5\r
         Bu pikselleme bölümü "Kaydırıcıları Gizle" seçeneğini kullanımını gösterir. Dikkat edin, genişlik ve yükseklik kaydırıcıları kullanılabilir değil ve genişlik ve yükseklik alanları değiştirilemez.
+      Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction: "#\nPikselasyon: Görev 3\\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right width=200 hspace=20>\\r\n**Yol tarifi:**\\r\nSeni videoda oluşturulmuş 4x4 Maddie resmi ile başlatıyoruz.\\r\n\\r\nSenin görevin 4x4 bir ızgarayı *piksel başına12-bit * kullanarak boya ile doldurmak.Sonuç sağda gözüken resime benzemeli (ama aynısı olmak zorunda değil).  \\r\n\\r\nİşte şartlar:\\r\n\\r\n\n * Satır 1 - Kırmızının tonları ile doldur. \\r\n * Satır 2 - Yeşilin tonları. \\r\n *Satır 3 - mavinin tonları. \\r\n * Satır 4 - grinin tonları.\\r\n"
+      Pixelation - Lesson 15 - Color Shades 4x4_2018_markdown_instruction: "#\nPikselasyon: Görev 3\\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right width=200 hspace=20>\\r\n**Yol tarifi:**\\r\nSeni videoda oluşturulmuş 4x4 Maddie resmi ile başlatıyoruz.\\r\n\\r\nSenin görevin 4x4 bir ızgarayı *piksel başına12-bit * kullanarak boya ile doldurmak.Sonuç sağda gözüken resime benzemeli (ama aynısı olmak zorunda değil).  \\r\n\\r\nİşte şartlar:\\r\n\\r\n\n * Satır 1 - Kırmızının tonları ile doldur. \\r\n * Satır 2 - Yeşilin tonları. \\r\n *Satır 3 - mavinin tonları. \\r\n * Satır 4 - grinin tonları.\\r\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "#\nRenk Pikselasyonu: Görev 1\n**Yol tarifi:**\n\n* Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.\n* Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin.\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_2018_markdown_instruction: "#\nRenk Pikselasyonu: Görev 1\n**Yol tarifi:**\n\n* Seni oluşturulmuş 4x2 Maddie resmi ile başlatıyoruz ancak son iki kareyi bıraktık.\n* Resmi, hangi iki rengin eksik olduğunu bularak ve onları kodlayarak bitirmelisin.\n"
+      Pizza on a Plate_markdown_instruction: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini oluşturun. Bu biraz sabır ve planlama gerektirir!"
       Predict Loop I_markdown_instruction: |-
         # Tahmin\r \r bu döngü sonucu ne yazdırılır?
       Predict Loop I_2018_markdown_instruction: |-
         # Tahmin\r \r bu döngü sonucu ne yazdırılır?
       'Project: Finish Color Sleuth_markdown_instruction': "# Meydan Okuma- Oyunu bitirmek için bir yol seçin ve bunu yerine getirecek şekilde programlayın\\r\n\\r\nŞimdiki göreviniz tamamen kendi kodunuzu eklemeniz. Şimdiye kadar öğrendiklerinizi kullanın. Alexis ve Michael'ın konuşmaları size yardımcı olacaktır.\\r\n\\r\n**Bu son programlama seviyesidir**\\r\n\\r\n* Programa istediğiniz tüm değişiklik ve eklemeleri yapın.\\r\n* Yaptığınızda **Gönder** düğmesine tıklayın.\\r\n\\r\n**Amaç:** Oyunu sonlandımak için size sağlanan kodu ekleyin, öyle ki:\\r\n* Oyun sonu ekranına (gameOver_screen) geçer.\\r\n*\nHangi oyuncunun oyunu kazandığını 'player1Win_label' veya 'player2Win_label' etiketleriyle gösterir.\\r\n\\r\n*Bu proje için şablonun bir parçası olarak oyun sonu (gameOver_screen) ekranını size sunduk -- Tasarım Görünümüne geçerek nerede olduğuna bir bak.*\\r\n\\r\n**Tavsiyeler**\\r\n* Eğer fikir bulamadıysanız, oyun sonu koşulunu \"10'a ilk gelen\" -10 skorunu ilk yapan kazanır-\nolarak tamamlamaya çalışın.\\r\n* Oyun sonunu kontrol et (checkGameOver()) ve doğru mu kontrol et (checkCorrect) fonksiyonlarını eklemek gibi Alexis ve Michael'in konuşmasındaki tavsiyeleri kullanmalısın. \\r\n\\r\n<details><summary><strong>Yukarıda ve ötede:\nProjeniz için isteğe bağlı ek seçenekler[Açmak için tıklayın]</strong></summary>\\r\n\\r\n<p>\\r\nBurada projene ekleyebileceğin veya projeni genişletebileceğin bir çözüm demeti var:\\r\n\\r\n</p>\\r\n<ul>\\r\n\\r\n\\r\n<li> Son ekrana herşeyi sıfırlayan ve oyunu başlat ekranına döndüren \"Tekrar Başlat\" düğmesi ekle\\r\n</li>\\r\n<li> Kuralları açıklayan ve oyuncuyu davet ederek oyunu başlatan hoş geldiniz ekranı ekle(varsayılan ekran yap)\\r\n</li>\\r\n<li>Oyunu daha zorlaştır:</li>\\r\n<uL>\\r\n<li>Renkleri birbirine daha benzer yap(biz her RGB değerine 20 ekledik, sen 10 veya 15 dene).</li>\\r\n<li>Veya zorluk değişkeni oluştur - 5 ile 20 arasında rastgele sayı üreterek RGB değerine ekle. </li>\\r\n<li>Veya gittikçe daha da zorlaştır - her birine ne kadar RGB değeri eklendiğini takip etmek ve süre geçtikçe azaltmak için bir değişken kullan.</li>\\r\n\\t<li>Veya hoş geldiniz ekranında kullanıcıya kolay, orta veya zor mu oynamak istediklerini sor.</li>\\r\n</uL>\\r\n\\r\n<li>Zamanlama ögesi ekle - belirli bir süre sonunda fonksiyon çağıran \"setTimeout\" komutu için belgelere bak. (Not: Serbest App Lab projesi olarak bunu yapmak için projeleri karıştırman gerekebilir).\\r\n</li>\\r\n<li> Bunların yanında oyunun bitmesi için ne kadar süre olduğunu hesaplayıp skora uyarlamak için\n<code>getTime()</code> komutunu kodunun başlangıcında ve sonunda kullanabilirsin. </li>\\r\n</ul>\\r\n</details>\\r\n"
+      'Project: Finish Color Sleuth_2018_markdown_instruction': "# Meydan Okuma- Oyunu bitirmek için bir yol seçin ve bunu yerine getirecek şekilde programlayın\\r\n\\r\nŞimdiki göreviniz tamamen kendi kodunuzu eklemeniz. Şimdiye kadar öğrendiklerinizi kullanın. Alexis ve Michael'ın konuşmaları size yardımcı olacaktır.\\r\n\\r\n**Bu son programlama seviyesidir**\\r\n\\r\n* Programa istediğiniz tüm değişiklik ve eklemeleri yapın.\\r\n* Yaptığınızda **Gönder** düğmesine tıklayın.\\r\n\\r\n**Amaç:** Oyunu sonlandımak için size sağlanan kodu ekleyin, öyle ki:\\r\n* Oyun sonu ekranına (gameOver_screen) geçer.\\r\n*\nHangi oyuncunun oyunu kazandığını 'player1Win_label' veya 'player2Win_label' etiketleriyle gösterir.\\r\n\\r\n*Bu proje için şablonun bir parçası olarak oyun sonu (gameOver_screen) ekranını size sunduk -- Tasarım Görünümüne geçerek nerede olduğuna bir bak.*\\r\n\\r\n**Tavsiyeler**\\r\n* Eğer fikir bulamadıysanız, oyun sonu koşulunu \"10'a ilk gelen\" -10 skorunu ilk yapan kazanır-\nolarak tamamlamaya çalışın.\\r\n* Oyun sonunu kontrol et (checkGameOver()) ve doğru mu kontrol et (checkCorrect) fonksiyonlarını eklemek gibi Alexis ve Michael'in konuşmasındaki tavsiyeleri kullanmalısın. \\r\n\\r\n<details><summary><strong>Yukarıda ve ötede:\nProjeniz için isteğe bağlı ek seçenekler[Açmak için tıklayın]</strong></summary>\\r\n\\r\n<p>\\r\nBurada projene ekleyebileceğin veya projeni genişletebileceğin bir çözüm demeti var:\\r\n\\r\n</p>\\r\n<ul>\\r\n\\r\n\\r\n<li> Son ekrana herşeyi sıfırlayan ve oyunu başlat ekranına döndüren \"Tekrar Başlat\" düğmesi ekle\\r\n</li>\\r\n<li> Kuralları açıklayan ve oyuncuyu davet ederek oyunu başlatan hoş geldiniz ekranı ekle(varsayılan ekran yap)\\r\n</li>\\r\n<li>Oyunu daha zorlaştır:</li>\\r\n<uL>\\r\n<li>Renkleri birbirine daha benzer yap(biz her RGB değerine 20 ekledik, sen 10 veya 15 dene).</li>\\r\n<li>Veya zorluk değişkeni oluştur - 5 ile 20 arasında rastgele sayı üreterek RGB değerine ekle. </li>\\r\n<li>Veya gittikçe daha da zorlaştır - her birine ne kadar RGB değeri eklendiğini takip etmek ve süre geçtikçe azaltmak için bir değişken kullan.</li>\\r\n\\t<li>Veya hoş geldiniz ekranında kullanıcıya kolay, orta veya zor mu oynamak istediklerini sor.</li>\\r\n</uL>\\r\n\\r\n<li>Zamanlama ögesi ekle - belirli bir süre sonunda fonksiyon çağıran \"setTimeout\" komutu için belgelere bak. (Not: Serbest App Lab projesi olarak bunu yapmak için projeleri karıştırman gerekebilir).\\r\n</li>\\r\n<li> Bunların yanında oyunun bitmesi için ne kadar süre olduğunu hesaplayıp skora uyarlamak için\n<code>getTime()</code> komutunu kodunun başlangıcında ve sonunda kullanabilirsin. </li>\\r\n</ul>\\r\n</details>\\r\n"
       Repeat Predict Contained_markdown_instruction: |-
         # Tahmin\r \r döngü kaç defa çalışacaktır?
+      Robot Doodle_markdown_instruction: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini oluşturun. Bu biraz sabır ve planlama gerektirir!"
+      Robot Doodle_2018_markdown_instruction: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini oluşturun. Bu biraz sabır ve planlama gerektirir!"
       Robot Drawing_markdown_instruction: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini oluşturun. Bu biraz sabır ve planlama gerektirir!"
       Robot_markdown_instruction: "**Proje Fikri:** Gerçek dünyadan tanıdık bir şeyin resmini oluşturun. Bu biraz sabır ve planlama gerektirir!"
       Room Escape Workshop - 1_markdown_instruction: |-
@@ -5870,6 +5915,32 @@ tr:
         Alt amaç etiket blokunu istediğin yere sürükle.
       Testing Quantum Farmer_markdown_instruction: "Hey şuna bak! Kaç kürek dolusu toprağa ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program yazabilir misin?  "
       U1L9 Free Response Assessment_markdown_instruction: "Öğrenmekten en çok zevk aldığın konulardan birini seçin. Öğrendiğin yeni bilgi sayı sistemleri kullanma ile nasıl ilgilidir.\n"
+      U3 - Simple Drawing - Personal Drawing_markdown_instruction: |
+        # Senin Kendi Çizimin\r
+        \r
+        Kendi çizimini oluşturma sırası sende. Öncelikle planın taslağını kağıt üzerine çıkarmalısın.\r
+        \r
+        # Bunu Yap\r
+        Hatırlatma olarak, hedeflere ulaştığından emin ol:\r
+        \r
+        *
+        Tarif edilebilir ve isimlendirilmiş hedef veya tasarım oluşturur (örneğin rastgele serpiştirilmiş şekiller)\r
+        * En az 10 tane şekil yada metin kullanır (dikdörtgen, düzgün çokgen, metin)\r
+        * En az 4 farklı dolgu rengi kullanır\r
+        * En az 2 farklı ana hat rengi kullanır\r
+        * Yorumlar ile birlikte 3 farklı mantıksal blok içerir\r
+        
+      U3L04 Assessment1_markdown_instruction: |+
+        Aşağıdaki şekli değerlendirin. Tümdengelim düşünmeyi kullanarak bu sorun için bir çözüm tasarlayın. Aşağıda verilen boşluğa, bu şekli çizen bir programda yazacağınız fonksiyonların **sadece isimlerinin** bir listesini yazın. (Uzun çizgi bölümlerinin 6 kaplumbağa adımı uzunluğunda olduğunu varsayın).\r
+        \r
+        ![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\r
+        
+      U3L04 Assessment1_2018_markdown_instruction: |+
+        Aşağıdaki şekli değerlendirin. Tümdengelim düşünmeyi kullanarak bu sorun için bir çözüm tasarlayın. Aşağıda verilen boşluğa, bu şekli çizen bir programda yazacağınız fonksiyonların **sadece isimlerinin** bir listesini yazın. (Uzun çizgi bölümlerinin 6 kaplumbağa adımı uzunluğunda olduğunu varsayın).\r
+        \r
+        ![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\r
+        
+      U5 ColorSleuth implement end game_markdown_instruction: "# Meydan Okuma- Oyunu bitirmek için bir yol seçin ve bunu yerine getirecek şekilde programlayın\\r\n\\r\nŞimdiki göreviniz tamamen kendi kodunuzu eklemeniz. Şimdiye kadar öğrendiklerinizi kullanın. Alexis ve Michael'ın konuşmaları size yardımcı olacaktır.\\r\n\\r\n**Bu son programlama seviyesidir**\\r\n\\r\n* Programa istediğiniz tüm değişiklik ve eklemeleri yapın.\\r\n* Yaptığınızda **Gönder** düğmesine tıklayın.\\r\n\\r\n**Amaç:** Oyunu sonlandımak için size sağlanan kodu ekleyin, öyle ki:\\r\n* Oyun sonu ekranına (gameOver_screen) geçer.\\r\n*\nHangi oyuncunun oyunu kazandığını 'player1Win_label' veya 'player2Win_label' etiketleriyle gösterir.\\r\n\\r\n*Bu proje için şablonun bir parçası olarak oyun sonu (gameOver_screen) ekranını size sunduk -- Tasarım Görünümüne geçerek nerede olduğuna bir bak.*\\r\n\\r\n**Tavsiyeler**\\r\n* Eğer fikir bulamadıysanız, oyun sonu koşulunu \"10'a ilk gelen\" -10 skorunu ilk yapan kazanır-\nolarak tamamlamaya çalışın.\\r\n* Oyun sonunu kontrol et (checkGameOver()) ve doğru mu kontrol et (checkCorrect) fonksiyonlarını eklemek gibi Alexis ve Michael'in konuşmasındaki tavsiyeleri kullanmalısın. \\r\n\\r\n<details><summary><strong>Yukarıda ve ötede:\nProjeniz için isteğe bağlı ek seçenekler[Açmak için tıklayın]</strong></summary>\\r\n\\r\n<p>\\r\nBurada projene ekleyebileceğin veya projeni genişletebileceğin bir çözüm demeti var:\\r\n\\r\n</p>\\r\n<ul>\\r\n\\r\n\\r\n<li> Son ekrana herşeyi sıfırlayan ve oyunu başlat ekranına döndüren \"Tekrar Başlat\" düğmesi ekle\\r\n</li>\\r\n<li> Kuralları açıklayan ve oyuncuyu davet ederek oyunu başlatan hoş geldiniz ekranı ekle(varsayılan ekran yap)\\r\n</li>\\r\n<li>Oyunu daha zorlaştır:</li>\\r\n<uL>\\r\n<li>Renkleri birbirine daha benzer yap(biz her RGB değerine 20 ekledik, sen 10 veya 15 dene).</li>\\r\n<li>Veya zorluk değişkeni oluştur - 5 ile 20 arasında rastgele sayı üreterek RGB değerine ekle. </li>\\r\n<li>Veya gittikçe daha da zorlaştır - her birine ne kadar RGB değeri eklendiğini takip etmek ve süre geçtikçe azaltmak için bir değişken kullan.</li>\\r\n\\t<li>Veya hoş geldiniz ekranında kullanıcıya kolay, orta veya zor mu oynamak istediklerini sor.</li>\\r\n</uL>\\r\n\\r\n<li>Zamanlama ögesi ekle - belirli bir süre sonunda fonksiyon çağıran \"setTimeout\" komutu için belgelere bak. (Not: Serbest App Lab projesi olarak bunu yapmak için projeleri karıştırman gerekebilir).\\r\n</li>\\r\n<li> Bunların yanında oyunun bitmesi için ne kadar süre olduğunu hesaplayıp skora uyarlamak için\n<code>getTime()</code> komutunu kodunun başlangıcında ve sonunda kullanabilirsin. </li>\\r\n</ul>\\r\n</details>\\r\n"
       Underground Avoiding Lava_markdown_instruction: Bu blokların bazılarının altında lav gizli ve ilerlemeden önce bunların üstünü örtmen gerekir. 'Eğer' komutu burada işine yarayacak. Bu blokları çıkarmak için doğru yere bir adet 'ilerle' komutu ekle.
       Underground Avoiding Lava_2018_markdown_instruction: Bu blokların bazılarının altında lav gizli ve ilerlemeden önce bunların üstünü örtmen gerekir. 'Eğer' komutu burada işine yarayacak. Bu blokları çıkarmak için doğru yere bir adet 'ilerle' komutu ekle.
       Underground If Statements_markdown_instruction: Şimdi işler biraz daha zorlaşıyor. 3 kızıltaş çıkarın ama lavın içine düşmeyin. Ortaya çıkardığınız lavların üstüne kırıktaş yerleştirmek için bir "eğer" komutu kullanın.
@@ -5975,13 +6046,14 @@ tr:
         Laurel i hazine ye ilerlet, daha sonra 'topla' kullan \r \r Bu seviyeyi geçmek için bir yığın topla.
       collectorSkinVideo2_markdown_instruction: |-
         Laurel i hazine ye ilerlet, daha sonra 'topla' kullan \r \r Bu seviyeyi geçmek için bir yığın topla.
+      conditionals_forvideo_harvester_markdown_instruction: Mısır ve marulların hepsini topla sonra kabakları seç.
       course1_artist_loops_challenge2_markdown_instruction: Bir oyun oynayalım! Çizebildiğin kadar X çiz! Üst üste 3 alabilir miyim?
       course1_artist_loops_challenge3_markdown_instruction: |-
         Tweet tweet! İki kuş evi yapmama yardımcı olabilir misin?
       course1_artist_loops_challenge4_markdown_instruction: 'Zar atma zamanı! Çizmek için yardımcı olabilir misin?'
       course1_maze_debugging_challenge1_markdown_instruction: "Hatayı ayıkla.\nFazla blokları çıkar ve eksik blokları ekle. Kuşu domuza ulaştır!"
       course1_maze_debugging_challenge2_markdown_instruction: "Hatayı ayıkla.\nBu bloklar doğru fakat onlara yanlış emirler verilmiş!"
-      course1_maze_seq_challenge2_markdown_instruction: Her yönde yalnızca 4 kez ilerleyebilirsin. Blokları bitirmeden bir yol bulabilir misin?
+      course1_maze_seq_challenge2_markdown_instruction: Her yönde yalnızca 4 kez ilerleyebilirsin. Kod bloklarını bitirmeden bir çözüm yolu bulabilir misin?
       course1_playlab_events_challenge1_markdown_instruction: |-
         Büyük hayvan yarışı Zamanı! ▼ bastığınızda aşağı ilerlesin. Kim en hızlı koşar
         
@@ -6018,8 +6090,8 @@ tr:
       course2_harvester_loops_challenge1_markdown_instruction: Bütün mısırları topla.
       course2_harvester_loops_challenge2_markdown_instruction: Tüm marulları topla. Ağaçlardan ve tarlalardan sakın!
       course2_maze_programming_challenge1_markdown_instruction: '* "Domuz saklanıyor! Etrafından bir yol bulmam için bana yardımcı olabilir misin?" *'
-      course2_maze_programming_challenge2_markdown_instruction: Bazen aynı sorunu çözmek için birden fazla yol vardır. Bazen geriye doğru gitmek ileriye doğru gitmekten daha hızlıdır!
-      course2_maze_seq_challenge2_markdown_instruction: Her yönde yalnızca 4 kez ilerleyebilirsin. Blokları bitirmeden bir yol bulabilir misin?
+      course2_maze_programming_challenge2_markdown_instruction: Bazen aynı sorunu çözmek için birden fazla yol vardır. Bazen geriye doğru gitmek daha hızlı olabilir!
+      course2_maze_seq_challenge2_markdown_instruction: Her yönde yalnızca 4 kez ilerleyebilirsin. Kod bloklarını bitirmeden bir çözüm yolu bulabilir misin?
       course2_playlab_stage17_11_markdown_instruction: "Kendi hikaye oluşturun. İşiniz bittiğinde, hikayeni arkadaşların telefonlarında denesin. \\r  <br/> \\r \\r <h5>\\r <details>\\r <summary><b>fikir gerekiyor mu?</b></summary> \\r \\t <br/> \\r \\t<h5>\\r \\t\\t<ul>\\r \\t <li><strong>kim var orada?</strong>- rasgele karekterler görüntüle ve böylece sırada hangisi gösterilecek kimse bilmesin.</li> \\r <li><strong>bir maceraya gidiyoruz</strong> - arka plan değiştir, sonra  karakterler şu anda nerede oldukları hakkında konuşsun.</li> \\r <li><strong>pinball</strong> - ok tuşlarını kullanarak karakteri hareket ettir ( 'yukarı ok ', 'aşağı ok ne zaman'), ekranda  karakterler diğerleri ile çarpıştığında rasgele sesleri oynat.</li> \\r         </ul>\\r \\t</h5>\\r </details>\\r </h5>\\r\n"
       course3_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/> \\r \\r şimdi bir meydan okuma!  \\r \\r burada sadece gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan çekinmeyin. \\r \\r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde kullanılan uzunluk biraz daha küçük. "
       course3_artist_functions_challenge1_markdown_instruction: Bir kere fonksiyonu tanımladıktan sonra onu tekrar tekrar çağırabilirsin -ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu dene, sonra onu kendi etkileyici tasarımını yapmak için değiştir!
@@ -6034,14 +6106,14 @@ tr:
             </block></xml>
       course3_bee_debugging_challenge1_markdown_instruction: Arıların nasıl nektar topladığını izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir misin?
       course3_bee_functions_challenge1_markdown_instruction: Bu meydan okumada tek başınasın. Göründüğünden daha zor olabilir!
-      course3_bee_functions_challenge2_markdown_instruction: Bu meydan okumada tek başınasın!
-      course3_bee_functions_challenge3_markdown_instruction: İlerde yol olduğu sürece tüm nektar ve balı toplamak için yeni bir fonksiyon oluştur. Bulmacayı tamamlamak için fonksiyonu kullan!
-      course3_bee_functions_challenge4_markdown_instruction: Bu bulmacayı tamamlamak için öğrendiğin her şeyi kullan!
+      course3_bee_functions_challenge2_markdown_instruction: Bu mücadelede tamamen kendi başınasın!
+      course3_bee_functions_challenge3_markdown_instruction: Bir yol var iken nektar ve bal toplayan yeni bir fonksiyon oluşturun. Fonksiyonu bulmacayı tamamlamak için kullanın!
+      course3_bee_functions_challenge4_markdown_instruction: Bulmacayı tamamlamak için öğrendiğin her şeyi kullan!
       course3_collector_debugging_challenge2_markdown_instruction: Arıların nasıl nektar topladığını izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir misin?
       course3_farmer_condLoops_challenge1_markdown_instruction: "Kabaklar nereden dönmen gerektiğini belirliyor. *Kabaklardan sağa dön.* Aksi halde düz gitmeye devam et ama yol boyunca bütün marul ve mısırları toplamayı unutma. \\r\n\\r\n**Her gizli ürün bir mısır ya da marula sahip.**"
       course3_farmer_condLoops_challenge2_markdown_instruction: "Burası sebze labirenti. Kabaklardan sağa dön, marullardan sola dön. Bölümü tamamlamak için her şeyi topla."
       course3_farmer_until_challenge2_markdown_instruction: Kıvrımlı yolu takip etmek için eğer/değilse (if/else) bloklarını kullan. Her köşede ürünleri silmek amacıyla bir döngü içerisinde 'remove1' komutunu kullan.
-      course3_maze_debugging_challenge1_markdown_instruction: '*"Ben sadece bir çember içinde mi dolaşıyorum?"*'
+      course3_maze_debugging_challenge1_markdown_instruction: '* "Ben sadece çember içinde mi dolaşıyorum?" *'
       course3_maze_debugging_challenge2_markdown_instruction: '* "Çok sık dönersem, başım dönebilir! Sadece dört dönüş komutu ile domuza ulaşmama yardım et." *'
       course3_maze_until_challenge1_markdown_instruction: "İpucu yok, sadece meydan okuma.\nZombiyi ayçiçeğine götür.\\r\nTalimatlari izle"
       course3_playLab_challenge1_markdown_instruction: "* **Sincaplar** **dinozorların** şehre indiğini görünce dehşete kapıldılar. Cesur **şövalye**onları paniklemekten kurtarabilir mi?*\\r\n\\r\nBurada sizin için önceden başlatılmış çeşitli oyunlar var! Nasıl çalıştığını görmek için oyna. \\r\n\\r\n\\r\nYeterince puan aldığınıza ve bitirdiğinizde bir şeyler olmalı. Oyunun olması gerektiği gibi çalışması için 'oyun kazan' (win game) ve 'oyun kaybet' (lose game) fonksiyonlarına birkaç kod ekleyin. \\r\nFikirler için ipucuna tıklayın!"
@@ -6061,7 +6133,7 @@ tr:
         Bu ızgarada temsil edilen 256 bit var - bu, küçük bir değişikliğin kolayca büyük problemlere sebep olacağı anlamına gelir. Bu logoyu normal haline çevirmekte yeterince ısrarcı mısın?\r
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
-      course4_artist_concept_challenge2_markdown_instruction: Aşağıdaki kodu kullanarak 5 tane rüzgar gülü tasarımı oluştur.
+      course4_artist_concept_challenge2_markdown_instruction: Aşağıdaki kodları kullanarak beş adet rüzgar gülü tasarımı oluştur.
       course4_artist_functions_challenge2_markdown_instruction: |2
         Sadece tuvalin köşeleri gibi daha önceden belirlediğin noktalara zıplamakla kalmaz, 'jump to' komutunu kullanarak tam olarak istediğin noktaya ulaşabilirsin. Nasıl çalıştığını görmek için aşağıdaki kodu dene, sonra kendi programını yap!\r
         <xml>\r
@@ -6079,7 +6151,7 @@ tr:
         \r
         Böyle bir deseni oluşturmak için ihtiyacı olan her şeyi öğrendin! Bu bulmacanın zor olması gerekiyor. Çözümü bulana kadar çabalayabilir misin?
       course4_bee_for_challenge1_markdown_instruction: Bütün nektarı toplamak için bu döngüyü kullan. Sayaç kadar tekrar ettirmek için bir kaç aksiyon(actions) var.
-      course4_bee_fwp_challenge1_markdown_instruction: Fonksiyon içinde bir şununla say (for) döngüsü kullanarak tüm mısırı topla. Aynı şununla say (for) döngüsü uzunluk (length) parametresini kullanarak farklı en büyük değerleri sayabilir.
+      course4_bee_fwp_challenge1_markdown_instruction: Tüm Mısır toplamak için fonksiyon içinde bununla say döngüsü kullanın. Aynı bununla say döngüsünü 'uzunluk' parametresini kullanarak farklı maksimum değerler için kullanabilirsiniz.
       course4_bee_fwp_challenge2_markdown_instruction: |-
         Son bir final testinin üstesinden gelebilecek misin görelim! Elindeki her şeyi ver!\r
         \r
@@ -6236,12 +6308,15 @@ tr:
       courseA_collector_loops3_2018_markdown_instruction: Laurel '[E-->]' sadece bir blok kullanarak beş yığını nasıl toplayabilir?
       courseA_collector_loops_challenge1_markdown_instruction: '*"Bazı hataları bulmama yardım eder misin? Hangi yöne gitmek istediğimi biliyorum, fakat kaç adım atacağımdan emin değilim."*'
       courseA_collector_loops_challenge1_2018_markdown_instruction: '*"Bazı hataları bulmama yardım eder misin? Hangi yöne gitmek istediğimi biliyorum, fakat kaç adım atacağımdan emin değilim."*'
-      courseA_collector_preLoops1_markdown_instruction: "Bu, Maceracı Laurel!\n\\r\n\\r\nHazineye kadar yürümek ve kapmak için \"Çalıştır\" düğmesine basın."
+      courseA_collector_preLoops1_markdown_instruction: "Bu maceracı Laurel!\\r\n\\r\nOnun hazineye doğru yürüdüğünü ve onu aldığını görmek için \"Çalıştır\"a basın."
       courseA_collector_preLoops7_markdown_instruction: |-
         Laurel i hazine taşıyın ve sonra <xml><block type="collector_collect"/></xml> bloğu kullanarak hazineyi toplayın \r \r 
         Seviyeyi geçmek için 3 yığınıda alın.
       courseA_forVideoTest_artist_markdown_instruction: '''Tekrarla döngüleri'' Sanatçı için de çalışır!'
       courseA_maze_ramp3_2018_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
+      courseA_maze_ramp4_2018_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseA_maze_ramp5_2018_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
       courseA_maze_seq1_markdown_instruction: 'Bu bloklarla oynayın ve beni kötü domuza ulaştırın'
       courseA_maze_seq10_markdown_instruction: |-
         ** Meydan Okuma: ** domuza ulaşmak için kuşu TNT etrafından dolaştır! \r \r <img src="https://images.code.org/fa04813e9451e0bc070af50bc01d4a6b-image-1467932582838.gif" width="200px"/>
@@ -6288,8 +6363,8 @@ tr:
       courseA_maze_seq9_2018_markdown_instruction: |-
         **Meydan okuma:** Blok ekleyerek kodu düzelt ve kuşu domuza ulaştır!\r \r <img src="https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif"
         width="200px"/>
-      courseA_maze_seq_challenge1_markdown_instruction: Hata ayıklama. İlave blokları kaldırın ve eksik blokları ekleyin. Kuşu domuza ulaştırın!
-      courseA_maze_seq_challenge1_2018_markdown_instruction: Hata ayıklama. İlave blokları kaldırın ve eksik blokları ekleyin. Kuşu domuza ulaştırın!
+      courseA_maze_seq_challenge1_markdown_instruction: "Hatayı ayıkla.\nFazla blokları çıkar ve eksik blokları ekle. Kuşu domuza ulaştır!"
+      courseA_maze_seq_challenge1_2018_markdown_instruction: "Hatayı ayıkla.\nFazla blokları çıkar ve eksik blokları ekle. Kuşu domuza ulaştır!"
       courseA_playLab_events3_markdown_instruction: |-
         Köpek Jorge u hareket ettirmek için  ! [] (https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) bloğu ile [] (https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png) olay bloğunu birleştir.   \r \r Bu seviyeyi bitirmek için Jorge u bayrağa ulaştır!
       courseA_playLab_events3_2018_markdown_instruction: |-
@@ -6409,6 +6484,9 @@ tr:
          
         
       courseB_artist_loops6_markdown_instruction: Çalıların arkasına güzel asma çiçekleri tam orada.  Asmaya tırmanıp nereye gittiğini görebilir misin?
+      courseB_artist_loops6_2018_markdown_instruction: Çalıların arkasına güzel asma çiçekleri tam orada.  Asmaya tırmanıp nereye gittiğini görebilir misin?
+      courseB_artist_loops7_markdown_instruction: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
+      courseB_artist_loops7_2018_markdown_instruction: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
       courseB_artist_loops_challenge1_markdown_instruction: 'Zar atma zamanı! Çizmek için yardımcı olabilir misin?'
       courseB_artist_loops_challenge1_2018_markdown_instruction: 'Zar atma zamanı! Çizmek için yardımcı olabilir misin?'
       courseB_artist_loops_challenge2_markdown_instruction: Bir oyun oynayalım! Çizebildiğin kadar X çiz! Üst üste 3 alabilir miyim?
@@ -6428,8 +6506,8 @@ tr:
       courseB_collector_loops3_2018_markdown_instruction: Laurel '[E-->]' sadece bir blok kullanarak beş yığını nasıl toplayabilir?
       courseB_collector_loops3_predict1_markdown_instruction: Laurel '[E-->]' sadece bir blok kullanarak beş yığını nasıl toplayabilir?
       courseB_collector_prog3_markdown_instruction: Laurel '[E-->]' sadece bir blok kullanarak beş yığını nasıl toplayabilir?
-      courseB_iceage_loops11_markdown_instruction: Scrat'ın meşe palamuduna ulaşmasına yardım edin!
-      courseB_iceage_loops11_forVideo_markdown_instruction: Scrat'ın meşe palamuduna ulaşmasına yardım edin!
+      courseB_iceage_loops11_markdown_instruction: Scrat'in meşe palamuduna ulaşmasını sağlayın!
+      courseB_iceage_loops11_forVideo_markdown_instruction: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseB_maze_seq3_markdown_instruction: 'Beni domuza götürmek için kodu değiştir'
       courseB_maze_seq9_markdown_instruction: "Meydan Okuma: TNT nin etrafından dolaşıp kuşu domuza eriştirin."
       courseB_maze_seq9_challenge1_markdown_instruction: "*O domuz şimdi nerede saklanıyor? *"
@@ -6478,8 +6556,8 @@ tr:
       courseB_starWars_prog4_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Al onu, BB-8!\"_"
       courseB_starWars_prog5_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hepsini alabilir misin?\"_"
       courseB_starWars_prog5_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Hepsini alabilir misin?\"_"
-      courseB_starWars_prog6_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu yapabilirsin!\"_\\r\n"
-      courseB_starWars_prog6_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu yapabilirsin!\"_\\r\n"
+      courseB_starWars_prog6_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu yapabilirsin!\"_"
+      courseB_starWars_prog6_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu yapabilirsin!\"_"
       courseB_starWars_prog7_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Git ve onu al!\"_"
       courseB_starWars_prog7_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Git ve onu al!\"_"
       courseB_starWars_prog8_markdown_instruction: |-
@@ -6493,7 +6571,7 @@ tr:
         \r
         **Meydan Okuma**: Tüm hurda metali topla.
       courseB_starWars_prog9_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu yapabilirsin!\"_"
-      courseB_starWars_prog9_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu yapabilirsin!\"_\\r\n"
+      courseB_starWars_prog9_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Bunu yapabilirsin!\"_"
       courseC_PlayLab_events_challenge1_markdown_instruction: |-
         Waddles' ın, dinazorla karşılaştığında ve puan aldığında başlangıç konumuna otomatik olarak geri dönmesi için yeni bir blok kullan. Bu, oyunu daha zorlu ve eğlenceli hale getirecek!\r
         \r
@@ -6509,8 +6587,8 @@ tr:
         Artık zombi yolunu bildiğine göre, yol boyunca daha fazla çiçek dikmesi için **25 piksel uzunluğunda** delikler kazmasına yardım et!\r
         - Her delik 25 piksel uzunluğunda olmalı\r
         - Her delikten bir sonraki deliğe kadar 25 piksel boşluk olmalı
-      courseC_artist_loops2a_markdown_instruction: "Şimdi, kuşu 12 kez 30 derece döndürmek için bir döngü kullanın .\\r\n___\\r\n\\r\n![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)"
-      courseC_artist_loops2a_2018_markdown_instruction: "Şimdi, kuşu 12 kez 30 derece döndürmek için bir döngü kullanın .\\r\n___\\r\n\\r\n![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)"
+      courseC_artist_loops2a_markdown_instruction: Şimdi, kuşun 36 derecelik 10 dönüş yapacağı bir döngü kullan.
+      courseC_artist_loops2a_2018_markdown_instruction: Şimdi, kuşun 36 derecelik 10 dönüş yapacağı bir döngü kullan.
       courseC_artist_loops3a_markdown_instruction: "Çok Eğlenceli!  \\r\n\\r\nAşağıdaki gibi bir resim yapmak için kuştan hemen sonra bir yarasa çıkartması ekleyin.\\r\n___\\r\n\\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2018_markdown_instruction: "Çok Eğlenceli!  \\r\n\\r\nAşağıdaki gibi bir resim yapmak için kuştan hemen sonra bir yarasa çıkartması ekleyin.\\r\n___\\r\n\\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops4a_markdown_instruction: |-
@@ -6610,15 +6688,26 @@ tr:
       courseC_flappy_events5_2018_markdown_instruction: "Flappy engelleri geçtiğinde puanları saymak için bir skor tabelası ekledik  \\r\n\\r\n'Bir engel geçildiğinde' olayına, puanları sayacak bir kod bloğu ekle, ardından Flappy'nin ilk grup borular arasında uçması için \"Çalıştır\" butonuna tıkla."
       courseC_flappy_events6_markdown_instruction: "Farklı bir kanat çırpma hızı almak için 'normal miktarda kanat çırp' ın içindeki aşağı oka tıklayın.  \\r\n\\r\nHer tıkladığınızda Flappy daha fazla veya daha az miktarda kanat çırptıktan sonra hala bir puan alıp alamadığınıza bakın."
       courseC_flappy_events6_2018_markdown_instruction: "Farklı bir kanat çırpma hızı almak için 'normal miktarda kanat çırp' ın içindeki aşağı oka tıklayın.  \\r\n\\r\nHer tıkladığınızda Flappy daha fazla veya daha az miktarda kanat çırptıktan sonra hala bir puan alıp alamadığınıza bakın."
-      courseC_flappy_events7_markdown_instruction: Ardından, 'Çalıştığı zaman' olayına bir kod bloğu ekleyerek sahneyi değiştirmeye çalış.
-      courseC_flappy_events7_2018_markdown_instruction: Ardından, 'Çalıştığı zaman' olayına bir kod bloğu ekleyerek sahneyi değiştirmeye çalış.
+      courseC_flappy_events7_markdown_instruction: Daha sonra, 'çalıştığı zaman' olayına bir blok ekleyerek sahneyi değiştirmeyi dene.
+      courseC_flappy_events7_2018_markdown_instruction: Daha sonra, 'çalıştığı zaman' olayına bir blok ekleyerek sahneyi değiştirmeyi dene.
       courseC_flappy_events8_markdown_instruction: "Arka planı, sadece oyun başladığında değil, herhangi bir olayın altında da değiştirebilirsin. \\r\n\\r\nDiğer olaylar gerçekleştiğinde **rastgele** bir sahne ayarlamaya çalış...örneğin bir engel geçildiğinde."
       courseC_flappy_events8_2018_markdown_instruction: "Arka planı, sadece oyun başladığında değil, herhangi bir olayın altında da değiştirebilirsin. \\r\n\\r\nDiğer olaylar gerçekleştiğinde **rastgele** bir sahne ayarlamaya çalış...örneğin bir engel geçildiğinde."
-      courseC_flappy_events9_markdown_instruction: Flappy bir engele çarptığında oyunu sonlandırmak yerine işleri iyice karıştırmak için, skoru yeniden 0 olarak ayarlamaya çalış.
-      courseC_flappy_events9_2018_markdown_instruction: Flappy bir engele çarptığında oyunu sonlandırmak yerine işleri iyice karıştırmak için, skoru yeniden 0 olarak ayarlamaya çalış.
+      courseC_flappy_events9_markdown_instruction: Flappy bir engele çarptığında oyunu sonlandırmak yerine, işleri iyice karıştırmak için, skoru yeniden 0 olarak ayarlamaya çalışın.
+      courseC_flappy_events9_2018_markdown_instruction: Flappy bir engele çarptığında oyunu sonlandırmak yerine, işleri iyice karıştırmak için, skoru yeniden 0 olarak ayarlamaya çalışın.
       courseC_harvester_loops10_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops10_2018_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops11_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops11_2018_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops3_markdown_instruction: Bütün balkabaklarını topla.
+      courseC_harvester_loops3_2018_markdown_instruction: Bütün balkabaklarını topla.
+      courseC_harvester_loops5_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops5_2018_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops6_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops6_2018_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops7_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops7_2018_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops9_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
+      courseC_harvester_loops9_2018_markdown_instruction: Bütün balkabaklarını ve bütün mısırı topla.
       courseC_harvester_loops_challenge1_markdown_instruction: Bütün mısırları topla.
       courseC_harvester_loops_challenge2_markdown_instruction: Tüm marulları topla. Ağaçlardan ve tarlalardan sakın!
       courseC_harvester_loops_challenge2_2018_markdown_instruction: Tüm marulları topla. Ağaçlardan ve tarlalardan sakın!
@@ -6626,12 +6715,23 @@ tr:
       courseC_maze_debugging_challenge2_markdown_instruction: '* "Çok sık dönersem, başım dönebilir! Sadece dört dönüş komutu ile domuza ulaşmama yardım et." *'
       courseC_maze_debugging_challenge2_2018_markdown_instruction: '* "Çok sık dönersem, başım dönebilir! Sadece dört dönüş komutu ile domuza ulaşmama yardım et." *'
       courseC_maze_loops2_predict1_markdown_instruction: "Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu içindeki kodu tekrar tekrar çalıştırır. \\r \\r 'tekrarla' bloğu içine İlerlebloğu koyarak domuza ulaşmayı sağla?"
-      courseC_maze_loops_challenge2_markdown_instruction: Döngüleri kullanarak hazine avı yapalım. Bu koddaki hatayı ayıklayarak toplayıcıya yardım et. Tüm hazineyi al!
+      courseC_maze_loops_challenge2_markdown_instruction: Hadi döngüler kullanarak hazine - avı yapalım! Toplayıcıya hata ayıklayarak yardımcı ol. Tüm hazineyi al!
+      courseC_maze_programming1_markdown_instruction: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
+      courseC_maze_programming1_2018_markdown_instruction: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
+      courseC_maze_programming4_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseC_maze_programming4_2018_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseC_maze_programming5_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
+      courseC_maze_programming5_2018_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
+      courseC_maze_programming8_markdown_instruction: '* "Sakin ol ve kötü domuzu bulmama yardım et." *'
+      courseC_maze_programming8_2018_markdown_instruction: '* "Sakin ol ve kötü domuzu bulmama yardım et." *'
       courseC_maze_programming8_predict1_markdown_instruction: '* "Sakin ol ve kötü domuzu bulmama yardım et." *'
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '* "Sakin ol ve kötü domuzu bulmama yardım et." *'
       courseC_maze_programming_challenge1_markdown_instruction: '* "Domuz saklanıyor! Etrafından bir yol bulmam için bana yardımcı olabilir misin?" *'
       courseC_maze_programming_challenge1_2018_markdown_instruction: '* "Domuz saklanıyor! Etrafından bir yol bulmam için bana yardımcı olabilir misin?" *'
-      courseC_maze_programming_challenge2_markdown_instruction: Bazen aynı sorunu çözmek için birden fazla yol vardır. Bazen geriye doğru gitmek ileriye doğru gitmekten daha hızlıdır!
-      courseC_maze_programming_challenge2_2018_markdown_instruction: Bazen aynı sorunu çözmek için birden fazla yol vardır. Bazen geriye doğru gitmek ileriye doğru gitmekten daha hızlıdır!
+      courseC_maze_programming_challenge2_markdown_instruction: Bazen aynı sorunu çözmek için birden fazla yol vardır. Bazen geriye doğru gitmek daha hızlı olabilir!
+      courseC_maze_programming_challenge2_2018_markdown_instruction: Bazen aynı sorunu çözmek için birden fazla yol vardır. Bazen geriye doğru gitmek daha hızlı olabilir!
       courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)\nBB-8 yuvarlanmış parlayan hurda metallerin hepsini alır. BB-8' in hepsini almasına yardımcı ol!  \\r\nSandıklara ve duvarlara dikkat et!  \\r\n"
       courseC_starWars_loops10_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r
@@ -6862,7 +6962,19 @@ tr:
         Harika!  Şimdi sanatçıyı kullanarak bir kare yapalım!  Bloklar biraz farklıdır, ancak fikir aynıdır. \r <hr/> \r  200 piksel uzunlukta kenarlar vardır ve her açıyı yapmak için 90 derece döndürmek gerekir.
       courseD_artist_ramp12_markdown_instruction: |-
         Öğrendiklerini kullan ve karenin içine üçgen çiz <hr/> \r her kenar 200 piksel uzunluktadırr. Kare için 90 ve üçgen için 120 derece yapmak döndürmek gerekir.
+      courseD_bee_conditionals1_markdown_instruction: |-
+        * "Bu bulut görüşümü engelliyor!" * \r \r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek ise, nektar al.
+      courseD_bee_conditionals10_markdown_instruction: |-
+        Her bir noktada ne olduğunu tam olarak bilebildiğinizde bile, şartlılar yardımcı olabilir!\r
+        \r
+        Tüm nektarı toplayın ve balın tamamını yapın.
+      courseD_bee_conditionals10_2018_markdown_instruction: |-
+        Her bir noktada ne olduğunu tam olarak bilebildiğinizde bile, şartlılar yardımcı olabilir!\r
+        \r
+        Tüm nektarı toplayın ve balın tamamını yapın.
       courseD_bee_conditionals1_predict1_markdown_instruction: |-
+        * "Bu bulut görüşümü engelliyor!" * \r \r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek ise, nektar al.
+      courseD_bee_conditionals1_predict1_2018_markdown_instruction: |-
         * "Bu bulut görüşümü engelliyor!" * \r \r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek ise, nektar al.
       courseD_bee_conditionals7_predict2_markdown_instruction: "Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir)."
       courseD_bee_conditionals7_predict2_2018_markdown_instruction: "Bazen bulut çiçeği saklar bazende peteği. Eğer/değilse bloğu kullanarak çiçek ise nektar al değilse bal yap( bu durumda petektir)."
@@ -6876,16 +6988,20 @@ tr:
       courseD_bee_debugging_challenge1a_markdown_instruction: |-
         Arıların nasıl nektar topladığını izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir misin?
       courseD_bee_debugging_challenge2_markdown_instruction: Arıların nasıl nektar topladığını izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım edebilir misin?
+      courseD_bee_nestedLoops2_markdown_instruction: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
+      courseD_bee_nestedLoops2_2018_markdown_instruction: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
       courseD_bee_nestedLoops2_predict1_markdown_instruction: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
+      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: Bu sefer tüm mümkün olduğunca az blok kullanarak tüm nektarı toplaması için arıya yardım edin.
       courseD_bee_nestedLoops5_markdown_instruction: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
       courseD_bee_nestedLoops8_markdown_instruction: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. '
       courseD_bee_nestedLoops9_markdown_instruction: Balın tamamını yap.
+      courseD_bee_nestedLoops9_2018_markdown_instruction: Balın tamamını yap.
       courseD_bee_nestedLoops9_predict2_markdown_instruction: Balın tamamını yap.
       courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Balın tamamını yap.
-      courseD_bee_nested_loops_challenge1_markdown_instruction: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç çubuğundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
-      courseD_bee_nested_loops_challenge2_markdown_instruction: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç çubuğundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
-      courseD_bounce_events1_markdown_instruction: Bayrağa ulaşın! 'Sol oka basıldığında' bloğuna bir blok ekleyin ve oyuncuyu bayrağa hareket ettirmek için 'Çalıştır' a basın.
+      courseD_bee_nested_loops_challenge1_markdown_instruction: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
+      courseD_bee_nested_loops_challenge2_markdown_instruction: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
+      courseD_bounce_events1_markdown_instruction: Bayrağa ulaşın! "sol ok olduğunda" karesine bir kare ekleyin ve oyuncuyu bayrağa doğru hareket ettirmek için "Çalıştır"a basın.
       courseD_bounce_events11s_markdown_instruction: |-
         Şimdi, topun kontrolü sizde! Oyunda yeni bir topa ihtiyaç olan her yere 'yeni top fırlat' bloğunu ekleyin.\r
         \r
@@ -6898,6 +7014,8 @@ tr:
         ---\r
         \r
         Rakibiniz iki sayı almadan önce kaç puan alabileceğinizi görün!
+      courseD_bounce_events2s_markdown_instruction: Şimdi, 'sağ olay olduğunda'ya bir blok ekleyin bu sayede el her iki potaya da ulaşabilir.
+      courseD_bounce_events2s_2018_markdown_instruction: Şimdi, 'sağ olay olduğunda'ya bir blok ekleyin bu sayede el her iki potaya da ulaşabilir.
       courseD_bounce_events7s_markdown_instruction: "Potaya vurduğunuzda filenin hışırdamasını ve top elinizi ıskaladığında düdüğün çalmasını sağlamak için ses blokları ekleyin. \\r\n\\r\n---\\r\n\\r\nTop son hedefe vurana kadar topu sektirin."
       courseD_bounce_events7s_2018_markdown_instruction: "Potaya vurduğunuzda filenin hışırdamasını ve top elinizi ıskaladığında düdüğün çalmasını sağlamak için ses blokları ekleyin. \\r\n\\r\n---\\r\n\\r\nTop son hedefe vurana kadar topu sektirin."
       courseD_collector_debugging1_markdown_instruction: |-
@@ -6905,13 +7023,13 @@ tr:
         \r
         Tüm hazineyi toplamak için hatayı/hataları düzeltin.
       courseD_collector_debugging10_predict1_markdown_instruction: |-
-        *"Hazine Adası!"*\r
+        *"Burası Hazine Adası!"*\r
         \r
-        Tüm hazineyi alması için Laurel'e yardım et.
+        Kodu düzeltip bütün hazineyi alması için Laurel'e yardım et.
       courseD_collector_debugging10_predict1_2018_markdown_instruction: |-
-        *"Hazine Adası!"*\r
+        *"Burası Hazine Adası!"*\r
         \r
-        Tüm hazineyi alması için Laurel'e yardım et.
+        Kodu düzeltip bütün hazineyi alması için Laurel'e yardım et.
       courseD_collector_debugging1_2018_markdown_instruction: |-
         *"Oh hayır! Bir problem görüyorum."*\r
         \r
@@ -6994,6 +7112,8 @@ tr:
         İhtiyaç duyduğun bütün komutlar zaten burada... Şimdi hata ayıklama yeteneğini bu bulmacayı nasıl çözeceğini bulmak için kullan.
       courseD_collector_debugging6_markdown_instruction: "**Meydan Okuma**:İhtiyaç duyduğun bütün bloklar zaten burada... Şimdi hata ayıklama yeteneğini hataları düzeltip bütün hazineyi toplamak için kullan."
       courseD_collector_debugging6_2018_markdown_instruction: "**Meydan Okuma**:İhtiyaç duyduğun bütün bloklar zaten burada... Şimdi hata ayıklama yeteneğini hataları düzeltip bütün hazineyi toplamak için kullan."
+      courseD_collector_debugging6a_markdown_instruction: 'Meydan Okuma: En az **6** tane hazine toplamak için çalışma alanındaki kodları kullan!'
+      courseD_collector_debugging6a_2018_markdown_instruction: 'Meydan Okuma: En az **6** tane hazine toplamak için çalışma alanındaki kodları kullan!'
       courseD_collector_debugging7_markdown_instruction: "**Meydan Okuma**:İhtiyaç duyduğun bütün komutlar zaten burada... Şimdi hata ayıklama yeteneğini bu bulmacayı nasıl çözeceğini bulmak için kullan."
       courseD_collector_debugging8_markdown_instruction: |-
         *"Daha fazla hazine!"*\r
@@ -7020,17 +7140,17 @@ tr:
         \r
         Kodu düzeltip bütün hazineyi alması için Laurel'e yardım et.
       courseD_collector_debugging9_2018_markdown_instruction: |-
-        *"Hazine Adası!"*\r
+        *"Burası Hazine Adası!"*\r
         \r
-        Tüm hazineyi alması için Laurel'e yardım et.
+        Kodu düzeltip bütün hazineyi alması için Laurel'e yardım et.
       courseD_collector_debugging9a_markdown_instruction: |-
-        *"Hazine Adası!"*\r
+        *"Burası Hazine Adası!"*\r
         \r
-        Tüm hazineyi alması için Laurel'e yardım et.
+        Kodu düzeltip bütün hazineyi alması için Laurel'e yardım et.
       courseD_collector_debugging9a_2018_markdown_instruction: |-
-        *"Hazine Adası!"*\r
+        *"Burası Hazine Adası!"*\r
         \r
-        Tüm hazineyi alması için Laurel'e yardım et.
+        Kodu düzeltip bütün hazineyi alması için Laurel'e yardım et.
       courseD_collector_nested_loops_challenge2_markdown_instruction: "Hazine için avlanalım - döngüleri kullanarak! Sadece araç kutundaki blokları kullanarak toplayıcının en az 2 yığın hazineye ulaşmasına yardım et. 4'ünün tamamını toplamak mümkün."
       courseD_collector_nested_loops_challenge2_2018_markdown_instruction: "Hazine için avlanalım - döngüleri kullanarak! Sadece araç kutundaki blokları kullanarak toplayıcının en az 2 yığın hazineye ulaşmasına yardım et. 4'ünün tamamını toplamak mümkün."
       courseD_collector_nested_loops_challenge2a_markdown_instruction: "Hazine için avlanalım - döngüleri kullanarak! Sadece araç kutundaki blokları kullanarak toplayıcının en az 2 yığın hazineye ulaşmasına yardım et. 4'ünün tamamını toplamak mümkün."
@@ -7052,15 +7172,27 @@ tr:
         Her bir bitki bir mısır tanesi, bir marul veya bir kabak olacak.
       courseD_farmer_condLoops4a_markdown_instruction: "* \"Vay canına! Şimdi ürünler kümeler halinde büyüyor!\" * \\r\n\\r\nDiğer demete geçmeden önce her bir kümedeki marulu toplaması için çiftçiye yardım edin. Kabağı alana kadar devam edin!"
       courseD_farmer_condLoops8_markdown_instruction: Mısır ve marulların hepsini topla sonra kabakları seç.
+      courseD_farmer_condLoops8_2018_markdown_instruction: Mısır ve marulların hepsini topla sonra kabakları seç.
+      courseD_farmer_condLoops9_markdown_instruction: Mısır ve marulların hepsini topla sonra kabakları seç.
+      courseD_farmer_condLoops9_2018_markdown_instruction: Mısır ve marulların hepsini topla sonra kabakları seç.
       courseD_farmer_condLoops9_predict1_markdown_instruction: Tüm Mısır ve marulları topla sonra kabak topla.
+      courseD_farmer_condLoops9_predict1_2018_markdown_instruction: Mısır ve marulların hepsini topla sonra kabakları seç.
       courseD_farmer_condLoops_challenge1_markdown_instruction: "Kabaklar nereden dönmen gerektiğini belirliyor. *Kabaklardan sağa dön.* Aksi halde düz gitmeye devam et ama yol boyunca bütün marul ve mısırları toplamayı unutma. \\r\n\\r\n**Her gizli ürün bir mısır ya da marula sahip.**"
       courseD_farmer_condLoops_challenge1_2018_markdown_instruction: "Kabaklar nereden dönmen gerektiğini belirliyor. *Kabaklardan sağa dön.* Aksi halde düz gitmeye devam et ama yol boyunca bütün marul ve mısırları toplamayı unutma. \\r\n\\r\n**Her gizli ürün bir mısır ya da marula sahip.**"
       courseD_farmer_condLoops_challenge2_markdown_instruction: "Burası sebze labirenti. Kabaklardan sağa dön, marullardan sola dön. Bölümü tamamlamak için her şeyi topla."
       courseD_farmer_condLoops_challenge2_2018_markdown_instruction: "Burası sebze labirenti. Kabaklardan sağa dön, marullardan sola dön. Bölümü tamamlamak için her şeyi topla."
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: Burası sebze labirenti. Kabaklardan sağa dön, marullardan sola dön. Bölümü tamamlamak için her şeyi topla.
+      courseD_farmer_conditionals4_markdown_instruction: |-
+        * "Ne kadar toprak olduğunu bilmiyorum!" * \r \r 'sürece' döngüsü kullanarak tüm yığını kaldırmak için çiftçiye yardım et.
       courseD_farmer_until_challenge2_markdown_instruction: Kıvrımlı yolu takip etmek için eğer/değilse (if/else) bloklarını kullan. Her köşede ürünleri silmek amacıyla bir döngü içerisinde 'remove1' komutunu kullan.
       courseD_farmer_until_challenge2_2018_markdown_instruction: Kıvrımlı yolu takip etmek için eğer/değilse (if/else) bloklarını kullan. Her köşede ürünleri silmek amacıyla bir döngü içerisinde 'remove1' komutunu kullan.
+      courseD_farmer_while4_markdown_instruction: |-
+        * "Ne kadar toprak olduğunu bilmiyorum!" * \r \r 'sürece' döngüsü kullanarak tüm yığını kaldırmak için çiftçiye yardım et.
+      courseD_farmer_while4_2018_markdown_instruction: |-
+        * "Ne kadar toprak olduğunu bilmiyorum!" * \r \r 'sürece' döngüsü kullanarak tüm yığını kaldırmak için çiftçiye yardım et.
       courseD_farmer_while4_predict1_markdown_instruction: |-
+        * "Ne kadar toprak olduğunu bilmiyorum!" * \r \r 'sürece' döngüsü kullanarak tüm yığını kaldırmak için çiftçiye yardım et.
+      courseD_farmer_while4_predict1_2018_markdown_instruction: |-
         * "Ne kadar toprak olduğunu bilmiyorum!" * \r \r 'sürece' döngüsü kullanarak tüm yığını kaldırmak için çiftçiye yardım et.
       courseD_farmer_while_challenge1_markdown_instruction: Tüm delikleri doldurun ve tüm yığınları kaldır.
       courseD_farmer_while_challenge1_2018_markdown_instruction: Tüm delikleri doldurun ve tüm yığınları kaldır.
@@ -7069,7 +7201,7 @@ tr:
       courseD_harvester_nested_loops_challenge1-broken_markdown_instruction: '*"Çiftlikte biraz yardıma ihtiyacım var! Sadece araç kutusundaki blokları kullanarak bu mısırı hasat etmeme yardım et."*'
       courseD_harvester_nested_loops_challenge1_markdown_instruction: '*"Çiftlikte biraz yardıma ihtiyacım var! Sadece araç kutusundaki blokları kullanarak bu mısırı hasat etmeme yardım et."*'
       courseD_harvester_nested_loops_challenge1_2018_markdown_instruction: '*"Çiftlikte biraz yardıma ihtiyacım var! Sadece araç kutusundaki blokları kullanarak bu mısırı hasat etmeme yardım et."*'
-      courseD_iceage_loops11_markdown_instruction: Scrat'ın meşe palamuduna ulaşmasına yardım edin!
+      courseD_iceage_loops11_markdown_instruction: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseD_maze_loops_challenge1_markdown_instruction: Haydi döngüler kullanarak hazine avı yapalım! Toplayıcıya, yalnızca araç kutusundaki blokları kullanarak, en az iki hazine yığınına ulaşmasına yardım et.
       courseD_maze_nestedLoops4_markdown_instruction: 'Beni ayçiçeğine götür!'
       courseD_maze_nestedLoops4_2018_markdown_instruction: 'Beni ayçiçeğine götür!'
@@ -7080,20 +7212,30 @@ tr:
       courseD_maze_ramp3_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
       courseD_maze_ramp3_2018_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
       courseD_maze_ramp4_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseD_maze_ramp4_2018_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
       courseD_maze_ramp5_markdown_instruction: |-
         * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
-      courseD_maze_ramp5a_markdown_instruction: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı çözmeye çalışın!
-      courseD_maze_ramp5a_2018_markdown_instruction: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı çözmeye çalışın!
+      courseD_maze_ramp5_2018_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
+      courseD_maze_ramp5a_markdown_instruction: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı bulmaya çalışın!
+      courseD_maze_ramp5a_2018_markdown_instruction: Sıraya dikkat edin ve o domuza nasıl ulaşacağınızı bulmaya çalışın!
       courseD_maze_ramp5c_markdown_instruction: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5c_2018_markdown_instruction: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5d_markdown_instruction: Kuşu domuza götür.
+      courseD_maze_ramp5d_2018_markdown_instruction: Kuşu domuza götür.
       courseD_maze_ramp6_markdown_instruction: |-
         * "Sakin ol ve kötü domuzu bulmama yardım et. Aksi takdirde sinirleniyorum!" * \r \r bir satırda birkaç blok varsa 'tekrarla' döngüsü içine taşıyın.  Bu daha az kod ile aynı şeyi yapmayı sağlar!
       courseD_maze_ramp7_markdown_instruction: "* \"Kızgın olma zamanı!\" * \\r \\r ** meydan okuma: ** kuşu domuza iletmek için öğrendiklerini kullanın!"
+      courseD_maze_until10_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
+      courseD_maze_until10_2018_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until10_predict2_markdown_instruction: Zombi yi ayçiçeği ne ulaştır.
+      courseD_maze_until10_predict2_2018_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until6_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
+      courseD_maze_until6_2018_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until7_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
+      courseD_maze_until7_2018_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until8_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
+      courseD_maze_until8_2018_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım et.
       courseD_maze_until_challenge_markdown_instruction: |-
         İpucu yok, sadece meydan okuma.
         Zombiyi ayçiçeğine götür.\r
@@ -7139,14 +7281,16 @@ tr:
       courseD_scrat_ramp4_2018_markdown_instruction: Scrat'i güvende tutmak için çatlak buzdan uzak durun!
       courseD_scrat_ramp5_markdown_instruction: Kırık buzdan kaçının!
       courseD_scrat_ramp5_2018_markdown_instruction: Kırık buzdan kaçının!
-      courseD_scrat_ramp7_markdown_instruction: Scrat'ın meşe palamuduna ulaşmasına yardım edin!
-      courseD_scrat_ramp7_2018_markdown_instruction: Scrat'ın meşe palamuduna ulaşmasına yardım edin!
+      courseD_scrat_ramp6_markdown_instruction: Scrat'in döngü kullanarak meşe palamuduna ulaşmasını sağla!
+      courseD_scrat_ramp6_2018_markdown_instruction: Scrat'in döngü kullanarak meşe palamuduna ulaşmasını sağla!
+      courseD_scrat_ramp7_markdown_instruction: Scrat'in meşe palamuduna ulaşmasını sağlayın!
+      courseD_scrat_ramp7_2018_markdown_instruction: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseE_artist_concept_challenge1_markdown_instruction: |-
         <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png" width="200px"/> \r \r şimdi bir meydan okuma!  \r \r burada sadece gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan çekinmeyin. \r \r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde kullanılan uzunluk biraz daha küçük. 
       courseE_artist_concept_challenge1_2018_markdown_instruction: |-
         <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png" width="200px"/> \r \r şimdi bir meydan okuma!  \r \r burada sadece gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan çekinmeyin. \r \r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde kullanılan uzunluk biraz daha küçük. 
-      courseE_artist_concept_challenge2_markdown_instruction: Aşağıdaki kodu kullanarak 5 tane rüzgar gülü tasarımı oluştur.
-      courseE_artist_concept_challenge2_2018_markdown_instruction: Aşağıdaki kodu kullanarak 5 tane rüzgar gülü tasarımı oluştur.
+      courseE_artist_concept_challenge2_markdown_instruction: Aşağıdaki kodları kullanarak beş adet rüzgar gülü tasarımı oluştur.
+      courseE_artist_concept_challenge2_2018_markdown_instruction: Aşağıdaki kodları kullanarak beş adet rüzgar gülü tasarımı oluştur.
       courseE_artist_functions_challenge_markdown_instruction: Bir kere fonksiyonu tanımladıktan sonra onu tekrar tekrar çağırabilirsin -ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu dene, sonra onu kendi etkileyici tasarımını yapmak için değiştir!
       courseE_artist_functions_challenge1_markdown_instruction: Bir kere fonksiyonu tanımladıktan sonra onu tekrar tekrar çağırabilirsin -ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu dene, sonra onu kendi etkileyici tasarımını yapmak için değiştir!
       courseE_artist_functions_challenge1_2018_markdown_instruction: Bir kere fonksiyonu tanımladıktan sonra onu tekrar tekrar çağırabilirsin -ne zaman ve nerede istersen! Nasıl çalıştığını görmek için bu kodu dene, sonra onu kendi etkileyici tasarımını yapmak için değiştir!
@@ -7208,7 +7352,7 @@ tr:
         Bu bulmaca s onuncusu gibi, ama şimdi maceracı Laurel yıldız! \r <hr/> \r \r daha önce olduğu gibi aynı yolu git, \r Tekrarla bloğunu kullanarak hazine topla
         
       courseE_collector_ramp9_markdown_instruction: "Daha önceki ile aynı yolu al, ama bu sefer tüm hazineyi topla\n"
-      courseE_farmer_concept4_markdown_instruction: Şimdi bir düzey daha derin gidelim! Biz bütün bu kod bloğunu bir döngü içine koyun fakat artist tekrar başa dönsün. Hangi kod bloklarını en dıştaki döngü sonunda yerleştirmeliyim?
+      courseE_farmer_concept4_markdown_instruction: Şimdi biraz daha derine inelim! Biz bütün bu kod bloğunu başka bir döngü içine koyduk fakat sanatçının tekrar başa dönüp bir sonraki çizgiyi çizmesi için onu kodlamalısın. Bunun için hangi kod bloklarını en dıştaki döngü sonunda yerleştirmeliyim?
       courseE_farmer_functions2ba_markdown_instruction: "*\"Çok fonksiyonel hissediyorum!\"*\\r\n\\r\nBu bulmacadaki tekrarlayan kodları fark ettin mi? Hepsini döngünün içine yerleştiremeyiz ama fonksiyonları **kullanabiliriz.**\n  \\r\n\\r\nBu bulmaca için tekrarlayan  kodları 'mısır ve kabak' (corn and pumpkin) isimli fonksiyona taşıdık. Şimdi bütün ihtiyacın olan küçük 'mısır ve kabak' (corn and pumpkin) **fonksiyon çağırma blokunu** ihtiyacın olan yere yerleştirmek. \\r\n\\r\n___\\r\n#####Her filiz *bir* mısır olarak büyüyecek yada hiçbir şey olmayacak."
       courseE_farmer_functions2ba_2018_markdown_instruction: |2
         *"Çok fonksiyonel hissediyorum!"*\r
@@ -7220,6 +7364,10 @@ tr:
         \r
         ___\r
         #####Her filiz *bir* mısır olarak büyüyecek yada hiçbir şey olmayacak.
+      courseE_farmer_functions4b_markdown_instruction: Bu bulmacayı çözmek için yeni fonksiyonu kullanın.
+      courseE_farmer_functions4b_2018_markdown_instruction: Bu bulmacayı çözmek için yeni fonksiyonu kullanın.
+      courseE_farmer_functions9b_markdown_instruction: Bu bulmacaya iyice göz atın. Bu deseni çözebilir misiniz?
+      courseE_farmer_functions9b_2018_markdown_instruction: Bu bulmacaya iyice göz atın. Bu deseni çözebilir misiniz?
       courseE_farmer_functions9b_clone_markdown_instruction: Bu bulmacaya iyice göz atın. Bu deseni çözebilir misiniz?
       courseE_farmer_predict1_markdown_instruction: "Şimdi çiftçi maruldan daha fazla şey büyüyor!  \\r \\r bu bulmacada, çiftçi marul veya ** değilse ** Mısır büyütüyor.  eğer marul / değilse' bloğu kullan ve marul topla **değilse **mısır topla. \\r \\r \\r \\r\n"
       courseE_farmer_predict1_2018_markdown_instruction: "Şimdi çiftçi maruldan daha fazla şey büyüyor!  \\r \\r bu bulmacada, çiftçi marul veya ** değilse ** Mısır büyütüyor.  eğer marul / değilse' bloğu kullan ve marul topla **değilse **mısır topla. \\r \\r \\r \\r\n"
@@ -7247,13 +7395,21 @@ tr:
         Yalnızca mevcut blokları kullanarak bu bulmacayı çöz. \r \r bu seviye 'tekrarla' bloğu ile pratik yapmada yardımcı olacak  Balkabağına \r ulaşana kadar kodunuzu tekrar edin (kabakları toplamayı unutmayın!)
       courseE_farmer_ramp15_2018_markdown_instruction: |-
         Yalnızca mevcut blokları kullanarak bu bulmacayı çöz. \r \r bu seviye 'tekrarla' bloğu ile pratik yapmada yardımcı olacak  Balkabağına \r ulaşana kadar kodunuzu tekrar edin (kabakları toplamayı unutmayın!)
-      courseE_farmer_ramp16_markdown_instruction: "** Meydan okuma: ** En az sayıda blok ile bu bulmacayı çöz. \\r <br/> \\r."
+      courseE_farmer_ramp16_markdown_instruction: "** Ş meydan okuma: ** En az sayıda blok ile bu bulmacayı çöz. \\r <br/> \\r."
       courseE_maze_ramp1_markdown_instruction: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
       courseE_maze_ramp13_markdown_instruction: |-
         Öğrendiklerimizi toparlamak için son bulmaca! \r \r domuz ve kuş almak için iç içe döngüleri kullanın.
+      courseE_maze_ramp1_2018_markdown_instruction: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
       courseE_maze_ramp2_markdown_instruction: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı zaman ' tüm blokları ekleyebilirsiniz.
       courseE_maze_ramp2_2018_markdown_instruction: Bir ilave 'ileri' bloğundan sürükleyin, sonra çalıştığı zaman ' tüm blokları ekleyebilirsiniz.
       courseE_maze_ramp3_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
+      courseE_maze_ramp3_2018_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
+      courseE_maze_ramp4_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseE_maze_ramp4_2018_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseE_maze_ramp5_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
+      courseE_maze_ramp5_2018_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
       courseE_maze_ramp6_markdown_instruction: |-
         * "Sakin ol ve kötü domuzu bulmama yardım et. Aksi takdirde sinirleniyorum!" * \r \r bir satırda birkaç blok varsa 'tekrarla' döngüsü içine taşıyın.  Bu daha az kod ile aynı şeyi yapmayı sağlar!
       courseE_maze_ramp6_2018_markdown_instruction: |-
@@ -7262,6 +7418,8 @@ tr:
         * "Kızgın olma zamanı!" * \r \r ** meydan okuma: ** kuşu domuza iletmek için öğrendiklerini kullanın!
       courseE_maze_ramp7_2018_markdown_instruction: |-
         * "Kızgın olma zamanı!" * \r \r ** meydan okuma: ** kuşu domuza iletmek için öğrendiklerini kullanın!
+      courseE_multi_maze_ramp5_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
       courseE_playLab_challenge1_markdown_instruction: "* **Sincaplar** **dinozorların** şehre indiğini görünce dehşete kapıldılar. Cesur **şövalye**onları paniklemekten kurtarabilir mi?*\\r\n\\r\nBurada sizin için önceden başlatılmış çeşitli oyunlar var! Nasıl çalıştığını görmek için oyna. \\r\n\\r\n\\r\nYeterince puan aldığınıza ve bitirdiğinizde bir şeyler olmalı. Oyunun olması gerektiği gibi çalışması için 'oyun kazan' (win game) ve 'oyun kaybet' (lose game) fonksiyonlarına birkaç kod ekleyin. \\r\nFikirler için ipucuna tıklayın!"
       courseE_playLab_challenge1_2018_markdown_instruction: "* **Sincaplar** **dinozorların** şehre indiğini görünce dehşete kapıldılar. Cesur **şövalye**onları paniklemekten kurtarabilir mi?*\\r\n\\r\nBurada sizin için önceden başlatılmış çeşitli oyunlar var! Nasıl çalıştığını görmek için oyna. \\r\n\\r\n\\r\nYeterince puan aldığınıza ve bitirdiğinizde bir şeyler olmalı. Oyunun olması gerektiği gibi çalışması için 'oyun kazan' (win game) ve 'oyun kaybet' (lose game) fonksiyonlarına birkaç kod ekleyin. \\r\nFikirler için ipucuna tıklayın!"
       courseE_playLab_scaffold1_markdown_instruction: |-
@@ -7318,7 +7476,7 @@ tr:
         Bu zorluklarla ilgili yardıma ihtiyacın olursa ipuçlarını kontrol et!
       courseF_IceAge_1_markdown_instruction: "Sid (aktör 1) yeni bir macera için herkesi toplamak istiyor. 'Aktör 1 söyle' bloğunu sürükleyerek ve 'çalıştığı zaman' olayının altına bağlayarak, Sid' e \"Merhaba!\" dedirtebilir misin?   \\r\n\\r\nİçine \"Merhaba\" yazmayı unutmayın!"
       courseF_IceAge_10_markdown_instruction: "Sid büyükannesi Granny' nin onu sevdiğini bilmesini istiyor.   \\r\n\\r\nSid (aktör 1)' in,  Granny (aktör 2)' ye kalpler fırlatması için `aktör __ fırlat` komutunu kullanın! \\r\nKalpler Granny' ye çarptığında, Granny' nin modunu mutlu olarak ayarlayın."
-      courseF_IceAge_11_markdown_instruction: "Kendi oyununu veya hikayeni oluşturma zamanı!  \\r\n\\r\nBitirdiğinde, arkadaşlarının telefon, tablet veya bilgisayarlarında oyununu denemeleri için 'Bitir' e tıklayın!\\r\nNe yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıklayın."
+      courseF_IceAge_11_markdown_instruction: "Kendi oyununu ya da hikayeni yaratma zamanı!  \\r\n\\r\nTamamladığın zaman, arkadaşlarının kendi telefon, tablet ya da bilgisayarlarında oyununu denemelerine izin vermek için \"Bitir\" butonuna tıkla!\\r\nNe yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıkla."
       courseF_IceAge_2_markdown_instruction: Manny (aktör 1), Sid (aktör 2) ' i buldu ve onu bir maceraya davet etmek istiyor. `Aktör ___ söyle` bloğunu iki kez kullanarak onların birbirleriyle selamlaşmalarına yardımcı ol.
       courseF_IceAge_3_markdown_instruction: Scrat onun meşe palamudu arıyor! Son 200 pikseli taşımasına yardımcı olabilir misiniz?
       courseF_IceAge_5_markdown_instruction: '''Sürekli tekrarla'' bloğu kodun devamlı çalışmasını sağlar. Granny'' nin sağa ve sola tekrar tekrar hareket ederek bazı alıştırmalar yapmasına yardımcı olmak için kodlarınızı ''sürekli tekrarla'' bloğunun içine koyabilir misin?'
@@ -7342,6 +7500,10 @@ tr:
         Bir şekil için, olması gerekenden biraz daha az ya da çok dönersen, bu "neat" efekti oluşturur.\r
         \r
         Önceki bölümden birkaç kod dene ama bu kıvrımlı kare sarmalı oluşturmak için 89 derece döndür.
+      courseF_artist_for_Template_2018_markdown_instruction: |-
+        Bir şekil için, olması gerekenden biraz daha az ya da çok dönersen, bu "neat" efekti oluşturur.\r
+        \r
+        Önceki bölümden birkaç kod dene ama bu kıvrımlı kare sarmalı oluşturmak için 89 derece döndür.
       courseF_artist_for_challenge1_markdown_instruction: "Bu çizimi nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
       courseF_artist_for_challenge1_2018_markdown_instruction: "Bu çizimi nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\"\nwidth=\"350px\"/>\\r\n"
       courseF_artist_for_challenge2_markdown_instruction: "Bu çizimi bir döngü ile nasıl yeniden oluşturabileceğini kestirebiliyor musun?\\r\n\\r\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"\nwidth=\"350px\"/>"
@@ -7351,9 +7513,12 @@ tr:
       courseF_artist_fwp2_markdown_instruction: "'Uzunluğu' adında bir parametre için fonksiyonu düzenleyin.  \\r \\r karenin kenarları 25 piksel daha büyük olmalıdır.  İlk karenin 25 piksel kenarları vardır.'?? ' yerine doğru değeri koyun ve resmi çizin."
       courseF_artist_fwp2_2018_markdown_instruction: "'Uzunluğu' adında bir parametre için fonksiyonu düzenleyin.  \\r \\r karenin kenarları 25 piksel daha büyük olmalıdır.  İlk karenin 25 piksel kenarları vardır.'?? ' yerine doğru değeri koyun ve resmi çizin."
       courseF_artist_fwp2_predict1_markdown_instruction: "'Uzunluğu' adında bir parametre için fonksiyonu düzenleyin.  \\r \\r karenin kenarları 25 piksel daha büyük olmalıdır.  İlk karenin 25 piksel kenarları vardır.'?? ' yerine doğru değeri koyun ve resmi çizin."
+      courseF_artist_fwp2_predict1_2018_markdown_instruction: "'Uzunluğu' adında bir parametre için fonksiyonu düzenleyin.  \\r \\r karenin kenarları 25 piksel daha büyük olmalıdır.  İlk karenin 25 piksel kenarları vardır.'?? ' yerine doğru değeri koyun ve resmi çizin."
       courseF_artist_fwp3_markdown_instruction: "Şimdi fonksyonu sıfırdan oluşturmayı deneyin!  \\r \\r 'bir kare çiz' adında bir fonksiyonu oluşturun ve bu dört kutunun anahattı için kullanın.  \\r 'uzunluğu' için bir parametre ekleyin! \\r \\r <hr/>, üst sağ köşeden başlayarak kutu genişlikleri  50, 100, 150 ve 200 pikseldir."
       courseF_artist_fwp3_2018_markdown_instruction: "Şimdi fonksyonu sıfırdan oluşturmayı deneyin!  \\r \\r 'bir kare çiz' adında bir fonksiyonu oluşturun ve bu dört kutunun anahattı için kullanın.  \\r 'uzunluğu' için bir parametre ekleyin! \\r \\r <hr/>, üst sağ köşeden başlayarak kutu genişlikleri  50, 100, 150 ve 200 pikseldir."
       courseF_artist_fwp4_markdown_instruction: |-
+        Harita!  Şimdi bu fonksiyona parametre eklemek için Düzenleye tıkla \r \rtüm şekillerin  kenar sayısını 100 piksel uzunluğundadır.
+      courseF_artist_fwp4_2018_markdown_instruction: |-
         Harita!  Şimdi bu fonksiyona parametre eklemek için Düzenleye tıkla \r \rtüm şekillerin  kenar sayısını 100 piksel uzunluğundadır.
       courseF_artist_fwp5_markdown_instruction: "Son bulmacadaki fonksiyonu bu dizi şekilleri çizmek için kullanın.  \\r \\r \\r üçgenin 21 piksel kena uzunluğu vardır aşağıdaki üçgen  öncekinden 7 piksel daha uzun kenara sahiptir.   \\r Çarpma bloğu kullanın ve sadece bir foksiyon ile halledin. \\r ile <hr/> \\r 'çarpım' bloğu şuna benzer!] (https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png) \\r \\r\n"
       courseF_artist_fwp5_2018_markdown_instruction: "Son bulmacadaki fonksiyonu bu dizi şekilleri çizmek için kullanın.  \\r \\r \\r üçgenin 21 piksel kena uzunluğu vardır aşağıdaki üçgen  öncekinden 7 piksel daha uzun kenara sahiptir.   \\r Çarpma bloğu kullanın ve sadece bir foksiyon ile halledin. \\r ile <hr/> \\r 'çarpım' bloğu şuna benzer!] (https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png) \\r \\r\n"
@@ -7362,6 +7527,9 @@ tr:
       courseF_artist_fwp6_2018_markdown_instruction: |-
         ** Meydan Okuma: ** Sipiral fonksiyonunu güncelleve 'uzunluk' ve 'taraf' parametrelerini alsın kare 3 pikselden 90 piksel e gider. \r - altıgen iyine 3 pikselden 100 piksele gidiyor - üçgen 3 pikselden 105 piksele gider.
       courseF_artist_fwp7_markdown_instruction: |-
+        Sprial kenar fonksiyonunu bitir ve merkezin minimum uzunluğunu sor. \r \r - Kare için minimum merkez 50 piksel \r En uzun tarafında 200 piksel
+        
+      courseF_artist_fwp7_2018_markdown_instruction: |-
         Sprial kenar fonksiyonunu bitir ve merkezin minimum uzunluğunu sor. \r \r - Kare için minimum merkez 50 piksel \r En uzun tarafında 200 piksel
         
       courseF_artist_fwp8_markdown_instruction: |-
@@ -7413,6 +7581,10 @@ tr:
         Her bir noktada ne olduğunu tam olarak bilebildiğinizde bile, şartlılar yardımcı olabilir!\r
         \r
         Tüm nektarı toplayın ve balın tamamını yapın.
+      courseF_bee_conditionals1_predict1_markdown_instruction: |-
+        * "Bu bulut görüşümü engelliyor!" * \r \r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek ise, nektar al.
+      courseF_bee_conditionals1_predict1_2018_markdown_instruction: |-
+        * "Bu bulut görüşümü engelliyor!" * \r \r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek ise, nektar al.
       courseF_bee_conditionals2_markdown_instruction: "*\"Herhangi bir çiçek görmek için hava çok bulutlu!\"*\\r\n\\r\nNektarı almadan önce altında çiçek gizli mi diye her bulutun altını kontrol et. Eğer bulutun altında çiçek varsa, arının *bir defa* nektar almaya ihtiyacı var. \\r\n\\r\nHatırla: Bütün bulutlar aynı şeyi gizlemiyor!"
       courseF_bee_conditionals2_2018_markdown_instruction: "*\"Herhangi bir çiçek görmek için hava çok bulutlu!\"*\\r\n\\r\nNektarı almadan önce altında çiçek gizli mi diye her bulutun altını kontrol et. Eğer bulutun altında çiçek varsa, arının *bir defa* nektar almaya ihtiyacı var. \\r\n\\r\nHatırla: Bütün bulutlar aynı şeyi gizlemiyor!"
       courseF_bee_conditionals3_markdown_instruction: Sadece çiçeklerden nektar toplayabilirsiniz, ancak bir çiçek olup olmadığını görmek için herhangi bir alanı kontrol edebilirsiniz. Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya **ilk defasında** ihtiyaç duyacaktır.
@@ -7434,7 +7606,7 @@ tr:
       courseF_bee_for_challenge1_2018_markdown_instruction: |-
         Bütün nektarı toplamak için bu döngüyü kullan. Sayaç kadar tekrar ettirmek için bir kaç aksiyon(actions) var.
       courseF_bee_for_challenge2_markdown_instruction: Mümkün olan en az blokla bu bulmacayı çöz.
-      courseF_bee_for_challenge2_2018_markdown_instruction: Bu bulmacayı en az sayıda blok kullanarak tamamla.
+      courseF_bee_for_challenge2_2018_markdown_instruction: Mümkün olan en az blokla bu bulmacayı çöz.
       courseF_bee_for_challenge3_markdown_instruction: "** Şununla say döngüsü (for loops)- süper meydan okuma:** \nMümkün olan en az sayıdaki blokla bu bulmacayı çöz."
       courseF_bee_functions2_markdown_instruction: "İşleri kolaylaştırmak için fonksiyonları öğrenme zamanı!\\r\n\\r\nBurada, yeni bir *fonksiyon editörü* kullanacaksınız.  Bu editör fonksiyonunuzu düzenlerken ortaya çıkan ayrı bir penceredir. Çalışma alanında kodlama yaparken fonksiyonunuzdaki tüm kodu göremezsiniz, ama merak etmeyin...kodlarınız hala orada!  \\r\n___\\r\n\\r\n Arı bir çiçekte olduğunda nektarı alan bu fonksiyonla alıştırma yapalım.  İçindeki kodu görmek için mavi \"düzenle\" butonuna tıklayın!\\r\n\\r\nHer çiçekteki nektarı toplamak için `sadece nektar al` fonksiyonunu kullanın."
       courseF_bee_functions2_2018_markdown_instruction: "İşleri kolaylaştırmak için fonksiyonları öğrenme zamanı!\\r\n\\r\nBurada, yeni bir *fonksiyon editörü* kullanacaksınız.  Bu editör fonksiyonunuzu düzenlerken ortaya çıkan ayrı bir penceredir. Çalışma alanında kodlama yaparken fonksiyonunuzdaki tüm kodu göremezsiniz, ama merak etmeyin...kodlarınız hala orada!  \\r\n___\\r\n\\r\n Arı bir çiçekte olduğunda nektarı alan bu fonksiyonla alıştırma yapalım.  İçindeki kodu görmek için mavi \"düzenle\" butonuna tıklayın!\\r\n\\r\nHer çiçekteki nektarı toplamak için `sadece nektar al` fonksiyonunu kullanın."
@@ -7468,17 +7640,19 @@ tr:
       courseF_bee_functions8a_2018_markdown_instruction: "Bu bulutun altında, bilinmeyen miktarda nektar veya petek ile bilinmeyen miktarda bal bulunduran bir çiçek olmalı. \\r\n\\r\nBunun da üstesinden gelebilecek bir program yazabilir misin?"
       courseF_bee_functionsPre7_markdown_instruction: "Şimdi bu labirenti çözmek için fonksiyonu oluştur. Sonuncudan farkı ne?\\r\n\\r\nPeteklerden sola ve çiçeklerden sağa dön.  \\r\n**Not:** Bazı köşeler işaretsiz!"
       courseF_bee_functionsPre7_2018_markdown_instruction: "Şimdi bu labirenti çözmek için fonksiyonu oluştur. Sonuncudan farkı ne?\\r\n\\r\nPeteklerden sola ve çiçeklerden sağa dön.  \\r\n**Not:** Bazı köşeler işaretsiz!"
-      courseF_bee_functions_challenge1_markdown_instruction: İlerde yol olduğu sürece tüm nektar ve balı toplamak için yeni bir fonksiyon oluştur. Bulmacayı tamamlamak için fonksiyonu kullan!
-      courseF_bee_functions_challenge1_2018_markdown_instruction: İlerde yol olduğu sürece tüm nektar ve balı toplamak için yeni bir fonksiyon oluştur. Bulmacayı tamamlamak için fonksiyonu kullan!
-      courseF_bee_functions_challenge2_markdown_instruction: Bu bulmacayı tamamlamak için öğrendiğin her şeyi kullan!
-      courseF_bee_functions_challenge2_2018_markdown_instruction: Bu bulmacayı tamamlamak için öğrendiğin her şeyi kullan!
+      courseF_bee_functions_challenge1_markdown_instruction: Bir yol var iken nektar ve bal toplayan yeni bir fonksiyon oluşturun. Fonksiyonu bulmacayı tamamlamak için kullanın!
+      courseF_bee_functions_challenge1_2018_markdown_instruction: Bir yol var iken nektar ve bal toplayan yeni bir fonksiyon oluşturun. Fonksiyonu bulmacayı tamamlamak için kullanın!
+      courseF_bee_functions_challenge2_markdown_instruction: Bulmacayı tamamlamak için öğrendiğin her şeyi kullan!
+      courseF_bee_functions_challenge2_2018_markdown_instruction: Bulmacayı tamamlamak için öğrendiğin her şeyi kullan!
       courseF_bee_functions_challenge2_recursion_markdown_instruction: "Bu bulutun altında, bilinmeyen miktarda nektar veya petek ile bilinmeyen miktarda bal bulunduran bir çiçek olmalı. \\r\n\\r\nBunun da üstesinden gelebilecek bir program yazabilir misin?"
       courseF_bee_fwp1_markdown_instruction: "Bulutlar altında çiçeklere bak ve herhangi bir nektar olup olmadığını kontrol edin."
       courseF_bee_fwp1_2018_markdown_instruction: "Bulutlar altında çiçeklere bak ve herhangi bir nektar olup olmadığını kontrol edin."
       courseF_bee_fwp2_markdown_instruction: "İşte son bulmacayı  çözen kod.  \\r Hadi bir fonksiyon içine koy, sonra nektarı  kontrol için fonkisyonu çağırın.  \\r <hr/> \\r bu şimdi garip bir adım gibi gelebilir ama yakında gerçekten yararlı olacak!"
       courseF_bee_fwp2_2018_markdown_instruction: "İşte son bulmacayı  çözen kod.  \\r Hadi bir fonksiyon içine koy, sonra nektarı  kontrol için fonkisyonu çağırın.  \\r <hr/> \\r bu şimdi garip bir adım gibi gelebilir ama yakında gerçekten yararlı olacak!"
       courseF_bee_fwp3_markdown_instruction: "Fonksiyonu test etme zamanı.\nNektarları toplamamızı kolaylaştırdımı görelim."
+      courseF_bee_fwp3_2018_markdown_instruction: "Fonksiyonu test etme zamanı.\nNektarları toplamamızı kolaylaştırdımı görelim."
       courseF_bee_fwp4_markdown_instruction: "* \"Fonksiyonlarınızın  durumu nasıl?\" * \\r \\r Bazı ayarlamalar yapmanız gerekir  'uzunluğu' parametresi eklemek için \"Düzenle\" seçeneğini tıklatın. Satır farklı uzunlukta olduğunda işe yarayacaktır."
+      courseF_bee_fwp4_2018_markdown_instruction: "* \"Fonksiyonlarınızın  durumu nasıl?\" * \\r \\r Bazı ayarlamalar yapmanız gerekir  'uzunluğu' parametresi eklemek için \"Düzenle\" seçeneğini tıklatın. Satır farklı uzunlukta olduğunda işe yarayacaktır."
       courseF_bee_fwp5_markdown_instruction: |-
         * "Harikasın!" * \r \r Hadi nektarı toplamak için bu fonksyonu kullanın.
       courseF_bee_fwp5_2018_markdown_instruction: |-
@@ -7487,8 +7661,8 @@ tr:
       courseF_bee_fwp6_2018_markdown_instruction: "Fonksiyonları diğer programlama öğeleri ile birleştirdiğinizde kod daha kısa ve daha verimli olacaktır.  \\r <hr/> Bu bulmaca için kısa ve tatlı bir çözüm oluşturmak için hangi blokları kullanırdınız \\r?"
       courseF_bee_fwp7_markdown_instruction: "** Meydan Okuma: ** bir şey biraz farklı görünüyor. Fonksiyonu değiştirerek Bal da yapmasını sağlayın."
       courseF_bee_fwp7_2018_markdown_instruction: "** Meydan Okuma: ** bir şey biraz farklı görünüyor. Fonksiyonu değiştirerek Bal da yapmasını sağlayın."
-      courseF_bee_fwp_challenge1_markdown_instruction: Fonksiyon içinde bir şununla say (for) döngüsü kullanarak tüm mısırı topla. Aynı şununla say (for) döngüsü uzunluk (length) parametresini kullanarak farklı en büyük değerleri sayabilir.
-      courseF_bee_fwp_challenge1_2018_markdown_instruction: Fonksiyon içinde bir şununla say (for) döngüsü kullanarak tüm mısırı topla. Aynı şununla say (for) döngüsü uzunluk (length) parametresini kullanarak farklı en büyük değerleri sayabilir.
+      courseF_bee_fwp_challenge1_markdown_instruction: Tüm Mısır toplamak için fonksiyon içinde bununla say döngüsü kullanın. Aynı bununla say döngüsünü 'uzunluk' parametresini kullanarak farklı maksimum değerler için kullanabilirsiniz.
+      courseF_bee_fwp_challenge1_2018_markdown_instruction: Tüm Mısır toplamak için fonksiyon içinde bununla say döngüsü kullanın. Aynı bununla say döngüsünü 'uzunluk' parametresini kullanarak farklı maksimum değerler için kullanabilirsiniz.
       courseF_bee_fwp_challenge2_markdown_instruction: |-
         Son bir final testinin üstesinden gelebilecek misin görelim! Elindeki her şeyi ver!\r
         \r
@@ -7511,6 +7685,12 @@ tr:
         Araç kutusundan 'tekrarla' bloğunu sürükleyin ve 'çalıştığı zaman' olayına bağlayın.   Kodunuzu bitirmek için 'İlerle' bloğunu içine yerleştirin.
       courseF_maze_ramp2_2018_markdown_instruction: |-
         Araç kutusundan 'tekrarla' bloğunu sürükleyin ve 'çalıştığı zaman' olayına bağlayın.   Kodunuzu bitirmek için 'İlerle' bloğunu içine yerleştirin.
+      courseF_maze_ramp4_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseF_maze_ramp4_2018_markdown_instruction: "Yolu izleyin ve aptal domuza ulaşmamda bana öncülük edin. TNT'lerden kaçının yoksa tüylerim havaya uçar!"
+      courseF_maze_ramp5_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
+      courseF_maze_ramp5_2018_markdown_instruction: |-
+        * Domuza ulaşmak için yolu takip edin!" * \r \r TNT den kaçının.
       courseF_maze_ramp6_markdown_instruction: |-
         * "Sakin ol ve kötü domuzu bulmama yardım et. Aksi takdirde sinirleniyorum!" * \r \r bir satırda birkaç blok varsa 'tekrarla' döngüsü içine taşıyın.  Bu daha az kod ile aynı şeyi yapmayı sağlar!
       courseF_maze_ramp6_2018_markdown_instruction: |-
@@ -7530,6 +7710,14 @@ tr:
       courseF_playlab_variables2_markdown_instruction: "Şimdi, korsan Pegleg'ın konuşma şifresini çözmek için sadece iki yerde değişkenlerin değerini değiştir!   \\r - \"arrrg\" yerine \"a\" \\r - \"ye\" yerine \"e\" olmalı "
       courseF_playlab_variables2a_markdown_instruction: "Şimdi, korsan Pegleg'ın konuşma şifresini çözmek için sadece iki yerde değişkenlerin değerini değiştir!   \\r - \"arrrg\" yerine \"a\" \\r - \"ye\" yerine \"e\" olmalı "
       courseF_playlab_variables2b RYAN CLONE_markdown_instruction: |-
+        Metin parçalarıyla değişkenleri karıştırarak cümleleri daha ilginç hale getirebiliriz.\r
+        \r
+        'join' blokunun içinde boş bir yuvaya yerleştirerek cümlenin ortasına 'color' (renk) değişkeni ekle.
+      courseF_playlab_variables2b_markdown_instruction: |-
+        Metin parçalarıyla değişkenleri karıştırarak cümleleri daha ilginç hale getirebiliriz.\r
+        \r
+        'join' blokunun içinde boş bir yuvaya yerleştirerek cümlenin ortasına 'color' (renk) değişkeni ekle.
+      courseF_playlab_variables2b_2018_markdown_instruction: |-
         Metin parçalarıyla değişkenleri karıştırarak cümleleri daha ilginç hale getirebiliriz.\r
         \r
         'join' blokunun içinde boş bir yuvaya yerleştirerek cümlenin ortasına 'color' (renk) değişkeni ekle.
@@ -7584,6 +7772,8 @@ tr:
       course_playlab_variables1_markdown_instruction: "Korsan Pegleg bu. Onu bu günlerde anlamak zor!  \\r \\r Metin içindeki şifreyi çözerek ne dediğini anla: \\r - \"arrrg\" yerine \"a\" ve de\n \"ye\" yerine \"e\" \\r \\r olmalıdır\n"
       course_playlab_variables2_markdown_instruction: "Şimdi, korsan Pegleg'ın konuşma şifresini çözmek için sadece iki yerde değişkenlerin değerini değiştir!   \\r - \"arrrg\" yerine \"a\" \\r - \"ye\" yerine \"e\" olmalı "
       course_playlab_variables3_markdown_instruction: "Şimdi, korsan Pegleg'ın konuşma şifresini çözmek için sadece iki yerde değişkenlerin değerini değiştir!   \\r - \"arrrg\" yerine \"a\" \\r - \"ye\" yerine \"e\" olmalı "
+      coursef_maze_ramp3_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
+      coursef_maze_ramp3_2018_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
       csd-post-survey-2017-FR_markdown_instruction: Kursdaki deneyiminiz hakkında söylemek istediğiniz başka bir şey var mı?
       csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: Öğretmeninizin bilmesini istediğiniz başka bir şey var mı?
       csd-pulse-check-survey-1-free-response U1Ch2_2018_markdown_instruction: Öğretmeninizin bilmesini istediğiniz başka bir şey var mı?
@@ -7663,20 +7853,25 @@ tr:
       frozen square loop 3x_markdown_instruction: Haydi her birinin ardından dönerek, 3 tane kare oluşturalım. Her bir karenin ardından 120 derece dönmem gerektiğine emin ol.
       frozen square loop_markdown_instruction: Merhaba, ben Arendelle'den Anna! Haydi "Tekrarla" bloğunu kullanarak daha az blok kullanarak kare yapalım. Bir kare yapmak için kaç kere (???) "Tekrar" yapmak gerekir?
       frozen square snowflake_markdown_instruction: '"Tekrarla" bloğuyla 10 kare çizerek ve her bir karenin arasında "Dönme" bloğuyla 36 derece dönerek bir kar tanesi oluşturabilir misin?'
+      grade1_adventurer_loops2_markdown_instruction: Laurel '[E-->]' sadece bir blok kullanarak beş yığını nasıl toplayabilir?
+      grade1_artist_loops6_markdown_instruction: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
+      grade2_CaringForNewPet_0_markdown_instruction: Bu bulmaca için tüm blokların birlikte sürükleyin ve izlemek için "Çalıştır" ı tıklatın!
+      grade2_CaringForNewPet_11_markdown_instruction: '* "Sakin ol ve kötü domuzu bulmama yardım et." *'
+      grade2_CaringForNewPet_2_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
+      grade2_CaringForNewPet_2courseC_maze_programming3_markdown_instruction: "* \"Bu domuz benim tüylerini  diken d\niken ediyor.\" * \\r \\r orada kuşun parçalanmasına sebep olacak bir blok var.  \\r Onu geri araç kutusuna geri sürükle."
       grade2_MakeDogTag_8_markdown_instruction: Hadi, şimdi birkaç V'yi onları bir döngüde çizerek birbirine bağlayalım.
       grade2_MakeDogTag_9_markdown_instruction: "Güzel bir şey yapmanın zamanı geldi!\n\\r\n\\r\nSon bulmacada yaptığınız kodu tekrar yapın, fakat bu kez döngü içinde en sona sola 30 derece dönüş ekleyin. Şimdi 8 yerine 24 kez tekrarlatın."
       grade2_PuppyLoops_10_markdown_instruction: |-
-        Öğretmenim başladığım işi bitirmem gerektiğini söylüyor! \r
-        \r 
-        Rüzgar gülümü bitirmeme yardım et. Nerenin hatalı olduğunu görebiliyor musun?
+        Öğretmenim başladığım işi bitirmem gerektiğini söylüyor! \r \r Fırıldağı bitirmeme yardım et. Sorunun ne olduğunu anlayabildin mi?
       grade2_PuppyLoops_2_markdown_instruction: |2
         Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu ile içindeki kodu tekrar tekrar çalıştırabilirsiniz. \r
          \r 'Tekrarla' bloğu içine sadece bir 'İlerle' bloğu koyarak domuza ulaşabilir misin?
       grade2_PuppyLoops_4_markdown_instruction: Domuza ulaşmak için daha az blok kullanarak iki döngü kullanın.
-      grade2_PuppyLoops_8_markdown_instruction: "Kedinin bıyıkları için bu kod yanlış.\n\\r\n\\r\nHer biri eşit uzunlukta kedi bıyıkları çizmek için bu kodu düzelt. "
-      grade2_PuppyLoops_9_markdown_instruction: |2
-        Görünüşe bakılırsa kod içindeki C ters.
-         C gibi görünmesini sağlayabilir misin?
+      grade2_PuppyLoops_8_markdown_instruction: "Kedi bıyıkları için bu kod yanlıştır. \\r \\r\nHatayı bulun ve aynı uzunlukta olan bıyıkları çizin."
+      grade2_PuppyLoops_9_markdown_instruction: |-
+        Görünüşe bakılırsa kod içindeki C ters çizilmiş. \r
+        \r
+        Tekrar C gibi görünmesini sağlayabilir misin?
       grade2_puppy_loops2_markdown_instruction: |2
         Aniden, büyülü bir blok göründü!  'Tekrarla' bloğu ile içindeki kodu tekrar tekrar çalıştırabilirsiniz. \r
          \r 'Tekrarla' bloğu içine sadece bir 'İlerle' bloğu koyarak domuza ulaşabilir misin?
@@ -7686,7 +7881,7 @@ tr:
       grade3_ConditionalsElse_4_markdown_instruction: "Bazen bulut çiçeği saklar bazen de peteği. \\r\n\\r\n'Eğer/değilse' bloğu kullanarak çiçek ise nektar al, \\r\ndeğilse bal yap(çünkü bu durumda petektir)."
       grade3_ConditionalsElse_5_markdown_instruction: |-
         Bulutların altında çiçek yada petek olabilir. Eğer/değilse bloğu kullan. Eğer çiçek ise polen topla değilse bal yap (çünkü çiçek değilse petektir).
-      grade3_ConditionalsElse_6_markdown_instruction: "Mor çiçeğin ne kadar nektar içerdiğini bilmiyoruz 1, 2 yada 3 olabilir. Burada eğer/değilse bloğu başka bir eğer/değilse bloğu ile beraber kullanılıyor. Çözümü bütün nektarları toplayacak şekilde tamamla."
+      grade3_ConditionalsElse_6_markdown_instruction: "Bu çiçekte ne kadar nektar var emin değilim ama 1, 2 veya 3 nektar olduğunu biliyorum. \\r \\r koşullu blok ('eğer' ve/veya ' Eğer/değilse') kullanarak olduğu kadar nektar al. \\r \\r, Nektar miktarı bulmacayı her çalıştırdığınızda değiştirebilir!"
       grade3_ConditionalsElse_7_markdown_instruction: "Mor çiçeklerde, 2, 3 veya 1 nektar olabilir. \"mor çiçeği kontrol et\" fonksiyonunu kullanarak nektarları toparla."
       grade3_ConditionalsElse_8_markdown_instruction: "`check flower make honey` için fonksiyonu yaz. \\r\n\\r\nFonksiyonun, mor çiçeğin 3,2 ve 1 nektara sahip olup olmadığını kontrol etmeli ve bütün nektarları toplamalı.\\r\nSonra ilerle ve bal yap."
       grade3_ConditionalsElse_9_markdown_instruction: "Değerlendirme: Bu kod yanlıştır. \"Nektar al ya da bal yap\" fonksiyonunu tamamla, sonra tüm nektar ve balı topla. Mor çiçekler 3, 2 veya 1 nektar içerebilir."
@@ -7699,7 +7894,7 @@ tr:
         Öğrendiklerinizi kullanarak tüm nektarı toplayın ve bal yapın.
       grade3_Conditionals_11 BAD_markdown_instruction: "**Değerlendirme:** - Bir 'süresince' döngüsü kullanarak bu çiçekteki tüm nektarları toplayın."
       grade3_Conditionals_11_markdown_instruction: "Her şeyi ortaya koyalım! \\r \\r Öğrendiklerini kullan ve çiçeklerden nektarı topla. Mümkün olduğunca az blok kullan. \\r \n\\r Sonunda bal yapmayı unutma."
-      grade3_Conditionals_12_markdown_instruction: "Bu merdiven basamağı deseni tanıdık gelmiş olmalı.\\r\n\\r\nEn az sayıda blokla sadece nektar olan çiçeklerden nektar toplayabilir misiniz?"
+      grade3_Conditionals_12_markdown_instruction: "Bu merdiven basamağı deseni tanıdık görünmelidir.  \\r \\r Mümkün olduğunca az blok kullanarak yalnızca  nektar olan çiçeklerden nektar toplayabilir misin?"
       grade3_Conditionals_13_markdown_instruction: "**Değerlendirme:** Tüm nektarları topla.  \\r\nNektarı olmayan mor çiçeklerden nektar toplamamaya dikkat et."
       grade3_Conditionals_2_markdown_instruction: "Tüm şu nektara bak!\\r\n\\r\nEn az sayıda blokla çiçekteki tüm nektarı toplayıp bal yapmama yardım et.  "
       grade3_Conditionals_3_markdown_instruction: "Bu sihirli mor çiçekler değişiyor! \\r \\r Bulmacayı her çalıştırdığında mor çiçeklerde 1 veya 0 nektar olabilir.. Ama kodu çalıştırmadan bilemezsin! \\r \\r Eğer nektar yoksa nektar toplamamalısın. \\r\n 'Eğer' bloğu kullanarak nektar miktarının 1 e eşit olup olmadığını gör."
@@ -7710,10 +7905,7 @@ tr:
         Hataları düzelt ve nektarları topla.
       grade3_Debugging_5_markdown_instruction: "O çiçek lezzetli görünüyor! \\r \\r Tüm nektarı toplamak için hataları düzelt. \\r\nŞimdi çalıştır ve adım tuşlarını beraber kullanabilirsin."
       grade3_Debugging_6_markdown_instruction: |-
-        Ne kadar tatlı bir mücadele!
-        \r
-        \r
-        Tüm balları yapmak ve tüm nektarları toplamak için hata(lar)'ı düzelt.
+        Ne güzel bir meydan okuma!\r \r Hataları düzelt ve nektarları topla.
       grade3_Debugging_9_markdown_instruction: |-
         Burada "sabırlı" olmalısın!\r
         \r
@@ -7733,7 +7925,15 @@ tr:
         Bu çiçekler iştah açıcı! \r
         \r
         En az blokla her çiçekten nektar toplayın.
+      grade3_RunningFarm_10_markdown_instruction: Mısır ve marulların hepsini topla sonra kabakları seç.
+      grade3_RunningFarm_11a_markdown_instruction: Mısır ve marulların hepsini topla sonra kabakları seç.
       grade3_RunningFarm_9_markdown_instruction: Son kez bana yardımcı olabilir? Bu alan üzerinde yabani otları toplamak istiyorum. Sence kaç tane toplayabilirim?
+      grade3_bee_conditionals_new3b_markdown_instruction: |-
+        Her bir noktada ne olduğunu tam olarak bilebildiğinizde bile, şartlılar yardımcı olabilir!\r
+        \r
+        Tüm nektarı toplayın ve balın tamamını yapın.
+      grade3_bee_conditionals_quantum1_markdown_instruction: |-
+        * "Bu bulut görüşümü engelliyor!" * \r \r bir çiçek bulut altında olup olmadığını kontrol edin. Eğer çiçek ise, nektar al.
       grade3_bee_conditionals_quantum2_markdown_instruction: "Yine bulutlar. Bütün bulutlar çiçek içermez. Nektar almadan önce çiçekmi diye kontrol et. "
       grade3_maze_Loop1_markdown_instruction: "**Değerlendirme:** Beni ayçiçeğine sadece 5 blok kullanarak götür! "
       grade3_maze_loops2_markdown_instruction: 'Beni ayçiçeğine götür!'
@@ -7743,24 +7943,35 @@ tr:
       grade3_maze_nestedLoops3_markdown_instruction: Domuza ulaştır. Sadece bir adet 'İlerle' bloğu kullanabilirsin
       grade3_maze_nestedLoops4_markdown_instruction: Domuza ulaşmak için daha az blok kullanarak iki döngü kullanın.
       grade4_arist_nested_loop_circles1_markdown_instruction: "Değerlendirme: Tasarımı tamamlamak için iç içe döngüler kullan."
+      grade4_arist_nested_loop_flags1_markdown_instruction: Bir yel değirmeni oluşturmak için verilen kodu döngü içinde kullan.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "Bu kodu 10 defa döngüye koyun. Her seferinde ne kadar dönmen gerektiğini buldun mu?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Bu kodu 6 defa döngüye koyun. Her seferinde ne kadar dönmen gerektiğini buldun mu? "
       grade4_arist_nested_loop_squares1_markdown_instruction: "İç içe döngü kullanarak 10 kareyi tamamlayın. Her bir kare 30 pikseldir."
       grade4_arist_nested_loop_triangles2_markdown_instruction: "Bu döngüyü başka bir döngü içine koyarak 10 üçgen çizin. Buna iç içe döngü denir.  "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Üçgen kodunu döngüde kullanarak altıgen çizebilir misin?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Timsahın ağzına dişleri çiz!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Verilen kodu başka bir döngü içine koyarak bir güneş oluştur. Bu güzel şekli oluşturmak için, her dönüşten önce üçgenin kenar uzunluğu kadar ileri atlamalısın.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: İç içe döngü kullanarak 36 tane üçgen çizebilir misin?
       grade4_artist_functions2_markdown_instruction: "Fonksiyonlar yeni bloklar tanımlamanı sağlar! \\r\n\\r\nKare çizmek için gerekli blokları \"Kare çiz\" fonksiyonuna taşıdık. \"Kare çiz\" fonksiyonunu kullanarak gözlükleri çizebilir misin? \\r\n\\r\nKareler birbirlerinden 75 piksel uzaklıktadır."
       grade4_artist_functions_challenge_markdown_instruction: "Meydan Okuma: Önerilen fonksiyonları kullanarak 4 satır altıgen çiz. Çift sayılı satırların sağa kayık olduğuna dikkat edin?"
       grade4_artist_functions_challenge2_markdown_instruction: "Meydan Okuma: Önerilen fonksiyonları kullanarak 4 satır altıgen çiz. Çift sayılı satırların sağa kayık olduğuna dikkat edin?"
       grade4_artist_nestedLoops_challenge_markdown_instruction: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" /> \\r \\r ** oyun zaman: ** İşte ilginç bir şekil için kod.   Birçok kez tekrar edip tekrarlar arsı dönersen ne olur \\r \\r?   \\r \\r 420 derece dönüldüğüne dikkat et, sanatçı bitince çizime başladığından daha farklı bir yöne dönük olacak.  * 60 derece * daha * sağ * yönde. \\r \\r <hr/> \\r \\r <h4>\\r <details>\\r <summary><b>yineleyin 4</b></summary> \\r <br/> tam bir daire içinde sadece 4 tekrar istersen \\r,  ** 360 derece/4 = 90 derece ** her seferinde döneceksin.  Dış döngüye için ilave bir '30 derece sağa dönüş' ekleyin ( ** 60 + 30 = 90 olduğu için**.)  \\r <br/> \\r <img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" /> \\r <br/> <br/> \\r</details> \\r </h4>\\r \\r <h4>\\r <details>\\r <summary><b>tekrar 6</b></summary> \\r <br/>  \\r-6 kez tekrar edince, toplam dönüşü elde ediyoruz ** 6 x 60 derece tam ** ** 360 derece **  dönüş  \\r <img src=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" /> \\r</details> \\r </h4>\\r \\r <h4>\\r <details>\\r <summary><b>tekrar 12</b></summary> \\r <br/> görüntü 12 kez yinelemek istiyorsanız \\r, ** 360 derece/12 = 30 derece ** her yineleme dön.  Sanatçı her seferinde '30 derece sola dön'ile ayarlaman gerekir.   <br/> <br/> \\r <img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" /> \\r</details> \\r </h4>şimdi sıra sende \\r \\r!  Başlangıç şekli tekrar ederek görüntüyü yeniden oluşturabilirsiniz?  "
       grade4_artist_nestedLoops_challenge2_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/> \\r \\r şimdi bir meydan okuma!  \\r \\r burada sadece gösterilmiş olan blokları kullanan bir tasarımdır.  Deneme yanılma kullanmaktan çekinmeyin. \\r \\r tekrarlanan şekilson Bulmaca ile aynı,  İlk döngüde kullanılan uzunluk biraz daha küçük. "
       grade4_artist_nested_loop_circles1_markdown_instruction: "Değerlendirme: Tasarımı tamamlamak için iç içe döngüler kullan."
+      grade4_artist_nested_loop_flags1_markdown_instruction: Bir yel değirmeni oluşturmak için verilen kodu döngü içinde kullan.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "Bu kodu 10 defa döngüye koyun. Her seferinde ne kadar dönmen gerektiğini buldun mu?"
       grade4_artist_nested_loop_squares1_markdown_instruction: "İç içe döngü kullanarak 10 kareyi tamamlayın. Her bir kare 30 pikseldir."
       grade4_artist_nested_loop_triangles1_markdown_instruction: "Bu üçgenleri çizmek için kodu tamamlayın. İlki sizin için yapıldı. İpucu: 3 üçgeni toplam 360 derece dönerek yapılır."
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Verilen kodu başka bir döngü içine koyarak bir güneş oluştur. Bu güzel şekli oluşturmak için, her dönüşten önce üçgenin kenar uzunluğu kadar ileri atlamalısın.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: İç içe döngü kullanarak 36 tane üçgen çizebilir misin?
+      grade4_artist_parameters_squares1_markdown_instruction: "Kare çiz \"draw a square\" fonksiyonunu düzenle ve parametre ekle. Uzunluk \"Length\" parametresi alsın. Bu defa 25, 50 ve 75 piksel uzunluğunda 3 üçgen çiz. Aralarında 100 piksel mesafe olsun."
       grade4_artist_parameters_triangles2_markdown_instruction: Bu fonksiyon bloklarında farklılık gördünüz mü? Çalıştırın ve ne olacağını görün.
+      grade4_artist_parameters_triangles2b_markdown_instruction: "Bu çizimi tamalayabilirmisin? : Üçgenin kenarları bir öncekinden 25 piksel daha uzundur. İlk üçgenin kanarları 25 pikseldir."
+      grade4_artist_parameters_triangles3_markdown_instruction: "Bu çizimi tamalayabilirmisin? : Üçgenin kenarları bir öncekinden 25 piksel daha uzundur. İlk üçgenin kanarları 25 pikseldir."
+      grade4_artist_parameters_triangles4_markdown_instruction: "Bu üçgen çizme fonksiyonu hatalıdır. Bu fonksiyonu düzenleyerek düzeltebilir misin? Sonra kenar uzunluğu 25, 50 ve 75 olan üçgen çizebilir misin?"
+      grade4_artist_parameters_trianglesx_markdown_instruction: "Bu çizimi tamalayabilirmisin? : Üçgenin kenarları bir öncekinden 25 piksel daha uzundur. İlk üçgenin kanarları 25 pikseldir."
       grade4_bee_conditionals_nested_loops_markdown_instruction: "**Değerlendirme:** Tüm nektarları topla.  \\r\nNektarı olmayan mor çiçeklerden nektar toplamamaya dikkat et."
       grade4_bee_conditionals_new1_markdown_instruction: "**Değerlendirme:** Tüm nektarları topla.  \\r\nNektarı olmayan mor çiçeklerden nektar toplamamaya dikkat et."
       grade4_bee_conditionals_quantum1_markdown_instruction: "Bu bulut görüşümü engelliyor! \\r \\r Bulutun altında çiçek olup olmadığını görmek için kontrol edin ve varsa bir nektar alın.   \\r  Dikkat et, değişebilir!"
@@ -7783,6 +7994,7 @@ tr:
       grade4_frozen_square_loop1_markdown_instruction: Merhaba, ben Arendelle'den Anna! Haydi "Tekrarla" bloğunu kullanarak daha az blok kullanarak kare yapalım. Bir kare yapmak için kaç kere (???) "Tekrar" yapmak gerekir?
       grade4_frozen_square_loop2_markdown_instruction: Haydi her birinin ardından dönerek, 3 tane kare oluşturalım. Her bir karenin ardından 120 derece dönmem gerektiğine emin ol.
       grade4_frozen_square_loop3_markdown_instruction: '"Tekrarla" bloğuyla 10 kare çizerek ve her bir karenin arasında "Dönme" bloğuyla 36 derece dönerek bir kar tanesi oluşturabilir misin?'
+      grade4_playlab_freeplay_markdown_instruction: "Serbest Oyun Zamanı!\nAraç kutundaki tüm bloklarla iyi eğlenceler. \\r\n<br/>\\r\n\\r\n<h5>\\r\n<details>\\r\n<summary><b>Bazı fikirlere mi ihtiyacın var?</b></summary>\\r\n\\t<br/>\\r\n\\t<h5>\\r\n\\t\\t<ul>\\r\n        \\t<li><strong>Etiket</strong>\n- Karakter 2 devriye gezsin ve çarpışana kadar karakter 1'in takip etmesi için yön ok tuşlarını kullan.</li>\\r\n            <li><strong>Nesneye Vurma</strong>\n- Karakter rastgele bir konumdan sürekli olarak pat diye çıkar. Nesne kaybolmadan tıklamaya ödül puanları verilir </li>\\r\n            <li><strong>En İyi Tahmin</strong> - Her iki karakteri görünmez yapın, konumu rastgele bir noktaya değiştirin, sonra karakteri tekrar ortaya çıkartın. İlkine tıklayın ve puan alın...  Ama ikinciye tıklarsanız puan KAYBEDERSİNİZ! </li>\\r\n        </ul>\\r\n\\t</h5>\\r\n</details>\\r\n</h5>\\r\n"
       grade4_playlab_test_markdown_instruction: "<h5><b>\\r bizim oyunda nasıl puan verelim? \\r</b></h5> \\r <br/> \\r \\r 1. 1 kedi köpeği  bir parça turta ile  vurursa 1 puan ekleyin.  <br/> <br/> \\r 2. S 'oyuncu 2 dokunur' olayını kullanın. ' puan = puan + 1.' ile puanınızı artırabilirsiniz<br/> <br/> \\r 3. Düzeyi. \\r \\r geçmek için 10 puan al <br/> <br/> \\r <h4>\\r ** Not: ** pasta atmak için sağ ok tuşunu kullanın! \\r</h4>"
       grade4_playlab_test2_markdown_instruction: "Ana karakterin 100 piksel kadar atlaması için Atla olarak adlandırılan fonksiyon burada. \\r \\r programını çalıştırın ve Atla fonksiyonu ile tüm bayrakları topla."
       grade4_review_artist2_markdown_instruction: "Bu evin bir çatıya ihtiyacı var! Üçgeni çizin.  \\r \\r İpucu: tüm üç kenarı aynı uzunlukta. \\r \\r  <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>"
@@ -7791,6 +8003,7 @@ tr:
       grade4_review_bee3_markdown_instruction: |-
         Çalışkan bir arı! \r \r 
         Arının en az sayıda blok ile tüm nektarı toplamasını ve bal yapmasını sağlayın.
+      grade4_scaffolded_project6_markdown_instruction: Bitirdin! Şimdi oyununuzu oynayabilir veya dostlarınızla ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       grade5_artist_binary10_markdown_instruction: "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\"\nwidth=\"250px\"/>\\r \\r\nSerbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r\n"
       grade5_artist_binary2_markdown_instruction: "Bu fonksiyon 1 ve 0 dan oluşan ikili diziyi alır ve sanatçının bunu soldan sağa ve üstten alta  doğru uygulamasını sağlar. Sanatçı 1 görünce kareyi doldurur ve 0 görünce boş bırakır. \\r\n\\r\nBu kodu çalıştırın ve nasıl bir desen çizdiğini görün."
       grade5_artist_for_loops1_markdown_instruction: 'Bu üçgeni 50 piksel genişliğinde çiz. İpucu: Tekrar bloğu kullan.'
@@ -7798,11 +8011,24 @@ tr:
       grade5_artist_for_loops5_markdown_instruction: |-
         Sadece küçük bir kod değişikliğiyle bu çizimi oluşturmak mümkün. Neyin değişeceğini görebildin mi?
         İpucu: Bir şeyleri çıkartman gerekiyor!
+      grade5_artist_for_loops6_markdown_instruction: |-
+        Bir şekil için, olması gerekenden biraz daha az ya da çok dönersen, bu "neat" efekti oluşturur.\r
+        \r
+        Önceki bölümden birkaç kod dene ama bu kıvrımlı kare sarmalı oluşturmak için 89 derece döndür.
       grade5_artist_for_loops8_markdown_instruction: "Bir önceki aşamada şeklin kenar sayısını kontrol etmek için değişken kullanmıştık. Şimdi aynıo şeyi \"sayaç\" değişkeni ile yapacağız. Bu desen üçgen ile başlıyor ve her seferinde bir kenar daha ekleyerek ongen ile bitiyor. İpucu: 360 bölü kenar sayısı kaç derece dönmen gerektiğini verecektir."
       grade5_artist_for_loops9_markdown_instruction: "Hepsini biraraya koyalım. Kere tekrarla döngüsü ve sayaç kullanarak her seferinde iki fazla kenarı olan şekil çizin. \nBir miktar kod hazır olarak size verildi."
       grade5_artist_for_loopsfreeplay11_markdown_instruction: "<br/><br/>\\r <img\nsrc=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\"\nwidth=\"250px\"/> \\r <br/><br/>\\r\nSerbest ilham zamanı. Bu deseni oluşturmak için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler yapmaya çalış. Yoksa kendi tasarımını yap.\\r."
       grade5_artist_functionparameters10_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/> \\r \\r ** Serbest ilham: ** Şimdi böyle bir model yapmak için bilmeniz gereken her şeyi öğrendin! \\r \\r bu resimden ilham almayı deneyin ve benzer bir şey yapın. Aksi takdirde, kendiniz birşey yaratın. \\r \\r dikkat: 'set Alfa' bloğu kullandım."
+      grade5_artist_functionparameters9a_markdown_instruction: |
+        Sprial kenar fonksiyonunu bitir ve merkezin minimum uzunluğunu sor. \r \r - Kare için minimum merkez 50 piksel \r En uzun tarafında 200 piksel
+        
+      grade5_artist_functionparameters_6_markdown_instruction: |-
+        Harita!  Şimdi bu fonksiyona parametre eklemek için Düzenleye tıkla \r \rtüm şekillerin  kenar sayısını 100 piksel uzunluğundadır.
+      grade5_artist_parameters_squares1_markdown_instruction: "Kare çiz \"draw a square\" fonksiyonunu düzenle ve parametre ekle. Uzunluk \"Length\" parametresi alsın. Bu defa 25, 50 ve 75 piksel uzunluğunda 3 üçgen çiz. Aralarında 100 piksel mesafe olsun."
+      grade5_artist_parameters_squares2a_markdown_instruction: "'Uzunluğu' adında bir parametre için fonksiyonu düzenleyin.  \\r \\r karenin kenarları 25 piksel daha büyük olmalıdır.  İlk karenin 25 piksel kenarları vardır.'?? ' yerine doğru değeri koyun ve resmi çizin."
+      grade5_artist_parameters_triangles2_markdown_instruction: "Bu çizimi tamalayabilirmisin? : Üçgenin kenarları bir öncekinden 25 piksel daha uzundur. İlk üçgenin kanarları 25 pikseldir."
       grade5_artist_parameters_triangles2a_markdown_instruction: Bu fonksiyon bloklarında farklılık gördünüz mü? Çalıştırın ve ne olacağını görün.
+      grade5_artist_parameters_triangles4_markdown_instruction: "Bu üçgen çizme fonksiyonu hatalıdır. Bu fonksiyonu düzenleyerek düzeltebilir misin? Sonra kenar uzunluğu 25, 50 ve 75 olan üçgen çizebilir misin?"
       grade5_artist_variables_freeplay10_markdown_instruction: "** Serbestoyun: ** Bu şeklin kenar sayısını ile değiştirmeyi. Kenar sayisi ne olursa olsun eklin toplam çevre boyutunun ayni kalmasını sağlayabilir misin?\n"
       grade5_artist_variables_freeplay14_markdown_instruction: |-
         Serbest oyun: Kontrol et! Şimdi algoritman bir döngüye daha sokulmuş. Değişkenlerinin değerlerini değiştirerek güzel bir şekil çizmeye çalış..\r
@@ -7820,13 +8046,22 @@ tr:
       grade5_artist_variables_rectangle6_markdown_instruction: Şimdi iki kat geniş kadar uzun bir dikdörtgen yapmak istiyorum. Genişlik "width" değişkeninine 100 atanmış olması gerekiyor. Kodu tamamlayabilmek için matematik bloklarını kullanabilir misin?
       grade5_artist_variables_square7_markdown_instruction: "Düzenli bir poligon çizen bir kod parçası. Kenar \"sides\" değişkenine 4 atanmış. sides değişkenini ve matematik bloklarını kullanarak her bir çokgen de ne kadar döneceğini hesaplayabilir misin?\n\n"
       grade5_artist_variables_triangles2_markdown_instruction: '"İleriye taşı 150" yerine "ileriye taşı" bloğu uzunluk "length" değişkeni kullanıyor. uzunluk "length" değişkenine 150 atayıp bu üçgeni çizebilir misin?'
+      grade5_artist_variables_triangles3_markdown_instruction: "Sayı bloğunu çekerek uzunluğu ayarla \"set length\" ve tekrarla \"repeat_times\" değerlerine değer aktar ve 50 piksel uzunluğunda üçgenler çiz.\n"
+      grade5_bee_for_loops5_markdown_instruction: Şimdi sayaç (counter) kadar ilerlemeliyiz. Sonra sayaç (counter) kadar nektar alalım. Problemi çözmek için "tekrarla" döngüsü kullanabilir misin?
+      grade5_bee_for_loops6_markdown_instruction: Bununla tekrarla "For" döngülerinde geriye doğruda sayabilirsiniz. 5 ten geriye doğru 1 e kadar sayarak nektarları toplayın.
+      grade5_bee_parameters_new3_markdown_instruction: "Fonksiyonu test etme zamanı.\nNektarları toplamamızı kolaylaştırdımı görelim."
+      grade5_bee_parameters_new4_markdown_instruction: "* \"Fonksiyonlarınızın  durumu nasıl?\" * \\r \\r Bazı ayarlamalar yapmanız gerekir  'uzunluğu' parametresi eklemek için \"Düzenle\" seçeneğini tıklatın. Satır farklı uzunlukta olduğunda işe yarayacaktır."
+      grade5_bee_parameters_new8a_markdown_instruction: Bu sarmalı çözmek için yeni fonksiyonu kullanın.
+      grade5_bee_parameters_new9a_markdown_instruction: Bu sarmalı çözmek için yeni fonksiyonu kullanın.
+      grade5_playlab_freeplay_markdown_instruction: "Serbest Oyun Zamanı!\nAraç kutundaki tüm bloklarla iyi eğlenceler. \\r\n<br/>\\r\n\\r\n<h5>\\r\n<details>\\r\n<summary><b>Bazı fikirlere mi ihtiyacın var?</b></summary>\\r\n\\t<br/>\\r\n\\t<h5>\\r\n\\t\\t<ul>\\r\n        \\t<li><strong>Etiket</strong>\n- Karakter 2 devriye gezsin ve çarpışana kadar karakter 1'in takip etmesi için yön ok tuşlarını kullan.</li>\\r\n            <li><strong>Nesneye Vurma</strong>\n- Karakter rastgele bir konumdan sürekli olarak pat diye çıkar. Nesne kaybolmadan tıklamaya ödül puanları verilir </li>\\r\n            <li><strong>En İyi Tahmin</strong> - Her iki karakteri görünmez yapın, konumu rastgele bir noktaya değiştirin, sonra karakteri tekrar ortaya çıkartın. İlkine tıklayın ve puan alın...  Ama ikinciye tıklarsanız puan KAYBEDERSİNİZ! </li>\\r\n        </ul>\\r\n\\t</h5>\\r\n</details>\\r\n</h5>\\r\n"
       grade5_playlab_variables1_markdown_instruction: "Bu sefer kod yazman gerekmiyor. Sadece çalıştır düğmesine bas ve oyunu oyna! Bu oyunda köpek kediden fazla bayrak toplamak istiyor. aşağı tuşu ile köpeği kontrol et. Oyunun bitince bitiş tuşuna bas."
       grade5_playlab_variables10_markdown_instruction: Devriye "patrol" fonksiyonunu düzenle ve oyuncu "actor" parametresi ekle. Böylece her bir oyuncuyu için kullanabiliriz. Oyuncular 1, 2, 3 diye numaralandırılmış.
       grade5_playlab_variables11_markdown_instruction: Devriye "patrol" fonkisyonuna hız "speed" parametresi ekle. "ayarla hız" bloğunu kullanarak penguenin diğerlerinden önce her iki bayrağı almasını sağla.
       grade5_playlab_variables12_markdown_instruction: "Eğlence zamanı. kodu incele ve her bir bloğun ne yaptığına bak. bitirdiğinde ok tuşları ile köpeğin bütün bayrakları toplamasını sağla."
       grade5_playlab_variables13_markdown_instruction: '"aktör zamanında dokunur" bloğunu kullan ve köpeği başka bir oyuncuya dokunursa sol üst köşeye gönder.'
-      grade5_playlab_variables2_markdown_instruction: Önceki oyundaki bulmaca adil değildi. dog_speed değişkeni ile hızı değiştirerek köpeğin kediden fazla bayrak toplamasını sağla. Önce 10 bayrak toplayan kazanır!
-      grade5_playlab_variables3_markdown_instruction: "İşte yeni bir oyun! Bu düzey. \\r \\r herhangi bir değişiklik gerekmez \\r \\r ** Klavuz ** atlamak için yukarı taşımak için sağ ve sol ok tuşları kullanın. Tüm bayrakları topla."
+      grade5_playlab_variables14_markdown_instruction: "Serbest Oyun Zamanı!\nAraç kutundaki tüm bloklarla iyi eğlenceler. \\r\n<br/>\\r\n\\r\n<h5>\\r\n<details>\\r\n<summary><b>Bazı fikirlere mi ihtiyacın var?</b></summary>\\r\n\\t<br/>\\r\n\\t<h5>\\r\n\\t\\t<ul>\\r\n        \\t<li><strong>Etiket</strong>\n- Karakter 2 devriye gezsin ve çarpışana kadar karakter 1'in takip etmesi için yön ok tuşlarını kullan.</li>\\r\n            <li><strong>Nesneye Vurma</strong>\n- Karakter rastgele bir konumdan sürekli olarak pat diye çıkar. Nesne kaybolmadan tıklamaya ödül puanları verilir </li>\\r\n            <li><strong>En İyi Tahmin</strong> - Her iki karakteri görünmez yapın, konumu rastgele bir noktaya değiştirin, sonra karakteri tekrar ortaya çıkartın. İlkine tıklayın ve puan alın...  Ama ikinciye tıklarsanız puan KAYBEDERSİNİZ! </li>\\r\n        </ul>\\r\n\\t</h5>\\r\n</details>\\r\n</h5>\\r\n"
+      grade5_playlab_variables2_markdown_instruction: Son bulmacadaki yarış pek adil değildi. Kediden daha fazla bayrak topladığından emin olmak için 'köpel_hızı' değişkenini değiştirin. 10 bayrağı ilk toplayan kazanır!
+      grade5_playlab_variables3_markdown_instruction: "İşte yeni bir tür oyun!\\r\n\\r\nBu düzeyde bir şey değiştirmenize gerek yoktur.\\r\n\\r\n**Talimatlar:** \nTaşımak için sol ve sağ okları ve atlamak için yukarı oku kullanın. Bütün bayrakları toplayıp toplamayacağınıza bakın."
       grade5_playlab_variables4_markdown_instruction: "Height yükseklik değişkeni köpeğin ne kadar zıplayacağını kontrol ediyor. Bu değişkeni güncelleyerek köpeğin bayrağa ulaşmasını sağla."
       grade5_playlab_variables71_markdown_instruction: "Önceki aşamadaki oyunumuz fakat kodlar saklanmış. Puan al \"score points\" fonksiyonu yeni.\nFonksiyonu düzenle ve puan \"points\" parametresi ekle ve oyuncu puanı \"player_Score\" değişkenine eklensin. player_score değişkeni köpek kediye pasta verdiğinde artsın fakat kedi köpeğe  sandviç verdiğinde azalsın.\nNot: Çalıştır tuşuna bas ve oyna, köpek 6 puan kazandığında sonraki seviyeye geçebilrisin. "
       grade5_playlab_variables81_markdown_instruction: |-
@@ -7837,8 +8072,8 @@ tr:
       grade5_playlab_variables_freeplay_markdown_instruction: "Serbest Oyun zamanı! Bu aşamada kullandığın bütün değişkenler ve birkaç tane exta burada.  \n\\r\n\\r\nAraç kutunda organize etmen gereken çok fazla blok var!  \nHer bir parçayı ilgili kategori içine koyduk. biraz dikkatini verip herşeyi keşvet. İncelemeyi bitirince tekrarla, değişkenler ve olaylar kullanarak hikayeni oluştur.\nİpucu: Çalışma alanındaki tüm komutları görmek için kaydır."
       iceage_click_hello_markdown_instruction: "Sid' e tıkladığında, arkadaşlarına seslenmesine yardımcı olur musun?  \\r\n\\r\nTamamladığında, oynamak için \"Çalıştır\" a bas.  Kodun çalıştığını görmek için Sid' e tıkla!"
       iceage_click_hello_2018_markdown_instruction: "Sid' e tıkladığında, arkadaşlarına seslenmesine yardımcı olur musun?  \\r\n\\r\nTamamladığında, oynamak için \"Çalıştır\" a bas.  Kodun çalıştığını görmek için Sid' e tıkla!"
-      iceage_free_play_markdown_instruction: "Kendi oyununu veya hikayeni oluşturma zamanı!  \\r\n\\r\nBitirdiğinde, arkadaşlarının telefon, tablet veya bilgisayarlarında oyununu denemeleri için 'Bitir' e tıklayın!\\r\nNe yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıklayın."
-      iceage_free_play_2018_markdown_instruction: "Kendi oyununu veya hikayeni oluşturma zamanı!  \\r\n\\r\nBitirdiğinde, arkadaşlarının telefon, tablet veya bilgisayarlarında oyununu denemeleri için 'Bitir' e tıklayın!\\r\nNe yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıklayın."
+      iceage_free_play_markdown_instruction: "Kendi oyununu ya da hikayeni yaratma zamanı!  \\r\n\\r\nTamamladığın zaman, arkadaşlarının kendi telefon, tablet ya da bilgisayarlarında oyununu denemelerine izin vermek için \"Bitir\" butonuna tıkla!\\r\nNe yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıkla."
+      iceage_free_play_2018_markdown_instruction: "Kendi oyununu ya da hikayeni yaratma zamanı!  \\r\n\\r\nTamamladığın zaman, arkadaşlarının kendi telefon, tablet ya da bilgisayarlarında oyununu denemelerine izin vermek için \"Bitir\" butonuna tıkla!\\r\nNe yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıkla."
       iceage_free_playcourseF_IceAge_11_markdown_instruction: "Kendi oyununu ya da hikayeni yaratma zamanı!  \\r\n\\r\nTamamladığın zaman, arkadaşlarının kendi telefon, tablet ya da bilgisayarlarında oyununu denemelerine izin vermek için \"Bitir\" butonuna tıkla!\\r\nNe yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıkla."
       iceage_hello1_markdown_instruction: "Sid (1. aktör) herkesi yeni bir macera için bir araya getirmek istiyor. 'söyle' bloğunu sürükleyip 'çalıştığında' olayının altına bağlayarak Sid'in \"Merhaba!\" demesine yardımcı olabilir misiniz? \\r\n\\r\nİçine \n\"Merhaba!\" yazmayı unutmayın!"
       iceage_hello1_2018_markdown_instruction: "Sid (1. aktör) herkesi yeni bir macera için bir araya getirmek istiyor. 'söyle' bloğunu sürükleyip 'çalıştığında' olayının altına bağlayarak Sid'in \"Merhaba!\" demesine yardımcı olabilir misiniz? \\r\n\\r\nİçine \n\"Merhaba!\" yazmayı unutmayın!"
@@ -7903,6 +8138,8 @@ tr:
         - Her basamak 50 piksel uzunluğunda ve 50 
         piksel yüksekliğindedir
         - Her yönde 90 derece dönmeniz gerekecek
+      ramp_artist_loops7_markdown_instruction: Tekrarlayan deseni bulun ve kodu daha kısa yapın!
+      ramp_artist_loops7_2018_markdown_instruction: Tekrarlayan deseni bulun ve kodu daha kısa yapın!
       ramp_artist_loops9_markdown_instruction: Bu bulmacayı 200 piksel kenarlı bir kare çizerek çözün.
       ramp_artist_loops9_2018_markdown_instruction: Bu bulmacayı 200 piksel kenarlı bir kare çizerek çözün.
       u3-old-drawing-view_markdown_instruction: |

@@ -1,2 +1,7 @@
 ---
-mt: 
+mt:
+  data:
+    level:
+      instructions:
+        maze_2_18: Ezempju iehor tal-blokka "if-else", jirnexxilek taghmila ma l'ewwel
+          darba?

@@ -324,7 +324,7 @@ hy:
     more: 'More'
     feedback: 'ապահովել հետադարձ կապը'
     translate: 'Օգնեք մեզ թարգմանել Ձեր լեզվով'
-    support: 'աջակցություն'
+    support: 'Help and Community'
     tos_short: 'Պայմաններ'
     tos: 'Ծառայությունների մատուցման պայմաններ'
     privacy: 'Գաղտնիության քաղաքականություն'
@@ -421,7 +421,7 @@ hy:
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
     minecraft:
       title: "Minecraft"
-      body: "Հետազոտել է Minecraft աշխարհը կոդը:"
+      body: "Explore a Minecraft world through code"
     minecraft2016:
       title: "Minecraft"
     hero:
@@ -523,15 +523,7 @@ hy:
     save: "Save"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Այլ"
-      - 
+      other: "Այլ"
     submit: "Հաստատել"
     decline: "փակել"
   zendesk_too_young_message: 'Ներեցեք, երիտասարդ օգտագործողները չեն կարող մուտք գործել մեր աջակցության կայքում. Դուք կարող եք թերթել <a href=http://support.code.org> support.code.org </a> առանց մուտք գործելու, կամ խնդրեք ձեր ծնողի կամ մանկավարժի կապնվել մեզ հետ է ձեզ համար.'
