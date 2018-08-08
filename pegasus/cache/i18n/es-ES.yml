@@ -415,7 +415,7 @@ es-ES:
   homepage_slot_text_link_hoc: Prueba la Hora del Código
   homepage_slot_text_link_about_hoc: Sobre la Hora del Código
   homepage_slot_text_link_host: Sea anfitrión de una hora de código
-  homepage_slot_text_link_hocserved: "# servidor"
+  homepage_slot_text_link_hocserved: "# servido"
   homepage_solot_text_link_volunteer: Hazte voluntario para la Hora de Code
   homepage_slot_text_title_students: Alumnos
   homepage_slot_text_blurb_students: Explora todos nuestros instructivos
@@ -521,8 +521,8 @@ es-ES:
   minecraft_tutorials: Tutoriales de Minecraft Hora del Código
   minecraft_specs: Muchos idiomas| Navegadores y tabletas modernos | Grados 2+
   minecraft_agent_button: Inicio
-  minecraft_designer_description: Construye tu propia versión de Minecraft. Crea tus
-    propias versiones de las gallinas, ovejas, Creepers, zombis y más.
+  minecraft_designer_description: Construye un juego de Minecraft. Crea tus propias
+    versiones de las gallinas, ovejas, Creepers, zombis y más.
   minecraft_designer_button: Inicio
   minecraft_adventurer_description: Utiliza código para guiar a Alex o a Steve en
     una aventura.
@@ -987,7 +987,7 @@ es-ES:
     en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Restablecer
     secreto</b>. Se generará una nueva imagen secreta para que ese estudiante pueda
     registrarse.
-  dashboard_students_secret_word_title: Palabra secreta
+  dashboard_students_secret_word_title: Palabras secretas
   dashboard_students_secret_word: Esta sección utiliza <b>imágenes</b> como tipo de
     letra secreto. Esto significa que cada uno de tus alumnos tiene una imagen secreta
     que utiliza en vez de una contraseña para iniciar la sesión. Los alumnos deben
@@ -1210,7 +1210,7 @@ es-ES:
   robomindnl_name: Programá tu robot virtual
   flappy_name: Crea un juego Flappy
   bitsbox_name: Bitsbox - crea un juego
-  makeschool_name: "¡Desarrolla un juego para iPhone en tu navegador!"
+  makeschool_name: "¡Crea un juego para iPhone en tu navegador!"
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor en la Hora de Code
   blockly_name: Blockly
@@ -1282,6 +1282,13 @@ es-ES:
   cspexam1-mWU7ilDYM9_name: Parte del test 1 - 25 preguntas
   cspexam2-AKwgAh1ac5_name: Parte del test 2 - 25 preguntas
   cspunit3_gradelevel: Grados 9-12
+  cspunit3_shortdescription_congrats: "Esta unidad presenta los conceptos fundamentales
+    de la programación informática, que desbloquea la capacidad de crear aplicaciones
+    ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación
+    y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos
+    aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r\n\r\nEsta
+    unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información
+    sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
   20-hour_name: Curso acelerado
   algebra_name: CS en Álgebra
   AlgebraA_name: CS en Álgebra Curso A
@@ -1303,7 +1310,7 @@ es-ES:
   applab_name: Laboratorio de Aplicaciones
   gamelab_name: Laboratorio de juego
   basketball_name: Crear un juego de baloncesto
-  sports_name: Crea tu propio Juego de deportes
+  sports_name: Programa tu propio juego de deporte
   applab_gradelevel: Edad 13+
   applab_shortdescription_congrats: App Lab es un entorno de programación en el que
     puedes hacer aplicaciones simples. Diseña una aplicación, codifícala con bloques
@@ -1336,7 +1343,7 @@ es-ES:
   kodable_gradelevel: Escuela primaria
   tynkerapp_gradelevel: Edad 5-13
   robomindnl_gradelevel: Edad 8-13
-  flappy_gradelevel: Edad 4-104
+  flappy_gradelevel: Mayores de 6 años
   bitsbox_gradelevel: Escuela primaria
   makeschool_gradelevel: Preparatoria
   touchdevelop_gradelevel: Preparatoria
@@ -1346,7 +1353,7 @@ es-ES:
   kodableunplugged_gradelevel: Edad 8-13
   projguts_gradelevel: Edad 10-13
   hourofcode_gradelevel: Edad 4-104
-  frozen_gradelevel: Edad 8+
+  frozen_gradelevel: Edad 4-104
   starwars_gradelevel: Mayores de 6 años
   playlab_gradelevel: Edad 4-104
   infinity_gradelevel: Edad 4-104
@@ -1448,7 +1455,7 @@ es-ES:
     procedimientos y bucles!"
   thinkersmith_shortdescription: Tutorial sin conexión para un grupo sin dispositivos
   condcards_shortdescription: Aprende algoritmos con una baraja de cartas
-  lightbotintl_shortdescription: Un juego para aprender conceptos de programación
+  lightbotintl_shortdescription: Un juego para enseñar conceptos de programación
   codehs_shortdescription: "¡Comienza a codificar con Karel el perro, una introducción
     divertida y visual a la programación!"
   codecademy_shortdescription: Aprende programación en JavaScript en un navegador
@@ -1726,12 +1733,12 @@ es-ES:
   appinventor_beyond_name: AppInventor en la Hora del Código
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Aprende a programar con Karel, el perro
-  udemy_beyond_name: Cursos de programación en línea
+  udemy_beyond_name: Cursos de programación online
   lynda_beyond_name: Cursos de programación online
   edx_beyond_name: Curso "CS50" de Harvard
   coursera_beyond_name: Curso Standford CS 101
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: Cursos universitarios en línea
+  teachingtree_beyond_name: Cursos de universidades en línea
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -1793,7 +1800,7 @@ es-ES:
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Aplicación móvil
   groklearning_beyond_platformtext: Navegadores modernos
-  hacketyhack_beyond_platformtext: Instalación en computadora de escritorio
+  hacketyhack_beyond_platformtext: Instalación en computadora
   robomind_beyond_platformtext: Navegador moderno, versión móvil
   makeschool_beyond_platformtext: Navegadores modernos
   appinventor_beyond_platformtext: Navegador moderno + Android
@@ -1802,7 +1809,7 @@ es-ES:
   codehs_beyond_platformtext: Navegadores modernos ($$ requerido)
   udemy_beyond_platformtext: Para la web
   lynda_beyond_platformtext: Basado en la web (requiere $$)
-  edx_beyond_platformtext: Navegadores modernos
+  edx_beyond_platformtext: Cualquier navegador moderno
   coursera_beyond_platformtext: Cualquier navegador moderno
   udacity_beyond_platformtext: Cualquier navegador moderno
   teachingtree_beyond_platformtext: Para la web

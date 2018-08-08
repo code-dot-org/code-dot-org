@@ -341,12 +341,12 @@ el-GR:
   studiobar_flappy_body: Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy
   studiobar_teacher_title: Φτιαγμένο για εκπαιδευτικούς
   studiobar_teacher_body: Εισάγετε το Στούντιο Κώδικα (Code Studio) στην τάξη σας
-  studiobar_frozen_title: Ώρα του Κώδικα
+  studiobar_frozen_title: Η Ώρα του Κώδικα
   studiobar_frozen_body: Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με την Άννα
     και την Έλσα
   studiobar_donate_title: Κάντε μια δωρεά
   studiobar_donate_body: Ένα παιδί μαθαίνει για κάθε δολάριο που δίνετε
-  studiobar_shop_title: Ηλεκτρονικό Κατάστημα
+  studiobar_shop_title: Κατάστημα
   studiobar_shop_body: Σπάστε τα στερεότυπα. Φορέστε  το λογότυπο μας με υπερηφάνεια.
   homepage_stats_students: των μαθητών στις ΗΠΑ έχουν λογαριασμό στο Code.org
   homepage_stats_female: των μαθητών μας είναι γυναίκες
@@ -453,6 +453,9 @@ el-GR:
   homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
   homepage_donors_seall: Εμφάνιση όλων
   homepage_donors_donate: Κάντε μια δωρεά
+  homepage_below_hero_announcement_text: Νοιαζόμαστε για την ιδιωτικότητά σας και
+    κάνουμε κάποιες ενημερώσεις στην πολιτική απορρήτου μας, που θα τεθούν σε ισχύ
+    από τις 25 Μαΐου.
   homepage_below_hero_announcement_link_text: Μάθετε περισσότερα
   contact_form_topic_student: Είμαι μαθητής
   contact_form_topic_parent: Είμαι γονέας
@@ -516,8 +519,8 @@ el-GR:
     κινητά, ταμπλέτες | Ηλικίες 6-10
   starwars_platform_text: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   mc_name: Η Ώρα του Κώδικα με το Minecraft
-  mc_longdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή την Άλεξ
-    σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
+  mc_longdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την
+    Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
   mc_shortdescription: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Στιβ ή τον
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
   mc_gradelevel: Ηλικίες 6+
@@ -530,6 +533,8 @@ el-GR:
   minecraft_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets |
     Ηλικίες 2+
   minecraft_agent_button: Έναρξη
+  minecraft_designer_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft
+    στην δικιά σου έκδοση του Minecraft.
   minecraft_designer_button: Έναρξη
   minecraft_adventurer_description: Χρησιμοποιήστε κώδικα για να οδηγήσετε τον Alex
     ή τον Steve σε μια περιπέτεια.
@@ -1132,7 +1137,7 @@ el-GR:
   starwarsblocks_name: Πόλεμος τον Άστρων (μπλοκ)
   hoc-encryption_name: Απλή Κρυπτογράφηση
   math_category_name: Μαθηματικά
-  hoc_category_name: Ώρα του Κώδικα
+  hoc_category_name: Η Ώρα του Κώδικα
   csf_category_name: Βασικές αρχές της Επιστήμης των Υπολογιστών
   csf_international_category_name: Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών
   csf2_draft_category_name: 'Υπό ανάπτυξη: Μαθήματα A - F'
@@ -1160,7 +1165,7 @@ el-GR:
   scratch_gradelevel: Ηλικίες 8 +
   lightbot_gradelevel: Όλων των ηλικιών
   thinkersmith_gradelevel: Όλων των ηλικιών
-  condcards_gradelevel: Ηλικίες 8-12
+  condcards_gradelevel: Τάξεις Γ' Γυμνασίου +
   lightbotintl_gradelevel: Όλων των ηλικιών
   codehs_gradelevel: Λύκειο
   codecademy_gradelevel: Λύκειο
@@ -1175,7 +1180,7 @@ el-GR:
   kodable_gradelevel: Δημοτικό
   tynkerapp_gradelevel: Ηλικίες 5-13
   robomindnl_gradelevel: Ηλικίες 8-13
-  flappy_gradelevel: Ηλικίες 4-104
+  flappy_gradelevel: Ηλικίες 6+
   bitsbox_gradelevel: Δημοτικό
   makeschool_gradelevel: Λύκειο
   touchdevelop_gradelevel: Λύκειο
@@ -1185,7 +1190,7 @@ el-GR:
   kodableunplugged_gradelevel: Ηλικίες 8-13
   projguts_gradelevel: Ηλικίες 10-13
   hourofcode_gradelevel: Ηλικίες 4-104
-  frozen_gradelevel: Ηλικίες 8 +
+  frozen_gradelevel: Ηλικίες 4-104
   starwars_gradelevel: Ηλικίες 6+
   playlab_gradelevel: Ηλικίες 4-104
   infinity_gradelevel: Ηλικίες 4-104
@@ -1209,15 +1214,15 @@ el-GR:
   coursea-2017_gradelevel: Τάξεις Ε' Δημοτικού +
   coursec-2017_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2017_gradelevel: Τάξεις Β' Γυμνασίου +
-  coursee-2017_gradelevel: Ηλικίες 8-12
+  coursee-2017_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2017_gradelevel: Τάξεις Α' Λυκείου +
   coursea-2018_gradelevel: Τάξεις Ε' Δημοτικού +
   coursec-2018_gradelevel: Τάξεις Α' Γυμνασίου +
   coursed-2018_gradelevel: Τάξεις Β' Γυμνασίου +
-  coursee-2018_gradelevel: Ηλικίες 8-12
+  coursee-2018_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2018_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
-  codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
+  codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   thinkersmithspanish_platformtext: Χωρίς σύνδεση
   khan_platformtext: Σύγρονα Προγράμματα περιήγησης
@@ -1267,7 +1272,7 @@ el-GR:
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Σύγρονα Προγράμματα περιήγησης
   texasinstruments_platformtext: Αριθμομηχανές ΤΙ
-  teacherled_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
+  teacherled_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   codeorg_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και τα
     Θυμωμένα Πουλιά!
   codeintl_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και τα
@@ -1584,7 +1589,7 @@ el-GR:
   lynda_beyond_name: Μαθήματα Προγραμματισμού σε σύνδεση
   edx_beyond_name: Χάρβαρντ κατηγορία CS50
   coursera_beyond_name: Στάνφορντ κατηγορία CS 101
-  teachingtree_beyond_name: Πανεπιστημιακά μαθήματα διαθέσιμα online
+  teachingtree_beyond_name: Μαθήματα Πανεπιστημίων σε σύνδεση
   w3schools_beyond_name: Μάθετε HTML
   codeavengers_beyond_name: Μάθετε γράφετε Κώδικα για Ιστοσελίδες
   codecombat_beyond_name: CodeCombat - Μονομαχία Κώδικα
@@ -1904,7 +1909,7 @@ el-GR:
   flappy_shortcode: Φτερούγισε
   header_courses: Τες
   header_project_gallery: Έργα
-  header_educate_hoc: Ώρα του Κώδικα
+  header_educate_hoc: Η Ώρα του Κώδικα
   header_help_support: 'Βοήθεια και υποστήριξη '
   csp_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
   user_header_label: Γεια σου %{username}
