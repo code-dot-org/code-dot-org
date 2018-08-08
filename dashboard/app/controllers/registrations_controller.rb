@@ -386,12 +386,10 @@ class RegistrationsController < Devise::RegistrationsController
     users = []
     if user.teacher?
       user.students.uniq.each do |student|
-        if student.depends_on_teacher_for_login?
-          users << {id: student.id, name: student.name}
-        end
+        users << student.summarize if student.depends_on_teacher_for_login?
       end
     end
-    users << {id: user.id, name: user.name}
+    users << user.summarize
     users
   end
 
