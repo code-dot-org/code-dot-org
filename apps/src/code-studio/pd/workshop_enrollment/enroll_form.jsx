@@ -2,18 +2,16 @@
  * Form to create a workshop enrollment
  */
 import React, {PropTypes} from 'react';
-import {FormGroup, Button, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap';
+import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
-import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import CustomSchoolInfo from '../components/customSchoolInfo';
+import {isEmail} from '@cdo/apps/util/formatValidation';
+import AutocompleteSchoolDropdownWithOtherFields from '../components/autocompleteSchoolDropdownWithOtherFields';
 import {
   TEACHING_ROLES,
   ROLES,
   GRADES_TEACHING,
-  OTHER_SCHOOL_VALUE,
   CSF,
   SCHOOL_TYPES_MAPPING,
   ERROR,
@@ -36,15 +34,11 @@ export default class EnrollForm extends React.Component {
     super(props);
 
     let initialState = {
-      school_id: null,
       errors: {}
     };
 
     if (this.props.email) {
-      initialState = Object.assign(initialState, {
-        first_name: this.props.first_name,
-        email: this.props.email
-      });
+      initialState = {...initialState, ...{first_name: this.props.first_name, email: this.props.email}};
     }
 
     this.state = initialState;
@@ -54,51 +48,12 @@ export default class EnrollForm extends React.Component {
     this.setState(change);
   };
 
-  handleSchoolStateChange = (selection) => {
-    let school_info = this.state.school_info;
-    school_info.school_state = selection.value;
-    this.setState({school_info: school_info});
-  };
-
-  handleSchoolInfoChange = (change) => {
-    let school_info = Object.assign(this.state.school_info, change);
-    this.setState({school_info: school_info});
-  };
-
-  handleSchoolDistrictChange = (change) => {
-    let school_info = Object.assign(this.state.school_info, change);
-    school_info.school_district_other = "true";
-    this.setState({school_info: school_info});
-  };
-
-  handleSchoolTypeChange = (change) => {
-    let school_info = Object.assign(this.state.school_info, change);
-    delete(school_info.school_district_other);
-    delete(school_info.school_district_name);
-    this.setState({school_info: school_info});
+  onSchoolInfoChange = (school_info) => {
+    this.setState(school_info);
   };
 
   handleRoleChange = (selection) => {
     this.setState({role: selection.value});
-  };
-
-  handleSchoolChange = (selection) => {
-    this.setState({school_id: selection && selection.value});
-    if (selection && selection.value !== OTHER_SCHOOL_VALUE) {
-      this.setState({
-        school_info: {
-          school_id: selection.school.nces_id,
-          school_name: selection.school.name,
-          school_state: selection.school.state,
-          school_zip: selection.school.zip,
-          school_type: selection.school.school_type
-        }
-      });
-    } else {
-      this.setState({
-        school_info: {}
-      });
-    }
   };
 
   handleNotTeachingChange = (input) => {
@@ -119,7 +74,7 @@ export default class EnrollForm extends React.Component {
     if (!this.state.grades_teaching) {
       return null;
     }
-    let processedGrades = [];
+    const processedGrades = [];
     this.state.grades_teaching.forEach((g) => {
       if (g === `${OTHER} ${EXPLAIN}`) {
         if (this.state.explain_teaching_other) {
@@ -141,7 +96,7 @@ export default class EnrollForm extends React.Component {
   }
 
   schoolType() {
-    if (this.state.school_id === OTHER_SCHOOL_VALUE) {
+    if (!this.state.school_info.school_id) {
       return SCHOOL_TYPES_MAPPING[this.state.school_info.school_type];
     } else {
       return this.state.school_info.school_type;
@@ -149,7 +104,7 @@ export default class EnrollForm extends React.Component {
   }
 
   submit() {
-    let params = {
+    const params = {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
@@ -180,14 +135,15 @@ export default class EnrollForm extends React.Component {
 
   validateRequiredFields() {
     let errors = this.getErrors();
-    let missingRequiredFields = this.getMissingRequiredFields();
+    const missingRequiredFields = this.getMissingRequiredFields();
 
     if (missingRequiredFields.length || Object.keys(errors).length) {
       let requiredFieldsErrors = {};
       missingRequiredFields.forEach((f) => {
         requiredFieldsErrors[f] = '';
       });
-      errors = Object.assign(errors, requiredFieldsErrors);
+      errors = {...errors, ...requiredFieldsErrors};
+      errors = {...errors, ...(AutocompleteSchoolDropdownWithOtherFields.getSchoolInfoErrors(this.state.school_info))};
       this.setState({errors: errors});
       return false;
     }
@@ -195,13 +151,13 @@ export default class EnrollForm extends React.Component {
   }
 
   render() {
-    let roleLabel = (
+    const roleLabel = (
       <div>
         What grades are you teaching this year? (Select all that apply)<span className="form-required-field"> *</span>
         <p>This workshop is intended for teachers for Grades K-5.</p>
       </div>
     );
-    let gradesTeaching = GRADES_TEACHING.concat([
+    const gradesTeaching = GRADES_TEACHING.concat([
       {
         answerText: `${NOT_TEACHING} ${EXPLAIN}`,
         inputValue: this.state.explain_not_teaching,
@@ -263,40 +219,12 @@ export default class EnrollForm extends React.Component {
             />
           }
         </FormGroup>
-        {this.state.school_id !== OTHER_SCHOOL_VALUE &&
-          <FormGroup
-            id="school_id"
-            validationState={this.state.errors.hasOwnProperty("school_id") ? ERROR : null}
-          >
-            <Row>
-              <Col md={6}>
-                <ControlLabel>
-                  School
-                  <span className="form-required-field"> *</span>
-                </ControlLabel>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={12}>
-                <SchoolAutocompleteDropdown
-                  value={this.state.school_id}
-                  onChange={this.handleSchoolChange}
-                />
-              </Col>
-            </Row>
-            <HelpBlock>{this.state.errors.school_id}</HelpBlock>
-          </FormGroup>
-        }
-        {this.state.school_id && this.state.school_id === OTHER_SCHOOL_VALUE &&
-          <CustomSchoolInfo
-            schoolInfo={this.state.school_info}
-            handleSchoolInfoChange={this.handleSchoolInfoChange}
-            handleSchoolStateChange={this.handleSchoolStateChange}
-            handleSchoolDistrictChange={this.handleSchoolDistrictChange}
-            handleSchoolTypeChange={this.handleSchoolTypeChange}
-            errors={this.state.errors}
-          />
-        }
+        <AutocompleteSchoolDropdownWithOtherFields
+          school_id={this.state.school_info && this.state.school_info.school_id}
+          onSchoolInfoChange={this.onSchoolInfoChange}
+          school_info={this.state.school_info}
+          errors={this.state.errors}
+        />
         {this.props.workshop_course === CSF &&
           <FormGroup
             validationState={this.state.errors.hasOwnProperty("role") ? ERROR : null}
@@ -355,24 +283,10 @@ export default class EnrollForm extends React.Component {
   }
 
   getMissingRequiredFields() {
-    let schoolInfoFields = [
-      'school_name',
-      'school_state',
-      'school_zip',
-      'school_type'
-    ];
-
-    let requiredFields = ['first_name', 'last_name', 'email', 'school_id'];
+    const requiredFields = ['first_name', 'last_name', 'email'];
 
     if (!this.props.email) {
       requiredFields.push('confirm_email');
-    }
-
-    if (this.state.school_id === OTHER_SCHOOL_VALUE) {
-      if (["Public school", "Charter school"].includes(this.state.school_info.school_type)) {
-        schoolInfoFields = schoolInfoFields.concat('school_district_name');
-      }
-      requiredFields = requiredFields.concat(schoolInfoFields);
     }
 
     if (this.props.workshop_course === CSF) {
@@ -383,19 +297,15 @@ export default class EnrollForm extends React.Component {
       requiredFields.push('grades_teaching');
     }
 
-    let missingRequiredFields = requiredFields.filter(f => {
-      if (schoolInfoFields.includes(f)) {
-        return !this.state.school_info[f];
-      } else {
-        return !this.state[f];
-      }
+    const missingRequiredFields = requiredFields.filter(f => {
+      return !this.state[f];
     });
 
     return missingRequiredFields;
   }
 
   getErrors() {
-    let errors = {};
+    const errors = {};
 
     if (this.state.email) {
       if (!isEmail(this.state.email)) {
@@ -403,12 +313,6 @@ export default class EnrollForm extends React.Component {
       }
       if (!this.props.email && this.state.email !== this.state.confirm_email) {
         errors.confirm_email = "Email addresses do not match";
-      }
-    }
-
-    if (this.state.school_info && this.state.school_info.school_zip) {
-      if (!isZipCode(this.state.school_info.school_zip)) {
-        errors.school_zip = "Must be a valid zip code";
       }
     }
 
