@@ -146,6 +146,20 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     refute_includes picked_users, deleted_30_days_ago
   end
 
+  test 'does not locate accounts already queued for manual review' do
+    autodeleteable = create :student, deleted_at: 3.days.ago
+    needs_manual_review = create :student, deleted_at: 3.days.ago
+    create :queued_account_purge, user: needs_manual_review
+
+    picked_users = ExpiredDeletedAccountPurger.new(
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago
+    ).send :expired_soft_deleted_accounts
+
+    assert_includes picked_users, autodeleteable
+    refute_includes picked_users, needs_manual_review
+  end
+
   test 'with two eligible and two ineligible accounts' do
     student_a = create :student, deleted_at: 1.day.ago
     student_b = create :student, deleted_at: 3.days.ago
@@ -188,11 +202,12 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/AccountsPurged", 1)
-    # TODO: Test moved to manual review queue
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
-    edap.purge_expired_deleted_accounts!
+    assert_creates QueuedAccountPurge do
+      edap.purge_expired_deleted_accounts!
+    end
 
     purged = User.with_deleted.where.not(purged_at: nil)
     assert_includes purged, student_a
