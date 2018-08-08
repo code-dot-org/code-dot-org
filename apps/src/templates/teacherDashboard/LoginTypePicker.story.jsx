@@ -46,4 +46,15 @@ export default storybook => storybook
         handleCancel={action('handleCancel')}
       />
     );
+  })
+  .add('With multiple OAuth imports', () => {
+    return (
+      <LoginTypePicker
+        title="New section"
+        providers={["google_classroom", "clever"]}
+        handleImportOpen={action('handleImportOpen')}
+        setLoginType={action('setLoginType')}
+        handleCancel={action('handleCancel')}
+      />
+    );
   });
