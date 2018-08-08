@@ -41,7 +41,7 @@ export default class CustomSchoolInfo extends React.Component {
           required={true}
         />
         {
-          [SCHOOL_TYPES.PUBLIC, SCHOOL_TYPES.CHARTER].includes(this.props.schoolInfo.school_type) &&
+          this.props.schoolInfo && [SCHOOL_TYPES.PUBLIC, SCHOOL_TYPES.CHARTER].includes(this.props.schoolInfo.school_type) &&
           <FieldGroup
             id="school_district_name"
             label="School District"
@@ -53,7 +53,7 @@ export default class CustomSchoolInfo extends React.Component {
           />
         }
         {
-          this.props.schoolInfo.school_type &&
+          this.props.schoolInfo && this.props.schoolInfo.school_type &&
           <FormGroup>
             <FormGroup
               id="school_state"
