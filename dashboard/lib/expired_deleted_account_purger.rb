@@ -52,6 +52,7 @@ class ExpiredDeletedAccountPurger
     start_activity_log
     num_accounts_purged = 0
     check_constraints
+
     account_purger = AccountPurger.new dry_run: @dry_run, log: @log
     expired_soft_deleted_accounts.each do |account|
       account_purger.purge_data_for_account account
@@ -59,6 +60,7 @@ class ExpiredDeletedAccountPurger
     rescue StandardError => err
       QueuedAccountPurge.create user: account, reason_for_review: err.message
     end
+
     if @dry_run
       say "Would have purged #{num_accounts_purged} accounts"
     else
