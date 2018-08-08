@@ -278,7 +278,7 @@ module Pd
 
     test 'facilitator specific survey redirects to next facilitator when response exists' do
       Session.any_instance.expects(:open_for_attendance?).returns(true)
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @enrollment
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
         day: 1, form_id: FAKE_FACILITATOR_FORM_ID, pd_session: @summer_workshop.sessions[0], facilitator: @facilitators[0]
 
@@ -289,7 +289,7 @@ module Pd
 
     test 'last facilitator specific survey redirects to thanks when response exists' do
       Session.any_instance.expects(:open_for_attendance?).returns(true)
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @enrollment
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
         day: 1, form_id: FAKE_FACILITATOR_FORM_ID, pd_session: @summer_workshop.sessions[0], facilitator: @facilitators[1]
 
@@ -300,7 +300,7 @@ module Pd
 
     test 'facilitator specific survey with open session attendance displays embedded JotForm' do
       Session.any_instance.expects(:open_for_attendance?).returns(true)
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @enrollment
+      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
       submit_redirect = facilitator_submit_redirect(day: 1, facilitator_index: 0)
       assert_equal '/pd/workshop_survey/facilitators/submit', URI.parse(submit_redirect).path
@@ -378,9 +378,9 @@ module Pd
     end
 
     test 'post workshop survey renders embedded JotForm' do
-      create :pd_attendance, session: @summer_workshop.sessions[4], teacher: @enrolled_summer_teacher, enrollment: @enrollment
+      create :pd_attendance, session: @summer_workshop.sessions[4], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
-      submit_redirect = general_submit_redirect(day: 5)
+      submit_redirect = general_submit_redirect(day: 5, enrollment_code: @summer_enrollment.code)
       assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
 
       WorkshopDailySurveyController.view_context_class.any_instance.expects(:embed_jotform).with(
@@ -397,7 +397,8 @@ module Pd
           workshopCourse: COURSE_CSP,
           workshopSubject: SUBJECT_TEACHER_CON,
           regionalPartnerName: @regional_partner.name,
-          submitRedirect: submit_redirect
+          submitRedirect: submit_redirect,
+          enrollmentCode: @summer_enrollment.code
         }
       )
 
@@ -449,14 +450,14 @@ module Pd
         'You need to be marked as attended for today’s session of your workshop before you can complete this survey.'
     end
 
-    def general_submit_redirect(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop)
+    def general_submit_redirect(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop, enrollment_code: nil)
       url_for(controller: 'pd/workshop_daily_survey', action: 'submit_general',
-        params: general_submit_redirect_params(day: day, user: user, workshop: workshop)
+        params: general_submit_redirect_params(day: day, user: user, workshop: workshop, enrollment_code: enrollment_code)
       )
     end
 
-    def general_submit_redirect_params(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop)
-      {
+    def general_submit_redirect_params(day:, user: @enrolled_summer_teacher, workshop: @summer_workshop, enrollment_code: nil)
+      params = {
         key: {
           environment: 'test',
           userId: user.id,
@@ -466,6 +467,10 @@ module Pd
           sessionId: day == 0 ? nil : workshop.sessions[day - 1].id
         }
       }
+
+      params[:key][:enrollmentCode] = enrollment_code if enrollment_code
+
+      params
     end
 
     def facilitator_submit_redirect(day:, facilitator_index:)

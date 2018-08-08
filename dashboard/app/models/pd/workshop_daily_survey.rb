@@ -78,7 +78,7 @@ module Pd
     validate :day_for_subject
 
     def self.get_form_id_for_day_and_subject(subject, day)
-      get_form_id CATEGORY_MAP[subject], "day_#{day}"
+      get_form_id CATEGORY_MAP[subject], day.is_a?(Integer) ? "day_#{day}" : day
     end
 
     def self.get_day_for_form_id_and_subject(subject, form_id)

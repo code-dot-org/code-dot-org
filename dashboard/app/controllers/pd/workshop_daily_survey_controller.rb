@@ -7,8 +7,6 @@ module Pd
     # The POST submit route will be redirected to from JotForm, after form submission
     skip_before_action :verify_authenticity_token, only: %w(submit_general submit_facilitator)
 
-    LAST_DAY = 5
-
     # Require login
     authorize_resource class: 'Pd::Enrollment'
 
@@ -24,7 +22,7 @@ module Pd
       day = params[:day].to_i
       return render_404 if day < 0 || day > 4
 
-      workshop = Workshop.
+      workshop = params[:enrollmentCode].present? ? Pd::Enrollment.find!(params[:enrollment_code]).workshop : Workshop.
         where(ended_at: nil, course: [COURSE_CSD, COURSE_CSP]).
         where.not(subject: SUBJECT_FIT).
         nearest_attended_or_enrolled_in_by(current_user)
@@ -36,7 +34,7 @@ module Pd
       if day > 0
         session = workshop.sessions[day - 1]
         return render_404 unless session
-        return render :too_late unless session.open_for_attendance?
+        return render :too_late unless session.open_for_attendance? || day == workshop.sessions.size
 
         return render :no_attendance unless session.attendances.exists?(teacher: current_user)
       end
@@ -92,7 +90,7 @@ module Pd
 
       # Post workshop survey (last day) does not need to be taken while the session is still open,
       # and has less strict attendance requirements.
-      unless day == LAST_DAY
+      unless day == workshop.sessions.size
         return render :too_late unless session.open_for_attendance?
 
         attendance = session.attendances.find_by(teacher: current_user)
@@ -155,20 +153,27 @@ module Pd
     def new_post
       enrollment = Enrollment.find_by!(code: params[:enrollment_code])
       workshop = enrollment.workshop
-      session = workshop.sessions[LAST_DAY - 1]
+      session = workshop.sessions[-1]
+      session_count = workshop.sessions.size
       return render_404 unless session
 
-      return redirect_to :pd_workshop_survey_thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop, day: LAST_DAY)
-      @form_id = WorkshopDailySurvey.get_form_id_for_day_and_subject workshop.subject, LAST_DAY
+      begin
+        @form_id = WorkshopDailySurvey.get_form_id_for_day_and_subject workshop.subject, 'post_workshop'
+      rescue
+        @form_id = WorkshopDailySurvey.get_form_id_for_day_and_subject workshop.subject, session_count
+      end
+
+      return redirect_to :pd_workshop_survey_thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop, form_id: @form_id)
 
       # Pass these params to the form and to the submit redirect to identify unique responses
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
         workshopId: workshop.id,
-        day: LAST_DAY,
+        day: session_count,
         formId: @form_id,
         sessionId: session&.id,
+        enrollmentCode: params[:enrollment_code]
       }
 
       return redirect_general(key_params) if response_exists_general?(key_params)
@@ -203,7 +208,13 @@ module Pd
 
     def redirect_general(key_params)
       session_id = key_params[:sessionId]
-      if session_id.present?
+      enrollment_code = key_params[:enrollmentCode]
+      workshop = Pd::Workshop.find(key_params[:workshopId])
+
+      if enrollment_code.present? && [SUBJECT_TEACHER_CON, SUBJECT_SUMMER_WORKSHOP].exclude?(workshop.subject)
+        # This is the post survey. Redirect to the agenda survey for the last day
+        redirect_to action: :new_general, day: workshop.sessions.size, enrollment_code: enrollment_code
+      elsif session_id.present?
         redirect_to action: :new_facilitator, session_id: session_id, facilitator_index: 0
       else
         redirect_to action: :thanks
