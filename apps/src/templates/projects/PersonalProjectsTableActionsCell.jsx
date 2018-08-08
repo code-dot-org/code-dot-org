@@ -64,7 +64,7 @@ class PersonalProjectsTableActionsCell extends Component {
   };
 
   onRemix = () => {
-    this.props.remix(this.props.projectId);
+    this.props.remix(this.props.projectId, this.props.projectType);
   };
 
   render() {
@@ -149,7 +149,7 @@ export default connect(state => ({}), dispatch => ({
   saveProjectName(projectId, updatedName) {
     dispatch(saveProjectName(projectId, updatedName));
   },
-  remix(projectId) {
-    dispatch(remix(projectId));
+  remix(projectId, projectType) {
+    dispatch(remix(projectId, projectType));
   },
 }))(PersonalProjectsTableActionsCell);
