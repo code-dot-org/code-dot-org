@@ -1,0 +1,26 @@
+//CS in A stuff
+.field
+  = f.label :use_contract_editor, 'Use MSM contract editor'
+  = boolean_check_box f, :use_contract_editor
+.field
+  = f.label :default_num_example_blocks, 'Default # of example blocks in contract editor'
+  = f.number_field :default_num_example_blocks
+.field
+  = f.label :disable_examples, 'Hide examples section in contract editor'
+  = boolean_check_box f, :disable_examples
+.field
+  = f.label :examples_required, 'Each function must have at least 1 example, and examples will be checked when hitting run'
+  = boolean_check_box f, :examples_required
+.field
+  = f.label :open_function_definition, 'Auto-open function definition'
+  = f.text_field :open_function_definition, placeholder: 'name of function to open'
+%table.contract-editor-config
+  %tr
+    %th Section
+    %th Highlight
+    %th Collapse
+  -%w(contract examples definition).each_with_index do |section, i|
+    %tr
+      %td #{i + 1}. #{section.titleize}
+      %td= boolean_check_box f, "#{section}_highlight".to_sym
+      %td= boolean_check_box f, "#{section}_collapse".to_sym
