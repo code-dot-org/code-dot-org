@@ -2,6 +2,7 @@ import React from 'react';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
+import {assetButtonStyles} from "./AssetManager";
 
 const ErrorType = {
   NONE: 'none',
@@ -14,15 +15,7 @@ const styles = {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between',
-  },
-  button: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginRight: 10,
-    borderRadius: 4,
-    fontSize: 'large',
-    fontWeight: 'lighter',
-    boxShadow: 'none',
+    alignItems: 'center'
   }
 };
 
@@ -114,7 +107,7 @@ export default class AudioRecorder extends React.Component {
               <Button
                 onClick={this.toggleRecord}
                 id="start-stop-record"
-                style={styles.button}
+                style={{...assetButtonStyles.button, ...{marginRight: 10}}}
                 color={Button.ButtonColor.blue}
                 icon={this.state.recording ? "stop" : "circle"}
                 text={this.state.recording ? i18n.stop() : i18n.record()}
@@ -123,7 +116,7 @@ export default class AudioRecorder extends React.Component {
               <Button
                 onClick={()=>{}}
                 id="cancel-record"
-                style={styles.button}
+                style={assetButtonStyles.button}
                 color={Button.ButtonColor.gray}
                 text={i18n.cancel()}
                 size="large"
