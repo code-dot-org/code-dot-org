@@ -41,7 +41,15 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
     assert_equal user.hashed_email, log[:hashed_email]
   end
 
-  # TODO: Does not retain hashed email if maually requested by user
+  test 'does not record hashed email if delete was requested manually' do
+    user = create :student
+    refute_nil user.hashed_email
+    log_obj = PurgedAccountLog.new user,
+      reason: PurgedAccountLog::REQUESTED_BY_USER
+    log = YAML.load log_obj.to_yaml
+    assert_nil log[:hashed_email]
+  end
+
   # TODO: Multi-auth handle multiple hashed emails
 
   test 'records Pardot ids' do

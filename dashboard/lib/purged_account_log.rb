@@ -16,7 +16,7 @@ class PurgedAccountLog
     @id = user.id
 
     # to be kept in the 28-day delete case
-    @hashed_email = user.hashed_email
+    @hashed_email = user.hashed_email unless reason == REQUESTED_BY_USER
 
     # These ids _should_ become meaningless since the user is
     # deleted from these systems - but having them here allows
