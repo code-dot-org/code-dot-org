@@ -2085,6 +2085,14 @@ class User < ActiveRecord::Base
     dependent_students
   end
 
+  def providers
+    if migrated?
+      authentication_options.map(&:credential_type)
+    else
+      [provider]
+    end
+  end
+
   private
 
   def hidden_stage_ids(sections)

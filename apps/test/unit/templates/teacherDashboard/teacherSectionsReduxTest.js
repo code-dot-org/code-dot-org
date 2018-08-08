@@ -3,7 +3,8 @@ import { assert, expect } from '../../../util/configuredChai';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 import reducer, {
   __testInterface__,
-  setOAuthProvider,
+  setAuthProviders,
+  setRosterProvider,
   setValidGrades,
   setValidAssignments,
   setSections,
@@ -26,7 +27,6 @@ import reducer, {
   cancelImportRosterFlow,
   importOrUpdateRoster,
   isRosterDialogOpen,
-  oauthProvider,
   sectionCode,
   sectionName,
   sectionProvider,
@@ -238,13 +238,19 @@ describe('teacherSectionsRedux', () => {
 
   const getState = () => store.getState();
 
-  describe('setOAuthProvider', () => {
-    it('sets oauth provider', () => {
-      expect(oauthProvider(getState())).to.be.null;
-      store.dispatch(setOAuthProvider('clever'));
-      expect(oauthProvider(getState())).to.equal('clever');
-      store.dispatch(setOAuthProvider('google_classroom'));
-      expect(oauthProvider(getState())).to.equal('google_classroom');
+  describe('setAuthProviders', () => {
+    it('sets teacher\'s auth providers', () => {
+      const action = setAuthProviders(['google_oauth2', 'clever', 'email', 'windowslive']);
+      const nextState = reducer(initialState, action);
+      assert.deepEqual(nextState.providers, ['google_classroom', 'clever', 'email', 'windowslive']);
+    });
+  });
+
+  describe('setRosterProvider', () => {
+    it('sets section\'s roster provider', () => {
+      const action = setRosterProvider('google_classroom');
+      const nextState = reducer(initialState, action);
+      assert.deepEqual(nextState.rosterProvider, 'google_classroom');
     });
   });
 
@@ -1178,8 +1184,8 @@ describe('teacherSectionsRedux', () => {
 
     const failureResponse = [500, {}, 'test-failure-body'];
 
-    const withGoogle = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.google_classroom));
-    const withClever = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.clever));
+    const withGoogle = () => store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+    const withClever = () => store.dispatch(setRosterProvider(OAuthSectionTypes.clever));
 
     it('throws if no oauth provider has been set', () => {
       return expect(store.dispatch(beginImportRosterFlow()))
@@ -1311,8 +1317,8 @@ describe('teacherSectionsRedux', () => {
       JSON.stringify(body)
     ];
 
-    const withGoogle = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.google_classroom));
-    const withClever = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.clever));
+    const withGoogle = () => store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+    const withClever = () => store.dispatch(setRosterProvider(OAuthSectionTypes.clever));
 
     it('immediately clears the classroom list', () => {
       withGoogle();
@@ -1430,7 +1436,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('the sectionProvider selector', () => {
-    beforeEach(() => store.dispatch(setOAuthProvider('google_classroom')));
+    beforeEach(() => store.dispatch(setRosterProvider('google_classroom')));
 
     it('null if the section is not found', () => {
       expect(sectionProvider(getState(), 42)).to.be.null;
