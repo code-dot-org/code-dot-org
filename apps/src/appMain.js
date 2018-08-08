@@ -9,6 +9,7 @@ import * as commonReducers from './redux/commonReducers';
 import codegen from './lib/tools/jsinterpreter/codegen';
 import {installCustomBlocks, appendBlocksByCategory} from '@cdo/apps/block_utils';
 import logToCloud from './logToCloud';
+import xml from './xml';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
@@ -99,6 +100,8 @@ export default function (app, levels, options) {
           level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
         }
       }
+
+      level.toolbox = appendBlocksByCategory(level.toolbox, {Behaviors: xml.parseElement(level.sharedCallers)});
     }
 
     Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();

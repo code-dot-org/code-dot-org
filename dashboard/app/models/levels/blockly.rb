@@ -292,7 +292,10 @@ class Blockly < Level
           default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
         level_prop['sharedBlocks'] = shared_blocks
-        level_prop['sharedFunctions'] = shared_functions if include_shared_functions
+        if include_shared_functions
+          level_prop['sharedFunctions'] = shared_functions
+          level_prop['sharedCallers'] = shared_callers
+        end
       end
 
       if is_a? Applab
@@ -487,6 +490,12 @@ class Blockly < Level
   def shared_functions
     Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
+    end.join
+  end
+
+  def shared_callers
+    Rails.cache.fetch("shared_callers/#{type}", force: !Script.should_cache?) do
+      SharedBlocklyFunction.where(level_type: type).map(&:get_caller_xml_fragment)
     end.join
   end
 end
