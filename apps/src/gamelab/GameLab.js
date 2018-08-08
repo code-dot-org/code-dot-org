@@ -543,7 +543,7 @@ GameLab.prototype.afterInject_ = function (config) {
       'code',
       'validationState',
       'validationResult',
-      'validationProperties',
+      'validationProps',
       'levelSuccess',
       'levelFailure',
     ].join(','));

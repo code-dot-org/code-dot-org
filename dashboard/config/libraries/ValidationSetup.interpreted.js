@@ -10,4 +10,4 @@ function levelFailure(msg) {
   validationResult = msg;
 }
 
-var validationProperites = {};
+var validationProps = {};
