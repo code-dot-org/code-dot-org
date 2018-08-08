@@ -14,4 +14,10 @@ class AccountPurgerTest < ActiveSupport::TestCase
       AccountPurger.new dry_run: 1
     end
   end
+
+  test 'purge_data_for_account does not upload a log when dry-run is enabled' do
+    PurgedAccountLog.any_instance.expects(:upload).never
+    ap = AccountPurger.new dry_run: true
+    ap.purge_data_for_account create(:student)
+  end
 end
