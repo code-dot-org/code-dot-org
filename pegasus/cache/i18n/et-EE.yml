@@ -11,7 +11,7 @@ et-EE:
     Palun võtke kasutusele kaasaegne veebilehitseja.
   upgrade_ie_link: Lisateave
   en: Arvutiteadus
-  computer_science_edweek: Arvutiteaduse hariduse nädal
+  computer_science_edweek: Koodi Tund on siin
   csedweek_dates: '08-14. detsember, 2014'
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Koodi Tund</a> on saabumas. Üleskutse kõigile õpetajatele ja
@@ -55,7 +55,7 @@ et-EE:
   csedweek_map_legend_event: KoodiTunni sündmus
   cded_sign_up: Liitu
   cded_try_it: Proovi seda
-  try_now: Proovi nüüd
+  try_now: Lisateave
   california_heading: Palu oma koolis õpetada arvutiteadust
   california_text: Iga õpetaja saab pakkuda meie <a href='http://studio.code.org/'>tasuta
     kursusi</a>. Iga algkool saab <a href='http://code.org/educate/k5'>õpetada arvutiteadust</a>.
@@ -346,11 +346,11 @@ et-EE:
     | Vanuses 6-106
   starwars_platform_text: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   mc_name: Minecrafti KoodiTund
-  mc_longdescription: Kasuta koodiplokke, et viia Steve või Alex seiklusele selles
-    Minecrafti maailmas.
-  mc_shortdescription: Kasuta koodiplokke, et viia Steve või Alex seiklusele selles
-    Minecrafti maailmas.
-  mc_gradelevel: Vanusele 4-104
+  mc_longdescription: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi
+    selle Minecrafti maailma.
+  mc_shortdescription: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi
+    selle Minecrafti maailma.
+  mc_gradelevel: Vanusele 6+
   mc_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
   mc_specs: Palju keeli | Kaasaegsed brauserid ja nutiseadmed | Vanuses 6 +
   minecraft_agent: 'Minecraft: Kangelase teekond'
@@ -361,8 +361,8 @@ et-EE:
   minecraft_agent_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
     Teekond läbi Minecrafti koos koodiga.
   minecraft_agent_button: Alusta
-  minecraft_designer_description: Programmeeri loomi ja teisi Minecrafti tegelasi
-    omaenda Minecrafti versioonis.
+  minecraft_designer_description: Programmeri loomi ja teisi Minecrafti olendeid sinu
+    enda Minecrafti versioonis.
   minecraft_designer_button: Alusta
   minecraft_adventurer_description: Kasuta koodi, et viia Alex või Steve seiklusele.
   minecraft_adventurer_button: Alusta
@@ -411,6 +411,7 @@ et-EE:
   video_1min: 1 min
   video_2min: 2 min
   video_5min: 5 min
+  no_internet: Ei ole internetti?
   are_you_teacher: Kas sa oled õpetaja?
   volunteer_engineer_submission_title: Inspireeri õpilasi ja ole KoodiTunni vabatahtlik
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad 2015.
@@ -584,6 +585,7 @@ et-EE:
   dashboard_action_delete_no: Ei
   dashboard_action_confirm: Kas kustutan?
   dashboard_action_done: Valmis
+  dashboard_filter_all: Kõik
   dashboard_navigation_home_page: Õpetaja esilehekülg
   dashboard_navigation_section_student_progress: Õpilaste kontod ja edenemine
   dashboard_navigation_section_teacher_progress: Sinu kursuse progress
@@ -880,7 +882,7 @@ et-EE:
   kodable_gradelevel: Algkool
   tynkerapp_gradelevel: Vanusele 5-13
   robomindnl_gradelevel: Vanuses 8-13
-  flappy_gradelevel: Vanusele 4-104
+  flappy_gradelevel: Vanusele 6+
   bitsbox_gradelevel: Algkool
   makeschool_gradelevel: Keskkool
   touchdevelop_gradelevel: Keskkool
@@ -889,7 +891,7 @@ et-EE:
   thinkersmith2_gradelevel: Vanusele 8+
   kodableunplugged_gradelevel: Vanuses 8-13
   projguts_gradelevel: Vanuses 10-13
-  hourofcode_gradelevel: Vanusele 4-104
+  hourofcode_gradelevel: Vanusele 6+
   frozen_gradelevel: Vanusele 8+
   starwars_gradelevel: Vanusele 6+
   playlab_gradelevel: Vanusele 4-104
@@ -1157,7 +1159,7 @@ et-EE:
   frozen_longdescription: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
     jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid uisutamise ajal
     ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!
-  starwars_longdescription: Õpi programmeerima droide ja loo oma Star Wars’i mäng
+  starwars_longdescription: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
     kauges, kauges galaktikas.
   playlab_longdescription: Loo oma lugu või mäng Play Labi abil! Pane loomad, piraadid,
     zombid, ninjad ja paljud teised tegelased liikuma, hääli tegema, punkte koguma

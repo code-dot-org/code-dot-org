@@ -188,7 +188,7 @@ sk:
           nastavenie "flagu" (vlajky). Toto signalizuje našej funkcií smer, ktorým
           sa má vydať naša včela.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Stlač "Spustiť" pre vyskúšanie svojho programu
+        Course 4 Maze 1_callout1: Stlačte "Spustiť" pre vyskúšanie programu
         Course 4 Maze 1_callout2: Presuňte blok "pohnúť" a pripojte ho pod ostatné
           bloky na pracovnej ploche
       Course 4 Maze 4_callout:
@@ -350,11 +350,11 @@ sk:
         craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to
           dokončiť?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Stlač "Spustiť" pre vyskúšanie svojho programu
+        craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
         craft_drag_block_callout: Potiahnite blok "posunúť vpred" a zapojte ho pod
           iný blok
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Stlač "Spustiť" pre vyskúšanie svojho programu
+        craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
         craft_drag_block_callout: Potiahnite blok "posunúť vpred" a zapojte ho pod
           iný blok
       Overworld Place Wall_callout:

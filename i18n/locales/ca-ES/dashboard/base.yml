@@ -11,9 +11,9 @@ ca:
     attributes:
       user:
         name: 'Nom a mostrar'
-        email: 'Email'
+        email: 'Correu electrònic'
         username: 'nom d''usuari'
-        password: 'contrasenya'
+        password: 'Contrasenya'
         password_confirmation: 'Confirma la contrasenya'
         current_password: 'Contrasenya actual'
         locale: 'Llengua'
@@ -22,7 +22,7 @@ ca:
         edit_header: 'Edita les dades del compte'
         error:
           future: no pot ser en el futur
-  hello: "Hola Món"
+  hello: "Hola món"
   welcome_back: "Benvingut de nou, %{name}"
   submit: Envia
   cancel: "Cancel·lar"
@@ -102,7 +102,7 @@ ca:
     other: 'Altres'
   signin_form:
     title: 'Ja teniu un compte? Entreu'
-    login: 'Email'
+    login: 'Correu electrònic'
     password: 'Contrasenya'
     remember: 'Recorda''m'
     submit: 'Inicia la sessió'
@@ -139,7 +139,7 @@ ca:
   section:
     type:
       word: 'Paraula de pas'
-      email: 'Email'
+      email: 'Correu electrònic'
   follower:
     invite_sent: 'S''ha enviat la invitació'
     added_teacher: 'S''ha afegit %{name} com el teu mestre'
@@ -186,7 +186,7 @@ ca:
     user:
       classroom: 'Pàgina d''inici de mestre'
       label: 'Hola %{username}'
-      stats: 'El meu progrés'
+      stats: 'Code Studio'
       settings: 'El meu compte'
       logout: 'Tanca la sessió'
       signin: 'Inicia la sessió'
@@ -252,7 +252,7 @@ ca:
     teacher_student_count_one: Tens %{count} estudiant.
     teacher_student_count: Tens %{count} estudiants.
     teacher_averages: "Els teus estudiants han guanyat de mitjana %{trophy_average} fora del \n%{trophy_max} \"Concepte de Domini\" de trofeus."
-    teacher_print_certificates: 'Imprimeix certificats per als alumnes que acabin aquest curs'
+    teacher_print_certificates: 'Imprimeix certificats per als estudiants que acabin aquest curs'
     teacher_read_blog: Llegiu notícies i actualitzacions sobre els nostres materials al nostre Blog d'educació
     classroom: La teva classe
     student_progress: El teu progrés d'aprenentatge
@@ -265,7 +265,7 @@ ca:
     view_course: Veure el curs
     prize_info: 'Premis de participació (només per escoles públiques dels Estats Units): fins a 1.000 dòlars recompenses per aula.'
     tryfirst: 'O podeu provar-ho primer i registrar-vos després:'
-    trynow: 'Intenteu-ho ara'
+    trynow: 'Més informació'
     add_hint_help: 'Si us plau, ajuda''ns a afegir pistes als tutorials de Code.org'
     20hour_overview: 'Aquest curs de 20 hores és una introducció als conceptes bàsics d''informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d''ESO, però és divertit d''aprendre a qualsevol edat.'
     test_videos_help: 'Prova el nostre nou reproductor de vídeo a la teva escola'
@@ -280,7 +280,7 @@ ca:
     choose_next_course: "Intenta un curs Code Studio triant-ne un a continuació"
     print_certificate: "Imprimeix el certificat"
     announcement_learn_more_button: "Aprèn més"
-    announcement_try_now_button: "Intenteu-ho ara"
+    announcement_try_now_button: "Més informació"
   share:
     title: "Aprendre sobre Code Studio"
     description: "Tothom pot aprendre programació. Crea jocs, apps i art amb codi."
@@ -385,6 +385,7 @@ ca:
       body: "Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity."
     minecraft:
       title: "Minecraft"
+      body: "Explora el món de Minecraft a través del codi"
     minecraft2016:
       title: "Minecraft"
     hero:
@@ -465,15 +466,7 @@ ca:
     save: "Desa"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Altres"
-      - 
+      other: "Altres"
     submit: "Envia"
     decline: "Tancar"
   zendesk_too_young_message: 'Lamentablement, els usuaris més joves no poden registrar-se en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a> sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres en representació vostra.'
@@ -535,7 +528,7 @@ ca:
     required: 'Vista general'
   pd:
     form_labels:
-      email: 'Email'
+      email: 'Correu electrònic'
     form_entries:
       gender:
         male: 'Home'
@@ -543,7 +536,7 @@ ca:
         none: 'Prefereixo no respondre'
       subjects:
         cs: 'Informàtica'
-        math: 'Mates'
+        math: 'Matemàtiques'
         science: 'Ciència'
         la: 'Arts del llenguatge'
       resources:

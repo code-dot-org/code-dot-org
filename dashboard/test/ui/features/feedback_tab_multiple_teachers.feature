@@ -14,7 +14,7 @@ Background:
 Scenario: With dev flag, student sees feedback from multiple teachers, when available
   #As teacher, not reviewing work, don't see feedback tab
   Then I sign in as "First_Teacher"
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=devCommentBoxTab"
+  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7"
 
   #As teacher1, reviewing work, submit feedback
   And I wait to see ".show-handle"
@@ -26,7 +26,7 @@ Scenario: With dev flag, student sees feedback from multiple teachers, when avai
 
   #As teacher2, reviewing work, submit feedback
   Then I sign in as "Second_Teacher"
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=devCommentBoxTab"
+  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7"
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".section-student .name a"
@@ -37,11 +37,10 @@ Scenario: With dev flag, student sees feedback from multiple teachers, when avai
   #As student, latest feedback from both teachers is displayed
   Then I sign out
   And I sign in as "Lillian"
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?enableExperiments=devCommentBoxTab"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7"
   And I press the first ".uitest-feedback" element
   And I wait until ".editor-column" contains text "Nice!"
   And element ".editor-column" contains text "Feedback from First_Teacher"
   And element ".editor-column" contains text "Better!"
   And element ".editor-column" contains text "Feedback from Second_Teacher"
 
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?disableExperiments=devCommentBoxTab"

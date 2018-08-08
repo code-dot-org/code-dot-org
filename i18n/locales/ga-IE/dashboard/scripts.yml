@@ -261,6 +261,7 @@ ga:
             Variables:
               name: Athróga
         algebra:
+          title: An Ríomheolaíocht san Ailgéabar
           stages:
             'Eval: Conditionals':
               name: Coinníollacha
@@ -318,7 +319,7 @@ ga:
             Introduction to Computer Science:
               name: Buntús na Ríomheolaíochta
             Relay Programming:
-              name: Códáil Sealaíochta
+              name: Códáil sealaíochta
             Song Writing:
               name: Cumadh Ceoil
             The Artist:
@@ -403,6 +404,8 @@ ga:
           stages:
             Puzzles:
               name: Dúshláin
+        cspunit1:
+          description_short: Códáil
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -418,6 +421,7 @@ ga:
             Strings and Images:
               name: Teaghráin agus Íomhánna
         cspunit3:
+          description_short: Códáil
           stages:
             Creating Functions:
               name: Feidhmeanna a chruthú
@@ -455,7 +459,15 @@ ga:
               name: Fáilte!
             Wrap-Up:
               name: Clabhsúr
+        Testing:
+          title: Tástáil
+          description: Tástáil
+          description_short: Tástáil
+          stages:
+            Testing:
+              name: Tástáil
         cspunit2:
+          description_short: Códáil
           stages:
             The Internet:
               name: Is le cách an tIdirlíon
@@ -527,6 +539,10 @@ ga:
               name: Ionsamhlóir an Idirlín
             Welcome!:
               name: Fáilte!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Buntús na Ríomheolaíochta
         ECSPD2:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
@@ -679,6 +695,10 @@ ga:
               name: Fáilte!
             Wrap-Up:
               name: Clabhsúr
+        cspunit5:
+          description_short: Códáil
+        cspunit4:
+          description_short: Códáil
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -961,6 +981,7 @@ ga:
             Your Digital Footprint:
               name: Do Lorg Digiteach
         coursec-draft:
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
@@ -971,6 +992,7 @@ ga:
             Building a Foundation:
               name: Dúshraith a Leagan
         coursed-draft:
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
           stages:
             Conditionals with Cards:
               name: Coinníollacha le Cártaí
@@ -985,6 +1007,7 @@ ga:
             Introduction:
               name: Réamhrá
         coursee-draft:
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
           stages:
             Digital Citizenship:
               name: Saoránacht Dhigiteach
@@ -997,6 +1020,7 @@ ga:
             Conditionals:
               name: Coinníollacha
         coursef-draft:
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
           stages:
             Digital Citizenship:
               name: Saoránacht Dhigiteach
@@ -1159,6 +1183,7 @@ ga:
               name: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
           title: Cúrsa C
           assignment_family_title: Cúrsa C
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
         coursed-2017:
           stages:
             Nested Loops:
@@ -1404,7 +1429,7 @@ ga:
             Crowdsourcing:
               name: Sluafhoinsiú
             Relay Programming:
-              name: Códáil Sealaíochta
+              name: Códáil sealaíochta
         courseb-2018:
           assignment_family_title: Cúrsa B
           stages:
@@ -1434,9 +1459,10 @@ ga:
             Graph Paper Programming:
               name: Ríomhchlárú ar Ghrafpháipéar
             Relay Programming:
-              name: Códáil Sealaíochta
+              name: Códáil sealaíochta
         coursec-2018:
           assignment_family_title: Cúrsa C
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
           stages:
             Building a Foundation:
               name: Dúshraith a Leagan

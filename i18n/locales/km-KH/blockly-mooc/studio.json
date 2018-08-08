@@ -519,7 +519,7 @@
   "saySpriteChoices_58": "នាក់ឯងមិនអាចចាប់ខ្ញំុបានទេ",
   "saySpriteChoices_59": "អោច័!",
   "score": "ពិន្ទុ",
-  "scoreText": "",
+  "scoreText": "ពិន្ទុ: {playerScore}",
   "set": "កំណត់",
   "setActivityRandom": "កំណត់សកម្មភាពចៃដន្យសម្រាប់",
   "setActivityRoam": "កំណត់សកម្មភាពដើម្បីដើរសម្រាប់",

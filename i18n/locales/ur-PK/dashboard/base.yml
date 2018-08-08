@@ -144,15 +144,7 @@ ur:
     print: "پرنٹ"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "دیگر"
-      - 
+      other: "دیگر"
     submit: "جمع کرائیں"
   project:
     share: "دوسروں کو بتائیں"

@@ -418,7 +418,7 @@ it:
           ![Solution Blocks](https://programmailfuturo.it/images/codeorg/4-20-4.png)
       Course 4 SCFL 3_authored_hint:
         Course_4_SCFL_3_a: La larghezza del pennello è 1. Il primo quadrato ha il lato di 50 pixel, ed ogni quadrato successivo ha il lato più lungo di 50 pixel.
-        Course_4_SCFL_3_b: Il valore dell'opacità del pennello è sempre la metà del valore del contatore (`counter`).
+        Course_4_SCFL_3_b: Il valore dell'opacità del pennello è sempre la metà del valore del contatore (`counter`/2).
         Course_4_SCFL_3_c: Al termine del disegno di un quadrato devi posizionare l'artista un po' più in alto a sinistra per disegnare correttamente il successivo quadrato.
         Course_4_SCFL_3_d: |-
           <b>Soluzione:</b> Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/398689696" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
@@ -493,7 +493,7 @@ it:
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Assicurati di impostare un valore di `dog_speed` (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità del gatto</i>).
       D_Frozen_nested3_authored_hint:
-        courseD_artist_project3_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n- Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n- Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       D_Frozen_nested4_authored_hint:
         courseD_artist_project4_a: |
@@ -878,9 +878,9 @@ it:
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua una sequenza che si ripete e sostituiscila con il ciclo.
       artistLoopsK2_authored_hint:
-        artistLoopsK2_a: Se vuoi che il ciclo si ripeta più di 4 volte, devi cambiare il numero in alto a destra nel blocco rosa del ciclo.
+        artistLoopsK2_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
       artistLoopsK2gradek_artist_loops3_authored_hint:
-        artistLoopsK2_a: Se vuoi che il ciclo si ripeta più di 4 volte, devi cambiare il numero in alto a destra nel blocco rosa del ciclo.
+        artistLoopsK2_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
       artistLoopsK3_authored_hint:
         artistLoopsK3_a: Prova a utilizzare quello che hai imparato sui blocchi di ripetizione per completare questo esercizio!
       artistLoopsK4_authored_hint:
@@ -1054,6 +1054,8 @@ it:
           Riesci a trovare un sentiero che raggiunga tutti i fiori e il favo senza colpire nessun albero? Il percorso migliore è una spirale.
           
           ** Puoi riuscirci senza mai girare a sinistra. **
+      course2_maze_programming_challenge2_authored_hint:
+        courseC_maze_programming_challenge2_a: "*Se mi fai muovere all'indietro, stai particolarmente attento a farmi girare dalla parte giusta!*"
       course2_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: Prova a contare le caselle con un dito. Ma ricorda di non tenere conto della casella di partenza!
       course2_maze_seq_challenge2_authored_hint:
@@ -1070,6 +1072,8 @@ it:
       course3_bee_functions_challenge2_authored_hint:
         courseE_bee_functions_challenge1_a: "Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno del blocco verde aperto che definisce cosa deve fare la funzione.
+      course3_maze_debugging_challenge1_authored_hint:
+        courseC_maze_debugging_challenge1_a: Destra o sinistra? A te la scelta!
       course3_playLab_challenge1_authored_hint:
         courseE_playLab_challenge1_a: |-
           Ecco alcune possibili cose da fare quando il giocatore vince la partita:
@@ -1285,7 +1289,7 @@ it:
           prova a metterlo all'interno del ciclo
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2018_authored_hint:
-        courseA_artist_loops4_a: Se vuoi che il ciclo si ripeta più di 4 volte, devi cambiare il numero in alto a destra nel blocco rosa del ciclo.
+        courseA_artist_loops4_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops4_b: |-
           Dato che puoi utilizzare solo un blocco
           <xml><block type="simple_move_right"/></xml>
@@ -1297,7 +1301,7 @@ it:
         courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco\n<xml><block type=\"simple_move_right\"/></xml>\nprova a metterlo all'interno del ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops5_2018_authored_hint:
         courseA_artist_loops5_a: "Prova a utilizzare quello che hai imparato sui blocchi\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nper completare questo esercizio!"
-        courseA_artist_loops5_b: Se vuoi che il ciclo si ripeta più di 4 volte, devi cambiare il numero in alto a destra nel blocco rosa del ciclo.
+        courseA_artist_loops5_b: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco\n<xml><block type=\"simple_move_right\"/></xml>\nprova a metterlo all'interno del ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Non riesci ad immaginare come disegnare la collina? Prova a giocare un po' con i blocchi per vedere che disegno fa ognuno.
@@ -2087,10 +2091,10 @@ it:
           </block>
           </xml>
       courseB_artist_loops2_authored_hint:
-        courseB_artist_loops2_a: Se vuoi che il ciclo si ripeta più di 4 volte, devi cambiare il numero in alto a destra nel blocco rosa del ciclo.
+        courseB_artist_loops2_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseB_artist_loops2_b: Prova prima ad eseguire il codice per vedere dove va a finire l'artista.
       courseB_artist_loops2_2018_authored_hint:
-        courseB_artist_loops2_a: Se vuoi che il ciclo si ripeta più di 4 volte, devi cambiare il numero in alto a destra nel blocco rosa del ciclo.
+        courseB_artist_loops2_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseB_artist_loops2_b: Prova prima ad eseguire il codice per vedere dove va a finire l'artista.
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_a: Ricordati che devi usare il ciclo `ripeti` per riuscire a risolvere l'esercizio!
@@ -2995,7 +2999,7 @@ it:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
-        courseC_PlayLab_events2_b: Usa il menu a discesa del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
+        courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
       courseC_PlayLab_events2_2018_authored_hint:
         courseC_PlayLab_events2_a: |-
           Collega due di questi blocchi al blocco `quando si clicca su "Esegui"`:
@@ -3006,7 +3010,7 @@ it:
           <title name="VALUE">Hi there.</title>
           </block>
           </xml>
-        courseC_PlayLab_events2_b: Usa il menu a discesa del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
+        courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: Devi solo spostare il cane a destra di circa 25 pixel per risolvere questo esercizio.
         courseC_PlayLab_events3_b: Nella cassetta degli attrezzi c'è un blocco che possa servire per muoverebbe un personaggio?
@@ -3040,18 +3044,18 @@ it:
         courseC_PlayLab_events4_b: Quando si clicca sul pulsante "Esegui", il cane deve spostarsi a destra di **100** pixel per raggiungere il gatto.
         courseC_PlayLab_events4_a: Per risolvere questo esercizio sarà necessario collegare un blocco `il personaggio ... dice` all'evento `quando il personaggio ... tocca ...`.
       courseC_PlayLab_events5_authored_hint:
-        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
+        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa (▼) del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
         courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca sul polpo dopo aver avviato il tuo programma!
       courseC_PlayLab_events5_2018_authored_hint:
-        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
+        courseC_PlayLab_events5_a: Sarà necessario cliccare sul secondo menù a discesa (▼) del blocco `il personaggio ... dice ...` per trovare il testo "Novità?"
         courseC_PlayLab_events5_b: Per controllare che funzioni correttamente, clicca sul polpo dopo aver avviato il tuo programma!
       courseC_PlayLab_events6_authored_hint:
         courseC_PlayLab_events6_a: 'Ogni blocco verde `quando si preme sulla freccia verso ...`può essere associato delle specifiche azioni: i blocchi agganciati sotto di esso.'
-        courseC_PlayLab_events6_b: Usa il menù a discesa del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
+        courseC_PlayLab_events6_b: Usa il menù a discesa (▼) del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
         courseC_PlayLab_events6_c: Quando avrai finito, sarai in grado di muovere il pinguino in tutte le direzioni usando i tasti freccia (sulla tastiera o cliccando i tasti arancioni).
       courseC_PlayLab_events6_2018_authored_hint:
         courseC_PlayLab_events6_a: 'Ogni blocco verde `quando si preme sulla freccia verso ...`può essere associato delle specifiche azioni: i blocchi agganciati sotto di esso.'
-        courseC_PlayLab_events6_b: Usa il menù a discesa del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
+        courseC_PlayLab_events6_b: Usa il menù a discesa (▼) del blocco `sposta il personaggio 1 ...` per cambiare la direzione da dare al pinguino.
         courseC_PlayLab_events6_c: Quando avrai finito, sarai in grado di muovere il pinguino in tutte le direzioni usando i tasti freccia (sulla tastiera o cliccando i tasti arancioni).
       courseC_PlayLab_events7_authored_hint:
         courseC_PlayLab_events7_a: 'Per risolvere questo esercizio, devi usare entrambi il blocchi `sposta il personaggio 2 in alto 400 pixel` e `sposta il personaggio 2 in basso 400 pixel` all''interno del ciclo `ripeti per sempre`.'
@@ -3181,10 +3185,10 @@ it:
         courseC_artist_loops2a_b: Clicca sul numero in cima al blocco`ripeti ... volte` per cambiare quante volte deve essere ripetuto il ciclo.
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del ciclo, dopo l'adesivo dell'uccello.
-        courseC_artist_loops3a_b: Usa il menù a discesa del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
+        courseC_artist_loops3a_b: Usa il menù a discesa (▼) del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops3a_2018_authored_hint:
         courseC_artist_loops3a_a: Dovrai aggiungere solo un blocco all'interno del ciclo, dopo l'adesivo dell'uccello.
-        courseC_artist_loops3a_b: Usa il menù a discesa del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
+        courseC_artist_loops3a_b: Usa il menù a discesa (▼) del blocco `disegna un adesivo` per trovare l'adesivo del pipistrello.
       courseC_artist_loops4a_authored_hint:
         courseC_artist_loops4a_a: |-
           Usa questo blocco per saltare in avanti:
@@ -3210,9 +3214,9 @@ it:
           
           Non dimenticare di cambiare la distanza!
       courseC_artist_loops5a_authored_hint:
-        courseC_artist_loops5a_a: Usa i menù a discesa dei blocchi `disegna un adesivo` per cambiare le immagini.
+        courseC_artist_loops5a_a: Usa i menù a discesa (▼) dei blocchi `disegna un adesivo` per cambiare le immagini.
       courseC_artist_loops5a_2018_authored_hint:
-        courseC_artist_loops5a_a: Usa i menù a discesa dei blocchi `disegna un adesivo` per cambiare le immagini.
+        courseC_artist_loops5a_a: Usa i menù a discesa (▼) dei blocchi `disegna un adesivo` per cambiare le immagini.
       courseC_artist_loops5b_authored_hint:
         courseC_artist_loops5b_a: |-
           Usa questo blocco per impostare lo schema delle tue linee:
@@ -3299,7 +3303,7 @@ it:
         courseC_artist_prog3_b: Vuoi fare un programma più breve? Prova ad usare un ciclo `Ripeti ... volte`.
       courseC_artist_prog4_authored_hint:
         courseC_artist_prog4_a: Per finire il razzo, basta disegnare il triangolo in cima!
-        courseC_artist_prog4_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog4_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog4_c: |-
           Per disegnare un triangolo dovresti fare così:
           - vai avanti
@@ -3309,7 +3313,7 @@ it:
           - vai avanti
       courseC_artist_prog4_2018_authored_hint:
         courseC_artist_prog4_a: Per finire il razzo, basta disegnare il triangolo in cima!
-        courseC_artist_prog4_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog4_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog4_c: |-
           Per disegnare un triangolo dovresti fare così:
           - vai avanti
@@ -3320,12 +3324,12 @@ it:
       courseC_artist_prog5_authored_hint:
         courseC_artist_prog5_a: Trascina il cursore verso la tartaruga per veder eseguire il codice più lentamente e capire dove sono eventuali errori.
         courseC_artist_prog5_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
-        courseC_artist_prog5_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog5_c: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog5_d: Ogni curva dovrebbe essere di 90 gradi a destra.
       courseC_artist_prog5_2018_authored_hint:
         courseC_artist_prog5_a: Trascina il cursore verso la tartaruga per veder eseguire il codice più lentamente e capire dove sono eventuali errori.
         courseC_artist_prog5_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
-        courseC_artist_prog5_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog5_c: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog5_d: Ogni curva dovrebbe essere di 90 gradi a destra.
       courseC_artist_prog6_authored_hint:
         courseC_artist_prog6_a: L'artista è già rivolto verso la direzione corretta per disegnare la prima linea.
@@ -3338,7 +3342,7 @@ it:
       courseC_artist_prog7_authored_hint:
         courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
         courseC_artist_prog7_b: "- Al primo passo tutto procede bene?\n- E al secondo?\n- Dov'è che qualcosa comincia a non funzionare?"
-        courseC_artist_prog7_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog7_c: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
           Dovresti fare così:
           - vai avanti
@@ -3353,7 +3357,7 @@ it:
       courseC_artist_prog7_2018_authored_hint:
         courseC_artist_prog7_a: Gli angoli sono di 45 o 90 gradi.
         courseC_artist_prog7_b: "- Al primo passo tutto procede bene?\n- E al secondo?\n- Dov'è che qualcosa comincia a non funzionare?"
-        courseC_artist_prog7_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseC_artist_prog7_c: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseC_artist_prog7_d: |-
           Dovresti fare così:
           - vai avanti
@@ -3576,7 +3580,7 @@ it:
         courseC_maze_debugging5_b: Prova a dire ad alta voce cosa dovrebbe fare Scrat.  Corrisponde al codice presente nell'area di lavoro?  Che differenza c'è?
       courseC_maze_debugging5_2018_authored_hint:
         courseC_maze_debugging5_a: "Ci sono un sacco di blocchi utili nell'area di lavoro! Non cancellarli tutti!\n\nUsa il pulsante \"Fai un passo\" per indagare e capire dove il codice è sbagliato."
-        courseC_maze_debugging5_c: Puoi modificare la direzione del blocco `gira a ....` cliccando sul menu a discesa.
+        courseC_maze_debugging5_c: Puoi modificare la direzione del blocco `gira a ....` cliccando sul menu a discesa (▼).
         courseC_maze_debugging5_b: Prova a dire ad alta voce cosa dovrebbe fare Scrat.  Corrisponde al codice presente nell'area di lavoro?  Che differenza c'è?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
@@ -3621,6 +3625,26 @@ it:
           - Cosa dovrebbe fare Scrat?
           - Cosa fa Scrat?
           - Questo cosa ti suggerisce?
+      courseC_maze_debugging_challenge1_authored_hint:
+        courseC_maze_debugging_challenge1_a: Destra o sinistra? A te la scelta!
+        courseC_maze_debugging_challenge1_b: Il percorso che deve seguire Scrat ha la forma di un rettangolo! Deve girare dalla stessa parte ad ogni svolta.
+        courseC_maze_debugging_challenge1_c: Se ti stai bloccando, puoi sempre ricominciare da capo e provare un percorso nuovo!
+      courseC_maze_debugging_challenge1_2018_authored_hint:
+        courseC_maze_debugging_challenge1_a: Destra o sinistra? A te la scelta!
+        courseC_maze_debugging_challenge1_b: Il percorso che deve seguire Scrat ha la forma di un rettangolo! Deve girare dalla stessa parte ad ogni svolta.
+        courseC_maze_debugging_challenge1_c: Se ti stai bloccando, puoi sempre ricominciare da capo e provare un percorso nuovo!
+      courseC_maze_debugging_challenge2_authored_hint:
+        courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare il codice (debugging). C'è qualcosa di sbagliato?
+        courseC_maze_debugging_challenge2_c: |-
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+          
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+      courseC_maze_debugging_challenge2_2018_authored_hint:
+        courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare il codice (debugging). C'è qualcosa di sbagliato?
+        courseC_maze_debugging_challenge2_c: |-
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+          
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: "Per inserire più blocchi all'interno di un ciclo `ripeti ... volte`, trascina un blocco `ripeti ... volte` dalla cassetta degli attrezzi all'area di lavoro, quindi trascina l'insieme di blocchi che devono ripetersi all'interno del ciclo `ripeti ... volte`.<br>\n<br>\nControlla che il tutto sia attaccato al blocco `quando si clicca su \"Esegui\"`."
       courseC_maze_loops7_authored_hint:
@@ -3632,8 +3656,10 @@ it:
       courseC_maze_programming1_2018_authored_hint:
         courseC_maze_programming1_0: Controlla che tutti i blocchi siano correttamente agganciati tra loro, quindi clicca nuovamente su "Esegui".
       courseC_maze_programming2_authored_hint:
+        courseC_maze_programming2_a: Per usare un blocco <xml><block type="maze_moveForward"/></xml>, trascinalo fuori dalla cassetta degli attrezzi e aggancialo al blocco <xml><block type="when_run"/></xml>.
         courseC_maze_programming2_b: Controlla che tutti i blocchi siano correttamente agganciati tra loro, quindi clicca nuovamente su "Esegui".
       courseC_maze_programming2_2018_authored_hint:
+        courseC_maze_programming2_a: Per usare un blocco <xml><block type="maze_moveForward"/></xml>, trascinalo fuori dalla cassetta degli attrezzi e aggancialo al blocco <xml><block type="when_run"/></xml>.
         courseC_maze_programming2_b: Controlla che tutti i blocchi siano correttamente agganciati tra loro, quindi clicca nuovamente su "Esegui".
       courseC_maze_programming3_authored_hint:
         courseC_maze_programming3_a: Prima prova ad eseguire il programma per vedere dove sbaglia.
@@ -3703,6 +3729,20 @@ it:
       courseC_maze_programming8_2018_authored_hint:
         courseC_maze_programming8_a: Ricordati che se ti blocchi puoi usare il pulsante "Fai un passo" per analizzare il tuo codice linea per linea.
         courseC_maze_programming8_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
+      courseC_maze_programming_challenge1_authored_hint:
+        courseC_maze_programming_challenge1_a: Ci sono molti modi per raggiungere il maiale. Usa il tuo dito per trovare un percorso e poi programmalo!
+      courseC_maze_programming_challenge1_2018_authored_hint:
+        courseC_maze_programming_challenge1_a: Ci sono molti modi per raggiungere il maiale. Usa il tuo dito per trovare un percorso e poi programmalo!
+      courseC_maze_programming_challenge2_authored_hint:
+        courseC_maze_programming_challenge2_a: '*"Se mi fai muovere all''indietro, stai particolarmente attento a farmi girare dalla parte giusta!"*'
+        courseC_maze_programming_challenge2_b: |-
+          La soluzione più corta usa solo 5 blocchi, ma usa questo blocco:
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseC_maze_programming_challenge2_2018_authored_hint:
+        courseC_maze_programming_challenge2_a: '*"Se mi fai muovere all''indietro, stai particolarmente attento a farmi girare dalla parte giusta!"*'
+        courseC_maze_programming_challenge2_b: |-
+          La soluzione più corta usa solo 5 blocchi, ma usa questo blocco:
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_puppy_loops8_authored_hint:
         2-3_Maze_Loops_17_a: Prova a suddividere questo problema in piccole parti. Prenditi tutto il tempo che serve. Non è necessario risolvere l'esercizio al primo tentativo!
       courseC_puppy_loops8courseC_maze_loops8_authored_hint:
@@ -3782,13 +3822,13 @@ it:
           
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_Frozen_nested1_authored_hint:
-        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_Frozen_nested2_authored_hint:
         courseD_artist_project2_a: Ricordati che il blocco `vai avanti` disegna una linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
         courseD_artist_project2_b: Dopo aver disegnato ed essere andato avanti la prima volta, puoi ripetere il codice aggiungendo un ciclo all'esterno.
       courseD_Frozen_nested3_authored_hint:
-        courseD_artist_project3_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n- Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n- Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_Frozen_nested4_authored_hint:
         courseD_artist_project4_a: |
@@ -3824,10 +3864,10 @@ it:
           
           <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
       courseD_artist_1_2018_authored_hint:
-        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_artist_2_2018_authored_hint:
-        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_7_2018_authored_hint:
@@ -4070,10 +4110,10 @@ it:
           
           Questa immagine è stata realizzata con un ciclo annidato che ripete un pentagono (con lati di 50 pixel) per 15 volte, usando un angolo di 48 gradi.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_artist_project1_2018_authored_hint:
-        courseD_artist_project1_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
       courseD_artist_project1a_authored_hint:
         courseD_artist_project1a_a: |
@@ -4104,10 +4144,10 @@ it:
           
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
-        courseD_artist_project3_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n- Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n- Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_artist_project3_2018_authored_hint:
-        courseD_artist_project3_a: Usa il menù a discesa del blocco `gira a ...` per scegliere l'angolo che ti serve!
+        courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n- Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n- Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_artist_project3a_authored_hint:
         courseD_artist_project3a_a: Puoi scegliere diversi modi di ruotare la tua forma! Cosa ne dici di 18 volte con angoli di 20 gradi tra una riga e l'altra?
@@ -4163,7 +4203,7 @@ it:
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: Puoi disegnare prima il quadrato e poi il triangolo, oppure farlo al contrario!
         courseD_artist_ramp12_b: Prova a suddividere il problema in 2 parti e usare 2 cicli.
-        courseD_artist_ramp12_c: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_c: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda il video-suggerimento!
         courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare un blocco `se`.
@@ -4341,9 +4381,27 @@ it:
       courseD_bee_nestedLoops7_authored_hint:
         courseD_bee_nestedLoops7_a: Devi ripetere il blocco `prendi il nettare` all'interno di un altro blocco`ripeti ... volte` che ha al suo interno anche il blocco `vai avanti`.
         courseD_bee_nestedLoops7_b: Devi usare tutti e tre i blocchi `ripeti ... volte` per risolvere l'esercizio.
+        courseD_bee_nestedLoops7_c: |
+          Annida i blocchi su tre livelli, in questo modo:
+          
+          - ripeti 4
+          - ripeti 3
+          - ripeti 12
+          - prendi il nettare
+          - vai avanti
+          - gira a destra
       courseD_bee_nestedLoops7_2018_authored_hint:
         courseD_bee_nestedLoops7_a: Devi ripetere il blocco `prendi il nettare` all'interno di un altro blocco`ripeti ... volte` che ha al suo interno anche il blocco `vai avanti`.
         courseD_bee_nestedLoops7_b: Devi usare tutti e tre i blocchi `ripeti ... volte` per risolvere l'esercizio.
+        courseD_bee_nestedLoops7_c: |
+          Annida i blocchi su tre livelli, in questo modo:
+          
+          - ripeti 4
+          - ripeti 3
+          - ripeti 12
+          - prendi il nettare
+          - vai avanti
+          - gira a destra
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
           Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
@@ -4915,11 +4973,11 @@ it:
         courseD_maze_until8_c: Ricordati di usare il blocco `ripeti fino a che` per far arrivare lo zombie fino al girasole!
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: Per risolvere questa sfida, collega il blocco `sposta il personaggio 1 in alto` all'evento `quando si preme sulla freccia verso l'alto`, poi fai lo stesso per tutte le altre direzioni.
-        courseD_playLab_cond1_b: Usa i menù a discesa dei blocchi `quando si preme sulla freccia ...` e `sposta il personaggio ...` per cambiare la direzione verso la quale devono muoversi.
+        courseD_playLab_cond1_b: Usa i menù a discesa (▼) dei blocchi `quando si preme sulla freccia ...` e `sposta il personaggio ...` per cambiare la direzione verso la quale devono muoversi.
         courseD_playLab_cond1_c: Dopo aver cliccato su "Esegui", ricorda di muovere il pirata verso entrambe le bandierine!
       courseD_playLab_cond1_2018_authored_hint:
         courseD_playLab_cond1_a: Per risolvere questa sfida, collega il blocco `sposta il personaggio 1 in alto` all'evento `quando si preme sulla freccia verso l'alto`, poi fai lo stesso per tutte le altre direzioni.
-        courseD_playLab_cond1_b: Usa i menù a discesa dei blocchi `quando si preme sulla freccia ...` e `sposta il personaggio ...` per cambiare la direzione verso la quale devono muoversi.
+        courseD_playLab_cond1_b: Usa i menù a discesa (▼) dei blocchi `quando si preme sulla freccia ...` e `sposta il personaggio ...` per cambiare la direzione verso la quale devono muoversi.
         courseD_playLab_cond1_c: Dopo aver cliccato su "Esegui", ricorda di muovere il pirata verso entrambe le bandierine!
       courseD_playLab_cond2_authored_hint:
         courseD_playLab_cond2_a: Per risolvere questo esercizio, usa il blocco `aggiungi un punto` sotto al blocco dell'evento `quando il personaggio 1 tocca il personaggio 2`.
@@ -5223,7 +5281,7 @@ it:
       courseE_artist_functions_challenge2_2018_authored_hint:
         courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nIl blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: *indipendentemente* dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_ramp10_authored_hint:
-        courseD_artist_ramp10_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp10_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
       courseE_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Per disegnare un lato, usa il blocco `vai avanti di 100 pixel` e cambia il 100 in 200.
         courseD_artist_ramp11b: |-
@@ -5262,19 +5320,19 @@ it:
         courseE_artist_ramp8_c: 'Il ciclo deve contenere due blocchi: `vai avanti` e `gira a destra di 90 gradi`.'
       courseE_artist_ramp9_authored_hint:
         courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
-        courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_artist_ramp9_2_authored_hint:
         courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
-        courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_artist_ramp9_2018_authored_hint:
         courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
-        courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_artist_ramp9_2_2018_authored_hint:
         courseD_artist_ramp12_a: In cosa è simile a un quadrato? e in cosa differisce?
-        courseD_artist_ramp12_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseD_artist_ramp12_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
         courseD_artist_ramp12_c: Per disegnare ogni lato, è necessario andare avanti di 100 pixel e poi girare a destra di 120 gradi. Quanti lati ti servono?
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_b: Vedi qualche schema che si *ripete*?
@@ -5630,6 +5688,15 @@ it:
       courseE_multi_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Prova ad usare il pulsante "Fai un passo" per eseguire il codice un'istruzione alla volta. Riesci ad capire cosa devi fare dopo?
       courseE_playLab_challenge1_authored_hint:
+        courseE_playLab_challenge1_a: |-
+          Ecco alcune possibili cose da fare quando il giocatore vince la partita:
+          
+          * Fai svanire il dinosauro.
+          * Ferma gli scoiattoli.
+          * Attribuisci un umore felice a scoiattoli e cavaliere.
+          * Imposta un nuovo sfondo.
+          * Fai in modo che il cavaliere ringrazi il giocatore per l'aiuto.
+          * Fai svanire tutti i personaggi e visualizza il messaggio "Hai vinto!".
         courseE_playLab_challenge1_b: |-
           Ecco alcune possibili cose da fare quando il giocatore perde la partita:
           
@@ -5639,6 +5706,15 @@ it:
           * Imposta un nuovo sfondo.
           * Fai svanire tutti i personaggi e visualizza il messaggio "Fine del gioco!".
       courseE_playLab_challenge1_2018_authored_hint:
+        courseE_playLab_challenge1_a: |-
+          Ecco alcune possibili cose da fare quando il giocatore vince la partita:
+          
+          * Fai svanire il dinosauro.
+          * Ferma gli scoiattoli.
+          * Attribuisci un umore felice a scoiattoli e cavaliere.
+          * Imposta un nuovo sfondo.
+          * Fai in modo che il cavaliere ringrazi il giocatore per l'aiuto.
+          * Fai svanire tutti i personaggi e visualizza il messaggio "Hai vinto!".
         courseE_playLab_challenge1_b: |-
           Ecco alcune possibili cose da fare quando il giocatore perde la partita:
           
@@ -5656,11 +5732,11 @@ it:
         courseE_playLab_scaffold1_b: Per fare in modo che il personaggio che hai scelto compaia all'avvio del tuo programma, metti il blocco `imposta il personaggio 1 come ...` sotto al blocco `quando si clicca su "Esegui"`.
         courseE_playLab_scaffold1_c: Usa il blocco `imposta uno sfondo ...` per scegliere lo sfondo della tua scena.
       courseE_playLab_scaffold2_authored_hint:
-        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa del blocco evento `quando si preme sulla freccia verso ...`.
+        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa (▼) del blocco evento `quando si preme sulla freccia verso ...`.
         courseE_playLab_scaffold1_b: Dovresti avere quattro diversi blocchi evento `quando si preme sulla freccia verso ...`, ognuno con uno specifico blocco di movimento agganciato sotto.
         courseE_playLab_scaffold1_c: Quando hai finito, dovresti essere in grado di spostare il tuo eroe con i tasti freccia!
       courseE_playLab_scaffold2_2018_authored_hint:
-        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa del blocco evento `quando si preme sulla freccia verso ...`.
+        courseE_playLab_scaffold1_a: Scegli la direzione corretta dal menù a discesa (▼) del blocco evento `quando si preme sulla freccia verso ...`.
         courseE_playLab_scaffold1_b: Dovresti avere quattro diversi blocchi evento `quando si preme sulla freccia verso ...`, ognuno con uno specifico blocco di movimento agganciato sotto.
         courseE_playLab_scaffold1_c: Quando hai finito, dovresti essere in grado di spostare il tuo eroe con i tasti freccia!
       courseE_playLab_scaffold4_authored_hint:
@@ -5698,8 +5774,34 @@ it:
         iceage_warn_ice_age_a: 'Devi semplicemente aggiungere due blocchi per risolvere questo esercizio.'
         iceage_warn_ice_age_b: Aggiungi entrambi i nuovi blocchi sotto all'evento `quando si clicca su "Esegui"` per farli eseguire immediatamente all'avvio del programma.
       courseF_artist_for3_authored_hint:
+        courseF_artist_for3_a: |-
+          Per risolvere l'esercizio con il ciclo `ripeti con counter`, devi rappresentare la distanza con la variabile `counter` (*contatore*) all'interno del blocco `vai avanti`.
+          
+          <xml>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
         courseF_artist_for3_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_artist_for3_2018_authored_hint:
+        courseF_artist_for3_a: |-
+          Per risolvere l'esercizio con il ciclo `ripeti con counter`, devi rappresentare la distanza con la variabile `counter` (*contatore*) all'interno del blocco `vai avanti`.
+          
+          <xml>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
         courseF_artist_for3_b: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:<br>\nQual è il valore più piccolo che serve? <br>\nQual è il più grande?<br>\nQual è l'incremento necessario ad ogni ripetizione?<br>\n<b>Nota</b>: ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esplorarle."
@@ -5709,13 +5811,13 @@ it:
         courseF_artist_for4_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_artist_for_challenge1_authored_hint:
         courseF_artist_for_challenge1_a: La larghezza del pennello è 1. Il primo quadrato ha il lato di 50 pixel, ed ogni quadrato successivo ha il lato più lungo di 50 pixel.
-        courseF_artist_for_challenge1_b: Il valore dell'opacità del pennello è sempre la metà del valore del contatore (`counter`).
+        courseF_artist_for_challenge1_b: Il valore dell'opacità del pennello è sempre la metà del valore del contatore (`counter`/2).
         courseF_artist_for_challenge1_c: Al termine del disegno di un quadrato devi posizionare l'artista un po' più in alto a sinistra per disegnare correttamente il successivo quadrato.
         courseF_artist_for_challenge1_d: |-
           <b>Soluzione:</b> Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/398689696" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       courseF_artist_for_challenge1_2018_authored_hint:
         courseF_artist_for_challenge1_a: La larghezza del pennello è 1. Il primo quadrato ha il lato di 50 pixel, ed ogni quadrato successivo ha il lato più lungo di 50 pixel.
-        courseF_artist_for_challenge1_b: Il valore dell'opacità del pennello è sempre la metà del valore del contatore (`counter`).
+        courseF_artist_for_challenge1_b: Il valore dell'opacità del pennello è sempre la metà del valore del contatore (`counter`/2).
         courseF_artist_for_challenge1_c: Al termine del disegno di un quadrato devi posizionare l'artista un po' più in alto a sinistra per disegnare correttamente il successivo quadrato.
         courseF_artist_for_challenge1_d: |-
           <b>Soluzione:</b> Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/398689696" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
@@ -5749,10 +5851,10 @@ it:
           <b>Soluzione:</b> Se vuoi, <a href="https://studio.code.org/c/159877686">clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: In cosa è simile a un quadrato? e in cosa differisce?
-        courseF_artist_ramp9_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseF_artist_ramp9_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
       courseF_artist_ramp9_2018_authored_hint:
         courseF_artist_ramp9_a: In cosa è simile a un quadrato? e in cosa differisce?
-        courseF_artist_ramp9_b: Puoi usare il menù a discesa del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
+        courseF_artist_ramp9_b: Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!
       courseF_artist_variables10_authored_hint:
         courseF_artist_variables10_a: Divertiti con questo esercizio! Guarda come possono influire delle piccole modifiche sul funzionamento del programma.
         courseF_artist_variables10_b: Puoi fare diverse modifiche ed eseguire il programma più volte.
@@ -6208,63 +6310,63 @@ it:
           
           Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
       courseF_bee_for1_authored_hint:
-        courseF_bee_for1_a: Trascina un blocco numerico viola nello spazio vuoto sul ciclo `ripeti ... volte` per dirgli quante volte deve ripeterlo.
+        courseF_bee_for1_a: Trascina un blocco numerico viola nello spazio vuoto del ciclo `ripeti ... volte` per indicare quante volte deve essere ripetuto.
         courseF_bee_for1_b: Hai bisogno di due blocchi nel ciclo `ripeti ... volte` per raccogliere tutto il nettare.
       courseF_bee_for10_authored_hint:
         courseF_bee_for10_a: Riesci a trovare una relazione tra il numero di passi che l'ape fa per arrivare al fiore ed il numero di dosi di nettare che deve raccogliere?
-        courseF_bee_for10_b: Il primo insieme di fiori ha un totale di ** 14 fiori **. Per arrivare a questo primo insieme, l'ape deve ronzare verso il basso per ** 7 quadrati ** (o 14 quadrati divisi per 2.) Quanti fiori ci sono nell'insieme successivo e per quanti quadrati dovrà volare l'ape per arrivarci?
-        courseF_bee_for10_c: "Nell' esercizio, il primo Insieme di fiori ha **14** fiori, il secondo insieme ha **10** fiori, il terzo insieme ha **6** fiori e il quarto insieme ha **2** fiori.\n\nIn questo disegno, ci sono **7** quadrati rossi, **5** quadrati arancioni, **3** quadrati verdi e **1** blocco blu.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nChe collegamento c'è tra questi numeri?"
+        courseF_bee_for10_b: Il primo fiore ha un totale di **14 dosi** di nettare. Per arrivare a questo primo fiore, l'ape deve ronzare verso il basso per **7 caselle** (ovvero 14 diviso 2). Quante dosi di nettare ci sono nel fiore successivo? e quante caselle dovrà percorrere l'ape per arrivarci?
+        courseF_bee_for10_c: "In questo esercizio, il primo fiore ha **14** dosi di nettare, il secondo ha **10** dosi, il terzo ne ha **6** e il quarto **2**.\n\nIn questo percorso, ci sono **7** caselle rosse, **5** arancioni, **3** verdi e **1** blu.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nChe collegamento c'è tra questi numeri?"
         courseF_bee_for10_d: Devi usare 2 blocchi `ripeti ... volte` e uno di questi deve usare un blocco con operazioni matematiche.
       courseF_bee_for10_2018_authored_hint:
         courseF_bee_for10_a: Riesci a trovare una relazione tra il numero di passi che l'ape fa per arrivare al fiore ed il numero di dosi di nettare che deve raccogliere?
-        courseF_bee_for10_b: Il primo insieme di fiori ha un totale di ** 14 fiori **. Per arrivare a questo primo insieme, l'ape deve ronzare verso il basso per ** 7 quadrati ** (o 14 quadrati divisi per 2.) Quanti fiori ci sono nell'insieme successivo e per quanti quadrati dovrà volare l'ape per arrivarci?
-        courseF_bee_for10_c: "Nell' esercizio, il primo Insieme di fiori ha **14** fiori, il secondo insieme ha **10** fiori, il terzo insieme ha **6** fiori e il quarto insieme ha **2** fiori.\n\nIn questo disegno, ci sono **7** quadrati rossi, **5** quadrati arancioni, **3** quadrati verdi e **1** blocco blu.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nChe collegamento c'è tra questi numeri?"
+        courseF_bee_for10_b: Il primo fiore ha un totale di **14 dosi** di nettare. Per arrivare a questo primo fiore, l'ape deve ronzare verso il basso per **7 caselle** (ovvero 14 diviso 2). Quante dosi di nettare ci sono nel fiore successivo? e quante caselle dovrà percorrere l'ape per arrivarci?
+        courseF_bee_for10_c: "In questo esercizio, il primo fiore ha **14** dosi di nettare, il secondo ha **10** dosi, il terzo ne ha **6** e il quarto **2**.\n\nIn questo percorso, ci sono **7** caselle rosse, **5** arancioni, **3** verdi e **1** blu.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nChe collegamento c'è tra questi numeri?"
         courseF_bee_for10_d: Devi usare 2 blocchi `ripeti ... volte` e uno di questi deve usare un blocco con operazioni matematiche.
       courseF_bee_for11_authored_hint:
-        courseF_bee_for11_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore a 12?\n\nRiesci a vedere lo schema?"
+        courseF_bee_for11_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore a 12?\n\nRiesci a individuare lo schema?"
       courseF_bee_for11_2018_authored_hint:
-        courseF_bee_for11_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore a 12?\n\nRiesci a vedere lo schema?"
+        courseF_bee_for11_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore a 12?\n\nRiesci a individuare lo schema?"
       courseF_bee_for1_2018_authored_hint:
-        courseF_bee_for1_a: Trascina un blocco numerico viola nello spazio vuoto sul ciclo `ripeti ... volte` per dirgli quante volte deve ripeterlo.
+        courseF_bee_for1_a: Trascina un blocco numerico viola nello spazio vuoto del ciclo `ripeti ... volte` per indicare quante volte deve essere ripetuto.
         courseF_bee_for1_b: Hai bisogno di due blocchi nel ciclo `ripeti ... volte` per raccogliere tutto il nettare.
       courseF_bee_for2_authored_hint:
-        courseF_bee_for2_a: Se sei confuso, lavora un fiore alla volta e prova spesso.
-        courseF_bee_for2_b: Ricordati di andare avanti tra ogni ciclo, cosi potrai raggiungere ogni fiore.
+        courseF_bee_for2_a: Se sei confuso, lavora su un fiore alla volta e prova ad eseguire il programma frequentemente.
+        courseF_bee_for2_b: Ricordati di andare avanti tra un ciclo e il successivo, cosi potrai raggiungere ogni fiore.
       courseF_bee_for2_2018_authored_hint:
-        courseF_bee_for2_a: Se sei confuso, lavora un fiore alla volta e prova spesso.
-        courseF_bee_for2_b: Ricordati di andare avanti tra ogni ciclo, cosi potrai raggiungere ogni fiore.
+        courseF_bee_for2_a: Se sei confuso, lavora su un fiore alla volta e prova ad eseguire il programma frequentemente.
+        courseF_bee_for2_b: Ricordati di andare avanti tra un ciclo e il successivo, cosi potrai raggiungere ogni fiore.
       courseF_bee_for4_authored_hint:
-        courseF_bee_for4_a: Usa un ciclo contatore che va da 1 a 7 con un incremento di uno per risolvere questo esercizio.
-        courseF_bee_for4_b: All'interno del tuo ciclo contatore, vorrai avere un comando `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for4_a: Usa un *ciclo con contatore* che va da 1 a 7 con un passo di 1 per risolvere questo esercizio.
+        courseF_bee_for4_b: All'interno del *ciclo con contatore*, dovrai avere un blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for4_c: Per raccogliere tutto il nettare, assicurati di usare la variabile `counter` (*contatore*) all'interno del ciclo annidato!
       courseF_bee_for4_2018_authored_hint:
-        courseF_bee_for4_a: Usa un ciclo contatore che va da 1 a 7 con un incremento di uno per risolvere questo esercizio.
-        courseF_bee_for4_b: All'interno del tuo ciclo contatore, vorrai avere un comando `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for4_a: Usa un *ciclo con contatore* che va da 1 a 7 con un passo di 1 per risolvere questo esercizio.
+        courseF_bee_for4_b: All'interno del *ciclo con contatore*, dovrai avere un blocco `vai avanti` e un ciclo per raccogliere il nettare.
         courseF_bee_for4_c: Per raccogliere tutto il nettare, assicurati di usare la variabile `counter` (*contatore*) all'interno del ciclo annidato!
       courseF_bee_for5_authored_hint:
-        courseF_bee_for5_a: Questa volta, il blocco `vai avanti` e il blocco `prendi il nettare`dovranno essere in cicli `ripeti ... volte` separati, entrambi all'interno dello stesso ciclo contatore.
-        courseF_bee_for5_b: Usa la variabile `contatore` in ogni ciclocosi che l'ape percorra distanze diverse tra ogni fiore.
+        courseF_bee_for5_a: Questa volta, il blocco `vai avanti` e il blocco `prendi il nettare` dovranno essere in cicli `ripeti ... volte` separati, entrambi all'interno dello stesso *ciclo con contatore*.
+        courseF_bee_for5_b: Usa la variabile `counter` (*contatore*) in ogni ciclo, in modo che l'ape percorra distanze diverse tra ogni fiore.
         courseF_bee_for5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_bee_for5_2018_authored_hint:
-        courseF_bee_for5_a: Questa volta, il blocco `vai avanti` e il blocco `prendi il nettare`dovranno essere in cicli `ripeti ... volte` separati, entrambi all'interno dello stesso ciclo contatore.
-        courseF_bee_for5_b: Usa la variabile `contatore` in ogni ciclocosi che l'ape percorra distanze diverse tra ogni fiore.
+        courseF_bee_for5_a: Questa volta, il blocco `vai avanti` e il blocco `prendi il nettare` dovranno essere in cicli `ripeti ... volte` separati, entrambi all'interno dello stesso *ciclo con contatore*.
+        courseF_bee_for5_b: Usa la variabile `counter` (*contatore*) in ogni ciclo, in modo che l'ape percorra distanze diverse tra ogni fiore.
         courseF_bee_for5_c: Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa accade, anche se non pensi di aver ancora risolto l'esercizio.
       courseF_bee_for6_authored_hint:
-        courseF_bee_for6_a: Non dimenticarti di usare la variabile `contatore` all'interno del ciclo `ripeti ... volte`.
-        courseF_bee_for6_b: All'interno del tuo ciclo contatore, vorrai avere un comando `vai avanti` e un ciclo per raccogliere il nettare.
-        courseF_bee_for6_c: Il ciclo dovrebbe contare **da 5 a 1**.
+        courseF_bee_for6_a: Non dimenticarti di usare la variabile `counter` (*contatore*) all'interno del ciclo `ripeti ... volte`.
+        courseF_bee_for6_b: All'interno del *ciclo con contatore*, dovrai avere un blocco `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for6_c: Il ciclo dovrà contare **da 5 a 1**.
       courseF_bee_for6_2018_authored_hint:
-        courseF_bee_for6_a: Non dimenticarti di usare la variabile `contatore` all'interno del ciclo `ripeti ... volte`.
-        courseF_bee_for6_b: All'interno del tuo ciclo contatore, vorrai avere un comando `vai avanti` e un ciclo per raccogliere il nettare.
-        courseF_bee_for6_c: Il ciclo dovrebbe contare **da 5 a 1**.
+        courseF_bee_for6_a: Non dimenticarti di usare la variabile `counter` (*contatore*) all'interno del ciclo `ripeti ... volte`.
+        courseF_bee_for6_b: All'interno del *ciclo con contatore*, dovrai avere un blocco `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for6_c: Il ciclo dovrà contare **da 5 a 1**.
       courseF_bee_for7_authored_hint:
-        courseF_bee_for7_a: Il ciclo contatore dovrà contare da 1 a 7 per 2.
-        courseF_bee_for7_b: All'interno del tuo ciclo contatore, vorrai avere un comando `vai avanti` e un ciclo per raccogliere il nettare.
-        courseF_bee_for7_c: Ricordati di usare la variabile `contatore` all'interno del ciclo `ripeti ... volte`.
+        courseF_bee_for7_a: Il *ciclo con contatore* dovrà contare da 1 a 7 a passi di 2.
+        courseF_bee_for7_b: All'interno del *ciclo con contatore*, dovrai avere un blocco `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for7_c: Ricordati di usare la variabile `counter` (*contatore*) all'interno del ciclo `ripeti ... volte`.
       courseF_bee_for7_2018_authored_hint:
-        courseF_bee_for7_a: Il ciclo contatore dovrà contare da 1 a 7 per 2.
-        courseF_bee_for7_b: All'interno del tuo ciclo contatore, vorrai avere un comando `vai avanti` e un ciclo per raccogliere il nettare.
-        courseF_bee_for7_c: Ricordati di usare la variabile `contatore` all'interno del ciclo `ripeti ... volte`.
+        courseF_bee_for7_a: Il *ciclo con contatore* dovrà contare da 1 a 7 a passi di 2.
+        courseF_bee_for7_b: All'interno del *ciclo con contatore*, dovrai avere un blocco `vai avanti` e un ciclo per raccogliere il nettare.
+        courseF_bee_for7_c: Ricordati di usare la variabile `counter` (*contatore*) all'interno del ciclo `ripeti ... volte`.
       courseF_bee_for9_authored_hint:
         courseF_bee_for9_a: |-
           Prova ad usare nel *ciclo con contatore* un valore della variabile `counter` che viene modificato con un blocco matematico man mano che ti sposti e raccogli il nettare.
@@ -6355,7 +6457,7 @@ it:
       grade1_adventurer_loops6_authored_hint:
         grade1_adventurer_loops6_a: Se hai problemi con questo esercizio, prova a disegnarlo su un pezzo di carta per aiutarti a capirlo.
       grade1_artist_loops1_authored_hint:
-        grade1_artist_loops1_a: Se vuoi che il ciclo si ripeta più di 4 volte, devi cambiare il numero in alto a destra nel blocco rosa del ciclo.
+        grade1_artist_loops1_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
       grade1_artist_loops2_authored_hint:
         grade1_artist_loops2_a: Ricordati che devi usare il ciclo `ripeti` per riuscire a risolvere l'esercizio!
       grade1_artist_loops4_authored_hint:
@@ -6751,17 +6853,17 @@ it:
         grade5_artist_variables_triangles1_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
         grade5_artist_variables_triangles1_c: All'interno del tuo ciclo, dovrai andare avanti di 50 pixel e poi girare a sinistra di 120 gradi.
       grade5_bee_for_loops10_authored_hint:
-        grade5_bee_for_loops10_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore a 12?\n\nRiesci a vedere lo schema?"
+        grade5_bee_for_loops10_a: "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore a 12?\n\nRiesci a individuare lo schema?"
       grade5_bee_for_loops11_authored_hint:
         NEW_Course_4_Bee_For_Loops_10a_a: Riesci a trovare una relazione tra il numero di passi che l'ape fa per arrivare al fiore ed il numero di dosi di nettare che deve raccogliere?
         NEW_Course_4_Bee_For_Loops_10a_b: Devi usare 2 blocchi `ripeti ... volte` e uno di questi deve usare un blocco con operazioni matematiche.
       grade5_bee_for_loops4_authored_hint:
-        grade5_bee_for_loops4_a: Usa un ciclo contatore che va da 1 a 7 con un incremento di uno per risolvere questo esercizio.
+        grade5_bee_for_loops4_a: Usa un *ciclo con contatore* che va da 1 a 7 con un passo di 1 per risolvere questo esercizio.
         grade5_bee_for_loops4_b: Per raccogliere tutto il nettare, assicurati di usare la variabile `counter` (*contatore*) all'interno del ciclo annidato!
       grade5_bee_for_loops6_authored_hint:
-        grade5_bee_for_loops6_a: Non dimenticarti di usare la variabile `contatore` all'interno del ciclo `ripeti ... volte`.
+        grade5_bee_for_loops6_a: Non dimenticarti di usare la variabile `counter` (*contatore*) all'interno del ciclo `ripeti ... volte`.
       grade5_bee_for_loops7_authored_hint:
-        grade5_bee_for_loops7_a: Il ciclo contatore dovrà contare da 1 a 7 per 2.
+        grade5_bee_for_loops7_a: Il *ciclo con contatore* dovrà contare da 1 a 7 a passi di 2.
       grade5_bee_for_loops9_authored_hint:
         NEW_Course_4_Bee_For_Loops_7_a: |-
           Prova ad usare nel *ciclo con contatore* un valore della variabile `counter` che viene modificato con un blocco matematico man mano che ti sposti e raccogli il nettare.
@@ -6779,7 +6881,7 @@ it:
       gradek_adventurer_loops7_challenge_authored_hint:
         gradek_adventurer_loops7_challenge_a: Il programma ti sembra troppo lungo? Prova a mettere due cicli `ripeti` dentro un altro ciclo per renderlo molto più breve!
       gradek_artist_loops3_authored_hint:
-        artistLoopsK2_a: Se vuoi che il ciclo si ripeta più di 4 volte, devi cambiare il numero in alto a destra nel blocco rosa del ciclo.
+        artistLoopsK2_a: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
       gradek_artist_loops4_authored_hint:
         artistLoopsK3_a: Prova a utilizzare quello che hai imparato sui blocchi di ripetizione per completare questo esercizio!
       gradek_artist_loops5_authored_hint:

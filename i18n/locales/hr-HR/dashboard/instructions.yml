@@ -153,6 +153,7 @@ hr:
       4-5 Maze Conditionals 9_instruction: |-
         Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?
       App Lab test_instruction: uvjet
+      Course 2 Bee Loops 1_instruction: 'Bok, ja sam pčelica. Možeš li mi pomoći pokupiti nektar s ovog cvijeća? '
       Course 4 SCFL 1a_instruction: Možeš li dovesti Scrata do žira koristeći što je manje blokova moguće?
       Course 4 SCFL 1b_instruction: Možeš li dovesti Scrata do žira koristeći što je manje blokova moguće?
       Crack Random Substitution_instruction: Upute
@@ -163,6 +164,7 @@ hr:
       K-1 Artist Loops 1_instruction: Nacrtaj ovu crtu krećući se 4 puta na Istok.
       K-1 Artist Loops 2_instruction: Sada nacrtaj istu crtu koristeći petlju.
       K-1 Artist Loops 3_instruction: Možeš li napraviti petlju od ovih blokova da nacrtaš 6 crta?
+      K-1 Artist1 8_instruction: Nacrtaj isprekidanu crtu koristeći blokove za skakanje i za crtanje
       K-1 Bee 15_instruction: Pokupi dva nektara i napravi dva meda!
       K-1 Bee 4_instruction: Pokupi dva nektara i zatim napravi dva meda!
       K-1 Bee 5_instruction: Pokupi tri nektara i zatim napravi tri meda!
@@ -188,6 +190,7 @@ hr:
       Kiki_StarWars_Test_5_instruction: tekst
       Kiki_StarWars_Test_5_Example_instruction: tekst
       MC HOC 2016 Level 3_instruction: "Odlično, pile se pomaklo! Ali tada je stalo. \nU igrama, pilići hodaju zauvijek. Koristi 'zauvijek radi' petlju da bi se pilići nastavili gibati.\n"
+      New Bounce Project_instruction: Napravi vlastitu igru Odbijanja. Možeš promijeniti sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima da isprobaju tvoju igru na svojim mobitelima.
       Overworld Avoid Monsters_instruction: "Naletjeti na \"creepera\" loša je ideja.\nOprezno se provucite pored Creepera do sigurnosti svog doma."
       Overworld Avoid Monsters_2018_instruction: "Naletjeti na \"creepera\" loša je ideja.\nOprezno se provucite pored Creepera do sigurnosti svog doma."
       Overworld Chop Tree - allthethings_instruction: Drvo je vrlo važan resurs. Mnoge stvari napravljeni su od drva. Prošetajte do stabla i nasjeckajte ga pomoću naredbe "uništiti blok".
@@ -232,6 +235,7 @@ hr:
       bounce_11_instruction: Sada možeš blokove prikačiti na blok "pri pokretanju". Trebaš dodati novi blok "ubaci novu loptu" na više mjesta. Također, pokušaj promijeniti scenu ili brzinu reketa i lopte te isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.
       bounce_11_2018_instruction: Sada možeš blokove prikačiti na blok "pri pokretanju". Trebaš dodati novi blok "ubaci novu loptu" na više mjesta. Također, pokušaj promijeniti scenu ili brzinu reketa i lopte te isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.
       bounce_12_instruction: Napravi vlastitu igru Odbijanja. Možeš promijeniti sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima da isprobaju tvoju igru na svojim mobitelima.
+      bounce_12_2018_instruction: Napravi vlastitu igru Odbijanja. Možeš promijeniti sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima da isprobaju tvoju igru na svojim mobitelima.
       bounce_1_2018_instruction: Dodaj blok na blok "kad lijeva strelica" i klikni na "Pokreni". Pomakni reket koristeći lijevu strelicu da dođeš do cilja.
       bounce_2_instruction: Dodaj blok na blokove "kad desna strelica" i "kad lijeva strelica". Pomiči reket da dođeš do oba cilja.
       bounce_2_2018_instruction: Dodaj blok na blokove "kad desna strelica" i "kad lijeva strelica". Pomiči reket da dođeš do oba cilja.
@@ -268,6 +272,7 @@ hr:
       courseD_bee_nestedLoops6_2018_instruction: Odvedi me do suncokreta!
       courseD_bounce_events10_instruction: Sada je gol na vrhu. Dodaj blokove "dodaj bod" i "dodaj bod protivniku" na blokove "kada je lopta u golu" i "kada lopta promaši reket" da bi napravio igru. Isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.
       courseD_bounce_events11_instruction: Sada možeš blokove prikačiti na blok "pri pokretanju". Trebaš dodati novi blok "ubaci novu loptu" na više mjesta. Također, pokušaj promijeniti scenu ili brzinu reketa i lopte te isprobaj koliko bodova možeš skupiti prije nego tvoj protivnik skupi dva boda.
+      courseD_bounce_events12_instruction: Napravi vlastitu igru Odbijanja. Možeš promijeniti sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima da isprobaju tvoju igru na svojim mobitelima.
       courseD_bounce_events2_instruction: Dodaj blok na blokove "kad desna strelica" i "kad lijeva strelica". Pomiči reket da dođeš do oba cilja.
       courseD_bounce_events3_instruction: Sad pokušaj nešto slično s blokom "kad strelica gore". Pomiči reket do cilja na vrhu.
       courseD_bounce_events3s_instruction: Sad pokušaj nešto slično s blokom "kad strelica gore". Pomiči reket do cilja na vrhu.
@@ -344,8 +349,10 @@ hr:
       level 'grade3_Loops_6_instruction: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\r\n\\r Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak koristeći što manje blokova."
       level 'grade3_Loops_8_instruction: Pokupi sav nektar i napravi sav med koristeći što je moguće manje blokova.
       level grade3_Loops_2_instruction: Ovaj put upotrijebi petlju da pokupiš sav nektar.
+      scrat 16 (copy 1)_instruction: Žir! Žir! Žir! Koristeći "ako" blok dovedi me do njega s najmanjim brojem blokova.
       scrat 16_instruction: Žir! Žir! Žir! Koristeći "ako" blok dovedi me do njega s najmanjim brojem blokova.
       scrat 17_instruction: Ok, hajdemo to napraviti ponovno za vježbu - ovo je vrlo slično, ali pazi na zid!
+      scrat 18 (copy 1)_instruction: Blok "ako-inače" provjerava uvjet, a onda napravi ILI jedno ILI drugo. Da bi me doveo do žira, probaj koristiti ovaj novi blok.
       scrat 18_instruction: Blok "ako-inače" provjerava uvjet, a onda napravi ILI jedno ILI drugo. Da bi me doveo do žira, probaj koristiti ovaj novi blok.
       scrat 19 (copy 1)_instruction: Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?
       scrat 19_instruction: Još jedna vježba s "ako-inače" blokom, možeš li je riješiti iz prvog pokušaja?

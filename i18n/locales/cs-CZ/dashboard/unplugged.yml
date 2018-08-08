@@ -80,7 +80,7 @@ cs:
         title: Funkční náhrdelníky
         desc: Studenti vytvoří algoritmus s proměnnými a funkcemi (kusy kódu, který chcete použít znovu a znovu) k vytvoření náhrdelníku pomocí provázku a korálků.
       SongwritingParameters:
-        title: Psaní písniček s parametry
+        title: Skládání písniček
         desc: Studenti používají koncept sboru v písni, aby se naučili předávání parametrů (které přizpůsobují funkce bez nutnosti celé funkce přepisovat).
       DiceRace:
         title: 'Algoritmy z reálného života: kostkový závod'
@@ -168,10 +168,10 @@ cs:
         title: Binární náramky
         desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než jedním způsobem.
       courseD_unplugged_graphPaperProgramming:
-        title: Programování na milimetrovém papíru
+        title: Programování Na Milimetrovém Papíru
         desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných příkazů k řízení svých spolužáků k reprodukci výkresu.
       courseD_unplugged_relayProgramming:
-        title: Štafetové programování
+        title: Relay programování
         desc: Studenti běží štafetový závod, kde kreslí pomlčky přes dvůr, aby napsali algoritmus založený na obrázku "programování s milimetrovým papírem". Mohou psát pouze jednu instrukci v době, a pokud je někde chyba, budou muset vymazat vše zpět do tohoto bodu.
       courseD_unplugged_conditionalsCards:
         title: Podmínky s kartami
@@ -191,7 +191,7 @@ cs:
         title: Crowdsourcing
         desc: Studenti používají crowdsourcing, problém-řešící techniku v informatice, dokončení úkolu společně s třídou je mnohem efektivněji, než když student se o to pokusí sám.
       courseE_unplugged_songwriting:
-        title: Psaní písniček s parametry
+        title: Skládání písniček
         desc: Studenti používají koncept sboru v písni, aby se naučili předávání parametrů (které přizpůsobují funkce bez nutnosti celé funkce přepisovat).
       courseF_unplugged_tangrams:
         title: Tangram algoritmy
@@ -220,7 +220,7 @@ cs:
         title: Velká událost
         desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
       GraphPaperProgramming_2018:
-        title: Programování na milimetrovém papíru
+        title: Programování Na Milimetrovém Papíru
         desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných příkazů k řízení svých spolužáků k reprodukci výkresu.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktivita bez počítače
@@ -247,4 +247,4 @@ cs:
       MoveItMoveIt_2018:
         title: Pohyb, pohyb
       RelayProgramming_2018:
-        title: Štafetové programování
+        title: Relay programování

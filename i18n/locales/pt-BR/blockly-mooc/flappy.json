@@ -43,7 +43,7 @@
   "setBackgroundUnderwater": "escolha o cenário Subaquático",
   "setBackgroundCave": "escolha o cenário Caverna",
   "setBackgroundSanta": "escolha o cenário de Natal",
-  "setBackgroundTooltip": "Define a imagem de fundo",
+  "setBackgroundTooltip": "Define a imagem do plano de fundo",
   "setGapRandom": "escolha uma abertura de tamanho aleatório",
   "setGapVerySmall": "escolha uma abertura bem pequena",
   "setGapSmall": "escolha uma abertura pequena",
@@ -127,7 +127,7 @@
   "whenCollideObstacleTooltip": "Execute as ações abaixo quando o passarinho atingir um obstáculo.",
   "whenEnterObstacle": "quando passar o obstáculo",
   "whenEnterObstacleTooltip": "Execute as ações abaixo quando o passarinho atingir um obstáculo.",
-  "whenRunButtonClick": "Quando o jogo começar",
+  "whenRunButtonClick": "quando o jogo começa",
   "whenRunButtonClickTooltip": "Execute as ações abaixo quando o jogo começar.",
   "yes": "Sim"
 }

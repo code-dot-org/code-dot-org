@@ -43,9 +43,6 @@ const ErrorType = {
 
 class TeacherFeedback extends Component {
   static propTypes = {
-    //temp prop for which version to display (stable, released 2018-teacher-experience, or internal, developer version)
-    withUnreleasedFeatures: PropTypes.bool,
-
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']),
     serverLevelId: PropTypes.number,
@@ -132,50 +129,41 @@ class TeacherFeedback extends Component {
 
     return (
       <div>
-        {!this.props.withUnreleasedFeatures &&
-          <div style={styles.content}>
-            Coming soon: You’ll be able to use this tab to give feedback to your students about their work.
-          </div>
+        {this.state.errorState === ErrorType.Load &&
+          <span>
+            <i className="fa fa-warning" style={styles.errorIcon}/>
+            {i18n.feedbackLoadError()}
+          </span>
         }
-        {this.props.withUnreleasedFeatures &&
-          <div>
-            {this.state.errorState === ErrorType.Load &&
+        <textarea
+          id="ui-test-feedback-input"
+          style={styles.textInput}
+          onChange={this.onCommentChange}
+          placeholder={placeholderText}
+          value={this.state.comment}
+        />
+        <div style={styles.footer}>
+          <div style={styles.button}>
+            <Button
+              id="ui-test-submit-feedback"
+              text={buttonText}
+              onClick={this.onSubmitFeedback}
+              color={Button.ButtonColor.blue}
+              disabled={buttonDisabled}
+            />
+            {this.state.errorState === ErrorType.Save &&
               <span>
                 <i className="fa fa-warning" style={styles.errorIcon}/>
-                {i18n.feedbackLoadError()}
+                {i18n.feedbackSaveError()}
               </span>
             }
-            <textarea
-              id="ui-test-feedback-input"
-              style={styles.textInput}
-              onChange={this.onCommentChange}
-              placeholder={placeholderText}
-              value={this.state.comment}
-            />
-            <div style={styles.footer}>
-              <div style={styles.button}>
-                <Button
-                  id="ui-test-submit-feedback"
-                  text={buttonText}
-                  onClick={this.onSubmitFeedback}
-                  color={Button.ButtonColor.blue}
-                  disabled={buttonDisabled}
-                />
-                {this.state.errorState === ErrorType.Save &&
-                  <span>
-                    <i className="fa fa-warning" style={styles.errorIcon}/>
-                    {i18n.feedbackSaveError()}
-                  </span>
-                }
-              </div>
-              {this.state.latestFeedback.length > 0 &&
-                <div style={styles.time} id="ui-test-feedback-time">
-                  {i18n.lastUpdated({time: moment(latestFeedback.created_at).fromNow()})}
-                </div>
-              }
-            </div>
           </div>
-        }
+          {this.state.latestFeedback.length > 0 &&
+            <div style={styles.time} id="ui-test-feedback-time">
+              {i18n.lastUpdated({time: moment.min(moment(), moment(latestFeedback.created_at)).fromNow()})}
+            </div>
+          }
+        </div>
       </div>
     );
   }

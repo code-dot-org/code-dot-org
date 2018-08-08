@@ -139,7 +139,7 @@ ro:
             Bounce:
               name: Săritură
             Computational Thinking:
-              name: Gândire de Calcul
+              name: Gândire Computațională
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
             Dice Race:
@@ -157,7 +157,7 @@ ro:
             'Maze: Conditionals':
               name: 'Labirint: Condiţionale'
             Songwriting:
-              name: Compoziții muzicale cu parametri
+              name: Compunând Cântece
             'Studio: Create a Game':
               name: 'Laboratorul de Joacă: Creează un Joc'
             'Studio: Create a Story':
@@ -187,7 +187,7 @@ ro:
               name: Labirint
           description_audience: "[șir gol]"
         frozen:
-          title: Codați cu Anna și Elsa
+          title: Programati cu Anna și Elsa
           description: Hai să folosim programarea pentru a ne alătura Annei şi Elsei
             în timp ce explorează magia şi frumuseţea gheței. Veţi crea fulgi de zăpadă
             şi modele ca la patinaj şi veți face un paradis de iarnă, pe care apoi
@@ -442,7 +442,7 @@ ro:
             Algorithms:
               name: Algoritmi
             Computational Thinking:
-              name: Gândire de Calcul
+              name: Gândire Computațională
             Conditionals:
               name: Condiţionale
             Functions:
@@ -450,11 +450,11 @@ ro:
             Graph Paper Programming:
               name: Programare pe Hârtie Milimetrică
             Introduction to Computer Science:
-              name: Introducere în Tehnologia calculatorului si programare
+              name: Introducere în Informatică
             Relay Programming:
               name: Programare de releu
             Song Writing:
-              name: Compunerea muzicală
+              name: Compunere muzicală
             The Artist:
               name: Artistul
             The Artist 2:
@@ -550,6 +550,8 @@ ro:
             Puzzles:
               name: Puzzle-uri
         cspunit1:
+          description_short: Unitatea aceasta este o versiune pilot care nu mai este
+            suportata. Poti gasi noua unitate la code.org/educate/csp.
           stages:
             Binary Numbers:
               name: Numerele binare
@@ -621,6 +623,8 @@ ro:
         rbo-reference:
           description_audience: "[șir gol]"
         cspunit3:
+          description_short: Unitatea aceasta este o versiune pilot care nu mai este
+            suportata. Poti gasi noua unitate la code.org/educate/csp.
           description_audience: "[șir gol]"
           stages:
             Creating Functions:
@@ -689,6 +693,8 @@ ro:
         Testing:
           description_audience: "[șir gol]"
         cspunit2:
+          description_short: Unitatea aceasta este o versiune pilot care nu mai este
+            suportata. Poti gasi noua unitate la code.org/educate/csp.
           stages:
             Packets and Making a Reliable Internet:
               name: Pachete și construcția unui internet fiabil
@@ -898,7 +904,7 @@ ro:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
             Songwriting:
-              name: Compoziții muzicale cu parametri
+              name: Compunând Cântece
             The Big Event:
               name: Marele eveniment
         vigenere:
@@ -971,20 +977,20 @@ ro:
               name: Laboratorul Joaca Gumball
         starwars:
           title: 'Star Wars: Programarea unei galaxii'
-          description: Invata sa programezi droizi si creeaza-ti propriul joc Star
-            Wars intr-o galaxie foarte indepartata.
-          description_short: Invata sa programezi droizi si creeaza-ti propriul joc
-            Star Wars intr-o galaxie foarte indepartata.
+          description: Învață să programezi droizi si creează-ți propriul joc Star
+            Wars într-o galaxie foarte îndepărtată.
+          description_short: Învață să programezi droizi si creează-ți propriul joc
+            Star Wars într-o galaxie foarte îndepărtată.
           description_audience: "[șir gol]"
           stages:
             Hour of Code 2015:
               name: Ora de cod 2015
         starwarsblocks:
           title: 'Star Wars: Programarea unei galaxii'
-          description: Invata sa programezi droizi si creeaza-ti propriul joc Star
-            Wars intr-o galaxie foarte indepartata.
-          description_short: Invata sa programezi droizi si creeaza-ti propriul joc
-            Star Wars intr-o galaxie foarte indepartata.
+          description: Învață să programezi droizi si creează-ți propriul joc Star
+            Wars într-o galaxie foarte îndepărtată.
+          description_short: Învață să programezi droizi si creează-ți propriul joc
+            Star Wars într-o galaxie foarte îndepărtată.
           description_audience: "[șir gol]"
           stages:
             Hour of Code 2015:
@@ -1006,8 +1012,12 @@ ro:
             Wrap-Up:
               name: Revizuire
         cspunit5:
+          description_short: Unitatea aceasta este o versiune pilot care nu mai este
+            suportata. Poti gasi noua unitate la code.org/educate/csp.
           description_audience: "[șir gol]"
         cspunit4:
+          description_short: Unitatea aceasta este o versiune pilot care nu mai este
+            suportata. Poti gasi noua unitate la code.org/educate/csp.
           description_audience: "[șir gol]"
         cspunit6:
           description_audience: "[șir gol]"
@@ -1221,7 +1231,7 @@ ro:
             Digital Citizenship:
               name: Cetățenia Digitală
             Songwriting:
-              name: Compoziții muzicale cu parametri
+              name: Compunând Cântece
         grade1:
           stages:
             Events:
@@ -1557,7 +1567,7 @@ ro:
             Hour of Code 2013:
               name: Ora de Programare 2013
         sports:
-          title: Prorgramează propriul joc sportiv
+          title: Propgrameaza propriul joc sport
           description_audience: "[șir gol]"
           description_short: Amesteca si potriveste sporturile
           description: Amesteca si potriveste sporturile
@@ -2362,7 +2372,7 @@ ro:
             Conditionals with Cards:
               name: Condiționale cu Carduri
             'Functions: Songwriting':
-              name: Compoziții muzicale cu parametri
+              name: Compunând Cântece
             Envelope Variables:
               name: Variabile de tip plic
             For Loop Fun:
@@ -2642,7 +2652,7 @@ ro:
             Introduction:
               name: Introducere
             'Functions: Songwriting':
-              name: Compoziții muzicale cu parametri
+              name: Compunând Cântece
             Functions in Harvester:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"

@@ -49,7 +49,7 @@ da:
         edit_get_nectar: Brug denne knap til at redigere funktionen og ændre den retning,
           som bien vil dreje for at hente nektar.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Tryk "Kør" for at starte dit program
+        Course 4 Maze 1_callout1: Tryk på "Kør" for at prøve dit program
       Course 4 Maze 4_callout:
         repeat: Sæt blokke indeni løkken for at gentage kommandoer
       Course 4 Play Lab Params 3_callout:
@@ -136,9 +136,9 @@ da:
         craft_callout_preplaced_house: Koden vil starte opførelsen af dit hus. Kan
           du fuldende den?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Tryk "Kør" for at starte dit program
+        craft_run_button_callout: Tryk på "Kør" for at prøve dit program
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Tryk "Kør" for at starte dit program
+        craft_run_button_callout: Tryk på "Kør" for at prøve dit program
       Overworld Place Wall_callout:
         craft_inside_repeat: Gentag handlinger ved at placere blokke herinde
       Overworld Place Wall_2018_callout:

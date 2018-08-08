@@ -415,9 +415,9 @@ es-MX:
         text: "Necesitas arrastrar los bloques desde la caja de herramientas al espacio de trabajo. Asegúrate de dejarlos debajo del bloque \"cuando se ejecuta\", y cuando creas que tienes la solución correcta, pulsa en \"ejecutar\" y observa cómo el pájaro va hacia el cerdo."
     C1_maze_loops:
       1:
-        text: "Una cosa en la que las computadoras son muy buenas es repetir instrucciones. Como persona, te aburrirías mucho si tuvieras que hacer lo mismo muchas veces seguidas. Pero una computadora puede hacer lo mismo millones o incluso miles de millones de veces sin aburrirse, y llevarlo a cabo perfectamente."
+        text: "Una cosa que las computadoras hacen muy bien es repetir instrucciones. Como persona, te aburrirías mucho si tuvieras que hacer lo mismo muchas veces seguidas. Pero una computadora puede hacer lo mismo millones o incluso miles de millones de veces sin aburrirse, y llevarlo a cabo perfectamente."
       2:
-        text: "Por ejemplo, si yo quisiera felicitar a todo el mundo en Facebook por su cumpleaños enviándoles un mensaje de correo electrónico, me podría llevar más de un siglo poder escribir todos esos mensajes a todo el mundo. Pero con unas pocas líneas de código puedo hacer que una máquina envíe un mensaje de correo electrónico a todo el mundo en Facebook felicitándoles por su cumpleaños."
+        text: "Por ejemplo, si yo quisiera felicitar a todo el mundo en Facebook por su cumpleaños enviándoles un mensaje de correo electrónico, me podría llevar más de un siglo poder escribir todos esos mensajes a todo el mundo. Pero con unas pocas líneas de código puedo hacer un sistema que envíe un mensaje de correo electrónico a todo el mundo en Facebook, felicitándoles por su cumpleaños."
       3:
         text: "Para llevar el pájaro al cerdo en este nivel, en lugar de arrastrar tres bloques norte al espacio de trabajo, utilizarás el bloque \"repetir\". Arrastra el bloque \"repetir\" al espacio de trabajo e introduce el número 3. Entonces arrastra el bloque \"mover al norte\" dentro de bloque \"repetir\" y pulsa \"ejecutar\" para ver si has acertado. Felicitaciones, ¡lo conseguiste!"
     C1_moveitmoveit_unplugged:
@@ -1131,7 +1131,7 @@ es-MX:
       7:
         text: "En el centro están las herramientas. Estos bloques son comandos para dar órdenes a Alex."
       8:
-        text: "El espacio blanco de la derecha se llama zona de trabajo y es donde crearemos nuestro programa."
+        text: "El espacio en blanco a la derecha se llama espacio de trabajo y es aquí donde construimos nuestro programa."
       9:
         text: "Si arrastramos el bloque \"avanzar\" a la zona de trabajo y hacemos clic en Ejecutar, ¿qué sucede? Que Alex avanza un espacio en la cuadrícula."
       10:
@@ -1229,7 +1229,7 @@ es-MX:
       5:
         text: "El área del medio es de la caja de herramientas y cada uno de estos bloques es un pedazo de código."
       6:
-        text: "El espacio blanco de la derecha se llama zona de trabajo y es donde crearemos nuestro programa."
+        text: "El espacio en blanco a la derecha se llama espacio de trabajo y es aquí donde construimos nuestro programa."
       7:
         text: "Para empezar, necesitarás unir tus bloques al bloque naranja, llamado \"cuando se ejecuta\". Puedes unir múltiples bloques arrastrándolos hacia fuera hasta que veas la línea amarilla, y luego encajarán todos a la vez."
       8:

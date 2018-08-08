@@ -64,6 +64,7 @@ class HttpCache
       'callouts_seen',
       'rack.session',
       'remember_user_token',
+      '__profilin', # Used by rack-mini-profiler
       session_key,
       storage_id,
     ].concat(default_cookies)

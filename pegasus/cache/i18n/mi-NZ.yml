@@ -10,7 +10,7 @@ mi-NZ:
     Explorer 8, 9, and 10. Tēna, whakahoungia tō pūtitotiro.
   upgrade_ie_link: Me ako tonu
   en: Pūtaiao Rorohiko
-  computer_science_edweek: Te Wiki o te Pūtaiao Rorohiko
+  computer_science_edweek: E tata mai ana te Hour of Code
   csedweek_dates: 8-14 Hakihea, 2014
   csedweek_banner_hoc: 'E tata mai ana te <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hour of Code</a>. Kei te karangahia
@@ -74,6 +74,7 @@ mi-NZ:
   gender: Ira
   learn_back_to_minecraft: Kia kaha tonu ki te ako me Mahimaina
   studiobar_flappy_title: Waehere Flappy
+  studiobar_donate_title: Tāpaetia he koha
   homepage_hero_text_malala: "&ldquo;E whakatara ana ahau i ngā kōtiro puta noa i
     te ao kia ako i tētahi Hour of Code&rdquo; Malala, kaiwhakawhiwhi ki te Tohu Nobel
     Peace"
@@ -168,13 +169,14 @@ mi-NZ:
   homepage_header_codestudio: Ngā waihangatanga nā ngā ākonga i Code Studio
   homepage_header_donors: Ka mihia ōna kaitautoko e Code.org
   homepage_donors_seall: Tirohia te katoa
+  homepage_donors_donate: Tāpaetia he koha
   homepage_below_hero_announcement_link_text: Me ako tonu
   starwars_blocks_title: Ngā Paraka
   mc_name: Hour of Code Mahimaina
-  mc_longdescription: Whakamahia ngā paraka waehere ki te kawe haere i te Steve, i
-    a Alex rānei i tētahi mahi mātātoa ki te ao Mahimaina nei.
-  mc_shortdescription: Whakamahia ngā paraka waehere ki te kawe haere i te Steve,
-    i a Alex rānei i tētahi mahi mātātoa ki te ao Mahimaina nei.
+  mc_longdescription: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex
+    rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
+  mc_shortdescription: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex
+    rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
   minecraft_designer: Pūhoahoa Mahimaina
   minecraft_adventurer: Kiri Māia Mahimaina
   minecraft_tutorials: Whakaakoranga Hour of Code Mahimaina

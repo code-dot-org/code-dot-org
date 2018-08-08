@@ -216,7 +216,7 @@ sq:
       2-3 Maze Loops 17_instruction: Më ço tek luledielli!
       2-3 Maze Loops 18_instruction: "Më ço tek luledielli!"
       2-3 Maze Loops 19_instruction: "Më ço tek luledielli!"
-      2-3 Maze Loops 20_instruction: Më ço tek luledielli!
+      2-3 Maze Loops 20_instruction: "A mund ta zgjidhësh këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve?"
       2-3 Maze Loops 21_instruction: Më ço tek luledielli!
       2-3 Maze Loops Assessment 1_instruction: "Vlerësim: Më ço tek luledielli\nduke përdorur vetëm 5 blloqe! "
       2-3 Maze sq10_instruction: Më ço tek derrkuci! Çfarë blloqesh u përsëritën?
@@ -254,11 +254,11 @@ sq:
       20hr_maze_stage2_16_instruction: Une dua lulen e diellit! Përdor një bllok "nëse", për të më çuar mua atje me numrin më të pakët të blloqeve.
       20hr_maze_stage2_17_instruction: Në rregull, le ta bëjmë përsëri për tu praktikuar - kjo nuk është shumë e ndryshme, por kujdes nga chompers!
       20hr_maze_stage2_18_instruction: Blloqet "nëse-përndryshe" kërkojnë një kusht që bën një gjë OSE një gjë tjetër. Për të më çuar tek luledielli përpiqu të përodrësh këtë bllok të ri.
-      20hr_maze_stage2_19_instruction: Edhe një herë praktikohu me bllokun "nëse-përndryshe", mund ta bësh si duhet me përpjekjen e parë?
+      20hr_maze_stage2_19_instruction: "Një praktikë më shumë për bllokun\n\"if-else\", a mund ta bësh si duhet me përpjekjen e parë?"
       20hr_maze_stage2_2_instruction: Ky derrkuci po më bezdis. Më ndihmo t'a gjej!
       20hr_maze_stage2_20_instruction: A mund të shtosh thjesht 3 blloqe për të më ndihmuar mua të zgjidh një maze të vështirësuar? Nëse e bën si duhet, unë mund të ec në çdo rrugë të dredhuar pa marrë parasysh gjatësinë.
       20hr_maze_stage2_3_instruction: Ndiq gjurmët dhe më drejto për tek derrkuci budalla. Shmang TNT-në ose përndryshe do të ikin puplat!
-      20hr_maze_stage2_4_instruction: Më udhëhiq për tek ligësia jeshile! (Kujdes nga TNT)
+      20hr_maze_stage2_4_instruction: Me udhëhiq për tek green evilness! (Kujdes nga TNT)
       20hr_maze_stage2_5_instruction: Ruaj qetësinë dhe më ndihmo të gjej derrkucin e keq! Përndryshe do të nevrikosem!
       20hr_maze_stage2_6_instruction: Ka një mënyrë për të shkuar tek derrkuci budalla duke përdorur 2 blloqe. E gjen dot cila është?
       20hr_maze_stage2_7_instruction: Përpiqu të më çosh tek ai i keqi i gjelbër duke përdorur vetëm tre blloqe.
@@ -319,7 +319,7 @@ sq:
       4-5 Artist Patterns 2_instruction: "Nëse ti vendos ciklin e katrorit tënd brenda një cikli tjetër,\nne e thërrasim një cikël të mbivendosur. Çfarë të duhet për të shtuar tek cikli jot i jashtëm\npër tu siguruar se të 15 katrorët rreshtohen pas njëri tjetrit?"
       4-5 Artist Patterns 3_instruction: "Tani le të shkojmë një nivel më thellë! Ne kemi\nmbivendosur gjithë bllokun e kodit në një cikël tjetër, por ti ke nevojë të arrish \nartistin mbrapsht për të vizatuar rreshtin tjetër. Cilin nga këto blloqe kodi mund \ntë vendosësh në fund të pozicionit për të vizatuar gjithë rrejtën?"
       4-5 Artist Patterns 4_instruction: "Ky diamant ka brinjë 50 piksela dhe kënde\n120 dhe 060 gradë. Përdor një cikël për ta vizatuar."
-      4-5 Artist Patterns 5.5_instruction: "Sa herë duhet të përsërisësh\nkëtë bllok për të vizatuar gjithë rrjetën me diamantë?"
+      4-5 Artist Patterns 5.5_instruction: "Sa herë do të duhet të përsërisësh këtë\nbllok për të vizatuar të gjithë rrjetën e diamantëve?"
       4-5 Artist Patterns 5_instruction: "Le të përsërisim për të bërë një rresht me 6 diamantë.\nVërej që ne kemi ndryshuar kodin e diamantit tonë për tu përsëritur 3 herë në vend të 2 herë - si mendon pse është bërë kjo?"
       4-5 Artist Patterns 6_instruction: "Sa herë do të duhet të përsërisësh këtë\nbllok për të vizatuar të gjithë rrjetën e diamantëve?"
       4-5 Artist Patterns 7_instruction: "Le të modifikojmë kodin nga puzzle i fundit\npër të bërë këtë model më kompleks. Shiko se si diamantet mbivendosen tani, përpiqu\ntë ndryshosh  \"kërcimet mbrapsht\" të parat nga 100 në 50 (gjysma aq larg) - tani sa larg\nduhet të shkojë artisti në \"kërcimet mbrapsht\" të dyta?"
@@ -374,7 +374,7 @@ sq:
       4-5 Maze 13_instruction: Më ço tek derrkuci!
       4-5 Maze 14_instruction: Me ço tek derrkuci! Përdor bllokun Repeat until.
       4-5 Maze 2 (copy 1)_instruction: "Çoje zombin tek luledielli, por shmang\npërtypjen!"
-      4-5 Maze 2_instruction: Çoje zombin tek luledielli, por shmang përtypjen!
+      4-5 Maze 2_instruction: "Çoje zombin tek luledielli, por shmang\npërtypjen!"
       4-5 Maze 3 (copy 1)_instruction: Duhet... të arrij... tek luledielli.
       4-5 Maze 3_instruction: Duhet... të arrij... tek luledielli.
       4-5 Maze 4 (copy 1)_instruction: Provo bllokun "repeat" për të përdorur më pak blloqe...
@@ -426,14 +426,14 @@ sq:
       4-5 While Loops 8_instruction: " Është një gropë vërtetë e thellë dhe një\ngrumbull vërtet i madh me dhe. Sa lopata me dhe nevojiten për tu hequr rreth\ntokës që të bëhet e sheshtë? Ndihmë: Përdor ciklin while për të dyja."
       4-5 While Loops Assessment 1_instruction: "Ka shumë gropa dhe\ngrumbuj. Më ndihmo të mbush gropat e të heq grumbujt që të bëj tokën e sheshtë."
       App Lab test_instruction: test
-      Artist - Nested Loops 1_instruction: "Plotëso kodin për të vizatuar këta\ntrekëndorë. I pari është bërë për ty. Ndihmë: 3 trekëndorë në një rrotullim\n360 gradë."
-      Artist - Nested Loops 10_instruction: "Vizato rreshtin e fundit të yjeve në këtë flamur\nduke cikluar blloqet e dhënë. Yjet janë 50 piksela larg, por kujto\nqë yjet vetë janë 30 piksela të gjerë."
-      Artist - Nested Loops 11_instruction: "A mund të vizatosh 10 katrorë të kësaj\nrruge duke përdorur një cikël të mbivendosur? Çdo katror është 30 piksela."
-      Artist - Nested Loops 12_instruction: "A mund ti vizatosh këto 36 trekëndorë duke përdorur\nnjë cikël të mbivendosur?"
+      Artist - Nested Loops 1_instruction: "Plotëso kodin për të vizatuar këta\ntrekëndësh. I pari është bërë për ty. Ndihmë: 3 trekëndëshi në një rrotullim\n360 gradë."
+      Artist - Nested Loops 10_instruction: Vizato rreshtin e fundit te ketij flamuri duke lidhur blloqet e dhëna. Yjet janë 50 piksel larg, por mos harro që vet yjet janë 30 piksel të gjerë.
+      Artist - Nested Loops 11_instruction: Mund të vizatosh këto 10 rretha në trotuar duke përdorur një cikël të mbivendosur? Secili rreth është 30 piksel.
+      Artist - Nested Loops 12_instruction: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       Artist - Nested Loops 2_instruction: "Tani mbivendos këtë cikël brenda një tjetri\ncikël për të vizatuar 10 trekëndorë. Ky quher një cikël i mbivendosur. Ndihmë: Të 10-të trekëndorët\nbëjnë një rrotullim prej 360 gradësh.  "
       Artist - Nested Loops 3_instruction: "Krijo një diell duke mbivendosurkodin e fillimit\nnë një cikël tjetër. Ky është quajtur një cikël i mbivendosur.\\r\n"
       Artist - Nested Loops 5_instruction: Ciklo kodin e dhënë për të krijuar një mulli ere.
-      Artist - Nested Loops 6_instruction: "A mund të vizatosh një gjashtëkëndësh duke cikluar\nkodin e trekëndorit?"
+      Artist - Nested Loops 6_instruction: Mund te vizatosh një gjashtëkëndesh duke cikluar kodin e trekëndëshit?
       Artist - Nested Loops 7_instruction: "Ciklo këtë dizenjim 10 herë. Sa\nduhet të kthehesh çdo herë që ti ciklon? (Ndihmë: Sa është 360 pjestuar me 10?)"
       Artist - Nested Loops 8_instruction: "Ciklo këtë dizenjim 6 herë. Sa\nduhet të kthehesh çdo herë që ti ciklon? (Ndihmë: Sa është 360 pjestuar me 6?)"
       Artist - Nested Loops 9_instruction: Vizato dhëmbët në gojën e krokodilit!
@@ -465,9 +465,9 @@ sq:
       C3-Farmer While Loops 2_instruction: "Më lëviz mua për te grumbulli me dhe dhe hiqe\natë me 5 lopata të mëdha, duke përdorur bllokun 'remove'."
       C3-Farmer While Loops 3_instruction: "Më lëviz mua për te grumbulli dhe hiqe\ntë gjithën, më pas lëvize te gropa dhe mbushe atë komplet. Ndihmë: Përdor sa më pak blloqe\ntë jetë e mundur."
       C3-Farmer While Loops 4_instruction: "Wow, unë gjeta një gropë vërtet të thellë! Unë nuk\ne di sa lopata me dhe nevojiten. A mund të shkruash një program që mbush\natë derisa toka të jetë e sheshtë? Ndihmë: Përpiqu të përdorësh ciklin while këtë herë."
-      C3-Farmer While Loops 5_instruction: "Wow, tani janë dy gropa të thella! Mund\ntë shkruash një program që mbush të dyja derisa toka të jetë e sheshtë?"
-      C3-Farmer While Loops 6_instruction: "Wow, tani është një grumbull i madh me dhe!\nA mund të shkruash një program që heq të gjithin që toka të jetë e sheshtë?"
-      C3-Farmer While Loops 7_instruction: "Wow, tani janë tre grumbuj me dhe!\nA mund të shkruash një program që heq secilin nga ata derisa toka të jetë e sheshtë?"
+      C3-Farmer While Loops 5_instruction: "Uou, tani janë dy gropa të thella! Mund\ntë shkruash një program që mbush të dyja derisa toka të jetë e sheshtë?"
+      C3-Farmer While Loops 6_instruction: "Uou, tani është një grumbull i madh me dhe!\nA mund të shkruash një program që heq të gjithin që toka të jetë e sheshtë?"
+      C3-Farmer While Loops 7_instruction: "Uou, tani janë tre grumbuj me dhe!\nA mund të shkruash një program që heq secilin nga ata derisa toka të jetë e sheshtë?"
       C3-Farmer While Loops 8_instruction: " Është një gropë vërtetë e thellë dhe një\ngrumbull vërtet i madh me dhe. Sa lopata me dhe nevojiten për tu hequr rreth\ntokës që të bëhet e sheshtë? Ndihmë: Përdor ciklin while për të dyja."
       C3-Farmer While Loops Assessment 1_instruction: "Ka shumë gropa dhe\ngrumbuj. Më ndihmo të mbush gropat e të heq grumbujt që të bëj tokën e sheshtë."
       Calc Circles of Eval .2_instruction: "Ky Bllok Vlerësimi është një funksion\nshumëzimi i cili merr 2 numra dhe kthen prodhimin e atyre numrave.\nRedakto kët bllok që të shumëzojë 2*5"
@@ -486,7 +486,7 @@ sq:
       Calc Define Funcs 2_instruction: "Shkruaj një funksion \"f\" që merr një parametër\n\"x\" dhe kthen x - 10. Testo funksionin tënd duke përdorur f(15)."
       Calc Vars 3 (copy 1)_instruction: "A mund të shtosh tek ky kod që të llogarisë\nse sa orë ka në vitet e \"moshës\"?"
       Calc Vars 4_instruction: "Ne gjithashtu mund të vendosim variable duke përdorur variabla të tjerë.\nLe të themi se ke një vëlla që është dy vite më i vogël se ju - a mund të\nvendosësh ti një variabël të ri \"mosha-vëllait\" duke përdorur variablin e \"moshës\" tënde?"
-      Code Studio Puzzle Challenge 1 - Artist_instruction: "Vizato vijën. Është\n200 piksela e gjatë. "
+      Code Studio Puzzle Challenge 1 - Artist_instruction: "Vizato vijën. Është 200\npiksela e gjatë. "
       Code Studio Puzzle Challenge 1 Artist1_instruction: "Vizato vijën. Është 200\npiksela e gjatë. "
       Code Studio Puzzle Challenge 10 - Bee (copy 1)_instruction: "Lëvize Bletën tek lulja\ndhe merr gjithë nektarin."
       Code Studio Puzzle Challenge 10 - Bee_instruction: "Lëvize Bletën tek lulja\ndhe merr gjithë nektarin."
@@ -496,7 +496,7 @@ sq:
       Code Studio Puzzle Challenge 2 - Artist_instruction: "Tani shto një kthim dhe një vijë\ntjetër. Vijat janë 200 piksela të gjata."
       Code Studio Puzzle Challenge 3 - Artist_instruction: "Vizato katrorin. Secila\nbrinjë është 100 piksela e gjatë."
       Code Studio Puzzle Challenge 4 - Artist_instruction: "Vizato tetëkëndëshin. Secila\nbrinjë është 100 piksela e gjatë."
-      Code Studio Puzzle Challenge 5 - Bee (copy 1)_instruction: "Lëvize Bletën tek\nlulja dhe merr nektarin."
+      Code Studio Puzzle Challenge 5 - Bee (copy 1)_instruction: "Lëvize Bletën tek lulja\ndhe merr nektarin."
       Code Studio Puzzle Challenge 5 - Bee_instruction: "Lulet përmbajnë një sasi\ntë caktuar nektari. Lëvize Bletën tek lulja dhe mblidh nektarin me bllokun\nget nectar."
       Code Studio Puzzle Challenge 6 - Bee_instruction: "Kosheret mund të mbajnë një sasi\ntë caktuar mjalti. Merr nektarin nga lulja dhe bëj mjaltë."
       Code Studio Puzzle Challenge 7 - Bee_instruction: "Lëvize Bletën tek lulja\ndhe merr nektarin."
@@ -506,7 +506,7 @@ sq:
       Code Studio Puzzle Challenge Artist Screencast_instruction: "Vizato vijën.\nSecili segment është 100 piksela i gjatë. "
       Code Studio Puzzle Challenge Bee Screencast_instruction: "Lëvize Bletën tek\nlulet dhe merr gjithë nektarin."
       Code Studio Puzzle Challenge Square - Artist_instruction: "Vizato një katror duke përdorur\nvariablin e dhënë gjatësia."
-      Course 2 Bee Loops 1_instruction: "Përshëndetje, unë jam një bletë. A mund të më ndihmosh të mbledh\nnektarin nga këto lulet? "
+      Course 2 Bee Loops 1_instruction: 'Ckemi, unë jam një bletë. Mund të më ndihmosh të mbledh nektarin nga këto lule?'
       Course 2 Bee Loops 13_instruction: "Vlerësim: Përdor bllokun repeat për të mbledhur\ngjithë nektarin."
       Course 2 Bee Loops 2_instruction: "A mund të bësh të njëjtën detyrë më lehtë me\nnjë cikël?"
       Course 2 Bee Loops 3_instruction: "Tani përdor bllokun e ri repeat për të mbledhur\ngjithë nektarin dhe bëj mjaltin."
@@ -675,12 +675,12 @@ sq:
       Course 4 Bee Params 4 backup_instruction: A nuk do te ishte super sikur te mund te mblidhnim gjithe kete nektar me nje komande te vetme? Perpiqu te shtosh nje parameter te ri ne komanden tende te quajtur "nektaret" per te kontrolluar sasine e nektarit per t'u mbledhur. Mbase do te duash t'ia ndryshosh emerimin edhe komandes!
       Course 4 Bee Params 4_instruction: Perpiqu te perdoresh komanden e re per te mbledhur te gjitha lulet. Mos harro te perdoresh variablen e majte dhe te djathte.
       Course 4 Bee Params 5_instruction: Le te fillojme nga fillimi-mund te krijosh nje komande te re "merr 5 nektar" me parameter te nje drejtimi?
-      Course 4 Bee Params 6 (copy 1)_instruction: Provo te perdoresh komanden tende te re per te mbledhur gjithe kete nektar.
+      Course 4 Bee Params 6 (copy 1)_instruction: Perpiqu te perdoresh komanden e re per te mbledhur gjithe kete nektar.
       Course 4 Bee Params 6_instruction: A nuk do te ishte super sikur te mund te mblidhnim gjithe kete nektar me nje komande te vetme? Perpiqu te shtosh nje parameter te ri ne komanden tende te quajtur "nektaret" per te kontrolluar sasine e nektarit per t'u mbledhur. Mbase do te duash t'ia ndryshosh emerimin edhe komandes!
-      Course 4 Bee Params 7 (copy 1)_instruction: Provo te perdoresh komanden tende te re per te mbledhur gjithe kete nektar.
+      Course 4 Bee Params 7 (copy 1)_instruction: Perpiqu te perdoresh komanden e re per te mbledhur gjithe kete nektar.
       Course 4 Bee Params 7_instruction: Perpiqu te perdoresh komanden e re per te mbledhur gjithe kete nektar.
       Course 4 Bee Params 8_instruction: "Oooh, tani kemi edhe mjalte!\nSi munde te rifreskosh komanden tende si per te mbledhur nektarin apo per te bere mjalte."
-      Course 4 Bee Params Ex_instruction: Provo te perdoresh komanden tende te re per te mbledhur gjithe kete nektar.
+      Course 4 Bee Params Ex_instruction: Perpiqu te perdoresh komanden e re per te mbledhur gjithe kete nektar.
       Course 4 Binary 1_instruction: Ja nje komande qe ka nje lidhje binare nga 1 ne 0 dhe meson fermerin te lancoje nisjen nga e majta ne te djathte, nga fillimi ne mes, duke ndezur katroret ku numri ka nje zero. Provo kodin e dhene per te pare sesi fermeri perdor dypolesine per te vizatuar nje pamje.
       Course 4 Binary 2_instruction: 'C''lloj fije dyjore do të lidhnit 8 herë për të vizatuar këtë imazh? Ndihmë: Numri "1" mbush një gropë.'
       Course 4 Binary 3_instruction: Mund t'a vizatoni këtë model duke lidhur vetëm një fije dyjore?
@@ -696,7 +696,7 @@ sq:
       Course 4 EC 2b_instruction: Pa rregulla. Pa gjurmë. Vetëm sfidë!
       Course 4 EC 2c_instruction: Pa rregulla. Pa gjurmë. Vetëm sfidë!
       Course 4 EC 2d_instruction: Pa rregulla. Pa gjurmë. Vetëm sfidë!
-      Course 4 EC 3_instruction: "Përdorni atë që keni mësuar në nivelin e mëparshëm për të vizatuar\nnjë imazh si kjo. Shënim: Kodi bëhet më i thjeshtë në qoftë se ju përfshini\nparametrat. "
+      Course 4 EC 3_instruction: "Përdorni atë që keni mësuar në nivelin e mëparshëm për të\ntë vizatuar një imazh të tillë. Shënim: Kodi bëhet më i thjeshtë në qoftë se ju përfshini\nparametrat. "
       Course 4 EC 3a_instruction: "Sfida ekstreme: Pa rregulla. Pa Gjurmë. Vetëm\nsfidë!"
       Course 4 Maze 1_instruction: Dërgo zogun nevrik te derrkuci!
       Course 4 Maze 2_instruction: Shmang TNT-në!
@@ -776,7 +776,7 @@ sq:
       Course 4 SCF 1a_instruction: "A mund të kuptoni se si të mblidhni të gjithë këtë\nNektar me sa më pak blloqe të jetë e mundur?"
       Course 4 SCF 1b_instruction: "A mund të kuptoni se si të mblidhni të gjithë këtë\nmjalt me sa më pak blloqe të jetë e mundur?"
       Course 4 SCF 2_instruction: "Përdorni atë që keni mësuar në nivelin e mëparshëm për të\ntë vizatuar një imazh të tillë. Shënim: Kodi bëhet më i thjeshtë në qoftë se ju përfshini\nparametrat. "
-      Course 4 SCF 3_instruction: "Përdorni atë që keni mësuar në nivelin e mëparshëm për të vizatuar\nnjë imazh si kjo. Shënim: Kodi bëhet më i thjeshtë në qoftë se ju përfshini\nparametrat. "
+      Course 4 SCF 3_instruction: "Përdorni atë që keni mësuar në nivelin e mëparshëm për të\ntë vizatuar një imazh të tillë. Shënim: Kodi bëhet më i thjeshtë në qoftë se ju përfshini\nparametrat. "
       Course 4 SCFL 1_instruction: "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       Course 4 SCFL 1a_instruction: "Mund ta bëni Skrat-in të shkojë te lisi i tij duke përdorur sa më pak\nblloqe të jetë e mundur?"
       Course 4 SCFL 1b_instruction: "Mund ta bëni Skrat-in të shkojë te lisi i tij duke përdorur sa më pak\nblloqe të jetë e mundur?"
@@ -1040,10 +1040,13 @@ sq:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Eshte koha e Lojës së Lirë! Beni qejf me te gjitha blloqet ne kutine tuaj te mjetit. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Sfidë: Si do ta përdorje "ciklin for" për të bërë që të gjithë aktorët të vijnë rrotull dhe të thonë numrin e tyre të aktorit, dhe më pas të zhduken nga ekrani? '
       New Artist Project_instruction: Vizatoni dicka te mrekullueshme! Kodi juaj eshte ruajtur si nje projekt qe mund ti kthehesh ne cdo kohe.
+      New Basketball Project_instruction: Krijo lojën tënde te Basketbollit. Ti mund të ndryshosh të gjitha rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
+      New Bounce Project_instruction: Krijo lojën tënde Bounce. Ti mund të ndryshosh të gjithë pamjet dhe rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
       New Course 4 Artist Functions Level 4_instruction: Përdor funksionin "vizato një katror" për të vizatuar modelin.
       New Gumball Project_instruction: Krijo çfarë të dëshirosh dhe shpërndaje!
       New Ice Age Project_instruction: Krijo çfarë të dëshirosh dhe shpërndaje!
       New Infinity Project_instruction: Krijo çfarë të dëshirosh dhe shpërndaje!
+      New Sports Project_instruction: 'Krijo lojën tuaj! Ju jeni përgjegjësi këtu: ju mund të ndryshoni të gjitha rregullat, përzieni dhe përshtasni aktivitet ,behuni kreative! Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.'
       Overworld Avoid Monsters_instruction: Vrapimi drejt bimëve kacavjerrëse është një ide e keqe. Levizni me kujdes mbrapa bimëve kacavjerrëse në shtëpinë tuaj.
       Overworld Avoid Monsters_2018_instruction: Vrapimi drejt bimëve kacavjerrëse është një ide e keqe. Levizni me kujdes mbrapa bimëve kacavjerrëse në shtëpinë tuaj.
       Overworld Chop Tree - allthethings_instruction: "Druri është një burim shumë i rëndësishëm. Shumë gjera\njanë bërë prej saj. Ecni në pemë dhe përdorni komandën \"shkatërro bllokun\" për\nta prerë atë."
@@ -1113,6 +1116,7 @@ sq:
       bounce_11_basketball_instruction: Ti tani mund të bashkangjitësh blloqe tek blloku "kur ekzekutohet". Ti duhet të bashkangjitësh bllokun e ri "hidh topin e ri" në më shumë se një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose shpejtësinë e dorës dhe topit dhe shiko se sa shumë pikë mund të shënosh përpara se kundërshtari jot të shënojë dy herë!
       bounce_11_sports_instruction: Ti tani mund të bashkangjitësh blloqe tek blloku "kur ekzekutohet". Ti duhet të bashkangjitësh bllokun e ri "hidh topin e ri" në më shumë se një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose shpejtësinë e dorës dhe topit dhe shiko se sa shumë pikë mund të shënosh përpara se kundërshtari jot të shënojë dy herë!
       bounce_12_instruction: Krijo lojën tënde Bounce. Ti mund të ndryshosh të gjithë pamjet dhe rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
+      bounce_12_2018_instruction: Krijo lojën tënde Bounce. Ti mund të ndryshosh të gjithë pamjet dhe rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
       bounce_12_basketball_instruction: Krijo lojën tënde te Basketbollit. Ti mund të ndryshosh të gjitha rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
       bounce_12_sports_instruction: 'Krijo lojën tuaj! Ju jeni përgjegjësi këtu: ju mund të ndryshoni të gjitha rregullat, përzieni dhe përshtasni aktivitet ,behuni kreative! Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.'
       bounce_1_2018_instruction: Bashkangjit një bllok me bllokun "kur shigjeta majtas" dhe shtyp "Ekzekuto". Lëviz raketën duke përdorur shigjetën e majtë për të arritur në objektivin e fundit.
@@ -1193,6 +1197,7 @@ sq:
       courseD_bee_nestedLoops8_2018_instruction: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
       courseD_bounce_events10_instruction: Tani është një shënjestër në krye! Bashkangjisni blloqet "pikët e shënuara " dhe "pikët e shënuara të kundërshtarit" me blloqet "kur topi është në shënjestër" dhe " kur topi humbet raketën" për të bërë një lojë. Shih se sa shumë pikë ju mund të shënoni para se kundërshtari juaj të shënoj dy herë.
       courseD_bounce_events11_instruction: Ti, tani, mund të bashkangjitësh blloqe tek blloku "when run". Ti duhet të bashkangjitësh bllokun e ri "launch new ball" në më shumë se një vend. Gjithashtu, përpiqu të ndryshosh vendngjarjen ose shpejtësinë e lopatës dhe topit dhe shiko se sa shumë pikë mund të shënosh përpara se kundërshtari jot të shënojë dy herë.
+      courseD_bounce_events12_instruction: Krijo lojën tënde Bounce. Ti mund të ndryshosh të gjithë pamjet dhe rregullat. Kur të mbarosh, kliko Përfundova për të lejuar shokët të provojnë lojën tënde në telefonat e tyre.
       courseD_bounce_events2_instruction: Bashkangjit një bllok me bllokqet "kur shigjeta  djathtas" dhe  "kur shigjeta  majtas". Lëviz raketën  për të arritur të dy objektivat  e fundit.
       courseD_bounce_events3_instruction: Tani provo dicka të ngjashëm me bllokun "kur shigjeta lart". Lëviz raketën për tek objektivi i fundit në majë.
       courseD_bounce_events3s_instruction: Tani provo dicka të ngjashëm me bllokun "kur shigjeta lart". Lëviz raketën për tek objektivi i fundit në majë.
@@ -1260,7 +1265,7 @@ sq:
       frozen diamond mini snowflake_instruction: A e dije që çdo flok dëbore ka formë të ndryshme nga njëra-tjetra? Le të krijojmë një flok dëbore të ri duke përdorur bllokun "Repeat" për të përsëritur një paralelogram 4 herë, duke u kthyer djathtas me 90 gradë ndërmjet çdo paralelogrami.
       frozen diamond snowflake_instruction: Tani le të krijojmë një flok dëbore të ri duke përodrur bllokun repeat për të përsëritur një paralelogram 10 herë, duke u kthyer djathtas me 36 gradë ndërmjet secilit.
       frozen diamond_instruction: "Përdorni një përsëritje rreth këtyre blloqeve për të krijuar një paralelogram.\nËshtë si një drejtkëndësh por ka kënde të ndryshme. Kjo i ka këndet 60 gradë\ndhe 120 gradë në vend të të gjitha këndeve 90 gradë."
-      frozen freeplay_instruction: Zyrtarisht je një mjeshtër artesh! Krijo një botë imagjinare dimërore.
+      frozen freeplay_instruction: Ti zyrtarisht je bërë një mjeshtër! Krijo një dimër në një botë çudirash.
       frozen line_instruction: Përshëndetje! Unë jam Elsa e Arendelle. Më ndihmo të krijoj një rresht të vetëm.
       frozen perpendicular_instruction: Tani le të shohim nëse ne mund të krijojmë dy rreshta që janë në një kënd 90 gradë nga njëri tjetri. Ti duhet të përdorësh bllokun "Kthehu" ashtu si edhe bllokun "Leviz".
       frozen snowflake branch_instruction: Provo të përdorësh bllokun "Create a snowflake branch" për të krijuar tre degë, të cilat fillojnë të duken si një flok dëbore.
@@ -1413,12 +1418,12 @@ sq:
       grade4_artist_nested_loop_circles1_instruction: "Përdor një cikël të mbivendosur për të përfunduar\ndizenjimin."
       grade4_artist_nested_loop_flags1_instruction: Ciklo kodin e dhënë për të krijuar një mulli ere.
       grade4_artist_nested_loop_polygons1_instruction: "Ciklo këtë dizenjo 10 herë. Sa herë duhet të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)"
-      grade4_artist_nested_loop_squares1_instruction: "A mund të vizatosh 10 katrorë të kësaj\nrruge duke përdorur një cikël të mbivendosur? Çdo katror është 30 piksela."
+      grade4_artist_nested_loop_squares1_instruction: Mund të vizatosh këto 10 rretha në trotuar duke përdorur një cikël të mbivendosur? Secili rreth është 30 piksel.
       grade4_artist_nested_loop_triangles1_instruction: "Plotëso kodin për të vizatuar këta\ntrekëndorë. I pari është bërë për ty. Ndihmë: 3 trekëndorë në një rrotullim\n360 gradë."
       grade4_artist_nested_loop_triangles5_instruction: |-
         Formo një diell duke mbivendosur kodin e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r
         
-      grade4_artist_nested_loop_triangles6_instruction: "A mund ti vizatosh këto 36 trekëndorë duke përdorur\nnjë cikël të mbivendosur?"
+      grade4_artist_nested_loop_triangles6_instruction: Mund të vizatosh 36 trekëndësha duke përdorur një cikël të mbivendosur?
       grade4_artist_parameters_squares1_instruction: 'Kliko "modifiko" për të plotësuar në përkufizimin e funksionit "vizato një katror" dhe shto një parametër. Duhet të marri një parametër për gjatësinë, ashtu si trekëndëshi. Këtë rradhë, vizato 3 katrorë: me gjatësi 25, 50 dhe 70 piksela, secili 100 piksela larg tjetrit.'
       grade4_artist_parameters_triangles2_instruction: A vure re diçka ndryshe te keto blloqe funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.
       grade4_artist_parameters_triangles2b_instruction: "A mund ta mbarosh këtë vizatim? Shënim:\nsecili trekëndësh është 25 piksela më i madh se i fundit. Trekëndëshi i parë është me madhësi 25\npiksela."
@@ -1440,7 +1445,7 @@ sq:
       grade4_bee_nestedLoops1_instruction: "Mblidh gjithë nektarin nga secila lule.\nPërdor një cikël të mbivendosur. "
       grade4_bee_nestedLoops3_instruction: "Mblidh gjithë nektarin duke krijuar\nnjë cikël të mbivendosur."
       grade4_bee_nestedLoops4_instruction: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
-      grade4_frozen_freeplay_instruction: Zyrtarisht je një mjeshtër artesh! Krijo një botë imagjinare dimërore.
+      grade4_frozen_freeplay_instruction: Ti zyrtarisht je bërë një mjeshtër! Krijo një dimër në një botë çudirash.
       grade4_frozen_functions0_instruction: A mund të zbulosh se me çfarë numri ti zëvëndësosh pikëpyetjet për të vizatuar një rreth?
       grade4_frozen_functions1a_instruction: Përdor bllokun e ri "Create a circle" për të krijuar 10 rrathë të mbivendosur. Mos harro të hidhesh përpara ndërmjet rrathëve.
       grade4_frozen_functions2_instruction: Tani le të krijojmë 20 rrathë të mbivendosur, duke kthyer 18 gradë ndërmjet çdo rrethi.
@@ -1481,6 +1486,11 @@ sq:
         - 16 piksele nga 16 pixels! \ r
         \ r
       grade5_artist_for_loops1_instruction: Vizato këtë trekëndësh që është në masë 50 piksel.
+      grade5_artist_for_loops10_instruction: |-
+        A mund të kuptoni se si të përdorni të gjitha gjërat që keni mësuar për të krijuar këtë imazh? \ r
+        \r
+        Ju duhet
+        një informacion? Kliko këtu.
       grade5_artist_for_loops5_instruction: |2
         Vetëm një ndryshim i vogël në kod nga figura e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është 
         ai ndryshim? \r
@@ -1568,9 +1578,11 @@ sq:
       level 'grade3_Loops_8_instruction: Përdor një cikël për të mbledhur nektarin dhe përgatitur mjaltin.
       level 'grade3_Loops_9_instruction: "Mblidh nektarin nga çdo lule dhe bëj mjaltë\ntek çdo koshere."
       level grade3_Loops_2_instruction: Mund t'a kryesh detyrën tënde më me lehtësi me një cikël?
+      scrat 16 (copy 1)_instruction: Lajthi! Lajthi! Lajthi! Përdor bllokun "if" për të më çuar mua atje me numrin më të vogël të blloqeve.
       scrat 16_instruction: Lajthi! Lajthi! Lajthi! Përdor bllokun "if" për të më çuar mua atje me numrin më të vogël të blloqeve.
       scrat 17_instruction: Në rregull, le ta bëjmë përsëri për tu praktikuar - kjo nuk është shumë e ndryshme, por kujdes nga muri!
+      scrat 18 (copy 1)_instruction: "Blloqet \"if-else\" kontrollojnë një kusht dhe më pas \nbëjnë një gjë ose diçka tjetër. Për të më çuar tek lisi provo të përdorësh këtë bllok të ri."
       scrat 18_instruction: "Blloqet \"if-else\" kontrollojnë një kusht dhe më pas \nbëjnë një gjë ose diçka tjetër. Për të më çuar tek lisi provo të përdorësh këtë bllok të ri."
-      scrat 19 (copy 1)_instruction: Edhe një herë praktikohu me bllokun "nëse-përndryshe", mund ta bësh si duhet me përpjekjen e parë?
+      scrat 19 (copy 1)_instruction: "Një praktikë më shumë për bllokun\n\"if-else\", a mund ta bësh si duhet me përpjekjen e parë?"
       scrat 19_instruction: "Një praktikë më shumë për bllokun\n\"if-else\", a mund ta bësh si duhet me përpjekjen e parë?"
       scrat 20_instruction: A mund të shtosh vetëm 3 blloqe për të më ndihmuar mua të zgjidh një maze të ndërlikuar? Nëse e bën si duhet, unë mund të ec n çdo rrugë me kthesa pavarësisht gjatësisë. Nxito! Akulli po shkrin!

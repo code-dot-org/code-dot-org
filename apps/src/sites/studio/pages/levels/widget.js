@@ -16,8 +16,8 @@ import i18n from '@cdo/locale';
 
 export function showInstructionsDialog() {
   let content;
-  if (appOptions.level.markdownInstructions) {
-    content = marked(appOptions.level.markdownInstructions);
+  if (appOptions.level.longInstructions) {
+    content = marked(appOptions.level.longInstructions);
   }
   showDialog(
     <InstructionsDialog

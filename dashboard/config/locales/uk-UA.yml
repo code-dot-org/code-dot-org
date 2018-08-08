@@ -24,7 +24,7 @@ uk:
         email: Електронна пошта
         parent_email: Електронна пошта батьків/опікуна
         username: ім'я користувача
-        password: пароль
+        password: Пароль
         password_confirmation: Підтвердження пароля
         current_password: Поточний пароль
         locale: Мова
@@ -33,7 +33,7 @@ uk:
         edit_header: Редагувати дані облікового запису
         error:
           future: не може бути в майбутньому
-  hello: Привіт, світе
+  hello: Привіт, світ!
   welcome_back: З поверненням, %{name}
   your_professional_learning_plan: Ваш план професійного навчання
   see_your_learning_plan: Перегляд навчального плану
@@ -56,7 +56,7 @@ uk:
     placeholder: Будь ласка, введіть сюди підказку
     submit: Додати підказку
   appname: Code.org
-  stage: етап
+  stage: Етап
   stage_number: Етап %{number}
   puzzle: Завдання
   trophies: трофеї
@@ -88,7 +88,7 @@ uk:
     twitter: Twitter
     facebook: Facebook
     windowslive: обліковий запис Microsoft
-    forgot_password: Забули свій пароль?
+    forgot_password: Забули пароль?
     need_confirmation: Не отримали вказівок підтвердження?
     need_unlock: Не отримали вказівок розблокування?
     not_linked: Вибачте, ваш профіль Code.org не пов'язан з вашим %{provider}. Вам
@@ -125,7 +125,7 @@ uk:
     birthday: День народження (необов'язково)
     age: Вік
     user_type: Ви учень або вчитель?
-    submit: Зареєструватися
+    submit: Реєстрація
     teacher: Ви вчитель?
     valid_username: Доступно!
     invalid_username: Ім'я користувача повинно мати хоча б 5 символів
@@ -146,7 +146,7 @@ uk:
     additional_information: Нам потрібна додаткова інформація, щоб продовжити реєстрацію.
     user_type_label: Тип облікового запису
     user_type_teacher: Вчитель
-    user_type_student: учень
+    user_type_student: Учень
     field_is_required: необхідне
     accept_terms: Потрібно погодитись, щоб створити обліковий запис
     email_preference_yes: Так
@@ -307,7 +307,7 @@ uk:
     student_teacher_disassociated: Ви видалили %{teacher_name} як свого вчителя.
     panel:
       answer_viewer: Панель вчителя
-      student: учень
+      student: Учень
       viewing_solution: Перегляд рішення
       try_it_yourself: Спробуйте самі
       section: Група
@@ -359,7 +359,7 @@ uk:
       трофеїв "Опанування понять".
     teacher_print_certificates: Надрукуйте сертифікати для учнів, які завершили цей
       курс
-    teacher_read_blog: Читайте новини та інформацію про оновлення матеріалів у нашому
+    teacher_read_blog: Читати про новини та оновлення наших матеріалів на нашому педагогічному
       блозі
     classroom: Ваш клас
     student_progress: Ваші навчальні досягнення
@@ -375,7 +375,7 @@ uk:
     prize_info: 'Призи за участь (тільки для вчителів державних шкіл США): до $1000
       нагород на клас.'
     tryfirst: 'Або, ви можете спочатку спробувати і зареєструватися пізніше:'
-    trynow: Спробувати
+    trynow: Спробувати зараз
     add_hint_help: Будь ласка, допоможіть розставити смарт-теги у підручниках Code.org
     20hour_overview: Цей 20-годинний курс охоплює базові поняття комп'ютерних наук
       та програмування. Цей курс розроблено для використання на заняттях в основній
@@ -404,7 +404,7 @@ uk:
       невикористаний код</a> у робочій області, що заохотить експерименти! Познайомтесь
       із усіма нашими новими функціями і поділіться своїми враженнями.
     announcement_learn_more_button: Дізнайтеся більше
-    announcement_try_now_button: Спробувати
+    announcement_try_now_button: Спробувати зараз
     announcement_host_an_hour_button: Провести Годину коду
     announcement_watch_video_button: Переглянути відео
     announcement_petition: Як вчитель, ви прокладаєте шлях забезпечення кожного учня
@@ -459,7 +459,7 @@ uk:
     female: Жінка
     none: Не волію відповідати
   user_type:
-    student: учень
+    student: Учень
     teacher: Вчитель
   footer:
     thank_you: Ми вдячні нашим <a href="https://code.org/about/donors">спонсорам</a>,
@@ -495,7 +495,7 @@ uk:
     more: Більше
     feedback: Надати відгук
     translate: Допоможіть нам перекласти вашою мовою
-    support: Підтримка
+    support: Довідка та спільнота
     support_url: http://support.code.org
     tos_short: Умови
     tos: Умови надання послуг
@@ -600,9 +600,9 @@ uk:
     starwars:
       title: Зоряні війни
     infinity:
-      title: Ігрова лабораторія Infinity
+      title: Ігрова лабораторія Infiinty
       body: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів
-        Діснея Infinity.
+        Діснея Infiinty.
     minecraft:
       title: Майнкрафт
       body: Дослідимо світ Майнкрафту через код.

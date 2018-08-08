@@ -12,17 +12,17 @@ id:
       draw a triangle: menggambar sebuah segitiga
       draw a house: gambar sebuah rumah
       draw a star: menggambar bintang
-      do something: melakukan sesuatu
+      do something: buat sesuatu
       jump: lompat
-      set score: atur nilai
+      set score: tetapkan skor
       get nectar: Dapatkan madu
       test: test
       diamond: berlian
       move: bergerak
-      move right: pindah kanan
-      move up: gerak ke atas
+      move right: Gerak ke kanan
+      move up: Gerak ke atas
       move down: Pindahkan ke bawah
-      move left: gerak kiri
+      move left: Gerak ke kiri
       collect: kumpulkan
       turn left: belok kiri
       move forward: Gerak maju

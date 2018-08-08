@@ -654,9 +654,9 @@
           løsningen, kan du klikke "Kjør" og se fuglen gå til grisen.
     C1_maze_loops:
       1:
-        text: Noe datamaskiner er veldig gode til, er å gjenta kommandoer. Vi som
-          er mennesker går fort lei hvis vi må gjøre den samme oppgaven mange, mange
-          ganger på rad. Men en datamaskin kan gjøre det samme millioner eller selv
+        text: Datamaskiner er veldig flinke til å gjenta kommandoer. Vi som er mennesker
+          går fort lei hvis vi må gjøre den samme oppgaven mange, mange ganger på
+          rad. Men en datamaskin kan gjøre den samme oppgaven millioner eller selv
           milliarder av ganger uten å gå lei.
       2:
         text: Hvis jeg for eksempel ønsket å sende en mail for å gratulere alle på

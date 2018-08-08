@@ -92,7 +92,7 @@ pt-BR:
             Getting Loopy:
               name: Repetindo
             Graph Paper Programming:
-              name: Programação em Papel Quadriculado
+              name: Programação em papel quadriculado
             'Maze: Loops':
               name: 'Labirinto: Laços'
             'Maze: Sequence':
@@ -137,7 +137,7 @@ pt-BR:
             Bounce:
               name: Pingue-pongue
             Computational Thinking:
-              name: Pensamento Computacional
+              name: Pensamento computacional
             Crowdsourcing:
               name: Crowdsourcing
             Dice Race:
@@ -155,7 +155,7 @@ pt-BR:
             'Maze: Conditionals':
               name: 'Labirinto: Condicionais'
             Songwriting:
-              name: Composição de música com parâmetros
+              name: Composição
             'Studio: Create a Game':
               name: 'Laboratório: Crie um jogo'
             'Studio: Create a Story':
@@ -289,7 +289,7 @@ pt-BR:
             Intro:
               name: Introdução
             Variables:
-              name: Variáveis
+              name: variáveis
         algebra:
           title: Ciência da computação em álgebra
           description: Aprenda programação funcional com álgebra
@@ -444,17 +444,17 @@ pt-BR:
             Algorithms:
               name: Algoritmos
             Computational Thinking:
-              name: Pensamento Computacional
+              name: Pensamento computacional
             Conditionals:
               name: Condições
             Functions:
-              name: Funções
+              name: funções
             Graph Paper Programming:
-              name: Programação em Papel Quadriculado
+              name: Programação em papel quadriculado
             Introduction to Computer Science:
               name: Introdução à Ciência da Computação
             Relay Programming:
-              name: Programação Relay
+              name: Programação por revezamento
             Song Writing:
               name: Escrevendo uma Canção
             The Artist:
@@ -560,7 +560,7 @@ pt-BR:
           description: Esta unidade explora os desafios e questões técnicas que surgem
             da necessidade de representar a informação digital em computadores e transferi-la
             entre pessoas e dispositivos computacionais.
-          description_short: Explore como a informação digital é representada e transferida
+          description_short: Programação
           stages:
             Binary Numbers:
               name: Números binários
@@ -592,8 +592,8 @@ pt-BR:
               name: Compressão de texto
         algebraPD:
           title: Ciência da computação em álgebra PD
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: Em parceria com o Projeto GUTS
+          description_short: Em parceria com o Projeto GUTS
           stages:
             Course Overview:
               name: Visão geral do curso
@@ -670,7 +670,7 @@ pt-BR:
         ECSPD:
           title: Explorando o DP em Ciência da Computação
           description: Introdução on-line a ECS
-          description_short: Ensine programação funcional com álgebra
+          description_short: Em parceria com o Projeto GUTS
           stages:
             Growth Mindset:
               name: Mentalidade de crescimento
@@ -687,7 +687,7 @@ pt-BR:
         sciencePD:
           title: DP da ciência da computação na ciência
           description: Em parceria com o Projeto GUTS
-          description_short: Ensine programação funcional com álgebra
+          description_short: Em parceria com o Projeto GUTS
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Agente com base na modelagem de sistemas adaptativos complexos
@@ -784,8 +784,8 @@ pt-BR:
               name: A receita de design
         ECSPD-NexTech:
           title: Explorando o DP em Ciência da Computação
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: Em parceria com o Projeto GUTS
+          description_short: Em parceria com o Projeto GUTS
           logo_image: nextech_logo.png
           stages:
             Growth Mindset:
@@ -802,8 +802,8 @@ pt-BR:
               name: O que é ECS?
         ECSPD-iZone:
           title: Explorando o DP em Ciência da Computação
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: Em parceria com o Projeto GUTS
+          description_short: Em parceria com o Projeto GUTS
           logo_image: izone_logo.png
           stages:
             Growth Mindset:
@@ -820,8 +820,8 @@ pt-BR:
               name: O que é ECS?
         algebraPD-NexTech:
           title: Ciência da computação em álgebra PD
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: Em parceria com o Projeto GUTS
+          description_short: Em parceria com o Projeto GUTS
           logo_image: nextech_logo.png
           stages:
             Course Overview:
@@ -838,8 +838,8 @@ pt-BR:
               name: Por que a ciência da computação faz parte da álgebra
         algebraPD-iZone:
           title: Ciência da computação em álgebra PD
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: Em parceria com o Projeto GUTS
+          description_short: Em parceria com o Projeto GUTS
           logo_image: izone_logo.png
           stages:
             Course Overview:
@@ -856,8 +856,8 @@ pt-BR:
               name: Por que a ciência da computação faz parte da álgebra
         sciencePD-NexTech:
           title: DP da ciência da computação na ciência
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: Em parceria com o Projeto GUTS
+          description_short: Em parceria com o Projeto GUTS
           logo_image: nextech_logo.png
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -887,8 +887,8 @@ pt-BR:
               name: O que esperar
         sciencePD-iZone:
           title: DP da ciência da computação na ciência
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: Em parceria com o Projeto GUTS
+          description_short: Em parceria com o Projeto GUTS
           logo_image: izone_logo.png
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -938,7 +938,7 @@ pt-BR:
             Testing:
               name: Testando
         cspunit2:
-          description_short: Explore como a informação digital é representada e transferida
+          description_short: Programação
           stages:
             DNS in the Real World:
               name: DNS no mundo Real
@@ -1150,7 +1150,7 @@ pt-BR:
             Getting Loopy:
               name: Repetindo
             Graph Paper Programming:
-              name: Programação em Papel Quadriculado
+              name: Programação em papel quadriculado
             Happy Maps:
               name: Mapas divertidos
             Move it, Move it:
@@ -1158,7 +1158,7 @@ pt-BR:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
             Songwriting:
-              name: Composição de música com parâmetros
+              name: Composição
             The Big Event:
               name: O grande evento
         algebraPD3a:
@@ -1303,9 +1303,12 @@ pt-BR:
             Wrap-Up:
               name: Resumo
         cspunit5:
-          description_short: Explore como a informação digital é representada e transferida
+          description_short: Programação
         cspunit4:
-          description_short: Explore como a informação digital é representada e transferida
+          description_short: Programação
+          stages:
+            What is Big Data?:
+              name: O que é Big Data?
         CSPPD3-Unit4:
           stages:
             Complete the Challenge:
@@ -1366,7 +1369,7 @@ pt-BR:
         algebraPD1:
           title: Ciência da computação em álgebra PD
           description: Ensine álgebra com programação funcional
-          description_short: Ensine programação funcional com álgebra
+          description_short: Em parceria com o Projeto GUTS
           stages:
             Course Overview:
               name: Visão geral do curso
@@ -1398,6 +1401,8 @@ pt-BR:
               name: A Necessidade de Endereçar
             The Need for DNS:
               name: A Necessidade de DNS
+            Unit 1 Chapter 1 Assessment:
+              name: Unidade 1 Capítulo 1 Avaliação
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp2-2017:
@@ -1432,6 +1437,8 @@ pt-BR:
               name: A necessidade de linguagens de programação
             Using Simple Commands:
               name: Usando comandos simples
+            Unit 3 Chapter 1 Assessment:
+              name: Unidade 3 Capítulo 1 Avaliação
             Creating Functions with Parameters:
               name: Criação de funções com parâmetros
             Post-Course Survey:
@@ -1440,6 +1447,10 @@ pt-BR:
           stages:
             Simple Encryption:
               name: Criptografia simples
+            What is Big Data?:
+              name: O que é Big Data?
+            Unit 4 Chapter 1 Assessment:
+              name: Unidade 4 Capítulo 1 Avaliação
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp5-2017:
@@ -1460,6 +1471,8 @@ pt-BR:
               name: Aplicativos Multi-Tela
             While Loops:
               name: Laços enquanto
+            If statements:
+              name: Instrução if
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         CSDU3-Draft:
@@ -1472,7 +1485,7 @@ pt-BR:
             Variables and Animation:
               name: Variáveis e Animação
             Functions:
-              name: Funções
+              name: funções
             Velocity:
               name: Velocidade
         2016_sciencePD_phase1:
@@ -1507,7 +1520,7 @@ pt-BR:
         CSF_Secret_Sample:
           description_audience: 8-18 anos de idade
         ECSPD1:
-          description_short: Ensine programação funcional com álgebra
+          description_short: Em parceria com o Projeto GUTS
         algebraFacilitator:
           description: Ensine álgebra com programação funcional
           description_short: Ensine álgebra com programação funcional
@@ -1521,7 +1534,7 @@ pt-BR:
             Why Computer Science belongs in Algebra:
               name: Por que a ciência da computação faz parte da álgebra
         sciencePD1:
-          description_short: Ensine programação funcional com álgebra
+          description_short: Em parceria com o Projeto GUTS
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Agente com base na modelagem de sistemas adaptativos complexos
@@ -1585,9 +1598,9 @@ pt-BR:
             'Jigsaw: Learn to drag and drop':
               name: 'Quebra-cabeça: aprenda a arrastar e soltar'
             Loops:
-              name: Laços
+              name: laços
             Loops Unplugged:
-              name: Repetições off-line
+              name: Loops off-line
             Programming:
               name: Programação
             'Real-life Algorithms: Plant a Seed':
@@ -1596,10 +1609,12 @@ pt-BR:
           stages:
             Digital Citizenship:
               name: Cidadania digital
+            Final Project - Presentation Day:
+              name: Projeto Final - Dia da Apresentação
             'New Artist: Functions':
               name: 'Novo Artista: Funções'
             Songwriting:
-              name: Composição de música com parâmetros
+              name: Composição
         grade1:
           stages:
             Debugging:
@@ -1611,9 +1626,9 @@ pt-BR:
             'Jigsaw: Learn to drag and drop':
               name: 'Quebra-cabeça: aprenda a arrastar e soltar'
             Loops:
-              name: Laços
+              name: laços
             Loops Unplugged:
-              name: Repetições off-line
+              name: Loops off-line
             Programming:
               name: Programação
             Unspotted Bugs:
@@ -1634,6 +1649,8 @@ pt-BR:
               name: 'Abelha: funções com parâmetros'
             Digital Citizenship:
               name: Cidadania digital
+            Final Project - Presentation Day:
+              name: Projeto Final - Dia da Apresentação
             'Play Lab: Variables':
               name: 'Laboratório: variáveis'
             'Unplugged: Envelope Variables':
@@ -1712,9 +1729,11 @@ pt-BR:
             Collisions:
               name: Colisões
             Functions:
-              name: Funções
+              name: funções
             Variables:
-              name: Variáveis
+              name: variáveis
+            Sprites:
+              name: Sprite
             Conditionals:
               name: Condições
         grade2:
@@ -1738,15 +1757,15 @@ pt-BR:
             For Loops:
               name: Laços para
             Functions:
-              name: Funções
+              name: funções
             Functions with Parameters:
               name: Funções com Parâmetros
             Loops:
-              name: Laços
+              name: laços
             Nested Loops:
               name: Laços aninhados
             Variables:
-              name: Variáveis
+              name: variáveis
             While Loops:
               name: Laços enquanto
         algebrapdnext:
@@ -1758,6 +1777,14 @@ pt-BR:
               name: A receita de design
             Welcome!:
               name: Bem-vindo!
+        csp-pre-survey:
+          stages:
+            Unit 1 Chapter 1 Assessment:
+              name: Unidade 1 Capítulo 1 Avaliação
+            Unit 3 Chapter 1 Assessment:
+              name: Unidade 3 Capítulo 1 Avaliação
+            Unit 4 Chapter 1 Assessment:
+              name: Unidade 4 Capítulo 1 Avaliação
         basketball:
           title: Escolha seu time e faça um jogo de basquete
           description_short: Escolha seu time e faça um jogo de basquete
@@ -1903,7 +1930,7 @@ pt-BR:
             Hour of Code 2013:
               name: Hora do Código 2013
         sports:
-          title: Esportes
+          title: Programe seus próprios jogos esportivos
           description_short: Esportes
           description: Esportes
           stages:
@@ -1953,6 +1980,8 @@ pt-BR:
               name: Pesquisa Pós-Curso
         csd6-draft:
           stages:
+            Foo:
+              name: Foo
             Lists:
               name: Listas
             For Loops:
@@ -1963,6 +1992,10 @@ pt-BR:
           stages:
             Introduction:
               name: Introdução
+            Sprites:
+              name: Sprite
+            Input:
+              name: Entrada
         coursed-ramp:
           stages:
             Introduction:
@@ -1988,7 +2021,9 @@ pt-BR:
         csd3-draft:
           stages:
             Variables:
-              name: Variáveis
+              name: variáveis
+            Sprites:
+              name: Sprite
             Conditionals:
               name: Condições
             Velocity:
@@ -1998,7 +2033,7 @@ pt-BR:
             Collisions:
               name: Colisões
             Functions:
-              name: Funções
+              name: funções
         csd3-old:
           stages:
             Variables and Animation:
@@ -2010,7 +2045,7 @@ pt-BR:
             Collisions:
               name: Colisões
             Functions:
-              name: Funções
+              name: funções
         csd2-draft:
           stages:
             Lists:
@@ -2018,7 +2053,9 @@ pt-BR:
         csd3-chapters:
           stages:
             Variables:
-              name: Variáveis
+              name: variáveis
+            Sprites:
+              name: Sprite
             Conditionals:
               name: Condições
             Velocity:
@@ -2028,7 +2065,7 @@ pt-BR:
             Collisions:
               name: Colisões
             Functions:
-              name: Funções
+              name: funções
             'null':
               name: nulo
         coursef-ramp:
@@ -2242,6 +2279,8 @@ pt-BR:
               name: APIs e parâmetros de função
             Looping and Random Numbers:
               name: Repetição e números aleatórios
+            Unit 3 Chapter 1 Assessment:
+              name: Unidade 3 Capítulo 1 Avaliação
           title: CSP Unidade 3 - Programação
           description_short: Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -2336,6 +2375,8 @@ pt-BR:
               name: APIs e parâmetros de função
             Looping and Random Numbers:
               name: Repetição e números aleatórios
+            Unit 3 Chapter 1 Assessment:
+              name: Unidade 3 Capítulo 1 Avaliação
         pwc:
           stages:
             Simple Encryption:
@@ -2393,7 +2434,9 @@ pt-BR:
         csd3-1819draft:
           stages:
             Variables:
-              name: Variáveis
+              name: variáveis
+            Sprites:
+              name: Sprite
             Conditionals:
               name: Condições
             Velocity:
@@ -2403,13 +2446,15 @@ pt-BR:
             Collisions:
               name: Colisões
             Functions:
-              name: Funções
+              name: funções
           description_short: Programação
         csd3-2018:
           description_short: Programação
           stages:
             Variables:
-              name: Variáveis
+              name: variáveis
+            Sprites:
+              name: Sprite
             Conditionals:
               name: Condições
             Velocity:
@@ -2419,7 +2464,7 @@ pt-BR:
             Collisions:
               name: Colisões
             Functions:
-              name: Funções
+              name: funções
         csd2-2018:
           stages:
             Lists:
@@ -2530,7 +2575,7 @@ pt-BR:
             ser compartilhada.
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programação em Papel Quadriculado
+              name: Programação em papel quadriculado
             Introduction:
               name: Introdução
             Building a Foundation:
@@ -2548,7 +2593,7 @@ pt-BR:
             Conditionals with Cards:
               name: Condicionais com cartas
             'Functions: Songwriting':
-              name: Composição de música com parâmetros
+              name: Composição
             Envelope Variables:
               name: Variáveis do envelope
             For Loop Fun:
@@ -2564,7 +2609,7 @@ pt-BR:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Programação Relay
+              name: Programação por revezamento
         courseb-2018:
           title: Curso B (2018)
           assignment_family_title: Curso B
@@ -2593,7 +2638,7 @@ pt-BR:
           assignment_family_title: Curso D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programação em Papel Quadriculado
+              name: Programação em papel quadriculado
             Introduction:
               name: Introdução
             Building a Foundation:
@@ -2609,9 +2654,9 @@ pt-BR:
             Loops in Ice Age:
               name: Repetições na Era do gelo
             Graph Paper Programming:
-              name: Programação em Papel Quadriculado
+              name: Programação em papel quadriculado
             Relay Programming:
-              name: Programação Relay
+              name: Programação por revezamento
         coursec-2018:
           title: Curso C (2018)
           assignment_family_title: Curso C
@@ -2641,7 +2686,7 @@ pt-BR:
             Introduction:
               name: Introdução
             'Functions: Songwriting':
-              name: Composição de música com parâmetros
+              name: Composição
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -2680,6 +2725,8 @@ pt-BR:
               name: Números binários
             Sending Numbers:
               name: Envio de números
+            Unit 1 Chapter 1 Assessment:
+              name: Unidade 1 Capítulo 1 Avaliação
             The Internet:
               name: A Internet
             The Need for Addressing:
@@ -2724,12 +2771,18 @@ pt-BR:
               name: APIs e parâmetros de função
             Looping and Random Numbers:
               name: Repetição e números aleatórios
+            Unit 3 Chapter 1 Assessment:
+              name: Unidade 3 Capítulo 1 Avaliação
             Creating Functions with Parameters:
               name: Criação de funções com parâmetros
         csp4-2018:
           stages:
+            What is Big Data?:
+              name: O que é Big Data?
             Simple Encryption:
               name: Criptografia simples
+            Unit 4 Chapter 1 Assessment:
+              name: Unidade 4 Capítulo 1 Avaliação
         csp5-2018:
           stages:
             Multi-screen Apps:

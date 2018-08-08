@@ -7,7 +7,7 @@ eu:
         Maze: labirintoa
         Multi: Aukera anitzeko gaiak
         Unplug2: Pentsamendu konputazionala
-        Unplug3: Paperean marraztuz programatu
+        Unplug3: Paper grafiko programazioa
         Artist: Artista
         Unplug4: Algoritmoak
         Artist2: Artista 2
@@ -23,7 +23,7 @@ eu:
         Farmer3: Baserritarra 3
         Unplug10: Internet
         Artist5: Artista 5
-        Unplug11: Errepasoa
+        Unplug11: Ixtea
         MazeEC: labirintoa
         Bounce: Errebotea
         Flappy: Flappy Bird
@@ -33,11 +33,11 @@ eu:
         Webapp: App laborategia
         ArtistEC: Artista
         TextMatch: Testua erlazionatu
-        StudioEC: Jokoen Laborategia
+        StudioEC: Jolas Laborategia
         Applab: App laborategia
         NetSim: Internet simulagailua
         Custom: Artista
-        CustomStudio: Jokoen Laborategia
+        CustomStudio: Jolas Laborategia
     trophy:
       name:
         Bronze: Brontzea
@@ -45,7 +45,7 @@ eu:
         Gold: Urrea
     concept:
       description:
-        sequence: Sekuentzia
+        sequence: Segida
         if: '"baldin" blokea'
         if_else: '"baldin-bestela" blokea'
         loop_times: '"Errepikatu aldiz" blokea'
@@ -514,8 +514,8 @@ eu:
           zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
     video:
       name:
-        maze_intro: 'Sarrera: Labirintora'
-        artist_intro: 'Sarrera: Artista'
+        maze_intro: Labirintora sarrera
+        artist_intro: Artistara sarrera
         farmer_intro: 'Sarrera: Baserritarra'
         flappy_intro: 'Sarrera: Flappy txoria'
         loop_times: '"Errepikatu Aldiz" Blokea'

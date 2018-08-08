@@ -71,7 +71,7 @@ ca:
         title: Pensament computacional
         desc: Els alumnes usen les passes del pensament computacional (descomposar, relació de patrons, abstracció, algoritme) per a esbrinar com jugar a un joc que no duu instruccions.
       SongwritingParameters:
-        title: Composició amb paràmetres
+        title: Composició de cançons
         desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
       DiceRace:
         title: 'Algoritmes de la vida real: cursa de daus'
@@ -152,7 +152,7 @@ ca:
       courseE_unplugged_crowdsourcing:
         title: Col·laboració oberta
       courseE_unplugged_songwriting:
-        title: Composició amb paràmetres
+        title: Composició de cançons
         desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
       courseF_unplugged_tangrams:
         title: Algoritmes de Tàngram

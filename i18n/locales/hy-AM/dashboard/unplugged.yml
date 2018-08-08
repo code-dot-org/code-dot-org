@@ -26,7 +26,7 @@ hy:
         title: աբստրակցիա
         desc: This activity combines your students' everyday routine and a Mad-Lib style thinking game to help your class learn about the effectiveness of abstraction.
       Unplug9:
-        title: Relay Ծրագրավորում
+        title: Relay programming
         desc: This lesson will take an idea from a previous activity (4. Graph Paper Programming) and use those skills to emphasize the importance of completing programs that operate in sequence and frequently checking programs for "bugs".
       Unplug10:
         title: Համացանց
@@ -80,7 +80,7 @@ hy:
         title: Functional Suncatchers
         desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
       SongwritingParameters:
-        title: Songwriting with Parameters
+        title: songwriting
         desc: Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).
       DiceRace:
         title: 'Real life algorithms: Dice Race'
@@ -171,7 +171,7 @@ hy:
         title: Գրաֆիկի Թուղթ Ծրագրավորում
         desc: Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
       courseD_unplugged_relayProgramming:
-        title: Relay Ծրագրավորում
+        title: Relay programming
         desc: Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
       courseD_unplugged_conditionalsCards:
         title: Conditionals with Cards
@@ -191,7 +191,7 @@ hy:
         title: Crowdsourcing
         desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
       courseE_unplugged_songwriting:
-        title: Songwriting with Parameters
+        title: songwriting
         desc: Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).
       courseF_unplugged_tangrams:
         title: Tangram Algorithms
@@ -247,4 +247,4 @@ hy:
       MoveItMoveIt_2018:
         title: Տեղափոխել այն, տեղափոխել այն
       RelayProgramming_2018:
-        title: Relay Ծրագրավորում
+        title: Relay programming

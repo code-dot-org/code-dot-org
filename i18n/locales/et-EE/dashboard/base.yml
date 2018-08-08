@@ -229,7 +229,7 @@ et:
       classroom: 'Õpetaja kodulehekülg'
       district_dashboard: 'Piirkondlik juhtpaneel'
       label: 'Tere, %{username}'
-      stats: 'Koodistuudio'
+      stats: 'Code Studio'
       settings: 'Minu konto'
       logout: 'Logi välja'
       signin: 'Logi sisse'
@@ -321,7 +321,7 @@ et:
     view_course: Vaata kursust
     prize_info: 'Auhinnad osalemise eest (ainult Ameerika Ühendriikide avalike koolide õpetajatele): Kuni $1,000 eest koolitarbeid.'
     tryfirst: 'Või võite proovida ja hiljem registreerida:'
-    trynow: 'Proovi nüüd'
+    trynow: 'Lisateave'
     add_hint_help: 'Palun aidake meil lisada kasulikke vihjeid Code.org õpetusvideotesse'
     20hour_overview: 'See 20-tunnine kursus tutvustab arvutiteaduse ja programmeerimise põhilisi aspekte ja mõisteid. Kursus on mõeldud õpilastele kuni 8, klassini, aga sellest on lõbus õppida igas vanuses.'
     test_videos_help: 'Proovige meie uut videomängijat enda koolis'
@@ -338,7 +338,7 @@ et:
     print_certificate: "Prindi tunnistus"
     announcement_title: "Teated"
     announcement_learn_more_button: "Lisateave"
-    announcement_try_now_button: "Proovi nüüd"
+    announcement_try_now_button: "Lisateave"
     announcement_host_an_hour_button: "Vii läbi KoodiTund"
     announcement_watch_video_button: "Vaata videot"
     announcement_petition: "Õpetajana oled sa teejuht liikumises, mis annab igale õpilasele igas koolis võimaluse arvutiteadust õppida. Nüüd on aeg, et ka sinu esindajad sinu arvamust kuuleksid. Sel nädalal kirjutasid haridusjuhid, 28 kuberneri, ameerika suurimate ettevõtete juhid ühise avatud kirja, kus palusid, et U.S.A. kongress rahastaks K-12 hariduse arvutiteaduse programmi."
@@ -380,7 +380,7 @@ et:
     more: 'Veel'
     feedback: 'Tagasiside'
     translate: 'Tule vabatahtlikuks ja aita meil tõlkida'
-    support: 'Tugi'
+    support: 'Abi ja kogukond'
     tos_short: 'Tingimused'
     tos: 'Teenuse tingimused'
     privacy: 'Privaatsuspoliitika'
@@ -484,7 +484,7 @@ et:
       body: "Uuri Minecrafti maailma koodi kaudu."
     minecraft2016:
       title: "Minecraft"
-      body: "Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis."
+      body: "Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti versioonis."
     hero:
       title: "Minecraft"
       body: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
@@ -600,22 +600,14 @@ et:
     title: "Valikuline: aita meil jälgida meie edusamme mitmekesisuse parendamisel arvutiteaduses"
     message: "Palun ütle meile, millisesse rassi kuulud (märgi kõik, millega end identifitseerid)"
     races:
-      - 
-        white: "Valge"
-      - 
-        black: "Mustanahaline või afroameeriklane"
-      - 
-        hispanic: "Hispaania või ladina päritolu"
-      - 
-        asian: "aasialane"
-      - 
-        hawaiian: "Havai põlisrahvusest või pärit vaikse ookeani saartelt"
-      - 
-        american_indian: "põlisameeriklane või Alaska põliselanik"
-      - 
-        other: "Muu"
-      - 
-        opt_out: "Ei soovi vastata"
+      white: "Valge"
+      black: "Mustanahaline või afroameeriklane"
+      hispanic: "Hispaania või ladina päritolu"
+      asian: "aasialane"
+      hawaiian: "Havai põlisrahvusest või pärit vaikse ookeani saartelt"
+      american_indian: "põlisameeriklane või Alaska põliselanik"
+      other: "Muu"
+      opt_out: "Ei soovi vastata"
     submit: "Esita"
     decline: "Sulge"
   zendesk_too_young_message: 'Vabandame, nooremad kasutajad ei saa meie kasutajatoe lehele sisse logida. Võid sirvida <a href="http://support.code.org"> support.code.org</a> ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.'
