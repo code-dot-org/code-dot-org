@@ -2075,6 +2075,14 @@ class User < ActiveRecord::Base
     student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
   end
 
+  def providers
+    if migrated?
+      authentication_options.map(&:credential_type)
+    else
+      [provider]
+    end
+  end
+
   private
 
   def hidden_stage_ids(sections)
