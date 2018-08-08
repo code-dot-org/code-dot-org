@@ -42,7 +42,8 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STAGE_EXTRAS_SCRIPT_IDS = 'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
-const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
+/** Sets teacher's current authentication providers */
+const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
@@ -63,7 +64,9 @@ const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
-/** Opens the third-paty roster UI */
+/** Sets a section's roster provider, which must be of type OAuthSectionTypes */
+const SET_ROSTER_PROVIDER = 'teacherSections/SET_ROSTER_PROVIDER';
+/** Opens the third-party roster UI */
 const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 /** Reports available rosters have been loaded */
 const IMPORT_ROSTER_FLOW_LIST_LOADED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
@@ -91,7 +94,8 @@ export const __testInterface__ = {
 //
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
 export const setStageExtrasScriptIds = ids => ({ type: SET_STAGE_EXTRAS_SCRIPT_IDS, ids });
-export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
+export const setAuthProviders = providers => ({ type: SET_AUTH_PROVIDERS, providers });
+export const setRosterProvider = rosterProvider => ({ type: SET_ROSTER_PROVIDER, rosterProvider });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
   validCourses,
@@ -243,7 +247,7 @@ function fetchJSON(url, params) {
  */
 export const beginImportRosterFlow = () => (dispatch, getState) => {
   const state = getState();
-  const provider = getRoot(state).provider;
+  const provider = getRoot(state).rosterProvider;
   if (!provider) {
     return Promise.reject(new Error('Unable to begin import roster flow without a provider'));
   }
@@ -288,7 +292,7 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
  */
 export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getState) => {
   const state = getState();
-  const provider = getRoot(state).provider;
+  const provider = getRoot(state).rosterProvider;
   const importSectionUrl = importUrlByProvider[provider];
   let sectionId;
 
@@ -309,7 +313,9 @@ export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getStat
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
-  provider: null,
+  // List of teacher's authentication providers (mapped to OAuthSectionTypes
+  // for consistency and ease of comparison).
+  providers: [],
   validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
@@ -334,6 +340,8 @@ const initialState = {
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
   isRosterDialogOpen: false,
+  // Track a section's roster provider. Must be of type OAuthSectionTypes.
+  rosterProvider: null,
   // Set of oauth classrooms available for import from a third-party source.
   // Not populated until the RosterDialog is opened.
   classrooms: null,
@@ -374,11 +382,22 @@ export const assignmentFamilyFields = [
   'category_priority', 'category', 'position', 'assignment_family_title', 'assignment_family_name'
 ];
 
+// Maps authentication provider to OAuthSectionTypes for ease of comparison
+// (i.e., Google auth is 'google_oauth2' but the section type is 'google_classroom').
+export const mapProviderToSectionType = (provider) => {
+  switch (provider) {
+    case 'google_oauth2':
+      return OAuthSectionTypes.google_classroom;
+    default:
+      return provider;
+  }
+};
+
 export default function teacherSections(state=initialState, action) {
-  if (action.type === SET_OAUTH_PROVIDER) {
+  if (action.type === SET_AUTH_PROVIDERS) {
     return {
       ...state,
-      provider: action.provider
+      providers: action.providers.map(provider => mapProviderToSectionType(provider))
     };
   }
 
@@ -676,6 +695,16 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === SET_ROSTER_PROVIDER) {
+    if (!OAuthSectionTypes[action.rosterProvider]) {
+      throw new Error(`SET_ROSTER_PROVIDER called with invalid provider type '${action.rosterProvider}'`);
+    }
+    return {
+      ...state,
+      rosterProvider: action.rosterProvider,
+    };
+  }
+
   //
   // Roster import action types
   //
@@ -709,6 +738,7 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       isRosterDialogOpen: false,
+      rosterProvider: null,
       classrooms: null,
     };
   }
@@ -747,8 +777,8 @@ export function isRosterDialogOpen(state) {
   return getRoot(state).isRosterDialogOpen;
 }
 
-export function oauthProvider(state) {
-  return getRoot(state).provider;
+export function rosterProvider(state) {
+  return getRoot(state).rosterProvider;
 }
 
 export function sectionCode(state, sectionId) {
@@ -761,7 +791,7 @@ export function sectionName(state, sectionId) {
 
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
-    return oauthProvider(state);
+    return rosterProvider(state);
   }
   return null;
 }

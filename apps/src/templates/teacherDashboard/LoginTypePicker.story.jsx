@@ -18,7 +18,7 @@ export default storybook => storybook
     return (
       <LoginTypePicker
         title="New section"
-        provider="google_classroom"
+        providers={["google_classroom"]}
         handleImportOpen={action('handleImportOpen')}
         setLoginType={action('setLoginType')}
         handleCancel={action('handleCancel')}
@@ -29,7 +29,7 @@ export default storybook => storybook
     return (
       <LoginTypePicker
         title="New section"
-        provider="clever"
+        providers={["clever"]}
         handleImportOpen={action('handleImportOpen')}
         setLoginType={action('setLoginType')}
         handleCancel={action('handleCancel')}
@@ -40,7 +40,7 @@ export default storybook => storybook
     return (
       <LoginTypePicker
         title="New section"
-        provider="microsoft_classroom"
+        providers={["microsoft_classroom"]}
         handleImportOpen={action('handleImportOpen')}
         setLoginType={action('setLoginType')}
         handleCancel={action('handleCancel')}
