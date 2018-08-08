@@ -41,11 +41,12 @@ def localize_block_content
   Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
     name = File.basename(file, '.*')
     block = JSON.parse(File.read(file))
-    puts name
-    blocks[name] = block['config']['blockText']
+    blocks[name] = {
+      'text' => block['config']['blockText'],
+    }
   end
 
-  copy_to_yml('blocks', blocks.compact)
+  copy_to_yml('blocks', blocks)
 end
 
 def redact_level_content
