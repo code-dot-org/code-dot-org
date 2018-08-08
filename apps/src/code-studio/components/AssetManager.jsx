@@ -50,6 +50,12 @@ export const assetButtonStyles = {
     borderRadius: 4,
     fontSize: 'large',
     fontWeight: 'lighter',
+    marginRight: 10
+  },
+  buttonRow: {
+    display: 'flex',
+    flexFlow: 'row',
+    alignItems: 'center'
   }
 };
 
@@ -58,10 +64,6 @@ const styles = {
     margin: '1em 0',
     fontSize: '16px',
     lineHeight: '20px'
-  },
-  buttonRow: {
-    display: 'flex',
-    flexFlow: 'row',
   }
 };
 

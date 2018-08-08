@@ -107,7 +107,7 @@ export default class AudioRecorder extends React.Component {
               <Button
                 onClick={this.toggleRecord}
                 id="start-stop-record"
-                style={{...assetButtonStyles.button, ...{marginRight: 10}}}
+                style={assetButtonStyles.button}
                 color={Button.ButtonColor.blue}
                 icon={this.state.recording ? "stop" : "circle"}
                 text={this.state.recording ? i18n.stop() : i18n.record()}
