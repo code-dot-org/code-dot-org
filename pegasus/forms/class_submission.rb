@@ -171,12 +171,10 @@ class ClassSubmission < Form
   def self.solr_query(params)
     query = ::PEGASUS_DB[:forms].
       where(
-        kind: name
-      ).where(
-        Sequel.or(
-          Sequel.function(:coalesce, Forms.json('data.published_s'), '') => "approved",
-            Sequel.function(:coalesce, Forms.json('data.review_s'), '') => "approved"
-        )
+        {
+          kind: name,
+          review: "approved"
+        }
       ).
       exclude(
         Sequel.function(:coalesce, Forms.json('data.class_format_category_s'), '') => "online"
