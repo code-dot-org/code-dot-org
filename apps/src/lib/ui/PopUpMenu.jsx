@@ -13,7 +13,8 @@ const STANDARD_PADDING = 20;
 
 const menuStyle = {
   position: 'absolute',
-  zIndex: 20,
+  // must appear in front of .modal from application.scss
+  zIndex: 1051,
   border: `1px solid ${BORDER_COLOR}`,
   backgroundColor: BACKGROUND_COLOR,
   borderRadius: 2,
@@ -161,9 +162,7 @@ export class MenuBreak extends Component {
 
 class Item extends Component {
   static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.array]).isRequired,
+    children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
     href: PropTypes.string,
     first: PropTypes.bool,

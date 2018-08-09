@@ -256,6 +256,7 @@ export default class AssignmentSelector extends Component {
             versions={versions}
             onChangeVersion={this.onChangeVersion}
             disabled={disabled}
+            showVersionMenu={true}
           />
         )}
         {secondaryOptions && (
