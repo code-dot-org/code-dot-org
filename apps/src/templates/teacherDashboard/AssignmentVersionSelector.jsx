@@ -58,17 +58,31 @@ export default class AssignmentVersionSelector extends Component {
     this.setState({isMenuOpen: true, canMenuOpen: false, targetPoint});
   }
 
+  closeMenu() {
+    this.setState({isMenuOpen: false});
+  }
+
   beforeClose = (node, resetPortalState) => {
     resetPortalState();
-    this.setState({isMenuOpen: false});
+    this.closeMenu();
     // Work around a bug in react-portal. see SettingsCog.jsx for details.
     window.setTimeout(() => {
       this.setState({canMenuOpen: true});
     });
   };
 
+  handleNativeDropdownChange = e => {
+    const versionYear = event.target.value;
+    this.props.onChangeVersion(versionYear);
+  };
+
+  chooseMenuItem = versionYear => {
+    this.props.onChangeVersion(versionYear);
+    this.closeMenu();
+  };
+
   render() {
-    const {dropdownStyle, onChangeVersion, selectedVersion, versions, disabled} = this.props;
+    const {dropdownStyle, selectedVersion, versions, disabled} = this.props;
 
     return (
       <span style={styles.version}>
@@ -76,7 +90,7 @@ export default class AssignmentVersionSelector extends Component {
         <select
           id="assignment-version-year"
           value={selectedVersion.year}
-          onChange={onChangeVersion}
+          onChange={this.handleNativeDropdownChange}
           onMouseDown={this.handleMouseDown}
           onClick={this.handleClick}
           style={dropdownStyle}
@@ -100,12 +114,16 @@ export default class AssignmentVersionSelector extends Component {
           offset={{x: 0, y: 0}}
           beforeClose={this.beforeClose}
         >
-          <PopUpMenu.Item onClick={() => {}}>
-            Option One
-          </PopUpMenu.Item>
-          <PopUpMenu.Item onClick={() => {}}>
-            Option Two
-          </PopUpMenu.Item>
+          {
+            versions.map(version => (
+              <PopUpMenu.Item
+                onClick={() => this.chooseMenuItem(version.year)}
+                key={version.year}
+              >
+                {version.isRecommended ? `${version.title} (Recommended)` : version.title}
+              </PopUpMenu.Item>
+            ))
+          }
         </PopUpMenu>
       </span>
     );
