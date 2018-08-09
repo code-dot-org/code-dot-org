@@ -22,8 +22,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
       deleted_before: 2.days.ago
-    ExpiredDeletedAccountPurger.any_instance.stubs(:upload_activity_log).at_least(0)
-    PurgedAccountLog.any_instance.stubs(:upload).at_least(0)
+    ExpiredDeletedAccountPurger.any_instance.stubs :upload_activity_log
+    PurgedAccountLog.any_instance.stubs :upload
   end
 
   test 'can construct with no arguments - all defaults' do
