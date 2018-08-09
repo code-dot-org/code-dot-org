@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import {assetButtonStyles} from "./AssetManager";
+import {assetButtonStyles} from "./AddAssetButtonRow";
 
 const ErrorType = {
   NONE: 'none',

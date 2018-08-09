@@ -1,9 +1,24 @@
-/* eslint-disable react/no-is-mounted */
 import React, {PropTypes} from 'react';
 import AssetUploader from './AssetUploader';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
-import {assetButtonStyles} from "./AssetManager";
+
+export const assetButtonStyles = {
+  button: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 5,
+    borderRadius: 4,
+    fontSize: 'large',
+    fontWeight: 'lighter',
+    marginRight: 10
+  },
+  buttonRow: {
+    display: 'flex',
+    flexFlow: 'row',
+    alignItems: 'center'
+  }
+};
 
 const RecordButton = ({onSelectRecord}) => (
   <span>
