@@ -54,7 +54,7 @@ import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
 import {SignInState} from '../code-studio/progressRedux';
-import Visualization from '@code-dot-org/artist/visualization';
+import Visualization from '@code-dot-org/artist';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -307,10 +307,10 @@ Artist.prototype.init = function (config) {
 
   if (
     config.embed &&
-    config.level.markdownInstructions &&
-    !config.level.instructions
+    config.level.longInstructions &&
+    !config.level.shortInstructions
   ) {
-    // if we are an embedded level with markdown instructions but no regular
+    // if we are an embedded level with long instructions but no short
     // instructions, we want to display CSP-style instructions and not be
     // centered
     config.noInstructionsWhenCollapsed = true;

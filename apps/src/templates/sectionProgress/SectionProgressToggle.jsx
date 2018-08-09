@@ -81,7 +81,7 @@ class SectionProgressToggle extends React.Component {
         <button value={ViewType.SUMMARY} style={styles.toggleButton}>
           <FontAwesome icon="search-minus"/>
         </button>
-        <button value={ViewType.DETAIL} style={styles.toggleButton}>
+        <button id={"uitest-toggle-detail-view"} value={ViewType.DETAIL} style={styles.toggleButton}>
           <FontAwesome icon="search-plus"/>
         </button>
       </ToggleGroup>

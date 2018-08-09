@@ -34,6 +34,7 @@
     "markdown_instructions": "I am not sure how much nectar this flower has, but I know it has either 1, 2, or 3 nectar. \r\n\r\nCombine the conditional blocks (`if` and/or `if/else`) to only get as much nectar as the flower has. \r\n\r\nRemember, the amount of nectar can change each time you run the puzzle!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can solve this puzzle using only the blocks on the workspace.  What order should they go in?\",\"hint_id\":\"4-5 Bee Conditionals 6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d676b86795acae131eafa871f71dd8a2/4-5 Bee Conditionals 6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure that you are checking to see if the flower has more than **0** nectar at least **3** times to solve this puzzle.\",\"hint_id\":\"4-5 Bee Conditionals 6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7cc5c221d71f5a58fa4c082a53ff88dd/4-5 Bee Conditionals 6.mp3\"}]",
     "instructions_important": "false",
+    "hint_prompt_attempts_threshold": 19,
     "contained_level_names": null
   },
   "published": true,

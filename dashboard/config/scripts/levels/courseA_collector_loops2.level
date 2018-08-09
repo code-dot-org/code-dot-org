@@ -37,6 +37,7 @@
     "shape_shift": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You'll have to move before you can collect any treasure.\",\"hint_id\":\"courseA_collector_loops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bbdb924d28f209f30776f991305333b2/courseA_collector_loops2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"After you have moved to a square with treasure, use this block to pick it up.\\n<xml>  <block type=\\\"collector_collect\\\"/></xml>\",\"hint_id\":\"courseA_collector_loops2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b2afd442649450d572cdece3cb98b978/courseA_collector_loops2.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

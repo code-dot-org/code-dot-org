@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Location",
   "config": {
     "func": "locationAdd",
     "blockText": "{LOC1} {OPERATOR} {LOC2}",

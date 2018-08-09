@@ -27,7 +27,7 @@
   ~ f.text_area :custom_blocks, placeholder: 'Custom blocks', rows: 4, value: @level.custom_blocks
   #custom-blocks-validation
 .field
-  = f.label :hide_custom_blocks, 'Hide the "Custom" toolbox category'
+  = f.label :hide_custom_blocks, 'Do not automatically add block pool and custom blocks to the toolbox'
   = boolean_check_box f, :hide_custom_blocks
 
 .field

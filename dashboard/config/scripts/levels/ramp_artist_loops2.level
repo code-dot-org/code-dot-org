@@ -38,6 +38,7 @@
     "instructions": "Move forward five times and make this colored line.",
     "markdown_instructions": "Add some beauty by repeating that step five times, changing to a random color between each move.",
     "ideal": "7",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

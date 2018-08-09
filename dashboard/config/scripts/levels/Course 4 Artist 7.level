@@ -35,6 +35,7 @@
     "video_key": "C3_artist_nested_loops",
     "authored_hints": "[]",
     "never_autoplay_video": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

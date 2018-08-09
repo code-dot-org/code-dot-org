@@ -108,6 +108,8 @@ Pegasus tests depend on the `pegasus_test` database.  If you have database-relat
 
 Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `pdftk` and `enscript` installed.
 
+To run one test file in pegasus, run `rake test TEST=<path-to-test-file>` (e.g. `rake test TEST=test/test_dev_routes.rb`).
+
 ### Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.
 

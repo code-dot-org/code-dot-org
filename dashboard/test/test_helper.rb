@@ -1,5 +1,9 @@
 require 'test_reporter'
 
+if defined? ActiveRecord
+  ActiveRecord::Migration&.check_pending!
+end
+
 # This is a workaround for https://github.com/kern/minitest-reporters/issues/230
 Minitest.load_plugins
 Minitest.extensions.delete('rails')
@@ -135,6 +139,7 @@ class ActiveSupport::TestCase
     end
   end
   alias refute_creates assert_does_not_create
+  alias refute_creates_or_destroys assert_does_not_create
 
   def assert_destroys(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1) do
@@ -145,6 +150,65 @@ class ActiveSupport::TestCase
   def assert_does_not_destroy(*args)
     assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
       yield
+    end
+  end
+
+  #
+  # Given an object and a hash mapping method or attribute names to expected
+  # values, checks that each attribute has the expected value.
+  #
+  # Attribute names should all be symbols.  They can refer to attributes,
+  # attr_readers, or methods that don't require arguments on the object.
+  #
+  # Expected values can be any literal object.  There are also some special
+  # expected values that may be passed:
+  #
+  # :not_nil - refutes .nil? on the attribute.
+  # :empty - asserts .empty? on the attribute.
+  # :not_empty - refutes .empty? on the attribute.
+  #
+  def assert_attributes(obj, expected_values)
+    expected_values.each do |attribute, expected_value|
+      actual_value =
+        if obj.respond_to? attribute
+          obj.send attribute
+        else
+          obj[attribute]
+        end
+      failure_message = "Expected #{attribute} to be " \
+        "#{expected_value.inspect} but was #{actual_value.inspect}"
+      if expected_value == :not_nil
+        refute_nil actual_value, failure_message
+      elsif expected_value == :empty
+        assert_empty actual_value, failure_message
+      elsif expected_value == :not_empty
+        refute_empty actual_value, failure_message
+      elsif expected_value.nil?
+        assert_nil actual_value, failure_message
+      else
+        assert_equal expected_value, actual_value, failure_message
+      end
+    end
+  end
+
+  #
+  # Assert a set of attributes about an authentication option.
+  # See assert_attributes for details.
+  # Has special handling for :data
+  #
+  def assert_authentication_option(actual_option, expected_values)
+    refute_nil actual_option
+    asserts_data = expected_values.key? :data
+    expected_data = expected_values.delete(:data)
+
+    assert_attributes actual_option, expected_values
+
+    return unless asserts_data
+    if expected_data.nil?
+      assert_nil actual_option.data
+    elsif expected_data
+      actual_data = JSON.parse(actual_option.data).symbolize_keys
+      assert_attributes actual_data, expected_data
     end
   end
 
@@ -211,12 +275,10 @@ class ActiveSupport::TestCase
   # exception with a message matching the regular expression.
   def assert_raises_matching(matcher)
     assert_raises do
-      begin
-        yield
-      rescue => err
-        assert_match matcher, err.to_s
-        raise err
-      end
+      yield
+    rescue => err
+      assert_match matcher, err.to_s
+      raise err
     end
   end
 
@@ -353,10 +415,8 @@ class ActionController::TestCase
       user_display_name =
         if user.is_a?(Proc)
           'supplied user'
-        elsif user.present?
-          user
         else
-          'not logged-in user'
+          user.presence || 'not logged-in user'
         end
 
       name = "#{user_display_name} calling #{method} #{action} should receive #{response}"
@@ -499,7 +559,7 @@ def storage_id(_)
 end
 
 def storage_id_for_user_id(user_id)
-  Random.new(user_id).rand(1_000_000)
+  Random.new(user_id.to_i).rand(1_000_000)
 end
 
 # A fake slogger implementation that captures the records written to it.

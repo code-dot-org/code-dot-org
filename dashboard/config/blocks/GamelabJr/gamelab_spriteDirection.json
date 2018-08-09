@@ -1,0 +1,37 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "spriteDirection",
+    "inline": false,
+    "blockText": "{DIRECTION}",
+    "returnType": "None",
+    "color": [
+      230,
+      "0.50",
+      "0.70"
+    ],
+    "args": [
+      {
+        "name": "DIRECTION",
+        "options": [
+          [
+            "North",
+            "\"North\""
+          ],
+          [
+            "East",
+            "\"East\""
+          ],
+          [
+            "South",
+            "\"South\""
+          ],
+          [
+            "West",
+            "\"West\""
+          ]
+        ]
+      }
+    ]
+  }
+}

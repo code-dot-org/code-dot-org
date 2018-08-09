@@ -37,6 +37,7 @@
     "instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?",
     "markdown_instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?",
     "ideal": "5",
+    "hint_prompt_attempts_threshold": 15,
     "contained_level_names": null
   },
   "published": true,

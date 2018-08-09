@@ -17,7 +17,9 @@ use Rack::SslEnforcer,
 require 'varnish_environment'
 use VarnishEnvironment
 
-if rack_env?(:development)
+unless CDO.chef_managed
+  # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
+  # For other environments (development / CI), run the HTTP cache from Rack middleware.
   require 'cdo/rack/whitelist'
   require File.expand_path('../../cookbooks/cdo-varnish/libraries/http_cache', __FILE__)
   use Rack::Whitelist::Downstream,

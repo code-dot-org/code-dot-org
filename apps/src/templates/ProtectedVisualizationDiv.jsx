@@ -1,4 +1,3 @@
-
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
@@ -19,11 +18,11 @@ export function isResponsiveFromState(state) {
  * Protected div with ID "visualization" that depends on Redux state to render
  * with the "responsive" class or not.
  */
-const ProtectedVisualizationDiv = React.createClass({
-  propTypes: {
+class ProtectedVisualizationDiv extends React.Component {
+  static propTypes = {
     isResponsive: PropTypes.bool.isRequired,
     children: PropTypes.node,
-  },
+  };
 
   render() {
     return (
@@ -35,7 +34,7 @@ const ProtectedVisualizationDiv = React.createClass({
       </ProtectedStatefulDiv>
     );
   }
-});
+}
 export default connect(state => ({
   isResponsive: isResponsiveFromState(state)
 }))(ProtectedVisualizationDiv);

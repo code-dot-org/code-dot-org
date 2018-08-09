@@ -217,11 +217,28 @@ class Pd::Workshop < ActiveRecord::Base
   # Find the workshop that is closest in time to today
   # @return [Pd::Workshop, nil]
   def self.nearest
-    includes(:sessions).
-      flat_map(&:sessions).
-      compact.
-      min_by {|s| (Date.today - s.start.to_date).to_i.abs}&.
-      workshop
+    joins(:sessions).
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      order("day_diff ASC").
+      first
+  end
+
+  # Find the workshop with the closest session to today attended by the given teacher
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.with_nearest_attendance_by(teacher)
+    joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      order("day_diff").
+      first
+  end
+
+  # Find the workshop with the closest session to today attended by the given teacher,
+  # or enrolled in (but not attended by) that same teacher
+  # @param [User] teacher
+  # @return [Pd::Workshop, nil]
+  def self.nearest_attended_or_enrolled_in_by(teacher)
+    current_scope.with_nearest_attendance_by(teacher) || current_scope.enrolled_in_by(teacher).nearest
   end
 
   def course_name
@@ -310,12 +327,10 @@ class Pd::Workshop < ActiveRecord::Base
     errors = []
     scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
-        begin
-          email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
-          email.deliver_now
-        rescue => e
-          errors << "teacher enrollment #{enrollment.id} - #{e.message}"
-        end
+        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
+        email.deliver_now
+      rescue => e
+        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
       end
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
@@ -339,11 +354,9 @@ class Pd::Workshop < ActiveRecord::Base
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     should_have_ended.each do |workshop|
-      begin
-        Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
-      rescue => e
-        errors << "organizer should close workshop #{workshop.id} - #{e.message}"
-      end
+      Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
+    rescue => e
+      errors << "organizer should close workshop #{workshop.id} - #{e.message}"
     end
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
@@ -503,10 +516,11 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def teachercon?
-    [
-      SUBJECT_CSP_TEACHER_CON,
-      SUBJECT_CSD_TEACHER_CON,
-    ].include?(subject)
+    subject == SUBJECT_TEACHER_CON
+  end
+
+  def summer?
+    local_summer? || teachercon?
   end
 
   def fit_weekend?
@@ -519,6 +533,14 @@ class Pd::Workshop < ActiveRecord::Base
 
   def funded_csf?
     course == COURSE_CSF && funded
+  end
+
+  def future_or_current_teachercon_or_fit?
+    [
+      Pd::Workshop::SUBJECT_TEACHER_CON,
+      Pd::Workshop::SUBJECT_FIT
+    ].include?(subject) &&
+      state != Pd::Workshop::STATE_ENDED
   end
 
   def funding_summary
@@ -565,13 +587,21 @@ class Pd::Workshop < ActiveRecord::Base
     PRE_SURVEY_BY_COURSE[course].try(:[], :course_name)
   end
 
+  def pre_survey_course
+    return nil unless pre_survey?
+    Course.find_by_name! pre_survey_course_name
+  rescue ActiveRecord::RecordNotFound
+    # Raise a RuntimeError if the course name is not found, so we'll be notified in Honeybadger
+    # Otherwise the RecordNotFound error will result in a 404, and we won't know.
+    raise "No course found for name #{pre_survey_course_name}"
+  end
+
   # @return an array of tuples, each in the format:
   #   [unit_name, [lesson names]]
   # Units represent the localized titles for scripts in the Course
   # Lessons are the stage names for that script (unit) preceded by "Lesson n: "
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
-    pre_survey_course = Course.find_by_name! pre_survey_course_name
     pre_survey_course.default_scripts.map do |script|
       unit_name = script.localized_title
       stage_names = script.stages.where(lockable: false).pluck(:name)

@@ -33,6 +33,7 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You should end up with four blocks inside your loop.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

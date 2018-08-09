@@ -34,6 +34,7 @@
     "step_speed": "1",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
+    "hint_prompt_attempts_threshold": 15,
     "contained_level_names": null
   },
   "published": true,

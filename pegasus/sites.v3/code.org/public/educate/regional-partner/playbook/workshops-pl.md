@@ -174,7 +174,7 @@ The Welcome Kits are located in our shared Google Drive, in the <a href="https:/
 
 ### Academic Year Workshops Specific
 
-- 2018-2019 Process Document to come! ([2017-2018 Academic Year Workshop Process Document](https://docs.google.com/document/d/1lI8E7IE0MOYktAPsmssb6vRVI5--s_5zK8OkUAcw158/edit?disco=AAAAA_lL-1o&ts=59833f89))
+- **[2018-2019 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?ts=5b294bbb)**
 - **Plan & Schedule**: Use <a href="https://docs.google.com/presentation/d/1wrwpbY3qpeyRBuh8FMyqg106P_zVzLYwZ-r6EyApNA8/edit#slide=id.g31297c2138_0_2" target=_blank>these guidelines</a> to design your academic year cohorts and determine best dates to schedule your academic-year workshops. (Supporting worksheet available <a href="https://docs.google.com/document/d/1Si2OH4TunUTYK5qX5Ht0qGMGKtk75QrDhWyus7YdPgU/edit#heading=h.qvu3qthzi6uv" target=_blank>here</a>.)
 - **Academic Year PD Options**: Be sure to review the [Recommendations for Supporting Academic Year Workshop Challenges](https://docs.google.com/document/d/1gSCtI19On4slBun5EsiYcRXs6_P7K0dkk25_mMqvVmg/edit#). Formal plans to use any of these solutions must be set with your Regional Manager by May 18, 2018.
 

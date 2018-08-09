@@ -54,6 +54,7 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/10354ace865b921dae1eaad2e6dd0465=levelbuilder/24830.png",
     "top_level_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

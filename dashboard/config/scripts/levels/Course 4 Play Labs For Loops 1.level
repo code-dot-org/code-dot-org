@@ -40,6 +40,7 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions_important": "true",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

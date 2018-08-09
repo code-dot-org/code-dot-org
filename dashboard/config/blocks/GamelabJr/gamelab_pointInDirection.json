@@ -1,0 +1,34 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "pointInDirection",
+    "blockText": "point {SPRITE} {DIRECTION}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "DIRECTION",
+        "options": [
+          [
+            "North",
+            "\"North\""
+          ],
+          [
+            "East",
+            "\"East\""
+          ],
+          [
+            "South",
+            "\"South\""
+          ],
+          [
+            "West",
+            "\"West\""
+          ]
+        ]
+      }
+    ]
+  }
+}

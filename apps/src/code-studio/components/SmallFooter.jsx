@@ -2,6 +2,7 @@
 
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
+import debounce from 'lodash/debounce';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -68,7 +69,7 @@ export default class SmallFooter extends React.Component {
 
   componentDidMount() {
     this.captureBaseElementDimensions();
-    window.addEventListener('resize', this.captureBaseElementDimensions);
+    window.addEventListener('resize', debounce(this.captureBaseElementDimensions, 100));
   }
 
   captureBaseElementDimensions = () => {

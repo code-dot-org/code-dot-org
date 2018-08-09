@@ -513,7 +513,7 @@ NetSimLobby.prototype.getUserSections_ = function (callback) {
 
   var ownedSectionsRequest = $.ajax({
     dataType: 'json',
-    url: '/v2/sections'
+    url: '/api/v1/sections'
   });
 
   $.when(memberSectionsRequest, ownedSectionsRequest).done(function (result1, result2) {

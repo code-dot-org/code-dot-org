@@ -96,7 +96,13 @@ class Stage < ActiveRecord::Base
 
   def localized_lesson_plan
     if script.curriculum_path?
-      script.curriculum_path.gsub('{LESSON}', relative_position.to_s).gsub('{LOCALE}', '')
+      path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
+
+      if path.include? '{LOCALE}'
+        CDO.curriculum_url I18n.locale, path.split('{LOCALE}/').last
+      else
+        path
+      end
     end
   end
 

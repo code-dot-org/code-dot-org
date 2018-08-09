@@ -38,6 +38,7 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are only few lines wrong in the original program.\",\"hint_id\":\"courseD_artist_binary_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/69c2c4403e9bee08ad3678fa7df64b81/courseD_artist_binary_challenge2.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/6cc1fcb9777fec6593fb976f3089a38c=levelbuilder/27779.png",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,
