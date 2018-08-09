@@ -274,31 +274,38 @@ module Pd::WorkshopSurveyResultsHelper
   end
 
   def get_questions_for_forms(workshop)
-    {
+    questions = workshop.summer? ? {
       'Pre Workshop' => {
-        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_0'], workshop)
-      },
-      'Day 1' => {
-        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_1'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
-      },
-      'Day 2' => {
-        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_2'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
-      },
-      'Day 3' => {
-        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_3'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
-      },
-      'Day 4' => {
-        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_4'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
-      },
-      'Day 5' => {
-        general: get_summary_for_form(CDO.jotform_forms['local_summer']['day_5'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local_summer']['facilitator'], workshop)
+        general: get_summary_for_form(
+          Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 0),
+          workshop
+        )
       }
-    }
+    } : {}
+
+    workshop.sessions.each_with_index do |_, index|
+      day = index + 1
+      questions["Day #{day}"] = {
+        general: get_summary_for_form(
+          Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, day),
+          workshop
+        ),
+        facilitator: get_summary_for_form(
+          Pd::WorkshopFacilitatorDailySurvey.form_id(workshop.subject),
+          workshop
+        )
+      }
+    end
+
+    unless workshop.summer?
+      questions["Post Workshop"] = {
+        general: get_summary_for_form(
+          Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 'post_workshop'), workshop
+        )
+      }
+    end
+
+    questions
   end
 
   private
