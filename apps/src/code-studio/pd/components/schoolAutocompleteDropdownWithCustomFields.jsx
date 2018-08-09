@@ -12,7 +12,7 @@ import {isZipCode} from '@cdo/apps/util/formatValidation';
 const VALIDATION_STATE_ERROR = "error";
 const OTHER_SCHOOL_VALUE = "-1";
 
-export default class AutocompleteSchoolDropdownWithOtherFields extends React.Component {
+export default class SchoolAutocompleteDropdownWithCustomFields extends React.Component {
   static propTypes = {
     school_id: PropTypes.string,
     school_info: PropTypes.object,
