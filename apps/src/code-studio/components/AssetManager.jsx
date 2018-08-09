@@ -24,23 +24,6 @@ function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
 
-export const assetButtonStyles = {
-  button: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 5,
-    borderRadius: 4,
-    fontSize: 'large',
-    fontWeight: 'lighter',
-    marginRight: 10
-  },
-  buttonRow: {
-    display: 'flex',
-    flexFlow: 'row',
-    alignItems: 'center'
-  }
-};
-
 const styles = {
   emptyText: {
     margin: '1em 0',
