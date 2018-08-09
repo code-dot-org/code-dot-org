@@ -2075,6 +2075,16 @@ class User < ActiveRecord::Base
     student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
   end
 
+  # Returns an array of summarized students that depend on this user.
+  # These map to the students that will be deleted if this user deletes their account.
+  def dependent_students
+    dependent_students = []
+    students.uniq.each do |student|
+      dependent_students << student.summarize if student.depends_on_teacher_for_login?
+    end
+    dependent_students
+  end
+
   def providers
     if migrated?
       authentication_options.map(&:credential_type)
