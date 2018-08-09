@@ -1,5 +1,10 @@
 require pegasus_dir('router')
+require cookbooks_dir('cdo-varnish/libraries/http_cache')
+require cookbooks_dir('cdo-varnish/libraries/helpers')
 
+# Simple Rack middleware that forwards requests to Pegasus or Dashboard where appropriate.
+# Matches `Host` HTTP request headers against standard Pegasus hosts.
+# Also processes HTTP-Cache `proxy` values for correct path-specific behaviors.
 class PegasusSites
   def initialize(app=nil, params={})
     @app = app
@@ -14,25 +19,34 @@ class PegasusSites
       advocacy.code.org
     ).concat(CDO.partners.map {|partner| "#{partner}.code.org"})
     @pegasus_hosts = pegasus_domains.map {|i| canonical_hostname(i)}
+    @config = HttpCache.config(rack_env)
   end
 
   def call(env)
     request = Rack::Request.new(env)
+    path = request.path
 
-    # /dashboardapi at either host goes to dashboard
-    if request.path =~ /^\/dashboardapi\//
-      env['HTTP_HOST'] = canonical_hostname('studio.code.org') + (CDO.https_development ? '' : ":#{CDO.dashboard_port}")
+    # Match against standard Pegasus hosts.
+    backend = if @pegasus_hosts.any? {|host| host.include? request.host}
+                :pegasus
+              else
+                :dashboard
+              end
+
+    # Process HTTP-cache `proxy` values for path-specific behavior.
+    config = @config[backend][:behaviors] + [@config[backend][:default]]
+    behavior = behavior_for_path(config, path)
+    if (proxy = behavior[:proxy])
+      if proxy == 'pegasus'
+        backend = :pegasus
+        env['HTTP_HOST'] = CDO.site_url('code.org')
+      elsif %w(cdo-assets dashboard).include?(proxy)
+        backend = :dashboard
+        env['HTTP_HOST'] = CDO.site_url('studio.code.org')
+      end
     end
 
-    # /v2 at either host goes to pegasus
-    if request.path =~ /^\/v2\//
-      env['HTTP_HOST'] = canonical_hostname('code.org') + (CDO.https_development ? '' : ":#{CDO.pegasus_port}")
-    end
-
-    if @pegasus_hosts.any? {|host| host.include? request.host}
-      @pegasus_app.call(env)
-    else
-      @app.call(env)
-    end
+    app = backend == :pegasus ? @pegasus_app : @app
+    app.call(env)
   end
 end

@@ -76,7 +76,7 @@ export default class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
           {this.props.workshopCourse === CSF && <td>{enrollment.role ? enrollment.role : NA}</td>}
-          {this.props.workshopCourse === CSF && <td>{enrollment.grades_teaching ? enrollment.grades_teaching : NA}</td>}
+          {this.props.workshopCourse === CSF && <td>{enrollment.grades_teaching ? enrollment.grades_teaching.join(', ') : NA}</td>}
           {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
         </tr>
       );

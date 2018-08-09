@@ -29,11 +29,11 @@
   og_title_soon: "Ora de Cod este aproape"
   og_title_here: "Ora De Cod e aici!"
   og_description: "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 45 de limbi vorbite."
-  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
+  og_description_celeb: "Încercaţi noi tutoriale, câştigați un video chat cu o celebritate pentru dvs. sau clasa dvs.!"
   csedweek_og_title: "Ora de Cod este aici"
   csedweek_og_description: "4-10 decembrie, 2017. Informatica este elementară pentru fiecare student."
-  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
-  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "Ora de Cod revine în 3-9 decembrie 2018. Informatica este un element esențial de studiu pentru fiecare student."
+  csedweek_og_description_here: "Ora de Cod este aici. Informatica este un element esențial de studiu pentru fiecare student."
   hoc2014_heading: "Alătură-te <a href=\"http://hourofcode.com\"> Orei de cod</a> <br/> 8-14 decembrie, 2014 <br/>"
   hoc2014_students: "Elevi"
   hoc2014_try: "Încearcă"
@@ -52,7 +52,7 @@
   csedweek_map_legend_cs_tech_jam: "Eveniment special"
   cded_sign_up: "Înregistrează-te"
   cded_try_it: "Încearcă"
-  try_now: "Încearcă acum"
+  try_now: "Află mai mult"
   california_heading: "Cere şcolii tale să predea informatica"
   california_text: "Orice profesor poate preda ale noastre <a href='http://studio.code.org/'>cursuri gratuite</a>.  Orice şcoală primară poate <a href='http://code.org/educate/k5'>preda informatică</a>. Cere liceelor să intre în <a href='http://code.org/educate/districts'>parteneriat cu noi."
   california_button: "Află mai mult"
@@ -70,17 +70,7 @@
   congratulations: "Felicitări!"
   congratulations_on_completing_hoc: "Felicitări pentru finalizarea unei Ore de Cod"
   congratulations_volunteer: 'Felicitari: acum, ca ai incercat Ora de Programare, <a href="https://code.org/volunteer">înscrie-te pentru a face voluntariat intr-o clasa</a> si pentru a ajuta elevii sa invete o Ora de Programare!'
-  congratulations_on_completing_course1: "Felicitări pentru finalizarea cursului 1"
-  congratulations_on_completing_course2: "Felicitări pentru finalizarea cursului 2"
-  congratulations_on_completing_course3: "Felicitări pentru finalizarea cursului 3"
-  congratulations_on_completing_course4: "Felicitări pentru finalizarea cursului 4"
-  congratulations_on_completing_coursea: "Felicitări pentru finalizarea Cursului A"
-  congratulations_on_completing_courseb: "Felicitări pentru finalizarea Cursului B"
-  congratulations_on_completing_coursec: "Felicitări pentru finalizarea Cursului C"
-  congratulations_on_completing_coursed: "Felicitări pentru finalizarea Cursului B"
-  congratulations_on_completing_coursee: "Felicitări pentru finalizarea Cursului E"
-  congratulations_on_completing_coursef: "Felicitări pentru finalizarea Cursului F"
-  congratulations_on_completing_accelerated: "Felicitări pentru finalizarea Cursului Accelerat"
+  congratulations_on_completing_course: "Felicitări pentru finalizarea %{course}"
   congrats_next_tutorials_title: "Mai departe incercati aceste tutoriale"
   congrats_next_tutorials_desc: "Încercați aceste tutoriale mai scurte, de 1 oră sau încercaţi un <a href=\"%{current_path}/next\"> partener tutorial</a>."
   get_a_certificate_of_achievement: "Obţine un certificat de realizare"
@@ -178,7 +168,7 @@
   get_started: "Începe"
   i_agree: "Sunt de acord"
   participant_select: "-Selectează-"
-  participant_student: "elev"
+  participant_student: "Elev"
   participant_parent: "Părinte"
   participant_educator: "Educator"
   participant_engineer: "Inginer de software"
@@ -213,17 +203,7 @@
   just_did_coursef: "Tocmai am terminat cursul F - vizualizați! @codeorg"
   just_did_accelerated: "Tocmai am terminat Cursul intensiv - vizualizați! @codeorg"
   just_did_hoc_donor: 'Tocmai am parcurs #HourOfCode - vizualizați! (Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg)'
-  just_did_course1_donor: "Tocmai am finalizat Cursul 1 - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_course2_donor: "Tocmai am finalizat Cursul 2 - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_course3_donor: "Tocmai am finalizat Cursul 3 - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_course4_donor: "Tocmai am finalizat Cursul 4 - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_coursea_donor: "Tocmai am finalizat Cursul A - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_courseb_donor: "Tocmai am finalizat Cursul B - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_coursec_donor: "Tocmai am finalizat Cursul C - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_coursed_donor: "Tocmai am finalizat Cursul D - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_coursee_donor: "Tocmai am finalizat Cursul E - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_coursef_donor: "Tocmai am finalizat Cursul F - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
-  just_did_accelerated_donor: "Tocmai am finalizat Cursul intensiv - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
+  just_did_course_donor: "Tocmai am finalizat %{course} - vizualizați! Mulțumesc %{donor_twitter} pentru sprijinul acordat @codeorg"
   twitter_teach_cs: "9 din 10 oameni sunt de acord, şcolile ar trebui să înveţe ştiinţa calculatoarelor. http://youtu.be/nKIu9yen5nc. Vizitati https://code.org/."
   twitter_cs_foundational: "Informatica este fundamentală pentru fiecare student. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Învață o Oră de Cod"
@@ -245,7 +225,7 @@
   stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana Alzate, elev de clasa a cincea'
   stats_michael: '"Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați să învețe."- Michael Clark, Profesor'
   studiobar_title: "Explorează <a href='http://studio.code.org'>Studio-ul Code</a>"
-  studiobar_title_nolink: "Explorează Studio-ul Code"
+  studiobar_title_nolink: "Explorează cursurile Code.org"
   studiobar_elementary_title: "Cursuri elementare"
   studiobar_elementary_body: "Cele trei cursuri noi ale noastre pentru K&#8209;5"
   studiobar_hoc_title: "Ora de Programare"
@@ -253,19 +233,19 @@
   studiobar_flappy_title: "Codul Flappy"
   studiobar_flappy_body: "Creează şi distribuie propriul tău joc Flappy"
   studiobar_teacher_title: "Făcute pentru profesori"
-  studiobar_teacher_body: "Prezintă clasei tale Studio-ul Code"
+  studiobar_teacher_body: "Prezintă clasei tale Code.org"
   studiobar_frozen_title: "Oră de Programare"
   studiobar_frozen_body: "Creează o țară a minunilor de iarnă cu Anna şi Elsa"
   studiobar_donate_title: "Donează"
   studiobar_donate_body: "Un copil învaţă pentru fiecare dolar donat"
   studiobar_shop_title: "Magazin"
   studiobar_shop_body: "Sparge stereotipurile. Poartă logo-ul nostru cu mândrie."
-  homepage_stats_students: "din studenții Americii au un cont pe Code.org"
+  homepage_stats_students: "din studenții Americii au un cont la Code.org"
   homepage_stats_female: "din stundeții noștri sunt femei"
-  homepage_stats_teachers: "profesori folosesc Code.org"
-  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
-  homepage_stats_policy: "states changed policy to support computer science"
-  homepage_stats_title: "We're making a difference"
+  homepage_stats_teachers: "profesorii folosesc Code.org"
+  homepage_stats_hourofcodde: "de elevi și studenți din lume au încercat Ora de Cod"
+  homepage_stats_policy: "statele au schimbat politica pentru a sprijini informatica"
+  homepage_stats_title: "Noi facem o diferență"
   homepage_hero_text_malala: "&ldquo;Provoc fetele din fiecare țară să studieze o Oră de Cod”&rdquo;\nMalala, câștigătoare a Premiului Nobel pentru Pace"
   homepage_hero_text_susan: |-
     &ldquo;Dacă puteţi schimba tehnologia, atunci puteţi schimba lumea.&rdquo; 
@@ -330,7 +310,6 @@
   homepage_banner_link_prizes: 'Alatura-te celui mai mare eveniment educational din istorie. '
   homepage_banner_text_main: "Code.org şi College Board formează o alianţă pentru a îmbunătăţi diversitatea în informatică."
   homepage_banner_text_link: "Află mai mult"
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Află mai mult"
   homepage_banner_20k_teachers: "20000 de profesori instruiţi, şi acum predau informatică în sălile de clasă."
   homepage_banner_20k_teachers_link: "Află mai mult"
@@ -338,19 +317,18 @@
   homepage_banner_congress_link: "Adauga sprijinul tau"
   homepage_banner_emailprivacy: "Facem o schimbare importantă pentru cum sprijinim confidenţialitatea studentului."
   homepage_banner_emailprivacy_link: "Citeşte mai mult"
-  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Află mai mult"
   homepage_slot_text_title_hoc: "Oră de Programare"
   homepage_slot_text_blurb_hoc: "Oricine poate învăța. Începe astăzi"
   homepage_slot_text_link_hoc: "Încearcă Ora de Programare"
   homepage_slot_text_link_about_hoc: "Despre Ora de Cod"
   homepage_slot_text_link_host: "Găzduiește o Oră de Cod"
-  homepage_slot_text_link_hocserved: "# servit"
+  homepage_slot_text_link_hocserved: "# efectuate"
   homepage_solot_text_link_volunteer: "Voluntariaza pentru Ora de Cod"
   homepage_slot_text_title_students: "Elevi"
   homepage_slot_text_blurb_students: "Explorează toate tutorialele noastre"
   homepage_slot_text_blurb_students_courses: "Explorează cursurile noastre"
-  homepage_slot_text_link_codestudio: "Incearca Code Studio"
+  homepage_slot_text_link_codestudio: "Încearcați Studio-ul Code"
   homepage_slot_text_link_local: "Găsește o clasă locală"
   homepage_slot_text_link_othercourses: "Alte cursuri online"
   homepage_slot_text_title_educators: "Educatori"
@@ -367,7 +345,7 @@
   homepage_slot_text_link_buy: "Implică-te"
   homepage_slot_text_link_donate: "Fă o donație"
   homepage_slot_text_link_shop: "Tricouri, palarii & mai mult"
-  homepage_slot_text_link_administrators: "Aduceți la școala dvs. sau în cartier"
+  homepage_slot_text_link_administrators: "Aduceți Informatica în școala dvs."
   homepage_header_codestudio: "Creațiile elevilor cu Studio-ul Code"
   homepage_header_donors: "Code.org mulţumește suporterilor săi"
   homepage_donors_seall: "Vizualizați toate"
@@ -437,7 +415,6 @@
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Tutoriale Hour of Code Minecraft"
   minecraft_specs: "Mai multe limbi | Browsere moderne și tablete | Clasele 2+"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   minecraft_agent_button: "Începe"
   minecraft_designer_description: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
   minecraft_designer_button: "Începe"
@@ -460,7 +437,7 @@
   minecraft_og_designer: "Minecraft revine cu o nouă activitate pentru Ora de Cod. Programați animale şi alte creaturi din Minecraft în propria voastră versiune a Minecraft."
   minecraft_og_agent: "Minecraft revine pentru Ora de Cod iar tu ești eroul principal! Scrie codul de călătorie prin biomurile Minecraft."
   sports_page_title: "Sporturi la Ora de Cod"
-  sports_og_title: "Dă-ţi silinţa. Oricine poate învăţa."
+  sports_og_title: "Da-ti silinta. Oricine poate învăţa."
   sports_og_description: "Campioni şi medaliaţi cu aur vă încurajează să încercaţi Ora de cod. Programaţi propriul joc sportiv."
   sports_title: "Propgrameaza propriul joc sport"
   sports_watch_video: "Urmărește secvența video"
@@ -488,20 +465,19 @@
   sports_athlete_Chris: "Chris Bosh, medaliat cu aur Olimpic şi campion NBA, Miami Heat"
   sports_athlete_Harrison: "Harrison Barnes, medaliat cu aur Olimpic şi campion NBA, Dallas Mavericks"
   watch_inspirational_videos: "Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri inspirationale"
-  video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "Inspira o fata"
   video_title_cs_intro: "Introducere in tehnologia computerelor"
   video_title_schools_dont_teach: "Ceea ce multe scoli nu predau"
   video_title_obama: "Președintele Obama despre tehnologia computerelor"
   video_title_hoc_is_here: "Hour of Code este aici - Oricine poate învăţa"
   video_title_anybody_can_learn: "Oricine poate învăța"
-  video_title_steph_curry: "Hour of Code with Steph Curry"
+  video_title_steph_curry: "Ora de cod cu Steph Curry"
   video_title_draymond_green: "Oră de cod cu Draymond verde"
   video_title_russell_okung: "Oră de cod cu Russell Okung"
   video_title_real_madrid: "Oră de cod cu Real Madrid"
   video_title_marco_belinelli: "Oră de cod cu Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh despre Informatică"
-  video_title_my_name_is_aracely: "My Name is Aracely"
+  video_title_my_name_is_aracely: "Numele meu este Aracely"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -545,7 +521,6 @@
   volunteer_engineer_submission_field_email_desc: "Adresa ta de e-mail nu va fi niciodata distribuita, dar iti vom trimite solicitari din partea profesorilor."
   volunteer_engineer_submission_field_email_placeholder: "Adresă de email"
   volunteer_engineer_submission_field_email_preference: "Sunteți de acord să vă trimitem prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Da'
   volunteer_engineer_submission_field_email_preference_no: 'Nu'
   volunteer_engineer_submission_final_paragraph: "Vei aparea pe o hartă pentru ca profesorii locali sa te contacteze pentru Ora de Cod sau alte oportunitati de voluntariat. Adresa ta de e-mail si adresa exactă nu vor fi distribuite, dar alte informatii (inclusiv locatia aproximativa) vor fi vizibile pentru profesorii locali."
@@ -725,14 +700,14 @@
   dashboard_students_secret_picture_title: "Imagine secreta"
   dashboard_students_secret_picture: "Această secţiune utilizează <b>imagine</b> ca tipul său secret.  Aceasta înseamnă că fiecare dintre studenţii tăi are o poză secretă folosită în loc de o parolă pentru a se conecta.  Elevii ar trebui să utilizeze adresa de web de logare de mai sus pentru a se conecta."
   dashboard_students_reset_picture: "Poți reseta imaginea secretă pentru un elev în orice moment selectând <b>Arată secret</b> și apoi <b>Resetare secret</b>. O nouă imagine secretă va fi generată pentru ca elevul să o folosească la logare."
-  dashboard_students_secret_word_title: "Cuvânt secret"
+  dashboard_students_secret_word_title: "Cuvinte secrete"
   dashboard_students_secret_word: "Cuvânt secret"
   dashboard_students_reset_word: 'Poți reseta cuvintele secrete ale unui elev în orice moment selectând <b>Arată secret</b> și apoi <b>Resetare secret</b>. O nouă pereche de cuvinte secrete va fi generată pentru ca elevul să o folosească atunci când se loghează. '
   dashboard_students_join_link: "Spune-le elevilor tăi să își creeze propriile conturi și să se alăture secțiunii tale la"
   dashboard_students_no_email: "Dacă elevii tăi nu au adrese de e-mail sau dacă dorești să creezi conturi pentru ei, schimbă tipul secret al acestei secţiuni la <b>cuvânt</b> sau <b>imagine</b>."
   dashboard_students_print_page: "Tipărește acestă pagină"
   dashboard_students_signin_card: "Vizitaţi %{join_url} şi introduceţi %{section_code}"
-  dashboard_students_url: "URL"
+  dashboard_students_url: "URL direct"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> fă clic aici</a> pentru documentația noastră de confidenţialitate, care poate fi distribuită sau tipărită pentru elevii tăi."
   dashboard_curriculum_k5_title: "Resurse pentru educatori de clase primare"
   dashboard_curriculum_middle_title: "Resurse pentru educatori de gimnaziu"
@@ -749,10 +724,10 @@
   dashboard_coursed: 'Curs D: '
   dashboard_coursee: 'Curs E: '
   dashboard_coursef: 'Curs F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
+  dashboard_pre-express: 'Curs Expres pentru preșcolari: '
+  dashboard_express: 'Curs Expres: '
   dashboard_unplugged: "Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați aceste lecţii offline</a> în clasa dvs."
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Instrumente: '
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "Prezentare generală Curriculum pentru clasele 1-5"
   dashboard_overview: "Prezentare generală"
@@ -770,8 +745,8 @@
   dashboard_curriculum_csins: 'Informatica în știință:'
   dashboard_curriculum_csp: 'AP ® Principiile Informaticii:'
   dashboard_curriculum_ecs: 'Explorând Informatica:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  dashboard_curriculum_csd: 'Descoperiri informatice: '
+  dashboard_curriculum_apcsa: 'Informatică la nivel avansat în Java: '
   dashboard_grade_k: "Clase"
   dashboard_grade_other: "Alte"
   dashboard_login_word: "Cuvânt"
@@ -876,7 +851,6 @@
   starwars_name: 'Star Wars: Programarea unei galaxii'
   codeorg_name: "Labirint Clasic"
   codeintl_name: "Labirint Clasic"
-  thinkersmithspanish_name: "Mis Amigos Roboticos"
   khan_name: "O introducere în JavaScript"
   khanes_name: "O introducere în JavaScript"
   khanpt_name: "O introducere în JavaScript"
@@ -884,14 +858,10 @@
   khanfr_name: "O introducere în JavaScript"
   khanpl_name: "O introducere în JavaScript"
   tynker_name: "Costruiește propriul tău joc"
-  scratch_name: "Fii creativ cu codarea"
-  lightbot_name: "Lightbot"
+  scratch_name: "Fii creativ cu programarea"
   thinkersmith_name: "Amicii mei roboți"
   condcards_name: "Condiționale cu Carduri"
-  lightbotintl_name: "Lightbot"
   codehs_name: "Învață programare cu Karel, câinele"
-  codecademy_name: "Codecademy"
-  codecombat_name: "CodeCombat"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "Construiește un joc cu JavaScript"
   processing_name: "Desenează programând"
@@ -905,11 +875,8 @@
   flappy_name: "Să facem un joc cu Flappy"
   bitsbox_name: "Bitsbox - creează un joc"
   makeschool_name: "Realizeaza un joc pentru iPhone in propriul browser!"
-  touchdevelop_name: "TouchDevelop"
-  appinventor_name: "Ora de Cod aplicație-inventor"
+  appinventor_name: "Ora de Pprogramare - Inventatorul de aplicatii"
   blockly_name: "Blockly"
-  thinkersmith2_name: "Binary Baubles"
-  kodableunplugged_name: "fuzzFamily Frenzy"
   projguts_name: "Piatră, hârtie, foarfece"
   hourofcode_name: "Labirint Clasic"
   playlab_name: "Laborator de Joacă"
@@ -919,7 +886,6 @@
   allcancode_name: "Fugi Marco!"
   csfirst_name: "CS First"
   boxisland_name: "Insula Cutiei"
-  codesters_name: "Codesters"
   texasinstruments_name: "10 minute de Programat"
   teacherled_name: "Planuri de lectie pentru Ora de Programare"
   course1_name: "Curs 1"
@@ -938,83 +904,53 @@
   coursee_name: "Curs E"
   coursef-draft_name: Curs F
   coursef_name: "Curs F"
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
+  coursea-2017_name: Cursul A (2017)
+  courseb-2017_name: Curs B (2017)
+  coursec-2017_name: Curs C (2017)
+  coursed-2017_name: Curs D (2017)
+  coursee-2017_name: Curs E (2017)
+  coursef-2017_name: Curs F (2017)
   accelerated_name: "Curs intensiv"
-  express_name: "Express Course"
-  pre-express_name: Curs expres pentru preșcolari
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
+  express_name: "Curs Expres"
+  pre-express_name: Curs Expres pentru preșcolari
+  express-2017_name: Curs Expres (2017)
+  pre-express-2017_name: Curs Expres pentru preșcolari (2017)
+  pre-express-2018_name: Curs Expres pentru preșcolari (2018)
   cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
   cspunit2_name: "(vechi) Unitatea 2: Internet"
   cspunit3_name: "(vechi) Unitate 3: programare"
   cspunit4_name: "(vechi) Unitatea 4: date"
   cspunit5_name: "(vechi) Unitatea 5: Exploreaza şi creaza PT"
   cspunit6_name: 'Post-AP: Baze de date din aplicaţii'
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unitatea 5: Datele și societatea'
   csd6_name: 'Unitatea 6: Calcul fizic'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
   csd5-2017_name: 'Unitatea 5: Datele și societatea'
   csd6-2017_name: 'Unitatea 6: Calcul fizic'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unitatea 5: Datele și societatea'
   csd6-2018_name: 'Unitatea 6: Calcul fizic'
   csp1-2017_name: 'Unitatea 1: Internet'
   csp2-2017_name: 'Unitatea 2: Informaţii digitale'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
+  csp-explore-2017_name: 'Nivel Avansat: Pregătire Explorare Perfomanță'
+  csp-create-2017_name: 'Nivel avansat: Creați temă preparatorie'
   csppostap-2017_name: 'Post-AP: Baze de date în aplicaţii'
   csp1-2018_name: 'Unitatea 1: Internet'
   csp2-2018_name: 'Unitatea 2: Informaţii digitale'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
+  csp-explore-2018_name: 'Nivel Avansat: Pregătire Explorare Perfomanță'
+  csp-create-2018_name: 'Nivel avansat: Creați temă preparatorie'
   csppostap-2018_name: 'Post-AP: Baze de date în aplicaţii'
   csp1_name: 'Unitatea 1: Internet'
   csp2_name: 'Unitatea 2: Informaţii digitale'
-  csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Unitatea 3: Introducere în programare (versiunea A)'
   csp3-research-mxghyt_name: 'Unitatea 3: Introducere în programare (obiective subordonate)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: Sarcini de performanţă AP
   csppostap_name: 'Post-AP: Baze de date în aplicaţii'
-  csp-post-survey_name: Student Post-Course Survey
+  csp-post-survey_name: Studiu post - curs pentru elevi
   cspassessment_name: "Testul complet - 50 întrebări"
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
+  csp-explore_name: 'Nivel Avansat: Pregătire Explorare Perfomanță'
+  csp-create_name: 'Nivel avansat: Creați temă preparatorie'
   cspexam1-mWU7ilDYM9_name: Test partea 1-25 întrebări
   cspexam2-AKwgAh1ac5_name: Test de partea 2-25 întrebări
   cspunit3_gradelevel: "Clasele 9-12"
-  cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   20-hour_name: Curs intensiv
   algebra_name: "CS în Algebră"
   AlgebraA_name: "CS în algebră Curs A"
@@ -1024,33 +960,27 @@
   iceage_name: "Epoca de gheață"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (blocuri)"
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Criptare simplă
-  text-compression_name: Text Compression
   math_category_name: "Matematică"
   hoc_category_name: "Oră de Programare"
   csf_category_name: "Fundamentele CS"
-  csf_2017_category_name: "CS Fundamentals (2017)"
-  csf_2018_category_name: "CS Fundamentals (2018)"
+  csf_2017_category_name: "Fundamentele Informaticii (2017)"
+  csf_2018_category_name: "Fundamentele Informaticii (2018)"
   csf_international_category_name: "Fundamentele internaționale ale Informaticii"
   csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
-  csd_category_name: "CS Discoveries ('17-'18)"
-  csd_2018_category_name: "CS Discoveries ('18-'19)"
+  csd_2018_category_name: "Descoperiri Informatice ('18-'19)"
   csp_category_name: "Principii de CS 15-16"
-  csp17_category_name: "Principii de CS 16-17"
-  csp_2018_category_name: "CS Principles ('18-'19)"
+  csp17_category_name: "Pricipiile Informaticii ('17-'18)"
+  csp_2018_category_name: "Pricipii Informatice ('18-'19)"
   cspexams_category_name: "Principiile practicilor test CS"
-  research_studies_category_name: "Research Studies"
   applab_name: "Laboratului Aplicației"
   gamelab_name: "Laborator de jocuri"
   basketball_name: "Realizeaza un joc de baschet"
-  sports_name: "Prorgramează propriul joc sportiv"
+  sports_name: "Propgrameaza propriul joc sport"
   applab_gradelevel: "Vârste 13 +"
   applab_shortdescription_congrats: "App Lab este un mediu de programare în care poți crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde"
   codeorg_gradelevel: "Vârste între 4-104 ani"
   codeintl_gradelevel: "Vârste între 4-104 ani"
-  thinkersmithspanish_gradelevel: "Por todos"
   khan_gradelevel: "Gimnaziu +"
   khanes_gradelevel: "Gimnaziu +"
   khanpt_gradelevel: "Gimnaziu +"
@@ -1076,7 +1006,7 @@
   kodable_gradelevel: "Învățământ primar"
   tynkerapp_gradelevel: "Vârste între 5-13 ani"
   robomindnl_gradelevel: "Vârste 8-13 ani"
-  flappy_gradelevel: "Vârste 6-106 ani"
+  flappy_gradelevel: "Varsta: peste 6 ani"
   bitsbox_gradelevel: "Învățământ primar"
   makeschool_gradelevel: "Liceu"
   touchdevelop_gradelevel: "Liceu"
@@ -1086,9 +1016,9 @@
   kodableunplugged_gradelevel: "Vârste 8-13 ani"
   projguts_gradelevel: "Vârstele 10-13 ani"
   hourofcode_gradelevel: "Vârste între 4-104 ani"
-  frozen_gradelevel: "Vârste 8 - 108 ani"
+  frozen_gradelevel: "Vârste între 4-104 ani"
   starwars_gradelevel: "Varsta: peste 6 ani"
-  playlab_gradelevel: "Vârste 6-14 ani"
+  playlab_gradelevel: "Vârste între 4-104 ani"
   infinity_gradelevel: "Vârste între 4-104 ani"
   artist_gradelevel: "Vârste între 4-104 ani"
   monstercoding_gradelevel: "Vârste între 5-13 ani"
@@ -1108,10 +1038,22 @@
   coursed_gradelevel: "Gradele 8+"
   coursee_gradelevel: "Clasele 9+"
   coursef_gradelevel: "Clasele 10+"
+  coursea-2017_gradelevel: Clasele 5+
+  courseb-2017_gradelevel: Clasele 6+
+  coursec-2017_gradelevel: Clasele 7+
+  coursed-2017_gradelevel: Gradele 8+
+  coursee-2017_gradelevel: Vârste 8-12 ani
+  coursef-2017_gradelevel: Clasele 10+
+  coursea-2018_gradelevel: Clasele 5+
+  courseb-2018_gradelevel: Clasele 6+
+  coursec-2018_gradelevel: Clasele 7+
+  coursed-2018_gradelevel: Gradele 8+
+  coursee-2018_gradelevel: Vârste 8-12 ani
+  coursef-2018_gradelevel: Clasele 10+
   accelerated_gradelevel: "Vârste 10 - 18 ani"
   codeorg_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   codeintl_platformtext: "Browsere web moderne, smartphone-uri, tablete"
-  thinkersmithspanish_platformtext: "Unplugged"
+  thinkersmithspanish_platformtext: "Unuplugged (fără calculator)"
   khan_platformtext: "Browsere web moderne"
   khanes_platformtext: "Browsere web moderne"
   khanpt_platformtext: "Browsere web moderne"
@@ -1134,7 +1076,6 @@
   groklearning_platformtext: "Browsere web moderne"
   quorum_platformtext: "Browserele web moderne. Cititoarele de ecran suportate"
   codespark_platformtext: "iOS, Android (sau browser web)"
-  kodable_platformtext: "iPad"
   tynkerapp_platformtext: "iPad, tablete Android"
   robomindnl_platformtext: "Browsere web moderne, web pentru mobil"
   flappy_platformtext: "Browsere web moderne, smartphone-uri, tablete"
@@ -1147,7 +1088,7 @@
   kodableunplugged_platformtext: "Unuplugged (fără calculator)"
   projguts_platformtext: "Unuplugged (fără calculator)"
   hourofcode_platformtext: "Browsere web moderne, smartphone-uri, tablete"
-  frozen_platformtext: "Browsere moderne + tablete"
+  frozen_platformtext: "Browser modern + tableta"
   starwars_platformtext: "Browser modern + tableta"
   playlab_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   monstercoding_platformtext: "Browsere moderne IOS, Android"
@@ -1159,7 +1100,6 @@
   teacherled_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   codeorg_shortdescription: "Învață să programezi cu Mark Zuckerberg și Angry Birds!"
   codeintl_shortdescription: "Învață să programezi cu Mark Zuckerberg și Angry Birds!"
-  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "Învață sa desenezi în JavaScript"
   khanes_shortdescription: "Învață sa desenezi în JavaScript"
   khanpt_shortdescription: "Învață sa desenezi în JavaScript"
@@ -1210,12 +1150,21 @@
   course2_shortdescription_congrats: "Pentru elevii cu aptitudini de bază de lectură, acest curs se bazează pe curs 1. Elevii vor crea programe pentru a rezolva probleme şi vor dezvolta jocuri interactive sau poveşti pe care le pot împărtăşi. Recomandat pentru clasele 2-5."
   course3_shortdescription_congrats: "Gata pentru urmatorul nivel? Elevii se vor infiltra mai adanc in subiectele programarii introduse în cursurile anterioare pentru a găsi soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui curs, elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu cineva. Recomandat pentru clasele 4-5."
   course4_shortdescription_congrats: "Gata pentru urmatorul nivel? Elevii se vor infiltra mai adanc in subiectele programarii introduse în cursuri anterioare pentru a găsi soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui curs, elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu cineva. Recomandat pentru clasele 4-8."
-  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
-  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
-  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
-  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
-  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
-  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
+  coursea_shortdescription_congrats: "O introducere în informatică pentru preșcolari."
+  courseb_shortdescription_congrats: "O introducere în informatică pentru preșcolari. (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)"
+  coursed_shortdescription_congrats: "Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele."
+  coursee_shortdescription_congrats: "Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii."
+  coursef_shortdescription_congrats: "Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc."
+  coursea-2017_shortdescription_congrats: O introducere în informatică pentru preșcolari.
+  courseb-2017_shortdescription_congrats: O introducere în informatică pentru preșcolari. (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursed-2017_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
+  coursee-2017_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii.
+  coursef-2017_shortdescription_congrats: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+  coursea-2018_shortdescription_congrats: O introducere în informatică pentru preșcolari.
+  courseb-2018_shortdescription_congrats: O introducere în informatică pentru preșcolari. (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursed-2018_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
+  coursee-2018_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii.
+  coursef-2018_shortdescription_congrats: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   codeintl_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   thinkersmithspanish_longdescription: "Folosind un limbaj predefinit \"Vocabularul Robotului\", elevii vor descoperi; mijloace prin care care să se ghideze pentru a duce la bun sfârșit anumite acțiuni specifice, fără a le discuta în prealabil. Această segment învață copiii legătura dintre simboluri și acțiuni, precum și deprinderea atât de necesară de debugging."
@@ -1268,8 +1217,6 @@
   khan_beyond_name: "Învață programare"
   tynker_beyond_name: "Învață programare acasă"
   scratch_beyond_name: "Fii creativ cu programarea"
-  lightbot_beyond_name: "LightBot"
-  codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "ScratchJR pentru preșcolari"
   hopscotch_beyond_name: 'Șotron: Programare pe iPad'
@@ -1279,28 +1226,16 @@
   robomind_beyond_name: "Programează un robot virtual"
   makeschool_beyond_name: "Realizeaza un joc pentru iPhone in propriul browser!"
   appinventor_beyond_name: "Ora de Pprogramare - Inventatorul de aplicatii"
-  touchdevelop_beyond_name: "TouchDevelop"
   codehs_beyond_name: "Învață programare cu Karel, câinele"
   udemy_beyond_name: "Cursuri de programare online"
   lynda_beyond_name: "Cursuri de programare online"
   edx_beyond_name: "Cursul Harvard CS50"
   coursera_beyond_name: "Cursul Stanford CS 101"
-  udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "Cursuri universitare online"
-  kodu_beyond_name: "Kodu"
-  cargobot_beyond_name: "Cargobot"
-  kidsruby_beyond_name: "KidsRuby"
   w3schools_beyond_name: "Învață HTML"
   codeavengers_beyond_name: "Învață să programezi website-uri"
-  mozilla_beyond_name: "Webmaker"
-  codecombat_beyond_name: "CodeCombat"
-  codea_beyond_name: "Codea"
-  lego_beyond_name: "Mindstorms"
-  finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduino cu Sparkfun"
   processing_beyond_name: "Programează cu Processing"
-  alice_beyond_name: "Alice"
-  sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "Vârste între 4-104 ani"
   khan_beyond_gradelevel: "Gimnaziu +"
   tynker_beyond_gradelevel: "Vârste între 5-13 ani"
@@ -1344,9 +1279,6 @@
   scratch_beyond_platformtext: "Orice browser"
   lightbot_beyond_platformtext: "iOS, Android (sau browser web)"
   codecademy_beyond_platformtext: "Browsere web moderne, iOS, Aplicații Android"
-  kodable_beyond_platformtext: "iPad"
-  scratchjr_beyond_platformtext: "iPad"
-  hopscotch_beyond_platformtext: "iPad"
   pocketcode_beyond_platformtext: "App pentru mobil"
   groklearning_beyond_platformtext: "Browsere web moderne"
   hacketyhack_beyond_platformtext: "Instalare pe Desktop"
@@ -1361,14 +1293,11 @@
   coursera_beyond_platformtext: "Browsere web moderne"
   udacity_beyond_platformtext: "Browsere web moderne"
   teachingtree_beyond_platformtext: "Web based"
-  kodu_beyond_platformtext: "Windows, xBox"
-  cargobot_beyond_platformtext: "iPad"
   kidsruby_beyond_platformtext: "Instalare pe Desktop"
   w3schools_beyond_platformtext: "Browsere web moderne"
   codeavengers_beyond_platformtext: "Browsere web moderne"
   mozilla_beyond_platformtext: "Browsere web moderne"
   codecombat_beyond_platformtext: "Web based (Firefox, Chrome, Safari, IE9+)"
-  codea_beyond_platformtext: "iPad"
   lego_beyond_platformtext: "Cumpărare-Robot"
   finch_beyond_platformtext: "Cumpărare-Robot"
   arduino_beyond_platformtext: "Browser web, apoi cumpărare Kit"
@@ -1451,54 +1380,15 @@
   sphero_beyond_longdescription: "Fie că sunteţi un educator sau un părinte, lecțiile SPRK oferă copiilor un curs intensiv și distractiv de programare a roboților, îmbunătățindu-și, în același timp, abilităţile în matematică şi ştiinţă."
   compatibility_hide_this_warning: "Ascunde această avertizare"
   compatibility_unsupported_browser: "Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade browser-ului la <a href='%{supported_browsers_url}', target='_blank'> unul din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii, dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare."
-  starwars_shortcode: "star"
-  mc_shortcode: "mc"
-  frozen_shortcode: "frzn"
-  hourofcode_shortcode: "code"
   flappy_shortcode: "zboară"
-  infinity_shortcode: "inf"
-  playlab_shortcode: "lab"
-  artist_shortcode: "art"
-  header_home: "Home"
-  header_my_dashboard: "My Dashboard"
   header_courses: "cursuri"
-  header_course_catalog: "Course Catalog"
   header_project_gallery: "Proiecte"
-  header_sections: "Sections"
-  header_professional_learning: "Professional Learning"
-  header_educate_overview: "Educator Overview"
-  header_educate_elementary: "Elementary School"
-  header_educate_middle: "Middle School"
-  header_educate_high: "High School"
   header_educate_hoc: "Oră de Programare"
-  header_educate_partner: "Partner with Us"
-  header_educate_beyond: "Beyond Code.org"
-  header_educate_inspire: "Inspire a Student"
-  header_educate_community: "Online Community"
-  header_educate_tools: "Tools and Videos"
-  header_about_us: "About Us"
-  header_about_leadership: "Leadership"
-  header_about_donors: "Donors"
-  header_about_partners: "Partners"
-  header_about_team: "Full Team"
-  header_about_news: "Newsroom"
-  header_about_evaluation: "Evaluation"
-  header_about_jobs: "Jobs"
-  header_about_contact: "Contact Us"
-  header_about_faqs: "FAQs"
-  header_learn: "Learn"
-  header_teach: "Teach"
   header_stats: "Statistici"
-  header_help_us: "Help Us"
-  header_about: "About"
-  header_teacher_community: "Teacher community"
   header_help_support: 'Ajutor şi suport '
-  header_report_bug: "Report bug"
-  header_tutorials: "Tutorials"
-  header_documentation: "Documentation"
-  csp_name: "Principii de CS 16-17"
-  csd_name: "CS Discoveries"
-  csd_2018_name: "CS Discoveries"
+  csp_name: "Principle Informaticii"
+  csd_name: "Descoperiri informatice"
+  csd_2018_name: "Descoperiri informatice"
   full_course_category_name: "Toate cursurile"
   user_header_label: "Salut %{username}"
   user_header_settings: "Contul meu"
@@ -1531,5 +1421,4 @@
   syncing_students: "Sincronizarea elevilor dvs"
   syncing_students_instructions: 'În cazul în care secţiunea Code.org apare vreodată ieșită din actualitate cu lista elevilor dvs. în clasa de Google, faceţi clic pe butonul "Sincronizare elevii din clasa Google" de pe fila "Gestionare elevii":'
   google_sign_in_instruct: 'De acolo, ei ar trebui să aleagă opțiunea "Conectare cu contul Google":'
-  hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro
+  applab-intro_name: Introducere Laborator de Aplicații

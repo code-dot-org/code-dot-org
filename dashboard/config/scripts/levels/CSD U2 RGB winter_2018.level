@@ -177,17 +177,24 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Winter Color\r\n\r\nIn the next few levels, you'll be finding seasonal colors for a website.  Here, you'll need to find the RGB values for a wintery blue color.\r\n\r\n* Click \"Run\" to start the widget.\r\n* Adjust the levels until you match the wintery blue color at the bottom of the widget.\r\n* Write the RGB values on your activity guide.  You will need them in the next activity.\r\n\r\n\r\n<div style=\"font-size: 16px\">\r\n<br />\r\n<details><summary>**How do I make a color lighter?**</summary>\r\n<p>To make a color lighter, you need to add more light (increase the level of the slider).  If you have already added the maximum amount of blue light, you will need to add more red and green light to make your blue lighter.</p></details>\r\n<details>\r\n<summary>**Why do red and green make yellow?**</summary>\r\n<p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\">Wikipedia - Additive Color</a></p> </details>\r\n<details>\r\n<summary>**How many colors can I make with RGB color mixing?**</summary>\r\n<p>You can make make over sixteen million different colors with RGB color mixing.</p></details>\r\n</div>",
+    "markdown_instructions": "# Winter Color\r\n\r\nIn the next few levels, you'll be finding seasonal colors for a website.  Here, you'll need to find the RGB values for a wintery blue color.\r\n\r\n* Click \"Run\" to start the widget.\r\n* Adjust the levels until you match the wintery blue color at the bottom of the widget.\r\n* Write the RGB values on your activity guide.  You will need them in the next activity.\r\n\r\n\r\n<div style=\"font-size: 16px\">\r\n<br />\r\n<details><summary>**How do I make a color lighter?**</summary>\r\n<p>To make a color lighter, you need to add more light (increase the level of the slider).  If you have already added the maximum amount of blue light, you will need to add more red and green light to make your blue lighter.</p></details>\r\n<details>\r\n<summary>**Why do red and green make yellow?**</summary>\r\n<p>When you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a></p> </details>\r\n<details>\r\n<summary>**How many colors can I make with RGB color mixing?**</summary>\r\n<p>You can make make over sixteen million different colors with RGB color mixing.</p></details>\r\n</div>",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "teacher_markdown": "Color solution for Winter Blue: (red, green, blue) = (195, 230, 255)",
     "parent_level_id": 7744,
     "name_suffix": "_2018",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-12 20:55:38 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-07-12 20:59:07 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

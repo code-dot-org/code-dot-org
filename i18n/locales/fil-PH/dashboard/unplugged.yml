@@ -4,69 +4,36 @@ fil:
       Unplug1:
         title: Panimula sa Computer Science
         desc: Ipinapakilala ng araling ito ang konsepto ng Computer Science at ipinapaliwanag kung ano ang ginagawa ng Computer scientist. Sa katapusan ng activity na ito, ang mga mag-aaral ay may pagkakataon upang malaman ang papel na ginagampanan ng isang computer scientist. Sa katapusang activity na ito, bawat mag-aaral ay magkakaroon ng isang paalala kung ano ang kanyang natutunan. Maaari kang matukso upang laktawan ang pagtuturo sa mga bata sa bokabularyo ng mga salita na nauugnay sa mga aralin na susunod, ngunit ang pagtatanghal sa mga ito sa isang masaya at mapaglarong paraan ay mas produktibo kaysa sa paghihintay para sa higit pang advanced na mga pagkakataon.
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: Computational Thinking
         desc: Walang ibang gamit kundi ang papel at mga marker, ang mga estudyante ay matututo sa apat na mga hakbang ng kompyutasiyonal na pag-iisip. Pagkatapos ng maikling panimula, ang mga estudyante ay dapat hahatiin sa mga koponan kung saan sila ay lilikha ng mga direksiyon para sa ibang mga estudyante na gumuhit ng isang partikular na halimaw (mula sa katalogo ng mga napiling mga halimaw). Ang buong gawain ay dapat iproseso, pagkatapos ang mga koponan ay magsusuri sa lahat ng mga halimaw sa katalogo para sa mga paterno, pag-abstract ng iba't ibang mga detalye mula sa mga halimaw, at pagkatapos ay gagamitin nila ang impormasyong ito para makalikha ng algoritmo (mga direksiyon) para makaguhit ng ibang koponan ang isang tiyak na halimaw. Ang mga koponan ay magpapalitan ng mga algoritmo sa ibang grupo at gumuhit ng isang halimaw ayon sa kung ano ang nakalagay sa algoritmo. Ang drowing ba ay kung ano ang pakay ng orihinal na koponan?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: Graph Paper Programming
         desc: Sa pamamagitan ng pag-program sa bawat isa na magguhit ng mga larawan, ang mga estudyante ay magsimulang maintindihan kung ano talaga ang pag-program. Ang klase ay magsisimula sa pagbigay ng instruksiyon ng mga estudyante sa isa't isa na kulayan ang mga parisukat sa graph na papel sa pagsisikap na makopya ang kasalukuyang larawan. Kung may oras pa, ang aralin ay magtatapos sa mga larawan na nalikha ng mga estudyante para sa sarili nila.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: Mga algorithm
         desc: Ang araling ito ay naglalakip sa mga algoritmo. Gamit ang mga tangram na hugis at ang graph na papel, ang unang pagsasanay ay magpapakita kung gaano ka importante ang paggawa sa mga instruksiyon na malinaw at hindi malabo hangga't maaari. Pagkatapos, ang klase ay tutuklas kung ilang paraan mo maaring matupi papel para makagawa ng parihaba, bigyan diin na ang ilang pamamaraan ay nangangailangan ng mas marami o mas kaunti na tupi kaysa sa iba.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: Mga function
         desc: Sa araling ito, ang mga estudyante ay gagawa ng isang suncatcher mula sa mga lubid, mga beads, at iisang espesyal na alindog. Ang mga estudyante ay susunod sa isang serye ng paulit-ulit na mga  hakbang, at pagkatapos ay tatanungin kung makilala ba nila ang isang tiyak na grupo ng mga "kakayahan" na pinaulit-ulit ng ilang beses. Kapag ang mga kakayang iyon ay nabigyang-kahulugan, sila ay tatawagin mula sa isang pangunahing programa at ang buong magandang proseso ng paglikha ay maitala sa isang pirasong papel. Ang pangwakas na program ay dinisenyo para sa buong klase, kung ano man ang kanilang lubid. mga beads, at mga alindog. Para epektibong mapayagan ito, ang mga estudyante ay kakailanganing "i-abstract out" ang mga detalye ng kanilang partikular na mga materyales at maglikha ng mga hindi malinaw na mga termino para sa indibidwal na suplay. Ang paggamit ng mga karaniwang placeholder ay isang magandang panimula sa mga variables.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: Mga kondisyon
         desc: Ito ay isang laro para sa klase. Pagkatapos ipakilala ang ideya ng mga kondisyonal, mga if na pahayag,  at mga loops, ang klase ay maaaring magsasanay nang sabay-sabay gamit ang isang paunang nasulat na programa, isang kahon ng mga kards, at ang suwerte ng pagbunot.
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: Song Writing
         desc: Ang pagbabasa ng mga liriko ay madaling maunawaan na gawin ng karamihan sa mga estudyante. Gagagawa kami ng isang gawain na isang karaniwang kaalaman at lilipat sa isang matatag na edukasyon tungkol sa pag-define at pagtawag ng mga functions. Kapag ang estudyante ay kabisado na sa pag-define/pagtawag na proseso, tayo ay magdadagdag ng karagdagang kakayahan na kalakip ng pagpasa ng mga parameter sa loob ng mga function calls na iyon.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstraction
         desc: Ang gawaing ito ang bumubuo sa pang-araw-araw na gawain ng iyong mga estudyante at ang Mad-Lib na istilo ng pag-iisip na laro ay makakatulong sa iyong klase na matuto tungkol sa pagkaepektibo ng paglalahat.
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
         title: Relay Programming
         desc: Ang araling ito ay magdadala ng isang ideya mula sa nakaraang gawain (4. Graph Paper na Pag-Program) at gagamitin ang mga kakayahang iyon upang bigyang-diin ang kahalagahan ng pagkompleto ng mga programa na gumagana ayon sa pagkasunod-sunod at palaging pagsusuri sa mga programa para sa mga "bugs".
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: The Internet
         desc: Sa araling ito, ang mga estudyante ay magpapanggap na dumaloy sa Internet, at sa proseso ay mapag-aralan ang tungkol sa mga web addresses, IPs at mga DNS.
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: Tapusin na
         desc: Ang huling pagtatapos sa unang 20-oras na serye ay makakatulong sa klase na gunitain ang kanilang mga paboritong sandali, habang nagbibigay sa kanila sa mga susunod na mga hakbang na maaari nilang kunin kung sila ay interesadong magpatuloy sa kanilang paglalakbay sa computer science.
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
         desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
@@ -185,7 +152,6 @@ fil:
         title: Unplugged na Aktibidad
         desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos online.
       deeper learning description:
-        title: ''
         desc: 'nawala ang pagsasalin: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
@@ -263,44 +229,7 @@ fil:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Sinubukang gawin ang bug na inulat ni Brooke\\r\nna proseso gaya ng sumunod:\\r\n1. nagsimula sa isang `unplugged` na antas. Naglagay ng mga impormasyon. Pinindot ang save and publish.\\r\n2. \"Nasira\" ang antas\\r\n3. Gumawa ng `markdown` na antas na may kaparehong nilalaman at parehong pangalan. Nilagyan ng tsek ang kahon para i-encrypt ito. Pinindot ang save at publish"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Ang Robot Kong Mga Kaibigan
       PlantASeed_2018:
         title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
         desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
@@ -345,13 +274,5 @@ fil:
         desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
       MoveItMoveIt_2018:
         title: Galawin ito, Galawin ito
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Relay Programming
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

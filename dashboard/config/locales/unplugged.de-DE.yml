@@ -12,8 +12,6 @@ de:
           wird, bei sehr jungen Schülern zu überspringen. Es ist allerdings produktiver,
           diese Begriffe bereits jetzt spielerisch einzuführen, anstatt auf spätere
           Gelegenheiten zu warten.
-        pdfs:
-        - unplug1
         video: Unplug1
       Unplug2:
         title: Computerorientiertes Denken
@@ -28,9 +26,6 @@ de:
           Die Teams tauschen ihre Algorithmen mit einer anderen Gruppe und zeichnen
           das Monster nach den Vorgaben der Anweisung. Entspricht die Zeichnung den
           Vorstellungen des Teams, das die Anweisungen erstellt hat?
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Millimeterpapier Programmierung
         desc: Schüler „programmieren“ einander, um Bilder zu zeichnen. Bei dieser
@@ -38,9 +33,6 @@ de:
           Der Unterricht beginnt damit, dass Schüler einander anweisen, Quadrate auf
           Millimeterpapier farbig anzumalen, um ein vorhandenes Bild zu reproduzieren.  Wenn
           Zeit dafür ist, können die Schüler am Ende der Stunde selbst Bilder erstellen.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algorithmen
         desc: In dieser Lektion geht es um Algorithmen.  Mit Tangram-Formen und Millimeterpapier
@@ -49,9 +41,6 @@ de:
           auf welche Weise ein Papier zu einem Rechteck gefaltet werden kann. Dabei
           wird angesprochen, dass einige Methoden mehr Faltvorgänge erfordern als
           andere.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Funktionen
         desc: In dieser Lektion basteln Schüler ein Fensterbild aus Faden, Perlen
@@ -65,18 +54,12 @@ de:
           ihrer Materialien „abstrahieren“ und vage Begriffe für die einzelnen Bastelmaterialien
           erfinden.  Diese Verwendung allgemeiner Platzhalter ist eine wunderbare
           Einführung in Variablen.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Bedingungen
         desc: Dies ist ein Spiel für die gesamte Klasse.  Nach der Einführung von
           Bedingungen, Wenn-Anweisungen und Schleifen kann die Klasse gemeinsam üben,
           und zwar mit einem zuvor erstellten Programm, einem Kartenspiel und ein
           bisschen Glück.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Lieder schreiben
         desc: Liedtexte lesen ist für die meisten Schüler eine ziemlich intuitive
@@ -85,44 +68,29 @@ de:
           erläutern. Nachdem Schüler mit dem Definieren/Aufrufen von Funktionen vertraut
           sind, kommen die zusätzlichen Möglichkeiten hinzu, die durch die Weitergabe
           von Parametern beim Aufrufen einer Funktion entstehen.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstraktion
         desc: Diese Aktivität kombiniert den Alltag der Schüler und ein Denkspiel
           nach Art von Onkel-Otto-Lückentexten, um der Klasse die Wirksamkeit von
           Abstraktion zu demonstrieren.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Relais-Programmierung
         desc: Diese Lektion greift eine Idee von einer vorhergehenden Aktivität auf
           (4. Programmieren auf Millimeterpapier) und nutzt die dort erlernten Fähigkeiten,
           um Schülern die Notwendigkeit der Sequenzierung und des Debuggens zu vermitteln.
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: das Internet
         desc: In dieser Lektion unternehmen die Schüler einen virtuellen Ausflug durch
           das Internet und lernen dabei über Internetadressen, IPs und DNS.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Zusammenfassung
         desc: Als Abschluss der ersten 20-stündigen Serie durchlebt die Klasse ihre
           Lieblingsmomente. Außerdem wird darüber gesprochen, wie Schüler bei Interesse
           ihre Informatikkenntnisse selbstständig weiter ausbauen und vertiefen können.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Glücklich Karten
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
-          um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+          um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
       MoveIt:
         title: Achtung, fertig, LOS
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
@@ -196,7 +164,7 @@ de:
         desc: Die Schüler erstellen einen Algorithmus mit Variablen und Funktionen
           (wiederverwendbarer Code), um ein Fensterbild aus Faden und Perlen zu machen.
       SongwritingParameters:
-        title: Songschreiben mit Parametern
+        title: Songschreiben
         desc: Schüler lernen das Konzept des Refrains in einem Lied, um die Weitergabe
           von Parametern kennen zu lernen (mit denen eine Funktion angepasst wird,
           ohne dass die gesamte Funktion neu geschrieben werden muss).
@@ -292,31 +260,16 @@ de:
           Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die
           Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden,
           ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Aktivität ohne Computer
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Aktivität ohne Computer
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivität ohne Computer
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Aktivität ohne Computer
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: Aktivität ohne Computer
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Aktivität ohne Computer
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum
@@ -325,7 +278,7 @@ de:
       courseA_unplugged_happyMaps:
         title: Glücklich Karten
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
-          um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+          um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
       courseA_unplugged_goingPlacesSafely:
         title: Sicher unterwegs
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer
@@ -388,7 +341,6 @@ de:
           das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie
           Bilder und Farben als Binärcode speichern können.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben
           behandelt. Dazu identifizieren und schreiben die Schüler den Algorithmus
           für ein Würfelrennen.
@@ -407,7 +359,7 @@ de:
           in Informatik und Technik angewendet wird, um gemeinsam eine Aufgabe zu
           lösen, die für einzelne Schüler zu schwierig wäre.
       courseE_unplugged_songwriting:
-        title: Songschreiben mit Parametern
+        title: Songschreiben
         desc: Schüler lernen das Konzept des Refrains in einem Lied, um die Weitergabe
           von Parametern kennen zu lernen (mit denen eine Funktion angepasst wird,
           ohne dass die gesamte Funktion neu geschrieben werden muss).
@@ -435,86 +387,8 @@ de:
           Programmen wieder und wieder verwendet werden können. In dieser Lektion
           lernen Schüler intuitiv, warum die Kombination von einzelnen Codeelementen
           zu Funktionen so nützlich ist.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
-          as follows:\r\n1. started with an `unplugged` level. populated with info.
-          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
-          level with the same content and same name. checked to box to encrypt it.
-          hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: Meine Roboterfreunde
       PlantASeed_2018:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum
@@ -523,14 +397,11 @@ de:
       UnplugHappyMaps_2018:
         title: Glücklich Karten
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
-          um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+          um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
       GoingPlacesSafely_2018:
         title: Sicher unterwegs
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer
           erklären, wie Schüler sicher im Internet navigieren.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine
@@ -544,10 +415,8 @@ de:
           anweisen, ein Bild zu reproduzieren.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktivität ohne Computer
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktivität ohne Computer
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
@@ -583,22 +452,5 @@ de:
           repräsentiert und gespeichert werden können.
       MoveItMoveIt_2018:
         title: Bewegung, Bewegung
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Relais-Programmierung
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.

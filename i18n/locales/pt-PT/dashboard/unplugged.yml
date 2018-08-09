@@ -4,69 +4,36 @@ pt:
       Unplug1:
         title: Introdução à Ciência Computacional
         desc: Essa lição vai introduzir o conceito de Ciência da Computação e explicar o que um Cientista da Computação faz. Ela também vai dar aos alunos a oportunidade de assumir o papel de um cientista da computação. No final da atividade, cada aluno vai levar para casa uma lembrança do que ele ou ela aprenderam. Você pode pensar em não ensinar às crianças mais jovens as palavras do vocabulário relacionado às lições a seguir, mas apresentá-las a eles e forma divertida e descontraída agora é muito mais produtivo do que esperar por oportunidades futuras.
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: Pensamento computacional
         desc: Com nada além de papel e caneta, os alunos vão aprender os quatro passos do pensamento computacional. Após uma breve introdução, eles devem se dividir em grupos e criar instruções para que os outros alunos desenhem um monstro específico (a partir de um catálogo de monstros previamente selecionados). A tarefa deve ser dividida, e então os grupos vão analisar todos os monstros no catálogo, procurando por padrões, detalhes abstratos e diferentes, e então usar essa informação para criar um algoritmo (instruções) para que outro grupo desenhe um certo monstro. Os grupos, então, vão trocar os algoritmos entre si e desenhar o monstro com base no algoritmo. O desenho vai ser parecido com o que o grupo que criou o algoritmo queria?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: Programação de papel milimetrico
         desc: Através da programação para desenhar as figuras, os alunos vão começar a entender o que de fato é programar. A aula vai começar com alunos dando instruções uns aos outros para colorir os quadrados em um papel quadriculado na tentativa de reproduzir uma figura existente. Se houver tempo, a aula pode ser concluída com imagens que os próprios alunos criaram.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmos
         desc: Essa lição aborda os algoritmos. Usando formas de tangram (um quebra-cabeça chinês) e papel quadriculado, o primeiro exercício mostra a importância de escrever cada instrução da forma mais clara e menos ambígua possível. Depois, a aula vai explorar de quantas formas você pode dobrar um papel para fazer um retângulo, mostrando como alguns métodos podem exigir mais ou menos dobras que outros.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: Funções
         desc: Nessa lição, os alunos vão fazer um suncatcher com cordas, miçangas, e um amuleto. Os alunos vão seguir uma série de passos repetitivos, e então devem identificar certos conjuntos de "habilidades" que são duplicadas várias vezes. Uma vez que essas habilidades estejam definidas, elas vão ser chamadas a partir de um programa principal, e todo o belo processo de criação será anotado em uma única folha de papel. O programa final será direcionado a toda a sala, seja qual for o tipo de cordas, miçangas, e amuletos usados. Para isso de fato funcionar, os alunos vão precisar "abstrair" os detalhes dos materiais específicos e criar condições vagas. O uso de espaços reservados genéricos é uma ótima forma de fazer uma introdução às variáveis.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: Condições
         desc: Essa aula é um jogo. Depois de introduzir a ideia de estruturas condicionais, instruções se e laços, os alunos podem praticar juntos, usando um programa, ou um baralho de cartas.
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: escrita de canção
         desc: Ler letras de música é uma coisa bastante intuitiva para a maioria dos alunos. Vamos pegar uma atividade que já é de conhecimento comum e transformá-la em uma maneira sólida de ensinar a definição e a chamada de funções. Uma vez que os alunos estiverem familiarizados com o processo de definição e a chamada, vamos adicionar capacidades extras, que vêm com a passagem de parâmetros nas chamadas de funções.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstração
         desc: Essa atividade combina a rotina diária de seus alunos e um jogo de raciocínio no estilo Mad-Lib para ajudar a classe a aprender sobre a eficácia da abstração.
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
         title: Programação do relé
         desc: Essa lição vai usar uma ideia de uma atividade anterior (4. Programação em Papel Quadriculado) e usar as habilidades nela presentes para enfatizar a importância de completar programas que operam em sequência e de frequentemente verificar os programas a procura de "bugs".
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: A Internet
         desc: Nessa lição, os alunos vão fingir que navegam pela Internet, enquanto aprendem sobre endereçamento web, IPs e DNS.
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: Resumo
         desc: O resumo final na primeira série de 20 horas de atividade vai ajudar os alunos a reviverem seus momentos preferidos, ao mesmo tempo que vai ajudá-los nos próximos passos que eles mesmos podem dar se estiverem interessados em continuar sua jornada na ciência da computação.
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Mapas felizes
         desc: Estudantes criam um algoritmo simples (conjunto de instruções) para mover a personagem através de um labirinto usando um único comando.
@@ -113,7 +80,7 @@ pt:
         title: Caça-sóis funcionais
         desc: Os alunos criam um algoritmo com variáveis e funções (trechos de código que você usa várias vezes) para criar caça-sóis usando fios e contas.
       SongwritingParameters:
-        title: Composição de música com parâmetros
+        title: Composição
         desc: Os alunos usam o conceito de refrão em uma música para aprender sobre a passagem de parâmetros (os quais personalizam uma função sem a necessidade de reescrevê-la).
       DiceRace:
         title: 'Algoritmos da via real: jogo de dados'
@@ -164,7 +131,6 @@ pt:
         title: Detecção de colisão e o teorema de Pitágoras
         desc: Determinar quando os objetos na tela se tocam é um aspecto importante na maioria dos jogos. Nesta lição, vamos ver como o teorema de Pitágoras e a fórmula da distância podem ser usados para medir a distância entre dois pontos no plano, e então decidir se esses dois pontos (ou personagens do jogo) estão se tocando.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: Nesta aula, vais aprender mais sobre os ciclos!
       courseB_unplugged_MRF:
         title: Atividade offline
@@ -174,19 +140,10 @@ pt:
         desc: Tal como fizeste em “Os meus amigos robótidos”, vais “programar” os teus amigos, mas desta vez com ciclos!
       courseC_Unplugged_ScreenOutTheMean:
         title: Atividade offline
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Atividade offline
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Atividade offline
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos da Vida Real: Plante uma Semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental.
@@ -215,10 +172,10 @@ pt:
         title: Pulseiras binárias
         desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
       courseD_unplugged_graphPaperProgramming:
-        title: Programação em Papel Quadriculado
+        title: Programação de papel milimetrico
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
       courseD_unplugged_relayProgramming:
-        title: Programação Relay
+        title: Programação por revezamento
         desc: Os alunos participam de uma corrida de revezamento na qual devem atravessar o pátio para escrever um algoritmo baseado em uma imagem em "papel quadriculado de programação". Eles só podem escrever uma instrução por vez, e, se houver um erro em algum lugar, eles têm que apagar e refazer os passos a partir daquele ponto.
       courseD_unplugged_conditionalsCards:
         title: Condicionais com cartas
@@ -227,7 +184,6 @@ pt:
         title: Imagens binárias
         desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns, nossos cursos anteriores ensinaram aos alunos que as informações podem ser representadas por uma grande variedade de opções binárias. Esta aula leva esse conceito um passo adiante, uma vez que demonstra como um computador também pode armazenar informações ainda mais complexas (como imagens e cores) em binário.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso, os alunos vão identificar e escrever um algoritmo para um jogo de dados.
       courseE_unplugged_songwritingParameters:
         title: Composição de música com parâmetros
@@ -239,7 +195,7 @@ pt:
         title: Aberto ao público
         desc: Os alunos usam o crowdsourcing, uma técnica comum de resolução de problemas em ciência da computação, para concluir uma tarefa juntos, em sala de aula, de maneira mais eficiente do que se um aluno tentasse resolver sozinho.
       courseE_unplugged_songwriting:
-        title: Composição de música com parâmetros
+        title: Composição
         desc: Os alunos usam o conceito de refrão em uma música para aprender sobre a passagem de parâmetros (os quais personalizam uma função sem a necessidade de reescrevê-la).
       courseF_unplugged_tangrams:
         title: Algoritmos Tangram
@@ -253,54 +209,8 @@ pt:
       courseF_unplugged_songwritingParameters:
         title: Escrevendo uma canção com parâmetros
         desc: 'Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Meus amigos robóticos
       PlantASeed_2018:
         title: 'Algoritmos da Vida Real: Plante uma Semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental.
@@ -311,20 +221,17 @@ pt:
         title: Ir a Locais de um modo Seguro
         desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram como navegar em segurança pela Internet.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: Nesta aula, vais aprender mais sobre os ciclos!
       BigEvent_2018:
         title: O Grande Evento
         desc: Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.
       GraphPaperProgramming_2018:
-        title: Programação em Papel Quadriculado
+        title: Programação de papel milimetrico
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
       courseD_unplugged_digitalCitizenship_2018:
         title: Atividade offline
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Atividade offline
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
@@ -345,13 +252,5 @@ pt:
         desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
       MoveItMoveIt_2018:
         title: Criando caminhos
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
-        title: Programação Relay
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+        title: Programação por revezamento

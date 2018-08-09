@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 module RegistrationsControllerTests
@@ -352,6 +351,8 @@ module RegistrationsControllerTests
 
       patch '/users/email', params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
       assert_response :unprocessable_entity
+      assert_includes assigns(:user).errors.full_messages, 'Current password is invalid'
+      assert_includes response.body, 'Current password is invalid'
     end
 
     test "multi-auth: updates email for migrated teacher if password is correct" do

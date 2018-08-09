@@ -33,7 +33,6 @@ const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
  */
 const instructionsInitialState = {
   noInstructionsWhenCollapsed: false,
-  hasInlineImages: false,
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
@@ -64,7 +63,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     }
     const {
       noInstructionsWhenCollapsed,
-      hasInlineImages,
       shortInstructions,
       shortInstructions2,
       longInstructions,
@@ -82,7 +80,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     }
     return Object.assign({}, state, {
       noInstructionsWhenCollapsed,
-      hasInlineImages,
       shortInstructions,
       shortInstructions2,
       longInstructions,
@@ -148,11 +145,10 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos,
+    hasContainedLevels, overlayVisible, teacherMarkdown, levelVideos,
     mapReference, referenceLinks}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
-  hasInlineImages,
   shortInstructions,
   shortInstructions2,
   longInstructions,
@@ -246,9 +242,9 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * Given a particular set of config options, determines what our instructions
  * constants should be
  * @param {AppOptionsConfig} config
- * @param {string} config.level.instructions
+ * @param {string} config.level.shortInstructions
  * @param {string} config.level.instructions2
- * @param {string} config.level.markdownInstructions
+ * @param {string} config.level.longInstructions
  * @param {array} config.level.inputOutputTable
  * @param {array} config.level.levelVideos
  * @param {stirng} config.level.mapReference,
@@ -265,22 +261,26 @@ export const determineInstructionsConstants = config => {
     locale,
     noInstructionsWhenCollapsed,
     hasContainedLevels,
-    teacherMarkdown} = config;
+    teacherMarkdown
+  } = config;
+
   const {
-    instructions,
     instructions2,
-    markdownInstructions,
     inputOutputTable,
     levelVideos,
     mapReference,
     referenceLinks,
   } = level;
 
-  let longInstructions, shortInstructions, shortInstructions2;
+  let {
+    longInstructions,
+    shortInstructions
+  } = level;
+
+  let shortInstructions2;
+
   if (noInstructionsWhenCollapsed) {
     // CSP mode - We dont care about locale, and always want to show English
-    longInstructions = markdownInstructions;
-    shortInstructions = instructions;
 
     // Never use short instructions in CSP. If that's all we have, make them
     // our longInstructions instead
@@ -289,14 +289,17 @@ export const determineInstructionsConstants = config => {
     }
     shortInstructions = undefined;
   } else {
-    if (experiments.isEnabled('i18nMarkdownInstructions')) {
-      longInstructions = markdownInstructions;
-    } else {
-      // CSF mode - For non-English folks, only use the non-markdown instructions
-      longInstructions = (!locale || locale === ENGLISH_LOCALE) ? markdownInstructions : undefined;
-    }
-    shortInstructions = instructions;
     shortInstructions2 = instructions2;
+
+    if (
+      shortInstructions &&
+      !experiments.isEnabled('i18nMarkdownInstructions') &&
+      (locale && locale !== ENGLISH_LOCALE)
+    ) {
+      // CSF mode - For non-English folks, if we have short instructions then
+      // use only those (and hide the long instructions)
+      longInstructions = undefined;
+    }
 
     // if the two sets of instructions are identical, only use the short
     // version (such that we dont end up minimizing/expanding between
@@ -343,7 +346,6 @@ export const determineInstructionsConstants = config => {
 
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
-    hasInlineImages: !!config.skin.instructions2ImageSubstitutions,
     overlayVisible: !!shouldShowOverlay,
     shortInstructions,
     shortInstructions2,

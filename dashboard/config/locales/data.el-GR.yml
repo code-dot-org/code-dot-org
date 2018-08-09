@@ -13,7 +13,7 @@ el:
         Artist2: Ο Καλλιτέχνης 2
         Unplug5: Συναρτήσεις
         Farmer: Ο Αγρότης
-        Unplug6: Έλεγχοι
+        Unplug6: Συνθήκες
         Artist3: Ο Καλλιτέχνης 3
         Unplug7: Συγγραφή τραγουδιού
         Farmer2: Ο Αγρότης 2
@@ -97,7 +97,7 @@ el:
         maze_2_17: Το πλακίδιο "Εάν - Αλλιώς" ελέγχει μια συνθήκη, και στη συνέχεια
           κάνει Ή το ένα πράγμα Ή το άλλο. Για να με οδηγήσεις στον ηλιοτρόπιο δοκίμασε
           να χρησιμοποιήσεις αυτό το νέο μπλοκ.
-        maze_2_18: Μια ακόμη άσκηση για το πλακίδιο "Εάν-Αλλιώς", μπορείς να τα καταφέρεις
+        maze_2_18: Αλλη μία εξάσκηση του μπλόκ "Αν-αλλιώς", μπορείς να το κάνεις σωστά
           με την πρώτη προσπάθεια;
         maze_2_19: Μπορείς να προσθέσεις 3 ακόμα πλακίδια για να με βοηθήσεις σε έναν
           πιο πολύπλοκο λαβύρινθο; Αν το κάνεις σωστά, θα μπορώ να περπατάω σε οποιαδήποτε
@@ -649,30 +649,27 @@ el:
         C4_function_edit: Επεξεργαζόμαστε Συναρτήσεις
         C4_function_create: Δημιουργούμε Συναρτήσεις
         C4_function_parameters: Συναρτήσεις με παραμέτρους
-        C4_conditionals: Έλεγχοι
+        C4_conditionals: Συνθήκες
         C4_unplugged_algorithms: Αλγόριθμοι με Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Μεταβλητές σε φακέλους
         C4_unplugged_forloops: Βρόχοι Για
         C4_unplugged_parameters: Γράφουμε τραγούδια με παραμέτρους
         C4_unplugged_binary: Δυαδικό
-        CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_artist_angles: Γωνίες σε έναν καλλιτέχνη
+        CSF_collector_k1_blocks: 'Θεμελιώσεις Επιστήμης Υπολογιστών: Ο Συλλέκτης'
+        CSF_collector_repeat_loops: Ο Συλλέκτης Επαναλαμβάνει Βρόγχους
+        CSF_collector_text_blocks: 'Θεμελιώσεις Επιστήμης Υπολογιστών: Ο Συλλέκτης'
+        CSF_create_functions: Δημιουργούνται Συναρτήσεις
+        CSF_EF_cs_matters: Ζητήματα Επιστήμης Υπολογιστών
+        CSF_maze_intro_k1_blocks: Εισαγωγή στο Στούντιο Κώδικα
+        CSF_maze_intro_text_blocks: Εισαγωγή στο Στούντιο Κώδικα
         CSF_my_robotic_friends: Οι Ρομποτικοί φίλοι μου
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
+        CSF_Power_of_Words: Ισχύς Λέξεων
+        CSF_Super_Digital_Citizen: Σούπερ Ψηφιακός Πολίτης
+        CSF_stevie_big_project: Ο Στίβι και το Μεγάλο Πρότζεκτ
+        CSF_unspotted_bugs: Μη εντοπισμένα bugs
+        CSF_zuck_loops_short: Επανάληψη Βρόγχων
         frozen_intro: Εισαγωγή στην Ώρα του Κώδικα
         frozen_loops: Εισαγωγή στους Βρόχους (Επαναλήψεις)
         frozen_functions: Εισαγωγή στις Συναρτήσεις
@@ -683,66 +680,24 @@ el:
         infinity_playlab_intro: Εργαστηριακό παιχνίδι - Εισαγωγή
         infinity_playlab_events: Εργαστηριακό παιχνίδι - Γεγονότα
         infinity_playlab_repeat_forever: Εργαστηριακό παιχνίδι - Επανάλαβε Για πάντα
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
+        csd_concept_how_computers_work: Εισαγωγή στο πως λειτουργούν οι υπολογιστές
+        csd_concept_computer: 'Πως λειτουργούν οι υπολογιστές: Τι κάνει έναν υπολογιστή,
+          υπολογιστή;'
+        csd_concept_binary_data: 'Πως λειτουργούν οι υπολογιστές: Δυαδικό Σύστημα
+          και Δεδομένα'
+        csd_concept_circuits_logic: 'Πως λειτουργούν οι Υπολογιστές: Κυκλώματα και
+          Λογική'
+        csd_concept_memory_cpu_input_output: 'Πως λειτουργούν οι Υπολογιστές: Μνήμη,
+          ΚΜΕ, Είσοδος και Έξοδος'
+        csd_concept_hardware_software: 'Πως λειτουργούν οι Υπολογιστές: Hardware &
+          Software'
+        csd_concept_search: Πως λειτουργεί η αναζήτηση
+        csd_external_amazon_data: Πως τα Big Data χρησιμοποιούνται από τα συστήματα
+          προτάσεων της Amazon για να μας αλλάξουν τις ζωές
         csp_applab_functions: Εισαγωγή στις Συναρτήσεις
         csp_applab_functions_parameters: Συναρτήσεις με παραμέτρους
         csp_applab_loops: Βρόχοι
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Λίγα για τα Εικονοστοιχεία
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 1
         csp_pixelation_color_2: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 2
         csp_pixelation_color_3: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 3
@@ -750,9 +705,6 @@ el:
         csp_U1L14_tipstricks: Ενότητα 1 Μάθημα 14 Βοηθήματα για δασκάλους
         csp_textcompression: Εργαλείο συμπίεσης κειμένου
         csp_textcompression_new: Εργαλείο συμπίεσης κειμένου
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS στην Άλγεβρα - Εισαγωγή
         alg_2_eval_block: Πληροφορική στην Άλγεβρα - Πλακάκια αξιολόγησης
         alg_3_pemdas: Πληροφορική στην Άλγεβρα - Σειρά πράξεων
@@ -800,63 +752,11 @@ el:
         iceage_intro: Ωρα του Κώδικα, Εποχή των Παγετώνων - Εισαγωγή
         iceage_events: Ωρα του Κώδικα, Εποχή των Παγετώνων - Γεγονότα
         iceage_repeat: Ωρα του Κώδικα, Εποχή των Παγετώνων - Εντολές επανάληψης
-        mc_2016_intro: Minecraft Hour of Code - Introduction
-        mc_2016_loops: Minecraft Hour of Code - Loops
-        mc_2016_events: Minecraft Hour of Code - Events
-        mc_2016_spawn: Minecraft Hour of Code - Spawn
-        mc_2016_congrats: Minecraft Hour of Code - Congratulations
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
-        mc_2017_congratulations: Minecraft Hour of Code - Congratulations
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: Βρόχοι
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ
-        run: Πάτα "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
+        run: Πάτησε "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
         watch_again: Πάτα εδώ με το ποντίκι να δεις το βίντεο ξανά
         gray_block_explanation: Μπλοκ που είναι γκριζαρισμένα δεν μπορούν να διαγραφούν.
           Μπορείς να βρεις λύση σ΄αυτό;

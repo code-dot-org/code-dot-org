@@ -649,22 +649,7 @@ Craft.executeUserCode = function () {
     tillSoil: function (blockID) {
       appCodeOrgAPI.tillSoil(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
-    whilePathAhead: function (blockID, callback) {
-      // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.whilePathAhead(studioApp().highlight.bind(studioApp(), blockID),
-          '',
-          'Player',
-          callback);
-    },
-    whileBlockAhead: function (blockID, blockType, callback) {
-      // if resurrected, move blockID be last parameter to fix "Show Code"
-      appCodeOrgAPI.whilePathAhead(studioApp().highlight.bind(studioApp(), blockID),
-          blockType,
-          'Player',
-          callback);
-    },
     ifLavaAhead: function (callback, blockID) {
-      // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.ifBlockAhead(studioApp().highlight.bind(studioApp(), blockID),
           "lava",
           'Player',

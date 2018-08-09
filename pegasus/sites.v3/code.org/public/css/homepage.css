@@ -119,12 +119,23 @@ body.modal-open .supreme-container{
   text-align: center
 }
 
-@media screen and (max-width: 970px)  {
+@media screen and (max-width: 970px) {
   #homepage #hero {
     overflow: visible;
   }
   #homepage #actions {
     margin-top: 300px;
+  }
+}
+
+#homepage .bigannounce {
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 971px)  {
+  #homepage .bigannounce {
+    padding-top: 100px;
   }
 }
 

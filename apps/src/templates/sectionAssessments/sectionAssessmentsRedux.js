@@ -1,4 +1,8 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
+import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
+import i18n from '@cdo/locale';
+
+export const ALL_STUDENT_FILTER = 0;
 
  /**
  * Initial state of sectionAssessmentsRedux
@@ -14,6 +18,8 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
  * isLoading - boolean - indicates that requests for assessments and surveys have been
  * sent to the server but the client has not yet received a response
  * assessmentId - int - the level_group id of the assessment currently in view
+ * questionIndex - int - the question index of the question currently in view in detail view
+ * studentId - int - the studentId of the current student being filtered for.
  */
 const initialState = {
   assessmentResponsesByScript: {},
@@ -21,6 +27,8 @@ const initialState = {
   surveysByScript: {},
   isLoading: false,
   assessmentId: 0,
+  questionIndex: 0,
+  studentId: ALL_STUDENT_FILTER,
 };
 
 // Question types for assessments.
@@ -49,6 +57,8 @@ const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
+const SET_STUDENT_ID = 'sectionAssessments/SET_STUDENT_ID';
+const SET_QUESTION_INDEX = 'sectionAssessments/SET_QUESTION_INDEX';
 
 // Action creators
 export const setAssessmentResponses = (scriptId, assessments) =>
@@ -58,14 +68,16 @@ export const setAssessmentQuestions = (scriptId, assessments) =>
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
+export const setQuestionIndex = (questionIndex) => ({ type: SET_QUESTION_INDEX, questionIndex: questionIndex });
+export const setStudentId = (studentId) => ({ type: SET_STUDENT_ID, studentId: studentId });
 export const setSurveys = (scriptId, surveys) => ({ type: SET_SURVEYS, scriptId, surveys });
 
 export const asyncLoadAssessments = (sectionId, scriptId) => {
-  return async (dispatch, getState) => {
+  return (dispatch, getState) => {
     const state = getState().sectionAssessments;
 
-    // Don't load data if it's already stored in redux.
-    if (state.assessmentResponsesByScript[scriptId]) {
+    // Don't load data if it's already stored or if there is no script or no section selected.
+    if (state.assessmentResponsesByScript[scriptId] || !scriptId || !sectionId) {
       return;
     }
 
@@ -74,13 +86,19 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     const loadResponses = loadAssessmentResponsesFromServer(sectionId, scriptId);
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
-    const [responses, questions, surveys] = await Promise.all([loadResponses, loadQuestions, loadSurveys]);
-
-    dispatch(setAssessmentResponses(scriptId, responses));
-    dispatch(setAssessmentQuestions(scriptId, questions));
-    dispatch(setSurveys(scriptId, surveys));
-
-    dispatch(finishLoadingAssessments());
+    Promise.all([
+      loadResponses,
+      loadQuestions,
+      loadSurveys
+    ]).then((arrayOfValues) => {
+      dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
+      dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
+      dispatch(setSurveys(scriptId, arrayOfValues[2]));
+      dispatch(finishLoadingAssessments());
+    }).catch((error) => {
+      // If any return an error, the UI will show that there are no assessments.
+      dispatch(finishLoadingAssessments());
+    });
   };
 };
 
@@ -95,10 +113,31 @@ export default function sectionAssessments(state=initialState, action) {
       ...initialState
     };
   }
+  if (action.type === SET_SCRIPT) {
+    return {
+      ...state,
+      studentId: ALL_STUDENT_FILTER,
+      questionIndex: 0,
+    };
+  }
   if (action.type === SET_ASSESSMENT_ID) {
     return {
       ...state,
       assessmentId: action.assessmentId,
+      questionIndex: 0,
+      studentId: ALL_STUDENT_FILTER,
+    };
+  }
+  if (action.type === SET_STUDENT_ID) {
+    return {
+      ...state,
+      studentId: action.studentId,
+    };
+  }
+  if (action.type === SET_QUESTION_INDEX) {
+    return {
+      ...state,
+      questionIndex: action.questionIndex,
     };
   }
   if (action.type === SET_ASSESSMENT_RESPONSES) {
@@ -133,13 +172,13 @@ export default function sectionAssessments(state=initialState, action) {
   if (action.type === START_LOADING_ASSESSMENTS) {
     return {
       ...state,
-      isLoading: true
+      isLoading: true,
     };
   }
   if (action.type === FINISH_LOADING_ASSESSMENTS) {
     return {
       ...state,
-      isLoading: false
+      isLoading: false,
     };
   }
 
@@ -182,6 +221,44 @@ export const getCurrentAssessmentQuestions = (state) => {
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
 
+// Returns an object with the question text and answers of the currently selected
+// question in the current assessment.
+export const getCurrentQuestion = (state) => {
+  const emptyQuestion = {question: '', answers: []};
+  const isSurvey = isCurrentAssessmentSurvey(state);
+  if (isSurvey) {
+    const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+    const currentSurvey = surveys[state.sectionAssessments.assessmentId];
+    const questionsData = currentSurvey.levelgroup_results;
+    const question = questionsData[state.sectionAssessments.questionIndex];
+    if (question) {
+      return {
+        question: question.question,
+        answers: question.type === SurveyQuestionType.MULTI && question.answer_texts.map((answer, index) => {
+          return {text: answer, correct: false, letter: ANSWER_LETTERS[index]};
+        }),
+      };
+    } else {
+      return emptyQuestion;
+    }
+  } else {
+    // Get question text for assessment.
+    const assessment = getCurrentAssessmentQuestions(state) || {};
+    const assessmentQuestions = assessment.questions;
+    const question = assessmentQuestions ? assessmentQuestions[state.sectionAssessments.questionIndex] : null;
+    if (question) {
+      return {
+        question: question.question_text,
+        answers: question.type === QuestionType.MULTI && question.answers.map((answer, index) => {
+          return {...answer, letter: ANSWER_LETTERS[index]};
+        }),
+      };
+    } else {
+      return emptyQuestion;
+    }
+  }
+};
+
 /**
  * Returns an array of objects, each of type questionStructurePropType
  * indicating the question and correct answers for each multiple choice
@@ -215,36 +292,68 @@ export const getMultipleChoiceStructureForCurrentAssessment = (state) => {
 export const getStudentMCResponsesForCurrentAssessment = (state) => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
+    return {};
+  }
+  const studentId = state.sectionAssessments.studentId;
+  const studentObject = studentResponses[studentId];
+  if (!studentObject) {
+    return {};
+  }
+
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+
+  // If the student has not submitted this assessment, don't display results.
+  if (!studentAssessment) {
+    return {};
+  }
+
+  // Transform that data into what we need for this particular table, in this case
+  // is the structure studentAnswerDataPropType
+  return {
+    id: studentId,
+    name: studentObject.student_name,
+    studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
+      .map(answer => {
+        return {
+          responses: indexesToAnswerString(answer.student_result),
+          isCorrect: answer.status === MultiAnswerStatus.CORRECT,
+        };
+      })
+  };
+
+};
+
+// Get an array of objects indicating what each student answered for the current
+// question in view.
+export const getStudentAnswersForCurrentQuestion = (state) => {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses || isCurrentAssessmentSurvey(state)) {
     return [];
   }
 
-  const studentResponsesArray = Object.keys(studentResponses).map(studentId => {
+  const questionIndex = state.sectionAssessments.questionIndex;
+  let studentAnswers = [];
+
+  // For each student, look up their responses to the currently selected assessment.
+  Object.keys(studentResponses).forEach(studentId => {
     studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
-    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+    let studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
 
-    // If the student has not submitted this assessment, don't display results.
-    if (!studentAssessment) {
-      return;
+    const responsesArray = studentAssessment.level_results || [];
+    const question = responsesArray[questionIndex];
+    if (question) {
+      studentAnswers.push({
+        id: studentId,
+        name: studentObject.student_name,
+        answer: question.student_result ? indexesToAnswerString(question.student_result) : '-',
+        correct: question.status === 'correct',
+      });
     }
-
-    // Transform that data into what we need for this particular table, in this case
-    // is the structure studentAnswerDataPropType
-    return {
-      id: studentId,
-      name: studentObject.student_name,
-      studentResponses: studentAssessment.level_results.filter(answer => answer.type === QuestionType.MULTI)
-        .map(answer => {
-          return {
-            responses: indexesToAnswerString(answer.student_result),
-            isCorrect: answer.status === MultiAnswerStatus.CORRECT,
-          };
-        })
-    };
-  }).filter(studentData => studentData);
-
-  return studentResponsesArray;
+  });
+  return studentAnswers;
 };
 
 /**
@@ -270,8 +379,18 @@ export const getAssessmentsFreeResponseResults = (state) => {
 
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
 
+  let currentStudentsIds = Object.keys(studentResponses);
+  // Filter by current selected student.
+  if (state.sectionAssessments.studentId !== ALL_STUDENT_FILTER) {
+    if (!currentStudentHasResponses(state)) {
+      return [];
+    } else {
+      currentStudentsIds = [state.sectionAssessments.studentId];
+    }
+  }
+
   // For each student, look up their responses to the currently selected assessment.
-  Object.keys(studentResponses).forEach(studentId => {
+  currentStudentsIds.forEach(studentId => {
     studentId = (parseInt(studentId, 10));
     const studentObject = studentResponses[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
@@ -386,32 +505,61 @@ export const isCurrentAssessmentSurvey = (state) => {
  * the assessment.
  */
 export const getStudentsMCSummaryForCurrentAssessment = (state) => {
-  const summaryOfStudentsMCData = getAssessmentResponsesForCurrentScript(state);
-  if (!summaryOfStudentsMCData) {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
     return [];
   }
 
-  const studentsSummaryArray = Object.keys(summaryOfStudentsMCData).map(studentId => {
+  // Get a set of all students from sectionDataRedux.
+  let allStudentsByIds = {};
+  state.sectionData.section.students.forEach(student => {
+    allStudentsByIds[student.id] = {
+      student_name: student.name,
+      responses_by_assessment: {},
+    };
+  });
+
+  // Combine the list of all students with the list of student responses.
+  allStudentsByIds = {
+    ...allStudentsByIds,
+    ...studentResponses,
+  };
+
+  let currentStudentsIds = Object.keys(allStudentsByIds);
+  // Filter by current selected student.
+  if (state.sectionAssessments.studentId !== ALL_STUDENT_FILTER) {
+    currentStudentsIds = [state.sectionAssessments.studentId];
+  }
+
+  const studentsSummaryArray = currentStudentsIds.map(studentId => {
     studentId = (parseInt(studentId, 10));
-    const studentsObject = summaryOfStudentsMCData[studentId];
+    const studentsObject = allStudentsByIds[studentId];
     const currentAssessmentId = state.sectionAssessments.assessmentId;
     const studentsAssessment = studentsObject.responses_by_assessment[currentAssessmentId];
 
-    // If the student has not submitted this assessment, don't display results.
+    // If the student has not submitted this assessment, display empty results.
     if (!studentsAssessment) {
-      return;
+      return {
+        id: studentId,
+        name: studentsObject.student_name,
+        isSubmitted: false,
+        submissionTimeStamp: i18n.notStarted(),
+      };
     }
     // Transform that data into what we need for this particular table, in this case
     // it is the structure studentOverviewDataPropType
+    const submissionTimeStamp = studentsAssessment.submitted ?
+      new Date(studentsAssessment.timestamp).toLocaleString() : i18n.inProgress();
     return {
       id: studentId,
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
       isSubmitted: studentsAssessment.submitted,
-      submissionTimeStamp: studentsAssessment.timestamp,
+      submissionTimeStamp: submissionTimeStamp,
+      url: studentsAssessment.url,
     };
-  }).filter(studentOverviewData => studentOverviewData);
+  });
 
   return studentsSummaryArray;
 };
@@ -487,7 +635,7 @@ export const countSubmissionsForCurrentAssessment = (state) => {
   if (isSurvey) {
     const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
     const currentSurvey = surveysStructure[currentAssessmentId];
-    if (!currentSurvey) {
+    if (!currentSurvey || currentSurvey.levelgroup_results.length === 0) {
       return 0;
     }
     return currentSurvey.levelgroup_results[0].results.length;
@@ -501,6 +649,99 @@ export const countSubmissionsForCurrentAssessment = (state) => {
     });
     return totalSubmissions;
   }
+};
+
+/**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are defined as CSV_SURVEY_HEADERS and CSV_ASSESSMENT_HEADERS.
+ */
+export const getExportableData = (state) => {
+  const isSurvey = isCurrentAssessmentSurvey(state);
+  if (isSurvey) {
+    return getExportableSurveyData(state);
+  } else {
+    return getExportableAssessmentData(state);
+  }
+};
+
+/**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are stage, questionNumber, questionText, answer, numberAnswered.
+ */
+export const getExportableSurveyData = (state) => {
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+  const currentSurvey = surveys[currentAssessmentId];
+  let responses = [];
+
+  for (let i = 0; i<currentSurvey.levelgroup_results.length; i++) {
+    const questionResults = currentSurvey.levelgroup_results[i];
+    const rowBase = {
+      stage: currentSurvey.stage_name,
+      questionNumber: questionResults.question_index + 1,
+      questionText: questionResults.question,
+    };
+
+    if (questionResults.type === SurveyQuestionType.MULTI) {
+      for (let answerIndex = 0; answerIndex<questionResults.answer_texts.length; answerIndex++) {
+        responses.push({
+          ...rowBase,
+          answer: questionResults.answer_texts[answerIndex],
+          numberAnswered: questionResults.results.filter(result => result.answer_index === answerIndex).length,
+        });
+      }
+    } else if (questionResults.type === SurveyQuestionType.FREE_RESPONSE) {
+      for (let j = 0; j<questionResults.results.length; j++) {
+        responses.push({
+          ...rowBase,
+          answer: questionResults.results[j].result,
+          numberAnswered: 1,
+        });
+      }
+    }
+  }
+
+  return responses;
+};
+
+/**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are studentName, stage, timestamp, question, response, and correct.
+ */
+export const getExportableAssessmentData = (state) => {
+  let responses = [];
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = (parseInt(studentId, 10));
+    const studentObject = studentResponses[studentId];
+    const studentAssessment = studentObject.responses_by_assessment[currentAssessmentId];
+
+    if (studentAssessment && studentAssessment.level_results) {
+      for (let questionIndex = 0; questionIndex < studentAssessment.level_results.length; questionIndex++) {
+        const response = studentAssessment.level_results[questionIndex];
+        responses.push({
+          studentName: studentObject.student_name,
+          stage: studentAssessment.stage,
+          timestamp: studentAssessment.timestamp,
+          question: questionIndex + 1,
+          response: response.type === QuestionType.MULTI ? indexesToAnswerString(response.student_result) :
+            response.student_result,
+          correct: response.status,
+        });
+      }
+    }
+  });
+
+  return responses;
+};
+
+/**
+ *  @returns {boolean} true if current studentId has submitted responses for current script.
+ */
+export const currentStudentHasResponses = (state) => {
+  return !!getAssessmentResponsesForCurrentScript(state).hasOwnProperty(state.sectionAssessments.studentId);
 };
 
 // Helpers

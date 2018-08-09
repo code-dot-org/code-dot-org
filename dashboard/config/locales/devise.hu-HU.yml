@@ -52,7 +52,6 @@ hu:
         a megerősítés linkre hogy igazold az új e-mail címed.
       updated: A fiók sikeresen frissítve.
     sessions:
-      signed_in: ''
       signed_out: Sikeresen kilépve.
     unlocks:
       send_instructions: Néhány percen belül kapsz egy e-mailt arról, hogy miként

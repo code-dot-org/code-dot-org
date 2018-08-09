@@ -2,6 +2,7 @@
  * Workshop Details section of the workshop enrollment form
  */
 import React, {PropTypes} from 'react';
+import {WorkshopPropType} from './enrollmentConstants';
 
 const styles = {
   label: {
@@ -14,25 +15,20 @@ const styles = {
 
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
-    workshop: PropTypes.object,
+    workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string)
   };
 
   workshopCourse() {
-    if (this.props.workshop.course_target) {
+
+    if (this.props.workshop.course_url) {
       return (
-        <a href={this.props.workshop.course_target}>
+        <a href={this.props.workshop.course_url}>
           {this.props.workshop.course}
         </a>
       );
     } else {
       return this.props.workshop.course;
-    }
-  }
-
-  workshopSubject() {
-    if (this.props.workshop.subject) {
-      return this.props.workshop.subject;
     }
   }
 
@@ -89,7 +85,7 @@ export default class WorkshopDetails extends React.Component {
         <div className="span2">
           {this.workshopCourse()}
           <br/>
-          {this.workshopSubject()}
+          {this.props.workshop.subject}
         </div>
       </div>
     );

@@ -2,18 +2,139 @@ import React, {PropTypes} from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
+import {navigateToHref} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from "@cdo/apps/templates/tables/tableConstants";
 import BootstrapButton from './BootstrapButton';
+import {connect} from 'react-redux';
+import {disconnect} from './manageLinkedAccountsRedux';
 
 const OAUTH_PROVIDERS = {
   GOOGLE: 'google_oauth2',
-  FACEBOOK: 'facebook',
+  MICROSOFT: 'windowslive',
   CLEVER: 'clever',
-  MICROSOFT: 'microsoft',
+  FACEBOOK: 'facebook',
+};
+export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
+const authOptionPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  credentialType: PropTypes.string.isRequired,
+  email: PropTypes.string,
+  error: PropTypes.string,
+});
+const EMPTY_AUTH_OPTION = {
+  credentialType: '',
+  email: '',
+  error: '',
+};
+const DISCONNECT_DISABLED_STATUS = {
+  ROSTER_SECTION: 'rosterSection',
+  NO_LOGIN_OPTIONS: 'noLoginOptions',
 };
 
-export default class ManageLinkedAccounts extends React.Component {
+class ManageLinkedAccounts extends React.Component {
+  static propTypes = {
+    // Provided by redux
+    authenticationOptions: PropTypes.objectOf(authOptionPropType),
+    userHasPassword: PropTypes.bool.isRequired,
+    isGoogleClassroomStudent: PropTypes.bool.isRequired,
+    isCleverStudent: PropTypes.bool.isRequired,
+    disconnect: PropTypes.func.isRequired,
+  };
+
+  connect = (provider) => {
+    navigateToHref(`/users/auth/${provider}/connect`);
+  };
+
+  toggleProvider = (id, provider) => {
+    if (id) {
+      this.props.disconnect(id);
+    } else {
+      this.connect(provider);
+    }
+  };
+
+  cannotDisconnectGoogle = (authOption) => {
+    return authOption.credentialType === OAUTH_PROVIDERS.GOOGLE && this.props.isGoogleClassroomStudent;
+  };
+
+  cannotDisconnectClever = (authOption) => {
+    return authOption.credentialType === OAUTH_PROVIDERS.CLEVER && this.props.isCleverStudent;
+  };
+
+  userHasLoginOption = (authOptions) => {
+    // It's the user's last authentication option
+    if (authOptions.length === 0) {
+      return false;
+    }
+
+    // If the user's only authentication options are email addresses, a password is required for login
+    const credentialTypes = authOptions.map(option => option.credentialType);
+    const uniqueCredentialTypes = _.uniq(credentialTypes);
+    if (uniqueCredentialTypes.length === 1 && uniqueCredentialTypes[0] === 'email') {
+      return this.props.userHasPassword;
+    }
+
+    // All other options must be OAuth, so user has login option
+    return true;
+  };
+
+  disconnectDisabledStatus = (authOption) => {
+    // Cannot disconnect from Google or Clever if student is in a Google Classroom or Clever section
+    if (this.cannotDisconnectGoogle(authOption) || this.cannotDisconnectClever(authOption)) {
+      return DISCONNECT_DISABLED_STATUS.ROSTER_SECTION;
+    }
+
+    // Make sure user has another way to log in if authOption is disconnected
+    const otherAuthOptions = Object.values(this.props.authenticationOptions).filter(option => {
+      return option.id !== authOption.id;
+    });
+    if (!this.userHasLoginOption(otherAuthOptions)) {
+      return DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS;
+    }
+  };
+
+  getDisplayName = (provider) => {
+    switch (provider) {
+      case OAUTH_PROVIDERS.GOOGLE:
+        return i18n.manageLinkedAccounts_google_oauth2();
+      case OAUTH_PROVIDERS.MICROSOFT:
+        return i18n.manageLinkedAccounts_microsoft();
+      case OAUTH_PROVIDERS.CLEVER:
+        return i18n.manageLinkedAccounts_clever();
+      case OAUTH_PROVIDERS.FACEBOOK:
+        return i18n.manageLinkedAccounts_facebook();
+    }
+  };
+
+  formatEmail = (authOption) => {
+    // Always display 'encrypted' if email is not recorded for connected authentication option
+    // (i.e., students or clever accounts)
+    if (authOption.id) {
+      return authOption.email || ENCRYPTED;
+    }
+    return null;
+  };
+
+  emptyAuthOption = (provider) => {
+    return {
+      ...EMPTY_AUTH_OPTION,
+      credentialType: provider
+    };
+  };
+
+  formatAuthOptions = () => {
+    const allOptions = Object.values(this.props.authenticationOptions);
+    const optionsByProvider = _.groupBy(allOptions, 'credentialType');
+
+    let formattedOptions = [];
+    Object.values(OAUTH_PROVIDERS).forEach(provider => {
+      const providerOptions = optionsByProvider[provider] || [this.emptyAuthOption(provider)];
+      formattedOptions = formattedOptions.concat(providerOptions);
+    });
+    return formattedOptions;
+  };
+
   render() {
     return (
       <div style={styles.container}>
@@ -28,31 +149,18 @@ export default class ManageLinkedAccounts extends React.Component {
             </tr>
           </thead>
           <tbody>
-            <OauthConnection
-              type={OAUTH_PROVIDERS.GOOGLE}
-              displayName={i18n.manageLinkedAccounts_google_oauth2()}
-              email={'brad@code.org'}
-              onClick={() => {}}
-            />
-            <OauthConnection
-              type={OAUTH_PROVIDERS.MICROSOFT}
-              displayName={i18n.manageLinkedAccounts_microsoft()}
-              email={'*** encrypted ***'}
-              onClick={() => {}}
-            />
-            <OauthConnection
-              type={OAUTH_PROVIDERS.CLEVER}
-              displayName={i18n.manageLinkedAccounts_clever()}
-              email={undefined}
-              onClick={() => {}}
-            />
-            <OauthConnection
-              type={OAUTH_PROVIDERS.FACEBOOK}
-              displayName={i18n.manageLinkedAccounts_facebook()}
-              email={'brad@code.org'}
-              onClick={() => {}}
-              cannotDisconnect
-            />
+            {this.formatAuthOptions().map(option => {
+              return (
+                <OauthConnection
+                  key={option.id || _.uniqueId('empty_')}
+                  displayName={this.getDisplayName(option.credentialType)}
+                  email={this.formatEmail(option)}
+                  onClick={() => this.toggleProvider(option.id, option.credentialType)}
+                  disconnectDisabledStatus={option.id ? this.disconnectDisabledStatus(option) : null}
+                  error={option.error}
+                />
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -60,17 +168,41 @@ export default class ManageLinkedAccounts extends React.Component {
   }
 }
 
+export const UnconnectedManageLinkedAccounts = ManageLinkedAccounts;
+
+export default connect(state => ({
+  authenticationOptions: state.manageLinkedAccounts.authenticationOptions,
+  userHasPassword: state.manageLinkedAccounts.userHasPassword,
+  isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
+  isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
+}), dispatch => ({
+  disconnect(id) {
+    dispatch(disconnect(id));
+  }
+}))(ManageLinkedAccounts);
+
 class OauthConnection extends React.Component {
   static propTypes = {
-    type: PropTypes.oneOf(Object.values(OAUTH_PROVIDERS)).isRequired,
     displayName: PropTypes.string.isRequired,
     email: PropTypes.string,
     onClick: PropTypes.func.isRequired,
-    cannotDisconnect: PropTypes.bool
+    disconnectDisabledStatus: PropTypes.string,
+    error: PropTypes.string,
+  };
+
+  getDisconnectDisabledTooltip = () => {
+    switch (this.props.disconnectDisabledStatus) {
+      case DISCONNECT_DISABLED_STATUS.ROSTER_SECTION:
+        return i18n.manageLinkedAccounts_rosteredSectionTooltip();
+      case DISCONNECT_DISABLED_STATUS.NO_LOGIN_OPTIONS:
+        return i18n.manageLinkedAccounts_noLoginTooltip();
+      default:
+        return null;
+    }
   };
 
   render() {
-    const {displayName, email, onClick, cannotDisconnect} = this.props;
+    const {displayName, email, onClick, disconnectDisabledStatus, error} = this.props;
     const emailStyles = !!email ? styles.cell : {...styles.cell, ...styles.emptyEmailCell};
     const buttonText = !!email ?
       i18n.manageLinkedAccounts_disconnect() :
@@ -95,9 +227,9 @@ class OauthConnection extends React.Component {
               style={styles.button}
               text={buttonText}
               onClick={onClick}
-              disabled={cannotDisconnect}
+              disabled={!!disconnectDisabledStatus}
             />
-            {cannotDisconnect &&
+            {disconnectDisabledStatus &&
               <ReactTooltip
                 id={tooltipId}
                 offset={styles.tooltipOffset}
@@ -105,11 +237,12 @@ class OauthConnection extends React.Component {
                 effect="solid"
               >
                 <div style={styles.tooltip}>
-                  {i18n.manageLinkedAccounts_cannotDisconnectTooltip()}
+                  {this.getDisconnectDisabledTooltip()}
                 </div>
               </ReactTooltip>
             }
           </span>
+          <span style={styles.error}>{error}</span>
         </td>
       </tr>
     );
@@ -134,6 +267,7 @@ const styles = {
     paddingLeft: GUTTER,
     paddingRight: GUTTER,
     fontWeight: 'normal',
+    width: tableLayoutStyles.table.width / 3,
   },
   cell: {
     ...tableLayoutStyles.cell,
@@ -155,5 +289,10 @@ const styles = {
   },
   tooltip: {
     width: BUTTON_WIDTH * 2
+  },
+  error: {
+    paddingLeft: GUTTER / 2,
+    color: color.red,
+    fontStyle: 'italic',
   },
 };

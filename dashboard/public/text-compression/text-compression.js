@@ -152,8 +152,8 @@
   var options = window.options || {};
 
 // Level builder settings
-  if (options.instructions) {
-    $('#widgetInstructions').text(options.instructions);
+  if (options.shortInstructions) {
+    $('#widgetInstructions').text(options.shortInstructions);
   }
   if (options.poems) {
     poemsList = options.poems;

@@ -6,28 +6,58 @@ import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
 import SignInPrompt from './sign_in_prompt';
 import EnrollForm from './enroll_form';
-import {SUBMISSION_STATUSES} from './enrollmentConstants';
+import {
+  WorkshopPropType,
+  FacilitatorPropType
+} from './enrollmentConstants';
+
+const SUBMISSION_STATUSES = {
+  UNSUBMITTED: "unsubmitted",
+  DUPLICATE: "duplicate",
+  OWN: "own",
+  CLOSED: "closed",
+  FULL: "full",
+  NOT_FOUND: "not found",
+  SUCCESS: "success",
+  UNKNOWN_ERROR: "error"
+};
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {
-    workshop: PropTypes.object,
+    workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
-    enrollment: PropTypes.object,
-    facilitators: PropTypes.arrayOf(PropTypes.object),
-    logged_in: PropTypes.bool,
-    sign_in_prompt_data: PropTypes.object
+    enrollment: PropTypes.shape({
+      email: PropTypes.string,
+      first_name: PropTypes.string
+    }),
+    facilitators: PropTypes.arrayOf(FacilitatorPropType),
+    sign_in_prompt_data: PropTypes.shape({
+      info_icon: PropTypes.string,
+      sign_in_url: PropTypes.string
+    }),
+    workshop_enrollment_status: PropTypes.string
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      submissionStatus: SUBMISSION_STATUSES.UNSUBMITTED
+      workshopEnrollmentStatus: this.props.workshop_enrollment_status || SUBMISSION_STATUSES.UNSUBMITTED
     };
   }
 
-  onSubmissionComplete = (data) => {
-    this.setState(data);
+  onSubmissionComplete = (result) => {
+    if (result.responseJSON) {
+      this.setState({
+        workshopEnrollmentStatus: result.responseJSON.workshop_enrollment_status,
+        cancelUrl: result.responseJSON.cancel_url,
+        accountExists: result.responseJSON.account_exists,
+        signUpUrl: result.responseJSON.sign_up_url,
+        workshopUrl: result.responseJSON.workshop_url
+      });
+    } else {
+      this.setState({workshopEnrollmentStatus: SUBMISSION_STATUSES.UNKNOWN_ERROR});
+    }
   };
 
   renderDuplicate() {
@@ -143,73 +173,73 @@ export default class WorkshopEnrollment extends React.Component {
   }
 
   render() {
-    if (this.state.submissionStatus === SUBMISSION_STATUSES.UNSUBMITTED) {
-      return (
-        <div>
-          <h1>
-            {`Register for a ${this.props.workshop.course} workshop`}
-          </h1>
-          <p>
-            Taught by Code.org facilitators who are experienced computer science educators,
-            our workshops will prepare you to teach the Code.org curriculum.
-          </p>
-          <div className="container">
-            <div className="row">
-              {/* Left Column */}
-              <div className ="span6">
-                <WorkshopDetails
-                  workshop={this.props.workshop}
-                  session_dates={this.props.session_dates}
-                />
-                <h2>Facilitators</h2>
-                {this.props.facilitators.map(facilitator => (
-                  <FacilitatorBio
-                    key={facilitator.email}
-                    facilitator={facilitator}
+    switch (this.state.workshopEnrollmentStatus) {
+      case SUBMISSION_STATUSES.UNSUBMITTED:
+        return (
+          <div>
+            <h1>
+              {`Register for a ${this.props.workshop.course} workshop`}
+            </h1>
+            <p>
+              Taught by Code.org facilitators who are experienced computer science educators,
+              our workshops will prepare you to teach the Code.org curriculum.
+            </p>
+            <div className="container">
+              <div className="row">
+                {/* Left Column */}
+                <div className ="span6">
+                  <WorkshopDetails
+                    workshop={this.props.workshop}
+                    session_dates={this.props.session_dates}
                   />
-                ))}
-              </div>
-              {/* Right Column */}
-              <div className ="span6">
-                <div className="row">
-                  <div className ="span6">
-                    <h2>Your Information</h2>
-                    {
-                      !this.props.logged_in &&
-                      <SignInPrompt
-                        info_icon={this.props.sign_in_prompt_data.info_icon}
-                        sign_in_url={this.props.sign_in_prompt_data.sign_in_url}
-                      />
-                    }
-                    <EnrollForm
-                      workshop_id={this.props.workshop.id}
-                      workshop_course={this.props.workshop.course}
-                      logged_in={this.props.logged_in}
-                      first_name={this.props.enrollment.first_name}
-                      email={this.props.enrollment.email}
-                      onSubmissionComplete={this.onSubmissionComplete}
+                  <h2>Facilitators</h2>
+                  {this.props.facilitators.map(facilitator => (
+                    <FacilitatorBio
+                      key={facilitator.email}
+                      facilitator={facilitator}
                     />
+                  ))}
+                </div>
+                {/* Right Column */}
+                <div className ="span6">
+                  <div className="row">
+                    <div className ="span6">
+                      <h2>Your Information</h2>
+                      {
+                        !this.props.enrollment.email &&
+                        <SignInPrompt
+                          info_icon={this.props.sign_in_prompt_data.info_icon}
+                          sign_in_url={this.props.sign_in_prompt_data.sign_in_url}
+                        />
+                      }
+                      <EnrollForm
+                        workshop_id={this.props.workshop.id}
+                        workshop_course={this.props.workshop.course}
+                        first_name={this.props.enrollment.first_name}
+                        email={this.props.enrollment.email}
+                        onSubmissionComplete={this.onSubmissionComplete}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      );
-    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.DUPLICATE) {
-      return this.renderDuplicate();
-    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.OWN) {
-      return this.renderOwn();
-    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.CLOSED) {
-      return this.renderClosed();
-    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.FULL) {
-      return this.renderFull();
-    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.NOT_FOUND) {
-      return this.renderNotFound();
-    } else if (this.state.submissionStatus === SUBMISSION_STATUSES.SUCCESS) {
-      return this.renderSuccess();
-    } else {
-      return this.renderUnknownError();
+        );
+      case SUBMISSION_STATUSES.DUPLICATE:
+        return this.renderDuplicate();
+      case SUBMISSION_STATUSES.OWN:
+        return this.renderOwn();
+      case SUBMISSION_STATUSES.CLOSED:
+        return this.renderClosed();
+      case SUBMISSION_STATUSES.FULL:
+        return this.renderFull();
+      case SUBMISSION_STATUSES.NOT_FOUND:
+        return this.renderNotFound();
+      case SUBMISSION_STATUSES.SUCCESS:
+        return this.renderSuccess();
+      default:
+        return this.renderUnknownError();
     }
   }
 }

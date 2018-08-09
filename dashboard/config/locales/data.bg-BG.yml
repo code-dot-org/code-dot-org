@@ -19,13 +19,13 @@ bg:
         Farmer2: Фермерът 2
         Unplug8: Абстракция
         Artist4: Художникът 4
-        Unplug9: Щафетно програмиране
+        Unplug9: Повтори програмирането
         Farmer3: Фермерът 3
         Unplug10: Интернет
         Artist5: Художникът 5
-        Unplug11: Заключение
+        Unplug11: Изводи
         MazeEC: Лабиринт
-        Bounce: Скачане
+        Bounce: Bounce
         Flappy: Flappy птица
         Jigsaw: Мозайка
         MazeStep: Лабиринт - стъпки
@@ -284,9 +284,9 @@ bg:
           за да мога да направя полето си равно?
         maze_karel_debug_function_3: 'Променете тази програма така, че да махна всички
           купчини от полето си. '
-        turtle_5_1: Опитайте да стартирате тази програма и направете промени, за да
-          видите какво се случва. Можете ли да разберете как работи? (Или изтрийте
-          и го заменете с нещо съвсем различно)
+        turtle_5_1: Опитайте да стартирате тази програма и направете промени за да
+          видите какво се случва. Можете ли да разберете как работи? (Или я изтрийте
+          и я заменете с различна)
         turtle_5_2: Опитайте да стартирате тази програма и направете промени за да
           видите какво се случва. Можете ли да разберете как работи? (Или я изтрийте
           и я заменете с различна)
@@ -312,18 +312,6 @@ bg:
           поле, за да направите свое собствено ниво. Натиснете "Старт" когато сте
           готови.
         jigsaw_1: Щракнете върху блока
-        jigsaw_2: Плъзнете блока до целта
-        jigsaw_3: Подредете блоковете за оформяне на изображение
-        jigsaw_4: Подредете блоковете за оформяне на изображение
-        jigsaw_5: Подредете блоковете за оформяне на изображение
-        jigsaw_6: Подредете блоковете за оформяне на изображение
-        jigsaw_7: Подредете блоковете за оформяне на изображение
-        jigsaw_8: Подредете блоковете за оформяне на изображение
-        jigsaw_9: Подредете блоковете за оформяне на изображение
-        jigsaw_10: Подредете блоковете за оформяне на изображение
-        jigsaw_11: Подредете блоковете за формиране на изображение
-        jigsaw_12: Подредете блоковете за формиране на изображение
-        jigsaw_13: Реши пъзела!
         mazestep_1: Лабиринт- описание на стъпката
         mazestep_2: Лабиринт- описание на стъпката
         mazestep_3: Лабиринт- описание на стъпката
@@ -333,23 +321,22 @@ bg:
         studio_c2_2: Може ли да направите диалог между кучето и котката?
         studio_c2_3: Можете ли да напишете програма, която да накара това куче да
           се движи към котката?
-        studio_c2_4: Можете ли да напишете програма, която да предвижи кучето до котката
+        studio_c2_4: Можете ли да напишете програма, която да придвижи кучето до котката
           и котката да каже "Здравей", когато кучето я достигне?
         studio_c2_5: Можете ли да напишете програма, която да накара октопода да каже
           "Здравей", когато бъде щракнато върху него?
         studio_c2_6: Можете ли да напишете програма, която да накара Уодъл да се движи
-          със стрелките нагоре / надолу/ наляво/ надясно? Изпробвайте Уодъл и ударете
-          всички цели.
+          със стрелките нагоре / надолу/ наляво/ надясно и да удари всички цели?
         studio_c2_7: Блокът "Повтаря завинаги" ви позволява да стартирате код непрекъснато.
           Можете ли да прикачите такъв блок, за да преместите този динозавър нагоре
           и надолу няколко пъти?
-        studio_c2_8: Може ли да накарате пингвина да казва "Ох!" и да се чува звук
-          за удар, ако той се блъсне в динозавъра?
-        studio_c2_9: Можете ли да добавите блок за точка, когато пингвинът достигне
-          октопода? Изпробвайте направеното със стрелките.
+        studio_c2_8: Може ли да накарате Пингвинчо да казва "Ох!" и да се чува звук
+          за удар, ако той се сблъска с динозавъра?
+        studio_c2_9: Можете ли да добавите блок за точка, когато Пингвинчо достигне
+          октопода? Изпробвайте направеното със стрелките?
         studio_c2_10: Можете ли да добавите блок за промяна на сцената и блок за промяна
-          скоростта на пингвина? Проверете дали действа това като местите пингвина
-          със стрелките.
+          скоростта на пингвина? Проверете дали това действа като местите пингвина
+          със стрелките?
         studio_c2_11: Създайте своя собствена история. Когато сте готови, щракнете
           върху Финал, за да могат приятелите ви да пробват историята ви на телефоните
           си.
@@ -489,7 +476,7 @@ bg:
           се движи към котката?
         studio_k1_4: Направете така, че кучето да се придвижи към котката и котката
           да му каже "Здравей", когато кучето е до нея.
-        studio_k1_5: Можете ли  да добавите  блок, с който да направите октопода щастлив?
+        studio_k1_5: Можете ли да добавите блок, с който да направите октопода щастлив?
         studio_k1_6: Създайте своя собствена игра! Движете котката и кучето и създайте
           диалог.
         maze_wordsearch_k_1: Премести ме така, че да изпиша думата "EAST"
@@ -568,7 +555,7 @@ bg:
         C2_graph_paper: Програмиране на милиметрова хартия
         C2_conditionals_with_cards: Условия
         C2_binary_bracelets: Двоични гривни
-        C2_relay_programming: Щафетно програмиране
+        C2_relay_programming: Повтори програмирането
         C2_paper_airplanes: Хартиени самолети
         C2_digital_footprint: Вашите дигитални отпечатъци
         C2_digital_footprint_v2: Вашите дигитални отпечатъци
@@ -591,7 +578,7 @@ bg:
         C3_functional_suncatchers: Функционални ловци на слънце
         C3_songwriting_with_parameters: Композиране на песен с параметри
         C4_intro: Въведение
-        C4_loops_zombie: Цикли
+        C4_loops_zombie: Повторения
         C4_bee_conditional: Пчела - условия
         C4_variables_artist: Променливи - художник
         C4_variables_playlab: Променливи - Игрална лаборатория
@@ -609,14 +596,11 @@ bg:
         C4_unplugged_forloops: За циклите
         C4_unplugged_parameters: Композиране на песен с параметри
         C4_unplugged_binary: Двоичен код
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Ъгли в художникът
         CSF_collector_k1_blocks: 'CS основи: Колекционерът'
         CSF_collector_repeat_loops: 'Колекционерът: Цикли да повторение'
         CSF_collector_text_blocks: 'CS основи: Колекционерът'
         CSF_create_functions: Създаване на функции
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: 'Компютърни науки: въпроси'
         CSF_maze_intro_k1_blocks: Въведение в Code Studio
         CSF_maze_intro_text_blocks: Въведение в Code Studio
@@ -636,67 +620,22 @@ bg:
         infinity_playlab_intro: Игрална лаборатория - Въведение
         infinity_playlab_events: Игрална лаборатория - Събития
         infinity_playlab_repeat_forever: Игрална Лаборатория - повторение завинаги
-        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: 'Как работят компютрите: Какво прави един компютър,
           компютър?'
         csd_concept_binary_data: 'Как компютрите работят: Двоичен код & данни'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: Как работи търсенето
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: Раздел "Анимация"
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Скорост
         csd_weblab_intro_1: Въведение в Web Lab - част 1
         csd_weblab_intro_2: Въведение в Web Lab - част 2
         csd_weblab_css_1: Въведение CSS - част 1
         csd_weblab_css_2: Въведение CSS - част 2
         csd_weblab_intro_3: Въведение в Web Lab - част 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Въвеждане във функциите
         csp_applab_functions_parameters: Функции с параметри
-        csp_applab_loops: Цикли
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
+        csp_applab_loops: Повторения
         csp_concept_internet_ip_dns: 'Интернет: IP адреси & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Малко за пикселите
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Приспособление за цветова пикселизация - част 1
         csp_pixelation_color_2: Приспособление за цветова пикселизация - част 2
         csp_pixelation_color_3: Приспособление за цветова пикселизация - част 3
@@ -704,9 +643,6 @@ bg:
         csp_U1L14_tipstricks: Част 1 урок 14 съвети & трикове за учителя
         csp_textcompression: Приспособление за компресиране на текст
         csp_textcompression_new: Приспособление за компресиране на текст
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS в алгебрата - Въведение
         alg_2_eval_block: CS в алгебрата - блокове за оценка
         alg_3_pemdas: CS в алгебрата - ред на операциите
@@ -765,41 +701,12 @@ bg:
         mc_2017_puzzle_3: Minecraft Hour of Code - Повторение на цикли
         mc_2017_puzzle_8: Minecraft Hour of Code - функции
         mc_2017_puzzle_12: Minecraft Hour of Code - свободна игра
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
         applab_intro_welcome: App Lab - първи стъпки
         applab_intro_events: App Lab - направи го интерактивно
         applab_intro_sounds: App Lab - изображения и звуци
         applab_intro_designmode: App Lab - режим на проектиране
         applab_intro_share: App Lab - Споделяне на вашето приложение
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
-        CSF_loops_AB: Цикли
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        CSF_loops_AB: Повторения
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

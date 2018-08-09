@@ -1,21 +1,6 @@
---CHANGES
--- addition of school years beyond 2017
--- removed 'location'
+drop table if exists analysis_pii.regional_partner_stats_csp_csd;
 
--- CHANGED DEPENDENCIES
--- before using this code to update analysis.regional_partner_stats_csp_csd, certain other tables need to have their names changed, and their references updated here
--- similarly, the tables analysis.teacher_most_progress and analysis.student_activity need to be updated and then their references in this file replaced with the originals
--- these two also need to be updated on Github
-
--- NOTES ON HOW TO UPDATE 
--- after updating at the dependencies listed above and noted with 'PUBLIC' in the code....
--- replace all instances of 'public.regional_partner_stats_csp_csd_test' with 'analysis.regional_partner_stats_csp_csd' and re-run table creation
--- this table will be generated daily from code hosted on github, so need to talk to Ben about how to update that process
-
-;
-drop table if exists analysis.regional_partner_stats_csp_csd;
-
-create table analysis.regional_partner_stats_csp_csd 
+create table analysis_pii.regional_partner_stats_csp_csd 
 AS
 with completed as
 (
@@ -61,7 +46,7 @@ pd_enrollments_with_year as
          d.course,
          d.school_year as school_year_trained,
          s.school_year as school_year_taught,
-         rp.name as regional_partner_name,
+         CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,
          rp.id as regional_partner_id,
          coalesce(d.school_id, ss_user.school_id) school_id,
          coalesce(ss_summer_pd.school_name, ss_user.school_name) school_name,
@@ -128,5 +113,5 @@ pd_enrollments_with_year as
          AND sa.school_year = s.school_year
 ;
 
-GRANT ALL PRIVILEGES ON analysis.regional_partner_stats_csp_csd TO GROUP admin;
-GRANT SELECT ON analysis.regional_partner_stats_csp_csd TO GROUP reader_pii;
+GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csp_csd TO GROUP admin;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd TO GROUP reader_pii;

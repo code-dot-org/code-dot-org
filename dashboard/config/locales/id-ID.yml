@@ -28,7 +28,7 @@ id:
         personal_email: Alamat email pribadi <a href="%{url}">(klik di sini jika Anda
           tidak memiliki sebuah alamat email)</a>
         username: nama pengguna
-        password: kata sandi
+        password: Kata sandi
         password_confirmation: Konfirmasi sandi
         current_password: Sandi saat ini
         locale: Bahasa
@@ -46,7 +46,6 @@ id:
   previous_page: Halaman sebelumnya
   next_page: Halamat berikutnya
   next_resource: Sumber selanjutnya
-  done_with_module: Done with this Learning Module
   cancel: Batal
   okay: Oke
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
@@ -97,7 +96,6 @@ id:
     facebook: Facebook
     windowslive: Akun Microsoft
     clever: Akun pintar
-    powerschool: Powerschool Account
     forgot_password: Lupa kata sandi?
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
@@ -142,13 +140,6 @@ id:
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services.
-    agree_us_website: I agree to using a website based in the United States.
-    my_data_to_us: Data from my use of this site may be sent to and stored or processed
-      in the United States.
     student_terms: Saya setuju untuk terikat oleh Code.org <a href='http://code.org/tos'>
       persyaratan layanan </a>. apabila saya berusia di bawah 13 tahun, saya mengonfirmasi
       dengan mengirimkan formulir ini bahwa saya memiliki izin orang tua atau wali
@@ -162,19 +153,14 @@ id:
       kebijakan privasi </a> kami.
     additional_information: Kami membutuhkan informasi tambahan untuk melanjutkan
       pendaftaran anda
-    user_type_button: Update Account Type
     user_type_label: Jenis akun
-    user_type_teacher: Guru
+    user_type_teacher: Pelajar
     user_type_student: siswa
     field_is_required: diperlukan
     accept_terms: Anda menyetujui untuk membuat akun
     error: Sebuah kesalahan terjadi.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
-    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ya
     email_preference_no: Tidak
-    email_preference_required: You must specify an email preference.
   school_info:
     title: Informasi sekolah (pilihan)
     school_country: Negara Sekolah
@@ -314,7 +300,6 @@ id:
       free_play:
         playlab: Buat sebuah aplikasi Lab Bermain
         artist: Gambarlah Sesuatu
-        calculate: Calculate Something
         applab: Buat sebuah aplikasi Lab Aplikasi
         gamelab: Buat sebuah proyek Lab Permainan
         weblab: Membuat proyek Lab Web (beta)
@@ -359,7 +344,7 @@ id:
       classroom: Beranda guru
       district_dashboard: Wilayah Dashboard
       label: Halo %{username}
-      stats: Kemajuan saya
+      stats: Kode Studio
       settings: Akun saya
       logout: Keluar
       signin: Masuk
@@ -412,7 +397,6 @@ id:
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
     email_confirm_wrong_email: "(Alamat email salah?)"
     email_resend_confirm: Kirim ulang petunjuk konfirmasi
-    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(Kosongkan jika Anda tidak ingin mengubahnya)"
     current_password_hint: "(kita perlu password Anda saat ini untuk mengkonfirmasi
       perubahan Anda)"
@@ -450,7 +434,6 @@ id:
       rahasia yang anda miliki sekarang
     enter_parent_email: Masukkan alamat surel orang tua atau wali anda (untuk pemulihan
       sandi)
-    update: Update Account
   user_level:
     completed: Selesai
     tried: Telah mencoba
@@ -653,8 +636,6 @@ id:
       di bagian Anda.
     already_enrolled_in_new_section: Anda tidak dapat memindahkan siswa ini karena
       mereka sudah dalam bagian baru.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
   share:
     title: Belajar di Code Studio
     description: Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi
@@ -663,8 +644,6 @@ id:
   gender:
     male: Laki-laki
     female: Wanita
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
     none: Memilih untuk tidak menjawab
   user_type:
     student: siswa
@@ -703,7 +682,7 @@ id:
     more: Lebih
     feedback: Berikan pendapat
     translate: Bantu kami menerjemahkan ke bahasa anda
-    support: Dukungan
+    support: Bantuan dan komunitas
     support_url: http://support.code.org
     tos_short: Ketentuan
     tos: Syarat
@@ -821,7 +800,6 @@ id:
       audience: Usia 13+
       cta: Pelajari caranya
     hoc-encryption:
-      title: Simple Encryption
       body: Pelajar akan belajar cara untuk membuat dan memecahkan pesan terenkripsi.
     weblab:
       title: Web Lab (beta)
@@ -840,17 +818,14 @@ id:
         karakter Disney tak terbatas.
     minecraft:
       title: Minecraft
-      body: Jelajahi dunia Minecraft melalui kode.
+      body: Jelajahi dunia Minecraft melalui kode
     minecraft2016:
       title: Minecraft
       body: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft
         Anda sendiri.
     hero:
       title: Minecraft
-      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
-        through Minecraft with code.
     sports:
-      title: Sports
       body: Membuat sebuah pertandingan basket atau mencampur dan mencocokkan di cabang
         olahraga.
     text-compression:
@@ -915,15 +890,11 @@ id:
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
     correct_title: Benar
     correct_body: Itu jawaban yang benar.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Terima kasih
     wrong_body: Terima kasih telah memberikan jawabannya.
     correct_title: Terima kasih
     correct_body: Terima kasih telah memberikan jawabannya.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Terima kasih
     wrong_body: Terima kasih telah memberikan jawaban
@@ -1031,14 +1002,14 @@ id:
       ilmu komputer'
     message: Silakan beritahu kami ras (periksa semua yang berlaku)
     races:
-    - white: Kaukasia
-    - black: Hitam atau Afrika Amerika
-    - hispanic: Hispanik atau Latino
-    - asian: Orang Asia
-    - hawaiian: Penduduk asli Hawaii atau Kepulauan Pasifik
-    - american_indian: Orang Indian Amerika/Penduduk Asli Alaska
-    - other: Lain
-    - opt_out: Memilih untuk tidak menjawab
+      white: Kaukasia
+      black: Hitam atau Afrika Amerika
+      hispanic: Hispanik atau Latino
+      asian: Orang Asia
+      hawaiian: Penduduk asli Hawaii atau Kepulauan Pasifik
+      american_indian: Orang Indian Amerika/Penduduk Asli Alaska
+      other: Lain
+      opt_out: Memilih untuk tidak menjawab
     submit: Kirim
     decline: Tutup
   zendesk_too_young_message: Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs
@@ -1165,23 +1136,9 @@ id:
     instructor_feedback: Umpan balik instruktur
     peer_feedback: Peer Feedback
     outdated: Umpan balik ini telah ditambahkan sebelumnya diserahkan versi
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Tinjauan
     content: Konten
-    practice: Teacher Practices
-    peer_review: Peer Review
-    ramp_up: Ramp-Up
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Kursus Utama
     extra_course_content: Isi Kursus Tambahan
     csf_e_1: Jalur naik tujuan E (opsional)
@@ -1200,7 +1157,6 @@ id:
     csd5_2: 'Bab 2: Memecahkan Masalah Data'
     csd6_1: 'Bab 1: Pemrograman dengan Hardware'
     csd6_2: 'Bab 2: Membangun Prototipe Fisik'
-    csd_survey: Post-Course Survey
     csp1_1: 'Bab 1: Mewakili dan Transmisi Informasi'
     csp1_2: 'Bab 2: Menciptakan Internet'
     csp2_1: 'Bab 1: Encoding dan Mengompresi Informasi yang Kompleks'
@@ -1211,14 +1167,8 @@ id:
     csp5_2: 'Bab 2: Pemrograman dengan Struktur Data'
     cspSurvey: Survei
     cspAssessment: Bab Penilaian
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Bab 2: AP Tepat Kinerja Tugas'
     csp_ap_3: 'Bab 3: AP Membuat Kinerja Tugas'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
-    csp2_1_2018: 'Unit 2: Digital Information'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Anjuran Refleksi
   external_links:
     disclaimer: Disclaimer
@@ -1287,21 +1237,8 @@ id:
     download_in_Turkish: 'Unduh dalam bahasa Turki:'
     download_in_Ukrainian: 'Unduh dalam bahasa Ukraina:'
     download_in_Vietnamese: 'Unduh dalam bahasa Vietnam:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
   locked_stage: Isi dari tahap ini tidak terlihat karena tahap ini saat ini terkunci.
     Guru anda dapat membuka tahap ini saat ketika tiba waktu mengerjakannya atau meninjau
     kembali jawaban anda.
@@ -1313,64 +1250,30 @@ id:
   return_course_overview: Pergi ke ikhtisar kursus
   view_all_units: Melihat semua satuan
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
-  courses_category: Full Courses
+    form_labels:
+      email: email
+      school_name: Nama Sekolah
+      school_city: Kota sekolah
+      school_country: Negara Sekolah
+    form_entries:
+      gender:
+        male: Laki-laki
+        female: Wanita
+        none: Memilih untuk tidak menjawab
+      subjects:
+        cs: Ilmu komputer
+        math: Matematika
+        science: Ilmu pengetahuan
+        la: Seni Bahasa
+      resources:
+        kodable: Kodable
+        lightbot: Lightbot
+      robotics:
+        kodable: Kodable
+      email_opt_in:
+        opt_in_yes: Ya
+        opt_in_no: Tidak
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
     accept: Saya setuju
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
     true: Ya

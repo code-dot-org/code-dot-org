@@ -6,7 +6,7 @@ ja:
         Maze: 迷路
         Multi: 複数選択の項目
         Unplug2: コンピュテーショナル・シンキング（コンピューターの様に考える）
-        Unplug3: プログラミングのグラフ用紙
+        Unplug3: グラフ用紙のプログラミング
         Artist: アーティスト
         Unplug4: アルゴリズム
         Artist2: アーティスト 2
@@ -14,7 +14,7 @@ ja:
         Farmer: 農家
         Unplug6: 条件
         Artist3: アーティスト 3
-        Unplug7: 作曲
+        Unplug7: 作曲する
         Farmer2: 農家 2
         Unplug8: 抽象化
         Artist4: アーティスト 4
@@ -22,9 +22,9 @@ ja:
         Farmer3: 農家 3
         Unplug10: インターネット
         Artist5: アーティスト 5
-        Unplug11: まとめ
+        Unplug11: ラップアップ
         MazeEC: 迷路
-        Bounce: はずむ
+        Bounce: バウンド
         Flappy: フラッピーバード
         Jigsaw: ジグソーパズル
         MazeStep: 迷路ステップ モード
@@ -45,15 +45,15 @@ ja:
         Gold: 金
     concept:
       description:
-        sequence: シークエンス
+        sequence: 連続
         if: もしブロック
         if_else: もし/でなければブロック
         loop_times: 回ブロックを繰り返す
         loop_until: までブロックを繰り返します
         loop_while: の間にブロック
         loop_for: 数える ブロック
-        function: 機能
-        parameters: パラメーター付き機能
+        function: 関数(かんすう) 
+        parameters: パラメーター付き関数
     level:
       instructions:
         maze_2_2: 'ブタを捕まえるのを手伝ってくれない？「前に動く」ブロックをつみあげて、「実行」ボタンをおしてね'
@@ -74,7 +74,7 @@ ja:
         maze_2_15: ヒマワリがほしい！"もし"ブロックを使って最小限のブロック数で私をそこまで連れていってください。
         maze_2_16: OK 練習のためにもう一度。 ー　それほど違いはないけれど、 チャンパーたちに気をつけて！
         maze_2_17: '"もし/でなければ"ブロックは条件を確かめて、あること、あるいは別のあることをします。ヒマワリをとってくるためにこの新しいブロックを試しましょう。'
-        maze_2_18: '"もし/でなければ"ブロックをもう一度練習。一度でちゃんとできるでしょうか？'
+        maze_2_18: '”もし○○でなければ××”ブロックの練習をもう一回やりましょう。一度でクリアできるかな？'
         maze_2_19: ブロックをあと3つ足して、難しい迷路を解くのをたすけてくれますか？もしそれができれば、どんな長くカーブした道でも歩けるようになります
         turtle_1_1: こんにちは、はアーティストです。プログラムを作ればどんな形でも描くことができます。ブロックをいくつか使い、灰色の線をなぞらせてください
         turtle_1_2: '四角形を描きます。注: 新しい「色の設定」ブロックで選択して、好きな色を使用する'
@@ -109,7 +109,7 @@ ja:
         maze_karel_1_10: 遅くまで仕事をしていたので外は真っ暗、積み上がった山がどのくらい大きいのかわかりません。whileブロックにあったようなオプションはもうありません。畑にそって私を移動させ、山があれば移動させます
         maze_karel_1_11: '外はまだ暗いです。私を田んぼにそって移動してください。山があったら移動し、穴があったら埋めます。ヒント:"もし"ブロックでオプションのドロップ ダウン メニューを使います'
         turtle_2_1: 'こんにちは。私、zombieアーティスト。私、描くのが大好き ！特別な色で四角形を描くのを手伝ってください。重要: ブロックはみんな同じですが、カテゴリーに分かれています'
-        turtle_2_2: 新しいブロックを定義させてくれる機能を使いましょう！「機能」カテゴリにある、新しい「四角形を描く」ブロックを試して、小さな 50 x 50 の緑の四角形を描きましょう
+        turtle_2_2: 新しいブロックを定義させてくれる機能を使いましょう！「関数」カテゴリにある、新しい「四角形を描く」ブロックを試して、小さな 50 x 50 の緑の四角形を描きましょう
         turtle_2_3: 繰り返し」ブロック を使い、「ループ」カテゴリにある、サイズが100、それぞれ120度離れている四角形を３つ描きます。そして３つのランダムで違う色で描いてください
         turtle_2_4: 'もっと素敵にしてみましょう。コードを変更して、100 ピクセルの幅、それぞれの間が10 度離れている36個の四角形を描きます。ヒント：スライダを使うと早くできます'
         turtle_2_5: 50、60、70、80、90ピクセルの辺を持つ四角形を描きます。「四角形を描く」機能を５回使います。
@@ -283,8 +283,6 @@ ja:
         Unplug11: ラップアップ
         C1_happy_maps_unplugged: ハッピーマップ
         C1_moveitmoveit_unplugged: 動かせ！動かせ！
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
         C1_pair_programming: ペアプログラミング
         C1_maze_intro_sequencing: 迷路シーケンスのイントロ
         C1_maze_debugging: 迷路：デバッグ
@@ -330,10 +328,10 @@ ja:
         C3_dice_race: 言うレース
         C3_internet: インターネット
         C3_crowdsourcing: クラウドソーシング
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: 関数サンキャッチャー
         C3_songwriting_with_parameters: パラメーターで作詞作曲
         C4_intro: はじめに
-        C4_loops_zombie: ループ
+        C4_loops_zombie: くりかえし
         C4_bee_conditional: つづりみつばち　条件文
         C4_variables_artist: 変数 - アーティスト
         C4_variables_playlab: 変数 - ゲームラブ
@@ -357,8 +355,6 @@ ja:
         CSF_collector_repeat_loops: コレクター 繰り返しループ
         CSF_collector_text_blocks: 'CS の基礎: コレクター'
         CSF_create_functions: 関数の作成
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: コンピュータ科学の問題
         CSF_maze_intro_k1_blocks: コード スタジオ入門
         CSF_maze_intro_text_blocks: コード スタジオ入門
@@ -378,90 +374,18 @@ ja:
         infinity_playlab_intro: プレイラボ：イントロダクション
         infinity_playlab_events: ゲームラボ - イベント
         infinity_playlab_repeat_forever: プレイラボ - ずっとくりかえす
-        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: '何がコンピュータをコンピュータにするのか。'
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input, & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: 検索のしくみ
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: '[アニメーション] タブ'
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: 速度
         csd_weblab_intro_1: Webラボ - パート 1 はじめに
         csd_weblab_intro_2: Webラボ - パート 2はじめに
         csd_weblab_css_1: CSS - パート 1 はじめに
         csd_weblab_css_2: CSS - パート 2 はじめに
         csd_weblab_intro_3: Webラボ - パート 3はじめに
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: 関数
         csp_applab_functions_parameters: パラメーター付き関数
-        csp_applab_loops: ループ
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_applab_loops: くりかえし
         starwars_intro: 'スター ・ ウォーズ: コーディングで銀河系を作る - 紹介'
         starwars_typing: 'スター ・ ウォーズ: コーディングで銀河系を作る - JavaScript'
         starwars_events: 'スター ・ ウォーズ: コーディングで銀河系を作る - イベント'
@@ -485,58 +409,12 @@ ja:
         mc_2016_events: Minecraft Hour of Code - イベント
         mc_2016_spawn: Minecraft Hour of Code - スポーン
         mc_2016_congrats: Minecraft Hour of Code - おめでとう
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
         mc_2017_congratulations: Minecraft Hour of Code - おめでとう
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
-        CSF_loops_AB: ループ
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        CSF_loops_AB: くりかえし
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'
-        run: '「実行」ボタンをおして、プログラムをうごかしてみてください。'
+        run: '「実行」ボタンをおして、プログラムを動かしてください。'
         watch_again: ここをクリックするともう一度ビデオを見られます
         gray_block_explanation: 灰色のブロックは消すことができません。それでもパズルをとくことができるでしょうか？
         show_code_explanation: 自分で書いたプログラムコードを表示する

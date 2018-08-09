@@ -12,9 +12,6 @@ nl:
           over te slaan die samengaat met de volgende lessen, maar door ze nu op een
           leuke en speelse wijze te presenteren is het veel effectiever dan wachten
           op diepergaande  situaties.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Rekenend Denken
         desc: Met niets anders dan pen en papier zullen leerlingen de vier stappen
@@ -28,9 +25,6 @@ nl:
           ruilen vervolgens algoritmes met een andere groep, en tekenen een monster
           dat het algoritme aangeeft. Is de tekening wat de oorspronkelijke groep
           bedoelde?
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Programmeren op Ruitjespapier
         desc: Door elkaar te programmeren om tekeningen te maken, zullen de leerlingen
@@ -38,9 +32,6 @@ nl:
           elkaar instructies geven om vakjes op ruitjespapier in te kleuren, om zo
           de bestaande tekening na te maken. Als er tijd is, kan de les worden afgesloten
           met tekeningen die de leerlingen zelf maken.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmen
         desc: Deze les gaat over algoritmen. Met tangram-vormen en ruitjespapier zal
@@ -48,9 +39,6 @@ nl:
           helder en eenduidig mogelijk te maken. Naderhand zal de klas ontdekken op
           hoeveel manieren je papier tot een rechthoek kunt vouwen, waarbij ze kunnen
           zien hoe sommige methoden meer of minder vouwen vereisen dan andere.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Functies
         desc: In deze les zullen de leerlingen een zonnevanger maken van draad, kralen
@@ -64,17 +52,11 @@ nl:
           de leerlingen de details van hun materialen "abstraheren" en vage beschrijvingen
           maken voor wat men aan materiaal heeft. Dit gebruik van generieke aanduidingen
           is een geweldige introductie in variabelen.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Voorwaarden
         desc: Dit is een spel voor de hele klas. Na uitleg van het idee van condities,
           if-commando's en lussen, kan de klas samen oefenen met een vooraf geschreven
           programma, een set speelkaarten en een dosis toeval.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Liedjes Schrijven
         desc: Het lezen van liedteksten is een redelijk intuïtieve activiteit voor
@@ -83,42 +65,27 @@ nl:
           van functies. Als leerlingen eenmaal bekend zijn met het definieer/aanroepproces
           zullen we extra mogelijkheden gaan toevoegen die horen bij het doorgeven
           van parameters in de functieaanroep.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstractie
         desc: Deze activiteit combineert de alledaagse routine van uw leerlingen en
           een Mad-Lib-stijl denkspel om uw klas de effectiviteit van abstractie te
           leren.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Estafette Programmeren
         desc: Deze les zal een idee gebruiken van de voorgaande activiteit (4. Ruitjespapier
           Programmeren) en die vaardigheden gebruiken om de nadruk te leggen op het
           belang van het afronden van programma's die sequentieel lopen en het regelmatig
           op "bugs" controleren van programma's.
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: Het Internet
         desc: In deze les zullen leerlingen doen alsof ze door het Internet stromen,
           terwijl ze leren over webadressen, IP's en de DNS.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Terugblik
         desc: De uiteindelijke terugblik op de eerste 20-uur serie zal de klas helpen
           om al hun favoriete momenten opnieuw te beleven, terwijl ze vervolgstappen
           krijgen aangereikt die ze zelf kunnen nemen als ze interesse hebben om hun
           reis in computerkunde voort te zetten.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Vrolijke Routes
         desc: Leerlingen maken eenvoudige algoritmen (reeks instructies) om een figuurtje
@@ -157,7 +124,7 @@ nl:
           spelen en regels maken als "als ik een rode kaar trek, krijg ik een punt"
           en "als ik een zwarte kaart krijg, krijg jij een punt".
       BigEvent:
-        title: De Grote Gebeurtenis
+        title: De grote gebeurtenis
         desc: Leerlingen worden bekend gemaakt met het programmeerconcept van "events",
           wat acties zijn waar een computer constant naar kijkt. De leraar drukt op
           knoppen van een papieren afstandsbediening en leerlingen reageren hierop,
@@ -191,12 +158,12 @@ nl:
           abstractie, algoritmes) om uit te vinden hoe je een spel speelt zonder het
           kennen van de instructies.
       FunctionalSuncatchers:
-        title: Werkende Zonnevangers
+        title: Functionele Zonnevangers
         desc: Leerlingen maken een algoritme met variabelen en functies(stukjes code
           die je vaker wilt gebruiken) om zonnevangers te maken met behulp van snoeren
           en kralen.
       SongwritingParameters:
-        title: Liedjes schrijven met Parameters
+        title: Songwriting
         desc: Leerlingen gebruiken het idee van het refrein in een liedje om over
           het doorgeven van parameters te leren (welke een functie aanpassen zonder
           de hele functie opnieuw te moeten schrijven).
@@ -293,29 +260,27 @@ nl:
           van de afstand tussen twee punten op een plat vlak, om vervolgens te beslissen
           of die twee punten (of spelfiguren) elkaar raken.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: In deze les leert je over lussen!
       courseB_unplugged_MRF:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: In deze les 'programmeer' je je vrienden!
       courseB_unplugged_loopyMRF:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Net als in "Mijn Robot vrienden", zal je je vrienden "programmeren",
           maar deze keer met loops!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       courseD_unplugged_digitalCitizenship:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
       courseE_unplugged_privateInformation:
         title: 'Gezond verstand onderwijs: Privé en persoonlijke informatie '
         desc: Vandaag leert je het verschil tussen privé en persoonlijke informatie!
       courseF_unplugged_powerOfWords:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       deeper learning description:
-        title: ''
         desc: 'vertaling ontbreekt: nl-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmen in het echte leven: Plant een zaadje'
@@ -332,7 +297,7 @@ nl:
         desc: Het internet is een krachtige, maar soms gevaarlijke plek. Leraren vertellen
           hoe je het veilig kunt houden wanneer je op internet surft.
       courseABC_unplugged_bigEvent:
-        title: De Grote Gebeurtenis
+        title: De grote gebeurtenis
         desc: Leerlingen worden bekend gemaakt met het programmeerconcept van "events",
           wat acties zijn waar een computer constant naar kijkt. De leraar drukt op
           knoppen van een papieren afstandsbediening en leerlingen reageren hierop,
@@ -406,7 +371,7 @@ nl:
           die gangbaar is in de computerkunde, om gezamenlijk als klas een opdracht
           efficiënter uit te voeren dan wanneer een leerling het alleen zou proberen.
       courseE_unplugged_songwriting:
-        title: Liedjes schrijven met Parameters
+        title: Songwriting
         desc: Leerlingen gebruiken het idee van het refrein in een liedje om over
           het doorgeven van parameters te leren (welke een functie aanpassen zonder
           de hele functie opnieuw te moeten schrijven).
@@ -433,86 +398,8 @@ nl:
           opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma.
           Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen
           in functies een nuttige praktijk is.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
-          as follows:\r\n1. started with an `unplugged` level. populated with info.
-          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
-          level with the same content and same name. checked to box to encrypt it.
-          hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: My Robotic Friends
       PlantASeed_2018:
         title: 'Algoritmen in het echte leven: Plant een zaadje'
         desc: Deze les laat zien hoe we algoritmen in het dagelijkse leven gebruiken,
@@ -528,10 +415,9 @@ nl:
         desc: Het internet is een krachtige, maar soms gevaarlijke plek. Leraren vertellen
           hoe je het veilig kunt houden wanneer je op internet surft.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: In deze les leert je over lussen!
       BigEvent_2018:
-        title: De Grote Gebeurtenis
+        title: De grote gebeurtenis
         desc: Leerlingen worden bekend gemaakt met het programmeerconcept van "events",
           wat acties zijn waar een computer constant naar kijkt. De leraar drukt op
           knoppen van een papieren afstandsbediening en leerlingen reageren hierop,
@@ -542,10 +428,10 @@ nl:
           een set van vooraf gedefinieerde opdrachten gebruiken om hun klasgenoten
           aanwijzingen te geven hoe ze een tekening moeten namaken.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat het betekent om een digitale burger te zijn.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Losgekoppelde activiteit
+        title: UNPLUGGED ACTIVITEIT
         desc: Vandaag leert je wat je kunt doen als iemand online gemeen doet.
       Conditionals_2018:
         title: Voorwaardelijke instructies
@@ -580,22 +466,5 @@ nl:
           en opgeslagen kunnen worden.
       MoveItMoveIt_2018:
         title: verplaats het, verplaats het
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Estafette Programmeren
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.

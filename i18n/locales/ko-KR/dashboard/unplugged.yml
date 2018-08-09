@@ -6,67 +6,56 @@ ko:
         desc: 이 과정은 컴퓨터과학(정보과학)에서 배우게 되는 기초 개념들을 소개하는 과정으로서, 컴퓨터과학자들이 하는 역할들에 대해서 설명합니다. 활동의 마지막 부분에서는 학생들이 배운 내용을 이용해 수행할 수 있는 과제가 제시됩니다. 관련 용어에 대해서 설명하지 않고 넘어갈 수도 있지만, 용어들을 제시하고 설명하는 것이 더 많은 것을 이해할 수 있도록 할 수 있습니다.
         pdfs:
           - unplug1
-        video: Unplug1
       Unplug2:
         title: 컴퓨터과학(정보과학)적 사고
         desc: 종이와 펜만 가지고도, 학생들은 4단계의 컴퓨터과학(정보과학)적 사고를 배울 수 있습니다. 간단한 설명을 들은 후, 각 학생들은 모둠을 만들고 몬스터 하나를 선택해 그려 내도록하는 활동을 할 것 입니다. 전체 그림은 몬스터를 그려낼 수 있는 패턴, 추상적 표현, 방법이나 알고리즘 등으로 분해될 것입니다. 모둠을 바꾼 후, 분해되어진 알고리즘과 방법으로 몬스터를 그려내게 됩니다. 원래 모둠이 의도했던데로 그림이 그려질까요? 
         pdfs:
           - unplug2
-        video: Unplug2
       Unplug3:
         title: 모눈 종이 프로그래밍
         desc: 다른 사람이 그림을 그려내기 위해서 프로그래밍을 하는 과정에서, 학생들은 프로그래밍이 무엇인지 깨닫게 될 것입니다. 학생들은 어떤 그림을 만들어내기 위해 모눈종이에 채워져야하는 색들을 지시하면서 시작될 것입니다. 시간이 흐르면, 학생들은 그림을 완성하게 될 것입니다.
         pdfs:
           - unplug3
-        video: Unplug3
       Unplug4:
         title: 알고리즘
         desc: 이 내용은 알고리즘에 대한 내용입니다. 탱그램 조각과 모눈 종이를 활용하는 가운데에서, 학생들은 구체적이며 명확하게 표현하는 것이 얼마나 중요한지 깨닫게 될 것입니다. 나중에 사각형으로 접는 방법이 얼마나 다양하게 있는지 생각하게 되고, 어떤 방법이 더 효과적인지 생각하게 될 것입니다.
         pdfs:
           - unplug4
-        video: Unplug4
       Unplug5:
         title: 함수
         desc: 이 활동에서 학생들은 실, 구슬, 특별한 조각들을 이용해 창문 장식 유리를 만들게 될 것입니다. 반복적인 과정을 통해서, 미리 정해져 있는 세트들을 반복적으로 만드는 과정을 진행하게 됩니다. 일단, 어떤 세트가 정의되면, 그것을 이용해 예쁜 것을 만들 수 있는 내용들을 종이에 기록할 수 있게 됩니다. 마지막 프로그램은 학급 전체를 위한 것입니다. 활동을 효과적으로 수행하기 위해서 학생들은 "추상화 시킬" 필요가 있습니다. 변수의 개념을 이해하는데 도움이 될 것입니다.
         pdfs:
           - unplug5
-        video: Unplug5
       Unplug6:
         title: 조건/선택
         desc: 이 것은 학급 게임입니다. 조건/선택, 반복 실행의 개념을 소개한 후에, 미리 작성해 둔 프로그램이나 카드, 제비뽑기 등을 이용해 연습할 수 있습니다. 
         pdfs:
           - unplug6
-        video: Unplug6
       Unplug7:
         title: 노래 만들기
         desc: 대부분의 학생들에게 있어서 노래 가사를 읽는 것은 의미적이기라기보다는 직감(느낌)적 입니다. 이러한 것을 함수의 정의와 사용에 적용시킬 수 있습니다. 함수를 정의하고 호출하는 과정에 익숙해지면, 그러한 함수에 변수를 전달하는 방법을 설명할 수 있습니다.
         pdfs:
           - unplug7
-        video: Unplug7
       Unplug8:
         title: 추상화
         desc: 이 활동은 일상 생활에서 반복되는 루틴과, 매드립(Mad-lib) 스타일의 생각 게임이 결합되어있는 활동으로 작업 추상화의 효과성을 배울 수 있게 합니다.
         pdfs:
           - unplug8
-        video: Unplug8
       Unplug9:
         title: 릴레이 프로그래밍
         desc: 이 활동은 이전의 모눈종이 프로그래밍을 응용한 것으로, 버그를 찾아내 오류를 수정하는 것과 관련된 활동입니다.
         pdfs:
           - unplug9
-        video: Unplug9
       Unplug10:
         title: 인터넷
         desc: 이 활동에서 학생들은  IP 주소, DNS 와 같은 개념들을 이용해 인터넷 흐름을 따라 움직이게 됩니다.
         pdfs:
           - unplug10
-        video: Unplug10
       Unplug11:
         title: 마무리
         desc: 20 시간 과정의 마지막 마무리에서는 학생들의 흥미와 동기를 일깨우기 위한 것으로, 컴퓨터과학(정보과학)에 대한 계속적인 관심과 학습을 도와줍니다.
         pdfs:
           - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: 즐거운 맵
         desc: 학생들은 명령어 조합으로 만들어진 하나의 명령으로, 미로를 움직이는 간단한 알고리즘들을 만든다.
@@ -164,29 +153,18 @@ ko:
         title: 충돌 감지와 피타고라스의 정리
         desc: 화면상의 오브젝트들이 언제 터치되는지 결정하는 것은 대부분의 게임에서 매우 중요하다. 이 단원에서는 피타고라스의 정리와 거리 공식을 사용해서 평면상에 위치한 두 점사이의 거리를 측정하는 방법을 배우고, 두 점이나(게임 캐릭터)의 터치 여부를 결정해보자.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: 이번 과정에서는 반복에 대해 배우게 됩니다.
       courseB_unplugged_MRF:
         title: 언플러그드 활동
         desc: 이번 과정에서는 친구를 '프로그래밍' 해봅니다.
       courseB_unplugged_loopyMRF:
         title: 언플러그드 활동
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: 언플러그드 활동
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: 언플러그드 활동
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: 언플러그드 활동
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: '실시간 알고리즘: 씨앗 심기'
         desc: 이 레슨은 일상생활에서 알고리즘을 사용하는 것, 예를 들어 씨앗 심기 등과 같은 일상생활에서의 알고리즘과 연관시킬 수 있다. 또한, 컴퓨터과학(정보과학)에서 알고리즘이 기본적으로 사용된다는 것과 같은 보다 큰 통찰에 중심이 맞추어져 있다.
@@ -215,7 +193,7 @@ ko:
         title: 2진 팔찌
         desc: 학생들은 자신의 이름의 앞글자로 표현되는 2진 팔찌를 만들게 된다. 다양한 방법으로 데이터가 표현되고 저장될 수 있다는 것을 배울 수 있다.
       courseD_unplugged_graphPaperProgramming:
-        title: 모눈종이 프로그래밍
+        title: 모눈 종이 프로그래밍
         desc: 학생들은 미리 정의되어있는 명령들의 집합을 사용하는 알고리즘을 만들어 친구들이 똑같은 그림을 그려낼 수 있도록 하게 된다.
       courseD_unplugged_relayProgramming:
         title: 릴레이 프로그래밍
@@ -227,7 +205,6 @@ ko:
         title: 2진 이미지
         desc: 많은 사람들인 2진은 정확히 0과 1들로만 구성된다고 생각하지만, 이전 과정에서 정보가 0과1의 2진 표현으로 다양하게 표현될 수 있다는 것을 배웠습니다. 이번 내용에서는 더 나아가 이미지나 색과 같은 더 복잡한 정보들도 2진 표현으로 표현할 수 있음을 설명합니다. 
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: 이 레슨은 일상생활에서의 알고리즘 사용을 연관시킨다. 또한 학생들은 주사위 레이스 게임을 위한 알고리즘을 파악하고 만들게 된다.
       courseE_unplugged_songwritingParameters:
         title: 매개변수를 사용하는 음악 작곡
@@ -253,54 +230,8 @@ ko:
       courseF_unplugged_songwritingParameters:
         title: 매개변수를 사용한 음악 작곡
         desc: '컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램, 매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수 있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할 수 있도록 합니다.'
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: 내 로봇 친구
       PlantASeed_2018:
         title: '실시간 알고리즘: 씨앗 심기'
         desc: 이 레슨은 일상생활에서 알고리즘을 사용하는 것, 예를 들어 씨앗 심기 등과 같은 일상생활에서의 알고리즘과 연관시킬 수 있다. 또한, 컴퓨터과학(정보과학)에서 알고리즘이 기본적으로 사용된다는 것과 같은 보다 큰 통찰에 중심이 맞추어져 있다.
@@ -311,22 +242,19 @@ ko:
         title: 안전하게 자리잡기
         desc: 인터넷은 강력하지만 위험한 곳이기도 하다. 교사는 인터넷을 검색하는 과정에서 자기 자신을 보호하는 방법에 대해서 소개한다.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: 이번 과정에서는 반복에 대해 배우게 됩니다.
       BigEvent_2018:
         title: 큰 이벤트
         desc: 학생들은 컴퓨터가 계속 확인하는 작업인 "이벤트"라는 프로그래밍 개념을 학습하게 된다. 교사가 종이에 그려진 버튼들을 누르면 학생들은 눌려진 버튼에 따라 반응할 것이다.
       GraphPaperProgramming_2018:
-        title: 모눈종이 프로그래밍
+        title: 모눈 종이 프로그래밍
         desc: 학생들은 미리 정의되어있는 명령들의 집합을 사용하는 알고리즘을 만들어 친구들이 똑같은 그림을 그려낼 수 있도록 하게 된다.
       courseD_unplugged_digitalCitizenship_2018:
         title: 언플러그드 활동
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: 언플러그드 활동
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
-        title: 조건/선택
+        title: 조건
         desc: 학생들은 조건선택 명령문을 학습하기 위해서 카드 게임과 규칙을 만든다. 예를 들어 "빨간 카드를 가져오면 내가 점수를 얻는다"나 "검정 카드를 가져오면 상대방이 점수를 얻는다"등과 같은 규칙이다. 
       DigitalFootprint_2018:
         title: 디지털 개인정보 흔적
@@ -345,13 +273,5 @@ ko:
         desc: 학생들은 자신의 이름의 앞글자로 표현되는 2진 팔찌를 만들게 된다. 다양한 방법으로 데이터가 표현되고 저장될 수 있다는 것을 배울 수 있다.
       MoveItMoveIt_2018:
         title: 빨리 빨리 움직이자!
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: 릴레이 프로그래밍
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

@@ -15,6 +15,7 @@ require 'animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
+require 'cdo/i18n_backend'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -22,7 +23,9 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    if Rails.env.development?
+    unless CDO.chef_managed
+      # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
+      # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
@@ -33,7 +36,9 @@ module Dashboard
 
       config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
+    end
 
+    if Rails.env.development?
       Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
 
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
@@ -80,9 +85,10 @@ module Dashboard
 
     # By default, config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = ['en-US']
-    config.i18n.fallbacks = {}
+    config.i18n.fallbacks[:defaults] = ['en-US']
     config.i18n.default_locale = 'en-US'
     LOCALES = YAML.load_file("#{Rails.root}/config/locales.yml")
     LOCALES.each do |locale, data|

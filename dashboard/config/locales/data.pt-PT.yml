@@ -7,7 +7,7 @@ pt:
         Maze: O Labirinto
         Multi: Perguntas de escolha múltipla
         Unplug2: Pensamento computacional
-        Unplug3: Programação em Papel Quadriculado
+        Unplug3: Programação de papel milimetrico
         Artist: O Artista
         Unplug4: Algoritmos
         Artist2: O Artista 2
@@ -15,17 +15,17 @@ pt:
         Farmer: O Agricultor
         Unplug6: Condicionais
         Artist3: O Artista 3
-        Unplug7: Escrevendo uma Canção
+        Unplug7: escrita de canção
         Farmer2: O Agricultor 2
         Unplug8: Abstração
         Artist4: O Artista 4
-        Unplug9: Programação Relay
+        Unplug9: Programação por revezamento
         Farmer3: O Agricultor 3
         Unplug10: A Internet
         Artist5: O Artista 5
-        Unplug11: Sumário
+        Unplug11: Resumo
         MazeEC: O Labirinto
-        Bounce: Pingue-pongue
+        Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Quebra-cabeças
         MazeStep: Modo Labirinto
@@ -38,7 +38,6 @@ pt:
         NetSim: Simulador de internet
         Custom: Artista
         CustomStudio: Laboratório
-        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronze
@@ -347,7 +346,7 @@ pt:
           usando as teclas com as setas para cima / para baixo / à esquerda / à direita,
           para atingir todos os alvos?
         studio_c2_7: O bloco "repita infinitamente" possibilita a execução contínua
-          do programa. Você pode anexar blocos para mover esse dinossauro para cima
+          do programa. Consegues usar blocos para mover esse dinossauro para cima
           e para baixo repetidamente?
         studio_c2_8: Você pode fazer com que o pinguim diga "Ai!" e reproduza um som
           de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas
@@ -375,7 +374,7 @@ pt:
           mover usando as teclas com as setas para cima / para baixo / à esquerda
           / à direita, para atingir todos os alvos?
         studio_c3_game_3: O bloco "repita infinitamente" possibilita a execução contínua
-          do programa. Você pode anexar blocos para mover esse dinossauro para cima
+          do programa. Consegues usar blocos para mover esse dinossauro para cima
           e para baixo repetidamente?
         studio_c3_game_4: Você pode fazer com que o pinguim diga "Ai!" e reproduza
           um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as
@@ -582,7 +581,7 @@ pt:
         C2_graph_paper: Programação de papel milimetrico
         C2_conditionals_with_cards: Condicionais
         C2_binary_bracelets: Pulseiras binárias
-        C2_relay_programming: Programação Relay
+        C2_relay_programming: Programação por revezamento
         C2_paper_airplanes: Aviões de papel
         C2_digital_footprint: Seu rastro digital
         C2_digital_footprint_v2: Seu rastro digital
@@ -596,7 +595,7 @@ pt:
         C3_farmer_while: Laços enquanto
         C3_bee_nested_loops: Laços aninhados
         C3_bee_debugging: Depuração da Abelha
-        C3_bounce: Pingue-pongue
+        C3_bounce: Bounce
         C3_playlab_create_game: Laboratório - Crie um jogo
         C3_computational_thinking: Pensamento computacional
         C3_dice_race: Jogo de dados
@@ -605,7 +604,7 @@ pt:
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
         C4_intro: Introdução
-        C4_loops_zombie: Ciclos
+        C4_loops_zombie: ciclos
         C4_bee_conditional: Condicionais da abelha
         C4_variables_artist: Variáveis - Artista
         C4_variables_playlab: Variáveis - Laboratório
@@ -623,23 +622,7 @@ pt:
         C4_unplugged_forloops: Ciclos "for"
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
-        CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
         CSF_my_robotic_friends: Meus amigos robóticos
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Introdução à Hora de Código
         frozen_loops: Introdução aos Laços
         frozen_functions: Introdução às Funções
@@ -650,93 +633,9 @@ pt:
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introdução às Funções
         csp_applab_functions_parameters: Funções com parâmetros
-        csp_applab_loops: Ciclos
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_applab_loops: ciclos
         starwars_intro: 'Star Wars: Construindo uma galáxia com código - Introdução'
         starwars_typing: 'Star Wars: Construindo uma galáxia com código - JavaScript'
         starwars_events: 'Star Wars: Construindo uma galáxia com código - Eventos'
@@ -761,58 +660,12 @@ pt:
         mc_2016_events: Minecraft Hora de Código - Eventos
         mc_2016_spawn: Minecraft Hora de Código - Spawn (Gerar)
         mc_2016_congrats: Minecraft Hora de Código - Parabéns
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
         mc_2017_congratulations: Minecraft Hora de Código - Parabéns
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
-        CSF_loops_AB: Ciclos
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        CSF_loops_AB: ciclos
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco
-        run: Clica em "Executar" para experimentares o teu programa
+        run: Clica em "Correr" para experimentares o teu programa
         watch_again: Clica aqui para voltares a ver o vídeo
         gray_block_explanation: Os blocos cinza não podem ser excluídos. Você consegue
           resolver o desafio assim mesmo?

@@ -13,9 +13,23 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     if @workshop.nil?
       render_404
     elsif workshop_closed?
-      render :closed
+      @script_data = {
+        props: {
+          workshop: {
+            organizer: @workshop.organizer
+          },
+          workshop_enrollment_status: "closed"
+        }.to_json
+      }
     elsif workshop_full?
-      render :full
+      @script_data = {
+        props: {
+          workshop: {
+            organizer: @workshop.organizer
+          },
+          workshop_enrollment_status: "full"
+        }.to_json
+      }
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
@@ -27,7 +41,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
 
       facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO: Retire old K5 dashboard, and come up with more permanent solution that doesn't require cross-project file dependency.
+        # TODO: Come up with more permanent solution that doesn't require cross-project file dependency.
         bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
         image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
 
@@ -51,14 +65,14 @@ class Pd::WorkshopEnrollmentController < ApplicationController
             {
               organizer: @workshop.organizer,
               regional_partner: @workshop.regional_partner,
-              course_target: @workshop.course_target
+              course_url: @workshop.course_url
             }
           ),
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
-          logged_in: current_user.present?,
-          sign_in_prompt_data: sign_in_prompt_data
+          sign_in_prompt_data: sign_in_prompt_data,
+          workshop_enrollment_status: "unsubmitted"
         }.to_json
       }
     end

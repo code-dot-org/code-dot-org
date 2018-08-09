@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+require 'aws-sdk-sts'
+
+unless (provider = Aws::CredentialProviderChain.new.current_provider) == :google_credentials
+  puts "WARNING: AWS is currently using #{provider}, not google_credentials."
+end
+
+arn = Aws::STS::Client.new.get_caller_identity.arn
+puts "AWS access: #{arn.split('assumed-role/').last}"

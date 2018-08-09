@@ -26,6 +26,7 @@ class StorageApps
       project_type: type,
       published_at: published_at,
       remix_parent_id: remix_parent_id,
+      skip_content_moderation: false,
     }
     row[:id] = @table.insert(row)
 
@@ -155,7 +156,6 @@ class StorageApps
     else
       return false
     end
-
   # Default to sharing disabled if there is an error
   rescue ArgumentError, OpenSSL::Cipher::CipherError
     true
@@ -204,6 +204,35 @@ class StorageApps
     0
   end
 
+  def content_moderation_disabled?(channel_id)
+    _owner, id = storage_decrypt_channel_id(channel_id)
+
+    row = @table.where(id: id).exclude(state: 'deleted').first
+    raise NotFound, "channel `#{channel_id}` not found" unless row
+
+    row[:skip_content_moderation]
+  end
+
+  #
+  # Disables or enables automated content moderation for this project by
+  # altering the value for content_moderation_disabled.
+  # @param [String] channel_id - an encrypted channel id
+  # @param [Boolean] disable, whether the content moderation should be
+  # skipped or not for this project.
+  # @raise [NotFound] if the channel does not exist or already has the desired
+  # value for content_moderation_disabled.
+  #
+  def set_content_moderation(channel_id, disable)
+    _owner, id = storage_decrypt_channel_id(channel_id)
+    rows_changed = @table.
+      where(id: id).
+      exclude(state: 'deleted').
+      update({skip_content_moderation: disable})
+    raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
+
+    disable
+  end
+
   def to_a
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |row|
       channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
@@ -222,12 +251,10 @@ class StorageApps
   # Find the encrypted channel token for most recent project of the given type.
   def most_recent(key)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
-      begin
-        parsed = JSON.parse(i[:value])
-        !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
-      rescue
-        # Malformed channel, or missing level.
-      end
+      parsed = JSON.parse(i[:value])
+      !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
+    rescue
+      # Malformed channel, or missing level.
     end
 
     storage_encrypt_channel_id(row[:storage_id], row[:id]) if row

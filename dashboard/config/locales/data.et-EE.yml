@@ -19,7 +19,7 @@ et:
         Farmer2: Talunik tase 2
         Unplug8: Abstraktsus
         Artist4: Kunstnik tase 4
-        Unplug9: Relee Programmeerimine
+        Unplug9: Relee programmeerimine
         Farmer3: Talunik tase 3
         Unplug10: Internet
         Artist5: Kunstnik tase 5
@@ -30,11 +30,11 @@ et:
         Jigsaw: Pusle
         MazeStep: Labürindi sammu režiim
         Wordsearch: Sõnaotsing
-        Webapp: Rakenduste labor
+        Webapp: App Lab
         ArtistEC: Kunstnik
         TextMatch: Teksti vaste
         StudioEC: Play Lab
-        Applab: Rakenduste labor
+        Applab: App Lab
         NetSim: Interneti simulaator
         Custom: Kunstnik
         CustomStudio: Play Lab
@@ -93,8 +93,7 @@ et:
           kuid hoidu taimede eest!
         maze_2_17: '"Kui-teine" plokid kontrollivad tingimust ja teeb vastavalt ühte
           või teist asja. Et saada mind päevalilleni, kasuta seda uut plokki.'
-        maze_2_18: Üks harjutamine veel "kui-teine" plokiga, kas saad esimese korraga
-          õigesti?
+        maze_2_18: Üks harjutus veel, kas sa saad esimese korraga õigesti?
         maze_2_19: Kas sa saad lisada 3 plokki, et aidata mul lahendada veel keerulisem
           labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu,
           ükskõik kui pikk see on.
@@ -323,51 +322,53 @@ et:
         studio_c2_1: Kas oskad panna koera ütlema "tere maailm"?
         studio_c2_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks
           kass midagi?
-        studio_c2_3: Kas oskad kirjutada programmi, mille abil koer liigub kassi juurde?
-        studio_c2_4: Kas oskad kirjutada programmi, mille abil koer liigub kassi juurde
-          ja kass ütleb „tere“, kui koer tema juurde jõuab?
-        studio_c2_5: Kas oskad kirjutada programmi, mille abil kaheksajalg ütleb „tere“,
-          kui temal klikitakse?
-        studio_c2_6: Kas oskad kirjutada programmi, mille abil liigutada pingviini
-          üles-, alla-, parem- ja vasaknooleklahvide abil, nii et ta jõuaks kõigi
+        studio_c2_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi
+          juurde?
+        studio_c2_4: Kas sa saaksid kirjutada programmi, mille abil koer liigub kassi
+          juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
+        studio_c2_5: Kas saaksid kirjutada programmi, mille abil kaheksajalg ütleb
+          „tere“, kui temal klikitakse?
+        studio_c2_6: Kas sa saaksid kirjutada programmi, mille abil liigutada pingviini
+          üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks kõigi
           sihtmärkideni?
-        studio_c2_7: Ploki „korda igavesti“ abil saad koodi pidevalt käitada. Kas
+        studio_c2_7: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada. Kas
           oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
-        studio_c2_8: Kas oskad panna pingviini nooleklahvidega liikuma ja teha nii,
-          et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja kõlab
-          heli „löök“?
-        studio_c2_9: Kas oskad lisada ploki nii, et kui pingviin põrkab kaheksajalaga
-          kokku, siis sa saad punkti, ja kas oskad teda selleks nooleklahvidega liigutada?
-        studio_c2_10: Kas oskad lisada plokid, millega muudetakse akna tausta ja pingviini
-          kiirust ning kas oskad siis pingviini nooleklahvidega liigutada, kuni saad
-          punkti?
-        studio_c2_11: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja lase
-          sõpradel telefonis lugu proovida.
+        studio_c2_8: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja teha
+          nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja
+          kõlab heli „löök“?
+        studio_c2_9: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin
+          põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni
+          saad punkti?
+        studio_c2_10: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta pingviini
+          kiirust ja liigutada teda nooltega kuni punkti saad?
+        studio_c2_11: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja lase
+          sõpradel nende telefonis oma lugu proovida.
         studio_c3_story_1: Kas oskad panna koera ütlema "tere maailm"?
         studio_c3_story_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda
           ütleks kass midagi?
-        studio_c3_story_3: Kas oskad kirjutada programmi, mille abil koer liigub kassi
-          juurde?
-        studio_c3_story_4: Kas oskad kirjutada programmi, mille abil koer liigub kassi
-          juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
-        studio_c3_story_5: Kas oskad lisada ploki, et kaheksajalg oleks õnnelik?
-        studio_c3_story_6: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
-          lase sõpradel telefonis lugu proovida.
-        studio_c3_game_1: Kas oskad kirjutada programmi, mille abil kaheksajalg ütleb
-          „tere“, kui temal klikitakse?
-        studio_c3_game_2: Kas oskad kirjutada programmi, mille abil liigutada pingviini
-          üles-, alla-, parem- ja vasaknooleklahvide abil, nii et ta jõuaks kõigi
-          sihtmärkideni?
-        studio_c3_game_3: Ploki „korda igavesti“ abil saad koodi pidevalt käitada.
+        studio_c3_story_3: Kas oskad kirjutada programmi, mille abil see koer liigub
+          kassi juurde?
+        studio_c3_story_4: Kas sa saaksid kirjutada programmi, mille abil koer liigub
+          kassi juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
+        studio_c3_story_5: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks
+          teha?
+        studio_c3_story_6: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja
+          lase sõpradel nende telefonis oma lugu proovida.
+        studio_c3_game_1: Kas saaksid kirjutada programmi, mille abil kaheksajalg
+          ütleb „tere“, kui temal klikitakse?
+        studio_c3_game_2: Kas sa saaksid kirjutada programmi, mille abil liigutada
+          pingviini üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks
+          kõigi sihtmärkideni?
+        studio_c3_game_3: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada.
           Kas oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
-        studio_c3_game_4: Kas oskad panna pingviini nooleklahvidega liikuma ja teha
-          nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja
-          kõlab heli „löök“?
-        studio_c3_game_5: Kas oskad lisada ploki nii, et kui pingviin põrkab kaheksajalaga
-          kokku, siis sa saad punkti, ja kas oskad teda selleks nooleklahvidega liigutada?
-        studio_c3_game_6: Kas oskad lisada plokid, millega muudetakse akna tausta
-          ja pingviini kiirust ning kas oskad siis pingviini nooleklahvidega liigutada,
-          kuni saad punkti?
+        studio_c3_game_4: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja
+          teha nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“
+          ja kõlab heli „löök“?
+        studio_c3_game_5: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin
+          põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni
+          saad punkti?
+        studio_c3_game_6: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta
+          pingviini kiirust ja liigutada teda nooltega kuni punkti saad?
         studio_c3_game_7: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
           lase sõpradel telefonis lugu proovida.
         studio_playlab_1: Pingviin tahab öelda „tere“. Kas saad teda aidata?
@@ -468,10 +469,11 @@ et:
         studio_k1_1: Kas oskad panna koera ütlema "tere maailm"?
         studio_k1_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks
           kass midagi?
-        studio_k1_3: Kas oskad kirjutada programmi, mille abil koer liigub kassi juurde?
+        studio_k1_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi
+          juurde?
         studio_k1_4: Tee nii, et koer liiguks kassi juurde ja kass ütleks „tere“,
           kui koer kohale jõuab.
-        studio_k1_5: Kas oskad lisada ploki, et kaheksajalg oleks õnnelik?
+        studio_k1_5: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks teha?
         studio_k1_6: Loo oma lugu. Liiguta kassi ja koera ja tee, et nad ütleksid
           midagi.
         maze_wordsearch_k_1: Liiguta mind, et kirjutada sõna EAST
@@ -525,7 +527,7 @@ et:
         Unplug9: Relee programmeerimine
         Unplug10: Internet
         Unplug11: Kokkuvõte
-        C1_happy_maps_unplugged: '"Happy Maps"'
+        C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Liiguta, liiguta
         C1_bigevent_unplugged: Suursündmus
         C1_getting_loopy: Muutub tsükliliseks
@@ -554,7 +556,7 @@ et:
         C2_graph_paper: Millimeetripaberi programmeerimine
         C2_conditionals_with_cards: Tingimuslaused
         C2_binary_bracelets: Binaarsed käevõrud
-        C2_relay_programming: Relee Programmeerimine
+        C2_relay_programming: Relee programmeerimine
         C2_paper_airplanes: Paberlennukid
         C2_digital_footprint: Sinu digitaalne jalajälg
         C2_digital_footprint_v2: Sinu digitaalne jalajälg
@@ -595,14 +597,11 @@ et:
         C4_unplugged_forloops: For tsükkel
         C4_unplugged_parameters: Laulukirjutamine parameetritega
         C4_unplugged_binary: Binaarne
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Nurgad Artistis
         CSF_collector_k1_blocks: 'CS alused: Koguja'
         CSF_collector_repeat_loops: Korruta tsükleid
         CSF_collector_text_blocks: 'CS alused: Koguja'
         CSF_create_functions: Koosta funktsioone
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Arvutiteadus on oluline
         CSF_maze_intro_k1_blocks: Sissejuhatus Code Studiosse
         CSF_maze_intro_text_blocks: Sissejuhatus Code Studiosse
@@ -622,93 +621,21 @@ et:
         infinity_playlab_intro: Play Lab - Sissejuhatus
         infinity_playlab_events: Play Lab - Üritused
         infinity_playlab_repeat_forever: Play Lab – korda Igavesti
-        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: 'Kuidas töötavad arvutid: Mis teeb arvutist arvuti?'
         csd_concept_binary_data: 'Kuidas töötavad arvutid: Binaararvud & andmed'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: Kuidas Otsing töötab
         csd_external_amazon_data: Kui kasutatakse Big Data't Amazonis, et muuta meie
           elu
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: Animatsioon
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocity
         csd_weblab_intro_1: Sissejuhatus Web Lab - osa 1
         csd_weblab_intro_2: Sissejuhatus Web Lab - osa 2
         csd_weblab_css_1: Sissejuhatus CSS - osa 1
         csd_weblab_css_2: Sissejuhatus CSS - osa 2
         csd_weblab_intro_3: Sissejuhatus Web Lab - osa 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Funktsioonide tutvustus
         csp_applab_functions_parameters: Parameetritega funktsioonid
         csp_applab_loops: Tsüklid
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
         starwars_intro: 'Star Wars: galaktika loomine koodiga – sissejuhatus'
         starwars_typing: 'Star Wars: galaktika loomine koodiga – JavaScript'
         starwars_events: 'Star Wars: galaktika loomine koodiga – sündmused'
@@ -745,41 +672,7 @@ et:
         mc_2017_puzzle_3: App Lab Hour of Code - tsüklid
         mc_2017_puzzle_8: Minecraft Hour of Code - funktsioonid
         mc_2017_puzzle_12: Minecraft KoodiTund - Vabamäng
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: Tsüklid
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla

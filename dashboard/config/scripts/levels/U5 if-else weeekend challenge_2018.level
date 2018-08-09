@@ -28,7 +28,9 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "orOperator": null,
-      "andOperator": null
+      "andOperator": null,
+      "functionParams_none": null,
+      "callMyFunction": null
     },
     "edit_code": true,
     "encrypted_examples": "PjleIEdB3s5+a4/8cIi9Zs46Dpf2db5QJbb4nxmqkom7NimX9vRphGHZFq1Z\noWGJRxGN2G+DlZGVro2/qDDmIw==\n",
@@ -97,10 +99,19 @@
     "hide_share_and_remix": "false",
     "parent_level_id": 7523,
     "name_suffix": "_2018",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-27 18:12:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

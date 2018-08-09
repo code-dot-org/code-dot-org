@@ -4,69 +4,36 @@ eu:
       Unplug1:
         title: Konputazio zientzetarako sarrera
         desc: Ikasgai honetan  informatika mundura gerturatuko gara eta informatikari batek zer egiten duen azalduko da. Ikasleei informatikarien rola hartzeko aukera emango zaie. Ekintzaren amaieran ikasle bakoitzak ikasi duenari buruz gogoeta egiteko aukera izango du. Izan zaitezke tentatua ikasleei ikasgaiarekin lotutako hiztegia ez erakusten, baina orain era atseginean egiten baduzu askoz ere amankorragoa izango da aukera berriei itxaroten baduzu baino.
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: Pentsamendu konputazionala
         desc: Orri eta arkatzak soilik erabiliz, ikasleek, pentsamendu konputazionalaren lau urratsak ikasiko dituzte. Sarrera motz baten ostean, ikasleak talde ezberdinetan banatuak izan beharko dira, eta beste ikasleek munstro zehatz bat marraztu ahal izateko zuzenbideak sortu beharko dituzte (aurretik aukeratutako monstruo katalogo batetik). Ataza osoa deskonposatu beharko da, eta taldeek katalogoan dauden munstro guztiak aztertu beharko dituzte patroi ezberdinen bila. Ondoren, lortutako informazioa erabiliz, algoritmo bat sortuko dute beste talde batek munstroa eraiki dezan. Taldeek algoritmo horiek trukatuko dituzte eta munstroa marraztuko dute algoritmoak zehazten duenaren arabera. Marrazkia hasierako taldeak esperotakoa islatzen al du?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: Paper grafiko programazioa
         desc: Marrazki batzuk programatzen, ikasleak programazioa benetan zer den ikasten hasiko dira. Eskola hasiko da ikasleak elkarri aginduak ematen orri laukidun batean lauki batzuk koloreztatzeko, irudi konkretu bat osatzeko asmoz. Ikasleek egin dituzten irudiak aztertuz bukatu daiteke eskola.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmoak
         desc: Ikasgai hau algoritmoei buruzkoa da. Tangrama eta paper koadrikulatua erabiliz, lehen ariketan argibideak modu garbian ematearen garrantzia ikasiko dugu. Ondoren, ikasleek folio bat laukizuzen bihurtzeko metodo ezberdinak proposatuko dituzte. Modu honetan ikasleek metodo bakoitzak tolestura kopuru ezberdina behar dutela ikusiko dute.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: Funtzioak
         desc: Ikasgai honetan, ikasleek eguzki-harrapatzaile bat egingo dute soka, apaingarriak eta amuleto berezia erabiliz. Ikasleek urrats errepikakor batzuk jarraituko dituzte eta ondoren behin baino gehiagotan errepikatzen diren "trebetasun" multzoak identifikatu beharko dituzte. Trebetasun horiek definitu onodren, programa nagusi batetik dei daitezke eta orduan sormen prozesu eder osoa paperezko orri batean batu ahal izango da. Azken programa eskola osoari zabalduko zaio, dituzten soka, apaingarri eta amuleto dituztela. Hau efektiboki ahalbidetzeko, ikasleek euren material bereizgarrien ezaugarrien "abstrakzioa egin" beharko dute eta bakoitzaren baliabideentzako termino orokorrak sortu.  Leku-marka generikoak erabiltzea aldagaientzako sarrera paregabea da.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: Baldintzak
         desc: Hau klase joko bat da. Baldintzak sartu eta gero, baldin eta begizta adierazpenak, klaseak batera praktika dezake aurre idatzita dagoen programa baten bidez.
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: Abestiak idazten
         desc: Abestien hitzak irakurtzea lan erraz eta polita da ikasle gehienentzat. Jarduera ohiko hau eraldatu dugu hezkuntza solido bat eskaintzeko, funtzioen definizioa eta hauen deiak ondo ulertzea ahalbidetuko duena. Behin ikasleek ondo ulertu dutela definizio eta dei prozesu hau, parametroekin hauek nola hedatu ikasiko dugu.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstrakzioa
         desc: Ariketa honek ikaslearen eguneroko errutina eta hitzekin zerikusia duen joko baten bidez, zure klaseari ikasten lagunduko dio abstrakzioaren eraginkortasuna.
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
         title: Rele programazioa
         desc: Ikasgai honek beste jarduera bateko (4. Laukidun Orri Programazioa) ideia hartuko du eta bertan lortutako gaitasunak. Honekin azpimarratuko dugu programak osatzearen garrantzia, batez ere sekuentzian exekutatzen direnak eta ez direla existitzen errorerik ("bug").
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: Internet
         desc: 'Ikastaro honetan ikasleek webari buruz ikasiko dute: web helbidea, IPa eta DNSa zer diren. Honetarako interneten nabigatzen dutela simulatuko dute.'
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: Itxi
         desc: Azken laburbiltzeak lehen 20 orduko seriean ikasleei une gogokoena berriro bizitzea ahalbidetuko die, informatikan bidea egiten jarraitu nahi badute euren kabuz hartuko dituzten urratsak emanez.
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Mapa Zoriontsuak
         desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto baten barnean gidatuko dute komando bakar bat erabiliz.
@@ -113,7 +80,7 @@ eu:
         title: Funtzioak aztertzen
         desc: Ikasleek algoritmo bat sortzen dute aldagai eta funtzioekin (kode zatiak erabil nahi ditugunak behin eta berriz) kristalezko apaingarriak sortzeko kateak eta aleak erabiliz.
       SongwritingParameters:
-        title: Abestiak idazten parametroekin
+        title: Musika idazten
         desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
       DiceRace:
         title: 'Benetako algoritmoak: dado lasterketa'
@@ -163,30 +130,16 @@ eu:
       CollisionDetection:
         title: Kolisio detekzioa eta Pitagorasen teorema
         desc: Pantailan dauden objektuek elkarren artean talka egiten duten jakitea oso garrantzitsua da joko gehienetan. Ikastaro honetan Pitagorasen teorema eta Distantzia formula nola erabili ikusiko dugu plano batean dauden bi puntuen (edo objetu, pertsonaia...) arteko distantzia neurtu eta ea elkar ukitzen duten jakiteko.
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Lineaz kanpoko ekintza
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Lineaz kanpoko ekintza
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Lineaz kanpoko ekintza
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Lineaz kanpoko ekintza
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Lineaz kanpoko ekintza
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
         desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
@@ -215,7 +168,7 @@ eu:
         title: Eskumuturreko bitarrak
         desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela ikasten dute honela.
       courseD_unplugged_graphPaperProgramming:
-        title: Paperean marraztuz programatu
+        title: Paper grafiko programazioa
         desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
       courseD_unplugged_relayProgramming:
         title: Txandaka programatzen
@@ -227,7 +180,6 @@ eu:
         title: Irudi bitarrak
         desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua gordetzeko gai dela (irudi eta kolore bezalakoak).
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Ikasgai honek algoritmoak eguneroko bizitzan nola erabiltzen ditugun azaltzen du. Bertan ikasleek dado lasterketa baten algoritmoa identifikatu eta idatziko dute.
       courseE_unplugged_songwritingParameters:
         title: Abestiak idazten parametroekin
@@ -239,7 +191,7 @@ eu:
         title: Crowdsourcing
         desc: Ikasleek talde-lana erabiltzen dute, eta hau oso erabilia den teknika bat da informatikan. Ekintza bat klasekoekin burutzea ekintza askoz ere eraginkorragoa bihurtzen du, lana banaka burutu ordez.
       courseE_unplugged_songwriting:
-        title: Abestiak idazten parametroekin
+        title: Musika idazten
         desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
       courseF_unplugged_tangrams:
         title: Tangram algoritmoak
@@ -253,54 +205,8 @@ eu:
       courseF_unplugged_songwritingParameters:
         title: Abestiak sortzen parametroekin
         desc: 'Funtzioa da informatika munduan dagoen egitura bikainenetako bat. Funtzioak (batzuetan prozedurak deituak) programa handiago batean behin eta berriro erabil ditzakezun programa txikiak dira. ikasgai honek ikasleei lagunduko die intuitiboki ulertzen zergatik den lagungarria kode zatiak elkartzea funtzioak osatuz.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Nire lagun robotikoak
       PlantASeed_2018:
         title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
         desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
@@ -310,21 +216,16 @@ eu:
       GoingPlacesSafely_2018:
         title: Joan segurtasunez
         desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek adieraziko dute nola nabigatu modu seguruan interneten.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: Gertaera Handia
         desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko dituzte.
       GraphPaperProgramming_2018:
-        title: Paperean marraztuz programatu
+        title: Paper grafiko programazioa
         desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
       courseD_unplugged_digitalCitizenship_2018:
         title: Lineaz kanpoko ekintza
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Lineaz kanpoko ekintza
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Baldintzak
         desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut, puntu bat lortzen duzu."'
@@ -345,13 +246,5 @@ eu:
         desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela ikasten dute honela.
       MoveItMoveIt_2018:
         title: Mugi ezazu, mugi ezazu!
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Txandaka programatzen
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

@@ -48,7 +48,7 @@
     "use_default_sprites": "false",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 14104,
-    "markdown_instructions": "These aliens are running wild!  \r\n\r\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\r\n      <value name=\"SPRITE\"/>\r\n    </block></xml> block to make each alien stop moving when it is clicked.  \r\n    \r\n---\r\n",
+    "markdown_instructions": "These aliens are running wild!  \r\n\r\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\r\n      <value name=\"SPRITE\"/>\r\n    </block></xml> block to make each alien stop moving when it is clicked.",
     "show_type_hints": "true",
     "instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
     "contained_level_names": null

@@ -693,22 +693,7 @@ export default class Craft {
       destroyBlock: function (blockID) {
         appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'PlayerAgent');
       },
-      whilePathAhead: function (blockID, callback) {
-        // if resurrected, move blockID be last parameter to fix "Show Code"
-        appCodeOrgAPI.whilePathAhead(studioApp().highlight.bind(studioApp(), blockID),
-            '',
-            'PlayerAgent',
-            callback);
-      },
-      whileBlockAhead: function (blockID, blockType, callback) {
-        // if resurrected, move blockID be last parameter to fix "Show Code"
-        appCodeOrgAPI.whilePathAhead(studioApp().highlight.bind(studioApp(), blockID),
-            blockType,
-            'PlayerAgent',
-            callback);
-      },
       ifLavaAhead: function (callback, blockID) {
-        // if resurrected, move blockID be last parameter to fix "Show Code"
         appCodeOrgAPI.ifBlockAhead(studioApp().highlight.bind(studioApp(), blockID),
             "lava",
             'PlayerAgent',

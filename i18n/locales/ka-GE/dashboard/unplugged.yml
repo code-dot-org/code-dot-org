@@ -4,69 +4,36 @@ ka:
       Unplug1:
         title: ინფორმატიკის შესავალი
         desc: ეს გაკვეთილი განმარტავს, თუ რა არის კომპიუტერული მეცნიერება და რას აკეთებს კომპიუტერული მეცნიერი. ასევე ის აძლევს მოსწავლეებს საშუალებას, კომპიუტერული მეცნიერის როლი მოირგონ. აქტივობის ბოლოს თითოეულ მოსწავლეს შეეძლება წაიღოს სახლში რაღაც, რას მას მიღებულ ცოდნას გაახსენებს. შესაძლოა, გაგიჩნდეთ სურვილი გამოტოვოთ ამ გაკვეთილებში შემავალი რთული ტერმინები, მაგრამ გაცილებით პროდუქტიული იქნება, თუ მათ ბავშვებს სახალისო თამაშის სახით ასწავლით და არ გადადებთ ამ საქმეს სამომავლოდ.
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: გამოთვლითი აზროვნება
         desc: მხოლოდ ქაღალდითა და მარკერებით, მოსწავლეები ისწავლიან გამოთვლითი აზროვნების ოთხ ნაბიჯს. მცირე შესავლის შემდეგ მოსწავლეები უნდა დაიყონ ჯგუფებად და შექმნან მითითებები სხვა სტუდენტებისთვის, თუ როგორ დახატონ კონკრეტული მონსტრი (წინასწარ არჩეული მონსტრების კატალოგიდან). მთელი დავალება დანაწევრებული უნდა იყოს, ჯგუფები გააანალიზებენ კატალოგში მოცემულ მონსტრებს, გამოყოფენ სხვადასხვა დეტალებს, შემდეგ კი ამ ინფორმაციას მეორე ჯგუფისთვის მონსტრის დასახატი ალგორითმის (მითითებების) შესაქმნელად გამოიყენებენ. შემდეგ ჯგუფები ერთმანეთში გაცვლიან ალგორითმებს და დახატავენ მონსტრს მიღებული ალგორითმის მიხედვით. დაემთხვევა ნახატები დაპირისპირებული გუნდის იდეას?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
-        title: გრაფიკული პროგრამირება
+        title: გრაფიკული პროგრამირება ქაღალდზე
         desc: სურათის დასახატად ერთმანეთის დაპროგრამებით მოსწავლეები გაიგებენ, თუ რეალურად რაზეა პროგრამირება. გაკვეთილი დაიწყება იმით, რომ მოსწავლეები ერთმანეთს მისცემენ ბრძანებებს, თუ როგორ გააფერადონ გრაფზე კვადრატები არსებული სურათის გასამეორებლად. თუ დრო დარჩება, გაკვეთილი შესაძლოა დასრულდეს მოსწავლეების მიერ სურათების დამოუკიდებლად შექმნით.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: ალგორითმები
         desc: ეს გაკვეთილი ეხება ალგორითმებს. ტანგრამის ფორმებისა და ქაღალდის გამოყენებით, პირველი სავარჯიშო გვაჩვეენებს, თუ რამდენად მნიშვნელოვანია თითოეული მითითება იყოს რაც შეიძლება გასაგები და ცხადი. შემდეგ, კლასი ნახავს თუ რამდენი გზა არსებობს ქაღალდის მართკუთხედად გადაკეცვის, სადაც გამოჩნდება რომ ზოგ მეთოდს მეტი ან ნაკლები გადაკეცვა სჭირდება.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: ფუნქციები
         desc: ამ გაკვეთილში მოსწავლეები ძაფის, მძივებისა და სპეციალური თილისმისგან გააკეთებენ ვიტრაჟებს. მოსწავლეები გაჰყვებიან განმეორებად ნაბიჯებს, შემდეგ კი მოუწევთ განსაზვრონ "უნარების" გაკრვეული განმეორებადი ერთობლიობები. ამ უნარების განსაზღვრის შემდეგ მათ მთავარი პროგრამა გამოიძახებს და შექმნის მთელი მშვენიერი პროცესი ერთ ფურცელზე ჩაიწერება. უკანასკნელი პროგრამა ორიენტირებული იქნება მთელ კლასზე, მიუხედავად მათი ძაფების, მძივების და თილისმებისა. იმისთვის რომ ამას ეფექტი ჰქონდეს, მოსწავლეებს მოუწევთ თავიანთი კონკრეტული მასალის სხვადასხვა დეტალების გამოყოფა და ცალკეული რესურსისთვის შედარებით ბუნდოვანი ტერმინის შერჩევა. ასეთი ზოგადი ადგილის შემავსებლების გამოყენება მშვენიერი დასაწყისია ცვლადების შესწავლისთვის.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: პირობები
         desc: ეს არის საკლასო თამაში. პირობითი ბრძანებების, თუ-დებულებებისა და ციკლების გაცნობის შემდეგ, მოსწავლეებს შეეძლებათ ვარჯიში წინასწარ დაწერილი პროგრამით, კარტითა და ცოტაოდენი იღბლის მეშვეობით.
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: სიმღერის დაწერა
         desc: მრავალი მოსწავლისთვის ნოტების წაკითხვა სირთულეს არ წარმოადგენს. ჩვენ ავირჩევთ უკვე ცნობილ აქტივობას და მისი გამოყენებით ვისწავლით ფუნქციების განსაზღვრასა და გამოძახებას. როდესაც მოსწავლეები განსაზღვრა/გამოძახების პროცესს გაეცნობიან, დავამატებთ შესაძლებლობებს, რომლებიც ფუნქციების გამოძახებისას პარამეტრების გადაცემას მოსდევს.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: აბსტრაქცია
         desc: ეს აქტივობა აერთიანებს მოსწავლეების ყოველდღიურ რუტინასა და Mad-Lib-ის სტილის სააზროვნო თამაშს, რითაც მოსწავლეებს აბსტრაქციის ეფექტურობას წარმოუდგენს.
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
-        title: ესტაფეტური პროგრამირება
+        title: პროგრამირება ცვლაში
         desc: ეს გაკვეთილი წინა აქტივობის იდეას (4. ქაღალდზე პროგრამირება) და მისთვის საჭირო უნარებს იყენებს, რათა ხაზი გაუსვას თანმიმდევრულად მოქმედი პროგრამების დასრულებასა და ბაგებზე პროგრამების ხშირად შემოწმების მნიშვნელოვანებას.
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: ინტერნეტი
         desc: ამ გაკვეთილში მოსწავლეები წარმოიდგენენ, თითქოს ინტერნეტში არიან, და გაეცნობიან ვებ-მისამართებს, IP-ებსა და DNS-ს.
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: შეჯამება
         desc: პირველი ოცსაათიანი სერიის საბოლოო შეჯამება მოსწავლეებს საუკეთესო მომენტების ხელახლა განცდის საშუალებას მისცემს და მიუთითებს მომდევნო ნაბიჯებზე, რომელთა გავლაც მოსწავლეებს თვითონ შეეძლებათ, თუ დაინტერესდებიან კომპიუტერულ მეცნიერებაში მოგზაურობის გაგრძელებით.
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: ბედნიერი რუკები
         desc: მოსწავლეები ქმნიან მარტივ ალგორითმებს (მითითებების სიებს), რათა პერსონაჟი ლაბირინთში ერთი ბრძანებით გაატარონ.
@@ -113,7 +80,7 @@ ka:
         title: ფუნქციური ვიტრაჟები
         desc: მოსწავლეები ვიტრაჟების შესაქმნელად ძაფებისა და მძივების გამოყენებით ქმნიან ფუნქციებიან და ცვლადებიან ალგორითმს (კოდს, რომლის ისევ და ისევ გამოყენება გვჭირდება).
       SongwritingParameters:
-        title: სიმღერის დაწერა პარამეტრების გამოყენებით
+        title: სიმღერის დაწერა
         desc: მოსწავლეები სიმღერაში მისამღერის ცნებას იყენებენ, რათა გაიაზრონ, თუ რას ნიშნავს ფუნქციის განსაზღვრა და გამოძახება.
       DiceRace:
         title: 'ცხოვრებისეული ალგორითმები: კამათლების შეჯიბრი'
@@ -164,28 +131,26 @@ ka:
         title: შეჯახების აღმოჩენა და პითაგორას თეორემა
         desc: თამაშების უმეტესობაში მნიშვნელოვან ასპექტს წარმოადგენს იმის დადგენა, თუ როდის ეხებიან ობიექტები ეკრანზე ერთმანეთს. ამ გაკვეთილში ვნახავთ, თუ როგორ გამოიყენება პითაგორას თეორემა და მანძილის ფორმულა ორ წერტილს შორის მანძილის გასაგებად და როგორ წყდება, ეხება თუ არა ეს ორი ობიექტი (ან თამაშის პერსონაჟი) ერთმანეთს.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: ამ გაკვეთილში თქვენ ისწავლით ციკლების შესახებ!
       courseB_unplugged_MRF:
         title: აქტივობა უკომპიუტეროდ
         desc: ამ გაკვეთილში თქვენ `დააპროპგრამებთ` მეგობრებთან ერთად!
       courseB_unplugged_loopyMRF:
         title: აქტივობა უკომპიუტეროდ
-        desc: ზუსტად ისე, როგორც "ჩემს რობოტულ მეგობრებში" თქვენ "დააპროგრამებთ" თქვენს მეგობრებთან ერთად, თუმცა ამჯერად ციკლების საშუალებით!
+        desc: ზუსტად ისე, როგორც "ჩემს რობოტულ მეგობრებში", თქვენ "დააპროგრამებთ" თქვენს მეგობრებთან ერთად, თუმცა ამჯერად ციკლების საშუალებით!
       courseC_Unplugged_ScreenOutTheMean:
         title: აქტივობა უკომპიუტეროდ
-        desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ ონლაინში.
+        desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ ონლაინ.
       courseD_unplugged_digitalCitizenship:
         title: აქტივობა უკომპიუტეროდ
-        desc: დღეს თქვენ გაიგებთ თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა.
+        desc: დღეს თქვენ გაიგებთ, თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა.
       courseE_unplugged_privateInformation:
         title: 'სტანდარტული უნარების კურსი: კონფიდენციალური და პირადი ინფორმაცია '
-        desc: დღეს თქვენ ისწავლით განსხვავებას კონფიდენციალური და პირადი ინფორმაციის შორის!
+        desc: დღეს თქვენ ისწავლით განსხვავებას კონფიდენციალურ და პირად ინფორმაციას შორის!
       courseF_unplugged_powerOfWords:
         title: აქტივობა უკომპიუტეროდ
-        desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ ონლაინში.
+        desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ ონლაინ.
       deeper learning description:
-        title: ''
         desc: 'თარგმანი არ არსებობს: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
@@ -215,10 +180,10 @@ ka:
         title: ორობითი სამაჯურები
         desc: მოსწავლეები ქმნიან სამაჯურებს, რომლებმაც მათი სახელის პირველი ასო ორობითი სისტემით უნდა წარადგინონ. მოსწავლეები სწავლობენ იმას, რომ მონაცემების წარდგენა და შენახვა არაერთი გზით შეიძლება.
       courseD_unplugged_graphPaperProgramming:
-        title: გრაფიკული პროგრამირება
+        title: გრაფიკული პროგრამირება ქაღალდზე
         desc: მოსწავლეები წინასწარ განსაზღვრული ბრძანებების გამოყენებით წერენ ალგორითმს (მითითებების სიას), რათა თავიანთ კლასელებს ნახატი დაახატვინონ.
       courseD_unplugged_relayProgramming:
-        title: ესტაფეტური პროგრამირება
+        title: პროგრამირება ცვლაში
         desc: მოსწავლეები მონაწილეობენ ესტაფეტაში, რომელშიც "ქაღალდზე გრაფიკული პროგრამირების" გამოსახულების მიხედვით ალგორითმის დასაწერად ეზოში სირბილი უწევთ. მოსწავლეს შეუძლია თითო ჯერზე მხოლოდ ერთი ინსტრუქციის დაწერა და თუ სადმე შეცდომაა, ინსტრუქციები უნდა წაიშალოს და პროცესი ხელახლა დაიწყოს.
       courseD_unplugged_conditionalsCards:
         title: პირობები ბარათებით
@@ -239,7 +204,7 @@ ka:
         title: ქრაუდსორსინგი
         desc: კომპიუტერულ მეცნიერებაში მოსწავლეები იყენებენ ამოცანის ამოხსნის ცნობილ ტექნიკას - ქრაუდსორსინგს და დავალებას ერთობლივად უფრო ეფექტურად ასრულებენ, ვიდრე ცალკეული მოსწავლე შეასრულებდა.
       courseE_unplugged_songwriting:
-        title: სიმღერის დაწერა პარამეტრების გამოყენებით
+        title: სიმღერის დაწერა
         desc: მოსწავლეები სიმღერაში მისამღერის ცნებას იყენებენ, რათა გაიაზრონ, თუ რას ნიშნავს ფუნქციის განსაზღვრა და გამოძახება.
       courseF_unplugged_tangrams:
         title: ტანგრამული ალგორითმები
@@ -253,54 +218,8 @@ ka:
       courseF_unplugged_songwritingParameters:
         title: სიმღერის დაწერა პარამეტრების გამოყენებით
         desc: 'კომპიუტერული მეცნიერების სამყაროს ერთ-ერთი ბრწყინვალე სტრუქტურაა ფუნქცია. ფუნქციები (რომელთაც ზოგჯერ პროცედურებს უწოდებენ) არის მინი–პროგრამები, რომელთა გამოყენება თქვენს პროგრამაში ისევ და ისევ შეგიძლიათ. ეს გაკვეთილი მოსწავლეებს დაეხმარება იმის გაგებაში, თუ რატომაა გამოსადეგი კოდის ბლოკების ფუნქციებად გაერთიანება.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: ჩემი რობოტი-მეგობრები
       PlantASeed_2018:
         title: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
         desc: ამ გაკვეთილში ნაჩვენებია, თუ როგორ ვიყენებთ ალგორითმებს ყოველდღიურ ცხოვრებაში, მაგალითად მცენარის დათესვისას. ასევე, ვისაუბრებთ კომპიუტერული მეცნიერების ზოგად სურათზე და იმაზე, თუ რამდენად მნიშვნელოვანია ალგორითმები.
@@ -311,20 +230,19 @@ ka:
         title: უსაფრთხო მგზავრობა
         desc: ინტერნეტი მძლავრი, მაგრამ ზოგჯერ საშიში ადგილია. მასწავლებლებმა უნდა აუხსნან მოსწავლეებს, თუ როგორ უნდა გამოიყენონ ინტერნეტი უსაფრთხოდ.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: ამ გაკვეთილში თქვენ ისწავლით ციკლების შესახებ!
       BigEvent_2018:
         title: დიდი მოვლენა
         desc: მოსწავლეები ეცნობიან პროგრამირების ახალ ცნებას - "მოვლენებს". მოვლენები ისეთი მოქმედებებია, რომელთაც კომპიუტერი მუდამ აკვირდება. მასწავლებელი ქაღალდის პულტზე ღილაკებს დააწვება, მოსწავლეები კი საპასუხო რეაქციას გამოავლენენ იმის მიხედვით, თუ რომელ ღილაკს დააწვა მასწავლებელი.
       GraphPaperProgramming_2018:
-        title: გრაფიკული პროგრამირება
+        title: გრაფიკული პროგრამირება ქაღალდზე
         desc: მოსწავლეები წინასწარ განსაზღვრული ბრძანებების გამოყენებით წერენ ალგორითმს (მითითებების სიას), რათა თავიანთ კლასელებს ნახატი დაახატვინონ.
       courseD_unplugged_digitalCitizenship_2018:
         title: აქტივობა უკომპიუტეროდ
-        desc: დღეს თქვენ გაიგებთ თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა.
+        desc: დღეს თქვენ გაიგებთ, თუ რას ნიშნავს ციფრულ მოქალაქედ ყოფნა.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: აქტივობა უკომპიუტეროდ
-        desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ ონლაინში.
+        desc: დღეს თქვენ ისწავლით, თუ როგორ უნდა მოიქცეთ, როდესაც ვიღაც გეუზრდელებათ ონლაინ.
       Conditionals_2018:
         title: პირობითი ბრძანებები
         desc: 'პირობითი ბრძანებების სასწავლად მოსწავლეები თამაშობენ კარტს და ქმნიან წესებს, მაგალითად: "თუ წითელი კარტი ამოვა, ერთ ქულას მივიღებ" და "თუ შავი კარტი ამოვა, თქვენ მიიღებ ერთ ქულას."'
@@ -345,13 +263,5 @@ ka:
         desc: მოსწავლეები ქმნიან სამაჯურებს, რომლებმაც მათი სახელის პირველი ასო ორობითი სისტემით უნდა წარადგინონ. მოსწავლეები სწავლობენ იმას, რომ მონაცემების წარდგენა და შენახვა არაერთი გზით შეიძლება.
       MoveItMoveIt_2018:
         title: ვისწავლოთ გადაადგილება
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
-        title: ესტაფეტური პროგრამირება
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+        title: პროგრამირება ცვლაში

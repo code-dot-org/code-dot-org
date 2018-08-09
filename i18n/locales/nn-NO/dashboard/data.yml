@@ -74,7 +74,7 @@ nn:
         maze_2_15: Meg vil ha solsikke! Bruk ei "viss"-blokk til å få meg dit med så få blokker du kan.
         maze_2_16: Ok, la oss gjere det ein gong til - denne er ikkje så ulik, men pass deg for dei kjøttetande plantane!
         maze_2_17: '"viss-elles"-blokka sjekkar eit vilkår og utfører det eine ELLER det andre. For å få meg til solsikka, prøv å bruke denne blokka.'
-        maze_2_18: Ei siste øving med "viss-elles"-blokka. Klarer du å få det rett på første forsøk?
+        maze_2_18: Ei siste øving med "viss-elles"-blokka. Klarar du å gjere det riktig på første forsøk?
         maze_2_19: Klarer du å hjelpe meg gjennom ein kompleks labyrint ved å legge til berre 3 blokker? Viss du gjer det rett, så kan eg gå ein vilkårleg kronglete veg uansett kor lang den er.
         turtle_1_1: Hei, eg er ein kunstnar. Du kan skrive kode som får meg til å teikne alt mulig rart. Bruk nokre blokker til å få meg til å teikne på dei grå linjene på bildet.
         turtle_1_2: 'No kan du prøve å teikne ein firkant. PS! Vel favorittfargen din med "sett farge"-blokka.'
@@ -178,28 +178,28 @@ nn:
         mazestep_4: Labyrint steg forklaring her
         mazestep_5: Labyrint steg forklaring her
         studio_c2_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_c2_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_c2_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
-        studio_c2_4: Kan du skrive eit program som gjer at hunden flyttar seg til katten og at katten seier "Hei" når hunden kjem?
-        studio_c2_5: Kan du skrive eut program som får blekkspruten til å sei "Hei" når den blir klikka på?
-        studio_c2_6: Kan du skrive eit program for å få denne pingvinen til røre seg omkring med opp / ned / venstre / høyre-tastane for å treffe alle måla?
-        studio_c2_7: '"Gjenta alltid"-blokka let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
-        studio_c2_8: Kan du få pingvinen til å seie "Au!" og spille ein "treff"-lyd viss han treff dinosauren og deretter flytte han med pilene for å få det til å skje?
-        studio_c2_9: Kan du legge til ei blokk for å skåre eit poeng når pingvinen kjem borti blekkspruten, og deretter flytte han med pilene til du skårer?
-        studio_c2_10: Kan du legge til blokker for å forandre bakgrunnen og farta til pingvinen og deretter bevege han med pil-tastane til du skårer?
-        studio_c2_11: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
+        studio_c2_2: Kan du få hunden til å seie noko, og deretter få katten til å seie noko etterpå?
+        studio_c2_3: Kan du lage eit program som får hunden til å flytte seg til katten?
+        studio_c2_4: Kan du lage eit program som får hunden til å flytte seg til katten, og får katten til å seie "Hallo" når hunden kjem bort?
+        studio_c2_5: Kan du lage eit program som får blekkspruten til å seie "Hallo" når ein klikkar på den?
+        studio_c2_6: Kan du lage eit program for å få Waddles til å flytte seg rundt ved å bruke piltastane for å treffe alle måla?
+        studio_c2_7: '"Gjenta for alltid"-blokka lar deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte dinosauren opp og ned for alltid?'
+        studio_c2_8: Kan du få Waddles til å seie "Au!" og spele ein "treffe"-lyd om han kjem borti dinosauren, og så flytte han med pilene for at det skal skje?
+        studio_c2_9: Kan du legge til ei blokk for å score eit poeng når Waddles kjem borti blekkspruten, og deretter flytte ham med pilane til du scorar?
+        studio_c2_10: Kan du legge til blokker for å endre bakgrunnen og farten til Waddles, og så flytte ham med pilane til du scorar?
+        studio_c2_11: Lag di eiga historie. Når du er ferdig klikker du Fullfør for å la vener prøve di historie på telefonane sine.
         studio_c3_story_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_c3_story_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_c3_story_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
-        studio_c3_story_4: Kan du skrive eit program som gjer at hunden flyttar seg til katten og at katten seier "Hei" når hunden kjem?
-        studio_c3_story_5: Kan du legge til ei blokk for å gjere blekkspruten glad?
-        studio_c3_story_6: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
-        studio_c3_game_1: Kan du skrive eut program som får blekkspruten til å sei "Hei" når den blir klikka på?
-        studio_c3_game_2: Kan du skrive eit program for å få denne pingvinen til røre seg omkring med opp / ned / venstre / høyre-tastane for å treffe alle måla?
-        studio_c3_game_3: '"Gjenta alltid"-blokka let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
-        studio_c3_game_4: Kan du få pingvinen til å seie "Au!" og spille ein "treff"-lyd viss han treff dinosauren og deretter flytte han med pilene for å få det til å skje?
-        studio_c3_game_5: Kan du legge til ei blokk for å skåre eit poeng når pingvinen kjem borti blekkspruten, og deretter flytte han med pilene til du skårer?
-        studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og farta til pingvinen og deretter bevege han med pil-tastane til du skårer?
+        studio_c3_story_2: Kan du få hunden til å seie noko, og deretter få katten til å seie noko etterpå?
+        studio_c3_story_3: Kan du lage eit program som får hunden til å flytte seg til katten?
+        studio_c3_story_4: Kan du lage eit program som får hunden til å flytte seg til katten, og får katten til å seie "Hallo" når hunden kjem bort?
+        studio_c3_story_5: Kan du legge til ei blokk for å få blekkspruten glad?
+        studio_c3_story_6: Lag di eiga historie. Når du er ferdig klikker du Fullfør for å la vener prøve di historie på telefonane sine.
+        studio_c3_game_1: Kan du lage eit program som får blekkspruten til å seie "Hallo" når ein klikkar på den?
+        studio_c3_game_2: Kan du lage eit program for å få Waddles til å flytte seg rundt ved å bruke piltastane for å treffe alle måla?
+        studio_c3_game_3: '"Gjenta for alltid"-blokka lar deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte dinosauren opp og ned for alltid?'
+        studio_c3_game_4: Kan du få Waddles til å seie "Au!" og spele ein "treffe"-lyd om han kjem borti dinosauren, og så flytte han med pilene for at det skal skje?
+        studio_c3_game_5: Kan du legge til ei blokk for å score eit poeng når Waddles kjem borti blekkspruten, og deretter flytte ham med pilane til du scorar?
+        studio_c3_game_6: Kan du legge til blokker for å endre bakgrunnen og farten til Waddles, og så flytte ham med pilane til du scorar?
         studio_c3_game_7: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venene dine prøve spelet ditt på mobilen sin.
         studio_playlab_1: Pingvinen vil si "hallo" - Kan du hjelpe han?
         studio_playlab_2: Holegut (spelar 1) og Jasmin (spelar 2) vil sei "hallo" til kvarandre. Kan du hjelpe dei ved å bruke "sei"-blokka to gonger?
@@ -235,10 +235,10 @@ nn:
         studio_gumball_free_play: Lag ditt eige spel eller historie. Når du er ferdig, klikk Fullfør for å la vennene dine prøve spelet på telefonen, nettbrettet eller datamaskinen!
         studio_full_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venene dine prøve spelet ditt på mobilen sin.
         studio_k1_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_k1_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_k1_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
+        studio_k1_2: Kan du få hunden til å seie noko, og deretter få katten til å seie noko etterpå?
+        studio_k1_3: Kan du lage eit program som får hunden til å flytte seg til katten?
         studio_k1_4: Få hunden til å flytte seg bort til katten og katten til å sei «hallo» når han kjem fram.
-        studio_k1_5: Kan du legge til ei blokk for å gjere blekkspruten glad?
+        studio_k1_5: Kan du legge til ei blokk for å få blekkspruten glad?
         studio_k1_6: Lag din eiga historie! Flytt katten og hunden rundt og få dei til å sei ting.
         maze_wordsearch_k_1: Flytt meg for å stave ordet AUST
         maze_wordsearch_k_2: Flytt meg for å stave ordet SØR
@@ -351,14 +351,11 @@ nn:
         C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Låtskriving med parameter
         C4_unplugged_binary: Binær
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Vinklar i Kunstner
         CSF_collector_k1_blocks: 'Grunnleggande: Samlaren'
         CSF_collector_repeat_loops: Collector gjenta-løkker
         CSF_collector_text_blocks: 'Grunnleggande: Samlaren'
         CSF_create_functions: Lag funksjonar
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Informatikk er viktig
         CSF_maze_intro_k1_blocks: Introduksjon til Code Studio
         CSF_maze_intro_text_blocks: Introduksjon til Code Studio
@@ -389,79 +386,16 @@ nn:
         csd_external_netflix_data: Hvordan lager Netflix forslagene til serier og filmer?
         csd_external_waze_data: Kvifor er så mange brukarar besatt av Waze?
         csd_gamelab_animation_tab: Animasjonsfanen
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Fart
         csd_weblab_intro_1: Introduksjon til Nett-lab - del 1
         csd_weblab_intro_2: Introduksjon til Nett-lab - del 2
         csd_weblab_css_1: Introduksjon til CSS - Del 1
         csd_weblab_css_2: Introduksjon til CSS - Del 2
         csd_weblab_intro_3: Introduksjon til Nett-lab - del 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduksjon til funksjonar
         csp_applab_functions_parameters: Funksjonar med parameter
         csp_applab_loops: Løkker
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Litt om pixler
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
         starwars_intro: 'Star Wars: Skap ein galakse med kode - introduksjon'
         starwars_typing: 'Star Wars: Skap ein galakse med kode - JavaScript'
         starwars_events: 'Star Wars: Skap ein galakse med kode - Hendingar'
@@ -517,22 +451,9 @@ nn:
         applab_intro_sounds: App Lab - bilder og lyder
         applab_intro_designmode: App Lab - utformingsmodus
         applab_intro_share: App Lab - del Appen din
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: Løkker
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka

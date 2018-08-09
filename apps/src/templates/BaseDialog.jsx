@@ -6,13 +6,14 @@ import React, {PropTypes} from 'react';
  * semi-transparent backdrop. Can be closed by clicking the x, clicking the
  * backdrop, or pressing esc.
  */
-var BaseDialog = React.createClass({
-  propTypes: {
+export default class BaseDialog extends React.Component {
+  static propTypes = {
     isOpen: PropTypes.bool,
     handleClose: PropTypes.func,
     uncloseable: PropTypes.bool,
     hideCloseButton: PropTypes.bool,
     handleKeyDown: PropTypes.func,
+    // For use in react-storybook; allows rendering dialog inline in story tables.
     hideBackdrop: PropTypes.bool,
     fullWidth: PropTypes.bool,
     fullHeight: PropTypes.bool,
@@ -22,35 +23,35 @@ var BaseDialog = React.createClass({
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
     style: PropTypes.object,
-  },
+  };
 
-  componentDidMount: function () {
+  componentDidMount() {
     this.focusDialog();
-  },
+  }
 
-  componentDidUpdate: function () {
+  componentDidUpdate() {
     this.focusDialog();
-  },
+  }
 
-  handleKeyDown: function (event) {
+  handleKeyDown = (event) => {
     if (event.key === 'Escape') {
       this.closeDialog();
     }
     this.props.handleKeyDown && this.props.handleKeyDown(event);
-  },
+  };
 
-  closeDialog: function () {
+  closeDialog = () => {
     if (!this.props.uncloseable && this.props.handleClose) {
       this.props.handleClose();
     }
-  },
+  };
 
   /** @returns {Array.<Element>} */
   getTabbableElements() {
     return [].slice.call(this.refs.dialog.querySelectorAll('a,button,input'));
-  },
+  }
 
-  focusDialog: function () {
+  focusDialog() {
     // Don't steal focus if the active element is already a descendant of the
     // dialog - prevents focus loss on updates of open BaseDialog components.
     const descendantIsActive = document.activeElement && this.refs.dialog &&
@@ -58,25 +59,20 @@ var BaseDialog = React.createClass({
     if (this.props.isOpen && !descendantIsActive) {
       this.refs.dialog.focus();
     }
-  },
+  }
 
-  render: function () {
+  render() {
     if (!this.props.isOpen && !this.props.hideBackdrop) {
-      return <div></div>;
+      return <div/>;
     }
 
     let bodyStyle, modalBodyStyle, xCloseStyle;
-    if (this.props.hideBackdrop) {
-      bodyStyle = {
-        position: 'initial',
-        marginLeft: 0,
-      };
-    }
     if (this.props.fullWidth) {
-      bodyStyle = Object.assign({}, bodyStyle, {
+      bodyStyle = {
+        ...bodyStyle,
         width: '90%',
         marginLeft: '-45%'
-      });
+      };
     }
     if (this.props.fullHeight) {
       bodyStyle = {
@@ -100,10 +96,11 @@ var BaseDialog = React.createClass({
         overflowY: (this.props.fixedHeight || this.props.fullHeight) ? 'hidden' : 'auto',
         borderRadius: 4,
       };
-      bodyStyle = Object.assign({}, bodyStyle, {
+      bodyStyle = {
+        ...bodyStyle,
         width: this.props.fixedWidth || 700,
         marginLeft: (-this.props.fixedWidth / 2) || -350,
-      });
+      };
       xCloseStyle = {
         position: 'absolute',
         top: 0,
@@ -117,7 +114,14 @@ var BaseDialog = React.createClass({
       modalClassNames = "";
       modalBodyClassNames = "";
     }
-    bodyStyle = { ...bodyStyle, ...this.props.style };
+    bodyStyle = {
+      ...bodyStyle,
+      ...(this.props.hideBackdrop && {
+        position: 'initial',
+        marginLeft: 0,
+      }),
+      ...this.props.style
+    };
     let body = (
       <div
         style={bodyStyle}
@@ -147,5 +151,4 @@ var BaseDialog = React.createClass({
       </div>
     );
   }
-});
-module.exports = BaseDialog;
+}

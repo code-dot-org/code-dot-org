@@ -511,7 +511,12 @@ class TopInstructions extends React.Component {
   }
 
   shouldIgnoreShortInstructions() {
-    // if we have no long instructions, never ignore the short ones.
+    // If we have no short instructions, always ignore them.
+    if (!this.props.shortInstructions) {
+      return true;
+    }
+
+    // Otherwise, if we have no long instructions, never ignore the short ones.
     // Note that we would only decide to ignore short instructions in
     // the absense of long instructions when the short instructions
     // themselves were less than 10 characters, which can easily happen
@@ -668,9 +673,12 @@ class TopInstructions extends React.Component {
                 />
               }
               {this.props.overlayVisible &&
-                <LegacyButton type="primary" onClick={this.props.hideOverlay}>
-                  {msg.dialogOK()}
-                </LegacyButton>
+                <div>
+                  <hr/>
+                  <LegacyButton type="primary" onClick={this.props.hideOverlay}>
+                    {msg.dialogOK()}
+                  </LegacyButton>
+                </div>
               }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>

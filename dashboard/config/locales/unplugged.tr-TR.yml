@@ -11,9 +11,6 @@ tr:
           gördükleri derslerle ilgili sözcükleri öğretmekten vazgeçmek isteyebilirsin,
           ama bunu eğlenceli ve oyun olarak anlatabilmek daha gelişmiş yöntemler sunan
           fırsatları beklemekten çok daha verimlidir.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Sayısal Düşünme
         desc: Yalnızca kalem ve işaretleyiciler kullanarak öğrenciler sayısal düşünmenin
@@ -27,9 +24,6 @@ tr:
           kullandıkları algoritmaları değiş tokuş ederek o algoritmada belirtilenlerden
           yola çıkarak belirlenen canavarı çizerler. Ortaya çıkan çizim, ilk takımın
           yeltendiği çizim midir?
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Grafik Kağıdıyla Programlama
         desc: Resimler çizmek için diğerlerini programlamak neticesinde öğrenciler
@@ -37,9 +31,6 @@ tr:
           öğrencilerin arkadaşlarını kareleri boyayarak var olan resmi ortaya çıkarmaları
           konusunda uğraş vermeleri ile başlar. Eğer daha zaman kalırsa, öğrencilere
           kendi çizdiği resimlerle çalışma imkanı da verilir.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmalar
         desc: Bu ders algoritmaları kapsar.  Tangram şekilleri ve grafik kağıt kullanarak
@@ -48,9 +39,6 @@ tr:
           dikdörtgen olarak katlayabilmenin kaç yolu olduğunu keşfetmeye çalışır,
           nasıl bazı metotların diğerlerinden daha az veya daha fazla katlama gerektirdiği
           incelenir.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Fonksiyonlar
         desc: Bu derste, öğrenciler güneş kapan(suncatcher) yapacaklar; bunu yaparken
@@ -63,56 +51,35 @@ tr:
           için, öğrencilerin kullandıkları malzemeleri soyut olarak kodlamaları ve
           kişisel seçimlerini genelleyerek bir terminoloji oluşturmaları gerekecek.
           Değişkenleri öğretmek için bu tarz jenerik isimler kullanılması mükemmel.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Koşullar
         desc: Bu bir sınıf oyunudur. Koşullamalar, if durumları ve döngüler hakkında
           fikir sahibi olduktan sonra, sınıf önceden yazılmış programla, bir deste
           kartla veya çekiliş şansıyla deneme yapabilir.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Şarkı yazma
         desc: Şarkı sözleri okuma oldukça sezgisel bir girişimdir. Biz zaten bilinen
           bir bilgiyi alıp onu fonksiyon tanımlama ve kullanma bilgisine çevireceğiz.
           Öğrenciler bir defa tanımlama ve çağırma işlemi ile aşina olduktan sonra
           parametre kullanma kabiliyetini öğrenecekler.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Soyutlama
         desc: Bu etkinlik günlük hayatımızda Mad-Lib stili düşünmeyi birleştirecek.
           Öğrencilere soyut düşünmenin avantajları hakkında bilgi verecek.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Röle programlama
         desc: Bu ders bir önceki faaliyetteki (4. grafik kağıdı programlama) fikri
           kullanacak ve sırayla çalışan programları ve hatayı kontrol etmenin önemini
           görecek.
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: İnternet
         desc: Bu derste öğrenciler IPs ve DNS web adresleri hakkındaki her şeyi öğrenirken,internetteki
           akışı taklit edecekler.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Toparlama
         desc: İlk 20 saatlik dersin son kısmı öğrencilerin dersler boyunca en sevdiği
           kısımları canlandıracak ve kendilerinin bilgisayar bilimleri macerasında
           yol almak isteyip istemeyeceklerine karar vermelerine destek olacak.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Mutlu Haritalar
         desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
@@ -183,7 +150,7 @@ tr:
           tekrar kullanmak istediğiniz kod parçalarını) kullanıyorlar. İp ve boncuk
           kullanarak kolye yapın.
       SongwritingParameters:
-        title: Şarkı Yazarlığı
+        title: Şarkı yazma
         desc: Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl parametre
           geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme).
       DiceRace:
@@ -277,28 +244,27 @@ tr:
         title: Bağımsız (Unplugged) Döngüler
         desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
       courseB_unplugged_MRF:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bu derste arkadaşlarınızı 'programlayacaksınız'!
       courseB_unplugged_loopyMRF:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Tıpkı 'Benim Robot Arkadaşlarım'da olduğu gibi, arkadaşlarınızı programlayacaksınız,
           ama bu kez döngülerle!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
           öğreneceksiniz.
       courseD_unplugged_digitalCitizenship:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
       courseE_unplugged_privateInformation:
         title: 'Common Sense Education: Özel ve Kişisel Bilgi '
         desc: Bugün, özel ve kişisel bilgiler arasındaki farkı öğreneceksiniz!
       courseF_unplugged_powerOfWords:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
           öğreneceksiniz.
       deeper learning description:
-        title: ''
         desc: 'eksik çeviri: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
@@ -342,7 +308,7 @@ tr:
         desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor.
           Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
       courseD_unplugged_graphPaperProgramming:
-        title: Grafikli Kağıdıyla Programlama
+        title: Grafik Kağıdı Programlama
         desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
           kullanarak sınfı bir çizim oluşturmaya yönlendirir.
       courseD_unplugged_relayProgramming:
@@ -380,7 +346,7 @@ tr:
         desc: Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler.
           Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır.
       courseE_unplugged_songwriting:
-        title: Şarkı Yazarlığı
+        title: Şarkı yazma
         desc: Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl parametre
           geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme).
       courseF_unplugged_tangrams:
@@ -440,52 +406,8 @@ tr:
           ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını
           görme şansınız olacak.\r\n\r\n\r\nAşağıda devama tıkladığınızda, size oyunu
           göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
-          as follows:\r\n1. started with an `unplugged` level. populated with info.
-          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
-          level with the same content and same name. checked to box to encrypt it.
-          hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: Robot dostlarım
       PlantASeed_2018:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın
@@ -508,14 +430,14 @@ tr:
           öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve
           öğrenciler basılan tuşa göre eylemde bulunacak.
       GraphPaperProgramming_2018:
-        title: Grafikli Kağıdıyla Programlama
+        title: Grafik Kağıdı Programlama
         desc: Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
           kullanarak sınfı bir çizim oluşturmaya yönlendirir.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Bağlantısız Etkinlik
+        title: Bilgisayarsız Etkinlik
         desc: Bugün birisi çevirimiçi size kötü söz söylerse ne yapmanız gerektiğini
           öğreneceksiniz.
       Conditionals_2018:
@@ -551,22 +473,5 @@ tr:
           Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
       MoveItMoveIt_2018:
         title: Çabuk, Çabuk Taşı
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Röle Programlama
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.

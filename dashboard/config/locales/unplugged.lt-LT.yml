@@ -9,9 +9,6 @@ lt:
           kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką
           jis ar ji išmoko. Jūs galite būti linkę praleisti  įvairių sąvokų paaiškinimus,
           tačiau jas mokyti galima labai žaismingai.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Skaičiuojamasis mąstymas
         desc: Mokiniai, nenaudodami kompiuterių, o tik popierių ir flomasterius, išmoks
@@ -24,92 +21,34 @@ lt:
           ji nupieštų tam tikrą monstrą. Komandos turės apsikeisti algoritmais ir
           pagal juos nupiešti monstrus. Po to bus patikrinama, ar mokiniai nupiešė
           tokį monstrą, kurį sugalvojo kita grupė.
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Programavimas ant languoto popieriaus
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmai
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Komandų kūrimas
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Sąlygos
         desc: Tai yra žaidimas klasėje. Kai mokiniai bus supažindinti su sąlyginiais
           sakiniais ir kartojimu, klasėje visi kartu galės praktikuotis, naudodami
           iš anksto parašytą programą, žaisdami su kortomis.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Dainos ir funkcijos
         desc: Skaityti dainos tekstą moka visi mokiniai. Mes šį  principą  pritaikysime  mokydami
           kurti savo komandas. Kai mokiniai supras, kaip iškviesti sukrutą komandą
           (funckiją), pridėsime papildomų parametrų, su kuriais yra iškviečiamos komandos.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Komandos su parametrais
-        desc: This activity combines your students' everyday routine and a Mad-Lib
-          style thinking game to help your class learn about the effectiveness of
-          abstraction.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Programavimas komandoje
-        desc: This lesson will take an idea from a previous activity (4. Graph Paper
-          Programming) and use those skills to emphasize the importance of completing
-          programs that operate in sequence and frequently checking programs for "bugs".
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: Internetas
-        desc: In this lesson, students will pretend to flow through the Internet,
-          all the while learning about web addresses, IPs and the DNS.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Apibendrinimas
         desc: Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti visus
           savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
           kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo
           susidomės.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Laimingieji žemėlapiai
         desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
@@ -125,9 +64,6 @@ lt:
           platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
       BuildingAFoundation:
         title: Laiptuota piramidė
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
         title: Kartojimo supratimas
         desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
@@ -173,115 +109,40 @@ lt:
           galima sekti ir tai gali turėti pasėkmių.
       ComputationalThinking:
         title: Skaičiuojamasis mąstymas
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
       FunctionalSuncatchers:
         title: Sekų suvokimas
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
       SongwritingParameters:
-        title: Dainų rašymas su parametrais
+        title: Dainų rašymas
         desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
           (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
       DiceRace:
         title: 'Algoritmai realiame gyvenime: kauliukų lenktynės'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
       Internet:
         title: Internetas
         desc: Mokiniai siunčia pranešimus, parašytus ant popieriaus lapo, kurie simbolizuoja
           įvairius prisijungimo prie interneto būdus.
       Crowdsourcing:
         title: Komandinis programavimas
-        desc: Students use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
       DigitalCitizenship:
         title: Virtuali pilietybė
         desc: Mokiniai nagrinėja skirtumus tarp asmeninės informacijos ir privačios
           informacijos, mokosi atskirti, ką yra saugu, o ką nesaugu skelbti internete.
-      TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
-      EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
-      MadGlibs:
-        title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist
-          to understand.  This activity will have your students analyzing stories
-          for differences so that they can abstract them away. Those abstracted stories
-          become templates for fun and crazy new ones.
-      ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
         title: Dainų rašymas su parametrais
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
       BinaryImages:
         title: Dvejetainiai vaizdai
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
-      VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Video Games and Coordinate Planes lesson description
-      Contracts:
-        title: Contracts
-        desc: Contracts unplugged lesson description
-      DesignRecipe:
-        title: The Design Recipe
-        desc: Design Recipe lesson description
-      Booleans:
-        title: Loginės reikšmės
-        desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
         title: Sąlygos ir funkcijos iš dalių
-        desc: Conditionals and Piecewise Functions lesson description
-      CollisionDetection:
-        title: Collision Detection
-        desc: Collision Detection lesson description
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Veikla be kompiuterių
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Veikla be kompiuterių
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Veikla be kompiuterių
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Veikla be kompiuterių
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: Veikla be kompiuterių
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Veikla be kompiuterių
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
         desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
@@ -308,9 +169,6 @@ lt:
           galima sekti ir tai gali turėti pasėkmių.
       courseC_unplugged_buildingAFoundation:
         title: Laiptuota piramidė
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
       courseC_unplugged_paperPlanes:
         title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
         desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
@@ -341,16 +199,6 @@ lt:
           arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
       courseD_unplugged_binaryImages:
         title: Dvejetainiai vaizdai
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
-      courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
       courseE_unplugged_songwritingParameters:
         title: Dainų rašymas su parametrais
         desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
@@ -361,116 +209,14 @@ lt:
           įvairius prisijungimo prie interneto būdus.
       courseE_unplugged_crowdsourcing:
         title: Komandinis programavimas
-        desc: Students use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
       courseE_unplugged_songwriting:
-        title: Dainų rašymas su parametrais
+        title: Dainų rašymas
         desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
           (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
-      courseF_unplugged_tangrams:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
-      courseF_unplugged_envelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
-      courseF_unplugged_forLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
       courseF_unplugged_songwritingParameters:
         title: Dainų rašymas su parametrais
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
-          as follows:\r\n1. started with an `unplugged` level. populated with info.
-          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
-          level with the same content and same name. checked to box to encrypt it.
-          hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: Mano draugai robotai
       PlantASeed_2018:
         title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
         desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
@@ -484,9 +230,6 @@ lt:
         title: Saugus naršymas internete
         desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
           kaip būti saugiam naršant internete.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: Didelis įvykis
         desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
@@ -499,10 +242,8 @@ lt:
           naudodamasis, kitas mokinys turės nupiešti piešinį.
       courseD_unplugged_digitalCitizenship_2018:
         title: Veikla be kompiuterių
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Veikla be kompiuterių
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Sąlyginiai sakiniai
         desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
@@ -515,11 +256,6 @@ lt:
           galima sekti ir tai gali turėti pasėkmių.
       BinaryImages_2018:
         title: Dvejetainiai vaizdai
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
       PaperPlanes_2018:
         title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
         desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
@@ -536,22 +272,5 @@ lt:
           daugiau nei vienu būdu.
       MoveItMoveIt_2018:
         title: Judėk, judėk
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Programavimas komandoje
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.

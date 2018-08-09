@@ -22,18 +22,12 @@
   name: "නම"
   email: "විද්‍යුත් තැපැල"
   zipcode: "ZIP කේතය හෝ රට"
-  submit: "යොමු කරන්න"
+  submit: "යොමුකරන්න"
   twentyhours_heading: "අප විසින් පිරිනමන පරිගණක විද්‍යා පිවිසුම් පාඨමාලාව උත්සාහ කර බලන්න"
   twentyhours_text: "ඔබගේ පළමු  Hour of Code වැඩසටහන අවසන්ද? මෙම පාඨමාලාවේ පසුවට මූලික පරිගණක විද්‍යාව සහ  ක්‍රමලේඛන සංකලප තව දුරටත් ඉගෙනගන්න."
   og_title: 'Hour of Code වැඩසටහන ළඟදීම'
-  og_title_soon: "The Hour of Code is coming"
-  og_title_here: "The Hour of Code is here!"
   og_description: "පරිගණක විද්‍යාව හැදෑරීමේ අවස්තාව, සෑම පාසලකම සිටින සෑම දරුවෙකුටම ලැබිය යුතු වේ. එය සෑමදෙයක්ම වෙනස් කරමින් පවතී."
-  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code ළඟදීම"
-  csedweek_og_description: "December 3-9, 2018. Computer science is foundational for every student to learn."
-  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
-  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Hour of Code</a> වැඩසටහන සමග එක්වන්න<br/>දෙසැම්බර් 8 - 14, 2014<br/>"
   hoc2014_students: "සිසුන්"
   hoc2014_try: "එය උත්සහ කරන්න"
@@ -70,17 +64,6 @@
   congratulations: "සුභපැතුම්!"
   congratulations_on_completing_hoc: "HOUR OF CODE එක වැඩසටහනක් අවසන් කිරීම ගැන අපගේ උණුසුම් සුභ පැතුම්"
   congratulations_volunteer: 'සුභපැතුම්: Hour of Code වැඩසටහන සාර්ථකව නිම කල ඔබ, තවත් සිසුන්ට ඒ සඳහා උපකාර කිරීමට <a href="https://code.org/volunteer">ස්වේචාවෙන් ඉදිරිපත් වන්න</a>!'
-  congratulations_on_completing_course1: "සුභ පැතුම්! පළමු පාඨමාලාව සම්පූර්ණයි."
-  congratulations_on_completing_course2: "සුභ පැතුම්! දෙවන පාඨමාලාව සම්පූර්ණයි."
-  congratulations_on_completing_course3: "සුභ පැතුම්! තෙවන පාඨමාලාව සම්පූර්ණයි"
-  congratulations_on_completing_course4: "සුභ පැතුම්! සිව්වන පාඨමාලාව සම්පූර්ණයි"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
-  congratulations_on_completing_accelerated: "අධිවේගී පාඨමාලාව සම්පූර්ණ කළ ඔබට සුභ පැතුම්"
   congrats_next_tutorials_title: "මීළඟ අදියරට යන්න"
   congrats_next_tutorials_desc: "මෙම කෙටි නිබන්දන හෝ අපගේ <a href=\"%{current_path}/next\">හවුල්කරුවන්ගේ නිබන්දනයක්</a> උත්සාහ කරන්න."
   get_a_certificate_of_achievement: "ජයග්‍රහණ සහතිකයක් ලබා ගන්න"
@@ -205,27 +188,8 @@
   just_did_course2: "මම දැන් දෙවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
   just_did_course3: "මම දැන් තෙවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
   just_did_course4: "මම දැන් සිවුවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "මම දැන් සීඝ්‍රගාමී පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "පුද්ගලයින් 10 දෙනෙකු ගෙන් 9 දෙනෙකු පාසල් තුළ පරිගණක විද්‍යාව ඉගැන්විය යුතු බවට එකඟ වේ.\nhttp://youtu.be/nKIu9yen5nc. https://code.org/ වෙත පිවිසෙන්නග."
-  twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Hour of Code පාඩමකට සම්බන්ධ වන්න"
   beyond_hoc: "පැයෙන් ඔබ්බට"
   what_gender: "ඔබේ ස්ත්‍රී/පුරුෂ භාවය සඳහන් කරන්න."
@@ -236,7 +200,6 @@
   lines_of_code: "අද වන විට <b>කේත පේළි #කට</b> අධිකව ලියා ඇත."
   lines_of_code_alt: "කේත පේළි <b>#</b>ක් සිසුන් විසින් ලියා ඇත"
   who_has_done_hoc: '#HourOfCode සම්පුර්ණ කර ඇත්තේ කවුරුන් ද? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Hour of Code ප්‍රමුඛත්ව පුවරු"
   students_and_lines: "Hour of Code වැඩසටහනට සහභාගී වී, සිසුන් %{students} ක් විසින් කේත පේලි %{lines} ක් ලියා ඇත."
   start_hoc: "Hour of Code දැන් ආරම්භ කරන්න "
@@ -250,22 +213,16 @@
   studiobar_elementary_body: "පෙරපාසල්&#8209;5 ශ්‍රේණි සඳහා අප හඳුන්වාදෙන නව පාඨමාලා තුන"
   studiobar_hoc_title: "Hour of Code වැඩසටහන"
   studiobar_hoc_body: "Angry Birds සමග කේත ඉගෙන ගන්න "
-  studiobar_flappy_title: "Flappy Code"
+  studiobar_flappy_title: "ෆ්ලැපි කේතය"
   studiobar_flappy_body: "ඔබගේම Flappy ක්‍රීඩාව නිර්මාණය කර මිතුරන් සමග බෙදාගන්න"
   studiobar_teacher_title: "ගුරුවරුන් වෙනුවෙන්ම"
   studiobar_teacher_body: "ඔබේ පංති කාමරයට Code Studio වැඩසටහන හඳුන්වාදෙන්න"
-  studiobar_frozen_title: "පැයේ කේතය"
+  studiobar_frozen_title: "Hour of Code"
   studiobar_frozen_body: "Anna සහ Elsa සමග ශීත ඍතු මායාලෝකය නිර්මාණය කරන්න"
   studiobar_donate_title: "පරිත්‍යාග"
   studiobar_donate_body: "ඔබ පරිත්‍යාග කරන සෑම ඩොලරයකින්ම එක දරුවෙක් ඉගෙනුම ලබයි"
   studiobar_shop_title: "සාප්පුව"
   studiobar_shop_body: "ඒකාකෘතික බව බිඳින්න. ආඩම්බරයෙන් අපේ ලාංඡනය පළඳින්න."
-  homepage_stats_students: "of US students have accounts on Code.org"
-  homepage_stats_female: "of our students are female"
-  homepage_stats_teachers: "teachers use Code.org"
-  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
-  homepage_stats_policy: "states changed policy to support computer science"
-  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;මම සෑම ගැහැණු ළමයෙක්ටම අභියෝග කරනවා, \nHour of Code වැඩසටහනක් ඉගෙන ගන්න කියලා&rdquo;\nනොබෙල් සාම ත්‍යාගලාභී, Malala"
   homepage_hero_text_susan: |-
     &ldquo;ඔබට තාක්ෂනය වෙනස් කිරීමට හැකිනම්, 
@@ -283,10 +240,6 @@
     &ldquo;පරිගණක විද්‍යාවට 
     ලොව හොඳම අවස්ථා සඳහා දොරගුළු විවර කළ හැකියි:&rdquo;
     Microsoft CEO, Satya
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;ඔබට කේතනය කළ හැකිනම්, 
     ඕබට ඔබේ ජීවන ගමන් මග රිසි සේ තෝරා ගත හැකියි.&rdquo;
@@ -313,8 +266,6 @@
   homepage_hero_text_stat_loc: "ගැහැනු ළමයින් මිලියන 2.5ක් කේත ස්ටූඩියෝව ඉගෙනීමට ලියාපදිංචිව සිටී"
   homepage_hero_text_stat_students: "#student_count ශිෂ්‍ය ගිණුම් Code Studio හි, තිබෙන"
   homepage_hero_text_stat_served: 'Hour of Code: #served දෙනා සහභාගී වී ඇත'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "Hour of Code වැඩසටහන"
   homepage_slot_text_frozen: "Anna සහ Elsa සමග Frozen"
   homepage_slot_text_teacher: "ගුරු උපකරණ පුවරුව"
@@ -334,14 +285,12 @@
   homepage_action_text_girlvideo: "ගැහැණු ළමයෙකු උනන්දු කරවන්න"
   homepage_action_text_learn: "ඉගෙනීම අරඹන්න"
   homepage_action_text_signpetition: "මෙම පෙත්සම අත්සන් කරන්න"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "මම එකඟ වෙමි &#x25BE;"
   homepage_diversity_pledge: "පරිගණක විද්‍යා ක්ෂේත්‍රය තුළ විවිදත්වය සඳහා ප්‍රතිඥා දෙන්න"
   homepage_banner_text_prizes: 'Hour of Code ළඟදීම පැමිණේ, දෙසැම්බර් 7-13. '
   homepage_banner_link_prizes: 'ඉතිහාසයේ දැවැන්තම ඉගෙනුම් වැඩසටහනට එක් වන්න. '
   homepage_banner_text_main: "Code.org සහ එම විද්යාලයේ සභා පරිගණක විද්යාව විවිධත්වය වැඩි දියුණු කිරීම සඳහා සන්ධානයක් සාදයි."
   homepage_banner_text_link: "වැඩිදුර ඉගෙන ගන්න"
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "වැඩිදුර ඉගෙන ගන්න"
   homepage_banner_20k_teachers: "ගුරුවරුන් 20,000ක් පුහුණු වී, දැන් පන්ති කාමර තුළ පරිගණක විද්‍යාව උගන්වති."
   homepage_banner_20k_teachers_link: "වැඩිදුර ඉගෙන ගන්න"
@@ -349,12 +298,10 @@
   homepage_banner_congress_link: "ඔබේ සහාය ලබාදෙන්න"
   homepage_banner_emailprivacy: "සිසුන්ගෙ රහස්‍යතාවය රැකගැනීමට අපි වැදගත් වෙනස්කමක් සිදුකරනවා."
   homepage_banner_emailprivacy_link: "වැඩිදුර කියවන්න"
-  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "වැඩිදුර ඉගෙන ගන්න"
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "ඕනෑම අයෙකුට ඉගෙනගත හැකියි. අදම ආරම්භ කරන්න"
   homepage_slot_text_link_hoc: "Hour of Code උත්සාහ කරන්න"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Hour of Code වැඩසටහනක් සංවිධානය කරන්න"
   homepage_slot_text_link_hocserved: "# ක් උත්සාහ කර ඇත"
   homepage_solot_text_link_volunteer: "Hour of Code සඳහා ස්වෙච්චාවෙන් ඉදිරිපත් වන්න"
@@ -378,12 +325,10 @@
   homepage_slot_text_link_buy: "සම්බන්ධ වන්න"
   homepage_slot_text_link_donate: "පරිත්‍යාගයක් කරන්න"
   homepage_slot_text_link_shop: "ටී-ෂර්ට්, තොප්පි, සහ තවත්"
-  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "කෝඩ් ස්ටුඩියෝ හි සිසුන්ගේ නිර්මාණ"
   homepage_header_donors: "Code.org එහි අනුග්‍රාහකයින්ට තුති පුදයි"
   homepage_donors_seall: "සියල්ල බලන්න"
   homepage_donors_donate: "පරිත්‍යාග"
-  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
   homepage_below_hero_announcement_link_text: "වැඩිදුර ඉගෙන ගන්න"
   contact_form_topic_student: "මම ශිෂ්‍යයෙක්"
   contact_form_topic_parent: "මම දෙමාපියෙක්"
@@ -443,80 +388,18 @@
   mc_gradelevel: "වයස 6-106"
   mc_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
   mc_specs: "භාෂා රැසක්| නවීන බ්‍රව්සර් සහ ටැබ්ලට් | වයස අවුරුදු 6-106"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Minecraft Hour of Code නිබන්ධන"
-  minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   minecraft_agent_button: "ආරම්භ කරන්න"
-  minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_designer_button: "ආරම්භ කරන්න"
-  minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
   minecraft_adventurer_button: "ආරම්භ කරන්න"
   minecraft_no_internet: "අන්තර්ජාල පහසුකම් නොමැති ද?"
   minecraft_download_adventurer: "Minecraft Adventurer නොබැඳි අනුවාදය බාගන්න."
   minecraft_subtitle: "Minecraft Hour of Code"
-  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
-  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
-  sports_page_title: "Hour of Code Sports"
-  sports_og_title: "Push yourself. Anybody can learn."
-  sports_og_description: "Champions and gold medalists encourage you to try the Hour of Code. Code your own sports game."
-  sports_title: "Code your own sports game"
   sports_watch_video: "වීඩියෝව නරඹන්න"
-  sports_video_title: "Push yourself. Anybody can learn."
-  sports_select_theme: "Select your tutorial theme"
-  sports_basketball_title: "Make a basketball game"
-  sports_all_sports_title: "Mix and match across sports"
-  sports_featured_athletes: "See featured athletes"
-  sports_athletes_title: "Featured athletes"
-  sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
-  sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
-  sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
-  sports_athlete_Sergio: "Sergio Ramos, World Cup Champion and Soccer/Futbol Player, Real Madrid"
-  sports_athlete_Sue: "Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm"
-  sports_athlete_Alana: "Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles Sparks"
-  sports_athlete_Angelo: "Angelo Matthews, Captain of the Sri Lankan Cricket Team"
-  sports_athlete_Nneka: "Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP, Los Angeles Sparks"
-  sports_athlete_Carmelo: "Carmelo Anthony, Olympic Gold Medalist and NBA All-Star, New York Knicks"
-  sports_athlete_Marco: "Marco Belinelli, NBA Champion, Charlotte Hornets"
-  sports_athlete_Neymar: "Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player, FC Barcelona and Brazil National Team"
-  sports_athlete_Sarah: "Sarah Quita Offringa, Windsurfing Champion"
-  sports_athlete_Marcelo: "Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil National Team"
-  sports_athlete_Erika: "Erika Olivera, Champion Marathon Runner"
-  sports_athlete_John: "John Wall, NBA All-Star, Washington Wizards"
-  sports_athlete_Chris: "Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami Heat"
-  sports_athlete_Harrison: "Harrison Barnes, Olympic Gold Medalist and NBA Champion, Dallas Mavericks"
   watch_inspirational_videos: "ඔබ ආරම්භ කිරීමට පෙර, මෙම ප්‍රබෝධමත් කරවන වීඩියෝ එකක් බලන්න"
-  video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "ගැහැණු ළමයෙකු උනන්දු කරවන්න"
-  video_title_cs_intro: "Computer Science intro"
-  video_title_schools_dont_teach: "What Most Schools Don't Teach"
-  video_title_obama: "President Obama on computer science"
-  video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
-  video_title_anybody_can_learn: "Anybody Can Learn"
-  video_title_steph_curry: "Hour of Code with Steph Curry"
-  video_title_draymond_green: "Hour of Code with Draymond Green"
-  video_title_russell_okung: "Hour of Code with Russell Okung"
-  video_title_real_madrid: "Hour of Code with Real Madrid"
-  video_title_marco_belinelli: "Hour of Code with Marco Belinelli"
-  video_title_chris_bosh: "Chris Bosh on Computer Science"
-  video_title_my_name_is_aracely: "My Name is Aracely"
-  video_1min: "1 min"
-  video_2min: "2 min"
-  video_3min: "3 min"
-  video_5min: "5 min"
   speak_another_language: "ඔබ තවත් භාෂාවක් කතා කරනවා ද?"
   help_translate: "පරිවර්තනයෙන් සහාය වන්න."
   no_internet: "අන්තර්ජාල පහසුකම් නොමැති ද?"
@@ -528,7 +411,6 @@
   volunteer_engineer_submission_subtitle_specific: "ගුරුවරුන් %{num_teachers} කට ස්වෙච්ඡාවෙන් ඉදිරිපත් වන්නන් අවශ්‍යයි.<br>ස්වෙච්ඡාවෙන් ඉදිරිපත් වන්නන් %{num_volunteers} ලියාපදිංචි වී ඇත. ඔවුන් සමඟ එක් වන්න."
   volunteer_engineer_submission_intro_background: "Hour of Code කියන්නෙ පරිඝණක විද්‍යාව හදුන්වාදීම සඳහා පැයක් හදුන්වාදීපු, රටවල් 180කට වඩා මිලියන ගනනාවක් සම්බන්දවුනු එක්තරා ගෝලීය ව්‍යාපරයක්.දෙසැම්බර් 7 සිට13 දක්වා ඇති පරිඝණක විද්‍යාව අධ්‍යණය සතියේ අප හා එක්වන්න."
   volunteer_engineer_submission_intro_recruit: 'ගුරුවරුන් සමග  කවුරුන්හෝ සම්බන්දවනවානම් කැමත්තක් දක්වාවි.<span style="font-family: ''Gotham 7r'', sans-serif;">පරිඝණක විද්‍යාව පිළිබඳව අධ්‍යනයට මහත් කැමත්ත</span>පන්තිකාමරය තුලදී උපකාර කල හැකි කවුරුන් හෝ උපකාර කිරීමට හැකි<span style="font-family: ''Gotham 7r'', sans-serif;">ආස්වාදයක්</span>පරිඝණක විද්‍යාව පිලිබඳව ඇති පුළුල් හැකියාවන්  කතා කරන ඔවුන්ගේ ශිෂ්‍යයයින්(වීඩියො චැට්  මගින් හෝ සම්බන්දවීමෙන්). '
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
   volunteer_engineer_submission_intro_signup: "ඔබ පරිගණක විද්‍යාව හදාරණ ශිෂ්‍යයෙක් හෝ මෘදුකාංග ක්ෂේත්‍රයේ වෘත්තිකයෙක් නම්, කරුණාකර පහත තොරතුරු සඳහන් කරන්න. <span class=\"form-required-field\">*</span> ලකුණු ඇති තොරතුරු සැපයීම අනිවාර්ය වේ."
   volunteer_engineer_submission_intro_links: "ඔබ ස්වේච්ඡාවෙන් ඉදිරිපත් වන අය සොයන ගුරුවරයෙක්ද? ඔබ ආසන්නයේ ස්වෙච්ඡාවෙන් ඉදිරිපත් වෙන්නන් <a href=\"%{volunteer_local}\">ස්වේච්ඡා සිතියම්</a>."
   volunteer_engineer_submission_update_information: "ඔබගේ තොරතුරු යාවත්කාලීන කරන්න"
@@ -555,14 +437,11 @@
   volunteer_engineer_submission_field_email: "විද්‍යුත් තැපැල් ලිපිනය"
   volunteer_engineer_submission_field_email_desc: "ඔබගේ විද්‍යුත් තැපැල් ලිපිනය බෙදා නොගැනේ, නමුත් අපි ඔබගේ ඉල්ලීම ගුරුවරු හරහා යවනවා."
   volunteer_engineer_submission_field_email_placeholder: "විද්‍යුත් තැපැල් ලිපිනය"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'ඔව්'
   volunteer_engineer_submission_field_email_preference_no: 'නැහැ'
   volunteer_engineer_submission_final_paragraph: "Hour of Code හෝ වෙනත් ස්වේච්ඡා කටයුතුසදහා ප්‍රාදේශීය ගුරුවරුන්ට ඇමතීම සදහා ඔබව සිතියම මත ලැයිස්තු ගත කරාවි. අප ඔබේ විද්‍යුත් තැපෑල සහ නියම ලිපිනිය කිසිදු අවස්ථාවක වෙනත් පාර්වශයක් සමග බෙදා නොගනී. නමුත් ප්‍රාදේශීය ගුරුවරුන්ට ප්රසිද්ධියේ වෙනත් තොරතුරු(ආසන්නතම ස්ථානය ඇතුලත්ව) නැරබීය හැකිවේ."
   volunteer_engineer_submission_checkbox_contact: 'ගුරුවරුන් විසින් ස්වේච්ඡා අවස්ථා සඳහා මාව සම්බන්ධ කරගත හැකි බවට, මම එකඟ වෙමි. (සැ. යු.: ඔබගේ Email ලිපිනය වෙනත් පාර්ශවයන් සමග බෙදාගනු නොලැබේ)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
-  volunteer_engineer_submission_submit: "යොමු කරන්න"
+  volunteer_engineer_submission_submit: "යොමුකරන්න"
   volunteer_engineer_submission_thankyou: "ස්තූතියි ස්වේච්ඡා සේවකයෙක් ලෙස ඇතුලත් වීම. ගුරුවරුන් බාවිතා කරනුයේ <a href=\"%{url}\">මෙම සිතියම </a>ස්වේච්ඡා සේවකයන් සොයාගැනීමට හා සම්බන්ද කරගැනීමට."
   volunteer_engineer_submission_commitment_uncertain: "අවිනිශ්චිතයි"
   volunteer_engineer_submission_commitment_one_hr_per_week: "සතියකට පැයක්"
@@ -592,7 +471,6 @@
   volunteer_engineer_submission_type_task_remote: "මට අවශ්‍යයි ශිෂ්‍යන්ගේ ආශ්වාදය සඳහා, මගේ පන්ති කාමරයට SKYPE ඇමතුමක් ගෙන ඔබට වචන කිහිපයක් කතාකිරීමට සැලස්වීමට"
   volunteer_engineer_submission_type_task_mentor: "මගේ සිසුන් සමඟ කේතනය මට උදව් කිරීමට සූදානම් උපදේශකක් මම සොයමි"
   petition_age: "වයස"
-  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
   dashboard_announce_learn_more_button: "වැඩිදුර ඉගෙන ගන්න"
   dashboard_landing_title: "ගුරු මුල් පිටුව"
   dashboard_landing_welcome: "නවීකරණය කරන ලද ගුරුවරුන්ගේ ඩෑශ්බෝඩය වෙත සාදරයෙන් පිලිගනිමු."
@@ -641,7 +519,7 @@
   dashboard_course_csp_desc: "Code.org සිත් ඇදගන්නා සුලු සහ ඕන විටක ලබා ගත හැකි පරිගණක විද්‍යාවේ මූලිකාංග අධ්‍යනය කල හැකි පාඨමාලා නිර්මාණය කර තිබේ."
   dashboard_landing_loading: "පූරණය වෙමින්..."
   dashboard_action_cancel: "අවලංගු කරන්න"
-  dashboard_action_delete: "මකන්න"
+  dashboard_action_delete: "මකාදමන්න"
   dashboard_action_delete_yes: 'ඔව්'
   dashboard_action_delete_no: 'නැහැ'
   dashboard_action_confirm: "මකනවා ද?"
@@ -688,7 +566,6 @@
   dashboard_responses_view: 'අන්තර්ගත ලිඛිත ප්‍රතිචාර:'
   dashboard_responses_none: "අපගේ බොහෝ පන්ති නිර්මාණය කර තිබෙන්නේ යෞවනයන් සදහා වන අතර ශිෂ්‍යයන් ප්‍රශ්න සදහා පිළිතුරු ලේකනගත කිරිම අනවශ්‍යවේ. එමනිසා ඔබට ලිඛිත ප්‍රතිචාර මෙහි දැකගත නොහැක. උසස් පෙළ හා සාමාන්‍ය පෙළ පරිණත සිසුන් සදහා, ඔබට ඔවුන්ගේ ලිඛිත යෙදුම් විවෘත අන්තික පිළිතුරු, ඉහත ඇති drop down මේනුවෙහි අදාල පාඨමාලාව තේරීමෙන් බලාගත හැක."
   dashboard_sections_new_section: "නව අංශයක්"
-  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "නව කොටස් පරාස  නිර්මාණය  කර ශිෂ්‍යාවන් එයට ඇතුලත් කරන්න .එය  ඔබට උදව් කරනවා ශිෂ්‍යාවන් කුඩා   කණ්ඩායම් වලට සංවිධානය කරන්න .ඒ හරහා ඔබට  ඔවුන්ගේ  ප්‍රගුති දාරිතාවය සහ ගිණුම්  පාලනය කර හැක."
   dashboard_sections_table_section: "අංශය"
   dashboard_sections_table_secret: "පිවිසුම් වර්ගය"
@@ -722,7 +599,6 @@
   dashboard_error_none_selected: "කරුණාකර එක සිසුවෙක් වත් තෝරන්න."
   dashboard_error_other_section: "ඔබ ඔබේ ම කොටස් අතර සිසුන් මාරු කරන්නේ නම්, ඔබේ කොටස dropdown මෙනුවෙන් තෝරන්න. ඔබගේ සිසුන් වෙනත් ගුරුවරුයෙකුගේ කොටසකට මාරු කිරීමට 'වෙනත් කොටස්' යන්න තෝරන්න."
   dashboard_students_add_multiple: 'එක් පේළියකට එක බැගින් වනසේ  ඔබගේ සිසුන් නම් ටයිප් කරන්න හෝ  paste  කරන්න :'
-  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "ඔබ නව කොටසක් නිර්මාණය කර ඇත! දැන් ඔබගේ සිසුන් ඇතුලත් කිරීමට <b> සිසුවෙකු ඇතුලත් කරන්න </b> සහ <b> සිසුන් ඇතුලත් කරන්න </b> යන ඉහත බොත්තම් භාවිතා කරන්න."
   dashboard_students_name: "නම"
   dashboard_students_progress: "ප්‍රගතිය"
@@ -731,7 +607,6 @@
   dashboard_students_completed_levels: "සම්පූර්ණ කර ඇති මට්ටම්"
   dashboard_students_total_lines: "කේත පේලි"
   dashboard_students_share_section: "මෙම කොටසේ පිවිසුම් පිටුව ඔබේ සිසුන් සමඟ බෙදා ගන්න:"
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "ඔබේ සිසුන්ගේ පිවිසුම් තොරතුරු සමඟ කාඩ්පත් මුද්‍රණය කරන්න."
   dashboard_students_secret_picture_title: "රහස් පින්තූරය"
   dashboard_students_secret_picture: "මෙම කොටසේ දී රහස්‍ය සංකේතය ලෙස <b>පින්තුරයක් </b> භාවිතා කරයි. එනම්, ඔබගේ සෑම සිසුවෙකුටම sign-in වීමට යාමේදී  password යන තැනට පාවිච්චි කිරීම සඳහා රහස්‍ය පින්තුරයක් තිබේ, සිසුන් මෙයට ඇතුළු වීමට, ඉහත සඳහන් sign-in වෙබ් ලිපිනය පාවිච්චි කල යුතුයි."
@@ -742,7 +617,6 @@
   dashboard_students_join_link: "ඔවුන්ගේම ගිණුම් සාදාගෙන ඔබේ කොටස වෙත එක් වීම ට ඔබේ සිසුන්ට නියම කරන්න"
   dashboard_students_no_email: "ඔබේ සිසුන් ඊ-මේල් ලිපින නැත්නම්, හෝ ඔබ ඔවුන්ට සඳහා වන ගිණුම් නිර්මාණය කිරීමට කැමති නම්,\nවෙනස් කරන්න මෙම අංශයෙහි රහස් ආකාරය <b>වචන</b> හෝ <b>පින්තුර</b> වෙත."
   dashboard_students_print_page: "මෙම පිටුව මුද්‍රණය කරන්න"
-  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "ඔබේ සිසුන් සඳහා බෙදාගත හැකි හෝ මුද්‍රණය කළ හැකි අපගේ රහස්‍යතා ලේඛනය සඳහා <a href=\"/privacy/student-privacy\", target=\"_blank\">මෙතැන ක්ලික් කරන්න</a>."
   dashboard_curriculum_k5_title: "පෙරපාසල් සිට 5 ශ්‍රේණිය දක්වා අධ්‍යාපක සම්පත්"
@@ -754,16 +628,7 @@
   dashboard_course2: 'පාඨමාලා අංක 2:'
   dashboard_course3: 'පාඨමාලා අංක 3:'
   dashboard_course4: 'පාඨමාලා අංක 4: '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
   dashboard_unplugged: "ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ <a href='%{unplugged_url}'>මෙම එළිදැක්වූ පාඩම් උත්සාහ කරන්න</a>."
-  dashboard_tools: 'Tools: '
   dashboard_curriculum: "විෂයමාලාව"
   dashboard_curriculum_overview: "K-5 විශය මාලාවේ සාරංශය"
   dashboard_overview: "දළ විශ්ලේෂණය"
@@ -781,8 +646,6 @@
   dashboard_curriculum_csins: 'විද්‍යාවේ පරිගණක විද්‍යාව:'
   dashboard_curriculum_csp: 'AP® පරිගණක විද්‍යා මූලධර්ම:'
   dashboard_curriculum_ecs: 'පරිගණක විද්‍යාව ගවේශණය:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "පෙරපාසල්"
   dashboard_grade_other: "වෙනත්"
   dashboard_login_word: "වචනය"
@@ -863,18 +726,12 @@
   carousel_heading_webpages: "වෙබ් පිටු සකසන්න පුරුදු වන්න"
   carousel_heading_robots: "රොබෝවරු සමග වැඩසටහනක් ඉගෙනගන්න "
   carousel_heading_ide: "ගුරුවරුන් අතර ජනප්‍රිය ප්ලැට්ෆෝම්"
-  carousel_heading_desktop: "Learn to code on a computer"
-  carousel_heading_mobtabelem: "For phones and tablets"
-  carousel_heading_prereader: "For pre-readers"
-  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
   educator_notes: "අධ්යාපක සටහන්"
   teach_led_lesson_plans: "ගුරුවරයා මග පෙන්වන පාඩම් සැලසුම්"
   learn_footer_all_tutorials: "සස් "
   how_to_teach_hoc: "Hour of Code සැසියක් මග පෙන්වන්නේ කෙසේද"
   more_resources_educators: "ගුරුවරුන් සහ අධ්‍යාපනඥයින් සඳහා තවත් තොරතුරු"
   beyond_submission: "ඔබට යොමු කරන්න  ඕනෙද නිබන්ධන Beyond an Hour සදහා? සම්මතයන්  සහ ඉදිරිපත් කිරීමේ පත්‍රිකා බලන්න "
-  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "සහභාගි වන්නන්"
   teachers_notes: "ගුරුවරයාගේ තුණ්ඩු"
   teachers_notes_hoc: 'ගුරුවරුනි :වැදගත්  අධ්යාපක සටහන් මෙතනින් කියවන්න.'
@@ -887,7 +744,6 @@
   starwars_name: 'Star Wars: කේතනය මගින් මන්දාකිණියක් නිර්මාණය කිරීම'
   codeorg_name: "සම්භාව්‍ය අවුල් ජාලය"
   codeintl_name: "සම්භාව්‍ය අවුල් ජාලය"
-  thinkersmithspanish_name: "Mis Amigos Roboticos"
   khan_name: "ජාවාස්ක්‍රිප්ට් හඳුන්වාදීමක්"
   khanes_name: "ජාවාස්ක්‍රිප්ට් හඳුන්වාදීමක්"
   khanpt_name: "ජාවාස්ක්‍රිප්ට් හඳුන්වාදීමක්"
@@ -937,95 +793,26 @@
   course2_name: "පාඨමාලාව 2"
   course3_name: "පාඨමාලාව 3"
   course4_name: "පාඨමාලාව 4"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
-  courseb-draft_name: Course B
-  courseb_name: "Course B"
-  coursec-draft_name: Course C
-  coursec_name: "Course C"
-  coursed-draft_name: Course D
-  coursed_name: "Course D"
-  coursee-draft_name: Course E
-  coursee_name: "Course E"
-  coursef-draft_name: Course F
-  coursef_name: "Course F"
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
   accelerated_name: "කඩිනම් පාඨමාලා"
-  express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "ඒකක 1: ඩිජිටල් තොරතුරු"
   cspunit2_name: "පාඩම් අංක 2: අන්තර්ජාලය"
   cspunit3_name: "(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය"
   cspunit4_name: "(පැරණි) 4 වෙනි ඒකකය: දත්ත"
   cspunit5_name: "(පැරණි) ඒකකය 5: PT ගවේෂණය කර තනන්න"
   cspunit6_name: 'පසු-AP: යෙදුම් තුළ දත්ත සංචිත'
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd5-2017_name: 'Unit 5: Data and Society'
-  csd6-2017_name: 'Unit 6: Physical Computing'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csd5-2018_name: 'Unit 5: Data and Society'
-  csd6-2018_name: 'Unit 6: Physical Computing'
   csp1-2017_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
   csp2-2017_name: '2වන ඒකකය: අංකිත තොරතුරු'
   csp3-2017_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csppostap-2017_name: 'Post AP: Databases in Apps'
   csp1-2018_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
   csp2-2018_name: '2වන ඒකකය: අංකිත තොරතුරු'
   csp3-2018_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
   csp2_name: '2වන ඒකකය: අංකිත තොරතුරු'
   csp3_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: Databases in Apps'
-  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "පූර්ණ පරීක්ෂණය - 50 ප්රශ්න"
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: පරීක්ෂණය 1 වැනි කොටස - ප්‍රශ්න 25
   cspexam2-AKwgAh1ac5_name: පරීක්ෂණය 2 වැනි කොටස - ප්‍රශ්න 25
   cspunit3_gradelevel: "9 ශ්‍රේණියේ සිට 12 ශ්‍රේණිය දක්වා"
-  cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   20-hour_name: කඩිනම් පාඨමාලා
   algebra_name: "පරිගණක විද්‍යාවේ වීජ ගණිතය"
   AlgebraA_name: "වීජ ගණිතයේ පරිගණක විද්‍යා පාඨමාලාව A"
@@ -1035,33 +822,17 @@
   iceage_name: "Ice Age"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (කොටස්)"
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression
   math_category_name: "ගණිත"
-  hoc_category_name: "පැයේ කේතය"
+  hoc_category_name: "Hour of Code"
   csf_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග"
-  csf_2017_category_name: "CS Fundamentals (2017)"
-  csf_2018_category_name: "CS Fundamentals (2018)"
-  csf_international_category_name: "CS Fundamentals International"
-  csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries ('17-'18)"
-  csd_2018_category_name: "CS Discoveries ('18-'19)"
   csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
   csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
-  csp_2018_category_name: "CS Principles ('18-'19)"
   cspexams_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය"
-  research_studies_category_name: "Research Studies"
   applab_name: "මෘදුකාංග විද්‍යාගාරය"
-  gamelab_name: "Game Lab"
-  basketball_name: "Make a basketball game"
-  sports_name: "Code your own sports game"
   applab_gradelevel: "වයස් 13+"
   applab_shortdescription_congrats: "App Lab යනු වැඩ සටහන් සම්පාදක පරිසරයකි. එය භාවිතා කර යෙදුම් නිර්මාණය කලහැක . යෙදුම් සැලසුම් කිරීම, JavaScript භාවිතා කර කේතනය කිරීම මෙය මගින් සිදුකල හැක. පසුව තත්පර කිහිපයකින් ඔබගේ යෙදුම බෙදාහැරීම සිදුකල හැක"
   codeorg_gradelevel: "වයස 4-104"
   codeintl_gradelevel: "වයස 4-104"
-  thinkersmithspanish_gradelevel: "Por todos"
   khan_gradelevel: "මධ්‍යම පාසල +"
   khanes_gradelevel: "මධ්‍යම පාසල +"
   khanpt_gradelevel: "මධ්‍යම පාසල +"
@@ -1113,12 +884,12 @@
   course2_gradelevel: "අවුරුදු 6 සිට 18 දක්වා"
   course3_gradelevel: "වයස අවුරුදු 8-18"
   course4_gradelevel: "වයස අවුරුදු 10-18"
-  coursea_gradelevel: "Ages 4-7"
-  courseb_gradelevel: "Ages 5-8"
-  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "8 ශ්‍රේණියේ සිට ඉහලට"
   coursee_gradelevel: "වයස 8-12"
-  coursef_gradelevel: "Ages 9-13"
+  coursed-2017_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2017_gradelevel: වයස 8-12
+  coursed-2018_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2018_gradelevel: වයස 8-12
   accelerated_gradelevel: "වයස අවුරුදු 10-18"
   codeorg_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
   codeintl_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
@@ -1170,7 +941,6 @@
   teacherled_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
   codeorg_shortdescription: "මාර්ක් සකර්බර්ග් සහ ඇන්ග්‍රි බර්ඩ්ස් සමඟින් කේතනය කිරීමට ඉගෙන ගන්න!"
   codeintl_shortdescription: "මාර්ක් සකර්බර්ග් සහ ඇන්ග්‍රි බර්ඩ්ස් සමඟින් කේතනය කිරීමට ඉගෙන ගන්න!"
-  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "ජාව ස්ක්‍රිප්ට් වලින් චිත්‍ර අඳින හැටි ඉගෙනගන්න"
   khanes_shortdescription: "ජාව ස්ක්‍රිප්ට් වලින් චිත්‍ර අඳින හැටි ඉගෙනගන්න"
   khanpt_shortdescription: "ජාව ස්ක්‍රිප්ට් වලින් චිත්‍ර අඳින හැටි ඉගෙනගන්න"
@@ -1221,15 +991,8 @@
   course2_shortdescription_congrats: "මූලික කියවීමේ හැකියාවන් සහිත සිසුන් සඳහා, මෙම පාඨමාලාව පලමු පාඨමාලාව මත පදනම් වේ. මෙහිදී සිසුන් විසින් ගැටළුවක් විසඳීම සඳහා ක්‍රමලේඛ සැකසීම සහ අන්තර් ක්‍රියාකාරී ක්‍රීඩා නිපදවීම හෝ බෙදාගත හැකි කතාන්දර නිපදවීම සිදුකරනු ඇත. 2 සිට 5 ශ්‍රේණි සඳහා නිර්දේශිතයි."
   course3_shortdescription_congrats: "මීළඟ අදියර සඳහා ඔබ සූදානම්ද? මෙම අදියරේදී සිසුන් විසින් පෙර පාඩම් වලදී උගත් ක්‍රමලේඛන සංකල්ප පිළිබඳ තවත් ගැඹුරින් හදාරමින් සංකීර්ණ ගැටළු වෙත විසඳුම් සොයනු ඇත. මෙම පාඩම අවසානයේදී, සිසුන් විසින් අන්තර්ක්‍රියා සහිත කතාන්දර සහ ක්‍රීඩා නිර්මාණය කරනු ඇත. 4 සිට 5 ශ්‍රේණි සඳහා නිර්දේශිතයි."
   course4_shortdescription_congrats: "තවත් ඉදිරියට යාමට ඔබ සූදානම්ද? මෙම අදියරේදී සිසුන් විසින් පෙර පාඩම් වලදී උගත් ක්‍රමලේඛන සංකල්ප පිළිබඳ තවත් ගැඹුරින් හදාරමින් සංකීර්ණ ගැටළු වෙත විසඳුම් සොයනු ඇත. මෙම පාඩම අවසානයේදී, සිසුන් විසින් අන්තර්ක්‍රියා සහිත කතාන්දර සහ ක්‍රීඩා නිර්මාණය කරනු ඇත. 4 සිට 8 ශ්‍රේණි සඳහා නිර්දේශිතයි."
-  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
-  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
-  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
-  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
-  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
-  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "මුලිකව පරිගණක විද්‍යාවේ සංකල්ප drag and drop ක්‍රමලේඛනය මගින් ඉගෙන ගන්න. මෙය ක්‍රීඩාවකට සමාන වූ, Angry Birds and Plants vs. Zombies ක්‍රීඩා ඇසුරින් Bill Gates, Mark Zuckerberg විසින් මෙහෙයවන නිබන්ධනයකි. repeat-loops, conditionals සහ මූලික ඇල්ගොරිතම මෙමගින් ඉගෙනගත හැක. භාෂා 34කින් ලබාගත හැකියි."
   codeintl_longdescription: "මුලිකව පරිගණක විද්‍යාවේ සංකල්ප drag and drop ක්‍රමලේඛනය මගින් ඉගෙන ගන්න. මෙය ක්‍රීඩාවකට සමාන වූ, Angry Birds and Plants vs. Zombies ක්‍රීඩා ඇසුරින් Bill Gates, Mark Zuckerberg විසින් මෙහෙයවන නිබන්ධනයකි. repeat-loops, conditionals සහ මූලික ඇල්ගොරිතම මෙමගින් ඉගෙනගත හැක. භාෂා 34කින් ලබාගත හැකියි."
-  thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
   khan_longdescription: "ඔබේ කේතය මගින් විනෝදාත්මක චිත්‍ර අඳින අතරතුරම ජාව ස්ක්‍රිප්ට් ඉගෙනගන්න. ඔබට තනියෙන් හෝ කණ්ඩායමක් ලෙස කල හැක!"
   khanes_longdescription: "ඔබේ කේතය මගින් විනෝදාත්මක චිත්‍ර අඳින අතරතුරම ජාව ස්ක්‍රිප්ට් ඉගෙනගන්න. ඔබට තනියෙන් හෝ කණ්ඩායමක් ලෙස කල හැක!"
   khanpt_longdescription: "ඔබේ කේතය මගින් විනෝදාත්මක චිත්‍ර අඳින අතරතුරම ජාව ස්ක්‍රිප්ට් ඉගෙනගන්න. ඔබට තනියෙන් හෝ කණ්ඩායමක් ලෙස කල හැක!"
@@ -1470,77 +1233,12 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "පරීක්ෂණාගාරය"
   artist_shortcode: "කලාව"
-  header_home: "Home"
-  header_my_dashboard: "My Dashboard"
   header_courses: "පාඨමාලාව"
-  header_course_catalog: "Course Catalog"
   header_project_gallery: "ව්යාපෘති"
-  header_sections: "Sections"
-  header_professional_learning: "Professional Learning"
-  header_educate_overview: "Educator Overview"
-  header_educate_elementary: "Elementary School"
-  header_educate_middle: "Middle School"
-  header_educate_high: "High School"
-  header_educate_hoc: "පැයේ කේතය"
-  header_educate_partner: "Partner with Us"
-  header_educate_beyond: "Beyond Code.org"
-  header_educate_inspire: "Inspire a Student"
-  header_educate_community: "Online Community"
-  header_educate_tools: "Tools and Videos"
-  header_about_us: "About Us"
-  header_about_leadership: "Leadership"
-  header_about_donors: "Donors"
-  header_about_partners: "Partners"
-  header_about_team: "Full Team"
-  header_about_news: "Newsroom"
-  header_about_evaluation: "Evaluation"
-  header_about_jobs: "Jobs"
-  header_about_contact: "Contact Us"
-  header_about_faqs: "FAQs"
-  header_learn: "Learn"
-  header_teach: "Teach"
+  header_educate_hoc: "Hour of Code"
   header_stats: "සංඛ්‍යාන"
-  header_help_us: "Help Us"
-  header_about: "About"
-  header_teacher_community: "Teacher community"
-  header_help_support: 'Help and support '
-  header_report_bug: "Report bug"
-  header_tutorials: "Tutorials"
-  header_documentation: "Documentation"
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
-  csd_name: "CS Discoveries"
-  csd_2018_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
   user_header_label: "ආයුබෝවන් %{username}"
   user_header_settings: "මගේ ගිණුම"
   user_header_logout: "නික්මෙන්න"
   user_header_signin: "පුරන්න"
-  view_all_sections: "View all sections"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
-  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
-  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
-  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
-  reset_student_password: "Resetting student passwords"
-  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
-  login_cards: "Login Cards"
-  print_login_cards: "Print login cards"
-  joining_section: "Joining your section (one-time only)"
-  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: "Sign in to their Code.org account."
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
-  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
-  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
-  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
-  syncing_students: "Syncing your students"
-  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro

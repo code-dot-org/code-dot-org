@@ -6,6 +6,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp-18/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-18/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
 has_verified_resources true
 has_lesson_plan true
+script_announcements [{"notice"=>"Join our Teacher Insights Group!  ", "details"=>"Share your experiences and get support from other teachers and our team.", "link"=>"http://teacherblog.code.org/post/176699827304/join-the-codeorg-teacher-insight-group", "type"=>"bullhorn"}]
 family_name 'csp5'
 version_year '2018'
 is_stable true
@@ -113,10 +114,6 @@ level 'CSPU5_U3L15 full clicker app_2018', progression: 'Project: Clicker App'
 assessment 'U5 AP Create Practice onEvent Doesnt Count_2018', progression: 'AP Practice Response - Choosing an Abstraction'
 
 stage 'Unit 5 Assessment 1', lockable: true, flex_category: 'csp5_1'
-variants
-  level 'csp_affirmation_control_5_2018', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
-  level 'csp_affirmation_intervention_5_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
-endvariants
 assessment 'CSP Unit 5 Cumulative Assessment 1 MC_2018'
 
 stage 'User Input and Strings', flex_category: 'csp5_1'
@@ -210,10 +207,6 @@ assessment 'CSP U5 AP Practice Choose the Algorithm_2018', progression: 'AP Prac
 assessment 'U5 AP Practice Create Algorithm Color Sleuth_2018', progression: 'AP Practice Responses - Algorithms and Abstraction'
 
 stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
-variants
-  level 'csp_affirmation_control_5_2018', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
-  level 'csp_affirmation_intervention_5_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
-endvariants
 assessment 'CSP Unit 5 Cumulative Assessment 2 MC_2018'
 
 stage 'While Loops', flex_category: 'csp5_2'

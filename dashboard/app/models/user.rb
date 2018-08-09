@@ -92,11 +92,13 @@ class User < ActiveRecord::Base
   #   american_indian: "American Indian/Alaska Native"
   #   other: "Other"
   #   opt_out: "Prefer not to say" (but selected this value and hit "Submit")
+  #
+  # Depending on the user's actions, the following values may also be applied:
   #   closed_dialog: This is a special value indicating that the user closed the
   #     dialog rather than selecting a race.
   #   nonsense: This is a special value indicating that the user chose
   #     (strictly) more than five races.
-  VALID_RACES = %w(
+  DISPLAY_RACES = %w(
     white
     black
     hispanic
@@ -105,6 +107,9 @@ class User < ActiveRecord::Base
     american_indian
     other
     opt_out
+  ).freeze
+
+  VALID_RACES = DISPLAY_RACES + %w(
     closed_dialog
     nonsense
   ).freeze
@@ -219,6 +224,8 @@ class User < ActiveRecord::Base
 
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
+
+  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -233,12 +240,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  #
-  # TEMPORARY: Remove these aliases
-  #
-  alias_attribute :primary_authentication_option, :primary_contact_info
-  alias_attribute :primary_authentication_option_id, :primary_contact_info_id
-
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
@@ -251,6 +252,7 @@ class User < ActiveRecord::Base
 
   has_many :user_geos, -> {order 'updated_at desc'}
 
+  before_validation :normalize_parent_email
   validate :validate_parent_email
 
   after_create :associate_with_potential_pd_enrollments
@@ -492,6 +494,7 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -569,12 +572,29 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Remove all cleartext email addresses (including soft-deleted ones)
+  # in migrated students' AuthenticationOptions.
+  def remove_cleartext_emails
+    authentication_options.with_deleted.update_all(email: '')
+  end
+
   # Given a cleartext email finds the first user that has a matching email or hash.
   # @param [String] email (cleartext)
   # @return [User|nil]
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
     find_by_hashed_email User.hash_email email
+  end
+
+  # Given a cleartext email, finds the first user that has a matching email.
+  # This will not find users (students) who only have hashed_emails stored.
+  # For that, use #find_by_email_or_hashed_email.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
+  def self.find_by_email(email)
+    return nil if email.blank?
+    migrated_user = AuthenticationOption.find_by(email: email)&.user
+    migrated_user || User.find_by(email: email)
   end
 
   # Given an email hash, finds the first user that has a matching email hash.
@@ -833,6 +853,43 @@ class User < ActiveRecord::Base
     success
   end
 
+  def set_user_type(user_type, email = nil, email_preference = nil)
+    case user_type
+    when TYPE_TEACHER
+      upgrade_to_teacher(email, email_preference)
+    when TYPE_STUDENT
+      downgrade_to_student
+    else
+      false # Unexpected user type
+    end
+  end
+
+  def downgrade_to_student
+    return true if student? # No-op if user is already a student
+    update(user_type: TYPE_STUDENT)
+  end
+
+  def upgrade_to_teacher(email, email_preference)
+    return true if teacher? # No-op if user is already a teacher
+    return false unless email.present?
+
+    hashed_email = User.hash_email(email)
+    match = authentication_options.find_by_hashed_email(hashed_email)
+    if match.nil?
+      errors.add(:email, I18n.t('activerecord.errors.messages.invalid'))
+      return false
+    end
+
+    transaction do
+      self.user_type = TYPE_TEACHER
+      # Make matching AuthenticationOption user's primary
+      self.primary_contact_info = match
+      # Update AuthenticationOption to have cleartext email
+      match.update!(email: email)
+      update!(email_preference)
+    end
+  end
+
   # True if the account is teacher-managed and has any sections that use word logins.
   # Will not be true if the user has a password or is only in picture sections
   def secret_word_account?
@@ -846,6 +903,16 @@ class User < ActiveRecord::Base
     return false unless teacher_managed_account?
     any_sections = !sections_as_student.empty?
     any_sections && sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
+  end
+
+  # True if user is a student in a section that has Google Classroom login type
+  def google_classroom_student?
+    sections_as_student.find_by_login_type(Section::LOGIN_TYPE_GOOGLE_CLASSROOM).present?
+  end
+
+  # True if user is a student in a section that has Clever login type
+  def clever_student?
+    sections_as_student.find_by_login_type(Section::LOGIN_TYPE_CLEVER).present?
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
@@ -1327,27 +1394,23 @@ class User < ActiveRecord::Base
 
   def in_progress_and_completed_scripts
     user_scripts.compact.reject do |user_script|
-      begin
-        user_script.script.nil?
-      rescue
-        # Getting user_script.script can raise if the script does not exist
-        # In that case we should also reject this user_script.
-        true
-      end
+      user_script.script.nil?
+    rescue
+      # Getting user_script.script can raise if the script does not exist
+      # In that case we should also reject this user_script.
+      true
     end
   end
 
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
-    section_courses.map do |course|
-      {
-        name: course[:name],
-        title: data_t_suffix('course.name', course[:name], 'title'),
-        description: data_t_suffix('course.name', course[:name], 'description_short'),
-        link: course_path(course),
-      }
-    end
+    section_courses.map(&:summarize_short)
+  end
+
+  # Returns the set of courses the user has been assigned to or has progress in.
+  def courses_as_student
+    scripts.map(&:course).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1376,7 +1439,7 @@ class User < ActiveRecord::Base
     primary_script_id = primary_script.try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
     user_scripts = in_progress_and_completed_scripts.
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
@@ -1398,7 +1461,9 @@ class User < ActiveRecord::Base
       end
     end.compact
 
-    assigned_courses + user_script_data
+    user_course_data = courses_as_student.map(&:summarize_short)
+
+    user_course_data + user_script_data
   end
 
   # Figures out the unique set of courses assigned to sections that this user
@@ -1649,7 +1714,7 @@ class User < ActiveRecord::Base
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
+      user_script.update!(assigned_at: Time.now)
       return user_script
     end
   end
@@ -1689,7 +1754,12 @@ class User < ActiveRecord::Base
       location: "/v2/users/#{id}",
       age: age,
       sharing_disabled: sharing_disabled?,
+      has_ever_signed_in: has_ever_signed_in?,
     }
+  end
+
+  def has_ever_signed_in?
+    current_sign_in_at.present?
   end
 
   def self.progress_queue
@@ -1705,6 +1775,16 @@ class User < ActiveRecord::Base
       authentication_options.empty? && encrypted_password.blank?
     else
       provider == PROVIDER_SPONSORED
+    end
+  end
+
+  def should_see_edit_email_link?
+    if migrated?
+      # Hide from students with no password (i.e., oauth-only and sponsored students)
+      # since we do not store their cleartext email address and email is not used for login.
+      can_edit_email? && !(student? && encrypted_password.blank?)
+    else
+      can_edit_email? && !oauth?
     end
   end
 
@@ -1725,29 +1805,31 @@ class User < ActiveRecord::Base
   # users that don't have a password because they authenticate via oauth, secret
   # picture, or some other unusual method
   def can_edit_password?
-    if migrated?
-      !sponsored?
-    else
-      encrypted_password.present?
-    end
+    !sponsored?
   end
 
   # Whether the current user has permission to change their own account type
   # from the account edit page.
   def can_change_own_user_type?
-    # Don't allow editing user type unless we can also edit email, because
-    # changing from a student (encrypted email) to a teacher (plaintext email)
-    # requires entering an email address.
-    # Don't allow editing user type for teachers with sections, as our validations
-    # require sections to be owned by teachers.
-    can_edit_email? && (student? || sections.empty?)
+    if student? # upgrading to teacher
+      # Requires ability to edit email because upgrade requires adding a cleartext email address.
+      # Students in sections cannot edit user type because teacher/school owns the student's data.
+      can_edit_email? && sections_as_student.empty?
+    else # downgrading to student
+      # Teachers with sections cannot downgrade because our validations require sections
+      # to be owned by teachers.
+      sections.empty?
+    end
   end
 
   # Whether the current user has permission to delete their own account from
   # the account edit page.
   def can_delete_own_account?
-    # All accounts except teacher-managed accounts may delete their own account.
-    !teacher_managed_account?
+    return true unless student?
+    # Teacher-managed student accounts may not delete their own account.
+    return false if teacher_managed_account?
+    # Students in sections may not delete their own account.
+    sections_as_student.empty?
   end
 
   # Users who might otherwise have orphaned accounts should have the option
@@ -1763,12 +1845,31 @@ class User < ActiveRecord::Base
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
-    # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
+    # Lastly, we check for oauth.
     !oauth?
+  end
+
+  def roster_managed_account?
+    return false unless student?
+    if migrated?
+      return false unless authentication_options.one?
+      sections_as_student.any?(&:externally_rostered?)
+    else
+      sections_as_student.any?(&:externally_rostered?) && encrypted_password.blank?
+    end
   end
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
+  end
+
+  # Temporary: Allow single-auth students to add a parent email so it's possible
+  # to add a recovery option to their account.  Once they are on multi-auth they
+  # can just add an email or another SSO, so this is no longer needed.
+  def can_add_parent_email?
+    student? && # only students
+      !can_create_personal_login? && # mutually exclusive with personal login UI
+      !migrated? # only for single-auth
   end
 
   def no_personal_email?
@@ -1964,6 +2065,24 @@ class User < ActiveRecord::Base
     restore(recursive: true, recovery_window: 5.minutes)
   end
 
+  def depended_upon_for_login?
+    students.any?(&:depends_on_teacher_for_login?)
+  end
+
+  def depends_on_teacher_for_login?
+    # Student depends on teacher for login if their account is teacher-managed or roster-managed
+    # and only have one teacher.
+    student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
+  end
+
+  def providers
+    if migrated?
+      authentication_options.map(&:credential_type)
+    else
+      [provider]
+    end
+  end
+
   private
 
   def hidden_stage_ids(sections)
@@ -2017,6 +2136,10 @@ class User < ActiveRecord::Base
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys
     end
+  end
+
+  def normalize_parent_email
+    self.parent_email = nil if parent_email.blank?
   end
 
   # Parent email is not required, but if it is present, it must be a

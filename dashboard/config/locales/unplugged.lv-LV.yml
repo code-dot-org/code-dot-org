@@ -10,9 +10,6 @@ lv:
           paturēs atmiņā to, ko viņš būs iemācījies. Jums var rasties kārdinājums
           izlaist terminu apgūšanu mazākiem bērniem, bet pasniegt tos jautrā un rotaļīgā
           gaisotnē ir labāk nekā atlikt to uz vēlāku laiku.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Algoritmiska domāšana
         desc: Ar vienīgi papīru un zīmuli skolēni četros solos apgūs algoritmisku
@@ -24,9 +21,6 @@ lv:
           (norādes) citai komandai, kas zīmēs noteiktu briesmonīti. Komandas tad apmainīsies
           ar algoritmiem un mēģinās restaurēt šo briesmonīti izmantojot tikai algoritmu,
           zīmuli un papīru. Vai gala zīmējums atbilst tam, ko sākotnējā komanda iedomājās?
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Rūtiņpapīra programmēšana
         desc: Vienam otru ieprogrammējot zīmēt zīmējumus, skolēni sāks izprast, ko
@@ -34,9 +28,6 @@ lv:
           dos norādes izkrāsot kvadrātiņus uz milimetru papīra cenšoties atdarināt
           esošu zīmējumu. Ja pietiks laiks, tad nodarbība var noslēgties ar skolēnu
           izstrādātiem zīmējumiem.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmi
         desc: Šī mācību stunda aptver algoritmus. Izmantojot Tangrama figūras un rūtiņu
@@ -44,9 +35,6 @@ lv:
           pēc iespējas skaidrāku un nepārprotamāku. Pēc tam klase pētīs, cik veidos
           var izlocīt no papīra taisnstūri, ievērojot, ka dažām metodēm nepieciešams
           mazāk locījumu kā citām.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Funkcijas
         desc: Šajā nodarbībā skolēni izveidos saules ķērāju no auklas, pērlītēm un
@@ -58,57 +46,36 @@ lv:
           vajadzēs vispārināt viņu specifisko materiālu detaļas un izdomāt plašākus
           jēdzienus saviem materiāliem. Vispārīgo jēdzienu izmantošana ir lielisks
           ievads par mainīgajiem.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Apstākļi
         desc: Šī ir spēle klasei. Pēc kondicionāļu, IF-nosacījumu un ciklu idejas
           iepazīstināšanas, klase var vingrināties, lietojot iepriekš uzrakstītas
           programmas, kāršu kavu un veiksmīgu dalījumu.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Dziesmas rakstīšana
         desc: Liriku lasīšana ir diezgan intuitīvs piedzīvojums studentiem. Mēs izmantosim
           jau iepriekš gūtas zināšanas, lietojot tās funkciju definēšanā un izsaukšanā.
           Kad skolēni būs apraduši ar definēšanas un izsaukšanas procesiem, mēs pievienosim
           papildus iespējas, kas seko parametru padošanai.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstrakcija
         desc: Šī aktivitāte apvieno Tavu skolēna ikdienas rutīnu ar unikālu domāšanu,
           lai palīdzētu apgūt abstrakcijas efektivitāti Tavā klasē.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Releju programmēšana
         desc: Šī nodarbība ir balstīta uz iepriekšējās aktivitātes, (4. Programmēšana
           uz Milimetrpapīra) un tajā tiks lietotas iepriekš gūtās zināšanas, lai uzsvērtu
           nozīmīgumu pabeigt līdz galam programmas, kas darbojas secīgi un pastāvīgi
           pārbaudīt programmas kļūdas.
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: Internets
         desc: Šajā nodarbībā skolēni izliksies, ka "plūst" cauri internetam, vienlaikus
           mācoties par tīmekļa vietnēm, IP adresēm un DNS serveriem.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Kopsavilkums
         desc: Beidzamais 20-stundu sērijas kopsavilkums palīdzēs klasei vēlreiz izdzīvot
           viņu mīļākos brīžus, vienlaikus sniedzot tiem turpmākos soļus, lai turpinātu
           datorzinātņu ceļojumu pašu spēkiem.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Laimīgās kartes
         desc: Skolēni veido vienkāršus algoritmus (instrukciju komplektus), lai pārvietotu
@@ -178,7 +145,7 @@ lv:
           ko var izmantot atkal un atkal), lai izveidotu saules ķērājus, izmantojot
           diegus un krelles.
       SongwritingParameters:
-        title: Dziesmu rakstīšana ar Parametriem
+        title: Dziesmu rakstīšana
         desc: Skolēni izmanto dziesmas piedziedājumu, lai mācītos par parametru uzdošanu
           (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
       DiceRace:
@@ -234,47 +201,20 @@ lv:
           kodā.
       VideoGamesCoordinatePlanes:
         title: Video spēles un koordinātu plakne
-        desc: Video spēļu un koordinātu plaknes nodarbības apraksts
-      Contracts:
-        title: Līgumi
-        desc: Contracts unplugged, nodarbības apraksts
       DesignRecipe:
         title: Dizaina recepte
-        desc: Noformējuma padomi - nodarbības apraksts
-      Booleans:
-        title: Booleans
-        desc: Booleans nodarbības apraksts
       ConditionalsPiecewiseFunctions:
         title: Nosacījumi un hibrīdfunkcijas
-        desc: Nosacījumi un Piecewise funkcija, nodarbības apraksts
-      CollisionDetection:
-        title: Sadursmes noteikšana
-        desc: Sadrusmes noteikšanas nodarbības apraksts
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Atvienota aktivitāte
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Atvienota aktivitāte
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Atvienota aktivitāte
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Atvienota aktivitāte
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: Atvienota aktivitāte
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Atvienota aktivitāte
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
         desc: Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru rādot
@@ -338,7 +278,6 @@ lv:
           sarežģītāku informāciju (kā, piemēram, attēlus un krāsas) var saglabāt binārajā
           kodā.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Šī nodarbība izceļ algoritmu lietošanas veidus ikdienā. Tā sevī ietver
           algoritma identificēšanu, ko skolēni izmantos metamo kauliņu spēlē.
       courseE_unplugged_songwritingParameters:
@@ -355,7 +294,7 @@ lv:
           risināšanas metode), lai pabeigtu uzdevumu kopā klasē daudz efektīgāk, nekā
           to darītu skolēns vienatnē.
       courseE_unplugged_songwriting:
-        title: Dziesmu rakstīšana ar Parametriem
+        title: Dziesmu rakstīšana
         desc: Skolēni izmanto dziesmas piedziedājumu, lai mācītos par parametru uzdošanu
           (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
       courseF_unplugged_tangrams:
@@ -379,86 +318,8 @@ lv:
           (tās reizēm sauc arī par procedūrām) ir nelielas programmas, kuras var atkal
           un atkal izmantot lielākā programmā. Šī nodarbība palīdzēs skolēniem intuitīvi
           saprast, kādēļ apvienot koda fragmentus funkcijās ir labā prakse.
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
-          as follows:\r\n1. started with an `unplugged` level. populated with info.
-          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
-          level with the same content and same name. checked to box to encrypt it.
-          hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: Mani Robotikas draugi
       PlantASeed_2018:
         title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
         desc: Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru rādot
@@ -472,9 +333,6 @@ lv:
         title: Nokļūst galamērķos droši
         desc: Internets ir iespējām bagāta, bet reizēm bīstama vieta. Skolotāji iepazīstina,
           kā būt drošiem, kamēr lieto internetu.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: Lielais notikums
         desc: Skolēni tiek iepazīstināti ar programmēšanas jēdzienu "notikums" (event),
@@ -486,10 +344,8 @@ lv:
           lai vadītu savus klasesbiedrus, kuri zīmē zīmējumu.
       courseD_unplugged_digitalCitizenship_2018:
         title: Atvienota aktivitāte
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Atvienota aktivitāte
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Sazarojumi
         desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle
@@ -522,22 +378,5 @@ lv:
           apgūst, ka dati ir attēlojami un uzglabājāmi vairāk kā vienā veidā.
       MoveItMoveIt_2018:
         title: Ej, ej
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Releju programmēšana
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.
