@@ -208,92 +208,16 @@ Resources:
           hook: 'WebServerHookNew',
           node_name: 'fe-$INSTANCE_ID',
           commit: commit)%>
-# Create associated resources for old and new Auto Scaling Groups.
-# TODO remove old resources after migration complete.
-  ScaleUpPolicyNew:
+  CPUScalingPolicy:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
-      AdjustmentType: PercentChangeInCapacity
       AutoScalingGroupName: !Ref Frontends
-      MetricAggregationType: Average
-      MinAdjustmentMagnitude: 1
       EstimatedInstanceWarmup: 300
-      PolicyType: StepScaling
-      StepAdjustments:
-        # 55-60% cpu, +10% instances
-        - MetricIntervalLowerBound: 0
-          MetricIntervalUpperBound: 5
-          ScalingAdjustment: 10
-        # 60-70% cpu, +20% instances
-        - MetricIntervalLowerBound: 5
-          MetricIntervalUpperBound: 15
-          ScalingAdjustment: 20
-        # 70-85% cpu, +30% instances
-        - MetricIntervalLowerBound: 15
-          MetricIntervalUpperBound: 30
-          ScalingAdjustment: 30
-        # 85-100% cpu, +35% instances
-        - MetricIntervalLowerBound: 30
-          ScalingAdjustment: 35
-  ScaleDownPolicyNew:
-    Type: AWS::AutoScaling::ScalingPolicy
-    Properties:
-      AdjustmentType: PercentChangeInCapacity
-      AutoScalingGroupName: !Ref Frontends
-      MetricAggregationType: Average
-      MinAdjustmentMagnitude: 1
-      EstimatedInstanceWarmup: 300
-      PolicyType: StepScaling
-      StepAdjustments:
-        # 40-30% cpu, -5% instances
-        - MetricIntervalUpperBound: 0
-          MetricIntervalLowerBound: -10
-          ScalingAdjustment: -5
-        # 30-20% cpu, -10% instances
-        - MetricIntervalUpperBound: -10
-          MetricIntervalLowerBound: -20
-          ScalingAdjustment: -10
-        # 20-15% cpu, -20% instances
-        - MetricIntervalUpperBound: -20
-          MetricIntervalLowerBound: -25
-          ScalingAdjustment: -20
-        # 15-10% cpu, -40% instances
-        - MetricIntervalUpperBound: -25
-          MetricIntervalLowerBound: -30
-          ScalingAdjustment: -40
-        # 10-0% cpu, -50% instances
-        - MetricIntervalUpperBound: -30
-          ScalingAdjustment: -50
-  ScaleUpAlarmNew:
-    Type: AWS::CloudWatch::Alarm
-    Properties:
-      AlarmDescription: Scale-up if average CPU is greater than 55% for 3 minutes
-      AlarmActions: [Ref: ScaleUpPolicyNew]
-      MetricName: CPUUtilization
-      Namespace: AWS/EC2
-      Statistic: Average
-      Period: 60
-      EvaluationPeriods: 3
-      Threshold: 55
-      ComparisonOperator: GreaterThanThreshold
-      Dimensions:
-        - Name: AutoScalingGroupName
-          Value: !Ref Frontends
-  ScaleDownAlarmNew:
-    Type: AWS::CloudWatch::Alarm
-    Properties:
-      AlarmDescription: Scale-down if average CPU is less than 40% for 10 minutes
-      AlarmActions: [Ref: ScaleDownPolicyNew]
-      MetricName: CPUUtilization
-      Namespace: AWS/EC2
-      Statistic: Average
-      Period: 60
-      EvaluationPeriods: 10
-      Threshold: 40
-      ComparisonOperator: LessThanOrEqualToThreshold
-      Dimensions:
-        - Name: AutoScalingGroupName
-          Value: !Ref Frontends
+      PolicyType: TargetTrackingScaling
+      TargetTrackingConfiguration:
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ASGAverageCPUUtilization
+        TargetValue: 50
   WebServerHookNew:
     Type: AWS::AutoScaling::LifecycleHook
     Properties:
