@@ -837,6 +837,24 @@ StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
  */
 StudioApp.prototype.runButtonClick = function () {};
 
+StudioApp.prototype.addChangeHandler = function (newHandler) {
+  if (!this.changeHandlers) {
+    this.changeHandlers = [newHandler];
+    const runAllHandlers = () =>
+      this.changeHandlers.forEach(handler => handler());
+    if (this.isUsingBlockly()) {
+      const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
+      blocklyCanvas.addEventListener('blocklyBlockSpaceChange', runAllHandlers);
+    } else {
+      this.editor.on('change', runAllHandlers);
+      // Droplet doesn't automatically bubble up aceEditor changes
+      this.editor.aceEditor.on('change', runAllHandlers);
+    }
+  } else {
+    this.changeHandlers.push(newHandler);
+  }
+};
+
 /**
  * Toggle whether run button or reset button is shown
  * @param {string} button Button to show, either "run" or "reset"
