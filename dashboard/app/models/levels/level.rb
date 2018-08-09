@@ -512,7 +512,7 @@ class Level < ActiveRecord::Base
 
   # Overriden by some child classes
   def get_question_text
-    properties['long_instructions']
+    long_instructions
   end
 
   # Used for individual levels in assessments
