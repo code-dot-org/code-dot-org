@@ -203,8 +203,8 @@ class TopInstructions extends React.Component {
     ),
     noVisualization: PropTypes.bool,
 
-    ttsInstructionsUrl: PropTypes.string,
-    ttsMarkdownInstructionsUrl:  PropTypes.string,
+    ttsShortInstructionsUrl: PropTypes.string,
+    ttsLongInstructionsUrl:  PropTypes.string,
 
     hideOverlay: PropTypes.func.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -609,7 +609,7 @@ class TopInstructions extends React.Component {
     const renderedMarkdown = processMarkdown(markdown, { renderer });
 
     const ttsUrl = this.shouldDisplayShortInstructions() ?
-      this.props.ttsInstructionsUrl : this.props.ttsMarkdownInstructionsUrl;
+      this.props.ttsShortInstructionsUrl : this.props.ttsLongInstructionsUrl;
 
     // Only used by star wars levels
     const instructions2 = this.props.shortInstructions2 ?
@@ -741,8 +741,8 @@ class TopInstructions extends React.Component {
 module.exports = connect(function propsFromStore(state) {
   return {
     overlayVisible: state.instructions.overlayVisible,
-    ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
-    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+    ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
+    ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,
