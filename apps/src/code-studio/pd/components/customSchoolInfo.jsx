@@ -16,12 +16,48 @@ const SCHOOL_TYPES = {
 
 export default class CustomSchoolInfo extends React.Component {
   static propTypes = {
-    schoolInfo: PropTypes.object,
-    handleSchoolInfoChange: PropTypes.func,
-    handleSchoolStateChange: PropTypes.func,
-    handleSchoolDistrictChange: PropTypes.func,
-    handleSchoolTypeChange: PropTypes.func,
+    school_info: PropTypes.object,
+    onSchoolInfoChange: PropTypes.func,
     errors: PropTypes.object
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      school_info: this.props.school_info,
+      errors: this.props.errors || {}
+    };
+  }
+
+  updateOnSchoolInfoChange = (school_info) => {
+    this.setState(school_info);
+    if (this.props.onSchoolInfoChange) {
+      this.props.onSchoolInfoChange(school_info);
+    }
+  };
+
+  handleSchoolStateChange = (selection) => {
+    const school_info = {...this.state.school_info, ...{school_state: selection.value}};
+    this.updateOnSchoolInfoChange({school_info});
+  };
+
+  handleSchoolInfoChange = (change) => {
+    const school_info = {...this.state.school_info, ...change};
+    this.updateOnSchoolInfoChange({school_info});
+  };
+
+  handleSchoolDistrictChange = (change) => {
+    const school_info = {...this.state.school_info, ...change};
+    school_info.school_district_other = "true";
+    this.updateOnSchoolInfoChange({school_info});
+  };
+
+  handleSchoolTypeChange = (change) => {
+    const school_info = {...this.state.school_info, ...change};
+    delete(school_info.school_district_other);
+    delete(school_info.school_district_name);
+    this.updateOnSchoolInfoChange({school_info});
   };
 
   render() {
@@ -32,7 +68,7 @@ export default class CustomSchoolInfo extends React.Component {
           label="School Name"
           type="text"
           required={true}
-          onChange={this.props.handleSchoolInfoChange}
+          onChange={this.handleSchoolInfoChange}
           validationState={this.props.errors.hasOwnProperty("school_name") ? VALIDATION_STATE_ERROR : null}
           errorMessage={this.props.errors.school_name}
         />
@@ -41,27 +77,27 @@ export default class CustomSchoolInfo extends React.Component {
           answers={Object.values(SCHOOL_TYPES)}
           groupName="school_type"
           label="My school is a"
-          onChange={this.props.handleSchoolTypeChange}
-          selectedItems={this.props.schoolInfo ? this.props.schoolInfo.school_type : null}
+          onChange={this.handleSchoolTypeChange}
+          selectedItems={this.props.school_info ? this.props.school_info.school_type : null}
           validationState={this.props.errors.hasOwnProperty("school_type") ? VALIDATION_STATE_ERROR : null}
           errorText={this.props.errors.school_type}
           type="radio"
           required={true}
         />
         {
-          this.props.schoolInfo && [SCHOOL_TYPES.PUBLIC, SCHOOL_TYPES.CHARTER].includes(this.props.schoolInfo.school_type) &&
+          this.props.school_info && [SCHOOL_TYPES.PUBLIC, SCHOOL_TYPES.CHARTER].includes(this.props.school_info.school_type) &&
           <FieldGroup
             id="school_district_name"
             label="School District"
             type="text"
             required={true}
-            onChange={this.props.handleSchoolDistrictChange}
+            onChange={this.handleSchoolDistrictChange}
             validationState={this.props.errors.hasOwnProperty("school_district_name") ? VALIDATION_STATE_ERROR : null}
             errorMessage={this.props.errors.school_district}
           />
         }
         {
-          this.props.schoolInfo && this.props.schoolInfo.school_type &&
+          this.props.school_info && this.props.school_info.school_type &&
           <FormGroup>
             <FormGroup
               id="school_state"
@@ -69,8 +105,8 @@ export default class CustomSchoolInfo extends React.Component {
             >
               <ControlLabel>School State<span className="form-required-field"> *</span></ControlLabel>
               <Select
-                value={this.props.schoolInfo ? this.props.schoolInfo.school_state : null}
-                onChange={this.props.handleSchoolStateChange}
+                value={this.props.school_info ? this.props.school_info.school_state : null}
+                onChange={this.handleSchoolStateChange}
                 options={STATES.map(v => ({value: v, label: v}))}
                 clearable={false}
               />
@@ -81,7 +117,7 @@ export default class CustomSchoolInfo extends React.Component {
               label="School Zip Code"
               type="text"
               required={true}
-              onChange={this.props.handleSchoolInfoChange}
+              onChange={this.handleSchoolInfoChange}
               validationState={this.props.errors.hasOwnProperty("school_zip") ? VALIDATION_STATE_ERROR : null}
               errorMessage={this.props.errors.school_zip}
             />
