@@ -121,7 +121,7 @@ const dateFormatter = function (time) {
 };
 
 const publishedAtFormatter = (publishedAt) => {
-  return publishedAt ? (<FontAwesome icon="circle"/>) : '';
+  return publishedAt ? (<FontAwesome icon="check"/>) : '';
 };
 
 class PersonalProjectsTable extends React.Component {
