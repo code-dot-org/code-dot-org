@@ -16,7 +16,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @workshop = create :pd_workshop, :local_summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP, num_facilitators: 2
+    @workshop = create :pd_workshop, :local_summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSP, num_facilitators: 2, num_sessions: 5
 
     @pre_workshop_questions = [
       Pd::JotForm::MatrixQuestion.new(
@@ -311,7 +311,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'daily survey get_question_for_forms gets workshop questions and substitutes question texts' do
-    CDO.expects(:jotform_forms).times(11).returns( # 6 for general, 5 for facilitator
+    CDO.expects(:jotform_forms).times(22).returns( # 12 for general, 10 for facilitator
       {
         'local_summer' => {
           'day_0' => FORM_IDS[:pre_workshop],
