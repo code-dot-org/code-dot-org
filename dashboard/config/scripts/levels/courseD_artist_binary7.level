@@ -35,6 +35,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Start at the top left. How far do you have to read before the pattern starts to repeat?\",\"hint_id\":\"courseD_artist_binary7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0f3be9e51aa73013422c98c8c5fff1cb/courseD_artist_binary7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseD_artist_binary7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c8854cf9390f36d26c02fcd459ba4252/courseD_artist_binary7.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

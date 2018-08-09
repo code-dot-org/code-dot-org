@@ -1,18 +1,14 @@
-# coding: utf-8
 require 'cdo/url_converter'
 
-# coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
 
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
-    begin
-      yield
-    rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
-      false
-    end
+    yield
+  rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+    false
   end
 end
 
@@ -80,6 +76,18 @@ When /^I go to the newly opened tab$/ do
   # Wait for Safari to finish switching to the new tab. We can't wait_short
   # because @browser.title takes 30 seconds to timeout.
   wait_until {@browser.title rescue nil}
+end
+
+When /^I open a new tab$/ do
+  @browser.execute_script('window.open();')
+end
+
+When /^I close the current tab$/ do
+  @browser.close
+end
+
+When /^I switch to tab index (\d+)$/ do |tab_index|
+  @browser.switch_to.window(@browser.window_handles[tab_index.to_i])
 end
 
 When /^I switch to the first iframe$/ do
@@ -260,13 +268,11 @@ When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ 
   end
 
   page_load(load) do
-    begin
-      @element.click
-    rescue
-      # Single retry to compensate for element changing between find and click
-      @element = @browser.find_element(:css, selector)
-      @element.click
-    end
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
   end
 end
 
@@ -275,13 +281,11 @@ When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector,
     @element = @browser.find_element(:css, selector)
   end
   page_load(load) do
-    begin
-      @element.click
-    rescue
-      # Single retry to compensate for element changing between find and click
-      @element = @browser.find_element(:css, selector)
-      @element.click
-    end
+    @element.click
+  rescue
+    # Single retry to compensate for element changing between find and click
+    @element = @browser.find_element(:css, selector)
+    @element.click
   end
 end
 
@@ -362,6 +366,15 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   name_selector = ".blocklyTreeLabel:contains(#{name})"
   # seems we usually have two of these item, and want the second if the function
   # editor is open, the first if it isn't
+  @browser.execute_script(
+    "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
+    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))"
+  )
+rescue
   script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
     "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
   @browser.execute_script(script)
@@ -371,6 +384,14 @@ And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # jQuery needs \\s to allow :s and .s in ID selectors
   # Escaping those gives us \\\\ per-character
   category_selector = "#\\\\:#{id}\\\\.label"
+  @browser.execute_script(
+    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {"\
+      "bubbles: true,"\
+      "cancelable: true,"\
+      "view: window"\
+    "}))"
+  )
+rescue
   @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
 end
 
@@ -418,14 +439,12 @@ When /^I click selector "([^"]*)" once I see it$/ do |selector|
 end
 
 When /^I click selector "([^"]*)" if I see it$/ do |selector|
-  begin
-    wait_until(5) do
-      @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
-    end
-    @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
-  rescue Selenium::WebDriver::Error::TimeOutError
-    # Element never appeared, ignore it
+  wait_until(5) do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
+  @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
+rescue Selenium::WebDriver::Error::TimeOutError
+  # Element never appeared, ignore it
 end
 
 When /^I focus selector "([^"]*)"$/ do |jquery_selector|
@@ -775,14 +794,12 @@ end
 
 def wait_for_jquery
   wait_until do
-    begin
-      @browser.execute_script("return (typeof jQuery !== 'undefined');")
-    rescue Selenium::WebDriver::Error::ScriptTimeOutError
-      puts "execute_script timed out after 30 seconds, likely because this is \
+    @browser.execute_script("return (typeof jQuery !== 'undefined');")
+  rescue Selenium::WebDriver::Error::ScriptTimeOutError
+    puts "execute_script timed out after 30 seconds, likely because this is \
 Safari and the browser was still on about:blank when wait_for_jquery \
 was called. Ignoring this error and continuing to wait..."
-      false
-    end
+    false
   end
 end
 
@@ -879,16 +896,7 @@ def generate_user(name)
   return email, password
 end
 
-def generate_teacher_student(name, teacher_authorized)
-  email, password = generate_user(name)
-
-  steps %Q{
-    Given I create a teacher named "Teacher_#{name}"
-  }
-
-  # enroll in a plc course as a way of becoming an authorized teacher
-  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
-
+def create_section_and_join_as_student(name, email, password)
   individual_steps %Q{
     Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
@@ -906,6 +914,54 @@ def generate_teacher_student(name, teacher_authorized)
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
+    And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+def generate_teacher_student(name, teacher_authorized)
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "Teacher_#{name}"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
+
+  create_section_and_join_as_student(name, email, password)
+end
+
+def generate_two_teachers_per_student(name, teacher_authorized)
+  email, password = generate_user(name)
+
+  steps %Q{
+    Given I create a teacher named "First_Teacher"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["First_Teacher"][:email]) if teacher_authorized
+
+  create_section_and_join_as_student(name, email, password)
+
+  steps %Q{
+    Given I create a teacher named "Second_Teacher"
+  }
+
+  # enroll in a plc course as a way of becoming an authorized teacher
+  enroll_in_plc_course(@users["Second_Teacher"][:email]) if teacher_authorized
+
+  individual_steps %Q{
+    Then I am on "http://studio.code.org/home"
+    And I dismiss the language selector
+
+    Then I see the section set up box
+    And I create a new section
+    And I save the section url
+  }
+  individual_steps %Q{
+    Then I sign out
+    And I sign in as "#{name}"
+    And I am on "#{@section_url}"
     And I wait until I am on "http://studio.code.org/home"
   }
 end
@@ -962,6 +1018,10 @@ end
 
 And(/^I create a teacher-associated student named "([^"]*)"$/) do |name|
   generate_teacher_student(name, false)
+end
+
+And(/^I create two teachers associated with a student named "([^"]*)"$/) do |name|
+  generate_two_teachers_per_student(name, false)
 end
 
 And(/^I create an authorized teacher-associated student named "([^"]*)"$/) do |name|
@@ -1040,6 +1100,16 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I click selector "#user_terms_of_service_version"
     And I click selector "#signup-button" to load a new page
     And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And(/^I submit this level$/) do
+  steps %Q{
+    And I press "runButton"
+    And I wait to see "#submitButton"
+    And I press "submitButton"
+    And I wait to see ".modal"
+    And I press "confirm-button" to load a new page
   }
 end
 
@@ -1437,6 +1507,11 @@ def get_section_id_from_table(row_index)
   section_id
 end
 
+And /^element "([^"]*)" contains text matching "([^"]*)"$/ do |selector, regex_text|
+  contents = @browser.execute_script("return $(#{selector.dump}).text();")
+  expect(contents.match(regex_text).nil?).to eq(false)
+end
+
 Then /^I scroll the "([^"]*)" element into view$/ do |selector|
   @browser.execute_script("$('#{selector}')[0].scrollIntoView(true)")
 end
@@ -1468,4 +1543,11 @@ Then /^I sign out using jquery$/ do
   JAVASCRIPT
   @browser.execute_script(code)
   wait_short_until {@browser.execute_script('return window.signOutComplete;')}
+end
+
+Then /^I open the Manage Assets dialog$/ do
+  steps <<-STEPS
+    Then I click selector ".settings-cog"
+    And I click selector ".pop-up-menu-item"
+  STEPS
 end

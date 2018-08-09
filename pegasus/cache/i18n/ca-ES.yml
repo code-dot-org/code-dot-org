@@ -1,4 +1,5 @@
-"ca-ES":
+---
+ca-ES:
   hour_of_code: Hour of Code
   hello: Hola món
   'yes': Sí
@@ -37,18 +38,8 @@
   twentyhours_text: Heu acabat la primera Hora del Codi? Apreneu més informàtica i
     programació en el curs següent.
   og_title: Cada nen mereix oportunitat
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
   og_description: Cada alumne de cada escola es mereix l'oportunitat d'estudiar informàtica.
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
   csedweek_og_title: Setmana de l'Educació en Informàtica
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
   hoc2014_heading: Uniu-vos a<a href="http://hourofcode.com">Hora del Codi</a><br/>Desembre
     8 - 14, 2014<br/>
   hoc2014_students: Alumnes
@@ -68,7 +59,7 @@
   csedweek_map_legend_cs_tech_jam: Esdeveniment especial
   cded_sign_up: Inscriure's
   cded_try_it: Proveu-ho
-  try_now: Intenteu-ho ara
+  try_now: Més informació
   california_heading: Demaneu a la vostra escola que ensenyin informàtica
   california_text: Qualsevol mestre pot oferir els nostres<a href='http://studio.code.org/'>cursos
     gratuïts</a>. Qualsevol escola de primària pot<a href='http://code.org/educate/k5'>ensenyar
@@ -96,17 +87,6 @@
   congratulations_volunteer: 'Felicitacions: ara que has provat l''Hora del Codi,
     <a href="https://code.org/volunteer"> registra''t com a voluntari en una aula</a>
     i ajuda els alumnes a aprendre una Hora del Codi!'
-  congratulations_on_completing_course1: Enhorabona per completar el curs 1
-  congratulations_on_completing_course2: Enhorabona per completar el curs 2
-  congratulations_on_completing_course3: Enhorabona per completar el curs 3
-  congratulations_on_completing_course4: Enhorabona per completar el curs 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: Enhorabona per completar el curs accelerat
   congrats_next_tutorials_title: Prova els següents tutorials
   congrats_next_tutorials_desc: Proveu aquestes classes més curtes, de 1 hora, o proveu
     una <a href="%{current_path}/next"> classe de soci</a>.
@@ -137,8 +117,6 @@
   third_party_price_varies: 'Preu: variable'
   third_party_price_free: 'Preu: gratuït'
   third_party_price_299: 'Preu: $2.99/descàrrega'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: La plataforma de computació creatiu de Tynker ajuda els
     nens a desenvolupar pensament computacional i coneixements de programació d'una
     manera divertida, intuïtiva i imaginativa. El nostre innovador llenguatge de programació
@@ -163,61 +141,7 @@
   third_party_scratch_btn_curriculum: Descarregar currículum de Scratch
   third_party_scratch_btn_forum: Fòrum per educadors de Scratch
   third_party_scratch_btn_site: Visita Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
   third_party_curriculum: Pla d'estudis
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Sisplau, tria una edat vàlida
   enter_valid_email: Per favor, introdueïx una adreça de correu electrònic vàlida
   get_a_certificate_message: T'enviarem un certificat i informació sobre com  <a href='/learn/beyond'>Aprendre
@@ -268,64 +192,10 @@
   continue_learning_header: Segueix aprenent més enllà d'una hora
   continue_learning_body: Hi ha un munt d'opcions.  Vostè pot aprendre en línia, o
     a una escola local o a un campament d'estiu.
-  learn_code_studio: Try Code Studio courses
   learn_next_level: Continua al següent nivell
   learn_online: Prova altres cursos online
   learn_classes: Troba classes locals
-  learn_back_to_minecraft: Keep learning with Minecraft
-  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Acabo de fer la #HourOfCode - Fes-ho! @codeorg'
-  just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course3: I just finished Course 3 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course4: I just finished Course 4 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! Thanks
-    @Microsoft for supporting @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
-  twitter_teach_cs: Per què no hi ha més escoles que ensenyin informàtica? Nosaltres
-    ho podem arreglar. http://youtu.be/nKIu9yen5nc. Visita http://code.org/ per obtenir
-    més informació.
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Aprendre una hora del codi
   beyond_hoc: Més enllà d'una hora
   what_gender: Quin gènere ets?
@@ -336,8 +206,6 @@
   lines_of_code: MÉS DE <b># LINES OF CODE</b> LÍNIES DE CODI ESCRITES FINS LA DATA.
   lines_of_code_alt: "<b>#</b> LÍNIES DE CODI ESCRIT PER ALUMNES"
   who_has_done_hoc: 'Qui ha fet la #HourOfCode? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
   hoc_leaderboards: Les Classificacions de la Hora del codi
   students_and_lines: "%{students} alumnes han fet l'hora de codi i han escrit %{lines}
     línies de codi."
@@ -366,12 +234,6 @@
   studiobar_donate_body: Un infant aprèn per cada dòlar que dongui
   studiobar_shop_title: Botiga
   studiobar_shop_body: Trencar els estereotips. Portar el nostre logotip amb orgull.
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: '"Vaig motivar a les nenes de cada país per aprendre
     una hora de codi" Malala, Premi Nobel de la pau'
   homepage_hero_text_susan: '"Si es pot canviar la tecnologia, es pot canviar el món."
@@ -387,10 +249,6 @@
     &ldquo;La informàtica obrir
     les millors oportunitats del món.&rdquo;
     Satya, CEO de Microsoft
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "&ldquo;Si programes, pots triar \nel curs de la teva vida.&rdquo;\nChris
     Bosh"
   homepage_hero_text_student1: "&ldquo;Aquestes habilitats han canviat el meu futur.
@@ -410,11 +268,8 @@
   homepage_hero_text_stat_loc: "#loc línies de codi escrites pels alumnes"
   homepage_hero_text_stat_students: comptes d'estudiant a Code Studio
   homepage_hero_text_stat_served: 'L''Hora del Codi: #served servit'
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: L'Hora de Codi
   homepage_slot_text_frozen: Frozen amb l'Anna i l'Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Tots els nostres tutorials
   homepage_slot_text_course4: Curs 4
   homepage_slot_text_shop: Botiga
@@ -431,9 +286,7 @@
   homepage_action_text_girlvideo: Inspira a una noia
   homepage_action_text_learn: Comença a aprendre
   homepage_action_text_signpetition: Signa la petició
-  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Estic d'acord &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'L''Hora del Codi s''acosta de nou, del 7 al 13 de
     desembre. '
   homepage_banner_link_prizes: 'Uneix-te a l''esdeveniment d''aprenentatge més gran
@@ -441,36 +294,22 @@
   homepage_banner_text_main: Code.org i el College Board formen una aliança per millorar
     la diversitat en informàtica.
   homepage_banner_text_link: Aprèn més
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Aprèn més
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
   homepage_banner_20k_teachers_link: Aprèn més
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Aprèn més
   homepage_slot_text_title_hoc: Hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: Proveu l'Hora de programació
-  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Amfitrió d'una hora de codi
   homepage_slot_text_link_hocserved: "# servit"
   homepage_solot_text_link_volunteer: Voluntari per a l'Hora del Codi
   homepage_slot_text_title_students: Alumnes
   homepage_slot_text_blurb_students: Explora tots els nostres tutorials
-  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prova el Code Studio
   homepage_slot_text_link_local: Troba una classe a prop teu
   homepage_slot_text_link_othercourses: Altres cursos online
   homepage_slot_text_title_educators: Educadors
   homepage_slot_text_blurb_educators: Ensenya als teus estudiants
-  homepage_slot_text_link_elementary: Elementary school
   homepage_slot_text_link_middle: ESO
   homepage_slot_text_link_high: Batxillerat
   homepage_slot_text_link_k5: Cursos per als graus K-5
@@ -481,14 +320,10 @@
   homepage_slot_text_link_stats: Veure les estadístiques
   homepage_slot_text_link_buy: Involucra't
   homepage_slot_text_link_donate: Fes una donació
-  homepage_slot_text_link_shop: T-shirts, hats, & more
-  homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Creacions d'estudiants del Code Studio
   homepage_header_donors: Code.org dóna gràcies als seus seguidors
   homepage_donors_seall: Mostra-ho tot
   homepage_donors_donate: Fes una donació
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
   homepage_below_hero_announcement_link_text: Aprèn més
   contact_form_topic_student: Sóc estudiant
   contact_form_topic_parent: Sóc pare o mare
@@ -530,148 +365,25 @@
   class_submission_level_college: Universitat
   class_submission_level_vocational: Formació professional
   class_submission_languages_other: Altres idiomes
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Clàssic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
-  starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
+  starwars_javascript_title: JavaScript
   starwars_javascript_specs: Només en anglès | Navegadors moderns | Edats 11 +
   starwars_blocks_title: Blocs
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
   starwars_platform_text: Navegadors moderns, mòbils i tablets
   mc_name: Hora del Codi de Minecraft
   mc_longdescription: Fes servir blocs de codi per portar al Steve o l'Alex a una
-    aventura a través d'aquest món de Minecraft.
+    aventura a través d'aquest món de Minecraft
   mc_shortdescription: Fes servir blocs de codi per portar al Steve o l'Alex a una
-    aventura a través d'aquest món de Minecraft.
+    aventura a través d'aquest món de Minecraft
   mc_gradelevel: Edat 4-104
   mc_platformtext: Navegadors moderns, mòbils i tablets
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
-  minecraft_agent: 'Minecraft: Hero’s Journey'
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
   minecraft_agent_button: Inici
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
   minecraft_designer_button: Inici
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
   minecraft_adventurer_button: Inici
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: Hora del Codi de Minecraft
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
-  minecraft_future: Help all youth become future ready
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Hour of Code Sports Tutorials
-  sports_og_description: Choose between making a basketball game or mix and match
-    across sports.
-  sports_title: Code your own sports game
   sports_watch_video: Mira el vídeo
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspira a una noia
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_title_steph_curry: Hour of Code with Steph Curry
-  video_title_draymond_green: Hour of Code with Draymond Green
-  video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
-  video_title_chris_bosh: Chris Bosh on Computer Science
-  video_title_my_name_is_aracely: My Name is Aracely
-  video_1min: 1 min
-  video_2min: 2 min
-  video_3min: 3 min
-  video_5min: 5 min
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
   are_you_teacher: Sou mestre?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspira alumnes i voluntaris per a l'Hora del
     Codi.
   volunteer_engineer_submission_subtitle_generic: '100.000 professors organitzaran
@@ -685,82 +397,18 @@
     per provar una introducció d'una hora a la informàtica, arribar a desenes de milions
     d'alumnes en és de 180 països. Si us plau, involucra't durant la setmana de l'educació
     en la informàtica, del 7 al 13 de desembre.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat).'
-  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
-    program here</a>.
-  volunteer_engineer_submission_intro_signup: Please enter the following information
-    if you are a computer science student or software professional. Fields marked
-    with a <span class="form-required-field">*</span> are required.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_update_information: Update your information
-  volunteer_engineer_submission_header_shared: Information shared with teachers on
-    volunteer map
   volunteer_engineer_submission_field_name: Nom
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
-  volunteer_engineer_submission_field_location_desc: Your location will be used to
-    allow teachers to search for nearby volunteers and will be shown as a pin on the
-    map. If you are concerned about privacy, please use your work/school address or
-    your city only.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Descripció
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
   volunteer_engineer_submission_field_email: Correu electrònic
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
   volunteer_engineer_submission_field_email_placeholder: Correu electrònic
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Sí
   volunteer_engineer_submission_field_email_preference_no: 'No'
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
-  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
-    18 years old.
   volunteer_engineer_submission_submit: Envia
-  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
-    will be using <a href="%{url}">this map</a> to search for and contact volunteers
-    like you.
   volunteer_engineer_submission_commitment_uncertain: Incert
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hora setmanal
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 hores setmanals
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 hores setmanals
   volunteer_engineer_submission_commitment_now_and_then: De tant en tant
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
   volunteer_engineer_submission_commitment_more: Més
   volunteer_engineer_submission_location_flexibility_onsite: Presencial a l'escola
   volunteer_engineer_submission_location_flexibility_remote: Tutoria remota (mestres
@@ -768,28 +416,10 @@
   volunteer_engineer_submission_location_flexibility_curriculum: Disposats a ajudar
     a contribuir als projectes curriculars de codi obert
   volunteer_engineer_submission_experience_unspecified: No especificat
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
   volunteer_engineer_submission_experience_university_student_or_researcher: Estudiant
     universitari actual (o investigador)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
-    for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
   petition_age: Edat
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
   dashboard_announce_learn_more_button: Aprèn més
   dashboard_landing_title: Pàgina d'inici de mestre
   dashboard_landing_welcome: Benvinguts al nou i millorat escriptori del mestre.
@@ -804,7 +434,6 @@
   dashboard_landing_new_k5courses: Nou! Proveu els nostres cursos per a estudiants
     de cicle superior de primària.
   dashboard_landing_useful_links: Altres enllaços d'interès (només en anglès)
-  dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Fes una pregunta en persona! Visita el nostre vídeo
     mensual en horari d'oficina.
   dashboard_landing_print_certificates: Imprimeix certificats per als estudiants que
@@ -817,7 +446,6 @@
   dashboard_landing_progress_biggest: Aquest és el progrés per a la teva secció més
     gran.
   dashboard_landing_view_progress: Veure el progrés per %{biggest_section}
-  dashboard_landing_print_progress: Print progress
   dashboard_landing_available_title: Cursos disponibles
   dashboard_landing_available_courses: Aquí hi ha cursos actualment disponible per
     a tu i els teus alumnes.
@@ -825,17 +453,9 @@
   dashboard_landing_more_tutorials_desc: Hi ha més tutorials <a href="/learn/beyond">
     oferts pels nostres socis.</a> Aprèn a programar amb robots, fes pàgines web,
     fes la teva pròpia app o explora altres llenguatges com C++, Python o Ruby!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: L'hora de codi per a totes les edats
   dashboard_hoc_courses_desc: Prova algun d'aquests tutorials de menys d'1 hora amb
     els teus alumnes!
-  dashboard_hoc_courses_desc_and_cta: Try these short, one-hour tutorials with your
-    students. <a href="https://hourofcode.com">Join the Hour of Code movement</a>
-    during Computer Science Education Week.
   dashboard_k5_courses: Cursos de 20 hores per a primària
   dashboard_k5_courses_desc: Aquests cursos barregen tutorials autoguiats on-line
     amb activitats que no requereixen l'ús de l'ordinador. Cada curs consta de 20
@@ -856,7 +476,6 @@
     i poder ofertar aquesta nova matèria. Per a inscriure's en els tallers de desenvolupament
     professional cal fer una sol·licitud a <a href="/educate/districts">districtes
     associats</a> de Code.org.
-  dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org s'ha associat amb Bootstrap  per desenvolupar
     un currículum per ensenyar conceptes algebraics i geomètrics mitjançant la programació
     d'ordinadors.
@@ -878,24 +497,6 @@
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: Vols suprimir?
   dashboard_action_done: Fet
-  dashboard_action_print_certificates: Print certificates
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: Most teachers measure their students' progress using
-    the "View Progress" tab. If you are interested in giving your students additional
-    assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
-  dashboard_assessments_none_part2: If you are teaching a middle or high school course,
-    we have assessment questions available as part of Code Studio to help your students
-    prepare for the AP test. To use these assessments, first assign the course to
-    your class and then pick the course from the drop down above and you'll see your
-    students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Pàgina d'inici de mestre
   dashboard_navigation_section_student_progress: Comptes i progrés dels alumnes
   dashboard_navigation_section_teacher_progress: El progrés del curs
@@ -905,13 +506,9 @@
   dashboard_navigation_section_speakers: Informàtica <br/> Oradors convidats
   dashboard_navigation_all_sections: Comptes i progrés dels alumnes
   dashboard_navigation_view_progress: Progrés
-  dashboard_navigation_view_text_responses: View Text Responses
-  dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Afegeix estudiants
   dashboard_navigation_manage_students: Gestiona els alumnes
   dashboard_navigation_lesson_plans_resources: Plans docents i recursos
-  dashboard_navigation_view_stats: Veure estadístiques
   dashboard_navigation_section: 'Secció: %{section_name}'
   dashboard_navigation_student: 'Alumne: %{student_name}'
   dashboard_progress_not_started: no començat
@@ -920,15 +517,7 @@
   dashboard_progress_completed_too_many_blocks: completat, massa blocs
   dashboard_progress_completed_perfect: completat, perfecte
   dashboard_progress_furthest_level_attempted: nivell més alt intentat
-  dashboard_progress_submitted: submitted
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_progress_pair_programming: pair programming
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nova secció
-  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Crea noves seccions i afegeix-hi alumnes.
     Les seccions t'ajuden a organitzar els estudiants en grups més petits de manera
     que puguis fer un seguiment del seu progrés i administrar els seus comptes.
@@ -937,7 +526,6 @@
   dashboard_sections_table_grade: Grau
   dashboard_sections_table_course: Curs
   dashboard_sections_table_pairing_allowed: Programació per parelles
-  dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alumnes
   dashboard_sections_table_code: Secció Codi
   dashboard_sections_name: Nom de la secció
@@ -956,42 +544,8 @@
     informació del compte per repartir als teus alumnes individualment.
   dashboard_sections_switch_section: 'Canvia de secció:'
   dashboard_sections_close: Tancar
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
   dashboard_students_add_multiple: 'Escriu o enganxa els noms dels teus alumnes, un
     per línia:'
-  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
-    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
-    Google Classroom</b> button above.
   dashboard_students_new_section: Heu creat un grup nou! Ara afegiu els vostres alumnes
     utilitzant els botons <b>Afegeix alumne</b> i <b>Afegeix diversos alumnes</b>.
   dashboard_students_name: Nom
@@ -1002,8 +556,6 @@
   dashboard_students_total_lines: Línies de codi
   dashboard_students_share_section: 'Comparteix la pàgina d''inici de sessió amb els
     vostres alumnes:'
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
   dashboard_students_print_info: Imprimeix targetes amb la informació d'accés dels
     vostres alumnes.
   dashboard_students_secret_picture_title: Imatge secreta
@@ -1030,7 +582,6 @@
     o voldries crear comptes per a ells, canvia el tipus secret d aquesta secció a
     <b>paraula</b> o <b>fotografia</b>.
   dashboard_students_print_page: Imprimeix aquesta pàgina
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Fes clic aquí</a> per veure el nostre document de privacitat, que pot ser compartit
@@ -1044,17 +595,6 @@
   dashboard_course2: 'Curs 2:'
   dashboard_course3: 'Curs 3:'
   dashboard_course4: 'Curs 4 (beta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
-  dashboard_tools: 'Tools: '
   dashboard_curriculum: Pla d'estudis
   dashboard_curriculum_overview: Resum del curriculum de cicle superior de primària
   dashboard_overview: Vista general
@@ -1072,29 +612,14 @@
   dashboard_curriculum_csins: 'Informàtica en la ciència:'
   dashboard_curriculum_csp: 'Principis informàtics AP®:'
   dashboard_curriculum_ecs: 'Explorant la informàtica:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Altres
   dashboard_login_word: Paraula
   dashboard_login_picture: Imatge
-  dashboard_login_none: Email
+  dashboard_login_none: Correu electrònic
   dashboard_stage: etapa
   dashboard_puzzle: Puzzle
-  dashboard_question: Question
-  dashboard_response: Response
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Correcte
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Increïbles estadístiques d''Hora de Codi de l''any passat.
     En només una setmana:'
   stats_hoc_2013_image_alt: Estadístiques de 2013 d'Hora de Codi
@@ -1118,77 +643,28 @@
   dashboard_faq_k5: Preguntes freqüents sobre K-5
   code_hoc_coming: L'hora del Codi és aquí - 8-14 de desembre!
   code_sign_up: Inscriure's a participar durant la setmana de l'educació CS
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
   learn_more: Més informació
-  learn_sign_up_description: Sign up to participate in the Hour of Code during CS
-    Education Week
   learn_sign_up_button: Inscriure's
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
-  learn_educator_resources_description: Learn how to teach an Hour of Code
-  learn_educator_resources_button: Educator resources
-  learn_are_you_educator: Are you an educator? Learn <a href="http://hourofcode.com/resources/how-to">how
-    to teach an Hour of Code</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
-  learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
-    led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
-    prizes for every educator.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
   hoc2014_try_new_tutorials: Prova els nous tutorial de l'Hora del Codi
   hoc2014_try_new_tutorial: Provi la nova classe beta de l'Hora del Codi
   hoc2014_try_scrat: Ocells enutjat, Scrat i PvZ
   hoc2014_try_frozen: Amb els personatges Anna i Elsa de Frozem
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
   carousel_heading_international: Tutorials en el teu idioma
   carousel_heading_domestic: Tutorials disponibles en anglès
   carousel_heading_beginners: Tutorials per a principiants
-  carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Tutorials que ensenyen Javascript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: Cap dispositiu o sense connexió a internet? Intenta
     informàtica "sense connexió"
   carousel_heading_devices: Tutorials d' aplicacions per a telèfons i tablets
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Tutorials en altres llenguatges de programació
-  carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Fes les teves pròpies apps o jocs
   carousel_heading_university: Cursos universitaris en línia
   carousel_heading_webpages: Aprèn a fer pàgines web
   carousel_heading_robots: Aprèn a programar amb robots
   carousel_heading_ide: Plataformes populars entre professors
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Notes d'educador
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
   how_to_teach_hoc: Com ensenyar una Hora de Codi
   more_resources_educators: Més recursos per a mestres i educadors
-  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
-    and submission form.
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
   participants: Participants
   teachers_notes: Notes del professor
   teachers_notes_hoc: 'Professors: Llegiu les notes importants per als educadors aquí'
@@ -1200,10 +676,6 @@
     target="_blank"> navegador Web modern.</a>
   mobile_devices: Tutorials per a dispositius mòbils
   frozen_name: Codi amb Anna i Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Escriu el teu primer programa d'ordinador
-  codeintl_name: Escriu el teu primer programa d'ordinador
-  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Una introducció a JavaScript
   khanes_name: Una introducció a JavaScript
   khanpt_name: Una introducció a JavaScript
@@ -1212,13 +684,9 @@
   khanpl_name: Una introducció a JavaScript
   tynker_name: Construeix el teu propi joc
   scratch_name: Sigueu creatius amb la programació
-  lightbot_name: Lightbot
   thinkersmith_name: Els meus amics robòtics
   condcards_name: Condicionals amb targetes
-  lightbotintl_name: Lightbot
   codehs_name: Aprendre a programar amb Karel el gos
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Construir un joc amb JavaScript
   processing_name: Dibuix amb codi
@@ -1231,159 +699,24 @@
   robomindnl_name: Programa un robot virtual
   flappy_name: Fes un joc Flappy
   bitsbox_name: Bitsbox - fes un joc
-  makeschool_name: Build an iPhone game in your browser!
-  touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hora del Codi
   blockly_name: Blockly
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Pedra, Paper, tisora
-  hourofcode_name: Contenidor per al nou code.org/hoc
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artista
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
-  codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Teacher Led Lesson Plans
   course1_name: Curs 1
   course2_name: Curs 2
   course3_name: Curs 3
   course4_name: Curs 4
-  coursea-draft_name: Course A
-  coursea_name: Course A
-  courseb-draft_name: Course B
-  courseb_name: Course B
-  coursec-draft_name: Course C
-  coursec_name: Course C
-  coursed-draft_name: Course D
-  coursed_name: Course D
-  coursee-draft_name: Course E
-  coursee_name: Course E
-  coursef-draft_name: Course F
-  coursef_name: Course F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
   accelerated_name: Curs Accelerat
-  express_name: Express Course
-  pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd5-2017_name: 'Unit 5: Data and Society'
-  csd6-2017_name: 'Unit 6: Physical Computing'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csd5-2018_name: 'Unit 5: Data and Society'
-  csd6-2018_name: 'Unit 6: Physical Computing'
-  csp1-2017_name: 'Unit 1: The Internet'
-  csp2-2017_name: 'Unit 2: Digital Information'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csppostap-2017_name: 'Post AP: Databases in Apps'
-  csp1-2018_name: 'Unit 1: The Internet'
-  csp2-2018_name: 'Unit 2: Digital Information'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csppostap-2018_name: 'Post AP: Databases in Apps'
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: Databases in Apps'
-  csp-post-survey_name: Student Post-Course Survey
-  cspassessment_name: Full Test - 50 questions
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: Grades 9-12
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
   20-hour_name: Curs Accelerat
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
-  gumball_name: Gumball
-  classicmaze_name: Classic Maze
-  iceage_name: Ice Age
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression
-  math_category_name: Mates
+  math_category_name: Matemàtiques
   hoc_category_name: Hora del codi
-  csf_category_name: CS Fundamentals
-  csf_2017_category_name: CS Fundamentals (2017)
-  csf_2018_category_name: CS Fundamentals (2018)
-  csf_international_category_name: CS Fundamentals International
-  csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
-  csd_2018_category_name: CS Discoveries ('18-'19)
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  csp_2018_category_name: CS Principles ('18-'19)
-  cspexams_category_name: CS Principles Practice Test
-  research_studies_category_name: Research Studies
   applab_name: Laboratori d'aplicacions
-  gamelab_name: Game Lab
-  basketball_name: Make a basketball game
-  sports_name: Code your own sports game
-  applab_gradelevel: Ages 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
-  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: ESO +
   khanes_gradelevel: ESO +
   khanpt_gradelevel: ESO +
@@ -1425,22 +758,17 @@
   infinity_gradelevel: Edat 4-104
   artist_gradelevel: Edat 8 +
   monstercoding_gradelevel: Edats 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
   boxisland_gradelevel: Primària
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
   course1_gradelevel: Edat 4 + (pre-lectors)
   course2_gradelevel: Edat +6 (es requereix lectura)
   course3_gradelevel: Edats 8 + (continuació del Curs 2)
   course4_gradelevel: Edat 10 + (després del curs 3)
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
   coursed_gradelevel: Qualificacions 8+
   coursee_gradelevel: Edats 8-12
-  coursef_gradelevel: Grade 10+
+  coursed-2017_gradelevel: Qualificacions 8+
+  coursee-2017_gradelevel: Edats 8-12
+  coursed-2018_gradelevel: Qualificacions 8+
+  coursee-2018_gradelevel: Edats 8-12
   accelerated_gradelevel: Edat 10 + (després del curs 3)
   codeorg_platformtext: Navegadors moderns, mòbils i tablets
   codeintl_platformtext: Navegadors moderns, mòbils i tablets
@@ -1468,7 +796,6 @@
   groklearning_platformtext: Navegadors moderns
   quorum_platformtext: Navegadors web moderns. Funciona amb lectors de pantalla
   codespark_platformtext: iOS, Android (o navegador web)
-  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, tablets Android
   robomindnl_platformtext: Navegadors web moderns, versió mòbil
   flappy_platformtext: Navegadors moderns, mòbils i tablets
@@ -1484,16 +811,11 @@
   frozen_platformtext: Navegadors moderns + tablets
   starwars_platformtext: Navegadors moderns + tablets
   playlab_platformtext: Navegadors moderns, mòbils i tablets
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
   csfirst_platformtext: Navegadors moderns
-  boxisland_platformtext: Android, iOS
   codesters_platformtext: Navegadors moderns
-  texasinstruments_platformtext: TI Calculators
   teacherled_platformtext: Navegadors moderns, mòbils i tablets
   codeorg_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
   codeintl_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Apreneu a dibuixar en JavaScript
   khanes_shortdescription: Apreneu a dibuixar en JavaScript
   khanpt_shortdescription: Apreneu a dibuixar en JavaScript
@@ -1533,8 +855,6 @@
   flappy_shortdescription: Fes el teu propi joc - ocell Flappy, tauró o submarí
   bitsbox_shortdescription: Programa una sèrie d'apps per jugar i compartir, utilitzant
     real JavaScript.
-  makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
-    your monster new moves!
   touchdevelop_shortdescription: 'Resol puzzles, crea jocs i aprèn programació tot
     al teu telèfon. '
   appinventor_shortdescription: Fes la teva pròpia app! (només Android)
@@ -1553,37 +873,6 @@
   infinity_shortdescription: Utilitza Play Lab per crear una història o un joc protagonitzada
     pels personatges de Disney infinity.
   artist_shortdescription: Dibuixar imatges estupendes i dissenys amb l'artista!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant
     la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies
     protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies.
@@ -1702,10 +991,6 @@
     una sèrie d'aplicacions per jugar i compartir. Tutorials simples fan possible
     fins i tot per als nens mes petits de programar en Javascript i  com més sàpiguen
     més lluny arribaran.
-  makeschool_longdescription: Learn to code by making an iPhone game using a brand
-    new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
-    action game and write code to teach your monster new moves. You will learn how
-    to use variables, methods, and objects to help your monster win!
   touchdevelop_longdescription: 'L''editor tàctil et guiarà en la creació d''art digital,
     resolent el trencaclosques de l''ós o fent el teu propi joc d''Angry birds. '
   appinventor_longdescription: Divertits, ràpids tutorials en vídeo et guiaran a través
@@ -1738,43 +1023,10 @@
   playlab_longdescription: Crea una història o fes un joc amb Play Lab! Fes que animals,
     pirates, zombies, ninjes i molts més personatges es moguin, facin sons, puntuacions
     i fins i tot llançar boles de foc!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Introducció a la programació (ESO)
   khan_beyond_name: Aprèn programació informàtica
   tynker_beyond_name: Aprendre programació des de casa
   scratch_beyond_name: Sigueu creatius amb la programació
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR per a prelectors
   hopscotch_beyond_name: 'Hopscotch: Programació al teu iPad'
@@ -1782,30 +1034,17 @@
   groklearning_beyond_name: Aprèn programació amb Python
   hacketyhack_beyond_name: Aprèn Ruby
   robomind_beyond_name: Programa un robot virtual
-  makeschool_beyond_name: Build an iPhone game in your browser!
   appinventor_beyond_name: AppInventor Hora del Codi
-  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Aprendre a programar amb Karel el gos
   udemy_beyond_name: Cursos de programació en línia
   lynda_beyond_name: Cursos de programació en línia
   edx_beyond_name: Curs "CS50" Harvard
   coursera_beyond_name: Curs "CS 101" de Stanford
-  udacity_beyond_name: CS 101
-  teachingtree_beyond_name: Estudis universitaris en línia
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
+  teachingtree_beyond_name: Cursos universitaris en línia
   w3schools_beyond_name: Aprèn HTML
   codeavengers_beyond_name: Aprèn a programar pàgines web
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
   arduino_beyond_name: Arduino amb Sparkfun
   processing_beyond_name: Programa amb Processing
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Edat 4-104
   khan_beyond_gradelevel: ESO +
   tynker_beyond_gradelevel: Edats 5-13
@@ -1849,9 +1088,6 @@
   scratch_beyond_platformtext: Qualsevol navegador
   lightbot_beyond_platformtext: iOS, Android (o navegador web)
   codecademy_beyond_platformtext: Navegadors web moderns. iOS, Android apps
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Aplicació mòbil
   groklearning_beyond_platformtext: Navegadors moderns
   hacketyhack_beyond_platformtext: Instal·lar a l'escriptori
@@ -1866,14 +1102,11 @@
   coursera_beyond_platformtext: Navegadors moderns
   udacity_beyond_platformtext: Navegadors moderns
   teachingtree_beyond_platformtext: Basada en web
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Instal·lar a l'escriptori
   w3schools_beyond_platformtext: Navegadors moderns
   codeavengers_beyond_platformtext: Navegadors moderns
   mozilla_beyond_platformtext: Navegadors moderns
   codecombat_beyond_platformtext: Basat en la web (Firefox, Chrome, Safari, IE9 +)
-  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Compra robot
   finch_beyond_platformtext: Compra robot
   arduino_beyond_platformtext: Navegador web, llavors compra Kit
@@ -1897,7 +1130,6 @@
   groklearning_beyond_shortdescription: Introducció bàsica a la programació python
   hacketyhack_beyond_shortdescription: Aprèn Ruby des de zero
   robomind_beyond_shortdescription: Programa per a un robot virtual
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
   appinventor_beyond_shortdescription: Fes la teva pròpia app! (només Android)
   touchdevelop_beyond_shortdescription: Programa aplicacions per a mòbils directament
     al teu telèfon, tableta o portàtil
@@ -1980,11 +1212,6 @@
     controlant el seu propi robot virtual. Curs en línia totalment autònom amb presentacions
     breus, vídeos, qüestionaris i pistes automàtiques per ajudar amb els exercicis
     de programació. '
-  makeschool_beyond_longdescription: Know some ObjectiveC? Learn to make an iPhone
-    game in an hour! We'll guide you through the process, to code, test, and play
-    your game entirely in the browser and then share it on Facebook for friends to
-    try! No prior iPhone development experience is required. You must understand what
-    variables, methods, and objects are.
   appinventor_beyond_longdescription: Divertits, ràpids tutorials en vídeo et guiaran
     a través de la construcció de tres simples apps per al teu mòbil Android o tablet.
     Dissenyat per principiants i experts per igual, aquesta Hora del codi et tindrà
@@ -2103,116 +1330,11 @@
   sphero_beyond_longdescription: Si ets educador o un pare, les lliçons SPRK donen
     als nens un divertit curs accelerat a la programació de robots de mentre  milloren
     les seves habilitats en matemàtiques i ciències.
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
-  starwars_shortcode: sw
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
   flappy_shortcode: aleteig
-  infinity_shortcode: inf
-  playlab_shortcode: reprodueix
-  artist_shortcode: art
-  header_home: Home
-  header_my_dashboard: My Dashboard
   header_courses: cursos
-  header_course_catalog: Course Catalog
   header_project_gallery: Projectes
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
   header_educate_hoc: Hora del codi
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: CS Principles
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  full_course_category_name: Full Courses
   user_header_label: Hola %{username}
   user_header_settings: El meu compte
   user_header_logout: Tanca la sessió
   user_header_signin: Inicia la sessió
-  view_all_sections: View All Sections
-  view_section: View Section
-  view_named_section: View %{section_name}
-  privacy_doc_explanation: Click here for our privacy document that can be shared
-    or printed for your students.
-  signing_in: Signing In
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
-    these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
-  sign_in_overview_cards: Students can find all of this information, including their
-    secret %{secret}, in the login cards below.
-  reset_student_password: Resetting student passwords
-  reset_student_password_instructions: You can reset the secret <word/picture> for
-    any of your students by going to the “Manage Students” tab for the section, clicking
-    the “Show secret” button under the “Password” column, and clicking the “Reset
-    secret” button.
-  login_cards: Login Cards
-  print_login_cards: Print login cards
-  joining_section: Joining your section (one-time only)
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
-    done so. They can do this at https://studio.code.org/users/sign_up. Note that
-    they can either sign up with an email address and password, or sign up through
-    Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
-    code: %{section_code}.'
-  joining_section_instruct_button: Once they press the “Go” button, they should be
-    added to your section.
-  signing_in_single_instruct: Your students can sign in to their Code.org accounts
-    by going to https://code.org/ and clicking on the “Sign in” button on the top
-    right corner.
-  reset_student_password_email: If your student created a Code.org account by using
-    their email address and password (instead of signing in through their Google,
-    Facebook, Microsoft, or Clever account), you can reset their password by going
-    to the “Manage Students” tab for the section, and clicking the “Reset password”
-    button under the “Password” column.
-  syncing_students: Syncing your students
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
-    Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro

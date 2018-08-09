@@ -4,69 +4,36 @@ zh-CN:
       Unplug1:
         title: 计算机概论
         desc: 本课将介绍计算机科学的概念并解释一个计算机科学家的工作内容。它也将给学生一个机会承担一个计算机科学家的角色。该活动结束后，每个学生将带来他们所学的内容的回执。你可以会跳过教幼儿下面课程相关的单词，但现在提高他们的兴趣比等待更好的机会更有效率。
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: 计算式思维技巧
         desc: 除了纸和笔不用带别的东西，学生将学习计算式思维技巧的四个步骤。简短的介绍后，学生应分成几个小组，在那里他们将为其他小组规划某个怪兽（从预先选定的怪兽目录里）的画法。整个任务必须分解，这样团队才能分析目录里所有怪兽的模式、提取出它们不同的细节，然后使用这些信息来创建算法 （规划），从而让另一个小组去绘制一个特定的怪兽。每个小组要和别的小组交换算法然后按照别的小组的算法来画怪兽。然后看看画出来的怪兽是不是和原先小组所想的一样？
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: 方格纸编程
         desc: 编程就像是画画，学生开始去了解什么是编程真正含义。班里的学生在相互的指引下，能根据已有的一张图，在图表上涂上颜色进行模仿。如果有更多的时间，可允许学生创作他们自己的作品。
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: 算法
         desc: 这一课将介绍算法。通过使用七巧板和方格纸，第一个练习会展现出提供清晰的指令是多么的重要。然后会探索有多少种方法把把纸折成长方形，注意一下那些方法会得到更多或更少的折叠次数。
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: 函数
         desc: 在这堂课里，学生会用细绳、珠子以及特别的风格来制作吊饰。学生要重复一系列的步骤，然后需要找出其中哪些制作技巧被重复了好几次。一旦这些技巧被定义好以后，就可以在主函数中调用它们，整个制作过程也就能被轻松的写到一张纸上了。通过最终的程序，不管什么样的细绳、珠子和风格，都能够做出吊饰来。为了做到这一步，学生需要对具体的材料进行抽象，找出每个人材料之间的共性。这一章介绍了泛型和变量优雅的使用方式。
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: 条件
         desc: 这是一个课堂游戏。首先介绍条件的概念，“如果”语句和循环，然后在课堂上一起通过预先写好的程序，扑克和抽签来练习。
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: 歌曲写作
         desc: 读歌词对于大部分学生来说都很简单。我们会通过一系列的活动来将这样的常识固化为定义、调用函数的知识。一旦学生实习了函数的定义和调用，我们会接着学习如何给函数调用添加参数。
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: 抽象化
         desc: 这项活动将学生们的日常生活与疯狂填词风格的思维游戏相结合，帮助你的班级了解抽象的效果。
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
         title: 编程接力
         desc: 本课将从之前的活动中借鉴一个思路 (4. 方格纸编程) 并使用这些技能来强调程序运行顺序的重要性，以及经常检查程序的"缺陷"的重要性。
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: 互联网
         desc: 在本课中，学生们会假装流过互联网，来学习有关 web 地址，ip 地址和 DNS。
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: 总结
         desc: 第一个 20 小时系列课程中，最后的小结中，将帮助学生重温所有他们最喜欢的时刻，同时给他们布置下一步的学习，如果他们感兴趣，他们可以自主学习，继续他们对计算机科学的探索。
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: 快乐地图
         desc: 学生们创建简单的算法 (指令集) 通过迷宫使用单个命令，移动角色。
@@ -116,7 +83,7 @@ zh-CN:
         title: 写歌
         desc: 学生会通过副歌的概念，来学习定义和调用函数。
       DiceRace:
-        title: '现实中的算法: 掷骰子比大小'
+        title: '生活中的算法: 掷骰子比赛'
         desc: 这节课展示我们在日常生活中使用的算法。作为其中的一部分，学生将发现并写出掷骰子比大小游戏的算法。
       Internet:
         title: 互联网
@@ -167,25 +134,24 @@ zh-CN:
         title: 线下循环
         desc: 在这节课中，你会学到循环。
       courseB_unplugged_MRF:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 在这节课中，你会给你的朋友“编程”！
       courseB_unplugged_loopyMRF:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 就像在“我的机器人朋友”里一样，你将会给你的朋友“编程”，这次需要用到循环！
       courseC_Unplugged_ScreenOutTheMean:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你会学习到在互联网上意味着什么，能做什么。
       courseD_unplugged_digitalCitizenship:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你将会学到成为一个数字公民意味着什么。
       courseE_unplugged_privateInformation:
         title: '常识教育： 私人和个人信息 '
         desc: 今天，你会学会隐私和个人信息之间的区别！
       courseF_unplugged_powerOfWords:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你会学习到在互联网上意味着什么，能做什么。
       deeper learning description:
-        title: ''
         desc: '翻译丢失: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: '真实算法： 播种一颗种子'
@@ -215,7 +181,7 @@ zh-CN:
         title: 二进制的手镯
         desc: 学生制作手镯，以二进制形式表示他们名字的首字母。学生们会学会数据能以多种方式表示和存储。
       courseD_unplugged_graphPaperProgramming:
-        title: 图纸上编程
+        title: 方格纸编程
         desc: 学生们使用一组预定义的命令模块写一个算法 (一组指令) 来指导同学们复制一幅图画。
       courseD_unplugged_relayProgramming:
         title: 编程接力
@@ -263,44 +229,8 @@ zh-CN:
         title: Brad报告错误000
         desc: "# Brad报告错误 000 \\r \n# # 尝试重新创建 bug 布鲁克报告 \\r \n过程如下: \\r \n1。从线下开始。填充信息。点击保存并发布. \n2。\"破坏\" 级别 \\r \n3。做个具有相同的内容和相同的名称的\"markdown\" 级别。选中进行加密。保存"
       courseB_unplugged_MRF_2018:
-        title: '翻译丢失：en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: '翻译丢失：en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: 我的机器人朋友
+        desc: 为朋友写代码来学习编程！
       PlantASeed_2018:
         title: '真实算法： 播种一颗种子'
         desc: 这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
@@ -317,13 +247,13 @@ zh-CN:
         title: 大事件
         desc: 学生们将学习编程概念中的"事件"，即计算机不断监控时的行动。老师在纸上按遥控按钮而学生们根据不同的按钮做某些动作，作为回应。
       GraphPaperProgramming_2018:
-        title: 图纸上编程
+        title: 方格纸编程
         desc: 学生们使用一组预定义的命令模块写一个算法 (一组指令) 来指导同学们复制一幅图画。
       courseD_unplugged_digitalCitizenship_2018:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你将会学到成为一个数字公民意味着什么。
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: 不用电脑的活动
+        title: 线下的活动
         desc: 今天，你会学习到在互联网上意味着什么，能做什么。
       Conditionals_2018:
         title: 条件语句
@@ -345,7 +275,6 @@ zh-CN:
         desc: 学生制作手镯，以二进制形式表示他们名字的首字母。学生们会学会数据能以多种方式表示和存储。
       MoveItMoveIt_2018:
         title: 移动它，移动它！
-        desc: ''
       courseB_unplugged_CnC_2018:
         title: 创建并实践公平非常的伟大。
         desc: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解共享和灵感的创新过程。同时也促进了创新的表达，以及创新中的公平。

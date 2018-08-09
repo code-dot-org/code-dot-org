@@ -34,19 +34,27 @@ module Pd
       # Retrieves new submissions for this form from JotForm's API
       # @param last_known_submission_id [Integer] (optional) - filter to new submissions, since the last known id
       # @param min_date [Date] (optional) (optional) filter to new submissions on or after the min date
-      # @return [Array<Hash>] array of hashes with keys :form_id, :submission_id, :answers
+      # @return [Hash] with {result_set: {offset, limit, count}, submissions: []}
+      #   where submissions is an array of hashes with keys :form_id, :submission_id, :answers
       #   where answers is itself a hash of question ids to raw answers.
       # Note - these answers are incomplete on their own, and need to be combined with the Question objects
       #        (from get_questions above)
-      def get_submissions(last_known_submission_id: nil, min_date: nil)
+      def get_submissions(last_known_submission_id: nil, min_date: nil, limit: 100, offset: 0)
         CDO.log.info "Getting JotForm submissions for #{@form_id} "\
-          "last_known_submission_id: #{last_known_submission_id}, min_date: #{min_date}"
+          "last_known_submission_id: #{last_known_submission_id}, min_date: #{min_date},"\
+          " limit: #{limit}, offset: #{offset}"
 
         response = @client.get_submissions(@form_id,
           last_known_submission_id: last_known_submission_id,
-          min_date: min_date
+          min_date: min_date,
+          limit: limit,
+          offset: offset
         )
-        response['content'].map {|s| parse_jotform_submission(s)}
+
+        {
+          result_set: response['resultSet'].slice('offset', 'limit', 'count').symbolize_keys,
+          submissions: response['content'].map {|s| parse_jotform_submission(s)}
+        }
       end
 
       # Retrieves a specific submission from JotForm's API
@@ -122,14 +130,18 @@ module Pd
         included_answers = jotform_submission['answers'].select do |answer_id, answer_data|
           next false unless answer_data.key? 'answer'
 
-          # We have seen (matrix) answers sometimes show up with a false value, and don't know how to interpret that
+          # We have seen (matrix) answers sometimes show up with a false or null value,
+          # and don't know how to interpret those.
           # See https://www.jotform.com/answers/1482175-API-Integration-Matrix-answer-returning-false-in-the-API#1
-          if answer_data['answer'] == false
+          if answer_data['answer'] == false || answer_data['answer'].nil?
             # For now, ignore / skip these
             # TODO(Andrew): update after followup with JotForm API support
-            CDO.log.warn "Encountered JotForm false answer, id #{answer_id} in submission: #{submission_id}"
+            CDO.log.warn "Encountered JotForm false or null answer, id #{answer_id} in submission: #{submission_id}"
             next false
           end
+
+          # Skip empty answers
+          next false if answer_data['answer'].blank?
 
           true
         end

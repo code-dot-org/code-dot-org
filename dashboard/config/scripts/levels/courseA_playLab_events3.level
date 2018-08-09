@@ -53,6 +53,7 @@
     "disable_if_else_editing": "false",
     "tts_markdown_instructions_override": "Help Jorge the Dog get moving by connecting the move left block to the when left arrow pressed event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag to finish this level!",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

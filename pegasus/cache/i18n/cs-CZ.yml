@@ -1,4 +1,5 @@
-"cs-CZ":
+---
+cs-CZ:
   hour_of_code: Hodina kódu
   hello: Ahoj světe
   'yes': Ano
@@ -34,19 +35,14 @@
   twentyhours_text: Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice
     a programovacích pojmech v  následujícím kurzu.
   og_title: Každé dítě si zaslouží příležitost
-  og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_here: Akce Hodiná kódování je tady!
   og_description: Každý student v každé škole si zaslouží možnost studovat informatiku.
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
+  og_description_celeb: Vyzkoušej nové kurzy a vyhraj video chat se známou celebritou
+    pro tvoji třídu!
   csedweek_og_title: Hodina kódu se blíží
   csedweek_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily
     desítky milionů žáků všech věkových kategorií z více než 180 zemí a mluvících
     více než 45 jazyky.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
   hoc2014_heading: Připojte se k <a href="http://hourofcode.com">Hodině kódu</a> <br/>
     8. až 14. prosince 2014 <br/>
   hoc2014_students: Studenti
@@ -92,18 +88,6 @@
   congratulations_on_completing_hoc: Gratulujeme k dokončení jedné Hodiny kódu
   congratulations_volunteer: 'Gratulujeme: teď, že jsi si zkusil Hodinu kódu, <a href="https://code.org/volunteer">
     Přihlás se u dobrovolníka v učebně</a> a pomoz studentům učit se Hodinu kódu!'
-  congratulations_on_completing_course1: Gratulujeme ti k dokončení kurzu 1
-  congratulations_on_completing_course2: Gratulujeme ti k dokončení kurzu 2
-  congratulations_on_completing_course3: Gratulujeme ti k dokončení kurzu 3
-  congratulations_on_completing_course4: Gratulujeme ti k dokončení kurzu 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: Gratulujeme ti k dokončení zrychleného
-    kurzu
   congrats_next_tutorials_title: Dále vyzkoušejte tyto výukové programy
   congrats_next_tutorials_desc: Vyzkoušejte tyto kratší, jednohodinovou výuku nebo
     zkuste <a href="%{current_path}/next"> partnerská výuka</a>.
@@ -281,43 +265,7 @@
   just_did_course2: Právě jsem dokončil kurz 2 - zkus si ho! @codeorg
   just_did_course3: Právě jsem dokončil kurz 3 - zkus si ho! @codeorg
   just_did_course4: Právě jsem dokončil kurz 4 - zkus si ho! @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
   just_did_accelerated: Právě jsem dokončil zrychlený kurz - zkus si ho! @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 9 z 10 lidí souhlasí s tím, že školy by měly učit informatiku.
     http://youtu.be/nKIu9yen5nc. Navštivte https://code.org/.
   twitter_cs_foundational: Studium informatiky je pro každého studenta základní. https://youtu.be/QvyTEx1wyOY.
@@ -331,8 +279,6 @@
   lines_of_code: DOSUD NAPSÁNO PŘES <b># ŘÁDKŮ KÓDU</b>.
   lines_of_code_alt: "<b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY"
   who_has_done_hoc: 'Kdo udělal #HourOfCode? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
   hoc_leaderboards: Žebříčky Hodiny Kódu
   students_and_lines: "%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
     řádků kódu."
@@ -360,12 +306,6 @@
   studiobar_donate_body: Jedno dítě se učí za každý dollar, který darujete
   studiobar_shop_title: Obchod
   studiobar_shop_body: Opusťte stereotypy. Noste hrdě naše logo.
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
   homepage_hero_text_malala: "&ldquo;Vyzývám divky v každé zemi, aby se učily jednu
     Hodinu kódu&rdquo; \nMalala, nosiltelka Nobelovy ceny za mír"
   homepage_hero_text_susan: |-
@@ -383,10 +323,6 @@
   homepage_hero_text_satya: |-
     &ldquo;Informatika umí otevřít ty nejlepší příležitosti ve světě.&rdquo;
     Satya, CEO Microsoft
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Když programuješ, můžeš si vybrat a zvolit směr svého života.&rdquo;
     Chris Bosh
@@ -411,8 +347,6 @@
   homepage_hero_text_stat_loc: 2.5 milionů dívek se zapsalo na výuku v Code Studiu
   homepage_hero_text_stat_students: "#student_count studentských účtů v Code Studiu"
   homepage_hero_text_stat_served: 'Hodinu kódu: #served si vyzkoušelo'
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: Hodina kódu
   homepage_slot_text_frozen: Kluziště s Annou a Elzou
   homepage_slot_text_teacher: Katedra učitele
@@ -432,7 +366,6 @@
   homepage_action_text_girlvideo: Inspirovat divku
   homepage_action_text_learn: Zahájení výuky
   homepage_action_text_signpetition: Podepište petici
-  homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Souhlasím &#x25BE;
   homepage_diversity_pledge: Zajistěte rozmanitost
   homepage_banner_text_prizes: 'Hodina kódu přichází znova, 7. -13. prosince. '
@@ -440,8 +373,6 @@
   homepage_banner_text_main: Code.org a College Board vytváří alianci, aby se zlepšila
     rozmanitost v informatice.
   homepage_banner_text_link: Zjisti více
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Zjisti více
   homepage_banner_20k_teachers: 20,000 učitelů trénovalo aby teď učili počítačovou
     vědu ve školách.
@@ -452,12 +383,10 @@
   homepage_banner_emailprivacy: Provádíme důležitou změnu ohledně podpory soukromí
     studentů.
   homepage_banner_emailprivacy_link: Přečtěte si více
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Zjisti více
   homepage_slot_text_title_hoc: Hodina kódu
   homepage_slot_text_blurb_hoc: Každý se to může naučit. Začni dnes
   homepage_slot_text_link_hoc: Vyzkoušej Hodinu Programování
-  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Uspořádejte Hodinu kódu
   homepage_slot_text_link_hocserved: "# si vyzkoušelo"
   homepage_solot_text_link_volunteer: Dobrovolník v Hodině kódu
@@ -481,13 +410,10 @@
   homepage_slot_text_link_buy: Zapojte se
   homepage_slot_text_link_donate: Přispějte
   homepage_slot_text_link_shop: Trička, čepice a další
-  homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Studentská tvorba v Code studiu
   homepage_header_donors: Code.org děkuje svým příznivcům
   homepage_donors_seall: Podívejte se na všechny
   homepage_donors_donate: Přispějte
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
   homepage_below_hero_announcement_link_text: Zjisti více
   contact_form_topic_student: Jsem student
   contact_form_topic_parent: Jsem rodič
@@ -538,7 +464,7 @@
   playlab_iceage_title: Doba ledová - se blíží
   playlab_iceage_title_live: Doba ledová
   starwars_subtitle: Budování Galaxie s kódem
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Použij táhni-pusť bloky a JavaScript.
   starwars_javascript_specs: Pouze anglicky | Moderní prohlížeče | Věk 11+
   starwars_blocks_title: Bloky
@@ -546,7 +472,7 @@
   starwars_blocks_specs: Mnoho jazyků | Moderní prohlížeče, chytré mobily, tablety
     | Věk 6-106 let
   starwars_platform_text: Moderní prohlížeče, smartphony, tablety
-  mc_name: Hodina kódu s Minecraftem
+  mc_name: Hodina kódu Minecraftu
   mc_longdescription: Vezmi pomocí kódu Steva nebo Alexe za dobrodružstvím po světě
     Minecraft.
   mc_shortdescription: Vezmi pomocí kódu Steva nebo Alexe za dobrodružstvím po světě
@@ -554,13 +480,10 @@
   mc_gradelevel: Věk 6 +
   mc_platformtext: Moderní prohlížeče, smartphony, tablety
   mc_specs: Mnoho jazyků | Moderní prohlížeče a tablety | Věk 6-106 let
-  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft Designer
   minecraft_adventurer: Minecraft Adventurer
   minecraft_tutorials: Návody Hodiny kódu s Minecraftem
   minecraft_specs: Mnoho jazyků | Moderní prohlížeč a tablety | Od druhé třídy
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
   minecraft_agent_button: Spustit
   minecraft_designer_description: Naprogramuj zvířata a další postavy, vytvoř si svojí
     vlastní verzi Minecraftu.
@@ -571,43 +494,8 @@
   minecraft_no_internet: Nemáš internet?
   minecraft_download_adventurer: Stáhni si offline verzi Minecraft Adventurer.
   minecraft_subtitle: Hodina kódu Minecraftu
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
-  minecraft_future: Help all youth become future ready
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
   sports_page_title: Hour of Code - sporty
-  sports_og_title: Hour of Code - sportovní semináře
+  sports_og_title: Opřete se do toho. Kdokoliv se může učit.
   sports_og_description: Vyberte si mezi vytvořením basketbalové hry nebo smíchejte
     a propojte napříč sporty.
   sports_title: Naprogramuj svoji vlastní sportovní hru
@@ -615,7 +503,6 @@
   sports_video_title: Opřete se do toho. Kdokoliv se může učit.
   sports_select_theme: Vyberte si vaše výukové téma
   sports_basketball_title: Vytvoř basketbalovou hru
-  sports_all_sports_title: Mix and match across sports
   sports_featured_athletes: Podívejte se na vybrané sportovce
   sports_athletes_title: Vybraní sportovci
   sports_athlete_Draymond: Draymond Green, olympijský vítěz a mistr NBA, Golden State
@@ -645,23 +532,19 @@
     Mavericks
   watch_inspirational_videos: Než začnete, podívejte se na jedno z následujících inspirativních
     videí
-  video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspirovat divku
   video_title_cs_intro: Úvod do počítačové vědy
   video_title_schools_dont_teach: Co většina škol neučí
   video_title_obama: Prezident Obama o informatice
   video_title_hoc_is_here: Hodina kódu je zde - každý se může naučit
   video_title_anybody_can_learn: Každý se může naučit
-  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hodina kódu s Draymonden Greenem
   video_title_russell_okung: Hodina kódu s Russellem Okungem
   video_title_real_madrid: Hodina kódu s Realem Madrid
   video_title_marco_belinelli: Hodina kódu s Marcem Belinelli
   video_title_chris_bosh: Chris Bosh o informatice
-  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 minuta
   video_2min: 2 min
-  video_3min: 3 min
   video_5min: 5 min
   speak_another_language: Mluvíš dalším jazykem?
   help_translate: Pomoz nám s překladem.
@@ -727,10 +610,6 @@
   volunteer_engineer_submission_field_email_desc: Vaše e-mailová adresa nebude nikdy
     sdílená, ale zašleme vám požadavky učitelů.
   volunteer_engineer_submission_field_email_placeholder: E-mailová adresa
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Ano
   volunteer_engineer_submission_field_email_preference_no: Ne
   volunteer_engineer_submission_final_paragraph: Budete zalistovaní na mapě pro místní
@@ -781,9 +660,6 @@
   volunteer_engineer_submission_type_task_mentor: Hledám mentora, aby mne pomohl připravit
     na kódování s mvými studenty
   petition_age: Věk
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
   dashboard_announce_learn_more_button: Zjisti více
   dashboard_landing_title: Učitelská domovská stránka
   dashboard_landing_welcome: Vítáme vás na novém a vylepšeném řídicím panelu pro učitele.
@@ -846,7 +722,6 @@
     nabízet celoroční třídy informatiky přípravou současných pedagogických pracovníků
     nabídkou nové oblasti. Pro registraci pro profesní rozvoj workshopy, požádat <a
     href="/educate/districts"> okresní úrovni partnerství</a> s Code.org.
-  dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org má partnerství s Bootstrap k vývoji kurukula
     pro výuku pojmů algebry a geometrie pomocí počítačového programování.
   dashboard_course_csins: Informatika ve vědě
@@ -919,7 +794,6 @@
     stupni nebo na střední škole můžete vidět jejich textové odpovědi výběrem daného
     kurzu z nabídky výše.
   dashboard_sections_new_section: Nová sekce
-  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Vytvoř nové oddíly a přidejte do nich
     studenty. Sekce pomáhají organizovat studenty do menších skupin, můžete sledovat
     jejich postup a spravovat jejich účty.
@@ -962,16 +836,6 @@
     pouze v nové sekci.
   dashboard_sections_move_students: Přesunout studenty
   dashboard_sections_assign_hoc_script_desc: Účast na hodině kódu?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
   dashboard_sections_assign_activity: Přiřadit kurz
   dashboard_error_none_selected: Nevybrali jste žádné studenty pro přesun. Vyberte
     prosím alespoň jednoho studenta.
@@ -980,9 +844,6 @@
     studentů do sekce jiného učitele.
   dashboard_students_add_multiple: 'Zadejte nebo vložte jména vašich studentů, jeden
     na řádek:'
-  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
-    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
-    Google Classroom</b> button above.
   dashboard_students_new_section: Vytvořili jste novou sekci! Nyní přidejte své studenty
     pomocí tlačítka <b>Přidat studenta</b> a <b>Přidat více studentů</b> výše.
   dashboard_students_name: Jméno
@@ -1028,17 +889,8 @@
   dashboard_course2: 'Kurz 2:'
   dashboard_course3: 'Kurz 3:'
   dashboard_course4: 'Kurz 4 (beta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
   dashboard_unplugged: Pokud nemáte přístup k počítačům, vyzkoušejte ve třídě tyto
     <a href='%{unplugged_url}'>lekce bez počítače</a>.
-  dashboard_tools: 'Tools: '
   dashboard_curriculum: Kurikulum
   dashboard_curriculum_overview: Přehled učiva 1. stupně ZŠ
   dashboard_overview: Přehled
@@ -1056,8 +908,6 @@
   dashboard_curriculum_csins: 'Informatika ve vědě:'
   dashboard_curriculum_csp: 'AP ® Informatika principy:'
   dashboard_curriculum_ecs: 'Zkoumání informatiky:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Ostatní
   dashboard_login_word: Slovo
@@ -1083,7 +933,7 @@
     týdne:'
   stats_hoc_2013_image_alt: Statistika z Hodiny kódu 2013
   dashboard_teacher: Učitel
-  dashboard_student: student
+  dashboard_student: Student
   dashboard_sections_email_question: Mají všichni studenti platnou e-mailovou adresu?
   dashboard_sections_account_creation_question: Kdo vytváří studentský účet?
   dashboard_sections_password_question: Co studenti využívají jako "heslo"?
@@ -1103,12 +953,6 @@
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   host_an_hour: Hostit hodinu
   learn_banner_title: Připojte se k nám na hodinu kódu
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
   learn_more: Další informace
   learn_sign_up_description: Přihlásit se k účasti Hodiny kódu během týdne CS vzdělávání
   learn_sign_up_button: Registrace
@@ -1153,11 +997,6 @@
   carousel_heading_webpages: Naučte se dělat webové stránky
   carousel_heading_robots: Naučte se programovat s roboty
   carousel_heading_ide: Platformy, které jsou populární mezi učiteli
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Poznámky pro školitele
   teach_led_lesson_plans: Učitelské vedení rozvrhu cvičení Hodiny kódu
   learn_footer_all_tutorials: Viz <a href="https://code.org/educate/allhourofcode">
@@ -1168,8 +1007,6 @@
   more_resources_educators: Další zdroje pro učitele
   beyond_submission: Chcete odeslat výuku za mimoškolní aktivitu? Viz kritéria a odesílací
     formulář.
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
   participants: účastníci
   teachers_notes: Poznámky pro učitele
   teachers_notes_hoc: 'Učitelé: Zde si přečtěte důležité informace pro vyučující'
@@ -1184,7 +1021,6 @@
   starwars_name: 'Star Wars: Budování galaxie'
   codeorg_name: Klasické bludiště
   codeintl_name: Klasické bludiště
-  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Úvod do JavaScriptu
   khanes_name: Úvod do JavaScriptu
   khanpt_name: Úvod do JavaScriptu
@@ -1193,13 +1029,9 @@
   khanpl_name: Úvod do JavaScriptu
   tynker_name: Vytvořte si vlastní hru
   scratch_name: Buďte kreativní s programováním
-  lightbot_name: Lightbot
   thinkersmith_name: Mí robotičtí přátelé
   condcards_name: Podmínky s kartami
-  lightbotintl_name: Lightbot
   codehs_name: Naučte se programovat s psem Karlem
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Vytvořte hru v JavaScriptu
   processing_name: Kreslení kódem
@@ -1213,11 +1045,8 @@
   flappy_name: Vytvořte hru Flappy
   bitsbox_name: Bitsbox - vytvořte hru
   makeschool_name: Vytvoř hru pro iPhone ve svém prohlížeči!
-  touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Hodina Kódu
   blockly_name: Blockly
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kámen, nůžky, papír
   hourofcode_name: Klasické bludiště
   playlab_name: Play Lab
@@ -1227,7 +1056,6 @@
   allcancode_name: Spusť Marca!
   csfirst_name: CS první
   boxisland_name: Kostkový ostrov
-  codesters_name: Codesters
   texasinstruments_name: 10 minut kódování
   teacherled_name: Učitelské vedení rozvrhu cvičení Hodiny kódu
   course1_name: Kurz 1
@@ -1246,87 +1074,32 @@
   coursee_name: Kurz E
   coursef-draft_name: Kurz F
   coursef_name: Kurz F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
   accelerated_name: Zrychlený kurz
-  express_name: Express Course
-  pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: '1. lekce: Digitální informace'
   cspunit2_name: '2. lekce: Internet'
   cspunit3_name: '3. lekce: Programování'
   cspunit4_name: '4. lekce: Data'
   cspunit5_name: '5. lekce: Prozkoumejte a vytvořte projekt'
   cspunit6_name: 'Po testu: Databáze v aplikacích'
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Lekce 5: Data a společnost'
   csd6_name: 'Lekce 6: Fyzikální výpočty'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
   csd5-2017_name: 'Lekce 5: Data a společnost'
   csd6-2017_name: 'Lekce 6: Fyzikální výpočty'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Lekce 5: Data a společnost'
   csd6-2018_name: 'Lekce 6: Fyzikální výpočty'
   csp1-2017_name: '1. lekce: Internet'
   csp2-2017_name: '2. lekce: Digitální informace'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
   csppostap-2017_name: 'Po testu: Databáze v aplikacích'
   csp1-2018_name: '1. lekce: Internet'
   csp2-2018_name: '2. lekce: Digitální informace'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
   csppostap-2018_name: 'Po testu: Databáze v aplikacích'
   csp1_name: '1. lekce: Internet'
   csp2_name: '2. lekce: Digitální informace'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Po testu: Databáze v aplikacích'
-  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Úplný test - 50 otázek
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: 1. část testu - 25 otázek
   cspexam2-AKwgAh1ac5_name: 2. část testu - 25 otázek
   cspunit3_gradelevel: Věk 15-18
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
   20-hour_name: Zrychlený kurz
   algebra_name: Informatika v algebře
   AlgebraA_name: Informatika v algebře, kurz A
@@ -1336,43 +1109,31 @@
   iceage_name: Doba ledová
   minecraft_name: Minecraft
   starwarsblocks_name: Hvězdné války (kostky)
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Jednoduché šifrování
-  text-compression_name: Text Compression
   math_category_name: Matematika
   hoc_category_name: Hodina kódu
   csf_category_name: Základy informatiky
-  csf_2017_category_name: CS Fundamentals (2017)
-  csf_2018_category_name: CS Fundamentals (2018)
-  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
-  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: Principy informatiky 2015-2016
   csp17_category_name: Principy informatiky 2016-2017
-  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: Praktický test z principů informatiky
-  research_studies_category_name: Research Studies
   applab_name: App Lab
-  gamelab_name: Game Lab
   basketball_name: Vytvoř basketbalovou hru
-  sports_name: Code your own sports game
+  sports_name: Naprogramuj svoji vlastní sportovní hru
   applab_gradelevel: Věk 13 +
   applab_shortdescription_congrats: App Lab je programovací prostředí, kde můžeš tvořit
     jednoduché aplikace. Navrhni aplikaci, vytvoř funkční kód pomocí bloků nebo JavaScriptu
     a výslednou aplikaci snadno sdílej
-  codeorg_gradelevel: Věk 4+
+  codeorg_gradelevel: Stáří 4-104
   codeintl_gradelevel: Stáří 4-104
-  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Druhý stupeň a starší
   khanes_gradelevel: Druhý stupeň a starší
   khanpt_gradelevel: Druhý stupeň a starší
   khanhe_gradelevel: Druhý stupeň a starší
   khanfr_gradelevel: Druhý stupeň a starší
   khanpl_gradelevel: Druhý stupeň a starší
-  tynker_gradelevel: Věk 5-13
-  scratch_gradelevel: Věk 8+
+  tynker_gradelevel: Stáří 5-13
+  scratch_gradelevel: Věk 8 +
   lightbot_gradelevel: Všechny věkové kategorie
   thinkersmith_gradelevel: Všechny věkové kategorie
   condcards_gradelevel: Věk 8-12
@@ -1383,14 +1144,14 @@
   codemonkey_gradelevel: Druhý stupeň a starší
   codeavengers_gradelevel: Druhý stupeň a starší
   processing_gradelevel: Střední škola
-  robomind_gradelevel: Věk 8-13
+  robomind_gradelevel: Stáří 8-13
   groklearning_gradelevel: Druhý stupeň a starší
   quorum_gradelevel: Druhý stupeň a starší
   codespark_gradelevel: Základní
   kodable_gradelevel: Základní
   tynkerapp_gradelevel: Stáří 5-13
   robomindnl_gradelevel: Stáří 8-13
-  flappy_gradelevel: Věk 6+
+  flappy_gradelevel: Věk 6 +
   bitsbox_gradelevel: Základní
   makeschool_gradelevel: Střední škola
   touchdevelop_gradelevel: Střední škola
@@ -1400,12 +1161,12 @@
   kodableunplugged_gradelevel: Stáří 8-13
   projguts_gradelevel: Věk 10-13
   hourofcode_gradelevel: Stáří 4-104
-  frozen_gradelevel: Věk 8+
+  frozen_gradelevel: Stáří 4-104
   starwars_gradelevel: Věk 6 +
-  playlab_gradelevel: Věk 6-14
+  playlab_gradelevel: Stáří 4-104
   infinity_gradelevel: Stáří 4-104
   artist_gradelevel: Stáří 4-104
-  monstercoding_gradelevel: Věk 5-13
+  monstercoding_gradelevel: Stáří 5-13
   allcancode_gradelevel: Věk 5-10
   csfirst_gradelevel: Věk 9-14
   boxisland_gradelevel: Základní
@@ -1416,12 +1177,12 @@
   course2_gradelevel: Věk 6-18
   course3_gradelevel: Ve věku 8-18
   course4_gradelevel: Stáří 10-13
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
   coursed_gradelevel: Známky 8+
   coursee_gradelevel: Věk 8-12
-  coursef_gradelevel: Grade 10+
+  coursed-2017_gradelevel: Známky 8+
+  coursee-2017_gradelevel: Věk 8-12
+  coursed-2018_gradelevel: Známky 8+
+  coursee-2018_gradelevel: Věk 8-12
   accelerated_gradelevel: Stáří 10-13
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
   codeintl_platformtext: Moderní prohlížeče, smartphony, tablety
@@ -1448,7 +1209,6 @@
   groklearning_platformtext: Moderní webové prohlížeče
   quorum_platformtext: Moderní webové prohlížeče. Čtečky obrazovky podporovány
   codespark_platformtext: iOS, Android (nebo webový prohlížeč)
-  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablety
   robomindnl_platformtext: Moderní webové prohlížeče, mobilní web
   flappy_platformtext: Moderní prohlížeče, smartphony, tablety
@@ -1473,7 +1233,6 @@
   teacherled_platformtext: Moderní prohlížeče, smartphony, tablety
   codeorg_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
   codeintl_shortdescription: Naučte se programovat s Markem Zuckerbergem a Angry Birds!
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Naučte se kreslit v JavaScriptu
   khanes_shortdescription: Naučte se kreslit v JavaScriptu
   khanpt_shortdescription: Naučte se kreslit v JavaScriptu
@@ -1551,12 +1310,6 @@
     do programovacích témat z předchozích kurzů a budou hledat vhodná řešení složitějších
     problémů. Na konci tohoto kurzu studenti tvoří interaktivní příběhy a hry, které
     mohou s kýmkoli sdílet. Vhodné pro 4.-8. ročník ZŠ.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší.
     Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích
     vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies.
@@ -1727,8 +1480,6 @@
   khan_beyond_name: Nauč se programovat počítač
   tynker_beyond_name: Nauč se programovat doma
   scratch_beyond_name: Buďte kreativní s programováním
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR pro nečtenáře
   hopscotch_beyond_name: 'Hopscotch: Programování na iPad'
@@ -1738,28 +1489,16 @@
   robomind_beyond_name: Naprogramujte virtuálního robota
   makeschool_beyond_name: Vytvoř hru pro iPhone ve svém prohlížeči!
   appinventor_beyond_name: AppInventor Hodina Kódu
-  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Naučte se programovat s psem Karlem
   udemy_beyond_name: Online kurzy programování
   lynda_beyond_name: Online kurzy programování
   edx_beyond_name: Třída Harvard CS50
   coursera_beyond_name: Třída Stanford CS 101
-  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Univerzitní kurzy online
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Naučte se HTML
   codeavengers_beyond_name: Naučte se kódovat webové stránky
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
   arduino_beyond_name: Arduino se Sparkfun
   processing_beyond_name: Programování v Processing
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Stáří 4-104
   khan_beyond_gradelevel: Druhý stupeň a starší
   tynker_beyond_gradelevel: Stáří 5-13
@@ -1803,9 +1542,6 @@
   scratch_beyond_platformtext: Jakýkoli prohlížeč
   lightbot_beyond_platformtext: iOS, Android (nebo webový prohlížeč)
   codecademy_beyond_platformtext: Moderní webové prohlížeče. iOS, aplikace pro Android
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobilní aplikace
   groklearning_beyond_platformtext: Moderní webové prohlížeče
   hacketyhack_beyond_platformtext: Klientská instalace
@@ -1820,14 +1556,11 @@
   coursera_beyond_platformtext: Moderní prohlížeče
   udacity_beyond_platformtext: Moderní prohlížeče
   teachingtree_beyond_platformtext: WEBově orientované
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Klientská instalace
   w3schools_beyond_platformtext: Moderní webové prohlížeče
   codeavengers_beyond_platformtext: Moderní webové prohlížeče
   mozilla_beyond_platformtext: Moderní webové prohlížeče
   codecombat_beyond_platformtext: WEBově orientované (Firefox, Chrome, Safari, IE9+)
-  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Nákup robota
   finch_beyond_platformtext: Nákup robota
   arduino_beyond_platformtext: Webový prohlížeč, pak nákup soupravy
@@ -2042,111 +1775,14 @@
     použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných
     prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat
     chyby ve funkcionalitě.
-  starwars_shortcode: sw
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
   flappy_shortcode: mávni
-  infinity_shortcode: inf
-  playlab_shortcode: hrát
-  artist_shortcode: art
-  header_home: Home
-  header_my_dashboard: My Dashboard
   header_courses: kurzy
-  header_course_catalog: Course Catalog
   header_project_gallery: Projekty
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
   header_educate_hoc: Hodina kódu
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
   header_stats: Statistiky
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
   header_help_support: 'Nápověda a podpora '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
   csp_name: Principy informatiky 2016-2017
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
-  full_course_category_name: Full Courses
   user_header_label: Ahoj %{username}
   user_header_settings: Můj účet
   user_header_logout: Odhlásit se
   user_header_signin: Přihlásit
-  view_all_sections: View All Sections
-  view_section: View Section
-  view_named_section: View %{section_name}
-  privacy_doc_explanation: Click here for our privacy document that can be shared
-    or printed for your students.
-  signing_in: Signing In
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following
-    these steps:'
-  sign_in_instruct_website: Go to Code.org and click on the 'Sign in' button on the
-    top right.
-  sign_in_instruct_code: 'Type in their 6 letter section code on the right side of
-    the page: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
-  sign_in_overview_cards: Students can find all of this information, including their
-    secret %{secret}, in the login cards below.
-  reset_student_password: Resetting student passwords
-  reset_student_password_instructions: You can reset the secret <word/picture> for
-    any of your students by going to the “Manage Students” tab for the section, clicking
-    the “Show secret” button under the “Password” column, and clicking the “Reset
-    secret” button.
-  login_cards: Login Cards
-  print_login_cards: Print login cards
-  joining_section: Joining your section (one-time only)
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
-    done so. They can do this at https://studio.code.org/users/sign_up. Note that
-    they can either sign up with an email address and password, or sign up through
-    Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
-    code: %{section_code}.'
-  joining_section_instruct_button: Once they press the “Go” button, they should be
-    added to your section.
-  signing_in_single_instruct: Your students can sign in to their Code.org accounts
-    by going to https://code.org/ and clicking on the “Sign in” button on the top
-    right corner.
-  reset_student_password_email: If your student created a Code.org account by using
-    their email address and password (instead of signing in through their Google,
-    Facebook, Microsoft, or Clever account), you can reset their password by going
-    to the “Manage Students” tab for the section, and clicking the “Reset password”
-    button under the “Password” column.
-  syncing_students: Syncing your students
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
-    Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro

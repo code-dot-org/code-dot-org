@@ -36,6 +36,7 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)\",\r\n  \"hint_id\": \"4-5_Artist_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "discard_background": "false",
     "instructions_important": "true",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

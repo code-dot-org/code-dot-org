@@ -117,28 +117,36 @@ module Pd
 
         JotFormRestClient.any_instance.
           expects(:get_submissions).
-          with(@form_id, last_known_submission_id: last_known_submission_id, min_date: nil).
+          with(@form_id, last_known_submission_id: last_known_submission_id, min_date: nil, limit: 100, offset: 0).
           returns(get_submissions_result)
 
         result = Translation.new(@form_id).get_submissions(last_known_submission_id: last_known_submission_id)
-        expected_result = [
-          {
-            form_id: @form_id,
-            submission_id: 101,
-            answers: {
-              1 => 'answer1.1',
-              2 => 'answer2.1'
-            }
+        expected_result = {
+          result_set: {
+            offset: 0,
+            limit: 100,
+            count: 2
           },
-          {
-            form_id: @form_id,
-            submission_id: 102,
-            answers: {
-              1 => 'answer1.2',
-              2 => 'answer2.2'
+          submissions:
+          [
+            {
+              form_id: @form_id,
+              submission_id: 101,
+              answers: {
+                1 => 'answer1.1',
+                2 => 'answer2.1'
+              }
+            },
+            {
+              form_id: @form_id,
+              submission_id: 102,
+              answers: {
+                1 => 'answer1.2',
+                2 => 'answer2.2'
+              }
             }
-          }
-        ]
+          ]
+        }
 
         assert_equal expected_result, result
       end
@@ -163,6 +171,11 @@ module Pd
 
       def get_submissions_result
         {
+          resultSet: {
+            offset: 0,
+            limit: 100,
+            count: 2
+          },
           content: [
             {
               id: '101',
@@ -189,6 +202,18 @@ module Pd
                   text: 'this should also be ignored',
                   type: 'control_matrix',
                   answer: false
+                },
+                '5' => {
+                  name: 'unexplainedNullAnswer',
+                  text: 'this should also be ignored',
+                  type: 'control_matrix',
+                  answer: nil
+                },
+                '6' => {
+                  name: 'emptyAnswer',
+                  text: 'this should also be ignored',
+                  type: 'control_matrix',
+                  answer: ''
                 },
               }
             },

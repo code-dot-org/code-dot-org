@@ -1,4 +1,5 @@
-"no-NO":
+---
+no-NO:
   hour_of_code: Kodetimen
   hello: Hei, verden
   'yes': Ja
@@ -10,7 +11,7 @@
     Explorer 8, 9 og 10. Venligst oppgrader til en moderne nettleser.
   upgrade_ie_link: Lær mer
   en: Datavitenskap
-  computer_science_edweek: Computer Science Education Week (CSEdWeek)
+  computer_science_edweek: Computer Science Education Week
   csedweek_dates: 8-14. Desember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Kodetimen</a> nærmer seg. Alle lærere og arrangører tilkalles!
@@ -92,18 +93,6 @@
   congratulations_volunteer: 'Gratulerer: nå har du prøvd ut Kodetimen,<a href="https://code.org/volunteer">
     meld deg på for å hjelpe til i et klasserom</a> og hjelp flere elever med å gjennomføre
     Kodetimen!'
-  congratulations_on_completing_course1: Gratulerer med å fullføre Kurs 1
-  congratulations_on_completing_course2: Gratulerer med fullført Kurs 2
-  congratulations_on_completing_course3: Gratulerer med å fullføre Kurs 3
-  congratulations_on_completing_course4: Gratulerer med fullført Kurs 4
-  congratulations_on_completing_coursea: Gratulerer med å ha fullført Kurs A
-  congratulations_on_completing_courseb: Gratulerer med å ha fullført Kurs B
-  congratulations_on_completing_coursec: Gratulerer med å ha fullført Kurs C
-  congratulations_on_completing_coursed: Gratulerer med å ha fullført Kurs D
-  congratulations_on_completing_coursee: Gratulerer med å ha fullført Kurs E
-  congratulations_on_completing_coursef: Gratulerer med å ha fullført Kurs F
-  congratulations_on_completing_accelerated: Gratulerer med å fullføre det Akselererte
-    Kurs
   congrats_next_tutorials_title: Prøv disse kursene
   congrats_next_tutorials_desc: Prøv disse kortere, 1-timers-kursene eller prøv et
     kurs fra våre <a href="%{current_path}/next">samarbeidspartenere</a>.
@@ -284,28 +273,6 @@
     @codeorg
   just_did_hoc_donor: 'Jeg ble nettopp ferdig med #Kodetimen - sjekk det ut! (Takk
     %{donor_twitter} for at dere støtter @codeorg)'
-  just_did_course1_donor: Jeg ble nettopp ferdig med Kurs 1 - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_course2_donor: Jeg ble nettopp ferdig med Kurs 2 - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_course3_donor: Jeg ble nettopp ferdig med Kurs 3 - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_course4_donor: Jeg ble nettopp ferdig med Kurs 4 - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_coursea_donor: Jeg ble nettopp ferdig med Kurs A - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_courseb_donor: Jeg ble nettopp ferdig med Kurs B - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_coursec_donor: Jeg ble nettopp ferdig med Kurs C - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_coursed_donor: Jeg ble nettopp ferdig med Kurs D - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_coursee_donor: Jeg ble nettopp ferdig med Kurs E - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_coursef_donor: Jeg ble nettopp ferdig med Kurs F - sjekk det ut! Takk %{donor_twitter}
-    for at dere støtter @codeorg
-  just_did_accelerated_donor: Jeg fullførte nettopp introduksjonskurset! Sjekk det
-    ut! Takk %{donor_twitter} for å støtte @codeorg
   twitter_teach_cs: 9 av 10 personer enig, skoler bør undervise i programmering. http://youtu.be/nKIu9yen5nc.
     Besøk https://code.org/.
   twitter_cs_foundational: Å lære programmering er fundamentalt for alle elever. https://youtu.be/QvyTEx1wyOY.
@@ -426,8 +393,6 @@
   homepage_banner_text_main: Code.org og College Board danner en allianse for å øke
     mangfoldet i informatikk.
   homepage_banner_text_link: Lær mer
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Lær mer
   homepage_banner_20k_teachers: 20 000 lærere har trent, og underviser nå informatikk
     i klasserommet.
@@ -437,7 +402,6 @@
   homepage_banner_emailprivacy: Vi gjør en viktig endring på hvordan vi støtter elevenes
     personvern.
   homepage_banner_emailprivacy_link: Les mer
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Lær mer
   homepage_slot_text_title_hoc: Kodetimen
   homepage_slot_text_blurb_hoc: Alle kan lære. Start i dag
@@ -522,7 +486,7 @@
   playlab_iceage_title: Istid - kommer snart
   playlab_iceage_title_live: Istid
   starwars_subtitle: Skap en galakse med kode
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Bruk dra-og-slipp blokker og JavaScript.
   starwars_javascript_specs: Bare Engelsk | Moderne nettlesere | For de som er 11
     år eller eldre
@@ -628,7 +592,6 @@
   sports_athlete_Harrison: Harrison Barnes, olympisk gullvinner og NBA-vinner for
     Dallas Mavericks
   watch_inspirational_videos: Før du begynner, se en av disse videoene og la deg inspirere
-  video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspirere en jente
   video_title_cs_intro: informatikk-introduksjon
   video_title_schools_dont_teach: Det skoler flest ikke underviser
@@ -641,10 +604,8 @@
   video_title_real_madrid: Kodetimen med Real Madrid
   video_title_marco_belinelli: Kodetimen med Marco Belinelli
   video_title_chris_bosh: Chris Bosh om programmering
-  video_title_my_name_is_aracely: My Name is Aracely
   video_1min: 1 min
   video_2min: 2 min
-  video_3min: 3 min
   video_5min: 5 min
   speak_another_language: Snakker du et annet språk?
   help_translate: Hjelp oss å oversette.
@@ -714,8 +675,6 @@
   volunteer_engineer_submission_field_email_placeholder: E-postadresse
   volunteer_engineer_submission_field_email_preference: Kan vi sende deg nyheter om
     kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?
-  volunteer_engineer_submission_field_email_preference_privacy: "(For mer informasjon,
-    se våre vilkår for personvern)"
   volunteer_engineer_submission_field_email_preference_yes: Ja
   volunteer_engineer_submission_field_email_preference_no: Nei
   volunteer_engineer_submission_final_paragraph: Du vil vises på et kart slik at lokale
@@ -827,7 +786,6 @@
     å tilby helårige datavitenskapskurs ved å sette eksisterende pedagogisk ansatte
     i gang med å tilby dette fagområdet. For å melde deg på de profesjonelle utviklingsverkstedene,
     søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.
-  dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org har inngått et samarbeid med Bootstrap om
     å utvikle en skoleplan som lærer bort algebraiske og geometriske konsepter gjennom
     dataprogrammering.
@@ -884,7 +842,7 @@
   dashboard_navigation_lesson_plans_resources: Oppgaveplaner og Resurser
   dashboard_navigation_view_stats: Statistikk
   dashboard_navigation_section: 'Seksjon: %{section_name}'
-  dashboard_navigation_student: 'Elev: %{student_name}'
+  dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: ikke påbegynt
   dashboard_progress_in_progress: pågår
   dashboard_progress_not_completed: ikke fullført
@@ -979,7 +937,7 @@
   dashboard_students_reset_picture: Du kan tilbakestille en elevs hemmelige bilde
     til enhver tid ved å velge <b>Vis hemmelig</b> og så <b>Tilbakestill hemmelig</b>.
     Et nytt hemmelig bilde vil bli generert for den eleven når den logger inn.
-  dashboard_students_secret_word_title: Hemmelig ord
+  dashboard_students_secret_word_title: Hemmelige ord
   dashboard_students_secret_word: Hemmelig ord
   dashboard_students_reset_word: Du kan tilbakestille en elevs hemmelige ord til enhver
     tid ved å velge <b>Vis hemmelig</b> og så <b>Tilbakestill hemmelig</b>. Et nytt
@@ -1010,11 +968,8 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
   dashboard_unplugged: Hvis dere ikke har datamaskiner i klasserommet, kan du <a href='%{unplugged_url}'>prøve
     disse analoge leksjonene</a>.
-  dashboard_tools: 'Tools: '
   dashboard_curriculum: Skoleplan
   dashboard_curriculum_overview: K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)
   dashboard_overview: Oversikt
@@ -1032,8 +987,6 @@
   dashboard_curriculum_csins: 'Datavitenskap i Vitenskap:'
   dashboard_curriculum_csp: 'AP® Datavitenskapsprinsipper:'
   dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Andre
   dashboard_login_word: Ord
@@ -1158,7 +1111,6 @@
   starwars_name: 'Star Wars: Skap en galakse med kode'
   codeorg_name: Klassisk labyrint
   codeintl_name: Klassisk labyrint
-  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: En introduksjon til JavaScript
   khanes_name: En introduksjon til JavaScript
   khanpt_name: En introduksjon til JavaScript
@@ -1167,17 +1119,13 @@
   khanpl_name: En introduksjon til JavaScript
   tynker_name: Lag ditt eget spill
   scratch_name: Vær kreativ med koding
-  lightbot_name: Lightbot
   thinkersmith_name: Mine robotliknende venner
   condcards_name: Betingelser med kort
-  lightbotintl_name: Lightbot
   codehs_name: Lære å kode med hunden Karel
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Bygg et spill med JavaScript
   processing_name: Å tegne med kode
-  robomind_name: Programmer en virtuell robot
+  robomind_name: Programmer ein virtuell robot
   groklearning_name: Chatterbot-doktotren Eliza
   quorum_name: Tilgjengelig koding (med skjemleserstøtte)
   codespark_name: Foos (velkommen, førskolebarn)
@@ -1187,11 +1135,8 @@
   flappy_name: Lag et Flappy spill
   bitsbox_name: Bitsbox - lag et spill
   makeschool_name: Lag et spill til iPhone i nettleseren!
-  touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Kodetimen
   blockly_name: Blockly
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Stein, saks, papir
   hourofcode_name: Klassisk labyrint
   playlab_name: Spill-lab
@@ -1201,7 +1146,6 @@
   allcancode_name: Kjør Marco!
   csfirst_name: CS først
   boxisland_name: Box Island
-  codesters_name: Codesters
   texasinstruments_name: 10 minutter med kode
   teacherled_name: Planlegging av Kodetimen
   course1_name: Kurs 1
@@ -1220,87 +1164,42 @@
   coursee_name: Kurs E
   coursef-draft_name: Kurs F
   coursef_name: Kurs F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
   accelerated_name: Framskyndet kurs
-  express_name: Express Course
   pre-express_name: Hurtigprogram for de som ikke leser
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: "(gammel) Enhet 1: Digital informasjon"
   cspunit2_name: "(gammel) Enhet 2: Internett"
   cspunit3_name: "(gammel) Enhet 3: Programmering"
   cspunit4_name: "(gammel) Enhet 4: Data"
   cspunit5_name: "(gammel) Enhet 5: Utforsk og lag PT"
   cspunit6_name: 'Post-AP: Databaser i apper'
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Enhet 5: Data og samfunn'
   csd6_name: 'Enhet 6: Praktisk programmering'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
   csd5-2017_name: 'Enhet 5: Data og samfunn'
   csd6-2017_name: 'Enhet 6: Praktisk programmering'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Enhet 5: Data og samfunn'
   csd6-2018_name: 'Enhet 6: Praktisk programmering'
   csp1-2017_name: 'Enhet 1: Internett'
   csp2-2017_name: 'Enhet 2: Digital informasjon'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
   csp-explore-2017_name: Utforsk PT forberedelse
   csp-create-2017_name: Lag en PT forberedelse
   csppostap-2017_name: 'Post AP: Databaser i appen'
   csp1-2018_name: 'Enhet 1: Internett'
   csp2-2018_name: 'Enhet 2: Digital informasjon'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
   csp-explore-2018_name: Utforsk PT forberedelse
   csp-create-2018_name: Lag en PT forberedelse
   csppostap-2018_name: 'Post AP: Databaser i appen'
   csp1_name: 'Enhet 1: Internett'
   csp2_name: 'Enhet 2: Digital informasjon'
-  csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Enhet 3: Introduksjon til programmering(Versjon A)'
   csp3-research-mxghyt_name: 'Enhet 3: Introduksjon til programmering (Del mål)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP ytelsesaktiviteter
   csppostap_name: 'Post AP: Databaser i appen'
-  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Full Test - 50 spørsmål
   csp-explore_name: Utforsk PT forberedelse
   csp-create_name: Lag en PT forberedelse
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
   cspunit3_gradelevel: 9.-12. klasse
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
   20-hour_name: Framskyndet kurs
   algebra_name: Informatikk i algebra
   AlgebraA_name: Informatikk i algebra Kurs A
@@ -1310,24 +1209,15 @@
   iceage_name: Istid
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blokker)
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Enkel kryptering
-  text-compression_name: Text Compression
   math_category_name: Matematikk
   hoc_category_name: Kodetimen
   csf_category_name: Grunnleggende informatikk
-  csf_2017_category_name: CS Fundamentals (2017)
-  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: Grunnleggende informatikk internasjonalt
   csf2_draft_category_name: 'Under utvikling: Kurs A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
-  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 Prinsipper i informatikk"
   csp17_category_name: "'16-'17 Prinsipper i informatikk"
-  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: Prinsipper i informatikk teoriprøve
-  research_studies_category_name: Research Studies
   applab_name: App Lab
   gamelab_name: Spill-lab
   basketball_name: Lag et basketball-spill
@@ -1338,7 +1228,6 @@
     få den til å fungere og del appen din på få sekunder
   codeorg_gradelevel: Alder 4-104
   codeintl_gradelevel: Alder 4-104
-  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Mellomtrinnet +
   khanes_gradelevel: Mellomtrinnet +
   khanpt_gradelevel: Mellomtrinnet +
@@ -1349,7 +1238,7 @@
   scratch_gradelevel: Alderen 8+
   lightbot_gradelevel: Alle aldre
   thinkersmith_gradelevel: Alle aldre
-  condcards_gradelevel: Alder 8–12
+  condcards_gradelevel: Klasse 9 +
   lightbotintl_gradelevel: Alle aldre
   codehs_gradelevel: Videregående
   codecademy_gradelevel: Videregående
@@ -1364,7 +1253,7 @@
   kodable_gradelevel: Grunnskole
   tynkerapp_gradelevel: Alderen 5 til 13
   robomindnl_gradelevel: Alderen 8-13
-  flappy_gradelevel: Alder 4-104
+  flappy_gradelevel: Passer for de som er 6 år og eldre
   bitsbox_gradelevel: Grunnskole
   makeschool_gradelevel: Videregående
   touchdevelop_gradelevel: Videregående
@@ -1374,7 +1263,7 @@
   kodableunplugged_gradelevel: Alderen 8-13
   projguts_gradelevel: Alder 10–13
   hourofcode_gradelevel: Alder 4-104
-  frozen_gradelevel: Alderen 8+
+  frozen_gradelevel: Alder 4-104
   starwars_gradelevel: Passer for de som er 6 år og eldre
   playlab_gradelevel: Alder 4-104
   infinity_gradelevel: Alder 4-104
@@ -1396,8 +1285,20 @@
   coursed_gradelevel: 8.+ klasse
   coursee_gradelevel: Klasse 9 +
   coursef_gradelevel: Klasse 10 +
+  coursea-2017_gradelevel: Klasse 5 +
+  courseb-2017_gradelevel: Klasse 6 +
+  coursec-2017_gradelevel: Klasse 7 +
+  coursed-2017_gradelevel: 8.+ klasse
+  coursee-2017_gradelevel: Klasse 9 +
+  coursef-2017_gradelevel: Klasse 10 +
+  coursea-2018_gradelevel: Klasse 5 +
+  courseb-2018_gradelevel: Klasse 6 +
+  coursec-2018_gradelevel: Klasse 7 +
+  coursed-2018_gradelevel: 8.+ klasse
+  coursee-2018_gradelevel: Klasse 9 +
+  coursef-2018_gradelevel: Klasse 10 +
   accelerated_gradelevel: Alder 10+ (etter kurs 3)
-  codeorg_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
+  codeorg_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   codeintl_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   thinkersmithspanish_platformtext: Frakobla
   khan_platformtext: Moderne nettlesere
@@ -1422,7 +1323,6 @@
   groklearning_platformtext: Moderne nettlesere
   quorum_platformtext: Moderne nettlesere. Støtte for skjermlesere
   codespark_platformtext: iOS, Android (eller nettleser)
-  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android-nettbrett
   robomindnl_platformtext: Moderne nettlesere, mobilt nett
   flappy_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
@@ -1444,10 +1344,9 @@
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Moderne nettlesere
   texasinstruments_platformtext: TI Kalkulatorer
-  teacherled_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
+  teacherled_platformtext: Moderne nettlesarar, smarttelefonar, tablet-pc'ar
   codeorg_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
   codeintl_shortdescription: Lær å kode med Mark Zuckerberg og sinte fuglar!
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Lær å teikne i JavaScript
   khanes_shortdescription: Lær å teikne i JavaScript
   khanpt_shortdescription: Lær å teikne i JavaScript
@@ -1526,12 +1425,6 @@
     i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible
     løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive
     historier og spill som de kan dele med andre. Anbefalt for 4.-8. klasse.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering.
     Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates,
     Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser
@@ -1588,7 +1481,7 @@
     Opplæringen er rettet mot elever men lærere kan registrere seg for tilgang til
     lærerverktøy og spore elevenes mestring!
   codecademy_longdescription: Codecademy er en interaktiv, elevfokusert introduksjon
-    til grunnleggende CS gjennom JavaScript som brukes av millioner av elever over
+    til grunnleggende CS gjennom JavaScript som brukes av millioner av studenter over
     hele verden. Vi har utarbeidet en problemfri Kodetime-opplevelse med tilhørende
     quiz, presentasjoner og et fullført prosjekt for elever på slutten.
   codecombat_longdescription: Overvinn uhyrer til å lære Python eller JavaScript i
@@ -1705,8 +1598,6 @@
   khan_beyond_name: Lær koding
   tynker_beyond_name: Lær koding hjemme
   scratch_beyond_name: Vær kreativ med koding
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR for førskolebarn
   hopscotch_beyond_name: 'Paradis: Programmering på iPad'
@@ -1716,28 +1607,16 @@
   robomind_beyond_name: Programmer ein virtuell robot
   makeschool_beyond_name: Lag et spill til iPhone i nettleseren!
   appinventor_beyond_name: AppInventor Kodetimen
-  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Lære å kode med hunden Karel
   udemy_beyond_name: Kodekurs på nett
   lynda_beyond_name: Kodekurs på nett
   edx_beyond_name: Harvard-faget CS50
   coursera_beyond_name: Stanford-faget CS 101
-  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Universitetskurs på nett
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Lær HTML
   codeavengers_beyond_name: Lær å programmere nettsider
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
   arduino_beyond_name: Arduino med Sparkfun
   processing_beyond_name: Programmer med Processing
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Alder 4-104
   khan_beyond_gradelevel: Mellomtrinnet +
   tynker_beyond_gradelevel: Alderen 5 til 13
@@ -1781,9 +1660,6 @@
   scratch_beyond_platformtext: Hvilken som helst nettleser
   lightbot_beyond_platformtext: iOS, Android (eller nettleser)
   codecademy_beyond_platformtext: Moderne nettlesere. iOS, Android apper
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobil applikasjon
   groklearning_beyond_platformtext: Moderne nettlesere
   hacketyhack_beyond_platformtext: Installering på datamaskinen
@@ -1798,14 +1674,11 @@
   coursera_beyond_platformtext: Moderne nettlesere
   udacity_beyond_platformtext: Moderne nettlesere
   teachingtree_beyond_platformtext: Nettbasert
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Installering på datamaskinen
   w3schools_beyond_platformtext: Moderne nettlesere
   codeavengers_beyond_platformtext: Moderne nettlesere
   mozilla_beyond_platformtext: Moderne nettlesere
   codecombat_beyond_platformtext: Nettbasert (Firefox, Chrome, Safari, IE9 +)
-  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Robotkjøp
   finch_beyond_platformtext: Robotkjøp
   arduino_beyond_platformtext: Nettlesere, deretter kjøpe Kit
@@ -2025,14 +1898,7 @@
     til <a href='%{supported_browsers_url}', target='_blank'>en nettleser vi støtter</a>.
     Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik det
     er ment.
-  starwars_shortcode: sw
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
   flappy_shortcode: flaks
-  infinity_shortcode: inf
-  playlab_shortcode: spill
-  artist_shortcode: art
   header_home: Hjem
   header_my_dashboard: Mitt Kontrollpanel
   header_courses: kurs
@@ -2071,8 +1937,6 @@
   header_tutorials: Guide
   header_documentation: Dokumentasjon
   csp_name: "'16-'17 Prinsipper i informatikk"
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
   full_course_category_name: Alle kurs
   user_header_label: Hei %{username}
   user_header_settings: Min konto

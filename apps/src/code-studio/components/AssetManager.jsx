@@ -5,6 +5,11 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetRow from './AssetRow';
 import AssetUploader from './AssetUploader';
 import assetListStore from '../assets/assetListStore';
+import AudioRecorder from './AudioRecorder';
+import experiments from '@cdo/apps/util/experiments';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from "../../templates/Button";
+import i18n from '@cdo/locale';
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -21,11 +26,42 @@ function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
 
+const RecordButton = ({onSelectRecord}) => (
+  <Button
+    onClick={onSelectRecord}
+    id="record-asset"
+    className="share"
+    text={i18n.recordAudio()}
+    icon="microphone"
+    style={assetButtonStyles.button}
+    size="large"
+  />
+);
+
+RecordButton.propTypes = {
+  onSelectRecord: PropTypes.func,
+};
+
+export const assetButtonStyles = {
+  button: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 5,
+    borderRadius: 4,
+    fontSize: 'large',
+    fontWeight: 'lighter',
+  }
+};
+
 const styles = {
   emptyText: {
     margin: '1em 0',
     fontSize: '16px',
     lineHeight: '20px'
+  },
+  buttonRow: {
+    display: 'flex',
+    flexFlow: 'row',
   }
 };
 
@@ -38,14 +74,17 @@ export default class AssetManager extends React.Component {
     assetsChanged: PropTypes.func,
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
-    useFilesApi: PropTypes.bool
+    useFilesApi: PropTypes.bool,
+    //For logging upload failures
+    projectId: PropTypes.string
   };
 
   constructor(props) {
     super(props);
     this.state = {
       assets: null,
-      statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled
+      statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
+      recordingAudio: false
     };
   }
 
@@ -106,6 +145,19 @@ export default class AssetManager extends React.Component {
   onUploadError = (status) => {
     this.setState({statusMessage: 'Error uploading file: ' +
       getErrorMessage(status)});
+    firehoseClient.putRecord(
+      {
+        study: 'project-data-integrity',
+        study_group: 'v3',
+        event: 'asset-upload-error',
+        project_id: this.props.projectId,
+        data_int: status
+      },
+    );
+  };
+
+  onSelectRecord = () => {
+    this.setState({recordingAudio: true});
   };
 
   deleteAssetRow = (name) => {
@@ -134,6 +186,18 @@ export default class AssetManager extends React.Component {
       </span>
     </div>);
 
+    const buttons = (
+      <div>
+        {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
+          <AudioRecorder onUploadDone={this.onUploadDone}/>
+        }
+        <span style={styles.buttonRow}>
+          {uploadButton}
+          {experiments.isEnabled('recordAudio') && <RecordButton onSelectRecord={this.onSelectRecord}/>}
+        </span>
+      </div>
+    );
+
     let assetList;
     // If `this.state.assets` is null, the asset list is still loading. If it's
     // empty, the asset list has loaded and there are no assets in the current
@@ -156,7 +220,7 @@ export default class AssetManager extends React.Component {
           <div style={styles.emptyText}>
             {emptyText}
           </div>
-          {uploadButton}
+          {buttons}
         </div>
       );
     } else {
@@ -187,7 +251,7 @@ export default class AssetManager extends React.Component {
               </tbody>
             </table>
           </div>
-          {uploadButton}
+          {buttons}
         </div>
       );
     }

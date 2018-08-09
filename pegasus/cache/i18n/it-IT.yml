@@ -1,4 +1,5 @@
-"it-IT":
+---
+it-IT:
   hour_of_code: Ora del codice
   hello: Ciao a tutti
   'yes': Sì
@@ -96,28 +97,7 @@
   congratulations_volunteer: 'Complimenti: ora che hai provato l''Ora del Codice,
     <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a>
     e aiuta gli studenti a imparare un''Ora del Codice!'
-  congratulations_on_completing_course1: Complimenti per aver completato il Corso
-    1
-  congratulations_on_completing_course2: Complimenti per aver completato il Corso
-    2
-  congratulations_on_completing_course3: Complimenti per aver completato il Corso
-    3
-  congratulations_on_completing_course4: Complimenti per aver completato il Corso
-    4
-  congratulations_on_completing_coursea: Complimenti per aver completato il Corso
-    A
-  congratulations_on_completing_courseb: Complimenti per aver completato il Corso
-    B
-  congratulations_on_completing_coursec: Complimenti per aver completato il Corso
-    C
-  congratulations_on_completing_coursed: Complimenti per aver completato il Corso
-    D
-  congratulations_on_completing_coursee: Complimenti per aver completato il Corso
-    E
-  congratulations_on_completing_coursef: Complimenti per aver completato il Corso
-    F
-  congratulations_on_completing_accelerated: Complimenti per aver completato il Corso
-    Rapido
+  congratulations_on_completing_course: Congratulazioni per aver completato il %{course}
   congrats_next_tutorials_title: Promosso ai corsi successivi!
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
     un <a href="%{current_path}/next">corso di un partner</a>.
@@ -132,7 +112,7 @@
     mappa di volontari per contattare volontari in zona per visitare la tua classe,
     oppure cerca in qualsiasi citta' per trovare studenti di informatica o professionisti
     pronti ad ispirare i tuoi studenti da remoto, tramite video chat.
-  congrats_guest_speaker_cta: Trova testimonial (USA)
+  congrats_guest_speaker_cta: Find a guest speaker
   congrats_third_party_title: Usa le tue nuova capacità con queste app e siti web
   third_party_gradelevel_kto8: Da 5 a 13 anni
   third_party_gradelevel_kto2: Da 5 a 7 anni
@@ -312,27 +292,7 @@
     @programmafuturo
   just_did_hoc_donor: Ho appena finito l'Ora del Codice (#HourOfCode) - Provalo! Grazie
     %{donor_twitter} per aver supportato @codeorg
-  just_did_course1_donor: Ho appena finito il Corso 1 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course2_donor: Ho appena finito il Corso 2 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course3_donor: Ho appena finito il Corso 3 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_course4_donor: Ho appena finito il Corso 4 - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursea_donor: Ho appena finito il Corso A - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_courseb_donor: Ho appena finito il Corso B - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursec_donor: Ho appena finito il Corso C - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursed_donor: Ho appena finito il Corso D - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursee_donor: Ho appena finito il Corso E - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_coursef_donor: Ho appena finito il Corso F - Provalo! Grazie %{donor_twitter}
-    per aver supportato @codeorg
-  just_did_accelerated_donor: Ho appena finito il Corso Rapido - Provalo! Grazie %{donor_twitter}
+  just_did_course_donor: Ho appena finito il %{course} - Provalo! Grazie %{donor_twitter}
     per aver supportato @codeorg
   twitter_teach_cs: 9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare
     informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/.
@@ -470,8 +430,6 @@
     l'apprendimento dell'informatica e ad aumentare la partecipazione da parte delle
     donne e degli studenti delle minoranze.
   homepage_banner_text_link: Ulteriori informazioni
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Ulteriori informazioni
   homepage_banner_20k_teachers: 20.000 insegnanti addestrati negli USA, che ora insegnano
     informatica nelle loro classi.
@@ -483,7 +441,6 @@
   homepage_banner_emailprivacy: Stiamo facendo un cambiamento importante per tutelare
     ancora di più la privacy degli studenti.
   homepage_banner_emailprivacy_link: Ulteriori informazioni…
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Ulteriori informazioni
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
@@ -572,7 +529,7 @@
   playlab_iceage_title: L'Era Glaciale - È in arrivo
   playlab_iceage_title_live: L'Era Glaciale
   starwars_subtitle: Costruisci una galassia con il codice
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Usa la programmazione a blocchi e il JavaScript.
   starwars_javascript_specs: Solo in inglese | Browser moderni | Da 11 anni in su
   starwars_blocks_title: Blocchi
@@ -585,8 +542,8 @@
     con Steve o Alex.
   mc_shortdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
     con Steve o Alex.
-  mc_gradelevel: Da 4 a 104 anni
-  mc_platformtext: Browser moderni, smartphone, Tablet
+  mc_gradelevel: Da 6 a 106 anni
+  mc_platformtext: Browser moderni, smartphone, tablet
   mc_specs: Molte lingue | Browser e tablet moderni | Da 6 anni in su
   minecraft_agent: 'Minecraft: Il viaggio dell''eroe'
   minecraft_designer: Programma il tuo Minecraft
@@ -606,40 +563,10 @@
   minecraft_download_adventurer: Scarica la versione da usare <i>in locale</i> di
     "Un avventura con Minecraft".
   minecraft_subtitle: L'Ora del Codice con Minecraft
-  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
-    free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
-    Puerto Rico or the US. Learn how coding is for everyone and combines creativity,
-    problem solving and loads of fun."
-  minecraft_host_event: Host a Minecraft Hour of Code Event
   minecraft_teach_resources: Risorse per l'insegnante e piano di lavoro della lezione.
   minecraft_leader_guide: Scarica le risorse per aiutarti a pianificare ed organizzare
     un evento.
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
-    facilitator quick start guide and PowerPoint presentations for younger and older
-    students now."
-  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
-    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
-    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
-    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
-    Get a head start on thinking through what you need to bring Hour of Code to young
-    people during Computer Science Education week (December 4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
   minecraft_future: Aiuta tutti i giovani a prepararsi al futuro
-  minecraft_future_description: Find out how other schools and nonprofits are bringing
-    digital skills, from digital literacy to computer science education, to their
-    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
-    the resources</a> they found most valuable.
-  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
-    Program animals and other Minecraft creatures in your own version of Minecraft.
   minecraft_og_agent: Minecraft è tornato per l'Ora del Codice e tu sei l'eroe! Programma
     il tuo viaggio attraverso le creature di Minecraft.
   sports_page_title: L'Ora del Codice con gli sport
@@ -825,9 +752,6 @@
   volunteer_engineer_submission_type_task_mentor: Sto cercando un mentore che mi aiuti
     a prepararmi per poter scrivere il codice con i miei studenti
   petition_age: Età
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
   dashboard_announce_learn_more_button: Ulteriori informazioni
   dashboard_landing_title: Cruscotto di Controllo dell'insegnante
   dashboard_landing_welcome: Benvenuti al nuovo cruscotto di controllo dell'insegnante.
@@ -865,8 +789,8 @@
     come C++, Ruby o Python!
   dashboard_landing_inspire: Ispira i tuoi studenti con poster, video e molto altro.
   dashboard_landing_video_library: Scegli tra i video sui concetti base di informatica.
-  dashboard_landing_report_bug: Richiedere una funzionalità o segnalare un bug.
-  dashboard_landing_teacher_forum: Unisciti alla comunità di apprendimento professionale.
+  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: L'ora del codice per tutte le età
   dashboard_hoc_courses_desc: Prova con i tuoi studenti una qualsiasi di questi corsi
     da un'ora!
@@ -933,7 +857,7 @@
     utilizzando il nostro corso <i>CS Principles</i>, ci sono domande di valutazione
     disponibili per aiutare gli studenti a prepararsi per l'esame finale. Per utilizzare
     queste domande, assegna alla classe uno dei corsi disponibili nella sezione <i>CS
-    Principles and Practice Test</i> e poi scegli il corso dal menu a tendina qui
+    Principles and Practice Test</i> e poi scegli il corso dal menù a discesa qui
     sopra per vedere le risposte degli studenti.
   dashboard_assessments_summaries: Sintesi dei risultati
   dashboard_assessments_answers: Risultati in dettaglio
@@ -984,7 +908,7 @@
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
   dashboard_sections_table_pairing_allowed: Programmazione in Coppia
-  dashboard_sections_table_stage_extras: Fase extra
+  dashboard_sections_table_stage_extras: Esercizi Supplementari
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Codice-Classe
   dashboard_sections_name: Nome della classe
@@ -1004,7 +928,7 @@
   dashboard_sections_close: Chiudi
   dashboard_sections_move_students_desc: |-
     Seleziona gli studenti da spostare in una nuova classe. Spostare gli studenti non eliminerà i loro progressi.<br><br>
-    Se alla classe in cui vengono inseriti è assegnato un corso <b>diverso</b> da quello della classe da cui provengono, per vedere i loro progressi nella scheda "Avanzamento" dovrai selezionare dal menù a tendina il corso che avevano nella classe da cui provengono.<br><br>
+    Se alla classe in cui vengono inseriti è assegnato un corso <b>diverso</b> da quello della classe da cui provengono, per vedere i loro progressi nella scheda "Avanzamento" dovrai selezionare dal menù a discesa il corso che avevano nella classe da cui provengono.<br><br>
     Inoltre, se la classe in cui vengono inseriti ha un diverso <i>tipo di accesso</i> rispetto alla classe da cui provengono, gli studenti riceveranno delle nuove password.
   dashboard_sections_one_per_teacher: Gli studenti possono trovarsi in una sola delle
     classi di uno stesso insegnante. I tuoi studenti verranno quindi assegnati alla
@@ -1035,7 +959,7 @@
   dashboard_error_none_selected: Non hai selezionato alcuno studente. Per favore,
     scegli almeno uno studente.
   dashboard_error_other_section: Se stai spostando degli studenti tra le tue classi,
-    selezionane una dal primo menù a tendina. Scegli "<b>Altro insegnante</b>" in
+    selezionane una dal primo menù a discesa. Scegli "<b>Altro insegnante</b>" in
     tale menù a tendina <b>solo</b> se devi spostare degli studenti nella classe di
     un <b>altro<b> insegnante.
   dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno
@@ -1129,7 +1053,6 @@
   dashboard_curriculum_csp: 'Principi di informatica ® AP:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
   dashboard_curriculum_csd: 'Alla Scoperta dell''Informatica (scuole medie - in inglese): '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: livello
   dashboard_grade_other: Altro
   dashboard_login_word: Parola
@@ -1245,8 +1168,6 @@
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   beyond_submission: Desideri inviarci un corso da svolgere "Dopo l'Ora del Codice"?
     Leggi i criteri e il modulo di invio.
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
   teachers_notes_hoc: 'Insegnanti: leggete qui gli avvisi per gli educatori'
@@ -1261,7 +1182,6 @@
   starwars_name: 'Guerre Stellari: Costruisci una galassia con il codice'
   codeorg_name: Labirinto Classico
   codeintl_name: Labirinto Classico
-  thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Un'introduzione a JavaScript
   khanes_name: Un'introduzione a JavaScript
   khanpt_name: Un'introduzione a JavaScript
@@ -1270,13 +1190,9 @@
   khanpl_name: Un'introduzione a JavaScript
   tynker_name: Costruisci un gioco come vuoi tu
   scratch_name: Scopri la tua creatività con la programmazione
-  lightbot_name: Lightbot
-  thinkersmith_name: I miei amici robotici
+  thinkersmith_name: I Miei Amici Robotici
   condcards_name: Istruzioni condizionali con le Carte da Gioco
-  lightbotintl_name: Lightbot
   codehs_name: Imparare a programmare con il cane Karel
-  codecademy_name: Codecademy
-  codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Costruisci un gioco con JavaScript
   processing_name: Disegna con il codice
@@ -1291,11 +1207,8 @@
   flappy_name: Costruisci la tua versione del gioco Flappy
   bitsbox_name: Bitsbox - crea un gioco
   makeschool_name: Costruisci un gioco per l'iPhone nel tuo browser!
-  touchdevelop_name: TouchDevelop
   appinventor_name: L'ora del codice per AppInventor
   blockly_name: Blockly
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sasso, Carta, Forbici
   hourofcode_name: Labirinto Classico
   playlab_name: Laboratorio
@@ -1305,7 +1218,6 @@
   allcancode_name: Corri Marco!
   csfirst_name: Prima il CS
   boxisland_name: Isola scatola
-  codesters_name: Codesters
   texasinstruments_name: 10 minuti di Coding
   teacherled_name: Piani di attività "Gestite dagli Insegnanti" per l'Ora del Codice
   course1_name: Corso 1
@@ -1324,25 +1236,25 @@
   coursee_name: Corso E
   coursef-draft_name: Corso F
   coursef_name: Corso F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
+  coursea-2017_name: Corso A (2017)
+  courseb-2017_name: Corso B (2017)
+  coursec-2017_name: Corso C (2017)
+  coursed-2017_name: Corso D (2017)
+  coursee-2017_name: Corso E (2017)
+  coursef-2017_name: Corso F (2017)
+  coursea-2018_name: Corso A (2018)
+  courseb-2018_name: Corso B (2018)
+  coursec-2018_name: Corso C (2018)
+  coursed-2018_name: Corso D (2018)
+  coursee-2018_name: Corso E (2018)
+  coursef-2018_name: Corso F (2018)
   accelerated_name: Corso rapido
   express_name: Corso Rapido
   pre-express_name: Corso Rapido pre-scolare
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
+  express-2017_name: Corso Rapido (2017)
+  pre-express-2017_name: Corso Rapido pre-scolare (2017)
   express-2018_name: Corso Rapido
-  pre-express-2018_name: Pre-reader Express Course (2018)
+  pre-express-2018_name: Corso Rapido pre-scolare (2018)
   cspunit1_name: Princìpi dell'Informatica - Unità 1
   cspunit2_name: Princìpi dell'Informatica - Unità 2
   cspunit3_name: Princìpi dell'Informatica - Unità 3
@@ -1350,89 +1262,47 @@
   cspunit5_name: Princìpi dell'Informatica - Unità 5
   cspunit6_name: 'Dopo il corso Princìpi dell''Informatica: uso di database nelle
     App'
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Dati e società'
   csd6_name: 'Unit 6: Informatica applicata'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
   csd5-2017_name: 'Unit 5: Dati e società'
   csd6-2017_name: 'Unit 6: Informatica applicata'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Unit 5: Dati e società'
   csd6-2018_name: 'Unit 6: Informatica applicata'
   csp1-2017_name: 'Unità 1: Internet'
   csp2-2017_name: 'Unità 2: Informazioni digitali'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
   csppostap-2017_name: 'Messaggio AP: Database in Apps'
   csp1-2018_name: 'Unità 1: Internet'
   csp2-2018_name: 'Unità 2: Informazioni digitali'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
   csppostap-2018_name: 'Messaggio AP: Database in Apps'
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Messaggio AP: Database in Apps'
-  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: Test completo - 50 domande
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
   cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
   cspunit3_gradelevel: Da 14 a 17 anni
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
   20-hour_name: Corso rapido
   algebra_name: L'informatica in algebra
   AlgebraA_name: Informatica nell'algebra Corso A
   AlgebraB_name: Informatica nell'algebra Corso B
-  gumball_name: Palla di gomma
+  gumball_name: Gumball
   classicmaze_name: Labirinto Classico
   iceage_name: L'Era Glaciale
   minecraft_name: Minecraft
   starwarsblocks_name: Guerre Stellari (Blocchi)
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Crittografia semplice
   text-compression_name: Compressione del Testo
   math_category_name: Matematica
   hoc_category_name: L'Ora del Codice
   csf_category_name: Corsi base
-  csf_2017_category_name: CS Fundamentals (2017)
-  csf_2018_category_name: CS Fundamentals (2018)
+  csf_2017_category_name: Fondamenti di Informatica (2017)
+  csf_2018_category_name: Fondamenti di Informatica (2018)
   csf_international_category_name: Fondamenti di Informatica (in Italiano)
   csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
-  csd_category_name: 'Under Development: CS Discoveries'
-  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: Princìpi dell'Informatica (versione 2015-16)
   csp17_category_name: "'16-'17 principi d'informatica"
-  csp_2018_category_name: CS Principles ('18-'19)
+  csp_2018_category_name: Principi di informatica ('18-'19)
   cspexams_category_name: Prova pratica di principi d'informatica
-  research_studies_category_name: Research Studies
   applab_name: Sviluppo App
   gamelab_name: Sviluppo Giochi
   basketball_name: Crea una partita di basket
@@ -1443,7 +1313,6 @@
     o JavaScript, e infine condividila.
   codeorg_gradelevel: Da 4 a 104 anni
   codeintl_gradelevel: Da 4 a 104 anni
-  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Dalla scuola media in su
   khanes_gradelevel: Dalla scuola media in su
   khanpt_gradelevel: Dalla scuola media in su
@@ -1469,7 +1338,7 @@
   kodable_gradelevel: Scuola elementare
   tynkerapp_gradelevel: Da 5 a 13 anni
   robomindnl_gradelevel: Da 8 a 13 anni
-  flappy_gradelevel: Da 4 a 104 anni
+  flappy_gradelevel: Da 6 a 106 anni
   bitsbox_gradelevel: Scuola elementare
   makeschool_gradelevel: Scuola superiore
   touchdevelop_gradelevel: Scuola superiore
@@ -1478,7 +1347,7 @@
   thinkersmith2_gradelevel: Da 8 anni in su
   kodableunplugged_gradelevel: Da 8 a 13 anni
   projguts_gradelevel: Da 10 a 13 anni
-  hourofcode_gradelevel: Da 4 a 104 anni
+  hourofcode_gradelevel: Da 6 a 106 anni
   frozen_gradelevel: Da 8 anni in su
   starwars_gradelevel: Da 6 a 106 anni
   playlab_gradelevel: Da 4 a 104 anni
@@ -1501,10 +1370,22 @@
   coursed_gradelevel: Da 7 a 11 anni
   coursee_gradelevel: Da 8 a 12 anni
   coursef_gradelevel: Da 9 a 13 anni
+  coursea-2017_gradelevel: Da 4 a 7 anni
+  courseb-2017_gradelevel: Da 5 a 8 anni
+  coursec-2017_gradelevel: Da 6 a 10 anni
+  coursed-2017_gradelevel: Da 7 a 11 anni
+  coursee-2017_gradelevel: Da 8 a 12 anni
+  coursef-2017_gradelevel: Da 9 a 13 anni
+  coursea-2018_gradelevel: Da 4 a 7 anni
+  courseb-2018_gradelevel: Da 5 a 8 anni
+  coursec-2018_gradelevel: Da 6 a 10 anni
+  coursed-2018_gradelevel: Da 7 a 11 anni
+  coursee-2018_gradelevel: Da 8 a 12 anni
+  coursef-2018_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
-  codeorg_platformtext: Browser moderni, smartphone, Tablet
-  codeintl_platformtext: Browser moderni, smartphone, Tablet
-  thinkersmithspanish_platformtext: Tradizionale
+  codeorg_platformtext: Browser moderni, smartphone, tablet
+  codeintl_platformtext: Browser moderni, smartphone, tablet
+  thinkersmithspanish_platformtext: Tradizionali
   khan_platformtext: Browser Web moderni
   khanes_platformtext: Browser Web moderni
   khanpt_platformtext: Browser Web moderni
@@ -1514,7 +1395,7 @@
   tynker_platformtext: Browser Web moderni
   scratch_platformtext: Browser web solo per computer da tavolo (non per tablet)
   lightbot_platformtext: Tutti i browser, sistemi iOS o Android, console di gioco
-  thinkersmith_platformtext: Tradizionale
+  thinkersmith_platformtext: Tradizionali
   condcards_platformtext: Tradizionali
   lightbotintl_platformtext: iOS, Android (o browser web)
   codehs_platformtext: Browser moderni. (Il proseguimento del corso è a pagamento)
@@ -1527,32 +1408,30 @@
   groklearning_platformtext: Browser Web moderni
   quorum_platformtext: Browser web moderni. I lettori di schermo sono supportati
   codespark_platformtext: iOS, Android (o browser web)
-  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, tablet Android
   robomindnl_platformtext: Browser web moderni, Browser web mobili
-  flappy_platformtext: Browser moderni, smartphone, Tablet
+  flappy_platformtext: Browser moderni, smartphone, tablet
   bitsbox_platformtext: Browser Web moderni
   makeschool_platformtext: Browser Web moderni
   touchdevelop_platformtext: Browser moderni, smartphone, tutti i dispositivi
   appinventor_platformtext: Browser moderni + Android
   blockly_platformtext: Solo per browser moderni
-  thinkersmith2_platformtext: Tradizionale
-  kodableunplugged_platformtext: Tradizionale
-  projguts_platformtext: Tradizionale
-  hourofcode_platformtext: Browser moderni, smartphone, Tablet
+  thinkersmith2_platformtext: Tradizionali
+  kodableunplugged_platformtext: Tradizionali
+  projguts_platformtext: Tradizionali
+  hourofcode_platformtext: Browser moderni, smartphone, tablet
   frozen_platformtext: Browser moderni  + tablet
   starwars_platformtext: Browser moderni  + tablet
-  playlab_platformtext: Browser moderni, smartphone, Tablet
+  playlab_platformtext: Browser moderni, smartphone, tablet
   monstercoding_platformtext: Browser moderni, iOS e Android
   allcancode_platformtext: Browser moderni e iOS
   csfirst_platformtext: Browser Web moderni
   boxisland_platformtext: Android e iOS
   codesters_platformtext: Browser Web moderni
   texasinstruments_platformtext: Calcolatori TI
-  teacherled_platformtext: Browser moderni, smartphone, Tablet
+  teacherled_platformtext: Browser moderni, smartphone, tablet
   codeorg_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Imparare a disegnare usando codice JavaScript
   khanes_shortdescription: Imparare a disegnare usando codice JavaScript
   khanpt_shortdescription: Imparare a disegnare usando codice JavaScript
@@ -1648,9 +1527,20 @@
     più grandi.)
   coursec_shortdescription_congrats: Impara le basi dell'informatica e dai vita a
     creazioni artistiche, storie animate o giochi interattivi.
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea-2017_shortdescription_congrats: Un'introduzione all'informatica per bambini
+    che non leggono ancora.
+  courseb-2017_shortdescription_congrats: Introduzione all'informatica per alunni
+    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
+    bambini leggermente più grandi.)
+  coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e dai vita
+    a creazioni artistiche, storie animate o giochi interattivi.
+  coursea-2018_shortdescription_congrats: Un'introduzione all'informatica per bambini
+    che non leggono ancora.
+  courseb-2018_shortdescription_congrats: Introduzione all'informatica per alunni
+    che devono imparare a leggere. (Simile al Corso A, ma con maggior varietà per
+    bambini leggermente più grandi.)
+  coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e dai vita
+    a creazioni artistiche, storie animate o giochi interattivi.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -1848,8 +1738,6 @@
   khan_beyond_name: Impara la programmazione informatica
   tynker_beyond_name: Impara a casa la programmazione informatica
   scratch_beyond_name: Scopri la tua creatività con la programmazione
-  lightbot_beyond_name: LightBot
-  codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR per i bambini che non sanno ancora leggere
   hopscotch_beyond_name: 'Il Gioco della Campana: programma sul tuo iPad'
@@ -1859,28 +1747,16 @@
   robomind_beyond_name: Programma un robot virtuale
   makeschool_beyond_name: Costruisci un gioco per l'iPhone nel tuo browser!
   appinventor_beyond_name: L'ora del codice per AppInventor
-  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Imparare a programmare con il cane Karel
   udemy_beyond_name: Corsi di programmazione online
   lynda_beyond_name: Corsi di programmazione online
   edx_beyond_name: Corso CS50 di Harvard
   coursera_beyond_name: Corso CS 101 di Stanford
-  udacity_beyond_name: CS 101
   teachingtree_beyond_name: Corsi universitari online
-  kodu_beyond_name: Kodu
-  cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Impara il linguaggio HTML
   codeavengers_beyond_name: Impara a programmare siti Web
-  mozilla_beyond_name: Webmaker
-  codecombat_beyond_name: CodeCombat
-  codea_beyond_name: Codea
-  lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
   arduino_beyond_name: Arduino con Sparkfun
   processing_beyond_name: Programma con il linguaggio Processing
-  alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Da 4 a 104 anni
   khan_beyond_gradelevel: Dalla scuola media in su
   tynker_beyond_gradelevel: Da 5 a 13 anni
@@ -1924,9 +1800,6 @@
   scratch_beyond_platformtext: Qualsiasi browser Web
   lightbot_beyond_platformtext: iOS, Android (o browser web)
   codecademy_beyond_platformtext: Browser web moderni. iOS, applicazioni Android
-  kodable_beyond_platformtext: iPad
-  scratchjr_beyond_platformtext: iPad
-  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: App mobile
   groklearning_beyond_platformtext: Browser Web moderni
   hacketyhack_beyond_platformtext: Installazione sul computer
@@ -1941,15 +1814,12 @@
   coursera_beyond_platformtext: Browser moderni
   udacity_beyond_platformtext: Browser moderni
   teachingtree_beyond_platformtext: Attività basate sul Web
-  kodu_beyond_platformtext: Windows, xBox
-  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Installazione sul computer
   w3schools_beyond_platformtext: Browser Web moderni
   codeavengers_beyond_platformtext: Browser Web moderni
   mozilla_beyond_platformtext: Browser Web moderni
   codecombat_beyond_platformtext: Attività basate sul Web (Firefox, Chrome, Safari,
     IE10 +)
-  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Acquisto di un robot
   finch_beyond_platformtext: Acquisto di un robot
   arduino_beyond_platformtext: Browser Web, poi acquisto del Kit
@@ -2190,14 +2060,7 @@
     aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'>
     uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina,
     ma aspettati qualche malfunzionamento.
-  starwars_shortcode: sw
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
   flappy_shortcode: sbatti le ali
-  infinity_shortcode: inf
-  playlab_shortcode: inizia
-  artist_shortcode: art
   header_home: Home
   header_my_dashboard: Controllo
   header_courses: Corsi
@@ -2236,8 +2099,6 @@
   header_tutorials: Corsi
   header_documentation: Documentazione
   csp_name: "'16-'17 principi d'informatica"
-  csd_name: CS Discoveries
-  csd_2018_name: CS Discoveries
   full_course_category_name: Corsi Avanzati
   user_header_label: Ciao %{username}
   user_header_settings: Il mio account
@@ -2266,16 +2127,6 @@
   login_cards: Schede di accesso
   print_login_cards: Stampa le schede di accesso
   joining_section: Iscrizione alla tua classe (una tantum)
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
-    done so. They can do this at https://studio.code.org/users/sign_up. Note that
-    they can either sign up with an email address and password, or sign up through
-    Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
   joining_section_instruct_code: 'Accedere alla pagina %{code_org_url} ed inserire
     il codice classe: %{section_code}.'
   joining_section_instruct_button: Alla pressione del pulsante “Go”, loro dovrebbero
@@ -2289,10 +2140,5 @@
     la password accedendo alla scheda "Gestisci gli studenti" per la classe, e cliccare
     sul pulsante "Reimposta la password" sotto la colonna "Password".
   syncing_students: Sincronizzazione studenti
-  syncing_students_instructions: 'If your Code.org section is ever out of date with
-    your list of students in Google Classroom, click on the “Sync students from Google
-    Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
-    Account” option:'
   hero_name: 'Minecraft: Il viaggio dell''eroe'
   applab-intro_name: Introduzione a Sviluppo App

@@ -13,6 +13,14 @@ import {stringifyQueryParams} from '../../utils';
  */
 
 /**
+ * NodeStyleCallback with additional jquery XHR object in the success case.
+ * @typedef {function} AjaxNodeStyleCallback
+ * @param {Error|null} error - null if the async operation was successful.
+ * @param {*} result - return value for async operation.
+ * @param {jqXHR} [jqXHR] - jquery XHR object, if the request was successful.
+ */
+
+/**
  * @name ClientApi
  */
 var base = {
@@ -83,7 +91,7 @@ var base = {
   /**
    * Retrieve a collection.
    * @param {string} childPath The path underneath api_base_url
-   * @param {NodeStyleCallback} callback - Expected result is the requested
+   * @param {AjaxNodeStyleCallback} callback - Expected result is the requested
    *        collection object.
    */
   fetch: function (childPath, callback) {
@@ -91,8 +99,8 @@ var base = {
       url: this.api_base_url + "/" + childPath,
       type: "get",
       dataType: "json",
-    }).done(function (data, text) {
-      callback(null, data);
+    }).done(function (data, textStatus, jqXHR) {
+      callback(null, data, jqXHR);
     }).fail(function (request, status, error) {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, undefined);

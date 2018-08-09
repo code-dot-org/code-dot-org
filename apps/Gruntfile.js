@@ -141,7 +141,7 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: 'node_modules/@code-dot-org/craft/src/assets',
+          cwd: 'node_modules/@code-dot-org/craft/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/craft',
         },
@@ -200,6 +200,18 @@ describe('entry tests', () => {
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
           dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: 'lib',
+          src: ['p5.sound.min.js'],
+          dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: './node_modules/gif.js/dist',
+          src: ['gif.worker.js'],
+          dest: 'build/package/js/dance/'
         },
         {
           expand: true,
@@ -428,6 +440,7 @@ describe('entry tests', () => {
     return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }));
   var codeStudioEntries = {
+    'blockly':                      './src/sites/studio/pages/blockly.js',
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
@@ -438,6 +451,7 @@ describe('entry tests', () => {
     'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'blocks/edit':                  './src/sites/studio/pages/blocks/edit.js',
     'shared_blockly_functions/edit':'./src/sites/studio/pages/shared_blockly_functions/edit.js',
+    'libraries/edit':               './src/sites/studio/pages/libraries/edit.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/_dialog':               './src/sites/studio/pages/levels/_dialog.js',
@@ -450,6 +464,7 @@ describe('entry tests', () => {
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'levels/_external_link':        './src/sites/studio/pages/levels/_external_link.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
+    'levels/editors/_droplet':      './src/sites/studio/pages/levels/editors/_droplet.js',
     'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
     'projects/index':               './src/sites/studio/pages/projects/index.js',
@@ -513,6 +528,8 @@ describe('entry tests', () => {
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
     'pd/regional_partner_contact/new': './src/sites/studio/pages/pd/regional_partner_contact/new.js',
 
+    'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',
+
     'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
 
     'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
@@ -535,6 +552,7 @@ describe('entry tests', () => {
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js',
+    dance: './src/gamelab/dance.js',
   };
 
   // Create a config for each of our bundles
@@ -634,21 +652,9 @@ describe('entry tests', () => {
       host: '0.0.0.0',
       watchOptions: {
         aggregateTimeout: 1000,
-        poll: 1000
+        poll: 1000,
+        ignored: /^node_modules\/[^@].*/
       },
-    }
-  };
-
-  var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
-  config.concat = {
-    vendor: {
-      src: [
-        'lib/blockly/preamble_' + ext + '.js',
-        'lib/blockly/blockly_' + ext + '.js',
-        'lib/blockly/blocks_' + ext + '.js',
-        'lib/blockly/javascript_' + ext + '.js',
-      ],
-      dest: 'build/package/js/blockly.js'
     }
   };
 
@@ -687,7 +693,7 @@ describe('entry tests', () => {
     },
     vendor_js: {
       files: ['lib/**/*.js'],
-      tasks: ['newer:concat', 'newer:copy:lib', 'notify:vendor_js'],
+      tasks: ['newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         livereload: envConstants.AUTO_RELOAD
@@ -713,23 +719,13 @@ describe('entry tests', () => {
     }
   },
 
-  config.strip_code = {
-    options: {
-      start_comment: 'start-test-block',
-      end_comment: 'end-test-block'
-    },
-    all: {
-      src: ['build/js/*.js']
-    }
-  };
-
   config.notify = {
     'js-build': {options: {message: 'JS build completed.'}},
     sass: {options: {message: 'SASS build completed.'}},
     content: {options: {message: 'Content build completed.'}},
     ejs: {options: {message: 'EJS build completed.'}},
     messages: {options: {message: 'i18n messages build completed.'}},
-    vendor_js: { options: {message: 'Blockly concat & vendor JS copy done.'}}
+    vendor_js: { options: {message: 'vendor JS copy done.'}}
   };
 
   grunt.initConfig(config);
@@ -770,7 +766,6 @@ describe('entry tests', () => {
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
-    'newer:strip_code',
     'ejs'
   ]);
 
@@ -814,7 +809,6 @@ describe('entry tests', () => {
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
-    'newer:concat',
     'newer:sass',
     'compile-firebase-rules'
   ]);
@@ -848,7 +842,6 @@ describe('entry tests', () => {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
-    'concat',
     'karma:unit'
   ]);
 
@@ -858,14 +851,12 @@ describe('entry tests', () => {
 
   grunt.registerTask('integrationTest', [
     'preconcat',
-    'concat',
     'karma:integration'
   ]);
 
   // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
   grunt.registerTask('scratchTest', [
     'preconcat',
-    'concat',
     'karma:scratch',
   ]);
 

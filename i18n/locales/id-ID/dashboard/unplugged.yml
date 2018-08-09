@@ -4,69 +4,36 @@ id:
       Unplug1:
         title: Perkenalan ilmu komputer
         desc: Pelajaran ini akan memperkenalkan konsep Ilmu Komputer dan menjelaskan pekerjaan seorang Ilmuwan Komputer. Pelajaran ini juga akan memberikan kesempatan kepada para siswa untuk berperan sebagai Ilmuwan Komputer. Di akhir kegiatani, setiap siswa akan mendapatkan pekerjaan rumah untuk mengingat apa yang mereka telah pelajari. Anda mungkin tergoda untuk melewatkan mengajar anak-anak muda kosa kata yang berkaitan dengan pelajaran yang mereka ikuti, tetapi menyajikan mereka dalam cara yang lucu dan menyenangkan sekarang jauh lebih produktif daripada menunggu kesempatan yang lebih lanjut.
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: Berpikir secara komputasi
         desc: Hanya dengan kertas dan spidol, para siswa akan belajar 4 langkah berpikir secara komputasi. Setelah pengenalan singkat, para siswa harus dibagi menjadi beberapa kelompok di mana mereka harus memberikan arahan kepada siswa lain untuk menggambar sebuah monster (dari sebuah katalog monster yang telah dipilih). Seluruh tugas harus diuraikan, maka para tim akan menganalisa semua monster di katalog untuk pola-pola, beberapa rincian abstrak dari monster-monster tersebut, kemudian menggunakan informasi itu untuk membuat sebuah algoritma (arahan) kepada tim lain untuk membuat sebuah monster. Para tim kemudian berganti algoritma dengan kelompok lain dan menggambar monster sesuai dengan yang tertera pada algoritma. Apakah gambarnya sesuai dengan yang diinginkan tim awal?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: Pemrograman grafis diatas kertas
         desc: Dengan memprogram satu sama lain untuk menggambar, murid-murid akan mengerti apakah pemrogaman sebenarnya itu. Kelas kan dimulai dengan mereka saling mengarahkan untuk menggambar persegi berwarna di kertas grafik dalam usaha membuat lagi gambar yang telah ada. Jika masih ada waktu, pelajaran dapat diakhiri dengan gambar-gambar yang mereka buat sendiri.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritma
         desc: Pelajaran ini mencakup algoritma.  Menggunakan bentuk tangram dan kertas grafik, latihan pertama akan menunjukkan pentingnya membuat instruksi yang sejelas mungkin.  Selanjutnya, kelas akan menjelajahi berapa banyak cara Anda dapat melipat kertas menjadi persegi panjang, mencatat bagaimana beberapa metode dapat memerlukan lipatan yang lebih banyak atau lebih sedikit daripada yang lain.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: fungsi
         desc: Dalam pelajaran ini, siswa akan membuat suncatcher string, manik-manik, dan pesona khusus. Siswa akan mengikuti serangkaian langkah-langkah yang berulang-ulang, kemudian diminta untuk mengidentifikasi set "kemampuan" tertentu yang merupakan duplikasi beberapa kali. Setelah keterampilan-keterampilan ditentukan, mereka akan dipanggil dari program utama dan seluruh proses yang indah ciptaan akan disimpan pada selembar kertas. akhir program ini akan diarahkan kepada seluruh kelas, apa pun jenis string, manik-manik dan pesona mereka. Untuk mengefektifkan memungkinkan hal tersebut dilakukan, siswa akan perlu "abstrak keluar" rincian dari bahan-bahan mereka dan menciptakan istilah yang Samar untuk kebutuhan individu.Hal ini memanfaatkan penampung yang umum merupakan pengenalan yang indah untuk variabel.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: Persyaratan
         desc: Ini adalah permainan kelas.  Setelah memperkenalkan gagasan conditional, pernyataan if-else (jika-lain dari itu) dan loop (putaran), kelas dapat berlatih bersama-sama menggunakan program yang telah ditulis, setumpuk kartu, dan keberuntungan mengundi.
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: Menulis lagu
         desc: Membaca lirik adalah pengalaman yang cukup intuitif untuk sebagian besar siswa.  Kita akan mengambil suatu kegiatan yang sudah umum dan mengubahnya menjadi bahan edukasi dalam menjelaskan dan memanggil fungsi.  Setelah siswa terbiasa dengan proses mendefinisikan panggilan, kita akan menambahkan kemampuan tambahan yang datang bersama dengan melewati parameter dalam pemanggilan fungsi tersebut.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstraksi
         desc: Kegiatan ini menggabungkan rutinitas sehari-hari siswa Anda dan permainan pikiran seperti Mad-Lib untuk membantu kelas Anda belajar tentang efektivitas abstraksi.
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
         title: Pemrograman relay
         desc: Pelajaran ini akan mengambil ide dari kegiatan sebelumnya (4. Kertas grafik pemrograman) dan menggunakan keterampilan mereka untuk menekankan pentingnya menyelesaikan program yang beroperasi dalam urutan dan sering memeriksa program untuk "bug".
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: Internet
         desc: Dalam pelajaran ini, siswa akan berpura-pura untuk mengalir di dalam Internet, sambil belajar tentang alamat web, IP (Protokol Internet) dan DNS (Sistem Penamaan Domain).
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: Penutupan
         desc: Tahap terakhir dalam seri 20 jam pertama ini akan membantu para siswa mengingat kembali semua momen favorit mereka, sambil memberikan langkah-langkah selanjutnya yang dapat mereka ambil jika tertarik untuk melanjutkan perjalanan ilmu komputer mereka.
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Pemetaan bahagia
         desc: Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan karakter melalui labirin menggunakan perintah tunggal.
@@ -110,10 +77,10 @@ id:
         title: Berpikir secara komputasi
         desc: Siswa menggunakan langkah-langkah berpikir komputasi (penguraian, pencocokan pola, abstrak, algoritma) untuk menemukan bagaimana memainkan permainan yang tidak dilengkapi instruksi.
       FunctionalSuncatchers:
-        title: Fungsional Penangakap Matahari
+        title: Fungsional pengkap matahari
         desc: Siswa membuat algoritma dengan variabel dan fungsi (potongan kode yang Anda ingin menggunakan lagi) untuk menciptakan suncatchers menggunakan string dan manik-manik.
       SongwritingParameters:
-        title: Penulisan lagu dengan Parameter
+        title: Menulis lagu
         desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh fungsi).
       DiceRace:
         title: 'Algoritma kehidupan nyata: Dice Race'
@@ -122,7 +89,7 @@ id:
         title: Internet
         desc: Siswa mengirim pesan yang mewakili berbagai metode transmisi internet menggunakan potongan-potongan kertas.
       Crowdsourcing:
-        title: Kerumunan
+        title: Sumber kerumunan
         desc: Siswa menggunakan crowdsourcing, teknik pemecahan masalah umum dalam ilmu komputer, untuk menyelesaikan tugas bersama sebagai kelas yang lebih efisien dibandingkan jika siswa berusaha sendiri.
       DigitalCitizenship:
         title: Kewarganegaraaan Digital
@@ -164,7 +131,6 @@ id:
         title: Pendeteksian Benturan dan Teorema Pythagoras
         desc: Menentukan kapan objek pada layar sentuh merupakan aspek penting dari sebagian besar permainan. Dalam pelajaran ini kita akan melihat bagaimana Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau karakter game) yang menyentuh.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       courseB_unplugged_MRF:
         title: Kegiatan tanpa komputer
@@ -185,7 +151,6 @@ id:
         title: Kegiatan tanpa komputer
         desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang sedang online.
       deeper learning description:
-        title: ''
         desc: 'terjemahan hilang: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
@@ -218,7 +183,7 @@ id:
         title: Pemrograman grafis diatas kertas
         desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah gambar.
       courseD_unplugged_relayProgramming:
-        title: Pemrograman relay
+        title: Pemrograman bergiliran
         desc: Siswa menjalankan perlombaan estafet, dimana mereka lari di halaman untuk menulis sebuah algoritma yang didasarkan pada sebuah gambar "Pemrograman kertas grafik". Mereka hanya dapat menulis satu instruksi pada satu waktu dan jika ada kesalahan di suatu tempat, mereka harus menghapus semua kembali ke titik itu.
       courseD_unplugged_conditionalsCards:
         title: Bersyarat dengan kartu
@@ -227,7 +192,6 @@ id:
         title: gambar Biner
         desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi lebih rumit (seperti gambar dan warna) dalam biner, juga.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Pelajaran ini memanggil cara kita menggunakan algoritma dalam kehidupan kita sehari-hari. Sebagai bagian dari itu, siswa akan mengidentifikasi dan menuliskan algoritma untuk game balapan dadu.
       courseE_unplugged_songwritingParameters:
         title: Penulisan lagu dengan Parameter
@@ -236,10 +200,10 @@ id:
         title: Internet
         desc: Siswa mengirim pesan yang mewakili berbagai metode transmisi internet menggunakan potongan-potongan kertas.
       courseE_unplugged_crowdsourcing:
-        title: Kerumunan
+        title: Sumber kerumunan
         desc: Siswa menggunakan crowdsourcing, teknik pemecahan masalah umum dalam ilmu komputer, untuk menyelesaikan tugas bersama sebagai kelas yang lebih efisien dibandingkan jika siswa berusaha sendiri.
       courseE_unplugged_songwriting:
-        title: Penulisan lagu dengan Parameter
+        title: Menulis lagu
         desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh fungsi).
       courseF_unplugged_tangrams:
         title: Algoritma tangram
@@ -255,52 +219,10 @@ id:
         desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
       swipeRightPassThrough:
         title: Sesi Skenario Perekrutan
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
       swipeRightPassThrough-test123:
         title: Sesi Skenario Perekrutan
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Teman-teman robot saya
       PlantASeed_2018:
         title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
         desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran amat penting.
@@ -311,7 +233,6 @@ id:
         title: Pergi ke tempat-tempat dengan aman
         desc: Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat melakukan navigasi Internet.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       BigEvent_2018:
         title: Acara besar
@@ -345,13 +266,5 @@ id:
         desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan pada lebih dari satu cara.
       MoveItMoveIt_2018:
         title: Gerakkan itu, Gerakkan itu
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
-        title: Pemrograman relay
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+        title: Pemrograman bergiliran

@@ -54,6 +54,7 @@ export default class LandingPage extends Component {
           <LastWorkshopSurveyBanner
             subHeading={subHeading}
             description={description}
+            surveyUrl={this.props.lastWorkshopSurveyUrl}
           />
        )}
         <EnrolledWorkshops/>
@@ -75,7 +76,7 @@ const HeaderImage = () => (
   </div>
 );
 
-const LastWorkshopSurveyBanner = ({subHeading, description}) => (
+export const LastWorkshopSurveyBanner = ({subHeading, description, surveyUrl}) => (
   <TwoColumnActionBlock
     isRtl={false}
     responsiveSize="lg"
@@ -84,13 +85,15 @@ const LastWorkshopSurveyBanner = ({subHeading, description}) => (
     description={description}
     buttons={[
       {
-        url: "/",
-        text: i18n.plLandingStartSurvey()
+        url: surveyUrl,
+        text: i18n.plLandingStartSurvey(),
+        target: '_blank'
       }
     ]}
   />
 );
 LastWorkshopSurveyBanner.propTypes = {
   subHeading: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
+  surveyUrl: PropTypes.string,
 };

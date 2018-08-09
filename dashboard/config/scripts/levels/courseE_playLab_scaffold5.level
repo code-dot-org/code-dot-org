@@ -50,6 +50,7 @@
     "disable_if_else_editing": "true",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish.\",\"hint_id\":\"courseE_playLab_scaffold5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/325da1a83f40cedf619fe658feb10692/courseE_playLab_scaffold5.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

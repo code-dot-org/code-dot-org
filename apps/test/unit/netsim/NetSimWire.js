@@ -1,9 +1,8 @@
 import {assert} from '../../util/configuredChai';
-var testUtils = require('../../util/testUtils');
+import {assertOwnProperty} from "../../util/assertions";
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 
-var assertOwnProperty = testUtils.assertOwnProperty;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var fakeShard = NetSimTestUtils.fakeShard;
 

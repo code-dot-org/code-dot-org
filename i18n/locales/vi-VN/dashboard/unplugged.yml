@@ -4,69 +4,36 @@ vi:
       Unplug1:
         title: Giới thiệu về khoa học máy tính
         desc: Bài học này sẽ giới thiệu cho các bạn khái niệm về Khoa Học Máy Tính và giải thích công việc của nhà khoa học máy tính là gì. Đó là một cơ hội cho học sinh-sinh viên xem xét về vai trò của một nhà khoa học máy tính. Cuối mỗi hoạt động, mỗi học sinh cần ghi nhớ những gì các em đã được học. Bạn có thể bỏ qua dạy trẻ những từ mới liên quan đến bài sau, nhưng diễn đạt chúng theo cách sinh động và thú vị sẽ có hiệu quả hơn là việc chờ những cơ hội phía trước.
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: suy nghĩ máy móc
         desc: Chỉ cần giấy và bút, học sinh sẽ được học 4 bước giải quyết vấn đề sử dụng kĩ thuật vi tính. Sau lời giới thiệu ngắn gọn, học sinh sẽ được chia ra thành nhiều nhóm, các em sẽ phải tạo ra những hướng dẫn cho những học sinh khác vẽ ra những con monster cụ thể (từ một cửa hàng quái vật chọn sẵn). Toàn bộ nhiệm vụ phải được phân tích, sau đó đội sẽ phân tích các quái vật theo mô hình, tóm tắt các chi tiết khác nhau từ chúng, sau đó sử dụng thông tin đó để tạo ra thuật toán( các hướng dẫn) cho các đội khác để tạo ra một con quái vật nào đó. Các đội sẽ chuyển đổi thuật toán với một nhóm khác và tạo ra một con quái vật dựa trên những gì thuật toán hướng dẫn. Đây có phải là bản vẽ mà ban đầu đội đã dự định?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: lập trình đồ thị trên giấy
         desc: Bằng cách lập trình vẽ những bức tranh, học sinh có thể hiểu thực sự lập trình là gì. Lớp học bắt đầu bằng việc các em hướng dẫn nhau cách tô màu những ô vuông trên bản vẽ, nỗ lực để vẽ lại một hình ảnh sẵn có. Nếu có thời gian, bài học có thể kết thúc với những hình ảnh mà các em đã tự vẽ ra.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: các bước lập trình
         desc: Bài này bao gồm những thuật toán. Sử dụng hình ảnh tangram và giấy vẽ sơ đồ, bài tập đầu tiên sẽ chỉ ra mức độ quan trọng của việc tạo ra mỗi hướng dẫn sao cho rõ ràng nhất có thể. Sau đó, lớp sẽ khám phá ra nhiều cách để gấp tờ giấy thành hình chữ nhật, chú ý một vài cách có thể cần nhiều hoặc ít nếp gấp hơn những cái khác.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: Các hàm
         desc: Trong bài học này, học sinh sẽ làm một cái vợt mặt trời (suncatcher) từ những sợi dây, hạt và một thứ xinh xắn đặc biệt. Các em sẽ làm theo một loạt những bước lặp đi lặp lại, sau đó được yêu cầu xác định một số kĩ năng đã được lặp lại nhiều lần. Một khi những kỹ năng này được xác định, chúng sẽ  được gọi từ một chương trình chính và quá trình sáng tạo tuyệt vời sẽ được ghi lại trên một tờ giấy duy nhất. Chương trình cuối cùng sẽ được hướng về toàn bộ lớp học, bất kể loại chuỗi hay hạt nào. Để có hiệu quả, các bạn sẽ cần phải tóm tắt ra chi tiết những tài liệu cụ thể của họ và tạo ra những thuật ngữ mơ hồ cho nguồn cung cấp của một cá nhân. Sử dụng những điểm chung này là một sự giới thiệu biến số tuyệt vời.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: Điều kiện
         desc: Đây là trò chơi trong lớp. Sau khi giới thiệu ý tưởng về các điều kiện, câu lệnh if, và vòng lặp, cả lớp có thể luyện tập cùng nhau sử dụng một chương trình viết trước, một cỗ bài, và vẽ vận may.
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: Viết nhạc
         desc: Đọc lời bài hát là một việc làm theo cảm tính hết sức mạo hiểm. Chúng tôi sẽ thực hiện một hành động mà nó đã là kiến thức phổ biến và thay đổi thành một nền giáo dục vững chắc đang được xác định và đang hoạt động. Một khi các em quen thuộc với quá trình xác định/cuộc gọi, chúng tôi sẽ thêm khả năng phụ cùng với những tham số trong những cuộc gọi chức năng đó.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: Trừu tượng
         desc: Hoạt động này kết hợp với những thói quen hàng ngày của các bạn học sinh và phong cách tư duy trò chơi Mad-Lib sẽ giúp lớp của bạn học hiệu quả hơn những khái niệm trừu tượng.
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
         title: Chương trình chuyển tiếp
         desc: Bài học này sẽ thực hiện một ý tưởng từ một hoạt động trước đó (4. Lập trình giấy vẽ sơ đồ) và sử dụng những kĩ năng đó để nhấn mạnh sự quan trọng của việc hoàn thành những chương trình hoạt động theo thứ tự và thường xuyên kiểm tra lỗi của chương trình.
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: Internet
         desc: Trong bài học này, các em sẽ tưởng tượng lướt web, đồng thời tìm hiểu về địa chỉ web, IP và DNS.
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: Tổng hợp
         desc: Bước tổng hợp cuối cùng trong loạt 20 giờ đầu tiên sẽ giúp lớp học tái hiện lại những khoảnh khắc yêu thích của họ, hướng dẫn các em rằng bước tiếp theo các em có thể tự mình thực hiện nếu các em học sinh thực sự có hứng thú với khoa học máy tính.
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Bản đồ thú vị
         desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
@@ -164,7 +131,6 @@ vi:
         title: Phát hiện sự va chạm và định lý Pythagore
         desc: Xác định các đối tượng trên màn hình cảm ứng là một khía cạnh quan trọng của hầu hết các trò chơi. Trong bài học này, chúng ta sẽ xem cách định lý Pythagore và công thức Khoảng cách được sử dụng để đo khoảng cách giữa hai điểm trên mặt phẳng, và tính xem khi nào hai điểm đó (hoặc các nhân vật điện tử) chạm vào nhau.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: Trong bài học này, bạn sẽ học về vòng lặp!
       courseB_unplugged_MRF:
         title: Hoạt động không dùng máy
@@ -185,7 +151,6 @@ vi:
         title: Hoạt động không dùng máy
         desc: Hôm nay bạn sẽ tìm hiểu về những gì phải làm nếu một người nào đó được ám chỉ là đang online.
       deeper learning description:
-        title: ''
         desc: 'bản dịch thiếu: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Thuật toán đời sống: Trồng một hạt giống'
@@ -221,7 +186,6 @@ vi:
         title: Chương trình chuyển tiếp
         desc: Học sinh tham gia chạy tiếp sức, nơi các em sẽ lao qua sân để viết một thuật toán dựa trên hình ảnh "Lập Trình Giấy Vẽ Sơ Đồ". Các em chỉ có thể viết  từng hướng dẫn một và nếu có lỗi sai ở đâu đó, các em phải xóa hết đi và quay lại từ đầu từ điểm đó.
       courseD_unplugged_conditionalsCards:
-        title: Conditionals with Cards
         desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu Tôi rút được một thẻ đen, bạn sẽ được một điểm."
       courseD_unplugged_binaryImages:
         title: Hình ảnh Nhị phân
@@ -263,44 +227,8 @@ vi:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Nỗ lực tạo lại một con bọ Brooke\\r theo quy trình sau:\\r\n1. bắt đầu với cấp độ không cần máy tính. làm quen với thông tin. nhấn sao lưu và đăng tin.\\r\n2. \"phá huỷ\" cấp độ\\r\n3. tạo một cấp độ \"đánh dấu\" với cùng một nội dung và cùng tên. Kiểm tra hộp thư mã hoá nó. nhấn sao lưu"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Bạn bè robot của tôi
+        desc: Học cách lập trình bằng việc viết mã cho bạn bè!
       PlantASeed_2018:
         title: 'Thuật toán đời sống: Trồng một hạt giống'
         desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai trò thiết yếu.
@@ -311,7 +239,6 @@ vi:
         title: Đến nơi an toàn
         desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt web.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: Trong bài học này, bạn sẽ học về vòng lặp!
       BigEvent_2018:
         title: Sự kiện lớn
@@ -345,13 +272,5 @@ vi:
         desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu trữ theo nhiều hơn một cách.
       MoveItMoveIt_2018:
         title: Di chuyển nó, di chuyển nó
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Chương trình chuyển tiếp
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

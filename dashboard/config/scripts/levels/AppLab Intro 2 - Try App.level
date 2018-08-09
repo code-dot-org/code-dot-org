@@ -15,7 +15,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg\", style=\"float:right;width:200px\">\r\n\r\n# Getting Started - Try this app\r\n\r\nYou're going to build a \"Choose Your Own Adventure\" app by extending this project. To get you started you already have the parts of your project outlined in blue. Hit \"Run\" and click through what's already been created for you. \r\n\r\nOnce you see how the project already works hit \"Finish\" to start making it yours.",
+    "markdown_instructions": "<img src=\"https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg\" style=\"float:right;width:200px\">\r\n\r\n# Getting Started - Try this app\r\n\r\nYou're going to build a \"Choose Your Own Adventure\" app by extending this project. To get you started you already have the parts of your project outlined in blue. Hit \"Run\" and click through what's already been created for you. \r\n\r\nOnce you see how the project already works hit \"Finish\" to start making it yours.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"dogButton\", \"click\", function() {\r\n  setScreen(\"dogScreen\");\r\n});",

@@ -22,6 +22,7 @@ function showCourses() {
   const signedOut = coursesData.signedout;
   const showInitialTips = !coursesData.initialtipsdismissed;
   const userId = coursesData.userid;
+  const modernElementaryCoursesAvailable = coursesData.modernelementarycoursesavailable;
 
   ReactDOM.render (
     <Provider store={getStore()}>
@@ -34,6 +35,7 @@ function showCourses() {
         isSignedOut={signedOut}
         showInitialTips={showInitialTips}
         userId={userId}
+        modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
       />
     </Provider>,
     document.getElementById('courses-container')

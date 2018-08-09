@@ -242,24 +242,20 @@ es-MX:
         text: "¡Ahora llevemos a esos zombies a donde pertenecen!"
     if_else_scrat:
       1:
-        image: notes/saloni_ifelse_scrat1.jpg
         text: Una instrucción si-si no es una decisión entre dos cosas. Vamos a ver
           cómo podemos utilizar una instrucción si-si no con nuestro amigo Scrat la
           ardilla.
       2:
-        image: notes/saloni_ifelse_scrat2.jpg
         text: Este bloque se ve igual que el bloque "si", pero hay una pieza extra
           en la parte inferior que dice "si no". Si ponemos un bloque "avanzar" donde
           dice "hacer" y un bloque "girar a la izquierda" donde dice "si no", eso
           significa que la ardilla Scrat avanzará si hay un camino delante. Si no
           hay un camino a seguir, Scrat girará a la izquierda.
       3:
-        image: notes/saloni_ifelse_scrat3.jpg
         text: Es tomar una decisión y realizar una de las dos acciones en base a esa
           decisión. Y al igual que los bloques "si", puedes poner bloques "si-si no"
           dentro de bloques "repetir".
       4:
-        image: notes/saloni_ifelse_scrat4.jpg
         text: "¡Ahora vamos a ayudar a la ardilla Scrat a conseguir esa bellota!"
     function:
       1:
@@ -382,79 +378,65 @@ es-MX:
         text: "¡Mostrar notas estará disponible pronto!"
     frozen_intro:
       1:
-        image: notes/frozen1_1.jpg
         text: Hola, mi nombre es Lindsey. Modelo, actúo y escribo mis propias aplicaciones.
           Vamos a usar código para unirnos a Ana y Elsa en la exploración de la magia
           y la belleza del hielo.
       2:
-        image: notes/frozen1_2.jpg
         text: Vas a crear copos de nieve y patrones, mientras patinas sobre hielo,
           realizas un paisaje invernal que luego puedes compartir con tus amigos.
       3:
-        image: notes/frozen1_3.jpg
         text: En la próxima hora, vas a aprender lo básico para poder programar. La
           programación tradicional es generalmente en texto escrito, pero usaremos
           Blockly, que utiliza bloques visuales que puedes arrastrar y soltar para
           escribir programas. De esta forma, incluso aprenden las bases los estudiantes
           universitarios. Pero en realidad, todavía estás generando código.
       4:
-        image: notes/frozen1_4.jpg
         text: Un programa es un conjunto de instrucciones que le dice a una computadora
           qué hacer. Vamos a construir un código o un programa que ayudará a Elsa
           a crear una línea simple. Más tarde, utilizaremos esto para crear patrones
           más complejos.
       5:
-        image: notes/frozen1_5.jpg
         text: La pantalla se divide en tres partes principales. A la izquierda, está
           la superficie de hielo en donde se ejecutará tu programa. Las instrucciones
           para cada nivel se escriben justo debajo de la superficie.
       6:
-        image: notes/frozen1_6.jpg
         text: Esta zona media es la caja de herramientas, y cada uno de estos bloques
           es una acción que pueden hacer Elsa y Anna.
       7:
-        image: notes/frozen1_7.jpg
         text: El espacio en blanco a la derecha se conoce como "área de trabajo",
           y es ahí dónde crearemos nuestro programa. Para poder movernos alrededor
           de la superficie de hielo necesitarás utilizar el bloque de "Mover hacia
           adelante".
       8:
-        image: notes/frozen1_8.jpg
         text: 'Aquí, el bloque de "Moverse hacia adelante" dice: "Moverse hacia adelante
           100 píxeles". Cuando oprimimos el botón "Ejecutar/Run". ¿Qué ocurre? Elsa
           se mueve hacia adelante una cierta distancia en la pantalla. ¡De hecho,
           se mueve 100 píxeles! Los píxeles son básicamente cuadros muy pequeños que
           se encuentran en la pantalla de la computadora.'
       9:
-        image: notes/frozen1_9.jpg
         text: El otro bloque que tenemos en este rompecabezas dice "girar a la derecha
           de 90 grados". Y cuando usamos este bloque "girar a la derecha", hace girar
           a Elsa una cierta cantidad de grados. Puedes probar cuánto quieres hacer
           girar a Elsa. El ángulo se mide desde el camino delante de Elsa. Entonces,
           éste es un giro de 90 grados. Y éste es un giro de 120 grados.
       10:
-        image: notes/frozen1_10.jpg
         text: Recuerda, puedes cambiar el número de píxeles y grados haciendo clic
           en las flechas junto a ellos.
     frozen_loops:
       1:
-        image: notes/frozen2_1.jpg
         text: "¡Hola, soy Paola! Las computadoras son muy buenas repitiendo acciones.
           Puedes contar hasta 10, 20 o 100. Pero una computadora puede contar hasta
           1 mil millones o 1 billón. No se aburrirá y sólo le costará unos pocos segundos.
           Ya sea contando, dibujando, o haciendo cualquier otra cosa, las computadoras
           pueden repetir acciones cientos o incluso miles de millones de veces."
       2:
-        image: notes/frozen2_2.jpg
         text: En programación, esto se llama bucle. Un bucle es la forma en la que
           repites una y otra vez tu código. Para el siguiente desafío, tu objetivo
           es ayudar a Anna a crear un cuadrado con el bloque "repetir".
       3:
-        image: notes/frozen2_3.jpg
         text: Cualquier bloque de código que pones dentro del bloque "repetir" se
           repetirá en secuencia, tantas veces como quieras.
       4:
-        image: notes/frozen2_4.jpg
         text: Para dibujar un cuadrado, puedes utilizar el bloque de "mover hacia
           adelante" y "girar a la derecha" 4 veces. Pero la forma más fácil es decirle
           a la computadora "mover hacia adelante" y "girar a la derecha 90 grados"
@@ -462,42 +444,34 @@ es-MX:
           tienes que poner el bloque "mover hacia adelante" y el bloque "girar a la
           derecha" dentro de un bloque "repetir".
       5:
-        image: notes/frozen2_5.jpg
         text: Recuerda que puedes cambiar el número del bloque "repetir" por cualquier
           otro, y va a repetir lo que está dentro del bloque cuantas veces le hayas
           indicado.
     frozen_functions:
       1:
-        image: notes/frozen3_1.jpg
         text: Hola, soy Chris Bosh. Soy un jugador de baloncesto profesional, y programé
           en la Universidad.
       2:
-        image: notes/frozen3_2.jpg
         text: Uno de los conceptos más importantes en Ciencias de la Computación trata
           sobre cómo definir nuevos comandos. La mayoría de lenguajes de programación
           tienen solamente cerca de 100 palabras o comandos. Y en realidad, el arte
           y la magia está en definir tus propias nuevas palabras utilizando estos
           bloques de construcción.
       3:
-        image: notes/frozen3_3.jpg
         text: Una vez que has enseñado a una computadora cómo realizar una acción
           una vez, con esta secuencia de comandos, puedes ponerle un nombre para que
           la acción sea fácil de repetir más adelante. Definir tu propio comando y
           darle un nombre, se conoce como definir una función.
       4:
-        image: notes/frozen3_4.jpg
         text: Hola, soy Jess. Al programar con bloques, utilizarías funciones cuando
           hay un conjunto de acciones que te gustaría hacer muchas veces. Por ejemplo,
           has escrito código para crear un cuadrado.
       5:
-        image: notes/frozen3_5.jpg
         text: Puedes definir esto como una función llamada "crear un cuadrado"
       6:
-        image: notes/frozen3_6.jpg
         text: Ahora tienes un nuevo bloque que puedes utilizar varias veces para crear
           múltiples cuadrados.
       7:
-        image: notes/frozen3_7.jpg
         text: Muchas figuras sencillas pueden utilizarse para crear patrones más complejos.
           En el siguiente desafío, el código que has escrito recientemente para hacer
           un círculo está disponible como una nueva función que puede hacer círculos
@@ -505,29 +479,24 @@ es-MX:
           intrincados y hermosos en la nieve?
     playlab_intro:
       1:
-        image: notes/playlab_intro_1.png
         text: Vamos a crear juegos usando Play Lab. Los buenos juegos tienen una historia
           y cada historia tiene actores. Aprenderemos cómo hacer que nuestros actores
           sean como brujas, alienígenas, y animales que hablan, se mueven e interactúan
           con los demás. Al final de este tutorial, puedes crear un juego desde cero
           y compartirlo con tus amigos.
       2:
-        image: notes/playlab_intro_2.png
         text: La pantalla se divide en tres partes principales. A la izquierda, es
           el espacio de juego donde se ejecutará el programa. Las instrucciones para
           cada nivel están escritas abajo.
       3:
-        image: notes/playlab_intro_3.png
         text: La zona media es la caja de herramientas, y cada uno de estos bloques
           es un fragmento de código. El espacio en blanco a la derecha se llama el
           espacio de trabajo y es donde construiremos nuestro programa.
       4:
-        image: notes/playlab_intro_4.png
         text: Para empezar, necesitarás unir tus bloques al bloque naranja, llamado
           "cuando se ejecuta". Puedes unir múltiples bloques arrastrándolos hacia
           fuera hasta que veas la línea amarilla, y luego encajarán todos a la vez.
       5:
-        image: notes/playlab_intro_5.png
         text: En este primer rompecabezas, el actor es un pingüino y haremos que diga
           "¡Hola!" arrastrando el bloque "decir", uniéndolo al bloque "cuándo se ejecuta"
           y escribiendo dentro "Hola". También podemos hacer que el pingüino se mueva
@@ -535,124 +504,103 @@ es-MX:
           que tienes puestos tus bloques, presiona el botón ejecutar para ver lo que
           has programado.
       6:
-        image: notes/playlab_intro_6.png
         text: Comienza, y al final podrás crear tu propio juego con toda clase de
           jugadores, que pueden interactuar, volverse felices o tristes, aumentar
           la puntuación, o lanzar bolas de fuego, o incluso desaparecer unos a otros.
           Depende de ti y del juego que quieres hacer.
     playlab_events:
       1:
-        image: notes/playlab_events_1.png
         text: Ahora vamos a aprender acerca de algo que todos los programadores de
           juegos usan todos los días. Se llaman eventos. Un evento le indica a tu
           programa que atienda cuando algo ocurra. Cuando eso sucede, se realiza una
           acción.
       2:
-        image: notes/playlab_events_2.png
         text: Algunos ejemplos de eventos son esperar a un clic en el mouse, un botón
           de flecha o pulsar en la pantalla.
       3:
-        image: notes/playlab_events_3.png
         text: Aquí vamos a hacer que el robot espacial salude a los terrícolas cuando
           un jugador haga clic en él. Utilizaremos el bloque "cuando hace clic en"
           y uniremos el bloque "decir". Cuando el jugador hace clic en el robot espacial,
           todo lo que esté unido al bloque de evento "cuando hace clic en" se ejecutará.
           ¿Qué dice tu alienígena?
       4:
-        image: notes/playlab_events_4.png
         text: También hay bloques "cuando tecla de flecha". Si se unen con los bloques
           "mover", puedes empezar a mover tus actores hacia arriba, hacia abajo, a
           la izquierda o a la derecha. Paso a paso, tu juego se está volviendo más
           interactivo.
     playlab_repeat_forever:
       1:
-        image: notes/playlab_repeat_forever_1.png
         text: Éste es el bloque "repetir para siempre". Todo lo que haya dentro de
           este bloque se repetirá para siempre en el juego.
       2:
-        image: notes/playlab_repeat_forever_2.png
         text: Si queremos que un actor haga algo en varias ocasiones, sin que el jugador
           tenga que hacer nada, pondremos esos bloques dentro del bloque "repetir
           para siempre".
       3:
-        image: notes/playlab_repeat_forever_3.png
         text: En el siguiente rompecabezas, nuestro objetivo es ayudar a que el asistente
           patrulle continuamente los límites del reino, a la izquierda y a la derecha.
           Aprender cómo funciona el comando repetir te ahorrará mucho tiempo después,
           cuando construyas tu propio juego.
     C1_artist_intro:
       1:
-        image: notes/C1_artist_intro_1.png
         text: Éstos son tus bloques de dibujo. Usa el correcto para mover al artistas
           donde necesita ir para completar las lineas grises.
       2:
-        image: notes/C1_artist_intro_2.png
         text: Estos son bloques de tu salto. Cuando los usas, tu artista se mueve
           pero no dibuja, así que úsalos para saltar a la siguiente línea gris.
     C1_bee_level_intro:
       1:
-        image: notes/C1_bee_level_intro_1.png
         text: ¿No son las abejas geniales? En el siguiente grupo de puzzles. Tu objetivo
           es ayudar a la abeja a llegar a las flores, tomar el néctar de las flores
           y volar a la colmena para hacer miel. Vas a tener que usar los bloques "obtener
           néctar" y "hacer miel" para estos ejercicios.
       2:
-        image: notes/C1_bee_level_intro_2.png
         text: 'Cada flor tiene un número diferente de néctares: 1, 2, 3 o más. Sabemos
           cuánto néctar está en las flores rojas, por el número pequeño en la esquina.
           Así que asegúrese de obtener todo el néctar de la flor antes de seguir adelante.
           Además, cada panal sólo puede contener cierta cantidad de miel: 1, 2, 3
           o más. Así que asegúrate de hacer tanta miel como la abeja pueda sostener.'
       3:
-        image: notes/C1_bee_level_intro_3.png
         text: Si eres capaz de obtener todo el néctar y toda la miel, tuviste éxito
           y pasa al siguiente nivel. De lo contrario, tienes que probar este acertijo
           otra vez. ¡Juega un rato mientras y ve lo que un programador siente al ser
           "abeja"!
     C1_bee_loops:
       1:
-        image: notes/C1_bee_loops_1.png
         text: Un bucle es una repetición de una actividad. Para entrar en una colmena
           a inspeccionar, miro un cuadro y luego lo pongo, luego repito esta actividad
           varias veces. Hacer un bucle, es hacer la misma actividad varias veces.
       2:
-        image: notes/C1_bee_loops_2.png
         text: En este nivel, queremos que la abeja colecte tres néctares de la flor.
           En lugar de utilizar tres "obtener néctar", vas a utilizar el bloque de
           repetición para obtener néctar tres veces. Pulse "Run" y ve si estás correcto.
           ¡Agradable!
     C1_bigevent_unplugged:
       1:
-        image: notes/C1_bigevent_unplugged_1.png
         text: Esta lección se llama el gran evento. Es acerca de cómo podemos controlar
           nuestros programas y cambiar la forma en que un programa se ejecuta sobre
           la marcha usando eventos, como el de pulsar de un botón o el clic de un
           mouse.
       2:
-        image: notes/C1_bigevent_unplugged_2.png
         text: Para esta lección, serás controlado con un control remoto de papel.
           Es como un juego de video real en vivo.
       3:
-        image: notes/C1_bigevent_unplugged_3.png
         text: Un evento es una acción que hace que algo pase. Es como cuando haces
           clic en el botón de un mouse y se carga un sitio web. Eso es un evento.
           Cuando tocas la pantalla de una tablet para deslizarla, también es un evento.
           Los eventos son una forma grandiosa de permitir al usuario manipular tu
           programa cuando quiera o lo necesite.
       4:
-        image: notes/C1_bigevent_unplugged_4.png
         text: Suceden cosas a las que todos respondemos. Sentimos hambre y nos vamos
           a la nevera. Escuchamos que el cartero viene y pone nuestro correo en el
           buzón y luego vamos a obtener nuestro correo. Lo mismo pasa con los eventos
           de pulsar un botón o mover una palanca de mando. Son algo que pasa que provocan
           que hagamos algo.
       5:
-        image: notes/C1_bigevent_unplugged_5.png
         text: En los videojuegos, hay un evento llamado "Actualizar" y pasa 30 o 60
           veces por segundo. Para los programadores de videojuegos eso es casi tan
           importante como un evento, los botones o la palanca de mando.
       6:
-        image: notes/C1_bigevent_unplugged_6.png
         text: Lo principal que buscamos es que pase el tick de "Actualizar". Entonces
           comprobamos el mando en el tick. Y decimos, "Oh, ¿alguien ha pulsado el
           botón en este marco? ¿Sí o no?" Sin eventos, el jugador no podría moverse,
@@ -660,59 +608,49 @@ es-MX:
           no sería capaz de animar nada.
     C1_building_foundation:
       1:
-        image: notes/C1_building_foundation_1.jpg
         text: En la escultura en arena tienes que saber que el fracaso es parte del
           programa. Pero si usted persiste, no conseguirá nada mejor y más emocionante
           para usted. La persistencia es el nombre del juego. Quédate, te va a encantar.
       2:
-        image: notes/C1_building_foundation_2.jpg
         text: Esta lección se llama construir una base. En esta lección, vamos a trabajar
           en una tarea que va a ser realmente difícil. Debes encontrar la manera de
           hacer una estructura tan alta como uno de estos vasos y tiene que ser lo
           suficientemente fuerte como para soportar el peso de un libro.
       3:
-        image: notes/C1_building_foundation_3.jpg
         text: Podría haber momentos en los que nuestra creación no funcione. Podría
           haber momentos en los que nos frustremos y queramos dejarlo. Podría haber
           muchos de esos momentos. Pero si seguimos intentándolo, y lo hacemos lo
           mejor que podemos una y otra vez, entonces seguramente lo conseguiremos
           enseguida.
       4:
-        image: notes/C1_building_foundation_4.jpg
         text: Persistencia es mantenerse firme cuando se quiere realmente renunciar.
           Si quieres crear algo nuevo y diferente, van a existir muchos fracasos en
           el camino.
       5:
-        image: notes/C1_building_foundation_5.jpg
         text: El truco para persistir es elegir seguir adelante y aprender de los
           fracasos en lugar de renunciar porque estás frustrado. La frustración sólo
           significa que hay algo maravilloso al doblar la esquina. Por lo que no renuncies
           antes de llegar a él. ¡Wooo!
     C1_getting_loopy:
       1:
-        image: notes/C1_getting_loopy_1.png
         text: Hola, mi nombre es Miral Kotb y soy el creador de Iluminado. En mi trabajo,
           hay algo que usamos en ambas cosas, en bailes y en programación, ¡y eso
           son los bucles! Los bucles repiten acciones una y otra vez.
       2:
-        image: notes/C1_getting_loopy_2.png
         text: Cuando repito algo muchas veces, como mis acciones para que el hula
           hoop siga girando, estoy haciendo un bucle de esa acción. Esto es un bucle.
           Esto es un bucle. Y esto es un bucle.
       3:
-        image: notes/C1_getting_loopy_3.png
         text: Hoy vamos a dar una fiesta de baile. Haremos bucles con un nuevo baile.
           La iteración. Vamos a aprender acerca de los bucles utilizando un baile.
           Aprenderás un par de pasos fáciles y los repetirás una y otra vez para completar
           el baile.
       4:
-        image: notes/C1_getting_loopy_4.png
         text: Estos son los pasos que necesitas aprender. Da las palmas. Pon tus manos
           detrás de tu cabeza. Pon tus manos en tu cintura. Sube la mano izquierda.
           Sube la mano derecha. Bastante fácil, ¿verdad? Descubrirás que puedes hacer
           más cortas las instrucciones poniendo algunos pasos de baile dentro de bucles.
       5:
-        image: notes/C1_getting_loopy_5.png
         text: De hecho, utilizamos bucles en nuestros bailes. Los bailarines llevan
           computadoras, todos en la misma red. Podría hacer un bucle poniendo las
           luces sobre los bailarines una y otra vez. En el bucle podría tener una
@@ -722,77 +660,63 @@ es-MX:
           en informática porque abrevian y simplifican nuestro trabajo.
     C1_happy_maps_unplugged:
       1:
-        image: notes/C1_happy_maps_unplugged_1.png
         text: Esta lección se llama Mapas Felices. Hoy vamos a ayudar a nuestro pequeño
           amigo peludo Flurb a llegar a su fruta.
       2:
-        image: notes/C1_happy_maps_unplugged_2.png
         text: Consigue que tu Flurb llegue a tu fruta. Para hacer eso necesitarás
           descubrir en qué dirección tiene que ir el Flurb, y dirigirla con las flechas.
           Para que el Flurb llegue a la manzana, ¿en qué dirección tiene que ir el
           Flurb? Línea para hacer que vaya arriba.
       3:
-        image: notes/C1_happy_maps_unplugged_3.png
         text: Para llegar ahí, haces un círculo en la dirección que tiene que ir.
       4:
-        image: notes/C1_happy_maps_unplugged_4.png
         text: Construye tu algoritmo pegando las flechas junto al mapa que estás intentando
           resolver. El segundo es igual, pero hacia abajo.
       5:
-        image: notes/C1_happy_maps_unplugged_5.png
         text: Es como programar con papel. ¡Y eso es todo!
     C1_maze_debugging:
       1:
-        image: notes/C1_maze_debugging_1.png
         text: Depurar es encontrar y arreglar problemas. Hay muchas formas de depurar
           problemas. Una de las más fáciles es ir paso a paso hasta que encuentras
           que algo sale mal. Aquí estoy intentando hacer una voltereta hacia atrás
           sobre la barra de equilibrios, pero me caigo una y otra vez.
       2:
-        image: notes/C1_maze_debugging_2.png
         text: Revisé cada parte paso a paso y me di cuenta de dónde estaba mi error.
           No estaba poniendo mis manos correctamente en la barra. de equilibrios.
           Así que intenté otra voltereta hacia atrás sobre la barra con una nueva
           posición de manos y lo conseguí. Estaba realmente contenta de haber depurado
           mi voltereta hacia atrás.
       3:
-        image: notes/C1_maze_debugging_3.png
         text: Para aprender a depurar, empezamos con un conjunto de bloques ya puestos
           en la fase. Como verás, esos bloques no te conducirán al objetivo. Necesitamos
           depurar la solución y arreglarla. ¿Qué falló? Te darás cuenta de que necesitabas
           seguir yendo al oeste una casilla más.
       4:
-        image: notes/C1_maze_debugging_4.png
         text: Vamos a arreglarlo añadiendo otro bloque de ir al oeste y dando a ejecutar
           para ver si has acertado. ¡Sí, has acertado!
     C1_maze_intro_sequencing:
       1:
-        image: notes/C1_maze_intro_sequencing_1.png
         text: Para este rompecabezas necesitarás llevar el pájaro al cerdo. Mira el
           rompecabezas y averigua que instrucciones necesita.
       2:
-        image: notes/C1_maze_intro_sequencing_2.png
         text: Necesitas arrastrar los bloques desde la caja de herramientas al espacio
           de trabajo. Asegúrate de dejarlos debajo del bloque "cuando se ejecuta",
           y cuando creas que tienes la solución correcta, pulsa en "ejecutar" y observa
           cómo el pájaro va hacia el cerdo.
     C1_maze_loops:
       1:
-        image: notes/C1_maze_loops_1.png
-        text: Una cosa en la que las computadoras son muy buenas es repetir instrucciones.
+        text: Una cosa que las computadoras hacen muy bien es repetir instrucciones.
           Como persona, te aburrirías mucho si tuvieras que hacer lo mismo muchas
           veces seguidas. Pero una computadora puede hacer lo mismo millones o incluso
           miles de millones de veces sin aburrirse, y llevarlo a cabo perfectamente.
       2:
-        image: notes/C1_maze_loops_2.png
         text: Por ejemplo, si yo quisiera felicitar a todo el mundo en Facebook por
           su cumpleaños enviándoles un mensaje de correo electrónico, me podría llevar
           más de un siglo poder escribir todos esos mensajes a todo el mundo. Pero
-          con unas pocas líneas de código puedo hacer que una máquina envíe un mensaje
-          de correo electrónico a todo el mundo en Facebook felicitándoles por su
+          con unas pocas líneas de código puedo hacer un sistema que envíe un mensaje
+          de correo electrónico a todo el mundo en Facebook, felicitándoles por su
           cumpleaños.
       3:
-        image: notes/C1_maze_loops_3.png
         text: Para llevar el pájaro al cerdo en este nivel, en lugar de arrastrar
           tres bloques norte al espacio de trabajo, utilizarás el bloque "repetir".
           Arrastra el bloque "repetir" al espacio de trabajo e introduce el número
@@ -800,16 +724,13 @@ es-MX:
           y pulsa "ejecutar" para ver si has acertado. Felicitaciones, ¡lo conseguiste!
     C1_moveitmoveit_unplugged:
       1:
-        image: notes/C1_moveitmoveit_unplugged_1.png
         text: Esta lección se llama muévelo, muévelo. Juntos vamos a escribir un programa
           para llevar a nuestros amigos desde la salida con la brújula hasta la meta,
           con la cara sonriente.
       2:
-        image: notes/C1_moveitmoveit_unplugged_2.png
         text: Pero la cara sonriente está boca abajo, y sólo una persona sabe como
           llegar hasta ella. Vamos a empezar este programa.
       3:
-        image: notes/C1_moveitmoveit_unplugged_3.png
         text: Un programa es un algoritmo que ha sido codificado en algo que se puede
           ejecutar en una máquina. La mayoría de nosotros piensa en un programa como
           algo que escribimos para una computadora. Los programas son muy buenos para
@@ -817,57 +738,48 @@ es-MX:
           programa de juego o incluso un robot para hacer las cosas para usted.
     C1_going_places_safely:
       1:
-        image: notes/C1_going_places_safely_1.png
         text: Me llamo Jeremiah. Hola, tengo siete años. Me encanta jugar con la computadora
           de mamá, pero siempre le pido permiso primero. "Mami, ¿puedo usar la computadora?
           ¡Claro que sí, cielo!"
       2:
-        image: notes/C1_going_places_safely_2.png
         text: Me encanta la computadora de mamá porque me puedo meter en Internet.
           Internet es un poco como tu barrio. Puedes visitar sitios interesantes,
           puedes hablar con tu familia y amigos, y puedes aprender muchas cosas nuevas.
       3:
-        image: notes/C1_going_places_safely_3.png
         text: Ayer, visité un parque zoológico que está cerca de mi casa. Vi una cebra
           bebé. Le tomé una fotografía y cambié el color de sus rayas, luego le puse
           un sombrero y la agregué a mi colección de animales locos. ¡Impresionante!
           Más tarde, fui a un lugar lejano. Visité Kenia. Es un país en África. Allí
           viven muchas cebras.
       4:
-        image: notes/C1_going_places_safely_4.png
         text: A veces, en Internet, conozco y hablo con las personas, como con mi
           abuela que vive en otro Estado. ¡Hola abuela! Ella me está haciendo galletas
           que me enviará para mi cumpleaños. "¡Delicioso, ojalá que Internet tuviera
           smellrama!" Yo puedo hablar con diferentes personas en Internet, como con
           mi prima, pero solamente hablo con la gente que conozco.
       5:
-        image: notes/C1_going_places_safely_5.png
         text: Lo que más me gusta de Internet es que puedo encontrar juegos divertidos.
           ¡Puntos! También me gusta dibujar y crear cosas nuevas y compartirlas con
           mis amigos. ¡Estupendo! Algunas veces visito sitios web en donde aprendo
           cosas nuevas pero siempre me quedo en sitios ideales para mí. ¡Guau, dinosaurios!
       6:
-        image: notes/C1_going_places_safely_6.png
         text: 'Internet es un lugar muy divertido. Pero al igual que cruzando la calle
           en tu barrio, también debes tener cuidado cuando estés en línea. Aquí hay
           tres reglas para recordar. Regla número 1: siempre pregunta a tus padres
           primero. Regla número 2: sólo habla con gente que conozcas. Regla número
           3: Visita lugares que son adecuados para ti.'
       7:
-        image: notes/C1_going_places_safely_7.png
         text: Guau, ¡eso fue divertido! Hora de la cena. Ahora estoy cerrando sesión.
           No puedo esperar para iniciar sesión otra vez para ver qué puedo visitar
           a continuación.
     C1_pair_programming:
       1:
-        image: notes/C1_pair_programming_1.png
         text: Hoy vamos a aprender sobre la programación en par. En la programación
           en par se trabaja como un equipo. ¿Por qué dos personas usan una computadora?
           Porque dos cabezas son mejores que una. En la Programación en par, tú y
           tu pareja van a sentarse juntos en una computadora y ambos van a trabajar
           en el mismo proyecto.
       2:
-        image: notes/C1_pair_programming_2.png
         text: En la programación en par, una persona es el conductor y la otra persona
           es el navegador, al igual que conducir un coche. El conductor se sienta
           en la computadora, y está utilizando el teclado y el mouse o la pantalla
@@ -875,45 +787,38 @@ es-MX:
           persona es el navegante. El navegador ayuda al conductor contestando sus
           preguntas y señalando posibles problemas o errores.
       3:
-        image: notes/C1_pair_programming_3.png
         text: La comunicación es la clave para el éxito en la programación en par.
           Sin insultos, debes ser respetuoso, no seas un navegador mandón, porque
           a nadie le gusta un conductor en el asiento trasero. Tú y tu compañero deben
           hablarse siempre. El conductor puede explicar lo que él o ella está haciendo.
           Y el navegador puede ayudar sugiriendo qué hacer a continuación.
       4:
-        image: notes/C1_pair_programming_4.png
         text: El navegador debe estar pensando en el panorama y el conductor se centra
           en los detalles. Ambos roles son importantes. Programación en par es trabajar
           juntos como un equipo.
     C1_planting_seed:
       1:
-        image: notes/C1_planting_seed_1.png
         text: Esta lección se llama plantar una semilla y va a ayudarnos a entender
           los algoritmos. Los algoritmos son instrucciones específicas que explican
           el orden en el que se hace algo. Incluso las tareas cotidianas, cosas como
           desayunar o el cepillado de los dientes son algoritmos que requieren pequeños
           pasos para hacer un trabajo.
       2:
-        image: notes/C1_planting_seed_2.png
         text: Las computadoras pueden ser muy inteligentes pero sólo pueden entender
           si les dices exactamente lo que quieres paso a paso. Lo bueno de los algoritmos
           es que si sigues las instrucciones en orden, puedes hacer algo que antes
           no sabías cómo hacer. Es como una receta.
       3:
-        image: notes/C1_planting_seed_3.png
         text: Hoy vamos a sembrar nuestras propias semillas utilizando un algoritmo.
           Crea tus propios algoritmos para apartar las fotos. Seleccione las imágenes
           que muestran los pasos para plantar una semilla y organiza las fotografías
           en el orden correcto.
       4:
-        image: notes/C1_planting_seed_4.png
         text: Ahora, es el momento para ver si el algoritmo funciona. Siga atentamente
           los pasos en el algoritmo. ¿Están en el orden correcto? ¿Has tenido éxito
           en plantar una semilla siguiendo el algoritmo? ¡Es como la programación
           con imágenes!
       5:
-        image: notes/C1_planting_seed_5.png
         text: Cuando queremos hacer el chocolate, hay muchos pasos importantes en
           este proceso y cada uno de estos pasos tiene un conjunto de pequeños pasos,
           y hay diferentes recetas o algoritmos, dependiendo del gusto que queremos
@@ -924,45 +829,37 @@ es-MX:
           realice.
     C1_playlab_storytelling:
       1:
-        image: notes/C1_playlab_storytelling_1.png
         text: Tiempo de ser creativo y utilizar tus habilidades de codificación para
           contar una historia. Tu historia contará con actores y tu serás capaz de
           hacer que estos actores hablen e interactúen con los demás. Comienza a pensar
           qué tipo de historia quieres contar.
       2:
-        image: notes/C1_playlab_storytelling_2.png
         text: El gato siempre ha tenido miedo del perro, y ¿qué pasa si el perro quiere
           ser amable con el gato? El bloque "cuando se ejecuta" comienza todo. El
           bloque "mover" moverá tu personaje y el bloque "decir" hará que tu personaje
           diga todo lo que escribes.
       3:
-        image: notes/C1_playlab_storytelling_3.png
         text: Éste es un bloque "cuando los actores colisionan" que puedes enlazar
           con otros bloques
       4:
-        image: notes/C1_playlab_storytelling_4.png
         text: Estaba haciendo que el perro viniera y dijera "Hola", pero cuando el
           gato se asustó se fue. "Ahhh". Si hubiera más tiempo, Habría sido un final
           feliz. ¡El final!
     C1_spelling_bee_intro:
       1:
-        image: notes/C1_spelling_bee_intro_1.png
         text: Éste es el nivel de ortografía. Utilice las piezas del puzzle para mover
           a la abeja. Al moverse, recogerá las letras para deletrear la palabra.
       2:
-        image: notes/C1_spelling_bee_intro_2.png
         text: Vea si puede deletrear la palabra que se da en el cuadro debajo de la
           etapa. ¡Pero cuidado con la abeja! Mover en la dirección equivocada agrega
           cartas que no quieres.
     C1_zuck_repeat_loop:
       1:
-        image: notes/C1_zuck_repeat_loop_1.png
         text: Una cosa que las computadoras hacen muy bien es repetir instrucciones.
           Como persona, te aburrirías mucho si tuvieras que hacer lo mismo muchas
           veces seguidas. Pero una computadora puede hacer lo mismo millones o incluso
           miles de millones de veces sin aburrirse, y llevarlo a cabo perfectamente.
       2:
-        image: notes/C1_zuck_repeat_loop_2.png
         text: Por ejemplo, si yo quisiera felicitar a todo el mundo en Facebook por
           su cumpleaños enviándoles un mensaje de correo electrónico, me podría llevar
           más de un siglo poder escribir todos esos mensajes a todo el mundo. Pero
@@ -970,7 +867,6 @@ es-MX:
           de correo electrónico a todo el mundo en Facebook, felicitándoles por su
           cumpleaños.
       3:
-        image: notes/C1_zuck_repeat_loop_3.png
         text: En este ejemplo, debes conseguir mover el pájaro para poder agarrar
           al cerdo. Ahora vamos a poder usar el bloque Repetir para poder hacer esto
           más fácil. Lo puedes hacer dándole a la computadora la instrucción mover
@@ -978,78 +874,64 @@ es-MX:
           o puedes directamente indicarle a la computadora que se mueva adelante una
           vez y decirle que lo repita 5 veces, y hará la misma cosa.
       4:
-        image: notes/C1_zuck_repeat_loop_4.png
         text: Para hacer esto, arrastra el comando mover hacia adelante y colócalo
           dentro del bloque repetir. Puedes hacer clic en él y decirle cuántas veces
           repetir el bloque para indicarle cuántos pasos quieres mover hacia adelante.
       5:
-        image: notes/C1_zuck_repeat_loop_5.png
         text: Una cosa más, puedes insertar tantos comandos como quieras dentro del
           bloque de repetición. Así que en este ejemplo, está diciendo seguir adelante
           y girar a la izquierda, que va a hacer cinco veces. ¡Que te diviertas!
     C2_artist_intro:
       1:
-        image: notes/C2_artist_intro_1.png
         text: Ni siquiera calificas para la carrera si no tienes personas que son
           competentes en ciencias de la computación, debido a tantos datos que colectan
           los carros y la necesidad de tener personas que puedan escribir programas
           y encuentren la manera de construir rendimiento.
       2:
-        image: notes/C2_artist_intro_2.png
         text: En estos puzzles, tú serás un artista que usa un lápiz para dibujar
           distintas formas. Donde sea que tu artista vaya, dibujará una linea detrás
           de él.
       3:
-        image: notes/C2_artist_intro_3.png
         text: Para moverte por canvas, necesitarás usar el bloque de mover hacia delante.
           Aquí el bloque de mover dice que te muevas 100 píxeles hacia delante. Cuando
           pulsamos ejecutar, ¿qué pasa? El artista se mueve hacia delante una cierta
           cantidad de píxeles y esa cantidad son 100px. Los píxeles son básicamente
           diminutos recuadros en la pantalla de tu computadora.
       4:
-        image: notes/C2_artist_intro_4.png
         text: El otro bloque que tenemos en este puzzle dice Girar a la derecha 90
           grados. Y cuando lo arrastramos, eso hace que nuestro artista gire una cierta
           cantidad. Así que puedes jugar con cuanto quieres que tu artista gire. Éste
           es un giro de 90 grados.
       5:
-        image: notes/C2_artist_intro_5.png
         text: Y éste es un giro de 120 grados. Y recuerda, tú puedes cambiar estos
           valores haciendo clic en las flechas junto a los números de píxeles y grados.
           ¡Disfruta dibujando con tu artista!
     C2_bee_conditionals:
       1:
-        image: notes/C2_bee_conditionals_1.png
         text: Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
           sea menor, igual o mayor que un número, ENTONCES haz algo.
       2:
-        image: notes/C2_bee_conditionals_2.png
         text: Esto es útil cuando no sabemos cuanto néctar o miel obtener, como vemos
           aquí con este signo de interrogación.
       3:
-        image: notes/C2_bee_conditionals_3.png
         text: En este ejemplo, vamos a determinar SI la flor purpura tiene un néctar
           mayor que 0 y obtiene néctar. Eso le dice a nuestra abeja que continúe obteniendo
           néctar mientra haya. ¡Ta-dah!
     C2_binary_bracelets:
       1:
-        image: notes/C2_binary_bracelets_1.png
         text: Ésta es la lección de brazaletes binarios. ¡Vamos a codificar nuestras
           iniciales en un brazalete que podemos usar y mostrar a todos nuestros amigos!
       2:
-        image: notes/C2_binary_bracelets_2.png
         text: El binario es una forma de representar información utilizando sólo dos
           opciones. A veces, la gente piensa solo en unos y ceros. Pero tú puedes
           representar el binario con combinaciones de encendido ó apagado, arriba
           ó abajo, dentro ó fuera o cualquier combinación de posibilidades.
       3:
-        image: notes/C2_binary_bracelets_3.png
         text: Hola, soy Orion y programo robots aquí en Play-im. Todos los cerebros
           de las computadoras y los robots, en su nivel más fundamental, son compuertas
           electrónicas. Cuando una compuerta está abierta la electricidad puede fluir,
           y cuando ésta está cerrada, la electricidad no fluye.
       4:
-        image: notes/C2_binary_bracelets_4.png
         text: Un ejemplo "binario" en el robot, son los ojos. Los ojos del robot son
           LED y éstas son luces que están encendidas o apagadas. Es un sistema binario
           de un estado u otro. Podemos utilizar las luces para representar números
@@ -1060,30 +942,25 @@ es-MX:
           por usted.
     C2_conditionals_with_cards:
       1:
-        image: notes/C2_conditionals_with_cards_1.png
         text: Esta lección se llama condicionales con cartas. Cada día tomas decisiones
           basadas en lo que ves o en lo que oyes.
       2:
-        image: notes/C2_conditionals_with_cards_2.png
         text: Quiero caminar por el parque pero primero debo decidir si debo llevar
           un paraguas o no. Entonces, miro por la ventana. Si está nublado, llevaré
           mi paraguas. Si no, llevaré mis anteojos de sol. Creo que debería llevar
           mi paraguas. Lo que veo y escucho determina mi decisión sobre qué llevar
           al parque.
       3:
-        image: notes/C2_conditionals_with_cards_3.png
         text: Condicionales se utilizan en juegos también. Hoy vamos a practicar usando
           condicionales con un juego de cartas. En este juego, la carta que saque
           determina qué harán mis amigos. Si yo saco un siete, todos aplauden. Si
           no, todos dicen "awww". ¡Vamos a intentarlo! "Awww" "Aplausos"
       4:
-        image: notes/C2_conditionals_with_cards_4.png
         text: Te apuesto a que puedes hacer juegos mucho más entretenidos usando condicionales.
           ¡Inténtalo! Las condicionales son lo que hacen que las computadoras parezcan
           inteligentes. Un programa de computador que incluye condicionales puede
           reaccionar frente al usuario y cambiar su curso de acción.
       5:
-        image: notes/C2_conditionals_with_cards_5.png
         text: Pikirkan tentang permainan kesukaan kamu. Apakah kamu mendapatkan poin
           karena melakukan suatu hal dibandingkan melakukan hal lainnya? Ini terjadi
           karena komputer menggunakan persyaratan. Inilah cara komputer membuat keputusan.
@@ -1092,36 +969,29 @@ es-MX:
           bekerja, kamu bisa menciptakan berbagai permainan yang menarik.
     C2_artist_debugging:
       1:
-        image: notes/C2_artist_debugging_1.png
         text: Ya tenemos algunos bloques en nuestro espacio de trabajo. Sin embargo,
           algo está mal.
       2:
-        image: notes/C2_artist_debugging_2.png
         text: Vamos a depurar éste código ralentizando la velocidad y observando a
           medida que avanza bloque a bloque.
       3:
-        image: notes/C2_artist_debugging_3.png
         text: "¡Oh, ahí está el problema! Los bigotes del gato tienen 75 píxeles de
           largo, no 25."
     C2_bee_debugging:
       1:
-        image: notes/C2_bee_debugging_1.png
         text: "¿Alguna vez has escuchado lo que es depurar un programa? Ésta es la
           manera en la que te das cuenta qué es lo que no está funcionando. Cuando
           depuras un código, identificas y arreglas errores."
       2:
-        image: notes/C2_bee_debugging_2.png
         text: Aquí estamos dando algunos bloques ya en nuestro lugar de trabajo. Vamos
           a utilizar el botón de paso para caminar a través de los bloques, paso a
           paso, a ver si ésta es la solución correcta y dónde necesitemos reparar.
       3:
-        image: notes/C2_bee_debugging_3.png
         text: "¡Al parecer ahí está nuestro problema! Necesitamos un bloque más de
           mover adelante. El botón de paso nos ayuda a depurar nuestro problema al
           identificar dónde está el error y cómo podemos arreglarlo."
     C2_digital_footprint:
       1:
-        image: notes/C2_digital_footprint_1.png
         text: "¡En tu cabeza sostienes tu sombrero y tu inteligencia te dirá dónde
           estás y te hará pensar en el zoológico y asentir Hola a ti y a ti! ¡Usa
           la cabeza cuando estás en línea para mantener lo que es tuyo dentro de tu
@@ -1129,7 +999,6 @@ es-MX:
           De tu cabeza hasta los dedos de tu pie, pausa, piensa en ello. ¡Desde tus
           pies hasta tu nariz, pausa y piensa en línea!"
       2:
-        image: notes/C2_digital_footprint_2.png
         text: Usa tu corazón para crecer y crecer y date a ti mismo un brillo saludable
           y para hacer un San Valentín, dile a alguien que tú seras mío! Usa tu corazón
           cuando estás en línea, siente lo que es correcto y siempre sé amable, y
@@ -1137,7 +1006,6 @@ es-MX:
           tu cabeza a los dedos de tus pies, pausa, piensa en ello. ¡Desde tus pies
           hasta tu nariz, pausa y piensa en línea!
       3:
-        image: notes/C2_digital_footprint_3.png
         text: Utiliza tus brazos para abrazar a tu mascota, mantén tu ropa sin que
           se moje y lleva tus mangas favoritas, y ayúdate a volar y hacerte creer.
           Utiliza tus brazos cuando estés en línea, tomate tiempo de descanso y equilibra
@@ -1145,7 +1013,6 @@ es-MX:
           cabeza hasta los dedos de tus pies, pausa, piensa en ello. ¡Desde tus pies
           hasta tu nariz, pausa y piensa en línea!
       4:
-        image: notes/C2_digital_footprint_4.png
         text: Utiliza tus tripas para almacenar tus alimentos y escucha su rugido
           estado de ánimo, haz descansar tu vientre y siente el gas de la soda. Utiliza
           tus instintos cuando estás en línea, para saber, observar ciertos signos
@@ -1153,7 +1020,6 @@ es-MX:
           hasta los dedos de tus pies, pausa, piensa en ello. ¡Desde tus pies hasta
           tu nariz, pausa y piensa en línea!
       5:
-        image: notes/C2_digital_footprint_5.png
         text: Entonces, piensa con tu cabeza y siente con tu corazón, equilibra tus
           brazos, escucha tus presentimiento, en línea. Utiliza tus piernas para correr
           y patear, salta y rebota en un palo saltarín, y baila alrededor de la cuadra
@@ -1161,7 +1027,6 @@ es-MX:
           en línea, para enfrentar a los peleadores que cruzan la línea, y recuerda
           pararte alto, sé agradable a las criaturas grandes y pequeñas.
       6:
-        image: notes/C2_digital_footprint_6.png
         text: Desde tu cabeza hasta los dedos de tus pies, pausa, piensa en ello.
           ¡Desde tus pies hasta tu nariz, pausa y piensa conectado! Así que piensa
           con la cabeza, y siente con el corazón, equilíbrate con tus brazos, escucha
@@ -1170,30 +1035,25 @@ es-MX:
           y piensa conectado!
     C2_digital_footprint_v2:
       1:
-        image: notes/C2_digital_footprint_v2_1.png
         text: Siempre que te conectas, dejas una huella que puede ser buscada, copiada
           y transmitida, y es permanente. ¿Qué clase de huella digital estás dejando?
           ¿Qué clase de huella digital quieres dejar?
     C2_graph_paper:
       1:
-        image: notes/C2_graph_paper_1.png
         text: Esta lección se llama "Papel gráfico Programación" y se trata de algoritmos.
           Hoy vamos a aprender cómo escribir programas que muestran entre sí cómo
           recrear simples imágenes en blanco y negro, usando sólo flechas dibujadas
           a mano.
       2:
-        image: notes/C2_graph_paper_2.png
         text: Un algoritmo es una lista de instrucciones necesarias para completar
           una tarea. Vamos a seguir este set de instrucciones para hacer el tazón.
           Los algoritmos son muy útiles cuando necesitas que otra personas entienda
           como hacer algo.
       3:
-        image: notes/C2_graph_paper_3.png
         text: Si estás escribiendo un algoritmo para una computadora, tienes que dividir
           el problema en pequeños pasos. Por lo tanto, termina esta fila y luego pasa
           a la siguiente, luego a la siguiente, y estarás listo.
       4:
-        image: notes/C2_graph_paper_4.png
         text: Yo utilizo algoritmos en mi trabajo. Si yo escribo todos los pasos puedo
           recrear esa misma pieza otra vez, o puedo enseñar a alguien que lo haga.
           Pon el vaso en el horno, fúndelo, y sigue el resto de las instrucciones
@@ -1201,24 +1061,20 @@ es-MX:
           haga algo.
     C2_artist_loops:
       1:
-        image: notes/C2_artist_loops_1.png
         text: Aquí vamos a utilizar el bloque de repetición que nos ayuda a ahorrar
           pasos cuando estemos programando nuestro artista. Ya tenemos algunos bloques
           fuera en nuestro escenario pero están ahí sólo para que comencemos.
       2:
-        image: notes/C2_artist_loops_2.png
         text: Para ciclar los bloques cuatro veces y dibujar un cuadro, sólo arrastra
           el bloque de repetir y pon el bloques de avanzar y gira a la derecha dentro
           del bloque de repetición. Cuando damos clic en ejecutar, el artista repetirá
           los pasos cuatro veces para completar el cuadrado.
     C2_bee_loops:
       1:
-        image: notes/C2_bee_loops_1.png
         text: Un bucle es una repetición de una actividad. Para entrar en una colmena
           a inspeccionar, miro un cuadro y luego lo pongo, luego repito esta actividad
           varias veces. Hacer un bucle, es hacer la misma actividad varias veces.
       2:
-        image: notes/C2_bee_loops_2.png
         text: Éste es el bloque de repetición. Lo que pongas dentro el bloque de repetición
           repetirá las acciones el número de veces que le digas. Por ejemplo, en éste
           nivel, haremos que algo que arrastre hacia fuera, mueva hacia adelante y
@@ -1226,14 +1082,12 @@ es-MX:
           y repetiremos la acción tres veces. ¡Ha sido fácil!
     C2_maze_intro:
       1:
-        image: notes/C2_maze_intro_1.png
         text: Normalmente, la programación es en texto pero nosotros usaremos Blockly
           que usa bloques visuales que puedes arrastrar y soltar para escribir programas.
           Bajo la cubierta, sigues creando el código. Para empezar, vamos a crear
           el código para el programa que ayudará a éste Angry Bird a moverse entre
           el laberinto para llegar a los cerdos malvados que robaron sus huevos.
       2:
-        image: notes/C2_maze_intro_2.png
         text: Blockly se divide en tres partes principales. A la izquierda está el
           laberinto de los pájaros, donde tu programa se ejecutará. Las instrucciones
           de cada nivel se escriben debajo del laberinto. Esta zona media es la caja
@@ -1241,39 +1095,33 @@ es-MX:
           puede entender. El espacio blanco en la derecha es el espacio de trabajo
           y es donde compilaremos nuestro programa.
       3:
-        image: notes/C2_maze_intro_3.png
         text: Si arrastro un bloque "mover" al área de trabajo y presiono "Ejecutar",
           ¿qué sucede? El pájaro se mueve hacia adelante un bloque del terreno. ¿Y
           si quiero que el pájaro haga algo más después de moverse adelante? Puedo
           añadir otro bloque al programa.
       4:
-        image: notes/C2_maze_intro_4.png
         text: Voy a elegir el bloque "girar a la derecha" y a arrastrarlo debajo de
           mi bloque de mover hasta que aparezca la flecha amarilla. Después la voy
           a soltar y los dos bloques se quedarán pegados. Cuando presione "Ejecutar"
           otra vez, el pájaro realizará los comandos que están apilados en nuestra
           área de trabajo en orden desde arriba hacia abajo.
       5:
-        image: notes/C2_maze_intro_5.png
         text: Si deseas eliminar un bloque, solo sácalo de la pila y arrástralo a
           la papelera. Después de ejecutar el programa, siempre puedes apretar el
           botón de reinicio para que el pájaro vuelva al punto de inicio. ¡Ahora vamos
           por esos cerdos!
     C2_paper_airplanes:
       1:
-        image: notes/C2_paper_airplanes_1.png
         text: Esta lição é designada de Real Life Algorithms. Algorismos descrevem
           coisas que as pessoas fazem todos os dias. Receitas de bolachas e instruções
           de como construir uma casa para passáros são ambos algorismos usados no
           quotidiano.
       2:
-        image: notes/C2_paper_airplanes_2.png
         text: Hoy vamos a realizar, crear y probar un algoritmo para un avión de papel.
           Pero primero, necesitamos romper este gran proyecto en pasos más pequeños
           y fáciles de seguir. Para hacer un avión de papel, necesitamos decidir qué
           pasos tomar y en qué orden realizarlos.
       3:
-        image: notes/C2_paper_airplanes_3.png
         text: Crearás tu algoritmo primero cortando aparte las fotos. Luego, seleccionarás
           las 6 fotos que muestran los pasos necesarios para hacer un avión de papel
           y arregla esas fotos en el orden correcto. Después de tener todo en orden,
@@ -1281,7 +1129,6 @@ es-MX:
           y ver si el algoritmo funciona. Es súper importante un algoritmo bien diseñado
           para hacer el mejor aeroplano de papel.
       4:
-        image: notes/C2_paper_airplanes_4.png
         text: Cuando queremos hacer chocolate, hay muchos pasos importantes para ese
           proceso y cada uno de esos pasos tiene un conjunto de pequeños pasos. Y
           hay diferentes recetas o algoritmos, dependiendo de cómo queremos que sepa
@@ -1292,36 +1139,30 @@ es-MX:
           hace.
     C2_playlab_createstory:
       1:
-        image: notes/C2_playlab_createastory_1.png
         text: Hasta ahora, has hecho una animación o una historia que hace exactamente
           lo mismo cada vez que ejecutas el programa. Ahora puedes hacer un juego
           interactivo con el que de verdad puedes jugar.
       2:
-        image: notes/C2_playlab_createastory_2.png
         text: Están el bloque "cuando flecha" y el bloque "mover actor". Puedes poner
           estos bloques juntos para mover a los actores con las teclas de flecha.
     C2_relay_programming:
       1:
-        image: notes/C2_relay_programming_1.png
         text: Hoy vamos hacer programación retransmitida. Es todo sobre programación
           bajo presión y depurando los errores que a veces ocurren cuando se trabaja
           muy rápido o en equipos. Utilizaremos papel gráfico programando para simular
           la codificación y utilizaremos carreras retransmitiendo para simular que
           se tiene una fecha límite.
       2:
-        image: notes/C2_relay_programming_2.png
         text: En programación retransmitida, equipos estarán compitiendo para terminar
           un programa de papel gráfico. Tienes que comprobar el trabajo de tu compañero
           de equipo, o depurarlo, arreglarlo si hay un error, agregar tu flecha y
           ejecutarlo nuevamente, además de etiquetar a tu compañero.
       3:
-        image: notes/C2_relay_programming_3.png
         text: Programadores utilizan mucho la depuración para encontrar y solucionar
           problemas en su código o sus algoritmos. Hay muchas maneras de depurar problemas.
           Uno de lo más fáciles es seguir paso a paso hasta encontrar algo que sale
           mal, y luego arreglarlo.
       4:
-        image: notes/C2_relay_programming_4.png
         text: Aquí, estoy tratando de hacer un salto hacia atrás, pero me sigo cayendo.
           Veo cada parte, paso a paso y trato de darme cuenta dónde estaba mi error.
           Mi entrenador me demostró que no estaba poniendo mis manos sobre la viga
@@ -1331,13 +1172,11 @@ es-MX:
           problemas! ¡Qué bueno, buen trabajo!
     C2_zuck_repeat_loop:
       1:
-        image: notes/C2_zuck_repeat_loop_1.png
         text: Una cosa que las computadoras hacen muy bien es repetir instrucciones.
           Como persona, te aburrirías mucho si tuvieras que hacer lo mismo muchas
           veces seguidas. Pero una computadora puede hacer lo mismo millones o incluso
           miles de millones de veces sin aburrirse, y llevarlo a cabo perfectamente.
       2:
-        image: notes/C2_zuck_repeat_loop_2.png
         text: Así que por ejemplo, si yo quisiera desearle a todos un feliz cumpleaños
           en Facebook enviándoles un correo electrónico, tardaría más de un siglo
           para realmente escribir todos los mensajes de correo electrónico a todos.
@@ -1346,33 +1185,28 @@ es-MX:
           Entonces, eso es lo que un ciclo es, y por qué son valiosos, y es algo que
           las computadoras pueden hacer muy bien.
       3:
-        image: notes/C2_zuck_repeat_loop_3.png
         text: En este ejemplo tu objetivo va a ser el de mover el pájaro para obtener
           el cerdo. Ahora vamos a ser capaces de utilizar el bloque "repetir" para
           poder hacer esto muy fácilmente. Tú puedes hacer esto dando al equipo un
           comando de "seguir adelante" cinco veces en orden para avanzar el pájaro
           un paso a la vez hacia el cerdo.
       4:
-        image: notes/C2_zuck_repeat_loop_4.png
         text: O simplemente puedes indicarle a la computadora "avanzar" una vez y
           luego indicarle "repetir" 5 veces, y hará lo mismo. Por lo que para hacer
           esto, arrastra el comando "avanzar", y ponlo dentro del bloque "repetir".
           Puedes hacer clic en él y decirle cuántas veces deseas que repita el bloque
           para indicarle cuántos pasos quieres que avance.
       5:
-        image: notes/C2_zuck_repeat_loop_5.png
         text: 'Una cosa más: puedes poner todos los comandos que desees dentro de
           un bloque "repetir". En este ejemplo, le estás diciendo que se mueva adelante
           y gire a la izquierda, y lo hará cinco veces. ¡Bien, buen trabajo y a divertirse!'
     C3_artist_functions:
       1:
-        image: notes/C3_artist_functions_1.png
         text: Una de las cosas más importantes de programar computadoras es que una
           vez que ya le dijiste a la computadora cómo realizar una acción, puedes
           darle un nuevo nombre a esa función. Le das un nombre y así la podrás llamar.
           En realidad, es como ampliar el idioma.
       2:
-        image: notes/C3_artist_functions_2.png
         text: En el programa que construimos, aprendimos a dibujar un cuadrado moviéndose
           y girando cuatro veces. Podemos tomar esa función y darle un nombre, dibujar
           un cuadrado, para cada vez que queramos hacerlo, simplemente decimos dibuja
@@ -1380,85 +1214,70 @@ es-MX:
           Hemos añadido ese concepto a nuestro lenguaje de programación.
     C3_artist_intro:
       1:
-        image: notes/C3_artist_intro_1.png
         text: Ni siquiera calificas para la carrera si no tienes personas que son
           competentes en ciencias de la computación, debido a tantos datos que colectan
           los carros y la necesidad de tener personas que puedan escribir programas
           y encuentren la manera de construir rendimiento.
       2:
-        image: notes/C3_artist_intro_2.png
         text: En estos puzzles, tú serás un artista que usa un lápiz para dibujar
           distintas formas. Donde sea que tu artista vaya, dibujará una linea detrás
           de él.
       3:
-        image: notes/C3_artist_intro_3.png
         text: Para moverte por canvas, necesitarás usar el bloque de mover hacia delante.
           Aquí el bloque de mover dice que te muevas 100 píxeles hacia delante. Cuando
           pulsamos ejecutar, ¿qué pasa? El artista se mueve hacia delante una cierta
           cantidad de píxeles y esa cantidad son 100px. Los píxeles son básicamente
           diminutos recuadros en la pantalla de tu computadora.
       4:
-        image: notes/C3_artist_intro_4.png
         text: El otro bloque que tenemos en este puzzle dice Girar a la derecha 90
           grados. Y cuando lo arrastramos, eso hace que nuestro artista gire una cierta
           cantidad. Así que puedes jugar con cuanto quieres que tu artista gire. Éste
           es un giro de 90 grados.
       5:
-        image: notes/C3_artist_intro_5.png
         text: Y éste es un giro de 120 grados. Y recuerda, tú puedes cambiar estos
           valores haciendo clic en las flechas junto a los números de píxeles y grados.
           ¡Disfruta dibujando con tu artista!
     C3_artist_nested_loops:
       1:
-        image: notes/C3_artist_nested_loops_1.png
         text: Cuando pones un ciclo dentro de otro ciclo, nosotros llamamos eso un
           ciclo anidado. Por ejemplo, aquí nosotros ya damos el código para dibujar
           un triángulo con lados de 100 píxeles de longitud usando el bloque de repetición
           tres veces, una para cada lado del triángulo.
       2:
-        image: notes/C3_artist_nested_loops_2.png
         text: Pero queremos dibujar seis triángulos. Para hacer eso, vamos a tomar
           ese bucle y lo pondremos dentro de otro bloque repetir. ¡Genial!, ¿No?
     C3_bee_conditionals:
       1:
-        image: notes/C3_bee_conditionals_1.png
         text: Éste es un bloque condicional. Éste dice SI hay un néctar O miel que
           sea menor, igual o mayor que un número, ENTONCES haz algo.
       2:
-        image: notes/C3_bee_conditionals_2.png
         text: Esto es útil cuando no sabemos cuanto néctar o miel obtener, como vemos
           aquí con este signo de interrogación.
       3:
-        image: notes/C3_bee_conditionals_3.png
         text: En este ejemplo, vamos a determinar SI la flor purpura tiene un néctar
           mayor que 0 y obtiene néctar. Eso le dice a nuestra abeja que continúe obteniendo
           néctar mientra haya. ¡Ta-dah!
     C3_bee_debugging:
       1:
-        image: notes/C3_debugging_bee_1.png
         text: "¿Alguna vez has escuchado lo que es depurar un programa? Ésta es la
           manera en la que te das cuenta qué es lo que no está funcionando. Cuando
           depuras un código, identificas y arreglas errores."
       2:
-        image: notes/C3_debugging_bee_2.png
         text: Aquí estamos dando algunos bloques ya en nuestro lugar de trabajo. Vamos
           a utilizar el botón de paso para caminar a través de los bloques, paso a
           paso, a ver si ésta es la solución correcta y dónde necesitemos reparar.
       3:
-        image: notes/C3_debugging_bee_3.png
         text: "¡Al parecer ahí está nuestro problema! Necesitamos un bloque más de
           mover adelante. El botón de paso nos ayuda a depurar nuestro problema al
           identificar dónde está el error y cómo podemos arreglarlo."
     C3_bee_functions:
       1:
-        image: notes/C3_bee_functions_1.png
         text: Uno de los conceptos más importantes en Ciencias de la computación es
           cómo definir nuevos comandos, cómo agregar tus propias palabras a un lenguaje
           para la computadora. La mayoría de los lenguajes de programación tienen
           sólo alrededor de cien palabras o comandos. El arte y la magia está definiendo
           tus propias nuevas palabras fuera de bloques de construcción.
       2:
-        image: notes/C3_bee_functions_2.png
         text: Hacemos esto todo el tiempo en el deporte. Por ejemplo, en baloncesto,
           tú empiezas aprendiendo cómo regatear el balón, cómo hacer un lanzamiento,
           cómo hacer un rebote. Una vez que aprendimos estos movimientos muy básicos,
@@ -1467,14 +1286,12 @@ es-MX:
           Una vez que aprendiste ese juego y le das un nombre, todos en el equipo
           saben cómo hacerlo.
       3:
-        image: notes/C3_bee_functions_3.png
         text: Del mismo modo, una vez que le enseñaste a la computadora cómo realizar
           una acción y usando estas secuencias de comandos, puedes darle un nombre
           a esa acción para que sea fácil repetirla más tarde. Cuando defines tu propio
           comando y le das un nombre, a eso se le llama función. Ahora vamos a usar
           funciones para ayudar a la abeja.
       4:
-        image: notes/C3_bee_functions_4.png
         text: En este ejemplo, nuestra función se llama obtén 2 néctares, este bloque
           verde de aquí. Sabemos qué es lo que hace obtén 2 néctares, viendo la caja
           gris que es la definición de función. Si vemos en el interior, va a obtener
@@ -1483,53 +1300,44 @@ es-MX:
           estas funciones de bloques verdes.
     C3_bee_nested_loops:
       1:
-        image: notes/C3_bee_nested_loops_1.png
         text: Ahora vamos a utilizar ciclos anidados con la abeja. Estamos dando un
           código de arranque que le dice a la abeja avanzar, obtener néctar tres veces
           y luego girar a la derecha. Tomemos la pieza completa de código y anidémosla
           dentro de otro bloque de repetir y establezcamos repetir tres veces. ¡Hecho!
     C3_bounce:
       1:
-        image: notes/C3_bounce_1.png
         text: Vas a crear tu propio juego de rebotar la pelota que podrás compartir
           con tus amigos, Genial, ¿No?
       2:
-        image: notes/C3_bounce_2.png
         text: Para empezar, tenemos que enlazar los controles de paleta a las flechas
           de nuestro teclado.
       3:
-        image: notes/C3_bounce_3.png
         text: Podemos hacer esto mediante la vinculación cuando el bloque de flecha
           izquierda mueve el bloque izquierdo y cuando el bloque de la flecha derecha
           mueve el bloque derecho. ¡Pruébalo y estarás programando tu propio juego
           al instante!
     C3_computational_thinking:
       1:
-        image: notes/C3_computational_thinking_1.png
         text: Esta lección es sobre pensamiento computacional. A veces, aprender un
           nuevo juego puede ser difícil, ¿verdad? Al principio puede parecer muy confuso
           y a veces, no hay nadie allí para enseñarte las reglas, entonces tienes
           que averiguarlo tú mismo.
       2:
-        image: notes/C3_computational_thinking_2.png
         text: La buena noticia es que puedes mejorar averiguando cosas por tú cuenta
           cuando sabes algunos trucos del pensamiento. Estos trucos son formas únicas
           que identifican y resuelven problemas. En esta lección, aprenderás cuatro
           formas de trucos y las practicarás con tus amigos para encontrar las reglas
           para un juego.
       3:
-        image: notes/C3_computational_thinking_3.png
         text: Cuando desglosas un gran problema en secciones pequeñas, estás utilizando
           tu cerebro para descomponer el problema. Una vez que hemos descompuesto
           el problema en varios problemas más pequeños, podemos pasar a nuestro siguiente
           truco, que se llama coincidencia de patrón.
       4:
-        image: notes/C3_computational_thinking_4.png
         text: Esto es cuando buscamos semejanzas entre las cosas. Una vez que encuentre
           las cosas que son iguales, puedo averiguar qué cosas son diferentes. Cuando
           elimino esas diferencias, a eso se le llama abstracción.
       5:
-        image: notes/C3_computational_thinking_5.png
         text: Después de que me he di cuenta los pasos para resolver un problema,
           puedo poner esos pasos en un orden específico llamado algoritmo para que
           cualquiera pueda utilizar mis instrucciones para resolver el problema. Vamos
@@ -1537,20 +1345,17 @@ es-MX:
           sin reglas. Al final del juego, podrás jugar algo que se ve así!
     C3_crowdsourcing:
       1:
-        image: notes/C3_crowdsourcing_1.png
         text: Esta lección se llama crowdsourcing. En esta lección vamos a usar una
           baraja de cartas para aprender cuánto mas fácil algunas cosas pueden ser
           si se hace en grupos en lugar de intentar hacerlo todo solo. Así que ve
           por algunos amigos y haz algo impresionante. Crowdsourcing es conseguir
           ayuda de un grupo grande de personas para terminar algo más rápido.
       2:
-        image: notes/C3_crowdsourcing_2.png
         text: En ciencias de la computación, utilizamos crowdsourcing todo el tiempo.
           Miles de aficionados y profesionales enlazan sus equipos conjuntamente para
           buscar a través de miles de millones de datos. Buscando cosas como el siguiente
           número primo de Mersenne, o incluso posibles comunicaciones de extraterrestres.
       3:
-        image: notes/C3_crowdsourcing_3.png
         text: Cuando ves una película, cada segundo de la película son 24 cuadros
           individuales, llamamos a esos fotogramas. Por lo que cada una de esas fotos
           debe ser creado y renderizado, y se junta todo. Mi equipo y yo, somos todos
@@ -1560,7 +1365,6 @@ es-MX:
           como parte de su trabajo en equipo y su proceso para ser capaces de crear
           las imágenes que quieren en pantalla.
       4:
-        image: notes/C3_crowdsourcing_4.png
         text: Por ejemplo, en buscando a Nemo, cuando Crush y Squirt y todos sus amigos
           están volando a través de la corriente Australiana del Este. Estás viendo
           imágenes de agua que fluyen, estás viendo los colores en la parte posterior
@@ -1570,14 +1374,12 @@ es-MX:
           la imagen final y retocarla para que se vea hermosa y divertida.
     C3_dice_race:
       1:
-        image: notes/C3_dice_race_1.png
         text: Esta lección se llama carrera de dados. A casi todos les gusta jugar
           juegos de computadoras. ¿Alguna vez has pensado cómo los programas de computadoras
           convierten los pasos de un juego en un programa? El primer paso en la creación
           de juegos de computadora y la resolución de cualquier problema es el pensamiento
           y la planificación.
       2:
-        image: notes/C3_dice_race_2.png
         text: El paso del pensamiento en la resolución de problemas produce un algoritmo,
           el cual es un plan de paso a paso para solucionar un problema o terminar
           una tarea. Tú crearás un algoritmo para un juego de carreras de dados. Luego,
@@ -1586,7 +1388,6 @@ es-MX:
           de que los pasos son correctos, es tiempo de traducir el algoritmo a un
           programa con un lenguaje que la computadora pueda entender.
       3:
-        image: notes/C3_dice_race_3.png
         text: Casi todo lo que hacemos todos los días requiere de un algoritmo, una
           lista de pasos que puedes seguir para terminar una tarea. Piensa en la rutina
           de estar listo para la escuela o la planificación de un día divertido con
@@ -1594,13 +1395,11 @@ es-MX:
           tareas, tendrás que desglosarlo en pasos más pequeños y algunas veces los
           pasos deben ser en un orden específico.
       4:
-        image: notes/C3_dice_race_4.png
         text: Piensa en hacer un sándwich. No importa qué ingrediente saques primero
           de la alacena. Pero tú no puedes poner mantequilla de maní hasta que abras
           el tarro. Las computadoras necesitan algoritmos y programas que le muestren
           cómo hacer incluso simples cosas que podemos hacer sin pensar.
       5:
-        image: notes/C3_dice_race_5.png
         text: Un algoritmo es el pensamiento detrás de lo que debe ocurrir mientras
           que el programa son las instrucciones reales dadas a la computadora para
           que algo ocurra. Un algoritmo tiene que traducirse en un programa antes
@@ -1609,49 +1408,41 @@ es-MX:
           se hace más fácil y más fácil con la práctica.
     C3_farmer_while:
       1:
-        image: notes/C3_farmer_while_1.png
         text: Mientras que los ciclos son muy similares a lo que haces en la vida
           cotidiana. Imagina que estás lavando tu coche, estarás lavando hasta que
           quede limpio. Mientras que no esté limpio, seguirás lavando. Estás evaluando
           estas cosas todo el tiempo.
       2:
-        image: notes/C3_farmer_while_2.png
         text: Tenemos un nuevo ciclo para ayudar a tu granjero. Se llama mientras-bloque.
           Es muy simple en realidad. Mientras que la declaración de la parte superior
           sea verdadera, haz algo. Por ejemplo, si hay mucha tierra, mueve una pala
           completa. Sigue adelante y dale una oportunidad a tu granjero.
     C3_functional_suncatchers:
       1:
-        image: notes/C3_functional_suncatchers_1.png
         text: Esta lección es funcional para vitrales. Crearás bonitos vitrales usando
           funciones. Hay varios pasos en la creación de uno de estos vitrales. Algunos
           de los pasos los tienes que repetir varias veces.
       2:
-        image: notes/C3_functional_suncatchers_2.png
         text: El primer paso para simplificar el proceso de hacer un vitral es averiguar
           lo que tenemos que repetir una y otra vez. Podemos agrupar estos pasos en
           lo que llamamos función.
       3:
-        image: notes/C3_functional_suncatchers_3.png
         text: Pero para crear un hermoso vitral, se necesita que seguir pasos exactos.
           A veces queremos ser creativos y cambiar el color de los vidrios que estamos
           utilizando. Podemos hacer cada vitral único si utilizamos diferentes coloreados
           de vidrios.
       4:
-        image: notes/C3_functional_suncatchers_4.png
         text: Tu vitral será únicamente tuyo cuando aprendas a pensar en los vidrios
           como las variables de una palabra que significa un marcador de la información
           que puede modificarse. ¡Diviértete creando hermosos vitrales usando funciones
           y variables!
     C3_internet:
       1:
-        image: notes/C3_internet_1.png
         text: Esta lección es acerca Internet. Internet es un lugar muy ocupado y
           similar a este camino concurrido. Se enfocan los mensajes, como los coches,
           a durante el camino, para llegar a sus destinos. Los mensajes se mueven
           muy rápidamente vía Internet.
       2:
-        image: notes/C3_internet_2.png
         text: Actuando de la manera que funciona Internet, comprenderás qué sucede
           cuando usas Internet. Aprenderás cómo los mensajes van de tu computadora
           a un sitio web favorito o de un amigo a un buzón de correo electrónico.
@@ -1659,7 +1450,6 @@ es-MX:
           caminos y puedes leer las señales, navegar por Internet no es tan complicado
           cuando sabes lo que está pasando detrás de escena.
       3:
-        image: notes/C3_internet_3.png
         text: El envío de mensajes por Internet es como enviar mensajes por correo
           pero con algunas diferencias. Estoy aquí en Google.com. La dirección IP
           para este sitio web es este número. Puedes pensar en una dirección IP como
@@ -1667,7 +1457,6 @@ es-MX:
           mensaje por correo a alguien en la oficina de allí. ¿Aparece la URL y la
           dirección IP en esa puerta? He escrito este mensaje y apreté enviar.
       4:
-        image: notes/C3_internet_4.png
         text: A diferencia de los servicios postales, lo primero que ocurre es que
           Internet separa el mensaje en partes más pequeñas, para que se pueda enviar
           más fácilmente. Estas partes pequeñas se llaman paquetes. Cada paquete del
@@ -1678,7 +1467,6 @@ es-MX:
           usuario de Internet! ¡No olvides decirle a tu familia y amigos lo que has
           aprendido!
       5:
-        image: notes/C3_internet_5.png
         text: Mi nombre es Amanda Camp y soy ingeniera de software en Google. Trabajo
           en un equipo que trabaja en el servidor final que almacena perfiles y contactos.
           En mi trabajo, pensamos mucho en cómo se pueden enviar contactos a otros
@@ -1690,7 +1478,6 @@ es-MX:
           teléfono 100 contactos a la vez y dejaremos que tu teléfono nos responda
           y pregunte por los próximos 100.
       6:
-        image: notes/C3_internet_6.png
         text: Lo más emocionante del software es el hecho de que puede afectar a todo
           el mundo. Primero aprendí a programar, cuando tenía unos diecinueve años.
           Creo que ya era un estudiante de segundo año o novato en la Universidad.
@@ -1700,7 +1487,6 @@ es-MX:
           y eso es realmente alucinante y emocionante.
     C3_maze_conditionals:
       1:
-        image: notes/C3_maze_conditionals_1.png
         text: Las personas toman decisiones todos los días. Por ejemplo, antes de
           salir al exterior, tienes una instrucción "Si..." que dice si está lloviendo,
           entonces necesito ponerme mi chaqueta. Las computadoras son sorprendentes
@@ -1709,21 +1495,18 @@ es-MX:
           de computadora es realmente un poco de matemáticas y algunas declaraciones
           en donde se toman decisiones.
       2:
-        image: notes/C3_maze_conditionals_2.png
         text: El bloque "Si..." ayuda a los zombies a tomar una decisión. Comprueba
           algo. Por ejemplo, vamos a utilizar el bloque que dice que hay un camino
           a la izquierda y poner un comando de doblar a la izquierda en su interior.
           Estamos diciéndoles a los zombis que controlen su entorno, que vean si hay
           un camino a la izquierda y de ser así, que doblen.
       3:
-        image: notes/C3_maze_conditionals_3.png
         text: Luego usamos el bloque Avanzar dentro de esta repetición para continuar
           moviéndonos hacia adelante mientras queramos. Entonces, cuando hay un giro,
           el bloque "Si..." te indicará que hagas el giro a la izquierda. Se puede
           ver que si lo hacemos, si tomamos el giro a la izquierda y en otro caso
           seguimos adelante, alcanzamos nuestro objetivo.
       4:
-        image: notes/C3_maze_conditionals_4.png
         text: Es un ejemplo el uso de una sentencia "Si" que es en realidad un concepto
           fundamental en programación. Una de las primeras cosas que aprendí fue cómo
           escribir un programa que juega tic-tac-toe. Tuve sentencias "Si" para decir,
@@ -1732,41 +1515,34 @@ es-MX:
           clave.
     C3_maze_level_4:
       1:
-        image: notes/C3_maze_level_4_1.png
         text: En este ejemplo, su meta es llevarle al zombie el girasol. Podríamos
           utilizar cinco bloques de movimiento hacia Adelante o podríamos indicarle
           a la computadora que avance 5 veces en un bloque de repetición.
       2:
-        image: notes/C3_maze_level_4_2.png
         text: Esto ahorra tiempo y lo hace mucho más fácil. Para usarlo, sólo hay
           que poner el bloque de avance dentro del bloque de repetición. Pulsa ejecutar
           y el zombie avanzará cinco veces para el delicioso girasol.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
         text: Hasta ahora, has hecho una animación o una historia que hace exactamente
           lo mismo cada vez que ejecutas el programa. Ahora puedes hacer un juego
           interactivo con el que de verdad puedes jugar.
       2:
-        image: notes/playlab_2.png
         text: Están el bloque "cuando flecha" y el bloque "mover actor". Puedes poner
           estos bloques juntos para mover a los actores con las teclas de flecha.
     C3_songwriting_with_parameters:
       1:
-        image: notes/C3_songwriting_with_parameters_1.png
         text: Esta es la lección de escritura de la canción. La música es como un
           programa de computadora. Las notas escritas y las palabras le dicen al cantante
           exactamente qué hacer. Algunas partes de la música se utilizan una y otra
           vez.
       2:
-        image: notes/C3_songwriting_with_parameters_2.png
         text: Llamamos a esto el coro. En un programa de computadora, las partes del
           programa que se utilizan una y otra vez se llaman funciones. Cuando lees
           la letra de la canción y dice la palabra "Coro", ¿Cantas la palabra "Coro"?
           No, nos fijamos en la parte superior de la página para ver qué palabras
           forman el coro.
       3:
-        image: notes/C3_songwriting_with_parameters_3.png
         text: En esta lección, aprenderás una canción un poco tonta llamada conejito
           foo foo. La canción tiene un coro que cantarás varias veces, una y otra
           vez. Una función es un pedazo de código que puedes llamar y usar una y otra
@@ -1774,17 +1550,14 @@ es-MX:
           una y otra vez los pasos de tu función. ¡Puede escribirlo solo una vez!
     C4_bee_conditional:
       1:
-        image: notes/C4_bee_conditional_1.png
         text: Éste es el bloque condicional. Indica "Si" estás en la flor o el panal,
           entonces haz algo. Esto es útil cuando no sabemos la cantidad de miel o
           néctar para conseguir, como vemos aquí con este signo de interrogación.
       2:
-        image: notes/C4_bee_conditional_2.png
         text: En este ejemplo, vamos a decir, "Si" es una flor, obtén todo el néctar
           y luego usa otro para decir, Si es un panal de abejas, haz miel. ¡Ta-dah!
     C4_conditionals:
       1:
-        image: notes/C4_conditionals_1.png
         text: Tenemos un nuevo bloque llamado el bloque Si/de oto modo. Es una sentencia
           condicional, al igual que Si, el bloque que has usado en el rompecabezas
           antes. Pero ahora hay una nueva pieza en la parte inferior que dice otra
@@ -1794,7 +1567,6 @@ es-MX:
           la abeja no está en la flor, la abeja hará el conjunto de acciones que pusiste
           en la ranura donde dice otra cosa.
       2:
-        image: notes/C4_conditionals_2.png
         text: Las sentencias "Si" son cómo las computadoras, son capaces de tomar
           decisiones. Los seres humanos definen condiciones para las computadoras
           que indican que "Si" la computadora se presenta con cierta situación, se
@@ -1807,14 +1579,12 @@ es-MX:
           es falsa, hará el segundo conjunto de acciones.
     C4_for_loops:
       1:
-        image: notes/C4_for_loops_1.png
         text: Cuando utilizas un bloque de repetición para un ciclo en tu código,
           ¿cómo sabe la computadora cuando fue repetido las veces suficientes? El
           bloque de repetición actualmente esconde en realidad una pieza más sofisticada
           de código llamado desde un ciclo que cuenta de un valor inicial hasta un
           valor final de un incremento específico.
       2:
-        image: notes/C4_for_loops_2.png
         text: Por ejemplo, una repetición de bloque tres cuenta del 1 al 3 por 1.
           Cada vez que cuenta, se ejecuta el código dentro del ciclo. El ciclo sabe
           cuántas veces se ha ejecutado mediante el uso de una variable contador,
@@ -1822,7 +1592,6 @@ es-MX:
           el incremento agregado a él cada vez que el ciclo se ejecuta. Si la variable
           contador es mayor que el valor final, el ciclo deja de ejecutarse.
       3:
-        image: notes/C4_for_loops_3.png
         text: La ventaja de utilizar un verdadero desde ciclo en lugar del bloque
           de repetición es que realmente puedes ver la variable contador y utilizarla
           en tu ciclo. Por ejemplo, si tengo una serie de flores y la primera de ellas
@@ -1831,20 +1600,17 @@ es-MX:
           de néctares cada vez, que sería uno en la primera flor, dos en la segunda
           y tres en la tercera.
       4:
-        image: notes/C4_for_loops_4.png
         text: También en desde ciclo, puedes incrementar el contador por un número
           distinto de uno cada vez. Potencialmente, puedes contar por 2s, 4s o incluso
           a través de una cantidad que cambia cada vez.
     C4_for_loops_bee:
       1:
-        image: notes/C4_for_loops_bee_1.png
         text: Cuando utilizas un bloque de repetición para un ciclo en tu código,
           ¿cómo sabe la computadora cuando fue repetido las veces suficientes? El
           bloque de repetición actualmente esconde en realidad una pieza más sofisticada
           de código llamado desde un ciclo que cuenta de un valor inicial hasta un
           valor final de un incremento específico.
       2:
-        image: notes/C4_for_loops_bee_2.png
         text: Por ejemplo, una repetición de bloque tres cuenta del 1 al 3 por 1.
           Cada vez que cuenta, se ejecuta el código dentro del ciclo. El ciclo sabe
           cuántas veces se ha ejecutado mediante el uso de una variable contador,
@@ -1852,7 +1618,6 @@ es-MX:
           el incremento agregado a él cada vez que el ciclo se ejecuta. Si la variable
           contador es mayor que el valor final, el ciclo deja de ejecutarse.
       3:
-        image: notes/C4_for_loops_bee_3.png
         text: La ventaja de utilizar un verdadero desde ciclo en lugar del bloque
           de repetición es que realmente puedes ver la variable contador y utilizarla
           en tu ciclo. Por ejemplo, si tengo una serie de flores y la primera de ellas
@@ -1861,20 +1626,17 @@ es-MX:
           de néctares cada vez, que sería uno en la primera flor, dos en la segunda
           y tres en la tercera.
       4:
-        image: notes/C4_for_loops_bee_4.png
         text: También en desde ciclo, puedes incrementar el contador por un número
           distinto de uno cada vez. Potencialmente, puedes contar por 2s, 4s o incluso
           a través de una cantidad que cambia cada vez.
     C4_for_loops_no_bee:
       1:
-        image: notes/C4_for_loops_no_bee_1.png
         text: Cuando utilizas un bloque de repetición para un ciclo en tu código,
           ¿cómo sabe la computadora cuando fue repetido las veces suficientes? El
           bloque de repetición actualmente esconde en realidad una pieza más sofisticada
           de código llamado desde un ciclo que cuenta de un valor inicial hasta un
           valor final de un incremento específico.
       2:
-        image: notes/C4_for_loops_no_bee_2.png
         text: Por ejemplo, un bloque de repetición de tres cuentas de 1 al 3 por 1.
           Cada vez que cuenta, se ejecuta el código dentro del ciclo. El desde ciclo
           sabe cuántas veces se ha ejecutado mediante el uso de una variable contador
@@ -1885,7 +1647,6 @@ es-MX:
           realmente puedes ver la variable contador y utilizar en tu ciclo.
     C4_function_create:
       1:
-        image: notes/C4_function_create_1.png
         text: Ahora que has editado bloques de función, es tiempo de crear un nuevo
           bloque de función desde cero. Es muy simple. Usted verá que el cuadro de
           herramientas tiene una categoría llamada funciones. Si hace clic en esto,
@@ -1893,14 +1654,12 @@ es-MX:
           en él, aparecerá el editor de función que ya has usado para editar bloques
           de función existentes.
       2:
-        image: notes/C4_function_create_2.png
         text: Al igual que antes, usted comenzó nombrando su función y escribiendo
           una descripción de lo que se supone que dicha función debe hacer. Por ejemplo,
           se supone que debe dibujar un cuadrado o dibujar un triángulo y luego arrastrar
           bloques de la caja de herramientas en el espacio blanco de abajo. Recuerda
           arrastrar estos bloques dentro del bloque verde que recubre la función.
       3:
-        image: notes/C4_function_create_3.png
         text: Una vez que terminaste, haz clic en guardar y salir. Esto te llevará
           al rompecabezas principal. La nueva función que creaste aparecerá como un
           bloque verde en la categoría de función en tu caja de herramientas. Arrástrala
@@ -1908,20 +1667,17 @@ es-MX:
           otro bloque para resolver el rompecabezas.
     C4_function_edit:
       1:
-        image: notes/C4_function_edit_1.png
         text: Una de las cosas más importantes de programar computadoras es que una
           vez que ya le dijiste a la computadora cómo realizar una acción, puedes
           darle un nuevo nombre a esa función. Le das un nombre y así la podrás llamar.
           En realidad, es como ampliar el idioma.
       2:
-        image: notes/C4_function_edit_2.png
         text: En el programa construimos y aprendimos a dibujar un cuadrado moviéndose
           y girando cuatro veces. Podemos tomar esa función y darle un nombre, dibuja
           un cuadrado, de esta forma, cada vez que queramos hacerlo, simplemente decimos
           dibuja un cuadrado y volverá a invocar esa función, ese código, y lo hará
           por nosotros. Hemos añadido ese concepto a nuestro lenguaje de programación.
       3:
-        image: notes/C4_function_edit_3.png
         text: En este rompecabezas, ya hemos creado una función de dibuja un cuadrado
           para ti. La verás en la caja de herramientas como un bloque verde. Lo que
           debes hacer es escribir el mismo código que escribiste antes de dibujar
@@ -1931,7 +1687,6 @@ es-MX:
           aparecerá en el bloque verde antes de esa función. Entonces, escribe una
           breve descripción de lo se supone que tu función realiza.
       4:
-        image: notes/C4_function_edit_4.png
         text: En este caso, se supone que para dibujar un cuadrado. El espacio blanco
           de abajo es el espacio de trabajo y obras como la obra de espacio que has
           estado usando. Arrastra y suelta bloques de la caja de herramientas en este
@@ -1942,14 +1697,12 @@ es-MX:
           otro bloque para resolver el rompecabezas.
     C4_function_parameters:
       1:
-        image: notes/C4_function_parameters_1.png
         text: Aquí hay una función que dibuja un cuadrado con lados de 50 píxeles.
           ¿Eso es genial pero que tal si quiero dibujar un cuadrado con lados de 50
           píxeles y otro cuadrado con lados de 100 píxeles? No tenemos que hacer dos
           funciones separadas que hacen casi lo mismo. Por el contrario, podemos usar
           una función con un parámetro.
       2:
-        image: notes/C4_function_parameters_2.png
         text: Parámetros nos permiten pasar valores a una función que utilice como
           variables dentro de la función. Vamos a intentar añadir un parámetro llamado
           como esta función para que podamos usarla para crear cuadrados de diferentes
@@ -1960,7 +1713,6 @@ es-MX:
           reemplazar el movimiento hacia adelante por el bloque de 100 con el parámetro
           longitud para que lo mueva hacia adelante por longitud.
       3:
-        image: notes/C4_function_parameters_3.png
         text: Haz clic en guardar y cerrar y arrastra hacia fuera tu nuevo crear un
           bloque cuadrado de la categoría de las funciones de la caja de herramientas.
           Notarás que hay un espacio vacío al lado de la longitud porque la función
@@ -1970,14 +1722,12 @@ es-MX:
           longitudes para hacer cuadrados de diferentes tamaños? ¡Pruébalo tú mismo!
     C4_intro:
       1:
-        image: notes/C4_intro_1.png
         text: Normalmente, la programación es en texto pero nosotros usaremos Blockly
           que usa bloques visuales que puedes arrastrar y soltar para escribir programas.
           Bajo la cubierta, sigues creando el código. Para empezar, vamos a crear
           el código para el programa que ayudará a éste Angry Bird a moverse entre
           el laberinto para llegar a los cerdos malvados que robaron sus huevos.
       2:
-        image: notes/C4_intro_2.png
         text: Blockly se divide en tres partes principales. A la izquierda está el
           laberinto de los pájaros, donde tu programa se ejecutará. Las instrucciones
           de cada nivel se escriben debajo del laberinto. Esta zona media es la caja
@@ -1985,34 +1735,29 @@ es-MX:
           puede entender. El espacio blanco en la derecha es el espacio de trabajo
           y es donde compilaremos nuestro programa.
       3:
-        image: notes/C4_intro_3.png
         text: Si arrastro un bloque "mover" al área de trabajo y presiono "Ejecutar",
           ¿qué sucede? El pájaro avanza una caja en la parrilla. ¿Y qué tal si quiero
           que el pájaro haga algo más después de que avanza una caja? Puedo agregar
           otro bloque a nuestro programa.
       4:
-        image: notes/C4_intro_4.png
         text: Voy a elegir el bloque "girar a la derecha" y lo arrastraré debajo de
           mi bloque de mover hasta que aparezca la flecha amarilla. Después la voy
           a soltar y los dos bloques se quedarán pegados. Cuando presione "Ejecutar"
           otra vez, el pájaro realizará los comandos que están apilados en nuestra
           área de trabajo en orden desde arriba hacia abajo.
       5:
-        image: notes/C4_intro_5.png
         text: Si deseas eliminar un bloque, solo sácalo de la pila y arrástralo a
           la papelera. Después de ejecutar el programa, siempre puedes apretar el
           botón de reinicio para que el pájaro vuelva al punto de inicio. ¡Ahora vamos
           por esos cerdos!
     C4_math_artist:
       1:
-        image: notes/C4_math_artist_1.png
         text: Si quiero dibujar un rectángulo de 50 píxeles de alto y eso es dos veces
           más ancho que alto, ¿cómo programaré la computadora para hacer eso? Bueno,
           podrían decirle al artista que suba cincuenta, gire a la derecha, luego
           vaya a más de 100 y mueva todo eso dos veces. Pero entonces estoy haciendo
           los cálculos para la computadora.
       2:
-        image: notes/C4_math_artist_2.png
         text: Multiplicar cincuenta por dos en tu cabeza puede no decir mucho pero
           las computadoras son realmente buenas en matemáticas, entonces debemos dejársela
           a ellos siempre que sea posible. Si solo llamo a la variable altura en su
@@ -2022,12 +1767,10 @@ es-MX:
           que es dos veces más ancho como lo es de alto.
     C4_unplugged_algorithms:
       1:
-        image: notes/C4_unplugged_algorithms_1.png
         text: Esta lección se denomina Tangram algoritmos. Un tangram es un rompecabezas
           con siete piezas que se pueden poner juntos y hacer otras formas. Utilizarás
           un algoritmo para explicar a tu compañero cómo armar el rompecabezas.
       2:
-        image: notes/C4_unplugged_algorithms_2.png
         text: Un algoritmo es uno de los pasos de la lista que tu puedes tomar para
           completar una tarea. Los utilizamos todos los días con cosas como recetas
           y listas de compras. Si mantienes un algoritmo simple, hay muchas maneras
@@ -2035,7 +1778,6 @@ es-MX:
           lo que querías. Si quieres asegurarte de que todos terminen exactamente
           con lo mismo, entonces tu algoritmo tendrá que ser detallado y específico.
       3:
-        image: notes/C4_unplugged_algorithms_3.png
         text: Estoy usando un algoritmo el día de hoy para completar una pintura.
           Quería intentar hacer una pintura de algunos lobos pero no soy el mejor
           pintor. Por suerte para la gente como yo, hay pintura por números. Hay 40
@@ -2043,7 +1785,6 @@ es-MX:
           cada sección. Pinturar por números me dice exactamente qué color usar y
           dónde.
       4:
-        image: notes/C4_unplugged_algorithms_4.png
         text: Es muy específico por lo que soy capaz de seguir indicaciones y la pintura
           va a quedar impresionante. Es un gran algoritmo. Si las instrucciones no
           fueron lo suficientemente específicas, mis lobos no se verán tan bien. Cuando
@@ -2051,13 +1792,11 @@ es-MX:
           es mejor ser extremadamente preciso.
     C4_unplugged_binary:
       1:
-        image: notes/C4_unplugged_binary_1.png
         text: En cada equipo, la persona que está dando instrucciones es la persona
           que sostiene el papel, y tiene que averiguar qué símbolo va a ser y su símbolo
           puesto es lo que va a ser. En binario, es como un alfabeto con dos letras.
           Como cuando A y B es tu alfabeto completo, pero tienes un 0 y un 1.
       2:
-        image: notes/C4_unplugged_binary_2.png
         text: Es la forma más común en que utilizas binario en una sentencia de "Si".
           Es un clásico de la programación. El programa se ejecuta a lo largo y dice
           Si algo es verdadero, entonces haz esto. O no es verdadero y haces otra
@@ -2065,14 +1804,12 @@ es-MX:
           En su lugar una sentencia Si, deseas trabajar con algo como una imagen o
           un sonido en una computadora.
       3:
-        image: notes/C4_unplugged_binary_3.png
         text: 'Una computadora sólo sabe binario pero una imagen, no es binario, no
           son unos y ceros entonces, ¿cómo haces esto? Aquí está un ejemplo: tienes
           este hermosa foto. Ahora, una foto es básicamente una forma de información.
           Toda la información puede ser codificada en binario de una u otra forma,
           sólo tienes que encontrar la manera de hacerlo.'
       4:
-        image: notes/C4_unplugged_binary_4.png
         text: Te imaginas que vamos a poner cuadros sobre este oso panda y para cada
           cuadro, vamos a decidir si ese cuadro es más negro o más blanco. Y luego
           vamos a colorearlo de esa manera. Ahora cada celda del cuadrado ya es negra
@@ -2082,7 +1819,6 @@ es-MX:
           binario.
     C4_unplugged_forloops:
       1:
-        image: notes/C4_unplugged_forloops_1.png
         text: Esta lección se denomina bucles divertido. En esta lección, usaremos
           una recta numérica para jugar el juego del dado. Cada jugador rodará tres
           veces para asignar un valor inicial, un valor para parar y nuestro intervalo.
@@ -2091,14 +1827,12 @@ es-MX:
           circunda al llegar a nuestro valor de parada. ¡La persona con la mayor puntuación
           gana!
       2:
-        image: notes/C4_unplugged_forloops_2.png
         text: Para bucles, pueden ser muy útiles sobre lugares, y si llegaras a ser
           un meteorólogo, utilizarás desde ciclos todo el tiempo. Hola, soy Becky.
           Trabajo en EverPower Renewables como meteorólogo de viento. Pronostico la
           velocidad del viento para el área del Río Columbia Gorge en donde la empresa
           es propietaria de parques eólicos.
       3:
-        image: notes/C4_unplugged_forloops_3.png
         text: Estamos tratando de entender cuánto viento va a estar ahí para que sepamos
           cuánta energía va a ser emitida. Damos esta información a proveedores de
           energía en tiempo real. Ellos compran y venden energía basándose en cuanta
@@ -2106,7 +1840,6 @@ es-MX:
           energía esté equilibrada y su luz se queda prendida, y aprovechamos al máximo
           la cantidad de energía que obtenemos de nuestras granjas.
       4:
-        image: notes/C4_unplugged_forloops_4.png
         text: Estamos en el centro de control nacional de EverPower Renewables aquí
           en Portland y es donde tenemos información proveniente de nuestras fincas
           en todo el país. Incluso los mayores equipos de potencia hoy en día no pueden
@@ -2115,7 +1848,6 @@ es-MX:
           latitud, longitud. Tenemos que calcular la física y tratar de averiguar
           la velocidad del viento, la temperatura, la presión, ese tipo de cosas.
       5:
-        image: notes/C4_unplugged_forloops_5.png
         text: Ya que éstas son redes bastante grandes y estamos haciendo esto en varios
           puntos, estamos haciendo bucles sobre estas cosas millones y millones de
           veces. En todo lo que hago Se qué usaré para bucles. Aquí por ejemplo hay
@@ -2126,12 +1858,10 @@ es-MX:
           un modelo de computadora para poder preverlo.
     C4_unplugged_madlibs:
       1:
-        image: notes/C4_unplugged_madlibs_1.png
         text: En esta lección, jugaremos con algún relleno en las historias en blanco.
           Tienes una plantilla que puedes completar para crear historias similares
           que tienen diferencias muy divertidas.
       2:
-        image: notes/C4_unplugged_madlibs_2.png
         text: En esta lección, también aprendimos cómo hacer una plantilla abstraída
           de dos historias que ya se han creado. Abstracción es el arte de la eliminación
           de las diferencias y detalles para que puedas ver cómo una solución puede
@@ -2140,7 +1870,6 @@ es-MX:
           varias situaciones diferentes.
     C4_unplugged_parameters:
       1:
-        image: notes/C4_unplugged_parameters_1.png
         text: Esta lección se llama escribiendo Canción con parámetros. Vamos a escribir
           algunas canciones aquí. A veces el coro es un poco diferente cada vez que
           canta. ¿Te acuerdas del viejo Macdonald que tenía una granja? El coro es
@@ -2148,13 +1877,11 @@ es-MX:
           1-a-i-a-o. El pequeño cambio en cada coro se puede demostrar con algo que
           llamamos parámetros.
       2:
-        image: notes/C4_unplugged_parameters_2.png
         text: A veces, una función necesita un parámetro. Un parámetro es una pieza
           adicional de información que puedes pasar a una función para personalizarla
           para una necesidad especial. Cuando haces helados con tus amigos, utilizas
           un proceso similar a los parámetros en un programa de computadora.
       3:
-        image: notes/C4_unplugged_parameters_3.png
         text: El disco de helado de vainilla puede ser el mismo para cada helado pero
           cuando pides a tus amigos que agreguen dos coberturas, podrías conseguir
           muchas combinaciones diferentes. Cobertura es el nombre de función pero
@@ -2163,7 +1890,6 @@ es-MX:
           también.
     C4_unplugged_variables:
       1:
-        image: notes/C4_unplugged_variables_1.png
         text: Esta lección se llama variables en sobres. Vamos a aprender cómo podemos
           construir oraciones cuando todavía nos falta parte de la información. La
           mayoría de nosotros ya está familiarizado con la idea de rellenar un espacio
@@ -2171,7 +1897,6 @@ es-MX:
           tarea. A veces, hay más de una palabra que necesitas llenar y en ese caso,
           te damos un espacio en blanco para saber qué información va allí.
       2:
-        image: notes/C4_unplugged_variables_2.png
         text: Las variables son marcadores de posición para piezas de información
           que pueden cambiar. Usando una variable para la información que falta, podemos
           seguir trabajando en lo que estábamos haciendo y dejar que otra persona
@@ -2182,7 +1907,6 @@ es-MX:
           después de que el usuario los rellene. Utilizamos variables todo el tiempo
           en nuestro trabajo.
       3:
-        image: notes/C4_unplugged_variables_3.png
         text: Cualquier momento que necesites almacenar un dato para después, utilizamos
           una variable. Supongamos que tenemos que contar el número de veces que el
           usuario ha puesto un mensaje en Tweeter. Cada vez que el usuario realiza
@@ -2192,13 +1916,11 @@ es-MX:
           en esa variable.
     C4_variables_artist:
       1:
-        image: notes/C4_variables_artist_1.png
         text: Una variable es un contenedor que puede almacenar un valor. Cuando utilizas
           esa variable en un algoritmo, abre el contenedor y mira el valor dentro.
           Esto te permite escribir algoritmos inteligentes que se comportan diferentemente
           dependiendo del valor almacenado en la variable.
       2:
-        image: notes/C4_variables_artist_2.png
         text: Por ejemplo, si quiero escribir un algoritmo para decir ¡Feliz cumpleaños,
           ya tienes 10 años! para mi hermanito, eso es grandioso, pero cuando lo ejecute
           el año que viene, quiero decir, ¡Feliz cumpleaños, ya tienes 11 años! Podría
@@ -2207,26 +1929,22 @@ es-MX:
           la variable puede cambiar, cada año puedo actualizar la variable 'edad'
           para igualar 'edad' más 1.
       3:
-        image: notes/C4_variables_artist_3.png
         text: En este rompecabezas, vamos a utilizar una variable que pondrá la longitud
           de la línea que dibuja nuestro artista. Más tarde en nuestro código, el
           bloque de avanza verá en esa variable de longitud para ver qué valor se
           ha establecido.
     C4_variables_playlab:
       1:
-        image: notes/C4_variables_playlab_1.png
         text: Una variable es un contenedor que puede almacenar un valor. Cuando utilizas
           esa variable en un algoritmo, abre el contenedor y mira el valor dentro.
           Esto te permite escribir algoritmos inteligentes que se comportan diferentemente
           dependiendo del valor almacenado en la variable.
       2:
-        image: notes/C4_variables_playlab_2.png
         text: Ahora vas a probar playlab donde te dan diferentes juegos y puedes cambiar
           los valores de las variables como velocidad, altura, puntuación, con el
           fin de cambiar el juego. No tienes que cambiar el algoritmo del juego para
           cambiar cómo juega, sólo la variable.
       3:
-        image: notes/C4_variables_playlab_3.png
         text: En mi trabajo para Kindle y en X-ray para libros, aplicamos las variables
           de diversas maneras. Una forma en que puedes utilizar una variable es almacenar
           los números de página de un libro. Un usuario puede aumentar y disminuir
@@ -2235,14 +1953,12 @@ es-MX:
           de número de páginas en la variable.
     infinity_playlab_events:
       1:
-        image: notes/infinity_playlab_events_1.png
         text: Ahora vamos a aprender de algo que todos los programadores del juego
           utilizan cada día. Se llaman eventos. Un evento le indica a tu programa
           que escuche cuando algo sucede. Y luego cuando lo hace, realiza una acción.
           Algunos ejemplos de eventos se escuchan por clic del mouse, un botón de
           flecha o un toque en la pantalla.
       2:
-        image: notes/infinity_playlab_events_2.png
         text: Aquí, vamos a hacer que Baymax se mueva hasta tocar a Hiro y bajar para
           tocar a Rapunzel cuando el jugador utiliza las teclas de flechas de arriba/abajo
           o los botones de arriba/abajo. utilizaremos el bloque de flecha arriba y
@@ -2252,14 +1968,12 @@ es-MX:
           mueva hacia abajo. Paso a paso, tu juego es cada vez más interactivo.
     infinity_playlab_intro:
       1:
-        image: notes/infinity_playlab_intro_1.png
         text: Entonces ¿en qué grado estás? Segundo. Décimo grado. Primer grado. Yo
           estaba en octavo grado cuando aprendí a programar. Obtuve mi primera computadora
           cuando estaba en sexto grado. Lo que me fascina es ser capaz de solucionar
           los problemas de la gente. Puedes expresarte, puedes construir cosas de
           una idea.
       2:
-        image: notes/infinity_playlab_intro_2.png
         text: La ciencia de la computación es la base para muchas de las cosas que
           profesionales y estudiantes universitarios harán en los próximos veinte
           o treinta años. Me gusta la programación porque me gusta ayudar a la gente.
@@ -2268,7 +1982,6 @@ es-MX:
           es la parte más importante. Yo soy un principiante y quiero que aprendas
           conmigo.
       3:
-        image: notes/infinity_playlab_intro_3.png
         text: Soy John Vechey, y soy uno de los co-fundadores de PopCap Games. Hacemos
           Juegos como Plants vs Zombies, Bejeweled y Peggle. Mucho acerca de los juegos
           no se trata de lo perfecto de su código, ni lo perfecto de su arte, sino
@@ -2276,7 +1989,6 @@ es-MX:
           probarlo, aprendiendo y adaptando, e iterando en sus propias habilidades
           de hacer juegos.
       4:
-        image: notes/infinity_playlab_intro_4.png
         text: "¿Tienes un juego de video favorito? Bueno, vamos a dar un paso hacia
           la creación de juegos usando Play Lab. Los buenos juegos tienen una historia
           y cada historia tiene actores. Actores hacen cosas como hablar, moverse
@@ -2286,7 +1998,6 @@ es-MX:
           Construiremos un juego desde cero que puedes compartir y reproducir en un
           teléfono."
       5:
-        image: notes/infinity_playlab_intro_5.png
         text: La pantalla se divide en tres partes principales. Sobre la izquierda
           está el espacio del juego, donde se ejecutará el programa. Las instrucciones
           para cada nivel se escriben a continuación. Esta área central es la caja
@@ -2294,7 +2005,6 @@ es-MX:
           espacio en blanco a la derecha se llama el espacio de trabajo, y es aquí
           donde construimos nuestro programa.
       6:
-        image: notes/infinity_playlab_intro_6.png
         text: Para empezar, necesitarás vincular tus bloques en el bloque naranja
           "cuando se ejecuta". Puedes vincular varios bloques juntos arrastrándolos
           hacia fuera hasta que veas el contorno amarillo, y luego se juntarán. En
@@ -2303,19 +2013,16 @@ es-MX:
           fuera y vinculándolo al bloque "cuando se ejecuta". Una vez que tengas tus
           bloques en lugar, presiona el botón "Ejecutar" para ver lo que programaste.
       7:
-        image: notes/infinity_playlab_intro_7.png
         text: Comienza y al final podrás crear tu propio juego con estos increíbles
           actores que pueden interactuar, obtener puntos, tiro de microbots, cerezas,
           ollas, destellos y hielo... y se desvanecen entre sí. ¡Todo depende de ti!
     infinity_playlab_repeat_forever:
       1:
-        image: notes/infinity_playlab_repeat_forever_1.png
         text: "¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
           Esperemos que nunca tengas que hacerlo, porque los equipos son realmente
           buenos en repetir cosas. Éste es el bloque de repetición por siempre. Cualquier
           cosa dentro de este bloque pasará por siempre en el juego."
       2:
-        image: notes/infinity_playlab_repeat_forever_2.png
         text: Por lo que si queríamos un actor que haga algo repetidamente sin el
           jugador teniendo que hacer nada, pondremos esos bloques dentro del bloque
           de repetición por siempre. En el siguiente rompecabezas, nuestro objetivo
@@ -2324,21 +2031,18 @@ es-MX:
           de que construyas tu propio juego.
     tutorial_puzzle_challenge:
       1:
-        image: notes/tutorial_puzzle_challenge_1.png
         text: "¿Qué quieres ser cuando crezcas Olivia? Una astronauta. ¿Sabes qué
           es un programador de computadoras? Sí umm, no. Umm, espera, ¿qué? No estoy
           realmente segura de cómo explicar programación de computadoras es bastante
           simple. Es un conjunto de instrucciones como una receta, tienes que seguirlas
           paso a paso para obtener el resultado final que deseas."
       2:
-        image: notes/tutorial_puzzle_challenge_2.png
         text: Puedo cambiar el número de píxeles, la longitud de la línea, utilizando
           este desplegable. ¿Cuánto de largo era otra vez? Puedes ver las instrucciones
           otra vez mirando abajo del botón de ejecutar. Aquí he usado el bloque de
           movimiento hacia adelante y voy a seleccionar 100 píxeles. Puedo borrar
           un bloque arrastrando a la caja de herramientas o al bote de basura. Regresémoslo.
       3:
-        image: notes/tutorial_puzzle_challenge_3.png
         text: Ejecuta el código pulsando ejecutar. ¡Bueno, eso no funcionó! Presionaré
           reiniciar y averiguaré que está mal. Puedes tratar un rompecabezas tantas
           veces como quieras y omitir rompecabezas y volver a ellos. Sólo asegúrate
@@ -2346,14 +2050,12 @@ es-MX:
           hacia adelante. Todavía no funciona. Puedo colocar un bloque entre otros
           bloques.
       4:
-        image: notes/tutorial_puzzle_challenge_4.png
         text: Tomemos un bloque de vuelta y coloquémoslo entre el movimiento avanza.
           Gire a la izquierda 45 grados. Vamos a intentarlo otra vez. ¡Reiniciar,
           ejecutar, impresionante! Aquí hay otro rompecabezas. A veces te dan código
           de comienzo para completar. Aquí tengo que agregar las longitudes y grados
           correspondientes.
       5:
-        image: notes/tutorial_puzzle_challenge_5.png
         text: A veces, accidentalmente puede tirar a la basura el código de arranque.
           ¿Qué hacer entonces? Puede presionar limpiar rompecabezas y empezar de nuevo.
           Voy a arrastrar este bloque del número en las diferentes áreas de píxeles.
@@ -2361,7 +2063,6 @@ es-MX:
           Aquí esta el código Studio de abeja. Necesito mover la abeja a cada flor
           y obtener el néctar.
       6:
-        image: notes/tutorial_puzzle_challenge_6.png
         text: La primera flor es tres bloques lejos así que necesito tres movimiento
           hacia adelante. 1, 2, 3. Luego, obtén néctar, después obtener otro néctar.
           ¡Bueno, eso no funcionó! Colocaré otro avanzar entre los obtener néctares
@@ -2370,14 +2071,12 @@ es-MX:
           de rompecabezas del código studio.
     unplug1:
       1:
-        image: notes/unplug1_1.png
         text: "¿Qué quieres ser cuando crezcas Olivia? Una astronauta. ¿Sabes qué
           es un programador de computadoras? Sí umm, no. Umm, espera, ¿qué? No estoy
           realmente segura de cómo explicar programación de computadoras es bastante
           simple. Es un conjunto de instrucciones como una receta, tienes que seguirlas
           paso a paso para obtener el resultado final que deseas."
       2:
-        image: notes/unplug1_2.png
         text: Ciencias de la computación es una manera de impactar el mundo. Puede
           ser videos de música, puede ser juegos, detectar si alguien se relaciona
           con otra persona o no. Encontrar y conocer a los amigos de las personas.
@@ -2385,7 +2084,6 @@ es-MX:
           que tener un disco, creo. Para mí es como un pincel. Yo creo que una gran
           programación no es tan diferente de un gran arte.
       3:
-        image: notes/unplug1_3.png
         text: Cuando por fin aprendí un poco de programación, esa pared en blanco
           resultó un montón de puertas, y las abres y por supuesto entonces encuentras
           que detrás de ellas hay otro pasillo lleno de un montón de puertas. La programación
@@ -2395,7 +2093,6 @@ es-MX:
           están iluminados. Un número de personas que puedes tocar y con las que puedes
           interactuar es algo que el mundo nunca antes había visto.
       4:
-        image: notes/unplug1_4.png
         text: Nuestra primera lección de estas series es acerca de Ciencias de la
           computación, lo que hace un informático y cómo puedes ser más responsable
           en el uso de tecnología. Es una lección muy importante pero es mucho texto.
@@ -2405,19 +2102,16 @@ es-MX:
           como si tú hablaras un idioma secreto.
     unplug2:
       1:
-        image: notes/unplug2_1.png
         text: La lección de pensamiento computacional pretende enseñarte a desglosar
           un problema difícil en varios problemas más simples. El objetivo de esta
           lección es escribir un conjunto de instrucciones para que alguien las pueda
           seguir y dibujar uno de los monstruos incluidos en el plan de la lección.
       2:
-        image: notes/unplug2_2.png
         text: 'Los estudiantes formarán grupos para escribir instrucciones y luego
           las cambiarán con otro grupo que tendrá que dibujar el monstruo. Los Grupos
           escribirán las instrucciones usando los cuatro pasos del pensamiento computacional:
           descomposición, patrón de ubicación, abstracción y algoritmos.'
       3:
-        image: notes/unplug2_3.png
         text: Primeros grupos descomponen la tarea que significa hacer un plan de
           juego. Entonces buscarán patrones entre todos los monstruos en el catálogo.
           Cuando se encuentren diferencias entre los monstruos, quitarán o eliminarán
@@ -2425,21 +2119,18 @@ es-MX:
           y otro tiene ojos spritem. Pero ambos tienen ojos, entonces podemos escribir
           una línea que diga el monstruo que tiene los ojos en blanco.
       4:
-        image: notes/unplug2_4.png
         text: Así, los estudiantes serán capaces de escribir un conjunto de instrucciones,
           llamar a un algoritmo, el cual numere las partes de los monstruos con espacios
           en blanco, para los que los estilos deberían ser. Éste es el conjunto de
           instrucciones que pasarán a otros estudiantes para crear su propio monstruo.
     unplug3:
       1:
-        image: notes/unplug3_1.png
         text: En papel gráfico de programación, ayudamos a explicar cómo trabaja la
           codificación tratando de ayudar a las personas a recrear dibujos usando
           únicamente flechas y garabatos. A una persona se le da un pequeño dibujo
           en papel gráfico y necesitan avanzar usando sólo flechas específicas y tratar
           de describir cómo recrear ese dibujo.
       2:
-        image: notes/unplug3_2.png
         text: 'En esta actividad, los símbolos que sólo se pueden utilizar son estos:
           mueve un cuadrado hacia delante, un cuadrado atrás, mueve un cuadrado hacia
           arriba, mueve un cuadrado hacia abajo, cambia al siguiente color y rellena
@@ -2447,14 +2138,12 @@ es-MX:
           a otra persona que pueda leer el código y probar y recrear la imagen.'
     unplug4:
       1:
-        image: notes/unplug4_1.png
         text: En papel gráfico de programación, ayudamos a explicar cómo trabaja la
           codificación tratando de ayudar a las personas a recrear dibujos usando
           únicamente flechas y garabatos. A una persona se le da un pequeño dibujo
           en papel gráfico y necesitan avanzar usando sólo flechas específicas y tratar
           de describir cómo recrear ese dibujo.
       2:
-        image: notes/unplug4_2.png
         text: En la segunda mitad de la actividad, les preguntamos a los estudiantes
           de cuántas maneras diferentes pueden doblar un pedazo de papel para crear
           dieciséis rectángulos idénticos. Luego, comentarás cuántas soluciones múltiples
@@ -2462,14 +2151,12 @@ es-MX:
           mejores en ciertas situaciones.
     unplug5:
       1:
-        image: notes/unplug5_1.png
         text: En papel gráfico de programación, ayudamos a explicar cómo trabaja la
           codificación tratando de ayudar a las personas a recrear dibujos usando
           únicamente flechas y garabatos. A una persona se le da un pequeño dibujo
           en papel gráfico y necesitan avanzar usando sólo flechas específicas y tratar
           de describir cómo recrear ese dibujo.
       2:
-        image: notes/unplug5_2.png
         text: En la segunda mitad de la actividad, les preguntamos a los estudiantes
           de cuántas maneras diferentes pueden doblar un pedazo de papel para crear
           dieciséis rectángulos idénticos. Luego, comentarás cuántas soluciones múltiples
@@ -2477,14 +2164,12 @@ es-MX:
           mejores en ciertas situaciones.
     unplug6:
       1:
-        image: notes/unplug6_1.png
         text: Esta actividad se llama codificación con tarjetas y es ideal para cualquier
           edad. Como aprendiste con la sentencia "Si" en lecciones anteriores, durante
           Blockly, las sentencias "Si" tienen algo de ellos, tienes que evaluar para
           saber si es verdadero o falso. Esa es la condicional y puede ser utilizada
           de muchas maneras diferentes.
       2:
-        image: notes/unplug6_2.png
         text: Tomamos ventaja porque, mediante la creación de programas en papel que
           ejecutas, toman cartas de juego aleatorios. Podrías tener una sentencia
           de "Si" que dice algo como "Si" la carta que tomas es mayor que 8, obtendrás
@@ -2492,19 +2177,16 @@ es-MX:
           tan simple o tan complicado como tú quieras.
     unplug7:
       1:
-        image: notes/unplug7_1.png
         text: "¿Sabes cuando buscas la letra de una canción y definen el estribillo
           al principio y luego, durante el resto de la canción, solo te regresan el
           estribillo? Así es como llamas a una función."
       2:
-        image: notes/unplug7_2.png
         text: En esta lección, definimos el estribillo al principio de nuestra canción
           y luego cantamos nuestra canción y regresamos y notamos que la clase no
           canta la palabra del estribillo, automáticamente va a la cima en donde definimos
           el coro y cantar eso. Utilizamos eso como una gran introducción a cómo entender
           lo que está haciendo un programa cuando se define y llama a una función.
       3:
-        image: notes/unplug7_3.png
         text: Utilizamos canciones conocidas como Old Macdonald para hablar de cómo
           un estribillo se llama una y otra vez y cómo a veces un coro puede cambiar.
           Cuando tienes una canción como Old Macdonald, donde cambian ciertas palabras,
@@ -2514,21 +2196,18 @@ es-MX:
           canciones familiares y separarlas tú mismo. Ve si pueden descubrirlo juntos.
     unplug8:
       1:
-        image: notes/unplug8_1.png
         text: Nuestra lección de abstracción utiliza un concepto familiar de madlibs,
           en donde básicamente se inserta un espacio en blanco en una historia que
           puede ser llenada con muchas palabras diferentes. Tomamos esa idea, desafiando
           a niños a que hagan sus propias palabras para sus propias historias y realmente
           explicar el concepto de abstracción.
       2:
-        image: notes/unplug8_2.png
         text: Se trata de funciones y cómo puedes tener una función, como en Old Macdonald,
           donde tienes una estructura para tu estribillo pero tienes algo pequeño
           que cambia y quitas esa cosita que cambia y puede llenarlo con tu propia
           palabra cada vez. Pero a veces tienes tres palabras que cambian y entonces
           las rellenas con tres parámetros, eso es aún bastante útil.
       3:
-        image: notes/unplug8_3.png
         text: Puedes tener una función que se encarga de muchos problemas diferentes.
           Muchas veces, la gente escribirá funciones separadas para todos los problemas,
           sin darse cuenta de que hay sólo una pequeña diferencia. Si sólo podrían
@@ -2536,13 +2215,11 @@ es-MX:
           reutilizar una función una y otra vez, en lugar de tener 14 funciones diferentes.
     unplug9:
       1:
-        image: notes/unplug9_1.png
         text: Programación Relay es una lección muy divertida que tiene más que sólo
           ciencias de la computación. Algunas veces todos se sienten un poquito impacientes
           y quieres mantenerlos en pie. Ésta es una gran manera de agregar algo de
           aliento a las ciencias de computación.
       2:
-        image: notes/unplug9_2.png
         text: Separas a todos en dos grupos en donde estén parados en una línea y
           ejecuten el estilo de transmisión. La primera persona de cada grupo corre
           al otro lado de la habitación en donde tienen un dibujo en papel gráfico
@@ -2550,27 +2227,23 @@ es-MX:
           para crear esa imagen, regresan a su línea, y etiquetan al siguiente jugador,
           quien escribirá el siguiente paso.
       3:
-        image: notes/unplug9_3.png
         text: Ésta es una excelente manera de entender la idea de depuración, la necesidad
           de corregir tu propio trabajo y la necesidad de revisar el trabajo que la
           gente hace antes de ti. Rápidamente, entenderás lo importante que es tener
           cuidado en tu codificación cuando todo el equipo está dependiendo de ti.
     unplug10:
       1:
-        image: notes/unplug10_1.png
         text: Esta actividad explica de una manera fácil de entender cómo trabaja
           Internet. Explicamos en términos simples toda la terminología que necesitarás
           para que los estudiantes pueden simular mensajes que se transmiten, como
           un correo electrónico.
       2:
-        image: notes/unplug10_2.png
         text: Los estudiantes transmitirán mensajes mientras que pretenden ser uno
           de los tres métodos de transmisión. Conexión inalámbrica a Internet, DSL
           o fibra óptica. Los estudiantes que representan Wi-Fi tendrán que llevar
           el mensaje que están transmitiendo en su cabeza porque es más probable que
           Wi-Fi deje caer alguna información.
       3:
-        image: notes/unplug10_3.png
         text: Los estudiantes que pretenden ser de DSL o cable llevarán el mensaje
           en la parte posterior de su mano, donde son ligeramente menos propensos
           a soltar información. Y los estudiantes que representan a la fibra óptica
@@ -2578,14 +2251,12 @@ es-MX:
           algo que muchos de nosotros usamos todos los días.
     unplug11:
       1:
-        image: notes/unplug11_1.png
         text: Así que ya es tiempo de dar un paso atrás y echar una vistazo a todo
           lo que has hecho en los últimas diecinueve lecciones. Éste es un buen momento
           de informar a los estudiantes que lo que han hecho es un gran logro. Que
           han aprendido más sobre las lecciones que la mayoría de los adultos sabe
           sobre ciencias de la computación.
       2:
-        image: notes/unplug11_2.png
         text: Comenta en clase o en pequeños grupos acerca de sus lecciones favoritas.
           Una vez que viste todo lo que has aprendido, aquí es donde la creatividad
           de sus estudiantes puede brillar. Divídelos en grupos y que hagan una lección
@@ -2595,7 +2266,6 @@ es-MX:
           establezca otro día para hacer algunas de las actividades que el estudiante
           creó.
       3:
-        image: notes/unplug11_3.png
         text: Desde todos lados, aquí en Code.org, esperamos que hayas tenido MUCHA
           diversión durante este curso. Y si tu sueño es crear la mejor aplicación,
           utiliza la programación para ayudar a curar enfermedades, o si sólo deseas
@@ -2603,7 +2273,6 @@ es-MX:
           para lograr esos sueños.
     starwars_intro:
       1:
-        image: notes/starwars_intro_1.JPG
         text: Hola, soy Kathleen Kennedy, la productora de Star Wars, El Despertar
           de La Fuerza. Hoy trabajarás con una de nuestras estrellas, el BB-8. BB-8
           es un androide esférico. Todo lo que hace, cada movimiento que ejecuta,
@@ -2612,14 +2281,12 @@ es-MX:
           o en una película. De hecho, cientos de ingenieros informáticos trabajaron
           conjuntamente para hacer una película como El Despertar de La Fuerza.
       2:
-        image: notes/starwars_intro_2.JPG
         text: Hola, soy Rachel Rose. Soy una ingeniera de I+D en ILM y lidero el equipo
           de desarrollo de criaturas y animación. En El Despertar de la Fuerza, soy
           la responsable de ayudar a los artistas a desarrollar plataformas, que son
           las partes de los personajes que se mueven y que permiten que parezcan muy
           creíbles en una galaxia lejana, muy lejana.
       3:
-        image: notes/starwars_intro_3.JPG
         text: En la siguiente hora, vamos a construir nuestro propio juego de Star
           Wars, el cual te enseñará los conceptos básicos de la programación. Normalmente,
           la programación es totalmente textual, pero nosotros utilizaremos bloques
@@ -2628,43 +2295,35 @@ es-MX:
           de que pruebes los conceptos básicos, cambiaremos a JavaScript, uno de los
           lenguajes de programación más populares en la web.
       4:
-        image: notes/starwars_intro_4.JPG
         text: Para empezar, vamos a trabajar con Rey para programar a BB-8 para que
           se mueva para recoger todos los trozos de chatarra. Tu pantalla esta dividida
           en tres partes. La de la izquierda es el espacio del juego Star Wars, en
           donde se ejecutará el código. Las instrucciones para cada nivel se escriben
           debajo del espacio de juego.
       5:
-        image: notes/starwars_intro_5.JPG
         text: La parte intermedia es la caja de herramientas y cada uno de estos bloques
           es un comando que BB-8 puede entender.
       6:
-        image: notes/starwars_intro_6.JPG
         text: El espacio blanco de la derecha se llama espacio de trabajo y es donde
           vamos a construir nuestro programa.
       7:
-        image: notes/starwars_intro_7.JPG
         text: Si arrastro el bloque moveLeft(); a nuestro espacio de trabajo y pulso
           ejecutar, ¿qué pasa? BB-8 mueve un bloque en la cuadrícula.
       8:
-        image: notes/starwars_intro_8.JPG
         text: "¿Y qué pasa si quiero que BB-8 haga algo después del bloque moveLeft();?
           Puedo añadir otro bloque a nuestro programa. Voy a elegir el bloque moveUp();
           y lo arrastraré bajo mi bloque moveLeft(); hasta que se destaque. Entonces
           lo soltaré y los dos bloques se engancharán juntos."
       9:
-        image: notes/starwars_intro_9.JPG
         text: Cuando pulse ejecutar otra vez, BB-8 realizará las acciones que he apilado
           de arriba a abajo en nuestro espacio de trabajo. Si quieres eliminar un
           bloque en algún momento, simplemente elimínalo del montón y devuélvelo arrastrándolo
           a la caja de herramientas.
       10:
-        image: notes/starwars_intro_10.JPG
         text: Después de pulsar ejecutar, siempre puedes pulsar el botón de reiniciar
           para devolver a BB-8 al principio. ¡Ahora, vamos a probar!
     starwars_typing:
       1:
-        image: notes/starwars_typing_1.JPG
         text: Dentro de los bloques que hemos estado utilizando hay comandos JavaScript.
           JavaScript es hoy en día el lenguaje de programación más popular para los
           desarrolladores profesionales. Los bloques son una magnífica forma de empezar
@@ -2673,17 +2332,14 @@ es-MX:
           los conceptos básicos, los ingenieros escribimos código tecleado texto ya
           que de esta forma programamos más rápido.
       2:
-        image: notes/starwars_typing_2.JPG
         text: Podemos teclear cientos de comandos sin tener que encontrarlos en la
           caja de herramientas y arrastrarlos, dado que estás aprendiendo a escribir
           texto, puede ser más lento al principio, pero queremos que lo intentes.
       3:
-        image: notes/starwars_typing_3.JPG
         text: En la esquina superior derecha de tu espacio de trabajo, puedes pulsar
           el botón de mostrar texto de cualquier puzzle para cambiar de mostrar bloques
           a introducir código como texto.
       4:
-        image: notes/starwars_typing_4.JPG
         text: En la próxima lección, empezaremos en modo de teclear texto. Aún podrás
           arrastrar el bloque desde la caja de herramientas, o bien, podrás teclear
           el nombre del comando. Cuando empiezas a teclear, verás que los nombres
@@ -2692,17 +2348,14 @@ es-MX:
           para ir más rápido. En mi trabajo, uso esta característica de autocompletar
           continuamente cuando escribo código.
       5:
-        image: notes/starwars_typing_5.JPG
         text: Cuando escribas código, el ordenador necesita que seas muy preciso.
           Deberás teclear y usar las mayúsculas en el nombre del comando exactamente,
           incluyendo los paréntesis y el punto y coma. Aunque sólo cometas un pequeño
           error, BB-8 no podrá entender el código y no será capaz de moverse.
       6:
-        image: notes/starwars_typing_6.JPG
         text: Cuando cometas un error en la línea, el editor lo marcará para que puedas
           intentar cambiar el texto para corregirlo.
       7:
-        image: notes/starwars_typing_7.JPG
         text: Si te atascas, siempre podrás comenzar de nuevo con el botón de recomenzar
           y también podrás volver al modo de bloques en cualquier momento pulsando
           en la esquina superior derecha. ¡Ok, vamos a probar escribir! Y si cometes
@@ -2710,89 +2363,74 @@ es-MX:
           correctamente.
     starwars_events:
       1:
-        image: notes/starwars_events_1.JPG
         text: Hola, me llamo Charita Carter. Soy una productora creativa en Walt Disney
           Imagineering. Mi trabajo es liderar los equipos que crean las atracciones
           que nuestros visitantes disfrutan. Siempre estamos buscando formas de mejorar
           y proponer mejores experiencias a nuestros visitantes y la tecnología está
           en el centro de todo ello.
       2:
-        image: notes/starwars_events_2.JPG
         text: "¡Felicitaciones, lo conseguiste! Has programado a BB-8. Ahora creo
           que estamos listos para un trabajo más duro. Vamos a ello. Ahora que has
           aprendido los fundamentos de la programación, vamos a volver atrás para
           construir tu propio juego, protagonizado por R2-D2 y C3PO."
       3:
-        image: notes/starwars_events_3.JPG
         text: 'Para hacer un juego, necesitamos aprender algunas cosas sobre algo
           que los programadores de juegos utilizan a diario: los eventos. Los eventos
           le indican a tu programa que escuche o espere hasta el momento en que pase
           algo y que cuando ésto ocurre, realice una acción.'
       4:
-        image: notes/starwars_events_4.JPG
         text: Algunos ejemplos de eventos son esperar una pulsación del mouse, de
           una tecla de flecha o un toque en la pantalla.
       5:
-        image: notes/starwars_events_5.JPG
         text: Aquí vamos a hacer que R2-D2 se mueva para entregar un mensaje a un
           piloto rebelde y después se mueva hacia abajo adonde está el otro piloto
           rebelde. Utilizaremos eventos para hacer que se mueva. Cuando el jugador
           use las teclas de flecha arriba/abajo, o los botones arriba/abajo.
       6:
-        image: notes/starwars_events_6.JPG
         text: Usamos el bloque de evento whenUp() y le añadimos el bloque goUp().
           Cuando el jugador pulse la tecla de flecha hacia arriba, el código asociado
           al bloque whenUp() se ejecutará. Y haremos lo mismo para mover a R2-D2 hacia
           abajo.
       7:
-        image: notes/starwars_events_7.JPG
         text: Para conseguirlo utilizaremos un comando que se llama whenUp(). Cuando
           arrastramos el comando desde la caja de herramientas, verás que empieza
           y acaba con una llave en vez de un punto y coma. Esto nos proporciona espacio
           para poner comandos dentro. Cada comando que pongamos entre las llaves se
           ejecutará cuando el jugador apriete la flecha arriba.
       8:
-        image: notes/starwars_events_8.JPG
         text: Queremos que R2-D2 vaya hacia arriba, por lo que pondremos el bloque
           goUp(); dentro del comando. Y haremos lo mismo para hacer que R2-D2 vaya
           hacia abajo.
       9:
-        image: notes/starwars_events_9.JPG
         text: Ahora, en vez de escribir todo el código para controlar nuestro androide
           a priori, podemos dejar que R2-D2 reaccione a los eventos de pulsación de
           botón que lo mueven por la pantalla. Paso a paso, tu juego se va haciendo
           cada vez más interactivo.
     starwars_congrats:
       1:
-        image: notes/starwars_congrats_1.JPG
         text: Hola, mi nombre es Alice y me encargo de los equipos de producto e ingeniería
           aquí en Code.org y he trabajado en este tutorial que estás siguiendo ahora.
       2:
-        image: notes/starwars_congrats_2.JPG
         text: Acabas de terminar el último nivel. ¡Felicitaciones! ¡Ya has aprendido
           todo lo que necesitas saber para hacer un patrón como éste! Ya no hay más
           instrucciones, ni puzzles que resolver. Puedes hacer tu propio juego y elegir
           lo que hará. Una cosa más, has desbloqueado sonidos nuevos y nuevos comandos
           para hacer aún más cosas.
       3:
-        image: notes/starwars_congrats_3.JPG
         text: "[alumnos hablando] Así que nosotros hicimos un juego en el que obtienes
           puntos cuando obtienes cerdos inflables. La idea es que cada vez que obtienes
           un cerdo inflable aparezca un soldado de asalto. En realidad toda la pantalla
           está llena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
-        image: notes/starwars_congrats_4.JPG
         text: Направихме игра в която неможете да губите печелите точки от всичко.
           В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
           долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
           предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
       5:
-        image: notes/starwars_congrats_5.JPG
         text: След като сте направите играта, изберете сподели за да я споделите с
           приятели или да играете на телефон. Забавлявайте се!
     starwars_blocks_intro:
       1:
-        image: notes/starwars_blocks_intro_1.JPG
         text: Hola, soy Kathleen Kennedy, la productora de Star Wars, El Despertar
           de La Fuerza. Hoy trabajarás con una de nuestras estrellas, el BB-8. BB-8
           es un androide esférico. Todo lo que hace, cada movimiento que ejecuta,
@@ -2801,14 +2439,12 @@ es-MX:
           o en una película. De hecho, cientos de ingenieros informáticos trabajaron
           conjuntamente para hacer una película como El Despertar de La Fuerza.
       2:
-        image: notes/starwars_blocks_intro_2.JPG
         text: Hola, soy Rachel Rose. Soy una ingeniera de I+D en ILM y lidero el equipo
           de desarrollo de criaturas y animación. En El Despertar de la Fuerza, soy
           la responsable de ayudar a los artistas a desarrollar plataformas, que son
           las partes de los personajes que se mueven y que permiten que parezcan muy
           creíbles en una galaxia lejana, muy lejana.
       3:
-        image: notes/starwars_blocks_intro_3.JPG
         text: En la siguiente hora, vamos a construir nuestro propio juego de Star
           Wars, el cual te enseñará los conceptos básicos de la programación. Normalmente,
           la programación es totalmente textual, pero nosotros utilizaremos bloques
@@ -2816,24 +2452,19 @@ es-MX:
           Para empezar, vamos a trabajar con Rey para programar a BB-8 para que se
           mueva para recoger todos los trozos de chatarra.
       4:
-        image: notes/starwars_blocks_intro_4.JPG
         text: Tu pantalla esta dividida en tres partes. La de la izquierda es el espacio
           del juego Star Wars, en donde se ejecutará el código. Las instrucciones
           para cada nivel se escriben debajo del espacio de juego.
       5:
-        image: notes/starwars_blocks_intro_5.JPG
         text: La parte intermedia es la caja de herramientas y cada uno de estos bloques
           es un comando que BB-8 puede entender.
       6:
-        image: notes/starwars_blocks_intro_6.JPG
         text: El espacio blanco de la derecha se llama espacio de trabajo y ahí es
           donde construiremos nuestro programa.
       7:
-        image: notes/starwars_blocks_intro_7.JPG
         text: Si arrastro el bloque moveLeft(); a nuestro espacio de trabajo, ¿qué
           pasará? BB-8 se mueve un bloque a la izquierda en la cuadrícula.
       8:
-        image: notes/starwars_blocks_intro_8.JPG
         text: "¿Y qué pasa si quiero que BB-8 haga algo después del bloque moveLeft();?
           Puedo añadir otro bloque a nuestro programa. Voy a elegir el bloque moveUp();
           y lo arrastraré bajo mi bloque moveLeft(); hasta que se destaque. Entonces
@@ -2841,45 +2472,37 @@ es-MX:
           otra vez, BB-8 realizará las acciones que he apilado de arriba a abajo en
           nuestro espacio de trabajo."
       9:
-        image: notes/starwars_blocks_intro_9.JPG
         text: Si quieres eliminar un bloque en algún momento, simplemente elimínalo
           del montón y devuélvelo arrastrándolo a la caja de herramientas.
       10:
-        image: notes/starwars_blocks_intro_10.JPG
         text: Después de pulsar ejecutar, siempre puedes pulsar el botón de reiniciar
           para devolver a BB-8 al principio. ¡Ahora, vamos a probar!
     starwars_blocks_events:
       1:
-        image: notes/starwars_blocks_events_1.JPG
         text: Hola, me llamo Charita Carter. Soy una productora creativa en Walt Disney
           Imagineering. Mi trabajo es liderar los equipos que crean las atracciones
           que nuestros visitantes disfrutan. Siempre estamos buscando formas de mejorar
           y proponer mejores experiencias a nuestros visitantes y la tecnología está
           en el centro de todo ello.
       2:
-        image: notes/starwars_blocks_events_2.JPG
         text: "¡Felicitaciones, lo conseguiste! Has programado a BB-8. Ahora creo
           que estamos listos para un trabajo más duro. Vamos a ello. Ahora que has
           aprendido los fundamentos de la programación, vamos a volver atrás para
           construir tu propio juego, protagonizado por R2-D2 y C3PO."
       3:
-        image: notes/starwars_blocks_events_3.JPG
         text: 'Para hacer un juego, necesitamos aprender algunas cosas sobre algo
           que los programadores de juegos utilizan a diario: los eventos. Los eventos
           le indican a tu programa que escuche o espere hasta el momento en que pase
           algo y que cuando ésto ocurre, realice una acción.'
       4:
-        image: notes/starwars_blocks_events_4.JPG
         text: Algunos ejemplos de eventos son esperar una pulsación del mouse, de
           una tecla de flecha o un toque en la pantalla.
       5:
-        image: notes/starwars_blocks_events_5.JPG
         text: Aquí vamos a hacer que R2-D2 se mueva para entregar un mensaje a un
           piloto rebelde y después se mueva hacia abajo adonde está el otro piloto
           rebelde. Utilizaremos eventos para hacer que se mueva. Cuando el jugador
           use las teclas de flecha arriba/abajo, o los botones arriba/abajo.
       6:
-        image: notes/starwars_blocks_events_6.JPG
         text: Usamos el bloque de evento whenUp() y le añadimos el bloque goUp().
           Cuando el jugador pulse la tecla de flecha hacia arriba, el código asociado
           al bloque whenUp() se ejecutará. Y haremos lo mismo para mover a R2-D2 hacia
@@ -2887,39 +2510,32 @@ es-MX:
           a priori, podemos dejar que R2-D2 reaccione a los eventos de pulsación de
           botón que lo mueven por la pantalla.
       7:
-        image: notes/starwars_blocks_events_7.JPG
         text: Paso a paso, tu juego se va haciendo cada vez más interactivo.
     starwars_blocks_congrats:
       1:
-        image: notes/starwars_blocks_congrats_1.JPG
         text: Hola, mi nombre es Alice y me encargo de los equipos de producto e ingeniería
           aquí en Code.org y he trabajado en este tutorial que estás siguiendo ahora.
       2:
-        image: notes/starwars_blocks_congrats_2.JPG
         text: Acabas de terminar el último nivel. ¡Felicitaciones! ¡Ya has aprendido
           todo lo que necesitas saber para hacer un patrón como éste! Ya no hay más
           instrucciones, ni puzzles que resolver. Puedes hacer tu propio juego y elegir
           lo que hará. Una cosa más, has desbloqueado sonidos nuevos y nuevos comandos
           para hacer aún más cosas.
       3:
-        image: notes/starwars_blocks_congrats_3.JPG
         text: "[alumnos hablando] Así que nosotros hicimos un juego en el que obtienes
           puntos cuando obtienes cerdos inflables. La idea es que cada vez que obtienes
           un cerdo inflable aparezca un soldado de asalto. En realidad toda la pantalla
           está llena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
-        image: notes/starwars_blocks_congrats_4.JPG
         text: Направихме игра в която неможете да губите печелите точки от всичко.
           В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
           долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
           предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
       5:
-        image: notes/starwars_blocks_congrats_5.JPG
         text: След като сте направите играта, изберете сподели за да я споделите с
           приятели или да играете на телефон. Забавлявайте се!
     mc_intro:
       1:
-        image: notes/mc_intro_1.JPG
         text: Me llamo Jens Bergensten, pero se me conoce como Jeb. Soy el jefe de
           diseño de Minecraft en Mojang, en Estocolmo. Creo que tenía 11 o 12 años
           cuando decidí aprender a programar, porque quería hacer juegos. Un amigo
@@ -2927,43 +2543,34 @@ es-MX:
           modo que así empecé. Me gusta mucho diseñar y desentrañar la arquitectura
           de los juegos. Eso es lo que me fascina de Minecraft.
       2:
-        image: notes/mc_intro_2.JPG
         text: A lo largo de la próxima hora, vas a aprender los fundamentos de la
           programación haciendo que Alex o Steve se muevan por un tramo simulado de
           un mundo de Minecraft.
       3:
-        image: notes/mc_intro_3.JPG
         text: Normalmente, la programación utiliza texto, pero hoy vamos a usar Blockly,
           un sistema de bloques que se pueden mover y soltar para escribir programas.
           En realidad, estarás usando código JavaScript.
       4:
-        image: notes/mc_intro_4.JPG
         text: Los conceptos que aprenderás son los que usan a diario los programadores
           y constituyen los cimientos de las ciencias informáticas. Son los que usamos
           en Mojang para Minecraft.
       5:
-        image: notes/mc_intro_5.JPG
         text: Antes de que empecemos, tienes que escoger un personaje. Yo voy a elegir
           a Alex. Vamos a crear el código de un programa para moverlo por la pantalla.
       6:
-        image: notes/mc_intro_6.JPG
         text: La pantalla se divide en tres partes. A la izquierda, está el área de
           juego de Minecraft, donde se ejecutará el programa. Debajo se escriben las
           instrucciones del nivel.
       7:
-        image: notes/mc_intro_7.JPG
         text: En el centro están las herramientas. Estos bloques son comandos para
           dar órdenes a Alex.
       8:
-        image: notes/mc_intro_8.JPG
-        text: El espacio blanco de la derecha se llama zona de trabajo y es donde
-          crearemos nuestro programa.
+        text: El espacio en blanco a la derecha se llama espacio de trabajo y es aquí
+          donde construimos nuestro programa.
       9:
-        image: notes/mc_intro_9.JPG
         text: Si arrastramos el bloque "avanzar" a la zona de trabajo y hacemos clic
           en Ejecutar, ¿qué sucede? Que Alex avanza un espacio en la cuadrícula.
       10:
-        image: notes/mc_intro_10.JPG
         text: ¿Y si queremos que haga algo después de avanzar? Podemos añadir otro
           bloque al programa. Voy a coger el de "girar a la derecha" y colocarlo debajo
           del de "avanzar" hasta que aparezca esta línea de color naranja. Entonces
@@ -2971,45 +2578,37 @@ es-MX:
           realizará los comandos que hayamos colocados en la zona de trabajo, en el
           orden indicado.
       11:
-        image: notes/mc_intro_11.JPG
         text: Y si alguna vez queremos borrar un bloque, solo tenemos que arrastrarlo
           de nuevo a la caja de herramientas.
       12:
-        image: notes/mc_intro_12.JPG
         text: Para deshacer los cambios y volver al principio podemos usar el botón
           Empezar de nuevo, situado arriba, a la derecha de la zona de trabajo. Ahora,
           ¿ves el triángulo de los bloques de giro? Estos triángulos significan que
           puedes escoger otra opción. Vamos, ¡empecemos a programar!
     mc_repeat:
       1:
-        image: notes/mc_repeat_1.JPG
         text: Soy Lydia Winters, directora de marca de Mojang. Somos los creadores
           de Minecraft.
       2:
-        image: notes/mc_repeat_2.JPG
         text: Lo que más me gusta hacer en Minecraft es explorar. Me encanta adentrarme
           en cuevas y ver lo que puedo encontrar. Para alguien que no es programadora,
           como yo, es fascinante recibir estas clases y aprender unas nociones sobre
           código.
       3:
-        image: notes/mc_repeat_3.JPG
         text: En el último nivel tuvimos que usar muchos bloques "avanzar". Sería
           mucho más cómodo decirle al ordenador que ejecutase el comando cuatro o
           cinco veces. Por suerte para nosotros, a los ordenadores se les da muy bien
           esto de los bucles.
       4:
-        image: notes/mc_repeat_4.JPG
         text: A la hora de construir Minecraft, usamos bucles de repetición para colocar
           los materiales iniciales que conforman el mundo. Hablamos de millares de
           bloques. También usamos los bucles para otras cosas, como hacer que los
           pies de Alex se muevan al caminar. Los bucles son realmente útiles en programación.
       5:
-        image: notes/mc_repeat_5.JPG
         text: Está anocheciendo, así que en los dos próximos niveles vamos a construir
           una casa para refugiarnos. Usaremos el bloque de repetición para que sea
           más fácil.
       6:
-        image: notes/mc_repeat_6.JPG
         text: Para levantar el muro de la casa, podemos decirle a Alex que avance
           y coloque tablones cuatro veces o hacerlo una sola vez y luego tomar el
           comando y usar el bloque de repetición para que realice la misma acción
@@ -3018,26 +2617,21 @@ es-MX:
           levantar la casa! Que te diviertas.
     mc_if_statements:
       1:
-        image: notes/mc_if_statements_1.JPG
         text: Vamos a aprender a usar las sentencias "si". Estas sentencias son fundamentales
           para aprender a programar. Ayudan al ordenador a tomar decisiones.
       2:
-        image: notes/mc_if_statements_2.JPG
         text: Todos los ordenadores las usan, incluido mi teléfono. Por ejemplo, cuando
           quieras desbloquearlo, ejecuta unas líneas de código que dicen que si la
           contraseña es correcta se desbloquee y si no, muestre un mensaje de error.
       3:
-        image: notes/mc_if_statements_3.JPG
         text: Puedes usar las sentencias "si" para que Steve y Alex reaccionen a lo
           que vean en el mundo. Por ejemplo, si hay una roca adelante, pueden girar
           a la izquierda. O a la derecha si se encuentran con un árbol.
       4:
-        image: notes/mc_if_statements_4.JPG
         text: En este caso, no queremos caernos en la lava. En principio no hay problema,
           porque la lava aparece en la pantalla. Pero, ¿qué pasa con la que no vemos,
           la que está bajo la piedra?
       5:
-        image: notes/mc_if_statements_5.JPG
         text: Cuando excavemos, tendremos que ver si hay lava en un sitio antes de
           avanzar. Y si resulta que la hay, habrá que colocar una piedra delante del
           personaje para que avance. De este modo, podrá desplazarse sin peligro.
@@ -3045,47 +2639,37 @@ es-MX:
           moverte.
     mc_congrats_share:
       1:
-        image: notes/mc_congrats_share_1.JPG
         text: "¡Felicitaciones! Acabas de aprender los fundamentos de la programación."
       2:
-        image: notes/mc_congrats_share_2.JPG
         text: Ya puedes usar estos bloques para construir tus propias creaciones.
           No hay más instrucciones ni rompecabezas. Puedes construir lo que te guste.
           La decisión es solo tuya.
       3:
-        image: notes/mc_congrats_share_3.JPG
         text: "[los estudiantes hablan] Hay que hacerlo real. Trasquilar. He hecho
           una L de antorchas. Yo una A con tablones de abedul. Ha funcionado. ¡Hemos
           hecho una casa de lana!"
       4:
-        image: notes/mc_congrats_share_4.JPG
         text: Al terminar, dale a Compartir. Recibirás un enlace para mandarles tu
           creación a tus amigos. ¡Que te diviertas!
     mc_congrats_no_share:
       1:
-        image: notes/mc_congrats_no_share_1.JPG
         text: "¡Felicitaciones! Acabas de aprender los fundamentos de la programación."
       2:
-        image: notes/mc_congrats_no_share_2.JPG
         text: Ya puedes usar estos bloques para construir tus propias creaciones.
           No hay más instrucciones ni rompecabezas. Puedes construir lo que te guste.
           La decisión es solo tuya.
       3:
-        image: notes/mc_congrats_no_share_3.JPG
         text: "[los estudiantes hablan] Hay que hacerlo real. Trasquilar. He hecho
           una L de antorchas. Yo una A con tablones de abedul. Ha funcionado. ¡Hemos
           hecho una casa de lana!"
       4:
-        image: notes/mc_congrats_no_share_4.JPG
         text: Ya puedes construir lo que quieras. ¡Que te diviertas!
     gumball_intro:
       1:
-        image: notes/gumball_intro_1.JPG
         text: Si deseas hacer su propio juego, es muy fácil. Todo lo que necesita
           son unos pocos conceptos básicos de programación y puede empezar a jugar
           un juego que tú creaste.
       2:
-        image: notes/gumball_intro_2.JPG
         text: "¿Tienes un video juego favorito? Vamos a dar un paso hacia la creación
           de juegos, sólo así, en el LabDeJuego. Los buenos juegos tienen una historia
           y cada historia tiene actores. Actores que hacen cosas como hablar, moverse
@@ -3094,86 +2678,70 @@ es-MX:
           uno con divertidos actores y luego construiremos un juego desde cero que
           puede compartir y reproducir en un teléfono."
       3:
-        image: notes/gumball_intro_3.JPG
         text: Hoy aprenderemos cómo hacer todas estas cosas uno por uno con divertidos
           actores y luego construiremos un juego desde cero que puede ser compartido
           y reproducido en un teléfono.
       4:
-        image: notes/gumball_intro_4.JPG
         text: La pantalla se divide en tres partes principales. A la izquierda, es
           el espacio de juego donde se ejecutará el programa. Las instrucciones para
           cada nivel están escritas abajo.
       5:
-        image: notes/gumball_intro_5.JPG
         text: El área del medio es de la caja de herramientas y cada uno de estos
           bloques es un pedazo de código.
       6:
-        image: notes/gumball_intro_6.JPG
         text: El espacio en blanco a la derecha se llama espacio de trabajo y es aquí
           donde construimos nuestro programa.
       7:
-        image: notes/gumball_intro_7.JPG
         text: Para empezar, necesitarás unir tus bloques al bloque naranja, llamado
           "cuando se ejecuta". Puedes unir múltiples bloques arrastrándolos hacia
           fuera hasta que veas la línea amarilla, y luego encajarán todos a la vez.
       8:
-        image: notes/gumball_intro_8.JPG
         text: En este primer rompecabezas, haremos que los actores digan algo poniendo
           el bloque de "decir" para cuando se ejecute el bloque y escribiendo tu mensaje.
           Una vez que tus bloques estén en lugar, haz clic en el botón de ejecutar
           para ver lo que programaste.
       9:
-        image: notes/gumball_intro_9.JPG
         text: Comienza y al final podrás crear tu propio juego con todo tipo de jugadores
           que puedan interactuar, tener puntos, tirar cosas y desaparecer unos a otros.
           ¡Todo depende de ti!
     gumball_events:
       1:
-        image: notes/gumball_events_1.JPG
         text: Ahora aprenderemos algo que todos los programadores de juego usan cada
           día. Son llamados eventos. Un evento le indica a tu programa que escuche
           para cuando algo sucede y entonces cuando lo hace, el juego realiza una
           acción.
       2:
-        image: notes/gumball_events_2.JPG
         text: Algunos ejemplos de eventos están escuchando por un clic del mouse o
           un teclado de la flecha de arriba o abajo en la pantalla.
       3:
-        image: notes/gumball_events_3.JPG
         text: Aquí, vamos a hacer al actor decir algo cuando el jugador haga clic
           en él. Lo usaremos cuando haga clic en el bloque y agregue el bloque de
           "decir" a éste. Cuando el jugador haga clic en todos los bloques agregados
           a este bloque, se realizarán.
       4:
-        image: notes/gumball_events_4.JPG
         text: También hay con bloques de flecha. Si tu enlace mueve bloques a esos,
           puedes comenzar a mover tus actores para arriba, abajo, izquierda, derecha,
           con las teclas de flecha. Poco a poco, tu juego es cada vez más interactivo.
     gumball_repeat:
       1:
-        image: notes/gumball_repeat_1.JPG
         text: "¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
           Esperemos que nunca tengas, porque los equipos son realmente buenos en repetir
           cosas."
       2:
-        image: notes/gumball_repeat_2.JPG
         text: Éste es el bloque de repetición por siempre. Cualquier cosa dentro de
           este bloque pasará por siempre en el juego. Si queremos que un actor haga
           algo repetidamente sin que el jugador haga nada, pondremos eso bloques dentro
           del bloque de repetición por siempre.
       3:
-        image: notes/gumball_repeat_3.JPG
         text: En el siguiente rompecabezas, nuestro objetivo es ayudar al actor a
           que haga un trabajo continuamente. Aprendiendo cómo el comando de repetición
           trabaja te ahorrará mucho tiempo más tarde cuando construyas tu propio juego.
     iceage_intro:
       1:
-        image: notes/iceage_intro_1.JPG
         text: Si deseas hacer su propio juego, es muy fácil. Todo lo que necesita
           son unos pocos conceptos básicos de programación y puede empezar a jugar
           un juego que tú creaste.
       2:
-        image: notes/iceage_intro_2.JPG
         text: "¿Tienes un video juego favorito? Vamos a dar un paso hacia la creación
           de juegos, sólo así, en el LabDeJuego. Los buenos juegos tienen una historia
           y cada historia tiene actores. Actores que hacen cosas como hablar, moverse
@@ -3182,112 +2750,91 @@ es-MX:
           uno con divertidos actores y luego construiremos un juego desde cero que
           puede compartir y reproducir en un teléfono."
       3:
-        image: notes/iceage_intro_3.JPG
         text: Hoy aprenderemos cómo hacer todas estas cosas uno por uno con divertidos
           actores y luego construiremos un juego desde cero que puede ser compartido
           y reproducido en un teléfono.
       4:
-        image: notes/iceage_intro_4.JPG
         text: La pantalla se divide en tres partes principales. A la izquierda, es
           el espacio de juego donde se ejecutará el programa. Las instrucciones para
           cada nivel están escritas abajo.
       5:
-        image: notes/iceage_intro_5.JPG
         text: El área del medio es de la caja de herramientas y cada uno de estos
           bloques es un pedazo de código.
       6:
-        image: notes/iceage_intro_6.JPG
-        text: El espacio blanco de la derecha se llama zona de trabajo y es donde
-          crearemos nuestro programa.
+        text: El espacio en blanco a la derecha se llama espacio de trabajo y es aquí
+          donde construimos nuestro programa.
       7:
-        image: notes/iceage_intro_7.JPG
         text: Para empezar, necesitarás unir tus bloques al bloque naranja, llamado
           "cuando se ejecuta". Puedes unir múltiples bloques arrastrándolos hacia
           fuera hasta que veas la línea amarilla, y luego encajarán todos a la vez.
       8:
-        image: notes/iceage_intro_8.JPG
         text: En este primer rompecabezas, haremos que los actores digan algo poniendo
           el bloque de "decir" para cuando se ejecute el bloque y escribiendo tu mensaje.
           Una vez que tus bloques estén en lugar, haz clic en el botón de ejecutar
           para ver lo que programaste.
       9:
-        image: notes/iceage_intro_9.JPG
         text: Comienza y al final podrás crear tu propio juego con todo tipo de jugadores
           que puedan interactuar, tener puntos, tirar cosas y desaparecer unos a otros.
           ¡Todo depende de ti!
     iceage_events:
       1:
-        image: notes/iceage_events_1.JPG
         text: Ahora aprenderemos algo que todos los programadores de juego usan cada
           día. Son llamados eventos. Un evento le indica a tu programa que escuche
           para cuando algo sucede y entonces cuando lo hace, el juego realiza una
           acción.
       2:
-        image: notes/iceage_events_2.JPG
         text: Algunos ejemplos de eventos están escuchando por un clic del mouse o
           un teclado de la flecha de arriba o abajo en la pantalla.
       3:
-        image: notes/iceage_events_3.JPG
         text: Aquí, vamos a hacer al actor decir algo cuando el jugador haga clic
           en él. Lo usaremos cuando haga clic en el bloque y agregue el bloque de
           "decir" a éste. Cuando el jugador haga clic en todos los bloques agregados
           a este bloque, se realizarán.
       4:
-        image: notes/iceage_events_4.JPG
         text: También hay con bloques de flecha. Si tu enlace mueve bloques a esos,
           puedes comenzar a mover tus actores para arriba, abajo, izquierda, derecha,
           con las teclas de flecha. Poco a poco, tu juego es cada vez más interactivo.
     iceage_repeat:
       1:
-        image: notes/iceage_repeat_1.JPG
         text: "¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
           Esperemos que nunca tengas, porque los equipos son realmente buenos en repetir
           cosas."
       2:
-        image: notes/iceage_repeat_2.JPG
         text: Éste es el bloque de repetición por siempre. Cualquier cosa dentro de
           este bloque pasará por siempre en el juego. Si queremos que un actor haga
           algo repetidamente sin que el jugador haga nada, pondremos eso bloques dentro
           del bloque de repetición por siempre.
       3:
-        image: notes/iceage_repeat_3.JPG
         text: En el siguiente rompecabezas, nuestro objetivo es ayudar al actor a
           que haga un trabajo continuamente. Aprendiendo cómo el comando de repetición
           trabaja te ahorrará mucho tiempo más tarde cuando construyas tu propio juego.
     mc_2016_intro:
       1:
-        image: notes/mc_2016_intro_1.jpg
         text: Hola, me llamo Jens y soy el director del diseño creativo de Minecraft.
           En la próxima hora, vas a aprender a crear tu propio juego de Minecraft.
           Esto parece Minecraft, pero el mundo se detuvo. Las ovejas no se mueven,
           las gallinas no ponen huevos y los zombis están quietitos. Depende de ti
           agregar código para que el mundo Minecraft comience a funcionar.
       2:
-        image: notes/mc_2016_intro_2.jpg
         text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
           really interested in is how people think and interact with technology and
           so this job is the perfect job for me to put together the computer engineering
           with the psychology: cómo la gente piensa y se comporta.'
       3:
-        image: notes/mc_2016_intro_3.jpg
         text: Vas a ver la pantalla dividida en tres partes. 1) A la izquierda aparece
           el juego de Minecraft. En este momento, el mundo está congelado, pero lo
           vamos a arreglar con código.
       4:
-        image: notes/mc_2016_intro_4.jpg
         text: 2) La parte del medio es el cuadro de herramientas. Cada uno de estos
           bloques es un comando que comprenden las gallinas, las ovejas y las demás
           criaturas de Minecraft.
       5:
-        image: notes/mc_2016_intro_5.jpg
         text: 3) A la derecha se encuentra el espacio de trabajo. Allí desarrollaremos
           el programa.
       6:
-        image: notes/mc_2016_intro_6.jpg
         text: Si no recuerdas qué hay que hacer, las instrucciones de cada nivel aparecen
           arriba.
       7:
-        image: notes/mc_2016_intro_7.jpg
         text: Para empezar, vamos a programar una gallina. Hay que arrastrar el comando
           "avanzar" al espacio de trabajo. Si pulso "Ejecutar", la gallina avanza
           un paso. Para que siga avanzando, agregaré otro bloque "avanzar" debajo
@@ -3295,29 +2842,24 @@ es-MX:
           dos bloques se unen. Si pulso "Ejecutar" otra vez, la gallina avanza dos
           pasos.
       8:
-        image: notes/mc_2016_intro_8.jpg
         text: Si quieres eliminar un bloque, solo tienes que quitarlo de la pila y
           arrastrarlo hasta el cuadro de herramientas.
       9:
-        image: notes/mc_2016_intro_9.jpg
         text: Después de haber pulsado "Ejecutar", puedes hacer clic en el botón "Restablecer"
           para restablecer el juego y volver a empezar. Ahora es tu turno de hacer
           tu propia versión de Minecraft. ¡Diviértete!
     mc_2016_loops:
       1:
-        image: notes/mc_2016_loops_1.jpg
         text: Hola, me llamo Lisa. Soy desarrolladora de software de Minecraft, y
           mi trabajo es programar algunos de los animales y enemigos del juego. Por
           ejemplo, trabajé en el ocelote. Me ocupé de la parte donde puedes alimentar
           a un ocelote con un pez y así domesticarlo y convertirlo en tu gato.
       2:
-        image: notes/mc_2016_loops_2.jpg
         text: Los humanos nos aburrimos si tenemos que hacer siempre lo mismo. Lo
           bueno de las computadoras es que pueden hacer una misma tarea miles y millones
           de veces seguidas sin aburrirse. Este tipo de repetición se llama bucle
           y lo usan todas las criaturas de Minecraft.
       3:
-        image: notes/mc_2016_loops_3.jpg
         text: Antes hicimos que una gallina se moviera, pero después se detuvo. En
           Minecraft, las gallinas deambulan sin rumbo y nunca se detienen. Para hacer
           que las gallinas estén en constante movimiento, podemos usar el bucle "hacer
@@ -3326,26 +2868,22 @@ es-MX:
           versión de Minecraft.
     mc_2016_events:
       1:
-        image: notes/mc_2016_events_1.jpg
         text: En el próximo nivel, puedes elegir ser Steve o Alex. Para moverte hacia
           arriba, abajo, a la izquierda o a la derecha, debes pulsar los botones con
           flechas del teclado. ¡Ahora sabes cómo ir de acá para allá en un nivel!
           Para usar una criatura, tienes que caminar hasta ella, colocártele en frente
           y pulsar la barra espaciadora.
       2:
-        image: notes/mc_2016_events_2.jpg
         text: Si estás usando una pantalla táctil, para moverte tienes que deslizar
           el dedo hacia arriba, abajo, a la izquierda o la derecha. Y toca el animal
           para usar la criatura que tienes en frente.
       3:
-        image: notes/mc_2016_events_3.jpg
         text: Pero ¿qué pasa cuando usamos un animal? En Minecraft, las ovejas sueltan
           lana cuando las esquilamos; las vacas salen corriendo cuando las golpeamos;
           y los Creepers explotan cuando estamos muy cerca. Estas reacciones son producto
           de una cosa llamada eventos. Los eventos le indican al programa que esté
           atento o que espere a que pase algo. Cuando pasa algo, realiza una acción.
       4:
-        image: notes/mc_2016_events_4.jpg
         text: Hasta ahora, usaste un solo evento. El código que colocaste en el espacio
           "cuando se genera" se ejecuta al crear una criatura o al iniciar el juego.
           En los próximos niveles, aparecerán nuevos espacios de eventos. Por ejemplo,
@@ -3354,24 +2892,20 @@ es-MX:
           sol, coloca eso en el espacio "cuando se hace de día".
     mc_2016_spawn:
       1:
-        image: notes/mc_2016_spawn_1.jpg
         text: En los videojuegos, generar es lo mismo que crear. En este nivel, vamos
           a generar zombis cuando el sol se esconda. Para eso, vamos a usar el bloque
           "cuando se hace de noche".
       2:
-        image: notes/mc_2016_spawn_2.jpg
         text: Como queremos que los zombis aparezcan de noche, vamos a agregar el
           bloque "generar zombi" debajo del bloque "cuando se hace de noche". Apenas
           aparezcan, cada zombi va a ejecutar el código que hayas colocado en su espacio
           de evento "cuando se genera". ¡Diviértete creando zombis!
     mc_2016_congrats:
       1:
-        image: notes/mc_2016_congrats_1.jpg
         text: "¡Felicitaciones! Aprendiste a usar comandos informáticos y a darle
           vida al mundo Minecraft. Ahora el desarrollador eres tú. ¡Desbloqueaste
           todos los comandos y todas las criaturas! Tú eliges lo que va a pasar."
       2:
-        image: notes/mc_2016_congrats_2.jpg
         text: Cuando termines de crear tu juego, pulsa Compartir para obtener un vínculo
           que puedes compartir con tus amigos o para jugar en tu teléfono. ¡Diviértete!
           Me entusiasma la idea de jugar a tu versión de Minecraft.
@@ -3550,168 +3084,59 @@ es-MX:
           vaya al programa.
       6:
         image: notes/applab_intro_designmode_6.png
-        text: If you add an element to your app by mistake, just drag it out or hit
-          the delete.
       7:
         image: notes/applab_intro_designmode_7.png
-        text: You can add entirely new screens to your app by dragging in a screen
-          element
       8:
         image: notes/applab_intro_designmode_8.png
-        text: From the drop-down at the top you can quickly switch back and forth
-          between the screens you create.
       9:
         image: notes/applab_intro_designmode_9.png
-        text: Inside your app, you'll need a way to switch between all of these screens,
-          so the setScreen block has been added to the toolbox. Use "setScreen" inside
-          the "onEvent" block to change screens at the click of a button.
       10:
         image: notes/applab_intro_designmode_10.png
-        text: In the next few levels you'll be working on a single project. First
-          you'll add a button then you'll add a new screen and finally you'll write
-          code so that the button switches to the new screen.
     applab_intro_share:
       1:
         image: notes/applab_intro_share_1.png
-        text: Now that you've learned some of the basics of App Lab like adding buttons,
-          sounds, images, text and new screens you can make all sorts of apps.
       2:
         image: notes/applab_intro_share_2.png
-        text: In the next level you'll find the app you just finished building. With
-          a little creativity, you can turn this into a personality quiz for your
-          friends, a greeting card that you can share with your family or a choose-your-own-adventure
-          game. All of these apps are just a combination of the skills you've already
-          learned, and I bet you can come up with even more.
       3:
         image: notes/applab_intro_share_3.png
-        text: Once you're done with your app you can easily send it to your phone
-          to see how it looks. Just click "Share" and enter your phone number here.
       4:
         image: notes/applab_intro_share_4.png
-        text: You'll receive a text message that'll let you open up your app instantly.
       5:
         image: notes/applab_intro_share_5.png
-        text: You can also share a link to your app over social media or post it to
-          the code.org public gallery for other people to play and share.
       6:
         image: notes/applab_intro_share_6.png
-        text: You've just scratched the surface of what App Lab can do. Full App Lab
-          features more advanced user interactions, new screen elements and even a
-          built-in database so you can quickly build full featured apps. At "code.org/applab"
-          you'll find the full tool and lots of ideas if you want to keep going.
       7:
         image: notes/applab_intro_share_7.png
-        text: Thanks for coming along the ride. Now go build and share your first
-          app, and keep on building apps with App Lab!
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What
-          I want to show you is just over this mesa plateau. I think you''re going
-          to love it!'
-      2:
-        image: notes/mc_2017_agent_intro_2.png
-        text: Wait a minute - there's a hole in the track! (screaming)
-      3:
-        image: notes/mc_2017_agent_intro_3.png
-        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a
-          hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather
-          blocks to fix it. Preston: Let''s make it a race. First one back to the
-          top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather
-          some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy:
-          I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine?
-          Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game
-          broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy:
-          Does anyone know how to write Minecraft code?'
-      4:
-        image: notes/mc_2017_agent_intro_4.png
-        text: "(poof) Preston: What is that? Stampy: I've never seen one of these
-          before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston:
-          Okay, what is going on? Someone needs to go back to the real world and fix
-          this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
-      5:
-        image: notes/mc_2017_agent_intro_5.png
-        text: Oh, okay, hey, so I'm in the real world now. I'm going to go try to
-          find the Minecraft offices.
-      6:
-        image: notes/mc_2017_agent_intro_6.png
-        text: But, I'm going to need your help. Start doing the tutorial, start learning
-          how to code, and I'll catch up with you guys after a few levels, okay? Wish
-          me luck! I think it's this way. Ow! Cactus! I'm okay!
-      7:
-        image: notes/mc_2017_agent_intro_7.png
-        text: To complete the Hour of Code challenge, you'll need to write code to
-          program the agent. You'll work together with The Agent to clear any obstacles
-          in your path, so you can pick up the items you'll need for your journey.
-          Only the Agent can place and break blocks, and only you can collect items.
-          Your screen is split into three main parts. On the left is Minecraft.
-      8:
-        image: notes/mc_2017_agent_intro_8.png
-        text: The middle area is the toolbox with commands that the Agent can understand.
-      9:
-        image: notes/mc_2017_agent_intro_9.png
-        text: And on the right, is the workspace. That's where you stack the commands
-          to build your program to control the Agent.
-      10:
-        image: notes/mc_2017_agent_intro_10.png
-        text: The Agent can walk, turn, and activate pressure plates. It can also
-          destroy blocks and place blocks. When it places the block like these minecart
-          rails, it places it underneath itself.
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
       11:
-        image: notes/mc_2017_agent_intro_11.png
         text: Si no recuerdas qué hay que hacer, las instrucciones de cada nivel aparecen
           arriba.
-      12:
-        image: notes/mc_2017_agent_intro_12.png
-        text: If you want to try again, you can hit the blue reset button to reset
-          everything to where it started. And if you need to delete a block of code,
-          drag it from your workspace to the toolbox. Remember to hit run to get the
-          Agent moving. Okay, go ahead and try out the first few levels. Good luck!
+      12: 
     mc_2017_repeat:
-      1:
-        image: notes/mc_2017_repeat_1.png
-        text: 'Stampy: I wonder what Stacy is up to?'
-      2:
-        image: notes/mc_2017_repeat_2.png
-        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
-      3:
-        image: notes/mc_2017_repeat_3.png
-        text: I feel like I'm back in Minecraft! Hello. How are you? Hello?
+      1: 
+      2: 
+      3: 
       4:
         image: notes/mc_2017_repeat_4.png
-        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy?
-          Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
       5:
         image: notes/mc_2017_repeat_5.png
-        text: 'Stacy: This is amazing. So you work here every day as a developer,
-          right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft
-          marketplace team. Stacy: How many coding languages do you know? Katie: In
-          my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie:
-          Yeah. Stacy: So now, you wouldn''t happen to know anything about this little
-          golem guy that calls himself the Agent? Katie: We use the Agent to do things
-          that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn
-          how to code, and they want to learn how to code, so what is one of the first
-          things that you need to know when you''re learning?'
       6:
         image: notes/mc_2017_repeat_6.png
-        text: 'Katie: Well, you need to learn how to use loops. Loops are things that
-          developers write to give commands to a computer that can be run over and
-          over again. Stacy: Got it, so I think there''s actually some of that coming
-          up in the levels ahead, so go ahead and give loops a try.'
       7:
         image: notes/mc_2017_repeat_7.png
-        text: In the next level, you can use a loop to move the Agent along the path.
-          Drag the repeat block into the workspace and place the move forward block
-          inside the repeat block. This tells the computer to do the same thing many
-          times in a row without having to drag a whole bunch of blocks into the workspace.
-          You can choose how many times to repeat by putting a number in the repeat
-          block.
       8:
         image: notes/mc_2017_repeat_8.png
-        text: You can put turns and multiple commands in the repeat block too, but
-          for now try using a repeat to move the Agent forward a few steps. Remember,
-          if you get stuck on a puzzle you can always hit the blue reset button and
-          try again.
       9:
         image: notes/mc_2017_repeat_9.png
         text: 'Si usted estan pensando en tener un trabajo genial como el de Katie,
@@ -3722,13 +3147,8 @@ es-MX:
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
-        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour.
-          Lizzy: Let''s sleep so it''s day when Stacy comes back.'
       2:
         image: notes/mc_2017_functions_2.png
-        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I
-          know how to solve the problem I''m having in my game. I think I can use
-          a function. Let me just open this.'
       3:
         image: notes/mc_2017_functions_3.png
         text: Así que una función es conjunto específico de instrucciones para llevar
@@ -3750,29 +3170,19 @@ es-MX:
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
-        text: 'Preston: Congratulations!'
+        text: 'Preston: ¡Felicidades!'
       2:
         image: notes/mc_2017_congratulations_2.png
-        text: 'Lizzy: Congratulations!'
+        text: 'Lizzy: ¡Felicidades!'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: Congratulations, you did it!'
+        text: 'Stampy: ¡Felicidades, lo has conseguido!'
       4:
         image: notes/mc_2017_congratulations_4.png
-        text: 'Stacy: Congratulations guys, you totally rocked that! And now that
-          you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve
-          learned about loops, functions, and what a software Agent does.'
       5:
         image: notes/mc_2017_congratulations_5.png
-        text: Now, it's time for the free play level, where you are the developer.
-          Use any remaining time to write your own functions to explore, mine, and
-          build.
       6:
         image: notes/mc_2017_congratulations_6.png
-        text: 'You can take the code that you write in this level into your Minecraft
-          world on Minecraft: Education Edition. Just click ''Finish'' and follow
-          the instructions for getting the link to use in your world. to continue
-          coding with the Agent. Have fun, and good job!'
       7:
         image: notes/mc_2017_congratulations_7.png
         text: 'Stacy: ¡Y estoy de regreso! Okey, chicos, ¡este es el agente! Les mostraré
@@ -3782,171 +3192,41 @@ es-MX:
           agente que haga lo que yo quiera, y lo hará para mí.'
       8:
         image: notes/mc_2017_congratulations_8.png
-        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used
-          code!'
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png
-        text: 'Everywhere you look, computers are changing the world. Whether they''re
-          on our desktops, in our homes, our pockets, or just about anywhere else.
-          But while most of us use this revolutionary technology daily, we don''t
-          often ask: "How do computers work?" In this series, you''re going to learn
-          how computers really work, starting with what makes a computer a computer.
-          Then, you''ll look at how information is represented inside the computer
-          using tiny electrical signals going on and off at mind-boggling speeds.'
       2:
         image: notes/csd_concept_how_computers_work_2.png
-        text: After that, you'll learn how computers use circuits to do everything
-          from simple math to simulating entire virtual worlds. Next, you'll zoom
-          out and look at the different parts of a computer that actually input, output,
-          and store all that information. Finally, you'll take a look at what code
-          actually is and how software controls hardware. So whether you're just curious
-          about the devices you use every day or you want to design the innovations
-          of the future, the first step is learning how computers work.
     csd_concept_computer:
       1:
         image: notes/csd_concept_computer_1.png
-        text: My name is May-Li Khoe and I'm a designer and an inventor. So some of
-          the things I've designed have been at Apple, and now I design products for
-          kids to use so that they can have an easier time in school. My other jobs
-          include DJ-ing and dancing.
       2:
         image: notes/csd_concept_computer_2.png
-        text: Computers are everywhere! They're in people's pockets, they're in people's
-          cars, people have them on their wrists. They might be in your backpack right
-          now. But what makes a computer a computer? What does make a computer a computer
-          anyway? And how does it even work?
       3:
         image: notes/csd_concept_computer_3.png
-        text: Hi I'm Nat! I was one of the original designers of the Xbox. I've been
-          working with computers since I was maybe seven years old and now I work
-          on virtual reality. As humans, we've always built tools to help us solve
-          problems. Tools like a wheelbarrow, a hammer, or a printing press, or a
-          tractor-trailer.
       4:
         image: notes/csd_concept_computer_4.png
-        text: All of these inventions helped us with manual work. Over time, people
-          began to wonder if a machine could be designed and built to help us with
-          the thinking work we do, like solving equations or tracking the stars in
-          the sky. Rather than moving or manipulating physical things like dirt and
-          stone, these machines would need to be designed to manipulate information.
-          As the pioneers of computer science explored how to design a thinking machine,
-          they realized that it had to perform four different tasks.
       5:
         image: notes/csd_concept_computer_5.png
-        text: It would need to take input, store information process it and then output
-          the results. Now this might sound simple, but these four things are common
-          to all computers. That's what makes a computer a computer.
       6:
         image: notes/csd_concept_computer_6.png
-        text: Computers started out as basic calculators, which was already really
-          awesome at the time, and they were only manipulating numbers back then.
-          But now we can use them to talk to each other, we can use them to play games,
-          control robots, and do any crazy thing that you could probably imagine.
-          Modern computers look nothing like those clunky old machines but they still
-          do these same four things.
-      7:
-        image: notes/csd_concept_computer_7.png
-        text: First, we're going to talk about input. You can tell computers what
-          to do with the keyboard, you can tell them what to do with the mouse, the
-          microphone, the camera. All these different inputs give a computer information,
-          which is then stored in memory.
-      8:
-        image: notes/csd_concept_computer_8.png
-        text: A computer's processor takes information from memory. It manipulates
-          it or changes it using an algorithm, which is just a series of commands.
-          And then it sends the processed information back to be stored in memory
-          again. This continues until the processed information is ready to be output.
-      9:
-        image: notes/csd_concept_computer_9.png
-        text: How a computer outputs information depends on what the computer is designed
-          to do. A computer display can show text, photos, videos, or interactive
-          games -- even virtual reality! The output of a computer may even include
-          signals to control a robot.
-      10:
-        image: notes/csd_concept_computer_10.png
-        text: And who knows what the computers of tomorrow will be like? My hope is
-          that you get to help decide what you want the computers of tomorrow to look
-          like. But across all computers, regardless of the different types of technology
-          they use, they're always doing those same four things. They take in information,
-          they store it as data, they process it, and then they output the results.
+      7: 
+      8: 
+      9: 
+      10: 
     csd_concept_binary_data:
-      1:
-        image: notes/csd_concept_binary_data_1.png
-        text: Hi! My name is Limor Fried, and I'm an engineer here at Adafruit Industries.
-          And this is where I do engineering and design, and I design circuits for
-          fashion and music and technology.
-      2:
-        image: notes/csd_concept_binary_data_2.png
-        text: My name is Federico Gomez Suarez, and I'm a software developer with
-          Microsoft Hack for Good. And I look into using technology to help us solve
-          some of the big social problems of our times.
-      3:
-        image: notes/csd_concept_binary_data_3.png
-        text: You may have heard that computers work on ones and zeros. But almost
-          nobody today actually deals directly with these ones and zeros. But ones
-          and zeroes do play a big role in how computers work on the inside.
-      4:
-        image: notes/csd_concept_binary_data_4.png
-        text: Inside a computer are electric wires and circuits that carry all the
-          information in a computer. How do you store or represent information using
-          electricity?
-      5:
-        image: notes/csd_concept_binary_data_5.png
-        text: Well, if you have a single wire with electricity flowing through it,
-          the signal could either be on or off. That's not a lot of choices, but it's
-          a really important start. With one wire, we can represent a yes or no, true
-          or false, a one or zero, or anything else with only two options. This on/off
-          state of a single wire is called a bit, and it's the smallest piece of information
-          a computer can store.
-      6:
-        image: notes/csd_concept_binary_data_6.png
-        text: 'If you use more wires you get more bits: more ones and zeros. With
-          more bits you can represent more complex information. But to understand
-          that, we need to learn about something called the binary number system.'
-      7:
-        image: notes/csd_concept_binary_data_7.png
-        text: 'In the decimal number system, we have ten digits from zero to nine,
-          and that''s how we''ve all learned to count. In the binary number system,
-          we only have two digits: zero and one. With these two digits, we can count
-          up to any number.'
-      8:
-        image: notes/csd_concept_binary_data_8.png
-        text: Here's how this works. In a decimal number system we're all used to,
-          each position in a number has a different value. There's a 1 position, the
-          10 position, the 100 position, and so on. For example, a 9 in the 100 position
-          is a 900. In binary, each position also carries a value. But instead of
-          multiplying by 10 each time, we multiply by 2. So there's the 1 position,
-          the 2 position, the 4 position, the 8 position, and so on. For example,
-          the number 9 in binary is 1001. To calculate the value, we add 1 times 8,
-          plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this
-          math because computers do it for us. What's important is that any number
-          can be represented with only ones and zeros, or by a bunch of wires that
-          are on or off. The more wires you use, the larger the numbers you can store.
-          With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With
-          just 32 wires, you can store all the way from 0 to over 4 billion. Using
-          the binary number system, you can represent any number you like.
-      9:
-        image: notes/csd_concept_binary_data_9.png
-        text: But what about other types of information? Like text, images, or sound?
-          It turns out that all these things can also be represented with numbers.
-          Think of all the letters in the alphabet. You could assign a number to each
-          letter. A could be 1, B could be 2, and so on. You can then represent any
-          word or paragraph as a sequence of numbers. And as we saw, these numbers
-          can be stored as on or off electrical signals. Every word you see on every
-          webpage or your phone is represented using a system like this.
-      10:
-        image: notes/csd_concept_binary_data_10.png
-        text: Now, let's consider photos, videos, and all the graphics you see on
-          a screen.
-      11:
-        image: notes/csd_concept_binary_data_11.png
-        text: All of these images are made out of teeny dots called pixels, and each
-          pixel has a color. Each of the colors can be represented with numbers. When
-          you consider the typical image has millions of these pixels, and the typical
-          video shows 30 images per second now we're talking about a lot of data here.
+      1: 
+      2: 
+      3: 
+      4: 
+      5: 
+      6: 
+      7: 
+      8: 
+      9: 
+      10: 
+      11: 
       12:
-        image: notes/csd_concept_binary_data_12.png
         text: Cada sonido es básicamente una serie de vibraciones en el aire. Las
           vibraciones pueden representarse gráficamente como una onda. Cualquier punto
           en esta onda puede ser representado por un número. Y de esta manera, cualquier
@@ -4048,32 +3328,18 @@ es-MX:
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
-        text: Hi, my name is Madison Maxey. I have a company called Loomia, and we
-          focus on making smart fabrics for smart clothing and smart soft good products.
-          The sky's the limit when it comes to textiles.
       2:
         image: notes/csd_concept_memory_cpu_input_output_2.png
-        text: My name is Danielle Applestone, and I'm CEO of Othermachine Company.
-          We build a desktop milling machine. A milling machine takes a rotating cutting
-          tool and moves it through material to create a 3D object.
+        text: Mi nombre es Danielle Applestone y soy CEO de Othermachine Company.
+          Construimos una fresadora de sobremesa. Una fresadora usa un instrumento
+          de corte giratorio moviéndolo a través de un material para crear un objeto
+          3D.
       3:
         image: notes/csd_concept_memory_cpu_input_output_3.png
-        text: Under the hood, all computers do the same four basic things. They input
-          information, store and process the information, and then, output information.
-          Each of these things is done by a different part of the computer.
       4:
         image: notes/csd_concept_memory_cpu_input_output_4.png
-        text: There are input devices that take input from the outside world and convert
-          it into binary information. There is memory to store this information. There's
-          a central processing unit or CPU, where all the calculations are done. And,
-          finally, there are output devices that take information and convert it into
-          a physical output.
       5:
         image: notes/csd_concept_memory_cpu_input_output_5.png
-        text: Let's talk about input first. Computers can take many different types
-          of input, like the keyboard of a computer, the touchpad of a phone, a camera,
-          a microphone, or a GPS. But even the sensors on a car, a thermostat, or
-          a drone are also different input devices.
       6:
         image: notes/csd_concept_memory_cpu_input_output_6.png
         text: Ahora, veamos como un simple ejemplo de cómo una entrada viaja a través
@@ -4124,16 +3390,8 @@ es-MX:
     csd_concept_hardware_software:
       1:
         image: notes/csd_concept_hardware_software_1.png
-        text: Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com.
-          One of the best things about working in tech, and at Amazon in particular,
-          is that I get to bring my dog with me to work every day. My job is to help
-          make sure software gets out the door and her job is to nap under my desk
-          and snore very loudly.
       2:
         image: notes/csd_concept_hardware_software_2.png
-        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and
-          I have a really fun job: Basically bringing the hardware and the software
-          together to give you all the games that you love on your Xbox.'
       3:
         image: notes/csd_concept_hardware_software_3.png
         text: Cuando se mira dentro de un dispositivo informático uno ve un montón
@@ -4148,61 +3406,26 @@ es-MX:
           cómo se comportan los clientes.
       5:
         image: notes/csd_concept_hardware_software_5.png
-        text: But how do the hardware and the software interact with one another?
-          Let's start at looking at a computer's central processing unit, or CPU.
       6:
         image: notes/csd_concept_hardware_software_6.png
-        text: The CPU is the master chip that controls all the other parts of the
-          computer. A CPU needs to do different things so inside it has smaller, simpler
-          parts that handle specific tasks. It has circuits to do simple math and
-          logic. It has other circuits to send and receive information to and from
-          different parts of the computer.
       7:
         image: notes/csd_concept_hardware_software_7.png
-        text: The real magic of the CPU is how it knows which circuits to use and
-          when to use them. The CPU receives simple commands that tell it which circuit
-          to use to do a specific job. For example, an "add" command tells the CPU
-          to use its outer circuit to calculate a new number. And then the "store"
-          command tells the CPU to use a different circuit to save that result into
-          memory.
       8:
         image: notes/csd_concept_hardware_software_8.png
-        text: Just like numbers, all of these simple commands can be represented in
-          binary ones and zeros or on and off electrical signals. The binary commands
-          are stored in memory and the CPU fetches and executes them in sequence one
-          after the other. This sequence of commands is, in fact, a very simple computer
-          program.
       9:
         image: notes/csd_concept_hardware_software_9.png
-        text: Binary code is the most basic form of software and it controls all the
-          hardware of a computer. These days, nobody writes software in binary. It
-          would take forever!
       10:
         image: notes/csd_concept_hardware_software_10.png
-        text: Today, the software we write looks more like this (Python), or this
-          (Ruby), or even this (Blockly). Programming languages like these let you
-          type in commands in something that looks a lot like English.
       11:
         image: notes/csd_concept_hardware_software_11.png
-        text: To draw a rectangle on the screen, you just need a single command. This
-          high-level command is converted into hundreds, or thousands, of simpler
-          binary commands that the CPU understands. Software tells the CPU what to
-          do, but when you're listening to music, and browsing the web, and chatting
-          with a friend, your computer is running multiple pieces of software all
-          at once.
       12:
         image: notes/csd_concept_hardware_software_12.png
-        text: So, how do all of these programs get on the computer in the first place,
-          and how can the CPU run them all at once? To find out we'll have to take
-          a look at the operating system.
       13:
-        image: notes/csd_concept_hardware_software_13.png
         text: El sistema operativo de la computadora es el programa principal que
           gestiona cómo el software consigue usar el hardware de la computadora. Por
           ejemplo, yo ayudé a crear el sistema operativo de Windows que se ejecuta
           en la mayoría de computadoras personales.
       14:
-        image: notes/csd_concept_hardware_software_14.png
         text: El sistema operativo es un programa con habilidades especiales que permiten
           controlar el otro software en la computadora. Permite instalar nuevos programa
           cargándolos en la memoria del su computadora. Él decido cuándo un programa
@@ -4212,17 +3435,10 @@ es-MX:
           es el sistema operativo que funciona rápido cambiando entre los programas
           que comparte ese CPU por fracciones de un segundo.
       15:
-        image: notes/csd_concept_hardware_software_15.png
         text: Dentro de cada computadora hay un sistema operativo manejando un software
           que controla el hardware de la computadora.
       16:
-        image: notes/csd_concept_hardware_software_16.png
         text: El software es una serie de comandos hechos de un código binario simple,
           y ese código binario simple son sólo señales eléctricas fluyendo a través
           de millones de pequeños circuitos.
-      17:
-        image: notes/csd_concept_hardware_software_17.png
-        text: Computers have the potential to do all kinds of amazing things. But
-          the only thing that makes the computer smart, or useful, is you. When you
-          learn to code you get to define the problem you want to solve, and write
-          the software that turns those ideas into reality.
+      17: 

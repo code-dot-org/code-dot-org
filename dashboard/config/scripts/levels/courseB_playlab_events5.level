@@ -50,6 +50,7 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "background": "tennis",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

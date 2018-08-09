@@ -4,68 +4,46 @@ uk:
       Unplug1:
         title: Вступ до інформатики
         desc: Цей урок введе поняття інформатики та пояснить, чим займаються комп'ютерні науки. Він також дасть учням можливість приміряти роль фахівця-інформатика. До кінця уроку кожен учень матиме заготовку з нагадуванням про вивчене, яку зможе взяти додому. Вам може здаватись доцільним пропускання цієї вправи через складну термінологію, особливо з молодшими учнями, але це чудова нагода ввести її у простий та цікавий спосіб.
-        pdfs:
-          - unplug1
         video: Безмашинна вправа 1
       Unplug2:
         title: Обчислювальне мислення
         desc: Без жодних технічних пристосувань, лише з ручкою та папером, учні ознайомляться з чотирма етапами обчислювального мислення. Після короткого вступного інструктажу учні поділяться на групи, у яких створюватимуть вказівки з побудови певного чудиська (за каталогом попередньо вибраних монстриків) для інших учнів. Усе завдання має розділятись на частини, команди аналізуватимуть всіх монстрів каталогу та шукатимуть шаблони, відкидатимуть неважливі деталі, а тоді використають цю інформацію для створення алгоритму (вказівок) для іншої команди, за допомогою яких можна намалювати цього монстра. Команда обміняється алгоритмами з іншою групою і намалює монстра на основі отриманого алгоритму. Чи вдалось відтворити початкове зображення?
-        pdfs:
-          - unplug2
         video: Безмашинна вправа 2
       Unplug3:
         title: Програмування по клітинках
         desc: Створюючи інструкції з малювання один для одного, учні зможуть зрозуміти, в чому суть програмування. Заняття розпочнеться із того, що учні спробують передати один одному вказівки із зафарбовування блоків на розграфленому папері для того, щоб відтворити початкове зображення. Якщо залишиться час, можна створити вказівки для власноруч намальованих картинок.
-        pdfs:
-          - unplug3
         video: Безмашинна вправа 3
       Unplug4:
         title: Алгоритми
         desc: Цей урок стосується алгоритмів. Використання танграму та розграфленого паперу у першій вправі покаже, як важливо створювати якомога чіткіші та однозначні команди. Потім учні досліджуватимуть, скільки існує способів скласти аркуш паперу в прямокутник, зауважуючи, що одні методи можуть потребувати більше операцій, ніж інші.
-        pdfs:
-          - unplug4
         video: Безмашинна вправа 4
       Unplug5:
         title: функції
         desc: На цьому занятті учні створять браслет з нитки, намистинок та спеціальної застібки. Учні виконають кілька повторюваних кроків, а тоді спробують визначити набори "прийомів", які потрібно повторити кілька разів. Після визначення цих прийомів, до них можна буде звертатись з основної програми (алгоритму), а весь прекрасний процес творення поміститься на одному аркуші паперу. Остаточна програма працюватиме для цілого класу браслетів, незалежно від типів ниток, намистинок та застібок. Для того, щоб забезпечити універсальність, учням потрібно буде абстрагуватись від особливостей конкретних матеріалів та використати загальні формулювання. Це використання загальних імен є чудовим вступом до використання змінних.
-        pdfs:
-          - unplug5
         video: Безмашинна вправа 5
       Unplug6:
         title: Умови
         desc: Це гра для цілого класу. Після введення поняття умов, команд "якщо" та циклів, клас може потренуватись використовувати попередньо записану на папері програму, колоду карт та трошки удачі.
-        pdfs:
-          - unplug6
         video: Безмашинна вправа 6
       Unplug7:
         title: Написання пісень
         desc: Читання слів пісні є інтуїтивним для більшості учнів. Ми скористаємось цим загальновідомим знанням та перемістимо його у навчальну площину для визначення та виклику функцій. Коли учні ознайомляться з процесами визначення та виклику функції, ми додамо додаткові можливості передачі параметрів у ці виклики функцій.
-        pdfs:
-          - unplug7
         video: Безмашинна вправа 7
       Unplug8:
         title: Абстракції
         desc: Ця вправа поєднує щоденну діяльність учнів з логічною грою в пропущені слова для того, щоб пояснити зміст ефективності абстрагування.
-        pdfs:
-          - unplug8
         video: Безмашинна вправа 8
       Unplug9:
         title: Естафетне програмування
         desc: Це заняття продовжує ідею попередньої вправи (4. Програмування на розграфленому папері), щоб застосувати отримані навики для підкреслення важливості створення програм, які виконуються послідовно та частої перевірки програм на наявність помилок.
-        pdfs:
-          - unplug9
         video: Безмашинна вправа 9
       Unplug10:
         title: Інтернет
         desc: На цьому уроці учні виконуватимуть роль пакетів, які передаються Інтернетом, дізнаючись про веб-адреси, IP та DNS.
-        pdfs:
-          - unplug10
         video: Безмашинна вправа 10
       Unplug11:
         title: Підведення підсумків
         desc: Підсумкове узагальнення першої 20-годинної серії занять допоможе класу пережити улюблені моменти, показуючи наступні кроки, які вони можуть реалізувати самостійно, якщо їх зацікавила подорож комп'ютерними науками.
-        pdfs:
-          - unplug11
         video: Безмашинна вправа 11
       UnplugHappyMaps:
         title: Щасливі карти
@@ -113,7 +91,7 @@ uk:
         title: Функції для блискіток
         desc: Учні створюють алгоритм зі змінними та функціями (фрагментами коду, які можна повторно використовувати) для створення дзеркал для сонячних зайчиків зі стрічок та бісеру.
       SongwritingParameters:
-        title: Пісні з параметрами
+        title: Написання пісень
         desc: Учні використовують поняття приспіву для вивчення передавання параметрів (які дозволяють налаштувати функцію без потреби її повністю переписувати).
       DiceRace:
         title: 'Життєві алгоритми: гонка в кубики'
@@ -163,30 +141,16 @@ uk:
       CollisionDetection:
         title: Виявлення Конфліктів та Теорема Піфагора
         desc: Визначення того, що об'єкти на екрані торкаються один одного є важливим аспектом більшості ігор. У цьому уроці ми розглянемо, як можна використати теорему Піфагора та формулу обчислення відстані між точками для того, щоб визначити, чи дві точки (чи ігрові персонажі) торкаються один одного.
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Безмашинна вправа
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Безмашинна вправа
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Безмашинна вправа
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Безмашинна вправа
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Безмашинна вправа
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Життєві алгоритми: посадити насіння'
         desc: Цей урок висвітлює способи використання алгоритмів у повсякденному житті, на прикладі висівання насіння. Він також акцентує увагу на ширшому контексті інформатики та важливій ролі, яку відіграють у ній алгоритми.
@@ -227,7 +191,6 @@ uk:
         title: Двійкові зображення
         desc: Хоча багато людей сприймає двійкову систему строго як одиниці та нулі, наші попередні вправи продемонстрували, що різноманітну інформацію можна представити різними варіантами двійкового подання. У цій вправі ми просунемося далі, показавши, як комп'ютер може зберігати складніші дані (зображення та кольори) також у двійковому форматі.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Цей урок висвітлює способи використання алгоритмів у повсякденному житті. Зокрема, учні визначатимуть та записуватимуть алгоритм гри у кубики.
       courseE_unplugged_songwritingParameters:
         title: Пісні з параметрами
@@ -239,7 +202,7 @@ uk:
         title: Краудсорсинг
         desc: Учні використовують методи краудсорсингу, навички розв'язання задач, поширені в інформатиці, для того, щоб виконати завдання як єдиний клас, з більшою ефективністю, аніж при індивідуальній роботі.
       courseE_unplugged_songwriting:
-        title: Пісні з параметрами
+        title: Написання пісень
         desc: Учні використовують поняття приспіву для вивчення передавання параметрів (які дозволяють налаштувати функцію без потреби її повністю переписувати).
       courseF_unplugged_tangrams:
         title: Алгоритми танграму
@@ -253,54 +216,8 @@ uk:
       courseF_unplugged_songwritingParameters:
         title: Пісні з параметрами
         desc: 'Величними структурами інформатики є функції. Іноді їх ще називають процедурами. Це міні-програми, котрі можна повторно використовувати в межах більших програм. У цій вправі учні пропонується інтуїтивно дізнатися, чому комбінування окремих фрагментів коду в функціях є таким корисним навиком.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Мої друзі-роботи
       PlantASeed_2018:
         title: 'Життєві алгоритми: посадити насіння'
         desc: Цей урок висвітлює способи використання алгоритмів у повсякденному житті, на прикладі висівання насіння. Він також акцентує увагу на ширшому контексті інформатики та важливій ролі, яку відіграють у ній алгоритми.
@@ -310,9 +227,6 @@ uk:
       GoingPlacesSafely_2018:
         title: Безпечне добирання
         desc: Інтернет є потужним засобом, але водночас іноді й небезпечним. Вчитель пояснює правила безпеки під час мандрівок Павутиною.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: Велика подія
         desc: Учні знайомляться з поняттям "подія", появи котрої постійно очікує комп'ютер. Вчитель натискає кнопки на паперовому пульті, а учні виконують різні дії, в залежності від того, яку кнопку натиснуто.
@@ -321,10 +235,8 @@ uk:
         desc: Учні пишуть алгоритм (набір інструкцій), використовуючи набір попередньо визначених команд для того, щоб скерувати своїх однокласників у відтворенні заданого малюнка.
       courseD_unplugged_digitalCitizenship_2018:
         title: Безмашинна вправа
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Безмашинна вправа
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Умови
         desc: Для вивчення команди умови, учні розігрують карткову гру і створюють правила, на кшталт "Якщо я витягую червону карту, я отримую бал" і "Якщо я витягую чорну карту, ти отримуєш бал".
@@ -345,13 +257,5 @@ uk:
         desc: Учні створюють браслети як двійкове представлення перших літер свого імені. Учні дізнаються, що дані можна представляти та зберігати більш, ніж одним способом.
       MoveItMoveIt_2018:
         title: Рухайся, рухайся
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Естафетне програмування
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

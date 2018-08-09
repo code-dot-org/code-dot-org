@@ -3,34 +3,36 @@ import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksTools from './CourseBlocksTools';
+import CourseBlocksInternationalGradeBands from './CourseBlocksInternationalGradeBands';
+import {NotificationResponsive} from '@cdo/apps/templates/Notification';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export class CourseBlocksCsf extends Component {
   static propTypes = {
-    isEnglish: PropTypes.bool.isRequired
+    showModern: PropTypes.bool.isRequired
   };
 
   render() {
-    if (this.props.isEnglish) {
-      return (<CourseBlocksCsfEnglish/>);
+    if (this.props.showModern) {
+      return (<CourseBlocksCsfModern/>);
     } else {
-      return (<CourseBlocksCsfNonEnglish/>);
+      return (<CourseBlocksCsfLegacy/>);
     }
   }
 }
 
-class CourseBlocksCsfEnglish extends Component {
+class CourseBlocksCsfModern extends Component {
   componentDidMount() {
-    $('#coursea').appendTo(ReactDOM.findDOMNode(this.refs.coursea)).show();
-    $('#courseb').appendTo(ReactDOM.findDOMNode(this.refs.courseb)).show();
-    $('#coursec').appendTo(ReactDOM.findDOMNode(this.refs.coursec)).show();
-    $('#coursed').appendTo(ReactDOM.findDOMNode(this.refs.coursed)).show();
-    $('#coursee').appendTo(ReactDOM.findDOMNode(this.refs.coursee)).show();
-    $('#coursef').appendTo(ReactDOM.findDOMNode(this.refs.coursef)).show();
-    $('#pre-express').appendTo(ReactDOM.findDOMNode(this.refs.pre_express)).show();
-    $('#express').appendTo(ReactDOM.findDOMNode(this.refs.express)).show();
+    $('#coursea-2017').appendTo(ReactDOM.findDOMNode(this.refs.coursea)).show();
+    $('#courseb-2017').appendTo(ReactDOM.findDOMNode(this.refs.courseb)).show();
+    $('#coursec-2017').appendTo(ReactDOM.findDOMNode(this.refs.coursec)).show();
+    $('#coursed-2017').appendTo(ReactDOM.findDOMNode(this.refs.coursed)).show();
+    $('#coursee-2017').appendTo(ReactDOM.findDOMNode(this.refs.coursee)).show();
+    $('#coursef-2017').appendTo(ReactDOM.findDOMNode(this.refs.coursef)).show();
+    $('#pre-express-2017').appendTo(ReactDOM.findDOMNode(this.refs.pre_express)).show();
+    $('#express-2017').appendTo(ReactDOM.findDOMNode(this.refs.express)).show();
   }
 
   render() {
@@ -68,12 +70,30 @@ class CourseBlocksCsfEnglish extends Component {
           </div>
         </ContentContainer>
 
+        <NotificationResponsive
+          type="bullhorn"
+          notice={i18n.courseBlocksLegacyNotificationHeading()}
+          details={i18n.courseBlocksLegacyNotificationBody()}
+          dismissible={false}
+          buttons={[
+            {
+              text: i18n.courseBlocksLegacyNotificationButtonTransitionGuide(),
+              link: "https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing",
+              newWindow: true,
+            },
+            {
+              text: i18n.courseBlocksLegacyNotificationButtonCourses(),
+              link: pegasus("/educate/curriculum/cs-fundamentals-international"),
+              newWindow: true,
+            }
+          ]}
+        />
       </div>
     );
   }
 }
 
-class CourseBlocksCsfNonEnglish extends Component {
+class CourseBlocksCsfLegacy extends Component {
   componentDidMount() {
     $('#course1').appendTo(ReactDOM.findDOMNode(this.refs.course1)).show();
     $('#course2').appendTo(ReactDOM.findDOMNode(this.refs.course2)).show();
@@ -85,7 +105,12 @@ class CourseBlocksCsfNonEnglish extends Component {
 
   render() {
     return (
-      <div>
+      <ContentContainer
+        heading={i18n.csf()}
+        description={i18n.csfDescription()}
+        link={'/home/#recent-courses'}
+        linkText={i18n.viewMyRecentCourses()}
+      >
         <div className="row">
           <ProtectedStatefulDiv ref="course1"/>
           <ProtectedStatefulDiv ref="course2"/>
@@ -98,7 +123,7 @@ class CourseBlocksCsfNonEnglish extends Component {
           <ProtectedStatefulDiv ref="twenty_hour"/>
           <ProtectedStatefulDiv ref="unplugged"/>
         </div>
-      </div>
+      </ContentContainer>
     );
   }
 }
@@ -149,6 +174,7 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
+    showModernElementaryCourses: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -158,14 +184,7 @@ export class CourseBlocksAll extends Component {
   render() {
     return (
       <div>
-        <ContentContainer
-          heading={i18n.csf()}
-          description={i18n.csfDescription()}
-          link={'/home/#recent-courses'}
-          linkText={i18n.viewMyRecentCourses()}
-        >
-          <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
-        </ContentContainer>
+        <CourseBlocksCsf showModern={this.props.showModernElementaryCourses}/>
 
         <ContentContainer
           heading={i18n.teacherCourseHoc()}
@@ -175,6 +194,10 @@ export class CourseBlocksAll extends Component {
         >
           <CourseBlocksHoc rowCount={1}/>
         </ContentContainer>
+
+        {!this.props.isEnglish && (
+          <CourseBlocksInternationalGradeBands/>
+        )}
 
         <CourseBlocksTools
           isEnglish={this.props.isEnglish}

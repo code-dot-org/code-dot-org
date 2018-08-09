@@ -11,9 +11,6 @@ hu:
           a következő leckékben található szakkifejezéseket, de ezek vidám és játékos
           megismertetése ebben a fázisban sokkal hatékonyabb, mintha későbbre hagynád
           őket.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Számítógépes gondolkodás
         desc: "Csak papírral és filccel felszerelkezve a diákok megtanulják a programozói
@@ -26,9 +23,6 @@ hu:
           szörnyet. A csapatok végül kicserélik a kész algoritmusokat és lerajzolják
           az az alapján készült szörnyet. Vajon az lesz a képen, amit az algoritmust
           író csapat szeretett volna?"
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Grafikus programozás
         desc: Egymás rajzolásra való beprogramozásával a diákok elkezdik megérteni,
@@ -36,9 +30,6 @@ hu:
           hogy egy négyzethálós papíron négyzeteket színezzenek, reprodukálva egy
           már meglévő képet. Ha van rá idő, akkor a leckét a diákok saját képeivel
           lehet zárni.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: algoritmusok
         desc: Ez a leckét az algoritmusokat fedi le.  A tangram alakzatok és milliméterpapír
@@ -46,9 +37,6 @@ hu:
           utasítás amennyire csak lehet, világos és egyértelmű legyen.  Utána az osztály
           megvizsgálja, milyen módokon lehet egy papírt téglalappá hajtogatni, megjegyezve,
           hogy egyes módszerek több vagy kevesebb hajtást igényelnek, mint mások.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: funkciók
         desc: Ebben a leckében a diákok madzagból, gyöngyökből és speciális kiegészítőből
@@ -60,17 +48,11 @@ hu:
           függetlenül. Hogy megfelelően alkalmazhassák a programot, ki kell emelni
           az elérhető hozzávalókat. A helyettesítők ilyenfajta használata remek lehetőség
           a változók bevezetésére.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Feltételek
         desc: Ez egy osztálytermi játék. A feltételek, ha utasítások és ciklusok megismerése
           után az osztály egy előre megírt program, egy kártyapakli és sorshúzás segítségével
           gyakorolhatnak.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Dal iras
         desc: A dalszövegek olvasása a legtöbb diák számára természetes folyamat.
@@ -78,41 +60,26 @@ hu:
           és felhasználjuk ezt a függvények definiálására és meghívására. Miután a
           diákok megértik a definiálás és a meghívás lényegét, bevezetjük az extra
           lehetőségek biztosítását lehetővé tevő paramétereket.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Absztrakció
         desc: Ezt a tevékenység ötvözi a tanulók mindennapi rutinját és a Mad-Lib
           stílusú gondolkodtató játékot, hogy segítsen az osztálynak megtanulni az
           absztrakció hatékonyságát.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Váltó programozás
         desc: Ezt a lecke egy korábbi tevékenységből (4. Grafikon papír programozás)
           származó ötletet hasznosít és az ott szerzett képességeket használja hogy
           kiemelje a sorrendben működő programok befejezésének fontosságát, valamint
           gyakori program ellenőrzéseket a hibák kiszűréséhez.
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: Az internet
         desc: Ebben a leckében diákok úgy tesznek, mintha maguk is fent lennének az
           interneten, miközben a webcímekről, IP és DNS azonosítókról tanulnak.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Összegzés
         desc: Az első 20 órás sorozat vége segít átélni az osztály kedvenc pillanatait
           és rávezeti őket a következő lépésekre, ha érdekli őket a számítógép tudománnyal
           megkezdett út folytatása.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Vidám térképek
         desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre,
@@ -280,31 +247,16 @@ hu:
           szempont a legtöbb játékban. Ebben a leckében megnézzük hogyan használható
           a Pitagorasz-tétel és Távolság-tétel két pont távolságának meghatározására
           a síkban és hogy a két pont (vagy játék szereplő) érinti-e egymást.
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Offline tevékenység
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Offline tevékenység
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Offline tevékenység
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Offline tevékenység
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: Offline tevékenység
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Offline tevékenység
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Valós algoritmusok: Ültess el egy magot!'
         desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
@@ -374,7 +326,6 @@ hu:
           egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett
           információt (például a képeket és színeket) is binárisan.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Ez a lecke rávilágít a valós életben is használt algoritmusokra. Ennek
           részeként a diákok azonosítják és leírják egy kockajáték során használt
           algoritmusokat.
@@ -417,86 +368,8 @@ hu:
           A függvények (más néven eljárások) egy mini programok, amiket használhatsz
           újra és újra a nagyobb programodban. Ez a lecke segít a diákoknak intuitív
           módon megérteni, miért hasznos gyakorlat kódrészleteket függvényekké egyesíteni.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
-          as follows:\r\n1. started with an `unplugged` level. populated with info.
-          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
-          level with the same content and same name. checked to box to encrypt it.
-          hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: A robot barátaim
       PlantASeed_2018:
         title: 'Valós algoritmusok: Ültess el egy magot!'
         desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét
@@ -511,9 +384,6 @@ hu:
         title: Biztonságos utazás
         desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják,
           hogyan maradhat biztonságos az interneten való jelenlét.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: A nagy esemény
         desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási
@@ -526,10 +396,8 @@ hu:
           egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
       courseD_unplugged_digitalCitizenship_2018:
         title: Offline tevékenység
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Offline tevékenység
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Feltételek
         desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
@@ -563,22 +431,5 @@ hu:
           diákok így megtanulják az adatok több módon is megjeleníthetők és tárolhatók.
       MoveItMoveIt_2018:
         title: Mozgás, mozgás
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Váltó programozás
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.

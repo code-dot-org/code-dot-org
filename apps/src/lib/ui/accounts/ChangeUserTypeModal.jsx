@@ -13,7 +13,7 @@ const STATE_UNKNOWN_ERROR = 'unknown-error';
 
 export default class ChangeUserTypeModal extends React.Component {
   static propTypes = {
-    currentHashedEmail: PropTypes.string,
+    currentHashedEmails: PropTypes.arrayOf(PropTypes.string),
     /**
      * @type {function({currentEmail: string}):Promise}
      */
@@ -76,14 +76,14 @@ export default class ChangeUserTypeModal extends React.Component {
 
   getCurrentEmailValidationError = () => {
     const {currentEmail} = this.state.values;
-    const {currentHashedEmail} = this.props;
+    const {currentHashedEmails} = this.props;
     if (currentEmail.trim().length === 0) {
       return i18n.changeUserTypeModal_currentEmail_isRequired();
     }
     if (!isEmail(currentEmail.trim())) {
       return i18n.changeUserTypeModal_currentEmail_invalid();
     }
-    if (currentHashedEmail !== hashEmail(currentEmail)) {
+    if (!currentHashedEmails.includes(hashEmail(currentEmail))) {
       return i18n.changeUserTypeModal_currentEmail_mustMatch();
     }
     return null;

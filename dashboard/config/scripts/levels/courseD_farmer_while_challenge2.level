@@ -34,6 +34,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "step_speed": "1",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Showing the New Contact\r\n\r\nWhen a user adds a contact, they should be **automatically taken to the `showContactsScreen`, and the newly added contact should be shown**. Additionally, when they return to the `addContactsScreen`, the fields should be cleared out.\r\n\r\n# Do This:\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* **Add code** to the event handler for the \"Save Contact\" button that:\r\n * **Clears the text** from the inputs on that page.\r\n * **Switches the screen** back to `showContactsScreen`.\r\n * **Sets the `currentIndex`** and calls `showCurrentContact` so that the newly-added contact is shown.\r\n\r\n![](https://images.code.org/734a4db82d61680bc4064eee5509d9c5-image-1449529424169.gif)\r\n\r\n",
+    "markdown_instructions": "# Showing the New Contact\r\n\r\nWhen a user adds a contact, they should be **automatically taken to the `showContactsScreen`, and the newly added contact should be shown**. Additionally, when they return to the `addContactsScreen`, the fields should be cleared out.\r\n\r\n# Do This:\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* **Add code** to the event handler for the \"Save Contact\" button that:\r\n  * **Clears the text** from the inputs on that page.\r\n  * **Switches the screen** back to `showContactsScreen`.\r\n  * **Sets the `currentIndex`** and calls `showCurrentContact` so that the newly-added contact is shown.\r\n\r\n![](https://images.code.org/734a4db82d61680bc4064eee5509d9c5-image-1449529424169.gif)\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

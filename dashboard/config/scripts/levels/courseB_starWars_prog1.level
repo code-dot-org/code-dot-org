@@ -47,6 +47,7 @@
     "remove_items_when_actor_collides": "false",
     "video_key": "CSF_bb8_skinOverview_K-1",
     "top_level_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

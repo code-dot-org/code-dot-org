@@ -1,13 +1,20 @@
 /** @file JavaScript run only on the gamelab level edit page. */
 import $ from 'jquery';
+import animationListModule, {
+  setInitialAnimationList,
+} from '@cdo/apps/gamelab/animationListModule';
+import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
 import initializeCodeMirror, {
   initializeCodeMirrorForJson,
 } from '@cdo/apps/code-studio/initializeCodeMirror';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/shapes';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
 
+registerReducers({animationList: animationListModule});
+getStore().dispatch(setInitialAnimationList(defaultSprites));
 $(document).ready(function () {
 
   // Live-validate animations JSON using same validation code we use in Gamelab

@@ -74,7 +74,6 @@ class AnimationPicker extends React.Component {
     return (
       <BaseDialog
         isOpen
-        useDeprecatedGlobalStyles
         handleClose={this.props.onClose}
         uncloseable={this.props.uploadInProgress}
         fullWidth={true}

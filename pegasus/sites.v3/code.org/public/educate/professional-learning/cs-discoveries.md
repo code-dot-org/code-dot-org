@@ -13,16 +13,15 @@ theme: responsive
 
 [col-50]
 
-## Spots still open for 2018!
+Our CS Discoveries Professional Learning program offers year round support for teachers. You don't need any prior computer science experience to get started! 
 
-- **Step 1**: Check [the list below](#openings) to see if applications are still being accepted in your area.
-- **Step 2**: Read about the [Program Features and Commitments](#features).
-- **Step 3**: Check out the course page for [CS Discoveries](/educate/csd).
-- **Step 4**: Set aside 10 - 15 minutes to complete the application.
-[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
+The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csp) and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops.
 
-Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
+This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd). 
 
+**Applications for the 2019-20 will open after October, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
+
+[<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
 
 [/col-50]
 
@@ -42,7 +41,7 @@ Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NAR
 
 Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
 
-The program kicks off with 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). Print a [flyer](/files/PLProgramsOverview_1-Pager.pdf) to share with teachers or administrators at your school.
+The program kicks off with 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). Print a <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">flyer</a> to share with teachers or administrators at your school.
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
@@ -55,9 +54,6 @@ The priority deadline for 2018 has passed, but we still have openings for our CS
 
 [col-33]
 
-Alabama<br>
-California<br>
-Florida<br>
 Idaho<br>
 Illinois<br>
 Iowa<br>
@@ -69,24 +65,15 @@ Maine<br>
 
 Maryland<br>
 Massachusetts<br>
-Mississippi<br>
 Montana<br>
-New Hampshire<br>
-Southeastern New York<br>
 North Carolina<br>
-
 
 [/col-33]
 
 [col-33]
 
-North Dakota<br>
-Central Pennsylvania<br>
-South Dakota<br>
-Vermont<br>
-Virginia<br>
+Pennsylvania (central regions)<br>
 Wisconsin<br>
-Wyoming<br>
 
 [/col-33]
 
@@ -212,17 +199,9 @@ Check out these 3 key benefits of ISTE membership:
 
 ## <a name="apply"></a>How to apply?
 
-- Step 1: Read about the [Program Features and Commitments](#features).
-- Step 2: Check out the course page for [CS Discoveries](/educate/csd).
-- Step 3: Set aside 10 - 15 minutes to complete the application.
+**Applications for the 2019-20 will open after October, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
-**Ready to get started?**
-
-[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
-
-**Applications are still being accepted in some regions. Check [the list above](#openings) to see if applications are still being accepted in your area.** 
-
-Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
 
 
 <!--
@@ -241,6 +220,20 @@ Code.org's [Facilitator Development Program](/educate/professional-learning/faci
 Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
 
 <a href="/educate/professional-learning/facilitator"><button>Learn more</button>
+
+## How to apply?
+
+- Step 1: Read about the [Program Features and Commitments](#features).
+- Step 2: Check out the course page for [CS Discoveries](/educate/csd).
+- Step 3: Set aside 10 - 15 minutes to complete the application.
+
+**Ready to get started?**
+
+[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
+
+Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
+
+**Applications are still being accepted in some regions. Check [the list above](#openings) to see if applications are still being accepted in your area.** 
 -->
 
 <%= view :answerdash %>

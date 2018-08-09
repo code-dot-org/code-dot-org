@@ -11,9 +11,6 @@ it:
           di non insegnare adesso ai tuoi allievi le parole complicate associate a
           queste lezioni, ma presentarle adesso in modo divertente e giocoso è molto
           più produttivo che aspettare opportunità più avanzate.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Pensiero computazionale
         desc: 'Usando solo carta e penna, gli studenti impareranno i 4 passi fondamentali
@@ -28,9 +25,6 @@ it:
           poi scambierà il proprio algoritmo con quello di un altro gruppo e disegnerà
           il mostro seguendo le istruzioni dell''algoritmo ricevuto. Il disegno che
           che ottengono è ciò che il gruppo che ha scritto l''algoritmo intendeva?'
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Programmazione su carta a quadretti
         desc: Lo studente impara a capire cos'è davvero la programmazione dando istruzioni
@@ -39,9 +33,6 @@ it:
           colorare le caselle di un foglio di carta a quadretti in modo da riprodurre
           un disegno esistente. Se c'è tempo, nella lezione si può affrontare la creazione
           da parte degli studenti di disegni originali.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmi
         desc: Questa lezione riguarda gli algoritmi. Usando le forme del tangram e
@@ -49,9 +40,6 @@ it:
           ogni istruzione chiara e non ambigua il più possibile. Successivamente,
           si esplora in quanti modi è possibile piegare la carta a formare un rettangolo,
           osservando come alcuni metodi richiedono più o meno piegature di altri.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Funzioni
         desc: In questa lezione gli studenti realizzano un acchiappa-sole con fili,
@@ -65,18 +53,12 @@ it:
           i dettagli del loro specifico materiale e creare opportuni termini generici
           per i singoli materiali usati. Quest'uso di termini generici è una magnifica
           introduzione alle variabili.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Istruzioni condizionali
         desc: Questo è un gioco per l'intera classe. Dopo aver introdotto i concetti
           di istruzioni condizionali, istruzioni "se" e istruzioni di ripetizione,
           gli studenti possono esercitarsi tutti insieme usando un programma già scritto,
           un mazzo di carte, e un po' di fortuna.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Composizione di canzoni
         desc: Leggere il testo delle canzoni è un'attività abbastanza intuitiva per
@@ -85,43 +67,28 @@ it:
           di funzioni. Una volta che gli studenti sono familiari con il processo di
           definizione/invocazione, aggiungiamo le ulteriori capacità di passaggio
           di parametri nella chiamata di funzioni.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Astrazione
         desc: Questa lezione combina le attività quotidiane dei tuoi studenti con
           un gioco con le parole chiamato "Mad-Libs" (che consiste nel riempire con
           parole a scelta degli spazi vuoti di frasi pre-determinate) per aiutarli
           a comprendere l'efficacia dell'astrazione.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Programmazione a Staffetta
         desc: Questa lezione riutilizza l'idea di una precedente lezione (n.4 - Programmazione
           su carta a quadretti) ed usa le abilità apprese in quella lezione per sottolineare
           l'importanza di costruire programmi che operano in sequenza e di controllare
           spesso se nel programma ci sono errori (detti "bug").
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: Internet
         desc: In questa lezione gli studenti fanno finta di viaggiare su Internet
           mentre imparano i segreti degli indirizzi del Web, degli indirizzi fisici
           della rete (IP), e dei servizi di indirizzamento (DNS).
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Conclusione
         desc: La conclusione finale di questa serie di 20 lezioni aiuta gli studenti
           a rivivere i momenti migliori, mentre indica loro i prossimi passi da intraprendere
           se sono interessati a continuare la loro escursione nell'informatica.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Mappe Felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per
@@ -196,12 +163,12 @@ it:
           identificazione di schemi, astrazione, algoritmica) per capire come si svolge
           un gioco che non ha istruzioni.
       FunctionalSuncatchers:
-        title: Acchiappa-Sole Funzionale
+        title: Acchiappa-sole Funzionale
         desc: Gli studenti creano un algoritmo con variabili e funzioni (porzioni
           di codice che si possono usare ripetutamente) per creare degli acchiappa-sole
           usando fili e perline.
       SongwritingParameters:
-        title: Composizione di Canzoni - Parametri
+        title: Composizione di canzoni
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
           come passare dei parametri ad una funzione. Questo permette di personalizzare
           una funzione senza doverla riscrivere interamente.
@@ -216,7 +183,7 @@ it:
           su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
         title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*),
           una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
@@ -311,22 +278,19 @@ it:
         desc: Come nella lezione "I Miei Amici Robotici", dovrai "programmare" i tuoi
           amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Attività Tradizionale
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
           rete.
       courseD_unplugged_digitalCitizenship:
-        title: Attività Tradizionale
-        desc: Today you will learn what it means to be a Digital Citizen.
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
         title: 'Cittadinanza Digitale: Dati Personali'
-        desc: Today you will learn the difference between private and personal information!
+        desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
-        title: Attività Tradizionale
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
           rete.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
@@ -400,7 +364,7 @@ it:
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo
           contesto, gli studenti devono identificare e scrivere l'algoritmo per un
           gioco con i dadi.
@@ -415,12 +379,12 @@ it:
           su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
         title: Intelligenza Collettiva
-        desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
+        desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*),
           una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
       courseE_unplugged_songwriting:
-        title: Composizione di Canzoni - Parametri
+        title: Composizione di canzoni
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
           come passare dei parametri ad una funzione. Questo permette di personalizzare
           una funzione senza doverla riscrivere interamente.
@@ -447,86 +411,9 @@ it:
           più e più volte all'interno di un programma più grande. Questa lezione aiuta
           gli studenti a comprendere intuitivamente perché raggruppare blocchi di
           codice all'interno di funzioni è un'utile pratica.
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
-          as follows:\r\n1. started with an `unplugged` level. populated with info.
-          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
-          level with the same content and same name. checked to box to encrypt it.
-          hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: I Miei Amici Robotici
+        desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
       PlantASeed_2018:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
@@ -556,8 +443,8 @@ it:
           un insieme di comandi predefiniti per guidare i loro compagni di classe
           nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Attività Tradizionale
-        desc: Today you will learn what it means to be a Digital Citizen.
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
+        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
@@ -598,22 +485,11 @@ it:
           essere rappresentati e memorizzati in più di un modo.
       MoveItMoveIt_2018:
         title: Muovilo, muovilo
-        desc: ''
       courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
+        title: È Fantastico Creare e Comportarsi Lealmente
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
+          Code.org e serve per aiutare gli studenti a capire il processo di condivisione
+          e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
+          di essere corretti con coloro che danno vita ai contenuti creativi.
       RelayProgramming_2018:
         title: Programmazione a Staffetta
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.

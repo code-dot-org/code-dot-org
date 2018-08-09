@@ -13,6 +13,7 @@
     "success_condition": "function successCondition() {\n\t        return Flappy.obstacles[0].hitAvatar && Flappy.gameState === Flappy.GameStates.OVER;\n\t      }",
     "failure_condition": "function failureCondition() {\n\t        // todo - would be nice if we could distinguish feedback for\n\t        // flew through pipe vs. didnt hook up endGame block\n\t        var obstacleEnd = Flappy.obstacles[0].x + Flappy.OBSTACLE_WIDTH;\n\t        return obstacleEnd < Flappy.avatarX;\n\t      }",
     "instructions": "Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the \"when hit an obstacle\" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

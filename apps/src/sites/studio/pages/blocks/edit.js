@@ -6,7 +6,8 @@ import initializeCodeMirror, {
 } from '@cdo/apps/code-studio/initializeCodeMirror';
 import jsonic from 'jsonic';
 import { parseElement } from '@cdo/apps/xml';
-import { installCustomBlocks } from '@cdo/apps/gamelab/blocks';
+import { installCustomBlocks } from '@cdo/apps/block_utils';
+import { customInputTypes } from '@cdo/apps/gamelab/blocks';
 import { valueTypeTabShapeMap } from '@cdo/apps/gamelab/GameLab';
 import animationListModule, {
   setInitialAnimationList
@@ -14,46 +15,49 @@ import animationListModule, {
 import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
-let nameField;
+let poolField, nameField, helperEditor;
+
 $(document).ready(() => {
   registerReducers({animationList: animationListModule});
   getStore().dispatch(setInitialAnimationList(defaultSprites));
 
+  poolField = document.getElementById('block_pool');
   nameField = document.getElementById('block_name');
   Blockly.inject(document.getElementById('blockly-container'), {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
+    typeHints: true,
   });
 
-  initializeCodeMirrorForJson('block_config', { onChange });
-  initializeCodeMirror('block_helper_code', 'javascript');
+  let submitButton = document.querySelector('#block_submit');
+  const fixupJson = initializeCodeMirrorForJson('block_config', { onChange });
+  helperEditor = initializeCodeMirror('block_helper_code', 'javascript', fixupJson, null, (_, errors) => {
+    if (errors.length) {
+      submitButton.setAttribute('disabled', 'disabled');
+    } else {
+      submitButton.removeAttribute('disabled');
+    }
+  });
+  poolField.addEventListener('change', fixupJson);
 });
 
 let config;
 function onChange(editor) {
-  if (editor.getValue() === config) {
-    return;
-  }
   config = editor.getValue();
 
-  let parsedConfig;
-  try {
-    parsedConfig = jsonic(config);
-  } catch (e) {
-    return;
-  }
+  const parsedConfig = jsonic(config);
 
-  const blocksInstalled = installCustomBlocks(
-    Blockly,
-    {},
-    [{
+  const blocksInstalled = installCustomBlocks({
+    blockly: Blockly,
+    blockDefinitions: [{
       name: nameField.value,
+      pool: poolField.value,
       category: 'Custom',
       config: parsedConfig,
+      helperCode: helperEditor && helperEditor.getValue(),
     }],
-    {},
-    true,
-  );
+    customInputTypes, // TODO: generalize for other app types.
+  });
   const blockName = Object.values(blocksInstalled)[0][0];
   nameField.value = blockName;
   const blocksDom = parseElement(`<block type="${blockName}" />`);

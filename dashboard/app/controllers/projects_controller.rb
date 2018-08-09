@@ -388,6 +388,7 @@ class ProjectsController < ApplicationController
     src_data = storage_app.get(src_channel_id)
     data = initial_data
     data['name'] = "Exported: #{src_data['name']}"
+    data['hidden'] = true
     new_channel_id = ChannelToken.create_channel(
       request.ip,
       storage_app,

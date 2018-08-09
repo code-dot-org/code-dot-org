@@ -41,9 +41,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 ## Get started with curriculum and professional learning
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science.  Code.org's <a href='/educate/curriculum/elementary-school'>Computer Science Fundamentals courses</a> are designed for elementary school teachers. <a href='/educate/csd'>CS Discoveries</a> and <a href='/educate/csp'>CS Principles</a> are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use anywhere in the world.
-In the US, Code.org's network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.
-Internationally, try <a href='/educate/professional-development-online'>our online self-paced courses</a>." %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science. We offer a high quality K-12 curriculum that can be used for a semester or full year. It includes daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings, all free to use. In the U.S., Code.org's network of Regional Partners prepare teachers to successfully lead computer science classrooms." %>
 <div style="clear:both"></div>
 
 ## Start Planning Now

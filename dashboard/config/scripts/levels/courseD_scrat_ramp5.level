@@ -35,6 +35,7 @@
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
     "step_speed": "2",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

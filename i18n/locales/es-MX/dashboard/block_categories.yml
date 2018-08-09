@@ -26,11 +26,10 @@ es-MX:
       everythingelse: detodolodemás
       numbers: números
       Numbers: Números
-      Input: Input
       Default: Incumplimiento
-      Sprites: Sprites
-      Behaviors: Comportamientos
       World: Mundo
+      Behaviors: Comportamientos
+      Advanced: Avanzado
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Hacer un Sprite
@@ -42,9 +41,8 @@ es-MX:
       Predefined: Predefinido
       test: prueba
       test2: prueba2
-      Foo: Foo
       Name: Nombre
       NEW BLOCKS: BLOQUES NUEVOS
-      'Functions ': 'Functions '
+      'Functions ': 'Funciones'
       Game/Score: Juego/Puntaje
       Function: Función

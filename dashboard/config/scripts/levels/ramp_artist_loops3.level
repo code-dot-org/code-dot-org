@@ -38,6 +38,7 @@
     "instructions": "Use a `repeat` loop to draw five colored dashes.",
     "markdown_instructions": "Draw the colorful line 5 times again, this time using a `repeat` loop.",
     "ideal": "4",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

@@ -11,7 +11,7 @@ import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
   setStageExtrasScriptIds,
-  setOAuthProvider,
+  setAuthProviders,
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
@@ -33,7 +33,7 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
-  store.dispatch(setOAuthProvider(homepageData.provider));
+  store.dispatch(setAuthProviders(homepageData.providers));
 
   let courseId;
   let scriptId;
@@ -156,13 +156,13 @@ function showHomepage() {
 function getTeacherAnnouncement(override) {
   // Start with default teacher announcement.
   let announcement = {
-    heading: i18n.announcementHeadingPrivacyGdpr(),
+    heading: i18n.announcementHeadingYouTubeNoCookie(),
     buttonText: i18n.learnMore(),
-    description: i18n.announcementDescriptionPrivacyGdpr(),
-    link: "https://code.org/privacy-may2018",
+    description: i18n.announcementDescriptionYouTubeNoCookie(),
+    link: "https://support.code.org/hc/en-us/articles/360006799751",
     image: "",
     type: "bullhorn",
-    id: "privacy_gdpr"
+    id: "youtube_nocookie"
   };
 
   // But for now, no announcement (unless there's an override).
