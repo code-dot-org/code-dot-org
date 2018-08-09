@@ -319,12 +319,12 @@ class Census::StateCsOffering < ApplicationRecord
   ).freeze
 
   MT_COURSE_CODES = %w(
-    10157
-    10152
-    10156
-    10159
-    10155
     21009
+    10152
+    10157
+    10156
+    10155
+    10159
     10153
   ).freeze
 
@@ -469,7 +469,7 @@ class Census::StateCsOffering < ApplicationRecord
     when 'MS'
       MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'MT'
-      MT_COURSE_CODES.select {|course| course == row_hash['course']}
+      MT_COURSE_CODES.select {|course| course == row_hash['NCES Course Code']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
     when 'NY'
