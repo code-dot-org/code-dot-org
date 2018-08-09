@@ -55,6 +55,7 @@ import ArtistSkins from './skins';
 import dom from '../dom';
 import {SignInState} from '../code-studio/progressRedux';
 import Visualization from '@code-dot-org/artist';
+import experiments from '../util/experiments';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -179,6 +180,8 @@ var Artist = function () {
 
   // these get set by init based on skin.
   this.speedSlider = null;
+
+  this.autoRun = experiments.isEnabled('auto-artist');
 };
 
 module.exports = Artist;
@@ -340,6 +343,19 @@ Artist.prototype.init = function (config) {
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
+    }
+
+    if (this.autoRun) {
+      const changeHandler = () => this.execute(true);
+      if (this.studioApp_.isUsingBlockly()) {
+        const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
+        blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
+          changeHandler);
+      } else {
+        this.studioApp_.editor.on('change', changeHandler);
+        // Droplet doesn't automatically bubble up aceEditor changes
+        this.studioApp_.editor.aceEditor.on('change', changeHandler);
+      }
     }
   }
 
@@ -744,7 +760,7 @@ Artist.prototype.handleExecutionError = function (err, lineNumber, outputString)
 /**
  * Execute the user's code.  Heaven help us...
  */
-Artist.prototype.execute = function () {
+Artist.prototype.execute = function (instant=this.instant_) {
   this.api.log = [];
 
   // Reset the graphic.
@@ -773,7 +789,7 @@ Artist.prototype.execute = function () {
 
   // If this is a free play level, save the code every time the run button is
   // clicked rather than only on finish
-  if (this.level.freePlay) {
+  if (this.level.freePlay && !instant) {
     this.levelComplete = true;
     this.testResults = TestResults.FREE_PLAY;
     this.report(false);
@@ -792,17 +808,19 @@ Artist.prototype.execute = function () {
     this.studioApp_.reset();
   }
 
-  this.studioApp_.playAudio('start', {loop : true});
+  if (!instant) {
+    this.studioApp_.playAudio('start', {loop : true});
+  }
 
   // animate the transcript.
 
-  if (this.instant_) {
+  if (instant) {
     while (this.animate()) {}
   } else {
     this.pid = window.setTimeout(_.bind(this.animate, this), 100);
   }
 
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.studioApp_.isUsingBlockly() && !instant) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
