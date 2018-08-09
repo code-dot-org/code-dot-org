@@ -180,8 +180,6 @@ var Artist = function () {
 
   // these get set by init based on skin.
   this.speedSlider = null;
-
-  this.autoRun = experiments.isEnabled('auto-artist');
 };
 
 module.exports = Artist;
@@ -299,6 +297,9 @@ Artist.prototype.init = function (config) {
     decorationAnimationImage: this.decorationAnimationImage,
     showDecoration: () => this.skin.id === "elsa",
   });
+
+  this.autoRun = experiments.isEnabled('auto-artist') ||
+    this.level.autoRun;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
