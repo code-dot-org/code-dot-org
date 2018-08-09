@@ -51,6 +51,8 @@
         and start solving without looking at the instructions first?
       = boolean_check_box f, :instructions_important
 
+    = render partial: 'levels/editors/tts', locals: {f: f}
+
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', function (editor, change) {
     localStorage.setItem('markdown_' + '#{@level.id || params[:type]}', editor.getValue());
