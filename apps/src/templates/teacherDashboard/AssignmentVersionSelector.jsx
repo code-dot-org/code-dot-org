@@ -97,6 +97,7 @@ export default class AssignmentVersionSelector extends Component {
         <PopUpMenu
           isOpen={this.state.isMenuOpen}
           targetPoint={this.state.targetPoint}
+          offset={{x: 0, y: 0}}
           beforeClose={this.beforeClose}
         >
           <PopUpMenu.Item onClick={() => {}}>
