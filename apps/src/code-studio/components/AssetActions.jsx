@@ -63,13 +63,15 @@ export default class AssetActions extends React.Component {
         {this.state.action === 'normal' &&
           <div>
             {flex}
-            <a
-              href={src}
-              target="_blank"
-              style={{backgroundColor: 'transparent'}}
-            >
-              <button><i className="fa fa-eye"/></button>
-            </a>
+            {!this.props.audioType &&
+              <a
+                href={src}
+                target="_blank"
+                style={{backgroundColor: 'transparent'}}
+              >
+                <button><i className="fa fa-eye"/></button>
+              </a>
+            }
             <button className="btn-danger" onClick={this.confirmDelete}>
               <i className="fa fa-trash-o"/>
             </button>
