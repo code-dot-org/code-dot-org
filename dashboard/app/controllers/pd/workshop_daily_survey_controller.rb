@@ -20,15 +20,18 @@ module Pd
     def new_general
       # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
       day = params[:day].to_i
-      return render_404 if day < 0 || day > 4
+      return render_404 if day < 0
 
-      workshop = params[:enrollmentCode].present? ? Pd::Enrollment.find!(params[:enrollment_code]).workshop : Workshop.
+      workshop = Workshop.
         where(ended_at: nil, course: [COURSE_CSD, COURSE_CSP]).
         where.not(subject: SUBJECT_FIT).
         nearest_attended_or_enrolled_in_by(current_user)
 
       return render :not_enrolled unless workshop
-      return render_404 if day == 0 && [SUBJECT_TEACHER_CON, SUBJECT_SUMMER_WORKSHOP].exclude?(workshop.subject)
+      # There's no pre-workshop survey for academic year workshops
+      return render_404 if day == 0 && !workshop.summer_workshop?
+      # There's no post workshop survey for summer workshops
+      return render_404 if day == 5 && workshop.summer_workshop?
 
       session = nil
       if day > 0
@@ -73,7 +76,7 @@ module Pd
         submission_id: params[:submission_id]
       )
 
-      redirect_general(key_params)
+      key_params[:enrollmentCode].present? ? redirect_post(key_params) : redirect_general(key_params)
     end
 
     # Facilitator-specific questions
@@ -176,7 +179,7 @@ module Pd
         enrollmentCode: params[:enrollment_code]
       }
 
-      return redirect_general(key_params) if response_exists_general?(key_params)
+      return redirect_post(key_params) if response_exists_general?(key_params)
 
       @form_params = key_params.merge(
         userName: current_user.name,
@@ -208,13 +211,8 @@ module Pd
 
     def redirect_general(key_params)
       session_id = key_params[:sessionId]
-      enrollment_code = key_params[:enrollmentCode]
-      workshop = Pd::Workshop.find(key_params[:workshopId])
 
-      if enrollment_code.present? && [SUBJECT_TEACHER_CON, SUBJECT_SUMMER_WORKSHOP].exclude?(workshop.subject)
-        # This is the post survey. Redirect to the agenda survey for the last day
-        redirect_to action: :new_general, day: workshop.sessions.size, enrollment_code: enrollment_code
-      elsif session_id.present?
+      if session_id.present?
         redirect_to action: :new_facilitator, session_id: session_id, facilitator_index: 0
       else
         redirect_to action: :thanks
@@ -235,6 +233,18 @@ module Pd
       next_facilitator_index = key_params[:facilitatorIndex].to_i + 1
       if next_facilitator_index.between?(1, session.workshop.facilitators.size - 1)
         redirect_to action: :new_facilitator, session_id: session.id, facilitator_index: next_facilitator_index
+      # No facilitators left. Academic workshops redirect to post if its the last day
+      elsif !session.workshop.summer_workshop? && key_params[:day].to_i == session.workshop.sessions.size
+        redirect_to action: :new_post, enrollment_code: Pd::Enrollment.find_by(user: current_user, workshop: session.workshop).code
+      else
+        redirect_to action: :thanks
+      end
+    end
+
+    def redirect_post(key_params)
+      session = Session.find(key_params[:sessionId])
+      if session.workshop.summer_workshop?
+        redirect_to action: :new_facilitator, session_id: session.id, facilitator_index: 0
       else
         redirect_to action: :thanks
       end

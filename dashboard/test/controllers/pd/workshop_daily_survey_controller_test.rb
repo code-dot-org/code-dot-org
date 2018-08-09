@@ -9,6 +9,7 @@ module Pd
       @unenrolled_teacher = create :teacher
       @enrolled_summer_teacher = create :teacher
       @enrolled_academic_year_teacher = create :teacher
+      @enrolled_two_day_academic_year_teacher = create :teacher
       @regional_partner = create :regional_partner
       @facilitators = create_list :facilitator, 2
 
@@ -18,8 +19,12 @@ module Pd
 
       @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
         num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators
-
       @academic_year_enrollment = create :pd_enrollment, :from_user, user: @enrolled_academic_year_teacher, workshop: @academic_year_workshop
+
+      @two_day_academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
+        num_sessions: 2, regional_partner: @regional_partner, facilitators: @facilitators
+      @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
+        user: @enrolled_two_day_academic_year_teacher, workshop: @two_day_academic_year_workshop
     end
 
     # Array of ids for days 0 (pre) and 1 - 5
@@ -39,7 +44,13 @@ module Pd
           },
           academic_year_1: {
             day_1: FAKE_ACADEMIC_YEAR_IDS[0],
-            post_workshop: FAKE_ACADEMIC_YEAR_IDS[1],
+            post_workshop: FAKE_ACADEMIC_YEAR_IDS[4],
+            facilitator: FAKE_FACILITATOR_FORM_ID
+          },
+          academic_year_5: {
+            day_1: FAKE_ACADEMIC_YEAR_IDS[0],
+            day_2: FAKE_ACADEMIC_YEAR_IDS[1],
+            post_workshop: FAKE_ACADEMIC_YEAR_IDS[4],
             facilitator: FAKE_FACILITATOR_FORM_ID
           }
         }.deep_stringify_keys
@@ -55,13 +66,13 @@ module Pd
       assert_response :not_found
     end
 
-    test 'daily academic year workshop survey results 404 for days outside of 1-4' do
+    test 'daily academic year workshop survey results 404 for days outside of 1' do
       sign_in @enrolled_academic_year_teacher
 
       get '/pd/workshop_survey/day/0'
       assert_response :not_found
 
-      get '/pd/workshop_survey/day/5'
+      get '/pd/workshop_survey/day/2'
       assert_response :not_found
     end
 
@@ -372,6 +383,75 @@ module Pd
       assert_equal @facilitators[1], new_record.facilitator
     end
 
+    test 'facilitator specific submit for 2-day academic redirects to thanks for day 1' do
+      sign_in @enrolled_two_day_academic_year_teacher
+
+      assert_creates Pd::WorkshopFacilitatorDailySurvey do
+        post '/pd/workshop_survey/facilitators/submit',
+          params: facilitator_submit_redirect_params(day: 1, facilitator_index: 1).deep_merge(
+            submission_id: FAKE_SUBMISSION_ID,
+            key: {
+              userId: @enrolled_two_day_academic_year_teacher.id,
+              sessionId: @two_day_academic_year_workshop.sessions[0].id
+            }
+          )
+
+        assert_redirected_to action: :thanks
+      end
+
+      new_record = Pd::WorkshopFacilitatorDailySurvey.last
+      assert new_record.placeholder?
+      assert_equal @two_day_academic_year_workshop, new_record.pd_workshop
+      assert_equal 1, new_record.day
+      assert_equal @facilitators[1], new_record.facilitator
+    end
+
+    test 'facilitator specific submit for 2-day academic redirects to post for day 2' do
+      sign_in @enrolled_two_day_academic_year_teacher
+
+      assert_creates Pd::WorkshopFacilitatorDailySurvey do
+        post '/pd/workshop_survey/facilitators/submit',
+          params: facilitator_submit_redirect_params(day: 2, facilitator_index: 1).deep_merge(
+            submission_id: FAKE_SUBMISSION_ID,
+            key: {
+              userId: @enrolled_two_day_academic_year_teacher.id,
+              sessionId: @two_day_academic_year_workshop.sessions[1].id
+            }
+          )
+
+        assert_redirected_to action: :new_post, enrollment_code: @two_day_academic_year_enrollment.code
+      end
+
+      new_record = Pd::WorkshopFacilitatorDailySurvey.last
+      assert new_record.placeholder?
+      assert_equal @two_day_academic_year_workshop, new_record.pd_workshop
+      assert_equal 2, new_record.day
+      assert_equal @facilitators[1], new_record.facilitator
+    end
+
+    test 'facilitator specific submit for 1-day academic redirects to post for day 1' do
+      sign_in @enrolled_academic_year_teacher
+
+      assert_creates Pd::WorkshopFacilitatorDailySurvey do
+        post '/pd/workshop_survey/facilitators/submit',
+          params: facilitator_submit_redirect_params(day: 1, facilitator_index: 1).deep_merge(
+            submission_id: FAKE_SUBMISSION_ID,
+            key: {
+              userId: @enrolled_academic_year_teacher.id,
+              sessionId: @academic_year_workshop.sessions[0].id
+            }
+          )
+
+        assert_redirected_to action: :new_post, enrollment_code: @academic_year_enrollment.code
+      end
+
+      new_record = Pd::WorkshopFacilitatorDailySurvey.last
+      assert new_record.placeholder?
+      assert_equal @academic_year_workshop, new_record.pd_workshop
+      assert_equal 1, new_record.day
+      assert_equal @facilitators[1], new_record.facilitator
+    end
+
     test 'post workshop survey without a valid enrollment code renders 404' do
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/post/invalid_enrollment_code'
@@ -408,7 +488,7 @@ module Pd
       assert_response :success
     end
 
-    test 'post workshop submit redirect creates a placeholder and redirects to first facilitator form' do
+    test 'post workshop for summer submit redirect creates a placeholder and redirects to thanks' do
       sign_in @enrolled_summer_teacher
 
       assert_creates Pd::WorkshopDailySurvey do
@@ -426,7 +506,7 @@ module Pd
       assert_equal 5, new_record.day
     end
 
-    test 'post workshop submit redirects to agenda survey for academic year workshops' do
+    test 'post workshop submit redirects to thanks academic year workshops' do
       sign_in @enrolled_academic_year_teacher
 
       assert_creates Pd::WorkshopDailySurvey do
@@ -440,7 +520,7 @@ module Pd
         params[:key][:formId] = FAKE_ACADEMIC_YEAR_IDS[1]
         post '/pd/workshop_survey/submit', params: params
 
-        assert_redirected_to action: :new_general, day: 1, enrollment_code: @academic_year_enrollment.code
+        assert_redirected_to action: :thanks
       end
 
       new_record = Pd::WorkshopDailySurvey.last
