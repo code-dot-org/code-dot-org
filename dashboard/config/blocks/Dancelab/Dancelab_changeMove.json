@@ -12,24 +12,28 @@
         "name": "MOVE",
         "options": [
           [
-            "Neutral",
-            "\"\""
+            "Standing",
+            "0"
           ],
           [
-            "Climb",
-            "\"_climb\""
+            "Clap",
+            "1"
           ],
           [
-            "Duck",
-            "\"_duck\""
+            "Spin",
+            "2"
           ],
           [
-            "Jump",
-            "\"_jump\""
+            "Uprock",
+            "3"
           ],
           [
-            "Walk",
-            "\"_walk\""
+            "Bboy",
+            "4"
+          ],
+          [
+            "Next",
+            "\"next\""
           ],
           [
             "Random",

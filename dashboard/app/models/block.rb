@@ -21,11 +21,14 @@
 class Block < ApplicationRecord
   include MultiFileSeeded
 
+  DEFAULT_POOL = 'Vanilla'.freeze
+
   def self.all_pool_names
     @@all_pool_names ||= Block.distinct.pluck(:pool)
   end
 
   def self.for(*types)
+    types = types.to_set.add(DEFAULT_POOL)
     types.map {|type| Block.load_and_cache_by_pool(type)}.flatten.compact
   end
 

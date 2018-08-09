@@ -1,7 +1,10 @@
 function changeMove(sprite, move) {
-  if (move == "rand") {
-    var moves = ["_climb", "_duck", "_jump", "_walk"];
-    move = moves[randomNumber(moves.length - 1)];
+  if (move == "next") {
+    move = (sprite.current_move + 1) % dancers[sprite.style].length;
+  } else if (move == "rand") {
+    move = randomNumber(0, dancers[sprite.style].length - 1);
   }
-  sprite.setAnimation(sprite.style + move);
+  sprite.changeAnimation("anim" + move);
+  sprite.current_move = move;
+  sprite.frameDelay = sprite.dance_speed;
 }

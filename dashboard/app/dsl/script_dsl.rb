@@ -29,6 +29,7 @@ class ScriptDSL < BaseDSL
     @family_name = nil
     @version_year = nil
     @is_stable = nil
+    @supported_locales = []
   end
 
   integer :id
@@ -59,6 +60,10 @@ class ScriptDSL < BaseDSL
 
   def project_widget_types(types)
     @project_widget_types = types
+  end
+
+  def supported_locales(locales)
+    @supported_locales = locales
   end
 
   def stage(name, properties = {})
@@ -103,6 +108,7 @@ class ScriptDSL < BaseDSL
       family_name: @family_name,
       version_year: @version_year,
       is_stable: @is_stable,
+      supported_locales: @supported_locales
     }
   end
 
@@ -260,6 +266,7 @@ class ScriptDSL < BaseDSL
     s << "family_name '#{script.family_name}'" if script.family_name
     s << "version_year '#{script.version_year}'" if script.version_year
     s << 'is_stable true' if script.is_stable
+    s << "supported_locales #{script.supported_locales}" if script.supported_locales
 
     s << '' unless s.empty?
     s << serialize_stages(script)
