@@ -11,7 +11,21 @@ export default storybook => {
           <div style={{width: 800}}>
             <AssetActions
               name="audioTest"
-              audioType={false}
+              size={5.3}
+              useFilesApi={true}
+              onDelete={() => {
+              }}
+            />
+          </div>
+        )
+      },
+      {
+        name: 'audio asset',
+        story: () => (
+          <div style={{width: 800}}>
+            <AssetActions
+              name="audioTest"
+              audioType={true}
               size={5.3}
               useFilesApi={true}
               onDelete={() => {
