@@ -5,11 +5,11 @@ module.exports = {
     $('button.tts').click(function () {
       var sourceText;
       switch (this.id) {
-        case 'tts-instructions':
-          sourceText = $("#level_tts_instructions_override").val() || $("#level_instructions").val();
+        case 'tts-short-instructions':
+          sourceText = $("#level_tts_short_instructions_override").val() || $("#level_short_instructions").val();
           break;
-        case 'tts-markdown-instructions':
-          sourceText = $("#level_tts_markdown_instructions_override").val() || $('#markdown-instructions-preview').text();
+        case 'tts-long-instructions':
+          sourceText = $("#level_tts_long_instructions_override").val() || $('#level_long_instructions_preview').text();
           break;
       }
 
