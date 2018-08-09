@@ -418,7 +418,7 @@ function main() {
         $scope.section.$promise.then(section =>
           renderSyncOauthSectionControl({
             sectionId: section.id,
-            provider: scriptData.provider
+            rosterProvider: section.login_type
           })
         );
       });
