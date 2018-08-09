@@ -7,7 +7,7 @@ import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {isEmail} from '@cdo/apps/util/formatValidation';
-import AutocompleteSchoolDropdownWithOtherFields from '../components/autocompleteSchoolDropdownWithOtherFields';
+import SchoolAutocompleteDropdownWithCustomFields from '../components/schoolAutocompleteDropdownWithCustomFields';
 
 const OTHER = "Other";
 const NOT_TEACHING = "I'm not teaching this year";
@@ -171,7 +171,7 @@ export default class EnrollForm extends React.Component {
         requiredFieldsErrors[f] = '';
       });
       errors = {...errors, ...requiredFieldsErrors};
-      errors = {...errors, ...(AutocompleteSchoolDropdownWithOtherFields.getSchoolInfoErrors(this.state.school_info))};
+      errors = {...errors, ...(SchoolAutocompleteDropdownWithCustomFields.getSchoolInfoErrors(this.state.school_info))};
       this.setState({errors: errors});
       return false;
     }
@@ -247,7 +247,7 @@ export default class EnrollForm extends React.Component {
             />
           }
         </FormGroup>
-        <AutocompleteSchoolDropdownWithOtherFields
+        <SchoolAutocompleteDropdownWithCustomFields
           school_id={this.state.school_info && this.state.school_info.school_id}
           onSchoolInfoChange={this.onSchoolInfoChange}
           school_info={this.state.school_info}
