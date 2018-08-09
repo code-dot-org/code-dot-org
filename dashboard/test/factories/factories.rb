@@ -319,7 +319,12 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123'
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
         )
       end
     end
@@ -331,7 +336,12 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123'
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
         )
         user.update!(
           primary_contact_info: ao,
@@ -349,7 +359,31 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh'
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+      end
+    end
+
+    trait :with_migrated_clever_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
