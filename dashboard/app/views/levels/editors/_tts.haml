@@ -6,17 +6,17 @@
   .row
     .span6
       %h5 Short Instructions
-      = f.text_area :tts_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+      = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
     .span6
       %h5 Long Instructions
-      = f.text_area :tts_markdown_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
+      = f.text_area :tts_long_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
   - if CDO.use_acapela
     = f.label :voice
     %div
       %select#level_tts_voice
     %div
-      %button.tts#tts-instructions{type: 'button'} Hear Short Instructions
-      %button.tts#tts-markdown-instructions{type: 'button'} Hear Long Instructions
+      %button.tts#tts-short-instructions{type: 'button'} Hear Short Instructions
+      %button.tts#tts-long-instructions{type: 'button'} Hear Long Instructions
     %div
       %audio#tts-audio
 
