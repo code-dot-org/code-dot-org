@@ -5,7 +5,7 @@ var collisionEvents = [];
 var callbacks = [];
 var setupCallbacks = [];
 var loops = [];
-var sprites = [];
+var sprites = createGroup();
 var song_meta = {
   bpm: 146,
   delay: 0.2
@@ -16,6 +16,8 @@ var show_score = false;
 var title = '';
 var subTitle = '';
 var processed_peaks;
+var lead_dancers = createGroup();
+var backup_dancers = createGroup();
 var bg_sprite = createSprite(200, 200, 400, 400);
 bg_sprite.shapeColor = "white";
 bg_sprite.tint = "white";
@@ -46,6 +48,13 @@ var dancers = {
     loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/spin/spin", 12),
     loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/uprock/uprock", 12),
     loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy", 18),
+    ],
+  wiggles: [
+  	loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Standing/Standing_", 1),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Electro/Electro_", 24),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Floss/Floss_", 24),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Fresh/Fresh_", 24),
+    //loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/bboy/bboy", 18),
     ]
 };
 
