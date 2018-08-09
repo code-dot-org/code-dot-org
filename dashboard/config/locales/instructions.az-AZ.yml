@@ -109,8 +109,8 @@ az:
       20hr_maze_stage2_18_instruction: '"Əgər-əks halda" bloku şərti yoxlayır, sonra
         isə bu VƏ YA digər işi yerinə yetirir. Məni günəbaxana çatdırmaq üçün bu yeni
         bloku istifadə etməyə çalışın.'
-      20hr_maze_stage2_19_instruction: '"Əgər-əks halda" blokunu bir daha təcrübədən
-        keçirin, birinci cəhdinizdən bunu düzgün edə bilərsinizmi?'
+      20hr_maze_stage2_19_instruction: "\"Əgər-əks halda\" blokunu bir daha təcrübədən
+        keçirin, \nbirinci cəhdinizdən bunu düzgün edə bilərsinizmi?"
       20hr_maze_stage2_2_instruction: Bu donuzun əlindən lələklərim biz-biz olur.
         Mənə kömək edin ki, onu tapım!
       20hr_maze_stage2_20_instruction: Sadəcə 3 blok əlavə etməklə mənə daha çətin
@@ -277,15 +277,20 @@ az:
         üçün bir neçə blokdan istifadə edin (hər xəttin uzunluğu 100 piksledir).
       grade5_artist_binary10_instruction: İpuclarını görmək üçün buraya basın.
       grade5_artist_binary8_instruction: Bu rəsmi bitirin.
+      scrat 16 (copy 1)_instruction: Palıd qozası! Palıd qozası! Palıd qozası! Mənim
+        oraya ən az sayda blokla çatmağım üçün "əgər" blokundan istifadə edin.
       scrat 16_instruction: Palıd qozası! Palıd qozası! Palıd qozası! Mənim oraya
         ən az sayda blokla çatmağım üçün "əgər" blokundan istifadə edin.
       scrat 17_instruction: Yaxşı, məşq üçün bunu bir daha edək - əvvəlkindən çox
         fərqlənmir, amma divardan ehtiyatlı olun!
+      scrat 18 (copy 1)_instruction: '"Əgər-əks halda" bloku şərti yoxlayır, sonra
+        isə bu VƏ YA digər işi yerinə yetirir. Məni palıd qozasına çatdırmaq üçün
+        bu yeni bloku istifadə etməyə çalışın.'
       scrat 18_instruction: '"Əgər-əks halda" bloku şərti yoxlayır, sonra isə bu VƏ
         YA digər işi yerinə yetirir. Məni palıd qozasına çatdırmaq üçün bu yeni bloku
         istifadə etməyə çalışın.'
-      scrat 19 (copy 1)_instruction: '"Əgər-əks halda" blokunu bir daha təcrübədən
-        keçirin, birinci cəhdinizdən bunu düzgün edə bilərsinizmi?'
+      scrat 19 (copy 1)_instruction: "\"Əgər-əks halda\" blokunu bir daha təcrübədən
+        keçirin, \nbirinci cəhdinizdən bunu düzgün edə bilərsinizmi?"
       scrat 19_instruction: "\"Əgər-əks halda\" blokunu bir daha təcrübədən keçirin,
         \nbirinci cəhdinizdən bunu düzgün edə bilərsinizmi?"
       scrat 20_instruction: "Cəmi 3 blok artırmaqla daha mürəkkəb labirinti keçməyimə

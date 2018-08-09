@@ -76,7 +76,7 @@ ar:
     twitter: 'تويتر'
     facebook: 'فيس بوك'
     windowslive: 'حساب Microsoft'
-    forgot_password: 'هل نسيت كلمة المرور؟'
+    forgot_password: 'نسيت كلمة المرور؟'
     need_confirmation: "لم تستلم تعليمات تأكيد الحساب؟"
     need_unlock: "لم تتلقى تعليمات فتح الحساب؟"
   signup_form:
@@ -118,7 +118,7 @@ ar:
     email_preference_yes: "نعم"
     email_preference_no: "لا"
   school_info:
-    other: 'أخرى'
+    other: 'الأخرى'
   signin_form:
     title: 'هل لديك حساب؟ قم بتسجيل الدخول'
     login: 'البريد الإلكتروني'
@@ -211,7 +211,7 @@ ar:
       classroom: 'الصفحة الرئيسية المعلم'
       district_dashboard: 'جزء لوحة المعلومات'
       label: 'مرحباً %{username}'
-      stats: 'انجازاتي'
+      stats: 'ستوديو كود'
       settings: 'حسابي'
       logout: 'تسجيل الخروج'
       signin: 'تسجيل الدخول'
@@ -558,18 +558,10 @@ ar:
     save: "حفظ"
   race_interstitial:
     races:
-      - 
-        white: "أبيض"
-      - 
-        black: "أسود أو أمريكي من أصل أفريقي"
-      - 
-      - 
-        asian: "آسيوي"
-      - 
-      - 
-      - 
-        other: "أخرى"
-      - 
+      white: "أبيض"
+      black: "أسود أو أمريكي من أصل أفريقي"
+      asian: "آسيوي"
+      other: "الأخرى"
     submit: "تسجيل"
     decline: "إغلاق"
   zendesk_too_young_message: 'عذراً، لا يمكن للمستخدمين الصغار تسجيل الدخول إلى موقع دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> دون تسجيل الدخول أو الطلب من والديك أو معلمك التواصل معنا نيابة عنك.'
@@ -640,7 +632,7 @@ ar:
           harassment: 'التهديدات والتسلط عبر الإنترنتت, تصرفات غير لائقة'
           offensive: 'محتوى مسيء'
           infringement: 'التعدي على حقوق النشر'
-          other: 'أخرى'
+          other: 'الأخرى'
         detail: 'يرجي تقديم كل التفاصيل الممكنة بشأن المحتوى الذي تريد الابلاغ عنه.'
         acknowledge: 'عند تقديم هذه المعلومات, تُقرّ بأنها سوف يتم التعامل معها وفقا للشروط الموجودة في %{link_start_privacy} سياسة الخصوصية %{link_end} و %{link_start_tos}شروط الاستخدام%{link_end}'
   peer_review:
@@ -688,4 +680,5 @@ ar:
   cookie_banner:
     accept: 'أوافق'
   gdpr_dialog:
+    message: 'قد تُرسل بيانات عن استخدامك لهذا الموقع إلى الولايات المتحدة وتُخزّن أو تُعالج فيها.'
     yes: 'نعم'

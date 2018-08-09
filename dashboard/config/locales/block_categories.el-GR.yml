@@ -14,7 +14,7 @@ el:
       String: Συμβολοσειρά
       Image: Εικόνα
       Boolean: Δυαδική τιμή
-      Conditionals: Έλεγχοι
+      Conditionals: Συνθήκες
       Events: Συμβάντα
       Games/Score: Παιχνίδια/Σκορ
       Comments: Σχόλια

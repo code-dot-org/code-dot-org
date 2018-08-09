@@ -132,7 +132,7 @@ lv:
             'Maze: Conditionals':
               name: 'Labirinta nosacījums'
             Songwriting:
-              name: Dziesmu rakstīšana ar Parametriem
+              name: Dziesmu rakstīšana
             'Studio: Create a Game':
               name: 'Spēļu laboratorija: Izveidot spēli'
             'Studio: Create a Story':
@@ -165,7 +165,7 @@ lv:
             Artist:
               name: Mākslinieks
         course4:
-          title: Kurss 4
+          title: 4. kurss
           description_short: Skolēniem, kas pilda 4. kursu vajadzēja pabeigt 2. un 3. kursu.
           description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
           stages:
@@ -485,7 +485,7 @@ lv:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
             Songwriting:
-              name: Dziesmu rakstīšana ar Parametriem
+              name: Dziesmu rakstīšana
             The Big Event:
               name: Lielais notikums
         ScienceP3OLPT2:
@@ -595,7 +595,7 @@ lv:
             Digital Citizenship:
               name: Digitālā pilsonība
             Songwriting:
-              name: Dziesmu rakstīšana ar Parametriem
+              name: Dziesmu rakstīšana
         grade1:
           stages:
             Events:
@@ -1064,7 +1064,7 @@ lv:
             Conditionals with Cards:
               name: nosacījumi ar kārtēm
             'Functions: Songwriting':
-              name: Dziesmu rakstīšana ar Parametriem
+              name: Dziesmu rakstīšana
             Envelope Variables:
               name: Aplokšņu mainīgie
             For Loop Fun:
@@ -1132,7 +1132,7 @@ lv:
             Introduction:
               name: Ievads
             'Functions: Songwriting':
-              name: Dziesmu rakstīšana ar Parametriem
+              name: Dziesmu rakstīšana
             Internet:
               name: Internets
             Crowdsourcing:

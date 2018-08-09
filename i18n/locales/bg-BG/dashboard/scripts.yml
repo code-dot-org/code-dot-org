@@ -121,7 +121,7 @@ bg:
             Computational Thinking:
               name: Изчислително мислене
             Crowdsourcing:
-              name: Crowdsourcing
+              name: Crowdsourcing кампания
             Dice Race:
               name: Състезание със зарове
             Digital Citizenship:
@@ -129,7 +129,7 @@ bg:
             'Farmer: While Loops':
               name: 'Фермер - цикли "докато"'
             Functional Suncatchers:
-              name: Функционални отразители на светлина
+              name: Функционални ловци на слънце
             Internet:
               name: Интернет
             Maze:
@@ -137,7 +137,7 @@ bg:
             'Maze: Conditionals':
               name: 'Лабиринт: услоия'
             Songwriting:
-              name: Композиране на песен
+              name: Писане на песен
             'Studio: Create a Game':
               name: 'Театрална лаборатория - Създаване на игра'
             'Studio: Create a Story':
@@ -164,8 +164,8 @@ bg:
             Maze:
               name: Лабиринт
         frozen:
-          title: Кодиране с Анна и Елза
-          description: Нека да използваме кода, за да се присъединим към Анна и Елза, докато те опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, която след това можете да споделите с приятелите си!
+          title: Код с Анна и Елза
+          description: Нека да използваме кода, за да се присъединим към Анна и Елза, които опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, които след това можете да споделите с приятелите си!
           description_short: Нека да използваме кода, за да се присъединим към Анна и Елза и заедно  опознаем  магията и красотата на леда.
           stages:
             Artist:
@@ -406,7 +406,7 @@ bg:
             Introduction to Computer Science:
               name: Въведение в компютърните науки
             Relay Programming:
-              name: Щафетно програмиране
+              name: Повтори програмирането
             Song Writing:
               name: Писане на песен
             The Artist:
@@ -430,7 +430,7 @@ bg:
             The Maze:
               name: Лабиринт
             Wrap-up:
-              name: Заключение
+              name: Изводи
         edit-code:
           title: Редактиране на кода
           description: Редактиране на кода
@@ -502,7 +502,7 @@ bg:
         cspunit1:
           title: "CSP Част 1 - Дигитална информация"
           description: Тази част изследва техническите предизвикателства и въпроси, които възникват от необходимостта да се въвежда цифровата информация в компютрите, и как се предава тя между хората и изчислителните устройства.
-          description_short: Изследвай как цифрова информация е представена и предадена
+          description_short: В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.
           stages:
             Binary Numbers:
               name: Бинарни числа
@@ -845,7 +845,7 @@ bg:
         sciencePD3:
           title: 'Компютърни науки в науката PD'
         cspunit2:
-          description_short: Изследвай как цифрова информация е представена и предадена
+          description_short: В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.
           stages:
             The Internet:
               name: Интернет
@@ -948,6 +948,8 @@ bg:
               name: Добре дошли!
         K5-OnlinePD:
           stages:
+            Computer Science Fundamentals:
+              name: Основи на компютърните науки
             Next Steps:
               name: Следващи стъпки
         ECSPD2:
@@ -963,7 +965,7 @@ bg:
             Welcome!:
               name: Добре дошли!
             Wrap-up:
-              name: Заключение
+              name: Изводи
         algebraPD2:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -1015,7 +1017,7 @@ bg:
             Welcome!:
               name: Добре дошли!
             Wrap-up:
-              name: Заключение
+              name: Изводи
         ECSPD2-NexTech:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -1029,7 +1031,7 @@ bg:
             Welcome!:
               name: Добре дошли!
             Wrap-up:
-              name: Заключение
+              name: Изводи
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -1047,7 +1049,7 @@ bg:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
             Songwriting:
-              name: Композиране на песен
+              name: Писане на песен
             The Big Event:
               name: Голямото събитие
         algebraPD3a:
@@ -1065,6 +1067,7 @@ bg:
             Teaching Strategies:
               name: Стратегии за преподаване
         cspunit4draft:
+          description_short: Данни
           stages:
             Permanent Data Storage and Clicker Completion:
               name: 'Постоянно съхраняване на данни и кликър: завършване'
@@ -1103,15 +1106,15 @@ bg:
               name: Гъмбол- игрална лаборатория
         starwars:
           title: 'Междузвездни войни: Изграждане на галактика с код'
-          description: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
-          description_short: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
+          description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
+          description_short: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           stages:
             Hour of Code 2015:
               name: Часът на кодирането 2015
         starwarsblocks:
           title: 'Междузвездни войни: Изграждане на галактика с код'
-          description: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
-          description_short: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
+          description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
+          description_short: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           stages:
             Hour of Code 2015:
               name: Часът на кодирането 2015
@@ -1129,9 +1132,9 @@ bg:
             Wrap-Up:
               name: Заключение
         cspunit5:
-          description_short: Изследвай как цифрова информация е представена и предадена
+          description_short: В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.
         cspunit4:
-          description_short: Изследвай как цифрова информация е представена и предадена
+          description_short: В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.
         AlgebraA:
           description: Научете функционално програмиране чрез алгебра
           description_short: Научете функционално програмиране чрез алгебра
@@ -1335,6 +1338,8 @@ bg:
           stages:
             Peer Review:
               name: Вашаят отзив
+        CSDU5-Draft:
+          description_short: Данни
         MikeTest:
           stages:
             Artist Functions:
@@ -1354,7 +1359,7 @@ bg:
             'Jigsaw: Learn to drag and drop':
               name: 'Мозайката: Научете за плъзгане и пускане'
             Loops:
-              name: Цикли
+              name: Повторения
             Programming:
               name: Програмиране
             'Real-life Algorithms: Plant a Seed':
@@ -1364,7 +1369,7 @@ bg:
             Digital Citizenship:
               name: Цифрови граждани
             Songwriting:
-              name: Композиране на песен
+              name: Писане на песен
         grade1:
           stages:
             Events:
@@ -1374,7 +1379,7 @@ bg:
             'Jigsaw: Learn to drag and drop':
               name: 'Мозайката: Научете за плъзгане и пускане'
             Loops:
-              name: Цикли
+              name: Повторения
             Programming:
               name: Програмиране
             Unspotted Bugs:
@@ -1412,7 +1417,7 @@ bg:
             Welcome!:
               name: Добре дошли!
             Wrap-up:
-              name: Заключение
+              name: Изводи
         ecs-unit2:
           stages:
             Teaching Strategies:
@@ -1471,7 +1476,7 @@ bg:
             Functions with Parameters:
               name: Функции с параметри
             Loops:
-              name: Цикли
+              name: Повторения
             Nested Loops:
               name: Вмъкнати цикли
             Variables:
@@ -1561,7 +1566,7 @@ bg:
             Internet:
               name: Интернет
             Crowdsourcing:
-              name: Crowdsourcing
+              name: Crowdsourcing кампания
             Introduction:
               name: Въведение
             Conditionals:
@@ -1591,7 +1596,7 @@ bg:
             Hour of Code 2013:
               name: Час на кодирането 2013
         sports:
-          title: Спорт
+          title: Програмирай своя спортна игра
           description_short: Програмирай свой собствен спорт
           description: Програмирай свой собствен спорт
           stages:
@@ -1811,7 +1816,7 @@ bg:
             Internet:
               name: Интернет
             Crowdsourcing:
-              name: Crowdsourcing
+              name: Crowdsourcing кампания
         new-d:
           stages:
             Introduction:
@@ -1847,7 +1852,7 @@ bg:
             Internet:
               name: Интернет
             Crowdsourcing:
-              name: Crowdsourcing
+              name: Crowdsourcing кампания
         new-f:
           stages:
             Building a Foundation:
@@ -1896,7 +1901,7 @@ bg:
             Internet:
               name: Интернет
             Crowdsourcing:
-              name: Crowdsourcing
+              name: Crowdsourcing кампания
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1976,7 +1981,7 @@ bg:
             Conditionals with Cards:
               name: Условия с карти
             'Functions: Songwriting':
-              name: Композиране на песен
+              name: Писане на песен
             Envelope Variables:
               name: Плик с променливи
             For Loop Fun:
@@ -1990,9 +1995,9 @@ bg:
             Internet:
               name: Интернет
             Crowdsourcing:
-              name: Crowdsourcing
+              name: Crowdsourcing кампания
             Relay Programming:
-              name: Щафетно програмиране
+              name: Повтори програмирането
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -2020,7 +2025,7 @@ bg:
             Graph Paper Programming:
               name: Програмиране на милиметрова хартия
             Relay Programming:
-              name: Щафетно програмиране
+              name: Повтори програмирането
         coursec-2018:
           stages:
             Building a Foundation:
@@ -2044,11 +2049,11 @@ bg:
             Introduction:
               name: Въведение
             'Functions: Songwriting':
-              name: Композиране на песен
+              name: Писане на песен
             Internet:
               name: Интернет
             Crowdsourcing:
-              name: Crowdsourcing
+              name: Crowdsourcing кампания
             Conditionals with Cards:
               name: Условия с карти
             Minecraft Hour of Code:

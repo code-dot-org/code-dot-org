@@ -51,7 +51,7 @@
   "blockActionWith": "med",
   "blockData": "blokdata",
   "blockDestroyBlock": "ødelæg blok",
-  "blockIf": "hvis\n",
+  "blockIf": "hvis",
   "blockIfLavaAhead": "hvis der er lava forude",
   "blockIs": "",
   "blockMove": "flyt",

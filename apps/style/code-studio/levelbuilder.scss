@@ -149,3 +149,32 @@ table.checkboxes {
     }
   }
 }
+
+.collapse {
+  padding-left: 10px;
+}
+
+ [data-toggle="collapse"] {
+   cursor: pointer;
+   padding: 2%;
+   padding-left: 0;
+   
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("/assets/glyphicons-halflings.png");
+    background-repeat: no-repeat;
+    margin-top: 1px;
+    margin-left: 10px;
+     /* Icon when the collapsible content is shown */
+    background-position: -288px -120px;
+  }
+   &.collapsed:after {
+    /* Icon when the collapsible content is hidden */
+    background-position: -313px -119px;
+  }
+}

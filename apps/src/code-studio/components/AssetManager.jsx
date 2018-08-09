@@ -33,12 +33,24 @@ const RecordButton = ({onSelectRecord}) => (
     className="share"
     text={i18n.recordAudio()}
     icon="microphone"
-    style={styles.buttonStyle}
+    style={assetButtonStyles.button}
+    size="large"
   />
 );
 
 RecordButton.propTypes = {
   onSelectRecord: PropTypes.func,
+};
+
+export const assetButtonStyles = {
+  button: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 5,
+    borderRadius: 4,
+    fontSize: 'large',
+    fontWeight: 'lighter',
+  }
 };
 
 const styles = {
@@ -50,13 +62,6 @@ const styles = {
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
-  },
-  buttonStyle: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    margin: 5,
-    borderRadius: 4,
-    fontSize: 'large'
   }
 };
 
@@ -184,7 +189,7 @@ export default class AssetManager extends React.Component {
     const buttons = (
       <div>
         {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
-          <AudioRecorder/>
+          <AudioRecorder onUploadDone={this.onUploadDone}/>
         }
         <span style={styles.buttonRow}>
           {uploadButton}

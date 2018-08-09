@@ -68,7 +68,7 @@ uk-UA:
   csedweek_map_legend_cs_tech_jam: Особливі заходи
   cded_sign_up: Реєстрація
   cded_try_it: Спробувати
-  try_now: Спробувати
+  try_now: Спробувати зараз
   california_heading: Попросіть свою школу викладати інформатику
   california_text: Кожен вчитель може провести наш <a href='http://studio.code.org/'>безкоштовний
     вступний курс</a>. Кожна початкова школа може <a href='http://code.org/educate/k5'>навчати
@@ -236,7 +236,7 @@ uk-UA:
   get_started: Початок
   i_agree: Погоджуюся
   participant_select: "-Виберіть-"
-  participant_student: учень
+  participant_student: Учень
   participant_parent: Батько/мати
   participant_educator: Педагог
   participant_engineer: Інженер-програміст
@@ -540,7 +540,7 @@ uk-UA:
     до їх спільноти. Розгляньте різні моделі, отримуйте поради та хитрощі та <a href='%{minecraft_future_url}',
     target='_blank'>отримуйте ресурси</a>, що вони знайшли найцинішими.
   sports_page_title: Спортивна Година коду
-  sports_og_title: Підручник зі спортивної Години коду
+  sports_og_title: Постарайся! Навчитись може кожен.
   sports_og_description: Обери між підручниками створення гри в баскетбол чи заміксуй
     інші спортивні заходи.
   sports_title: Закодуй власну спортивну гру
@@ -1233,7 +1233,7 @@ uk-UA:
   kodable_gradelevel: Початкова школа
   tynkerapp_gradelevel: Вік 5-13
   robomindnl_gradelevel: Вік 8-13
-  flappy_gradelevel: Вік 4-104
+  flappy_gradelevel: Вік 6-106
   bitsbox_gradelevel: Початкова школа
   makeschool_gradelevel: Старша школа
   touchdevelop_gradelevel: Старша школа
@@ -1243,7 +1243,7 @@ uk-UA:
   kodableunplugged_gradelevel: Вік 8-13
   projguts_gradelevel: Вік 10-13
   hourofcode_gradelevel: Вік 4-104
-  frozen_gradelevel: Вік 8 +
+  frozen_gradelevel: Вік 4-104
   starwars_gradelevel: Вік 6-106
   playlab_gradelevel: Вік 4-104
   infinity_gradelevel: Вік 4-104

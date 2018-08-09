@@ -142,7 +142,7 @@ it:
             Computational Thinking:
               name: Pensiero computazionale
             Crowdsourcing:
-              name: Crowdsourcing (Intelligenza Collettiva)
+              name: Intelligenza Collettiva
             Dice Race:
               name: Gara con i Dadi
             Digital Citizenship:
@@ -150,7 +150,7 @@ it:
             'Farmer: While Loops':
               name: 'Contadina: Cicli "Mentre"'
             Functional Suncatchers:
-              name: Acchiappa-Sole Funzionale
+              name: Acchiappa-sole Funzionale
             Internet:
               name: Internet
             Maze:
@@ -158,7 +158,7 @@ it:
             'Maze: Conditionals':
               name: 'Labirinto: Istruzioni Condizionali'
             Songwriting:
-              name: Composizione di Canzoni - Parametri
+              name: Composizione di canzoni
             'Studio: Create a Game':
               name: 'Laboratorio: Crea un Gioco'
             'Studio: Create a Story':
@@ -421,7 +421,7 @@ it:
             The Internet:
               name: Internet
             The Maze:
-              name: Il labirinto
+              name: Il Labirinto
             Wrap-up:
               name: Conclusione
         edit-code:
@@ -436,7 +436,7 @@ it:
             The Artist:
               name: L'artista
             The Maze:
-              name: Il labirinto
+              name: Il Labirinto
         events:
           title: Eventi
           description: Eventi
@@ -493,6 +493,7 @@ it:
             Puzzles:
               name: Puzzle
         cspunit1:
+          description_short: Programmazione
           stages:
             Number Systems:
               name: Sistema di numerazione
@@ -558,6 +559,7 @@ it:
             reference:
               name: riferimento
         cspunit3:
+          description_short: Programmazione
           stages:
             Creating Functions:
               name: Creazione di funzioni
@@ -637,6 +639,7 @@ it:
             Welcome Back!:
               name: Bentornato!
         cspunit2:
+          description_short: Programmazione
           stages:
             The Internet:
               name: Internet
@@ -843,7 +846,7 @@ it:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Songwriting:
-              name: Composizione di Canzoni - Parametri
+              name: Composizione di canzoni
             The Big Event:
               name: Gli Eventi
         sciencePD3_pre1:
@@ -927,6 +930,10 @@ it:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+        cspunit5:
+          description_short: Programmazione
+        cspunit4:
+          description_short: Programmazione
         AlgebraA:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
@@ -1096,7 +1103,7 @@ it:
             Explore project ideas:
               name: Idee di Progetto
             Songwriting:
-              name: Composizione di Canzoni - Parametri
+              name: Composizione di canzoni
         grade1:
           stages:
             Debugging:
@@ -1206,7 +1213,7 @@ it:
             Loops:
               name: Ripetizioni
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
             Variables:
               name: Variabili
             While Loops:
@@ -1379,7 +1386,7 @@ it:
             Nested Loops in Bee:
               name: Cicli Annidati con l'Ape
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
             Introduction:
               name: Introduzione
             Debugging in Collector:
@@ -1413,7 +1420,7 @@ it:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Crowdsourcing (Intelligenza Collettiva)
+              name: Intelligenza Collettiva
             Determine the Concept:
               name: Fissare i Concetti
             Introduction:
@@ -1835,7 +1842,7 @@ it:
                 lezione, gli studenti avranno la possibilità di personalizzare il
                 proprio gioco modificando velocità e suoni.
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
               description_student: Cicli all'interno di altri cicli, all'interno di
                 altri cicli... Cosa significa? In questa lezione imparerai cosa succede
                 quando inserisci un ciclo all'interno di un altro ciclo.
@@ -2139,7 +2146,7 @@ it:
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
             Functions in Harvester:
               name: Funzioni con la Contadina
           title: Corso E
@@ -2365,7 +2372,7 @@ it:
             Building a Foundation:
               name: Costruire le Fondamenta
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
             Conditionals & Loops in Harvester:
               name: Istruzioni Condizionali & Cicli con la Contadina
             Until Loops in Maze:
@@ -2426,6 +2433,12 @@ it:
             Intro to App Lab:
               name: Introduzione a Sviluppo App
           title: Introduzione a Sviluppo App
+          description_short: Crea la tua app in JavaScript usando la programmazione
+            a blocchi o in formato testo. Se ti sei già esercitato con i blocchi,
+            spingi le tue abilità al livello successivo.
+          description: Crea la tua app in JavaScript usando la programmazione a blocchi
+            o in formato testo. Se ti sei già esercitato con i blocchi, spingi le
+            tue abilità al livello successivo.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -2441,7 +2454,7 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
             'Algorithms: Dice Race':
@@ -2473,7 +2486,7 @@ it:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Crowdsourcing (Intelligenza Collettiva)
+              name: Intelligenza Collettiva
             Nested Loops in Bee:
               name: Cicli Annidati con l'Ape
             Nested Loops in Bee/Zombie:
@@ -2489,7 +2502,7 @@ it:
             Events in Bounce:
               name: Eventi con Ping-Pong
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
             Nested Loops in Artist:
               name: Cicli Annidati con l'Artista
             Debugging in Collector:
@@ -2564,7 +2577,7 @@ it:
             Debugging with Scrat:
               name: Debugging con Scrat
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -2618,7 +2631,7 @@ it:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Crowdsourcing (Intelligenza Collettiva)
+              name: Intelligenza Collettiva
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -2715,7 +2728,7 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
             Nested Loops with Frozen:
               name: Cicli Annidati con Frozen
             'Algorithms: Dice Race':
@@ -2747,7 +2760,7 @@ it:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Crowdsourcing (Intelligenza Collettiva)
+              name: Intelligenza Collettiva
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
             Functions in Harvester:
@@ -2965,7 +2978,7 @@ it:
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
-              name: Cicli Annidati
+              name: Cicli annidati
             'Common Sense Education: Screen Out the Mean':
               name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             'Events: The Big Event':
@@ -3027,7 +3040,7 @@ it:
             Conditionals & Loops in Harvester:
               name: Istruzioni Condizionali & Cicli con la Contadina
             'Functions: Songwriting':
-              name: Composizione di Canzoni - Parametri
+              name: Composizione di canzoni
             Functions in Minecraft:
               name: Funzioni con Minecraft
             Functions in Harvester:
@@ -3067,7 +3080,7 @@ it:
             Internet:
               name: Internet
             Crowdsourcing:
-              name: Crowdsourcing (Intelligenza Collettiva)
+              name: Intelligenza Collettiva
             Relay Programming:
               name: Programmazione a Staffetta
         courseb-2018:
@@ -3277,7 +3290,7 @@ it:
                 guidati attraverso gli eventi, infine avranno un loro spazio per creare
                 il loro gioco.
             'Functions: Songwriting':
-              name: Composizione di Canzoni - Parametri
+              name: Composizione di canzoni
               description_teacher: Una delle strutture più belle nell'informatica
                 è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi
                 che è possibile utilizzare più e più volte all'interno di un programma
@@ -3346,7 +3359,7 @@ it:
                 finta di navigare in Internet, imparando a conoscere connessioni,
                 URL, indirizzi IP e DNS.
             Crowdsourcing:
-              name: Crowdsourcing (Intelligenza Collettiva)
+              name: Intelligenza Collettiva
               description_teacher: In informatica affrontiamo alcuni problemi che
                 possono scoraggiare. Sfide come la ricerca di grandi numeri primi
                 o il sequenziamento del DNA sono quasi impossibili da risolvere come

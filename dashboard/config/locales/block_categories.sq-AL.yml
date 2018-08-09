@@ -4,12 +4,12 @@ sq:
     block_categories:
       Actions: Veprime
       Loops: cikle
-      Functions: Funksionet
+      Functions: funksione
       Color: Ngjyra
       Math: Matematikë
       Logic: Logjikë
-      Variables: Variabla
-      Conditionals: Kushtoret
+      Variables: variabla
+      Conditionals: Kushtet
       Events: Ngjarje
       Text: Tekst
       Start: Fillo

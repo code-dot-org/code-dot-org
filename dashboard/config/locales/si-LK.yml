@@ -31,11 +31,11 @@ si:
         current_password: දවර්තමාන මුර පදය
         locale: භාෂාව
         age: වයස
-        gender: ලිංගභේදය
+        gender: ස්ත්‍රී/පුරුෂ භාවය
         edit_header: "ගිනුමේ තොරතුරු \tසංස්කරණය කරන්න"
         error:
           future: අනාගතයේදී විය නොහැකිය
-  hello: හේලෝ ලෝකය
+  hello: Hello world
   welcome_back: "%{name}, ඔබව නැවතත් පිළිගන්නවා"
   your_professional_learning_plan: ඔබේ වෘත්තිමය ඉගෙනුම් සැලැස්ම
   see_your_learning_plan: ඔබගේ ඉගෙනුම් සැලැස්ම දකින්න
@@ -169,7 +169,7 @@ si:
       instructions: ඔබගේ ඊ-තැපැල් ලිපිනය පහත ඇතුලත් කළ පසු අපි ඔබට මුරපදය යළි සැකසීමෙී
         උපදෙස් එවන්නම්.
       email: විද්‍යුත් තැපැල් ලිපිනය
-      submit: යොමු කරන්න
+      submit: යොමුකරන්න
     change_form:
       title: ඔබේ මුරපදය වෙනස් කරන්න
       new_password: නව මුරපදය
@@ -216,7 +216,7 @@ si:
     edit: සංස්කරණය කරන්න
     edit_model: සංස්කරණය කරන්න %{model}
     update: යාවත්කාලීන කරන්න
-    submit: යොමු කරන්න
+    submit: යොමුකරන්න
     destroy: විනාශ කරන්න
     back: ආපසු
     confirm: ඔබට විශ්වාසද?
@@ -235,7 +235,7 @@ si:
         applab: App එකක් හදන්න
       courses: පාඨමාලාව
       project_gallery: ව්යාපෘති
-      educate_hoc: පැයේ කේතය
+      educate_hoc: Hour of Code
       stats: සංඛ්‍යාන
     user:
       classroom: ගුරු මුල් පිටුව
@@ -521,11 +521,11 @@ si:
       audience: වයස් 13+
       cta: කෙසේදැයි දැනගන්න
     hoc:
-      title: පැරණි වංකගිරිය
+      title: සම්භාව්‍ය අවුල් ජාලය
       body: "පරිගණක විද්යාව පිළිබඳ මූලික දේ උත්සාහ කරන්න. මිලියන ගණනක් එයට \nඋත්සාහයක්
         දී ඇත."
     flappy:
-      title: Flappy Code
+      title: ෆ්ලැපි කේතය
       body: විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද? අපගේ Flappy
         Code නිබන්දනය කියවන්න!
     20-hour:
@@ -556,12 +556,12 @@ si:
       body: ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත ඇති කතාවක් හෝ ක්‍රීඩාවක්
         සාදන්න.
     minecraft:
-      title: මයින්ක්‍රාෆ්ට්
-      body: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න.
+      title: Minecraft
+      body: Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න
     minecraft2016:
-      title: මයින්ක්‍රාෆ්ට්
+      title: Minecraft
     hero:
-      title: මයින්ක්‍රාෆ්ට්
+      title: Minecraft
     unplugged:
       title: එළිදැක්වූ පාඩම්
       audience: වයස අවුරුදු 4+
@@ -714,7 +714,7 @@ si:
       american_indian: ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික
       other: වෙනත්
       opt_out: පිළිතුරු දීමට අකැමතියි
-    submit: යොමු කරන්න
+    submit: යොමුකරන්න
     decline: වසන්න
   zendesk_too_young_message: සමාවෙන්න,උපකාරක වෙබ් අඩවියට වයසින් බාල සිසුන් සඳහා sign
     in වියනොහක.සොයන්න <a href="http://support.code.org">support.code.org</a> signing
@@ -726,7 +726,7 @@ si:
     completed_perfect: සාර්ථකව සම්පූර්ණ කර ඇත
     furthest_level_attempted: දුරතම මට්ටමට උත්සාහ කර ඇත
     assessment: ඇගයුම්
-    submitted: ඉදිරිපත් කලා
+    submitted: ඉදිරිපත් කළා
   studio:
     courses_working_on: ඔබේ පාඨමාලා
     completed_courses: සම්පූර්ණ කරන ලද පාඨමාලා
@@ -738,7 +738,7 @@ si:
     new: අලුතෙන් තනන්න
     rename: නැවත නම් කරන්න
     save: සුරකින්න
-    delete: මකන්න
+    delete: මකාදමන්න
     exit: පාඨමාලාව වෙත ආපසු යන්න
     my_projects: මගේ ව්යාපෘති
     project_gallery: ව්යාපෘති

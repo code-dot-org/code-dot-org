@@ -11,13 +11,13 @@ cs:
       draw a triangle: nakresli trojúhelník
       draw a house: nakresli dům
       draw a star: nakreslete hvězdu
-      do something: něco udělej
+      do something: proveď něco
       jump: skoč
       set score: nastavit body
       get nectar: získej nektar
       test: otestuj
       diamond: diamant
-      move: pohyb
+      move: posun
       move right: pohnout vpravo
       move up: pohnout nahoru
       move down: pohyb dolů

@@ -328,10 +328,10 @@ bs:
       2-3 Maze 10_instruction: Vodi me do zelene zloće! (Pazi se TNT-a)
       2-3 Maze 11_instruction: Dovedi me do cvijeta jer osjećam glad! Koliko puta
         trebaš ponoviti blok ponavljanja?
-      2-3 Maze 12 (copy 1)_instruction: 'Možeš li zamijeniti dva prethodna rješenja
-        sa samo dva bloka? (Savjet: Kreiraj petlju koristeći "ponavljaj puta" blok.)'
-      2-3 Maze 12 (copy 2)_instruction: 'Možeš li zamijeniti dva prethodna rješenja
-        sa samo dva bloka? (Savjet: Kreiraj petlju koristeći "ponavljaj puta" blok.)'
+      2-3 Maze 12 (copy 1)_instruction: 'Možeš li zamijeniti prethodno rješenje sa
+        samo dva bloka? (Savjet: Napravi petlju koristeći "ponovi puta" blok.)'
+      2-3 Maze 12 (copy 2)_instruction: 'Možeš li zamijeniti prethodno rješenje sa
+        samo dva bloka? (Savjet: Napravi petlju koristeći "ponovi puta" blok.)'
       2-3 Maze 12 (old)_instruction: Dovedi me do svinje. Sada koristi "ponavljaj
         puta" blok!
       2-3 Maze 12_instruction: 'Možeš li zamijeniti ovih pet blokova sa samo dva bloka?
@@ -363,7 +363,8 @@ bs:
       2-3 Maze Loops 17_instruction: Dovedi me do suncokreta!
       2-3 Maze Loops 18_instruction: Dovedi me do suncokreta!
       2-3 Maze Loops 19_instruction: Dovedi me do suncokreta!
-      2-3 Maze Loops 20_instruction: Dovedi me do suncokreta!
+      2-3 Maze Loops 20_instruction: Možeš li riješiti ovaj zadatak korištenjem što
+        manjeg broja blokova?
       2-3 Maze Loops 21_instruction: Dovedi me do suncokreta!
       2-3 Maze Loops Assessment 1_instruction: 'Procjena: Dovedi me do suncokreta
         koristeći samo 5 blokova! '
@@ -437,8 +438,8 @@ bs:
       20hr_maze_stage2_18_instruction: Blok "ako-inače" provjerava uslov, a onda izvrši
         ILI jedno ILI drugo. Da bi me doveo do suncokreta, probaj koristiti ovaj novi
         blok.
-      20hr_maze_stage2_19_instruction: Još jedna vježba sa "ako-inače" blokom, možeš
-        li je riješiti iz prvog pokušaja?
+      20hr_maze_stage2_19_instruction: Još jedna vježba za "ako-inače" blok. Možeš
+        li to uspješno izvršiti od prve?
       20hr_maze_stage2_2_instruction: Ova svinja mi je nakostriješila perje. Pomozi
         mi ga pronaći!
       20hr_maze_stage2_20_instruction: Možeš li dodati samo 3 bloka da bi mi pomogao
@@ -593,7 +594,7 @@ bs:
         postaviti na kraj vanjske petlje da bi nacrtao/la čitavu mrežu?
       4-5 Artist Patterns 4_instruction: Ovaj dijamant ima stranice od 50 piksela
         i uglove od 120 i 60 stepeni. Upotrijebi petlju za crtanje.
-      4-5 Artist Patterns 5.5_instruction: Koliko puta moraš ponoviti ovaj blok da
+      4-5 Artist Patterns 5.5_instruction: Koliko puta trebaš ponoviti ovaj blok da
         bi nacrtao čitavu mrežu dijamanata?
       4-5 Artist Patterns 5_instruction: Hajde da to ponovimo da bismo dobilired od
         6 dijamanata. Primjeti da smo promijenili kod za dijamanta tako da ponavlja
@@ -620,6 +621,9 @@ bs:
       4-5 Bee Conditionals 1_instruction: Pčela ne može razabrati da li je ovo cvijet
         ili saće meda. Sakupi nektar samo iz cvjetova, ali prvo provjeri da li je
         određeni predmet cvijet ili saće meda.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Pčela želi nektar ovog trenutka.
+        Sjeti se, nisu svi objekti cvijeće, tako da moraš prvo provjeriti da li je
+        objekat cvijet i tek onda pokupiti nektar.
       4-5 Bee Conditionals 2_instruction: Pčela sada želi samo nektar. Zapamti, nisu
         svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da
         li je u pitanju cvijet.
@@ -787,11 +791,11 @@ bs:
       App Lab test_instruction: uslov
       Artist - Nested Loops 1_instruction: 'Dovrši kod za crtanje ovih trokutova.
         Prvi dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
-      Artist - Nested Loops 10_instruction: Nacrtaj zadnji red zvijezda na ovoj zastavi
-        tako što ćeš staviti u petlju obezbijeđene blokove. Zvijezde su razmaknute
-        za 50 piksela, ali zapamti da su same zvijezde 30 piksela široke.
+      Artist - Nested Loops 10_instruction: Nacrtati zadnji red zvijezda na ovoj zastavi
+        tako što ćeš ponavljati date blokove. Zvijezde su odmaknute za 50 piksela,
+        ali zapamti da su zvijezde same 30 piksela široke.
       Artist - Nested Loops 11_instruction: Možeš li nacrtati ovih 10 kvadrata ovog
-        trotoara koristeći ugniježdenu petlju? Svaki kvadrat ima 30 piksela.
+        trotoara koristeći ugniježdene petlje? Svaki kvadrat je širok 30 piksela.
       Artist - Nested Loops 12_instruction: Možeš li nacrtati ovih 36 trokutova koristeći
         ugniježdenu petlju?
       Artist - Nested Loops 2_instruction: 'Sada ugnijezdi ovu petlju unutar druge
@@ -881,16 +885,16 @@ bs:
         sve dok zemlja nije poravnata? Savjet: Pokušaj korisitit "dok" petlju ovaj
         puta.'
       C3-Farmer While Loops 5_instruction: Wow, sada vidim dvije duboke rupe! Možeš
-        li napisati program koji ih obje popunjava sve dok zemlja nije poravnata?
-      C3-Farmer While Loops 6_instruction: Wow, sada vidim veliku gomilu zemlje! Možeš
-        li napisati program koji uklanja zemlju sve dok zemlja ne bude poravnata?
-      C3-Farmer While Loops 7_instruction: Wow, sada vidim tri gomile zemlje! Možeš
-        li napisati program koji uklanja svaku od njih dok se zemlja ne poravna?
+        li napisati program koji ih obje popunjava sve dok se zemlja ne izjednači?
+      C3-Farmer While Loops 6_instruction: Wow, sada vidim veliku hrpu zemlje! Možeš
+        li napisati program koji je uklanja sve dok se zemlja ne izjednači?
+      C3-Farmer While Loops 7_instruction: Wow, sada vidim tri hrpe zemlje! Možeš
+        li napisati program koji uklanja svaku od njih sve dok se zemlja ne izjednači?
       C3-Farmer While Loops 8_instruction: ' Vidim stvarno duboku rupu i veoma veliku
         gomilu zemlje. Koliko lopata zemlje trebam premjestiti da bi se zemlja poravnala?
         Savjet: Koristi "dok" petlju za oboje.'
-      C3-Farmer While Loops Assessment 1_instruction: Vidim jako mnogo rupa i gomila.
-        Pomozi mi da premjestim zemlju tako da se sve poravna.
+      C3-Farmer While Loops Assessment 1_instruction: Sada vidim puno rupa i hrpa.
+        Pomozi mi da ih popunim i uklonim sve dok se zemlja ne poravna.
       Calc Circles of Eval .2_instruction: Ovaj Blok Izvršenja je funkcija za množenje
         koja uzima dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako
         da pomnoži 2 * 5
@@ -958,8 +962,9 @@ bs:
         stranica je 100 piksela duga.
       Code Studio Puzzle Challenge 4 - Artist_instruction: "Nacrtaj osmougaonik. Svaka
         \nstranica je 100 piksela duga."
-      Code Studio Puzzle Challenge 5 - Bee (copy 1)_instruction: Dovedi Pčelu do cvijeta
-        i pokupi nektar.
+      Code Studio Puzzle Challenge 5 - Bee (copy 1)_instruction: |-
+        Pokreći Pčelu do cvijeta
+        i sakupi nektar.
       Code Studio Puzzle Challenge 5 - Bee_instruction: Cvjetovi sadrže određenu količinu
         nektra. Pokreći Pčelu prema cvijetu i pokupi nektar sa "pokupi nektar" blokom.
       Code Studio Puzzle Challenge 6 - Bee_instruction: Saća meda mogu sadržati određenu
@@ -984,8 +989,8 @@ bs:
       Code Studio Puzzle Challenge Square - Artist_instruction: |-
         Nacrtaj kvadrat koristeći
         datu varijablu za dužinu.
-      Course 2 Bee Loops 1_instruction: 'Zdravo, ja sam pčela. Možeš li mi pomoći
-        da sakupim nektar iz ovih cvjetova? '
+      Course 2 Bee Loops 1_instruction: Zdravo ja sam pčela. Možeš li mi pomoći da
+        sakupim nektar iz ovih cvjetova?
       Course 2 Bee Loops 13_instruction: 'Procjena: Upotrijebi blok za ponavljanje
         da bi sakupio/la sav nektar.'
       Course 2 Bee Loops 2_instruction: Možeš li izvršiti isti zadatak na lakši način
@@ -1259,7 +1264,7 @@ bs:
         nektar. Ovje je ako-inače blok kombinovan sa drugim ako-inače blokom za kreiranje
         ako, inače-ako i inače bloka. Dovrši rješenje za sakupljanje nepoznate količine
         nektra.
-      Course 4 Bee For Loops 1_instruction: Upotrijebi petlju za sakupljanje nektra
+      Course 4 Bee For Loops 1_instruction: Upotrijebi petlju za skupljanje nektra
         iz svakog cvijeta.
       Course 4 Bee For Loops 10_instruction: Ako tvoja petlja broji prema dole, korak
         za povećanje se pri svakom prolazu kroz petlju oduzima od trenutne vrijednosti
@@ -1281,8 +1286,8 @@ bs:
         Pokušaj sakupiti nektar sa odbrojavanjem od 5 do 1 za 1.
       Course 4 Bee For Loops 7_instruction: Upotrijebi "brojač" varijablu iz svoje
         "od-do" petlje da bi kontrolisao/la koliko se treba pomjeriti horizontalno.
-      Course 4 Bee For Loops 8_instruction: Možeš li upotrijebiti varijablu petlje
-        za kontrolu pokreta i sakupljanja meda?
+      Course 4 Bee For Loops 8_instruction: Možeš li koristiti varijablu petlje za
+        kontrolisanje kretanja i sakupljanja nektra?
       Course 4 Bee For Loops 9_instruction: Zadnji broj u tvojoj "od-do" petlji se
         zove "povećanje", i svaki put kada se petlja izvršava, brojač varijabla se
         mijenja za vrijednost povećanja. Pokušaj sakupiti ove cvjetove koristeći povećanje
@@ -1696,7 +1701,7 @@ bs:
       K-1 Artist1 7_instruction: Upotrijebi blok za skakanje da bi se pokretao/la
         bez crtanja. Skoči prema gore i nacrtaj liniju.
       K-1 Artist1 8_instruction: Nacrtaj isprekidanu liniju koristeći blokove za skakanje
-        i crtanje
+        i za crtanje
       K-1 Artist1 9_instruction: Crtaj i Skači da bi napravio/la isprekidanu liniju
       K-1 Artist1 Assessment 1_instruction: Nacrtaj kratke i duge linije!
       K-1 Artist1 Assessment 2_instruction: Nacrtaj kratke isprekidane linije!
@@ -1997,6 +2002,9 @@ bs:
         igranje. Zabavi se sa svim blokovima u tvojoj alatnoj traci. '
       New Artist Project_instruction: Nacrtaj nešto cool! Tvoj kod je snimljen kao
         pojekt kojem se možeš vratiti kada god poželiš.
+      New Bounce Project_instruction: Napravi vlastitu igru Odbijanja. Možeš promijeniti
+        sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima
+        da isprobaju tvoju igru na svojim mobitelima.
       New Course 4 Artist Functions Level 4_instruction: Upotrijebi "nacrtaj kvadrat"
         funkciju da bi nacrtao/la ovaj uzorak.
       New Gumball Project_instruction: Napravi šta god želiš i podijeli!
@@ -2105,6 +2113,9 @@ bs:
       bounce_12_instruction: Napravi vlastitu igru Odbijanja. Možeš promijeniti sav
         izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima
         da isprobaju tvoju igru na svojim mobitelima.
+      bounce_12_2018_instruction: Napravi vlastitu igru Odbijanja. Možeš promijeniti
+        sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima
+        da isprobaju tvoju igru na svojim mobitelima.
       bounce_1_2018_instruction: Dodaj blok na "kad lijeva strelica" blok i klikni
         na "Pokreni". Pomakni reket koristeći lijevu strelicu da dođeš do cilja.
       bounce_2_instruction: Dodaj blok na "kad desna strelica" i "kad lijeva strelica"
@@ -2210,6 +2221,9 @@ bs:
         pokretanju". Trebaš dodati novi blok "lansiraj novu loptu" na više mjesta.
         Također, pokušaj promijeniti scenu ili brzinu reketa i lopte te isprobaj koliko
         bodova možeš sakupiti prije nego tvoj protivnik skupi dva boda.
+      courseD_bounce_events12_instruction: Napravi vlastitu igru Odbijanja. Možeš
+        promijeniti sav izgled i pravila. Kad završiš, klikni na Kraj da bi omogućio
+        prijateljima da isprobaju tvoju igru na svojim mobitelima.
       courseD_bounce_events2_instruction: Dodaj blok na "kad desna strelica" i "kad
         lijeva strelica" blokove. Pomiči reket da dođeš do oba cilja.
       courseD_bounce_events3_instruction: Sad pokušaj nešto slično sa blokom "kad
@@ -2577,7 +2591,7 @@ bs:
         Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno
         sa 10?)'
       grade4_artist_nested_loop_squares1_instruction: Možeš li nacrtati ovih 10 kvadrata
-        ovog trotoara koristeći ugniježdenu petlju? Svaki kvadrat ima 30 piksela.
+        ovog trotoara koristeći ugniježdene petlje? Svaki kvadrat je širok 30 piksela.
       grade4_artist_nested_loop_triangles1_instruction: 'Dovrši kod za crtanje ovih
         trokutova. Prvi dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za
         360 stepeni.'
@@ -2862,14 +2876,19 @@ bs:
         med u svakoj saći meda.
       level grade3_Loops_2_instruction: Možeš li izvršiti isti zadatak na lakši način
         pomoću petlje?
+      scrat 16 (copy 1)_instruction: Žir! Žir! Žir! Dovedi me do tamo koristeći "ako"
+        blok. Pri tome koristi što manje blokova.
       scrat 16_instruction: Žir! Žir! Žir! Dovedi me do tamo koristeći "ako" blok.
         Pri tome koristi što manje blokova.
       scrat 17_instruction: Ok, hajde da to ponovimo još jednom radi vježbe  - ovo
         nije toliko različito, ali pazi na zid!
+      scrat 18 (copy 1)_instruction: '"Ako-inače" blokovi provjeravaju uslov, i onda
+        izvrše jednu stvar ILI drugu. Da bi me doveo/la do žira, koristi ovaj novi
+        blok.'
       scrat 18_instruction: '"Ako-inače" blokovi provjeravaju uslov, i onda izvrše
         jednu stvar ILI drugu. Da bi me doveo/la do žira, koristi ovaj novi blok.'
-      scrat 19 (copy 1)_instruction: Još jedna vježba sa "ako-inače" blokom, možeš
-        li je riješiti iz prvog pokušaja?
+      scrat 19 (copy 1)_instruction: Još jedna vježba za "ako-inače" blok. Možeš li
+        to uspješno izvršiti od prve?
       scrat 19_instruction: Još jedna vježba za "ako-inače" blok. Možeš li to uspješno
         izvršiti od prve?
       scrat 20_instruction: Možeš li dodati samo 3 bloka da bi mi pomogao/la da riješim

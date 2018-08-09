@@ -62,26 +62,20 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def destroy
-    # TODO: (madelynkasula) Remove the new_destroy_flow check when the
-    # ACCOUNT_DELETION_NEW_FLOW experiment is removed.
-    if params[:new_destroy_flow]
-      return head :bad_request unless current_user.can_delete_own_account?
-      password_required = current_user.encrypted_password.present?
-      invalid_password = !current_user.valid_password?(params[:password_confirmation])
-      if password_required && invalid_password
-        current_user.errors.add :current_password
-        render json: {
-          error: current_user.errors.as_json(full_messages: true)
-        }, status: :bad_request
-        return
-      end
-      TeacherMailer.delete_teacher_email(current_user).deliver_now if current_user.teacher?
-      destroy_dependent_users(current_user)
-      Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
-      return head :no_content
-    else
-      super
+    return head :bad_request unless current_user.can_delete_own_account?
+    password_required = current_user.encrypted_password.present?
+    invalid_password = !current_user.valid_password?(params[:password_confirmation])
+    if password_required && invalid_password
+      current_user.errors.add :current_password
+      render json: {
+        error: current_user.errors.as_json(full_messages: true)
+      }, status: :bad_request
+      return
     end
+    TeacherMailer.delete_teacher_email(current_user).deliver_now if current_user.teacher?
+    destroy_dependent_users(current_user)
+    Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
+    return head :no_content
   end
 
   def sign_up_params
@@ -201,13 +195,25 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user][:user_type].nil?
 
     successfully_updated =
-      if forbidden_change?(current_user, params)
-        false
-      elsif needs_password?(current_user, params)
-        # Guaranteed to fail, but sets appropriate user errors for response
-        current_user.update_with_password(set_user_type_params)
+      if current_user.migrated?
+        if forbidden_change?(current_user, params)
+          false
+        else
+          current_user.set_user_type(
+            set_user_type_params[:user_type],
+            set_user_type_params[:email],
+            email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
+          )
+        end
       else
-        current_user.update_without_password(set_user_type_params)
+        if forbidden_change?(current_user, params)
+          false
+        elsif needs_password?(current_user, params)
+          # Guaranteed to fail, but sets appropriate user errors for response
+          current_user.update_with_password(set_user_type_params)
+        else
+          current_user.update_without_password(set_user_type_params)
+        end
       end
 
     if successfully_updated
@@ -380,12 +386,10 @@ class RegistrationsController < Devise::RegistrationsController
     users = []
     if user.teacher?
       user.students.uniq.each do |student|
-        if student.depends_on_teacher_for_login?
-          users << {id: student.id, name: student.name}
-        end
+        users << student.summarize if student.depends_on_teacher_for_login?
       end
     end
-    users << {id: user.id, name: user.name}
+    users << user.summarize
     users
   end
 

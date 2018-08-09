@@ -111,6 +111,8 @@ he:
               name: מבוך
             'Maze: Conditionals':
               name: 'מבוך: ההתניות'
+            Songwriting:
+              name: כתיבת שירים
             'Studio: Create a Game':
               name: 'מעבדת הצעצועים: צור משחק'
             'Studio: Create a Story':
@@ -173,8 +175,12 @@ he:
               name: 'מעבדת הצעצועים: פונקציות עם פרמטרים'
             'Play Lab: Variables':
               name: 'מעבדת הצעצועים: משתנים'
+            Super Challenge - For Loops:
+              name: אתגר מיוחד - לולאות עבור
             Super Challenge - Variables:
               name: אתגר מיוחד - משתנים
+            'Unplugged: For Loop Fun':
+              name: 'ללא מחשב: כיף עם לולאות עבור'
         Course4pre:
           stages:
             'Artist: Functions':
@@ -531,6 +537,8 @@ he:
               name: זוזו, זוזו
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
+            Songwriting:
+              name: כתיבת שירים
             The Big Event:
               name: האירוע הגדול
         algebraPD3a:
@@ -671,7 +679,7 @@ he:
             'Jigsaw: Learn to drag and drop':
               name: 'מסור: למד לגרור ולשחרר'
             Loops:
-              name: לולאות
+              name: חזרות
             'Real-life Algorithms: Plant a Seed':
               name: 'אלגוריתמים מהחיים: שתול זרעון'
         grade4:
@@ -682,6 +690,8 @@ he:
               name: 'דבורה: פונקציות (קורס 3)'
             'New Artist: Functions':
               name: 'אמן חדש: פונקציות'
+            Songwriting:
+              name: כתיבת שירים
         grade1:
           stages:
             Events:
@@ -689,7 +699,7 @@ he:
             'Jigsaw: Learn to drag and drop':
               name: 'מסור: למד לגרור ולשחרר'
             Loops:
-              name: לולאות
+              name: חזרות
         grade5:
           stages:
             'Artist: For Loops':
@@ -704,6 +714,8 @@ he:
               name: 'דבורה: פונקציות עם פרמטרים'
             'Play Lab: Variables':
               name: 'מעבדת הצעצועים: משתנים'
+            'Unplugged: For Loop Fun':
+              name: 'ללא מחשב: כיף עם לולאות עבור'
         ecs-unit1:
           stages:
             0: |-
@@ -761,7 +773,7 @@ he:
             Functions with Parameters:
               name: פונקציות ופרמטרים
             Loops:
-              name: לולאות
+              name: חזרות
             Variables:
               name: משתנים
             While Loops:
@@ -854,6 +866,12 @@ he:
           stages:
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
             Introduction:
               name: מבוא
             Ice Age Play Lab:
@@ -916,6 +934,10 @@ he:
               name: רשימות
             For Loops:
               name: בשביל לולאות
+            List and For Loops:
+              name: רשימה ולולאות עבור
+            Arrays and For Loops:
+              name: מערכים ולולאות עבור
             Functions with Parameters:
               name: פונקציות ופרמטרים
         workshop-gamelab:
@@ -942,8 +964,13 @@ he:
               name: רשימות
             For Loops:
               name: בשביל לולאות
+              description_student: הכיתה לומדת על חזרה על הוראות בעזרת _לולאת עבור_, בתחילה על-ידי שליטה ברובוט בעזרת רשת ואז במעבדת האפליקציות.
+            Arrays and For Loops:
+              name: מערכים ולולאות עבור
             Functions with Parameters:
               name: פונקציות ופרמטרים
+            Arrays and For Loops_:
+              name: מערכים ולולאות עבור
             Functions with Parameters_:
               name: פונקציות ופרמטרים
         csd3-draft:
@@ -1042,6 +1069,12 @@ he:
               name: עידן הקרח Play Lab
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
             Conditionals:
               description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
             Functions in Farmer:
@@ -1059,6 +1092,10 @@ he:
               name: היכרות עם חידות מבוכים
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
             Functions with Parameters in Bee:
               description_teacher: שיעור זה משתמש בסביבת הדבורה, וממשיך בלימוד הרעיון של שימוש בפונקציות עם פרמטרים אשר נלמד בשלב האמן הקודם. התלמידים יתרגלו כתיבה ושימוש בפונקציות כדי ללכת בנתיבים מורכבים ובאיסוף תבניות של צוף ודבש.
             Sequence in Maze:
@@ -1077,6 +1114,12 @@ he:
               name: ההתניות & לולאות במבוך
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
             Conditional Loops in Maze:
               name: ההתניות & לולאות במבוך
             Until Loops in Maze:
@@ -1130,6 +1173,10 @@ he:
               name: לולאות עם התניות במבוך
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
         new-e:
@@ -1154,6 +1201,12 @@ he:
               name: עידן הקרח Play Lab
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
         csd5-old:
           stages:
             ASCII and Binary Representation:
@@ -1196,6 +1249,12 @@ he:
               name: עידן הקרח Play Lab
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            For Loops in Bee:
+              name: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              name: לולאות עבור עם האמן
         csd6-old:
           stages:
             Lists:
@@ -1259,6 +1318,10 @@ he:
               name: ניפוי שגיאות עם סקראט
             Conditionals with Cards:
               name: התניות עם כרטיסים
+            'Functions: Songwriting':
+              name: כתיבת שירים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
             Binary Bracelets:
               name: צמידים בינארים
             'Unplugged: Binary':
@@ -1324,6 +1387,8 @@ he:
               name: צמידים בינארים
         csd6-2018:
           stages:
+            Arrays and For Loops:
+              name: מערכים ולולאות עבור
             Functions with Parameters:
               name: פונקציות ופרמטרים
         coursee-2018:
@@ -1341,6 +1406,8 @@ he:
               description_teacher: בשלב זה, תלמידים יחלו עם היכרות (או סקירה, תלוי ברמת הידע של כיתתך) לסביבת העבודה המקוונת של Code.org. התלמידים ילמדו את הפונקציונליות הבסיסית של הסביבה האינטראקטיבית כולל כפתורי 'הרץ', 'אפס', ו- 'צעד'. היכרות עם גרירה, מחיקה וחיבור של בלוקי Blockly גם נכללים בהתחלת הסרטון. בתוך החידות, תלמידים יתרגלו את השליטה שלהם ברצפים וניפוי שגיאות בתוך המבוך ובעזרת האמן.
             Conditionals:
               description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+            'Functions: Songwriting':
+              name: כתיבת שירים
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
               description_teacher: שיעור זה כולל שימוש במעבדת הצעצועים, פלטפורמה עבור תלמידים בה הם יכולים ליצור משחקים כראות עיניהם וליצור אינטראקציה בין הדמויות ולקבל קלט מהמשתמש. התלמידים יעבדו עם אירועים שנוצרו מהקשה במקלדת. קבוצת החידות הללו ידריכו את התלמידים בתהליך בניית המשחק אבל גם ישאירו להם חופש להוסיף רעיונות משל עצמם.
@@ -1366,6 +1433,8 @@ he:
               name: עידן הקרח Play Lab
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
             Functions with Parameters in Bee:
               description_teacher: שיעור זה משתמש בסביבת הדבורה, וממשיך בלימוד הרעיון של שימוש בפונקציות עם פרמטרים אשר נלמד בשלב האמן הקודם. התלמידים יתרגלו כתיבה ושימוש בפונקציות כדי ללכת בנתיבים מורכבים ובאיסוף תבניות של צוף ודבש.
             Conditionals with Cards:

@@ -221,12 +221,19 @@ eu:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: '"errepikatu arte"
         bloke bat eta "baldin-bestela" bloke bat erabil itzazu, ni ekiloreraino eramateko
         ahal den bloke kopuru txikienarekin.'
+      4-5 Nested Loops 12_markdown_instruction: Marraztu ditzakezu 36 triangelu hauek
+        begizta kabiatu bat erabiliz?
       4-5 Nested Loops 3_markdown_instruction: "Sortu eguzki bat emandako kodea beste
         begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r"
+      4-5 Nested Loops 5_markdown_instruction: Errepikatu emandako kodea haize-errota
+        bat sortzeko.
+      4-5 Nested Loops 6_markdown_instruction: Marraztu dezakezu hexagono bat triangeluaren
+        kodea errepikatuz?
       4-5 Nested Loops 7_markdown_instruction: 'Errepikatu diseinu hau 10 aldiz. Zenbat
         biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)'
       4-5 Nested Loops 8_markdown_instruction: 'Errepikatu diseinu hau 6 aldiz. Zenbat
         biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 6?)'
+      4-5 Nested Loops 9_markdown_instruction: Marraztu krokodiloaren ahoko hortzak!
       4-5 While Loops 1_markdown_instruction: Mugi nazazu zuloraino eta bete hau bi
         lur palakadaz, "bete" blokea erabiliz.
       4-5 While Loops 2_markdown_instruction: Mugi nazazu lur tontorreraino eta desegin
@@ -362,6 +369,9 @@ eu:
         guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Bildu lore bakoitzeko nektar
         guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
+      courseD_bounce_events1_markdown_instruction: Iritsi banderara! Itsatsi bloke
+        bat "ezkerreko gezia sakatzean" blokeari eta sakatu "Hasi" jokalariak banderara
+        mugitzeko.
       courseD_maze_nestedLoops4_markdown_instruction: Eraman nazazu ekiloreraino!
       courseD_maze_nestedLoops4_2018_markdown_instruction: Eraman nazazu ekiloreraino!
       courseE_bee_functions3_markdown_instruction: Funtzioak ataza bat burutzen duten
@@ -496,26 +506,38 @@ eu:
       grade3_maze_loops2_markdown_instruction: Eraman nazazu ekiloreraino!
       grade3_maze_nestedLoops4_markdown_instruction: Erabili bi begizta zerriraino
         iristeko bloke gutxiago erabiliz.
+      grade4_arist_nested_loop_flags1_markdown_instruction: Errepikatu emandako kodea
+        haize-errota bat sortzeko.
       grade4_arist_nested_loop_polygons1_markdown_instruction: 'Errepikatu diseinu
         hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat
         da 360 zati 10?)'
       grade4_arist_nested_loop_polygons2_markdown_instruction: 'Errepikatu diseinu
         hau 6 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat
         da 360 zati 6?)'
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Marraztu dezakezu
+        hexagono bat triangeluaren kodea errepikatuz?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Marraztu krokodiloaren
+        ahoko hortzak!
       grade4_arist_nested_loop_triangles5_markdown_instruction: "Sortu eguzki bat
         emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen
         zaio.\r"
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Marraztu ditzakezu
+        36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_functions2_markdown_instruction: Funtzioak ahalbidetzen zaitu
         bloke berriak definitzen. Karratu bat definitzeko blokeak "marraztu karratua"
         izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu "marraztu karratua"
         funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia
         75 pixelekoa da.
+      grade4_artist_nested_loop_flags1_markdown_instruction: Errepikatu emandako kodea
+        haize-errota bat sortzeko.
       grade4_artist_nested_loop_polygons1_markdown_instruction: 'Errepikatu diseinu
         hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat
         da 360 zati 10?)'
       grade4_artist_nested_loop_triangles5_markdown_instruction: "Sortu eguzki bat
         emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen
         zaio.\r"
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Marraztu ditzakezu
+        36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_parameters_triangles2_markdown_instruction: Ezer berezirik antzeman
         al duzu funtzio-bloke hauetan? Sakatu "Abiatu" zer gertatzen den ikusteko.
       grade4_bee_conditionals_quantum2_markdown_instruction: Erleak orain nektarra
@@ -531,8 +553,8 @@ eu:
         ere bai.
       grade4_bee_nestedLoops4_markdown_instruction: 'Bildu lore bakoitzeko nektar
         guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
-      grade4_frozen_freeplay_markdown_instruction: Artista zoragarri batean bihurtu
-        zara! Sortu neguko mundu magikoa.
+      grade4_frozen_freeplay_markdown_instruction: Ofizialki, artista bihurtu zara!
+        Sor ezazu neguko herrialdi miragarri bat.
       grade4_frozen_functions0_markdown_instruction: Zirkuluak forma berezia du. Asma
         dezakezu galdera ikurren ordez zein zenbaki jarri behar den zirkulu bat marrazteko?
       grade4_frozen_functions1a_markdown_instruction: Erabili "Sortu zirkulua" bloke

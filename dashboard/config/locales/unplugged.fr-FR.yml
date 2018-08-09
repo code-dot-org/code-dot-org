@@ -169,7 +169,7 @@ fr:
           (portions de code que vous voulez utiliser encore et encore) pour créer
           des vitraux en utilisant des cordes et des perles.
       SongwritingParameters:
-        title: La composition de chansons avec des paramètres
+        title: Écriture de chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
           le passage de paramètres (qui permettent de personnaliser une fonction sans
           avoir à la réécrire complètement).
@@ -387,7 +387,7 @@ fr:
           de problèmes répandue en informatique, pour accomplir une tâche tous ensemble
           et plus efficacement que si un élève l'avait tentée en solo.
       courseE_unplugged_songwriting:
-        title: La composition de chansons avec des paramètres
+        title: Écriture de chansons
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
           le passage de paramètres (qui permettent de personnaliser une fonction sans
           avoir à la réécrire complètement).
@@ -434,6 +434,7 @@ fr:
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
           présentent comment rester en sécurité en naviguant sur Internet.
       courseA_unplugged_loops_2018:
+        title: Boucles débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       BigEvent_2018:
         title: Le Grand Événement

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180723175106) do
+ActiveRecord::Schema.define(version: 20180806214228) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1057,6 +1057,14 @@ ActiveRecord::Schema.define(version: 20180723175106) do
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
+  create_table "queued_account_purges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                         null: false
+    t.text     "reason_for_review", limit: 65535
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true, using: :btree
+  end
+
   create_table "regional_partner_program_managers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "program_manager_id",  null: false
     t.integer "regional_partner_id", null: false
@@ -1627,6 +1635,7 @@ ActiveRecord::Schema.define(version: 20180723175106) do
   add_foreign_key "plc_courses", "courses"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
+  add_foreign_key "queued_account_purges", "users"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"

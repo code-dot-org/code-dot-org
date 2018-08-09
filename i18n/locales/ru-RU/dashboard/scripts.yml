@@ -75,7 +75,7 @@ ru:
             Binary Bracelets:
               name: Двоичные браслеты
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Flappy:
               name: Порхающий код
             Getting Loopy:
@@ -139,7 +139,7 @@ ru:
             'Maze: Conditionals':
               name: 'Лабиринт: Условные команды'
             Songwriting:
-              name: Написание песен с параметрами
+              name: Написание песен
             'Studio: Create a Game':
               name: 'Лаборатория игр: создай игру'
             'Studio: Create a Story':
@@ -258,7 +258,7 @@ ru:
             Intro:
               name: Введение
             Variables:
-              name: Переменные
+              name: переменные
         algebra:
           title: Информатика в алгебре
           description: Изучайте функциональное программирование, используя алгебру
@@ -271,7 +271,7 @@ ru:
             'Eval: Boolean Operators':
               name: Логические операторы
             'Eval: Conditionals':
-              name: Условные операторы
+              name: Условные команды
             'Eval: Defining Functions':
               name: Составные функции
             'Eval: Functions':
@@ -364,13 +364,13 @@ ru:
             Computational Thinking:
               name: Вычислительное мышление
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Functions:
-              name: Процедуры
+              name: функции
             Graph Paper Programming:
               name: Программирование на бумаге в клеточку
             Introduction to Computer Science:
-              name: Введение в информатику
+              name: Введение в Информатику
             Relay Programming:
               name: Эстафетное программирование
             Song Writing:
@@ -460,6 +460,7 @@ ru:
             Puzzles:
               name: Головоломки
         cspunit1:
+          description_short: Программирование
           stages:
             Binary Numbers:
               name: Двоичные числа
@@ -498,6 +499,7 @@ ru:
             Introduction to PD:
               name: Введение в профессиональные разработки
         cspunit3:
+          description_short: Программирование
           stages:
             Creating Functions:
               name: Создание функций
@@ -560,6 +562,7 @@ ru:
             Welcome Back!:
               name: Добро пожаловать!
         cspunit2:
+          description_short: Программирование
           stages:
             DNS in the Real World:
               name: DNS в реальном мире
@@ -746,7 +749,7 @@ ru:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
             Songwriting:
-              name: Написание песен с параметрами
+              name: Написание песен
             The Big Event:
               name: Большое Событие
         sciencePD3_pre1:
@@ -824,6 +827,10 @@ ru:
               name: Добро пожаловать!
             Wrap-Up:
               name: Итоги
+        cspunit5:
+          description_short: Программирование
+        cspunit4:
+          description_short: Программирование
         AlgebraA:
           description: Изучайте функциональное программирование, используя алгебру
           description_short: Изучайте функциональное программирование, используя алгебру
@@ -899,7 +906,7 @@ ru:
           description_short: Программирование
           stages:
             Functions:
-              name: Процедуры
+              name: функции
             Velocity:
               name: Скорость
         2016_sciencePD_phase1:
@@ -959,7 +966,7 @@ ru:
             Digital Citizenship:
               name: Цифровое гражданство
             Songwriting:
-              name: Написание песен с параметрами
+              name: Написание песен
         grade1:
           stages:
             Events:
@@ -1024,13 +1031,13 @@ ru:
             Velocity:
               name: Скорость
             Functions:
-              name: Процедуры
+              name: функции
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: Переменные
+              name: переменные
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
         grade2:
           stages:
             Flappy:
@@ -1046,13 +1053,13 @@ ru:
             Binary:
               name: Двоичный
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Events:
               name: События
             For Loops:
               name: Циклы с параметром
             Functions:
-              name: Процедуры
+              name: функции
             Functions with Parameters:
               name: Процедуры с параметрами
             Loops:
@@ -1060,7 +1067,7 @@ ru:
             Nested Loops:
               name: Вложенные циклы
             Variables:
-              name: Переменные
+              name: переменные
             While Loops:
               name: Циклы «пока»
         algebrapdnext:
@@ -1099,7 +1106,7 @@ ru:
               name: Списки
         minecraft:
           title: Редактор для «Часа Кода» Minecraft
-          description_short: Запрограммируй поведение животных и существ своего мира Minecraft.
+          description_short: Создайте игру Minecraft. Придумайте собственные варианты курицы, овцы, криперов, зомби и других существ.
           description: Создайте игру Minecraft. Придумайте собственные варианты курицы, овцы, криперов, зомби и других существ.
           stages:
             Minecraft Hour of Code Designer:
@@ -1173,7 +1180,7 @@ ru:
             Introduction:
               name: Введение
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
         coursef-draft:
           stages:
             Digital Citizenship:
@@ -1308,7 +1315,7 @@ ru:
             Introduction:
               name: Введение
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             'Real Life Algorithms: Dice Race':
               name: 'Алгоритмы из повседневной жизни: Гонки кубиков'
         csd6-2017:
@@ -1342,15 +1349,15 @@ ru:
           description_short: Анимация и игры
           stages:
             Variables:
-              name: Переменные
+              name: переменные
             Plotting Shapes:
               name: Рисование фигур
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Velocity:
               name: Скорость
             Functions:
-              name: Процедуры
+              name: функции
         csd5-2017:
           stages:
             ASCII and Binary Representation:
@@ -1368,7 +1375,7 @@ ru:
             Velocity:
               name: Скорость
             Functions:
-              name: Процедуры
+              name: функции
         csd2-draft:
           stages:
             Lists:
@@ -1378,13 +1385,13 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: Переменные
+              name: переменные
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Velocity:
               name: Скорость
             Functions:
-              name: Процедуры
+              name: функции
             'null':
               name: 'нуль'
         coursef-ramp:
@@ -1572,7 +1579,7 @@ ru:
             Nested Loops:
               name: Вложенные циклы
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Internet:
               name: интернет
             Crowdsourcing:
@@ -1632,7 +1639,7 @@ ru:
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Internet:
               name: интернет
             Crowdsourcing:
@@ -1695,7 +1702,7 @@ ru:
             Introduction:
               name: Введение
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Internet:
               name: интернет
             Crowdsourcing:
@@ -1739,13 +1746,13 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: Переменные
+              name: переменные
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Velocity:
               name: Скорость
             Functions:
-              name: Процедуры
+              name: функции
           description_short: "Программирование"
         csd3-2018:
           description_short: "Программирование"
@@ -1753,13 +1760,13 @@ ru:
             Plotting Shapes:
               name: Рисование фигур
             Variables:
-              name: Переменные
+              name: переменные
             Conditionals:
-              name: Условные операторы
+              name: Условные команды
             Velocity:
               name: Скорость
             Functions:
-              name: Процедуры
+              name: функции
         csd2-2018:
           stages:
             Lists:
@@ -1812,7 +1819,7 @@ ru:
             Conditionals with Cards:
               name: Условные выражения с картами
             'Functions: Songwriting':
-              name: Написание песен с параметрами
+              name: Написание песен
             Envelope Variables:
               name: Конвертные переменные
             For Loop Fun:
@@ -1912,7 +1919,7 @@ ru:
             Introduction:
               name: Введение
             'Functions: Songwriting':
-              name: Написание песен с параметрами
+              name: Написание песен
             Internet:
               name: Интернет
             Crowdsourcing:

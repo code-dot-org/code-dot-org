@@ -3,7 +3,7 @@ id:
   data:
     game:
       name:
-        Unplug1: Pengantar Ilmu Komputer
+        Unplug1: Perkenalan ilmu komputer
         Maze: Labirin
         Multi: Beberapa pilihan barang
         Unplug2: Berpikir secara komputasi
@@ -19,7 +19,7 @@ id:
         Farmer2: Petani 2
         Unplug8: Abstraksi
         Artist4: Artis 4
-        Unplug9: Pemrograman relay
+        Unplug9: Pemrograman bergiliran
         Farmer3: Petani 3
         Unplug10: Internet
         Artist5: Artis 5
@@ -53,7 +53,7 @@ id:
         loop_until: Blok Ulangi Sampai
         loop_while: Blok Selagi (while)
         loop_for: Blok konter (Counter)
-        function: Fungsi
+        function: fungsi
         parameters: Fungsi dengan parameter
     level:
       instructions:
@@ -540,8 +540,8 @@ id:
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
     video:
       name:
-        maze_intro: Introduksi labirin
-        artist_intro: Introduksi Artis
+        maze_intro: Apa itu Labirin?
+        artist_intro: Apa itu Artis?
         farmer_intro: Apa itu Petani?
         flappy_intro: Introduksi untuk Flappy
         loop_times: Blok Ulangi
@@ -578,7 +578,7 @@ id:
         C1_zuck_repeat_loop: Pengulangan labirin
         C1_bee_loops: Pengulangan lebah
         C1_maze_loops: Pengulangan labirin
-        C1_playlab_storytelling: Play Lab - Buat sebuah Cerita
+        C1_playlab_storytelling: Mainkan Lab - Buat sebuah Cerita
         C1_planting_seed: Penanaman benih
         C1_building_foundation: Membangun dasar
         C1_going_places_safely: Pergi ke tempat-tempat dengan aman
@@ -594,7 +594,7 @@ id:
         C2_graph_paper: Pemrograman grafis diatas kertas
         C2_conditionals_with_cards: Kondisi
         C2_binary_bracelets: Gelang biner
-        C2_relay_programming: Pemrograman relay
+        C2_relay_programming: Pemrograman bergiliran
         C2_paper_airplanes: Pesawat kertas
         C2_digital_footprint: Digital Footprint Kamu
         C2_digital_footprint_v2: Digital Footprint Kamu
@@ -604,7 +604,7 @@ id:
         C3_bee_functions: Fungsi lebah
         C3_bee_conditionals: kondisi lebah
         C3_maze_conditionals: Kondisional labirin
-        C3_artist_nested_loops: Perulangan bertingkat
+        C3_artist_nested_loops: Perulangan bercabang
         C3_farmer_while: Perulangan Selagi
         C3_bee_nested_loops: Perulangan bercabang
         C3_bee_debugging: Lebah Debugging
@@ -726,7 +726,7 @@ id:
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain
-        run: Klik "Jalankan program" untuk mencoba program Anda
+        run: Klik "Run" untuk mencoba program kamu
         watch_again: Klik di sini untuk menonton video lagi
         gray_block_explanation: Blok berwarna abu-abu tidak dapat dihapus. Dapatkah
           anda memecahkan teka-teki ini?

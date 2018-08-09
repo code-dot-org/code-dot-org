@@ -731,6 +731,8 @@ sk:
       CSD U5 black white images pixelation_2018_instruction: Dokončite tvar X písaním
         núl a jednotiek
       CSP student contact info_instruction: Zadajte svoju e-mailovú adresu.
+      Course 2 Bee Loops 1_instruction: 'Ahoj, ja som včielka. Pomôžeš mi pozbierať
+        nektár z týchto kvetov? '
       Course 2 Maze Loops 1_instruction: Viete ma dostať k prasiatku použitím 5 blokov?
       Course 4 Artist 1_instruction: 'Pomôžte mi nakresliť krabicu (každá čiara je
         200 pixelov dlhá) '
@@ -980,6 +982,9 @@ sk:
         Pozor, kvetinka môže meniť svoju polohu!
       NEW Course 4 Bee For Loops 1_instruction: Použite slučku pre pozbieranie nektáru
         z každej kvetinky.
+      New Basketball Project_instruction: Vytvor si svoju vlastnú basketbalovú hru.
+        Môžeš zmeniť pravidlá. Keď budeš hotový, klikni na Skončiť, nech tvoju hru
+        môžu vyskúšať kamaráti na svojich telefónoch.
       New Gumball Project_instruction: Vytvorte čo len chcete a zdieľajte to!
       New Ice Age Project_instruction: Vytvorte čo len chcete a zdieľajte to!
       New Infinity Project_instruction: Vytvorte čo len chcete a zdieľajte to!
@@ -994,9 +999,9 @@ sk:
       Overworld Chop Tree - allthethings_instruction: "Drevo je veľmi dôležitý zdroj.
         \nVyrába sa z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\"
         na to aby si ho vyrúbal."
-      Overworld Chop Tree_instruction: Drevo je veľmi dôležitý zdroj. Vyrába sa z
-        neho veľa vecí. Prikráčaj ku stromu a použi "destroy block" na to aby si ho
-        vyrúbal.
+      Overworld Chop Tree_instruction: "Drevo je veľmi dôležitý zdroj. \nVyrába sa
+        z neho veľa vecí. Prikráčaj ku stromu a použi \"destroy block\" na to aby
+        si ho vyrúbal."
       Overworld Chop Tree_2018_instruction: Drevo je veľmi dôležitý zdroj. Vyrába
         sa z neho veľa vecí. Prikráčaj ku stromu a použi "destroy block" na to aby
         si ho vyrúbal.

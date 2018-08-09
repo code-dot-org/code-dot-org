@@ -28,7 +28,7 @@ pt:
         password_confirmation: Confirmação da palavra-passe
         current_password: Palavra-passe atual
         locale: Idioma
-        age: Idade
+        age: Idade  
         gender: Género
         edit_header: Edita os detalhes da tua conta
         error:
@@ -149,7 +149,7 @@ pt:
     charter: Escola por contrato de associação
     private: Privada
     public: Pública
-    other: Outros
+    other: Outro
     state: Estado
     district: Distrito
     other_district_not_listed: Outro distrito
@@ -599,11 +599,11 @@ pt:
         da Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explora um mundo Minecraft através do código.
+      body: Explora um mundo Minecraft através do código
     minecraft2016:
       title: Minecraft
-      body: Programe animais e outras criaturas Minecraft na sua própria versão do
-        Minecraft.
+      body: Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas,
+        ovelhas, Creepers, mortos-vivos e muito mais.
     hero:
       title: Minecraft
     unplugged:
@@ -719,7 +719,7 @@ pt:
     save: Guardar
   race_interstitial:
     races:
-      other: Outros
+      other: Outro
     submit: OK
     decline: Fechar
   zendesk_too_young_message: Pedimos desculpa, mas os utilizadores mais jovens não
@@ -810,7 +810,7 @@ pt:
           harassment: Ameaças, cyberbullying, assédio
           offensive: Conteúdo ofensivo
           infringement: Violação de direitos de autor
-          other: Outros
+          other: Outro
         detail: Por favor, dá-nos o máximo possível de detalhes relacionados com o
           conteúdo que estás a denunciar.
         acknowledge: Ao submeter esta informação, aceita que esta será tratada de

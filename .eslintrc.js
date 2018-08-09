@@ -34,6 +34,7 @@ module.exports = {
     "no-duplicate-imports": "error",
     "no-empty": "off",
     "no-eval": "error",
+    "no-ex-assign": "off",
     "no-extra-boolean-cast": "off",
     "no-implicit-globals": "error",
     "no-new-object": "error",

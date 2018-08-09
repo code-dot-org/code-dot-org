@@ -49,7 +49,7 @@ gl:
         edit_get_nectar: Use este botón para editar a función e alterar a dirección
           para a cal a abella vai virar para obter o néctar.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Preme en "Executar" para probares o teu programa
+        Course 4 Maze 1_callout1: Preme en "Correr" para probares o teu programa
       Course 4 Maze 4_callout:
         repeat: Coloque os bloques dentro do bucle para repetir os comandos
       Course 4 Play Lab Params 3_callout:
@@ -113,9 +113,9 @@ gl:
         craft_callout_preplaced_house: Este código vai comezar a construír a túa casa.
           Consegues terminala?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Preme en "Executar" para probares o teu programa
+        craft_run_button_callout: Preme en "Correr" para probares o teu programa
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Preme en "Executar" para probares o teu programa
+        craft_run_button_callout: Preme en "Correr" para probares o teu programa
       Overworld Place Wall_callout:
         craft_inside_repeat: Repite accións colocando bloques aquí
       Overworld Place Wall_2018_callout:

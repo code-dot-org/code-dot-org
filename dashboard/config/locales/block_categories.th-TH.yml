@@ -2,7 +2,7 @@
 th:
   data:
     block_categories:
-      Actions: การกระทำ
+      Actions: การดำเนินการ
       Loops: ลูป
       Functions: ฟังก์ชัน
       Color: สี

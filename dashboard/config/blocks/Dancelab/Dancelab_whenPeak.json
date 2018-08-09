@@ -2,7 +2,26 @@
   "category": "Events",
   "config": {
     "func": "whenPeak",
-    "blockText": "when peak",
+    "blockText": "when {RANGE} peak",
+    "args": [
+      {
+        "name": "RANGE",
+        "options": [
+          [
+            "low",
+            "0"
+          ],
+          [
+            "mid",
+            "1"
+          ],
+          [
+            "high",
+            "2"
+          ]
+        ]
+      }
+    ],
     "eventBlock": true,
     "color": [
       140,

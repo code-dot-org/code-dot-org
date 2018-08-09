@@ -139,7 +139,7 @@ uk:
             'Maze: Conditionals':
               name: 'Лабіринт - умови'
             Songwriting:
-              name: Пісні з параметрами
+              name: Написання пісень
             'Studio: Create a Game':
               name: 'Ігрова студія: Створення історії'
             'Studio: Create a Story':
@@ -258,7 +258,7 @@ uk:
             Intro:
               name: Вступ
             Variables:
-              name: Змінні
+              name: змінні
         algebra:
           title: Інформатика в алгебрі
           description: Вивчайте функціональне програмування через алгебру
@@ -276,8 +276,8 @@ uk:
               name: 'Безмашинна вправа: відео-ігри та координатні площини'
         infinity:
           title: Ігрова лабораторія Діснея Infinity
-          description: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infinity.
-          description_short: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infinity.
+          description: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infiinty.
+          description_short: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infiinty.
           stages:
             Infinity:
               name: Infinity
@@ -329,7 +329,7 @@ uk:
             Conditionals:
               name: Умови
             Functions:
-              name: Функції
+              name: функції
             Graph Paper Programming:
               name: Програмування по клітинках
             Introduction to Computer Science:
@@ -421,6 +421,7 @@ uk:
             Puzzles:
               name: Задачі
         cspunit1:
+          description_short: Програмування
           stages:
             Personal Innovations:
               name: Особисті інновації
@@ -453,6 +454,7 @@ uk:
             Introduction to PD:
               name: Знайомство з профессійним кодуванням
         cspunit3:
+          description_short: Програмування
           stages:
             Creating Functions:
               name: Створення функцій
@@ -509,6 +511,7 @@ uk:
             Wrap-Up:
               name: Підведення підсумків
         cspunit2:
+          description_short: Програмування
           stages:
             The Internet:
               name: Інтернет
@@ -687,7 +690,7 @@ uk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
             Songwriting:
-              name: Пісні з параметрами
+              name: Написання пісень
             The Big Event:
               name: Велика подія
         ScienceP3OLPT2:
@@ -746,6 +749,10 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        cspunit5:
+          description_short: Програмування
+        cspunit4:
+          description_short: Програмування
         AlgebraA:
           description: Вивчайте функціональне програмування через алгебру
           description_short: Вивчайте функціональне програмування через алгебру
@@ -821,7 +828,7 @@ uk:
           description_short: Програмування
           stages:
             Functions:
-              name: Функції
+              name: функції
             Velocity:
               name: Швидкість
         2016_sciencePD_phase1:
@@ -869,7 +876,7 @@ uk:
             'Jigsaw: Learn to drag and drop':
               name: 'Пазли: вчимося перетягувати'
             Loops:
-              name: Цикли
+              name: петлі
             Programming:
               name: Програмування
             'Real-life Algorithms: Plant a Seed':
@@ -879,7 +886,7 @@ uk:
             Digital Citizenship:
               name: Цифрове громадянство
             Songwriting:
-              name: Пісні з параметрами
+              name: Написання пісень
         grade1:
           stages:
             Events:
@@ -887,7 +894,7 @@ uk:
             'Jigsaw: Learn to drag and drop':
               name: 'Пазли: вчимося перетягувати'
             Loops:
-              name: Цикли
+              name: петлі
             Programming:
               name: Програмування
             Unspotted Bugs:
@@ -942,9 +949,9 @@ uk:
             Velocity:
               name: Швидкість
             Functions:
-              name: Функції
+              name: функції
             Variables:
-              name: Змінні
+              name: змінні
             Conditionals:
               name: Умови
         grade2:
@@ -968,15 +975,15 @@ uk:
             For Loops:
               name: Цикли For
             Functions:
-              name: Функції
+              name: функції
             Functions with Parameters:
               name: Функції з параметрами
             Loops:
-              name: Цикли
+              name: петлі
             Nested Loops:
               name: Вкладені цикли
             Variables:
-              name: Змінні
+              name: змінні
             While Loops:
               name: Цикли "поки"
         algebrapdnext:
@@ -1172,19 +1179,19 @@ uk:
         csd3-draft:
           stages:
             Variables:
-              name: Змінні
+              name: змінні
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
             Functions:
-              name: Функції
+              name: функції
         csd3-old:
           stages:
             Velocity:
               name: Швидкість
             Functions:
-              name: Функції
+              name: функції
         csd2-draft:
           stages:
             Lists:
@@ -1192,13 +1199,13 @@ uk:
         csd3-chapters:
           stages:
             Variables:
-              name: Змінні
+              name: змінні
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
             Functions:
-              name: Функції
+              name: функції
             'null':
               name: 'нічого'
         coursef-ramp:
@@ -1407,25 +1414,25 @@ uk:
         csd3-1819draft:
           stages:
             Variables:
-              name: Змінні
+              name: змінні
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
             Functions:
-              name: Функції
+              name: функції
           description_short: "Програмування"
         csd3-2018:
           description_short: "Програмування"
           stages:
             Variables:
-              name: Змінні
+              name: змінні
             Conditionals:
               name: Умови
             Velocity:
               name: Швидкість
             Functions:
-              name: Функції
+              name: функції
         csd2-2018:
           stages:
             Lists:
@@ -1460,7 +1467,7 @@ uk:
             Conditionals with Cards:
               name: Листівки та умови
             'Functions: Songwriting':
-              name: Пісні з параметрами
+              name: Написання пісень
             Envelope Variables:
               name: Конвертні змінні
             For Loop Fun:
@@ -1532,7 +1539,7 @@ uk:
             Introduction:
               name: Вступ
             'Functions: Songwriting':
-              name: Пісні з параметрами
+              name: Написання пісень
             Internet:
               name: Інтернет
             Crowdsourcing:

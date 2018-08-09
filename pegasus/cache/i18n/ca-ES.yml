@@ -59,7 +59,7 @@ ca-ES:
   csedweek_map_legend_cs_tech_jam: Esdeveniment especial
   cded_sign_up: Inscriure's
   cded_try_it: Proveu-ho
-  try_now: Intenteu-ho ara
+  try_now: Més informació
   california_heading: Demaneu a la vostra escola que ensenyin informàtica
   california_text: Qualsevol mestre pot oferir els nostres<a href='http://studio.code.org/'>cursos
     gratuïts</a>. Qualsevol escola de primària pot<a href='http://code.org/educate/k5'>ensenyar
@@ -372,9 +372,9 @@ ca-ES:
   starwars_platform_text: Navegadors moderns, mòbils i tablets
   mc_name: Hora del Codi de Minecraft
   mc_longdescription: Fes servir blocs de codi per portar al Steve o l'Alex a una
-    aventura a través d'aquest món de Minecraft.
+    aventura a través d'aquest món de Minecraft
   mc_shortdescription: Fes servir blocs de codi per portar al Steve o l'Alex a una
-    aventura a través d'aquest món de Minecraft.
+    aventura a través d'aquest món de Minecraft
   mc_gradelevel: Edat 4-104
   mc_platformtext: Navegadors moderns, mòbils i tablets
   minecraft_agent_button: Inici
@@ -616,7 +616,7 @@ ca-ES:
   dashboard_grade_other: Altres
   dashboard_login_word: Paraula
   dashboard_login_picture: Imatge
-  dashboard_login_none: Email
+  dashboard_login_none: Correu electrònic
   dashboard_stage: etapa
   dashboard_puzzle: Puzzle
   dashboard_correctness_correct: Correcte
@@ -712,7 +712,7 @@ ca-ES:
   accelerated_name: Curs Accelerat
   20-hour_name: Curs Accelerat
   minecraft_name: Minecraft
-  math_category_name: Mates
+  math_category_name: Matemàtiques
   hoc_category_name: Hora del codi
   applab_name: Laboratori d'aplicacions
   codeorg_gradelevel: Edat 4-104
@@ -1040,7 +1040,7 @@ ca-ES:
   lynda_beyond_name: Cursos de programació en línia
   edx_beyond_name: Curs "CS50" Harvard
   coursera_beyond_name: Curs "CS 101" de Stanford
-  teachingtree_beyond_name: Estudis universitaris en línia
+  teachingtree_beyond_name: Cursos universitaris en línia
   w3schools_beyond_name: Aprèn HTML
   codeavengers_beyond_name: Aprèn a programar pàgines web
   arduino_beyond_name: Arduino amb Sparkfun

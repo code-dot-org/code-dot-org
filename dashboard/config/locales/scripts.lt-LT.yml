@@ -124,7 +124,7 @@ lt:
             'Bee: Nested Loops':
               name: 'Bitė: kartojimas kartojime'
             Bounce:
-              name: Tenisas
+              name: Bounce
             Computational Thinking:
               name: Skaičiuojamasis mąstymas
             Crowdsourcing:
@@ -144,7 +144,7 @@ lt:
             'Maze: Conditionals':
               name: 'Labirintas: sąlyginiai sakiniai'
             Songwriting:
-              name: Dainų rašymas su parametrais
+              name: Dainų rašymas
             'Studio: Create a Game':
               name: 'Laboratorija: sukurk žaidimą'
             'Studio: Create a Story':
@@ -348,7 +348,7 @@ lt:
             Graph Paper Programming:
               name: Programavimas ant languoto popieriaus
             Introduction to Computer Science:
-              name: Įvadas į informatiką
+              name: Informatikos įvadas
             Relay Programming:
               name: Programavimas komandoje
             Song Writing:
@@ -392,7 +392,7 @@ lt:
           description_short: Įvykiai
           stages:
             Bounce:
-              name: Tenisas
+              name: Bounce
             Calc:
               name: Skaič
             Eval:
@@ -400,14 +400,14 @@ lt:
             Studio:
               name: Studija
         flappy:
-          title: Flappy kodas
+          title: Flappy Kodas
           description: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink
             Flappy Code pamokėles!
           description_short: Parašyk savo nuosavą Flappy žaidimą per mažiau, nei 10
             minučių!
           stages:
             Flappy Code:
-              name: Flappy kodas
+              name: Flappy Kodas
         jigsaw:
           title: Dėlionės
           description: Išbandykite Dėlionės pamokėlę
@@ -566,7 +566,7 @@ lt:
             Bee:
               name: Bitė
             Bounce:
-              name: Tenisas
+              name: Bounce
             Flappy:
               name: Flappy
             Jigsaw:
@@ -707,7 +707,7 @@ lt:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
             Songwriting:
-              name: Dainų rašymas su parametrais
+              name: Dainų rašymas
             The Big Event:
               name: Didelis įvykis
         algebraPD3a:
@@ -881,7 +881,7 @@ lt:
             Digital Citizenship:
               name: Virtuali pilietybė
             Songwriting:
-              name: Dainų rašymas su parametrais
+              name: Dainų rašymas
         grade1:
           stages:
             Events:
@@ -931,7 +931,7 @@ lt:
             Bee Debugging:
               name: 'Bitė: klaidų ieškojimas'
             Bounce:
-              name: Tenisas
+              name: Bounce
             'Farmer: While Loops':
               name: 'Ūkininkas: kartojimas'
         csd3-2017:
@@ -989,7 +989,7 @@ lt:
           description: Sukurk kreipšinio žaidimą
           stages:
             Bounce:
-              name: Tenisas
+              name: Bounce
         fesbinary:
           title: Dvejetainis
           stages:
@@ -1005,8 +1005,8 @@ lt:
               name: Sąrašai
         minecraft:
           title: Minecraft „Programavimo valandos“ projektavimo aplinka
-          description_short: Suprogramuok gyvūnus ir kitas Minecraft būtybes savo
-            paties Minecraft versijoje.
+          description_short: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje
+            Minecraft versijoje.
           description: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje
             Minecraft versijoje.
           stages:
@@ -1015,7 +1015,7 @@ lt:
         flappy-impact-study:
           stages:
             Flappy Code:
-              name: Flappy kodas
+              name: Flappy Kodas
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1206,7 +1206,7 @@ lt:
             Ice Age Play Lab:
               name: Ledynmečio laboratorija
             Bounce:
-              name: Tenisas
+              name: Bounce
         coursea-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1406,7 +1406,7 @@ lt:
             Conditionals with Cards:
               name: Sąlyginiai sakiniai su kortomis
             'Functions: Songwriting':
-              name: Dainų rašymas su parametrais
+              name: Dainų rašymas
             Binary Bracelets:
               name: Dvejetainės apyrankės
             'Unplugged: Binary':
@@ -1470,7 +1470,7 @@ lt:
             Introduction:
               name: Įvadas
             'Functions: Songwriting':
-              name: Dainų rašymas su parametrais
+              name: Dainų rašymas
             Internet:
               name: Internetas
             Crowdsourcing:

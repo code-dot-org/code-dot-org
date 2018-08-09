@@ -142,11 +142,11 @@ it:
       25 pixel square: quadrato da 25 pixel
       draw eye: disegna occhio
       Make a Dot: Fai un Punto
-      move right: sposta a destra
+      move right: vai a destra
       say number: dì un numero
-      move up: sposta in alto
-      move down: sposta in basso
-      move left: sposta a sinistra
+      move up: vai in alto
+      move down: vai in basso
+      move left: vai a sinistra
       Squares row: Riga di quadrati
       draw first part of heart: disegna la prima parte del cuore
       make triangle: fai un triangolo

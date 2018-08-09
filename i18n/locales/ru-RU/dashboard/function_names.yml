@@ -11,18 +11,18 @@ ru:
       draw a triangle: нарисовать треугольник
       draw a house: нарисовать дом
       draw a star: нарисовать звезду
-      do something: Делать что-нибудь
+      do something: выполнить что-то
       jump: прыгнуть
       set score: задать счет
       get nectar: собрать нектар
       test: тест
       diamond: алмаз
       move: переместить
-      move right: переместить вправо
+      move right: Переместить вправо
       move up: переместить вверх
-      move down: переместить вниз
+      move down: Переместить вниз
       move left: переместить влево
       collect: собрать
       turn left: повернуть налево
-      move forward: переместить вперед
+      move forward: двигаться вперед
       turn right: повернуть направо

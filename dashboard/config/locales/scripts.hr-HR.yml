@@ -140,7 +140,7 @@ hr:
             'Maze: Conditionals':
               name: 'Labirint: Uvjeti'
             Songwriting:
-              name: Pisanje pjesama s parametrima
+              name: Pisanje pjesama
             'Studio: Create a Game':
               name: 'Laboratorij igara: Napravi igru'
             'Studio: Create a Story':
@@ -296,9 +296,9 @@ hr:
               name: 'Izvanmrežno: Videoigre i Koordinatne ravnine'
         infinity:
           title: Disney Infinity Laboratorij igara
-          description: Koristi Laboratorij igara da napraviš priču ili igru s likovima
+          description: Koristi Laboratorij igara za stvaranje priče ili igre s likovima
             iz Disney Infinity.
-          description_short: Koristi Laboratorij igara da napraviš priču ili igru
+          description_short: Koristi Laboratorij igara za stvaranje priče ili igre
             s likovima iz Disney Infinity.
           stages:
             Infinity:
@@ -333,11 +333,11 @@ hr:
             Graph Paper Programming:
               name: Grafičko programiranje
             Introduction to Computer Science:
-              name: Uvod u računalstvo
+              name: Uvod u Informatiku
             Relay Programming:
-              name: Programiranje u smjenama
+              name: Odnosno programiranje
             Song Writing:
-              name: Skladanje pjesama
+              name: Skladanje pjesmi
             The Artist:
               name: Umjetnik
             The Artist 2:
@@ -597,7 +597,7 @@ hr:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
             Songwriting:
-              name: Pisanje pjesama s parametrima
+              name: Pisanje pjesama
             The Big Event:
               name: Veliki događaj
         ScienceP3OLPT2:
@@ -750,7 +750,7 @@ hr:
             Digital Citizenship:
               name: Digitalno građanstvo
             Songwriting:
-              name: Pisanje pjesama s parametrima
+              name: Pisanje pjesama
         grade1:
           stages:
             Events:
@@ -1231,7 +1231,7 @@ hr:
             Conditionals with Cards:
               name: Uvjeti s kartama
             'Functions: Songwriting':
-              name: Pisanje pjesama s parametrima
+              name: Pisanje pjesama
             For Loop Fun:
               name: For Petlja Zabava
             Binary Bracelets:
@@ -1243,7 +1243,7 @@ hr:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Programiranje u smjenama
+              name: Odnosno programiranje
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1269,7 +1269,7 @@ hr:
             Graph Paper Programming:
               name: Grafičko programiranje
             Relay Programming:
-              name: Programiranje u smjenama
+              name: Odnosno programiranje
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1293,7 +1293,7 @@ hr:
             Introduction:
               name: Uvod
             'Functions: Songwriting':
-              name: Pisanje pjesama s parametrima
+              name: Pisanje pjesama
             Internet:
               name: Internet
             Crowdsourcing:

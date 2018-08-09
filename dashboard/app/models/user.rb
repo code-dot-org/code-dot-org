@@ -494,6 +494,7 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -569,6 +570,12 @@ class User < ActiveRecord::Base
         self.terms_of_service_version = nil
       end
     end
+  end
+
+  # Remove all cleartext email addresses (including soft-deleted ones)
+  # in migrated students' AuthenticationOptions.
+  def remove_cleartext_emails
+    authentication_options.with_deleted.update_all(email: '')
   end
 
   # Given a cleartext email finds the first user that has a matching email or hash.
@@ -844,6 +851,43 @@ class User < ActiveRecord::Base
     end
 
     success
+  end
+
+  def set_user_type(user_type, email = nil, email_preference = nil)
+    case user_type
+    when TYPE_TEACHER
+      upgrade_to_teacher(email, email_preference)
+    when TYPE_STUDENT
+      downgrade_to_student
+    else
+      false # Unexpected user type
+    end
+  end
+
+  def downgrade_to_student
+    return true if student? # No-op if user is already a student
+    update(user_type: TYPE_STUDENT)
+  end
+
+  def upgrade_to_teacher(email, email_preference)
+    return true if teacher? # No-op if user is already a teacher
+    return false unless email.present?
+
+    hashed_email = User.hash_email(email)
+    match = authentication_options.find_by_hashed_email(hashed_email)
+    if match.nil?
+      errors.add(:email, I18n.t('activerecord.errors.messages.invalid'))
+      return false
+    end
+
+    transaction do
+      self.user_type = TYPE_TEACHER
+      # Make matching AuthenticationOption user's primary
+      self.primary_contact_info = match
+      # Update AuthenticationOption to have cleartext email
+      match.update!(email: email)
+      update!(email_preference)
+    end
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
@@ -2029,6 +2073,14 @@ class User < ActiveRecord::Base
     # Student depends on teacher for login if their account is teacher-managed or roster-managed
     # and only have one teacher.
     student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
+  end
+
+  def providers
+    if migrated?
+      authentication_options.map(&:credential_type)
+    else
+      [provider]
+    end
   end
 
   private
