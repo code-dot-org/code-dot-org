@@ -73,7 +73,7 @@ export const styles = {
 
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
-  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
+  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
     <a style={tableLayoutStyles.link} href={projectUrl} target="_blank">
