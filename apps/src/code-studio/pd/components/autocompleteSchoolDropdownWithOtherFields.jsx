@@ -30,27 +30,11 @@ export default class AutocompleteSchoolDropdownWithOtherFields extends React.Com
     };
   }
 
-  handleSchoolStateChange = (selection) => {
-    const school_info = {...this.state.school_info, ...{school_state: selection.value}};
-    this.updateOnSchoolInfoChange({school_info});
-  };
-
-  handleSchoolInfoChange = (change) => {
-    const school_info = {...this.state.school_info, ...change};
-    this.updateOnSchoolInfoChange({school_info});
-  };
-
-  handleSchoolDistrictChange = (change) => {
-    const school_info = {...this.state.school_info, ...change};
-    school_info.school_district_other = "true";
-    this.updateOnSchoolInfoChange({school_info});
-  };
-
-  handleSchoolTypeChange = (change) => {
-    const school_info = {...this.state.school_info, ...change};
-    delete(school_info.school_district_other);
-    delete(school_info.school_district_name);
-    this.updateOnSchoolInfoChange({school_info});
+  updateOnSchoolInfoChange = (school_info) => {
+    this.setState(school_info);
+    if (this.props.onSchoolInfoChange) {
+      this.props.onSchoolInfoChange(school_info);
+    }
   };
 
   handleSchoolDropdownChange = (selection) => {
@@ -67,13 +51,6 @@ export default class AutocompleteSchoolDropdownWithOtherFields extends React.Com
       });
     } else {
       this.updateOnSchoolInfoChange({school_info: {}});
-    }
-  };
-
-  updateOnSchoolInfoChange = (school_info) => {
-    this.setState(school_info);
-    if (this.props.onSchoolInfoChange) {
-      this.props.onSchoolInfoChange(school_info);
     }
   };
 
@@ -106,11 +83,8 @@ export default class AutocompleteSchoolDropdownWithOtherFields extends React.Com
         }
         {this.state.school_id && this.state.school_id === OTHER_SCHOOL_VALUE &&
           <CustomSchoolInfo
-            schoolInfo={this.state.school_info}
-            handleSchoolInfoChange={this.handleSchoolInfoChange}
-            handleSchoolStateChange={this.handleSchoolStateChange}
-            handleSchoolDistrictChange={this.handleSchoolDistrictChange}
-            handleSchoolTypeChange={this.handleSchoolTypeChange}
+            school_info={this.props.school_info}
+            onSchoolInfoChange={this.props.onSchoolInfoChange}
             errors={this.props.errors}
           />
         }
