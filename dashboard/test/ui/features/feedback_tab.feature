@@ -31,8 +31,8 @@ Scenario: With dev flag, as teacher, tab is invisible when not reviewing student
   And element "#ui-test-feedback-time" does not exist
   And I press keys "Nice!" for element "#ui-test-feedback-input"
   And I press "#ui-test-submit-feedback" using jQuery
-  And I wait until ".editor-column" contains text "Nice!"
-  And element "#ui-test-feedback-time" contains text "Last updated"
+  And element ".editor-column" contains text "Nice!"
+  And I wait until "#ui-test-feedback-time" contains text "Last updated"
   And element "#ui-test-submit-feedback" contains text "Update"
 
   #As teacher, refresh page and latest feedback is visible

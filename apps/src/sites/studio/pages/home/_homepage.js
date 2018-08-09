@@ -11,7 +11,7 @@ import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
   setStageExtrasScriptIds,
-  setOAuthProvider,
+  setAuthProviders,
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
@@ -33,7 +33,7 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
-  store.dispatch(setOAuthProvider(homepageData.provider));
+  store.dispatch(setAuthProviders(homepageData.providers));
 
   let courseId;
   let scriptId;
