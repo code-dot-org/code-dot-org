@@ -25,7 +25,31 @@ const appendBlocks = function (toolboxDom, blockTypes) {
   });
   return xml.serialize(toolboxDom);
 };
-exports.appendBlocks = appendBlocks;
+
+exports.appendCallers = function (toolboxXml, callBlocksXml) {
+  const parser = new DOMParser();
+  const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
+  let category = toolboxDom.querySelector(`category[name="Behaviors"]`);
+  if (!category) {
+    // Shared Behaviors and Functions require category mode.
+    const defaultCategory = toolboxDom.createElement('category');
+    defaultCategory.setAttribute('name', 'Default');
+    const blocks = toolboxDom.firstElementChild.childNodes;
+    while (blocks.length) {
+      defaultCategory.appendChild(blocks[0]);
+    }
+    toolboxDom.firstElementChild.appendChild(defaultCategory);
+
+    category = toolboxDom.createElement('category');
+    category.setAttribute('name', 'Behaviors');
+    toolboxDom.firstElementChild.appendChild(category);
+  }
+  const blocks = xml.parseElement(callBlocksXml).childNodes;
+  while (blocks.length) {
+    category.appendChild(blocks[0]);
+  }
+  return xml.serialize(toolboxDom);
+};
 
 exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
   const parser = new DOMParser();

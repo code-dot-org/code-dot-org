@@ -36,6 +36,7 @@ class Dancelab < GamelabJr
           ],
           hide_animation_mode: true,
           show_type_hints: true,
+          include_shared_functions: true,
           use_modal_function_editor: true,
         }
       )

@@ -7,7 +7,7 @@ import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
 import codegen from './lib/tools/jsinterpreter/codegen';
-import {installCustomBlocks, appendBlocksByCategory} from '@cdo/apps/block_utils';
+import {installCustomBlocks, appendBlocksByCategory, appendCallers} from '@cdo/apps/block_utils';
 import logToCloud from './logToCloud';
 
 window.__TestInterface = {
@@ -98,6 +98,10 @@ export default function (app, levels, options) {
         if (!valueOr(level.hideCustomBlocks, true) || options.level.edit_blocks) {
           level.toolbox = appendBlocksByCategory(level.toolbox, blocksByCategory);
         }
+      }
+
+      if (level.sharedCallers) {
+        level.toolbox = appendCallers(level.toolbox, level.sharedCallers);
       }
     }
 

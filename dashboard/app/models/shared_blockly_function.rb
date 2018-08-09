@@ -17,6 +17,11 @@ DEFINITION_BLOCK_TYPES = {
   behavior: 'behavior_definition',
 }
 
+CALL_BLOCK_TYPES = {
+  function: 'procedures_callnoreturn',
+  behavior: 'gamelab_behavior_get',
+}
+
 BLOCK_TYPES_BY_DEFINITION_TYPE = DEFINITION_BLOCK_TYPES.invert
 
 class SharedBlocklyFunction < ApplicationRecord
@@ -59,6 +64,19 @@ class SharedBlocklyFunction < ApplicationRecord
         end
       end
     end.doc
+  end
+
+  def get_caller_xml_fragment
+    Nokogiri::XML::Builder.new do |xml|
+      xml.block(type: CALL_BLOCK_TYPES[block_type.to_sym]) do
+        xml.title(name, name: 'VAR')
+        xml.mutation do
+          JSON.parse(arguments).each do |name, type|
+            xml.arg(name: name, type: type)
+          end
+        end
+      end
+    end.doc.root.to_xml
   end
 
   def self.arguments_from_xml(args_xml)
