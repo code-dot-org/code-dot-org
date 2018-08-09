@@ -29,9 +29,9 @@ module Pd
 
       return render :not_enrolled unless workshop
       # There's no pre-workshop survey for academic year workshops
-      return render_404 if day == 0 && !workshop.summer_workshop?
+      return render_404 if day == 0 && !workshop.summer?
       # There's no post workshop survey for summer workshops
-      return render_404 if day == 5 && workshop.summer_workshop?
+      return render_404 if day == 5 && workshop.summer?
 
       session = nil
       if day > 0
@@ -42,7 +42,7 @@ module Pd
         return render :no_attendance unless session.attendances.exists?(teacher: current_user)
       end
 
-      @form_id = WorkshopDailySurvey.get_form_id_for_day_and_subject workshop.subject, day
+      @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, day
 
       # Pass these params to the form and to the submit redirect to identify unique responses
       key_params = {
@@ -156,14 +156,14 @@ module Pd
     def new_post
       enrollment = Enrollment.find_by!(code: params[:enrollment_code])
       workshop = enrollment.workshop
-      session = workshop.sessions[-1]
+      session = workshop.sessions.last
       session_count = workshop.sessions.size
       return render_404 unless session
 
       begin
-        @form_id = WorkshopDailySurvey.get_form_id_for_day_and_subject workshop.subject, 'post_workshop'
+        @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, 'post_workshop'
       rescue
-        @form_id = WorkshopDailySurvey.get_form_id_for_day_and_subject workshop.subject, session_count
+        @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, session_count
       end
 
       return redirect_to :pd_workshop_survey_thanks if WorkshopDailySurvey.exists?(user: current_user, pd_workshop: workshop, form_id: @form_id)
@@ -234,7 +234,7 @@ module Pd
       if next_facilitator_index.between?(1, session.workshop.facilitators.size - 1)
         redirect_to action: :new_facilitator, session_id: session.id, facilitator_index: next_facilitator_index
       # No facilitators left. Academic workshops redirect to post if its the last day
-      elsif !session.workshop.summer_workshop? && key_params[:day].to_i == session.workshop.sessions.size
+      elsif !session.workshop.summer? && key_params[:day].to_i == session.workshop.sessions.size
         redirect_to action: :new_post, enrollment_code: Pd::Enrollment.find_by(user: current_user, workshop: session.workshop).code
       else
         redirect_to action: :thanks
@@ -243,7 +243,7 @@ module Pd
 
     def redirect_post(key_params)
       session = Session.find(key_params[:sessionId])
-      if session.workshop.summer_workshop?
+      if session.workshop.summer?
         redirect_to action: :new_facilitator, session_id: session.id, facilitator_index: 0
       else
         redirect_to action: :thanks

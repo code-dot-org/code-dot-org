@@ -568,7 +568,7 @@ module Pd
           userId: user.id,
           workshopId: workshop.id,
           day: day,
-          formId: (workshop.local_summer? || workshop.teachercon?) ? FAKE_DAILY_FORM_IDS[day] : FAKE_ACADEMIC_YEAR_IDS[day - 1],
+          formId: workshop.summer? ? FAKE_DAILY_FORM_IDS[day] : FAKE_ACADEMIC_YEAR_IDS[day - 1],
           sessionId: day == 0 ? nil : workshop.sessions[day - 1].id
         }
       }

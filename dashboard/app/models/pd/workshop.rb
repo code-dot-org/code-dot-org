@@ -511,10 +511,6 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
 
-  def summer_workshop?
-    local_summer? || teachercon?
-  end
-
   def local_summer?
     subject == SUBJECT_SUMMER_WORKSHOP
   end
