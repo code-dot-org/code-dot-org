@@ -152,9 +152,8 @@ export default class AssignmentSelector extends Component {
     this.setPrimary(assignmentFamily);
   };
 
-  onChangeVersion = event => {
+  onChangeVersion = versionYear => {
     const { selectedAssignmentFamily, versions } = this.state;
-    const versionYear = event.target.value;
     const version = versions.find(version => version.year === versionYear);
     this.setPrimary(selectedAssignmentFamily, version);
   };
