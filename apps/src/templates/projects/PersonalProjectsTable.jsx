@@ -11,6 +11,7 @@ import {
   personalProjectDataPropType,
   FEATURED_PROJECT_TYPE_MAP,
 } from './projectConstants';
+import {AllPublishableProjectTypes} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
@@ -102,8 +103,7 @@ const nameFormatter = (projectName, {rowData}) => {
 };
 
 const actionsFormatter = (actions, {rowData}) => {
-  const unpublishableTypes = ['calc', 'eval', 'weblab'];
-  const isPublishable = !unpublishableTypes.includes(rowData.type);
+  const isPublishable = AllPublishableProjectTypes.includes(rowData.type);
   return (
     <PersonalProjectsTableActionsCell
       isPublishable={isPublishable}
