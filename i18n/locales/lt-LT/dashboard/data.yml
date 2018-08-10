@@ -2,7 +2,7 @@ lt:
   data:
     game:
       name:
-        Unplug1: Įvadas į informatiką
+        Unplug1: Informatikos įvadas
         Maze: Labirintas
         Multi: Pasirinkti iš kelių variantų
         Unplug2: Skaičiuojamasis mąstymas
@@ -24,7 +24,7 @@ lt:
         Artist5: Menininkas 5
         Unplug11: Apibendrinimas
         MazeEC: Labirintas
-        Bounce: Tenisas
+        Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Dėlionės
         MazeStep: Labirintas Žingsnio režimu
@@ -183,11 +183,11 @@ lt:
         studio_c2_4: Ar gali parašyti programą, kuri priverčia šunį pajudėti iki katino, o katiną priverčia pasakyti „Labas“, kai šuo prie jo prieina?
         studio_c2_5: Ar gali sukurti programą, kad aštuonkojis pasakytų „Labas“, kai ant jo nuspaudi su pele?
         studio_c2_6: Ar gali parašyti programą, kad šis pingvinas judėtų spaudinėjant klaviatūros rodykles ir pataikytų į visus taikinius?
-        studio_c2_7: Blokelis „kartok visada“ leis vykdyti nurodytus veiksmus nesustojant. Ar mokėtum nurodyti dinozaurui pastoviai vaikščioti aukštyn-žemyn?
+        studio_c2_7: Blokelis „kartok amžinai“ leidžia kodui veikti nesustojant. Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų aukštyn ir žemyn nesustodamas?
         studio_c2_8: Padaryk, kad pingvinas sakytų „Oi!“ ir sugrotų garsas „atsimušimas“, jeigu jis atsitrenkia į dinozaurą. Pingvinas turi būti valdomas klaviatūros rodyklėmis.
         studio_c2_9: Pridėk bloką, kad būtų gaunamas taškas, kai pingvinas pasiekia aštuonkojį. Pingvinas turi būti judinamas tol, kol bus gaunamas taškas.
         studio_c2_10: Pridėk blokelius, kurie, paleidus žaidimą, pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką.
-        studio_c2_11: Sukurk savo istoriją. Kai ją užbaigsi, pasidalink ja su draugais, kad jie galėtų ją peržiūrėti savo telefonuose.
+        studio_c2_11: Sukurk savo istoriją. Kai baigsi, spustelk "Finišas", ir galėsi leisti draugams savo telefonuose peržiūrėti istoriją.
         studio_c3_story_1: Ar galėtum padaryti, kad šis šuo pasakytų „Sveikas, pasauli“?
         studio_c3_story_2: Ar gali padaryti taip, kad šuo ką nors pasakytų, o po to ką nors pasakytų katinas?
         studio_c3_story_3: Ar gali parašyti programą, kad šis šuo nueitų iki katės?
@@ -240,7 +240,7 @@ lt:
     video:
       name:
         maze_intro: Labirinto užduoties įvadas
-        artist_intro: Menininko užduoties įvadas
+        artist_intro: Įvadas į Menininką
         farmer_intro: Įvadas į Ūkininką
         flappy_intro: Įvadas į Flappy
         loop_times: '„Kartojimo“ blokelis'
@@ -375,7 +375,7 @@ lt:
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat blokeliu
-        run: Nuspausk „Paleisti“, kad išmėgintum savo programą
+        run: Paspausk „Paleisti" ir išmėgink savo programą
         watch_again: Nuspausk čia, kad iš naujo galėtum peržiūrėti vaizdo įrašą
         gray_block_explanation: Pilkų blokelių negalima pašalinti. Ar vis tiek sugebėsi išspręsti šią užduotį?
         show_code_explanation: Nuspausk čia, kad peržiūrėtum savo programos kodą

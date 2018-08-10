@@ -2,10 +2,10 @@ ro:
   data:
     game:
       name:
-        Unplug1: Introducere în Tehnologia calculatorului si programare
+        Unplug1: Introducere în Informatică
         Maze: Labirintul
         Multi: Opțiuni Multiple
-        Unplug2: Gândire de Calcul
+        Unplug2: Gândire Computațională
         Unplug3: Programare pe Hârtie Milimetrică
         Artist: Artistul
         Unplug4: Algoritmi
@@ -14,7 +14,7 @@ ro:
         Farmer: Fermierul
         Unplug6: Condiţionale
         Artist3: Artistul 3
-        Unplug7: Compunerea muzicală
+        Unplug7: Compunere muzicală
         Farmer2: Fermierul 2
         Unplug8: Abstractizare
         Artist4: Artistul 4
@@ -179,27 +179,27 @@ ro:
         mazestep_5: Pas Labirint descriere
         studio_c2_1: Poți face acest câine să spună "Bună ziua lume"?
         studio_c2_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
-        studio_c2_3: Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
+        studio_c2_3: Puteți scrie un program pentru a face acest câine să se miște către pisică?
         studio_c2_4: Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
-        studio_c2_5: Puteţi scrie un program pentru a face caracatiţa să spună "hello", atunci când se dă clic pe ea?
-        studio_c2_6: Puteţi scrie un program pentru a face acest pinguin să se deplaseze folosind tastele sus / jos / stânga/dreapta pentru a lovi toate obiectivele?
+        studio_c2_5: Puteţi scrie un program pentru a face caracatiţa să spună "Bună", atunci când se dă clic pe ea?
+        studio_c2_6: Acum, scrie un program care să îl facă pe Waddles să se miște de jur împrejur folosind tastele săgeată sus / jos / stânga / dreapta pentru a atinge toate obiectivele?
         studio_c2_7: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod repetat?
-        studio_c2_8: Puteți face acest pinguin să spună "Ouch!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?
-        studio_c2_9: Puteţi adăuga un bloc pentru a înscrie un punct când pinguinul aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
-        studio_c2_10: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza pinguinului, şi apoi să îl mutaţi cu săgeţile până când marcați?
-        studio_c2_11: Creați-vă propria poveste. Când aţi terminat, faceţi clic pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele lor.
+        studio_c2_8: Puteți să îl faceți pe Waddles să spună "Au!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?
+        studio_c2_9: Puteţi adăuga un bloc pentru a înscrie un punct când Waddles aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
+        studio_c2_10: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza lui Waddles, şi apoi să îl mutaţi cu săgeţile până când marcați?
+        studio_c2_11: Creați-vă propria poveste. Când ați terminat, faceți click pe Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele lor.
         studio_c3_story_1: Poți face acest câine să spună "Bună ziua lume"?
         studio_c3_story_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
-        studio_c3_story_3: Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
+        studio_c3_story_3: Puteți scrie un program pentru a face acest câine să se miște către pisică?
         studio_c3_story_4: Poți scrie un program care să îl facă pe câine să meargă către pisică, iar atunci când o ajunge, aceasta să spună "Bună"?
         studio_c3_story_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
-        studio_c3_story_6: Creați-vă propria poveste. Când aţi terminat, faceţi clic pe Terminare pentru a lăsa prietenii să vă încerce povestea pe telefoanele lor.
-        studio_c3_game_1: Puteţi scrie un program pentru a face caracatiţa să spună "hello", atunci când se dă clic pe ea?
-        studio_c3_game_2: Puteţi scrie un program pentru a face acest pinguin să se deplaseze folosind tastele sus / jos / stânga/dreapta pentru a lovi toate obiectivele?
+        studio_c3_story_6: Creați-vă propria poveste. Când ați terminat, faceți click pe Terminare pentru a permite prietenilor să vă încerce povestea pe telefoanele lor.
+        studio_c3_game_1: Puteţi scrie un program pentru a face caracatiţa să spună "Bună", atunci când se dă clic pe ea?
+        studio_c3_game_2: Acum, scrie un program care să îl facă pe Waddles să se miște de jur împrejur folosind tastele săgeată sus / jos / stânga / dreapta pentru a atinge toate obiectivele?
         studio_c3_game_3: Blocul "repetă pentru totdeauna" vă permite să rulaţi cod continuu. Puteți ataşa blocuri pentru a muta acest dinozaur în sus şi în jos în mod repetat?
-        studio_c3_game_4: Puteți face acest pinguin să spună "Ouch!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?
-        studio_c3_game_5: Puteţi adăuga un bloc pentru a înscrie un punct când pinguinul aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
-        studio_c3_game_6: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza pinguinului, şi apoi să îl mutaţi cu săgeţile până când marcați?
+        studio_c3_game_4: Puteți să îl faceți pe Waddles să spună "Au!" şi să redea un sunet "lovit" dacă el aleargă la dinozaur, şi apoi să îl mutaţi cu săgeţile pentru a face să se întâmple asta?
+        studio_c3_game_5: Puteţi adăuga un bloc pentru a înscrie un punct când Waddles aleargă la caracatiţă şi apoi să îl mutaţi cu săgeţile până când înscrieți puncte?
+        studio_c3_game_6: Puteţi adăuga blocuri pentru a schimba fundalul şi viteza lui Waddles, şi apoi să îl mutaţi cu săgeţile până când marcați?
         studio_c3_game_7: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
         studio_playlab_1: Pinguinul vrea să spună "Bună ziua" - îl puteți ajuta?
         studio_playlab_2: Băiatul din peşteră (actor 1) şi Fata din peşteră (actor 2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune" de două ori?
@@ -235,8 +235,8 @@ ro:
         studio_gumball_free_play: Creeaza-ti propria poveste a jocului. Cand e gata, apasa "terminare"si spune-le prietenilor tai sa incerce jocul pe telefoane, tablete sau calculatoare!
         studio_full_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
         studio_k1_1: Poți face acest câine să spună "Bună ziua lume"?
-        studio_k1_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
-        studio_k1_3: Puteţi scrie un program pentru a face acest câine să se miște spre pisică?
+        studio_k1_2: Puteți face câinele să spună ceva și apoi pisica să continue spunând altceva?
+        studio_k1_3: Puteți scrie un program pentru a face acest câine să se miște către pisică?
         studio_k1_4: Faceți câinele să se miște spre pisică și pe aceasta să spună "hello", atunci când el ajunge acolo.
         studio_k1_5: Puteţi să adăugaţi un bloc pentru a face caracatiţa fericită?
         studio_k1_6: Creați-vă propria poveste! Deplasați împrejur pisica şi câinele şi făceți-le să spună ceva.
@@ -375,8 +375,12 @@ ro:
         infinity_playlab_intro: Atelier de Joacă - Introducere
         infinity_playlab_events: Atelier de Joacă - Evenimente
         infinity_playlab_repeat_forever: Atelier de Joacă - Repetare la nesfârșit
+        csd_concept_how_computers_work: 'Introducere: cum funcționează calculatoarele'
         csd_concept_computer: 'Cum funcţionează calculatoarele: Ce face calculatorul, calculator?'
         csd_concept_binary_data: 'Cum funcţionează calculatoare: Binar & date'
+        csd_concept_circuits_logic: 'Cum funcționează calculatoarele: Circuite și logică'
+        csd_concept_memory_cpu_input_output: 'Cum funcționează calculatoarele: Memorie, CPU, intrare și ieșire'
+        csd_concept_hardware_software: 'Cum funcționează calculatoarele: Hardware și Software (aparatură și programe)'
         csd_concept_search: Cum funcţionează căutarea
         csd_external_amazon_data: Cum se utilizează cantitățile mari de date în sistemele de recomandare Amazon pentru a ne schimba viaţa
         csd_external_waze_data: De ce sunt atât de mulţi utilizatori obsedați de Waze?
@@ -447,7 +451,7 @@ ro:
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
-        run: Apasă "Rulează" pentru a încerca programul tău
+        run: Apasă "Run" pentru a încerca programul tău
         watch_again: Click aici pentru a viziona video din nou
         gray_block_explanation: Blocurile cu gri nu pot fi șterse. Puteți, totuși, să rezolvați puzzle-ul?
         show_code_explanation: Click aici pentru a vedea codul pentru programul pe care îl faci

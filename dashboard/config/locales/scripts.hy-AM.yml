@@ -144,7 +144,7 @@ hy:
             'Maze: Conditionals':
               name: 'Maze: Conditionals'
             Songwriting:
-              name: Songwriting with Parameters
+              name: songwriting
             'Studio: Create a Game':
               name: 'Play Lab: Create a Game'
             'Studio: Create a Story':
@@ -333,7 +333,7 @@ hy:
             Introduction to Computer Science:
               name: Ներածություն համակարգչային գիտության
             Relay Programming:
-              name: Relay Ծրագրավորում
+              name: Relay programming
             Song Writing:
               name: Song Writing
             The Artist:
@@ -406,6 +406,8 @@ hy:
           stages:
             Hour of Code 2013:
               name: Ժամ օրենսգրքի 2013-
+        cspunit1:
+          description_short: Programming
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -421,6 +423,7 @@ hy:
             Strings and Images:
               name: Strings and Images
         cspunit3:
+          description_short: Programming
           stages:
             Creating Functions:
               name: Ստեղծվում գործառույթները
@@ -457,6 +460,7 @@ hy:
             Wrap-Up:
               name: Wrap-Up
         cspunit2:
+          description_short: Programming
           stages:
             The Internet:
               name: The Internet Is for Everyone
@@ -615,7 +619,7 @@ hy:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
             Songwriting:
-              name: Songwriting with Parameters
+              name: songwriting
             The Big Event:
               name: The Big Event
         ScienceP3OLPT2:
@@ -679,6 +683,10 @@ hy:
               name: Welcome!
             Wrap-Up:
               name: Wrap-Up
+        cspunit5:
+          description_short: Programming
+        cspunit4:
+          description_short: Programming
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -779,7 +787,7 @@ hy:
             Digital Citizenship:
               name: Digital Citizenship
             Songwriting:
-              name: Songwriting with Parameters
+              name: songwriting
         grade1:
           stages:
             Events:
@@ -1307,7 +1315,7 @@ hy:
             Conditionals with Cards:
               name: Conditionals with Cards
             'Functions: Songwriting':
-              name: Songwriting with Parameters
+              name: songwriting
             Envelope Variables:
               name: Envelope Variables
             For Loop Fun:
@@ -1323,7 +1331,7 @@ hy:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Relay Ծրագրավորում
+              name: Relay programming
         courseb-2018:
           assignment_family_title: Կուրս B
           stages:
@@ -1353,7 +1361,7 @@ hy:
             Graph Paper Programming:
               name: Գրաֆիկի Թուղթ Ծրագրավորում
             Relay Programming:
-              name: Relay Ծրագրավորում
+              name: Relay programming
         coursec-2018:
           assignment_family_title: Կուրս C
           stages:
@@ -1379,7 +1387,7 @@ hy:
             Introduction:
               name: ներածություն
             'Functions: Songwriting':
-              name: Songwriting with Parameters
+              name: songwriting
             Internet:
               name: Համացանց
             Crowdsourcing:

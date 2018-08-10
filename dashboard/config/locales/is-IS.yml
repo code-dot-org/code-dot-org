@@ -27,7 +27,7 @@ is:
         personal_email: Einkanetfang <a href="%{url}">(smelltu hér ef þú hefur ekki
           netfang)</a>
         username: notandanafn
-        password: lykilorð
+        password: Lykilorð
         password_confirmation: Staðfesting lykilorðs
         current_password: Núverandi lykilorð
         locale: Tungumál
@@ -60,7 +60,7 @@ is:
     placeholder: Færðu vísbendingu þína inn hér
     submit: Bæta við vísbendingu
   appname: Code.org
-  stage: áfangi
+  stage: Áfangi
   stage_number: Áfangi %{number}
   puzzle: Þraut
   trophies: bikarar
@@ -94,7 +94,7 @@ is:
     facebook: Facebook
     windowslive: Microsoft reikning
     clever: Clever aðgangur
-    forgot_password: Gleymt lykilorð?
+    forgot_password: Gleymdir þú lykilorðinu þínu ?
     need_confirmation: Fékkstu ekki sendar leiðbeiningar um staðfestingu?
     need_unlock: Fékkstu ekki leiðbeiningar um opnun?
     not_linked: Því miður er Code.org aðgangur þinn ekki tengur við %{provider}. Þú
@@ -151,7 +151,7 @@ is:
       að skrá þig.
     user_type_label: Tegund aðgangs
     user_type_teacher: Kennari
-    user_type_student: nemandi
+    user_type_student: Nemandi
     field_is_required: er nauðsynlegt
     accept_terms: Þú verður að samþykkja að stofna aðgang
     error: Villa kom upp.
@@ -376,7 +376,7 @@ is:
     student_teacher_disassociated: Þú hefur fjarlægt %{teacher_name} sem kennara þinn.
     panel:
       answer_viewer: Kennaraborðið
-      student: nemandi
+      student: Nemandi
       viewing_solution: Skoðun lausnar
       try_it_yourself: Prófaðu þetta
       section: Hópur
@@ -464,7 +464,7 @@ is:
     prize_info: 'Verðlaun fyrir þátttöku (aðeins kennarar í opinberum skólum í USA):
       Allt að $1.000 bekkjarverðlaun.'
     tryfirst: 'Eða þú getur prófað fyrst og skráð þig seinna:'
-    trynow: Prófa núna
+    trynow: Prófaðu núna
     add_hint_help: Vinsamlegast hjálpaðu okkur að bæta gagnlegum vísbendingum við
       kennsluna á Code.org
     20hour_overview: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
@@ -498,7 +498,7 @@ is:
       hugtök? Við höfum tekið bestu gagnvirku verkfærin í námsefni okkar Grunnhugtök
       tölvunarfræði og útbúið sjálfstæð örforrit sem þú getur notað hvenær sem er!
     announcement_learn_more_button: Læra meira
-    announcement_try_now_button: Prófa núna
+    announcement_try_now_button: Prófaðu núna
     announcement_host_an_hour_button: Sjá um Klukkustund
     announcement_watch_video_button: Horfa á myndband
     announcement_petition: Sem kennari ert þú í fararbroddi hreyfingar sem vill gefa
@@ -615,7 +615,7 @@ is:
     female: Kvenkyns
     none: Kýs að svara ekki
   user_type:
-    student: nemandi
+    student: Nemandi
     teacher: Kennari
   footer:
     thank_you: Þakkir til <a href="https://code.org/about/donors">stuðningsaðila</a>,
@@ -651,7 +651,7 @@ is:
     more: Meira
     feedback: Gefðu endurgjöf
     translate: Hjálpaðu okkur að þýða yfir á þitt tungumál
-    support: Aðstoð
+    support: Stuðningur
     support_url: http://support.code.org
     tos_short: Skilmálar
     tos: Skilmálar
@@ -785,7 +785,7 @@ is:
       body: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
     minecraft:
       title: Minecraft
-      body: Kannaðu Minecraft heim með kóða.
+      body: Kannaðu Minecraft heim með kóða
     minecraft2016:
       title: Minecraft
       body: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
@@ -982,7 +982,7 @@ is:
     in_progress: í vinnslu
     completed_too_many_blocks: lokið, of margir kubbar
     completed_perfect: lokið, fullkomið
-    furthest_level_attempted: hæsti unninn áfangi
+    furthest_level_attempted: hæsta prófað borð
     assessment: mat
     submitted: sent inn
   studio:

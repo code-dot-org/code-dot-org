@@ -21,7 +21,7 @@ lt:
       user:
         name: Tavo vardas
         name_example: Tavo vardas<br/>(jį matys tavo mokytoja(-s))
-        email: El. pašto adresas
+        email: El. paštas
         username: Naudotojo vardas
         password: Slaptažodis
         password_confirmation: Slaptažodžio patvirtinimas
@@ -144,7 +144,7 @@ lt:
     school_organization_zip: Mokyklos ar organizacijos pašto indeksas
   signin_form:
     title: Jau registravotės? Prisijunkite
-    login: El. pašto adresas
+    login: El. paštas
     login_username: El. paštas arba naudotojo vardas
     password: Slaptažodis
     remember: Prisiminti mane
@@ -192,7 +192,7 @@ lt:
   section:
     type:
       word: Slaptas pasaulis
-      email: El. pašto adresas
+      email: El. paštas
   follower:
     invite_sent: Pakvietimas išsiųstas
     added_teacher: "%{name} pridėtas(-a) kaip tavo mokytojas(-a)"
@@ -490,7 +490,7 @@ lt:
       title: Klasikinis labirintas
       body: Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.
     flappy:
-      title: Flappy kodas
+      title: Flappy Kodas
       body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy
         Code pamokėles!
     20-hour:
@@ -527,7 +527,7 @@ lt:
       body: Tyrinėk Minecraft pasaulį koduodamas.
     minecraft2016:
       title: Minecraft
-      body: Suprogramuok gyvūnus ir kitas Minecraft būtybes savo paties Minecraft
+      body: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje Minecraft
         versijoje.
     hero:
       title: Minecraft
@@ -758,7 +758,7 @@ lt:
   return_course_overview: Eiti į skyriaus apžvalgą
   pd:
     form_labels:
-      email: El. pašto adresas
+      email: El. paštas
       school_name: Mokyklos pavadinimas
     form_entries:
       gender:

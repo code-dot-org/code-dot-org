@@ -269,7 +269,7 @@
   "knight": "",
   "localFunction": "",
   "loseMessage": "",
-  "makeProjectileDisappear": "",
+  "makeProjectileDisappear": "disappear",
   "makeProjectileBounce": "",
   "makeProjectileAirplane": "",
   "makeProjectileBasketball": "",

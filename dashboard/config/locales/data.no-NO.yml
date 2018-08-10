@@ -19,7 +19,7 @@
         Farmer2: Bonden 2
         Unplug8: Abstraksjon
         Artist4: Kunstneren 4
-        Unplug9: Relé-programmering
+        Unplug9: Relé programmering
         Farmer3: Bonden 3
         Unplug10: Internett
         Artist5: Kunstneren 5
@@ -334,8 +334,8 @@
         studio_c2_7: '"Gjenta alltid" blokken tillater deg å kjøre kode kontinuerlig.
           Kan du legge til blokker for å flytte denne dinosauren opp og ned flere
           ganger?'
-        studio_c2_8: Kan du få pingvinen til å si "Au!", spille en "treff"-lyd hvis
-          han går inn dinosauren og deretter flytte ham med pilene for å få det til
+        studio_c2_8: Kan du få Waddles til å si "Au!" og spille en "treff"-lyd når
+          han treffer dinosauren, og så flytte ham med piltastene for å få det til
           å skje?
         studio_c2_9: Kan du legge til en blokk for å skåre et poeng når pingvinen
           kommer borti blekkspruten, og deretter flytte ham med pilene til du skårer?
@@ -550,7 +550,7 @@
         C2_graph_paper: Millimeterpapirprogrammering
         C2_conditionals_with_cards: Betingelser
         C2_binary_bracelets: Binær armbånd
-        C2_relay_programming: Relé-programmering
+        C2_relay_programming: Relé programmering
         C2_paper_airplanes: Papir fly
         C2_digital_footprint: Dine digitale fotavtrykk
         C2_digital_footprint_v2: Dine digitale fotavtrykk
@@ -702,7 +702,7 @@
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken
-        run: Trykk "Kjør" for å prøve programmet
+        run: Trykk på "Kjør" for å prøve programme
         watch_again: Klikk her for å se filmen igjen
         gray_block_explanation: Blokker som er grå kan ikke slettes. Kan du løse oppgaven
           likevel?

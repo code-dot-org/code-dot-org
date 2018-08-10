@@ -74,7 +74,7 @@ nn:
         maze_2_15: Meg vil ha solsikke! Bruk ei "viss"-blokk til å få meg dit med så få blokker du kan.
         maze_2_16: Ok, la oss gjere det ein gong til - denne er ikkje så ulik, men pass deg for dei kjøttetande plantane!
         maze_2_17: '"viss-elles"-blokka sjekkar eit vilkår og utfører det eine ELLER det andre. For å få meg til solsikka, prøv å bruke denne blokka.'
-        maze_2_18: Ei siste øving med "viss-elles"-blokka. Klarer du å få det rett på første forsøk?
+        maze_2_18: Ei siste øving med "viss-elles"-blokka. Klarar du å gjere det riktig på første forsøk?
         maze_2_19: Klarer du å hjelpe meg gjennom ein kompleks labyrint ved å legge til berre 3 blokker? Viss du gjer det rett, så kan eg gå ein vilkårleg kronglete veg uansett kor lang den er.
         turtle_1_1: Hei, eg er ein kunstnar. Du kan skrive kode som får meg til å teikne alt mulig rart. Bruk nokre blokker til å få meg til å teikne på dei grå linjene på bildet.
         turtle_1_2: 'No kan du prøve å teikne ein firkant. PS! Vel favorittfargen din med "sett farge"-blokka.'
@@ -178,28 +178,28 @@ nn:
         mazestep_4: Labyrint steg forklaring her
         mazestep_5: Labyrint steg forklaring her
         studio_c2_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_c2_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_c2_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
-        studio_c2_4: Kan du skrive eit program som gjer at hunden flyttar seg til katten og at katten seier "Hei" når hunden kjem?
-        studio_c2_5: Kan du skrive eut program som får blekkspruten til å sei "Hei" når den blir klikka på?
-        studio_c2_6: Kan du skrive eit program for å få denne pingvinen til røre seg omkring med opp / ned / venstre / høyre-tastane for å treffe alle måla?
-        studio_c2_7: '"Gjenta alltid"-blokka let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
-        studio_c2_8: Kan du få pingvinen til å seie "Au!" og spille ein "treff"-lyd viss han treff dinosauren og deretter flytte han med pilene for å få det til å skje?
-        studio_c2_9: Kan du legge til ei blokk for å skåre eit poeng når pingvinen kjem borti blekkspruten, og deretter flytte han med pilene til du skårer?
-        studio_c2_10: Kan du legge til blokker for å forandre bakgrunnen og farta til pingvinen og deretter bevege han med pil-tastane til du skårer?
-        studio_c2_11: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
+        studio_c2_2: Kan du få hunden til å seie noko, og deretter få katten til å seie noko etterpå?
+        studio_c2_3: Kan du lage eit program som får hunden til å flytte seg til katten?
+        studio_c2_4: Kan du lage eit program som får hunden til å flytte seg til katten, og får katten til å seie "Hallo" når hunden kjem bort?
+        studio_c2_5: Kan du lage eit program som får blekkspruten til å seie "Hallo" når ein klikkar på den?
+        studio_c2_6: Kan du lage eit program for å få Waddles til å flytte seg rundt ved å bruke piltastane for å treffe alle måla?
+        studio_c2_7: '"Gjenta for alltid"-blokka lar deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte dinosauren opp og ned for alltid?'
+        studio_c2_8: Kan du få Waddles til å seie "Au!" og spele ein "treffe"-lyd om han kjem borti dinosauren, og så flytte han med pilene for at det skal skje?
+        studio_c2_9: Kan du legge til ei blokk for å score eit poeng når Waddles kjem borti blekkspruten, og deretter flytte ham med pilane til du scorar?
+        studio_c2_10: Kan du legge til blokker for å endre bakgrunnen og farten til Waddles, og så flytte ham med pilane til du scorar?
+        studio_c2_11: Lag di eiga historie. Når du er ferdig klikker du Fullfør for å la vener prøve di historie på telefonane sine.
         studio_c3_story_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_c3_story_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_c3_story_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
-        studio_c3_story_4: Kan du skrive eit program som gjer at hunden flyttar seg til katten og at katten seier "Hei" når hunden kjem?
-        studio_c3_story_5: Kan du legge til ei blokk for å gjere blekkspruten glad?
-        studio_c3_story_6: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
-        studio_c3_game_1: Kan du skrive eut program som får blekkspruten til å sei "Hei" når den blir klikka på?
-        studio_c3_game_2: Kan du skrive eit program for å få denne pingvinen til røre seg omkring med opp / ned / venstre / høyre-tastane for å treffe alle måla?
-        studio_c3_game_3: '"Gjenta alltid"-blokka let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
-        studio_c3_game_4: Kan du få pingvinen til å seie "Au!" og spille ein "treff"-lyd viss han treff dinosauren og deretter flytte han med pilene for å få det til å skje?
-        studio_c3_game_5: Kan du legge til ei blokk for å skåre eit poeng når pingvinen kjem borti blekkspruten, og deretter flytte han med pilene til du skårer?
-        studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og farta til pingvinen og deretter bevege han med pil-tastane til du skårer?
+        studio_c3_story_2: Kan du få hunden til å seie noko, og deretter få katten til å seie noko etterpå?
+        studio_c3_story_3: Kan du lage eit program som får hunden til å flytte seg til katten?
+        studio_c3_story_4: Kan du lage eit program som får hunden til å flytte seg til katten, og får katten til å seie "Hallo" når hunden kjem bort?
+        studio_c3_story_5: Kan du legge til ei blokk for å få blekkspruten glad?
+        studio_c3_story_6: Lag di eiga historie. Når du er ferdig klikker du Fullfør for å la vener prøve di historie på telefonane sine.
+        studio_c3_game_1: Kan du lage eit program som får blekkspruten til å seie "Hallo" når ein klikkar på den?
+        studio_c3_game_2: Kan du lage eit program for å få Waddles til å flytte seg rundt ved å bruke piltastane for å treffe alle måla?
+        studio_c3_game_3: '"Gjenta for alltid"-blokka lar deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte dinosauren opp og ned for alltid?'
+        studio_c3_game_4: Kan du få Waddles til å seie "Au!" og spele ein "treffe"-lyd om han kjem borti dinosauren, og så flytte han med pilene for at det skal skje?
+        studio_c3_game_5: Kan du legge til ei blokk for å score eit poeng når Waddles kjem borti blekkspruten, og deretter flytte ham med pilane til du scorar?
+        studio_c3_game_6: Kan du legge til blokker for å endre bakgrunnen og farten til Waddles, og så flytte ham med pilane til du scorar?
         studio_c3_game_7: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venene dine prøve spelet ditt på mobilen sin.
         studio_playlab_1: Pingvinen vil si "hallo" - Kan du hjelpe han?
         studio_playlab_2: Holegut (spelar 1) og Jasmin (spelar 2) vil sei "hallo" til kvarandre. Kan du hjelpe dei ved å bruke "sei"-blokka to gonger?
@@ -235,10 +235,10 @@ nn:
         studio_gumball_free_play: Lag ditt eige spel eller historie. Når du er ferdig, klikk Fullfør for å la vennene dine prøve spelet på telefonen, nettbrettet eller datamaskinen!
         studio_full_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venene dine prøve spelet ditt på mobilen sin.
         studio_k1_1: Kan du få denne hunden til å seie «hallo verda»?
-        studio_k1_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
-        studio_k1_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
+        studio_k1_2: Kan du få hunden til å seie noko, og deretter få katten til å seie noko etterpå?
+        studio_k1_3: Kan du lage eit program som får hunden til å flytte seg til katten?
         studio_k1_4: Få hunden til å flytte seg bort til katten og katten til å sei «hallo» når han kjem fram.
-        studio_k1_5: Kan du legge til ei blokk for å gjere blekkspruten glad?
+        studio_k1_5: Kan du legge til ei blokk for å få blekkspruten glad?
         studio_k1_6: Lag din eiga historie! Flytt katten og hunden rundt og få dei til å sei ting.
         maze_wordsearch_k_1: Flytt meg for å stave ordet AUST
         maze_wordsearch_k_2: Flytt meg for å stave ordet SØR

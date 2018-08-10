@@ -77,10 +77,10 @@ it:
         title: Pensiero computazionale
         desc: Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione, identificazione di schemi, astrazione, algoritmica) per capire come si svolge un gioco che non ha istruzioni.
       FunctionalSuncatchers:
-        title: Acchiappa-Sole Funzionale
+        title: Acchiappa-sole Funzionale
         desc: Gli studenti creano un algoritmo con variabili e funzioni (porzioni di codice che si possono usare ripetutamente) per creare degli acchiappa-sole usando fili e perline.
       SongwritingParameters:
-        title: Composizione di Canzoni - Parametri
+        title: Composizione di canzoni
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
       DiceRace:
         title: 'Algoritmi della Vita Reale: Gara con i Dadi'
@@ -89,7 +89,7 @@ it:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
-        title: Crowdsourcing (Intelligenza Collettiva)
+        title: Intelligenza Collettiva
         desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       DigitalCitizenship:
         title: Cittadinanza Digitale
@@ -140,16 +140,16 @@ it:
         title: 'Attività Tradizionale: I Miei Ciclici Amici Robotici'
         desc: Come nella lezione "I Miei Amici Robotici", dovrai "programmare" i tuoi amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Attività Tradizionale
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       courseD_unplugged_digitalCitizenship:
-        title: Attività Tradizionale
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
         title: 'Cittadinanza Digitale: Dati Personali'
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
-        title: Attività Tradizionale
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
@@ -200,10 +200,10 @@ it:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
-        title: Crowdsourcing (Intelligenza Collettiva)
+        title: Intelligenza Collettiva
         desc: Gli studenti utilizzano l'Intelligenza Collettiva (*crowd-sourcing*), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       courseE_unplugged_songwriting:
-        title: Composizione di Canzoni - Parametri
+        title: Composizione di canzoni
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
       courseF_unplugged_tangrams:
         title: Algoritmi per il Tangram
@@ -239,7 +239,7 @@ it:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Attività Tradizionale
+        title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'

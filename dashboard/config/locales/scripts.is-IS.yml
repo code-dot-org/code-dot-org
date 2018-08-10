@@ -433,7 +433,7 @@ is:
           description_audience: Fyrir 10-18 ára
           stages:
             Abstraction:
-              name: Greining kjarna
+              name: Útdráttur
             Algorithms:
               name: Algrím
             Computational Thinking:
@@ -553,7 +553,7 @@ is:
             og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar
             á code.org/educate/csp.
           description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd
-            eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+            eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
             Binary Numbers:
               name: Tvíundartölur
@@ -708,7 +708,7 @@ is:
               name: Kynning á PDK5
         cspunit3:
           description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd
-            eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+            eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
             APIs and Function Parameters:
               name: API og stikar falla
@@ -908,7 +908,7 @@ is:
               name: Velkomin aftur!
         cspunit2:
           description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd
-            eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+            eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Erfið verkefni - Vandamál farandsölumannsins
@@ -1359,6 +1359,7 @@ is:
             Unit 6 lessons:
               name: Kennslustundir 6. einingar
         cspunit4draft:
+          description_short: Gögn
           stages:
             Check Your Assumptions:
               name: Kannaðu hvað þú heldur
@@ -1557,10 +1558,10 @@ is:
               name: Samantekt
         cspunit5:
           description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd
-            eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+            eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
         cspunit4:
           description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd
-            eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
+            eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stages:
             Check Your Assumptions:
               name: Kannaðu hvað þú heldur
@@ -1978,6 +1979,8 @@ is:
               name: Álit samnemenda
             Describing Web Pages:
               name: Lýsing vefsíðna
+        CSDU5-Draft:
+          description_short: Gögn
         MikeTest:
           stages:
             Artist Functions:
@@ -2015,7 +2018,7 @@ is:
         gradeKinder:
           stages:
             Debugging:
-              name: Kembing
+              name: Villuleit
             Events:
               name: Atvik
             Events Unplugged:
@@ -2071,7 +2074,7 @@ is:
         grade1:
           stages:
             Debugging:
-              name: Kembing
+              name: Villuleit
             Events:
               name: Atvik
             Events Unplugged:
@@ -2534,7 +2537,7 @@ is:
             Measuring Student Learning:
               name: Mæling á námi nemenda
         basketball:
-          title: Veldu þér lið og búðu til körfuboltaleik
+          title: Velja lið og búa til körfuboltaleik
           description_short: Velja lið og búa til körfuboltaleik
           description: Velja lið og búa til körfuboltaleik
           stages:
@@ -2714,7 +2717,7 @@ is:
             Hour of Code 2013:
               name: Klukkustund kóðunar 2013
         sports:
-          title: Kóðaðu íþróttaleik eftir þínu höfði
+          title: Kóðaðu þinn eigin íþróttaleik
           description_short: Blandaðu saman íþróttum
           description: Blandaðu saman íþróttum
           stages:

@@ -11,18 +11,18 @@ fi:
       draw a triangle: piirrä kolmio
       draw a house: piirrä talo
       draw a star: piirrä tähti
-      do something: jotain
+      do something: tee jotain
       jump: hyppää
       set score: aseta pisteet
       get nectar: kerää mesi
       test: ehto
       diamond: timantti
       move: liikuta
-      move right: liiku oikealle
-      move up: liiku ylös
-      move down: liiku alas
-      move left: liiku vasemmalle
+      move right: siirrä oikealle
+      move up: siirrä ylös
+      move down: siirrä alas
+      move left: siirrä vasemmalle
       collect: kerätä
       turn left: käänny vasempaan
-      move forward: liiku eteenpäin
+      move forward: siirry eteenpäin
       turn right: käänny oikeaan

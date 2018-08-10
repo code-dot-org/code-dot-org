@@ -21,7 +21,7 @@ fa:
         name: نمایش نام
         email: ایمیل
         username: نام کاربری
-        password: رمز عبور
+        password: کلمه عبور
         password_confirmation: تکرار کلمه عبور
         current_password: کلمه عبور فعلی
         locale: زبان
@@ -39,7 +39,7 @@ fa:
   previous_page: صفحه‌ی قبل
   next_page: صفحه بعد
   next_resource: منبع بعدی
-  cancel: لغو کن
+  cancel: لغو
   okay: باشه
   heading_x_of_y: "%{heading} (%{x} صفحه %{y})"
   add_teacher_form:
@@ -485,7 +485,7 @@ fa:
     unplugged:
       audience: سنین بالای 4 سال
     unplugged_conditionals:
-      title: مشروط
+      title: شرطی ها
     widgets:
       cta: یادبگیر چگونه
   gallery:
@@ -561,7 +561,7 @@ fa:
     startover_body: این کار معما را به حالت اولیه اش تنظیم خواهد کرد و تمام داده هایی
       که شما اضافه کرده یا تغییر داده اید را بازنشانی می کند.
     startover_ok: دوباره شروع کنید
-    startover_cancel: لغو کن
+    startover_cancel: لغو
   time:
     hour: ۱ ساعت
     day: روز
@@ -630,7 +630,7 @@ fa:
     delete_no: نه
     saved: ذخیره شد
     not_saved: ذخیره نشده
-    cancel: لغو کن
+    cancel: لغو
     delete_confirm_title: آیا مطمئنید می خواهید این پروژه را پاک کنید?
     delete_confirm_text: پاک کردن پروژه تان آن را به طور دائم از لیست پروژه های من
       شما حذف خواهد کرد. هرکسی که لینک را با او به اشتراک گذاشته اید دیگر قادر نخواهد

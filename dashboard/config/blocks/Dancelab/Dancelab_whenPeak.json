@@ -8,7 +8,7 @@
         "name": "RANGE",
         "options": [
           [
-            "low",
+            "bass",
             "0"
           ],
           [
@@ -16,7 +16,7 @@
             "1"
           ],
           [
-            "high",
+            "treble",
             "2"
           ]
         ]

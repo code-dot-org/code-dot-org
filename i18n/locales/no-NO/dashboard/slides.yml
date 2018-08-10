@@ -405,7 +405,7 @@
         text: "Du skal dra blokkene fra verktøykassen til og bort arbeidsområdet. Der skal de henge fast under \"når kjører\" blokken. Når du mener du har den rette løsningen, kan du klikke \"Kjør\" og se fuglen gå til grisen."
     C1_maze_loops:
       1:
-        text: "Noe datamaskiner er veldig gode til, er å gjenta kommandoer. Vi som er mennesker går fort lei hvis vi må gjøre den samme oppgaven mange, mange ganger på rad. Men en datamaskin kan gjøre det samme millioner eller selv milliarder av ganger uten å gå lei."
+        text: "Datamaskiner er veldig flinke til å gjenta kommandoer. Vi som er mennesker går fort lei hvis vi må gjøre den samme oppgaven mange, mange ganger på rad. Men en datamaskin kan gjøre den samme oppgaven millioner eller selv milliarder av ganger uten å gå lei."
       2:
         text: "Hvis jeg for eksempel ønsket å sende en mail for å gratulere alle på Facebook som har fødselsdag i dag, ville det tatt meg over hundre år å sende alle mailene. Men med bare noen linjer kode kan jeg få et dataprogram til å gratulere dem på noen få sekunder."
       3:

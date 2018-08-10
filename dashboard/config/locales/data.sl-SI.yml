@@ -88,8 +88,9 @@ sl:
           se, da te Žvečko ne dobi!
         maze_2_17: Bloki "če-sicer" preverijo pogoj in nato naredi eno stvar ali drugo.
           Uporabi ta nov blok in me pripelji do sončnice.
-        maze_2_18: 'Ti bo uspelo že v prvem poskusu? Uporabi še enkrat ukaz: "če-sicer"
-          pa ti bo uspelo.'
+        maze_2_18: |-
+          Še ena vaja za "če drugo" kocko. Ti lahko
+          uspe že v prvem poskusu?
         maze_2_19: Poskusi uporabiti še tri dodatne bloke in ta zapletenejši labirint
           ne bo več težava. Če jih prav sestaviš, lahko prehodim vse ovinke in vse
           razdalje.

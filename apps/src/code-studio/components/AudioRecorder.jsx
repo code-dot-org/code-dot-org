@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
+import {assetButtonStyles} from "./AssetManager";
 
 const ErrorType = {
   NONE: 'none',
@@ -14,19 +15,15 @@ const styles = {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between',
-  },
-  button: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginRight: 10,
-    borderRadius: 4,
-    fontSize: 'large',
-    fontWeight: 'lighter',
-    boxShadow: 'none',
+    alignItems: 'center'
   }
 };
 
 export default class AudioRecorder extends React.Component {
+  static propTypes = {
+    onUploadDone: PropTypes.func,
+  };
+
   constructor(props) {
     super(props);
     this.recorder = null;
@@ -64,26 +61,23 @@ export default class AudioRecorder extends React.Component {
     this.recorder.onstop = (e) => {
       const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
       this.slices = [];
-      this.saveAudio(blob)
-        .then(() => console.log('Audio Saved'));
+      this.saveAudio(blob);
     };
   };
 
   saveAudio = (blob) => {
-    return new Promise((resolve, reject) => {
-      assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-      () => {
-        this.setState({error: ErrorType.NONE});
-        resolve();
-      }, error => {
-        this.setState({error: ErrorType.SAVE});
-        reject(`Audio Failed to Save: ${error}`);
-      });
+    assetsApi.putAsset(this.state.audioName + ".mp3", blob,
+    (xhr) => {
+      this.setState({error: ErrorType.NONE});
+      this.props.onUploadDone(JSON.parse(xhr.response));
+    }, error => {
+      this.setState({error: ErrorType.SAVE});
+      console.error(`Audio Failed to Save: ${error}`);
     });
   };
 
   recordInitializationError = (err) => {
-    console.error('Audio Initializing Error: ' + err);
+    console.error('Audio Recorder Failed to Initialize: ' + err);
     this.setState({error: ErrorType.INITIALIZE});
   };
 
@@ -114,7 +108,7 @@ export default class AudioRecorder extends React.Component {
               <Button
                 onClick={this.toggleRecord}
                 id="start-stop-record"
-                style={styles.button}
+                style={{...assetButtonStyles.button, ...{marginRight: 10}}}
                 color={Button.ButtonColor.blue}
                 icon={this.state.recording ? "stop" : "circle"}
                 text={this.state.recording ? i18n.stop() : i18n.record()}
@@ -123,7 +117,7 @@ export default class AudioRecorder extends React.Component {
               <Button
                 onClick={()=>{}}
                 id="cancel-record"
-                style={styles.button}
+                style={assetButtonStyles.button}
                 color={Button.ButtonColor.gray}
                 text={i18n.cancel()}
                 size="large"

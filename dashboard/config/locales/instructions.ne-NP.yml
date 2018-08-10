@@ -414,8 +414,8 @@ ne:
       2-3 Maze Loops 19_instruction: "Let's take this to another level! \r\nUse\nloops
         to get me to the sunflower with the fewest loops possible."
       2-3 Maze Loops 20_instruction: |-
-        Get me to the sunflower using the fewest number
-        of blocks possible!
+        Get me to the sunflower using the fewest number of
+        blocks possible!
       2-3 Maze Loops 21_instruction: |-
         Get me to the sunflower using the fewest blocks
         possible!
@@ -483,8 +483,9 @@ ne:
       20hr_maze_stage2_18_instruction: The "If-else" blocks checks a condition, and
         then does one thing OR another. To get me to the sunflower try to use this
         new block.
-      20hr_maze_stage2_19_instruction: One more practice of the "if-else" block, can
-        you get it right on your first try?
+      20hr_maze_stage2_19_instruction: |-
+        One more practice of the "if-else" block, can you
+        get it right on your first try?
       20hr_maze_stage2_2_instruction: This pig is ruffling my feathers. Help me to
         find him!
       20hr_maze_stage2_20_instruction: Can you add just 3 blocks to help me solve
@@ -642,8 +643,8 @@ ne:
         This diamond has 50 pixel sides and angles
         of 120 and 60 degrees. Use a loop to draw it.
       4-5 Artist Patterns 5.5_instruction: |-
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
+        How many times do you need to repeat this
+        block to draw the full grid of diamonds?
       4-5 Artist Patterns 5_instruction: "Repeat this code to make a row of 6 diamonds.\n\r\n\r\nNotice
         that we changed our diamond code to repeat 3 times instead\nof 2 - why do
         you think that is?\r\n"
@@ -744,7 +745,9 @@ ne:
       4-5 Maze 1 (copy 1)_instruction: |-
         Dear person. Me zombie. Must... get... to
         sunflower.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      4-5 Maze 1_instruction: |-
+        Dear person. Me zombie. Must... get... to
+        sunflower.
       4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |-
@@ -755,19 +758,21 @@ ne:
       4-5 Maze 2 (copy 1)_instruction: |-
         Get the zombie to the sunflower, but avoid
         the chomper!
-      4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
+      4-5 Maze 2_instruction: |-
+        Get the zombie to the sunflower, but avoid
+        the chomper!
       4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
       4-5 Maze 3_instruction: Must... get... to sunflower.
       4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
       4-5 Maze 5 (copy 1)_instruction: |-
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
+        Can you solve this puzzle using the fewest number
+        of blocks possible?
       4-5 Maze 5_instruction: |-
         Can you solve this puzzle using the fewest number
         of blocks possible?
       4-5 Maze 6 (copy 1)_instruction: |-
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
+        Can you solve this puzzle using the fewest number
+        of blocks possible?
       4-5 Maze 6_instruction: |-
         Get me to the sunflower using the fewest number of
         blocks possible!
@@ -863,6 +868,15 @@ ne:
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
       App Lab test_instruction: test
+      Artist - Nested Loops 11_instruction: |-
+        Can you draw these 10 squares of this sidewalk
+        using a nested loop? Each square is 30 pixels.
+      Artist - Nested Loops 12_instruction: |-
+        Can you draw these 36 triangles using a nested
+        loop?
+      Artist - Nested Loops 6_instruction: |-
+        Can you draw a hexagon by looping the triangle
+        code?
       Artist - Nested Loops Assessment 1_instruction: |-
         Use a nested loop to complete
         the design.
@@ -886,6 +900,20 @@ ne:
       Busy Bee_instruction: |-
         This bee has a lot of work to do! Do you notice any
         patterns that you can use to simplify your code?
+      C3-Farmer While Loops 5_instruction: |-
+        Wow, now there are two deep holes! Can you
+        write a program that fills them both until the ground is even?
+      C3-Farmer While Loops 6_instruction: |-
+        Wow, now there is a large pile of dirt! Can
+        you write a program that removes all of it so the ground is even?
+      C3-Farmer While Loops 7_instruction: |-
+        Wow, now there are three piles of dirt! Can
+        you write a program that removes each of them until the ground is even?
+      C3-Farmer While Loops Assessment 1_instruction: |-
+        There are a lot of holes and piles.  Help
+        me to fill and remove them to make the ground flat.
+      Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
+        from these flowers? "
       Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
       Course 4 Artist 1_instruction: "Help me draw a box. (Each line is 200 pixels\nlong) "
       Course 4 Artist 10_instruction: "Click here to see the full instructions again!\r\n\r\nHere\nis
@@ -1059,8 +1087,9 @@ ne:
       Course 4 Artist Functions challenge_instruction: |-
         Click here to see the hints
         again.
-      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign
-        or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
+      Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration
+        design\nor the hints?  Click here!\r\n\r\nOtherwise, make a design all your
+        own!"
       Course 4 Artist Params 13_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome!
@@ -1140,8 +1169,8 @@ ne:
         This time, use the if/else block to collect one nectar if it is a flower,
         else make one honey (because then it would be a honeycomb).
       Course 4 Bee For Loops 1_instruction: |-
-        Use a loop to collect the nectar from
-        each flower.
+        Use a loop to collect the nectar
+        from each flower.
       Course 4 Bee For Loops 10_instruction: |-
         If your loop is counting down, the
         increment is subtracted from your counter variable each loop. What should
@@ -1154,8 +1183,8 @@ ne:
         You can also use a for loop to count
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
       Course 4 Bee For Loops 8_instruction: |-
-        Can you use the loop variable to control
-        movement and nectar collection?
+        Can you use the loop variable to
+        control movement and nectar collection?
       Course 4 Bee For Loops 9_instruction: |-
         The last number in your for loop is
         called the "increment,"  and each time the loop is run the counter variable
@@ -1205,16 +1234,16 @@ ne:
         Let's start from scratch - can you create
         a new function called "get 5 nectar" with a direction parameter?
       Course 4 Bee Params 6 (copy 1)_instruction: |-
-        Try using your new function to
-        collect all of this nectar.
+        Try using your new function to collect
+        all of this nectar.
       Course 4 Bee Params 6_instruction: |-
         Wouldn't it be nice if we could collect
         all of these nectars with a single function? Try adding a new parameter to
         your function called "nectar units" to control the amount of nectar to collect.
         You'll probably want to rename the function too!
       Course 4 Bee Params 7 (copy 1)_instruction: |-
-        Try using your new function to
-        collect all of this nectar.
+        Try using your new function to collect
+        all of this nectar.
       Course 4 Bee Params 7_instruction: |-
         Try using your new function to collect
         all of this nectar.
@@ -1224,8 +1253,8 @@ ne:
         of nectar units.  How would you use those numbers to decide what you should
         do?
       Course 4 Bee Params Ex_instruction: |-
-        Try using your new function to
-        collect all of this nectar.
+        Try using your new function to collect
+        all of this nectar.
       Course 4 Binary 1_instruction: |-
         Here's a function that takes a binary string
         of 1's and 0's and instructs the farmer to turn on the go from left to right,
@@ -1235,28 +1264,28 @@ ne:
         Can you draw this pattern by looping a single
         binary string?
       Course 4 Binary 5 (copy 1)_instruction: |-
-        Which binary string, repeated 10 times,
-        will draw this image?
+        Which binary string, repeated 10 times, will
+        draw this image?
       Course 4 Binary 5_instruction: |-
         Which binary string, repeated 10 times, will
         draw this image?
       Course 4 Binary 6 (copy 1)_instruction: |-
-        Which binary string, repeated 10 times,
-        will draw this image?
+        Which binary string, repeated 10 times, will
+        draw this image?
       Course 4 Binary 6_instruction: |-
-        Which binary string, repeated 10 times,
-        will draw this image?
+        Which binary string, repeated 10 times, will
+        draw this image?
       Course 4 Binary 7_instruction: |-
-        Which binary string, repeated 10 times,
-        will draw this image?
+        Which binary string, repeated 10 times, will
+        draw this image?
       Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 2a_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 2b_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 2c_instruction: No rules. No clues. Just the challenge!
       Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
-        image like this. Note: The code becomes more simple if you incorporate\nparameters. "
+      Course 4 EC 3_instruction: "Use what you learned in the previous level to\ndraw
+        an image like this. Note: The code becomes more simple if you incorporate\nparameters. "
       Course 4 EC 3a_instruction: |-
         Extreme Challenge: No rules. No clues. Just the
         challenge!
@@ -1267,11 +1296,11 @@ ne:
         Try the "repeat" block to use fewer blocks
         when solving this puzzle...
       Course 4 Maze 5_instruction: |-
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
+        Can you solve this puzzle using the fewest number
+        of blocks possible?
       Course 4 Maze 6_instruction: |-
-        Can you solve this puzzle using the fewest
-        number of blocks possible?
+        Can you solve this puzzle using the fewest number
+        of blocks possible?
       Course 4 Play Lab For Loops 2_instruction: |-
         This time, let's try counting
         the odd numbers from 1 to 100.
@@ -1394,8 +1423,8 @@ ne:
         honey with the fewest blocks possible?
       Course 4 SCF 2_instruction: "Use what you learned in the previous level to\ndraw
         an image like this. Note: The code becomes more simple if you incorporate\nparameters. "
-      Course 4 SCF 3_instruction: "Use what you learned in the previous level to draw\nan
-        image like this. Note: The code becomes more simple if you incorporate\nparameters. "
+      Course 4 SCF 3_instruction: "Use what you learned in the previous level to\ndraw
+        an image like this. Note: The code becomes more simple if you incorporate\nparameters. "
       Course 4 SCFL 1_instruction: |-
         Solve this puzzle using the fewest number of
         blocks possible.
@@ -1556,8 +1585,8 @@ ne:
         Use the jump block to move without drawing. Jump
         up and draw a line.
       K-1 Artist1 8_instruction: |-
-        Draw the dashed line by using both the jump and
-        draw blocks
+        Draw the dashed line by using both the
+        jump and draw blocks
       K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
       K-1 Artist1 Assessment 1_instruction: Draw the short and long lines!
       K-1 Artist1 Assessment 2_instruction: Draw the short dashed lines!
@@ -1916,12 +1945,21 @@ ne:
       New Artist Project_instruction: |-
         Draw something awesome! Your code is saved
         as a project that you can return to at any time.
+      New Basketball Project_instruction: Create your own Basketball game. You can
+        change all the rules. When you're done, click Finish to let friends try your
+        game on their phones.
+      New Bounce Project_instruction: Create your own Bounce game. You can change
+        all the visuals and the rules. When you're done, click Finish to let friends
+        try your game on their phones.
       New Course 4 Artist Functions Level 4_instruction: |-
         Use the "draw a square"
         function to draw this pattern.
       New Gumball Project_instruction: Create anything you like and share it!
       New Ice Age Project_instruction: Create anything you like and share it!
       New Infinity Project_instruction: Create anything you like and share it!
+      New Sports Project_instruction: 'Create your own game! You''re in charge here:
+        you can change all the rules, mix and match sports, get creative! When you''re
+        done, click Finish to let friends try your game on their phones.'
       Overworld Avoid Monsters_instruction: |-
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
@@ -2147,6 +2185,9 @@ ne:
       bounce_12_instruction: Create your own Bounce game. You can change all the visuals
         and the rules. When you're done, click Finish to let friends try your game
         on their phones.
+      bounce_12_2018_instruction: Create your own Bounce game. You can change all
+        the visuals and the rules. When you're done, click Finish to let friends try
+        your game on their phones.
       bounce_12_basketball_instruction: Create your own Basketball game. You can change
         all the rules. When you're done, click Finish to let friends try your game
         on their phones.
@@ -2250,8 +2291,9 @@ ne:
       course3_playlab_stage16_5_instruction: |-
         Can you add a block to make the octopus
         happy?
-      course3_playlab_stage16_6_instruction: Create your own story. When you're done,
-        click Finish to let friends try your story on their phones.
+      course3_playlab_stage16_6_instruction: |-
+        Create your own story. When you're
+        done, click Finish to let friends try your story on their phones.
       course3_playlab_stage17_1_instruction: |-
         Can you write a program to make the
         octopus say "hello" when it is clicked?
@@ -2273,8 +2315,9 @@ ne:
       course3_playlab_stage17_6_instruction: |-
         Can you add blocks to change the background
         and the speed of Waddles, and then move him with the arrows until you score?
-      course3_playlab_stage17_7_instruction: Create your own story. When you're done,
-        click Finish to let friends try your story on their phones.
+      course3_playlab_stage17_7_instruction: |-
+        Create your own story. When you're
+        done, click Finish to let friends try your story on their phones.
       course4_artist_fwp_challenge1_instruction: Try running this program, and make
         changes to see what happens. Can you figure out how it works? (Or delete it
         and replace it with something totally different)
@@ -2330,6 +2373,9 @@ ne:
         run" block. You have to attach the new "launch new ball" block in more than
         one place. Also, try changing the scene or the speed of the paddle and the
         ball and see how many points you can score before your opponent scores twice.
+      courseD_bounce_events12_instruction: Create your own Bounce game. You can change
+        all the visuals and the rules. When you're done, click Finish to let friends
+        try your game on their phones.
       courseD_bounce_events2_instruction: Attach a block to the "when right arrow"
         and "when left arrow" blocks. Move the paddle to reach both finish targets.
       courseD_bounce_events3_instruction: Now try something similar with the "when
@@ -2473,8 +2519,8 @@ ne:
         It's just like a rectangle but has different angles. This one has 60 degree
         and 120 degree angles instead of all 90 degree angles.
       frozen freeplay_instruction: |-
-        You've officially become a master artist! Create
-        a winter wonderland.
+        You've officially become a master artist!
+        Create a winter wonderland.
       frozen line_instruction: |-
         Hi! I'm Elsa of Arendelle. Help me create a single
         line.
@@ -2719,12 +2765,21 @@ ne:
         \r\n\r\nHow much\ndo you have to turn each time you loop?"
       grade4_arist_nested_loop_polygons2_instruction: "Loop this shape 6 times. \r\n\r\nHow
         much\ndo you have to turn each time you loop? "
+      grade4_arist_nested_loop_squares1_instruction: |-
+        Can you draw these 10 squares of this sidewalk
+        using a nested loop? Each square is 30 pixels.
       grade4_arist_nested_loop_triangles2_instruction: "Now nest this loop inside
         another loop to\ndraw 10 triangles.  This is called a \"nested\" loop.  "
+      grade4_arist_nested_loop_triangles3_instruction: |-
+        Can you draw a hexagon by looping the triangle
+        code?
       grade4_arist_nested_loop_triangles5_instruction: "Create a sun by nesting the
         starter code in\nanother loop.\r\n\r\nTo get this cool design with a hollow
         center, you'll\nneed to jump forward by the length of the triangle before
         turning."
+      grade4_arist_nested_loop_triangles6_instruction: |-
+        Can you draw these 36 triangles using a nested
+        loop?
       grade4_artist_functions2_instruction: "Functions let you define new blocks!
         \r\n\r\nWe've\nmoved the blocks needed for drawing a square into a function
         called `draw\na square`. This time, use the `draw a square` function to create
@@ -2751,10 +2806,16 @@ ne:
         complete the design.
       grade4_artist_nested_loop_polygons1_instruction: "Loop this design 10 times.
         \r\n\r\nHow much\ndo you have to turn each time you loop?"
+      grade4_artist_nested_loop_squares1_instruction: |-
+        Can you draw these 10 squares of this sidewalk
+        using a nested loop? Each square is 30 pixels.
       grade4_artist_nested_loop_triangles5_instruction: "Create a sun by nesting the
         starter code in\nanother loop.\r\n\r\nTo get this cool design with a hollow
         center, you'll\nneed to jump forward by the length of the triangle before
         turning."
+      grade4_artist_nested_loop_triangles6_instruction: |-
+        Can you draw these 36 triangles using a nested
+        loop?
       grade4_artist_parameters_squares1_instruction: |-
         Click "edit" to fill in the function
         definition of "draw a square" and add a parameter. It should take a length
@@ -2804,8 +2865,8 @@ ne:
         Collect all of the nectar by creating
         a nested loop.
       grade4_frozen_freeplay_instruction: |-
-        You've officially become a master artist! Create
-        a winter wonderland.
+        You've officially become a master artist!
+        Create a winter wonderland.
       grade4_frozen_functions0_instruction: Can you figure out what number to replace
         the question marks with to draw a circle?
       grade4_frozen_functions1a_instruction: |-
@@ -2912,6 +2973,9 @@ ne:
       grade5_artist_binary9_instruction: "Here's a higher resolution\ncanvas to draw
         on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart to get
         creative with the bits?"
+      grade5_artist_for_loops10_instruction: "Can you figure out how\nto use all of
+        the things you've learned to create this image?\r\n\r\nNeed\na hint? Click
+        here."
       grade5_artist_for_loops5_instruction: "Just one little change to the code\nfrom
         the last image can create this drawing. Can you figure out what that\nchange
         is?\r\n\r\nHint:  You need to remove something!"
@@ -3132,17 +3196,24 @@ ne:
         at each honeycomb using the fewest blocks possible.
       level grade3_Loops_2_instruction: This time, use a loop to gather all of the
         nectar.
+      scrat 16 (copy 1)_instruction: |-
+        Acorn! Acorn! Acorn! Use an "if" block to get me there
+        with the fewest number of blocks.
       scrat 16_instruction: |-
         Acorn! Acorn! Acorn! Use an "if" block to get me there
         with the fewest number of blocks.
       scrat 17_instruction: |-
         Ok, let's do that again for practice - this isn't
         very different, but watch out for the wall!
+      scrat 18 (copy 1)_instruction: |-
+        The "If-else" blocks checks a condition, and then
+        does one thing OR another. To get me to the acorn try to use this new block.
       scrat 18_instruction: |-
         The "If-else" blocks checks a condition, and then
         does one thing OR another. To get me to the acorn try to use this new block.
-      scrat 19 (copy 1)_instruction: One more practice of the "if-else" block, can
-        you get it right on your first try?
+      scrat 19 (copy 1)_instruction: |-
+        One more practice of the "if-else" block, can you
+        get it right on your first try?
       scrat 19_instruction: |-
         One more practice of the "if-else" block, can you
         get it right on your first try?

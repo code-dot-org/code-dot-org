@@ -35,6 +35,8 @@ bn:
         title: ছক-কাগজে প্রোগ্রামিং
       ComputationalThinking:
         title: গণিতিক চিন্তা-ভাবনা
+      SongwritingParameters:
+        title: গান লিখা
       Internet:
         title: ইন্টারনেট
       BinaryImages:
@@ -53,6 +55,8 @@ bn:
         title: দ্বিমিক ছবি
       courseE_unplugged_internet:
         title: ইন্টারনেট
+      courseE_unplugged_songwriting:
+        title: গান লিখা
       courseB_unplugged_MRF_2018:
         title: আমার রোবোটিক্স বন্ধুরা
       UnplugHappyMaps_2018:

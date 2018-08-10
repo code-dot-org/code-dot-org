@@ -2802,9 +2802,9 @@ it:
           e non si attaccheranno tra loro.
       8:
         text: In questo primo esercizio, faremo dire qualcosa ai personaggi attaccando
-          il blocco "il personaggio dice ..." al blocco 'quando si clicca su "Esegui"
-          ' e scrivendo qualcosa al suo interno. Una volta che i blocchi sono stati
-          posizionati, clicca il pulsante "Esegui" per vedere quello che hai programmato.
+          il blocco "pronuncia" al blocco 'quando si clicca su "Esegui" ' e scrivendo
+          qualcosa al suo interno. Una volta che i blocchi sono stati posizionati,
+          clicca il pulsante "Esegui" per vedere quello che hai programmato.
       9:
         text: Inizia a lavorarci su e alla fine sarai in grado di creare il tuo gioco
           con tanti tipi di giocatori che possono interagire, guadagnare punti, lanciare
@@ -2820,9 +2820,9 @@ it:
       3:
         text: In questo esercizio, faremo dire qualcosa al personaggio quando il giocatore
           clicca su di lui. Usa il blocco "quando si clicca sul personaggio" ('when
-          actor clicked') attaccandoci sotto un blocco "il personaggio dice ..." ('say').
-          Quando il giocatore clicca sul personaggio, tutto ciò che è attaccato al
-          blocco "quando si clicca sul personaggio" viene eseguito.
+          actor clicked') attaccandoci sotto un blocco "pronuncia" ('say'). Quando
+          il giocatore clicca sul personaggio, tutto ciò che è attaccato al blocco
+          "quando si clicca sul personaggio" viene eseguito.
       4:
         text: Ci sono anche i blocchi  "quando si preme la freccia ..." ('when ...
           arrow'). Se gli colleghi i blocchi "sposta il personaggio ..." ('move ...'),

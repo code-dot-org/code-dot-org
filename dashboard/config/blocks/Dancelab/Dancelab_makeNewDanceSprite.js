@@ -8,10 +8,12 @@ function makeNewDanceSprite(costume, name, location) {
   
   sprite.maxSpeed = 0;
   sprite.style = costume;
+  sprite.current_move = 0;
+  sprite.previous_move = 0;
   for (var i=0; i < dancers[costume].length; i++) {
     sprite.addAnimation("anim" + i, dancers[costume][i]);
   }
-  sprites.push(sprite);
+  sprites.add(sprite);
   sprite.speed = 10;
   sprite.dance_speed = 2;
   sprite.behaviors = [];
@@ -19,6 +21,9 @@ function makeNewDanceSprite(costume, name, location) {
   addBehavior(sprite, function() {
     if (sprite.animation.getFrame() === 0 && sprite.frameDidChange()) {
       sprite.mirrorX(sprite.mirrorX() * -1);
+    } else if (sprite.animation.getFrame() === sprite.animation.getLastFrame() && !sprite.animation.looping) {
+      changeMove(sprite, sprite.current_move);
+      sprite.animation.looping = true;
     }
   });
 

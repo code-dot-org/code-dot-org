@@ -436,7 +436,7 @@ gl:
     choose_next_course: Experimenta un dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
     announcement_title: Anuncios
-    announcement_learn_more_button: Aprende máis
+    announcement_learn_more_button: Aprender máis
     announcement_try_now_button: Proba agora
   move_students:
     all_students_must_be_in_current_section: Todo o alumnado debe estar inscrito no
@@ -489,7 +489,7 @@ gl:
     more: Máis
     feedback: Enviar comentarios
     translate: Axúdanos a traducir ao teu idioma
-    support: Soporte
+    support: Axuda e Comunidade
     tos_short: Termos
     tos: Termos de Servizo
     privacy: Política de Privacidade
@@ -517,7 +517,7 @@ gl:
     show_video: Amosar video
   compatibility:
     upgrade:
-      link: Aprende máis
+      link: Aprender máis
   slow_loading: Isto está a demorar máis do habitual...
   try_reloading: Tente recarregar a páxina
   next_stage: Xa está! Continúa para a próxima etapa
@@ -587,7 +587,7 @@ gl:
         por personaxes de Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explora un mundo Minecraft através do código.
+      body: Explora o mundo de Minecraft a través do código
     minecraft2016:
       title: Minecraft
     hero:

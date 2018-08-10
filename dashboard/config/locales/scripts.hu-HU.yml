@@ -130,7 +130,7 @@ hu:
             'Bee: Nested Loops':
               name: 'Méh: egymásba ágyazott ciklusok'
             Bounce:
-              name: Visszapattanós
+              name: Ugrál
             Computational Thinking:
               name: Számítógépes gondolkodás
             Crowdsourcing:
@@ -283,7 +283,7 @@ hu:
             Intro:
               name: Bevezető
             Variables:
-              name: Változók
+              name: változók
         algebra:
           stages:
             'Eval: Conditionals':
@@ -336,7 +336,7 @@ hu:
           description_audience: 10-től 18 éves korig
           stages:
             Abstraction:
-              name: Változó
+              name: Absztrakció
             Algorithms:
               name: algoritmusok
             Computational Thinking:
@@ -344,15 +344,15 @@ hu:
             Conditionals:
               name: Feltételek
             Functions:
-              name: Függvények
+              name: funkciók
             Graph Paper Programming:
               name: Grafikus programozás
             Introduction to Computer Science:
-              name: Bevezetés a számítástechnikába
+              name: Bevezetés a számítógép tudományába
             Relay Programming:
               name: Váltó programozás
             Song Writing:
-              name: Dalírás
+              name: Dal iras
             The Artist:
               name: A művész
             The Artist 2:
@@ -394,7 +394,7 @@ hu:
           description_short: Események
           stages:
             Bounce:
-              name: Visszapattanós
+              name: Ugrál
             Calc:
               name: Számolás
             Eval:
@@ -441,6 +441,8 @@ hu:
           stages:
             Puzzles:
               name: Feladványok
+        cspunit1:
+          description_short: Programozás
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -460,6 +462,7 @@ hu:
             What is CSP?:
               name: Mi a CSP?
         cspunit3:
+          description_short: Programozás
           stages:
             Creating Functions:
               name: Függvények létrehozása
@@ -498,6 +501,7 @@ hu:
             Wrap-Up:
               name: Összegzés
         cspunit2:
+          description_short: Programozás
           stages:
             The Internet:
               name: Az internet
@@ -526,7 +530,7 @@ hu:
             Bee:
               name: Méh
             Bounce:
-              name: Visszapattanós
+              name: Ugrál
             Flappy:
               name: Flappy
             Jigsaw:
@@ -729,6 +733,10 @@ hu:
               name: Üdvözlünk!
             Wrap-Up:
               name: Összegzés
+        cspunit5:
+          description_short: Programozás
+        cspunit4:
+          description_short: Programozás
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -802,7 +810,7 @@ hu:
           description_short: Programozás
           stages:
             Functions:
-              name: Függvények
+              name: funkciók
         TEMP CSD Unit 3:
           description_short: Programozás
         CSF_Secret_Sample:
@@ -832,7 +840,7 @@ hu:
             'Jigsaw: Learn to drag and drop':
               name: 'Kirakós játék: Tanuld meg a vonszolást'
             Loops:
-              name: Ciklusok
+              name: hurkok
             Programming:
               name: Programozás
             'Real-life Algorithms: Plant a Seed':
@@ -852,7 +860,7 @@ hu:
             'Jigsaw: Learn to drag and drop':
               name: 'Kirakós játék: Tanuld meg a vonszolást'
             Loops:
-              name: Ciklusok
+              name: hurkok
             Programming:
               name: Programozás
         grade5:
@@ -896,16 +904,16 @@ hu:
             Bee Debugging:
               name: 'Méh: hibakeresés'
             Bounce:
-              name: Visszapattanós
+              name: Ugrál
             'Farmer: While Loops':
               name: 'Farmer: feltételes ciklusok'
         csd3-2017:
           description_short: Programozás
           stages:
             Functions:
-              name: Függvények
+              name: funkciók
             Variables:
-              name: Változók
+              name: változók
             Conditionals:
               name: Feltételek
         grade2:
@@ -929,15 +937,15 @@ hu:
             For Loops:
               name: Számláló ciklusok
             Functions:
-              name: Függvények
+              name: funkciók
             Functions with Parameters:
               name: Paraméteres függvények
             Loops:
-              name: Ciklusok
+              name: hurkok
             Nested Loops:
               name: Egymásba ágyazott ciklusok
             Variables:
-              name: Változók
+              name: változók
             While Loops:
               name: Elől tesztelős ciklusok
         algebrapdnext:
@@ -1005,7 +1013,7 @@ hu:
           description: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
           stages:
             Bounce:
-              name: Visszapattanós
+              name: Ugrál
         fesbinary:
           title: Bináris
           stages:
@@ -1185,15 +1193,15 @@ hu:
         csd3-draft:
           stages:
             Variables:
-              name: Változók
+              name: változók
             Conditionals:
               name: Feltételek
             Functions:
-              name: Függvények
+              name: funkciók
         csd3-old:
           stages:
             Functions:
-              name: Függvények
+              name: funkciók
         csd1-old:
           stages:
             Intro to Problem Solving:
@@ -1227,11 +1235,11 @@ hu:
         csd3-chapters:
           stages:
             Variables:
-              name: Változók
+              name: változók
             Conditionals:
               name: Feltételek
             Functions:
-              name: Függvények
+              name: funkciók
             'null':
               name: semmi
         coursef-ramp:
@@ -1245,7 +1253,7 @@ hu:
             Ice Age Play Lab:
               name: Jégkorszak játéklabor
             Bounce:
-              name: Visszapattanós
+              name: Ugrál
         coursea-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1438,21 +1446,21 @@ hu:
         csd3-1819draft:
           stages:
             Variables:
-              name: Változók
+              name: változók
             Conditionals:
               name: Feltételek
             Functions:
-              name: Függvények
+              name: funkciók
           description_short: Programozás
         csd3-2018:
           description_short: Programozás
           stages:
             Variables:
-              name: Változók
+              name: változók
             Conditionals:
               name: Feltételek
             Functions:
-              name: Függvények
+              name: funkciók
         csd2-2018:
           stages:
             Lists:

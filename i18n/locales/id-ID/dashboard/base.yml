@@ -19,7 +19,7 @@ id:
         parent_email: 'Email orang tua/wali'
         personal_email: "Alamat email pribadi <a href=\"%{url}\">(klik di sini jika Anda tidak memiliki sebuah alamat email)</a>"
         username: 'nama pengguna'
-        password: 'kata sandi'
+        password: 'Kata sandi'
         password_confirmation: 'Konfirmasi sandi'
         current_password: 'Sandi saat ini'
         locale: 'Bahasa'
@@ -117,7 +117,7 @@ id:
     teacher_terms: "Saya setuju untuk terikat dengan persyaratan layanan Code.org. Untuk informasi yang lebih lanjut tentang privasi, lihat <a href='http://code.org/privacy'> kebijakan privasi </a> kami."
     additional_information: "Kami membutuhkan informasi tambahan untuk melanjutkan pendaftaran anda"
     user_type_label: "Jenis akun"
-    user_type_teacher: "Guru"
+    user_type_teacher: "Pelajar"
     user_type_student: "siswa"
     field_is_required: "diperlukan"
     accept_terms: "Anda menyetujui untuk membuat akun"
@@ -295,7 +295,7 @@ id:
       classroom: 'Beranda guru'
       district_dashboard: 'Wilayah Dashboard'
       label: 'Halo %{username}'
-      stats: 'Kemajuan saya'
+      stats: 'Kode Studio'
       settings: 'Akun saya'
       logout: 'Keluar'
       signin: 'Masuk'
@@ -471,7 +471,7 @@ id:
     more: 'Lebih'
     feedback: 'Berikan pendapat'
     translate: 'Bantu kami menerjemahkan ke bahasa anda'
-    support: 'Dukungan'
+    support: 'Bantuan dan komunitas'
     support_url: 'http://support.code.org'
     tos_short: 'Ketentuan'
     tos: 'Syarat'
@@ -582,7 +582,7 @@ id:
       body: "Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas."
     minecraft:
       title: "Minecraft"
-      body: "Jelajahi dunia Minecraft melalui kode."
+      body: "Jelajahi dunia Minecraft melalui kode"
     minecraft2016:
       title: "Minecraft"
       body: "Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri."
@@ -713,22 +713,14 @@ id:
     title: "Opsional: Bantu kami melacak kemajuan untuk meningkatkan keragaman dalam ilmu komputer"
     message: "Silakan beritahu kami ras (periksa semua yang berlaku)"
     races:
-      - 
-        white: "Kaukasia"
-      - 
-        black: "Hitam atau Afrika Amerika"
-      - 
-        hispanic: "Hispanik atau Latino"
-      - 
-        asian: "Orang Asia"
-      - 
-        hawaiian: "Penduduk asli Hawaii atau Kepulauan Pasifik"
-      - 
-        american_indian: "Orang Indian Amerika/Penduduk Asli Alaska"
-      - 
-        other: "Lain"
-      - 
-        opt_out: "Memilih untuk tidak menjawab"
+      white: "Kaukasia"
+      black: "Hitam atau Afrika Amerika"
+      hispanic: "Hispanik atau Latino"
+      asian: "Orang Asia"
+      hawaiian: "Penduduk asli Hawaii atau Kepulauan Pasifik"
+      american_indian: "Orang Indian Amerika/Penduduk Asli Alaska"
+      other: "Lain"
+      opt_out: "Memilih untuk tidak menjawab"
     submit: "Kirim"
     decline: "Tutup"
   zendesk_too_young_message: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami. u.'

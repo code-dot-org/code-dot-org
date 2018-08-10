@@ -1,3 +1,5 @@
+require 'stringio'
+require 'cdo/aws/s3'
 require 'cdo/chat_client'
 
 #
@@ -19,11 +21,9 @@ require 'cdo/chat_client'
 class ExpiredDeletedAccountPurger
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run
+  attr_reader :dry_run, :deleted_after, :deleted_before, :max_accounts_to_purge,
+    :log
   alias :dry_run? :dry_run
-  attr_reader :deleted_after
-  attr_reader :deleted_before
-  attr_reader :max_accounts_to_purge
 
   def initialize(options = {})
     @dry_run = options[:dry_run].nil? ? false : options[:dry_run]
@@ -43,26 +43,55 @@ class ExpiredDeletedAccountPurger
     # We'll want to adjust this over time to match activity on our site.
     @max_accounts_to_purge = options[:max_accounts_to_purge] || 100
     raise ArgumentError.new('max_accounts_to_purge must be Integer') unless @max_accounts_to_purge.is_a? Integer
+
+    @log = StringIO.new
   end
 
   def purge_expired_deleted_accounts!
+    start_time = Time.now
+    start_activity_log
     num_accounts_purged = 0
     check_constraints
-    account_purger = AccountPurger.new dry_run: @dry_run
+
+    account_purger = AccountPurger.new dry_run: @dry_run, log: @log
     expired_soft_deleted_accounts.each do |account|
       account_purger.purge_data_for_account account
       num_accounts_purged += 1
-    rescue StandardError
-      say "unable to purge account #{account}, moving to manual review queue"
-      # TODO: Move to manual review queue
+    rescue StandardError => err
+      QueuedAccountPurge.create user: account, reason_for_review: err.message
     end
-    say "Done - Purged #{num_accounts_purged} expired deleted accounts"
+
+    if @dry_run
+      say "Would have purged #{num_accounts_purged} accounts"
+    else
+      say "Purged #{num_accounts_purged} accounts"
+    end
     say "#{manual_review_queue_depth} accounts require review" if manual_review_queue_depth > 0
   rescue StandardError => err
     yell err.message
     raise
   ensure
-    record_metrics num_accounts_purged unless @dry_run
+    metrics = gather_metrics num_accounts_purged
+    upload_activity_log start_time, metrics
+    send_metrics metrics unless @dry_run
+  end
+
+  private def start_activity_log
+    @log.puts "Starting purge_expired_deleted_accounts!"
+    @log.puts "deleted_after: #{@deleted_after}"
+    @log.puts "deleted_before: #{@deleted_before}"
+    @log.puts "max_accounts_to_purge: #{@max_accounts_to_purge}"
+    @log.puts "(dry-run)" if @dry_run
+  end
+
+  private def upload_activity_log(time, metrics)
+    metrics.each do |key, value|
+      @log.puts "#{key}: #{value}"
+    end
+    @log.puts "Done in #{Time.now - time} seconds"
+    AWS::S3::LogUploader.
+      new('cdo-audit-logs', "expired-deleted-account-purger-activity/#{CDO.rack_env}").
+      upload_log(time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
   end
 
   private def check_constraints
@@ -73,13 +102,21 @@ class ExpiredDeletedAccountPurger
     end
   end
 
-  private def record_metrics(num_accounts_purged)
-    # Number of soft-deleted accounts in system after this run
-    NewRelic::Agent.record_metric("Custom/DeletedAccountPurger/SoftDeletedAccounts", soft_deleted_accounts.count)
-    # Number of accounts purged during this run
-    NewRelic::Agent.record_metric("Custom/DeletedAccountPurger/AccountsPurged", num_accounts_purged)
-    # Depth of manual review queue after this run
-    NewRelic::Agent.record_metric("Custom/DeletedAccountPurger/ManualReviewQueueDepth", manual_review_queue_depth)
+  private def gather_metrics(num_accounts_purged)
+    {
+      # Number of soft-deleted accounts in system after this run
+      "Custom/DeletedAccountPurger/SoftDeletedAccounts" => soft_deleted_accounts.count,
+      # Number of accounts purged during this run
+      "Custom/DeletedAccountPurger/AccountsPurged" => num_accounts_purged,
+      # Depth of manual review queue after this run
+      "Custom/DeletedAccountPurger/ManualReviewQueueDepth" => manual_review_queue_depth,
+    }
+  end
+
+  private def send_metrics(metrics)
+    metrics.each do |key, value|
+      NewRelic::Agent.record_metric key, value
+    end
   end
 
   private def soft_deleted_accounts
@@ -87,17 +124,23 @@ class ExpiredDeletedAccountPurger
   end
 
   private def expired_soft_deleted_accounts
-    soft_deleted_accounts.where 'deleted_at BETWEEN :start_date AND :end_date',
-      start_date: @deleted_after,
-      end_date: @deleted_before
+    user_ids_needing_manual_review = QueuedAccountPurge.pluck(:user_id)
+    soft_deleted_accounts.
+      where(
+        'deleted_at BETWEEN :start_date AND :end_date',
+        start_date: @deleted_after,
+        end_date: @deleted_before
+      ).
+      where.not(id: user_ids_needing_manual_review)
   end
 
   private def manual_review_queue_depth
-    0 #TODO
+    QueuedAccountPurge.all.count
   end
 
   # Send messages to Slack #cron-daily room.
   private def say(message, options = {})
+    @log.puts message
     ChatClient.message 'cron-daily', prefixed(message), options
   end
 

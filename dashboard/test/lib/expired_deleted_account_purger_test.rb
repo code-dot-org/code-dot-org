@@ -1,9 +1,30 @@
 require 'test_helper'
+require 'account_purger'
 require 'expired_deleted_account_purger'
 require_relative '../../../shared/test/spy_newrelic_agent'
 
+# For purposes of this test, reopen AccountPurger and fake the actual
+# account deletion logic.
+class AccountPurger
+  private def really_purge_data_for_account(user)
+    user.update(purged_at: Time.now)
+  end
+end
+
 class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   freeze_time
+
+  def setup
+    CDO.hip_chat_logging = false
+    CDO.slack_endpoint = nil
+
+    # No uploads
+    ExpiredDeletedAccountPurger.new \
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago
+    ExpiredDeletedAccountPurger.any_instance.stubs :upload_activity_log
+    PurgedAccountLog.any_instance.stubs :upload
+  end
 
   test 'can construct with no arguments - all defaults' do
     edap = ExpiredDeletedAccountPurger.new
@@ -141,6 +162,24 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     refute_includes picked_users, deleted_30_days_ago
   end
 
+  test 'does not locate accounts already queued for manual review' do
+    autodeleteable = create :student, deleted_at: 3.days.ago
+    needs_manual_review = create :student, deleted_at: 3.days.ago
+    create :queued_account_purge, user: needs_manual_review
+
+    picked_users = ExpiredDeletedAccountPurger.new(
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago
+    ).send :expired_soft_deleted_accounts
+
+    assert_includes picked_users, autodeleteable
+    refute_includes picked_users, needs_manual_review
+  end
+
+  #
+  # Tests over full behavior
+  #
+
   test 'with two eligible and two ineligible accounts' do
     student_a = create :student, deleted_at: 1.day.ago
     student_b = create :student, deleted_at: 3.days.ago
@@ -150,8 +189,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
       deleted_before: 2.days.ago
-
-    AccountPurger.stubs(:new).returns(FakeAccountPurger.new)
 
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
@@ -167,6 +204,16 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     assert_includes purged, student_b
     assert_includes purged, student_c
     refute_includes purged, student_d
+
+    assert_equal <<~LOG, edap.log.string
+      Starting purge_expired_deleted_accounts!
+      deleted_after: #{4.days.ago}
+      deleted_before: #{2.days.ago}
+      max_accounts_to_purge: 100
+      Purging user_id #{student_b.id}
+      Purging user_id #{student_c.id}
+      Purged 2 accounts
+    LOG
   end
 
   test 'moves account to queue when purge fails' do
@@ -183,21 +230,31 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/AccountsPurged", 1)
-    # TODO: Test moved to manual review queue
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
-    edap.purge_expired_deleted_accounts!
+    assert_creates QueuedAccountPurge do
+      edap.purge_expired_deleted_accounts!
+    end
 
     purged = User.with_deleted.where.not(purged_at: nil)
     assert_includes purged, student_a
     refute_includes purged, student_b
+
+    assert_equal <<~LOG, edap.log.string
+      Starting purge_expired_deleted_accounts!
+      deleted_after: #{4.days.ago}
+      deleted_before: #{2.days.ago}
+      max_accounts_to_purge: 100
+      Purged 1 accounts
+      1 accounts require review
+    LOG
   end
 
   test 'dry-run behavior' do
     create :student, deleted_at: 1.day.ago
-    create :student, deleted_at: 3.days.ago
-    create :student, deleted_at: 3.days.ago
+    student_b = create :student, deleted_at: 3.days.ago
+    student_c = create :student, deleted_at: 3.days.ago
     create :student, deleted_at: 5.days.ago
 
     edap = ExpiredDeletedAccountPurger.new \
@@ -205,13 +262,20 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_before: 2.days.ago,
       dry_run: true
 
-    dry_run_account_purger = FakeAccountPurger.new(dry_run: true)
-    AccountPurger.stubs(:new).with(dry_run: true).returns(dry_run_account_purger)
-    dry_run_account_purger.expects(:purge_data_for_account).twice
-
     NewRelic::Agent.expects(:record_metric).never
 
     edap.purge_expired_deleted_accounts!
+
+    assert_equal <<~LOG, edap.log.string
+      Starting purge_expired_deleted_accounts!
+      deleted_after: #{4.days.ago}
+      deleted_before: #{2.days.ago}
+      max_accounts_to_purge: 100
+      (dry-run)
+      Purging user_id #{student_b.id} (dry-run)
+      Purging user_id #{student_c.id} (dry-run)
+      Would have purged 2 accounts
+    LOG
   end
 
   test 'when number of accounts to delete exceeds safety constraint' do
@@ -244,6 +308,14 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     assert_equal \
       "Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.",
       raised.message
+
+    assert_equal <<~LOG, edap.log.string
+      Starting purge_expired_deleted_accounts!
+      deleted_after: #{25.days.ago}
+      deleted_before: #{15.days.ago}
+      max_accounts_to_purge: 5
+      Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
+    LOG
   end
 end
 

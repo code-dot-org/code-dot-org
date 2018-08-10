@@ -152,19 +152,18 @@ es:
       2-3 Artist Loops New 11_instruction: Esta vez vamos a dibujarlo 24 veces. Añadir
         un giro a la izquierda de 30 grados a este código y ponerlo todo en un bloque
         de repetición.
-      2-3 Artist Loops New 12_instruction: 'Dibuja un diamante con lados de 100 píxeles.
-
-'
+      2-3 Artist Loops New 12_instruction: 'Dibuja un diamante con lados de 100 píxeles. '
       2-3 Artist Loops New 13_instruction: Ahora dibuja un diamante 3 veces en una
         iteración.
       2-3 Artist Loops New 14_instruction: Ahora a dibujar el diamante 10 veces pero
         gire 90 grados entre cada diamante.
       2-3 Artist Loops New 15_instruction: Dibuja algo divertido.
-      2-3 Artist Loops New 2_instruction: Aquí hay parte del código que utilizas para
-        dibujar ese cuadro. ¿Qué sucede si se utiliza el bloque de repetición para
-        ejecutar este código 4 veces?
-      2-3 Artist Loops New 9_instruction: Dibujar una "V" simple donde ambos lados
-        sean 50 píxeles para completar la flecha.
+      2-3 Artist Loops New 2_instruction: "Aquí es el mismo rompecabezas que sólo
+        solucionamos, pero esta vez, sólo podemos utilizar un bloque de 'avanzar'
+        y 'girar' cuadra que este tiempo. \r \r puede utiliza una 'repetición' para
+        resolver este rompecabezas?"
+      2-3 Artist Loops New 9_instruction: Dibuja una simple V donde ambos lados sean
+        de 50 píxeles para completar la flecha.
       2-3 Artist Match Hex Pic_instruction: 'Iguala: Ayuda a terminar el hexágono.'
       2-3 Artist Match Rho Pic_instruction: 'Iguala: Terminar el código faltante.'
       2-3 Artist Match Sq Pic_instruction: 'Iguala: Completar el código faltante'
@@ -174,12 +173,10 @@ es:
         \nbucle todo esto \nbloque de código 3 veces para dibujar el patrón."
       2-3 Artist Nested Loops 10_instruction: Itera este código 12 veces para completar
         el patrón.
-      2-3 Artist Nested Loops 11_instruction: |-
-        bucle este código 4 veces para completar
-        el patrón, gire 90 grados después de cada círculo.
-      2-3 Artist Nested Loops 12_instruction: |-
-        Itera este código 12 veces para completar
-        las curvas.
+      2-3 Artist Nested Loops 11_instruction: Itera este código 4 veces para completar
+        el patrón, gira 90 grados después de cada circulo.
+      2-3 Artist Nested Loops 12_instruction: Itera este código 12 veces para completar
+        los rizos.
       2-3 Artist Nested Loops 2_instruction: "Ahora usaremos un bucle para crear un
         triangulo 6 veces. \r \n\r\nDespués de dibujar cada triangulo, debes girar
         60 grados antes de dibujar el siguiente."
@@ -187,30 +184,29 @@ es:
         12 veces. \r\n\r\nDivide el número de grados de un círculo (360) \npor el
         número de formas que dibujarás (12) para averiguar cuánto debes girar \ndespués
         de cada forma."
-      2-3 Artist Nested Loops 4_instruction: "Usa un bucle para dibujar un diamante
-        12 veces y hacer una flor. \r\n\r\nSugerencia: Dibujar 12 diamantes es igual
-        que dibujar 12 triángulos, como ya lo hiciste \r \n¿cuánto necesitas girar
-        después de cada forma?"
-      2-3 Artist Nested Loops 5_instruction: "Llenar en las ventanas del edificio
-        con \nun bucle anidado. Las ventanas son 20 píxeles de largos y 20 píxeles
-        aparte."
+      2-3 Artist Nested Loops 4_instruction: "Haz un blucle con el diamante 12 veces
+        para dibujar una flor!\r\n\r\nNota: Usaremos el mismo ángulo para hacer el
+        bucle de los 12 diamantes como lo hicimos para los 12 triángulos.  \r\n¿Cuánto
+        necesitas girar después de hacer cada forma?"
+      2-3 Artist Nested Loops 5_instruction: "Rellena dentro de las ventanas del edificio
+        utilizando un bucle anidado. \r\n\r\nLas ventanas son de 20 pixels de largo
+        por 20 pixels de ancho."
       2-3 Artist Nested Loops 6_instruction: "Este dinosaurio tiene 8 picos subiendo
         por su cola. \r\nCada pico tiene 30 píxeles de largo. Usa un bucle para crear
         el pico (triángulo) 8 veces, pero\n¡asegúrate de moverte hacia adelante después
         de cada uno!"
-      2-3 Artist Nested Loops 7_instruction: "Usa un bucle para dibujar 10 triángulos
-        y crear un sol. \r\n\r\nNecesitarás moverte y girar después de cada triángulo.
-        \r\n\r\nPuedes averiguar cuanto debes girar dividiendo la cantidad de grados
-        de un circulo por \nla cantidad de figuras que lo componen."
-      2-3 Artist Nested Loops 8_instruction: |-
-        Ahora vamos a agregar un poco de césped a nuestra imagen.
-        Cada penacho de césped está separado 50 píxeles del otro.
-      2-3 Artist Nested Loops 9_instruction: |-
-        Terminaremos esta foto agregandole
-        una flor. Enrolle el diamante 12 veces para dibujar tu flor.
-      2-3 Artist Nested Loops Free Play_instruction: |-
-        jugo libre, dibujar algo fascinante
-        con bucles anidados.
+      2-3 Artist Nested Loops 7_instruction: "Haz un bucle con este triángulo 10 veces
+        para dibujar el sol. \r\n\r\nNecesitarás moverte y torcer después de cada
+        triángulo..\n\r\n\r\nPuedes averiguar cuánto tienes que girar dividiendo el
+        número de grados que tiene un círculo entre el número de triángulos que quieres
+        hacer."
+      2-3 Artist Nested Loops 8_instruction: "Ahora vamos a añadir algo de hierba
+        a nuestra imagen. \r\n\r\nLas matas de hierba están separadas 50 pixels entre
+        sí."
+      2-3 Artist Nested Loops 9_instruction: "Vamos a terminar este dibujo añadiendo
+        nuestra flor. \r\n\r\nHaz el bucle del diamante 12 veces para dibujar la flor."
+      2-3 Artist Nested Loops Free Play_instruction: Juego libre, dibuja algo chulo
+        con los bucles anidados.
       2-3 Bee Conditionals 1_instruction: |-
         ¡Hola! Soy una abeja. Ayúdame a obtener
         néctar de la flor.
@@ -255,15 +251,15 @@ es:
         el error(s) para colectar todo el néctar y hacer toda la miel.
       2-3 Bee Debugging 2_instruction: Estos bloques realmente me molesta. Corregir
         el error(s) para recoger todo el néctar y hacer todo de la miel.
-      2-3 Bee Debugging 3_instruction: Estos bloques realmente me molesta. Corregir
-        el error(s) para recoger todo el néctar y hacer todo de la miel.
+      2-3 Bee Debugging 3_instruction: "Ooh, este pica!\r\n\r\nArregla\nel error(s)
+        para recoger todo el néctar."
       2-3 Bee Debugging 4_instruction: Estos bloques realmente me molesta. Corregir
         el error(s) para recoger todo el néctar y hacer todo de la miel.
       2-3 Bee Debugging 5_instruction: "Estos bloques realmente me molestan. Corregir
         \nel error(s) para recoger todo el néctar y hacer todo de la miel.  Usted
         puede \nahora usar ejecutar y paso."
-      2-3 Bee Debugging 6_instruction: "Estos bloques realmente me molestan. Corregir
-        \nel error(s) para recoger todo el néctar y hacer toda la miel. "
+      2-3 Bee Debugging 6_instruction: "¡Qué desafío tan dulce!\r\n\r\nArregla\nel
+        error(s) para recoger todo el néctar."
       2-3 Bee Debugging 7_instruction: Estos bloques realmente me molesta. Corregir
         el error(s) para recoger todo el néctar y hacer todo de la miel.
       2-3 Bee Debugging 8_instruction: Estos bloques realmente me molesta. Corregir
@@ -279,10 +275,9 @@ es:
         de cada\nflor."
       2-3 Bee Functions 10_instruction: Las flores moradas pueden tener 1 o 0 néctar.
         Crea una función que recoja el néctar solo de aquellas flores que lo tengan.
-      2-3 Bee Functions 2_instruction: "Las funciones son bloques de código que realizan\nuna
-        tarea. Utilice la función \"get 5\" para obtener 5 néctares a cada momento.
-        Asegúrese de \nutilizar un bucle para obtener un recuento ideal de bloque,
-        también."
+      2-3 Bee Functions 2_instruction: "Las funciones son bloques de código que realizan
+        una tarea. \r\n\r\nUsa la función `obtener 5` para obtener 5 néctares a la
+        vez."
       2-3 Bee Functions 3_instruction: Colecta todo el néctar de cada flor.
       2-3 Bee Functions 4_instruction: La función "mover y obtener néctar" realizada
         por la abeja, recoge néctar, y entonces devuelve a la abeja al principio.
@@ -329,9 +324,8 @@ es:
         cada panal."
       2-3 Bee Loops 3A_instruction: "¿Podrías utilizar un ciclo para recolectar todo
         el néctar?"
-      2-3 Bee Loops 3B_instruction: |-
-        Ahora usa el nuevo bloque repeat para recolectar todo
-        el néctar y hacer toda la miel.
+      2-3 Bee Loops 3B_instruction: Ahora usa el bloque 'repetir' para recolectar
+        todo el néctar y crear toda la miel.
       2-3 Bee Loops 4_instruction: |-
         Utiliza un ciclo similar al del último problema, pero ahora utiliza
         un bloque turn.
@@ -505,13 +499,15 @@ es:
         de "repetir": mover, mover, girar.'
       4-5 Artist 1_instruction: 'Ayudarme a terminar de dibujar mi caja. (Cada línea
         tiene 300 píxeles de  largo) '
-      4-5 Artist 10_instruction: Presione "Ejecutar" para probar el código. Luego,
-        repita varias veces para completar el dibujo. Los colores serán diferentes
-        cada vez.
+      4-5 Artist 10_instruction: |-
+        Presiona "Ejecutar" para probar el código. Entonces, repite
+        las veces necesarias para completar el dibujo. Los colores serán diferentes cada
+        hora.
       4-5 Artist 11_instruction: Completa las líneas verdes. Las líneas son de 300
         píxeles de largo y están separadas por 15 píxeles.
-      4-5 Artist 2_instruction: "¿Puedes crear un bucle de código para completar el
-        cuadrado?"
+      4-5 Artist 2_instruction: |-
+        Pasa este código usando el bloque `repetir`
+        para completar el cuadrado.
       4-5 Artist 3.5_instruction: Muy bien, tratar de averiguar qué pasaría si ejecutas
         este código (o presiona "Run" para probarlo). Luego, repitítelo la suficiente
         cantidad de veces para completar el dibujo. Los colores serán (probablemente)
@@ -521,9 +517,12 @@ es:
         El lado más largo tiene una longitud de 200. Dibuja el rectángulo.
       4-5 Artist 4_instruction: "¿Cuántos grados son en un círculo?  Crea bucles con
         los bloques para crear un círculo de colores."
-      4-5 Artist 5_instruction: "¿Qué ángulo utilizas?"
-      4-5 Artist 6_instruction: Este triángulo equilátero tiene ángulos de 60, 60
-        y 60 grados. Cada lado es de 200 píxeles. Completa el dibujo.
+      4-5 Artist 5_instruction: |-
+        ¿Qué podemos reemplazar "???" con hacer
+        seguro que el zombi completa este dibujo usando el circuito proporcionado?
+      4-5 Artist 6_instruction: |-
+        Este triángulo equilátero tiene ángulos de
+        60, 60 y 60 grados Cada lado tiene 200 píxeles. Completa el dibujo.
       4-5 Artist 7_instruction: Este triángulo rectángulo tiene ángulos de 30, 60
         y 90 grados. La longitud de la hipotenusa es del doble de la altura de 100
         píxeles. Completa el dibujo.
@@ -572,8 +571,9 @@ es:
          Puedes encontrar el bloque "for" en la categoría de bucles.
       4-5 Artist For Loops 9_instruction: "Estos círculos son tamaño 5, 10, 15, 20,
         25, 30 y 35. \nDibujar los círculos usando un bloque de \"for\"."
-      4-5 Artist Free Draw 1_instruction: "¡Dibujo libre!  Dibuja cualquier cosa que
-        estés inspirado a crear."
+      4-5 Artist Free Draw 1_instruction: |-
+        ¡Dibujo libre! Dibuja cualquier cosa que tu
+        estés inspirado para crear.
       4-5 Artist Functions 1_instruction: Usa un bucle de repetición para dibujar
         este triángulo.
       4-5 Artist Functions 10a_instruction: Pon este código en la función 'dibujar
@@ -673,11 +673,14 @@ es:
       4-5 Artist Patterns Free Play_instruction: Juego libre - prueba tu destreza
         en la fabricación de un patrón propio!
       4-5 Bee Conditionals - FC Test_instruction: La abeja sólo quiere néctar ahora.
-        No todo los objetos son flores, así que compruebe debajo de cada nube para
-        ver si está ocultando una flor. Si es así, puede recolectar néctar.
+        No todos los objetos son flores, así que mira debajo de TODAS LAS NUBES para
+        verlo si esta escondiendo una flor. Si es así, puedes coger néctar.
       4-5 Bee Conditionals 1_instruction: La abeja no puede decir si se trata de una
         flor o un panal de miel. Reúnen néctar de las flores, pero primero tienes
         que comprobar si es una flor o un panal de miel.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: La abeja solo quiere néctar ahora
+        mismo. Recuerda, no todos los objetos son flores, así que chequea, para solo
+        recoger néctar de las flores.
       4-5 Bee Conditionals 2_instruction: "La abeja sólo quiere néctar ahora . \nRecuerde
         que no todos los objetos son flores, recoge néctar solamente de las flores."
       4-5 Bee Conditionals 3_instruction: "Ahora la abeja sólo quiere hacer miel.
@@ -710,8 +713,9 @@ es:
       4-5 Bee Debugging 3_instruction: Encuentra los errores y arréglalos.
       4-5 Bee Debugging 4_instruction: Estos bloques no funcionan. ¿Cúal es el patrón?
       4-5 Bee Debugging 5_instruction: Algo no está bien aquí...
-      4-5 Bee Debugging 6_instruction: La flor púrpura contiene una cantidad desconocida
-        de néctar. Arrela los bloques, para obtener todo el néctar de la flor.
+      4-5 Bee Debugging 6_instruction: "La flor morada tiene una diferente\ncantidad
+        de néctar cada vez que ejecutas el rompecabezas. \r\n\r\nArregla los bloques
+        para obtener\ntodo el néctar de la flor cada vez."
       4-5 Bee Debugging 7_instruction: La función le falta algo...
       4-5 Bee Debugging 8_instruction: Esta función está bien, pero no fue usada correctamente.
       4-5 Bee Debugging 9_instruction: "¿Por qué la abeja no está haciendo suficiente
@@ -735,8 +739,9 @@ es:
         un bucle de tiempo.
       4-5 Bee Nested Loops 9_instruction: Recolecta todo el néctar de estas flores,
         anidando un bucle de tiempo dentro de un bloque de repetición.
-      4-5 Bee Nested Loops Assessment 1_instruction: Evaluación - Recolecta todo el
-        néctar y haz toda la miel mediante el uso de bucles.
+      4-5 Bee Nested Loops Assessment 1_instruction: |-
+        ** Evaluación: ** Reunir
+        todo el néctar y hacer toda la miel usando lazos.
       4-5 Bee Nested Loops Rows_instruction: |-
         Reune todo el néctar de las filas de las flores!
         Utiliza un bucle anidado.
@@ -778,30 +783,33 @@ es:
 '
       4-5 Maze Conditionals 1_instruction: Utiliza el bloque repetir hasta para llevar
         al zombie hasta el girasol.
-      4-5 Maze Conditionals 10_instruction: "¿Puede añadir solo 3 bloques para ayudar
-        al zombie a resolver un laberinto más complejo? \r \r si lo haces bien, él
-        puede caminar cualquier camino con curvas sin importar la longitud!"
+      4-5 Maze Conditionals 10_instruction: "¿Puedes agregar solo 3 bloques para ayudar
+        al zombi a resolver un laberinto más complejo? \r\n\r\nSi lo haces bien, él
+        puede caminar cualquier camino curvilíneo sin importar la longitud!"
       4-5 Maze Conditionals 2_instruction: Utiliza el bloque repetir hasta para llevar
         al zombie hasta el girasol.
-      4-5 Maze Conditionals 3_instruction: 'Utiliza el bloque "if" para dejarme decidir
-        cuando voltear. Sugerencia: Sólo necesitas un bloque mas, pero aprende como
-        se configura, con eso lo puedes hacer por ti mismo la próxima vez.'
-      4-5 Maze Conditionals 4_instruction: Ok, esto es como con el rompecabezas pasado,
-        pero recuerda como utilizaste el bloque "if" y el bloque "repeat" juntos.
-      4-5 Maze Conditionals 5_instruction: ¡Yo querer girasol! Utiliza in bloque "if"
-        para llevarme allá, con el menor número de bloques.
-      4-5 Maze Conditionals 6_instruction: ¡Yo querer girasol! Utiliza in bloque "if"
-        para llevarme allá, con el menor número de bloques.
-      4-5 Maze Conditionals 7_instruction: Ok, hagámoslo de nuevo para pacticar -
-        esto no es muy diferente, pero hay que estar pendiente de los ¡chompers!
-      4-5 Maze Conditionals 8_instruction: Los bloques "if-else" comprueban una condición,
-        y luego realizan una cosa o la otra. Para llevarme al girasol trata usando
-        este nuevo bloque.
-      4-5 Maze Conditionals 9_instruction: Una práctica mas con el bloque "if-else",
-        ¿Puedes hacerlo corectamente en el primer intento?
-      4-5 Maze Conditionals Assessment 1_instruction: Utiliza un bloque "repeat until"
-        y un bloque "if-else" para llevarme al girasol usando la mínima cantidad de
-        bloques posible.
+      4-5 Maze Conditionals 3_instruction: "Usa el bloque `si` para ayudarme\na decidir
+        cuándo girar. \r\n"
+      4-5 Maze Conditionals 4_instruction: |-
+        Ok, resuelve este como el último puzzle, pero necesitas recordar cómo usaste los bloques `si` y
+        `repetir hasta` juntos.
+      4-5 Maze Conditionals 5_instruction: "\"¡Quiero girasol!\" \r\n\r\nUsa\nuna
+        declaración `si` para llevar al zombi al girasol con el menor número\nde bloques."
+      4-5 Maze Conditionals 6_instruction: "\"¡Come girasol!\"\r\n\r\nUsa\nuna declaración
+        `si` para llevar al zombi al girasol con el menor número\nde bloques."
+      4-5 Maze Conditionals 7_instruction: |-
+        La solución a este rompecabezas
+        no es muy diferente, ¡pero ten cuidado con los chompers!
+      4-5 Maze Conditionals 8_instruction: "El bloque `si/ no` verifica una\ncondición,
+        entonces hace una cosa u otra. \r\n\r\nUsa este nuevo bloque\npara llevarme
+        al girasol."
+      4-5 Maze Conditionals 9_instruction: "Practica un rompecabezas más con\nel bloque
+        `si/no`!\r\n\r\nSíguelo con tu dedo para ver si puedes lograr\nen tu primer
+        intento."
+      4-5 Maze Conditionals Assessment 1_instruction: |-
+        ** Evaluación: ** Usa
+        un `repetir hasta` y un bloque`si/no` para llevarme al girasol usando la menor cantidad de
+        bloques como sea posible.
       4-5 Nested Loops 1_instruction: 'Completa el código para dibujar estos triángulos.
         El primero es hecho por ti. Sugerencia: 3 triángulos en una rotación de 360
         grados.'
@@ -829,16 +837,18 @@ es:
       4-5 Nested Loops 9_instruction: Dibuja los dientes en la boca de cocodrilo!
       4-5 Nested Loops Assessment 1_instruction: Usar un bucle anidado para completar
         el diseño.
-      4-5 While Loops 1_instruction: Mueveme al agujero y rellena con dos palas de
-        tierra, usando el bloque de "relleno".
-      4-5 While Loops 2_instruction: Mueveme a la pila de tierra y remueve con 5 paleos,
-        usando el bloque 'remover'.
-      4-5 While Loops 3_instruction: 'Mueveme a la pila y remueve todo, despues mueveme
-        hacia el agujero y llenalo completamente.  Sugerencia: Utiliza tan pocos bloques
-        como sea posible.'
-      4-5 While Loops 4_instruction: 'Wow, encontre un agujero realmente profundo!
-        no se cuantas paleadas de tierra necesita. ¿Puedes escribir un programa que
-        llene hasta que el suelo este parejo? Sugerencia: trata usando el bucle mientras.'
+      4-5 While Loops 1_instruction: |-
+        Muéveme al hoyo y llénalo con
+        dos paladas de tierra, usando el bloque `llenar`.
+      4-5 While Loops 2_instruction: |-
+        Moverme a la pila de tierra y eliminar
+        eso con 5 palas de cuchara, usando el bloque `remover 1`.
+      4-5 While Loops 3_instruction: "Use la menor cantidad de bloques posible para
+        completar\neste rompecabezas! \r\n\r\nMuéveme al montón y quita todo el sucio,
+        luego muévete\nal agujero y llénalo completamente."
+      4-5 While Loops 4_instruction: "Wow, mira eso! \r\n\r\nYo no\nse cuántas palas
+        de tierra necesita este hoyo. \r\n¿Puedes tu escribir un programa\nque siga
+        usando el bloque `llenar` hasta que el suelo esté parejo?\n  "
       4-5 While Loops 5_instruction: Wow, ahora hay dos agujeros  muy profundos. ¿Puedes
         escribir un programa que llene los dos hasta que el suelo este parejo?
       4-5 While Loops 6_instruction: Wow, ahora hay un monton de tierra! ¿Puedes escribir
@@ -865,6 +875,32 @@ es:
         últimos cuadrados. Termine la imagen descubriendo los dos colores que faltan
         y codifíquelos.
       App Lab test_instruction: prueba
+      Applab AllTheThings ResourcesTab AllResources_instruction: Dibuja un cuadrado
+        de 1x1 arriba y a la izquierda de la posición inicial de la tortuga. Haz clic
+        para ver las instrucciones completas.
+      Applab AllTheThings ResourcesTab MapReference_instruction: Dibuja un cuadrado
+        de 1x1 arriba y a la izquierda de la posición inicial de la tortuga. Haz clic
+        para ver las instrucciones completas.
+      Applab AllTheThings ResourcesTab ReferenceLinks_instruction: Dibuja un cuadrado
+        de 1x1 arriba y a la izquierda de la posición inicial de la tortuga. Haz clic
+        para ver las instrucciones completas.
+      Artist - Nested Loops 1_instruction: 'Completa el código para dibujar estos
+        triángulos. El primero es hecho por ti. Sugerencia: 3 triángulos en una rotación
+        de 360 grados.'
+      Artist - Nested Loops 10_instruction: Dibuja la última fila de estrellas de
+        esta bandera, por medio de un bucle de bloques proporcionados. Las estrellas
+        son de 50 píxeles, pero recuerda que las estrellas por si mismas son 30 píxeles
+        de ancho.
+      Artist - Nested Loops 11_instruction: "¿Puedes dibujar estas 10 plazas de esta
+        acera, usando un bucle anidado? Cada cuadrado tiene 30 píxeles."
+      Artist - Nested Loops 12_instruction: "¿Puedes dibujar estos 36 triángulos utilizando
+        un bucle anidado?"
+      Artist - Nested Loops 5_instruction: has un bucle con el código dado para crear
+        un molino de viento.
+      Artist - Nested Loops 6_instruction: |-
+        ¿Puedes dibujar un hexágono haciendo un enlace
+        con el código triangular?
+      Artist - Nested Loops 9_instruction: Dibujar los dientes en la boca del cocodrilo!
       Artist - Nested Loops Assessment 1_instruction: Utiliza un circuito anidado
         para completar el diseño.
       Artist Inspiration_instruction: "Inspiración de juego libre: Ahora has aprendido
@@ -886,10 +922,33 @@ es:
         has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       Brad Spooky House_instruction: 'Juego Libre: Aquí están las funciones que has
         escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
+      Building a Foundation Assessment_instruction: |-
+        Construye una piramide de tres niveles,
+        ¡No hay mas instrucciones, simplemente juega con las piezas hasta lograrlo!
       Busy Bee 2_instruction: "¡Esta abeja tiene mucho trabajo por hacer! ¿Puedes
         encontrar algún patrón que se pueda utilizar para simplificar el código?"
       Busy Bee_instruction: "¡Esta abeja tiene mucho trabajo por hacer! ¿Puedes encontrar
         algún patrón que se pueda utilizar para simplificar el código?"
+      C3-Farmer While Loops 5_instruction: Wow, ahora hay dos agujeros  muy profundos.
+        ¿Puedes escribir un programa que llene los dos hasta que el suelo este parejo?
+      C3-Farmer While Loops 6_instruction: Wow, ahora hay un monton de tierra! ¿Puedes
+        escribir un programa que quite todo eso para que el suelo quede parejo?
+      C3-Farmer While Loops 7_instruction: "¡Wow, ahora hay tres montones de tierra!
+        ¿Puedes escribir un programa que elimine cada uno de ellos hasta que la tierre
+        quede plana?"
+      C3-Farmer While Loops Assessment 1_instruction: Existen un montón de huecos
+        y pilotes. Ayúdame a llenarlos y removerlos para aplanar la tierra.
+      CSPU5_U3 - Canvas - freePlay_instruction: Extiende la funcionalidad de uno de
+        los efectos o crea uno completamente nuevo (haz clic para ver instrucciones
+        completas)
+      CSPU5_U3 - Canvas - freePlay_2018_instruction: Extiende la funcionalidad de
+        uno de los efectos o crea uno completamente nuevo (haz clic para ver instrucciones
+        completas)
+      CSPU5_U3 - Keys - Final Image Scroller_instruction: Actualice el desplazamiento
+        de la imagen para responder a los botones y presionar las teclas. (Haga clic
+        para ver instrucciones completas)
+      Course 2 Bee Loops 1_instruction: "Hola, soy una abeja. ¿Puedes ayudarme a recolectar
+        \nel néctar de estas flores? "
       Course 2 Maze Loops 1_instruction: "¿Puedes llevarme hasta el cerdo usando 5
         bloques?"
       Course 4 2_instruction: La abeja solo quiere néctar ahora mismo. Recuerda, no
@@ -1126,11 +1185,9 @@ es:
         este! Si te inspira esta imagen, tratar de hacer algo similar. De lo contrario,
         crea algo por tu cuenta. \r \r quieres saber cómo se hizo nuestro patron de
         inspiración? Visita https://studio.code.org/c/106387604 para la solución."
-      Course 4 Artist Inspire_instruction: "Inspiración para ejercicio libre: ¡Ya
-        has aprendido todo lo que necesitas saber para hacer un patrón como este!
-        \ Si te inspira esta imagen, tratar de hacer algo similar.  Si no, crea algo
-        por tu cuenta \r \r ¿Quieres saber cómo se hizo nuestro modelo de inspiración?
-        Echa un vistazo aquí: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "¿Quieres un segundo vistazo al diseño
+        de inspiración o los consejos?  Haga clic aquí! \r \r si lo prefieres, ¡crea
+        un diseño propio!"
       Course 4 Artist Params 1_instruction: Editemos una función que dibuje un cuadrado
         de 50 píxeles cada lado
       Course 4 Artist Params 10_instruction: ¡Puedes llamar una función dentro de
@@ -1245,7 +1302,7 @@ es:
         desconocida de néctar.
       Course 4 Bee 7_instruction: Aprovecha todo lo que has aprendido hasta ahora
         para recolectar todo el néctar. La flor púrpura puede tener 3, 2 o 1 néctares.
-      Course 4 Bee For Loops 1_instruction: Utilizar un bucle para recolectar el néctar
+      Course 4 Bee For Loops 1_instruction: Utiliza un bucle para recolectar el néctar
         de cada flor.
       Course 4 Bee For Loops 10_instruction: Si tu ciclo es regresivo, se resta el
         incremento de la variable contador en cada bucle. Lo que debería ser un incremento
@@ -1269,8 +1326,8 @@ es:
         1 por 1.
       Course 4 Bee For Loops 7_instruction: Usa tu variable "contador" de bucle para
         el controlar que tan lejos debe moverse horizontalmente.
-      Course 4 Bee For Loops 8_instruction: "¿Puedes usar la variable del bucle para
-        controlar el movimiento y la recolección de néctar?"
+      Course 4 Bee For Loops 8_instruction: "¿Puedes utilizar la variable de bucle
+        para controlar el movimiento y la recolección del néctar?"
       Course 4 Bee For Loops 9_instruction: El último número en tu bucle for se llama
         "incremento", y cada vez que se ejecuta el bucle la variable contador cambia
         por el incremento, Trata de recoger la flores usando un incremento de 2.
@@ -1307,14 +1364,14 @@ es:
         todas las flores.  Recuerde usar las variables izquierda y derecha.
       Course 4 Bee Params 5_instruction: Vamos a empezar desde cero - ¿Puedes crear
         una nueva función llamada "consigue 5 néctares" con un parámetro de dirección?
-      Course 4 Bee Params 6 (copy 1)_instruction: Intenta utilizar tu nueva función
-        para recolectar todo este néctar.
+      Course 4 Bee Params 6 (copy 1)_instruction: Trata de utilizar tu nueva función
+        para recolectar todos este néctar.
       Course 4 Bee Params 6_instruction: No sería genial si pudiéramos recolectar
         todo este néctar con una sola función? Intenta agregar un nuevo parámetro
         a tu función "nectars" para controlar la cantidad de nectar para recolectar.
         Probablemente quieras renombrar la función también!
-      Course 4 Bee Params 7 (copy 1)_instruction: Intenta utilizar tu nueva función
-        para recolectar todo este néctar.
+      Course 4 Bee Params 7 (copy 1)_instruction: Trata de utilizar tu nueva función
+        para recolectar todos este néctar.
       Course 4 Bee Params 7_instruction: Trata de utilizar tu nueva función para recolectar
         todos este néctar.
       Course 4 Bee Params 8 Clone 2_instruction: Oooh, ahora hay miel con la que lidiar
@@ -1333,8 +1390,8 @@ es:
         Vuelve a escribir tu funcion para usar las dos el numero de unidades de miel
         y el numero de unidades de nectar. ¿Cómo utilizarias esos numeros para decidir
         que puedes hacer?'
-      Course 4 Bee Params Ex_instruction: Intenta utilizar tu nueva función para recolectar
-        todo este néctar.
+      Course 4 Bee Params Ex_instruction: Trata de utilizar tu nueva función para
+        recolectar todos este néctar.
       Course 4 Binary 1_instruction: Esta es una función que toma una cadena binaria
         de 0s y 1s e instruye al granjero girar de izquierda a derecha, de arriba
         a abajo, girando en los cuadrados donde el número tiene un cero. Ejecute el
@@ -1453,11 +1510,11 @@ es:
         Use el evento \"cuando actor 2 toca cualquier cosa\"\npara iniciar una actualización
         a tu puntuacion. Puedes incrementar tu variable estableciendo \"puntos = puntos
         + 1\". Obten tu puntaje mas de 10 (¡llendo uno a la vez!) para pasar de nivel."
-      Course 4 Play Lab Vars 7_instruction: Bien, ahora asegurémonos que este juego
-        no sea muy fácil - cada vez que el Perro (actor 1) es golpeado por una bola
-        de fuego used debe perder un punto.  Empiece con 10 puntos de tal manera que
-        no sea muy difícil.  Deje que su calificación caiga de 10 a 0 para pasar de
-        nivel.
+      Course 4 Play Lab Vars 7_instruction: "Bien, ahora asegurémonos de que este
+        juego no sea \ndemasiado fácil de jugar. Cada vez que el Perro (actor 1) es
+        golpeado por un sándwich de el Gato (actor 2), deberías perder un punto. Comienza
+        con 10 puntos, así que no es demasiado difícil. Deja que tu puntaje descienda
+        de 10 a 0 para pasar el nivel."
       Course 4 Play Lab Vars 8 (copy 1)_instruction: Muy bien, una consideración final
         para este juego - programémoslo de tal manera que el jugador pueda ganar (o
         perder).  Use una iteración infinita para verificar el valor de la calificación
@@ -1470,11 +1527,14 @@ es:
         enemigo (Un gato), SI la puntuacion es siempre menor que 0 haz que desaparezca
         el jugador (El Perro). Presiona "Finalizar" cuando el juego funcione como
         te gustaría.
-      Course 4 Play Lab Vars 9_instruction: 'Tiempo Libre para jugar! Aquí estan todas
-        las variables con las que hemos jugado hasta ahora, tambien unas pocas mas
-        en caso de necesitarlas. Haz un juego o historia que utilice estas variables.
-        Sugerencia: desplazate hacia abajo para ver todos los comandos en el área
-        de trabajo.'
+      Course 4 Play Lab Vars 9_instruction: "¡Momento de un juego gratis! Aquí están
+        todas las variables con las que hemos jugado hasta ahora en esta etapa, así
+        como algunas más en caso de que las desees. \r\n\r\n¡Observa que ahora hay
+        tantos bloques en nuestra caja de herramientas que necesitan organizarse!
+        Aquí, hemos puesto cada pieza en una categoría apropiada. Tómate tu tiempo
+        para explorar todo lo que está disponible. Cuando hayas terminado de navegar,
+        crea un juego o una historia con repeticiones, variables y eventos. \r\n\r\nSugerencia:
+        desplázate hacia abajo para ver todos los comandos en el espacio de trabajo."
       Course 4 Play Lab Vars_instruction: Muy bien, una cosa mas para este juego -
         configuralo para que el pueda ganar ( peder). Usa un ciclo continuo para verificar
         el valor de la puntuación - si la puntuación es siempre mayor que 20. haz
@@ -1711,7 +1771,8 @@ es:
       K-1 Artist1 6_instruction: "¡Termina el dibujo usando el bloque de salto! "
       K-1 Artist1 7_instruction: "Use el bloque de salto para moverte sin dibujar.
         Salta hacia arriba \ny dibuja una linea"
-      K-1 Artist1 8_instruction: Trazqa una linea usando los bloques de saltar y dibujar
+      K-1 Artist1 8_instruction: Dibuja una linea punteada utilizando los bloques
+        de dibujar y saltar
       K-1 Artist1 9_instruction: Dibuja y salta para trazar una linea
       K-1 Artist1 Assessment 1_instruction: "¡Dibuja lineas largas y cortas!"
       K-1 Artist1 Assessment 2_instruction: "¡Dibuja una traza de lineas cortas!"
@@ -2158,6 +2219,12 @@ es:
         de actor y desaparezcan de la pantalla? '
       New Artist Project_instruction: Dibuja algo impresionante! Tu código ha sido
         guardado como un projecto al que puedes regresar en cualquier momento.
+      New Basketball Project_instruction: Crea tu propio juego de baloncesto. Puedes
+        cambiar todas las reglas. Cuando hayas terminado, haz clic en finalizar para
+        permitir a tus amigos/as probar el juego en sus teléfonos.
+      New Bounce Project_instruction: Crea tu propio juego "Rebote". Puedes cambiar
+        todos los efectos visuales y las reglas. Cuando estés listo, haz clic en Terminar
+        para que tus amigos prueben tu juego en sus teléfonos.
       New Course 4 Artist Functions Level 4_instruction: Usa la función "dibujar un
         cuadrado" para dibujar este patrón.
       New Gumball Project_instruction: "¡Crea cualquier osa que desees compartir!"
@@ -2165,6 +2232,9 @@ es:
       New Infinity Project_instruction: "¡Crea cualquier osa que desees compartir!"
       New Minecraft Hero Project_instruction: "**Juego libre:**  ¡Ha llegado el momento
         de explorar por tu propia cuenta!"
+      New Sports Project_instruction: Crea tu propio juego. Puedes cambiar todas las
+        reglas y mezclar deportes. ¡Puedes ser creativo! Cuando estés listo haz clic
+        en Terminar para que tus amigos prueben tu juego en sus teléfonos.
       Overworld Avoid Monsters_instruction: Ir contra un Creeper no es buena idea.
         Evítalos con cuidado y llega a casa para estar a salvo.
       Overworld Avoid Monsters_2018_instruction: Ir contra un Creeper no es buena
@@ -2216,6 +2286,10 @@ es:
         para obtener lana de ambas ovejas.
       Overworld Shear Sheep_2018_instruction: ¡Hora de esquilar! Usa el comando "esquilar"
         para obtener lana de ambas ovejas.
+      PDK5 Conditionals 1_instruction: "¡ Las flores moradas pueden tener un tipo
+        de néctar de 1 ó 0, pero tu no sabes cuál !. Ten cuidado de no recolectar
+        el néctar de una flor morada sin  néctar. Revisa si el valor del néctar es
+        igual a 1 usando el bloque “if”. "
       PDK5 Functions 2_instruction: ¡Las funciones permiten definir nuevos bloques!
         Hemos movido los bloques para dibujar un cuadrado en la función llamada "dibuja
         un cuadrado". ¿Puedes utilizar la función "dibuja un cuadrado" para crear
@@ -2232,9 +2306,39 @@ es:
         el uso de la opción "Ocultar controles deslizantes". Tenga en cuenta que los
         controles deslizantes de ancho y alto no están disponibles, y los campos de
         ancho y alto no son editables.
+      Pixelation - Lesson 14 - Make the Letter A_instruction: 'Haz una letra ''A''
+        de 3x5. El widget está configurado con las dimensiones incorrectas. Tu primera
+        tarea es establecer el segundo byte en el código binario de 8 bits para 5:
+        0000 0101. Luego comience a ingresar datos de píxeles.'
+      Pixelation - Lesson 14 - Make the Letter A_2018_instruction: 'Haz una letra
+        ''A'' de 3x5. El widget está configurado con las dimensiones incorrectas.
+        Tu primera tarea es establecer el segundo byte en el código binario de 8 bits
+        para 5: 0000 0101. Luego comience a ingresar datos de píxeles.'
+      Pixelation - Lesson 15 - Color Shades 4x4_instruction: 'Comenzamos con la imagen
+        4x4 que Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4
+        con colores utilizando 12 bits por píxel. Estos son los requisitos: Fila 1-
+        llenar con tonos de rojo. Fila 2: tonos de verde. Fila 3 - tonos de azul.
+        Fila 4 - tonos de gris.'
+      Pixelation - Lesson 15 - Color Shades 4x4_2018_instruction: 'Comenzamos con
+        la imagen 4x4 que Maddie creó en el video. Su tarea es llenar una cuadrícula
+        de 4x4 con colores utilizando 12 bits por píxel. Estos son los requisitos:
+        Fila 1- llenar con tonos de rojo. Fila 2: tonos de verde. Fila 3 - tonos de
+        azul. Fila 4 - tonos de gris.'
+      Pixelation - Lesson 15 - Complete 3-bit color_instruction: Comenzamos con la
+        imagen de 4x2 que Maddie estaba creando, pero hemos omitido los dos últimos
+        cuadrados. Termine la imagen descubriendo los dos colores que faltan y codifíquelos.
+      Pixelation - Lesson 15 - Complete 3-bit color_2018_instruction: Comenzamos con
+        la imagen de 4x2 que Maddie estaba creando, pero hemos omitido los dos últimos
+        cuadrados. Termine la imagen descubriendo los dos colores que faltan y codifíquelos.
+      Poorva copy U3L2 Using Simple Commands_instruction: Dibuja un cuadrado de 1x1
+        arriba y a la izquierda de la posición inicial de la tortuga. Haz clic para
+        ver las instrucciones completas.
       Project - Final Image Scroller_instruction: Actualice el desplazamiento de la
         imagen para responder a los botones y presionar las teclas. (Haga clic para
         ver instrucciones completas)
+      Project - Final Image Scroller_2018_instruction: Actualice el desplazamiento
+        de la imagen para responder a los botones y presionar las teclas. (Haga clic
+        para ver instrucciones completas)
       Project - Finish your canvas app_instruction: Extiende la funcionalidad de uno
         de los efectos o crea uno completamente nuevo (haz clic para ver instrucciones
         completas)
@@ -2246,8 +2350,8 @@ es:
         de una flor morada sin  néctar. Revisa si el valor del néctar es igual a 1
         usando el bloque “if”. "
       Ryan - 4-5 Bee Conditionals 2_instruction: La abeja sólo quiere néctar ahora.
-        No todo los objetos son flores, así que compruebe debajo de cada nube para
-        ver si está ocultando una flor. Si es así, puede recolectar néctar.
+        No todos los objetos son flores, así que mira debajo de TODAS LAS NUBES para
+        verlo si esta escondiendo una flor. Si es así, puedes coger néctar.
       Ryan - Bee Conditionals_instruction: La abeja sólo quiere néctar ahora. No todos
         los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo
         si esta escondiendo una flor. Si es así, puedes coger néctar.
@@ -2267,6 +2371,15 @@ es:
       SG U3L07 - topDownDesign_instruction: Ponte cómodo con la estructura de este
         programa, luego avance al siguiente ejercicio. (Haz clic para ver instrucciones
         completas)
+      SG U3L2 Using Simple Commands part 1_instruction: Dibuja un cuadrado de 1x1
+        arriba y a la izquierda de la posición inicial de la tortuga. Haz clic para
+        ver las instrucciones completas.
+      SG U3L2 Using Simple Commands_instruction: Dibuja un cuadrado de 1x1 arriba
+        y a la izquierda de la posición inicial de la tortuga. Haz clic para ver las
+        instrucciones completas.
+      SG U3L2_TurtleSquare_right_instruction: |-
+        Dibuja un cuadrado al frente y
+         a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
       SpecialFrozenLevel_instruction: "¡Te has convertido oficialmente en un artista
         maestro! Crea un paraíso invernal."
       Standalone_Artist_1_instruction: "¡ Bienvenido a Artista! En primer lugar, vamos
@@ -2314,6 +2427,48 @@ es:
       U2 frequency caesar_instruction: Instrucciones
       U2 frequency random sub_instruction: Instrucciones
       U2 vigenere cipher_instruction: Instrucciones
+      U3 - Canvas - freePlay_instruction: Extiende la funcionalidad de uno de los
+        efectos o crea uno completamente nuevo (haz clic para ver instrucciones completas)
+      U3 - Keys - Final Image Scroller_instruction: Actualice el desplazamiento de
+        la imagen para responder a los botones y presionar las teclas. (Haga clic
+        para ver instrucciones completas)
+      U3L06 Challenge 5 overlapping circles_instruction: 'Esta imagen se crea simplemente
+        usando punto() y colorLapicero() pero, ¿cómo vamos a hacer que esos círculos
+        sean transparentes? Si todavía no has entendido la pista: ¡consulta la documentación!'
+      U3L06 Challenge 5 overlapping circles_2018_instruction: 'Esta imagen se crea
+        simplemente usando punto() y colorLapicero() pero, ¿cómo vamos a hacer que
+        esos círculos sean transparentes? Si todavía no has entendido la pista: ¡consulta
+        la documentación!'
+      U3L07 - introSquare_instruction: "Usa un bucle para dibujar un cuadrado. A continuación,
+        agregue \notro bucle para dibujar muchos cuadrados, cada uno rotado alguna
+        cantidad. \n(Haz clic para ver instrucciones completas)"
+      U3L07 - introSquare_2018_instruction: "Usa un bucle para dibujar un cuadrado.
+        A continuación, agregue \notro bucle para dibujar muchos cuadrados, cada uno
+        rotado alguna cantidad. \n(Haz clic para ver instrucciones completas)"
+      U3L07 - loopsWithRandom_instruction: Aumenta el número de iteraciones para completar
+        la pantalla con blanco. (Haz clic para ver instrucciones completas)
+      U3L07 - loopsWithRandom_2018_instruction: Aumenta el número de iteraciones para
+        completar la pantalla con blanco. (Haz clic para ver instrucciones completas)
+      U3L07 - topDownDesign_instruction: Ponte cómodo con la estructura de este programa,
+        luego avance al siguiente ejercicio. (Haz clic para ver instrucciones completas)
+      U3L07 - topDownDesign_2018_instruction: Ponte cómodo con la estructura de este
+        programa, luego avance al siguiente ejercicio. (Haz clic para ver instrucciones
+        completas)
+      U3L2 Using Simple Commands (no tooltips)_instruction: Dibuja un cuadrado de
+        1x1 arriba y a la izquierda de la posición inicial de la tortuga. Haz clic
+        para ver las instrucciones completas.
+      U3L2 Using Simple Commands_instruction: Dibuja un cuadrado de 1x1 arriba y a
+        la izquierda de la posición inicial de la tortuga. Haz clic para ver las instrucciones
+        completas.
+      U3L2 Using Simple Commands_2018_instruction: Dibuja un cuadrado de 1x1 arriba
+        y a la izquierda de la posición inicial de la tortuga. Haz clic para ver las
+        instrucciones completas.
+      U3L2_TurtleSquare_right_instruction: |-
+        Dibuja un cuadrado al frente y
+         a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
+      U3L2_TurtleSquare_right_2018_instruction: |-
+        Dibuja un cuadrado al frente y
+         a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
       U4 vigenere cipher 2_instruction: Instrucciones
       U4L02 - Objects - Template1_instruction: Plantilla
       U4L02 - Objects - Template1_2018_instruction: Plantilla
@@ -2391,6 +2546,9 @@ es:
       bounce_12_instruction: Crea tu propio juego "Rebote". Puedes cambiar todos los
         efectos visuales y las reglas. Cuando estés listo, haz clic en Terminar para
         que tus amigos prueben tu juego en sus teléfonos.
+      bounce_12_2018_instruction: Crea tu propio juego "Rebote". Puedes cambiar todos
+        los efectos visuales y las reglas. Cuando estés listo, haz clic en Terminar
+        para que tus amigos prueben tu juego en sus teléfonos.
       bounce_12_basketball_instruction: Crea tu propio juego de baloncesto. Puedes
         cambiar todas las reglas. Cuando hayas terminado, haz clic en finalizar para
         permitir a tus amigos/as probar el juego en sus teléfonos.
@@ -2489,6 +2647,8 @@ es:
       course2_playlab_stage17_9_instruction: "¿Puedes agregar un bloque para ganar
         un punto\ncuando Waddles choque con Octavia (actor 3)?\r\n¡Juega y mueve a
         Waddles\ncon las flechas hasta que anotes!"
+      course3_playlab_challenge2_instruction: "¿Puedes averiguar cómo funciona esta
+        aplicación \"Fortune Teller\"? \nHaz clic en `MÁS` para ver sus desafíos."
       course3_playlab_stage16_1_instruction: ¿Puedes hacer que este perro diga "Hola
         mundo"?
       course3_playlab_stage16_2_instruction: "¿Puedes hacer que el perro diga algo
@@ -2523,12 +2683,14 @@ es:
         y la velocidad de Waddles, y luego moverlo con las flechas hasta que anotes?
       course3_playlab_stage17_7_instruction: Crea tu propia historia. Cuando finalices,
         haz clic en Terminar para que tus amigos prueben tu historia en sus teléfonos.
-      course4_artist_fwp_challenge1_instruction: Intenta ejecutar este programa y
-        haz cambios para ver que ocurre. ¿Puedes averiguar cómo funciona? (o elimínalo
-        y reemplázalo con algo totalmente diferente)
+      course4_artist_fwp_challenge1_instruction: Intente ejecutar este programa y
+        haga cambios para ver que ocurre. ¿Puede averiguar cómo funciona? (o elimínalo
+        y reemplazalo con algo totalmente diferente)
       course4_playlab_variables_challenge1_instruction: "Usa estos bloques para hacer
         \nque los actores compartan una broma de toc-toc. ¡Cambia la configuración
         y la frase final para contar con tu propio chiste!"
+      course4_playlab_variables_challenge3_instruction: "¿Puedes averiguar cómo funciona
+        esta aplicación \"Fortune Teller\"? \nHaz clic en `MÁS` para ver sus desafíos."
       courseA_artist_loops_challenge3_instruction: |-
         ¡Vamos a jugar un juego!! Dibuja tantas X como tú
         puedas! ¿Puedes obtener 3 en una fila?
@@ -2591,6 +2753,9 @@ es:
         de un lugar. También, trata de cambiar la escena o la velocidad de la paleta
         y la pelota y ver cuántos puntos puedes anotar antes de que tu oponente anote
         dos veces.
+      courseD_bounce_events12_instruction: Crea tu propio juego "Rebote". Puedes cambiar
+        todos los efectos visuales y las reglas. Cuando estés listo, haz clic en Terminar
+        para que tus amigos prueben tu juego en sus teléfonos.
       courseD_bounce_events2_instruction: Une un bloque a los bloques "cuándo flecha
         derecha" y "cuándo flecha izquierda". Mueve la paleta para alcanzar ambos
         objetivos finales.
@@ -2648,8 +2813,27 @@ es:
         anidado todo el bloque de código en otro bucle, pero tienes que poner al artista
         en su lugar para dibujar la línea siguiente. ¿Cuál de estos bloques de código
         puede usted colocar al final del bucle exterior para dibujar la red entera?
+      courseE_playlab_challenge2_instruction: "¿Puedes averiguar cómo funciona esta
+        aplicación \"Fortune Teller\"? \nHaz clic en `MÁS` para ver sus desafíos."
       courseE_playlab_variables_challenge2_instruction: "¿Puedes averiguar cómo funciona
         esta aplicación \"Fortune Teller\"? \nHaz clic en `MÁS` para ver sus desafíos."
+      courseF_IceAge_10_instruction: "Usa el comando `el actor __ lanza` para que
+        \nSid (actor 1) lance corazones a Granny (actor 2) y ponerla feliz cuando
+        colisionen con ella."
+      courseF_IceAge_11_instruction: "¡Es hora de crear tu propio juego\n o historia! "
+      courseF_IceAge_2_instruction: |-
+        Ayuda a Manny y Sid a saludarse usando do
+        s veces el bloque `el actor ___ dice`.
+      courseF_IceAge_5_instruction: |-
+        Ayuda a la abuela a hacer ejercicio moviéndola hacia
+         la izquierda y hacia la derecha varias veces.
+      courseF_IceAge_6_instruction: "¿Puedes ayudar a Sid a llamar a sus amigos\n
+        cuando haces clic en él? "
+      courseF_IceAge_8_instruction: "¿Puedes terminar este programa para haciendo
+        que ambos ** toquen un sonido ** y ** obtengan un punto ** cuando Sid y Granny
+        colisionen? "
+      courseF_IceAge_9_instruction: Cambia la escena a un fondo helado y establece
+        la velocidad de Sid (actor 1) en rápido.
       courseF_artist_embed_variables9_instruction: "¡Presiona Ejecutar para ver el
         programa en acción!"
       courseF_artist_for7_instruction: Haz 3 pequeños cambios al código desde el último
@@ -2712,6 +2896,8 @@ es:
         se te explicó. ¿Cómo lograrás que el Perro se mueva en todas las direcciones
         con las teclas de flecha? ¿Cómo agregaras puntos cuando el Perro toque al
         Gato o al Pingüino? ¿Cómo restarás puntos cuando se  toquen el Gato y el Pingüino?"
+      courseF_playlab_variables_challenge3_instruction: "¿Puedes averiguar cómo funciona
+        esta aplicación \"Fortune Teller\"? \nHaz clic en `MÁS` para ver sus desafíos."
       flappy_1_instruction: |-
         Adjunta un bloque al bloque "Cuanto Clica", luego presione
         "Ejecutar". Haz clic o toca la pantalla para mover Flappy al objetivo.
@@ -2948,8 +3134,8 @@ es:
       grade3_Debugging_5_instruction: "Estos bloques realmente me molestan. Corregir
         \nel error(s) para recoger todo el néctar y hacer todo de la miel.  Usted
         puede \nahora usar ejecutar y paso."
-      grade3_Debugging_6_instruction: "Estos bloques realmente me molestan. Corregir
-        \nel error(s) para recoger todo el néctar y hacer toda la miel. "
+      grade3_Debugging_6_instruction: "¡Qué desafío tan dulce!\r\n\r\nArregla\nel
+        error(s) para recoger todo el néctar."
       grade3_Debugging_7_instruction: Estos bloques realmente me molesta. Corregir
         el error(s) para recoger todo el néctar y hacer todo de la miel.
       grade3_Debugging_9_instruction: Estos bloques realmente me molesta. Corregir
@@ -3015,16 +3201,27 @@ es:
         bloque "repetir" dentro del bloque "mientras".'
       grade4_arist_nested_loop_circles1_instruction: Usar un bucle anidado para completar
         el diseño.
+      grade4_arist_nested_loop_flags1_instruction: has un bucle con el código dado
+        para crear un molino de viento.
       grade4_arist_nested_loop_polygons1_instruction: 'con el bucle repite este diseño
         10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista: ¿Cuanto es 360
         dividido por 10?)'
       grade4_arist_nested_loop_polygons2_instruction: 'Repite el bucle 6 veces. ¿Cuánto
         tienes que girar cada vez el bucle? (Pista: ¿Cuánto es 360 dividido por 6?)'
+      grade4_arist_nested_loop_squares1_instruction: "¿Puedes dibujar estas 10 plazas
+        de esta acera, usando un bucle anidado? Cada cuadrado tiene 30 píxeles."
       grade4_arist_nested_loop_triangles2_instruction: 'Ahora anida este bucle dentro
         de otro bucle para dibujar 10 triángulos.  Esto se llama un bucle anidado.  Sugerencia:
         Todos 10 triángulos completan una rotación de 360 grados.  '
+      grade4_arist_nested_loop_triangles3_instruction: |-
+        ¿Puedes dibujar un hexágono haciendo un enlace
+        con el código triangular?
+      grade4_arist_nested_loop_triangles4_instruction: Dibujar los dientes en la boca
+        del cocodrilo!
       grade4_arist_nested_loop_triangles5_instruction: "Crea un sol anidando el código
         de arranque en otro bucle. Esto se llama un bucle anidado. \r"
+      grade4_arist_nested_loop_triangles6_instruction: "¿Puedes dibujar estos 36 triángulos
+        utilizando un bucle anidado?"
       grade4_artist_functions1_instruction: |-
         Hola. Yo artista zombie. Yo amo dibujar!
         Ayúdame a dibujar las gafas cuadradas.  Sugerencia: el puente entre las gafas es 25 píxeles más corto que la longitud cuadrada.
@@ -3050,11 +3247,20 @@ es:
         usa ensayo y error. No se espera que esté perfecto la primera vez."
       grade4_artist_nested_loop_circles1_instruction: Usar un bucle anidado para completar
         el diseño.
+      grade4_artist_nested_loop_flags1_instruction: has un bucle con el código dado
+        para crear un molino de viento.
       grade4_artist_nested_loop_polygons1_instruction: 'con el bucle repite este diseño
         10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista: ¿Cuanto es 360
         dividido por 10?)'
+      grade4_artist_nested_loop_squares1_instruction: "¿Puedes dibujar estas 10 plazas
+        de esta acera, usando un bucle anidado? Cada cuadrado tiene 30 píxeles."
+      grade4_artist_nested_loop_triangles1_instruction: 'Completa el código para dibujar
+        estos triángulos. El primero es hecho por ti. Sugerencia: 3 triángulos en
+        una rotación de 360 grados.'
       grade4_artist_nested_loop_triangles5_instruction: "Crea un sol anidando el código
         de arranque en otro bucle. Esto se llama un bucle anidado. \r"
+      grade4_artist_nested_loop_triangles6_instruction: "¿Puedes dibujar estos 36
+        triángulos utilizando un bucle anidado?"
       grade4_artist_parameters_squares1_instruction: 'Haz clic en "Editar" para completar
         la definición de la función "dibujar un cuadrado" y agrega un parámetro. Debe
         tomar un parámetro de longitud, al igual que el triángulo. Esta vez, dibuja
@@ -3198,6 +3404,9 @@ es:
         a ser creativos con los bits?"
       grade5_artist_for_loops1_instruction: 'Dibuje este triángulo que tiene un tamaño
         de 50 pixeles.  Sugerencia: Use un bloque de repetición.'
+      grade5_artist_for_loops10_instruction: "Puedes descubrir como utilizar las cosas
+        que has aprendido para crear esta imagen\r\n\r\nNecesitas una pista? Presiona
+        aquí."
       grade5_artist_for_loops5_instruction: La línea mas pequeña de este espiral cuadrado
         es 10, el mas largo es 200, y cada línea es 10 píxeles mas larga que la anterior.
         ¿Puedes llenar los bloques faltantes para completar este sorprendente dibujo?
@@ -3355,11 +3564,11 @@ es:
         Use el evento \"cuando actor 2 toca cualquier cosa\"\npara iniciar una actualización
         a tu puntuacion. Puedes incrementar tu variable estableciendo \"puntos = puntos
         + 1\". Obten tu puntaje mas de 10 (¡llendo uno a la vez!) para pasar de nivel."
-      grade5_playlab_variables7_instruction: Bien, ahora asegurémonos que este juego
-        no sea muy fácil - cada vez que el Perro (actor 1) es golpeado por una bola
-        de fuego used debe perder un punto.  Empiece con 10 puntos de tal manera que
-        no sea muy difícil.  Deje que su calificación caiga de 10 a 0 para pasar de
-        nivel.
+      grade5_playlab_variables7_instruction: "Bien, ahora asegurémonos de que este
+        juego no sea \ndemasiado fácil de jugar. Cada vez que el Perro (actor 1) es
+        golpeado por un sándwich de el Gato (actor 2), deberías perder un punto. Comienza
+        con 10 puntos, así que no es demasiado difícil. Deja que tu puntaje descienda
+        de 10 a 0 para pasar el nivel."
       grade5_playlab_variables71_instruction: "Aquí esta nuestro juego de una etapa
         anterior,\npero la mayoría del código está oculto. Hay una nueva función \"puntuación.\"\r\n\r\neditar\nla
         función para que el parámetro \"puntos\" sea agregado a la variable \"puntuacion_jugador\".
@@ -3389,6 +3598,10 @@ es:
         puedas! ¿Puedes obtener 3 en una fila?
       iceage_click_hello_instruction: "¿Puedes ayudar a Sid a llamar a sus amigos\n
         cuando haces clic en él? "
+      iceage_click_hello_2018_instruction: "¿Puedes ayudar a Sid a llamar a sus amigos\n
+        cuando haces clic en él? "
+      iceage_free_play_instruction: "¡Es hora de crear tu propio juego\n o historia! "
+      iceage_free_play_2018_instruction: "¡Es hora de crear tu propio juego\n o historia! "
       iceage_free_playcourseF_IceAge_11_instruction: "¡Es hora de crear tu propio
         juego\n o historia! "
       iceage_hello1_instruction: Ayuda a Sid a decir "¡Hola!" arrastrando el bloque
@@ -3398,16 +3611,30 @@ es:
       iceage_hello2_instruction: |-
         Ayuda a Manny y Sid a saludarse usando do
         s veces el bloque `el actor ___ dice`.
+      iceage_hello2_2018_instruction: |-
+        Ayuda a Manny y Sid a saludarse usando do
+        s veces el bloque `el actor ___ dice`.
       iceage_repeat_instruction: |-
+        Ayuda a la abuela a hacer ejercicio moviéndola hacia
+         la izquierda y hacia la derecha varias veces.
+      iceage_repeat_2018_instruction: |-
         Ayuda a la abuela a hacer ejercicio moviéndola hacia
          la izquierda y hacia la derecha varias veces.
       iceage_sound_and_points_instruction: "¿Puedes terminar este programa para haciendo
         que ambos ** toquen un sonido ** y ** obtengan un punto ** cuando Sid y Granny
         colisionen? "
+      iceage_sound_and_points_2018_instruction: "¿Puedes terminar este programa para
+        haciendo que ambos ** toquen un sonido ** y ** obtengan un punto ** cuando
+        Sid y Granny colisionen? "
       iceage_throw_hearts_instruction: "Usa el comando `el actor __ lanza` para que
         \nSid (actor 1) lance corazones a Granny (actor 2) y ponerla feliz cuando
         colisionen con ella."
+      iceage_throw_hearts_2018_instruction: "Usa el comando `el actor __ lanza` para
+        que \nSid (actor 1) lance corazones a Granny (actor 2) y ponerla feliz cuando
+        colisionen con ella."
       iceage_warn_ice_age_instruction: Cambia la escena a un fondo helado y establece
+        la velocidad de Sid (actor 1) en rápido.
+      iceage_warn_ice_age_2018_instruction: Cambia la escena a un fondo helado y establece
         la velocidad de Sid (actor 1) en rápido.
       k-1 maze 1_instruction: "¿Me llevarias al Oeste para agarrar al cerdo? "
       level 'grade3_Loops_10_instruction: |-
@@ -3422,9 +3649,8 @@ es:
         con un \nciclo?"
       level 'grade3_Loops_3_instruction: "¿Podrías utilizar un ciclo para recolectar
         todo el néctar?"
-      level 'grade3_Loops_4_instruction: |-
-        Ahora usa el nuevo bloque repeat para recolectar todo
-        el néctar y hacer toda la miel.
+      level 'grade3_Loops_4_instruction: Ahora usa el bloque 'repetir' para recolectar
+        todo el néctar y crear toda la miel.
       level 'grade3_Loops_5_instruction: |-
         Pon estos bloques en un ciclo para recolectar néctar
         de cada flor.
@@ -3454,6 +3680,8 @@ es:
         guiones de colores.
       ramp_artist_loops4_instruction: "¿Qué sucede cuando agregas un giro a la derecha
         \nde 72 grados después de todo lo demás dentro de tu bucle?"
+      ramp_artist_loops4_2018_instruction: "¿Qué sucede cuando agregas un giro a la
+        derecha \nde 72 grados después de todo lo demás dentro de tu bucle?"
       ramp_artist_loops6_instruction: Edita tu bucle para dibujar esta escalera.
       ramp_artist_loops6_2018_instruction: Edita tu bucle para dibujar esta escalera.
       ramp_artist_loops8_instruction: Busca un patrón y acorta este código usando
@@ -3464,6 +3692,8 @@ es:
         bucles.
       ramp_artist_loops9_instruction: Resuelve este puzzle dibujando un cuadrado.
       ramp_artist_loops9_2018_instruction: Resuelve este puzzle dibujando un cuadrado.
+      scrat 16 (copy 1)_instruction: ¡Bellota! ¡Bellota! ¡Bellota! Utiliza un bloque
+        "si" para llevarme ahí con el menor número de bloques.
       scrat 16_instruction: ¡Bellota! ¡Bellota! ¡Bellota! Utiliza un bloque "si" para
         llevarme ahí con el menor número de bloques.
       scrat 17_instruction: Ok, vamos a hacerlo de nuevo para practicar - este no

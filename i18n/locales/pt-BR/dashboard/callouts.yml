@@ -1,10 +1,14 @@
 pt-BR:
   data:
     callouts:
+      AppLab Intro 2 - Edit place1 2_callout:
+        screenSelectorCallout3: Escolher a tela que você fez
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: Este é o seletor de tela
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Clique no título de seu app
+      AppLab Intro 2 - Edit startScreen2_callout:
+        applabIntro2storyText: Clique no texto da história nesta tela
       CSD U3 Variables Predict Where X_callout:
         CSD_U3_variables: Altera o número aqui
       CSD U3 Variables Predict Where X_2018_callout:
@@ -96,7 +100,7 @@ pt-BR:
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Use este botão para editar a função e alterar a direção para a qual a abelha vai virar para obter o néctar.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Clique em "Executar" para iniciar seu programa
+        Course 4 Maze 1_callout1: Selecione "Executar" para abrir seu programa
       Course 4 Maze 4_callout:
         repeat: Coloque os blocos dentro do laço para repetir os comandos
       Course 4 Play Lab Params 3_callout:
@@ -179,9 +183,9 @@ pt-BR:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Este código começará a construção da sua casa. Você consegue terminá-la?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Clique em "Executar" para iniciar seu programa
+        craft_run_button_callout: Selecione "Executar" para abrir seu programa
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Clique em "Executar" para iniciar seu programa
+        craft_run_button_callout: Selecione "Executar" para abrir seu programa
       Overworld Place Wall_callout:
         craft_inside_repeat: Repita as ações colocando blocos aqui
       Overworld Place Wall_2018_callout:
@@ -216,9 +220,9 @@ pt-BR:
       courseA_artist_loops8_2018_callout:
         courseA_artist_loops8_1: Você sabia que você pode desenhar por cima de uma linha sempre que precisar?
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: Você vê alguns blocos novos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no nível.
+        courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
       courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: Você vê alguns blocos novos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no nível.
+        courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Clique aqui para ver o código sendo executado!
       courseA_collector_preLoops2_callout:
@@ -237,6 +241,8 @@ pt-BR:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Clique na lâmpada quando você precisar de uma dica!
       courseA_maze_seq1_2018_callout:
@@ -266,7 +272,7 @@ pt-BR:
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
       courseB_collector_loops1_2018_callout:
-        courseB_collector_loops1_1: Você vê alguns blocos novos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no nível.
+        courseB_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Clique na lâmpada quando você precisar de uma dica!
       courseB_maze_seq1_2018_callout:
@@ -309,10 +315,17 @@ pt-BR:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
       courseC_maze_programming3_2018_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
+      courseC_maze_programming4_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseC_starWars_loops2_callout:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
       courseC_starWars_loops2_2018_callout:
         courseC_starWars_loops2: Você só tem um desses blocos disponível neste quebra-cabeças.
+      courseD_artist_ramp11_callout:
+        courseD_artist_ramp11_1: Você pode mudar esse número.
+        courseD_artist_ramp11_2: Clique aqui para digitar o número de vezes que o código será repetido.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
       courseD_maze_ramp1_2018_callout:
@@ -325,6 +338,10 @@ pt-BR:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
       courseD_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
+      courseD_maze_ramp4_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
+      courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseD_scrat_ramp1_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
       courseD_scrat_ramp1_2018_callout:
@@ -339,6 +356,8 @@ pt-BR:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
       courseD_scrat_ramp4_callout:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
+      courseD_scrat_ramp4_2018_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: Você pode mudar esse número.
         courseD_artist_ramp11_2: Clique aqui para digitar o número de vezes que o código será repetido.
@@ -346,6 +365,12 @@ pt-BR:
         courseE_artist_ramp8_1: Você pode mudar esse número.
         courseE_artist_ramp8_2: Clique aqui para digitar o número de vezes que o código será repetido.
       courseE_artist_ramp8_2_callout:
+        courseE_artist_ramp8_1: Você pode mudar esse número.
+        courseE_artist_ramp8_2: Clique aqui para digitar o número de vezes que o código será repetido.
+      courseE_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Você pode mudar esse número.
+        courseE_artist_ramp8_2: Clique aqui para digitar o número de vezes que o código será repetido.
+      courseE_artist_ramp8_2_2018_callout:
         courseE_artist_ramp8_1: Você pode mudar esse número.
         courseE_artist_ramp8_2: Clique aqui para digitar o número de vezes que o código será repetido.
       courseE_maze_ramp1_callout:
@@ -360,10 +385,18 @@ pt-BR:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
       courseE_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
+      courseE_maze_ramp4_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Adicione seus blocos aqui
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Você pode mudar esse número.
+        courseE_artist_ramp8_2: Clique aqui para digitar o número de vezes que o código será repetido.
+      courseF_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: Você pode mudar esse número.
+        courseE_artist_ramp8_2: Clique aqui para digitar o número de vezes que o código será repetido.
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Run" para executar o programa.
       courseF_maze_ramp1_2018_callout:
@@ -372,6 +405,10 @@ pt-BR:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
+      courseF_maze_ramp4_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseF_playLab_func2_callout:
         sign_in_to_save_project: Deseja acessar seu projeto depois? Logue para salvar esse projeto em sua conta!
       courseF_playlab_brokenText_callout:
@@ -440,6 +477,8 @@ pt-BR:
         grade2_CaringForNewPet_2_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
       grade2_CaringForNewPet_2courseC_maze_programming3_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
+      grade2_CaringForNewPet_3_callout:
+        grade2_CaringForNewPet_3_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       grade2_collector_7_callout:
         grade2_collector_7_1: Você pode pegar mais blocos da caixa de ferramentas se você precisar!
       grade2_puppy_loops2_callout:

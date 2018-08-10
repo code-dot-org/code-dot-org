@@ -87,7 +87,7 @@ pt:
             Getting Loopy:
               name: Repetindo
             Graph Paper Programming:
-              name: Programação em Papel Quadriculado
+              name: Programação de papel milimetrico
             'Maze: Loops':
               name: 'Labirinto: Ciclos'
             'Maze: Sequence':
@@ -144,7 +144,7 @@ pt:
             'Maze: Conditionals':
               name: 'Labirinto: Condicionais'
             Songwriting:
-              name: Composição de música com parâmetros
+              name: Composição
             'Studio: Create a Game':
               name: 'Laboratório do Jogo: Criar Um jogo'
             'Studio: Create a Story':
@@ -276,7 +276,7 @@ pt:
             Intro:
               name: Introdução
             Variables:
-              name: Variáveis
+              name: variáveis
         algebra:
           stages:
             'Eval: Conditionals':
@@ -332,13 +332,13 @@ pt:
             Functions:
               name: Funções
             Graph Paper Programming:
-              name: Programação em Papel Quadriculado
+              name: Programação de papel milimetrico
             Introduction to Computer Science:
               name: Introdução à Ciência Computacional
             Relay Programming:
-              name: Programação Relay
+              name: Programação por revezamento
             Song Writing:
-              name: Escrevendo uma Canção
+              name: escrita de canção
             The Artist:
               name: O Artista
             The Artist 2:
@@ -360,7 +360,7 @@ pt:
             The Maze:
               name: O Labirinto
             Wrap-up:
-              name: Sumário
+              name: Resumo
         edit-code:
           title: Editar código
           description: Editar código
@@ -412,6 +412,7 @@ pt:
             Hour of Code 2013:
               name: Hora de Código 2013
         cspunit1:
+          description_short: Programação
           stages:
             Sending Numbers:
               name: Enviando números
@@ -432,6 +433,7 @@ pt:
             Strings and Images:
               name: Cadeias de caracteres e imagens
         cspunit3:
+          description_short: Programação
           stages:
             Creating Functions:
               name: Criando funções
@@ -474,6 +476,7 @@ pt:
             Wrap-Up:
               name: Resumo
         cspunit2:
+          description_short: Programação
           stages:
             The Internet:
               name: A Internet
@@ -557,7 +560,7 @@ pt:
             Welcome!:
               name: Olá!
             Wrap-up:
-              name: Sumário
+              name: Resumo
         algebraPD2:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -605,7 +608,7 @@ pt:
             Welcome!:
               name: Olá!
             Wrap-up:
-              name: Sumário
+              name: Resumo
         ECSPD2-NexTech:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -619,7 +622,7 @@ pt:
             Welcome!:
               name: Olá!
             Wrap-up:
-              name: Sumário
+              name: Resumo
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -629,7 +632,7 @@ pt:
             Getting Loopy:
               name: Repetindo
             Graph Paper Programming:
-              name: Programação em Papel Quadriculado
+              name: Programação de papel milimetrico
             Happy Maps:
               name: Mapas felizes
             Move it, Move it:
@@ -637,7 +640,7 @@ pt:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
             Songwriting:
-              name: Composição de música com parâmetros
+              name: Composição
             The Big Event:
               name: O Grande Evento
         ScienceP3OLPT2:
@@ -705,6 +708,10 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
+        cspunit5:
+          description_short: Programação
+        cspunit4:
+          description_short: Programação
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -798,7 +805,7 @@ pt:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Aprender a arrastar e largar'
             Loops:
-              name: Ciclos
+              name: ciclos
             Programming:
               name: Programação
             'Real-life Algorithms: Plant a Seed':
@@ -808,7 +815,7 @@ pt:
             Digital Citizenship:
               name: Cidadania digital
             Songwriting:
-              name: Composição de música com parâmetros
+              name: Composição
         grade1:
           stages:
             Events:
@@ -816,7 +823,7 @@ pt:
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Aprender a arrastar e largar'
             Loops:
-              name: Ciclos
+              name: ciclos
             Programming:
               name: Programação
         grade5:
@@ -852,7 +859,7 @@ pt:
             Welcome!:
               name: Olá!
             Wrap-up:
-              name: Sumário
+              name: Resumo
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -869,7 +876,7 @@ pt:
             Functions:
               name: Funções
             Variables:
-              name: Variáveis
+              name: variáveis
             Conditionals:
               name: Condicionais
         grade2:
@@ -897,11 +904,11 @@ pt:
             Functions with Parameters:
               name: Funções com parâmetros
             Loops:
-              name: Ciclos
+              name: ciclos
             Nested Loops:
               name: Laços aninhados
             Variables:
-              name: Variáveis
+              name: variáveis
             While Loops:
               name: Laços enquanto
         algebrapdnext:
@@ -929,8 +936,8 @@ pt:
               name: Listas
         minecraft:
           title: Desginer da Hora do Código de Minecraft
-          description_short: Programe animais e outras criaturas Minecraft na sua
-            própria versão do Minecraft.
+          description_short: Constrói um jogo Minecraft. Cria as tuas próprias versões
+            de galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
           description: Constrói um jogo Minecraft. Cria as tuas próprias versões de
             galinhas, ovelhas, Creepers, mortos-vivos e muito mais.
           stages:
@@ -1085,7 +1092,7 @@ pt:
         csd3-draft:
           stages:
             Variables:
-              name: Variáveis
+              name: variáveis
             Conditionals:
               name: Condicionais
             Functions:
@@ -1101,7 +1108,7 @@ pt:
         csd3-chapters:
           stages:
             Variables:
-              name: Variáveis
+              name: variáveis
             Conditionals:
               name: Condicionais
             Functions:
@@ -1292,7 +1299,7 @@ pt:
         csd3-1819draft:
           stages:
             Variables:
-              name: Variáveis
+              name: variáveis
             Conditionals:
               name: Condicionais
             Functions:
@@ -1302,7 +1309,7 @@ pt:
           description_short: Programação
           stages:
             Variables:
-              name: Variáveis
+              name: variáveis
             Conditionals:
               name: Condicionais
             Functions:
@@ -1320,7 +1327,7 @@ pt:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programação em Papel Quadriculado
+              name: Programação de papel milimetrico
             Introduction:
               name: Introdução
             Building a Foundation:
@@ -1334,7 +1341,7 @@ pt:
             Conditionals with Cards:
               name: Condicionais com cartas
             'Functions: Songwriting':
-              name: Composição de música com parâmetros
+              name: Composição
             Envelope Variables:
               name: Variáveis do envelope
             For Loop Fun:
@@ -1350,7 +1357,7 @@ pt:
             Crowdsourcing:
               name: Aberto ao público
             Relay Programming:
-              name: Programação Relay
+              name: Programação por revezamento
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1362,7 +1369,7 @@ pt:
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programação em Papel Quadriculado
+              name: Programação de papel milimetrico
             Introduction:
               name: Introdução
             Building a Foundation:
@@ -1376,9 +1383,9 @@ pt:
             Artist Binary:
               name: 'Artista: binário'
             Graph Paper Programming:
-              name: Programação em Papel Quadriculado
+              name: Programação de papel milimetrico
             Relay Programming:
-              name: Programação Relay
+              name: Programação por revezamento
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1402,7 +1409,7 @@ pt:
             Introduction:
               name: Introdução
             'Functions: Songwriting':
-              name: Composição de música com parâmetros
+              name: Composição
             Internet:
               name: A Internet
             Crowdsourcing:

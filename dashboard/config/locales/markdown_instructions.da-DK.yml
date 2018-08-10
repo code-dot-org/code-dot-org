@@ -195,6 +195,7 @@ da:
         og lav honning i alle bikuber. Brug indlejrede løkker. '
       4-5 Bee Nested Loops Assessment 1_markdown_instruction: "** Vurdering: ** Saml
         al nektaren og lav al honningen ved hjælp af løkker."
+      4-5 Nested Loops 9_markdown_instruction: Tegn tænderne i alligatorens mund!
       Function intro Ryan_markdown_instruction: "Du har en **funktion**, der hedder
         \"byg bro\" i dit arbejdsområde.  Den indeholder al den nødvendige kode til
         at komme over floden! \r\n \r\nKlik den lille grønne blok ind i dit arbejdsområde
@@ -499,6 +500,8 @@ da:
       grade3_maze_loops2_markdown_instruction: Få mig til solsikken!
       grade3_maze_nestedLoops4_markdown_instruction: Bruge to løkker til at komme
         hen til grisen med færre blokke.
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Tegn tænderne i alligatorens
+        mund!
       grade4_artist_functions2_markdown_instruction: Funktioner lader dig definere
         nye blokke! Vi har flyttet blokkene for at tegne en firkant til en funktion
         kaldet "tegn en firkant". Kan du bruge "tegn en firkant"-funktionen til at

@@ -95,9 +95,9 @@ sr:
       courseC_unplugged_binaryBracelets:
         title: Бинарне наруквице
       courseD_unplugged_graphPaperProgramming:
-        title: Графичко програмирање
+        title: Графиконско - Папирно Програмирање
       courseD_unplugged_relayProgramming:
-        title: Релејно Програмирање
+        title: Relay programming
       courseD_unplugged_conditionalsCards:
         title: Услови са картама
       courseD_unplugged_binaryImages:
@@ -117,7 +117,7 @@ sr:
       BigEvent_2018:
         title: Велики догађај
       GraphPaperProgramming_2018:
-        title: Графичко програмирање
+        title: Графиконско - Папирно Програмирање
       courseD_unplugged_digitalCitizenship_2018:
         title: Активност ван мреже
       courseC_Unplugged_ScreenOutTheMean_2018:
@@ -135,4 +135,4 @@ sr:
       BinaryBracelets_2018:
         title: Бинарне наруквице
       RelayProgramming_2018:
-        title: Релејно Програмирање
+        title: Relay programming

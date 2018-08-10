@@ -225,8 +225,8 @@ StudioApp.prototype.configure = function (options) {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return !!(config.level.instructions ||
-      config.level.markdownInstructions ||
+  return !!(config.level.shortInstructions ||
+      config.level.longInstructions ||
       config.level.aniGifURL);
 };
 

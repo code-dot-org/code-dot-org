@@ -31,12 +31,16 @@ class Census::StateCsOffering < ApplicationRecord
     IA
     ID
     IN
+    KS
     KY
     LA
     MA
     MI
+    MO
     MS
+    MT
     NC
+    NY
     OH
     OK
     SC
@@ -85,17 +89,23 @@ class Census::StateCsOffering < ApplicationRecord
     when 'IN'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['NCES'])&.state_school_id
+    when 'KS'
+      row_hash['state_school_id']
     when 'KY'
       row_hash['State School ID']
     when 'LA'
       row_hash['State_School_ID']
     when 'MA'
       School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
+    when 'MO'
+      row_hash['STATE_SCHOOL_ID']
     when 'MS'
       School.find_by(id: row_hash['NCES School ID'])&.state_school_id
     when 'MI'
       # Strip spaces from within cell (convert 'MI - 50050 - 00119' to 'MI-50050-00119').
       row_hash['State School ID'].delete(' ')
+    when 'MT'
+      row_hash['state_school_id']
     when 'NC'
       # School code in the spreadsheet from North Carolina is prefixed with the district code
       # but our schools data imported from NCES is not.
@@ -104,6 +114,8 @@ class Census::StateCsOffering < ApplicationRecord
       # Remove district code prefix from school code.
       school_code.slice!(district_code)
       School.construct_state_school_id('NC', district_code, school_code)
+    when 'NY'
+      row_hash['state_school_id']
     when 'OH'
       row_hash['State School ID']
     when 'OK'
@@ -239,6 +251,16 @@ class Census::StateCsOffering < ApplicationRecord
     4586
   ).freeze
 
+  KS_COURSE_CODES = %w(
+    10152
+    10155
+    10156
+    10153
+    10154
+    10199
+    10197
+  ).freeze
+
   KY_COURSE_CODES = %w(
     110711
     110701
@@ -278,6 +300,14 @@ class Census::StateCsOffering < ApplicationRecord
     10197
   ).freeze
 
+  MO_COURSE_CODES = %w(
+    034355
+    991105
+    100415
+    991195
+    991196
+  ).freeze
+
   MS_COURSE_CODES = %w(
     561005
     000283
@@ -286,7 +316,17 @@ class Census::StateCsOffering < ApplicationRecord
     232060
     232070
     110141
-  )
+  ).freeze
+
+  MT_COURSE_CODES = %w(
+    21009
+    10152
+    10157
+    10156
+    10155
+    10159
+    10153
+  ).freeze
 
   NC_COURSE_CODES = %w(
     BL03
@@ -310,6 +350,17 @@ class Census::StateCsOffering < ApplicationRecord
     TP01
     WC21
     WC22
+  ).freeze
+
+  NY_COURSE_CODES = %w(
+    10152
+    10157
+    10155
+    10154
+    10153
+    10159
+    10156
+    2156
   ).freeze
 
   OH_COURSE_CODES = %w(
@@ -396,6 +447,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'IN'
       # A column per CS course with a value of 'Y' if the course is offered.
       IN_COURSE_CODES.select {|course| row_hash[course] == 'Y'}
+    when 'KS'
+      KS_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'KY'
       KY_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'LA'
@@ -411,10 +464,16 @@ class Census::StateCsOffering < ApplicationRecord
       end
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
+    when 'MO'
+      MO_COURSE_CODES.select {|course| course == row_hash['COURSE']}
     when 'MS'
       MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
+    when 'MT'
+      MT_COURSE_CODES.select {|course| course == row_hash['NCES Course Code']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
+    when 'NY'
+      NY_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'OH'
       OH_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'OK'

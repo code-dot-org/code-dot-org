@@ -3,11 +3,11 @@ es:
   data:
     game:
       name:
-        Unplug1: Introducción al Arte de las Ciencias de la Computación
-        Maze: El laberinto
+        Unplug1: Introducción a la informática
+        Maze: El Laberinto
         Multi: Materias de elección múltiple
         Unplug2: Pensamiento computacional
-        Unplug3: Programación de hoja cuadriculada
+        Unplug3: Programación en papel cuadriculado
         Artist: El artista
         Unplug4: Algoritmos
         Artist2: El artista 2
@@ -15,11 +15,11 @@ es:
         Farmer: El granjero
         Unplug6: Condicionales
         Artist3: El artista 3
-        Unplug7: Escribir canciones
+        Unplug7: Escritura de la canción
         Farmer2: El granjero 2
-        Unplug8: Liberación abstracta
+        Unplug8: Abstracción
         Artist4: El artista 4
-        Unplug9: Programación bajo presión
+        Unplug9: Programación de Relevos
         Farmer3: El granjero 3
         Unplug10: Internet
         Artist5: El artista 5
@@ -53,7 +53,7 @@ es:
         loop_until: Bloque repetir hasta que
         loop_while: Bloque mientras
         loop_for: Bloque contador
-        function: Funciones
+        function: funciones
         parameters: Funciones con parámetros
     level:
       instructions:
@@ -290,8 +290,8 @@ es:
           dejar mi campo plano?"
         maze_karel_debug_function_3: 'Edita este programa para que pueda eliminar
           todas las pilas de mi campo. '
-        turtle_5_1: Intenta ejecutar este programa y haz cambios para ver que ocurre.
-          ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo con algo totalmente
+        turtle_5_1: Intente ejecutar este programa y haga cambios para ver que ocurre.
+          ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
           diferente)
         turtle_5_2: Intente ejecutar este programa y haga cambios para ver que ocurre.
           ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
@@ -582,7 +582,7 @@ es:
         C2_graph_paper: Programación de hoja cuadriculada
         C2_conditionals_with_cards: Condicionales
         C2_binary_bracelets: Pulseras Binarias
-        C2_relay_programming: Programación bajo presión
+        C2_relay_programming: Programación de Relevos
         C2_paper_airplanes: Aviones de Papel
         C2_digital_footprint: Tu huella Digital
         C2_digital_footprint_v2: Tu huella Digital
@@ -605,7 +605,7 @@ es:
         C3_functional_suncatchers: Tragaluces Funcionales
         C3_songwriting_with_parameters: Composición Musical con Parámetros
         C4_intro: Introducción
-        C4_loops_zombie: Bucles
+        C4_loops_zombie: vuelta
         C4_bee_conditional: Condiciones de la Abeja
         C4_variables_artist: Variables - Artista
         C4_variables_playlab: Variables - Laboratorio de juego
@@ -674,8 +674,10 @@ es:
         csd_weblab_intro_3: Introducción a Laboratorio Web - Part 3
         csp_applab_functions: Introducción a las Funciones
         csp_applab_functions_parameters: Funciones con parámetros
-        csp_applab_loops: Bucles
+        csp_applab_loops: vuelta
         csp_concept_rgb: Un poco más de píxeles
+        csp_cs_is_changing_everything: Las Ciencias de la Computación están cambiando
+          todo
         csp_pixelation_color_1: Reproductor Color pixelación - parte 1
         csp_pixelation_color_2: Reproductor Color pixelación - parte 2
         csp_pixelation_color_3: Reproductor Color pixelación - parte 3
@@ -768,14 +770,14 @@ es:
         CSF_if_allskins: El Bloque If
         CSF_ifelse_allskins: Usando Bloques "If/Else"
         CSF_ifelseifelse_allskins: Usando Bloques "If/ElseIf/Else"
-        CSF_loops_AB: Bucles
+        CSF_loops_AB: vuelta
         csd_gamelab_booleans: Expresiones Booleanas
         csd_gamelab_conditional_statements: Sentencias Condicionales
         csd_gamelab_if_else: Sentencias If/Else
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
-        run: Haz clic en "Ejecutar" para probar tu programa
+        run: Dale a "Ejecutar" para probar el programa.
         watch_again: Haz clic aquí para ver el vídeo otra vez
         gray_block_explanation: Los bloques que están de color gris no se pueden eliminar.
           ¿Puedes resolver el rompecabezas de todas formas?

@@ -306,6 +306,16 @@ lt:
       4-5 While Loops Assessment 1_instruction: Lauke yra daug duobių ir žemių. Padėk
         man išlyginti lauką.
       App Lab test_instruction: sąlyga
+      Artist - Nested Loops 1_instruction: 'Užbaik kodą, kad gautum šiuos trikampius.
+        Pirmasis trikampis tau jau yra duotas. Patarimas: apskritimo ilgis yra 360
+        laipsnių. Įsivaizduok, kad šie trikampiai yra apskritimo viduje.'
+      Artist - Nested Loops 5_instruction: Įdėk duotą kodą į kartojimą, kad gautumei
+        malūnėlį.
+      Artist - Nested Loops 9_instruction: Nupiešk krokodilo dantis!
+      C3-Farmer While Loops Assessment 1_instruction: Lauke yra daug duobių ir žemių.
+        Padėk man išlyginti lauką.
+      Course 2 Bee Loops 1_instruction: Labas, aš esu bitė. Ar padėsi man surinkti
+        nektarą iš šių gėlių?
       Course 2 Bee Loops 13_instruction: 'Iššūkis: panaudok kartojimo blokelį ir surink
         visą nektarą.'
       Course 2 Maze Loops 1_instruction: Ar gali nuvesti mane pas kiaulę naudodamas
@@ -506,6 +516,15 @@ lt:
       MC HOC 2016 Village Test_instruction: |-
         O ne! Zombiai įviliojo tave į spąstus!
         Užprogramuok Geležinį Golemą persekioti ir atakuoti zombius!
+      New Basketball Project_instruction: Sukurk savo krepšinio žaidimą - gali keisti
+        visas taisykles. Kai pabaigsi, spustelk "Finišas", ir leisk draugams jį išbandyti
+        savo telefonuose.
+      New Bounce Project_instruction: Sukurk savo "Pong" žaidimą. Tu gali pakeisti
+        išvaizdą bei taisykles. Kai pabaigsi, spustelk "Finišas", ir draugai galės
+        išbandyti jį savo telefonuose (ar pan.).
+      New Sports Project_instruction: 'Sukurk savo žaidimą! Dabar tu čia šeimininkas:
+        gali pakeisti visas taisykles, panaudoti kelias sporto rūšis - būk kūrybingas!.
+        Kai pabaigsi, spustelk "Finišas", ir leisk draugams jį išbandyti savo telefonuose.'
       Overworld Avoid Monsters_instruction: Atsitrenkti į Creeper'į - bloga idėja.
         Atsargiai judėk tarp Crepper'ių ir saugiai pasiek namus.
       Overworld Avoid Monsters_2018_instruction: Atsitrenkti į Creeper'į - bloga idėja.
@@ -633,6 +652,9 @@ lt:
       bounce_12_instruction: Sukurk savo "Pong" žaidimą. Tu gali pakeisti išvaizdą
         bei taisykles. Kai pabaigsi, spustelk "Finišas", ir draugai galės išbandyti
         jį savo telefonuose (ar pan.).
+      bounce_12_2018_instruction: Sukurk savo "Pong" žaidimą. Tu gali pakeisti išvaizdą
+        bei taisykles. Kai pabaigsi, spustelk "Finišas", ir draugai galės išbandyti
+        jį savo telefonuose (ar pan.).
       bounce_12_basketball_instruction: Sukurk savo krepšinio žaidimą - gali keisti
         visas taisykles. Kai pabaigsi, spustelk "Finišas", ir leisk draugams jį išbandyti
         savo telefonuose.
@@ -693,8 +715,8 @@ lt:
         (įvykio). Atmušinėk kamuolį, kol jis pasieks vėliavą.
       course2_maze_seq_challenge1_instruction: Surask kelią ir nuvesk mane pas kvailą
         kiaulę. Tik neleisk man prisiliesti prie TNT dėžučių, nes susprogsiu!
-      course2_playlab_stage17_11_instruction: Sukurk savo istoriją. Kai ją užbaigsi,
-        pasidalink ja su draugais, kad jie galėtų ją peržiūrėti savo telefonuose.
+      course2_playlab_stage17_11_instruction: Sukurk savo istoriją. Kai baigsi, spustelk
+        "Finišas", ir galėsi leisti draugams savo telefonuose peržiūrėti istoriją.
       course3_playlab_stage16_1_instruction: Ar galėtum padaryti, kad šis šuo pasakytų
         „Sveikas, pasauli“?
       course3_playlab_stage16_2_instruction: Ar gali padaryti taip, kad šuo ką nors
@@ -706,15 +728,15 @@ lt:
         jo prieina?
       course3_playlab_stage16_5_instruction: Ar gali pridėti bloką, kad aštuonkojis
         taptų laimingas?
-      course3_playlab_stage16_6_instruction: Sukurk savo istoriją. Kai ją užbaigsi,
-        pasidalink ja su draugais, kad jie galėtų ją peržiūrėti savo telefonuose.
+      course3_playlab_stage16_6_instruction: Sukurk savo istoriją. Kai baigsi, spustelk
+        "Finišas", ir galėsi leisti draugams savo telefonuose peržiūrėti istoriją.
       course3_playlab_stage17_1_instruction: Ar gali sukurti programą, kad aštuonkojis
         pasakytų „Labas“, kai ant jo nuspaudi su pele?
       course3_playlab_stage17_2_instruction: Ar gali parašyti programą, kad šis pingvinas
         judėtų spaudinėjant klaviatūros rodykles ir pataikytų į visus taikinius?
-      course3_playlab_stage17_3_instruction: Blokelis „kartok visada“ leis vykdyti
-        nurodytus veiksmus nesustojant. Ar mokėtum nurodyti dinozaurui pastoviai vaikščioti
-        aukštyn-žemyn?
+      course3_playlab_stage17_3_instruction: Blokelis „kartok amžinai“ leidžia kodui
+        veikti nesustojant. Ar sugebėsi sudėti blokus taip, kad šis dinozauras judėtų
+        aukštyn ir žemyn nesustodamas?
       course3_playlab_stage17_4_instruction: Padaryk, kad pingvinas sakytų „Oi!“ ir
         sugrotų garsas „atsimušimas“, jeigu jis atsitrenkia į dinozaurą. Pingvinas
         turi būti valdomas klaviatūros rodyklėmis.
@@ -723,8 +745,8 @@ lt:
         bus gaunamas taškas.
       course3_playlab_stage17_6_instruction: Pridėk blokelius, kurie, paleidus žaidimą,
         pakeistų foną ir pingvino greitį. Po to pajudink pingviną, kol gausi tašką.
-      course3_playlab_stage17_7_instruction: Sukurk savo istoriją. Kai ją užbaigsi,
-        pasidalink ja su draugais, kad jie galėtų ją peržiūrėti savo telefonuose.
+      course3_playlab_stage17_7_instruction: Sukurk savo istoriją. Kai baigsi, spustelk
+        "Finišas", ir galėsi leisti draugams savo telefonuose peržiūrėti istoriją.
       course4_artist_fwp_challenge1_instruction: Pamėgink paleisti šią programą, po
         to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip
         ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)
@@ -745,6 +767,9 @@ lt:
         naują kamuolį“ daugiau nei vienoje vietoje. Taip pat pamėgink pakeisti scenos
         foną ar raketės greitį . Išbandyk, kiek taškų sugebėsi surinkti, kol priešininkas
         jų gaus dvigubai daugiau.
+      courseD_bounce_events12_instruction: Sukurk savo "Pong" žaidimą. Tu gali pakeisti
+        išvaizdą bei taisykles. Kai pabaigsi, spustelk "Finišas", ir draugai galės
+        išbandyti jį savo telefonuose (ar pan.).
       courseD_bounce_events2_instruction: Prijunk blokelį prie  „kai ... rodyklė dešinėn“
         ir „kai ... kairėn“ . Judink raketę, kad pasiektum abu  taikinius.
       courseD_bounce_events3_instruction: Dabar pabandyk atlikti kažką panašaus su
@@ -928,12 +953,15 @@ lt:
         į „Kol“ blokelio vidų.'
       grade4_arist_nested_loop_circles1_instruction: Įdėk kartojimą į kartojimą, kad
         užbaigtum šį raštą.
+      grade4_arist_nested_loop_flags1_instruction: Įdėk duotą kodą į kartojimą, kad
+        gautumei malūnėlį.
       grade4_arist_nested_loop_polygons1_instruction: "Pakartok šį kodą 10 kartų.
         \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime?"
       grade4_arist_nested_loop_polygons2_instruction: "Pakartok šį kodą 6 kartus.
         \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime? "
       grade4_arist_nested_loop_triangles2_instruction: 'Įdėk visą šį kodą į kartojimo
         blokelį, kad gautum 10 trikampių. Tai yra vadinama „kartojimu kartojime“.  '
+      grade4_arist_nested_loop_triangles4_instruction: Nupiešk krokodilo dantis!
       grade4_arist_nested_loop_triangles5_instruction: Nupiešk saulę, sukurdama(-s)
         kartojimą kartojime.
       grade4_artist_functions1_instruction: |-
@@ -945,8 +973,13 @@ lt:
         Tarp kvadratų yra 75 pikselių atstumas.
       grade4_artist_nested_loop_circles1_instruction: Įdėk kartojimą į kartojimą,
         kad užbaigtum šį raštą.
+      grade4_artist_nested_loop_flags1_instruction: Įdėk duotą kodą į kartojimą, kad
+        gautumei malūnėlį.
       grade4_artist_nested_loop_polygons1_instruction: "Pakartok šį kodą 10 kartų.
         \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime?"
+      grade4_artist_nested_loop_triangles1_instruction: 'Užbaik kodą, kad gautum šiuos
+        trikampius. Pirmasis trikampis tau jau yra duotas. Patarimas: apskritimo ilgis
+        yra 360 laipsnių. Įsivaizduok, kad šie trikampiai yra apskritimo viduje.'
       grade4_artist_nested_loop_triangles5_instruction: Nupiešk saulę, sukurdama(-s)
         kartojimą kartojime.
       grade4_bee_functions1_instruction: Surink visą nektarą iš kiekvienos gėlės.
@@ -993,10 +1026,15 @@ lt:
         padaryti taip, kad menininkas judėtų nepiešdamas. Nubrėžk punktyrinę liniją
         naudodamas peršokimo ir piešimo mygtukus.
       k-1 maze 1_instruction: Padėk man žingsniuoti į vakarus, kad pasiekčiau kiaulę.
+      scrat 16 (copy 1)_instruction: Gilė! Gilė! Gilė! Panaudok blokelį „jei“, kad
+        galėčiau ją pasiekti. Pamėgink panaudoti kuo mažiau blokelių.
       scrat 16_instruction: Gilė! Gilė! Gilė! Panaudok blokelį „jei“, kad galėčiau
         ją pasiekti. Pamėgink panaudoti kuo mažiau blokelių.
       scrat 17_instruction: Pamėginkime dar kartą – užduotis labai panaši, bet reikia
         stengtis neatsitrenkti į sieną!
+      scrat 18 (copy 1)_instruction: Blokelis „jei-kitu atveju“ tikrina sąlygą, o
+        po to atlieka vieną ARBA kitą veiksmą. Padėk man pasiekti gilę, panaudodamas
+        šį blokelį.
       scrat 18_instruction: Blokelis „jei-kitu atveju“ tikrina sąlygą, o po to atlieka
         vieną ARBA kitą veiksmą. Padėk man pasiekti gilę, panaudodamas šį blokelį.
       scrat 19 (copy 1)_instruction: Dar viena užduotis su „Jei-priešingu atveju“

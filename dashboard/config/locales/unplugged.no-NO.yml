@@ -154,7 +154,7 @@
           som du skal bruke mange ganger) for å lage solfangere ved bruk av tråder
           og perler.
       SongwritingParameters:
-        title: Låtskriving med parametere
+        title: Låtskriving
         desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende
           parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele
           funksjonen).
@@ -317,7 +317,7 @@
           samling med instruksjoner) for å styre klassekameratene sine til å lage
           en tegning.
       courseD_unplugged_relayProgramming:
-        title: Relé-programmering
+        title: Relé programmering
         desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for
           å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov
           til å skrive en instruksjon om gangen og dersom det er en feil må de viske
@@ -354,7 +354,7 @@
           å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer
           effektivt enn hvis en elev prøvde det alene.
       courseE_unplugged_songwriting:
-        title: Låtskriving med parametere
+        title: Låtskriving
         desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende
           parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele
           funksjonen).
@@ -451,4 +451,4 @@
       MoveItMoveIt_2018:
         title: Flytt den, flytt den
       RelayProgramming_2018:
-        title: Relé-programmering
+        title: Relé programmering

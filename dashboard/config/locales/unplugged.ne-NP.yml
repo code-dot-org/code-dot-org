@@ -68,7 +68,7 @@ ne:
           style thinking game to help your class learn about the effectiveness of
           abstraction.
       Unplug9:
-        title: Relay Programming
+        title: Relay programming
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -305,7 +305,7 @@ ne:
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       courseD_unplugged_relayProgramming:
-        title: Relay Programming
+        title: Relay programming
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -429,4 +429,4 @@ ne:
       MoveItMoveIt_2018:
         title: Move It, Move It
       RelayProgramming_2018:
-        title: Relay Programming
+        title: Relay programming
