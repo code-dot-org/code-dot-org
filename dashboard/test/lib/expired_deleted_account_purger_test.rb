@@ -3,14 +3,6 @@ require 'account_purger'
 require 'expired_deleted_account_purger'
 require_relative '../../../shared/test/spy_newrelic_agent'
 
-# For purposes of this test, reopen AccountPurger and fake the actual
-# account deletion logic.
-class AccountPurger
-  private def really_purge_data_for_account(user)
-    user.update(purged_at: Time.now)
-  end
-end
-
 class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   freeze_time
 
@@ -30,6 +22,11 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     # No uploads
     ExpiredDeletedAccountPurger.any_instance.stubs :upload_activity_log
     PurgedAccountLog.any_instance.stubs :upload
+
+    # Fake deletion behavior
+    DeleteAccountsHelper.stubs(:purge_user).with do |account|
+      account.update!(purged_at: Time.now); true
+    end
   end
 
   def teardown
@@ -243,7 +240,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_after: 4.days.ago,
       deleted_before: 2.days.ago
 
-    AccountPurger.stubs(:new).returns(FakeAccountPurger.new(fails_on: student_b))
+    DeleteAccountsHelper.stubs(:purge_user).with do |account|
+      raise 'Intentional failure' if account == student_b
+      account.update!(purged_at: Time.now); true
+    end
 
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
@@ -267,6 +267,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
       max_accounts_to_purge: 100
+      Purging user_id #{student_a.id}
+      Purging user_id #{student_b.id}
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 1
       Custom/DeletedAccountPurger/AccountsQueued: 1
@@ -421,18 +423,5 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purged 0 account(s).
       🕐 00:00:00
     LOG
-  end
-end
-
-class FakeAccountPurger
-  def initialize(options = {})
-    @dry_run = options[:dry_run].nil? ? false : options[:dry_run]
-    @fails_on = options[:fails_on]
-  end
-
-  # Purge information for an individual user account.
-  def purge_data_for_account(user)
-    raise 'Fake failure' if user == @fails_on
-    user.update!(purged_at: Time.now) unless @dry_run
   end
 end

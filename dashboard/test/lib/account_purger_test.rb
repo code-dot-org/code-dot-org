@@ -3,6 +3,8 @@ require 'account_purger'
 require 'cdo/delete_accounts_helper'
 
 class AccountPurgerTest < ActiveSupport::TestCase
+  NULL_STREAM = File.open File::NULL, 'w'
+
   setup do
     # Don't actually call in to inner logic in any test
     DeleteAccountsHelper.stubs(:purge_user)
@@ -36,28 +38,33 @@ class AccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'purge_data_for_account uses DeleteAccountsHelper to purge the user' do
-    DeleteAccountsHelper.expects(:purge_user).with(@student).once
-    AccountPurger.new.purge_data_for_account @student
+    DeleteAccountsHelper.expects(:purge_user).once.with {|account| account.id == @student.id}
+    AccountPurger.new(log: NULL_STREAM).
+      purge_data_for_account @student
   end
 
   test 'purge_data_for_account does not call DeleteAccountsHelper when dry-run is enabled' do
     DeleteAccountsHelper.expects(:purge_user).never
-    AccountPurger.new(dry_run: true).purge_data_for_account @student
+    AccountPurger.new(log: NULL_STREAM, dry_run: true).
+      purge_data_for_account @student
   end
 
   test 'purge_data_for_account uploads a log' do
     PurgedAccountLog.any_instance.expects(:upload).once
-    AccountPurger.new.purge_data_for_account @student
+    AccountPurger.new(log: NULL_STREAM).
+      purge_data_for_account @student
   end
 
   test 'purge_data_for_account does not upload a log when dry-run is enabled' do
     PurgedAccountLog.any_instance.expects(:upload).never
-    AccountPurger.new(dry_run: true).purge_data_for_account @student
+    AccountPurger.new(log: NULL_STREAM, dry_run: true).
+      purge_data_for_account @student
   end
 
   test 'purge_data_for_account logs activity' do
     log = StringIO.new
-    AccountPurger.new(log: log).purge_data_for_account @student
+    AccountPurger.new(log: log).
+      purge_data_for_account @student
     assert_equal <<~LOG, log.string
       Purging user_id #{@student.id}
     LOG
@@ -65,7 +72,8 @@ class AccountPurgerTest < ActiveSupport::TestCase
 
   test 'purge_data_for_account logs activity when dry-run is enabled' do
     log = StringIO.new
-    AccountPurger.new(log: log, dry_run: true).purge_data_for_account @student
+    AccountPurger.new(log: log, dry_run: true).
+      purge_data_for_account @student
     assert_equal <<~LOG, log.string
       Purging user_id #{@student.id} (dry-run)
     LOG
