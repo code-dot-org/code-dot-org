@@ -2,7 +2,6 @@ module Pd
   class WorkshopDailySurveyController < ApplicationController
     include WorkshopConstants
     include JotForm::EmbedHelper
-    include Pd::JotForm::Constants
 
     # The POST submit route will be redirected to from JotForm, after form submission
     skip_before_action :verify_authenticity_token, only: %w(submit_general submit_facilitator)
@@ -23,7 +22,7 @@ module Pd
       return render_404 if day < 0
 
       workshop = Workshop.
-        where(ended_at: nil, course: [COURSE_CSD, COURSE_CSP]).
+        where(course: [COURSE_CSD, COURSE_CSP]).
         where.not(subject: SUBJECT_FIT).
         nearest_attended_or_enrolled_in_by(current_user)
 
