@@ -21,10 +21,15 @@ module Pd
       day = params[:day].to_i
       return render_404 if day < 0
 
-      workshop = params[:enrollmentCode].present? ? Pd::Enrollment.find_by!(code: params[:enrollmentCode]).workshop : Workshop.
-        where(course: [COURSE_CSD, COURSE_CSP]).
-        where.not(subject: SUBJECT_FIT).
-        nearest_attended_or_enrolled_in_by(current_user)
+      workshop =
+        if params[:enrollmentCode].present?
+          Pd::Enrollment.find_by!(code: params[:enrollmentCode]).workshop
+        else
+          Workshop.
+          where(course: [COURSE_CSD, COURSE_CSP]).
+          where.not(subject: SUBJECT_FIT).
+          nearest_attended_or_enrolled_in_by(current_user)
+        end
 
       return render :not_enrolled unless workshop
       # There's no pre-workshop survey for academic year workshops

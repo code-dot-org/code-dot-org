@@ -235,13 +235,13 @@ module Pd
 
     test 'enrollment code override is used when fetching the workshop for a user' do
       other_academic_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators
+        num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
       create :pd_attendance, session: other_academic_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: other_enrollment
 
       # Same test as above but make sure we use the other workshop instead of @academic_year_workshop
       # because we are using the enrollment code
-      #
+
       submit_redirect = general_submit_redirect(day: 1, user: @enrolled_academic_year_teacher, workshop: other_academic_workshop)
       assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
 
