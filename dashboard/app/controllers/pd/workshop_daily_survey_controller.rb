@@ -21,7 +21,7 @@ module Pd
       day = params[:day].to_i
       return render_404 if day < 0
 
-      workshop = Workshop.
+      workshop = params[:enrollmentCode].present? ? Pd::Enrollment.find_by!(code: params[:enrollmentCode]).workshop : Workshop.
         where(course: [COURSE_CSD, COURSE_CSP]).
         where.not(subject: SUBJECT_FIT).
         nearest_attended_or_enrolled_in_by(current_user)
