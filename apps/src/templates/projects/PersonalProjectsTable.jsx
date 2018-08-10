@@ -41,7 +41,8 @@ export const styles = {
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
-    padding: 2
+    padding: 2,
+    overflow: 'hidden'
   },
   headerCellThumbnail: {
     padding: 0
@@ -121,7 +122,7 @@ const dateFormatter = function (time) {
 };
 
 const publishedAtFormatter = (publishedAt) => {
-  return publishedAt ? (<FontAwesome icon="circle"/>) : '';
+  return publishedAt ? (<FontAwesome icon="check"/>) : '';
 };
 
 class PersonalProjectsTable extends React.Component {
