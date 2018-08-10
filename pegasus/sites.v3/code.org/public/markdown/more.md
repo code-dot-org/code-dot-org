@@ -90,6 +90,21 @@ Cu vis minim imperdiet. Vel cu phaedrum adolescens, vim te assentior delicatissi
 
 ## Social Media
 ***
+
+### How to point to Code.org's social media sites
+Do not use any social media components that are hosted on third-party sites. Third-party content can use cookies to track users, violating our privacy policy. Instead, use an image file that we host. This image may still link to the third-party site when clicked.
+
+<%= view :social_media, facebook: "Code.org", twitter: "codeorg", tumblr: "http://teacherblog.code.org", instagram: "codeorg" %>
+
+### How to share your page on social media
+
+You can use our buttons to share your page on Facebook or Twitter. Below is an example of the buttons to share the Access Report. Simply replace the URL with your page's URL and update the placeholder text for the tweet.
+
+<% facebook = {:u=>'https://code.org/yourschool'} %>
+<% twitter = {:url=>'https://code.org/yourschool', :related=>'codeorg', :text=>'Does your school teach computer science? Expand computer science at your school or district. @codeorg'} %>
+<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+
+### What your page looks like when shared on social media
 You can customize how your page appears on social media channels by adding social media tags to your page metadata (at the top of the page). Use og tags for Facebook’s Open Graph protocol and twitter tags for Twitter. Include twitter and og tags with an image, url, description, etc. so that when your page is shared on social media they appear with specific text you provide instead of the social media channel scanning and selecting it's own content.
 
 <br>

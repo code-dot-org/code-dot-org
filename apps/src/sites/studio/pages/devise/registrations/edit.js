@@ -7,7 +7,6 @@ import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeCo
 import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import experiments from '@cdo/apps/util/experiments';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -20,6 +19,7 @@ const {
   isGoogleClassroomStudent,
   isCleverStudent,
   dependedUponForLogin,
+  studentCount,
 } = scriptData;
 
 $(document).ready(() => {
@@ -33,9 +33,11 @@ $(document).ready(() => {
     emailChangedCallback: onEmailChanged,
   });
 
+  const hashedEmails = authenticationOptions.map(ao => ao.hashed_email);
   new ChangeUserTypeController(
     $('#change-user-type-modal-form'),
     userType,
+    hashedEmails,
   );
 
   const addPasswordMountPoint = document.getElementById('add-password-fields');
@@ -54,19 +56,17 @@ $(document).ready(() => {
     );
   }
 
-  if (experiments.isEnabled(experiments.ACCOUNT_DELETION_NEW_FLOW)) {
-    const deleteAccountMountPoint = document.getElementById('delete-account');
-    // Replace deleteAccountMountPoint Rails contents with DeleteAccount component.
-    if (deleteAccountMountPoint) {
-      ReactDOM.render(
-        <DeleteAccount
-          isPasswordRequired={isPasswordRequired}
-          isTeacher={userType === 'teacher'}
-          dependedUponForLogin={dependedUponForLogin}
-        />,
-        deleteAccountMountPoint
-      );
-    }
+  const deleteAccountMountPoint = document.getElementById('delete-account');
+  if (deleteAccountMountPoint) {
+    ReactDOM.render(
+      <DeleteAccount
+        isPasswordRequired={isPasswordRequired}
+        isTeacher={userType === 'teacher'}
+        dependedUponForLogin={dependedUponForLogin}
+        hasStudents={studentCount > 0}
+      />,
+      deleteAccountMountPoint
+    );
   }
 
   initializeCreatePersonalAccountControls();

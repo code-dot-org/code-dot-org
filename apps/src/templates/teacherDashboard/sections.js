@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import teacherSections, {
-  setOAuthProvider,
+  setRosterProvider,
   asyncLoadSectionData
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import manageStudents, {
@@ -25,13 +25,13 @@ import scriptSelection, { loadValidScripts } from '@cdo/apps/redux/scriptSelecti
  * On the manage students tab of an oauth section, use React to render a button
  * that will re-sync an OmniAuth section's roster.
  * @param {number} sectionId
- * @param {OAuthSectionTypes} provider
+ * @param {OAuthSectionTypes} rosterProvider
  */
-export function renderSyncOauthSectionControl({sectionId, provider}) {
+export function renderSyncOauthSectionControl({sectionId, rosterProvider}) {
   registerReducers({teacherSections});
   const store = getStore();
 
-  store.dispatch(setOAuthProvider(provider));
+  store.dispatch(setRosterProvider(rosterProvider));
   store.dispatch(asyncLoadSectionData(sectionId));
 
   ReactDOM.render(
@@ -96,9 +96,11 @@ export function renderSectionTable(section, studioUrlPrefix,) {
   store.dispatch(asyncLoadSectionData(section.id));
   store.dispatch(setSection(section));
 
-  // Show share column by default for CSD and CSP courses.
-  const coursesToShowShareSetting = ['csd-2017', 'csd-2018', 'csp-2017', 'csp-2018'];
-  if (coursesToShowShareSetting.includes(section.course_name)) {
+  // Show share column by default for CSD and CSP courses,
+  // or any script in either course.
+  const scriptsToShowShareSetting = ["csp-2017", "csp-2018", "csd-2017", "csd-2018", "csd1-2018", "csd2-2018", "csd3-2018", "csd4-2018", "csd5-2018", "csd6-2018", "csd1-2017", "csd2-2017", "csd3-2017", "csd4-2017", "csd5-2017", "csd6-2017", "csp1-2018", "csp2-2018", "csp3-2018", "csp4-2018", "csp-explore-2018", "csp5-2018", "csp-create-2018", "csppostap-2018", "cspunit1", "cspunit2", "cspunit3", "cspunit4", "cspunit5", "cspunit6", "csp1-2017", "csp2-2017", "csp3-2017", "csp4-2017", "csp5-2017", "csp-explore-2017", "csp-create-2017", "csppostap-2017", "csp-post-survey"];
+
+  if (scriptsToShowShareSetting.includes(section.script.name)) {
     store.dispatch(toggleSharingColumn());
   }
 

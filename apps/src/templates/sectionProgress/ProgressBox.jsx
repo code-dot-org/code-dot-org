@@ -52,7 +52,7 @@ export default class ProgressBox extends Component {
       <div style={boxWithBorderStyle}>
         <div style={incompleteLevels}/>
         <div style={imperfectLevels}/>
-        <div style={perfectLevels}/>
+        <div className={"uitest-perfect-bar"} style={perfectLevels}/>
       </div>
     );
   }

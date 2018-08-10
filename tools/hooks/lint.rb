@@ -14,7 +14,7 @@ def filter_eslint_apps(modified_files)
         f.match(/public\/.+package\//) ||
         f.match(/apps\/lib\//) ||
         f.match(/shared\//) ||
-        f.match(/dashboard\/config\/blocks/)
+        f.match(/dashboard\/config\//)
        )
   end
 end

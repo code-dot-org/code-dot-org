@@ -1,0 +1,7 @@
+%h1= 'Libraries'
+= link_to 'Create a New Library', new_library_path
+
+%h2= 'Edit an existing Library'
+%ul
+  - Library.all.each do |library|
+    %li= link_to library.name, edit_library_path(id: library.name)

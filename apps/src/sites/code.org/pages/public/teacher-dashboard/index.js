@@ -216,8 +216,6 @@ function main() {
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
-         assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
-         surveys: {method:'GET', url:'/dashboardapi/section_surveys/:id', isArray: true},
          validScripts: {method:'GET', url:'/dashboardapi/sections/valid_scripts', isArray: true},
       });
     }]).config(['$httpProvider', function ($httpProvider) {
@@ -420,7 +418,7 @@ function main() {
         $scope.section.$promise.then(section =>
           renderSyncOauthSectionControl({
             sectionId: section.id,
-            provider: scriptData.provider
+            rosterProvider: section.login_type
           })
         );
       });
@@ -626,6 +624,12 @@ function main() {
     $scope.script_list = sectionsService.validScripts();
     $scope.tab = 'responses';
 
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
+
     $scope.react_text_responses = true;
     $scope.$on('text-responses-table-rendered', () => {
       $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
@@ -668,15 +672,19 @@ function main() {
     $scope.sections = sectionsService.query();
     $scope.tab = 'assessments';
 
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
+
     $scope.script_list = sectionsService.validScripts();
 
     $scope.assessmentsLoaded = false;
     $scope.assessmentStages = [];
-    $scope.assessments = sectionsService.assessments({id: $routeParams.id});
 
     $scope.surveysLoaded = false;
     $scope.surveyStages = [];
-    $scope.surveys = sectionsService.surveys({id: $routeParams.id});
 
     $scope.react_assessments = true;
     $scope.$on('section-assessments-rendered', () => {

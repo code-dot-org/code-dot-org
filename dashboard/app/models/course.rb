@@ -261,6 +261,15 @@ class Course < ApplicationRecord
     }
   end
 
+  def summarize_short
+    {
+      name: name,
+      title: I18n.t("data.course.name.#{name}.title", default: ''),
+      description: I18n.t("data.course.name.#{name}.description_short", default: ''),
+      link: Rails.application.routes.url_helpers.course_path(self),
+    }
+  end
+
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
   def summarize_versions
@@ -353,6 +362,17 @@ class Course < ApplicationRecord
       # select only courses with scripts which the user has progress in.
       where('course_scripts.script_id' => user_script_ids).
       count > 0
+  end
+
+  # returns whether a script in this course has version_warning_dismissed.
+  def has_dismissed_version_warning?(user)
+    return nil unless user
+    script_ids = default_scripts.pluck(:id)
+    user.
+      user_scripts.
+      where(script_id: script_ids).
+      select(&:version_warning_dismissed).
+      any?
   end
 
   @@course_cache = nil

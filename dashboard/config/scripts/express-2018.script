@@ -1,3 +1,4 @@
+hidden false
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/express/standards/"]]
 stage_extras_available true
@@ -8,6 +9,7 @@ project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses bullhorn", "type"=>"bullhorn"}]
 family_name 'express'
 version_year '2018'
+is_stable true
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
@@ -410,9 +412,7 @@ level 'Virtual Pet Freeplay'
 stage 'Explore Project Ideas'
 named_level 'courseF_video_csMatters_2018'
 named_level 'InspirationalArtwork_2018'
-named_level 'FoodFight_2018'
-named_level 'Guess The Number_2018'
-named_level 'Choose Your Own Adventure_2018'
+named_level 'courseF_project_1'
 
 stage 'The Design Process'
 named_level 'Begin planning your project_2018'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180716214410) do
+ActiveRecord::Schema.define(version: 20180806214228) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -88,14 +88,17 @@ ActiveRecord::Schema.define(version: 20180716214410) do
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
   end
 
-  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
-    t.string   "name"
-    t.string   "level_type"
+  create_table "blocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",                                   null: false
+    t.string   "pool",                      default: "", null: false
     t.string   "category"
     t.text     "config",      limit: 65535
     t.text     "helper_code", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_blocks_on_deleted_at", using: :btree
+    t.index ["pool", "name"], name: "index_blocks_on_pool_and_name", unique: true, using: :btree
   end
 
   create_table "callouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -518,6 +521,13 @@ ActiveRecord::Schema.define(version: 20180716214410) do
     t.integer "script_level_id", null: false
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id", using: :btree
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
+  end
+
+  create_table "libraries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",                     null: false
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "metrics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1046,6 +1056,14 @@ ActiveRecord::Schema.define(version: 20180716214410) do
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
+  create_table "queued_account_purges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                         null: false
+    t.text     "reason_for_review", limit: 65535
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true, using: :btree
+  end
+
   create_table "regional_partner_program_managers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "program_manager_id",  null: false
     t.integer "regional_partner_id", null: false
@@ -1472,14 +1490,15 @@ ActiveRecord::Schema.define(version: 20180716214410) do
   end
 
   create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",          null: false
-    t.integer  "script_id",        null: false
+    t.integer  "user_id",                        null: false
+    t.integer  "script_id",                      null: false
     t.datetime "started_at"
     t.datetime "completed_at"
     t.datetime "assigned_at"
     t.datetime "last_progress_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "properties",       limit: 65535
     t.index ["script_id"], name: "index_user_scripts_on_script_id", using: :btree
     t.index ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true, using: :btree
   end
@@ -1615,6 +1634,7 @@ ActiveRecord::Schema.define(version: 20180716214410) do
   add_foreign_key "plc_courses", "courses"
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "plc_tasks", "script_levels"
+  add_foreign_key "queued_account_purges", "users"
   add_foreign_key "school_infos", "school_districts"
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"

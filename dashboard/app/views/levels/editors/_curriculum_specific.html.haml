@@ -1,0 +1,29 @@
+.field
+  = f.label :thumbnail_url, 'Optional thumbnail URL (overrides default thumbnail)'
+  = f.text_field :thumbnail_url
+
+.field
+  = f.label :project_template_level_name, 'Project Template Level Name'
+  %p What this does:
+  %ul
+    %li if start_blocks are defined in the project template level, use those instead of the start blocks for this level
+    %li if toolbox_blocks are defined in the project template level, use those instead of the toolbox blocks for this level
+    %li autocreate a project that is shared with all levels with the same project template level
+  %p (Leave blank if you do not want all of this)
+  = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
+
+.field
+  = f.label :contained_level_names, 'Contained Level Names'
+  %p Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
+  - @level.contained_level_names = [''] unless @level.contained_level_names.try(:present?)
+  - @level.contained_level_names.each do |level_name|
+    = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
+  #plusAnswerContainedLevel
+    %i.fa.fa-plus-circle
+
+  = render partial: 'levels/editors/hide_share_and_remix', locals: {f: f}
+
+  .field
+    = f.label :failure_message_override, 'Failure Message Override'
+    %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
+    = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'

@@ -555,9 +555,14 @@ class ScriptTest < ActiveSupport::TestCase
     refute foo17.summarize(true, user)[:show_script_version_warning]
     assert foo18.summarize(true, user)[:show_script_version_warning]
 
-    create(:user_script, user: user, script: foo18)
+    user_script_18 = create(:user_script, user: user, script: foo18)
     refute foo17.summarize(true, user)[:show_script_version_warning]
     assert foo18.summarize(true, user)[:show_script_version_warning]
+
+    # version warning can be dismissed
+    user_script_18.version_warning_dismissed = true
+    user_script_18.save!
+    refute foo18.summarize(true, user)[:show_script_version_warning]
   end
 
   test 'summarize only shows one version warning' do
@@ -1229,6 +1234,18 @@ endvariants
 
     assessment_script_levels = script.get_assessment_script_levels
     assert_equal assessment_script_levels[0], script_level
+  end
+
+  test "self.modern_elementary_courses_available?" do
+    course1_modern = create(:script, name: 'course1-modern', supported_locales: ["en-us", "it-it"])
+    course2_modern = create(:script, name: 'course2-modern', supported_locales: ["fr-fr", "en-us"])
+
+    Script.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
+
+    assert Script.modern_elementary_courses_available?("en-us")
+    assert_not Script.modern_elementary_courses_available?("ch-ch")
+    assert_not Script.modern_elementary_courses_available?("it-it")
+    assert_not Script.modern_elementary_courses_available?("fr-fr")
   end
 
   private

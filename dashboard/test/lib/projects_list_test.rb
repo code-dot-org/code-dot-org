@@ -25,7 +25,7 @@ class ProjectsListTest < ActionController::TestCase
   end
 
   test 'get_project_row_data correctly parses student and project data' do
-    project_row = ProjectsList.send(:get_project_row_data, @student, @student_project, @channel_id)
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, @student)
     assert_equal @channel_id, project_row['channel']
     assert_equal 'Bobs App', project_row['name']
     assert_equal @student.name, project_row['studentName']
@@ -34,7 +34,15 @@ class ProjectsListTest < ActionController::TestCase
   end
 
   test 'get_project_row_data ignores hidden projects' do
-    assert_nil ProjectsList.send(:get_project_row_data, @student, @hidden_project, @channel_id)
+    assert_nil ProjectsList.send(:get_project_row_data, @hidden_project, @channel_id, @student)
+  end
+
+  test 'get_project_row_data still correctly parses project data even if no student is passed' do
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id)
+    assert_equal @channel_id, project_row['channel']
+    assert_equal 'Bobs App', project_row['name']
+    assert_equal 'applab', project_row['type']
+    assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
   end
 
   test 'get_published_project_and_user_data returns nil for projects with sharing_disabled' do

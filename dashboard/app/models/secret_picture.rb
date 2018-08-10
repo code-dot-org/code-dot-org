@@ -18,11 +18,10 @@ class SecretPicture < ActiveRecord::Base
   include Seeded
 
   def self.setup
+    secret_pictures = load_csv Dashboard::Application.config.secret_pictures_csv
     transaction do
       reset_db
-      load_csv(Dashboard::Application.config.secret_pictures_csv) do |attrs|
-        create!(attrs)
-      end
+      SecretPicture.import! secret_pictures
     end
   end
 

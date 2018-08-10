@@ -1,0 +1,7 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "helloWorld",
+    "blockText": "hello world"
+  }
+}

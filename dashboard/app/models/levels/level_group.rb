@@ -186,60 +186,6 @@ ruby
     end
   end
 
-  # Surveys: Returns all anonymized survey results, given a script and a section.
-  #
-  # The results look like this.  For each LevelGroup, levelgroup_results is an array
-  # wih an entry per contained sublevel.  Inside each entry is an array of results
-  # which has been shuffled to increase student anonymity.  There is an entry for each
-  # student who has submitted the overall LevelGroup, whether they have given a valid
-  # answer to that sublevel question or not, which explains the empty hashes
-  # intermingled with real results.
-  # [
-  #   { stage: "Stage 30: Anonymous student survey",
-  #     levelgroup_results: [
-  #       {
-  #         type: "multi",
-  #         question: "Computer science is fun",
-  #         results: [
-  #           {answer_index: 0},
-  #           {},
-  #           {answer_index: 0}],
-  #         answer_texts: ["Agree", "Disagree", "Not sure"]}},
-  #       {
-  #         type: "free_response",
-  #         question: "Why are you doing this class?  Give at least two reasons.",
-  #         results: [
-  #           {result: ""},
-  #           {result: "I like making games, and I also like the lifestyle."},
-  #           {}]}]}]
-  #
-  # TODO(caleybrock): remove once assessments tab is converted to react
-  def self.get_survey_results(script, section)
-    level_group_script_levels = script.script_levels.includes(:levels).where('levels.type' => 'LevelGroup')
-
-    # Go through each anonymous long-assessment LevelGroup.
-    level_group_script_levels.map do |script_level|
-      next unless script_level.long_assessment?
-      next unless script_level.anonymous?
-
-      levelgroup_results = get_levelgroup_survey_results(script_level, section)
-
-      # We will have results, even empty ones, for each student that submitted
-      # an answer.
-      student_count = levelgroup_results.empty? ? 0 : levelgroup_results.first[:results].length
-
-      if student_count >= SURVEY_REQUIRED_SUBMISSION_COUNT
-        # All the results for one LevelGroup for a group of students.
-        {
-          stage: script_level.stage.localized_title,
-          levelgroup_results: levelgroup_results
-        }
-      else
-        nil
-      end
-    end.compact
-  end
-
   # Surveys: Returns all anonymous survey results, given a script and a section.
   #
   # The results look like this.  For each level_group_id, levelgroup_results is an array
