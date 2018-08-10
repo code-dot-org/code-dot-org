@@ -13,8 +13,7 @@ const STANDARD_PADDING = 20;
 
 const menuStyle = {
   position: 'absolute',
-  // must appear in front of .modal from application.scss
-  zIndex: 1051,
+  zIndex: 20,
   border: `1px solid ${BORDER_COLOR}`,
   backgroundColor: BACKGROUND_COLOR,
   borderRadius: 2,
@@ -55,6 +54,7 @@ export default class PopUpMenu extends Component {
     isOpen: PropTypes.bool,
     beforeClose: PropTypes.func,
     showTail: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   render() {
@@ -71,6 +71,7 @@ export default class PopUpMenu extends Component {
           className={this.props.className}
           children={this.props.children}
           showTail={this.props.showTail}
+          style={this.props.style}
         />
       </Portal>
     );
@@ -90,6 +91,7 @@ class MenuBubbleUnwrapped extends Component {
     children: PropTypes.any,
     className: PropTypes.string,
     showTail: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   renderMenuItems() {
@@ -123,6 +125,7 @@ class MenuBubbleUnwrapped extends Component {
     const marginLeft = this.props.offset ? this.props.offset.x : -STANDARD_PADDING;
     const style = {
       ...menuStyle,
+      ...this.props.style,
       ...targetPoint,
       marginTop: marginTop,
       marginLeft: marginLeft,
