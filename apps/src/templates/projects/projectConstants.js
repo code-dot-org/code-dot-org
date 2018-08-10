@@ -62,6 +62,32 @@ export const PROJECT_TYPE_MAP = {
   weblab: i18n.projectTypeWeblab(),
 };
 
+export const PERSONAL_PROJECT_TYPE_MAP = {
+  algebra_game: i18n.projectTypeAlgebra(),
+  applab: i18n.projectTypeApplab(),
+  artist: i18n.projectTypeArtist(),
+  frozen: i18n.projectTypeFrozen(),
+  gumball: i18n.projectTypeGumball(),
+  infinity: i18n.projectTypeInfinity(),
+  iceage: i18n.projectTypeIceage(),
+  minecraft_adventurer: i18n.projectTypeMinecraft(),
+  minecraft_designer: i18n.projectTypeMinecraft(),
+  minecraft_hero: i18n.projectTypeMinecraft(),
+  gamelab: i18n.projectTypeGamelab(),
+  playlab: i18n.projectTypePlaylab(),
+  weblab: i18n.projectTypeWeblab(),
+  bounce: i18n.projectTypeBounce(),
+  flappy: i18n.projectTypeFlappy(),
+  starwars: i18n.projectTypeStarwars(),
+  starwarsblocks_hour: i18n.projectTypeStarwarsBlocks(),
+  sports: i18n.projectTypeSports(),
+  basketball: i18n.projectTypeBasketball(),
+  artist_k1: i18n.projectTypeArtistPreReader(),
+  playlab_k1: i18n.projectTypePlaylabPreReader(),
+  eval: i18n.projectTypeEval(),
+  calc: i18n.projectTypeCalc(),
+};
+
 export const FEATURED_PROJECT_TYPE_MAP = {
   applab: i18n.projectTypeApplab(),
   artist: i18n.projectTypeDrawing(),
