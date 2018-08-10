@@ -59,6 +59,7 @@ export const assignmentVersionShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
   isStable: PropTypes.bool.isRequired,
   isRecommended: PropTypes.bool,
+  isSelected: PropTypes.bool,
 });
 
 export const classroomShape = PropTypes.shape({

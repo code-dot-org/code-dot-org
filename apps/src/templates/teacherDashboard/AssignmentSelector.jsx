@@ -74,7 +74,7 @@ export default class AssignmentSelector extends Component {
    *   {boolean} isStable Whether this version is stable.
    *   {boolean} isRecommended Whether this is the latest stable version.
    */
-  getVersions = assignmentFamilyName => {
+  getVersions = (assignmentFamilyName, selectedVersionYear) => {
     if (!assignmentFamilyName) {
       return [];
     }
@@ -92,6 +92,11 @@ export default class AssignmentSelector extends Component {
     if (recommendedVersion) {
       recommendedVersion.isRecommended = true;
     }
+    const selectedVersion =
+      versions.find(v => v.year === selectedVersionYear) ||
+      recommendedVersion ||
+      versions[0];
+    selectedVersion.isSelected = true;
     return versions;
   };
 
@@ -116,7 +121,7 @@ export default class AssignmentSelector extends Component {
     if (primaryAssignment) {
       selectedAssignmentFamily = primaryAssignment.assignment_family_name;
       versions = this.getVersions(selectedAssignmentFamily);
-      selectedVersionYear = getVersion(primaryAssignment).year;
+      selectedVersionYear = versions.find(v => v.isSelected).year;
     }
 
     this.state = {
@@ -173,9 +178,8 @@ export default class AssignmentSelector extends Component {
   }
 
   setPrimary = (selectedAssignmentFamily, selectedVersionYear) => {
-    const versions = this.getVersions(selectedAssignmentFamily);
-    const recommendedVersion = versions.find(v => v.isRecommended);
-    selectedVersionYear = selectedVersionYear || (recommendedVersion && recommendedVersion.year) || versions[0].year;
+    const versions = this.getVersions(selectedAssignmentFamily, selectedVersionYear);
+    selectedVersionYear = versions.find(v => v.isSelected).year;
     const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear);
     const selectedSecondaryId = noAssignment;
 
