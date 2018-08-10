@@ -39,3 +39,6 @@ en:
         lesson_plan:
           pdf: 'http://example.com/not-real.pdf'
           html: 'http://example.com/not-real/'
+    multi:
+      random question:
+        Test trailing dot in key.: Test trailing dot in value.

@@ -44,6 +44,7 @@ const child_process = require('child_process');
 const SILENCED = [
   'applab',
   'applab-api',
+  'blockly',
   'bounce',
   'brambleHost',
   'calc',
@@ -85,6 +86,7 @@ const SILENCED = [
   'weblab',
   'learn/index',
   'cookieBanner',
+  'dance',
 ];
 const SITES_CONFIG = {
   'studio': {

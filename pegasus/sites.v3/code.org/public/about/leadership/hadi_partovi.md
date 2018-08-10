@@ -19,30 +19,37 @@ Hadi has served as an early advisor or investor at many tech startups including 
 <hr/>
 Educators: [Request a visit to your school assembly](/visit)
 <hr/>
+Follow Hadi &nbsp;&nbsp;
+<%= view :social_media, facebook: "hadi", twitter: "hadip", instagram: "hadipartovi" %>
+<hr/>
 
-<iframe src="//www.facebook.com/plugins/follow.php?href=http%3A%2F%2Fwww.facebook.com%2Fhadi&amp;width=600&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;show_faces=true&amp;appId=516556435052145" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:600px; height:80px;" allowTransparency="true"></iframe>
+[col-50]
 
-<a href="https://twitter.com/hadip" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @hadip</a>
+<%= view :display_video_thumbnail, id: "nasdaq", video_code: "zxcBZg7jYlc", caption: "Nasdaq #BehindtheBell Interview", play_button: 'center' %>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+[/col-50]
 
+[col-50]
 
+<%= view :display_video_thumbnail, id: "tedtalk", video_code: "m-U9wzC9xLk", caption: "TED Talk: Computer Science is Foundational", play_button: 'center' %>
 
-<br/><br/>
+[/col-50]
 
-<iframe style="max-width: 100%" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FNASDAQ%2Fvideos%2F10154693804912429%2F&show_text=0&width=640" width="640" height="360" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+[col-50]
 
-<br/><br/>
+<%= view :display_video_thumbnail, id: "whycs", video_code: "GsagBkLXtRE", caption: "Why Computer Science for Every Child?", play_button: 'center' %>
 
+[/col-50]
 
-<iframe style="max-width: 100%" width="640" height="360" src="//www.youtube.com/embed/m-U9wzC9xLk" frameborder="0" allowfullscreen></iframe>
+[col-50]
 
-<br/><br/><br/>
+<%= view :display_video_thumbnail, id: "commencement", video_code: "mVMKC6t0c8I", caption: "Hadi and Ali Partovi return to their high school as commencement speakers", play_button: 'center' %>
 
-<iframe style="max-width: 100%" width="640" height="360" src="//www.youtube.com/embed/GsagBkLXtRE" frameborder="0" allowfullscreen></iframe>
+[/col-50]
 
+[col-50]
 
-<br/><br/><br/>
-## Hadi and Ali Partovi return to their highschool as commencement speakers
+<%= view :display_video_thumbnail, id: "bloomber", video_code: "BKKZWJV_OOI", caption: "
+Ali and Hadi Partovi on Bloomberg Studio 1.0", play_button: 'center' %>
 
-<iframe style="max-width: 100%" width="480" height="360" src="https://www.youtube.com/embed/mVMKC6t0c8I" frameborder="0" allowfullscreen></iframe>
+[/col-50]

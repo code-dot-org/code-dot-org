@@ -84,7 +84,7 @@ pt-BR:
       dropL: soltarL
       init: iniciar
       grabR: pegarD
-      do something: faça alguma coisa
+      do something: faça algo
       filter_pixel: filtrar_pixel
       draw_image: desenha_imagem
       witch ending: final da bruxa
@@ -160,7 +160,6 @@ pt-BR:
       move: mova
       function 1: função 1
       function 2: função 2
-      turn corner: virar esquina
       destroy and move: destruir e mover
       clear path: limpar o caminho
       clear cacti: retirar cactos
@@ -173,6 +172,7 @@ pt-BR:
       fix right corner: consertar canto superior direito
       fix left corner: consertar canto superior esquerdo
       make segment: fazer segmento
+      turn corner: virar esquina
       fix long path: consertar caminho longo
       fix short path: consertar caminho curto
       place 3 tracks: colocar 3 faixas

@@ -92,11 +92,13 @@ class User < ActiveRecord::Base
   #   american_indian: "American Indian/Alaska Native"
   #   other: "Other"
   #   opt_out: "Prefer not to say" (but selected this value and hit "Submit")
+  #
+  # Depending on the user's actions, the following values may also be applied:
   #   closed_dialog: This is a special value indicating that the user closed the
   #     dialog rather than selecting a race.
   #   nonsense: This is a special value indicating that the user chose
   #     (strictly) more than five races.
-  VALID_RACES = %w(
+  DISPLAY_RACES = %w(
     white
     black
     hispanic
@@ -105,6 +107,9 @@ class User < ActiveRecord::Base
     american_indian
     other
     opt_out
+  ).freeze
+
+  VALID_RACES = DISPLAY_RACES + %w(
     closed_dialog
     nonsense
   ).freeze
@@ -247,6 +252,7 @@ class User < ActiveRecord::Base
 
   has_many :user_geos, -> {order 'updated_at desc'}
 
+  before_validation :normalize_parent_email
   validate :validate_parent_email
 
   after_create :associate_with_potential_pd_enrollments
@@ -488,6 +494,7 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -565,12 +572,29 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Remove all cleartext email addresses (including soft-deleted ones)
+  # in migrated students' AuthenticationOptions.
+  def remove_cleartext_emails
+    authentication_options.with_deleted.update_all(email: '')
+  end
+
   # Given a cleartext email finds the first user that has a matching email or hash.
   # @param [String] email (cleartext)
   # @return [User|nil]
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
     find_by_hashed_email User.hash_email email
+  end
+
+  # Given a cleartext email, finds the first user that has a matching email.
+  # This will not find users (students) who only have hashed_emails stored.
+  # For that, use #find_by_email_or_hashed_email.
+  # @param [String] email (cleartext)
+  # @return [User|nil]
+  def self.find_by_email(email)
+    return nil if email.blank?
+    migrated_user = AuthenticationOption.find_by(email: email)&.user
+    migrated_user || User.find_by(email: email)
   end
 
   # Given an email hash, finds the first user that has a matching email hash.
@@ -827,6 +851,43 @@ class User < ActiveRecord::Base
     end
 
     success
+  end
+
+  def set_user_type(user_type, email = nil, email_preference = nil)
+    case user_type
+    when TYPE_TEACHER
+      upgrade_to_teacher(email, email_preference)
+    when TYPE_STUDENT
+      downgrade_to_student
+    else
+      false # Unexpected user type
+    end
+  end
+
+  def downgrade_to_student
+    return true if student? # No-op if user is already a student
+    update(user_type: TYPE_STUDENT)
+  end
+
+  def upgrade_to_teacher(email, email_preference)
+    return true if teacher? # No-op if user is already a teacher
+    return false unless email.present?
+
+    hashed_email = User.hash_email(email)
+    match = authentication_options.find_by_hashed_email(hashed_email)
+    if match.nil?
+      errors.add(:email, I18n.t('activerecord.errors.messages.invalid'))
+      return false
+    end
+
+    transaction do
+      self.user_type = TYPE_TEACHER
+      # Make matching AuthenticationOption user's primary
+      self.primary_contact_info = match
+      # Update AuthenticationOption to have cleartext email
+      match.update!(email: email)
+      update!(email_preference)
+    end
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
@@ -1344,14 +1405,12 @@ class User < ActiveRecord::Base
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
-    section_courses.map do |course|
-      {
-        name: course[:name],
-        title: data_t_suffix('course.name', course[:name], 'title'),
-        description: data_t_suffix('course.name', course[:name], 'description_short'),
-        link: course_path(course),
-      }
-    end
+    section_courses.map(&:summarize_short)
+  end
+
+  # Returns the set of courses the user has been assigned to or has progress in.
+  def courses_as_student
+    scripts.map(&:course).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1380,7 +1439,7 @@ class User < ActiveRecord::Base
     primary_script_id = primary_script.try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    course_scripts_script_ids = section_courses.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
+    course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
     user_scripts = in_progress_and_completed_scripts.
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
@@ -1402,7 +1461,9 @@ class User < ActiveRecord::Base
       end
     end.compact
 
-    assigned_courses + user_script_data
+    user_course_data = courses_as_student.map(&:summarize_short)
+
+    user_course_data + user_script_data
   end
 
   # Figures out the unique set of courses assigned to sections that this user
@@ -1653,7 +1714,7 @@ class User < ActiveRecord::Base
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script).first_or_create
-      user_script.update!(assigned_at: Time.now) unless user_script.assigned_at
+      user_script.update!(assigned_at: Time.now)
       return user_script
     end
   end
@@ -1717,6 +1778,16 @@ class User < ActiveRecord::Base
     end
   end
 
+  def should_see_edit_email_link?
+    if migrated?
+      # Hide from students with no password (i.e., oauth-only and sponsored students)
+      # since we do not store their cleartext email address and email is not used for login.
+      can_edit_email? && !(student? && encrypted_password.blank?)
+    else
+      can_edit_email? && !oauth?
+    end
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -1734,11 +1805,7 @@ class User < ActiveRecord::Base
   # users that don't have a password because they authenticate via oauth, secret
   # picture, or some other unusual method
   def can_edit_password?
-    if migrated?
-      !sponsored?
-    else
-      encrypted_password.present?
-    end
+    !sponsored?
   end
 
   # Whether the current user has permission to change their own account type
@@ -1778,12 +1845,31 @@ class User < ActiveRecord::Base
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
-    # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
+    # Lastly, we check for oauth.
     !oauth?
+  end
+
+  def roster_managed_account?
+    return false unless student?
+    if migrated?
+      return false unless authentication_options.one?
+      sections_as_student.any?(&:externally_rostered?)
+    else
+      sections_as_student.any?(&:externally_rostered?) && encrypted_password.blank?
+    end
   end
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
+  end
+
+  # Temporary: Allow single-auth students to add a parent email so it's possible
+  # to add a recovery option to their account.  Once they are on multi-auth they
+  # can just add an email or another SSO, so this is no longer needed.
+  def can_add_parent_email?
+    student? && # only students
+      !can_create_personal_login? && # mutually exclusive with personal login UI
+      !migrated? # only for single-auth
   end
 
   def no_personal_email?
@@ -1980,10 +2066,30 @@ class User < ActiveRecord::Base
   end
 
   def depended_upon_for_login?
-    # Teacher is depended upon for login if student does not have a personal login
-    # and student has no other teachers.
-    students.any? do |student|
-      student.can_create_personal_login? && student.teachers.uniq.one?
+    students.any?(&:depends_on_teacher_for_login?)
+  end
+
+  def depends_on_teacher_for_login?
+    # Student depends on teacher for login if their account is teacher-managed or roster-managed
+    # and only have one teacher.
+    student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
+  end
+
+  # Returns an array of summarized students that depend on this user.
+  # These map to the students that will be deleted if this user deletes their account.
+  def dependent_students
+    dependent_students = []
+    students.uniq.each do |student|
+      dependent_students << student.summarize if student.depends_on_teacher_for_login?
+    end
+    dependent_students
+  end
+
+  def providers
+    if migrated?
+      authentication_options.map(&:credential_type)
+    else
+      [provider]
     end
   end
 
@@ -2040,6 +2146,10 @@ class User < ActiveRecord::Base
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys
     end
+  end
+
+  def normalize_parent_email
+    self.parent_email = nil if parent_email.blank?
   end
 
   # Parent email is not required, but if it is present, it must be a

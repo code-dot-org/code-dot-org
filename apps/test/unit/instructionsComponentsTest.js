@@ -48,7 +48,7 @@ describe('NonMarkdownInstructions', function () {
       <div>
         <NonMarkdownInstructions
           puzzleTitle="title"
-          instructions="instructions"
+          shortInstructions="instructions"
         />
       </div>
     );
@@ -64,7 +64,7 @@ describe('NonMarkdownInstructions', function () {
       <div>
         <NonMarkdownInstructions
           puzzleTitle="title"
-          instructions="instructions"
+          shortInstructions="instructions"
           instructions2="instructions2"
         />
       </div>

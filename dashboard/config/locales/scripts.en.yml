@@ -7568,7 +7568,7 @@ en:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: The Big Event
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -7737,9 +7737,9 @@ en:
             Until Loops in Maze:
               name: Until Loops in Maze
             Programming in Maze:
-              name: Programming with Angry Birds
+              name: Coding with Angry Birds
             Debugging in Maze:
-              name: Debugging with Angry Birds
+              name: Debugging with Scrat
             Programming in Collector:
               name: Collecting Treasure with Laurel
             Programming in Artist:
@@ -7755,7 +7755,7 @@ en:
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Nested Loops with Anna and Elsa
             Conditionals with Cards:
               name: Conditionals with Cards
             Conditionals & Loops in Harvester:
@@ -7763,9 +7763,9 @@ en:
             'Functions: Songwriting':
               name: Songwriting
             Functions in Minecraft:
-              name: Functions in Minecraft
+              name: Functions with Minecraft
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with the Harvester
             Functions in Artist:
               name: Functions in Artist
             Screen Out the Mean:
@@ -7856,7 +7856,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: The Big Event
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9492,7 +9492,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: The Big Event
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -9510,15 +9510,15 @@ en:
             Your Digital Footprint:
               name: Your Digital Footprint
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Copyright and Creativity:
-              name: Copyright and Creativity
+              name: It's Great to Create and Play Fair
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
+              name: Stevie and the Big Project
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -9546,6 +9546,46 @@ en:
             Debugging for CDEF Educators:
               name: Debugging for CDEF Educators
           title: Debugging Lessons for Educators
+          description_audience: ''
+          description_short: ''
+          description: ''
+        fit-test:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Practice Question:
+              name: Complete Practice Question
+          title: FIT Training Practice PLC Course
+          description_audience: Facilitators in Training
+          description_short: FIT Training Course
+          description: To be used to demonstrate how the PLC courses work.
+        spritelab-simple:
+          title: Introduction to Sprite Lab (EE)
+          description: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
+          description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
+          description_audience: Course E/F Students
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+              description_student: ''
+              description_teacher: ''
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+              description_student: ''
+              description_teacher: ''
+        spritelab-ee:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: Introduction to Sprite Lab (EE)
           description_audience: ''
           description_short: ''
           description: ''

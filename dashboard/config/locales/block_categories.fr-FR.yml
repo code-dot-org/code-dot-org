@@ -3,50 +3,48 @@ fr:
   data:
     block_categories:
       Actions: Actions
-      Loops: Boucles
-      Functions: Fonctions
+      Loops: boucles
+      Functions: fonctions
       Color: Couleur
-      Brushes: Brushes
-      Math: Calculs
+      Brushes: Pinceaux
+      Math: Math
       Logic: Logique
-      Variables: Variables
-      Number: Number
-      String: String
+      Variables: variables
+      Number: Nombre
+      String: Chaîne
       Image: Image
-      Boolean: Boolean
+      Boolean: Booléen
       Conditionals: Instructions conditionnelles
       Events: Événements
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
-      Text: texte
-      Picker: Picker
-      Comment: Comment
+      Games/Score: Jeux/Score
+      Comments: Commentaires
+      Category: Catégorie
+      Prebuilt: Préconstruit
+      Text: Texte
+      Picker: Sélecteur
+      Comment: Commentaire
       'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
+      everythingelse: toutlereste
+      numbers: nombres
+      Numbers: Nombres
       Input: Entrée
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Default: Par défaut
+      World: Monde
+      Behaviors: Comportements
+      Advanced: Avancé
+      Sprite: Lutin
+      Brush: Pinceau
+      Make Sprite: Créer un lutin
+      Movement: Mouvement
       Start: Commencer
-      Groups: Groups
+      Groups: Groupes
       Booleans: Booléens
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Fonctionnel
+      Predefined: Prédéfini
       test: test
       test2: test2
-      Foo: Foo
       Name: Nom
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: NOUVEAUX BLOCS
+      'Functions ': 'Fonctions '
+      Game/Score: Jeu/Score
       Function: Fonction

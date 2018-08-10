@@ -30,7 +30,7 @@
     = f.label 'Function type'
     = f.select :block_type, SharedBlocklyFunction.block_types.keys
     = f.label 'Level type'
-    = f.select :level_type, [GamelabJr.name]
+    = f.select :level_type, [Dancelab.name, GamelabJr.name]
   %div
     = f.submit class: 'btn', id: 'shared_function_submit'
 

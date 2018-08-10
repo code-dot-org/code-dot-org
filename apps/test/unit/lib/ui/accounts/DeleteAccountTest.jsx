@@ -2,15 +2,15 @@ import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
-import DeleteAccount, {
-  DELETE_VERIFICATION_STRING,
-  buildCheckboxMap,
-} from '@cdo/apps/lib/ui/accounts/DeleteAccount';
+import DeleteAccount, {DELETE_VERIFICATION_STRING} from '@cdo/apps/lib/ui/accounts/DeleteAccount';
+import {getCheckboxes} from '@cdo/apps/lib/ui/accounts/DeleteAccountHelpers';
 import * as utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,
   isTeacher: false,
+  hasStudents: false,
+  dependedUponForLogin: false,
 };
 
 describe('DeleteAccount', () => {
@@ -70,9 +70,29 @@ describe('DeleteAccount', () => {
     });
 
     describe('for teachers', () => {
-      it('is disabled if not all checkboxes are checked', () => {
-        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true}/>);
-        let checkboxes = buildCheckboxMap();
+      it('is disabled if checkbox is not checked for teacher that has students', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true} hasStudents={true}/>);
+        let checkboxes = getCheckboxes(false, true);
+        wrapper.setState({
+          isDeleteAccountDialogOpen: true,
+          password: 'password',
+          deleteVerification: DELETE_VERIFICATION_STRING,
+          checkboxes
+        });
+        const confirmButton = wrapper.find('Button').at(0);
+        expect(confirmButton).to.have.attr('disabled');
+      });
+
+      it('is disabled if not all checkboxes are checked for teacher that is depended upon for login', () => {
+        const wrapper = mount(
+          <DeleteAccount
+            {...DEFAULT_PROPS}
+            isTeacher={true}
+            dependedUponForLogin={true}
+            hasStudents={true}
+          />
+        );
+        let checkboxes = getCheckboxes(true, true);
         checkboxes[1].checked = true;
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
@@ -85,8 +105,15 @@ describe('DeleteAccount', () => {
       });
 
       it('is enabled if checkboxes are checked, verification string is correct, and password not required', () => {
-        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isPasswordRequired={false} isTeacher={true}/>);
-        let checkboxes = buildCheckboxMap();
+        const wrapper = mount(
+          <DeleteAccount
+            {...DEFAULT_PROPS}
+            isPasswordRequired={false}
+            isTeacher={true}
+            hasStudents={true}
+          />
+        );
+        let checkboxes = getCheckboxes(false, false);
         Object.keys(checkboxes).map(id => checkboxes[id].checked = true);
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
@@ -98,14 +125,31 @@ describe('DeleteAccount', () => {
       });
 
       it('is enabled if checkboxes are checked, verification string is correct, and password provided and required', () => {
-        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true}/>);
-        let checkboxes = buildCheckboxMap();
+        const wrapper = mount(
+          <DeleteAccount
+            {...DEFAULT_PROPS}
+            isTeacher={true}
+            hasStudents={true}
+          />
+        );
+        let checkboxes = getCheckboxes(false, true);
         Object.keys(checkboxes).map(id => checkboxes[id].checked = true);
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
           checkboxes
+        });
+        const confirmButton = wrapper.find('Button').at(0);
+        expect(confirmButton).to.not.have.attr('disabled');
+      });
+
+      it('is enabled if checkboxes not required, verification string is correct, and password provided and required', () => {
+        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} isTeacher={true} hasStudents={false}/>);
+        wrapper.setState({
+          isDeleteAccountDialogOpen: true,
+          password: 'password',
+          deleteVerification: DELETE_VERIFICATION_STRING
         });
         const confirmButton = wrapper.find('Button').at(0);
         expect(confirmButton).to.not.have.attr('disabled');

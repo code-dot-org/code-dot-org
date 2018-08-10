@@ -33,7 +33,7 @@ import InstructionsDialogWrapper from './templates/instructions/InstructionsDial
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
-import WireframeButtons from './templates/WireframeButtons';
+import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
 import getAchievements from './achievements';
@@ -225,8 +225,8 @@ StudioApp.prototype.configure = function (options) {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return !!(config.level.instructions ||
-      config.level.markdownInstructions ||
+  return !!(config.level.shortInstructions ||
+      config.level.longInstructions ||
       config.level.aniGifURL);
 };
 

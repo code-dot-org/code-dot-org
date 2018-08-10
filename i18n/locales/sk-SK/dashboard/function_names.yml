@@ -159,7 +159,6 @@ sk:
       move: presunúť
       function 1: funkcia 1
       function 2: funkcia 2
-      turn corner: otočiť sa na rohu
       destroy and move: zničiť a posunúť sa
       clear path: vyčistiť cestu
       clear cacti: odstrániť kaktus
@@ -172,6 +171,7 @@ sk:
       fix right corner: opraviť pravý roh
       fix left corner: opraviť ľavý roh
       make segment: vytvoriť segment
+      turn corner: otočiť sa na rohu
       fix long path: opraviť dlhú cestu
       fix short path: opraviť krátku cestu
       place 3 tracks: umiestniť 3 trate

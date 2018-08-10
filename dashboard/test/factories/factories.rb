@@ -84,7 +84,7 @@ FactoryGirl.define do
       end
       factory :facilitator do
         sequence(:name) {|n| "Facilitator Person #{n}"}
-        sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
+        email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
         end
@@ -97,7 +97,7 @@ FactoryGirl.define do
       end
       factory :workshop_organizer do
         sequence(:name) {|n| "Workshop Organizer Person #{n}"}
-        sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
+        email {("WorkshopOrganizer_#{(User.maximum(:id) || 0) + 1}@code.org")}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -242,6 +242,11 @@ FactoryGirl.define do
           user.reload
         end
       end
+
+      trait :without_email do
+        email ''
+        hashed_email nil
+      end
     end
 
     trait :unmigrated_sso do
@@ -314,7 +319,12 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123'
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
         )
       end
     end
@@ -326,7 +336,12 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123'
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
         )
         user.update!(
           primary_contact_info: ao,
@@ -344,7 +359,31 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh'
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+      end
+    end
+
+    trait :with_migrated_clever_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
@@ -438,6 +477,14 @@ FactoryGirl.define do
 
     factory :google_authentication_option do
       credential_type AuthenticationOption::GOOGLE
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
+
+    factory :facebook_authentication_option do
+      credential_type AuthenticationOption::FACEBOOK
       sequence(:email) {|n| "testuser#{n}@example.com.xx"}
       after(:create) do |auth|
         auth.authentication_id = auth.hashed_email
@@ -616,7 +663,7 @@ FactoryGirl.define do
     end
     name {"gamelab_block#{index}"}
     category 'custom'
-    level_type 'fakeLevelType'
+    pool 'fakeLevelType'
     config do
       {
         func: "block#{index}",
