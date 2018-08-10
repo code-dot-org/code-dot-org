@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
+import i18n from '@cdo/locale';
+
 /**
  * Part of a row in the AssetManager, enables deleting the asset and, if not an audio asset, previewing.
  */
@@ -42,7 +44,7 @@ export default class AssetActions extends React.Component {
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     api.deleteFile(this.props.name, this.props.onDelete, () => {
       this.setState({action: 'confirming delete',
-        actionText: 'Error deleting file.'});
+        actionText: i18n.errorDeleting()});
     });
   };
 
@@ -50,7 +52,7 @@ export default class AssetActions extends React.Component {
     let flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
-      flex = <button onClick={this.props.onChoose}>Choose</button>;
+      flex = <button onClick={this.props.onChoose}>{i18n.choose()}</button>;
     } else {
       const size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';
@@ -75,7 +77,6 @@ export default class AssetActions extends React.Component {
             <button className="btn-danger" onClick={this.confirmDelete}>
               <i className="fa fa-trash-o"/>
             </button>
-            {this.state.actionText}
           </div>
         }
         {this.state.action === 'confirming delete' &&
