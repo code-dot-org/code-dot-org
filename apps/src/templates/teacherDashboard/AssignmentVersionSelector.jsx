@@ -12,6 +12,10 @@ const styles = {
   dropdownLabel: {
     fontFamily: '"Gotham 5r", sans-serif',
   },
+  popUpMenuStyle: {
+    // must appear in front of .modal from application.scss
+    zIndex: 1051,
+  }
 };
 
 export default class AssignmentVersionSelector extends Component {
@@ -113,6 +117,7 @@ export default class AssignmentVersionSelector extends Component {
           isOpen={this.state.isMenuOpen}
           targetPoint={this.state.targetPoint}
           offset={{x: 0, y: 0}}
+          style={styles.popUpMenuStyle}
           beforeClose={this.beforeClose}
         >
           {
