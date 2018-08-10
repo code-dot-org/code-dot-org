@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 import HiddenUploader from './HiddenUploader.jsx';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import Button from "../../templates/Button";
-import {assetButtonStyles} from "./AssetManager";
+import {assetButtonStyles} from "./AddAssetButtonRow";
 import i18n from '@cdo/locale';
 
 /**
