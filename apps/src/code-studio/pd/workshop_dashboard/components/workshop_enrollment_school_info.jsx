@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'react-bootstrap';
-import ConfirmationDialog from './confirmation_dialog';
+import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from "../types";
 import {workshopEnrollmentStyles as styles} from "../workshop_enrollment_styles";
 

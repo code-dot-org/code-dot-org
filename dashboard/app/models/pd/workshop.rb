@@ -254,7 +254,7 @@ class Pd::Workshop < ActiveRecord::Base
     course_subject = subject ? "#{course} #{subject}" : course
 
     # Limit the friendly name to 255 chars
-    "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
+    "#{course_subject} workshop on #{start_time} at #{location_name} in #{friendly_location}"[0...255]
   end
 
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
