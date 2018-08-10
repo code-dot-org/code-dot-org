@@ -14,7 +14,6 @@ const OTHER_SCHOOL_VALUE = "-1";
 
 export default class SchoolAutocompleteDropdownWithCustomFields extends React.Component {
   static propTypes = {
-    school_id: PropTypes.string,
     school_info: PropTypes.object,
     onSchoolInfoChange: PropTypes.func,
     errors: PropTypes.object
@@ -24,22 +23,20 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
     super(props);
 
     this.state = {
-      school_id: null,
-      school_info: this.props.school_info,
-      errors: this.props.errors || {}
+      showCustomFields: false
     };
   }
 
   updateOnSchoolInfoChange = (school_info) => {
-    this.setState(school_info);
     if (this.props.onSchoolInfoChange) {
       this.props.onSchoolInfoChange(school_info);
     }
   };
 
   handleSchoolDropdownChange = (selection) => {
-    this.setState({school_id: selection && selection.value});
-    if (selection && selection.value !== OTHER_SCHOOL_VALUE) {
+    const showCustomFields = !!(selection && selection.value === OTHER_SCHOOL_VALUE);
+    this.setState({showCustomFields});
+    if (!showCustomFields) {
       this.updateOnSchoolInfoChange({
         school_info: {
           school_id: selection.school.nces_id,
@@ -57,7 +54,7 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
   render() {
     return (
       <div>
-        {this.state.school_id !== OTHER_SCHOOL_VALUE &&
+        {!this.state.showCustomFields &&
           <FormGroup
             id="school_id"
             validationState={this.props.errors.hasOwnProperty("school_id") ? VALIDATION_STATE_ERROR : null}
@@ -73,7 +70,7 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
             <Row>
               <Col md={12}>
                 <SchoolAutocompleteDropdown
-                  value={this.state.school_id}
+                  value={this.props.school_info && this.props.school_info.school_id}
                   onChange={this.handleSchoolDropdownChange}
                 />
               </Col>
@@ -81,7 +78,7 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
             <HelpBlock>{this.props.errors.school_id}</HelpBlock>
           </FormGroup>
         }
-        {this.state.school_id && this.state.school_id === OTHER_SCHOOL_VALUE &&
+        {this.state.showCustomFields &&
           <CustomSchoolInfo
             school_info={this.props.school_info}
             onSchoolInfoChange={this.props.onSchoolInfoChange}
