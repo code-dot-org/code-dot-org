@@ -16,8 +16,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
 
   def setup_all
     # Enable New Relic logging for these tests to test metrics
-    @@original_new_relic_logging = CDO.new_relic_logging
-    CDO.new_relic_logging = true
+    @@original_newrelic_logging = CDO.newrelic_logging
+    CDO.newrelic_logging = true
 
     # Disable other logging
     @@original_hip_chat_logging = CDO.hip_chat_logging
@@ -27,7 +27,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   def teardown_all
-    CDO.new_relic_logging = @@original_new_relic_logging
+    CDO.newrelic_logging = @@original_newrelic_logging
     CDO.hip_chat_logging = @@original_hip_chat_logging
     CDO.slack_endpoint = @@original_slack_endpoint
   end
