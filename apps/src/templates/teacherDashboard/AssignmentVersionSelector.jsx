@@ -73,7 +73,7 @@ export default class AssignmentVersionSelector extends Component {
     });
   };
 
-  handleNativeDropdownChange = e => {
+  handleNativeDropdownChange = event => {
     const versionYear = event.target.value;
     this.props.onChangeVersion(versionYear);
   };
