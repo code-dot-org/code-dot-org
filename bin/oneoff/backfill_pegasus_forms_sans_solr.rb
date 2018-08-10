@@ -9,7 +9,7 @@ require src_dir 'abort_form_error'
 # As the NULLness of various date columns indicates further processing is
 # necessary, we use this date to represent that an unrecoverable error happened.
 DATE_FOR_ERRORS = '1980-01-01 00:00:00'.freeze
-BATCH_SIZE = 1500
+BATCH_SIZE = 15000
 
 # load helpers
 load pegasus_dir('helpers.rb')
