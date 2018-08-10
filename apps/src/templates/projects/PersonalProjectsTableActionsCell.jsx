@@ -24,6 +24,7 @@ export const styles = {
 
 class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
+    isPublishable: PropTypes.bool.isRequired,
     isPublished: PropTypes.bool.isRequired,
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
@@ -68,7 +69,7 @@ class PersonalProjectsTableActionsCell extends Component {
   };
 
   render() {
-    const {isEditing, isSaving} = this.props;
+    const {isEditing, isSaving, isPublishable, isPublished} = this.props;
 
     return (
       <div>
@@ -84,14 +85,14 @@ class PersonalProjectsTableActionsCell extends Component {
             >
               {i18n.remix()}
             </PopUpMenu.Item>
-            {this.props.isPublished && (
+            {isPublished && isPublishable &&(
               <PopUpMenu.Item
                 onClick={this.onUnpublish}
               >
                 {i18n.unpublish()}
               </PopUpMenu.Item>
             )}
-            {!this.props.isPublished && (
+            {!isPublished && isPublishable && (
               <PopUpMenu.Item
                 onClick={this.onPublish}
               >
