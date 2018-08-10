@@ -13,8 +13,7 @@ export default storybook => {
               name="audioTest"
               size={5.3}
               useFilesApi={true}
-              onDelete={() => {
-              }}
+              onDelete={() => {}}
             />
           </div>
         )
@@ -28,8 +27,36 @@ export default storybook => {
               audioType={true}
               size={5.3}
               useFilesApi={true}
-              onDelete={() => {
-              }}
+              onDelete={() => {}}
+            />
+          </div>
+        )
+      },
+      {
+        name: 'normal with choose',
+        story: () => (
+          <div style={{width: 800}}>
+            <AssetActions
+              name="audioTest"
+              size={5.3}
+              useFilesApi={true}
+              onDelete={() => {}}
+              onChoose={() => {}}
+            />
+          </div>
+        )
+      },
+      {
+        name: 'audio asset with choose',
+        story: () => (
+          <div style={{width: 800}}>
+            <AssetActions
+              name="audioTest"
+              audioType={true}
+              size={5.3}
+              useFilesApi={true}
+              onDelete={() => {}}
+              onChoose={() => {}}
             />
           </div>
         )
