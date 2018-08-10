@@ -77,7 +77,7 @@ module Pd
     validate :day_for_subject
 
     def self.form_id(subject)
-      get_form_id CATEGORY_MAP[subject], 'facilitator'
+      get_form_id CATEGORY_MAP[subject], FACILITATOR_FORM_KEY
     end
 
     def self.all_form_ids
