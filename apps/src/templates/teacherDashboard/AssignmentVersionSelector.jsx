@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import {assignmentVersionShape} from './shapes';
 import PopUpMenu from "../../lib/ui/PopUpMenu";
+import AssignmentVersionMenuItem from './AssignmentVersionMenuItem';
 
 const styles = {
   version: {
@@ -116,12 +117,11 @@ export default class AssignmentVersionSelector extends Component {
         >
           {
             versions.map(version => (
-              <PopUpMenu.Item
+              <AssignmentVersionMenuItem
+                version={version}
                 onClick={() => this.chooseMenuItem(version.year)}
                 key={version.year}
-              >
-                {version.isRecommended ? `${version.title} (Recommended)` : version.title}
-              </PopUpMenu.Item>
+              />
             ))
           }
         </PopUpMenu>
