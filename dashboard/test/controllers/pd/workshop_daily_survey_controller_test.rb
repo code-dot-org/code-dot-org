@@ -241,7 +241,6 @@ module Pd
 
       # Same test as above but make sure we use the other workshop instead of @academic_year_workshop
       # because we are using the enrollment code
-
       submit_redirect = general_submit_redirect(day: 1, user: @enrolled_academic_year_teacher, workshop: other_academic_workshop)
       assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
 
