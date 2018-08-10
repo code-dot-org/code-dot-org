@@ -9,7 +9,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
   personalProjectDataPropType,
-  FEATURED_PROJECT_TYPE_MAP,
+  PROJECT_TYPE_MAP,
 } from './projectConstants';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
@@ -88,6 +88,7 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
+  const updatedName = rowData.isEditing ? rowData.updatedName : '';
   return (
     <PersonalProjectsNameCell
       id={rowData.id}
@@ -95,7 +96,7 @@ const nameFormatter = (projectName, {rowData}) => {
       projectType={rowData.type}
       projectName={projectName}
       isEditing={rowData.isEditing}
-      updatedName={rowData.updatedName}
+      updatedName={updatedName}
     />
   );
 };
@@ -113,7 +114,7 @@ const actionsFormatter = (actions, {rowData}) => {
 };
 
 const typeFormatter = (type) => {
-  return FEATURED_PROJECT_TYPE_MAP[type];
+  return PROJECT_TYPE_MAP[type];
 };
 
 const dateFormatter = function (time) {

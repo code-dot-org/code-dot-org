@@ -68,6 +68,9 @@ describe('projectsRedux', () => {
       const nextAction = startRenamingProject('abcd3');
       const nextNextState = projects(nextState, nextAction);
       assert.equal(nextNextState.personalProjectsList.projects[2].isEditing, true);
+      assert.equal(
+        nextNextState.personalProjectsList.projects[2].updatedName, nextNextState.personalProjectsList.projects[2].name
+      );
     });
   });
 
