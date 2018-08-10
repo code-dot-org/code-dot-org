@@ -88,6 +88,7 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
+  const updatedName = rowData.isEditing ? rowData.updatedName : '';
   return (
     <PersonalProjectsNameCell
       id={rowData.id}
@@ -95,7 +96,7 @@ const nameFormatter = (projectName, {rowData}) => {
       projectType={rowData.type}
       projectName={projectName}
       isEditing={rowData.isEditing}
-      updatedName={rowData.updatedName}
+      updatedName={updatedName}
     />
   );
 };
