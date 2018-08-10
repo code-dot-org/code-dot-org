@@ -40,7 +40,8 @@ def replace_hostname(url)
     dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
     pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
     hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
-    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN']
+    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN'],
+    advocacy_host: ENV['ADVOCACY_TEST_DOMAIN']
   ).replace_origin(url)
 end
 
