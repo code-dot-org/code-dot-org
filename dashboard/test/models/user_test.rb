@@ -3610,4 +3610,50 @@ class UserTest < ActiveSupport::TestCase
 
     assert section.teacher.depended_upon_for_login?
   end
+
+  test 'dependent_students for student: returns empty array' do
+    student = create :student
+    assert_empty student.dependent_students
+  end
+
+  test 'dependent_students for teacher: does not return other teachers' do
+    section = create :section
+    another_teacher = create :teacher
+    section.students << another_teacher
+
+    assert_empty section.teacher.dependent_students
+  end
+
+  test 'dependent_students for teacher: does not return students with personal logins' do
+    section = create :section
+    create(:follower, section: section)
+
+    assert_empty section.teacher.dependent_students
+  end
+
+  test 'dependent_students for teacher: does not return students without personal logins that have other teachers' do
+    student = create :student_in_word_section
+    teacher = student.teachers.first
+    another_section = create :section
+    another_section.students << student
+
+    assert_empty teacher.dependent_students
+  end
+
+  test 'dependent_students for teacher: returns students without personal logins that have no other teachers' do
+    student = create :student_in_word_section
+    teacher = student.teachers.first
+    another_word_section = create :section, user: teacher, login_type: Section::LOGIN_TYPE_WORD
+    another_word_section.students << student
+
+    assert_equal [student.summarize], teacher.dependent_students
+  end
+
+  test 'dependent_students for teacher: returns students in rostered sections without passwords that have no other teachers' do
+    student = create :student, :unmigrated_google_sso, encrypted_password: nil
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+
+    assert_equal [student.summarize], section.teacher.dependent_students
+  end
 end
