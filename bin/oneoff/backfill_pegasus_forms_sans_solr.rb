@@ -45,6 +45,7 @@ def process_existing_batch_of_forms
         elsif extra.keys.any? {|key| processed_data.key?(key)}
           $stderr.puts "Form's processed_data already contains one key we meant to write."
           already_has_key_count += 1
+          next
         else
           processed_data.merge! extra
         end
