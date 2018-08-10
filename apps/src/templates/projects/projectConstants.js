@@ -53,16 +53,8 @@ export const MAX_PROJECTS_PER_CATEGORY = 100;
  * Map from project type to friendly name.
  * @type {Object}
  */
-export const PROJECT_TYPE_MAP = {
-  algebra_game: i18n.projectTypeAlgebra(),
-  applab: i18n.projectTypeApplab(),
-  artist: i18n.projectTypeArtist(),
-  gamelab: i18n.projectTypeGamelab(),
-  playlab: i18n.projectTypePlaylab(),
-  weblab: i18n.projectTypeWeblab(),
-};
 
-export const PERSONAL_PROJECT_TYPE_MAP = {
+export const PROJECT_TYPE_MAP = {
   algebra_game: i18n.projectTypeAlgebra(),
   applab: i18n.projectTypeApplab(),
   artist: i18n.projectTypeArtist(),
