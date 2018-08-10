@@ -60,20 +60,35 @@ class ExpiredDeletedAccountPurger
     rescue StandardError => err
       QueuedAccountPurge.create user: account, reason_for_review: err.message
     end
-
-    if @dry_run
-      say "Would have purged #{num_accounts_purged} accounts"
-    else
-      say "Purged #{num_accounts_purged} accounts"
-    end
-    say "#{manual_review_queue_depth} accounts require review" if manual_review_queue_depth > 0
   rescue StandardError => err
     yell err.message
     raise
   ensure
-    metrics = gather_metrics num_accounts_purged
-    upload_activity_log start_time, metrics
+    review_queue_depth = manual_review_queue_depth
+    metrics = build_metrics soft_deleted_accounts.count, num_accounts_purged, review_queue_depth
+    metrics.each do |key, value|
+      @log.puts "#{key}: #{value}"
+    end
+
+    summary = build_summary num_accounts_purged, review_queue_depth, start_time
+    @log.puts summary
+    log_link = upload_activity_log start_time
+
+    say "#{summary} #{log_link}"
     send_metrics metrics unless @dry_run
+  end
+
+  private def purged_accounts_summary(accounts_purged)
+    return "Would have purged #{accounts_purged} accounts." if @dry_run
+    "Purged #{accounts_purged} accounts."
+  end
+
+  private def build_summary(accounts_purged, review_queue_depth, start_time)
+    formatted_duration = Time.at(Time.now.to_i - start_time.to_i).utc.strftime("%H:%M:%S")
+
+    summary = purged_accounts_summary accounts_purged
+    summary += "\n#{review_queue_depth} accounts require review." if review_queue_depth > 0
+    summary + "\n🕐 #{formatted_duration}"
   end
 
   private def start_activity_log
@@ -84,14 +99,12 @@ class ExpiredDeletedAccountPurger
     @log.puts "(dry-run)" if @dry_run
   end
 
-  private def upload_activity_log(time, metrics)
-    metrics.each do |key, value|
-      @log.puts "#{key}: #{value}"
-    end
-    @log.puts "Done in #{Time.now - time} seconds"
-    AWS::S3::LogUploader.
+  # @return [String] HTML link to view uploaded log
+  private def upload_activity_log(time)
+    log_url = AWS::S3::LogUploader.
       new('cdo-audit-logs', "expired-deleted-account-purger-activity/#{CDO.rack_env}").
       upload_log(time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
+    " <a href='#{log_url}'>☁ Log on S3</a>"
   end
 
   private def check_constraints
@@ -102,14 +115,14 @@ class ExpiredDeletedAccountPurger
     end
   end
 
-  private def gather_metrics(num_accounts_purged)
+  private def build_metrics(soft_deleted, accounts_purged, review_queue_depth)
     {
       # Number of soft-deleted accounts in system after this run
-      "Custom/DeletedAccountPurger/SoftDeletedAccounts" => soft_deleted_accounts.count,
+      "Custom/DeletedAccountPurger/SoftDeletedAccounts" => soft_deleted,
       # Number of accounts purged during this run
-      "Custom/DeletedAccountPurger/AccountsPurged" => num_accounts_purged,
+      "Custom/DeletedAccountPurger/AccountsPurged" => accounts_purged,
       # Depth of manual review queue after this run
-      "Custom/DeletedAccountPurger/ManualReviewQueueDepth" => manual_review_queue_depth,
+      "Custom/DeletedAccountPurger/ManualReviewQueueDepth" => review_queue_depth,
     }
   end
 
@@ -135,17 +148,17 @@ class ExpiredDeletedAccountPurger
   end
 
   private def manual_review_queue_depth
-    QueuedAccountPurge.all.count
+    QueuedAccountPurge.count
   end
 
   # Send messages to Slack #cron-daily room.
   private def say(message, options = {})
-    @log.puts message
     ChatClient.message 'cron-daily', prefixed(message), options
   end
 
   # Send error messages to #cron-daily and #server-operations
   private def yell(message)
+    @log.puts message
     say message, color: 'red', notify: 1
   end
 

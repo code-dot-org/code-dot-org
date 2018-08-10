@@ -212,7 +212,11 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       max_accounts_to_purge: 100
       Purging user_id #{student_b.id}
       Purging user_id #{student_c.id}
-      Purged 2 accounts
+      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      Custom/DeletedAccountPurger/AccountsPurged: 2
+      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      Purged 2 accounts.
+      🕐 00:00:00
     LOG
   end
 
@@ -246,8 +250,12 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
       max_accounts_to_purge: 100
-      Purged 1 accounts
-      1 accounts require review
+      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      Custom/DeletedAccountPurger/AccountsPurged: 1
+      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      Purged 1 accounts.
+      1 accounts require review.
+      🕐 00:00:00
     LOG
   end
 
@@ -274,7 +282,11 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       (dry-run)
       Purging user_id #{student_b.id} (dry-run)
       Purging user_id #{student_c.id} (dry-run)
-      Would have purged 2 accounts
+      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      Custom/DeletedAccountPurger/AccountsPurged: 2
+      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      Would have purged 2 accounts.
+      🕐 00:00:00
     LOG
   end
 
@@ -315,6 +327,11 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_before: #{15.days.ago}
       max_accounts_to_purge: 5
       Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
+      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      Custom/DeletedAccountPurger/AccountsPurged: 0
+      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      Purged 0 accounts.
+      🕐 00:00:00
     LOG
   end
 end
