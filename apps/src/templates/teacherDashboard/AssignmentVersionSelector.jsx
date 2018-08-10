@@ -28,14 +28,11 @@ export default class AssignmentVersionSelector extends Component {
     showVersionMenu: PropTypes.bool,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMenuOpen: false,
-      canMenuOpen: true,
-      targetPoint: {top: 0, left: 0},
-    };
-  }
+  state = {
+    isMenuOpen: false,
+    canMenuOpen: true,
+    targetPoint: {top: 0, left: 0},
+  };
 
   handleMouseDown = e => {
     if (this.props.showVersionMenu) {
