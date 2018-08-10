@@ -32,6 +32,7 @@ class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
   include Pd::SharedWorkshopConstants
+  include Pd::WorkshopSurveyConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -317,7 +318,7 @@ class Pd::Enrollment < ActiveRecord::Base
   private_class_method def self.filter_for_academic_year_survey_completion(academic_year_enrollments, select_completed)
     completed_surveys, uncompleted_surveys = academic_year_enrollments.partition do |enrollment|
       workshop = enrollment.workshop
-      Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 'post_workshop'))
+      Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
     end
 
     select_completed ? completed_surveys : uncompleted_surveys

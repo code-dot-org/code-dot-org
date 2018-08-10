@@ -2,6 +2,9 @@ module Pd
   module WorkshopSurveyConstants
     include SharedWorkshopConstants
 
+    POST_WORKSHOP_FORM_KEY = 'post_workshop'
+    FACILITATOR_FORM_KEY = 'facilitator'
+
     FORM_CATEGORIES = [
       LOCAL_CATEGORY = 'local_summer',
       ACADEMIC_YEAR_1_CATEGORY = 'academic_year_1',

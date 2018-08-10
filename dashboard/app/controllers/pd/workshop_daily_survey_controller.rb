@@ -160,7 +160,7 @@ module Pd
       return render_404 unless session
 
       begin
-        @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, 'post_workshop'
+        @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, POST_WORKSHOP_FORM_KEY
       rescue
         @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, session_count
       end
