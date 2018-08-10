@@ -46,8 +46,17 @@ def localize_block_content
     }
 
     next unless config['args']
-    args_with_options = config['args'].map {|arg| arg['options']}.compact.flatten(1)
-    blocks[name]['options'] = args_with_options.map(&:reverse).to_h unless args_with_options.empty?
+
+    args_with_options = {}
+    config['args'].each do |arg|
+      next if !arg['options'] || arg['options'].empty?
+
+      options = args_with_options[arg['name']] = {}
+      arg['options'].each do |option_tuple|
+        options[option_tuple.last] = option_tuple.first
+      end
+    end
+    blocks[name]['options'] = args_with_options unless args_with_options.empty?
   end
 
   copy_to_yml('blocks', blocks)
