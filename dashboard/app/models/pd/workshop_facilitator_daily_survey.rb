@@ -28,7 +28,7 @@
 module Pd
   class WorkshopFacilitatorDailySurvey < ActiveRecord::Base
     include JotFormBackedForm
-    include Pd::JotForm::Constants
+    include Pd::WorkshopSurveyConstants
 
     belongs_to :user
     belongs_to :pd_session, class_name: 'Pd::Session'
