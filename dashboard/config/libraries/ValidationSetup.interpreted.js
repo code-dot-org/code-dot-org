@@ -9,3 +9,5 @@ function levelFailure(msg) {
   validationState = 'failed';
   validationResult = msg;
 }
+
+var validationProps = {};

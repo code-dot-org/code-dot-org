@@ -38,6 +38,7 @@ class Census::StateCsOffering < ApplicationRecord
     MI
     MO
     MS
+    MT
     NC
     NY
     OH
@@ -103,6 +104,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'MI'
       # Strip spaces from within cell (convert 'MI - 50050 - 00119' to 'MI-50050-00119').
       row_hash['State School ID'].delete(' ')
+    when 'MT'
+      row_hash['state_school_id']
     when 'NC'
       # School code in the spreadsheet from North Carolina is prefixed with the district code
       # but our schools data imported from NCES is not.
@@ -313,7 +316,17 @@ class Census::StateCsOffering < ApplicationRecord
     232060
     232070
     110141
-  )
+  ).freeze
+
+  MT_COURSE_CODES = %w(
+    21009
+    10152
+    10157
+    10156
+    10155
+    10159
+    10153
+  ).freeze
 
   NC_COURSE_CODES = %w(
     BL03
@@ -455,6 +468,8 @@ class Census::StateCsOffering < ApplicationRecord
       MO_COURSE_CODES.select {|course| course == row_hash['COURSE']}
     when 'MS'
       MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
+    when 'MT'
+      MT_COURSE_CODES.select {|course| course == row_hash['NCES Course Code']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
     when 'NY'

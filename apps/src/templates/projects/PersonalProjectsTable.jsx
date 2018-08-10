@@ -41,7 +41,8 @@ export const styles = {
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
-    padding: 2
+    padding: 2,
+    overflow: 'hidden'
   },
   headerCellThumbnail: {
     padding: 0
@@ -73,7 +74,7 @@ export const styles = {
 
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
-  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
+  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
     <a style={tableLayoutStyles.link} href={projectUrl} target="_blank">
@@ -87,6 +88,7 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
+  const updatedName = rowData.isEditing ? rowData.updatedName : '';
   return (
     <PersonalProjectsNameCell
       id={rowData.id}
@@ -94,7 +96,7 @@ const nameFormatter = (projectName, {rowData}) => {
       projectType={rowData.type}
       projectName={projectName}
       isEditing={rowData.isEditing}
-      updatedName={rowData.updatedName}
+      updatedName={updatedName}
     />
   );
 };
@@ -121,7 +123,7 @@ const dateFormatter = function (time) {
 };
 
 const publishedAtFormatter = (publishedAt) => {
-  return publishedAt ? (<FontAwesome icon="circle"/>) : '';
+  return publishedAt ? (<FontAwesome icon="check"/>) : '';
 };
 
 class PersonalProjectsTable extends React.Component {
