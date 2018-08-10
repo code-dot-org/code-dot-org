@@ -124,7 +124,7 @@ class ExpiredDeletedAccountPurger
     log_link = upload_activity_log
     say "#{summary} #{log_link}"
 
-    upload_metrics metrics unless @dry_run
+    upload_metrics metrics
   end
 
   def manual_review_queue_depth
