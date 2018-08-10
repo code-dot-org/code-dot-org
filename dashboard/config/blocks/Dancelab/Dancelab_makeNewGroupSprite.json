@@ -1,9 +1,9 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "makeNewDanceSprite",
+    "func": "makeNewGroupSprite",
     "inline": false,
-    "blockText": "make a new {COSTUME} sprite \n called {NAME} at {LOCATION}",
+    "blockText": "make a new {COSTUME} \n {GROUP} dancer called {NAME} at {LOCATION}",
     "color": [
       355,
       ".7",
@@ -20,6 +20,19 @@
           [
             "Wiggles",
             "\"wiggles\""
+          ]
+        ]
+      },
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "Lead",
+            "lead_dancers"
+          ],
+          [
+            "Backup",
+            "backup_dancers"
           ]
         ]
       },
