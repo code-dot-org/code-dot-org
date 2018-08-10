@@ -230,7 +230,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Custom/DeletedAccountPurger/AccountsPurged: 2
       Custom/DeletedAccountPurger/AccountsQueued: 0
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
-      Purged 2 accounts.
+      Purged 2 account(s).
       🕐 00:00:00
     LOG
   end
@@ -271,8 +271,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Custom/DeletedAccountPurger/AccountsPurged: 1
       Custom/DeletedAccountPurger/AccountsQueued: 1
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
-      Purged 1 accounts.
-      1 accounts require review.
+      Purged 1 account(s).
+      Queued 1 account(s) for manual review.
+      1 account(s) require review.
       🕐 00:00:00
     LOG
   end
@@ -304,7 +305,42 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Custom/DeletedAccountPurger/AccountsPurged: 2
       Custom/DeletedAccountPurger/AccountsQueued: 0
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
-      Would have purged 2 accounts.
+      Would have purged 2 account(s).
+      🕐 00:00:00
+    LOG
+  end
+
+  test 'does not queue accounts when dry-run is true' do
+    student_a = create :student, deleted_at: 3.days.ago
+    student_b = create :student, deleted_at: 3.days.ago
+
+    edap = ExpiredDeletedAccountPurger.new \
+      deleted_after: 4.days.ago,
+      deleted_before: 2.days.ago,
+      dry_run: true
+
+    AccountPurger.stubs(:new).returns(FakeAccountPurger.new(fails_on: student_b))
+
+    refute_creates QueuedAccountPurge do
+      edap.purge_expired_deleted_accounts!
+    end
+
+    purged = User.with_deleted.where.not(purged_at: nil)
+    assert_includes purged, student_a
+    refute_includes purged, student_b
+
+    assert_equal <<~LOG, edap.log.string
+      Starting purge_expired_deleted_accounts!
+      deleted_after: #{4.days.ago}
+      deleted_before: #{2.days.ago}
+      max_accounts_to_purge: 100
+      (dry-run)
+      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      Custom/DeletedAccountPurger/AccountsPurged: 1
+      Custom/DeletedAccountPurger/AccountsQueued: 1
+      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      Would have purged 1 account(s).
+      Would have queued 1 account(s) for manual review.
       🕐 00:00:00
     LOG
   end
@@ -354,7 +390,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Custom/DeletedAccountPurger/AccountsPurged: 0
       Custom/DeletedAccountPurger/AccountsQueued: 0
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
-      Purged 0 accounts.
+      Purged 0 account(s).
       🕐 00:00:00
     LOG
   end

@@ -56,7 +56,7 @@ class ExpiredDeletedAccountPurger
       account_purger.purge_data_for_account account
       @num_accounts_purged += 1
     rescue StandardError => err
-      QueuedAccountPurge.create user: account, reason_for_review: err.message
+      QueuedAccountPurge.create user: account, reason_for_review: err.message unless @dry_run
       @num_accounts_queued += 1
     end
   rescue StandardError => err
@@ -165,13 +165,19 @@ class ExpiredDeletedAccountPurger
     formatted_duration = Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")
 
     summary = purged_accounts_summary
-    summary += "\n#{review_queue_depth} accounts require review." if review_queue_depth > 0
+    summary += "\n" + queued_accounts_summary if @num_accounts_queued > 0
+    summary += "\n#{review_queue_depth} account(s) require review." if review_queue_depth > 0
     summary + "\n🕐 #{formatted_duration}"
   end
 
   def purged_accounts_summary
-    return "Would have purged #{@num_accounts_purged} accounts." if @dry_run
-    "Purged #{@num_accounts_purged} accounts."
+    intro = @dry_run ? 'Would have purged' : 'Purged'
+    "#{intro} #{@num_accounts_purged} account(s)."
+  end
+
+  def queued_accounts_summary
+    intro = @dry_run ? 'Would have queued' : 'Queued'
+    "#{intro} #{@num_accounts_queued} account(s) for manual review."
   end
 
   # @return [String] HTML link to view uploaded log
