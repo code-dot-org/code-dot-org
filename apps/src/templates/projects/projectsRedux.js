@@ -241,6 +241,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       updatedEditing[projectToRenameIndex] = {
         ...updatedEditing[projectToRenameIndex],
         isEditing: true,
+        updatedName: updatedEditing[projectToRenameIndex].name
       };
 
       return {
