@@ -134,14 +134,18 @@ class ExpiredDeletedAccountPurger
   def build_metrics(review_queue_depth)
     {
       # Number of soft-deleted accounts in system after this run
-      "Custom/DeletedAccountPurger/SoftDeletedAccounts" => soft_deleted_accounts.count,
+      metric_name('SoftDeletedAccounts') => soft_deleted_accounts.count,
       # Number of accounts purged during this run
-      "Custom/DeletedAccountPurger/AccountsPurged" => @num_accounts_purged,
+      metric_name('AccountsPurged') => @num_accounts_purged,
       # Number of accounts queued for manual review during this run
-      "Custom/DeletedAccountPurger/AccountsQueued" => @num_accounts_queued,
+      metric_name('AccountsQueued') => @num_accounts_queued,
       # Depth of manual review queue after this run
-      "Custom/DeletedAccountPurger/ManualReviewQueueDepth" => review_queue_depth,
+      metric_name('ManualReviewQueueDepth') => review_queue_depth,
     }
+  end
+
+  def metric_name(name)
+    "Custom/DeletedAccountPurger/#{name}"
   end
 
   def log_metrics(metrics)
@@ -151,6 +155,7 @@ class ExpiredDeletedAccountPurger
   end
 
   def upload_metrics(metrics)
+    return unless CDO.newrelic_logging
     metrics.each do |key, value|
       NewRelic::Agent.record_metric key, value
     end
