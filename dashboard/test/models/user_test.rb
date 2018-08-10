@@ -2679,7 +2679,7 @@ class UserTest < ActiveSupport::TestCase
     NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1)
     result = student.destroy
 
-    assert_equal true, result
+    assert_equal student, result
   ensure
     CDO.newrelic_logging = original_newrelic_logging
   end
