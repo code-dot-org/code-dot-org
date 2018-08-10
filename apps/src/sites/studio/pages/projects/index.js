@@ -60,9 +60,7 @@ $(document).ready(() => {
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
       <Provider store={store}>
-        <PublicGallery
-          projectValidator={projectsData.projectValidator}
-        />
+        <PublicGallery/>
       </Provider>,
       publicGallery);
   });
