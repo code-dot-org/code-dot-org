@@ -867,7 +867,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
 
     workshop = build :pd_workshop
-    workshop.expects(:pre_survey?).returns(true)
+    workshop.expects(:pre_survey?).returns(true).twice
     workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
 
     expected = [
@@ -876,6 +876,29 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       ['Unit 3', ['Lesson 1: Unit 3 - Lesson 1']]
     ]
     assert_equal expected, workshop.pre_survey_units_and_lessons
+  end
+
+  test 'pre_workshop_course' do
+    course_name = 'Fake Course Name'
+    mock_course = mock
+
+    # No pre-survey
+    workshop = build :pd_workshop
+    workshop.stubs(:pre_survey?).returns(false)
+    assert_nil workshop.pre_survey_course
+
+    # With valid course name
+    workshop.stubs(:pre_survey?).returns(true)
+    workshop.stubs(:pre_survey_course_name).returns(course_name)
+    Course.expects(:find_by_name!).with(course_name).returns(mock_course)
+    assert_equal mock_course, workshop.pre_survey_course
+
+    # With invalid course name
+    Course.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    e = assert_raises RuntimeError do
+      workshop.pre_survey_course
+    end
+    assert_equal "No course found for name #{course_name}", e.message
   end
 
   test 'friendly date range same month' do
