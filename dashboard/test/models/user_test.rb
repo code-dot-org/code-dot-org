@@ -2670,6 +2670,35 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.deleted?
   end
 
+  test 'soft-deleting a user records a NewRelic metric' do
+    original_newrelic_logging = CDO.newrelic_logging
+    CDO.newrelic_logging = true
+
+    student = create :student
+
+    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1)
+    result = student.destroy
+
+    assert_equal true, result
+  ensure
+    CDO.newrelic_logging = original_newrelic_logging
+  end
+
+  test 'soft-deleting a group of users records NewRelic metrics' do
+    original_newrelic_logging = CDO.newrelic_logging
+    CDO.newrelic_logging = true
+
+    student_a = create :student
+    student_b = create :student
+
+    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1).twice
+    result = User.destroy [student_a.id, student_b.id]
+
+    assert_equal [student_a, student_b], result
+  ensure
+    CDO.newrelic_logging = original_newrelic_logging
+  end
+
   test 'undestroy restores recent dependents only' do
     teacher = create :teacher
     old_section = create :section, teacher: teacher
