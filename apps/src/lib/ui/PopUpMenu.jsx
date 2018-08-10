@@ -54,6 +54,7 @@ export default class PopUpMenu extends Component {
     isOpen: PropTypes.bool,
     beforeClose: PropTypes.func,
     showTail: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   render() {
@@ -70,6 +71,7 @@ export default class PopUpMenu extends Component {
           className={this.props.className}
           children={this.props.children}
           showTail={this.props.showTail}
+          style={this.props.style}
         />
       </Portal>
     );
@@ -89,6 +91,7 @@ class MenuBubbleUnwrapped extends Component {
     children: PropTypes.any,
     className: PropTypes.string,
     showTail: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   renderMenuItems() {
@@ -122,6 +125,7 @@ class MenuBubbleUnwrapped extends Component {
     const marginLeft = this.props.offset ? this.props.offset.x : -STANDARD_PADDING;
     const style = {
       ...menuStyle,
+      ...this.props.style,
       ...targetPoint,
       marginTop: marginTop,
       marginLeft: marginLeft,
@@ -161,9 +165,7 @@ export class MenuBreak extends Component {
 
 class Item extends Component {
   static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.array]).isRequired,
+    children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
     href: PropTypes.string,
     first: PropTypes.bool,
