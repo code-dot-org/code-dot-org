@@ -9,7 +9,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
   personalProjectDataPropType,
-  FEATURED_PROJECT_TYPE_MAP,
+  PROJECT_TYPE_MAP,
 } from './projectConstants';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
@@ -114,7 +114,7 @@ const actionsFormatter = (actions, {rowData}) => {
 };
 
 const typeFormatter = (type) => {
-  return FEATURED_PROJECT_TYPE_MAP[type];
+  return PROJECT_TYPE_MAP[type];
 };
 
 const dateFormatter = function (time) {
