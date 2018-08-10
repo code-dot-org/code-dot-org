@@ -302,9 +302,11 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_b.id} (dry-run)
       Purging user_id #{student_c.id} (dry-run)
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 2
+      Custom/DeletedAccountPurger/AccountsPurged: 0
       Custom/DeletedAccountPurger/AccountsQueued: 0
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      Custom/DeletedAccountPurger/DryRunAccountsPurged: 2
+      Custom/DeletedAccountPurger/DryRunAccountsQueued: 0
       Would have purged 2 account(s).
       🕐 00:00:00
     LOG
@@ -336,9 +338,11 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       max_accounts_to_purge: 100
       (dry-run)
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 1
-      Custom/DeletedAccountPurger/AccountsQueued: 1
+      Custom/DeletedAccountPurger/AccountsPurged: 0
+      Custom/DeletedAccountPurger/AccountsQueued: 0
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      Custom/DeletedAccountPurger/DryRunAccountsPurged: 1
+      Custom/DeletedAccountPurger/DryRunAccountsQueued: 1
       Would have purged 1 account(s).
       Would have queued 1 account(s) for manual review.
       🕐 00:00:00
