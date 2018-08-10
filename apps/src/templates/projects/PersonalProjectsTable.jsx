@@ -102,8 +102,11 @@ const nameFormatter = (projectName, {rowData}) => {
 };
 
 const actionsFormatter = (actions, {rowData}) => {
+  const unpublishableTypes = ['calc', 'eval', 'weblab'];
+  const isPublishable = !unpublishableTypes.includes(rowData.type);
   return (
     <PersonalProjectsTableActionsCell
+      isPublishable={isPublishable}
       isPublished={!!rowData.publishedAt}
       projectId={rowData.channel}
       projectType={rowData.type}
