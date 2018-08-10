@@ -100,7 +100,7 @@ export default class AssignmentSelector extends Component {
 
     const { section, assignments } = props;
 
-    let selectedAssignmentFamily, versions, selectedVersion, selectedPrimaryId, selectedSecondaryId;
+    let selectedAssignmentFamily, versions, selectedVersionYear, selectedPrimaryId, selectedSecondaryId;
     if (!section) {
       selectedPrimaryId = noAssignment;
       selectedSecondaryId = noAssignment;
@@ -116,13 +116,13 @@ export default class AssignmentSelector extends Component {
     if (primaryAssignment) {
       selectedAssignmentFamily = primaryAssignment.assignment_family_name;
       versions = this.getVersions(selectedAssignmentFamily);
-      selectedVersion = getVersion(primaryAssignment);
+      selectedVersionYear = getVersion(primaryAssignment).year;
     }
 
     this.state = {
       selectedAssignmentFamily,
       versions: versions || [],
-      selectedVersion,
+      selectedVersionYear,
       selectedPrimaryId,
       selectedSecondaryId,
     };
@@ -156,13 +156,13 @@ export default class AssignmentSelector extends Component {
   onChangeVersion = versionYear => {
     const { selectedAssignmentFamily, versions } = this.state;
     const version = versions.find(version => version.year === versionYear);
-    this.setPrimary(selectedAssignmentFamily, version);
+    this.setPrimary(selectedAssignmentFamily, version.year);
   };
 
-  getSelectedPrimaryId(selectedAssignmentFamily, selectedVersion) {
+  getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear) {
     const primaryAssignment = _.values(this.props.assignments).find(assignment => (
       assignment.assignment_family_name === selectedAssignmentFamily &&
-      assignment.version_year === selectedVersion.year
+      assignment.version_year === selectedVersionYear
     ));
 
     if (!primaryAssignment) {
@@ -172,17 +172,17 @@ export default class AssignmentSelector extends Component {
     return assignmentId(primaryAssignment.courseId, primaryAssignment.scriptId);
   }
 
-  setPrimary = (selectedAssignmentFamily, selectedVersion) => {
+  setPrimary = (selectedAssignmentFamily, selectedVersionYear) => {
     const versions = this.getVersions(selectedAssignmentFamily);
     const recommendedVersion = versions.find(v => v.isRecommended);
-    selectedVersion = selectedVersion || recommendedVersion || versions[0];
-    const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersion);
+    selectedVersionYear = selectedVersionYear || (recommendedVersion && recommendedVersion.year) || versions[0].year;
+    const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear);
     const selectedSecondaryId = noAssignment;
 
     this.setState({
       selectedAssignmentFamily,
       versions,
-      selectedVersion,
+      selectedVersionYear,
       selectedPrimaryId,
       selectedSecondaryId
     }, this.reportChange);
@@ -203,7 +203,7 @@ export default class AssignmentSelector extends Component {
   render() {
     const { assignments, dropdownStyle, disabled, showVersionMenu } = this.props;
     let { assignmentFamilies } = this.props;
-    const { selectedPrimaryId, selectedSecondaryId, selectedAssignmentFamily, versions, selectedVersion } = this.state;
+    const { selectedPrimaryId, selectedSecondaryId, selectedAssignmentFamily, versions, selectedVersionYear } = this.state;
 
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
@@ -252,7 +252,7 @@ export default class AssignmentSelector extends Component {
         {versions.length > 1 && (
           <AssignmentVersionSelector
             dropdownStyle={dropdownStyle}
-            selectedVersion={selectedVersion}
+            selectedVersionYear={selectedVersionYear}
             versions={versions}
             onChangeVersion={this.onChangeVersion}
             disabled={disabled}
