@@ -14,31 +14,28 @@ end
 class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   freeze_time
 
-  def setup_all
+  def setup
     # Enable New Relic logging for these tests to test metrics
     @@original_newrelic_logging = CDO.newrelic_logging
     CDO.newrelic_logging = true
+    # Force tests to fail unless they explicitly expect every call to record_metric
+    NewRelic::Agent.expects(:record_metric).never
 
     # Disable other logging
     @@original_hip_chat_logging = CDO.hip_chat_logging
     CDO.hip_chat_logging = false
     @@original_slack_endpoint = CDO.slack_endpoint
     CDO.slack_endpoint = nil
-  end
-
-  def teardown_all
-    CDO.newrelic_logging = @@original_newrelic_logging
-    CDO.hip_chat_logging = @@original_hip_chat_logging
-    CDO.slack_endpoint = @@original_slack_endpoint
-  end
-
-  def setup
-    # Force tests to fail unless they explicitly expect every call to record_metric
-    NewRelic::Agent.expects(:record_metric).never
 
     # No uploads
     ExpiredDeletedAccountPurger.any_instance.stubs :upload_activity_log
     PurgedAccountLog.any_instance.stubs :upload
+  end
+
+  def teardown
+    CDO.newrelic_logging = @@original_newrelic_logging
+    CDO.hip_chat_logging = @@original_hip_chat_logging
+    CDO.slack_endpoint = @@original_slack_endpoint
   end
 
   test 'can construct with no arguments - all defaults' do
