@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
+import color from "@cdo/apps/util/color";
 
 const defaultIcons = {
   image: 'fa fa-picture-o',
@@ -31,11 +32,22 @@ export const styles = {
   wrapper: {
     width: 60,
     height: 60,
-    margin: '10px auto',
+    margin: '10px auto'
+  },
+  background: {
     background: '#eee',
     border: '1px solid #ccc',
     textAlign: 'center'
   },
+  audioIcon: {
+    color: color.purple,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    display: 'block'
+  },
+  audioWrapper: {
+    display: 'flex'
+  }
 };
 
 class AssetThumbnail extends React.Component {
@@ -72,13 +84,20 @@ class AssetThumbnail extends React.Component {
     const srcPath = `${basePath}${cacheBustSuffix}`;
 
     return (
-      <div className="assetThumbnail" style={[styles.wrapper, style]}>
-        {type === 'image' ?
-         <img src={srcPath} style={assetThumbnailStyle} /> :
-         <i
-           className={defaultIcons[type] || defaultIcons.unknown}
-           style={[assetIconStyle, iconStyle]}
-         />
+      <div>
+        {type === 'audio' ?
+          <div style={[styles.wrapper, styles.audioWrapper]}>
+            <i className={'fa fa-play-circle fa-4x'} style={[styles.audioIcon]} />
+          </div> :
+          <div className="assetThumbnail" style={[styles.wrapper, style, styles.background]}>
+            {type === 'image' ?
+              <img src={srcPath} style={assetThumbnailStyle}/> :
+              <i
+                className={defaultIcons[type] || defaultIcons.unknown}
+                style={[assetIconStyle, iconStyle]}
+              />
+            }
+          </div>
         }
       </div>
     );
