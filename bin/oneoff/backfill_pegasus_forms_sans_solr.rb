@@ -38,7 +38,7 @@ def process_existing_batch_of_forms
       if kind.respond_to?(:additional_data)
         extra = kind.additional_data(data)
 
-        if false && (extra.to_a - processed_data.to_a).empty?
+        if (extra.to_a - processed_data.to_a).empty?
           $stderr.puts "Form's processed_data already contains what we meant to write."
           already_written_count += 1
           next
@@ -48,13 +48,12 @@ def process_existing_batch_of_forms
           next
         else
           processed_data.merge! extra
+
+          $stderr.puts "Would write #{processed_data.to_json}"
+          # TEMP: While we are still validating this script, don't actually write to DB.
+          #DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json, processed_at: DateTime.now)
+          update_count += 1
         end
-
-        $stderr.puts "Would write #{processed_data.to_json}"
-
-        # TEMP: While we are still validating this script, don't actually write to DB.
-        #DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json, processed_at: DateTime.now)
-        update_count += 1
       end
     rescue AbortFormError => e
       $stderr.puts "Unable to process form #{form[:id]} because #{e.message}."
