@@ -248,7 +248,6 @@ export default class EnrollForm extends React.Component {
           }
         </FormGroup>
         <SchoolAutocompleteDropdownWithCustomFields
-          school_id={this.state.school_info && this.state.school_info.school_id}
           onSchoolInfoChange={this.onSchoolInfoChange}
           school_info={this.state.school_info}
           errors={this.state.errors}
