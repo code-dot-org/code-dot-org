@@ -137,8 +137,8 @@ class ExpiredDeletedAccountPurger
       "Custom/DeletedAccountPurger/SoftDeletedAccounts" => soft_deleted_accounts.count,
       # Number of accounts purged during this run
       "Custom/DeletedAccountPurger/AccountsPurged" => @num_accounts_purged,
-      # Number of accounts queued during this run
-      # "Custom/DeletedAccountPurger/AccountsQueued" => @num_accounts_queued,
+      # Number of accounts queued for manual review during this run
+      "Custom/DeletedAccountPurger/AccountsQueued" => @num_accounts_queued,
       # Depth of manual review queue after this run
       "Custom/DeletedAccountPurger/ManualReviewQueueDepth" => review_queue_depth,
     }
