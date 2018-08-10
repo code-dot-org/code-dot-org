@@ -289,7 +289,18 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_before: 2.days.ago,
       dry_run: true
 
-    NewRelic::Agent.expects(:record_metric).never
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/AccountsPurged", 0)
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/AccountsQueued", 0)
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/DryRunAccountsPurged", 2)
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/DryRunAccountsQueued", 0)
 
     edap.purge_expired_deleted_accounts!
 
@@ -322,6 +333,19 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       dry_run: true
 
     AccountPurger.stubs(:new).returns(FakeAccountPurger.new(fails_on: student_b))
+
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/AccountsPurged", 0)
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/AccountsQueued", 0)
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/DryRunAccountsPurged", 1)
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/DryRunAccountsQueued", 1)
 
     refute_creates QueuedAccountPurge do
       edap.purge_expired_deleted_accounts!
