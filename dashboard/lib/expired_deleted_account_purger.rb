@@ -44,39 +44,44 @@ class ExpiredDeletedAccountPurger
     @max_accounts_to_purge = options[:max_accounts_to_purge] || 100
     raise ArgumentError.new('max_accounts_to_purge must be Integer') unless @max_accounts_to_purge.is_a? Integer
 
-    @log = StringIO.new
+    reset
   end
 
   def purge_expired_deleted_accounts!
-    start_time = Time.now
-    start_activity_log
-    num_accounts_purged = 0
+    reset
     check_constraints
 
     account_purger = AccountPurger.new dry_run: @dry_run, log: @log
     expired_soft_deleted_accounts.each do |account|
       account_purger.purge_data_for_account account
-      num_accounts_purged += 1
+      @num_accounts_purged += 1
     rescue StandardError => err
       QueuedAccountPurge.create user: account, reason_for_review: err.message
+      @num_accounts_queued += 1
     end
-
-    if @dry_run
-      say "Would have purged #{num_accounts_purged} accounts"
-    else
-      say "Purged #{num_accounts_purged} accounts"
-    end
-    say "#{manual_review_queue_depth} accounts require review" if manual_review_queue_depth > 0
   rescue StandardError => err
     yell err.message
     raise
   ensure
-    metrics = gather_metrics num_accounts_purged
-    upload_activity_log start_time, metrics
-    send_metrics metrics unless @dry_run
+    report_results
   end
 
-  private def start_activity_log
+  private
+
+  def reset
+    # Logging stream we can pass down to the account purger component so it
+    # can add its own content to the log
+    @log = StringIO.new
+
+    # Other values tracked internally and reset with every run
+    @num_accounts_purged = 0
+    @num_accounts_queued = 0
+    @start_time = Time.now
+
+    start_activity_log
+  end
+
+  def start_activity_log
     @log.puts "Starting purge_expired_deleted_accounts!"
     @log.puts "deleted_after: #{@deleted_after}"
     @log.puts "deleted_before: #{@deleted_before}"
@@ -84,17 +89,7 @@ class ExpiredDeletedAccountPurger
     @log.puts "(dry-run)" if @dry_run
   end
 
-  private def upload_activity_log(time, metrics)
-    metrics.each do |key, value|
-      @log.puts "#{key}: #{value}"
-    end
-    @log.puts "Done in #{Time.now - time} seconds"
-    AWS::S3::LogUploader.
-      new('cdo-audit-logs', "expired-deleted-account-purger-activity/#{CDO.rack_env}").
-      upload_log(time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
-  end
-
-  private def check_constraints
+  def check_constraints
     if expired_soft_deleted_accounts.count > @max_accounts_to_purge
       raise SafetyConstraintViolation, "Found #{expired_soft_deleted_accounts.count} " \
         "accounts to purge, which exceeds the configured limit of " \
@@ -102,28 +97,7 @@ class ExpiredDeletedAccountPurger
     end
   end
 
-  private def gather_metrics(num_accounts_purged)
-    {
-      # Number of soft-deleted accounts in system after this run
-      "Custom/DeletedAccountPurger/SoftDeletedAccounts" => soft_deleted_accounts.count,
-      # Number of accounts purged during this run
-      "Custom/DeletedAccountPurger/AccountsPurged" => num_accounts_purged,
-      # Depth of manual review queue after this run
-      "Custom/DeletedAccountPurger/ManualReviewQueueDepth" => manual_review_queue_depth,
-    }
-  end
-
-  private def send_metrics(metrics)
-    metrics.each do |key, value|
-      NewRelic::Agent.record_metric key, value
-    end
-  end
-
-  private def soft_deleted_accounts
-    User.with_deleted.where(purged_at: nil).where.not(deleted_at: nil)
-  end
-
-  private def expired_soft_deleted_accounts
+  def expired_soft_deleted_accounts
     user_ids_needing_manual_review = QueuedAccountPurge.pluck(:user_id)
     soft_deleted_accounts.
       where(
@@ -134,22 +108,92 @@ class ExpiredDeletedAccountPurger
       where.not(id: user_ids_needing_manual_review)
   end
 
-  private def manual_review_queue_depth
-    QueuedAccountPurge.all.count
+  def soft_deleted_accounts
+    User.with_deleted.where(purged_at: nil).where.not(deleted_at: nil)
   end
 
-  # Send messages to Slack #cron-daily room.
-  private def say(message, options = {})
+  def report_results
+    review_queue_depth = manual_review_queue_depth
+
+    metrics = build_metrics review_queue_depth
+    log_metrics metrics
+
+    summary = build_summary review_queue_depth
+    @log.puts summary
+
+    log_link = upload_activity_log
+    say "#{summary} #{log_link}"
+
+    upload_metrics metrics unless @dry_run
+  end
+
+  def manual_review_queue_depth
+    QueuedAccountPurge.count
+  end
+
+  def build_metrics(review_queue_depth)
+    {
+      # Number of soft-deleted accounts in system after this run
+      metric_name('SoftDeletedAccounts') => soft_deleted_accounts.count,
+      # Number of accounts purged during this run
+      metric_name('AccountsPurged') => @num_accounts_purged,
+      # Number of accounts queued for manual review during this run
+      metric_name('AccountsQueued') => @num_accounts_queued,
+      # Depth of manual review queue after this run
+      metric_name('ManualReviewQueueDepth') => review_queue_depth,
+    }
+  end
+
+  def metric_name(name)
+    "Custom/DeletedAccountPurger/#{name}"
+  end
+
+  def log_metrics(metrics)
+    metrics.each do |key, value|
+      @log.puts "#{key}: #{value}"
+    end
+  end
+
+  def upload_metrics(metrics)
+    return unless CDO.newrelic_logging
+    metrics.each do |key, value|
+      NewRelic::Agent.record_metric key, value
+    end
+  end
+
+  def build_summary(review_queue_depth)
+    formatted_duration = Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")
+
+    summary = purged_accounts_summary
+    summary += "\n#{review_queue_depth} accounts require review." if review_queue_depth > 0
+    summary + "\n🕐 #{formatted_duration}"
+  end
+
+  def purged_accounts_summary
+    return "Would have purged #{@num_accounts_purged} accounts." if @dry_run
+    "Purged #{@num_accounts_purged} accounts."
+  end
+
+  # @return [String] HTML link to view uploaded log
+  def upload_activity_log
+    log_url = AWS::S3::LogUploader.
+      new('cdo-audit-logs', "expired-deleted-account-purger-activity/#{CDO.rack_env}").
+      upload_log(@start_time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
+    " <a href='#{log_url}'>☁ Log on S3</a>"
+  end
+
+  # Send error messages to #cron-daily
+  def yell(message)
     @log.puts message
-    ChatClient.message 'cron-daily', prefixed(message), options
-  end
-
-  # Send error messages to #cron-daily and #server-operations
-  private def yell(message)
     say message, color: 'red', notify: 1
   end
 
-  private def prefixed(message)
+  # Send messages to Slack #cron-daily
+  def say(message, options = {})
+    ChatClient.message 'cron-daily', prefixed(message), options
+  end
+
+  def prefixed(message)
     "ExpiredDeletedAccountPurger#{@dry_run ? ' (dry-run)' : ''}: #{message}"
   end
 end
