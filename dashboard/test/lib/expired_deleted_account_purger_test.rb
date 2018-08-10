@@ -195,6 +195,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/AccountsPurged", 2)
     NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/AccountsQueued", 0)
+    NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
     edap.purge_expired_deleted_accounts!
@@ -214,6 +216,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_c.id}
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 2
+      Custom/DeletedAccountPurger/AccountsQueued: 0
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
       Purged 2 accounts.
       🕐 00:00:00
@@ -235,6 +238,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/AccountsPurged", 1)
     NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/AccountsQueued", 1)
+    NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
     assert_creates QueuedAccountPurge do
@@ -252,6 +257,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       max_accounts_to_purge: 100
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 1
+      Custom/DeletedAccountPurger/AccountsQueued: 1
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
       Purged 1 accounts.
       1 accounts require review.
@@ -284,6 +290,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_c.id} (dry-run)
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 2
+      Custom/DeletedAccountPurger/AccountsQueued: 0
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
       Would have purged 2 accounts.
       🕐 00:00:00
@@ -310,6 +317,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     # Records no purged accounts
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/AccountsPurged", 0)
+    # Records no queued accounts (we don't queue individual accounts for review
+    # when the problem is that there's too many accounts)
+    NewRelic::Agent.stubs(:record_metric).
+      once.with("Custom/DeletedAccountPurger/AccountsQueued", 0)
     # Nothing moved to manual review queue
     NewRelic::Agent.stubs(:record_metric).
       once.with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
@@ -329,6 +340,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 0
+      Custom/DeletedAccountPurger/AccountsQueued: 0
       Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
       Purged 0 accounts.
       🕐 00:00:00
