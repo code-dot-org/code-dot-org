@@ -3,31 +3,44 @@ import PopUpMenu from "../../lib/ui/PopUpMenu";
 import {assignmentVersionShape} from './shapes';
 import i18n from '@cdo/locale';
 import FontAwesome from './../FontAwesome';
+import color from "../../util/color";
 
 export const columnWidths = {
   selected: 25,
   title: 60,
-  status: 100
+  status: 120
+};
+
+const cellStyle = {
+  display: 'inline-block',
+  marginTop: 11,
 };
 
 const style = {
   wrapper: {
     fontSize: 16,
+    height: 40,
   },
   selectedColumn: {
+    ...cellStyle,
     width: columnWidths.selected,
-    display: 'inline-block',
     marginLeft: -10,
   },
   titleColumn: {
+    ...cellStyle,
     width: columnWidths.title,
-    display: 'inline-block',
   },
   statusColumn: {
+    ...cellStyle,
     width: columnWidths.status,
-    display: 'inline-block',
     marginRight: -10,
   },
+  recommended: {
+    borderRadius: 5,
+    padding: 8,
+    backgroundColor: color.cyan,
+    color: 'white',
+  }
 };
 
 export default class AssignmentVersionMenuItem extends Component {
@@ -48,7 +61,11 @@ export default class AssignmentVersionMenuItem extends Component {
             {version.title}
           </span>
             <span style={style.statusColumn}>
-            {version.isRecommended && i18n.recommended()}
+            {version.isRecommended && (
+              <span style={style.recommended}>
+                {i18n.recommended()}
+              </span>
+            )}
           </span>
         </div>
       </PopUpMenu.Item>
