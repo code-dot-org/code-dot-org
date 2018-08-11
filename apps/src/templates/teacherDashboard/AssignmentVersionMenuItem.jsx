@@ -4,6 +4,8 @@ import {assignmentVersionShape} from './shapes';
 import i18n from '@cdo/locale';
 import FontAwesome from './../FontAwesome';
 import color from "../../util/color";
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 
 export const columnWidths = {
   selected: 25,
@@ -73,6 +75,7 @@ export default class AssignmentVersionMenuItem extends Component {
 
   render() {
     const {version, onClick} = this.props;
+    const tooltipId = _.uniqueId();
     return (
       <PopUpMenu.Item onClick={onClick}>
         <div style={style.wrapper}>
@@ -102,11 +105,16 @@ export default class AssignmentVersionMenuItem extends Component {
           <span style={style.languageColumn}>
             {this.englishOnly() && i18n.englishOnly()}
             {!this.englishOnly() && (
-              <span title={version.locales.join(', ')}>
-                {i18n.numLanguages({numLanguages: version.locales.length})}
-                &nbsp;
-                <FontAwesome icon="info-circle" style={style.infoCircle}/>
-              </span>
+              <div>
+                <span data-tip data-for={tooltipId}>
+                  {i18n.numLanguages({numLanguages: version.locales.length})}
+                  &nbsp;
+                  <FontAwesome icon="info-circle" style={style.infoCircle}/>
+                </span>
+                <ReactTooltip id={tooltipId}>
+                  {version.locales.join(', ')}
+                </ReactTooltip>
+              </div>
             )}
           </span>
         </div>
