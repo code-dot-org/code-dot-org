@@ -49,7 +49,7 @@ def restore_redacted_files
       source_path = redacted_path.sub("redacted", "source")
       translated_path = redacted_path.sub("redacted", locale)
 
-      restore(source_path, translated_path, translated_path)
+      restore(source_path, translated_path, translated_path, 'nonPedanticEmphasis')
     end
   end
 end
