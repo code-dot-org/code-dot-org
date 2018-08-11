@@ -9,16 +9,16 @@ import _ from 'lodash';
 
 export const columnWidths = {
   selected: 25,
-  title: 60,
-  status: 150,
+  title: 70,
+  status: 160,
   language: 140,
 };
 
-export const rowHeight = 40;
+export const rowHeight = 35;
 
-const cellStyle = {
+export const cellStyle = {
   display: 'inline-block',
-  marginTop: 11,
+  marginTop: 9,
 };
 
 const style = {
