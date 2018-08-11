@@ -85,7 +85,7 @@ class PersonalProjectsTableActionsCell extends Component {
             >
               {i18n.remix()}
             </PopUpMenu.Item>
-            {isPublished && isPublishable &&(
+            {isPublished && isPublishable && (
               <PopUpMenu.Item
                 onClick={this.onUnpublish}
               >
