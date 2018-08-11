@@ -334,7 +334,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_before: 2.days.ago,
       dry_run: true
 
-    AccountPurger.stubs(:new).returns(FakeAccountPurger.new(fails_on: student_b))
+    AccountPurger.any_instance.stubs(:purge_data_for_account).with do |account|
+      edap.log.puts "Purging user_id #{account.id} (dry-run)"
+      raise 'Intentional failure' if account.id == student_b.id; true
+    end
 
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
@@ -354,7 +357,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     end
 
     purged = User.with_deleted.where.not(purged_at: nil)
-    assert_includes purged, student_a
+    refute_includes purged, student_a
     refute_includes purged, student_b
 
     assert_equal <<~LOG, edap.log.string
@@ -363,6 +366,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_before: #{2.days.ago}
       max_accounts_to_purge: 100
       (dry-run)
+      Purging user_id #{student_a.id} (dry-run)
+      Purging user_id #{student_b.id} (dry-run)
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 0
       Custom/DeletedAccountPurger/AccountsQueued: 0
