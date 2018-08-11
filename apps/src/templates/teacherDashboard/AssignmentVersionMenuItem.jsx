@@ -11,6 +11,8 @@ export const columnWidths = {
   status: 120
 };
 
+export const rowHeight = 40;
+
 const cellStyle = {
   display: 'inline-block',
   marginTop: 11,
@@ -19,7 +21,7 @@ const cellStyle = {
 const style = {
   wrapper: {
     fontSize: 16,
-    height: 40,
+    height: rowHeight,
   },
   selectedColumn: {
     ...cellStyle,

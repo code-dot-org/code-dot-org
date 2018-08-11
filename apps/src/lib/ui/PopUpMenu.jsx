@@ -173,10 +173,11 @@ class Item extends Component {
     color: PropTypes.string,
     openInNewTab: PropTypes.bool,
     className: PropTypes.string,
+    style: PropTypes.object,
   };
 
   render() {
-    const {first, last, onClick, children, href, openInNewTab, className} = this.props;
+    const {first, last, onClick, children, href, openInNewTab, className, style} = this.props;
     const defaultClassName = 'pop-up-menu-item';
     const classList = className ? `${defaultClassName} ${className}` : defaultClassName;
     if (!href && !onClick) {
@@ -194,6 +195,11 @@ class Item extends Component {
       }
     };
 
+    const wrapperStyle = {
+      ...paddingStyle,
+      ...style,
+    };
+
     // Style for anchors tags nested in divs
     const areaStyle = {
       display: 'block',
@@ -208,7 +214,7 @@ class Item extends Component {
     const target = openInNewTab ? "_blank" : "";
 
     return (
-      <div style={paddingStyle}>
+      <div style={wrapperStyle}>
         {this.props.href &&
           <a
             className={classList}
