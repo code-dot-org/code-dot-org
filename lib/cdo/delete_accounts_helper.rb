@@ -203,6 +203,17 @@ class DeleteAccountsHelper
     user.circuit_playground_discount_application&.anonymize
   end
 
+  def purge_teacher_feedbacks(user_id)
+    # Purge feedback written by target user
+    TeacherFeedback.with_deleted.where(teacher_id: user_id).each(&:really_destroy!)
+    # Soft-delete feedback written to target user
+    TeacherFeedback.with_deleted.where(student_id: user_id).each do |feedback|
+      feedback.student = nil
+      feedback.destroy
+      feedback.save!
+    end
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -219,6 +230,7 @@ class DeleteAccountsHelper
     # NOTE: We do not gate any deletion logic on `user.user_type` as its current state may not be
     # reflective of past state.
     user.destroy
+    purge_teacher_feedbacks(user.id)
     remove_census_submissions(user.email) if user.email
     remove_email_preferences(user.email) if user.email
     anonymize_circuit_playground_discount_application(user)
