@@ -132,8 +132,8 @@ class PersonalProjectsTable extends React.Component {
   };
 
   actionsFormatter = (actions, {rowData}) => {
-    let {canShare} = this.props;
-    let isPublishable =
+    const {canShare} = this.props;
+    const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
       (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
     return (

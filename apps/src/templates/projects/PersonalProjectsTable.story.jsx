@@ -13,6 +13,7 @@ export default storybook => {
         story: () => (
           <PersonalProjectsTable
             personalProjectsList={stubFakePersonalProjectData}
+            canShare={true}
           />
         )
       },
@@ -22,6 +23,7 @@ export default storybook => {
         story: () => (
           <PersonalProjectsTable
             personalProjectsList={[]}
+            canShare={true}
           />
         )
       },
