@@ -46,13 +46,18 @@ def run_bash_script(location)
   run_standalone_script("bash #{location}")
 end
 
-def redact(source, dest)
+def plugins_to_arg(plugins)
+  plugins.map {|name| "bin/i18n/plugins/#{name}.js"}.join(',')
+end
+
+def redact(source, dest, *plugins)
+  plugins = plugins_to_arg(plugins)
   data = YAML.load_file(source)
   stdout, _status = Open3.capture2(
     [
       'bin/i18n/node_modules/.bin/redact',
       '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
-      '-p bin/i18n/plugins/nonPedanticEmphasis.js'
+      '-p ' + plugins,
     ].join(" "),
     stdin_data: JSON.generate(data)
   )
@@ -62,7 +67,8 @@ def redact(source, dest)
   end
 end
 
-def restore(source, redacted, dest)
+def restore(source, redacted, dest, *plugins)
+  plugins = plugins_to_arg(plugins)
   source_data = YAML.load_file(source)
   redacted_data = YAML.load_file(redacted)
   source_json = Tempfile.new(['source', '.json'])
@@ -75,7 +81,7 @@ def restore(source, redacted, dest)
     [
       'bin/i18n/node_modules/.bin/restore',
       '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
-      '-p bin/i18n/plugins/nonPedanticEmphasis.js',
+      '-p ' + plugins,
       "-s #{source_json.path}",
       "-r #{redacted_json.path}",
     ].join(" ")
