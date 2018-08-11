@@ -26,6 +26,9 @@
   = f.label :auto_run, 'Automatically rerun on block changes'
   = boolean_check_box f, :auto_run
 .field
+  = f.label :limited_auto_run, 'Automatically rerun on block changes, but only allow field edits'
+  = boolean_check_box f, :limited_auto_run
+.field
   = link_to 'Edit Predraw Blocks', level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
   = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'predraw'}
   :javascript
