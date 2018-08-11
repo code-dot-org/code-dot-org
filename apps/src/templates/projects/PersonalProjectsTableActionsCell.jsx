@@ -61,7 +61,7 @@ class PersonalProjectsTableActionsCell extends Component {
   };
 
   onSave = () => {
-    this.props.saveProjectName(this.props.projectId, this.props.updatedName);
+    this.props.saveProjectName(this.props.projectId, this.props.updatedName, new Date().toLocaleString());
   };
 
   onRemix = () => {
@@ -147,8 +147,8 @@ export default connect(state => ({}), dispatch => ({
   cancelRenamingProject(projectId) {
     dispatch(cancelRenamingProject(projectId));
   },
-  saveProjectName(projectId, updatedName) {
-    dispatch(saveProjectName(projectId, updatedName));
+  saveProjectName(projectId, updatedName, lastUpdatedAt) {
+    dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
   },
   remix(projectId, projectType) {
     dispatch(remix(projectId, projectType));
