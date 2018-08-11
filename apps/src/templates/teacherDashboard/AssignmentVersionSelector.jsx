@@ -1,8 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import {assignmentVersionShape} from './shapes';
-import PopUpMenu from "../../lib/ui/PopUpMenu";
-import AssignmentVersionMenuItem from './AssignmentVersionMenuItem';
+import PopUpMenu, {STANDARD_PADDING} from "../../lib/ui/PopUpMenu";
+import AssignmentVersionMenuItem, {columnWidths} from './AssignmentVersionMenuItem';
+import _ from 'lodash';
+
+const menuItemWidth = _(columnWidths).values().reduce(_.add);
+const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
 const styles = {
   version: {
@@ -15,6 +19,8 @@ const styles = {
   popUpMenuStyle: {
     // must appear in front of .modal from application.scss
     zIndex: 1051,
+    maxWidth: null,
+    width: menuWidth,
   }
 };
 

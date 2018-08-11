@@ -9,7 +9,7 @@ const TAIL_WIDTH = 14;
 const TAIL_HEIGHT = 12;
 const BACKGROUND_COLOR = color.white;
 const BORDER_COLOR = color.light_gray;
-const STANDARD_PADDING = 20;
+export const STANDARD_PADDING = 20;
 
 const menuStyle = {
   position: 'absolute',
