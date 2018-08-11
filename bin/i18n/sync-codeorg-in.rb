@@ -15,6 +15,7 @@ require_relative 'i18n_script_utils'
 
 def sync_in
   localize_level_content
+  localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
 end
@@ -30,6 +31,35 @@ end
 # CRLF -> LF conversion, but could be extended to do more
 def sanitize(string)
   return string.gsub(/\r(\n)?/, "\n")
+end
+
+# Pull in various fields for custom blocks from .json files and save them to
+# blocks.en.yml.
+def localize_block_content
+  blocks = {}
+
+  Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
+    name = File.basename(file, '.*')
+    config = JSON.parse(File.read(file))['config']
+    blocks[name] = {
+      'text' => config['blockText'],
+    }
+
+    next unless config['args']
+
+    args_with_options = {}
+    config['args'].each do |arg|
+      next if !arg['options'] || arg['options'].empty?
+
+      options = args_with_options[arg['name']] = {}
+      arg['options'].each do |option_tuple|
+        options[option_tuple.last] = option_tuple.first
+      end
+    end
+    blocks[name]['options'] = args_with_options unless args_with_options.empty?
+  end
+
+  copy_to_yml('blocks', blocks)
 end
 
 def redact_level_content

@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'timecop'
+require_relative '../../../shared/test/spy_newrelic_agent'
 
 class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
