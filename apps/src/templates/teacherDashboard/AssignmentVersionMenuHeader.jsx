@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import PopUpMenu from "../../lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
 import color from "../../util/color";
-import {columnWidths, rowHeight} from "./AssignmentVersionMenuItem";
-
-const cellStyle = {
-  display: 'inline-block',
-  marginTop: 11,
-};
+import {columnWidths, rowHeight, cellStyle} from "./AssignmentVersionMenuItem";
 
 const style = {
   item: {
@@ -19,6 +14,7 @@ const style = {
   },
   wrapper: {
     fontSize: 16,
+    fontWeight: 'bold',
     height: rowHeight,
     color: 'white',
   },
