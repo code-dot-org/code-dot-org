@@ -671,6 +671,7 @@
   "ignore": "Ignore",
   "importFromGoogleClassroom": "Import section from Google Classroom",
   "importFromClever": "Import section from Clever",
+  "inDevelopment": "In Development",
   "incorrectAnswer": "Incorrect answer",
   "incorrectAnswerBody": "The answer you've entered is not correct.  Please try again!",
   "incorrectSolution": "Incorrect solution",
