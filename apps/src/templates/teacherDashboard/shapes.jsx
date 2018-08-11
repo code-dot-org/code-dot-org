@@ -60,6 +60,7 @@ export const assignmentVersionShape = PropTypes.shape({
   isStable: PropTypes.bool.isRequired,
   isRecommended: PropTypes.bool,
   isSelected: PropTypes.bool,
+  locales: PropTypes.arrayOf(PropTypes.string).isRequired,
 });
 
 export const classroomShape = PropTypes.shape({
