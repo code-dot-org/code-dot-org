@@ -8,7 +8,7 @@ import color from "../../util/color";
 export const columnWidths = {
   selected: 25,
   title: 60,
-  status: 120
+  status: 150,
 };
 
 export const rowHeight = 40;
@@ -69,6 +69,16 @@ export default class AssignmentVersionMenuItem extends Component {
             {version.isRecommended && (
               <span style={style.recommended}>
                 {i18n.recommended()}
+              </span>
+            )}
+            {!version.isStable && (
+              <span>
+                <FontAwesome
+                  icon="exclamation-triangle"
+                  style={{color: color.light_orange}}
+                />
+                &nbsp;
+                {i18n.inDevelopment()}
               </span>
             )}
           </span>
