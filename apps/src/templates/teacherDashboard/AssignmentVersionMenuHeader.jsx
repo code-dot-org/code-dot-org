@@ -34,6 +34,10 @@ const style = {
   statusColumn: {
     ...cellStyle,
     width: columnWidths.status,
+  },
+  languageColumn: {
+    ...cellStyle,
+    width: columnWidths.language,
     marginRight: -10,
   },
 };
@@ -48,6 +52,9 @@ export default class AssignmentVersionMenuHeader extends Component {
             {i18n.version()}
           </span>
           <span style={style.statusColumn}/>
+          <span style={style.languageColumn}>
+            {i18n.languages()}
+          </span>
         </div>
       </PopUpMenu.Item>
     );

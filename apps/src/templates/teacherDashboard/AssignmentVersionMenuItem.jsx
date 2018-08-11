@@ -9,6 +9,7 @@ export const columnWidths = {
   selected: 25,
   title: 60,
   status: 150,
+  language: 140,
 };
 
 export const rowHeight = 40;
@@ -38,14 +39,21 @@ const style = {
   statusColumn: {
     ...cellStyle,
     width: columnWidths.status,
-    marginRight: -10,
   },
   recommended: {
     borderRadius: 5,
     padding: 8,
     backgroundColor: color.cyan,
     color: 'white',
-  }
+  },
+  languageColumn: {
+    ...cellStyle,
+    width: columnWidths.language,
+    marginRight: -10,
+  },
+  infoCircle: {
+    fontSize: 18,
+  },
 };
 
 export default class AssignmentVersionMenuItem extends Component {
@@ -53,6 +61,15 @@ export default class AssignmentVersionMenuItem extends Component {
     version: assignmentVersionShape,
     onClick: PropTypes.func.isRequired,
   };
+
+  // Returns whether we should display this version as english-only.
+  englishOnly() {
+    const locales = this.props.version.locales;
+    return (
+      locales.length === 0 ||
+      (locales.length === 1 && locales[0] === 'English')
+    );
+  }
 
   render() {
     const {version, onClick} = this.props;
@@ -79,6 +96,16 @@ export default class AssignmentVersionMenuItem extends Component {
                 />
                 &nbsp;
                 {i18n.inDevelopment()}
+              </span>
+            )}
+          </span>
+          <span style={style.languageColumn}>
+            {this.englishOnly() && i18n.englishOnly()}
+            {!this.englishOnly() && (
+              <span title={version.locales.join(', ')}>
+                {i18n.numLanguages({numLanguages: version.locales.length})}
+                &nbsp;
+                <FontAwesome icon="info-circle" style={style.infoCircle}/>
               </span>
             )}
           </span>
