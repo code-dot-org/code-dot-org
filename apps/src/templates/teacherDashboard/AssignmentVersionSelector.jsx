@@ -3,6 +3,7 @@ import i18n from '@cdo/locale';
 import {assignmentVersionShape} from './shapes';
 import PopUpMenu, {STANDARD_PADDING} from "../../lib/ui/PopUpMenu";
 import AssignmentVersionMenuItem, {columnWidths} from './AssignmentVersionMenuItem';
+import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import _ from 'lodash';
 
 const menuItemWidth = _(columnWidths).values().reduce(_.add);
@@ -123,6 +124,7 @@ export default class AssignmentVersionSelector extends Component {
           style={styles.popUpMenuStyle}
           beforeClose={this.beforeClose}
         >
+          <AssignmentVersionMenuHeader/>
           {
             versions.map(version => (
               <AssignmentVersionMenuItem
