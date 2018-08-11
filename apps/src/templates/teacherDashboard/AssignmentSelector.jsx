@@ -45,6 +45,7 @@ const getVersion = assignment => ({
     year: assignment.version_year,
     title: assignment.version_title,
     isStable: assignment.is_stable,
+    locales: assignment.supported_locales,
 });
 
 /**
