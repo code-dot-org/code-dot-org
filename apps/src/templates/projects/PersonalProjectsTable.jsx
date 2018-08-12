@@ -11,6 +11,10 @@ import {
   personalProjectDataPropType,
   PROJECT_TYPE_MAP,
 } from './projectConstants';
+import {
+  AlwaysPublishableProjectTypes,
+  ConditionallyPublishableProjectTypes,
+} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
@@ -101,18 +105,6 @@ const nameFormatter = (projectName, {rowData}) => {
   );
 };
 
-const actionsFormatter = (actions, {rowData}) => {
-  return (
-    <PersonalProjectsTableActionsCell
-      isPublished={!!rowData.publishedAt}
-      projectId={rowData.channel}
-      projectType={rowData.type}
-      isEditing={rowData.isEditing}
-      updatedName={rowData.updatedName}
-    />
-  );
-};
-
 const typeFormatter = (type) => {
   return PROJECT_TYPE_MAP[type];
 };
@@ -129,6 +121,7 @@ const publishedAtFormatter = (publishedAt) => {
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
+    canShare: PropTypes.bool.isRequired
   };
 
   state = {
@@ -136,6 +129,23 @@ class PersonalProjectsTable extends React.Component {
       direction: 'desc',
       position: 0
     }
+  };
+
+  actionsFormatter = (actions, {rowData}) => {
+    const {canShare} = this.props;
+    const isPublishable =
+      AlwaysPublishableProjectTypes.includes(rowData.type) ||
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+    return (
+      <PersonalProjectsTableActionsCell
+        isPublishable={isPublishable}
+        isPublished={!!rowData.publishedAt}
+        projectId={rowData.channel}
+        projectType={rowData.type}
+        isEditing={rowData.isEditing}
+        updatedName={rowData.updatedName}
+      />
+    );
   };
 
   getSortingColumns = () => {
@@ -250,7 +260,7 @@ class PersonalProjectsTable extends React.Component {
           },
         },
         cell: {
-          format: actionsFormatter,
+          format: this.actionsFormatter,
           props: {style: {
             ...tableLayoutStyles.cell,
             ...styles.centeredCell
