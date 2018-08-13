@@ -15,7 +15,7 @@ const OTHER_SCHOOL_VALUE = "-1";
 export default class SchoolAutocompleteDropdownWithCustomFields extends React.Component {
   static propTypes = {
     school_info: PropTypes.object,
-    onSchoolInfoChange: PropTypes.func,
+    onSchoolInfoChange: PropTypes.func.isRequired,
     errors: PropTypes.object
   };
 
@@ -27,17 +27,11 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
     };
   }
 
-  updateOnSchoolInfoChange = (school_info) => {
-    if (this.props.onSchoolInfoChange) {
-      this.props.onSchoolInfoChange(school_info);
-    }
-  };
-
   handleSchoolDropdownChange = (selection) => {
     const showCustomFields = !!(selection && selection.value === OTHER_SCHOOL_VALUE);
     this.setState({showCustomFields});
     if (!showCustomFields) {
-      this.updateOnSchoolInfoChange({
+      this.props.onSchoolInfoChange({
         school_info: {
           school_id: selection.school.nces_id,
           school_name: selection.school.name,
@@ -47,7 +41,7 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
         }
       });
     } else {
-      this.updateOnSchoolInfoChange({school_info: {}});
+      this.props.onSchoolInfoChange({school_info: {}});
     }
   };
 

@@ -17,30 +17,24 @@ const SCHOOL_TYPES = {
 export default class CustomSchoolInfo extends React.Component {
   static propTypes = {
     school_info: PropTypes.object,
-    onSchoolInfoChange: PropTypes.func,
+    onSchoolInfoChange: PropTypes.func.isRequired,
     errors: PropTypes.object
-  };
-
-  updateOnSchoolInfoChange = (school_info) => {
-    if (this.props.onSchoolInfoChange) {
-      this.props.onSchoolInfoChange(school_info);
-    }
   };
 
   handleSchoolStateChange = (selection) => {
     const school_info = {...this.props.school_info, ...{school_state: selection.value}};
-    this.updateOnSchoolInfoChange({school_info});
+    this.props.onSchoolInfoChange({school_info});
   };
 
   handleSchoolInfoChange = (change) => {
     const school_info = {...this.props.school_info, ...change};
-    this.updateOnSchoolInfoChange({school_info});
+    this.props.onSchoolInfoChange({school_info});
   };
 
   handleSchoolDistrictChange = (change) => {
     const school_info = {...this.props.school_info, ...change};
     school_info.school_district_other = "true";
-    this.updateOnSchoolInfoChange({school_info});
+    this.props.onSchoolInfoChange({school_info});
   };
 
   handleSchoolTypeChange = (change) => {
@@ -49,7 +43,7 @@ export default class CustomSchoolInfo extends React.Component {
       delete(school_info.school_district_other);
       delete(school_info.school_district_name);
     }
-    this.updateOnSchoolInfoChange({school_info});
+    this.props.onSchoolInfoChange({school_info});
   };
 
   render() {
