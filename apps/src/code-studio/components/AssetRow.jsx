@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import AssetThumbnail from './AssetThumbnail';
 import AssetActions from "./AssetActions";
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -34,7 +35,7 @@ export default class AssetRow extends React.Component {
           useFilesApi={this.props.useFilesApi}
           onDelete={this.props.onDelete}
           onChoose={this.props.onChoose}
-          audioType={this.props.type === 'audio'}
+          audioType={experiments.isEnabled('recordAudio') && this.props.type === 'audio'}
         />
       </tr>
     );

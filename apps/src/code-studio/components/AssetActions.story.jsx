@@ -6,7 +6,7 @@ export default storybook => {
     .storiesOf('AssetActions', module)
     .addStoryTable([
       {
-        name: 'normal',
+        name: 'default',
         story: () => (
           <div style={{width: 800}}>
             <AssetActions
@@ -33,7 +33,7 @@ export default storybook => {
         )
       },
       {
-        name: 'normal with choose',
+        name: 'default with choose',
         story: () => (
           <div style={{width: 800}}>
             <AssetActions
