@@ -72,8 +72,9 @@ class RegistrationsController < Devise::RegistrationsController
       }, status: :bad_request
       return
     end
-    TeacherMailer.delete_teacher_email(current_user).deliver_now if current_user.teacher?
-    destroy_dependent_users(current_user)
+    dependent_students = current_user.dependent_students
+    TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
+    destroy_users(dependent_students << current_user)
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
     return head :no_content
   end
@@ -386,8 +387,8 @@ class RegistrationsController < Devise::RegistrationsController
     user.dependent_students << user.summarize
   end
 
-  def destroy_dependent_users(user)
-    user_ids_to_destroy = get_users_to_destroy(user).pluck(:id)
+  def destroy_users(users)
+    user_ids_to_destroy = users.pluck(:id)
     User.destroy(user_ids_to_destroy)
   end
 end
