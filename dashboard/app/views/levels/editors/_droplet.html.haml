@@ -22,16 +22,16 @@
 
 .field
   = f.label :text_mode_at_start, 'Code View When Level Starts'
-  %p What mode the code is presented as when the user loads this level
+  %p What mode the code is presented as when the level loads
   .alignment-box
-    = f.label :text_mode_at_start, 'Start with user preferred setting:', :value => 'false'
-    = f.radio_button :text_mode_at_start, 'false'
+    = f.radio_button :text_mode_at_start, 'false', :checked => true
+    = f.label :text_mode_at_start, 'Start with user preferred setting', :value => 'false'
   .alignment-box
-    = f.label :text_mode_at_start, 'Always start with blocks:', :value => 'blocks'
     = f.radio_button :text_mode_at_start, 'blocks'
+    = f.label :text_mode_at_start, 'Always start with blocks', :value => 'blocks'
   .alignment-box
-    = f.label :text_mode_at_start, 'Always start with text:', :value => 'true'
     = f.radio_button :text_mode_at_start, 'true'
+    = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
 :ruby
   script_data = {
     pageOptions: {
