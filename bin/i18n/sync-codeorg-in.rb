@@ -18,6 +18,7 @@ def sync_in
   localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
+  redact_block_content
 end
 
 def copy_to_yml(label, data)
@@ -31,6 +32,12 @@ end
 # CRLF -> LF conversion, but could be extended to do more
 def sanitize(string)
   return string.gsub(/\r(\n)?/, "\n")
+end
+
+def redact_block_content
+  source = 'i18n/locales/source/dashboard/blocks.yml'
+  dest = 'i18n/locales/redacted/dashboard/blocks.yml'
+  redact(source, dest, 'blockfield')
 end
 
 # Pull in various fields for custom blocks from .json files and save them to
@@ -73,7 +80,7 @@ def redact_level_content
     puts "\t#{content_type}"
     source = "i18n/locales/source/dashboard/#{content_type}.yml"
     dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
-    redact(source, dest)
+    redact(source, dest, 'nonPedanticEmphasis')
   end
 end
 

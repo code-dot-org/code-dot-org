@@ -39,7 +39,6 @@ files: [
     "/source/dashboard/authored_hints.yml",
     "/source/dashboard/instructions.yml",
     "/source/dashboard/markdown_instructions.yml",
-    "/source/dashboard/blocks.yml",
   ],
 
   #
