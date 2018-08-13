@@ -21,7 +21,7 @@ Scenario: As teacher, tab is invisible when not reviewing student work and visib
   Then I sign in as "Teacher_Lillian"
 
   #Not automatically visible on contained levels
-  Then I am on "http://studio.code.org:3000/s/allthethings/stage/18/puzzle/15"
+  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
   And element ".uitest-feedback" is not visible
 
   #Not automatically visible on un-contained levels

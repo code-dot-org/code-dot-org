@@ -132,13 +132,11 @@ class TopInstructions extends Component {
 
     const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
       (window.location.search).includes('user_id');
-    const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
 
     this.state = {
       tabSelected: teacherViewingStudentWork ? TabType.COMMENTS : TabType.INSTRUCTIONS,
       feedbacks: [],
       displayFeedbackTeacherFacing: teacherViewingStudentWork,
-      displayFeedback: displayFeedbackStudent || teacherViewingStudentWork
     };
   }
 
@@ -277,7 +275,8 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
-
+    const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
+    const displayFeedback = displayFeedbackStudent || this.state.displayFeedbackTeacherFacing;
     const teacherOnly = this.state.tabSelected === TabType.COMMENTS && this.state.displayFeedbackTeacherFacing;
 
     return (
@@ -312,7 +311,7 @@ class TopInstructions extends Component {
                   teacherOnly={teacherOnly}
                 />
               }
-              {this.state.displayFeedback &&
+              {displayFeedback &&
                 <InstructionsTab
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
