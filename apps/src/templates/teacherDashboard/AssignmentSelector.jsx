@@ -179,10 +179,16 @@ export default class AssignmentSelector extends Component {
     return assignmentId(primaryAssignment.courseId, primaryAssignment.scriptId);
   }
 
+  /** @param versions {Array.<assignmentVersionShape>} */
+  getSelectedVersionYear(versions) {
+    return versions.length > 0 ?
+      versions.find(v => v.isSelected).year :
+      undefined;
+  }
+
   setPrimary = (selectedAssignmentFamily, selectedVersionYear) => {
     const versions = this.getVersions(selectedAssignmentFamily, selectedVersionYear);
-    const selectedVersion = versions.find(v => v.isSelected);
-    selectedVersionYear = selectedVersion && selectedVersion.year;
+    selectedVersionYear = this.getSelectedVersionYear(versions);
     const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear);
     const selectedSecondaryId = noAssignment;
 
