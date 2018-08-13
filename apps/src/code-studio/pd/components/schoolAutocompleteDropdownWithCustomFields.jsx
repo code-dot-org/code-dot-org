@@ -84,7 +84,12 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
     );
   }
 
-  static getSchoolInfoErrors(school_info) {
+ /*
+  * Returns an object containing the fields with errors in the form
+  * {"field_id": "error message"}
+  * If a required field is missing, the error message is an empty string
+  */
+  static validate(school_info) {
     let errors = [];
 
     if (!school_info) {
