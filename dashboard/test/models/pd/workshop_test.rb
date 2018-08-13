@@ -366,15 +366,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'friendly name' do
+    Geocoder.expects(:search).returns([])
     workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, location_name: 'Code.org',
-      sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
+      location_address: 'Seattle, WA', sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
-    assert_equal 'Admin workshop on 09/01/16 at Code.org', workshop.friendly_name
+    assert_equal 'Admin workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
 
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
-    assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org', workshop.friendly_name
+    assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
 
     # truncated at 255 chars
     workshop.update!(location_name: "blah" * 60)
