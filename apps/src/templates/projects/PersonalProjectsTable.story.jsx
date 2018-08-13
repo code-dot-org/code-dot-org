@@ -1,6 +1,7 @@
 import React from 'react';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './PersonalProjectsTable';
 import {stubFakePersonalProjectData} from './generateFakeProjects';
+import {publishMethods} from './projectConstants';
 
 export default storybook => {
   storybook
@@ -14,7 +15,7 @@ export default storybook => {
           <PersonalProjectsTable
             personalProjectsList={stubFakePersonalProjectData}
             canShare={true}
-            publishMethod="button"
+            publishMethod={publishMethods.BUTTON}
           />
         )
       },
@@ -25,7 +26,7 @@ export default storybook => {
           <PersonalProjectsTable
             personalProjectsList={stubFakePersonalProjectData}
             canShare={true}
-            publishMethod="chevron"
+            publishMethod={publishMethods.CHEVRON}
           />
         )
       },
@@ -36,7 +37,7 @@ export default storybook => {
           <PersonalProjectsTable
             personalProjectsList={[]}
             canShare={true}
-            publishMethod="chevron"
+            publishMethod={publishMethods.CHEVRON}
           />
         )
       },
