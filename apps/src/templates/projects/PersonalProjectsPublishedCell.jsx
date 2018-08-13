@@ -5,6 +5,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import {showPublishDialog} from './publishDialog/publishDialogRedux';
 import {unpublishProject} from './projectsRedux';
+import {publishMethods} from './projectConstants';
 
 class PersonalProjectsPublishedCell extends Component {
   static propTypes = {
@@ -12,7 +13,7 @@ class PersonalProjectsPublishedCell extends Component {
     projectType: PropTypes.string.isRequired,
     isPublished: PropTypes.bool.isRequired,
     isPublishable: PropTypes.bool.isRequired,
-    publishMethod: PropTypes.oneOf(['button', 'chevron']).isRequired,
+    publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
     showPublishDialog: PropTypes.func.isRequired,
     unpublishProject: PropTypes.func.isRequired,
   };
