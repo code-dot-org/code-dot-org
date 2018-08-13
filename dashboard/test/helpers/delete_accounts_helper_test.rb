@@ -238,6 +238,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil user_geo.country
   end
 
+  test 'does not purge dependent students of a teacher' do
+    student = create :student_in_picture_section
+    teacher = student.teachers.first
+    assert_includes teacher.dependent_students.map {|s| s[:id]}, student.id
+
+    assert_nil teacher.purged_at
+    assert_nil student.purged_at
+
+    purge_user teacher
+
+    student.reload
+    refute_nil teacher.purged_at
+    assert_nil student.purged_at
+  end
+
   test 'purged student still passes validations' do
     user = create :student
     assert user.valid?
@@ -674,8 +689,18 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # that instance so we can assert things about its final state.
   #
   def purge_user(user)
-    SolrHelper.stubs(:delete_document).once
+    SolrHelper.stubs(:delete_document)
+    unpurged_users_before = User.with_deleted.where(purged_at: nil).count
+
     DeleteAccountsHelper.new(solr: {}).purge_user(user)
+
+    # Never allow more than one user to be purged by this operation
+    unpurged_users_after = User.with_deleted.where(purged_at: nil).count
+    unpurged_users_diff = unpurged_users_after - unpurged_users_before
+    assert_includes (-1..0), unpurged_users_diff,
+      "Expected purge_user to only purge one user, but " \
+      "#{-unpurged_users_diff} users were purged."
+
     user.reload
   end
 
