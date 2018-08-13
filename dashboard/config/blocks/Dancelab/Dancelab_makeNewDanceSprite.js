@@ -8,6 +8,10 @@ function makeNewDanceSprite(costume, name, location) {
   
   sprite.maxSpeed = 0;
   sprite.style = costume;
+  if (!sprites_by_type.hasOwnProperty(costume)) {
+    sprites_by_type[costume] = createGroup();
+  }
+  sprites_by_type[costume].add(sprite);
   sprite.current_move = 0;
   sprite.previous_move = 0;
   for (var i=0; i < dancers[costume].length; i++) {

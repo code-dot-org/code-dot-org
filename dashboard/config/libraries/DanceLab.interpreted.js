@@ -6,6 +6,7 @@ var callbacks = [];
 var setupCallbacks = [];
 var loops = [];
 var sprites = createGroup();
+var sprites_by_type = {};
 var song_meta = {
   bpm: 146,
   delay: 0.2
