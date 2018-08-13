@@ -53,7 +53,7 @@ class FormRoutesTest < SequelTestCase
 
     assert_equal 0.8236209090344097,
       JSON.parse(
-        VolunteerEngineerSubmission2015.solr_query('coordinates' => '37.774368,-122.428760')
+        VolunteerEngineerSubmission2015.solr_query('coordinates' => '-122.428760,37.774368')
       )['response']['docs'].first['distance']
   end
 end
