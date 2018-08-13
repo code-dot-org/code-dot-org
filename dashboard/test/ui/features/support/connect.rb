@@ -51,10 +51,14 @@ def saucelabs_browser
       # Longer overall timeout, because iOS takes more time. This must be set before initializing Selenium::WebDriver.
       http_client.timeout = 5.minutes
 
+      options = Selenium::WebDriver::Chrome::Options.new
+      options.add_argument('disable-multilingual-spellchecker')
+
       browser = Selenium::WebDriver.for(:remote,
         url: url,
         desired_capabilities: capabilities,
-        http_client: http_client
+        http_client: http_client,
+        options: options
       )
 
       # Shorter idle_timeout to avoid "too many connection resets" error
