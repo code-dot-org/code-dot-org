@@ -231,9 +231,9 @@ describe('determineInstructionsConstants', () => {
     const hasContainedLevels = false;
     const overlayVisible = false;
 
-    it('sets long and short instructions for english locale', () => {
+    it('sets long and short instructions for all locales', () => {
       // en_us and undefined should both be treated as english
-      ['en_us', undefined].forEach(locale => {
+      ['en_us', undefined, 'fr_fr'].forEach(locale => {
         const result = determineInstructionsConstants({
           level: {
             shortInstructions: 'non-markdown',
@@ -257,33 +257,6 @@ describe('determineInstructionsConstants', () => {
           mapReference: undefined,
           referenceLinks: undefined
         });
-      });
-    });
-
-    it('does not set long instructions if non-english locale', () => {
-      const result = determineInstructionsConstants({
-        level: {
-          shortInstructions: 'non-markdown',
-          longInstructions: 'markdown',
-        },
-        skin: {},
-        locale: 'fr-fr',
-        noInstructionsWhenCollapsed,
-        showInstructionsInTopPane,
-        hasContainedLevels,
-        overlayVisible
-      });
-      assert.deepEqual(result, {
-        noInstructionsWhenCollapsed,
-        shortInstructions: 'non-markdown',
-        shortInstructions2: undefined,
-        longInstructions: undefined,
-        hasContainedLevels,
-        overlayVisible,
-        teacherMarkdown: undefined,
-        levelVideos: undefined,
-        mapReference: undefined,
-        referenceLinks: undefined
       });
     });
 
