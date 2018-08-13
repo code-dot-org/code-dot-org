@@ -179,12 +179,13 @@ table.checkboxes {
   }
 }
 
-.alignment-box{
+.aligned-input-group{
   padding-top: 1%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  label{
+
+  label {
     padding-left: 2%;
   }
 }
