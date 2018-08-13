@@ -1,5 +1,13 @@
-function layoutSprites(group, format) {
+function layoutSprites(sprites, format) {
+  var group;
+  if (typeof(sprites) == "string") {
+    group = spritesWhere("style", "=", sprites);
+    console.log(group.length);
+  } else {
+    group = sprites;
+  }
   var count = group.length;
+  console.log(count);
   var sprite, i, j;
   if (format == "grid") {
     var cols = Math.ceil(Math.sqrt(count));

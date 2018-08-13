@@ -10,6 +10,14 @@
           [
             "all",
             "sprites"
+          ],
+          [
+            "Circle",
+            "\"circle\""
+          ],
+          [
+            "Wiggles",
+            "\"wiggles\""
           ]
         ]
       },
