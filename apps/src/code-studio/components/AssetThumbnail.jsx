@@ -2,6 +2,8 @@ import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import color from "@cdo/apps/util/color";
+import experiments from '@cdo/apps/util/experiments';
+import AudioIconPlayer from "./AudioIconPlayer";
 
 const defaultIcons = {
   image: 'fa fa-picture-o',
@@ -85,9 +87,9 @@ class AssetThumbnail extends React.Component {
 
     return (
       <div>
-        {type === 'audio' ?
+        {(experiments.isEnabled('recordAudio') && type === 'audio') ?
           <div style={[styles.wrapper, styles.audioWrapper]}>
-            <i className={'fa fa-play-circle fa-4x'} style={[styles.audioIcon]} />
+            <AudioIconPlayer src={srcPath}/>
           </div> :
           <div className="assetThumbnail" style={[styles.wrapper, style, styles.background]}>
             {type === 'image' ?
