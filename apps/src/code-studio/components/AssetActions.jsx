@@ -12,7 +12,10 @@ export default class AssetActions extends React.Component {
     useFilesApi: PropTypes.bool.isRequired,
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
-    audioType: PropTypes.bool
+    isAudio: PropTypes.bool,
+
+    //Temp prop to hide/show updated styles for audio recording release
+    useUpdatedStyles: PropTypes.bool
   };
 
   state = {
@@ -65,7 +68,7 @@ export default class AssetActions extends React.Component {
         {this.state.action === 'normal' &&
           <div>
             {flex}
-            {!this.props.audioType &&
+            {(!this.props.useUpdatedStyles || (this.props.useUpdatedStyles && !this.props.isAudio)) &&
               <a
                 href={src}
                 target="_blank"

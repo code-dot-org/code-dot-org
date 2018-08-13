@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import color from "@cdo/apps/util/color";
-import experiments from '@cdo/apps/util/experiments';
 import AudioIconPlayer from "./AudioIconPlayer";
 
 const defaultIcons = {
@@ -60,7 +59,10 @@ class AssetThumbnail extends React.Component {
     style: PropTypes.object,
     iconStyle: PropTypes.object,
     useFilesApi: PropTypes.bool,
-    projectId: PropTypes.string
+    projectId: PropTypes.string,
+
+    //Temp prop to hide/show updated styles for audio recording release
+    useUpdatedStyles: PropTypes.bool
   };
 
   render() {
@@ -87,7 +89,7 @@ class AssetThumbnail extends React.Component {
 
     return (
       <div>
-        {(experiments.isEnabled('recordAudio') && type === 'audio') ?
+        {(this.props.useUpdatedStyles && type === 'audio') ?
           <div style={[styles.wrapper, styles.audioWrapper]}>
             <AudioIconPlayer src={srcPath}/>
           </div> :

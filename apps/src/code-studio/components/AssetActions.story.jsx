@@ -24,10 +24,25 @@ export default storybook => {
           <div style={{width: 800}}>
             <AssetActions
               name="audioTest"
-              audioType={true}
+              isAudio={true}
               size={5.3}
               useFilesApi={true}
               onDelete={() => {}}
+            />
+          </div>
+        )
+      },
+      {
+        name: 'audio asset with updated styles',
+        story: () => (
+          <div style={{width: 800}}>
+            <AssetActions
+              name="audioTest"
+              isAudio={true}
+              size={5.3}
+              useFilesApi={true}
+              onDelete={() => {}}
+              useUpdatedStyles={true}
             />
           </div>
         )
@@ -52,11 +67,27 @@ export default storybook => {
           <div style={{width: 800}}>
             <AssetActions
               name="audioTest"
-              audioType={true}
+              isAudio={true}
               size={5.3}
               useFilesApi={true}
               onDelete={() => {}}
               onChoose={() => {}}
+            />
+          </div>
+        )
+      },
+      {
+        name: 'audio asset with choose with updated styles',
+        story: () => (
+          <div style={{width: 800}}>
+            <AssetActions
+              name="audioTest"
+              isAudio={true}
+              size={5.3}
+              useFilesApi={true}
+              onDelete={() => {}}
+              onChoose={() => {}}
+              useUpdatedStyles={true}
             />
           </div>
         )
