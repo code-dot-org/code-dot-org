@@ -388,7 +388,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal(@expected_questions, get_questions_for_forms(@workshop))
   end
 
-  test 'daily survey get_questiosn_for_forms gets academic year workshop questions' do
+  test 'daily survey get_questions_for_forms gets academic year workshop questions' do
     CDO.expects(:jotform_forms).times(6).returns(
       {
         'academic_year_1' => {

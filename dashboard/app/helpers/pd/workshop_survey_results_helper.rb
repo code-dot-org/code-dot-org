@@ -242,7 +242,9 @@ module Pd::WorkshopSurveyResultsHelper
 
   def get_surveys_for_workshops(workshop)
     responses = workshop.summer? ? {
-      general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, day: 0).map(&:form_data_hash)
+      'Pre Workshop' => {
+        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, day: 0).map(&:form_data_hash)
+      }
     } : {}
 
     workshop.sessions.each_with_index do |_, index|
