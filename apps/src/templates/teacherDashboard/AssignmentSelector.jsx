@@ -123,7 +123,7 @@ export default class AssignmentSelector extends Component {
     const primaryAssignment = assignments[selectedPrimaryId];
     if (primaryAssignment) {
       selectedAssignmentFamily = primaryAssignment.assignment_family_name;
-      const selectedVersionYear = getVersion(primaryAssignment).year;
+      const selectedVersionYear = primaryAssignment.version_year;
       versions = this.getVersions(selectedAssignmentFamily, selectedVersionYear);
     }
 
