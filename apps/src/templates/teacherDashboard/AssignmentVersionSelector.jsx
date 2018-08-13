@@ -29,7 +29,6 @@ export default class AssignmentVersionSelector extends Component {
   static propTypes = {
     dropdownStyle: PropTypes.object,
     onChangeVersion: PropTypes.func.isRequired,
-    selectedVersionYear: PropTypes.string.isRequired,
     versions: PropTypes.arrayOf(assignmentVersionShape),
     disabled: PropTypes.bool,
     showVersionMenu: PropTypes.bool,
@@ -91,7 +90,8 @@ export default class AssignmentVersionSelector extends Component {
   };
 
   render() {
-    const {dropdownStyle, selectedVersionYear, versions, disabled} = this.props;
+    const {dropdownStyle, versions, disabled} = this.props;
+    const selectedVersionYear = versions.find(v => v.isSelected).year;
 
     return (
       <span style={styles.version}>
