@@ -316,7 +316,6 @@ module Pd
       raise 'Missing submission id' unless submission_id.present?
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
-      puts JSON.pretty_generate submission[:answers]
       update!(answers: submission[:answers].to_json)
     end
 
