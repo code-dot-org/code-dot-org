@@ -32,6 +32,20 @@ export default storybook => {
         )
       },
       {
+        name: 'audio with updated styles',
+        story: () => (
+          <div style={{width: 800}}>
+            <AssetThumbnail
+              name="AudioTest"
+              type="audio"
+              useFilesApi={true}
+              projectId="123"
+              useUpdatedStyles={true}
+            />
+          </div>
+        )
+      },
+      {
         name: 'video',
         story: () => (
           <div style={{width: 800}}>
