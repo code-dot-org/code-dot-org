@@ -394,6 +394,7 @@ Dashboard::Application.routes.draw do
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+      delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'

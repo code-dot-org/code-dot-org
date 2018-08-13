@@ -1,6 +1,6 @@
 import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import ConfirmationDialog from '@cdo/apps/code-studio/pd/workshop_dashboard/components/confirmation_dialog';
+import ConfirmationDialog from '@cdo/apps/code-studio/pd/components/confirmation_dialog';
 import {Button} from 'react-bootstrap';
 import React from 'react';
 import {expect} from 'chai';

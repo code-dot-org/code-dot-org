@@ -36,6 +36,10 @@
             "\"next\""
           ],
           [
+            "Previous",
+            "\"prev\""
+          ],
+          [
             "Random",
             "\"rand\""
           ]
