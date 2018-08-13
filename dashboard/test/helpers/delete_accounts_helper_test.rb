@@ -631,6 +631,41 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_empty StudioPerson.where(id: studio_person_id)
   end
 
+  #
+  # Table: dashboard.teacher_feedbacks
+  #
+
+  test "purges feedback written by purged teacher" do
+    feedback = create :teacher_feedback
+    assert TeacherFeedback.with_deleted.exists? id: feedback.id
+
+    purge_user feedback.teacher
+
+    refute TeacherFeedback.with_deleted.exists? id: feedback.id
+  end
+
+  test "soft-deletes and disassociates feedback written to purged student" do
+    student = create :student
+
+    feedback = create :teacher_feedback, student: student
+    refute feedback.deleted?
+    refute_nil feedback.student_id
+
+    deleted_feedback = create :teacher_feedback, student: student, deleted_at: Time.now
+    assert deleted_feedback.deleted?
+    refute_nil deleted_feedback.student_id
+
+    purge_user student
+
+    feedback.reload
+    assert feedback.deleted?
+    assert_nil feedback.student_id
+
+    deleted_feedback.reload
+    assert deleted_feedback.deleted?
+    assert_nil deleted_feedback.student_id
+  end
+
   private
 
   #
