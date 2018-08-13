@@ -224,8 +224,6 @@ module Pd
       # @raises [KeyError] when either the category or name cannot be found
       # @return [Integer] form id
       def get_form_id(category, name)
-        puts category || 'No category'
-        puts name || 'No name'
         raise KeyError, "Missing jotform form category #{category}" unless CDO.jotform_forms&.key? category
         forms = CDO.jotform_forms[category]
 
