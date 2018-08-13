@@ -464,7 +464,9 @@ module LevelsHelper
     # Locale-depdendent option
     # For historical reasons, `localized_instructions` and
     # `localized_authored_hints` should happen independent of `should_localize?`
-    set_unless_nil(level_options, 'instructions', l.localized_instructions)
+    # TODO: elijah: update these instructions values to new names once we
+    # migrate to the new keys
+    set_unless_nil(level_options, 'instructions', l.localized_short_instructions)
     set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
     if l.should_localize?
       # Don't ever show non-English markdown instructions for Course 1 - 4 or
@@ -472,7 +474,7 @@ module LevelsHelper
       if @script && (@script.csf_international? || @script.twenty_hour?)
         level_options.delete('markdownInstructions')
       else
-        set_unless_nil(level_options, 'markdownInstructions', l.localized_markdown_instructions)
+        set_unless_nil(level_options, 'markdownInstructions', l.localized_long_instructions)
       end
       set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
       set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
