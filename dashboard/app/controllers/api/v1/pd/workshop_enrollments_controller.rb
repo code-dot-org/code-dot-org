@@ -1,7 +1,7 @@
 class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include Api::CsvDownload
   include ::Pd::WorkshopConstants
-  load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: 'create'
+  load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: 'create', 'cancel'
 
   RESPONSE_MESSAGES = {
     SUCCESS: "success".freeze,
@@ -123,5 +123,14 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def workshop_owned_by?(user)
     return false unless user
     @workshop.organizer_or_facilitator? user
+
+  # DELETE /api/v1/pd/enrollments/:enrollment_code
+  def cancel
+    enrollment = Pd::Enrollment.find_by(code: params[:enrollment_code])
+    return unless enrollment
+
+    enrollment.destroy!
+    Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
+    Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
   end
 end

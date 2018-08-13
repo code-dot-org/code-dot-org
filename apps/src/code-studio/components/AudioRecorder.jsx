@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import {assetButtonStyles} from "./AssetManager";
+import {assetButtonStyles} from "./AddAssetButtonRow";
 
 const ErrorType = {
   NONE: 'none',
@@ -108,7 +108,7 @@ export default class AudioRecorder extends React.Component {
               <Button
                 onClick={this.toggleRecord}
                 id="start-stop-record"
-                style={{...assetButtonStyles.button, ...{marginRight: 10}}}
+                style={assetButtonStyles.button}
                 color={Button.ButtonColor.blue}
                 icon={this.state.recording ? "stop" : "circle"}
                 text={this.state.recording ? i18n.stop() : i18n.record()}
