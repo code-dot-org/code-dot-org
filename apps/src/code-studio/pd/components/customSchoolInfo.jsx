@@ -4,6 +4,7 @@ import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {STATES} from '../../../geographyConstants';
+import {SchoolInfoPropType} from './constants';
 
 const VALIDATION_STATE_ERROR = "error";
 
@@ -16,7 +17,7 @@ const SCHOOL_TYPES = {
 
 export default class CustomSchoolInfo extends React.Component {
   static propTypes = {
-    school_info: PropTypes.object,
+    school_info: SchoolInfoPropType,
     onSchoolInfoChange: PropTypes.func.isRequired,
     errors: PropTypes.object
   };
