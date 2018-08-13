@@ -97,7 +97,9 @@ export default class AssignmentSelector extends Component {
       versions.find(v => v.year === selectedVersionYear) ||
       recommendedVersion ||
       versions[0];
-    selectedVersion.isSelected = true;
+    if (selectedVersion) {
+      selectedVersion.isSelected = true;
+    }
     return versions;
   };
 
@@ -122,7 +124,8 @@ export default class AssignmentSelector extends Component {
     if (primaryAssignment) {
       selectedAssignmentFamily = primaryAssignment.assignment_family_name;
       versions = this.getVersions(selectedAssignmentFamily);
-      selectedVersionYear = versions.find(v => v.isSelected).year;
+      const selectedVersion = versions.find(v => v.isSelected);
+      selectedVersionYear = selectedVersion && selectedVersion.year;
     }
 
     this.state = {
@@ -180,7 +183,8 @@ export default class AssignmentSelector extends Component {
 
   setPrimary = (selectedAssignmentFamily, selectedVersionYear) => {
     const versions = this.getVersions(selectedAssignmentFamily, selectedVersionYear);
-    selectedVersionYear = versions.find(v => v.isSelected).year;
+    const selectedVersion = versions.find(v => v.isSelected);
+    selectedVersionYear = selectedVersion && selectedVersion.year;
     const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear);
     const selectedSecondaryId = noAssignment;
 
