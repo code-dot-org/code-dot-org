@@ -36,7 +36,6 @@ const style = {
     width: columnWidths.title,
     fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'bold',
-    color: color.cyan,
   },
   statusColumn: {
     ...cellStyle,
