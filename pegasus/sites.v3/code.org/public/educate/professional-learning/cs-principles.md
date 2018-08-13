@@ -90,10 +90,9 @@ The Code.org Professional Learning Program has both in-person and online support
 
 **Ongoing Support, throughout following academic year:**  
 
-* Participants attend local, 1-day follow up workshops hosted by Code.org Regional Partners
+* Participants attend local, follow up workshops hosted by Code.org Regional Partners
 * Usually held on Saturdays, these workshops are run by local Code.org-trained facilitators
 * They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continue to build pedagogical strategies.
-
 
 In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. Have more questions about which program is for you? Learn more about <a href="https://code.org/files/PL-Program-for-Me.pdf", target=_"blank">implementation options</a> or <a href="mailto:teacher@code.org">contact us</a>.
 

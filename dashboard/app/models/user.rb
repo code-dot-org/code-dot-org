@@ -2055,6 +2055,12 @@ class User < ActiveRecord::Base
     end
   end
 
+  def destroy
+    super.tap do
+      NewRelic::Agent.record_metric("Custom/User/SoftDelete", 1) if CDO.newrelic_logging
+    end
+  end
+
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
   # destroys done around the time of the delete / destroy.
   # @raise [RuntimeError] If the user is purged.

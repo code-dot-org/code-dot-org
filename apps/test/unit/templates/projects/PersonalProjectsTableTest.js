@@ -12,6 +12,7 @@ describe('PersonalProjectsTable', () => {
       <Provider store={getStore()}>
         <PersonalProjectsTable
           personalProjectsList={stubFakePersonalProjectData}
+          canShare={true}
         />
       </Provider>
     );
@@ -23,6 +24,7 @@ describe('PersonalProjectsTable', () => {
       <Provider store={getStore()}>
         <PersonalProjectsTable
           personalProjectsList={stubFakePersonalProjectData}
+          canShare={true}
         />
       </Provider>
     );

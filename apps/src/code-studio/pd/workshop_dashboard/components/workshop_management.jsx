@@ -5,7 +5,7 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import ConfirmationDialog from './confirmation_dialog';
+import ConfirmationDialog from '../../components/confirmation_dialog';
 import {
   PermissionPropType,
   Organizer,

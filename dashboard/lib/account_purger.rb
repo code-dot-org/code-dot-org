@@ -1,3 +1,5 @@
+require 'cdo/delete_accounts_helper'
+
 #
 # Responsible for performing unrecoverable deletion of PII from our system.
 #
@@ -48,6 +50,8 @@ class AccountPurger
   end
 
   private def really_purge_data_for_account(user)
-    raise 'Not implemented'
+    ActiveRecord::Base.transaction do
+      DeleteAccountsHelper.purge_user user
+    end
   end
 end
