@@ -82,7 +82,7 @@ export default class AssignmentVersionMenuItem extends Component {
           <span style={style.selectedColumn}>
             {version.isSelected && <FontAwesome icon="check"/>}
           </span>
-            <span style={style.titleColumn}>
+            <span style={style.titleColumn} className="assignment-version-title">
             {version.title}
           </span>
             <span style={style.statusColumn}>
