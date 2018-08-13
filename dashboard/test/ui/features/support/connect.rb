@@ -52,7 +52,7 @@ def saucelabs_browser
       http_client.timeout = 5.minutes
 
       options = Selenium::WebDriver::Chrome::Options.new
-      options.add_argument('disable-multilingual-spellchecker')
+      options.add_argument('--disable-multilingual-spellchecker')
 
       browser = Selenium::WebDriver.for(:remote,
         url: url,
