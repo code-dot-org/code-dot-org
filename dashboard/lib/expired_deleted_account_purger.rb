@@ -56,7 +56,7 @@ class ExpiredDeletedAccountPurger
       account_purger.purge_data_for_account account
       @num_accounts_purged += 1
     rescue StandardError => err
-      QueuedAccountPurge.create user: account, reason_for_review: err.message unless @dry_run
+      QueuedAccountPurge.create(user: account, reason_for_review: err.message) unless @dry_run
       @num_accounts_queued += 1
     end
   rescue StandardError => err
