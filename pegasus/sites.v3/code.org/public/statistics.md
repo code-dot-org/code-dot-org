@@ -51,6 +51,16 @@ Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twi
 
 <div class="col-33" style="padding-right: 20px;">
 
+<a href="https://twitter.com/codeorg/status/1027955009755828224" target="_blank"><img src="/images/statistics/fit-250/garfield.png"></a>
+
+<br>
+
+According to Code.org's "fun-o-meter," turns out our students get a case of the Monday's too! 
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
 <a href="https://twitter.com/codeorg/status/959441286397751299" target="_blank"><img src="/images/statistics/fit-250/student-proficient.png"></a>
 
 <br>
@@ -62,18 +72,10 @@ And over 800,000 of those students are female.
 <div class="col-33" style="padding-right: 20px;">
 
 <a href="https://twitter.com/codeorg/status/964571108627300352" target="_blank"><img src="/images/statistics/fit-250/double-enrollment.png"></a>
+
 <br>
 
 And this double enrollment means more girls and underrepresented minorities are taking AP Computer Science than ever before!
-
-</div>
-
-<div class="col-33" style="padding-right: 20px;">
-
-<a href="https://twitter.com/codeorg/status/983763631711154177" target="_blank"><img src="/images/statistics/fit-250/balance.png"></a>
-<br>
-
-We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de" target="_blank">change this way before then</a>.
 
 </div>
 
@@ -83,19 +85,21 @@ We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computi
 
 <div class="col-33" style="padding-right: 20px;">
 
-<a href="https://twitter.com/codeorg/status/903629740640149505" target="_blank"><img src="/images/statistics/fit-250/less-cs.png"></a>
+<a href="https://twitter.com/codeorg/status/983763631711154177" target="_blank"><img src="/images/statistics/fit-250/balance.png"></a>
+
 <br>
 
-Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa" target="_blank">computer science teachers</a> to fill the growing demand.
+We're determined to <a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de" target="_blank">change this way before then</a>.
 
 </div>
 
 <div class="col-33" style="padding-right: 20px;">
 
+<a href="https://twitter.com/codeorg/status/903629740640149505" target="_blank"><img src="/images/statistics/fit-250/less-cs.png"></a>
 
 <br>
 
-
+Universities aren't preparing nearly enough <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa" target="_blank">computer science teachers</a> to fill the growing demand.
 
 </div>
 
