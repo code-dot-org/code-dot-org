@@ -111,7 +111,7 @@ export default class AssignmentVersionMenuItem extends Component {
                   &nbsp;
                   <FontAwesome icon="info-circle" style={style.infoCircle}/>
                 </span>
-                <ReactTooltip id={tooltipId}>
+                <ReactTooltip id={tooltipId} place="right" >
                   {version.locales.join(', ')}
                 </ReactTooltip>
               </div>
