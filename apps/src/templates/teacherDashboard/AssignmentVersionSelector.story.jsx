@@ -58,6 +58,19 @@ export default storybook => {
             />
           );
         }
+      }, {
+        name: 'with popup menu, disabled',
+        story: () => {
+          return (
+            <AssignmentVersionSelector
+              dropdownStyle={styles.dropdown}
+              onChangeVersion={action('onChangeVersion')}
+              versions={defaultVersions}
+              showVersionMenu
+              disabled
+            />
+          );
+        }
       }
     ]);
 };
