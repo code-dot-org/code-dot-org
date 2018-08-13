@@ -153,7 +153,7 @@ class ClassSubmission < Form
     end
   end
 
-  # This is essentially identical to the below function, but it's called by
+  # This is almost identical to the below function, but it's called by
   # process_with_ip which is called by process_forms' process_batch_of_forms
   # which writes to the database's processed_data column in the forms table.
   # The fields stored by this function were previously only written to Solr.

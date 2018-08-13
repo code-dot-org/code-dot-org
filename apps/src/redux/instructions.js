@@ -5,7 +5,6 @@
  * off of those actions.
  */
 
-import experiments from '@cdo/apps/util/experiments';
 import { trySetLocalStorage, tryGetLocalStorage } from '../utils';
 
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
@@ -16,8 +15,6 @@ const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE = 'instructions/SET_INSTRUCTIONS_MAX
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
-
-const ENGLISH_LOCALE = 'en_us';
 
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 
@@ -258,7 +255,6 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
 export const determineInstructionsConstants = config => {
   const {
     level,
-    locale,
     noInstructionsWhenCollapsed,
     hasContainedLevels,
     teacherMarkdown
@@ -290,16 +286,6 @@ export const determineInstructionsConstants = config => {
     shortInstructions = undefined;
   } else {
     shortInstructions2 = instructions2;
-
-    if (
-      shortInstructions &&
-      !experiments.isEnabled('i18nMarkdownInstructions') &&
-      (locale && locale !== ENGLISH_LOCALE)
-    ) {
-      // CSF mode - For non-English folks, if we have short instructions then
-      // use only those (and hide the long instructions)
-      longInstructions = undefined;
-    }
 
     // if the two sets of instructions are identical, only use the short
     // version (such that we dont end up minimizing/expanding between

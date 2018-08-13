@@ -52,6 +52,15 @@ export const assignmentFamilyShape = PropTypes.shape({
   assignment_family_name: PropTypes.string.isRequired,
 });
 
+// Represents a version of an assignment (script or course) as it
+// appears in the version menu in the assignment selector.
+export const assignmentVersionShape = PropTypes.shape({
+  year: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  isStable: PropTypes.bool.isRequired,
+  isRecommended: PropTypes.bool,
+});
+
 export const classroomShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

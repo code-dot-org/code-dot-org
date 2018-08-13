@@ -36,7 +36,7 @@ class HocSignup2017 < HocSignup2014
       end
     end
     # Call process in the parent class.
-    process(data).merge!(nces_school_name_s:  nces_school_name)
+    process(data).merge!(nces_school_name_s: nces_school_name)
   end
 
   def self.receipt

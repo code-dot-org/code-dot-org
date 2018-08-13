@@ -79,7 +79,9 @@ $(document).ready(() => {
 
       ReactDOM.render(
         <Provider store={store}>
-          <PersonalProjectsTable/>
+          <PersonalProjectsTable
+            canShare={projectsData.canShare}
+          />
         </Provider>,
        document.getElementById('react-my-projects')
       );
