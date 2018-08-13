@@ -127,15 +127,27 @@ class TopInstructions extends Component {
     user: PropTypes.number
   };
 
-  state = {
-    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace ? TabType.COMMENTS : TabType.INSTRUCTIONS,
-    feedbacks: []
-  };
+  constructor(props) {
+    super(props);
+
+    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
+      (window.location.search).includes('user_id');
+    const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
+
+    this.state = {
+      tabSelected: teacherViewingStudentWork ? TabType.COMMENTS : TabType.INSTRUCTIONS,
+      feedbacks: [],
+      displayFeedbackTeacherFacing: teacherViewingStudentWork,
+      displayFeedback: displayFeedbackStudent || teacherViewingStudentWork
+    };
+  }
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
+
+
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
@@ -268,13 +280,7 @@ class TopInstructions extends Component {
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
 
-    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
-
-    const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
-
-    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && teacherViewingStudentWork;
-
-    const displayFeedback = teacherViewingStudentWork || displayFeedbackStudent;
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && this.state.displayFeedbackTeacherFacing;
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -308,7 +314,7 @@ class TopInstructions extends Component {
                   teacherOnly={teacherOnly}
                 />
               }
-              {displayFeedback &&
+              {this.state.displayFeedback &&
                 <InstructionsTab
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
