@@ -108,7 +108,7 @@ export default class AssignmentSelector extends Component {
 
     const { section, assignments } = props;
 
-    let selectedAssignmentFamily, versions, selectedVersionYear, selectedPrimaryId, selectedSecondaryId;
+    let selectedAssignmentFamily, versions, selectedPrimaryId, selectedSecondaryId;
     if (!section) {
       selectedPrimaryId = noAssignment;
       selectedSecondaryId = noAssignment;
@@ -123,14 +123,13 @@ export default class AssignmentSelector extends Component {
     const primaryAssignment = assignments[selectedPrimaryId];
     if (primaryAssignment) {
       selectedAssignmentFamily = primaryAssignment.assignment_family_name;
-      selectedVersionYear = getVersion(primaryAssignment).year;
+      const selectedVersionYear = getVersion(primaryAssignment).year;
       versions = this.getVersions(selectedAssignmentFamily, selectedVersionYear);
     }
 
     this.state = {
       selectedAssignmentFamily,
       versions: versions || [],
-      selectedVersionYear,
       selectedPrimaryId,
       selectedSecondaryId,
     };
@@ -190,7 +189,6 @@ export default class AssignmentSelector extends Component {
     this.setState({
       selectedAssignmentFamily,
       versions,
-      selectedVersionYear,
       selectedPrimaryId,
       selectedSecondaryId
     }, this.reportChange);
