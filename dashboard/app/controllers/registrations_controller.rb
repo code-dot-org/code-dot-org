@@ -58,7 +58,8 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def users_to_destroy
     return head :bad_request unless current_user&.can_delete_own_account?
-    render json: get_users_to_destroy(current_user)
+    users = current_user.dependent_students << current_user.summarize
+    render json: users
   end
 
   def destroy
@@ -73,8 +74,8 @@ class RegistrationsController < Devise::RegistrationsController
       return
     end
     dependent_students = current_user.dependent_students
-    TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
     destroy_users(dependent_students << current_user)
+    TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
     return head :no_content
   end
@@ -381,10 +382,6 @@ class RegistrationsController < Devise::RegistrationsController
         :email_preference_source,
         :email_preference_form_kind,
       )
-  end
-
-  def get_users_to_destroy(user)
-    user.dependent_students << user.summarize
   end
 
   def destroy_users(users)
