@@ -8,12 +8,24 @@ export default storybook => {
     .withReduxStore()
     .addStoryTable([
       {
-        name: 'Personal Project Table',
+        name: 'Personal Project Table - (un)publish via buttons',
         description: 'Table of personal projects',
         story: () => (
           <PersonalProjectsTable
             personalProjectsList={stubFakePersonalProjectData}
             canShare={true}
+            publishMethod="button"
+          />
+        )
+      },
+      {
+        name: 'Personal Project Table - (un)publish via dropdown action',
+        description: 'Table of personal projects',
+        story: () => (
+          <PersonalProjectsTable
+            personalProjectsList={stubFakePersonalProjectData}
+            canShare={true}
+            publishMethod="chevron"
           />
         )
       },
@@ -24,6 +36,7 @@ export default storybook => {
           <PersonalProjectsTable
             personalProjectsList={[]}
             canShare={true}
+            publishMethod="chevron"
           />
         )
       },
