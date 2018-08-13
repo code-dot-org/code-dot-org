@@ -16,7 +16,7 @@ module.exports = function blockfield() {
       });
     };
 
-    // Run it just before `html`
+    // Run it just before `html`.
     const methods = Parser.prototype.inlineMethods;
     methods.splice(methods.indexOf('html'), 0, BLOCKFIELD);
   }
@@ -28,7 +28,7 @@ tokenizeResourcelink.locator = locateResourcelink;
 function tokenizeResourcelink(eat, value, silent) {
   const match = BLOCKFIELD_RE.exec(value);
 
-  // Resource links are ONLY supported in redaction mode.
+  // Custom block fields are ONLY supported in redaction mode.
   if (match && redact) {
     if (silent) {
       return true;
