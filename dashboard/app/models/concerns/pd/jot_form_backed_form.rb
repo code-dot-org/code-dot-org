@@ -224,6 +224,8 @@ module Pd
       # @raises [KeyError] when either the category or name cannot be found
       # @return [Integer] form id
       def get_form_id(category, name)
+        puts category || 'No category'
+        puts name || 'No name'
         raise KeyError, "Missing jotform form category #{category}" unless CDO.jotform_forms&.key? category
         forms = CDO.jotform_forms[category]
 
@@ -316,6 +318,7 @@ module Pd
       raise 'Missing submission id' unless submission_id.present?
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
+      puts JSON.pretty_generate submission[:answers]
       update!(answers: submission[:answers].to_json)
     end
 
@@ -326,7 +329,7 @@ module Pd
     def map_answers_to_attributes
       hash = form_data_hash(show_hidden_questions: true)
       self.class.attribute_mapping.each do |attribute, question_name|
-        write_attribute attribute, hash[question_name.to_s]
+        write_attribute attribute, hash[question_name.to_s] if hash[question_name.to_s]
       end
     end
 

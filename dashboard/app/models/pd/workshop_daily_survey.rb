@@ -78,7 +78,7 @@ module Pd
     validate :day_for_subject
 
     def self.get_form_id_for_subject_and_day(subject, day)
-      get_form_id CATEGORY_MAP[subject], day.is_a?(Integer) ? "day_#{day}" : day
+      get_form_id CATEGORY_MAP[subject], (day.is_a?(Integer) || day =~ '\d+') ? "day_#{day}" : day
     end
 
     def self.get_day_for_subject_and_form_id(subject, form_id)
@@ -87,7 +87,7 @@ module Pd
 
     def self.all_form_ids
       FORM_CATEGORIES.map do |category|
-        VALID_DAYS.map do |day|
+        VALID_DAYS[category].map do |day|
           get_form_id category, "day_#{day}"
         end
       end.flatten.compact
@@ -100,6 +100,8 @@ module Pd
     private
 
     def day_for_subject
+      puts day
+
       unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
         errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
       end
