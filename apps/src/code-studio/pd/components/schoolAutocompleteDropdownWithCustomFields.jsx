@@ -6,6 +6,7 @@ import React, {PropTypes} from 'react';
 import {FormGroup, Row, Col, ControlLabel, HelpBlock} from 'react-bootstrap';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import CustomSchoolInfo from './customSchoolInfo';
+import {SchoolInfoPropType} from './constants';
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 
 
@@ -14,7 +15,7 @@ const OTHER_SCHOOL_VALUE = "-1";
 
 export default class SchoolAutocompleteDropdownWithCustomFields extends React.Component {
   static propTypes = {
-    school_info: PropTypes.object,
+    school_info: SchoolInfoPropType,
     onSchoolInfoChange: PropTypes.func.isRequired,
     errors: PropTypes.object
   };
