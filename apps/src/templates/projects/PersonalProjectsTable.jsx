@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -18,6 +17,7 @@ import {
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -114,14 +114,13 @@ const dateFormatter = function (time) {
   return date.toLocaleDateString();
 };
 
-const publishedAtFormatter = (publishedAt) => {
-  return publishedAt ? (<FontAwesome icon="check"/>) : '';
-};
-
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
-    canShare: PropTypes.bool.isRequired
+    canShare: PropTypes.bool.isRequired,
+    // We're going to run an A/B experiment to compare (un)publishing from the // quick actions dropdown and from a button in the published column.
+    // TODO (Erin B.) delete this prop and the less effective variant when we // determine the experiment outcome.
+    publishMethod: PropTypes.oneOf(['button', 'chevron']).isRequired,
   };
 
   state = {
@@ -131,14 +130,33 @@ class PersonalProjectsTable extends React.Component {
     }
   };
 
-  actionsFormatter = (actions, {rowData}) => {
-    const {canShare} = this.props;
+  publishedAtFormatter = (publishedAt, {rowData}) => {
+    const {canShare, publishMethod} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
       (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+
+    return (
+      <PersonalProjectsPublishedCell
+        isPublishable={isPublishable}
+        isPublished={!!rowData.publishedAt}
+        projectId={rowData.channel}
+        projectType={rowData.type}
+        publishMethod={publishMethod}
+      />
+    );
+  };
+
+  actionsFormatter = (actions, {rowData}) => {
+    const {canShare, publishMethod} = this.props;
+    const isPublishable =
+      AlwaysPublishableProjectTypes.includes(rowData.type) ||
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+    const showPublishAction = isPublishable && publishMethod === 'chevron';
+
     return (
       <PersonalProjectsTableActionsCell
-        isPublishable={isPublishable}
+        isPublishable={showPublishAction}
         isPublished={!!rowData.publishedAt}
         projectId={rowData.channel}
         projectType={rowData.type}
@@ -241,7 +259,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable],
         },
         cell: {
-          format: publishedAtFormatter,
+          format: this.publishedAtFormatter,
           props: {style: {
             ...tableLayoutStyles.cell,
             ...styles.centeredCell
