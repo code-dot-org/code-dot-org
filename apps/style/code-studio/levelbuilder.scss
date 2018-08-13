@@ -158,7 +158,7 @@ table.checkboxes {
    cursor: pointer;
    padding: 2%;
    padding-left: 0;
-   
+
   &:after {
     content: "";
     display: inline-block;
@@ -177,4 +177,7 @@ table.checkboxes {
     /* Icon when the collapsible content is hidden */
     background-position: -313px -119px;
   }
+}
+.collapsed_area_header{
+  font-size: 1.5em;
 }
