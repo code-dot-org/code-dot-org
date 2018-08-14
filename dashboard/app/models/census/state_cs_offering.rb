@@ -45,6 +45,7 @@ class Census::StateCsOffering < ApplicationRecord
     OH
     OK
     OR
+    PA
     SC
     UT
     VA
@@ -125,6 +126,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'OK'
       row_hash['State School ID']
     when 'OR'
+      row_hash['state_school_id']
+    when 'PA'
       row_hash['state_school_id']
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
@@ -508,6 +511,9 @@ class Census::StateCsOffering < ApplicationRecord
       OK_COURSE_CODES.select {|course| course == row_hash['ClassCode']}
     when 'OR'
       OR_COURSE_CODES.select {|course| course == row_hash['Course']}
+    when 'PA'
+      # One source per row
+      [UNSPECIFIED_COURSE]
     when 'UT'
       UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'SC'
