@@ -238,6 +238,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil user_geo.country
   end
 
+  test 'does not purge dependent students of a teacher' do
+    student = create :student_in_picture_section
+    teacher = student.teachers.first
+    assert_includes teacher.dependent_students.map {|s| s[:id]}, student.id
+
+    assert_nil teacher.purged_at
+    assert_nil student.purged_at
+
+    purge_user teacher
+
+    student.reload
+    refute_nil teacher.purged_at
+    assert_nil student.purged_at
+  end
+
   test 'purged student still passes validations' do
     user = create :student
     assert user.valid?
@@ -631,6 +646,41 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_empty StudioPerson.where(id: studio_person_id)
   end
 
+  #
+  # Table: dashboard.teacher_feedbacks
+  #
+
+  test "purges feedback written by purged teacher" do
+    feedback = create :teacher_feedback
+    assert TeacherFeedback.with_deleted.exists? id: feedback.id
+
+    purge_user feedback.teacher
+
+    refute TeacherFeedback.with_deleted.exists? id: feedback.id
+  end
+
+  test "soft-deletes and disassociates feedback written to purged student" do
+    student = create :student
+
+    feedback = create :teacher_feedback, student: student
+    refute feedback.deleted?
+    refute_nil feedback.student_id
+
+    deleted_feedback = create :teacher_feedback, student: student, deleted_at: Time.now
+    assert deleted_feedback.deleted?
+    refute_nil deleted_feedback.student_id
+
+    purge_user student
+
+    feedback.reload
+    assert feedback.deleted?
+    assert_nil feedback.student_id
+
+    deleted_feedback.reload
+    assert deleted_feedback.deleted?
+    assert_nil deleted_feedback.student_id
+  end
+
   private
 
   #
@@ -639,8 +689,18 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # that instance so we can assert things about its final state.
   #
   def purge_user(user)
-    SolrHelper.stubs(:delete_document).once
+    SolrHelper.stubs(:delete_document)
+    unpurged_users_before = User.with_deleted.where(purged_at: nil).count
+
     DeleteAccountsHelper.new(solr: {}).purge_user(user)
+
+    # Never allow more than one user to be purged by this operation
+    unpurged_users_after = User.with_deleted.where(purged_at: nil).count
+    unpurged_users_diff = unpurged_users_after - unpurged_users_before
+    assert_includes (-1..0), unpurged_users_diff,
+      "Expected purge_user to only purge one user, but " \
+      "#{-unpurged_users_diff} users were purged."
+
     user.reload
   end
 

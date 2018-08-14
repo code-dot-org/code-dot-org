@@ -3,16 +3,13 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
 import { assignmentId, assignmentFamilyFields } from './teacherSectionsRedux';
+import AssignmentVersionSelector from './AssignmentVersionSelector';
 
 const styles = {
   family: {
     display: 'inline-block',
     marginTop: 4,
     marginRight: 6,
-  },
-  version: {
-    display: 'inline-block',
-    marginTop: 4,
   },
   secondary: {
     marginTop: 6
@@ -63,6 +60,7 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
+    showVersionMenu: PropTypes.bool,
   };
 
   /**
@@ -155,9 +153,8 @@ export default class AssignmentSelector extends Component {
     this.setPrimary(assignmentFamily);
   };
 
-  onChangeVersion = event => {
+  onChangeVersion = versionYear => {
     const { selectedAssignmentFamily, versions } = this.state;
-    const versionYear = event.target.value;
     const version = versions.find(version => version.year === versionYear);
     this.setPrimary(selectedAssignmentFamily, version);
   };
@@ -204,7 +201,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const { assignments, dropdownStyle, disabled } = this.props;
+    const { assignments, dropdownStyle, disabled, showVersionMenu } = this.props;
     let { assignmentFamilies } = this.props;
     const { selectedPrimaryId, selectedSecondaryId, selectedAssignmentFamily, versions, selectedVersion } = this.state;
 
@@ -253,27 +250,14 @@ export default class AssignmentSelector extends Component {
         </select>
         </span>
         {versions.length > 1 && (
-          <span style={styles.version}>
-            <div style={styles.dropdownLabel}>{i18n.assignmentSelectorVersion()}</div>
-            <select
-              id="assignment-version-year"
-              value={selectedVersion.year}
-              onChange={this.onChangeVersion}
-              style={dropdownStyle}
-              disabled={disabled}
-            >
-              {
-                versions.map(version => (
-                  <option
-                    key={version.year}
-                    value={version.year}
-                  >
-                    {version.isRecommended ? `${version.title} (Recommended)` : version.title}
-                  </option>
-                ))
-              }
-            </select>
-          </span>
+          <AssignmentVersionSelector
+            dropdownStyle={dropdownStyle}
+            selectedVersion={selectedVersion}
+            versions={versions}
+            onChangeVersion={this.onChangeVersion}
+            disabled={disabled}
+            showVersionMenu={showVersionMenu}
+          />
         )}
         {secondaryOptions && (
           <div style={styles.secondary}>
