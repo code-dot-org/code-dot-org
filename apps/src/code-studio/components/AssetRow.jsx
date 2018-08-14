@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import AssetThumbnail from './AssetThumbnail';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
+import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 
 export const styles = {
@@ -72,39 +72,40 @@ export default class AssetRow extends React.Component {
 
     const api = this.props.useFilesApi ? filesApi : assetsApi;
     const src = api.basePath(this.props.name);
-
     switch (this.state.action) {
       case 'normal':
-        actions =
-          (<td width="250" style={{textAlign: 'right'}}>
+        actions = (
+          <td width="250" style={{textAlign: 'right'}}>
             {flex}
             {(!this.props.useUpdatedStyles || (this.props.useUpdatedStyles && this.props.type !== 'audio')) &&
-            <a
-              href={src}
-              target="_blank"
-              style={{backgroundColor: 'transparent'}}
-            >
-              <button><i className="fa fa-eye"/></button>
-            </a>
+              <a
+                href={src}
+                target="_blank"
+                style={{backgroundColor: 'transparent'}}
+              >
+                <button><i className="fa fa-eye"/></button>
+              </a>
             }
             <button className="btn-danger" onClick={this.confirmDelete}>
               <i className="fa fa-trash-o"/>
             </button>
-          </td>);
+          </td>
+        );
         break;
       case 'confirming delete':
-        actions =
-          (<td width="250" style={{textAlign: 'right'}}>
+        actions = (
+          <td width="250" style={{textAlign: 'right'}}>
             <button className="btn-danger" onClick={this.handleDelete}>
               Delete File
             </button>
             <button onClick={this.cancelDelete}>Cancel</button>
             {this.state.actionText}
-          </td>);
+          </td>
+        );
         break;
       case 'deleting':
-        actions =
-          (<td width="250" style={{textAlign: 'right'}}>
+        actions = (
+          <td width="250" style={{textAlign: 'right'}}>
             <i
               className="fa fa-spinner fa-spin"
               style={{
@@ -112,7 +113,8 @@ export default class AssetRow extends React.Component {
                 marginRight: '15px'
               }}
             />
-          </td>);
+          </td>
+        );
         break;
     }
 
