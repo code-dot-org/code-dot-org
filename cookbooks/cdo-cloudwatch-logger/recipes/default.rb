@@ -39,16 +39,16 @@ module(load="mmjsonparse")
 action(type="mmjsonparse")
 template(name="json_syslog" type="list") {
   constant(value="{")
-  constant(value="\"@timestamp\":\"")    property(name="timereported" dateFormat="rfc3339")
-  constant(value="\",\"host\":\"")       property(name="hostname")
-  constant(value="\",\"severity\":\"")   property(name="syslogseverity-text")
-  constant(value="\",\"facility\":\"")   property(name="syslogfacility-text")
-  constant(value="\",\"syslog-tag\":\"") property(name="syslogtag")
-  constant(value="\",\"program\":\"")     property(name="programname")
+  constant(value="\\"@timestamp\\":\\"")    property(name="timereported" dateFormat="rfc3339")
+  constant(value="\\",\\"host\\":\\"")       property(name="hostname")
+  constant(value="\\",\\"severity\\":\\"")   property(name="syslogseverity-text")
+  constant(value="\\",\\"facility\\":\\"")   property(name="syslogfacility-text")
+  constant(value="\\",\\"syslog-tag\\":\\"") property(name="syslogtag")
+  constant(value="\\",\\"program\\":\\"")     property(name="programname")
   property(name="$!all-json" position.from="2")
 }
 
-Module (path="builtin:ompipe")
+module(load="builtin:ompipe")
 *.* action(type="ompipe" template="json_syslog" Pipe="#{fifo}")
 RSYSLOG
 end
