@@ -1850,7 +1850,7 @@ class User < ActiveRecord::Base
   # continue to use our site without losing progress.
   def can_create_personal_login?
     return false unless student?
-    teacher_managed_account? || oauth_only?
+    teacher_managed_account? || (migrated? && oauth_only?)
   end
 
   def teacher_managed_account?
