@@ -10,7 +10,11 @@ import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
-import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
+import {
+  MAX_PROJECTS_PER_CATEGORY,
+  Galleries,
+  publishMethods,
+} from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
   selectGallery,
   setProjectLists,
@@ -67,7 +71,7 @@ $(document).ready(() => {
       publicGallery);
   });
 
-  if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE)) {
+  if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE) && projectsData.experimentGroup === 0) {
     const personalProjectsUrl = `/api/v1/projects/personal`;
 
     $.ajax({
@@ -81,7 +85,35 @@ $(document).ready(() => {
         <Provider store={store}>
           <PersonalProjectsTable
             canShare={projectsData.canShare}
-            publishMethod="chevron"
+            publishMethod={publishMethods.CHEVRON}
+          />
+        </Provider>,
+       document.getElementById('react-my-projects')
+      );
+    });
+  }
+
+  // We're going to run an A/B experiment to compare (un)publishing from the
+  // quick actions dropdown and from a button in the published column.
+  // Users with an odd id will see the chevron variant.
+  // Users with an even id will see the button variant.
+  // TODO (Erin B.) delete the duplicate table when we
+  // determine the experiment outcome.
+  if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE) && projectsData.experimentGroup === 1) {
+    const personalProjectsUrl = `/api/v1/projects/personal`;
+
+    $.ajax({
+      method: 'GET',
+      url: personalProjectsUrl,
+      dataType: 'json'
+    }).done(personalProjectsList => {
+      store.dispatch(setPersonalProjectsList(personalProjectsList));
+
+      ReactDOM.render(
+        <Provider store={store}>
+          <PersonalProjectsTable
+            canShare={projectsData.canShare}
+            publishMethod={publishMethods.BUTTON}
           />
         </Provider>,
        document.getElementById('react-my-projects')
