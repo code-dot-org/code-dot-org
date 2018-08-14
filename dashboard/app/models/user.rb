@@ -1849,8 +1849,8 @@ class User < ActiveRecord::Base
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.
   def can_create_personal_login?
-    # once parent e-mail is added, we should check for it here
-    teacher_managed_account? || (student? && oauth_only?)
+    return false unless student?
+    teacher_managed_account? || oauth_only?
   end
 
   def teacher_managed_account?
