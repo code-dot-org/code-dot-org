@@ -7,6 +7,7 @@
   // projects internally to project_validators via the view more link.
   // TODO Erin B - remove when we have enough featured Applab and Gamelab projects and/or profanity filter in place.
   - projects_data[:projectValidator] = current_user.permission?  UserPermission::PROJECT_VALIDATOR
+  - projects_data[:canShare] = !current_user.sharing_disabled?
 
 = render partial: 'shared/angular'
 
@@ -18,7 +19,7 @@
 .projects-page
   #projects-header
 
-  #new-project-buttons
+  #gallery-navigation
 
   #react-my-projects
 
