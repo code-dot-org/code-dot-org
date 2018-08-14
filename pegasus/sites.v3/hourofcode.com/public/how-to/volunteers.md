@@ -9,6 +9,8 @@ nav: how_to_nav
 # How-to Guide for Volunteers
 ### Make a difference in a classroom today!
 
+*** 
+
 ## Why volunteer?
 Check out some testimony from past volunteers:
 
@@ -17,19 +19,24 @@ Check out some testimony from past volunteers:
 - “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
 
 ## Anyone can volunteer
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+### Volunteers and speakers in tech: 
+Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
 
 You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+<br>
+<br>
 
 <a href=codeorg_url("/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button>
+<br>
+<br>
 
-**Anyone passionate about expanding opportunity**: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+### Anyone passionate about expanding opportunity: 
+Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
 
-How do you get started?
+### How do you get started?
 
 1. [Send this email](<%= resolve_url('/promote/resources#help-schools') %>) to your child’s teacher offering to help them run an Hour of Code.
-
-1. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide](<%= resolve_url('/how-to') %>) to help you plan.
+2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide](<%= resolve_url('/how-to') %>) to help you plan.
 
 ## Recruit your co-workers to volunteer
 Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](<%= resolve_url('/promote/resources#sample-email') %>) to your manager or the CEO to get everyone on board.
