@@ -1590,6 +1590,23 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_delete_own_account?
   end
 
+  test 'can_create_personal_login? is false for teacher' do
+    refute @teacher.can_create_personal_login?
+  end
+
+  test 'can_create_personal_login? is true for student with teacher-managed account' do
+    student = create :student
+    student.stubs(:teacher_managed_account?).returns(true)
+    assert student.can_create_personal_login?
+  end
+
+  test 'can_create_personal_login? is true for migrated student with oauth-only account' do
+    student = create :student
+    student.stubs(:migrated?).returns(true)
+    student.stubs(:oauth_only?).returns(true)
+    assert student.can_create_personal_login?
+  end
+
   test 'teacher_managed_account? is false for teacher' do
     refute @teacher.teacher_managed_account?
   end
