@@ -86,26 +86,6 @@ class DeleteAccountsHelper
     SurveyResult.where(user_id: user_id).each(&:clear_open_ended_responses)
   end
 
-  # Purges all student users whose acceptance of our Terms of Service and Privacy Policy
-  # is only through the being purged user.
-  # NOTE: This method assumes the sections and followers associated with user_id have already been
-  # destroyed.
-  # @param [Integer] user_id for which to delete orphaned students.
-  def purge_orphaned_students(user_id)
-    section_ids = Section.with_deleted.
-      where(user_id: user_id).
-      where(login_type: [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD]).
-      pluck(:id)
-    Follower.with_deleted.where(section_id: section_ids).find_each do |follower|
-      student_user = User.with_deleted.find_by_id(follower.student_user_id)
-      next if student_user.purged_at
-      next unless student_user.sponsored?
-      next unless Follower.where(student_user: student_user).count == 0
-
-      purge_user(student_user)
-    end
-  end
-
   # Remove all user generated content associated with any PD the user has been through, as well as
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
@@ -218,17 +198,14 @@ class DeleteAccountsHelper
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
   def purge_user(user)
-    # This early exit is necessary, else we would enter an infinite cycle if two users were both
-    # students of the other (via `purge_orphaned_students`).
     return if user.purged_at
 
     user.revoke_all_permissions
-    # NOTE: It is important that user.destroy happen early, as `purge_orphaned_students` assumes the
-    # dependent destroys have already been executed. Further, doing so early assures the user is not
-    # able to access an account in a partially purged state should an exception occur somewhere in
-    # this method.
-    # NOTE: We do not gate any deletion logic on `user.user_type` as its current state may not be
-    # reflective of past state.
+    # NOTE: Calling user.destroy early assures the user is not able to access
+    # an account in a partially purged state should an exception occur
+    # somewhere in this method.
+    # NOTE: Do not gate any deletion logic on `user.user_type`: A student
+    # account may be a former teacher account, or vice-versa.
     user.destroy
     purge_teacher_feedbacks(user.id)
     remove_census_submissions(user.email) if user.email
@@ -237,7 +214,6 @@ class DeleteAccountsHelper
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
     delete_project_backed_progress(user.id)
-    purge_orphaned_students(user.id)
     clean_and_destroy_pd_content(user.id)
     remove_user_sections(user.id)
     remove_user_from_sections_as_student(user)
