@@ -29,7 +29,7 @@ export default class AssetRow extends React.Component {
 
   render() {
     return (
-      <tr className="assetRow" onDoubleClick={this.props.onChoose} style={styles.wrapper}>
+      <tr className="assetRow" onDoubleClick={this.props.onChoose} style={this.props.useUpdatedStyles ? {...styles.wrapper} : null}>
         <td width="80">
           <AssetThumbnail
             type={this.props.type}
