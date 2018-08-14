@@ -28,6 +28,7 @@ require_relative 'sync-codeorg-in'
 require_relative 'sync-codeorg-up'
 require_relative 'sync-codeorg-down'
 require_relative 'sync-codeorg-out'
+require_relative 'upload_i18n_translation_percentages_to_gdrive'
 
 require 'optparse'
 
@@ -174,6 +175,7 @@ def main
     sync_down if should_i "sync down"
     sync_out if should_i "sync out"
     create_down_out_pr if options[:with_pull_request]
+    upload_i18n_stats if should_i "upload translation stats"
   elsif options[:command]
     case options[:command]
     when 'in'

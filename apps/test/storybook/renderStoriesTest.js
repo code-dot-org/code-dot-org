@@ -6,6 +6,7 @@ import {
   clearTimeoutsBetweenTests,
 } from '../util/testUtils';
 import testStorybook from './util/testStorybook';
+import $ from 'jquery';
 
 // Add story files here to exclude them from the storybook render tests.
 const BLACKLIST = [
@@ -16,6 +17,16 @@ describe('react-storybook stories render without errors or warnings', function (
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();
+
+  //Stub jquery fileupload library function
+  let fileupload;
+  before(()=> {
+    fileupload = $.fn.fileupload;
+    $.fn.fileupload = () => {};
+  });
+  after(()=>{
+    $.fn.fileupload = fileupload;
+  });
 
   // Test all the *.story.jsx files that aren't blacklisted
   const context = require.context('../../src/', true, /.*\.story\.jsx?$/);

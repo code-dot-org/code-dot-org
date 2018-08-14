@@ -145,7 +145,7 @@ export default class WorkshopEnrollment extends React.Component {
           organizer: {this.props.workshop.organizer.name} at {this.props.workshop.organizer.email}.
         </p>
         <p>
-          If you need to cancel, click <a href={this.state.cancelUrl}>{this.state.cancelUrl}</a>
+          If you need to cancel, click <a href={this.state.cancelUrl}>here</a>.
         </p>
         <br/>
         {!this.state.accountExists &&

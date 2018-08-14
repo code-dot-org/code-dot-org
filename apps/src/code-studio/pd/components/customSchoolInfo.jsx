@@ -4,6 +4,7 @@ import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import {STATES} from '../../../geographyConstants';
+import {SchoolInfoPropType} from './constants';
 
 const VALIDATION_STATE_ERROR = "error";
 
@@ -16,48 +17,34 @@ const SCHOOL_TYPES = {
 
 export default class CustomSchoolInfo extends React.Component {
   static propTypes = {
-    school_info: PropTypes.object,
-    onSchoolInfoChange: PropTypes.func,
+    school_info: SchoolInfoPropType,
+    onSchoolInfoChange: PropTypes.func.isRequired,
     errors: PropTypes.object
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      school_info: this.props.school_info,
-      errors: this.props.errors || {}
-    };
-  }
-
-  updateOnSchoolInfoChange = (school_info) => {
-    this.setState(school_info);
-    if (this.props.onSchoolInfoChange) {
-      this.props.onSchoolInfoChange(school_info);
-    }
-  };
-
   handleSchoolStateChange = (selection) => {
-    const school_info = {...this.state.school_info, ...{school_state: selection.value}};
-    this.updateOnSchoolInfoChange({school_info});
+    const school_info = {...this.props.school_info, ...{school_state: selection.value}};
+    this.props.onSchoolInfoChange({school_info});
   };
 
   handleSchoolInfoChange = (change) => {
-    const school_info = {...this.state.school_info, ...change};
-    this.updateOnSchoolInfoChange({school_info});
+    const school_info = {...this.props.school_info, ...change};
+    this.props.onSchoolInfoChange({school_info});
   };
 
   handleSchoolDistrictChange = (change) => {
-    const school_info = {...this.state.school_info, ...change};
+    const school_info = {...this.props.school_info, ...change};
     school_info.school_district_other = "true";
-    this.updateOnSchoolInfoChange({school_info});
+    this.props.onSchoolInfoChange({school_info});
   };
 
   handleSchoolTypeChange = (change) => {
-    const school_info = {...this.state.school_info, ...change};
-    delete(school_info.school_district_other);
-    delete(school_info.school_district_name);
-    this.updateOnSchoolInfoChange({school_info});
+    const school_info = {...this.props.school_info, ...change};
+    if ([SCHOOL_TYPES.PRIVATE, SCHOOL_TYPES.OTHER].includes(change["school_type"])) {
+      delete(school_info.school_district_other);
+      delete(school_info.school_district_name);
+    }
+    this.props.onSchoolInfoChange({school_info});
   };
 
   render() {
