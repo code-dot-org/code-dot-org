@@ -728,7 +728,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def purge_all_accounts_with_email(email)
-    SolrHelper.stubs(:delete_document).at_least_once
+    SolrHelper.expects(:delete_document).at_least_once
     DeleteAccountsHelper.new(solr: {}).purge_all_accounts_with_email(email)
   end
 end

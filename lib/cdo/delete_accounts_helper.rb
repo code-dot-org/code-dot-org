@@ -13,8 +13,9 @@ class DeleteAccountsHelper
   ).freeze
 
   def initialize(solr: nil)
-    raise 'No SOLR server configured' unless solr || CDO.solr_server
-    @solr = solr || Solr::Server.new(host: CDO.solr_server)
+    if solr || CDO.solr_server
+      @solr = solr || Solr::Server.new(host: CDO.solr_server)
+    end
     @pegasus_db = PEGASUS_DB
     @pegasus_reporting_db = sequel_connect(
       CDO.pegasus_reporting_db_writer,
@@ -152,6 +153,7 @@ class DeleteAccountsHelper
   # WARNING: This does not remove SOLR records associated with forms for the user.
   # @param [Integer] The user ID to purge from SOLR.
   def remove_from_solr(user_id)
+    return unless @solr
     SolrHelper.delete_document(@solr, 'user', user_id)
   end
 
