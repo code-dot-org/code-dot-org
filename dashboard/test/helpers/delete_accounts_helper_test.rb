@@ -704,6 +704,41 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil deleted_feedback.student_id
   end
 
+  #
+  # Table: dashboard.pd_applications
+  #
+
+  test "soft-deletes pd_applications for user" do
+    # The user soft-delete actually does this.
+    application = create :pd_teacher1819_application
+    refute application.deleted?
+
+    purge_user application.user
+
+    application.reload
+    assert application.deleted?
+  end
+
+  test "clears form_data from pd_applications for user" do
+    application = create :pd_teacher1819_application
+    refute_equal '{}', application.form_data
+
+    purge_user application.user
+
+    application.reload
+    assert_equal '{}', application.form_data
+  end
+
+  test "clears notes from pd_applications for user" do
+    application = create :pd_teacher1819_application, notes: 'Test notes'
+    refute_nil application.notes
+
+    purge_user application.user
+
+    application.reload
+    assert_nil application.notes
+  end
+
   private
 
   #
