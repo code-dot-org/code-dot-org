@@ -34,12 +34,10 @@
 #  index_pd_applications_on_user_id              (user_id)
 #
 
-require_dependency 'cdo/shared_constants/pd/teacher_common_application_constants'
-
 module Pd::Application
   class TeacherApplicationBase < WorkshopAutoenrolledApplication
     include Rails.application.routes.url_helpers
-    include TeacherCommonApplicationConstants
+    include Pd::TeacherCommonApplicationConstants
     include SchoolInfoDeduplicator
 
     # Updates the associated user's school info with the info from this teacher application

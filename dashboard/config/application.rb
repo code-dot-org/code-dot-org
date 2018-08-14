@@ -123,6 +123,7 @@ module Dashboard
     config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
     config.autoload_paths << Rails.root.join('app', 'models', 'levels')
     config.autoload_paths << Rails.root.join('app', 'models', 'sections')
+    config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
