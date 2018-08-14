@@ -1600,8 +1600,9 @@ class UserTest < ActiveSupport::TestCase
     assert student.can_create_personal_login?
   end
 
-  test 'can_create_personal_login? is true for student with oauth-only account' do
+  test 'can_create_personal_login? is true for migrated student with oauth-only account' do
     student = create :student
+    student.stubs(:migrated?).returns(true)
     student.stubs(:oauth_only?).returns(true)
     assert student.can_create_personal_login?
   end
