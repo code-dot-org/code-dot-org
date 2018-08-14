@@ -81,6 +81,7 @@ $(document).ready(() => {
         <Provider store={store}>
           <PersonalProjectsTable
             canShare={projectsData.canShare}
+            publishMethod="chevron"
           />
         </Provider>,
        document.getElementById('react-my-projects')
