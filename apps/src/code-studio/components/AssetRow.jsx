@@ -27,49 +27,6 @@ export default class AssetRow extends React.Component {
     useUpdatedStyles:PropTypes.bool
   };
 
-  render() {
-    return (
-      <tr className="assetRow" onDoubleClick={this.props.onChoose} style={this.props.useUpdatedStyles ? {...styles.wrapper} : null}>
-        <td width="80">
-          <AssetThumbnail
-            type={this.props.type}
-            name={this.props.name}
-            timestamp={this.props.timestamp}
-            useFilesApi={this.props.useFilesApi}
-            useUpdatedStyles={this.props.useUpdatedStyles}
-          />
-        </td>
-        <td>{this.props.name}</td>
-        <AssetActions
-          name="audioTest"
-          size={this.props.size}
-          useFilesApi={this.props.useFilesApi}
-          onDelete={this.props.onDelete}
-          onChoose={this.props.onChoose}
-          isAudio={this.props.type === 'audio'}
-          useUpdatedStyles={this.props.useUpdatedStyles}
-        />
-      </tr>
-    );
-  }
-}
-
-/**
- * Part of a row in the AssetManager, enables deleting the asset and, if not an audio asset, previewing.
- */
-export class AssetActions extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    size: PropTypes.number,
-    useFilesApi: PropTypes.bool.isRequired,
-    onChoose: PropTypes.func,
-    onDelete: PropTypes.func.isRequired,
-    isAudio: PropTypes.bool,
-
-    //Temp prop to hide/show updated styles for audio recording release
-    useUpdatedStyles: PropTypes.bool
-  };
-
   state = {
     action: 'normal',
     actionText: ''
@@ -104,7 +61,7 @@ export class AssetActions extends React.Component {
   };
 
   render() {
-    let flex;
+    let actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
       flex = <button onClick={this.props.onChoose}>{i18n.choose()}</button>;
@@ -115,46 +72,64 @@ export class AssetActions extends React.Component {
 
     const api = this.props.useFilesApi ? filesApi : assetsApi;
     const src = api.basePath(this.props.name);
+
+    switch (this.state.action) {
+      case 'normal':
+        actions =
+          (<td width="250" style={{textAlign: 'right'}}>
+            {flex}
+            {(!this.props.useUpdatedStyles || (this.props.useUpdatedStyles && this.props.type !== 'audio')) &&
+            <a
+              href={src}
+              target="_blank"
+              style={{backgroundColor: 'transparent'}}
+            >
+              <button><i className="fa fa-eye"/></button>
+            </a>
+            }
+            <button className="btn-danger" onClick={this.confirmDelete}>
+              <i className="fa fa-trash-o"/>
+            </button>
+          </td>);
+        break;
+      case 'confirming delete':
+        actions =
+          (<td width="250" style={{textAlign: 'right'}}>
+            <button className="btn-danger" onClick={this.handleDelete}>
+              Delete File
+            </button>
+            <button onClick={this.cancelDelete}>Cancel</button>
+            {this.state.actionText}
+          </td>);
+        break;
+      case 'deleting':
+        actions =
+          (<td width="250" style={{textAlign: 'right'}}>
+            <i
+              className="fa fa-spinner fa-spin"
+              style={{
+                fontSize: '32px',
+                marginRight: '15px'
+              }}
+            />
+          </td>);
+        break;
+    }
+
     return (
-      <td width="250" style={{textAlign: 'right'}}>
-        {this.state.action === 'normal' &&
-        <div>
-          {flex}
-          {(!this.props.useUpdatedStyles || (this.props.useUpdatedStyles && !this.props.isAudio)) &&
-          <a
-            href={src}
-            target="_blank"
-            style={{backgroundColor: 'transparent'}}
-          >
-            <button><i className="fa fa-eye"/></button>
-          </a>
-          }
-          <button className="btn-danger" onClick={this.confirmDelete}>
-            <i className="fa fa-trash-o"/>
-          </button>
-        </div>
-        }
-        {this.state.action === 'confirming delete' &&
-        <div>
-          <button className="btn-danger" onClick={this.handleDelete}>
-            Delete File
-          </button>
-          <button onClick={this.cancelDelete}>Cancel</button>
-          {this.state.actionText}
-        </div>
-        }
-        {this.state.action === 'deleting' &&
-        <div>
-          <i
-            className="fa fa-spinner fa-spin"
-            style={{
-              fontSize: '32px',
-              marginRight: '15px'
-            }}
+      <tr className="assetRow" onDoubleClick={this.props.onChoose} style={this.props.useUpdatedStyles ? {...styles.wrapper} : null}>
+        <td width="80">
+          <AssetThumbnail
+            type={this.props.type}
+            name={this.props.name}
+            timestamp={this.props.timestamp}
+            useFilesApi={this.props.useFilesApi}
+            useUpdatedStyles={this.props.useUpdatedStyles}
           />
-        </div>
-        }
-      </td>
+        </td>
+        <td>{this.props.name}</td>
+        {actions}
+      </tr>
     );
   }
 }
