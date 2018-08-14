@@ -3,13 +3,6 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 
-export const styles = {
-  wrapper: {
-    display: 'flex',
-    alignItems: 'center'
-  }
-};
-
 /**
  * A single row in the AssetManager, describing one asset.
  */
@@ -77,7 +70,7 @@ export default class AssetRow extends React.Component {
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            {(!this.props.useUpdatedStyles || (this.props.useUpdatedStyles && this.props.type !== 'audio')) &&
+            {!this.props.useUpdatedStyles &&
               <a
                 href={src}
                 target="_blank"
@@ -119,7 +112,7 @@ export default class AssetRow extends React.Component {
     }
 
     return (
-      <tr className="assetRow" onDoubleClick={this.props.onChoose} style={this.props.useUpdatedStyles ? {...styles.wrapper} : null}>
+      <tr className="assetRow" onDoubleClick={this.props.onChoose}>
         <td width="80">
           <AssetThumbnail
             type={this.props.type}
@@ -127,6 +120,7 @@ export default class AssetRow extends React.Component {
             timestamp={this.props.timestamp}
             useFilesApi={this.props.useFilesApi}
             useUpdatedStyles={this.props.useUpdatedStyles}
+            src={src}
           />
         </td>
         <td>{this.props.name}</td>
