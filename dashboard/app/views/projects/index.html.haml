@@ -8,6 +8,13 @@
   // TODO Erin B - remove when we have enough featured Applab and Gamelab projects and/or profanity filter in place.
   - projects_data[:projectValidator] = current_user.permission?  UserPermission::PROJECT_VALIDATOR
   - projects_data[:canShare] = !current_user.sharing_disabled?
+  // We're going to run an A/B experiment to compare (un)publishing from the
+  // quick actions dropdown and from a button in the published column.
+  // Users with an odd id will see the chevron variant.
+  // Users with an even id will see the button variant.
+  // TODO (Erin B.) delete this data when we
+  // determine the experiment outcome.
+  - projects_data[:experimentGroup] = current_user.id % 2
 
 = render partial: 'shared/angular'
 
