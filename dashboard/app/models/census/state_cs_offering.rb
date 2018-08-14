@@ -44,6 +44,7 @@ class Census::StateCsOffering < ApplicationRecord
     NY
     OH
     OK
+    OR
     SC
     UT
     VA
@@ -123,6 +124,8 @@ class Census::StateCsOffering < ApplicationRecord
       row_hash['State School ID']
     when 'OK'
       row_hash['State School ID']
+    when 'OR'
+      row_hash['state_school_id']
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
     when 'UT'
@@ -398,6 +401,16 @@ class Census::StateCsOffering < ApplicationRecord
     2536
   ).freeze
 
+  OR_COURSE_CODES = %w(
+    10152
+    10155
+    10157
+    10156
+    10154
+    10153
+    10112
+  ).freeze
+
   # Utah did not provide codes, but did provide course titles.
   UT_COURSE_CODES = [
     'A.P.  Computer Science',
@@ -493,6 +506,8 @@ class Census::StateCsOffering < ApplicationRecord
       OH_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'OK'
       OK_COURSE_CODES.select {|course| course == row_hash['ClassCode']}
+    when 'OR'
+      OR_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'UT'
       UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'SC'
