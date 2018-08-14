@@ -247,7 +247,8 @@ group :development, :staging do
 end
 
 # Reduce volume of production logs
-gem 'lograge'
+# Ref: https://github.com/roidrage/lograge/pull/252
+gem 'lograge', github: 'wjordan/lograge', ref: 'debug_exceptions'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
