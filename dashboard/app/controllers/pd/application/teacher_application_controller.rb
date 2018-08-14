@@ -27,5 +27,22 @@ module Pd::Application
         }.to_json
       }
     end
+
+    # Temporary preview
+    # GET /pd/application/teacher_1920_preview
+    def new_1920_preview
+      return render_404 unless current_user&.workshop_admin?
+
+      view_options(answerdash: true)
+
+      @script_data = {
+        props: {
+          options: APPLICATION_CLASS.options.camelize_keys,
+          requiredFields: APPLICATION_CLASS.camelize_required_fields,
+          accountEmail: current_user.email,
+          apiEndpoint: nil
+        }.to_json
+      }
+    end
   end
 end

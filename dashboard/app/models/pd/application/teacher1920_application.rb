@@ -34,11 +34,9 @@
 #  index_pd_applications_on_user_id              (user_id)
 #
 
-require_dependency 'cdo/shared_constants/pd/teacher1920_application_constants'
-
 module Pd::Application
   class Teacher1920Application < TeacherApplicationBase
-    include Teacher1920ApplicationConstants
+    include Pd::Teacher1920ApplicationConstants
 
     # @override
     def year
