@@ -237,16 +237,16 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     )
   end
 
-  test 'cancel with a known code deletes the enrollment' do
-    assert_equal 2, Pd::Enrollment.count
+  test 'cancel with a known code displays the cancel page' do
     get :cancel, params: {code: @existing_enrollment.code}
     assert_response :success
-    assert_equal 1, Pd::Enrollment.count
+    assert_select 'h1', text: 'Cancel Registration'
   end
 
-  test 'cancel with an unknown code responds with 404' do
+  test 'cancel with an unknown code or canceled displays the canceled page' do
     get :cancel, params: {code: 'not a valid code'}
-    assert_response 404
+    assert_response :success
+    assert_select 'h1', text: 'Workshop Registration Canceled'
   end
 
   test 'cancel with attendance renders attended view and preserves the enrollment' do

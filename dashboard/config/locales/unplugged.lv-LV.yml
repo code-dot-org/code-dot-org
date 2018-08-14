@@ -145,7 +145,7 @@ lv:
           ko var izmantot atkal un atkal), lai izveidotu saules ķērājus, izmantojot
           diegus un krelles.
       SongwritingParameters:
-        title: Dziesmu rakstīšana ar Parametriem
+        title: Dziesmu rakstīšana
         desc: Skolēni izmanto dziesmas piedziedājumu, lai mācītos par parametru uzdošanu
           (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
       DiceRace:
@@ -294,7 +294,7 @@ lv:
           risināšanas metode), lai pabeigtu uzdevumu kopā klasē daudz efektīgāk, nekā
           to darītu skolēns vienatnē.
       courseE_unplugged_songwriting:
-        title: Dziesmu rakstīšana ar Parametriem
+        title: Dziesmu rakstīšana
         desc: Skolēni izmanto dziesmas piedziedājumu, lai mācītos par parametru uzdošanu
           (kas izmaina funkciju, neveicot tās koda pārrakstīšanu).
       courseF_unplugged_tangrams:

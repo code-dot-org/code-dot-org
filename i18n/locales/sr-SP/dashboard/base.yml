@@ -14,7 +14,7 @@ sr:
         name: 'Прикажи назив'
         email: 'Електронска пошта'
         username: 'корисничко име'
-        password: 'Шифра'
+        password: 'Лозинка'
         password_confirmation: 'Потврдите лозинку'
         current_password: 'Тренутна лозинка'
         locale: 'Језик'
@@ -309,7 +309,7 @@ sr:
     more: 'Више'
     feedback: 'Обезбедити податке о резултатима'
     translate: 'Помози нам превести на твој језик'
-    support: 'Подршка'
+    support: 'Помоћ и заједница'
     tos_short: 'Услови'
     tos: 'Услови коришћења'
     privacy: 'Политика приватности'
@@ -352,6 +352,10 @@ sr:
       title: "Залеђено краљевство"
     infinity:
       body: "Креирај приче и игре са Дизнијевим ликовима у Играоници."
+    minecraft:
+      body: "Истражите Мајнкрафт свет кроз кôд"
+    minecraft2016:
+      body: "Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а."
     unplugged_conditionals:
       title: "Кондиционали"
   gallery:
@@ -379,15 +383,7 @@ sr:
     save: "Сачувај"
   race_interstitial:
     races:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-        other: "Други"
-      - 
+      other: "Други"
     submit: "Пошаљи"
   project:
     save: "Сачувај"

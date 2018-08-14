@@ -122,7 +122,7 @@
   "dropletBlock_setSprite_description": "קובע את תמונת השחקן",
   "dropletBlock_setSprite_param0": "",
   "dropletBlock_setSprite_param0_description": "האינדקס (מתחיל בספרה 0) המציין איזה שחקן צריך להשתנות.",
-  "dropletBlock_setSprite_param1": "",
+  "dropletBlock_setSprite_param1": "תמונה",
   "dropletBlock_setSprite_param1_description": "שם תמונת השחקן.",
   "dropletBlock_setToChase_description": "משנה סדרה של דמויות, וגורם להן לרדוף אחרי הדרואיד.",
   "dropletBlock_setToChase_param0": "סוג",

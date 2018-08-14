@@ -12,6 +12,7 @@ import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
+  remix,
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 
@@ -23,6 +24,7 @@ export const styles = {
 
 class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
+    isPublishable: PropTypes.bool.isRequired,
     isPublished: PropTypes.bool.isRequired,
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
@@ -35,6 +37,7 @@ class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
+    remix: PropTypes.func.isRequired,
   };
 
   onPublish = () => {
@@ -61,8 +64,12 @@ class PersonalProjectsTableActionsCell extends Component {
     this.props.saveProjectName(this.props.projectId, this.props.updatedName);
   };
 
+  onRemix = () => {
+    this.props.remix(this.props.projectId, this.props.projectType);
+  };
+
   render() {
-    const {isEditing, isSaving} = this.props;
+    const {isEditing, isSaving, isPublishable, isPublished} = this.props;
 
     return (
       <div>
@@ -74,18 +81,18 @@ class PersonalProjectsTableActionsCell extends Component {
               {i18n.rename()}
             </PopUpMenu.Item>
             <PopUpMenu.Item
-              onClick={() => console.log("Remix was clicked")}
+              onClick={this.onRemix}
             >
               {i18n.remix()}
             </PopUpMenu.Item>
-            {this.props.isPublished && (
+            {isPublished && isPublishable && (
               <PopUpMenu.Item
                 onClick={this.onUnpublish}
               >
                 {i18n.unpublish()}
               </PopUpMenu.Item>
             )}
-            {!this.props.isPublished && (
+            {!isPublished && isPublishable && (
               <PopUpMenu.Item
                 onClick={this.onPublish}
               >
@@ -142,5 +149,8 @@ export default connect(state => ({}), dispatch => ({
   },
   saveProjectName(projectId, updatedName) {
     dispatch(saveProjectName(projectId, updatedName));
+  },
+  remix(projectId, projectType) {
+    dispatch(remix(projectId, projectType));
   },
 }))(PersonalProjectsTableActionsCell);

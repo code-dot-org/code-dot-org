@@ -238,6 +238,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil user_geo.country
   end
 
+  test 'does not purge dependent students of a teacher' do
+    student = create :student_in_picture_section
+    teacher = student.teachers.first
+    assert_includes teacher.dependent_students.map {|s| s[:id]}, student.id
+
+    assert_nil teacher.purged_at
+    assert_nil student.purged_at
+
+    purge_user teacher
+
+    student.reload
+    refute_nil teacher.purged_at
+    assert_nil student.purged_at
+  end
+
   test 'purged student still passes validations' do
     user = create :student
     assert user.valid?
@@ -257,22 +272,81 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.sections
+  # Table: dashboard.user_permissions
   #
 
-  test "hard-deletes all of a user's owned sections" do
+  test "revokes the user's permissions" do
     user = create :teacher
-    create_list :section, 3, user: user
-    user.sections.first.destroy
-    section_ids = user.sections.with_deleted.map(&:id)
-
-    assert_equal 2, Section.where(id: section_ids).count
-    assert_equal 3, Section.with_deleted.where(id: section_ids).count
+    UserPermission::VALID_PERMISSIONS.each {|perm| user.permission = perm}
+    refute_empty UserPermission.where(user_id: user.id)
 
     purge_user user
 
-    assert_empty Section.where(id: section_ids)
-    assert_empty Section.with_deleted.where(id: section_ids)
+    assert_empty UserPermission.where(user_id: user.id)
+  end
+
+  test "revokes the user's admin status" do
+    user = create :teacher, admin: true
+    assert user.admin?
+
+    purge_user user
+
+    refute user.admin?
+  end
+
+  #
+  # Table: dashboard.sections
+  #
+
+  test "soft-deletes all of a user's owned sections" do
+    user = create :teacher
+    section_a = create :section, user: user
+    section_b = create :section, user: user
+    section_a.destroy
+
+    assert section_a.deleted?
+    refute section_b.deleted?
+
+    purge_user user
+
+    section_a.reload
+    section_b.reload
+    assert section_a.deleted?
+    assert section_b.deleted?
+  end
+
+  test "removes name from all of a user's owned sections" do
+    user = create :teacher
+    section_a = create :section, user: user
+    section_b = create :section, user: user
+    section_a.destroy
+
+    refute_nil section_a.name
+    refute_nil section_b.name
+
+    purge_user user
+
+    section_a.reload
+    section_b.reload
+    assert_nil section_a.name
+    assert_nil section_b.name
+  end
+
+  test "removes code from all of a user's owned sections" do
+    user = create :teacher
+    section_a = create :section, user: user
+    section_b = create :section, user: user
+    section_a.destroy
+
+    refute_nil section_a.code
+    refute_nil section_b.code
+
+    purge_user user
+
+    section_a.reload
+    section_b.reload
+    assert_nil section_a.code
+    assert_nil section_b.code
   end
 
   #
@@ -294,22 +368,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty user.sections_as_student
     refute_includes section.students, user
     assert_empty Follower.with_deleted.where(student_user: user)
-  end
-
-  test "hard-deletes all followers of a hard-deleted teacher's sections" do
-    user = create :teacher
-    section_1 = create :section, teacher: user
-    section_1.students << create_list(:student, 3)
-    section_2 = create :section, teacher: user
-    section_2.students << create_list(:student, 3)
-
-    section_ids = user.sections.map(&:id)
-
-    assert_equal 6, Follower.with_deleted.where(section_id: section_ids).count
-
-    purge_user user
-
-    assert_empty Follower.with_deleted.where(section_id: section_ids)
   end
 
   #
@@ -631,6 +689,41 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_empty StudioPerson.where(id: studio_person_id)
   end
 
+  #
+  # Table: dashboard.teacher_feedbacks
+  #
+
+  test "purges feedback written by purged teacher" do
+    feedback = create :teacher_feedback
+    assert TeacherFeedback.with_deleted.exists? id: feedback.id
+
+    purge_user feedback.teacher
+
+    refute TeacherFeedback.with_deleted.exists? id: feedback.id
+  end
+
+  test "soft-deletes and disassociates feedback written to purged student" do
+    student = create :student
+
+    feedback = create :teacher_feedback, student: student
+    refute feedback.deleted?
+    refute_nil feedback.student_id
+
+    deleted_feedback = create :teacher_feedback, student: student, deleted_at: Time.now
+    assert deleted_feedback.deleted?
+    refute_nil deleted_feedback.student_id
+
+    purge_user student
+
+    feedback.reload
+    assert feedback.deleted?
+    assert_nil feedback.student_id
+
+    deleted_feedback.reload
+    assert deleted_feedback.deleted?
+    assert_nil deleted_feedback.student_id
+  end
+
   private
 
   #
@@ -639,13 +732,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # that instance so we can assert things about its final state.
   #
   def purge_user(user)
-    SolrHelper.stubs(:delete_document).once
+    SolrHelper.stubs(:delete_document)
+    unpurged_users_before = User.with_deleted.where(purged_at: nil).count
+
     DeleteAccountsHelper.new(solr: {}).purge_user(user)
+
+    # Never allow more than one user to be purged by this operation
+    unpurged_users_after = User.with_deleted.where(purged_at: nil).count
+    unpurged_users_diff = unpurged_users_after - unpurged_users_before
+    assert_includes (-1..0), unpurged_users_diff,
+      "Expected purge_user to only purge one user, but " \
+      "#{-unpurged_users_diff} users were purged."
+
     user.reload
   end
 
   def purge_all_accounts_with_email(email)
-    SolrHelper.stubs(:delete_document).at_least_once
+    SolrHelper.expects(:delete_document).at_least_once
     DeleteAccountsHelper.new(solr: {}).purge_all_accounts_with_email(email)
   end
 end

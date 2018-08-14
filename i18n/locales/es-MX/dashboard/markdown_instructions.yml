@@ -119,7 +119,7 @@ es-MX:
         \r
         Repare el error(s) para recojer todo
         el néctar y hacer toda la miel.
-      2-3 Bee Functions 1_markdown_instruction: "Las funciones son bloques de código que realizan una tarea. \\r\n\\r\nUsa la función `obtener 2 néctar` para recolectar el néctar de cada flor."
+      2-3 Bee Functions 1_markdown_instruction: "Las funciones son bloques de códigos que realizan una tarea. \\r\n\\r\nUsa la función 'llegar al néctar' para recoger el néctar de cada flor."
       2-3 Bee Functions 10_markdown_instruction: "Las flores moradas pueden tener 1 o 0 néctar. Crea una función que recoja el néctar solo de aquellas flores que lo tengan."
       2-3 Bee Functions 2_markdown_instruction: "Las funciones son bloques de código que realizan una tarea. Utilice la función \"get 5\" para obtener 5 néctares a cada momento. Asegúrese de utilizar un bucle para obtener un recuento ideal de bloque, también."
       2-3 Bee Functions 4_markdown_instruction: "La función \"mover y obtener néctar\" realizada por la abeja, recoge néctar, y entonces devuelve a la abeja al principio. Usa la función para recoger todo el néctar."
@@ -139,7 +139,7 @@ es-MX:
       2-3 Bee Loops 7_markdown_instruction: "Que hermoso campo de flores! \\r\n\\r\nAyuda\na la abeja a visitar cada uno.\\r\n\\r\nPuedes conseguir la manera de hacerlo con menos de 7 bloques?"
       2-3 Bee Loops 8_markdown_instruction: "Estas flores moradas tienen una cantidad desconocida de néctar. Utiliza el ciclo \"while nectar\" para recolectar todo el néctar. Este ciclo va a ejecutarse mientras la condición sea verdadera, en este caso Néctar > 0."
       2-3 Bee Loops Assessment 1_markdown_instruction: "** Evaluación: ** Use un bucle `siempre que`\npara recoger todo el néctar de estas flores."
-      2-3 Maze 1_markdown_instruction: "¿Puedes ayudarme a atrapar al cerdo travieso? \\r\n\\r\nApila un par de bloques `avanzar` debajo del bloque`cuando se ejecuta` y presiona \"ejecutar\".\n"
+      2-3 Maze 1_markdown_instruction: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \\r\n\\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona \"Ejecutar\". "
       2-3 Maze 12 - One Move Block_markdown_instruction: |-
         Obtén el cerdo malo!
         Pero esta vez, solo puedes usar un bloque de `avanzar`\r
@@ -220,10 +220,14 @@ es-MX:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "Utiliza un bloque \"repeat until\" y un bloque \"if-else\" para llevarme al girasol usando la mínima cantidad de bloques posible."
       4-5 Nested Loops 1_markdown_instruction: "Completa el código para dibujar estos triángulos. El\nprimero está hecho para ti. Sugerencia: 3 triángulos en una rotación de 360 grados.\\r\n\\r\n"
       4-5 Nested Loops 11_markdown_instruction: "¿Puedes tu dibujar los 10 cuadrados de\nesta acera usando un circuito insertado? \\r\n\\r\nCada cuadrado tiene 30 píxeles."
+      4-5 Nested Loops 12_markdown_instruction: '¿Puedes dibujar estos 36 triángulos utilizando un bucle anidado?'
       4-5 Nested Loops 3_markdown_instruction: |-
         Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado.
+      4-5 Nested Loops 5_markdown_instruction: haz un bucle con el código dado para crear un molino de viento.
+      4-5 Nested Loops 6_markdown_instruction: '¿Puedes dibujar un hexágono con un bucle del código del triángulo?'
       4-5 Nested Loops 7_markdown_instruction: "con el bucle repite este diseño 10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista: ¿Cuánto es 360 dividido por 10?)"
       4-5 Nested Loops 8_markdown_instruction: "Repite el bucle 6 veces. ¿Cuánto tienes que girar cada vez el bucle? (Pista: ¿Cuánto es 360 dividido por 6?)"
+      4-5 Nested Loops 9_markdown_instruction: '¡Dibuja los dientes en la boca de cocodrilo!'
       4-5 While Loops 1_markdown_instruction: Muéveme al agujero y rellena con dos palas de tierra, usando el bloque de "relleno".
       4-5 While Loops 2_markdown_instruction: Muéveme a la pila de tierra y remueve con 5 palos, usando el bloque 'remover'.
       4-5 While Loops 3_markdown_instruction: "Muéveme a la pila y remueve todo, después muéveme hacia el agujero y llénalo completamente. Sugerencia: Utiliza tan pocos bloques como sea posible."
@@ -231,6 +235,7 @@ es-MX:
       AWS link_markdown_instruction: "# Usa esta herramienta para cosas"
       Alien Defender_markdown_instruction: "** La Idea del proyecto **: hacer un juego protector\nen Play Lab!"
       Alien Defender_2018_markdown_instruction: "** La Idea del proyecto **: hacer un juego protector\nen Play Lab!"
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       AppLab Intro 1 - Build Your Adventure_markdown_instruction: |-
         # Build Your Adventure\r
         \r
@@ -345,7 +350,21 @@ es-MX:
         texto para cuando el usuario haga clic en los diferentes botones. ¡Personaliza los colores
         o si quieres también puedes agregar imágenes!
       AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**Meta:**\nAgregar un segundo botón a la pantalla que dice \"¡Bien!\"\\r\n\\r\n**Cómo:** En\nmodo de diseño arrastrar en un nuevo botón. Posicionar y redimensionarlo. Luego configure su `\" texto \"`,\n`\" color de fondo \"`, y `\" tamaño de fuente \"\\r`\n\\r\n**Muéstrame:** "
-      Bergeron Robot Maze1_markdown_instruction: "¿Puedes ayudarme a atrapar al cerdo travieso? \\r\n\\r\nApila un par de bloques `avanzar` debajo del bloque`cuando se ejecuta` y presiona \"ejecutar\".\n"
+      Bergeron Robot Maze1_markdown_instruction: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \\r\n\\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona \"Ejecutar\". "
+      CSD U3 - conditionals - arrows and gears_markdown_instruction: |-
+        # Engranajes con Condicionales\r
+        \r
+        Vamos a
+        hacer girar los engranajes solo cuando la tecla de espacio se mantiene presionada.\r
+        \r
+        # Hagamos
+        Esto\r
+        \r
+        * Agregar una instrucción `if`.\r
+        * Use `Flecha bajando` como entrada para la
+        declaración if para verificar cuando se presiona la tecla de espacio.\r
+        * Mueve el código que
+        hace que los engranajes giren dentro del `if`.
       CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: |-
         # Alienígena Saltador\r
         \r
@@ -457,6 +476,34 @@ es-MX:
         la tecla de flecha izquierda está presionada hacia abajo.\r
         * Mueva los comandos para mover el
         pez dentro de la declaración if.
+      CSD U3 Input Gears_markdown_instruction: |-
+        # Engranajes con Condicionales\r
+        \r
+        Vamos a
+        hacer girar los engranajes solo cuando la tecla de espacio se mantiene presionada.\r
+        \r
+        # Hagamos
+        Esto\r
+        \r
+        * Agregar una instrucción `if`.\r
+        * Use `Flecha bajando` como entrada para la
+        declaración if para verificar cuando se presiona la tecla de espacio.\r
+        * Mueve el código que
+        hace que los engranajes giren dentro del `if`.
+      CSD U3 Input Gears_2018_markdown_instruction: |-
+        # Engranajes con Condicionales\r
+        \r
+        Vamos a
+        hacer girar los engranajes solo cuando la tecla de espacio se mantiene presionada.\r
+        \r
+        # Hagamos
+        Esto\r
+        \r
+        * Agregar una instrucción `if`.\r
+        * Use `Flecha bajando` como entrada para la
+        declaración if para verificar cuando se presiona la tecla de espacio.\r
+        * Mueve el código que
+        hace que los engranajes giren dentro del `if`.
       CSD U3 Keyboard Input Challenge-2018_markdown_instruction: |-
         # Desafío\r
         _Comprobar
@@ -888,6 +935,8 @@ es-MX:
       Course 4 Play Lab Params 4_markdown_instruction: "Aquí hay una función denominada \"patrulla\". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles."
       Course 4 Play Lab Params 8_markdown_instruction: Use un bloque "cuando el actor toque" para enviar al Perro de regreso al lado superior izquierdo SOLAMENTE si el Perro toca a alguno de los otros actores.
       Course 4 Play Lab Vars 2_markdown_instruction: '¡Esa carrera en ese último problema no fue justa! Cambie la variable de "velocidad_perro" para asegurarse de que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!'
+      Course 4 Play Lab Vars 6_markdown_instruction: "<h5><b>\\r\nEn nuestro juego, ¿Cómo deberíamos marcar los puntos? \\r\n</b></h5> \\r\n<br/>\\r\n\\r\n1. Agrega 1 a tu variable `puntos` cada vez que el perro golpee al gato un un trozo de torta.  <br/>    <br/> \\r\n2. Usa el evento `cuando el actor 2 toque cualquier cosa` para gatillar una actualización a tu puntaje. Puedes incrementar tu variable estableciendo `puntos= punto + 1.`  <br/>   <br/> \\r\n3. Llega a un puntaje de 10 para pasar de nivel.\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**Nota:** ¡Usa la flecha derecha para lanzar torta!\\r\n</h4>"
+      Course 4 Play Lab Vars 9_markdown_instruction: "¡Momento de juego gratis! Aquí están todas las variables con las  que hemos jugado hasta ahora, así como unas pocas más en caso que las quieras. \\r\n\\r\n¡Observa ahora que hay tantos bloques en nuestra caja de herramientas que necesitan ser organizadas Aquí hemos puesto cada pieza en una categoría apropiada. Tómate un tiempo para explorar todo lo que hay disponible. Cuando hayas terminado de navegar, haz un juego o historia usando repeticiones, variables y eventos.  \\r\n\\r\n*Sugerencia: desplázate hacia abajo para ver todos los comandos en el espacio de trabajo.*"
       Course 4 Play Labs For Loops 1_markdown_instruction: Vamos a hacer que el perro diga todos los números desde el 1 hasta el 100. Usa un ciclo y un bloque contador para decir la variable contador cada vez que se ejecute el ciclo.
       Course 4 Playlab For Loops 5b_markdown_instruction: Ajusta el intervalo de los bucles 'for' para que ambos personajes terminen exactamente en el mismo lugar.
       Course 4 SCFP 1_markdown_instruction: Crea una función con parámetros que permita al artista saltar hacia adelante y atrás una cantidad x de píxeles, y además arriba y abajo una cantidad y de píxeles (utilizando números positivos y negativos).
@@ -921,8 +970,7 @@ es-MX:
         Intenta jugar con lo que has creado. ¡Dibuja lo que quieras!\r
         - ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu escalera?\r
         - ¿Qué sucede si haces el patrón de tu diamante más largo o más corto?\r
-        -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r
-        
+        -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?
       Function intro Ryan_markdown_instruction: "Una **función** llamada \"Construye puente\" se encuentra en tu área de trabajo.  ¡Incluye todo el código que necesitas para cruzar el río! \\r\n \\r\nAjusta el pequeño bloque verde en tu área de trabajo dos veces para arreglar el camino y llevar a {currentPlayerName} hasta la antorcha de piedra rojiza [redstone_torch]."
       K-1 Bee Loops 2_markdown_instruction: '¡Utiliza un enlace para moverte y obtener el néctar y hacer miel!'
       K-1 Bee Loops 3_markdown_instruction: '¡Utiliza enlaces para obtener néctar y para hacer miel!'
@@ -1025,8 +1073,11 @@ es-MX:
       Overworld Move to Sheep_markdown_instruction: Añade un segundo comando "avanzar" para llegar a la oveja.
       Overworld Move to Sheep_2018_markdown_instruction: Añade un segundo comando "avanzar" para llegar a la oveja.
       PS copy 2-3 Bee Conditionals 5_markdown_instruction: "Estas flores púrpura cambian!\\r\n\\r\nCada vez que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero no sabrás el número hasta que ejecutes el código! \\r\n\\r\nTen cuidado de no recolectar néctar de una flor púrpura si no tiene. \\r\nPrimero deberás comprobar si el néctar es igual a 1 usando el bloque `si hay néctar`."
+      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_2018_markdown_instruction: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       Testing Quantum Farmer_markdown_instruction: "¡Wow, encontré un agujero realmente profundo! no sé cuántas paleadas de tierra necesita. ¿Puedes escribir un programa que llene hasta que el suelo esté parejo? Sugerencia: trata usando el bucle mientras."
-      course1_artist_loops_challenge2_markdown_instruction: "¡Vamos a jugar un juego!! Dibuja tantas X como tú\npuedas! ¿Puedes obtener 3 en una fila?"
+      conditionals_forvideo_harvester_markdown_instruction: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
+      course1_artist_loops_challenge2_markdown_instruction: '¡Vamos a jugar un juego!! Dibuja tantas X como tú puedas! ¿Puedes obtener 3 en una fila?'
       course1_artist_loops_challenge3_markdown_instruction: |-
         **Tweet!**\r
         \r
@@ -1181,14 +1232,14 @@ es-MX:
         \ r 
         ! [expandable] (https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
-        ## Use el bucle <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.\r
-        \r
+        ## Use el <xml><block
+        type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        ciclo para agregar olas al agua.
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018_markdown_instruction: |-
-        ## Use el bucle <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.\r
-        \r
+        ## Use el <xml><block
+        type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        ciclo para agregar olas al agua.
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_forVideo_markdown_instruction: |-
         ## Use el <xml><block
@@ -1198,7 +1249,7 @@ es-MX:
       courseA_artist_loops8_markdown_instruction: |-
         ## Necesitamos una escalera hasta el bote.\r
         \r
-        ! [expandable] (https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops8_2018_markdown_instruction: |-
         ## Necesitamos una escalera hasta el bote.\r
         \r
@@ -1212,11 +1263,12 @@ es-MX:
         \r
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1_markdown_instruction: |-
-        Puede usar un bucle para dibujar muchas líneas en seguidas.\r
+        Puede usar un ciclo 
+        para dibujar muchas líneas en una fila.\r
         \r
-        ¿Puedes dibujar una casa ? ¡Haz que se vea como a ti te gusta! Intenta buscar patrones que se repiten!\r
+        ¿Puedes dibujar una casa ? ¡Haz que se vea como a ti te gusta! Intente buscar por patrones que se repiten\r
         \r
-        Aquí hay algunas ideas:\r
+        Aquí algunas ideas:\r
         \r
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge1_2018_markdown_instruction: |-
@@ -1233,7 +1285,7 @@ es-MX:
         \r
         *"¿Puedes ayudarme a hacer dos casas de pájaros?"*
       courseA_artist_loops_challenge2a_markdown_instruction: |-
-        *"¡Ayúdame a dejar el campamento listo!*\r
+        *"¡Ayúdame a preparar el campamento!"*\r
         \r
         Usa los bloques en la caja de herramientas para dibujar estas tres tiendas.
       courseA_artist_loops_challenge2a_2018_markdown_instruction: |-
@@ -1260,11 +1312,10 @@ es-MX:
       courseA_bee_seq7_markdown_instruction: '¡Agrega dos bloques para terminar este rompecabezas!'
       courseA_bee_seq8_markdown_instruction: Este laberinto parece familiar... ¿puedes descubrir qué se ve diferente?
       courseA_bee_seq9_markdown_instruction: '¡Esta abeja necesita néctar! ¿Ves un patrón?'
-      courseA_collector_loops1_markdown_instruction: |2
-        **** Juego gratis: ** ¡Esta es Laurel the Adventurer! Muévela y consigue todo el tesoro que puedas.\r
+      courseA_collector_loops1_markdown_instruction: |-
+        **** Juego gratis: ** ¡Esta es Laurel la Aventurera! Muévela y consigue todo el tesoro que puedas.\r
         \r
-        Arrastra
-         bloques al espacio de trabajo e intenta descubrir cómo obtener tesoros. Obtenga al menos un elemento para pasar este nivel.
+        Arrastra los bloques al espacio de trabajo e intenta descifrar cómo obtener tesoros. Obtén al menos un elemento para pasar este nivel.
       courseA_collector_loops12_markdown_instruction: "*\"¡Eureka, consigue tanto tesoro como puedas!\"*  \\r\n(No tienes que obtenerlo todo)"
       courseA_collector_loops12_2018_markdown_instruction: "*\"¡Eureka, consigue tanto tesoro como puedas!\"*  \\r\n(No tienes que obtenerlo todo)"
       courseA_collector_loops1_2018_markdown_instruction: |2
@@ -1280,9 +1331,9 @@ es-MX:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops3_markdown_instruction: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
       courseA_collector_loops3_2018_markdown_instruction: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
-      courseA_collector_loops_challenge1_markdown_instruction: '* "¿Puedes ayudarme a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". ** "¿Puedes ayudarme a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". *'
+      courseA_collector_loops_challenge1_markdown_instruction: '* "¿Puedes ayudarme a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". *'
       courseA_collector_loops_challenge1_2018_markdown_instruction: '* "¿Puedes ayudarme a detectar algunos errores? Sé de qué manera quiero ir, pero no estoy seguro de cuántos pasos dar". *'
-      courseA_collector_preLoops1_markdown_instruction: "¡Esta es Laurel la Aventurera!\n\\r\n\\r\nPulse el botón \"Ejecutar\" para verla caminar hasta el tesoro y lo agarra."
+      courseA_collector_preLoops1_markdown_instruction: "¡Esta es Laurel la Aventurera!\n\\r\n\\r\nPresiona el botón \"Ejecutar\" para verla caminar hasta el tesoro y tomarlo."
       courseA_collector_preLoops2_markdown_instruction: "¡Estupendo! ¡Ahora puedes agregar el código tú mismo!  \\r\n\\r\nColoque un ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) bloque en la parte inferior del programa y haga clic en \"Ejecutar\"!"
       courseA_collector_preLoops3_markdown_instruction: "Para agarrar el tesoro, ¡encaje dos! [](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)\n bloques y uno ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)\n bloque en la parte inferior del programa y haga clic en \"Ejecutar\"!"
       courseA_collector_preLoops7_markdown_instruction: |2
@@ -1324,10 +1375,10 @@ es-MX:
       courseA_harvester_seq7_markdown_instruction: '¡Tienes que moverte en dos direcciones para obtener el maiz! Ayuda a la cosechadora a escoger la dirección correcta.'
       courseA_harvester_seq8_markdown_instruction: '¡Ahora la cosechadora necesita recoger maíz dos veces!'
       courseA_harvester_seq9_markdown_instruction: '¡Agrega dos bloques para terminar este rompecabezas!'
-      courseA_maze_ramp2_2018_markdown_instruction: "¡Junta ambosbloques <xml><block type=\"maze_moveEast\"/></xml> a <xml><block type=\"when_run\"/></xml> para finalizar tu código, luego haz click![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)."
+      courseA_maze_ramp2_2018_markdown_instruction: '¡Junta ambosbloques <xml><block type="maze_moveEast"/></xml> a <xml><block type="when_run"/></xml> para finalizar tu código, luego haz click![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
       courseA_maze_ramp2a_2018_markdown_instruction: '¡Junta ambosbloques <xml><block type="maze_moveEast"/></xml> a <xml><block type="when_run"/></xml> para finalizar tu código, luego haz click![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
       courseA_maze_ramp3_2018_markdown_instruction: "*\"Este cerdo esta erizando mis plumas.\"*\\r\n\\r\nHay un bloque adicional que va a hacer que el pájaro choque.  \\r\nEliminalo removiéndolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas."
-      courseA_maze_ramp3a_2018_markdown_instruction: "¡Toma un <xml><block type=\"maze_moveNorth\"/></xml> de la caja de herramientas y agregalo en la base de los otros bloques para finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)."
+      courseA_maze_ramp3a_2018_markdown_instruction: '¡Toma un <xml><block type="maze_moveNorth"/></xml> de la caja de herramientas y agregalo en la base de los otros bloques para finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
       courseA_maze_ramp4_2018_markdown_instruction: "*\"Traza el camino y llevame hasta el cerdo tonto.\"* \\r\n\\r\n¡Evita el TNT o volarán plumas!"
       courseA_maze_ramp4a_2018_markdown_instruction: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
       courseA_maze_ramp5_2018_markdown_instruction: |-
@@ -1400,7 +1451,7 @@ es-MX:
         ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018_markdown_instruction: '¡Resuelve este nivel y lleva el pájaro al cerdo!'
       courseA_maze_seq9_markdown_instruction: |-
-        **Desafío:** ¡Depura este nivel agregando bloques para llevar al pájaro hasta el cerdo!\r
+        ** Desafío: ** Depura este nivel agregando bloques para llevar al pájaro al cerdo.\r
         \r
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
       courseA_maze_seq9_2018_markdown_instruction: |-
@@ -1410,12 +1461,14 @@ es-MX:
       courseA_maze_seq_challenge1_markdown_instruction: Depura este nivel. Elimina los bloques adicionales y agrega los bloques faltantes. ¡Lleva el pájaro al cerdo!
       courseA_maze_seq_challenge1_2018_markdown_instruction: Depura este nivel. Elimina los bloques adicionales y agrega los bloques faltantes. ¡Lleva el pájaro al cerdo!
       courseA_playLab_events3_markdown_instruction: |2
-        Ayuda a Jorge el Perro a moverse conectando el bloque evento <xml><block type="studio_move">\r
+        Ayuda a Jorge el perro a moverse conectando el <xml><block type="studio_move">\r
             <title name="SPRITE">1</title>\r
-            <title name="DIR">8</title>\r
+            <title
+        name="DIR">8</title>\r
           </block></xml> bloque a la <xml><block type="studio_whenArrow">\r
-            <title name="VALUE">izquierdo</title>\r
-          </block></xml>  que ya está en el área de trabajo.\r
+            <title
+        name="VALUE">izquierdo</title>\r
+          </block></xml> evento bloque que ya está en el área de trabajo.\r
         \r
         ¡Lleva a Jorge a la bandera para terminar este nivel!
       courseA_playLab_events3_2018_markdown_instruction: |2
@@ -1431,12 +1484,13 @@ es-MX:
         ¡Lleva a Jorge a la bandera para terminar este nivel!
       courseA_playLab_events4_markdown_instruction: Ahora, haga que Jorge se mueva hacia la derecha cuando se haga click en la flecha derecha.
       courseA_playLab_events4_2018_markdown_instruction: Ahora, haga que Jorge se mueva hacia la derecha cuando haga clic en el botón de flecha hacia la derecha.
-      courseA_playLab_events5_markdown_instruction: Agregue eventos para que Jorge se mueva hacia arriba y hacia abajo cuando se presionan los botones de flecha hacia arriba y flecha hacia abajo.
+      courseA_playLab_events5_markdown_instruction: Agregue eventos para que Jorge se mueva hacia arriba y hacia abajo cuando se presionan los botones de flecha arriba y flecha abajo.
       courseA_playLab_events5_2018_markdown_instruction: Agregue eventos para que Jorge se mueva hacia arriba y hacia abajo cuando se presionan los botones de flecha arriba y flecha abajo.
-      courseA_playlab_events_challenge1_markdown_instruction: |-
-        ¡Al hacer click en Olive aparecerá Robin!. ¿Puedes escribir código para mostrar al resto de los personajes también?\r
+      courseA_playlab_events_challenge1_markdown_instruction: |2
+        Al hacer clic en Olive
+         aparecerá Robin. ¿Puedes escribir código para mostrar el resto de los personajes también?\r
         \r
-        En este rompecabezas , ¡Asegúrate de hacer click para sugerencias! ¡Las sugerencias te ayudarán a hacer este proyecto paso a paso!\r
+        En este rompecabezas , hacer Asegúrese de hacer clic para consejos ! ¡Los consejos te ayudarán a hacer este proyecto paso a paso!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
@@ -1449,17 +1503,17 @@ es-MX:
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseA_playlab_events_challenge1a_markdown_instruction: |-
-        ¿Dónde se esconden mis amigos? En este juego, al hacer click en mí, ¡se mostrará a mi amigo Olive, el gato! ¡Al hacer click en Olive aparecerá Robin!. ¿Puedes escribir código para mostrar al resto de mis amigos también?\r
+        ¿Dónde se esconden mis amigos? En este juego, al hacer click en mí, ¡se mostrará a mi amigo Olive, el gato! Al hacer clic en Olive aparecerá Robin. ¿Puedes escribir código para mostrar al resto de mis amigos también?\r
         \r
         \r
-        En este rompecabezas , hacer asegúrate de hacer click para las sugerencias! ¡Las sugerencias te ayudarán a hacer este proyecto paso a paso!\r
+        En este rompecabezas , asegúrate de hacer click para sugerencias! ¡Las sugerencias te ayudarán a hacer este proyecto paso a paso!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
       courseA_playlab_events_challenge2_markdown_instruction: |-
-        Da a cada uno algo que hacer cuando haga click en ellos. ¿Qué dirán los animales? ¿Qué más pasará?\r
+        Dé a cada uno algo que hacer cuando haga clic en ellos. ¿Qué dirán los animales? ¿Qué más pasará?\r
         \r
-        En este rompecabezas , asegúrate de hacer click para las sugerencias. ¡Las sugerencias te darán cosas divertidas para probar!\r
+        En este rompecabezas , hacer asegúrese de hacer clic para consejos . ¡Los consejos te darán cosas divertidas para probar!\r
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
@@ -1478,9 +1532,9 @@ es-MX:
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
-      courseB_Scrat_ramp1_2018_markdown_instruction: "Para llevar a Scrat hasta la bellota, encaja el bloque <xml><block type=\"maze_moveEast\"/></xml> block to the bottom of the <xml><block type=\"when_run\"/></xml>, luego presiona ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!"
-      courseB_Scrat_ramp2_2018_markdown_instruction: "Encaja ambos bloques <xml><block type=\"maze_moveEast\"/></xml> al fondo del bloque <xml><block type=\"when_run\"/></xml> para terminar tu código, luego haz click en ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)."
-      courseB_Scrat_ramp3a_2018_markdown_instruction: "¡Toma un <xml><block type=\"maze_moveNorth\"/></xml> de la caja de herramientas y agregalo en la base de los otros bloques para finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png)."
+      courseB_Scrat_ramp1_2018_markdown_instruction: Para llevar a Scrat hasta la bellota, encaja el bloque <xml><block type="maze_moveEast"/></xml> block to the bottom of the <xml><block type="when_run"/></xml>, luego presiona ![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
+      courseB_Scrat_ramp2_2018_markdown_instruction: Encaja ambos bloques <xml><block type="maze_moveEast"/></xml> al fondo del bloque <xml><block type="when_run"/></xml> para terminar tu código, luego haz click en ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseB_Scrat_ramp3a_2018_markdown_instruction: '¡Toma un <xml><block type="maze_moveNorth"/></xml> de la caja de herramientas y agregalo en la base de los otros bloques para finalizar este código, luego haz click ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).'
       courseB_Scrat_ramp4a_2018_markdown_instruction: '¿Puedes descubrir qué bloque necesitas agregar al final de los otros bloques para terminar este código?'
       courseB_Scrat_ramp5a_2018_markdown_instruction: '¡Intenta con este tu mismo!'
       courseB_artist_loops10_markdown_instruction: |-
@@ -1504,10 +1558,11 @@ es-MX:
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseB_artist_loops7_markdown_instruction: "**Desafío:** ¡Es un jardín escondido! Vamos a recorrerlo."
+      courseB_artist_loops7_2018_markdown_instruction: "**Desafío:** ¡Es un jardín escondido! Vamos a recorrerlo."
       courseB_artist_loops_challenge1_markdown_instruction: '*"Es momento de lanzar el dado! ¿Puedes ayudarme a dibujar estos?"*'
       courseB_artist_loops_challenge1_2018_markdown_instruction: '*"Es momento de lanzar el dado! ¿Puedes ayudarme a dibujar estos?"*'
-      courseB_artist_loops_challenge2_markdown_instruction: Dibuja tantas Xs como puedas. ¿Puedes obtener 3 seguidas?
-      courseB_artist_loops_challenge2_2018_markdown_instruction: Dibuja tantas Xs como puedas. ¿Puedes obtener 3 seguidas?
+      courseB_artist_loops_challenge2_markdown_instruction: Dibuja tantas X como puedas. ¿Puedes obtener 3 en una fila?
+      courseB_artist_loops_challenge2_2018_markdown_instruction: Dibuja tantas X como puedas. ¿Puedes obtener 3 en una fila?
       courseB_collector_loops1_markdown_instruction: |-
         **** Juego gratis: ** ¡Esta es Laurel la Aventurera! Muévela y consigue todo el tesoro que puedas.\r
         \r
@@ -1523,8 +1578,9 @@ es-MX:
         \r
         \r
         Get all four piles to pass this level.
-      courseB_collector_loops3_markdown_instruction: '¿Cómo puede Laurel obtener los cinco montones de tesoros usando sólo el bloque <xml><block type="maze_moveEast"/></xml>?'
-      courseB_collector_loops3_2018_markdown_instruction: '¿Cómo puede Laurel obtener los cinco montones de tesoros usando sólo el bloque <xml><block type="maze_moveEast"/></xml>?'
+      courseB_collector_loops3_markdown_instruction: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
+      courseB_collector_loops3_2018_markdown_instruction: "¿Cómo puede obtener todos Laurel cinco montones de tesoro usando solamente un <xml><block type=\"maze_moveEast\"/></xml>\nbloque?"
+      courseB_collector_loops3_predict1_markdown_instruction: '¿Cómo puede Laurel recoger las cinco pilas de oro usando solo un bloque `E ->`?'
       courseB_collector_loops_challenge2a_markdown_instruction: |-
         *"¡Vamos a buscar el tesoro!"*\r
         \r
@@ -1533,6 +1589,7 @@ es-MX:
         *"¡Vamos a buscar el tesoro!"*\r
         \r
         Ayuda a Laurel obtener al menos **5** partes del tesoro para finalizar este rompecabezas.
+      courseB_collector_prog3_markdown_instruction: '¿Cómo puede Laurel recoger las cinco pilas de oro usando solo un bloque `E ->`?'
       courseB_iceage_loops1_markdown_instruction: '¡Ayuda a Scrat sobre el hielo resbaladizo para llegar a la bellota!'
       courseB_iceage_loops10_markdown_instruction: "¡Ayuda a Scrat a llegar a la\n bellota!"
       courseB_iceage_loops11_markdown_instruction: '¡Ayuda a Scrat a llegar a la bellota!'
@@ -1568,9 +1625,9 @@ es-MX:
         \r
         Para hacerlo, necesitarás agregar eventos para ayudar al cabellro a moverse hacia arriba, abajo, izquierda y derecha.
       courseB_playlab_events6_2018_markdown_instruction: |-
-        ¡Ayuda a tu caballero a conseguir todas las banderas!
-        
-        Para ello, necesitarás añadir eventos para que ayuden al caballero a moverse hacia arriba, hacia abajo, a la izquierda y a la derecha.
+        ¡Ayuda a tu caballero a obtener todas las banderas!\r
+        \r
+        Para hacerlo, necesitarás agregar eventos para ayudar al cabellro a moverse hacia arriba, abajo, izquierda y derecha.
       courseB_playlab_events7_markdown_instruction: "¡Haz que el juego sea divertido haciendo que el caballero se desvanezca cuando corre hacia el dragón en su camino a obtener las banderas! \\r\n\\r\nAgrega un sonido cuando choquen para hacerlo más real.\\r\n\\r\nVisita todos los objetivos, luego corre hacia el dragón para pasar de nivel."
       courseB_playlab_events7_2018_markdown_instruction: "¡Haz que el juego sea divertido haciendo que el caballero se desvanezca cuando corre hacia el dragón en su camino a obtener las banderas! \\r\n\\r\nAgrega un sonido cuando choquen para hacerlo más real.\\r\n\\r\nVisita todos los objetivos, luego corre hacia el dragón para pasar de nivel."
       courseB_playlab_events_challenge1_markdown_instruction: "¡Es momento para la Gran Carrera Aninmal! Haz que los animales se muevan hacia abajo cuando presiones `▼`. \\r\n\\r\n¿uién será el más feloz?"
@@ -1841,9 +1898,9 @@ es-MX:
       courseC_flappy_events9_2018_markdown_instruction: Para mezclar las cosas, en lugar de finalizar el juego cuando Flappy golpee un obstáculo, trata de volver el puntaje a 0.
       courseC_harvester_loops1_markdown_instruction: "Los bucles se puede usar para repetir más que movimientos.  \\r\n\\r\nUsa los bucles para recolectar las cuatro calabazas."
       courseC_harvester_loops10_markdown_instruction: Recoge todo el maiz y todas las calabazas.
-      courseC_harvester_loops10_2018_markdown_instruction: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops10_2018_markdown_instruction: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11_markdown_instruction: Recoge todo el maiz y todas las calabazas.
-      courseC_harvester_loops11_2018_markdown_instruction: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops11_2018_markdown_instruction: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops1_2018_markdown_instruction: "Los bucles se puede usar para repetir más que movimientos.  \\r\n\\r\nUsa los bucles para recolectar las cuatro calabazas."
       courseC_harvester_loops2_markdown_instruction: '¿Puedes combinar dos bucles diferentes para moverte hacia las calabazas, luego recogerlas todas?'
       courseC_harvester_loops2_2018_markdown_instruction: '¿Puedes combinar dos bucles diferentes para moverte hacia las calabazas, luego recogerlas todas?'
@@ -1858,11 +1915,11 @@ es-MX:
         \r
         Recoge todo el maíz y las calabazas.
       courseC_harvester_loops5_markdown_instruction: Recoge todo el maíz y todas las calabazas.
-      courseC_harvester_loops5_2018_markdown_instruction: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops5_2018_markdown_instruction: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops6_markdown_instruction: Recoge todo el maíz y todas las calabazas.
-      courseC_harvester_loops6_2018_markdown_instruction: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops6_2018_markdown_instruction: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops7_markdown_instruction: Recoge todo el maíz y todas las calabazas.
-      courseC_harvester_loops7_2018_markdown_instruction: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops7_2018_markdown_instruction: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops8_markdown_instruction: |-
         **Desafío:** Recoge todo el maíz y todas las calabazas.\r
         \r
@@ -1872,11 +1929,11 @@ es-MX:
         \r
         Puedes completar este desafío de la forma que quieras, ¡pero te tomará ya sea o mucho trabajo o te dará mucho que pensar!
       courseC_harvester_loops9_markdown_instruction: Recoge todo el maíz y todas las calabazas.
-      courseC_harvester_loops9_2018_markdown_instruction: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops9_2018_markdown_instruction: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops_challenge1_markdown_instruction: Recoge todo el maíz.
       courseC_harvester_loops_challenge2_markdown_instruction: Recoge toda la lechuga. ¡Evita los áboles y los campos!
       courseC_harvester_loops_challenge2_2018_markdown_instruction: Recoge toda la lechuga. ¡Evita los áboles y los campos!
-      courseC_harvester_loops_forVid_markdown_instruction: Recoge todo el maiz y todas las calabazas.
+      courseC_harvester_loops_forVid_markdown_instruction: Recoge todo el maíz y todas las calabazas.
       courseC_maze_debugging1_markdown_instruction: "¡Este código no está del todo correcto!  \\r\n\\r\nArregla el código para ayudar a Scrat a llegar a la bellota."
       courseC_maze_debugging1_2018_markdown_instruction: "¡Este código no está del todo correcto!  \\r\n\\r\nArregla el código para ayudar a Scrat a llegar a la bellota."
       courseC_maze_debugging3_markdown_instruction: "Algo no está bien. \\r\n\\r\n¡Remueve los bloques para llevar a Scrat a la bellota!"
@@ -1905,6 +1962,7 @@ es-MX:
       courseC_maze_loops8_markdown_instruction: "**Desafío:** Combina ideas de los últmos rompecabezas para completar este nivel."
       courseC_maze_loops_challenge2_markdown_instruction: Vamos a cazar tesoros - ¡usando bucles! Ayuda al coleccionista depurando este código. ¡Obtén todo el tesoro!
       courseC_maze_programming1_markdown_instruction: Para este rompecabezas, arrastra todos los bloques para juntarlos y haz click en "Ejecutar" ¡para verlo funcionar!
+      courseC_maze_programming1_2018_markdown_instruction: Para este rompecabezas, arrastra todos los bloques para juntarlos y haz click en "Ejecutar" ¡para verlo funcionar!
       courseC_maze_programming2_markdown_instruction: Arrastra un bloque <xml><block type="maze_moveForward"/></xml> extra desde la caja de herramientas para finalizar tu código.
       courseC_maze_programming2_2018_markdown_instruction: Arrastra un bloque <xml><block type="maze_moveForward"/></xml> extra desde la caja de herramientas para finalizar tu código.
       courseC_maze_programming3_markdown_instruction: "*\"Este cerdo está erizando mis plumas.\"*\\r\n\\r\nHay un bloque extra que producirá que el pájaro choque.  \\r\nElimínalo desenganchándolo de los bloques grises y arrastrándolo de vuelta a la caja de herramientas."
@@ -2042,8 +2100,7 @@ es-MX:
         Intenta jugar con lo que has creado. ¡Dibuja lo que quieras!\r
         - ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu escalera?\r
         - ¿Qué sucede si haces el patrón de tu diamante más largo o más corto?\r
-        -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r
-        
+        -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?
       courseD_artist_1_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hola, Soy Elsa de Arendelle, ayúdame a dibiujar una forma.”_\\r\n\\r\nDibuja un hexagón con lados de 50 pixeles de largo.  \\r\n\\r\n---\\r\n\\r\nPara dibujar un hexagón, necesitaras: \\r\n- moverte hacia adelante **50** pixeles\\r\n- girar a la derecha en **60** grados\\r\n- repetir un total de **6** veces\\r\n\\r\n"
       courseD_artist_2_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“¡Buen trabajo!”_\\r\n\\r\nDespués que tu hexagón, gira a la derecha en **60** grados, luego dibuja una línea que sea de **150** pixeles de largo.   \\r\n\\r\nFinaliza poniendo a Elsa al centro del área de juego, uando el bloque <xml><block type=\"jump_to\"><title name=\"VALUE\">middle center</title></block></xml>.\\r\n\\r\n\\r\n"
       courseD_artist_3_2018_markdown_instruction: |+
@@ -2084,8 +2141,7 @@ es-MX:
         Intenta jugar con lo que has creado. ¡Dibuja lo que quieras!\r
         - ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu escalera?\r
         - ¿Qué sucede si haces el patrón de tu diamante más largo o más corto?\r
-        -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r
-        
+        -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?
       courseD_artist_binary1_markdown_instruction: |-
         Te hemos proporcionado con una grilla de "pixeles" que puedes recorrer y crear diseños sólo encendiando algunos cuadrados.\r
         \r
@@ -2272,8 +2328,7 @@ es-MX:
         Intenta jugar con lo que has creado. ¡Dibuja lo que quieras!\r
         - ¿Qué sucede si usas dos ángulos diferentes en el patrón del escalón de tu escalera?\r
         - ¿Qué sucede si haces el patrón de tu diamante más largo o más corto?\r
-        -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r
-        
+        -¿Cómo luce al dibujar dos copos de nieve uno encima del otro?\r?
       courseD_artist_project4a_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Ahora, ¿Qué deberíamos hacer? Exploremos y creemos nuestro propio wonderland invernal!"_\r
         \r
@@ -2422,6 +2477,7 @@ es-MX:
         \r
         Lleva al zombie hasta el girasol sólo usando los bloques disponibles.
       courseD_bee_nestedLoops7_markdown_instruction: "**Desafío:** Descifra cómo obtener todo el néctar usando sólo los bloques disponibles."
+      courseD_bee_nestedLoops7_2018_markdown_instruction: "**Desafío:** Descifra cómo obtener todo el néctar usando sólo los bloques disponibles."
       courseD_bee_nestedLoops8_markdown_instruction: 'Recolecta todo el néctar de cada flor y haz miel en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops8_2018_markdown_instruction: 'Recolecta todo el néctar de cada flor y haz miel en cada panel. Utiliza un bucle anidado. '
       courseD_bee_nestedLoops9_markdown_instruction: Haz toda la miel.
@@ -2652,8 +2708,13 @@ es-MX:
         \r
         ¿Puedes descifrar cómo recoger la calabaza?  Asegúrate de recoger todo el maíz a lo largo del camino!
       courseD_farmer_condLoops7_markdown_instruction: "**Desafío:** Reoge todo el máiz y las lechugas, luego recoge la calabaza."
+      courseD_farmer_condLoops7_2018_markdown_instruction: "**Desafío:** Reoge todo el máiz y las lechugas, luego recoge la calabaza."
       courseD_farmer_condLoops8_markdown_instruction: Recoge todo el maíz y todas las lechugas, luego recoge la calabaza.
+      courseD_farmer_condLoops8_2018_markdown_instruction: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       courseD_farmer_condLoops9_markdown_instruction: Recoge todo el maíz y todas las lechugas, luego recoge la calabaza.
+      courseD_farmer_condLoops9_2018_markdown_instruction: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
+      courseD_farmer_condLoops9_predict1_markdown_instruction: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
+      courseD_farmer_condLoops9_predict1_2018_markdown_instruction: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       courseD_farmer_condLoops_challenge1_markdown_instruction: "Las calabazas marcan el lugar donde deberías 'girar a la derecha'. De lo contrario sigue derecho hacia adelante, pero recuerda recoger todas las lechugas o el maíz a lo largo del camino. \\r\n\\r\n**Cada cultivo ocuto tiene sólo un maíz o una lechuga.**"
       courseD_farmer_condLoops_challenge1_2018_markdown_instruction: "Las calabazas marcan el lugar donde deberías 'girar a la derecha'. De lo contrario sigue derecho hacia adelante, pero recuerda recoger todas las lechugas o el maíz a lo largo del camino. \\r\n\\r\n**Cada cultivo ocuto tiene sólo un maíz o una lechuga.**"
       courseD_farmer_condLoops_challenge2_markdown_instruction: "*\"¡Es un laberinto de vegatales variados!\"* \\r\n\\r\nGira a la derecha en las calabazas, gira a la derecha en las lechugas. Recoge todo para completar el nivel."
@@ -2663,7 +2724,7 @@ es-MX:
       courseD_farmer_conditionals3_markdown_instruction: |-
         *"Muévete al montón de tierra y dime cuántas paladas remover."*\r
         \r
-        Usa la menor cantidad de bloques posible para resolver el rompecabezas.
+        Usala menor cantidad de bloques posible para resolver el rompecabezas.
       courseD_farmer_conditionals4_markdown_instruction: |-
         *"¡No se cuánta tierra hay en este montón!"*\r
         \r
@@ -2673,6 +2734,7 @@ es-MX:
       courseD_farmer_until_challenge2_markdown_instruction: Usa los bloques `Sí/más` para seguir el camino con curvas. En cada esquina, usa el bloque 'remover 1' en un bucle para limpiar los montones.
       courseD_farmer_until_challenge2_2018_markdown_instruction: Usa los bloques `Sí/más` para seguir el camino con curvas. En cada esquina, usa el bloque 'remover 1' en un bucle para limpiar los montones.
       courseD_farmer_while1_markdown_instruction: "*\"Hola, soy un agricultor. ¡Necesito tu ayuda para aplanar el campo de mi granja para que quede lista para plantar!\"*  \n\\r\n\\r\nMuévete al montón de tierra y usa el bloque 'remover' para removerla."
+      courseD_farmer_while1_2018_markdown_instruction: "*\"Hola, soy un agricultor. ¡Necesito tu ayuda para aplanar el campo de mi granja para que quede lista para plantar!\"*  \n\\r\n\\r\nMuévete al montón de tierra y usa el bloque 'remover' para removerla."
       courseD_farmer_while3_markdown_instruction: |-
         *"Muévete al montón de tierra y dime cuántas paladas remover."*\r
         \r
@@ -2680,13 +2742,27 @@ es-MX:
       courseD_farmer_while3_2018_markdown_instruction: |-
         *"Muévete al montón de tierra y dime cuántas paladas remover."*\r
         \r
-        Usa la menor cantidad de bloques posible para resolver el rompecabezas.
+        Usala menor cantidad de bloques posible para resolver el rompecabezas.
       courseD_farmer_while4_markdown_instruction: |-
         *"¡No se cuánta tierra hay en este montón!"*\r
         \r
         Ayuda al agricultor a quitar el montón completo usando un bucle 'mientras'.
+      courseD_farmer_while4_2018_markdown_instruction: |-
+        *"¡No se cuánta tierra hay en este montón!"*\r
+        \r
+        Ayuda al agricultor a quitar el montón completo usando un bucle 'mientras'.
+      courseD_farmer_while4_predict1_markdown_instruction: |-
+        *"¡No se cuánta tierra hay en este montón!"*\r
+        \r
+        Ayuda al agricultor a quitar el montón completo usando un bucle 'mientras'.
+      courseD_farmer_while4_predict1_2018_markdown_instruction: |-
+        *"¡No se cuánta tierra hay en este montón!"*\r
+        \r
+        Ayuda al agricultor a quitar el montón completo usando un bucle 'mientras'.
       courseD_farmer_while6_markdown_instruction: "¡Mra todos esos hoyos!  Cada uno necesita una cantidad diferente de tierra.   \\r\n\\r\nPuedes usar el bucle 'mientras' ¡para llenarlos todos facílmente!"
+      courseD_farmer_while6_2018_markdown_instruction: "¡Mra todos esos hoyos!  Cada uno necesita una cantidad diferente de tierra.   \\r\n\\r\nPuedes usar el bucle 'mientras' ¡para llenarlos todos facílmente!"
       courseD_farmer_while8_markdown_instruction: "**Desafío:** Llena todos estos hoyos usando lla menor cantidad de bloques posible. "
+      courseD_farmer_while8_2018_markdown_instruction: "**Desafío:** Llena todos estos hoyos usando lla menor cantidad de bloques posible. "
       courseD_farmer_while_challenge1_markdown_instruction: Llena todos los hoyos y remueve todos los montones.
       courseD_farmer_while_challenge1_2018_markdown_instruction: Llena todos los hoyos y remueve todos los montones.
       courseD_farmer_while_challenge2_markdown_instruction: Llena todos los hoyos y remueve todos los montones.
@@ -2695,7 +2771,7 @@ es-MX:
       courseD_harvester_nested_loops_challenge1_markdown_instruction: 'Llena todos los hoyos y remueve todos los montones'
       courseD_harvester_nested_loops_challenge1_2018_markdown_instruction: 'Llena todos los hoyos y remueve todos los montones'
       courseD_iceage_loops1_markdown_instruction: '¡Ayuda a Scrat sobre el hielo resbaladizo para llegar a la bellota!'
-      courseD_iceage_loops10_markdown_instruction: '¡Ayuda a Scrat a llegar a la bellota!'
+      courseD_iceage_loops10_markdown_instruction: "¡Ayuda a Scrat a llegar a la\n bellota!"
       courseD_iceage_loops11_markdown_instruction: '¡Ayuda a Scrat a llegar a la bellota!'
       courseD_iceage_loops12_markdown_instruction: '¡Llega a la bellota de cualquier forma que puedas!'
       courseD_iceage_loops2_markdown_instruction: |2
@@ -2727,10 +2803,10 @@ es-MX:
         *"¡Debo comer girasol!"*\r
         \r
         Lleva al zombie hasta el girasol sólo usando los bloques disponibles.
-      courseD_maze_ramp1_markdown_instruction: Para este rompecabezas, encaja todos los bloques haz clic en "Ejecutar" y ¡ve que sucede!
-      courseD_maze_ramp1_2018_markdown_instruction: Para este rompecabezas, encaja todos los bloques haz clic en "Ejecutar" y ¡ve que sucede!
-      courseD_maze_ramp2_markdown_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
-      courseD_maze_ramp2_2018_markdown_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
+      courseD_maze_ramp1_markdown_instruction: Para este rompecabezas, encaja todos los bloques juntos y haz clic en "Ejecutar" ¡para verlos funcionar!
+      courseD_maze_ramp1_2018_markdown_instruction: Para este rompecabezas, encaja todos los bloques juntos y haz clic en "Ejecutar" ¡para verlos funcionar!
+      courseD_maze_ramp2_markdown_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
+      courseD_maze_ramp2_2018_markdown_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
       courseD_maze_ramp3_markdown_instruction: "*\"Este cerdo esta erizando mis plumas.\"*\\r\n\\r\nHay un bloque adicional que va a hacer que el pájaro choque.  \\r\nEliminalo removiéndolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas."
       courseD_maze_ramp3_2018_markdown_instruction: "*\"Este cerdo esta erizando mis plumas.\"*\\r\n\\r\nHay un bloque adicional que va a hacer que el pájaro choque.  \\r\nEliminalo removiéndolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas."
       courseD_maze_ramp4_markdown_instruction: "*\"Traza el camino y llevame hasta el cerdo tonto.\"* \\r\n\\r\n¡Evita el TNT o volarán plumas!"
@@ -2774,7 +2850,7 @@ es-MX:
         \r
         ¿Puedes llevar al zombie hasta el girasol usando sólo los bloues que están disponibles?
       courseD_maze_until5_markdown_instruction: Usa el bloque 'sí' para ayudar al zombie a decidir cuándo girar, luego lleva al zombie hasta el girasol.
-      courseD_maze_until5_2018_markdown_instruction: Usa el bloque si/más para ayudar al zombie a decidir cuándo girar, luego lleva al zombie hasta el girasol.
+      courseD_maze_until5_2018_markdown_instruction: Usa el bloque 'sí' para ayudar al zombie a decidir cuándo girar, luego lleva al zombie hasta el girasol.
       courseD_maze_until6_markdown_instruction: Ayuda al zombie a llegar al girasol.
       courseD_maze_until6_2018_markdown_instruction: Ayuda al zombie a llegar al girasol.
       courseD_maze_until7_markdown_instruction: Ayuda al zombie a llegar al girasol.
@@ -2782,7 +2858,7 @@ es-MX:
       courseD_maze_until8_markdown_instruction: Ayuda al zombie a llegar al girasol.
       courseD_maze_until8_2018_markdown_instruction: Ayuda al zombie a llegar al girasol.
       courseD_maze_until9_markdown_instruction: "**Desafío:** Evita los mordiscos y ayuda al zombie a llegar al girasol."
-      courseD_maze_until9_2018_markdown_instruction: "**Desafío:** Evita las mordidas y ayuda al zombie a llegar hasta el girasol."
+      courseD_maze_until9_2018_markdown_instruction: "**Desafío:** Evita los mordiscos y ayuda al zombie a llegar al girasol."
       courseD_maze_until_challenge_markdown_instruction: |-
         Sin pistas, sólo desafío. Lleva al zombie hasta el girasol.\r
         Apuntar instrucciones
@@ -2842,9 +2918,9 @@ es-MX:
       courseD_playLab_cond6a_2018_markdown_instruction: "¡No queremos que el pirata se qude en la 'zona segura' por mucho tiempo!  \\r\n\\r\nAgrega el código de afirmación `sí` debajo para que el pirata (actor 1) statement below so that if the pirate (actor 1) esté en la zona segura, el programa esperará un segundo, luego deducirá un punto mientras permanezca debajo de la línea de pulpos."
       courseD_playLab_cond6cloneForTest_markdown_instruction: '¿Podemos hacer que esto funcione?'
       courseD_scrat_ramp1_markdown_instruction: Para este rompecabezas, encaja todos los bloques juntos y haz clic en "Ejecutar" ¡para verlos funcionar!
-      courseD_scrat_ramp1_2018_markdown_instruction: Para este rompecabezas, encaja todos los bloques haz clic en "Ejecutar" y ¡ve que sucede!
+      courseD_scrat_ramp1_2018_markdown_instruction: Para este rompecabezas, encaja todos los bloques juntos y haz clic en "Ejecutar" ¡para verlos funcionar!
       courseD_scrat_ramp2_markdown_instruction: Arrastra un bloque adicional 'mover hacia adelante' desde la caja de herramientas, luego adjunta todos los bloques 'cuand ejecutar' a tu código final.
-      courseD_scrat_ramp2_2018_markdown_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
+      courseD_scrat_ramp2_2018_markdown_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
       courseD_scrat_ramp3_markdown_instruction: "Hay un bloue extra que va a causar que Scrat se estrelle. \\r\nEliminalo desconectándolo de los otros bloques y arrastrándolo a la caja de herramientas."
       courseD_scrat_ramp3_2018_markdown_instruction: "Hay un bloue extra que va a causar que Scrat se estrelle. \\r\nEliminalo desconectándolo de los otros bloques y arrastrándolo a la caja de herramientas."
       courseD_scrat_ramp4_markdown_instruction: '¡Evita el hielo trizado para mantener seguro a Scrat!'
@@ -3016,7 +3092,7 @@ es-MX:
       courseE_bee_functions10_markdown_instruction: "*\"¡Muestrame la miel!\"*\\r\n\\r\nRexuelve este rompecabezas creando una función que provoque que la abeja: \\r\n- Gire hacia la rama en el camino\\r\n- Se mueva hacia adelante\\r\n- Haga toda la miel\\r\n- Vuelva al camino principal \\r\n- Vuelva ala dirección original"
       courseE_bee_functions10_2018_markdown_instruction: "*\"¡Muestrame la miel!\"*\\r\n\\r\nRexuelve este rompecabezas creando una función que provoque que la abeja: \\r\n- Gire hacia la rama en el camino\\r\n- Se mueva hacia adelante\\r\n- Haga toda la miel\\r\n- Vuelva al camino principal \\r\n- Vuelva ala dirección original"
       courseE_bee_functions2_markdown_instruction: "Las funciones son bloques de códigos que realizan una tarea. \\r\n\\r\nUsa la función 'llegar al néctar' para recoger el néctar de cada flor."
-      courseE_bee_functions2_2018_markdown_instruction: "Las funciones son bloques de código que realizan una tarea. \\r\n\\r\nUsa la función `obtener 2 néctar` para recolectar el néctar de cada flor."
+      courseE_bee_functions2_2018_markdown_instruction: "Las funciones son bloques de códigos que realizan una tarea. \\r\n\\r\nUsa la función 'llegar al néctar' para recoger el néctar de cada flor."
       courseE_bee_functions3_markdown_instruction: Las funciones son bloques de código que realizan una tarea. Utilice la función "get 5" para obtener 5 néctares a cada momento. Asegúrese de utilizar un bucle para obtener un recuento ideal de bloque, también.
       courseE_bee_functions3_2018_markdown_instruction: Las funciones son bloques de código que realizan una tarea. Utilice la función "get 5" para obtener 5 néctares a cada momento. Asegúrese de utilizar un bucle para obtener un recuento ideal de bloque, también.
       courseE_bee_functions4_markdown_instruction: "La función 'mover y llegar al néctar' gira a la abeja, recoge néctar y luego retorna a la abeja donde comenzó. \\r\n\\r\nUsa la función 'mover y llegar al néctar' para recoger el néctar."
@@ -3167,12 +3243,16 @@ es-MX:
         \r
         Este nivel te ayudará a practicar con el bloque 'repetir hasta'. Recoge todo el maíz y las lechugas hasta que llegues a la calabaza. (¡No te olvides de recoger la clabaza también!)
       courseE_farmer_ramp16_markdown_instruction: "**Desafío:** Resuelve este rompecabezas con la menor cantidad de bloques."
+      courseE_maze_ramp1_markdown_instruction: Para este rompecabezas, arrastra todos los bloques para juntarlos y haz click en "Ejecutar" ¡para verlo funcionar!
       courseE_maze_ramp13_markdown_instruction: |-
         ¡Momento para un último romrecabezas para unirlos todos!\r
         \r
         Usa bucles anidados para llevar al pájaro hasta el cerdo.
+      courseE_maze_ramp1_2018_markdown_instruction: Para este rompecabezas, arrastra todos los bloques para juntarlos y haz click en "Ejecutar" ¡para verlo funcionar!
       courseE_maze_ramp2_markdown_instruction: Arrastra un bloque adicional 'mover hacia adelante' desde la caja de herramientas, luego argega todos los bloques al 'cuando ejecuta' para finalizar tu código.
-      courseE_maze_ramp2_2018_markdown_instruction: Arrastra un bloque `mover hacia adelante` extra desde la caja de herramientas, luego adjunta todos los bloques al `cuando ejecute` para finalizar tu código.
+      courseE_maze_ramp2_2018_markdown_instruction: Arrastra un bloque 'mover hacia adelante' extra desde la caja de herramientas, luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
+      courseE_maze_ramp3_markdown_instruction: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
+      courseE_maze_ramp3_2018_markdown_instruction: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
       courseE_maze_ramp4_markdown_instruction: "*\"Traza el camino y llevame hasta el cerdo tonto.\"* \\r\n\\r\n¡Evita el TNT o volarán plumas!"
       courseE_maze_ramp4_2018_markdown_instruction: "*\"Traza el camino y llevame hasta el cerdo tonto.\"* \\r\n\\r\n¡Evita el TNT o volarán plumas!"
       courseE_maze_ramp5_markdown_instruction: |-
@@ -3234,6 +3314,7 @@ es-MX:
       courseE_playLab_scaffold5_markdown_instruction: '¡Gran trabajo! Tienes todos los componentes básicos de un juego funcionando. Ahora gasta algún tiemp asegurándote que el juego funciones de la forma que quieres. Incluye una forma de ganar o perder tu juego, luego juega hasta que necesites una de esa condiciones.'
       courseE_playLab_scaffold5_2018_markdown_instruction: '¡Gran trabajo! Tienes todos los componentes básicos de un juego funcionando. Ahora gasta algún tiemp asegurándote que el juego funciones de la forma que quieres. Incluye una forma de ganar o perder tu juego, luego juega hasta que necesites una de esa condiciones.'
       courseE_playLab_scaffold6_markdown_instruction: '¡Has terminado! ¡Ahora puedes jugar tu juego o compartirlo cin tus amigos y compañeros!'
+      courseE_playLab_scaffold6_2018_markdown_instruction: '¡Has terminado! Ahora puedes jugar tu juego o compartirlo con tus amigos o compañeros!'
       courseE_playlab_challenge2_markdown_instruction: |-
         ¿Puedes descifrar cómo funciona esta aplicación 'Adivino"? Inenta agregar alguna de las siguientes características al juego:\r
         \r
@@ -3329,6 +3410,11 @@ es-MX:
         \r
         - El lado más pequeño en el centro de este cuadrado es de 50 pixeles de largo\r
         - el lado más largo fuera de este espiral es de 200 pixeles de largo
+      courseF_artist_fwp7_2018_markdown_instruction: |-
+        Ermina la función 'dibuajarorde en espiral' para pedir una longitud mínima para el centro del espiral.\r
+        \r
+        - El lado más pequeño en el centro de este cuadrado es de 50 pixeles de largo\r
+        - el lado más largo fuera de este espiral es de 200 pixeles de largo
       courseF_artist_fwp8_markdown_instruction: |-
         ¡Juego libre! ¿Puedes descifrar cómo hacer este dinujo usando la función que creaste?\r
         \r
@@ -3386,7 +3472,7 @@ es-MX:
       courseF_artist_variables3_markdown_instruction: "Antes que las cosas se pongan díficiles, ¿Puedes mover la longitud de 50 a una variable para que así podamos usarla en el próximo rompecabezas?  \\r\n\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
       courseF_artist_variables3_2018_markdown_instruction: "Antes que las cosas se pongan díficiles, ¿Puedes mover la longitud de 50 a una variable para que así podamos usarla en el próximo rompecabezas?  \\r\n\\r\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
       courseF_artist_variables4_markdown_instruction: Ahora, usa la variable 'longitud' para que el artista salte hacia adelante y hacia abajo a lo largo de la 'longitud' de pixeles entre los triángulos.
-      courseF_artist_variables4_2018_markdown_instruction: Ahora, usa la variable 'longitud' para hacer qe el artista salte haciia adelante y hacia abajo por la 'longitud' en pixeles entre los triángulos.
+      courseF_artist_variables4_2018_markdown_instruction: Ahora usa la variable 'longitud' para hacer que el artista salte hacia adelante y hacia abajo en 'longitud' de los pixeles entre los triángulos.
       courseF_artist_variables6_markdown_instruction: "**¡Ups!**  \\r\n\\r\nRealmente necesitamos que los triángulos sean de 60 pixeles de ancho, con saltos de 60 pixeles.  \\r\n\\r\n¿No estás feliz de estar usando una variable?"
       courseF_artist_variables6_2018_markdown_instruction: "**¡Ups!**  \\r\n\\r\nRealmente necesitamos que los triángulos sean de 60 pixeles de ancho, con saltos de 60 pixeles.  \\r\n\\r\n¿No estás feliz de estar usando una variable?"
       courseF_artist_variables6a_markdown_instruction: Usa lo que has aprendido para construir este diseño donde los cuadrados tengan lados de 80 pixeles y el artista salte 80 pixeles por sobre y por debajo entre cada uno.
@@ -3450,7 +3536,7 @@ es-MX:
       courseF_artist_variables9_markdown_instruction: "¡Tiempo de hacer algo de arte!  \\r\n\\r\n¡Ve lo que sucede cuando repites el código del último rompecabezas **30** veces en lugar de sólo 3!\\r\n\\r\nSiente la libertad de hacer tus líneas de cualquier color o patrón para algo de diversión extra."
       courseF_artist_variables9_2018_markdown_instruction: "¡Tiempo de hacer algo de arte!  \\r\n\\r\n¡Ve lo que sucede cuando repites el código del último rompecabezas **30** veces en lugar de sólo 3!\\r\n\\r\nSiente la libertad de hacer tus líneas de cualquier color o patrón para algo de diversión extra."
       courseF_artist_variablesFP_markdown_instruction: "**Juego libre:** Toma lo que has aprendido y haz tu propio dibujo. \\r\n\\r\n¿Cómo puedes usar las variables con os cuadrados, los pentágono o los hexágonos?"
-      courseF_artist_variablesFP_2018_markdown_instruction: "**Juego libre:** Usa lo que has aprendido y haz tu popio dibujo. \n\n¿Cómo puedes usar las variables con cuadrados, pentágonos o hexágonos?"
+      courseF_artist_variablesFP_2018_markdown_instruction: "**Juego libre:** Toma lo que has aprendido y haz tu propio dibujo. \\r\n\\r\n¿Cómo puedes usar las variables con cuadrados, pentágonos o hexágonos?"
       courseF_artist_variables_10_markdown_instruction: "Aquí está tu código del último rompecabezas. Intenta editar la variable de otras formas.  \\r\n-  ¿Qué sucede si comienzas con una 'longitud' de menos de 150? \\r\n-  ¿Qué pasa si multiplicamos tu variable por 1.25 a través cada vez\\r\n-? Cuál será tu código si giras 119 grados?"
       courseF_artist_variables_2_markdown_instruction: "Ahra usa oro bucle para dibujar tres de esos triángulos uno al lado del otro. \\r\n\\r\nPuede anidar el código dentro del interior de tu último rompecabezas."
       courseF_artist_variables_3_markdown_instruction: "Antes que las cosas se pongan dífíciles, ¿puedes mover la longitud de 50 hacia una variable y asi poder usarla en los próximos rompecabezas? \\r\n<br/>\\r\n\\r\n<img src=\"https://images.code.org/e6eac1f6aeb68a9a7584516e28663c14-image-1477533059853.gif\" width=\"65%\"/>"
@@ -3687,6 +3773,7 @@ es-MX:
       courseF_playlab_variables1a_markdown_instruction: "Las variables pueden ser usadas para almacenar el texto que quieres usar más tarde. \\r\nHaz que Kiki, jugador de fútbol, grite \"¡Gol!\" asignándo ese texto a la variable 'gritar'."
       courseF_playlab_variables1a_2018_markdown_instruction: "Las variables pueden ser usadas para almacenar el texto que quieres usar más tarde. \\r\nHaz que Kiki, jugador de fútbol, grite \"¡Gol!\" asignándo ese texto a la variable 'gritar'."
       courseF_playlab_variables2_markdown_instruction: "Ahora, decodifica el discurso de Pegleg el Pirata cambiando el valor de las variables ¡sólo en dos lugares! \\r\n- \"arrrg\" debería ser \"a\" \\r\n- \"ye\" deberá ser \"e\"\\r\n\\r\n"
+      courseF_playlab_variables2a_markdown_instruction: "Ahora, decodifica el discurso de Pegleg el Pirata cambiando el valor de las variables ¡sólo en dos lugares! \\r\n- \"arrrg\" debería ser \"a\" \\r\n- \"ye\" deberá ser \"e\"\\r\n\\r\n"
       courseF_playlab_variables2b RYAN CLONE_markdown_instruction: |-
         Podemos hacer las oracones más interesantes mezclando las piezas del texto con las variables.\r
         \r
@@ -3703,7 +3790,7 @@ es-MX:
       courseF_playlab_variables3b_markdown_instruction: 'Ayuda a Kiki a tener una conversación con Brian usando la variable ''edad'' en todos los lugares donde se debería usar la edad ''12''. '
       courseF_playlab_variables3bEdit_markdown_instruction: 'Ayuda a Kiki a tener una conversación con Brian usando la variable ''A1'' en todos los lugares donde se debería usar la edad ''12''. '
       courseF_playlab_variables3b_josh_markdown_instruction: 'Ayuda a Kiki a tener una conversación con Brian usando la variable ''edad'' en todos los lugares donde se debería usar la edad ''12''. '
-      courseF_playlab_variables3b_josh_2018_markdown_instruction: 'Ayuda a Kiki a tener una conversación con Brian usando la variable ''edad'' en todos los lugares don se deba usar edad ''12''. '
+      courseF_playlab_variables3b_josh_2018_markdown_instruction: 'Ayuda a Kiki a tener una conversación con Brian usando la variable ''edad'' en todos los lugares donde se debería usar la edad ''12''. '
       courseF_playlab_variables4_markdown_instruction: "Ahora, vamos a unir una variable al comienzo de la próxima oración de Pegleg usando el bloque 'crear texto con'.\\r\n\\r\n¿Puedes encontrar la variable correcta en la caja de herramientas para rellenar el espacio?\\r\n\\r\n"
       courseF_playlab_variables4b_markdown_instruction: "Ahora, El Pirata Pegleg tiene algunas preguntas para Brien.\\r\n\\r\nEste código usa un bloque 'preguntar', para que puedas escribir las respuestas de Brian después de hacer clic en \"Ejecutar\". \\r\n\\r\nPon las variables en los lugares correctos para crear esta conversación."
       courseF_playlab_variables4b_2018_markdown_instruction: "Ahora, El Pirata Pegleg tiene algunas preguntas para Brien.\\r\n\\r\nEste código usa un bloque 'preguntar', para que puedas escribir las respuestas de Brian después de hacer clic en \"Ejecutar\". \\r\n\\r\nPon las variables en los lugares correctos para crear esta conversación."
@@ -3757,8 +3844,12 @@ es-MX:
         * Has que cada actor cambie de estado de ánimo al azar.\r
         \r
         ¡Revisa estas pistas si necesitas ayuda con estos desafíos!
-      coursea_maze_ramp1_2018_markdown_instruction: "Para llevar al pájaro hasta el cerdo, encaja el bloque <xml><block type=\"maze_moveEast\"/></xml> a la parte inferior del bloque <xml><block type=\"when_run\"/></xml> , ¡luego presiona![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!"
+      course_playlab_variables1_markdown_instruction: "Este es el pirata Pegleg. ¡Es díficil entenderlo en estos días! \\r\n\\r\nDecodifica su discurso cambiando estas piezas del texto en el código:\\r\n- \"arrrg\" debería ser \"a\" \\r\n- \"ye\" deberá ser \"e\"\\r\n\\r\n"
+      course_playlab_variables2_markdown_instruction: "Ahora, decodifica el discurso de Pegleg el Pirata cambiando el valor de las variables ¡sólo en dos lugares! \\r\n- \"arrrg\" debería ser \"a\" \\r\n- \"ye\" deberá ser \"e\"\\r\n\\r\n"
+      course_playlab_variables3_markdown_instruction: "Ahora, decodifica el discurso de Pegleg el Pirata cambiando el valor de las variables ¡sólo en dos lugares! \\r\n- \"arrrg\" debería ser \"a\" \\r\n- \"ye\" deberá ser \"e\"\\r\n\\r\n"
+      coursea_maze_ramp1_2018_markdown_instruction: Para llevar al pájaro hasta el cerdo, encaja el bloque <xml><block type="maze_moveEast"/></xml> a la parte inferior del bloque <xml><block type="when_run"/></xml> , ¡luego presiona![](https://images.code.org/473d3e1e4a05104502a99048338a45df-image-1522887336604.11.32.png)!
       coursef_maze_ramp3_markdown_instruction: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
+      coursef_maze_ramp3_2018_markdown_instruction: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
       frozen circle function in circle_markdown_instruction: Ahora crearemos 20 círculos superpuestos, girando 18 grados entre cada círculo.
       frozen circle function with parameter_markdown_instruction: Aquí está un bloque "Crear círculo" que puede dibujar círculos de diferentes tamaños. ¿Puedes usarlo para dibujar un círculo pequeño de tamaño 5 y uno más grande de tamaño 10?
       frozen circle function_markdown_instruction: Utiliza el nuevo bloque "Crear un círculo" para crear 10 círculos superpuestos. No te olvides de saltar hacia adelante entre cada círculo.
@@ -3778,7 +3869,11 @@ es-MX:
       frozen square loop 3x_markdown_instruction: Ahora crearemos tres cuadrados, girando al terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un nuevo cuadrado.
       frozen square loop_markdown_instruction: '¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado con el bloque de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas veces (???) se deberían repetir los bloques que están dentro del bloque "Repetir" para formar un cuadrado?'
       frozen square snowflake_markdown_instruction: '¿Puedes dibujar un copo de nieve utilizando el bloque "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 36 grados entre cada cuadrado?'
+      grade1_adventurer_loops2_markdown_instruction: '¿Cómo puede Laurel recoger las cinco pilas de oro usando solo un bloque `E ->`?'
+      grade1_artist_loops6_markdown_instruction: "**Desafío:** ¡Es un jardín escondido! Vamos a recorrerlo."
+      grade2_CaringForNewPet_0_markdown_instruction: Para este rompecabezas, arrastra todos los bloques para juntarlos y haz click en "Ejecutar" ¡para verlo funcionar!
       grade2_CaringForNewPet_11_markdown_instruction: '*"Mantén la calma y ayúdame a encontrar al cerdo malo."*'
+      grade2_CaringForNewPet_2_markdown_instruction: "*\"Este cerdo me eriza las plumas.\"*\\r\n\\r\nHay un bloque adicional que va a producir que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
       grade2_CaringForNewPet_2courseC_maze_programming3_markdown_instruction: "*\"Este cerdo está arrugando mis plumas.\"*\\r\n\\r\nHay un bloque extra que va a hacer que el pájaro se estrelle.  \\r\nElimínalo arrastrándolo de vuelta a la caja de herramientas."
       grade2_MakeDogTag_1_markdown_instruction: "*\"¡Hagamos una jaula para mi mascota monstruo!\"*\\r\n\\r\narrastra los bloques a la pantalla para que el artista dibuje sobre las lineas gises de la imagen.  \\r\n(Each line is 100 pixels long)"
       grade2_MakeDogTag_2_markdown_instruction: |-
@@ -3791,7 +3886,7 @@ es-MX:
         \r
         Dibuja este diamante con lados de 200 pixeles.
       grade2_MakeDogTag_7_markdown_instruction: "Una etiqueta más.  Este es un triángulo para Pi.  \\r\n(Cada lado es de 150 pixeles)"
-      grade2_MakeDogTag_8_markdown_instruction: Ahora conectemos un montón de V juntos, dibujándolos en un bucle.
+      grade2_MakeDogTag_8_markdown_instruction: Ahora conectemos un montón de V juntas en un ciclo.
       grade2_MakeDogTag_9_markdown_instruction: "¡Es hora de hacer algo elegante!\n\\r\n\\r\nReconstruye el código del último rompecabezas, pero esta vez, agrega un giro a la izquierda de 30 grados dentro del ciclo. Ahora, repítelo 24 veces en lugar de 8."
       grade2_MakeDogTag_BFP_markdown_instruction: |-
         *"Hola, Soy artista. Puedes escribir un código para hacerme dibujar casi de todo."*\r
@@ -3810,8 +3905,8 @@ es-MX:
       grade2_PuppyLoops_8_markdown_instruction: "El código para los tres bigotes que ves es incorrecto. Sugerencia: cada bigote tiene 75 píxeles de largo. Repara este código para dibujar los bigotes."
       grade2_PuppyLoops_9_markdown_instruction: |-
         Parece que la C en Código está dibujada al revés - ¿Puedes hacer que parezca una C?
-      grade2_collector_A_markdown_instruction: Ayuda a Laurel a recolectar todo el tesoro.
-      grade2_collector_A_2018_markdown_instruction: Ayuda a Laurel a recolectar todo el tesoro.
+      grade2_collector_A_markdown_instruction: Ayuda Laurel a recolectar todo el tesoro.
+      grade2_collector_A_2018_markdown_instruction: Ayuda Laurel a recolectar todo el tesoro.
       grade2_maze_debuggingFP_markdown_instruction: '*"Ahora, ¡ayúdame a acercarme sigilosamente al cerdo de la forma que quieras!"*'
       grade2_playlab_project_3_markdown_instruction: "¿Puedes hacer que Waddles (actor 1) diga \"¡auch!\" y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \\r\n\\r\nCuando estes listo, juega el juego para hacer que eso suceda.\\r\n\\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       grade2_puppy_loops2_markdown_instruction: |-
@@ -3898,10 +3993,13 @@ es-MX:
         Cada flor contiene una unidad de néctar. Recolecta néctar de cada una de las flores. 
       grade3_Loops_TeacherIDo_markdown_instruction: |-
         Cada flor contiene una unidad de néctar. Recolecta néctar de cada una de las flores. 
+      grade3_RunningFarm_10_markdown_instruction: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
+      grade3_RunningFarm_11a_markdown_instruction: Recoge todo el máiz y todas las lechugas, luego recoge la calabaza.
       grade3_RunningFarm_6_markdown_instruction: |-
         *"¡Vamos a tomar un paso más!"*\r
         \r
         ¿Puedes descifrar cómo recoger la calabaza?  Asegúrate de recoger todo el maíz a lo largo del camino!
+      grade3_RunningFarm_7_markdown_instruction: "**Desafío:** Reoge todo el máiz y las lechugas, luego recoge la calabaza."
       grade3_bee_conditionals_new2a_markdown_instruction: |-
         En este rompecabezas, sabemos que cada flor tiene exactamente un néctar, pero las flores no están distribuidas en forma pareja.\r
         \r
@@ -3934,11 +4032,15 @@ es-MX:
         de una 'repetición'?
       grade3_maze_nestedLoops3_markdown_instruction: "Llévame al cerdo! tu solo puedes usar un\nbloque de `avanzar`en esta oportunidad"
       grade3_maze_nestedLoops4_markdown_instruction: Usa dos ciclos para hacer que el cerdo use menos bloques.
+      grade4_arist_nested_loop_flags1_markdown_instruction: haz un bucle con el código dado para crear un molino de viento.
       grade4_arist_nested_loop_polygons1_markdown_instruction: "con el bucle repite este diseño 10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista: ¿Cuánto es 360 dividido por 10?)"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "Repite el bucle 6 veces. ¿Cuánto tienes que girar cada vez el bucle? (Pista: ¿Cuánto es 360 dividido por 6?)"
       grade4_arist_nested_loop_squares1_markdown_instruction: "¿Puedes tu dibujar los 10 cuadrados de\nesta acera usando un circuito insertado? \\r\n\\r\nCada cuadrado tiene 30 píxeles."
+      grade4_arist_nested_loop_triangles3_markdown_instruction: '¿Puedes dibujar un hexágono con un bucle del código del triángulo?'
+      grade4_arist_nested_loop_triangles4_markdown_instruction: '¡Dibuja los dientes en la boca de cocodrilo!'
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: '¿Puedes dibujar estos 36 triángulos utilizando un bucle anidado?'
       grade4_artist_functions1_markdown_instruction: "*\"¡Yo zombie artista. Yo amar dibujar!\"*\\r\n\\r\nAyuda al zombie a dibujar vasos usando los cuadrados con lados de 100 pixeles.  \\r\nEl puente etre los vasos es de 75 pixeles de largo.\\r\n\\r\n"
       grade4_artist_functions2_markdown_instruction: "¡Las funciones permiten definir nuevos bloques! Hemos movido los bloques para dibujar un cuadrado en la función llamada \"dibuja un cuadrado\". ¿Puedes utilizar la función \"dibuja un cuadrado\" para crear los lentes? Los cuadrados están separados por 75 píxeles."
       grade4_artist_functions2a_markdown_instruction: |-
@@ -3954,6 +4056,7 @@ es-MX:
         \r
         - Para consruir cada hexagón, repite 6 veces, girando en 60 grados.\r
         - Para dibujar un diamante, necesitarás alternar entre un giro de 60 grados y uno de 120.
+      grade4_artist_functionsChallenge0_markdown_instruction: "**Desafío:** Crea tantas funciones como creas que vas a necesitar para hacer este dibujo de cuadrados de 50 pixeles."
       grade4_artist_functions_stars0_markdown_instruction: "Volveremos a las funciones en breve. Tomemonos un descanso para practicar cómo hacer una estrella. \\r\n\\r\nPuedes hacer este dibujo agragando un block de repetición."
       grade4_artist_functions_stars1_markdown_instruction: |-
         Ahora que puedes dibujar una estrella, ¡Intenta dibujar cuatro estrellas!\r
@@ -3967,11 +4070,13 @@ es-MX:
         Dibuja sólo esas tres estrellas para terminar el rompecabezas.
       grade4_artist_functions_windows0_markdown_instruction: "¡Lo estás haciendo muy bien! \\r\n\\r\nConstruye esta ventana dibujando un cuadrado, luego gira 90 grados dibujando otro, y así sucesivamente."
       grade4_artist_functions_windows2_markdown_instruction: "Tomemos el código para la ventana y agreguémoslo a la función 'dibujar una ventana'. Ahora, podemos llamar a la función en cualquier momento que necesitemos dibujar una ventana sin tener que escribir el código de nuevo. \\r\n\\r\n<img src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\" width=\"450px\"/>\\r\n<br/> \\r\n\\r\nIntenta resolver este rompecabezas creando un `dibujar una ventana` y llmándolo cinco veces. ¡Cuidado con la puerta!\\r\n\\r\n- Las ventanas superiores están a 50 pixeles de distancia entre ellas.  \\r\n- Las ventanas inferiores están a 100 pixeles por debajo del conjunto superior."
+      grade4_artist_nested_loop_flags1_markdown_instruction: haz un bucle con el código dado para crear un molino de viento.
       grade4_artist_nested_loop_polygons1_markdown_instruction: "con el bucle repite este diseño 10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista: ¿Cuánto es 360 dividido por 10?)"
       grade4_artist_nested_loop_squares1_markdown_instruction: "¿Puedes tu dibujar los 10 cuadrados de\nesta acera usando un circuito insertado? \\r\n\\r\nCada cuadrado tiene 30 píxeles."
       grade4_artist_nested_loop_triangles1_markdown_instruction: "Completa el código para dibujar estos triángulos. El\nprimero está hecho para ti. Sugerencia: 3 triángulos en una rotación de 360 grados.\\r\n\\r\n"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: '¿Puedes dibujar estos 36 triángulos utilizando un bucle anidado?'
       grade4_artist_parameters_triangles2_markdown_instruction: '¿Notas algo diferente en estos bloques de función? Haz clic en "Ejecutar" para ver qué pasa.'
       grade4_bee_conditionals_nested_loops_markdown_instruction: "**Assessment:** Recolecta todo el néctar.  \\r\nTen cuidado de no recolectar néctar de de una flor púrpura que no tiene nada de néctar."
       grade4_bee_conditionals_new1_markdown_instruction: "**Assessment:** Recolecta todo el néctar.  \\r\nTen cuidado de no recolectar néctar de de una flor púrpura que no tiene nada de néctar."
@@ -3980,11 +4085,12 @@ es-MX:
       grade4_bee_conditionals_quantum4_markdown_instruction: "A veces, esta nube cubre una\nflor, y a veces cubre un panal! \\r\n\\r\nUse el bloque `si/no`\npara recolectar néctar solo si es una flor. \\r\nDe lo contrario, haz miel (porque\nes un panal de miel)."
       grade4_bee_conditionals_quantum5_markdown_instruction: |-
         Puede haber una flor o un panal bajo esas nubes. Usa el bloque if/else para recoger néctar si hay una flor, si no haz miel (porque hay un panal de abejas).
-      grade4_bee_functions2_markdown_instruction: "Las funciones son bloques de código que realizan una tarea. \\r\n\\r\nUsa la función `obtener 2 néctar` para recolectar el néctar de cada flor."
+      grade4_bee_functions2_markdown_instruction: "Las funciones son bloques de códigos que realizan una tarea. \\r\n\\r\nUsa la función 'llegar al néctar' para recoger el néctar de cada flor."
       grade4_bee_functions3_markdown_instruction: Las funciones son bloques de código que realizan una tarea. Utilice la función "get 5" para obtener 5 néctares a cada momento. Asegúrese de utilizar un bucle para obtener un recuento ideal de bloque, también.
       grade4_bee_functions4_markdown_instruction: "La función 'mover y llegar al néctar' gira a la abeja, recoge néctar y luego retorna a la abeja donde comenzó. \\r\n\\r\nUsa la función 'mover y llegar al néctar' para recoger el néctar."
       grade4_bee_functions9_markdown_instruction: "**Desafío:** Estas flores pueden tiene una cantidad diferente de néctar cada vez que ejecutas el rompecabezas.   \\r\n\\r\nCrea una función que recoja todo el néctar de cada flor."
       grade4_bee_nestedLoops1_markdown_instruction: "*\"¿Puedes creer todas estas lores?\"*\\r\n\\r\nRecoge todo el néctar de cada flor. "
+      grade4_bee_nestedLoops2_markdown_instruction: "**Desafío:** Descifra cómo obtener todo el néctar usando sólo los bloques disponibles."
       grade4_bee_nestedLoops4_markdown_instruction: 'Recolecta todo el néctar de cada flor y haz miel en cada panel. Utiliza un bucle anidado. '
       grade4_frozen_freeplay_markdown_instruction: '¡Te has convertido oficialmente en un artista maestro! Crea un paraíso invernal.'
       grade4_frozen_functions0_markdown_instruction: Un círculo es una figura especial. ¿Puedes adivinar qué número debe reemplazar los signos de interrogación para dibujar un círculo?
@@ -3998,6 +4104,7 @@ es-MX:
       grade4_frozen_square_loop1_markdown_instruction: '¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado con el bloque de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas veces (???) se deberían repetir los bloques que están dentro del bloque "Repetir" para formar un cuadrado?'
       grade4_frozen_square_loop2_markdown_instruction: Ahora crearemos tres cuadrados, girando al terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un nuevo cuadrado.
       grade4_frozen_square_loop3_markdown_instruction: '¿Puedes dibujar un copo de nieve utilizando el bloque "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 36 grados entre cada cuadrado?'
+      grade4_playlab_test_markdown_instruction: "<h5><b>\\r\nEn nuestro juego, ¿Cómo deberíamos marcar los puntos? \\r\n</b></h5> \\r\n<br/>\\r\n\\r\n1. Agrega 1 a tu variable `puntos` cada vez que el perro golpee al gato un un trozo de torta.  <br/>    <br/> \\r\n2. Usa el evento `cuando el actor 2 toque cualquier cosa` para gatillar una actualización a tu puntaje. Puedes incrementar tu variable estableciendo `puntos= punto + 1.`  <br/>   <br/> \\r\n3. Llega a un puntaje de 10 para pasar de nivel.\\r\n\\r\n<br/><br/>\\r\n<h4>\\r\n**Nota:** ¡Usa la flecha derecha para lanzar torta!\\r\n</h4>"
       grade4_review_artist2_markdown_instruction: "¡Esta casa necesita un techo! Dibuja el triángulo.\n\nSugerencia: los tres lados tienen la misma longitud. \n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>"
       grade4_review_artist3_markdown_instruction: El bloque Salta mueve el artista sin dibujar. Dibuja la línea punteada utilizando los bloques Salta y Dibuja.
       grade4_review_bee1_markdown_instruction: Ahora usa el nuevo bloque repeat para recolectar todo el néctar y hacer toda la miel.
@@ -4005,18 +4112,28 @@ es-MX:
         ¡Una abeja tan ocupada!
         \r
         Ayuda a Abeja a recolectar todo el néctar y hacer toda la miel con la menor cantidad de bloques posible.
+      grade4_scaffolded_project6_markdown_instruction: '¡Has terminado! Ahora puedes jugar tu juego o compartirlo con tus amigos o compañeros!'
       grade5_artist_for_loops1_markdown_instruction: 'Dibuje este triángulo que tiene un tamaño de 50 píxeles. Sugerencia: Use un bloque de repetición.'
       grade5_artist_for_loops10_markdown_instruction: "Con todas las cosas que ha aprendido, ¿podrías decir cómo se hizo esta imagen? ¿Necesita una ayuda? Presione aquí."
       grade5_artist_for_loops5_markdown_instruction: |-
         La línea más pequeña de este espiral cuadrado es 10, el más largo es 200, y cada línea es 10 píxeles mas larga que la anterior. ¿Puedes llenar los bloques faltantes para completar este sorprendente dibujo?
+      grade5_artist_for_loops7a_markdown_instruction: Baja el ángulo a 72 grados para obtener un pentagón en espiral.
+      grade5_artist_functionparameters9a_markdown_instruction: |
+        Ermina la función 'dibuajarorde en espiral' para pedir una longitud mínima para el centro del espiral.\r
+        \r
+        - El lado más pequeño en el centro de este cuadrado es de 50 pixeles de largo\r
+        - el lado más largo fuera de este espiral es de 200 pixeles de largo
       grade5_artist_parameters_triangles2a_markdown_instruction: '¿Notas algo diferente en estos bloques de función? Haz clic en "Ejecutar" para ver qué pasa.'
       grade5_artist_variables_hexagons1_markdown_instruction: "Vamos a intentarlo otra vez. Ahora, vamos a hacer este diseño cool con un hexágono de 60 píxeles."
       grade5_artist_variables_pentagon9_markdown_instruction: Modifica este algoritmo para que utilice la variable "lados" en lugar de un número fijo para dibujar un pentágono. Reemplaza el número 5 con la variable "lados" y usa el bloque "establecer lados".
       grade5_artist_variables_pentagons1_markdown_instruction: "¿Me puedes ayudar a dibujar este patrón cool dejando caer el bloque de variable \"longitud\" en los lugares correctos?"
       grade5_bee_for_loops10_markdown_instruction: "Si tu bucle está en cuenta regresiva, el incremento es **sustraido** de la variable contador cada vez que se complete una vuelta.\\r\n\\r\n¿Cuál debería ser tu incremento para recoger 15, luego 12, luego 9, 6, 3 néctars?"
+      grade5_bee_for_loops4_markdown_instruction: Ayuda a la abeja a recoger todo el néctar.
       grade5_playlab_variables13_markdown_instruction: Use un bloque "cuando el actor toque" para enviar al Perro de regreso al lado superior izquierdo SOLAMENTE si el Perro toca a alguno de los otros actores.
       grade5_playlab_variables2_markdown_instruction: '¡Esa carrera en ese último problema no fue justa! Cambie la variable de "velocidad_perro" para asegurarse de que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!'
       grade5_playlab_variables9_markdown_instruction: "Aquí hay una función denominada \"patrulla\". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles."
+      grade5_playlab_variables_freeplay_markdown_instruction: "¡Momento de juego gratis! Aquí están todas las variables con las  que hemos jugado hasta ahora, así como unas pocas más en caso que las quieras. \\r\n\\r\n¡Observa ahora que hay tantos bloques en nuestra caja de herramientas que necesitan ser organizadas Aquí hemos puesto cada pieza en una categoría apropiada. Tómate un tiempo para explorar todo lo que hay disponible. Cuando hayas terminado de navegar, haz un juego o historia usando repeticiones, variables y eventos.  \\r\n\\r\n*Sugerencia: desplázate hacia abajo para ver todos los comandos en el espacio de trabajo.*"
+      gradek_playlab_events1c_markdown_instruction: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?
       iceAgeLoopsforVideo_markdown_instruction: '¿Puedes llegar a la bellota con sólo un bloque <xml><block type="maze_moveForward"/></xml>? ¡Inténtalo usando un bucle!'
       iceage_free_play_markdown_instruction: "¡Momento de crear tu propio juego o historia!  \\r\n\\r\n¡Cuando hayas terminado, haz clic en \"Finalizar\" para que tus amigos prueben tu juego en sus teléfonos, tablets o computadores!\\r\n¿No sabes que hacer? Haz clic en las sugerencias para detalles."
       iceage_free_play_2018_markdown_instruction: "¡Momento de crear tu propio juego o historia!  \\r\n\\r\n¡Cuando hayas terminado, haz clic en \"Finalizar\" para que tus amigos prueben tu juego en sus teléfonos, tablets o computadores!\\r\n¿No sabes que hacer? Haz clic en las sugerencias para detalles."
@@ -4048,3 +4165,5 @@ es-MX:
       level 'grade3_Loops_6_markdown_instruction: "¿Qué pasa si haces un ciclo con esta secuencia 3 veces? ¡No olvides hacer la miel al final!"
       level 'grade3_Loops_7_markdown_instruction: |-
         Cada flor contiene una unidad de néctar. Recolecta néctar de cada una de las flores. 
+      ramp_artist_loops4_markdown_instruction: "¿Qué sucede cuando agregas un giro a la derecha \nde 72 grados después de todo lo demás dentro de tu bucle?"
+      ramp_artist_loops4_2018_markdown_instruction: "¿Qué sucede cuando agregas un giro a la derecha \nde 72 grados después de todo lo demás dentro de tu bucle?"

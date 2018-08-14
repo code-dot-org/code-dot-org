@@ -24,6 +24,7 @@ const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
 const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
+
 // Action creators
 
 /**
@@ -103,8 +104,6 @@ export function saveSuccess(projectId) {
 export function saveFailure(projectId) {
   return {type: SAVE_FAILURE, projectId};
 }
-
-
 
 // Reducers
 
@@ -242,6 +241,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       updatedEditing[projectToRenameIndex] = {
         ...updatedEditing[projectToRenameIndex],
         isEditing: true,
+        updatedName: updatedEditing[projectToRenameIndex].name
       };
 
       return {
@@ -397,4 +397,8 @@ export const saveProjectName = (projectId, updatedName) => {
       }
     });
   };
+};
+
+export const remix = (projectId, projectType) => {
+  window.location = `/projects/${projectType}/${projectId}/remix`;
 };

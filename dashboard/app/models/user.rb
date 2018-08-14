@@ -760,6 +760,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def oauth_only?
+    if migrated?
+      authentication_options.all?(&:oauth?) && encrypted_password.blank?
+    else
+      OAUTH_PROVIDERS.include?(provider) && encrypted_password.blank?
+    end
+  end
+
   def self.new_with_session(params, session)
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"]) do |user|
@@ -1788,6 +1796,11 @@ class User < ActiveRecord::Base
     end
   end
 
+  def should_see_add_password_form?
+    !can_create_personal_login? && # mutually exclusive with personal login UI
+      can_edit_password? && encrypted_password.blank?
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -1836,7 +1849,8 @@ class User < ActiveRecord::Base
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.
   def can_create_personal_login?
-    teacher_managed_account? # once parent e-mail is added, we should check for it here
+    return false unless student?
+    teacher_managed_account? || (migrated? && oauth_only?)
   end
 
   def teacher_managed_account?
@@ -2055,6 +2069,12 @@ class User < ActiveRecord::Base
     end
   end
 
+  def destroy
+    super.tap do
+      NewRelic::Agent.record_metric("Custom/User/SoftDelete", 1) if CDO.newrelic_logging
+    end
+  end
+
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
   # destroys done around the time of the delete / destroy.
   # @raise [RuntimeError] If the user is purged.
@@ -2073,6 +2093,24 @@ class User < ActiveRecord::Base
     # Student depends on teacher for login if their account is teacher-managed or roster-managed
     # and only have one teacher.
     student? && (teacher_managed_account? || roster_managed_account?) && teachers.uniq.one?
+  end
+
+  # Returns an array of summarized students that depend on this user.
+  # These map to the students that will be deleted if this user deletes their account.
+  def dependent_students
+    dependent_students = []
+    students.uniq.each do |student|
+      dependent_students << student.summarize if student.depends_on_teacher_for_login?
+    end
+    dependent_students
+  end
+
+  def providers
+    if migrated?
+      authentication_options.map(&:credential_type)
+    else
+      [provider]
+    end
   end
 
   private

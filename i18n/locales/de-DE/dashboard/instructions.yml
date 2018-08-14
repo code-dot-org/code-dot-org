@@ -20,7 +20,7 @@ de:
       2-3 Artist 9_instruction: Vervollständige diesen Drachen
       2-3 Artist Assessment 1_instruction: 'Prüfung: Vervollständige den letzten Zahn: 25 Pixel breit und 25 Pixel hoch.'
       2-3 Artist Debugging 1_instruction: Dieser Hut sollte nur 50 Pixel breit sein. Kannst du das Programm an der richtigen Stelle korrigieren?
-      2-3 Artist Debugging 10_instruction: "Das Steuerkreuz auf meinem Spiele-Controller ist zu klein. \\r\n\\r\nMache es bitte 10 Pixel breiter.\\r\n\\r\nStarte das Programm zuerst einmal um zusehen, was du ändern musst."
+      2-3 Artist Debugging 10_instruction: "Das Steuerkreuz auf meinem Game-Controller ist zu klein. \\r\n\\r\nKannst Du es 10 Pixel breiter machen?.\\r\n\\r\nStarte das Programm zuerst einmal, um zusehen, was du ändern musst."
       2-3 Artist Debugging 11_instruction: |-
         Hilf mir, meine schöne Schneeflocke zu beenden. Wie oft muss ich es „wiederholen“, um es zu beenden?
       2-3 Artist Debugging 12_instruction: Ich soll zu dieser Szene eine Ozeanwelle hinzufügen.  Kannst du mir helfen?
@@ -29,9 +29,9 @@ de:
       2-3 Artist Debugging 4_instruction: Was ist das für ein Bild, das wir versuchen zu zeichnen? Beende es, indem du die Punkte mit den richtigen Linien und Winkeln verbindest.
       2-3 Artist Debugging 5_instruction: "Der Code für das Bein und den Fuß, den du siehst, ist falsch. Hinweis:  Der Fuß ist zu lang, wir müssen möglicherweise einen Schritt (Wortspiel beabsichtigt) löschen."
       2-3 Artist Debugging 6_instruction: |-
-        Es sieht so aus, als ob ich auf einem Stuhl sitze, dem ein Bein fehlt. \r
+        Ich scheine auf einen Stuhl, dem ein Bein fehlt, zu sitzen.\r
         \r
-        Bearbeite das Programm, um auch noch das fehlende Bein zu zeichnen.
+        Ändere den Code, um das letzte Bein zu zeichnen.
       2-3 Artist Debugging 7_instruction: |-
         Es sieht aus als ob C in Code spiegelverkehrt ist. Kannst du es wie ein C aussehen lassen?
       2-3 Artist Debugging 8_instruction: |-
@@ -193,7 +193,7 @@ de:
       2-3 Maze Loops 17_instruction: Bring mich zu der Sonnenblume!
       2-3 Maze Loops 18_instruction: "Bring mich zu der Sonnenblume!\n(Hinweis: Du musst eine „Wiederholen“-Schleife innerhalb einer anderen benutzen, um dieses Level zu bestehen."
       2-3 Maze Loops 19_instruction: "Bring mich zu der Sonnenblume!"
-      2-3 Maze Loops 20_instruction: Bring mich zu der Sonnenblume!
+      2-3 Maze Loops 20_instruction: Kannst du diese Aufgabe lösen und dabei die kleinstmögliche Anzahl an Bausteinen verwenden?
       2-3 Maze Loops 21_instruction: Bring mich zu der Sonnenblume!
       2-3 Maze Loops Assessment 1_instruction: 'Prüfung:  Hole mir die Sonnenblume und benutze dabei nur 5 Bausteine! '
       2-3 Maze sq10_instruction: Bring mich zum Schwein! Welche Blöcke wurden wiederholt?
@@ -231,7 +231,7 @@ de:
       20hr_maze_stage2_16_instruction: Ich will Sonnenblume! Verwende einen "Wenn"-Baustein, um mich mit der geringsten Anzahl an Bausteinen zum Ziel zu bringen.
       20hr_maze_stage2_17_instruction: Ok, lass uns das nochmal üben. Das ist wieder beinahe dasselbe, aber hüte dich vor den fleischfressenden Pflanzen!
       20hr_maze_stage2_18_instruction: Die „Wenn-Ansonsten“-Bausteine überprüfen eine Bedingung und führen dann entweder eine ODER eine andere Anweisung aus. Verwende diesen neuen Baustein, um mich zur Sonnenblume zu bringen.
-      20hr_maze_stage2_19_instruction: Noch eine Übung mit dem "Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?
+      20hr_maze_stage2_19_instruction: Noch eine Übung mit dem „Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?
       20hr_maze_stage2_2_instruction: Dieses Schwein lässt meine Federn zu Berge stehen. Hilf mir, es zu finden!
       20hr_maze_stage2_20_instruction: Kannst du 3 Bausteine hinzufügen, um mit mir zusammen ein komplizierteres Labyrinth zu lösen? Wenn du es richtig machst, kann ich auf jedem kurvigen Weg entlang gehen, egal wie lang.
       20hr_maze_stage2_3_instruction: Verfolge den Pfad und führe mich zum Schwein. Vermeide das TNT, sonst fliegen die Federn!
@@ -305,6 +305,7 @@ de:
       4-5 Artist Patterns Free Play_instruction: Freies Spielen - versuche dein Glück beim Entwerfen deines eigenen Musters!
       4-5 Bee Conditionals - FC Test_instruction: Die Biene will jetzt nur Nektar. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst du Nektar sammeln.
       4-5 Bee Conditionals 1_instruction: Die Biene kann nicht unterscheiden, ob dies eine Blume oder eine Wabe ist. Sammle den Nektar nur aus Blüten, aber prüfe erst, ob es sich um eine Wabe oder um eine Blüte handelt.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: 'Die Biene will jetzt nur Nektar. Erinnere dich: Nicht alle Objekte sind Blüten, also prüfe, damit nur aus Blüten Nektar gesammelt wird.'
       4-5 Bee Conditionals 2_instruction: "Die Biene will jetzt nur Nektar. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst du Nektar sammeln."
       4-5 Bee Conditionals 3_instruction: Jetzt will die Biene nur Honig erzeugen. Prüfe, damit nur bei Waben Honig erzeugt wird.
       4-5 Bee Conditionals 4_instruction: Das unbekannte Objekt ist entweder eine Blume oder eine Bienenwabe. Benutze den „wenn/ansonsten"- Baustein um Nektar zu machen, wenn es eine Blüte ist, „ansonsten", um Honig zu erzeugen (weil es eine Wabe ist).
@@ -396,8 +397,13 @@ de:
       Alien Defender_instruction: 'Projekt Idee: Macht ein Verteidigungsspiel in Play Lab!'
       Alien Defender_2018_instruction: 'Projekt Idee: Macht ein Verteidigungsspiel in Play Lab!'
       App Lab test_instruction: prüfe
-      Artist - Nested Loops 1_instruction: 'Vervollständige den Code, damit diese Dreiecke gezeichnet werden. Das erste hast du erledigt. Hinweis: 3 Dreiecke in einer 360- Grad- Drehung.'
-      Artist - Nested Loops 10_instruction: Zeichne die letzte Sternenzeile dieser Flagge, indem du die verfügbaren Bausteine in Schleifen einschließt. Die Sterne liegen 50 Pixel auseinander, aber vergiss nicht, dass die Sterne selbst 30 Pixel breit sind.
+      Artist - Nested Loops 1_instruction: 'Vervollständige den Code, um diese Dreiecke zu zeichnen.  Das erste ist für dich erledigt.  Hinweis:  3 Dreiecke in einer 360- Grad- Drehung.'
+      Artist - Nested Loops 10_instruction: Zeichne die letzte Sternenreihe dieser Flagge, indem du die verfügbaren Bausteine in Schleifen einschließt. Die Sterne sind 50 Pixel auseinander, aber vergiss nicht, dass die Sterne selbst 30 Pixel breit sind.
+      Artist - Nested Loops 11_instruction: Kannst du diese 10 Quadrate dieses Gehsteigs mit einer verschachtelten Schleife zeichnen? Jedes Quadrat hat eine Seitenlänge von 30 Pixeln.
+      Artist - Nested Loops 12_instruction: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife zeichnen?
+      Artist - Nested Loops 5_instruction: Benutze den angegebenen Code in einer Schleife, um eine Windmühle zu erstellen.
+      Artist - Nested Loops 6_instruction: Kannst Du ein Sechseck zeichnen, indem Du den Dreieck-Code in einer Schleife verwendest?
+      Artist - Nested Loops 9_instruction: Zeichne die Zähne im Mund des Alligators!
       Artist - Nested Loops Assessment 1_instruction: Verwende eine verschachtelte Schleife um das Design fertigzustellen.
       Artist Inspiration_instruction: "Freies Spiel Inspiration: Du hast jetzt alles gelernt, um so ein Muster zu machen! Wenn dich das Bild inspiriert, versuche etwas Ähnliches zu machen. Wenn nicht, mach etwas ganz alleine.\n\nMöchtest du wissen, wie unser Inspirationsmuster gemacht wurde?"
       Auto Open Function Editor_instruction: 'Du kannst Funktionen innerhalb anderer Funktionen aufrufen! Ausgehend von der „Form" -Funktion, erstelle 3 Haus-Formen, von denen jede 20 Pixel größer als die vorherige sein soll. Beginne mit einer Länge von 50 Pixeln. Eine Zähl-Schleife könnte hier hilfreich sein. '
@@ -405,12 +411,28 @@ de:
       Bergeron Robot Maze1_instruction: 'Hilfst du mir, das freche Schwein zu fangen? Stecke ein paar „vorwärts bewegen“-Bausteine zusammen und drücke „Ausführen“. '
       Brad Spooky House Copy_instruction: 'Freies Spiel: Hier sind die Funktionen, die du geschrieben hast, und ein paar mehr für dich zum Spielen. Zeichne etwas Tolles! Spiele mit der Stiftbreite um zu sehen, wie unterschiedlich deine Zeichnungen aussehen!'
       Brad Spooky House_instruction: 'Freies Spiel: Hier sind die Funktionen, die du geschrieben hast, und ein paar mehr für dich zum Spielen. Zeichne etwas Tolles! Spiele mit der Stiftbreite um zu sehen, wie unterschiedlich deine Zeichnungen aussehen!'
+      Building a Foundation Assessment_instruction: Baue eine dreistufige Pyramide. Es gibt keine anderen Richtungsanweisungen. Probiere es einfach aus!
       Busy Bee 2_instruction: Diese Biene hat eine Menge Arbeit! Bemerkst du irgendwelche Muster, die du verwenden kannst, um deinen Code zu vereinfachen?
       Busy Bee_instruction: Diese Biene hat eine Menge Arbeit! Bemerkst du irgendwelche Muster, die du verwenden kannst, um deinen Code zu vereinfachen?
+      C3-Farmer While Loops 5_instruction: Wow, jetzt sind da zwei tiefe Löcher! Kannst du ein Programm schreiben, das beide voll füllt bis der Boden eben ist?
+      C3-Farmer While Loops 6_instruction: Wow, jetzt ist da ein großer Haufen Erde! Kannst du ein Programm schreiben, das alles entfernt, damit der Boden eben ist?
+      C3-Farmer While Loops 7_instruction: Wow, da sind jetzt drei Haufen Erde! Kannst du ein Programm schreiben, das jeden entfernt bis der Boden eben ist?
+      C3-Farmer While Loops Assessment 1_instruction: Hier sind viele Löcher und Erdhaufen.  Hilf mir, die Löcher zu füllen und die Haufen zu entfernen und den Boden wieder zu ebnen.
       CSD U5 black white images pixelation 5_instruction: Zeichne was du willst
       CSD U5 black white images pixelation 5_2018_instruction: Zeichne was du willst
+      CSDU6 - Arrays - indexPractice_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSDU6 - for loop - color buttons with for_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSDU6 - for loop - color buttons_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSDU6 - for loop - why for_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSDU6 arrays rainbow_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSDU6 arrays select rainbow_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSDU6 arrays select rainbow_2018_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
       CSP student contact info_instruction: Bitte gibt deine E-Mail-Adresse ein.
+      CSPU5_U3 - Arrays - indexPractice_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSPU5_U3 - Arrays - indexPractice_2018_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      CSPU5_U3L15 full clicker app_instruction: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
+      CSPU5_U3L15 full clicker app_2018_instruction: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
+      Course 2 Bee Loops 1_instruction: 'Hallo, ich bin eine Biene. Kannst du mir helfen, den Nektar von diesen Blüten zu sammeln? '
       Course 2 Maze Loops 1_instruction: Kannst du mich zu dem Schwein bringen, indem du 5 Bausteine benutzt?
       Course 4 2_instruction: 'Die Biene will jetzt nur Nektar. Erinnere dich: Nicht alle Objekte sind Blüten, also prüfe, damit nur aus Blüten Nektar gesammelt wird.'
       Course 4 Artist 1_instruction: 'Hilf mir, eine Box zu zeichnen. (Jede Linie ist 200 Pixel lang) '
@@ -981,11 +1003,14 @@ de:
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Freies Spielen! Viel Spaß mit all den Bausteinen in deinem Werkzeugkasten. '
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Herausforderung: Wie würdest Du die „Zähle mit“-Schleife verwenden, um jeden Schauspieler umherlaufen, seine Nummer sagen und dann vom Bildschirm verschwinden zu lassen? '
       New Artist Project_instruction: Zeichne etwas Tolles! Dein Code wurde als Projekt gespeichert, zu dem du jederzeit zurückkehren kannst.
+      New Basketball Project_instruction: Erstelle Dein eigenes Basketball-Spiel. Du kannst die Regeln ändern. Wenn Du fertig bist, klicke auf fertigstellen, um Deine Freunde das Spiel auf ihrem Handys ausprobieren zu lassen.
+      New Bounce Project_instruction: Erstelle dein eigenes Bounce-Spiel. Du kannst die Bilder und Regeln ändern. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
       New Course 4 Artist Functions Level 4_instruction: Benutze die Funktion „Zeichne ein Quadrat“, um das Muster zu zeichnen.
       New Gumball Project_instruction: Erstelle alles, was dir gefällt und teile es!
       New Ice Age Project_instruction: Erstelle alles, was dir gefällt und teile es!
       New Infinity Project_instruction: Erstelle alles, was dir gefällt und teile es!
       New Minecraft Hero Project_instruction: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust losziehen!"
+      New Sports Project_instruction: "Jetzt bist Du an der Reihe: Erstelle dein eigenes Spiel. Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\r\n\\r \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren."
       Overworld Avoid Monsters_instruction: In einen Creeper hinein zu laufen, ist eine schlechte Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres Zuhause.
       Overworld Avoid Monsters_2018_instruction: In einen Creeper hinein zu laufen, ist eine schlechte Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres Zuhause.
       Overworld Chop Tree - allthethings_instruction: Holz ist ein sehr wichtiger Rohstoff. Viele Dinge werden daraus hergestellt. Um einen Baum zu fällen, gehe zu seinem Stamm und benutze den „Zerstören“-Baustein.
@@ -1007,9 +1032,11 @@ de:
       Overworld Powered Minecart_2018_instruction: Gute Arbeit! Du hast viele Rohstoffe gesammelt und ein bescheidenes Haus gebaut. Lege jetzt Schienen vom Rand der Karte bis zur Tür deines Hauses.
       Overworld Shear Sheep_instruction: Zeit zum Schafescheren! Benutze den Befehl "scheren", um Wolle von beiden Schafen zu sammeln.
       Overworld Shear Sheep_2018_instruction: Zeit zum Schafescheren! Benutze den Befehl "scheren", um Wolle von beiden Schafen zu sammeln.
+      PDK5 Conditionals 1_instruction: Eine lila Blume kann entweder 1 oder 0 Portion Nektar haben, aber du weißt nicht genau, welche. Achte darauf, nicht von einer lila Blume Nektar zu sammeln, wenn sie keinen hat. Überprüfe, ob die Nektarmenge gleich 1 ist, indem du einen „Wenn“-Baustein benutzt.
       PDK5 Functions 2_instruction: Funktionen erlauben dir, neue Blöcke zu definieren! Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben, um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen, um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel.
       PS copy 2-3 Bee Conditionals 5_instruction: "Eine lila Blume kann entweder 1 oder 0 Portion Nektar haben, aber du weißt nicht genau, welche. Achte darauf, nicht von einer lila Blume Nektar zu sammeln, wenn sie keinen hat. Überprüfe, ob die Nektarmenge gleich 1 ist, indem du einen „Wenn“-Baustein benutzt."
       Project - Make Your Own Clicker Game_instruction: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
+      Quantum Bee_instruction: Eine lila Blume kann entweder 1 oder 0 Portion Nektar haben, aber du weißt nicht genau, welche. Achte darauf, nicht von einer lila Blume Nektar zu sammeln, wenn sie keinen hat. Überprüfe, ob die Nektarmenge gleich 1 ist, indem du einen „Wenn“-Baustein benutzt.
       Ryan - 4-5 Bee Conditionals 2_instruction: Die Biene will jetzt nur Nektar. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst du Nektar sammeln.
       Ryan - Bee Conditionals_instruction: Die Biene will jetzt nur Nektar. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst du Nektar sammeln.
       Ryan Test Locked Blocks_instruction: Hier ist eine Funktion namens „Patrouille“. Ändere sie so, dass die Katze sich 400 Pixel auf- und abwärts bewegt.
@@ -1033,6 +1060,8 @@ de:
       U2 frequency caesar_instruction: Anweisungen
       U2 frequency random sub_instruction: Anweisungen
       U2 vigenere cipher_instruction: Anweisungen
+      U3 - Arrays - indexPractice_instruction: Schreibe den Inhalt der Felder nach Nummer geordnet auf den Bildschirm. (Klicke, um die komplette Anweisung anzuzeigen)
+      U3L15 full clicker app_instruction: Beende dein Klick-Spiel! (Klicke um die komplette Anweisung anzuzeigen)
       U4 vigenere cipher 2_instruction: Anweisungen
       U4L02 - Objects - Template1_instruction: Vorlage
       U4L02 - Objects - Template1_2018_instruction: Vorlage
@@ -1060,6 +1089,7 @@ de:
       bounce_11_basketball_instruction: "Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein anhängen. Den neuen Baustein „neuen Ball werfen“ musst Du an mehr als einer Stelle einsetzen. Versuche auch die Geschwindigkeit der Hand und des Balls zu verändern .\\r\n\\r\nStarte das Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei Punkte erzielt."
       bounce_11_sports_instruction: "Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein anhängen. Den neuen Baustein „neuen Ball werfen“ musst Du an mehr als einer Stelle einsetzen. Versuche auch die Geschwindigkeit der Hand und des Balls zu verändern .\\r\n\\r\nStarte das Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei Punkte erzielt."
       bounce_12_instruction: Erstelle dein eigenes Bounce-Spiel. Du kannst die Bilder und Regeln ändern. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
+      bounce_12_2018_instruction: Erstelle dein eigenes Bounce-Spiel. Du kannst die Bilder und Regeln ändern. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
       bounce_12_basketball_instruction: Erstelle Dein eigenes Basketball-Spiel. Du kannst die Regeln ändern. Wenn Du fertig bist, klicke auf fertigstellen, um Deine Freunde das Spiel auf ihrem Handys ausprobieren zu lassen.
       bounce_12_sports_instruction: "Jetzt bist Du an der Reihe: Erstelle dein eigenes Spiel. Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\r\n\\r \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren."
       bounce_1_2018_instruction: Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein und drücke „Ausführen“. Bewege den Schläger mit dem Linkspfeil, um das Ziel zu erreichen.
@@ -1085,6 +1115,7 @@ de:
       bounce_7_2018_instruction: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball hüpfen, bis er das Ziel trifft.
       bounce_7_basketball_instruction: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball hüpfen, bis er das Ziel trifft.
       bounce_7_sports_instruction: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball hüpfen, bis er das Ziel trifft.
+      collector example_instruction: Bringen Sie diese Blöcke in eine Ordnung, um all das Gold zu sammeln und das Rätsel zu lösen.
       collectorDebugVideo2_instruction: Bringen Sie diese Blöcke in eine Ordnung, um all das Gold zu sammeln und das Rätsel zu lösen.
       collectorSkinVideo1_instruction: Sammeln Sie alle vier Haufen um dieses Level zu schaffen.
       collectorSkinVideo2_instruction: Sammeln Sie einen Haufen Gold, dieses Level zu beenden.
@@ -1115,16 +1146,23 @@ de:
       course3_playlab_stage17_5_instruction: "Kannst du einen Programm-Block hinzufügen, so dass du ein Punkt erhältst, sobald der Pinguin den Tintenfisch (Figur 3) erreicht?\\r\n\\r\nWenn du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
       course3_playlab_stage17_6_instruction: "Kannst Du dieses Programm mit weiteren Bausteinen erweiten, um den Hintergrund und die Geschwindigkeit des Pinguins 'Watschel' zu verändern. \n\\r\\r\nWenn du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
       course3_playlab_stage17_7_instruction: Mache deine eigene Geschichte. Wenn du fertig bist, klicke auf "Abschließen" um deine Geschichte deinen Freunden an ihren Smartphones zu zeigen.
-      course4_artist_fwp_challenge1_instruction: Führe dieses Programm aus und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
+      course4_artist_fwp_challenge1_instruction: Versuche, dieses Programm auszuführen und verändere es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert? (Oder lösche es und ersetze es durch etwas ganz anderes)
       courseA_artist_loops10_instruction: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
       courseA_artist_loops10_2018_instruction: Hilf mir, Stein abzulegen, so das ich nicht hineinfalle!
       courseA_artist_loops11_instruction: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln zu sehen.
+      courseA_artist_loops11_2018_instruction: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln zu sehen.
       courseA_artist_loops12_instruction: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
+      courseA_artist_loops12_2018_instruction: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
       courseA_artist_loops3_instruction: Zeichne eine Linie fünfmal geradeaus.
       courseA_artist_loops3_2018_instruction: Zeichne eine Linie fünfmal geradeaus.
+      courseA_artist_loops7_instruction: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
+      courseA_artist_loops7_2018_instruction: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
+      courseA_artist_loops7_forVideo_instruction: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
       courseA_artist_loops9_instruction: 'Herausforderung: Repariere die Treppe!'
       courseA_artist_loops9_2018_instruction: 'Herausforderung: Repariere die Treppe!'
       courseA_collector_loops1_instruction: Bewege Laurel umher und sammle so viel Gold, wie Du kannst!
+      courseA_collector_loops11_instruction: Hilf Laurel, alles Gold aus der Höhle zu holen!
+      courseA_collector_loops11_2018_instruction: Hilf Laurel, alles Gold aus der Höhle zu holen!
       courseA_collector_loops12_instruction: 'Heureka!  Hol dir so viele Schätze wie möglich!'
       courseA_collector_loops12_2018_instruction: 'Heureka!  Hol dir so viele Schätze wie möglich!'
       courseA_collector_loops1_2018_instruction: Bewege Laurel umher und sammle so viel Gold, wie Du kannst!
@@ -1139,6 +1177,7 @@ de:
       courseA_collector_loops9_instruction: "**Aufgabe:** Das Gold liegt die ganze Treppe herauf. Schreibe Code, um mir zu helfen, alles einzusammeln!"
       courseA_collector_loops9_2018_instruction: "**Aufgabe:** Das Gold liegt die ganze Treppe herauf. Schreibe Code, um mir zu helfen, alles einzusammeln!"
       courseA_collector_preLoops7_instruction: Da sind drei Stapel Gold. Sammle Sie alle ein!
+      courseA_forVideoTest_artist_instruction: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
       courseA_maze_seq1_instruction: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq10_instruction: 'Herausforderung: Geh um das TNT herum, um den Vogel zum Schwein zu bringen! '
       courseA_maze_seq11_instruction: Gehe den einen Weg, dann den anderen, um den Vogel zum Schwein zu bringen!
@@ -1165,10 +1204,13 @@ de:
       courseA_playLab_events3_instruction: Verbinde den "nach links bewegen"-Block mit dem "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseA_playLab_events3_2018_instruction: Verbinde den "nach links bewegen"-Block mit dem "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseB_artist_loops3_instruction: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen, um eine Gartenmauer zu bauen.
+      courseB_artist_loops3_2018_instruction: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen, um eine Gartenmauer zu bauen.
       courseB_artist_loops6_instruction: Die Ranke hochklettern und sehen wo sie hinführt?
       courseB_artist_loops6_2018_instruction: Die Ranke hochklettern und sehen wo sie hinführt?
       courseB_artist_loops7_instruction: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
+      courseB_artist_loops7_2018_instruction: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
       courseB_collector_loops10_instruction: Hilf Laurel, alles Gold aus der Höhle zu holen!
+      courseB_collector_loops10_2018_instruction: Hilf Laurel, alles Gold aus der Höhle zu holen!
       courseB_collector_loops11_instruction: Heureka!  Hol dir so viele Schätze wie möglich!
       courseB_collector_loops11_2018_instruction: Heureka!  Hol dir so viele Schätze wie möglich!
       courseB_collector_loops2_instruction: Sammeln Sie alle vier Haufen um dieses Level zu beenden.
@@ -1218,6 +1260,7 @@ de:
       courseD_bee_nestedLoops8_2018_instruction: 'Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.'
       courseD_bounce_events10_instruction: Jetzt ist oben ein Tor. Hänge die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und „Wenn Ball Schläger verfehlt“, um ein Spiel zu erzeugen. Finde heraus, wie viele Punkte du erreichen kannst, bevor dein Gegner zwei Punkte erhält.
       courseD_bounce_events11_instruction: Jetzt kannst du Bausteine an den „wenn Ausführen“-Baustein anhängen. Du musst den neuen Baustein „neuen Ball werfen“ an mehr als einer Stelle einsetzen. Versuche, die Geschwindigkeit des Schlägers und des Balls zu verändern und probiere, wie viele Punkte Du machen kannst, bevor dein Gegner zwei Mal punktet.
+      courseD_bounce_events12_instruction: Erstelle dein eigenes Bounce-Spiel. Du kannst die Bilder und Regeln ändern. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
       courseD_bounce_events2_instruction: Hänge einen Baustein an die „wenn-Pfeil-nach-rechts“- und „wenn-Pfeil-nach-links“-Bausteine. Bewege den Schläger, um beide Ziele zu erreichen.
       courseD_bounce_events3_instruction: Versuche nun, etwas Ähnliches mit dem „wenn-Pfeil nach-oben“-Baustein zu erreichen. Bewege den Schläger zum Ziel am oberen Rand.
       courseD_bounce_events3s_instruction: Versuche nun, etwas Ähnliches mit dem „wenn-Pfeil nach-oben“-Baustein zu erreichen. Bewege den Schläger zum Ziel am oberen Rand.
@@ -1242,6 +1285,8 @@ de:
       courseE_bee_functions4_instruction: Die „bewege und hole Nektar“- Funktion dreht die Biene, sammelt Nektar und bringt die Biene an den Ausgangsort zurück. Benutze die Funktion, um den ganzen Nektar zu sammeln.
       courseE_bee_functions4_2018_instruction: Die „bewege und hole Nektar“- Funktion dreht die Biene, sammelt Nektar und bringt die Biene an den Ausgangsort zurück. Benutze die Funktion, um den ganzen Nektar zu sammeln.
       courseE_farmer_concept4_instruction: Wir gehen jetzt eine Ebene nach unten. Wir haben den ganzen Code- Baustein in eine andere Schleife geschachtelt, aber du musst den Künstler wieder zurückholen, damit er die nächste Zeile zeichnet. Welchen dieser Code- Bausteine kannst du am Schluss der äußeren Schleife einfügen, damit das ganze Gitternetz gezeichnet wird?
+      courseE_farmer_functions4b_instruction: Benutze deine neue Funktion um dieses Puzzle zu lösen.
+      courseE_farmer_functions4b_2018_instruction: Benutze deine neue Funktion um dieses Puzzle zu lösen.
       courseF_artist_for7_instruction: Nimm drei kleine Änderungen an dem Code aus dem vorherigem Level vor, um dies zu erreichen!
       courseF_artist_for7_2018_instruction: Nimm drei kleine Änderungen an dem Code aus dem vorherigem Level vor, um dies zu erreichen!
       courseF_artist_for_challenge1_instruction: Kriegst du heraus, wie man das Bild nachzeichnet?
@@ -1251,6 +1296,9 @@ de:
       courseF_artist_fwp1_instruction: Bearbeite die Funktion "Zeichne ein Quadrat", um Fehler zu finden.
       courseF_artist_fwp1_2018_instruction: Bearbeite die Funktion "Zeichne ein Quadrat", um Fehler zu finden.
       courseF_artist_fwp2_instruction: Bearbeiten Sie die Funktion, um einen Parameter namens "Länge" zu akzeptieren.
+      courseF_artist_fwp2_2018_instruction: Bearbeiten Sie die Funktion, um einen Parameter namens "Länge" zu akzeptieren.
+      courseF_artist_fwp2_predict1_instruction: Bearbeiten Sie die Funktion, um einen Parameter namens "Länge" zu akzeptieren.
+      courseF_artist_fwp2_predict1_2018_instruction: Bearbeiten Sie die Funktion, um einen Parameter namens "Länge" zu akzeptieren.
       courseF_artist_fwp3_instruction: Erstelle eine Funktion namens "Zeichne ein Quadrat" und verwende sie, um diese vier Boxen mit Parametern zu skizzieren.
       courseF_artist_fwp3_2018_instruction: Erstelle eine Funktion namens "Zeichne ein Quadrat" und verwende sie, um diese vier Boxen mit Parametern zu skizzieren.
       courseF_artist_fwp4_instruction: Bearbeiten Sie diese Funktion, um einen Parameter für die Anzahl der Seiten in Ihrem Polygon hinzufügen.
@@ -1258,8 +1306,11 @@ de:
       courseF_artist_fwp5_instruction: 'Verwenden Sie die Funktion vom letzten Puzzle, um diese Folge von Formen zu zeichnen.  '
       courseF_artist_fwp5_2018_instruction: 'Verwenden Sie die Funktion vom letzten Puzzle, um diese Folge von Formen zu zeichnen.  '
       courseF_artist_fwp6_instruction: 'Aufgabe: Bearbeite ''Zeichne einen Spiralenrand'', um ''Länge'' und ''Seiten'' zu verwenden, dann erstelle diese Formen.'
+      courseF_artist_fwp6_2018_instruction: 'Aufgabe: Bearbeite ''Zeichne einen Spiralenrand'', um ''Länge'' und ''Seiten'' zu verwenden, dann erstelle diese Formen.'
       courseF_artist_fwp7_instruction: Fertige die 'Zeichne eine Spiralkante' Funktion an, damit du auch eine Mindestlänge für das Zentrum der Spirale machen kannst.
+      courseF_artist_fwp7_2018_instruction: Fertige die 'Zeichne eine Spiralkante' Funktion an, damit du auch eine Mindestlänge für das Zentrum der Spirale machen kannst.
       courseF_artist_fwp8_instruction: Findest du heraus, wie man diese Zeichnung mit Hilfe der Funktion macht, die du gerade erstellt hast?
+      courseF_artist_fwp8_2018_instruction: Findest du heraus, wie man diese Zeichnung mit Hilfe der Funktion macht, die du gerade erstellt hast?
       courseF_artist_fwp9_instruction: 'Freizeit: Zeichne etwas cooles! Spiele mit die Stiftbreite zu sehen, wie unterschiedlich Deine Zeichnungen aussehen kann!'
       courseF_artist_fwp9_2018_instruction: 'Freizeit: Zeichne etwas cooles! Spiele mit die Stiftbreite zu sehen, wie unterschiedlich Deine Zeichnungen aussehen kann!'
       courseF_bee_for8_instruction: "Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?\nHinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?"
@@ -1282,7 +1333,10 @@ de:
       courseF_bee_fwp7_instruction: "**Aufgabe:** Modifiziere deine Funktion um auch Honig zu machen."
       courseF_bee_fwp7_2018_instruction: "**Aufgabe:** Modifiziere deine Funktion um auch Honig zu machen."
       courseF_bee_fwp8_instruction: Benutze deine neue Funktion um die Spirale zu lösen.
+      courseF_bee_fwp8_2018_instruction: Benutze deine neue Funktion um die Spirale zu lösen.
       courseF_bee_fwp9_instruction: Benutze deine neue Funktion um dieses Puzzle zu lösen.
+      courseF_bee_fwp9_predict1_instruction: Benutze deine neue Funktion um dieses Puzzle zu lösen.
+      courseF_bee_fwp9_predict1_2018_instruction: Benutze deine neue Funktion um dieses Puzzle zu lösen.
       flappy_1_instruction: Füge dem "Beim Klicken"-Baustein einen weiteren Baustein hinzu und drücke dann "Ausführen". Klicke oder tippe auf den Bildschirm, um Flappy zum Ziel zu bewegen.
       flappy_11_instruction: Programmiere Dein eigenes "Flappy"-Spiel. Du kannst alle Bilder und Regeln ändern, sogar die Schwerkraft. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
       flappy_11_2018_instruction: Programmiere Dein eigenes "Flappy"-Spiel. Du kannst alle Bilder und Regeln ändern, sogar die Schwerkraft. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
@@ -1323,10 +1377,14 @@ de:
       frozen square loop 3x_instruction: Lass uns drei Quadrate erstellen und nach jedem Quadrat drehen. Stell sicher, dass du vor jedem neuen Quadrat um 120° drehst.
       frozen square loop_instruction: Hallo, ich bin Anna von Arendelle! Lass uns ein Quadrat mit dem „Wiederholen“-Baustein zeichnen, dadurch brauchen wir weniger Blöcke. Wie oft (???) muss der „Wiederholen“-Baustein die inneren Bausteine durchlaufen, damit ein Quadrat entsteht?
       frozen square snowflake_instruction: Kannst du eine Schneeflocke erstellen, indem du den „Wiederholen"-Baustein 10 mal benutzt, um ein Quadrat zu erstellen und nach jedem Quadrat den „Drehen"-Baustein mit 36° benutzt?
+      grade1_adventurer_loopsPre_instruction: Dies ist Laurel, der Abenteurer. Kannst Du sie herumführen und Gold einsammeln?
+      grade1_artist_loops2_instruction: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen, um eine Gartenmauer zu bauen.
+      grade1_artist_loops6_instruction: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein bisschen herum."
       grade1_maze_sequence1_instruction: Bring mich zum Schwein, indem du den Code änderst.
       grade1_maze_sequence2_instruction: Bring mich zum Schwein, indem du den Code änderst.
       grade1_maze_sequence5_instruction: Bewege mich in eine Richtung, dann in eine andere, um mich zum Schwein zu bringen!
       grade1_maze_sequence6_instruction: Finde heraus was fehlt und ergänze dann Bausteine, um mich zu dem Schwein zu bringen!
+      grade1_maze_sequence7_instruction: Du bist dran! Was musst du machen um den Vogel zum Schwein zu bringen?
       grade1_maze_sequence9_instruction: 'Gehe um das TNT herum, um mich zum Schwein zu bringen!'
       grade2_CaringForNewPet_10_instruction: Bring mich zum Schwein!
       grade2_CaringForNewPet_5_instruction: Bring mich zum Schwein!
@@ -1348,6 +1406,7 @@ de:
       grade2_PuppyLoops_8_instruction: "Der Code für die drei Schnurrhaare, die du siehst, ist falsch. Hinweis: Jedes Schnurrhaar ist 75 Pixel lang. Verbessere diesen Code, um die Schnurrhaare zu zeichnen."
       grade2_PuppyLoops_9_instruction: |-
         Es sieht aus als ob C in Code spiegelverkehrt ist. Kannst du es wie ein C aussehen lassen?
+      grade2_collector_3_instruction: Bringen Sie diese Blöcke in eine Ordnung, um all das Gold zu sammeln und das Rätsel zu lösen.
       grade2_playlab_project_1_instruction: Schreib als nächstes ein Programm, mit dem Du Watschel, den Pinguin mit den Pfeiltasten hoch / runter/ links / rechts steuern kannst und versuche anschliessend alle Ziele zu treffen.
       grade2_playlab_project_3_instruction: "Kannst Du ein Programm schreiben, so dass der Pinguin (Figur 1) \"Autsch!\" sagt und gleichzeitig ein \"Treffer\"-Geräusch ertönt, sobald er in den Dinosaurier läuft?\\r\n\\r\nWenn du fertig bist, spiele Dein Spiel und versuche aus, ob es so funktioniert."
       grade2_playlab_project_4_instruction: "Kannst du einen Programm-Block hinzufügen, so dass du ein Punkt erhältst, sobald der Pinguin den Tintenfisch (Figur 3) erreicht?\\r\n\\r\nWenn du fertig bist, starte das Spiel und steuere den Pinguin mit den Pfeilen, bis du punktest."
@@ -1425,11 +1484,16 @@ de:
       grade3_robotFarmer_ConditionalsIntro_6_instruction: Entferne alle Erdhaufen mit so wenig Bausteinen wie möglich. Die neuen Optionen im Dropdown-Menü auf dem "Wenn"-Baustein sagen mir, ob ich auf einem Haufen oder einem Loch stehe.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: 'Hilf mir, alle Löcher mit 5 Schaufeln Erde aufzufüllen. Tipp: Setze einen „Wiederholen“-Baustein in den „Wenn“-Baustein.'
       grade4_arist_nested_loop_circles1_instruction: 'Verwende eine verschachtelte Schleife um das Design fertigzustellen.'
+      grade4_arist_nested_loop_flags1_instruction: Benutze den angegebenen Code in einer Schleife, um eine Windmühle zu erstellen.
       grade4_arist_nested_loop_polygons1_instruction: "Führe dieses Design 10 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 10?)"
       grade4_arist_nested_loop_polygons2_instruction: "Führe dieses Design 6 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 6?)"
+      grade4_arist_nested_loop_squares1_instruction: Kannst du diese 10 Quadrate dieses Gehsteigs mit einer verschachtelten Schleife zeichnen? Jedes Quadrat hat eine Seitenlänge von 30 Pixeln.
       grade4_arist_nested_loop_triangles2_instruction: 'Erstelle nun eine Schleife in einer weiteren Schleife um 10 Dreiecke zu zeichnen.  Dies nennt man eine verschachtelte Schleife.  Hinweis: Alle 10 Dreiecke ergeben eine 360-Grad-Drehung.  '
+      grade4_arist_nested_loop_triangles3_instruction: Kannst Du ein Sechseck zeichnen, indem Du den Dreieck-Code in einer Schleife verwendest?
+      grade4_arist_nested_loop_triangles4_instruction: Zeichne die Zähne im Mund des Alligators!
       grade4_arist_nested_loop_triangles5_instruction: |-
         Male eine Sonne indem Du den Startbefehl in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+      grade4_arist_nested_loop_triangles6_instruction: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife zeichnen?
       grade4_artist_functions1_instruction: "Hallo. Ich Zombie-Künstler. Ich zeichnen liebe! Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate."
       grade4_artist_functions2_instruction: "Funktionen erlauben dir, neue Blöcke zu definieren! Wir haben die Blöcke in eine Funktion namens „zeichne ein Quadrat“ verschoben, um ein Quadrat zu zeichnen. Kannst du die Funktion „zeichne ein Quadrat“ benutzen, um die Gläser zu erstellen? Die Quadrate haben einen Abstand von 75 Pixel."
       grade4_artist_functions_challenge_instruction: Zeichne mit dem vorgegebenen Funktionen vier Zeilen mit Sechsecken. Beachte, dass die geradzahligen Zeilen nach rechts verschoben sind.
@@ -1440,10 +1504,13 @@ de:
         Hier ist der Code für eine interessante Form.  Was passiert, wenn du sie mehrmals wiederholst und zwischen jeder Wiederholung drehst?   Beachte, dass die Drehungen in dieser Form bis zu 420 Grad betragen, was bedeutet, dass sie zu dem Zeitpunkt, zu dem dein Künstler mit Zeichnen fertig ist, eine andere Richtung hat als zu dem Zeitpunkt, als du angefangen hast.  Diese neue Richtung ist genau 60 Grad rechts von dem Punkt, wo du angefangen hast.
       grade4_artist_nestedLoops_challenge2_instruction: Jetzt kommt eine Herausforderung!  Hier ist ein Design, das nur Blöcke benutzt, die dir bereits gezeigt wurden!  Schaffst du es, es ohne weitere Informationen wieder zu erstellen?  Habe keine Angst zu versuchen und dabei Fehler zu machen. Es wird nicht erwartet, dass es beim ersten Mal perfekt wird.  Möchtest du mehr Hinweise sehen?  Klicke hier!
       grade4_artist_nested_loop_circles1_instruction: 'Verwende eine verschachtelte Schleife um das Design fertigzustellen.'
+      grade4_artist_nested_loop_flags1_instruction: Benutze den angegebenen Code in einer Schleife, um eine Windmühle zu erstellen.
       grade4_artist_nested_loop_polygons1_instruction: "Führe dieses Design 10 Mal aus. Um wie viel Grad musst Du Dich bei jeder Wiederholung weiterdrehen? (Hinweis: Was ist 360 geteilt durch 10?)"
+      grade4_artist_nested_loop_squares1_instruction: Kannst du diese 10 Quadrate dieses Gehsteigs mit einer verschachtelten Schleife zeichnen? Jedes Quadrat hat eine Seitenlänge von 30 Pixeln.
       grade4_artist_nested_loop_triangles1_instruction: 'Vervollständige den Code, damit diese Dreiecke gezeichnet werden. Das erste hast du erledigt. Hinweis: 3 Dreiecke in einer 360- Grad- Drehung.'
       grade4_artist_nested_loop_triangles5_instruction: |-
         Male eine Sonne indem Du den Startbefehl in einer anderen Schleife benutzt. Dies nennt man eine verschachtelte Schleife.
+      grade4_artist_nested_loop_triangles6_instruction: Kannst du diese 36 Dreiecke mit einer verschachtelten Schleife zeichnen?
       grade4_artist_parameters_squares1_instruction: 'Klicke „Ausführen“, um die Funktionsdefinition von „Zeichne ein Quadrat“ auszufüllen und füge einen Parameter hinzu. Sie sollte auch von einem Längenparameter ausgehen, genau wie das Dreieck. Zeichne dieses Mal 3 Quadrate: 25, 50 und 75 Pixel lang, jeweils 100 Pixel voneinander entfernt.'
       grade4_artist_parameters_triangles2_instruction: Fällt dir irgendetwas Neues an diesen Funktionsbausteinen auf? Klicke „Ausführen“, um zu sehen, was passiert.
       grade4_artist_parameters_triangles2b_instruction: 'Kannst du diese Zeichnung vervollständigen? Hinweis: Die Seite jedes Dreiecks sind 25 Pixel länger als die des vorherigen.  Das erste Dreieck hat Seiten von 25 Pixeln.'
@@ -1503,6 +1570,10 @@ de:
         
         Siehst du, was passiert, wenn wir anfangen mit den Bits kreativ zu werden?
       grade5_artist_for_loops1_instruction: 'Zeichne dieses Dreieck, das 50 Pixel groß ist. Hinweis: Benutze einen Wiederholen-Baustein.'
+      grade5_artist_for_loops10_instruction: |-
+        Mit allem, was du bisher gelernt hast: Findest du heraus, wie du dieses Bild machen kannst?\r
+        \r
+        Brauchst du einen Tipp? Klick hier.
       grade5_artist_for_loops5_instruction: |-
         Eine kleine Änderung am Code des letzten Bildes kann dieses Bild erzeugen. Kannst du herausfinden, was für eine Änderung es ist?
         
@@ -1522,9 +1593,13 @@ de:
       grade5_artist_functionparameters11_instruction: 'Freies Spiel: Hier sind die Funktionen, die du geschrieben hast, und ein paar mehr für dich zum Spielen. Zeichne etwas Tolles! Spiele mit der Stiftbreite um zu sehen, wie unterschiedlich deine Zeichnungen aussehen!'
       grade5_artist_functionparameters7_instruction: Dieses Bild ist so ähnlich wie das letzte. Kannst du eine „Zähle mit“-Schleife mit deiner Funktion benutzen, um dieses Design zu erstellen?
       grade5_artist_functionparameters8_instruction: "Lass und diese „Zeichne ein Vieleck“-Funktion ändern. Sie hat bereits einen Parameter „Seiten“. Lass uns nun einen Parameter „Länge“ ergänzen.\nHinweis: Der Umfang jeder Form ist 200 Pixel lang. Kannst du dich noch an die Gleichung erinnern, mit der jede Figur gleich groß wird, auch bei unterschiedlicher Seitenanzahl?"
+      grade5_artist_functionparameters9_instruction: 'Aufgabe: Bearbeite ''Zeichne einen Spiralenrand'', um ''Länge'' und ''Seiten'' zu verwenden, dann erstelle diese Formen.'
+      grade5_artist_functionparameters9a_instruction: Fertige die 'Zeichne eine Spiralkante' Funktion an, damit du auch eine Mindestlänge für das Zentrum der Spirale machen kannst.
+      grade5_artist_functionparameters9b_instruction: Findest du heraus, wie man diese Zeichnung mit Hilfe der Funktion macht, die du gerade erstellt hast?
       grade5_artist_functionparameters_6_instruction: |-
         Kannst du diese Zeichnung vervollständigen? Die Seiten aller Formen sind 100 Pixel lang.
       grade5_artist_parameters_squares1_instruction: 'Klicke „Ausführen“, um die Funktionsdefinition von „Zeichne ein Quadrat“ auszufüllen und füge einen Parameter hinzu. Sie sollte auch von einem Längenparameter ausgehen, genau wie das Dreieck. Zeichne dieses Mal 3 Quadrate: 25, 50 und 75 Pixel lang, jeweils 100 Pixel voneinander entfernt.'
+      grade5_artist_parameters_squares2a_instruction: Bearbeiten Sie die Funktion, um einen Parameter namens "Länge" zu akzeptieren.
       grade5_artist_parameters_triangles2a_instruction: Fällt dir irgendetwas Neues an diesen Funktionsbausteinen auf? Klicke „Ausführen“, um zu sehen, was passiert.
       grade5_artist_parameters_triangles4_instruction: Der Code für diese Dreiecksfunktion ist defekt. Kannst du die Funktion überarbeiten, um ihn zu reparieren und dann Dreiecke mit einer Länge von 25, 50 und 75 erstellen?
       grade5_artist_variables_freeplay10_instruction: 'Freies Spiel: Experimentiere mit der Anzahl Seiten, die diese Form hat. Schaffst du es, den Algorithmus so anzupassen, dass die Größe der Form unabhängig von der Zahl der Seiten immer dieselbe ist? Hinweis: Wenn du die Ausgangslänge durch die Zahl der Seiten teilst, nimmt die Länge der Seiten mit zunehmender Seitenzahl ab.'
@@ -1577,7 +1652,11 @@ de:
       grade5_playlab_variables81_instruction: "Wir haben für dich eine letzte Funktion ergänzt.\n\nBenutze eine „Wenn“-Aussage, um dein Spiel zu programmieren, um die „Level-hoch“-Funktion nur dann aufzurufen, wenn „Spieler_Punkte“ größer als eine bestimmte Zahl wird.\n\nZum Beispiel: „Spieler_Punkte“ > 6\n\nSpiele das Spiel und lasse es Level 4 passieren, um zum nächsten Puzzle zu gelangen."
       grade5_playlab_variables9_instruction: "Hier ist eine Funktion namens „Patrouille“. Ändere sie so, dass die Katze sich 400 Pixel auf- und abwärts bewegt."
       grade5_playlab_variables_freeplay_instruction: "Zeit für freies Spiel! Hier sind alle Variablen, mit denen wir bis jetzt in dieser Phase gespielt haben, sowie ein paar mehr, falls du sie möchtest.\n\nBeachte, dass deine Toolbox jetzt über eine große Zahl von Bausteinen verfügt, die wir daher erneut nach Kategorien geordnet haben.  Hier haben wir jedes Teil in eine passende Kategorie eingeordnet.  Nimm dir Zeit und schau dir alles genau an. Wenn du mit Browsen fertig bist, gestalte ein Spiel oder eine Geschichte mit Wiederholungen, Variablen und Ereignissen.\n\nHinweis: Du musst vielleicht runterscrollen, um alle Befehle im Arbeitsraum zu finden."
+      gradek_artist_loops6_instruction: Benutze die 'Wiederholen' Schleife um Wellen zum Wasser hinzuzufügen.
+      gradek_artist_loopsA_instruction: Hilf mir, Stufen zu bauen, um das Schiff davonsegeln zu sehen.
+      gradek_artist_loopsFP_instruction: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
       k-1 maze 1_instruction: Kannst du mich nach Westen bewegen, damit ich zum Schwein komme?
+      k1stickerfreeplay_instruction: Der Zeichner sah etwas Lustiges in der Ferne. Zeichne, was Du denkst, was er sah!
       level 'grade3_Loops_10_instruction: |-
         Benutze eine ähnliche Schleife wie in der letzten Aufgabe, aber arbeite eine Drehung ein.
       level 'grade3_Loops_11_instruction: "Benutze eine Schleife, um die Stufen herabzusteigen und den Nektar zu sammeln."
@@ -1592,10 +1671,12 @@ de:
       level 'grade3_Loops_8_instruction: Benutze eine Schleife, um den Nektar zu sammeln und Honig zu erzeugen.
       level 'grade3_Loops_9_instruction: Sammle Nektar aus jeder Blüte und erzeuge Honig bei jeder Wabe.
       level grade3_Loops_2_instruction: Kannst du diese Aufgabe mit einer Schleife vereinfachen?
+      scrat 16 (copy 1)_instruction: Eichel! Eichel! Eichel! Verwende einen „Wenn"-Baustein, um mich mit der geringsten Anzahl an Bausteinen zum Ziel zu bringen.
       scrat 16_instruction: Eichel! Eichel! Eichel! Verwende einen „Wenn"-Baustein, um mich mit der geringsten Anzahl an Bausteinen zum Ziel zu bringen.
       scrat 17_instruction: OK, nochmals zum Üben - das ist nicht sehr unterschiedlich, aber man muss auf die Wand achten!
+      scrat 18 (copy 1)_instruction: Die „Wenn-Ansonsten“-Bausteine überprüfen eine Bedingung und führen dann entweder eine ODER eine andere Anweisung aus. Verwende diesen neuen Baustein, um mich zur Eichel zu bringen.
       scrat 18_instruction: Die „Wenn-Ansonsten“-Bausteine überprüfen eine Bedingung und führen dann entweder eine ODER eine andere Anweisung aus. Verwende diesen neuen Baustein, um mich zur Eichel zu bringen.
-      scrat 19 (copy 1)_instruction: Noch eine Übung mit dem "Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?
+      scrat 19 (copy 1)_instruction: Noch eine Übung mit dem „Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?
       scrat 19_instruction: Noch eine Übung mit dem „Wenn-Ansonsten" Baustein, schaffst du es mit dem ersten Versuch?
       scrat 20_instruction: Kannst du 3 Bausteine hinzufügen, um mit mir zusammen ein komplizierteres Labyrinth zu lösen? Wenn du es richtig machst, kann ich auf jedem kurvigen Weg entlang gehen, egal wie lang. Beeile dich! Das Eis schmilzt!
       skratDebugVideo1_instruction: Hilf Skrat zur Eichel zu gelangen.

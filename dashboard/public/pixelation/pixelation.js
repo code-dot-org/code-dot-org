@@ -87,8 +87,8 @@ function customizeStyles() {
   if (options.hideEncodingControls === true || options.hideEncodingControls === 'true') {
     $('.encoding_controls').hide();
   }
-  if (options.instructions) {
-    $('#below_viz_instructions').text(options.instructions).show();
+  if (options.shortInstructions) {
+    $('#below_viz_instructions').text(options.shortInstructions).show();
   }
 }
 

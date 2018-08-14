@@ -396,7 +396,7 @@ hu:
         Minden felhő alatt egy virágnak vagy egy lépnek kell lennie. Használd a ha/különben blokkot nektár gyűjtésére, ha ott egy virág van, különben készíts mézet (mert ez egy lép).
       grade4_bee_functions3_markdown_instruction: A függvények olyan kódot tartalmazó blokkok, amelyek elvégeznek egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre 5 egység nektárt össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj a számlálóra is.
       grade4_bee_nestedLoops4_markdown_instruction: 'Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!'
-      grade4_frozen_freeplay_markdown_instruction: Hivatalos művész mesterré váltál! Készíts egy téli csodaországot.
+      grade4_frozen_freeplay_markdown_instruction: "Hivatalosan is egy mester művész lettél!\nHozz létre egy téli csodaországot!"
       grade4_frozen_functions0_markdown_instruction: A kör egy különleges forma. Ki tudod találni, mit kell beírni a kérdőjelek helyére, hogy meg tudjunk rajzolni egy kört?
       grade4_frozen_functions1a_markdown_instruction: Használd a "készíts kört" blokkot, hogy 10 egymást átfedő kör készüljön. Ne felejts el ugrani a körök között!
       grade4_frozen_functions2_markdown_instruction: Most rajzoljunk 20 egymást átfedő kört! 18 fokot kell fordulni minden kör rajzolása után.

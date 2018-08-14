@@ -7,6 +7,7 @@ import experiments from '@cdo/apps/util/experiments';
 import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
+import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
@@ -21,7 +22,6 @@ import publishDialogReducer, {
 } from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import { AlwaysPublishableProjectTypes, AllPublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
-import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
@@ -30,22 +30,20 @@ $(document).ready(() => {
   registerReducers({projects, publishDialog: publishDialogReducer, deleteDialog: deleteDialogReducer});
   const store = getStore();
   setupReduxSubscribers(store);
-  const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={store}>
-      <ProjectHeader/>
+      <GallerySwitcher/>
     </Provider>,
-    projectsHeader
+    document.getElementById('gallery-navigation')
   );
 
   ReactDOM.render(
     <Provider store={store}>
-      <StartNewProject
-        canViewFullList
+      <ProjectHeader
         canViewAdvancedTools={projectsData.canViewAdvancedTools}
       />
     </Provider>,
-    document.getElementById('new-project-buttons')
+    document.getElementById('projects-header')
   );
 
   const isPublic = window.location.pathname.startsWith('/projects/public');
@@ -81,7 +79,10 @@ $(document).ready(() => {
 
       ReactDOM.render(
         <Provider store={store}>
-          <PersonalProjectsTable/>
+          <PersonalProjectsTable
+            canShare={projectsData.canShare}
+            publishMethod="chevron"
+          />
         </Provider>,
        document.getElementById('react-my-projects')
       );

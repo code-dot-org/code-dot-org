@@ -73,7 +73,7 @@ sr:
             Getting Loopy:
               name: Запетљанције
             Graph Paper Programming:
-              name: Графичко програмирање
+              name: Графиконско - Папирно Програмирање
             'Maze: Loops':
               name: 'Лавиринт: Петље'
             'Maze: Sequence':
@@ -287,11 +287,11 @@ sr:
             Functions:
               name: Функције
             Graph Paper Programming:
-              name: Графичко програмирање
+              name: Графиконско - Папирно Програмирање
             Introduction to Computer Science:
               name: Увод у Компјутерске Науке
             Relay Programming:
-              name: Релејно Програмирање
+              name: Relay programming
             Song Writing:
               name: Писање Песама
             The Artist:
@@ -350,6 +350,8 @@ sr:
         Hour of Code:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
+        cspunit1:
+          description_short: Programming
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -373,6 +375,7 @@ sr:
             Impact of Computer Science:
               name: Утицај рачунарских наука
         cspunit3:
+          description_short: Programming
           stages:
             While Loops:
               name: Понављања са условима
@@ -411,6 +414,7 @@ sr:
             Welcome!:
               name: Welcome!
         cspunit2:
+          description_short: Programming
           stages:
             The Internet:
               name: Интернет је за свакога
@@ -539,7 +543,7 @@ sr:
             Getting Loopy:
               name: Запетљанције
             Graph Paper Programming:
-              name: Графичко програмирање
+              name: Графиконско - Папирно Програмирање
             Happy Maps:
               name: Веселе мапе
             Move it, Move it:
@@ -600,6 +604,10 @@ sr:
           stages:
             Welcome!:
               name: Welcome!
+        cspunit5:
+          description_short: Programming
+        cspunit4:
+          description_short: Programming
         AlgebraA:
           stages:
             'Calc: Defining Variables':
@@ -802,6 +810,7 @@ sr:
               name: Листе
         minecraft:
           title: Мајнкрафт дизајнер - час програмирања
+          description_short: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
           description: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
           stages:
             Minecraft Hour of Code Designer:
@@ -1083,7 +1092,7 @@ sr:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Графичко програмирање
+              name: Графиконско - Папирно Програмирање
             Building a Foundation:
               name: Изградња темеља
             'Events: The Big Event':
@@ -1103,7 +1112,7 @@ sr:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Релејно Програмирање
+              name: Relay programming
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1113,7 +1122,7 @@ sr:
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Графичко програмирање
+              name: Графиконско - Папирно Програмирање
             Building a Foundation:
               name: Изградња темеља
             Conditionals with Cards:
@@ -1125,9 +1134,9 @@ sr:
             Artist Binary:
               name: Уметник Бинарно
             Graph Paper Programming:
-              name: Графичко програмирање
+              name: Графиконско - Папирно Програмирање
             Relay Programming:
-              name: Релејно Програмирање
+              name: Relay programming
         coursec-2018:
           stages:
             Building a Foundation:

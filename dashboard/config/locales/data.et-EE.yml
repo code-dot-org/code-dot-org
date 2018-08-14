@@ -19,7 +19,7 @@ et:
         Farmer2: Talunik tase 2
         Unplug8: Abstraktsus
         Artist4: Kunstnik tase 4
-        Unplug9: Relee Programmeerimine
+        Unplug9: Relee programmeerimine
         Farmer3: Talunik tase 3
         Unplug10: Internet
         Artist5: Kunstnik tase 5
@@ -93,8 +93,7 @@ et:
           kuid hoidu taimede eest!
         maze_2_17: '"Kui-teine" plokid kontrollivad tingimust ja teeb vastavalt ühte
           või teist asja. Et saada mind päevalilleni, kasuta seda uut plokki.'
-        maze_2_18: Üks harjutamine veel "kui-teine" plokiga, kas saad esimese korraga
-          õigesti?
+        maze_2_18: Üks harjutus veel, kas sa saad esimese korraga õigesti?
         maze_2_19: Kas sa saad lisada 3 plokki, et aidata mul lahendada veel keerulisem
           labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu,
           ükskõik kui pikk see on.
@@ -323,51 +322,53 @@ et:
         studio_c2_1: Kas oskad panna koera ütlema "tere maailm"?
         studio_c2_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks
           kass midagi?
-        studio_c2_3: Kas oskad kirjutada programmi, mille abil koer liigub kassi juurde?
-        studio_c2_4: Kas oskad kirjutada programmi, mille abil koer liigub kassi juurde
-          ja kass ütleb „tere“, kui koer tema juurde jõuab?
-        studio_c2_5: Kas oskad kirjutada programmi, mille abil kaheksajalg ütleb „tere“,
-          kui temal klikitakse?
-        studio_c2_6: Kas oskad kirjutada programmi, mille abil liigutada pingviini
-          üles-, alla-, parem- ja vasaknooleklahvide abil, nii et ta jõuaks kõigi
+        studio_c2_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi
+          juurde?
+        studio_c2_4: Kas sa saaksid kirjutada programmi, mille abil koer liigub kassi
+          juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
+        studio_c2_5: Kas saaksid kirjutada programmi, mille abil kaheksajalg ütleb
+          „tere“, kui temal klikitakse?
+        studio_c2_6: Kas sa saaksid kirjutada programmi, mille abil liigutada pingviini
+          üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks kõigi
           sihtmärkideni?
-        studio_c2_7: Ploki „korda igavesti“ abil saad koodi pidevalt käitada. Kas
+        studio_c2_7: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada. Kas
           oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
-        studio_c2_8: Kas oskad panna pingviini nooleklahvidega liikuma ja teha nii,
-          et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja kõlab
-          heli „löök“?
-        studio_c2_9: Kas oskad lisada ploki nii, et kui pingviin põrkab kaheksajalaga
-          kokku, siis sa saad punkti, ja kas oskad teda selleks nooleklahvidega liigutada?
-        studio_c2_10: Kas oskad lisada plokid, millega muudetakse akna tausta ja pingviini
-          kiirust ning kas oskad siis pingviini nooleklahvidega liigutada, kuni saad
-          punkti?
-        studio_c2_11: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja lase
-          sõpradel telefonis lugu proovida.
+        studio_c2_8: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja teha
+          nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja
+          kõlab heli „löök“?
+        studio_c2_9: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin
+          põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni
+          saad punkti?
+        studio_c2_10: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta pingviini
+          kiirust ja liigutada teda nooltega kuni punkti saad?
+        studio_c2_11: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja lase
+          sõpradel nende telefonis oma lugu proovida.
         studio_c3_story_1: Kas oskad panna koera ütlema "tere maailm"?
         studio_c3_story_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda
           ütleks kass midagi?
-        studio_c3_story_3: Kas oskad kirjutada programmi, mille abil koer liigub kassi
-          juurde?
-        studio_c3_story_4: Kas oskad kirjutada programmi, mille abil koer liigub kassi
-          juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
-        studio_c3_story_5: Kas oskad lisada ploki, et kaheksajalg oleks õnnelik?
-        studio_c3_story_6: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
-          lase sõpradel telefonis lugu proovida.
-        studio_c3_game_1: Kas oskad kirjutada programmi, mille abil kaheksajalg ütleb
-          „tere“, kui temal klikitakse?
-        studio_c3_game_2: Kas oskad kirjutada programmi, mille abil liigutada pingviini
-          üles-, alla-, parem- ja vasaknooleklahvide abil, nii et ta jõuaks kõigi
-          sihtmärkideni?
-        studio_c3_game_3: Ploki „korda igavesti“ abil saad koodi pidevalt käitada.
+        studio_c3_story_3: Kas oskad kirjutada programmi, mille abil see koer liigub
+          kassi juurde?
+        studio_c3_story_4: Kas sa saaksid kirjutada programmi, mille abil koer liigub
+          kassi juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
+        studio_c3_story_5: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks
+          teha?
+        studio_c3_story_6: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja
+          lase sõpradel nende telefonis oma lugu proovida.
+        studio_c3_game_1: Kas saaksid kirjutada programmi, mille abil kaheksajalg
+          ütleb „tere“, kui temal klikitakse?
+        studio_c3_game_2: Kas sa saaksid kirjutada programmi, mille abil liigutada
+          pingviini üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks
+          kõigi sihtmärkideni?
+        studio_c3_game_3: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada.
           Kas oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
-        studio_c3_game_4: Kas oskad panna pingviini nooleklahvidega liikuma ja teha
-          nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja
-          kõlab heli „löök“?
-        studio_c3_game_5: Kas oskad lisada ploki nii, et kui pingviin põrkab kaheksajalaga
-          kokku, siis sa saad punkti, ja kas oskad teda selleks nooleklahvidega liigutada?
-        studio_c3_game_6: Kas oskad lisada plokid, millega muudetakse akna tausta
-          ja pingviini kiirust ning kas oskad siis pingviini nooleklahvidega liigutada,
-          kuni saad punkti?
+        studio_c3_game_4: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja
+          teha nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“
+          ja kõlab heli „löök“?
+        studio_c3_game_5: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin
+          põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni
+          saad punkti?
+        studio_c3_game_6: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta
+          pingviini kiirust ja liigutada teda nooltega kuni punkti saad?
         studio_c3_game_7: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
           lase sõpradel telefonis lugu proovida.
         studio_playlab_1: Pingviin tahab öelda „tere“. Kas saad teda aidata?
@@ -468,10 +469,11 @@ et:
         studio_k1_1: Kas oskad panna koera ütlema "tere maailm"?
         studio_k1_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks
           kass midagi?
-        studio_k1_3: Kas oskad kirjutada programmi, mille abil koer liigub kassi juurde?
+        studio_k1_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi
+          juurde?
         studio_k1_4: Tee nii, et koer liiguks kassi juurde ja kass ütleks „tere“,
           kui koer kohale jõuab.
-        studio_k1_5: Kas oskad lisada ploki, et kaheksajalg oleks õnnelik?
+        studio_k1_5: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks teha?
         studio_k1_6: Loo oma lugu. Liiguta kassi ja koera ja tee, et nad ütleksid
           midagi.
         maze_wordsearch_k_1: Liiguta mind, et kirjutada sõna EAST
@@ -554,7 +556,7 @@ et:
         C2_graph_paper: Millimeetripaberi programmeerimine
         C2_conditionals_with_cards: Tingimuslaused
         C2_binary_bracelets: Binaarsed käevõrud
-        C2_relay_programming: Relee Programmeerimine
+        C2_relay_programming: Relee programmeerimine
         C2_paper_airplanes: Paberlennukid
         C2_digital_footprint: Sinu digitaalne jalajälg
         C2_digital_footprint_v2: Sinu digitaalne jalajälg

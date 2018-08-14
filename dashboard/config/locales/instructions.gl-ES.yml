@@ -410,11 +410,11 @@ gl:
         Teño fame, lévame até a flor! Cantas veces
         necesitas repetir un bloque?
       2-3 Maze 12 (copy 1)_instruction: |-
-        Podes substituír a resposta anterior por
-        só dous bloques? (Pista: crea un bucle usando un bloque "repita veces")
+        Podes substituír a resposta anterior por só dous
+        bloques? (Pista: crea un bucle usando un bloque "repita veces")
       2-3 Maze 12 (copy 2)_instruction: |-
-        Podes substituír a resposta anterior por
-        só dous bloques? (Pista: crea un bucle usando un bloque "repita veces")
+        Podes substituír a resposta anterior por só dous
+        bloques? (Pista: crea un bucle usando un bloque "repita veces")
       2-3 Maze 12 (old)_instruction: |-
         Lévame até o porco, agora co bloque "repita
         veces"!
@@ -455,7 +455,9 @@ gl:
       2-3 Maze Loops 17_instruction: Lévame até o xirasol!
       2-3 Maze Loops 18_instruction: Lévame até o xirasol!
       2-3 Maze Loops 19_instruction: Lévame até o xirasol!
-      2-3 Maze Loops 20_instruction: Lévame até o xirasol!
+      2-3 Maze Loops 20_instruction: |-
+        Podes resolver este desafío usando o menor número
+        posíbel de bloques?
       2-3 Maze Loops 21_instruction: Lévame até o xirasol!
       2-3 Maze Loops Assessment 1_instruction: "Avaliación: Lévame até o xirasol\nusando
         só 5 bloques! "
@@ -535,8 +537,9 @@ gl:
       20hr_maze_stage2_18_instruction: Os bloques "se-senón" verifican unha condición,
         e axiña, fan unha cousa OU outra. Para me levar para o xirasol tenta usar
         este novo bloque.
-      20hr_maze_stage2_19_instruction: Practica unha vez máis o bloque "se-senón",
-        consegues á primeira tentativa?
+      20hr_maze_stage2_19_instruction: |-
+        Imos praticar o uso do bloque "se-senón" unha vez máis. Consegues
+        acertar na primeira tentativa?
       20hr_maze_stage2_2_instruction: Ese porco está me deixando nervioso. Axúdeme
         a encontralo!
       20hr_maze_stage2_20_instruction: Podes agregar máis 3 bloques para me axudares
@@ -727,8 +730,8 @@ gl:
         Este diamante ten lados de 50 pixels e ángulos
         de 120 e 60 graos. Usa un bucle para debuxalo.
       4-5 Artist Patterns 5.5_instruction: |-
-        Cantas veces precisas repetir
-        este bloque para debuxar toda a grade de diamantes?
+        Cantas veces necesitas repetir este
+        bloque para debuxar toda a grade de diamantes?
       4-5 Artist Patterns 5_instruction: |-
         Imos repetir isto para facer unha fileira de 6 diamantes.
         Percibes que alteramos o noso código do diamante para repetir 3 veces en vez de 2 - por que pensas que fixemos isto?
@@ -752,12 +755,15 @@ gl:
         Actividade libre - proba a crear
         o teu propio padrón!
       4-5 Bee Conditionals - FC Test_instruction: |-
-        Agora, a abella só quere néctar.
-        Non todos os obxectos son flores, entón mira embaixo de TODAS AS NUBES para ver se está escondendo unha flor. Se estivese entón podes recoller o néctar.
+        A abella agora só quere néctar.
+        Non son flores todos os obxectos, así que revisa embaixo de CADA NUBE para ver se agacha unha flor. Se fose así entón podes recoller néctar.
       4-5 Bee Conditionals 1_instruction: |-
         A abella non sabe se iso é unha flor ou
         unha colmea. Recolla néctar só das flores, pero primeiro verifique se o obxecto é
         unha flor ou unha colmea.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: |-
+        Agora a abella só quere néctar. Lémbrate, non
+        todos os obxectos son flores, entón fai a verificación para recoller néctar só das flores.
       4-5 Bee Conditionals 2_instruction: |-
         Agora a abella só quere néctar. Lémbrate,
         non todos os obxectos son flores, entón mira se o obxecto debaixo da nube é
@@ -836,7 +842,9 @@ gl:
       4-5 Maze 1 (copy 1)_instruction: |-
         Querida persoa. Min zumbi. Precisa... chegar...
         xirasol.
-      4-5 Maze 1_instruction: Querida persoa. Min zumbi. Debe... chegar... xirasol.
+      4-5 Maze 1_instruction: |-
+        Querida persoa. Min zumbi. Precisa... chegar...
+        xirasol.
       4-5 Maze 10_instruction: Podes chegar até o xirasol usando só catro bloques?
       4-5 Maze 11_instruction: Podes chegar até o xirasol usando só seis bloques?
       4-5 Maze 12_instruction: |-
@@ -851,14 +859,14 @@ gl:
       4-5 Maze 4 (copy 1)_instruction: Proba o bloque "repita" para usar menos bloques...
       4-5 Maze 4_instruction: Proba o bloque "repita" para usar menos bloques...
       4-5 Maze 5 (copy 1)_instruction: |-
-        Podes resolver este desafío usando o menor
-        número posíbel de bloques?
+        Podes resolver este desafío usando o menor número
+        posíbel de bloques?
       4-5 Maze 5_instruction: |-
         Podes resolver este desafío usando o menor número
         posíbel de bloques?
       4-5 Maze 6 (copy 1)_instruction: |-
-        Podes resolver este desafío usando o menor
-        número posíbel de bloques?
+        Podes resolver este desafío usando o menor número
+        posíbel de bloques?
       4-5 Maze 6_instruction: |-
         Podes resolver este desafío usando o menor número
         posíbel de bloques?
@@ -964,6 +972,24 @@ gl:
         Há unha chea de buracos e
         montes. Axúdame a cubrilos e removelos para tornar o solo plano.
       App Lab test_instruction: test
+      Artist - Nested Loops 1_instruction: |-
+        Completa o código para debuxar estes triángulos. O
+        primeiro está preparado para ti. Pista: 3 triángulos nunha rotación de 360 graos.
+      Artist - Nested Loops 10_instruction: |-
+        Debuxa a última liña de estrelas nesta bandeira
+        repetindo os bloques dados. As estrelas están separadas por 50 pixels, pero lémbrate que teñen 30 pixels de longo.
+      Artist - Nested Loops 11_instruction: |-
+        Podes debuxar estes 10 cadrados desta
+        calzada usando un bucle aniñado? Cada cadrado ten 30 pixels.
+      Artist - Nested Loops 12_instruction: |-
+        Podes debuxar estes 36 triángulos usando
+        un bucle aniñado?
+      Artist - Nested Loops 5_instruction: Repite o código dado para crear un muiño
+        de vento.
+      Artist - Nested Loops 6_instruction: |-
+        Podes debuxar un hexágono repetindo o
+        código do triángulo?
+      Artist - Nested Loops 9_instruction: Debuxa o dente na boca do crocodilo!
       Artist - Nested Loops Assessment 1_instruction: |-
         Usa un bucle aniñado para completar
         o debuxo.
@@ -990,12 +1016,29 @@ gl:
         Actividade libre: aquí están para usar as funcións
         que escribiches e máis algunhas. Debuxa algo incríbel!
         Xoga co longo do lapis para ver como fican diferentes os teus debuxos!
+      Building a Foundation Assessment_instruction: |-
+        Constrúe unha piramide de tres niveis.
+        Non hai outras instrucións, só simplesmente xoga coas pezas até
+        conseguilo!
       Busy Bee 2_instruction: |-
         Esta abella ten moito traballo a facer! Notaches algún
         padrón que poidas usar para simplificar o teu código?
       Busy Bee_instruction: |-
         Esta abella ten moito traballo a facer! Notaches algún
         padrón que poidas usar para simplificar o teu código?
+      C3-Farmer While Loops 5_instruction: "Uau, agora hai dous buracos profundos!
+        \nPodes escribir un programa que os cubra até que o solo fique nivelado?"
+      C3-Farmer While Loops 6_instruction: |-
+        Uau, agora hai unha morea de terra!
+        Podes escribir un programa que remova a terra até que o solo fique nivelado?
+      C3-Farmer While Loops 7_instruction: |-
+        Uau, agora hai tres grandes montes de terra!
+        Podes escribir un programa que remova cada un deles até que o solo fique nivelado?
+      C3-Farmer While Loops Assessment 1_instruction: |-
+        Há unha chea de buracos e
+        montes. Axúdame a cubrilos e removelos para tornar o solo plano.
+      Course 2 Bee Loops 1_instruction: "Olá, son unha abella. Podes me axudar a recoller\no
+        néctar destas flores? "
       Course 2 Maze Loops 1_instruction: Podes me levar até o porco usando 5 bloques?
       Course 4 2_instruction: |-
         Agora a abella só quere néctar. Lémbrate, non
@@ -1381,8 +1424,8 @@ gl:
         Usa todo o que aprendiches até agora para recoller
         todo o néctar. A flor morada pode ter 1, 2 ou 3 néctares.
       Course 4 Bee For Loops 1_instruction: |-
-        Usa un bucle para recoller o néctar de
-        todas as flores.
+        Usa un bucle para recoller o néctar
+        de cada flor.
       Course 4 Bee For Loops 10_instruction: |-
         Se o teu bucle está a facer conta regresiva, o
         incremento é subtraído da túa variábel contador a cada repetición. Cal debe ser
@@ -1411,8 +1454,8 @@ gl:
         Usa a variábel "contador" do teu bucle "para"
         para controlar a distancia do movemento horizontal.
       Course 4 Bee For Loops 8_instruction: |-
-        Podes usar a variábel do bucle para controlar
-        o movemento e a colleita de néctar?
+        Podes usar a variábel do bucle para
+        controlar o movemento e recoller néctar?
       Course 4 Bee For Loops 9_instruction: "O último número no teu bucle \"para\"
         \nchámase  \"incremento\" e, a cada execución do bucle, a variábel contador\né
         alterada de acordo co incremento. Tenta recoller estas flores usando un incremento
@@ -1521,14 +1564,24 @@ gl:
       Course 4 Binary 8_instruction: |-
         Podes completar a maior parte desta imaxe
         repetindo un número binario de 5 bits - daquela vas precisar de outro número de 4 bits para completar o recanto inferior dereito.
-      Course 4 EC 1a_instruction: Sen regras. Sen pistas. Só o desafío!
-      Course 4 EC 1b_instruction: Sen regras. Sen pistas. Só o desafío!
+      Course 4 EC 1a_instruction: |-
+        **Desafio Extremo:** Sen regras. Sen pistas. Só
+        o desafío!
+      Course 4 EC 1b_instruction: |-
+        **Desafio Extremo:** Sen regras. Sen pistas. Só
+        o desafío!
       Course 4 EC 2a_instruction: |-
         **Desafio Extremo:** Sen regras. Sen pistas. Só
         o desafío!
-      Course 4 EC 2b_instruction: Sen regras. Sen pistas. Só o desafío!
-      Course 4 EC 2c_instruction: Sen regras. Sen pistas. Só o desafío!
-      Course 4 EC 2d_instruction: Sen regras. Sen pistas. Só o desafío!
+      Course 4 EC 2b_instruction: |-
+        **Desafio Extremo:** Sen regras. Sen pistas. Só
+        o desafío!
+      Course 4 EC 2c_instruction: |-
+        **Desafio Extremo:** Sen regras. Sen pistas. Só
+        o desafío!
+      Course 4 EC 2d_instruction: |-
+        **Desafio Extremo:** Sen regras. Sen pistas. Só
+        o desafío!
       Course 4 EC 3_instruction: "Usa o que aprendiches no nivel anterior para debuxar\nunha
         imaxe como esta. Nota: O código vólvese máis simple se incorporas\nparámetros. "
       Course 4 EC 3a_instruction: 'Desafio Extremo: Sen regras. Sen pistas. Só o desafío!'
@@ -1539,11 +1592,11 @@ gl:
         Proba o bloque "repita" para usar menos bloques
         na resolución deste desafío...
       Course 4 Maze 5_instruction: |-
-        Podes resolver este desafío usando o menor
-        número posíbel de bloques?
+        Podes resolver este desafío usando o menor número
+        posíbel de bloques?
       Course 4 Maze 6_instruction: |-
-        Podes resolver este desafío usando o menor
-        número posíbel de bloques?
+        Podes resolver este desafío usando o menor número
+        posíbel de bloques?
       Course 4 Play Lab For Loops 2_instruction: |-
         Desta vez, imos tentar contar
         os números impares de 1 até 100.
@@ -1870,8 +1923,7 @@ gl:
       K-1 Artist1 7_instruction: |-
         Usa o bloque "salte" para se mover sen debuxar. Salta
         e debuxa unha recta.
-      K-1 Artist1 8_instruction: |-
-        Debuxa liñas trazadas usando os bloques "salte" e
+      K-1 Artist1 8_instruction: Debuxa liñas trazadas usando os bloques "salte" e
         "debuxe"
       K-1 Artist1 9_instruction: Debuxa e salta para facer a recta trazada
       K-1 Artist1 Assessment 1_instruction: Debuxa as rectas pequenas e grandes!
@@ -2255,6 +2307,9 @@ gl:
       New Artist Project_instruction: |-
         Debuxa algo incríbel! O teu código é gardado
         como proxecto e podes volver a el en calquera momento.
+      New Bounce Project_instruction: Cree seu propio xogo de rebote. Pode mudar o
+        visual e todas as regras. Cando terminar, clic en Concluír para que seus amigos
+        poidan xogar seu xogo en seus teléfonos móbeis.
       New Course 4 Artist Functions Level 4_instruction: |-
         Usa a función "debuxe un cadrado"
         para debuxar este padrón.
@@ -2312,6 +2367,11 @@ gl:
         para obter lá das dúas ovellas.
       Overworld Shear Sheep_2018_instruction: Hora de rapar ovellas! Usa o comando
         "tosquiar" para obter lá das dúas ovellas.
+      PDK5 Conditionals 1_instruction: |-
+        As flores moradas poden ter 1 ou 0
+        néctar, pero non sabes canto! Ten coidado de non recoller néctar de
+        unha flor morada se ela non tivese néctar. Verifica se o néctar é igual a 1
+        usando o bloque "se".
       PDK5 Functions 2_instruction: |-
         As funcións permiten que definas novos bloques! Movemos
         os bloques para debuxar un cadrado para dentro dunha función chamada "debuxa un cadrado".
@@ -2321,9 +2381,14 @@ gl:
         néctar, pero non sabes canto! Ten coidado de non recoller néctar de
         unha flor morada se ela non tivese néctar. Verifica se o néctar é igual a 1
         usando o bloque "se".
+      Quantum Bee_instruction: |-
+        As flores moradas poden ter 1 ou 0
+        néctar, pero non sabes canto! Ten coidado de non recoller néctar de
+        unha flor morada se ela non tivese néctar. Verifica se o néctar é igual a 1
+        usando o bloque "se".
       Ryan - 4-5 Bee Conditionals 2_instruction: |-
-        Agora, a abella só quere néctar.
-        Non todos os obxectos son flores, entón mira embaixo de TODAS AS NUBES para ver se está escondendo unha flor. Se estivese entón podes recoller o néctar.
+        A abella agora só quere néctar.
+        Non son flores todos os obxectos, así que revisa embaixo de CADA NUBE para ver se agacha unha flor. Se fose así entón podes recoller néctar.
       Ryan - Bee Conditionals_instruction: |-
         A abella agora só quere néctar.
         Non son flores todos os obxectos, así que revisa embaixo de CADA NUBE para ver se agacha unha flor. Se fose así entón podes recoller néctar.
@@ -2452,6 +2517,9 @@ gl:
       bounce_12_instruction: Cree seu propio xogo de rebote. Pode mudar o visual e
         todas as regras. Cando terminar, clic en Concluír para que seus amigos poidan
         xogar seu xogo en seus teléfonos móbeis.
+      bounce_12_2018_instruction: Cree seu propio xogo de rebote. Pode mudar o visual
+        e todas as regras. Cando terminar, clic en Concluír para que seus amigos poidan
+        xogar seu xogo en seus teléfonos móbeis.
       bounce_1_2018_instruction: Conecte un bloque ao bloque "cando premer na frecha
         para a esquerda" e clic en "Executar". Mova a raqueta usando a frecha para
         a esquerda para alcanzar o obxectivo final.
@@ -2579,6 +2647,9 @@ gl:
         en máis dun lugar. Alén diso, tente mudar o escenario ou a velocidade da raqueta
         e da bóla e vexa cantos puntos Pode marcar antes de seu oponente marcar dúas
         veces.
+      courseD_bounce_events12_instruction: Cree seu propio xogo de rebote. Pode mudar
+        o visual e todas as regras. Cando terminar, clic en Concluír para que seus
+        amigos poidan xogar seu xogo en seus teléfonos móbeis.
       courseD_bounce_events2_instruction: Conecte un bloque aos bloques "cando premer
         na frecha para a dereita" e "cando premer na frecha para a esquerda". Mova
         a raqueta para alcanzar ambos os obxectivos finais.
@@ -3006,17 +3077,29 @@ gl:
       grade4_arist_nested_loop_circles1_instruction: |-
         Usa un bucle aniñado para completar
         o debuxo.
+      grade4_arist_nested_loop_flags1_instruction: Repite o código dado para crear
+        un muiño de vento.
       grade4_arist_nested_loop_polygons1_instruction: |-
         Repite este debuxo 10 veces. Canto
         necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
       grade4_arist_nested_loop_polygons2_instruction: |-
         Repita este debuxo 6 veces. Canto
         precisas virar a cada repetición? (Pista: canto é 360 dividido por 6?)
+      grade4_arist_nested_loop_squares1_instruction: |-
+        Podes debuxar estes 10 cadrados desta
+        calzada usando un bucle aniñado? Cada cadrado ten 30 pixels.
       grade4_arist_nested_loop_triangles2_instruction: "Agora, aniña este bucle dentro
         de outro bucle para debuxar\n10 triángulos. Isto se chama bucle aniñado. Pista:
         todos os 10 triángulos completan\nunha rotación de 360 graos.  "
+      grade4_arist_nested_loop_triangles3_instruction: |-
+        Podes debuxar un hexágono repetindo o
+        código do triángulo?
+      grade4_arist_nested_loop_triangles4_instruction: Debuxa o dente na boca do crocodilo!
       grade4_arist_nested_loop_triangles5_instruction: "Crea un sol aniñando o código
         inicial\ndentro de outro bucle. Chamamos a isto bucle aniñado.\r"
+      grade4_arist_nested_loop_triangles6_instruction: |-
+        Podes debuxar estes 36 triángulos usando
+        un bucle aniñado?
       grade4_artist_functions1_instruction: |-
         Olá. Min artista zumbi. Min ama debuxar!
         Axúdame a debuxar os lentes cadrados. Pista: a tira entre as lentes é
@@ -3046,11 +3129,22 @@ gl:
       grade4_artist_nested_loop_circles1_instruction: |-
         Usa un bucle aniñado para completar
         o debuxo.
+      grade4_artist_nested_loop_flags1_instruction: Repite o código dado para crear
+        un muiño de vento.
       grade4_artist_nested_loop_polygons1_instruction: |-
         Repite este debuxo 10 veces. Canto
         necesitas virar a cada repetición? (Pista: canto é 360 dividido por 10?)
+      grade4_artist_nested_loop_squares1_instruction: |-
+        Podes debuxar estes 10 cadrados desta
+        calzada usando un bucle aniñado? Cada cadrado ten 30 pixels.
+      grade4_artist_nested_loop_triangles1_instruction: |-
+        Completa o código para debuxar estes triángulos. O
+        primeiro está preparado para ti. Pista: 3 triángulos nunha rotación de 360 graos.
       grade4_artist_nested_loop_triangles5_instruction: "Crea un sol aniñando o código
         inicial\ndentro de outro bucle. Chamamos a isto bucle aniñado.\r"
+      grade4_artist_nested_loop_triangles6_instruction: |-
+        Podes debuxar estes 36 triángulos usando
+        un bucle aniñado?
       grade4_artist_parameters_squares1_instruction: |-
         Clica en "editar" para cubrir a definición
         da función "debuxe un cadrado" e agregar un parámetro. Debe recibir un parámetro lonxitude, como no triángulo. Desta vez, debuxa 3 cadrados: 25, 50 e 75
@@ -3442,17 +3536,24 @@ gl:
       level grade3_Loops_2_instruction: |-
         Podes realizar a mesma tarefa máis facilmente
         cun bucle?
+      scrat 16 (copy 1)_instruction: |-
+        Landra! Landra! Landra! Usa un bloque "se" para me levar até alá
+        co menor número de bloques.
       scrat 16_instruction: |-
         Landra! Landra! Landra! Usa un bloque "se" para me levar até alá
         co menor número de bloques.
       scrat 17_instruction: |-
         Ok, ímolo facer novamente para coller práctica - este non é
         moi diferente, pero coidado coa parede!
+      scrat 18 (copy 1)_instruction: |-
+        Os bloques "se-senón" verifican unha condición e en consecuencia
+        fan unha cousa OU outra. Para que eu chegue até a landra, tenta usar este novo bloque.
       scrat 18_instruction: |-
         Os bloques "se-senón" verifican unha condición e en consecuencia
         fan unha cousa OU outra. Para que eu chegue até a landra, tenta usar este novo bloque.
-      scrat 19 (copy 1)_instruction: Practica unha vez máis o bloque "se-senón", consegues
-        á primeira tentativa?
+      scrat 19 (copy 1)_instruction: |-
+        Imos praticar o uso do bloque "se-senón" unha vez máis. Consegues
+        acertar na primeira tentativa?
       scrat 19_instruction: |-
         Imos praticar o uso do bloque "se-senón" unha vez máis. Consegues
         acertar na primeira tentativa?

@@ -139,6 +139,8 @@ bs:
               name: Labirint
             'Maze: Conditionals':
               name: 'Labirint: Uvjeti'
+            Songwriting:
+              name: Pisanje pjesama
             'Studio: Create a Game':
               name: 'Laboratorij Igara: Napravi Igru'
             'Studio: Create a Story':
@@ -381,7 +383,7 @@ bs:
             Introduction to Computer Science:
               name: Uvod u računarstvo
             Relay Programming:
-              name: Štafeta Programiranje
+              name: Prijenos programiranja
             Song Writing:
               name: Pisanje Pjesmi
             The Artist:
@@ -797,6 +799,8 @@ bs:
               name: Pomakni, pomakni
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            Songwriting:
+              name: Pisanje pjesama
             The Big Event:
               name: Veliki Događaj
         algebraPD3a:
@@ -1120,6 +1124,8 @@ bs:
           stages:
             Digital Citizenship:
               name: Digitalno Državljanstvo
+            Songwriting:
+              name: Pisanje pjesama
         grade1:
           stages:
             Events:
@@ -1789,6 +1795,8 @@ bs:
               name: Zapetljavanje
             Conditionals with Cards:
               name: Uvjeti s Kartama
+            'Functions: Songwriting':
+              name: Pisanje pjesama
             Binary Bracelets:
               name: Binarne narukvice
             Artist Binary:
@@ -1798,7 +1806,7 @@ bs:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Štafeta Programiranje
+              name: Prijenos programiranja
         courseb-2018:
           assignment_family_title: Kurs B
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
@@ -1827,7 +1835,7 @@ bs:
             Graph Paper Programming:
               name: Papirno Programiranje Grafikona
             Relay Programming:
-              name: Štafeta Programiranje
+              name: Prijenos programiranja
         coursec-2018:
           stages:
             Building a Foundation:
@@ -1852,6 +1860,8 @@ bs:
               name: Izrada Temelja
             Introduction:
               name: Uvod
+            'Functions: Songwriting':
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:

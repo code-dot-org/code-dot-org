@@ -1,0 +1,47 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "layoutSprites",
+    "blockText": "layout {GROUP} sprites as a {FORMAT}",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "Circle",
+            "\"circle\""
+          ],
+          [
+            "Wiggles",
+            "\"wiggles\""
+          ],
+          [
+            "Alien",
+            "\"alien\""
+          ]
+        ]
+      },
+      {
+        "name": "FORMAT",
+        "options": [
+          [
+            "grid",
+            "\"grid\""
+          ],
+          [
+            "row",
+            "\"row\""
+          ],
+          [
+            "column",
+            "\"column\""
+          ]
+        ]
+      }
+    ]
+  }
+}

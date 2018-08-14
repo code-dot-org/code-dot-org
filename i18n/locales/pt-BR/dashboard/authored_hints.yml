@@ -3941,7 +3941,7 @@ pt-BR:
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_b: |-
-          Já que você só pode usar um bloco <xml><block type="simple_move_right"/></xml>, tente colocá-lo dentro do laço <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>.
+          Já que você só pode usar um bloco <xml><block type="simple_move_right"/></xml>, tente colocá-lo dentro do laço <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_b: |-
           Já que você só pode usar um bloco <xml><block type="simple_move_right"/></xml>, tente colocá-lo dentro do laço <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>.
@@ -4750,6 +4750,22 @@ pt-BR:
       courseC_artist_prog2_2018_authored_hint:
         courseC_artist_prog2_a: 'Se você usar o bloco para me fazer `avançar por 100 pixels`, eu desenharei uma linha automaticamente.'
         courseC_artist_prog2_b: Você está tendo problemas para virar a esquina? Use o bloco 'virar à direita 90 graus'.
+      courseC_artist_prog5_authored_hint:
+        courseC_artist_prog5_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_artist_prog5_2018_authored_hint:
+        courseC_artist_prog5_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_artist_prog7_authored_hint:
+        courseC_artist_prog7_e: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_artist_prog7_2018_authored_hint:
+        courseC_artist_prog7_e: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_collector_prog2_authored_hint:
+        courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_collector_prog2_2018_authored_hint:
+        courseC_collector_prog2_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_collector_prog4_authored_hint:
+        courseC_collector_prog4_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_collector_prog4_2018_authored_hint:
+        courseC_collector_prog4_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Se você ficar preso, tente escrever os passos no papel e olhar por padrões que se repetem.
       courseC_harvester_loops2_2018_authored_hint:
@@ -4766,10 +4782,18 @@ pt-BR:
         courseC_maze_loops6_b: "Para colocar muitos blocos dentro de bloco `repita`, apenas arraste um repita para fora na área de Blocos, em seguida, arraste todos os blocos do programa inicial dentro dele.    Conecte tudo de volta no bloco `quando executar` e está pronto para executar!"
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: Se o padrão está difícil de ser identificado, tente fazer toda a programação primeiro, veja quais partes se repetem várias vezes e então as substitua por um loop.
+      courseC_maze_programming5_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+      courseC_maze_programming5_2018_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
       courseC_maze_programming6_2018_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+      courseC_maze_programming8_authored_hint:
+        courseC_maze_programming8_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseC_maze_programming8_2018_authored_hint:
+        courseC_maze_programming8_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
       courseD_artist_functions2_authored_hint:
@@ -4990,20 +5014,66 @@ pt-BR:
           </next>
           </block>
           </xml>
+      courseD_maze_ramp1_authored_hint:
+        courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp3_authored_hint:
         courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \nPara excluir um bloco de no meio do seu código, arraste todos os blocos abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas. \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
       courseD_maze_ramp3_2018_authored_hint:
         courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \nPara excluir um bloco de no meio do seu código, arraste todos os blocos abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas. \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
+      courseD_maze_ramp5_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp5a_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp5a_2018_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp5b_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_maze_ramp5b_2018_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+        courseC_maze_programming5_b: Lembre-se de que viradas são na perspectiva do pássaro.
+        courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+      courseD_scrat_ramp1_authored_hint:
+        courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_scrat_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseD_scrat_ramp3_authored_hint:
         courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \nPara excluir um bloco de no meio do seu código, arraste todos os blocos abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas. \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
       courseD_scrat_ramp3_2018_authored_hint:
         courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \nPara excluir um bloco de no meio do seu código, arraste todos os blocos abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas. \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
+      courseD_scrat_ramp4_authored_hint:
+        courseC_maze_programming4_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_scrat_ramp4_2018_authored_hint:
+        courseC_maze_programming4_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_scrat_ramp5_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+      courseD_scrat_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseD_scrat_programming6_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseD_scrat_programming6_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_scrat_ramp8_authored_hint:
+        courseD_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseD_scrat_ramp8_2018_authored_hint:
+        courseD_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'O metade-hexágono tem um ** comprimento de 30 ** e gira para a direita em ** 60 graus **.  '
         courseE_artist_concept_challenge1_b: 'Os 2/3 do triângulo tem um ** comprimento de 80 ** e gira para a direita em ** 120 graus **. '
@@ -5068,10 +5138,26 @@ pt-BR:
         courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \nPara excluir um bloco de no meio do seu código, arraste todos os blocos abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas. \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
       courseE_maze_ramp3_2018_authored_hint:
         courseC_maze_programming3_a: "! [] (https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif) \nPara excluir um bloco de no meio do seu código, arraste todos os blocos abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas. \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem.\n"
+      courseE_maze_ramp4_authored_hint:
+        courseC_maze_programming4_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseE_maze_ramp4_2018_authored_hint:
+        courseC_maze_programming4_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseE_maze_ramp5_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+      courseE_maze_ramp5_2018_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseC_maze_programming6_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseC_maze_programming6_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseE_maze_ramp7_authored_hint:
+        courseD_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseE_maze_ramp7_2018_authored_hint:
+        courseD_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseE_multi_maze_ramp5_authored_hint:
+        courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "**Qual o menor número que você precisa?\nQual é o maior número?\nDe quanto é o aumento cada vez?**\n\nEssas são as questões que você precisa responder para preencher as lacunas no laço `para`."
       courseF_artist_for4_2018_authored_hint:
@@ -6625,10 +6711,18 @@ pt-BR:
           </block>
           </statement>
           </block></xml>
+      courseF_maze_ramp5_authored_hint:
+        courseF_maze_ramp5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
+      courseF_maze_ramp5_2018_authored_hint:
+        courseF_maze_ramp5_a: Tente usar o botão "Passo" para executar o seu código linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseF_maze_ramp6_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseF_maze_ramp6_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
+      courseF_maze_ramp7_authored_hint:
+        courseF_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos e executar o código para ver o que vai acontecer, mesmo se você achar que ainda não resolveu o quebra-cabeça.
       courseF_playlab_variables_challenge2_authored_hint:
         courseF_playlab_variables_challenge2_c: |-
           **Solução:**

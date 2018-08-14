@@ -49,7 +49,7 @@ fil:
       2-3 Artist Functions 11.5_markdown_instruction: "Narito ang parehong `draw a hexagon` na function. \\r\n\\r\nAno ang mangyayari kapag ini-loop mo ang pangunahing programa nang 6 na mga beses, na umikot nang 60 degrees sa bawat beses na mag-loop ka?"
       2-3 Artist Functions 11_markdown_instruction: "Aming binago ang pangalan ng `draw a square` na function sa `draw a hexagon` ngunit ito ay nagbibigay pa rin sa atin ng mga parisukat! \\r\n\\r\nMaaari mo bang baguhin ang `draw a hexagon` na function para makaguhit ng hexagon na may mga gilid na 50 pixel?\n\\r\n\\r\nGumuhit ng larawan gamit ang bagong function!"
       2-3 Artist Functions 12 Mike_markdown_instruction: "Ang mga function ay talagang mahusay para sa pagguhit ng mga kumplikadong mga bagay nang maraming beses. \\r\n\\r\nMaaari mo bang gamit ang `gumuhit ng bulaklak` na function para punan ang natitirang mga kahon nang nagtanim?\\r\nAng mga tanim ay dapat 100 pixels ang layo."
-      2-3 Artist Functions 12 a_markdown_instruction: "Ang mga function ay talagang mahusay para sa pagguhit ng mga kumplikadong mga bagay nang maraming beses. \\r\n\\r\nMaaari mo bang gamit ang `gumuhit ng bulaklak` na function para punan ang natitirang mga kahon nang nagtanim?\\r\nAng mga tanim ay dapat 100 pixels ang layo."
+      2-3 Artist Functions 12 a_markdown_instruction: "Ang mga function ay talagang mahusay para sa pagguhit ng mga kumplikadong mga bagay nang ilang beses. \\r\n\\r\nMaaari mo bang gamitin ang `draw a flower` na function sa punan ang natitirang mga kahon ng pananim?\\r\nAng mga pananamim ay parehong 100 pixels ang pagitan."
       2-3 Artist Functions 12_markdown_instruction: "Ang mga function ay talagang mahusay para sa pagguhit ng mga kumplikadong mga bagay nang ilang beses. \\r\n\\r\nMaaari mo bang gamitin ang `draw a flower` na function sa punan ang natitirang mga kahon ng pananim?\\r\nAng mga pananamim ay parehong 100 pixels ang pagitan."
       2-3 Artist Functions 2_markdown_instruction: "Ang mga function ay nagbibigay-daan na makagawa ka ng mga bagong bloke!\\r\n\\r\nAming inilipat ang mga kinakailangang bloke para sa pagguhit ng parisukat sa isang function na tinatawag na `draw a square`. Sa oras na ito, gamitin ang `draw a square` na function para malikha ang mga baso. \\r\n\\r\nAng mga parisukat ay 75 pixels ang pagitan."
       2-3 Artist Functions 3_markdown_instruction: "Baguhin ang function para maiguhit ang parisukat na may haba ng gilid na 115 para maiguhit ang malalaking mga baso. \\r\n\\r\nAng mga parisukat ay 45 pixels na ang pagitan ngayon."
@@ -242,6 +242,7 @@ fil:
       4-5 Maze Conditionals Assessment 1_markdown_instruction: "**Pagtatasa:** Gamitin ang `repeat until` at isang `if/else` na bloke para mapapunta ako sa mirasol gamit ang kaunting mga bloke lang hangga't maaari."
       4-5 Nested Loops 1_markdown_instruction: "Kumpletohin ang code para maiguhit ang mga tatsulok na ito. Ang una ay ginawa para sa iyo. Higing: 3 mga tatsulok sa isang 360 degree na rotasyon.\\r\n\\r\n"
       4-5 Nested Loops 11_markdown_instruction: "Maaari mo bang maiguhit ang 10 mga parisukat sa bangketang ito gamit ang naka-nest na loop?\\r\n\\r\nBawat parisukat ay 30 pixels."
+      4-5 Nested Loops 12_markdown_instruction: Maaari mo bang iguhit ang 36 na mga tatsulok na ito gamit ang naka-nest na loop?
       4-5 Nested Loops 2_markdown_instruction: "Nyaon ay i-nest ang loop na ito sa loob ng isa pang loop para maiguhit ang 10 mga tatsulok. \\r\nIto ay tinatawag na \"naka-nest\" na  loop.  "
       4-5 Nested Loops 3_markdown_instruction: |-
         Maglikha ng araw sa pamamagitan ng pag-nest sa panimulang code sa isa pang loop.\r
@@ -474,9 +475,9 @@ fil:
         \r
         ![expandable](https://images.code.org/a5081cce1969c5a784b4440369706801-image-1505941723405.gif)
       AppLab Intro 3 - thisOrThat_markdown_instruction: |-
-        Gumawa ng This or That na app. Magdesisyon kung ano ang mangyayari sa screen at teksto kapag ang gumagamit ay nag-click sa bawat button.\r
+        Gumawa ng This or That na app. Mag-desisyon kung ano ang mangyayari sa screen at sa teksto kapag ang gumagamit ay nag-click sa bawat button.\r
         \r
-        Kapag tapos ka na sa iyong app, i-click ang "Share" sa dulo para mapadala ito sa iyong kaibigan para mapaglaruan! I-click ang larawan para makita kung paano magbahagi.\r
+        Kapag ang tapos ka na sa iyong app, i-click ang "Share" na nasa taas para ipadala ito sa iyong kaibigan para maglaro. I-click ang larawan para makita kung paano magbahagi.\r
         \r
         ![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)
       AppLab Intro 4 - Change Screen Color_markdown_instruction: "<div style=\"float:right\">\\r\n\\t<img\nsrc=\"https://images.code.org/1c2a02a2caebbda2be4e537ab5087dcd-image-1506613875548.50.54\nAM.png\" style=\"height:150px\"> \\r\n</div>\\r\n\\r\n**Layunin:** Gawing `\"red\"` ang screen. \\r\n\\r\n**Paano:** Kaladkarin ang bloke at pindutin ang \"Run\".\\r\n\\r\n**Ipakita sa akin:** ![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif)"
@@ -853,6 +854,8 @@ fil:
       K-1 Maze Loops 12_markdown_instruction: "Dalhin ako sa baboy! \\r\nAng `repeat` na loop ay magpapadali nito."
       K-1 Maze Loops 2_markdown_instruction: Gamitin ang `repeat` na bloke para mapapunta ako sa baboy!
       K-1 Maze Loops 8_markdown_instruction: Gamitin ang `repeat` na mga loop para mapapunta ako sa baboy.
+      MC_HOC_2017_01_Cole_markdown_instruction: Kailangan mong ikolekta ang lahat ng mga kagamitan sa paglalakbay na ito. Gumalaw sa paligid gamit ang mga **arrow key**, at pumunta sa baol na nasa landas para manalo
+      MC_HOC_2017_04_markdown_instruction: Baguhin ang loop mula sa huling palaisipan para matulungan ang Ahente na gumawa ng landas sa ibabaw nang malawak na bahagi ng ilog na ito.
       Mike Test Bee Conditionals 1_markdown_instruction: "Ang ulap na ito ay nakaharang sa aking paningin!\n\\r\n\\r\nSuriin kung mayroon bang bulakla sa ilalim ng ulap, at kumuha lang nektar kung mayroong bulaklak.   \\r\nMaging maingat, maaari itong magbago!"
       Mike Test Bee Conditionals 2_markdown_instruction: "**Pagtatasa:** Kolektahin ang lahat ng nektar. \\r\nMag-ingat na hindi masubukang magkolekta ng nektar mula sa lilang bulaklak kung wala itong laman na kahit ano."
       NEW Course 4 Artist Functions 12_markdown_instruction: Gamitin ang `draw a line of squares` na function mula sa huling palaisipan para iguhit ang pattern na ito.
@@ -866,16 +869,47 @@ fil:
       Overworld Move to Sheep_markdown_instruction: Magdagdag ng pangalawang `move forward` na bloke para maabot ang tupa.
       Overworld Move to Sheep_2018_markdown_instruction: Magdagdag ng pangalawang `move forward` na bloke para maabot ang tupa.
       PS copy 2-3 Bee Conditionals 5_markdown_instruction: "Ang mga mahiwagang lilang mga bulaklak ay nagbabago!\\r\n\\r\nBawat beses na susubukan mo ang palaisipan, ang mga lilang mga bulaklak ay maaaring magkaroon ng 1 nektar o wala talaga,..ngunit hindi mo malalaman ang bilang hanggang sa patatakbuhin mo ang code! \\r\n\\r\nMag-ingat na hindi makakolekta ng nektar sa lilang bulaklak kung wala itong lamat na kahit ano. \\r\nDapat mong suriin kung ang nektar ay katumbas ng 1 gamit ang `if nectar` na bloke."
-      Testing Quantum Farmer_markdown_instruction: "Wow, tingnan mo iyan!\\r\n\\r\nHindi ko alam kung ilang pala ng lupa ang kakailanganin ng butas na ito.  \\r\nMaaari ka bang magsulat ng programa na palaging gumagamit ng `fill` na bloke hanggang sa mapatag na ang lupa?  "
+      Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction: "#\nPixelation: Gawain 3\\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right width=200 hspace=20>\\r\n**Mga Direksyon:**\\r\nAmin kang pinasimula sa isang 4x4 na larawan na nilikha ni Maddie sa video.\\r\n\\r\nAng iyong gawain ay punan ang 4x4 na grid nang mga kulay gamit ang *12-bits kada pixel*. Ang resulta ay dapat katulad (ngunit hindi talaga eksakto) sa larawang ipinakita sa kanan.  \\r\n\\r\nNarito ang mga kinakailangan:\\r\n\\r\n\n* Hanay 1 - punan ng mga kulay na pula fill with shades of red. \\r\n * Hanay 2 - kulay na berde. \\r\n *\nHanay 3 - kulay na asul. \\r\n * Hanay 4 - kulay na abo.\\r\n"
+      Pixelation - Lesson 15 - Color Shades 4x4_2018_markdown_instruction: "#\nPixelation: Gawain 3\\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"\nalign=right width=200 hspace=20>\\r\n**Mga Direksyon:**\\r\nAmin kang pinasimula sa isang 4x4 na larawan na nilikha ni Maddie sa video.\\r\n\\r\nAng iyong gawain ay punan ang 4x4 na grid nang mga kulay gamit ang *12-bits kada pixel*. Ang resulta ay dapat katulad (ngunit hindi talaga eksakto) sa larawang ipinakita sa kanan.  \\r\n\\r\nNarito ang mga kinakailangan:\\r\n\\r\n\n* Hanay 1 - punan ng mga kulay na pula fill with shades of red. \\r\n * Hanay 2 - kulay na berde. \\r\n *\nHanay 3 - kulay na asul. \\r\n * Hanay 4 - kulay na abo.\\r\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "#\nPixelation ng Kulay: Gawain 1\n**Mga Direksyon:**\n\n* Pinagsimula ka namin sa isang 4x2 na imahe na nagawa ni Maddie, ngunit kami ay nag-iwan sa huling dalawang mga parisukat. \n*Tapusin ang larawan sa pamamagitan ng pagtukoy kung aling mga kulay ang nawawala at i-encode ang mga ito.\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_2018_markdown_instruction: "#\nPixelation ng Kulay: Gawain 1\n**Mga Direksyon:**\n\n* Pinagsimula ka namin sa isang 4x2 na imahe na nagawa ni Maddie, ngunit kami ay nag-iwan sa huling dalawang mga parisukat. \n*Tapusin ang larawan sa pamamagitan ng pagtukoy kung aling mga kulay ang nawawala at i-encode ang mga ito.\n"
+      Testing Quantum Farmer_markdown_instruction: "Wow, tingnan mo iyan! \\r\n\\r\nHindi ko alam kung ilang pala ng lupa ang kailangan ng butas na ito.  \\r\nMaaari ka bang magsulat ng programa na panatiling gumagamit ng `fill` na bloke hanggang sa ang lupa ay patag?  "
+      conditionals_forvideo_harvester_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
       course1_artist_loops_challenge2_markdown_instruction: Tayo ay maglaro ng isang laro! Magguhit nang maraming mga X hangga't kaya mo! Maaari ka bang makakuha ng 3 sa isang hanay?
       course1_maze_debugging_challenge2_markdown_instruction: I-debug ang antas na ito. Ito ang tamang mga bloke, ngunit sila ay nasa maling pagkasunod-sunod!
+      course1_maze_seq_challenge2_markdown_instruction: Maaari ka lang makagalaw hanggang sa apat na beses sa bawat direksyon. Makakahanap ka ba ng daan bago ka maubusan ng mga bloke?
+      course2_artist_prog_challenge2_markdown_instruction: "*Tulungan akong magpinta ng dilaw na mga linya sa kalsadang ito!*"
       course2_collector_prog_challenge1_markdown_instruction: Tingnang mabuti! Maaari mo bang makolekta ang lahat ng **10** mga piraso ng kayamanan?
+      course2_harvester_loops_challenge1_markdown_instruction: Kolektahin ang lahat ng mga mais.
+      course2_harvester_loops_challenge2_markdown_instruction: Kolektahin ang lahat ng mga letsugas. Iwasan ang mga kahoy ay mga kabukiran!
+      course2_maze_programming_challenge1_markdown_instruction: '*"Ang baboy ay nagtatago! Maaari mo ba ang akong tulungan na makahanap ng ibang daan?"*'
+      course2_maze_programming_challenge2_markdown_instruction: Minsan ay mayroong higit sa isang pamamaraan para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad pabalik kaysa sa pumunta pasulong!
+      course2_maze_seq_challenge2_markdown_instruction: Maaari ka lang makagalaw hanggang sa apat na beses sa bawat direksyon. Makakahanap ka ba ng daan bago ka maubusan ng mga bloke?
+      course3_artist_functions_challenge1_markdown_instruction: Kapag nagbigay-kahulugan ka na sa isang function, maaari mo na itong tawagin nang paulit-ulit. kahit kailang at kahit saan na gusto mo! Subukan ang code na ito para makita kung paano ito gumagana, pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang mga disenyo!
+      course3_bee_debugging_challenge1_markdown_instruction: Panoorin kung paano ang bubuyog kukuha ng nektar. Maaari mo bang gamitin ang parehong uri na pattern para matulongan ang bubuyog na gawin ang lahat ng mga pulot?
+      course3_bee_functions_challenge2_markdown_instruction: Ikaw ay mag-isa nalang para sa hamong ito!
+      course3_bee_functions_challenge3_markdown_instruction: Maglikha ng bagong function para makolekta ang lahat ng nektar at pulot habang mayroon pang landas sa unahan. Gamitin ito para makompleto ang palaisipan!
+      course3_bee_functions_challenge4_markdown_instruction: Gamitin ang lahat ng iyong natutunan para ikompleto ang palaisipang ito!
       course3_collector_debugging_challenge2_markdown_instruction: Ikaw ba ay bihasa na sa naka-nest na mga loop? Gamitin ang natutunan mo para kolektahin ang lahat ng mga yaman!
       course3_farmer_until_challenge2_markdown_instruction: Gamitin ang If/Else na mga bloke para sundan ang balikong landas. Sa bawat sulok, gamitin ang `remove 1` na utos sa isang loop para malinaw ang mga tumpok.
+      course3_maze_debugging_challenge1_markdown_instruction: '*"Nagpabalik-balik lang ba ako?"*'
+      course3_maze_until_challenge1_markdown_instruction: Walang pahiwatig, hamon lang. Dalhin ang zombie sa mirasol.
       course4_artist_binary_challenge1_markdown_instruction: Maaari ka lang gumamin ng bawat halaga ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest na mga loop para makumpleto ang drowing na ito.
-      course4_artist_fwp_challenge1_markdown_instruction: Subukang patakbuhin ang programang ito, at gumawa ng mga pagbabago para matingnan mo ang mangyari. Maari mo bang malaman kung paano ito gumana? (O burahin ito at palitan mo ng isang bagay na talagang kakaiba)
+      course4_artist_concept_challenge2_markdown_instruction: Maglikha ng limang pinwheel na mga disenyo gamit ang code sa baba.
+      course4_artist_fwp_challenge1_markdown_instruction: Subukang ipatakbo ang programang ito, at gumawa ng mga pagbabago para makita kung ano ang mangyayari. Maaari mo bang alamin kung paano ito gumagana? (O burahin ito at palitan ito ng isang talagang kakaiba)
+      course4_bee_fwp_challenge1_markdown_instruction: Gumamit ng isang `for loop` sa isang function para kolektahin ang lahat ng mga mais. Ang parehong `for loop` ay maaaring magbilang sa iba't ibang pinakamataas na mga halaga sa pamamagitan ng paggamit ng `length` na parameter.
+      courseA_collector_preLoops1_markdown_instruction: "Ito si Laurel ang Manggagalugad! \\r\n\\r\nPindutin ang \"Run\" para makita siyang maglakad sa mga kayaman para kunin ito."
       courseA_maze_seq6_2018_markdown_instruction: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta ang ibon sa baboy!
       courseA_maze_seq8_2018_markdown_instruction: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
+      courseB_artist_loops7_markdown_instruction: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
+      courseB_artist_loops7_2018_markdown_instruction: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
+      courseB_artist_loops_challenge2_markdown_instruction: Magguhit ng maraming mga X hangga't kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
+      courseB_artist_loops_challenge2_2018_markdown_instruction: Magguhit ng maraming mga X hangga't kaya mo. Maaari ka bang makakuha ng 3 sa isang hanay?
+      courseB_collector_loops3_predict1_markdown_instruction: Paano makolekta ni Laurel ang lahat ng limang mga bunton ng ginto gamit ang isang `E-->` na bloke lang?
+      courseB_collector_prog3_markdown_instruction: Paano makolekta ni Laurel ang lahat ng limang mga bunton ng ginto gamit ang isang `E-->` na bloke lang?
+      courseB_iceage_loops11_markdown_instruction: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseB_iceage_loops11_forVideo_markdown_instruction: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseB_maze_seq9_challenge1_markdown_instruction: "*Nasaan na nagtago ang baboy ngayon?*"
       courseB_playlab_events6_markdown_instruction: |-
         Tulungan ang iyong kabalyero para makuha ang lahat ng mga bandila!\r
         \r
@@ -884,52 +918,100 @@ fil:
         Tulungan ang iyong kabalyero para makuha ang lahat ng mga bandila!\r
         \r
         Para magawa ito, kailangan mong magdagdag ng mga pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa, at pakanan.
+      courseC_artist_loops2a_markdown_instruction: Ngayon, gumamit ng loop para paikutin ang iyong ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
+      courseC_artist_loops2a_2018_markdown_instruction: Ngayon, gumamit ng loop para paikutin ang iyong ibon sa paligid nang 12 beses gamit ang 30 degree na pagliko.
+      courseC_artist_prog_challenge1-doghouse_markdown_instruction: Tayo ay gagawa ng bahat ng aso para kay Jorge!
+      courseC_artist_prog_challenge2_markdown_instruction: "*Tulungan akong magpinta ng dilaw na mga linya sa kalsadang ito!*"
       courseC_collector_prog8_markdown_instruction: '*"Panatilihin ang magandang trabaho! Tulungan akong kolektahin ang lahat ng mga kayamanan."*'
       courseC_collector_prog8_2018_markdown_instruction: '*"Panatilihin ang magandang trabaho! Tulungan akong kolektahin ang lahat ng mga kayamanan."*'
       courseC_collector_prog9_markdown_instruction: '*"Ating kunin ang lahat ng mga kayamanan!"*'
       courseC_collector_prog9_2018_markdown_instruction: '*"Ating kunin ang lahat ng mga kayamanan!"*'
-      courseC_collector_progA_markdown_instruction: Tulungan si Laurel na kolektahin ang lahat ng mga kayamanan.
+      courseC_collector_progA_markdown_instruction: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
+      courseC_flappy_events7_markdown_instruction: Kasunod nito, subukang baguhin ang eksena sa pamamagitan ng paglakip ng bloke sa `when run` na pangyayari.
+      courseC_flappy_events7_2018_markdown_instruction: Kasunod nito, subukang baguhin ang eksena sa pamamagitan ng paglakip ng bloke sa `when run` na pangyayari.
+      courseC_flappy_events9_markdown_instruction: Para haluin ang mga bagay, sa halip na tapusin ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang score pabalik sa 0.
+      courseC_flappy_events9_2018_markdown_instruction: Para haluin ang mga bagay, sa halip na tapusin ang laro kapag si Flappy ay nakabangga ng isang balakid, subukang itakda ang score pabalik sa 0.
       courseC_harvester_loops10_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops10_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops11_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops11_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
+      courseC_harvester_loops10_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops11_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops11_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_harvester_loops2_markdown_instruction: Maaari mo bang haluin ang dalawang iba't ibang mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang lahat ng mga ito?
       courseC_harvester_loops2_2018_markdown_instruction: Maaari mo bang haluin ang dalawang iba't ibang mga loop para makapunta sa mga kalabasa, pagkatapos ay kolektahin ang lahat ng mga ito?
       courseC_harvester_loops3_markdown_instruction: Kolektahin ang lahat ng mga kalabasa.
       courseC_harvester_loops3_2018_markdown_instruction: Kolektahin ang lahat ng mga kalabasa.
-      courseC_harvester_loops5_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops5_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops6_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops6_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops7_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops7_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops9_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops9_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
-      courseC_harvester_loops_forVid_markdown_instruction: Kolektahin ang lahat ng mga mais at lahat ng mga kalabasa.
+      courseC_harvester_loops5_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops5_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops6_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops6_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops7_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops7_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops9_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops9_2018_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
+      courseC_harvester_loops_challenge1_markdown_instruction: Kolektahin ang lahat ng mga mais.
+      courseC_harvester_loops_challenge2_markdown_instruction: Kolektahin ang lahat ng mga letsugas. Iwasan ang mga kahoy ay mga kabukiran!
+      courseC_harvester_loops_challenge2_2018_markdown_instruction: Kolektahin ang lahat ng mga letsugas. Iwasan ang mga kahoy ay mga kabukiran!
+      courseC_harvester_loops_forVid_markdown_instruction: Kolektahin ang lahat ng mga mais at ang lahat ng mga kalabasa.
       courseC_maze_loops4_markdown_instruction: Sa palaisipang ito, ang dalawang `repeat` na mga loop ay makakatulong sa iyo para mapapunta ang ibon sa baboy gamin ang pinakakaunting bilang ng mga bloke!
       courseC_maze_loops5_markdown_instruction: '*"Dalhin ako sa baboy nang mabilisan hangga''t maaari!"*'
+      courseC_maze_loops_challenge2_markdown_instruction: Tayo ay maghanap ng mga kayamanan - gamit ang mga loop! Tulungan ang kolektor sa pamamagitan ng pag-debug ng code na ito. Kunin ang lahat ng mga kayamanan!
+      courseC_maze_programming1_markdown_instruction: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
+      courseC_maze_programming1_2018_markdown_instruction: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
       courseC_maze_programming8_markdown_instruction: '*"Manatiling kalmado at tulungan akong hanapin ang masamang baboy."*'
-      courseC_maze_programming8_2018_markdown_instruction: '*"Manatiling kalmado at tulungan akong hanapin ang masamang baboy."*'
-      courseC_maze_programming8_predict1_markdown_instruction: '*"Manatiling kalmado at tulungan akong hanapin ang masamang baboy."*'
-      courseC_maze_programming8_predict1_2018_markdown_instruction: '*"Manatiling kalmado at tulungan akong hanapin ang masamang baboy."*'
+      courseC_maze_programming8_2018_markdown_instruction: '*"Maging kalmado at tulungan akong hanapin ang masamang baboy."*'
+      courseC_maze_programming8_predict1_markdown_instruction: '*"Maging kalmado at tulungan akong hanapin ang masamang baboy."*'
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '*"Maging kalmado at tulungan akong hanapin ang masamang baboy."*'
       courseC_maze_programming9_markdown_instruction: '""Ngayon, tulungan akong mag-abang sa baboy sa kahit anong paraan na gusto mo!"*'
       courseC_maze_programming9_2018_markdown_instruction: '""Ngayon, tulungan akong mag-abang sa baboy sa kahit anong paraan na gusto mo!"*'
+      courseC_maze_programming_challenge2_markdown_instruction: Minsan ay mayroong higit sa isang pamamaraan para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad pabalik kaysa sa pumunta pasulong!
+      courseC_maze_programming_challenge2_2018_markdown_instruction: Minsan ay mayroong higit sa isang pamamaraan para malutas ang parehang problema. Minsan ay mas mabilis ang maglakad pabalik kaysa sa pumunta pasulong!
       courseD_artist_binary_challenge1_markdown_instruction: Maaari ka lang gumamin ng bawat halaga ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest na mga loop para makumpleto ang drowing na ito.
       courseD_artist_binary_challenge1_2018_markdown_instruction: Maaari ka lang gumamin ng bawat halaga ng binary (0 o 1) sa isang beses sa palaisipang ito. Subukang gumamit ng naka-nest na mga loop para makumpleto ang drowing na ito.
       courseD_artist_project_embedded_markdown_instruction: Narito ang gagawin mo mamaya!
+      courseD_bee_debugging_challenge1_markdown_instruction: Tingnan kung paano ang mga bubuyog kumuha ng nektar. Maaari mo bang gamitin ang parehong uri ng patter para matulungan ang bubuyog na gawing pulot ang lahat?
+      courseD_bee_debugging_challenge1_2018_markdown_instruction: Tingnan kung paano ang mga bubuyog kumuha ng nektar. Maaari mo bang gamitin ang parehong uri ng patter para matulungan ang bubuyog na gawing pulot ang lahat?
+      courseD_bee_debugging_challenge2_markdown_instruction: Tingnan kung paano ang mga bubuyog kumukuha ng nektar. Maaari mo bang gamitin ang parehong tipo ng pattern para matulungan ang bubuyog na gawing pulot ang lahat?
       courseD_bee_nestedLoops2_markdown_instruction: Sa oras na ito, tulongan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang hangga't maaari.
-      courseD_bee_nestedLoops2_2018_markdown_instruction: Sa oras na ito, tulongan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang hangga't maaari.
-      courseD_bee_nestedLoops2_predict1_markdown_instruction: Sa oras na ito, tulongan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang hangga't maaari.
-      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: Sa oras na ito, tulongan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang hangga't maaari.
+      courseD_bee_nestedLoops2_2018_markdown_instruction: Sa oras na ito, tulungan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
+      courseD_bee_nestedLoops2_predict1_markdown_instruction: Sa oras na ito, tulungan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
+      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: Sa oras na ito, tulungan ang bubuyog na kolektahin ang lahat ng nektar gamit ang kaunting mga bloke lang na posible.
+      courseD_bee_nestedLoops5_markdown_instruction: 'Kolektahin ang lahat ng nektar mula sa bawat isa sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. '
       courseD_bee_nestedLoops6_markdown_instruction: Gawin ang lahat ng nektar.
+      courseD_bee_nestedLoops8_markdown_instruction: 'Kolektahin ang lahat ng nektar mula sa bawat isa sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. '
+      courseD_bee_nestedLoops8_2018_markdown_instruction: 'Kolektahin ang lahat ng nektar mula sa bawat isa sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. '
       courseD_bee_nestedLoops9_markdown_instruction: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_2018_markdown_instruction: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_predict2_markdown_instruction: Gawin ang lahat ng pulot.
       courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Gawin ang lahat ng pulot.
+      courseD_bee_nested_loops_challenge1_markdown_instruction: Maghanap tayo ng mga kayamanan - gamit ang mga loop! Tulunga ang kolektor na maabot ang hindi bababa sa dalawang tumpok ng yaman gamit ang mga bloke lang na nasa iyong toolbox.
+      courseD_bee_nested_loops_challenge2_markdown_instruction: Maghanap tayo ng mga kayamanan - gamit ang mga loop! Tulunga ang kolektor na maabot ang hindi bababa sa dalawang tumpok ng yaman gamit ang mga bloke lang na nasa iyong toolbox.
+      courseD_bounce_events1_markdown_instruction: Puntahan ang bandila! Maglakip ng mga bloke sa "when left arrow" na bloke at pindutin ang "Run" para ilipat ang manlalaro palapit sa bandila.
+      courseD_bounce_events2s_markdown_instruction: Ngayon, ilakip ang bloke sa `when right event` para ang kamay ay maaaring makakuha sa parehong buslo.
+      courseD_bounce_events2s_2018_markdown_instruction: Ngayon, ilakip ang bloke sa `when right event` para ang kamay ay maaaring makakuha sa parehong buslo.
+      courseD_collector_debugging6a_markdown_instruction: 'Hamon: Gamitin ang code sa loob ng pangtrabahong lugar para makakuha ng hindi bababa sa **6** na mga piraso ng kayamanan!'
+      courseD_collector_debugging6a_2018_markdown_instruction: 'Hamon: Gamitin ang code sa loob ng pangtrabahong lugar para makakuha ng hindi bababa sa **6** na mga piraso ng kayamanan!'
+      courseD_collector_until_challenge1_markdown_instruction: Tingnan kung paano ang mga bubuyog kumukuha ng nektar. Maaari mo bang gamitin ang parehong tipo ng pattern para matulungan ang bubuyog na gawing pulot ang lahat?
+      courseD_farmer_condLoops8_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops8_2018_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_2018_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_predict1_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_condLoops9_predict1_2018_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
+      courseD_farmer_while_challenge1_markdown_instruction: Punan ang lahat ng mga butas at tanggalin ang lahat ng mga tumpok.
+      courseD_farmer_while_challenge1_2018_markdown_instruction: Punan ang lahat ng mga butas at tanggalin ang lahat ng mga tumpok.
+      courseD_farmer_while_challenge2_markdown_instruction: Punan ang lahat ng mga butas at tanggalin ang lahat ng mga tumpok.
+      courseD_farmer_while_challenge2_2018_markdown_instruction: Punan ang lahat ng mga butas at tanggalin ang lahat ng mga tumpok.
+      courseD_iceage_loops11_markdown_instruction: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseD_maze_loops_challenge1_markdown_instruction: Maghanap tayo ng mga kayamanan - gamit ang mga loop! Tulunga ang kolektor na maabot ang hindi bababa sa dalawang tumpok ng yaman gamit ang mga bloke lang na nasa iyong toolbox.
+      courseD_maze_nestedLoops4_markdown_instruction: 'Dalhin ang zombie sa mirasol gamit ang pinakakaunting bloke na posible!  '
+      courseD_maze_nestedLoops4_2018_markdown_instruction: 'Dalhin ang zombie sa mirasol gamit ang pinakakaunting bloke na posible!  '
       courseD_maze_ramp1_markdown_instruction: Para sa palaisipang ito, i-snap ang lahat ng mga bloke nang sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_maze_ramp1_2018_markdown_instruction: Para sa palaisipang ito, i-snap ang lahat ng mga bloke nang sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_maze_ramp2_markdown_instruction: Mag-kaladkad ng ekstrang `move forward` na bloke palabas sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para matapos ang iyong code.
       courseD_maze_ramp2_2018_markdown_instruction: Mag-kaladkad ng ekstrang `move forward` na bloke palabas sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para matapos ang iyong code.
+      courseD_maze_ramp5a_markdown_instruction: Bigyang-pansin ang pagkasunod-sunod at tingnan kung matukoy mo kung paano makapunta sa baboy na iyan!
+      courseD_maze_ramp5a_2018_markdown_instruction: Bigyang-pansin ang pagkasunod-sunod at tingnan kung matukoy mo kung paano makapunta sa baboy na iyan!
+      courseD_maze_ramp5c_markdown_instruction: Tulungan ang ibon na makapunta sa baboy.
+      courseD_maze_ramp5c_2018_markdown_instruction: Tulungan ang ibon na makapunta sa baboy.
       courseD_maze_ramp5d_markdown_instruction: Dalhin ang ibon sa baboy.
       courseD_maze_ramp5d_2018_markdown_instruction: Dalhin ang ibon sa baboy.
       courseD_maze_until10_markdown_instruction: Tulungan ang zombie na makapunta sa mirasol.
@@ -947,22 +1029,43 @@ fil:
       courseD_maze_until8_2018_markdown_instruction: Tulungan ang zombie na makapunta sa mirasol.
       courseD_maze_until9_markdown_instruction: "**Hamon:** Iwasan ang mga chomper at tulungan ang zombie na makapunta sa mirasol."
       courseD_maze_until9_2018_markdown_instruction: "**Hamon:** Iwasan ang mga chomper at tulungan ang zombie na makapunta sa mirasol."
+      courseD_maze_until_challenge1_markdown_instruction: Walang pahiwatig, hamon lang. Dalhin ang zombie sa mirasol.
+      courseD_maze_until_challenge1_2018_markdown_instruction: Walang pahiwatig, hamon lang. Dalhin ang zombie sa mirasol.
       courseD_scrat_ramp1_markdown_instruction: Para sa palaisipang ito, i-snap ang lahat ng mga bloke nang sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_scrat_ramp1_2018_markdown_instruction: Para sa palaisipang ito, i-snap ang lahat ng mga bloke nang sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_scrat_ramp2_markdown_instruction: Mag-kaladkad ng ekstrang `move forward` na bloke palabas sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para matapos ang iyong code.
       courseD_scrat_ramp2_2018_markdown_instruction: Mag-kaladkad ng ekstrang `move forward` na bloke palabas sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para matapos ang iyong code.
+      courseD_scrat_ramp4_markdown_instruction: Iwasan ang basag na yelop para panatilihing ligtas si Scrat!
+      courseD_scrat_ramp4_2018_markdown_instruction: Iwasan ang basag na yelop para panatilihing ligtas si Scrat!
+      courseD_scrat_ramp6_markdown_instruction: Tulungan si Scrat na makakuha ng bunga ng oak gamit ang loop!
+      courseD_scrat_ramp6_2018_markdown_instruction: Tulungan si Scrat na makakuha ng bunga ng oak gamit ang loop!
+      courseD_scrat_ramp7_markdown_instruction: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseD_scrat_ramp7_2018_markdown_instruction: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseE_artist_concept_challenge2_markdown_instruction: Maglikha ng limang pinwheel na mga disenyo gamit ang code sa baba.
+      courseE_artist_concept_challenge2_2018_markdown_instruction: Maglikha ng limang pinwheel na mga disenyo gamit ang code sa baba.
+      courseE_artist_functions_challenge_markdown_instruction: Kapag nagbigay-kahulugan ka na sa isang function, maaari mo na itong tawagin nang paulit-ulit. kahit kailang at kahit saan na gusto mo! Subukan ang code na ito para makita kung paano ito gumagana, pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang mga disenyo!
+      courseE_artist_functions_challenge1_markdown_instruction: Kapag nagbigay-kahulugan ka na sa isang function, maaari mo na itong tawagin nang paulit-ulit. kahit kailang at kahit saan na gusto mo! Subukan ang code na ito para makita kung paano ito gumagana, pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang mga disenyo!
+      courseE_artist_functions_challenge1_2018_markdown_instruction: Kapag nagbigay-kahulugan ka na sa isang function, maaari mo na itong tawagin nang paulit-ulit. kahit kailang at kahit saan na gusto mo! Subukan ang code na ito para makita kung paano ito gumagana, pagkatapos ay palitan ito para makagawa ng iyong sariling kamangha-maghang mga disenyo!
       courseE_bee_functions2_markdown_instruction: "Ang mga functions ay mga bloke ng code na gumagawa ng isang gawin.  \\r\n\\r\nGamitin ang `get 2 nectar` na function para magkolekta ng nektar mula sa bawat bulaklak."
       courseE_bee_functions2_2018_markdown_instruction: "Ang mga functions ay mga bloke ng code na gumagawa ng isang gawin.  \\r\n\\r\nGamitin ang `get 2 nectar` na function para magkolekta ng nektar mula sa bawat bulaklak."
-      courseE_farmer_concept4_markdown_instruction: Ngayon ay pupunta tayo nang mas malalim! Ating nai-nest ang buong bloke ng code sa isang loop, ngunit kailangan mong pabalikin ang artista sa lugar para maiguhit ang sunod na linya. Alin sa mga code na blokeng ito ang maaaring maglagay sa dulo ng pinakalabas na loop para maiguhit ang buong grid?
+      courseE_bee_functions3_markdown_instruction: Gumawa ng `get 5` na function para magamit sa palaisipang ito.
+      courseE_bee_functions3_2018_markdown_instruction: Gumawa ng `get 5` na function para magamit sa palaisipang ito.
+      courseE_farmer_concept4_markdown_instruction: "Ngayon ay pupunta pa tayo ng isang antas na mas malalim!\nAting na-nest ang buong bloke ng code sa isa pang loop, ngunit kakailanganin mog mapabalik ang artista sa lugr para maiguhit ang susunod na linya. Alin sa mga code na mga blokeng ito ang maaari mong ilagay sa dulo ng pinakalabas na loop para maiguhit ang buong grid?"
       courseE_farmer_functions10b_markdown_instruction: Gamitin ang iyong bagong function nang dalawang beses para malutas ang palaisipang ito.
       courseE_farmer_functions10b_2018_markdown_instruction: Gamitin ang iyong bagong function nang dalawang beses para malutas ang palaisipang ito.
       courseE_farmer_functions4b_markdown_instruction: Gamitin ang iyong bagong function para malutas ang palaisipang ito.
-      courseE_farmer_functions4b_2018_markdown_instruction: Gamitin ang iyong bagong function para malutas ang palaisipang ito.
+      courseE_farmer_functions4b_2018_markdown_instruction: Gamitin ang iyong bagong function para lutasin ang spiral na ito.
       courseE_farmer_functions5c_markdown_instruction: Ang iyong function ay talagang magagamit dito.
       courseE_farmer_functions5c_2018_markdown_instruction: Ang iyong function ay talagang magagamit dito.
       courseE_farmer_functions6b_markdown_instruction: Pulutin ang lahat ng mga ani.
+      courseE_farmer_ramp16_markdown_instruction: "**Hamon:** Lutasin ang palaisipang ito gamit ang pinakakaunting bilang ng mga bloke."
+      courseE_maze_ramp1_markdown_instruction: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
+      courseE_maze_ramp1_2018_markdown_instruction: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
       courseE_maze_ramp2_markdown_instruction: Mag-kaladkad ng ekstrang `move forward` na bloke palabas sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para matapos ang iyong code.
       courseE_maze_ramp2_2018_markdown_instruction: Mag-kaladkad ng ekstrang `move forward` na bloke palabas sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para matapos ang iyong code.
+      courseE_playLab_scaffold6_markdown_instruction: Natapos mo na! Ngayon ay maaari ka nang maglaro sa iyong laro o magbahagi nito sa iyong mga kaibigan at mga kamag-aral!
+      courseE_playLab_scaffold6_2018_markdown_instruction: Natapos mo na! Ngayon ay maaari ka nang maglaro sa iyong laro o magbahagi nito sa iyong mga kaibigan at mga kamag-aral!
+      courseF_IceAge_3_markdown_instruction: Si Scrat ay naghahanap sa kayang bunga ng oak! Maari mo ba siyang tulungan ng gumalaw sa huling 200 na mga pixels?
       courseF_artist_variables4_markdown_instruction: Ngayon, gamitin ang `length` na variable para mapatalon ang artista paharap at pababa mga `length` pixels sa gitna ng mga tatsulok.
       courseF_artist_variables4_2018_markdown_instruction: Ngayon, gamitin ang `length` na variable para mapatalon ang artista paharap at pababa mga `length` pixels sa gitna ng mga tatsulok.
       courseF_artist_variablesFP_markdown_instruction: "**Libreng laro:** Kunin ang natutunan mo at gumawa ng iyong sariling drowing. \\r\n\\r\nPaano mo magagamit ang mga variables sa mga parisukat, mga pentagon, o mga hexagon?"
@@ -973,7 +1076,14 @@ fil:
       courseF_artist_variables_FP_markdown_instruction: "**Libreng laro:** Kunin ang natutunan mo at gumawa ng iyong sariling drowing. \\r\n\\r\nPaano mo magagamit ang mga variables sa mga parisukat, mga pentagon, o mga hexagon?"
       courseF_bee_for_challenge2_markdown_instruction: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang ng mga bloke hangga't maaari.
       courseF_bee_for_challenge2_2018_markdown_instruction: Lutasin ang palaisipang ito gamit ang pinakakaunting bilang ng mga bloke hangga't maaari.
+      courseF_bee_functions_challenge1_markdown_instruction: Maglikha ng bagong function para makolekta ang lahat ng nektar at pulot habang mayroon pang landas sa unahan. Gamitin ito para makompleto ang palaisipan!
+      courseF_bee_functions_challenge1_2018_markdown_instruction: Maglikha ng bagong function para makolekta ang lahat ng nektar at pulot habang mayroon pang landas sa unahan. Gamitin ito para makompleto ang palaisipan!
+      courseF_bee_functions_challenge2_markdown_instruction: Gamitin ang lahat ng iyong natutunan para ikompleto ang palaisipang ito!
+      courseF_bee_functions_challenge2_2018_markdown_instruction: Gamitin ang lahat ng iyong natutunan para ikompleto ang palaisipang ito!
+      courseF_bee_fwp_challenge1_markdown_instruction: Gumamit ng isang `for loop` sa isang function para kolektahin ang lahat ng mga mais. Ang parehong `for loop` ay maaaring magbilang sa iba't ibang pinakamataas na mga halaga sa pamamagitan ng paggamit ng `length` na parameter.
+      courseF_bee_fwp_challenge1_2018_markdown_instruction: Gumamit ng isang `for loop` sa isang function para kolektahin ang lahat ng mga mais. Ang parehong `for loop` ay maaaring magbilang sa iba't ibang pinakamataas na mga halaga sa pamamagitan ng paggamit ng `length` na parameter.
       courseF_playlab_variables3b_markdown_instruction: 'Tulungan si Kiki na makipag-usap kay Brian sa pamamagitan ng paggamit sa variable na `age` sa lahat ng mga lugar kung saan ang edad na `12` ay dapat gagamitin. '
+      courseF_playlab_variables3bEdit_markdown_instruction: 'Tulungan si Kiki na makipag-usap kay Brian sa pamamagitan ng paggamit sa variable na `age` sa lahat ng mga lugar kung saan ang edad na `12` ay dapat gagamitin. '
       courseF_playlab_variables3b_josh_markdown_instruction: 'Tulungan si Kiki na makipag-usap kay Brian sa pamamagitan ng paggamit sa variable na `age` sa lahat ng mga lugar kung saan ang edad na `12` ay dapat gagamitin. '
       courseF_playlab_variables3b_josh_2018_markdown_instruction: 'Tulungan si Kiki na makipag-usap kay Brian sa pamamagitan ng paggamit sa variable na `age` sa lahat ng mga lugar kung saan ang edad na `12` ay dapat gagamitin. '
       frozen circle function in circle_markdown_instruction: Ngayon ay lilikha tayo nang 20 na nagpatung-patong na mga bilog, sa pamamagitan ng pag-ikot ng 18 degrees sa bawat bilog.
@@ -995,29 +1105,33 @@ fil:
       frozen square loop 3x_markdown_instruction: Tayo ay maglikha ng tatlong mga parisukat, umikot pagkatapos sa bawat parisukat. Siguraduhing umikot nang 120 degrees bago maglikha ng bawat bagong parisukat.
       frozen square loop_markdown_instruction: Hi, ako si Anna ng Arendelle! Tayo ay gagawa ng parisukat gamit ang "Repeat" na bloke, kung saan ay gumagamit ng kaunting mga bloke. Ilang beses (???) ba dapat ang "Repeat" na bloke mag-loop sa mga bloke sa loob nito para makagawa ng parisukat?
       frozen square snowflake_markdown_instruction: Maaari ka bang maglikha ng niyebe gamit ang "Repeat" na bloke para makagawa ng parisukat nang 10 beses, at ang "Turn" na bloke ay liliko nang 36 degrees sa pagitan ng bawat parisukat?
-      grade2_CaringForNewPet_11_markdown_instruction: '*"Manatiling kalmado at tulungan akong hanapin ang masamang baboy."*'
+      grade1_adventurer_loops2_markdown_instruction: Paano makolekta ni Laurel ang lahat ng limang mga bunton ng ginto gamit ang isang `E-->` na bloke lang?
+      grade1_artist_loops6_markdown_instruction: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay maglakad sa paligid."
+      grade2_CaringForNewPet_0_markdown_instruction: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke na sama-sama at pindutin ang "Run" para tingnan itong mawala!
+      grade2_CaringForNewPet_1_markdown_instruction: I-drag ang ekstrang `move forward` na bloke palabas sa toolbox para tapusin ang iyong code.
+      grade2_CaringForNewPet_11_markdown_instruction: '*"Maging kalmado at tulungan akong hanapin ang masamang baboy."*'
       grade2_MakeDogTag_8_markdown_instruction: Ngayon ay ating ikonekta ang isang bungkos ng mga V nang sama-sama sa isang loop.
       grade2_MakeDogTag_9_markdown_instruction: "Oras na para gumawa ng isang bagay na maganda!\n\\r\n\\r\nGawin muli ang code mula sa huling palaisipan, ngunit sa oras na ito, magdagdag ng pagliko sa kaliwa nang 30 degrees sa loob ng loop. Ngayon, ulitin ito nang 24 na beses sa halip na 8."
       grade2_PuppyLoops_10_markdown_instruction: |-
-        Ang aking guro ay nagsasabi na dapat kung tapusin kung ano ang aking nasimulan!\r
+        Ang guro ay nagsasabi na dapat kung tapusin kung ano ang nasimulan ko!\r
         \r
-        Tulungan akong tapusing ang aking pinwheel. Maaari mo bang matukoy kung ano ang problema?
+        Tulungan akong tapusin ang aking pinwheel. Maaari mo bang matukoy kung ano ang problema?
       grade2_PuppyLoops_2_markdown_instruction: |-
         Bigla nalang, may isang mahiwagang bloke ang dumating! Kasama ang `repeat` bloke, maaari ka ring mag-loop ng code nang paulit-ulit. \r
         \r
         Maaari ka bang makapunta sa baboy sa pamamagitan ng paglikha ng loop na gumagamit ng isang `move forward` na bloke lang sa loob ng isang `repeat`?
       grade2_PuppyLoops_4_markdown_instruction: Sa palaisipang ito, ang dalawang `repeat` na mga loop ay makakatulong sa iyo na makapunta sa baboy gamit ang pinakakaunting bilang ng mga bloke!
-      grade2_PuppyLoops_8_markdown_instruction: "Ang code na ito para sa bigote ng pusa ay mali.\n\\r\n\\r\nAyusin ang code para maiguhit ang mga bigote na pareho ang haba ng lahat."
+      grade2_PuppyLoops_8_markdown_instruction: "Ang code na ito para sa bigote ng pusa ay mali. \\r\n\\r\nAyusin ang code na ito para iguhit ang mga bigote na lahat ay magkapareho ang haba."
       grade2_PuppyLoops_9_markdown_instruction: |-
-        Mung ang C sa code ay naguhit nang paurong!\r
+        Parang ang C na code ay naguhit nang paurong!\r
         \r
-        Maaari mo ba itong gawing parang C ulit?
+        Maaari mo bang magawa ito na parang C ulit?
       grade2_collector_2_markdown_instruction: Papuntahin si Laurel sa ginto, pagkatapos ay gumamit nang `collect` para pulotin ito.
       grade2_collector_4_markdown_instruction: Ang pagkasunod-sunod ay mahalaga! Ang mga bloke na kakailanganin mo ay nasa iyong workspace na, ngunit hindi konektado. Isunod-sunod ang mga blokeng ito para malutas ang palaisipan.
       grade2_collector_9_markdown_instruction: '*"Ating kunin ang lahat ng mga barya!"*'
       grade2_collector_9a_markdown_instruction: "**Hamon:** Kunin ang lahat ng mga barya."
-      grade2_collector_A_markdown_instruction: Tulungan si Laurel na kolektahin ang lahat ng mga kayamanan.
-      grade2_collector_A_2018_markdown_instruction: Tulungan si Laurel na kolektahin ang lahat ng mga kayamanan.
+      grade2_collector_A_markdown_instruction: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
+      grade2_collector_A_2018_markdown_instruction: Tulungan si Laurel na kolektahin ang lahat ng kayamanan.
       grade2_maze_debuggingFP_markdown_instruction: '""Ngayon, tulungan akong mag-abang sa baboy sa kahit anong paraan na gusto mo!"*'
       grade2_puppy_loops2_markdown_instruction: |-
         Bigla nalang, may isang mahiwagang bloke ang dumating! Kasama ang `repeat` bloke, maaari ka ring mag-loop ng code nang paulit-ulit. \r
@@ -1033,10 +1147,10 @@ fil:
         \r
         Gamitin ang `if/else` na bloke para magkolekta ng nektar kung mayroong isang bulaklak.\r
         Kung hindi, gumawa ng pulot (dahil mayroong pulot-pukyutan).
-      grade3_ConditionalsElse_6_markdown_instruction: "Hindi ako sigurado kung magkano ang nektar sa loob ng bulaklak na ito, ngunit alam ko na ito ay mayroong 1, 2, o 3 na nektar.\\r\n\\r\nPagsamahin ang kondisyonal na mga bloke (`if` at/o `if/else`) para makuha lang ang nektar na nilalaman ng bulaklak.\n\\r\n\\r\nTandaan, na ang bilang ng nektar ay maaring magbago bawat beses na patakbuhin mo ang palaisipan!"
-      grade3_ConditionalsElse_7_markdown_instruction: "Ang mga bulaklak na mga ito ay maaaring magkaroon ng 3, 2, o 1 na nektar.\n\\r\n\\r\nKumpletohin ang `check purple flower` na function at gamitin ito para kolektahin ang lahat ng mga nektar na nasa mga bulaklak."
-      grade3_ConditionalsElse_8_markdown_instruction: "Isulat ang function para sa `check flower make honey`. \\r\n\\r\nAng iyong function ay dapat titingin kung ang lilang bulaklak ay mayroong 3, 2, o 1 na nektar at kunin ang lahat ng nektar. \\r\nPagkatapos, gumalaw pasulong at gumawa ng pulot."
-      grade3_ConditionalsElse_9_markdown_instruction: "**Pagtatasa:** Ang ulap na ito ay nagtatago ng bulaklak na may isang nektar o isang pulot-pukyutan na nangangailangan ng isang pulot. \\r\n\\r\nKumpletohin ang `get nectar or make honey` na function, pagkatapos ay tawagin ito para kolektahin ang nektar o pulot.\\r\n"
+      grade3_ConditionalsElse_6_markdown_instruction: "Hindi ako sigurado kung ilang nektar mayroon ang bulaklak na ito, ngunit alam ko na ito ay alinman sa 1, 2, o 3 na nektar. \\r\n\\r\nIpagsama ang mga kondisyonal na mga bloke (`if` at/o `if/else`) para kumuha lang ng nektar kung ano lang ang laman ng bulaklak. \\r\n\\r\nTandaan, ang halaga ng nektar ay maaaring magbago bawat beses na patatakbuhin mo ang palaisipan!"
+      grade3_ConditionalsElse_7_markdown_instruction: "Ang mga bulaklak na mga ito ay maaaring magkaroon ng 3, 2, o 11 na nektar. \\r\n\\r\nKumpletohin ang `check purple flower` na function at gamitin ito para kolektahin ang lahat ng mga nektar na nasa mga bulaklak."
+      grade3_ConditionalsElse_8_markdown_instruction: "Isulat ang function para sa `check flower make honey`. \\r\n\\r\nAng iyong function ay dapat magsusuri kung ang lilang bulaklak ay mayroong 3, 2, o 1 nektar at kunin ang lahat ng nektar. \\r\nPagkatapos, lumakad pasulong at gumawa ng pulot."
+      grade3_ConditionalsElse_9_markdown_instruction: "**Pagtatasa:** Ang mga ulap na ito ay marahil nagtatago ng bulaklak na may isang nektar o isang pulot-puktutan na nangangailangan ng isang pulot. \\r\n\\r\nKumpletohin ang `get nectar or make honey` na function, pagkatapos ay tawagin ito para magkolekta ng nektar o pulot. \\r\n"
       grade3_ConditionalsElse_TeacherIDo_markdown_instruction: |-
         Mayroon lang isang bulaklak o pulot-pukyutan sa ilalim ng bawat isa sa mga ulap na iyon!\r
         \r
@@ -1049,7 +1163,7 @@ fil:
         Gamitin kung ano ang natutunan mo para makolekta ang lahat ng nektar at pagkatapos ay makagawa ng pulot.
       grade3_Conditionals_11 BAD_markdown_instruction: "**Pagtatasa:** Gamitin ang `while` na loop para kolektahin ang lahat ng nektar mula sa mga bulaklak na mga ito."
       grade3_Conditionals_11_markdown_instruction: "Ating isama-sama ang lahat!\\r\n\\r\nGamitin ang natutunan mo para matulungan akong magkolekta ng nektar lang mula sa mga bulaklak na mayroon nito, gamit ang kaunting mga bloke lang na posible. \\r\n\\r\nHuwag kalimutang gumawa ng mga pulot sa dulo."
-      grade3_Conditionals_12_markdown_instruction: "Ang pattern ng baitang na hagdan ay dapat magmukhang pamilyar. \\r\n\\r\nMaaari mo bang magkolekta sa mga bulaklak lang na mayroong mga nektar, gamit ang iilang mga bloke lang hangga't maaari?"
+      grade3_Conditionals_12_markdown_instruction: "Ang hagdanan na hakbang na patter ay dapat magmukhang pamilyar. \\r\n\\r\nMaaari ka bang magkolekta ng nektar lang mula sa mga bulaklak na mayroon nito, gamit ang kaunting mga bloke lang na posible?"
       grade3_Conditionals_13_markdown_instruction: "**Pagtatasa:** Kolektahin ang lahat ng nektar. \\r\nMag-ingat na hindi masubukang magkolekta ng nektar mula sa lilang bulaklak kung wala itong laman na kahit ano."
       grade3_Conditionals_2_markdown_instruction: "Tingnan ang lahat ng mga nektar na iyan!\\r\n\\r\nTulungan akong kolektahin ang nektar at gumawa ng pulot gamit ang iilang mga bloke lang hangga't maaari.  "
       grade3_Conditionals_3_markdown_instruction: "Ang mga mahiwagang lilang mga bulaklak ay nagbabago!\\r\n\\r\nBawat beses na susubukan mo ang palaisipan, ang mga lilang mga bulaklak ay maaaring magkaroon ng 1 nektar o wala talaga,..ngunit hindi mo malalaman ang bilang hanggang sa patatakbuhin mo ang code! \\r\n\\r\nMag-ingat na hindi makakolekta ng nektar sa lilang bulaklak kung wala itong lamat na kahit ano. \\r\nDapat mong suriin kung ang nektar ay katumbas ng 1 gamit ang `if nectar` na bloke."
@@ -1060,7 +1174,7 @@ fil:
         Ayusin ang (mga) kamalian para makolekta ang lahat ng nektar.
       grade3_Debugging_5_markdown_instruction: "Ang bulaklak na iyan ay mukhang masarap! \\r\n\\r\nAyusin ang (mga) kamalian para makolekta ang lahat ng nektar. \\r\nMaaari mo na ngayong gamitin ang parehong run at step."
       grade3_Debugging_6_markdown_instruction: |-
-        Napakatamis na hamon!\r
+        Isang napakatamis na hamon!\r
         \r
         Ayusin ang (mga) kamalian para makolekta ang lahat ng mga nektar.
       grade3_Debugging_9_markdown_instruction: |-
@@ -1072,9 +1186,9 @@ fil:
         \r
         Tulungan ang Bubuyog na kolektahin ang lahat ng nektar at gawin ang lahat ng pulot gamit ang pinakakaunting mga bloke na posible.
       grade3_Loops_11_markdown_instruction: "Ang hugis nang daanang ito ay kakaiba sa iba.\\r\n\\r\nMaaari mo bang kolektahin ang lahat ng nektar gamit ang kaunting mga bloke hangga't maaari?"
-      grade3_Loops_3_markdown_instruction: Gamitin ang `repeat` na loop para kolektahin ang lahat ng mga nektar.
-      grade3_Loops_4_markdown_instruction: Ngayon, gamitin ang `repeat` na bloke para kolektahin ang lahat ng mga nektar at gawin ang lahat ng pulot.
-      grade3_Loops_6_markdown_instruction: "Ilang beses ba maaaring makakatulong ang mga loop sa iyo sa palaisipang ito? \\r\n\\r\nAng mga loop ay iyong kaibigan! Gumamit ng iilan sa kanila para makumpleto ang palaisipang ito gamit ang pinakakaunting mga bloke hangga't maaari."
+      grade3_Loops_3_markdown_instruction: Gamitin ang `repeat` na loop para kolektahin ang lahat ng nektar.
+      grade3_Loops_4_markdown_instruction: Ngayon ay gamitin ang `repeat` na bloke para kolektahin ang lahat ng nektar at gawin ang lahat ng pulot.
+      grade3_Loops_6_markdown_instruction: "Ilan beses ba maaaring makakatulong ang mga loop sa palaisipang ito? \\r\n\\r\nAng mga loop ay iyong kaibigan! Gummat ng iilan sa kanila para makompleto ang palaisipang ito gamit ang pinakakaunting mga bloke na posible."
       grade3_Loops_7_markdown_instruction: |-
         Ang mga bulaklak na iyon ay parang masarap!\r
         \r
@@ -1083,8 +1197,11 @@ fil:
         Ang mga bulaklak na iyon ay parang masarap!\r
         \r
         Magkolekta ng nektar mula sa bawat bulaklak gamit ang pinakakaunting mga bloke hangga't maaari.
+      grade3_RunningFarm_10_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
+      grade3_RunningFarm_11a_markdown_instruction: Kolektahin ang lahat ng mais at letsugas, pagkatapos ay kunin ang kalabasa.
       grade3_bee_conditionals_quantum2_markdown_instruction: "Mas marami pang mga ulap! \\r\n\\r\nTingnan sa baba ng bawat ulap para makita kung ito ba ay nagtatago ng bulaklak bago ikaw makakakuha ng nektar.  \\r\n\\r\nTandaan:\nHindi lahat ng mga ulap ay magkapareha!"
       grade3_maze_Loop1_markdown_instruction: "**Pagtatasa:** Dalhin ako sa mirasol gamit ang 5 mga bloke lang! "
+      grade3_maze_loops2_markdown_instruction: 'Dalhin ang zombie sa mirasol gamit ang pinakakaunting bloke na posible!  '
       grade3_maze_nestedLoops2_markdown_instruction: |-
         Bigla nalang, may isang mahiwagang bloke ang dumating! Kasama ang `repeat` bloke, maaari ka ring mag-loop ng code nang paulit-ulit. \r
         \r
@@ -1092,23 +1209,29 @@ fil:
       grade3_maze_nestedLoops3_markdown_instruction: Dalhin ako sa baboy! Maaari ka lang gumamit ng isang `move forward` na bloke sa pagkakataong ito
       grade3_maze_nestedLoops4_markdown_instruction: Sa palaisipang ito, ang dalawang `repeat` na mga loop ay makakatulong sa iyo na makapunta sa baboy gamit ang pinakakaunting bilang ng mga bloke!
       grade4_arist_nested_loop_circles1_markdown_instruction: "**Pagtatasa:** Gumamit ng naka-nest na loop para kumpletohin ang disenyo."
-      grade4_arist_nested_loop_polygons1_markdown_instruction: "I-loop ang disenyong ito nang 10 beses. \\r\n\\r\nIlang beses ka ba dapat iikot sa bawat beses na mag-loop ka?"
+      grade4_arist_nested_loop_flags1_markdown_instruction: I-loop ang binigay na code mara makalikha ng windmill.
+      grade4_arist_nested_loop_polygons1_markdown_instruction: "I-loop ang disenyong ito nang 10 beses. \\r\n\\r\nIlang beses ka ba dapat liliko bawat beses na ikaw ay mag-loop?"
       grade4_arist_nested_loop_polygons2_markdown_instruction: "I-loop ang hugis na ito nang 6 na beses. \\r\n\\r\nIlang ikot ba dapat ang kailangang gawin mo sa bawat beses na mag-loop ka? "
       grade4_arist_nested_loop_squares1_markdown_instruction: "Maaari mo bang maiguhit ang 10 mga parisukat sa bangketang ito gamit ang naka-nest na loop?\\r\n\\r\nBawat parisukat ay 30 pixels."
       grade4_arist_nested_loop_triangles2_markdown_instruction: "Nyaon ay i-nest ang loop na ito sa loob ng isa pang loop para maiguhit ang 10 mga tatsulok. \\r\nIto ay tinatawag na \"naka-nest\" na  loop.  "
+      grade4_arist_nested_loop_triangles3_markdown_instruction: Maaari mo bang maiguhit ang hexagon sa pamamagitan ng pag-loop sa tatsulok na code?
+      grade4_arist_nested_loop_triangles4_markdown_instruction: Iguhit ang ngipin sa loob ng bibig ng buwaya!
       grade4_arist_nested_loop_triangles5_markdown_instruction: |-
         Maglikha ng araw sa pamamagitan ng pag-nest sa panimulang code sa isa pang loop.\r
         \r
-        Para magawa ang magandang disenyong ito na walang laman sa gitna, kakailanganin mong tumalon pasulong sa haba ng tatsulok bago umikot.
-      grade4_artist_functions2_markdown_instruction: "Ang mga function ay nagbibigay daan sa iyo na makagawa ng bagong mga bloke! \\r\n\\r\nAming inilipat ang mga bloke na kinakailangan para sa pagguhit ng mga parisukat sa isang function na tinatawag na `gumuhit ng parisukat`. Sa oras na ito, gamitin ang `gumuhit ng parisukat` na function para makalikha ng mga baso.\n\\r\n\\r\nAng mga parisukat ay 75 pixels ang layo."
+        Para makuha ang magandang disenyong ito na walang laman sa gitna, kakailanganin mong tumalon pasulong ayon sa haba ng tatsulok bago liliko.
+      grade4_arist_nested_loop_triangles6_markdown_instruction: Maaari mo bang iguhit ang 36 na mga tatsulok na ito gamit ang naka-nest na loop?
+      grade4_artist_functions2_markdown_instruction: "Ang mga function ay nagbibigay-daan na makagawa ka ng mga bagong bloke!\\r\n\\r\nAming inilipat ang mga kinakailangang bloke para sa pagguhit ng parisukat sa isang function na tinatawag na `draw a square`. Sa oras na ito, gamitin ang `draw a square` na function para malikha ang mga baso. \\r\n\\r\nAng mga parisukat ay 75 pixels ang pagitan."
       grade4_artist_nested_loop_circles1_markdown_instruction: "**Pagtatasa:** Gumamit ng naka-nest na loop para kumpletohin ang disenyo."
-      grade4_artist_nested_loop_polygons1_markdown_instruction: "I-loop ang disenyong ito nang 10 beses. \\r\n\\r\nIlang beses ka ba dapat iikot sa bawat beses na mag-loop ka?"
+      grade4_artist_nested_loop_flags1_markdown_instruction: I-loop ang binigay na code mara makalikha ng windmill.
+      grade4_artist_nested_loop_polygons1_markdown_instruction: "I-loop ang disenyong ito nang 10 beses. \\r\n\\r\nIlang beses ka ba dapat liliko bawat beses na ikaw ay mag-loop?"
       grade4_artist_nested_loop_squares1_markdown_instruction: "Maaari mo bang maiguhit ang 10 mga parisukat sa bangketang ito gamit ang naka-nest na loop?\\r\n\\r\nBawat parisukat ay 30 pixels."
       grade4_artist_nested_loop_triangles1_markdown_instruction: "Kumpletohin ang code para maiguhit ang mga tatsulok na ito. Ang una ay ginawa para sa iyo. Higing: 3 mga tatsulok sa isang 360 degree na rotasyon.\\r\n\\r\n"
       grade4_artist_nested_loop_triangles5_markdown_instruction: |-
         Maglikha ng araw sa pamamagitan ng pag-nest sa panimulang code sa isa pang loop.\r
         \r
-        Para magawa ang magandang disenyong ito na walang laman sa gitna, kakailanganin mong tumalon pasulong sa haba ng tatsulok bago umikot.
+        Para makuha ang magandang disenyong ito na walang laman sa gitna, kakailanganin mong tumalon pasulong ayon sa haba ng tatsulok bago liliko.
+      grade4_artist_nested_loop_triangles6_markdown_instruction: Maaari mo bang iguhit ang 36 na mga tatsulok na ito gamit ang naka-nest na loop?
       grade4_artist_parameters_triangles2_markdown_instruction: Napansin mo ba ang anumang bagay na kakaiba sa function na mga blokeng ito? I-click ang "Run" para makita kung ano ang nangyari.
       grade4_bee_conditionals_nested_loops_markdown_instruction: "**Pagtatasa:** Kolektahin ang lahat ng nektar. \\r\nMag-ingat na hindi masubukang magkolekta ng nektar mula sa lilang bulaklak kung wala itong laman na kahit ano."
       grade4_bee_conditionals_new1_markdown_instruction: "**Pagtatasa:** Kolektahin ang lahat ng nektar. \\r\nMag-ingat na hindi masubukang magkolekta ng nektar mula sa lilang bulaklak kung wala itong laman na kahit ano."
@@ -1121,6 +1244,8 @@ fil:
         Gamitin ang `if/else` na bloke para magkolekta ng nektar kung mayroong isang bulaklak.\r
         Kung hindi, gumawa ng pulot (dahil mayroong pulot-pukyutan).
       grade4_bee_functions2_markdown_instruction: "Ang mga functions ay mga bloke ng code na gumagawa ng isang gawin.  \\r\n\\r\nGamitin ang `get 2 nectar` na function para magkolekta ng nektar mula sa bawat bulaklak."
+      grade4_bee_functions3_markdown_instruction: Gumawa ng `get 5` na function para magamit sa palaisipang ito.
+      grade4_bee_nestedLoops4_markdown_instruction: 'Kolektahin ang lahat ng nektar mula sa bawat isa sa mga bulaklak at gumawa ng pulot sa pulot-pukyutan. '
       grade4_frozen_freeplay_markdown_instruction: Ikaw ay pormal na naging dalubhasang artista! Maglikha ng isang kamangha-manghang taglamig na lugar.
       grade4_frozen_functions0_markdown_instruction: Ang bilog ay isang espesyal na hugis. Maaari mo bang matukoy kung ano ang numero na ipapalit sa patanong na marka para maguhit ang bilog?
       grade4_frozen_functions1a_markdown_instruction: Gamitin ang bagong "Create a circle" na bloke para lilikha ng tatlong nagpatung-patong na mga bilog. Huwag kalimutan ang pagtalon pasulong sa pagitan ng mga bilog.
@@ -1135,33 +1260,45 @@ fil:
       grade4_frozen_square_loop3_markdown_instruction: Maaari ka bang maglikha ng niyebe gamit ang "Repeat" na bloke para makagawa ng parisukat nang 10 beses, at ang "Turn" na bloke ay liliko nang 36 degrees sa pagitan ng bawat parisukat?
       grade4_review_artist2_markdown_instruction: "Ang bahay na ito ay nangangailangan ng bubong! Iguhit ang tatsulok.  \\r\n\\r\nHint: lahat ng tatlong mga gilid ay pareho ang haba.\\r\n\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3_markdown_instruction: "Sa pamamagitan ng blokeng tumalon, gagalaw  ang artista nang hindi gumuguhit. \nIguhit ang mga linya gamit pareho ang mga blokeng gumuhit at tumalon."
-      grade4_review_bee1_markdown_instruction: Ngayon, gamitin ang `repeat` na bloke para kolektahin ang lahat ng mga nektar at gawin ang lahat ng pulot.
+      grade4_review_bee1_markdown_instruction: Ngayon ay gamitin ang `repeat` na bloke para kolektahin ang lahat ng nektar at gawin ang lahat ng pulot.
       grade4_review_bee3_markdown_instruction: |-
         Sadyang abalang bubuyog!\r
         \r
         Tulungan ang Bubuyog na kolektahin ang lahat ng nektar at gawin ang lahat ng pulot gamit ang pinakakaunting mga bloke na posible.
+      grade4_scaffolded_project6_markdown_instruction: Natapos mo na! Ngayon ay maaari ka nang maglaro sa iyong laro o magbahagi nito sa iyong mga kaibigan at mga kamag-aral!
       grade5_artist_for_loops10_markdown_instruction: "**Hamon:** Maaari mo bang malaman kung paano gamitin ang lahat ng mga bagay na natutunan mo para malikha ang larawan na ito ng mga polygon, lahat ay mayroong 40 pixel na mga gilid?"
       grade5_artist_for_loops5_markdown_instruction: |-
         Isa nalang maliit na pagbabago sa code mula sa huling larawan para malikha ang drowing na ito. Maaari mo bang matukoy kung ano ang pagbabago?\r
         \r
         Higing: Kailangan mong magtanggal ng isang bagay!
+      grade5_artist_for_loops7a_markdown_instruction: Pababain ang anggulo sa 72 degrees para makuha ang isang naka-spiral na pentagon.
       grade5_artist_parameters_triangles2a_markdown_instruction: Napansin mo ba ang anumang bagay na kakaiba sa function na mga blokeng ito? I-click ang "Run" para makita kung ano ang nangyari.
       grade5_artist_variables_hexagons1_markdown_instruction: "Subukan natin ulit ito! \\r\n\\r\nMaaari mo bang itakda ang `length` na variable sa 60 para magawa ang maganda disenyong may mga hexagon na ito?"
       grade5_artist_variables_pentagon9_markdown_instruction: Ngayon, muling ilikha ang algoritmo mula sa huling antas at maglikha ng pentagon na may haba ng mga gilid na 150.
       grade5_artist_variables_pentagons1_markdown_instruction: "Iguhit ang pattern ng mga pentagon na ito na may gilid na 100 pixels sa pamamagitan ng pagtakda ng tamang halaga para sa `length` at maghulog sa `length` na variable sa lahat ng tamang mga lugar. \\r\n\\r\nTingnan kung paano mo lang itakda ang halaga ng `length` nang isang beses, at ang code ay gagamit na sa tamang halaga kahit saan?"
+      grade5_bee_for_loops4_markdown_instruction: Tulungan ang bubuyog na kolektahin ang lahat ng nektar.
+      grade5_bee_parameters_new8a_markdown_instruction: Gamitin ang iyong bagong function para lutasin ang spiral na ito.
+      grade5_bee_parameters_new9a_markdown_instruction: Gamitin ang iyong bagong function para lutasin ang spiral na ito.
       grade5_playlab_variables13_markdown_instruction: Gamitin ang `when actor touches` na bloke para mapadala ang Aso pabalik sa kaliwang-itaas LANG kapag ang Aso ay nakakahawak sa kahit na sino sa ibang mga aktor.
       grade5_playlab_variables2_markdown_instruction: Ang habulan sa huling palaisipan ay hindi talaga patas! Palitan ang `dog_speed` na variable para masiguro na makakolekta ka ng mas maraming mga bandila kaysa sa Pusa. Ang unang makakakolekta ng 10 mga bandila ang mananalo!
       grade5_playlab_variables9_markdown_instruction: "Narito ang isang function na tinatawag na `patrol`.\n\\r\n\\r\nBaguhin ang `patrol` para pagalawain ang Pusa pataas ng 400 pixels at pagkatapos ay pababa ng 400 pixels."
+      gradek_playlab_events1c_markdown_instruction: Si Jorge ang Aso ay gustong magsabi ang "Hi sa iyo." Maaari mo ba siyang matulungan?
+      iceage_move_to_flag_markdown_instruction: Si Scrat ay naghahanap sa kayang bunga ng oak! Maari mo ba siyang tulungan ng gumalaw sa huling 200 na mga pixels?
+      iceage_move_to_flag_2018_markdown_instruction: Si Scrat ay naghahanap sa kayang bunga ng oak! Maari mo ba siyang tulungan ng gumalaw sa huling 200 na mga pixels?
       level 'grade3_Loops_10_markdown_instruction: |-
         Sadyang abalang bubuyog!\r
         \r
         Tulungan ang Bubuyog na kolektahin ang lahat ng nektar at gawin ang lahat ng pulot gamit ang pinakakaunting mga bloke na posible.
       level 'grade3_Loops_11_markdown_instruction: "Ang hugis nang daanang ito ay kakaiba sa iba.\\r\n\\r\nMaaari mo bang kolektahin ang lahat ng nektar gamit ang kaunting mga bloke hangga't maaari?"
-      level 'grade3_Loops_3_markdown_instruction: Gamitin ang `repeat` na loop para kolektahin ang lahat ng mga nektar.
-      level 'grade3_Loops_4_markdown_instruction: Ngayon, gamitin ang `repeat` na bloke para kolektahin ang lahat ng mga nektar at gawin ang lahat ng pulot.
+      level 'grade3_Loops_3_markdown_instruction: Gamitin ang `repeat` na loop para kolektahin ang lahat ng nektar.
+      level 'grade3_Loops_4_markdown_instruction: Ngayon ay gamitin ang `repeat` na bloke para kolektahin ang lahat ng nektar at gawin ang lahat ng pulot.
       level 'grade3_Loops_5_markdown_instruction: "Isang napakagandang bukirin ng mga bulaklak!  \\r\n\\r\nTulungan ang bubuyog na bisitahin ang bawat isa.\\r\n\\r\nMaaari ka bang maghanap ng daaanan para magawa ito gamit ang mas kunti pa sa 7 mga bloke?"
-      level 'grade3_Loops_6_markdown_instruction: "Ilang beses ba maaaring makakatulong ang mga loop sa iyo sa palaisipang ito? \\r\n\\r\nAng mga loop ay iyong kaibigan! Gumamit ng iilan sa kanila para makumpleto ang palaisipang ito gamit ang pinakakaunting mga bloke hangga't maaari."
+      level 'grade3_Loops_6_markdown_instruction: "Ilan beses ba maaaring makakatulong ang mga loop sa palaisipang ito? \\r\n\\r\nAng mga loop ay iyong kaibigan! Gummat ng iilan sa kanila para makompleto ang palaisipang ito gamit ang pinakakaunting mga bloke na posible."
       level 'grade3_Loops_7_markdown_instruction: |-
         Ang mga bulaklak na iyon ay parang masarap!\r
         \r
         Magkolekta ng nektar mula sa bawat bulaklak gamit ang pinakakaunting mga bloke hangga't maaari.
+      ramp_artist_loops4_markdown_instruction: Ano ang mangyayari kapag nagdagdag ka ng 72 degree na pagliko sa kanan pagkatapos ng lahat sa loob ng iyong loop?
+      ramp_artist_loops4_2018_markdown_instruction: Ano ang mangyayari kapag nagdagdag ka ng 72 degree na pagliko sa kanan pagkatapos ng lahat sa loob ng iyong loop?
+      ramp_artist_loops7_markdown_instruction: Maghanap ng paterno at paikilin ang code na ito gamit ang mga loop!
+      ramp_artist_loops7_2018_markdown_instruction: Maghanap ng paterno at paikilin ang code na ito gamit ang mga loop!

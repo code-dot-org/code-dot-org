@@ -2,12 +2,12 @@ pl:
   data:
     game:
       name:
-        Unplug1: Wprowadzenie do Informatyki
+        Unplug1: Wprowadzenie do informatyki
         Maze: Labirynt
         Multi: Wieloraki Wybór Rzeczy
         Unplug2: Myślenie komputacyjne
         Unplug3: Programowanie na papierze milimetrowym
-        Artist: Artysta
+        Artist: Artysta/Postać
         Unplug4: Algorytmy
         Artist2: Artysta 2
         Unplug5: Funkcje
@@ -18,7 +18,7 @@ pl:
         Farmer2: Rolnik 2
         Unplug8: Abstrakcja
         Artist4: Artysta 4
-        Unplug9: Programowanie przekaźnika
+        Unplug9: Sztafeta programowania
         Farmer3: Rolnik 3
         Unplug10: Internet
         Artist5: Artysta 5
@@ -74,7 +74,7 @@ pl:
         maze_2_15: Ja chcieć słonecznik! Użyj bloku jeśli, abym mógł się tam dostać za pomocą jak najmniejszej liczby bloków.
         maze_2_16: OK, zróbmy to jeszcze raz dla wprawy - ta łamigłówka niewiele się różni od poprzedniej, ale uważaj na chrupaczy!
         maze_2_17: Bloki jeśli-w przeciwnym razie sprawdzają warunek i wtedy wykonują pierwszą czynność ALBO drugą. Spróbuj doprowadzić mnie do słonecznika przy użyciu tego nowego bloku.
-        maze_2_18: Jeszcze jedno ćwiczenie z bloków jeśli-w przeciwnym razie. Czy potrafisz użyć ich prawidłowo przy pierwszym podejściu?
+        maze_2_18: Jeszcze jedno ćwiczenie z blokiem "jeśli-w przeciwnym razie", czy potrafisz je wykonać za pierwszym razem?
         maze_2_19: Czy potrafisz dodać 3 bloki, by pomóc mi przejść bardziej skomplikowany labirynt? Jeśli zrobisz to prawidłowo, to będę mógł przejść każdą krętą ścieżkę bez względu na jej długość.
         turtle_1_1: Witaj, jestem artystą. Pisząc kod możesz sprawić, że narysuję niemalże wszystko. Użyj kilku bloków, abym zaczął rysować wzdłuż szarych linii na obrazku.
         turtle_1_2: 'A teraz narysuj kwadrat. Wskazówka: użyj swojego ulubionego koloru, wybierając go z nowego bloku ustaw kolor.'
@@ -182,11 +182,11 @@ pl:
         studio_c2_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie się do kota?
         studio_c2_4: Czy mógłbyś napisać program, który sprawia, że pies porusza się w kierunku kota i powoduje, że kot mówi "Hello!", kiedy pies dochodzi do niego?
         studio_c2_5: Czy mógłbyś napisać program, który powoduje, że ośmiornica mówi "Hello!", po kliknięciu na niej?
-        studio_c2_6: Czy mógłbyś napisać program, który powoduje, że pingwin porusza się za pomocą przycisków w górę / w dół / w lewo/w prawo, by uderzyć we wszystkie cele?
+        studio_c2_6: Czy mógłbyś napisać program, który powoduje, że pingwin Waddles porusza się za pomocą klawiszy w górę/w dół /w lewo/w prawo, aby trafić wszystkie cele?
         studio_c2_7: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie kodu bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę i w dół w nieskończoność?
-        studio_c2_8: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk trafienia, gdy wpadnie na dinozaura. Następnie przenieś go za pomocą strzałek, aby się to stało?
-        studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin wpada na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz punkt?
-        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina, a następnie poruszać nim za pomocą przycisków ze strzałkami, aż zdobędziesz punkt?
+        studio_c2_8: Czy mógłbyś spowodować, że Pingwin Waddles mówi "Och!" i gra dźwięk trafienia, gdy wpadnie na dinozaura. Następnie przenoś go za pomocą strzałek, aby się to stało?
+        studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin Waddles wpada na ośmiornicę, a następnie przenoś go za pomocą strzałek, aż zdobędziesz punkt?
+        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina Waddles, a następnie przenoś go za pomocą strzałek, aż zdobędziesz punkt?
         studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk "Zakończ", aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
         studio_c3_story_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
         studio_c3_story_2: Czy mógłbyś spowodować, by pies coś powiedział, a następnie by kot, coś powiedział?
@@ -198,7 +198,7 @@ pl:
         studio_c3_game_2: Czy mógłbyś napisać program, który powoduje, że pingwin porusza się za pomocą przycisków w górę /w dół /w lewo/w prawo, by uderzyć we wszystkie cele?
         studio_c3_game_3: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie kodu bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza się w górę i w dół w nieskończoność?
         studio_c3_game_4: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk "hit", gdy wpadnie na dinozaura, następnie przenieś go za pomocą strzałek, aby się to stało?
-        studio_c3_game_5: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin wpada na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz punkt?
+        studio_c3_game_5: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin Waddles wpada na ośmiornicę, a następnie przenoś go za pomocą strzałek, aż zdobędziesz punkt?
         studio_c3_game_6: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina, a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz wynik?
         studio_c3_game_7: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
         studio_playlab_1: Pingwin chce powiedzieć "hello" - czy możesz mu pomóc?
@@ -234,7 +234,7 @@ pl:
         studio_gumball_join_food_fight: Przyłącz się do walki żywnością! Użyj bloku "rzut postaci w prawo", aby Bananowy Joe (postać 1) rzucił pożywieniem w Antona (postać 2). Ustaw, by Anton się zezłościł, kiedy zostanie trafiony.
         studio_gumball_free_play: Utwórz własną grę lub historyjkę! Kiedy skończysz, kliknij przycisk "Zakończ", aby umożliwić znajomym pograć na swoich telefonach, tabletach lub komputerach!
         studio_full_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-        studio_k1_1: Czy mógłbyś spowodować, aby ten pies powiedział "hello world"?
+        studio_k1_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
         studio_k1_2: Czy mógłbyś spowodować, aby ten pies coś powiedzieć, a następnie, by kot coś powiedział po nim?
         studio_k1_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie się do kota?
         studio_k1_4: Spowoduj, że pies przesuwa się w kierunku kota i kot mówi "Hello!", kiedy dociera do niego pies.
@@ -310,7 +310,7 @@ pl:
         C2_graph_paper: Programowanie na papierze milimetrowym
         C2_conditionals_with_cards: Warunkowe
         C2_binary_bracelets: Binarne bransoletki
-        C2_relay_programming: Programowanie przekaźnika
+        C2_relay_programming: Sztafeta programowania
         C2_paper_airplanes: Samoloty z papieru
         C2_digital_footprint: Twój cyfrowy ślad
         C2_digital_footprint_v2: Twój cyfrowy ślad

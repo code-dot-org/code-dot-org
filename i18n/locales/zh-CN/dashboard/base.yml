@@ -19,7 +19,7 @@ zh-CN:
         parent_email: '父母/监护人电子邮箱'
         personal_email: "个人电子邮箱地址 <a href=\"%{url}\">(如果没有电子邮箱请点击这里)</a>"
         username: '用户名'
-        password: '密码'
+        password: '密码:'
         password_confirmation: '密码确认：'
         current_password: '当前密码'
         locale: '语言'
@@ -28,7 +28,7 @@ zh-CN:
         edit_header: '编辑用户信息'
         error:
           future: 不能选择将来的时间
-  hello: "你好，世界！"
+  hello: "世界你好"
   welcome_back: "欢迎回来，%{name}"
   your_professional_learning_plan: "你的专业学习计划"
   see_your_learning_plan: "查看你的学习计划。"
@@ -53,13 +53,13 @@ zh-CN:
   appname: "Code.org"
   stage: "阶段"
   stage_number: "课程 %{number}"
-  puzzle: "题目"
+  puzzle: "关卡"
   trophies: "奖杯"
   courses: '课程'
   courses_page:
     title_student: "在代码工作室学习"
     title_teacher: "教授计算机科学"
-  unplugged_activity: '不用电脑的活动'
+  unplugged_activity: '线下的活动'
   of: "的"
   more: "更多"
   less: "更少"
@@ -85,7 +85,7 @@ zh-CN:
     windowslive: '微软账户'
     clever: 'Clever 账号'
     powerschool: 'Powerschool 帐户'
-    forgot_password: '忘记密码？'
+    forgot_password: '忘记了您的密码吗？'
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
     not_linked: "对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。"
@@ -106,7 +106,7 @@ zh-CN:
     birthday: '生日 （可选）'
     age: '年龄'
     user_type: '你是学生还是老师？'
-    submit: '登录'
+    submit: '注册'
     teacher: '你是老师吗？'
     valid_username: "可用 ！"
     invalid_username: "用户名必须至少 5 个字符"
@@ -128,9 +128,9 @@ zh-CN:
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
     error: "发生错误。"
-    email_preference_question: "我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？"
+    email_preference_question: "我们可以通过电子邮件向您发送有关我们课程、本地的机会以及其他计算机科学新闻吗？"
     email_preference_privacy: "(请参阅我们的隐私政策)"
-    email_preference_yes: "是"
+    email_preference_yes: "对"
     email_preference_no: "不"
     email_preference_required: "你必须指定一个电子邮件地址。"
   school_info:
@@ -562,14 +562,14 @@ zh-CN:
       title: '经典迷宫'
       body: '请尝试计算机科学的基本知识。数百万人尝试了它。'
     flappy:
-      title: '像素鸟编程'
+      title: '飞扬的代码'
       body: '想要在 10 分钟内写你自己的游戏吗？请尝试我们像素鸟编程教程 ！'
     20-hour:
       title: '加速课程'
       body: '这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。'
       body_short: '在速成版课程2-4中学习入门的计算机科学。'
     hoc2014:
-      try_new_tutorial: '试试我们新的beta 版的一小时代码教程'
+      try_new_tutorial: '试试我们新的测试版的编程一小时教程'
       try_frozen: '來自冰雪奇缘的艺术家安娜及爱莎。'
     gallery:
       title: "作品"
@@ -599,7 +599,7 @@ zh-CN:
       body: "用代码来探索《我的世界》。"
     minecraft2016:
       title: "我的世界"
-      body: "在你自己的《我的世界》中编写各种动物和其他生物。"
+      body: "建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。"
     hero:
       title: "我的世界"
       body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
@@ -728,22 +728,14 @@ zh-CN:
     title: "可选︰ 帮助我们跟踪进展来提高在计算机科学中的多元化。"
     message: "请告诉我们您的种族（选择所有适用的项目）"
     races:
-      - 
-        white: "白人"
-      - 
-        black: "黑人或非裔美国人"
-      - 
-        hispanic: "西班牙裔或拉丁裔"
-      - 
-        asian: "亚裔"
-      - 
-        hawaiian: "夏威夷土著或其他太平洋岛民"
-      - 
-        american_indian: "美国印第安/阿拉斯加原住民"
-      - 
-        other: "其他"
-      - 
-        opt_out: "不想说"
+      white: "白人"
+      black: "黑人或非裔美国人"
+      hispanic: "西班牙裔或拉丁裔"
+      asian: "亚裔"
+      hawaiian: "夏威夷土著或其他太平洋岛民"
+      american_indian: "美国印第安/阿拉斯加原住民"
+      other: "其他"
+      opt_out: "不想说"
     submit: "提交"
     decline: "关闭"
   zendesk_too_young_message: '对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org"> support.code.org</a> 或让你的父母或老师来联系我们。'
@@ -794,7 +786,7 @@ zh-CN:
     need_help: "实施这些课程来帮助你开始新项目。"
     thumbnail_help: "没有为您的项目扎红到正确的缩略图？运行您的应用来生成一个新的缩略图。注意，需要几个小时后，缩略图才会同步显示到每个地方。"
     really_delete: '要删除吗？'
-    delete_yes: '是'
+    delete_yes: '对'
     delete_no: '不'
     saved: "已保存"
     not_saved: "没有保存"
@@ -996,7 +988,7 @@ zh-CN:
         csd: '计算机科学发现'
         csp: '计算机科学原理'
       email_opt_in:
-        opt_in_yes: '是'
+        opt_in_yes: '对'
         opt_in_no: '不'
     international_opt_in:
       intro: "非常感谢您抽出时间接受Code.org的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。"
@@ -1010,8 +1002,8 @@ zh-CN:
     accept: '我同意'
   gdpr_dialog:
     heading: '你同意使用一个美国的网站吗？'
-    message: '你使用本网站的数据可能会发送到美国，并被存储或处理。'
+    message: '您使用本网站产生的数据可能会被传输至美国并在美国存储或处理。'
     link_intro: '有关详细信息, 请参阅我们'
     privacy_policy: '隐私条款'
     logout: '注销'
-    yes: '是'
+    yes: '对'

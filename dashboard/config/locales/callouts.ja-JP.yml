@@ -48,7 +48,7 @@ ja:
       Course 4 Bee Params 2_callout:
         edit_get_nectar: 関数を編集し、はちが みつを集めるために方向を変えるには、このボタンを使います。
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: "「実行」ボタンをおして、プログラムをうごかしてみてください。"
+        Course 4 Maze 1_callout1: "「実行」ボタンをおして、プログラムを動かしてください。"
       Course 4 Maze 4_callout:
         repeat: コマンドを繰り返すには、ループ内にブロックを配置します。
       Course 4 Play Lab Params 3_callout:
@@ -138,9 +138,9 @@ ja:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: このコードで家を建ててみましょう
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: "「実行」ボタンをおして、プログラムをうごかしてみてください。"
+        craft_run_button_callout: "「実行」ボタンをおして、プログラムを動かしてください。"
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: "「実行」ボタンをおして、プログラムをうごかしてみてください。"
+        craft_run_button_callout: "「実行」ボタンをおして、プログラムを動かしてください。"
       Overworld Place Wall_callout:
         craft_inside_repeat: ここにブロックを置いて繰り返しましょう
       Overworld Place Wall_2018_callout:

@@ -69,7 +69,7 @@ gl:
           raciocinio no estilo Mad-Lib para axudar a clase a aprender sobre a eficacia
           da abstracción.
       Unplug9:
-        title: Programación baixo presión
+        title: Programación por relevos
         desc: Esta lección vai usar unha idea dunha actividade anterior (4. Programación
           en Papel Cadriculado) e usar as habilidades nela presentes para enfatizar
           a importancia de completar programas que operan en secuencia e tamén de
@@ -159,7 +159,7 @@ gl:
         desc: Os alumnos crean un algoritmo con variábeis e funcións (fragmentos de
           código para usar varias veces) para crear colares usando fíos e doas.
       SongwritingParameters:
-        title: Composición de música con parámetros
+        title: Composición
         desc: Os alumnos usan o concepto de retrouso nunha música para aprender sobre
           o paso de parámetros (os cales personalizan unha función sen a necesidade
           de reescribila).
@@ -313,7 +313,7 @@ gl:
           un conxunto predefinido de comandos para orientar os seus compañeiros de
           clase na reprodución dun debuxo.
       courseD_unplugged_relayProgramming:
-        title: Programación baixo presión
+        title: Programación por relevos
         desc: Os alumnos participan dunha carreira de relevos na cal deben atravesar
           o patio para escribir un algoritmo baseado nunha imaxe en "papel cadriculado
           de programación". Eles só poden escribir unha instrución por vez, e, se
@@ -351,7 +351,7 @@ gl:
           problemas en informática, para concluír unha tarefa xuntos, na aula, de
           maneira máis eficiente que se un alumno tentase resolver el soíño.
       courseE_unplugged_songwriting:
-        title: Composición de música con parámetros
+        title: Composición
         desc: Os alumnos usan o concepto de retrouso nunha música para aprender sobre
           o paso de parámetros (os cales personalizan unha función sen a necesidade
           de reescribila).
@@ -442,4 +442,4 @@ gl:
       MoveItMoveIt_2018:
         title: Creando camiños
       RelayProgramming_2018:
-        title: Programación baixo presión
+        title: Programación por relevos

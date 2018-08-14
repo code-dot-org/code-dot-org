@@ -95,7 +95,8 @@ nl:
         maze_2_17: Het "als anders"-blok kijkt naar een voorwaarde, en doet het één
           OF het ander. Probeer dit blok te gebruiken om me naar de zonnebloem te
           brengen.
-        maze_2_18: Nog een oefening met het "als anders"-blok - lukt deze in één keer?
+        maze_2_18: Nog een oefening met het "als-anders" blok, kun je het in een keer
+          goed doen?
         maze_2_19: Lukt het om een moeilijker doolhof op te lossen door maar 3 blokken
           toe te voegen? Als je het goed doet kan ik ieder kronkelend pad volgen,
           hoe lang het ook is.
@@ -334,7 +335,8 @@ nl:
         mazestep_5: Doolhof stap beschrijving hier
         studio_c2_1: Kan je deze hond "hallo wereld" laten zeggen?
         studio_c2_2: Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
-        studio_c2_3: Kun je een programma schrijven dat de hond naar de kat verplaatst?
+        studio_c2_3: Kan je een programma schrijven dat deze hond naar de kat laat
+          bewegen?
         studio_c2_4: Kun je een programma maken die de hond naar de kat verplaatst,
           en de kat "hallo" laat zeggen wanneer de hond bij de kat is?
         studio_c2_5: Kun je een programma schrijven die de octopus "hallo" laat zeggen
@@ -352,13 +354,13 @@ nl:
         studio_c2_10: Kan je blokken toevoegen die de achtergrond en de snelheid van
           de pinguïn veranderen, en hem dan verplaatsen met de pijltjes totdat je
           scoort?
-        studio_c2_11: Maak je eigen Verhaal, klik als je klaar bent op Afronden om
-          je vrienden je verhaal te laten proberen op hun telefoons.
+        studio_c2_11: Creëer je eigen verhaal. Wanneer je gedaan hebt, klik dan op
+          Voltooien zodat je vrienden je verhaal kunnen uitproberen op hun telefoons.
         studio_c3_story_1: Kan je deze hond "hallo wereld" laten zeggen?
         studio_c3_story_2: Kan je de hond iets laten zeggen en dan de kat iets laten
           zeggen?
-        studio_c3_story_3: Kun je een programma schrijven dat de hond naar de kat
-          verplaatst?
+        studio_c3_story_3: Kan je een programma schrijven dat deze hond naar de kat
+          laat bewegen?
         studio_c3_story_4: Kun je een programma maken die de hond naar de kat verplaatst,
           en de kat "hallo" laat zeggen wanneer de hond bij de kat is?
         studio_c3_story_5: Kan je een blok toevoegen zodat de octopus blij wordt?
@@ -491,10 +493,11 @@ nl:
           om je vrienden toe te laten je spel te proberen op hun telefoons.
         studio_k1_1: Kan je deze hond "hallo wereld" laten zeggen?
         studio_k1_2: Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
-        studio_k1_3: Kun je een programma schrijven dat de hond naar de kat verplaatst?
+        studio_k1_3: Kan je een programma schrijven dat deze hond naar de kat laat
+          bewegen?
         studio_k1_4: Maak een programma dat de hond naar de kat laat verplaatst en
           de kat hallo laat zeggen als hij aankomt.
-        studio_k1_5: Kan je een blok toevoegen zodat de octopus blij wordt?
+        studio_k1_5: Kan je een blok toevoegen zodat de inktvis blij wordt?
         studio_k1_6: Maak je eigen verhaal! Beweeg de kat en de hond en laat ze praten.
         maze_wordsearch_k_1: Verplaats me zodat het woord EAST (oost) gespeld wordt
         maze_wordsearch_k_2: Verplaats me zodat het woord SOUTH (zuid) gespeld wordt
@@ -587,7 +590,7 @@ nl:
         C3_bee_functions: Bij functies
         C3_bee_conditionals: Bij voorwaardelijke instructies
         C3_maze_conditionals: Doolhof voorwaardelijke instructies
-        C3_artist_nested_loops: Geneste lussen
+        C3_artist_nested_loops: Genestelde lussen
         C3_farmer_while: Zolang-lussen
         C3_bee_nested_loops: Genestelde lussen
         C3_bee_debugging: Bij foutopsporing
@@ -718,7 +721,7 @@ nl:
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok
-        run: Druk op "Uitvoeren" om het programma uit te proberen
+        run: Klik op "Run" om je programma te proberen
         watch_again: Klik hier om de video opnieuw te bekijken
         gray_block_explanation: Grijze blokken kunnen niet worden verwijderd. Kan
           je de puzzel toch oplossen?

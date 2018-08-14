@@ -38,7 +38,7 @@ cs:
       Course 4 Bee Params 2_callout:
         edit_get_nectar: Použij toto tlačítko k upravě funkce a změně směru, kterým se včela obrátí, aby dostala nektar.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Stisknutím tlačítka "Spustit" vyzkoušíš svůj program
+        Course 4 Maze 1_callout1: Stisknutím tlačítka "Spustit" si vyzkoušíš program
       Course 4 Maze 4_callout:
         repeat: Polož bloky dovnitř cyklu k opakování příkazů
       Course 4 Play Lab Params 3_callout:
@@ -111,9 +111,9 @@ cs:
       Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš to dokončit?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Stisknutím tlačítka "Spustit" vyzkoušíš svůj program
+        craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Stisknutím tlačítka "Spustit" vyzkoušíš svůj program
+        craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
       Overworld Place Wall_callout:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
       Overworld Place Wall_2018_callout:

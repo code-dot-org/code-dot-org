@@ -76,7 +76,7 @@ eu:
             Getting Loopy:
               name: Iteratzen
             Graph Paper Programming:
-              name: Paperean marraztuz programatu
+              name: Paper grafiko programazioa
             'Maze: Loops':
               name: 'Labirintoa: Begiztak'
             'Maze: Sequence':
@@ -134,18 +134,18 @@ eu:
             'Maze: Conditionals':
               name: 'Labirintoa: Funtzioak'
             Songwriting:
-              name: Abestiak idazten parametroekin
+              name: Musika idazten
             'Studio: Create a Game':
               name: 'Joku laborategia: sortu joku bat'
             'Studio: Create a Story':
               name: 'Jolas laborategia: sortu istorioa'
         playlab:
-          title: Jokoen Laborategia
-          description: Sortu istorio bat edo egin ezazu jolas bat Play Labekin!
-          description_short: Sortu istorio bat edo egin ezazu jolas bat Play Labekin!
+          title: Jolas Laborategia
+          description: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
+          description_short: Sortu istorio bat edo egin ezazu jolas bat Jolas Labekin!
           stages:
             Play Lab:
-              name: Jokoen Laborategia
+              name: Jolas Laborategia
         artist:
           title: Artista
           description: Irudi eta diseinu ederrak irudikatu itzazu artistarekin!
@@ -252,6 +252,7 @@ eu:
             Variables:
               name: Aldagaiak
         algebra:
+          title: Informatika Aljebran
           stages:
             'Eval: Conditionals':
               name: Baldintzak
@@ -301,7 +302,7 @@ eu:
             Functions:
               name: Funtzioak
             Graph Paper Programming:
-              name: Paperean marraztuz programatu
+              name: Paper grafiko programazioa
             Introduction to Computer Science:
               name: Konputazio zientzetarako sarrera
             Relay Programming:
@@ -329,14 +330,14 @@ eu:
             The Maze:
               name: labirintoa
             Wrap-up:
-              name: Errepasoa
+              name: Ixtea
         edit-code:
           title: Editatu kodea
           description: Editatu kodea
           description_short: Editatu kodea
           stages:
             Play Lab:
-              name: Jokoen Laborategia
+              name: Jolas Laborategia
             The Artist:
               name: Artista
             The Maze:
@@ -511,7 +512,7 @@ eu:
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
-              name: Errepasoa
+              name: Ixtea
         algebraPD2:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -559,7 +560,7 @@ eu:
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
-              name: Errepasoa
+              name: Ixtea
         ECSPD2-NexTech:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
@@ -573,7 +574,7 @@ eu:
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
-              name: Errepasoa
+              name: Ixtea
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -583,7 +584,7 @@ eu:
             Getting Loopy:
               name: Iteratzen
             Graph Paper Programming:
-              name: Paperean marraztuz programatu
+              name: Paper grafiko programazioa
             Happy Maps:
               name: Mapa Zoriontsuak
             Move it, Move it:
@@ -591,9 +592,11 @@ eu:
             'Real-life Algorithms: Plant a Seed':
               name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
             Songwriting:
-              name: Abestiak idazten parametroekin
+              name: Musika idazten
             The Big Event:
               name: Gertaera Handia
+        cspunit4draft:
+          description_short: Datu
         ScienceP3OLPT2:
           stages:
             Welcome!:
@@ -717,6 +720,8 @@ eu:
               name: Ebaluazio blokeak
             Teacher Dashboard:
               name: Irakaslearen arbela
+        CSDU5-Draft:
+          description_short: Datu
         MikeTest:
           stages:
             Artist Functions:
@@ -742,7 +747,7 @@ eu:
             Digital Citizenship:
               name: Hiritartasun digitala
             Songwriting:
-              name: Abestiak idazten parametroekin
+              name: Musika idazten
         grade1:
           stages:
             Events:
@@ -784,7 +789,7 @@ eu:
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
-              name: Errepasoa
+              name: Ixtea
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -1241,7 +1246,7 @@ eu:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Paperean marraztuz programatu
+              name: Paper grafiko programazioa
             Introduction:
               name: Sarrera
             Building a Foundation:
@@ -1255,7 +1260,7 @@ eu:
             Conditionals with Cards:
               name: Baldintzak Txartelekin
             'Functions: Songwriting':
-              name: Abestiak idazten parametroekin
+              name: Musika idazten
             Envelope Variables:
               name: Gutun-azaleko aldagarriak
             For Loop Fun:
@@ -1283,7 +1288,7 @@ eu:
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Paperean marraztuz programatu
+              name: Paper grafiko programazioa
             Introduction:
               name: Sarrera
             Building a Foundation:
@@ -1297,7 +1302,7 @@ eu:
             Artist Binary:
               name: Artista bitarra
             Graph Paper Programming:
-              name: Paperean marraztuz programatu
+              name: Paper grafiko programazioa
             Relay Programming:
               name: Txandaka programatzen
         coursec-2018:
@@ -1323,7 +1328,7 @@ eu:
             Introduction:
               name: Sarrera
             'Functions: Songwriting':
-              name: Abestiak idazten parametroekin
+              name: Musika idazten
             Internet:
               name: Internet
             Crowdsourcing:

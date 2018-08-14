@@ -3,7 +3,7 @@ ca:
     script:
       category:
         hoc_category_name: Hora del codi
-        math_category_name: Mates
+        math_category_name: Matemàtiques
       name:
         course1:
           title: Curs 1
@@ -130,7 +130,7 @@ ca:
             'Maze: Conditionals':
               name: 'Laberint: els condicionals'
             Songwriting:
-              name: Composició amb paràmetres
+              name: Composició de cançons
             'Studio: Create a Game':
               name: 'Play Lab: Creeu un joc'
             'Studio: Create a Story':
@@ -288,7 +288,7 @@ ca:
             Relay Programming:
               name: Programació en relleus
             Song Writing:
-              name: Composició de la cançó
+              name: Escriptura de la cançó
             The Artist:
               name: L'artista
             The Artist 2:
@@ -308,7 +308,7 @@ ca:
             The Internet:
               name: Internet
             The Maze:
-              name: El laberint
+              name: El Laberint
             Wrap-up:
               name: Recapitulació
         edit-code:
@@ -321,7 +321,7 @@ ca:
             The Artist:
               name: L'artista
             The Maze:
-              name: El laberint
+              name: El Laberint
         events:
           title: Esdeveniments
           description: Esdeveniments
@@ -495,7 +495,7 @@ ca:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
             Songwriting:
-              name: Composició amb paràmetres
+              name: Composició de cançons
             The Big Event:
               name: El gran esdeveniment
         ScienceP3OLPT2:
@@ -604,7 +604,7 @@ ca:
             Digital Citizenship:
               name: Ciutadania digital
             Songwriting:
-              name: Composició amb paràmetres
+              name: Composició de cançons
         grade1:
           stages:
             Events:
@@ -1061,7 +1061,7 @@ ca:
             Conditionals with Cards:
               name: Condicionals amb targetes
             'Functions: Songwriting':
-              name: Composició amb paràmetres
+              name: Composició de cançons
             Binary Bracelets:
               name: Polseres binàries
             'Unplugged: Binary':
@@ -1125,7 +1125,7 @@ ca:
             Introduction:
               name: Introducció
             'Functions: Songwriting':
-              name: Composició amb paràmetres
+              name: Composició de cançons
             Internet:
               name: Internet
             Crowdsourcing:

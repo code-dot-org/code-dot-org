@@ -152,7 +152,7 @@ fi:
           joita haluat käyttää uudestaan ja uudestaan) luodakseen auringonkerääjän
           käyttäen narua ja helmiä.
       SongwritingParameters:
-        title: Parametroitu sävellys
+        title: Säveltäminen
         desc: Opiskelijat käyttävät kuoron käsitettä oppiakseen muuttujien välityksestä
           (joilla voi muokata funktiota ilman että koko funktiota tarvitsee kirjoittaa
           uudestaan).
@@ -338,7 +338,7 @@ fi:
           ongelmanratkaisutekniikkaa, ratkaistakseen yhdessä luokkana tehtävän tehokkaammin
           kuin että yksi opiskelija yrittäisi sitä yksinään.
       courseE_unplugged_songwriting:
-        title: Parametroitu sävellys
+        title: Säveltäminen
         desc: Opiskelijat käyttävät kuoron käsitettä oppiakseen muuttujien välityksestä
           (joilla voi muokata funktiota ilman että koko funktiota tarvitsee kirjoittaa
           uudestaan).

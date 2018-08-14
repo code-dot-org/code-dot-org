@@ -183,7 +183,7 @@ es:
           de código que quieres usar una y otra vez) para crear un tragaluz con un
           hilo y pequeños cristales.
       SongwritingParameters:
-        title: Composicion musical con parámetros
+        title: Composición Musical
         desc: Los estudiantes usan el concepto del coro en una canción para aprender
           sobre el paso de parámetros (que personaliza una función sin tener que reescribir
           la función entera).
@@ -349,12 +349,12 @@ es:
           primera letra de su nombre. Aprenden que los datos se pueden representar
           y guardar de más de una forma.
       courseD_unplugged_graphPaperProgramming:
-        title: Programación de hoja cuadriculada
+        title: Programación en papel cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones)
           usando un conjunto de comandos predefinidos para dirigir a sus compañeros
           en la reproducción de un dibujo.
       courseD_unplugged_relayProgramming:
-        title: Programación bajo presión
+        title: Programación de Relevos
         desc: Los estudiantes corren una carrera de relevos, donde aceleran por el
           camino para escribir un algoritmo basado en una imagen "Grafica en papel
           de programación". Ellos sólo pueden escribir una instrucción a la vez y
@@ -391,7 +391,7 @@ es:
           problemas en informática, para completar una tarea juntos como un aula,
           más eficientemente que si un alumno lo intentara solo.
       courseE_unplugged_songwriting:
-        title: Composicion musical con parámetros
+        title: Composición Musical
         desc: Los estudiantes usan el concepto del coro en una canción para aprender
           sobre el paso de parámetros (que personaliza una función sin tener que reescribir
           la función entera).
@@ -444,7 +444,7 @@ es:
           presionará botones en un control remoto de papel y los estudiantes reaccionarán
           dependiendo de qué botón se presiona.
       GraphPaperProgramming_2018:
-        title: Programación de hoja cuadriculada
+        title: Programación en papel cuadriculado
         desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones)
           usando un conjunto de comandos predefinidos para dirigir a sus compañeros
           en la reproducción de un dibujo.
@@ -490,4 +490,4 @@ es:
       MoveItMoveIt_2018:
         title: Muévelo, Muévelo
       RelayProgramming_2018:
-        title: Programación bajo presión
+        title: Programación de Relevos

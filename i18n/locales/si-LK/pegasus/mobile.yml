@@ -22,7 +22,7 @@
   name: "නම"
   email: "විද්‍යුත් තැපැල"
   zipcode: "ZIP කේතය හෝ රට"
-  submit: "යොමු කරන්න"
+  submit: "යොමුකරන්න"
   twentyhours_heading: "අප විසින් පිරිනමන පරිගණක විද්‍යා පිවිසුම් පාඨමාලාව උත්සාහ කර බලන්න"
   twentyhours_text: "ඔබගේ පළමු  Hour of Code වැඩසටහන අවසන්ද? මෙම පාඨමාලාවේ පසුවට මූලික පරිගණක විද්‍යාව සහ  ක්‍රමලේඛන සංකලප තව දුරටත් ඉගෙනගන්න."
   og_title: 'Hour of Code වැඩසටහන ළඟදීම'
@@ -213,11 +213,11 @@
   studiobar_elementary_body: "පෙරපාසල්&#8209;5 ශ්‍රේණි සඳහා අප හඳුන්වාදෙන නව පාඨමාලා තුන"
   studiobar_hoc_title: "Hour of Code වැඩසටහන"
   studiobar_hoc_body: "Angry Birds සමග කේත ඉගෙන ගන්න "
-  studiobar_flappy_title: "Flappy Code"
+  studiobar_flappy_title: "ෆ්ලැපි කේතය"
   studiobar_flappy_body: "ඔබගේම Flappy ක්‍රීඩාව නිර්මාණය කර මිතුරන් සමග බෙදාගන්න"
   studiobar_teacher_title: "ගුරුවරුන් වෙනුවෙන්ම"
   studiobar_teacher_body: "ඔබේ පංති කාමරයට Code Studio වැඩසටහන හඳුන්වාදෙන්න"
-  studiobar_frozen_title: "පැයේ කේතය"
+  studiobar_frozen_title: "Hour of Code"
   studiobar_frozen_body: "Anna සහ Elsa සමග ශීත ඍතු මායාලෝකය නිර්මාණය කරන්න"
   studiobar_donate_title: "පරිත්‍යාග"
   studiobar_donate_body: "ඔබ පරිත්‍යාග කරන සෑම ඩොලරයකින්ම එක දරුවෙක් ඉගෙනුම ලබයි"
@@ -441,7 +441,7 @@
   volunteer_engineer_submission_field_email_preference_no: 'නැහැ'
   volunteer_engineer_submission_final_paragraph: "Hour of Code හෝ වෙනත් ස්වේච්ඡා කටයුතුසදහා ප්‍රාදේශීය ගුරුවරුන්ට ඇමතීම සදහා ඔබව සිතියම මත ලැයිස්තු ගත කරාවි. අප ඔබේ විද්‍යුත් තැපෑල සහ නියම ලිපිනිය කිසිදු අවස්ථාවක වෙනත් පාර්වශයක් සමග බෙදා නොගනී. නමුත් ප්‍රාදේශීය ගුරුවරුන්ට ප්රසිද්ධියේ වෙනත් තොරතුරු(ආසන්නතම ස්ථානය ඇතුලත්ව) නැරබීය හැකිවේ."
   volunteer_engineer_submission_checkbox_contact: 'ගුරුවරුන් විසින් ස්වේච්ඡා අවස්ථා සඳහා මාව සම්බන්ධ කරගත හැකි බවට, මම එකඟ වෙමි. (සැ. යු.: ඔබගේ Email ලිපිනය වෙනත් පාර්ශවයන් සමග බෙදාගනු නොලැබේ)'
-  volunteer_engineer_submission_submit: "යොමු කරන්න"
+  volunteer_engineer_submission_submit: "යොමුකරන්න"
   volunteer_engineer_submission_thankyou: "ස්තූතියි ස්වේච්ඡා සේවකයෙක් ලෙස ඇතුලත් වීම. ගුරුවරුන් බාවිතා කරනුයේ <a href=\"%{url}\">මෙම සිතියම </a>ස්වේච්ඡා සේවකයන් සොයාගැනීමට හා සම්බන්ද කරගැනීමට."
   volunteer_engineer_submission_commitment_uncertain: "අවිනිශ්චිතයි"
   volunteer_engineer_submission_commitment_one_hr_per_week: "සතියකට පැයක්"
@@ -519,7 +519,7 @@
   dashboard_course_csp_desc: "Code.org සිත් ඇදගන්නා සුලු සහ ඕන විටක ලබා ගත හැකි පරිගණක විද්‍යාවේ මූලිකාංග අධ්‍යනය කල හැකි පාඨමාලා නිර්මාණය කර තිබේ."
   dashboard_landing_loading: "පූරණය වෙමින්..."
   dashboard_action_cancel: "අවලංගු කරන්න"
-  dashboard_action_delete: "මකන්න"
+  dashboard_action_delete: "මකාදමන්න"
   dashboard_action_delete_yes: 'ඔව්'
   dashboard_action_delete_no: 'නැහැ'
   dashboard_action_confirm: "මකනවා ද?"
@@ -823,7 +823,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (කොටස්)"
   math_category_name: "ගණිත"
-  hoc_category_name: "පැයේ කේතය"
+  hoc_category_name: "Hour of Code"
   csf_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග"
   csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
   csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
@@ -1235,7 +1235,7 @@
   artist_shortcode: "කලාව"
   header_courses: "පාඨමාලාව"
   header_project_gallery: "ව්යාපෘති"
-  header_educate_hoc: "පැයේ කේතය"
+  header_educate_hoc: "Hour of Code"
   header_stats: "සංඛ්‍යාන"
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   user_header_label: "ආයුබෝවන් %{username}"

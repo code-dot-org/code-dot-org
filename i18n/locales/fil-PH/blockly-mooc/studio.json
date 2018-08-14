@@ -165,7 +165,7 @@
   "dropletBlock_whenTouchTauntaun_description": "Ang function na ito ay tatakbo kapag ang droid ay nakahawak ng Tauntaun na mga karakter.",
   "dropletBlock_whenTouchProbot_description": "Ang function na ito ay tatakbo kapag ang droid ay nakahawak ng Probot na mga karakter.",
   "dropletBlock_whenUp_description": "Ang function na ito ay tatakbo kapag ang taas na button ay napindot.",
-  "elseCode": "else",
+  "elseCode": "kung hindi",
   "emotion": "mood",
   "endGameWin": "wakasan ang laro bilang panalo",
   "endGameLose": "wakasan ang laro bilang talo",

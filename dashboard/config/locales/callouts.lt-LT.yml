@@ -20,7 +20,7 @@ lt:
       Course 4 Bee For Loops 1_callout:
         get_nectar: Panaudok naują blokelį „gauk nektarą“.
       Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Nuspausk „Paleisti“, kad išmėgintum savo programą
+        Course 4 Maze 1_callout1: Paspausk „Paleisti" ir išmėgink savo programą
       Course 4 Play Lab Params 3_callout:
         edit_function: Spausk čia, kad paredaguotum funkciją.
       Course 4 Play Lab Vars 1_callout:
@@ -70,9 +70,9 @@ lt:
         craft_callout_preplaced_house: Šis kodas pradės statyti tavo namą. Ar tu gali
           jį pabaigti?
       Overworld Move to Sheep_callout:
-        craft_run_button_callout: Nuspausk „Paleisti“, kad išmėgintum savo programą
+        craft_run_button_callout: Paspausk „Paleisti" ir išmėgink savo programą
       Overworld Move to Sheep_2018_callout:
-        craft_run_button_callout: Nuspausk „Paleisti“, kad išmėgintum savo programą
+        craft_run_button_callout: Paspausk „Paleisti" ir išmėgink savo programą
       Overworld Place Wall_callout:
         craft_inside_repeat: Kartok veiksmus, įdėdamas čia blokelius
       Overworld Place Wall_2018_callout:
