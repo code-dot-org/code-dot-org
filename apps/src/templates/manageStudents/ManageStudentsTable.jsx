@@ -130,7 +130,7 @@ class ManageStudentsTable extends Component {
   state = {
     sortingColumns: {
       [COLUMNS.NAME]: {
-        direction: 'desc',
+        direction: 'asc',
         position: 0
       }
     }

@@ -181,10 +181,9 @@ const initialPersonalProjectsList = [];
 function personalProjectsList(state = initialPersonalProjectsList, action) {
   switch (action.type) {
     case SET_PERSONAL_PROJECTS_LIST:
-      var {personalProjectsList} = action;
       return {
         ...state,
-        projects: personalProjectsList,
+        projects: action.personalProjectsList,
       };
     case PUBLISH_SUCCESS:
       var publishedChannel = action.lastPublishedProjectData.channel;

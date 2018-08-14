@@ -129,7 +129,7 @@ class PersonalProjectsTable extends React.Component {
   state = {
     sortingColumns: {
       [COLUMNS.LAST_EDITED]: {
-        direction: "desc",
+        direction: 'desc',
         position: 0
       }
     }
