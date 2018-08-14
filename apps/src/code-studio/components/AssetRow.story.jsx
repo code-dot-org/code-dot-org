@@ -14,6 +14,7 @@ export default storybook => {
               type={'audio'}
               useFilesApi={true}
               onDelete={()=>{}}
+              useUpdatedStyles={true}
             />
           </div>
         )
@@ -27,12 +28,13 @@ export default storybook => {
               type={'image'}
               useFilesApi={true}
               onDelete={()=>{}}
+              useUpdatedStyles={true}
             />
           </div>
         )
       },
       {
-        name: 'audio with updated styles',
+        name: 'audio with choose',
         story: () => (
           <div style={{width: 800}}>
             <AssetRow
@@ -40,13 +42,14 @@ export default storybook => {
               type={'audio'}
               useFilesApi={true}
               onDelete={()=>{}}
+              onChoose={()=>{}}
               useUpdatedStyles={true}
             />
           </div>
         )
       },
       {
-        name: 'image with updated styles',
+        name: 'image with choose',
         story: () => (
           <div style={{width: 800}}>
             <AssetRow
@@ -54,6 +57,7 @@ export default storybook => {
               type={'image'}
               useFilesApi={true}
               onDelete={()=>{}}
+              onChoose={()=>{}}
               useUpdatedStyles={true}
             />
           </div>
