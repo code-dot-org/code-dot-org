@@ -51,11 +51,21 @@ var dancers = {
     loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/circle/bboy/bboy", 18),
     ],
   wiggles: [
-  	loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Standing/Standing_", 1),
+  	loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Rest/MrWiggles_Rest_", 24),
     loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Electro/Electro_", 24),
     loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Floss/Floss_", 24),
     loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Fresh/Fresh_", 24),
-    //loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/bboy/bboy", 18),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Breakdown/MrWiggles_Breakdown24_", 24),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/March/MrWiggles_March_", 24),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/wiggles/Wave/MrWiggles_Wave24_", 24),
+    ],
+  alien: [
+  	loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Clap/Alien_Clap48_", 1),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Electro/Alien_Electro48_", 48),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Floss/Alien_Floss48_", 48),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Fresh/Alien_Fresh48_", 48),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Clap/Alien_Clap48_", 48),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/March/Alien_March48_", 48),
     ]
 };
 
@@ -99,6 +109,26 @@ var bg_effects = {
       for (var i=0; i<this.colors.length; i++) {
         fill(this.colors[i]);
         rect((i % 8) * 50, Math.floor(i / 8) * 50, 50, 50);
+      }
+      pop();
+    }
+  },
+  diamonds: {
+    hue: 0,
+    update: function() {
+      this.hue += 25;
+    },
+    draw: function() {
+      if (Dance.fft.isPeak()) this.update();
+      push();
+      colorMode(HSB);
+      noStroke();
+      rectMode(CENTER);
+      translate(200, 200);
+      rotate(45);
+      for (var i=12; i>1; i--) {
+        fill((this.hue + i * 10) % 360, 100, 75);
+        rect(0, 0, i * 50, i * 50);
       }
       pop();
     }
