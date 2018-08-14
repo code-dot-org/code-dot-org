@@ -206,23 +206,29 @@ function makeNewSpriteLocation(animation, loc) {
   return makeNewSprite(animation, loc.x, loc.y);
 }
 
+function setAnimation(sprite, animation) {
+  sprite.setAnimation(animation);
+  sprite.scale /= sprite.baseScale;
+  sprite.baseScale = 100 / Math.max(
+    100,
+    sprite.animation.getHeight(),
+    sprite.animation.getWidth()
+  );
+  sprite.scale *= sprite.baseScale;
+}
+
 function makeNewSprite(animation, x, y) {
   var sprite = createSprite(x, y);
 
+  sprite.baseScale = 1;
   if (animation) {
-    sprite.setAnimation(animation);
-    sprite.baseScale = 100 / Math.max(100,
-      sprite.animation.getHeight(),
-      sprite.animation.getWidth());
-  } else {
-    sprite.baseScale = 1;
+    setAnimation(sprite, animation);
   }
   sprites.push(sprite);
   sprite.speed = 10;
   sprite.patrolling = false;
   sprite.things_to_say = [];
   sprite.behaviors = [];
-  sprite.scale = sprite.baseScale;
 
   sprite.setSpeed = function (speed) {
     sprite.speed = speed;
