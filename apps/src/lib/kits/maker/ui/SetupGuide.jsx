@@ -8,6 +8,7 @@ import SurveySupportSection from "./SurveySupportSection";
 import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from "../../../../templates/FontAwesome";
+import i18n from '@cdo/applab/locale';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -77,22 +78,22 @@ class Downloads extends React.Component {
           <button value={WINDOWS}>
             <FontAwesome icon="windows"/>
             {' '}
-            Windows
+            {i18n.maker_setup_os_windows()}
           </button>
           <button value={MAC}>
             <FontAwesome icon="apple"/>
             {' '}
-            Mac
+            {i18n.maker_setup_os_mac()}
           </button>
           <button value={LINUX}>
             <FontAwesome icon="linux"/>
             {' '}
-            Linux
+            {i18n.maker_setup_os_linux()}
           </button>
           <button value={CHROMEBOOK}>
             <FontAwesome icon="chrome"/>
             {' '}
-            Chromebook
+            {i18n.maker_setup_os_chromebook()}
           </button>
         </ToggleGroup>
         {WINDOWS === platform && <WindowsDownloads/>}

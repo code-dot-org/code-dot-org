@@ -7,6 +7,7 @@ import {getVisualizationScale} from '../../../../redux/layout';
 import {isConnecting, hasConnectionError, getConnectionError, useFakeBoardOnNextRun} from '../redux';
 import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
+import i18n from '@cdo/applab/locale';
 
 const overlayDimensionsPropTypes = {
   width: PropTypes.number.isRequired,
@@ -143,7 +144,7 @@ class WaitingToConnect extends Component {
     return (
       <Overlay {...this.props}>
         <Icon icon="cog" spin/>
-        <Text>Waiting for board to connect...</Text>
+        <Text>{i18n.maker_overlay_waiting()}</Text>
       </Overlay>
     );
   }
@@ -162,17 +163,17 @@ class UnsupportedBrowser extends Component {
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle"/>
         <Text>
-          This level requires the<br/>Code.org Maker App
+          {i18n.maker_overlay_unsupported_browser()}
         </Text>
         <UniformWidth>
           <OverlayButton
             primary
-            text="Get Code.org Maker App"
+            text={i18n.maker_overlay_get_app()}
             className="setup-instructions"
             onClick={handleOpenSetupPage}
           />
           <OverlayButton
-            text="Disable Maker Toolkit"
+            text={i18n.maker_overlay_disable_maker()}
             className="disable-maker-toolkit"
             onClick={handleDisableMaker}
           />
@@ -199,21 +200,21 @@ class BoardNotFound extends Component {
     return (
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle"/>
-        <Text>Make sure your board is plugged in.</Text>
+        <Text>{i18n.maker_overlay_board_not_found()}</Text>
         <UniformWidth>
           <OverlayButton
             primary
-            text="Try Again"
+            text={i18n.maker_overlay_try_again()}
             className="try-again"
             onClick={this.props.handleTryAgain}
           />
           <OverlayButton
-            text="Run Without Board"
+            text={i18n.maker_overlay_run_without_board()}
             className="run-without-board"
             onClick={this.handleRunWithoutBoard}
           />
           <OverlayButton
-            text="Setup Instructions"
+            text={i18n.maker_overlay_setup_instructions()}
             className="setup-instructions"
             onClick={this.props.handleOpenSetupPage}
           />

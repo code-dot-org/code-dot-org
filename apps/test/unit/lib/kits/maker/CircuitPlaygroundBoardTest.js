@@ -9,6 +9,7 @@ import {SONG_CHARGE, EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundCon
 import Led from '@cdo/apps/lib/kits/maker/Led';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/applab/locale';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -123,7 +124,7 @@ describe('CircuitPlaygroundBoard', () => {
   describe(`initializeComponents()`, () => {
     it('throws if called before connecting to firmware', () => {
       expect(() => board.initializeComponents())
-          .to.throw(Error, 'Cannot initialize components: Not connected to board firmware.');
+          .to.throw(Error, i18n.maker_error_cannotInitializeWithNoBoard());
     });
 
     it('initializes a set of components', () => {

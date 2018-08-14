@@ -16,6 +16,7 @@ import MakerError, {
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import i18n from '@cdo/applab/locale';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -31,7 +32,7 @@ let currentBoard = null;
  */
 export function enable() {
   if (!isAvailable()) {
-    throw new MakerError('Maker cannot be enabled: Its reducer was not registered.');
+    throw new MakerError(i18n.maker_error_noReducerRegistered());
   }
   getStore().dispatch(redux.enable());
 }
@@ -67,13 +68,11 @@ export function isAvailable() {
  */
 export function connect({interpreter, onDisconnect}) {
   if (!isEnabled()) {
-    return Promise.reject(new Error('Attempted to connect to a maker board, ' +
-        'but Maker Toolkit is not enabled.'));
+    return Promise.reject(new Error(i18n.maker_error_cannotConnectWhenDisabled()));
   }
 
   if (currentBoard) {
-    return Promise.reject(new Error('Attempted to connect Maker Toolkit when ' +
-        'an existing board is already connected.'));
+    return Promise.reject(new Error(i18n.maker_error_cannotConnectAlreadyConnected()));
   }
 
   const store = getStore();
@@ -125,7 +124,7 @@ function confirmSupportedBrowser() {
   if (isCodeOrgBrowser() || (isChrome() && gtChrome33())) {
     return Promise.resolve();
   } else {
-    return Promise.reject(new UnsupportedBrowserError('Unsupported browser'));
+    return Promise.reject(new UnsupportedBrowserError(i18n.maker_error_unsupportedBrowser()));
   }
 }
 
