@@ -272,6 +272,29 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.user_permissions
+  #
+
+  test "revokes the user's permissions" do
+    user = create :teacher
+    UserPermission::VALID_PERMISSIONS.each {|perm| user.permission = perm}
+    refute_empty UserPermission.where(user_id: user.id)
+
+    purge_user user
+
+    assert_empty UserPermission.where(user_id: user.id)
+  end
+
+  test "revokes the user's admin status" do
+    user = create :teacher, admin: true
+    assert user.admin?
+
+    purge_user user
+
+    refute user.admin?
+  end
+
+  #
   # Table: dashboard.sections
   #
 
