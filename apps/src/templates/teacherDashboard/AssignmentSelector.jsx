@@ -186,9 +186,24 @@ export default class AssignmentSelector extends Component {
       undefined;
   }
 
-  setPrimary = (selectedAssignmentFamily, selectedVersionYear) => {
-    const versions = this.getVersions(selectedAssignmentFamily, selectedVersionYear);
-    selectedVersionYear = this.getSelectedVersionYear(versions);
+  /**
+   * Updates this component's state to reflect a new primary assignment having been
+   * made via change to the Assignment Family dropdown or the Version dropdown.
+   * @param selectedAssignmentFamily {string}
+   * @param versionYear {string|undefined} the version year selected by the user,
+   * if one has been selected.
+   */
+  setPrimary = (selectedAssignmentFamily, versionYear) => {
+    const versions = this.getVersions(selectedAssignmentFamily, versionYear);
+
+    // The version year to show in the version dropdown. This will be the
+    // versionYear if one was specified by the user, otherwise we choose a
+    // default from the list of versions.
+    //
+    // We pull this info from the version list, because the version list is the
+    // source of truth for the currently selected version.
+    const selectedVersionYear = this.getSelectedVersionYear(versions);
+
     const selectedPrimaryId = this.getSelectedPrimaryId(selectedAssignmentFamily, selectedVersionYear);
     const selectedSecondaryId = noAssignment;
 
