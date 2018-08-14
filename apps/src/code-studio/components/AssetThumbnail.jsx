@@ -60,6 +60,7 @@ class AssetThumbnail extends React.Component {
     iconStyle: PropTypes.object,
     useFilesApi: PropTypes.bool,
     projectId: PropTypes.string,
+    src: PropTypes.string,
 
     //Temp prop to hide/show updated styles for audio recording release
     useUpdatedStyles: PropTypes.bool
@@ -96,7 +97,12 @@ class AssetThumbnail extends React.Component {
           </div> :
           <div className="assetThumbnail" style={[styles.wrapper, style, styles.background]}>
             {type === 'image' ?
-              <img src={srcPath} style={assetThumbnailStyle}/> :
+              <a
+                href={this.props.src}
+                target="_blank"
+              >
+                <img src={srcPath} style={assetThumbnailStyle}/>
+              </a> :
               <i
                 className={defaultIcons[type] || defaultIcons.unknown}
                 style={[assetIconStyle, iconStyle]}
