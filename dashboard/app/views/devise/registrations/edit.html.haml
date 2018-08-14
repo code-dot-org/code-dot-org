@@ -78,7 +78,7 @@
 
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
 
-- if current_user.can_edit_password? && current_user.encrypted_password.blank?
+- if current_user.should_see_add_password_form?
   -# Mount point for React AddPasswordForm component.
   %div#add-password-fields
 
