@@ -117,7 +117,7 @@ class RegistrationsController < Devise::RegistrationsController
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
     can_update =
-      if current_user.teacher_managed_account?
+      if current_user.can_create_personal_login?
         if current_user.secret_word_account?
           secret_words_match = user_params[:secret_words] == current_user.secret_words
           unless secret_words_match
