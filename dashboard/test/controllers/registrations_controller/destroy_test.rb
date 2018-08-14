@@ -126,7 +126,7 @@ module RegistrationsControllerTests
       assert_raises(ActiveRecord::RecordNotFound) {User.find(student.id)}
     end
 
-    test "sends email when teacher destroyed in new flow" do
+    test "sends email when teacher destroyed" do
       default_params = {
         name: 'A name',
         password: 'apassword',
