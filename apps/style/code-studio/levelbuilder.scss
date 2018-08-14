@@ -178,6 +178,17 @@ table.checkboxes {
     background-position: -313px -119px;
   }
 }
+
+.aligned-input-group{
+  padding-top: 1%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  label {
+    padding-left: 2%;
+  }
+}
 .collapsed_area_header{
   font-size: 1.5em;
 }
