@@ -760,6 +760,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def oauth_only?
+    if migrated?
+      authentication_options.all?(&:oauth?) && encrypted_password.blank?
+    else
+      OAUTH_PROVIDERS.include?(provider) && encrypted_password.blank?
+    end
+  end
+
   def self.new_with_session(params, session)
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"]) do |user|
@@ -1788,6 +1796,11 @@ class User < ActiveRecord::Base
     end
   end
 
+  def should_see_add_password_form?
+    !can_create_personal_login? && # mutually exclusive with personal login UI
+      can_edit_password? && encrypted_password.blank?
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -1836,7 +1849,8 @@ class User < ActiveRecord::Base
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.
   def can_create_personal_login?
-    teacher_managed_account? # once parent e-mail is added, we should check for it here
+    # once parent e-mail is added, we should check for it here
+    teacher_managed_account? || (student? && oauth_only?)
   end
 
   def teacher_managed_account?
