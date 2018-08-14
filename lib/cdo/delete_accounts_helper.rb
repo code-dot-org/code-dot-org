@@ -26,34 +26,14 @@ class DeleteAccountsHelper
   # Deletes all project-backed progress associated with a user.
   # @param [Integer] user_id The user to delete the project-backed progress of.
   def delete_project_backed_progress(user_id)
+    storage_apps = @pegasus_db[:storage_apps]
     # Query the DB for the user's storage ID.
     user_storage_ids_row = @pegasus_db[:user_storage_ids].where(user_id: user_id).first
     return unless user_storage_ids_row
     storage_id = user_storage_ids_row[:id]
 
-    # Delete project data stored on AWS s3.
-    s3_client = AWS::S3.create_client
-    {
-      CDO.animations_s3_bucket => CDO.animations_s3_directory,
-      CDO.assets_s3_bucket => CDO.assets_s3_directory,
-      CDO.files_s3_bucket => CDO.files_s3_directory,
-      CDO.sources_s3_bucket => CDO.sources_s3_directory
-    }.each do |bucket, directory|
-      unless bucket.present? && directory.present?
-        raise "Missing AWS s3 bucket information (bucket: #{bucket}, directory: #{directory})."
-      end
-      s3_client.buckets[bucket].objects.with_prefix("/#{directory}/#{storage_id}/").delete_all
-    end
-
-    # Query the DB for the channel IDs associated with the storage ID, deleting data on Firebase
-    # for each.
-    @pegasus_db[:storage_apps].where(storage_id: storage_id).each do |storage_app|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app[:id]
-      # TODO(asher): This makes more sense as
-      #   FirebaseHelper.new.delete_channel(encrypted_channel_id).
-      # Refactor FirebaseHelper to allow this.
-      FirebaseHelper.new(encrypted_channel_id).delete_channel
-    end
+    # Soft-delete all of the user's channels
+    storage_apps.where(storage_id: storage_id).update(state: 'deleted')
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
