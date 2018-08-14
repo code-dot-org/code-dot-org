@@ -49,6 +49,7 @@ class Census::StateCsOffering < ApplicationRecord
     SC
     UT
     VA
+    WI
   ).freeze
 
   # By default we treat the lack of state data for high schools as an
@@ -136,6 +137,9 @@ class Census::StateCsOffering < ApplicationRecord
       School.find_by(id: row_hash['NCES ID'])&.state_school_id
     when 'VA'
       row_hash['state_school_id']
+    when 'WI'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['SCHOOL_NCES_CODE'])&.state_school_id
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
@@ -441,6 +445,49 @@ class Census::StateCsOffering < ApplicationRecord
     '10159'
   ].freeze
 
+  WI_COURSE_CODES = %w(
+    6490
+    6464
+    6467
+    6476
+    6485
+    6665
+    6466
+    6480
+    6458
+    6492
+    6475
+    6491
+    6660
+    6650
+    6470
+    6664
+    6488
+    6667
+    6484
+    6666
+    6644
+    6661
+    6662
+    6487
+    6471
+    6655
+    6478
+    6645
+    6659
+    6486
+    6489
+    6653
+    6465
+    6457
+    6474
+    6479
+    6481
+    6646
+    6472
+    6482
+  ).freeze
+
   def self.get_courses(state_code, row_hash)
     case state_code
     when 'AL'
@@ -521,6 +568,8 @@ class Census::StateCsOffering < ApplicationRecord
       [UNSPECIFIED_COURSE]
     when 'VA'
       VA_COURSE_CODES.select {|course| course == row_hash['course']}
+    when 'WI'
+      WI_COURSE_CODES.select {|course| course == row_hash['course']}
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
