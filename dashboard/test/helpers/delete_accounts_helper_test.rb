@@ -298,19 +298,55 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: dashboard.sections
   #
 
-  test "hard-deletes all of a user's owned sections" do
+  test "soft-deletes all of a user's owned sections" do
     user = create :teacher
-    create_list :section, 3, user: user
-    user.sections.first.destroy
-    section_ids = user.sections.with_deleted.map(&:id)
+    section_a = create :section, user: user
+    section_b = create :section, user: user
+    section_a.destroy
 
-    assert_equal 2, Section.where(id: section_ids).count
-    assert_equal 3, Section.with_deleted.where(id: section_ids).count
+    assert section_a.deleted?
+    refute section_b.deleted?
 
     purge_user user
 
-    assert_empty Section.where(id: section_ids)
-    assert_empty Section.with_deleted.where(id: section_ids)
+    section_a.reload
+    section_b.reload
+    assert section_a.deleted?
+    assert section_b.deleted?
+  end
+
+  test "removes name from all of a user's owned sections" do
+    user = create :teacher
+    section_a = create :section, user: user
+    section_b = create :section, user: user
+    section_a.destroy
+
+    refute_nil section_a.name
+    refute_nil section_b.name
+
+    purge_user user
+
+    section_a.reload
+    section_b.reload
+    assert_nil section_a.name
+    assert_nil section_b.name
+  end
+
+  test "removes code from all of a user's owned sections" do
+    user = create :teacher
+    section_a = create :section, user: user
+    section_b = create :section, user: user
+    section_a.destroy
+
+    refute_nil section_a.code
+    refute_nil section_b.code
+
+    purge_user user
+
+    section_a.reload
+    section_b.reload
+    assert_nil section_a.code
+    assert_nil section_b.code
   end
 
   #
@@ -332,22 +368,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty user.sections_as_student
     refute_includes section.students, user
     assert_empty Follower.with_deleted.where(student_user: user)
-  end
-
-  test "hard-deletes all followers of a hard-deleted teacher's sections" do
-    user = create :teacher
-    section_1 = create :section, teacher: user
-    section_1.students << create_list(:student, 3)
-    section_2 = create :section, teacher: user
-    section_2.students << create_list(:student, 3)
-
-    section_ids = user.sections.map(&:id)
-
-    assert_equal 6, Follower.with_deleted.where(section_id: section_ids).count
-
-    purge_user user
-
-    assert_empty Follower.with_deleted.where(section_id: section_ids)
   end
 
   #

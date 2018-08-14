@@ -116,8 +116,10 @@ class DeleteAccountsHelper
 
   # Cleans all sections owned by the user.
   # @param [Integer] The ID of the user to anonymize the sections of.
-  def remove_user_sections(user_id)
-    Section.with_deleted.where(user_id: user_id).each(&:really_destroy!)
+  def clean_user_sections(user_id)
+    Section.with_deleted.where(user_id: user_id).each do |section|
+      section.update! name: nil, code: nil
+    end
   end
 
   def remove_user_from_sections_as_student(user)
@@ -215,7 +217,7 @@ class DeleteAccountsHelper
     clean_survey_responses(user.id)
     delete_project_backed_progress(user.id)
     clean_and_destroy_pd_content(user.id)
-    remove_user_sections(user.id)
+    clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_from_pardot(user.id)
     remove_from_solr(user.id)
