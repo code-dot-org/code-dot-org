@@ -358,7 +358,7 @@ class Blockly < Level
     get_localized_property("failure_message_overrides")
   end
 
-  def localized_markdown_instructions
+  def localized_long_instructions
     get_localized_property("markdown_instructions")
   end
 
@@ -397,7 +397,7 @@ class Blockly < Level
     end
   end
 
-  def localized_instructions
+  def localized_short_instructions
     if custom?
       loc_val = get_localized_property("instructions")
       unless I18n.en? || loc_val.nil?
