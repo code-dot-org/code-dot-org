@@ -109,7 +109,7 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil?}
+    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     def save_partner
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
