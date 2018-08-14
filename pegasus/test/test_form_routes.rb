@@ -49,11 +49,11 @@ class FormRoutesTest < SequelTestCase
     row = insert_or_upsert_form('VolunteerEngineerSubmission2015', DEFAULT_DATA.dup)
     @form = Form.find(id: row[:id])
 
-    @form.update(processed_data: {location_p: '-122.419416,37.774929'}.to_json)
+    @form.update(processed_data: {location_p: '37.774929,-122.419416'}.to_json)
 
     assert_equal 0.8236209090344097,
       JSON.parse(
-        VolunteerEngineerSubmission2015.solr_query('coordinates' => '-122.428760,37.774368')
+        VolunteerEngineerSubmission2015.solr_query('coordinates' => '37.774368,-122.428760')
       )['response']['docs'].first['distance']
   end
 end
