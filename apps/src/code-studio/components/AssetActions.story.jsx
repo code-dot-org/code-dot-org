@@ -1,5 +1,5 @@
 import React from 'react';
-import AssetActions from "./AssetActions";
+import {AssetActions} from "./AssetRow";
 
 export default storybook => {
   return storybook
