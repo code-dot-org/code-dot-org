@@ -73,7 +73,8 @@ class AssetThumbnail extends React.Component {
       useFilesApi,
       projectId,
       iconStyle,
-      style
+      style,
+      useUpdatedStyles
     } = this.props;
     let api = useFilesApi ? filesApi : assetsApi;
     if (projectId) {
@@ -89,7 +90,7 @@ class AssetThumbnail extends React.Component {
 
     return (
       <div>
-        {(this.props.useUpdatedStyles && type === 'audio') ?
+        {(useUpdatedStyles && type === 'audio') ?
           <div style={[styles.wrapper, styles.audioWrapper]}>
             <AudioIconPlayer src={srcPath}/>
           </div> :
