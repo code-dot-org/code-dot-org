@@ -6,9 +6,6 @@ require 'retryable'
 require src_dir 'forms'
 require src_dir 'abort_form_error'
 
-# As the NULLness of various date columns indicates further processing is
-# necessary, we use this date to represent that an unrecoverable error happened.
-DATE_FOR_ERRORS = '1980-01-01 00:00:00'.freeze
 BATCH_SIZE = 15000
 
 # load helpers
@@ -41,31 +38,20 @@ def process_existing_batch_of_forms
         if (extra.to_a - processed_data.to_a).empty?
           $stderr.puts "Form's processed_data already contains what we meant to write."
           already_written_count += 1
-          next
         elsif extra.keys.any? {|key| processed_data.key?(key)}
           $stderr.puts "Form's processed_data already contains one key we meant to write."
           already_has_key_count += 1
-          next
         else
           processed_data.merge! extra
 
-          $stderr.puts "Would write #{processed_data.to_json}"
-          # TEMP: While we are still validating this script, don't actually write to DB.
-          #DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json, processed_at: DateTime.now)
+          $stderr.puts "Writing #{processed_data.to_json}"
+          DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json)
           update_count += 1
         end
       end
     rescue AbortFormError => e
       $stderr.puts "Unable to process form #{form[:id]} because #{e.message}."
       error_count += 1
-
-      # TEMP: While we are still validating this script, don't actually write to DB.
-      #DB[:forms].where(id: form[:id]).update(
-      #  processed_at: DATE_FOR_ERRORS,
-      #  indexed_at: DATE_FOR_ERRORS,
-      #  notified_at: DATE_FOR_ERRORS
-      #)
-
       next
     rescue Exception => e
       $stderr.puts "Unable to process form #{form[:id]} because #{e.message}."

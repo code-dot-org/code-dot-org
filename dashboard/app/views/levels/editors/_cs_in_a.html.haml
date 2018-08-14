@@ -1,0 +1,30 @@
+//CS in A stuff
+.field
+  = f.label :use_contract_editor, 'Use MSM contract editor'
+  = boolean_check_box f, :use_contract_editor
+.field
+  = f.label :default_num_example_blocks, 'Default # of example blocks in contract editor'
+  = f.number_field :default_num_example_blocks
+.field
+  = f.label :disable_examples, 'Hide examples section in contract editor'
+  = boolean_check_box f, :disable_examples
+.field
+  = f.label :examples_required, 'Each function must have at least 1 example, and examples will be checked when hitting run'
+  = boolean_check_box f, :examples_required
+%table.contract-editor-config
+  %tr
+    %th Section
+    %th Highlight
+    %th Collapse
+  -%w(contract examples definition).each_with_index do |section, i|
+    %tr
+      %td #{i + 1}. #{section.titleize}
+      %td= boolean_check_box f, "#{section}_highlight".to_sym
+      %td= boolean_check_box f, "#{section}_collapse".to_sym
+
+-if @level.respond_to? :input_output_table
+  .field
+    = f.label :input_output_table, 'Input/Output Table'
+    %p An array of tuples where each tuple is [input, output].
+    %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
+    = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
