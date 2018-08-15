@@ -108,7 +108,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def upgrade
-    return head(:bad_request) unless params[:user] && current_user&.can_create_personal_login?
+    return head(:bad_request) unless params[:user].present? && current_user&.can_create_personal_login?
     user_params = params[:user]
     # User model normalizes and hashes email _after_ validation **rage**
     user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
