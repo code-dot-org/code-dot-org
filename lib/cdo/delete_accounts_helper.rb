@@ -26,11 +26,10 @@ class DeleteAccountsHelper
   # Deletes all project-backed progress associated with a user.
   # @param [Integer] user_id The user to delete the project-backed progress of.
   def delete_project_backed_progress(user_id)
+    user_storage_ids = @pegasus_db[:user_storage_ids]
     storage_apps = @pegasus_db[:storage_apps]
-    # Query the DB for the user's storage ID.
-    user_storage_ids_row = @pegasus_db[:user_storage_ids].where(user_id: user_id).first
-    return unless user_storage_ids_row
-    storage_id = user_storage_ids_row[:id]
+    storage_id = user_storage_ids.where(user_id: user_id).first&.[](:id)
+    return unless storage_id
 
     # Soft-delete all of the user's channels
     storage_apps.where(storage_id: storage_id).update(
