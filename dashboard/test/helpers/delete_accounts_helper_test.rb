@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'cdo/delete_accounts_helper'
+require_relative '../../../shared/middleware/helpers/storage_apps'
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -759,7 +760,164 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil application.notes
   end
 
+  #
+  # Table: pegasus.storage_apps
+  #
+
+  test "soft-deletes all of a user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'active', app[:state]
+      end
+
+      purge_user student
+
+      assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'deleted', app[:state]
+      end
+    end
+  end
+
+  test "does not soft-delete anyone else's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student_a = create :student
+    student_b = create :student
+    with_channel_for student_a do |channel_id_a|
+      with_channel_for student_b do |channel_id_b|
+        assert_equal 'active', storage_apps.where(id: channel_id_a).first[:state]
+        assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+
+        purge_user student_a
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+        assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+      end
+    end
+  end
+
+  test "clears 'value' for all of a user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      refute_nil storage_apps.where(id: channel_id).first[:value]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        refute_nil app[:value]
+      end
+
+      purge_user student
+
+      assert_nil storage_apps.where(id: channel_id).first[:value]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_nil app[:value]
+      end
+    end
+  end
+
+  test "clears 'updated_ip' all of a user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      refute_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        refute_empty app[:updated_ip]
+      end
+
+      purge_user student
+
+      assert_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_empty app[:updated_ip]
+      end
+    end
+  end
+
+  #
+  # Testing our utilities
+  #
+
+  test 'with_channel_for owns channel' do
+    table = PEGASUS_DB[:storage_apps]
+    student = create :student
+
+    with_storage_id_for student do |storage_id|
+      assert_empty table.where(storage_id: storage_id)
+
+      with_channel_for student do |channel_id|
+        assert_equal channel_id, table.where(storage_id: storage_id).first[:id]
+      end
+
+      assert_empty table.where(storage_id: storage_id)
+    end
+  end
+
+  test 'with_storage_id_for owns id if it does not exist' do
+    table = PEGASUS_DB[:user_storage_ids]
+    student = create :student
+
+    assert_empty table.where(user_id: student.id)
+
+    with_storage_id_for student do |storage_id|
+      assert_equal storage_id, table.where(user_id: student.id).first[:id]
+    end
+
+    assert_empty table.where(user_id: student.id)
+  end
+
+  test 'with_storage_id_for does not own id if it does exist' do
+    table = PEGASUS_DB[:user_storage_ids]
+    student = create :student
+    assert_empty table.where(user_id: student.id)
+
+    table.insert(user_id: student.id)
+
+    refute_empty table.where(user_id: student.id)
+
+    with_storage_id_for student do |storage_id|
+      assert_equal storage_id, table.where(user_id: student.id).first[:id]
+    end
+
+    refute_empty table.where(user_id: student.id)
+
+    table.where(user_id: student.id).delete
+    assert_empty table.where(user_id: student.id)
+  end
+
   private
+
+  def with_channel_for(owner)
+    table = PEGASUS_DB[:storage_apps]
+    channels_before = table.count
+    with_storage_id_for owner do |storage_id|
+      encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
+      _, id = storage_decrypt_channel_id encrypted_channel_id
+      yield id, storage_id
+    ensure
+      table.where(id: id).delete if id
+    end
+  ensure
+    assert_equal channels_before, table.count
+  end
+
+  def with_storage_id_for(user)
+    table = PEGASUS_DB[:user_storage_ids]
+    user_storage_ids_count_before = table.count
+    owns_storage_id = false
+
+    storage_id = table.where(user_id: user.id).first&.[](:id)
+    unless storage_id
+      storage_id = table.insert(user_id: user.id)
+      owns_storage_id = true
+    end
+
+    yield storage_id
+  ensure
+    table.where(id: storage_id).delete if owns_storage_id
+    assert_equal user_storage_ids_count_before, table.count
+  end
 
   #
   # Helper to make this specific set of tests more readable
