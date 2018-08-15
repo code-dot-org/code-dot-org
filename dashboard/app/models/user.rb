@@ -881,8 +881,8 @@ class User < ActiveRecord::Base
 
     email = params.delete(:email)
     hashed_email = params.delete(:hashed_email)
+    should_update_contact_info = email.present? || hashed_email.present?
     transaction do
-      should_update_contact_info = email.present? || hashed_email.present?
       update_primary_contact_info!(user: {email: email, hashed_email: hashed_email}) if should_update_contact_info
       update!(params)
     end
