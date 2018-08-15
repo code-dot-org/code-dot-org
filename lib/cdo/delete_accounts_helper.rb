@@ -20,15 +20,14 @@ class DeleteAccountsHelper
   end
 
   # Deletes all project-backed progress associated with a user.
-  # @param [Integer] user_id The user to delete the project-backed progress of.
-  def delete_project_backed_progress(user_id)
-    user_storage_ids = @pegasus_db[:user_storage_ids]
-    storage_apps = @pegasus_db[:storage_apps]
-    storage_id = user_storage_ids.where(user_id: user_id).first&.[](:id)
-    return unless storage_id
+  # @param [User] user The user to delete the project-backed progress of.
+  def delete_project_backed_progress(user)
+    return unless user.user_storage_id
 
     # Clear potential PII from user's channels
-    storage_apps.where(storage_id: storage_id).update(value: nil, updated_ip: '')
+    @pegasus_db[:storage_apps].
+      where(storage_id: user.user_storage_id).
+      update(value: nil, updated_ip: '')
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
@@ -207,7 +206,7 @@ class DeleteAccountsHelper
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
     clean_pegasus_forms_for_user(user)
-    delete_project_backed_progress(user.id)
+    delete_project_backed_progress(user)
     clean_and_destroy_pd_content(user.id)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
