@@ -71,39 +71,42 @@ var dancers = {
 
 var bg_effects = {
   none: {
-    draw: function() {
+    draw: function(alpha) {
+      alpha = alpha || 1;
       background(World.background_color || "white");
     }
   },
   rainbow: {
-    color: color('hsl(0, 100%, 80%)'),
-    update: function () {
+    color: color('hsla(0, 100%, 80%, 1)'),
+    update: function (alpha) {
       push();
       colorMode(HSL);
-      this.color = color(this.color._getHue() + 10, 100, 80);
+      this.color = color(this.color._getHue() + 10, 100, 80, alpha);
       pop();
     },
-    draw: function () {
-      if (Dance.fft.isPeak()) this.update();
+    draw: function (alpha) {
+      alpha = alpha || 1;
+      if (Dance.fft.isPeak()) this.update(alpha);
       background(this.color);
     }
   },
   disco: {
     colors: [],
-    update: function () {
+    update: function (alpha) {
       if (this.colors.length < 64) {
         this.colors = [];
         for (var i=0; i<64; i++) {
-          this.colors.push(color("hsb(" + randomNumber(0, 359) + ", 100%, 100%)"));
+          this.colors.push(color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")"));
         }
       } else {
         for (var j=randomNumber(5, 10); j>0; j--) {
-          this.colors[randomNumber(0, this.colors.length - 1)] = color("hsb(" + randomNumber(0, 359) + ", 100%, 100%)");
+          this.colors[randomNumber(0, this.colors.length - 1)] = color("hsb(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")");
         }
       }
     },
-    draw: function () {
-      if (Dance.fft.isPeak() || World.frameCount == 1) this.update();
+    draw: function (alpha) {
+      alpha = alpha || 1;
+      if (Dance.fft.isPeak() || World.frameCount == 1) this.update(alpha);
       push();
       noStroke();
       for (var i=0; i<this.colors.length; i++) {
@@ -118,7 +121,8 @@ var bg_effects = {
     update: function() {
       this.hue += 25;
     },
-    draw: function() {
+    draw: function(alpha) {
+      alpha = alpha || 1;
       if (Dance.fft.isPeak()) this.update();
       push();
       colorMode(HSB);
@@ -127,7 +131,7 @@ var bg_effects = {
       translate(200, 200);
       rotate(45);
       for (var i=12; i>1; i--) {
-        fill((this.hue + i * 10) % 360, 100, 75);
+        fill((this.hue + i * 10) % 360, 100, 75, alpha);
         rect(0, 0, i * 50, i * 50);
       }
       pop();
@@ -136,6 +140,8 @@ var bg_effects = {
 };
 
 World.bg_effect = bg_effects.none;
+World.fg_effect = bg_effects.none;
+
 function loadS3Animation(base_url, count) {
   var args = [];
   for (var i=0; i< count; i++) {
@@ -351,7 +357,11 @@ function draw() {
   }
 
   drawSprites();
-  
+
+  if (World.fg_effect != bg_effects.none) {
+    World.fg_effect.draw(0.25);
+  }
+
   fill("black");
   //textStyle(BOLD);
   text("time: " + Dance.song.currentTime().toFixed(3) + " | bass: " + Math.round(Dance.fft.getEnergy("bass")) + " | mid: " + Math.round(Dance.fft.getEnergy("mid")) + " | treble: " + Math.round(Dance.fft.getEnergy("treble")) + " | framerate: " + World.frameRate, 20, 20);
