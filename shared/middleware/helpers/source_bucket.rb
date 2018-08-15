@@ -114,11 +114,12 @@ class SourceBucket < BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     # Find all versions of main.json
     main_json_key = s3_path owner_id, channel_id, 'main.json'
-    versions = s3.list_object_versions(bucket: @bucket, prefix: main_json_key).versions
-    return 0 if versions.empty?
+    version_list = s3.list_object_versions(bucket: @bucket, prefix: main_json_key)
+    return 0 if version_list.versions.empty? && version_list.delete_markers.empty?
 
-    # Delete all versions of main.json
-    objects_to_delete = versions.map {|v| v.to_h.slice(:key, :version_id)}
+    # Delete all versions and delete markers of main.json
+    objects_to_delete = (version_list.versions + version_list.delete_markers).
+      map {|v| v.to_h.slice(:key, :version_id)}
     result = s3.delete_objects(
       bucket: @bucket,
       delete: {
