@@ -896,7 +896,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       _, id = storage_decrypt_channel_id encrypted_channel_id
       yield id, storage_id
     ensure
-      table.where(storage_id: storage_id).delete
+      table.where(id: id).delete if id
     end
   ensure
     assert_equal channels_before, table.count
