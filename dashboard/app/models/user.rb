@@ -259,6 +259,8 @@ class User < ActiveRecord::Base
 
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
+  before_destroy :soft_delete_channels
+
   def save_email_preference
     if teacher?
       EmailPreference.upsert!(
@@ -2073,6 +2075,24 @@ class User < ActiveRecord::Base
     super.tap do
       NewRelic::Agent.record_metric("Custom/User/SoftDelete", 1) if CDO.newrelic_logging
     end
+  end
+
+  # Called before_destroy.
+  # Soft-deletes any projects and other channel-backed progress belonging to
+  # this user.  Unfeatures any featured projects belonging to this user.
+  private def soft_delete_channels
+    return unless PEGASUS_DB
+    user_storage_ids = PEGASUS_DB[:user_storage_ids]
+    storage_apps = PEGASUS_DB[:storage_apps]
+    storage_id = user_storage_ids.where(user_id: id).first&.[](:id)
+    return unless storage_id
+
+    # Unfeature any featured projects owned by the user
+    channel_ids = storage_apps.where(storage_id: storage_id).map(:id)
+    FeaturedProject.where(storage_app_id: channel_ids).update_all(unfeatured_at: Time.now)
+
+    # Soft-delete all of the user's channels
+    storage_apps.where(storage_id: storage_id).update(state: 'deleted')
   end
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
