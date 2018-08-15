@@ -1,0 +1,169 @@
+ky:
+  data:
+    blocks:
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: баары
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': оңго
+            '"left"': солго
+      Dancelab_randomColor:
+        text: кокус түс
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Жок
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'туура'
+            'false': 'жалган'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": туш келди
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': оңго
+            '"left"': солго
+      gamelab_randColor:
+        text: кокус түс
+      gamelab_randomColor:
+        text: кокус түс
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': туш келди
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': оңго
+            '"left"': солго
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": өйдө
+            "'down'": ылдый
+            "'left'": солго
+            "'right'": оңго
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      Vanilla_randomColor:
+        text: кокус түс

@@ -1,0 +1,181 @@
+sl:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': levo
+      Dancelab_randomColor:
+        text: naključna barva
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'velja'
+            'false': 'ne velja'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": naključno
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': levo
+      gamelab_randColor:
+        text: naključna barva
+      gamelab_randomColor:
+        text: naključna barva
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': naključno
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': levo
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": gor
+            "'down'": dol
+            "'left'": levo
+            "'right'": desno
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      Vanilla_randomColor:
+        text: naključna barva
