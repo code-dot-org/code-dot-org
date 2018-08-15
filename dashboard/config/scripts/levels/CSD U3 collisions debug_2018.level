@@ -31,7 +31,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Debug\r\n\r\nSometimes sprites will behave in ways that are unexpected. There is a special `sprite.debug` property you can use to better understand why the sprites interact the way that they do.\r\n\r\n# Do This\r\n\r\nThese two coins are round, so you would expect them to bounce in a certain way. Something weird is happening though!\r\n\r\n* Run the code and watch the way that the coins interact.\r\n* Use the `sprite.debug` block to make debug 'true' for both the sprites and run the code again.\r\n* Change the gold coin's starting x position to 51 and run the code again.\r\n* Discuss with a partner: Why do you think the coins are bouncing strangely?",

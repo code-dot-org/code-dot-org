@@ -1,0 +1,75 @@
+name 'v2 U3L10 Student Lesson Introduction_2018'
+display_name 'Lesson Vocabulary & Resources'
+title 'Design a Digital Scene'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 10 - Practice PT - Design a Digital Scene
+
+## Lesson
+
+* Collaborate with a group to choose a topic for a digital scene
+* Identify the major components of your digital scene and assign them to individual group members
+* Individually program your assigned components of the digital scene
+* Recombine your group's code and use it to create a digital scene
+* Complete reflection questions
+
+## Vocabulary
+
+* **Abstraction** - a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+
+## Resources
+
+* Design a Digital Scene - Project Overview and Submission Guidelines - Worksheet ([PDF](https://docs.google.com/document/d/1z5RTsKEJPqv0NT9aHm5sao0MHKFLrScUYNBewDUZUhg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1z5RTsKEJPqv0NT9aHm5sao0MHKFLrScUYNBewDUZUhg/export?format=doc))
+* Template for student written responses - Worksheet ([PDF](https://docs.google.com/document/d/1bbWt1FaeqPzn1yYLpDKf7g4tfXocgF8F_eCyH3dmb_Q/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bbWt1FaeqPzn1yYLpDKf7g4tfXocgF8F_eCyH3dmb_Q/export?format=doc))
+* [Code Print](https://bakerfranke.github.io/codePrint/) - Create PT Code Formatting
+
+*Design a Digital Scene* Rubrics
+
+ * AP-style written response scoring guidelines - Rubric ( [PDF](https://docs.google.com/document/d/1ZzWxRWZNfmwLDjtPtKJ0y3TtrSn0SIwo89jLdpkwZUs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1ZzWxRWZNfmwLDjtPtKJ0y3TtrSn0SIwo89jLdpkwZUs/export?format=doc))
+ * Project and Programming Rubric - Rubric ([PDF](https://docs.google.com/document/d/1NsiNVravnV5PRUC241JjNHhWN1C2-MbsNV9XP95qp68/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1NsiNVravnV5PRUC241JjNHhWN1C2-MbsNV9XP95qp68/export?format=doc))
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+---
+
+**Older versions of documents. Deprectated Oct. 2017**
+
+*In October 2017 we updated these student documents to better reflect and mimic changes to the AP Performance Tasks announced in August.  The original documents are here in the event you or your class were doing work based on them. The new documents are above.*
+
+* **[Deprecated]** Design a Digital Scene - Planning Guide - Worksheet ([PDF](https://docs.google.com/document/d/1piOp7zsljj_cpUs5yEy5-9EH3Zh7iD2LdzsyaEJDKcE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1piOp7zsljj_cpUs5yEy5-9EH3Zh7iD2LdzsyaEJDKcE/export?format=doc))
+* **[Deprecated]** Design a Digital Scene - Project Overview and Rubric - Worksheet ([PDF](https://docs.google.com/document/d/1aWGZCnkozPfDKGiFxCJhr0LH_zHTgEVoZcDYQPNpsFY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1aWGZCnkozPfDKGiFxCJhr0LH_zHTgEVoZcDYQPNpsFY/export?format=doc))
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**AP-style student submission**
+
+[key]
+
+* [Student Sample Submission for writing](https://docs.google.com/document/d/1_BwS1RF6vG7tsWAE2wqT7I55cVdBC_oFKi4Dl4rHG6s) -  Document showing student writing sample side by side with scoring guide and suggested scoring.
+* [Sample student code PDF](https://drive.google.com/open?id=0B2QFqkDgv9LjZ0pDUFRvYlo3V1k) - linked to in sample submission doc as well.
+
+[/key]
+
+**Exemplar programming projects**
+
+These sample App Lab projects contain inline comments explaining how they might be scored against the Project Programming Rubic.
+
+[key]
+
+* [Full credit sample](https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q) - Beach Scene
+* [Partial credit sample](https://studio.code.org/projects/applab/sSdQJEeupZeUvMWiLZKpaA) - Desert Scene
+
+[/key]
+
+---
+
+Please note there is small multi-chose assessment in the next lesson, the "Unit 3 Chapter 1 Assessment."  You might use it immediately after, or as part of, evaluating this project.
+
+**Q:** Where do I find the assessment that used to be linked in this space?
+
+**A:** It has been moved into the online version you see for the "Unit 3: Chapter 1 Assessment" in the lesson that follows this one.
+MARKDOWN

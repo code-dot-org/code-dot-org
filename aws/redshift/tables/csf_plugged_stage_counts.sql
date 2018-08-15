@@ -9,7 +9,7 @@ insert into analysis.csf_plugged_stage_counts values
 (17,11),
 (18,11),
 (19,14),
-(23,16),
+(23,12),  
 (236,5),
 (237,6),
 (238,9),

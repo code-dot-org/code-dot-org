@@ -2,23 +2,28 @@
 
 = view 'popup_window.js'
 
-.share-buttons.clear
-  -if gplus
-    %a.window-popup{:href=>"https://plus.google.com/share?#{gplus.to_query}"}<
-      %button.button-color-share.share-button-gplus<
-        %i{:class=>"fa fa-google-plus-square"}<
-        ="Share on Google+"
-  -if facebook
-    %a.window-popup{:href=>"https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"}<
-      %button.button-color-share.share-button-facebook<
-        %i{:class=>"fa fa-facebook"}<
-        =I18n.t(:share_on_facebook)
-  -if twitter
-    %a.window-popup{:href=>"https://twitter.com/intent/tweet?#{twitter.to_query}"}<
-      %button.button-color-share.share-button-twitter<
-        %i{:class=>"fa fa-twitter"}<
-        =I18n.t(:share_on_twitter)
-  -download_url ||= nil
-  -unless download_url.nil_or_empty?
-    %a.desktop-feature{:href=>download_url, :style=>'padding-left:10px'}
-      %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:10px'}
+:ruby
+  cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+  user_type = request.cookies[cookie_key]
+
+- unless user_type == "student_y"
+  .share-buttons.clear
+    -if gplus
+      %a.window-popup.share-button-gplus-link{:href=>"https://plus.google.com/share?#{gplus.to_query}"}<
+        %button.button-color-share.share-button-gplus<
+          %i{:class=>"fa fa-google-plus-square"}<
+          ="Share on Google+"
+    -if facebook
+      %a.window-popup.share-button-facebook-link{:style=>"display: none", :href=>"https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"}<
+        %button.button-color-share.share-button-facebook<
+          %i{:class=>"fa fa-facebook"}<
+          =I18n.t(:share_on_facebook)
+    -if twitter
+      %a.window-popup.share-button-twitter-link{:style=>"display: none", :href=>"https://twitter.com/intent/tweet?#{twitter.to_query}"}<
+        %button.button-color-share.share-button-twitter<
+          %i{:class=>"fa fa-twitter"}<
+          =I18n.t(:share_on_twitter)
+    -download_url ||= nil
+    -unless download_url.nil_or_empty?
+      %a.desktop-feature{:href=>download_url, :style=>'padding-left:10px'}
+        %img{:src=>"/images/download.png", :width=>"35px", :style=>'margin-top:10px'}

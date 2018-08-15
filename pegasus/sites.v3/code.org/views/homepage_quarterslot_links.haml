@@ -3,7 +3,6 @@
 
 .quarterslot-links.col-mobile-50{class: "col-#{desktop_column_width} #{layout_class}"}
   %a.linktag{href: entry[:url], id: entry[:id]}
-    - entry[:image] = entry[:image].gsub("/images/", "/images/fit-400/")
     .slotbox{style: "background-image: url(#{entry[:image]})"}
       .headerbox{style: "background-color: rgb(#{entry[:color1]}); background-color: rgba(#{entry[:color1]}, 0.92)"}
         .header{class: entry[:url] ? "underscorehover" : ""}

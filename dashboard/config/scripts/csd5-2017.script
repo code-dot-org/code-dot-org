@@ -1,0 +1,85 @@
+hidden false
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd/unit5/standards/"]]
+has_verified_resources true
+has_lesson_plan true
+new_name 'csd5-2017'
+family_name 'csd5'
+version_year '2017'
+is_stable true
+
+stage 'Representation Matters', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representation Matters'
+
+stage 'Patterns and Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Patterns and Representation'
+
+stage 'ASCII and Binary Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP ASCII and Binary Representation'
+
+stage 'Representing Images', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Images'
+level 'CSD U5 black white images pixelation', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 2', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 3', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 4', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 5', progression: 'Representing Images'
+
+stage 'Representing Numbers', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Numbers Part 1'
+level 'CSD U5 binary 1', progression: 'Binary Numbers'
+level 'CSD U5 binary 2', progression: 'Binary Numbers'
+level 'CSD U5 binary 4-new', progression: 'Binary Numbers'
+level 'CSD U5 binary 5-new', progression: 'Binary Numbers'
+level 'CSD U5 binary 6-new', progression: 'Binary Numbers'
+level 'CSD U5 binary 7-new', progression: 'Binary Numbers'
+named_level 'CSD U5 binary video'
+
+stage 'Keeping Data Secret', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Representing Numbers Part 2'
+level 'CSD U5 Encryption 2', progression: 'Keeping Data Secret'
+level 'CSD U5 Encryption 1', progression: 'Keeping Data Secret'
+
+stage 'Combining Representations', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Combining Representations'
+level 'CSD U3 combining rep', progression: 'Combining Representations'
+level 'CSD U5 student record', progression: 'Combining Representations'
+
+stage 'Project - Create a Representation', flex_category: 'csd5_1'
+named_level 'CSD-U5-SFLP Create a Representation'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch1', progression: 'Reflection'
+
+stage 'Problem Solving and Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Problem Solving and Data'
+
+stage 'Problem Solving with Big Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Problem Solving with Big Data'
+level 'CSD U5 Netflix Data Video', progression: 'Problem Solving'
+level 'CSD U5 Waze Data Video', progression: 'Problem Solving'
+level 'CSD U5 Amazon Data Video', progression: 'Problem Solving'
+
+stage 'Structuring Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Interpreting Data'
+level 'CSD U5 data visualization', progression: 'Data Visualization'
+level 'CSD U5 Pizza', progression: 'Data Visualization'
+level 'CSD U5 Pizza 2', progression: 'Data Visualization'
+
+stage 'Making Decisions with Data', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Making Decisions with Data'
+
+stage 'Interpreting Data', flex_category: 'csd5_2'
+named_level 'CSD U5 L13 SFLP Interpreting Data'
+named_level 'CSD U5 crosstab warmup'
+
+stage 'Automating Data Decisions', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Automating Data Decisions'
+
+stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
+named_level 'CSD-U5-SFLP Solve a Data Problem'
+assessment 'csd-pulse-check-survey-1-levelgroup U5Ch2', progression: 'Reflection'
+
+stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
+assessment 'csd-post-survey-2018-markdown-with-link-to-survey'

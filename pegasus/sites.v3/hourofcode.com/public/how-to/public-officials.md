@@ -6,7 +6,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire community.
+# How to involve your entire community
 
 [col-33]
 

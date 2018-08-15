@@ -33,6 +33,7 @@
     "ideal": "9",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

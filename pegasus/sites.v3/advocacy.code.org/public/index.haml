@@ -39,6 +39,8 @@ video_player: false
     .non-banner.mobile-feature
       = banner_body
 
+    = view :forum_banner
+
     -state ||= nil
     = view :interactive_map, use_url: false, advocacy_variation: true
 

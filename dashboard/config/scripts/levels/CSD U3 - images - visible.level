@@ -68,7 +68,6 @@
       "comment": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Visible\r\n\r\nNow that you have conditionals and images sometimes it appropriate to hide the image for a while and then show it again. You can do this using the `visible` property. The visible property is a little different than some of the other properties you have seen in the past. It is a boolean value. So visible is either true or false. By default visible is set to true.\r\n\r\n\r\n# Do This\r\n\r\n* In response to something set the sprite to visible and invisible.\r\n",

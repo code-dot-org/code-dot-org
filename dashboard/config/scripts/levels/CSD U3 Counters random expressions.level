@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Random Numbers in Expressions\r\n\r\nYou can **use random numbers inside of expressions** too. For example, \r\n\r\n`10 * randomNumber(1,5)`\r\n\r\nis a perfectly valid expression. This is because **`randomNumber` will generate a single random value** that can then be used in the expression just like a number.\r\n\r\n# Do This\r\n\r\nThis program displays random multiples of 10 between 10 and 50.\r\n\r\n* **Run the program** to see how it works\r\n* **Change the program** so that it displays **random multiples of 10 between 10 and 100**.\r\n* Change the expression with a random number in it more if you like. Once you're comfortable with how it works move on.",

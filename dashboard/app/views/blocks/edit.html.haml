@@ -1,0 +1,44 @@
+- content_for(:head) do
+  %script{src: asset_path('js/blockly.js')}
+  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
+  %script{src: minifiable_asset_path('js/blocks/edit.js')}
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+  = stylesheet_link_tag asset_path('css/common.css'), media: 'all'
+
+%h1= @block.new_record? ? "New Block" : "Editing block #{@block.name}"
+.block-editor-container
+  .editor
+    = form_for(@block,
+      url: @block.new_record? ? blocks_path : block_path(id: @block.name),
+      html: {id: 'edit-block-form', method: @block.new_record? ? 'post' : 'patch'},
+    ) do |f|
+      = f.label 'Pool Name'
+      = f.select :pool, Block.all_pool_names + [params[:pool]].compact
+      = f.label 'Category'
+      = f.text_field :category
+      = f.label 'Name'
+      = f.text_field :name
+      = f.label 'Config'
+      = f.text_area :config
+      = f.label 'Helper Code'
+      = f.text_area :helper_code
+      %div
+        = f.submit class: 'btn', id: 'block_submit'
+      %br
+        = f.submit class: 'btn btn-info', value: 'Save as Clone', data: {'disable-with': 'Cloning...'}
+
+    - unless @block.new_record?
+      = form_for(@block,
+        url: block_path(id: @block.name),
+        html: {id: 'delete-block-form', method: 'delete'},
+      ) do |f|
+        = f.submit 'Delete Block',
+            data: {confirm: 'Are you sure you want to delete this block?'},
+            class: 'btn btn-danger'
+  .block-preview
+    %h3 Block Preview
+    #blockly-container
+    %h3 Generated Code
+    %pre#code-preview
+
+= link_to "Back", blocks_path

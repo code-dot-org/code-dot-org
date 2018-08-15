@@ -22,7 +22,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Program a Sprite Interaction\r\n\r\nYou should have discussed with your classmates how you could create the sprite interaction you saw in the last level. Now it's your turn to program it yourself. How can you make the giraffe move the monkey off the screen?\r\n\r\n# Do This\r\n\r\nThe giraffe is already moving across the screen toward the monkey but the sprite interaction itself hasn't been programmed.\r\n\r\n* Use the plan you developed with your classmates on the last level to program the sprite interaction yourself.\r\n\r\n[//]: # (https://images.code.org/2e6b993747a39cd5076dce219037903d-image-1470319674401.png)\r\n\r\n[//]: # (https://images.code.org/d44d7c1aa87ea7eeceea9e9b023408f9-image-1470319674396.png)",

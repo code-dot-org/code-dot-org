@@ -10,13 +10,16 @@ import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/export/project.html.ejs';
 import exportProjectReadmeEjs from '../templates/export/projectReadme.md.ejs';
+import exportFontAwesomeCssEjs from '../templates/export/fontAwesome.css.ejs';
 import exportExpoIndexEjs from '../templates/export/expo/index.html.ejs';
 import exportExpoPackageJson from '../templates/export/expo/package.exported_json';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
-import exportExpoAppJs from '../templates/export/expo/App.exported_js';
+import exportExpoAppEjs from '../templates/export/expo/App.js.ejs';
 import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported_js';
+import exportExpoDataWarningJs from '../templates/export/expo/DataWarning.exported_js';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
+import exportExpoWarningPng from '../templates/export/expo/warning.png';
 import exportExpoIconPng from '../templates/export/expo/icon.png';
 import exportExpoSplashPng from '../templates/export/expo/splash.png';
 import logToCloud from '../logToCloud';
@@ -138,7 +141,7 @@ const APP_OPTIONS_OVERRIDES = {
   readonlyWorkspace: true,
 };
 
-export function getAppOptionsFile() {
+export function getAppOptionsFile(expoMode, channelId) {
   function getAppOptionsAtPath(whitelist, sourceOptions) {
     if (!whitelist || !sourceOptions) {
       return null;
@@ -154,6 +157,16 @@ export function getAppOptionsFile() {
   }
   const options = getAppOptionsAtPath(APP_OPTIONS_WHITELIST, getAppOptions());
   _.merge(options, APP_OPTIONS_OVERRIDES);
+  options.nativeExport = expoMode;
+  if (!expoMode) {
+    // call non-whitelisted hasDataAPIs() function and persist as a bool in
+    // the exported options:
+    const { shareWarningInfo = {} } = getAppOptions();
+    const { hasDataAPIs } = shareWarningInfo;
+    options.exportUsesDataAPIs = hasDataAPIs && hasDataAPIs();
+  }
+  // Override the channel if it is supplied to this function as channelId:
+  options.channel = channelId || options.channel;
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
 
@@ -163,7 +176,8 @@ export function getAppOptionsFile() {
  * looking at the style attributes. We use the element library to determine
  * which styles are common among each element and split those out into more
  * generic selectors. This function also removes all the style attributes from
- * the elements.
+ * the elements. It gives each element where it removed styles an
+ * 'appModernDesign' class.
  */
 function extractCSSFromHTML(el) {
   var css = [];
@@ -183,6 +197,7 @@ function extractCSSFromHTML(el) {
     if (baseEl.tagName.toLowerCase() === 'input') {
       selector += '[type=' + (baseEl.getAttribute('type') || 'text') + ']';
     }
+    selector += '.appModernDesign';
     selector += ',\n' + selector + ':hover';
     css.push(selector + ' {');
     for (var k = 0; k < baseEl.style.length; k++) {
@@ -213,11 +228,21 @@ function extractCSSFromHTML(el) {
           }
         }
         if (styleDiff.length > 0) {
-          css.push(selectorPrefix + '#' + child.id + ' {');
+          let childId = child.id;
+          const firstIdChar = childId.charAt(0);
+          if (!isNaN(parseInt(firstIdChar, 10))) {
+            // First character of id is a number. Must transform this to create
+            // legal CSS:
+            childId = `\\3${firstIdChar} ${childId.substring(1)}`;
+          }
+          css.push(selectorPrefix + '#' + childId + ' {');
           css = css.concat(styleDiff);
           css.push('}');
           css.push('');
         }
+        const exitingClassName = child.className;
+        const exitingClassNamePrefix = exitingClassName ? `${exitingClassName} ` : '';
+        child.className = `${exitingClassNamePrefix}appModernDesign`;
       }
       traverse(child);
     }
@@ -226,25 +251,66 @@ function extractCSSFromHTML(el) {
   return css.join('\n');
 }
 
+const fontAwesomeWOFFRelativeSourcePath = '/fonts/fontawesome-webfont.woff2';
+const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
+
+function getExportCreateChannelPath() {
+  const baseHref = project.getShareUrl();
+  return `${baseHref}/export_create_channel`;
+}
+
+/**
+ * Retrieves the export config object.
+ * @param {boolean} expoMode
+ * @returns {{channelId: string, path: string}} channelId only when overriding
+ */
+async function getExportConfig(expoMode) {
+  const exportConfigUrlSuffix = 'export_config?script_call=setExportConfig';
+  if (!expoMode) {
+    const baseHref = project.getShareUrl();
+    return { path: `${baseHref}/${exportConfigUrlSuffix}` };
+  }
+  const createChannelUrl = getExportCreateChannelPath();
+  const response = await fetch(createChannelUrl, { credentials: 'include' });
+  if (!response.ok) {
+    throw Error(`fetch failed with status ${response.status}`);
+  }
+  const json = await response.json();
+  const { channel_id: channelId } = json;
+
+  const baseHref = `${location.origin}${project.appToProjectUrl()}`;
+  return {
+    channelId: channelId,
+    path: `${baseHref}/${channelId}/${exportConfigUrlSuffix}`,
+  };
+}
+
 export default {
-  exportAppToZip(appName, code, levelHtml, expoMode) {
+  async exportAppToZip(appName, code, levelHtml, expoMode) {
     const { css, outerHTML } = transformLevelHtml(levelHtml);
 
+    const exportConfig = await getExportConfig(expoMode);
     const jQueryBaseName = 'jquery-1.12.1.min';
     var html;
     if (expoMode) {
       html = exportExpoIndexEjs({
+        exportConfigPath: exportConfig.path,
         htmlBody: outerHTML,
         applabApiPath: "applab-api.j",
         jQueryPath: jQueryBaseName + ".j",
         applabCssPath: "applab/applab.css",
+        fontPath: fontAwesomeWOFFPath,
         appOptionsPath: null,
         commonLocalePath: null,
         applabLocalePath: null,
         commonCssPath: null,
       });
     } else {
-      html = exportProjectEjs({htmlBody: outerHTML});
+      html = exportProjectEjs({
+        exportConfigPath: exportConfig.path,
+        htmlBody: outerHTML,
+        fontPath: fontAwesomeWOFFPath,
+      });
     }
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
@@ -254,11 +320,12 @@ export default {
       }, {
         url: '/blockly/js/en_us/applab_locale.js' + cacheBust,
       }, {
-        url: '/blockly/js/applab-api.js' + cacheBust,
-      }, {
         url: '/blockly/css/applab.css' + cacheBust,
       }, {
         url: '/blockly/css/common.css' + cacheBust,
+      }, {
+        dataType: 'binary',
+        url: fontAwesomeWOFFRelativeSourcePath + cacheBust,
       },
     ];
     if (expoMode) {
@@ -270,28 +337,28 @@ export default {
     const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
     const zipAssetPrefix = appName + '/assets/';
 
-    const appAssets = dashboard.assets.listStore.list().map(asset => ({
-      url: assetPrefix.fixPath(asset.filename),
-      rootRelativePath: rootRelativeAssetPrefix + asset.filename,
-      zipPath: zipAssetPrefix + asset.filename,
-      dataType: 'binary',
-      filename: asset.filename,
-    }));
+    const appAssets = generateAppAssets({
+      html,
+      code,
+      rootRelativeAssetPrefix,
+      zipAssetPrefix,
+    });
 
     if (expoMode) {
       appAssets.push({
+        url: exportExpoWarningPng,
+        zipPath: appName + '/appassets/warning.png',
+        dataType: 'binary',
+      });
+      appAssets.push({
         url: exportExpoIconPng,
-        rootRelativePath: 'appassets/icon.png',
         zipPath: appName + '/appassets/icon.png',
         dataType: 'binary',
-        filename: 'icon.png',
       });
       appAssets.push({
         url: exportExpoSplashPng,
-        rootRelativePath: 'appassets/splash.png',
         zipPath: appName + '/appassets/splash.png',
         dataType: 'binary',
-        filename: 'splash.png',
       });
     }
 
@@ -303,29 +370,47 @@ export default {
         appName: appName,
         projectId: project.getCurrentId()
       });
+      const { shareWarningInfo = {} } = getAppOptions();
+      const { hasDataAPIs } = shareWarningInfo;
+      const appJs = exportExpoAppEjs({
+        hasDataAPIs: hasDataAPIs && hasDataAPIs(),
+      });
 
       zip.file(appName + "/package.json", exportExpoPackageJson);
       zip.file(appName + "/app.json", appJson);
-      zip.file(appName + "/App.js", exportExpoAppJs);
+      zip.file(appName + "/App.js", appJs);
       zip.file(appName + "/CustomAsset.js", exportExpoCustomAssetJs);
+      zip.file(appName + "/DataWarning.js", exportExpoDataWarningJs);
     }
     // NOTE: for expoMode, it is important that index.html comes first...
     zip.file(mainProjectFilesPrefix + "index.html", rewriteAssetUrls(appAssets, html));
     zip.file(mainProjectFilesPrefix + "README.txt", readme);
-    zip.file(mainProjectFilesPrefix + "style.css", rewriteAssetUrls(appAssets, css));
+    const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
+    zip.file(mainProjectFilesPrefix + "style.css", fontAwesomeCSS + rewriteAssetUrls(appAssets, css));
     zip.file(mainProjectFilesPrefix + (expoMode ? "code.j" : "code.js"), rewriteAssetUrls(appAssets, code));
 
     const rootApplabPrefix = expoMode ? 'assets/applab/' : 'applab/';
     const rootRelativeApplabAssetPrefix = rootApplabPrefix + 'assets';
     const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
+    // Attempt to fetch applab-api.min.js if possible, but when running on non-production
+    // environments, fallback if we can't fetch that file to use applab-api.js:
+    const applabApiAsset = new $.Deferred();
+    download('/blockly/js/applab-api.min.js' + cacheBust, 'text')
+      .then((data, success, jqXHR) => applabApiAsset.resolve([data, success, jqXHR]),
+          () => download('/blockly/js/applab-api.js' + cacheBust, 'text')
+              .then((data, success, jqXHR) => applabApiAsset.resolve([data, success, jqXHR]),
+                  () => applabApiAsset.reject(new Error("failed to fetch applab-api.js"))));
+
     return new Promise((resolve, reject) => {
-      $.when(...[...staticAssets, ...appAssets].map(
+      $.when(applabApiAsset, ...([...staticAssets, ...appAssets].map(
         (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
-      )).then(
-        ([commonLocale], [applabLocale], [applabApi], [applabCSS], [commonCSS], ...rest) => {
+      ))).then(
+        ([applabApi], [commonLocale], [applabLocale], [applabCSS], [commonCSS], [fontAwesomeWOFF], ...rest) => {
+          const appOptionsContents = getAppOptionsFile(expoMode, exportConfig.channelId);
           zip.file(appName + "/" + (expoMode ? "assets/applab-api.j" : rootApplabPrefix + "applab-api.js"),
-                   [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
+                   [appOptionsContents, commonLocale, applabLocale, applabApi].join('\n'));
+          zip.file(mainProjectFilesPrefix + fontAwesomeWOFFPath, fontAwesomeWOFF);
           if (expoMode) {
             const [data] = rest[0];
             zip.file(mainProjectFilesPrefix + jQueryBaseName + '.j', data);
@@ -389,7 +474,7 @@ export default {
           );
         },
         () => {
-          logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
+          logToCloud.addPageAction(logToCloud.PageAction.StaticResourceFetchError, {
             app: 'applab'
           }, 1/100);
           reject(new Error("failed to fetch assets"));
@@ -438,29 +523,38 @@ export default {
   },
 
   async publishToExpo(appName, code, levelHtml) {
-    const appOptionsJs = getAppOptionsFile();
     const { css, outerHTML } = transformLevelHtml(levelHtml);
+    const fontAwesomeCSS = exportFontAwesomeCssEjs({fontPath: fontAwesomeWOFFPath});
+    const exportConfig = await getExportConfig(true);
+    const appOptionsJs = getAppOptionsFile(true, exportConfig.channelId);
+    const { origin } = window.location;
+    const applabApiPath = getEnvironmentPrefix() === 'cdo-development' ?
+        `${origin}/blockly/js/applab-api.js` :
+        `${origin}/blockly/js/applab-api.min.js`;
     const html = exportExpoIndexEjs({
+      exportConfigPath: exportConfig.path,
       htmlBody: outerHTML,
-      commonLocalePath: "https://studio.code.org/blockly/js/en_us/common_locale.js",
-      applabLocalePath: "https://studio.code.org/blockly/js/en_us/applab_locale.js",
+      commonLocalePath: `${origin}/blockly/js/en_us/common_locale.js`,
+      applabLocalePath: `${origin}/blockly/js/en_us/applab_locale.js`,
       appOptionsPath: "appOptions.j",
-      applabApiPath: "https://studio.code.org/blockly/js/applab-api.js",
+      fontPath: fontAwesomeWOFFPath,
+      applabApiPath,
       jQueryPath: "https://code.jquery.com/jquery-1.12.1.min.js",
-      commonCssPath: "https://studio.code.org/blockly/css/common.css",
-      applabCssPath: "https://studio.code.org/blockly/css/applab.css",
+      commonCssPath: `${origin}/blockly/css/common.css`,
+      applabCssPath: `${origin}/blockly/css/applab.css`,
+    });
+    const { shareWarningInfo = {} } = getAppOptions();
+    const { hasDataAPIs } = shareWarningInfo;
+    const appJs = exportExpoAppEjs({
+      hasDataAPIs: hasDataAPIs && hasDataAPIs(),
     });
 
-    const appAssets = dashboard.assets.listStore.list().map(asset => ({
-      url: assetPrefix.fixPath(asset.filename),
-      rootRelativePath: asset.filename,
-      dataType: 'binary',
-      filename: asset.filename,
-    }));
+    const appAssets = generateAppAssets({ html, code });
 
     const files = {
-      'App.js': { contents: exportExpoAppJs, type: 'CODE'},
+      'App.js': { contents: appJs, type: 'CODE'},
       'CustomAsset.js': { contents: exportExpoCustomAssetJs, type: 'CODE'},
+      'DataWarning.js': { contents: exportExpoDataWarningJs, type: 'CODE'},
     };
 
     const session = new SnackSession({
@@ -473,7 +567,7 @@ export default {
     // Important that index.html comes first:
     const fileAssets = [
       { filename: 'index.html', data: rewriteAssetUrls(appAssets, html) },
-      { filename: 'style.css', data: rewriteAssetUrls(appAssets, css) },
+      { filename: 'style.css', data: fontAwesomeCSS + rewriteAssetUrls(appAssets, css) },
       { filename: 'code.j', data: rewriteAssetUrls(appAssets, code) },
       { filename: 'appOptions.j', data: appOptionsJs },
     ];
@@ -490,6 +584,19 @@ export default {
       };
     });
 
+    appAssets.push({
+      url: fontAwesomeWOFFRelativeSourcePath,
+      dataType: 'binary',
+      filename: fontAwesomeWOFFPath,
+    });
+
+    appAssets.push({
+      url: exportExpoWarningPng,
+      dataType: 'binary',
+      filename: 'warning.png',
+      assetLocation: 'appassets/',
+    });
+
     const assetDownloads = appAssets.map(asset =>
       download(asset.url, asset.dataType || 'text')
     );
@@ -501,7 +608,7 @@ export default {
     const snackAssetUrls = await Promise.all(assetUploads);
 
     snackAssetUrls.forEach((url, index) => {
-      files['assets/' + appAssets[index].filename] = {
+      files[(appAssets[index].assetLocation || 'assets/') + appAssets[index].filename] = {
         contents: url,
         type: 'ASSET',
       };
@@ -519,13 +626,50 @@ export default {
   }
 };
 
+function generateAppAssets(params) {
+  const { html = '', code = '', rootRelativeAssetPrefix = '', zipAssetPrefix = '' } = params;
+
+  const appAssets = dashboard.assets.listStore.list().map(asset => ({
+    url: assetPrefix.fixPath(asset.filename),
+    rootRelativePath: rootRelativeAssetPrefix + asset.filename,
+    zipPath: zipAssetPrefix + asset.filename,
+    dataType: 'binary',
+    filename: asset.filename,
+  }));
+
+  const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  const allSounds = [
+    ...(html.match(soundRegex) || []),
+    ...(code.match(soundRegex) || []),
+  ];
+  const uniqueSounds = [...(new Set(allSounds))];
+  const soundAssets = uniqueSounds.map(soundProtocolUrl => {
+    const soundOriginUrl = assetPrefix.fixPath(soundProtocolUrl);
+    const filename = soundProtocolUrl.replace(assetPrefix.SOUND_PREFIX, '');
+    return {
+      url: soundOriginUrl,
+      rootRelativePath: rootRelativeAssetPrefix + filename,
+      zipPath: zipAssetPrefix + filename,
+      dataType: 'binary',
+      filename,
+      searchUrl: soundProtocolUrl,
+    };
+  });
+
+  return [
+    ...appAssets,
+    ...soundAssets,
+  ];
+}
+
 // TODO: for expoMode, replace spaces in asset filenames or wait for this fix
 // to make it into Metro Bundler:
 // https://github.com/facebook/react-native/pull/10365
 function rewriteAssetUrls(appAssets, data) {
   return appAssets.reduce(function (data, assetToDownload) {
-    data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`), `"${assetToDownload.rootRelativePath}"`);
-    return data.replace(new RegExp(`["|']${assetToDownload.filename}["|']`), `"${assetToDownload.rootRelativePath}"`);
+    const searchUrl = assetToDownload.searchUrl || assetToDownload.filename;
+    data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`, 'g'), `"${assetToDownload.rootRelativePath}"`);
+    return data.replace(new RegExp(`["|']${searchUrl}["|']`, 'g'), `"${assetToDownload.rootRelativePath}"`);
   }, data);
 }
 
@@ -549,7 +693,7 @@ function transformLevelHtml(levelHtml) {
 }
 
 function getEnvironmentPrefix() {
-  const hostname = window.location.hostname;
+  const { hostname } = window.location;
   if (hostname.includes("adhoc")) {
     // As adhoc hostnames may include other keywords, check it first.
     return "cdo-adhoc";

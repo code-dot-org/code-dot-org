@@ -8,12 +8,17 @@ class ScriptsController < ApplicationController
 
   def show
     if @script.redirect_to?
-      redirect_to Script.get_from_cache(@script.redirect_to)
+      redirect_path = script_path(Script.get_from_cache(@script.redirect_to))
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to "#{redirect_path}#{redirect_query_string}"
       return
     end
 
     if request.path != (canonical_path = script_path(@script))
-      redirect_to canonical_path, status: :moved_permanently
+      # return a temporary redirect rather than a permanent one, to avoid ever
+      # serving a permanent redirect from a script's new location to its old
+      # location during the script renaming process.
+      redirect_to canonical_path
       return
     end
   end
@@ -117,6 +122,7 @@ class ScriptsController < ApplicationController
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
+      supported_locales: [],
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]

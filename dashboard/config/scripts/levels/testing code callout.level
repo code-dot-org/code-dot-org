@@ -176,7 +176,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"testing_code_callout\",\r\n  \"callout_text\": \"This makes the sprite move!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"sprite.x = sprite.x + 1\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 200,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",

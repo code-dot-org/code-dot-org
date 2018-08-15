@@ -5,4 +5,4 @@ cmd 'node -v', 'v6.'
 cmd 'npm -v', '3.'
 
 cmd 'which yarn', '/usr/bin/yarn'
-cmd 'yarn --version', '0.23.2'
+cmd 'yarn --version', '1.6.0'

@@ -22,7 +22,8 @@ export default class CrosshairOverlay extends React.Component {
     width: PropTypes.number,
     height: PropTypes.number,
     mouseX: PropTypes.number,
-    mouseY: PropTypes.number
+    mouseY: PropTypes.number,
+    flip: PropTypes.bool,
   };
 
   render() {
@@ -31,19 +32,21 @@ export default class CrosshairOverlay extends React.Component {
       return null;
     }
 
+    const flip = this.props.flip;
+
     return (
       <g className="crosshair-overlay">
         <line
           x1={this.props.mouseX}
-          y1={this.props.mouseY - CROSSHAIR_MARGIN}
+          y1={flip ? this.props.height : 0}
           x2={this.props.mouseX}
-          y2={0}
+          y2={this.props.mouseY - CROSSHAIR_MARGIN * (flip ? -1 : 1)}
           style={styles.line}
         />
         <line
-          x1={this.props.mouseX - CROSSHAIR_MARGIN}
+          x1={0}
           y1={this.props.mouseY}
-          x2={0}
+          x2={this.props.mouseX - CROSSHAIR_MARGIN}
           y2={this.props.mouseY}
           style={styles.line}
         />

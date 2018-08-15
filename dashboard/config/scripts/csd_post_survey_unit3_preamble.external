@@ -1,0 +1,8 @@
+name 'csd-post-survey-unit3-preamble'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Unit 3: Interactive Games and Animations
+
+![](https://images.code.org/8bd6359a99d85595cd13a36c4496f8f9-image-1526917686038.59.04 PM.png)
+MARKDOWN

@@ -22,6 +22,8 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_UNFINISHED,
       },
       customValidator: function () {
+        // Don't run all 10,000 steps...
+        Maze.executionInfo.steps_.length = 0;
         return Maze.result === 2;
       },
       xml: '<xml><block type="when_run"><next><block type="maze_untilBlockedOrNotClear"><title name="DIR">isPathForward</title><statement name="DO"><block type="maze_moveForward"><next><block type="maze_turn"><title name="DIR">turnLeft</title><next><block type="maze_turn"><title name="DIR">turnLeft</title></block></next></block></next></block></statement></block></next></block></xml>'

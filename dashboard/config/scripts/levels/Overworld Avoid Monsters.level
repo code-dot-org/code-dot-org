@@ -46,6 +46,7 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

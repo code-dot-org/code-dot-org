@@ -44,7 +44,10 @@
         = f.hidden_field :hashed_email
 
         #email-block.itemblock
-          .labelblock= t('activerecord.attributes.user.email')
+          .labelblock
+            = t('activerecord.attributes.user.email')
+            %span.student-options
+              *
           = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
           .error_in_field
 
@@ -80,7 +83,33 @@
           = f.select :gender, gender_options, {disabled: '', selected: ''}, {class: 'fieldblock'}
           .error_in_field
 
-        #teacher-terms{style: 'display: none'}
+        #email_preference_opt_in-block
+          #optin-container
+            .email-preference.itemblock{style: "display: none"}
+              .labelblock-wide
+                = t('signup_form.email_preference_question').html_safe
+                = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
+              %select#user_email_preference_opt_in.fieldblock{name: "user[email_preference_opt_in]", type: "select"}
+                %option{value: "", selected: true, disabled: true}
+                %option{value: "yes"}= t('signup_form.email_preference_yes').html_safe
+                %option{value: "no"}= t('signup_form.email_preference_no').html_safe
+
+          #optin2-container{style: "display: none"}
+            .email-preference.itemblock{style: "display: none"}
+              .labelblock-wide
+                = t('signup_form.email_preference_question').html_safe
+                = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
+              #optin2-yes-container
+                %input{type: "radio", id: "optin2-yes", name: "user[email_preference_opt_in]", value: "yes"}
+                %label{for: "optin2-yes"}= t('signup_form.email_preference_yes').html_safe
+              #optin2-no-container
+                %input{type: "radio", id: "optin2-no", name: "user[email_preference_opt_in]", value: "no"}
+                %label{for: "optin2-no"}= t('signup_form.email_preference_no').html_safe
+
+          .error_in_field.checkbox-error
+
+        -# Additional terms view for teachers only.
+        .teacher-options{style: 'display: none'}
           .right
             %iframe#print-frame{src: '/terms-and-privacy', style: 'display: none'}
             %a#print-terms{href: "#"}
@@ -96,22 +125,44 @@
             %hr
             %h1.custom-h1= t('terms_interstitial.privacy_notice')
             = render partial: 'home/privacy_notice'
-          %br
-          #terms_of_service_version-block.itemblock
-            .error_in_field.checkbox-error
-            %br
-            = f.label :terms_of_service_version do
-              = f.check_box :terms_of_service_version, {class: 'terms-checkbox', :checked => true}, User::TERMS_OF_SERVICE_VERSIONS.last
-              = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
 
+        -# Show terms of service for both student and teacher
         %br
+        #terms_of_service_version-block.itemblock
+          .error_in_field.checkbox-error
+          %br
+          = f.label :terms_of_service_version do
+            = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, User::TERMS_OF_SERVICE_VERSIONS.last
+            -# Teacher text.
+            %span.teacher-options{style: 'display: none'}
+              = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+            -# Student text.
+            %span.student-options
+              = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+              != t('signup_form.under_13_consent')
+
+        -# If GDPR applies, show an additional checkbox.
+        #data_transfer_agreement_accepted-block.itemblock
+          - if request.gdpr? || request.params['force_in_eu']
+            .error_in_field.checkbox-error
+            = f.hidden_field :data_transfer_agreement_required, value: "1"
+            %br/
+            = f.label :data_transfer_agreement_accepted, id: "gdpr_agreement" do
+              = f.check_box :data_transfer_agreement_accepted, {class: 'terms-checkbox'}
+              %span
+                != t('signup_form.agree_us_website')
+                != t('signup_form.my_data_to_us')
+
+        %br/
         #signup-error.error{style: 'display: none'}= t('signup_form.error')
         %button#signup-button.primary= t('signup_form.submit')
 
-        #student-terms
+        -# More information for students about email storage.
+        .student-options
           %br/
           %br/
-          %br/
+          *
+          -# Temporarily use student_terms so that existing translations get used.
           != t('signup_form.student_terms')
 
     .span4
@@ -137,6 +188,7 @@
       invalidPasswordString: "#{t('signup_form.invalid_password')}",
       passwordMismatchString: "#{t('signup_form.mismatch_password')}",
       acceptTermsString: "#{t('signup_form.accept_terms')}",
+      emailPreferenceOptInString: "#{t('signup_form.email_preference_required')}",
       usIP: #{us_ip}
     });
   });

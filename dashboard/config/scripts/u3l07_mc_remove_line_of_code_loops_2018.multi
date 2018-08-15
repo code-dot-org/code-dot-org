@@ -1,0 +1,28 @@
+name 'U3L07 - MC remove line of code loops_2018'
+
+question 'Which line of code should be removed to make the program do what it\'s supposed to?'
+wrong '1'
+wrong '5'
+wrong '6'
+right '7'
+wrong '14'
+
+markdown <<MARKDOWN
+## Multiple Choice: Code Trace
+A programmer wants to write a program in which the turtle draws 8 squares in a row while moving forward. The final result *should* look like this:
+
+<img src="https://images.code.org/59b3db519d6507b71fdf0670eeb98ab2-image-1443129607058.png" style="float: left; height: 120px">
+
+But **something is wrong!**  The incorrect code is shown below.  The programmer has attempted to write a function to draw a single square.  Then he wrote another function that attempts to call that function 8 times.  
+
+Mentally trace through the code and determine which line of code should be removed to make the program do what it's supposed to.
+
+<img src="https://images.code.org/792ec4d5f8919808ea47ec657c969314-image-1443129807227.png" style="width: 300px">
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Correct answer: Line 7.
+
+The turnRight on line 7 will re-orient after drawing each square, which causes the turtle to not travel straight forward drawing squares. Since the drawSquare function has the turtle finish at the same location and facing the same direction that it started, all that needs to happen after drawing each square is to move forward.
+
+MARKDOWN

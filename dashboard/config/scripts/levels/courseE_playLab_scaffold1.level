@@ -44,6 +44,7 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The `set actor 1 to ??? image` block can be used to add an actor to the stage.\",\"hint_id\":\"courseE_playLab_scaffold1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1cf3941a36a16e8374a8175563175dff/courseE_playLab_scaffold1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.\",\"hint_id\":\"courseE_playLab_scaffold1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d1181b1f0daeeef46ed61da6a128eb12/courseE_playLab_scaffold1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use `set ??? background` to choose a background for your scene.\",\"hint_id\":\"courseE_playLab_scaffold1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/90dac11d2a53fa4f6b44f74983a2720f/courseE_playLab_scaffold1.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 4,
     "contained_level_names": null
   },
   "published": true,

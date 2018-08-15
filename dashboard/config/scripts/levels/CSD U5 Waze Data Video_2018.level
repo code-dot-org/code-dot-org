@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-04-30T18:05:33.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csd_external_waze_data",
+    "markdown_instructions": "Watch this video to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from.",
+    "instructions_important": "false",
+    "display_name": "Collecting Information About Users",
+    "encrypted_teacher_markdown": "tIcDCDuS63ml0BA5dYeDGE/9AEHGX96lq0OxZL1bz0zSPSDerzh73cFJTmhn\nu6X2EQUN0HgOYEBeewYoaoXici9DBR4ELmBgUPNbkJtQ7tsegG21UhuRlNDG\n6TXBM2il2uZZdwf5yLYHIYLO+PbYKnmNu4X8F7MjGNIVwVdu1WmlVe2jwAwB\nwDQYYiXxl562xzf0wR8lxydETbShPjwFAvToqkB07WWyQFRH7yAbn95QayV1\nu6UXVYZKCzCy61+e\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 10494,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-25 22:42:09 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-08 20:45:21 +0000\",\"changed\":[\"video_key\",\"markdown_instructions\",\"encrypted_teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

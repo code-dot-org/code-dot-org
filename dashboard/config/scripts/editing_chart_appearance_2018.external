@@ -1,0 +1,60 @@
+name 'Editing Chart Appearance_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+# Give Your Chart a Makeover!
+
+You’ve now successfully learned to create charts! Now you’ll learn to further **customize the appearance of your chart**, which will make your visualization easier to read and understand. This exercise will **walk you through the steps to customize the line chart you created a few levels ago**, but these same steps can be applied to any charts you make in the future.
+
+---
+
+## Chart Title
+
+A good chart title should effectively summarize the data story in the chart. You can change the title of your chart by double-clicking it.
+
+**Do This:** Change the title of your line chart to **“Average Rating by Age of Reviewer”**.
+
+![](https://images.code.org/0d0401220c11c43e3742ad8c80c0ae99-image-1454103545269.gif)
+*Change the chart title.*
+
+---
+
+## Axis Labels
+
+Your chart should include labels that indicate what the axes represent. Include measurement units, if applicable.
+
+**Do This:** Rename your horizontal axis to **“Age (years)”** and your left vertical axis to **“Movie Rating”**.
+
+* **Hint:** You will need to right-click the chart to access the axis labels.
+
+![](https://images.code.org/7184121a90a5d537eaeb2497c7616cc8-image-1454103551555.gif)
+*Add axis labels.*
+
+---
+
+## Legend
+
+You may notice that the labels in your legend are not very official-looking. To change the text that appears on the chart, you have to change the text in the column headers themselves.
+
+**Do This:** Change the legend labels to **“Avg. Rating: Women”** and **“Avg. Rating: Men”**.
+
+* Note: If you can’t read your legend labels because the text is overlapping, try adjusting the style (bold, italics, etc.) of your legend.
+
+![](https://images.code.org/2b62c373903b2ce6bc877528fc30b04c-image-1454103555027.gif)
+*Change the labels for your chart’s legend.*
+
+---
+
+## Ranges
+
+Examine both the far right and far left sides of your chart. Notice that both the men’s and women’s lines do not run continuously across the entire graph. The men’s line has a gap on the left side of the chart, and the women’s line ends shortly after age 55 and only has a few dots after that. These discontinuities appear because there are gaps in the data set.
+
+**Do This:** Adjust the boundaries for your chart’s x-axis using the **“Min”** and **“Max”** text inputs.
+
+* Try to minimize the discontinuities shown in your chart while still displaying as much of the two lines as possible.
+* If you want to adjust the boundaries for the y-axis, select **“Left vertical”** from the **“Axis”** dropdown menu and adjust **“Min”** and **“Max”** for that axis.
+
+![](https://images.code.org/b3a4b3c24f585d79627fab6e30aa64b9-image-1454103557193.gif)
+*Adjust the minimum and maximum x-values for the chart.*
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

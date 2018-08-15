@@ -54,7 +54,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Kite Free Play\r\n\r\nHere is the flying kite you have been working on. Continue to improve the animation!\r\n\r\n# Do This\r\n\r\n* Add at least 1 other sprite.\r\n* Make the sprite move.\r\n* Improve the background by adding clouds or other objects.\r\n* Add more ideas of your own!",

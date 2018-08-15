@@ -396,7 +396,11 @@ EquationSet.getEquationFromBlock = function (block) {
         EquationSet.getEquationFromBlock(firstChild).expression :
         new ExpressionNode(0);
 
-      return new Equation(name, block.getVars(), expression);
+      return new Equation(
+          name,
+          Blockly.Variables.allVariablesFromBlock(block),
+          expression,
+      );
 
     case 'functional_parameters_get':
       return new Equation(null, [], new ExpressionNode(block.getTitleValue('VAR')));

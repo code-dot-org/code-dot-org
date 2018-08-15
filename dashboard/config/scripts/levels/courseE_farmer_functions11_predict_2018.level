@@ -35,15 +35,15 @@
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": [
       "courseE_multi_farmer_functions11_predict_2018"
-    ],
-    "top_level_procedure_autopopulate": "false",
-    "name_suffix": "_2018"
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 18:04:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-15 01:19:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:22:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:30:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:31:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:08:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:36:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:37:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:37:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-08 00:22:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 18:04:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-15 01:19:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:22:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:30:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:31:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:08:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:36:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:37:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:37:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-08 00:22:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-05-01 03:12:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 03:16:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 03:19:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 03:22:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -52,32 +52,26 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="find pumpkin"/>
-              <next>
+            <block type="maze_untilBlocked">
+              <statement name="DO">
                 <block type="procedures_callnoreturn">
-                  <mutation name="wander path"/>
+                  <mutation name="check square for corn"/>
                   <next>
-                    <block type="procedures_callnoreturn">
-                      <mutation name="find pumpkin"/>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
                       <next>
                         <block type="procedures_callnoreturn">
-                          <mutation name="wander path"/>
-                          <next>
-                            <block type="procedures_callnoreturn">
-                              <mutation name="find pumpkin"/>
-                              <next>
-                                <block type="procedures_callnoreturn">
-                                  <mutation name="wander path"/>
-                                  <next>
-                                    <block type="procedures_callnoreturn">
-                                      <mutation name="check and pick"/>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
+                          <mutation name="get produce"/>
                         </block>
                       </next>
                     </block>
@@ -87,67 +81,87 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" x="250px" y="20px">
+        <block type="procedures_defnoreturn" x="250" y="550">
           <mutation/>
-          <title name="NAME">check and pick</title>
+          <title name="NAME">pick along path</title>
           <statement name="STACK">
-            <block type="harvester_ifHasCropElse">
-              <title name="LOC">Corn</title>
+            <block type="harvester_untilHasCrop">
+              <title name="LOC">Pumpkin</title>
               <statement name="DO">
-                <block type="harvester_corn"/>
-              </statement>
-              <statement name="ELSE">
-                <block type="harvester_ifHasCropElse">
-                  <title name="LOC">Lettuce</title>
-                  <statement name="DO">
-                    <block type="harvester_lettuce"/>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="harvester_ifHasCrop">
-                      <title name="LOC">Pumpkin</title>
-                      <statement name="DO">
-                        <block type="harvester_pumpkin"/>
-                      </statement>
+                <block type="procedures_callnoreturn">
+                  <mutation name="check square for corn"/>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
                     </block>
-                  </statement>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">find pumpkin</title>
-          <statement name="STACK">
-            <block type="harvester_untilHasPumpkin">
-              <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
-                </block>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" x="250px" y="300px">
-          <mutation/>
-          <title name="NAME">wander path</title>
-          <statement name="STACK">
-            <block type="maze_untilBlocked">
-              <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
+                  </next>
                 </block>
               </statement>
               <next>
                 <block type="procedures_callnoreturn">
-                  <mutation name="check and pick"/>
+                  <mutation name="get all pumpkins"/>
                 </block>
               </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" y="250">
+          <mutation/>
+          <title name="NAME">pumpkin square</title>
+          <statement name="STACK">
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="pick along path"/>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" x="250" y="100">
+          <mutation/>
+          <title name="NAME">check square for corn</title>
+          <statement name="STACK">
+            <block type="harvester_ifHasCrop" can_disconnect_from_parent="false">
+              <title name="LOC">Corn</title>
+              <statement name="DO">
+                <block type="harvester_corn" can_disconnect_from_parent="false"/>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" x="250" y="350">
+          <mutation/>
+          <title name="NAME">get produce</title>
+          <statement name="STACK">
+            <block type="harvester_untilHasCrop">
+              <title name="LOC">Lettuce</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                </block>
+              </statement>
+              <next>
+                <block type="harvester_lettuce"/>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" y="500">
+          <mutation/>
+          <title name="NAME">get all pumpkins</title>
+          <statement name="STACK">
+            <block type="harvester_whileHasCrop">
+              <title name="LOC">Pumpkin</title>
+              <statement name="DO">
+                <block type="harvester_pumpkin" editable="false"/>
+              </statement>
             </block>
           </statement>
         </block>
@@ -198,5 +212,124 @@
         <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_untilBlocked">
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="check square for corn"/>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="get produce"/>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">pick along path</title>
+          <statement name="STACK">
+            <block type="harvester_untilHasCrop">
+              <title name="LOC">Pumpkin</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="check square for corn"/>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="get all pumpkins"/>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">pumpkin square</title>
+          <statement name="STACK">
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="pick along path"/>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">check square for corn</title>
+          <statement name="STACK">
+            <block type="harvester_ifHasCrop" can_disconnect_from_parent="false">
+              <title name="LOC">Corn</title>
+              <statement name="DO">
+                <block type="harvester_corn" can_disconnect_from_parent="false"/>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">get produce</title>
+          <statement name="STACK">
+            <block type="harvester_untilHasCrop">
+              <title name="LOC">Lettuce</title>
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                </block>
+              </statement>
+              <next>
+                <block type="harvester_lettuce"/>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">get all pumpkins</title>
+          <statement name="STACK">
+            <block type="harvester_whileHasCrop">
+              <title name="LOC">Pumpkin</title>
+              <statement name="DO">
+                <block type="harvester_pumpkin" editable="false"/>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>

@@ -62,12 +62,13 @@ Across all the [video tutorials](/educate/videos) we produce, we've recruited a 
 
 The results speak for themselves:
 
-|Code.org program | Scale (students) | % Female | % Underrepresented minorities <br/>(Black, Hispanic, Pacific Islander, Native American)|
-|------------ | ------------- | ------------ | ------------|
-|Hour of Code | Tens of millions | 49% | 38.7% (U.S.)|
-|CS Fundamentals for K-8  | Millions | 45% | 48% (U.S.)|
-|Exploring CS - high school intro class | Tens of thousands | 36% (U.S.) | 58% (U.S.)|
-|CS Principles - high school AP class | Thousands | 31% (U.S.) | 49% (U.S.)|
+|Code.org program                                  | Scale (students)  | % Female  | % Underrepresented minorities <br/>(Black, Hispanic, Pacific Islander, Native American)|
+|------------------------------------------------- | ----------------- | ----------| ---------------------------------------------------------------------------------------|
+|Hour of Code                                      | Tens of millions  | 49%       | 38.7% (U.S.)                                                                           |
+|CS Fundamentals for K-8                           | Millions          | 45%       | 48% (U.S.)                                                                             |
+|Exploring CS - high school intro class            | Tens of thousands | 36% (U.S.)| 58% (U.S.)                                                                             |
+|CS Discoveries - middle & high school intro class | Tens of thousands | 38% (U.S.)| 49% (U.S.)                                                                             |
+|CS Principles - high school AP class              | Tens of thousands | 33% (U.S.)| 42% (U.S.)                                                                             |
 
 <center><font size="1">Source: Code.org surveys of students or participating educators</font></center>
 <br/>

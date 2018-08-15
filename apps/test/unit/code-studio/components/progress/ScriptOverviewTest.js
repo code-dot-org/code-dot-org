@@ -23,6 +23,7 @@ const defaultProps = {
   sectionsInfo: [],
   scriptHasLockableStages: false,
   scriptAllowsHiddenStages: false,
+  versions: [],
 };
 
 describe('ScriptOverview', () => {

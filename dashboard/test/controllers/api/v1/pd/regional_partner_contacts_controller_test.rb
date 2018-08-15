@@ -12,7 +12,8 @@ class Api::V1::Pd::RegionalPartnerContactsControllerTest < ::ActionController::T
     school_type: 'public',
     school_state: 'NY',
     school_district_other: true,
-    school_district_name: 'Hogwarts'
+    school_district_name: 'Hogwarts',
+    opt_in: 'Yes'
   }
 
   test 'create creates a new regional partner contact' do

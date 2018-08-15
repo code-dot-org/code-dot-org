@@ -9,9 +9,9 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "false",
-    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Now, get Jorge to move right when the `right` button is clicked.",
+    "instructions": "Add another event block to get Jorge to move right when the `right` button is clicked.",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -47,7 +47,7 @@
     "timeout_failure_tick": "0",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_playlab_events4_callout1\",\r\n  \"callout_text\": \"This is a callout\",\r\n  \"element_id\": \"#whenArrow\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "project_template_level_name": "gradek_playlab_events5c_template_2018",
-    "markdown_instructions": "Now, get Jorge to move right when the right arrow button is clicked.",
+    "markdown_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the event block that you will need to get Jorge to move right:\\n\\n<xml><block type=\\\"studio_move\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"DIR\\\">2</title>\\n  </block></xml>\",\"hint_id\":\"courseA_playLab_events4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/18040c96ad827073ee04d73bfbe5ef34/courseA_playLab_events4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the code you will need to complete this puzzle:\\n\\n<xml><block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">right</title>\\n    <next>\\n  <block type=\\\"studio_move\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"DIR\\\">2</title>\\n  </block></next></block></xml>\",\"hint_id\":\"courseA_playLab_events4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4a2d790296ae7eab7e5cf5a78e1e1ae4/courseA_playLab_events4.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -55,11 +55,16 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 7290,
     "name_suffix": "_2018",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:42:16 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 17:50:04 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:42:16 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 17:50:04 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-17 19:25:01 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

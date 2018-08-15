@@ -43,11 +43,11 @@ class SurveyResultsHelperTest < ActionView::TestCase
     assert has_any_student_under_13?
   end
 
-  test 'do not show diversity survey' do
+  test 'show diversity survey' do
     stubs(:language).returns "en"
     stubs(:request).returns(stub(location: stub(try: "RD")))
     follower = create :follower, user: @teacher
     follower.student_user.update(age: 10)
-    refute show_diversity_survey? SurveyResult::DIVERSITY_2017
+    assert show_diversity_survey? SurveyResult::DIVERSITY_2017
   end
 end

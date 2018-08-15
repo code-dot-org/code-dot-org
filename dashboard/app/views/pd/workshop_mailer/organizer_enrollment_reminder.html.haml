@@ -19,9 +19,9 @@
   workshop.
 
 - if @workshop.course == Pd::Workshop::COURSE_CSP
-  = render partial: 'csp_supply_list'
+  = render partial: 'supply_list'
 - elsif @workshop.course == Pd::Workshop::COURSE_CSD
-  = render partial: 'csd_supply_list'
+  = render partial: 'supply_list'
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'

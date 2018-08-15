@@ -51,7 +51,7 @@ video_player: true
   = view :map
 
   #columns.desktop-feature{:style=>'clear:both; overflow:hidden'}
-    #column1{:style=>'float:left; width: 33.33%'}
+    #column1{:style=>'float:left; width: 50%'}
       %h2 Teachers & Educators
       #column1content
         -count = 0
@@ -70,7 +70,7 @@ video_player: true
 
         = view 'find-on-fb', current_site:request.site
 
-    #column2{:style=>'float:left; width: 33.33%; padding-right: 25px; padding-left: 25px'}
+    #column2{:style=>'float:left; width: 50%; padding-left: 25px'}
       %h2 Latest Highlights
       #column2content
         -count = 0
@@ -87,10 +87,6 @@ video_player: true
         %br
         %br
         %a{:href=>'/about/news', :style=>'float:right'} See all
-
-    #column3{:style=>'float:left; width: 33.33%;'}
-      %h2 From the Community
-      = view :index_twitter
 
   #gap
 

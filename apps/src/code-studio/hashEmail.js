@@ -1,13 +1,13 @@
 import $ from 'jquery';
 import MD5 from 'crypto-js/md5';
 
-var EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
-module.exports = function hashEmail(options) {
+export default function (options) {
   // Hash the email, if it is an email.
-  var email = $(options.email_selector).val().toLowerCase().trim();
+  const email = normalizeEmail($(options.email_selector).val());
   if (email !== '' && EMAIL_REGEX.test(email)) {
-    var hashed_email = MD5(email);
+    const hashed_email = hashEmail(email);
     $(options.hashed_email_selector).val(hashed_email);
 
     // Unless we want to deliberately skip the step of clearing the email.
@@ -18,4 +18,12 @@ module.exports = function hashEmail(options) {
       }
     }
   }
-};
+}
+
+export function hashEmail(cleartextEmail) {
+  return MD5(normalizeEmail(cleartextEmail)).toString();
+}
+
+function normalizeEmail(rawEmail) {
+  return rawEmail.toLowerCase().trim();
+}

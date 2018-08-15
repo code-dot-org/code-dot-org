@@ -586,6 +586,7 @@ describe('progressReduxTest', () => {
             levelNumber: undefined,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           },
           {
             status: 'not_tried',
@@ -598,6 +599,7 @@ describe('progressReduxTest', () => {
             levelNumber: 1,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           },
           {
             status: 'not_tried',
@@ -610,6 +612,7 @@ describe('progressReduxTest', () => {
             levelNumber: 2,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           }
         ],
         [
@@ -624,6 +627,7 @@ describe('progressReduxTest', () => {
             levelNumber: 1,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           },
           {
             status: 'perfect',
@@ -636,6 +640,7 @@ describe('progressReduxTest', () => {
             levelNumber: 2,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           },
           {
             status: 'attempted',
@@ -648,6 +653,7 @@ describe('progressReduxTest', () => {
             levelNumber: 3,
             isCurrentLevel: false,
             isConceptLevel: false,
+            paired: undefined
           }
         ]
       ];

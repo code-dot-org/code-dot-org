@@ -6,7 +6,6 @@ import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocomplete
 import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -54,9 +53,6 @@ window.SignupManager = function (options) {
   this.options = options;
   var self = this;
 
-  const optionalTestGroup = (Math.random() < 0.5 ? 'control' : 'optional-removed');
-  const showOptional = optionalTestGroup === 'control';
-
   let schoolData = {
     country: options.usIP ? 'United States' : '',
     nces: '',
@@ -76,25 +72,7 @@ window.SignupManager = function (options) {
     showTeacher();
   }
 
-  function getSchoolInfoSplitTestData() {
-    return JSON.stringify({
-      'country': schoolData.country,
-      'nces': schoolData.nces
-    });
-  }
-
-  function sendSchoolInfoSplitTestEvent(event) {
-    firehoseClient.putRecord(
-      {
-        study: 'school-info-optional',
-        study_group: optionalTestGroup,
-        event: event,
-        data_json: getSchoolInfoSplitTestData(),
-      }
-    );
-  }
-
-  function formSuccess(success) {
+  this.formSuccess = function (success) {
     var url;
     if (self.options.returnToUrl !== "") {
       url = self.options.returnToUrl;
@@ -103,13 +81,11 @@ window.SignupManager = function (options) {
     } else {
       url = "/";
     }
-    if (isTeacherSelected()) {
-      sendSchoolInfoSplitTestEvent('signup-success');
-    }
-    window.location.href = url;
-  }
 
-  function formError(err) {
+    window.location.href = url;
+  };
+
+  this.formError = function (err) {
     // re-enable "Sign up" button upon error
     $('#signup-button').prop('disabled', false);
 
@@ -123,7 +99,9 @@ window.SignupManager = function (options) {
       "age",
       "gender",
       "terms_of_service_version",
-      "school_info.zip"
+      "school_info.zip",
+      "email_preference_opt_in",
+      "data_transfer_agreement_accepted"
     ];
 
     var fieldsWithErrors = 0;
@@ -135,7 +113,11 @@ window.SignupManager = function (options) {
           // We have a custom inline message for user_type errors already set in the DOM.
           if (field === "terms_of_service_version") {
             errorField.text(self.options.acceptTermsString);
-          } else if (field === "school_info.zip") {
+          } else if (field === 'data_transfer_agreement_accepted') {
+            errorField.text(self.options.acceptTermsString);
+          } else if (field === 'email_preference_opt_in') {
+            errorField.text(self.options.emailPreferenceOptInString);
+          }  else if (field === "school_info.zip") {
             errorField = $('#school-zip').find('.error_in_field');
             errorField.text(err.responseJSON.errors[field][0]);
           } else if (field !== "user_type") {
@@ -153,10 +135,7 @@ window.SignupManager = function (options) {
       $('#signup-error').show();
     }
 
-    if (isTeacherSelected()) {
-      sendSchoolInfoSplitTestEvent('signup-error');
-    }
-  }
+  };
 
   $("#user_user_type").change(function () {
     var value = $(this).val();
@@ -182,13 +161,14 @@ window.SignupManager = function (options) {
     $("#name-student").fadeIn();
     $("#name-teacher").hide();
     setSchoolInfoVisibility(false);
+    $(".email-preference").hide();
 
     // Show correct terms below form.
-    $("#student-terms").fadeIn();
-    $("#teacher-terms").hide();
+    $(".student-options").fadeIn();
+    $(".teacher-options").hide();
 
-    // Implicitly accept terms of service for students.
-    $("#user_terms_of_service_version").prop('checked', true);
+    // Force students to explicitly accept terms of service.
+    $("#user_terms_of_service_version").prop('checked', false);
   }
 
   function onCountryChange(_, event) {
@@ -221,7 +201,7 @@ window.SignupManager = function (options) {
     ReactDOM.render(
       <div>
         <h5 style={{fontWeight: "bold"}}>
-          {showOptional ? i18n.schoolInformationOptionalHeader() : i18n.schoolInformationHeader()}
+          {i18n.schoolInformationHeader()}
         </h5>
         <hr/>
         <CountryAutocompleteDropdown
@@ -278,17 +258,16 @@ window.SignupManager = function (options) {
     $("#name-student").hide();
     $("#name-teacher").fadeIn();
     setSchoolInfoVisibility(true);
+    $(".email-preference").fadeIn();
 
     // Show correct terms below form.
-    $("#student-terms").hide();
-    $("#teacher-terms").fadeIn();
+    $(".student-options").hide();
+    $(".teacher-options").fadeIn();
 
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
 
     updateAutocompleteSchoolFields(schoolData);
-
-    sendSchoolInfoSplitTestEvent('signup-loaded');
   }
 
   function getUserTypeSelected() {
@@ -345,7 +324,6 @@ window.SignupManager = function (options) {
 
     if (isTeacherSelected()) {
       updateAutocompleteSchoolFields(schoolData);
-      sendSchoolInfoSplitTestEvent('signup-submitted');
     }
 
     $.ajax({
@@ -353,7 +331,7 @@ window.SignupManager = function (options) {
       type: "post",
       dataType: "json",
       data: formData
-    }).done(formSuccess).fail(formError);
+    }).done(self.formSuccess).fail(self.formError);
 
     return false;
   });

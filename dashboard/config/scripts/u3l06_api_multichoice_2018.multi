@@ -1,0 +1,32 @@
+name 'U3L06-API-multichoice_2018'
+title 'Multiple Choice: What is an API?'
+wrong 'Abstract Programming Inheritance'
+wrong 'Artificial Parameter Intelligence'
+right 'Application Program Interface'
+wrong 'Applied Power Implementation'
+wrong 'Abstract Parameter Interface'
+
+markdown <<MARKDOWN
+Read the definitions provided below and then choose the best answer.
+
+- **Abstract Programming Inheritance** -  The idea that abstractions in languages get "passed down" in newer versions.
+
+- **Artificial Parameter Intelligence** - The idea that function parameters should be intelligent enough to "know" what you want as a programmer.
+
+- **Application Program Interface** - A well-documented library of functions provided in a programming language that helps to simplify complex programming tasks.
+
+- **Applied Power Implementation** - A process by which functions are given extra override power related to parameters.
+
+- **Abstract Parameter Interface** - A programming construct in which parameters are passed down through levels of abstraction.
+
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+Application Program Interface
+
+MARKDOWN

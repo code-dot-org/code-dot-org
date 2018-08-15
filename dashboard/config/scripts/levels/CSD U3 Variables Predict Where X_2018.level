@@ -10,13 +10,12 @@
       "ellipse": null,
       "declareAssign_x": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "start_blocks": "var xPosition = 50;\r\n\r\nellipse(xPosition, 350, 100, 100);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -50,11 +49,23 @@
     "markdown_instructions": "# Using Variables\r\n\r\nIn this program, the variable `xPosition` is used to store the x-coordinate of the circle.\r\n\r\n# Do This\r\n* Run the program to see how it works.\r\n* Change the number that is stored into the variable ([Show me where](#triggercallout=code_triggered)) and run the code again.",
     "parent_level_id": 8737,
     "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/csd-1718/drawing_shapes_map/index.html",
+      "/docs/csd-1718/shape_size_map/index.html",
+      "/docs/csd-1718/random_numbers_csd/index.html"
+    ],
+    "map_reference": "/docs/csd-1718/variables_intro_csd/index.html",
+    "video_key": "csd_gamelab_variables_1",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 17:36:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-02 17:36:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:44:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 17:45:10 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

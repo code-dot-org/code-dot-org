@@ -32,7 +32,6 @@
     "debugger_disabled": "true",
     "markdown_instructions": "# More Practice With Booleans\r\n\r\nLet's use one more Boolean expression to check the condition of a sprite.  You can use a `console.log` command to check whether its scale is 2 yet.\r\n\r\n# Do This\r\n\r\n* Add a `console.log` statement.\r\n* Add a Boolean expression inside the `console.log` that checks whether the `apple.scale` is greater than 2.",
     "callout_json": "[]",
-    "show_d_pad": "false",
     "project_template_level_name": "CSD U3 apple template-2018",
     "instructions_important": "false",
     "hide_animation_mode": "false",

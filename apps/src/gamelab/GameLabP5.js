@@ -4,6 +4,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
+import {getDanceAPI, teardown} from './DanceLabP5';
 
 const defaultFrameRate = 30;
 
@@ -125,6 +126,41 @@ GameLabP5.prototype.init = function (options) {
     return false;
   };
 
+  // Modify p5 to ignore out-of-bounds positions before setting touchIsDown
+  window.p5.prototype._ontouchstart = function (e) {
+    if (!this._curElement) {
+      return;
+    }
+    var validTouch;
+    for (var i = 0; i < e.touches.length; i++) {
+      validTouch = getTouchInfo(this._curElement.elt, e, i);
+      if (validTouch) {
+        break;
+      }
+    }
+    if (!validTouch) {
+      // No in-bounds (valid) touches, return and ignore:
+      return;
+    }
+    var context = this._isGlobal ? window : this;
+    var executeDefault;
+    this._updateNextTouchCoords(e);
+    this._updateNextMouseCoords(e);
+    this._setProperty('touchIsDown', true);
+    if (typeof context.touchStarted === 'function') {
+      executeDefault = context.touchStarted(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    } else if (typeof context.mousePressed === 'function') {
+      executeDefault = context.mousePressed(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+      //this._setMouseButton(e);
+    }
+  };
+
   // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
   // positions before reporting touch coordinates
   //
@@ -184,6 +220,36 @@ GameLabP5.prototype.init = function (options) {
       };
     }
   }
+
+  // Modify p5 to ignore out-of-bounds positions before setting mouseIsPressed
+  // and isMousePressed
+  window.p5.prototype._onmousedown = function (e) {
+    if (!this._curElement) {
+      return;
+    }
+    if (!getMousePos(this._curElement.elt, e)) {
+      // Not in-bounds, return and ignore:
+      return;
+    }
+    var context = this._isGlobal ? window : this;
+    var executeDefault;
+    this._setProperty('isMousePressed', true);
+    this._setProperty('mouseIsPressed', true);
+    this._setMouseButton(e);
+    this._updateNextMouseCoords(e);
+    this._updateNextTouchCoords(e);
+    if (typeof context.mousePressed === 'function') {
+      executeDefault = context.mousePressed(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    } else if (typeof context.touchStarted === 'function') {
+      executeDefault = context.touchStarted(e);
+      if (executeDefault === false) {
+        e.preventDefault();
+      }
+    }
+  };
 
   // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
   // positions before reporting mouse coordinates
@@ -254,7 +320,7 @@ GameLabP5.prototype.init = function (options) {
   };
 
   window.p5.prototype.mousePressedOver = function (sprite) {
-    return this.mouseIsPressed && this.mouseIsOver(sprite);
+    return (this.mouseIsPressed || this.touchIsDown) && this.mouseIsOver(sprite);
   };
 
   var styleEmpty = 'rgba(0,0,0,0)';
@@ -460,7 +526,7 @@ GameLabP5.prototype.init = function (options) {
  * Reset GameLabP5 to its initial state. Called before each time it is used.
  */
 GameLabP5.prototype.resetExecution = function () {
-
+  teardown();
   gameLabSprite.setCreateWithDebug(false);
 
   if (this.p5) {
@@ -840,7 +906,7 @@ GameLabP5.prototype.getMarshallableP5Properties = function () {
   return propNames;
 };
 
-GameLabP5.prototype.getGlobalPropertyList = function () {
+GameLabP5.prototype.getGlobalPropertyList = function (danceLab) {
   const propList = {};
 
   // Include every property on the p5 instance in the global property list
@@ -859,6 +925,11 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
 
   // Create a 'World' object in the global namespace:
   propList.World = [this.gameLabWorld, this];
+
+  if (danceLab) {
+    // Create a 'Dance' object in the global namespace:
+    propList.Dance = [getDanceAPI(this.p5), this];
+  }
 
   return propList;
 };
@@ -936,4 +1007,14 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
       });
     });
   }));
+};
+
+/**
+ * Reset just the world object without reloading the rest of p5
+ */
+GameLabP5.prototype.resetWorld = function () {
+  if (!this.p5) {
+    return;
+  }
+  this.gameLabWorld = new GameLabWorld(this.p5);
 };

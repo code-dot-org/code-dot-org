@@ -21,6 +21,10 @@ const statusStyle = {
     backgroundColor: color.level_perfect,
     color: color.white,
   },
+  [LevelStatus.free_play_complete]: {
+    backgroundColor: color.level_perfect,
+    color: color.white,
+  },
   [LevelStatus.passed]: {
     backgroundColor: color.level_passed,
   },
@@ -62,12 +66,18 @@ export const levelProgressStyle = (level, disabled) => {
       ...style,
       ...!disabled && hoverStyle
     };
-  } else if (level.kind === LevelKind.assessment && level.status !== LevelStatus.not_tried) {
+  } else if (
+    level.kind === LevelKind.assessment &&
+    level.status === LevelStatus.free_play_complete
+  ) {
     style.borderColor = color.level_submitted;
-    if (level.status === LevelStatus.perfect) {
-      style.backgroundColor = color.level_submitted;
-      style.color = color.white;
-    }
+    style.backgroundColor = color.level_submitted;
+    style.color = color.white;
+  } else if (
+    level.kind === LevelKind.assessment &&
+    level.status === LevelStatus.attempted
+  ) {
+    style.borderColor = color.level_submitted;
   } else {
     if (level.status !== LevelStatus.not_tried) {
       style.borderColor = color.level_perfect;

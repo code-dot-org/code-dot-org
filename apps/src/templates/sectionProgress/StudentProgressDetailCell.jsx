@@ -14,6 +14,7 @@ export default class StudentProgressDetailCell extends Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     stageId: PropTypes.number.isRequired,
+    sectionId: PropTypes.number.isRequired,
     levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
   };
 
@@ -26,6 +27,9 @@ export default class StudentProgressDetailCell extends Component {
             levels={this.props.levelsWithStatus}
             disabled={false}
             hideToolTips={true}
+            selectedSectionId={this.props.sectionId}
+            selectedStudentId={this.props.studentId}
+            pairingIconEnabled={true}
           />
         </div>
       </div>

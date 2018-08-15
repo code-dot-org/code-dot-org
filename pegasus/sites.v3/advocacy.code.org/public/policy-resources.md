@@ -13,13 +13,13 @@ style_min: true
   * [K-12 computer science and cybersecurity](https://docs.google.com/document/d/1iHNKnQkWSbahakoHUnBnjWu_d-d-Kcyp2aPk3LFSsqw/edit?usp=sharing)
 
 ### Model language and sample docs for policies
-  * [Model legislation](https://docs.wixstatic.com/ugd/be22fe_f50c481364f44ca4807a3efee8c11ad1.pdf)
+  * [Model legislation](https://docs.google.com/document/d/1TL70O0pxsiv-ilC6puSagG4JzLTrDc5UMKfzyBwUgNI/edit?usp=sharing)
   * [Model state computer science coordinator job description](https://docs.google.com/document/d/12qHVm3YQ0-1RS2ciN1Hu39mSYziVQp82Gj_HOB_CkfE/edit?usp=sharing)
   * [State examples of "all schools offer" policies](https://docs.google.com/document/d/1JAqCLHh9Sp1KW00b4IOGbYFaIO3dmHDQ5bLG5cdNJYs/edit?usp=sharing)
 
 ### Model language and sample docs for funding
   * [Professional development funding calculator](https://docs.google.com/spreadsheets/d/11JmxmBwkAte9CjdTx4xhkH4bE2MAFS-PVG0qgYzLRU4/edit?usp=sharing)
-  * [Models for computer science professional funding](https://www.dropbox.com/s/2y0i360pt6pap1o/ModelStatePracticetoExpandCS.pdf?dl=0)
+  * [Models for computer science professional funding](https://docs.google.com/document/d/1yU2YS5YWHEZBN363pUUIy-FBqDDQVoOSFOsSb06qMbM/edit?usp=sharing)
   * [State examples of budget language](https://docs.google.com/document/d/1HYSGUkS4kURfuz-1EZsf9jUOy3bCdz4h60PFiJXtKrU/edit?usp=sharing)
 
 ### Planning and implementation

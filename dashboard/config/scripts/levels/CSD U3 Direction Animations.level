@@ -59,7 +59,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Changing Images as you Move\r\nRight now your conditionals only do one thing (change your sprite's x or y), but you can actually put as much code as you want inside a conditional. A common thing to do in games is to change your character's image depending on which direction they're walking.\r\n\r\n# Do This\r\nUsing the provided program and images:\r\n\r\n- Duplicate your chosen bug image four times.\r\n- Edit each of your images to point in one of the four directions.\r\n- Write code that uses `sprite.setAnimation()` to change the image on your bug sprite when different arrow keys are pressed.",

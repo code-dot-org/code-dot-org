@@ -29,7 +29,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Setting up your picture\r\n<img style=\"float: right; margin: 4px;\" src=\"https://images.code.org/b90748874dc9094386134be8ec1b95e5-image-1469228306235.png\">\r\nBefore you make anything move, you'll need to start all your sprites off in the right place.  The Earth has already been positioned for you.\r\n\r\n# Do This\r\n\r\nCreate sprites for the moon, spaceship, and satellite.  Use `setAnimation` to add a picture to each one, and use the `x` and `y` properties to put them in the right place on the screen.\r\n\r\n",

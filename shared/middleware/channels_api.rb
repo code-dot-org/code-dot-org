@@ -82,10 +82,11 @@ class ChannelsApi < Sinatra::Base
     timestamp = Time.now
 
     published_at = nil
+
     if data['shouldPublish']
       project_type = data['projectType']
-      bad_request unless PUBLISHABLE_PROJECT_TYPES_OVER_13.include?(project_type)
-      forbidden if under_13? && !PUBLISHABLE_PROJECT_TYPES_UNDER_13.include?(project_type)
+      bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+      forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
 
       # The client decides whether to publish the project, but we rely on the
       # server to generate the timestamp. Remove shouldPublish from the project
@@ -179,8 +180,8 @@ class ChannelsApi < Sinatra::Base
   #
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
     not_authorized unless owns_channel?(channel_id)
-    bad_request unless PUBLISHABLE_PROJECT_TYPES_OVER_13.include?(project_type)
-    forbidden if under_13? && !PUBLISHABLE_PROJECT_TYPES_UNDER_13.include?(project_type)
+    bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
 
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.
@@ -196,6 +197,40 @@ class ChannelsApi < Sinatra::Base
     not_authorized unless owns_channel?(channel_id)
     StorageApps.new(storage_id('user')).unpublish(channel_id)
     {publishedAt: nil}.to_json
+  end
+
+  #
+  # POST /v3/channels/<channel-id>/disable_content_moderation
+  #
+  # Disables automatic content moderation.
+  #
+  post %r{/v3/channels/([^/]+)/disable-content-moderation} do |channel_id|
+    not_authorized unless project_validator?
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(storage_id('user')).set_content_moderation(channel_id, true)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {skip_content_moderation: value}.to_json
+  end
+
+  #
+  # POST /v3/channels/<channel-id>/enable_content_moderation
+  #
+  # Enables automatic content moderation.
+  #
+  post %r{/v3/channels/([^/]+)/enable-content-moderation} do |channel_id|
+    not_authorized unless project_validator?
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(storage_id('user')).set_content_moderation(channel_id, false)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {skip_content_moderation: value}.to_json
   end
 
   #
@@ -268,7 +303,7 @@ class ChannelsApi < Sinatra::Base
   #
   delete %r{/v3/channels/([^/]+)/abuse$} do |id|
     # UserPermission::PROJECT_VALIDATOR
-    not_authorized unless has_permission?('project_validator')
+    not_authorized unless project_validator?
 
     dont_cache
     content_type :json
@@ -281,5 +316,10 @@ class ChannelsApi < Sinatra::Base
   end
   post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))
+  end
+
+  # This method is included here so that it can be stubbed in tests.
+  def project_validator?
+    has_permission?("project_validator")
   end
 end

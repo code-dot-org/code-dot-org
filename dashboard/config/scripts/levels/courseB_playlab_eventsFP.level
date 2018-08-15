@@ -46,6 +46,7 @@
       "upButton"
     ],
     "instructions_important": "false",
+    "hint_prompt_attempts_threshold": 3,
     "contained_level_names": null
   },
   "published": true,

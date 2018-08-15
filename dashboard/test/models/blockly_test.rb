@@ -26,12 +26,12 @@ class BlocklyTest < ActiveSupport::TestCase
   <block type="simple_move_right"></block>
   <block type="simple_move_left"></block>
 
-  <block type="category">
-    <title name="CATEGORY">Functions</title>
+  <block type="custom_category">
+    <title name="CUSTOM">PROCEDURE</title>
   </block>
 
-  <block type="category">
-    <title name="CATEGORY">Variables</title>
+  <block type="custom_category">
+    <title name="CUSTOM">VARIABLE</title>
   </block>
 </xml>
 XML
@@ -193,7 +193,7 @@ XML
       authored_hints: JSON.generate(
         [
           {"hint_markdown": "first english markdown", "hint_id": "first"},
-          {"hint_markdown": "second english markdown", "hint_id": "second"},
+          {"hint_markdown": "second english markdown", "hint_id": ""},
         ]
       )
     )
@@ -201,25 +201,17 @@ XML
     custom_i18n = {
       'data' => {
         'authored_hints' => {
-          "#{level_name}_authored_hint" => []
+          "#{level_name}_authored_hint" => {
+            first: nil,
+            second: nil
+          }
         }
       }
     }
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    assert_nil level.localized_authored_hints
-
-    custom_i18n = {
-      'data' => {
-        'authored_hints' => {
-        }
-      }
-    }
-
-    I18n.backend.store_translations test_locale, custom_i18n
-
-    assert_nil level.localized_authored_hints
+    assert_equal level.authored_hints, level.localized_authored_hints
   end
 
   test 'uses_droplet for StudioEC levels' do

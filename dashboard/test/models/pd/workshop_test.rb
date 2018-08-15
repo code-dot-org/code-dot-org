@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
+  include Pd::WorkshopConstants
+
   freeze_time
 
   self.use_transactional_test_case = true
@@ -60,7 +62,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshops = Pd::Workshop.enrolled_in_by teacher
     assert_equal 1, workshops.length
-    assert_equal workshops.first, @workshop
+    assert_equal @workshop, workshops.first
+  end
+
+  test 'enrolled_in_by scope variations' do
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: 'nomatch@ex.net'
+    assert_empty Pd::Workshop.enrolled_in_by(teacher)
+
+    # Email match only
+    enrollment.update!(email: teacher.email)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # UserId only
+    enrollment.update!(email: 'nomatch@ex.net', user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # Both email and user id. Should still find workshop exactly once
+    enrollment.update!(email: teacher.email, user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
   end
 
   test 'exclude_summer scope' do
@@ -346,15 +366,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'friendly name' do
+    Geocoder.expects(:search).returns([])
     workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, location_name: 'Code.org',
-      sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
+      location_address: 'Seattle, WA', sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
-    assert_equal 'Admin workshop on 09/01/16 at Code.org', workshop.friendly_name
+    assert_equal 'Admin workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
 
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
-    assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org', workshop.friendly_name
+    assert_equal 'Exploring Computer Science Unit 5 - Data workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
 
     # truncated at 255 chars
     workshop.update!(location_name: "blah" * 60)
@@ -847,7 +868,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
 
     workshop = build :pd_workshop
-    workshop.expects(:pre_survey?).returns(true)
+    workshop.expects(:pre_survey?).returns(true).twice
     workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
 
     expected = [
@@ -856,6 +877,29 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       ['Unit 3', ['Lesson 1: Unit 3 - Lesson 1']]
     ]
     assert_equal expected, workshop.pre_survey_units_and_lessons
+  end
+
+  test 'pre_workshop_course' do
+    course_name = 'Fake Course Name'
+    mock_course = mock
+
+    # No pre-survey
+    workshop = build :pd_workshop
+    workshop.stubs(:pre_survey?).returns(false)
+    assert_nil workshop.pre_survey_course
+
+    # With valid course name
+    workshop.stubs(:pre_survey?).returns(true)
+    workshop.stubs(:pre_survey_course_name).returns(course_name)
+    Course.expects(:find_by_name!).with(course_name).returns(mock_course)
+    assert_equal mock_course, workshop.pre_survey_course
+
+    # With invalid course name
+    Course.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    e = assert_raises RuntimeError do
+      workshop.pre_survey_course
+    end
+    assert_equal "No course found for name #{course_name}", e.message
   end
 
   test 'friendly date range same month' do
@@ -995,6 +1039,103 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
         "Expected #{params} funded_friendly_name to be #{expected}"
       )
     end
+  end
+
+  test 'nearest' do
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+
+    assert_equal target, Pd::Workshop.nearest
+  end
+
+  test 'nearest is independent of creation order' do
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+
+    nearest_workshop = Pd::Workshop.nearest
+    assert_equal target, nearest_workshop
+
+    # Also make sure attributes are included
+    assert_equal target.course, nearest_workshop.course
+    assert_equal 1, nearest_workshop.sessions.count
+  end
+
+  test 'nearest with no matches returns nil' do
+    assert_nil Pd::Workshop.none.nearest
+  end
+
+  test 'nearest combined with subject and enrollment' do
+    user = create :teacher
+    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.day,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+
+    create :pd_enrollment, :from_user, user: user, workshop: target
+
+    same_subject_farther = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
+
+    different_subject_closer = create :pd_workshop, num_sessions: 1, sessions_from: Date.today,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
+    create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
+
+    # closer, not enrolled
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.today,
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+
+    found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
+    assert_equal target, found
+  end
+
+  test 'with_nearest_attendance_by' do
+    teacher = create :teacher
+
+    # 2 workshops on the same day
+    workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day
+
+    # Attend first session from one
+    create :pd_attendance, session: workshops[0].sessions[0], teacher: teacher
+    nearest_workshop = Pd::Workshop.with_nearest_attendance_by(teacher)
+    assert_equal workshops[0], nearest_workshop
+
+    # Also make sure attributes are included
+    assert_equal workshops[0].course, nearest_workshop.course
+    assert_equal 2, nearest_workshop.sessions.count
+
+    # Attend second session (today, now nearest) from the other
+    create :pd_attendance, session: workshops[1].sessions[1], teacher: teacher
+    assert_equal workshops[1], Pd::Workshop.with_nearest_attendance_by(teacher)
+  end
+
+  test 'nearest_attended_or_enrolled_in_by' do
+    teacher = create :teacher
+    other_teacher = create :teacher
+
+    # 2 workshops on the same day for each course
+    csd_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSD
+    csp_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSP
+
+    # Enroll in the first of each
+    create :pd_enrollment, :from_user, user: teacher, workshop: csd_workshops[0]
+    create :pd_enrollment, :from_user, user: teacher, workshop: csp_workshops[0]
+
+    assert_nil Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(other_teacher)
+
+    # No attendances, expect enrolled workshop
+    assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
+
+    # Now enroll in and attend the second csp workshop, expect the attended one
+    create :pd_enrollment, :from_user, user: teacher, workshop: csp_workshops[1]
+    create :pd_attendance, teacher: teacher, session: csp_workshops[1].sessions.first
+    assert_equal csp_workshops[1], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
+
+    # Switch workshops half way through. (Yes this actually happened in the wild)
+    # No problem. Return the one associated with the most recent attendance
+    create :pd_attendance, teacher: teacher, session: csp_workshops[0].sessions.last
+    assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
   end
 
   private

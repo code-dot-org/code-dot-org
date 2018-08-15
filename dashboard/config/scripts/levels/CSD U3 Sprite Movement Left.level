@@ -21,7 +21,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/9f9162cb94a02d9b3aba9b6067d0281a-image-1491862771496.gif\" style=\"float: right; margin-left: 20px\">\r\n\r\n# Moving to the Left\r\n\r\nIf adding to a sprite's x coordinate makes it move to the right, how could you make it move to the left?\r\n\r\n# Do This\r\n\r\nMake your program animate like the image to the right. Update `fly.x` inside the draw loop so that in each frame the fly is drawn a little bit further to the left.\r\n\r\n_Tip: You can make your sprites move faster by adding or subtracting larger numbers. The fly in our example moves about twice as fast as the plane in the last level._",

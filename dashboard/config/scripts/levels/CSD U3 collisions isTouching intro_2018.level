@@ -26,7 +26,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# isTouching()\r\n\r\nWriting out the math each time you want to check whether two sprites are touching can take a while, so a programmer created the `isTouching` block, which can check whether one sprite is touching another sprite (the *target*).  The computer is still doing the same math as in the previous program, but you don't have to worry about it because another programmer already did that work.\r\n\r\n# Do This\r\n\r\nInside the draw loop, drag the `isTouching` block into the `if` block.  &nbsp;&nbsp; ( [Show me where](#triggercallout=code_triggered) )\r\n\r\n*Hint: Don't forget to change the \"sprite\" to \"balloon\" and the \"target\" to \"tack\".*\r\n\r\n[//]: # (https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png)\r\n\r\n[//]: # (https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png)\r\n\r\n[//]: # (https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png)",

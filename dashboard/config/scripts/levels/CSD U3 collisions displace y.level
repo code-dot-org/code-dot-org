@@ -25,7 +25,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Write Your Own Sprite Interaction\r\n\r\nIn the last level you should have written code for a sprite interaction that you developed with your classmates. This time try to write the program on your own, but you can use the patterns you saw in the last level.\r\n\r\n# Do This\r\n\r\nThe elephant should **push the hippo off the screen**. Notice that the elephant moves at a random Y velocity each time the program runs.\r\n\r\n* Using the patterns from the last level, write code that makes the elephant push the hippo off the screen.",

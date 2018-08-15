@@ -1,0 +1,19 @@
+name 'CPS Unit2 Ch 1 MC lossless compression_2018'
+title 'Compression'
+description ' '
+question ' '
+wrong 'Lossy compression'
+right 'Lossless compression'
+wrong 'Fast Fourier Transform compression'
+wrong 'Tailored compression'
+markdown <<MARKDOWN
+A compression scheme for long strings of bits called *run-length encoding* is described as follows: 
+
+Rather than record each 0 and 1 individually, instead record “runs” of bits by storing the number of consecutive 1s and 0s that appear.  
+
+Since it’s binary, any run of 0s must be followed by a run of 1s (even if the run is only 1-bit long) and vice versa. Thus, you can store a list of small numbers that represents the alternating runs of 0s and 1s.  Here is an example:
+
+![](https://images.code.org/e36d29fd5a1cf276b4a0437cbc5c9235-image-1470149724968.png)
+
+To uncompress the data back into its original binary state, you simply reverse the process.  This technique is an example of what type of compression?
+MARKDOWN

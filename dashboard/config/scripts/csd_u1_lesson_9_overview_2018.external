@@ -1,0 +1,20 @@
+name 'CSD U1 Lesson 9 Overview_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+For this project you will design your own app that solves a problem that you get to define.
+
+## Resources
+
+* [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+* [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+* [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Apps and Problem Solving](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+* [Apps and Problem Solving](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+
+
+MARKDOWN

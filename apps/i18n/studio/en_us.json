@@ -318,6 +318,7 @@
   "moveSpriteN": "move actor {spriteIndex}",
   "moveDroid": "move droid",
   "moveDroidN": "move droid {spriteIndex}",
+  "to": "to",
   "toXY": "to x,y",
   "moveDown": "move down",
   "moveDownTooltip": "Move an actor down.",

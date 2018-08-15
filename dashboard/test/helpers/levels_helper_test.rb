@@ -563,6 +563,7 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in student
 
     assert_includes app_options[:experiments], experiment.name
+    experiment.destroy
   end
 
   test 'video data available for levels with associated videos' do
@@ -598,5 +599,9 @@ class LevelsHelperTest < ActionView::TestCase
   test 'reference links is empty for levels with no associated reference links' do
     @level = create :applab
     assert_nil app_options[:level][:referenceLinks]
+  end
+
+  test 'data_t resolves localized key with trailing dot correctly' do
+    assert_equal 'Test trailing dot in value.', data_t('multi.random question', 'Test trailing dot in key.')
   end
 end

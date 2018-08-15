@@ -1,0 +1,16 @@
+name 'CSD U1 Lesson 7 Overview_2018'
+display_name 'Lesson Overview'
+
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll learn about the kinds of information computers store and how storage is a critical part of processing information.
+
+## Resources
+
+* [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Storage and Processing - Exemplar](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))
+MARKDOWN

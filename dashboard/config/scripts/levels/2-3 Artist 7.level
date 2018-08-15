@@ -34,6 +34,7 @@
     "never_autoplay_video": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The easiest way to solve this puzzle is to draw the first square and end with the artist pointing down before starting your second square.\",\r\n  \"hint_id\": \"2-3_Artist_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "discard_background": "false",
+    "hint_prompt_attempts_threshold": 11,
     "contained_level_names": null
   },
   "published": true,

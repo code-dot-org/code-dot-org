@@ -17,7 +17,7 @@ cd apps
 
 # Machine setup (OSX with Homebrew)
 brew install node
-npm install -g grunt-cli yarn@0.23.2
+npm install -g grunt-cli yarn@1.6.0
 
 # Perform first full build
 yarn
@@ -25,10 +25,7 @@ npm run build
 npm rebuild node-sass
 
 # automatically rebuild every time you make changes to source files
-npm run start
-
-# or, if you want it to rebuild even faster, do this instead:
-CHEAP=1 npm run start
+yarn start
 ```
 
 ### Seeing your development version of Apps in Dashboard

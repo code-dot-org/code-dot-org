@@ -1,0 +1,19 @@
+{
+  "category": "Comments",
+  "config": {
+    "blockText": "comment: {COMMENT}",
+    "func": "comment",
+    "color": [
+      0,
+      0,
+      0.7
+    ],
+    "args": [
+      {
+        "name": "COMMENT",
+        "field": true,
+        "type": "String"
+      }
+    ]
+  }
+}

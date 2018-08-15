@@ -173,7 +173,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "true",
     "markdown_instructions": "# Example Project\r\n\r\nRun the program a few times and answer the following questions:\r\n\r\n1) Which elements appear to use drawing commands?\r\n\r\n2) Which elements appear to be Sprites?\r\n\r\n3) For each Sprite, which properties are being updated?\r\n\r\n4) Where do you see conditionals being used?\r\n\r\n5) Are there elements that you don’t understand?",

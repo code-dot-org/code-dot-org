@@ -38,6 +38,7 @@
     "ideal": "7",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can either draw the square first, then the triangle, or do it the other way around!\",\"hint_id\":\"courseD_artist_ramp12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/20538712e078ef545e4983c4ffdaaef3/courseD_artist_ramp12.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try splitting the problem into 2 parts, and using 2 loops.\",\"hint_id\":\"courseD_artist_ramp12_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/25ecb4c87c70ece54252447874eb895c/courseD_artist_ramp12.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can use the drop down menu on the `turn` blocks to see which angle you need!\",\"hint_id\":\"courseD_artist_ramp12_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b5b76af7795f852f315ac145422b8ea2/courseD_artist_ramp12.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 35,
     "contained_level_names": null
   },
   "published": true,

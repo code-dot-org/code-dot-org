@@ -1,0 +1,13 @@
+name 'csp-post-survey-explorePT-preamble'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+## AP Explore Performance Task
+
+As a reminder, The Explore Performance Task asked you to:
+
+* research a **Computing Innovation**
+* create a computational artifact about its purpose
+* write about how it used data
+* write about the beneficial and harmful effects of the innovation
+MARKDOWN

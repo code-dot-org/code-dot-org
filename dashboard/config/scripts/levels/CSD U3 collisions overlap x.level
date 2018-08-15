@@ -38,7 +38,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Turtle Race\r\n\r\nThe turtle moves forward every time you press the left key.  When he touches the finish line, he should get a trophy.  The trophy will appear when `isTouchingX` is true.  Can you add code to make sure it is set to true when the turtle gets to the finish line?\r\n\r\n# Do This\r\n\r\nAdd code inside the draw loop to set the values of the variables that have been created for you.  Then, test your program by playing the game.\r\n\r\n\r\n[//]: #  (https://images.code.org/af2cffe952997258eb6b5573cfe9a29f-image-1470188585528.png)\r\n\r\n[//]: #  (https://images.code.org/d2eb9684743d45ef1e10ff4602936107-image-1470188590517.png)\r\n\r\n[//]: #  (https://images.code.org/98aee1ed11c7e00cd66718b4c232ab66-image-1470190293465.png)\r\n\r\n[//]: #  (https://images.code.org/fb129d34e3089763f35dfc8980d705ea-image-1470191576501.png)\r\n\r\n[//]: #  (https://images.code.org/3fc6da739dfd31b256618a560c12a076-image-1470191923150.png)",

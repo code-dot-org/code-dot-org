@@ -1,0 +1,11 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "makeNewGroup",
+    "blockText": "make a new group",
+    "args": [
+
+    ],
+    "returnType": "Sprite"
+  }
+}

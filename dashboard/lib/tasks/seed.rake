@@ -30,18 +30,37 @@ namespace :seed do
     'course2',
     'course3',
     'course4',
-    'csp1',
-    'csp2',
-    'csp3',
+    'coursea-2017',
+    'courseb-2017',
+    'coursec-2017',
+    'coursed-2017',
+    'coursee-2017',
+    'coursef-2017',
+    'express-2017',
+    'pre-express-2017',
+    'coursea-2018',
+    'csp1-2017',
+    'csp2-2017',
+    'csp3-2017',
     'csp3-a',
     'csp3-research-mxghyt',
-    'csp4',
-    'csp5',
+    'csp4-2017',
+    'csp5-2017',
     'csp-ap',
-    'csp-explore',
-    'csp-create',
-    'csppostap',
+    'csp-explore-2017',
+    'csp-create-2017',
+    'csp-post-survey',
+    'csppostap-2017',
+    'csp1-2018',
+    'csp2-2018',
+    'csp3-2018',
+    'csp4-2018',
+    'csp5-2018',
+    'csp-explore-2018',
+    'csp-create-2018',
+    'csppostap-2018',
     'events',
+    'express-2017',
     'flappy',
     'frozen',
     'hero',
@@ -82,7 +101,16 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls].freeze
+  SCRIPTS_DEPENDENCIES = [
+    :environment,
+    :games,
+    :custom_levels,
+    :dsls,
+    :blocks,
+    :shared_blockly_functions,
+    :libraries,
+  ].freeze
+
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -103,7 +131,7 @@ namespace :seed do
 
   task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2018).each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
     end
   end
@@ -139,8 +167,16 @@ namespace :seed do
     end
   end
 
-  task import_custom_levels: :environment do
-    LevelLoader.load_custom_levels
+  task blocks: :environment do
+    Block.load_records
+  end
+
+  task shared_blockly_functions: :environment do
+    SharedBlocklyFunction.load_records
+  end
+
+  task libraries: :environment do
+    Library.load_records
   end
 
   # Generate the database entry from the custom levels json file
@@ -186,6 +222,15 @@ namespace :seed do
 
   task state_cs_offerings: :environment do
     Census::StateCsOffering.seed
+  end
+
+  # Seed school course offering data where the courses are taught by outside curriculum providers, such as TEALS.
+  task other_curriculum_offerings: :environment do
+    Census::OtherCurriculumOffering.seed
+  end
+
+  task sample_data: :environment do
+    SampleData.seed
   end
 
   MAX_LEVEL_SOURCES = 10_000

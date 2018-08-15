@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Expressions Evaluate to a Single Value\r\n\r\nAs you probably just noticed expressions can be used in places where you might normally use a number. That's because your computer can **evaluate or calculate the single number that is the result of the expression**. When your computer runs the command\r\n\r\n`strokeWeight(10 + 20)`\r\n\r\nIt will first calculate the value of the expression `10 + 20` to be `30` and use that value to set the strokeWeight. In fact, **every expression will eventually be evaluated to a single value**.\r\n\r\n# Do This\r\n\r\nThis program uses console.log to show the single value of a couple long expressions.\r\n\r\n* **Run the program** to see that the expressions result in a single value\r\n* **Create and display the results of some expressions of your own**. It doesn't matter what they are, just throw in something long and complex and convince yourself a single value always comes out.",

@@ -932,11 +932,15 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(msg.setSprite());
       }
       this.appendDummyInput()
-        .appendTitle(msg.toXY());
+        .appendTitle(msg.to());
       this.appendValueInput('XPOS')
         .setCheck(blockly.BlockValueType.NUMBER);
+      this.appendDummyInput()
+        .appendTitle(commonMsg.positionAbsoluteOver());
       this.appendValueInput('YPOS')
         .setCheck(blockly.BlockValueType.NUMBER);
+      this.appendDummyInput()
+        .appendTitle(commonMsg.positionAbsoluteDown());
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -989,18 +993,21 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_addGoalXY = {
-    // Block for jumping a sprite to specific XY location.
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
         .appendTitle(msg.addGoal());
       this.appendDummyInput()
-        .appendTitle(msg.toXY());
+        .appendTitle(msg.to());
       this.appendValueInput('XPOS')
         .setCheck(blockly.BlockValueType.NUMBER);
+      this.appendDummyInput()
+        .appendTitle(commonMsg.positionAbsoluteOver());
       this.appendValueInput('YPOS')
         .setCheck(blockly.BlockValueType.NUMBER);
+      this.appendDummyInput()
+        .appendTitle(commonMsg.positionAbsoluteDown());
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -3078,7 +3085,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
   addIfAndIfElseVersions('ifActorHasEmotion', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
-        .appendTitle('if');
+        .appendTitle(commonMsg.ifCode());
 
     appendActorSelect(this, actorSelectDropdown);
 
@@ -3146,7 +3153,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
 
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
-        .appendTitle('if');
+        .appendTitle(commonMsg.ifCode());
 
     appendActorSelect(this, actorSelectDropdown);
 
@@ -3213,7 +3220,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
   addIfAndIfElseVersions('ifActorIsVisible', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
-        .appendTitle('if');
+        .appendTitle(commonMsg.ifCode());
 
     appendActorSelect(this, actorSelectDropdown);
 
@@ -3260,7 +3267,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
   addIfAndIfElseVersions('ifActorIsSprite', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
-        .appendTitle('if');
+        .appendTitle(commonMsg.ifCode());
 
     appendActorSelect(this, actorSelectDropdown);
 

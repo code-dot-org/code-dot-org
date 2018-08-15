@@ -21,6 +21,7 @@ class ShowSecret extends Component {
     secretPicture: PropTypes.string,
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
+    sectionId: PropTypes.number.isRequired,
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
     setSecretWords: PropTypes.func.isRequired,
@@ -43,11 +44,16 @@ class ShowSecret extends Component {
   };
 
   reset = () => {
+    const dataToUpdate = {
+      secrets: "reset_secrets",
+      student: {id: this.props.id}
+    };
+
     $.ajax({
-      url: `/v2/students/${this.props.id}/update`,
-      method: 'POST',
+      url: `/dashboardapi/sections/${this.props.sectionId}/students/${this.props.id}`,
+      method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({secrets: "reset"}),
+      data: JSON.stringify(dataToUpdate),
     }).done((data) => {
       if (this.props.loginType === SectionLoginType.picture) {
         this.props.setSecretImage(this.props.id, data.secret_picture_path);

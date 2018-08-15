@@ -264,8 +264,8 @@ en:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess as follows:\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+        title: My Robotic Friends
+        desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
         title: 
         desc: 
@@ -347,3 +347,12 @@ en:
       MoveItMoveIt_2018:
         title: Move It, Move It
         desc: ''
+      courseB_unplugged_CnC_2018:
+        title: It's Great to Create and Play Fair
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
+      courseE_unplugged_CnC_2018:
+        title: Digital Sharing
+        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+      RelayProgramming_2018:
+        title: Relay Programming
+        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

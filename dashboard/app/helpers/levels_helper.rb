@@ -219,8 +219,19 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
+    # Temporary conversion from old instructions naming scheme to new
+    #TODO: elijah: remove this override once we have fully converted
+    if @app_options[:level]
+      # Level types are unfortunately inconsistent in their use of strings vs
+      # symbols for keys, forcing us to consider both here.
+      @app_options[:level]['shortInstructions'] = @app_options[:level].delete('instructions') if @app_options[:level]['instructions']
+      @app_options[:level]['longInstructions'] = @app_options[:level].delete('markdownInstructions') if @app_options[:level]['markdownInstructions']
+      @app_options[:level][:shortInstructions] = @app_options[:level].delete(:instructions) if @app_options[:level][:instructions]
+      @app_options[:level][:longInstructions] = @app_options[:level].delete(:markdownInstructions) if @app_options[:level][:markdownInstructions]
+    end
+
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
+    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?) && I18n.en?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -271,6 +282,7 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_dance = @level.is_a?(Gamelab) && @level.helper_libraries.try(:include?, 'DanceLab')
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
       locals: {
@@ -282,6 +294,7 @@ module LevelsHelper
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
+        use_dance: use_dance,
         hide_source: hide_source,
         static_asset_base_path: app_options[:baseUrl]
       }
@@ -322,7 +335,7 @@ module LevelsHelper
 
   def set_hint_prompt_options(level_options)
     if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @script_level.hint_prompt_attempts_threshold
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
     end
   end
 
@@ -382,7 +395,7 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
 
-    if (@game && @game.owns_footer_for_share?) || @is_legacy_share
+    if (@game && @game.owns_footer_for_share?) || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -420,6 +433,25 @@ module LevelsHelper
     app_options
   end
 
+  def firebase_options
+    fb_options = {}
+
+    if @level.game.use_firebase?
+      fb_options[:firebaseName] = CDO.firebase_name
+      fb_options[:firebaseAuthToken] = firebase_auth_token
+      fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
+    end
+
+    fb_options
+  end
+
+  # simple helper to set the given key and value on the given hash unless the
+  # value is nil, used to set localized versions of level options without
+  # calling the localization methods twice
+  def set_unless_nil(hash, key, value)
+    hash[key] = value unless value.nil?
+  end
+
   # Options hash for Blockly
   def blockly_options
     l = @level
@@ -430,9 +462,35 @@ module LevelsHelper
     app_options[:level] = level_options
 
     # Locale-depdendent option
-    level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
-    level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
-    level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
+    # For historical reasons, `localized_instructions` and
+    # `localized_authored_hints` should happen independent of `should_localize?`
+    # TODO: elijah: update these instructions values to new names once we
+    # migrate to the new keys
+    set_unless_nil(level_options, 'instructions', l.localized_short_instructions)
+    set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
+    if l.should_localize?
+      # Don't ever show non-English markdown instructions for Course 1 - 4 or
+      # the 20-hour course. We're prioritizing translation of Course A - F.
+      if @script && (@script.csf_international? || @script.twenty_hour?)
+        level_options.delete('markdownInstructions')
+      else
+        set_unless_nil(level_options, 'markdownInstructions', l.localized_long_instructions)
+      end
+      set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
+      set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
+
+      %w(
+        initializationBlocks
+        startBlocks
+        toolbox
+        levelBuilderRequiredBlocks
+        levelBuilderRecommendedBlocks
+        solutionBlocks
+      ).each do |xml_block_prop|
+        next unless level_options.key? xml_block_prop
+        set_unless_nil(level_options, xml_block_prop, l.localize_function_blocks(level_options[xml_block_prop]))
+      end
+    end
 
     # Script-dependent option
     script = @script
@@ -444,56 +502,6 @@ module LevelsHelper
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
-
-    # Unused Blocks option
-    ## TODO (elijah) replace this with more-permanent level configuration
-    ## options once the experimental period is over.
-
-    ## allow unused blocks for all levels except Jigsaw
-    app_options[:showUnusedBlocks] = @game ? @game.name != 'Jigsaw' : true
-
-    ## Allow gatekeeper to disable otherwise-enabled unused blocks in a
-    ## cascading way; more specific options take priority over
-    ## less-specific options.
-    if script && script_level && app_options[:showUnusedBlocks] != false
-
-      # puzzle-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {
-          script_name: script.name,
-          stage: script_level.stage.absolute_position,
-          puzzle: script_level.position
-        },
-        default: nil
-      )
-
-      # stage-specific
-      if enabled.nil?
-        enabled = Gatekeeper.allows(
-          'showUnusedBlocks',
-          where: {
-            script_name: script.name,
-            stage: script_level.stage.absolute_position,
-          },
-          default: nil
-        )
-      end
-
-      # script-specific
-      if enabled.nil?
-        enabled = Gatekeeper.allows(
-          'showUnusedBlocks',
-          where: {script_name: script.name},
-          default: nil
-        )
-      end
-
-      # global
-      enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
-
-      app_options[:showUnusedBlocks] = enabled
-    end
 
     # Edit blocks-dependent options
     if level_view_options(@level.id)[:edit_blocks]
@@ -542,14 +550,10 @@ module LevelsHelper
 
     # User/session-dependent options
     app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
-    app_options[:isLegacyShare] = true if @is_legacy_share
+    app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    if @level.game.use_firebase?
-      app_options[:firebaseName] = CDO.firebase_name
-      app_options[:firebaseAuthToken] = firebase_auth_token
-      app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
-    end
+    app_options.merge!(firebase_options)
     app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
@@ -561,6 +565,10 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
+
+    if params[:blocks]
+      level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+    end
 
     unless params[:no_last_attempt]
       level_options[:lastAttempt] = @last_attempt
@@ -581,7 +589,7 @@ module LevelsHelper
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
-    if (@game && @game.owns_footer_for_share?) || @is_legacy_share
+    if (@game && @game.owns_footer_for_share?) || @legacy_share_style
       app_options[:copyrightStrings] = build_copyright_strings
     end
 
@@ -752,9 +760,11 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
     payload = {
       uid: user_or_session_id,
-      is_dashboard_user: !!current_user
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
     }
     options = {}
     # Provides additional debugging information to the browser when
@@ -775,6 +785,7 @@ module LevelsHelper
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab
+    return false if level.is_a? GamelabJr
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")

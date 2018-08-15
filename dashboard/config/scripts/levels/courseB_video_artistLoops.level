@@ -8,7 +8,8 @@
     "video_key": "CSF_a_b_artist_loops",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": 2
   },
   "published": true,
   "notes": "Is there a way for these videos to start automatically (and if so, is that a good idea for this stage)?",

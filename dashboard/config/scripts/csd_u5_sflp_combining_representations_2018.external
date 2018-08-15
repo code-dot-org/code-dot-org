@@ -1,0 +1,17 @@
+name 'CSD-U5-SFLP Combining Representations_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+This lesson combines all three types of binary representation systems (ASCII characters, binary number, and images) to allow for the encode of more complex types information in a record.  After seeing a series of bits and being asked to decode them, the class is introduced to the idea that  understanding binary information requires understanding both the system that is being used and the meaning of the information encoded.
+
+
+## Resources
+
+* [Pet Records - Activity Guide](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
+* [ASCII to Binary Table - Reference](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [Pet Records](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/) - Exemplar ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))
+MARKDOWN

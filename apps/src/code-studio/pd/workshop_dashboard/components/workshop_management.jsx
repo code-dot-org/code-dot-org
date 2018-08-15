@@ -4,7 +4,8 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
-import ConfirmationDialog from './confirmation_dialog';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import ConfirmationDialog from '../../components/confirmation_dialog';
 import {
   PermissionPropType,
   Organizer,
@@ -19,11 +20,13 @@ export class WorkshopManagement extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
     workshopId: PropTypes.number.isRequired,
+    course: PropTypes.string,
     subject: PropTypes.string,
     viewUrl: PropTypes.string.isRequired,
     editUrl: PropTypes.string,
     onDelete: PropTypes.func,
-    showSurveyUrl: PropTypes.bool
+    showSurveyUrl: PropTypes.bool,
+    date: PropTypes.string
   };
 
   static defaultProps = {
@@ -37,7 +40,19 @@ export class WorkshopManagement extends React.Component {
     if (props.showSurveyUrl) {
       let surveyBaseUrl;
 
-      if (props.subject === '5-day Summer') {
+      if (
+          (
+            [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(props.subject)
+            && new Date(this.props.date).getFullYear() >= 2018
+          ) ||
+          (
+            ['CS Discoveries', 'CS Principles'].includes(props.course)
+            && props.subject !== 'Code.org Facilitator Weekend'
+            && new Date(this.props.date) >= new Date(2018, 8, 1)
+          )
+      ) {
+        surveyBaseUrl = "local_summer_workshop_daily_survey_results";
+      } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = "local_summer_workshop_survey_results";
       } else {
         surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager) ? "organizer_survey_results" : "survey_results";
@@ -155,5 +170,5 @@ export class WorkshopManagement extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission
+  permission: state.workshopDashboard.permission
 }))(WorkshopManagement);

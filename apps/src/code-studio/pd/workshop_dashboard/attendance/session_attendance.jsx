@@ -212,5 +212,5 @@ export class SessionAttendance extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission
+  permission: state.workshopDashboard.permission
 }))(SessionAttendance);

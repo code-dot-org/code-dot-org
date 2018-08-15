@@ -1,0 +1,13 @@
+name 'csp-pulse-check-survey-2-levelgroup-U2Ch1_2018'
+title 'CS Principles Rapid Survey!'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csp-pulse-check-survey-preamble_2018'
+level 'csp-pulse-check-survey-2-q1-U2Ch1_2018'
+level 'csp-pulse-check-survey-2-q2-U2Ch1_2018'
+level 'csp-pulse-check-survey-2-q3-U2Ch1_2018'
+level 'csp-pulse-check-survey-2-q4-U2Ch1_2018'
+level 'csp-pulse-check-survey-2-q5-U2Ch1_2018'
+level 'csp-pulse-check-survey-2-q6-FR-U2Ch1_2018'

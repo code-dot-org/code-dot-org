@@ -3,16 +3,17 @@ require 'test_helper'
 class PairedUserLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    user_1 = create :user
-    user_2 = create :user
-    user_3 = create :user
+    @user_1 = create :user
+    @user_2 = create :user
+    @user_3 = create :user
+    @user_4 = create :user
 
-    @nav_level_1 = create :user_level, user: user_1
-    @driver_level_1 = create :user_level, user: user_2
-    @nav_level_2 = create :user_level, user: user_2
-    @driver_level_2 = create :user_level, user: user_3
-    @nonpaired_level_3 = create :user_level, user: user_1
-    @nonpaired_level_4 = create :user_level, user: user_2
+    @nav_level_1 = create :user_level, user: @user_1
+    @driver_level_1 = create :user_level, user: @user_2
+    @nav_level_2 = create :user_level, user: @user_2
+    @driver_level_2 = create :user_level, user: @user_3
+    @nonpaired_level_3 = create :user_level, user: @user_1
+    @nonpaired_level_4 = create :user_level, user: @user_2
 
     PairedUserLevel.create driver_user_level: @driver_level_1,
       navigator_user_level: @nav_level_1
@@ -44,5 +45,19 @@ class PairedUserLevelTest < ActiveSupport::TestCase
         ]
       ).sort
     )
+  end
+
+  test 'pairs_by_user' do
+    assert_queries(2) do
+      assert_equal(
+        {
+          @user_1.id => Set[@nav_level_1.id],
+          @user_2.id => Set[@driver_level_1.id, @nav_level_2.id],
+          @user_3.id => Set[@driver_level_2.id],
+          @user_4.id => Set.new
+        },
+        PairedUserLevel.pairs_by_user([@user_1, @user_2, @user_3, @user_4])
+      )
+    end
   end
 end

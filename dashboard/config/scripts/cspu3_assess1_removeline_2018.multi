@@ -1,0 +1,37 @@
+name 'cspu3_assess1_removeline_2018'
+right 'Line 3 and Line 4'
+wrong 'Lines 5, 6, 7, 8 and 9'
+wrong 'Line 8 and Line 9'
+wrong 'Line 9'
+
+
+markdown <<MARKDOWN
+Consider the following incorrect program, which is intended to move the robot around the perimeter of a grid, as indicated by the drawing below.  The starting position and direction of the robot is indicated in the diagram.
+
+	Line 1: REPEAT 4 TIMES
+    Line 2: {
+    Line 3:      MOVE_FORWARD()
+    Line 4:      ROTATE_RIGHT()
+    Line 5:      MOVE_FORWARD()
+    Line 6:      MOVE_FORWARD()
+    Line 7:      MOVE_FORWARD()
+    Line 8:      MOVE_FORWARD()
+    Line 9:      ROTATE_RIGHT()
+    Line 10: }
+
+![](https://images.code.org/64dbce1cd3b26de78691ca0bae8eb350-image-1474952402425.png)
+
+* Fig: What the robot is supposed to do
+
+Given the options below, which lines should be removed so the program will work as intended?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+There are two possible approaches to this question:
+
+* Go through the code line by line and see which ones need to be removed or
+* Write the code from scratch according to the given figure and see what is different in comparison to the given code
+
+First, look at the figure and break down the steps the robot needs to take. Looking at the figure, the robot needs to move forward 4 steps then rotate right. Notice the robot is moving clockwise and thus, will need to rotate right rather than left. This is repeated 4 times to make a square. Looking at the given code, lines 3 and 4 are extra steps and need to be removed.
+
+MARKDOWN

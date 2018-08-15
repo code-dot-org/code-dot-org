@@ -11,7 +11,7 @@ By translating Code.org content to other languages, you are directly impacting s
 [Learn how to use Crowdin](/translate/tutorials/#crowdinhowto), our translation platform. 
 
 # Help Translate
-1. Sign up [here](http://eepurl.com/Im_In) to stay up to date on what we need translated.
+1. Sign up [here](http://go.pardot.com/l/153401/2018-05-09/kyjslf) to stay up to date on what we need translated.
 1. Translate hourofcode.com [here](https://crowdin.com/project/hour-of-code).
 1. Translate our newest tutorials.
   * [Minecraft: Hero's Journey](/translate/hero)
@@ -19,7 +19,6 @@ By translating Code.org content to other languages, you are directly impacting s
   * [Minecraft Adventurer](/translate/mc)
   * [Star Wars](/translate/starwars)
   * [Sports and Basketball](/translate/sports)
-  * [All Code Studio courses](/translate/tutorials)
 1. Translate our video captions.
   * [Computer Science is Changing Everything](https://amara.org/en/videos/atEXdPApYAO8/info/computer-science-is-changing-everything/)
   * [The Hour of Code Worldwide (2016)](https://amara.org/en/videos/mbBjcLLwypIT/info/hour-of-code-worldwide/)

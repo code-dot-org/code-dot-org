@@ -1,5 +1,6 @@
 import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
-import ConfirmationDialog from '@cdo/apps/code-studio/pd/workshop_dashboard/components/confirmation_dialog';
+import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import ConfirmationDialog from '@cdo/apps/code-studio/pd/components/confirmation_dialog';
 import {Button} from 'react-bootstrap';
 import React from 'react';
 import {expect} from 'chai';
@@ -14,8 +15,10 @@ from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 const defaultProps = {
   permission: new Permission(),
+  course: 'CS Principles',
   workshopId: 123,
-  viewUrl: "viewUrl"
+  viewUrl: "viewUrl",
+  date: new Date().toISOString()
 };
 
 describe("WorkshopManagement", () => {
@@ -55,6 +58,58 @@ describe("WorkshopManagement", () => {
     mockRouter.expects("push").withExactArgs("viewUrl");
     viewWorkshopButton.simulate('click', mockClickEvent);
   };
+
+  describe("with showSurveyUrl", () => {
+    const getSurveyUrlForProps = props => shallow(
+      <WorkshopManagement
+        {...defaultProps}
+        showSurveyUrl={true}
+        {...props}
+      />, {context}
+    ).instance().surveyUrl;
+
+    it("uses daily results for academic year workshop past August 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-09-01", subject: '1-day Academic Year, Units 1 and 2'});
+      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+    });
+
+    it("uses survey results for academic year workshop before August 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: '1-day Academic Year, Units 1 and 2'});
+      expect(surveyUrl).to.eql("/survey_results/123");
+    });
+
+    it("uses daily results for local summer in 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.local_summer});
+      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+    });
+
+    it("uses daily results for teachercon in 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.teachercon});
+      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+    });
+
+    it("uses local summer results for local summer in 2017", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2017-07-01", subject: WorkshopTypes.local_summer});
+      expect(surveyUrl).to.eql("/local_summer_workshop_survey_results/123");
+    });
+
+    it("uses organizer results for organizers", () => {
+      const organizerPermission = new Permission([Organizer]);
+      const surveyUrl = getSurveyUrlForProps({permission: organizerPermission});
+      expect(surveyUrl).to.eql("/organizer_survey_results/123");
+    });
+
+    it("uses organizer results for program managers", () => {
+      const programManagerPermission = new Permission([ProgramManager]);
+      const surveyUrl = getSurveyUrlForProps({permission: programManagerPermission});
+      expect(surveyUrl).to.eql("/organizer_survey_results/123");
+    });
+
+    it("uses survey_results by default", () => {
+      const surveyUrl = getSurveyUrlForProps();
+      expect(surveyUrl).to.eql("/survey_results/123");
+    });
+  });
 
   describe("For not-started workshops", () => {
     let deleteStub;
@@ -241,6 +296,40 @@ describe("WorkshopManagement", () => {
 
       mockRouter.expects("push").withExactArgs("/survey_results/123");
       surveyButton.simulate('click', mockClickEvent);
+    });
+  });
+
+  describe("For a local summer workshop in 2017 or earlier", () => {
+    it("Renders the correct survey results URL", () => {
+      mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+      mockRouter.expects("createHref").withExactArgs("/local_summer_workshop_survey_results/123").returns("surveyResultsHref");
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          showSurveyUrl={true}
+          subject="5-day Summer"
+          date="2017-06-04T09:00:00.000Z"
+        />,
+        {context}
+      );
+    });
+  });
+
+  describe("For a local summer workshop in 2018 or later", () => {
+    it("Renders the correct survey results URL", () => {
+      mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+      mockRouter.expects("createHref").withExactArgs("/local_summer_workshop_daily_survey_results/123").returns("surveyResultsHref");
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          {...defaultProps}
+          showSurveyUrl={true}
+          subject="5-day Summer"
+          date="2018-06-04T09:00:00.000Z"
+        />,
+        {context}
+      );
     });
   });
 });

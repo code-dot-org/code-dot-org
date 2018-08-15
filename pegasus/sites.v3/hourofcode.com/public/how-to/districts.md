@@ -6,8 +6,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district
-
+# How to involve your entire school district
 
 ## Get every school participating, every student learning!
 

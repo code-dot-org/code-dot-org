@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-24T18:58:52.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "# Day 3 Question 2\r\n\r\nWhat additional questions came up for you today? Record them here so we can discuss your questions during your FiT training.\r\n",
+    "parent_level_id": 14285
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 23:05:13 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-09 13:45:10 +0000\",\"changed\":[\"tts_markdown_instructions_override\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-09 14:12:13 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-13 23:18:20 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-22 22:37:20 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-22 23:21:21 +0000\",\"changed\":[\"display_name\",\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-22 23:30:35 +0000\",\"changed\":[\"name\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-22 23:31:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-24 18:46:33 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-24 18:49:14 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-24 18:53:21 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-24 18:59:01 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

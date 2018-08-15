@@ -1,0 +1,22 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "setAnimation",
+    "blockText": "change {THIS} costume to {ANIMATION}",
+    "args": [
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      },
+      {
+        "name": "ANIMATION",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

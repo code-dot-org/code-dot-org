@@ -5,6 +5,7 @@ require 'timecop'
 require 'cdo/firehose'
 
 MAIN_JSON = 'main.json'
+COMMENT_BLOCK_SOURCES = File.join(__dir__, 'fixtures', 'comment-block-sources.json')
 
 class SourcesTest < FilesApiTestBase
   def setup
@@ -262,14 +263,14 @@ class SourcesTest < FilesApiTestBase
     FirehoseClient.instance.expects(:put_record).with do |data|
       data_json_data = JSON.parse(data[:data_json])
       data[:study] == 'project-data-integrity' &&
-        data[:event] == 'replace-non-current-main-json' &&
+        data[:event] == 'reject-comparing-older-main-json' &&
         data[:project_id] == @channel &&
-        data_json_data['replacedVersionId'] == version1
+        data_json_data['currentVersionId'] == version1
     end
 
     file_data = 'version 3'
     @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
-    assert successful?
+    assert conflict?
 
     delete_all_source_versions(filename)
 
@@ -538,7 +539,7 @@ class SourcesTest < FilesApiTestBase
     delete_all_animation_versions(animation_filename_1)
     delete_all_animation_versions(animation_filename_2)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename_1}")
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/2/#{animation_filename_2}")
   end
@@ -582,7 +583,7 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions(MAIN_JSON)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
   end
 
   def test_remix_not_main
@@ -609,7 +610,7 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions('test.json')
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/test.json")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/test.json")
   end
 
   def test_remix_no_animations
@@ -641,7 +642,60 @@ class SourcesTest < FilesApiTestBase
     # Clear original and remixed buckets
     delete_all_source_versions(MAIN_JSON)
 
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/2/#{MAIN_JSON}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/2/#{MAIN_JSON}")
+  end
+
+  def test_remove_under_13_comments
+    comment_block_sources = JSON.parse(IO.read(COMMENT_BLOCK_SOURCES))
+    birthdays = [Date.parse("1900-01-01"), Date.today]
+    sources = ["short_source_with_comments", "long_source_with_comments"]
+    sessions = [:admin, :non_owner]
+
+    birthdays.each do |birthday|
+      user_age = UserHelpers.age_from_birthday(birthday)
+      FilesApi.any_instance.stubs(:under_13?).returns(user_age < 13)
+
+      sources.each do |source|
+        put_main_json({"source": comment_block_sources[source]}.stringify_keys)
+
+        # owner sees unchanged
+        @api.get_object(MAIN_JSON)
+        assert successful?
+        assert_equal(
+          comment_block_sources[source],
+          JSON.parse(last_response.body)['source'],
+          "#{user_age}-year-old user sees own complete #{source}"
+        )
+
+        # iff owner is under 13, non-owners (including admins) should see
+        # version without comments
+        sessions.each do |session|
+          with_session(session) do
+            non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+            non_owner_api.get_object(MAIN_JSON)
+            assert successful?
+            response_source = JSON.parse(last_response.body)['source']
+            if user_age < 13
+              assert_equal(
+                comment_block_sources["source_without_comments"],
+                response_source,
+                "#{session} user sees sanitized source for #{user_age}-year-old user's #{source}"
+              )
+            else
+              assert_equal(
+                comment_block_sources[source],
+                response_source,
+                "#{session} user sees complete source for #{user_age}-year-old user's #{source}"
+              )
+            end
+          end
+        end
+      end
+
+      FilesApi.any_instance.unstub(:under_13?)
+    end
+
+    delete_all_source_versions(MAIN_JSON)
   end
 
   private
@@ -764,7 +818,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def delete_all_source_versions(filename)
-    delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/1/#{filename}")
+    delete_all_versions(CDO.sources_s3_bucket, "#{CDO.sources_s3_directory}/1/1/#{filename}")
   end
 
   def delete_all_animation_versions(filename)

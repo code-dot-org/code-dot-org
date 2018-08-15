@@ -46,7 +46,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Bumper Cars\r\n\r\nThe bumper cars are almost ready, but they still don't bump into each other.  Can you choose the right method to make the cars behave like they do in the picture?\r\n\r\n# Do This\r\n\r\nUse `displace`, `collide`, `bounce`, or `bounceOff` to make the sprites interact in the right way.\r\n\r\n[//]: # (https://images.code.org/682567536f824cc930ebed5c1b936e5f-image-1470415888369.png)\r\n\r\n[//]: # (https://images.code.org/8a6915fe703f4fe097094cad1e754a6f-image-1470415888371.png)\r\n\r\n[//]: # (https://images.code.org/0b9f5ca88dc99fc08d472fdba87d6e32-image-1470417254115.png)\r\n\r\n[//]: # (https://images.code.org/2085e5de29f7170465b0c7bd5e6b56e9-image-1470417254116.png)",

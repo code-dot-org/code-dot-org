@@ -109,7 +109,7 @@ module Pd::Application
       self.course = PROGRAMS.key(program)
     end
 
-    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil?}
+    before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     def save_partner
       self.regional_partner_id = sanitize_form_data_hash[:regional_partner_id]
     end
@@ -494,7 +494,7 @@ module Pd::Application
     def principal_greeting
       hash = sanitize_form_data_hash
       title = hash[:principal_title]
-      "#{title.present? ? title : hash[:principal_first_name]} #{hash[:principal_last_name]}"
+      "#{title.presence || hash[:principal_first_name]} #{hash[:principal_last_name]}"
     end
 
     def principal_approval_url
@@ -622,10 +622,25 @@ module Pd::Application
     end
 
     # @override
-    def self.cohort_csv_header
+    def self.cohort_csv_header(optional_columns)
+      columns = [
+        'Date Accepted',
+        'Applicant Name',
+        'District Name',
+        'School Name',
+        'Email',
+        'Status',
+        'Assigned Workshop'
+      ]
+      if optional_columns[:registered_workshop]
+        columns.push 'Registered Workshop'
+      end
+      if optional_columns[:accepted_teachercon]
+        columns.push 'Accepted Teachercon'
+      end
+
       CSV.generate do |csv|
-        csv << ['Date Accepted', 'Applicant Name', 'District Name', 'School Name',
-                'Email', 'Assigned Workshop', 'Registered Workshop', 'Status']
+        csv << columns
       end
     end
 
@@ -657,18 +672,33 @@ module Pd::Application
     end
 
     # @override
-    def to_cohort_csv_row
+    def to_cohort_csv_row(optional_columns)
+      columns = [
+        date_accepted,
+        applicant_name,
+        district_name,
+        school_name,
+        user.email,
+        status,
+        workshop_date_and_location
+      ]
+      if optional_columns[:registered_workshop]
+        if workshop.try(:local_summer?)
+          columns.push(registered_workshop? ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+      if optional_columns[:accepted_teachercon]
+        if workshop.try(:teachercon?)
+          columns.push(pd_teachercon1819_registration ? 'Yes' : 'No')
+        else
+          columns.push nil
+        end
+      end
+
       CSV.generate do |csv|
-        csv << [
-          date_accepted,
-          applicant_name,
-          district_name,
-          school_name,
-          user.email,
-          workshop_date_and_location,
-          registered_workshop? ? 'Yes' : 'No',
-          status
-        ]
+        csv << columns
       end
     end
 

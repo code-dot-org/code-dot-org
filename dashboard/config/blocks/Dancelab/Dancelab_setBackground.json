@@ -1,0 +1,18 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "setBackground",
+    "blockText": "set background color {COLOR}",
+    "args": [
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      }
+    ]
+  }
+}

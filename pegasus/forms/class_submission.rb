@@ -1,5 +1,3 @@
-require_relative './form'
-
 class ClassSubmission < Form
   def self.normalize(data)
     result = {}
@@ -27,6 +25,7 @@ class ClassSubmission < Form
     result[:contact_phone_s] = nil_if_empty data[:contact_phone_s]
 
     result[:email_s] = required email_address data[:email_s]
+    result[:email_preference_optin_s] = required enum(data[:email_preference_optin_s].to_s.strip.downcase, ['yes', 'no'])
 
     result
   end
@@ -132,13 +131,49 @@ class ClassSubmission < Form
     )
   end
 
-  def self.process(data)
+  def self.process_with_ip(data, created_ip)
+    if data['email_preference_optin_s'] && created_ip && data['email_s']
+      EmailPreferenceHelper.upsert!(
+        email: data['email_s'],
+        opt_in: data['email_preference_opt_in_s'] == 'yes',
+        ip_address: created_ip,
+        source: EmailPreferenceHelper::FORM_CLASS_SUBMIT,
+        form_kind: '0'
+      )
+    end
+
     {}.tap do |results|
       location = search_for_address(data['school_address_s'])
       results.merge! location.to_solr if location
     end
   end
 
+  # This is almost identical to the below function, but it's called by
+  # process_with_ip which is called by process_forms' process_batch_of_forms
+  # which writes to the database's processed_data column in the forms table.
+  # The fields stored by this function were previously only written to Solr.
+  def self.additional_data(data)
+    new_data = {}
+
+    ['in_school', 'out_of_school', 'online'].each do |prefix|
+      class_format = data['class_format_s']
+      if class_format =~ /^#{prefix}_/
+        new_data['class_format_category_s'] = prefix
+        new_data['class_format_subcategory_s'] = class_format.sub(/^#{prefix}_/, '')
+      end
+    end
+
+    new_data['class_languages_all_ss'] = data['class_languages_ss'] - ['Other']
+    new_data['class_languages_all_ss'].concat(data['class_languages_other_ss'] || []).sort.uniq
+
+    # Create a case-insensitive version of the name for sorting.
+    new_data['school_name_sort_s'] = data['school_name_s'].downcase
+
+    new_data
+  end
+
+  # This function adds additional fields to the data.  It's called by
+  # process_forms' index_batch_of_forms which writes them to Solr.
   def self.index(data)
     ['in_school', 'out_of_school', 'online'].each do |prefix|
       class_format = data['class_format_s']

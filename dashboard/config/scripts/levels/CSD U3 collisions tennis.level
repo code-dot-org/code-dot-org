@@ -39,7 +39,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Tennis\r\n\r\nComplete the tennis game by making sure the ball and the racket interact in the right way. You can use your up and down arrows to control the racket.\r\n\r\n# Do This\r\n\r\nAdd a `displace`, `collide`, `bounce`, or `bounceOff` block in the draw loop to make the sprites interact as they do in the picture.\r\n\r\n_Challenge: Can you add a scoreboard that will add a point every time the ball is hit, and subtract one every time it's missed?_\r\n\r\n[//]: # (https://images.code.org/8d8cf039f50114c07a21e73bbc1c8dfe-image-1470418244037.png)\r\n\r\n[//]: # (https://images.code.org/d05be653ae7e4717353dffd08af9c656-image-1470418244039.png)",

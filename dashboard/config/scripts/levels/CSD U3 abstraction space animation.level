@@ -32,7 +32,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Your choice\r\n\r\n<img style=\"float:right\" src=\"https://images.code.org/1c05e3bd228881b77109488b2eb5e737-image-1472408305120.gif\">\r\n\r\nNow that you have everything moving in the correct way, you can add your own sprite.  You can choose between the star and astronaut animations in the animations tab\r\n\r\n# Do This\r\n\r\n* Add a new sprite to the picture using the star or astronaut in the animations tab\r\n* Make  your sprite move in a new way based on what you have learned\r\n* Share your picture with a classmate and compare your animations",

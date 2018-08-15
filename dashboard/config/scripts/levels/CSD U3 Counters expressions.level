@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Expressions\r\n\r\nWe're going to start learning about **expressions** and how to use them in programs. Here are two expressions, a short one and a longer one.\r\n\r\n`1 + 2`\r\n\r\n`(1000 - 400) / (3 * 20)`\r\n\r\nThese expressions have two important components:\r\n\r\n* **values:** numbers, text, or information in your program \r\n* **operators:** commands telling the computer to perform an action with those value `+`, `-`, `*`, `/`\r\n\r\nDon't worry if this is a lot of vocabulary all at once. Try using some expressions first to get a feel for how they work.\r\n\r\n# Do This: \r\n\r\nThis program draws a rectangle using 4 separate expressions. \r\n\r\n* **Run the program** to see what happens\r\n* **Change some of the values and operators in the 4 expressions**. How does it change the rectangle?\r\n* Move on once you've changed a few expressions. It's fine if your program didn't run properly.",

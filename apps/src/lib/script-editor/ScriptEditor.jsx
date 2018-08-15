@@ -49,11 +49,18 @@ const ScriptEditor = React.createClass({
     stageLevelData: PropTypes.string,
     hasVerifiedResources: PropTypes.bool,
     hasLessonPlan: PropTypes.bool,
+    curriculumPath: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
+    supportedLocales: PropTypes.arrayOf(PropTypes.string),
+    locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
   },
 
   handleClearProjectWidgetSelectClick() {
     $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
+  },
+
+  handleClearSupportedLocalesSelectClick() {
+    $(this.supportedLocaleSelect).children('option')['removeAttr']('selected', true);
   },
 
   presubmit(e) {
@@ -209,6 +216,14 @@ const ScriptEditor = React.createClass({
           </p>
         </label>
         <label>
+          Curriculum Path
+          <input
+            name="curriculum_path"
+            defaultValue={this.props.curriculumPath}
+            style={styles.input}
+          />
+        </label>
+        <label>
           Professional Learning Course. When filled out, the course unit associated with
           this script will be associated with the course named in this box. If the course
           unit does not exist, and if the course does not exist it will be created.
@@ -290,6 +305,26 @@ const ScriptEditor = React.createClass({
             <option value="gumball">Gumball</option>
           </select>
         </label>
+
+        <label>
+          Supported locales
+          <p>
+            Select additional locales supported by this script. Select
+            <a onClick={this.handleClearSupportedLocalesSelectClick}> none </a>
+            or shift-click or cmd-click to select multiple.
+          </p>
+          <select
+            name="supported_locales[]"
+            multiple
+            defaultValue={this.props.supportedLocales}
+            ref={select => this.supportedLocaleSelect = select}
+          >
+            {this.props.locales.filter(locale => !locale[1].startsWith("en")).map(locale =>
+              <option key={locale[1]} value={locale[1]}>{locale[1]}</option>
+            )}
+          </select>
+        </label>
+
         <div>
           <h4>Teacher Resources</h4>
           <div>

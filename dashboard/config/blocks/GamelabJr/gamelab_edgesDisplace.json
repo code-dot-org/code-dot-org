@@ -1,0 +1,13 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "edgesDisplace",
+    "blockText": "edges block {SPRITE} from moving",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ]
+  }
+}

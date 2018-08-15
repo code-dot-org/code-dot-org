@@ -1,0 +1,20 @@
+name 'CSP Unit2 Ch 1 MC hex rgb_2018'
+title '12-bit Red'
+description ' '
+question ' '
+right 'F00'
+wrong '00F'
+wrong 'FF00'
+wrong 'FF0000'
+
+markdown <<MARKDOWN
+An artist makes an RGB raster image in which each pixel color is encoded with *12-bits* — 4 bits each for red, green and blue.  
+
+Which of the following correctly shows the **hexadecimal value for Red as a *12-bit* representation.**
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The correct answer is `F00`.  A single hex digit is used to represent a 4-bit sequence - since there are 16 possible 4-bit sequences and 16 different hex digits 0-F.  
+
+So 3 hex digits represents 12 bits, and the first digit represents the intensity of Red in an RGB image.
+MARKDOWN

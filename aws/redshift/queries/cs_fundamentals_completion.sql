@@ -1,7 +1,11 @@
+select *
+from
+(
 -- # of teachers completing CSF for first time
 select 
   'Teacher with classroom completing CSF for first time' metric, 
-  count(*) value
+  count(*) value,
+  1 as sort
 from
 (
   select 
@@ -20,7 +24,8 @@ union all
 -- (first_script_complete, students)
 select 
   'Students completing CSF for first time' metric, 
-  count(*) value
+  count(*) value,
+  2 as sort
 from
 (
   select 
@@ -38,7 +43,8 @@ union all
 -- pct female
 select 
   'Students completing CSF for the first time, % female' metric, 
-  count(distinct case when u.gender = 'f' then u.id else null end)::float / count(distinct case when u.gender in ('m','f') then u.id else null end) value
+  count(distinct case when u.gender = 'f' then u.id else null end)::float / count(distinct case when u.gender in ('m','f') then u.id else null end) value,
+  3 as sort
 from
 (
   select 
@@ -61,7 +67,8 @@ union all
 -- # of PD'd teachers completing CSF for first time
 select 
   'PDd teacher with classroom completing CSF for first time' metric,
-  count(*) value
+  count(*) value,
+  4 as sort
 from
 (
   select 
@@ -80,7 +87,8 @@ union all
 -- get count by month of students with PD'd teachers completing their first script
 select 
   'Students of PDd teachers completing first script' metric, 
-  count(distinct students.user_id) value
+  count(distinct students.user_id) value,
+  5 as sort
 from
 (
   select 
@@ -101,7 +109,8 @@ union all
 -- pct female
 select 
   'Students of PDd teachers completing first CSF script, % female' metric, 
-  count(distinct case when u.gender = 'f' then u.id else null end)::float / count(distinct case when u.gender in ('m','f') then u.id else null end) value
+  count(distinct case when u.gender = 'f' then u.id else null end)::float / count(distinct case when u.gender in ('m','f') then u.id else null end) value,
+  6 as sort
 from
 (
   select 
@@ -116,4 +125,6 @@ join users u on u.id = students.user_id
 where DATE_PART(month,first_completed_at) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN 12 ELSE DATE_PART(month,getdate()) - 1 END
   AND DATE_PART(year,first_completed_at) = CASE WHEN DATE_PART(month,getdate()) = 1 THEN DATE_PART(year,getdate()) - 1 ELSE DATE_PART(year,getdate()) END
   AND se.user_id in (select user_id from csf_teachers_trained)
-group by 1;
+group by 1
+)
+order by sort asc;

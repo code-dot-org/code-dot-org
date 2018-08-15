@@ -39,6 +39,7 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The variable `length` will be used in two places in your code: In the side length of your triangle, and in the amount you move forward between triangles.\",\"hint_id\":\"courseF_artist_variables3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f0e910fb628e094de41568a3c27922e4/courseF_artist_variables3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"A number block with value 50 should only be in one place: after the `set variable length` block.\",\"hint_id\":\"courseF_artist_variables3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/46408831127dc514e9bf219f49d9a632/courseF_artist_variables3.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

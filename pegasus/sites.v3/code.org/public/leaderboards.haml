@@ -27,40 +27,33 @@ social:
   %div{:style=>'font-size:18px'}
     %b= "Total participation: #{started} served. Students have written #{loc} lines of code."
 
-  .col-66
+  = view :votes, results:hoc_metrics
+  %br
 
-    = view :votes, results:hoc_metrics
-    %br
+  %div{:style=>'float:left; margin-right:20px'}
+    = view :share_buttons, facebook:facebook, twitter:twitter
 
-    %div{:style=>'float:left; margin-right:20px'}
-      = view :share_buttons, facebook:facebook, twitter:twitter
+  %div{:style=>'float:left'}
+    %a{:href=>CDO.code_org_url('/learn')}
+      %button{:style=>"margin-top:10px; font-family: 'Gotham 5r', sans-serif;"}= "Start the Hour of Code now"
 
-    %div{:style=>'float:left'}
-      %a{:href=>CDO.code_org_url('/learn')}
-        %button{:style=>"margin-top:10px; font-family: 'Gotham 5r', sans-serif;"}= "Start the Hour of Code now"
+  %div{:style=>'clear:both;'}
 
-    %div{:style=>'clear:both;'}
+  %br
 
-    %br
+  .col-50
+    %h3.special_heading{:style=>'margin-top: 20px'}=I18n.t :country
+    -hoc_metrics['countries'].keys.first(40).each do |country|
+      =country
+      %hr.grey_hr_fine{:style=>'margin-right:40px'}
 
-    .col-50
-      %h3.special_heading{:style=>'margin-top: 20px'}=I18n.t :country
-      -hoc_metrics['countries'].keys.first(40).each do |country|
-        =country
-        %hr.grey_hr_fine{:style=>'margin-right:40px'}
+  .col-50
+    %h3.special_heading{:style=>'margin-top: 20px'}=I18n.t :city
+    -hoc_metrics['cities'].keys.first(40).each do |city|
+      =city
+      %hr.grey_hr_fine{:style=>'margin-right:40px'}
 
-    .col-50
-      %h3.special_heading{:style=>'margin-top: 20px'}=I18n.t :city
-      -hoc_metrics['cities'].keys.first(40).each do |city|
-        =city
-        %hr.grey_hr_fine{:style=>'margin-right:40px'}
-
-  .col-33.desktop-feature
-    %br
-    %br
-    = view :twitter_tall
-
-  %div{:style=>'clear:both; text-align:center'}
+  %div{:style=>'clear:both;'}
     %br
     %a{:href=>CDO.code_org_url('/learn')}
       %button{:style=>"font-family: 'Gotham 5r', sans-serif;"}= "Start the Hour of Code now"

@@ -1,5 +1,3 @@
-require_relative './form'
-
 class PdProgramRegistration < Form
   def self.normalize(data)
     result = {}

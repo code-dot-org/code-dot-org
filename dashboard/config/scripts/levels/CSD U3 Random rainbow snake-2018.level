@@ -13,7 +13,6 @@
       "rect": null,
       "randomNumber_min_max": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Rainbow Snake\r\n\r\nThis program draws a very rare breed of rainbow snake. To make the snake draw differently every time you'll need to use random numbers.\r\n\r\n# Do This\r\n\r\n* Run the program several times to see how the starter code works.\r\n* Add at least three new different colored circles to your rainbow snake.\r\n* Use `randomNumber()` to make the rest of the snake's body move up and down like the first three.\r\n\r\n*Challenge: Can you make size of some of the circles random, too?*",

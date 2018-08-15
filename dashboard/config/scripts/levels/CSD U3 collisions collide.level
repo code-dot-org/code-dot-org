@@ -30,7 +30,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Save your treasure\r\n\r\nThe pirate is trying to steal your treasure!  Use the arrow keys to move the pirate around the screen.  Can you change the code so the pirate can't get past the wall?\r\n\r\n# Do This\r\n\r\nUse the `collide` block to make the pirate sprite collide into the wall.\r\n\r\n[//]: #(https://images.code.org/04a7b28f7228570602238fed87420aab-image-1470944619236.png)\r\n\r\n[//]: #(https://images.code.org/8f7ec18621c97ce98d22337a1e21ddab-image-1470944619234.png)\r\n\r\n[//]: #(https://images.code.org/6b749a05857ea1e88fa46f7e2740c77c-image-1470944619235.png)",

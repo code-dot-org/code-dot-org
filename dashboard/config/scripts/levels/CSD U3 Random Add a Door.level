@@ -20,7 +20,6 @@
       "comment_Drawing": null,
       "noFill": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/fd746a708d8a94ad0aad863f3284a1ad-image-1490826372819.25.25 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Do This\r\n\r\n* Write code that makes a red rectangle that is taller than the one already in the drawing.\r\n* Don't worry about the exact dimensions as long as your new rectangle is taller.",

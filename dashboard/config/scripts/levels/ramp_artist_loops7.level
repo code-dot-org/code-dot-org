@@ -37,6 +37,7 @@
     "instructions": "Look for a pattern and make this code shorter using loops!",
     "markdown_instructions": "Look for a pattern and make this code shorter using loops!",
     "ideal": "7",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

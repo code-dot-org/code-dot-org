@@ -1,0 +1,11 @@
+name 'U4L1 - MC big data def_2018'
+title 'Big Data'
+question 'When a computer scientist uses the term “Big Data” what do they typically mean?'
+wrong 'That a dataset is larger than 5TB which is the common "Big Data" threshold.'
+wrong 'That there is so much data it\’s virtually impossible to process.'
+right 'There is enough data that traditional data processing applications are inadequate.'
+wrong 'It implies that the findings from the data are potentially hugely important for society.'
+teacher_markdown <<MARKDOWN
+The typical threshold for "Big Data" is when common desktop tools and techniques for handling, processing and manipulating data are not enough.  This is not a hard and fast definition, but the important note is that what makes it "big" is not only a function of the number of bytes, but how it needs to be processed as well.
+
+MARKDOWN

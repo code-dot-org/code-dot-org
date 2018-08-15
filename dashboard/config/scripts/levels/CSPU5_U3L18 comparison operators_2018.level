@@ -1,0 +1,77 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-04T23:02:16.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# Explore Comparison Operators with Console.log\r\n\r\n**Your task:** Make each expression evaluate to **true** by changing only the comparison operator.\r\n\r\nWe can easily test the results of comparison operators with `console.log`. \r\n\r\n* Run the code provided - see results in the console debug area below.\r\n* All of the Boolean expressions currently evaluate to `false`.\r\n* **Modify the code** so they all evaluate to `true`\r\n* **Change only the operator**\r\n\r\nExample:\r\n\r\n* `(3 > 4)` evaluates to **false**...\r\n* Change it to `(3 < 4)` (_3 is **less than** 4_) to make it **true*\r\n\r\n**HINT:** The workspace starts in text mode because you might find that doing this in text mode is much easier and faster than dragging out new blocks.  You can flip back to block mode if you like.\r\n",
+    "start_blocks": "var age = 16;\r\nvar name = \"Marcus\"\r\nvar boolean = false;\r\n\r\nconsole.log(age >= 18);\r\nconsole.log(age < 16);\r\nconsole.log(name == \"marcus\");\r\nconsole.log(\"Julio\" > name);\r\nconsole.log(true != true);\r\nconsole.log(boolean == true);\r\n\r\nconsole.log(\"---- Warning: below this line examples get weird ----\");\r\nconsole.log(\"The point is: you shouldn't do this, but you could.  It might even happen by accident, so you should know what happens.\");\r\n\r\nconsole.log(3 != \"3\");\r\nconsole.log(\"5\" > 10);\r\nconsole.log(age < name);\r\nconsole.log(\"hello\" == false);\r\nconsole.log(boolean == age);\r\nconsole.log(name == \"name\");\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "instructions": "Use console.log to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "rlr2N1FltblrUta/+SMU2NxO1/qB3rtsfxXN7aluiWuVC8xrNKhXQPYrnfWi\nHyBW\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "console.log"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to call both functions."
+      }
+    ],
+    "parent_level_id": 6817,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

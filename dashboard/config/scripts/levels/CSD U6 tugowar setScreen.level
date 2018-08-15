@@ -223,9 +223,9 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
     "encrypted_examples": "B6L+ut3qR8PsQiZpvyhBWj6V4oVJC/Kk5nVQh3SA6Q7ITGdZrL+Qhm5b3jRa\n2QRj\n",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

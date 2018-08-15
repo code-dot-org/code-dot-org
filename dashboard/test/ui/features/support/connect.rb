@@ -143,6 +143,7 @@ After do |_s|
         steps 'Then I am on "http://studio.code.org/"'
       end
       @browser.execute_script 'sessionStorage.clear()'
+      @browser.execute_script 'localStorage.clear()'
     else
       @browser.quit unless @browser.nil?
     end

@@ -34,7 +34,24 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "first_sprite_index": "0",
-    "protaganist_sprite_index": "0"
+    "protaganist_sprite_index": "0",
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "never_autoplay_video": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "examples_required": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "remove_items_when_actor_collides": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-07 19:16:24 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
@@ -56,7 +73,7 @@
     <required_blocks>
       <xml>
         <block type="studio_saySpriteChoices">
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">???</title>
         </block>
       </xml>
     </required_blocks>

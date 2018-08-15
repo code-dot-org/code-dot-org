@@ -5,7 +5,7 @@
  */
 import React, {PropTypes} from 'react';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, combineReducers} from 'redux';
 import {
   Router,
   Route,
@@ -19,6 +19,7 @@ import Header from '../components/header';
 import SurveyResults from './survey_results.jsx';
 import OrganizerSurveyResults from './organizer_survey_results.jsx';
 import LocalSummerWorkshopSurveyResults from './local_summer_workshop_survey_results';
+import {ResultsLoader as LocalSummerWorkshopDailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
 import WorkshopIndex from './workshop_index';
 import WorkshopFilter from './workshop_filter';
 import WorkshopAttendance from './attendance/workshop_attendance';
@@ -27,12 +28,25 @@ import workshopDashboardReducers, {
   setPermission,
   setFacilitatorCourses
 } from './reducers';
+import regionalPartnerReducers, {
+  setRegionalPartners,
+  setRegionalPartnerFilter,
+  getInitialRegionalPartnerFilter,
+} from '../components/regional_partners_reducers';
+import {WorkshopAdmin} from './permission';
+import {
+  RegionalPartnerShape,
+  ALL_PARTNERS_OPTION
+} from "../components/regional_partner_dropdown";
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
-const store = createStore(workshopDashboardReducers);
+const store = createStore(combineReducers({
+  workshopDashboard: workshopDashboardReducers,
+  regionalPartners: regionalPartnerReducers
+}));
 
 const WorkshopDashboardHeader = (props) => (
   <Header
@@ -44,7 +58,8 @@ const WorkshopDashboardHeader = (props) => (
 export default class WorkshopDashboard extends React.Component {
   static propTypes = {
     permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
-    facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired
+    facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
+    regionalPartners: PropTypes.arrayOf(RegionalPartnerShape)
   };
 
   constructor(props) {
@@ -57,6 +72,17 @@ export default class WorkshopDashboard extends React.Component {
     if (props.facilitatorCourses) {
       store.dispatch(setFacilitatorCourses(props.facilitatorCourses));
     }
+
+    store.dispatch(setRegionalPartners(this.props.regionalPartners));
+    store.dispatch(
+      setRegionalPartnerFilter(
+        getInitialRegionalPartnerFilter(
+          props.permissionList.includes(WorkshopAdmin),
+          this.props.regionalPartners,
+          ALL_PARTNERS_OPTION
+        )
+      )
+    );
   }
 
   render() {
@@ -94,6 +120,11 @@ export default class WorkshopDashboard extends React.Component {
               path="local_summer_workshop_survey_results(/:workshopId)"
               breadcrumbs="Local Summer Workshop Survey Results"
               component={LocalSummerWorkshopSurveyResults}
+            />
+            <Route
+              path="local_summer_workshop_daily_survey_results(/:workshopId)"
+              breadcrumbs="Local Summer Workshop Daily Survey Results"
+              component={LocalSummerWorkshopDailySurveyResultsLoader}
             />
             <Route
               path="workshops/new"

@@ -40,6 +40,7 @@
     "disable_procedure_autopopulate": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
+    "hint_prompt_attempts_threshold": 8,
     "contained_level_names": null
   },
   "published": true,

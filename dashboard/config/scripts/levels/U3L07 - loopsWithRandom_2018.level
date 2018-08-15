@@ -1,0 +1,100 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:38:12.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveTo": null,
+      "dot": null,
+      "penUp": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_min_max": null,
+      "penRGB": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "IzD1IsWQ223jSTrz9wySyqNwzZD9eXFcRNvrh+gndLm6fph6FuKo8YE/5+gE\ndraQ\n",
+    "embed": "false",
+    "instructions": "Increase the number of iterations to fill the screen with white. (Click to see full instructions)",
+    "markdown_instructions": "# Using Multiple Loops\r\n\r\nSome repeated tasks can't easily be solved with a single loop. Instead, you'll need to use **one loop after another**, each one solving a part of the problem. \r\n\r\n# Do This:\r\n\r\nAdd a loop to fill the screen with semi-transparent white dots until the original dots are \"erased\".\r\n\r\n<img src=\"https://images.code.org/329912b3c61cc62acbd36035ff4b823a-image-1443109101866.gif\" style=\"float: right; width: 100px\">\r\n* **Drag ** a second loop into your code that will run after the first loop.\r\n* **Add** commands to draw dots in random locations that are white with opacity set to 0.5.\r\n* **Increase the iterations** so that the colored dots are totally erased. How many does it take?\r\n\r\nHINT: you can copy/paste the original loop and just change the color of the dots and number of iterations.\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1.0",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "project_template_level_name": "U3L07 - randomDotsTemplate_2018",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 2500,
+        "message": "You're probably not running the loop(s) enough times to completely fill the screen with colored dots and then filling it again with white dots."
+      },
+      {
+        "entries": [
+          "[forInit]",
+          "[forInit]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "maxTimes": 1,
+        "message": "Your code is supposed to have two loops in it - your current code has less than or more than 2 loops.  One to draw a whole bunch of colored dots, and afterward a second loop to draw a whole bunch of white dots."
+      },
+      {
+        "entries": [
+          "[forInit]",
+          "[forTest]",
+          "[forUpdate]",
+          "[forInit]",
+          "[forTest]",
+          "[forUpdate]"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "We've detected that you have two loops, but perhaps you have one loop inside another?  The loops should appear one after the other - the loop that fills the screen with colored dots should run to completion, THEN another loop that draws white dots should start up."
+      }
+    ],
+    "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Validation note: here's what is checked on this level --\r\n\r\n* Two loops are present\r\n* The loops are not \"nested\" - i.e. one loop inside the other.\r\n* That the sum total number of iterations is greater than 2500.  (It probably needs to be more than this to actually work.  This is just a minimal check).\r\n",
+    "parent_level_id": 3189,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

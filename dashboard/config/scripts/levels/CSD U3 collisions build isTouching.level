@@ -36,7 +36,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Balloon\r\n\r\nThe code below uses the sprites' x and y positions to check whether they are touching.  It will change the balloon sprite's animation when the tack touches it.  Use the arrow keys to move the tack until it touches the balloon.\r\n\r\n# Do This\r\n\r\n* You do not need to change any code on this level.\r\n* Read the if statements inside the draw loop and find the different sprite properties and how they are compared.\r\n* Discuss the code with your partner.  Would you want to write this code every time you checked whether sprites were touching?\r\n\r\n\r\n[//]: # (https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png)\r\n\r\n[//]: # (https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png)\r\n\r\n[//]: # (https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png)",

@@ -35,6 +35,7 @@
     "tts_instructions_override": "Keep calm and help me find the bad pig.",
     "tts_markdown_instructions_override": "Keep calm and help me find the bad pig.",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

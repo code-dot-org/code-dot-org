@@ -5,12 +5,15 @@
   "level_num": "custom",
   "user_id": 772,
   "properties": {
-    "video_key": "CSF_harvester_loops_K1",
+    "video_key": "CSF_loops_AB",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-01 02:09:08 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

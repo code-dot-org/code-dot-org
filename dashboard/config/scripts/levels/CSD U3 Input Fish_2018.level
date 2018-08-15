@@ -59,7 +59,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Fish With Arrows\r\n\r\nThe fish are back. Can you make the fish move left only when the left arrow key is pressed down?\r\n\r\n# Do This\r\n\r\n* Add an if statement to check when the left arrow key is pressed down.\r\n* Move the commands for moving the fish inside the if statement.",
@@ -101,11 +100,22 @@
     "start_blocks": "var orangeFish = createSprite(400, randomNumber(0, 100));\r\norangeFish.setAnimation(\"orange_fish\");\r\nvar blueFish = createSprite(250, randomNumber(0, 200));\r\nblueFish.setAnimation(\"blue_fish\");\r\nvar greenFish = createSprite(300, randomNumber(200, 300));\r\ngreenFish.setAnimation(\"green_fish\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"navy\");\r\n  \r\n  // Update Values\r\n  orangeFish.x = orangeFish.x - 2;\r\n  blueFish.x = blueFish.x - 3;\r\n  greenFish.x = greenFish.x - 1;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}\r\n",
     "parent_level_id": 8886,
     "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/gamelab/keyDown/index.html",
+      "/docs/csd-1718/if_statements/index.html",
+      "/docs/csd-1718/booleans/index.html",
+      "/docs/csd-1718/counter_pattern/index.html",
+      "/docs/csd-1718/sprite_properties/index.html",
+      "/docs/csd-1718/sprites/index.html"
+    ],
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-22 18:57:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 16:55:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-22 23:55:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_animations\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-27 05:29:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-22 18:57:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 16:55:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-22 23:55:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_animations\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-27 05:29:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 21:22:02 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

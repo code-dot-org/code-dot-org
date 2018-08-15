@@ -1,0 +1,24 @@
+name 'CSPFinal_Question_18_2018'
+question 'The colors of the pixels in a digital image are often represented by red, green, and blue values between 0 and 255 (an RGB triplet). A photographer is manipulating a digital image to lighten it because all of the RGB values in the image are less than 100, making it very dark. He does this by adding 20 to the R, G, and B values of each pixel, then overwriting the original image.  What type of transformation is the photographer using on the digital image?'
+right 'Lossless transformation'
+wrong 'Lossy transformation'
+wrong 'Multiband transformation'
+wrong 'Chrome Sampling transformation'
+
+teacher_markdown <<MARKDOWN
+The answer is "lossless" transformation because there is a computational process you can perform on the transformed data to recover the original (namely, subtract 20).  The question is carefully formulated to ensure that this is true.
+
+This question is tricky for a few reasons: 
+
+0. it is carefully formulated with starting assumptions and values that ensure the transformation is lossless. If you applied this transformation willy-nilly it *might* be lossless (see below). 
+
+1. it applies the terms lossy and lossless outside the context they are usually presented (compression)
+
+2. because of the fact that the data is being transformed and overwritten, you might be tricked into thinking that the data is "lost".   But the transformation itself is lossless because you can apply a computational process to the transformed data to recover every bit of the original information.
+
+It would be "lossy" if the transformation did something that would *not* let you recover every bit.  
+
+**For example:**  If the question stated that you add *200* to each RGB channel, it might be lossy, because if, say, one of the RGB values was (75, 57, 99), adding 200 to each would max out the values at 255 - since an RGB value cannot be greater than 255 - the resulting transformation would be the RGB value (255, 255, 255).  
+
+Reversing the process, subtracting 200 from each of the *transformed* values does not restore the original.  Since there is no process or computation you can perform on the transformed data to recover the original, it is "lossy".
+MARKDOWN

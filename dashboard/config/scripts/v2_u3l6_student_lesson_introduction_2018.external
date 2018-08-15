@@ -1,0 +1,26 @@
+name 'v2 U3L6 Student Lesson Introduction_2018'
+display_name 'Lesson Vocabulary & Resources'
+title 'Functions and Top-Down Design'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Unit 3: Lesson 06 - Functions and Top-Down Design
+
+## Lesson
+
+* Learn about top-down design.
+* Practice top-down design on a small problem.
+* Program a solution to that problem.
+* Revisit the 3x3 grid problem and consider using functions to solve it more efficiently.
+  
+## Vocabulary
+* **Abstraction:** a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.
+* **Function:** a named group of programming instructions. Functions are reusable abstractions that reduce the complexity of writing and maintaining programs
+* **Top Down Design** - a problem solving approach (also known as stepwise design) in which you break down a system to gain insight into the sub-systems that make it up.
+
+## Resources
+
+* Top-Down Design - Worksheet ([PDF](https://docs.google.com/document/d/1kfcdyJsC-I1Pl-TPWLv-BB7ffMxtw5B6XtegmVwzo7o/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1kfcdyJsC-I1Pl-TPWLv-BB7ffMxtw5B6XtegmVwzo7o/export?format=doc))
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

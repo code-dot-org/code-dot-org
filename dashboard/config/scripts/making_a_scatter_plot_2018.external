@@ -1,0 +1,58 @@
+name 'Making a Scatter Plot_2018'
+css 'unplugged'
+markdown <<MARKDOWN
+# Making a Scatter Chart
+
+The first type of chart you’re going to build is a **scatter chart**. Scatter charts are useful for finding relationships between two types of data. In this exercise, you will build a scatter chart that shows the relationship between movie reviewer age and average movie rating.
+
+---
+
+## Select Data
+
+**Do This:** Select the “age” and “avg rating” columns, as show below.
+
+![](https://images.code.org/ffaca4dab49fa2e0a71d75f4c6f9c2a2-image-1454102458528.gif)<br>
+*Select the "age" and "avg rating" columns*
+
+* **Hint:** To select an entire column, click the top cell (ex. A1), then hold down the "SHIFT" key and select the last cell from the last column you want (ex. B62).
+
+---
+
+## Insert Chart
+
+Google gives suggestions of what kind of chart you can make from your data, but for this exercise you’re going to ignore those suggestions and make the chart yourself.
+
+**Do This:** Go to the Chart Editor by clicking **Insert -> Chart**.
+
+* Try a few chart types. Notice the preview changing.
+* Eventually select **"Scatter Chart."**
+* Experiment with the check boxes on the right, and notice how the chart preview changes.
+* Check **"Use row 1 as headers."** This makes sure your chart uses the column names in the first row of your spreadsheet.
+* Check **"Use column A as labels."** This tells the chart that column A is your horizontal or "x" axis.
+* Click **“Insert”** to add your chart to the spreadsheet.
+
+![](https://images.code.org/097d30b261df0204fd6ec0f7a5af58bd-image-1454098624733.gif)
+*Change chart type and insert your scatter chart into the spreadsheet.*
+
+---
+
+## Do a Visual Check
+At this point, your chart should look something like this:
+
+![](https://images.code.org/3012fe576b9d2a3bf985adf4dd6c4dcd-image-1454098640073.PNG)
+
+**Do This:** Take a moment to look at your visualization. You can switch between "View" and "Edit" mode with this button.
+
+![](https://images.code.org/9aa88eb7c54c2f75dde180a22f3b61f4-image-1453690323325.PNG)
+
+Can you understand what the chart is showing? Even though the title and axis labels are wrong or don’t appear, you should be able to decode the basics of your chart.
+
+* What does this chart help you notice about the data?
+* Which age groups had the highest average ratings? 
+* Which age groups had the lowest? 
+* What other connections and trends can you see?
+
+After you’ve thought about these questions, move on to the next section to learn how to make a line chart.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

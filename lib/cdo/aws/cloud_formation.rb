@@ -2,7 +2,11 @@ require_relative '../../../deployment'
 require 'active_support/core_ext/string/inflections'
 require 'active_support/core_ext/object/blank'
 require 'cdo/rake_utils'
-require 'aws-sdk'
+require 'aws-sdk-cloudformation'
+require 'aws-sdk-acm'
+require 'aws-sdk-s3'
+require 'aws-sdk-ec2'
+require 'aws-sdk-cloudwatchlogs'
 require 'json'
 require 'yaml'
 require 'erb'
@@ -61,15 +65,13 @@ module AWS
       end
 
       # Fully qualified domain name, with optional pre/postfix.
-      # prod_stack_name is used to control partially-migrated resources in production.
-      def subdomain(prefix = nil, postfix = nil, prod_stack_name: true)
-        name = (rack_env?(:production) && !prod_stack_name) ? nil : cname
-        subdomain = [prefix, name, postfix].compact.join('-')
+      def subdomain(prefix = nil, postfix = nil)
+        subdomain = [prefix, cname, postfix].compact.join('-')
         [subdomain.presence, DOMAIN].compact.join('.').downcase
       end
 
-      def studio_subdomain(prod_stack_name: true)
-        subdomain nil, 'studio', prod_stack_name: prod_stack_name
+      def studio_subdomain
+        subdomain nil, 'studio'
       end
 
       def adhoc_image_id

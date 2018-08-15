@@ -24,31 +24,29 @@ def main
   )
   until messages_to_delete.empty?
     messages_to_delete.each do |message|
-      begin
-        # As it is an error to delete a message being processed, we pass them
-        # by, allowing them to be deleted after being processed, as part of
-        # another execution of this script.
-        # Per customer ticket #712102, it is also an error to delete a message
-        # in state sent, despite not seeing public documentation of this.
-        if %w(accepted queued sending sent SENT receiving).include? message.status
-          next
-        end
-
-        # Note that any media associated with a message is deleted independently
-        # of the message itself. As there is a maximum limit of ten media per
-        # message, we do not need to worry about iterating through pages.
-        if message.num_media != '0'
-          media_to_delete = message.media.list
-          media_to_delete.each(&:delete)
-        end
-
-        message.delete
-      rescue Twilio::REST::RequestError => e
-        # Sanitize the exception message so that we don't expose secrets.
-        e.message.gsub! CDO.twilio_sid, 'CDO.twilio_sid'
-        Honeybadger.notify(e)
+      # As it is an error to delete a message being processed, we pass them
+      # by, allowing them to be deleted after being processed, as part of
+      # another execution of this script.
+      # Per customer ticket #712102, it is also an error to delete a message
+      # in state sent, despite not seeing public documentation of this.
+      if %w(accepted queued sending sent SENT receiving).include? message.status
         next
       end
+
+      # Note that any media associated with a message is deleted independently
+      # of the message itself. As there is a maximum limit of ten media per
+      # message, we do not need to worry about iterating through pages.
+      if message.num_media != '0'
+        media_to_delete = message.media.list
+        media_to_delete.each(&:delete)
+      end
+
+      message.delete
+    rescue Twilio::REST::RequestError => e
+      # Sanitize the exception message so that we don't expose secrets.
+      e.message.gsub! CDO.twilio_sid, 'CDO.twilio_sid'
+      Honeybadger.notify(e)
+      next
     end
 
     messages_to_delete = messages_to_delete.next_page

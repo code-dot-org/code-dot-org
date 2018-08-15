@@ -21,17 +21,35 @@ class Census::StateCsOffering < ApplicationRecord
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
   SUPPORTED_STATES = %w(
+    AL
     AR
     CA
+    CO
     CT
     FL
     GA
+    IA
     ID
     IN
+    KS
+    KY
+    LA
+    MA
     MI
+    MO
+    MS
+    MT
     NC
+    ND
+    NY
+    OH
+    OK
+    OR
+    PA
     SC
     UT
+    VA
+    WI
   ).freeze
 
   # By default we treat the lack of state data for high schools as an
@@ -39,6 +57,7 @@ class Census::StateCsOffering < ApplicationRecord
   # that the state data is conplete for the following states so we do
   # not want to treat the lack of data as a no for those.
   INFERRED_NO_EXCLUSION_LIST = %w(
+    CO
     ID
     MI
   ).freeze
@@ -49,10 +68,14 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.construct_state_school_id(state_code, row_hash)
     case state_code
+    when 'AL'
+      row_hash['State School ID']
     when 'AR'
       School.construct_state_school_id('AR', row_hash['District LEA'], row_hash['Location ID'])
     when 'CA'
       School.construct_state_school_id('CA', row_hash['DistrictCode'], row_hash['schoolCode'])
+    when 'CO'
+      row_hash['state_school_id']
     when 'CT'
       district_id = row_hash['District Code'][0..2]
       school_id = row_hash['School Code'][3..4]
@@ -62,14 +85,31 @@ class Census::StateCsOffering < ApplicationRecord
     when 'GA'
       school_id = format("%04d", row_hash['SCHOOL_ID'].to_i)
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
+    when 'IA'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['NCES ID'])&.state_school_id
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
     when 'IN'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['NCES'])&.state_school_id
+    when 'KS'
+      row_hash['state_school_id']
+    when 'KY'
+      row_hash['State School ID']
+    when 'LA'
+      row_hash['State_School_ID']
+    when 'MA'
+      School.construct_state_school_id('MA', row_hash['District Code'][0..3], row_hash['School Code'])
+    when 'MO'
+      row_hash['STATE_SCHOOL_ID']
+    when 'MS'
+      School.find_by(id: row_hash['NCES School ID'])&.state_school_id
     when 'MI'
       # Strip spaces from within cell (convert 'MI - 50050 - 00119' to 'MI-50050-00119').
       row_hash['State School ID'].delete(' ')
+    when 'MT'
+      row_hash['state_school_id']
     when 'NC'
       # School code in the spreadsheet from North Carolina is prefixed with the district code
       # but our schools data imported from NCES is not.
@@ -78,17 +118,53 @@ class Census::StateCsOffering < ApplicationRecord
       # Remove district code prefix from school code.
       school_code.slice!(district_code)
       School.construct_state_school_id('NC', district_code, school_code)
+    when 'ND'
+      row_hash['state_school_id']
+    when 'NY'
+      row_hash['state_school_id']
+    when 'OH'
+      row_hash['State School ID']
+    when 'OK'
+      row_hash['State School ID']
+    when 'OR'
+      row_hash['state_school_id']
+    when 'PA'
+      row_hash['state_school_id']
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
     when 'UT'
       # Don't raise an error if school does not exist because the logic that invokes this method skips these.
       School.find_by(id: row_hash['NCES ID'])&.state_school_id
+    when 'VA'
+      row_hash['state_school_id']
+    when 'WI'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['SCHOOL_NCES_CODE'])&.state_school_id
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
   end
 
   UNSPECIFIED_COURSE = 'unspecified'
+
+  AL_COURSE_CODES = %w(
+    520006
+    520007
+    560024
+    520045
+    520046
+    560032
+    520018
+    220098
+    520043
+    925611
+    560025
+    560026
+    450012
+    520014
+    520044
+    520015
+  ).freeze
 
   AR_COURSE_CODES = %w(
     565320
@@ -136,6 +212,18 @@ class Census::StateCsOffering < ApplicationRecord
     8131
   ).freeze
 
+  CO_COURSE_CODES = %w(
+    10152
+    10155
+    10156
+    10157
+    10153
+    10011
+    10159
+    10154
+    10012
+  ).freeze
+
   CT_COURSE_CODES = [
     'AP Computer Science A',
     'Computer Programming',
@@ -176,6 +264,41 @@ class Census::StateCsOffering < ApplicationRecord
     4586
   ).freeze
 
+  KS_COURSE_CODES = %w(
+    10152
+    10155
+    10156
+    10153
+    10154
+    10199
+    10197
+  ).freeze
+
+  KY_COURSE_CODES = %w(
+    110711
+    110701
+    Other
+  ).freeze
+
+  LA_COURSE_CODES = %w(
+    061102
+    061103
+    061177
+    061175
+    061176
+  ).freeze
+
+  MA_COURSE_CODES = %w(
+    10011
+    10012
+    10019
+    10153
+    10154
+    10155
+    10156
+    10158
+  ).freeze
+
   MI_COURSE_CODES = %w(
     10157
     10999
@@ -188,6 +311,34 @@ class Census::StateCsOffering < ApplicationRecord
     10003
     10199
     10197
+  ).freeze
+
+  MO_COURSE_CODES = %w(
+    034355
+    991105
+    100415
+    991195
+    991196
+  ).freeze
+
+  MS_COURSE_CODES = %w(
+    561005
+    000283
+    110142
+    232050
+    232060
+    232070
+    110141
+  ).freeze
+
+  MT_COURSE_CODES = %w(
+    21009
+    10152
+    10157
+    10156
+    10155
+    10159
+    10153
   ).freeze
 
   NC_COURSE_CODES = %w(
@@ -214,6 +365,59 @@ class Census::StateCsOffering < ApplicationRecord
     WC22
   ).freeze
 
+  ND_COURSE_CODES = %w(
+    27122
+    23015
+    23012
+    23580
+    27127
+    27125
+    23582
+  ).freeze
+
+  NY_COURSE_CODES = %w(
+    10152
+    10157
+    10155
+    10154
+    10153
+    10159
+    10156
+    2156
+  ).freeze
+
+  OH_COURSE_CODES = %w(
+    031700
+    145060
+    145070
+    290200
+    290310
+    145090
+    175004
+    290250
+    145065
+    321600
+  ).freeze
+
+  OK_COURSE_CODES = %w(
+    2510
+    2511
+    2531
+    2532
+    2535
+    2536
+  ).freeze
+
+  OR_COURSE_CODES = %w(
+    10152
+    10155
+    10157
+    10156
+    10154
+    10153
+    10112
+  ).freeze
+
   # Utah did not provide codes, but did provide course titles.
   UT_COURSE_CODES = [
     'A.P.  Computer Science',
@@ -231,17 +435,72 @@ class Census::StateCsOffering < ApplicationRecord
     'IB Computer Science SL 1',
     'IB Computer Science SL 2',
     'PLtW Computer Science & Software Enginee'
-  ]
+  ].freeze
+
+  VA_COURSE_CODES = [
+    '10019',
+    '10152',
+    '10152 advanced',
+    '10157',
+    '10159'
+  ].freeze
+
+  WI_COURSE_CODES = %w(
+    6490
+    6464
+    6467
+    6476
+    6485
+    6665
+    6466
+    6480
+    6458
+    6492
+    6475
+    6491
+    6660
+    6650
+    6470
+    6664
+    6488
+    6667
+    6484
+    6666
+    6644
+    6661
+    6662
+    6487
+    6471
+    6655
+    6478
+    6645
+    6659
+    6486
+    6489
+    6653
+    6465
+    6457
+    6474
+    6479
+    6481
+    6646
+    6472
+    6482
+  ).freeze
 
   def self.get_courses(state_code, row_hash)
     case state_code
+    when 'AL'
+      AL_COURSE_CODES.select {|course| course == row_hash['Course Code']}
     when 'AR'
       AR_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'CA'
       CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
+    when 'CO'
+      CO_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'CT'
       enrollment = row_hash['CourseEnrollments']
-      # Don't consider a course as offered at a school if there is no enrollment ("*") and it is a positive number
+      # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
       CT_COURSE_CODES.select {|course| course == row_hash['Course'] && enrollment != '*' && enrollment.to_i > 0}
     when 'FL'
       FL_COURSE_CODES.select {|course| course == row_hash['Course']}
@@ -255,21 +514,62 @@ class Census::StateCsOffering < ApplicationRecord
       suffix = format("%-5.5s", course_parts.second).tr(' ', '0')
       course_code = "#{prefix}.#{suffix}"
       GA_COURSE_CODES.select {|course| course == course_code}
+    when 'IA'
+      # One source per row
+      [UNSPECIFIED_COURSE]
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
     when 'IN'
       # A column per CS course with a value of 'Y' if the course is offered.
       IN_COURSE_CODES.select {|course| row_hash[course] == 'Y'}
+    when 'KS'
+      KS_COURSE_CODES.select {|course| course == row_hash['course']}
+    when 'KY'
+      KY_COURSE_CODES.select {|course| course == row_hash['Course']}
+    when 'LA'
+      LA_COURSE_CODES.select {|course| course == row_hash['Course']}
+    when 'MA'
+      # Don't consider a course as offered at a school if there is no enrollment ("*") or it is not a positive number
+      MA_COURSE_CODES.select do |course|
+        course == row_hash['Course Code'] &&
+        row_hash['Progrmming Included'] == 'Y' &&
+        # Massachusetts has a note in their spreadsheet indicating that "*" means fewer than 6 students are enrolled
+        row_hash['Total Enrollment'] != '*' &&
+        row_hash['Total Enrollment'].to_i > 0
+      end
     when 'MI'
       MI_COURSE_CODES.select {|course| course == row_hash['Subject Course Code']}
+    when 'MO'
+      MO_COURSE_CODES.select {|course| course == row_hash['COURSE']}
+    when 'MS'
+      MS_COURSE_CODES.select {|course| course == row_hash['Course ID']}
+    when 'MT'
+      MT_COURSE_CODES.select {|course| course == row_hash['NCES Course Code']}
     when 'NC'
       NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
+    when 'ND'
+      ND_COURSE_CODES.select {|course| course == row_hash['Course']}
+    when 'NY'
+      NY_COURSE_CODES.select {|course| course == row_hash['course']}
+    when 'OH'
+      OH_COURSE_CODES.select {|course| course == row_hash['Course']}
+    when 'OK'
+      OK_COURSE_CODES.select {|course| course == row_hash['ClassCode']}
+    when 'OR'
+      OR_COURSE_CODES.select {|course| course == row_hash['Course']}
+    when 'PA'
+      # One source per row
+      [UNSPECIFIED_COURSE]
     when 'UT'
       UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'SC'
       # One source per row
       [UNSPECIFIED_COURSE]
+    when 'VA'
+      VA_COURSE_CODES.select {|course| course == row_hash['course']}
+    when 'WI'
+      WI_COURSE_CODES.select {|course| course == row_hash['course']}
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end

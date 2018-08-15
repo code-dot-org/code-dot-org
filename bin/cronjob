@@ -69,6 +69,9 @@ def main
 
   honeybadger_notify command, exitstatus, stdout, stderr
   email_notify command, exitstatus, result, ARGV[1]
+rescue => e
+  Honeybadger.notify_cronjob_error e
+  raise
 end
 
 main

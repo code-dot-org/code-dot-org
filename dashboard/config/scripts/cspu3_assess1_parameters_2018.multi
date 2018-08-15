@@ -1,0 +1,28 @@
+name 'cspu3_assess1_parameters_2018'
+wrong 'Parameters determine the number of times the function will run.'
+right 'Parameters allow for more flexible, generalized behaviors in functions.'
+wrong 'Parameters are useful for teams of programmers because they help define the boundaries of the problem they are trying to solve.'
+wrong 'Parameters change the order of operations within a function.'
+
+markdown <<MARKDOWN
+Why are parameters useful when programming? 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Incorrect answers:
+
+* Parameters can change the behavior inside a function, but the function only runs the number of times it is called and is not always based on the parameters given.
+* Parameters can help define boundaries within the function, but is not restricted to teams of programmers. An individual programmer can used parameters as well.
+* Once code is written, it is read line by line in order. The input of a parameter will not change the order the lines run in.
+
+Correct answer:
+
+* Ultimately, parameters are great for noting specific inputs for a particular function, allowing flexible outcomes within a function.
+* For example: say you want a function to draw some squares but with different side lengths. The function drawSquare(s) where s is the side length. The programmer can then easily call
+
+		drawSquare(3);
+		drawSquare(8);
+        drawSquare(76);
+        
+For squares of side length 3, 8, and 76 without having repetitive chunks of code in their program.
+MARKDOWN

@@ -21,9 +21,15 @@ class ScriptDSL < BaseDSL
     @project_widget_visible = false
     @has_verified_resources = false
     @has_lesson_plan = false
+    @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
     @script_announcements = nil
+    @new_name = nil
+    @family_name = nil
+    @version_year = nil
+    @is_stable = nil
+    @supported_locales = []
   end
 
   integer :id
@@ -39,9 +45,14 @@ class ScriptDSL < BaseDSL
   boolean :project_widget_visible
   boolean :has_verified_resources
   boolean :has_lesson_plan
+  boolean :is_stable
 
   string :wrapup_video
   string :script_announcements
+  string :new_name
+  string :family_name
+  string :version_year
+  string :curriculum_path
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -49,6 +60,10 @@ class ScriptDSL < BaseDSL
 
   def project_widget_types(types)
     @project_widget_types = types
+  end
+
+  def supported_locales(locales)
+    @supported_locales = locales
   end
 
   def stage(name, properties = {})
@@ -85,9 +100,15 @@ class ScriptDSL < BaseDSL
       stage_extras_available: @stage_extras_available,
       has_verified_resources: @has_verified_resources,
       has_lesson_plan: @has_lesson_plan,
+      curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
       script_announcements: @script_announcements,
+      new_name: @new_name,
+      family_name: @family_name,
+      version_year: @version_year,
+      is_stable: @is_stable,
+      supported_locales: @supported_locales
     }
   end
 
@@ -237,9 +258,15 @@ class ScriptDSL < BaseDSL
     s << 'stage_extras_available true' if script.stage_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
     s << 'has_lesson_plan true' if script.has_lesson_plan
+    s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
     s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "new_name '#{script.new_name}'" if script.new_name
+    s << "family_name '#{script.family_name}'" if script.family_name
+    s << "version_year '#{script.version_year}'" if script.version_year
+    s << 'is_stable true' if script.is_stable
+    s << "supported_locales #{script.supported_locales}" if script.supported_locales
 
     s << '' unless s.empty?
     s << serialize_stages(script)

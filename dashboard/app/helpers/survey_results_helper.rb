@@ -1,9 +1,5 @@
 module SurveyResultsHelper
-  # rubocop:disable Lint/UnreachableCode
   def show_diversity_survey?(kind)
-    # Disable diversity survey
-    return false
-
     return false unless current_user
     return false unless language == "en"
     return false if current_user.under_13?
@@ -17,7 +13,6 @@ module SurveyResultsHelper
     # There is no reason not to show the survey, so show the survey.
     return true
   end
-  # rubocop:enable Lint/UnreachableCode
 
   def show_nps_survey?(kind)
     # Disable NPS survey

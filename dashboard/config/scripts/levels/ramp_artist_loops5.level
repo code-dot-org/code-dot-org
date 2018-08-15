@@ -37,6 +37,7 @@
     "instructions": "Use loops to draw this staircase.",
     "markdown_instructions": "Loops sure make writing code easier!\r\n\r\nUse loops to draw this staircase.\r\n- Each stairstep is 50 pixels long and 50 pixels tall\r\n- You will need to turn 90 degrees in each direction",
     "ideal": "7",
+    "hint_prompt_attempts_threshold": 13,
     "contained_level_names": null
   },
   "published": true,

@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:37:41.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Why Limit to 4 Commands?",
+    "markdown_instructions": "Today we solved a series of problems with a limited set of commands (only 4). Give at least one reason why it's useful to learn how to solve and program solutions with a limited set of commands.  \n",
+    "encrypted_solution": "Wcs0LZa5/A7WIvTPmej64oNwbskyadm0FrO11dKbAvUKp6upU5i8U/O+oy5Y\npCAmeR5lib6fVcMohm778qC9dkDocYeClJdtiwcSAnT5WEAnUzq5x36hpQBp\n5Nzr/0j5RIvsYhHZpvdnEOtJmOXHXe+ZsBD6/gahFxoFSgKOLbN3k8PbrupL\nM/j+zjE8fdpzaqh+gB/5/iqow0+0+nCf/IKS6a1odCnyzBVnH3LBHIGJCsTC\n65caTousAhrGTjVyijP5k7nkcnmuqXvjjHDfpNlMmdpouVepiBrriF+O2X5d\npMpammr14lsrO3VUIpRmUYIv2TnU6e3Sw3GzqCtoh2jTGFP39fzpJaIJeCZz\nqJ8EGIMPTsE723TGTZ0+EqWwmsSSaccomrzTsvd3HHBSWDJhj9UOQ8d/t+gq\nVCD2POZCphH6LdKpLSWtTxNihz/AuHEOYvku80r0kPeyJGnY3w/JAnGijOSZ\nIQlIMBHvuJ2UFylsYHnlkyDqZ0z5Rb42z8Oix9zEvUWb1tZeBx3M+hiMtfus\nJ4bcBXk1q4cv0TTiU5StWbAZ0cnUnpw4pV7YORsmVYZ65TucDfF/x0ldDZhq\npNlMixxgIm6feHzNcArKPMirVPV+lJW5lLeQvaqVD+OJml4tgP3vdX3rU/vJ\n2vquEAM5dQkDvk6rUrBct3sJPDwvamlL/2Yrxzb3G73bj2yyWF3k4l1erscp\nW0hwUrLNnsr1l8h+PrynqykHaqPTtgVWc0voDAbvwlj4AYtZTyRyQz+vG4qf\nESB9BJdzIESbejBYYpkUqhfH3LFrzX8=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2399,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

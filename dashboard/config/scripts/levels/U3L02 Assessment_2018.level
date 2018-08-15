@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:37:41.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Efficiency in the Real World",
+    "markdown_instructions": "This lesson introduced the notion of \"efficiency\" in programming, and that it might mean different things at different times.  Think of an example *outside* of computer science in which you have heard the term “efficiency” and compare it to the ways we talked about efficiency in programming.  \n\nIn what ways is the meaning of \"efficiency\" the same? In what ways is it different?\n",
+    "encrypted_solution": "nBEtQBG2DwrblNYYhhG/WTUXH56ZcomUb0tIcnA2/byUbqvkSI1s3tjUmdj/\nXxPzTo/ojuD5wruRjU6yYlR+Q6x3u1NleYYLbXgeOojOCGZ5Cyojy/d7WGQp\n8zW73e8M/0JGPO5HfIhXHdhky50613IkEZlcpZoiHTaky+V0R2gI3XQU91jp\na4Sy4Zh/c/HI4OlvdVNw/0zqAcGDRb7Q30WCnQ9jBDBn9UOEuuzQr0/Az6Qe\nWJ3bdnL4ictHLtcXLa7pvOBkbgjr4XEGbTrftig4tF36UN7R5OkJoH5vIQrP\ncbVYuMeHSJD3eOZRlguLqOB7pqjrVYm5ygOZoDVcYV0naHm5IZEFM/CuhaPv\nbwf8w6NYHBSa9RX8mEnN4mtFglfPvM34PryhSM4YRKzDkLJEvfeS1M20m/D+\nNVHlVsK6Qxb/7d23XKxiQLxaB3LHFzGVjEaC/lY0gdO80dx6BhlMVQql2egZ\no6Mj4Q4Z3UZwBbzIb8hgd/5R5n4n7OnxKPMZr1SZBFC1e/ucH9lvWlUCwrvy\nvPodnsp3uj1HBMxJBiPTt6mYF44QRY77HoipimsNyxnij3J81o0YZJbG43Xg\ntywc/w4KIgErnTZQKpnSK9s/vGfrANZYr0nFmgG+xDu65g2or0HnCqL7D/P6\nKJFTaV77h63uF84n5Wl9ycDsxAQyiIkker+5RSWasKQ+H10dp/VcU6Zddpaq\nXABbXPV/oKrZ1Fv1xlhpK0mHNLaPSqj+imaZPGSDHCVTso9x1Lljsi7GZOcQ\nZ/56LwJ5y2yU+SWBIaqCqSfkVtAJU2olv60QQdd4yfw94ACH0o33\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2402,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>
