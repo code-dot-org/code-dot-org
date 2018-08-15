@@ -1,12 +1,29 @@
 {
-  "category": "Moves",
+  "category": "Groups",
   "config": {
-    "func": "changeMove",
-    "blockText": "change {SPRITE} dance move to {MOVE}",
+    "func": "changeMoveEach",
+    "blockText": "change {GROUP} dance move to {MOVE}",
     "args": [
       {
-        "name": "SPRITE",
-        "type": "Sprite"
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "Circle",
+            "\"circle\""
+          ],
+          [
+            "Wiggles",
+            "\"wiggles\""
+          ],
+          [
+            "Alien",
+            "\"alien\""
+          ]
+        ]
       },
       {
         "name": "MOVE",
