@@ -77,6 +77,17 @@ class DeleteAccountsHelper
       application.notes = nil
       application.save! validate: false
     end
+
+    # Two different paths to anonymizing attendance records
+    Pd::Attendance.with_deleted.where(teacher_id: user_id).each do |attendance|
+      attendance.destroy!
+      attendance.update!(teacher_id: nil)
+    end
+    Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).each do |attendance|
+      attendance.destroy!
+      attendance.update!(marked_by_user_id: nil)
+    end
+
     Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
     Pd::FacilitatorProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
