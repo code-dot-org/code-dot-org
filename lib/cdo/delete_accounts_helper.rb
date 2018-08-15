@@ -35,7 +35,7 @@ class DeleteAccountsHelper
     storage_apps.where(storage_id: storage_id).update(
       state: 'deleted',
       value: nil,
-      updated_ip: nil
+      updated_ip: ''
     )
   end
 
