@@ -882,6 +882,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: pegasus.storage_apps
+  # Table: dashboard.featured_projects
   #
 
   test "soft-deletes all of a user's projects" do
@@ -952,6 +953,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_empty app[:updated_ip]
       end
+    end
+  end
+
+  test "unfeatures any featured projects owned by purged user" do
+    student = create :student
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: Time.now
+
+      assert featured_project.featured?
+
+      purge_user student
+
+      featured_project.reload
+      refute featured_project.featured?
     end
   end
 
