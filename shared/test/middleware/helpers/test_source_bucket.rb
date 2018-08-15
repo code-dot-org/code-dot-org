@@ -12,36 +12,49 @@ require_relative '../../files_api_test_helper'
 #
 class SourceBucketTest < FilesApiTestBase
   def setup
+    @source_bucket = SourceBucket.new
     @channel = create_channel
     @main_json = 'main.json' # Source bucket only ever uses this file
+
+    # Start with an empty channel
+    @source_bucket.hard_delete_channel_content @channel
+    assert_empty @source_bucket.list @channel
+    assert_empty @source_bucket.list_versions @channel, @main_json
   end
 
   def teardown
     # Require that tests delete the files they upload
-    assert_empty SourceBucket.new.list(@channel),
+    assert_empty @source_bucket.list(@channel),
       "Expected no leftover source files"
-    assert_empty SourceBucket.new.list_versions(@channel, @main_json),
+    assert_empty @source_bucket.list_versions(@channel, @main_json),
       "Expected no leftover main.json versions"
 
     delete_channel(@channel)
     @channel = nil
+    @source_bucket = nil
   end
 
   def test_hard_delete_channel_content
-    sb = SourceBucket.new
-    sb.hard_delete_channel_content @channel
+    @source_bucket.create_or_replace @channel, @main_json, '{}'
 
-    assert_empty sb.list @channel
-    assert_empty sb.list_versions @channel, @main_json
+    refute_empty @source_bucket.list(@channel)
+    refute_empty @source_bucket.list_versions(@channel, @main_json)
 
-    sb.create_or_replace @channel, @main_json, '{}'
+    @source_bucket.hard_delete_channel_content @channel
 
-    refute_empty sb.list(@channel)
-    refute_empty sb.list_versions(@channel, @main_json)
+    assert_empty @source_bucket.list(@channel)
+    assert_empty @source_bucket.list_versions(@channel, @main_json)
+  end
 
-    sb.hard_delete_channel_content @channel
+  def test_hard_delete_channel_content_many_versions
+    @source_bucket.create_or_replace @channel, @main_json, '{"name": "v1"}'
+    @source_bucket.create_or_replace @channel, @main_json, '{"name": "v2"}'
+    @source_bucket.create_or_replace @channel, @main_json, '{"name": "v3"}'
 
-    assert_empty sb.list(@channel)
-    assert_empty sb.list_versions(@channel, @main_json)
+    assert_equal 3, @source_bucket.list_versions(@channel, @main_json).count
+
+    @source_bucket.hard_delete_channel_content @channel
+
+    assert_empty @source_bucket.list_versions(@channel, @main_json)
   end
 end
