@@ -792,7 +792,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil attendance.teacher_id
   end
 
-  test "soft-deletes pd_attendances when marked_by_user is purged" do
+  test "does not soft-delete pd_attendances when marked_by_user is purged" do
     marked_by_user = create :teacher
     attendance = create :pd_attendance
     attendance.update!(marked_by_user: marked_by_user)
@@ -801,7 +801,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     purge_user marked_by_user
 
     attendance.reload
-    assert attendance.deleted?
+    refute attendance.deleted?
   end
 
   test "clears marked_by_user_id from pd_attendances when marked_by_user is purged" do
