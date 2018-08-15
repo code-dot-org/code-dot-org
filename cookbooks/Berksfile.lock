@@ -56,7 +56,7 @@ DEPENDENCIES
     branch: update_rubygems_fix
   ixgbevf
     git: https://github.com/wjordan/chef-ixgbevf.git
-    revision: 969318033aecd49dbbd57d9dafd03a84959d7736
+    revision: fb14d4f0e4caf21dd835739e58d372c66dca8a6e
     branch: cdo
   ntp (~> 1.8.6)
   sudo-user
@@ -114,7 +114,7 @@ GRAPH
     build-essential (>= 0.0.0)
   cdo-mysql (0.1.11)
     apt (~> 2.6.0)
-  cdo-networking (0.1.1)
+  cdo-networking (0.1.2)
     ixgbevf (>= 0.0.0)
   cdo-newrelic (0.1.18)
     apt (>= 0.0.0)
@@ -176,6 +176,4 @@ GRAPH
   ulimit (0.4.0)
   windows (1.39.1)
     chef_handler (>= 0.0.0)
-  yum (3.10.0)
-  yum-epel (0.6.5)
-    yum (~> 3.2)
+  yum-epel (3.2.0)
