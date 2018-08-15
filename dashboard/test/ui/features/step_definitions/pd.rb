@@ -241,7 +241,7 @@ And(/^I am viewing a workshop with fake survey results$/) do
 end
 
 def create_fake_survey_questions(workshop)
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_0'],
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local_summer']['day_0'],
     questions: [
       {
         id: 1,
@@ -312,7 +312,7 @@ def create_fake_survey_questions(workshop)
     ].to_json
   )
 
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['day_1'],
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local_summer']['day_1'],
     questions: [
       {
         id: 1,
@@ -348,7 +348,7 @@ def create_fake_survey_questions(workshop)
     ].to_json
   )
 
-  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local']['facilitator'],
+  Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local_summer']['facilitator'],
     questions: [
       {
         id: 1,
@@ -410,7 +410,7 @@ def create_fake_daily_survey_results(workshop)
     user = workshop.enrollments[x].user
 
     Pd::WorkshopDailySurvey.create!(
-      form_id: CDO.jotform_forms['local']['day_0'],
+      form_id: CDO.jotform_forms['local_summer']['day_0'],
       submission_id: (Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1,
       pd_session: nil, #No session for the first survey
       answers: {
@@ -428,7 +428,7 @@ def create_fake_daily_survey_results(workshop)
     )
 
     Pd::WorkshopDailySurvey.create!(
-      form_id: CDO.jotform_forms['local']['day_1'],
+      form_id: CDO.jotform_forms['local_summer']['day_1'],
       submission_id: (Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1,
       user: workshop.enrollments[x].user,
       pd_session: workshop.sessions.first,
@@ -442,7 +442,7 @@ def create_fake_daily_survey_results(workshop)
     )
 
     Pd::WorkshopFacilitatorDailySurvey.create!(
-      form_id: CDO.jotform_forms['local']['facilitator'],
+      form_id: CDO.jotform_forms['local_summer']['facilitator'],
       submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:submission_id) || 0) + 1,
       answers: {
         '1': %w(Helpful Hillarious Inspiring Brilliant)[x % 4],
