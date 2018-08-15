@@ -882,10 +882,27 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: pegasus.storage_apps
-  # Table: dashboard.featured_projects
   #
 
-  test "soft-deletes all of a user's projects" do
+  test "soft-deletes all of a soft-deleted user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'active', app[:state]
+      end
+
+      student.destroy
+
+      assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'deleted', app[:state]
+      end
+    end
+  end
+
+  test "soft-deletes all of a purged user's projects" do
     storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
@@ -920,7 +937,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  test "clears 'value' for all of a user's projects" do
+  test "clears 'value' for all of a purged user's projects" do
     storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
@@ -938,7 +955,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  test "clears 'updated_ip' all of a user's projects" do
+  test "clears 'updated_ip' all of a purged user's projects" do
     storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
@@ -953,6 +970,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_empty app[:updated_ip]
       end
+    end
+  end
+
+  #
+  # Table: dashboard.featured_projects
+  #
+
+  test "unfeatures any featured projects owned by soft-deleted user" do
+    student = create :student
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: Time.now
+
+      assert featured_project.featured?
+
+      student.destroy
+
+      featured_project.reload
+      refute featured_project.featured?
     end
   end
 
