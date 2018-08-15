@@ -15,15 +15,23 @@ export function getDanceAPI(p5Inst) {
   const env = new p5.Env();
   env.setADSR(0.001, 0.01, 0.1, 0.1);
   env.setRange(1, 0);
+  let callback = () => {};
 
   const playTick = (time, vol) => {
+    callback();
+    if (vol < 0.1) {
+      return;
+    }
     env.setRange(vol, 0);
     env.play(noise);
   };
-  const phrase = new p5.Phrase('tick', playTick, [0.2, 0, 1, 0, 0.2, 0, 1, 0]);
-  part = new p5.Part();
+  const phrase = new p5.Phrase('tick', playTick, [
+    1.0, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001,
+    0.2, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001,
+  ]);
+  part = new p5.Part(48, 1 / 48);
   part.addPhrase(phrase);
-  part.setBPM(120);
+  part.setBPM(100 * 1.2);
 
   return {
     oscillator: {
@@ -63,8 +71,9 @@ export function getDanceAPI(p5Inst) {
 
     metronome: {
       start: () => part.loop(),
-      setBPM: n => part.setBPM(n),
+      setBPM: n => part.setBPM(n * 1.2),
       stop: () => part.stop(),
+      registerTick: f => callback = f,
     },
   };
 }
