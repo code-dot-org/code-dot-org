@@ -147,8 +147,8 @@ export default connect(state => ({}), dispatch => ({
   cancelRenamingProject(projectId) {
     dispatch(cancelRenamingProject(projectId));
   },
-  saveProjectName(projectId, updatedName) {
-    dispatch(saveProjectName(projectId, updatedName));
+  saveProjectName(projectId, updatedName, lastUpdatedAt) {
+    dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
   },
   remix(projectId, projectType) {
     dispatch(remix(projectId, projectType));
