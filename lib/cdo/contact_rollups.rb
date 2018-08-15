@@ -274,7 +274,6 @@ class ContactRollups
   def self.insert_from_dashboard_contacts
     start = Time.now
     log "Inserting teacher contacts and IP geo data from dashboard.users"
-    # MULTIAUTH edit point
     PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
     -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
@@ -342,7 +341,6 @@ class ContactRollups
     # State for schools is stored in state abbreviation. We need to convert
     # to state name, so do this row-by-row using existing Ruby code for that
     # conversion.
-    # MULTIAUTH edit point
     sql = "
     SELECT users.email, schools.city, schools.state, schools.zip
     FROM users_view
@@ -470,7 +468,6 @@ class ContactRollups
   end
 
   def self.append_to_role_list_from_permission(permission_name, dest_value)
-    # MULTIAUTH edit point
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
@@ -493,7 +490,6 @@ class ContactRollups
   end
 
   def self.add_role_from_course_sections_taught(role_name, course_name)
-    # MULTIAUTH edit point
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN (
@@ -528,7 +524,6 @@ class ContactRollups
   end
 
   def self.append_regional_partner_to_role_list
-    # MULTIAUTH edit point
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
@@ -620,7 +615,6 @@ class ContactRollups
   # Updates professional learning attendance based on pd_attendances table
   # @param course [String] name of course to update for
   def self.update_professional_learning_attendance_for_course_from_pd_attendances(course)
-    # MULTIAUTH edit point
     PEGASUS_REPORTING_DB_WRITER.run "
       UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
         (SELECT DISTINCT users.email
@@ -642,7 +636,6 @@ class ContactRollups
   # Updates professional learning attendance based on workshop_attendance table
   # @param course [String] name of course to update for
   def self.update_professional_learning_attendance_for_course_from_workshop_attendance(course)
-    # MULTIAUTH edit point
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT DISTINCT users.email
@@ -671,7 +664,6 @@ class ContactRollups
   # Updates professional learning attendance based on sections table
   # @param course [String] name of course to update for
   def self.update_professional_learning_attendance_for_course_from_sections(course)
-    # MULTIAUTH edit point
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT DISTINCT users.email
@@ -842,7 +834,6 @@ class ContactRollups
 
   def self.update_grades_taught
     start = Time.now
-    # MULTIAUTH note: this doesn't actually access dashboard.users
     log "Updating grades taught from dashboard.users"
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
@@ -871,7 +862,6 @@ class ContactRollups
     # for age = 4, include 4 and below
     max_birthday_clause = "students.birthday <= DATE_ADD(NOW(), INTERVAL -#{age} YEAR) AND" unless age <= 4
 
-    # MULTIAUTH edit point
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}, (
     SELECT DISTINCT sections.user_id AS teacher_user_id
@@ -912,9 +902,8 @@ class ContactRollups
     # has district names like "open csp".
     districts = District.all.index_by(&:id)
 
-    # MULTIAUTH edit point
-    # users = User.where("length(email) > 0") # original query, replaced by following
-    users = User.find_by_sql(<<-eos
+    # users = User.where("length(email) > 0") # original query, replaced by following for multiauth
+    users = User.find_by_sql <<-eos
       SELECT * FROM users
       LEFT JOIN authentication_options
         ON users.primary_authentication_option_id = authentication_options.id
@@ -926,7 +915,6 @@ class ContactRollups
         )
         > 0
     eos
-    )
 
     users.find_each do |user|
       unless user.ops_school.nil?
