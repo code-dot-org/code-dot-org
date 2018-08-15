@@ -376,7 +376,7 @@ export function unpublishProject(projectId) {
   };
 }
 
-const updateProjectNameOnServer = (project, lastUpdatedAt) => {
+const updateProjectNameOnServer = (project) => {
   return (dispatch) => {
     $.ajax({
       url: `/v3/channels/${project.id}`,
@@ -385,14 +385,14 @@ const updateProjectNameOnServer = (project, lastUpdatedAt) => {
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(project)
     }).done((data) => {
-      dispatch(saveSuccess(project.id, lastUpdatedAt));
+      dispatch(saveSuccess(project.id, data.updatedAt));
     }).fail((jqXhr, status) => {
       dispatch(saveFailure(project.id));
     });
   };
 };
 
-export const saveProjectName = (projectId, updatedName, lastUpdatedAt) => {
+export const saveProjectName = (projectId, updatedName) => {
   return (dispatch) => {
     fetchProjectToUpdate(projectId,
     (error, data) => {
@@ -400,8 +400,7 @@ export const saveProjectName = (projectId, updatedName, lastUpdatedAt) => {
         console.error(error);
       } else {
         data.name = updatedName;
-        data.updatedAt = lastUpdatedAt;
-        dispatch(updateProjectNameOnServer(data, lastUpdatedAt));
+        dispatch(updateProjectNameOnServer(data));
       }
     });
   };

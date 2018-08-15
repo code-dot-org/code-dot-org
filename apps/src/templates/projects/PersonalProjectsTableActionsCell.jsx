@@ -61,7 +61,7 @@ class PersonalProjectsTableActionsCell extends Component {
   };
 
   onSave = () => {
-    this.props.saveProjectName(this.props.projectId, this.props.updatedName, new Date().toLocaleString());
+    this.props.saveProjectName(this.props.projectId, this.props.updatedName);
   };
 
   onRemix = () => {
