@@ -27,6 +27,10 @@ class DeleteAccountsHelper
     storage_id = user_storage_ids.where(user_id: user_id).first&.[](:id)
     return unless storage_id
 
+    # Unfeatures any featured projects owned by the user
+    channel_ids = storage_apps.where(storage_id: storage_id).map(:id)
+    FeaturedProject.where(storage_app_id: channel_ids).update_all(unfeatured_at: Time.now)
+
     # Soft-delete all of the user's channels
     storage_apps.where(storage_id: storage_id).update(
       state: 'deleted',
