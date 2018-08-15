@@ -1,0 +1,189 @@
+es:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Siguiente
+            '"prev"': Anterior
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Siguiente
+            '"prev"': Anterior
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: todo
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': derecha
+            '"left"': izquierda
+      Dancelab_randomColor:
+        text: color aleatorio
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Nada
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'verdadero'
+            'false': 'falso'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": aleatorio
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': derecha
+            '"left"': izquierda
+      gamelab_randColor:
+        text: color aleatorio
+      gamelab_randomColor:
+        text: color aleatorio
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': aleatorio
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': derecha
+            '"left"': izquierda
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": arriba
+            "'down'": abajo
+            "'left'": izquierda
+            "'right'": derecha
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abajo
+            '"left"': izquierda
+            '"right"': derecha
+            '"space"': espacio
+      Vanilla_randomColor:
+        text: color aleatorio

@@ -1,0 +1,189 @@
+nl:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Volgende
+            '"prev"': Vorige
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Volgende
+            '"prev"': Vorige
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: alles
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': rechts
+            '"left"': links
+      Dancelab_randomColor:
+        text: willekeurige kleur
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Geen
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'waar'
+            'false': 'onwaar'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": willekeurig
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': rechts
+            '"left"': links
+      gamelab_randColor:
+        text: willekeurige kleur
+      gamelab_randomColor:
+        text: willekeurige kleur
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': willekeurig
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"height"': hoogte
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': rechts
+            '"left"': links
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": omhoog
+            "'down'": omlaag
+            "'left'": links
+            "'right'": rechts
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      Vanilla_randomColor:
+        text: willekeurige kleur

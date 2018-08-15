@@ -1,0 +1,157 @@
+sq:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Tjetër
+            '"prev"': Paraardhëse
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Tjetër
+            '"prev"': Paraardhëse
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': djathtas
+            '"left"': majtas
+      Dancelab_randomColor:
+        text: ngjyrë e rastësishme
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'e saktë'
+            'false': 'e gabuar'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": zakonshëm
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': djathtas
+            '"left"': majtas
+      gamelab_randColor:
+        text: ngjyrë e rastësishme
+      gamelab_randomColor:
+        text: ngjyrë e rastësishme
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': zakonshëm
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': djathtas
+            '"left"': majtas
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": lart
+            "'down'": poshtë
+            "'left'": majtas
+            "'right'": djathtas
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
+      Vanilla_randomColor:
+        text: ngjyrë e rastësishme

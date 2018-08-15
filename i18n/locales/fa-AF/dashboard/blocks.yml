@@ -1,0 +1,17 @@
+fa:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: رنگ تصادفی
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      gamelab_randColor:
+        text: رنگ تصادفی
+      gamelab_randomColor:
+        text: رنگ تصادفی
+      Vanilla_randomColor:
+        text: رنگ تصادفی
