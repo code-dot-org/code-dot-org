@@ -906,7 +906,7 @@ class ContactRollups
     users = User.find_by_sql <<-eos
       SELECT * FROM users
       LEFT JOIN authentication_options
-        ON users.primary_authentication_option_id = authentication_options.id
+        ON users.primary_contact_info_id = authentication_options.id
       WHERE
         IF (
           users.provider = 'migrated',
