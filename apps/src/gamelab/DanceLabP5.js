@@ -1,11 +1,13 @@
 /* global p5 */
 
+let osc, fft, peakDetect, customPeakDetects, songs;
+
 export function getDanceAPI(p5Inst) {
-  const osc = new p5.Oscillator();
-  const fft = new p5.FFT(0.7, 128);
-  const peakDetect = new p5.PeakDetect(3000, 5000, 0.1, 3);
-  const customPeakDetects = [];
-  const songs = [];
+  osc = new p5.Oscillator();
+  fft = new p5.FFT(0.7, 128);
+  peakDetect = new p5.PeakDetect(3000, 5000, 0.1, 3);
+  customPeakDetects = [];
+  songs = [];
 
   return {
     oscillator: {
@@ -43,4 +45,18 @@ export function getDanceAPI(p5Inst) {
       setVolume: (n = 0, vol, rampTime) => songs[n].setVolume(vol, rampTime),
     },
   };
+}
+
+export function teardown() {
+  if (!osc) {
+    return;
+  }
+
+  songs.forEach(song => song.stop());
+  songs.length = 0;
+  customPeakDetects.length = 0;
+  peakDetect = null;
+  fft = null;
+  osc.stop();
+  osc = null;
 }

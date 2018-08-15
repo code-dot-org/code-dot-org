@@ -99,7 +99,7 @@ GRAPH
   cdo-awscli (0.1.5)
   cdo-cloudwatch-extra-metrics (0.1.6)
     ark (>= 0.0.0)
-  cdo-cloudwatch-logger (0.1.5)
+  cdo-cloudwatch-logger (0.1.7)
     ark (>= 0.0.0)
     poise-service (>= 0.0.0)
   cdo-freegeoip (0.1.2)
