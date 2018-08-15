@@ -84,7 +84,6 @@ class DeleteAccountsHelper
       attendance.update!(teacher_id: nil)
     end
     Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).each do |attendance|
-      attendance.destroy!
       attendance.update!(marked_by_user_id: nil)
     end
 
