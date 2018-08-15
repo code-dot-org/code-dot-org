@@ -69,12 +69,12 @@ describe("WorkshopManagement", () => {
     ).instance().surveyUrl;
 
     it("uses daily results for academic year workshop past August 2018", () => {
-      const surveyUrl = getSurveyUrlForProps({date: "2018-9-01", subject: '1-day Academic Year, Units 1 and 2'});
+      const surveyUrl = getSurveyUrlForProps({date: "2018-09-01", subject: '1-day Academic Year, Units 1 and 2'});
       expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
     });
 
     it("uses survey results for academic year workshop before August 2018", () => {
-      const surveyUrl = getSurveyUrlForProps({date: "2018-7-01", subject: '1-day Academic Year, Units 1 and 2'});
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: '1-day Academic Year, Units 1 and 2'});
       expect(surveyUrl).to.eql("/survey_results/123");
     });
 
