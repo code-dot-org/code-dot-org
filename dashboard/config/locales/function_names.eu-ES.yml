@@ -1,0 +1,29 @@
+---
+eu:
+  data:
+    function_names:
+      x: x
+      draw a circle: marraztu zirkulu bat
+      draw a hexagon: marraztu hexagono bat
+      draw a flower: marraztu lore bat
+      draw a square: marraztu karratu bat
+      draw a snowflake: marraztu elur-maluta bat
+      draw a tree: marraztu zuhaitz bat
+      draw a triangle: marraztu triangelu bat
+      draw a house: marraztu etxe bat
+      draw a star: marraztu izar bat
+      do something: egin zerbait
+      jump: salto egin
+      set score: ezarri markagailua
+      get nectar: lortu nektarra
+      test: proba
+      diamond: diamantea
+      move: mugitu
+      move right: mugitu eskuinera
+      move up: Mugitu gora
+      move down: mugiru behera
+      move left: mugitu ezkerrera
+      collect: uzta bildu
+      turn left: ezkerrera biratu
+      move forward: mugitu aurrera
+      turn right: eskuinera biratu

@@ -1,0 +1,25 @@
+en-GB:
+  data:
+    function_names:
+      x: x
+      draw a circle: dibujar un circulo
+      draw a hexagon: dibuja un hexágono
+      draw a flower: dibujar una flor
+      draw a square: dibuja un cuadrado
+      draw a tree: dibuja un árbol
+      draw a triangle: dibuja un triangulo
+      draw a house: dibuja una casa
+      draw a star: dibuja una estrella
+      do something: do something
+      jump: jump
+      set score: set score
+      get nectar: get nectar
+      test: test
+      move right: mova à direita
+      move up: move up
+      move down: move down
+      move left: move left
+      collect: collect
+      turn left: turn left
+      move forward: move forward
+      turn right: turn right

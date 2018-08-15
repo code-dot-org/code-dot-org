@@ -1,5 +1,4 @@
 require 'test_helper'
-require_relative "#{Rails.root}/../pegasus/forms/pd_workshop_survey"
 
 module Api::V1::Pd
   class WorkshopScoreSummarizerTest < ActiveSupport::TestCase

@@ -27,6 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Try tracing out a path with your finger.  \\nIs it the shortest path you can find?\",\r\n  \"hint_id\": \"4-5_Maze_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "hint_prompt_attempts_threshold": 7,
     "contained_level_names": null
   },
   "published": true,

@@ -14,7 +14,6 @@
       "rect": null,
       "comment_Drawing": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nThis program uses the four parameter version of `rect()` and `ellipse()` to draw a simple scene.\r\n\r\n# Do This\r\n\r\n* Debug this program and correct the error so that the grass extends across the entire bottom.\r\n* Hint: You only have to change one number. Which parameter makes your rectangle (the grass) wider?",

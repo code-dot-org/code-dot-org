@@ -1,0 +1,29 @@
+---
+nn:
+  data:
+    function_names:
+      x: x
+      draw a circle: teikn ein sirkel
+      draw a hexagon: teikn ein sekskant
+      draw a flower: teikn ein blome
+      draw a square: teikn ein firkant
+      draw a snowflake: teikn eit snøfnugg
+      draw a tree: teikn eit tre
+      draw a triangle: teikn ein trekant
+      draw a house: teikn eit hus
+      draw a star: teikn ei stjerne
+      do something: gjer noko
+      jump: hopp
+      set score: set poengsum
+      get nectar: få nektar
+      test: test
+      diamond: diamant
+      move: flytt
+      move right: flytt høgre
+      move up: flytt opp
+      move down: flytt ned
+      move left: flytt til venstre
+      collect: samle
+      turn left: snu mot venstre
+      move forward: gå framover
+      turn right: snu mot høgre

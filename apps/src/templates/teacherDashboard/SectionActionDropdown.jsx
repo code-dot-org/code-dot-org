@@ -55,7 +55,7 @@ class SectionActionDropdown extends Component {
       const {removeSection } = this.props;
       const section = this.props.sectionData;
       $.ajax({
-          url: `/v2/sections/${section.id}`,
+          url: `/dashboardapi/sections/${section.id}`,
           method: 'DELETE',
       }).done(() => {
           removeSection(section.id);
@@ -116,6 +116,7 @@ class SectionActionDropdown extends Component {
           <MenuBreak/>
           <PopUpMenu.Item
             onClick={this.onClickEdit}
+            className="edit-section-details-link"
           >
             {i18n.editSectionDetails()}
           </PopUpMenu.Item>
@@ -140,7 +141,7 @@ class SectionActionDropdown extends Component {
           <PopUpMenu.Item
             onClick={this.onClickHideShow}
           >
-            {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
+            {this.props.sectionData.hidden ? i18n.restoreSection() : i18n.archiveSection()}
           </PopUpMenu.Item>
           {sectionData.studentCount === 0 &&
             <PopUpMenu.Item

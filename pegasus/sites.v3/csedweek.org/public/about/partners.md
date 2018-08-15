@@ -14,6 +14,7 @@ nav: about_nav
 
 ---
 
-# All Other Partners
+# Additional Partners
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(csedweek_b:true).and(kind_s:'other') %>
+<%= view :about_logos, logos:DB[:cdo_partners].where(csedweek_b:true).and(kind_s:'additional') %>
+

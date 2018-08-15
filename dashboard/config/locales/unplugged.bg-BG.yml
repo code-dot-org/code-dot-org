@@ -1,4 +1,5 @@
-"bg":
+---
+bg:
   data:
     unplugged:
       Unplug1:
@@ -182,12 +183,12 @@
           съвпадение, абстрактно мислене, алгоритъм), трябва  да разберат как да играят
           игра, която идва без инструкции.
       FunctionalSuncatchers:
-        title: Функционални отразители на светлина
+        title: Функционални ловци на слънце
         desc: Учениците създават алгоритъм с променливи и функции (части от кода,
           който искате да използвате отново и отново) за създаване на ловци на светлина,
           използвайки шнур и мъниста.
       SongwritingParameters:
-        title: Композиране на песен
+        title: Писане на песен
         desc: Учениците, използвайки концепцията за припевите в песента, ще научат
           повече за подаване на параметри (което променя функцията без да се налага
           пренаписване).
@@ -201,7 +202,7 @@
         desc: Учениците изпращат съобщения, представящи различни методи за изпращане
           в Интернет, използвайки листове хартия.
       Crowdsourcing:
-        title: Съвместен код
+        title: Crowdsourcing кампания
         desc: Учениците използват crowdsourcing техниката, за решаване на проблеми
           в компютърните науки. При нея, за да завършите задачата по-ефективно, трябва
           да работите заедно като клас, отколкото ако един ученик се опитва сам.
@@ -284,7 +285,6 @@
           между две точки от равнината и след това да прецени дали тези две точки
           (или герои от игра) се докосват.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: В този урок вие ще научите за повторенията!
       courseB_unplugged_MRF:
         title: Ънплъгд дейност
@@ -300,13 +300,11 @@
         title: Ънплъгд дейност
         desc: Днес ще научите какво означава да бъдеш дигитален гражданин.
       courseE_unplugged_privateInformation:
-        title: Ънплъгд дейност
         desc: Днес ще научите разликата между частна и лична информация!
       courseF_unplugged_powerOfWords:
         title: Ънплъгд дейност
         desc: Днес ще научите какво да направите, ако някой се отбелязл като онлайн.
       deeper learning description:
-        title: ''
         desc: 'превод липсва: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Реални алгоритми: Засадете семената'
@@ -357,7 +355,7 @@
           определени команди, за да насочат своите съученици да възпроизведат предварително
           начертана рисунка.
       courseD_unplugged_relayProgramming:
-        title: Щафетно програмиране
+        title: Повтори програмирането
         desc: Учениците ще тичат в щафета, където те, обикаляйки двора, ще трябва
           да напишат алгоритъм въз основа на изображение на "Милиметрова хартия".
           Те могат да напишат само по една инструкция и ако има грешка някъде, ще
@@ -389,12 +387,12 @@
         desc: Учениците изпращат съобщения, представящи различни методи за изпращане
           в Интернет, използвайки листове хартия.
       courseE_unplugged_crowdsourcing:
-        title: Crowdsourcing
+        title: Crowdsourcing кампания
         desc: Учениците използват crowdsourcing техниката, за решаване на проблеми
           в компютърните науки. При нея, за да завършите задачата по-ефективно, трябва
           да работите заедно като клас, отколкото ако един ученик се опитва сам.
       courseE_unplugged_songwriting:
-        title: Композиране на песен
+        title: Писане на песен
         desc: Учениците, използвайки концепцията за припевите в песента, ще научат
           повече за подаване на параметри (което променя функцията без да се налага
           пренаписване).
@@ -422,80 +420,8 @@
           можете да използвате отново и отново в рамките на вашата по-голяма програма.
           Този урок ще помогне на учениците интуитивно да разберат защо комбинирането
           на парчетата код във функции е такава полезна практика.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: Моите приятели роботи
       PlantASeed_2018:
         title: 'Реални алгоритми: Засадете семената'
         desc: Този урок ни показва, че ние използваме алгоритми и в ежедневието ни,
@@ -510,7 +436,6 @@
         desc: Интернет е мощно, но понякога опасно място. Учителите ще въведат правила
           за безопасност на учениците при навигиране в Интернет.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: В този урок вие ще научите за повторенията!
       BigEvent_2018:
         title: Голямото събитие
@@ -561,4 +486,5 @@
           по повече от един начин.
       MoveItMoveIt_2018:
         title: Преместете го, преместете го
-        desc: ''
+      RelayProgramming_2018:
+        title: Повтори програмирането

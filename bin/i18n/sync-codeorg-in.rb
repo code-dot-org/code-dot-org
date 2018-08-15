@@ -15,31 +15,72 @@ require_relative 'i18n_script_utils'
 
 def sync_in
   localize_level_content
+  localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
+  redact_level_content
+  redact_block_content
 end
 
-def copy_to_yml(label, data, allow_full_length=false)
-  args = allow_full_length ? {line_width: -1} : {}
+def copy_to_yml(label, data)
   File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    data = ({"en" => {"data" => {label => data}}}).to_yaml(**args)
+    data = ({"en" => {"data" => {label => data}}}).to_yaml(line_width: -1)
     f.write(data)
   end
 end
 
-def reformat_quotes
-  filenames = [
-    "instructions",
-    "markdown_instructions",
-    'failure_message_overrides',
-  ]
+# sanitize a string before uploading to crowdin. Currently only performs
+# CRLF -> LF conversion, but could be extended to do more
+def sanitize(string)
+  return string.gsub(/\r(\n)?/, "\n")
+end
 
-  filenames.each do |filename|
-    temp_file = Tempfile.new("temp#{filename}.yml")
-    File.open("dashboard/config/locales/#{filename}.en.yml", "r") do |f|
-      f.each_line {|line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
+def redact_block_content
+  source = 'i18n/locales/source/dashboard/blocks.yml'
+  dest = 'i18n/locales/redacted/dashboard/blocks.yml'
+  redact(source, dest, 'blockfield')
+end
+
+# Pull in various fields for custom blocks from .json files and save them to
+# blocks.en.yml.
+def localize_block_content
+  blocks = {}
+
+  Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
+    name = File.basename(file, '.*')
+    config = JSON.parse(File.read(file))['config']
+    blocks[name] = {
+      'text' => config['blockText'],
+    }
+
+    next unless config['args']
+
+    args_with_options = {}
+    config['args'].each do |arg|
+      next if !arg['options'] || arg['options'].empty?
+
+      options = args_with_options[arg['name']] = {}
+      arg['options'].each do |option_tuple|
+        options[option_tuple.last] = option_tuple.first
+      end
     end
-    temp_file.close
-    FileUtils.mv(temp_file.path, "dashboard/config/locales/#{filename}.en.yml")
+    blocks[name]['options'] = args_with_options unless args_with_options.empty?
+  end
+
+  copy_to_yml('blocks', blocks)
+end
+
+def redact_level_content
+  FileUtils.mkdir_p 'i18n/locales/redacted/dashboard'
+  puts "Redacting"
+  %w(
+    authored_hints
+    instructions
+    markdown_instructions
+  ).each do |content_type|
+    puts "\t#{content_type}"
+    source = "i18n/locales/source/dashboard/#{content_type}.yml"
+    dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
+    redact(source, dest, 'nonPedanticEmphasis')
   end
 end
 
@@ -56,57 +97,61 @@ def localize_level_content
   level_failure_message_overrides = Hash.new
   level_authored_hints = Hash.new
   level_callouts = Hash.new
-
-  instruction_pattern = /^\s*"instructions": (".*?"),?\n$/
-  markdown_instruction_pattern = /^\s*"markdown_instructions": (".*?"),?\n$/
-  failure_message_override_pattern = /^\s*"failure_message_override": (".*?"),?\n$/
-  authored_hint_pattern = /^\s*"authored_hints": "(.*?)",?\n$/
-  callout_pattern = /^\s*"callout_json": "(.*?)",?\n$/
+  level_block_categories = Hash.new
+  level_function_names = Hash.new
 
   Dir.glob("dashboard/config/scripts/levels/*.level").sort.each do |file|
-    level = File.basename(file, ".*") + "_instruction"
-    markdown_level = File.basename(file, ".*") + "_markdown_instruction"
-    failure_message_override_level = File.basename(file, ".*") + "_failure_message_override"
-    authored_hint_level = File.basename(file, ".*") + "_authored_hint"
-    callout_level = File.basename(file, ".*") + "_callout"
+    level_name = File.basename(file, ".*")
+    File.open(file) do |data|
+      level_xml = Nokogiri::XML(data, &:noblanks)
 
-    File.open(file) do |f|
-      f.each_line do |line|
-        # Instructions
-        instruction_match = line.match instruction_pattern
-        if instruction_match
-          level_instructions[level] = instruction_match.captures.first
+      # Properties
+      config = JSON.parse(level_xml.xpath('//../config').first.text)
+
+      ## Instructions
+      if instructions = config["properties"]["instructions"]
+        level_instructions["#{level_name}_instruction"] = sanitize(instructions)
+      end
+
+      ## Markdown Instructions
+      if markdown_instructions = config["properties"]["markdown_instructions"]
+        level_markdown_instructions["#{level_name}_markdown_instruction"] = sanitize(markdown_instructions)
+      end
+
+      ## Failure message overrides
+      if failure_message_overrides = config["properties"]["failure_message_override"]
+        level_failure_message_overrides["#{level_name}_failure_message_override"] = sanitize(failure_message_overrides)
+      end
+
+      ## Authored Hints
+      if authored_hints_json = config["properties"]["authored_hints"]
+        level_authored_hints["#{level_name}_authored_hint"] = JSON.parse(authored_hints_json).reduce({}) do |memo, hint|
+          memo[hint['hint_id']] = hint['hint_markdown'] unless hint['hint_id'].empty?
+          memo
         end
+      end
 
-        # Markdown Instructions
-        markdown_instruction_match = line.match markdown_instruction_pattern
-        if markdown_instruction_match
-          level_markdown_instructions[markdown_level] = markdown_instruction_match.captures.first
-        end
-
-        # Failure message overrides
-        failure_message_override_match = line.match failure_message_override_pattern
-        if failure_message_override_match
-          level_failure_message_overrides[failure_message_override_level] = failure_message_override_match.captures.first
-        end
-
-        # Authored Hints
-        authored_hint_match = line.match authored_hint_pattern
-        if authored_hint_match
-          hint_json = JSON.load(%Q("#{authored_hint_match.captures.first}"))
-          level_authored_hints[authored_hint_level] = JSON.parse(hint_json).reduce({}) do |memo, hint|
-            memo[hint['hint_id']] = hint['hint_markdown'] unless hint['hint_id'].empty?
-            memo
-          end
-        end
-
-        # Callouts
-        callout_match = line.match callout_pattern
-        next unless callout_match
-        callout_json = JSON.load(%Q("#{callout_match.captures.first}"))
-        level_callouts[callout_level] = JSON.parse(callout_json).reduce({}) do |memo, callout|
+      ## Callouts
+      if callouts_json = config["properties"]["callout_json"]
+        level_callouts["#{level_name}_callout"] = JSON.parse(callouts_json).reduce({}) do |memo, callout|
           memo[callout['localization_key']] = callout['callout_text'] unless callout['localization_key'].empty?
           memo
+        end
+      end
+
+      # Blocks
+      blocks = level_xml.xpath('//blocks').first
+      if blocks
+        ## Categories
+        blocks.xpath('//category').each do |category|
+          name = category.attr('name')
+          level_block_categories[name] = name if name
+        end
+
+        ## Function Names
+        blocks.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
+          name = function.at_xpath('./title[@name="NAME"]')
+          level_function_names[name.content] = name.content if name
         end
       end
     end
@@ -115,9 +160,10 @@ def localize_level_content
   copy_to_yml("instructions", level_instructions)
   copy_to_yml("markdown_instructions", level_markdown_instructions)
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
-  copy_to_yml("authored_hints", level_authored_hints, true)
-  copy_to_yml("callouts", level_callouts, true)
-  reformat_quotes
+  copy_to_yml("authored_hints", level_authored_hints)
+  copy_to_yml("callouts", level_callouts)
+  copy_to_yml("block_categories", level_block_categories)
+  copy_to_yml("function_names", level_function_names)
 end
 
 sync_in if __FILE__ == $0

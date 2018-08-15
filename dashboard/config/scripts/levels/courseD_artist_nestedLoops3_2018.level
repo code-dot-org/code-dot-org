@@ -39,10 +39,16 @@
     "disable_if_else_editing": "false",
     "parent_level_id": 7338,
     "name_suffix": "_2018",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-31 23:49:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -82,6 +88,9 @@
           <value name="COLOUR">
             <block type="colour_random"/>
           </value>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
         </block>
       </xml>
     </toolbox_blocks>

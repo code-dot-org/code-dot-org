@@ -1,4 +1,5 @@
-"is":
+---
+is:
   devise:
     confirmations:
       confirmed: Tókst að staðfesta netfang þitt.
@@ -55,7 +56,6 @@
         og smelltu á staðfestingarkrækjuna til að ljúka staðfestingu á nýju netfangi.
       updated: Breytingin á reikningi þínum tókst.
     sessions:
-      signed_in: ''
       signed_out: Útskráning tókst.
     unlocks:
       send_instructions: Þú færð tölvupóst innan nokkurra mínútna með leiðbeiningum

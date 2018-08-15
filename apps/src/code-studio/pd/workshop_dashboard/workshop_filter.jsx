@@ -35,6 +35,7 @@ import {
   Subjects,
   States
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import RegionalPartnerDropdown, {RegionalPartnerPropType} from "../components/regional_partner_dropdown";
 
 const limitOptions = [
   {value: 25, text: 'first 25'},
@@ -47,6 +48,7 @@ const QUERY_API_URL = "/api/v1/pd/workshops/filter";
 export class WorkshopFilter extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
+    regionalPartnerFilter: RegionalPartnerPropType,
     location: PropTypes.shape({
       pathname: PropTypes.string,
       query: PropTypes.shape({
@@ -59,7 +61,8 @@ export class WorkshopFilter extends React.Component {
         teacher_email: PropTypes.string,
         only_attended: PropTypes.string,
       })
-    })
+    }),
+    showRegionalPartnerDropdown: PropTypes.bool
   };
 
   static contextTypes = {
@@ -223,6 +226,7 @@ export class WorkshopFilter extends React.Component {
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,
       only_attended: urlParams.only_attended,
+      regional_partner_id: this.props.regionalPartnerFilter.value
     });
   }
 
@@ -379,6 +383,14 @@ export class WorkshopFilter extends React.Component {
             </Col>
           }
         </Row>
+        {
+          this.props.showRegionalPartnerDropdown &&
+          <Row>
+            <Col md={6}>
+              <RegionalPartnerDropdown/>
+            </Col>
+          </Row>
+        }
         <Row>
           <ServerSortWorkshopTable
             queryUrl={QUERY_API_URL}
@@ -395,5 +407,7 @@ export class WorkshopFilter extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission
+  permission: state.workshopDashboard.permission,
+  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
+  showRegionalPartnerDropdown: state.regionalPartners.regionalPartners.length > 1
 }))(WorkshopFilter);

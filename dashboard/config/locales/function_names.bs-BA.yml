@@ -1,0 +1,29 @@
+---
+bs:
+  data:
+    function_names:
+      x: x
+      draw a circle: nacrtaj krug
+      draw a hexagon: nacrtaj šesterougao
+      draw a flower: nacrtaj cvijet
+      draw a square: nacrtaj kvadrat
+      draw a snowflake: nacrtaj pahuljicu
+      draw a tree: nacrtaj drvo
+      draw a triangle: nacrtaj trougao
+      draw a house: nacrtaj kuću
+      draw a star: nacrtaj zvijezdu
+      do something: uradi nešto
+      jump: skoči
+      set score: postavi rezultat
+      get nectar: pokupi nektar
+      test: uslov
+      diamond: dijamant
+      move: pomakni
+      move right: pomakni desno
+      move up: pomakni gore
+      move down: pomakni dolje
+      move left: pomakni lijevo
+      collect: pokupi
+      turn left: okreni lijevo
+      move forward: idi naprijed
+      turn right: okreni desno

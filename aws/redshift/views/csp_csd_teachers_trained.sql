@@ -1,3 +1,5 @@
+DROP VIEW IF EXISTS analysis.csp_csd_teachers_trained CASCADE;
+
 -- to figure out
 -- 19 teachers who are listed in 2016 and 2017 PD cohort?
 create or replace view analysis.csp_csd_teachers_trained as
@@ -56,7 +58,7 @@ trained_2016 as
   select 
     tp.studio_person_id,
     'CS Principles' as course,
-    2016 as year,
+    '2016-17' as school_year,
     case partner
       when 'Academy for CS Education - Florida International University' then 'Florida International University'
       when 'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)' then 'Maryland Codes'
@@ -79,12 +81,13 @@ trained_2017 as
   select 
     studio_person_id,
     course,
-    2017 as year,
+    '2017-18' as school_year,
     case regional_partner
       when 'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)' then 'Maryland Codes'
       when 'America Campaign - Big Sky Code Academy' then 'Teachers Teaching Tech (MT)'
       when 'No Partner' then NULL
       when 'mindSpark Learning and Colorado Education Initiative' then 'mindSpark Learning'
+      when 'The Div' then 'Oklahoma Public School Resource Center (OPSRC)'
       else regional_partner
     end as regional_partner
   from analysis_pii.teachers_trained_2017 tt
@@ -109,6 +112,3 @@ from trained_2017 t
   left join dashboard_production_pii.regional_partners rp on rp.name = t.regional_partner
 
 with no schema binding;
-
-GRANT ALL PRIVILEGES ON analysis.csp_csd_teachers_trained TO GROUP admin;
-GRANT SELECT ON analysis.csp_csd_teachers_trained TO GROUP reader, GROUP reader_pii;

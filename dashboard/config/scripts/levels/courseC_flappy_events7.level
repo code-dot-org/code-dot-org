@@ -39,6 +39,7 @@
     "markdown_instructions": "Next, try changing the scene by attaching a block to the `when run` event.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can change the background using the `set scene` block. \",\"hint_id\":\"courseC_flappy_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2e288e3a59cf712ff03ad8ac9ef3d3f2/courseC_flappy_events7.mp3\"}]",
     "project_template_level_name": "courseC_flappy_events_template",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

@@ -28,7 +28,6 @@
     "text_mode_at_start": "false",
     "hide_animation_mode": "false",
     "all_animations_single_frame": "true",
-    "show_d_pad": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",

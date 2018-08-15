@@ -1,0 +1,16 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      322,
+      0.9,
+      0.95
+    ],
+    "func": "whileUpArrow",
+    "blockText": "while up arrow pressed",
+    "args": [
+
+    ],
+    "eventLoopBlock": true
+  }
+}

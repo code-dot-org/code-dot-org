@@ -8,20 +8,20 @@ import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
-import PublishDialog from './templates/publishDialog/PublishDialog';
+import PublishDialog from './templates/projects/publishDialog/PublishDialog';
 import {
   showPublishDialog,
   PUBLISH_REQUEST,
   PUBLISH_SUCCESS,
   PUBLISH_FAILURE,
-} from './templates/publishDialog/publishDialogRedux';
+} from './templates/projects/publishDialog/publishDialogRedux';
 import {createHiddenPrintWindow} from './utils';
 import testImageAccess from './code-studio/url_test';
 import {TestResults, KeyCodes} from './constants';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
-var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha"];
+var UNCOUNTED_BLOCK_TYPES = ["draw_colour", "alpha", "comment"];
 
 /**
  * Bag of utility functions related to building and displaying feedback
@@ -1266,14 +1266,23 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
  *   are found.
  */
 FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
-  var emptyBlock = this.getEmptyContainerBlock_();
+  const emptyBlock = this.getEmptyContainerBlock_();
   if (!emptyBlock) {
     return TestResults.ALL_PASS;
   }
 
-  var type = emptyBlock.type;
+  const type = emptyBlock.type;
   if (type === 'procedures_defnoreturn' || type === 'procedures_defreturn') {
-    return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+    const emptyBlockInfo = emptyBlock.getProcedureInfo();
+    const findUsages = block =>
+      block.type === emptyBlockInfo.callType &&
+      block.getTitleValue('NAME') === emptyBlockInfo.name;
+
+    if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
+      return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
+    } else {
+      return TestResults.ALL_PASS;
+    }
   }
 
   // Block is assumed to be "if" or "repeat" if we reach here.

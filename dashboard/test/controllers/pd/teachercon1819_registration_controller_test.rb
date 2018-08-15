@@ -1,11 +1,15 @@
 require 'test_helper'
 
 class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCase
-  setup do
+  self.use_transactional_test_case = true
+
+  setup_all do
+    # Don't bother creating enrollments here. That functionality is tested in the model
+    Pd::Application::Teacher1819Application.any_instance.stubs(:enroll_user)
+
     @teacher = create :teacher
-    @application = create :pd_teacher1819_application, :locked, user: @teacher
     @teachercon = create :pd_workshop, :teachercon, num_sessions: 5
-    @application.update(pd_workshop_id: @teachercon.id)
+    @application = create :pd_teacher1819_application, :locked, user: @teacher, pd_workshop_id: @teachercon.id
     @regional_partner = RegionalPartner.find_or_create_by(name: 'WNY STEM Hub', group: 3)
     regional_partner_program_manager = create :regional_partner_program_manager,
       regional_partner: @regional_partner
@@ -32,9 +36,13 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
       date: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:dates],
       email: @facilitator.email,
     }.to_json
-
-    sign_in(@teacher)
   end
+
+  setup do
+    sign_in(@teacher)
+    @application.reload
+  end
+
   # Signed out teacher gets redirected to sign in
   test_redirect_to_sign_in_for :new, params: -> {{application_guid: @application.application_guid}}
 
@@ -135,16 +143,6 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     assert_template('please_sign_in')
   end
 
-  # Regional Partner Program Manager not in Group 3 should be redirected
-  test 'Program manager not in group 3 should be redirected to only_group_3' do
-    sign_out(@teacher)
-    regional_partner_program_manager = create :regional_partner_program_manager
-    sign_in(regional_partner_program_manager.program_manager)
-
-    get :partner, params: {city: 'Phoenix'}
-    assert_template('only_group_3')
-  end
-
   # Not specifying teachercon should redirect to invalid page
   test 'Invalid city in city param should redirect' do
     sign_out(@teacher)
@@ -162,6 +160,27 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     get :partner, params: {city: 'Phoenix'}
     assert_response :success
     assert_equal @expected_partner_teachercon_registration_script_data, assigns(:script_data)[:props]
+  end
+
+  # Program Manager with Group 4 partner should have appropriate script_data set
+  test 'Program manager with group 4 partner should have script_data values set' do
+    regional_partner = create :regional_partner, group: 4
+    regional_partner_program_manager = create :regional_partner_program_manager,
+      regional_partner: regional_partner
+    program_manager = regional_partner_program_manager.program_manager
+
+    sign_out(@teacher)
+    sign_in(program_manager)
+
+    get :partner, params: {city: 'Phoenix'}
+    assert_response :success
+    expected_script_data = JSON.parse(@expected_partner_teachercon_registration_script_data).merge(
+      {
+        regionalPartnerId: regional_partner.id,
+        email: program_manager.email
+      }
+    ).to_json
+    assert_equal expected_script_data, assigns(:script_data)[:props]
   end
 
   # If a city is not specified, try and figure out the teachercon based on the mapping
@@ -238,5 +257,23 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     assert_destroys(Pd::Teachercon1819Registration) do
       delete :destroy, params: {application_guid: application.application_guid}
     end
+  end
+
+  test 'recreated teacher applications can register for teachercon' do
+    # Make sure the page still loads when the associated principal approval (same application_guid)
+    # was created before the teacher application. This can happen when an application is destroyed and recreated.
+    guid = @application.application_guid
+    create :pd_principal_approval1819_application, teacher_application: @application
+    @application.destroy
+
+    Pd::Application::Teacher1819Application.any_instance.stubs(:enroll_user)
+    create :pd_teacher1819_application, :locked, application_guid: guid,
+      user: @teacher, pd_workshop_id: @teachercon.id
+
+    get :new, params: {
+      application_guid: guid
+    }
+    assert_response :success
+    assert_template :new
   end
 end

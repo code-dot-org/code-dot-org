@@ -1,4 +1,5 @@
-"vi":
+---
+vi:
   devise:
     confirmations:
       confirmed: Địa chỉ email của bạn đã được xác nhận thành công.
@@ -54,7 +55,6 @@
         bạn và bấm vào liên kết xác nhận để xác nhận địa chỉ email mới của bạn.
       updated: Bạn đã cập nhật tài khoản thành công.
     sessions:
-      signed_in: ''
       signed_out: Đăng xuất thành công.
     unlocks:
       send_instructions: Bạn sẽ nhận được một email hướng dẫn mở khóa tài khoản của

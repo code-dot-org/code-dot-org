@@ -1,0 +1,17 @@
+- @page_title = I18n.t('pd.international_opt_in.title')
+
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+%script{src: minifiable_asset_path('js/pd/international_opt_in/new.js'), data: @script_data}
+
+#application-header
+  %h3
+    = I18n.t('pd.international_opt_in.title')
+
+%p
+  = I18n.t('pd.international_opt_in.intro')
+
+%p
+  = I18n.t('pd.international_opt_in.instructions')
+
+%div#application-container

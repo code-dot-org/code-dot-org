@@ -1,8 +1,20 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 
-# TODO: this should probably live in rake_utils, but for HOC 2016 we're not
-# going to do another DTP, so it's embedded here to work standalone
+#
+# Runs a command using the fanout logic, but only actually runs it on the
+# production-console server.
+#
+# bin/fanout-dryrun [command]
+#
+# We expect you to run this command from the production-daemon server.
+# Before you do, you'll need to copy the required SSH configuration into place:
+#
+# cp ~/.ssh/config_fanout ~/.ssh/config
+#
+# See also: fanout, fanout-partial
+#
+
 def fanout(command, num_batches=1, delay_per_group=0)
   app_servers = [CDO.app_servers["console"]]
   size = app_servers.length

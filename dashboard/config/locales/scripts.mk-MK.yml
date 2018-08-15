@@ -1,4 +1,5 @@
-"mk":
+---
+mk:
   data:
     script:
       name:
@@ -9,8 +10,8 @@
             develop problem-solving skills, and persist through difficult tasks. By
             the end of this course, students create their very own custom game or
             story that they can share. Recommended for grades K-1.
-          description_short: Start with Course 1 for early readers.
-          description_audience: Ages 4+ (pre-readers)
+          description_short: Introduction to computer science for early readers.
+          description_audience: Ages 4-6
           stages:
             'Artist: Loops':
               name: 'Artist: Loops'
@@ -54,8 +55,9 @@
             programming experience. In this course students will create programs to
             solve problems and develop interactive games or stories they can share.
             Recommended for grades 2-5.
-          description_short: Start with Course 2 for students who can read.
-          description_audience: Ages  6+ (reading required)
+          description_short: Introduction to computer science for students who can
+            read.
+          description_audience: Ages 6+ (reading required)
           stages:
             'Artist: Debugging':
               name: 'Artist: Debugging'
@@ -99,11 +101,12 @@
           title: Course 3
           description: Course 3 is designed for students who have taken Course 2.
             Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-5.
-          description_short: Course 3 is a follow-up to Course 2.
-          description_audience: Ages 8+ (after Course 2)
+            courses to create flexible solutions to more complex problems. By the
+            end of this course, students create interactive stories and games they
+            can share with anyone. Recommended for grades 4-5.
+          description_short: Delve even deeper into programming while building games
+            and interactive stories. This is a follow-up to Course 2.
+          description_audience: Ages 8-18
           stages:
             Artist:
               name: Artist
@@ -162,7 +165,7 @@
             Artist:
               name: Artist
         hourofcode:
-          title: Hour of Code
+          title: Classic Maze
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
@@ -182,14 +185,15 @@
               name: Artist
         course4:
           title: Course 4
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description_audience: Ages 10+ (after Course 3)
+          description: Course 4 is designed for students who have taken Courses 2
+            and 3. Students will learn how to tackle puzzles with increased complexity
+            as they learn how to combine several concepts when solving each challenge.
+            By the time this Course is completed, students will be creating programs
+            that let them showcase multiple skills, including for loops and functions
+            with parameters. Recommended for grades 4-8.
+          description_short: Build more complex programs with concepts such as for
+            loops and functions with parameters. This is a follow-up to Course 3.
+          description_audience: Ages 9-18
           stages:
             Artist:
               name: Artist
@@ -279,8 +283,8 @@
               name: Променливи
         algebra:
           title: Computer Science in Algebra
-          description: Learn Functional Programming through Algebra
-          description_short: Learn Functional Programming through Algebra
+          description: Learn Functional Programming through Algebra.
+          description_short: Learn Functional Programming through Algebra.
           description_audience: ''
           stages:
             'Calc: Defining Variables':
@@ -324,9 +328,11 @@
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Games and Coordinate Planes'
         infinity:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          description_short: Create a story or make a game with Play Lab!
+          title: Disney Infinity Play Lab
+          description: Use Play Lab to create a story or game starring Disney Infinity
+            characters.
+          description_short: Use Play Lab to create a story or game starring Disney
+            Infinity characters.
           stages:
             Infinity:
               name: Бесконечно
@@ -379,8 +385,8 @@
               name: Writing computer programs
         netsim:
           title: Internet Simulator
-          description: ''
-          description_short: ''
+          description: Learn about how the Internet works.
+          description_short: Learn about how the Internet works.
           description_audience: ''
           stages:
             Automatic DNS node:
@@ -420,10 +426,10 @@
             Color Pixelation Tutorial:
               name: Color Pixelation Tutorial
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
-          description: This 20-hour course introduces core computer science and programming
-            concepts. The course is designed for use in classrooms for grades K-8,
-            but it is fun to learn at all ages.
+          title: Accelerated Intro to CS Course
+          description: This 20-hour course covers the core computer science and programming
+            concepts in courses 2-4. The course is designed for use with ages 10-18.
+            Check out courses 2-4 for a more complete experience!
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
           description_audience: Ages 10-18
@@ -470,7 +476,7 @@
               name: Wrap-up
         edit-code:
           title: Edit Code
-          description: ''
+          description: Edit Code
           description_short: Edit Code
           description_audience: ''
           stages:
@@ -486,7 +492,7 @@
               name: The Maze
         events:
           title: Events
-          description: ''
+          description: Events
           description_short: Events
           description_audience: ''
           stages:
@@ -502,22 +508,22 @@
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Write your own Flappy game!
           description_audience: ''
           stages:
             Flappy Code:
               name: Flappy Code
         jigsaw:
           title: Jigsaw
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Try our Jigsaw tutorial.
+          description_short: Try our Jigsaw tutorial.
           description_audience: ''
           stages:
             Jigsaw:
               name: Jigsaw
         step:
           title: Step
-          description: ''
+          description: Step tutorial
           description_short: Step tutorial
           description_audience: ''
           stages:
@@ -525,7 +531,8 @@
               name: Step
         Hour of Code:
           title: Hour of Code 2013
-          description: ''
+          description: Try the basics of computer science with characters from Angry
+            Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
           description_audience: ''
           stages:
@@ -548,9 +555,14 @@
             Puzzles:
               name: Puzzles
         cspunit1:
-          title: CSP Unit 1
-          description: CSP Unit 1 Stages
-          description_short: Make Black and White Images with the pixelation tool
+          title: "(old) CS Principles Unit 1 - Digital Information"
+          description: This unit explores the technical challenges and questions that
+            arise from the need to represent digital information in computers and
+            transfer it between people and computational devices. This unit is a pilot
+            version and is no longer supported or updated. You can find the new units
+            at code.org/educate/csp.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Binary Numbers:
               name: Binary Numbers
@@ -662,8 +674,8 @@
               name: What is CSP?
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description: Lesson samples for csp
-          description_short: lesson samples for csp
+          description: Lesson samples for CSP
+          description_short: Lesson samples for CSP
           description_audience: ''
           stages:
             Lesson 14:
@@ -733,9 +745,14 @@
             PDK5 Intro:
               name: PDK5 Intro
         cspunit3:
-          title: CSP Unit 3 - Programming
-          description: Programming in Javascript and AppLap
-          description_short: Programming
+          title: "(old) CS Principles Unit 3 - Programming"
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             APIs and Function Parameters:
@@ -955,9 +972,9 @@
             What to Expect:
               name: What to Expect
         sciencePD2:
-          title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          title: 'CS in Science: Part 2'
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           stages:
             Creating Breeds in Starlogo Nova:
               name: Creating Breeds in Starlogo Nova
@@ -974,9 +991,9 @@
             Wrap-Up:
               name: Wrap-Up
         sciencePD3:
-          title: Computer Science in Science PD
-          description: Phase 3 Professional Development
-          description_short: Phase 3 Professional Development
+          title: 'CS in Science: Part 3'
+          description: Academic Year Support - Semester 1
+          description_short: Academic Year Support - Semester 1
           stages:
             Decode and Share:
               name: Decode and Share
@@ -993,14 +1010,13 @@
               name: Testing
           description_audience: ''
         cspunit2:
-          title: CSP Unit 2 - The Internet
-          description: |
-            In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
-            structure and design of the internet and the implications of those design decisions including
-            the reliability of network communication, the security of data, and personal privacy. Topics
-            include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
-            concerns.
-          description_short: The Internet
+          title: "(old) CS Principles Unit 2 - The Internet"
+          description: In this unit, students extend their understanding of the internet
+            and how it functions by building off the concepts learned when sending
+            bits in Unit 1. This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Hard Problems - The Traveling Salesperson Problem
@@ -1079,7 +1095,10 @@
               name: The Design Recipe
         allthethings:
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test
+            applab levels (By design, applab levels only work if signed in. Normally,
+            we make people sign in, but this is only enforceable for a whole script
+            and would be annoying to do for this script).
           description_short: All the level types for UI testing
           description_audience: ''
           stages:
@@ -1277,9 +1296,9 @@
             Necessary Background:
               name: Necessary Background
         algebraPD2:
-          title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          title: CS in Algebra Part 2
+          description: Academic Year Support
+          description_short: Academic Year Support
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1326,8 +1345,8 @@
               name: Necessary Background
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1465,7 +1484,8 @@
           description: Use the Odometer widget to control odometers with various number
             bases. Binary, Decimal and Hexadecimal are the most common number systems
             to see in computer science.
-          description_short: Odometer widget
+          description_short: Use the Odometer widget to control odometers with various
+            number bases.
           description_audience: ''
           stages:
             Odometer Widget:
@@ -1512,16 +1532,19 @@
         vigenere:
           title: Vigenere Cipher Widget
           description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
-            messages using a Vigenere Cipher
-          description_short: Vigenere Cipher Widget
+            messages using a Vigenere Cipher.
+          description_short: Use the Vigenere Cipher Widget to explore encrypting
+            and decrypting messages using a Vigenere Cipher.
           description_audience: ''
           stages:
             Vigenere:
               name: Vigenere
         algebraPD3a:
           title: Computer Science in Algebra PD
-          description: CS in Algebra blended online school year study
-          description_short: CS in Algebra blended online school year study
+          description: 'Phase 3 (Part 2): CS in Algebra blended online school year
+            study'
+          description_short: 'Phase 3 (Part 1): CS in Algebra blended online school
+            year study'
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1533,9 +1556,9 @@
             Updates - Tweaks and Polish:
               name: Updates - Tweaks and Polish
         sciencePD3_pre1:
-          title: Computer Science in Science PD Phase 3 Before 1st In-Person
-          description: Phase 3 Blended Summer Study (Segment One)
-          description_short: Phase 3 Blended Summer Study Pre 1
+          title: CS in Science PD3 Before 1st In-Person
+          description: 'Phase 3: Academic Year Development (Segment One)'
+          description_short: 'Phase 3: Academic Year Development Pre 1'
           description_audience: ''
           stages:
             Prep With Your Modules:
@@ -1549,15 +1572,17 @@
           description: Use the Frequency Analysis Widget to analyze letter frequencies
             in an input text compared to expected frequencies for standard English.
             Use that comparison to explore cracking Shift and Substitution Ciphers.
-          description_short: Frequency Analysis Widget
+          description_short: Use the Frequency Analysis Widget to analyze letter frequencies
+            in a text compared to expected frequencies. Crack Shift and Substitution
+            Ciphers.
           stages:
             Frequency Analysis:
               name: Frequency Analysis
           description_audience: ''
         ECSPD3-Unit2:
-          title: 'Exploring Computer Science PD: Academic Year Development'
-          description: Academic Year Development
-          description_short: Academic Year Development
+          title: 'Exploring Computer Science: Unit 2'
+          description: Online Professional Development Course
+          description_short: Unit 2 Online PD
           description_audience: ''
           stages:
             Close & Next Steps:
@@ -1573,7 +1598,7 @@
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ECSPD3-Unit3:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 3'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1591,7 +1616,7 @@
             Unit 3 Day-by-Day:
               name: Unit 3 Day-by-Day
         ECSPD3-Unit4:
-          title: 'Exploring Computer Science PD: Academic Year Development'
+          title: 'Exploring Computer Science: Unit 4'
           description: Academic Year Development
           description_short: Academic Year Development
           description_audience: ''
@@ -1646,10 +1671,9 @@
               name: Unit 6 lessons
         cspunit4draft:
           title: CS Principles Unit 4 - Data
-          description: |-
-            Collect, analyze, and extract knowledge from data by programming and\r
-            building apps. Process data imported from other sources and also pull\r
-            data from live data APIs.
+          description: "Collect, analyze, and extract knowledge from data by programming
+            and\r\nbuilding apps. Process data imported from other sources and also
+            pull\r\ndata from live data APIs."
           description_short: Data
           description_audience: ''
           stages:
@@ -1710,7 +1734,7 @@
             Why Make Apps?:
               name: Why Make Apps?
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description: Phase 3 Academic Year Development
           description_short: Phase 3 Academic Year Development
           description_audience: ''
@@ -1729,8 +1753,8 @@
               name: Wrap-Up
         algebraPD3b:
           title: Computer Science in Algebra PD
-          description: CS in Algebra mid year lesson support
-          description_short: CS in Algebra mid year lesson support
+          description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
+          description_short: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
           description_audience: ''
           stages:
             Close and Next Steps:
@@ -1832,13 +1856,14 @@
             Unit 3 Overview:
               name: Unit 3 Overview
         cspunit3temp:
-          title: CSP Unit 3 - Temp
+          title: "(old) CS Principles Unit 3 - Programming"
           description: This unit introduces the foundational concepts of computer
             programming, which unlocks the ability to make rich, interactive apps.
             This course uses JavaScript as the programming language, and App Lab as
             the programming environment to build apps, but the concepts learned in
             these lessons span all programming languages and tools.
-          description_short: Programming
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Canvas and Arrays in Apps:
@@ -1906,8 +1931,8 @@
         mc:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
-          description_short: Explore a Minecraft world through code
+            this Minecraft world.
+          description_short: Explore a Minecraft world through code.
           stages:
             Hour of Code 2015:
               name: Hour of Code 2015
@@ -1938,10 +1963,11 @@
             Wrap-Up:
               name: Wrap-Up
         cspunit5:
-          title: CSP Unit 5 - Performance Tasks
+          title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore
             and Create Performance Tasks.
-          description_short: Performance Tasks
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           stages:
             Create PT:
               name: Create PT
@@ -1953,16 +1979,17 @@
               name: Explore PT Prep
           description_audience: ''
         cspunit4:
-          title: CSP Unit 4 - Data
-          description: Being able to digitally manipulate data, visualize it, identify
-            patterns, trends and possible meanings are important practical skills
-            that computer scientists do every day. The data rich world we live in
-            also introduces many complex questions related to public policy, law,
+          title: "(old) CS Principles Unit 4 - Data"
+          description: Being able to digitally manipulate data, visualize it, and
+            identify patterns, trends and possible meanings are important practical
+            skills that computer scientists do every day. The data-rich world we live
+            in also introduces many complex questions related to public policy, law,
             ethics and societal impact. Understanding where data comes from, having
             intuitions about what could be learned or extracted from it, and being
             able to use computational tools to manipulate data and communicate about
             it are the primary skills addressed in the unit.
-          description_short: Data
+          description_short: This unit is a pilot version and is no longer supported
+            or updated. You can find the new units at code.org/educate/csp.
           description_audience: ''
           stages:
             Check Your Assumptions:
@@ -2065,7 +2092,7 @@
             use data in your apps. The following material provides an overview of
             how these tools work, a sampling of example projects that can be built
             using these tools, and a space in which to build and submit a final project.
-          description_short: Data Apps
+          description_short: Learn to collect and use data in App Lab apps.
           description_audience: ''
           stages:
             Creating Javascript Objects:
@@ -2148,9 +2175,9 @@
             Middle_School_Hackathon:
               name: Middle_School_Hackathon
         algebraPD1:
-          title: Computer Science in Algebra PD
+          title: CS in Algebra Part 1
           description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description_short: 'Phase 1: Online Introduction'
           description_audience: ''
           stages:
             Course Overview:
@@ -2178,13 +2205,14 @@
             Sharing Student Work:
               name: Sharing Student Work
         csp1:
-          title: CS Principles Unit 1 - The Internet
+          title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that
             arise from the need to represent digital information in computers and
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          description_short: The Internet
+          description_short: Explore the challenges about representing information
+            as bits and how to get those bits from one place to another.
           description_audience: ''
           stages:
             Binary Numbers:
@@ -2228,7 +2256,7 @@
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
         csp2:
-          title: CS Principles Unit 2 - Digital Information
+          title: CSP Unit 2 - Digital Information
           description: This unit further explores the ways that digital information
             is encoded, represented and manipulated. Being able to digitally manipulate
             data, visualize it, and identify patterns, trends and possible meanings
@@ -2237,7 +2265,8 @@
             be learned or extracted from it, and being able to use computational tools
             to manipulate data and communicate about it are the primary skills addressed
             in the unit.
-          description_short: Digital Information
+          description_short: Explore how more complex digital information is represented
+            and manipulated through computation and visualization.
           description_audience: ''
           stages:
             Bytes and File Sizes:
@@ -2283,12 +2312,16 @@
             Practice PT - Encode an Experience:
               name: Practice PT - Encode an Experience
         csp3:
-          title: CSP Unit 3 - Programming
-          description: |-
-            This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
-            \r
-            This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
-          description_short: Programming
+          title: CSP Unit 3 - Intro to Programming
+          description: "This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.\r\n\r\nThis unit
+            was last updated October 30th, 2017. Read more about curriculum updates
+            at forum.code.org/c/csp/updates."
+          description_short: Learn the basics of programming in JavaScript through
+            a top-down design approach using classic turtle drawing.
           description_audience: ''
           stages:
             APIs and Function Parameters:
@@ -2330,12 +2363,15 @@
             Please complete the CSP Mid-course survey!:
               name: Please complete the CSP Mid-course survey!
         csp4:
-          title: CS Principles Unit 4 - Big Data and Privacy
-          description: |-
-            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
-          description_short: Big Data and Privacy
+          title: CSP Unit 4 - Big Data and Privacy
+          description: "The data-rich world we live in introduces many complex questions
+            related to public policy, law, ethics and societal impact. The goals of
+            this unit are to develop a well-rounded and balanced view about data in
+            the world, including the positive and negative effects of it, and to understand
+            the basics of how and why modern encryption works.\r\n\r\nThis unit was
+            last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description_short: Explore the data-rich world we live, and how data impacts
+            public policy, personal privacy, security, the law, and ethics.
           description_audience: ''
           stages:
             Alice and Bob and Asymmetric Keys:
@@ -2373,13 +2409,14 @@
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
         csp5:
-          title: CS Principles Unit 5 - Building Apps
-          description: 'This unit continues the introduction of foundational concepts
+          title: CSP Unit 5 - Building Apps
+          description: This unit continues the introduction of foundational concepts
             of computer programming, which unlocks the ability to make rich, interactive
             apps. This course uses JavaScript as the programming language, and App
             Lab as the programming environment to build apps, but the concepts learned
-            in these lessons span all programming languages and tools. '
-          description_short: Building Apps
+            in these lessons span all programming languages and tools.
+          description_short: Continue to learn foundational concepts of computer programming
+            in JavaScript by making rich, interactive apps.
           description_audience: ''
           stages:
             Beyond Buttons Toward Apps:
@@ -2487,10 +2524,11 @@
             Boolean Expressions and "if" Statements:
               name: Boolean Expressions and "if" Statements
         csp6:
-          title: CS Principles Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create
             and Explore Performance Tasks.
-          description_short: Performance Tasks
+          description_short: Lessons guide students to prepare for and complete the
+            AP Performance Tasks.
           description_audience: ''
           stages:
             Create PT:
@@ -2570,7 +2608,7 @@
             Using the Game Design Process:
               name: Using the Game Design Process
         2016_sciencePD_phase1:
-          title: Computer Science in Science PD 2016-2017
+          title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
           description_short: In Partnership with Project GUTS
           description_audience: ''
@@ -2788,11 +2826,16 @@
             Turtle Programming:
               name: Turtle Programming
         cspassessment:
-          title: CS Principles Culminating Assessment
-          description: 'This 55-question multiple choice assessment covers questions
-            across 7 big ideas of computer science: Creativity, Abstraction, Data,
-            Algorithms, Programming, The Internet, and Global Impact. '
-          description_short: Culminating
+          title: "[Deprecated] CS Principles Culminating Assessment"
+          description: 'This assessment has been deprecated and is scheduled for removal
+            in Summer of 2017.  Students may complete the test and see their own results,
+            but a teacher will not be able to see results for students in a section.  Please
+            use the official CSP practice exam from the College Board.  [This 55-question
+            multiple choice assessment covers questions across 7 big ideas of computer
+            science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet,
+            and Global Impact.]'
+          description_short: This assessment has been deprecated and is scheduled
+            for removal in Summer of 2017.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
@@ -2816,7 +2859,9 @@
           description: 'This 25 question multiple choice assessment covers questions
             across 7 big ideas of computer science: Creativity, Abstraction, Data,
             Algorithms, Programming, The Internet, and Global Impact.'
-          description_short: Culminating
+          description_short: This multiple choice assessment covers questions across
+            7 big ideas of computer science. It is part 1 of a two-part 50 question
+            exam.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 1:
@@ -2827,7 +2872,9 @@
             across 7 big ideas of computer science: Creativity, Abstraction, Data,
             Algorithms, Programming, The Internet, and Global Impact.  It is part
             2 of a two-part 50 question exam'
-          description_short: Culminating
+          description_short: This multiple choice assessment covers questions across
+            7 big ideas of computer science. It is part 2 of a two-part 50 question
+            exam.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 2:
@@ -3190,7 +3237,7 @@
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
-          title: ECS Part 1
+          title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
           description_short: 'Unit 1: Human-Computer Interaction'
           description_audience: ''
@@ -3385,9 +3432,15 @@
             Test stage with bubbles:
               name: Test stage with bubbles
         csd3:
-          title: " TEMP CSD Unit 3 - Interactive Games and Animations"
-          description: Temp place to work on U3 of Disco
-          description_short: Programming
+          title: CSD Unit 3 - Animations and Games
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."
+          description_short: " Learn to program animations, interactive art, and games
+            in Game Lab."
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -3871,11 +3924,15 @@
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
         csd1:
-          title: 'CSD Unit 1 - Problem Solving: Computers and Logic'
-          description_short: Problem Solving
-          description: |2
-             \r
-            Unit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r
+          title: CSD Unit 1 - Problem Solving
+          description_short: "  Learn how humans work with computers to solve problems."
+          description: " \r\nUnit 1 is a highly interactive and collaborative introduction
+            to the field of computer science, as framed within the broader pursuit
+            of solving problems. You’ll practice using a problem solving process to
+            address a series of puzzles, challenges, and real world scenarios. Next,
+            you’ll learn how computers input, output, store, and process information
+            to help humans solve problems.  The unit concludes with a project in which
+            you design an application that helps solve a problem of your choosing.\r\n"
           description_audience: ''
           stages:
             Intro to Problem Solving:
@@ -4134,10 +4191,10 @@
             Unit 5 Overview:
               name: Unit 5 Overview
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing
-            to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 1.
           description_audience: ''
           stages:
             Unit 1 Overview:
@@ -4165,10 +4222,10 @@
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
-          title: Basketball
+          title: Choose your team and make a basketball game
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Choose your team and make a basketball game
+          description: Choose your team and make a basketball game
           stages:
             Bounce:
               name: Bounce
@@ -4188,7 +4245,7 @@
               name: Simple Encryption
         fesbinary:
           title: Binary
-          description_audience: ''
+          description_audience: Falmouth Middle School
           description_short: ''
           description: ''
           stages:
@@ -4203,10 +4260,15 @@
             Processing with Bits:
               name: Processing with Bits
         csd2:
-          title: 'CSD Unit 2 - The Internet: Web Development'
+          title: CSD Unit 2 - Web Development
           description_audience: ''
-          description_short: Web Development
-          description: ''
+          description_short: "  Learn to build your own web site in Web Lab."
+          description: " In Unit 2, you’ll learn how to create and share the content
+            on your own web pages. After deciding what content you want to share with
+            the world, you’ll learn how to structure and style your pages using HTML
+            and CSS. You’ll also practice valuable programming skills such as debugging
+            and commenting.  By the end of the unit, you’ll have a personal website
+            that you can publish to the Internet."
           stages:
             new stage:
               name: new stage
@@ -4227,13 +4289,13 @@
                 a sequence of increasingly complex web pages found on Code Studio
                 and learn the importance of comments, whitespace, and indentation
                 as tools for making web pages easier to read.
-              description_teacher: In this lesson students will deal with common issues
-                that arise when designing web pages in HTML. Students will correct
-                errors in a sequence of increasingly complex web pages found on Code
-                Studio. In the process they will learn the importance of comments,
-                whitespace, and indentation as tools for making web pages easier to
-                read. At the end of the lesson students create a list of strategies
-                for debugging web pages and ensuring they are easy to read and maintain.
+              description_teacher: Students deal with common issues that arise when
+                designing web pages in HTML. Students will correct errors in a sequence
+                of increasingly complex web pages. In the process they will learn
+                the importance of comments, whitespace, and indentation as tools for
+                making web pages easier to read. At the end of the lesson students
+                create a list of strategies for debugging web pages and ensuring they
+                are easy to read and maintain.
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             Multi-Page Websites:
@@ -4256,12 +4318,22 @@
                 could be shared intentionally or unintentionally.  Finally, the class
                 comes up with a set of guidelines to follow when putting information
                 online.
-              description_teacher: |-
-                As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r
-                \r
-                Students begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r
-                \r
-                The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \r\n\r\nStudents begin by individually identifying appropriate audiences
+                with whom they would be comfortable sharing given pieces of personal
+                information.  They then look at several social media pages to determine
+                what sorts of information people are sharing about themselves or one
+                another.  Last, students reflect on what guidelines they think are
+                appropriate for posting information online.\r\n\r\nThe ultimate point
+                of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
             Publishing a Website:
               name: Publishing a Website
             Sources and Search Engines:
@@ -4291,9 +4363,13 @@
                 on the page. The class learns the basic syntax for CSS rule-sets and
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
-              description_teacher: |
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
-                \r
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\r\n\r\n"
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -4392,10 +4468,14 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: |-
-                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
-                \r
-                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
+              description_teacher: "Starting with an discussion of their personal
+                opinions on how others should be allowed to use their work, the class
+                explores the purpose and role of copyright for both creators and users
+                of creative content.  They then move on to an activity exploring the
+                various Creative Commons licenses as a solution to the difficulty
+                in dealing with copyright. \r\n\r\nFinally, with a common understanding
+                of the restrictions of various Creative Commons licenses, students
+                learn how to add images to their web pages using the &lt;img&gt; tag."
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: 'This lesson covers hyperlinks, which allow web
@@ -4403,9 +4483,12 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: |
-                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
-                \r
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \r\n\r\n"
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: This lesson covers classes and custom colors. The
@@ -4427,15 +4510,13 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: 'Students have spent a lot of time throughout the
+              description_teacher: "Students have spent a lot of time throughout the
                 unit working on their Personal Website. In the final couple of days
                 students finalize their websites.  They work with peers to get feedback,
                 put the finishing touches on the websites, review the rubric and reflect
                 on their process. To cap off the unit, they will share their projects
                 and also a overview of the process they took to get to that final
-                design.\r
-
-'
+                design.\r\n"
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4452,11 +4533,11 @@
                 web pages.  In the last level, students begin the project that they
                 will continue to work on throughout the unit.
         csp2-support:
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing
-            to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 2. '
           stages:
             Unit 2 Overview:
               name: Unit 2 Overview
@@ -4482,10 +4563,17 @@
             AP Preparation and Support:
               name: AP Preparation and Support
         csd4:
-          title: 'CSD Unit 4 - Problem Solving: The Design Process'
+          title: CSD Unit 4 - The Design Process
           description_audience: ''
-          description_short: The Design Process
-          description: ''
+          description_short: "  Learn how to design a program that meets the needs
+            of your users."
+          description: Unit 4 introduces the broader social impacts of computing.
+            Through a series of design challenges, you will learn how to better understand
+            the needs of others while developing a solution to a problem. The second
+            half of the unit consists of an iterative team project, during which teams
+            have the opportunity to identify a need that they care about, prototype
+            solutions both on paper and in App Lab, and test solutions with real users
+            to get feedback and drive further iteration.
           stages:
             Analysis of Design:
               name: Analysis of Design
@@ -4509,15 +4597,13 @@
                 users might react to a variety of products. Role playing as a different
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
-              description_teacher: 'Designers need to understand their users’ needs
+              description_teacher: "Designers need to understand their users’ needs
                 in order to create useful products.  This lesson encourages students
                 to think about how to design for another person by role-playing as
                 someone else using a user profile and reacting as that user to a series
                 of products.  Each student is assigned a user profile describing a
                 person, which they then use to choose appropriate products, critique
-                product design, and suggest improvements to design.\r
-
-'
+                product design, and suggest improvements to design.\r\n"
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4581,7 +4667,7 @@
                 ideas before investing a lot of time writing code. In this lesson
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
-              description_teacher: 'Before starting to design apps, we need to help
+              description_teacher: "Before starting to design apps, we need to help
                 students to better scope their expectations. Because students will
                 eventually be prototyping these apps in App Lab, they will be in better
                 shape if their ideas align with the kinds of apps that are easily
@@ -4590,9 +4676,7 @@
                 with App Lab. Teams then can chose one (or more) of the apps as a
                 basis for their own. From there, teams have some time to discuss the
                 basic functionality of their app before using 3x5 index cards to develop
-                paper prototypes.\r
-
-'
+                paper prototypes.\r\n"
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -4613,17 +4697,18 @@
             Digital Design:
               name: Digital Design
               description_student: Having developed, tested, and gathered feedback
-                on a paper prototype, teams now moves to App Lab to build the next
+                on a paper prototype, teams now move to App Lab to build the next
                 iteration of their apps. Using the drag-and-drop Design Mode, each
                 team member builds out at least one page of their team's app, responding
                 to feedback that was received in the previous round of testing.
               description_teacher: Having collaboratively developed a paper prototype
-                for their apps, groups now divide and conquer to begin implementing
-                an interactive digital version of their prototype. Using the drag-and-drop
-                design mode of App Lab, students individually work through a progression
-                of skill-building levels to learn how to build digital app wireframes.
-                From there, each group member builds out at least one page of their
-                app in App Lab.
+                for their apps, groups now divide and conquer to begin work on an
+                interactive digital version based on the paper prototype. Using the
+                drag-and-drop design mode of App Lab, students individually work through
+                a progression of skill-building levels to learn how to build digital
+                versions of a paper prototype. From there, each group member builds
+                out at least one page of their app in App Lab, to be later combined
+                into a single app.
             Event Driven Programming:
               name: Event Driven Programming
               description_student: Building on the screens that the class designed
@@ -4840,10 +4925,12 @@
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: ''
-          description: |-
-            Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
-            Recommended for grade K.
+          description_short: An introduction to computer science for early readers.
+          description: "Course A is for early readers. Students will create computer
+            programs that will help them learn to collaborate with others, develop
+            problem-solving skills, and persist through difficult tasks. By the end
+            of this course, students create their very own custom game or story that
+            they can share. \r\nRecommended for grade K."
           stages:
             'Debugging: Bugs in Codeville':
               name: 'Debugging: Bugs in Codeville'
@@ -4878,7 +4965,7 @@
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: ''
+          description_short: An introduction to computer science for early readers.
           description: Course B is for early readers. Students will create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
@@ -4920,7 +5007,8 @@
         coursec-draft:
           title: 'CS Fundamentals: Course C'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. Recommended for
             2nd grade.
@@ -4964,7 +5052,8 @@
         coursed-draft:
           title: 'CS Fundamentals: Course D'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. Recommended for
             3rd grade.
@@ -4990,7 +5079,7 @@
             Conditionals & Loops in Maze:
               name: Conditionals & Loops in Maze
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
             Impacts of Computing:
               name: Impacts of Computing
             More Programming with CS4FN:
@@ -5018,7 +5107,8 @@
         coursee-draft:
           title: 'CS Fundamentals: Course E'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. The course culminates
             in a multi-day project. Recommended for 4th grade.
@@ -5066,7 +5156,8 @@
         coursef-draft:
           title: 'CS Fundamentals: Course F'
           description_audience: ''
-          description_short: ''
+          description_short: Learn the basics of computer science and create your
+            own art, stories, and games.
           description: In this course students will create programs to solve problems
             and develop interactive games or stories they can share. The course culminates
             in a multi-day project. Recommended for 5th grade.
@@ -5146,10 +5237,10 @@
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         sports:
-          title: Sports
+          title: Code your own sports game
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: Mix and match across sports
+          description: Mix and match across sports
           stages:
             Sports:
               name: Sports
@@ -5206,10 +5297,11 @@
             Prep With Your Modules:
               name: Prep With Your Modules
         csp3-support:
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 3.
           stages:
             Unit 3 Overview:
               name: Unit 3 Overview
@@ -5244,10 +5336,11 @@
             External Style Sheets:
               name: External Style Sheets
         csp4-support:
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 4.
           stages:
             Unit 3 Overview:
               name: Unit 3 Overview
@@ -5308,10 +5401,10 @@
             Wrap-Up:
               name: Wrap-Up
         csf2harvey:
-          title: New Functions Puzzles
+          title: Mr. Harvey's Class
           description_audience: ''
           description_short: ''
-          description: Testing for Mr. Harvey's class
+          description: Special bubbles just for our class!
           stages:
             'Functions: Songwriting':
               name: 'Functions: Songwriting'
@@ -5348,9 +5441,9 @@
         csp5-support:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 1
-          description: 'COMING SOON: In mid-February, this page will host the CSP
-            Unit 5 Professional Learning Course. '
+          description_short: Teacher Professional Learning Course for CSP Unit 5
+          description: This is a set of online supports arranged into a Professional
+            Learning Course for CSP teachers preparing to teach Unit 5.
           stages:
             Unit 5 Overview:
               name: Unit 5 Overview
@@ -5374,16 +5467,16 @@
               name: Measuring Student Learning
         csp6-support:
           stage: []
-          title: Unit 6 Online Professional Learning Course
+          title: AP Preparation and Resources for Teachers
           description_audience: ''
           description_short: ''
-          description: 'COMING SOON: In mid-February, this page will host a set of
-            resources for teachers preparing for the AP exam'
+          description: 'COMING SOON: soon this page will host a set of resources for
+            teachers preparing for the AP exam'
           stages: []
         csppostap:
           title: CSP Post-AP - Databases and Using Data in Your Apps
           description_audience: ''
-          description_short: ''
+          description_short: Learn to collect and use data in App Lab apps.
           description: App Lab has a number of tools that allow you to collect and
             use data in your apps. The following material provides an overview of
             how these tools work, a sampling of example projects that can be built
@@ -5426,7 +5519,7 @@
             Simple Sprite Movement:
               name: Simple Sprite Movement
         csd6-draft:
-          title: Draft Unit 6
+          title: CSD Unit 6 Revisions Draft
           description_audience: ''
           description_short: ''
           description: ''
@@ -5522,7 +5615,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
         csd5-draft:
-          title: ''
+          title: Draft of CSD5
           description_audience: ''
           description_short: ''
           description: ''
@@ -5638,7 +5731,7 @@
             Analog Input:
               name: Analog Input
         coursee-ramp:
-          title: ''
+          title: coursee-ramp
           description_audience: ''
           description_short: ''
           description: ''
@@ -5652,10 +5745,15 @@
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
-          description_short: Programming with physical devices
-          description: The sixth unit of CS Discoveries, in which students use App
-            Lab and the Maker Toolkit to develop programs that communicate with a
-            physical board.
+          description_short: Learn to program with physical devices.
+          description: Unit 6 explores the role of hardware platforms in computing
+            and how different sensors can provide more effective input and output
+            than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s
+            Circuit Playground, you’ll develop programs that utilize the same hardware
+            inputs and outputs that you see in the smart devices, looking at how a
+            simple rough prototype can lead to a finished product. The unit concludes
+            with a design challenge to use the Circuit Playground as the basis for
+            an innovation of your own design.
           stages:
             Computing Innovations:
               name: Computing Innovations
@@ -5678,8 +5776,8 @@
                 written in both Game Lab and App Lab handle taking input from the
                 user. After comparing and contrasting the approaches they saw in the
                 example apps, students group up to act out the two different models
-                for input (conditionals in an infinite and asynchronous events) to
-                gain a better understanding of how they work.
+                for input (conditionals in an infinite loop and asynchronous events)
+                to gain a better understanding of how they work.
             Event Types:
               name: Event Types
               description_student: Review the basics of programming in App Lab and
@@ -5714,11 +5812,10 @@
               description_teacher: In this lesson students get their first opportunity
                 to write programs that use the Circuit Playground. After first inspecting
                 the board visually and hypothesizing possibly functionalities, students
-                move online where they will learn to write applications that blink
-                an LED and make noise with a buzzer. By combining App Lab screens
-                with the Circuit Playgrounds, students can gradually start to integrate
-                elements of the board as an ouput device while relying on App Lab
-                for user input.
+                move online where they will learn to write applications that control
+                an LED. By combining App Lab screens with the Circuit Playgrounds,
+                students can gradually start to integrate elements of the board as
+                an ouput device while relying on App Lab for user input.
             Lists:
               name: Листи
               description_student: Learn how lists can be used to store multiple values
@@ -5821,7 +5918,7 @@
               name: 'Project: Prototype an Innovation'
               description_student: Develop innovative computing devices of your own
                 design, using everything you've learned throughout this course.
-              description_teacher: 'In this final project for the course, student
+              description_teacher: 'In this final project for the course, students
                 team to develop and test a prototype for an innovative computing device
                 based on the Circuit Playground. Using the inputs and outputs available
                 on the board, groups will create programs that allow for interesting
@@ -6092,24 +6189,27 @@
         csd5:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Learn how people use computers to solve data problems.
+          description: Unit 5 is about the importance of data in solving problems
+            and highlights how computers can help in this process. The first chapter
+            explores different systems used to represent information in a computer
+            and the challenges and tradeoffs posed by using them. In the second chapter
+            you’ll learn how collections of data are used to solve problems, and how
+            computers help to automate the steps of this process. The chapter concludes
+            by considering how the data problem solving process can be applied to
+            an area of your choosing.
           stages:
             Representation Matters:
               name: Representation Matters
-              description_student: In the first lesson of the data unit, students
-                will get an overview of what data is and how it is used to solve problems.  Students
-                will start off with a brief discussion to come to a common understanding
-                of data.  They then split into groups and use a data set to make a
-                series of meal recommendations for people with various criteria.  Each
-                group has the choices of meal represented in a different way (pictures,
-                recipes, menu, nutrition) that gives an advantage for one of the recommendations.  Afterwards,
+              description_student: This first lesson provides an overview of what
+                data is and how it is used to solve problems.  Groups use a data set
+                to make a series of meal recommendations for people with various criteria.   Afterwards,
                 groups compare their responses and discuss how the different representations
                 of the meal data affected how the students were able to solve the
                 different problems.
               description_teacher: In the first lesson of the data unit, students
-                will get an overview of what data is and how it is used to solve problems.  Students
-                will start off with a brief discussion to come to a common understanding
+                get an overview of what data is and how it is used to solve problems.  Students
+                start off with a brief discussion to come to a common understanding
                 of data.  They then split into groups and use a data set to make a
                 series of meal recommendations for people with various criteria.  Each
                 group has the choices of meal represented in a different way (pictures,
@@ -6119,20 +6219,13 @@
                 different problems.
             Patterns and Representation:
               name: Patterns and Representation
-              description_student: In this lesson students create their own system
-                for representing information. They begin by brainstorming all the
-                different systems they already use to represent yes-no responses.
-                They then work in small groups to create a system that can represent
-                any letter in the alphabet using only a single stack of cards. The
-                cards used have one of 6 different possible drawings (6 animals, 6
-                colors, etc.) and so to represent the entire alphabet students will
-                need to use patterns of multiple cards to represent each letter. Students
-                will create messages with their systems and exchange with other groups
-                to ensure the system worked as intended. In the wrap-up discussion
-                the class will review any pros and cons of the different systems.
-                They will discuss commonalities between working systems and recognize
-                that there are many possible solutions to this problem and what's
-                important is that everyone use the same arbitrary system to communicate.
+              description_student: This lesson looks closer at what is needed to create
+                a system of representation.  Groups create systems that can represent
+                any letter in the alphabet using only a single stack of cards, then
+                create messages with their systems and exchange with other groups
+                to ensure the system worked as intended.   The class discusses commonalities
+                between working systems while recognizing that there are many possible
+                working solutions.
               description_teacher: In this lesson students create their own system
                 for representing information. They begin by brainstorming all the
                 different systems they already use to represent yes-no responses.
@@ -6141,23 +6234,21 @@
                 cards used have one of 6 different possible drawings (6 animals, 6
                 colors, etc.) and so to represent the entire alphabet students will
                 need to use patterns of multiple cards to represent each letter. Students
-                will create messages with their systems and exchange with other groups
+                create messages with their systems and exchange with other groups
                 to ensure the system worked as intended. In the wrap-up discussion
-                the class will review any pros and cons of the different systems.
-                They will discuss commonalities between working systems and recognize
-                that there are many possible solutions to this problem and what's
-                important is that everyone use the same arbitrary system to communicate.
+                the class  reviews any pros and cons of the different systems. They
+                discuss commonalities between working systems and recognize that there
+                are many possible solutions to this problem and what's important is
+                that everyone use the same arbitrary system to communicate.
             ASCII and Binary Representation:
               name: ASCII and Binary Representation
-              description_student: In this lesson students learn to use their first
-                binary system for encoding information, the ASCII system for representing
-                letters and other characters. At the beginning of the lesson the teacher
-                introduces the fact that computers must represent information using
-                either "on" or "off". Then students are introduced to the ASCII system
-                for representing text using binary symbols. Students practice using
-                this system before encoding their own message using ASCII. At the
-                end of the lesson a debrief conversation helps synthesize the key
-                learning objectives of the activity.
+              description_student: This lesson introduces a formal binary system for
+                encoding information, the ASCII system for representing letters and
+                other characters. At the beginning of the lesson the teacher introduces
+                the fact that computers must represent information using either "on"
+                or "off". The class is then introduced to the ASCII system for representing
+                text using binary symbols and practices using this system before encoding
+                their own messages using ASCII.
               description_teacher: In this lesson students learn to use their first
                 binary system for encoding information, the ASCII system for representing
                 letters and other characters. At the beginning of the lesson the teacher
@@ -6169,18 +6260,13 @@
                 learning objectives of the activity.
             Representing Images:
               name: Representing Images
-              description_student: In this lesson students learn how computers represent
-                images. To begin the lesson they consider the challenge of turning
-                all the complexity of vision into a binary pattern. Through a series
-                of images showing how this transformation is made students are introduced
-                to the concept of splitting images into squares or "pixels" which
-                can then be turned on or off individually to make the entire image.
-                Students then do a short set of challenges using the Pixelation Widget
-                in order to draw black and white images. Puzzles are designed to call
-                out some of the challenges of representing images in this way. In
-                the wrap up students make connections between the system for representing
-                images and the system for representing text they learned in the previous
-                lesson.
+              description_student: This lesson continues the study of binary representation
+                systems, this time with images. The class is introduced to the concept
+                of splitting images into squares or "pixels" which can then be turned
+                on or off individually to make the entire image. After doing a short
+                set of challenges using the Pixelation Widget, the class makes connections
+                between the system for representing images and the system for representing
+                text they learned in the previous lesson.
               description_teacher: In this lesson students learn how computers represent
                 images. To begin the lesson they consider the challenge of turning
                 all the complexity of vision into a binary pattern. Through a series
@@ -6199,14 +6285,13 @@
               name: Representing Numbers Part 2
             Combining Representations:
               name: Combining Representations
-              description_student: In this lesson, students use all three types of
-                binary representation systems (ASCII characters, binary number, and
-                images) to decode information in a record.  After seeing a series
-                of bits and being asked to decode them, students are introduced to
-                the idea that in order to understand binary information, they must
-                understand both the system that is being used and the meaning of the
-                information encoded.  They then decode a record representing a pet
-                based on a given structure.
+              description_student: This lesson combines all three types of binary
+                representation systems (ASCII characters, binary number, and images)
+                to allow for the encode of more complex types information in a record.  After
+                seeing a series of bits and being asked to decode them, the class
+                is introduced to the idea that  understanding binary information requires
+                understanding both the system that is being used and the meaning of
+                the information encoded.
               description_teacher: In this lesson, students use all three types of
                 binary representation systems (ASCII characters, binary number, and
                 images) to decode information in a record.  After seeing a series
@@ -6217,17 +6302,14 @@
                 based on a given structure.
             Project - Create a Representation:
               name: Project - Create a Representation
-              description_student: In this lesson students design a structure to represent
-                their perfect day using the binary representation systems they've
-                learned in this chapter. Students will first write a short description
-                of their perfect day and then review with a partner to identify the
-                key pieces of information they think a computer could capture. As
-                a class students will decide how a punch card of bytes of information
-                will be interpreted to represent those pieces of information. Students
-                will then use the ASCII, binary number, and image formats they have
-                learned to represent their perfect days. Students then trade punch
-                cards and try to decipher what the other student's perfect day is
-                like. The lesson ends with a reflection.
+              description_student: The class designs structure to represent their
+                perfect day using the binary representation systems they've learned
+                in this chapter. After deciding which pieces of information the record
+                should capture, the class will decide how a punch card of bytes of
+                information will be interpreted to represent those pieces of information.
+                Afterwards, everyone will use the ASCII, binary number, and image
+                formats they have learned to represent their perfect days try to decipher
+                what a partner's perfect day is like.
               description_teacher: In this lesson students design a structure to represent
                 their perfect day using the binary representation systems they've
                 learned in this chapter. Students will first write a short description
@@ -6241,21 +6323,30 @@
                 like. The lesson ends with a reflection.
             Problem Solving and Data:
               name: Problem Solving and Data
-              description_student: In this lesson, students use the problem solving
-                process from earlier in the course to solve a data problem.
-              description_teacher: In this lesson, students use the problem solving
-                process from earlier in the course to solve a data problem.
+              description_student: This lesson covers how the problem solving process
+                can be tailored to deal with data problems, in particular.  The class
+                is tasked with deciding what a city most needs to spend resources
+                on.  They must find and use data from the Internet to support their
+                decision.
+              description_teacher: 'In this lesson, students use the problem solving
+                process from earlier in the course to solve a data problem.  After
+                reviewing the process, the class is presented with a decision: whether
+                a city should build a library, pet shelter, or fire department.  Students
+                work in teams to collect information on the Internet to help them
+                decide what should be built, then use this information build an argument
+                that will convince the city council of their choice.  They then map
+                what they have done to the problem solving process that they have
+                been using throughout the course, comparing the general problem solving
+                process to its specific application to data problems.'
             Making Decisions with Data:
               name: Making Decisions with Data
-              description_student: In this lesson students get practice making decisions
-                with data based on some problems designed to be familiar to middle
-                school students. Students work in groups discussing how they would
-                use the data presented to make a decision before the class discusses
-                their final choices. Not all questions have right answers and in some
-                cases students can and should decide that they should collect more
-                data. The lesson concludes with a discussion of how different people
-                could draw different conclusions from the same data, or how collecting
-                different data might have affected the decisions they made.
+              description_student: This lesson gives the class a chance to practice
+                the data problem solving process introduced in the last lesson.  Not
+                all questions have right answers and in some cases the class can and
+                should decide that they should collect more data. The lesson concludes
+                with a discussion of how different people could draw different conclusions
+                from the same data, or how collecting different data might have affected
+                the decisions they made.
               description_teacher: In this lesson students get practice making decisions
                 with data based on some problems designed to be familiar to middle
                 school students. Students work in groups discussing how they would
@@ -6267,110 +6358,103 @@
                 different data might have affected the decisions they made.
             Interpreting Data:
               name: Interpreting Data
-              description_student: In this lesson, students go further into the interpretation
-                of data, including cleaning and visualizing raw data sets.  Students
-                first look at the how presenting data in different ways can help people
-                to understand it better.  They then visualize their own raw data set,
-                in the context of a pizza topping survey, deciding what to do with
-                data that does not easily fit into the visualization scheme that they
-                have chosen.  Last, students look at what parts of this process can
-                be automated, and what need a human to make decisions.
-              description_teacher: In this lesson, students go further into the interpretation
-                of data, including cleaning and visualizing raw data sets.  Students
-                first look at the how presenting data in different ways can help people
-                to understand it better.  They then visualize their own raw data set,
-                in the context of a pizza topping survey, deciding what to do with
-                data that does not easily fit into the visualization scheme that they
-                have chosen.  Last, students look at what parts of this process can
-                be automated, and what need a human to make decisions.
+              description_student: Students begin the lesson by looking at a cake
+                preference survey that allows respondents to specify both a cake and
+                an icing flavor.  They discuss how knowing the relationship between
+                cake and icing preference helps them better decide which combination
+                to recommend.  They are then introduced to cross tabulation, which
+                allows them to graph relationships to different preferences.  They
+                use this technique to find relationships in a preference survey, then
+                brainstorm the different types of problems that this process could
+                help solve.
+              description_teacher: Students begin the lesson by looking at a cake
+                preference survey that allows respondents to specify both a cake and
+                an icing flavor.  They discuss how knowing the relationship between
+                cake and icing preference helps them better decide which combination
+                to recommend.  They are then introduced to cross tabulation, which
+                allows them to graph relationships to different preferences.  They
+                use this technique to find relationships in a preference survey, then
+                brainstorm the different types of problems that this process could
+                help solve.
             Automating Data Decisions:
               name: Automating Data Decisions
               description_student: In this lesson students look at a simple example
-                of how a computer could be used to complete essentially every step
-                of the data problem solving process. To begin students are given the
-                clean data they collected about their ice cream preferences. They
-                use a spreadsheet to visualize this data using simple charts and discuss
-                in groups the decision they would make with this data. Students then
-                create rules, or an algorithm, that a computer could use to make this
-                decision automatically. Groups share their rules and what choices
+                of how a computer could be used to complete the decision making step
+                of the data problem solving process. Students are given the task of
+                creating an algorithm that could suggest a vacation spot.  Students
+                then create rules, or an algorithm, that a computer could use to make
+                this decision automatically. Students share their rules and what choices
                 their rules would make with the class data. They then use their rules
-                on data from another class to reinforce the fact that the rules they
-                create should be useful for any data set. The lesson concludes with
+                on data from their classmates to test whether their rules would make
+                the same decision that  a person would. The lesson concludes with
                 a discussion about the benefits and drawbacks of using computers to
                 automate the data problem solving process.
               description_teacher: In this lesson students look at a simple example
-                of how a computer could be used to complete essentially every step
-                of the data problem solving process. To begin students are given the
-                clean data they collected about their ice cream preferences. They
-                use a spreadsheet to visualize this data using simple charts and discuss
-                in groups the decision they would make with this data. Students then
-                create rules, or an algorithm, that a computer could use to make this
-                decision automatically. Groups share their rules and what choices
+                of how a computer could be used to complete the decision making step
+                of the data problem solving process. Students are given the task of
+                creating an algorithm that could suggest a vacation spot.  Students
+                then create rules, or an algorithm, that a computer could use to make
+                this decision automatically. Students share their rules and what choices
                 their rules would make with the class data. They then use their rules
-                on data from another class to reinforce the fact that the rules they
-                create should be useful for any data set. The lesson concludes with
+                on data from their classmates to test whether their rules would make
+                the same decision that  a person would. The lesson concludes with
                 a discussion about the benefits and drawbacks of using computers to
                 automate the data problem solving process.
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
-              description_student: In this lesson, students look at how data is collected
-                and used by a organizations to solve problems in the real world. The
-                lesson begins with a quick review of the data problem solving process
-                they have explored in this unit. Then students are presented three
-                scenarios that could be solved using data and they brainstorm the
-                types of data they would want to solve them and how they could collect
-                the data. Each problem is designed to reflect a real-world service
-                that exists. After brainstorming students will watch a video about
-                a real-world service and will record notes about what data is collected
-                by the real-world service and how it is used. At the end of the lesson
-                students record whether data was provided actively by a user, was
-                recorded passively, or is collected by sensors.
+              description_student: This lesson covers how data is collected and used
+                by a organizations to solve problems in the real world. The class
+                looks at three scenarios that could be solved using data and brainstorms
+                the types of data they would want to solve them and how they could
+                collect the data.  Each scenario also includes a video about a real-world
+                service that has solved a similar problem with data.
               description_teacher: In this lesson, students look at how data is collected
-                and used by a organizations to solve problems in the real world. The
+                and used by organizations to solve problems in the real world. The
                 lesson begins with a quick review of the data problem solving process
-                they have explored in this unit. Then students are presented three
-                scenarios that could be solved using data and they brainstorm the
-                types of data they would want to solve them and how they could collect
-                the data. Each problem is designed to reflect a real-world service
-                that exists. After brainstorming students will watch a video about
-                a real-world service and will record notes about what data is collected
-                by the real-world service and how it is used. At the end of the lesson
-                students record whether data was provided actively by a user, was
-                recorded passively, or is collected by sensors.
+                they  explored in the last lesson. Then students are presented three
+                scenarios that could be solved using data and brainstorm the types
+                of data they would want to solve them and how they could collect the
+                data. Each problem is designed to reflect a real-world service that
+                exists. After brainstorming, students watch a video about a real-world
+                service and record notes about what data is collected by the real-world
+                service and how it is used. At the end of the lesson, students record
+                whether data was provided actively by a user, was recorded passively,
+                or is collected by sensors.
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
-              description_student: To conclude this unit students will design a way
-                to use data to make a recommendation or prediction to help solve a
-                problem. Students will follow a project guide to complete this multi-day
-                activity. In the first several steps students brainstorm problems,
-                perform simple research, and define a problem of their choosing. They
-                will then decide what kind of data they would want to collect, how
-                it could be collected, and how it could be used. Students will perform
-                a peer review and make any necessary updates to their project before
-                preparing a presentation to their classmates.
-              description_teacher: To conclude this unit students will design a way
-                to use data to make a recommendation or prediction to help solve a
-                problem. Students will follow a project guide to complete this multi-day
-                activity. In the first several steps students brainstorm problems,
-                perform simple research, and define a problem of their choosing. They
-                will then decide what kind of data they would want to collect, how
-                it could be collected, and how it could be used. Students will perform
-                a peer review and make any necessary updates to their project before
-                preparing a presentation to their classmates.
+              description_student: To conclude this unit the class designs ways to
+                use data to make a recommendations or predictions to help solve a
+                problem.  In the first several steps the class brainstorms problems,
+                performs simple research, and defines a problem of their choosing.
+                They then decide what kind of data they want to collect, how it could
+                be collected, and how it could be used, before exchanging feedback
+                and giving a final presentation.
+              description_teacher: To conclude this unit, students design a recommendation
+                engine based on data that they collect and analyze from their classmates.
+                After looking at an example of a recommendation app, students follow
+                a project guide to complete this multi-day activity. In the first
+                several steps, students choose what choice they want to help the user
+                to make, what data they need to give the recommendation, create a
+                survey, and collect information about their classmates' choices. They
+                then interpret the data and use what they have learned to create the
+                recommendation algorithm.  Last, they use their algorithms to make
+                recommendations to a few classmates. Students perform a peer review
+                and make any necessary updates to their projects before preparing
+                a presentation to the class.
             Representing Numbers:
               name: Representing Numbers
-              description_student: In this lesson, students learn about the binary
-                number system.  With a set of cards that represent the place values
-                in a binary (base-2) number system by a collection of dots, students
-                turn bits "on" or "off" by turning cards face up and face down, then
-                observe the numbers that result from these different patterns.  Eventually,
-                student extend the pattern to a generic 4-bit system.
+              description_student: This lesson introduces the binary number system.  With
+                a set of cards that represent the place values in a binary (base-2)
+                number system, the class turns bits "on" or "off" by turning cards
+                face up and face down, then observes the numbers that result from
+                these different patterns.  Eventually, the pattern is extended to
+                a generic 4-bit system.
               description_teacher: In this lesson, students learn about the binary
                 number system.  With a set of cards that represent the place values
                 in a binary (base-2) number system by a collection of dots, students
                 turn bits "on" or "off" by turning cards face up and face down, then
                 observe the numbers that result from these different patterns.  Eventually,
-                student extend the pattern to a generic 4-bit system.
+                students extend the pattern to a generic 4-bit system.
             8-bit Numbers:
               name: 8-bit Numbers
               description_student: Students review the concept of binary numbers,
@@ -6410,13 +6494,14 @@
                 can help people make better decisions, the class looks at what parts
                 of this process can be automated, and what need a human.
               description_teacher: In this lesson, students go further into the collection
-                and interpretation of data, including cleaning and visualizing raw
-                data sets.  Students first look at the how presenting data in different
-                ways can help people to understand it better.  They then visualize
-                their own raw data set, in the context of a pizza topping survey,
-                deciding what to do with data that does not easily fit into the visualization
-                scheme that they have chosen.  Last, students look at what parts of
-                this process can be automated, and what need a human to make decisions.
+                and interpretation of data, including cleaning and visualizing data.  Students
+                first look at the how presenting data in different ways can help people
+                to understand it better, and they then create visualizations of their
+                own data. Using a the results of a preferred pizza topping survey,
+                students must decide what to do with data that does not easily fit
+                into the visualization scheme that they have chosen.  Finally, students
+                look at which parts of this process can be automated by a computer
+                and which need a human to make decisions.
             Keeping Data Secret:
               name: Keeping Data Secret
               description_student: Students have a discussion on the different levels
@@ -6786,23 +6871,25 @@
                 of debugging.  Students will learn the mantra: "What happened?  What
                 was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
               description_student: ''
-              description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
-                \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+              description_teacher: "When students run into a barrier while answering
+                a question or working on a project, it’s so easy for them to get frustrated
+                and give up.  This lesson will introduce students to the idea that
+                frustration can be an important part of learning. Here, frustration
+                is presented as a step in the creative process, rather than a sign
+                of failure.\r\n\r\nThis lession can be done over one or two class
+                sessions.  If you have more time, feel free to draw out the building
+                and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
               description_student: ''
-              description_teacher: 'In this lesson, students will relate the concept
+              description_teacher: "In this lesson, students will relate the concept
                 of algorithms back to everyday, real-life activities by planting an
                 actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r
-
-'
+                real-world situations to online scenarios and vice versa.\r\n"
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequencing with Drag and Drop
               description_student: ''
               description_teacher: This lesson will give students an idea of what
                 to expect when they head to the computer lab. It begins with a brief
@@ -6827,7 +6914,7 @@
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: Going Places Safely
+              name: 'Digital Citizenship: Going Places Safely'
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -6868,28 +6955,23 @@
                 opportunity to learn how to use events in Play Lab and to apply all
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
-          description: Course A offers computer science curriculum for beginning readers
-            around the kindergarten age range. Students will learn to program using
-            commands like loops and events. The lessons featured in this course also
-            teach students to collaborate with others meaningfully, investigate different
-            problem-solving techniques, persist in the face of difficult tasks, and
-            learn about internet safety. By the end of this course, students create
-            their very own custom game or story from Play Lab that they can share.
+          title: Course A
+          description_audience: 'Ages: 4-7'
+          description_short: An introduction to computer science for pre-readers.
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequencing with Drag and Drop
             Your Digital Footprint:
-              name: Your Digital Footprint
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
@@ -6908,17 +6990,16 @@
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
-          description: |-
-            Course B was developed with first graders in mind. Tailored to a novice reading level, this course also assumes limited knowledge of shapes and numbers.\r
-            \r
-            At the moment, Course B closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course students will create their very own custom game from Play Lab that they can share with a link.
+          title: Course B
+          description_audience: 'Ages: 5-8'
+          description_short: An introduction to computer science for pre-readers.
+            (Similar to Course A, but with more variety for older students.)
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
         coursec:
           stages:
             Building a Foundation:
-              name: Building a Foundation
+              name: 'Persistence: Building a Foundation'
             Programming in Maze:
               name: Programming in Maze
             Debugging in Maze:
@@ -6942,25 +7023,25 @@
             Events in Play Lab:
               name: Events in Play Lab
             Screen Out the Mean:
-              name: Screen Out the Mean
+              name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
-              name: Binary Bracelets
+              name: 'Beyond Programming: Binary Bracelets'
             Loops in Artist:
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
-          description_audience: ''
+          title: Course C
+          description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your
             own art, stories, and games.
-          description: |-
-            Course C was developed for students in and around the second grade. It uses a limited understanding of shapes and elementary math concepts.\r
-            \r
-            Students will create programs with loops, events, and conditionals. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share. Each concept in Course C is taught from the beginning, graduating toward experiences that allow for growth and creativity to provide all students a rich and novel programming experience.
+          description: Create programs with sequencing, loops, and events. Translate
+            your initials into binary, investigate different problem-solving techniques,
+            and learn how to respond to cyberbullying. At the end of the course, create
+            your very own game or story you can share!
         coursed:
           stages:
             Introduction:
-              name: Introduction
+              name: Introduction to Online Puzzles
               description_student: This lesson will give you practice in the skills
                 you will need for this course.
               description_teacher: 'In this set of puzzles, students will begin with
@@ -6973,7 +7054,7 @@
                 maze. From there, students will see new types of puzzles like Collector,
                 Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Programming: Graph Paper Programming'
               description_student: In this lesson, you will program your friend to
                 draw pictures!
               description_teacher: By "programming" one another to draw pictures,
@@ -7005,16 +7086,14 @@
                 their program when they click `Run`.
             Nested Loops in Artist:
               name: Nested Loops in Artist
-              description_student: More nested loops! This time, you get to make some
-                AMAZING drawing with nested loops.
-              description_teacher: Students will create intricate designs using Artist
-                in today's set of puzzles. By continuing to practice nested loops
-                with new goals, students will see more uses of loops in general. This
-                set of puzzles also offers a lot more potential for creativity with
-                an opportunity for students to create their own design at the end
-                of the stage.
+              description_student: Here you will be using nested loops to make cool
+                drawings to show to your family and friends.
+              description_teacher: Now that students know how to layer their loops,
+                they can create so many beautiful things.  This lesson will take students
+                through a series of exercises to help them create their own portfolio-ready
+                images.
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
+              name: 'Debugging: Relay Programming'
               description_student: Remember at the beginning of the course when you
                 made drawings with code? In this lesson, you will be working with
                 a team to do something very similar!
@@ -7040,19 +7119,17 @@
                 students will know they need to keep filling the holes and digging
                 the dirt as long as the ground is not flat."
             Conditionals with Cards:
-              name: Conditionals with Cards
+              name: 'If/Else: Conditionals with Cards'
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: 'This lesson demonstrates how conditionals can
+              description_teacher: "This lesson demonstrates how conditionals can
                 be used to tailor a program to specific information. We don’t always
                 have all of the information we need when writing a program. Sometimes
                 you will want to do something different in one situation than in another,
-                even if you don''t know what situation will be true when your code
+                even if you don't know what situation will be true when your code
                 runs. That is where conditionals come in. Conditionals allow a computer
                 to make a decision, based on the information that is true any time
-                your code is run.
-
-'
+                your code is run.\n\n"
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7073,7 +7150,7 @@
                 will create more complex code that shows both impressive creativity
                 and critical thinking!'
             Conditionals & Loops in Farmer:
-              name: Conditionals & Loops in Farmer
+              name: Conditionals & Loops in Harvester
               description_student: It's not always clear when to use each conditional.  This
                 lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops,
@@ -7081,7 +7158,7 @@
                 By practicing all three, students will learn to write complex and
                 flexible code.
             Digital Citizenship:
-              name: Digital Citizenship
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
               description_student: Some information is not safe to share online. This
                 lesson will help you learn the difference between safe and private
                 information.
@@ -7098,7 +7175,7 @@
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: 'Beyond Programming: Binary Images'
               description_student: 'Learn how computers store pictures using simple
                 ideas like on and off. '
               description_teacher: Though many people think of binary as strictly
@@ -7108,7 +7185,7 @@
                 store even more complex information (such as images and colors) in
                 binary, as well.
             Artist Binary:
-              name: Artist Binary
+              name: Binary in Artist
               description_student: Direct your own artist to create a binary image
                 using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers.
@@ -7118,13 +7195,15 @@
                 offs. Students will build binary images in Artist by translating 0s
                 and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
-              name: Nested Loops Project in Artist
-              description_student: Here you will be using nested loops to make cool
-                projects to show to your family and friends.
-              description_teacher: Now that students know how to layer their loops,
-                they can create so many beautiful things.  This lesson will take students
-                through a series of exercises to help them create their own portfolio-ready
-                images.
+              name: Nested Loops in Frozen
+              description_student: More nested loops! This time, you get to make some
+                AMAZING drawing with nested loops.
+              description_teacher: Students will create intricate designs using Artist
+                in today's set of puzzles. By continuing to practice nested loops
+                with new goals, students will see more uses of loops in general. This
+                set of puzzles also offers a lot more potential for creativity with
+                an opportunity for students to create their own design at the end
+                of the stage.
             Debugging in Collector:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In
@@ -7134,20 +7213,20 @@
                 debugging in the "collector" environment. Students will get to practice
                 reading and editing code to fix puzzles with simple algorithms, loops
                 and nested loops.
-          title: 'CS Fundamentals: Course D'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: |-
-            Course D was created for students who read at roughly a third grade level. Angles and mathematical concepts are introduced with helpful videos and hints.\r
-            \r
-            The course begins with a review of the concepts found in Courses A, B, and C. This review helps introduce or refresh basic ideas such as repeat loops and events. Students will develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Lessons on digital citizenship are also included. This course is crafted to build a strong foundation of basic concepts before opening up to a wide range of new and exciting topics.
+          title: Course D
+          description_audience: 'Ages: 7-11'
+          description_short: Quickly cover concepts from Course C, then go further
+            with algorithms, nested loops, conditionals, and more.
+          description: Learn new coding concepts including algorithms, nested loops,
+            while loops, conditionals, and events. Get an introduction to digital
+            citizenship before   creating your very own game or story that you can
+            share.
         coursee:
           stages:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: Introduction
+              name: Introduction to Online Puzzles
               description_student: This fast-paced introduction will give you the
                 chance to practice most of the skills that you will need to solve
                 the puzzles in this course.
@@ -7236,7 +7315,7 @@
                 game. The goal here is to start building the skills to translate real-world
                 situations to online scenarios and vice versa.
             Conditionals:
-              name: Conditionals
+              name: Conditionals in Farmer
               description_student: You will get to tell the computer what to do under
                 certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops
@@ -7249,7 +7328,7 @@
                 sections of code only if something is true, otherwise it runs something
                 else.
             Private and Personal Information:
-              name: Private and Personal Information
+              name: 'Digital Citizenship: Private and Personal Information'
               description_student: The internet is fun and exciting, but it's important
                 to stay safe too. This lesson teaches you the difference between information
                 that is safe to share and information that is private.
@@ -7328,7 +7407,7 @@
                 for all four stages of the process can be found in the first stage
                 of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: Internet
+              name: 'Beyond Programming: The Internet'
               description_student: Ever wondered how information travels across the
                 internet? It's not magic! This lesson will teach you the basics of
                 how the internet works.
@@ -7337,7 +7416,7 @@
                 to flow through the internet, all the while learning about connections,
                 URLs, IP Addresses, and the DNS.
             Crowdsourcing:
-              name: Crowdsourcing
+              name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing,
                 the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting
@@ -7365,18 +7444,14 @@
               name: Nested Loops with Frozen
             Nested Loops:
               name: Nested Loops
-          title: 'CS Fundamentals: Course E'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: Created with fourth grade students in mind, this course begins
-            with a brief review of concepts previously taught in courses C and D.
-            This introduction is intended to inspire beginners and remind the experts
-            of the wonders of computer science. Students will practice coding with
-            algorithms, loops, conditionals, and events before they are introduced
-            to functions. At the end of the course, students will have the opportunity
-            to create a capstone project that they can proudly share with peers and
-            loved ones.
+          title: Course E
+          description_audience: 'Ages: 8-12'
+          description_short: Quickly cover concepts in Course C & D and then go further
+            with functions.
+          description: Start coding with algorithms, loops, conditionals, and events
+            and then you’ll move on functions. In the second part of this course,
+            design and create a capstone project you can share with your friends and
+            family.
         coursef:
           stages:
             'Algorithms: Tangrams':
@@ -7390,7 +7465,7 @@
                 will learn the difference between a detailed and general algorithm
                 while playing with tangrams.
             Introduction:
-              name: Introduction
+              name: Introduction to Online Puzzles
               description_student: This lesson will give you a brief introduction
                 to some of the amazing things you will learn in this course!
               description_teacher: 'In this lesson, students will be introduced to
@@ -7398,7 +7473,7 @@
                 concepts in the later part of the course. This "ramp up" lesson equalizes
                 the playing field between the experts and the beginners in your class. '
             The Power of Words:
-              name: The Power of Words
+              name: 'Digital Citizenship: The Power of Words'
               description_student: Bullying is never okay. This lesson will teach
                 you about what is and isn't okay to say online.
               description_teacher: "Students consider that while they are enjoying
@@ -7410,7 +7485,7 @@
                 in-person and online communication. Students then brainstorm ways
                 to respond to cyberbullying. "
             Ice Age Play Lab:
-              name: Ice Age Play Lab
+              name: Events in Ice Age
               description_student: Think of your favorite video game. Ever wondered
                 how it was made? In these puzzles you will develop a video game of
                 your own with friends from Ice Age!
@@ -7419,7 +7494,7 @@
                 and loops to make characters move on the screen, and will get the
                 chance to create their own game or story after the guided levels.
             Envelope Variables:
-              name: Envelope Variables
+              name: 'Variables: Envelope Variables'
               description_student: 'Envelopes and variables have something in common:
                 both can hold valuable things. Here you will learn what variables
                 are and the awesome things they can do.'
@@ -7449,7 +7524,7 @@
                 with user input to set the values of their variables, then get space
                 to create their own mini-project with variables.
             For Loop Fun:
-              name: For Loop Fun
+              name: 'For Loops: For Loop Fun'
               description_student: You're going to have loads of fun learning about
                 `for` loops!
               description_teacher: 'We know that loops allow us to do things over
@@ -7475,7 +7550,7 @@
                 At the end, they will have a chance to create their own art in a freeplay
                 level.
             Songwriting with Parameters:
-              name: Songwriting with Parameters
+              name: 'Functions: Songwriting with Parameters'
               description_student: You just might release the next big hit single!
                 In this lesson, you will be learning what parameters are and how they
                 make some fantastic songs!
@@ -7603,14 +7678,15 @@
               name: Nested Loops in Bee/Zombie
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
-          title: 'CS Fundamentals: Course F'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: |-
-            The last course in CS Fundamentals was tailored to the needs students in the fifth grade.\r
-            \r
-            In these lessons, students will create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. By the end of the curriculum, students create interactive stories and games that they can share with their friends and family.
+          title: Course F
+          description_audience: 'Ages: 9-13'
+          description_short: Learn all the concepts in Computer Science Fundamentals
+            and create your own art, story or game.
+          description: Learn to use different kinds of loops, events, functions, and
+            conditionals. Investigate different problem-solving techniques and discuss
+            societal impacts of computing and the internet. In the second part of
+            this course, design and create a capstone project you can share with friends
+            and family.
         csdnovice:
           stages:
             Tuesday:
@@ -7703,7 +7779,7 @@
               name: Thursday
             Wrap Up:
               name: Wrap Up
-          title: CS Principles TeacherCon Novice Facilitators
+          title: CS Principles TeacherCon Novice Facilitator Reflection
           description_audience: CSP Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as
@@ -7903,11 +7979,11 @@
             Introduction:
               name: Introduction
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Programming: Graph Paper Programming'
             'Algorithms: Relay Programming':
-              name: 'Algorithms: Relay Programming'
+              name: 'Debugging: Relay Programming'
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
@@ -7969,13 +8045,13 @@
             Present Your Project:
               name: Present Your Project
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Nested Loops in Frozen
             'How it Works: The Internet':
-              name: 'How it Works: The Internet'
+              name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Common Sense Education: Digital Citizenship'
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Common Sense Education: Screen Out the Mean'
+              name: 'Digital Citizenship: Screen Out the Mean'
             Events in Star Wars:
               name: Events in Star Wars
             Events with Flappy:
@@ -7983,7 +8059,7 @@
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: Conditionals & Loops in Maze
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             'For Loops: For Loop Fun':
@@ -7994,22 +8070,24 @@
               name: Building a Foundation
             Nested Loops:
               name: Nested Loops
-          title: ''
-          description_audience: ''
-          description_short: ''
-          description: ''
+          title: Express Course
+          description_audience: 'Ages: 9-18'
+          description_short: 'An introduction to computer science: combines the best
+            of our elementary school curriculum for older students.'
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Sequencing with Drag and Drop
             'Online Safety: Your Digital Footprint':
-              name: 'Online Safety: Your Digital Footprint'
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
@@ -8028,10 +8106,12 @@
               name: Events in Play Lab
             Spelling Bee:
               name: Spelling Bee
-          title: ''
-          description_audience: ''
-          description_short: ''
-          description: ''
+          title: Pre-reader Express
+          description_audience: 'Ages: 4-8'
+          description_short: 'An introduction to computer science for pre-readers:
+            combines the best of our kindergarten and first grade courses.'
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -8046,7 +8126,7 @@
               name: ''
             " ":
               name: " "
-          title: ''
+          title: Subgoal Labels Study Opt-in
           description_audience: ''
           description_short: ''
           description: ''
@@ -8098,10 +8178,15 @@
               name: CSP Mid-course survey
             Please complete the CSP Mid-course survey:
               name: Please complete the CSP Mid-course survey
-          title: ''
+          title: CSP Unit 3 - Intro to Programming (subgoals)
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Learn the basics of programming in JavaScript through
+            a top-down design approach using classic turtle drawing.
+          description: This unit introduces the foundational concepts of computer
+            programming, which unlocks the ability to make rich, interactive apps.
+            This course uses JavaScript as the programming language, and App Lab as
+            the programming environment to build apps, but the concepts learned in
+            these lessons span all programming languages and tools.
         csd4-draft:
           stages:
             Analysis of Design:
@@ -8174,9 +8259,12 @@
               name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
-          description_short: ''
-          description: These lessons introduce you to App Lab through a series of
-            creative projects.
+          description_short: Create your own app in JavaScript using either block
+            based programming or text. If you've already done some programming with
+            blocks, take your skills to the next level.
+          description: Create your own app in JavaScript using either block based
+            programming or text. If you've already done some programming with blocks,
+            take your skills to the next level.
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
@@ -8679,10 +8767,8 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: 'This is a replica of live levels in /s/csp3 with new and modified
-            stages added.  DO NOT EDIT LIVE LEVELS.\r
-
-'
+          description: "This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
         pwc:
           stages:
             new stage:
@@ -8719,10 +8805,16 @@
               name: Smart Clothing Design
             Intro to App Lab (13+):
               name: Intro to App Lab (13+)
-          title: PwC Access Your Potential
+          title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
-          description: ''
+          description: At PwC, we believe that all students have the potential to
+            be tomorrow’s leaders and tech-driven workforce. Access Your Potential
+            is our commitment to help close the opportunity gap by equipping young
+            people, especially those from disadvantaged communities, with the financial,
+            technology and career-selection skills they need to change the trajectory
+            of their lives. As part of our commitment, we’re excited to launch our
+            Access Your Potential middle school technology and careers curriculum.
         allthesurveys:
           stages:
             CSP pre survey Test:
@@ -8767,8 +8859,10 @@
               name: Minecraft Hour of Code
           title: 'Minecraft: Hero''s Journey'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Minecraft is back with a brand new activity for Hour
+            of Code!
+          description: Minecraft is back for the Hour of Code with a brand new activity!
+            Journey through Minecraft with code.
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -8809,10 +8903,13 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Explore Performance Tasks.
-          description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
-            \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "These lessons are here to help you understand, prepare for,
+            and do the AP Explore Performance Task.  Each \"lesson\" contains links
+            to helpful documents that your teacher can help walk you through. NOTE:
+            the second item in the first lesson is not related to the Explore PT directly,
+            but covers general tech setup and tools you need to do various elements
+            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
+            November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -8827,10 +8924,13 @@
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and
             complete the AP Create Performance Tasks.
-          description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
-            \r
-            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+          description: "These lessons are here to help you understand, prepare for,
+            and do the AP Create Performance Task.  Each \"lesson\" contains links
+            to helpful documents that your teacher can help walk you through. NOTE:
+            the first item in the first lesson is not related to the Create PT directly,
+            but covers general tech setup and tools you need to do various elements
+            of both the Explore and Create tasks.\r\n\r\nThis unit was last updated
+            December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -9561,12 +9661,22 @@
                 could be shared intentionally or unintentionally.  Finally, the class
                 comes up with a set of guidelines to follow when putting information
                 online.
-              description_teacher: |-
-                As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r
-                \r
-                Students begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r
-                \r
-                The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \r\n\r\nStudents begin by individually identifying appropriate audiences
+                with whom they would be comfortable sharing given pieces of personal
+                information.  They then look at several social media pages to determine
+                what sorts of information people are sharing about themselves or one
+                another.  Last, students reflect on what guidelines they think are
+                appropriate for posting information online.\r\n\r\nThe ultimate point
+                of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
             Lists:
               name: Листи
               description_student: This lesson introduces ordered and unordered lists
@@ -9586,10 +9696,14 @@
                 of the creator of that media. After first studying Creative Commons
                 licensing, the class learns how to add images to web pages, and how
                 to give proper attribution when doing so.
-              description_teacher: |-
-                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
-                \r
-                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
+              description_teacher: "Starting with an discussion of their personal
+                opinions on how others should be allowed to use their work, the class
+                explores the purpose and role of copyright for both creators and users
+                of creative content.  They then move on to an activity exploring the
+                various Creative Commons licenses as a solution to the difficulty
+                in dealing with copyright. \r\n\r\nFinally, with a common understanding
+                of the restrictions of various Creative Commons licenses, students
+                learn how to add images to their web pages using the &lt;img&gt; tag."
             Clean Code and Debugging:
               name: Clean Code and Debugging
               description_student: In this lesson covers common issues that arise
@@ -9611,18 +9725,25 @@
                 will link together all the previous pages into one project, and create
                 navigation bars for each page before publishing the entire site to
                 the Web.  '
-              description_teacher: |
-                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
-                \r
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \r\n\r\n"
             Styling Text with CSS:
               name: Styling Text with CSS
               description_student: This lesson introduces CSS as a way to style elements
                 on the page. The class learns the basic syntax for CSS rule-sets and
                 then explores properties that impact HTML text elements.  Finally,
                 everyone applies text styles to their personal websites.
-              description_teacher: |
-                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
-                \r
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\r\n\r\n"
             Styling Elements with CSS:
               name: Styling Elements with CSS
               description_student: This lesson continues the introduction to CSS style
@@ -9671,15 +9792,13 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: 'Students have spent a lot of time throughout the
+              description_teacher: "Students have spent a lot of time throughout the
                 unit working on their Personal Website. In the final couple of days
                 students finalize their websites.  They work with peers to get feedback,
                 put the finishing touches on the websites, review the rubric and reflect
                 on their process. To cap off the unit, they will share their projects
                 and also a overview of the process they took to get to that final
-                design.\r
-
-'
+                design.\r\n"
         coursea-2018:
           title: Course A
           description: Learn the basics of computer science and internet safety. At
@@ -9696,19 +9815,21 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
               description_student: ''
-              description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
-                \r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+              description_teacher: "When students run into a barrier while answering
+                a question or working on a project, it’s so easy for them to get frustrated
+                and give up.  This lesson will introduce students to the idea that
+                frustration can be an important part of learning. Here, frustration
+                is presented as a step in the creative process, rather than a sign
+                of failure.\r\n\r\nThis lession can be done over one or two class
+                sessions.  If you have more time, feel free to draw out the building
+                and revising phase of the Marble Run activity."
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
               description_student: ''
-              description_teacher: 'In this lesson, students will relate the concept
+              description_teacher: "In this lesson, students will relate the concept
                 of algorithms back to everyday, real-life activities by planting an
                 actual seed. The goal here is to start building the skills to translate
-                real-world situations to online scenarios and vice versa.\r
-
-'
+                real-world situations to online scenarios and vice versa.\r\n"
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''

@@ -25,7 +25,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Rainbow Horse\r\n\r\nWhen the rainbow touches the horse, it should turn into a unicorn.\r\n\r\n# Do This\r\n\r\nUse the `if`, `isTouching`, and `setAnimation` blocks to change the horse sprite's image when the rainbow touches it.  The unicorn image is already loaded in the animations tab for you.\r\n\r\n[//]: #  (https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png)\r\n\r\n[//]: #  (https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png)\r\n\r\n[//]: #  (https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png)\r\n\r\n[//]: #  (https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png)",

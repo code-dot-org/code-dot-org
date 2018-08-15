@@ -175,7 +175,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Race Your Car\r\n\r\nNow that you can steer, you need to control the speed of your car.  Use the `setSpeed` method to make the car go faster when you push the up arrow and slower when you push the down arrow.\r\n\r\n# Do This\r\n\r\nAdd two conditionals to your car program.  \r\n\r\n* The first should check whether the up arrow is pressed, and increase the speed of the car. \r\n* The second should check whether the down arrow is pressed and decrease the speed of the car.\r\n\r\n*Hint:  What's the difference between `keyDown` and `keyWentDown`?  Which do you think will work better for changing the speed of the car?*",

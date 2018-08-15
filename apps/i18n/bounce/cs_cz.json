@@ -122,7 +122,7 @@
   "setTeam": "Nastavit tým{team}",
   "setTeamRandom": "Nastavit tým náhodně",
   "shareBounceTwitter": "Podívejte se na hru Odraz, kterou jsem vyrobil. Napsal jsem ji sám s @codeorg",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
+  "shareBounceTwitterDonor": "",
   "shareGame": "Sdílej svou hru:",
   "turnLeft": "otočit vlevo",
   "turnRight": "otočit vpravo",

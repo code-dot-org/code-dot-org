@@ -34,7 +34,6 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "show_d_pad": "false",
     "callout_json": "[]",
     "start_blocks": "var mySprite = createSprite(300, 100);\r\ndrawSprites();",
     "hide_animation_mode": "true",
@@ -50,11 +49,25 @@
       "CSD U3 Sprites intro predict multi_2018"
     ],
     "parent_level_id": 8757,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/csd-1718/drawing_shapes_map/index.html",
+      "/docs/csd-1718/shape_size_map/index.html",
+      "/docs/csd-1718/random_numbers_csd/index.html",
+      "/docs/csd-1718/variables_intro_csd/index.html",
+      "/docs/csd-1718/naming_variables/index.html"
+    ],
+    "map_reference": "/docs/csd-1718/sprites/index.html",
+    "video_key": "csd_gamelab_sprites_1",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:41:30 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:41:30 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 18:54:00 +0000\",\"changed\":[\"code_functions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

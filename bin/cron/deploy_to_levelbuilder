@@ -65,7 +65,7 @@ def new_commits?(commit)
 end
 
 def message_dtl_soon(pr_number)
-  "<!here> Robo-DTL will deploy <a href=\"#{GitHub.url(pr_number)}\">PR #{pr_number}</a> in five " \
+  "<!levelbuilders> Robo-DTL will deploy <a href=\"#{GitHub.url(pr_number)}\">PR #{pr_number}</a> in five " \
   'minutes. Please ping #developers or set "DTL: no" in #deploy-status if you wish to prevent this.'
 end
 

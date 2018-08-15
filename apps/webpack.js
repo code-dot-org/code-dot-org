@@ -17,7 +17,6 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
   path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
-  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'craft'),
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -128,7 +127,7 @@ if (envConstants.COVERAGE) {
   );
 }
 
-var devtool = process.env.CHEAP ?
+var devtool = process.env.DEV ?
     'cheap-inline-source-map' :
     'inline-source-map';
 

@@ -1,0 +1,29 @@
+---
+fa:
+  data:
+    function_names:
+      x: طول (x)
+      draw a circle: یک دایره بکشید
+      draw a hexagon: یک شش ضلعی بکش
+      draw a flower: یک گل نقاشی بکن
+      draw a square: یک مربع بکشید
+      draw a snowflake: یک دانه ی برف بکش
+      draw a tree: یک درخت بکشید
+      draw a triangle: یک مثلث بکشید
+      draw a house: یک خانه بکشید
+      draw a star: رسم یک ستاره
+      do something: یه کاری بکن
+      jump: پرش
+      set score: تنظیم امتیاز
+      get nectar: گرفتن شهد
+      test: آزمایش
+      diamond: الماس
+      move: حرکت
+      move right: برو به راست
+      move up: برو بالا
+      move down: برو پایین
+      move left: برو به چپ
+      collect: جمع آوری
+      turn left: بپیچ به چپ
+      move forward: برو جلو
+      turn right: بپیچ به راست

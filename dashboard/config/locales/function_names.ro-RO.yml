@@ -1,0 +1,88 @@
+---
+ro:
+  data:
+    function_names:
+      x: x
+      details: detalii
+      draw eyebrow: desenează sprânceană
+      draw pupil: desenează elev
+      draw a circle: desenează un cerc
+      draw a car: desenează o mașină
+      draw_rect: desenează_dreptunghi
+      draw square: desenează pătrat
+      jump to middle: sări la mijloc
+      draw a button: desenează un buton
+      draw left leg: desenează piciorul stâng
+      draw right leg: desenează piciorul drept
+      draw body and arms: desenează corpul și brațele
+      draw a head: desenează un cap
+      draw head: desenează cap
+      draw arms: desenează brațe
+      jump to neck: sări la gât
+      draw O: desenează O
+      draw D: desenează D
+      draw E: desenează E
+      draw a hexagon: desenează un hexagon
+      draw a flower: desenează o floare
+      draw a square: desenează un pătrat
+      draw a snowflake: desenează un fulg de nea
+      draw 3 hexagons: desenează 3 hexagoane
+      draw 4 hexagons: desenează 4 hexagoane
+      draw 5 hexagons: desenează 5 hexagoane
+      get 2 nectar: obţine 2 nectare
+      collect purple nectar: colectează nectar mov
+      get 5: obține 5
+      move and get nectar: mută și obține nectar
+      move and get 4: mută și obține 4
+      get 7 nectar make 7 honey: obține 7 nectare și fă 7 cantități de miere
+      get 7 make 7: obține 7 și fă 7
+      get 7: obține 7
+      move and get 3: mută și obține 3
+      draw a tree: desenează un copac
+      draw triangle: desenează triunghi
+      draw circle: desenează cerc
+      graph: grafic
+      draw waves: desenează valuri
+      draw a wave: desenează un val
+      draw a small triangle: desenează un triunghi mic
+      draw a medium triangle: desenează un triunghi mediu
+      draw a large triangle: desenează un triunghi mare
+      draw a big triangle: desenează un triunghi mare
+      draw a triangle: desenează un triunghi
+      draw a house: desenează o casă
+      check purple flower: verifică floare mov
+      check flower make honey: verifică floare fă miere
+      get nectar or make honey: coletează nectar sau fă miere
+      draw a star: desenează o stea
+      game has been won: jocul a fost câștigat
+      draw: desenează
+      draw a polygon: desenează un poligon
+      draw a shape: desenează o formă
+      do something: facă ceva
+      jump: sari
+      jump upper left: sări în sus la stânga
+      Draw a Square: Desenează un Pătrat
+      Draw a Triangle with length: Desenează un Triunghi cu lungime
+      draw a triangle wioth length: desenează un triunghi cu lungime
+      draw a sqaure: desenează un pătrat
+      triangle: triunghi
+      draw a spiral shape: desenează o formă spiralată
+      get 3 nectar: obţine 3 nectare
+      get many nectar: obţine multe nectare
+      get nectar make honey: obține nectar fă miere
+      set score: Setează scor
+      get nectar: obţine nectar
+      test: test
+      draw grass: desenează iarbă
+      sun: soare
+      square: pătrat
+      diamond: diamant
+      move: mută
+      move right: mută la dreapta
+      move up: mută în sus
+      move down: mută în jos
+      move left: mută la stânga
+      collect: colectează
+      turn left: ia-o la stânga
+      move forward: mută înainte
+      turn right: ia-o la dreapta

@@ -78,16 +78,6 @@ body.modal-open .supreme-container{
   width: 100%;
 }
 
-#homepage #newsbanner {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  color: #696969;
-  background-color: rgba(255,255,255,0.8);
-  text-align: center;
-  padding: 5px
-}
-
 #homepage #caption_container {
   color: white;
   font-size: 20px;
@@ -129,12 +119,23 @@ body.modal-open .supreme-container{
   text-align: center
 }
 
-@media screen and (max-width: 970px)  {
+@media screen and (max-width: 970px) {
   #homepage #hero {
     overflow: visible;
   }
   #homepage #actions {
     margin-top: 300px;
+  }
+}
+
+#homepage .bigannounce {
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 971px)  {
+  #homepage .bigannounce {
+    padding-top: 100px;
   }
 }
 
@@ -421,4 +422,9 @@ body.modal-open .supreme-container{
 
 .statistics a .stats-number:hover {
   color: rgb(0,173,188);
+}
+
+.below_hero_announcement {
+  text-align: center;
+  padding: 10px;
 }

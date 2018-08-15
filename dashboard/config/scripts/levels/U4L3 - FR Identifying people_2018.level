@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:39:58.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "markdown_instructions": "Consider the following scenario:\r\n\r\n*In order to dampen the effect of a potential data breach or accidental release of records a health care company has decided to remove a lot of personally identifiable information in its health records, like names, phone numbers and so on.  In its place, along with all medical information, they plan to store ONLY the gender, age, and zip code of the patient.*\r\n\r\n**Give your opinion**: Is this health care company doing enough to protect the personal information of patients? If yes, explain why this is the best they can do. If no, explain what they should do instead.  (Limit your response to a few sentences).",
+    "instructions_important": "false",
+    "submittable": "false",
+    "encrypted_solution": "1EJYwEM/LrrARZAj99m7lB0VGn5IdSYlVGAYtRv+7xwIYS5KfZhoJW2KHc9X\nZfzz/UEByj+nld5W7GqjGQuvHpK5gIiZ4ph6LKxkS/amfo3+YUj3OZ/eW96g\nZTCjZApH12eGOcdYyRJA91xwAMPSpBomSridIwwoZw7Maho4ZDrzr2AOVGz5\nGL8uLWQsbQfSi/FlyUK+rC7zgTVatK4vTcttz7TWy1DeooT4aw4rKecl482a\nN2ImZYVgvLzMDn0vA7qOSfejFgpcJWCJgoBMVHDADGPDR4hOZSEDOt3gKG0j\nyfcotbOvrkSlElsa7za8pVNZCrKP+Bt5d7GJTRml+DYk9qKsif+GbU0GuS/g\neD2gdMOQi+T3sxPw2S9Wo7aYngVlizL/OjVyCQvLjeMs9F0TlCvV11Lu97cB\nWoissYzbBaWdFS37AF1j/UoGkRC1o3MjgQP2gTKS2yddvsDYneRGoCm/vUk5\n7aJ79Nm6P2+5fm/lSbceq6Fsvt4VaQJiN6XJSMOCD9I999C/SiCYEcvpdiDx\nk5cEFe9dwbQe6Zwpb75+ElH64BLUNOipJrkSDsbAyeo/LkQNpat7Qx3JOvfb\nUEUUagUnx09OlPzVQbI0s6PVVEoGM8j1OdY60qpMSKsR+WsGziUipxiw8U7K\nbhJb4noaAh5Z8iQBYTRIa/TDm2wVEPd3CrfyJPZYF+a0hI91awduzbS+nGBb\nH30vv2GGYY1K/aY/NienKH8jkFmE73LKeHvO0wmOk2XfyYzXslbaCsXvckkb\nQwPZ2dCJMACDb/MrOvFOOwlWwAO6D+fN+zX8Ap1swZARavKClMNy4X+noNWJ\n+v6cqXf6UzhGnH/njiar57O526yJ+i/vYQOE6KaUqLnUt5ptjOSN7hnOH6a3\nWbHck4lcxn97QKx/qLGdnyk3eF7TyrcM3veEUAscVVERJpgEQXMa0m1HXVkQ\n",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 7464,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

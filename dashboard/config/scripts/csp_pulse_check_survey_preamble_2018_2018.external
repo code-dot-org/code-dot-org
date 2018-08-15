@@ -1,0 +1,8 @@
+name 'csp-pulse-check-survey-preamble_2018_2018'
+markdown <<MARKDOWN
+### We occasionally like to check in to see how things are going. Please take a moment to respond to these **quick questions**.
+
+<small>
+<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.
+</small>
+MARKDOWN

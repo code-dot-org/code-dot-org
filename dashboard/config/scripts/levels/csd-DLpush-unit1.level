@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-22T23:38:01.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "# Day 1 Question 1\r\n\r\nThink back on your experience today.\r\n\r\n* Use a few words or sentences to describe how you felt as a participant during those sessions today (e.g., confused, engaged, anxious, etc.)\r\n* What factors contributed to you feeling that way? \r\n* Did you feel supported as a teacher today? \r\n\t* If yes, why?\r\n\t* If no, why? What would have improved your experience?\r\n",
+    "parent_level_id": 14268
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 23:05:13 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-09 13:45:10 +0000\",\"changed\":[\"tts_markdown_instructions_override\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-09 14:12:13 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-13 23:18:20 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-22 22:37:20 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-22 23:21:21 +0000\",\"changed\":[\"display_name\",\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-22 23:30:35 +0000\",\"changed\":[\"name\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2018-05-22 23:31:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</FreeResponse>

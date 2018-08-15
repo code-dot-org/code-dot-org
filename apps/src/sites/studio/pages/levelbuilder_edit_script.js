@@ -30,6 +30,7 @@ export default function initPage(scriptEditorData) {
       progression: level.progression
     }))
   }));
+  const locales = scriptEditorData.locales;
 
   registerReducers(reducers);
   const store = getStore();
@@ -61,7 +62,10 @@ export default function initPage(scriptEditorData) {
         stageLevelData={stageLevelData}
         hasVerifiedResources={scriptData.has_verified_resources}
         hasLessonPlan={scriptData.has_lesson_plan}
+        curriculumPath={scriptData.curriculum_path}
         announcements={announcements}
+        supportedLocales={scriptData.supported_locales}
+        locales={locales}
       />
     </Provider>,
     document.querySelector('.edit_container')

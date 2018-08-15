@@ -452,7 +452,11 @@ export class WorkshopForm extends React.Component {
       !(this.props.permission.has(CsfFacilitator) && !this.props.workshop)
     );
 
-    const options = [{value: '', label: 'None'}];
+    const options = [];
+    if (this.props.permission.has(CsfFacilitator) || this.props.permission.has(WorkshopAdmin)) {
+      options.push({value: '', label: 'None'});
+    }
+
     if (this.state.regionalPartners) {
       const sortedPartners = _.sortBy(this.state.regionalPartners, partner => partner.name);
       options.push(...sortedPartners.map(partner => ({
@@ -472,24 +476,40 @@ export class WorkshopForm extends React.Component {
         <ControlLabel>
           Regional Partner
         </ControlLabel>
-        <Select
-          id="regional-partner-select"
-          name="regional_partner_id"
-          onChange={this.handleRegionalPartnerSelect}
-          style={this.getInputStyle()}
-          value={this.state.regional_partner_id || ''}
-          options={options}
+        {
+          options.length > 1 &&
+          <Select
+            id="regional-partner-select"
+            name="regional_partner_id"
+            onChange={this.handleRegionalPartnerSelect}
+            style={this.getInputStyle()}
+            value={this.state.regional_partner_id || ''}
+            options={options}
 
-          // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
-          disabled={editDisabled}
-        />
+            // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
+            disabled={editDisabled}
+          />
+        }
+        {
+          options.length === 1 &&
+          <p
+            id="regional-partner-name"
+          >
+            {options[0].label}
+          </p>
+        }
       </FormGroup>
     );
   }
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
-      const options = Subjects[this.state.course].map((subject, i) => {
+      // TODO(tanya): Show 201 subject in workshop dashboard UI
+      // Temporarily hiding CSF 201 subject from the workshop dashboard
+      // until the pilot is over in winter 2018
+      const included_subjects = Subjects[this.state.course]
+        .filter(subject => subject !== "Deep Dive");
+      const options = included_subjects.map((subject, i) => {
         return (<option key={i} value={subject}>{subject}</option>);
       });
       const placeHolder = this.state.subject ? null : <option />;
@@ -879,7 +899,7 @@ export class WorkshopForm extends React.Component {
                   name="notes"
                   onChange={this.handleFieldChange}
                   maxLength={65535}
-                  rows={Math.max(5, this.state.notes.split("\n").length + 1)}
+                  rows={Math.max(5, this.state.notes && this.state.notes.split("\n").length + 1)}
                   style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
@@ -906,6 +926,6 @@ export class WorkshopForm extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission,
-  facilitatorCourses: state.facilitatorCourses
+  permission: state.workshopDashboard.permission,
+  facilitatorCourses: state.workshopDashboard.facilitatorCourses
 }))(WorkshopForm);

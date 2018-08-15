@@ -25,7 +25,6 @@
 
 class GamelabJr < Gamelab
   serialized_attrs %w(
-    helper_libraries
     custom_helper_library
     custom_blocks
     hide_custom_blocks
@@ -45,6 +44,8 @@ class GamelabJr < Gamelab
           ],
           use_default_sprites: true,
           hide_animation_mode: true,
+          show_type_hints: true,
+          include_shared_functions: true,
         }
       )
     )
@@ -54,60 +55,13 @@ class GamelabJr < Gamelab
     <<-XML.chomp
 <category name="Start">
   <block type="when_run" />
-  <block type="gamelab_setup" />
 </category>
 <category name="Variables" custom="VARIABLE" />
 <category name="Functions" custom="PROCEDURE" />
-<category name="World">
-  <block type="gamelab_setBackground">
-    <value name="COLOR">
-      <block type="colour_picker"></block>
-    </value>
-  </block>
-  <block type="gamelab_showTitleScreen" />
-  <block type="gamelab_hideTitleScreen" />
-</category>
-<category name="Sprites">
-  <block type="gamelab_makeNewSprite" />
-  <block type="gamelab_makeNewSpriteLocation" />
-  <block type="gamelab_location_picker" />
-  <block type="gamelab_setAnimation" />
-  <block type="gamelab_setTint">
-    <value name="COLOR">
-      <block type="colour_picker"></block>
-    </value>
-  </block>
-  <block type="gamelab_removeTint" />
-  <block type="gamelab_moveUp" />
-  <block type="gamelab_moveDown" />
-  <block type="gamelab_moveLeft" />
-  <block type="gamelab_moveRight" />
-  <block type="gamelab_setPosition" />
-  <block type="gamelab_displace" />
-  <block type="gamelab_destroy" />
-  <block type="gamelab_firstTouched" />
-  <block type="gamelab_secondTouched" />
-  <block type="sprite_variables_get" />
-  <block type="sprite_variables_set" />
-</category>
-<category name="Groups">
-  <block type="gamelab_makeNewGroup" />
-  <block type="gamelab_add" />
-  <block type="gamelab_groupLength" />
-</category>
-<category name="Events">
-  <block type="gamelab_whenUpArrow" />
-  <block type="gamelab_whenDownArrow" />
-  <block type="gamelab_whenLeftArrow" />
-  <block type="gamelab_whenRightArrow" />
-  <block type="gamelab_whileUpArrow" />
-  <block type="gamelab_whileDownArrow" />
-  <block type="gamelab_whileLeftArrow" />
-  <block type="gamelab_whileRightArrow" />
-  <block type="gamelab_whenTouching" />
-  <block type="gamelab_whileTouching" />
-  <block type="gamelab_clickedOn" />
-</category>
+<category name="World" />
+<category name="Sprites" custom="Sprite" />
+<category name="Groups" />
+<category name="Events" />
 <category name="Math">
   <block type="math_number" />
   <block type="math_change">
@@ -170,6 +124,7 @@ class GamelabJr < Gamelab
   <block type="text_join_simple" inputcount="2" />
   <block type="text" />
 </category>
+<category name="Behaviors" custom="Behavior" />
     XML
   end
 
@@ -178,6 +133,7 @@ class GamelabJr < Gamelab
     <<-XML.chomp
 <category name="Category">
   <block type="category"></block>
+  <block type="custom_category"></block>
 </category>
 #{common_blocks(type)}
     XML

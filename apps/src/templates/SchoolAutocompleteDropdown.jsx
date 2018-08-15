@@ -5,6 +5,7 @@ import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import i18n from "@cdo/locale";
+import experiments from '@cdo/apps/util/experiments';
 
 export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {
@@ -42,7 +43,10 @@ export default class SchoolAutocompleteDropdown extends Component {
    *   returns results or a request error occurs.
    */
   debouncedSearch = _.debounce((q, callback) => {
-    const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40`;
+    const searchUrl = `/dashboardapi/v1/schoolsearch/${encodeURIComponent(q)}/40` +
+      (experiments.isEnabled(experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH) ?
+       '/useNewSearch' : '');
+
     // Note, we don't return the fetch promise chain because in a debounced
     // function we're not guaranteed to return anything, and it's not a great
     // interface to sometimes return undefined when there's still async work

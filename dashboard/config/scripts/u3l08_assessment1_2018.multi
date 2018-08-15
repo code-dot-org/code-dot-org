@@ -1,0 +1,26 @@
+name 'U3L08 Assessment1_2018'
+title 'Choose Two: Functions with Parameters'
+type 'multi2'
+question 'Select the two true statements about functions with parameters:'
+wrong 'Parameters can only be used once within the body of a function.'
+right 'Functions with parameters can be used to prevent the creation of duplicated code.'
+right 'Parameters help generalize the solution of a specific problem.'
+wrong 'Values do not need to be provided to a function with parameters in any particular order.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+**Correct answers:**
+
+* Functions with parameters can be used to prevent the creation of duplicated code.
+	* Explanation: For example, consider the case where we want to turn the turtle 180 degrees. Using `turnLeft()` (without parameters), we'd have to call the turn function twice in a row to achieve the desired results. But by using the turn function with parameters (e.g. `turnLeft(180)`, we can consolidate this action into a single line of code.
+* Parameters help generalize the solution of a specific problem.
+	* Explanation: A function defined with parameters solves the general case of a particular problem or task. The parameters act as placeholders for whatever data the programmer passes into the function when it gets called. It isn't until a function is actually called within a program that a specific instance of the problem is solved.
+    
+**Incorrect answers:**
+
+* Parameters can only be used once within the body of a function.
+* Values do not need to be provided to a function with parameters in any particular order.
+	* Explanation: When calling a function with parameters in your program, you must pass the corresponding values into the function in the same order as they are listed in the function definition.
+MARKDOWN

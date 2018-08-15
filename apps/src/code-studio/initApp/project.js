@@ -69,6 +69,7 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+let replaceCurrentSourceVersion = false;
 // String representing server timestamp at which the first project version was
 // saved from this browser tab, to uniquely identify the browser tab for
 // logging purposes.
@@ -248,6 +249,22 @@ var projects = module.exports = {
 
   getCurrentSourceVersionId() {
     return currentSourceVersionId;
+  },
+
+  disableAutoContentModeration() {
+    return new Promise((resolve, reject) => {
+      channels.update(`${this.getCurrentId()}/disable-content-moderation`, null, (err) => {
+        err ? reject(err) : resolve();
+      });
+    });
+  },
+
+  enableAutoContentModeration() {
+    return new Promise((resolve, reject) => {
+      channels.update(`${this.getCurrentId()}/enable-content-moderation`, null, (err) => {
+        err ? reject(err) : resolve();
+      });
+    });
   },
 
   /**
@@ -523,7 +540,7 @@ var projects = module.exports = {
         this.sourceHandler.setInitialLevelSource(currentSources.source);
         this.showMinimalProjectHeader();
       }
-    } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
+    } else if (appOptions.legacyShareStyle && this.getStandaloneApp()) {
       this.setName('Untitled Project');
       this.showMinimalProjectHeader();
     }
@@ -607,7 +624,10 @@ var projects = module.exports = {
       case 'applab':
         return 'applab';
       case 'gamelab':
-        return 'gamelab';
+        if (appOptions.droplet) {
+          return 'gamelab';
+        }
+        return 'spritelab';
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
@@ -783,7 +803,7 @@ var projects = module.exports = {
 
     if (forceNewVersion) {
       lastNewSourceVersionTime = Date.now();
-      currentSourceVersionId = null;
+      replaceCurrentSourceVersion = false;
     }
 
     var channelId = current.id;
@@ -803,7 +823,8 @@ var projects = module.exports = {
     if (this.useSourcesApi()) {
       let params = '';
       if (currentSourceVersionId) {
-        params = `?version=${currentSourceVersionId}` +
+        params = `?currentVersion=${currentSourceVersionId}` +
+          `&replace=${!!replaceCurrentSourceVersion}` +
           `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
           `&tabId=${utils.getTabId()}`;
       }
@@ -812,6 +833,9 @@ var projects = module.exports = {
         if (err) {
           if (err.message.includes('httpStatusCode: 401')) {
             this.showSaveError_('unauthorized-save-sources-reload', saveSourcesErrorCount, err.message);
+            window.location.reload();
+          } else if (err.message.includes('httpStatusCode: 409')) {
+            this.showSaveError_('conflict-save-sources-reload', saveSourcesErrorCount, err.message);
             window.location.reload();
           } else {
             saveSourcesErrorCount++;
@@ -824,6 +848,7 @@ var projects = module.exports = {
           firstSaveTimestamp = response.timestamp;
         }
         currentSourceVersionId = response.versionId;
+        replaceCurrentSourceVersion = true;
         current.migratedToS3 = true;
 
         this.updateChannels_(callback);
@@ -1036,6 +1061,19 @@ var projects = module.exports = {
     }
     current.frozen = true;
     current.hidden = true;
+    this.updateChannels_(callback);
+  },
+
+  /**
+   * Unfreezes the project. Also unhides so that it's available for
+   * deleting/renaming in the user's project list.
+   */
+  unfreeze(callback) {
+    if (!(current && current.isOwner)) {
+      return;
+    }
+    current.frozen = false;
+    current.hidden = false;
     this.updateChannels_(callback);
   },
 
@@ -1274,7 +1312,7 @@ function fetchSource(channelData, callback, version, useSourcesApi) {
     if (version) {
       url += '?version=' + version;
     }
-    sources.fetch(url, function (err, data) {
+    sources.fetch(url, function (err, data, jqXHR) {
       if (err) {
         console.warn('unable to fetch project source file', err);
         data = {
@@ -1283,6 +1321,7 @@ function fetchSource(channelData, callback, version, useSourcesApi) {
           animations: ''
         };
       }
+      currentSourceVersionId = jqXHR.getResponseHeader('S3-Version-Id');
       unpackSources(data);
       callback();
     });

@@ -1,0 +1,24 @@
+bn:
+  data:
+    function_names:
+      x: এক্স
+      draw a circle: একটি বৃত্ত আঁকুন।
+      draw a flower: ফুল আঁকুন
+      draw a square: একটি বর্গ আঁকুন।
+      draw a tree: একটি গাছ আঁকুন।
+      draw a triangle: একটি ত্রিভুজ আঁকুন।
+      draw a house: একটি ঘর আঁকুন।
+      draw a star: একটি বর্গ আঁকুন
+      do something: কিছু কর
+      jump: লাফান
+      set score: স্কোর সেট করুন
+      get nectar: পুষ্পমধু নিন
+      test: পরীক্ষা
+      move: সরান
+      move right: ডানে যান
+      move up: উপরে উঠুন
+      move down: নিচে নামুন
+      move left: বামে যান
+      turn left: বামে যান
+      move forward: সামনে এগিয়ে যান
+      turn right: ডানে যান

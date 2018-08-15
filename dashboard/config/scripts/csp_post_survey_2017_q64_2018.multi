@@ -1,0 +1,4 @@
+name 'csp-post-survey-2017-q64_2018'
+question 'Do you know anyone outside of school who works in computer science? (For example, working as a Computer Programmer, Software Developer, Web Developer, Network Administrator, etc.) '
+right 'Yes'
+right 'No'

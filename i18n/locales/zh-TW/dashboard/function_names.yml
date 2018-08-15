@@ -1,0 +1,31 @@
+zh-TW:
+  data:
+    function_names:
+      x: x
+      details: 詳細資訊
+      draw eyebrow: 畫睫毛
+      draw a circle: 畫個圓形
+      draw a car: 畫一輛車
+      draw a hexagon: 畫個六邊形
+      draw a flower: 畫個花朵
+      draw a square: 畫個正方形
+      draw a snowflake: 畫個雪花
+      draw a tree: 畫棵樹木
+      draw a triangle: 畫個三角形
+      draw a house: 畫個房子
+      draw a star: 畫顆星星
+      do something: 函式名稱
+      jump: 跳
+      set score: 設置得分
+      get nectar: 採集花蜜
+      test: 測試
+      diamond: 鑽石
+      move: 移動
+      move right: 移動-向右
+      move up: 移動-向上
+      move down: 移動-向下
+      move left: 移動-向左
+      collect: 收集
+      turn left: 轉向-左方
+      move forward: 移動-向前
+      turn right: 轉向-右方

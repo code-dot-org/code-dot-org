@@ -1,0 +1,57 @@
+name 'csd-pre-survey-2017-levelgroup_2018'
+title 'CS Discoveries Student Pre-Course Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csp-pre-survey-2017 preamble 1_2018'
+level 'csp-pre-survey-2017-q1_2018'
+level 'csp-pre-survey-2017-q2_2018'
+level 'csp-pre-survey-2017-q3_2018'
+level 'csp-pre-survey-2017-q4_2018'
+level 'csp-pre-survey-2017-q5_2018'
+level 'csp-pre-survey-2017-q6_2018'
+level 'csp-pre-survey-2017-q7_2018'
+level 'csp-pre-survey-2017-q8_2018'
+level 'csp-pre-survey-2017-q9_2018'
+
+page
+text 'csp-pre-survey-2017 preamble 2 cs in general_2018'
+level 'csp-pre-survey-2017-q10_2018'
+level 'csp-pre-survey-2017-q11_2018'
+level 'csp-pre-survey-2017-q12_2018'
+level 'csp-pre-survey-2017-q13_2018'
+level 'csp-pre-survey-2017-q14_2018'
+level 'csp-pre-survey-2017-q16_2018'
+level 'csp-pre-survey-2017-q17_2018'
+level 'csp-pre-survey-2017-q18_2018'
+level 'csp-pre-survey-2017-q27_2018'
+level 'csp-pre-survey-2017-q28_2018'
+
+page
+text 'csp-pre-survey-2017 preamble 3 this class_2018'
+level 'csp-pre-survey-2017-q19_2018'
+level 'csp-pre-survey-2017-q20_2018'
+level 'csp-pre-survey-2017-q21_2018'
+level 'csp-pre-survey-2017-q22_2018'
+level 'csp-pre-survey-2017-q23_2018'
+level 'csp-pre-survey-2017-q24_2018'
+level 'csp-pre-survey-2017-q25_2018'
+level 'csp-pre-survey-2017-q26_2018'
+
+page
+text 'csp-pre-survey-2017 preamble 4 the future_2018'
+level 'csp-pre-survey-2017-q35_2018'
+text 'csp-pre-survey-2017-q36-preamble_2018'
+level 'csp-pre-survey-2017-q36-b_2018'
+level 'csp-pre-survey-2017-q36-e_2018'
+level 'csp-pre-survey-2017-q29_2018'
+level 'csp-pre-survey-2017-q30_2018'
+level 'csp-pre-survey-2017-q31_2018'
+
+page
+text 'csp-pre-survey-2017 preamble 5 demographics_2018'
+level 'csp-pre-survey-2017-q37_2018'
+level 'csp-pre-survey-2017-q38_2018'
+level 'csp-pre-survey-2017-q39_2018'
+level 'csp-pre-survey-2017-q40_2018'

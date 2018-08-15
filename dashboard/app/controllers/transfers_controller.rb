@@ -2,7 +2,7 @@ class TransfersController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
 
-  # POST /sections/:id/transfers
+  # POST /sections/transfers
   def create
     new_section_code = params[:new_section_code]
     current_section_code = params[:current_section_code]
@@ -10,12 +10,12 @@ class TransfersController < ApplicationController
       return head :bad_request
     end
 
-    stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section].try(:to_bool)
+    stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section]
     if stay_enrolled_in_current_section.nil?
       return head :bad_request
     end
 
-    student_ids = params[:student_ids].try(:split, ',').try(:map, &:to_i)
+    student_ids = params[:student_ids].try(:map, &:to_i)
     if student_ids.nil? || student_ids.empty?
       render json: {
         error: I18n.t('move_students.student_ids_not_entered')
@@ -30,8 +30,15 @@ class TransfersController < ApplicationController
       }, status: :bad_request
       return
     end
-    # Verify the destination section and destination teacher exist (are not soft-deleted).
+    # Verify the destination section is not managed by a third-party login
     new_section = Section.find_by_code(new_section_code)
+    if new_section && new_section.externally_rostered?
+      render json: {
+        error: I18n.t('move_students.third_party_login')
+      }, status: :bad_request
+      return
+    end
+    # Verify the destination section and destination teacher exist (are not soft-deleted).
     unless new_section && new_section.user
       render json: {
         error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)

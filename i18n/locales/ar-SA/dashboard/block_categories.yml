@@ -1,0 +1,22 @@
+ar:
+  data:
+    block_categories:
+      Actions: الإجراءات
+      Loops: الحلقات
+      Functions: دوال
+      Color: اللون
+      Brushes: فرش
+      Math: العمليات الحسابية
+      Logic: المنطق
+      Variables: المتغيرات
+      Number: رقم
+      String: نص
+      Image: صورة
+      Conditionals: الجمل الشرطية
+      Events: الأحداث
+      Text: النص
+      Start: إبدأ
+      Booleans: القيم المنطقية
+      test: اختبار
+      Name: الاسم
+      Function: دالة

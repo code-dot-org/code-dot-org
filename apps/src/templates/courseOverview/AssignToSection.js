@@ -49,7 +49,7 @@ class AssignToSection extends Component {
   updateCourse = () => {
     const section = this.props.sectionsInfo[this.state.sectionIndexToAssign];
     $.ajax({
-      url: `/sections/${section.id}`,
+      url: `/dashboardapi/sections/${section.id}`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({

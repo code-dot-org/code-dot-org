@@ -21,13 +21,21 @@ def current_user
   @dashboard_user ||= DASHBOARD_DB[:users][id: current_user_id]
 end
 
-# Returns true if the current user is under 13 or if age is unknown.
+# Consider the age of the specified user if user_id is provided, or of the
+# current user otherwise.
+# Returns true if the user is under 13 or if age is unknown.
 # Duplicates User#under_13? without using the rails model.
-def under_13?
-  return true unless current_user
-  birthday = current_user[:birthday]
+def under_13?(user_id)
+  user = user_id ? DASHBOARD_DB[:users].select(:birthday).first(id: user_id) : current_user
+  return true unless user
+  birthday = user[:birthday]
   age = UserHelpers.age_from_birthday(birthday)
   age < 13
+end
+
+def sharing_disabled?
+  return false unless current_user
+  get_sharing_disabled_from_properties(current_user[:properties])
 end
 
 # Returns the sharing_disabled property of a user with a given user_id,
@@ -61,7 +69,7 @@ def has_permission?(permission)
 end
 
 # @param [Integer] section_id
-# @returns [Boolean] true iff the current user is the owner of the given section.
+# @returns [Boolean] true if the current user is the owner of the given section.
 #          Note: NOT always true for admins.
 def owns_section?(section_id)
   return false unless section_id && current_user_id
@@ -69,7 +77,7 @@ def owns_section?(section_id)
 end
 
 # @param [Integer] student_id
-# @returns [Boolean] true iff the current user, or given user, is the teacher for the student of the given id
+# @returns [Boolean] true if the current user, or given user, is the teacher for the student of the given id
 def teaches_student?(student_id, user_id = current_user_id)
   return false unless student_id && user_id
   DASHBOARD_DB[:sections].

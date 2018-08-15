@@ -27,6 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "instructions": "Ok, solve this one just like the last puzzle, but you need to remember how you used the `if` and `repeat until` blocks together.",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

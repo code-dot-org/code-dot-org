@@ -104,6 +104,24 @@ module Api::V1::Pd
       end
     end
 
+    # GET /api/v1/pd/workshops/:id/local_workshop_daily_survey_report
+    def local_workshop_daily_survey_report
+      unless @workshop.local_summer? || @workshop.teachercon? ||
+        ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) && @workshop.workshop_starting_date > Date.new(2018, 8, 1))
+        return render status: :bad_request, json: {
+          error: 'Only call this route for new academic year workshops, 5 day summer workshops, local or TeacherCon'
+        }
+      end
+
+      survey_report = generate_workshop_daily_session_summary(@workshop)
+
+      respond_to do |format|
+        format.json do
+          render json: survey_report
+        end
+      end
+    end
+
     private
 
     # We want to filter facilitator-specific responses if the user is a facilitator and

@@ -1,0 +1,29 @@
+---
+ka:
+  data:
+    function_names:
+      x: x
+      draw a circle: წრის დახატვა
+      draw a hexagon: ექვსკუთხედის დახატვა
+      draw a flower: ყვავილის დახატვა
+      draw a square: კვადრატის დახატვა
+      draw a snowflake: ფიფქის დახატვა
+      draw a tree: ხის დახატვა
+      draw a triangle: სამკუთხედის დახატვა
+      draw a house: სახლის დახატვა
+      draw a star: ვარსკვლავის დახატვა
+      do something: გააკეთეთ რამე
+      jump: ახტომა
+      set score: ქულის განსაზღვრა
+      get nectar: ნექტარის აღება
+      test: ტესტი
+      diamond: ბრილიანტი
+      move: გადაადგილება
+      move right: მარჯვნივ გადაადგილება
+      move up: გადაადგილება ზემოთ
+      move down: გადაადგილება ქვემოთ
+      move left: გადაადგილება მარცხნივ
+      collect: შეგროვება
+      turn left: მარცხნივ მობრუნება
+      move forward: წინ გადაადგილება
+      turn right: მარჯვნივ მობრუნება

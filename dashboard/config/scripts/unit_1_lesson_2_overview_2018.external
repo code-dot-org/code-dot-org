@@ -1,0 +1,19 @@
+name 'Unit 1 Lesson 2 Overview_2018'
+display_name 'Lesson Overview'
+
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you will learn a formal problem solving process that will help you to structure your approach to a wide variety of problems.
+
+
+## Resources
+
+* [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* [The Problem Solving Process](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Activity Guide ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
+
+
+MARKDOWN

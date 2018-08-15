@@ -1,0 +1,7 @@
+ps:
+  data:
+    function_names:
+      move right: راسته اړځ ته لاړ شۍ
+      move up: اوچټ لاړ شۍ
+      move down: ښکته لاړ سۍ
+      move left: چپ اړخ ته لاړ شۍ

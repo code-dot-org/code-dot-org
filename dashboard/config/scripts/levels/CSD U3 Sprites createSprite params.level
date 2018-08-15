@@ -27,7 +27,6 @@
       "rect": null,
       "fill": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# createSprite() with parameters\r\n\r\nWhen you create a variable you often want to set its value right away. That's why the command `var x =` exists, to let you perform both commands at once.\r\n\r\nIt's very common to want to set the x and y of your sprite in a single command. To help, the createSprite command accepts 2 parameters or values that set these properties right away. Instead of writing \r\n\r\n  \tvar mySprite = createSprite();\r\n  \tmySprite.x = 100;\r\n  \tmySprite.y = 200; \r\n\r\nyou can just write the command\r\n\r\n\tvar mySprite = createSprite(100, 200);\r\n\r\nThis code does exactly the same thing, but it's much easier to write. \r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/2f9214a801a60af226fa604a9b6533f5-image-1466008001402.26.15 AM.png\" style=\"float:right; width:200px\">\r\n\r\nThis is your code from earlier. Note that a new, larger version of `createSprite` is now available.\r\n\r\n<img src=\"https://images.code.org/4a2e6bf1ffbd9782ce637b3e997004e3-image-1468337207497.25.20 AM.png\" style=\" width:350px\">\r\n\r\n* Update your code to use this new version of `createSprite`\r\n* Your program should only be **9 total lines**\r\n* You're still trying to make your image look as close as possible to the image at the right.",

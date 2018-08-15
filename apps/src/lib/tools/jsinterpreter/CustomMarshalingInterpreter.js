@@ -3,6 +3,18 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 
+const DEFAULT_MAX_STEPS = 5e5;
+
+const defaultExecutionInfo = {
+  ticks: DEFAULT_MAX_STEPS,
+  checkTimeout: function () {
+    if (this.ticks-- < 0) {
+      throw 'Infinity';
+    }
+  },
+  isTerminated: () => false,
+};
+
 /**
  * Property access wrapped in try/catch. This is in an indepedendent function
  * so the JIT compiler can optimize the calling function.
@@ -388,16 +400,20 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * Generate code for each of the given events, and evaluate it using the
    * provided APIs as context. Note that this does not currently support custom marshaling.
    *
-   * @param {Object} apis - Context to be set as globals in the interpreted runtime.
+   * @param {Object} scope - Context to be set as globals in the interpreted runtime.
    * @param {Object} events - Mapping of hook names to the corresponding handler code.
    *     The handler code is of the form {code: string|Array<string>, args: ?Array<string>}
    * @param {string} [evalCode] - Optional extra code to evaluate.
    * @return {{hooks: Array<{name: string, func: Function}>, interpreter: CustomMarshalingInterpreter}} Mapping of
    *     hook names to the corresponding event handler, and the interpreter that was created to evaluate the code.
    */
-  static evalWithEvents(apis, events, evalCode = '') {
+  static evalWithEvents(scope, events, evalCode = '', customMarshalObjectList) {
     let interpreter, currentCallback, lastReturnValue;
     const hooks = [];
+    const apis = {
+      executionInfo: defaultExecutionInfo,
+      ...scope,
+    };
 
     Object.keys(events).forEach(event => {
       let {code, args} = events[event];
@@ -420,14 +436,14 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     // The event loop pauses the interpreter until the native async function
     // `currentCallback` returns a value. The value contains the name of the event
     // to call, and any arguments.
-    const eventLoop = ';while(true){var event=wait();setReturnValue(this[event.name].apply(null,event.args));}';
+    const eventLoop = ';while(true){var _event=_wait();setReturnValue(this[_event.name].apply(null,_event.args));}';
 
     interpreter = new CustomMarshalingInterpreter(
       evalCode + eventLoop,
-      new CustomMarshaler({}),
+      new CustomMarshaler({objectList: customMarshalObjectList}),
       (interpreter, scope) => {
         interpreter.marshalNativeToInterpreterObject(apis, 5, scope);
-        interpreter.setProperty(scope, 'wait', interpreter.createAsyncFunction(callback => {
+        interpreter.setProperty(scope, '_wait', interpreter.createAsyncFunction(callback => {
           currentCallback = callback;
         }));
         interpreter.setProperty(scope, 'setReturnValue', interpreter.createNativeFunction(returnValue => {
@@ -524,7 +540,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         // Mark if this should be nativeIsAsync:
         makeNativeOpts.nativeIsAsync = true;
       }
-      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(nativeParentObj);
+      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(nativeParentObj, nativeVar);
       // Add extra options if the parent of this function is in our custom marshal
       // modified object list:
       for (var prop in extraOpts) {
@@ -563,14 +579,19 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    * Note that this does not currently support custom marshaling.
    *
    * @param code {string} - the code to evaluation
-   * @param globals {Object} - An object of globals to be added to the scope of code being executed
+   * @param scope {Object} - An object of globals to be added to the scope of code being executed
    * @param {Object} opts - Additional options to control behavior
    * @param {Array} opts.asyncFunctionList - list of functions to treat asynchronously
    * @param {boolean} opts.legacy - If true, code will be run natively via an eval-like method,
    *     otherwise it will use the js interpreter.
    * @returns the interpreter instance unless legacy=true, in which case, it returns whatever the given code returns.
    */
-  static evalWith(code, globals, {asyncFunctionList, legacy}={}) {
+  static evalWith(code, scope, {asyncFunctionList, legacy}={}) {
+    const globals = {
+      executionInfo: defaultExecutionInfo,
+      ...scope,
+    };
+
     if (legacy) {
       // execute JS code "natively"
       var params = [];
@@ -684,7 +705,10 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       var state = opts.callbackState || {};
       state.node = {
         type: 'CallExpression',
-        arguments: intArgs /* this just needs to be an array of the same size */
+        arguments: intArgs, /* this just needs to be an array of the same size */
+        // give this node an end so that the interpreter doesn't treat it
+        // like polyfill code and do weird weird scray terrible things.
+        end: 1,
       };
       state.doneCallee_ = true;
       state.func_ = intFunc;
@@ -696,7 +720,15 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         state.value = state.arguments_.pop();
       }
 
-      this.pushStackFrame(state);
+      const depth = this.pushStackFrame(state);
+
+      if (opts.run) {
+        this.paused_ = false;
+        while (this.getStackDepth() >= depth) {
+          this.step();
+        }
+        this.paused_ = true;
+      }
     };
   }
 
@@ -755,7 +787,18 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
           }
         }
       }
-      var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
+      try {
+        var nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
+      } catch (e) {
+        if (!(e instanceof Error)) {
+          e = new Error(e);
+          e.stack = 'Error does not have stack information. Throw `new Error()` '
+            + 'instead of a string to get a full stack trace. Exception thrown '
+            + `when calling ${nativeFunc} on ${nativeParentObj}`;
+        }
+        e.native = true;
+        throw e;
+      }
       return this.marshalNativeToInterpreter(
         nativeRetVal,
         null,

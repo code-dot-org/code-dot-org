@@ -24,7 +24,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Diagonal Elevator\r\n\r\nLast time we saw balloon, it pushed the feather all the way off screen.  What do you think will happen when the balloon moves away from the feather while it's moving it?\r\n\r\n# Do This\r\n\r\nUse the `displace` block to make the balloon sprite push the feather sprite, and watch what happens when the sprites stop touching each other.\r\n\r\n[//]: # (https://images.code.org/a6c891b044cea1b6d8649a153e13739b-image-1470316517410.png)\r\n\r\n[//]: # (https://images.code.org/af2df53196186e50a58f64f6559a53ca-image-1470316589121.png)\r\n\r\n[//]: # (https://images.code.org/fb739254c4d2f6745977a26e0481162a-image-1470316780326.png)\r\n\r\n[//]: # (https://images.code.org/341bb1ce73ba812f2bd0afeb01e08aad-image-1470316853020.png)",

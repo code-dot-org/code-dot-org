@@ -173,7 +173,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# User Input\r\nYou've got a background, you've got Sprites, now it's time to give your user something to do!\r\n\r\n# Do This\r\nOn the interactions table from your planning sheet, find all of the interactions that rely on user input (key presses and mouse movements). For each of those interactions:\r\n\r\n* Add an `if` block (or `if-else` block if you need a fallback action) inside the `draw()` loop.\r\n* Add the appropriate input block for your condition (such as `keyDown()` or `mouseDown()`).\r\n* Add the necessary actions inside the `if` block.\r\n\r\n**Challenge:** Can you create more sophisticated conditionals by nesting them or using compound booleans?",

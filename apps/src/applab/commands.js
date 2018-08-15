@@ -21,6 +21,7 @@ import {
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -1356,7 +1357,8 @@ applabCommands.startWebRequest = function (opts) {
   }
   var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url) +
       '&c=' + encodeURIComponent(Applab.channelId);
-  req.open('GET', url, true);
+  const { isExported } = getAppOptions() || {};
+  req.open('GET', isExported ? opts.url : url, true);
   req.send();
 };
 

@@ -51,6 +51,7 @@
     "markdown_instructions": "*\"Where are my friends hiding? In this game, clicking on me will show my friend Olive the cat!\"*\r\n\r\nClicking Olive will make Robin appear! Can you write code to show the rest of the characters too?\r\n\r\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
     "instructions": "\"Where are my friends hiding? Can you write code to show the rest of my friends?\"",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

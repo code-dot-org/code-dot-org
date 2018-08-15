@@ -1,0 +1,15 @@
+name 'CSD-U5-SFLP Problem Solving and Data_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+You'll use the problem solving process to help solve a data problem.
+
+## Resources
+
+* [Problem Solving with Data](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Activity Guide
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Problem Solving with Data - Exemplar ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))
+MARKDOWN

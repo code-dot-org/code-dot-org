@@ -1,0 +1,16 @@
+name 'CSD-U5-SFLP Create a Representation_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+Design a structure to represent your perfect day using the binary representation systems they've learned in this chapter. You'll need to use ASCII, binary numbers, and images as you design a punch card format.
+
+## Resources
+
+* [Create a Representation - Project Guide](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* Create a Representation - Project Guide ([Google Doc](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit) | [PDF](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))
+
+MARKDOWN

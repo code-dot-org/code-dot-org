@@ -31,7 +31,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
-    "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "all_animations_single_frame": "true",
     "instructions_important": "false",

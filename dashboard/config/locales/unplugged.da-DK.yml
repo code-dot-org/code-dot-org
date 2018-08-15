@@ -1,4 +1,5 @@
-"da":
+---
+da:
   data:
     unplugged:
       Unplug1:
@@ -10,9 +11,6 @@
           fristet til at springe forklaringen af computerord  over, men hvis du præsenterer
           dem for eleverne på en sjov og legende måde nu, vil det være langt mere
           produktivt end at vente på mere bedre muligheder senere.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Data-Tænkning
         desc: "Med intet andet end papir og speedmarker, vil eleverne lære de fire
@@ -25,9 +23,6 @@
           at tegne en bestemt monster. Hold vil derefter skifte algoritmer med en
           anden gruppe og tegne monster baseret på hvad denne algoritme angiver. Er
           tegningen hvad den oprindelige team er beregnet?"
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Programmering på millimeterpapir
         desc: Ved at programmere hinanden til at tegne billeder, vil de eleverne begynde
@@ -35,9 +30,6 @@
           eleverne instruerer hinanden i at farve firkanter på millimeterpapir, i
           et forsøg på at reproducere et eksisterende billede.  Hvis der er tid, kan
           lektionen afsluttes med billeder som eleverne selv har lavet.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmer
         desc: Denne lektion dækker algoritmer.  Ved hjælp af tangram figurer og millimeterpapir,
@@ -45,9 +37,6 @@
           så klar og utvetydigt som muligt.  Bagefter, vil klassen undersøge, hvor
           mange måder man kan folde papir til et rektangel, og bemærke, hvordan nogle
           metoder kan tage flere eller færre foldninger end andre.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Funktioner
         desc: I denne lektion vil eleverne lave en solfanger af snor, perler og et
@@ -60,17 +49,11 @@
           " detaljerne i deres specifikke materialer og oprette vendinger for den
           enkeltes forsyninger.  Denne brug af generiske pladsholdere er en vidunderlig
           introduktion til variabler.
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Betingelser
         desc: Dette er et klassespil.  Efter at have indført begreberne betingelser,
           hvis-sætninger og sløjfer/loops, kan klassen samlet øve sig ved hjælp af
           et i forvejen skrevet program, et sæt kort, og held ved at trække et kort.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Sang Skrivning
         desc: At læse tekster er temmeligt nemt for de fleste elever.  Vi vil foretage
@@ -78,42 +61,27 @@
           definition og kaldende funktioner. Når eleverne er bekendt med at definere
           kald, vil vi tilføje de ekstra muligheder, der kommer sammen med at tildele
           parametre inden for disse funktionskald.
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstraktion
         desc: Denne aktivitet kombinerer din elevernes daglige rutine og en Mad-Lib
           stil tænknings spil, for at hjælpe din klasse med at lære om effektiviteten
           af abstraktion.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Stafet-programmering
         desc: Denne lektion vil tage en idé fra en tidligere aktivitet (4. Millimeterpapir
           programmering) og bruge disse færdigheder til at understrege betydningen
           af at gennemføre programmer, der opererer i sekvens og ofte kontrollere
           programmer for "fejl".
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: Internettet
         desc: I denne lektion, vil eleverne foregive at flyde gennem internettet,
           alt imens de lærer om web-adresser, IPs og DNS.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Konklusion
         desc: Den endelige færdiggørelse i de første 20 timers serien vil hjælpe klassen
           med at genopleve alle deres yndlings øjeblikke, i mens give dem næste skridt,
           så de kan tage på deres egen hvis de er interesseret i at fortsætte rejsen
           i computer videnskab.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Glade Kort
         desc: Studerende laver simple algoritmer (sæt af instruktioner) til at flytte
@@ -191,7 +159,7 @@
           som du vil bruge igen og igen) til at oprette solfangere ved hjælp af snor
           og perler.
       SongwritingParameters:
-        title: Sangskrivning med parametre
+        title: Sangskrivning
         desc: Studerende bruger begrebet omkvædet i en sang for at lære om bestået
           parametre (som tilpasser en funktion uden at omskrive den hel funktion).
       DiceRace:
@@ -285,31 +253,16 @@
           og afstandsformlen kan bruges til at måle afstanden mellem to punkter på
           skærmen, og derefter beslutte, om disse to punkter (eller spilobjekter)
           rører.
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Unplugged aktivitet
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Unplugged aktivitet
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Unplugged aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Unplugged aktivitet
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: Unplugged aktivitet
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Unplugged aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Real-life algoritmer: Plante et frø'
         desc: Denne lektion gør opmærksom på måder, vi bruge algoritmer i vores daglige
@@ -381,7 +334,6 @@
           da den illustrerer hvordan en computer også kan gemme endnu mere komplekse
           oplysninger (f.eks. billeder og farver) i binære tal.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Denne lektion gør opmærksom på måder, vi bruge algoritmer i vores dagligdag.
           Som en del af denne, vil studerende identificere og nedskrive algoritme
           for et terning race spil.
@@ -399,7 +351,7 @@
           at fuldføre en opgave sammen som et klasse, mere effektivt end hvis en studerende
           forsøger det alene.
       courseE_unplugged_songwriting:
-        title: Sangskrivning med parametre
+        title: Sangskrivning
         desc: Studerende bruger begrebet omkvædet i en sang for at lære om bestået
           parametre (som tilpasser en funktion uden at omskrive den hel funktion).
       courseF_unplugged_tangrams:
@@ -425,80 +377,8 @@
           og igen i dine større program. Denne lektion vil hjælpe eleverne til intuitivt
           at forstå, hvorfor det at kombinere stumper af kode i funktioner er sådan
           en god praksis.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: Mine robot venner
       PlantASeed_2018:
         title: 'Real-life algoritmer: Plante et frø'
         desc: Denne lektion gør opmærksom på måder, vi bruge algoritmer i vores daglige
@@ -513,9 +393,6 @@
         title: Gå til sikre steder
         desc: Internettet er kraftfuldt, men sommetider et farligt sted. Lærere introducere
           hvordan man kan forholde sig sikker mens man surfer på internettet.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: Den store begivenhed
         desc: Eleverne introduceres til programmerings begrebet "begivenheder", som
@@ -529,10 +406,8 @@
           til at gengive en tegning.
       courseD_unplugged_digitalCitizenship_2018:
         title: Unplugged aktivitet
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Unplugged aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Betingelser
         desc: 'For at lære om betingelsessætninger, skal eleverne spiller et kortspil
@@ -568,4 +443,5 @@
           på mere end én måde.
       MoveItMoveIt_2018:
         title: Flyt det, flyt det
-        desc: ''
+      RelayProgramming_2018:
+        title: Stafet-programmering

@@ -36,6 +36,7 @@
     "default_flap": "NORMAL",
     "markdown_instructions": "Create your own Flappy game! \r\n\r\nYou can change the visuals and the rules...even the gravity! \r\nWhen you're done, click \"Finish\" to share with friends on their phones.",
     "project_template_level_name": "courseC_flappy_events_template",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

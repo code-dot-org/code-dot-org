@@ -1,0 +1,28 @@
+---
+ca:
+  data:
+    function_names:
+      x: x
+      draw a circle: dibuixa un cercle
+      draw a hexagon: dibuixa un hexàgon
+      draw a flower: dibuixa una flor
+      draw a square: dibuixa un quadrat
+      draw a snowflake: dibuixa un floc de neu
+      draw a tree: dibuixa un arbre
+      draw a triangle: dibuixa un triangle
+      draw a house: dibuixa una casa
+      draw a star: dibuixa una estrella
+      do something: fes alguna cosa
+      jump: salt
+      set score: assigna la puntuació
+      get nectar: obtenir nèctar
+      test: prova
+      move: moure's
+      move right: Desplaça a la dreta
+      move up: Desplaça amunt
+      move down: Desplaça avall
+      move left: desplaça a l'esquerra
+      collect: agafa
+      turn left: gira a l'esquerra
+      move forward: avança
+      turn right: gira a la dreta

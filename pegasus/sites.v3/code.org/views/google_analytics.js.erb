@@ -2,6 +2,7 @@
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
   ga('create', 'UA-37745279-1', '<%=request.site%>');
 
+  ga('set', 'anonymizeIp', true);
   ga('set', 'dimension1', '<%=request.language%>');
   ga('set', 'dimension4', '<%=user_type%>');
 

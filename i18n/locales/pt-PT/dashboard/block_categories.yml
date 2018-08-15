@@ -1,0 +1,18 @@
+pt:
+  data:
+    block_categories:
+      Actions: Ações
+      Loops: ciclos
+      Functions: Funções
+      Color: Cor
+      Math: Matemática
+      Logic: Lógica
+      Variables: variáveis
+      Conditionals: Condicionais
+      Events: Eventos
+      Text: texto
+      Start: Começar
+      Booleans: Booleanos
+      test: teste
+      Name: Nome
+      Function: Função

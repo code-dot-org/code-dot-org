@@ -45,41 +45,50 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-14 01:40:27 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-10-04 02:19:22 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:40:27 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-10-04 02:19:22 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:55:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_move">
-          <title name="DIR">moveForward</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-        </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
-        <block type="harvester_pumpkin"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="harvester_whileHasCrop">
-          <title name="LOC">Pumpkin</title>
-        </block>
-        <block type="maze_untilBlocked"/>
-        <block type="maze_if">
-          <title name="DIR">isPathLeft</title>
-        </block>
-        <block type="maze_ifElse">
-          <title name="DIR">isPathLeft</title>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">do something</title>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="do something"/>
-        </block>
+        <category name="Actions">
+          <block type="maze_move">
+            <title name="DIR">moveForward</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnLeft</title>
+          </block>
+          <block type="maze_turn">
+            <title name="DIR">turnRight</title>
+          </block>
+          <block type="harvester_pumpkin"/>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat">
+            <title name="TIMES">???</title>
+          </block>
+          <block type="harvester_whileHasCrop">
+            <title name="LOC">Pumpkin</title>
+          </block>
+          <block type="maze_untilBlocked"/>
+        </category>
+        <category name="Conditionals">
+          <block type="harvester_whileHasCrop">
+            <title name="LOC">Pumpkin</title>
+          </block>
+          <block type="maze_untilBlocked"/>
+          <block type="maze_if">
+            <title name="DIR">isPathLeft</title>
+          </block>
+          <block type="maze_ifElse">
+            <title name="DIR">isPathLeft</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

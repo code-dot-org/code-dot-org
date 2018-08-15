@@ -6,7 +6,6 @@
   "user_id": 4,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "edit_code": true,
     "contained_level_names": [
       "Test Contained Multi"

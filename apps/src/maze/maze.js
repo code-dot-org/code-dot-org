@@ -22,9 +22,10 @@ const MazeVisualizationColumn = require('./MazeVisualizationColumn');
 const api = require('./api');
 const dropletConfig = require('./dropletConfig');
 const mazeReducer = require('./redux');
-const tiles = require('./tiles');
 
-const MazeController = require('./mazeController');
+const maze = require('@code-dot-org/maze');
+const MazeController = maze.MazeController;
+const tiles = maze.tiles;
 
 const createResultsHandlerForSubtype = require('./results/utils').createResultsHandlerForSubtype;
 
@@ -37,8 +38,6 @@ module.exports = class Maze {
 
     this.stepSpeed = 100;
     this.animating_ = false;
-
-    this.cachedBlockStates = [];
 
     this.resultsHandler = undefined;
     this.response = undefined;
@@ -139,7 +138,7 @@ module.exports = class Maze {
         Blockly.HSV_SATURATION = 0.6;
 
         Blockly.SNAP_RADIUS *= this.scale.snapRadius;
-        Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
+        Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
       }
 
       const svg = document.getElementById('svgMaze');
@@ -176,10 +175,10 @@ module.exports = class Maze {
 
     if (
       config.embed &&
-      config.level.markdownInstructions &&
-      !config.level.instructions
+      config.level.longInstructions &&
+      !config.level.shortInstructions
     ) {
-      // if we are an embedded level with markdown instructions but no regular
+      // if we are an embedded level with long instructions but no short
       // instructions, we want to display CSP-style instructions and not be
       // centered
       config.noInstructionsWhenCollapsed = true;
@@ -247,8 +246,6 @@ module.exports = class Maze {
   resetButtonClick_ = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.removeAttribute('disabled');
-
-    this.reenableCachedBlockStates_();
   };
 
   /**
@@ -266,6 +263,7 @@ module.exports = class Maze {
 
   reset_ = () => {
     this.animating_ = false;
+    timeoutList.clearTimeouts();
     this.controller.reset();
   };
 
@@ -491,24 +489,6 @@ module.exports = class Maze {
     if (studioApp().isUsingBlockly()) {
       // Disable toolbox while running
       Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-
-      if (stepMode) {
-        if (this.cachedBlockStates.length !== 0) {
-          throw new Error('Unexpected cachedBlockStates');
-        }
-        // Disable all blocks, caching their state first
-        Blockly.mainBlockSpace.getAllBlocks().forEach((block) => {
-          this.cachedBlockStates.push({
-            block: block,
-            movable: block.isMovable(),
-            deletable: block.isDeletable(),
-            editable: block.isEditable()
-          });
-          block.setMovable(false);
-          block.setDeletable(false);
-          block.setEditable(false);
-        });
-      }
     }
 
     this.controller.animationsController.stopIdling();
@@ -530,18 +510,6 @@ module.exports = class Maze {
     var actions = this.executionInfo.getActions(singleStep);
 
     this.scheduleSingleAnimation_(0, actions, singleStep, timePerAction);
-  }
-
-  reenableCachedBlockStates_() {
-    if (this.cachedBlockStates) {
-      // restore moveable/deletable/editable state from before we started stepping
-      this.cachedBlockStates.forEach(function (cached) {
-        cached.block.setMovable(cached.movable);
-        cached.block.setDeletable(cached.deletable);
-        cached.block.setEditable(cached.editable);
-      });
-      this.cachedBlockStates = [];
-    }
   }
 
   /**
@@ -616,7 +584,7 @@ module.exports = class Maze {
    */
   prepareForExecution_() {
     this.executionInfo = new ExecutionInfo({
-      ticks: 100
+      ticks: 1e4
     });
     this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;
@@ -629,12 +597,11 @@ module.exports = class Maze {
   /**
    * Animates a single action
    * @param {string} action The action to animate
-   * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
    * @param {integer} timePerStep How much time we have allocated before the next step
    */
-  animateAction_(action, spotlightBlocks, timePerStep) {
+  animateAction_(action, timePerStep) {
     if (action.blockId) {
-      studioApp().highlight(String(action.blockId), spotlightBlocks);
+      studioApp().highlight(String(action.blockId));
     }
 
     switch (action.command) {
@@ -740,7 +707,7 @@ module.exports = class Maze {
       return;
     }
 
-    this.animateAction_(actions[index], singleStep, timePerAction);
+    this.animateAction_(actions[index], timePerAction);
 
     var command = actions[index] && actions[index].command;
     var timeModifier = (this.controller.skin.actionSpeedScale && this.controller.skin.actionSpeedScale[command]) || 1;
@@ -776,7 +743,6 @@ module.exports = class Maze {
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now
         if (!singleStep || this.result === ResultType.SUCCESS) {
-          this.reenableCachedBlockStates_();
           studioApp().clearHighlighting();
         }
         this.displayFeedback_();

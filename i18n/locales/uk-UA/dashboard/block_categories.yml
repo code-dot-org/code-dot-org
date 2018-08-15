@@ -1,0 +1,18 @@
+uk:
+  data:
+    block_categories:
+      Actions: Дії
+      Loops: петлі
+      Functions: функції
+      Color: Колір
+      Math: Математика
+      Logic: Логіка
+      Variables: змінні
+      Conditionals: Умови
+      Events: Події
+      Text: Текст
+      Start: Початок
+      Booleans: Логічні вирази
+      test: тест
+      Name: Ім’я
+      Function: Функція

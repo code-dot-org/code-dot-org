@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:40:19.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Cracking the Code: Getting Started",
+    "markdown_instructions": "What is the difference is between “cracking” a code and “decrypting” a message?\r\n",
+    "encrypted_solution": "+DQbNUyWToQHfQZQon0lWSbrcx2oUJcdXpHaTT4tInvCKt4aXOCiSGK4bM+E\npnZ/7xctWlAxIDArpNgelE2xvZUa4fzpcT+JM/VLlMKE9U4mIzVR9Voz2E6D\ncIRGp4PffGiTGtTR3WoO/2pUGWK/wBVD1FsNcNCTyVL5frhyKJBdGLxYXZQv\nhtteX5LbcY8xq1K2dvwBdqCYykEJ42fglbadfoFC+IqiZ/bpmEGVFyBiPLc1\npOthj+Ag89zSdipVvgPbJG+Ow1jFZQ2IqlS4Ik+RkKnAK83ErkNdB1FSA7Mv\nfkbxrg62VcmWZxl2F9b0AB4TLuAZShRMa/T/U5Xd5w/ea/WgxIn8wik5fosK\nfNVH/hZShBLDdC4euV6uk5EthP4U2invKus0n/5FTD15c+d5yjCwOZdraXS/\nSHQXS1hbAdnH2iGo1MUDgVt2jh3KHO1/C/i14BjcuZNKWajwh6DpE2YUkImo\n96fN8iM7iyLWrtJ0f86/xuBVTbdok0NjVamFbyvDf865ecpBMZcvE2lE/eXe\nT4nTC3dQrAajVWKUgiZT571JnOuIbIHATerMXlOebNbaS6ZvLM3gQ7gyjYwI\nFbjQPXOcfHmxOT1/r1aJ0I6aMiExibbVt3kkv6fzZdk2IPHxJJQBwWJfNMjX\nbkcfPqbvbxd4QUzuk+UhNwWoxevQx32kx35IyjdJPRfuEzJjE9gJpvfAJTaQ\nsx7RWQ==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 2546,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

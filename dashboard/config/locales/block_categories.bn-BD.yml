@@ -1,0 +1,19 @@
+---
+bn:
+  data:
+    block_categories:
+      Actions: ক্রিয়া
+      Loops: চক্র
+      Functions: ফাংশনগুলি
+      Color: রং
+      Math: গণিত
+      Logic: যুক্তি
+      Variables: চলকগুলো
+      Conditionals: শর্তযুক্ত
+      Events: ঘটনাবলী
+      Text: পাঠ
+      Start: শুরু করুন
+      Booleans: বুলিয়ান
+      test: পরীক্ষা
+      Name: নাম
+      Function: ফাংশন

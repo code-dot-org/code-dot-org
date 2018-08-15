@@ -8,15 +8,6 @@
   %script{src: minifiable_asset_path('js/levelbuilder_gamelab.js')}
 
 .field
-  = f.label :text_mode_at_start, 'Text mode (showing code) at start'
-  = f.radio_button :text_mode_at_start, 'false'
-  = f.label :text_mode_at_start, 'Start with user preferred setting', :value => 'false'
-  = f.radio_button :text_mode_at_start, 'blocks'
-  = f.label :text_mode_at_start, 'Always start with blocks', :value => 'blocks'
-  = f.radio_button :text_mode_at_start, 'true'
-  = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
-
-.field
   = f.label :hide_animation_mode, 'Hide the Animation Tab (you can still seed a level with animations)'
   = boolean_check_box f, :hide_animation_mode
 
@@ -27,10 +18,6 @@
 .field
   = f.label :all_animations_single_frame, 'All animations should be a single frame. If it has multiple frames, only show the first frame as a still image.'
   = boolean_check_box f, :all_animations_single_frame
-
-.field
-  = f.label :show_d_pad
-  = boolean_check_box f, :show_d_pad
 
 .field
   = f.label :expand_debugger, 'Expand Debugger by Default'
@@ -92,6 +79,22 @@
   = selector
   = f.label 'Custom setup code'
   = f.text_field :custom_setup_code
+
+.field
+  = f.label :helper_libraries
+  %p
+    Select
+    %a.select_all{href: '#'} all
+    \/
+    %a.select_none{href: '#'} none
+    (shift-click or cmd-click to select multiple).
+  = f.select :helper_libraries, (Library.distinct.pluck(:name) + (@level.helper_libraries || [])).uniq.sort, {}, {multiple: true}
+
+.field
+  = f.label 'Validation code'
+  %p
+    This is a snippet of javascript that is run after every draw loop. Call levelSuccess() in here to stop the level as a success. You can also pass a number into levelSuccess() to give the student a non-perfect test result (see <a href="https://github.com/code-dot-org/code-dot-org/blob/101fbfd2dcdd635d7359e991559ba782f9fd00be/apps/src/constants.js#L33-L106">TestResults</a> for the list of valid test results). There is also a `validationProps` object that you can stick arbitrary properties on to track state across draw loops.
+  = f.text_area :validation_code
 
 .field
   =f.label 'Animations are paused by default'

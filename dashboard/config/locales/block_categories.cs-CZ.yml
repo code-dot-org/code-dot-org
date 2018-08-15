@@ -1,0 +1,19 @@
+---
+cs:
+  data:
+    block_categories:
+      Actions: Akce
+      Loops: Smyčky
+      Functions: Funkce
+      Color: Barva
+      Math: Matematika
+      Logic: Logika
+      Variables: Proměnné
+      Conditionals: Podmínky
+      Events: Události
+      Text: text
+      Start: Spustit
+      Booleans: Logické hodnoty
+      test: otestuj
+      Name: Jméno
+      Function: Funkce

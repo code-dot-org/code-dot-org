@@ -38,7 +38,6 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Challenge: Nightfall\r\n\r\nThink you've got drawing with counters down? Try this challenge.\r\n\r\nThe color block can take a 4th input that controls the opacity of the color. You can click the arrows on the side of the color block to expand this 4th input.\r\n\r\n![](https://images.code.org/7844f8cb46eade7cec452b7a4d98124b-image-1484964689007.10.08 PM.png)\r\n\r\n# Do This\r\n\r\nThis is your same sunset animation from before. Can you make the scene slowly change to night?\r\n\r\n![](https://images.code.org/b055142110b0d0ed092d6496447aad6e-image-1463079830043.gif)\r\n\r\n",

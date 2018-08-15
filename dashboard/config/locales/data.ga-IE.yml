@@ -1,4 +1,5 @@
-"ga":
+---
+ga:
   data:
     game:
       name:
@@ -18,7 +19,7 @@
         Farmer2: An Feirmeoir 2
         Unplug8: Teibíocht
         Artist4: An tEalaíontóir 4
-        Unplug9: Códáil Sealaíochta
+        Unplug9: Códáil sealaíochta
         Farmer3: An Feirmeoir 3
         Unplug10: An tIdirlíon
         Artist5: An tEalaíontóir 5
@@ -368,8 +369,8 @@
         studio_c3_story_4: An féidir leat ríomhchlár a scríobh a aistríonn an madra
           go dtí an cat, agus a thugann ar an gcat "dia dhuit" a rá nuair a shroicheann
           an madra é?
-        studio_c3_story_5: An féidir leat bloc a chur leis ionas go mbeidh an t-ochtapas
-          sona sásta?
+        studio_c3_story_5: An féidir leat bloc a chur leis an gcód ionas go mbeidh
+          an t-ochtapas sona sásta?
         studio_c3_story_6: Scríobh do scéal féin. Nuair a bheidh tú críochnaithe,
           cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil ar a nguthán.
         studio_c3_game_1: An féidir leat ríomhchlár a scríobh a thugann ar an ochtapas
@@ -511,7 +512,7 @@
           an cat?
         studio_k1_4: Aistrigh an madra go dtí an cat, ansin tabhair ar an gcat "dia
           dhuit" a rá nuair a shroicheann an madra é.
-        studio_k1_5: An féidir leat bloc a chur leis ionas go mbeidh an t-ochtapas
+        studio_k1_5: An féidir leat bloc a chur leis an gcód ionas go mbeidh an t-ochtapas
           sona sásta?
         studio_k1_6: Inis do scéal féin! Aistrigh an cat agus an madra timpeall an
           scáileáin, agus déan comhrá eatarthu.
@@ -580,7 +581,7 @@
         C1_zuck_repeat_loop: 'Cathair Ghríobháin: Lúba'
         C1_bee_loops: 'Beach: Lúba'
         C1_maze_loops: 'Cathair Ghríobháin: Lúba'
-        C1_playlab_storytelling: 'Súgradh is Dáiríre: Cruthaigh Scéal'
+        C1_playlab_storytelling: 'Spraotharlann: Cruthaigh Scéal'
         C1_planting_seed: Síol a Chur
         C1_building_foundation: Dúshraith a Leagan
         C1_going_places_safely: Ag Taisteal Slán Sábháilte
@@ -596,7 +597,7 @@
         C2_graph_paper: Ríomhchlárú ar Ghrafpháipéar
         C2_conditionals_with_cards: Coinníollacha
         C2_binary_bracelets: Bráisléid Dhénártha
-        C2_relay_programming: Códáil Sealaíochta
+        C2_relay_programming: Códáil sealaíochta
         C2_paper_airplanes: Eitleáin Pháipéir
         C2_digital_footprint: Do Lorg Digiteach
         C2_digital_footprint_v2: Do Lorg Digiteach
@@ -637,20 +638,17 @@
         C4_unplugged_forloops: Lúba "Do Gach"
         C4_unplugged_parameters: Ceapadh Ceoil le Paraiméadair
         C4_unplugged_binary: Dénártha
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Uillinneacha in Ealaíontóir
         CSF_collector_k1_blocks: 'Buntús na Ríomheolaíochta: An Bailitheoir'
         CSF_collector_repeat_loops: 'An Bailitheoir: Lúbanna "Athdhéan"'
         CSF_collector_text_blocks: 'Buntús na Ríomheolaíochta: An Bailitheoir'
         CSF_create_functions: Cruthaigh Feidhmeanna
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Tá an Ríomheolaíocht Fíorthábhachtach
         CSF_maze_intro_k1_blocks: Eolas bunúsach ar an Stiúideo Códála
         CSF_maze_intro_text_blocks: Eolas bunúsach ar an Stiúideo Códála
         CSF_my_robotic_friends: Mo Chairde Róbatacha
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_Power_of_Words: Cumhacht na Teanga
+        CSF_Super_Digital_Citizen: Sárshaoránach Digiteach
         CSF_stevie_big_project: Stiofán agus an Tionscadal Mór
         CSF_unspotted_bugs: Fabhtanna nár tugadh faoi deara
         CSF_zuck_loops_short: Lúbanna "Athdhéan"
@@ -664,96 +662,34 @@
         infinity_playlab_intro: Súgradh is Dáiríre - Réamhrá
         infinity_playlab_events: Súgradh is Dáiríre - Teagmhais
         infinity_playlab_repeat_forever: Súgradh is Dáiríre - Athdhéan go deo
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: Cad is Ríomhaire ann, i ndáiríre?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
+        csd_concept_how_computers_work: 'An chaoi a n-oibríonn ríomhairí: Brollach'
+        csd_concept_computer: 'An chaoi a n-oibríonn ríomhairí: Cad is ríomhaire ann,
+          i ndáiríre?'
+        csd_concept_binary_data: 'An chaoi a n-oibríonn ríomhairí: Dénárchódú agus
+          Sonraí'
+        csd_concept_circuits_logic: 'An chaoi a n-oibríonn ríomhairí: Ciorcaid agus
+          Loighic'
+        csd_concept_memory_cpu_input_output: 'An chaoi a n-oibríonn ríomhairí: Cuimhne,
+          LAP, Ionchur agus Aschur'
+        csd_concept_hardware_software: 'An chaoi a n-oibríonn ríomhairí: Crua-earraí
+          agus Bogearraí'
         csd_concept_search: Conas a Oibríonn Inneall Cuardaigh
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
+        csd_external_amazon_data: An chaoi a n-úsáideann Amazon mórshonraí i gcórais
+          mholta chun do shaol a athrú
+        csd_external_netflix_data: Cén chaoi a molann Netflix scannáin agus cláir
+          theilifíse duit?
+        csd_external_waze_data: Cén fáth a bhfuil go leor daoine go hiomlán gafa le
+          Waze?
         csd_gamelab_animation_tab: An Cluaisín Beochana
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Treoluas
         csd_weblab_intro_1: Eolas bunúsach ar Shaotharlann an Ghréasáin - Cuid a haon
         csd_weblab_intro_2: Eolas bunúsach ar Shaotharlann an Ghréasáin - Cuid a dó
         csd_weblab_css_1: Buntús CSS - Cuid a haon
         csd_weblab_css_2: Buntús CSS - Cuid a dó
         csd_weblab_intro_3: Eolas bunúsach ar Shaotharlann an Ghréasáin - Cuid a trí
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Buneolas ar Fheidhmeanna
         csp_applab_functions_parameters: Feidhmeanna a ghlacann le Paraiméadair
         csp_applab_loops: Lúba
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
-        hoc2015_preview_blocks: Make your own game blocks
-        hoc2015_preview_typing: Make your own game typing
-        hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Tóg do Réaltra Féin le Cód - Réamhrá'
         starwars_typing: 'Star Wars: Tóg do Réaltra Féin le Cód - JavaScript'
         starwars_events: 'Star Wars: Tóg do Réaltra Féin le Cód - Teagmhais'
@@ -777,47 +713,43 @@
         mc_2016_events: Uair Chódála Minecraft - Teagmhais
         mc_2016_spawn: Uair Chódála Minecraft - Sceitheadh
         mc_2016_congrats: Uair Chódála Minecraft - Comhghairdeas
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
+        applab_hoc_welcome: Uair Chódála sa tSaotharlann Aipeanna - Fáilte
+        applab_hoc_setproperty: Uair Chódála sa tSaotharlann Aipeanna - setProperty
+        applab_hoc_onevent: Uair Chódála sa tSaotharlann Aipeanna - onEvent
+        applab_hoc_designmode: Uair Chódála sa tSaotharlann Aipeanna - Mód Deartha
+        applab_hoc_share: Uair Chódála sa tSaotharlann Aipeanna - Comhroinnt
+        mc_2017_agent_intro: Uair Chódála Minecraft - An Gníomhaire
+        mc_2017_repeat: Uair Chódála Minecraft - Lúba Athdhéanta
+        mc_2017_functions: Uair Chódála Minecraft - Feidhmeanna
         mc_2017_congratulations: Uair Chódála Minecraft - Comhghairdeas
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
+        mc_2017_puzzle_1: Uair Chódála Minecraft - An Gníomhaire
+        mc_2017_puzzle_3: Uair Chódála Minecraft - Lúba Athdhéanta
+        mc_2017_puzzle_8: Uair Chódála Minecraft - Feidhmeanna
+        mc_2017_puzzle_12: Uair Chódála Minecraft - Saorimirt
+        hint_videos_d_11_3_first: 'Físeáin Chabhracha: D.11.3 Tús'
+        hint_videos_d_11_3_last: 'Físeáin Chabhracha: D.11.3 Deireadh'
+        hint_videos_d_11_4_first: 'Físeáin Chabhracha: D.11.4 Tús'
+        hint_videos_d_11_4_last: 'Físeáin Chabhracha: D.11.4 Deireadh'
+        hint_videos_d_11_5_first: 'Físeáin Chabhracha: D.11.5 Tús'
+        hint_videos_d_11_5_last: 'Físeáin Chabhracha: D.11.5 Deireadh'
+        hint_videos_d_11_6_first: 'Físeáin Chabhracha: D.11.6 Tús'
+        hint_videos_d_11_6_last: 'Físeáin Chabhracha: D.11.6 Deireadh'
+        hint_videos_d_11_7_first: 'Físeáin Chabhracha: D.11.7 Tús'
+        hint_videos_d_11_7_last: 'Físeáin Chabhracha: D.11.7 Deireadh'
+        hint_videos_d_11_9_first: 'Físeáin Chabhracha: D.11.9 Tús'
+        hint_videos_d_11_9_last: 'Físeáin Chabhracha: D.11.9 Deireadh'
+        hint_videos_d_11_11_first: 'Físeáin Chabhracha: D.11.11 Tús'
+        hint_videos_d_11_11_last: 'Físeáin Chabhracha: D.11.11 Deireadh'
+        applab_intro_welcome: An tSaotharlann Aipeanna - Tús Maith
+        applab_intro_events: An tSaotharlann Aipeanna - Idirghníomhaíocht
+        applab_intro_sounds: An tSaotharlann Aipeanna - Íomhánna agus Fuaimeanna
+        applab_intro_designmode: An tSaotharlann Aipeanna - An Mód Deartha
+        applab_intro_share: An tSaotharlann Aipeanna - Foilsigh d'Aip
+        CSF_skinOverview_Harvester: An Buainteoir
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_harvester_skinOverview_K-1: An Buainteoir
+        CSF_loops_AB: Lúba
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile

@@ -19,8 +19,8 @@
     = render file: Rails.root.join('..', 'shared', 'haml', 'answerdash.haml') if view_options[:answerdash]
     = javascript_include_tag 'application'
     = javascript_include_tag "js/#{js_locale}/common_locale"
+    = javascript_include_tag '//cdn.optimizely.com/js/400912536.js' if Rails.env.production?
     %script{src: minifiable_asset_path('js/code-studio-common.js')}
-    %script{src: minifiable_asset_path('js/code-studio.js')}
     = csrf_meta_tags
     = yield :head
     - if content_for? :og
@@ -35,6 +35,17 @@
       = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
+
+    - gdpr_data = {}
+    - if current_user
+      - already_accepted = current_user.data_transfer_agreement_accepted == true
+      - force_eu = request.params['force_in_eu'].present?
+      - gdpr_data[:show_gdpr_dialog] = (request.gdpr? || force_eu) && !already_accepted
+      - gdpr_data[:current_user_id] = current_user.id
+
+    #gdpr-dialog
+
+    %script{src: minifiable_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json}}
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]
@@ -75,5 +86,7 @@
       - elsif !view_options[:small_footer]
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
       = render partial: 'shared/maybe_set_hoc_secret'
+
+    = render file: Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml'), locals: {dashboard: true}
 
     = yield :body_scripts

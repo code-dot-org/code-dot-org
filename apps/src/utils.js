@@ -756,3 +756,15 @@ export function createHiddenPrintWindow(src) {
     iframe[0].contentWindow.document.write(`<img src="${data}" style="border: 1px solid #000;" onload="if (document.execCommand('print', false, null)) {  } else { window.print(); }"/>`);
   });
 }
+
+export function calculateOffsetCoordinates(element, clientX, clientY) {
+  const rect = element.getBoundingClientRect();
+  return {
+    x: Math.round((clientX - rect.left) * element.offsetWidth / rect.width),
+    y: Math.round((clientY - rect.top) * element.offsetHeight / rect.height),
+  };
+}
+
+export function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}

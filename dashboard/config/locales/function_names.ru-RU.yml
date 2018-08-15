@@ -1,0 +1,29 @@
+---
+ru:
+  data:
+    function_names:
+      x: x
+      draw a circle: нарисовать круг
+      draw a hexagon: нарисовать шестиугольник
+      draw a flower: нарисовать цветок
+      draw a square: нарисовать квадрат
+      draw a snowflake: нарисовать снежинку
+      draw a tree: нарисовать дерево
+      draw a triangle: нарисовать треугольник
+      draw a house: нарисовать дом
+      draw a star: нарисовать звезду
+      do something: выполнить что-то
+      jump: прыгнуть
+      set score: задать счет
+      get nectar: собрать нектар
+      test: тест
+      diamond: алмаз
+      move: переместить
+      move right: Переместить вправо
+      move up: переместить вверх
+      move down: Переместить вниз
+      move left: переместить влево
+      collect: собрать
+      turn left: повернуть налево
+      move forward: двигаться вперед
+      turn right: повернуть направо

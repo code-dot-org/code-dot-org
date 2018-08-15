@@ -39,7 +39,6 @@
       "randomNumber_min_max": null,
       "comment_Math": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Experiment with the Draw Loop\r\n\r\nHere's a simple app that we've slowed down by changing the _frame rate_ (the number of times the draw loop is run each second).\r\n\r\nWith a neighbor:\r\n\r\n* Read through the code and discuss what you think it will do\r\n* Run and observe the program\r\n* Try reordering the blocks to see how it impacts the drawing\r\n\t* Can you make the rectangle appear above the circle?\r\n    * What happens if you place one of the commands before or after the draw loop?\r\n    * Try adding some new shapes to the program",

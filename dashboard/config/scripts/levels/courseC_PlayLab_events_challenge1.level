@@ -52,6 +52,7 @@
     "markdown_instructions": "Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. This will make your game more challenging and fun!\r\n\r\nPlay the game and move Waddles with the arrows until you score enough points. Waddles must be moved to the `middle left` position of the screen to complete this challenge.",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/0b5d06628b7510904ee392a94065352a=development/2069.png",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 2,
     "contained_level_names": null
   },
   "published": true,

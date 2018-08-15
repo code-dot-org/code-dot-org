@@ -1,0 +1,70 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:40:36.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "moveForward": null,
+      "turnLeft": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Debug the program by verifying your IDs are being referenced properly. (Click to see full instructions)",
+    "start_blocks": "onEvent(\"fwdBtn\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"leftbtn\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "HkFAuxcHk7FrpOQl/NluL//zhJexv2BrW/GPj3EreveCfk9vsPDRo5c/dpNy\niy1Y\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"fwdBtn\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 15px; top: 10px;\">Go Forth!</button><button id=\"leftBtn\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 130px; top: 10px;\">Turn Left!</button></div></div>",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "markdown_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\nTry another one! -- This one is trickier, but very common.\r\n\r\n1. **Run the program** and inspect the messages in the Debug Console for clues.\r\n2. **Investigate** - track down what the root of the problem might be.\r\n3. **Fix it** the program and correct the errors so that it works as intended.\r\n4. **Run the program** and verify that both buttons have the intended functionality.\r\n5. **Repeat as necessary** until the program works as intended\r\n\r\n<details><summary>Hint? [click here]</summary>\r\n\r\n<li>Remember: IDs are **case-sensitive**!!!</li>\r\n<li>The error is with the id: **left**[**B/b**]**tn**</li>\r\n</details>\r\n",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "true",
+    "parent_level_id": 6717,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

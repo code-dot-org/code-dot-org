@@ -7,7 +7,7 @@
 require_relative 'i18n_script_utils'
 
 def sync_up
-  exec "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} upload sources"
+  system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} upload sources"
 end
 
 sync_up if __FILE__ == $0

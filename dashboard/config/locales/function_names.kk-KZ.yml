@@ -1,0 +1,29 @@
+---
+kk:
+  data:
+    function_names:
+      x: x
+      draw a circle: Шеңбер салу
+      draw a hexagon: алтыбұрыш салу
+      draw a flower: гүл салу
+      draw a square: төртбұрыш салу
+      draw a snowflake: қар бүршігін салу
+      draw a tree: ағаш салу
+      draw a triangle: үшбұрыш салу
+      draw a house: үй салу
+      draw a star: жұлдыз салу
+      do something: Бірнәрсе істе
+      jump: секіру
+      set score: ұпайды орнату
+      get nectar: шырынды алу
+      test: таңдау
+      diamond: алмас
+      move: жылжы
+      move right: оңға жүру
+      move up: жоғары жүру
+      move down: төмен жүру
+      move left: солға жүру
+      collect: жинау
+      turn left: солға бұрылу
+      move forward: алдыға қозғалу
+      turn right: оңға бұрылу

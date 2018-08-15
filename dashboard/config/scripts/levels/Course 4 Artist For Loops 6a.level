@@ -35,6 +35,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "discard_background": "false",
+    "hint_prompt_attempts_threshold": 9,
     "contained_level_names": null
   },
   "published": true,

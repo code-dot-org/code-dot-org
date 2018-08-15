@@ -1,0 +1,20 @@
+name 'CSD-U5-SFLP Representing Numbers Part 1_2018'
+display_name 'Lesson Overview'
+
+markdown <<MARKDOWN
+# Overview
+
+This lesson introduces the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system, the class turns bits "on" or "off" by turning cards face up and face down, then observes the numbers that result from these different patterns.  Eventually, the pattern is extended to a generic 4-bit system.
+
+## Resources
+* [Representing Numbers - Activity Guide](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
+* [Number Cards - Manipulative](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[key]
+
+* Representing Numbers - Exemplar ([Google Doc](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+[/key]
+MARKDOWN

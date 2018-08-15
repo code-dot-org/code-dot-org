@@ -74,16 +74,14 @@ class Pardot
     failed_prospect_ids = []
 
     prospect_ids.each do |prospect_id|
-      begin
-        url = "#{PARDOT_PROSPECT_DELETION_URL}/#{prospect_id}"
-        post_request_with_auth url
-      rescue RuntimeError => e
-        if e.message =~ /Pardot request failed with HTTP/
-          failed_prospect_ids << prospect_id
-          next
-        else
-          raise e
-        end
+      url = "#{PARDOT_PROSPECT_DELETION_URL}/#{prospect_id}"
+      post_request_with_auth url
+    rescue RuntimeError => e
+      if e.message =~ /Pardot request failed with HTTP/
+        failed_prospect_ids << prospect_id
+        next
+      else
+        raise e
       end
     end
 
@@ -229,7 +227,7 @@ class Pardot
       # Do special handling of a few fields
       apply_special_fields(contact_rollup, prospect)
 
-      # Add this prosect to the batch.
+      # Add this prospect to the batch.
       prospects << prospect
 
       # As a sniff test, build the URL that would result from our current
@@ -271,6 +269,13 @@ class Pardot
       dest[:opted_out] = true
       dest[:is_do_not_email] = true
     end
+
+    # The custom Pardot db_Opt_In field has type "Dropdown" with permitted values "Yes" or "No".
+    # Explicitly check for the source opt_in field to be true or false, because nil is 'falsey'
+    # and it's a little misleading to set a value for db_Opt_In in Pardot when there's no information either
+    # way from the user in our database.
+    dest[:db_Opt_In] = 'Yes' if src[:opt_in] == true
+    dest[:db_Opt_In] = 'No' if src[:opt_in] == false
 
     # If this contact has a dashboard user ID (which means it is a teacher
     # account), mark that in a Pardot field so we can segment on that.

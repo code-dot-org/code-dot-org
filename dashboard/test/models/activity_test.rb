@@ -1,6 +1,6 @@
 require 'test_helper'
 
-require 'aws-sdk'
+require 'aws-sdk-sqs'
 require 'fake_sqs/test_integration'
 require 'securerandom'
 require 'timecop'

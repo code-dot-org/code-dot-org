@@ -1,4 +1,5 @@
-"sk":
+---
+sk:
   devise:
     confirmations:
       confirmed: Vaša e-mailová adresa bola úspešne potvrdená.
@@ -51,7 +52,6 @@
         adresu.
       updated: Úspešne ste aktualizovali Vaše konto.
     sessions:
-      signed_in: ''
       signed_out: Úspešne odhlásení.
     unlocks:
       send_instructions: O niekoľko minúť obdržíte email s pokynmi, ako odomknúť účet.

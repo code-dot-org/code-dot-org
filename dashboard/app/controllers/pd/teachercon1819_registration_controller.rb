@@ -2,7 +2,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   include Pd::Application::RegionalPartnerTeacherconMapping
 
   load_and_authorize_resource :application,
-    class: 'Pd::Application::ApplicationBase', find_by: :application_guid,
+    class: 'Pd::Application::WorkshopAutoenrolledApplication', find_by: :application_guid,
     id_param: :application_guid, except: [:partner, :partner_submitted, :lead_facilitator, :lead_facilitator_submitted]
 
   # here we handle the CanCan error manually so that we can present
@@ -70,12 +70,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    regional_partner = current_user.regional_partners.find_by(group: 3)
-    unless regional_partner
-      render :only_group_3
-      return
-    end
-
+    regional_partner = current_user.regional_partners.first
     teachercon = get_teachercon regional_partner
 
     unless teachercon

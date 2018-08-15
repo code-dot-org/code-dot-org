@@ -1,0 +1,29 @@
+---
+ne:
+  data:
+    function_names:
+      x: x
+      draw a circle: draw a circle
+      draw a hexagon: draw a hexagon
+      draw a flower: draw a flower
+      draw a square: draw a square
+      draw a snowflake: draw a snowflake
+      draw a tree: draw a tree
+      draw a triangle: draw a triangle
+      draw a house: draw a house
+      draw a star: draw a star
+      do something: do something
+      jump: jump
+      set score: set score
+      get nectar: get nectar
+      test: test
+      diamond: diamond
+      move: चल्नु
+      move right: move right
+      move up: move up
+      move down: move down
+      move left: move left
+      collect: collect
+      turn left: turn left
+      move forward: move forward
+      turn right: turn right

@@ -28,7 +28,6 @@
       "comment_GameLab": null,
       "comment_Sprites": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Resizing with Scale\r\n\r\nIn the _Sprites_ drawer of the toolbox, you'll see a new block called `sprite.scale`. It lets you change the size of a sprite in relation to its original size. `sprite.scale = 1` is the normal size. `sprite.scale = 0.5` makes your sprite half as big, while `sprite.scale = 2` makes it twice as big.\r\n\r\n# Do This\r\n\r\nThe program should already include your newly uploaded image, but it's probably not the _perfect_ size. Use `sprite.scale` to change the size of your `kite` sprite.\r\n\r\n_Hint: the order of your code matters! You need to add `sprite.scale` **after** you've created the sprite, but **before** you draw the sprite with `drawSprites()`. For clarity, try to keep all of your sprite code together at the top of your program._",

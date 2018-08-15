@@ -1,9 +1,9 @@
-"es-MX":
+---
+es-MX:
   data:
     course:
       name:
-        csp:
-          title: Principios de Ciencias de la Computación
+        csp-2017:
           description_student: En otoño 2016, el College Board lanzó su más reciente
             curso AP, Principios de Ciencias de la Computación. El curso introduce
             a los estudiantes a los conceptos fundamentales de Ciencias de la computación
@@ -12,31 +12,37 @@
             el campo de Ciencias de la Computación y atraer a quienes tradicionalmente
             son subrepresentados en el con herramientas computacionales esenciales
             y oportunidades multidisciplinarias.
-          description_teacher: En otoño de 2016, el College Board lanzó su más reciente
+          description_teacher: En otoño 2016, el College Board lanzó su más reciente
             curso AP, Principios de Ciencias de la Computación. El curso introduce
             a los estudiantes a los conceptos fundamentales de Ciencias de la computación
             y desafía a explorar cómo la computación y la tecnología pueden impactar
-            el mundo. El Programa AP lo diseñó con el objetivo de crear líderes en
+            el mundo. El programa AP lo diseñó con el objetivo de crear líderes en
             el campo de Ciencias de la Computación y atraer a quienes tradicionalmente
             son subrepresentados en el con herramientas computacionales esenciales
             y oportunidades multidisciplinarias.
           description_short: Aprende conceptos fundamentales de ciencias de la computación.
-        csd:
-          title: Computer Science Discoveries
-          description_student: CS Discoveries es un curso introductorio que permite
-            a los estudiantes crear artefactos auténticos y utilizar las Ciencias
-            de la computación como un medio para la creatividad, comunicación, resolución
-            de problemas y diversión.
-          description_teacher: CS Discoveries es un curso introductorio que permite
-            a los estudiantes crear artefactos auténticos y utilizar las Ciencias
-            de la computación como un medio para la creatividad, comunicación, resolución
-            de problemas y diversión.
-          description_short: Un curso introductorio de Ciencias de la Computación
-            que permite a los estudiantes crear artefactos auténticos.
         allthethingscourse:
           title: allthethingscourse
           description_short: Este es un curso para allthethings
           description_student: Este es un curso para allthethings y cuenta con una
-            descripción más larga para los estudiantes
+            descripción más extensa para los estudiantes
           description_teacher: Este es un curso para allthethings y cuenta con una
-            descripción más larga para los profesores
+            descripción más extensa para los profesores
+        csp-2018:
+          description_short: Aprende conceptos fundamentales de ciencias de la computación.
+          description_student: En otoño 2016, el College Board lanzó su más reciente
+            curso AP, Principios de Ciencias de la Computación. El curso introduce
+            a los estudiantes a los conceptos fundamentales de Ciencias de la computación
+            y desafía a explorar cómo la computación y la tecnología pueden impactar
+            el mundo. El programa AP lo diseñó con el objetivo de crear líderes en
+            el campo de Ciencias de la Computación y atraer a quienes tradicionalmente
+            son subrepresentados en el con herramientas computacionales esenciales
+            y oportunidades multidisciplinarias.
+          description_teacher: En otoño 2016, el College Board lanzó su más reciente
+            curso AP, Principios de Ciencias de la Computación. El curso introduce
+            a los estudiantes a los conceptos fundamentales de Ciencias de la computación
+            y desafía a explorar cómo la computación y la tecnología pueden impactar
+            el mundo. El programa AP lo diseñó con el objetivo de crear líderes en
+            el campo de Ciencias de la Computación y atraer a quienes tradicionalmente
+            son subrepresentados en el con herramientas computacionales esenciales
+            y oportunidades multidisciplinarias.

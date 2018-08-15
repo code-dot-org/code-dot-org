@@ -1,4 +1,3 @@
-# coding: utf-8
 require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
@@ -84,6 +83,11 @@ module ApplicationHelper
     if notice.present?
       ret += content_tag(:div, flash.notice, {class: 'alert alert-success'})
       flash.notice = nil
+    end
+
+    if flash[:info].present?
+      ret += content_tag(:div, flash[:info], {class: 'alert alert-info'})
+      flash[:info] = nil
     end
 
     if alert.present?

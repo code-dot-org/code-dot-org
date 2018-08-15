@@ -1,0 +1,17 @@
+hi:
+  data:
+    block_categories:
+      Actions: क्रियाएँ
+      Loops: फंदे
+      Functions: कार्य
+      Color: रंग
+      Math: गणित
+      Logic: तर्क
+      Variables: चर
+      Conditionals: शर्तें
+      Events: घटनाएँ
+      Text: पाठ
+      Start: शुरू करें
+      test: परिक्षा
+      Name: नाम
+      Function: कार्य

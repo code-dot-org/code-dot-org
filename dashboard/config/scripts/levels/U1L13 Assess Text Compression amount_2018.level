@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:35:34.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Is this a good compression rate?",
+    "markdown_instructions": "Here's the same compressed text that you saw on the last level, but now we also see the size of the original, uncompressed text. On the previous level you reconstructed the text by tracing back through the dictionary. Now we're going to think about if this is a \"good\" compression rate.\r\n\r\n![](https://images.code.org/ffb941527193cd04c02ff2ce392d02e6-image-1439479301236.20.23 AM.png)\r\n\r\nIn the text box below, answer the following two questions:\r\n\r\n1. What is the compression rate? The compression rate says by how much the text was compressed from the original as a percentage. Don't forget that the compressed version of the text is the compressed text size + dictionary size. (see note below) \r\n\r\n2. Is this a \"good\" compression rate? Why or why not? \r\n\r\n\r\n(*NOTE: to calculate, the compression rate is slightly different than simply stating the compressed size as a fraction of the original. It's just opposite sides of the same coin.  For example: if you find the compressed text + dictionary size is 70% of the original, that means the text was compressed by 30%.*)\r\n",
+    "encrypted_solution": "qMRPgTIfFnwLgQEuysXvEvGEINZL7I8SEzvDOe4P+JFok/cnO91fvwlOMqXE\nka0s2OAUbxeks2OAz6HOGT/03j8ZB74K0XzIxtuInKRt63Sk4s8oKiOoavCP\nNLHNg0frEVUQi0cQ5bRL3pndREajF+Tqe09sPN/Y0/Y9oURMb9sKJ9hiZQ1w\n1sBmzmHxoZxHSJS7UOqNrKKEHVFI5OfHAWmkdd6UMoCQmUJyfEegB0LRjUHr\n7T+L4bk0dYlVmAOVkj6CSNCNqsxm1OMDexgq5kRcIBFHIeffNxMvNvYJKN5B\nNOAz6t8zWILOa1Do6qvKeN9sdmYNstArH7+dk2WrTd4O1Lf/czEZe19PYB31\nvdnK2i4c1Y/jiEdtTPwfe5RXYXbNX3P0bp2IMUVgxhmQQsLRlqtrhzkit3ni\nK7E/GydBtP8Ik+1norTOqgx9lQfLWMQ0PAx6A0do0eEO8qpfuMPhHd6ExUpZ\nKaap0zeuc7GSi0evMKHGPJEKDq9P2NtVA70oVq3YceQvRhV14d5shUuB0+ua\nWDiVAj1T3cTCQVda5mdlaUUvcXdqQAOhH1/fszdNcsXYkfVyBqqy5/UskMSz\nfZbR5ZMf3WfjO82d1O1FB7RdsY9NnwZOuczogOrORCYJwkrmDoezQPwPDFAF\nidk/L8F/YBSxWlvp7BESs47lXj76kI7k2as477sXDHSbE5mcKfFKP2VW6eWL\nSzoIuyVD8jDsDQAvRY+x/aSQHJ/Y5OMIsUah5rHhBCsghDDt\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2936,
+    "name_suffix": "_2018",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-31 14:10:17 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-07-31 14:10:53 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-07-31 14:13:29 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-07-31 14:14:45 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-07-31 14:15:39 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-07-31 14:17:42 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-07-31 14:19:32 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-07-31 14:20:18 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

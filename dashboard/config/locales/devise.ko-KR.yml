@@ -1,4 +1,5 @@
-"ko":
+---
+ko:
   devise:
     confirmations:
       confirmed: 이메일 확인이 완료되었습니다.
@@ -41,7 +42,6 @@
         주세요.
       updated: 계정 정보가 수정되었습니다.
     sessions:
-      signed_in: ''
       signed_out: 로그아웃 되었습니다.
     unlocks:
       send_instructions: 계정 잠김 해제 메일이 전송되었습니다.

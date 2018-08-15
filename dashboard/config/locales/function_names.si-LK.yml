@@ -1,0 +1,28 @@
+---
+si:
+  data:
+    function_names:
+      x: x
+      draw a circle: රවුමක් අඳින්න
+      draw a hexagon: ෂඩස්‍රයක් අඳින්න
+      draw a flower: මලක් අඳින්න
+      draw a square: සමචතුරස්‍රයක් අඳින්න
+      draw a snowflake: හිම පියල්ලක් අඳින්න
+      draw a tree: ගසක් අඳින්න
+      draw a triangle: ත්‍රිකොණයක් අඳින්න
+      draw a house: ගෙයක් අඳින්න
+      draw a star: තරුවක් අඳින්න
+      do something: යමක් කරන්න
+      jump: පනින්න
+      set score: ලකුණු පෙන්වන්න
+      get nectar: මල්පැණි ලබාගන්න
+      test: පරික්ෂාව
+      move: යන්න
+      move right: දකුණට චලනය කරන්න
+      move up: ඉහළට චලනය කරන්න
+      move down: පහළට චලනය කරන්න
+      move left: දකුණට චලනය කරන්න
+      collect: එකතු කරන්න
+      turn left: වමට හැරෙන්න
+      move forward: ඉදිරියට යන්න
+      turn right: දකුණට හැරෙන්න

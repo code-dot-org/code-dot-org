@@ -6,17 +6,30 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
 
   # GET /sections/<section_id>/students
   def index
-    passing_level_counts = UserLevel.count_passed_levels_for_users(@section.students.pluck(:id))
-    render json: (@section.students.map do |student|
-      student.summarize.merge(
-        completed_levels_count: passing_level_counts[student.id] || 0,
+    summaries = @section.students.map do |student|
+      # Student depends on this section for login if student's account is
+      # teacher managed and only belongs to the one section.
+      student.summarize.merge(depends_on_this_section_for_login:
+        student.teacher_managed_account? &&
+          student.sections_as_student.size == 1
       )
-    end)
+    end
+    render json: summaries
   end
 
-  # PATCH /sections/<section_id>/student/<id>/update
+  # GET /sections/<section_id>/students/completed_levels_count
+  def completed_levels_count
+    passing_level_counts = UserLevel.count_passed_levels_for_users(@section.students.pluck(:id))
+    completed_levels_count_per_student = {}
+    @section.students.each do |student|
+      completed_levels_count_per_student[student.id] = passing_level_counts[student.id] || 0
+    end
+    render json: completed_levels_count_per_student
+  end
+
+  # PATCH /sections/<section_id>/students/<id>
   def update
-    return render_404 unless @student
+    @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 
     if @student.update(student_params)
       render json: @student.summarize
@@ -36,20 +49,18 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     new_students = []
     ActiveRecord::Base.transaction do
       params[:students].each do |student|
-        begin
-          new_student = User.create!(
-            user_type: User::TYPE_STUDENT,
-            provider: User::PROVIDER_SPONSORED,
-            name: student["name"],
-            age: student["age"],
-            gender: student["gender"],
-            sharing_disabled: !!student["sharing_disabled"],
-          )
-          @section.add_student(new_student)
-          new_students.push(new_student.summarize)
-        rescue ActiveRecord::RecordInvalid => e
-          errors << e.message
-        end
+        new_student = User.create!(
+          user_type: User::TYPE_STUDENT,
+          provider: User::PROVIDER_SPONSORED,
+          name: student["name"],
+          age: student["age"],
+          gender: student["gender"],
+          sharing_disabled: !!student["sharing_disabled"],
+        )
+        @section.add_student(new_student)
+        new_students.push(new_student.summarize)
+      rescue ActiveRecord::RecordInvalid => e
+        errors << e.message
       end
       raise ActiveRecord::Rollback if errors.any?
     end
@@ -82,6 +93,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
       :gender,
       :name,
       :sharing_disabled,
+      :password,
     )
   end
 end

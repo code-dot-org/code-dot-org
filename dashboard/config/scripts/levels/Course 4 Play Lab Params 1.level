@@ -42,10 +42,11 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "min_workspace_height": "600",
-    "contained_level_names": null,
     "instructions_important": "true",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "hint_prompt_attempts_threshold": 2,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

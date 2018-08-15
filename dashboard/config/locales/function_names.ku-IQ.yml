@@ -1,0 +1,12 @@
+---
+ku:
+  data:
+    function_names:
+      draw a circle: بازنێك دروست بكە
+      draw a hexagon: شەش لا دروست بكە
+      draw a flower: گوڵێك دروست بكە
+      draw a house: ماڵێك دروست بكە
+      test: تاقیکردنەوە
+      move right: بڕۆ بۆ دەستە ڕاست
+      move down: بڕۆ خوارێ
+      collect: كۆبكەوە/خركەوە

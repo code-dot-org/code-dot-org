@@ -6,7 +6,6 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
@@ -76,11 +75,23 @@
     "project_template_level_name": "CSD U3 Movement Your Own_2018",
     "parent_level_id": 8878,
     "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/csd-1718/animation_tab/index.html",
+      "/docs/csd-1718/sprites/index.html",
+      "/docs/csd-1718/draw_loop/index.html",
+      "/docs/csd-1718/counter_pattern/index.html",
+      "/docs/csd-1718/gamelab_watchers/index.html"
+    ],
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:23:47 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:23:47 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 19:58:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

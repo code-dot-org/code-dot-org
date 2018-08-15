@@ -1,0 +1,38 @@
+name 'v2 U2L3 Student Lesson Summary_2018'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+# Unit 2: Lesson 3 - Encoding B&W Images
+
+## Background
+
+Digital images perform the difficult task of translating human vision into a bit-level encoding. In this lesson we get our feet wet by encoding simple black and white images.  Digital images break a larger image into small squares on a monitor, called pixels, which can be individually illuminated. In a black and white image each pixel may either be turned on or off, and so can be represented by a single bit.  But the image encoding must contain other data as well, like the width and height, in order to properly reproduce the image from the bits.
+
+## Vocabulary
+
+* **Image:** A type of data used for graphics or pictures.
+* **Metadata:** Data that describes other data.  For example, a digital image may include metadata that describe the size of the image, number of colors, or resolution.
+* **Pixel:** Short for &quot;picture element&quot; it is the fundamental unit of a digital image, typically a tiny square or dot which contains a single point of color of a larger image.
+
+## Lesson
+
+* Develop an encoding scheme for B&W images
+* Experiment with Pixelation Tool
+* Incorporate metadata into encoding of a digital image
+
+## Resources
+
+* B&W Pixelation Widget - Activity Guide ([PDF](https://docs.google.com/document/d/1kLLr-ELXgBKDULCYDm3slAVQkszAHez85es7aLdAk_Q/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1kLLr-ELXgBKDULCYDm3slAVQkszAHez85es7aLdAk_Q/export?format=doc))
+* Invent a B&W image encoding scheme - Activity Guide ([PDF](https://docs.google.com/document/d/1ueUif3AbjQHgte5B1ud1gyenQFEYzj5f8rnqpAsZXJg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1ueUif3AbjQHgte5B1ud1gyenQFEYzj5f8rnqpAsZXJg/export?format=doc))
+* Extension: Magnify an Image (optional) - Activity Guide ([PDF](https://docs.google.com/document/d/12Ugl6_dULl_3r2Jjg_7At0ZqK98e8olOAMQAgU0Pv7I/export?format=pdf) | [DOCX](https://docs.google.com/document/d/12Ugl6_dULl_3r2Jjg_7At0ZqK98e8olOAMQAgU0Pv7I/export?format=doc))
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+[key]
+
+* Answers to questions in [KEY: Activity Guide- B&amp;W Pixelation Widget](https://docs.google.com/document/d/12GvbkoCj-pP4g7uX2tNIUJOH4CJsLiATkcYXlvk4a08/edit?usp=sharing)
+
+[/key]
+MARKDOWN

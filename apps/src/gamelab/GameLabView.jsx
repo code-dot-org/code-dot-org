@@ -35,6 +35,7 @@ class GameLabView extends React.Component {
     showVisualizationHeader: PropTypes.bool.isRequired,
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
+    spriteLab: PropTypes.bool.isRequired,
   };
 
   getChannelId() {
@@ -87,7 +88,7 @@ class GameLabView extends React.Component {
          />}
         <VisualizationResizeBar/>
         <InstructionsWithWorkspace>
-          <CodeWorkspace withSettingsCog/>
+          <CodeWorkspace withSettingsCog={!this.props.spriteLab} />
         </InstructionsWithWorkspace>
       </div>
     );
@@ -120,4 +121,5 @@ export default connect(state => ({
   showVisualizationHeader: showVisualizationHeader(state),
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
+  spriteLab: state.pageConstants.isBlockly,
 }))(GameLabView);

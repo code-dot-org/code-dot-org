@@ -1,16 +1,20 @@
-import { assert } from '../../../util/configuredChai';
+import { assert, expect } from '../../../util/configuredChai';
 import sectionProgress, {
-  setSection,
-  setValidScripts,
   setCurrentView,
   ViewType,
-  setScriptId,
   addScriptData,
   addStudentLevelProgress,
+  addStudentLevelPairing,
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
+  getStudentPairing,
+  getStudentLevelResult,
+  getCurrentProgress,
+  getCurrentScriptData,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
+import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeSectionData = {
   id: 123,
@@ -29,41 +33,6 @@ const fakeSectionData = {
     name: 'csp2',
   }
 };
-
-const sortedFakeSectionData = {
-  id: 123,
-  students: [
-    {
-      id: 2,
-      name: 'studenta'
-    },
-    {
-      id: 1,
-      name: 'studentb'
-    },
-  ],
-  script: {
-    id: 300,
-    name: 'csp2',
-  }
-};
-
-const fakeValidScripts = [
-  {
-    category: 'category1',
-    category_priority: 1,
-    id: 456,
-    name: 'Script Name',
-    position: 23
-  },
-  {
-    category: 'category1',
-    category_priority: 1,
-    id: 300,
-    name: 'csp2',
-    position: 23
-  }
-];
 
 const fakeScriptData789 = {
   id: 789,
@@ -98,16 +67,11 @@ describe('sectionProgressRedux', () => {
   const initialState = sectionProgress(undefined, {});
 
   describe('setScriptId', () => {
-    it('sets the script id', () => {
-      const action = setScriptId(130);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.scriptId, 130);
-    });
-
     it('seting the script id resets the lesson of interest', () => {
       const action = setLessonOfInterest(lessonOfInterest);
       const nextState = sectionProgress(initialState, action);
 
+      // This action is from scriptSelectionRedux but affects sectionProgress
       const action2 = setScriptId(130);
       const nextState2 = sectionProgress(nextState, action2);
       assert.deepEqual(nextState2.lessonOfInterest, 1);
@@ -115,31 +79,12 @@ describe('sectionProgressRedux', () => {
   });
 
   describe('setSection', () => {
-    it('sets the section data and assigned scriptId', () => {
-      const action = setSection(fakeSectionData);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.section, sortedFakeSectionData);
-      assert.deepEqual(nextState.scriptId, 300);
-    });
-
     it('resets all non-section data to initial state', () => {
       const action = setSection(fakeSectionData);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.section, sortedFakeSectionData);
       assert.deepEqual(nextState.scriptDataByScript, {});
       assert.deepEqual(nextState.studentLevelProgressByScript, {});
       assert.deepEqual(nextState.levelsByLessonByScript, {});
-    });
-
-    it('sets the section data with no default scriptId', () => {
-      const sectionDataWithNoScript = {
-        ...fakeSectionData,
-        script: null,
-      };
-      const action = setSection(sectionDataWithNoScript);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.section, {...sortedFakeSectionData, script: null});
-      assert.deepEqual(nextState.scriptId, null);
     });
   });
 
@@ -152,25 +97,6 @@ describe('sectionProgressRedux', () => {
     it('finishLoadingProgress sets isLoadingProgress to false', () => {
       const nextState = sectionProgress({isLoadingProgress: true}, finishLoadingProgress());
       assert.deepEqual(nextState.isLoadingProgress, false);
-    });
-  });
-
-  describe('setValidScripts', () => {
-    it('sets the script data and defaults scriptId', () => {
-      const action = setValidScripts(fakeValidScripts);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.validScripts, fakeValidScripts);
-      assert.deepEqual(nextState.scriptId, fakeValidScripts[0].id);
-    });
-
-    it('sets the script data and does not override already assigned scriptId', () => {
-      const action = setValidScripts(fakeValidScripts);
-      const nextState = sectionProgress({
-        ...initialState,
-        scriptId: 100
-      }, action);
-      assert.deepEqual(nextState.validScripts, fakeValidScripts);
-      assert.deepEqual(nextState.scriptId, 100);
     });
   });
 
@@ -209,6 +135,64 @@ describe('sectionProgressRedux', () => {
     });
   });
 
+  describe('addStudentLevelPairing', () => {
+    function isValidInput(input) {
+      addStudentLevelPairing(130, input);
+    }
+
+    function isInvalidInput(input) {
+      expect(() => {
+        addStudentLevelPairing(130, input);
+      }).to.throw(undefined, undefined, `
+        Expected input ${JSON.stringify(input)} to be rejected as invalid, but it was accepted`);
+    }
+
+    it('no students is valid', () => {
+      isValidInput({});
+    });
+
+    it('students without progress are valid', () => {
+      isValidInput({
+        375: {}
+      });
+    });
+
+    it('students with progress, who did not pair are valid', () => {
+      isValidInput({
+        377: {
+          5336: false
+        }
+      });
+    });
+
+    it('students with progress, who did pair are valid', () => {
+      isValidInput({
+        377: {
+          5336: true,
+        },
+        378: {
+          5336: true,
+        }
+      });
+    });
+
+    it('invalid if contains too many properties', () => {
+      isInvalidInput({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true
+          },
+          5337: {
+            status: 'perfect',
+            result: 31
+          }
+        }
+      });
+    });
+  });
+
   describe('addStudentLevelProgress', () => {
     it('adds multiple scriptData info', () => {
       const action = addStudentLevelProgress(130, fakeStudentProgress);
@@ -233,6 +217,114 @@ describe('sectionProgressRedux', () => {
         ...fakeStudentProgress,
         3: {},
         4: {},
+      });
+    });
+  });
+
+  describe('getStudentPairing', () => {
+    it('plucks paired value from object', () => {
+      expect(getStudentPairing({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true,
+          },
+          5337: {
+            status: 'perfect',
+            result: 31,
+            paired: false,
+          }
+        }
+      })).to.deep.equal({
+        377: {
+          5336: true,
+          5337: false
+        }
+      });
+    });
+  });
+
+  describe('getCurrentProgress', () => {
+    it('gets the progress for the current script', () => {
+      const stateWithProgress = {
+        scriptSelection: {scriptId: 123},
+        sectionProgress: {
+          studentLevelProgressByScript: {
+            123: 'fake progress 1',
+            456: 'fake progress 2',
+          }
+        }
+      };
+      expect(getCurrentProgress(stateWithProgress)).to.deep.equal('fake progress 1');
+    });
+  });
+
+  describe('getCurrentScriptData', () => {
+    it('gets the script data for the section in the selected script', () => {
+      const stateWithScript = {
+        scriptSelection: {scriptId: 123},
+        sectionProgress: {
+          scriptDataByScript: {
+            123: {
+              stages: [
+                {
+                  levels: [{
+                    url: 'url',
+                    name: 'name',
+                    progression: 'progression',
+                    kind: 'assessment',
+                    icon: 'fa-computer',
+                    is_concept_level: false,
+                    title: 'hello world'
+                  }]
+                }
+              ]
+            }
+          },
+        },
+      };
+      expect((getCurrentScriptData(stateWithScript))).to.deep.equal({
+        stages: [
+          {
+            levels: [
+              {
+                icon: 'fa-computer',
+                isConceptLevel: false,
+                isUnplugged: false,
+                kind: 'assessment',
+                levelNumber: 'hello world',
+                name: 'name',
+                progression: 'progression',
+                url: 'url'
+              }
+            ]
+          }
+        ]
+      });
+    });
+  });
+
+  describe('getStudentLevelResult', () => {
+    it('plucks level result value from object', () => {
+      expect(getStudentLevelResult({
+        377: {
+          5336: {
+            status: 'perfect',
+            result: 31,
+            paired: true,
+          },
+          5337: {
+            status: 'perfect',
+            result: 31,
+            paired: false,
+          }
+        }
+      })).to.deep.equal({
+        377: {
+          5336: 31,
+          5337: 31
+        }
       });
     });
   });

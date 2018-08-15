@@ -16,6 +16,8 @@ export const CANCEL_LOCATION_SELECTION = 'gamelab/CANCEL_LOCATION_SELECTION';
 export const SELECT_LOCATION = 'gamelab/SELECT_LOCATION';
 export const UPDATE_LOCATION = 'gamelab/UPDATE_LOCATION';
 
+export const SET_MOBILE_CONTROLS_CONFIG = 'gamelab/SET_MOBILE_CONTROLS_CONFIG';
+
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!GameLabInterfaceMode} interfaceMode
@@ -39,6 +41,15 @@ export function toggleGridOverlay(showGridOverlay) {
     dispatch({
       type: TOGGLE_GRID_OVERLAY,
       showGridOverlay: showGridOverlay
+    });
+  };
+}
+
+export function setMobileControlsConfig(mobileControlsConfig) {
+  return function (dispatch) {
+    dispatch({
+      type: SET_MOBILE_CONTROLS_CONFIG,
+      mobileControlsConfig: mobileControlsConfig
     });
   };
 }

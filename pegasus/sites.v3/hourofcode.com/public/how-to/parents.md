@@ -6,7 +6,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Do an Hour of Code with your child
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
 ## 1) Watch this how-to video

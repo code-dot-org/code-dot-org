@@ -1,0 +1,35 @@
+professional_learning_course 'CS Principles Facilitator in Training 2018-2019'
+login_required true
+exclude_csf_column_in_legend true
+student_detail_progress_view true
+
+stage 'Novice Reflection Overview', flex_category: 'required'
+named_level 'welcome-novice-18'
+
+stage 'Day 1'
+level 'novice-monday-1'
+level 'csp-pushDL-unit1'
+level 'novice-monday-2'
+
+stage 'Day 2'
+level 'novice-tuesday-1'
+level 'instructional-strategy-tuesday'
+level 'csp-pushDL-unit1'
+level 'novice-tuesday-2'
+
+stage 'Day 3'
+level 'novice-wednesday-1'
+level 'getting-buy-in-wednesday'
+level 'csp-pushDL-unit1'
+level 'csp-pushDL-unit2'
+level 'novice-wednesday-2'
+
+stage 'Day 4'
+level 'novice-thursday-1'
+level 'recruiting-thursday'
+level 'csp-pushDL-unit2'
+level 'csp-pushDL-unit3'
+level 'novice-thursday-2'
+
+stage 'Wrap Up'
+named_level 'novice-congrats'

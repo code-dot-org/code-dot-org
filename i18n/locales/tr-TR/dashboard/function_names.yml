@@ -1,0 +1,87 @@
+tr:
+  data:
+    function_names:
+      x: x
+      details: detaylar
+      draw eyebrow: kaş çiz
+      draw pupil: gözbebeği çiz
+      draw a circle: bir çember çiz
+      draw a car: araba çiz
+      draw_rect: dikdörtgen çiz
+      draw square: kare çiz
+      jump to middle: ortaya atla
+      draw a button: düğme çiz
+      draw left leg: sol bacak çiz
+      draw right leg: sağ bacak çiz
+      draw body and arms: gövde ve kollar çiz
+      draw a head: kafa çiz
+      draw sitting stick figure: oturan çöp adam çiz
+      draw head: kafa çiz
+      draw arms: kollar çiz
+      jump to neck: boyna atla
+      draw O: O çiz
+      draw D: D çiz
+      draw E: E çiz
+      big gear: büyük dişli
+      small gear: küçük dişli
+      draw a hexagon: ' altıgen çiz'
+      draw a flower: çiçek çiz
+      draw a square: bir kare çiz
+      draw a snowflake: bir kar tanesi çiz
+      draw 3 hexagons: 3 altıgen çiz
+      draw 4 hexagons: 4 altıgen çiz
+      draw 5 hexagons: 5 altıgen çiz
+      get 2 nectar: 2 nektar al
+      collect purple nectar: mor nektar topla
+      get 5: 5 al
+      move and get nectar: hareket et ve nektar al
+      move and get 4: hareket et ve 4 al
+      get 7 nectar make 7 honey: 7 nektar al 7 bal yap
+      get 7 make 7: 7 al 7 yap
+      get 7: 7 al
+      move and get 3: hareket et ve 3 al
+      draw a tree: bir ağaç çiz
+      draw triangle: üçgen çiz
+      draw circle: çember çiz
+      draw goal: hedef çiz
+      graph: grafik
+      draw waves: dalgalar çiz
+      draw a wave: bir dalga çiz
+      draw a small triangle: küçük bir üçgen çiz
+      draw a medium triangle: orta boy bir üçgen çiz
+      draw a large triangle: çok büyük bir üçgen çiz
+      draw a big triangle: büyük bir üçgen çiz
+      draw a triangle: bir üçgen çiz
+      draw a house: bir ev çiz
+      check purple flower: mor çiçeğe bak
+      check flower make honey: çiçeğe bak bal yap
+      get nectar or make honey: nektar al veya bal yap
+      make 3 honey: 3 bal yap
+      draw a star: bir yıldız çiz
+      do something: bir şeyler yap
+      jump: zıpla
+      Draw a Square: Kare çiz
+      triangle: üçgen
+      set score: skor ayarla
+      get nectar: nektarı al
+      test: dene
+      diamond: elmas
+      move: hareket et
+      move right: sağa ilerle
+      move up: yukarı hareket et
+      move down: aşağı yönde ilerle
+      move left: sola ilerle
+      collect: topla
+      Stop Dragon: Ejderhayı durdur
+      follow path: yolu takip et
+      physics: Fizik
+      initialization: başlatma
+      Make Actor 1 Jump: Aktör 1'i Zıplat
+      Choose Number: Rakam Seç
+      Move Bird: Kuşu Hareket ettir
+      turn left: sola dön
+      move forward: ilerle
+      turn right: sağa dön
+      draw a rectangle: dikdörtgen çiz
+      Which Course for My Students?: Öğrencilerim için hangi Kurs uygun?
+      draw a heart: kalp çiz

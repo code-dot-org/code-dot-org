@@ -1,0 +1,18 @@
+da:
+  data:
+    block_categories:
+      Actions: Handlinger
+      Loops: Løkker
+      Functions: Funktioner
+      Color: Farve
+      Math: Matematik
+      Logic: Logik
+      Variables: Variabler
+      Conditionals: Betingelser
+      Events: Hændelser
+      Text: Tekst
+      Start: Start
+      Booleans: Booleans
+      test: test
+      Name: Navn
+      Function: Funktion

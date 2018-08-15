@@ -1,4 +1,5 @@
-"ka":
+---
+ka:
   data:
     failure_message_overrides:
       Code Studio Puzzle Challenge 1 - Artist_failure_message_override: |-
@@ -77,8 +78,8 @@
       MC HOC 2016 Level 8_failure_message_override: თქვენ უნდა გამოიყენოთ ფეთქებადი
         კრიპერი, რათა ააფეთქოთ კედელი და მიაღწიოთ ცხვართან.
       MC HOC 2016 New Drop_failure_message_override: გამოიყენეთ ისრის ღილაკები, რათა
-        მიხვიდეთ ცხვართან და დააჭირეთ ჰარის ღილაკს ან დააკლიკეთ სათამაშო დაფას, რათა
-        გამოიყენოთ ცხვარი. და არ დაგავიწყდეთ თქვენს კოდში `დაგდების` ბლოკის დამატება.
+        მიხვიდეთ ცხვართან და დააჭირეთ ჰარის ღილაკს ან დააწკაპუნეთ სათამაშო დაფას,
+        რათა გამოიყენოთ ცხვარი. და არ დაგავიწყდეთ თქვენს კოდში `დაგდების` ბლოკის დამატება.
       MC HOC 2016 New Spawn_failure_message_override: განათავსეთ `გააჩინე ცხვარი`
         `როცა გაიშვება` ბლოკის ქვემოთ.
       MC HOC 2016 New Walk_failure_message_override: კარის გასაღებად დააჭირეთ ჰარის
@@ -88,13 +89,11 @@
         სცადეთ თითო დაჭერაზე 2 ქულა დაიმატოთ.
       MC HOC 2016 Village Test_failure_message_override: გასამარჯვებლად, თქვენ უნდა
         გააკეთოთ ისე, რომ გოლემი იჭერდეს და უტევდეს ზომბებს.
-      Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: გილოცავთ! თქვენ შეაგროვეთ X მონეტა!
       courseE_playLab_scaffold3_failure_message_override: თქვენ უნდა დაამატოთ ორი
         ახალი მსახიობი თქვენს თამაშში და დაპროგრამების საშუალებით ამოძრაოთ ისინი.
-      courseE_playLab_scaffold3_2018_failure_message_override: |-
-        You must add two
-        or more new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: თქვენ უნდა დაამატოთ
+        ორი ახალი მსახიობი თქვენს თამაშში და დაპროგრამების საშუალებით ამოძრაოთ ისინი.
       grade4_scaffolded_project3_failure_message_override: თქვენ უნდა დაამატოთ ორი
         მოძრავი მსახიობი თქვენს თამაშში.
       kikiTesta_failure_message_override: გილოცავთ! თქვენ შეაგროვეთ X მონეტა!

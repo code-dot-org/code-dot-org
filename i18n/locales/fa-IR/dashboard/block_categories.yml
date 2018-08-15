@@ -1,0 +1,18 @@
+fa:
+  data:
+    block_categories:
+      Actions: اقدامات
+      Loops: حلقه‌ها
+      Functions: توابع
+      Color: رنگ
+      Math: ریاضی
+      Logic: منطق
+      Variables: متغیرها
+      Conditionals: شرطی ها
+      Events: رویدادها
+      Text: متن
+      Start: شروع
+      Booleans: بولی ها
+      test: آزمایش
+      Name: نام
+      Function: تابع

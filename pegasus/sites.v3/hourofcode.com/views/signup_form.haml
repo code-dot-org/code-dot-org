@@ -106,6 +106,20 @@
             %input#hoc-match-volunteer-flag{name: "match_volunteer_flag_b", type: "checkbox", value: "1"}/
             = hoc_s(:signup_match_volunteer)
 
+      .form-group
+        %label.control-label{for: "hoc-email-preference-opt-in"}
+          = hoc_s(:signup_email_preference_opt_in)
+          %a{href: codeorg_url('/privacy'), target: '_blank'}
+            = hoc_s(:signup_email_preference_privacy)
+          %span.required*
+        %div
+          %select#email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}
+            %option{value: nil, selected: true}
+            -['yes', 'no'].each do |email_preference|
+              %option{value: email_preference}= hoc_s('signup_email_preference_' + email_preference)
+        #email-preference-error.error-message{style: "display:none;"}
+          = hoc_s(:signup_email_preference_error)
+
       %input{name:'hoc_country_s', type:'hidden', value:@country}
       %input{name:'hoc_company_s', type:'hidden', value:@company}
 

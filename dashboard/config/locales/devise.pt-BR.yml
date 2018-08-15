@@ -1,4 +1,5 @@
-"pt-BR":
+---
+pt-BR:
   devise:
     confirmations:
       confirmed: Seu endereço de email foi confirmado com sucesso.
@@ -53,7 +54,6 @@
         para confirmar seu novo endereço.
       updated: Você atualizou sua conta com sucesso.
     sessions:
-      signed_in: ''
       signed_out: Desconectado com sucesso.
     unlocks:
       send_instructions: Você receberá um email, em poucos minutos, com instruções

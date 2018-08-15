@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-05-03T16:37:51.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Abstraction to Manage Complexity",
+    "markdown_instructions": "In the Create Performance Task, you will be asked to identify an abstraction in your program and explain how it helps manage the complexity of the program. Functions are a form of abstraction. Pick a function you wrote in your solution to the 3x3 square problem and explain how it helps manage the complexity of your program.\n",
+    "encrypted_solution": "z+sKgtDNSBOmgvYC++VKlUKaXXlVo4zjF6YAuQSkIWOTs41aB2dGtBo3UwA7\nI4n1UTpR5eA2K0bqgAgtovkQy66Puym9PWrZwUiGtJQjGpgB0XsIQ1ZiD38+\nnYjmXBzC5Q012ec0VijBOgWu6QnBVnoS24N9z6ABoINv0Xr9CSH1n232z5od\n18h22Dlj1h/pJ+3eJRjhcykDiJc6h4w+w/ET5TPJquascR4S2U53gNkM37//\nZIQFSDf3o8S0a/oHTdZ7V0vuvKeyo3RR78DKDOrD0R4e6AO24+MN99WqNHr+\n67uj0wMWwz1CCg/Vaw9L+NAtIR3ZOUb/Po9onVDWTJ6VdgpTCK1EJFj9gzIj\nh0DggPjZ5jeKFZTE03srpPhMdyvByKPKDawf68eBabTyfN/d5XMCU5yfDrEy\ntNFI9zp7DBgd5qK3skVId2HJlGH2AutR8GkqYuNS70c165KpSHfiqefhRquD\nD0GHhdvV7OUoYwHFvvGLLwALGNlAeJqeCMmbeeOTbAPsXrq8QAyN1Th0JxMg\nmt90ARHJD1lhua31+TdEJ+rMWC2XumpOkK6GzNJugYkq1mUCR6hsymGxjPs9\nIecjygdt14Opj886oTJcLt/mYvhcZ66fbkHKtTE2uA56t2S31zIIGibw0dVt\nU5KxpVrMrw8I8FxrO5Kbf6w=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 2418,
+    "name_suffix": "_2018"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

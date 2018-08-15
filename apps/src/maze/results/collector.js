@@ -178,7 +178,7 @@ export default class CollectorHandler extends ResultsHandler {
       case COLLECTED_NOT_ENOUGH:
         return TestResults.APP_SPECIFIC_FAIL;
       case COLLECTED_ENOUGH_BUT_NOT_ALL:
-        return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+        return TestResults.APP_SPECIFIC_IMPERFECT_PASS;
       case true:
         return TestResults.ALL_PASS;
     }

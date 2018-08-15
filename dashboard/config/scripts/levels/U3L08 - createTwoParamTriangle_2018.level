@@ -1,0 +1,132 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:38:03.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveTo": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "nKVY+rMEqpUAnAqH4mLeqlzT0GtwEQo7G83G6BObn1RcXG+0+vTvDLKrWtl9\ngXlR\n",
+    "embed": "false",
+    "instructions": "Define a function called drawTriangle() that accepts two parameters to set the size and width of the triangle. (Click to see full instructions)",
+    "markdown_instructions": "# Defining Functions with Multiple Parameters\r\n\r\nNow it's your turn to define a function that accepts multiple parameters. Just like in the previous example make sure you **separate your parameters with commas** and give them **descriptive and meaningful** names.\r\n\r\n# Do This:\r\n* **Drag out ** the function block, and **name** your function `drawTriangle`. \r\n* **Define `drawTriangle` to have two parameters ** within the parentheses making sure to give them **descriptive and meaningful** names separated by commas. \r\n* The example below uses *size* and *width* for parameter names but you can use whatever you like.\r\n\r\n![](https://images.code.org/b1f5eead2ccb60e5ae607feff590bd3c-image-1442850344677.gif)\r\n\r\n*  Then **write ** the code inside `function drawTriangle(size, width)` that will make it work as described.\r\n* Test it out!  **Run ** the code and experiment to create an image similar to the one below.\r\n\r\n![](https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38 PM.png)\r\n\r\n",
+    "start_blocks": "penUp();\r\nmoveTo(200,200);\r\ndrawTriangle(150,5);\r\nmoveTo(300,400);\r\ndrawTriangle(200,10);\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "penWidth:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 2,
+        "message": "To complete the task the penWidth should be set explicitly on at least two occasions - it should be done as part of the drawTriangle definition."
+      },
+      {
+        "entries": [
+          "moveTo:2",
+          "drawTriangle:2",
+          "moveTo:2",
+          "drawTriangle:2"
+        ],
+        "matchType": "inexact",
+        "minTimes": 1,
+        "message": "App Lab is expecting the code to move the turtle to a specific location, then call drawTriangle(size, penWidth), then move to another location, and draw another triangle with a differnt size and line thickness"
+      },
+      {
+        "entries": [
+          "drawTriangle:2"
+        ],
+        "matchType": "inexact",
+        "minTimes": 2,
+        "message": "To complete the task you need to define a function called drawTriangle with two parameters.  The function should make sure to set the given penWidth and then draw a triangle by moving forward however many pixels are passed into through the size paramater and turning left."
+      },
+      {
+        "entries": [
+          "drawTriangle:2",
+          "penWidth:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1",
+          "moveForward:1",
+          "turnLeft:1"
+        ],
+        "matchType": "inexact",
+        "minTimes": 2,
+        "message": "The order of turtle commands in the drawTriangle functions is not what we were expecting. Do you have a final turnLeft - so the turtle is facing the same direction it was when it started? are you moving forward before turning each time?"
+      }
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "teacher_markdown": "**Potential stop/recap point**\r\n\r\nYou might consider having students work up to this level and then stopping to review it as a whole class.\r\n\r\nThis task is challenging and represents the crux of the whole parameters \"thing\". It's worth the time to get this level right and to explain the terminology and what's happening.",
+    "parent_level_id": 3184,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:59:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

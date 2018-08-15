@@ -1,0 +1,28 @@
+et:
+  data:
+    function_names:
+      x: x
+      draw a circle: joonista ring
+      draw a hexagon: joonista kuusnurk
+      draw a flower: joonista lill
+      draw a square: joonista ruut
+      draw a snowflake: joonista lumehelves
+      draw a tree: joonista puu
+      draw a triangle: joonista kolmnurk
+      draw a house: joonista maja
+      draw a star: joonista täht
+      do something: tee midagi
+      jump: hüppa
+      set score: määra tulemus
+      get nectar: korja nektarit
+      test: test
+      diamond: teemant
+      move: liiguta
+      move right: liigu paremale
+      move up: liigu üles
+      move down: liigu alla
+      move left: liigu vasakule
+      collect: kogu
+      turn left: pööra vasakule
+      move forward: liigu edasi
+      turn right: pööra paremale

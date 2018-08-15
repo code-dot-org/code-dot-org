@@ -6,12 +6,11 @@
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -79,11 +78,22 @@
     "encrypted_examples": "FO/Nr7XQiTcpqxP+uw40XZca4VEkOCVEQKgxOk/3Vdy6A8fsL2RVDE8XKdEH\n5Tm9NA076eME0/5UPJ+7lDfz6OcnIv+mEhWRwDmYlG6CAVA6z5SiDKS/YA06\nKOCCE+wKVvutQqW/yIvfge2Al9i1Tg==\n",
     "parent_level_id": 8945,
     "name_suffix": "_2018",
+    "reference_links": [
+      "/docs/csd-1718/sprite_properties/index.html",
+      "/docs/gamelab/rotateToDirection/index.html"
+    ],
+    "map_reference": "/docs/csd-1718/counter_pattern/index.html",
+    "video_key": "csd_gamelab_sprites_2",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:29:58 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"expand_debugger\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 17:54:11 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:29:58 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"expand_debugger\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 17:54:11 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 19:41:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 19:42:16 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -41,7 +41,6 @@
       "assign_x": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Sprite Interactions\r\n\r\nAt this point there's one sprite on screen, and we can move it around with the arrow keys. Now let's add a second sprite and get the two interacting.\r\n\r\n1. Add a new animation in the animation tab\r\n2. Create a new sprite called \"target\" and set its animation\r\n3. Use the `sprite.isTouching()` block in a conditional to make the target sprite react to the player sprite\r\n\t* Make the target sprite shrink or grow\r\n    * Make the target move to a random location\r\n    * Make the target rotate\r\n",

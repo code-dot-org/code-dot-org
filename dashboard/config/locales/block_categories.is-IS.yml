@@ -1,0 +1,19 @@
+---
+is:
+  data:
+    block_categories:
+      Actions: Aðgerðir
+      Loops: Lykkjur
+      Functions: Föll
+      Color: Litir
+      Math: Reikningur
+      Logic: Rökvísi
+      Variables: Breytur
+      Conditionals: Skilyrði
+      Events: Atvik
+      Text: texti
+      Start: Byrja
+      Booleans: Boolean gildi
+      test: prófun
+      Name: Nafn
+      Function: Aðgerð

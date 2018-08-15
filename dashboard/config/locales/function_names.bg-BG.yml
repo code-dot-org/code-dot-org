@@ -1,0 +1,29 @@
+---
+bg:
+  data:
+    function_names:
+      x: x
+      draw a circle: чертае кръг
+      draw a hexagon: чертае шестоъгълник
+      draw a flower: чертае цвете
+      draw a square: чертае квадрат
+      draw a snowflake: рисува снежинка
+      draw a tree: рисува дърво
+      draw a triangle: чертае триъгълник
+      draw a house: рисува къща
+      draw a star: рисува звезда
+      do something: изпълнява нещо
+      jump: скок
+      set score: задава резултат
+      get nectar: вземи нектар
+      test: тест
+      diamond: диамант
+      move: Премести
+      move right: Премести надясно
+      move up: Премести нагоре
+      move down: Премести надолу
+      move left: премести наляво
+      collect: събери
+      turn left: завий наляво
+      move forward: върви напред
+      turn right: завий надясно

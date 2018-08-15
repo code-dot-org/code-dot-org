@@ -63,7 +63,6 @@
       "comment": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Multiple Paths to the Same Outcome\r\n\r\nYou may have seen several different approaches to solving the previous challenge - one of the beatiful things about programming is that it is as much about personal expression as it is about problem solving. You could have 10 people attempt to create the same program, and each would be unique and reflective of the person who programmed it!\r\n\r\nThere are two primary approaches to checking for multiple conditions:\r\n\r\n### Nesting Conditionals\r\n\r\nIf you think about asking one question first, and then asking the second question only if the first was true, you could nest your conditionals, like so:\r\n\r\n```javascript\r\nif (keyDown('up') {\r\n  if (sprite.y > 0) {\r\n    sprite.y = sprite.y - 1;\r\n  }\r\n}\r\n```\r\n\r\n### Compound Booleans\r\n\r\nIf you think about asking if both the first and second question are true at the same time, you could use `&&` (and) to combine booleans, like so:\r\n\r\n```javascript\r\nif (keyDown('up') && sprite.y < 0) {\r\n\tsprite.y = sprite.y - 1;\r\n}\r\n```\r\n\r\n# Do This\r\n\r\nThis program uses a nested conditional to check the up arrow and a compound boolean to check the down arrow. Use one (or both) techniques to check the left and right arrows as well.",

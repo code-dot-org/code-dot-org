@@ -1,0 +1,28 @@
+ar:
+  data:
+    function_names:
+      x: x
+      draw a circle: رسم دائرة
+      draw a hexagon: رسم شكل سداسي
+      draw a flower: رسم زهرة
+      draw a square: رسم مربع
+      draw a snowflake: رسم ندفة الثلج
+      draw a tree: رسم شجرة
+      draw a triangle: رسم مثلث
+      draw a house: رسم منزل
+      draw a star: رسم نجمة
+      do something: القيام بشيء ما
+      jump: قفز
+      set score: تعيين النتيجة
+      get nectar: الحصول على الرحيق
+      test: اختبار
+      diamond: ماسة
+      move: تحريك
+      move right: تحريك لليمين
+      move up: تحريك لأعلى
+      move down: تحريك لأسفل
+      move left: تحرك لليسار
+      collect: جمع
+      turn left: اتجه إلى اليسار
+      move forward: تحريك إلى الأمام
+      turn right: اتجه إلى اليمين

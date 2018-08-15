@@ -1,0 +1,29 @@
+---
+sv:
+  data:
+    function_names:
+      x: x
+      draw a circle: rita en circel
+      draw a hexagon: rita en hexagon
+      draw a flower: rita en blomma
+      draw a square: rita en kvadrat
+      draw a snowflake: rita en snöflinga
+      draw a tree: Rita ett träd
+      draw a triangle: rita en triangel
+      draw a house: rita ett hus
+      draw a star: rita en stjärna
+      do something: gör någonting
+      jump: hoppa
+      set score: anger poäng
+      get nectar: få nektar
+      test: test
+      diamond: diamant
+      move: flytta
+      move right: flytta höger
+      move up: flytta uppåt
+      move down: flytta neråt
+      move left: flytta vänster
+      collect: samla in
+      turn left: sväng vänster
+      move forward: gå framåt
+      turn right: sväng höger

@@ -1,0 +1,28 @@
+name 'U2L14 Assessment_2018'
+title 'Terminology Matching'
+
+question 'encrypt'
+answer 'use an algorithm to encode a message'
+question 'decrypt'
+answer 'use an algorithm to decode a message'
+question 'cipher'
+answer 'another term for encrypted message'
+question 'random substitution cipher'
+answer 'encryption in which arbitrary symbols replace letters'
+question 'Caesar cipher'
+answer 'encryption scheme based on shifting the alphabet'
+question 'Vigenère Cipher'
+answer 'encryption that shifts the alphabet differently per character'
+question 'Computationally Hard'
+answer 'a problem that cannot be solved in a reasonable amount of time'
+ 
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN

@@ -48,7 +48,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    birthday Date.new(1991, 3, 14)
+    birthday Time.zone.today - 21.years
     email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
     password "00secret"
     locale 'en-US'
@@ -84,7 +84,7 @@ FactoryGirl.define do
       end
       factory :facilitator do
         sequence(:name) {|n| "Facilitator Person #{n}"}
-        sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
+        email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
         end
@@ -97,7 +97,7 @@ FactoryGirl.define do
       end
       factory :workshop_organizer do
         sequence(:name) {|n| "Workshop Organizer Person #{n}"}
-        sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
+        email {("WorkshopOrganizer_#{(User.maximum(:id) || 0) + 1}@code.org")}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -127,9 +127,6 @@ FactoryGirl.define do
         name 'District Contact Person'
         ops_first_name 'District'
         ops_last_name 'Person'
-        after(:create) do |district_contact|
-          district_contact.permission = UserPermission::DISTRICT_CONTACT
-        end
       end
       # Creates a teacher optionally enrolled in a workshop,
       # or marked attended on either all (true) or a specified list of workshop sessions.
@@ -150,10 +147,33 @@ FactoryGirl.define do
           end
         end
       end
+      trait :with_google_authentication_option do
+        after(:create) do |user|
+          create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: AuthenticationOption::GOOGLE,
+            authentication_id: 'abcd123'
+          )
+        end
+      end
+      trait :with_email_authentication_option do
+        after(:create) do |user|
+          create(:authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: AuthenticationOption::EMAIL,
+            authentication_id: user.hashed_email
+          )
+        end
+      end
     end
 
     factory :student do
       user_type User::TYPE_STUDENT
+      birthday Time.zone.today - 17.years
 
       factory :young_student do
         birthday Time.zone.today - 10.years
@@ -176,7 +196,14 @@ FactoryGirl.define do
           sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
           email nil
           hashed_email nil
+          provider nil
         end
+      end
+
+      factory :manual_username_password_student do
+        email nil
+        hashed_email nil
+        provider User::PROVIDER_MANUAL
       end
 
       factory :student_in_word_section do
@@ -193,7 +220,14 @@ FactoryGirl.define do
       factory :student_in_picture_section do
         encrypted_password nil
         provider 'sponsored'
+        in_picture_section
+      end
 
+      factory :old_student do
+        birthday Time.zone.today - 30.years
+      end
+
+      trait :in_picture_section do
         after(:create) do |user|
           picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
           create(:follower, student_user: user, section: picture_section)
@@ -201,15 +235,81 @@ FactoryGirl.define do
         end
       end
 
-      factory :google_oauth2_student do
-        encrypted_password nil
-        provider 'google_oauth2'
-        sequence(:uid) {|n| n}
+      trait :in_email_section do
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+          create :follower, student_user: user, section: section
+          user.reload
+        end
       end
 
-      factory :old_student do
-        birthday Time.zone.today - 30.years
+      trait :without_email do
+        email ''
+        hashed_email nil
       end
+    end
+
+    trait :unmigrated_sso do
+      encrypted_password nil
+      provider %w(facebook windowslive clever).sample
+      sequence(:uid) {|n| n}
+    end
+
+    trait :unmigrated_sso_with_token do
+      unmigrated_sso
+      oauth_token 'fake-oauth-token'
+      oauth_token_expiration 'fake-oauth-token-expiration'
+    end
+
+    trait :unmigrated_untrusted_email_sso do
+      unmigrated_sso_with_token
+      after(:create) do |user|
+        if user.student?
+          user.hashed_email = nil
+          user.save!
+        end
+      end
+    end
+
+    trait :unmigrated_clever_sso do
+      unmigrated_untrusted_email_sso
+      provider 'clever'
+    end
+
+    trait :unmigrated_facebook_sso do
+      unmigrated_sso_with_token
+      provider 'facebook'
+    end
+
+    trait :unmigrated_google_sso do
+      unmigrated_sso_with_token
+      provider 'google_oauth2'
+      oauth_refresh_token 'fake-oauth-refresh-token'
+    end
+
+    trait :unmigrated_powerschool_sso do
+      unmigrated_untrusted_email_sso
+      provider 'powerschool'
+    end
+
+    trait :unmigrated_the_school_project_sso do
+      unmigrated_sso
+      provider 'the_school_project'
+    end
+
+    trait :unmigrated_twitter_sso do
+      unmigrated_sso
+      provider 'twitter'
+    end
+
+    trait :unmigrated_qwiklabs_sso do
+      unmigrated_sso
+      provider 'lti_lti_prod_kids.qwikcamps.com'
+    end
+
+    trait :unmigrated_windowslive_sso do
+      unmigrated_sso_with_token
+      provider 'windowslive'
     end
 
     trait :with_google_authentication_option do
@@ -218,8 +318,36 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'google_oauth',
-          authentication_id: 'abcd123'
+          credential_type: AuthenticationOption::GOOGLE,
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+      end
+    end
+
+    trait :with_migrated_google_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::GOOGLE,
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
@@ -230,8 +358,32 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'clever',
-          authentication_id: '456efgh'
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+      end
+    end
+
+    trait :with_migrated_clever_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
@@ -242,8 +394,37 @@ FactoryGirl.define do
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
-          credential_type: 'email',
+          credential_type: AuthenticationOption::EMAIL,
           authentication_id: user.hashed_email
+        )
+      end
+    end
+
+    trait :with_migrated_email_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::EMAIL,
+          authentication_id: user.hashed_email
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
+        )
+      end
+    end
+
+    trait :multi_auth_migrated do
+      after(:create) do |user|
+        user.update_attributes(
+          provider: 'migrated',
+          uid: '',
+          email: '',
+          hashed_email: ''
         )
       end
     end
@@ -266,16 +447,44 @@ FactoryGirl.define do
         user.reload
       end
     end
+
+    trait :within_united_states do
+      after(:create) do |user|
+        create :user_geo, :seattle, user: user
+      end
+    end
+
+    trait :outside_united_states do
+      after(:create) do |user|
+        create :user_geo, :sydney, user: user
+      end
+    end
   end
 
   factory :authentication_option do
     association :user
     email {''}
     hashed_email {''}
-    credential_type {'email'}
+    credential_type {AuthenticationOption::EMAIL}
     authentication_id {''}
 
     factory :email_authentication_option do
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
+
+    factory :google_authentication_option do
+      credential_type AuthenticationOption::GOOGLE
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
+
+    factory :facebook_authentication_option do
+      credential_type AuthenticationOption::FACEBOOK
       sequence(:email) {|n| "testuser#{n}@example.com.xx"}
       after(:create) do |auth|
         auth.authentication_id = auth.hashed_email
@@ -448,6 +657,34 @@ FactoryGirl.define do
     game {Game.curriculum_reference}
   end
 
+  factory :block do
+    transient do
+      sequence(:index)
+    end
+    name {"gamelab_block#{index}"}
+    category 'custom'
+    pool 'fakeLevelType'
+    config do
+      {
+        func: "block#{index}",
+        args: [{name: 'ARG'}],
+      }.to_json
+    end
+    helper_code {"function block#{index}() {}"}
+  end
+
+  factory :shared_blockly_function do
+    transient do
+      sequence(:index)
+    end
+    name {"doing_something#{index}"}
+    level_type 'fakeLevelType'
+    block_type 'function'
+    description 'This does >>something<< interesting!'
+    arguments '{"this sprite": "Sprite"}'
+    stack '<block type="implementationBlock"></block>'
+  end
+
   factory :level_source do
     level
     data '<xml/>'
@@ -563,6 +800,7 @@ FactoryGirl.define do
   factory :video do
     sequence(:key) {|n| "concept_#{n}"}
     youtube_code 'Bogus text'
+    download 'https://videos.code.org/test-video.mp4'
   end
 
   factory :follower do
@@ -670,6 +908,15 @@ FactoryGirl.define do
     user {create :student}
     script {create :script}
     level {create :level}
+  end
+
+  factory :authored_hint_view_request do
+    user {create :student}
+    script {create :script}
+    level {create :level}
+    prev_level_source_id {create(:level_source).id}
+    next_level_source_id {create(:level_source).id}
+    final_level_source_id {create(:level_source).id}
   end
 
   factory :level_concept_difficulty do
@@ -901,11 +1148,49 @@ FactoryGirl.define do
   end
 
   factory :circuit_playground_discount_application do
+    user {create :teacher}
   end
 
   factory :seeded_s3_object do
     bucket "Bucket containing object"
     key "Object Key"
     etag "Object etag"
+  end
+
+  factory :email_preference do
+    email 'test@example.net'
+    opt_in false
+    ip_address '10.0.0.1'
+    source :ACCOUNT_SIGN_UP
+  end
+
+  factory :user_geo do
+    ip_address '10.0.0.1'
+
+    # Space Needle
+    trait :seattle do
+      city 'Seattle'
+      state 'Washington'
+      country 'United States'
+      postal_code '98109'
+      latitude 47.620470
+      longitude (-122.349181)
+    end
+
+    # Sydney Opera House
+    trait :sydney do
+      city 'Sydney'
+      state 'New South Wales'
+      country 'Australia'
+      postal_code '2000'
+      latitude (-33.859100)
+      longitude 151.200200
+    end
+  end
+
+  factory :teacher_feedback do
+    association :student
+    association :teacher
+    association :level
   end
 end

@@ -1,0 +1,29 @@
+---
+pl:
+  data:
+    function_names:
+      x: x
+      draw a circle: narysuj okrąg
+      draw a hexagon: narysuj sześciokąt
+      draw a flower: narysuj kwiatka
+      draw a square: narysuj kwadrat
+      draw a snowflake: narysuj płatek śniegu
+      draw a tree: narysuj drzewo
+      draw a triangle: narysuj trójkąt
+      draw a house: narysuj dom
+      draw a star: narysuj gwiazdę
+      do something: wykonaj coś
+      jump: skocz
+      set score: ustaw wynik
+      get nectar: pobierz nektar
+      test: test
+      diamond: diament
+      move: idź
+      move right: idź w prawo
+      move up: idź w górę
+      move down: idź w dół
+      move left: idź w lewo
+      collect: zbierz
+      turn left: skręć w lewo
+      move forward: idź do przodu
+      turn right: skręć w prawo

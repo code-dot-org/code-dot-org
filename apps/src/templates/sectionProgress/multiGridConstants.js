@@ -1,6 +1,7 @@
 import color from "../../util/color";
 
 export const ROW_HEIGHT = 42;
+export const LAST_ROW_MARGIN_HEIGHT = 18;
 export const NAME_COLUMN_WIDTH = 170;
 export const MAX_TABLE_SIZE = 680;
 export const PROGRESS_BUBBLE_WIDTH = 38;
@@ -23,6 +24,7 @@ export const progressStyles = {
     ':hover': {
       cursor: 'pointer'
     },
+    textAlign: 'center'
   },
   lessonOfInterest: {
     backgroundColor: color.teal,
@@ -30,8 +32,9 @@ export const progressStyles = {
     fontSize: 18,
     paddingTop: 10,
     paddingBottom: 10,
+    paddingLeft: 10,
     paddingRight: 10,
-    paddingLeft: 16,
+    textAlign: 'center'
   },
   multigrid: {
     border: '1px solid',
@@ -85,3 +88,7 @@ export const progressStyles = {
     borderColor: color.border_gray,
   }
 };
+
+export function tooltipIdForLessonNumber(i) {
+  return `tooltipForLesson${i}`;
+}

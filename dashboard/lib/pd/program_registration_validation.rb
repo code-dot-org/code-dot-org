@@ -1,5 +1,4 @@
-require lib_dir 'forms/pegasus_form_validation'
-require pegasus_dir 'forms/pd_program_registration'
+require pegasus_dir 'src/forms'
 
 FORM_CLASS = PdProgramRegistration
 

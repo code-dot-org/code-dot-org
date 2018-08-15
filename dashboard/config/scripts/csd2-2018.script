@@ -1,22 +1,26 @@
+hidden false
 login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit2/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-18/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd-18/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-18/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-18/unit2/code/"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Join our Teacher Insights Group!", "details"=>" Share your experiences and get support from other teachers and our team.", "link"=>"http://teacherblog.code.org/post/176699827304/join-the-codeorg-teacher-insight-group", "type"=>"bullhorn"}]
+family_name 'csd2'
+version_year '2018'
+is_stable true
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
-named_level 'CSD U2 L1 Overview_2018'
+named_level 'CSD U2L01 TFMD_2018'
 named_level 'CSD U2 Top Websites_2018'
 
 stage 'Websites for Expression ', flex_category: 'csd2_1'
-named_level 'CSD U2 L2 Overview_2018'
+named_level 'CSD U2L02 TFMD_2018'
 named_level 'CSD U2 Expression Exemplars_2018'
 
 stage 'Intro to HTML', flex_category: 'csd2_1'
-named_level 'CSD U2 L3 Overview_2018'
+named_level 'CSD U2L03 TFMD_2018'
 level 'CSDU2 - Type Anything_2018', progression: 'Experiment with Web Lab'
 named_level 'Intro to Web Lab - Part 1_2018'
 named_level 'CSD U2 Inspector Warm Up_2018'
@@ -27,7 +31,7 @@ level 'CSD U2 HTML Adding Paragraphs pt 2_2018', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Debug Paragraphs_2018', progression: 'Using HTML Tags'
 
 stage 'Headings', flex_category: 'csd2_1'
-named_level 'CSD U2 L4 Overview_2018'
+named_level 'CSD U2L04 TFMD_2018'
 named_level 'CSD U2 Pair Programming Video_2018'
 level 'CSD U2 Heading Demo_2018', progression: 'Headings'
 level 'CSD U2 Heading Sizes_2018', progression: 'Headings'
@@ -39,11 +43,11 @@ level 'CSD U2 Design Project_2018', progression: 'Your Personal Website'
 level 'CSD U2 Project Start_2018', progression: 'Your Personal Website'
 
 stage 'Digital Footprint', flex_category: 'csd2_1'
-named_level 'CSD U2 L5 Overview_2018'
+named_level 'CSD U2L05 TFMD_2018'
 named_level 'Social Sleuth_2018'
 
 stage 'Lists', flex_category: 'csd2_1'
-named_level 'CSD U2 L6 Overview_2018'
+named_level 'CSD U2L06 TFMD_2018'
 level 'CSD U2 lists intro_2018', progression: 'Lists'
 level 'CSD U2 ordered list_2018', progression: 'Lists'
 level 'CSD U2 unordered list_2018', progression: 'Lists'
@@ -53,7 +57,7 @@ level 'CSD U2 expand project_2018', progression: 'Expanding Your Website'
 level 'CSD U2 new page_2018', progression: 'Expanding Personal Website'
 
 stage 'Intellectual Property and Images', flex_category: 'csd2_1'
-named_level 'CSD U2 L7 Overview_2018'
+named_level 'CSD U2L07 TFMD_2018'
 named_level 'CSD U2 images map_2018'
 level 'CSD U2 Image Tag 1_2018', progression: 'Adding Images'
 level 'CSD U2 Image Tag Debug_2018', progression: 'Adding Images'
@@ -63,7 +67,7 @@ level 'CSD U2 Image Tag Attribution_2018', progression: 'Attribution'
 level 'CSD U2 Info Page Final Touches_2018', progression: 'Attribution'
 
 stage 'Clean Code and Debugging', flex_category: 'csd2_1'
-named_level 'CSD U2 Lesson 6 Overview_2018'
+named_level 'CSD U2L08 TFMD_2018'
 level 'CSD U2 Debugging 1_2018', progression: 'Debugging'
 level 'CSD U2 Debugging 2_2018', progression: 'Debugging'
 level 'CSD U2 Debugging 3_2018', progression: 'Debugging'
@@ -73,7 +77,7 @@ named_level 'CSD U2 formatting map_2018'
 level 'CSD U2 challenge_2018', progression: 'Challenge'
 
 stage 'Project - Multi-Page Websites', flex_category: 'csd2_1'
-named_level 'CSD U2 Lesson 9 Overview_2018'
+named_level 'CSD U2L09 TFMD_2018'
 named_level 'CSD U2 a tag map_2018'
 level 'CSD U2 link demo_2018', progression: 'Linking Pages'
 level 'CSD U2 navigation_2018', progression: 'Linking Pages'
@@ -87,7 +91,7 @@ level 'CSD U2 project share_2018', progression: 'Website Project'
 assessment 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018', progression: 'Reflection'
 
 stage 'Styling Text with CSS', flex_category: 'csd2_2'
-named_level 'Unit 2 Lesson 7 Overview_2018'
+named_level 'CSD U2L10 TFMD_2018'
 named_level 'CSD U2 CSS explore CSS_2018'
 named_level 'Video: Intro to CSS_2018'
 level 'CSD U2 text style h1_2018', progression: 'Styling Text'
@@ -103,7 +107,7 @@ level 'CSD U2 add file_2018', progression: 'Styling your Website'
 level 'CSD U2 text style freeplay_2018', progression: 'Styling your Website'
 
 stage 'Styling Elements with CSS', flex_category: 'csd2_2'
-named_level 'Unit 2 Lesson 8 Overview_2018'
+named_level 'CSD U2L11 TFMD_2018'
 level 'CSD U2 layout style sample_2018', progression: 'Exploring more CSS'
 level 'CSD U2 layout style bgcolor_2018', progression: 'Exploring more CSS'
 named_level 'CSS U2 Body Map_2018'
@@ -117,10 +121,10 @@ named_level 'CSD U2 Layout Properties Map_2018'
 level 'CSD U2 layout style freeplay_2018', progression: 'Styling your Website'
 
 stage 'Sources and Search Engines', flex_category: 'csd2_2'
-named_level 'CSD U2 L12 Overview_2018'
+named_level 'CSD U2L12 TFMD_2018'
 
 stage 'RGB Colors and Classes', flex_category: 'csd2_2'
-named_level 'Unit 2 Lesson 10 Overview_2018'
+named_level 'CSD U2L13 TFMD_2018'
 named_level 'CSD U2 RGB intro_2018'
 level 'CSD U2 RGB winter_2018', progression: 'RGB Exploration'
 level 'CSD U2 RGB summer_2018', progression: 'RGB Exploration'
@@ -133,6 +137,6 @@ level 'CSD U2 classes summer_2018', progression: 'Styling with Classes'
 level 'CSDU2 - PW - Class Style Personal Site_2018', progression: 'Styling with Classes'
 
 stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
-named_level 'Unit 2 Lesson 16 Overview_2018'
+named_level 'CSD U2L14 TFMD_2018'
 named_level 'Final Personal Website_2018'
 assessment 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018', progression: 'Reflection'

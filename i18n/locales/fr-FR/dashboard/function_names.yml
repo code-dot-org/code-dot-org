@@ -1,0 +1,242 @@
+fr:
+  data:
+    function_names:
+      x: x
+      details: détails
+      draw eyebrow: dessiner les sourcils
+      draw pupil: dessiner la pupille
+      draw a circle: dessine un cercle
+      draw a car: dessiner une voiture
+      draw_rect: dessiner_rectangle
+      draw square: dessiner un carré
+      jump to controller top left: aller au contrôleur en haut à gauche
+      jump to middle: aller au milieu
+      draw a button: dessiner un bouton
+      draw cord: dessiner une corde
+      draw R pad: dessiner la touche R
+      draw left leg: dessiner la jambe gauche
+      draw right leg: dessiner la jambe droite
+      draw body and arms: dessiner le corps et les bras
+      draw a head: dessiner une tête
+      draw sitting stick figure: dessiner un bonhomme fil de fer assis
+      draw head: dessiner la tête
+      draw arms: dessiner les bras
+      jump to neck: aller au cou
+      draw O: dessiner un O
+      draw D: dessiner un D
+      draw E: dessiner un E
+      draw ear stems: dessiner les branches de lunettes
+      big gear: grand engrenage
+      small gear: petit engrenage
+      draw a hexagon: dessine un hexagone
+      draw a flower: dessine une fleur
+      draw a square: dessine un carré
+      draw a snowflake: dessine un flocon de neige
+      draw 3 hexagons: dessiner 3 hexagones
+      draw 4 hexagons: dessiner 4 hexagones
+      draw 5 hexagons: dessiner 5 hexagones
+      get 2 nectar: obtenir 2 nectars
+      collect purple nectar: collecter le nectar violet
+      get 5: en obtenir 5
+      move and get nectar: se déplacer et obtenir le nectar
+      move and get 4: se déplacer et en obtenir 4
+      get 7 nectar make 7 honey: obtenir 7 nectars et fabriquer 7 miels
+      get 7 make 7: en obtenir 7 en créer 7
+      get 7: en obtenir 7
+      move and get 3: se déplacer et en obtenir 3
+      draw a tree: dessine un arbre
+      draw triangle: dessiner un triangle
+      draw circle: dessiner un cercle
+      draw goal: dessiner l'objectif
+      graph: graphique
+      draw waves: dessiner des vagues
+      draw a wave: dessiner une vague
+      draw a small triangle: dessiner un petit triangle
+      draw a medium triangle: dessiner un triangle moyen
+      draw a large triangle: dessiner un triangle large
+      draw a big triangle: dessiner un grand triangle
+      draw a triangle: dessine un triangle
+      draw a house: dessine une maison
+      check purple flower: vérifier les fleurs violettes
+      check flower make honey: vérifier les fleurs fabriquer du miel
+      get nectar or make honey: obtenir du nectar ou fabriquer du miel
+      make 3 honey: fabriquer 3 miels
+      get 5 nectar: obtenir 5 nectars
+      make all honey: fabriquer tout le miel
+      draw a star: dessine une étoile
+      game has been won: le jeu a été gagné
+      draw: dessiner
+      draw bit: dessiner un peu
+      draw a polygon: dessiner un polygone
+      draw a shape: dessiner une forme
+      get 2 and make 2: en obtenir 2 et en fabriquer 2
+      draw a pinwheel: dessiner une girouette
+      drawTree: dessinerArbre
+      drawHouse: dessinerMaison
+      drawBranch: dessinerBranche
+      drawSky: dessinerCiel
+      fillScreen: remplirEcran
+      swap: échanger
+      dropR: laissertomberR
+      grabL: saisirL
+      dropL: laissertomberL
+      init: init
+      grabR: saisirR
+      do something: faire quelque chose
+      filter_pixel: filtre_pixel
+      draw_image: dessiner_image
+      witch ending: fin de la sorcière
+      story: histoire
+      starting path: chemin de départ
+      jump: sauter
+      patrol: patrouiller
+      draw grid1: dessiner grille1
+      draw lines: dessiner des lignes
+      Draw a Square Line: Dessiner une ligne de carrés
+      Draw a triangle: Dessiner un triangle
+      Draw a Cube: Dessiner un cube
+      draw a cube: dessiner un cube
+      draw an octagon 20: dessinez un octogone 20
+      Draw a square: Dessiner un carré
+      cube: cube
+      do something2: faire quelquechose2
+      jump upper right: sauter plus haut à droite
+      draw a line of  squares: dessiner une ligne de carrés
+      draw a line of squares: dessiner une ligne de carrés
+      Draw Square Line: Dessiner une ligne de carrés
+      jump upper left: sauter plus haut à gauche
+      draw a line of octagons: dessiner une ligne d'octogones
+      draw a square line: dessiner une ligne de carrés
+      Draw a Square: Dessiner un carré
+      draw a square 20: dessiner un carré 20
+      draw a square 40: dessiner un carré 40
+      draw a triangle with length: dessiner une triangle dont la longueur
+      Draw a Triangle with length: Dessiner un triangle dont la longueur
+      draw a triangle wioth length: dessiner une triangle dont la longueur
+      draw a sqaure: dessiner un carré
+      triangle: triangle
+      draw a spiral shape: dessiner une forme en spirale
+      get 3 nectar: obtenir 3 nectars
+      get many nectar: obtenir beaucoup de nectars
+      get nectar make honey: obtenir du nectar fabriquer du miel
+      draw an octagon: dessinez un octogone
+      draw octagons: dessinez des octogones
+      level_up: niveau_suivant
+      score_points: score_points
+      set score: mettre le score à
+      draw a line of hexagons: dessiner une ligne d'hexagones
+      get nectar: obtenir du nectar
+      make honey up and over: solution "simple"
+      patrol left right: patrouiller de gauche à droite
+      empty function: fonction vide
+      check guess: vérifier l'hypothèse
+      Jump: Aller à
+      test: test
+      build bridge: construire le pont
+      run right: courir à droite
+      spin right: tourner à droite
+      grow forever: grandir pour toujours
+      draw grass: dessinez de l'herbe
+      sun: soleil
+      draw windows: dessiner les fenêtres
+      square: carré
+      draw a door: dessiner une porte
+      rectangle: rectangle
+      diamond: diamant
+      window: fenêtre
+      n-sided shape: forme avec n côtés
+      draw a loop: dessiner une boucle
+      draw spiral circle: dessiner un cercle en spirale
+      draw roof: dessiner le toit
+      draw rectangle: dessiner le rectangle
+      move: déplacer
+      function 1: fonction 1
+      function 2: fonction 2
+      destroy and move: détruire et déplacer
+      place and move: placer et se déplacer
+      build short bridge: construire un petit pont
+      build long bridge: construire un grand pont
+      create trail: créer une piste
+      move and fill: déplacer et remplir
+      make segment: faire un segment
+      turn corner: tourner au coin
+      clear right corner: effacer le coin droit
+      clear left corner: effacer le coin gauche
+      draw a pentagon: dessiner un pentagone
+      25 pixel square: carré de 25 pixels
+      draw eye: dessiner un oeil
+      move right: déplacer vers la droite
+      move up: déplacer vers le haut
+      move down: déplacer vers le bas
+      move left: déplacer vers la gauche
+      kill alien: tuer l'extra-terrestre
+      click: cliquer
+      my function: ma fonction
+      Squares row: Ligne de carrés
+      draw first part of heart: dessiner la première partie du cœur
+      check win: vérifier la victoire
+      make triangle: faire un triangle
+      my behavior: mon comportement
+      '"simple" solution': 'solution "simple"'
+      potential solution: solution potentielle
+      my design: ma conception
+      get 3 nectar or honey: obtenir 3 nectars ou miels
+      move and collect: se déplacer et collecter
+      check nectar or honey: vérifier le nectar ou le miel
+      row of nectar: ligne de nectars
+      rowOfNectar: lignedenectars
+      move and check: se déplacer et vérifier
+      win game: gagner le jeu
+      lose game: perdre le jeu
+      keep playing: continuer à jouer
+      Ask a question: Poser une question
+      draw pinwheel: dessiner une girouette
+      draw background: dessiner un arrière plan
+      move and get nectar with counter: se déplacer et obtenir le nectar avec compteur
+      pick row: choisir la ligne
+      draw flame: dessiner des flammes
+      draw fire: dessiner du feu
+      check for corn: vérifier pour le maïs
+      corn rectangle: rectangle de maïs
+      lettuce stairs: escaliers de laitue
+      pick veggie: choisir les légumes
+      corn and pumpkin: maïs et citrouille
+      go get pumpkins: aller chercher les citrouilles
+      go get lettuce: aller chercher la laitue
+      garden square: jardin carré
+      get corn come back: obtenir le maïs revenir
+      checker: vérificateur
+      draw a square2: dessiner un carré2
+      filled square: carré rempli
+      get only nectar: obtenir uniquement le nectar
+      only make honey: fabriquer uniquement le miel
+      collect row: collecter la ligne
+      rowOfNectarOrHoney: lignedenectaroumiel
+      collect stairs: collecter les escaliers
+      collect: collecter
+      move and increment: déplacer et incrémenter
+      do something3: faire quelquechose3
+      Robin Fly: Vol de Robin
+      Robot Jump: Saut du robot
+      Center Dragon: Centrer le dragon
+      Dragon Fly: Vol du dragon
+      Knight Surge: Ruée du chevalier
+      Stop Dragon: Arrêter le dragon
+      Knight Jump: Saut du chevalier
+      fill area with color: remplir l'espace avec de la couleur
+      draw a line of triangles: dessiner une ligne de triangles
+      check flower: vérifier la fleur
+      get next row: obtenir la ligne suivante
+      check space: vérifier l'espace
+      follow path: suivre le chemin
+      physics: physiques
+      initialization: initialisation
+      Make Actor 1 Jump: Faire sauter l'acteur 1
+      Choose Number: Choisir un nombre
+      Move Bird: Déplacer l'oiseau
+      turn left: tourner à gauche
+      move forward: avancer plus
+      turn right: tourner à droite
+      draw a rectangle: dessiner un rectangle
+      Which Course for My Students?: Quel cours pour mes étudiants ?
+      draw a heart: dessiner un cœur

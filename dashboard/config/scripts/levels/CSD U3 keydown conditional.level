@@ -29,7 +29,6 @@
       "assign_x": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Changing Sprites\r\n\r\nYou saw on the last level that `keyDown` returns `true` while you are holding a key down and `false` when the key is not pressed down.   The input for the `keyDown` command is the name of key you want to check in quotes. Some examples are \"x\", \"up\" and \"space\".\r\n\r\nWe can use `keyDown` as an input to an `if` statement to change our animations based on key presses!\r\n\r\n# Do This\r\n* Run the code and try pressing the up and down arrows.\r\n* Look inside the `if` statement to see how the code works.\r\n* Add a block inside the third `if` statement to change the animation to a different animal.\r\n\r\n*Hint: you can use the rabbit that's already in the Animations tab, or add a new animation.*",

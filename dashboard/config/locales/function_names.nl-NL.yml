@@ -1,0 +1,29 @@
+---
+nl:
+  data:
+    function_names:
+      x: x
+      draw a circle: teken een cirkel
+      draw a hexagon: teken een zeskant
+      draw a flower: teken een bloem
+      draw a square: teken een vierkant
+      draw a snowflake: teken een sneeuwvlok
+      draw a tree: teken een boom
+      draw a triangle: teken een driehoek
+      draw a house: teken een huis
+      draw a star: teken een ster
+      do something: do iets
+      jump: spring
+      set score: score instellen
+      get nectar: haal nectar
+      test: test
+      diamond: diamant
+      move: ga
+      move right: naar rechts
+      move up: omhoog
+      move down: omlaag
+      move left: naar links
+      collect: verzamel
+      turn left: Draai linksom
+      move forward: beweeg vooruit
+      turn right: Draai rechtsom

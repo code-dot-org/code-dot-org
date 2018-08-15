@@ -1,0 +1,28 @@
+ko:
+  data:
+    function_names:
+      x: x
+      draw a circle: 원 그리기
+      draw a hexagon: 6각형 그리기
+      draw a flower: 꽃 그리기
+      draw a square: 사각형 그리기
+      draw a snowflake: 해바라기 그리기
+      draw a tree: 나무 그리기
+      draw a triangle: 삼각형 그리기
+      draw a house: 집 그리기
+      draw a star: 별 그리기
+      do something: 함수 이름
+      jump: 점프
+      set score: 점수 등록
+      get nectar: 꽃꿀 얻기
+      test: 검사
+      diamond: 다이아몬드
+      move: 움직이기
+      move right: 오른쪽으로 이동하기
+      move up: 위로 올라가기
+      move down: 아래로 이동하기
+      move left: 왼쪽으로 이동하기
+      collect: 모으세요.
+      turn left: 왼쪽으로 회전
+      move forward: move forward
+      turn right: 오른쪽으로 회전

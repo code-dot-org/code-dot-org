@@ -96,7 +96,7 @@ class BonusLevel extends React.Component {
     );
   }
 
-  renderSolutionImageThumbnail() {
+  renderSolutionImageThumbnail(src) {
     return (
       <div style={styles.bonusLevel}>
         <a href={`?id=${this.props.id}`}>
@@ -105,7 +105,7 @@ class BonusLevel extends React.Component {
             completed={this.props.perfected}
           >
             <img
-              src={this.props.solutionImageUrl}
+              src={src}
               style={styles.solutionImage}
             />
           </CompletableLevelThumbnail>
@@ -116,10 +116,12 @@ class BonusLevel extends React.Component {
   }
 
   render() {
-    if (["Maze", "Karel"].includes(this.props.type)) {
+    if (this.props.thumbnailUrl) {
+      return this.renderSolutionImageThumbnail(this.props.thumbnailUrl);
+    } else if (["Maze", "Karel"].includes(this.props.type)) {
       return this.renderWithMazeThumbnail();
     } else if (this.props.solutionImageUrl) {
-      return this.renderSolutionImageThumbnail();
+      return this.renderSolutionImageThumbnail(this.props.solutionImageUrl);
     } else {
       return (
         <a href={`?id=${this.props.id}`}>{this.props.name}</a>

@@ -1,0 +1,27 @@
+name 'U4L08v2 Making Pivot Tables Part 3_2018'
+title 'title'
+css 'unplugged'
+description 'description here'
+markdown <<MARKDOWN
+# Free Play!
+Now you'll make summary tables of the data you collected and cleaned!
+
+**NOTE:** The task below is a kick-off to the next lesson which is a **Practice Performance Task**. You don't *have to* make a chart of the pivot table today - you'll be doing that as part of the next project - but you might experiment.
+
+## Your Task
+
+**Create at least two (2) pivot tables** that show different things about your data.
+* With your partner, go back to the data you collected as a class (and which you cleaned up yesterday).
+* Practice using pivot tables to group and calculate things you might be interested in.
+
+## Tips
+
+There are two approaches to thinking about what kind of summary table to make:
+
+1. Work backward from a question: Start with a question you want to answer, or a hypothesis about something in the data you think you could reveal. Often the question itself tells you what calculations you need to make.
+2. Work forward by experimenting, iterating, and finding something interesting. Start by simply picking a category to group in rows. Then pick a second one to display as values, and try COUNT, AVERAGE, MIN, MAX, etc.  By poking around ideas will come to you for interesting investigations.
+
+Click "Continue" below to head to the next level.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

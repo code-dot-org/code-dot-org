@@ -1,4 +1,5 @@
-"fa":
+---
+fa:
   data:
     unplugged:
       Unplug1:
@@ -188,7 +189,7 @@
           بارها و بارها استفاده کنید) برای ایجاد آویزهای شیشه ای با استفاده از نخ
           و مهره میسازند.
       SongwritingParameters:
-        title: ترانه نویسی با پارامترها
+        title: ترانه سرایی
         desc: دانش آموزان مفهوم کُر در یک ترانه را برای یادگیری در مورد "عبور دادن
           پارامترها" (که از یک تابع، تابع سفارشی جدیدی بدون نیاز به بازنویسی کل تابع
           اولیه میسازد) استفاده میکنند.
@@ -251,47 +252,20 @@
           با دودویی ذخیره کند.
       VideoGamesCoordinatePlanes:
         title: بازیهای ویدئویی و هواپیماهای همآهنگ
-        desc: شرح درس بازیهای ویدئویی و هواپیماهای همآهنگ
-      Contracts:
-        title: قراردادها
-        desc: شرح درس بدون دستگاه قراردادها
       DesignRecipe:
         title: دستور العمل طراحی
-        desc: شرح درس دستور العمل طراحی
-      Booleans:
-        title: بولی
-        desc: شرح درس بولین
       ConditionalsPiecewiseFunctions:
         title: شرطی ها و توابع چند ضابطه ای
-        desc: شرح درس شرطی ها و توابع چند ضابطه ای
-      CollisionDetection:
-        title: تشخیص تصادم
-        desc: شرح درس تشخیص تصادم
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: فعالیت کلاسی
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: فعالیت کلاسی
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: فعالیت کلاسی
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: فعالیت کلاسی
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: فعالیت کلاسی
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: فعالیت کلاسی
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'الگوریتم های زندگی واقعی: یک بذر بکار'
         desc: اين درس روش هایی را جستجومیکند که ما از الگوریتم ها در زندگی روزمره
@@ -338,12 +312,12 @@
           دودویی نشان میدهد. دانش آموزان یاد میگیرند که داده ها می توانند به طرق مختلف
           نمایندگی و ذخیره شوند.
       courseD_unplugged_graphPaperProgramming:
-        title: برنامه نویسی روی کاغذ شطرنجی
+        title: برنامه نویسی روی کاغذ رسم شطرنجی
         desc: دانش آموزان یک الگوریتم (مجموعه ای از دستورالعمل ها) را با استفاده از
           مجموعه ای از فرمان های از پیش تعریف شده مینویسند تا همکلاسی های خود را برای
           بازتولید یک نقاشی هدایت کنند.
       courseD_unplugged_relayProgramming:
-        title: برنامه نویسی رله
+        title: برنامه نویسی دست به دست
         desc: دانش آموزان یک مسابقۀ رله اجرا میکنند، طوری که آنها در میان محوطه میدوند
           تا یک الگوریتم مبتنی بر یک تصویر "کاغذ گراف" بنویسند. آنها می توانند فقط
           یک دستور را در آن واحد بنویسند و اگر خطایی در جایی وجود داشت، بایدهمه چیز
@@ -361,7 +335,6 @@
           چگونه یک کامپیوتر می تواند اطلاعات پیچیده تری (مانند تصاویر و رنگ ها) را
           با دودویی ذخیره کند.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: اين درس روش هایی را جستجومیکند که ما از الگوریتم ها در زندگی روزمره
           خود استفاده کنیم. به عنوان بخشی از آن، دانش آموزان الگوریتم بازی تاس انداختن
           را شناسایی میکنند و مینویسند.
@@ -380,7 +353,7 @@
           علوم کامپیوتر، برای تکمیل دست جمعی یک کار مفیدترعمل میکنند تا وقتی که یک
           دانش آموز به تنهایی اقدام به حل یک مسأله بکند.
       courseE_unplugged_songwriting:
-        title: ترانه نویسی با پارامترها
+        title: ترانه سرایی
         desc: دانش آموزان مفهوم کُر در یک ترانه را برای یادگیری در مورد "عبور دادن
           پارامترها" (که از یک تابع، تابع سفارشی جدیدی بدون نیاز به بازنویسی کل تابع
           اولیه میسازد) استفاده میکنند.
@@ -402,86 +375,14 @@
           تکرار کنیم، اما الآن میخواهیم یاد بگیریم که چگونه از حلقه هایی با ساختارهای
           پیچیده تر استفاده کنیم.
       courseF_unplugged_songwritingParameters:
-        title: ترانه سرایی با متغیر ها
+        title: ترانه نویسی با پارامترها
         desc: 'یکی از با شکوه ترین سازه های جهان علم کامپیوتر تابع است.  توابع (گاهی
           رویه نامیده میشوند) برنامه های کوچک هستند که شما میتوانید بارها و بارها
           در داخل برنامه بزرگتر خود از آنها آستفاده کنید. این درس به دانش آموزان کمک
           خواهد کرد که عمیقاً درک کنند که چرا ترکیب انبوهی از کد در توابع عمل بسیار
           مفیدی است.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: دوستان رباتی من
       PlantASeed_2018:
         title: 'الگوریتم های زندگی واقعی: یک بذر بکار'
         desc: اين درس روش هایی را جستجومیکند که ما از الگوریتم ها در زندگی روزمره
@@ -496,9 +397,6 @@
         title: با خیال راحت سفرکردن
         desc: اینترنت یک مکان قدرتمند، اما گاهی خطرناک است. معلمان نشان میدهند که
           چگونه در حالی که در اینترنت میگردیم ایمن بمانیم.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: رویداد بزرگ
         desc: دانش آموزان با مفهومِ برنامه نویسیِ "رویدادها" آشنا میشوند، که اقداماتی
@@ -506,18 +404,16 @@
           از راه دور کاغذی را فشار میدهد و دانش آموزان بسته به اینکه کدام دکمه فشار
           داده شده است واکنش نشان می دهند.
       GraphPaperProgramming_2018:
-        title: برنامه نویسی روی کاغذ شطرنجی
+        title: برنامه نویسی روی کاغذ رسم شطرنجی
         desc: دانش آموزان یک الگوریتم (مجموعه ای از دستورالعمل ها) را با استفاده از
           مجموعه ای از فرمان های از پیش تعریف شده مینویسند تا همکلاسی های خود را برای
           بازتولید یک نقاشی هدایت کنند.
       courseD_unplugged_digitalCitizenship_2018:
         title: فعالیت کلاسی
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: فعالیت کلاسی
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
-        title: مشروط
+        title: شرطی ها
         desc: برای یادگیری درباره عبارات شرطی، دانش آموزان یک بازی با کارت انجام میدهند
           و قوانینی مانند "اگر من کارت قرمز را بیرون کشیدم, یک امتیاز دریافت میکنم"
           و "اگر کارت سیاه را بیرون کشیدم، تو یک امتیاز دریافت میکنی" را ایجاد میکنند.
@@ -549,4 +445,5 @@
           نمایندگی و ذخیره شوند.
       MoveItMoveIt_2018:
         title: حرکت کن، حرکت کن
-        desc: ''
+      RelayProgramming_2018:
+        title: برنامه نویسی دست به دست

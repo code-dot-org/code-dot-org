@@ -68,7 +68,6 @@
       "comment": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Switching Images\r\n\r\nYou don't have to keep the same image the whole time. In fact since your *image* was moving around the screen it would be cool to have it fact the correct direction as it moves.\r\n\r\n# Do This\r\n\r\nYour work was copied here as well\r\n\r\n* Add a call to `setAnimation` inside each if statement to the correct image",

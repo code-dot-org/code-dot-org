@@ -51,7 +51,6 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Race Cars\r\n\r\nYou made a racing game in the last lesson. You can now make those rectangles look like race cars!\r\n\r\n# Do This\r\n\r\n* Use the race car images in the animations tab to update your racing animation.",

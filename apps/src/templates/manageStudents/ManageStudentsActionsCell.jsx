@@ -6,9 +6,8 @@ import FontAwesome from '../FontAwesome';
 import Button from '../Button';
 import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudents, RowType} from './manageStudentsRedux';
 import {connect} from 'react-redux';
-import BaseDialog from '../BaseDialog';
-import DialogFooter from "../teacherDashboard/DialogFooter";
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -22,13 +21,16 @@ const styles = {
 
 class ManageStudentActionsCell extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired, // the student's user id
     sectionId: PropTypes.number,
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
     rowType: PropTypes.oneOf(Object.values(RowType)),
     loginType: PropTypes.string,
+    studentName: PropTypes.string.isRequired,
+    hasEverSignedIn: PropTypes.bool,
+    dependsOnThisSectionForLogin: PropTypes.bool,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -142,34 +144,15 @@ class ManageStudentActionsCell extends Component {
             />
           </div>
         }
-        <BaseDialog
-          useUpdatedStyles
-          uncloseable
+        <ConfirmRemoveStudentDialog
           isOpen={this.state.deleting}
-          style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
-        >
-          <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
-          <div>
-            {i18n.removeStudentConfirm1() + ' '}
-            <a target="_blank" href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
-              {i18n.removeStudentConfirm2()}
-            </a>
-            {' ' + i18n.removeStudentConfirm3()}
-          </div>
-          <DialogFooter>
-            <Button
-              text={i18n.dialogCancel()}
-              onClick={this.onCancelDelete}
-              color={Button.ButtonColor.gray}
-            />
-            <Button
-              text={i18n.removeStudent()}
-              onClick={this.onConfirmDelete}
-              color={Button.ButtonColor.red}
-              disabled={this.state.requestInProgress}
-            />
-          </DialogFooter>
-        </BaseDialog>
+          disabled={this.state.requestInProgress}
+          studentName={this.props.studentName}
+          hasEverSignedIn={this.props.hasEverSignedIn}
+          dependsOnThisSectionForLogin={this.props.dependsOnThisSectionForLogin}
+          onConfirm={this.onConfirmDelete}
+          onCancel={this.onCancelDelete}
+        />
       </div>
     );
   }

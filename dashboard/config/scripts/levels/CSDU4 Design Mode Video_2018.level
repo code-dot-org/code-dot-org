@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-04-30T18:04:00.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csp_applab_design",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Intro to Design Mode",
+    "parent_level_id": 8094,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-18 15:48:18 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

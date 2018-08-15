@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { OAuthSectionTypes } from './shapes';
+
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
@@ -39,9 +40,10 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_CSF_SCRIPT_IDS = 'teacherDashboard/SET_CSF_SCRIPT_IDS';
+const SET_STAGE_EXTRAS_SCRIPT_IDS = 'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
-const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
+/** Sets teacher's current authentication providers */
+const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
@@ -62,7 +64,9 @@ const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
-/** Opens the third-paty roster UI */
+/** Sets a section's roster provider, which must be of type OAuthSectionTypes */
+const SET_ROSTER_PROVIDER = 'teacherSections/SET_ROSTER_PROVIDER';
+/** Opens the third-party roster UI */
 const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 /** Reports available rosters have been loaded */
 const IMPORT_ROSTER_FLOW_LIST_LOADED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
@@ -74,6 +78,8 @@ const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
 const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
+/** temporary flag to enable versionMenu experiment */
+const SET_SHOW_VERSION_MENU = 'teacherSections/SET_SHOW_VERSION_MENU';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -89,8 +95,9 @@ export const __testInterface__ = {
 // Action Creators
 //
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
-export const setCsfScriptIds = ids => ({ type: SET_CSF_SCRIPT_IDS, ids });
-export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
+export const setStageExtrasScriptIds = ids => ({ type: SET_STAGE_EXTRAS_SCRIPT_IDS, ids });
+export const setAuthProviders = providers => ({ type: SET_AUTH_PROVIDERS, providers });
+export const setRosterProvider = rosterProvider => ({ type: SET_ROSTER_PROVIDER, rosterProvider });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
   validCourses,
@@ -100,6 +107,10 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
   sectionId: sectionId,
   students: studentInfo
+});
+export const setShowVersionMenu = (enabled) => ({
+  type: SET_SHOW_VERSION_MENU,
+  enabled
 });
 
 /**
@@ -160,10 +171,13 @@ export const finishEditingSection = () => (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
+
+  const dataUrl = isAddingSection(state) ? '/dashboardapi/sections' : `/dashboardapi/sections/${section.id}`;
+  const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: isAddingSection(state) ? '/v2/sections' : `/v2/sections/${section.id}/update`,
-      method: 'POST',
+      url: dataUrl,
+      method: httpMethod,
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
     }).done(result => {
@@ -195,12 +209,11 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
 export const asyncLoadSectionData = (id) => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
-
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-    '/dashboardapi/courses',
-    '/v2/sections/valid_scripts'
+    `/dashboardapi/courses`,
+    '/dashboardapi/sections/valid_scripts'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
@@ -240,7 +253,7 @@ function fetchJSON(url, params) {
  */
 export const beginImportRosterFlow = () => (dispatch, getState) => {
   const state = getState();
-  const provider = getRoot(state).provider;
+  const provider = getRoot(state).rosterProvider;
   if (!provider) {
     return Promise.reject(new Error('Unable to begin import roster flow without a provider'));
   }
@@ -285,7 +298,7 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
  */
 export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getState) => {
   const state = getState();
-  const provider = getRoot(state).provider;
+  const provider = getRoot(state).rosterProvider;
   const importSectionUrl = importUrlByProvider[provider];
   let sectionId;
 
@@ -306,14 +319,18 @@ export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getStat
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
-  provider: null,
+  // List of teacher's authentication providers (mapped to OAuthSectionTypes
+  // for consistency and ease of comparison).
+  providers: [],
   validGrades: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
+  // A map from assignmentId to assignment (see assignmentShape PropType).
   validAssignments: {},
-  // Ids of assignments that go in our first dropdown (i.e. courses, and scripts
-  // that are not in a course)
-  primaryAssignmentIds: [],
+  // Array of assignment families, to populate the assignment family dropdown
+  // with options like "CSD", "Course A", or "Frozen". See the
+  // assignmentFamilyShape PropType.
+  assignmentFamilies: [],
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited
@@ -329,11 +346,15 @@ const initialState = {
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
   isRosterDialogOpen: false,
+  // Track a section's roster provider. Must be of type OAuthSectionTypes.
+  rosterProvider: null,
   // Set of oauth classrooms available for import from a third-party source.
   // Not populated until the RosterDialog is opened.
   classrooms: null,
   // Error that occurred while loading oauth classrooms
   loadError: null,
+  // whether to show the new version menu
+  showVersionMenu: false,
 };
 
 /**
@@ -362,18 +383,36 @@ function newSectionData(id, courseId, scriptId, loginType) {
   };
 }
 
+const defaultVersionYear = '2017';
+
+// Fields to copy from the assignmentInfo when creating an assignmentFamily.
+export const assignmentFamilyFields = [
+  'category_priority', 'category', 'position', 'assignment_family_title', 'assignment_family_name'
+];
+
+// Maps authentication provider to OAuthSectionTypes for ease of comparison
+// (i.e., Google auth is 'google_oauth2' but the section type is 'google_classroom').
+export const mapProviderToSectionType = (provider) => {
+  switch (provider) {
+    case 'google_oauth2':
+      return OAuthSectionTypes.google_classroom;
+    default:
+      return provider;
+  }
+};
+
 export default function teacherSections(state=initialState, action) {
-  if (action.type === SET_OAUTH_PROVIDER) {
+  if (action.type === SET_AUTH_PROVIDERS) {
     return {
       ...state,
-      provider: action.provider
+      providers: action.providers.map(provider => mapProviderToSectionType(provider))
     };
   }
 
-  if (action.type === SET_CSF_SCRIPT_IDS) {
+  if (action.type === SET_STAGE_EXTRAS_SCRIPT_IDS) {
     return {
       ...state,
-      csfScriptIds: action.ids,
+      stageExtrasScriptIds: action.ids,
     };
   }
 
@@ -386,10 +425,9 @@ export default function teacherSections(state=initialState, action) {
 
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
+    const assignmentFamilies = [];
 
-    // Primary assignment ids are (a) courses and (b) scripts that are not in any
-    // of our courses.
-    let primaryAssignmentIds = [];
+    // Array of assignment ids of scripts which belong to any valid courses.
     let secondaryAssignmentIds = [];
 
     // NOTE: We depend elsewhere on the order of our keys in validAssignments
@@ -405,30 +443,58 @@ export default function teacherSections(state=initialState, action) {
         assignId,
         path: `/courses/${course.script_name}`
       };
-      primaryAssignmentIds.push(assignId);
+
+      // Use the assignment family fields from the course in that family with
+      // the default version year, 2017.
+      if (course.version_year === defaultVersionYear) {
+        assignmentFamilies.push(_.pick(course, assignmentFamilyFields));
+      }
+
       secondaryAssignmentIds.push(...scriptAssignIds);
     });
     secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
 
     action.validScripts.forEach(script => {
       const assignId = assignmentId(null, script.id);
+
+      // Put each script in its own assignment family with the default version
+      // year, unless those values were provided by the server.
+      const assignmentFamilyName = script.assignment_family_name || script.script_name;
+      const assignmentFamilyTitle = script.assignment_family_title || script.name;
+      const versionYear = script.version_year || defaultVersionYear;
+      const versionTitle = script.version_title || defaultVersionYear;
+
       validAssignments[assignId] = {
         ...script,
         courseId: null,
         scriptId: script.id,
         assignId,
-        path: `/s/${script.script_name}`
+        path: `/s/${script.script_name}`,
+        assignment_family_name: assignmentFamilyName,
+        version_year: versionYear,
+        version_title: versionTitle
       };
 
+      // Do not add assignment families for scripts belonging to courses. To assign
+      // them, one must first select the corresponding course from the assignment
+      // family dropdown, and then select the script from the secondary dropdown.
       if (!secondaryAssignmentIds.includes(assignId)) {
-        primaryAssignmentIds.push(assignId);
+        // Use the assignment family fields from the script in that family with
+        // the default version year, 2017.
+        if (versionYear === defaultVersionYear) {
+          assignmentFamilies.push({
+            ..._.pick(script, assignmentFamilyFields),
+            assignment_family_title: assignmentFamilyTitle,
+            assignment_family_name: assignmentFamilyName
+          });
+        }
       }
     });
 
     return {
       ...state,
       validAssignments,
-      primaryAssignmentIds,
+      assignmentFamilies,
     };
   }
 
@@ -637,6 +703,16 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === SET_ROSTER_PROVIDER) {
+    if (!OAuthSectionTypes[action.rosterProvider]) {
+      throw new Error(`SET_ROSTER_PROVIDER called with invalid provider type '${action.rosterProvider}'`);
+    }
+    return {
+      ...state,
+      rosterProvider: action.rosterProvider,
+    };
+  }
+
   //
   // Roster import action types
   //
@@ -670,6 +746,7 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       isRosterDialogOpen: false,
+      rosterProvider: null,
       classrooms: null,
     };
   }
@@ -693,6 +770,13 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === SET_SHOW_VERSION_MENU) {
+    return {
+      ...state,
+      showVersionMenu: action.enabled
+    };
+  }
+
   return state;
 }
 
@@ -708,8 +792,8 @@ export function isRosterDialogOpen(state) {
   return getRoot(state).isRosterDialogOpen;
 }
 
-export function oauthProvider(state) {
-  return getRoot(state).provider;
+export function rosterProvider(state) {
+  return getRoot(state).rosterProvider;
 }
 
 export function sectionCode(state, sectionId) {
@@ -722,7 +806,7 @@ export function sectionName(state, sectionId) {
 
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
-    return oauthProvider(state);
+    return rosterProvider(state);
   }
   return null;
 }
@@ -850,7 +934,7 @@ export const assignmentPaths = (validAssignments, section) => {
  * @param state
  * @param id
  */
-export const isCsfScript = (state, id) => state.teacherSections.csfScriptIds.indexOf(id) > -1;
+export const stageExtrasAvailable = (state, id) => state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using

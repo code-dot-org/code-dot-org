@@ -1,0 +1,19 @@
+---
+eu:
+  data:
+    block_categories:
+      Actions: Ekintzak
+      Loops: Itzuliak
+      Functions: Funtzioak
+      Color: Kolorea
+      Math: Matematika
+      Logic: Logika
+      Variables: Aldagaiak
+      Conditionals: Baldintzak
+      Events: Gertaerak
+      Text: Testua
+      Start: Hasiera
+      Booleans: Boolearrak
+      test: proba
+      Name: Izena
+      Function: Funtzioa

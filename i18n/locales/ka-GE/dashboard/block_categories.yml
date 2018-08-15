@@ -1,0 +1,21 @@
+ka:
+  data:
+    block_categories:
+      Actions: მოქმედებები
+      Loops: ციკლები
+      Functions: ფუნქციები
+      Color: ფერი
+      Math: მათემატიკა
+      Logic: ლოგიკა
+      Variables: ცვლადები
+      Conditionals: პირობითი ბრძანებები
+      Events: მოვლენები
+      Text: ტექსტი
+      Input: შემომავალი ინფორმაცია
+      Sprites: სპრაიტები
+      Start: დაწყება
+      Booleans: ბულის ტიპის მონაცემები (ლოგიკური ოპერატორები)
+      test: ტესტი
+      Foo: Foo
+      Name: სახელი
+      Function: ფუნქცია

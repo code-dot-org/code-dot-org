@@ -80,7 +80,8 @@
       "tempSensor.F": null,
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+      "rgb": null
     },
     "edit_code": true,
     "embed": "false",
@@ -124,11 +125,12 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "encrypted_examples": "LYv/4kAfSpf2YkoRvnAaExl20MIIgQKhTyBeNWVH8E/P47Ue730OtxlyBDBi\neoxOX8RP6pmAXa2DudILlB8Q1g==\n",
+    "show_type_hints": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-22 23:18:33 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 19:25:04 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 19:26:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 22:45:27 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-22 23:18:33 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 19:25:04 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 19:26:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 22:45:27 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-15 16:05:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

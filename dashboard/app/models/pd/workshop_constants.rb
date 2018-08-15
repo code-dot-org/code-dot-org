@@ -4,14 +4,9 @@ module Pd
   module WorkshopConstants
     include SharedWorkshopConstants
 
-    COURSE_NAMES_MAP = {
-      COURSE_CSF => 'CS Fundamentals',
-      COURSE_CSP => 'CS Principles',
-      COURSE_ECS => 'Exploring Computer Science',
-      COURSE_CS_IN_A => 'CS in Algebra',
-      COURSE_CS_IN_S => 'CS in Science',
-      COURSE_CSD => 'CS Discoveries',
-      COURSE_COUNSELOR => 'Counselor',
+    # Override certain course names for display purposes.
+    # Otherwise the raw course name will be used.
+    COURSE_NAME_OVERRIDES = {
       COURSE_ADMIN => 'Administrator'
     }.freeze
 
@@ -69,6 +64,7 @@ module Pd
         SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5}
       },
       COURSE_CSD => {
+        SUBJECT_CSD_SUMMER_WORKSHOP => {max_hours: 33.5},
         SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
       }
     }.freeze
@@ -79,7 +75,6 @@ module Pd
     ]
 
     WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
-      COURSE_CSP => 'CSP Support',
       COURSE_ECS => 'ECS Support',
       COURSE_CS_IN_A => 'CS in Algebra Support',
       COURSE_CS_IN_S => 'CS in Science Support'
@@ -89,8 +84,8 @@ module Pd
     #  - course_name : the name of the Course object associated with that workshop.
     # Only courses with a pre-survey will have an entry here
     PRE_SURVEY_BY_COURSE = {
-      COURSE_CSD => {course_name: 'csd'},
-      COURSE_CSP => {course_name: 'csp'}
+      COURSE_CSD => {course_name: 'csd-2018'},
+      COURSE_CSP => {course_name: 'csp-2018'}
     }.freeze
   end
 end

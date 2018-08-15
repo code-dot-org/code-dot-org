@@ -1,0 +1,44 @@
+name 'Technique: Frequency Analysis_2018'
+title 'How to crack a substitution cipher'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Cracking Substitution Ciphers
+
+The best technique for cracking a random substitution cipher is known as **frequency analysis** 
+
+Paraphrased from: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+
+* **Frequency analysis** is a technique that is based on how *frequently* certain letters appear in English versus others.
+* For instance, given a section of English text, *E*, *T*, *A* and *O* are the most common, while *Z*, *Q* and *X* are rare. Likewise, *TH*, *ER*, *ON*, and *AN* are the most common pairs of letters that occur next to each other.
+* In fact, the distribution of letters is roughly the same for almost *all* samples of English text. 
+
+
+The version of the widget on the previous page is intended to help you **crack a substitution cipher through frequency analysis**.
+
+By analyzing the frequency of the letters in the encrypted message compared to the frequency of letters in a typical piece of English prose, you can start to narrow in on what some of the letter mappings might be. 
+
+The tool shows you how the frequency of letters in the encrypted text (orange) compares with frequencies from typical english (blue).
+
+### Hint: Where to start?
+
+1. Find the short words and "crack" them first.  How many one-letter words do you know? ("a").  A very common 3-letter word is "the".
+2. Once you've done that, you have substitions for some of the most common letters.  You should be able to use intuition to look at other words with these partial subsititions and make good guesses.
+3. After finding only a handful of hard-fought letters, the rest will tumble quickly.
+4. Comparing the frequencies of letters gives good insight for making sensible guesses.
+
+### Try this:
+The animation below shows someone getting started.  Here's what they tried
+
+* First sort the characters by frequency. 
+* Identify a group of characters that might map to the word `the`.  
+It's a good start!
+
+![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+
+## Is random substitution good?
+* After a little practice, how long does it take you to crack a random substitution cipher?
+* Is this good or not?
+
+
+MARKDOWN

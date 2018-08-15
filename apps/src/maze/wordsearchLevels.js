@@ -1,6 +1,9 @@
-var Direction = require('./tiles').Direction;
-var reqBlocks = require('./requiredBlocks');
+var tiles = require('@code-dot-org/maze').tiles;
+var Direction = tiles.Direction;
+
 var blockUtils = require('../block_utils');
+
+var reqBlocks = require('./requiredBlocks');
 
 var wordSearchToolbox = function () {
   return blockUtils.createToolbox(

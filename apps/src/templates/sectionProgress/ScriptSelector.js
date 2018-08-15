@@ -1,17 +1,17 @@
 import React, { Component, PropTypes } from 'react';
-import {validScriptPropType} from './sectionProgressRedux';
+import {validScriptPropType} from '@cdo/apps/redux/scriptSelectionRedux';
 import _ from 'lodash';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
 
-const styles = {
+export const dropdownStyles = {
   dropdown: {
-    width: 250,
     display: 'block',
     boxSizing: 'border-box',
     fontSize: 'medium',
-    padding: '0.8em',
-    height: 34
+    height: 34,
+    paddingLeft: 5,
+    paddingRight: 5
   },
 };
 
@@ -29,7 +29,7 @@ const groupedAssignments = assignments => (
 export default class ScriptSelector extends Component {
   static propTypes = {
     // This shape is similar to that used by AssignmentSelector, but in that
-    // case they've been semi-processed and given assignIds to diferentiate
+    // case they've been semi-processed and given assignIds to differentiate
     // courses and scripts
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     scriptId: PropTypes.number,
@@ -47,9 +47,9 @@ export default class ScriptSelector extends Component {
         <select
           value={scriptId}
           onChange={event => onChange(parseInt(event.target.value))}
-          style={styles.dropdown}
+          style={dropdownStyles.dropdown}
+          id="uitest-course-dropdown"
         >
-          <option key="default" value={''}/>
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
               {grouped[groupName].map((assignment) => (

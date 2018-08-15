@@ -1,0 +1,38 @@
+es:
+  data:
+    function_names:
+      x: x
+      details: detalles
+      draw eyebrow: dibujar la ceja
+      draw pupil: dibujar la pupila
+      draw a circle: dibujar un círculo
+      draw a car: dibuja un carro
+      draw_rect: dibuja_rectangulo
+      draw square: dibuja cuadro
+      jump to controller top left: salta sobre el controlador izquierdo
+      jump to middle: salta al medio
+      draw a button: dibuja un boton
+      draw cord: dibuja cuerda
+      draw a hexagon: dibujar un hexágono
+      draw a flower: dibujar una flor
+      draw a square: Dibuja un cuadrado
+      draw a snowflake: dibujar un copo de nieve
+      draw a tree: dibujar un árbol
+      draw a triangle: dibujar un triángulo
+      draw a house: dibujar una casa
+      draw a star: dibujar una estrella
+      do something: hacer algo
+      jump: salta
+      set score: Establece el puntaje
+      get nectar: obtener néctar
+      test: prueba
+      diamond: diamante
+      move: mover
+      move right: mover hacia la derecha
+      move up: mover hacia arriba
+      move down: mover hacia abajo
+      move left: mover hacia la izquierda
+      collect: junta
+      turn left: girar a la izquierda
+      move forward: avanzar
+      turn right: girar a la derecha

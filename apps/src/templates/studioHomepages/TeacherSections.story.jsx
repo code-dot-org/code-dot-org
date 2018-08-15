@@ -101,5 +101,5 @@ function withFakeServer({courses = [], sections = []} = {}) {
   ];
   server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
   server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
-  server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
+  server.respondWith('GET', '/dashboardapi/sections/valid_scripts', successResponse([]));
 }

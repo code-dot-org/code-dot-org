@@ -52,11 +52,13 @@ class Concept < ActiveRecord::Base
   end
 
   def self.setup_with_concepts(concepts_by_index)
+    videos_by_concept = Video.where(key: concepts_by_index).index_by(&:key)
+    concepts = concepts_by_index.map.with_index(1) do |concept, id|
+      {id: id, name: concept, video_id: videos_by_concept[concept]&.id}
+    end
     transaction do
       reset_db
-      concepts_by_index.each_with_index do |concept, id|
-        Concept.create!(id: id + 1, name: concept, video: Video.find_by_key(concept))
-      end
+      Concept.import! concepts
     end
   end
 end

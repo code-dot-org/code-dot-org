@@ -1,0 +1,18 @@
+ko:
+  data:
+    block_categories:
+      Actions: 동작
+      Loops: 반복
+      Functions: 함수
+      Color: 색
+      Math: 계산
+      Logic: 논리
+      Variables: 변수
+      Conditionals: 조건
+      Events: 이벤트
+      Text: 문장
+      Start: '시작:'
+      Booleans: 불(참 또는 거짓)값들
+      test: 검사
+      Name: 이름
+      Function: 함수

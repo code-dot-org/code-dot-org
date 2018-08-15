@@ -91,10 +91,12 @@ exports.handler = (event, context, callback) => {
       })
       .then(conn => {
         mysqlConnection = conn;
-        return mysqlConnection.query('SELECT count(*) AS number_of_users FROM users');
+        return mysqlConnection.query('SELECT count(*) AS number_of_users, max(updated_at) AS last_updated_at FROM users');
       })
       .then(rows => {
-        status_message = 'Successfully queried offsite backup of database.  Number of Users = ' + rows[0].number_of_users;
+        status_message = 'Successfully queried offsite backup of database.  ' +
+          'Number of Users = ' + rows[0].number_of_users +
+          ', Last Updated = ' + rows[0].last_updated_at;
         console.log(status_message);
         publishStatus(status_message);
         mysqlConnection.end();

@@ -32,7 +32,6 @@
       "addOperator": null,
       "subtractOperator": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Random Movement\r\n\r\nRight now your race isn't very interesting. Let's make one small change to make it a lot more exciting. Instead of your sprites moving the same amount forward every frame, **they will now move a random amount**. This will make use of what we'll call the **random counter pattern**. Here's what the code might look like.\r\n\r\n\t// Random Counter Pattern\r\n    mySprite.x = mySprite.x + randomNumber(0,2);\r\n    \r\nInstead of adding the same amount every time it will move forward by some random amount between 0 and 2.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/accadb669e88a7c2aff8a29b6305da55-image-1466021491106.gif\" style=\"float:right; width:200px\">\r\n\r\n* **Use the random counter pattern** to make your sprites move forward by a random amount in each frame.\r\n* **Run the program** to make sure your sprites now move a random amount. Is your race predictable anymore?\r\n* Your animation should look similar to the example at the right.",

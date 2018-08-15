@@ -138,4 +138,13 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       discount_code: application.try(:circuit_playground_discount_code).try(:code)
     }
   end
+
+  #
+  # Part of the account purge system
+  #
+  def anonymize
+    self.signature = '(anonymized signature)' if signature
+    self.school_id = nil
+    save!
+  end
 end

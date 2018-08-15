@@ -33,6 +33,7 @@
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"This design will loop 10 times over 360 degrees.\\n\\n**360 / 10 = ?**\",\r\n  \"hint_id\": \"4-5_Nested_Loops_7_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
+    "hint_prompt_attempts_threshold": 11,
     "contained_level_names": null
   },
   "published": true,

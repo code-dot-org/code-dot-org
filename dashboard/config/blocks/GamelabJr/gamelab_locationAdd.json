@@ -1,0 +1,31 @@
+{
+  "category": "Location",
+  "config": {
+    "func": "locationAdd",
+    "blockText": "{LOC1} {OPERATOR} {LOC2}",
+    "returnType": "Location",
+    "args": [
+      {
+        "name": "LOC1",
+        "type": "Location"
+      },
+      {
+        "name": "LOC2",
+        "type": "Location"
+      },
+      {
+        "name": "OPERATOR",
+        "options": [
+          [
+            "+",
+            "'plus'"
+          ],
+          [
+            "-",
+            "'minus'"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+---
+uk:
+  data:
+    function_names:
+      x: x
+      draw a circle: намалювати коло
+      draw a hexagon: намалювати шестикутник
+      draw a flower: намалювати квітку
+      draw a square: намалювати квадрат
+      draw a snowflake: намалювати сніжинку
+      draw a tree: намалювати дерево
+      draw a triangle: намалювати трикутник
+      draw a house: намалювати будинок
+      draw a star: намалювати зірку
+      do something: щось зробити
+      jump: стрибок
+      set score: встановити рахунок
+      get nectar: взяти нектар
+      test: тест
+      diamond: діамант
+      move: переміститись
+      move right: рухатись праворуч
+      move up: рухатися вгору
+      move down: рухатися вниз
+      move left: рухатись ліворуч
+      collect: збирати
+      turn left: повернути ліворуч
+      move forward: рухатись вперед
+      turn right: повернути праворуч

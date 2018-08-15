@@ -28,6 +28,7 @@ require_relative 'sync-codeorg-in'
 require_relative 'sync-codeorg-up'
 require_relative 'sync-codeorg-down'
 require_relative 'sync-codeorg-out'
+require_relative 'upload_i18n_translation_percentages_to_gdrive'
 
 require 'optparse'
 
@@ -120,13 +121,19 @@ def create_down_out_pr
     "pegasus i18n updates"
   )
 
-  git_add_and_commit(
-    [
-      "dashboard/config/locales/*.yml",
-      "i18n/locales/*/dashboard",
-    ],
-    "dashboard i18n updates"
-  )
+  # Break up the dashboard changes, since they frequently end up being large
+  # enough to have trouble viewing in github
+  Languages.get_crowdin_name_and_locale.each do |prop|
+    locale = prop[:locale_s]
+    next if locale == 'en-US'
+    git_add_and_commit(
+      [
+        "dashboard/config/locales/*#{locale}.yml",
+        "i18n/locales/#{locale}/dashboard",
+      ],
+      "dashboard i18n updates - #{prop[:crowdin_name_s]}"
+    )
+  end
 
   git_add_and_commit(
     [
@@ -168,6 +175,7 @@ def main
     sync_down if should_i "sync down"
     sync_out if should_i "sync out"
     create_down_out_pr if options[:with_pull_request]
+    upload_i18n_stats if should_i "upload translation stats"
   elsif options[:command]
     case options[:command]
     when 'in'

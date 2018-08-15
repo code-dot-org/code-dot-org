@@ -1,4 +1,5 @@
-"pl":
+---
+pl:
   data:
     unplugged:
       Unplug1:
@@ -149,7 +150,7 @@
           i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam
           punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'
       BigEvent:
-        title: Wielkie Wydarzenie
+        title: Wielkie wydarzenie
         desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
           są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
           przyciski na papierze a uczniowie będą reagować w zależności od tego, który
@@ -305,7 +306,6 @@
         title: Aktywność unplugged (bez komputera)
         desc: Dziś dowiesz się, co zrobić, jeśli ktoś jest złośliwy online.
       deeper learning description:
-        title: ''
         desc: 'brakujące tłumaczenie: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algorytmy z życia wzięte: sadź nasiona'
@@ -322,7 +322,7 @@
         desc: Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Nauczyciele
           przedstawiają, jak bezpiecznie nawigować po Internecie.
       courseABC_unplugged_bigEvent:
-        title: Wielkie Wydarzenie
+        title: Wielkie wydarzenie
         desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
           są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
           przyciski na papierze a uczniowie będą reagować w zależności od tego, który
@@ -356,7 +356,7 @@
         desc: Uczniowie piszą algorytm (zestaw instrukcji) korzystając ze zbioru wcześniej
           zdefiniowanych poleceń, aby kierować innymi uczniami przy odtworzeniu rysunku.
       courseD_unplugged_relayProgramming:
-        title: Programowanie przekaźnika
+        title: Sztafeta programowania
         desc: Uczniowie tworzą sztafetę, w której biegną przez trawnik, aby zapisać
           algorytm oparty na obrazie pochodzącym z "Programowania na papierze". Każdy
           uczeń może zapisywać tylko jedną instrukcję i jeśli w jakimś punkcie pojawia
@@ -420,78 +420,10 @@
           praktyką.  '
       swipeRightPassThrough:
         title: Sesja Scenariuszy Rekrutacyjnych
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
       swipeRightPassThrough-test123:
         title: Sesja Scenariuszy Rekrutacyjnych
-        desc: |-
-          # Recruitment Scenarios Session\r
-          \r
-          ## Swipe Right for CS\r
-          For this session we'll use a tool called "Swipe Right for CS", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \r
-          \r
-          ### How it Works\r
-          When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \r
-          \r
-          \r
-          When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: |-
-          # Brad Repro Bug 000\r
-          ## Attempt to recreate a bug Brooke reported\r
-          process as follows:\r
-          1. started with an `unplugged` level. populated with info. hit save and publish.\r
-          2. “destroyed” the level\r
-          3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: Moi przyjaciele wśród robotów
       PlantASeed_2018:
         title: 'Algorytmy z życia wzięte: sadź nasiona'
         desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym
@@ -510,7 +442,7 @@
         title: Pętle bez komputera
         desc: W tej lekcji dowiesz się, jak używać pętli!
       BigEvent_2018:
-        title: Wielkie Wydarzenie
+        title: Wielkie wydarzenie
         desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
           są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
           przyciski na papierze a uczniowie będą reagować w zależności od tego, który
@@ -558,4 +490,5 @@
           i przechowywane na wiele sposobów.
       MoveItMoveIt_2018:
         title: Przenieść go, przenieść go
-        desc: ''
+      RelayProgramming_2018:
+        title: Sztafeta programowania

@@ -1,0 +1,47 @@
+sk:
+  data:
+    block_categories:
+      Actions: Akcie
+      Loops: Slučky
+      Functions: Funkcie
+      Color: Farba
+      Brushes: Štetky
+      Math: Matematické
+      Logic: Logické
+      Variables: Premenné
+      Number: Číslo
+      String: Reťazec
+      Image: Obrázok
+      Boolean: Logická hodnota
+      Conditionals: Podmienky
+      Events: Udalosti
+      Games/Score: Hry/skóre
+      Comments: Komentáre
+      Category: Kategória
+      Prebuilt: Vopred vytvorené
+      Text: Text
+      Picker: Nástroj výberu
+      Comment: Komentár
+      'Variables ': 'Premenné '
+      everythingelse: všetko ostatné
+      numbers: čisla
+      Numbers: Čísla
+      Default: Predvolené
+      World: Svet
+      Behaviors: Správanie
+      Advanced: Pokročilé
+      Sprite: Objekt
+      Brush: Štetka
+      Make Sprite: Vytvoriť objekt
+      Movement: Pohyb
+      Start: Spustiť
+      Groups: Skupiny
+      Functional: Funkcie
+      Predefined: Preddefinované
+      test: test
+      test2: test2
+      Name: Meno
+      NEW BLOCKS: NOVÉ BLOKY
+      'Functions ': 'Funkcie '
+      Game/Score: Hra/skóre
+      Function: Funkcia

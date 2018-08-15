@@ -31,7 +31,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "show_d_pad": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",
     "hide_animation_mode": "false",

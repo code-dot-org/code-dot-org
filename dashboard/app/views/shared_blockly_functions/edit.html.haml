@@ -1,0 +1,39 @@
+- content_for(:head) do
+  %script{src: asset_path('js/blockly.js')}
+  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
+  :scss
+    #blockly-container {
+      height: 600px;
+      position: relative;
+    }
+    #modalEditorClose {
+      display: none;
+    }
+
+%h1= @shared_blockly_function.new_record? ? 'New Blockly Function' : 'Editing Blockly Function'
+
+%p No toolbox yet — paste blocks from other levels into the function definition.
+
+#blockly-container
+
+%p
+
+= form_for @shared_blockly_function do |f|
+  = f.hidden_field :name
+  = f.hidden_field :description
+  = f.hidden_field :arguments
+  = f.hidden_field :stack
+  %details
+    %summary Other options
+    = f.label 'Function type'
+    = f.select :block_type, SharedBlocklyFunction.block_types.keys
+    = f.label 'Level type'
+    = f.select :level_type, [Dancelab.name, GamelabJr.name]
+  %div
+    = f.submit class: 'btn', id: 'shared_function_submit'
+
+%script{src: minifiable_asset_path('js/shared_blockly_functions/edit.js'), data: {blockpool: @block_pool.to_json}}
+
+= link_to 'Back', shared_blockly_functions_path

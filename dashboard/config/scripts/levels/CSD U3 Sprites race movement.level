@@ -32,7 +32,6 @@
       "addOperator": null,
       "subtractOperator": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Get Those Sprites Moving!\r\n\r\nNow that you have three sprites on the screen, it's time to make them \"race\" across the screen. For now, the race will just be a tie, so focus mainly on **making sure your code is organized** and that **you use sprite properties with the counter pattern correctly**.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/a935615480098eb0a8e7723d87b2308c-image-1466021329937.gif\" style=\"float:right; width:200px\">\r\n\r\n* **Add code to the \"Update Properties\" section** that makes the sprites move across the screen together.\r\n* Your animation should look like the example at the right.",

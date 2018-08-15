@@ -1,0 +1,14 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "getDirection",
+    "blockText": "{SPRITE} movement direction",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ],
+    "returnType": "Number"
+  }
+}

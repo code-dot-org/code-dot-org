@@ -1,0 +1,19 @@
+---
+sr:
+  data:
+    block_categories:
+      Actions: Акције
+      Loops: Петље
+      Functions: Функције
+      Color: Боја
+      Math: Математика
+      Logic: Логика
+      Variables: Променљиве
+      Conditionals: Кондиционали
+      Events: Догађаји
+      Text: текст
+      Start: Покрени
+      Booleans: Booleans
+      test: тест
+      Name: Име
+      Function: Функција

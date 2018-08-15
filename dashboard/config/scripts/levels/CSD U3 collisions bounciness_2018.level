@@ -33,7 +33,6 @@
       "console.log": null,
       "comment_Variables": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Bounciness\r\n\r\nSo far, `bounceOff` has made sprites bounce away from other objects as fast as they bounced into them.  In the real world, almost everything slows down just a little bit when it bounces off something else.  You can use the `bounciness` block to tell your sprite how much to slow down or speed up when it bounces off something else.\r\n\r\n# Do This\r\n\r\n* Read the code below and press \"Run\" to see the behavior of the basketball and pool ball.\r\n* Use a `bounciness` block to set the bounciness of your soccer ball.\r\n* Run the code again to see how the sprites bounce off the floor.\r\n\r\n\r\n[//]: #  (https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png)\r\n\r\n[//]: #  (https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png)\r\n\r\n[//]: #  (https://images.code.org/0e4e9c26bed0d31d14f6b3f8f8bb4c27-image-1475786966986.png)",

@@ -1,0 +1,143 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2018-05-03T16:37:50.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": {
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 0,
+          "minArgs": 0
+        },
+        "params": [
+          ""
+        ],
+        "paletteParams": [
+          ""
+        ]
+      },
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "PUo+2/dKmiUZYqBWNLocpY5RzPOLuRv3spooQHKOxbKqIO8iJl+Kvu8a0Jg3\nY4Cs\n",
+    "embed": "false",
+    "instructions": "Create the design by breaking it down into layers of functions. (Click to see full instructions)",
+    "markdown_instructions": "# Do This:\r\n\r\nYou should have already worked with a partner to break down the design below into its multiple layers of functions. Now you'll have an opportunity to program your solution. Here are a few things to keep in mind:\r\n\r\n* Identify useful patterns that can be reused and give them **their own functions**.\r\n* Remember: The functions you design **can call one another**. This is how you create layers of abstraction.\r\n* Functions should be given names that are **descriptive and meaningful**.\r\n* Your program should be kicked off with a single call to a function that makes calls to subsequent functions.\r\n\r\n\r\n![](https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33 PM.png)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "true",
+    "execute_palette_apis_only": "true",
+    "fail_on_lint_errors": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "turnLeft"
+        ],
+        "matchType": "exact",
+        "minTimes": 20,
+        "message": "It seems like you’re not turning the turtle left enough times.  Remember that at the end the turtle should be facing the same direction in which it started."
+      },
+      {
+        "entries": [
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 20,
+        "message": "It seems like you’re not moving the turtle enough times to draw a complete square."
+      },
+      {
+        "entries": [
+          "[forTest]"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "Hey! You're using a programming construct - loops - we haven't (officially) learned about yet :).  Don't worry, your knowledge will come in handy later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft() without any loops."
+      },
+      {
+        "entries": [
+          "turnLeft:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the turnLeft() function can accept the number of degrees to turn!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() - which moves 25 pixels forward - and turnLeft() - which turns left 90 degrees every time."
+      },
+      {
+        "entries": [
+          "moveForward:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have discovered that the moveForward() function can accept the number of pixels to move forward!  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() - which moves 25 pixels forward - and turnLeft() - which turns left 90 degrees every time."
+      },
+      {
+        "entries": [
+          "turnRight"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function.  Clever.  You can use this knowledge later, but for now, try to stick to the constraints of this problem: Just use a sequence of moveForward() and turnLeft()."
+      }
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "NOTE: this is a problem from the worksheet. Students are now being asked to write code for it.\r\n\r\nStudents' solutions should involve writing multiple layers of functions following the principles of top-down design.",
+    "parent_level_id": 3094,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:22:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

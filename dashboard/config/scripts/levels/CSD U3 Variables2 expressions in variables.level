@@ -16,7 +16,6 @@
       "assign_x": null,
       "console.log": null
     },
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "instructions": "Assign the value of each expression to a variable and console.log that variable.",

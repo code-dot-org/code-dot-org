@@ -1,0 +1,18 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "destroy",
+    "blockText": "remove {THIS}",
+    "args": [
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      }
+    ]
+  }
+}

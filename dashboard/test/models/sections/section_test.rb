@@ -287,6 +287,14 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
   end
 
+  test 'externally_rostered?' do
+    [Section::LOGIN_TYPE_GOOGLE_CLASSROOM, Section::LOGIN_TYPE_CLEVER].each do |type|
+      assert Section.new(login_type: type).externally_rostered?
+    end
+
+    refute Section.new.externally_rostered?
+  end
+
   test 'name safe students' do
     def verify(actual, expected)
       section = create :section
@@ -334,12 +342,6 @@ class SectionTest < ActiveSupport::TestCase
 
     expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
     assert_equal expected_url, section.teacher_dashboard_url
-  end
-
-  test 'clean_data' do
-    section = create :section
-    section.clean_data
-    assert_equal Section::SYSTEM_DELETED_NAME, section.reload.name
   end
 
   test 'default_script: no script or course assigned' do
@@ -401,6 +403,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -430,6 +433,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -462,6 +466,7 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
   end
@@ -489,8 +494,21 @@ class SectionTest < ActiveSupport::TestCase
       grade: nil,
       providerManaged: false,
       hidden: false,
+      students: [],
     }
     assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with students' do
+    section = create :section, script: nil, course: nil
+    student1 = create(:follower, section: section).student_user
+    student2 = create(:follower, section: section).student_user
+
+    summarized_section = section.summarize
+    assert_equal 2, summarized_section[:numberOfStudents]
+    assert_equal 2, summarized_section[:studentCount]
+    assert_includes summarized_section[:students], student1.summarize
+    assert_includes summarized_section[:students], student2.summarize
   end
 
   test 'valid_grade? accepts K-12 and Other' do
@@ -540,8 +558,8 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     setup_all do
-      @csd2 = create_script_with_levels('csd2', :weblab)
-      @csd3 = create_script_with_levels('csd3', :gamelab)
+      @csd2 = create_script_with_levels('csd2-2017', :weblab)
+      @csd3 = create_script_with_levels('csd3-2017', :gamelab)
     end
 
     test 'returns true when all conditions met' do

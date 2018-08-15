@@ -1,0 +1,13 @@
+name 'CSD U5 data visualization_2018'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+## Best Class Pet
+### Here are three different ways to show the results of a vote for best class pet.
+
+![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+### Which one makes it easiest for a human to make a decision about which pet is the most popular?
+### Which one makes it easiest for a computer to make a decision?
+MARKDOWN

@@ -1,0 +1,29 @@
+---
+fil:
+  data:
+    function_names:
+      x: x
+      draw a circle: gumuhit ng bilog
+      draw a hexagon: gumuhit ng hexagon
+      draw a flower: gumuhit ng bulaklak
+      draw a square: gumuhit ng parisukat
+      draw a snowflake: gumuhit ng snowflake
+      draw a tree: gumuhit ng puno
+      draw a triangle: gumuhit ng tatsulok
+      draw a house: gumuhit ng bahay
+      draw a star: gumuhit ng bituin
+      do something: gumawa ng kahit ano
+      jump: talon
+      set score: ilagay ang puntos
+      get nectar: kunin ang nectar
+      test: subukan
+      diamond: diyamante
+      move: galaw
+      move right: igalaw pakanan
+      move up: igalaw pataas
+      move down: igalaw pababa
+      move left: igalaw pakaliwa
+      collect: kolektahin
+      turn left: kumaliwa
+      move forward: umabante
+      turn right: kumanan

@@ -47,6 +47,7 @@
     "use_player": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The iron blocks are the speckled spaces behind the torch! How are you going to get over there?\",\"hint_id\":\"mc_10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/983a2fc582a72266ccad9024e0853415/Underground Iron.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!\",\"hint_id\":\"mc_10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/08bd79e348bf4004792784582509f948/Underground Iron.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.\",\"hint_id\":\"mc_10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5dbc8a441cfe78f9f41366345e6db629/Underground Iron.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "hint_prompt_attempts_threshold": 5,
     "contained_level_names": null
   },
   "published": true,

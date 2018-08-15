@@ -1,4 +1,6 @@
+import _ from 'lodash';
 import React, { PropTypes, Component } from 'react';
+import ReactTooltip from 'react-tooltip';
 import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
@@ -16,12 +18,12 @@ import {
   loadScript,
   getCurrentProgress,
   getCurrentScriptData,
-  setScriptId,
   setLessonOfInterest,
-  sectionDataPropType,
-  validScriptPropType,
   scriptDataPropType,
 } from './sectionProgressRedux';
+import { tooltipIdForLessonNumber } from './multiGridConstants';
+import { sectionDataPropType } from '@cdo/apps/redux/sectionDataRedux';
+import { setScriptId, validScriptPropType } from '@cdo/apps/redux/scriptSelectionRedux';
 
 const styles = {
   heading: {
@@ -87,6 +89,25 @@ class SectionProgress extends Component {
     this.props.setLessonOfInterest(lessonOfInterest);
   };
 
+  renderTooltips() {
+    return this.props.scriptData.stages.map((stage) => (
+      <ReactTooltip
+        id={tooltipIdForLessonNumber(stage.position)}
+        key={tooltipIdForLessonNumber(stage.position)}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        {stage.name}
+      </ReactTooltip>
+    ));
+  }
+
+  // Re-attaches mouse handlers on tooltip targets to tooltips.  Called
+  // after the virtualized MultiGrid component scrolls, which may cause
+  // target cells to be created or destroyed.
+  afterScroll = _.debounce(ReactTooltip.rebuild, 10);
+
   render() {
     const {
       section,
@@ -129,7 +150,7 @@ class SectionProgress extends Component {
             <SectionProgressToggle />
           </div>
           <div style={styles.lessonSelectorContainer}>
-            {lessons.length !== 0 &&
+            {currentView === ViewType.DETAIL && lessons.length !== 0 &&
               <LessonSelector
                 lessons={lessons}
                 onChange={this.onChangeLevel}
@@ -138,12 +159,13 @@ class SectionProgress extends Component {
           </div>
         </div>
         <div style={{clear: 'both'}}>
-          {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
+          {!levelDataInitialized && <FontAwesome id="uitest-spinner" icon="spinner" className="fa-pulse fa-3x"/>}
           {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
-            <div>
+            <div id="uitest-summary-view">
               <VirtualizedSummaryView
                 section={section}
                 scriptData={scriptData}
+                onScroll={this.afterScroll}
               />
               <SummaryViewLegend
                 showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
@@ -151,17 +173,19 @@ class SectionProgress extends Component {
             </div>
           }
           {(levelDataInitialized && currentView === ViewType.DETAIL) &&
-            <div>
+            <div id="uitest-detail-view">
               <VirtualizedDetailView
                 section={section}
                 scriptData={scriptData}
+                onScroll={this.afterScroll}
               />
               <ProgressLegend
-                excludeCsfColumn={true}
+                excludeCsfColumn={scriptData.excludeCsfColumnInLegend}
               />
             </div>
           }
         </div>
+        {levelDataInitialized && this.renderTooltips()}
       </div>
     );
   }
@@ -170,9 +194,9 @@ class SectionProgress extends Component {
 export const UnconnectedSectionProgress = SectionProgress;
 
 export default connect(state => ({
-  scriptId: state.sectionProgress.scriptId,
-  section: state.sectionProgress.section,
-  validScripts: state.sectionProgress.validScripts,
+  scriptId: state.scriptSelection.scriptId,
+  section: state.sectionData.section,
+  validScripts: state.scriptSelection.validScripts,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),

@@ -39,9 +39,8 @@
     "hide_animation_mode": true,
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "show_d_pad": "false",
     "pause_animations_by_default": "false",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"setVelocity\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"X\"\r\n      },\r\n      {\r\n        \"name\": \"Y\"\r\n      }\r\n    ],\r\n    \"blockText\": \"Set {THIS} velocity to {X}, {Y}\",\r\n    \"methodCall\": true\r\n  }\r\n]",
+    "custom_blocks": "[\n  {\n    \"func\": \"setVelocity\",\n    \"args\": [\n      {\n        \"name\": \"X\"\n      },\n      {\n        \"name\": \"Y\"\n      }\n    ],\n    \"blockText\": \"Set {THIS} velocity to {X}, {Y}\",\n    \"methodCall\": true\n  }\n]\n",
     "contained_level_names": null
   },
   "published": true,

@@ -1,0 +1,19 @@
+ru:
+  data:
+    block_categories:
+      Actions: Действия
+      Loops: Циклы
+      Functions: функции
+      Color: Цвет
+      Math: Математика
+      Logic: Логика
+      Variables: переменные
+      Conditionals: Условные команды
+      Events: События
+      Text: Текст
+      Input: Ввод
+      Start: Начать
+      Booleans: Логические выражения
+      test: тест
+      Name: Имя
+      Function: Функция

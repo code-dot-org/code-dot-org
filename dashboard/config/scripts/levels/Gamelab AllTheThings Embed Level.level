@@ -173,7 +173,6 @@
       "comment": null,
       "stopSound": null
     },
-    "show_d_pad": "false",
     "edit_code": true,
     "embed": "true",
     "markdown_instructions": "# How Many Counter Variables?\r\n\r\nYou can use counter variables (`x = x + 1` , `x = x - 1` , `x = x + 0.5`, etc.) to animate a scene. What happens when scenes start to get larger and more complicated? \r\n\r\nWatch this animation. With a partner: \r\n\r\n* Decide how many counter variables you would need to create this scene\r\n* Decide what you would name your counter variables\r\n* **Draw a Labels-Values-Connectors** diagram of your variables at the first frame of this scene. Don't worry about getting the values exactly correct.\r\n* Share your answer with another group **and be ready to share your ideas with the class**",

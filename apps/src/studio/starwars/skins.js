@@ -628,6 +628,7 @@ export function loadStarWarsGrid(skin) {
   skin.hideIconInClearPuzzle = true;
 
   skin.defaultBackground = 'main';
+  skin.showGrid = true;
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 

@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-04-30T18:05:33.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csd_external_netflix_data",
+    "markdown_instructions": "Watch this video to learn how this problem is solved by Netflix. As you watch think about what data is being collected and where it's coming from.",
+    "instructions_important": "false",
+    "encrypted_teacher_markdown": "sK9ShmyBoCu6nL+OsH20We6Uu/kmYqV6h2sOGCA5Shguf3cyVJMFt7BQx1ao\ngLJOK0EKf3BTolE3qwCT7eCQVak4d4UUI27ro2JbXc+ilRxb18M2ZCPXZoB9\nzsLS+DfSxNne3MySW6U25bGwiATQPlwGw5EMzWkIAYrIWYKdPjSrMt+6A+qd\nMCIsytoLws/8E94VYxuOMqY2eKD2cGDJMDZ57cKHyBz/xVLCm4QROxnJoknR\nog2ouGhv1Gm3vso0JBH6B4pDY9xB1gUbR4aea9gYl6jvn7avTqB7Eg1eidKT\nAqIwAVu1fcD40w3JyjMbiLAOm/0Zgrc4kEVQHnpxD5j+LVAnM6qVig22GLt2\nGF8OWsRDA4CmLpzNB/FVdl2jrVaaSyWn/oUbvuyCMfQqAmjEmsEhNCQddpiF\nx0aUakg7grW2Y6b4afAJbYjmAZhay6PMFmiV9nBpffVnTTp+D/7FeH3CSrlQ\nTTXJVptFano=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 10723,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-16 04:11:34 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

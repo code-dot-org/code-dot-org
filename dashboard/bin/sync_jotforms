@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+# This should be run periodically (~ daily) to sync any JotForm responses that we missed and update the answers
+# Typically we will get a postback from JotForm on submit, and create a placeholder.
+# These placeholders are filled in with the more frequent (~ every minute) fill_jotform_placeholders cronjob
+
+require_relative '../../lib/cdo/only_one'
+exit unless only_one_running?(__FILE__)
+
+require_relative '../config/environment'
+
+JOT_FORM_CLASSES = [
+  Pd::WorkshopDailySurvey,
+  Pd::WorkshopFacilitatorDailySurvey,
+  # Pd::PostCourseSurvey -- don't sync this one until we support the datetime control
+].freeze
+
+def main
+  JOT_FORM_CLASSES.each(&:sync_from_jotform)
+end
+
+main if only_one_running?(__FILE__)

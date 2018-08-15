@@ -1,0 +1,19 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "locationAt",
+    "blockText": "location x: {X} y: {Y}",
+    "returnType": "Location",
+    "args": [
+      {
+        "name": "X",
+        "type": "Number"
+      },
+      {
+        "name": "Y",
+        "type": "Number"
+      }
+    ],
+    "inline": false
+  }
+}

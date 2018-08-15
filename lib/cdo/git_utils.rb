@@ -58,8 +58,14 @@ module GitUtils
     `git rev-parse HEAD`.strip
   end
 
-  def self.git_revision_short
-    `git rev-parse --short=8 HEAD`.strip
+  def self.git_revision_short(project_directory=Dir.pwd)
+    # Cron jobs execute as root and may not be in the current project directory, preventing git commands from working.
+    # Eventually other (or all) GitUtils methods may need to explicitly change to the project root, but currently
+    # only this call to a GitUtils method is executed when a cron job runs:
+    # https://github.com/code-dot-org/code-dot-org/blob/7863f6bdc4d275536754bbce8f88400c96de48db/deployment.rb#L41
+    Dir.chdir(project_directory) do
+      `git rev-parse --short=8 HEAD`.strip
+    end
   end
 
   def self.git_revision_branch(branch)
@@ -108,5 +114,30 @@ module GitUtils
   def self.valid_commit?(hash_or_branch)
     `git cat-file commit #{hash_or_branch}`
     $?.success?
+  end
+
+  def self.merge_branch
+    "origin/#{pr_base_branch_or_default_no_origin}"
+  end
+
+  CIRCLE_CONFIG_FILE = '.circleci/config.yml'.freeze
+
+  def self.circle_yml_changed
+    system("git fetch origin #{pr_base_branch_or_default_no_origin}")
+    !`git diff ...#{merge_branch} -- #{CIRCLE_CONFIG_FILE}`.empty?
+  end
+
+  # Most changes can be merged from the base branch (usually staging) into the
+  # feature branch under test here and the build can proceed as usual.
+  # Changes to the CircleCI configuration file are a special case though, because
+  # it can control how the Circle container is created, and by the time we run
+  # this merge step we're already _in_ the container itself - so the only way
+  # to guarantee we're accurately testing the merge result is to have the config
+  # change in our feature branch from the moment the build starts.  Therefore we
+  # must stop and ask the user to manually merge the base branch into their own.
+  def self.ensure_latest_circle_yml
+    if circle_yml_changed
+      raise "#{CIRCLE_CONFIG_FILE} has changed.\nPlease merge the #{merge_branch} branch into your branch and try again."
+    end
   end
 end

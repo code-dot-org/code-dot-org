@@ -34,6 +34,7 @@
     "markdown_instructions": "Click \"edit\" to fill in the function definition of `draw a square` and add a parameter.  \r\nIt should take a length parameter just like the triangle. \r\n\r\n**This time, draw 3 squares:** 25, 50 and 75 pixels in length. The lefthand corners are each 100 pixels away from the last.",
     "examples_required": "false",
     "never_autoplay_video": "true",
+    "hint_prompt_attempts_threshold": 6,
     "contained_level_names": null
   },
   "published": true,

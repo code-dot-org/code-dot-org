@@ -73,6 +73,11 @@ class PeerReviewsController < ApplicationController
       return_params[:data] = return_params[:data].strip_utf8mb4
     end
 
+    # Only plc reviewers should be able to set the status on a review
+    unless current_user.permission? UserPermission::PLC_REVIEWER
+      return_params.delete :status
+    end
+
     return_params
   end
 end

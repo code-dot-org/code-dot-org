@@ -20,10 +20,10 @@ const styles = {
  * the hints or just the anigif (in this case instructions/renderedMarkdown
  * props will be undefined).
  */
-var Instructions = React.createClass({
-  propTypes: {
+class Instructions extends React.Component {
+  static propTypes = {
     puzzleTitle: PropTypes.string,
-    instructions: PropTypes.string,
+    shortInstructions: PropTypes.string,
     instructions2: PropTypes.string,
     renderedMarkdown: PropTypes.string,
     imgURL: PropTypes.string,
@@ -33,9 +33,9 @@ var Instructions = React.createClass({
     ),
     inTopPane: PropTypes.bool,
     onResize: PropTypes.func,
-  },
+  };
 
-  render: function () {
+  render() {
     // Body logic is as follows:
     //
     // If we have been given rendered markdown, render a div containing
@@ -50,18 +50,17 @@ var Instructions = React.createClass({
       <div style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}>
         {this.props.renderedMarkdown &&
           <MarkdownInstructions
-            ref="instructionsMarkdown"
             renderedMarkdown={this.props.renderedMarkdown}
             onResize={this.props.onResize}
             inTopPane={this.props.inTopPane}
           />
         }
-        { /* Note: In this case props.instructions might be undefined, but we
+        { /* Note: In this case props.shortInstructions might be undefined, but we
           still want to render NonMarkdownInstructions to get the puzzle title */
         !this.props.renderedMarkdown &&
           <NonMarkdownInstructions
             puzzleTitle={this.props.puzzleTitle}
-            instructions={this.props.instructions}
+            shortInstructions={this.props.shortInstructions}
             instructions2={this.props.instructions2}
           />
         }
@@ -80,6 +79,6 @@ var Instructions = React.createClass({
       </div>
     );
   }
-});
+}
 
 module.exports = Instructions;

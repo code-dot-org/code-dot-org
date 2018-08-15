@@ -6,7 +6,6 @@
   "user_id": 1,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Prediction\r\n\r\nIn this program, the animation has different reactions when the user presses different keys. One reaction is a new kind of behavior you haven't seen before. Look at the following inputs and match them to their outputs. Once you have made your prediction you will be able to test it out.\r\n\r\n| Input  |\r\n| ------------- | \r\n| Press the _space_ bar  | \r\n| Press the _w_ key  | \r\n| Press the _j_ key |\r\n| Press the _j_ and _k_ keys | \r\n| Press the _k_ key |\r\n\r\n\r\n| Output |\r\n| ------------------------- |\r\n| blue_sprite rotates clockwise  |\r\n| red_sprite moves up and blue_sprite moves down  |\r\n| The sprites don't change |\r\n| red_sprite rotates counter clockwise  |\r\n| red_sprite gets bigger and blue_sprite gets smaller  |\r\n",
