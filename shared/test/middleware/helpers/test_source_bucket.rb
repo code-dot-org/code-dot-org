@@ -1,5 +1,6 @@
 require_relative '../../files_api_test_base' # Must be required first to establish load paths
 require_relative '../../files_api_test_helper'
+require 'ostruct'
 
 #
 # Unlike SourcesTest (test_sources.rb) which is essentially a controller test
@@ -77,5 +78,34 @@ class SourceBucketTest < FilesApiTestBase
     @source_bucket.hard_delete_channel_content @channel
 
     assert_empty @source_bucket.list_delete_markers(@channel, @main_json)
+  end
+
+  def test_raises_on_s3_error
+    fake_object_versions_response = OpenStruct.new(
+      {
+        versions: [
+          {key: 'fake-key', version_id: 'null'}
+        ],
+        delete_markers: []
+      }
+    )
+
+    fake_delete_objects_response = OpenStruct.new(
+      {
+        deleted: [],
+        errors: [
+          {key: 'fake-key', version_id: 'null', code: '500', message: 'Fake failure'}
+        ]
+      }
+    )
+
+    @source_bucket.s3.stub :list_object_versions, fake_object_versions_response do
+      @source_bucket.s3.stub :delete_objects, fake_delete_objects_response do
+        err = assert_raises RuntimeError do
+          @source_bucket.hard_delete_channel_content @channel
+        end
+        assert_match /Error deleting channel content/, err.message
+      end
+    end
   end
 end
