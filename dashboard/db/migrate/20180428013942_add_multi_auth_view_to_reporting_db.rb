@@ -15,10 +15,10 @@ class AddMultiAuthViewToReportingDb < ActiveRecord::Migration[5.0]
         IF(users.provider = 'migrated', authentication_options.hashed_email, users.hashed_email) as hashed_email,
         users.deleted_at as deleted_at, purged_at, secret_words, properties, invitation_token, invitation_created_at,
         invitation_sent_at, invitation_accepted_at, invitation_limit, invited_by_id, invited_by_type,
-        invitations_count, terms_of_service_version, urm, races, primary_authentication_option_id
+        invitations_count, terms_of_service_version, urm, races, primary_contact_info_id
       FROM users
       LEFT JOIN authentication_options
-        ON users.primary_authentication_option_id = authentication_options.id
+        ON users.primary_contact_info_id = authentication_options.id
     multiline
   end
 
