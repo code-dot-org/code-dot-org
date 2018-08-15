@@ -799,6 +799,42 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  test "clears 'value' for all of a user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      refute_nil storage_apps.where(id: channel_id).first[:value]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        refute_nil app[:value]
+      end
+
+      purge_user student
+
+      assert_nil storage_apps.where(id: channel_id).first[:value]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_nil app[:value]
+      end
+    end
+  end
+
+  test "clears 'updated_ip' all of a user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      refute_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        refute_empty app[:updated_ip]
+      end
+
+      purge_user student
+
+      assert_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_empty app[:updated_ip]
+      end
+    end
+  end
+
   #
   # Testing our utilities
   #

@@ -33,7 +33,11 @@ class DeleteAccountsHelper
     storage_id = user_storage_ids_row[:id]
 
     # Soft-delete all of the user's channels
-    storage_apps.where(storage_id: storage_id).update(state: 'deleted')
+    storage_apps.where(storage_id: storage_id).update(
+      state: 'deleted',
+      value: nil,
+      updated_ip: nil
+    )
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
