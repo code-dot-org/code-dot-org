@@ -2,6 +2,7 @@ module Pd
   class WorkshopDailySurveyController < ApplicationController
     include WorkshopConstants
     include JotForm::EmbedHelper
+    include WorkshopSurveyConstants
 
     # The POST submit route will be redirected to from JotForm, after form submission
     skip_before_action :verify_authenticity_token, only: %w(submit_general submit_facilitator)

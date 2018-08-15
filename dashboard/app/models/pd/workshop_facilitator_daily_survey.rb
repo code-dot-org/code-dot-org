@@ -81,7 +81,9 @@ module Pd
     end
 
     def self.all_form_ids
-      [form_id(Pd::WorkshopDailySurvey::LOCAL_CATEGORY), form_id(Pd::WorkshopDailySurvey::ACADEMIC_YEAR_CATEGORY)]
+      CATEGORY_MAP.keys.map do |subject|
+        form_id(subject)
+      end
     end
 
     def self.unique_attributes

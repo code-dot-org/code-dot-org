@@ -326,7 +326,7 @@ module Pd
     def map_answers_to_attributes
       hash = form_data_hash(show_hidden_questions: true)
       self.class.attribute_mapping.each do |attribute, question_name|
-        write_attribute attribute, hash[question_name.to_s]
+        write_attribute attribute, hash[question_name.to_s] if hash[question_name.to_s]
       end
     end
 
