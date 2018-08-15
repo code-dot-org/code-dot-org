@@ -1061,7 +1061,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def purge_all_accounts_with_email(email)
-    SolrHelper.expects(:delete_document).at_least_once
+    SolrHelper.stubs(:delete_document)
     DeleteAccountsHelper.new(solr: {}).purge_all_accounts_with_email(email)
   end
 
@@ -1127,7 +1127,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         data: {
           name: use_name,
           email: use_email
-        },
+        }.to_json,
         name: use_name,
         email: use_email,
         hashed_email: Digest::MD5.hexdigest(use_email),
@@ -1138,7 +1138,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         user_id: user&.id,
         processed_data: {
           name: use_name
-        },
+        }.to_json,
         processed_at: DateTime.now,
       }
     )
