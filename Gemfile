@@ -84,6 +84,7 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
