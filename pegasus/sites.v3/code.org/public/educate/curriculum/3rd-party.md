@@ -4,7 +4,7 @@ theme: responsive
 style_min: true
 ---
 
-<!--- If you update the resources here, don't forget to also update /educate/curriculum/xx-school for elementary, middle, and high-school -->
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/elementary-school, /educate/curriculum/middle-school, and /educate/curriculum/high-school -->
 
 # 3rd Party Educator Resources
 
