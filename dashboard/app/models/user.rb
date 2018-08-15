@@ -863,7 +863,7 @@ class User < ActiveRecord::Base
 
   def update_primary_contact_info!(user: {email: nil, hashed_email: nil})
     success = update_primary_contact_info(user: user)
-    raise "User's primary contact info was not saved successfully" unless success
+    raise "User's primary contact info was not updated successfully" unless success
     success
   end
 
