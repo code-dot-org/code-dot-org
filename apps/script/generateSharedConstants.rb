@@ -114,7 +114,7 @@ def main
       source_module: Pd::Teacher1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher1920lib/cdo/shared_constants/pd/facilitator1819_application_constants.rbApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/teacher1920ApplicationConstants.js"
   )
 
   generate_shared_js_file(
