@@ -57,4 +57,17 @@ class SourceBucketTest < FilesApiTestBase
 
     assert_empty @source_bucket.list_versions(@channel, @main_json)
   end
+
+  def test_hard_delete_channel_content_delete_markers
+    @source_bucket.create_or_replace @channel, @main_json, '{"name": "v1"}'
+    @source_bucket.delete @channel, @main_json
+    @source_bucket.create_or_replace @channel, @main_json, '{"name": "v2"}'
+    @source_bucket.delete @channel, @main_json
+
+    assert_equal 2, @source_bucket.list_delete_markers(@channel, @main_json).count
+
+    @source_bucket.hard_delete_channel_content @channel
+
+    assert_empty @source_bucket.list_delete_markers(@channel, @main_json)
+  end
 end
