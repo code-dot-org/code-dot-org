@@ -535,33 +535,6 @@ def with_locale(locale)
   end
 end
 
-# Mock StorageApps to generate random tokens
-class StorageApps
-  def initialize(storage_id)
-    @storage_id = storage_id
-  end
-
-  def create(_, _)
-    storage_app_id = SecureRandom.random_number(100000)
-    storage_encrypt_channel_id(@storage_id, storage_app_id)
-  end
-
-  def most_recent(_)
-    create(nil, nil)
-  end
-end
-
-# Mock storage_id to generate random IDs. Seed with current user so that a user maintains
-# the same id
-def storage_id(_)
-  return storage_id_for_user_id(current_user.id) if current_user
-  Random.new.rand(1_000_000)
-end
-
-def storage_id_for_user_id(user_id)
-  Random.new(user_id.to_i).rand(1_000_000)
-end
-
 # A fake slogger implementation that captures the records written to it.
 class FakeSlogger
   attr_reader :records
