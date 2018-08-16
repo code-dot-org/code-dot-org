@@ -129,7 +129,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/lograge.git
-  revision: eea2ff761375ca4b0d3fdbeb21c0995c558d1991
+  revision: 1ef23fb6fe78e73e782e6393477a9953fb3f4515
   ref: debug_exceptions
   specs:
     lograge (0.10.0)
