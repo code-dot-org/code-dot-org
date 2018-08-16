@@ -1207,7 +1207,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "AssetBucket: hard-deletes soft-deleted channels" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id_a, _|
       with_channel_for student do |channel_id_b, storage_id|
