@@ -22,6 +22,13 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     store_initial_pegasus_table_sizes %i{contacts forms form_geos}
   end
 
+  setup do
+    # Skip real S3 operations in this test
+    [SourceBucket, AssetBucket].each do |bucket|
+      bucket.any_instance.stubs(:hard_delete_channel_content)
+    end
+  end
+
   teardown_all do
     check_final_pegasus_table_sizes
   end
