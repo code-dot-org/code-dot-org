@@ -58,9 +58,10 @@ class AssetBucketTest < FilesApiTestBase
   def test_raises_on_s3_error
     fake_object_versions_response = OpenStruct.new(
       {
-        contents: [
-          {key: 'fake-key'}
-        ]
+        versions: [
+          {key: 'fake-key', version_id: 'null'}
+        ],
+        delete_markers: []
       }
     )
 
@@ -68,12 +69,12 @@ class AssetBucketTest < FilesApiTestBase
       {
         deleted: [],
         errors: [
-          {key: 'fake-key', code: '500', message: 'Fake failure'}
+          {key: 'fake-key', version_id: 'null', code: '500', message: 'Fake failure'}
         ]
       }
     )
 
-    @asset_bucket.s3.stub :list_objects, fake_object_versions_response do
+    @asset_bucket.s3.stub :list_object_versions, fake_object_versions_response do
       @asset_bucket.s3.stub :delete_objects, fake_delete_objects_response do
         err = assert_raises RuntimeError do
           @asset_bucket.hard_delete_channel_content @channel
