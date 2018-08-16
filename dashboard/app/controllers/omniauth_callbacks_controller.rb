@@ -147,7 +147,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Otherwise, it's either the first login, or a user who must connect -
       # offer to connect the Clever account to an existing one, or insist if needed
       if user.migrated?
-        auth_option = authentication_options.find_by credential_type: provider
+        auth_option = user.authentication_options.find_by credential_type: provider
         session['clever_link_flag'] = provider
         session['clever_takeover_id'] = auth_option.authentication_id
         session['clever_takeover_token'] = auth_option.data_hash[:oauth_token]
