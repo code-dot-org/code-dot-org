@@ -291,6 +291,7 @@ class BucketHelper
   end
 
   def hard_delete_channel_content(encrypted_channel_id)
+    # TODO: Handle pagination in the S3 APIs
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     # Find all versions of all objects
     channel_prefix = s3_path owner_id, channel_id
