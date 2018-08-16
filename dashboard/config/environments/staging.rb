@@ -83,6 +83,12 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
 
+  # Log condensed lines to syslog for centralized logging.
+  config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Cee.new
+  require 'syslog/logger'
+  config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
+
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 

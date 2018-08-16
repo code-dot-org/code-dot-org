@@ -12,24 +12,32 @@
         "name": "MOVE",
         "options": [
           [
-            "Standing",
+            "Rest",
             "0"
           ],
           [
-            "Clap",
+            "Electro",
             "1"
           ],
           [
-            "Spin",
+            "Floss",
             "2"
           ],
           [
-            "Uprock",
+            "Fresh",
             "3"
           ],
           [
-            "Bboy",
+            "Breakdown",
             "4"
+          ],
+          [
+            "March",
+            "5"
+          ],
+          [
+            "Wave",
+            "6"
           ],
           [
             "Next",

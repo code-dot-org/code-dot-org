@@ -129,7 +129,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/lograge.git
-  revision: eea2ff761375ca4b0d3fdbeb21c0995c558d1991
+  revision: 1ef23fb6fe78e73e782e6393477a9953fb3f4515
   ref: debug_exceptions
   specs:
     lograge (0.10.0)
@@ -314,6 +314,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
+    brakeman (4.3.1)
     builder (3.2.3)
     cancancan (1.15.0)
     capybara (2.17.0)
@@ -885,6 +886,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
+  brakeman
   cancancan (~> 1.15.0)
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
