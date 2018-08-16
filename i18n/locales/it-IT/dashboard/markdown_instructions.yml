@@ -464,6 +464,17 @@ it:
         - Cosa succede se usi due angoli diversi nello schema a scalinata?
         - Cosa succede se rendi lo schema a rombo più lungo o più corto?
         - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
+      Dance Party 1-validated_markdown_instruction: "**Fai una previsione:** Ecco un personaggio chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
+      Dance Party 1-validated_simple_markdown_instruction: "**Fai una previsione:** Ecco un personaggio chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
+      Dance Party 2_markdown_instruction: "L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare il comportamento all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> per fare in modo che inizi gironzolando qua e là?  "
+      Dance Party 3 - Validated_markdown_instruction: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare un passo di danza diverso ogni volta che ci clicchi sopra."
+      Dance Party 3_markdown_instruction: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare un passo di danza diverso ogni volta che ci clicchi sopra."
+      Dance Party 4 Validated_markdown_instruction: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
+      Dance Party 4_markdown_instruction: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci ad posizionare tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
+      Dance Party 5 - Validated_markdown_instruction: "Possiamo modificare ogni cosa in questo programma quando si clicca sui personaggi. Cambiamo il loro colore!  \n\n**Aggiungi il codice per modificare il colore di ogni alieno quando si clicca su di esso.**"
+      Dance Party 5_markdown_instruction: "Possiamo modificare ogni cosa in questo programma quando si clicca sui personaggi. Cambiamo il loro colore!  \n\n**Aggiungi il codice per modificare il colore di ogni alieno quando si clicca su di esso.**"
+      Dance Party 6 - Validated_markdown_instruction: "Questi alieni si stanno scatenando!  \n\nUsa il blocco <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> per fare in modo che ogni alieno si fermi quando si clicca su di esso."
+      Dance Party 6_markdown_instruction: "Questi alieni si stanno scatenando!  \n\nUsa il blocco <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> per fare in modo che ogni alieno si fermi quando si clicca su di esso."
       Fish Tank 1-validated_markdown_instruction: "**Fai una previsione**: Che cosa pensi accadrà quando eseguirai questo codice?"
       Fish Tank 1_markdown_instruction: "**Fai una previsione**: Che cosa pensi accadrà quando eseguirai questo codice?"
       Fish Tank 5-validated_markdown_instruction: Il nostro pesce si sente un po' solo. Aggiungi un altro personaggio nell'acquario.
@@ -2330,7 +2341,7 @@ it:
       courseF_IceAge_8_markdown_instruction: "Qui trovi il codice del precedente esercizio unito a quello per muovere la Nonnina a destra e sinistra. Puoi completare questo codice per fare in modo che si riproduca un suono e si guadagni un punto quando Sid e la Nonnina si scontrano? Clicca su \"Esegui\" per lanciare il gioco."
       courseF_IceAge_9_markdown_instruction: "Tutti devono muoversi più velocemente perché l'era glaciale sta arrivando! Cambia lo sfondo impostandone uno con ghiaccio e imposta la velocità di Sid (personaggio 1) a veloce, quindi premi \"Esegui\" per farlo correre da Diego ad avvertirlo."
       courseF_IceAge_template_markdown_instruction: "Scrat è ancora alla ricerca di ghiande! Aiutalo a scorrazzare in giro attaccando il blocco `sposta ...` a ciascuno degli eventi e cambiando la direzione di marcia in base al tasto freccia. Quando hai finito, clicca su \"Esegui\" per raccogliere tutte le ghiande."
-      courseF_artist_for1_markdown_instruction: "**Tempo di giocare:** Sperimenta con il *ciclo con contatore*  e la variabile `countrer` (*contatore*).  \n\nTrascina qualche blocco e vedi cosa succede.  \n"
+      courseF_artist_for1_markdown_instruction: "**Tempo di giocare:** Sperimenta con il ciclo `ripeti con counter` e la variabile `countrer` (*contatore*).  \n\nTrascina qualche blocco e vedi cosa succede.  \n"
       courseF_artist_for10_markdown_instruction: |-
         **Tempo di giocare:** Prova ad usare la variabile `counter` (*contatore*) con altri elementi grafici per creare immagini magiche come questa.
         
@@ -2339,9 +2350,9 @@ it:
         **Tempo di giocare:** Prova ad usare la variabile `counter` (*contatore*) con altri elementi grafici per creare immagini magiche come questa.
         
         ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
-      courseF_artist_for1_2018_markdown_instruction: "**Tempo di giocare:** Sperimenta con il *ciclo con contatore*  e la variabile `countrer` (*contatore*).  \n\nTrascina qualche blocco e vedi cosa succede.  \n"
-      courseF_artist_for2_markdown_instruction: Usa un ciclo `ripeti ... volte` all'interno di un il *ciclo con contatore* per creare questa pila di triangoli, i lati misurano da 50 a 100 pixel.
-      courseF_artist_for2_2018_markdown_instruction: Usa un ciclo `ripeti ... volte` all'interno di un il *ciclo con contatore* per creare questa pila di triangoli, i lati misurano da 50 a 100 pixel.
+      courseF_artist_for1_2018_markdown_instruction: "**Tempo di giocare:** Sperimenta con il ciclo `ripeti con counter` e la variabile `countrer` (*contatore*).  \n\nTrascina qualche blocco e vedi cosa succede.  \n"
+      courseF_artist_for2_markdown_instruction: Usa un ciclo `ripeti ... volte` all'interno di un il ciclo `ripeti con counter` per creare questa pila di triangoli, i cui lati misurano da 50 a 100 pixel.
+      courseF_artist_for2_2018_markdown_instruction: Usa un ciclo `ripeti ... volte` all'interno di un il ciclo `ripeti con counter` per creare questa pila di triangoli, i cui lati misurano da 50 a 100 pixel.
       courseF_artist_for3_markdown_instruction: Crea questi triangoli i cui lati misurano da 20 a 200 pixel e ogni triangolo è largo 20 pixel più del precedente.
       courseF_artist_for3_2018_markdown_instruction: Crea questi triangoli i cui lati misurano da 20 a 200 pixel e ogni triangolo è largo 20 pixel più del precedente.
       courseF_artist_for5_markdown_instruction: |-
@@ -2353,9 +2364,13 @@ it:
         ___
         Suggerimento: devi eliminare qualcosa!
       courseF_artist_for6_markdown_instruction: |-
-        Se ruoti un po' di più, o un po' di meno, di quanto fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando di 89 gradi.
+        Se ruoti un po' di più, o un po' di meno, di quanto necessario per realizzare una certa figura, puoi ottenere un effetto fantastico.
+        
+        Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio, ma ruotando solo di 89 gradi.
       courseF_artist_for6_2018_markdown_instruction: |-
-        Se ruoti un po' di più, o un po' di meno, di quanto fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando di 89 gradi.
+        Se ruoti un po' di più, o un po' di meno, di quanto necessario per realizzare una certa figura, puoi ottenere un effetto fantastico.
+        
+        Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio, ma ruotando solo di 89 gradi.
       courseF_artist_for7_markdown_instruction: 'Per ottenere questo disegno bastano solo tre piccole modifiche al codice del precedente esercizio!'
       courseF_artist_for7_2018_markdown_instruction: 'Per ottenere questo disegno bastano solo tre piccole modifiche al codice del precedente esercizio!'
       courseF_artist_for_challenge1_markdown_instruction: "Riesci a ricreare questo disegno?\n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>"
@@ -2473,26 +2488,26 @@ it:
         In questo esercizio, sappiamo che ogni fiore ha esattamente una dose di nettare, ma i fiori non sono distanziati in modo uniforme.
         
         Raccogli tutto il nettare usando il minor numero possibile di blocchi.
-      courseF_bee_for10_markdown_instruction: "**Sfida:** Usa ciò che hai imparato sui `cicli con contatore` e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente avrai bisogno di più tentativi prima di riuscire a capire tutti i passaggi necessari."
-      courseF_bee_for10_2018_markdown_instruction: "**Sfida:** Usa ciò che hai imparato sui `cicli con contatore` e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente avrai bisogno di più tentativi prima di riuscire a capire tutti i passaggi necessari."
-      courseF_bee_for11_markdown_instruction: "Se il tuo ciclo conta alla rovescia, il valore del passo viene **sottratto** dalla variabile `counter` (*contatore*) ogni volta. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
-      courseF_bee_for11_2018_markdown_instruction: "Se il tuo ciclo conta alla rovescia, il valore del passo viene **sottratto** dalla variabile `counter` (*contatore*) ogni volta. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
+      courseF_bee_for10_markdown_instruction: "**Sfida:** Usa ciò che hai imparato sui *cicli con contatore* e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente avrai bisogno di più tentativi prima di riuscire a capire tutti i passaggi necessari."
+      courseF_bee_for10_2018_markdown_instruction: "**Sfida:** Usa ciò che hai imparato sui *cicli con contatore* e cerca si risolvere questo problema. \n\nRicordati: molto probabilmente avrai bisogno di più tentativi prima di riuscire a capire tutti i passaggi necessari."
+      courseF_bee_for11_markdown_instruction: "Se il tuo ciclo deve contare alla rovescia (perché il valore iniziale è maggiore di quello finale), il passo viene **sottratto** dalla variabile `counter` (*contatore*) ad ogni ripetizione. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
+      courseF_bee_for11_2018_markdown_instruction: "Se il tuo ciclo deve contare alla rovescia (perché il valore iniziale è maggiore di quello finale), il passo viene **sottratto** dalla variabile `counter` (*contatore*) ad ogni ripetizione. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
       courseF_bee_for2_markdown_instruction: |-
         Scrivi il codice per aiutare l'ape a raccogliere tutto il nettare.
         
-        Avrai bisogno di molti blocchi per questa sfida, ma imparerai un modo più semplice nel prossimo esercizio.
+        Dovrai usare molti blocchi in questa sfida, ma imparerai un metodo più semplice nel prossimo esercizio.
       courseF_bee_for2_2018_markdown_instruction: |-
         Scrivi il codice per aiutare l'ape a raccogliere tutto il nettare.
         
-        Avrai bisogno di molti blocchi per questa sfida, ma imparerai un modo più semplice nel prossimo esercizio.
-      courseF_bee_for6_markdown_instruction: "Puoi usare un `ciclo con contatore` anche per contare alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da **5** a **1** a passi di **1**."
-      courseF_bee_for6_2018_markdown_instruction: "Puoi usare un `ciclo con contatore` anche per contare alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da **5** a **1** a passi di **1**."
+        Dovrai usare molti blocchi in questa sfida, ma imparerai un metodo più semplice nel prossimo esercizio.
+      courseF_bee_for6_markdown_instruction: "Puoi usare un ciclo `ripeti con counter` anche per contare alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da **5** a **1** a passi di **1**."
+      courseF_bee_for6_2018_markdown_instruction: "Puoi usare un ciclo `ripeti con counter` anche per contare alla rovescia. \n\nProva a raccogliere il nettare contando alla rovescia da **5** a **1** a passi di **1**."
       courseF_bee_for7_markdown_instruction: |-
-        L'ultimo numero del  `ciclo con contatore` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (*contatore*) si modifica del valore indicato  dal  **"passo"**.
+        L'ultimo numero del  ciclo `ripeti con counter` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (*contatore*) si modifica del valore indicato  dal  **"passo"**.
         
         Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for7_2018_markdown_instruction: |-
-        L'ultimo numero del  `ciclo con contatore` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (*contatore*) si modifica del valore indicato  dal  **"passo"**.
+        L'ultimo numero del  ciclo `ripeti con counter` viene chiamato **"passo"**. Ogni volta che il ciclo viene eseguito, la variabile `counter` (*contatore*) si modifica del valore indicato  dal  **"passo"**.
         
         Prova a raccogliere questi fiori usando un  **"passo"** di 2.
       courseF_bee_for8_markdown_instruction: "Questo codice è da completare!\n\nQuale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?"
@@ -2515,6 +2530,9 @@ it:
         
         Evita la dinamite (TNT).
       coursea_maze_ramp1_2018_markdown_instruction: "Per far arrivare l'uccellino fino al maialino, trascina il blocco <xml><block type=\"maze_moveEast\"/></xml> sotto al blocco <xml><block type=\"when_run\"/></xml>, poi premi \"▶ Esegui\"!  \n\n\n---\n"
+      farmer-test-lb_markdown_instruction: |-
+        # Creare una funzione
+        1. Fai questa cosa
       frozen circle function in circle_markdown_instruction: Ora disegniamo 20 cerchi sovrapposti, girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?
       frozen circle function with parameter_markdown_instruction: In questo esercizio il blocco "disegna un cerchio" può creare cerchi di diverse dimensioni. Usalo per disegnare un cerchio piccolo di dimensione 5 e un cerchio più grande di dimensione 10.
       frozen circle function_markdown_instruction: Usa il nuovo blocco "disegna un cerchio" per disegnare 10 cerchi sovrapposti. Devi capire di quanto saltare in avanti tra un cerchio e l'altro.
@@ -2828,7 +2846,7 @@ it:
       grade5_artist_variables_triangles1_2018_markdown_instruction: "Disegniamo un triangolo equilatero.\n\nOgni lato deve essere lungo esattamente 50 pixel."
       grade5_artist_variables_triangles2_markdown_instruction: "Adesso nel blocco `vai avanti ...`, invece di usare un valore esplicito di pixel, si fa riferimento ad una variabile di nome `length` (<i>lunghezza</i>). Puoi impostare la variabile `length` a 150 per disegnare questo nuovo triangolo?<br>\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-6#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       grade5_artist_variables_triangles3_markdown_instruction: 'Inserisci il blocco numerico `???` nei blocchi `imposta length a` (<i>imposta lunghezza a</i>) e `ripeti ... volte` e scrivi al posto dei punti interrogativi i valori necessari per disegnare questo insieme di triangoli equilateri aventi i lati lunghi 50 pixel.'
-      grade5_bee_for_loops10_markdown_instruction: "Se il tuo ciclo conta alla rovescia, il valore del passo viene **sottratto** dalla variabile `counter` (*contatore*) ogni volta. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
+      grade5_bee_for_loops10_markdown_instruction: "Se il tuo ciclo deve contare alla rovescia (perché il valore iniziale è maggiore di quello finale), il passo viene **sottratto** dalla variabile `counter` (*contatore*) ad ogni ripetizione. \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi 12, poi 9, 6, 3 dosi di nettare?"
       grade5_bee_for_loops5_markdown_instruction: Ora bisogna spostarsi in avanti di `counter` (<i>contatore</i>) volte, e poi raccogliere il nettare `counter` volte. Riesci a svolgere questo compito usando due cicli?
       grade5_bee_for_loops6_markdown_instruction: Puoi usare un <i>ciclo con contatore</i> anche per contare all'indietro. In questo esercizio, prova a raccogliere il nettare contando all'indietro da 5 ad 1 a passi di 1.
       grade5_bee_for_loops8_markdown_instruction: "Questo codice è da completare! Quale deve essere il passo in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?"

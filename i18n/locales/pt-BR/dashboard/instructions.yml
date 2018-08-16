@@ -539,6 +539,8 @@ pt-BR:
       C3-Farmer While Loops 8_instruction: " Há um buraco realmente fundo e um monte de terra\nrealmente grande. Quantas pás de terra são necessárias para\ntornar o solo plano? Dica: use o laço enquanto para ambos."
       C3-Farmer While Loops Assessment 1_instruction: "Há um monte de buracos e\nmontes. Ajude-me a preenchê-los e removê-los para tornar o solo plano."
       CDEF_debugging_flappy2_instruction: Por que este jogo não funciona?
+      CSD U5 black white images pixelation 2_instruction: Desenhar uma cara de sorriso (clique aqui para ver a imagem)
+      CSD U5 black white images pixelation 2_2018_instruction: Desenhar uma cara de sorriso (clique aqui para ver a imagem)
       CSD U5 black white images pixelation 5_instruction: Desenho algo que você gosta
       CSD U5 black white images pixelation 5_2018_instruction: Desenho algo que você gosta
       CSDU4 - AppLab - 1_instruction: "Desta vez vamos aprender\num pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar\nlarguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado."
@@ -1050,10 +1052,14 @@ pt-BR:
       Crack a Caesar Cipher_instruction: Instruções
       Crack a Caesar Cipher_2018_instruction: Instruções
       Dance Party 1-validated_instruction: 'O que acha que vai acontecer quando você clicar no alienígena?  '
+      Dance Party 1-validated_simple_instruction: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Dance Party 6 - Validated_instruction: Use o bloco 'para tudo' para fazer cada alienígena parar de se mover quando ele for clicado.
       Dance Party 6_instruction: Use o bloco 'para tudo' para fazer cada alienígena parar de se mover quando ele for clicado.
+      Dance Party 6_simple_instruction: Use o bloco 'para tudo' para fazer cada alienígena parar de se mover quando ele for clicado.
       Dance Party Freeplay_instruction: Agora crie o seu próprio disco alienígena!
+      Dance Party Freeplay_simple_instruction: Agora crie o seu próprio disco alienígena!
       Dance Party Predict_instruction: 'O que acha que vai acontecer quando você clicar no alienígena?  '
+      Dance Party Predict_simple_instruction: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       Eval Booleans 1_instruction: "Operadores booleanos (como >, <, =) nos permitem\ncomparar valores diferentes, retornando \"verdadeiro\" ou \"falso\". Clique em \"Executar\"\npara ver o que essa expressão retorna."
       Eval Booleans 2_instruction: "Você pode definir os valores para que essa expressão\nseja \"verdadeira\"?"
       Eval Booleans 3_instruction: "A função \"comprimento-string\" retorna o número\nde caracteres em uma string (incluindo espaços!) - faça esse código retornar\n\"verdadeiro\"."
@@ -1147,6 +1153,8 @@ pt-BR:
       Infinity_touch_four_instruction: "Mova Anna para cima, para a esquerda e para a direita para tocar\ncada um dos quatro flocos de neve."
       Infinity_touch_score_instruction: "Faça Anna marcar um ponto quando ela tocar\nem um floco de neve. Depois clique em \"Executar\" e faça ela tocar uma vez em cada floco de neve."
       Inspirational Artwork_instruction: "Atividade livre - Inspiração: agora você\naprendeu tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\r\n \\r\nQuer saber como nosso padrão de inspiração foi feito? "
+      InspirationalArtwork_instruction: Se esta imagem te inspira, tente fazer algo parecido. Senão, crie algo você mesmo.
+      InspirationalArtwork_2018_instruction: Se esta imagem te inspira, tente fazer algo parecido. Senão, crie algo você mesmo.
       'Internet Simulator: Sending Binary Messages 1_instruction': "Envie uma mensagem configurando o estado do\nfio como A ou B."
       'Internet Simulator: Sending Binary Messages_instruction': "Envie uma mensagem configurando o estado do\nfio como A ou B."
       'Internet Simulator: Sending Binary Messages_2018_instruction': "Envie uma mensagem configurando o estado do\nfio como A ou B."
@@ -1626,7 +1634,10 @@ pt-BR:
       Underground Iron_2018_instruction: Não é uma boa ideia tentar andar sobre lava incandescente. Coloque os paralelepípedos para criar uma ponte, depois minere pelo menos dois dos blocos de ferro.
       Underground Mining Coal_instruction: Você encontrará os recursos mais valiosos no subterrâneo, mas pode ficar escuro lá dentro. Coloque pelo menos 2 tochas e minere pelo menos 2 carvões.
       Underground Mining Coal_2018_instruction: Você encontrará os recursos mais valiosos no subterrâneo, mas pode ficar escuro lá dentro. Coloque pelo menos 2 tochas e minere pelo menos 2 carvões.
+      Valentine_artist_01_instruction: Ajuda a artista completa o coração de lhama dele.
+      Valentine_playlab_01_instruction: 'Programa Kiki (Ator 1) para mover ao esquerda e direto quando as botoes esquerda e direto sao pressionado. Quado Kiki esta clicado, ela precisa lancar coracoes na direcao das amigas dela. '
       Virtual Pet 1 Predict_instruction: 'O que acha que vai acontecer quando você clicar no alienígena?  '
+      Virtual Pet 1 Predict_simple_instruction: 'O que acha que vai acontecer quando você clicar no alienígena?  '
       XML Scratchpad_instruction: Use este nível de teste para pegar xml para testes de unidade
       aE7_instruction: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés da direita, o que acontece? \\r\n\\r\nVocê pode repetir tudo\nisso para desenhar essa onda?"
       aE8_instruction: "Agora vamos repetir tudo quatro\nvezes para criar a moldura dessa imagem. Preste atenção nos cantos - você não pode\nsimplesmente virar 90 graus! \\r\n\\r\nSe repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
@@ -1669,9 +1680,12 @@ pt-BR:
       bounce_7_2018_instruction: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar até que ela atinja o alvo.
       bounce_7_basketball_instruction: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar até que ela atinja a bandeira.
       bounce_7_sports_instruction: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar até que ela atinja a bandeira.
+      collectorSkinVideo1_instruction: Colete todas as quatro pilhas para passar esse nível.
+      collectorSkinVideo2_instruction: Colete uma pilha de ouro para passar deste nível.
       course1_artist_loops_challenge3_instruction: '"Você pode me ajudar a fazer duas casas de pássaros?"'
       course1_artist_loops_challenge4_instruction: '"É hora de jogar os dados! Você consegue me ajudar a desenhar estes?"'
       course1_collector_loops_challenge1_instruction: '"Você pode me ajudar encontrar alguns bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo dar."'
+      course2_collector_prog_challenge2_instruction: Há 20 peças de tesouro para serem encontradas. Colete pelo menos metade para finalizar este desafio!
       course2_maze_seq_challenge1_instruction: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe pelas dinamites, senão penas vão voar!
       course2_playlab_stage17_1_instruction: "Você pode fazer Jorge, o cachorro (personagem 1),\ndizer \"Olá\"?"
       course2_playlab_stage17_10_instruction: |-
@@ -1869,6 +1883,8 @@ pt-BR:
       courseB_collector_loops7_2018_instruction: Escreva o código para pegar todo este tesouro.
       courseB_collector_loops8_instruction: "**Desafio:** O tesouro vai até o final das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
       courseB_collector_loops8_2018_instruction: "**Desafio:** O tesouro vai até o final das escadas!  Escreva o código para ajudar a Laurel a pegar tudo."
+      courseB_collector_loops_challenge2a_instruction: Ajude Laurel a pegar pelo menos **5** peças do tesouro para finalizar este enigma.
+      courseB_collector_loops_challenge2a_2018_instruction: Ajude Laurel a pegar pelo menos **5** peças do tesouro para finalizar este enigma.
       courseB_iceage_loops12_instruction: Pegue a noz da maneira que você conseguir!
       courseB_iceage_loops2_instruction: Uso dois blocos de movimento diferentes para chegar até a noz!
       courseB_iceage_loops3_instruction: Você consegue pegar a noz com apenas um bloco `W`?
@@ -1958,6 +1974,7 @@ pt-BR:
       courseD_artist_binary6_2018_instruction: "Que string binária de 6 dígitos, repetida\n11 vezes, vai desenhar essa imagem?"
       courseD_artist_binary7_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
       courseD_artist_binary7_2018_instruction: "Qual é a menor string binária que você\npode repetir para desenhar esta imagem?"
+      courseD_artist_binaryFP8_instruction: "**Atividade livre**: desenhe o que você quiser com números binários! "
       courseD_artist_nestedLoops_challenge2_instruction: Conserte o código para fazer esta pintura!
       courseD_artist_nestedLoops_challenge2_2018_instruction: Conserte o código para fazer esta pintura!
       courseD_bee_debugging3_instruction: "Corrija o(s) erro(s) para coletar todo o néctar\ne produzir todo o mel."

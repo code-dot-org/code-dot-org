@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'cdo/delete_accounts_helper'
+require_relative '../../../shared/middleware/helpers/storage_apps'
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -17,6 +18,14 @@ require 'cdo/delete_accounts_helper'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
+  setup_all do
+    store_initial_pegasus_table_sizes %i{contacts forms form_geos}
+  end
+
+  teardown_all do
+    check_final_pegasus_table_sizes
+  end
+
   test 'sets purged_at' do
     user = create :student
     assert_nil user.purged_at
@@ -759,7 +768,324 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil application.notes
   end
 
+  #
+  # Table: dashboard.pd_attendances
+  #
+
+  test "soft-deletes pd_attendances when teacher is purged" do
+    attendance = create :pd_attendance
+    refute attendance.deleted?
+
+    purge_user attendance.teacher
+
+    attendance.reload
+    assert attendance.deleted?
+  end
+
+  test "clears teacher_id from pd_attendances when teacher is purged" do
+    attendance = create :pd_attendance
+    refute_nil attendance.teacher_id
+
+    purge_user attendance.teacher
+
+    attendance.reload
+    assert_nil attendance.teacher_id
+  end
+
+  test "does not soft-delete pd_attendances when marked_by_user is purged" do
+    marked_by_user = create :teacher
+    attendance = create :pd_attendance
+    attendance.update!(marked_by_user: marked_by_user)
+    refute attendance.deleted?
+
+    purge_user marked_by_user
+
+    attendance.reload
+    refute attendance.deleted?
+  end
+
+  test "clears marked_by_user_id from pd_attendances when marked_by_user is purged" do
+    marked_by_user = create :teacher
+    attendance = create :pd_attendance
+    attendance.update!(marked_by_user: marked_by_user)
+    refute_nil attendance.marked_by_user_id
+
+    purge_user marked_by_user
+
+    attendance.reload
+    assert_nil attendance.marked_by_user_id
+  end
+
+  #
+  # Table: pegasus.contacts
+  #
+
+  test "removes contacts rows for email" do
+    user = create :teacher
+    email = user.email
+    Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+
+    refute_empty PEGASUS_DB[:contacts].where(email: email)
+    contact_ids = PEGASUS_DB[:contacts].where(email: email).map {|s| s[:id]}
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:contacts].where(email: email)
+    assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
+  end
+
+  #
+  # Table: pegasus.contact_rollups
+  #
+  # TODO: To interact correctly with contact_rollups (a table controlled only
+  #   by a nightly batch job) we may want to update our user purge to be a
+  #   long-running operation; we'll queue a contact purge that the contact
+  #   rollups job will take care of, and when all deferred work is done we
+  #   will report that the hard-delete is completed.
+
+  #
+  # Table: pegasus.forms
+  # Table: pegasus.form_geos
+  #
+
+  test "cleans forms matched by email if purging by email" do
+    email = 'test@example.com'
+    with_form(email: email) do |_|
+      form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
+
+      refute_empty PEGASUS_DB[:forms].where(id: form_ids)
+      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+
+      purge_all_accounts_with_email email
+
+      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+    end
+  end
+
+  test "cleans forms matched by user_id" do
+    user = create :teacher
+    with_form(user: user) do |_|
+      form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
+
+      refute_empty PEGASUS_DB[:forms].where(id: form_ids)
+      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+
+      purge_user user
+
+      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+    end
+  end
+
+  test "removes email from forms" do
+    assert_removes_field_from_forms :email, expect: :empty
+  end
+
+  test "removes name from forms" do
+    assert_removes_field_from_forms :name
+  end
+
+  test "removes data from forms" do
+    assert_removes_field_from_forms :data, expect: {}.to_json
+  end
+
+  test "removes created_ip from forms" do
+    assert_removes_field_from_forms :created_ip, expect: :empty
+  end
+
+  test "removes updated_ip from forms" do
+    assert_removes_field_from_forms :updated_ip, expect: :empty
+  end
+
+  test "removes processed_data from forms" do
+    assert_removes_field_from_forms :processed_data
+  end
+
+  test "removes hashed_email from forms" do
+    assert_removes_field_from_forms :hashed_email
+  end
+
+  test "removes ip_address from form_geos" do
+    assert_removes_field_from_form_geos :ip_address
+  end
+
+  test "removes city from form_geos" do
+    assert_removes_field_from_form_geos :city
+  end
+
+  test "removes state from form_geos" do
+    assert_removes_field_from_form_geos :state
+  end
+
+  test "removes postal_code from form_geos" do
+    assert_removes_field_from_form_geos :postal_code
+  end
+
+  test "removes latitude from form_geos" do
+    assert_removes_field_from_form_geos :latitude
+  end
+
+  test "removes longitude from form_geos" do
+    assert_removes_field_from_form_geos :longitude
+  end
+
+  #
+  # Table: pegasus.storage_apps
+  #
+
+  test "soft-deletes all of a user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'active', app[:state]
+      end
+
+      purge_user student
+
+      assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'deleted', app[:state]
+      end
+    end
+  end
+
+  test "does not soft-delete anyone else's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student_a = create :student
+    student_b = create :student
+    with_channel_for student_a do |channel_id_a|
+      with_channel_for student_b do |channel_id_b|
+        assert_equal 'active', storage_apps.where(id: channel_id_a).first[:state]
+        assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+
+        purge_user student_a
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+        assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+      end
+    end
+  end
+
+  test "clears 'value' for all of a user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      refute_nil storage_apps.where(id: channel_id).first[:value]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        refute_nil app[:value]
+      end
+
+      purge_user student
+
+      assert_nil storage_apps.where(id: channel_id).first[:value]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_nil app[:value]
+      end
+    end
+  end
+
+  test "clears 'updated_ip' all of a user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      refute_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        refute_empty app[:updated_ip]
+      end
+
+      purge_user student
+
+      assert_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_empty app[:updated_ip]
+      end
+    end
+  end
+
+  #
+  # Testing our utilities
+  #
+
+  test 'with_channel_for owns channel' do
+    table = PEGASUS_DB[:storage_apps]
+    student = create :student
+
+    with_storage_id_for student do |storage_id|
+      assert_empty table.where(storage_id: storage_id)
+
+      with_channel_for student do |channel_id|
+        assert_equal channel_id, table.where(storage_id: storage_id).first[:id]
+      end
+
+      assert_empty table.where(storage_id: storage_id)
+    end
+  end
+
+  test 'with_storage_id_for owns id if it does not exist' do
+    table = PEGASUS_DB[:user_storage_ids]
+    student = create :student
+
+    assert_empty table.where(user_id: student.id)
+
+    with_storage_id_for student do |storage_id|
+      assert_equal storage_id, table.where(user_id: student.id).first[:id]
+    end
+
+    assert_empty table.where(user_id: student.id)
+  end
+
+  test 'with_storage_id_for does not own id if it does exist' do
+    table = PEGASUS_DB[:user_storage_ids]
+    student = create :student
+    assert_empty table.where(user_id: student.id)
+
+    table.insert(user_id: student.id)
+
+    refute_empty table.where(user_id: student.id)
+
+    with_storage_id_for student do |storage_id|
+      assert_equal storage_id, table.where(user_id: student.id).first[:id]
+    end
+
+    refute_empty table.where(user_id: student.id)
+
+    table.where(user_id: student.id).delete
+    assert_empty table.where(user_id: student.id)
+  end
+
   private
+
+  def with_channel_for(owner)
+    table = PEGASUS_DB[:storage_apps]
+    channels_before = table.count
+    with_storage_id_for owner do |storage_id|
+      encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
+      _, id = storage_decrypt_channel_id encrypted_channel_id
+      yield id, storage_id
+    ensure
+      table.where(id: id).delete if id
+    end
+  ensure
+    assert_equal channels_before, table.count
+  end
+
+  def with_storage_id_for(user)
+    table = PEGASUS_DB[:user_storage_ids]
+    user_storage_ids_count_before = table.count
+    owns_storage_id = false
+
+    storage_id = table.where(user_id: user.id).first&.[](:id)
+    unless storage_id
+      storage_id = table.insert(user_id: user.id)
+      owns_storage_id = true
+    end
+
+    yield storage_id
+  ensure
+    table.where(id: storage_id).delete if owns_storage_id
+    assert_equal user_storage_ids_count_before, table.count
+  end
 
   #
   # Helper to make this specific set of tests more readable
@@ -783,7 +1109,136 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def purge_all_accounts_with_email(email)
-    SolrHelper.expects(:delete_document).at_least_once
+    SolrHelper.stubs(:delete_document)
     DeleteAccountsHelper.new(solr: {}).purge_all_accounts_with_email(email)
+  end
+
+  def assert_removes_field_from_forms(field, expect: :nil)
+    user = create :teacher
+    with_form(user: user) do |form_id|
+      initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
+      initial_expectation_msg = "Expected initial #{field} not to be #{expect}"
+      case expect
+      when :empty
+        refute_empty initial_value, initial_expectation_msg
+      when :nil
+        refute_nil initial_value, initial_expectation_msg
+      else
+        refute_equal expect, initial_value, initial_expectation_msg
+      end
+
+      purge_user user
+
+      cleared_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
+      result_expectation_msg = "Expected cleared #{field} to be #{expect} but was #{cleared_value.inspect}"
+      case expect
+      when :empty
+        assert_empty cleared_value, result_expectation_msg
+      when :nil
+        assert_nil cleared_value, result_expectation_msg
+      else
+        assert_equal expect, cleared_value, result_expectation_msg
+      end
+    end
+  end
+
+  def assert_removes_field_from_form_geos(field)
+    user = create :teacher
+    with_form_geo(user) do |form_geo_id|
+      initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
+      refute_nil initial_value,
+        "Expected initial #{field} not to be nil"
+
+      purge_user user
+
+      cleared_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
+      assert_nil cleared_value,
+        "Expected cleared #{field} to be nil but was #{cleared_value.inspect}"
+    end
+  end
+
+  #
+  # Adds a test row to pegasus.forms, removes it at the end of the block.
+  # Should provide either user or email as a param.
+  # @param [User] user - A user to be treated as the form submitter.  If provided,
+  #   email will be derived from user.
+  # @param [String] email - An email for the form submitter.
+  # @yields [Integer] The id for the created form.
+  #
+  def with_form(user: nil, email: nil)
+    use_name = user&.name || 'Fake Name'
+    use_email = user ? user.email : email
+    form_id = PEGASUS_DB[:forms].insert(
+      {
+        kind: 'DeleteAccountsHelperTestForm',
+        secret: SecureRandom.hex,
+        data: {
+          name: use_name,
+          email: use_email
+        }.to_json,
+        name: use_name,
+        email: use_email,
+        hashed_email: Digest::MD5.hexdigest(use_email),
+        created_at: DateTime.now,
+        updated_at: DateTime.now,
+        created_ip: '1.2.3.4',
+        updated_ip: '1.2.3.4',
+        user_id: user&.id,
+        processed_data: {
+          name: use_name
+        }.to_json,
+        processed_at: DateTime.now,
+      }
+    )
+    yield form_id
+  ensure
+    PEGASUS_DB[:forms].where(id: form_id).delete
+  end
+
+  #
+  # Adds a test row to pegasus.form_geos.
+  # @param [User] user to create an associated form.
+  # @yields [Integer] the id of the form_geos row.
+  #
+  def with_form_geo(user)
+    with_form(user: user) do |form_id|
+      form_geo_id = PEGASUS_DB[:form_geos].insert(
+        {
+          form_id: form_id,
+          created_at: DateTime.now,
+          updated_at: DateTime.now,
+          ip_address: '1.2.3.4',
+          # World's largest ball of twine!
+          city: 'Cawker City',
+          state: 'Kansas',
+          country: 'USA',
+          postal_code: '67430',
+          latitude: 39.509222,
+          longitude: -98.433800,
+        }
+      )
+      yield form_geo_id
+    ensure
+      PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
+    end
+  end
+
+  #
+  # Verify that tests clean up affected Pegasus tables properly, since we
+  # aren't depending on FactoryBot to do that for us.
+  #
+  def store_initial_pegasus_table_sizes(table_names)
+    @initial_pegasus_table_sizes = table_names.map do |table_name|
+      [table_name, PEGASUS_DB[table_name].count]
+    end.to_h
+  end
+
+  def check_final_pegasus_table_sizes
+    @initial_pegasus_table_sizes.each do |table_name, initial_size|
+      final_size = PEGASUS_DB[table_name].count
+      assert_equal initial_size, final_size,
+        "Expected pegasus.#{table_name} to contain #{initial_size} rows but " \
+        "it had #{final_size} rows"
+    end
   end
 end

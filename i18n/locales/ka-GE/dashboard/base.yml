@@ -122,6 +122,7 @@ ka:
     field_is_required: "სავალდებულოა"
     accept_terms: "ანგარიშის შესაქმნელად უნდა დაეთანხმოთ"
     error: "მოხდა შეცდომა."
+    email_preference_privacy: "(იხილეთ ჩვენი კონფიდენციალურობის დებულება)"
     email_preference_yes: "დიახ"
     email_preference_no: "არა"
   school_info:

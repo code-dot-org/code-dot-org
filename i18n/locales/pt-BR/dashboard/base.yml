@@ -10,6 +10,7 @@ pt-BR:
       messages:
         blank: "é obrigatório"
         blank_plural: "obrigatório"
+        invalid: "é inválido"
         invalid_plural: "inválido"
     attributes:
       user:
