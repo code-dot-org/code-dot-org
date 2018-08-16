@@ -189,25 +189,9 @@ export default function sectionAssessments(state=initialState, action) {
 
 // Returns an array of objects, each indicating an assessment name and it's id
 // for the assessments and surveys in the current script.
-export const getCurrentScriptAssessmentList = (state) => {
-  const assessmentStructure = state.sectionAssessments.assessmentQuestionsByScript[state.scriptSelection.scriptId] || {};
-  const assessments = Object.values(assessmentStructure).map(assessment => {
-    return {
-      id: assessment.id,
-      name: assessment.name,
-    };
-  });
-
-  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
-  const surveys = Object.keys(surveysStructure).map(surveyId => {
-    return {
-      id: parseInt(surveyId),
-      name: surveysStructure[surveyId].stage_name,
-    };
-  });
-
-  return assessments.concat(surveys);
-};
+export const getCurrentScriptAssessmentList = (state) => (
+  computeScriptAssessmentList(state.sectionAssessments, state.scriptSelection.scriptId)
+);
 
 // Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentScript = (state) => {
@@ -769,6 +753,34 @@ export function indexesToAnswerString(answerArr) {
   }
   return answerArr.map(index => ANSWER_LETTERS[index]).join(', ');
 }
+
+/**
+ * Returns a list of ids and names of assessments and surveys.
+ *
+ * @param state {Object} the sectionAssessments branch of the redux state tree.
+ * @param scriptId {number|string}
+ * @returns {Array}
+ */
+const computeScriptAssessmentList = (state, scriptId) => {
+  const assessmentStructure = state.assessmentQuestionsByScript[scriptId] || {};
+  const assessments = Object.values(assessmentStructure).map(assessment => {
+    return {
+      id: assessment.id,
+      name: assessment.name,
+    };
+  });
+
+  const surveysStructure = state.surveysByScript[scriptId] || {};
+  const surveys = Object.keys(surveysStructure).map(surveyId => {
+    return {
+      id: parseInt(surveyId),
+      name: surveysStructure[surveyId].stage_name,
+    };
+  });
+
+  return assessments.concat(surveys);
+};
+
 
 // Requests to the server for assessment data
 
