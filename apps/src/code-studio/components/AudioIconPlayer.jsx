@@ -17,7 +17,7 @@ export default class AudioIconPlayer extends React.Component {
       this.props.soundPlayer.stopPlayingURL(this.props.src);
     } else {
       this.setState({isPlaying: true});
-      this.props.soundPlayer.play(this.props.src);
+      this.props.soundPlayer.play(this.props.src, {onEnded: ()=>{this.setState({isPlaying: false});}});
     }
   };
 

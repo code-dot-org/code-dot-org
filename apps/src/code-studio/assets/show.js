@@ -1,7 +1,6 @@
 /* global dashboard */
 
 import Sounds from "../../Sounds";
-
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ImagePicker = require('../components/ImagePicker');
@@ -29,7 +28,6 @@ module.exports = function showAssetManager(assetChosen, typeFilter, onClose, opt
     id: 'manageAssetsModal',
     onHidden: () => {sounds.stopAllAudio(); onClose;}
   });
-
 
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
 
