@@ -155,6 +155,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
+  after_create :set_multi_auth_status
 
   # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_PROVIDERS = %w(
@@ -619,6 +620,18 @@ class User < ActiveRecord::Base
     authentication_option&.user || User.find_by(provider: type, uid: id)
   end
 
+  def add_credential(type:, id:, email:, hashed_email:, data:)
+    return false unless migrated?
+    AuthenticationOption.create(
+      user: self,
+      email: email,
+      hashed_email: hashed_email,
+      credential_type: type,
+      authentication_id: id,
+      data: data
+    )
+  end
+
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
@@ -760,6 +773,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def oauth_only?
+    if migrated?
+      authentication_options.all?(&:oauth?) && encrypted_password.blank?
+    else
+      OAUTH_PROVIDERS.include?(provider) && encrypted_password.blank?
+    end
+  end
+
   def self.new_with_session(params, session)
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"]) do |user|
@@ -851,6 +872,35 @@ class User < ActiveRecord::Base
     end
 
     success
+  end
+
+  def update_primary_contact_info!(user: {email: nil, hashed_email: nil})
+    success = update_primary_contact_info(user: user)
+    raise "User's primary contact info was not updated successfully" unless success
+    success
+  end
+
+  def upgrade_to_personal_login(params)
+    if secret_word_account? && !valid_secret_words?(params[:secret_words])
+      error = params[:secret_words].blank? ? :blank_plural : :invalid_plural
+      errors.add(:secret_words, error)
+      return false
+    end
+
+    unless migrated?
+      params[:provider] = nil # Set provider to nil to mark the account as self-managed
+      return update(params)
+    end
+
+    email = params.delete(:email)
+    hashed_email = params.delete(:hashed_email)
+    should_update_contact_info = email.present? || hashed_email.present?
+    transaction do
+      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email}) if should_update_contact_info
+      update!(params)
+    end
+  rescue
+    false # Relevant errors are set on the user model, so we rescue and return false here.
   end
 
   def set_user_type(user_type, email = nil, email_preference = nil)
@@ -1230,6 +1280,10 @@ class User < ActiveRecord::Base
 
   def initial
     UserHelpers.initial(name)
+  end
+
+  def valid_secret_words?(words)
+    words == secret_words
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -1788,6 +1842,11 @@ class User < ActiveRecord::Base
     end
   end
 
+  def should_see_add_password_form?
+    !can_create_personal_login? && # mutually exclusive with personal login UI
+      can_edit_password? && encrypted_password.blank?
+  end
+
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -1836,7 +1895,8 @@ class User < ActiveRecord::Base
   # to create personal logins (using e-mail/password or oauth) so they can
   # continue to use our site without losing progress.
   def can_create_personal_login?
-    teacher_managed_account? # once parent e-mail is added, we should check for it here
+    return false unless student?
+    teacher_managed_account? || (migrated? && oauth_only?)
   end
 
   def teacher_managed_account?
