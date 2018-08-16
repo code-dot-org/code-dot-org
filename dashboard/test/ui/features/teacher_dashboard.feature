@@ -13,7 +13,7 @@ Feature: Using the teacher dashboard
     Then I wait until I am on "http://studio.code.org/home"
 
   Scenario: Loading student progress
-    Given I create a teacher-associated student named "Sally"
+    Given I create an authorized teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
@@ -44,6 +44,11 @@ Feature: Using the teacher dashboard
     # Assessments and surveys tab
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
+    And I wait until element "h3:contains(no submissions for this assessment)" is visible
+    And I wait until element "h3:contains(this survey is anonymous)" is not visible
+    And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"
+    And I wait until element "h3:contains(this survey is anonymous)" is visible
+    And I wait until element "h3:contains(no submissions for this assessment)" is not visible
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
