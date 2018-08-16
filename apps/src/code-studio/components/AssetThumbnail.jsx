@@ -61,9 +61,25 @@ class AssetThumbnail extends React.Component {
     useFilesApi: PropTypes.bool,
     projectId: PropTypes.string,
     src: PropTypes.string,
+    soundPlayer: PropTypes.object,
 
     //Temp prop to hide/show updated styles for audio recording release
     useUpdatedStyles: PropTypes.bool
+  };
+
+  state = {
+    isPlaying: false
+  };
+
+  clickSoundControl = (src) => {
+    if (this.state.isPlaying) {
+      this.setState({isPlaying: false});
+      console.log(src);
+      this.props.soundPlayer.stopPlayingURL(src);
+    } else {
+      this.setState({isPlaying: true});
+      this.props.soundPlayer.play(src, {onEnded: ()=>{this.setState({isPlaying:false});}});
+    }
   };
 
   render() {
@@ -89,11 +105,15 @@ class AssetThumbnail extends React.Component {
     }
     const srcPath = `${basePath}${cacheBustSuffix}`;
 
+    if (type === 'audio') {
+      this.props.soundPlayer.register({id: srcPath, mp3: srcPath});
+    }
+
     return (
       <div>
         {(useUpdatedStyles && type === 'audio') ?
           <div style={[styles.wrapper, styles.audioWrapper]}>
-            <AudioIconPlayer src={srcPath}/>
+            <AudioIconPlayer src={srcPath} soundPlayer={this.props.soundPlayer}/>
           </div> :
           <div className="assetThumbnail" style={[styles.wrapper, style, styles.background]}>
             {type === 'image' ?

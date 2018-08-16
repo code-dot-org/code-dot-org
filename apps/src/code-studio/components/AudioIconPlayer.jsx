@@ -3,32 +3,21 @@ import {styles} from "./AssetThumbnail";
 
 export default class AudioIconPlayer extends React.Component {
   static propTypes = {
-    src: PropTypes.string.isRequired
+    src: PropTypes.string.isRequired,
+    soundPlayer: PropTypes.object
   };
 
-  constructor(props) {
-    super(props);
-    const audio = new Audio(this.props.src);
-
-    this.state = {
-      isPlaying: false,
-      audio: audio
-    };
-  }
-
-  componentDidMount() {
-    this.state.audio.addEventListener('ended', () => {
-      this.setState({isPlaying: false});
-    });
-  }
+  state = {
+    isPlaying: false
+  };
 
   clickSoundControl = () => {
     if (this.state.isPlaying) {
       this.setState({isPlaying: false});
-      this.state.audio.pause();
+      this.props.soundPlayer.stopPlayingURL(this.props.src);
     } else {
       this.setState({isPlaying: true});
-      this.state.audio.play();
+      this.props.soundPlayer.play(this.props.src);
     }
   };
 
