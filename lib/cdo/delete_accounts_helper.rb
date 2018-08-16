@@ -24,10 +24,21 @@ class DeleteAccountsHelper
   def delete_project_backed_progress(user)
     return unless user.user_storage_id
 
+    channel_ids = @pegasus_db[:storage_apps].where(storage_id: user.user_storage_id).map(:id)
+    encrypted_channel_ids = channel_ids.map do |id|
+      storage_encrypt_channel_id user.user_storage_id, id
+    end
+
     # Clear potential PII from user's channels
     @pegasus_db[:storage_apps].
-      where(storage_id: user.user_storage_id).
+      where(id: channel_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
+
+    # Clear S3 sources for user's channels
+    source_bucket = SourceBucket.new
+    encrypted_channel_ids.map do |eid|
+      source_bucket.hard_delete_channel_content eid
+    end
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
