@@ -487,7 +487,7 @@ export const isCurrentAssessmentSurvey = (state) => {
   const surveysStructure = state.sectionAssessments.surveysByScript[scriptId] || {};
 
   const currentAssessmentId = state.sectionAssessments.assessmentId;
-  return Object.keys(surveysStructure).includes(currentAssessmentId.toString());
+  return Object.keys(surveysStructure).includes(currentAssessmentId + '');
 };
 
 /** Get data for students assessments multiple choice table
