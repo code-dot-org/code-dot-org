@@ -932,7 +932,25 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: pegasus.storage_apps
   #
 
-  test "soft-deletes all of a user's projects" do
+  test "soft-deletes all of a soft-deleted user's projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'active', app[:state]
+      end
+
+      student.destroy
+
+      assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'deleted', app[:state]
+      end
+    end
+  end
+
+  test "soft-deletes all of a purged user's projects" do
     storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
@@ -967,7 +985,68 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  test "clears 'value' for all of a user's projects" do
+  test "sets updated_at when soft-deleting projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        student.destroy
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        refute_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
+  test "soft-delete does not set updated_at on already soft-deleted projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        storage_apps.where(id: channel_id).update(state: 'deleted', updated_at: Time.now)
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        student.destroy
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        assert_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
+  test "user purge does set updated_at on already soft-deleted projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        storage_apps.where(id: channel_id).update(state: 'deleted', updated_at: Time.now)
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        purge_user student
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        refute_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
+  test "clears 'value' for all of a purged user's projects" do
     storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
@@ -985,7 +1064,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  test "clears 'updated_ip' all of a user's projects" do
+  test "clears 'updated_ip' for all of a purged user's projects" do
     storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
@@ -1000,6 +1079,65 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       storage_apps.where(storage_id: storage_id).each do |app|
         assert_empty app[:updated_ip]
       end
+    end
+  end
+
+  #
+  # Table: dashboard.featured_projects
+  #
+
+  test "unfeatures any featured projects owned by soft-deleted user" do
+    student = create :student
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: Time.now
+
+      assert featured_project.featured?
+
+      student.destroy
+
+      featured_project.reload
+      refute featured_project.featured?
+    end
+  end
+
+  test "unfeatures any featured projects owned by purged user" do
+    student = create :student
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: Time.now
+
+      assert featured_project.featured?
+
+      purge_user student
+
+      featured_project.reload
+      refute featured_project.featured?
+    end
+  end
+
+  test "does not change unfeature time on previously unfeatured projects" do
+    student = create :student
+    featured_time = Time.now - 20
+    unfeatured_time = Time.now - 10
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: featured_time,
+        unfeatured_at: unfeatured_time
+
+      refute featured_project.featured?
+      assert_equal unfeatured_time.utc.to_s,
+        featured_project.unfeatured_at.utc.to_s
+
+      student.destroy
+
+      featured_project.reload
+      refute featured_project.featured?
+      assert_equal unfeatured_time.utc.to_s,
+        featured_project.unfeatured_at.utc.to_s
     end
   end
 

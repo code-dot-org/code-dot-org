@@ -553,6 +553,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
 
   test 'application is valid for deleted owner after clear_data' do
     application = create :pd_teacher_application
+    application.user.stubs(:user_storage_id)
     application.user.destroy!
 
     application.clear_data
