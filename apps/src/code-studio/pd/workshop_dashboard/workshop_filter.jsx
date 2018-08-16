@@ -80,8 +80,6 @@ export class WorkshopFilter extends React.Component {
   componentDidMount() {
     if (this.props.permission.has(WorkshopAdmin)) {
       this.loadOrganizers();
-    }
-    if (this.props.permission.hasAny(WorkshopAdmin)) {
       this.loadFacilitators();
     }
   }

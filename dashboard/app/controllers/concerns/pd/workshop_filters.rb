@@ -86,7 +86,7 @@ module Pd::WorkshopFilters
 
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
         workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
-        workshops = workshops.facilitated_by(User.find(params[:facilitator_id])) if params[:facilitator_id]
+        workshops = workshops.facilitated_by(User.find_by(id: params[:facilitator_id])) if params[:facilitator_id]
       end
 
       if params[:regional_partner_id] && params[:regional_partner_id] != 'all'
