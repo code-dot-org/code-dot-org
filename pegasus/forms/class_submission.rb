@@ -146,7 +146,7 @@ class ClassSubmission < Form
 
     {}.tap do |results|
       location = search_for_address(data['school_address_s'])
-      results.merge! location.to_solr if location
+      results.merge! location.summarize if location
 
       # Add additional data that was previously only used for indexing.
       results.merge! additional_data(data)
@@ -177,7 +177,7 @@ class ClassSubmission < Form
     new_data
   end
 
-  def self.solr_query(params)
+  def self.query(params)
     query = ::PEGASUS_DB[:forms].
       where(
         {

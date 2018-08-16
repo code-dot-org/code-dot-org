@@ -115,11 +115,11 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
     {}.tap do |results|
       location = search_for_address(data['location_s'])
-      results.merge! location.to_solr if location
+      results.merge! location.summarize if location
     end
   end
 
-  def self.solr_query(params)
+  def self.query(params)
     query = ::PEGASUS_DB[:forms].
       where(
         kind: name,
