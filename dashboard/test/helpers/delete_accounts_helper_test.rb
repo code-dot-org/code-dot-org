@@ -937,6 +937,67 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  test "sets updated_at when soft-deleting projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        student.destroy
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        refute_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
+  test "soft-delete does not set updated_at on already soft-deleted projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        storage_apps.where(id: channel_id).update(state: 'deleted', updated_at: Time.now)
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        student.destroy
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        assert_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
+  test "user purge does set updated_at on already soft-deleted projects" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        storage_apps.where(id: channel_id).update(state: 'deleted', updated_at: Time.now)
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        purge_user student
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        refute_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
   test "clears 'value' for all of a purged user's projects" do
     storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
@@ -1009,7 +1070,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  test "does not change time on previously unfeatured projects" do
+  test "does not change unfeature time on previously unfeatured projects" do
     student = create :student
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10

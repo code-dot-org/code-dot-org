@@ -2096,7 +2096,8 @@ class User < ActiveRecord::Base
     # Soft-delete all of the user's channels
     PEGASUS_DB[:storage_apps].
       where(id: channel_ids).
-      update(state: 'deleted')
+      exclude(state: 'deleted').
+      update(state: 'deleted', updated_at: Time.now)
   end
 
   # Gets the user's user_storage_id from the pegasus database, if it's available.

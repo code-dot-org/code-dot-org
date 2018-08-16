@@ -27,7 +27,7 @@ class DeleteAccountsHelper
     # Clear potential PII from user's channels
     @pegasus_db[:storage_apps].
       where(storage_id: user.user_storage_id).
-      update(value: nil, updated_ip: '')
+      update(value: nil, updated_ip: '', updated_at: Time.now)
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
