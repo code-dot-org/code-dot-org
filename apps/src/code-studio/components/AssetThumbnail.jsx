@@ -67,61 +67,47 @@ class AssetThumbnail extends React.Component {
     useUpdatedStyles: PropTypes.bool
   };
 
-  state = {
-    isPlaying: false
-  };
-
-  clickSoundControl = (src) => {
-    if (this.state.isPlaying) {
-      this.setState({isPlaying: false});
-      console.log(src);
-      this.props.soundPlayer.stopPlayingURL(src);
-    } else {
-      this.setState({isPlaying: true});
-      this.props.soundPlayer.play(src, {onEnded: ()=>{this.setState({isPlaying:false});}});
+  constructor(props) {
+    super(props);
+    let api = this.props.useFilesApi ? filesApi : assetsApi;
+    if (this.props.projectId) {
+      api = api.withProjectId(this.props.projectId);
     }
-  };
+    const basePath = api.basePath(this.props.name);
+    let cacheBustSuffix = '';
+    if (this.props.timestamp) {
+      const date = new Date(this.props.timestamp);
+      cacheBustSuffix = `?t=${date.valueOf()}`;
+    }
+    this.srcPath = `${basePath}${cacheBustSuffix}`;
+
+    if (this.props.type === 'audio') {
+      this.props.soundPlayer.register({id: this.srcPath, mp3: this.srcPath});
+    }
+  }
 
   render() {
     const {
-      timestamp,
       type,
-      name,
-      useFilesApi,
-      projectId,
       iconStyle,
       style,
-      useUpdatedStyles
+      useUpdatedStyles,
+      src
     } = this.props;
-    let api = useFilesApi ? filesApi : assetsApi;
-    if (projectId) {
-      api = api.withProjectId(projectId);
-    }
-    const basePath = api.basePath(name);
-    let cacheBustSuffix = '';
-    if (timestamp) {
-      const date = new Date(timestamp);
-      cacheBustSuffix = `?t=${date.valueOf()}`;
-    }
-    const srcPath = `${basePath}${cacheBustSuffix}`;
-
-    if (type === 'audio') {
-      this.props.soundPlayer.register({id: srcPath, mp3: srcPath});
-    }
 
     return (
       <div>
         {(useUpdatedStyles && type === 'audio') ?
           <div style={[styles.wrapper, styles.audioWrapper]}>
-            <AudioIconPlayer src={srcPath} soundPlayer={this.props.soundPlayer}/>
+            <AudioIconPlayer src={this.srcPath} soundPlayer={this.props.soundPlayer}/>
           </div> :
           <div className="assetThumbnail" style={[styles.wrapper, style, styles.background]}>
             {type === 'image' ?
               <a
-                href={this.props.src}
+                href={src}
                 target="_blank"
               >
-                <img src={srcPath} style={assetThumbnailStyle}/>
+                <img src={this.srcPath} style={assetThumbnailStyle}/>
               </a> :
               <i
                 className={defaultIcons[type] || defaultIcons.unknown}
