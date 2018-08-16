@@ -15,6 +15,7 @@ import {
   remix,
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 export const styles = {
   xIcon: {
@@ -38,13 +39,32 @@ class PersonalProjectsTableActionsCell extends Component {
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
     remix: PropTypes.func.isRequired,
+    userId: PropTypes.string,
   };
 
   onPublish = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'project-publish',
+        study_group: 'publish-chevron',
+        event: 'publish',
+        user_id: this.props.userId,
+        channel_id: this.props.projectId,
+      }
+    );
     this.props.showPublishDialog(this.props.projectId, this.props.projectType);
   };
 
   onUnpublish = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'project-publish',
+        study_group: 'publish-chevron',
+        event: 'unpublish',
+        user_id: this.props.userId,
+        channel_id: this.props.projectId,
+      }
+    );
     this.props.unpublishProject(this.props.projectId);
   };
 
