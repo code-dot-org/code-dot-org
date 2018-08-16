@@ -61,90 +61,93 @@ var dancers = {
     ],
   alien: [
   	loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Clap/Alien_Clap48_", 1),
-    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Electro/Alien_Electro48_", 48),
-    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Floss/Alien_Floss48_", 48),
-    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Fresh/Alien_Fresh48_", 48),
-    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Clap/Alien_Clap48_", 48),
-    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/March/Alien_March48_", 48),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Electro/Alien_Electro48_", 48, 2),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Floss/Alien_Floss48_", 48, 2),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Fresh/Alien_Fresh48_", 48, 2),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/Clap/Alien_Clap48_", 48, 2),
+    loadS3Animation("https://s3.amazonaws.com/cdo-curriculum/images/sprites/alien/March/Alien_March48_", 48, 2),
     ]
 };
 
-var bg_effects = {
-  none: {
-    draw: function(alpha) {
-      alpha = alpha || 1;
+function Effects(alpha, blend) {
+  var self = this;
+  this.alpha = alpha || 1;
+  this.blend = blend || BLEND;
+  this.none = {
+    draw: function() {
       background(World.background_color || "white");
     }
-  },
-  rainbow: {
-    color: color('hsla(0, 100%, 80%, 1)'),
-    update: function (alpha) {
+  };
+  this.rainbow = {
+    color: color('hsla(0, 100%, 80%, ' + self.alpha + ')'),
+    update: function () {
       push();
       colorMode(HSL);
-      this.color = color(this.color._getHue() + 10, 100, 80, alpha);
+      this.color = color(this.color._getHue() + 10, 100, 80, self.alpha);
       pop();
     },
-    draw: function (alpha) {
-      alpha = alpha || 1;
-      if (Dance.fft.isPeak()) this.update(alpha);
+    draw: function () {
+      if (Dance.fft.isPeak()) this.update();
       background(this.color);
     }
-  },
-  disco: {
+  };
+  this.disco = {
     colors: [],
-    update: function (alpha) {
-      if (this.colors.length < 64) {
+    update: function () {
+      if (this.colors.length < 16) {
         this.colors = [];
-        for (var i=0; i<64; i++) {
-          this.colors.push(color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")"));
+        for (var i=0; i<16; i++) {
+          this.colors.push(color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")"));
         }
       } else {
         for (var j=randomNumber(5, 10); j>0; j--) {
-          this.colors[randomNumber(0, this.colors.length - 1)] = color("hsb(" + randomNumber(0, 359) + ", 100%, 80%, " + alpha + ")");
+          this.colors[randomNumber(0, this.colors.length - 1)] = color("hsla(" + randomNumber(0, 359) + ", 100%, 80%, " + self.alpha + ")");
         }
       }
     },
-    draw: function (alpha) {
-      alpha = alpha || 1;
-      if (Dance.fft.isPeak() || World.frameCount == 1) this.update(alpha);
+    draw: function () {
+      if (Dance.fft.isPeak() || World.frameCount == 1) this.update();
       push();
       noStroke();
       for (var i=0; i<this.colors.length; i++) {
         fill(this.colors[i]);
-        rect((i % 8) * 50, Math.floor(i / 8) * 50, 50, 50);
+        rect((i % 4) * 100, Math.floor(i / 4) * 100, 100, 100);
       }
       pop();
     }
-  },
-  diamonds: {
+  };
+  this.diamonds = {
     hue: 0,
     update: function() {
       this.hue += 25;
     },
-    draw: function(alpha) {
-      alpha = alpha || 1;
+    draw: function() {
       if (Dance.fft.isPeak()) this.update();
       push();
       colorMode(HSB);
-      noStroke();
       rectMode(CENTER);
       translate(200, 200);
       rotate(45);
-      for (var i=12; i>1; i--) {
-        fill((this.hue + i * 10) % 360, 100, 75, alpha);
-        rect(0, 0, i * 50, i * 50);
+      noFill();
+      strokeWeight(map(Dance.fft.getCentroid(), 0, 4000, 0, 50));
+      for (var i=5; i>-1; i--) {
+        stroke((this.hue + i * 10) % 360, 100, 75, self.alpha);
+        rect(0, 0, i * 100 + 50, i * 100 + 50);
       }
       pop();
     }
-  }
-};
+  };
+}
+var bg_effects = new Effects(1);
+var fg_effects = new Effects(0.2);
 
 World.bg_effect = bg_effects.none;
-World.fg_effect = bg_effects.none;
+World.fg_effect = fg_effects.none;
 
-function loadS3Animation(base_url, count) {
+function loadS3Animation(base_url, count, every) {
+  every = every || 1;
   var args = [];
-  for (var i=0; i< count; i++) {
+  for (var i=0; i< count; i+=every) {
     args.push(base_url + i + ".png");
   }
   return loadAnimation.apply(null, args);
@@ -275,6 +278,7 @@ function shouldUpdate() {
 function draw() {
   Dance.fft.analyze();
 
+  background("white");
   if (World.bg_effect) {
     World.bg_effect.draw();
   } else {
@@ -358,8 +362,11 @@ function draw() {
 
   drawSprites();
 
-  if (World.fg_effect != bg_effects.none) {
-    World.fg_effect.draw(0.25);
+  if (World.fg_effect != fg_effects.none) {
+    push();
+    blendMode(fg_effects.blend);
+    World.fg_effect.draw();
+    pop();
   }
 
   fill("black");
