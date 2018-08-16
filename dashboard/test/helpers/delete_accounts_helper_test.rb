@@ -955,7 +955,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  test "clears 'updated_ip' all of a purged user's projects" do
+  test "clears 'updated_ip' for all of a purged user's projects" do
     storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
