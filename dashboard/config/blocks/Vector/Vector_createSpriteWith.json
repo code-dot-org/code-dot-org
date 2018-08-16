@@ -3,7 +3,7 @@
   "config": {
     "func": "createSpriteWith",
     "inline": false,
-    "blockText": "create sprite with:\n{STATEMENT}",
+    "blockText": "create sprite\n{STATEMENT}",
     "args": [
       {
         "name": "STATEMENT",

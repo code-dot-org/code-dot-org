@@ -9,6 +9,7 @@
         "type": "Location"
       }
     ],
-    "methodCall": true
+    "methodCall": true,
+    "thisObject": "this"
   }
 }

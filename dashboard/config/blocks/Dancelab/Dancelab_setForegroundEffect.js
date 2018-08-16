@@ -1,3 +1,3 @@
 function setForegroundEffect(effect) {
-  World.fg_effect = bg_effects[effect];
+  World.fg_effect = fg_effects[effect];
 }
