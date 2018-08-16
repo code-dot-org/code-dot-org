@@ -1,5 +1,6 @@
 require 'cdo/activity_constants'
 require 'cdo/shared_constants'
+require 'honeybadger'
 
 module UsersHelper
   include ApplicationHelper
@@ -24,15 +25,22 @@ module UsersHelper
 
       existing_account.destroy! if existing_account
       if user.migrated?
-        user.add_credential(
+        success = user.add_credential(
           type: provider,
           id: uid,
           email: user.email,
           hashed_email: user.hashed_email,
           data: {
             oauth_token: session['clever_takeover_token']
-          }
+          }.to_json
         )
+        unless success
+          # We want to know when this fails
+          Honeybadger.notify(
+            error_class: 'Failed to create AuthenticationOption during signup oauth takeover',
+            error_message: "Could not create AuthenticationOption during signup oauth takeover for user with email #{user.email}"
+          )
+        end
       else
         user.provider = provider
         user.uid = uid
