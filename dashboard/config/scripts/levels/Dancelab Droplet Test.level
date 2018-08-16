@@ -182,10 +182,6 @@
       "comment": null
     },
     "show_debug_watch": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "helper_libraries": [
       "DanceLab"
     ],
@@ -196,18 +192,23 @@
     "lock_zero_param_functions": "false",
     "free_play": "false",
     "submittable": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "hide_view_data_button": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "start_blocks": "var s, dance, bpm = 100, slider;\r\n\r\nvar action = 'Fresh';\r\nvar offsetFrames = 24;\r\n\r\nfunction preload() {\r\n  var base = 'https://s3.amazonaws.com/cdo-curriculum/images/sprites/dance/Alien_' + action + '48_';\r\n  var frames = [];\r\n  for (var i = 0; i < 48; i++) {\r\n    if (i < 10) {\r\n      frames.push(base + '0' + i + '-fs8.png');\r\n    } else {\r\n      frames.push(base + i + '-fs8.png');\r\n    }\r\n  }\r\n  dance = loadAnimation.apply(null, frames);\r\n}\r\n\r\nfunction setup() {\r\n  Dance.metronome.start();\r\n  s = createSprite();\r\n  s.addAnimation('dance', dance);\r\n  s.animation.stop();\r\n  s.x = 200;\r\n  s.y = 180;\r\n  s.scale = 0.5;\r\n  for (var i = 0; i < 24; i++) {\r\n    s.animation.nextFrame();\r\n  }\r\n  Dance.metronome.registerTick(function () {\r\n    s.animation.nextFrame();\r\n    if (s.animation.getFrame() === 0) {\r\n      s.mirrorX(-s.mirrorX());\r\n    }\r\n  });\r\n  \r\n  slider = createSprite(380, 227, 50, 20);\r\n  slider.shapeColor = 'orange';\r\n}\r\n\r\nfunction draw() {\r\n  if (mouseDown('left') && mouseDidMove()) {\r\n    slider.y += (mouseY - pmouseY);\r\n  }\r\n  \r\n  if (keyWentDown('up')) {\r\n    slider.y--;\r\n  }\r\n  if (keyWentDown('down')) {\r\n    slider.y++;\r\n  }\r\n  \r\n  if (slider.y > 390) {\r\n    slider.y = 390;\r\n  } if (slider.y < 10) {\r\n    slider.y = 10;\r\n  }\r\n  \r\n  var bpm = Math.round(map(slider.y, 390, 10, 30, 240));\r\n  Dance.metronome.setBPM(bpm);\r\n\r\n  background('#fff');\r\n  text('BPM: ' + bpm, 20, 20);\r\n  \r\n  drawSprites();\r\n}\r\n"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-16 17:16:00 +0000\",\"changed\":[\"notes\",\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-16 17:16:00 +0000\",\"changed\":[\"notes\",\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-08-16 21:29:36 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-08-16 21:40:38 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
