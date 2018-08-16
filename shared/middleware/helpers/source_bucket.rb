@@ -110,6 +110,30 @@ class SourceBucket < BucketHelper
     end
   end
 
+  def hard_delete_channel_content(encrypted_channel_id)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    # Find all versions of main.json
+    main_json_key = s3_path owner_id, channel_id, 'main.json'
+    version_list = s3.list_object_versions(bucket: @bucket, prefix: main_json_key)
+    return 0 if version_list.versions.empty? && version_list.delete_markers.empty?
+
+    # Delete all versions and delete markers of main.json
+    objects_to_delete = (version_list.versions + version_list.delete_markers).
+      map {|v| v.to_h.slice(:key, :version_id)}
+    result = s3.delete_objects(
+      bucket: @bucket,
+      delete: {
+        objects: objects_to_delete,
+        quiet: true
+      }
+    )
+    raise <<~ERROR unless result.errors.empty?
+      Error deleting channel content:
+      #{result.errors.map(&:to_s).join("\n      ")}
+    ERROR
+    result.deleted.count
+  end
+
   private
 
   def library_animation?(animation_props)

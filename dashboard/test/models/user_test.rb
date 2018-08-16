@@ -1897,6 +1897,97 @@ class UserTest < ActiveSupport::TestCase
     assert_equal original_primary_contact_info, user.primary_contact_info
   end
 
+  def upgrade_to_personal_login_params(**args)
+    {
+      username: 'my_new_username',
+      parent_email: 'parent@email.com',
+      email: 'my@email.com',
+      password: 'mypassword',
+      password_confirmation: 'mypassword',
+      secret_words: 'secret words',
+    }.merge(args)
+  end
+
+  test 'upgrade_to_personal_login is false for teacher' do
+    refute @teacher.upgrade_to_personal_login(upgrade_to_personal_login_params)
+  end
+
+  test 'upgrade_to_personal_login is false for word account with empty secret words' do
+    word_student = create :student_in_word_section
+    word_student.update!(secret_words: 'secret words')
+    params = upgrade_to_personal_login_params(secret_words: '')
+
+    refute word_student.upgrade_to_personal_login(params)
+    assert_equal ['Secret words are required'], word_student.errors.full_messages
+  end
+
+  test 'upgrade_to_personal_login is false for word account with incorrect secret words' do
+    word_student = create :student_in_word_section
+    word_student.update!(secret_words: 'secret words')
+    params = upgrade_to_personal_login_params(secret_words: 'incorrect words')
+
+    refute word_student.upgrade_to_personal_login(params)
+    assert_equal ['Secret words are invalid'], word_student.errors.full_messages
+  end
+
+  test 'upgrade_to_personal_login is true for successfully updated non-migrated student' do
+    student = create :student, :unmigrated_google_sso
+    params = upgrade_to_personal_login_params
+
+    assert student.upgrade_to_personal_login(params)
+    student.reload
+    assert_nil student.provider
+    assert_equal User.hash_email(params[:email]), student.hashed_email
+    assert_equal params[:username], student.username
+    assert_equal params[:parent_email], student.parent_email
+    assert student.valid_password?(params[:password])
+  end
+
+  test 'upgrade_to_personal_login is false for migrated student if update_primary_contact_info fails' do
+    student = create :student, :with_migrated_google_authentication_option
+    student.stubs(:update_primary_contact_info!).raises(RuntimeError)
+    params = upgrade_to_personal_login_params
+    new_email = params[:email]
+
+    refute student.upgrade_to_personal_login(params)
+    student.reload
+    refute_nil student.provider
+    refute_equal User.hash_email(new_email), student.hashed_email
+    refute_equal params[:username], student.username
+    refute_equal params[:parent_email], student.parent_email
+    refute student.valid_password?(params[:password])
+  end
+
+  test 'upgrade_to_personal_login is false for migrated student if update fails' do
+    student = create :student, :with_migrated_google_authentication_option
+    student.stubs(:update!).raises(ActiveRecord::RecordInvalid)
+    params = upgrade_to_personal_login_params
+    new_email = params[:email]
+
+    refute student.upgrade_to_personal_login(params)
+    student.reload
+    refute_nil student.provider
+    refute_equal User.hash_email(new_email), student.hashed_email
+    refute_equal params[:username], student.username
+    refute_equal params[:parent_email], student.parent_email
+    refute student.valid_password?(params[:password])
+  end
+
+  test 'upgrade_to_personal_login is true for successfully updated migrated student' do
+    student = create :student, :with_migrated_google_authentication_option
+    params = upgrade_to_personal_login_params
+    new_email = params[:email]
+
+    assert student.upgrade_to_personal_login(params)
+    student.reload
+    refute_nil student.provider
+    assert_equal 2, student.authentication_options.count
+    assert_equal User.hash_email(new_email), student.hashed_email
+    assert_equal params[:username], student.username
+    assert_equal params[:parent_email], student.parent_email
+    assert student.valid_password?(params[:password])
+  end
+
   test 'downgrade_to_student sets user_type to student and clears cleartext emails' do
     user = create :teacher, :with_migrated_email_authentication_option
     assert user.downgrade_to_student

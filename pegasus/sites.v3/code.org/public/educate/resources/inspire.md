@@ -41,7 +41,7 @@ Watch videos and read interviews with inspirational people working in a variety 
 ## 4. Put up these posters
 
 [![image](/images/fit-260/malala.png)](/files/malala-poster.pdf)
-[![image](/images/fit-260/obama-new.png)](/files/obama-poster-new.pdf)
+[![image](/images/fit-260/obama-poster-new.png)](/files/obama-poster-new.pdf)
 [![image](/images/fit-260/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
 [![image](/images/fit-260/mark-poster.png)](/files/mark-poster.pdf)
 [![image](/images/fit-260/chris-poster.png)](/files/chris-poster.pdf)
