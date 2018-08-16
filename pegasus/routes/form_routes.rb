@@ -32,9 +32,9 @@ post '/forms/:kind/query' do |kind|
   rescue NameError
     halt 400
   end
-  pass unless kind.respond_to?(:solr_query)
+  pass unless kind.respond_to?(:query)
   content_type :json
-  kind.solr_query(params)
+  kind.query(params)
 end
 
 post "/forms/:kind/:secret" do |kind, secret|

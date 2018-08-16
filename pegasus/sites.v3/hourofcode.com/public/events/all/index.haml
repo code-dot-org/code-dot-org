@@ -6,9 +6,9 @@ nav: events_nav
 :ruby
   require pegasus_dir 'helper_modules/forms'
   hoc_year = DCDO.get("hoc_year", 2017)
-  kind = "HocSignup#{hoc_year}"
-  events = Forms.events_by_country(kind)
-  us_events = Forms.events_by_state(kind)
+  KIND = "HocSignup#{hoc_year}".freeze
+  events = Forms.events_by_country(KIND)
+  us_events = Forms.events_by_state(KIND)
 
 %h1= hoc_s(:events_all_title)
 
