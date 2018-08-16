@@ -15,6 +15,7 @@ export default class AssetRow extends React.Component {
     useFilesApi: PropTypes.bool.isRequired,
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
+    soundPlayer: PropTypes.object,
 
     //temp prop to hide/show recordAudio style changes
     useUpdatedStyles:PropTypes.bool
@@ -121,6 +122,7 @@ export default class AssetRow extends React.Component {
             useFilesApi={this.props.useFilesApi}
             useUpdatedStyles={this.props.useUpdatedStyles}
             src={src}
+            soundPlayer={this.props.soundPlayer}
           />
         </td>
         <td>{this.props.name}</td>
