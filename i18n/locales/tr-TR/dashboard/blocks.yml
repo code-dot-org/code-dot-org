@@ -1,0 +1,189 @@
+tr:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Sonraki
+            '"prev"': Önceki
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Sonraki
+            '"prev"': Önceki
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: tüm
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': sağ
+            '"left"': sol
+      Dancelab_randomColor:
+        text: rastgele renk
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Hiçbiri
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'doğru'
+            'false': 'false'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": gelişigüzel
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': sağ
+            '"left"': sol
+      gamelab_randColor:
+        text: rastgele renk
+      gamelab_randomColor:
+        text: rastgele renk
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': gelişigüzel
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"height"': Yükseklik
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': sağ
+            '"left"': sol
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": yukarı
+            "'down'": aşağı
+            "'left'": sol
+            "'right'": sağ
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': yukarı
+            '"down"': aşağı
+            '"left"': sol
+            '"right"': sağ
+            '"space"': uzay
+      Vanilla_randomColor:
+        text: rastgele renk

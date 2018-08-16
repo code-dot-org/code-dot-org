@@ -1,0 +1,37 @@
+tg:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Навбатӣ
+            '"prev"': Қаблӣ
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Навбатӣ
+            '"prev"': Қаблӣ
+      Dancelab_randomColor:
+        text: ранги тасодуфӣ
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      gamelab_randColor:
+        text: ранги тасодуфӣ
+      gamelab_randomColor:
+        text: ранги тасодуфӣ
+      Vanilla_randomColor:
+        text: ранги тасодуфӣ

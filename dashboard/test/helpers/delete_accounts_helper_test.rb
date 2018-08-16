@@ -769,6 +769,54 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_attendances
+  #
+
+  test "soft-deletes pd_attendances when teacher is purged" do
+    attendance = create :pd_attendance
+    refute attendance.deleted?
+
+    purge_user attendance.teacher
+
+    attendance.reload
+    assert attendance.deleted?
+  end
+
+  test "clears teacher_id from pd_attendances when teacher is purged" do
+    attendance = create :pd_attendance
+    refute_nil attendance.teacher_id
+
+    purge_user attendance.teacher
+
+    attendance.reload
+    assert_nil attendance.teacher_id
+  end
+
+  test "does not soft-delete pd_attendances when marked_by_user is purged" do
+    marked_by_user = create :teacher
+    attendance = create :pd_attendance
+    attendance.update!(marked_by_user: marked_by_user)
+    refute attendance.deleted?
+
+    purge_user marked_by_user
+
+    attendance.reload
+    refute attendance.deleted?
+  end
+
+  test "clears marked_by_user_id from pd_attendances when marked_by_user is purged" do
+    marked_by_user = create :teacher
+    attendance = create :pd_attendance
+    attendance.update!(marked_by_user: marked_by_user)
+    refute_nil attendance.marked_by_user_id
+
+    purge_user marked_by_user
+
+    attendance.reload
+    assert_nil attendance.marked_by_user_id
+  end
+
+  #
   # Table: pegasus.contacts
   #
 

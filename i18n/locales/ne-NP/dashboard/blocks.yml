@@ -1,0 +1,149 @@
+ne:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': अर्को
+            '"prev"': Previous
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': अर्को
+            '"prev"': Previous
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': दाँया
+            '"left"': बाँया
+      Dancelab_randomColor:
+        text: कुनै एक  रङ
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': size
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': size
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'true'
+            'false': 'false'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': दाँया
+            '"left"': बाँया
+      gamelab_randColor:
+        text: कुनै एक  रङ
+      gamelab_randomColor:
+        text: कुनै एक  रङ
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': size
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': size
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': size
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': दाँया
+            '"left"': बाँया
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": माथि
+            "'down'": तल
+            "'left'": बाँया
+            "'right'": दाँया
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+      Vanilla_randomColor:
+        text: कुनै एक  रङ

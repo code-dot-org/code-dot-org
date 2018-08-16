@@ -10,6 +10,7 @@ zh-CN:
       messages:
         blank: "必填"
         blank_plural: "必填"
+        invalid: "是无效的"
         invalid_plural: "无效"
     attributes:
       user:
@@ -90,6 +91,7 @@ zh-CN:
     need_unlock: "未收到解锁指令吗？"
     not_linked: "对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。"
     use_clever: "对不起，您的 Code.org 帐号无法连接到%{provider}。请尝试通过Clever登录。"
+    unable_to_connect_provider: "无法将您的 Code.org 帐户连接到 %{provider}。请重试。"
   signup_form:
     student_count: '%{count} 位学生已经注册。'
     teacher_count: '%{count} 位教师已经注册。'
@@ -199,6 +201,7 @@ zh-CN:
     student_associated_subject: 'Code.org的登录信息'
   teacher_mailer:
     new_teacher_subject: '欢迎来到 Code.org ！'
+    delete_teacher_subject: 'Code.org 发来通知: 您的帐户已被删除'
   section:
     your_section:
       one: '你的小组：'
@@ -360,6 +363,7 @@ zh-CN:
     current_password_hint: '（我们需要您的当前密码以确认您的更改）'
     delete: '删除帐号'
     delete_text: "删除账号会擦除连接到这个账号的所有信息和进度。"
+    delete_text_teacher_managed_note: "因为这个账号是由你的老师管理的，所以你没有权限删除此账号。你的老师(们) 需要先将你移出他们的管理区，才能自己的删除账号。"
     delete_text_teacher_note: "请注意：删除你的帐号并不会同时删除你学生的帐号。"
     delete_confirm: '你确定删除这个帐号吗？'
     deleted_user: '已删除的用户'
@@ -374,8 +378,11 @@ zh-CN:
     create_personal_login_email_note: "注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。"
     enter_new_login_info: '输入新的登录信息'
     confirm_secret_words: '输入你当前的秘密单词来确认你的身份'
+    parent_email_label: "家长/监护人电子邮件 (可选)"
+    parent_email_hint: "(这可用于密码的恢复)"
     enter_parent_email: "输入你的父母或监护人的电子邮件地址（用于恢复密码）"
     update: "更新帐户"
+    account_successfully_updated: "账号已成功更新。"
   user_level:
     completed: '已完成'
     tried: '试过了'
@@ -933,6 +940,7 @@ zh-CN:
     download_in_Vietnamese: '下载越南语版本︰'
     windows: 'Windows （64位）'
     mac: 'Mac OS X'
+  stage_extras_teacher_message: "您已经关闭了一些小组的课程附加内容。除非重新打开, 否则您的学生将看不到此页。可以通过访问 <a href='http://code.org/teacher-dashboard'>教师仪表板</a> 来打开课程附加内容。"
   locked_stage: '这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候， 你的老师可以解锁这一阶段。'
   hidden_stage: "你的老师没有预料到你来到这里。 请询问你的老师你应该上什么课。"
   hidden_script: "你的老师不期待你来这里。请询问你的老师应该上哪个单元。"
@@ -941,14 +949,24 @@ zh-CN:
   view_all_units: '查看所有单元'
   pd:
     form_labels:
+      first_name: '名'
+      first_name_preferred: '首选名字'
+      last_name: '姓'
       email: '电子邮件'
+      email_alternate: '备用电子邮件'
       gender: '性别'
       school_name: '学校名称'
       school_city: '学校所在城市'
       school_country: '学校所在国家'
+      ages: '今年将教什么年纪的学生？'
+      subjects: '今年教的科目是什么？'
       resources: '您使用以下哪种计算机科学教育资源？'
       robotics: '您使用以下哪种机器人设备？'
-      email_opt_in: '允许 Code.org 能与我国的 Code.org 国际合作伙伴分享我的联系信息和汇总班级数据。'
+      workshop_organizer: '工作室组织者'
+      workshop_facilitator: '工作室引导员'
+      workshop_course: '工作室课程'
+      email_opt_in: '我们是否能发给你关于 Code.org 国际项目，课程更新或其它计算机科学新闻的邮件？'
+      legal_opt_in: '提交此表单即表示您同意允许 Code.org 与您的所在国家、所在学区和调解人的 Code.org 国际合作伙伴共享有关您如何使用 Code.org 和专业学习资源的信息。我们将分享您的联系信息， 您正在使用哪些课程/组件, 以及如何与这些合作伙伴聚合有关您的数据。这包括你的班级的学生数量, 你的教室的人口细分 以及您的学校和地区的名称。我们不会与我们的合作伙伴分享关于个别学生的任何信息: 所有学生的信息将不会被识别和聚合。我们的国际合作伙伴和调解人在合同上有义务以 和Code.org 相同的保密级别对待这一信息。'
     form_entries:
       gender:
         male: '男性'
@@ -974,16 +992,29 @@ zh-CN:
         ages_19_over: '19岁以上'
       subjects:
         cs: '计算机科学'
+        ict: 'ICT'
         math: '数学'
         science: '科学'
+        history: '历史/社会研究'
         la: '语言艺术'
+        efl: '英语作为外语'
+        music: '音乐'
+        art: '艺术'
+        other: "其他："
       resources:
+        bootstrap: '启动'
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
         khan: '可汗学院'
         kodable: 'Kodable'
+        other: "其他："
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
+        lego: '乐高教育'
+        microbit: 'Microbit'
         raspberry: '树莓派'
+        other: "其他："
       workshop_course:
         csd: '计算机科学发现'
         csp: '计算机科学原理'
@@ -992,9 +1023,15 @@ zh-CN:
         opt_in_no: '不'
     international_opt_in:
       intro: "非常感谢您抽出时间接受Code.org的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。"
-      thanks: "感谢您的提交！我们期待着能帮助您熟悉Code.org的课程及教学工具。如果您有任何问题和反馈，请及时告知我们。这包括向 support@code.org 发送邮件和在教师论坛发帖两种方法。"
+      instructions: "请填写下方的表格，该行为表明 1)您参加了一个由Code.org的国际合作伙伴运作的培训工坊，并且 2)您同意我们将您的情况告知我们在您所在国家的国际合作伙伴，以便他们在计算机教学方面帮助您。"
+      thanks: "感谢您的提交！我们期待着能帮助您熟悉Code.org的课程及教学工具。请与我们分享你的问题和反馈，可发邮件至<a href='%{support_email_url}'>support@code.org</a>，或在<a href='%{teacher_forum_url}' target='_blank'>教师论坛</a>上发帖！"
     logged_out:
       heading: '感谢您对专业学习计划的兴趣！'
+      body: '要开始, 首先需要登录到您的 Code.org 帐户。如果您希望在启动应用程序之前了解有关该程序的更多信息, 请查看 <a href="%{url}">专业学习计划概述</a>。'
+    not_teacher:
+      body: '感谢您对Code.org的专业学习项目抱有兴趣。现在您已经注册了一个学生账户，请创建教师账户或<a href="%{user_settings}">转到用户设置</a>将您的账户升级为教师账户。'
+    no_teacher_email:
+      body: '您的帐户还没有填写电子邮件地址。请 <a href="%{user_registration}">访问您的帐户设置</a> 以在填写此表单之前添加您的电子邮件地址。'
   courses_category: '完整课程'
   cookie_banner:
     message: '通过继续浏览我们的网站或单击 "我同意", 您同意在你的计算机或设备上存储 cookie。'
