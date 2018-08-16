@@ -834,6 +834,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
   end
 
+  test "removes poste_deliveries for user" do
+    user = create :teacher
+    email = user.email
+    recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+    Poste2.send_message('dashboard', recipient)
+
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+  end
+
   #
   # Table: pegasus.contact_rollups
   #
