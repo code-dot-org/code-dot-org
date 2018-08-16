@@ -57,6 +57,7 @@ const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
+const SET_INITIAL_ASSESSMENT_ID = 'sectionAssessments/SET_INITIAL_ASSESSMENT_ID';
 const SET_STUDENT_ID = 'sectionAssessments/SET_STUDENT_ID';
 const SET_QUESTION_INDEX = 'sectionAssessments/SET_QUESTION_INDEX';
 
@@ -68,6 +69,7 @@ export const setAssessmentQuestions = (scriptId, assessments) =>
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
+export const setInitialAssessmentId = (scriptId) => ({ type: SET_INITIAL_ASSESSMENT_ID, scriptId: scriptId });
 export const setQuestionIndex = (questionIndex) => ({ type: SET_QUESTION_INDEX, questionIndex: questionIndex });
 export const setStudentId = (studentId) => ({ type: SET_STUDENT_ID, studentId: studentId });
 export const setSurveys = (scriptId, surveys) => ({ type: SET_SURVEYS, scriptId, surveys });
@@ -94,6 +96,7 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
       dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
       dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
       dispatch(setSurveys(scriptId, arrayOfValues[2]));
+      dispatch(setInitialAssessmentId(scriptId));
       dispatch(finishLoadingAssessments());
     }).catch((error) => {
       // If any return an error, the UI will show that there are no assessments.
@@ -126,6 +129,13 @@ export default function sectionAssessments(state=initialState, action) {
       assessmentId: action.assessmentId,
       questionIndex: 0,
       studentId: ALL_STUDENT_FILTER,
+    };
+  }
+  if (action.type === SET_INITIAL_ASSESSMENT_ID) {
+    const assessmentId = getFirstAssessmentId(state, action.scriptId);
+    return {
+      ...state,
+      assessmentId,
     };
   }
   if (action.type === SET_STUDENT_ID) {
@@ -753,6 +763,17 @@ export function indexesToAnswerString(answerArr) {
   }
   return answerArr.map(index => ANSWER_LETTERS[index]).join(', ');
 }
+
+/**
+ * Return the id of the first assessment or survey in the list.
+ *
+ * @param state {Object} the sectionAssessments branch of the redux state tree.
+ * @param scriptId
+ * @returns {number|undefined} The id of the first assessment or survey.
+ */
+const getFirstAssessmentId = (state, scriptId) => (
+  computeScriptAssessmentList(state, scriptId).map(a => a.id)[0]
+);
 
 /**
  * Returns a list of ids and names of assessments and surveys.
