@@ -6,47 +6,44 @@ el:
       Loops: Βρόχοι
       Functions: Συναρτήσεις
       Color: Χρώμα
-      Brushes: Brushes
+      Brushes: Πινέλα
       Math: Μαθηματικά
       Logic: Λογική
       Variables: Μεταβλητές
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
-      Conditionals: Έλεγχοι
+      Number: Αριθμός
+      String: Συμβολοσειρά
+      Image: Εικόνα
+      Boolean: Δυαδική τιμή
+      Conditionals: Συνθήκες
       Events: Συμβάντα
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Παιχνίδια/Σκορ
+      Comments: Σχόλια
+      Category: Κατηγορία
+      Prebuilt: Προχτισμένα
       Text: κείμενο
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
+      Picker: Επιλέκτης
+      Comment: Σχόλιο
+      'Variables ': 'Μεταβλητές '
+      everythingelse: όλαταάλλα
+      numbers: αριθμοί
+      Numbers: Αριθμοί
+      Default: Προεπιλογή
+      World: Κόσμος
+      Behaviors: Συμπεριφορές
+      Advanced: Για προχωρημένους
       Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Brush: Πινέλο
+      Make Sprite: Δημιούργησε ένα Sprite
+      Movement: Κίνηση
       Start: Έναρξη
-      Groups: Groups
+      Groups: Ομάδες
       Booleans: Δυαδικοί
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Λειτουργικός
+      Predefined: Προορισμένα
       test: δοκιμή
-      test2: test2
-      Foo: Foo
+      test2: δοκιμή2
       Name: Όνομα
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: ΝΕΑ ΜΠΛΟΚ
+      'Functions ': 'Συναρτήσεις '
+      Game/Score: Παιχνίδι/Σκορ
       Function: Συνάρτηση

@@ -18,7 +18,6 @@ it:
       Games/Score: Gioco/Punteggio
       Comments: Commenti
       Category: Categoria
-      Prebuilt: Prebuilt
       Text: Testo
       Picker: Selezione
       Comment: Commento
@@ -26,26 +25,15 @@ it:
       everythingelse: qualunque altra cosa
       numbers: numeri
       Numbers: Numeri
-      Input: Input
       Default: Impostazione predefinita
       World: Mondo
-      Sprites: Sprites
       Behaviors: Comportamenti
-      Advanced: Advanced
+      Start: Inizia
+      Music: Musica
       Sprite: Personaggio
       Brush: Pennello
-      Make Sprite: Make Sprite
-      Movement: Movement
-      Start: Inizia
-      Groups: Groups
       Booleans: Valori Booleani
-      Functional: Functional
-      Predefined: Predefined
       test: test
-      test2: test2
-      Foo: Foo
       Name: Nome
-      NEW BLOCKS: NEW BLOCKS
       'Functions ': 'Funzioni '
-      Game/Score: Game/Score
       Function: Funzione

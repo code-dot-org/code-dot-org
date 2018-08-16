@@ -120,7 +120,7 @@ class OwnedSections extends React.Component {
                   className="ui-test-show-hide"
                   onClick={this.toggleViewHidden}
                   icon={viewHidden ? "caret-up" : "caret-down"}
-                  text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}
+                  text={viewHidden ? i18n.hideArchivedSections() : i18n.viewArchivedSections()}
                   color={Button.ButtonColor.gray}
                 />
               )}
@@ -128,7 +128,7 @@ class OwnedSections extends React.Component {
             {viewHidden && hiddenSectionIds.length > 0 &&
               <div>
                 <div style={styles.hiddenSectionLabel}>
-                  {i18n.hiddenSections()}
+                  {i18n.archivedSections()}
                 </div>
                 <OwnedSectionsTable
                   sectionIds={hiddenSectionIds}

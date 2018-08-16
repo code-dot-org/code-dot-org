@@ -3,10 +3,10 @@ fr:
   data:
     game:
       name:
-        Unplug1: Introduction à l'Informatique
+        Unplug1: Introduction à l'informatique
         Maze: Le labyrinthe
         Multi: Les questions à choix multiples
-        Unplug2: Pensée computationnelle
+        Unplug2: Algorithmique
         Unplug3: Programmation sur papier quadrillé
         Artist: L'Artiste
         Unplug4: Algorithmes
@@ -15,17 +15,17 @@ fr:
         Farmer: Le Fermier
         Unplug6: Instructions conditionnelles
         Artist3: L'Artiste 3
-        Unplug7: Composition de chansons
+        Unplug7: Ecriture de chanson
         Farmer2: Le Fermier 2
         Unplug8: Abstraction
         Artist4: L'Artiste 4
         Unplug9: Programmation de relais
         Farmer3: Le Fermier 3
-        Unplug10: L’Internet
+        Unplug10: Internet et les réseaux connectés
         Artist5: L'Artiste 5
-        Unplug11: Conclusions
+        Unplug11: Résumé et ouverture
         MazeEC: Le labyrinthe
-        Bounce: Casse-briques à rebond
+        Bounce: Rebond
         Flappy: Flappy Bird
         Jigsaw: Puzzle
         MazeStep: Mode « pas à pas » du labyrinthe
@@ -53,7 +53,7 @@ fr:
         loop_until: Bloc « Répète jusqu’à »
         loop_while: Bloc « tant que »
         loop_for: Bloc « Compteur »
-        function: Fonctions
+        function: fonctions
         parameters: Fonctions avec paramètres
     level:
       instructions:
@@ -161,18 +161,18 @@ fr:
         maze_karel_1_2: Ensuite, déplace-moi vers le trou et remplis-le avec DEUX
           pelletées de terre, en utilisant le bloc «Remplir».
         maze_karel_1_3: Déplace-moi vers le tas de terre et dis-moi combien de pelletées
-          supprimer en utilisant le moins de blocs possible.
+          il faut pour le supprimer, en utilisant le moins de blocs possible.
         maze_karel_1_4: 'Peux-tu m''aider à supprimer les quatre tas de terre ? Indice:
           utilise un bloc «Répéter» si tu peux.'
-        maze_karel_1_5: 'Aide-moi à remplir tous ces trous avec 5 pelletées de terre.
-          Indice : tu peux mettre un bloc «Répéter» dans le bloc «Tant que».'
+        maze_karel_1_5: 'Aide-moi à remplir chacun de ces trous avec 5 pelletées de
+          terre. Indice : tu peux mettre un bloc «Répéter» dans le bloc «Tant que».'
         maze_karel_1_6: Supprime tous les tas de terre en utilisant le moins de blocs
           possible. Les nouvelles options dans le menu déroulant du bloc « Tant que »
           me permettent de savoir si je suis sur un tas ou dans un trou.
         maze_karel_1_7: Wow, j'ai trouvé un trou très profond ! Je ne sais pas combien
           de pelletées de terre il faudra pour le remplir. Peux-tu écrire un programme
           qui le remplira jusqu’à ce que le sol soit nivelé ?
-        maze_karel_1_8: Aide-moi à remplir le trou à l'extrémité du champ avec le
+        maze_karel_1_8: Aide moi à remplir le trou à l'extrémité du champ avec le
           moins de blocs possible.
         maze_karel_1_9: 'Fais-moi enlever tous ces tas de terre. Essaie d’utiliser
           le moins de blocs possible. Indice : essaie d''utiliser un bloc «Tant que».'
@@ -297,9 +297,10 @@ fr:
           aplanir mon champ?
         maze_karel_debug_function_3: Modifie ce programme pour que je supprime tous
           les tas de mon champ.
-        turtle_5_1: Essaie d'exécuter ce programme et apporte des modifications pour
-          voir ce qui se passe. Peux-tu trouver comment ça marche ? (Ou supprime-le
-          et remplace-le par quelque chose de totalement différent)
+        turtle_5_1: Essayez d'exécuter ce programme, et apportez-y des modifications
+          pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne
+          ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement
+          différent à la place.)
         turtle_5_2: Essayez d'exécuter ce programme, et apportez-y des modifications
           pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne
           ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement
@@ -332,7 +333,7 @@ fr:
           quand tu es prêt.
         jigsaw_1: Clique sur le bloc
         jigsaw_2: Glisse le bloc vers la cible
-        jigsaw_3: Organise les blocs pour former l'image
+        jigsaw_3: Ordonne les blocs pour former l'image
         jigsaw_4: Ordonne les blocs pour former l'image
         jigsaw_5: Ordonne les blocs pour former l'image
         jigsaw_6: Ordonne les blocs pour former l'image
@@ -372,7 +373,7 @@ fr:
         studio_c2_10: Peux-tu ajouter des blocs pour changer l'arrière-plan et la
           vitesse de Waddles, puis le déplacer avec les flèches jusqu'à ce que tu
           marques un point?
-        studio_c2_11: Crée ta propre histoire. Lorsque tu as fini, clique sur «Terminer»
+        studio_c2_11: Crée ta propre histoire. Quand tu as fini, clique sur «Terminer»
           pour laisser tes amis essayer ton histoire sur leur téléphone.
         studio_c3_story_1: Peux-tu faire dire « Bonjour » à ce chien ?
         studio_c3_story_2: Peux-tu faire dire quelque chose au chien puis faire parler
@@ -511,7 +512,7 @@ fr:
           sur leur téléphone, leur tablette ou leur ordinateur.
         studio_full_sandbox: Crée ton propre jeu. Lorsque tu as fini, clique sur «Terminer»
           pour laisser tes amis essayer ton jeu sur leur téléphone.
-        studio_k1_1: Peux-tu faire dire «Bonjour tout le monde» à ce chien?
+        studio_k1_1: Peux-tu faire dire « Bonjour » à ce chien ?
         studio_k1_2: Peux-tu faire dire quelque chose au chien puis faire parler le
           chat juste après?
         studio_k1_3: Peux-tu écrire un programme pour que ce chien se déplace jusqu'au
@@ -547,7 +548,7 @@ fr:
           pour laisser tes amis essayer ton jeu sur leur téléphone.
     video:
       name:
-        maze_intro: Introduction au labyrinthe
+        maze_intro: Introduction au Dédale
         artist_intro: Introduction à l'Artiste
         farmer_intro: Introduction au Fermier
         flappy_intro: Introduction à Flappy l’oiseau
@@ -611,7 +612,7 @@ fr:
         C3_bee_functions: Abeilles et fonctions
         C3_bee_conditionals: Abeilles et instructions conditionnelles
         C3_maze_conditionals: 'Labyrinthe : instructions conditionnelles'
-        C3_artist_nested_loops: Boucles Imbriquées
+        C3_artist_nested_loops: Boucles imbriquées
         C3_farmer_while: Boucles « Tant que »
         C3_bee_nested_loops: Boucles imbriquées
         C3_bee_debugging: Abeilles et debugging
@@ -624,7 +625,7 @@ fr:
         C3_functional_suncatchers: Vitraux fonctionnels
         C3_songwriting_with_parameters: Composition de chansons avec des paramètres
         C4_intro: Introduction
-        C4_loops_zombie: Boucles
+        C4_loops_zombie: boucles
         C4_bee_conditional: Abeilles et instructions conditionnelles
         C4_variables_artist: Variables - Artiste
         C4_variables_playlab: Variables - Labo de jeux
@@ -642,14 +643,11 @@ fr:
         C4_unplugged_forloops: Boucles « Pour »
         C4_unplugged_parameters: La composition de chansons avec des paramètres
         C4_unplugged_binary: Binaire
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Angles pour Artiste
         CSF_collector_k1_blocks: 'Informatique fondamentale : le collector'
         CSF_collector_repeat_loops: Boucles de répétition Collector
         CSF_collector_text_blocks: 'Informatique fondamentale : le collector'
         CSF_create_functions: Création de fonctions
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Introduction à la science de l'informatique
         CSF_maze_intro_k1_blocks: Intro à Code Studio
         CSF_maze_intro_text_blocks: Intro à Code Studio
@@ -687,80 +685,15 @@ fr:
           d'émissions de télévision?
         csd_external_waze_data: Pourquoi tant d'utilisateurs sont passionnés par Waze?
         csd_gamelab_animation_tab: L’onglet Animation
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Vitesse
         csd_weblab_intro_1: Intro Web Lab - partie 1
         csd_weblab_intro_2: Intro Web Lab - partie 2
         csd_weblab_css_1: Introduction à CSS - partie 1
         csd_weblab_css_2: Introduction à CSS - partie 2
         csd_weblab_intro_3: Intro Web Lab - partie 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction aux Fonctions
         csp_applab_functions_parameters: Fonctions avec Paramètres
-        csp_applab_loops: Boucles
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        csp_applab_loops: boucles
         starwars_intro: 'Star Wars : Construire une galaxie avec du code - Introduction'
         starwars_typing: 'Star Wars : Construire une galaxie avec du code - JavaScript'
         starwars_events: 'Star Wars : Construire une galaxie avec du code - Événements'
@@ -823,18 +756,12 @@ fr:
         CSF_skinOverview_Harvester: La moissonneuse
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
         CSF_harvester_skinOverview_K-1: La moissonneuse
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
         CSF_if_allskins: Le bloc conditionnel if
         CSF_ifelse_allskins: Utiliser les blocs If/Else
         CSF_ifelseifelse_allskins: Utiliser les blocs If/ElseIf/Else
-        CSF_loops_AB: Boucles
+        CSF_loops_AB: boucles
         csd_gamelab_booleans: Expressions booléennes
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

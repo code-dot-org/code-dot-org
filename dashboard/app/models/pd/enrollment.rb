@@ -32,6 +32,7 @@ class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
   include Pd::SharedWorkshopConstants
+  include Pd::WorkshopSurveyConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -137,14 +138,19 @@ class Pd::Enrollment < ActiveRecord::Base
     teachercon_enrollments, non_teachercon_enrollments = enrollments.partition do |enrollment|
       enrollment.workshop.teachercon?
     end
-    local_summer_enrollments, regular_enrollments = non_teachercon_enrollments.partition do |enrollment|
+
+    local_summer_enrollments, other_enrollments = non_teachercon_enrollments.partition do |enrollment|
       enrollment.workshop.local_summer?
+    end
+    new_academic_year_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
+      [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(enrollment.workshop.course) && enrollment.workshop.workshop_starting_date > Date.new(2018, 8, 1)
     end
 
     (
-      filter_for_regular_survey_completion(regular_enrollments, select_completed) +
+      filter_for_regular_survey_completion(other_enrollments, select_completed) +
       filter_for_teachercon_survey_completion(teachercon_enrollments, select_completed) +
-      filter_for_local_summer_survey_completion(local_summer_enrollments, select_completed)
+      filter_for_local_summer_survey_completion(local_summer_enrollments, select_completed) +
+      filter_for_academic_year_survey_completion(new_academic_year_enrollments, select_completed)
     )
   end
 
@@ -165,15 +171,17 @@ class Pd::Enrollment < ActiveRecord::Base
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
-    elsif workshop.local_summer? || workshop.teachercon?
+    elsif workshop.summer?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
+    elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
+      CDO.studio_url "/pd/workshop_survey/day/#{workshop.sessions.size}?enrollmentCode=#{code}", CDO.default_scheme
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", CDO.default_scheme
     end
   end
 
   def should_send_exit_survey?
-    !workshop.fit_weekend?
+    !workshop.fit_weekend? && workshop.subject != SUBJECT_CSF_201
   end
 
   def send_exit_survey
@@ -302,6 +310,15 @@ class Pd::Enrollment < ActiveRecord::Base
       workshop = enrollment.workshop
       user = enrollment.user
       Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: user, day: 5)
+    end
+
+    select_completed ? completed_surveys : uncompleted_surveys
+  end
+
+  private_class_method def self.filter_for_academic_year_survey_completion(academic_year_enrollments, select_completed)
+    completed_surveys, uncompleted_surveys = academic_year_enrollments.partition do |enrollment|
+      workshop = enrollment.workshop
+      Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
     end
 
     select_completed ? completed_surveys : uncompleted_surveys

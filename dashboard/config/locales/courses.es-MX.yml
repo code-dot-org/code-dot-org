@@ -4,9 +4,6 @@ es-MX:
     course:
       name:
         csp-2017:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('17-'18)
-          version_title: "'17-'18"
           description_student: En otoño 2016, el College Board lanzó su más reciente
             curso AP, Principios de Ciencias de la Computación. El curso introduce
             a los estudiantes a los conceptos fundamentales de Ciencias de la computación
@@ -24,20 +21,6 @@ es-MX:
             son subrepresentados en el con herramientas computacionales esenciales
             y oportunidades multidisciplinarias.
           description_short: Aprende conceptos fundamentales de ciencias de la computación.
-        csd-2017:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries ('17-'18)
-          version_title: "'17-'18"
-          description_student: Computer Science Discoveries (CS Discoveries) is an
-            introductory computer science course that empowers students to create
-            authentic artifacts and engage with computer science as a medium for creativity,
-            communication, problem solving, and fun.
-          description_teacher: Computer Science Discoveries (CS Discoveries) is an
-            introductory computer science course that empowers students to create
-            authentic artifacts and engage with computer science as a medium for creativity,
-            communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers
-            students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
           description_short: Este es un curso para allthethings
@@ -45,17 +28,7 @@ es-MX:
             descripción más extensa para los estudiantes
           description_teacher: Este es un curso para allthethings y cuenta con una
             descripción más extensa para los profesores
-        csd-2018:
-          assignment_family_title: Computer Science Discoveries
-          title: Computer Science Discoveries 2018
-          version_title: "'18-'19"
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
         csp-2018:
-          assignment_family_title: Computer Science Principles
-          title: Computer Science Principles ('18-'19)
-          version_title: "'18-'19"
           description_short: Aprende conceptos fundamentales de ciencias de la computación.
           description_student: En otoño 2016, el College Board lanzó su más reciente
             curso AP, Principios de Ciencias de la Computación. El curso introduce

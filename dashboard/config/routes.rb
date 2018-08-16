@@ -7,6 +7,8 @@ Dashboard::Application.routes.draw do
 
   resources :user_levels, only: [:update, :destroy]
 
+  patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
+
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
@@ -142,6 +144,7 @@ Dashboard::Application.routes.draw do
     delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
+    get '/users/to_destroy', to: 'registrations#users_to_destroy'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -205,8 +208,8 @@ Dashboard::Application.routes.draw do
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :blocks, constraints: {id: /[^\/]+/}
-
   resources :shared_blockly_functions, path: '/functions'
+  resources :libraries
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
@@ -391,6 +394,7 @@ Dashboard::Application.routes.draw do
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+      delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
@@ -446,10 +450,6 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
-
-    # Temporary transition routes. TODO(Andrew): delete after switching JotForm forms over to POST
-    get 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general_temp'
-    get 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator_temp'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
@@ -522,9 +522,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
-  # Used in angular assessments tab
-  get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
-  get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes
@@ -582,6 +579,8 @@ Dashboard::Application.routes.draw do
       get 'regional_partners/capacity', to: 'regional_partners#capacity'
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+
+      get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

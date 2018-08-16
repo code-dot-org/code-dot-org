@@ -1,6 +1,7 @@
-var utils = require('./utils');
+import { makeEnum } from './utils';
+import experiments from './util/experiments';
 
-var PageAction = utils.makeEnum(
+const PageAction = makeEnum(
   'DropletTransitionError',
   'FirebaseRateLimitExceeded',
   'SanitizedLevelHtml',
@@ -12,11 +13,13 @@ var PageAction = utils.makeEnum(
   'BrambleError'
 );
 
-var MAX_FIELD_LENGTH = 4095;
+const MAX_FIELD_LENGTH = 4095;
+const REPORT_PAGE_SIZE = experiments.isEnabled('logPageSize') ||
+  Math.random() < 0.01;
 
 /**
- * Shims window.newrelic, which is only included in production. This causes us
- * to no-op in other environments.
+ * Wraps and adds functionality to window.newrelic, which is only included in
+ * production. This causes us to no-op in other environments.
  */
 module.exports = {
   PageAction: PageAction,
@@ -74,5 +77,48 @@ module.exports = {
     }
 
     window.newrelic.setCustomAttribute(key, value);
-  }
+  },
+
+  loadFinished() {
+    if (!window.newrelic) {
+      return;
+    }
+
+    window.newrelic.finished();
+  },
+
+  logError(e) {
+    if (!window.newrelic) {
+      return;
+    }
+    window.newrelic.noticeError(e);
+  },
+
+  reportPageSize() {
+    if (!REPORT_PAGE_SIZE) {
+      return;
+    }
+    try {
+      const resources = performance && performance.getEntriesByType('resource');
+      let totalDownloadSize = 0;
+      let jsDownloadSize = 0;
+      const jsFileRegex = /\.js$/;
+      for (const resource of resources) {
+        if (resource.transferSize === undefined || resource.encodedBodySize === undefined) {
+          return;
+        }
+        totalDownloadSize += resource.transferSize;
+        if (jsFileRegex.test(resource.name)) {
+          jsDownloadSize += resource.transferSize;
+        }
+      }
+      if (!window.newrelic) {
+        return;
+      }
+      window.newrelic.setCustomAttribute('totalDownloadSize', totalDownloadSize);
+      window.newrelic.setCustomAttribute('jsDownloadSize', jsDownloadSize);
+    } catch (e) {
+      this.logError(e);
+    }
+  },
 };

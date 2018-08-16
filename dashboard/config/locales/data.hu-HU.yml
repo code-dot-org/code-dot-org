@@ -3,7 +3,7 @@ hu:
   data:
     game:
       name:
-        Unplug1: Bevezetés a számítástechnikába
+        Unplug1: Bevezetés a számítógép tudományába
         Maze: A labirintus
         Multi: Feleletválasztós anyagok
         Unplug2: Számítógépes gondolkodás
@@ -15,9 +15,9 @@ hu:
         Farmer: A Farmer
         Unplug6: Feltételek
         Artist3: A művész 3
-        Unplug7: Dalírás
+        Unplug7: Dal iras
         Farmer2: A Farmer 2
-        Unplug8: Változó
+        Unplug8: Absztrakció
         Artist4: A művész 4
         Unplug9: Váltó programozás
         Farmer3: A Farmer 3
@@ -25,12 +25,12 @@ hu:
         Artist5: A Művész 5
         Unplug11: Összefoglaló
         MazeEC: A labirintus
-        Bounce: Visszapattanós
+        Bounce: Ugrál
         Flappy: Flappy madár
         Jigsaw: Kirakós játék
         MazeStep: Labirintus üzemmód
         Wordsearch: Szókeresés
-        Webapp: Web alkalmazás
+        Webapp: App Lab
         ArtistEC: A művész
         TextMatch: Szöveg egyezés
         StudioEC: Játéklabor
@@ -38,7 +38,6 @@ hu:
         NetSim: Internet szimulátor
         Custom: Művész
         CustomStudio: Játéklabor
-        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronz
@@ -53,7 +52,7 @@ hu:
         loop_until: Ismételd amíg, blokk
         loop_while: Amig blokk
         loop_for: Számláló blokk
-        function: Függvények
+        function: funkciók
         parameters: Paraméterezett függvények
     level:
       instructions:
@@ -93,7 +92,7 @@ hu:
         maze_2_17: A "ha-különben" blokk ellenőriz egy feltételt és aszerint tesz
           meg valamit VAGY valami mást. Próbálj meg eljuttatni a napraforgóhoz úgy,
           hogy ezt az új blokkot használod.
-        maze_2_18: Még egy gyakorlat az „ha-különben” blokkhoz. Meg tudod csinálni
+        maze_2_18: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod csinálni
           elsőre?
         maze_2_19: Tudsz segíteni kijutni ebből az összetett útvesztőből mindössze
           3 blokk hozzáadásával? Ha jól csinálod, akkor bármilyen kacskaringós utat
@@ -345,9 +344,9 @@ hu:
         studio_c2_7: A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan
           fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően
           fel és le mozogjon?
-        studio_c2_8: Meg tudod csinálni, hogy a pingvin azt mondja, "Au!" és legyen
-          egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a
-          nyilakkal, hogy ez megtörténjen.
+        studio_c2_8: Meg tudod csinálni, hogy a Waddles azt mondja, "Au!" (Ouch!),
+          és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd
+          őt a nyilakkal, hogy ez megtörténjen.
         studio_c2_9: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin
           nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem
           szerzel.
@@ -372,8 +371,8 @@ hu:
         studio_c3_game_3: A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan
           fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően
           fel és le mozogjon?
-        studio_c3_game_4: Meg tudod csinálni, hogy a pingvin azt mondja, "Au!" és
-          legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd
+        studio_c3_game_4: Meg tudod csinálni, hogy a Waddles azt mondja, "Au!" (Ouch!),
+          és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd
           őt a nyilakkal, hogy ez megtörténjen.
         studio_c3_game_5: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin
           nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem
@@ -519,8 +518,8 @@ hu:
           gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
     video:
       name:
-        maze_intro: Labirintus - Bevezető
-        artist_intro: Művész - Bevezető
+        maze_intro: Labirintus Intro
+        artist_intro: Művész Intro
         farmer_intro: Farmer - Bevezető
         flappy_intro: Flappy - Bevezető
         loop_times: Ismétlés valahányszor blokk
@@ -596,7 +595,7 @@ hu:
         C3_functional_suncatchers: Hasznos díszek
         C3_songwriting_with_parameters: Dalszerzés paraméterekkel
         C4_intro: Bevezető
-        C4_loops_zombie: Ciklusok
+        C4_loops_zombie: hurkok
         C4_bee_conditional: Méh Feltételes mód
         C4_variables_artist: Változók - művész
         C4_variables_playlab: Változók - Játéklabor
@@ -614,23 +613,7 @@ hu:
         C4_unplugged_forloops: Számláló ciklusok
         C4_unplugged_parameters: Dalszerzés paraméterekkel
         C4_unplugged_binary: Bináris
-        CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
         CSF_my_robotic_friends: A robot barátaim
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Bevezetés a Kódolás Órájába
         frozen_loops: Bevezetés a ciklusokba
         frozen_functions: Bevezetés a függvényekbe
@@ -641,76 +624,9 @@ hu:
         infinity_playlab_intro: Játéklabor - bevezetés
         infinity_playlab_events: Játéklabor - események
         infinity_playlab_repeat_forever: Játéklabor - végtelen ciklus
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input,
-          & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Intro to Web Lab - Part 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
-        csd_weblab_css_1: Intro to CSS - Part 1
-        csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Bevezetés a függvényekbe
         csp_applab_functions_parameters: Paraméteres függvények
-        csp_applab_loops: Ciklusok
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
+        csp_applab_loops: hurkok
         alg_1_intro: Számítógép-tudomány az algebrában - bevezetés
         alg_2_eval_block: Számítógép-tudomány az algebrában - kiértékelő blokkok
         alg_3_pemdas: Számítógép-tudomány az algebrában - a műveletek sorrendje
@@ -718,16 +634,9 @@ hu:
         alg_5_contracts: Számítógép-tudomány az algebrában - megkötések
         alg_6_variables: Számítógép-tudomány az algebrában - változók
         alg_7_function: Számítógép-tudomány az algebrában - függvények
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
         alg_10_conditionals: Számítógép-tudomány az algebrában - feltételek
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
         alg_12_biggame_variables: Számítógép-tudomány az algebrában - Nagy Játék változók
         alg_13_biggame_animation: Számítógép-tudomány az algebrában - Nagy Játék animáció
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
         starwars_intro: 'Star Wars: A galaxis építése kóddal - Bevezetés'
         starwars_typing: 'Star Wars: A galaxis építése kóddal - JavaScript'
         starwars_events: 'Star Wars: A galaxis építése kóddal - Események'
@@ -749,56 +658,9 @@ hu:
         mc_2016_intro: Minecraft Kódolás Órája - Bevezetés
         mc_2016_loops: Minecraft Kódolás Órája - Ciklusok
         mc_2016_events: Minecraft Kódolás Órája - Események
-        mc_2016_spawn: Minecraft Hour of Code - Spawn
         mc_2016_congrats: Minecraft Kódolás Órája - Gratulálunk!
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
         mc_2017_congratulations: Minecraft Kódolás Órája - Gratulálunk!
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
-        CSF_loops_AB: Ciklusok
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        CSF_loops_AB: hurkok
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

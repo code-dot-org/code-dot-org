@@ -47,7 +47,6 @@ fil:
   previous_page: Dating pahina
   next_page: Susunod na pahina
   next_resource: Susunod na resource
-  done_with_module: Done with this Learning Module
   cancel: Kanselahin
   okay: Okey
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
@@ -98,7 +97,6 @@ fil:
     facebook: Facebook
     windowslive: Account sa Microsoft
     clever: Clever na Account
-    powerschool: Powerschool Account
     forgot_password: Hindi matandaan ang password?
     need_confirmation: Hindi nakatanggap ng kumpirmasyon?
     need_unlock: Hindi nakatanggap kung paano mag unlock?
@@ -146,13 +144,6 @@ fil:
     valid_password: Mali ang na-type na password!
     invalid_password: Ang Password ay dapat may at least 6 characters
     mismatch_password: Ang passwords na iyong inenter ay hindi tugma sa isa't isa
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services.
-    agree_us_website: I agree to using a website based in the United States.
-    my_data_to_us: Data from my use of this site may be sent to and stored or processed
-      in the United States.
     student_terms: Ako ay sumang-ayon na mapailalim sa Code.org na <a href='http://code.org/tos'>mga
       palatuntunin</a>. Kung ako ay mas bata pa 13 taong gulang, kinokompirma ko ito
       sa pamamagitan ng pagpasa ng form na ito na nagpapakita na mayroon akong pahintulot
@@ -167,19 +158,14 @@ fil:
       sa privacy</a>.
     additional_information: Kailangan namin ng karagdagang impormasyon para maituloy
       ang pag-sign up sa iyo.
-    user_type_button: Update Account Type
     user_type_label: Uri ng Account
     user_type_teacher: Teacher
     user_type_student: Estudyante
     field_is_required: ay kailangan
     accept_terms: Kailangan mong sumang-ayon para gumawa ng account
     error: May problemang naganap.
-    email_preference_question: Can we email you about updates to our courses, local
-      learning opportunities, or other computer science news?
-    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Oo
     email_preference_no: Hindi
-    email_preference_required: You must specify an email preference.
   school_info:
     title: Impormasyon ng Paaralan (opsyonal)
     school_country: Bansa ng Paaralan
@@ -203,7 +189,7 @@ fil:
     school_organization_zip: Zip Code ng Paaralan/Organisasyon
   signin_form:
     title: May account ka na? Sign in
-    login: Email o username
+    login: Email
     login_username: Email o Username
     password: Password
     remember: Remember me
@@ -321,7 +307,6 @@ fil:
       free_play:
         playlab: Lumikha ng App
         artist: Gumuhit ng isang bagay
-        calculate: Calculate Something
         applab: Lumikha ng App
         gamelab: Gumawa ng Game Lab na proyekto
         weblab: Gumawa ng Web Lab (beta) na proyekto
@@ -366,7 +351,7 @@ fil:
       classroom: Home Page ng Teacher
       district_dashboard: Dashboard ng Distrito
       label: Mabuhay %{username}
-      stats: My progress
+      stats: Code Studio
       settings: Account Ko
       logout: Mag-sign out
       signin: Sign in
@@ -418,7 +403,6 @@ fil:
     email_confirm_needed_required: 'Ang email address mong %{email} ay hindi pa nakukumpirma:'
     email_confirm_wrong_email: "(Maling email address?)"
     email_resend_confirm: Ipadalang muli ang mga instruksyon sa pag-kumpirma
-    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(Iwan ito na walang laman kung ayaw mong baguhin ito)"
     current_password_hint: "(kailangan namin ang iyong kasalukuyang password para
       kumpirmahin ang iyong mga binago)"
@@ -458,7 +442,6 @@ fil:
       ng iyong kasalukuyang mga secret na mga pulong
     enter_parent_email: Ilagay ang iyong mga magulang, o tagapangalaga na email address
       (para sa password recovery)
-    update: Update Account
   user_level:
     completed: Nakompleto
     tried: Sinubukan
@@ -662,8 +645,6 @@ fil:
       naka-enrol sa iyong seksiyon.
     already_enrolled_in_new_section: Hindi mo maaring ilipat ang mga estudyanteng
       ito dahil nasa bagong seksiyon na sila.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
   share:
     title: Mag-aral sa Code Studio
     description: Kahit sino man ay maaring matuto ng computer science. Gumawa ng mga
@@ -672,8 +653,6 @@ fil:
   gender:
     male: Lalaki
     female: Babae
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
     none: Mas mabuti na hindi sagutin
   user_type:
     student: Estudyante
@@ -688,12 +667,22 @@ fil:
       mga materyales na ito.
     help_from_html_old: Ang mga inhinyero mula sa Google, Microsoft, Facebook, at
       Twitter ay tumulong sa paglikha ng mga materyales na ito.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. All Rights Reserved.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
+      and &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; %{current_year} Cartoon Network.
     code_from_html: Ang Code.org ay gumagamit ng p5.play, na lisensiyado sa ilalim
       ng <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
@@ -704,7 +693,7 @@ fil:
     more: More
     feedback: Magbigay ng feedback
     translate: Magboluntaryo na magsali ng ating nilalaman
-    support: Suporta
+    support: Tulong at Komunidad
     support_url: http://support.code.org/
     tos_short: Mga Alituntunin
     tos: Mga Palatuntunan
@@ -821,7 +810,7 @@ fil:
       body: Tingnan ang isang galeriya ng mga app at larawan ng mga artista na nilikha
         na aming mga user
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Ang Game Lab ay isang programming environment kung saan makakagawa ka
         ng simpleng mga animation at laro gamit ang objects at mga karakter na maaring
         makipag-ugnayan sa bawat isa.
@@ -848,7 +837,7 @@ fil:
         ng mga karakter sa Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code.
+      body: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code
     minecraft2016:
       title: Minecraft
       body: Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong
@@ -861,7 +850,6 @@ fil:
       title: Mga Palakasan
       body: Gumawa ka ng basketbol na laro o mix at match sa mga palakasan.
     text-compression:
-      title: Text Compression
       body: Sa leksyon na ito, ang mga estudyante ay gagamit ng mga Text Compression
         Widget para mag-compress ng tekso sa pamamagitan ng pagpalit ng mga patterns
         sa mga simbolo.
@@ -917,7 +905,6 @@ fil:
       ay ginagawa pa.
     report_bug: I-report ang Bug
     support: Humingi ng Tulong
-    support_url: "//support.code.org"
     help_resources: Mga Tulong at mga Pag-aaring Yaman
     help_support: Tulong at Suporta
     documentation: Dokumentasyon
@@ -927,15 +914,11 @@ fil:
     wrong_body: Ang sagot na iyong ipinasok ay hindi tama. Pakisubukang uli!
     correct_title: Tama
     correct_body: Iyon ay ang tamang sagot.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Maraming Salamat
     wrong_body: Salamat sa pagpasa ng sagot.
     correct_title: Maraming Salamat
     correct_body: Salamat sa pagpasa ng sagot.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Maraming Salamat
     wrong_body: Salamat sa pagpasa ng mga sagot.
@@ -1049,14 +1032,14 @@ fil:
     message: Mangyaring sabihan niyo kami sa iyong lahi (lagyan ng tsek ang angkop
       sa iyo)
     races:
-    - white: Puti
-    - black: Itim o Aprikano-Amerikano
-    - hispanic: Hispano o Latino
-    - asian: Asyano
-    - hawaiian: Katutubong Hawayano o ibang pang nasa Pasipiko
-    - american_indian: Amerikanong-Indiyano/Katutubong Alaska
-    - other: Iba
-    - opt_out: Mas gustong hindi sabihin
+      white: Puti
+      black: Itim o Aprikano-Amerikano
+      hispanic: Hispano o Latino
+      asian: Asyano
+      hawaiian: Katutubong Hawayano o ibang pang nasa Pasipiko
+      american_indian: Amerikanong-Indiyano/Katutubong Alaska
+      other: Iba
+      opt_out: Mas gustong hindi sabihin
     submit: Ipasa
     decline: Isara
   zendesk_too_young_message: Ipagpaumanhin niyo po, ang nakakabatang mga user ay hindi
@@ -1185,23 +1168,9 @@ fil:
     instructor_feedback: Feedback ng Guro
     peer_feedback: Feedback ng Kasamahan
     outdated: Ang feedback ay nadadag sa mga dating isinumite na bersyon
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Buod
-    content: Content
-    practice: Teacher Practices
-    peer_review: Peer Review
     ramp_up: Pabilisin
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Pangunahing Kurso
     extra_course_content: Ekstra na Nilalaman ng Kurso
     csf_e_1: Mag-ramp up sa Course E (Opsyonal)
@@ -1220,7 +1189,6 @@ fil:
     csd5_2: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
     csd6_1: 'Kabanata 1: Output ng Hardware'
     csd6_2: 'Kabanata 2: Input ng Hardware'
-    csd_survey: Post-Course Survey
     csp1_1: 'Kabanata 1: Pag-representa at Pagpasa ng Impormasyon'
     csp1_2: 'Kabanata 2: Pag-imbento ng Internet'
     csp2_1: 'Kabanata 1: Pag-encode at Pag-compress ng Komplikadong Impormasyon'
@@ -1234,11 +1202,7 @@ fil:
     csp_ap_1: 'Kabanata 1: AP Tech na Setup'
     csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
     csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
     csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Pagmunimuni na mga Prompt
   external_links:
     disclaimer: Disclaimer
@@ -1309,21 +1273,8 @@ fil:
     download_in_Turkish: 'I-download sa Turkish:'
     download_in_Ukrainian: 'I-download sa Ukrainian:'
     download_in_Vietnamese: 'I-download sa Vietnamese:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
   locked_stage: Ang nilalaman ng entabladong ito ay hindi makikita dahil ang entabladong
     ito nay naka-lock. Ang iyong guro ay maaaring mag-unlock sa entabladong ito kung
     oras na para gawin ito o repasuhin ang iyong mga sagot.
@@ -1335,64 +1286,32 @@ fil:
   return_course_overview: Pumunta sa buod ng kurso
   view_all_units: Tingnan ang lahat ng mga yunit
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
+    form_labels:
+      email: Email
+      school_name: Pangalan ng Paaralan
+      school_city: Lungsod ng Paaralan
+      school_country: Bansa ng Paaralan
+    form_entries:
+      gender:
+        male: Lalaki
+        female: Babae
+        none: Mas mabuti na hindi sagutin
+      subjects:
+        cs: Computer Science
+        math: Math
+        science: Agham
+        la: Sining ng Wika
+      resources:
+        kodable: Kodable
+      robotics:
+        kodable: Kodable
+      workshop_course:
+        csp: Mga Prinsipyo ng CS
+      email_opt_in:
+        opt_in_yes: Oo
+        opt_in_no: Hindi
   courses_category: Buong mga Kurso
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
     accept: Ako ay sumasang-ayon
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
     true: Oo

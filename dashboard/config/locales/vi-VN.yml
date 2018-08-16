@@ -23,12 +23,12 @@ vi:
       user:
         name: Tên hiển thị
         name_example: Tên hiển thị<br/>(ví dụ như Cool Coder hoặc Jane S.)
-        email: Địa chỉ email
+        email: Thư điện tử
         parent_email: Email của phụ huynh/người giám hộ
         personal_email: Địa chỉ email cá nhân <a href="%{url}">(nhấp vào đây nếu bạn
           không có địa chỉ email)</a>
         username: tài khoản
-        password: mật khẩu
+        password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
         current_password: Mật khẩu hiện tại
         locale: Ngôn ngữ
@@ -46,7 +46,6 @@ vi:
   previous_page: Trang trước
   next_page: Trang tiếp theo
   next_resource: Tài nguyên tiếp theo
-  done_with_module: Done with this Learning Module
   cancel: Huỷ
   okay: Đồng ý
   heading_x_of_y: "%{heading} (trang %{x} của %{y})"
@@ -69,7 +68,7 @@ vi:
   courses: Các khóa học
   courses_page:
     title_student: Học Khoa học Máy tính
-    title_teacher: Dạy Khoa học Máy tính
+    title_teacher: Giảng dạy với Code Studio
   unplugged_activity: Hoạt động không dùng máy
   of: của
   more: NHIỀU HƠN
@@ -96,7 +95,7 @@ vi:
     facebook: Facebook
     windowslive: Tài khoản Microsoft
     clever: Tài khoản Clever
-    powerschool: Powerschool Account
+    powerschool: Tài khoản Powerschool
     forgot_password: Quên mật khẩu?
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
@@ -144,8 +143,8 @@ vi:
     valid_password: Mật khẩu hợp lệ!
     invalid_password: Mật khẩu phải có ít nhất 6 ký tự
     mismatch_password: Hai mật khẩu bạn nhập không khớp
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    agree_tos_privacy: Tôi đồng ý với <a href='http://code.org/tos'>Điều khoản Dịch
+      vụ</a> và <a href='http://code.org/privacy'>Chính sách Bảo mật</a>.
     under_13_consent: Nếu dưới 13 tuổi, tôi xác nhận rằng tôi đã được cha mẹ hoặc
       người giám hộ hợp pháp cho phép sử dụng các dịch vụ trên Code.org.
     agree_us_website: Tôi đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ.
@@ -163,7 +162,6 @@ vi:
       riêng tư</a>.
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
       ký cho bạn.
-    user_type_button: Update Account Type
     user_type_label: Loại tài khoản
     user_type_teacher: Giáo viên
     user_type_student: học sinh
@@ -173,10 +171,8 @@ vi:
     email_preference_question: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
       về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
       máy tính khác không?
-    email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
     email_preference_yes: Đồng ý
     email_preference_no: Không
-    email_preference_required: You must specify an email preference.
   school_info:
     title: Thông tin trường học (không bắt buộc)
     school_country: Quốc gia
@@ -200,7 +196,7 @@ vi:
     school_organization_zip: Zip Code của trường/tổ chức
   signin_form:
     title: Đã có một tài khoản? Đăng nhập
-    login: Địa chỉ email
+    login: Thư điện tử
     login_username: Email hoặc tên tài khoản
     password: Mật khẩu
     remember: Nhớ mật khẩu
@@ -258,7 +254,7 @@ vi:
     type:
       picture: Mật khẩu bằng ảnh
       word: Mật khẩu bằng từ ngữ
-      email: Địa chỉ email
+      email: Thư điện tử
       google_classroom: Google Classroom
       clever: Clever
   follower:
@@ -315,7 +311,6 @@ vi:
       free_play:
         playlab: Tạo một ứng dụng
         artist: Vẽ một cái gì đó
-        calculate: Calculate Something
         applab: Tạo một ứng dụng
         gamelab: Tạo một dự án trò chơi
         weblab: Tạo một dự án Web thử nghiệm (beta)
@@ -352,7 +347,6 @@ vi:
       about_contact: Liên hệ
       about_faqs: Hỏi đáp
       learn: Học
-      stats: Stats
       help_us: Giúp đỡ chúng tôi
       teach: Dạy
       about: Thông tin
@@ -413,7 +407,6 @@ vi:
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
     email_confirm_wrong_email: "(Địa chỉ email sai?)"
     email_resend_confirm: Gửi lại hướng dẫn xác nhận
-    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(để trống nếu bạn không muốn thay đổi nó)"
     current_password_hint: "(chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)"
     delete: Xóa tài khoản của bạn
@@ -449,7 +442,6 @@ vi:
       mình
     enter_parent_email: Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho
       việc khôi phục mật khẩu)
-    update: Update Account
   user_level:
     completed: Đã hoàn thành
     tried: thử lại
@@ -604,10 +596,6 @@ vi:
       thưởng khác</a>! Chia sẻ <a href='%{video_url}' target='_blank'>video này</a>để
       sinh viên của bạn có thể nghe thấy từ những người bạn trên khắp đất nước đang
       thi.
-    announcement_csp_deadline: Final call for high school teachers! Take the lead
-      on computer science in your school and apply for our high-quality professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Applications close on April 14th.
     announcement_applab_export: App Lab, môi trường lập trình web của chúng tôi, bây
       giờ hỗ trợ xuất mã của bạn! Bạn có thể bắt đầu xây dựng ứng dụng bằng các khối
       JavaScript kéo và thả, sau đó xuất mã để tiếp tục chỉnh sửa trong bất kỳ môi
@@ -618,27 +606,11 @@ vi:
       của học sinh của bạn được nghe - nhắc nhở họ để hoàn thành các cuộc khảo sát
       kết thúc của khóa học! Bạn sẽ có thể xem lại phản hồi của sinh viên và chúng
       tôi cũng sẽ chia sẻ báo cáo toàn quốc với bạn."
-    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming
-      soon this summer, we’re improving navigation across the Code.org site so that
-      you always have access to your top resources from anywhere on the site. As soon
-      as you log in to your teacher account, every page will have a new navigation
-      bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional
-      Learning."
   move_students:
     new_section_dne: Xin lỗi, nhưng phần học %{new_section_code} không tồn tại. Vui
       lòng nhập một mã khác cho phần học.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
     student_ids_not_entered: Vui lòng cung cấp student_ids.
     student_not_found: Không thể tìm thấy một hoặc vài sinh viên.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
   share:
     title: Học về Xưởng Code
     description: Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ
@@ -647,8 +619,6 @@ vi:
   gender:
     male: Nam
     female: Nữ
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
     none: Tùy chọn không muốn trả lời
   user_type:
     student: học sinh
@@ -688,8 +658,7 @@ vi:
     more: Nhiều hơn
     feedback: Cung cấp thông tin phản hồi
     translate: Giúp chúng tôi dịch sang ngôn ngữ của bạn
-    support: Hỗ trợ
-    support_url: http://support.code.org
+    support: Trợ giúp và Cộng đồng
     tos_short: Các điều khoản của Code.org
     tos: Các điều khoản của Code.org
     privacy: Chính sách riêng tư
@@ -703,7 +672,6 @@ vi:
     title: Cần trợ giúp?
     subtitle: Xem các video và gợi ý
     teacher: Xem giải pháp
-    teacher_no_solution: Stop seeing solution
     auth_error: Bạn không có quyền xem các giải pháp.
     submit: Cập nhật vị trí nghệ sĩ
     direction: Bắt đầu định hướng (tính bằng độ)
@@ -809,7 +777,6 @@ vi:
       audience: Lứa tuổi 13 +
       cta: Học cách làm
     hoc-encryption:
-      title: Simple Encryption
       body: Học sinh sẽ học các kỹ thuật tạo và giải mã các tin nhắn được mã hóa.
     weblab:
       title: Web Lab (beta)
@@ -828,7 +795,7 @@ vi:
         các nhân vật Disney Infinity nổi tiếng.
     minecraft:
       title: Minecraft
-      body: Khám phá thế giới Minecraft thông qua mã.
+      body: Hãy khám phá thế giới Minecraft qua những đoạn mã
     minecraft2016:
       title: Minecraft
       body: Chương trình động vật và sinh vật Minecraft khác trong phiên bản Minecraft
@@ -838,14 +805,11 @@ vi:
       body: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt động mới! Hãy bắt
         đầu cuộc hành trình Minecraft với việc lập trình.
     sports:
-      title: Sports
       body: Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao.
     text-compression:
-      title: Text Compression
       body: Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản
         bằng cách thay thế các mẫu với các ký hiệu.
     unplugged:
-      title: Unplugged Lessons
       audience: Lứa tuổi 4 +
       body: Chúng tôi đã biên soạn một danh sách các bài học không cắm phí cho bạn
         để sử dụng trong lớp học của bạn. Bây giờ bạn có thể dạy các nguyên tắc cơ
@@ -896,7 +860,6 @@ vi:
       cải tiến.
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
-    support_url: "//support.code.org"
     help_resources: Trợ giúp và tài nguyên
     help_support: Giúp đỡ và hỗ trợ
     documentation: Tài liệu
@@ -906,15 +869,11 @@ vi:
     wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!
     correct_title: Chính xác
     correct_body: Đó là câu trả lời chính xác.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Cảm ơn bạn
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
     correct_title: Cảm ơn bạn
     correct_body: Cảm ơn bạn đã gửi câu trả lời.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Cảm ơn bạn
     wrong_body: Cảm ơn bạn đã gửi câu trả lời.
@@ -1005,11 +964,6 @@ vi:
       mật</a>
     accept: Đồng ý
     print: In
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
     review_terms: Xem những điều khoản mới
   school_info_interstitial:
     title: Chúng tôi muốn mang Khoa học Máy tính đến mọi học sinh - giúp chúng tôi
@@ -1024,14 +978,14 @@ vi:
     message: Vui lòng cho chúng tôi biết chủng tộc của bạn (hãy đánh dấu vào tất cả
       các mục thích hợp)
     races:
-    - white: Màu trắng
-    - black: Người da đen hoặc người Mỹ gốc Phi
-    - hispanic: Người Hispanic hoặc Latino
-    - asian: Châu á
-    - hawaiian: Người bản địa hoặc người Đảo Thái Bình Dương khác
-    - american_indian: Thổ Dân Mỹ Da Đỏ/Alaska
-    - other: Khác
-    - opt_out: Không thích nói
+      white: Màu trắng
+      black: Người da đen hoặc người Mỹ gốc Phi
+      hispanic: Người Hispanic hoặc Latino
+      asian: Châu á
+      hawaiian: Người bản địa hoặc người Đảo Thái Bình Dương khác
+      american_indian: Thổ Dân Mỹ Da Đỏ/Alaska
+      other: Khác
+      opt_out: Không thích nói
     submit: Gửi
     decline: Đóng
   zendesk_too_young_message: Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang
@@ -1157,90 +1111,14 @@ vi:
         các yêu cầu"
     escalated:
       name: Đã tăng cấp
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Tổng quan
     content: Nội dung
-    practice: Teacher Practices
-    peer_review: Peer Review
-    ramp_up: Ramp-Up
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
-    main_course: Main Course
-    extra_course_content: Extra Course Content
-    csf_e_1: Ramp Up to Course E (Optional)
-    csf_e_2: Course E Content
-    csf_f_1: Ramp Up to Course F (Optional)
-    csf_f_2: Course F Content
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
-    csd_survey: Post-Course Survey
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: Survey
-    cspAssessment: Chapter Assessment
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
-    csp2_1_2018: 'Unit 2: Digital Information'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
-    dlp: Reflection Prompts
   external_links:
     disclaimer: Miễn trừ trách nhiệm
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Tải giờ của mã
-    capsule_title: Do you have Internet?
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
     instructions_headline: Không có Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
     download_in_Albanian: 'Tải xuống bằng Tiếng Albania:'
     download_in_Arabic: 'Tải xuống bằng tiếng Ả Rập:'
     download_in_Azerbaijani: 'Tải về tại Azerbaijan:'
@@ -1285,88 +1163,33 @@ vi:
     download_in_Vietnamese: 'Tải bằng tiếng Việt:'
     windows: Hệ điều hành windows(bản 64-bit)
     mac: Hệ điều hành Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
   locked_stage: Nội dung của giai đoạn này không hiển thị vì giai đoạn này hiện đang
     bị khóa. Giáo viên của bạn có thể mở khóa giai đoạn này khi đến lúc làm việc hoặc
     xem lại câu trả lời của bạn.
   hidden_stage: Giáo viên của bạn đã không mong đợi bạn ở đây. Hãy hỏi giáo viên của
     bạn về bài học nào bạn nên vào.
-  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
-    which unit you should be on.
-  return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
-  view_all_units: View all units
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
-  courses_category: Full Courses
+    form_labels:
+      email: Thư điện tử
+      school_name: Tên trường
+      school_city: Thành phố của trường
+      school_country: Quốc gia
+    form_entries:
+      gender:
+        male: Nam
+        female: Nữ
+        none: Tùy chọn không muốn trả lời
+      subjects:
+        cs: Khoa học máy tính
+        math: thuật toán
+        science: Khoa học
+        la: Nghệ thuật ngôn ngữ
+      email_opt_in:
+        opt_in_yes: Đồng ý
+        opt_in_no: Không
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
     accept: Tôi đồng ý
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
+    message: Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu
+      trữ hoặc xử lý tại Hoa Kỳ.
     true: Đồng ý

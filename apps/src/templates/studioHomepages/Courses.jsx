@@ -29,6 +29,7 @@ class Courses extends Component {
     studentsCount: PropTypes.string.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
+    modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -37,7 +38,14 @@ class Courses extends Component {
   }
 
   render() {
-    const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips } = this.props;
+    const {
+      isEnglish,
+      isTeacher,
+      isSignedOut,
+      userId,
+      showInitialTips,
+      modernElementaryCoursesAvailable
+    } = this.props;
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -89,6 +97,7 @@ class Courses extends Component {
         {(!isEnglish) && (
           <CourseBlocksAll
             isEnglish={false}
+            showModernElementaryCourses={modernElementaryCoursesAvailable}
           />
         )}
       </div>

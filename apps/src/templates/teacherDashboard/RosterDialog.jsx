@@ -62,7 +62,7 @@ const styles = {
   },
 };
 
-const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classrooms.length ?
+const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) => classrooms.length ?
   <div>
     {classrooms.map(classroom => (
       <div
@@ -84,17 +84,17 @@ const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classroo
       </div>
     ))}
   </div> :
-  <NoClassroomsFound provider={provider}/>
+  <NoClassroomsFound rosterProvider={rosterProvider}/>
 ;
 ClassroomList.propTypes = {
   classrooms: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
   selectedId: PropTypes.string,
-  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const NoClassroomsFound = ({provider}) => {
-  switch (provider) {
+const NoClassroomsFound = ({rosterProvider}) => {
+  switch (rosterProvider) {
     case OAuthSectionTypes.google_classroom:
       return (
         <div>
@@ -102,7 +102,7 @@ const NoClassroomsFound = ({provider}) => {
             {locale.noClassroomsFound()}
           </p>
           <a href="https://classroom.google.com/">
-              {locale.addRemoveGoogleClassrooms()}
+            {locale.addRemoveGoogleClassrooms()}
           </a>
         </div>
       );
@@ -112,7 +112,7 @@ const NoClassroomsFound = ({provider}) => {
           <p>
             {locale.noClassroomsFound()}
           </p>
-          <a href="https://classroom.google.com/">
+          <a href="https://clever.com/">
             {locale.addRemoveCleverClassrooms()}
           </a>
         </div>
@@ -120,7 +120,7 @@ const NoClassroomsFound = ({provider}) => {
   }
 };
 NoClassroomsFound.propTypes = {
-  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const LoadError = ({error}) =>
@@ -147,7 +147,7 @@ class RosterDialog extends React.Component {
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
   };
 
   state = {selectedId: null};
@@ -172,7 +172,7 @@ class RosterDialog extends React.Component {
 
   render() {
     let title = '';
-    switch (this.props.provider) {
+    switch (this.props.rosterProvider) {
       case OAuthSectionTypes.google_classroom:
         title = locale.selectGoogleClassroom();
         break;
@@ -200,7 +200,7 @@ class RosterDialog extends React.Component {
                 classrooms={this.props.classrooms}
                 onSelect={this.onClassroomSelected}
                 selectedId={this.state.selectedId}
-                provider={this.props.provider}
+                rosterProvider={this.props.rosterProvider}
               /> :
               locale.loading()
           }
@@ -232,7 +232,7 @@ export default connect(state => ({
   isOpen: isRosterDialogOpen(state),
   classrooms: state.teacherSections.classrooms,
   loadError: state.teacherSections.loadError,
-  provider: state.teacherSections.provider,
+  rosterProvider: state.teacherSections.rosterProvider,
 }), {
   handleImport: importOrUpdateRoster,
   handleCancel: cancelImportRosterFlow,

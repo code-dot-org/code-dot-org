@@ -206,18 +206,21 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    level = LevelLoader.load_custom_level(LevelLoader.level_file_path('K-1 Bee 2'))
+    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    level = Level.find_by_name('K-1 Bee 2')
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
       level.properties['initial_dirt']
   end
 
-  test 'debugging info for exceptions in load_custom_level' do
-    begin
-      LevelLoader.load_custom_level('xxxxx')
-    rescue Exception => e
-      assert_includes e.message, "in level"
-    end
+  test 'creating custom level from file sets level_concept_difficulty' do
+    Level.find_by_name('K-1 Bee 2')&.destroy
+    assert_nil Level.find_by_name('K-1 Bee 2')
+    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    level = Level.find_by_name('K-1 Bee 2')
+    refute_nil level
+
+    assert_equal 3, level.level_concept_difficulty.sequencing
   end
 
   test 'prioritize property over column data in merged update' do
@@ -272,7 +275,7 @@ EOS
 
   test 'updating ContractMatch level updates it in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
+    File.expects(:write).times(2) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
 
     update_contract_match
   end
@@ -579,7 +582,10 @@ EOS
     custom_i18n = {
       'data' => {
         'callouts' => {
-          "#{level_name}_callout" => []
+          "#{level_name}_callout" => {
+            first: nil,
+            second: nil
+          }
         }
       }
     }

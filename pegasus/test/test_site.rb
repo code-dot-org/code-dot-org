@@ -52,7 +52,14 @@ class SiteTest < Minitest::Test
   end
 
   def test_new_relic_transactions
+    # Disable cache for requests in this test.
+    env 'rack-cache.allow_reload', true
+    header 'cache-control', 'no-cache'
+
     header 'host', 'code.org'
+
+    assert_equal 200, get('/').status
+
     ::NewRelic::Agent.expects(:set_transaction_name).with('/')
     assert_equal 200, get('/').status
 

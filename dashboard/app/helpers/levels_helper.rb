@@ -219,8 +219,19 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
+    # Temporary conversion from old instructions naming scheme to new
+    #TODO: elijah: remove this override once we have fully converted
+    if @app_options[:level]
+      # Level types are unfortunately inconsistent in their use of strings vs
+      # symbols for keys, forcing us to consider both here.
+      @app_options[:level]['shortInstructions'] = @app_options[:level].delete('instructions') if @app_options[:level]['instructions']
+      @app_options[:level]['longInstructions'] = @app_options[:level].delete('markdownInstructions') if @app_options[:level]['markdownInstructions']
+      @app_options[:level][:shortInstructions] = @app_options[:level].delete(:instructions) if @app_options[:level][:instructions]
+      @app_options[:level][:longInstructions] = @app_options[:level].delete(:markdownInstructions) if @app_options[:level][:markdownInstructions]
+    end
+
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
+    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?) && I18n.en?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -271,6 +282,7 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_dance = @level.is_a?(Gamelab) && @level.helper_libraries.try(:include?, 'DanceLab')
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
       locals: {
@@ -282,6 +294,7 @@ module LevelsHelper
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
+        use_dance: use_dance,
         hide_source: hide_source,
         static_asset_base_path: app_options[:baseUrl]
       }
@@ -451,7 +464,9 @@ module LevelsHelper
     # Locale-depdendent option
     # For historical reasons, `localized_instructions` and
     # `localized_authored_hints` should happen independent of `should_localize?`
-    set_unless_nil(level_options, 'instructions', l.localized_instructions)
+    # TODO: elijah: update these instructions values to new names once we
+    # migrate to the new keys
+    set_unless_nil(level_options, 'instructions', l.localized_short_instructions)
     set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
     if l.should_localize?
       # Don't ever show non-English markdown instructions for Course 1 - 4 or
@@ -459,10 +474,22 @@ module LevelsHelper
       if @script && (@script.csf_international? || @script.twenty_hour?)
         level_options.delete('markdownInstructions')
       else
-        set_unless_nil(level_options, 'markdownInstructions', l.localized_markdown_instructions)
+        set_unless_nil(level_options, 'markdownInstructions', l.localized_long_instructions)
       end
       set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
       set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
+
+      %w(
+        initializationBlocks
+        startBlocks
+        toolbox
+        levelBuilderRequiredBlocks
+        levelBuilderRecommendedBlocks
+        solutionBlocks
+      ).each do |xml_block_prop|
+        next unless level_options.key? xml_block_prop
+        set_unless_nil(level_options, xml_block_prop, l.localize_function_blocks(level_options[xml_block_prop]))
+      end
     end
 
     # Script-dependent option
@@ -538,6 +565,10 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
+
+    if params[:blocks]
+      level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+    end
 
     unless params[:no_last_attempt]
       level_options[:lastAttempt] = @last_attempt

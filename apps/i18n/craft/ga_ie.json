@@ -288,7 +288,7 @@
   "timeShort": "tamall gairid",
   "timeVeryLong": "tamall an-fhada",
   "timeVeryShort": "tamall an-ghairid",
-  "to": "le",
+  "to": "ag",
   "toSlotNumber": "go dtí sliotán #",
   "tooManyBlocksFail": "Chríochnaigh tú dúshlán {puzzleNumber}. Comhghairdeas! Is féidir é a dhéanamh le {numBlocks, plural, one {bloc amháin} other {# bloc}} freisin.",
   "turnRandom": "cas randamach",

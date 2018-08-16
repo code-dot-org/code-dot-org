@@ -4,6 +4,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 var GameLabWorld = require('./GameLabWorld');
+import {getDanceAPI, teardown} from './DanceLabP5';
 
 const defaultFrameRate = 30;
 
@@ -525,7 +526,7 @@ GameLabP5.prototype.init = function (options) {
  * Reset GameLabP5 to its initial state. Called before each time it is used.
  */
 GameLabP5.prototype.resetExecution = function () {
-
+  teardown();
   gameLabSprite.setCreateWithDebug(false);
 
   if (this.p5) {
@@ -905,7 +906,7 @@ GameLabP5.prototype.getMarshallableP5Properties = function () {
   return propNames;
 };
 
-GameLabP5.prototype.getGlobalPropertyList = function () {
+GameLabP5.prototype.getGlobalPropertyList = function (danceLab) {
   const propList = {};
 
   // Include every property on the p5 instance in the global property list
@@ -924,6 +925,11 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
 
   // Create a 'World' object in the global namespace:
   propList.World = [this.gameLabWorld, this];
+
+  if (danceLab) {
+    // Create a 'Dance' object in the global namespace:
+    propList.Dance = [getDanceAPI(this.p5), this];
+  }
 
   return propList;
 };

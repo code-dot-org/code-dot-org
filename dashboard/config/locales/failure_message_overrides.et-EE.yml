@@ -53,11 +53,6 @@ et:
         või paremale.
       MC HOC 2016 Level 5_failure_message_override: Proovi kasutada "igavesti täida"
         koos "liigu edasi" mängija poole.
-      MC HOC 2016 Level 6_failure_message_override: |-
-        Use the `spawn zombie` command
-        under `when night` to spawn at least three zombies. Then, add `move a step
-        toward player` to their `when spawned` event with a loop to help them chase
-        you. If they’re too fast, add a `wait` command to slow them down.
       MC HOC 2016 Level 8_failure_message_override: Sa pead kasutama plahvatavat Kreeperit
         seina õhku laskmiseks, et jõuaksid oma lambani.
       MC HOC 2016 New Drop_failure_message_override: Kasutage nooleklahve lammaste
@@ -71,7 +66,6 @@ et:
         saamisega, muutse see arv 2ks.
       MC HOC 2016 Village Test_failure_message_override: Pane Raud Golem taga ajama
         ja ründama zombisid.
-      Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: Palju õnne!  Sa kogusid X münti!
       courseE_playLab_scaffold3_failure_message_override: Peate lisama kaks või enam
         uut liikuvat osalised oma mängu ning panema nad liikuma.

@@ -1,0 +1,58 @@
+{
+  "category": "Moves",
+  "config": {
+    "func": "doMoveOnce",
+    "blockText": "{SPRITE} do move {MOVE} once",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "MOVE",
+        "options": [
+          [
+            "Rest",
+            "0"
+          ],
+          [
+            "Electro",
+            "1"
+          ],
+          [
+            "Floss",
+            "2"
+          ],
+          [
+            "Fresh",
+            "3"
+          ],
+          [
+            "Breakdown",
+            "4"
+          ],
+          [
+            "March",
+            "5"
+          ],
+          [
+            "Wave",
+            "6"
+          ],
+          [
+            "Next",
+            "\"next\""
+          ],
+          [
+            "Previous",
+            "\"prev\""
+          ],
+          [
+            "Random",
+            "\"rand\""
+          ]
+        ]
+      }
+    ]
+  }
+}

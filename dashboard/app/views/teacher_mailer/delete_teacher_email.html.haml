@@ -1,0 +1,16 @@
+%p
+  Hi #{@teacher.name},
+%p
+  Your account has been deleted along with the accounts of all of your students that didn’t have a personal login or were not in another teacher’s section. If you think this was done in error, please contact us at support@code.org to recover your and your students’ accounts. These accounts will be permanently deleted in 28 days, after which we will no longer be able to recover them.
+%p
+  - if @removed_students.present?
+    Student accounts deleted:
+    %br
+    %ol
+      - @removed_students.each do |student|
+        %li
+          #{student[:name]} (#{student[:username]})
+%p
+  Thanks,
+%p
+  The Code.org Team

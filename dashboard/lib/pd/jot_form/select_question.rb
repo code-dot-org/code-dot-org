@@ -70,7 +70,10 @@ module Pd
 
       # @override
       def type_specific_summary
-        {options: options}
+        {
+          options: options,
+          other_text: other_text
+        }
       end
     end
   end

@@ -1,13 +1,13 @@
 ja:
   data:
     block_categories:
-      Actions: うごき
-      Loops: ループ
-      Functions: 機能
+      Actions: 操作
+      Loops: くりかえし
+      Functions: 関数(かんすう) 
       Color: 色
       Brushes: ブラシ
-      Math: 数値
-      Logic: ロジック
+      Math: 計算(けいさん)
+      Logic: ロジック（論理）
       Variables: 変数
       Number: 数（かず）
       String: 文字列（もじれつ）
@@ -19,31 +19,27 @@ ja:
       Comments: コメント
       Category: カテゴリー
       Prebuilt: あらかじめつくられた
-      Text: テキスト（文字列）
+      Text: テキスト
       Picker: ピッカー
       Comment: コメント
-      'Variables ': '変数（へんすう） '
+      'Variables ': '変数(へんすう) '
       everythingelse: ほかのすべて
-      numbers: 数値
-      Numbers: 数字
-      Input: Input
+      numbers: 数（かず）
+      Numbers: 数（かず）
       Default: デフォルト
       World: 世界
-      Sprites: Sprites
       Behaviors: 行動
-      Advanced: Advanced
+      Advanced: 詳細設定
+      Start: 始める
       Sprite: スプライト
       Brush: ブラシ
       Make Sprite: スプライトを つくる
       Movement: 動作
-      Start: 始める
       Groups: グループ
-      Booleans: Booleans
       Functional: 関数(かんすう)の
       Predefined: あらかじめ定義（ていぎ）された
       test: テスト
       test2: テスト2
-      Foo: Foo
       Name: 名前
       NEW BLOCKS: あたらしい ブロック
       'Functions ': '関数(かんすう) '

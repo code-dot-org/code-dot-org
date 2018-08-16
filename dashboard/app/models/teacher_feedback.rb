@@ -19,14 +19,20 @@
 
 class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
-  validates_presence_of :student_id, :level_id, :teacher_id
+  validates_presence_of :student_id, :level_id, :teacher_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
   def self.latest_per_teacher
-    find(group(:teacher_id).maximum(:id).values)
+    #Only select feedback from teachers who lead sections in which the student is still enrolled
+    find(
+      joins(:student_sections).
+        where('sections.user_id = teacher_id').
+        group([:teacher_id, :student_id]).
+        pluck('MAX(teacher_feedbacks.id)')
+    )
   end
 
   def self.latest

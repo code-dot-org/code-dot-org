@@ -168,7 +168,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Build your final project here. (Click to see full instructions)",
-    "markdown_instructions": "# Congratulations!\r\n\r\nYou've reached the end of the year! Now it's time to show off everything you've learned by creating a final project.\r\n\r\n# Do This:\r\n\r\n* Use this level to create and submit your final app.\r\n * Alternatively, if you want to remix a previous project and add new features, you can copy the \"Share\" link for your remixed project and paste it into a comment in this level.\r\n* **Have fun!**",
+    "markdown_instructions": "# Congratulations!\r\n\r\nYou've reached the end of the year! Now it's time to show off everything you've learned by creating a final project.\r\n\r\n# Do This:\r\n\r\n* Use this level to create and submit your final app.\r\n  * Alternatively, if you want to remix a previous project and add new features, you can copy the \"Share\" link for your remixed project and paste it into a comment in this level.\r\n* **Have fun!**",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

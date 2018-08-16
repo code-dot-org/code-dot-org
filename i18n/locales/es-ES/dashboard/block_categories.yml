@@ -2,50 +2,47 @@ es:
   data:
     block_categories:
       Actions: Acciones
-      Loops: Bucles
-      Functions: Funciones
+      Loops: vuelta
+      Functions: funciones
       Color: Color
-      Brushes: Brushes
+      Brushes: Pinceles
       Math: Matemáticas
       Logic: Lógica
-      Variables: Variables
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Variables: variables
+      Number: Número
+      String: Cadena
+      Image: Imagen
+      Boolean: Booleano
       Conditionals: Condicionales
       Events: Eventos
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Calificación de juegos
+      Comments: Comentario
+      Category: Categoría
+      Prebuilt: Precompilado
       Text: Texto
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Seleccionador
+      Comment: Comentario
+      'Variables ': 'Variables'
+      everythingelse: Todo lo demas
+      numbers: Numeros
+      Numbers: Numeros
+      Default: Por defecto
+      World: Mundo
+      Behaviors: Comportamientos
+      Advanced: Avanzado
       Start: Inicio
-      Groups: Groups
+      Sprite: Sprite
+      Brush: Pincel
+      Make Sprite: Hacer sprite
+      Movement: Movimiento
+      Groups: Grupos
       Booleans: Valores booleanos
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funcional
+      Predefined: Predefinido
       test: prueba
-      test2: test2
-      Foo: Foo
+      test2: Test2
       Name: Nombre
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: Nuevos bloques
+      'Functions ': 'Funciones'
+      Game/Score: Calificación de juegos
       Function: Función

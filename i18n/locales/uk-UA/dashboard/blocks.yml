@@ -1,0 +1,185 @@
+uk:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Далі
+            '"prev"': Назад
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Далі
+            '"prev"': Назад
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: усі
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': праворуч
+            '"left"': ліворуч
+      Dancelab_randomColor:
+        text: випадковий колір
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'Істина'
+            'false': 'Хибність'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": випадковий
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': праворуч
+            '"left"': ліворуч
+      gamelab_randColor:
+        text: випадковий колір
+      gamelab_randomColor:
+        text: випадковий колір
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': випадковий
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"height"': висота
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': праворуч
+            '"left"': ліворуч
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": вгору
+            "'down'": вниз
+            "'left'": ліворуч
+            "'right'": праворуч
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+      Vanilla_randomColor:
+        text: випадковий колір

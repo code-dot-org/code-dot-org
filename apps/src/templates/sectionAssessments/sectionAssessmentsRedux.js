@@ -18,6 +18,7 @@ export const ALL_STUDENT_FILTER = 0;
  * isLoading - boolean - indicates that requests for assessments and surveys have been
  * sent to the server but the client has not yet received a response
  * assessmentId - int - the level_group id of the assessment currently in view
+ * questionIndex - int - the question index of the question currently in view in detail view
  * studentId - int - the studentId of the current student being filtered for.
  */
 const initialState = {
@@ -26,6 +27,7 @@ const initialState = {
   surveysByScript: {},
   isLoading: false,
   assessmentId: 0,
+  questionIndex: 0,
   studentId: ALL_STUDENT_FILTER,
 };
 
@@ -56,6 +58,7 @@ const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS'
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
 const SET_STUDENT_ID = 'sectionAssessments/SET_STUDENT_ID';
+const SET_QUESTION_INDEX = 'sectionAssessments/SET_QUESTION_INDEX';
 
 // Action creators
 export const setAssessmentResponses = (scriptId, assessments) =>
@@ -65,6 +68,7 @@ export const setAssessmentQuestions = (scriptId, assessments) =>
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
+export const setQuestionIndex = (questionIndex) => ({ type: SET_QUESTION_INDEX, questionIndex: questionIndex });
 export const setStudentId = (studentId) => ({ type: SET_STUDENT_ID, studentId: studentId });
 export const setSurveys = (scriptId, surveys) => ({ type: SET_SURVEYS, scriptId, surveys });
 
@@ -113,12 +117,14 @@ export default function sectionAssessments(state=initialState, action) {
     return {
       ...state,
       studentId: ALL_STUDENT_FILTER,
+      questionIndex: 0,
     };
   }
   if (action.type === SET_ASSESSMENT_ID) {
     return {
       ...state,
       assessmentId: action.assessmentId,
+      questionIndex: 0,
       studentId: ALL_STUDENT_FILTER,
     };
   }
@@ -126,6 +132,12 @@ export default function sectionAssessments(state=initialState, action) {
     return {
       ...state,
       studentId: action.studentId,
+    };
+  }
+  if (action.type === SET_QUESTION_INDEX) {
+    return {
+      ...state,
+      questionIndex: action.questionIndex,
     };
   }
   if (action.type === SET_ASSESSMENT_RESPONSES) {
@@ -209,6 +221,44 @@ export const getCurrentAssessmentQuestions = (state) => {
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
 
+// Returns an object with the question text and answers of the currently selected
+// question in the current assessment.
+export const getCurrentQuestion = (state) => {
+  const emptyQuestion = {question: '', answers: []};
+  const isSurvey = isCurrentAssessmentSurvey(state);
+  if (isSurvey) {
+    const surveys = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
+    const currentSurvey = surveys[state.sectionAssessments.assessmentId];
+    const questionsData = currentSurvey.levelgroup_results;
+    const question = questionsData[state.sectionAssessments.questionIndex];
+    if (question) {
+      return {
+        question: question.question,
+        answers: question.type === SurveyQuestionType.MULTI && question.answer_texts.map((answer, index) => {
+          return {text: answer, correct: false, letter: ANSWER_LETTERS[index]};
+        }),
+      };
+    } else {
+      return emptyQuestion;
+    }
+  } else {
+    // Get question text for assessment.
+    const assessment = getCurrentAssessmentQuestions(state) || {};
+    const assessmentQuestions = assessment.questions;
+    const question = assessmentQuestions ? assessmentQuestions[state.sectionAssessments.questionIndex] : null;
+    if (question) {
+      return {
+        question: question.question_text,
+        answers: question.type === QuestionType.MULTI && question.answers.map((answer, index) => {
+          return {...answer, letter: ANSWER_LETTERS[index]};
+        }),
+      };
+    } else {
+      return emptyQuestion;
+    }
+  }
+};
+
 /**
  * Returns an array of objects, each of type questionStructurePropType
  * indicating the question and correct answers for each multiple choice
@@ -272,6 +322,38 @@ export const getStudentMCResponsesForCurrentAssessment = (state) => {
       })
   };
 
+};
+
+// Get an array of objects indicating what each student answered for the current
+// question in view.
+export const getStudentAnswersForCurrentQuestion = (state) => {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses || isCurrentAssessmentSurvey(state)) {
+    return [];
+  }
+
+  const questionIndex = state.sectionAssessments.questionIndex;
+  let studentAnswers = [];
+
+  // For each student, look up their responses to the currently selected assessment.
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = (parseInt(studentId, 10));
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    let studentAssessment = studentObject.responses_by_assessment[currentAssessmentId] || {};
+
+    const responsesArray = studentAssessment.level_results || [];
+    const question = responsesArray[questionIndex];
+    if (question) {
+      studentAnswers.push({
+        id: studentId,
+        name: studentObject.student_name,
+        answer: question.student_result ? indexesToAnswerString(question.student_result) : '-',
+        correct: question.status === 'correct',
+      });
+    }
+  });
+  return studentAnswers;
 };
 
 /**

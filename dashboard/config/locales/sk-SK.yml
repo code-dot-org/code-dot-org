@@ -46,7 +46,6 @@ sk:
   previous_page: Predchádzajúca strana
   next_page: Nasledujúca strana
   next_resource: Ďalší zdroj
-  done_with_module: Done with this Learning Module
   cancel: Zrušiť
   okay: Dobre
   heading_x_of_y: "%{heading} (strana %{x} z %{y})"
@@ -104,6 +103,8 @@ sk:
       Musíte sa prihlásiť zadaním hesla nižšie.
     use_clever: Ľutujeme, Vaše Code.org konto nie je prepojené s Vašim %{provider}.
       Musíte sa prihlásiť cez Smart portál nižšie.
+    unable_to_connect_provider: Nedokázali sme prepojiť Váš účet na Code.org s %{provider}.
+      Skúste prosím znova.
   signup_form:
     student_count: "%{count} študentov sa už zaregistrovalo."
     teacher_count: "%{count} učitelov sa už zaregistrovalo."
@@ -316,7 +317,6 @@ sk:
       free_play:
         playlab: Vytvoriť aplikáciu
         artist: Nakresliť niečo
-        calculate: Calculate Something
         applab: Vytvoriť aplikáciu
         gamelab: Vytvorte projekt v Hernom laboratóriu
         weblab: Vytvorte prjekt vo Webovom laboratóriu (beta verzia)
@@ -449,6 +449,7 @@ sk:
     enter_parent_email: Zadajte emailovú adresu rodiča alebo zodpovedného zástupcu
       (pre obnovenie hesla)
     update: Aktualizujte konto
+    account_successfully_updated: Konto bolo úspešne zmenené.
   user_level:
     completed: Dokončené
     tried: Vyskúšaný
@@ -481,7 +482,7 @@ sk:
     student_finished: Dokončil si všetky cvičenia, vyber si ďaľšiu triedu %{online_link}
       alebo v %{local_school_link}
     local_school: miestna škola
-    online: Online
+    online: online
     see_details: Pozri detaily
     view_course: Prezrieť kurz
     prize_info: 'Ceny za účasti (iba pre učiteľov verejných škôl v U.S.): Nad $1,000
@@ -795,7 +796,6 @@ sk:
       audience: Vek 13+
       cta: Nauč sa ako
     hoc-encryption:
-      title: Simple Encryption
       body: Študenti sa naučia metódy na vytvorenie a prelomenie zašifrovaných správ.
     weblab:
       title: Webové laboratórium (beta)
@@ -810,7 +810,6 @@ sk:
       title: Star Wars
     infinity:
       title: Neobmedzená Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: Minecraft
       body: Preskúmajte Minecraft svet prostredníctvom kódu.
@@ -822,10 +821,8 @@ sk:
       body: Minecraft je naspäť v Hodine Kódu so zbrusu novou aktivitou! Prejdite
         sa po Minecrafte s kódom.
     sports:
-      title: Sports
       body: Vytvorte basketbalovú hru alebo pospájajte a pomiešajte viaceré športy.
     text-compression:
-      title: Text Compression
       body: V tejto lekcií budú študenti používať nástroj Kompresia textu na kompresiu
         textu pomocou nahradenia opakujúcich sa vzorov symbolmi.
     unplugged:
@@ -885,15 +882,11 @@ sk:
     wrong_body: Zadaná odpoveď je nesprávna.  Prosím skúste to znova!
     correct_title: Správne
     correct_body: To je správna odpoveď.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Ďakujeme
     wrong_body: Ďakujeme za odoslanie odpovede.
     correct_title: Ďakujeme
     correct_body: Ďakujeme za odoslanie odpovede.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Ďakujeme
     wrong_body: Ďakujeme za odoslanie odpovedí.
@@ -996,14 +989,14 @@ sk:
     title: 'Dobrovoľné: Pomôžte nám sledovať náš pokrok ku zlepšeniu diverzity v informatike'
     message: Prosím zvoľte vašu rasu (označte všetky ktoré platia)
     races:
-    - white: Biela
-    - black: Africká alebo Afroamerická
-    - hispanic: Hispánska alebo Latinoamerická
-    - asian: Ázijská
-    - hawaiian: Pôvodná havajská alebo iná tichomorská
-    - american_indian: Pôvodná americká alebo alijašská
-    - other: Ostatné
-    - opt_out: Preferujem neodpovedať
+      white: Biela
+      black: Africká alebo Afroamerická
+      hispanic: Hispánska alebo Latinoamerická
+      asian: Ázijská
+      hawaiian: Pôvodná havajská alebo iná tichomorská
+      american_indian: Pôvodná americká alebo alijašská
+      other: Ostatné
+      opt_out: Preferujem neodpovedať
     submit: Odoslať
     decline: Zatvoriť
   zendesk_too_young_message: Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu
@@ -1126,23 +1119,12 @@ sk:
     instructor_feedback: Spätná väzba inštruktora
     peer_feedback: Spätná väzba spoluriešiteľa
     outdated: Táto spätná väzba bola pridaná k predchádzajúcej verzii
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Prehľad
     content: Obsah
     practice: Učiteľské cvičenia
     peer_review: Recenzia
     ramp_up: Posuňte sa
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Hlavný kurz
     extra_course_content: Obsah ku kurzom navyše
     csf_e_1: Posuňte sa do kurzu E (voliteľné)
@@ -1177,9 +1159,7 @@ sk:
     csp_ap_3: 'Kapitola 3: AP výtváranie výkonnovej úlohy'
     csp_postap_1: 'Kapitola 1: Práca s a vizualizácia dát'
     csp_postap_2: 'Kapitola 2: Aplikáce a databázy'
-    csp2_1_2018: 'Unit 2: Digital Information'
     csp3_1_2018: 'Kapitola 3: Úvod do programovania'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Výzvy na zhodnotenie
   external_links:
     disclaimer: Upozornenie
@@ -1249,19 +1229,10 @@ sk:
     download_in_Vietnamese: 'Stiahnúť v vietnamčine:'
     windows: Windows (64-bitová verzia)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
+  stage_extras_teacher_message: Pre niektoré z Vašich sekcií máte vypnuté Doplnky
+    k lekciám. Vaši študenti neuvidia túto stránku až kým ju nezapnete. Doplnky k
+    lekciám môžete zapnúť navštívením Vašej <a href='http://code.org/teacher-dashboard'>učiteľskej
+    domovej stránky</a>.
   locked_stage: Obsah tejto úrovne nie je viditeľný, pretože táto úroveň je momentálne
     zamknutá. Tvoj učiteľ odomkne túto úroveň, keď sa na nej bude pracovať, alebo
     keď bude kontrolovať tvoje odpovede.
@@ -1273,54 +1244,125 @@ sk:
   return_course_overview: Prejsť na prehľad
   view_all_units: Zobraziť všetky kapitoly
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
-  courses_category: Full Courses
+    form_labels:
+      first_name: Meno
+      first_name_preferred: Uprednostňované Krstné Meno
+      last_name: Priezvisko
+      email: E-mail
+      email_alternate: Ďaľšia emailová adresa
+      gender: Rodová identita
+      school_name: Názov školy
+      school_city: Mesto
+      school_country: Krajina
+      ages: Ktoré ročníky vyučujute tento rok?
+      subjects: Ktoré predmety vyučujute tento rok?
+      resources: Ktoré z nasledovných zdrojov používate pri výučbe informatiky?
+      robotics: Ktoré z nasledovných robotických zdrojov používate pri výučbe?
+      workshop_organizer: Organizér workshopov
+      workshop_facilitator: Usporiadateľ workshopov
+      workshop_course: Kurz workshopov
+      email_opt_in: Súhlasím, že Code.org môžete zdieľať moje kontaktné informácie
+        a súhrnné údaje o mojich triedach s medzinárodným Code.org partnerom v mojej
+        krajine.
+      legal_opt_in: 'Odoslaním tohto formuláru súhlasíte so zdieľaním Vašich informácií
+        a spôsobu používania Code.org a Nástrojov pre vydelávanie profesionálov s
+        medzinárodným Code.org partnerom vo Vašej krajine, školským obvodom a organizátormi.
+        S týmto partnerom budeme zdieľať Vaše kontaktné údaje, ktoré kurzy/lekcie
+        absolvujete a súhrnné dáta o Vašej triede. Tie zahrňujú počet študentov vo
+        Vašich triedach, demografické rozdelenie Vašej triedy a názov Vašej školy
+        a školského obvodu. Nebudeme zdieľať žiadne informácie o jednotlivých študentoch:
+        všetky takéto informácie budú anonymizované a súhrnné. Naši medzinárodní partneri
+        a organizátori sú zmluvne zaviazaní zaobchádzať s týmito údajmi na rovnako
+        dôvernej úrovni ako na Code.org všeobecne.'
+    form_entries:
+      gender:
+        male: Muž
+        female: Žena
+        non_binary: Nebinárne
+        not_listed: Uprednosťnovaný termín nie je v zozname
+        none: Preferujem neodpovedať
+      school_country:
+        canada: Kanada
+        chile: Čile
+        israel: Izrael
+        malaysia: Malajzia
+        mexico: Mexiko
+        thailand: Thajsko
+      ages:
+        ages_under_6: "< 6 rokov"
+        ages_7_8: 7-8 rokov
+        ages_9_10: 9-10 rokov
+        ages_11_12: 11-12 rokov
+        ages_13_14: 13-14 rokov
+        ages_15_16: 15-16 rokov
+        ages_17_18: 17-18 rokov
+        ages_19_over: 19 a viac rokov
+      subjects:
+        cs: Počítačová veda
+        ict: IT
+        math: Matematické
+        science: Veda
+        history: História / Sociálne vedy
+        la: Jazykové umenia
+        efl: Angličtina ako cudzí jazyk
+        music: Hudba
+        art: Umenie
+        other: 'Iné:'
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        kodable: Kodable
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Iné:'
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO pre výchovu
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Malinová Pi
+        wonder: Seminár Wonder
+        other: 'Iné:'
+      workshop_course:
+        csf_af: Základy informatiky (kurzy A-F)
+        csf_express: Základy informatiky (skrátená verzia)
+      email_opt_in:
+        opt_in_yes: Áno
+        opt_in_no: Nie
+    international_opt_in:
+      title: Účasť na workshope pre učiteľov z mimo USA
+      intro: Ďakujeme, že ste obetovali Váš čas a absolvovali tréning podľa osnov
+        na Code.org. Naša misia - priniesť možnosť naučiť sa informatiku všetkým deťom
+        po celom svete - by nebola možná bez Vašej podpory.
+      instructions: Vyplňte prosím formulár nižšie s potvrdením, že 1) ste sa zúčastnili
+        tréningového workshopu organizovaného jedným z našich medzinárodných Code.org
+        partnerov, a 2) súhlasíte so zdieľaním Vašich údajov s naším medzinárodným
+        Code.org partnerom vo Vašej krajine, aby sme Vám mohli pomôcť pri Vašej práci
+        - výučbe informatiky.
+      thanks: Ďakujeme Vám za odoslanie! Tešíme sa, že Vás budeme môcť podporovať
+        pri spoznávaní Code.org a našich nástrojov. Dajte nám prosím vedieť Vaše nápady,
+        otázky a postrehy emailom na support@code.org alebo príspevkom vo fóre pre
+        učiteľov!
+    logged_out:
+      heading: Ďakujeme Vám za prejavený záujem o Vzdelávací program pre profesionálov!
+      body: Ak chcete začať, musíte sa najprv prihlásiť do Vášho účtu na Code.org.
+        Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku, navštívte
+        <a href="%{url}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
+    not_teacher:
+      body: Ďakujeme Vám za záujem o Vzdelávací program pre profesionálov na Code.org!
+        Momentálne ste prihlásený ako študent. Vytvorte si prosím <a href="%{create_teacher}">konto
+        pre školiteľa</a> alebo prejdite do <a href="%{user_settings}">nastavení užívateľa</a>
+        pre zmenu typu Vášho konta na zo študentského na učiteľské.
+      more: Pre viac informácií o programe predtým, než začnete vypĺňať prihlášku,
+        navštívte <a href="%{pl_overview}">Prehľad Vzdelávacieho programu pre profesionálov</a>.
+    no_teacher_email:
+      body: Váš účet nemá priradenú emailovú adresu. Navštívte prosím <a href="%{user_registration}">stránku
+        s nastaveniami Vášho účtu</a> pre pridanie emailovej adresy predtým, než vyplníte
+        tento formulár.
   cookie_banner:
     message: Prehliadaním našej stránky alebo kliknutím na "Súhlasím" súhlasite s
       uložením cookies na Vašom počítači alebo zariadení.

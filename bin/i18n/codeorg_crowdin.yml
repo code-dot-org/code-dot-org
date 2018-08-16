@@ -29,9 +29,15 @@ files: [
   # files or directories for ignore
   # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
   #
+  # hourofcode content is handled by the hourofcode-specific sync
+  # dsls content is temporarily disabled until it can be refactored
+  # authord hints, instructions, and markdown instructions should be redacted
+  #   rather than uploading the source directly
   "ignore" : [
     "/source/hourofcode/**",
-    "/source/dashboard/dsls.yml"
+    "/source/dashboard/authored_hints.yml",
+    "/source/dashboard/instructions.yml",
+    "/source/dashboard/markdown_instructions.yml",
   ],
 
   #
@@ -40,6 +46,12 @@ files: [
   #
   "update_option" : "update_as_unapproved"
  }, {
+  # config for redacted content
+  "source" : "/redacted/**/*.yml",
+  "translation" : "/%language%/**/%original_file_name%",
+  "update_option" : "update_as_unapproved"
+ }, {
+  # config for json content
   "source" : "/source/**/*.json",
   "translation" : "/%language%/**/%original_file_name%",
   "ignore" : [

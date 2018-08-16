@@ -6,47 +6,46 @@ de:
       Loops: Schleifen
       Functions: Funktionen
       Color: Farbe
-      Brushes: Brushes
+      Brushes: Bürsten
       Math: Mathematik
       Logic: Logik
       Variables: Variablen
-      Number: Number
+      Number: Nummer
       String: String
-      Image: Image
+      Image: Bild
       Boolean: Boolean
       Conditionals: Bedingungen
       Events: Ereignisse
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Spiel/Punktzahl
+      Comments: Kommentare
+      Category: Kategorie
+      Prebuilt: Vorgefertigt
       Text: Text
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
+      Picker: Sammler
+      Comment: Kommentar
+      'Variables ': 'Variablen '
+      everythingelse: allesandere
+      numbers: nummern
+      Numbers: Nummern
       Input: Eingabe
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
+      Default: Standard
+      World: Welt
+      Behaviors: Verhaltensweisen
+      Advanced: Erweitert
       Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Brush: Bürste
+      Make Sprite: Sprite erstellen
+      Movement: Bewegung
       Start: Start
-      Groups: Groups
+      Groups: Gruppen
       Booleans: Boolesche Werte
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Funktional
+      Predefined: Vordefiniert
       test: prüfe
       test2: test2
       Foo: Kram
       Name: Name
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: NEUE BAUSTEINE
+      'Functions ': 'Funktionen '
+      Game/Score: Spiel/Punktzahl
       Function: Funktion

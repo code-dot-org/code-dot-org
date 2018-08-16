@@ -1,4 +1,5 @@
 require 'open3'
+require 'tempfile'
 
 CODEORG_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_crowdin.yml")
 CODEORG_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_credentials.yml")
@@ -43,4 +44,53 @@ end
 
 def run_bash_script(location)
   run_standalone_script("bash #{location}")
+end
+
+def plugins_to_arg(plugins)
+  plugins.map {|name| "bin/i18n/plugins/#{name}.js"}.join(',')
+end
+
+def redact(source, dest, *plugins)
+  plugins = plugins_to_arg(plugins)
+  data = YAML.load_file(source)
+  stdout, _status = Open3.capture2(
+    [
+      'bin/i18n/node_modules/.bin/redact',
+      '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
+      '-p ' + plugins,
+    ].join(" "),
+    stdin_data: JSON.generate(data)
+  )
+  data = JSON.parse(stdout)
+  File.open(dest, "w+") do |file|
+    file.write(data.to_yaml(line_width: -1))
+  end
+end
+
+def restore(source, redacted, dest, *plugins)
+  plugins = plugins_to_arg(plugins)
+  source_data = YAML.load_file(source)
+  redacted_data = YAML.load_file(redacted)
+  source_json = Tempfile.new(['source', '.json'])
+  redacted_json = Tempfile.new(['redacted', '.json'])
+
+  source_json.write(JSON.generate(source_data))
+  redacted_json.write(JSON.generate(redacted_data))
+
+  stdout, _status = Open3.capture2(
+    [
+      'bin/i18n/node_modules/.bin/restore',
+      '-c bin/i18n/plugins/nonCommonmarkLinebreak.js',
+      '-p ' + plugins,
+      "-s #{source_json.path}",
+      "-r #{redacted_json.path}",
+    ].join(" ")
+  )
+  restored_data = JSON.parse(stdout)
+  File.open(dest, "w+") do |file|
+    file.write(restored_data.to_yaml(line_width: -1))
+  end
+
+  source_json.close
+  redacted_json.close
 end

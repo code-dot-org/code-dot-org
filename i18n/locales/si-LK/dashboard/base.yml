@@ -24,11 +24,11 @@ si:
         current_password: 'දවර්තමාන මුර පදය'
         locale: 'භාෂාව'
         age: 'වයස'
-        gender: 'ලිංගභේදය'
+        gender: 'ස්ත්‍රී/පුරුෂ භාවය'
         edit_header: 'ගිනුමේ තොරතුරු 	සංස්කරණය කරන්න'
         error:
           future: අනාගතයේදී විය නොහැකිය
-  hello: "හේලෝ ලෝකය"
+  hello: "Hello world"
   welcome_back: "%{name}, ඔබව නැවතත් පිළිගන්නවා"
   your_professional_learning_plan: "ඔබේ වෘත්තිමය ඉගෙනුම් සැලැස්ම"
   see_your_learning_plan: "ඔබගේ ඉගෙනුම් සැලැස්ම දකින්න"
@@ -37,7 +37,6 @@ si:
   previous_page: පෙර පිටුව
   next_page: ඊළඟ පිටුව
   next_resource: ඊළඟ සම්පත
-  done_with_module: Done with this Learning Module
   cancel: "අවලංගු කරන්න"
   okay: "හරි"
   heading_x_of_y: "%{heading} (පිටුව %{y} න් %{x})"
@@ -46,7 +45,6 @@ si:
       label: 'ගුරුවරයෙක් එකතු කරන්න:'
       placeholder: "Code එකෙහි කණ්ඩය (ABCDEF)"
       instructions: "ඔබේ ගුරුවරයා විසින් ඔබ හට ලබා දුන් අකුරු 6ක් ඇති කේතය සඳහන් කරන්න."
-      instructions_short: "Enter your 6 letter section code"
     submit: 'ගුරුවරයෙක් එකතු කරන්න'
   add_hint_form:
     placeholder: 'කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න'
@@ -59,7 +57,6 @@ si:
   courses: 'පාඨමාලාව'
   courses_page:
     title_student: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
-    title_teacher: "Teach Computer Science"
   unplugged_activity: 'අපේනුගත ක්‍රියාකාරකම'
   of: "ගේ"
   more: "වැඩි"
@@ -85,19 +82,16 @@ si:
     facebook: 'Facebook'
     windowslive: 'Microsoft ගිණුම'
     clever: 'දක්ෂ ගිණුම'
-    powerschool: 'Powerschool Account'
     forgot_password: 'ඔබගේ මුරපදය අමතකද?'
     need_confirmation: "තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?"
     need_unlock: "අගුළු හැරීමේ උපදෙස් ලැබී නැත් ද?"
     not_linked: "සමාවන්න, ඔබගේ Code.org ගිණුම %{provider} ට සම්බන්ධ වී නොමැත. ඔබට ඔබේ මුරපදය (password) යොදා ඇතුලත් විය හැක."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: 'සිසුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
     teacher_count: 'ගුරුවරුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
     overview: 'ගිණුමකට   අත්සන්වන්න  ඔබගේ ප්‍රගතිය බැලීමට නැතහොත් පාලනය කිරීමට.<a href="/">ඔබට විවිද අවදි ප්‍රහේලිකාවේ සොයන්න හැකය.</a>ගිණුමක් නොමැතිව ,නමුත්  ඔබට අත්සන්වන්න වෙනවා ගිණුමට  ඔබගේ ප්‍රගතිය  සහ  ව්‍යාපෘති දිගුකාලීනව තබා ගැනීමට.'
     hoc_already_signed_up_heading: 'ඇතුළත් නොවී ආරම්භ කරන්න'
     hoc_already_signed_up_content: 'ඔබ Hour of Code ඉගැන්වීමට ලියාපදිංචි වී ඇත! ඔබටත් ඔබගේ සිසුන් හටත් මෙම වැඩසටහන සඳහා සහභාගී වීමට Code Studio හි ලියාපදිංචි වීමට අවශ්‍යතාවයක් නැත. ආරම්භ වීමට, ඔබගේ පන්තිය සඳහා<a href="%{learn_url}">නිබන්ධනයක් තෝරා ගැනීමට</a> ඔවුන් හා ලින්ක් එක බෙදාගන්න.<br/><br/>ඔබ Hour of Code රසවිඳ තව දුරටත් යාමට කැමති නම්, ඔබට මුරපදයක් යොදා Code Studio ගිණුමක් සාඳා ඔබගේ සිසුන් එහි ඇති <a href="%{educate_url}">දිගු පාඨමාලා</a>හි යෙඳවිය හැකිය.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'අධ්‍යාපක මඟපෙන්වීම දකින්න'
     title: "Code.org සඳහා ලියාපදිංචි වන්න"
     school_name: 'පාසලේ නම (විකල්ප)'
@@ -115,50 +109,21 @@ si:
     valid_password: "මුර පදය වලංගුයි!"
     invalid_password: "Password එක අකුරු 6ට වැඩිවිය යුතුයි"
     mismatch_password: "යෙදු මුර පද දෙක සමාන වී නැත"
-    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
-    under_13_consent: "If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
     student_terms: "මම එකග වෙනවා  Code.org එකත්  සමග එහි <a href='http://code.org/tos'>නීති සහ රෙගුලාසි </a>මට  13ට  වඩා අඩුනම් වයස.මම තහවරු  කරනවා මෙම පත්‍රිකාව මගේ දෙමාපියන්ගේ  හෝ නිත්‍යානුකුල බාරකරුගේ  අනුමැතිය ගත්  බව මෙම  Code.org සේවාව ලබාගනිම <br/><br/>විද්‍යුත් තැපෑලය ශිෂ්‍ය   පිට පතෙහි දක්වා නැත.ශිෂ්වයන්  කිසිම දිනෙක  විද්‍යුත් තැපෑලයක්  Code.org  වලින් නොලැබේ මුර පදය වෙනස් කිරීමට හැර.අපේ <a href='http://code.org/privacy'>පෞද්ගලික නිතිය </a>මෙම දත වලට \n\n"
     teacher_terms: "මම Code.org සේවා නියමයන් මගින් බැඳී සිටීමට එකඟ වෙමි. වැඩි විස්තර සඳහා, අපගේ රහස්‍ය ප්‍රතිපත්තිය බලන්න<a href='http://code.org/privacy'> රහස්‍ය ප්‍රතිපත්තිය </a>."
     additional_information: "ඔබට ඇතුලු වීමට තව තොරතුරු කිහිපයක් අවශ්‍යව ඇත."
-    user_type_button: "Update Account Type"
     user_type_label: "ගිණුම් වර්ගය"
     user_type_teacher: "ගුරු වරයා"
     user_type_student: "ශිෂ්‍යයා"
     field_is_required: "අවශ්‍යයි"
     accept_terms: "ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය"
-    error: "An error occurred."
-    email_preference_question: "Can we email you about updates to our courses, local opportunities, or other computer science news?"
-    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: "ඔව්"
     email_preference_no: "නැහැ"
-    email_preference_required: "You must specify an email preference."
   school_info:
-    title: 'School Information (optional)'
-    school_country: 'School Country'
-    select_school_type: 'School Type'
-    charter: 'Charter'
-    private: 'Private'
-    public: 'Public'
-    homeschool: 'Homeschool'
-    after_school: 'After School'
     other: 'වෙනත්'
-    state: 'State'
-    district: 'District'
-    other_district_not_listed: 'Other district not listed above'
-    district_name: 'District Name'
-    school: 'School'
-    other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
-    school_zip: 'School Zip Code'
-    school_address: 'School Address'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'ඔබට ගිණුමක් ඇති නම් ඇතුලු විය හැක'
     login: 'විද්‍යුත් තැපැල'
-    login_username: 'Email or Username'
     password: 'මුර පදය'
     remember: 'මාව මතක තබා ගන්න'
     submit: 'පුරන්න'
@@ -174,16 +139,12 @@ si:
     login: 'පුරන්න'
     invalid_login: 'ඔබ විසින් ඇතුලත් කල තොරතුරු වැරදියි. නැවතත් උත්සහ කරන්න'
     pair_programming: 'මා සමග සහායකයෙකු ඇත'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'ඔබගේ මුරපදය අමතකද?'
       instructions: "ඔබගේ ඊ-තැපැල් ලිපිනය පහත ඇතුලත් කළ පසු අපි ඔබට මුරපදය යළි සැකසීමෙී උපදෙස් එවන්නම්."
       email: 'විද්‍යුත් තැපැල් ලිපිනය'
-      submit: 'යොමු කරන්න'
-    reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
-      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
+      submit: 'යොමුකරන්න'
     change_form:
       title: 'ඔබේ මුරපදය වෙනස් කරන්න'
       new_password: 'නව මුරපදය'
@@ -199,24 +160,10 @@ si:
       මෙම පාඩම් මාලාව විනෝදාත්මක,සිත් ඇදගන්න සුළු සහ පරිගණක විද්‍යාවේ ඇති මුලික සංකල්ප පහසු, මර්ගොපදේෂි,ක්‍රීඩා ආකාරයේ අත්දැකීම් මගින් ඉගැන්වීම සිදු කරයි. කේතනය කිරීමට Bill Gates මහතාගෙන්, Mark Zuckerberg මහතාගෙන්, Angry Birds ක්‍රීඩාවෙන් හෝ Plants vs. Zombies ක්‍රීඩාවෙන් ඉගෙනගන්න! :-)
       
       %{name}
-  parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
-  teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
   section:
-    your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: '%{section_code} with %{teacher_name}'
-    confirm:
-      remove: 'Are you sure you want to leave this section?'
-    remove: '(remove section)'
     type:
-      picture: 'Picture Password'
       word: 'රහස් පදය'
       email: 'විද්‍යුත් තැපැල'
-      google_classroom: 'Google Classroom'
-      clever: 'Clever'
   follower:
     invite_sent: 'ආරාධනාව යවන ලදී'
     added_teacher: '%{name} ඔබේ ගුරුවරයා ලෙස එක් කරන ලදි'
@@ -229,7 +176,6 @@ si:
       section_not_found: "'%{section_code}' කේතය මගින් ඔබේ අංශය සොයා ගත නොහැක."
       blank_code: "කරුණාකර Section Code එක ඇතුලත් කරන්න"
       cant_join_own_section: "ඔබට ඔබේම ඒකකයක් සඳහා එකතු විය නොහැකියි."
-      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: "\"Code.org\" හි නිවේදනයි: %{student_name} තවදුරටත් ඔබගේ ශිෂ්‍යකු නොවේ."
@@ -242,7 +188,7 @@ si:
     edit: 'සංස්කරණය කරන්න'
     edit_model: 'සංස්කරණය කරන්න %{model}'
     update: 'යාවත්කාලීන කරන්න'
-    submit: 'යොමු කරන්න'
+    submit: 'යොමුකරන්න'
     destroy: 'විනාශ කරන්න'
     back: 'ආපසු'
     confirm: 'ඔබට විශ්වාසද?'
@@ -250,12 +196,6 @@ si:
     updated: '%{model} සාර්ථකව යාවත්කාලීන කරන ලදී.'
     destroyed: '%{model} සාර්ථකව මකා දමන ලදී.'
     access_denied: '%{model} සඳහා ඔබට ප්‍රවේශ විය නොහැක.'
-  devise:
-    registrations:
-      user:
-        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
     header:
       finished_hoc: "මා Hour of Code අවසන් කරන ලදි"
@@ -265,45 +205,10 @@ si:
         artist: 'යමක් අඳින්න'
         calculate: 'යමක් ගණනය කරන්න'
         applab: 'App එකක් හදන්න'
-        gamelab: 'Make a Game Lab project'
-        weblab: 'Make a Web Lab (beta) project'
-      home: "Home"
-      my_dashboard: "My Dashboard"
       courses: "පාඨමාලාව"
-      course_catalog: "Course Catalog"
       project_gallery: "ව්යාපෘති"
-      sections: "Sections"
-      help_support: "Help and support"
-      report_bug: "Report bug"
-      teacher_community: "Teacher community"
-      professional_learning: "Professional Learning"
-      documentation: "Documentation"
-      tutorials: "Tutorials"
-      educate_overview: "Educator Overview"
-      educate_elementary: "Elementary School"
-      educate_middle: "Middle School"
-      educate_high: "High School"
-      educate_hoc: "පැයේ කේතය"
-      educate_partner: "Partner with Us"
-      educate_beyond: "Beyond Code.org"
-      educate_inspire: "Inspire a Student"
-      educate_community: "Online Community"
-      educate_tools: "Tools and Videos"
-      about_us: "About Us"
-      about_leadership: "Leadership"
-      about_donors: "Donors"
-      about_partners: "Partners"
-      about_team: "Full Team"
-      about_news: "Newsroom"
-      about_evaluation: "Evaluation"
-      about_jobs: "Jobs"
-      about_contact: "Contact Us"
-      about_faqs: "FAQs"
-      learn: "Learn"
+      educate_hoc: "Hour of Code"
       stats: "සංඛ්‍යාන"
-      help_us: "Help Us"
-      teach: "Teach"
-      about: "About"
     user:
       classroom: 'ගුරු මුල් පිටුව'
       district_dashboard: 'දිස්ත්‍රික්ක උපකරණ පුවරුව'
@@ -360,27 +265,12 @@ si:
     email_confirm_needed_required: 'ඔබේ විද්යුත් තැපැල් ලිපිනය %{email} තහවුරු කර නොමැත:'
     email_confirm_wrong_email: 'වැරදි විද්යුත් තැපැල් ලිපිනය'
     email_resend_confirm: 'තහවුරු උපදෙස් නැවත භාරදෙන්න'
-    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(ඔබට එය වෙනස් කිරීම අවශ්‍ය නොවේ නම් හිස්ව තබන්න)"
     current_password_hint: '(ඔබ සිදුකළ වෙනස්කම් තහවුරු කිරීමට දැනට භාවිතා කරන මුරපදය ලබාදෙන්න)'
     delete: 'ඔබගේ ගිණුම මකන්න'
     delete_text: "පහත බොත්තම ක්ලික් කිරීමෙන් ඔබගේ ගිණුම මකනු ඇත."
     delete_text_teacher_note: "සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ ගිණුම් ඉවත් නොවේ."
     delete_confirm: 'ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?'
-    deleted_user: 'deleted user'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
-    create_personal_login: 'Create a personal login'
-    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address'
-    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
-    enter_new_login_info: 'Enter your new login information'
-    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
-    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
-    update: "Update Account"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -429,31 +319,13 @@ si:
     print_certificate: "සහතිකය මුද්‍රණයකරන්න"
     announcement_title: "නිවේදන"
     announcement_message_fall2016_features: "අපි ගිම්හාන  ඍතුව ගතකලා, ඔබගේ ප්‍රතිචාරය නව ලක්ෂණ වලට.දැන් ඔබට  <a href=\"%{pp_url}\" target=\"_blank\">  බහුතරයක්   ශිෂ්‍යයන්ගේ  ප්‍රගතිය මැනීමට  </a>ඔව්න්  දෙදෙනෙකු  එකතුව එකම උපකරණය  බවිත කර <a href=\"%{csp_widgets_url}\" target=\"_blank\">හොදම අන්තර් ක්‍රියාකාරි උපකරණ</a> අපේ  CS මූලධර්ම පාඨමාලාව<i>ඕනෑම </i>  පංතියක .සහ ඔබේ ශිෂ්‍යාවන්ට  පුළුවන් <a href=\"%{unused_code_url}\" target=\"_blank\">තබාගන්න  බවිත නොකරපු කේතය.</a>එයාලගේ වැඩ පරාසයේ  ධෛර්ය්‍ය දෙන්න එයාලගේ  පරීක්ෂණ කිරීම සදහා.පරීක්ෂා කර බලන්න  අපේ නවතම ලක්ෂණ සහ ඔබගේ ප්‍රතිචාරය."
-    announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "වැඩිදුර ඉගෙන ගන්න"
     announcement_try_now_button: "දැන් අත්හදා බලන්න"
     announcement_host_an_hour_button: "Hour of Code වැඩසටහනක් සංවිධානය කරන්න"
-    announcement_watch_video_button: "Watch video"
     announcement_petition: "ඔබ ගුරුවරයෙකු වශයෙන් ඔබේ පාසලේ සෑම සිසුවෙකුටම පරිගණක විද්‍යාව පිලිබඳ අධ්‍යාපනය ලබා දෙන වැඩ පිලිවෙලක කොටස් කරුවෙකි. දැන් ඔබේ නියෝජිතයින්ට කතා කිරීමට කාලයයි. මෙම සතියේදි අධ්‍යාපනය පිලිබඳ ක්‍රියාධරයින්, ආණ්ඩුකාරවරු 28 දෙනෙක් සහ ඇමරිකාවේ ප්‍රධාන සමාගම් වල ප්‍රධානීන් පිරිසක් පෙර පාසලේ සිට අවුරුදු 12 දක්වා ළමුන්ගේ පරිගණක අධ්‍යාපනය වෙනුවෙන් මූල්‍ය පහසුකම් සපයන ලෙස එක්සත් ජනපදයේ කොන්ග්‍රසයට විවෘත ලිපියක් යැවීමට ගිවිස ගත්හ."
     announcement_petition_button: "ඔබේ නම එක් කරන්න"
-    announcement_go_beyond_button: "Go beyond"
-    announcement_apply_now: "Apply now"
     announcement_all: "teacher blog හි, නව අංග හා යාවත්කාලීන කිරීම් ගැන දැනගැනීමට <a href='%{teacher_blog_url}' target='_blank'>පසුගිය නිවේදන බලන්න.</a>"
     announcement_hoc_launch: "ලොවපුරා 180කට වැඩි රටවල් ගණනකින්, අධ්‍යපකයින් දහස් ගණනක් මෙම දෙසම්බර් මස 5-11 සතිය තුළ Hour of Code වැඩසටහන ඔස්සේ පරිගණක විද්‍යාව ඉගැන්වීම අරඹනු ඇත. පෙර වතාවන් වලට වැඩි සිසුන් ගණනක් මෙවර සහභාගී කරගැනීමට අප ඔබගේ දායකත්වය අවශ්‍ය වන අතර තවත් ගුරුවරුන් මේ සඳහා සම්බන්ධ වීමට පොළඹවමින් දැන්ම <a href='%{signup_url}' target='_blank'>ඔබේ Hour of Code වැඩසටහන ලියාපදිංචි කරන්න</a>."
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
-    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
-    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
-    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
-    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
-    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
-    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
-    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
-    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
-    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
-    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
-    announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
-    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
-    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning."
   move_students:
     new_section_dne: "සමාවෙන්න!, %{new_section_code} අංශය නොපවතී. කරුණාකර වෙනස් අංශ කේතයක් ඇතුල් කරන්න."
     section_code_cant_be_current_section: "වර්තමාන කොටස සහ නව කොටස සමාන නොවිය යුතුය."
@@ -462,7 +334,6 @@ si:
     student_not_found: "සිසුන් එක් අයෙක් හෝ ඊට වැඩි ගණනක් සොයා ගැනීමට නොහැකි විය."
     all_students_must_be_in_current_section: "සියලුම සිසුන් දැන් ඔබගේ කොටසට ඇතුළත් වී සිටිය යුතුය."
     already_enrolled_in_new_section: "මෙම ගුරුවරයා විසින් මෙම සිසුන් වෙනත් කොටසකට ඇතුලත් කර තිබෙන නිසා ඔබට මෙම සිසුන් ඉවත් කල නොහැකියි."
-    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
     description: "ඕනෑම කෙනෙකුට පරිගණක විද්යාව ඉගෙනගන්න පුළුවන්. කේතය සමඟ ක්රීඩා, යෙදුම් හා කලා කරන්න."
@@ -470,8 +341,6 @@ si:
   gender:
     male: 'පිරිමි'
     female: 'ගැහැණු'
-    non_binary: 'Non-binary'
-    not_listed: 'Preferred term not listed'
     none: 'පිළිතුරු නොදීමට කැමතියි'
   user_type:
     student: 'ශිෂ්‍යයා'
@@ -504,7 +373,6 @@ si:
     title: 'උදව්වක් අවශ්‍යද?'
     subtitle: 'මෙම වීඩියෝ සහ ඉඟි දකින්න'
     teacher: 'උත්තරය බලන්න'
-    teacher_no_solution: 'Stop seeing solution'
     auth_error: 'විසඳුමක දැකීමට ඔබට අවසර නැත.'
     submit: 'චිත්ර ශිල්පියා සිටින ස්ථානය යාවත්කාලීන කරන්න'
     direction: 'ආරම්භක දිශාව (අංශක වලින්)'
@@ -514,16 +382,10 @@ si:
     notes_coming_soon: 'මෙම වීඩියෝව සඳහා නෝට්ටු ළඟදීම බලාපොරොත්තු වන්න.'
     autoplay_option: 'ස්වයංක්‍රියව වීඩියෝ ධාවනය කරන්න'
     download: 'වීඩියෝව බාගන්න'
-    show_notes: 'Show Notes'
-    show_video: 'Show Video'
   compatibility:
     upgrade:
       unsupported_message: "ඔබේ වෙබ් ගවේශකය මේසඳහා අනුග්‍රහකරන්නේ නැත. මේසඳහා ඔබේ වෙබ් ගවේශකය <a href='%{supported_browsers_url}', target='_blank'>අනුග්‍රාහක වෙබ් ගවේශකයක් වෙත</a> යාවත්කාලීන් කරන්න. ඔබට පිටුව නැරබීමට උත්සාහ කල හැක, නමුත් ක්‍රියාකාරීත්වය බිඳ වැටීම අපේක්ෂා කළ හැක."
       link: "වැඩිදුර ඉගෙන ගන්න"
-      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
-      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'මෙම සාමාන්ය ප්රමාණයට වඩා වැඩි කාලයක් ගනිමින්...'
   try_reloading: 'මෙම පිටුව නැවත පිරවීමට උත්සාහ කරන්න'
   next_stage: 'සම්පූර්ණයි! ඉදිරි පියවර වෙත ගමන් කරන්න'
@@ -564,10 +426,10 @@ si:
       audience: 'වයස් 13+'
       cta: 'කෙසේදැයි දැනගන්න'
     hoc:
-      title: 'පැරණි වංකගිරිය'
+      title: 'සම්භාව්‍ය අවුල් ජාලය'
       body: "පරිගණක විද්යාව පිළිබඳ මූලික දේ උත්සාහ කරන්න. මිලියන ගණනක් එයට \nඋත්සාහයක් දී ඇත."
     flappy:
-      title: 'Flappy Code'
+      title: 'ෆ්ලැපි කේතය'
       body: 'විනාඩි 10 කට වඩා අඩු කාලයක් තුළ ඔබේම ක්‍රීඩාව ලියන්න අවශ්‍යද? අපගේ Flappy Code නිබන්දනය කියවන්න!'
     20-hour:
       title: 'කඩිනම් පාඨමාලා'
@@ -580,16 +442,9 @@ si:
       title: "ගැලරිය"
       body: "අපගේ පරිශීලකයන් විසින් නිර්මිත app සහ artist images පෙන්වන්න"
     gamelab:
-      title: "Game Lab"
-      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "වයස් 13+"
       cta: "කෙසේදැයි දැනගන්න"
-    hoc-encryption:
-      title: "Simple Encryption"
-      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "වයස් 13+"
       cta: "කෙසේදැයි දැනගන්න"
     frozen:
@@ -600,20 +455,12 @@ si:
       title: "Infinity Play Lab"
       body: "ක්‍රීඩා පරීක්ෂණාගාරය භාවිතයෙන් ඩිස්නි ඉන්ෆිනිටි චරිත ඇති කතාවක් හෝ ක්‍රීඩාවක් සාදන්න."
     minecraft:
-      title: "මයින්ක්‍රාෆ්ට්"
-      body: "Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න."
+      title: "Minecraft"
+      body: "Minecraft ලෝකය කේතය මගින් ගවේශණය කරන්න"
     minecraft2016:
-      title: "මයින්ක්‍රාෆ්ට්"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      title: "Minecraft"
     hero:
-      title: "මයින්ක්‍රාෆ්ට්"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
-    sports:
-      title: "Sports"
-      body: "Make a basketball game or mix and match across sports."
-    text-compression:
-      title: "Text Compression"
-      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
+      title: "Minecraft"
     unplugged:
       title: "එළිදැක්වූ පාඩම්"
       audience: "වයස අවුරුදු 4+"
@@ -621,11 +468,7 @@ si:
       body_short: "ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ , පරිගණකයක් අවශ්‍ය නැති, මෙම පාඩම් උත්සාහ කරන්න."
     unplugged_conditionals:
       title: "කන්ඩිෂනලස්"
-      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
-      title: "Widgets"
-      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Ages 14+"
       cta: "කෙසේදැයි දැනගන්න"
   gallery:
     students_drew_these_with_code: "සිසුන් මේවා ඇන්දේ කේත මගිනි!"
@@ -648,30 +491,24 @@ si:
     support: "උපකාර ලබාගන්න"
     support_url: "//support.code.org"
     help_resources: "උදවු සහ සම්පත්"
-    help_support: "Help and support"
-    documentation: "Documentation"
-    tutorials: "Tutorials"
   multi:
     wrong_title: "පිළිතුර වැරදියි"
     wrong_body: "ඔබ ඇතුලත් කල පිළිතුර වැරදියි. කරුණාකර නැවත උත්සාහ කරන්න!"
     correct_title: "නිවැරදියි"
     correct_body: "ඒ නිවැරදි පිළිතුර වේ."
     toofew_title: "පිළිතුරු ගණන අඩුයි."
-    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "ස්තුතියි ඔබට"
     wrong_body: "පිළිතුරු ඉදිරිපත් කිරීම සඳහා ඔබට ස්තුතියි."
     correct_title: "ස්තුතියි ඔබට"
     correct_body: "පිළිතුරු ඉදිරිපත් කිරීම සඳහා ඔබට ස්තුතියි."
     toofew_title: "පිළිතුරු ගණන අඩුයි."
-    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "ස්තුතියි ඔබට"
     wrong_body: "පිලිතුරු සැපයුවාට ස්තූතියි."
     correct_title: "ස්තුතියි ඔබට"
     correct_body: "පිලිතුරු සැපයුවාට ස්තූතියි."
     hide_survey_last_answer: "මෙය අඥාත සමීක්ශණයකි. අවසන් ප්‍රතිඵල සඳහා ඩෑශ්බෝඩය වෙත යන්න. ප්‍රතිඵල දක්වනු ලබන්නේ අවම සිසුන් 5ක් මේ සඳහා සහභාගී වී ඇතිනම් පමණි."
-    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "ස්තුතියි ඔබට"
     wrong_body: "පිලිතුරු සැපයුවාට ස්තූතියි."
@@ -730,31 +567,20 @@ si:
     reminder_desc: 'අප අපගේ <a href="%{tos_url}" target="_blank">සේවා කොන්දේසි</a>සහ<a href="%{privacy_url}" target="_blank">රහස්‍ය ප්‍රතිපත්ති</a> යාවත්කාලින කර ඇත. ඒවා පිළිගැනීමට පෙර හොදින් කියවා බලන්න. නිශ්චිතව අපගේ යාවත්කාලින කිරීමේ කොන්දේසි පිළිපදින තෙක් ඔබගේ සිසුවාට JavaScript ඉගැන්වීමේ අපගේ උපාංග නොලැබිය හැකි බව සලකන්න.'
     review_terms: "යාවත්කාලීන නියම සමාලෝචනය කරන්න"
   school_info_interstitial:
-    title: "We want to bring Computer Science to every student - help us track our progress!"
-    message: "Please enter your school information below."
-    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "සුරකින්න"
   race_interstitial:
     title: "විකල්ප: පරිගණක විද්‍යා ක්ෂේත්‍රය තුළ විවිධත්වය වර්ධනය කිරීමට අප දරන ප්‍රයත්නයේ ප්‍රගතිය මැනීමට අපට උදව් කරන්න"
     message: "ඔබේ ජාතිය සඳහන් කරන්න (අදාළ වන සියල්ල ලකුණු කරන්න)"
     races:
-      - 
-        white: "සුදු ජාතික"
-      - 
-        black: "අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත"
-      - 
-        hispanic: "ලතින් ඇමරිකානු"
-      - 
-        asian: "ආසියානු"
-      - 
-        hawaiian: "හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී"
-      - 
-        american_indian: "ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික"
-      - 
-        other: "වෙනත්"
-      - 
-        opt_out: "පිළිතුරු දීමට අකැමතියි"
-    submit: "යොමු කරන්න"
+      white: "සුදු ජාතික"
+      black: "අප්‍රිකානු ඇමෙරිකානු සම්භවයක් සහිත"
+      hispanic: "ලතින් ඇමරිකානු"
+      asian: "ආසියානු"
+      hawaiian: "හවායි ජාතික හෝ වෙනත් පැසිෆික් වාසී"
+      american_indian: "ඉන්දු ඇමෙරිකානු/ ඇලස්කා ජාතික"
+      other: "වෙනත්"
+      opt_out: "පිළිතුරු දීමට අකැමතියි"
+    submit: "යොමුකරන්න"
     decline: "වසන්න"
   zendesk_too_young_message: 'සමාවෙන්න,උපකාරක වෙබ් අඩවියට වයසින් බාල සිසුන් සඳහා sign in වියනොහක.සොයන්න <a href="http://support.code.org">support.code.org</a> signing in නොවී හෝ ඔබ වෙනුවෙන් දෙමාපියන් හෝ ගුරුවන් සම්බන්ද කරන්න.'
   progress:
@@ -764,7 +590,7 @@ si:
     completed_perfect: සාර්ථකව සම්පූර්ණ කර ඇත
     furthest_level_attempted: දුරතම මට්ටමට උත්සාහ කර ඇත
     assessment: ඇගයුම්
-    submitted: ඉදිරිපත් කලා
+    submitted: ඉදිරිපත් කළා
   studio:
     courses_working_on: "ඔබේ පාඨමාලා"
     completed_courses: "සම්පූර්ණ කරන ලද පාඨමාලා"
@@ -776,17 +602,10 @@ si:
     new: "අලුතෙන් තනන්න"
     rename: "නැවත නම් කරන්න"
     save: "සුරකින්න"
-    delete: "මකන්න"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    delete: "මකාදමන්න"
     exit: "පාඨමාලාව වෙත ආපසු යන්න"
     my_projects: "මගේ ව්යාපෘති"
     project_gallery: "ව්යාපෘති"
-    publish: "Publish"
-    unpublish: "Unpublish"
     share: "බෙදා ගන්න"
     share_title: ඔබගේ ව්යාපෘතිය බෙදාහරින්න
     share_copy_link: "මෙම සබැඳිය පිටපත් කරගන්න:"
@@ -794,7 +613,6 @@ si:
     share_u13_warning: "බෙදාහැරීමට පෙර ඔබේ ගුරුවරයාගෙන් උපදෙස් ගන්න. ඔබේ පාසැලේ අනිත් අය සමඟ පමණක් බෙදාගන්න."
     embed: "ඇතුල් කරන්න"
     advanced_share: "උසස් විකල්ප පෙන්වන්න"
-    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
     close: "වසන්න"
     more: "තවදුරටත්"
     name: "නම"
@@ -802,7 +620,6 @@ si:
     project_type: "ව්යාපෘති වර්ගය"
     help_text: "ක්ලික් <strong>යෙදුම සකසන්න</strong>හෝ<strong>යමක් අඳින්න</strong>නව ව්යාපෘතියක් ආරම්භ කරන්න<br/>. නැවත පැමිණ වැඩ ආරම්බ කල හැක."
     need_help: "ඔබේ නව ව්‍යාපෘතිය සඳහා උපදෙස් ලබාගැනීමට මෙම පාඨමාලා උත්සාහ කර බලන්න"
-    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     really_delete: 'මකනවා ද?'
     delete_yes: 'ඔව්'
     delete_no: 'නැහැ'
@@ -815,7 +632,6 @@ si:
     remix: 'නැවත සංකලනය'
     click_to_remix: "ඔබේම නව සංස්කරණයක් නිර්මාණය කිරීමට \"Remix\" මත ක්ලික් කරන්න!"
     edit_project: 'ව්යාපෘතිය සංස්කරණය කරන්න'
-    sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
       tos: "මෙම ව්‍යාපෘතිය විසින් <a href='http://code.org/tos'>සේවා කොන්දේසි</a> කඩ කිරීම පිලිබඳ වාර්තා වී ඇත. එම නිසා බෙදාගත නොහැකිය."
       policy_violation: "වෙනත් අය සමග බෙදා ගත නොහැකි තොරතුරු මෙම ව්‍යාපෘතියේ ඇතුලත් ව ඇත. මෙම ගැටලුව විසඳා ගැනීමට මෙහි අයිතිකරු ව විමසන්න."
@@ -851,59 +667,13 @@ si:
     peer_feedback: 'සමූහ ප්‍රතිචාර'
     outdated: 'කලින් ඉදිරිපත් කල සංස්කරණයක් සඳහා මෙම ප්‍රතිචාරය එක් කරන ලදී'
     review_in_progress: 'සමාලෝචනයට සූදානම්'
-    link_to_submitted_review: 'Link to submitted review'
-    reviews_unavailable: 'Reviews unavailable at this time'
-    review_count: 'You must complete %{review_count} reviews for this unit'
-    must_be_enrolled: 'You must be enrolled in this course to review peers'
-    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
-    review_submitted: 'Your peer review was submitted'
     review_new_submission: 'අලුත් ඉදිරිපත් කිරීමක් සමාලෝචනය කරන්න'
   flex_category:
     required: 'දළ විශ්ලේෂණය'
     content: 'අන්තර්ගතය'
     practice: 'ඉගැන්වීමේ පිළිවෙත්'
     peer_review: 'සමූහ විමර්ශනය'
-    ramp_up: 'Ramp-Up'
-    end_of_course_project: 'End of Course Project'
-    optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
-    csf_e_1: 'Ramp Up to Course E (Optional)'
-    csf_e_2: 'Course E Content'
-    csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Programming with Hardware'
-    csd6_2: 'Chapter 2: Building Physical Prototypes'
-    csd_survey: 'Post-Course Survey'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
-    cspAssessment: 'Chapter Assessment'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
     csp2_1_2018: '2වන ඒකකය: අංකිත තොරතුරු'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
-    dlp: 'Reflection Prompts'
   external_links:
     disclaimer: වියාචනය
     leaving_domain: දැන් ඔබට Code.org විසින් ක්‍රියාත්මක නොවන බව අඩවියකට, යොමුකරයි.
@@ -918,103 +688,35 @@ si:
     starwars_blocks_name: 'Star Wars: කේතය සමඟින් මන්දාකිණියක් තැනීම (කොටස්)'
     starwars_javascript_name: 'Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)'
     download_message: 'අන්තර්ජාලය නැතිව භාවිත කිරීමට %{app_name} ඇප් එක බාගත කරන්න (136MB)'
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'ජනේලය'
     mac: 'මැක් OS X'
-  plc:
-    preview_assignments:
-      content_focus_header: 'Content Focus Area'
-      practice_focus_header: 'Practice Focus Area'
-      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
-      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
-      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
-      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
-      confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'මෙම අදියර දැනට අහුරා ඇති නිසා මෙම අදියරේ අන්තර්ගතය දැකගත නොහැක. එහි වැඩ කිරමට පටන්ගත් විට හෝ ඔබගේ පිළිතුරු සමාලෝචනය කිරීමට අවශ්‍ය වූ අවස්ථාවේදී ඔබගේ ගුරුවරයාට එය අගුල් ඇරිය හැක.'
   hidden_stage: "ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න."
-  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
-  return_unit_overview: 'Go to unit overview'
   return_course_overview: 'ඒකක දළ විශ්ලේෂණයට යන්න'
-  view_all_units: 'View all units'
   pd:
-    survey:
-      number_teachers: 'Number of attending teachers'
-      response_count: 'Number of survey responses'
-      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
-      teacher_engagement: 'Teacher Engagement (out of 5)'
-      overall_success: 'Overall Success Score (out of 6)'
-      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
-      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
-      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
-      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
-      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
-      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
-      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
-      how_much_participated_s: 'During your workshop, how much did you participate?'
-      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
-      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
-      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
-      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
-      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
-      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
-      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
-      would_recommend_s: 'I would recommend this professional development to others.'
-      part_of_community_s: 'I feel like I am a part of a community of teachers.'
-      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
-      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
-      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
-      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
-      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+    form_labels:
+      email: 'විද්‍යුත් තැපැල'
+    form_entries:
+      gender:
+        male: 'පිරිමි'
+        female: 'ගැහැණු'
+        none: 'පිළිතුරු නොදීමට කැමතියි'
+      subjects:
+        cs: 'පරිගණක විද්‍යාව'
+        math: 'ගණිත'
+        science: 'විද්‍යාව'
+        la: 'භාෂා අධ්‍යනය'
+      resources:
+        kodable: 'කෝඩබල්'
+        lightbot: 'Lightbot'
+      robotics:
+        kodable: 'කෝඩබල්'
+      workshop_course:
+        csp: '''16-''17 පරිගණක විද්‍යාවේ මූලිකාංග'
+      email_opt_in:
+        opt_in_yes: 'ඔව්'
+        opt_in_no: 'නැහැ'
   cookie_banner:
-    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-    more_information: "See Code.org's Privacy Policy."
     accept: 'මම එකඟයි'
   gdpr_dialog:
-    heading: 'Do you agree to using a web site based in the United States?'
-    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-    link_intro: 'For details see our'
-    privacy_policy: 'privacy policy'
-    logout: 'Logout'
     yes: 'ඔව්'

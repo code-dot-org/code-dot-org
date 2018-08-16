@@ -1,0 +1,189 @@
+is:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Næsta
+            '"prev"': Fyrri
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Næsta
+            '"prev"': Fyrri
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: allt
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': hægri
+            '"left"': vinstri
+      Dancelab_randomColor:
+        text: einhver litur
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ekkert
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': uppi
+            '"down"': niðri
+            '"left"': vinstri
+            '"right"': hægri
+            '"space"': geimur
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': uppi
+            '"down"': niðri
+            '"left"': vinstri
+            '"right"': hægri
+            '"space"': geimur
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'satt'
+            'false': 'ósatt'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": eitthvað
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': hægri
+            '"left"': vinstri
+      gamelab_randColor:
+        text: einhver litur
+      gamelab_randomColor:
+        text: einhver litur
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': eitthvað
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"height"': hæð
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': hægri
+            '"left"': vinstri
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': uppi
+            '"down"': niðri
+            '"left"': vinstri
+            '"right"': hægri
+            '"space"': geimur
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": uppi
+            "'down'": niðri
+            "'left'": vinstri
+            "'right'": hægri
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': uppi
+            '"down"': niðri
+            '"left"': vinstri
+            '"right"': hægri
+            '"space"': geimur
+      Vanilla_randomColor:
+        text: einhver litur
