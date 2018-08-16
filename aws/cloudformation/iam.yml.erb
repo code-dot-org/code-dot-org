@@ -28,6 +28,9 @@ Resources:
             - 'autoscaling:CompleteLifecycleAction'
             - 'ec2:DescribeImages'
             - 'ec2:DescribeTags'
+            - 'logs:Create*'
+            - 'logs:PutLogEvents'
+            - 'logs:PutRetentionPolicy'
             - 'cloudwatch:PutMetricData'
             Resource: '*'
       - PolicyName: ServiceAccess
@@ -62,6 +65,7 @@ Resources:
             - "s3:PutObjectAcl"
             Resource:
             - "arn:aws:s3:::cdo-dist/adhoc/*"
+            - "arn:aws:s3:::cdo-build-logs/adhoc-*"
           - Effect: Allow
             Action:
             - 'cloudformation:SignalResource'
