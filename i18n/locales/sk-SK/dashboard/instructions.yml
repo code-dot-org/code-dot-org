@@ -428,10 +428,15 @@ sk:
       Crack a Caesar Cipher_instruction: Inštrukcie
       Crack a Caesar Cipher_2018_instruction: Inštrukcie
       Dance Party 1-validated_instruction: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Dance Party 1-validated_simple_instruction: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party Freeplay_instruction: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
+      Dance Party Freeplay_simple_instruction: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
       Dance Party Predict_instruction: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Dance Party Predict_simple_instruction: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Fish Tank 2-validated_instruction: Zmeňte Pracháča (kôpku slamy) na rybu.
+      Fish Tank 2-validated_simple_instruction: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 6-validated_instruction: Pridajte správanie k novému rybkinmu kamarátovi.
+      Fish Tank 6-validated_simple_instruction: Pridajte správanie k novému rybkinmu kamarátovi.
       FoodFight_instruction: Toto je príklad hry, ktorú môžete vytvoriť v hernom laboratóriu.
       FoodFight_2018_instruction: Toto je príklad hry, ktorú môžete vytvoriť v hernom laboratóriu.
       Function intro Ryan_instruction: Dvakrát použite funkciu „vybudovať most“ na vytvorenie cesty k fakli.
@@ -570,6 +575,7 @@ sk:
       Underground Mining Coal_instruction: Najcennejšie zdroje nájdete v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakľe a vyťaž aspoň 2 kusy uhlia.
       Underground Mining Coal_2018_instruction: Najcennejšie zdroje nájdete v podzemí, ale môže sa tam stmievať. Polož tam aspoň 2 fakľe a vyťaž aspoň 2 kusy uhlia.
       Virtual Pet 1 Predict_instruction: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Virtual Pet 1 Predict_simple_instruction: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       aE7_instruction: "Ak spravíte ďaľšiu takúto slučku, ale zabočíte doľava namiesto doprava, čo sa stane? \n\nViete to celé zopakovať pre nakreslenie tejto vlny?"
       aE8_instruction: "A teraz zopakujme celú vec štyrikrát pre vytvorenie tohto rámika obrázku. Pozor na rohy - nemôžete jednoducho zabočiť o 90 stupňov! \n\nAk zopakovanie 3 otočiek o 60 stupňov spraví polkruh, ktorý z týchto blokov spraví dodatočný štvrťkruh pre rohy?"
       beeDebugVideo1_instruction: Použite slučku "opakovať" pre pozbieranie všetkého nektáru.

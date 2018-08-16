@@ -294,13 +294,31 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    s3.list_object_versions(bucket: @bucket, prefix: key).versions.map do |version|
-      {
-        versionId: version.version_id,
-        lastModified: version.last_modified,
-        isLatest: version.is_latest
-      }
-    end
+    s3.list_object_versions(bucket: @bucket, prefix: key).
+      versions.
+      map do |version|
+        {
+          versionId: version.version_id,
+          lastModified: version.last_modified,
+          isLatest: version.is_latest
+        }
+      end
+  end
+
+  # Used for testing
+  def list_delete_markers(encrypted_channel_id, filename)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    s3.list_object_versions(bucket: @bucket, prefix: key).
+      delete_markers.
+      map do |delete_marker|
+        {
+          versionId: delete_marker.version_id,
+          lastModified: delete_marker.last_modified,
+          isLatest: delete_marker.is_latest
+        }
+      end
   end
 
   # Copies the given version of the file to make it the current revision.

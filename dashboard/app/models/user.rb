@@ -155,6 +155,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
+  after_create :set_multi_auth_status
 
   # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_PROVIDERS = %w(
@@ -619,6 +620,18 @@ class User < ActiveRecord::Base
     authentication_option&.user || User.find_by(provider: type, uid: id)
   end
 
+  def add_credential(type:, id:, email:, hashed_email:, data:)
+    return false unless migrated?
+    AuthenticationOption.create(
+      user: self,
+      email: email,
+      hashed_email: hashed_email,
+      credential_type: type,
+      authentication_id: id,
+      data: data
+    )
+  end
+
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
@@ -859,6 +872,35 @@ class User < ActiveRecord::Base
     end
 
     success
+  end
+
+  def update_primary_contact_info!(user: {email: nil, hashed_email: nil})
+    success = update_primary_contact_info(user: user)
+    raise "User's primary contact info was not updated successfully" unless success
+    success
+  end
+
+  def upgrade_to_personal_login(params)
+    if secret_word_account? && !valid_secret_words?(params[:secret_words])
+      error = params[:secret_words].blank? ? :blank_plural : :invalid_plural
+      errors.add(:secret_words, error)
+      return false
+    end
+
+    unless migrated?
+      params[:provider] = nil # Set provider to nil to mark the account as self-managed
+      return update(params)
+    end
+
+    email = params.delete(:email)
+    hashed_email = params.delete(:hashed_email)
+    should_update_contact_info = email.present? || hashed_email.present?
+    transaction do
+      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email}) if should_update_contact_info
+      update!(params)
+    end
+  rescue
+    false # Relevant errors are set on the user model, so we rescue and return false here.
   end
 
   def set_user_type(user_type, email = nil, email_preference = nil)
@@ -1238,6 +1280,10 @@ class User < ActiveRecord::Base
 
   def initial
     UserHelpers.initial(name)
+  end
+
+  def valid_secret_words?(words)
+    words == secret_words
   end
 
   # override the default devise password to support old and new style hashed passwords
