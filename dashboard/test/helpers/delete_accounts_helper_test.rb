@@ -1183,6 +1183,49 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # S3: cdo-v3-assets
+  #
+
+  test "AssetBucket: hard-deletes all of user's channels" do
+    # Here we are testing that for every one of the user's channels we
+    # ask AssetBucket to delete its contents.  To avoid interacting with S3
+    # in this test, we depend on the unit tests in test_source_bucket.rb to
+    # verify correct hard-delete behavior for that bucket.
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        AssetBucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        AssetBucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  test "AssetBucket: hard-deletes soft-deleted channels" do
+    storage_apps = PEGASUS_DB[:storage_apps]
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        storage_apps.where(id: [channel_id_a, channel_id_b]).update(state: 'deleted')
+
+        AssetBucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        AssetBucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  #
   # Testing our utilities
   #
 
