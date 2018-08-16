@@ -197,7 +197,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           oauth_token: auth_hash.credentials&.token,
           oauth_token_expiration: auth_hash.credentials&.expires_at,
           oauth_refresh_token: auth_hash.credentials&.refresh_token
-        }
+        }.to_json
       )
       unless success
         # This should never happen if other logic is working correctly, so notify
