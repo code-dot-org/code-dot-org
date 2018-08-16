@@ -1,12 +1,12 @@
 {
   "category": "",
   "config": {
-    "func": "teleportTo",
-    "blockText": "set position {POSITION}",
+    "func": "push",
+    "blockText": "set velocity {VECTOR}",
     "args": [
       {
-        "name": "POSITION",
-        "type": "Location"
+        "name": "VECTOR",
+        "type": "Sprite"
       }
     ],
     "methodCall": true,

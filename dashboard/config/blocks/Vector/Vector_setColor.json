@@ -1,12 +1,12 @@
 {
   "category": "",
   "config": {
-    "func": "teleportTo",
-    "blockText": "set position {POSITION}",
+    "func": "setColor",
+    "blockText": "set color to {COLOR}",
     "args": [
       {
-        "name": "POSITION",
-        "type": "Location"
+        "name": "COLOR",
+        "type": "Colour"
       }
     ],
     "methodCall": true,
