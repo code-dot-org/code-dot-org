@@ -881,6 +881,8 @@ class User < ActiveRecord::Base
   end
 
   def upgrade_to_personal_login(params)
+    return false unless student?
+
     if secret_word_account? && !valid_secret_words?(params[:secret_words])
       error = params[:secret_words].blank? ? :blank_plural : :invalid_plural
       errors.add(:secret_words, error)
