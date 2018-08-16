@@ -1,0 +1,44 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "setVisibleEach",
+    "blockText": "set {THIS} visibility to {VISIBILITY}",
+    "args": [
+      {
+        "name": "THIS",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "Circle",
+            "\"circle\""
+          ],
+          [
+            "Wiggles",
+            "\"wiggles\""
+          ],
+          [
+            "Alien",
+            "\"alien\""
+          ]
+        ]
+      },
+      {
+        "name": "VISIBILITY",
+        "options": [
+          [
+            "visible",
+            "true"
+          ],
+          [
+            "invisible",
+            "false"
+          ]
+        ]
+      }
+    ],
+    "methodCall": true
+  }
+}

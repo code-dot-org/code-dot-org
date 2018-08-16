@@ -82,6 +82,9 @@ Dashboard::Application.configure do
   config.pretty_apps = false
 
   config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Cee.new
+  require 'syslog/logger'
+  config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode

@@ -2,7 +2,22 @@
   "category": "Music",
   "config": {
     "func": "getTime",
-    "blockText": "time elapsed",
+    "blockText": "{UNIT} elapsed",
+    "args": [
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "Measures",
+            "\"measures\""
+          ],
+          [
+            "Seconds",
+            "\"seconds\""
+          ]
+        ]
+      }
+    ],
     "returnType": "Number"
   }
 }

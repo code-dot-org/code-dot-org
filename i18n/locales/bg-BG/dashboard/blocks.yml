@@ -1,0 +1,189 @@
+bg:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Напред
+            '"prev"': Предишен
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Напред
+            '"prev"': Предишен
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: всички
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': надясно
+            '"left"': наляво
+      Dancelab_randomColor:
+        text: случаен цвят
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Без
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+            '"space"': космос
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+            '"space"': космос
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'вярно'
+            'false': 'грешно'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": случаен
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': надясно
+            '"left"': наляво
+      gamelab_randColor:
+        text: случаен цвят
+      gamelab_randomColor:
+        text: случаен цвят
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': случаен
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': надясно
+            '"left"': наляво
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+            '"space"': космос
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": нагоре
+            "'down'": надолу
+            "'left'": наляво
+            "'right'": надясно
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+            '"space"': космос
+      Vanilla_randomColor:
+        text: случаен цвят
