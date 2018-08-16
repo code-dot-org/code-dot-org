@@ -1009,6 +1009,29 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  test "does not change time on previously unfeatured projects" do
+    student = create :student
+    featured_time = Time.now - 20
+    unfeatured_time = Time.now - 10
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: featured_time,
+        unfeatured_at: unfeatured_time
+
+      refute featured_project.featured?
+      assert_equal unfeatured_time.utc.to_s,
+        featured_project.unfeatured_at.utc.to_s
+
+      student.destroy
+
+      featured_project.reload
+      refute featured_project.featured?
+      assert_equal unfeatured_time.utc.to_s,
+        featured_project.unfeatured_at.utc.to_s
+    end
+  end
+
   #
   # Testing our utilities
   #
