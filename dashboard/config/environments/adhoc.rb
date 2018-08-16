@@ -41,6 +41,7 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
 
+  # Log condensed lines to syslog for centralized logging.
   config.lograge.enabled = true
   config.lograge.formatter = Lograge::Formatters::Cee.new
   require 'syslog/logger'
