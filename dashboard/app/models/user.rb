@@ -2089,7 +2089,8 @@ class User < ActiveRecord::Base
 
     # Unfeature any featured projects owned by the user
     FeaturedProject.
-      where(storage_app_id: channel_ids).
+      where(storage_app_id: channel_ids, unfeatured_at: nil).
+      where.not(featured_at: nil).
       update_all(unfeatured_at: Time.now)
 
     # Soft-delete all of the user's channels
