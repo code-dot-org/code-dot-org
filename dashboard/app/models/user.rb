@@ -2099,6 +2099,8 @@ class User < ActiveRecord::Base
   end
 
   # Gets the user's user_storage_id from the pegasus database, if it's available.
+  # Note: Known that this duplicates some logic in storage_id_for_user_id, but
+  # that method is globally stubbed in tests :cry: and therefore not very helpful.
   def user_storage_id
     @user_storage_id ||= PEGASUS_DB[:user_storage_ids].where(user_id: id).first&.[](:id)
   end
