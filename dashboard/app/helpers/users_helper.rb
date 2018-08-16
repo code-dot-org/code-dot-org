@@ -10,8 +10,10 @@ module UsersHelper
   def check_and_apply_oauth_takeover(user)
     if session['clever_link_flag'].present? && session['clever_takeover_id'].present?
       uid = session['clever_takeover_id']
+      provider = session['clever_link_flag']
+
       # TODO: validate that we're not destroying an active account?
-      existing_account = User.find_by_credential(type: session['clever_link_flag'], id: uid)
+      existing_account = User.find_by_credential(type: provider, id: uid)
 
       # Move over sections that students follow
       if user.student? && existing_account
@@ -23,7 +25,7 @@ module UsersHelper
       existing_account.destroy! if existing_account
       if user.migrated?
         user.add_credential(
-          type: session['clever_link_flag'],
+          type: provider,
           id: uid,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -32,7 +34,7 @@ module UsersHelper
           }
         )
       else
-        user.provider = session['clever_link_flag']
+        user.provider = provider
         user.uid = uid
         user.oauth_token = session['clever_takeover_token']
         user.save
