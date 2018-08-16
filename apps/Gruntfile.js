@@ -10,7 +10,6 @@ var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
   var buildTimeLogger = logBuildTimes(grunt);
