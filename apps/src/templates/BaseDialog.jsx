@@ -13,6 +13,7 @@ export default class BaseDialog extends React.Component {
     uncloseable: PropTypes.bool,
     hideCloseButton: PropTypes.bool,
     handleKeyDown: PropTypes.func,
+    // For use in react-storybook; allows rendering dialog inline in story tables.
     hideBackdrop: PropTypes.bool,
     fullWidth: PropTypes.bool,
     fullHeight: PropTypes.bool,
@@ -62,21 +63,16 @@ export default class BaseDialog extends React.Component {
 
   render() {
     if (!this.props.isOpen && !this.props.hideBackdrop) {
-      return <div></div>;
+      return <div/>;
     }
 
     let bodyStyle, modalBodyStyle, xCloseStyle;
-    if (this.props.hideBackdrop) {
-      bodyStyle = {
-        position: 'initial',
-        marginLeft: 0,
-      };
-    }
     if (this.props.fullWidth) {
-      bodyStyle = Object.assign({}, bodyStyle, {
+      bodyStyle = {
+        ...bodyStyle,
         width: '90%',
         marginLeft: '-45%'
-      });
+      };
     }
     if (this.props.fullHeight) {
       bodyStyle = {
@@ -100,10 +96,11 @@ export default class BaseDialog extends React.Component {
         overflowY: (this.props.fixedHeight || this.props.fullHeight) ? 'hidden' : 'auto',
         borderRadius: 4,
       };
-      bodyStyle = Object.assign({}, bodyStyle, {
+      bodyStyle = {
+        ...bodyStyle,
         width: this.props.fixedWidth || 700,
         marginLeft: (-this.props.fixedWidth / 2) || -350,
-      });
+      };
       xCloseStyle = {
         position: 'absolute',
         top: 0,
@@ -117,7 +114,14 @@ export default class BaseDialog extends React.Component {
       modalClassNames = "";
       modalBodyClassNames = "";
     }
-    bodyStyle = { ...bodyStyle, ...this.props.style };
+    bodyStyle = {
+      ...bodyStyle,
+      ...(this.props.hideBackdrop && {
+        position: 'initial',
+        marginLeft: 0,
+      }),
+      ...this.props.style
+    };
     let body = (
       <div
         style={bodyStyle}

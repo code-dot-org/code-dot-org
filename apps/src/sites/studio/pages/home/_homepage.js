@@ -11,12 +11,14 @@ import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
   setStageExtrasScriptIds,
-  setOAuthProvider,
+  setAuthProviders,
   beginEditingNewSection,
+  setShowVersionMenu,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(showHomepage);
 
@@ -33,7 +35,8 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
-  store.dispatch(setOAuthProvider(homepageData.provider));
+  store.dispatch(setAuthProviders(homepageData.providers));
+  store.dispatch(setShowVersionMenu(experiments.isEnabled(experiments.VERSION_MENU)));
 
   let courseId;
   let scriptId;
@@ -164,6 +167,9 @@ function getTeacherAnnouncement(override) {
     type: "bullhorn",
     id: "youtube_nocookie"
   };
+
+  // But for now, no announcement (unless there's an override).
+  announcement = null;
 
   // Optional override of teacher announcement (typically via DCDO).
   // Note that teacher_announce_type is optional.

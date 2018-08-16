@@ -104,9 +104,33 @@ module Pd
           'sampleSelect' => {
             text: 'a label',
             answer_type: ANSWER_SINGLE_SELECT,
-            options: %w(One Two Three)
+            options: %w(One Two Three),
+            other_text: nil
           }
         }
+        assert_equal expected_summary, question.summarize
+      end
+
+      test 'summarize_with_other' do
+        question = SelectQuestion.new(
+          id: 1,
+          type: TYPE_RADIO,
+          name: 'sampleSelectWithOther',
+          text: 'pick one',
+          options: %w(A B C),
+          other_text: 'Other',
+          allow_other: true
+        )
+
+        expected_summary = {
+          'sampleSelectWithOther' => {
+            text: 'pick one',
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(A B C),
+            other_text: 'Other'
+          }
+        }
+
         assert_equal expected_summary, question.summarize
       end
     end

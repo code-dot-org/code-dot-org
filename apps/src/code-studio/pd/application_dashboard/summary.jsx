@@ -5,11 +5,10 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
-import RegionalPartnerDropdown from './regional_partner_dropdown';
+import RegionalPartnerDropdown, {RegionalPartnerPropType} from '../components/regional_partner_dropdown';
 import ApplicantSearch from './applicant_search';
 import AdminNavigationButtons from './admin_navigation_buttons';
 import Spinner from '../components/spinner';
-import {RegionalPartnerPropType} from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
@@ -53,7 +52,7 @@ export class Summary extends React.Component {
     this.setState({loading: true});
 
     let url = '/api/v1/pd/applications';
-    if (this.props.isWorkshopAdmin) {
+    if (this.props.showRegionalPartnerDropdown) {
       url += `?${$.param({regional_partner_value: regionalPartnerFilter.value})}`;
     }
 
@@ -121,7 +120,7 @@ export class Summary extends React.Component {
 }
 
 export default connect(state => ({
-  regionalPartnerFilter: state.regionalPartnerFilter,
-  isWorkshopAdmin: state.permissions.workshopAdmin,
-  showRegionalPartnerDropdown: state.regionalPartners.length > 1
+  regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
+  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
+  showRegionalPartnerDropdown: state.regionalPartners.regionalPartners.length > 1
 }))(Summary);

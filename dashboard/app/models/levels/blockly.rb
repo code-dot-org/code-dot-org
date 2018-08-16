@@ -344,9 +344,13 @@ class Blockly < Level
     options.freeze
   end
 
-  def get_localized_property(property_name)
+  # @param resolve [Boolean] if true (default), localize property using I18n#t.
+  #   if false, just return computed property key directly.
+  def get_localized_property(property_name, resolve: true)
     if should_localize? && try(property_name)
-      I18n.t("data.#{property_name.pluralize}.#{name}_#{property_name.singularize}", default: nil)
+      key = "data.#{property_name.pluralize}.#{name}_#{property_name.singularize}"
+      return key unless resolve
+      I18n.t(key, default: nil)
     end
   end
 
@@ -354,7 +358,7 @@ class Blockly < Level
     get_localized_property("failure_message_overrides")
   end
 
-  def localized_markdown_instructions
+  def localized_long_instructions
     get_localized_property("markdown_instructions")
   end
 
@@ -362,14 +366,16 @@ class Blockly < Level
     return unless authored_hints
 
     if should_localize?
-      translations = get_localized_property("authored_hints")
+      authored_hints_key = get_localized_property("authored_hints", resolve: false)
 
-      return unless translations.instance_of? Hash
+      return unless authored_hints_key
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
-        next if hint['hint_markdown'].nil? || hint['hint_id'].nil?
+        # Skip empty hints, or hints with videos (these aren't translated).
+        next if hint['hint_markdown'].nil? || hint['hint_id'].nil? || hint['hint_video'].present?
 
-        translated_text = translations.try(:[], hint['hint_id'].to_sym)
+        translated_text = hint['hint_id'].empty? ? nil :
+          I18n.t(hint['hint_id'], scope: authored_hints_key, default: nil)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -379,7 +385,7 @@ class Blockly < Level
 
         hint
       end
-      JSON.generate(localized_hints)
+      JSON.generate(localized_hints.compact)
     else
       hints = JSON.parse(authored_hints).map do |hint|
         if hint['hint_video'].present?
@@ -391,7 +397,7 @@ class Blockly < Level
     end
   end
 
-  def localized_instructions
+  def localized_short_instructions
     if custom?
       loc_val = get_localized_property("instructions")
       unless I18n.en? || loc_val.nil?
@@ -399,7 +405,7 @@ class Blockly < Level
       end
     else
       val = [game.app, game.name].map do |name|
-        I18n.t("data.level.instructions").try(:[], "#{name}_#{level_num}".to_sym)
+        I18n.t("data.level.instructions.#{name}_#{level_num}", default: nil)
       end.compact.first
       return val unless val.nil?
     end
@@ -407,7 +413,7 @@ class Blockly < Level
 
   def localized_toolbox_blocks
     if should_localize? && toolbox_blocks
-      block_xml = Nokogiri::XML(toolbox_blocks, &:noblanks)
+      block_xml = Nokogiri::XML(localize_function_blocks(toolbox_blocks), &:noblanks)
       block_xml.xpath('//../category').each do |category|
         name = category.attr('name')
         localized_name = I18n.t("data.block_categories.#{name}", default: nil)
@@ -415,6 +421,23 @@ class Blockly < Level
       end
       return block_xml.serialize(save_with: XML_OPTIONS).strip
     end
+  end
+
+  def localize_function_blocks(blocks)
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
+      name = function.at_xpath('./title[@name="NAME"]')
+      next unless name
+      localized_name = I18n.t("data.function_names.#{name.content}", default: nil)
+      name.content = localized_name if localized_name
+    end
+    block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
+      mutation = function.at_xpath('./mutation')
+      next unless mutation
+      localized_name = I18n.t("data.function_names.#{mutation.attr('name')}", default: nil)
+      mutation.set_attribute('name', localized_name) if localized_name
+    end
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   def self.base_url
@@ -458,9 +481,7 @@ class Blockly < Level
   end
 
   def shared_blocks
-    Rails.cache.fetch("blocks/#{type}", force: !Script.should_cache?) do
-      Block.where(level_type: type).map(&:block_options)
-    end
+    Block.for(type)
   end
 
   def shared_functions

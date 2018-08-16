@@ -1,0 +1,32 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "whenPeak",
+    "blockText": "when {RANGE} peak",
+    "args": [
+      {
+        "name": "RANGE",
+        "options": [
+          [
+            "bass",
+            "0"
+          ],
+          [
+            "mid",
+            "1"
+          ],
+          [
+            "treble",
+            "2"
+          ]
+        ]
+      }
+    ],
+    "eventBlock": true,
+    "color": [
+      140,
+      1,
+      0.74
+    ]
+  }
+}

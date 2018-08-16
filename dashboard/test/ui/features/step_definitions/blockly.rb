@@ -201,6 +201,13 @@ Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, class_name|
   expect(classes.include?(class_name)).to eq(false)
 end
 
+Then /^block "([^"]*)" contains text "(.*?)"$/ do |block_id, text|
+  block = @browser.find_element(:css, "[block-id='#{get_block_id(block_id)}']")
+  # Replace non-breaking spaces with normal spaces
+  given_text = block.attribute('textContent').tr("\u00A0", ' ')
+  expect(given_text).to include(text)
+end
+
 Then /^the modal function editor is closed$/ do
   expect(modal_dialog_visible).to eq(false)
 end

@@ -1,11 +1,12 @@
 import React from 'react';
 import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {combineReducers, createStore} from 'redux';
-import manageStudents, {RowType, blankStudentTransfer} from './manageStudentsRedux';
+import manageStudents, {
+  RowType,
+  blankStudentTransfer
+} from './manageStudentsRedux';
 import teacherSections from '../teacherDashboard/teacherSectionsRedux';
 import sectionData from '@cdo/apps/redux/sectionDataRedux';
-import {Provider} from 'react-redux';
 
 const initialState = {
   manageStudents: {
@@ -228,93 +229,83 @@ const cleverData = [
 ];
 
 export default storybook => {
-  const store = createStore(combineReducers({manageStudents, teacherSections, sectionData}), initialState);
   storybook
     .storiesOf('ManageStudentsTable', module)
+    .withReduxStore({manageStudents, teacherSections, sectionData}, initialState)
     .addStoryTable([
       {
         name: 'Table for email accounts',
         description: 'Ability to edit/delete all data including the password',
         story: () => (
-          <Provider store={store}>
-            <UnconnectedManageStudentsTable
-              studentData={passwordAccountData}
-              editingData={{}}
-              loginType={SectionLoginType.email}
-              addStatus={{}}
-              transferData={blankStudentTransfer}
-              transferStatus={{}}
-              sectionId={53}
-            />
-          </Provider>
+          <UnconnectedManageStudentsTable
+            studentData={passwordAccountData}
+            editingData={{}}
+            loginType={SectionLoginType.email}
+            addStatus={{}}
+            transferData={blankStudentTransfer}
+            transferStatus={{}}
+            sectionId={53}
+          />
         )
       },
       {
         name: 'Table for word accounts',
         description: 'Ability to edit/delete all data and reset the secret word',
         story: () => (
-          <Provider store={store}>
-            <UnconnectedManageStudentsTable
-              studentData={wordAccountData}
-              editingData={{}}
-              loginType={SectionLoginType.word}
-              addStatus={{}}
-              transferData={blankStudentTransfer}
-              transferStatus={{}}
-              sectionId={53}
-            />
-          </Provider>
+          <UnconnectedManageStudentsTable
+            studentData={wordAccountData}
+            editingData={{}}
+            loginType={SectionLoginType.word}
+            addStatus={{}}
+            transferData={blankStudentTransfer}
+            transferStatus={{}}
+            sectionId={53}
+          />
         )
       },
       {
         name: 'Table for picture accounts',
         description: 'Ability to edit/delete all data and reset the secret picture',
         story: () => (
-          <Provider store={store}>
-            <UnconnectedManageStudentsTable
-              studentData={pictureAccountData}
-              editingData={{}}
-              loginType={SectionLoginType.picture}
-              addStatus={{}}
-              transferData={blankStudentTransfer}
-              transferStatus={{}}
-              sectionId={53}
-            />
-          </Provider>
+          <UnconnectedManageStudentsTable
+            studentData={pictureAccountData}
+            editingData={{}}
+            loginType={SectionLoginType.picture}
+            addStatus={{}}
+            transferData={blankStudentTransfer}
+            transferStatus={{}}
+            sectionId={53}
+          />
         )
       },
       {
         name: 'Table for Google accounts',
         description: 'Read only table',
         story: () => (
-          <Provider store={store}>
-            <UnconnectedManageStudentsTable
-              studentData={googleData}
-              editingData={{}}
-              loginType={SectionLoginType.google_classroom}
-              addStatus={{}}
-              transferData={blankStudentTransfer}
-              transferStatus={{}}
-              sectionId={53}
-            />
-          </Provider>
+          <UnconnectedManageStudentsTable
+            studentData={googleData}
+            editingData={{}}
+            loginType={SectionLoginType.google_classroom}
+            addStatus={{}}
+            transferData={blankStudentTransfer}
+            transferStatus={{}}
+            sectionId={53}
+          />
         )
       },
       {
         name: 'Table for Clever accounts',
         description: 'Ready only table',
         story: () => (
-          <Provider store={store}>
-            <UnconnectedManageStudentsTable
-              studentData={cleverData}
-              editingData={{}}
-              loginType={SectionLoginType.clever}
-              addStatus={{}}
-              transferData={blankStudentTransfer}
-              transferStatus={{}}
-              sectionId={53}
-            />
-          </Provider>
+          <UnconnectedManageStudentsTable
+            studentData={cleverData}
+            editingData={{}}
+            loginType={SectionLoginType.clever}
+            addStatus={{}}
+            transferData={blankStudentTransfer}
+            transferStatus={{}}
+            sectionId={53}
+          />
         )
       },
     ]);

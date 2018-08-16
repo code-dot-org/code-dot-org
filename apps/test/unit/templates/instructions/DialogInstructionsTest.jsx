@@ -42,7 +42,7 @@ describe('DialogInstructions', () => {
     expect(wrapper).to.containMatchingElement(
       <Instructions
         puzzleTitle={EXPECTED_PUZZLE_TITLE}
-        instructions={TEST_INSTRUCTIONS_1}
+        shortInstructions={TEST_INSTRUCTIONS_1}
         instructions2={TEST_INSTRUCTIONS_2}
         renderedMarkdown={undefined}
         imgURL={SAMPLE_IMAGE_URL}
@@ -60,7 +60,7 @@ describe('DialogInstructions', () => {
     expect(wrapper).to.containMatchingElement(
       <Instructions
         puzzleTitle={EXPECTED_PUZZLE_TITLE}
-        instructions={TEST_INSTRUCTIONS_1}
+        shortInstructions={TEST_INSTRUCTIONS_1}
         instructions2={TEST_INSTRUCTIONS_2}
         renderedMarkdown={SAMPLE_RENDERED_MARKDOWN}
         imgURL={SAMPLE_IMAGE_URL}
@@ -79,7 +79,7 @@ describe('DialogInstructions', () => {
     expect(wrapper).to.containMatchingElement(
       <Instructions
         puzzleTitle={EXPECTED_PUZZLE_TITLE}
-        instructions={undefined}
+        shortInstructions={undefined}
         instructions2={undefined}
         renderedMarkdown={undefined}
         imgURL={SAMPLE_IMAGE_URL}
@@ -98,7 +98,7 @@ describe('DialogInstructions', () => {
     expect(wrapper).to.containMatchingElement(
       <Instructions
         puzzleTitle={EXPECTED_PUZZLE_TITLE}
-        instructions={undefined}
+        shortInstructions={undefined}
         instructions2={undefined}
         renderedMarkdown={undefined}
         imgURL={undefined}

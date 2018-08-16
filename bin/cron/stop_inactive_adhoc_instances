@@ -2,7 +2,9 @@
 
 require_relative '../../dashboard/config/environment'
 require_relative '../../lib/cdo/only_one'
-require 'aws-sdk'
+require 'aws-sdk-cloudformation'
+require 'aws-sdk-cloudwatch'
+require 'aws-sdk-ec2'
 require 'cdo/chat_client'
 
 StackStatus = Struct.new(
@@ -47,69 +49,69 @@ def main
   # find all stacks with 'adhoc' name prefix or environment tag
   adhoc_stacks = cloudformation_resource.stacks.select do |stack|
     stack.name.starts_with?('adhoc-') ||
-    stack.tags.detect {|tag| tag.key == 'environment'}.try(:value) == 'adhoc'
+    stack.tags.detect {|tag| tag.key == 'environment'}&.value == 'adhoc'
   end
 
   adhoc_stacks.each do |stack|
-    begin
-      status = StackStatus.new
-      status.name = stack.name
-      status.cloudformation_status = stack.stack_status
-      status.owner = stack.tags.detect {|tag| tag.key == 'owner'}.try(:value)
-      status.creation_time = stack.creation_time
+    status = StackStatus.new
+    status.name = stack.name
+    status.cloudformation_status = stack.stack_status
+    status.owner = stack.tags.detect {|tag| tag.key == 'owner'}.try(:value)
+    status.creation_time = stack.creation_time
 
-      # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
-      metric = Aws::CloudWatch::Metric.new(namespace: 'Unicorn', name: 'active', client: cloudwatch_client)
-      unicorn_metric = metric.get_statistics(
+    # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
+    metric = Aws::CloudWatch::Metric.new(namespace: 'Unicorn', name: 'active', client: cloudwatch_client)
+    total_http_requests = metric.get_statistics(
+      {
+        dimensions: [
+          {
+            name: 'Environment',
+            value: 'adhoc',
+          },
+          {
+            name: 'Host',
+            value: "#{stack.name}.cdn-code.org",
+          }
+        ],
+        start_time: Time.now - ACTIVITY_PERIOD_DAYS.days,
+        end_time: Time.now,
+        period: ACTIVITY_PERIOD_DAYS.days,
+        statistics: ['Sum'],
+        unit: 'Count'
+      }
+    )&.datapoints&.sum(&:sum)
+
+    status[:activity] = total_http_requests
+
+    # If an engineer Terminates the EC2 Instance in their adhoc environment instead of running the rake task to delete
+    # their adhoc environment, then the Stack still exists and references an AWS Instance Resource.  Instantiating an
+    # EC2 Instance Resource object by the instance id succeeds, but invoking most methods on the resource object will
+    # raise an error.  Protect all method calls on the variable 'instance' with instance.exists?
+    instance = Aws::EC2::Instance.new(id: stack.resource('WebServer').physical_resource_id)
+    status[:previous_instance_status] = instance.exists? ? instance&.state&.name : 'TERMINATED'
+
+    # stop instances with activity below threshold if they are running (state code == 16)
+    if total_http_requests.between?(1, ACTIVITY_THRESHOLD) &&
+        instance.exists? &&
+        instance&.state&.code == 16 &&
+        stack.creation_time < Time.now - GRACE_PERIOD_DAYS.days
+      stop_result = instance.stop(
         {
-          dimensions: [
-            {
-              name: 'Environment',
-              value: 'adhoc',
-            },
-            {
-              name: 'Host',
-              value: "#{stack.name}.cdn-code.org",
-            }
-          ],
-          start_time: Time.now - ACTIVITY_PERIOD_DAYS.days,
-          end_time: Time.now,
-          period: ACTIVITY_PERIOD_DAYS.days,
-          statistics: ['Sum'],
-          unit: 'Count'
+          dry_run: !(EXECUTION_MODE == :stop_instance),
+          force: false
         }
       )
-
-      # each datapoint in the metric statistics array contains an attribute called 'sum'
-      total_http_requests = unicorn_metric.datapoints.sum(&:sum) unless unicorn_metric.nil?
-      status[:activity] = total_http_requests
-      instance = Aws::EC2::Instance.new(id: stack.resource('WebServer').physical_resource_id)
-      status[:previous_instance_status] = instance.state.name unless instance.nil?
-
-      # stop instances with activity below threshold if they are running (state code == 16)
-      if total_http_requests.between?(1, ACTIVITY_THRESHOLD) &&
-          instance &&
-          instance.state.code == 16 &&
-          stack.creation_time < Time.now - GRACE_PERIOD_DAYS.days
-        stop_result = instance.stop(
-          {
-            dry_run: !(EXECUTION_MODE == :stop_instance),
-            force: false
-          }
-        )
-        status[:current_instance_status] = stop_result.state.name
-        status[:instance_status_change_reason] = 'Instance activity is below threshold'
-      else
-        status[:current_instance_status] = instance.reload.state.name unless instance.nil?
-        status[:instance_status_change_reason] = 'Instance is already stopped or activity is above threshold'
-      end
-
-    rescue StandardError => error
-      status[:current_instance_status] = instance.reload.state.name unless instance.nil?
-      status[:instance_status_change_reason] = error.to_s
-    ensure
-      job_status.push(status)
+      status[:current_instance_status] = stop_result.state.name
+      status[:instance_status_change_reason] = 'Instance activity is below threshold'
+    else
+      status[:current_instance_status] = instance.exists? ? instance&.reload&.state&.name : 'TERMINATED'
+      status[:instance_status_change_reason] = 'Instance is already stopped or activity is above threshold'
     end
+  rescue StandardError => error
+    status[:current_instance_status] = instance.exists? ? instance&.reload&.state&.name : 'TERMINATED'
+    status[:instance_status_change_reason] = error.to_s
+  ensure
+    job_status.push(status)
   end
   job_status_csv = CSV.generate do |csv|
     csv << StackStatus.members

@@ -20,18 +20,20 @@ with
 csf_teachers_trained_temp as 
 (
   select distinct
-  user_id,
+  user_id, -- multiple entries per person (if they attended multiple workshops)
   u.studio_person_id,
   'CS Fundamentals'::varchar as course,
   school_year as school_year,
   regional_partner as regional_partner,
   regional_partner_id as regional_partner_id, 
-  trained_at as trained_at
+  trained_at as trained_at, -- this is the 'min' date from the teachers trained at table (the first time they were trained)
+  workshop_date as workshop_date -- this is the date of the workshop (and the source of multiple entries per person) 
   from
   (
     SELECT  
         ctt.user_id, 
         ctt.trained_at,
+        pds.start as workshop_date,
         regional_partner_id::int, 
         rp.name::varchar as regional_partner
         FROM 
@@ -90,7 +92,6 @@ pd_facilitators as
   group by 1
 
 )
-
   SELECT distinct 
          d.user_id,
          d.studio_person_id,
@@ -115,7 +116,7 @@ pd_facilitators as
          csfa.subject,
          csfa.trained_by_regional_partner,
          d.trained_at as trained_at,
-         csfa.workshop_date as workshop_date, 
+         coalesce(d.workshop_date, csfa.workshop_date, d.trained_at)  as workshop_date, 
          extract(month from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(day from csfa.workshop_date)::varchar(16) || '/'::varchar(2) || extract(year from csfa.workshop_date)::varchar(16) || ', id:'::varchar(2) || csfa.workshop_id::varchar(16)  as workshop_id_year,
          pwf.facilitator_names,
          -- started and completed
@@ -142,10 +143,11 @@ pd_facilitators as
          ON ss_user.school_id = si_user.school_id
 -- attendance
  -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
-  JOIN analysis.csf_workshop_attendance csfa   
+  LEFT JOIN analysis.csf_workshop_attendance csfa   
         ON csfa.user_id = d.user_id
         AND csfa.course = d.course
         AND csfa.school_year = d.school_year
+        AND csfa.workshop_date = d.workshop_date
         AND csfa.not_attended = 0 
 --pii tables (regional partner names, person names, emails, locations)
   LEFT JOIN pd_facilitators pwf

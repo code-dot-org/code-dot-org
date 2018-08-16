@@ -28,6 +28,11 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       {method: :delete, path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments/#{@enrollment.id}"},
       {controller: CONTROLLER_PATH, action: 'destroy', workshop_id: @workshop.id.to_s, id: @enrollment.id.to_s}
     )
+
+    assert_routing(
+      {method: :delete, path: "/api/v1/pd/enrollments/#{@enrollment.code}"},
+      {controller: CONTROLLER_PATH, action: 'cancel', enrollment_code: @enrollment.code.to_s}
+    )
   end
 
   test 'admins can see enrollments for all workshops' do
@@ -175,5 +180,28 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       id: @unrelated_enrollment.id
     }
     assert_response :success
+  end
+
+  test 'cancelling an active enrollment deletes it and sends email' do
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).returns(stub(:deliver_now))
+    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(:deliver_now))
+
+    assert_destroys Pd::Enrollment do
+      delete :cancel, params: {enrollment_code: @enrollment.code}
+      assert_response :success
+    end
+
+    assert @enrollment.reload.deleted?
+  end
+
+  test 'cancelling a deleted enrollment does nothing' do
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).never
+    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).never
+
+    @enrollment.destroy
+    assert_does_not_destroy Pd::Enrollment do
+      delete :cancel, params: {enrollment_code: @enrollment.code}
+      assert_response :success
+    end
   end
 end

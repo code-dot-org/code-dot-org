@@ -27,7 +27,6 @@ import Instructions from './Instructions';
 import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
@@ -82,11 +81,7 @@ const styles = {
     float: 'left',
     paddingTop: 6,
     paddingLeft: 30,
-  },
-  highlighted: {
-    borderBottom: "2px solid " + color.default_text,
-    color: color.default_text,
-  },
+  }
 };
 
 const audioStyle = {
@@ -132,11 +127,18 @@ class TopInstructions extends Component {
     user: PropTypes.number
   };
 
-  state = {
-    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
-      experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) ? TabType.COMMENTS : TabType.INSTRUCTIONS,
-    feedbacks: []
-  };
+  constructor(props) {
+    super(props);
+
+    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
+      (window.location.search).includes('user_id');
+
+    this.state = {
+      tabSelected: teacherViewingStudentWork ? TabType.COMMENTS : TabType.INSTRUCTIONS,
+      feedbacks: [],
+      displayFeedbackTeacherFacing: teacherViewingStudentWork,
+    };
+  }
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -150,7 +152,7 @@ class TopInstructions extends Component {
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
 
-    if (this.props.viewAs === ViewType.Student && experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB)) {
+    if (this.props.viewAs === ViewType.Student) {
       $.ajax({
         url: '/api/v1/teacher_feedbacks/get_feedbacks?student_id='+this.props.user+'&level_id='+this.props.serverLevelId,
         method: 'GET',
@@ -273,27 +275,18 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
+    const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
+    const displayFeedback = displayFeedbackStudent || this.state.displayFeedbackTeacherFacing;
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && this.state.displayFeedbackTeacherFacing;
 
-    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
-
-    const displayFeedbackStable = experiments.isEnabled(experiments.COMMENT_BOX_TAB) &&
-      teacherViewingStudentWork;
-
-    const displayFeedbackDevTeacher = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
-      teacherViewingStudentWork;
-
-    const displayFeedbackDevStudent = experiments.isEnabled(experiments.DEV_COMMENT_BOX_TAB) &&
-      this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
-
-    const displayFeedback = displayFeedbackDevTeacher || displayFeedbackStable || displayFeedbackDevStudent;
     return (
       <div style={mainStyle} className="editor-column">
-        <PaneHeader hasFocus={false}>
+        <PaneHeader hasFocus={false} teacherOnly={teacherOnly}>
           <div style={styles.paneHeaderOverride}>
             {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl &&
               <InlineAudio src={ttsUrl} style={audioStyle}/>
             }
-            {this.props.documentationUrl &&
+            {(this.props.documentationUrl && (this.state.tabSelected !== TabType.COMMENTS)) &&
               <PaneButton
                 iconClass="fa fa-book"
                 label={msg.documentation()}
@@ -305,23 +298,26 @@ class TopInstructions extends Component {
               <InstructionsTab
                 className="uitest-instructionsTab"
                 onClick={this.handleInstructionTabClick}
-                style={this.state.tabSelected === TabType.INSTRUCTIONS ? styles.highlighted : null}
+                selected={this.state.tabSelected === TabType.INSTRUCTIONS}
                 text={msg.instructions()}
+                teacherOnly={teacherOnly}
               />
               {displayHelpTab &&
                 <InstructionsTab
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
-                  style={this.state.tabSelected === TabType.RESOURCES ? styles.highlighted : null}
+                  selected={this.state.tabSelected === TabType.RESOURCES}
                   text={msg.helpTips()}
+                  teacherOnly={teacherOnly}
                 />
               }
               {displayFeedback &&
                 <InstructionsTab
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
-                  style={this.state.tabSelected === TabType.COMMENTS ? styles.highlighted : null}
+                  selected={this.state.tabSelected === TabType.COMMENTS}
                   text={msg.feedback()}
+                  teacherOnly={teacherOnly}
                 />
               }
             </div>
@@ -329,6 +325,7 @@ class TopInstructions extends Component {
               <CollapserIcon
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
+                teacherOnly={teacherOnly}
               />}
           </div>
         </PaneHeader>
@@ -367,7 +364,6 @@ class TopInstructions extends Component {
                 {this.props.viewAs === ViewType.Teacher &&
                   <TeacherFeedback
                     ref="commentTab"
-                    withUnreleasedFeatures={displayFeedbackDevTeacher}
                   />
                 }
                 {this.props.viewAs === ViewType.Student &&

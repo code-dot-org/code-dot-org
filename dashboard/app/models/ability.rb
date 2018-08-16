@@ -227,6 +227,7 @@ class Ability
       can :manage, [
         Block,
         SharedBlocklyFunction,
+        Library,
         Game,
         Level,
         Course,

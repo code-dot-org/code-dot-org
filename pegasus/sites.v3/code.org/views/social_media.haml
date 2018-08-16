@@ -1,0 +1,21 @@
+- fb ||= nil
+- twitter ||= nil
+- tumblr ||= nil
+- instagam ||= nil
+
+- unless facebook.nil?
+  %a{href: "https://www.facebook.com/#{facebook}", target: "_blank"}
+    %i.fa.fa-facebook.fa-lg
+  &nbsp; &nbsp;
+- unless twitter.nil?
+  %a{href: "https://twitter.com/#{twitter}", target: "_blank"}
+    %i.fa.fa-twitter.fa-lg
+  &nbsp; &nbsp;
+- unless tumblr.nil?
+  %a{href: "#{tumblr}", target: "_blank"}
+    %i.fa.fa-tumblr.fa-lg
+  &nbsp; &nbsp;
+- unless instagram.nil?
+  %a{href: "https://www.instagram.com/#{instagram}", target: "_blank"}
+    %i.fa.fa-instagram.fa-lg
+  &nbsp; &nbsp;

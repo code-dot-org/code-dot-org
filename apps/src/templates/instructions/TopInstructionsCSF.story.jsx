@@ -36,8 +36,10 @@ const createCommonStore = function (options = {}) {
 
   // Set required values
   pageConstants.showNextHint = () => {};
-  instructionsConstants.shortInstructions =
-    'some short, plaintext instructions, used to quickly communicate the goals of the level without taking up too much vertical real estate';
+  if (!options.disableShortInstructions) {
+    instructionsConstants.shortInstructions =
+      'some short, plaintext instructions, used to quickly communicate the goals of the level without taking up too much vertical real estate';
+  }
 
   // Set conditional values
   if (options.longInstructions) {
@@ -121,6 +123,10 @@ const STORIES = {
   },
   'Markdown instructions': {
     longInstructions: true,
+  },
+  'Only long instructions, no short': {
+    longInstructions: true,
+    disableShortInstructions: true
   },
   'Avatar': {
     avatar: true,

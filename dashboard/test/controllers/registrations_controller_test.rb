@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 ################################################################################
@@ -425,16 +424,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     assert_equal ['Display Name is required', "Age is required"],
       assigns(:user).errors.full_messages
-  end
-
-  test 'deleting sets deleted at on a user' do
-    user = create :user
-    sign_in user
-
-    delete :destroy
-
-    user = user.reload
-    assert user.deleted?
   end
 
   test "display name edit field absent for picture account" do

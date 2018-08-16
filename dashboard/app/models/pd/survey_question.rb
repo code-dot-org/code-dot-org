@@ -39,6 +39,16 @@ module Pd
       @form_questions ||= JotForm::FormQuestions.deserialize(form_id, JSON.parse(questions))
     end
 
+    def reload
+      super
+      @form_questions = nil
+    end
+
+    def questions=(value)
+      super(value)
+      @form_questions = nil
+    end
+
     delegate :summarize, to: :form_questions
     delegate :process_answers, to: :form_questions
     delegate :[], to: :form_questions

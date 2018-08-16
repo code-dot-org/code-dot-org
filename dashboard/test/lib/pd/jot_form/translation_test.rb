@@ -203,6 +203,18 @@ module Pd
                   type: 'control_matrix',
                   answer: false
                 },
+                '5' => {
+                  name: 'unexplainedNullAnswer',
+                  text: 'this should also be ignored',
+                  type: 'control_matrix',
+                  answer: nil
+                },
+                '6' => {
+                  name: 'emptyAnswer',
+                  text: 'this should also be ignored',
+                  type: 'control_matrix',
+                  answer: ''
+                },
               }
             },
             {
