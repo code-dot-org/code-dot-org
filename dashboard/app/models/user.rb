@@ -155,6 +155,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
+  after_create :set_multi_auth_status
 
   # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_PROVIDERS = %w(
@@ -617,6 +618,18 @@ class User < ActiveRecord::Base
       authentication_id: id
     )
     authentication_option&.user || User.find_by(provider: type, uid: id)
+  end
+
+  def add_credential(type:, id:, email:, hashed_email:, data:)
+    return false unless migrated?
+    AuthenticationOption.create(
+      user: self,
+      email: email,
+      hashed_email: hashed_email,
+      credential_type: type,
+      authentication_id: id,
+      data: data
+    )
   end
 
   def self.find_channel_owner(encrypted_channel_id)
