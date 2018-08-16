@@ -290,6 +290,13 @@ class BucketHelper
     s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
   end
 
+  #
+  # Irrevocably removes all objects from the channel.  If the bucket is
+  # versioned, this includes all past versions of objects and all delete
+  # markers, leaving no trace that the channel was ever used.
+  #
+  # @param [String] encrypted_channel_id for the channel to hard-delete
+  # @return [Integer] the number of objects deleted
   def hard_delete_channel_content(encrypted_channel_id)
     # TODO: Handle pagination in the S3 APIs
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
