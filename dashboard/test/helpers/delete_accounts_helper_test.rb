@@ -26,7 +26,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   setup do
     # Skip real S3 operations in this test
     AWS::S3.stubs(:create_client)
-    [SourceBucket, AssetBucket].each do |bucket|
+    [SourceBucket, AssetBucket, AnimationBucket].each do |bucket|
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
   end
@@ -1220,7 +1220,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "AssetBucket: hard-deletes all of user's channels" do
     # Here we are testing that for every one of the user's channels we
     # ask AssetBucket to delete its contents.  To avoid interacting with S3
-    # in this test, we depend on the unit tests in test_source_bucket.rb to
+    # in this test, we depend on the unit tests in test_asset_bucket.rb to
     # verify correct hard-delete behavior for that bucket.
     student = create :student
     with_channel_for student do |channel_id_a, _|
@@ -1247,6 +1247,48 @@ class DeleteAccountsHelperTest < ActionView::TestCase
           expects(:hard_delete_channel_content).
           with(storage_encrypt_channel_id(storage_id, channel_id_a))
         AssetBucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  #
+  # S3: cdo-v3-animations
+  #
+
+  test "AnimationBucket: hard-deletes all of user's channels" do
+    # Here we are testing that for every one of the user's channels we
+    # ask AnimationBucket to delete its contents.  To avoid interacting with S3
+    # in this test, we depend on the unit tests in test_animation_bucket.rb to
+    # verify correct hard-delete behavior for that bucket.
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        AnimationBucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        AnimationBucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  test "AnimationBucket: hard-deletes soft-deleted channels" do
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        storage_apps.where(id: [channel_id_a, channel_id_b]).update(state: 'deleted')
+
+        AnimationBucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        AnimationBucket.any_instance.
           expects(:hard_delete_channel_content).
           with(storage_encrypt_channel_id(storage_id, channel_id_b))
 
