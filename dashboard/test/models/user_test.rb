@@ -1897,15 +1897,15 @@ class UserTest < ActiveSupport::TestCase
     assert_equal original_primary_contact_info, user.primary_contact_info
   end
 
-  def upgrade_to_personal_login_params(args = {})
+  def upgrade_to_personal_login_params(**args)
     {
       username: 'my_new_username',
       parent_email: 'parent@email.com',
       email: 'my@email.com',
       password: 'mypassword',
       password_confirmation: 'mypassword',
-      secret_words: args[:secret_words] || 'secret words',
-    }
+      secret_words: 'secret words',
+    }.merge(args)
   end
 
   test 'upgrade_to_personal_login is false for teacher' do
