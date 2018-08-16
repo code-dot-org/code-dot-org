@@ -290,9 +290,28 @@ class BucketHelper
     s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
   end
 
-  def hard_delete_channel_content(_encrypted_channel_id)
-    # See implementations in descendant classes for now
-    raise 'Not implemented'
+  def hard_delete_channel_content(encrypted_channel_id)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    # Find all versions of all objects
+    channel_prefix = s3_path owner_id, channel_id
+    version_list = s3.list_object_versions(bucket: @bucket, prefix: channel_prefix)
+    return 0 if version_list.versions.empty? && version_list.delete_markers.empty?
+
+    # Delete all versions and delete markers
+    objects_to_delete = (version_list.versions + version_list.delete_markers).
+      map {|v| v.to_h.slice(:key, :version_id)}
+    result = s3.delete_objects(
+      bucket: @bucket,
+      delete: {
+        objects: objects_to_delete,
+        quiet: true
+      }
+    )
+    raise <<~ERROR unless result.errors.empty?
+      Error deleting channel content:
+      #{result.errors.map(&:to_s).join("\n      ")}
+    ERROR
+    result.deleted.count
   end
 
   def list_versions(encrypted_channel_id, filename)
