@@ -58,4 +58,9 @@ class AnimationBucket < BucketHelper
     )
     s3_object
   end
+
+  def hard_delete_channel_content(_encrypted_channel_id)
+    # Preventing calls since we haven't tested this yet
+    raise 'Not implemented'
+  end
 end
