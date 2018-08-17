@@ -1304,7 +1304,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "FileBucket: hard-deletes all of user's channels" do
     # Here we are testing that for every one of the user's channels we
     # ask FileBucket to delete its contents.  To avoid interacting with S3
-    # in this test, we depend on the unit tests in test_animation_bucket.rb to
+    # in this test, we depend on the unit tests in test_file_bucket.rb to
     # verify correct hard-delete behavior for that bucket.
     student = create :student
     with_channel_for student do |channel_id_a, _|
