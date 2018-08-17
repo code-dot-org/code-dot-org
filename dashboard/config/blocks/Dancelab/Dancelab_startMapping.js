@@ -15,5 +15,6 @@ function startMapping(sprite, property, range) {
     }
     sprite[property] = energy;
   }, [property, range]);
+  behavior.func.name = "mapping" + property + range;
   addBehavior(sprite, behavior);
 }

@@ -1,9 +1,9 @@
 function layoutSprites(group, format) {
     if (typeof(group) == "string") {
       group = sprites_by_type[group];
+      if (!group) return;
     }
     var count = group.length;
-    console.log(count);
     var sprite, i, j;
     if (format == "grid") {
       var cols = Math.ceil(Math.sqrt(count));

@@ -16,5 +16,6 @@ function stopMapping(sprite, property, range) {
     console.log(property + " " + energy);
     sprite[property] = energy;
   }, [property, range]);
+  behavior.func.name = "mapping" + property + range;
   removeBehavior(sprite, behavior);
 }

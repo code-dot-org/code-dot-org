@@ -2,7 +2,7 @@
 
 let osc, fft, peakDetect, customPeakDetects, songs, part;
 
-export function getDanceAPI(p5Inst) {
+export function createDanceAPI(p5Inst) {
   osc = new p5.Oscillator();
   fft = new p5.FFT(0.7, 128);
   peakDetect = new p5.PeakDetect(3000, 5000, 0.1, 3);
