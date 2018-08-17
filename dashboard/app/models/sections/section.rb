@@ -222,10 +222,16 @@ class Section < ActiveRecord::Base
 
     title = ''
     link_to_assigned = base_url
+    title_of_current_unit = ''
+    link_to_current_unit = ''
 
     if course
       title = course.localized_title
       link_to_assigned = course_path(course)
+      if script_id
+        title_of_current_unit = script.localized_title
+        link_to_current_unit = script_path(script)
+      end
     elsif script_id
       title = script.localized_title
       link_to_assigned = script_path(script)
@@ -238,6 +244,8 @@ class Section < ActiveRecord::Base
       linkToProgress: "#{base_url}#{id}/progress",
       assignedTitle: title,
       linkToAssigned: link_to_assigned,
+      currentUnitTitle: title_of_current_unit,
+      linkToCurrentUnit: link_to_current_unit,
       numberOfStudents: students.length,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
