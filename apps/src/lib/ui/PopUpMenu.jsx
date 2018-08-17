@@ -9,7 +9,7 @@ const TAIL_WIDTH = 14;
 const TAIL_HEIGHT = 12;
 const BACKGROUND_COLOR = color.white;
 const BORDER_COLOR = color.light_gray;
-const STANDARD_PADDING = 20;
+export const STANDARD_PADDING = 20;
 
 const menuStyle = {
   position: 'absolute',
@@ -173,10 +173,11 @@ class Item extends Component {
     color: PropTypes.string,
     openInNewTab: PropTypes.bool,
     className: PropTypes.string,
+    style: PropTypes.object,
   };
 
   render() {
-    const {first, last, onClick, children, href, openInNewTab, className} = this.props;
+    const {first, last, onClick, children, href, openInNewTab, className, style} = this.props;
     const defaultClassName = 'pop-up-menu-item';
     const classList = className ? `${defaultClassName} ${className}` : defaultClassName;
     if (!href && !onClick) {
@@ -194,6 +195,11 @@ class Item extends Component {
       }
     };
 
+    const wrapperStyle = {
+      ...paddingStyle,
+      ...style,
+    };
+
     // Style for anchors tags nested in divs
     const areaStyle = {
       display: 'block',
@@ -208,7 +214,7 @@ class Item extends Component {
     const target = openInNewTab ? "_blank" : "";
 
     return (
-      <div style={paddingStyle}>
+      <div style={wrapperStyle}>
         {this.props.href &&
           <a
             className={classList}

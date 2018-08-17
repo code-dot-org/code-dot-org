@@ -60,10 +60,9 @@ function renderSectionAssessments(section, validScripts) {
   const store = getStore();
   store.dispatch(setSection(section));
 
-  const scriptId = store.getState().scriptSelection.scriptId;
-  store.dispatch(asyncLoadAssessments(section.id, scriptId));
-
   store.dispatch(loadValidScripts(section, validScripts)).then(() => {
+    const scriptId = store.getState().scriptSelection.scriptId;
+    store.dispatch(asyncLoadAssessments(section.id, scriptId));
     ReactDOM.render(
       <Provider store={store}>
         <SectionAssessments />
@@ -688,9 +687,11 @@ function main() {
 
     $scope.react_assessments = true;
     $scope.$on('section-assessments-rendered', () => {
-      $scope.section.$promise.then(script =>
-        renderSectionAssessments(script, $scope.script_list)
-      );
+      $scope.section.$promise.then(script => {
+        $scope.script_list.$promise.then(scriptList => (
+          renderSectionAssessments(script, scriptList)
+        ));
+      });
     });
   }]);
 
