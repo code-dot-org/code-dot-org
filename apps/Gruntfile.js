@@ -192,7 +192,7 @@ describe('entry tests', () => {
         // p5.play repo at https://github.com/code-dot-org/p5.play
         {
           expand: true,
-          cwd: './node_modules/@code-dot-org/p5.play/examples/lib',
+          cwd: './node_modules/p5/lib/',
           src: ['p5.js'],
           dest: 'build/package/js/p5play/'
         },
@@ -204,8 +204,8 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: 'lib',
-          src: ['p5.sound.min.js'],
+          cwd: './node_modules/p5/lib/addons',
+          src: ['p5.sound.js'],
           dest: 'build/package/js/p5play/'
         },
         {
