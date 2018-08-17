@@ -482,6 +482,12 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # Returns an array of all levels which contain this level
+  # WARNING this is a heavy SQL query; do not use this for view operations
+  def containing_levels
+    Level.where("JSON_CONTAINS(properties, :name, '$.contained_level_names')", name: name.inspect)
+  end
+
   def summarize
     {
       level_id: id,
