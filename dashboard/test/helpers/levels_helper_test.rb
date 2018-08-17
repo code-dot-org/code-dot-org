@@ -20,6 +20,8 @@ class LevelsHelperTest < ActionView::TestCase
     end
 
     stubs(:current_user).returns nil
+    stubs(:storage_id).returns(Random.new.rand(1_000_000))
+    stubs(:storage_id_for_user_id).returns(Random.new.rand(1_000_000))
     stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
