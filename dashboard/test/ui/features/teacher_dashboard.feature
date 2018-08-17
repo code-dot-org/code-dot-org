@@ -77,6 +77,9 @@ Feature: Using the teacher dashboard
     And I wait until element "#uitest-course-dropdown" is visible
     Then I wait until element "h3:contains(this survey is anonymous)" is visible
 
+    When I select the "CS Principles Pre-survey" option in dropdown "assessment-selector"
+    Then I wait until element "h2:contains(Multiple choice questions overview)" is visible
+
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
     And I am on "http://studio.code.org/projects/applab"
