@@ -55,3 +55,8 @@
 .field
   = f.label :background, 'Default background'
   = f.text_field :background
+
+%div.collapsed_area_header{data: {toggle: "collapse", target: "#cs_in_a"}}
+  CS in A Options
+.collapse{id: "cs_in_a"}
+  = render partial: 'levels/editors/cs_in_a', locals: {f: f}

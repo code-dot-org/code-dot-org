@@ -1,0 +1,157 @@
+si:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': දකුණ
+            '"left"': වම
+      Dancelab_randomColor:
+        text: අහඹු වර්ණයක්
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'සත්‍ය'
+            'false': 'false'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": අහඹු
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': දකුණ
+            '"left"': වම
+      gamelab_randColor:
+        text: අහඹු වර්ණයක්
+      gamelab_randomColor:
+        text: අහඹු වර්ණයක්
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': අහඹු
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': දකුණ
+            '"left"': වම
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": උඩ
+            "'down'": යට
+            "'left'": වම
+            "'right'": දකුණ
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
+      Vanilla_randomColor:
+        text: අහඹු වර්ණයක්

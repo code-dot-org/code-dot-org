@@ -1,5 +1,6 @@
 require 'cdo/activity_constants'
 require 'cdo/shared_constants'
+require 'honeybadger'
 
 module UsersHelper
   include ApplicationHelper
@@ -10,8 +11,10 @@ module UsersHelper
   def check_and_apply_oauth_takeover(user)
     if session['clever_link_flag'].present? && session['clever_takeover_id'].present?
       uid = session['clever_takeover_id']
+      provider = session['clever_link_flag']
+
       # TODO: validate that we're not destroying an active account?
-      existing_account = User.where(uid: uid, provider: session['clever_link_flag']).first
+      existing_account = User.find_by_credential(type: provider, id: uid)
 
       # Move over sections that students follow
       if user.student? && existing_account
@@ -21,10 +24,29 @@ module UsersHelper
       end
 
       existing_account.destroy! if existing_account
-      user.provider = session['clever_link_flag']
-      user.uid = uid
-      user.oauth_token = session['clever_takeover_token']
-      user.save
+      if user.migrated?
+        success = user.add_credential(
+          type: provider,
+          id: uid,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          data: {
+            oauth_token: session['clever_takeover_token']
+          }.to_json
+        )
+        unless success
+          # We want to know when this fails
+          Honeybadger.notify(
+            error_class: 'Failed to create AuthenticationOption during signup oauth takeover',
+            error_message: "Could not create AuthenticationOption during signup oauth takeover for user with email #{user.email}"
+          )
+        end
+      else
+        user.provider = provider
+        user.uid = uid
+        user.oauth_token = session['clever_takeover_token']
+        user.save
+      end
       clear_takeover_session_variables
     end
   end

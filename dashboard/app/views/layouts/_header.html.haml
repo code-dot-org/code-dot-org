@@ -130,7 +130,7 @@
   - script_data = script.summarize_header
   - stage_data = (@stage || script_level.stage).summarize
   -# If caching, we don't know the sign in state, and should be nil
-  - signed_in = @public_caching ? 'null' : !current_user.nil?
+  - signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
   :javascript
     //<![CDATA[
     dashboard.header.build(

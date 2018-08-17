@@ -9589,3 +9589,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        craft18:
+          stages:
+            craft18 levels:
+              name: craft18 levels
+          title: craft18 test script
+          description_audience: ''
+          description_short: ''
+          description: ''

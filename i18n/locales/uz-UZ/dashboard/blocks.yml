@@ -1,0 +1,66 @@
+uz:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Keyingi
+            '"prev"': Avvalgi
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Keyingi
+            '"prev"': Avvalgi
+      Dancelab_randomColor:
+        text: tasodifiy rang
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"space"': koinot
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"space"': koinot
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'rost'
+            'false': 'yolgʻon'
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": tasodifiy
+      gamelab_randColor:
+        text: tasodifiy rang
+      gamelab_randomColor:
+        text: tasodifiy rang
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': tasodifiy
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"space"': koinot
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"space"': koinot
+      Vanilla_randomColor:
+        text: tasodifiy rang

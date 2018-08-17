@@ -478,6 +478,7 @@
   volunteer_engineer_submission_field_email: "ელ.ფოსტის მისამართი"
   volunteer_engineer_submission_field_email_desc: "თქვენი ელ. ფოსტის მისამართი ინახება კონფიდენციალურად, მაგრამ ჩვენ გამოგიგზავნით მასწავლებლების შეტყობინებებს."
   volunteer_engineer_submission_field_email_placeholder: "ელ.ფოსტის მისამართი"
+  volunteer_engineer_submission_field_email_preference_privacy: "(იხილეთ ჩვენი კონფიდენციალურობის დებულება)"
   volunteer_engineer_submission_field_email_preference_yes: 'დიახ'
   volunteer_engineer_submission_field_email_preference_no: 'არა'
   volunteer_engineer_submission_final_paragraph: "თქვენ იქნებით აღნიშნული რუკაზე, რათა ადგილობრივმა მასწავლებლემა მარტივად შეძლონ თქვენი პოვნა კოდის ერთი საათისა ან სხვა მოხალისეობრივი პროექტებისთვის. ჩვენ არსად არ ვაზიარებთ თქვენს ელ. ფოსტასა და მისამართს. მაგრამ სხვა ინფორმაცია (დაახლოებითი ადგილმდებარეობის ჩათვლით) თავისუფლად იქნება მისაწვდომი ადგილობრივი მასწავლებლებისთვის."

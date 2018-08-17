@@ -40,7 +40,8 @@ def replace_hostname(url)
     dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
     pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
     hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
-    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN']
+    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN'],
+    advocacy_host: ENV['ADVOCACY_TEST_DOMAIN']
   ).replace_origin(url)
 end
 
@@ -983,7 +984,7 @@ And /^I create a new section$/ do
   }
 end
 
-And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
+And /^I create a new section( via popup menu)? with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |via_popup, assignment_family, version_year, secondary|
   individual_steps %Q{
     When I press the new section button
     Then I should see the new section dialog
@@ -992,8 +993,18 @@ And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and uni
     Then I wait to see "#uitest-assignment-family"
 
     When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
-    And I select the "#{version_year}" option in dropdown "assignment-version-year"
   }
+
+  if via_popup
+    individual_steps %Q{
+      And I click selector "#assignment-version-year" once I see it
+      And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
+    }
+  else
+    individual_steps %Q{
+      And I select the "#{version_year}" option in dropdown "assignment-version-year"
+    }
+  end
 
   if secondary
     individual_steps %Q{
