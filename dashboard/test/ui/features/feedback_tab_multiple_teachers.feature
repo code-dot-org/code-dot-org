@@ -38,6 +38,7 @@ Scenario: With dev flag, student sees feedback from multiple teachers, when avai
   Then I sign out
   And I sign in as "Lillian"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7"
+  And I wait to see ".uitest-feedback"
   And I press the first ".uitest-feedback" element
   And I wait until ".editor-column" contains text "Nice!"
   And element ".editor-column" contains text "Feedback from First_Teacher"

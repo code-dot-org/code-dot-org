@@ -20,19 +20,25 @@ class DeleteAccountsHelper
   end
 
   # Deletes all project-backed progress associated with a user.
-  # @param [Integer] user_id The user to delete the project-backed progress of.
-  def delete_project_backed_progress(user_id)
-    user_storage_ids = @pegasus_db[:user_storage_ids]
-    storage_apps = @pegasus_db[:storage_apps]
-    storage_id = user_storage_ids.where(user_id: user_id).first&.[](:id)
-    return unless storage_id
+  # @param [User] user The user to delete the project-backed progress of.
+  def delete_project_backed_progress(user)
+    return unless user.user_storage_id
 
-    # Soft-delete all of the user's channels
-    storage_apps.where(storage_id: storage_id).update(
-      state: 'deleted',
-      value: nil,
-      updated_ip: ''
-    )
+    channel_ids = @pegasus_db[:storage_apps].where(storage_id: user.user_storage_id).map(:id)
+    encrypted_channel_ids = channel_ids.map do |id|
+      storage_encrypt_channel_id user.user_storage_id, id
+    end
+
+    # Clear potential PII from user's channels
+    @pegasus_db[:storage_apps].
+      where(id: channel_ids).
+      update(value: nil, updated_ip: '', updated_at: Time.now)
+
+    # Clear S3 contents for user's channels
+    buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
+    buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
+      bucket.hard_delete_channel_content encrypted_channel_id
+    end
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
@@ -123,6 +129,12 @@ class DeleteAccountsHelper
 
   def remove_contacts(email)
     @pegasus_db[:contacts].where(email: email).delete
+  end
+
+  def remove_poste_data(email)
+    ids = @pegasus_db[:poste_deliveries].where(contact_email: email).map {|x| x[:id]}
+    @pegasus_db[:poste_opens].where(delivery_id: ids).delete
+    @pegasus_db[:poste_deliveries].where(contact_email: email).delete
   end
 
   def remove_from_pardot_and_contact_rollups(contact_rollups_recordset)
@@ -221,11 +233,12 @@ class DeleteAccountsHelper
     clean_level_source_backed_progress(user.id)
     clean_survey_responses(user.id)
     clean_pegasus_forms_for_user(user)
-    delete_project_backed_progress(user.id)
+    delete_project_backed_progress(user)
     clean_and_destroy_pd_content(user.id)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_contacts(user.email) if user.email
+    remove_poste_data(user.email) if user.email
     remove_from_pardot_by_user_id(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)
