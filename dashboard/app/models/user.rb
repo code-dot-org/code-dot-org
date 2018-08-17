@@ -850,9 +850,10 @@ class User < ActiveRecord::Base
     new_primary = existing_auth_option || AuthenticationOption.new(
       user: self,
       credential_type: AuthenticationOption::EMAIL,
-      email: new_email,
       hashed_email: new_hashed_email
     )
+    # Whether it's an existing auth option or a new one, always want to set a cleartext email.
+    new_primary.email = new_email
 
     # Even though it's implied, pushing the new option into the
     # authentication_options association now allows our validations to run
@@ -924,20 +925,13 @@ class User < ActiveRecord::Base
     return false unless email.present?
 
     hashed_email = User.hash_email(email)
-    match = authentication_options.find_by_hashed_email(hashed_email)
-    if match.nil?
-      errors.add(:email, I18n.t('activerecord.errors.messages.invalid'))
-      return false
-    end
-
+    self.user_type = TYPE_TEACHER
     transaction do
-      self.user_type = TYPE_TEACHER
-      # Make matching AuthenticationOption user's primary
-      self.primary_contact_info = match
-      # Update AuthenticationOption to have cleartext email
-      match.update!(email: email)
+      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email})
       update!(email_preference)
     end
+  rescue
+    false # Relevant errors are set on the user model, so we rescue and return false here.
   end
 
   # True if the account is teacher-managed and has any sections that use word logins.
