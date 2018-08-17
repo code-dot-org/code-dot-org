@@ -3,12 +3,18 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include ::Pd::WorkshopConstants
   load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel']
 
+  load_and_authorize_resource :session, class: 'Pd::Session', find_by: :code, id_param: :session_code,
+    only: [:confirm_join_session]
+  load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
+    only: [:confirm_join_session]
+
   RESPONSE_MESSAGES = {
     SUCCESS: "success".freeze,
     DUPLICATE: "duplicate".freeze,
     OWN: "own".freeze,
     CLOSED: "closed".freeze,
     FULL: "full".freeze,
+    ACCOUNT_NEEDS_UPGRADE: "upgrade".freeze,
     NOT_FOUND: "not found".freeze,
     ERROR: "error".freeze
   }
@@ -75,6 +81,32 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
   end
 
+  # POST /api/v1/pd/attend/:session_code/join
+  def confirm_join_session
+    @enrollment = build_enrollment_from_params
+
+    unless @enrollment.save
+      render_unsuccessful RESPONSE_MESSAGES[:ERROR]
+      return
+    end
+
+    if current_user.student?
+      if User.hash_email(@enrollment.email) == current_user.hashed_email
+        # Email matches user's hashed email. Upgrade to teacher and set email.
+        current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email)
+      else
+        # No email match. Account needs to be upgraded via upgrade page.
+        return render json: {
+          workshop_enrollment_status: RESPONSE_MESSAGES[:ACCOUNT_NEEDS_UPGRADE]
+        }
+      end
+    end
+
+    render json: {
+      workshop_enrollment_status: RESPONSE_MESSAGES[:SUCCESS]
+    }
+  end
+
   # DELETE /api/v1/pd/workshops/1/enrollments/1
   def destroy
     enrollment = @workshop.enrollments.find_by(id: params[:id])
@@ -133,5 +165,26 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def workshop_owned_by?(user)
     return false unless user
     @workshop.organizer_or_facilitator? user
+  end
+
+  def build_enrollment_from_params
+    enrollment = get_workshop_user_enrollment
+    enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
+    enrollment.school_info_attributes = school_info_params
+
+    enrollment
+  end
+
+  # Gets the workshop enrollment associated with the current user id or email if one exists.
+  # Otherwise returns a new enrollment for that user.
+  def get_workshop_user_enrollment
+    @workshop.enrollments.where(
+      'user_id = ? OR email = ?', current_user.id, current_user.email
+    ).first || Pd::Enrollment.new(
+      pd_workshop_id: @workshop.id,
+      user_id: current_user.id,
+      full_name: current_user.name,
+      email: current_user.email
+    )
   end
 end

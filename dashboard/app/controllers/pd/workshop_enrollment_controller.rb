@@ -1,9 +1,9 @@
 class Pd::WorkshopEnrollmentController < ApplicationController
   authorize_resource class: 'Pd::Enrollment', only: [:join_session, :confirm_join_session]
   load_and_authorize_resource :session, class: 'Pd::Session', find_by: :code, id_param: :session_code,
-    only: [:join_session, :confirm_join_session]
+    only: [:join_session]
   load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
-    only: [:join_session, :confirm_join_session]
+    only: [:join_session]
 
   # GET /pd/workshops/1/enroll
   def new
@@ -156,40 +156,25 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   # GET /pd/attend/:session_code/join
   def join_session
     @enrollment = get_workshop_user_enrollment
-  end
 
-  # POST /pd/attend/:session_code/join
-  def confirm_join_session
-    @enrollment = build_enrollment_from_params
-
-    unless @enrollment.save
-      render :join_session
-      return
-    end
-
-    if current_user.student?
-      if User.hash_email(@enrollment.email) == current_user.hashed_email
-        # Email matches user's hashed email. Upgrade to teacher and set email.
-        current_user.update!(user_type: User::TYPE_TEACHER, email: @enrollment.email)
-      else
-        # No email match. Redirect to upgrade page.
-        redirect_to controller: 'pd/session_attendance', action: 'upgrade_account'
-        return
-      end
-    end
-
-    redirect_to controller: 'pd/session_attendance', action: 'attend'
+    @script_data = {
+      props: {
+        workshop: @workshop.attributes.merge(
+          {
+            organizer: @workshop.organizer,
+            regional_partner: @workshop.regional_partner,
+            course_url: @workshop.course_url
+          }
+        ),
+        session_dates: @workshop.sessions.map(&:formatted_date_with_start_and_end_times),
+        enrollment: @enrollment,
+        workshop_enrollment_status: "unsubmitted",
+        session_code: params[:session_code]
+      }.to_json
+    }
   end
 
   private
-
-  def build_enrollment_from_params
-    enrollment = get_workshop_user_enrollment
-    enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
-    enrollment.school_info_attributes = school_info_params
-
-    enrollment
-  end
 
   def mark_attended(user_id, session_id)
     Pd::Attendance.find_or_create_by!(teacher_id: user_id, pd_session_id: session_id)

@@ -218,6 +218,7 @@ export default class WorkshopEnrollment extends React.Component {
                         first_name={this.props.enrollment.first_name}
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}
+                        submitUrl={`/api/v1/pd/workshops/${this.props.workshop.id}/enrollments`}
                       />
                     </div>
                   </div>

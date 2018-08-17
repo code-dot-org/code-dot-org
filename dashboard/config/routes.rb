@@ -395,6 +395,7 @@ Dashboard::Application.routes.draw do
       resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
+      post 'attend/:session_code/join', action: 'confirm_join_session', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
@@ -499,7 +500,6 @@ Dashboard::Application.routes.draw do
     get 'attend/:session_code', controller: 'session_attendance', action: 'attend'
     post 'attend/:session_code', controller: 'session_attendance', action: 'select_enrollment'
     get 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'join_session'
-    post 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'confirm_join_session'
     get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
 

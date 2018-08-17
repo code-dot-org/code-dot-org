@@ -55,7 +55,9 @@ export default class EnrollForm extends React.Component {
     workshop_course: PropTypes.string,
     first_name: PropTypes.string,
     email: PropTypes.string,
-    onSubmissionComplete: PropTypes.func
+    onSubmissionComplete: PropTypes.func,
+    submitUrl: PropTypes.string,
+    submitText: PropTypes.string
   };
 
   constructor(props) {
@@ -152,7 +154,7 @@ export default class EnrollForm extends React.Component {
     };
     this.submitRequest = $.ajax({
       method: 'POST',
-      url: `/api/v1/pd/workshops/${this.props.workshop_id}/enrollments`,
+      url: this.props.submitUrl,
       contentType: 'application/json',
       data: JSON.stringify(params),
       complete: (result) => {
@@ -299,7 +301,7 @@ export default class EnrollForm extends React.Component {
         <Button
           onClick={this.handleClickRegister}
         >
-          Register
+          {this.props.submitText || "Register"}
         </Button>
         <br/>
         <br/>
