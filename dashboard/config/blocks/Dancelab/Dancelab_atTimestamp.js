@@ -1,4 +1,4 @@
-function atTimestamp(timestamp, event) {
+function atTimestamp(timestamp, unit, event) {
   registerSetup(function() {
     if (unit == "measures") {
       timestamp = nMeasures(timestamp);
