@@ -748,7 +748,7 @@ ka:
         3) თუ ჯადოქარს ათჯერ მაინც არ დააჭერენ, თამაში სრულდება.
       Course 4 Playlab For Loop Freeplay_instruction: 'თავისუფალი თამაში: გამოიყენეთ ყველაფერი, რაც ისწავლეთ, და შექმენით თამაში, რომელიც შეიცავს `for` ციკლს!'
       Course 4 Playlab For Loops 4b_instruction: შეგიძლიათ, შეცვალოთ **ნაზრდი** ერთ-ერთ ციკლში ისე, რომ რბოლა ციკლური გახდეს?
-      Course 4 Playlab For Loops 5b_instruction: "დაარეგულირეთ ინტერვალი ამ `მიზნისთვის` \nციკლებში ისე, რომ ორი სიმბოლო დასრულდეს ერთსა და იმავე ადგილას."
+      Course 4 Playlab For Loops 5b_instruction: "დაარეგულირეთ ინტერვალი ამ `for` \nციკლებში ისე, რომ ორივე პერსონაჟი საბოლოოდ აღმოჩნდეს ერთსა და იმავე ადგილას."
       Course 4 Playlab For Loops 6b_instruction: "შეასწორეთ `for` ციკლი და შექმენით სახალისო თამაში!\\r\nდააჭირეთ \"გაშვებას\" და დაკლიკეთ \"ქალბატონ უნიქორნს\" მაქსიმალურად ბევრჯერ. ჩვენ 24 ქულა დავაგროვეთ. შეძლებთ მეტს? "
       Course 4 SCF 1_instruction: გამოიყენეთ შეთავაზებული ფუნქციები და დახატეთ ექვსკუთხედების ოთხი რიგი. ამჩნევთ, რომ ლუწნომრიანი რიგები მარჯვნივ არის გაწეული?
       Course 4 SCF 1a_instruction: ხვდებით, როგორ შეაგროვოთ მთელი ნექტარი ბლოკების მინიმალური რაოდენობით?
@@ -805,7 +805,7 @@ ka:
       Crack a Caesar Cipher_instruction: ინსტრუქციები
       Crack a Caesar Cipher_2018_instruction: ინსტრუქციები
       D_Frozen_nested3_instruction: მოდით დავატრიალოთ ეს ფიგურების მწკრივი!
-      D_Frozen_nested4_instruction: დროა ფენებად განვალაგოთ ეს ფიგურები!
+      D_Frozen_nested4_instruction: დროა ეს ფიგურები ფენებად განვალაგოთ!
       D_Frozen_nested5_instruction: ითამაშეთ ფიფქებით!
       D_Frozen_nested6_instruction: დახატეთ კიბე-საფეხუროვანი ნიმუში, რომელიც გამოიყენებს 75 და 105 გრადუსს შორის მოთავსებულ მობრუნებებს.
       D_Frozen_nested7_instruction: ახლა კი, შეტრიალდით 180 გრადუსით და ისევ დახატეთ ეს კიბისებრი ორნამენტი!
@@ -816,15 +816,16 @@ ka:
         - რა მოხდება, თუ შექმნით თქვენს რომბისებრ ორნამენტს უფრო გრძლად ან მოკლედ?\r
         - რას დაემსგავსება ნახატი, თუ ერთმანეთის ზემოთ დახატავთ ორ ფიფქს?
       Dance Party Freeplay_instruction: ახლა შექმენით საკუთარი უცხოპლანეტელთა დისკო!
+      Dance Party Freeplay_simple_instruction: ახლა შექმენით საკუთარი უცხოპლანეტელთა დისკო!
       Find the Wizard_instruction: ააშენეთ ნებისმიერი სასურველი რამ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
-      Find the Wizard_2018_instruction: ააშენეთ ნებისმიერი სასურველი რამ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
+      Find the Wizard_2018_instruction: ააშენეთ, რაც გსურთ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
       Food Fight!_instruction: "ჩვენ თქვენთვის დავამატეთ კიდევ ერთი ფუნქცია.\\r\n\\r\nდააპროგრამეთ თქვენი თამაში ისე, რომ იძახებდეს \"დონის გაზრდის\" ფუნქციას თუ \"მოთამაშის_ქულა\" გარკვეულ რიცხვზე მეტი ხდება. \\r\n\\r\nმაგალითად: \"მოთამაშის_ქულა\" > 6\\r\n\\r\nითამაშეთ! შემდეგ თავსატეხზე გადასასვლელად მესამე დონეზე უნდა გადახვიდეთ. "
       FoodFight_instruction: ეს იმ თამაშის მაგალითია, რომელიც შეგიძლიათ შექმნათ თამაშების ლაბორატორიაში.
       FoodFight_2018_instruction: ეს იმ თამაშის მაგალითია, რომელიც შეგიძლიათ შექმნათ თამაშების ლაბორატორიაში.
-      Get To The Goal_instruction: ააშენეთ ნებისმიერი სასურველი რამ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
-      Guess The Number 2_instruction: ააშენეთ ნებისმიერი სასურველი რამ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
-      Guess The Number_instruction: ააშენეთ ნებისმიერი სასურველი რამ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
-      Guess The Number_2018_instruction: ააშენეთ ნებისმიერი სასურველი რამ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
+      Get To The Goal_instruction: ააშენეთ, რაც გსურთ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
+      Guess The Number 2_instruction: ააშენეთ, რაც გსურთ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
+      Guess The Number_instruction: ააშენეთ, რაც გსურთ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
+      Guess The Number_2018_instruction: ააშენეთ, რაც გსურთ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
       Infinity_catch_instruction: შეგიძლიათ ელზა ("პერსონაჟი 2") ანას ისრებიანი ღილაკების გამოყენებით დააწიო?
       Infinity_finale_instruction: შექმენით, რაც მოგესურვებათ და გააზიარეთ!
       Infinity_move_collide_instruction: ჰირო არის "პერსონაჟი 1". გადააადგილეთ ის ბეიმაქსის მარჯვნივ და ჩართეთ მუსიკა, როცა ისინი შეეხებიან ერთმანეთს.
@@ -1009,7 +1010,7 @@ ka:
       NEW Course 4 Artist Params 13_instruction: "მოდით, ჩავასწოროთ ფუნქცია \"მრავალკუთხედის დახატვა\". მას უკვე აქვს პარამეტრი \"გვერდები\". ახლა ჩავასწოროთ ფუნქცია ისე, რომ მას გააჩნდეს პარამეტრი \"სიგრძე\".\\r\nმინიშნება: ყოველი ფიგურის მთლიანი ზომა არის 200 პიქსელი. გახსოვთ განტოლება, რომლითაც სხვადასხვა რაოდენობის გვერდების მქონდე ფიგურები ერთი ზომის ხდება?"
       NEW Course 4 Artist Params 14_instruction: შეასწორეთ "სპირალური კიდის დახატვა" და გამოიყენეთ მისი პარამეტრები ამ ფიგურების შესაქმნელად.
       NEW Course 4 Artist Params 15_instruction: "თავისუფალი თამაში: აქ რამდენიმე ფუნქციაა, რომელიც დაწერეთ და რამდენიმე, რომლითაც თამაში შეგიძლიათ. დახატეთ რამე მაგარი!\nშეცვალეთ ფაქრის სისქე და დააკვირდით შედეგს!"
-      NEW Course 4 Artist Params 2_instruction: შექმენით `სამკუთხედის დახტვის` ფუნქცია ახლად, რომელიც გააკეთეს სამკუთხედს 50 პიქსელიანი გვერდებით.
+      NEW Course 4 Artist Params 2_instruction: თავიდან შექმენით `სამკუთხედის დახტვის` ფუნქცია, რომელიც დახატავს სამკუთხედს 50-პიქსელიანი გვერდებით.
       NEW Course 4 Artist Params 3_instruction: "ახლა გამოვიყენოთ ფუნქცია წინა თავსატეხიდან 5 სამკუთხედის დასახატად. მინიშნება: თითოეული სამკუთხედი დაშორებულია წინას 30 პიქსელით.\\r\n"
       NEW Course 4 Artist Params 4_instruction: ამ ფუნქციის ბლოკებს რამე განსხვავებულს ხომ არ ამჩნევთ? დააჭირეთ გაშვებას და ნახეთ რა მოხდება.
       NEW Course 4 Artist Params 5_instruction: 'შეავსეთ ??? სიგრძის პარამეტრის შემავალი მონაცემის ბლოკში. მინიშნება; ხუთკუთხედის გვერდის ზომაა 100 პიქსელი. '
@@ -1095,7 +1096,7 @@ ka:
       Project - Final Image Scroller_2018_instruction: განაახლეთ სურათის სქროლერი ისე, რომ ის რეაგირებდეს ღილაკების დაჭერებზე. (დააწკაპუნეთ სრული ინსტრუქციის სანახავად)
       Project - Finish your canvas app_instruction: განავრცეთ ერთ-ერთი ეფექტის ფუნქციონალი ან შექმენით თქვენი საკუთარი. (დააწკაპუნეთ სრული ინსტრუქციის სანახავად)
       Project - Make Your Own Clicker Game_instruction: "დაასრულეთ თქვენი წკაპუნის თამაში!\n(დააწკაპუნეთ აქ სრული ინსტრუქციის მისაღებად)"
-      Prompt Test_instruction: ააშენეთ ნებისმიერი სასურველი რამ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
+      Prompt Test_instruction: ააშენეთ, რაც გსურთ. ეს რიცხვების ამოცნობის თამაშის მაგალითია!
       Quantum Bee - Ryan_instruction: ეს ღრუბლები მაბნევს! ზოგში არის ყვავილი და ზოგში არა. ყოველი ღრუბელი უნდა შევამოწმო, თაფლი კი მხოლოდ ყვავილებიდან მოვკრიბო.
       Quantum Bee_instruction: იისფერ ყვავილებს აქვთ 1 ან 0 ნექტარი, მაგრამ თქვენ არ იცით, რომელს რამდენი აქვს. ფრთხილად - არ მოკრიბოთ ნექტარი ისეთი ყვავილიდან, რომელიც მას არ შეიცავს. "თუ" ბლოკით შეამოწმეთ, შეიცავს თუ არა ყვავილი ნექტარს.
       Robot Doodle_instruction: 'პროექტის იდეა: შექმენით სურათი რაიმე კარგად ნაცნობისა, რეალური სამყაროდან. ეს მოითხოვს მოთმინებასა და დაგეგმვას!'
@@ -1218,9 +1219,9 @@ ka:
       course1_artist_loops_challenge3_instruction: '"როგორ შეგიძლიათ დამეხმაროთ ორი ჩიტის სახლის შექმნაში?"'
       course1_artist_loops_challenge4_instruction: '"დროა კამათელი გავაგოროთ! შეგიძლიათ დამეხმაროთ მათ დახატვაში?"'
       course1_collector_loops_challenge1_instruction: '"შეგიძლიათ, დამეხმაროთ რამდენიმე ხოჭოს პოვნაში? მე ვიცი, თუ სად უნდა წავიდე, მაგრამ დარწმუნებული არ ვარ, თუ რამდენი ნაბიჯი დამჭირდება ამისთვის."'
-      course1_collector_loops_challenge2_instruction: 'ამჯერად, თქვენ შეგიძლიათ გამოიყენოთ მხოლოდ თითო ისრის ბლოკი. შეაგროვეთ მთელი განძი! '
-      course1_collector_loops_challenge3_instruction: 'ამჯერად, თქვენ შეგიძლიათ გამოიყენოთ მხოლოდ თითო ისრის ბლოკი. შეაგროვეთ მთელი განძი! '
-      course1_collector_loops_challenge4_instruction: მოდით ავიღოთ განძი! დამეხმარეთ ყველა მწკრივში, შემდეგ დაუბრუნდით შემდეგი მწკრივის დასაწყისს. შეგიძლიათ დაინახოთ საერთო პრინციპი?
+      course1_collector_loops_challenge2_instruction: 'ამჯერად, თითოეული ისრის ბლოკის მხოლოდ ერთხელ გამოყენება შეგიძლიათ. შეაგროვეთ მთელი განძი! '
+      course1_collector_loops_challenge3_instruction: 'ამჯერად, თითოეული ისრის ბლოკის მხოლოდ ერთხელ გამოყენება შეგიძლიათ. შეაგროვეთ მთელი განძი! '
+      course1_collector_loops_challenge4_instruction: მოდით, მოვაგროვოთ განძი! დამეხმარეთ თითოეულ მწკრივში, შემდეგ კი გადადით მომდევნო მწკრივის დასაწყისზე. შეგიძლიათ საერთო პრინციპის აღმოჩენა?
       course1_maze_debugging_challenge1_instruction: გამართეთ ეს დონე. ამოიღეთ ზედმეტი ბლოკები და დაამატეთ საჭირო ბლოკები. მიიყვანეთ ჩიტი გოჭთან!
       course1_maze_debugging_challenge2_instruction: "გამართეთ ეს დონე.\nაქ სწორი ბლოკებია განთავსებული, მაგრამ არასწორი თანმიმდევრობით!"
       course1_maze_seq_challenge1_instruction: '"მონიშნეთ ტრაექტორია და მიმიყვანეთ გოჭამდე. უფრთხილდით ასაფეთქებელს, თორემ ბუმბულებს დაკარგავთ!"'
@@ -1268,7 +1269,7 @@ ka:
       course3_bee_functions_challenge4_instruction: გამოიყენეთ ნასწავლი მასალა ამ თავსატეხის ამოსახსნელად!
       course3_collector_debugging_challenge2_instruction: ხართ თუ არა ჩადგმული ციკლების ექსპერტი? გამოიყენეთ აქამდე შესწავლილი მასალა, რათა შეაგროვოთ მთელი განძი!
       course3_farmer_condLoops_challenge1_instruction: შეუხვიეთ მარჯვნივ გოგრებთან. შეაგროვეთ ყველაფერი ამ დონის დასამთავრებლად. ყოველი ფარული დანათესი შეიცავს მხოლოდ ერთ სიმინდს ან სალათს.
-      course3_farmer_condLoops_challenge2_instruction: შეაგროვეთ ყველაფერი, რათა დაასრულოთ ეს დონე.
+      course3_farmer_condLoops_challenge2_instruction: ამ დონის დასასრულებლად შეაგროვეთ ყველაფერი.
       course3_farmer_until_challenge2_instruction: გამოიყენეთ თუ/სხვაგვარად ბლოკები, რათა მიჰყვეთ უსწორმასწორო გზას. გროვების მოსაშორებლად ყოველ კუთხესთან, გამოიყენეთ `ამოიღე 1` ბრძანება ციკლში.
       course3_maze_debugging_challenge1_instruction: '*"მე რა, უბრალოდ წრეებს ვარტყამ?"*'
       course3_maze_debugging_challenge2_instruction: '*"თუ ხშირად მოვტრიალდები, შეიძლება, თავბრუ დამეხვეს! დამეხმარეთ, მივიდე რკოსთან მხოლოდ ოთხი `მობრუნების` ბრძანების საშუალებით."*'
@@ -1412,51 +1413,58 @@ ka:
       courseB_collector_loops5_2018_instruction: 'დაამატეთ კოდი წინა დონიდან, რათა შეაგროვოთ მთელი განძი. '
       courseB_collector_loops6_instruction: მოიფიქრეთ კოდი, რათა ლორელს შეაგროვებინოთ მთელი განძი!
       courseB_collector_loops6_2018_instruction: მოიფიქრეთ კოდი, რათა შეაგროვებინოთ ლორელს მთელი განძი!
-      courseB_collector_loops7_instruction: დაწერეთ კოდი, რათა აიღოთ მთელი განძი.
+      courseB_collector_loops7_instruction: დაწერეთ კოდი, მთელი განძის ასაღებად.
       courseB_collector_loops7_2018_instruction: დაწერეთ კოდი, რათა აიღოთ მთელი განძი.
-      courseB_collector_loops8_instruction: "**გამოწვევა:** განძი მიუყვება ამ კიბეს ბოლომდე. დაწერეთ კოდი, რათა შეაგროვებინოთ ლორელს ყველაფერი."
+      courseB_collector_loops8_instruction: "**გამოწვევა:** განძი ამ კიბეს ბოლომდე მიუყვება. დაწერეთ კოდი, რომლითაც ლორელს მის სრულად შეგროვებაში დაეხმარებით."
       courseB_collector_loops8_2018_instruction: "**გამოწვევა:** განძი მიუყვება ამ კიბეს ბოლომდე. დაწერეთ კოდი, რათა შეაგროვებინოთ ლორელს ყველაფერი."
-      courseB_collector_loops9_instruction: '*"დამეხმარეთ ამ ღრმა ხეობიდან განძეულობის შეგროვება."*'
+      courseB_collector_loops9_instruction: '*"დამეხმარეთ ამ ღრმა ხეობიდან განძეულის შეგროვებაში."*'
       courseB_collector_loops9_2018_instruction: '*"დამეხმარეთ ამ ღრმა ხეობიდან განძეულობის შეგროვება."*'
       courseB_collector_loops_challenge1_instruction: 'ამჯერად შეზღუდული რაოდენობის ბლოკები გაქვთ. შეაგროვეთ მთელი განძი! '
       courseB_collector_loops_challenge1_2018_instruction: 'ამჯერად შეზღუდული რაოდენობის ბლოკები გაქვთ. შეაგროვეთ მთელი განძი! '
-      courseB_collector_loops_challenge2_instruction: მოდით ავიღოთ განძი! დამეხმარეთ ყველა მწკრივში, შემდეგ დაუბრუნდით შემდეგი მწკრივის დასაწყისს. შეგიძლიათ დაინახოთ საერთო პრინციპი?
-      courseB_collector_loops_challenge2_2018_instruction: მოდით ავიღოთ განძი! დამეხმარეთ ყველა მწკრივში, შემდეგ დაუბრუნდით შემდეგი მწკრივის დასაწყისს. შეგიძლიათ დაინახოთ საერთო პრინციპი?
-      courseB_collector_loops_challenge`_instruction: 'ამჯერად, თქვენ შეგიძლიათ გამოიყენოთ მხოლოდ თითო ისრის ბლოკი. შეაგროვეთ მთელი განძი! '
+      courseB_collector_loops_challenge2_instruction: მოდით, მოვაგროვოთ განძი! დამეხმარეთ თითოეულ მწკრივში, შემდეგ კი გადადით მომდევნო მწკრივის დასაწყისზე. შეგიძლიათ საერთო პრინციპის აღმოჩენა?
+      courseB_collector_loops_challenge2_2018_instruction: მოდით, მოვაგროვოთ განძი! დამეხმარეთ თითოეულ მწკრივში, შემდეგ კი გადადით მომდევნო მწკრივის დასაწყისზე. შეგიძლიათ საერთო პრინციპის აღმოჩენა?
+      courseB_collector_loops_challenge`_instruction: 'ამჯერად, თითოეული ისრის ბლოკის მხოლოდ ერთხელ გამოყენება შეგიძლიათ. შეაგროვეთ მთელი განძი! '
       courseB_collector_prog1_instruction: ეს მოგზაური ლორელია! შეგიძლიათ გადაადგილოთ ის და შეაგროვებინოთ ოქრო?
       courseB_collector_prog3_instruction: როგორ ავაკრეფინოთ ლორელს ხუთივე ოქროს გროვა მხოლოდ `E -->` ბლოკის გამოყენებით?
       courseB_iceage_loops11_instruction: დაეხმარეთ სკრეტს მიაღწიოს რკომდე!
       courseB_iceage_loops11_forVideo_instruction: დაეხმარეთ სკრეტს მიაღწიოს რკომდე!
-      courseB_maze_seq1_instruction: "გაეთამაშეთ ამ ბლოკებს იმის სანახავად თუ რას გააკეთებს ჩიტი!\\r\n\\r\nამ დონის დასასრულებლად მიიყვანეთ ჩიტი გოჭთან."
-      courseB_maze_seq12_instruction: ახლა კი, გამოიყენეთ ნებისმიერ გზა ამ გოჭის დასაჭერად!
-      courseB_maze_seq12_2018_instruction: ახლა კი, გამოიყენეთ ნებისმიერ გზა ამ გოჭის დასაჭერად!
-      courseB_maze_seq2_instruction: '*"აქ შეცდომაა! შეასწორეთ კოდი, რათა მიმიყვანოთ გოჭთან."*'
+      courseB_iceage_loops12_instruction: გამოიყენეთ ნებისმიერი საშუალება ამ რკოს მოსაპოვებლად!
+      courseB_iceage_loops2_instruction: რკოს მოსაპოვებლად გამოიყენეთ ორი განსხვავებული მოძრაობის ბლოკი!
+      courseB_iceage_loops6_instruction: შეგიძლიათ რკოს მოსაპოვებლად ციკლის დამატება?
+      courseB_iceage_loops7_instruction: 'სკრატს ძალიან უნდა ეს რკო! '
+      courseB_iceage_loops8_instruction: 'შეგიძლიათ კოდის გასწორება? '
+      courseB_maze_seq1_instruction: "წაითამაშეთ ამ ბლოკებით, რომ ნახოთ, როგორ მოქმედებენ ისინი ჩიტზე! \n\nდონის დასასრულებლად მიიყვანეთ ჩიტი გოჭთნ."
+      courseB_maze_seq12_instruction: ახლა კი, გამოიყენეთ ნებისმიერი გზა ამ გოჭის დასაჭერად!
+      courseB_maze_seq12_2018_instruction: ახლა კი, გამოიყენეთ ნებისმიერი საშუალება ამ რკოს დასაჭერად!
+      courseB_maze_seq2_instruction: '*"აქ შეცდომაა! შეასწორეთ კოდი, რომ გოჭთან მიმიყვანოთ."*'
       courseB_maze_seq6_instruction: გადაადგილდით ერთი მიმართულებით, შემდეგ კი მეორე მიმართულებით და მიიყვანეთ ჩიტი გოჭთან!
       courseB_maze_seq7_instruction: გაარკვიეთ, რა აკლია კოდს და დაამატეთ ბლოკები, რომ მიმიყვანოთ გოჭთან!
       courseB_maze_seq8_instruction: თქვენი ჯერია! რა უნდა გააკეთოთ, რათა მიიყვანოთ ჩიტი გოჭთან?
-      courseB_maze_seq9_instruction: 'გამოწვევა: შემოუარეთ დინამიტს, რათა მიიყვანოთ ჩიტი გოჭთან.'
+      courseB_maze_seq9_instruction: 'გამოწვევა: შემოუარეთ დინამიტს, რომ ჩიტი გოჭთან მიიყვანოთ.'
       courseB_maze_seq9_challenge1_instruction: "*სად იმალება გოჭი ახლა?*"
-      courseB_maze_seqCold_instruction: '**გამოწვევა:** გამართეთ ეს დონე ბლოკების დამატებით, რათა მიიყვანოთ ჩიტი გოჭთან!'
-      courseB_maze_seqOld_instruction: 'შემოუარეთ დინამიტს და მიიყვანეთ ჩიტი გოჭთან! '
-      courseB_maze_seq_challenge1_instruction: თქვენ შეგიძლიათ იმოძრაოთ მხოლოდ ოთხჯერ ერთი მიმართულებით. შეგიძლიათ მოძებნოთ გზა, სანამ ბლოკები გაგითავდებათ?
+      courseB_maze_seqCold_instruction: '**გამოწვევა:** გამართეთ ეს დონე ბლოკების დამატებით და მიიყვანეთ ჩიტი გოჭთან!'
+      courseB_maze_seqOld_instruction: 'შემოუარეთ დინამიტს და ჩიტი გოჭთან მიიყვანეთ! '
+      courseB_maze_seq_challenge1_instruction: შეძლებთ გზის პოვნას ბლოკების დამთავრებამდე?
       courseB_maze_seq_challenge1_2018_instruction: თქვენ შეგიძლიათ იმოძრაოთ მხოლოდ ოთხჯერ ერთი მიმართულებით. შეგიძლიათ მოძებნოთ გზა, სანამ ბლოკები გაგითავდებათ?
-      courseB_maze_seq_challenge2_instruction: "გამართეთ ეს დონე.\nაქ სწორი ბლოკებია განთავსებული, მაგრამ არასწორი თანმიმდევრობით!"
-      courseB_maze_seq_challenge2_2018_instruction: "გამართეთ ეს დონე.\nაქ სწორი ბლოკებია განთავსებული, მაგრამ არასწორი თანმიმდევრობით!"
-      courseB_playLab_events1_instruction: ნახეთ თუ მიხვდებით თუ რომელი ბლოკი რას აკეთებს.
+      courseB_maze_seq_challenge2_instruction: გამართეთ ეს დონე. აქ სწორი ბლოკებია გამოყენებული, მაგრამ არასწორი თანმიმდევრობით!
+      courseB_maze_seq_challenge2_2018_instruction: გამართეთ ეს დონე. აქ სწორი ბლოკებია გამოყენებული, მაგრამ არასწორი თანმიმდევრობით!
+      courseB_playLab_events1_instruction: აბა თუ მიხვდებით, რომელი ბლოკი რას აკეთებს.
       courseB_playLab_events1_2018_instruction: ნახეთ თუ მიხვდებით თუ რომელი ბლოკი რას აკეთებს.
-      courseB_playlab_events_challenge1_instruction: "დადგა დრო ცხოველების დიდი რბოლისთვის! ამოძრავეთ ცხოველები ქვემოთ, როდესაც დააჭერთ `▼`.\nვინ ირბენს ყველაზე სწრაფად?"
+      courseB_playlab_events4_2018_instruction: ეტაპის დასამთავრებლად, მოინადირეთ დრაკონი!
+      courseB_playlab_events_challenge1_instruction: 'გააკეთეთ ისე, რომ როდესაც ▼ ღილაკს დააჭერთ, ცხოველებმა ქვემოთ იმოძრაონ. '
       courseB_playlab_events_challenge1_2018_instruction: "დადგა დრო ცხოველების დიდი რბოლისთვის! ამოძრავეთ ცხოველები ქვემოთ, როდესაც დააჭერთ `▼`.\nვინ ირბენს ყველაზე სწრაფად?"
-      courseB_playlab_events_challenge2_instruction: "მოდით გავაუჩინაროთ ცხოველები მაშინ, როდესაც მათზე დააწკაპებთ! თავიდან სცადეთ გაეთამაშოთ ძაღლს, შემდეგ კი დაეხმარეთ სხვა ცხოველებს მიიღონ მონაწილეობა გართობაში.\\r\nცხოველთა დაჭერობანის შესაქმნელად, თქვენ ასევე შეგიძლიათ ხმების და ქულების დამატება!"
-      courseB_playlab_events_challenge2_2018_instruction: "მოდით გავაუჩინაროთ ცხოველები მაშინ, როდესაც მათზე დააწკაპებთ! თავიდან სცადეთ გაეთამაშოთ ძაღლს, შემდეგ კი დაეხმარეთ სხვა ცხოველებს მიიღონ მონაწილეობა გართობაში.\\r\nცხოველთა დაჭერობანის შესაქმნელად, თქვენ ასევე შეგიძლიათ ხმების და ქულების დამატება!"
+      courseB_playlab_events_challenge2_instruction: გააკეთეთ ისე, რომ როდესაც ცხოველზე დააწკაპუნებთ, ის გაქრეს.
+      courseB_playlab_events_challenge2_2018_instruction: გააკეთეთ ისე, რომ როდესაც ცხოველზე დააწკაპუნებთ, ის გაქრეს.
       courseB_playlab_events_challenge2_embed_instruction: ესეც თქვენი დასრულებული თამაში!
-      courseB_playlab_events_challenge2_template_instruction: მოდით გავაუჩინაროთ ცხოველები მაშინ, როდესაც მათზე დააწკაპებთ! სახალისო ცხოველთა დაჭერობანის თამაშის შესაქმნელად, თქვენ ასევე შეგიძლიათ ხმების და ქულების მთვლელის დამატება!
+      courseB_playlab_events_challenge2_template_instruction: მოდით, გავაქროთ ცხოველები, როდესაც მათზე დააწკაპუნებთ! ცხოველთა დაჭერობანას სახალისო თამაშის შესაქმნელად, ასევე, შეგიძლიათ ხმებისა და ქულების მთვლელის დამატება!
       courseB_playlab_events_challenge2_template_2018_instruction: მოდით გავაუჩინაროთ ცხოველები მაშინ, როდესაც მათზე დააწკაპებთ! სახალისო ცხოველთა დაჭერობანის თამაშის შესაქმნელად, თქვენ ასევე შეგიძლიათ ხმების და ქულების მთვლელის დამატება!
-      courseB_starWars_prog1_instruction: '"მიდი და შეაგროვე ჯართი, BB-8!"'
+      courseB_scrat_forVideo_instruction: მოიპოვეთ რკო!
+      courseB_starWars_prog1_instruction: '"მიდი, ჯართი შეაგროვე, BB-8!"'
       courseB_starWars_prog10_instruction: დაეხმარეთ BB-8-ს მანათობელი ჯართის შეგროვებაში
       courseB_starWars_prog10_2018_instruction: დაეხმარეთ BB-8-ს მანათობელი ჯართის შეგროვებაში
       courseB_starWars_prog11_instruction: დაეხმარეთ BB-8-ს მანათობელი ჯართის შეგროვებაში
       courseB_starWars_prog11_2018_instruction: დაეხმარეთ BB-8-ს მანათობელი ჯართის შეგროვებაში
-      courseB_starWars_prog1_2018_instruction: '"მიდი და შეაგროვე ჯართი, BB-8!"'
+      courseB_starWars_prog1_2018_instruction: '"მიდი, ჯართი შეაგროვე, BB-8!"'
       courseB_starWars_prog2_instruction: შეაგროვეთ მთელი მეტალი.
       courseB_starWars_prog2_2018_instruction: შეაგროვეთ მთელი მეტალი.
       courseB_starWars_prog3_instruction: შეაგროვეთ მთელი ჯართი
@@ -1484,7 +1492,7 @@ ka:
         \r
         ითამაშეთ თამაში და ამოძრავეთ ვადლსი ისრების ღილაკებით მანამ, სანამ შეაგროვებთ საკმარის ქულას.
       courseC_artist_loop1_instruction: მოდით დავამატოთ ცოტაოდენი პიცა!
-      courseC_artist_loop1_2018_instruction: მოდით დავამატოთ ცოტაოდენი პიცა!
+      courseC_artist_loop1_2018_instruction: მოდით, `დააყენე ნიმუში` ბლოკს ცოტაოდენი პიცა დავამატოთ.
       courseC_artist_loops1_instruction: "*\"ზომბი. დახატე!\"*\\r\n\\r\nამ ზომბის სურს დახატოს ხაზი იმ ადგილიდან სადაც იმყოფება მზესუმზირების ბაღამდე. შეგიძლიათ დაეხმაროთ მას? \\r\n*(ბაღი 250 პიქსელითაა მოშორებული)*  "
       courseC_artist_loops1a_instruction: 'მიიყვანეთ მხატვარი სათამაშო გარემოს ცენტრში, შემდეგ კი დახატეთ ჩიტი სტიკერის გამოყენებით. '
       courseC_artist_loops1a_2018_instruction: 'მიიყვანეთ მხატვარი სათამაშო გარემოს ცენტრში, შემდეგ კი დახატეთ ჩიტი სტიკერის გამოყენებით. '
@@ -1502,16 +1510,16 @@ ka:
       courseC_artist_loops5a_2018_instruction: გამოსცადეთ ახალი სტიკერები!
       courseC_artist_loops5b_instruction: სცადეთ ხაზების დამატება!
       courseC_artist_loops5b_2018_instruction: სცადეთ ხაზების დამატება!
-      courseC_artist_loops6_instruction: "რა უნდა განათავსოს ზომბმა ბაღში? \\r\n\\r\n\\r\n"
+      courseC_artist_loops6_instruction: "რა უნდა მოათავსოს ზომბმა ბაღში?  \n\n\n"
       courseC_artist_loops6a_instruction: დაამატეთ სხვა სტიკერი!
       courseC_artist_loops6a_2018_instruction: დაამატეთ სხვა სტიკერი!
-      courseC_artist_loops7a_instruction: გაეთამაშეთ ციკლების და კუთხეებს.
-      courseC_artist_loops7a_2018_instruction: გაეთამაშეთ ციკლების და კუთხეებს.
+      courseC_artist_loops7a_instruction: წაითამაშეთ ციკლებითა და კუთხეებით.
+      courseC_artist_loops7a_2018_instruction: წაითამაშეთ ციკლებითა და კუთხეებით.
       courseC_artist_loops8a_instruction: ახლა კი თქვენით სცადეთ რამის გაკეთება!
       courseC_artist_loops8a_2018_instruction: ახლა კი თქვენით სცადეთ რამის გაკეთება!
       courseC_artist_loopsPre1a_instruction: დროა დავატრიალოთ ეს ხაზი!
       courseC_artist_loopsPre1a_2018_instruction: დროა დავატრიალოთ ეს ხაზი!
-      courseC_artist_loopsPrePre1a_instruction: 'მიიყვანეთ მხატვარი სათამაშო გარემოს ცენტრში, შემდეგ კი დახატეთ ხაზი. '
+      courseC_artist_loopsPrePre1a_instruction: 'მიიყვანეთ მხატვარი სათამაშო გარემოს ცენტრში, შემდეგ კი ხაზი დახატეთ. '
       courseC_artist_loopsPrePre1a_2018_instruction: 'მიიყვანეთ მხატვარი სათამაშო გარემოს ცენტრში, შემდეგ კი დახატეთ ხაზი. '
       courseC_artist_loopsTemplate_instruction: შესანიშნავია! ახლა, როდესაც ყვავილებმა კალამი გამოიტანეს, დაეხმარეთ ზომბის ყვავილების დასაცავად განათავსოს მეგობარი ყოველ 50 პიქსელში.
       courseC_artist_loopsTemplateA_instruction: 'მიიყვანეთ მხატვარი სათამაშო გარემოს ცენტრში, შემდეგ კი დახატეთ ჩიტი სტიკერის გამოყენებით. '
@@ -1521,25 +1529,25 @@ ka:
       courseC_artist_prog5_2018_instruction: |-
         სახლს სახურავი სჭირდება! დახატეთ სამკუთხედი. მინიშნება: სამივე გვერდი თანაბარი სიგრძისაა.
       courseC_artist_prog_challenge1-doghouse_instruction: მოდით ავაშენოთ ჯორჯისათვის ძაღლის სახლი!
-      courseC_artist_prog_challenge1_instruction: "დახატეთ ოთახი ყოველი ცხოველისთვის.\nამ თავსატეხის ამოხსნის მრავალი გზა არსებობს, ამიტომ იხალისეთ. \nუმოკლესი შესაძლებელი ამოხსნა საჭიროებს 6 ბლოკს, მაგრამ თქვენ შეგიძლიათ გამოიყენოთ იმდენი, რამდენიც გაგიხარდებათ!"
+      courseC_artist_prog_challenge1_instruction: 'დახატეთ ოთახი თითოეული ცხოველისთვის. '
       courseC_artist_prog_challenge1_2018_instruction: "დახატეთ ოთახი ყოველი ცხოველისთვის.\nამ თავსატეხის ამოხსნის მრავალი გზა არსებობს, ამიტომ იხალისეთ. \nუმოკლესი შესაძლებელი ამოხსნა საჭიროებს 6 ბლოკს, მაგრამ თქვენ შეგიძლიათ გამოიყენოთ იმდენი, რამდენიც გაგიხარდებათ!"
       courseC_artist_prog_challenge2_instruction: "*დამეხმარეთ დავხატო გზაზე ყვითელი ხაზები!*"
-      courseC_artist_prog_challenge2a_instruction: '*დამეხმარეთ დავხატო გზაზე ყვითელი ხაზები!*'
+      courseC_artist_prog_challenge2a_instruction: '*დამეხმარეთ გზაზე ყვითელი ხაზების დახატვაში!*'
       courseC_artist_prog_challenge2a_2018_instruction: '*დამეხმარეთ დავხატო გზაზე ყვითელი ხაზები!*'
-      courseC_collector_loops_challenge2_instruction: შეაგროვეთ მთელი განძი!
-      courseC_collector_loops_challenge2_2018_instruction: შეაგროვეთ მთელი განძი!
+      courseC_collector_loops_challenge2_instruction: შეაგროვეთ განძის სულ მცირე **5** ერთეული!
+      courseC_collector_loops_challenge2_2018_instruction: შეაგროვეთ განძის სულ მცირე **5** ერთეული!
       courseC_collector_prog2_instruction: ამოძრავეთ ლორელი განძთან, შემდეგ გამოიყენეთ `შეგროვება`, რათა შეაგროვოთ ის.
       courseC_collector_prog2_2018_instruction: ამოძრავეთ ლორელი განძთან, შემდეგ გამოიყენეთ `შეგროვება`, რათა შეაგროვოთ ის.
-      courseC_collector_prog9_instruction: '*"მოდით შევაგროვოთ მთელი განძი!"*'
-      courseC_collector_prog9_2018_instruction: '*"მოდით შევაგროვოთ მთელი განძი!"*'
+      courseC_collector_prog9_instruction: '*"მოდით მთელი განძი შევაგროვოთ!"*'
+      courseC_collector_prog9_2018_instruction: '*"მოდით მთელი განძი შევაგროვოთ!"*'
       courseC_collector_prog_challenge1_instruction: კარგი დააკვირდით! შეგიძლიათ შეაგროვოთ **10-ვე** განძის ერთეული?
       courseC_collector_prog_challenge1_2018_instruction: კარგი დააკვირდით! შეგიძლიათ შეაგროვოთ **10-ვე** განძის ერთეული?
       courseC_collector_prog_challenge2_instruction: ამ გამოქვაბულში განძეულობის **20** ნაწილაკია. შეაგროვეთ ნახევარი მაინც, რათა დაასრულოთ ეს გამოწვევა!
       courseC_collector_prog_challenge2_2018_instruction: ამ გამოქვაბულში განძეულობის **20** ნაწილაკია. შეაგროვეთ ნახევარი მაინც, რათა დაასრულოთ ეს გამოწვევა!
       courseC_flappy_embed_events_instruction: ეს იმ თამაშის მაგალითია, რომელსაც მალევე თქვენით შექმნით! გაითამაშეთ ის რამდენჯერმე, რათა გაიაზროთ იმის იდეა, თუ რისი გაკეთება მოგიწევთ.
       courseC_flappy_events1_instruction: "დააკავშირეთ `იფრიალე ნორმალური რაოდენობით` ბლოკი `როცა დააწკაპებთ` მოვლენასთან, შემდეგ დააჭირეთ \"გაშვებას\". \\r\n\\r\n---\\r\n\\r\nდააწკაპუნეთ ან დააჭირეთ სათამაშო გარემოს, რათა მიიყვანოთ მოლივლივე მიზანთან."
-      courseC_flappy_events10_instruction: 'შექმენით თქვენი საკუთარი მოლივლივე თამაშე! '
-      courseC_flappy_events10_2018_instruction: 'შექმენით თქვენი საკუთარი მოლივლივე თამაშე! '
+      courseC_flappy_events10_instruction: 'შექმენით საკუთარი მოფარფატე თამაშე! '
+      courseC_flappy_events10_2018_instruction: 'შექმენით საკუთარი მოფარფატე თამაშე! '
       courseC_flappy_events1_2018_instruction: "დააკავშირეთ `იფრიალე ნორმალური რაოდენობით` ბლოკი `როცა დააწკაპებთ` მოვლენასთან, შემდეგ დააჭირეთ \"გაშვებას\". \\r\n\\r\n---\\r\n\\r\nდააწკაპუნეთ ან დააჭირეთ სათამაშო გარემოს, რათა მიიყვანოთ მოლივლივე მიზანთან."
       courseC_flappy_events2_instruction: სცადეთ ისეთი ბლოკის დამატება, რომელიც განსაზღვრავს დონის სისწრაფეს, როდესაც მომხმარებელი დააწკაპებთ "გაშვების" ღილაკზე. გასაგრძელებლად, ითამაშეთ თამაში და ილივლივეთ მიზნამდე.
       courseC_flappy_events2_2018_instruction: სცადეთ ისეთი ბლოკის დამატება, რომელიც განსაზღვრავს დონის სისწრაფეს, როდესაც მომხმარებელი დააწკაპებთ "გაშვების" ღილაკზე. გასაგრძელებლად, ითამაშეთ თამაში და ილივლივეთ მიზნამდე.
@@ -1567,8 +1575,8 @@ ka:
       courseC_maze_debugging_challenge1_2018_instruction: '*"მე რა, უბრალოდ წრეებს ვარტყამ?"*'
       courseC_maze_debugging_challenge2_instruction: '*"თუ ხშირად მოვტრიალდები, შეიძლება თავბრუ დამეხვეს! დამეხმარეთ მივიდე რკოსთან მხოლოდ ოთხი `მობრუნების` ბრძანების საშუალებით."*'
       courseC_maze_debugging_challenge2_2018_instruction: '*"თუ ხშირად მოვტრიალდები, შეიძლება თავბრუ დამეხვეს! დამეხმარეთ მივიდე რკოსთან მხოლოდ ოთხი `მობრუნების` ბრძანების საშუალებით."*'
-      courseC_maze_loops10_instruction: ყველაფერს შესანიშნავად აკეთებთ! ასე გააგრძელეთ!
-      courseC_maze_loops9_instruction: ყველაფერს შესანიშნავად აკეთებთ! ასე გააგრძელეთ!
+      courseC_maze_loops10_instruction: ყველაფერს ჩინებულად აკეთებთ! ასე განაგრძეთ!
+      courseC_maze_loops9_instruction: ყველაფერს ჩინებულად აკეთებთ! ასე განაგრძეთ!
       courseC_maze_loops_challenge1_instruction: 'ამჯერად სკრატს რკოს საპოვნელად ციკლების გამოყენება სურს! '
       courseC_maze_loops_challenge1a_instruction: 'ამჯერად სკრატს რკოს საპოვნელად ციკლების გამოყენება სურს! '
       courseC_maze_loops_challenge1a_2018_instruction: 'ამჯერად სკრატს რკოს საპოვნელად ციკლების გამოყენება სურს! '
@@ -1583,7 +1591,7 @@ ka:
       courseC_maze_programming8_2018_instruction: '*"შეინარჩუნეთ სიმშვიდე და დამეხმარეთ ცუდი გოჭის პოვნაში."*'
       courseC_maze_programming8_predict1_instruction: '*"შეინარჩუნეთ სიმშვიდე და დამეხმარეთ ცუდი გოჭის პოვნაში."*'
       courseC_maze_programming8_predict1_2018_instruction: '*"შეინარჩუნეთ სიმშვიდე და დამეხმარეთ ცუდი გოჭის პოვნაში."*'
-      courseC_maze_programming_challenge1_instruction: "*\"გოჭი იმალება!\nშეგიძლიათ მაპოვნინოთ ის?\"*"
+      courseC_maze_programming_challenge1_instruction: 'გოჭი იმალება. თქვენ ის უნდა იპოვნოთ. '
       courseC_maze_programming_challenge1_2018_instruction: "*\"გოჭი იმალება!\nშეგიძლიათ მაპოვნინოთ ის?\"*"
       courseC_maze_programming_challenge2_instruction: ზოგჯერ პრობლემის გადაწყვეტის რამდენიმე გზა არსეობს. ზოგჯერ უკან მოძრაობა უფრო სწრაფია, ვიდრე წინ მოძრაობა!
       courseC_maze_programming_challenge2_2018_instruction: ზოგჯერ პრობლემის გადაწყვეტის რამდენიმე გზა არსეობს. ზოგჯერ უკან მოძრაობა უფრო სწრაფია, ვიდრე წინ მოძრაობა!
@@ -1591,13 +1599,13 @@ ka:
         აი თამაში, რომელიც შეგიძლიათ ითამაშოთ! გასამარჯვებლად, გამოიყენეთ თქვენი ისრების ღილაკები და დააჯახეთ პინგვინი რვაფეხას.\r
         \r
         როდესაც მორჩებით, თქვენ შეისწავლით თუ როგორ უნდა გააკეთოთ ეს თამაში!
-      courseC_puppy_loops10_instruction: ყველაფერს შესანიშნავად აკეთებთ! ასე გააგრძელეთ!
-      courseC_puppy_loops9_instruction: ყველაფერს შესანიშნავად აკეთებთ! ასე გააგრძელეთ!
+      courseC_puppy_loops10_instruction: ყველაფერს ჩინებულად აკეთებთ! ასე განაგრძეთ!
+      courseC_puppy_loops9_instruction: ყველაფერს ჩინებულად აკეთებთ! ასე განაგრძეთ!
       courseC_starWars_loops1_instruction: BB-8 შეაგროვებს მთელ ჯართს, რომელსაც მოძრაობისას გზად გადააწყდება. გამოიყენეთ 5 ერთნაირი ბლოკი, რათა ააღებინოთ BB-8-ს მთელი ჯართი სათამაშო გარემოდან.
-      courseC_starWars_loops10_instruction: ყველაფერს შესანიშნავად აკეთებთ! ასე გააგრძელეთ!
-      courseC_starWars_loops10_2018_instruction: ყველაფერს შესანიშნავად აკეთებთ! ასე გააგრძელეთ!
+      courseC_starWars_loops10_instruction: ყველაფერს ჩინებულად აკეთებთ! ასე განაგრძეთ!
+      courseC_starWars_loops10_2018_instruction: ყველაფერს ჩინებულად აკეთებთ! ასე განაგრძეთ!
       courseC_starWars_loops10_predict2_instruction: ყველაფერს შესანიშნავად აკეთებთ! ასე გააგრძელეთ!
-      courseC_starWars_loops10_predict2_2018_instruction: ყველაფერს შესანიშნავად აკეთებთ! ასე გააგრძელეთ!
+      courseC_starWars_loops10_predict2_2018_instruction: ყველაფერს ჩინებულად აკეთებთ! ასე განაგრძეთ!
       courseC_starWars_loops1_2018_instruction: BB-8 შეაგროვებს მთელ ჯართს, რომელსაც მოძრაობისას გზად გადააწყდება. გამოიყენეთ 5 ერთნაირი ბლოკი, რათა ააღებინოთ BB-8-ს მთელი ჯართი სათამაშო გარემოდან.
       courseC_starWars_loops1_predict1_instruction: BB-8 შეაგროვებს მთელ ჯართს, რომელსაც მოძრაობისას გზად გადააწყდება. გამოიყენეთ 5 ერთნაირი ბლოკი, რათა ააღებინოთ BB-8-ს მთელი ჯართი სათამაშო გარემოდან.
       courseC_starWars_loops1_predict1_2018_instruction: BB-8 შეაგროვებს მთელ ჯართს, რომელსაც მოძრაობისას გზად გადააწყდება. გამოიყენეთ 5 ერთნაირი ბლოკი, რათა ააღებინოთ BB-8-ს მთელი ჯართი სათამაშო გარემოდან.
@@ -1614,7 +1622,7 @@ ka:
       courseD_Frozen_nested1_instruction: 'დახატეთ პატარა ფიგურა, რომლის სიგანე **20 და 50** პიქსელის შორის იქნება. ეს ნებისმიერ თქვენითვის სასურველი ფიგურა შეიძლება იყოს.  '
       courseD_Frozen_nested2_instruction: ახლა კი ზედიზედ რამდენიმე ფიგურა დახატეთ!
       courseD_Frozen_nested3_instruction: მოდით დავატრიალოთ ეს ფიგურების მწკრივი!
-      courseD_Frozen_nested4_instruction: დროა ფენებად განვალაგოთ ეს ფიგურები!
+      courseD_Frozen_nested4_instruction: დროა ეს ფიგურები ფენებად განვალაგოთ!
       courseD_Frozen_nested5_instruction: ითამაშეთ ფიფქებით!
       courseD_Frozen_nested6_instruction: დახატეთ კიბე-საფეხუროვანი ნიმუში, რომელიც გამოიყენებს 75 და 105 გრადუსს შორის მოთავსებულ მობრუნებებს.
       courseD_Frozen_nested7_instruction: ახლა კი, შეტრიალდით 180 გრადუსით და ისევ დახატეთ ეს კიბისებრი ორნამენტი!
@@ -1640,11 +1648,11 @@ ka:
       courseD_artist_binary6_2018_instruction: რომელი ექვსნიშნა ორობითი ხაზი დახატავს ამ სურათს 11-ჯერ გამეორებით?
       courseD_artist_binary7_instruction: რომელია უმოკლესი ორობითი ხაზი, რომელიც შეგიძლიათ გაიმეოროთ ამ სურათის დასახატად?
       courseD_artist_binary7_2018_instruction: რომელია უმოკლესი ორობითი ხაზი, რომელიც შეგიძლიათ გაიმეოროთ ამ სურათის დასახატად?
-      courseD_artist_binary8_instruction: დაასრულეთ კოდი, რათა შექმნათ ეს ნახატი.
-      courseD_artist_binary8_2018_instruction: დაასრულეთ კოდი, რათა შექმნათ ეს ნახატი.
+      courseD_artist_binary8_instruction: ამ ნახატის შესაქმნელად დაასრულეთ მოცემული კოდი.
+      courseD_artist_binary8_2018_instruction: ამ ნახატის შესაქმნელად დაასრულეთ მოცემული კოდი.
       courseD_artist_binary8_predict1_instruction: დაასრულეთ კოდი, რათა შექმნათ ეს ნახატი.
-      courseD_artist_binary8_predict1_2018_instruction: დაასრულეთ კოდი, რათა შექმნათ ეს ნახატი.
-      courseD_artist_binary_challenge0_instruction: სცადეთ ჩადგმული ციკლების გამოყენება ამ ნახატის დასარულებლად.
+      courseD_artist_binary8_predict1_2018_instruction: ამ ნახატის შესაქმნელად დაასრულეთ მოცემული კოდი.
+      courseD_artist_binary_challenge0_instruction: მოცემული ნახატის დასასრულებლად სცადეთ ჩასმული ციკლების გამოყენება.
       courseD_artist_binary_challenge1_instruction: ამ თავსატეხში თქვენ შეგიძლიათ გამოიყენოთ მხოლოდ ორობითი (0 ან 1) მნიშვნელობები. სცადეთ, ჩადგმული ციკლების გამოყენება ამ ნახატის დასასრულებლად.
       courseD_artist_binary_challenge1_2018_instruction: ამ თავსატეხში თქვენ შეგიძლიათ გამოიყენოთ მხოლოდ ორობითი (0 ან 1) მნიშვნელობები. სცადეთ, ჩადგმული ციკლების გამოყენება ამ ნახატის დასასრულებლად.
       courseD_artist_binary_challenge2_instruction: ხართ თუ არა საკმარისად დაკვირვებული ან ლოგოს ნორმალურ მდგომარეობაში დასაბრუნებლად?
@@ -1672,8 +1680,8 @@ ka:
       courseD_artist_project3_2018_instruction: მოდით დავატრიალოთ ეს ფიგურების მწკრივი!
       courseD_artist_project3a_instruction: წრიულად დაატრიალეთ ეს ფიგურა 5-ჯერ ან 6-ჯერ.
       courseD_artist_project3a_2018_instruction: წრიულად დაატრიალეთ ეს ფიგურა 5-ჯერ ან 6-ჯერ.
-      courseD_artist_project4_instruction: დროა ფენებად განვალაგოთ ეს ფიგურები!
-      courseD_artist_project4_2018_instruction: დროა ფენებად განვალაგოთ ეს ფიგურები!
+      courseD_artist_project4_instruction: დროა ეს ფიგურები ფენებად განვალაგოთ!
+      courseD_artist_project4_2018_instruction: დროა ეს ფიგურები ფენებად განვალაგოთ!
       courseD_artist_project4a_instruction: |-
         სცადეთ გაეთამაშოთ თქვენს ქმნილებას. დახატეთ ის რაც მოგწონთ.\r
         - რა მოხდება, თუ გამოიყენებთ ორ განსხვავებულ კუთხეს თქვენს კიბის-საფეხურისებრი ორნამენტში\r
@@ -1688,7 +1696,7 @@ ka:
       courseD_artist_project5_2018_instruction: ითამაშეთ ფიფქებით!
       courseD_artist_project_embedded_instruction: ეს ისაა, რის გაკეთებასაც მალე დაიწყებთ!
       courseD_artist_ramp11_instruction: ახლა კი მხატვრის გამოყენებით შექმენით კვადრატი!
-      courseD_artist_ramp12_instruction: გამოიყენეთ ნასწავლი მასალა და დახატეთ სამკუთხედი კვადრატის შიგნით.
+      courseD_artist_ramp12_instruction: ნასწავლი მასალის გამოყენებით ჩახატეთ კვადრატში სამკუთხედი.
       courseD_bee_conditionals1_instruction: შეამოწმეთ არის თუ არა ღრუბლის ქვეშ ყვავილი. თუ არის, შეაგროვეთ ნექტარი.
       courseD_bee_conditionals1_predict1_instruction: შეამოწმეთ არის თუ არა ღრუბლის ქვეშ ყვავილი. თუ არის, შეაგროვეთ ნექტარი.
       courseD_bee_conditionals1_predict1_2018_instruction: შეამოწმეთ არის თუ არა ღრუბლის ქვეშ ყვავილი. თუ არის, შეაგროვეთ ნექტარი.
@@ -1698,13 +1706,13 @@ ka:
       courseD_bee_conditionals7_predict2_2018_instruction: გამოიყენეთ `თუ/სხვაგვარად` ბლოკე, რათა შეაგროვოთ ნექტარი ყვავილებიდან და გააკეთოთ თაფლი ფიჭაში.
       courseD_bee_conditionals9_instruction: შეაგროვეთ მთელი ნექტარი ან გააკეთეთ მთელი თაფლი.
       courseD_bee_conditionals9_2018_instruction: შეაგროვეთ მთელი ნექტარი ან გააკეთეთ მთელი თაფლი.
-      courseD_bee_conditionals_challenge1_instruction: შეაგროვეთ მთელი ნექტარი ან გააკეთეთ მთელი თაფლი.
+      courseD_bee_conditionals_challenge1_instruction: შეაგროვეთ მთელი ნექტარი და გააკეთეთ მთელი თაფლი.
       courseD_bee_conditionals_challenge1_2018_instruction: შეაგროვეთ მთელი ნექტარი ან გააკეთეთ მთელი თაფლი.
-      courseD_bee_conditionals_challenge2_instruction: შეაგროვეთ მთელი ნექტარი ან გააკეთეთ მთელი თაფლი.
-      courseD_bee_conditionals_challenge2_2018_instruction: შეაგროვეთ მთელი ნექტარი ან გააკეთეთ მთელი თაფლი.
+      courseD_bee_conditionals_challenge2_instruction: შეაგროვეთ მთელი ნექტარი და გააკეთეთ მთელი თაფლი.
+      courseD_bee_conditionals_challenge2_2018_instruction: შეაგროვეთ მთელი ნექტარი და გააკეთეთ მთელი თაფლი.
       courseD_bee_conditionals_challenge3_instruction: შეაგროვეთ მთელი ნექტარი ან გააკეთეთ მთელი თაფლი.
       courseD_bee_debugging3_instruction: გაასწორეთ შეცდომა/შეცდომები, რათა შეაგროვოთ მთელი ნექტარი და გააკეთოთ თაფლის სრული რაოდენობა.
-      courseD_bee_debugging5_instruction: '**გამოწვევა:** ყველა საჭირო ბრძანება უკვე აქაა...ახლა კი, გამოიყენეთ თქვენი გამართვის უნარები, რათა ამოხსნათ ეს თავსატეხი.'
+      courseD_bee_debugging5_instruction: '**გამოწვევა:** ყველა საჭირო ბრძანება უკვე აქაა...ახლა კი, გამოიყენეთ თქვენი გამართვის უნარები და ამოხსნათ ეს თავსატეხი.'
       courseD_bee_debugging_challenge1_instruction: შეხედეთ თუ როგორ აგროვებენ ფუტკრები ნექტარს. შეგიძლიათ გამოიყენოთ იგივე პრინციპი, რათა დაეხმაროთ ფუტკარს თაფლის სრული რაოდენობის დამზადებაში?
       courseD_bee_debugging_challenge1_2018_instruction: შეხედეთ თუ როგორ აგროვებენ ფუტკრები ნექტარს. შეგიძლიათ გამოიყენოთ იგივე პრინციპი, რათა დაეხმაროთ ფუტკარს თაფლის სრული რაოდენობის დამზადებაში?
       courseD_bee_debugging_challenge1a_instruction: შეხედეთ თუ როგორ აგროვებენ ფუტკრები ნექტარს. შეგიძლიათ გამოიყენოთ იგივე პრინციპი, რათა დაეხმაროთ ფუტკარს თაფლის სრული რაოდენობის დამზადებაში?
@@ -1750,22 +1758,22 @@ ka:
       courseD_bounce_events7_instruction: მიამაგრეთ ბლოკები ორივე "როცა" ბლოკს. აისხლიტეთ ბურთი, სანამ ის მიზანს არ მოხვდება.
       courseD_bounce_events7s_instruction: "დააკავშირეთ ხმის ბლოკები, რათა კალათში ჩაგდებისას ბადემ ხმა გამოსცეს და ისმოდეს სტვენის ხმა, როდესაც ბურთს ვერ დაიჭერთ.\nათამაშეთ ბურთი, სანამ ის არ მიაღწევს საბოლოო მიზანს."
       courseD_bounce_events7s_2018_instruction: "დააკავშირეთ ხმის ბლოკები, რათა კალათში ჩაგდებისას ბადემ ხმა გამოსცეს და ისმოდეს სტვენის ხმა, როდესაც ბურთს ვერ დაიჭერთ.\nათამაშეთ ბურთი, სანამ ის არ მიაღწევს საბოლოო მიზანს."
-      courseD_collector_debugging1_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
+      courseD_collector_debugging1_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
       courseD_collector_debugging1_2018_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging1a_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging1a_2018_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging2_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging2_2018_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging2a_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging2a_2018_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging3_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging3_2018_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging3a_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging3a_2018_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging4_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging4_2018_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging4a_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
-      courseD_collector_debugging4a_2018_instruction: შეასწორეთ შეცდომა(ები), რათა შეაგროვოთ მთელი განძი.
+      courseD_collector_debugging1a_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging1a_2018_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging2_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging2_2018_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging2a_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging2a_2018_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging3_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging3_2018_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging3a_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging3a_2018_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging4_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging4_2018_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging4a_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
+      courseD_collector_debugging4a_2018_instruction: მთელი განძის შესაგროვებლად შეასწორეთ შეცდომა(ები).
       courseD_collector_debugging5_instruction: ყველა საჭირო ბრძანება უკვე აქაა...ახლა კი, გამოიყენეთ თქვენი გამართვის უნარები, რათა ამოხსნათ ეს თავსატეხი.
       courseD_collector_debugging5_2018_instruction: ყველა საჭირო ბრძანება უკვე აქაა...ახლა კი, გამოიყენეთ თქვენი გამართვის უნარები, რათა ამოხსნათ ეს თავსატეხი.
       courseD_collector_debugging5a_instruction: ყველა საჭირო ბრძანება უკვე აქაა...ახლა კი, გამოიყენეთ თქვენი გამართვის უნარები, რათა ამოხსნათ ეს თავსატეხი.
@@ -1777,10 +1785,10 @@ ka:
       courseD_collector_debugging_challenge2_2018_instruction: ხართ თუ არა ჩადგმული ციკლების ექსპერტი? გამოიყენეთ აქამდე შესწავლილი მასალა, რათა შეაგროვოთ მთელი განძი!
       courseD_collector_nested_loops_challenge2_instruction: დაეხმარეთ შემგროვებელს მინიმუმ ორი განძეულობის გროვასთან მიღწევაში. შეგიძლიათ მხოლოდ ინსტრუმენტების პანელში არსებული ბლოკბის გამოყენება. 4-ვეს შეგროვებაა შესაძლებელი.
       courseD_collector_nested_loops_challenge2_2018_instruction: დაეხმარეთ შემგროვებელს მინიმუმ ორი განძეულობის გროვასთან მიღწევაში. შეგიძლიათ მხოლოდ ინსტრუმენტების პანელში არსებული ბლოკბის გამოყენება. 4-ვეს შეგროვებაა შესაძლებელი.
-      courseD_collector_nested_loops_challenge2a_instruction: დაეხმარეთ შემგროვებელს მინიმუმ ორი განძეულობის გროვასთან მიღწევაში. შეგიძლიათ მხოლოდ ინსტრუმენტების პანელში არსებული ბლოკბის გამოყენება. 4-ვეს შეგროვებაა შესაძლებელი.
+      courseD_collector_nested_loops_challenge2a_instruction: დაეხმარეთ ლორელს განძის სულ მცირე ორი გროვის შეგროვებაში.
       courseD_collector_until_challenge1_instruction: ხართ თუ არა ჩადგმული ციკლების ექსპერტი? გამოიყენეთ აქამდე შესწავლილი მასალა, რათა შეაგროვოთ მთელი განძი!
       courseD_debugging_3_instruction: გაასწორეთ შეცდომა/შეცდომები, რათა შეაგროვოთ მთელი ნექტარი და გააკეთოთ თაფლის სრული რაოდენობა.
-      courseD_debugging_5_instruction: '**გამოწვევა:** ყველა საჭირო ბრძანება უკვე აქაა...ახლა კი, გამოიყენეთ თქვენი გამართვის უნარები, რათა ამოხსნათ ეს თავსატეხი.'
+      courseD_debugging_5_instruction: '**გამოწვევა:** ყველა საჭირო ბრძანება უკვე აქაა...ახლა კი, გამოიყენეთ თქვენი გამართვის უნარები და ამოხსნათ ეს თავსატეხი.'
       courseD_farmer_condLoops5_instruction: შეაგროვეთ მთელი სიმინდი და სალათი, შემდეგ კი აიღეთ გოგრა.
       courseD_farmer_condLoops5_2018_instruction: შეაგროვეთ მთელი სიმინდი და სალათი, შემდეგ კი აიღეთ გოგრა.
       courseD_farmer_condLoops8_instruction: შეაგროვეთ მთელი სიმინდი და სალათი, შემდეგ კი აიღეთ გოგრა.
@@ -1791,7 +1799,7 @@ ka:
       courseD_farmer_condLoops9_predict1_2018_instruction: შეაგროვეთ მთელი სიმინდი და სალათი, შემდეგ კი აიღეთ გოგრა.
       courseD_farmer_condLoops_challenge1_instruction: "შეუხვიეთ მარჯვნივ გოგრებთან.\nშეაგროვეთ ყველაფერი ამ დონის დასამთავრებლად. ყოველი ფარული დანათესი შეიცავს მხოლოდ ერთ სიმინდს ან სალათს."
       courseD_farmer_condLoops_challenge1_2018_instruction: "შეუხვიეთ მარჯვნივ გოგრებთან.\nშეაგროვეთ ყველაფერი ამ დონის დასამთავრებლად. ყოველი ფარული დანათესი შეიცავს მხოლოდ ერთ სიმინდს ან სალათს."
-      courseD_farmer_condLoops_challenge2_instruction: შეაგროვეთ ყველაფერი, რათა დაასრულოთ ეს დონე.
+      courseD_farmer_condLoops_challenge2_instruction: ამ დონის დასასრულებლად შეაგროვეთ ყველაფერი.
       courseD_farmer_condLoops_challenge2_2018_instruction: შეაგროვეთ ყველაფერი, რათა დაასრულოთ ეს დონე.
       courseD_farmer_condLoops_challenge2_clone_instruction: შეაგროვეთ ყველაფერი, რათა დაასრულოთ ეს დონე.
       courseD_farmer_until_challenge2_instruction: გამოიყენეთ თუ/სხვაგვარად ბლოკები, რათა მიჰყვეთ უსწორმასწორო გზას. გროვების მოსაშორებლად ყოველ კუთხესთან, გამოიყენეთ `ამოიღე 1` ბრძანება ციკლში.
@@ -1804,6 +1812,10 @@ ka:
       courseD_harvester_nested_loops_challenge1_instruction: '"ფერმაზე მცირედი დახმარება მჭირდება! დამეხმარეთ ამ სიმინდის მოგროვებაში მხოლოდ თქვენს ინსტრუმენტების პანელში არსებული ბლოკების გამოყენებით."'
       courseD_harvester_nested_loops_challenge1_2018_instruction: '"ფერმაზე მცირედი დახმარება მჭირდება! დამეხმარეთ ამ სიმინდის მოგროვებაში მხოლოდ თქვენს ინსტრუმენტების პანელში არსებული ბლოკების გამოყენებით."'
       courseD_iceage_loops11_instruction: დაეხმარეთ სკრეტს მიაღწიოს რკომდე!
+      courseD_iceage_loops12_instruction: გამოიყენეთ ნებისმიერი საშუალება ამ რკოს მოსაპოვებლად!
+      courseD_iceage_loops6_instruction: შეგიძლიათ რკოს მოსაპოვებლად ციკლის დამატება?
+      courseD_iceage_loops7_instruction: 'სკრატს ძალიან უნდა ეს რკო! '
+      courseD_iceage_loops8_instruction: 'შეგიძლიათ კოდის გასწორება? '
       courseD_maze_loops_challenge1_instruction: მოდით ვინადიროთ განძიზე ციკლების გამოყენებით! დაეხმარეთ კოლექციონერს მინიმუმ ორი განძის გროვასთან მისვლაში, მხოლოდ თქვენს ინსტრუმენტების პანელში არსებული ბლოკების საშუალებით.
       courseD_maze_nestedLoops4_instruction: 'მიმიყვანეთ მზესუმზირასთან ბლოკების მინიმალური რაოდენობის გამოყენებით!\r\r სცადეთ ჩასვათ გამეორების ერთი ციკლი მეორეში და ასე შეამოკლოთ თქვენი კოდი.'
       courseD_maze_nestedLoops4_2018_instruction: 'მიმიყვანეთ მზესუმზირასთან ბლოკების მინიმალური რაოდენობის გამოყენებით!\r\r სცადეთ ჩასვათ გამეორების ერთი ციკლი მეორეში და ასე შეამოკლოთ თქვენი კოდი.'
@@ -1817,7 +1829,7 @@ ka:
       courseD_maze_ramp3_2018_instruction: არსებობს კიდევ ერთი დამატებით ბლოკი, რომელიც ჩამოაგდებს ჩიტს. მოაშორეთ ის სამუშაო სივრცეს. ამისათვის გადაათრიეთ ის ინსტრუმენტების პანელში.
       courseD_maze_ramp5a_instruction: მიაქციეთ ყურადღება მიმდევრობას და სცადეთ გოჭთან მისასვლელი გზის მოფიქრება!
       courseD_maze_ramp5a_2018_instruction: მიაქციეთ ყურადღება მიმდევრობას და სცადეთ გოჭთან მისასვლელი გზის მოფიქრება!
-      courseD_maze_ramp5b_instruction: მიაქციეთ ყურადღება მიმდევრობას და სცადეთ გოჭთან მისასვლელი გზის მოფიქრება!
+      courseD_maze_ramp5b_instruction: გაიკვლიეთ გზა ლაბირინთში და ჩიტს გოჭის პოვნაში დაეხმარეთ!
       courseD_maze_ramp5b_2018_instruction: მიაქციეთ ყურადღება მიმდევრობას და სცადეთ გოჭთან მისასვლელი გზის მოფიქრება!
       courseD_maze_ramp6_instruction: '"დამშვიდდით და მაპოვნინეთ ეს ტუტუცი გოჭი. თორემ გავბრაზდები!"'
       courseD_maze_ramp6a_instruction: '"დამშვიდდით და მაპოვნინეთ ეს ტუტუცი გოჭი. თორემ გავბრაზდები!"'
@@ -1860,7 +1872,7 @@ ka:
       courseD_scrat_ramp7_2018_instruction: დაეხმარეთ სკრეტს მიაღწიოს რკომდე!
       courseD_scrat_ramp8_instruction: გამოიყენეთ ნასწავლი მასალა სკრეტის რკოსთან მისაყვანად!
       courseD_scrat_ramp8_2018_instruction: გამოიყენეთ ნასწავლი მასალა სკრეტის რკოსთან მისაყვანად!
-      courseE_artist_concept_challenge1_instruction: "ახლა კი გიწვევთ! შეგიძლიათ შეცდომების ხარჯზე ისწავლოთ. არაა აუცილებელი, პირველივე ცდა წარმატებული იყოს.\nმეტი მინიშნების ნახვა გინდათ? დააჭირეთ აქ!"
+      courseE_artist_concept_challenge1_instruction: 'დაეხმარეთ მხატვარს უნიკალური ფიგურის დახატვაში. '
       courseE_artist_concept_challenge1_2018_instruction: "ახლა კი გიწვევთ! შეგიძლიათ შეცდომების ხარჯზე ისწავლოთ. არაა აუცილებელი, პირველივე ცდა წარმატებული იყოს.\nმეტი მინიშნების ნახვა გინდათ? დააჭირეთ აქ!"
       courseE_artist_concept_challenge2_instruction: ქვემოთ მოცემული კოდის გამოყენებით, შექმენით ბზრიალის 5 დიზაინი.
       courseE_artist_concept_challenge2_2018_instruction: ქვემოთ მოცემული კოდის გამოყენებით, შექმენით ბზრიალის 5 დიზაინი.
@@ -1876,7 +1888,7 @@ ka:
       courseE_artist_functions_challenge2_2018_instruction: გამოსცადეთ ეს კოდი, რათა ნახოთ თუ როგორ მუშაობს ის. ამის შემდეგ თქვენით შექმენით ეს პროგრამა!
       courseE_artist_ramp10_instruction: ახლა, გადმოათრიეთ კოდი წინა სამკუთედიდად ახალ ფუნქციაში, რათა დაატრიალოთ ის და შექმნათ ფიფქი!
       courseE_artist_ramp11_instruction: ახლა კი მხატვრის გამოყენებით შექმენით კვადრატი!
-      courseE_artist_ramp12_instruction: გამოიყენეთ ნასწავლი მასალა და დახატეთ სამკუთხედი კვადრატის შიგნით.
+      courseE_artist_ramp12_instruction: ნასწავლი მასალის გამოყენებით ჩახატეთ კვადრატში სამკუთხედი.
       courseE_artist_ramp8_instruction: ახლა კი მხატვრის გამოყენებით შექმენით კვადრატი!
       courseE_artist_ramp8_2_instruction: ახლა კი მხატვრის გამოყენებით შექმენით კვადრატი!
       courseE_artist_ramp8_2018_instruction: ახლა კი მხატვრის გამოყენებით შექმენით კვადრატი!
@@ -1906,20 +1918,20 @@ ka:
       courseE_farmer_concept4_instruction: "ახლა კი მოდით ოდნავ გავართულოთ!\nკოდის მთელი ბლოკი ჩავსვით ციკლში, მაგრამ შემდეგი ხაზის დასახატად საჭიროა მხატვარი უკან დააბრუნოთ. კოდის რომელი ბლოკი უნდა მოვათავსოთ გარე ციკლის ბოლოს მთლიანი ბადის დასახატად?"
       courseE_farmer_functions2ba_instruction: დაეხმარეთ ფერმერს სიმინდის და გოგრის შეგროვებაში `სიმინდი და გოგრა` ფუნქცის გამოყენებით.
       courseE_farmer_functions2ba_2018_instruction: დაეხმარეთ ფერმერს სიმინდის და გოგრის შეგროვებაში `სიმინდი და გოგრა` ფუნქცის გამოყენებით.
-      courseE_farmer_functions4b_instruction: გამოიყენეთ თქვენი ახალი ფუნქცია, რათა ამოხსნათ ეს თავსატეხი.
-      courseE_farmer_functions4b_2018_instruction: გამოიყენეთ თქვენი ახალი ფუნქცია, რათა ამოხსნათ ეს თავსატეხი.
+      courseE_farmer_functions4b_instruction: თავსატეხის ამოსახსნელად გამოიყენეთ თქვენი ახალი ფუნქცია.
+      courseE_farmer_functions4b_2018_instruction: თავსატეხის ამოსახსნელად გამოიყენეთ თქვენი ახალი ფუნქცია.
       courseE_farmer_functions9b_instruction: შეგიძლიათ მიაგნოთ პრინციპს, რომელიც დაგეხმარებათ ამ თავსატეხის ამოხსნაში?
       courseE_farmer_functions9b_2018_instruction: შეგიძლიათ მიაგნოთ პრინციპს, რომელიც დაგეხმარებათ ამ თავსატეხის ამოხსნაში?
       courseE_farmer_functions9b_clone_instruction: შეგიძლიათ მიაგნოთ პრინციპს, რომელიც დაგეხმარებათ ამ თავსატეხის ამოხსნაში?
       courseE_farmer_predict1_instruction: შეაგროვეთ მთელი სალათი (მხოლოდ მაშინ, როცა შესაგროვებელი სალათი არსებობს.)
       courseE_farmer_predict1_2018_instruction: შეაგროვეთ მთელი სალათი (მხოლოდ მაშინ, როცა შესაგროვებელი სალათი არსებობს.)
       courseE_farmer_ramp11_instruction: ეს თავსატეხი ასევე იყენებს ჩადგმულ ციკლებს. შეგიძლიათ მიხვდეთ როგორ?
-      courseE_farmer_ramp11a_instruction: შეაგროვეთ სალათი მანამ სანამ სალათი არ გათავდა. 
-      courseE_farmer_ramp11a_2018_instruction: შეაგროვეთ სალათი მანამ სანამ სალათი არ გათავდა. 
-      courseE_farmer_ramp11b_instruction: შეაგროვეთ სალათი მანამ სანამ სალათი არ გათავდა. 
-      courseE_farmer_ramp11b_2018_instruction: შეაგროვეთ სალათი მანამ სანამ სალათი არ გათავდა. 
-      courseE_farmer_ramp12_instruction: ახლა კი, გამოიყენეთ ჩადგმული ციკლები (`გამეორება` და `სანამ`) იმისათვის, რომ ამოხსნათ ეს თავსატეხი.
-      courseE_farmer_ramp12_2018_instruction: ახლა კი, გამოიყენეთ ჩადგმული ციკლები (`გამეორება` და `სანამ`) იმისათვის, რომ ამოხსნათ ეს თავსატეხი.
+      courseE_farmer_ramp11a_instruction: მოწმინდეთ ჭუჭყი, სანამ გროვები ჩანს.
+      courseE_farmer_ramp11a_2018_instruction: მოწმინდეთ ჭუჭყი, სანამ გროვები ჩანს.
+      courseE_farmer_ramp11b_instruction: მოწმინდეთ ჭუჭყი, სანამ გროვები ჩანს.
+      courseE_farmer_ramp11b_2018_instruction: მოწმინდეთ ჭუჭყი, სანამ გროვები ჩანს.
+      courseE_farmer_ramp12_instruction: ახლა კი, თავსატეხის ამოსახსნელად გამოიყენეთ ჩადგმული ციკლები.
+      courseE_farmer_ramp12_2018_instruction: ახლა კი, თავსატეხის ამოსახსნელად გამოიყენეთ ჩადგმული ციკლები.
       courseE_farmer_ramp12_forswap_instruction: ახლა კი, გამოიყენეთ ჩადგმული ციკლები (`გამეორება` და `სანამ`) იმისათვის, რომ ამოხსნათ ეს თავსატეხი.
       courseE_farmer_ramp12_forswap_2018_instruction: ახლა კი, გამოიყენეთ ჩადგმული ციკლები (`გამეორება` და `სანამ`) იმისათვის, რომ ამოხსნათ ეს თავსატეხი.
       courseE_farmer_ramp12a_instruction: დაეხმარეთ ფერმერს გზაზე სწორად გასვლაში მთელი სალათის შესაგროვებლად.
@@ -1964,7 +1976,7 @@ ka:
       courseE_playlab_variables_challenge2_instruction: შეგიძლიათ გაარკვიოთ თუ როგორ მუშაობს "მკითხავი" აპლიკაცია? დააწკაპუნეთ `მეტს`, რათა დაინახოთ თქვენი ცვლილებები.
       courseF_IceAge_1_instruction: დაეხმარეთ სიდს თქვას "გამარჯობა!" `მსახიობო 1 თქვი` ბლოკის გადმოთრევით და `როცა გაიშვება` მოვლენის ბოლოსთა დაკავშირებით.
       courseF_IceAge_10_instruction: გამოიყენეთ `მსახიობო ___გაისროლე` ბრძანება, რათა სიდმა (მსახიობი 1) ესროლოს გულები ბებოს (მსახიობი 2) და განსაზღვრეთ ბებოს განწყობა, როგორც ბედნიერი, როდესაც გულები მიაღწევს მიზნამდე.
-      courseF_IceAge_11_instruction: 'დროა შექმნათ თქვენი საკუთარი თამაში ან ამბავი! '
+      courseF_IceAge_11_instruction: 'დროა შექმნათ საკუთარი თამაში ან ამბავი! '
       courseF_IceAge_2_instruction: დაეხმარეთ მანის და სიდს ერთმანეთთან მისალმებაში, `მსახიობო___თქვი` ბლოკის ორჯერ გამოყენებით.
       courseF_IceAge_3_instruction: სკრატი თავის რკოს ეძებს! შეგიძლიათ მას უკანასკნელი 200 პიქსელის გავლაში დაეხმაროთ?
       courseF_IceAge_4_instruction: დააკავშირეთ ბლოკი `როცა მსახიობი შეეხება` მოვლენასთან, რათა დაუკრათ ხმა, როდესაც დიეგო იპოვის მენის.
@@ -1975,7 +1987,7 @@ ka:
       courseF_IceAge_9_instruction: შეცვალეთ სცენა გაყინულ ფონზე და განსაზღვრეთ სიდის (მსახიობი 1-ს) სისწრაფე, როგორც სწრაფი.
       courseF_IceAge_template_instruction: დაწერეთ კოდი, რათა დაეხმაროთ სკრატს შეაგროვოს ყველა რკო!
       courseF_artist_embed_for7_instruction: "დააჭირეთ გაშვებას, რათა დაინახოთ პროგრამა მოქმედებაში!\nეს კონკრეტული იყენებს ციკლებს."
-      courseF_artist_embed_variables9_instruction: უბრალოდ დააჭირეთ `გაშვებას`, რათა იხილოთ ეს პროგრამა მოქმედებაში!
+      courseF_artist_embed_variables9_instruction: პროგრამის მოქმედების სანახავად დააჭირეთ გაშვებას!
       courseF_artist_for7_instruction: შეცვალეთ წინა დონის კოდში სამი რამ და მიიღეთ ეს!
       courseF_artist_for7_2018_instruction: შეცვალეთ წინა დონის კოდში სამი რამ და მიიღეთ ეს!
       courseF_artist_for_Template_instruction: სცადეთ წინა დონის კოდის ნაწილის გამოყენება, მაგრამ ამჯერად 89 გრადუსიანი მობრუნების კუთხით დაკლაკნილი კვადრატული სპირალის შესაქმნელად.
@@ -1984,7 +1996,7 @@ ka:
       courseF_artist_for_challenge1_2018_instruction: ხვდებით, როგორ უნდა გაიმეოროთ ეს ნახატი?
       courseF_artist_for_challenge2_instruction: ხვდებით, როგორ გაიმეოროთ ეს ნახატი ერთი ციკლით?
       courseF_artist_for_challenge2_2018_instruction: ხვდებით, როგორ გაიმეოროთ ეს ნახატი ერთი ციკლით?
-      courseF_artist_fwp1_instruction: დაარედაქტირეთ ფუნქცია `დახატე კვადრატი` შეცდომების საპოვნელად.
+      courseF_artist_fwp1_instruction: შეცდომების მოსანახად შეასწორეთ ფუნქცია `დახატე კვადრატი`.
       courseF_artist_fwp1_2018_instruction: დაარედაქტირეთ ფუნქცია `დახატე კვადრატი` შეცდომების საპოვნელად.
       courseF_artist_fwp2_instruction: შეცვალეთ ფუნქცია ისე, რომ მან მიიღოს პარამეტრი სახელად `სიგრძე`.
       courseF_artist_fwp2_2018_instruction: შეცვალეთ ფუნქცია ისე, რომ მან მიიღოს პარამეტრი სახელად `სიგრძე`.
@@ -2004,7 +2016,7 @@ ka:
       courseF_artist_fwp8_2018_instruction: შეგიძლიათ მიხვდეთ თუ როგორ უნდა შექმნათ ეს ნახატი ახლახან დაწერილი ფუნქციის გამოყენებით?
       courseF_artist_fwp9_instruction: 'თავისუფალი თამაში: დახატეთ რამე მაგარი! გაეთამაშეთ პასტის სიგანეს, რათა ნახოთ თუ როგორ გამოიყურებიან განსხვავებული ნახატები!'
       courseF_artist_fwp9_2018_instruction: 'თავისუფალი თამაში: დახატეთ რამე მაგარი! გაეთამაშეთ პასტის სიგანეს, რათა ნახოთ თუ როგორ გამოიყურებიან განსხვავებული ნახატები!'
-      courseF_artist_fwp_challenge1_instruction: სცადეთ ამ პროგრამის გაშვება, ცვლილებების შეტანა და დაკვირვება. ხვდებით, როგორ მუშაობს? (ასევე შეგიძლიათ წაშალოთ ეს პროგრამა და აბსოლუტურად სხვა რამით შეცვალოთ)
+      courseF_artist_fwp_challenge1_instruction: შეგიძლიათ, ამოიცნოთ, როგორ მუშაობს ეს პროგრამა?
       courseF_artist_fwp_challenge1_2018_instruction: სცადეთ ამ პროგრამის გაშვება, ცვლილებების შეტანა და დაკვირვება. ხვდებით, როგორ მუშაობს? (ასევე შეგიძლიათ წაშალოთ ეს პროგრამა და აბსოლუტურად სხვა რამით შეცვალოთ)
       courseF_artist_fwp_challenge2_instruction: 'გამოიყენეთ წინა დონეზე შეძენილი ცოდნა და დახატეთ მსგავსი სურათი. მინიშნება: კოდი უფრო მარტივი იქნება, თუ პარამეტრებს ჩაურთავთ. '
       courseF_artist_fwp_challenge2_2018_instruction: 'გამოიყენეთ წინა დონეზე შეძენილი ცოდნა და დახატეთ მსგავსი სურათი. მინიშნება: კოდი უფრო მარტივი იქნება, თუ პარამეტრებს ჩაურთავთ. '
@@ -2026,13 +2038,13 @@ ka:
       courseF_bee_conditionals1_predict1_2018_instruction: შეამოწმეთ არის თუ არა ღრუბლის ქვეშ ყვავილი. თუ არის, შეაგროვეთ ნექტარი.
       courseF_bee_conditionals2_instruction: 'შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ არ მალავს. მხოლოდ შემდეგ აიღეთ ნექტარი.  '
       courseF_bee_conditionals2_2018_instruction: 'შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ არ მალავს. მხოლოდ შემდეგ აიღეთ ნექტარი.  '
-      courseF_bee_conditionals3_instruction: "დაეხმარეთ ფუტკარს მთელი ნექტარის შეგროვებაში.\n\\r\n"
+      courseF_bee_conditionals3_instruction: 'დაეხმარეთ ფუტკარს მთელი ნექტარის შეგროვებაში. '
       courseF_bee_conditionals3_2018_instruction: "დაეხმარეთ ფუტკარს მთელი ნექტარის შეგროვებაში.\n\\r\n"
       courseF_bee_conditionals7_predict2_instruction: გამოიყენეთ `თუ/სხვაგვარად` ბლოკე, რათა შეაგროვოთ ნექტარი ყვავილებიდან და გააკეთოთ თაფლი ფიჭაში.
       courseF_bee_conditionals7_predict2_2018_instruction: გამოიყენეთ `თუ/სხვაგვარად` ბლოკე, რათა შეაგროვოთ ნექტარი ყვავილებიდან და გააკეთოთ თაფლი ფიჭაში.
       courseF_bee_for8_instruction: "გამოგივიდათ! \nრამდენი უნდა იყოს ნაზრდი, რომ შეაგროვოთ 3, 6, 9, 12, 15 ნექტარი?"
       courseF_bee_for8_2018_instruction: "გამოგივიდათ! \nრამდენი უნდა იყოს ნაზრდი, რომ შეაგროვოთ 3, 6, 9, 12, 15 ნექტარი?"
-      courseF_bee_for_challenge1_instruction: 'გამოიყენეთ ეს ციკლი მთელი ნექტარის შესაგროვებლად. იქ რამდენიმე ქმედებაა, რომელის გამეორება დაგჭირდებათ `მთვლელჯერ`.'
+      courseF_bee_for_challenge1_instruction: 'გამოიყენეთ `for ციკლი` მთელი ნექტარის შესაგროვებლად. '
       courseF_bee_for_challenge1_2018_instruction: 'გამოიყენეთ ეს ციკლი მთელი ნექტარის შესაგროვებლად. იქ რამდენიმე ქმედებაა, რომელის გამეორება დაგჭირდებათ `მთვლელჯერ`.'
       courseF_bee_for_challenge2_instruction: ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობის გამოყენებით.
       courseF_bee_for_challenge2_2018_instruction: ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობის გამოყენებით.
@@ -2068,15 +2080,15 @@ ka:
       courseF_bee_fwp4_2018_instruction: დაუმატეთ ფუნქციას `სიგრძის` პარამეტრი ისე, რომ მან გააგრძელოს მუშაობა, როდესაც მწკრივი განსხვავებული სიგრძის იქნება.
       courseF_bee_fwp5_instruction: გამოიყენეთ ეს ფუნქცია ნექტარის შესაგროვებლად.
       courseF_bee_fwp5_2018_instruction: გამოიყენეთ ეს ფუნქცია ნექტარის შესაგროვებლად.
-      courseF_bee_fwp6_instruction: ააწყვეთ ამ თავსატეხის მოკლე და ტკბილი ამონახსნი.
+      courseF_bee_fwp6_instruction: ააწყვეთ ამ თავსატეხის მოკლე და ტკბილი ამოხსნა.
       courseF_bee_fwp6_2018_instruction: ააწყვეთ ამ თავსატეხის მოკლე და ტკბილი ამონახსნი.
       courseF_bee_fwp7_instruction: "**გამოწვევა:** შეცვალეთ თქვენი ფუნქცია, რათა ასევე მიიღოთ თაფლი."
       courseF_bee_fwp7_2018_instruction: "**გამოწვევა:** შეცვალეთ თქვენი ფუნქცია, რათა ასევე მიიღოთ თაფლი."
       courseF_bee_fwp8_instruction: გამოიყენეთ თქვენი ახალი ფუნქცია, რათა ამოხსნათ ეს სპირალი.
       courseF_bee_fwp8_2018_instruction: გამოიყენეთ თქვენი ახალი ფუნქცია, რათა ამოხსნათ ეს სპირალი.
       courseF_bee_fwp9_instruction: გამოიყენეთ თქვენი ახალი ფუნქცია, რათა ამოხსნათ ეს თავსატეხი.
-      courseF_bee_fwp9_predict1_instruction: გამოიყენეთ თქვენი ახალი ფუნქცია, რათა ამოხსნათ ეს თავსატეხი.
-      courseF_bee_fwp9_predict1_2018_instruction: გამოიყენეთ თქვენი ახალი ფუნქცია, რათა ამოხსნათ ეს თავსატეხი.
+      courseF_bee_fwp9_predict1_instruction: თავსატეხის ამოსახსნელად გამოიყენეთ თქვენი ახალი ფუნქცია.
+      courseF_bee_fwp9_predict1_2018_instruction: თავსატეხის ამოსახსნელად გამოიყენეთ თქვენი ახალი ფუნქცია.
       courseF_bee_fwp_challenge1_instruction: გამოიყენეთ ერთი `for ციკლი` ფუნქციაში, რათა შეაგროვოთ მთელი სიმინდი. ამავე `for ციკლს` შეუძლია დაითვალოს განსხვავებულ მაქსიმალურ მნიშვნელობებამდე `სიგრძის` პარამეტრის საშუალებით.
       courseF_bee_fwp_challenge1_2018_instruction: გამოიყენეთ ერთი `for ციკლი` ფუნქციაში, რათა შეაგროვოთ მთელი სიმინდი. ამავე `for ციკლს` შეუძლია დაითვალოს განსხვავებულ მაქსიმალურ მნიშვნელობებამდე `სიგრძის` პარამეტრის საშუალებით.
       courseF_bee_fwp_challenge2_instruction: 'გამოიყენეთ ერთი `for ციკლი` ფუნქციაში, რათა შეაგროვოთ მთლიანი ბოსტნეული ერთ მწკრივში. დაათვლევინეთ `for ციკლს` სხვადასხვა მაქსიმალურ მნიშვნელობამდე `სიგრძის` პარამეტრის გამოყენებით. მაქსიმალურად შეამოკლეთ თქვენი პროგრამა ფუნქციის გარეთ მეორე `for ციკლის` გამოყენებით.'
@@ -2472,7 +2484,7 @@ ka:
       harvey_tictactoe_instruction: "მოდით ვითამაშოთ თამაში!\nდახატეთ იმდენი X-ი რამდენიც შეგიძლიათ! შეგიძლიათ დახატოთ 3 ერთ მწკრივში?"
       iceage_click_hello_instruction: 'შეგიძლიათ დაეხმაროთ სიდს მეგობრებთან დარეკვაში მაშინ, როდესაც მასზე დააწკაპებთ? '
       iceage_click_hello_2018_instruction: 'შეგიძლიათ დაეხმაროთ სიდს მეგობრებთან დარეკვაში მაშინ, როდესაც იმასზე დააწკაპებთ? '
-      iceage_free_play_instruction: 'დროა შექმნათ თქვენი საკუთარი თამაში ან ამბავი! '
+      iceage_free_play_instruction: 'დროა შექმნათ საკუთარი თამაში ან ამბავი! '
       iceage_free_play_2018_instruction: 'დროა შექმნათ თქვენი საკუთარი თამაში ან ამბავი! '
       iceage_free_playcourseF_IceAge_11_instruction: 'დროა შექმნათ თქვენი საკუთარი თამაში ან ამბავი! '
       iceage_hello1_instruction: დაეხმარეთ სიდს თქვას "გამარჯობა!" `მსახიობო 1 თქვი` ბლოკის გადმოთრევით და `როცა გაიშვება` მოვლენის ბოლოსთან დაკავშირებით.
@@ -2513,21 +2525,21 @@ ka:
       ramp_artist_loops1_2018_instruction: გადაადგილდით წინ 60 პიქსელით, რათა დაასრულოთ ეს თავსატეხი.
       ramp_artist_loops2_instruction: გადაადგილდით წინ ხუთჯერ და შექმენით ეს ფერადი ხაზი.
       ramp_artist_loops2_2018_instruction: გადაადგილდით წინ ხუთჯერ და შექმენით ეს ფერადი ხაზი.
-      ramp_artist_loops3_instruction: გამოიყენეთ `გამეორების` ციკლი, რათა დახატოთ ხუთი ფერადი პუნქტირული ხაზი.
+      ramp_artist_loops3_instruction: გამოიყენეთ `გამეორების` ციკლი ხუთი ფერადი, პუნქტირული ხაზის დასახატად.
       ramp_artist_loops3_2018_instruction: გამოიყენეთ `გამეორების` ციკლი, რათა დახატოთ ხუთი ფერადი პუნქტირული ხაზი.
       ramp_artist_loops4_instruction: რა მოხდება, თუ თქვენი ციკლის ბოლოს დაამატებთ 72 გრადუსიან მარჯვნივ მობრუნებას?
       ramp_artist_loops4_2018_instruction: რა მოხდება, თუ თქვენი ციკლის ბოლოს დაამატებთ 72 გრადუსიან მარჯვნივ მობრუნებას?
-      ramp_artist_loops5_instruction: გამოიყენეთ ციკლები ამ კიბის დასახატად.
-      ramp_artist_loops5_2018_instruction: გამოიყენეთ ციკლები ამ კიბის დასახატად.
-      ramp_artist_loops6_instruction: დაარედაქტირეთ თქვენი ციკლი, რათა დახატოთ ეს კიბე.
-      ramp_artist_loops6_2018_instruction: დაარედაქტირეთ თქვენი ციკლი, რათა დახატოთ ეს კიბე.
+      ramp_artist_loops5_instruction: კიბის დასახატად გამოიყენეთ ციკლები.
+      ramp_artist_loops5_2018_instruction: კიბის დასახატად გამოიყენეთ ციკლები.
+      ramp_artist_loops6_instruction: კიბის დასახატად შეასწორეთ თქვენი ციკლი.
+      ramp_artist_loops6_2018_instruction: კიბის დასახატად შეასწორეთ თქვენი ციკლი.
       ramp_artist_loops7_instruction: მოძებნეთ განმეორებადი პრინციპი და შეამოკლეთ კოდი ციკლების გამოყენებით!
       ramp_artist_loops7_2018_instruction: მოძებნეთ განმეორებადი პრინციპი და შეამოკლეთ კოდი ციკლების გამოყენებით!
       ramp_artist_loops8_instruction: მოძებნეთ განმეორებადი პრინციპი და შეამოკლეთ კოდი ციკლების გამოყენებით.
       ramp_artist_loops8_2018_instruction: მოძებნეთ განმეორებადი პრინციპი და შეამოკლეთ კოდი ციკლების გამოყენებით.
       ramp_artist_loops8_clone_instruction: მოძებნეთ განმეორებადი პრინციპი და შეამოკლეთ კოდი ციკლების გამოყენებით.
-      ramp_artist_loops9_instruction: დახატეთ კვადრატი, რათა ამოხსნათ ეს თავსატეხი.
-      ramp_artist_loops9_2018_instruction: დახატეთ კვადრატი, რათა ამოხსნათ ეს თავსატეხი.
+      ramp_artist_loops9_instruction: თავსატეხის ამოსახსნელად დახატეთ კვადრატი.
+      ramp_artist_loops9_2018_instruction: თავსატეხის ამოსახსნელად დახატეთ კვადრატი.
       scrat 16 (copy 1)_instruction: რკო! რკო! რკო! გამოიყენეთ "თუ" ბლოკ და მიმიყვანეთ იქ ბლოკების უმცირესი რაოდენობის გამოყენებით.
       scrat 16_instruction: რკო! რკო! რკო! გამოიყენეთ "თუ" ბლოკ და მიმიყვანეთ იქ ბლოკების უმცირესი რაოდენობის გამოყენებით.
       scrat 17_instruction: გავაკეთოთ კიდევ ერთხელ - ეს დავალება თითქმის იგივეა, მაგრამ უნდა უფრთხილდეთ კედელს!
@@ -2537,7 +2549,7 @@ ka:
       scrat 19_instruction: კიდევ ერთი ამოცანა "თუ/სხვაგვარად" ბლოკის გამოყენებაზე. შეძლებთ პირველივე ცდაზე სწორად გააკეთო?
       scrat 20_instruction: შეგიძლიათ დაამატოთ 3 ბლოკი, რომ დამეხმაროთ უფრო რთული ლაბირინთიდან გამოსვლაში? თუ ყველაფერს სწორად გააკეთებთ, ნებისმიერ მრუდ გზაზე ვიმოძრავებ, მიუხედავად სიგრძისა. ჩქარა! ყინული დნება!
       skratDebugVideo1_instruction: მიიყვანეთ სკრეტი რკოსთან.
-      subgoal U3 L4 introducing subgoal labels_instruction: გაგვაცანით და ამოძრავეთ აღმოსავლური კუ
+      subgoal U3 L4 introducing subgoal labels_instruction: აუხსენით კუს მიტრიალება და კუს გადაადგილება
       subgoal U3L2 Using Simple Commands_instruction: კუს სწაყისი პოზიციის ზემოთ და მარცხნივ დახატეთ 1x1 კვადრატი. დააწკაპუნეთ სრული ინსტრუქციის სანახავად.
       subgoalU3L2_TurtleSquare_right_instruction: დახატეთ კვადრატი საწყისი ლოკაციის წინ და მარჯვნივ. (დააწკაპუნეთ, რათა ნახოთ სრული ინსტრუქცია)
       valentine_artist_03_instruction: ახლა კი თქვენით სცადეთ რამის გაკეთება!

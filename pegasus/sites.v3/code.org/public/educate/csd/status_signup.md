@@ -20,14 +20,15 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - <a href="http://go.pardot.com/webmail/153401/376044498/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">April 2018</a>
 - <a href="http://go.pardot.com/webmail/153401/389808866/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">May 2018</a>
 - <a href="http://go.pardot.com/webmail/153401/413524536/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">June 2018</a>
+- <a href="http://go.pardot.com/webmail/153401/442424065/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Back-to-School 2018</a>
 
 ### 2017
 
 - <a href="http://us6.campaign-archive2.com/?u=cabadc8d10a257f2cd70c583e&id=7fcf661144&e=a5b693f06b", target=_"blank">January 2017</a>
 - <a href="http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=6ee90e50da", target=_"blank">February/March 2017</a>
 - <a href="http://us6.campaign-archive1.com/?u=cabadc8d10a257f2cd70c583e&id=f666af3b5b", target=_"blank">April 2017</a>
-- <a href="http://mailchi.mp/code/8u8akp7iv7", target=_"blank">End of School Update 2017</a>
-- <a href="http://go.pardot.com/webmail/153401/261565773/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Back to School Update, Sept 2017</a>
+- <a href="http://mailchi.mp/code/8u8akp7iv7", target=_"blank">May 2017</a>
+- <a href="http://go.pardot.com/webmail/153401/261565773/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Back-to-School 2017</a>
 - <a href="http://go.pardot.com/webmail/153401/282691073/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">October 2017</a>
 - <a href="http://go.pardot.com/webmail/153401/302034923/e46ae3ec91ad4014b64fb4078ff8739e65c753bc5464d16656455ab2891a49bd", target=_"blank">November 2017</a>
 - <a href="http://go.pardot.com/webmail/153401/325200442/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">December 2017</a>

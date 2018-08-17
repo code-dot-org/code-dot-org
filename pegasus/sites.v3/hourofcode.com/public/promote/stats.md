@@ -33,7 +33,7 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 <br>
 <br>
 
-#### More details and a quote you can use in materials
+#### A quote you can use in materials
 "The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries."
 <br>
 <br>

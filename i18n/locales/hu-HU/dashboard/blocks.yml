@@ -1,0 +1,185 @@
+hu:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Következő
+            '"prev"': Előző
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Következő
+            '"prev"': Előző
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: összes
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': jobbra
+            '"left"': balra
+      Dancelab_randomColor:
+        text: Véletlen szín
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+            '"space"': világűr
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+            '"space"': világűr
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'igaz'
+            'false': 'hamis'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": véletlen
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': jobbra
+            '"left"': balra
+      gamelab_randColor:
+        text: Véletlen szín
+      gamelab_randomColor:
+        text: Véletlen szín
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': véletlen
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"height"': magasság
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': jobbra
+            '"left"': balra
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+            '"space"': világűr
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": fel
+            "'down'": le
+            "'left'": balra
+            "'right'": jobbra
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': fel
+            '"down"': le
+            '"left"': balra
+            '"right"': jobbra
+            '"space"': világűr
+      Vanilla_randomColor:
+        text: Véletlen szín

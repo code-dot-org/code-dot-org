@@ -1,0 +1,165 @@
+az:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Növbəti
+            '"prev"': Əvvəlki
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Növbəti
+            '"prev"': Əvvəlki
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: bütün
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': sağa
+            '"left"': sola
+      Dancelab_randomColor:
+        text: ixtiyari rəng
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Heç biri
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'doğru'
+            'false': 'yalan'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": təsadüfi
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': sağa
+            '"left"': sola
+      gamelab_randColor:
+        text: ixtiyari rəng
+      gamelab_randomColor:
+        text: ixtiyari rəng
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': təsadüfi
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': sağa
+            '"left"': sola
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": yuxarı
+            "'down'": aşağı
+            "'left'": sola
+            "'right'": sağa
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+      Vanilla_randomColor:
+        text: ixtiyari rəng

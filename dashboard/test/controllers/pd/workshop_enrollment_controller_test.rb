@@ -77,20 +77,6 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :new
   end
 
-  test 'new action for closed workshops renders closed view' do
-    @workshop.start!
-    @workshop.end!
-    get :new, params: {workshop_id: @workshop.id}
-    assert_template :closed
-  end
-
-  test 'new action for full workshops renders full view' do
-    @workshop.capacity = 1
-    @workshop.save!
-    get :new, params: {workshop_id: @workshop.id}
-    assert_template :full
-  end
-
   test 'unknown workshop id responds with 404' do
     get :new, params: {workshop_id: 'nonsense'}
     assert_response 404
@@ -164,26 +150,6 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     )
     post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
     assert_template :own
-  end
-
-  test 'creating an enrollment on a closed workshop renders new view' do
-    @workshop.start!
-    @workshop.end!
-    post :create, params: {
-      workshop_id: @workshop.id,
-      pd_enrollment: enrollment_test_params
-    }
-    assert_template :closed
-  end
-
-  test 'creating an enrollment on a full workshop renders full view' do
-    @workshop.capacity = 1
-    @workshop.save!
-    post :create, params: {
-      workshop_id: @workshop.id,
-      pd_enrollment: enrollment_test_params
-    }
-    assert_template :full
   end
 
   test 'creating an enrollment with errors renders new view' do

@@ -596,6 +596,10 @@ it:
         playlab_drag_say_a: Trascina qui il blocco `attore 1 dice` and digita "Hello!"
       courseF_IceAge_9_callout:
         playlab_add_blocks_1: Aggiungi blocchi qui
+      courseF_artist_for1_callout:
+        courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie, in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
+      courseF_artist_for1_2018_callout:
+        courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie, in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
       courseF_artist_ramp8_callout:
         courseE_artist_ramp8_1: Puoi cambiare questo numero.
         courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere il tuo codice.
@@ -610,6 +614,10 @@ it:
         courseF_bee_conditionals5_1: Usa questo blocco quando la lunghezza del percorso cambia (come nei lati del rettangolo!)
       courseF_bee_conditionals5_2018_callout:
         courseF_bee_conditionals5_1: Usa questo blocco quando la lunghezza del percorso cambia (come nei lati del rettangolo!)
+      courseF_bee_for4_callout:
+        courseF_bee_for4_1: I cicli li trovi qui dentro!
+      courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: I cicli li trovi qui dentro!
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo bottono "modifica" per vedere cosa c'è all'interno!
       courseF_bee_functions2_2018_callout:

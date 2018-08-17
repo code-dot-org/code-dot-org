@@ -1,0 +1,185 @@
+ro:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Următor
+            '"prev"': Anterior
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Următor
+            '"prev"': Anterior
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: toate
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dreapta
+            '"left"': stânga
+      Dancelab_randomColor:
+        text: culoare aleatorie
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'adevărat'
+            'false': 'fals'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": aleator
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dreapta
+            '"left"': stânga
+      gamelab_randColor:
+        text: culoare aleatorie
+      gamelab_randomColor:
+        text: culoare aleatorie
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': aleator
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"height"': înălțime
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': dreapta
+            '"left"': stânga
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": sus
+            "'down'": jos
+            "'left'": stânga
+            "'right'": dreapta
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+      Vanilla_randomColor:
+        text: culoare aleatorie
