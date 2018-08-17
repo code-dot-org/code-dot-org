@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import color from "@cdo/apps/util/color";
-import AudioIconPlayer from "./AudioIconPlayer";
 
 const defaultIcons = {
   image: 'fa fa-picture-o',
@@ -69,6 +68,9 @@ class AssetThumbnail extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      isPlayingAudio: false
+    };
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     if (this.props.projectId) {
       api = api.withProjectId(this.props.projectId);
@@ -86,6 +88,16 @@ class AssetThumbnail extends React.Component {
     }
   }
 
+  clickSoundControl = () => {
+    if (this.state.isPlayingAudio) {
+      this.setState({isPlayingAudio: false});
+      this.props.soundPlayer.stopPlayingURL(this.srcPath);
+    } else {
+      this.setState({isPlayingAudio: true});
+      this.props.soundPlayer.play(this.srcPath, {onEnded: ()=>{this.setState({isPlayingAudio: false});}});
+    }
+  };
+
   render() {
     const {
       type,
@@ -95,11 +107,13 @@ class AssetThumbnail extends React.Component {
       src
     } = this.props;
 
+    const playIcon = this.state.isPlayingAudio ? 'fa-pause-circle' : 'fa-play-circle';
+
     return (
       <div>
         {(useUpdatedStyles && type === 'audio') ?
           <div style={[styles.wrapper, styles.audioWrapper]}>
-            <AudioIconPlayer src={this.srcPath} soundPlayer={this.props.soundPlayer}/>
+            <i onClick={this.clickSoundControl} className={'fa '+ playIcon +' fa-4x'} style={styles.audioIcon} />
           </div> :
           <div className="assetThumbnail" style={[styles.wrapper, style, styles.background]}>
             {type === 'image' ?
