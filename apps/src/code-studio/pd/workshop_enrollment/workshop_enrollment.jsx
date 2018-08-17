@@ -187,7 +187,7 @@ export default class WorkshopEnrollment extends React.Component {
             <div className="container">
               <div className="row">
                 {/* Left Column */}
-                <div className ="span6">
+                <div className="span6">
                   <WorkshopDetails
                     workshop={this.props.workshop}
                     session_dates={this.props.session_dates}
@@ -201,9 +201,9 @@ export default class WorkshopEnrollment extends React.Component {
                   ))}
                 </div>
                 {/* Right Column */}
-                <div className ="span6">
+                <div className="span6">
                   <div className="row">
-                    <div className ="span6">
+                    <div className="span6">
                       <h2>Your Information</h2>
                       {
                         !this.props.enrollment.email &&

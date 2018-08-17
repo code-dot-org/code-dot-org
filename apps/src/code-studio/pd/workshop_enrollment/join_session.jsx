@@ -55,6 +55,10 @@ export default class JoinSession extends React.Component {
   }
 
   render() {
+    const formStyle = {
+      marginLeft: '0px'
+    };
+
     if (this.state.workshopEnrollmentStatus === SUBMISSION_STATUSES.UNSUBMITTED) {
       return (
         <div>
@@ -66,15 +70,20 @@ export default class JoinSession extends React.Component {
             session_dates={this.props.session_dates}
           />
           <h2>Please complete and confirm the information below.</h2>
-          <EnrollForm
-            workshop_id={this.props.workshop.id}
-            workshop_course={this.props.workshop.course}
-            first_name={this.props.enrollment.first_name}
-            email={this.props.enrollment.email}
-            onSubmissionComplete={this.onSubmissionComplete}
-            submitText="Confirm"
-            submitUrl={`/api/v1/pd/attend/${this.props.session_code}/join`}
-          />
+          <div
+            className="span6"
+            style={formStyle}
+          >
+            <EnrollForm
+              workshop_id={this.props.workshop.id}
+              workshop_course={this.props.workshop.course}
+              first_name={this.props.enrollment.first_name}
+              email={this.props.enrollment.email}
+              onSubmissionComplete={this.onSubmissionComplete}
+              submitText="Confirm"
+              submitUrl={`/api/v1/pd/attend/${this.props.session_code}/join`}
+            />
+          </div>
         </div>
       );
     } else {
