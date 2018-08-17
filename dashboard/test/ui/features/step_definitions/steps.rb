@@ -847,7 +847,7 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
 end
 
 Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
-  steps %Q{
+  individual_steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     And I wait for 5 seconds
     Then I am on "http://studio.code.org/"
