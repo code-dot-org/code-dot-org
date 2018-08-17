@@ -126,6 +126,8 @@ class DeleteAccountsHelper
   end
 
   def remove_poste_data(email)
+    ids = @pegasus_db[:poste_deliveries].where(contact_email: email).map {|x| x[:id]}
+    @pegasus_db[:poste_opens].where(delivery_id: ids).delete
     @pegasus_db[:poste_deliveries].where(contact_email: email).delete
   end
 

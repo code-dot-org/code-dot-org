@@ -1,6 +1,7 @@
 require 'test_helper'
 require 'cdo/delete_accounts_helper'
 require_relative '../../../shared/middleware/helpers/storage_apps'
+require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -845,6 +846,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     purge_user user
 
     assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+  end
+
+  test "removes poste_opens for user" do
+    user = create :teacher
+    email = user.email
+    recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+    id = Poste2.send_message('dashboard', recipient)
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
+    pegasus.get "/o/#{Poste.encrypt(id)}"
+    assert DB[:poste_opens].where(delivery_id: id).any?
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    assert_empty DB[:poste_opens].where(delivery_id: id)
   end
 
   #
