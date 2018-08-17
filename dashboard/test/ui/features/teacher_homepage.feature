@@ -63,24 +63,8 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
     And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
 
-  Scenario: Assign a CSF course with multiple versions via native dropdown
-    When I see the section set up box
-    And I create a new section with course "Course A", version "2017"
-    Then the section table should have 1 rows
-    And the section table row at index 0 has primary assignment path "/s/coursea-2017"
-
-    When I click selector ".ui-test-section-dropdown"
-    And I click selector ".edit-section-details-link"
-    And I wait until element "#assignment-version-year" is visible
-    And element "#assignment-version-year" has value "2017"
-    And I select the "2018 (Recommended)" option in dropdown "assignment-version-year"
-    And I press the first ".uitest-saveButton" element
-    And I wait for the dialog to close
-    Then I should see the section table
-    And the section table row at index 0 has primary assignment path "/s/coursea-2018"
-
-  Scenario: Assign a CSF course with multiple versions via popup menu
-    Given I am on "http://studio.code.org/home?enableExperiments=versionMenu"
+  Scenario: Assign a CSF course with multiple versions
+    Given I am on "http://studio.code.org/home"
     When I see the section set up box
     And I create a new section with course "Course A", version "2017"
     Then the section table should have 1 rows
@@ -97,34 +81,10 @@ Feature: Using the teacher homepage sections feature
     Then I should see the section table
     And the section table row at index 0 has primary assignment path "/s/coursea-2018"
 
-  Scenario: Navigate to course pages with course versions enabled via native dropdown
+  Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'18-'19 (Recommended)" and unit "CSP Unit 1 - The Internet"
-    Then the section table should have 1 rows
-
-    # save the older section id, from the last row of the table
-    And I save the section id from row 0 of the section table
-
-    And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
-    And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
-
-    When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
-    And I wait to see ".uitest-CourseScript"
-    Then the url contains the section id
-    And check that the URL contains "/courses/csp-2018"
-
-    When I select the "'17-'18" option in dropdown "version-selector" to load a new page
-    And I wait to see ".uitest-CourseScript"
-    Then the url contains the section id
-    And check that the URL contains "/courses/csp-2017"
-
-    And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
-
-  Scenario: Navigate to course pages with course versions enabled via popup menu
-    Given I am on "http://studio.code.org/home?enableExperiments=versionMenu"
-    When I see the section set up box
-    And I create a new section via popup menu with course "Computer Science Principles", version "'18-'19" and unit "CSP Unit 1 - The Internet"
+    And I create a new section with course "Computer Science Principles", version "'18-'19" and unit "CSP Unit 1 - The Internet"
     Then the section table should have 1 rows
 
     # save the older section id, from the last row of the table
