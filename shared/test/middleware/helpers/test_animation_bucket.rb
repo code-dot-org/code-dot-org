@@ -31,7 +31,7 @@ class AnimationBucketTest < FilesApiTestBase
   def teardown
     # Require that tests delete the files they upload
     assert_empty @animation_bucket.list(@channel),
-      "Expected no leftover source files"
+      "Expected no leftover animation files"
     assert_empty @animation_bucket.list_versions(@channel, @cat_png),
       "Expected no leftover cat.png versions"
     assert_empty @animation_bucket.list_versions(@channel, @dog_png),
