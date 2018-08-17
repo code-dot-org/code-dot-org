@@ -39,6 +39,11 @@ class DeleteAccountsHelper
     buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
       bucket.hard_delete_channel_content encrypted_channel_id
     end
+
+    # Clear Firebase contents for user's channels
+    encrypted_channel_ids.each do |encrypted_channel_id|
+      FirebaseHelper.delete_channel encrypted_channel_id
+    end
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
