@@ -8341,6 +8341,10 @@ p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
 
+p5@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-0.7.1.tgz#8283e7e9eb928cdb957541d32be2b0ff7f2251e0"
+
 pac-proxy-agent@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/pac-proxy-agent/-/pac-proxy-agent-2.0.0.tgz#beb17cd2b06a20b379d57e1b2e2c29be0dfe5f9a"
