@@ -1,0 +1,17 @@
+ps:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: نا ټاکلۍ رنګ
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      gamelab_randColor:
+        text: نا ټاکلۍ رنګ
+      gamelab_randomColor:
+        text: نا ټاکلۍ رنګ
+      Vanilla_randomColor:
+        text: نا ټاکلۍ رنګ

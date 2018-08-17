@@ -1,0 +1,185 @@
+th:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': ถัดไป
+            '"prev"': ก่อนหน้า
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': ถัดไป
+            '"prev"': ก่อนหน้า
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ทางขวา
+            '"left"': ซ้าย
+      Dancelab_randomColor:
+        text: สุ่มสี
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': ลงข้างล่าง
+            '"left"': ซ้าย
+            '"right"': ทางขวา
+            '"space"': อวกาศ
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': ลงข้างล่าง
+            '"left"': ซ้าย
+            '"right"': ทางขวา
+            '"space"': อวกาศ
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'จริง'
+            'false': 'เท็จ'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": สุ่ม
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ทางขวา
+            '"left"': ซ้าย
+      gamelab_randColor:
+        text: สุ่มสี
+      gamelab_randomColor:
+        text: สุ่มสี
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': สุ่ม
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"height"': ความสูง
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': ทางขวา
+            '"left"': ซ้าย
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': ลงข้างล่าง
+            '"left"': ซ้าย
+            '"right"': ทางขวา
+            '"space"': อวกาศ
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ขึ้นข้างบน
+            "'down'": ลงข้างล่าง
+            "'left'": ซ้าย
+            "'right'": ทางขวา
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': ขึ้นข้างบน
+            '"down"': ลงข้างล่าง
+            '"left"': ซ้าย
+            '"right"': ทางขวา
+            '"space"': อวกาศ
+      Vanilla_randomColor:
+        text: สุ่มสี

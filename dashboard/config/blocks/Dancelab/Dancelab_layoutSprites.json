@@ -1,5 +1,5 @@
 {
-  "category": "Actions",
+  "category": "Groups",
   "config": {
     "func": "layoutSprites",
     "blockText": "layout {GROUP} sprites as a {FORMAT}",
@@ -10,6 +10,18 @@
           [
             "all",
             "sprites"
+          ],
+          [
+            "Circle",
+            "\"circle\""
+          ],
+          [
+            "Wiggles",
+            "\"wiggles\""
+          ],
+          [
+            "Alien",
+            "\"alien\""
           ]
         ]
       },
