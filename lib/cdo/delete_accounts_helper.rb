@@ -34,8 +34,8 @@ class DeleteAccountsHelper
       where(id: channel_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
-    # Clear S3 sources and assets for user's channels
-    buckets = [SourceBucket, AssetBucket, AnimationBucket].map(&:new)
+    # Clear S3 contents for user's channels
+    buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
     buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
       bucket.hard_delete_channel_content encrypted_channel_id
     end
