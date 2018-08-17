@@ -29,6 +29,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     [SourceBucket, AssetBucket, AnimationBucket, FileBucket].each do |bucket|
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
+    # Skip real Firebase operations
+    FirebaseHelper.stubs(:delete_channel)
   end
 
   teardown_all do
@@ -1212,6 +1214,28 @@ class DeleteAccountsHelperTest < ActionView::TestCase
           with(storage_encrypt_channel_id(storage_id, channel_id_a))
         bucket.any_instance.
           expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  #
+  # Firebase
+  #
+
+  test "Firebase: deletes content for all of user's channels" do
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
+
+        FirebaseHelper.
+          expects(:delete_channel).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        FirebaseHelper.
+          expects(:delete_channel).
           with(storage_encrypt_channel_id(storage_id, channel_id_b))
 
         purge_user student
