@@ -1,8 +1,6 @@
 require 'csv'
 require 'set'
 
-require_relative './dynamo_table'
-
 class TableMetadata
   def self.generate_column_list(records)
     return [] if records.nil?
