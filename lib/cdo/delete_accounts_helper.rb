@@ -131,6 +131,12 @@ class DeleteAccountsHelper
     @pegasus_db[:contacts].where(email: email).delete
   end
 
+  def remove_poste_data(email)
+    ids = @pegasus_db[:poste_deliveries].where(contact_email: email).map {|x| x[:id]}
+    @pegasus_db[:poste_opens].where(delivery_id: ids).delete
+    @pegasus_db[:poste_deliveries].where(contact_email: email).delete
+  end
+
   def remove_from_pardot_and_contact_rollups(contact_rollups_recordset)
     # TODO: Make this an operation handled by the contact rollups task itself
     #       instead of crossing the architectural boundary ourselves.
@@ -232,6 +238,7 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_contacts(user.email) if user.email
+    remove_poste_data(user.email) if user.email
     remove_from_pardot_by_user_id(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)
