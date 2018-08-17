@@ -56,6 +56,15 @@ class DSLDefined < Level
     dsl_class.parse(str, filename, name)
   end
 
+  def should_write_i18n?
+    # As of August 2018, we only want to internationalize DSL levels that are
+    # used in the CSF courses, either directly or as a contained level
+    return true if script_levels.any? {|sl| sl.script.csf?}
+    return true if containing_levels.collect(&:script_levels).flatten.any? {|sl| sl.script.csf?}
+
+    false
+  end
+
   def self.create_from_level_builder(params, level_params, old_name = nil)
     text = level_params[:dsl_text] || params[:dsl_text]
     transaction do
@@ -76,7 +85,7 @@ class DSLDefined < Level
         level.rewrite_dsl_file(text)
         # Only bother saving levels in scripts that we want to internationalize.
         # As of August 2018, that's just the CSF levels.
-        rewrite_i18n_file(i18n) if level.script_levels.any? {|sl| sl.script.csf?}
+        rewrite_i18n_file(i18n) if level.should_write_i18n?
       end
 
       level
