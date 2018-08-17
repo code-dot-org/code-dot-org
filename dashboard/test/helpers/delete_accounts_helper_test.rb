@@ -1183,23 +1183,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     with_channel_for student do |channel_id_a, _|
       with_channel_for student do |channel_id_b, storage_id|
-        SourceBucket.any_instance.
-          expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_a))
-        SourceBucket.any_instance.
-          expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_b))
-
-        purge_user student
-      end
-    end
-  end
-
-  test "SourceBucket: hard-deletes soft-deleted channels" do
-    student = create :student
-    with_channel_for student do |channel_id_a, _|
-      with_channel_for student do |channel_id_b, storage_id|
-        storage_apps.where(id: [channel_id_a, channel_id_b]).update(state: 'deleted')
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
 
         SourceBucket.any_instance.
           expects(:hard_delete_channel_content).
@@ -1225,23 +1209,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     with_channel_for student do |channel_id_a, _|
       with_channel_for student do |channel_id_b, storage_id|
-        AssetBucket.any_instance.
-          expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_a))
-        AssetBucket.any_instance.
-          expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_b))
-
-        purge_user student
-      end
-    end
-  end
-
-  test "AssetBucket: hard-deletes soft-deleted channels" do
-    student = create :student
-    with_channel_for student do |channel_id_a, _|
-      with_channel_for student do |channel_id_b, storage_id|
-        storage_apps.where(id: [channel_id_a, channel_id_b]).update(state: 'deleted')
+        storage_apps.where(id: channel_id_b).update(state: 'deleted')
 
         AssetBucket.any_instance.
           expects(:hard_delete_channel_content).
@@ -1267,23 +1235,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     with_channel_for student do |channel_id_a, _|
       with_channel_for student do |channel_id_b, storage_id|
-        AnimationBucket.any_instance.
-          expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_a))
-        AnimationBucket.any_instance.
-          expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_b))
-
-        purge_user student
-      end
-    end
-  end
-
-  test "AnimationBucket: hard-deletes soft-deleted channels" do
-    student = create :student
-    with_channel_for student do |channel_id_a, _|
-      with_channel_for student do |channel_id_b, storage_id|
-        storage_apps.where(id: [channel_id_a, channel_id_b]).update(state: 'deleted')
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
 
         AnimationBucket.any_instance.
           expects(:hard_delete_channel_content).
@@ -1309,23 +1261,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     with_channel_for student do |channel_id_a, _|
       with_channel_for student do |channel_id_b, storage_id|
-        FileBucket.any_instance.
-          expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_a))
-        FileBucket.any_instance.
-          expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, channel_id_b))
-
-        purge_user student
-      end
-    end
-  end
-
-  test "FileBucket: hard-deletes soft-deleted channels" do
-    student = create :student
-    with_channel_for student do |channel_id_a, _|
-      with_channel_for student do |channel_id_b, storage_id|
-        storage_apps.where(id: [channel_id_a, channel_id_b]).update(state: 'deleted')
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
 
         FileBucket.any_instance.
           expects(:hard_delete_channel_content).
