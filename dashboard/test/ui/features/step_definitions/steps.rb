@@ -846,6 +846,20 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
   }
 end
 
+Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
+  individual_steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    And I wait for 5 seconds
+    Then I am on "http://studio.code.org/"
+    And I wait to see "#signin_button"
+    Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "#signin-button"
+    And I wait to see ".header_user"
+  }
+end
+
 Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
   steps %Q{
     And check that the url contains "/users/sign_in"
