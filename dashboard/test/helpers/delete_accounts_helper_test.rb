@@ -1,6 +1,7 @@
 require 'test_helper'
 require 'cdo/delete_accounts_helper'
 require_relative '../../../shared/middleware/helpers/storage_apps'
+require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -20,6 +21,14 @@ require_relative '../../../shared/middleware/helpers/storage_apps'
 class DeleteAccountsHelperTest < ActionView::TestCase
   setup_all do
     store_initial_pegasus_table_sizes %i{contacts forms form_geos}
+  end
+
+  setup do
+    # Skip real S3 operations in this test
+    AWS::S3.stubs(:create_client)
+    [SourceBucket, AssetBucket, AnimationBucket, FileBucket].each do |bucket|
+      bucket.any_instance.stubs(:hard_delete_channel_content)
+    end
   end
 
   teardown_all do
@@ -834,6 +843,35 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
   end
 
+  test "removes poste_deliveries for user" do
+    user = create :teacher
+    email = user.email
+    recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+    Poste2.send_message('dashboard', recipient)
+
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+  end
+
+  test "removes poste_opens for user" do
+    user = create :teacher
+    email = user.email
+    recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+    id = Poste2.send_message('dashboard', recipient)
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
+    pegasus.get "/o/#{Poste.encrypt(id)}"
+    assert DB[:poste_opens].where(delivery_id: id).any?
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    assert_empty DB[:poste_opens].where(delivery_id: id)
+  end
+
   #
   # Table: pegasus.contact_rollups
   #
@@ -933,7 +971,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "soft-deletes all of a soft-deleted user's projects" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
       assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
@@ -951,7 +988,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-deletes all of a purged user's projects" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
       assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
@@ -969,7 +1005,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not soft-delete anyone else's projects" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student_a = create :student
     student_b = create :student
     with_channel_for student_a do |channel_id_a|
@@ -986,7 +1021,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "sets updated_at when soft-deleting projects" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     Timecop.freeze do
       with_channel_for student do |channel_id|
@@ -1005,7 +1039,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-delete does not set updated_at on already soft-deleted projects" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     Timecop.freeze do
       with_channel_for student do |channel_id|
@@ -1026,7 +1059,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "user purge does set updated_at on already soft-deleted projects" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     Timecop.freeze do
       with_channel_for student do |channel_id|
@@ -1047,7 +1079,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'value' for all of a purged user's projects" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
       refute_nil storage_apps.where(id: channel_id).first[:value]
@@ -1065,7 +1096,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'updated_ip' for all of a purged user's projects" do
-    storage_apps = PEGASUS_DB[:storage_apps]
     student = create :student
     with_channel_for student do |channel_id, storage_id|
       refute_empty storage_apps.where(id: channel_id).first[:updated_ip]
@@ -1142,87 +1172,130 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # S3: cdo-v3-sources
+  # S3: cdo-v3-assets
+  # S3: cdo-v3-animations
+  # S3: cdo-v3-files
+  #
+  # Tested together because they've been built to support the same
+  # hard_delete_channel_content interface.
+  #
+
+  test "SourceBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents SourceBucket
+  end
+
+  test "AssetBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents AssetBucket
+  end
+
+  test "AnimationBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents AnimationBucket
+  end
+
+  test "FileBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents FileBucket
+  end
+
+  def assert_bucket_hard_deletes_contents(bucket)
+    # Here we are testing that for every one of the user's channels we
+    # ask the bucket to delete its contents.  To avoid interacting with S3
+    # in this test, we depend on the unit tests for the particular buckets to
+    # verify correct hard-delete behavior for that bucket.
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
+
+        bucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        bucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  #
   # Testing our utilities
   #
 
   test 'with_channel_for owns channel' do
-    table = PEGASUS_DB[:storage_apps]
     student = create :student
 
     with_storage_id_for student do |storage_id|
-      assert_empty table.where(storage_id: storage_id)
+      assert_empty storage_apps.where(storage_id: storage_id)
 
       with_channel_for student do |channel_id|
-        assert_equal channel_id, table.where(storage_id: storage_id).first[:id]
+        assert_equal channel_id, storage_apps.where(storage_id: storage_id).first[:id]
       end
 
-      assert_empty table.where(storage_id: storage_id)
+      assert_empty storage_apps.where(storage_id: storage_id)
     end
   end
 
   test 'with_storage_id_for owns id if it does not exist' do
-    table = PEGASUS_DB[:user_storage_ids]
     student = create :student
 
-    assert_empty table.where(user_id: student.id)
+    assert_empty user_storage_ids.where(user_id: student.id)
 
     with_storage_id_for student do |storage_id|
-      assert_equal storage_id, table.where(user_id: student.id).first[:id]
+      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
     end
 
-    assert_empty table.where(user_id: student.id)
+    assert_empty user_storage_ids.where(user_id: student.id)
   end
 
   test 'with_storage_id_for does not own id if it does exist' do
-    table = PEGASUS_DB[:user_storage_ids]
     student = create :student
-    assert_empty table.where(user_id: student.id)
+    assert_empty user_storage_ids.where(user_id: student.id)
 
-    table.insert(user_id: student.id)
+    user_storage_ids.insert(user_id: student.id)
 
-    refute_empty table.where(user_id: student.id)
+    refute_empty user_storage_ids.where(user_id: student.id)
 
     with_storage_id_for student do |storage_id|
-      assert_equal storage_id, table.where(user_id: student.id).first[:id]
+      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
     end
 
-    refute_empty table.where(user_id: student.id)
+    refute_empty user_storage_ids.where(user_id: student.id)
 
-    table.where(user_id: student.id).delete
-    assert_empty table.where(user_id: student.id)
+    user_storage_ids.where(user_id: student.id).delete
+    assert_empty user_storage_ids.where(user_id: student.id)
   end
 
   private
 
   def with_channel_for(owner)
-    table = PEGASUS_DB[:storage_apps]
-    channels_before = table.count
+    channels_before = storage_apps.count
     with_storage_id_for owner do |storage_id|
       encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
       _, id = storage_decrypt_channel_id encrypted_channel_id
       yield id, storage_id
     ensure
-      table.where(id: id).delete if id
+      storage_apps.where(id: id).delete if id
     end
   ensure
-    assert_equal channels_before, table.count
+    assert_equal channels_before, storage_apps.count
   end
 
   def with_storage_id_for(user)
-    table = PEGASUS_DB[:user_storage_ids]
-    user_storage_ids_count_before = table.count
+    user_storage_ids_count_before = user_storage_ids.count
     owns_storage_id = false
 
-    storage_id = table.where(user_id: user.id).first&.[](:id)
+    storage_id = user_storage_ids.where(user_id: user.id).first&.[](:id)
     unless storage_id
-      storage_id = table.insert(user_id: user.id)
+      storage_id = user_storage_ids.insert(user_id: user.id)
       owns_storage_id = true
     end
 
     yield storage_id
   ensure
-    table.where(id: storage_id).delete if owns_storage_id
-    assert_equal user_storage_ids_count_before, table.count
+    user_storage_ids.where(id: storage_id).delete if owns_storage_id
+    assert_equal user_storage_ids_count_before, user_storage_ids.count
   end
 
   #
@@ -1359,6 +1432,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ensure
       PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
     end
+  end
+
+  def storage_apps
+    PEGASUS_DB[:storage_apps]
+  end
+
+  def user_storage_ids
+    PEGASUS_DB[:user_storage_ids]
   end
 
   #

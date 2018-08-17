@@ -24,10 +24,21 @@ class DeleteAccountsHelper
   def delete_project_backed_progress(user)
     return unless user.user_storage_id
 
+    channel_ids = @pegasus_db[:storage_apps].where(storage_id: user.user_storage_id).map(:id)
+    encrypted_channel_ids = channel_ids.map do |id|
+      storage_encrypt_channel_id user.user_storage_id, id
+    end
+
     # Clear potential PII from user's channels
     @pegasus_db[:storage_apps].
-      where(storage_id: user.user_storage_id).
+      where(id: channel_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
+
+    # Clear S3 contents for user's channels
+    buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
+    buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
+      bucket.hard_delete_channel_content encrypted_channel_id
+    end
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
@@ -118,6 +129,12 @@ class DeleteAccountsHelper
 
   def remove_contacts(email)
     @pegasus_db[:contacts].where(email: email).delete
+  end
+
+  def remove_poste_data(email)
+    ids = @pegasus_db[:poste_deliveries].where(contact_email: email).map {|x| x[:id]}
+    @pegasus_db[:poste_opens].where(delivery_id: ids).delete
+    @pegasus_db[:poste_deliveries].where(contact_email: email).delete
   end
 
   def remove_from_pardot_and_contact_rollups(contact_rollups_recordset)
@@ -221,6 +238,7 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_contacts(user.email) if user.email
+    remove_poste_data(user.email) if user.email
     remove_from_pardot_by_user_id(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)
