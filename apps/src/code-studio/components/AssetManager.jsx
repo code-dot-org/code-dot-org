@@ -239,7 +239,6 @@ export default class AssetManager extends React.Component {
             useFilesApi={this.props.useFilesApi}
             onChoose={choose}
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
-            useUpdatedStyles={experiments.isEnabled('recordAudio')}
             soundPlayer={this.props.soundPlayer}
           />
         );

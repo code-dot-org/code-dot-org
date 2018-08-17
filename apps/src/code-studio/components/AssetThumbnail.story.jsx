@@ -27,7 +27,6 @@ export default storybook => {
               type="audio"
               useFilesApi={true}
               projectId="123"
-              useUpdatedStyles={true}
             />
           </div>
         )
