@@ -1,6 +1,7 @@
 require 'test_helper'
 require 'cdo/delete_accounts_helper'
 require_relative '../../../shared/middleware/helpers/storage_apps'
+require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -24,6 +25,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   setup do
     # Skip real S3 operations in this test
+    AWS::S3.stubs(:create_client)
     [SourceBucket, AssetBucket].each do |bucket|
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
@@ -841,6 +843,35 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
   end
 
+  test "removes poste_deliveries for user" do
+    user = create :teacher
+    email = user.email
+    recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+    Poste2.send_message('dashboard', recipient)
+
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+  end
+
+  test "removes poste_opens for user" do
+    user = create :teacher
+    email = user.email
+    recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+    id = Poste2.send_message('dashboard', recipient)
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
+    pegasus.get "/o/#{Poste.encrypt(id)}"
+    assert DB[:poste_opens].where(delivery_id: id).any?
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    assert_empty DB[:poste_opens].where(delivery_id: id)
+  end
+
   #
   # Table: pegasus.contact_rollups
   #
@@ -940,7 +971,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "soft-deletes all of a soft-deleted user's projects" do
-    skip 'Brad investigating...'
     student = create :student
     with_channel_for student do |channel_id, storage_id|
       assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
@@ -958,7 +988,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-deletes all of a purged user's projects" do
-    skip 'Brad investigating...'
     student = create :student
     with_channel_for student do |channel_id, storage_id|
       assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
@@ -976,7 +1005,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not soft-delete anyone else's projects" do
-    skip 'Brad investigating...'
     student_a = create :student
     student_b = create :student
     with_channel_for student_a do |channel_id_a|
@@ -993,7 +1021,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "sets updated_at when soft-deleting projects" do
-    skip 'Brad investigating...'
     student = create :student
     Timecop.freeze do
       with_channel_for student do |channel_id|
@@ -1012,7 +1039,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-delete does not set updated_at on already soft-deleted projects" do
-    skip 'Brad investigating...'
     student = create :student
     Timecop.freeze do
       with_channel_for student do |channel_id|
@@ -1033,7 +1059,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "user purge does set updated_at on already soft-deleted projects" do
-    skip 'Brad investigating...'
     student = create :student
     Timecop.freeze do
       with_channel_for student do |channel_id|
@@ -1054,7 +1079,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'value' for all of a purged user's projects" do
-    skip 'Brad investigating...'
     student = create :student
     with_channel_for student do |channel_id, storage_id|
       refute_nil storage_apps.where(id: channel_id).first[:value]
@@ -1072,7 +1096,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'updated_ip' for all of a purged user's projects" do
-    skip 'Brad investigating...'
     student = create :student
     with_channel_for student do |channel_id, storage_id|
       refute_empty storage_apps.where(id: channel_id).first[:updated_ip]
@@ -1094,7 +1117,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "unfeatures any featured projects owned by soft-deleted user" do
-    skip 'Brad investigating...'
     student = create :student
     with_channel_for student do |channel_id|
       featured_project = create :featured_project,
@@ -1111,7 +1133,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "unfeatures any featured projects owned by purged user" do
-    skip 'Brad investigating...'
     student = create :student
     with_channel_for student do |channel_id|
       featured_project = create :featured_project,
@@ -1128,7 +1149,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not change unfeature time on previously unfeatured projects" do
-    skip 'Brad investigating...'
     student = create :student
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10
@@ -1156,7 +1176,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "SourceBucket: hard-deletes all of user's channels" do
-    skip 'Brad investigating...'
     # Here we are testing that for every one of the user's channels we
     # ask SourceBucket to delete its contents.  To avoid interacting with S3
     # in this test, we depend on the unit tests in test_source_bucket.rb to
@@ -1177,7 +1196,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "SourceBucket: hard-deletes soft-deleted channels" do
-    skip 'Brad investigating...'
     student = create :student
     with_channel_for student do |channel_id_a, _|
       with_channel_for student do |channel_id_b, storage_id|
