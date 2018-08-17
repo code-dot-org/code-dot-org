@@ -23,7 +23,6 @@ experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdownNewSearch';
 experiments.REACT_PROJECTS_TABLE = 'reactProjectsTable';
-experiments.VERSION_MENU = 'versionMenu';
 experiments.CHEVRON_PUBLISH_EXPERIMENT = 'chevron-publish';
 
 // This is a per user experiment and is defined in experiments.rb
