@@ -75,8 +75,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.destroy!
 
     assert enrollment.reload.deleted?
-    refute Pd::Enrollment.exists? enrollment.attributes
-    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
+    refute Pd::Enrollment.exists? enrollment.id
+    assert Pd::Enrollment.with_deleted.exists? enrollment.id
   end
 
   test 'for_school_district' do
