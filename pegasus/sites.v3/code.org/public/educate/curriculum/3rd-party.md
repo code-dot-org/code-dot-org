@@ -4,7 +4,7 @@ theme: responsive
 style_min: true
 ---
 
-[](If you update the resources here, don't forget to also update /educate/curriculum/xx-school for ES, MS, and HS)
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/elementary-school, /educate/curriculum/middle-school, and /educate/curriculum/high-school -->
 
 # 3rd Party Educator Resources
 
@@ -69,7 +69,7 @@ Looking for resources specifically for AP Computer Science Principles A in Java?
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
 
 ## For school counselors and administrators
-[NCWIT Counselors for Computing (C4C)](https://www.ncwit.org/c4c) provides school counselors with
+[NCWIT Counselors for Computing (C4C)](https://www.ncwit.org/project/counselors-computing-c4c) provides school counselors with
 up-to-date information and resources they can use to guide students toward education and
 careers in computing. Free professional development webinars and 1-day workshops are available
 across the US.   
@@ -116,9 +116,6 @@ Free curriculum from Google that uses online, project-based tutorials for elemen
 
 ### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
 Build the next generation of creators using free, open-source Java courseware.
-
-### [Teacher Led Hour of Code Lesson Plans](/teacher-led)
-Check out one-hour, teacher-led lesson and activity plans designed for different subject areas to teach the basics of computer science.
 
 ## Other lists of resources for curriculum or PD
 - AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
