@@ -1248,6 +1248,27 @@ endvariants
     assert_not Script.modern_elementary_courses_available?("fr-fr")
   end
 
+  test 'my assertions' do
+    assert_equal ['foo'], ['foo']
+  end
+
+  test 'supported locales' do
+    script = create :script
+    assert_equal [], script.supported_locale_names
+
+    script.supported_locales = ['en-US']
+    assert_equal ['English'], script.supported_locale_names
+
+    script.supported_locales = ['fr-FR']
+    assert_equal ['French'], script.supported_locale_names
+
+    script.supported_locales = ['fr-FR', 'ar-SA']
+    assert_equal ['Arabic', 'French'], script.supported_locale_names
+
+    script.supported_locales = ['fr-fr']
+    assert_equal ['fr-fr'], script.supported_locale_names
+  end
+
   private
 
   def has_hidden_script?(scripts)
