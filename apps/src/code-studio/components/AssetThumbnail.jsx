@@ -61,9 +61,6 @@ class AssetThumbnail extends React.Component {
     projectId: PropTypes.string,
     src: PropTypes.string,
     soundPlayer: PropTypes.object,
-
-    //Temp prop to hide/show updated styles for audio recording release
-    useUpdatedStyles: PropTypes.bool
   };
 
   constructor(props) {
@@ -103,7 +100,6 @@ class AssetThumbnail extends React.Component {
       type,
       iconStyle,
       style,
-      useUpdatedStyles,
       src
     } = this.props;
 
@@ -111,7 +107,7 @@ class AssetThumbnail extends React.Component {
 
     return (
       <div>
-        {(useUpdatedStyles && type === 'audio') ?
+        {type === 'audio' ?
           <div style={[styles.wrapper, styles.audioWrapper]}>
             <i onClick={this.clickSoundControl} className={'fa '+ playIcon +' fa-4x'} style={styles.audioIcon} />
           </div> :

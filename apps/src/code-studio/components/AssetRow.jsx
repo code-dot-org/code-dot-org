@@ -15,10 +15,7 @@ export default class AssetRow extends React.Component {
     useFilesApi: PropTypes.bool.isRequired,
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
-    soundPlayer: PropTypes.object,
-
-    //temp prop to hide/show recordAudio style changes
-    useUpdatedStyles:PropTypes.bool
+    soundPlayer: PropTypes.object
   };
 
   state = {
@@ -71,15 +68,6 @@ export default class AssetRow extends React.Component {
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            {!this.props.useUpdatedStyles &&
-              <a
-                href={src}
-                target="_blank"
-                style={{backgroundColor: 'transparent'}}
-              >
-                <button><i className="fa fa-eye"/></button>
-              </a>
-            }
             <button className="btn-danger" onClick={this.confirmDelete}>
               <i className="fa fa-trash-o"/>
             </button>
@@ -120,7 +108,6 @@ export default class AssetRow extends React.Component {
             name={this.props.name}
             timestamp={this.props.timestamp}
             useFilesApi={this.props.useFilesApi}
-            useUpdatedStyles={this.props.useUpdatedStyles}
             src={src}
             soundPlayer={this.props.soundPlayer}
           />
