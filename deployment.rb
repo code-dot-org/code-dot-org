@@ -105,8 +105,6 @@ def load_configuration
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
-    'dynamo_tables_table'         => "#{rack_env}_tables",
-    'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
     'firebase_name'               => rack_env == :development ? 'cdo-v3-dev' : nil,
     'firebase_secret'             => nil,
     'firebase_max_channel_writes_per_15_sec' => 300,
