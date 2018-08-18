@@ -342,9 +342,9 @@ class ContactRollups
     # to state name, so do this row-by-row using existing Ruby code for that
     # conversion.
     sql = "
-    SELECT users.email, schools.city, schools.state, schools.zip
+    SELECT users_view.email, schools.city, schools.state, schools.zip
     FROM users_view
-    INNER JOIN school_infos ON school_infos.id = users.school_info_id
+    INNER JOIN school_infos ON school_infos.id = users_view.school_info_id
     INNER JOIN schools ON schools.id = school_infos.school_id"
 
     dataset = DASHBOARD_REPORTING_DB_READER[sql]
