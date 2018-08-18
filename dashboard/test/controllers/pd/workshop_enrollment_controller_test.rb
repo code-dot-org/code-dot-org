@@ -227,65 +227,6 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  test_redirect_to_sign_in_for :confirm_join_session, method: :post, params: {session_code: 'XYZ'}
-  test 'confirm_join_session' do
-    @workshop.start!
-    sign_in @teacher
-
-    assert_creates Pd::Enrollment do
-      post :confirm_join_session, params: {
-        session_code: @workshop.sessions.first.code,
-        pd_enrollment: enrollment_test_params(@teacher),
-        school_info: school_info_params
-      }
-    end
-
-    assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
-  end
-
-  test 'confirm_join_session upgrades student account if emails match' do
-    @workshop.start!
-    email = 'accidental_student@example.net'
-    student = create :student, email: email
-    sign_in student
-
-    assert_creates Pd::Enrollment do
-      post :confirm_join_session, params: {
-        session_code: @workshop.sessions.first.code,
-        pd_enrollment: enrollment_test_params(student).merge(
-          email: email,
-          email_confirmation: email
-        ),
-        school_info: school_info_params
-      }
-    end
-
-    assert student.reload.teacher?
-    assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
-  end
-
-  test 'confirm_join_session redirects student to upgrade account if emails dont match' do
-    @workshop.start!
-    email = 'mismatch@example.net'
-    student = create :student, email: 'accidental_student@example.net'
-    sign_in student
-
-    assert_creates Pd::Enrollment do
-      post :confirm_join_session, params: {
-        session_code: @workshop.sessions.first.code,
-        pd_enrollment: enrollment_test_params(student).merge(
-          email: email,
-          email_confirmation: email
-        ),
-        school_info: school_info_params
-      }
-    end
-
-    # Still a student
-    assert student.reload.student?
-    assert_redirected_to controller: 'pd/session_attendance', action: 'upgrade_account'
-  end
-
   private
 
   def enrollment_test_params(teacher = nil)
