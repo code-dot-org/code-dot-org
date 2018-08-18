@@ -79,32 +79,34 @@ class DeleteAccountsHelper
 
   # Remove all user generated content associated with any PD the user has been through, as well as
   # all PII associated with any PD records.
-  # @param [Integer] The ID of the user to clean the PD content.
-  def clean_and_destroy_pd_content(user_id)
-    PeerReview.where(reviewer_id: user_id).each(&:clear_data)
+  # @param [User] user being purged
+  def clean_and_destroy_pd_content(user)
+    user.workshops_as_facilitator = []
 
-    Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).each do |application|
+    PeerReview.where(reviewer_id: user.id).each(&:clear_data)
+
+    Pd::Application::ApplicationBase.with_deleted.where(user_id: user.id).each do |application|
       application.form_data = '{}'
       application.notes = nil
       application.save! validate: false
     end
 
     # Two different paths to anonymizing attendance records
-    Pd::Attendance.with_deleted.where(teacher_id: user_id).each do |attendance|
+    Pd::Attendance.with_deleted.where(teacher_id: user.id).each do |attendance|
       attendance.destroy!
       attendance.update!(teacher_id: nil)
     end
-    Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).each do |attendance|
+    Pd::Attendance.with_deleted.where(marked_by_user_id: user.id).each do |attendance|
       attendance.update!(marked_by_user_id: nil)
     end
 
-    Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
-    Pd::FacilitatorProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
-    Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
-    Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
-    Pd::InternationalOptIn.where(user_id: user_id).each(&:clear_form_data)
+    Pd::TeacherApplication.where(user_id: user.id).each(&:destroy)
+    Pd::FacilitatorProgramRegistration.where(user_id: user.id).each(&:clear_form_data)
+    Pd::RegionalPartnerProgramRegistration.where(user_id: user.id).each(&:clear_form_data)
+    Pd::WorkshopMaterialOrder.where(user_id: user.id).each(&:clear_data)
+    Pd::InternationalOptIn.where(user_id: user.id).each(&:clear_form_data)
 
-    pd_enrollment_id = Pd::Enrollment.where(user_id: user_id).pluck(:id).first
+    pd_enrollment_id = Pd::Enrollment.where(user_id: user.id).pluck(:id).first
     if pd_enrollment_id
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
       Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
@@ -239,7 +241,7 @@ class DeleteAccountsHelper
     clean_survey_responses(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
-    clean_and_destroy_pd_content(user.id)
+    clean_and_destroy_pd_content(user)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_contacts(user.email) if user.email

@@ -370,6 +370,32 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.facilitators_workshops
+  #
+
+  test 'deletes facilitators_workshops rows for purged facilitator' do
+    workshop = create :workshop
+    facilitator = workshop.facilitators.first
+
+    refute_empty facilitator.workshops_as_facilitator
+    result = ActiveRecord::Base.connection.exec_query(<<~SQL)
+      SELECT * FROM facilitators_workshops WHERE facilitator_id = '#{facilitator.id}';
+    SQL
+    refute_empty result.rows
+
+    purge_user facilitator
+
+    assert_empty facilitator.workshops_as_facilitator
+    result = ActiveRecord::Base.connection.exec_query(<<~SQL)
+      SELECT * FROM facilitators_workshops WHERE facilitator_id = '#{facilitator.id}';
+    SQL
+    assert_empty result.rows
+
+    # Does NOT delete workshop
+    workshop.reload
+  end
+
+  #
   # Table: dashboard.followers
   #
 
