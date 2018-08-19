@@ -922,6 +922,7 @@ def create_section_and_join_as_student(name, email, password)
 
     Then I sign out
     And I navigate to the section url
+    And I wait until I am on the join page
     And I wait to see "#user_name"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
@@ -1150,6 +1151,9 @@ And(/^I navigate to the section url$/) do
   steps %Q{
     Given I am on "#{@section_url}"
   }
+end
+
+And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
 
