@@ -1,16 +1,12 @@
 //CS in A stuff
 .field
-  = f.label :use_contract_editor, 'Use MSM contract editor'
-  = boolean_check_box f, :use_contract_editor
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_contract_editor, description: "Use MSM contract editor"}
 .field
-  = f.label :default_num_example_blocks, 'Default # of example blocks in contract editor'
-  = f.number_field :default_num_example_blocks
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :default_num_example_blocks, description: "Default # of example blocks in contract editor"}
 .field
-  = f.label :disable_examples, 'Hide examples section in contract editor'
-  = boolean_check_box f, :disable_examples
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_examples, description: "Hide examples section in contract editor"}
 .field
-  = f.label :examples_required, 'Each function must have at least 1 example, and examples will be checked when hitting run'
-  = boolean_check_box f, :examples_required
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :examples_required, description: "Each function must have at least 1 example, and examples will be checked when hitting run"}
 %table.contract-editor-config
   %tr
     %th Section
