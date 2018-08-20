@@ -19,8 +19,8 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
-  setup_all do
-    store_initial_pegasus_table_sizes %i{contacts forms form_geos}
+  def run(*_args, &_block)
+    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) {super}
   end
 
   setup do
@@ -29,10 +29,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     [SourceBucket, AssetBucket, AnimationBucket, FileBucket].each do |bucket|
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
-  end
-
-  teardown_all do
-    check_final_pegasus_table_sizes
+    # Skip real Firebase operations
+    FirebaseHelper.stubs(:delete_channel)
   end
 
   test 'sets purged_at' do
@@ -1220,6 +1218,28 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Firebase
+  #
+
+  test "Firebase: deletes content for all of user's channels" do
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
+
+        FirebaseHelper.
+          expects(:delete_channel).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        FirebaseHelper.
+          expects(:delete_channel).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  #
   # Testing our utilities
   #
 
@@ -1440,24 +1460,5 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   def user_storage_ids
     PEGASUS_DB[:user_storage_ids]
-  end
-
-  #
-  # Verify that tests clean up affected Pegasus tables properly, since we
-  # aren't depending on FactoryBot to do that for us.
-  #
-  def store_initial_pegasus_table_sizes(table_names)
-    @initial_pegasus_table_sizes = table_names.map do |table_name|
-      [table_name, PEGASUS_DB[table_name].count]
-    end.to_h
-  end
-
-  def check_final_pegasus_table_sizes
-    @initial_pegasus_table_sizes.each do |table_name, initial_size|
-      final_size = PEGASUS_DB[table_name].count
-      assert_equal initial_size, final_size,
-        "Expected pegasus.#{table_name} to contain #{initial_size} rows but " \
-        "it had #{final_size} rows"
-    end
   end
 end

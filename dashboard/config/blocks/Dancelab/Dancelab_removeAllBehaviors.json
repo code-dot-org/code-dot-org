@@ -6,7 +6,7 @@
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "customInput": "spritePicker"
       }
     ]
   }

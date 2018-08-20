@@ -6,7 +6,8 @@
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "type": "Sprite",
+        "customInput": "spritePicker"
       },
       {
         "name": "PROPERTY",
@@ -26,10 +27,6 @@
           [
             "y position",
             "\"y\""
-          ],
-          [
-            "movement direction",
-            "\"direction\""
           ],
           [
             "tint",

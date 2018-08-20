@@ -1,5 +1,5 @@
 
-function makeNewDanceSprite(costume, name, location) {
+function makeNewDanceSpriteSync(costume, name, location) {
   if (!location) {
     location = {x: 200, y: 200};
   }
@@ -24,11 +24,10 @@ function makeNewDanceSprite(costume, name, location) {
   sprite.dance_speed = 1;
   sprite.behaviors = [];
 
-  // Add behavior to control animation
   addBehavior(sprite, function() {
     var delta = 1 / (frameRate() + 0.01) * 1000;
     sprite.sinceLastFrame += delta;
-    var msPerBeat = 60 * 1000 / (song_meta.bpm * (sprite.dance_speed / 2));
+    var msPerBeat = 60 * 1000 / (song_meta.bpm * sprite.dance_speed);
     var msPerFrame = msPerBeat / 48;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
