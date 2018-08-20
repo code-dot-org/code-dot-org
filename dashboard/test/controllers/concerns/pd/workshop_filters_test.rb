@@ -132,7 +132,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   test 'filter_workshops with facilitator_id' do
-    User.stubs(:find).with(789).returns(@user)
+    User.stubs(:find_by).with(id: 789).returns(@user)
     expects(:facilitated_by).with(@user)
     params facilitator_id: 789
     @controller.filter_workshops @workshop_query
