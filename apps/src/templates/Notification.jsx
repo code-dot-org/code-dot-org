@@ -238,11 +238,13 @@ class Notification extends Component {
               </div>
               <div style={styles.details}>
                 {details}
-                &nbsp;
                 {detailsLinkText && detailsLink && (
-                  <a href={detailsLink} style={styles.detailsLink}>
-                    {detailsLinkText}
-                  </a>
+                  <span>
+                    &nbsp;
+                    <a href={detailsLink} style={styles.detailsLink}>
+                      {detailsLinkText}
+                    </a>
+                  </span>
                 )}
               </div>
             </div>
