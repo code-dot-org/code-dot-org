@@ -8,7 +8,7 @@ function changePropBy(sprite,  property, val) {
       sprite.scale = 0;
     }
   } else if (property == "tint") {
-    sprite.tint = changeColorBy(sprite.tint, "hue", val);
+    sprite.tint = changeColorBy(sprite.tint, "hue", Math.round(val));
   }
   else if (property=="direction") {
    	sprite.direction = getDirection(sprite) + val;
