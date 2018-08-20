@@ -10,8 +10,7 @@ var sprites_by_type = {};
 var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites";
 var song_meta = {
   bpm: 146,
-  delay: 0.2,
-  frameRate: 28
+  delay: 0.2
 };
 var score = 0;
 var game_over = false;
@@ -32,7 +31,6 @@ function preload() {
 }
 
 function setup() {
-  frameRate(song_meta.frameRate);
   setupCallbacks.forEach(function (callback) {
     callback();
   });
@@ -47,28 +45,28 @@ function setup() {
 
 var dancers = {
   alien: [
-  	loadS3Animation("/48frames/Alien_Rest/Alien_Rest_", 48, 2),
-  	loadS3Animation("/48frames/Alien_Breakdown/Alien_Breakdown_", 48, 2),
-  	loadS3Animation("/48frames/Alien_Floss/Alien_Floss_", 48, 2),
-  	loadS3Animation("/48frames/Alien_Fresh/Alien_Fresh_", 48, 2)
+  	loadS3Animation("/48frames/Alien_Rest/Alien_Rest_", 48),
+  	loadS3Animation("/48frames/Alien_Breakdown/Alien_Breakdown_", 48),
+  	loadS3Animation("/48frames/Alien_Floss/Alien_Floss_", 48),
+  	loadS3Animation("/48frames/Alien_Fresh/Alien_Fresh_", 48)
     ],
   mrwiggles: [
-  	loadS3Animation("/48frames/MrWiggles_Rest/MrWiggles_Rest_", 48, 2),
-  	loadS3Animation("/48frames/MrWiggles_Breakdown/MrWiggles_Breakdown", 48, 2),
-  	loadS3Animation("/48frames/MrWiggles_Floss/MrWiggles_Floss_", 48, 2),
-  	loadS3Animation("/48frames/MrWiggles_Fresh/MrWiggles_Fresh_", 48, 2)
+  	loadS3Animation("/48frames/MrWiggles_Rest/MrWiggles_Rest_", 48),
+  	loadS3Animation("/48frames/MrWiggles_Breakdown/MrWiggles_Breakdown", 48),
+  	loadS3Animation("/48frames/MrWiggles_Floss/MrWiggles_Floss_", 48),
+  	loadS3Animation("/48frames/MrWiggles_Fresh/MrWiggles_Fresh_", 48)
     ],
   pizza: [
-  	loadS3Animation("/48frames/Pizza_Rest/Pizza_Rest_", 48, 2),
-  	loadS3Animation("/48frames/Pizza_Breakdown/Pizza_Breakdown_", 48, 2),
-  	loadS3Animation("/48frames/Pizza_Floss/Pizza_Floss_", 48, 2),
-  	loadS3Animation("/48frames/Pizza_Fresh/Pizza_Fresh_", 48, 2)
+  	loadS3Animation("/48frames/Pizza_Rest/Pizza_Rest_", 48),
+  	loadS3Animation("/48frames/Pizza_Breakdown/Pizza_Breakdown_", 48),
+  	loadS3Animation("/48frames/Pizza_Floss/Pizza_Floss_", 48),
+  	loadS3Animation("/48frames/Pizza_Fresh/Pizza_Fresh_", 48)
     ],
   unicorn: [
-  	loadS3Animation("/48frames/Unicorn_Rest/Unicorn_Rest_", 48, 2),
-  	loadS3Animation("/48frames/Unicorn_Breakdown/Unicorn_Breakdown_", 48, 2),
-  	loadS3Animation("/48frames/Unicorn_Floss/Unicorn_Floss_", 48, 2),
-  	loadS3Animation("/48frames/Unicorn_Fresh/Unicorn_Fresh_", 48, 2)
+  	loadS3Animation("/48frames/Unicorn_Rest/Unicorn_Rest_", 48),
+  	loadS3Animation("/48frames/Unicorn_Breakdown/Unicorn_Breakdown_", 48),
+  	loadS3Animation("/48frames/Unicorn_Floss/Unicorn_Floss_", 48),
+  	loadS3Animation("/48frames/Unicorn_Fresh/Unicorn_Fresh_", 48)
     ]
 };
 
