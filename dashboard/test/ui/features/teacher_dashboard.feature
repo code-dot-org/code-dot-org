@@ -67,6 +67,7 @@ Feature: Using the teacher dashboard
     And I click selector ".assignment-version-title:contains('17-'18)" once I see it
     And I select the "CSP Student Post-Course Survey" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
+    And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
     When I click selector "a:contains('New Section')" once I see it
@@ -115,6 +116,7 @@ Feature: Using the teacher dashboard
     And I click selector ".assignment-version-title:contains('17-'18)" once I see it
     And I select the "CSP Student Post-Course Survey" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
+    And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
     When I click selector "a:contains('New Section')" once I see it
