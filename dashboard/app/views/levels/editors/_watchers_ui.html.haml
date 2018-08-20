@@ -1,6 +1,5 @@
 .field
-  = f.label :show_debug_watch, 'Show Watchers UI in Debug Area'
-  = boolean_check_box f, :show_debug_watch
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :show_debug_watch, description: "Show Watchers UI in Debug Area"}
 .field
   = f.label 'Pre-populated Watchers'
   %pre
