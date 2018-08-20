@@ -86,5 +86,25 @@ module Forms
         tap {|x| puts x.sql, x.explain if explain}.
         all
     end
+
+    def events_by_company_name(
+      kind,
+      explain: false
+    )
+      FORMS.
+        select(
+          json('data.hoc_company_s').as(:company_name)
+        ).
+        where(
+          kind: kind
+        ).
+        exclude(
+          Sequel.function(:coalesce, Forms.json('data.hoc_company_s'), '') => 'null'
+        ).
+        order_by(:company_name).
+        distinct.
+        tap {|x| puts x.sql, x.explain if explain}.
+        all
+    end
   end
 end
