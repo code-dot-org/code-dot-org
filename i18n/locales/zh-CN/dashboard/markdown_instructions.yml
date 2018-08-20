@@ -339,7 +339,7 @@ zh-CN:
         # 开始-尝试这个应用程序\r
         \r
         在你建立自己的《惊险岔路口》之前，用应用程序实验室来实践，来创建这个关于参观宠物店的项目。开始先点击 "运行", 然后导航到 "狗" 屏幕。一旦你完成了, 点击 "完成" 继续前进。
-      AppLab Intro 2 - Try App_markdown_instruction: "<img src=\"https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg\",\nstyle=\"float:right;width:200px\">\\r\n\\r\n# 开始-尝试此应用程序 \\r\n\\r\n你将要通过扩展这个项目来建立一个《惊险岔路口》应用程序。开始时, 你已经有了蓝色的项目概览部分。点击 \"运行\" 并单击已为您创建的内容。\n\\r\n\\r\n一旦看到项目已经对了，就可以点击 \"完成\"来开始创造自己的。"
+      AppLab Intro 2 - Try App_markdown_instruction: "<img src=\"https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg\" style=\"float:right;width:200px\">\n\n# 开始 - 尝试此应用程序 \n\n你将要通过扩展这个项目来构建一个《惊险岔路口》应用程序。开始时，你已经有了蓝色的项目概览部分。点击 \"运行\" 并单击已创建的内容。\n\n\n一旦看到项目已经对了，就可以点击 \"完成\"来开始创造自己的。"
       AppLab Intro 2 - Try Cat Commander_markdown_instruction: "猫司令的代码看起来是这样的。花一分钟滚动代码, 看看你是否能理解它是如何工作的。和一个搭档谈谈你看到了什么模式？\\r\n\\r\n一旦你完成了, 点击 \"运行\" 然后 \"完成\", 来学习建立自己的冒险。"
       AppLab Intro 2 - add Button_markdown_instruction: |-
         现在你有两个屏幕, 但没有办法在两者之间作业。是时候添加按钮了！\r
@@ -1327,59 +1327,55 @@ zh-CN:
          * 至少**一个段落**\r
         * 比对你的草图，**反想**你做出的网页，并把它给你的伙伴看。
       CSD U2 RGB intro_2018_markdown_instruction: |-
-        # RGB（红绿蓝）颜色\r
-        \r
-        所有的颜色，不管它们有没有名字，都可以用不同水平的红、绿、蓝色的光混合起来显示。这叫做RGB值（这是Red-Green-Blue，也就是红-绿-蓝的简称）。你可以用左边的小部件来试试不同的RGB值，看看能做出什么样的颜色。\r
-        \r
+        # RGB（红绿蓝）颜色
+        
+        所有的颜色，不管它们有没有名字，都可以用不同水平的红、绿、蓝色的光混合起来显示。这叫做RGB值（这是Red-Green-Blue，也就是红-绿-蓝的简称）。你可以用左边的小部件来试试不同的RGB值，看看能做出什么样的颜色。
+        
         * **点击"运行"来开始左边的小部件**，并用滑动条来改变红、绿、蓝光的水平。\r
-        * 对于下面每个颜色，用RGB值来匹配它。\r
-        \r
-        A) 红: 216, 绿: 191, 蓝: 216 - rgb(216,191,216)\r
-        \r
-        B)
-        红: 255, 绿: 239, 蓝: 213 - rgb(255,239,213)\r
-        \r
-        C) 红: 250, 绿:
-        128, 蓝: 114 - rgb(250,128,114)\r
-        \r
-        D) 红: 70, 绿: 130, 蓝: 180
-        - rgb(70, 130, 180)\r
-        \r
-        E) 红: 107, 绿: 142, 蓝: 35 - rgb(107,142,35)\r
-        \r
-        \r
+        * 对于下面每个颜色，用RGB值来匹配它。
+        
+        A) 红: 216, 绿: 191, 蓝: 216 - rgb(216,191,216)
+        
+        B) 红: 255, 绿: 239, 蓝: 213 - rgb(255,239,213)
+        
+        C) 红: 250, 绿:128, 蓝: 114 - rgb(250,128,114)
+        
+        D) 红: 70, 绿: 130, 蓝: 180 - rgb(70, 130, 180)
+        
+        E) 红: 107, 绿: 142, 蓝: 35 - rgb(107,142,35)
+        
+        
         <div
-        style="font-size: 16px">\r
-        <br />\r
-        <details>\r
-        <summary>**为什么红色和绿色能组合出黄色？**</summary>\r
-        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a>\r
-        </p> </details>\r
-        <details>\r
-        <summary>**我能用RGB组合出多少种颜色？**</summary>\r
-        <p>\r
-        用RGB大概能组合出一千六百万种不同的颜色。\r
-        </p></details>\r
+        style="font-size: 16px">
+        <br />
+        <details>
+        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a>
+        </p> </details>
+        <details>
+        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <p>
+        用RGB大概能组合出一千六百万种不同的颜色。
+        </p></details>
         </div>
       CSD U2 RGB summer_2018_markdown_instruction: |-
-        # 夏天的颜色\r
-        \r
-        找到夏天的黄色的RGB值。\r
-        \r
-        * 点击"运行"来启动小部件。\r
-        * 调节小部件下的水平值，直到找到和夏天的黄色一样的颜色。\r
-        * 在你的活动指南上写上RGB值，你会在下个活动中需要它。\r
-        \r
-        \r
-        <div style="font-size: 16px">\r
-        <br
-        />\r
-        <details>\r
-        <summary>**为什么红色和绿色能组合出黄色？**</summary>\r
-        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>\r
-        <details>\r
-        <summary>**我能用RGB组合出多少种颜色？**</summary>\r
-        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>\r
+        # 夏天的颜色
+        
+        找到夏天的黄色的RGB值。
+        
+        * 点击"运行"来启动小部件。
+        * 调节小部件下的水平值，直到找到和夏天的黄色一样的颜色。
+        * 在活动指南上写上RGB值，会在下个活动中需要它。
+        
+        
+        <div style="font-size: 16px">
+        <br />
+        <details>
+        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
+        <details>
+        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
       CSD U2 RGB winter_2018_markdown_instruction: |-
         # 冬天的颜色\r
@@ -10400,6 +10396,7 @@ zh-CN:
         - 如果你的钻石图案长一点或短一点会发生什么？\r
         - 如果在一个雪花上画另一个雪花看起来会是什么样子？
       Dance Party 1-validated_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
+      Dance Party 1-validated_simple_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Dance Party 1_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Dance Party 2 Validated_markdown_instruction: 这个外星人对自己在火星上的舞技非常自信，但现在她只能左右移动了。你能在 ‘开始’ 模块中改变行为让她可以旋转吗？
       Dance Party 2_markdown_instruction: "这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。 \n\n你能在<xml><block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"sprite_variables_get\">\n<title name=\"VAR\">alien1</title>\n</block>\n</value>\n</block></xml>中改变行为，让它可以旋转吗？  "
@@ -10413,6 +10410,7 @@ zh-CN:
       Dance Party 6_markdown_instruction: "这些外星人太调皮了！\n\n用<xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\"><value name=\"SPRITE\"/></block></xml>模块来在每个外星人被单击时停下来。\n"
       Dance Party 7 - Validated_markdown_instruction: "最后一步，创建一个新的钟形图形，命名为`我的钟`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！\n"
       Dance Party 7_markdown_instruction: "最后一步，创建一个新的钟形图形，命名为`我的钟`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！\n"
+      Dance Party 7_simple_markdown_instruction: "最后一步，创建一个新的钟形图形，命名为`我的钟`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！\n"
       Dance Party Freeplay_markdown_instruction: |-
         现在可以创建自己的外星人迪斯科啦！想找点灵感？试试这些：
         * 创建两个时钟，让外星人在不同时钟的控制下完成不同的舞步
@@ -10434,6 +10432,7 @@ zh-CN:
       Fish Tank 1_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank 2-validated_markdown_instruction: "我们来做个鱼缸！\n\n把灰蒙蒙的风滚草变成一条鱼。"
       Fish Tank 2_markdown_instruction: 我们要做一个鱼缸。将达斯提草变成一条鱼。
+      Fish Tank 3-validated Ram_markdown_instruction: "这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。"
       Fish Tank 3-validated_markdown_instruction: "这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。"
       Fish Tank 3_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
       Fish Tank 4-validated_markdown_instruction: "鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。"
@@ -10446,6 +10445,7 @@ zh-CN:
       Fish Tank 7_markdown_instruction: 工具箱里有许多新的模块。用它们来让你的鱼缸变得特别。
       Fish Tank Predict_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank Template_markdown_instruction: 项目模版
+      Fish Tank Template_simple_markdown_instruction: 项目模版
       Food Fight!_markdown_instruction: |-
         我们已为你添加了上一关的函数。\r
         <hr/>\r
@@ -12021,6 +12021,7 @@ zh-CN:
         你觉得在按下"▶ 运行"之后点击她会发生什么事？
       Virtual Pet 1-validated_markdown_instruction: 这是杰拉尔丁，你的宠物长颈鹿。你觉得按下运行之后点击她会发生什么事？
       Virtual Pet 1_markdown_instruction: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
+      Virtual Pet 1_simple_markdown_instruction: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 2 - Validated (Ram)_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
       Virtual Pet 2 - Validated_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
       Virtual Pet 2_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"

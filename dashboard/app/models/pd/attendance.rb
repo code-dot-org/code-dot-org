@@ -28,7 +28,7 @@ class Pd::Attendance < ActiveRecord::Base
 
   has_one :workshop, class_name: 'Pd::Workshop', through: :session
 
-  validate :teacher_or_enrollment_must_be_present
+  validate :teacher_or_enrollment_must_be_present, unless: :deleted?
   def teacher_or_enrollment_must_be_present
     if teacher.nil? && enrollment.nil?
       errors.add(:base, 'Teacher or enrollment must be present.')

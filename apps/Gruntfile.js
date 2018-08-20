@@ -8,6 +8,7 @@ var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -611,6 +612,11 @@ describe('entry tests', () => {
             'code-studio-common',
           ]
         }),
+        ...(process.env.ANALYZE_BUNDLE ? [
+          new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+          }),
+        ] : []),
       ],
       minify: minify,
       watch: watch,

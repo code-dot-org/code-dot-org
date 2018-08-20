@@ -1,0 +1,9 @@
+co:
+  data:
+    blocks:
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow

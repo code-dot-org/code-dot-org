@@ -18,7 +18,6 @@ import {
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
-import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(showHomepage);
 
@@ -36,7 +35,7 @@ function showHomepage() {
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
-  store.dispatch(setShowVersionMenu(experiments.isEnabled(experiments.VERSION_MENU)));
+  store.dispatch(setShowVersionMenu(true));
 
   let courseId;
   let scriptId;

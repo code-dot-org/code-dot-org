@@ -7,7 +7,7 @@ class AccountPurgerTest < ActiveSupport::TestCase
 
   setup do
     # Don't actually call in to inner logic in any test
-    DeleteAccountsHelper.stubs(:purge_user)
+    DeleteAccountsHelper.any_instance.stubs(:purge_user)
     # Never actually upload logs to S3
     PurgedAccountLog.any_instance.stubs(:upload)
 
@@ -38,13 +38,13 @@ class AccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'purge_data_for_account uses DeleteAccountsHelper to purge the user' do
-    DeleteAccountsHelper.expects(:purge_user).once.with {|account| account.id == @student.id}
+    DeleteAccountsHelper.any_instance.expects(:purge_user).once.with {|account| account.id == @student.id}
     AccountPurger.new(log: NULL_STREAM).
       purge_data_for_account @student
   end
 
   test 'purge_data_for_account does not call DeleteAccountsHelper when dry-run is enabled' do
-    DeleteAccountsHelper.expects(:purge_user).never
+    DeleteAccountsHelper.any_instance.expects(:purge_user).never
     AccountPurger.new(log: NULL_STREAM, dry_run: true).
       purge_data_for_account @student
   end
@@ -77,5 +77,32 @@ class AccountPurgerTest < ActiveSupport::TestCase
     assert_equal <<~LOG, log.string
       Purging user_id #{@student.id} (dry-run)
     LOG
+  end
+
+  test 'uses dashboard and pegasus transactions' do
+    test_name = 'Boaty McBoatface'
+
+    refute_equal test_name, @student.name
+    assert_empty PEGASUS_DB[:user_storage_ids].where user_id: @student.id
+
+    # Perform Dashboard (Activerecord) and Pegasus DB operations as
+    # a side effect, then raise, and prove the changes weren't saved
+    stub_code_ran = false
+    DeleteAccountsHelper.any_instance.stubs(:purge_user).with do |user|
+      user.update(name: test_name)
+      PEGASUS_DB[:user_storage_ids].insert(user_id: user.id)
+      stub_code_ran = true
+      raise 'Intentional failure during transaction'
+    end
+
+    assert_raise RuntimeError do
+      AccountPurger.new(log: NULL_STREAM).purge_data_for_account @student
+    end
+
+    @student.reload
+
+    assert stub_code_ran
+    assert_empty PEGASUS_DB[:user_storage_ids].where(user_id: @student.id)
+    refute_equal test_name, @student.name
   end
 end
