@@ -555,8 +555,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           },
           facilitator: {
             'sampleFacilitatorText' => {
-              'Facilitator Person 1' => ['Great!'],
-              'Facilitator Person 2' => ['Bad!']
+              @workshop.facilitators.first.name => ['Great!'],
+              @workshop.facilitators.second.name => ['Bad!']
             }
           }
         },
