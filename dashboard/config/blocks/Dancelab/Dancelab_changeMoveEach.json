@@ -12,16 +12,20 @@
             "sprites"
           ],
           [
-            "Circle",
-            "\"circle\""
-          ],
-          [
-            "Wiggles",
-            "\"wiggles\""
-          ],
-          [
             "Alien",
             "\"alien\""
+          ],
+          [
+            "MrWiggles",
+            "\"mrwiggles\""
+          ],
+          [
+            "Pizza",
+            "\"pizza\""
+          ],
+          [
+            "Unicorn",
+            "\"unicorn\""
           ]
         ]
       },
@@ -33,7 +37,7 @@
             "0"
           ],
           [
-            "Electro",
+            "Breakdown",
             "1"
           ],
           [
@@ -43,18 +47,6 @@
           [
             "Fresh",
             "3"
-          ],
-          [
-            "Breakdown",
-            "4"
-          ],
-          [
-            "March",
-            "5"
-          ],
-          [
-            "Wave",
-            "6"
           ],
           [
             "Next",
