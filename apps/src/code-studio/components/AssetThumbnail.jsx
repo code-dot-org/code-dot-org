@@ -59,15 +59,11 @@ class AssetThumbnail extends React.Component {
     iconStyle: PropTypes.object,
     useFilesApi: PropTypes.bool,
     projectId: PropTypes.string,
-    src: PropTypes.string,
     soundPlayer: PropTypes.object,
   };
 
   constructor(props) {
     super(props);
-    this.state = {
-      isPlayingAudio: false
-    };
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     if (this.props.projectId) {
       api = api.withProjectId(this.props.projectId);
@@ -78,18 +74,22 @@ class AssetThumbnail extends React.Component {
       const date = new Date(this.props.timestamp);
       cacheBustSuffix = `?t=${date.valueOf()}`;
     }
+
     this.srcPath = `${basePath}${cacheBustSuffix}`;
 
-    if (this.props.type === 'audio') {
+    if (this.props.type === 'audio' && this.props.soundPlayer) {
       this.props.soundPlayer.register({id: this.srcPath, mp3: this.srcPath});
     }
+    this.state = {
+      isPlayingAudio: false
+    };
   }
 
   clickSoundControl = () => {
-    if (this.state.isPlayingAudio) {
+    if (this.state.isPlayingAudio && this.props.soundPlayer) {
       this.setState({isPlayingAudio: false});
       this.props.soundPlayer.stopPlayingURL(this.srcPath);
-    } else {
+    } else if (this.props.soundPlayer) {
       this.setState({isPlayingAudio: true});
       this.props.soundPlayer.play(this.srcPath, {onEnded: ()=>{this.setState({isPlayingAudio: false});}});
     }
@@ -99,30 +99,17 @@ class AssetThumbnail extends React.Component {
     const {
       type,
       iconStyle,
-      style,
-      src
+      style
     } = this.props;
-
-    const playIcon = this.state.isPlayingAudio ? 'fa-pause-circle' : 'fa-play-circle';
 
     return (
       <div>
         {type === 'audio' ?
-          <div style={[styles.wrapper, styles.audioWrapper]}>
-            <i onClick={this.clickSoundControl} className={'fa '+ playIcon +' fa-4x'} style={styles.audioIcon} />
-          </div> :
+          <AudioThumbnail clickSoundControl={this.clickSoundControl} isPlaying={this.state.isPlayingAudio}/> :
           <div className="assetThumbnail" style={[styles.wrapper, style, styles.background]}>
             {type === 'image' ?
-              <a
-                href={src}
-                target="_blank"
-              >
-                <img src={this.srcPath} style={assetThumbnailStyle}/>
-              </a> :
-              <i
-                className={defaultIcons[type] || defaultIcons.unknown}
-                style={[assetIconStyle, iconStyle]}
-              />
+              <ImageThumbnail src={this.srcPath}/> :
+              <DefaultThumbnail type={type} iconStyle={iconStyle}/>
             }
           </div>
         }
@@ -132,3 +119,53 @@ class AssetThumbnail extends React.Component {
 }
 
 export default Radium(AssetThumbnail);
+
+const AudioThumbnail = Radium(class extends React.Component {
+  static propTypes = {
+    clickSoundControl: PropTypes.func,
+    isPlaying: PropTypes.bool
+  };
+
+  render() {
+    const playIcon = this.props.isPlaying ? 'fa-pause-circle' : 'fa-play-circle';
+
+    return (
+      <div style={[styles.wrapper, styles.audioWrapper]}>
+        <i onClick={this.props.clickSoundControl} className={'fa '+ playIcon +' fa-4x'} style={styles.audioIcon} />
+      </div>
+    );
+  }
+});
+
+const ImageThumbnail = Radium(class extends React.Component {
+  static propTypes = {
+    src: PropTypes.string
+  };
+
+  render() {
+    return (
+      <a
+        href={this.props.src}
+        target="_blank"
+      >
+        <img src={this.props.src} style={assetThumbnailStyle}/>
+      </a>
+    );
+  }
+});
+
+const DefaultThumbnail = Radium(class extends React.Component {
+  static propTypes = {
+    type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
+    iconStyle: PropTypes.object
+  };
+
+  render() {
+    return (
+      <i
+        className={defaultIcons[this.props.type] || defaultIcons.unknown}
+        style={[assetIconStyle, this.props.iconStyle]}
+      />
+    );
+  }
+});

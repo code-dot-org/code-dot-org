@@ -61,8 +61,6 @@ export default class AssetRow extends React.Component {
       flex = size + ' kb';
     }
 
-    const api = this.props.useFilesApi ? filesApi : assetsApi;
-    const src = api.basePath(this.props.name);
     switch (this.state.action) {
       case 'normal':
         actions = (
@@ -108,7 +106,6 @@ export default class AssetRow extends React.Component {
             name={this.props.name}
             timestamp={this.props.timestamp}
             useFilesApi={this.props.useFilesApi}
-            src={src}
             soundPlayer={this.props.soundPlayer}
           />
         </td>
