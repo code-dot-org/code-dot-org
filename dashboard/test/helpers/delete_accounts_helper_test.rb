@@ -19,8 +19,8 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
-  setup_all do
-    store_initial_pegasus_table_sizes %i{contacts forms form_geos}
+  def run(*_args, &_block)
+    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) {super}
   end
 
   setup do
@@ -31,10 +31,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
     # Skip real Firebase operations
     FirebaseHelper.stubs(:delete_channel)
-  end
-
-  teardown_all do
-    check_final_pegasus_table_sizes
   end
 
   test 'sets purged_at' do
@@ -889,7 +885,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "cleans forms matched by email if purging by email" do
-    skip "Disabled until test is parallel-safe. Brad investigating..."
     email = 'test@example.com'
     with_form(email: email) do |_|
       form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
@@ -904,7 +899,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "cleans forms matched by user_id" do
-    skip "Disabled until test is parallel-safe. Brad investigating..."
     user = create :teacher
     with_form(user: user) do |_|
       form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
@@ -1296,8 +1290,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   private
 
   def with_channel_for(owner)
-    skip "Disabled until test is parallel-safe. Brad investigating..."
-    # channels_before = storage_apps.count
+    channels_before = storage_apps.count
     with_storage_id_for owner do |storage_id|
       encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
       _, id = storage_decrypt_channel_id encrypted_channel_id
@@ -1305,13 +1298,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ensure
       storage_apps.where(id: id).delete if id
     end
-    # ensure
-    # assert_equal channels_before, storage_apps.count
+  ensure
+    assert_equal channels_before, storage_apps.count
   end
 
   def with_storage_id_for(user)
-    skip "Disabled until test is parallel-safe. Brad investigating..."
-    # user_storage_ids_count_before = user_storage_ids.count
+    user_storage_ids_count_before = user_storage_ids.count
     owns_storage_id = false
 
     storage_id = user_storage_ids.where(user_id: user.id).first&.[](:id)
@@ -1323,7 +1315,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     yield storage_id
   ensure
     user_storage_ids.where(id: storage_id).delete if owns_storage_id
-    # assert_equal user_storage_ids_count_before, user_storage_ids.count
+    assert_equal user_storage_ids_count_before, user_storage_ids.count
   end
 
   #
@@ -1353,7 +1345,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def assert_removes_field_from_forms(field, expect: :nil)
-    skip "Disabled until test is parallel-safe. Brad investigating..."
     user = create :teacher
     with_form(user: user) do |form_id|
       initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
@@ -1383,7 +1374,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def assert_removes_field_from_form_geos(field)
-    skip "Disabled until test is parallel-safe. Brad investigating..."
     user = create :teacher
     with_form_geo(user) do |form_geo_id|
       initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
@@ -1470,24 +1460,5 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   def user_storage_ids
     PEGASUS_DB[:user_storage_ids]
-  end
-
-  #
-  # Verify that tests clean up affected Pegasus tables properly, since we
-  # aren't depending on FactoryBot to do that for us.
-  #
-  def store_initial_pegasus_table_sizes(table_names)
-    @initial_pegasus_table_sizes = table_names.map do |table_name|
-      [table_name, PEGASUS_DB[table_name].count]
-    end.to_h
-  end
-
-  def check_final_pegasus_table_sizes
-    @initial_pegasus_table_sizes.each do |table_name, initial_size|
-      final_size = PEGASUS_DB[table_name].count
-      assert_equal initial_size, final_size,
-        "Expected pegasus.#{table_name} to contain #{initial_size} rows but " \
-        "it had #{final_size} rows"
-    end
   end
 end
