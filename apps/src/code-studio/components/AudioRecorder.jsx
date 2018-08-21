@@ -19,6 +19,8 @@ const styles = {
   }
 };
 
+const RECORD_MAX_TIME = 30000;
+
 export default class AudioRecorder extends React.Component {
   static propTypes = {
     onUploadDone: PropTypes.func,
@@ -26,6 +28,7 @@ export default class AudioRecorder extends React.Component {
 
   constructor(props) {
     super(props);
+    this.timeout = null;
     this.recorder = null;
     this.slices = [];
     this.state = {
@@ -87,11 +90,26 @@ export default class AudioRecorder extends React.Component {
 
   toggleRecord = () => {
     if (this.state.recording) {
-      this.recorder.stop();
+      this.stopRecording();
     } else {
-      this.recorder.start();
+      this.startRecording();
     }
+  };
+
+  startRecording = () => {
+    this.recorder.start();
     this.setState({recording: !this.state.recording});
+
+    //Stop recording after set amount of time
+    this.recordTimeout = setTimeout(this.stopRecording, RECORD_MAX_TIME);
+  };
+
+  stopRecording = () => {
+    if (this.state.recording) {
+      clearTimeout(this.recordTimeout);
+      this.recorder.stop();
+      this.setState({recording: !this.state.recording});
+    }
   };
 
   render() {
