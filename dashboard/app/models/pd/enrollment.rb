@@ -250,12 +250,14 @@ class Pd::Enrollment < ActiveRecord::Base
 
   # Removes the name and email information stored within this Pd::Enrollment.
   def clear_data
-    update!(
-      name: '',
-      first_name: nil,
-      last_name: nil,
-      email: ''
-    )
+    write_attribute :name, nil
+    self.first_name = nil
+    self.last_name = nil
+    self.email = ''
+    self.user_id = nil
+    self.school = nil
+    self.school_info_id = nil
+    save(validate: false)
   end
 
   protected
