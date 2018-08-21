@@ -230,6 +230,8 @@ class DeleteAccountsHelper
   def check_safety_constraints(user)
     assert_constraint !user.facilitator?,
       'Automated purging of facilitator accounts is not supported at this time.'
+    assert_constraint RegionalPartner.with_deleted.where(contact_id: user.id).empty?,
+      'Automated purging of regional partner contact accounts is not supported at this time.'
   end
 
   def assert_constraint(condition, message)
