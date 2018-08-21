@@ -27,7 +27,7 @@ import LegacyButton from '../LegacyButton';
 import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
 import msg from '@cdo/locale';
 
-import RenderedMarkdown from '../RenderedMarkdown';
+import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 
 import {
   getOuterHeight,
@@ -661,7 +661,7 @@ class TopInstructions extends React.Component {
               />
               {this.props.shortInstructions2 &&
                 <div className="secondary-instructions">
-                  <RenderedMarkdown markdown={this.props.shortInstructions2} />
+                  <UnsafeRenderedMarkdown markdown={this.props.shortInstructions2} />
                 </div>
               }
               {this.props.overlayVisible &&
