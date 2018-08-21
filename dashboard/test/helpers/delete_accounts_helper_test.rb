@@ -1240,6 +1240,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Solr
+  #
+
+  test "Solr: deletes user document" do
+    student = create :student
+    mock_solr = mock
+    CDO.stubs(:solr_server).returns('fake-solr-configuration')
+    Solr::Server.expects(:new).with(host: 'fake-solr-configuration').returns(mock_solr)
+    SolrHelper.expects(:delete_document).with(mock_solr, 'user', student.id)
+
+    DeleteAccountsHelper.new.purge_user student
+  end
+
+  #
   # Testing our utilities
   #
 
