@@ -6,7 +6,7 @@ nav: events_nav
 :ruby
   require pegasus_dir 'helper_modules/forms'
   HOC_YEAR = 2014.freeze
-  KIND = "HocSignup#{hoc_year}".freeze
+  KIND = "HocSignup#{HOC_YEAR}".freeze
   events = Forms.events_by_country(KIND)
   us_events = Forms.events_by_state(KIND)
 
