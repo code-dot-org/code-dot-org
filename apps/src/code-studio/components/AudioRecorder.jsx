@@ -22,6 +22,7 @@ const styles = {
 export default class AudioRecorder extends React.Component {
   static propTypes = {
     onUploadDone: PropTypes.func,
+    afterAudioSaved: PropTypes.func
   };
 
   constructor(props) {
@@ -70,9 +71,11 @@ export default class AudioRecorder extends React.Component {
     (xhr) => {
       this.setState({error: ErrorType.NONE});
       this.props.onUploadDone(JSON.parse(xhr.response));
+      this.props.afterAudioSaved();
     }, error => {
       this.setState({error: ErrorType.SAVE});
       console.error(`Audio Failed to Save: ${error}`);
+      this.props.afterAudioSaved();
     });
   };
 
