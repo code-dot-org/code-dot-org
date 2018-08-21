@@ -138,11 +138,15 @@ export default class AssetManager extends React.Component {
     });
   };
 
+  afterAudioSaved = () => {
+    this.setState({recordingAudio: false});
+  };
+
   render() {
     const buttons = (
       <div>
         {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
-          <AudioRecorder onUploadDone={this.onUploadDone}/>
+          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved}/>
         }
         <AddAssetButtonRow
           uploadsEnabled={this.props.uploadsEnabled}
@@ -153,6 +157,7 @@ export default class AssetManager extends React.Component {
           onUploadError={this.onUploadError}
           onSelectRecord={this.onSelectRecord}
           statusMessage={this.state.statusMessage}
+          recordDisabled={this.state.recordingAudio}
           recordEnabled={experiments.isEnabled('recordAudio')}
         />
       </div>
