@@ -1331,6 +1331,33 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil facilitator.purged_at
   end
 
+  test 'refuses to delete a regional partner contact account in normal conditions' do
+    regional_partner = create :regional_partner
+    contact = regional_partner.contact
+
+    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
+      purge_user contact
+    end
+
+    assert_equal <<~MESSAGE, err.message
+      Automated purging of regional partner contact accounts is not supported at this time.
+      If you are a developer attempting to manually purge this account, run
+
+        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+      to bypass this constraint and purge the user from our system.
+    MESSAGE
+  end
+
+  test 'can delete a regional partner contact account if bypassing safety constraints' do
+    regional_partner = create :regional_partner
+    contact = regional_partner.contact
+
+    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(contact)
+
+    refute_nil contact.purged_at
+  end
+
   private
 
   def with_channel_for(owner)
