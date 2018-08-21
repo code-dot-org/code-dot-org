@@ -9,6 +9,7 @@ new_name 'coursec-2017'
 family_name 'coursec'
 version_year '2017'
 is_stable true
+supported_locales ["es-ES", "es-MX"]
 
 stage 'Building a Foundation'
 level 'BuildingAFoundation'
