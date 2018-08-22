@@ -32,21 +32,9 @@ post '/forms/:kind/query' do |kind|
   rescue NameError
     halt 400
   end
-  pass unless kind.respond_to?(:solr_query)
-
-  host, port = CDO.solr_server.to_s.split(':')
-  service_unavailable! if host.nil_or_empty?
-  port ||= '8983'
-
-  query = kind.solr_query(params)
-  uri = "/solr/query?#{solr_query_to_param(query)}"
-
-  request = Net::HTTP::Get.new(uri)
-  response = Net::HTTP.new(host, port).request(request)
-
-  status response.code
-  content_type response.content_type if response.content_type
-  response.body
+  pass unless kind.respond_to?(:query)
+  content_type :json
+  kind.query(params)
 end
 
 post "/forms/:kind/:secret" do |kind, secret|

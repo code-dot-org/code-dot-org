@@ -146,6 +146,9 @@ class FirehoseClient {
    * @param {hash} data The data to add the key-value pairs to.
    * @option {boolean} includeUserId Include userId in records, if signed in
    * @return {hash} The data, including the newly added key-value pairs.
+   * NOTE: In scenarios where userId is not in pageConstants, such as in the
+   * project gallery, we can also directly pass user_id as a field on the data * object. In this case, includeUserId should be false to avoid overriding
+   * the manually set user_id.
    */
   addCommonValues(data, includeUserId) {
     data['created_at'] = new Date().toISOString();
@@ -178,6 +181,9 @@ class FirehoseClient {
    *   (default {alwaysPut: false})
    * @option options [boolean] alwaysPut Forces the record to be sent.
    * @option options [boolean] includeUserId Include userId in records, if signed in
+   * NOTE: In scenarios where userId is not in pageConstants, such as in the
+   * project gallery, we can also directly pass user_id as a field on the data * object. In this case, includeUserId should be false to avoid overriding
+   * the manually set user_id.
    * @option options [function(err, data)] callback Invoked upon completion with error or data
    */
   putRecord(data, options = {alwaysPut: false, includeUserId: false, callback: null}) {

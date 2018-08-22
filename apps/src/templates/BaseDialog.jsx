@@ -23,6 +23,7 @@ export default class BaseDialog extends React.Component {
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
     style: PropTypes.object,
+    soundPlayer: PropTypes.object
   };
 
   componentDidMount() {
@@ -43,6 +44,9 @@ export default class BaseDialog extends React.Component {
   closeDialog = () => {
     if (!this.props.uncloseable && this.props.handleClose) {
       this.props.handleClose();
+      if (this.props.soundPlayer) {
+        this.props.soundPlayer.stopAllAudio();
+      }
     }
   };
 

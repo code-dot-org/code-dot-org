@@ -11,4 +11,4 @@ Need help recruiting students for your computer science class? Want to wow stude
 * [Recruit students for your computer science class](/educate/resources/recruit)
 * [Inspire students to try computer science](/educate/resources/inspire)
 * [IT requirements for Code.org tutorials](/educate/resources/tech-requirements)
-* [Video Library](/educate/resources-videos)
+* [Video Library](/educate/resources/videos)

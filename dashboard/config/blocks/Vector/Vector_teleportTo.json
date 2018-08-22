@@ -2,13 +2,14 @@
   "category": "",
   "config": {
     "func": "teleportTo",
-    "blockText": "teleport to {POSITION}",
+    "blockText": "set position {POSITION}",
     "args": [
       {
         "name": "POSITION",
         "type": "Location"
       }
     ],
-    "methodCall": true
+    "methodCall": true,
+    "thisObject": "this"
   }
 }

@@ -19,10 +19,17 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
   CONTROLLER_PATH = 'api/v1/pd/workshop_enrollments'
 
+  RESPONSE_MESSAGES = Api::V1::Pd::WorkshopEnrollmentsController::RESPONSE_MESSAGES
+
   test 'routes' do
     assert_routing(
       {method: :get, path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments"},
       {controller: CONTROLLER_PATH, action: 'index', workshop_id: @workshop.id.to_s}
+    )
+
+    assert_routing(
+      {path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments", method: :post},
+      {controller: CONTROLLER_PATH, action: 'create', workshop_id: @workshop.id.to_s}
     )
 
     assert_routing(
@@ -271,6 +278,94 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
     # Still a student
     assert student.reload.student?
+  end
+
+  test 'enrollments can be created' do
+    assert_creates(Pd::Enrollment) do
+      post :create, params: {
+        workshop_id: @workshop.id,
+        school_info: school_info_params
+      }.merge(enrollment_test_params)
+      assert_response :success
+      assert_equal RESPONSE_MESSAGES[:SUCCESS], JSON.parse(@response.body)["workshop_enrollment_status"]
+    end
+    enrollment = Pd::Enrollment.last
+    refute_nil enrollment.code
+  end
+
+  test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        first_name: @enrollment.first_name,
+        last_name: @enrollment.last_name,
+        email: @enrollment.email,
+        confirmation_email: @enrollment.email,
+      }
+    )
+    post :create, params: params.merge({workshop_id: @workshop.id})
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:DUPLICATE], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'creating an enrollment with email match from organizer sends \'own\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @organizer.name,
+        email: @organizer.email,
+        confirmation_email: @organizer.email,
+      }
+    )
+    post :create, params: params.merge({workshop_id: @organizer_workshop.id})
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:OWN], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment with email match from program manager organizer sends \'own\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @program_manager.name,
+        email: @program_manager.email,
+        confirmation_email: @program_manager.email,
+      }
+    )
+    post :create, params: params.merge({workshop_id: @workshop.id})
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:OWN], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment with email match from facilitator sends \'own\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @facilitator.name,
+        email: @facilitator.email,
+        confirmation_email: @facilitator.email,
+      }
+    )
+    post :create, params: params.merge({workshop_id: @workshop.id})
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:OWN], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment with errors sends \'error\' workshop enrollment status' do
+    params = enrollment_test_params.merge(
+      {
+        first_name: '',
+        confirmation_email: nil
+      }
+    )
+    post :create, params: {
+      workshop_id: @workshop.id,
+      pd_enrollment: params,
+      school_info: school_info_params
+    }
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:ERROR], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment on an unknown workshop id returns 404' do
+    post :create, params: enrollment_test_params.merge({workshop_id: 'nonsense'})
+    assert_response 404
   end
 
   private

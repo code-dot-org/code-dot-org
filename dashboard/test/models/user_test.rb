@@ -1672,13 +1672,22 @@ class UserTest < ActiveSupport::TestCase
     refute student.roster_managed_account?
   end
 
-  test 'roster_managed_account? is true for migrated student in an externally rostered section' do
-    student = create :student, :with_migrated_google_authentication_option
+  test 'roster_managed_account? is true for migrated student in an externally rostered section without a password' do
+    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
     section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
     section.students << student
     student.reload
 
     assert student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student in an externally rostered section with a password' do
+    student = create :student, :with_migrated_google_authentication_option, password: 'mypassword'
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
   end
 
   test 'roster_managed_account? is false for unmigrated student in an externally rostered section with a password' do
@@ -1996,28 +2005,75 @@ class UserTest < ActiveSupport::TestCase
     assert_empty user.email
   end
 
-  test 'upgrade_to_teacher is false if matching authentication option is not found' do
-    user = create :student, :with_migrated_google_authentication_option
-    refute user.upgrade_to_teacher('some_fake@email.com', {})
+  def email_preference_params(**args)
+    {
+      email_preference_opt_in: 'no',
+      email_preference_request_ip: '127.0.0.1',
+      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
+      email_preference_form_kind: '0',
+    }.merge(args)
+  end
+
+  test 'upgrade_to_teacher is false if updating primary contact info fails' do
+    user = create :student, :with_migrated_email_authentication_option
+    original_primary_contact_info = user.primary_contact_info
+    user.stubs(:update_primary_contact_info!).raises(RuntimeError)
+
+    assert_equal 1, user.authentication_options.count
+    refute_nil original_primary_contact_info
+
+    refute user.upgrade_to_teacher('example@email.com', email_preference_params)
     user.reload
-    assert_equal ["Email is invalid"], user.errors.full_messages
+    assert_equal 1, user.authentication_options.count
+    assert_equal original_primary_contact_info, user.primary_contact_info
+    assert_nil EmailPreference.find_by_email('example@email.com')
+  end
+
+  test 'upgrade_to_teacher is false if user update fails' do
+    user = create :student, :with_migrated_email_authentication_option
+    original_primary_contact_info = user.primary_contact_info
+    user.stubs(:update!).raises(ActiveRecord::RecordInvalid)
+
+    assert_equal 1, user.authentication_options.count
+    refute_nil original_primary_contact_info
+
+    refute user.upgrade_to_teacher('example@email.com', email_preference_params)
+    user.reload
+    assert_equal 1, user.authentication_options.count
+    assert_equal original_primary_contact_info, user.primary_contact_info
+    assert_nil EmailPreference.find_by_email('example@email.com')
+  end
+
+  test 'upgrade_to_teacher is true if new authentication option is created' do
+    user = create :student, :with_migrated_google_authentication_option
+
+    assert_equal 1, user.authentication_options.count
+
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
+    user.reload
+    assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal 2, user.authentication_options.count
+    assert_equal 'example@email.com', user.email
+    email_preference = EmailPreference.find_by_email('example@email.com')
+    refute email_preference.opt_in
+    assert_equal '127.0.0.1', email_preference.ip_address
+    assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, email_preference.source
+    assert_equal '0', email_preference.form_kind
   end
 
   test 'upgrade_to_teacher is true if matching authentication option is found' do
     user = create :student, :with_migrated_google_authentication_option
     auth_option = create :authentication_option, user: user, email: 'example@email.com'
-    email_preference_params = {
-      email_preference_opt_in: 'yes',
-      email_preference_request_ip: '127.0.0.1',
-      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
-      email_preference_form_kind: '0',
-    }
-    assert_empty auth_option.email
 
+    assert_empty auth_option.email
+    assert_equal 2, user.authentication_options.count
+
+    email_preference_params = email_preference_params(email_preference_opt_in: 'yes')
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
     user.reload
     auth_option.reload
     assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal 2, user.authentication_options.count
     assert_equal auth_option, user.primary_contact_info
     assert_equal 'example@email.com', auth_option.email
     email_preference = EmailPreference.find_by_email('example@email.com')
