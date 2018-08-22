@@ -56,8 +56,12 @@ export default class EnrollForm extends React.Component {
     first_name: PropTypes.string,
     email: PropTypes.string,
     onSubmissionComplete: PropTypes.func,
-    submitUrl: PropTypes.string,
+    submitUrl: PropTypes.string.isRequired,
     submitText: PropTypes.string
+  };
+
+  static defaultProps = {
+    submitText: 'Register'
   };
 
   constructor(props) {
@@ -301,7 +305,7 @@ export default class EnrollForm extends React.Component {
         <Button
           onClick={this.handleClickRegister}
         >
-          {this.props.submitText || "Register"}
+          {this.props.submitText}
         </Button>
         <br/>
         <br/>
