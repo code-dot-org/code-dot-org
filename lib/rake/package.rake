@@ -49,6 +49,7 @@ namespace :package do
       unless rack_env?(:adhoc)
         packager.upload_package_to_s3(package)
         ChatClient.log "Uploaded apps package to S3: #{packager.commit_hash}"
+        apps_packager.log_bundle_size
       end
 
       packager.decompress_package(package)
