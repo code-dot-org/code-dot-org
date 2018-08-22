@@ -39,7 +39,7 @@ class PersonalProjectsTableActionsCell extends Component {
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
     remix: PropTypes.func.isRequired,
-    userId: PropTypes.string,
+    userId: PropTypes.number,
   };
 
   onPublish = () => {
@@ -49,7 +49,7 @@ class PersonalProjectsTableActionsCell extends Component {
         study_group: 'publish-chevron',
         event: 'publish',
         user_id: this.props.userId,
-        channel_id: this.props.projectId,
+        data_json: JSON.stringify({ channel_id: this.props.projectId })
       }
     );
     this.props.showPublishDialog(this.props.projectId, this.props.projectType);
@@ -62,7 +62,7 @@ class PersonalProjectsTableActionsCell extends Component {
         study_group: 'publish-chevron',
         event: 'unpublish',
         user_id: this.props.userId,
-        channel_id: this.props.projectId,
+        data_json: JSON.stringify({ channel_id: this.props.projectId })
       }
     );
     this.props.unpublishProject(this.props.projectId);
