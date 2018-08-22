@@ -124,7 +124,7 @@ class PersonalProjectsTable extends React.Component {
     // TODO (Erin B.) delete this prop, userId prop (for logging),
     // and the less effective variant when we determine the experiment outcome.
     publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
-    userId: PropTypes.string,
+    userId: PropTypes.number,
   };
 
   state = {

@@ -17,7 +17,7 @@ class PersonalProjectsPublishedCell extends Component {
     publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
     showPublishDialog: PropTypes.func.isRequired,
     unpublishProject: PropTypes.func.isRequired,
-    userId: PropTypes.string,
+    userId: PropTypes.number,
   };
 
   onPublish = () => {
@@ -27,7 +27,7 @@ class PersonalProjectsPublishedCell extends Component {
         study_group: 'publish-button',
         event: 'publish',
         user_id: this.props.userId,
-        channel_id: this.props.projectId,
+        data_json: JSON.stringify({ channel_id: this.props.projectId })
       }
     );
     this.props.showPublishDialog(this.props.projectId, this.props.projectType);
@@ -40,7 +40,7 @@ class PersonalProjectsPublishedCell extends Component {
         study_group: 'publish-button',
         event: 'unpublish',
         user_id: this.props.userId,
-        channel_id: this.props.projectId,
+        data_json: JSON.stringify({ channel_id: this.props.projectId })
       }
     );
     this.props.unpublishProject(this.props.projectId);
