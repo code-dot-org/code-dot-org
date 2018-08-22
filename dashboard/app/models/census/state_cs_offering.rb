@@ -46,6 +46,7 @@ class Census::StateCsOffering < ApplicationRecord
     OK
     OR
     PA
+    RI
     SC
     UT
     VA
@@ -130,6 +131,8 @@ class Census::StateCsOffering < ApplicationRecord
       row_hash['state_school_id']
     when 'PA'
       row_hash['state_school_id']
+    when 'RI'
+      row_hash['School ID']
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
     when 'UT'
@@ -418,6 +421,37 @@ class Census::StateCsOffering < ApplicationRecord
     10112
   ).freeze
 
+  RI_COURSE_CODES = [
+    '7th Grade Computer Science',
+    '8th Grade Computer Science',
+    'AP Computer Science A',
+    'AP Computer Science Principles',
+    'Block-Based Coding',
+    'Bootstrap: Algebra',
+    'Bootstrap: Data Science',
+    'Coding integrated into other course',
+    'Computer Science Elective',
+    'Creative Computing with Scratch',
+    'CS Discoveries',
+    'CS Fundamentals',
+    'Cubetto',
+    'GameSalad',
+    'Intro to Computer Science and Robotics',
+    'Introduction to Computer Science',
+    'Introduction to Computing and Data Science',
+    'JavaScript Programming',
+    'PLTW Computer Science Essentials',
+    'PLTW Computer Science Principles',
+    'PLTW Gateway: Computer Science for Innovators and Makers',
+    'PLTW Gateway: App Creators',
+    'Programming: Visual Basic',
+    'Python I',
+    'Python II',
+    'Robotics & Coding',
+    'TEALS Introducting to Programming',
+    'URI Introduction to Computing'
+  ].freeze
+
   # Utah did not provide codes, but did provide course titles.
   UT_COURSE_CODES = [
     'A.P.  Computer Science',
@@ -561,11 +595,13 @@ class Census::StateCsOffering < ApplicationRecord
     when 'PA'
       # One source per row
       [UNSPECIFIED_COURSE]
-    when 'UT'
-      UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
+    when 'RI'
+      RI_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'SC'
       # One source per row
       [UNSPECIFIED_COURSE]
+    when 'UT'
+      UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'VA'
       VA_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'WI'

@@ -8,6 +8,8 @@ cron-pii:
 - dashboard.regional_partners_school_districts
 - dashboard.pd_%
 - dashboard.email_preferences
+- dashboard.teacher_feedbacks
+- dashboard.authentication_options
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
