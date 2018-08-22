@@ -1,5 +1,7 @@
 require 'test_helper'
 require 'cdo/delete_accounts_helper'
+require_relative '../../../shared/middleware/helpers/storage_apps'
+require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -17,6 +19,20 @@ require 'cdo/delete_accounts_helper'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
+  def run(*_args, &_block)
+    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) {super}
+  end
+
+  setup do
+    # Skip real S3 operations in this test
+    AWS::S3.stubs(:create_client)
+    [SourceBucket, AssetBucket, AnimationBucket, FileBucket].each do |bucket|
+      bucket.any_instance.stubs(:hard_delete_channel_content)
+    end
+    # Skip real Firebase operations
+    FirebaseHelper.stubs(:delete_channel)
+  end
+
   test 'sets purged_at' do
     user = create :student
     assert_nil user.purged_at
@@ -724,7 +740,597 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil deleted_feedback.student_id
   end
 
+  #
+  # Table: dashboard.pd_applications
+  #
+
+  test "soft-deletes pd_applications for user" do
+    # The user soft-delete actually does this.
+    application = create :pd_teacher1819_application
+    refute application.deleted?
+
+    purge_user application.user
+
+    application.reload
+    assert application.deleted?
+  end
+
+  test "clears form_data from pd_applications for user" do
+    application = create :pd_teacher1819_application
+    refute_equal '{}', application.form_data
+
+    purge_user application.user
+
+    application.reload
+    assert_equal '{}', application.form_data
+  end
+
+  test "clears notes from pd_applications for user" do
+    application = create :pd_teacher1819_application, notes: 'Test notes'
+    refute_nil application.notes
+
+    purge_user application.user
+
+    application.reload
+    assert_nil application.notes
+  end
+
+  #
+  # Table: dashboard.pd_attendances
+  #
+
+  test "soft-deletes pd_attendances when teacher is purged" do
+    attendance = create :pd_attendance
+    refute attendance.deleted?
+
+    purge_user attendance.teacher
+
+    attendance.reload
+    assert attendance.deleted?
+  end
+
+  test "clears teacher_id from pd_attendances when teacher is purged" do
+    attendance = create :pd_attendance
+    refute_nil attendance.teacher_id
+
+    purge_user attendance.teacher
+
+    attendance.reload
+    assert_nil attendance.teacher_id
+  end
+
+  test "does not soft-delete pd_attendances when marked_by_user is purged" do
+    marked_by_user = create :teacher
+    attendance = create :pd_attendance
+    attendance.update!(marked_by_user: marked_by_user)
+    refute attendance.deleted?
+
+    purge_user marked_by_user
+
+    attendance.reload
+    refute attendance.deleted?
+  end
+
+  test "clears marked_by_user_id from pd_attendances when marked_by_user is purged" do
+    marked_by_user = create :teacher
+    attendance = create :pd_attendance
+    attendance.update!(marked_by_user: marked_by_user)
+    refute_nil attendance.marked_by_user_id
+
+    purge_user marked_by_user
+
+    attendance.reload
+    assert_nil attendance.marked_by_user_id
+  end
+
+  #
+  # Table: pegasus.contacts
+  #
+
+  test "removes contacts rows for email" do
+    user = create :teacher
+    email = user.email
+    Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+
+    refute_empty PEGASUS_DB[:contacts].where(email: email)
+    contact_ids = PEGASUS_DB[:contacts].where(email: email).map {|s| s[:id]}
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:contacts].where(email: email)
+    assert_empty PEGASUS_DB[:contacts].where(id: contact_ids)
+  end
+
+  test "removes poste_deliveries for user" do
+    user = create :teacher
+    email = user.email
+    recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+    Poste2.send_message('dashboard', recipient)
+
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+  end
+
+  test "removes poste_opens for user" do
+    user = create :teacher
+    email = user.email
+    recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
+    id = Poste2.send_message('dashboard', recipient)
+    refute_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    pegasus = Rack::Test::Session.new(Rack::MockSession.new(MockPegasus.new, "studio.code.org"))
+    pegasus.get "/o/#{Poste.encrypt(id)}"
+    assert DB[:poste_opens].where(delivery_id: id).any?
+
+    purge_user user
+
+    assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
+    assert_empty DB[:poste_opens].where(delivery_id: id)
+  end
+
+  #
+  # Table: pegasus.contact_rollups
+  #
+  # TODO: To interact correctly with contact_rollups (a table controlled only
+  #   by a nightly batch job) we may want to update our user purge to be a
+  #   long-running operation; we'll queue a contact purge that the contact
+  #   rollups job will take care of, and when all deferred work is done we
+  #   will report that the hard-delete is completed.
+
+  #
+  # Table: pegasus.forms
+  # Table: pegasus.form_geos
+  #
+
+  test "cleans forms matched by email if purging by email" do
+    email = 'test@example.com'
+    with_form(email: email) do |_|
+      form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
+
+      refute_empty PEGASUS_DB[:forms].where(id: form_ids)
+      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+
+      purge_all_accounts_with_email email
+
+      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+    end
+  end
+
+  test "cleans forms matched by user_id" do
+    user = create :teacher
+    with_form(user: user) do |_|
+      form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
+
+      refute_empty PEGASUS_DB[:forms].where(id: form_ids)
+      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+
+      purge_user user
+
+      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+    end
+  end
+
+  test "removes email from forms" do
+    assert_removes_field_from_forms :email, expect: :empty
+  end
+
+  test "removes name from forms" do
+    assert_removes_field_from_forms :name
+  end
+
+  test "removes data from forms" do
+    assert_removes_field_from_forms :data, expect: {}.to_json
+  end
+
+  test "removes created_ip from forms" do
+    assert_removes_field_from_forms :created_ip, expect: :empty
+  end
+
+  test "removes updated_ip from forms" do
+    assert_removes_field_from_forms :updated_ip, expect: :empty
+  end
+
+  test "removes processed_data from forms" do
+    assert_removes_field_from_forms :processed_data
+  end
+
+  test "removes hashed_email from forms" do
+    assert_removes_field_from_forms :hashed_email
+  end
+
+  test "removes ip_address from form_geos" do
+    assert_removes_field_from_form_geos :ip_address
+  end
+
+  test "removes city from form_geos" do
+    assert_removes_field_from_form_geos :city
+  end
+
+  test "removes state from form_geos" do
+    assert_removes_field_from_form_geos :state
+  end
+
+  test "removes postal_code from form_geos" do
+    assert_removes_field_from_form_geos :postal_code
+  end
+
+  test "removes latitude from form_geos" do
+    assert_removes_field_from_form_geos :latitude
+  end
+
+  test "removes longitude from form_geos" do
+    assert_removes_field_from_form_geos :longitude
+  end
+
+  #
+  # Table: pegasus.storage_apps
+  #
+
+  test "soft-deletes all of a soft-deleted user's projects" do
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'active', app[:state]
+      end
+
+      student.destroy
+
+      assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'deleted', app[:state]
+      end
+    end
+  end
+
+  test "soft-deletes all of a purged user's projects" do
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'active', app[:state]
+      end
+
+      purge_user student
+
+      assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_equal 'deleted', app[:state]
+      end
+    end
+  end
+
+  test "does not soft-delete anyone else's projects" do
+    student_a = create :student
+    student_b = create :student
+    with_channel_for student_a do |channel_id_a|
+      with_channel_for student_b do |channel_id_b|
+        assert_equal 'active', storage_apps.where(id: channel_id_a).first[:state]
+        assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+
+        purge_user student_a
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+        assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+      end
+    end
+  end
+
+  test "sets updated_at when soft-deleting projects" do
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        assert_equal 'active', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        student.destroy
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        refute_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
+  test "soft-delete does not set updated_at on already soft-deleted projects" do
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        storage_apps.where(id: channel_id).update(state: 'deleted', updated_at: Time.now)
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        student.destroy
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        assert_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
+  test "user purge does set updated_at on already soft-deleted projects" do
+    student = create :student
+    Timecop.freeze do
+      with_channel_for student do |channel_id|
+        storage_apps.where(id: channel_id).update(state: 'deleted', updated_at: Time.now)
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        original_updated_at = storage_apps.where(id: channel_id).first[:updated_at]
+
+        Timecop.travel 10
+
+        purge_user student
+
+        assert_equal 'deleted', storage_apps.where(id: channel_id).first[:state]
+        refute_equal original_updated_at.utc.to_s,
+          storage_apps.where(id: channel_id).first[:updated_at].utc.to_s
+      end
+    end
+  end
+
+  test "clears 'value' for all of a purged user's projects" do
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      refute_nil storage_apps.where(id: channel_id).first[:value]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        refute_nil app[:value]
+      end
+
+      purge_user student
+
+      assert_nil storage_apps.where(id: channel_id).first[:value]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_nil app[:value]
+      end
+    end
+  end
+
+  test "clears 'updated_ip' for all of a purged user's projects" do
+    student = create :student
+    with_channel_for student do |channel_id, storage_id|
+      refute_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        refute_empty app[:updated_ip]
+      end
+
+      purge_user student
+
+      assert_empty storage_apps.where(id: channel_id).first[:updated_ip]
+      storage_apps.where(storage_id: storage_id).each do |app|
+        assert_empty app[:updated_ip]
+      end
+    end
+  end
+
+  #
+  # Table: dashboard.featured_projects
+  #
+
+  test "unfeatures any featured projects owned by soft-deleted user" do
+    student = create :student
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: Time.now
+
+      assert featured_project.featured?
+
+      student.destroy
+
+      featured_project.reload
+      refute featured_project.featured?
+    end
+  end
+
+  test "unfeatures any featured projects owned by purged user" do
+    student = create :student
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: Time.now
+
+      assert featured_project.featured?
+
+      purge_user student
+
+      featured_project.reload
+      refute featured_project.featured?
+    end
+  end
+
+  test "does not change unfeature time on previously unfeatured projects" do
+    student = create :student
+    featured_time = Time.now - 20
+    unfeatured_time = Time.now - 10
+    with_channel_for student do |channel_id|
+      featured_project = create :featured_project,
+        storage_app_id: channel_id,
+        featured_at: featured_time,
+        unfeatured_at: unfeatured_time
+
+      refute featured_project.featured?
+      assert_equal unfeatured_time.utc.to_s,
+        featured_project.unfeatured_at.utc.to_s
+
+      student.destroy
+
+      featured_project.reload
+      refute featured_project.featured?
+      assert_equal unfeatured_time.utc.to_s,
+        featured_project.unfeatured_at.utc.to_s
+    end
+  end
+
+  #
+  # S3: cdo-v3-sources
+  # S3: cdo-v3-assets
+  # S3: cdo-v3-animations
+  # S3: cdo-v3-files
+  #
+  # Tested together because they've been built to support the same
+  # hard_delete_channel_content interface.
+  #
+
+  test "SourceBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents SourceBucket
+  end
+
+  test "AssetBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents AssetBucket
+  end
+
+  test "AnimationBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents AnimationBucket
+  end
+
+  test "FileBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents FileBucket
+  end
+
+  def assert_bucket_hard_deletes_contents(bucket)
+    # Here we are testing that for every one of the user's channels we
+    # ask the bucket to delete its contents.  To avoid interacting with S3
+    # in this test, we depend on the unit tests for the particular buckets to
+    # verify correct hard-delete behavior for that bucket.
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
+
+        bucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        bucket.any_instance.
+          expects(:hard_delete_channel_content).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  #
+  # Firebase
+  #
+
+  test "Firebase: deletes content for all of user's channels" do
+    student = create :student
+    with_channel_for student do |channel_id_a, _|
+      with_channel_for student do |channel_id_b, storage_id|
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
+
+        FirebaseHelper.
+          expects(:delete_channel).
+          with(storage_encrypt_channel_id(storage_id, channel_id_a))
+        FirebaseHelper.
+          expects(:delete_channel).
+          with(storage_encrypt_channel_id(storage_id, channel_id_b))
+
+        purge_user student
+      end
+    end
+  end
+
+  #
+  # Solr
+  #
+
+  test "Solr: deletes user document" do
+    student = create :student
+    mock_solr = mock
+    CDO.stubs(:solr_server).returns('fake-solr-configuration')
+    Solr::Server.expects(:new).with(host: 'fake-solr-configuration').returns(mock_solr)
+    SolrHelper.expects(:delete_document).with(mock_solr, 'user', student.id)
+
+    DeleteAccountsHelper.new.purge_user student
+  end
+
+  #
+  # Testing our utilities
+  #
+
+  test 'with_channel_for owns channel' do
+    student = create :student
+
+    with_storage_id_for student do |storage_id|
+      assert_empty storage_apps.where(storage_id: storage_id)
+
+      with_channel_for student do |channel_id|
+        assert_equal channel_id, storage_apps.where(storage_id: storage_id).first[:id]
+      end
+
+      assert_empty storage_apps.where(storage_id: storage_id)
+    end
+  end
+
+  test 'with_storage_id_for owns id if it does not exist' do
+    student = create :student
+
+    assert_empty user_storage_ids.where(user_id: student.id)
+
+    with_storage_id_for student do |storage_id|
+      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
+    end
+
+    assert_empty user_storage_ids.where(user_id: student.id)
+  end
+
+  test 'with_storage_id_for does not own id if it does exist' do
+    student = create :student
+    assert_empty user_storage_ids.where(user_id: student.id)
+
+    user_storage_ids.insert(user_id: student.id)
+
+    refute_empty user_storage_ids.where(user_id: student.id)
+
+    with_storage_id_for student do |storage_id|
+      assert_equal storage_id, user_storage_ids.where(user_id: student.id).first[:id]
+    end
+
+    refute_empty user_storage_ids.where(user_id: student.id)
+
+    user_storage_ids.where(user_id: student.id).delete
+    assert_empty user_storage_ids.where(user_id: student.id)
+  end
+
   private
+
+  def with_channel_for(owner)
+    channels_before = storage_apps.count
+    with_storage_id_for owner do |storage_id|
+      encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
+      _, id = storage_decrypt_channel_id encrypted_channel_id
+      yield id, storage_id
+    ensure
+      storage_apps.where(id: id).delete if id
+    end
+  ensure
+    assert_equal channels_before, storage_apps.count
+  end
+
+  def with_storage_id_for(user)
+    user_storage_ids_count_before = user_storage_ids.count
+    owns_storage_id = false
+
+    storage_id = user_storage_ids.where(user_id: user.id).first&.[](:id)
+    unless storage_id
+      storage_id = user_storage_ids.insert(user_id: user.id)
+      owns_storage_id = true
+    end
+
+    yield storage_id
+  ensure
+    user_storage_ids.where(id: storage_id).delete if owns_storage_id
+    assert_equal user_storage_ids_count_before, user_storage_ids.count
+  end
 
   #
   # Helper to make this specific set of tests more readable
@@ -748,7 +1354,125 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def purge_all_accounts_with_email(email)
-    SolrHelper.expects(:delete_document).at_least_once
+    SolrHelper.stubs(:delete_document)
     DeleteAccountsHelper.new(solr: {}).purge_all_accounts_with_email(email)
+  end
+
+  def assert_removes_field_from_forms(field, expect: :nil)
+    user = create :teacher
+    with_form(user: user) do |form_id|
+      initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
+      initial_expectation_msg = "Expected initial #{field} not to be #{expect}"
+      case expect
+      when :empty
+        refute_empty initial_value, initial_expectation_msg
+      when :nil
+        refute_nil initial_value, initial_expectation_msg
+      else
+        refute_equal expect, initial_value, initial_expectation_msg
+      end
+
+      purge_user user
+
+      cleared_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
+      result_expectation_msg = "Expected cleared #{field} to be #{expect} but was #{cleared_value.inspect}"
+      case expect
+      when :empty
+        assert_empty cleared_value, result_expectation_msg
+      when :nil
+        assert_nil cleared_value, result_expectation_msg
+      else
+        assert_equal expect, cleared_value, result_expectation_msg
+      end
+    end
+  end
+
+  def assert_removes_field_from_form_geos(field)
+    user = create :teacher
+    with_form_geo(user) do |form_geo_id|
+      initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
+      refute_nil initial_value,
+        "Expected initial #{field} not to be nil"
+
+      purge_user user
+
+      cleared_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
+      assert_nil cleared_value,
+        "Expected cleared #{field} to be nil but was #{cleared_value.inspect}"
+    end
+  end
+
+  #
+  # Adds a test row to pegasus.forms, removes it at the end of the block.
+  # Should provide either user or email as a param.
+  # @param [User] user - A user to be treated as the form submitter.  If provided,
+  #   email will be derived from user.
+  # @param [String] email - An email for the form submitter.
+  # @yields [Integer] The id for the created form.
+  #
+  def with_form(user: nil, email: nil)
+    use_name = user&.name || 'Fake Name'
+    use_email = user ? user.email : email
+    form_id = PEGASUS_DB[:forms].insert(
+      {
+        kind: 'DeleteAccountsHelperTestForm',
+        secret: SecureRandom.hex,
+        data: {
+          name: use_name,
+          email: use_email
+        }.to_json,
+        name: use_name,
+        email: use_email,
+        hashed_email: Digest::MD5.hexdigest(use_email),
+        created_at: DateTime.now,
+        updated_at: DateTime.now,
+        created_ip: '1.2.3.4',
+        updated_ip: '1.2.3.4',
+        user_id: user&.id,
+        processed_data: {
+          name: use_name
+        }.to_json,
+        processed_at: DateTime.now,
+      }
+    )
+    yield form_id
+  ensure
+    PEGASUS_DB[:forms].where(id: form_id).delete
+  end
+
+  #
+  # Adds a test row to pegasus.form_geos.
+  # @param [User] user to create an associated form.
+  # @yields [Integer] the id of the form_geos row.
+  #
+  def with_form_geo(user)
+    with_form(user: user) do |form_id|
+      form_geo_id = PEGASUS_DB[:form_geos].insert(
+        {
+          form_id: form_id,
+          created_at: DateTime.now,
+          updated_at: DateTime.now,
+          ip_address: '1.2.3.4',
+          # World's largest ball of twine!
+          city: 'Cawker City',
+          state: 'Kansas',
+          country: 'USA',
+          postal_code: '67430',
+          latitude: 39.509222,
+          longitude: -98.433800,
+        }
+      )
+      yield form_geo_id
+    ensure
+      PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
+    end
+  end
+
+  def storage_apps
+    PEGASUS_DB[:storage_apps]
+  end
+
+  def user_storage_ids
+    PEGASUS_DB[:user_storage_ids]
   end
 end

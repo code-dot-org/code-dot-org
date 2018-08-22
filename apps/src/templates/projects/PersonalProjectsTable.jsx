@@ -29,8 +29,8 @@ export const COLUMNS = {
   THUMBNAIL: 0,
   PROJECT_NAME: 1,
   APP_TYPE: 2,
-  LAST_PUBLISHED: 3,
-  LAST_FEATURED: 4,
+  LAST_EDITED: 3,
+  LAST_PUBLISHED: 4,
   ACTIONS: 5,
 };
 
@@ -121,20 +121,23 @@ class PersonalProjectsTable extends React.Component {
     canShare: PropTypes.bool.isRequired,
     // We're going to run an A/B experiment to compare (un)publishing from the
     // quick actions dropdown and from a button in the published column.
-    // TODO (Erin B.) delete this prop and the less effective variant when we
-    // determine the experiment outcome.
+    // TODO (Erin B.) delete this prop, userId prop (for logging),
+    // and the less effective variant when we determine the experiment outcome.
     publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
+    userId: PropTypes.number,
   };
 
   state = {
-    [COLUMNS.PROJECT_NAME]: {
-      direction: 'desc',
-      position: 0
+    sortingColumns: {
+      [COLUMNS.LAST_EDITED]: {
+        direction: 'desc',
+        position: 0
+      }
     }
   };
 
   publishedAtFormatter = (publishedAt, {rowData}) => {
-    const {canShare, publishMethod} = this.props;
+    const {canShare, publishMethod, userId} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
       (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
@@ -146,12 +149,13 @@ class PersonalProjectsTable extends React.Component {
         projectId={rowData.channel}
         projectType={rowData.type}
         publishMethod={publishMethod}
+        userId={userId}
       />
     );
   };
 
   actionsFormatter = (actions, {rowData}) => {
-    const {canShare, publishMethod} = this.props;
+    const {canShare, publishMethod, userId} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
       (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
@@ -165,6 +169,7 @@ class PersonalProjectsTable extends React.Component {
         projectType={rowData.type}
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
+        userId={userId}
       />
     );
   };
@@ -218,6 +223,7 @@ class PersonalProjectsTable extends React.Component {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCellName,
           }},
+          transforms: [sortable],
         },
         cell: {
           format: nameFormatter,

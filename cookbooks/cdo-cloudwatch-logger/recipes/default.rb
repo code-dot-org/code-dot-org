@@ -45,7 +45,9 @@ template(name="json_syslog" type="list") {
   constant(value="\\",\\"facility\\":\\"")   property(name="syslogfacility-text")
   constant(value="\\",\\"syslog-tag\\":\\"") property(name="syslogtag")
   constant(value="\\",\\"program\\":\\"")     property(name="programname")
+  constant(value="\\",")
   property(name="$!all-json" position.from="2")
+  constant(value="\\n")
 }
 
 module(load="builtin:ompipe")
@@ -54,5 +56,5 @@ RSYSLOG
 end
 
 service 'rsyslog' do
-  subscribes :restart, 'template[99-cdo.conf]', :delayed
+  subscribes :restart, 'file[99-cdo.conf]', :delayed
 end

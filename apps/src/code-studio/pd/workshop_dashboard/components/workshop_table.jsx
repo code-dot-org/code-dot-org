@@ -12,7 +12,6 @@ import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
-import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
   container: {
@@ -271,17 +270,20 @@ export default class WorkshopTable extends React.Component {
   };
 
   formatManagement = (manageData) => {
-    const {id, subject, state, date} = manageData;
+    const {id, course, subject, state, date} = manageData;
 
     return (
       <WorkshopManagement
         workshopId={id}
+        course={course}
         subject={subject}
         viewUrl={`/workshops/${id}`}
         date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
-        showSurveyUrl={state === 'Ended' || [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(subject)}
+        showSurveyUrl={state === 'Ended' || (
+          ['CS Discoveries', 'CS Principles'].includes(course) && subject !== 'Code.org Facilitator Weekend'
+        )}
       />
     );
   };
@@ -296,7 +298,7 @@ export default class WorkshopTable extends React.Component {
       row => _.merge(row, {
         enrollments: `${row.enrolled_teacher_count} / ${row.capacity}`,
         date: row.sessions[0].start,
-        manage: {id: row.id, subject: row.subject, state: row.state, date: row.sessions[0].start}
+        manage: {id: row.id, course: row.course, subject: row.subject, state: row.state, date: row.sessions[0].start}
       })
     );
 

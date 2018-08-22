@@ -108,31 +108,13 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def upgrade
-    return head(:bad_request) if params[:user].nil?
-    params_to_pass = params.deep_dup
-    # Set provider to nil to mark the account as self-managed
-    user_params = params_to_pass[:user].merge!({provider: nil})
+    return head(:bad_request) unless params[:user].present? && current_user&.can_create_personal_login?
+    user_params = params[:user]
     # User model normalizes and hashes email _after_ validation **rage**
     user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
-    can_update =
-      if current_user.can_create_personal_login?
-        if current_user.secret_word_account?
-          secret_words_match = user_params[:secret_words] == current_user.secret_words
-          unless secret_words_match
-            error_string = user_params[:secret_words].blank? ? :blank_plural : :invalid_plural
-            current_user.errors.add(:secret_words, error_string)
-          end
-          secret_words_match
-        else
-          true
-        end
-      else
-        false
-      end
-
-    successfully_updated = can_update && current_user.update(upgrade_params(params_to_pass))
+    successfully_updated = current_user.upgrade_to_personal_login(upgrade_params)
     has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
     success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
 
@@ -306,7 +288,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   # Accept only whitelisted params for update and upgrade.
-  def upgrade_params(params)
+  def upgrade_params
     params.require(:user).permit(
       :username,
       :parent_email,
@@ -314,7 +296,7 @@ class RegistrationsController < Devise::RegistrationsController
       :hashed_email,
       :password,
       :password_confirmation,
-      :provider
+      :secret_words,
     )
   end
 
