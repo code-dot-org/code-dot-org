@@ -23,6 +23,7 @@
 -contact_email_s ||= nil
 -contact_phone_s ||= nil
 -email_s ||= nil
+-email_preference_optin_s ||= nil
 -form ||= nil
 
 -#
@@ -159,8 +160,8 @@
       %div
         %select#email-preference.form-control{name: "email_preference_optin_s", type: "select", required: true}
           %option{value: "", selected: true, disabled: true}
-          %option{value: "yes"} Yes
-          %option{value: "no"} No
+          %option{value: "yes", selected: email_preference_optin_s == "yes"} Yes
+          %option{value: "no", selected: email_preference_optin_s == "no"} No
 
   -if mode == 'review'
     .form-group
