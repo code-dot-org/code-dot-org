@@ -11,6 +11,10 @@ require 'ostruct'
 # teardown is easier to do through our actual API, and we want to use VCR
 # to actually test S3 operations.
 #
+# The cdo-v3-sources bucket is versioned, but only ever contains a main.json
+# file, so some of the operations other buckets do across multiple files don't
+# apply here.
+#
 class SourceBucketTest < FilesApiTestBase
   def setup
     @source_bucket = SourceBucket.new

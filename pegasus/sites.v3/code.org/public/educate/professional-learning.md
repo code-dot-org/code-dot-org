@@ -20,7 +20,7 @@ theme: responsive
 
 ## New to computer science? No worries.
 
-Code.org offers hands-on workshops and online support at no charge. Over 72,000 teachers have been through the workshops and thousands more attend every month. Whether you're brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our professional learning program is a great way to get started.
+Code.org offers hands-on workshops and online support at no charge. Over 80,000 teachers have been through the workshops and thousands more attend every month. Whether you're brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our professional learning program is a great way to get started.
 
 ## Professional Learning Program Offerings
 Select the grade level below to learn more about our programs. Have questions about which program is for you? Learn more about [implementation options](/files/PL-Program-for-Me.pdf) or contact us at [teacher@code.org](mailto: teacher@code.org):
@@ -101,7 +101,7 @@ You can also contact our [international partners](https://hourofcode.com/interna
 
 <br/>
 ## Attendees love our professional learning!
-72,000 teachers have participated.
+80,000 teachers have participated.
 98% of attendees would recommend our program to another teacher.
 The majority of our workshop attendees rank it the **best professional development ever.**
 

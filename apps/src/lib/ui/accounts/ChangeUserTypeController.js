@@ -30,10 +30,9 @@ export default class ChangeUserTypeController {
    *   children of that form element.
    * @param {!string} initialUserType
    */
-  constructor(form, initialUserType, hashedEmails) {
+  constructor(form, initialUserType) {
     this.form = form;
     this.initialUserType = initialUserType;
-    this.hashedEmails = hashedEmails;
     this.dropdown = form.find('#change-user-type_user_user_type');
     this.button = form.find('#change-user-type-button');
     this.status = form.find('#change-user-type-status');
@@ -95,7 +94,6 @@ export default class ChangeUserTypeController {
     document.body.appendChild(this.mountPoint);
     ReactDOM.render(
       <ChangeUserTypeModal
-        currentHashedEmails={this.hashedEmails}
         handleSubmit={handleSubmit}
         handleCancel={this.hideChangeUserTypeModal}
       />,
@@ -113,12 +111,12 @@ export default class ChangeUserTypeController {
 
   /**
    * Submit a user type change using the Rails-generated async form.
-   * @param {string} currentEmail
+   * @param {string} email
    * @param {''|'yes'|'no'} emailOptIn
    * @return {Promise} which may reject with an error or object containing
    *   serverErrors.
    */
-  submitUserTypeChange({currentEmail, emailOptIn}) {
+  submitUserTypeChange({email, emailOptIn}) {
     return new Promise((resolve, reject) => {
       const onSuccess = () => {
         detachHandlers();
@@ -131,9 +129,12 @@ export default class ChangeUserTypeController {
         if (validationErrors) {
           error = {
             serverErrors: {
-              currentEmail:
+              email:
                 (validationErrors.email && validationErrors.email[0]) ||
-                (validationErrors.current_password && i18n.changeUserTypeModal_currentEmail_mustMatch()),
+                // TODO: (madelynkasula) The line below can be deleted once all users have been migrated.
+                // We no longer have the requirement that the given email address must match an existing
+                // email address upon changing user type.
+                (validationErrors.current_password && i18n.changeUserTypeModal_email_mustMatch()),
             }
           };
         } else {
@@ -151,7 +152,7 @@ export default class ChangeUserTypeController {
       };
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
-      this.form.find('#change-user-type_user_email').val(currentEmail);
+      this.form.find('#change-user-type_user_email').val(email);
       this.form.find('#change-user-type_user_email_preference_opt_in').val(emailOptIn);
       this.form.submit();
     });

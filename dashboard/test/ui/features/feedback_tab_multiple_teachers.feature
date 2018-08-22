@@ -13,7 +13,7 @@ Background:
 # so submit button remains disabled
 Scenario: With dev flag, student sees feedback from multiple teachers, when available
   #As teacher, not reviewing work, don't see feedback tab
-  Then I sign in as "First_Teacher"
+  Then I sign out and sign in as "First_Teacher"
   Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7"
 
   #As teacher1, reviewing work, submit feedback
@@ -25,7 +25,7 @@ Scenario: With dev flag, student sees feedback from multiple teachers, when avai
   And I press "#ui-test-submit-feedback" using jQuery
 
   #As teacher2, reviewing work, submit feedback
-  Then I sign in as "Second_Teacher"
+  Then I sign out and sign in as "Second_Teacher"
   Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7"
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
