@@ -102,11 +102,11 @@ class PersonalProjectsTableActionsCell extends Component {
         {!isEditing  &&
           <QuickActionsCell
             experimentDetails={{
-              group: experimentGroup,
-              event: 'chevron',
               study: 'project-publish',
-              userId: userId,
-              projectId: projectId,
+              study_group: experimentGroup,
+              event: 'chevron',
+              user_id: userId,
+              data_json: JSON.stringify({ channel_id: projectId }),
             }}
           >
             <PopUpMenu.Item
