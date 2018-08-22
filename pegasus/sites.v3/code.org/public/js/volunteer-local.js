@@ -1,4 +1,4 @@
-/* global google, Maplace */
+/* global Maplace */
 
 var gmap;
 var gmap_loc;
@@ -13,7 +13,7 @@ $(function () {
   selectize = $('#volunteer-search-facets select').selectize();
 
   $("#location").geocomplete()
-    .bind("geocode:result", function (event, result){
+    .bind("geocode:result", function (event, result) {
       var loc = result.geometry.location;
       gmap_loc = loc.lat() + ',' + loc.lng();
       resetFacets();
@@ -34,20 +34,6 @@ function initializeMap() {
 
   var params = getParams(form_data);
   sendQuery(params);
-}
-
-function getLatLng(address) {
-  var geocoder = new google.maps.Geocoder();
-
-  geocoder.geocode({'address': address}, function (results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      var loc;
-      loc = results[0].geometry.location;
-      gmap_loc = loc.d + ',' + loc.e;
-    } else {
-      displayQueryError();
-    }
-  });
 }
 
 function getParams(form_data) {
@@ -103,10 +89,8 @@ function getParams(form_data) {
 
 function sendQuery(params) {
   $.post('/forms/VolunteerEngineerSubmission2015/query', $.param(params), function (response) {
-    var results = JSON.parse(response); // Convert the JSON string to a JavaScript object.
-    var locations = getLocations(results);
+    var locations = getLocations(response);
     updateResults(locations);
-    updateFacets(results);
   }).fail(displayQueryError);
 }
 
@@ -160,10 +144,6 @@ function resetFacets() {
     select.selectize.clear();
     select.selectize.refreshOptions(false);
   });
-}
-
-function updateFacets(results) {
-  var facet_fields = results.facet_counts.facet_fields;
 }
 
 function displayNoResults() {
@@ -283,6 +263,7 @@ function setContactTrigger(index, location, marker) {
   });
 }
 
+/* eslint-disable no-unused-vars */
 function contactVolunteer() {
   $('#name').show();
   $('#volunteer-contact').show();
@@ -292,45 +273,7 @@ function contactVolunteer() {
 
   return false;
 }
-
-function processResponse(data) {
-  $('#error-message').hide();
-  $('#success-message').show();
-}
-
-function processError(data) {
-  $('.has-error').removeClass('has-error');
-
-  var errors = Object.keys(data.responseJSON);
-  var errors_count = errors.length;
-
-  for (var i = 0; i < errors_count; ++i) {
-    var error_id = '#volunteer-contact-' + errors[i].replace(/_/g, '-');
-    error_id = error_id.replace(/-[sb]s?$/, '');
-    $(error_id).parents('.form-group').addClass('has-error');
-  }
-
-  var error = '<font color="#a94442">An error occurred. All fields are required. Please check that all fields have been filled out properly.</font>';
-  $('#error-message').html(error).hide().fadeTo("normal", 1);
-  $('#success-message').hide();
-}
-
-function sendEmail(data) {
-  var typeTaskSelected = $('#volunteer-type-task input:checked').length > 0;
-  if (typeTaskSelected) {
-    $.ajax({
-      url: "/forms/VolunteerContact2015",
-      type: "post",
-      dataType: "json",
-      data: $('#contact-volunteer-form').serialize()
-    }).done(processResponse).fail(processError);
-  } else {
-    var error = '<font color="#a94442">Please select at least one way for the volunteer to help.</font>';
-    $('#error-message').html(error).show();
-  }
-
-  return false;
-}
+/* eslint-enable no-unused-vars */
 
 function adjustScroll(destination) {
   $('html, body').animate({

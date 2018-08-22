@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import {showPublishDialog} from './publishDialog/publishDialogRedux';
 import {unpublishProject} from './projectsRedux';
 import {publishMethods} from './projectConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 class PersonalProjectsPublishedCell extends Component {
   static propTypes = {
@@ -16,13 +17,32 @@ class PersonalProjectsPublishedCell extends Component {
     publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
     showPublishDialog: PropTypes.func.isRequired,
     unpublishProject: PropTypes.func.isRequired,
+    userId: PropTypes.number,
   };
 
   onPublish = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'project-publish',
+        study_group: 'publish-button',
+        event: 'publish',
+        user_id: this.props.userId,
+        data_json: JSON.stringify({ channel_id: this.props.projectId })
+      }
+    );
     this.props.showPublishDialog(this.props.projectId, this.props.projectType);
   };
 
   onUnpublish = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'project-publish',
+        study_group: 'publish-button',
+        event: 'unpublish',
+        user_id: this.props.userId,
+        data_json: JSON.stringify({ channel_id: this.props.projectId })
+      }
+    );
     this.props.unpublishProject(this.props.projectId);
   };
 
