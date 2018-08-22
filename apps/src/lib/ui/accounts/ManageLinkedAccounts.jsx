@@ -64,14 +64,10 @@ class ManageLinkedAccounts extends React.Component {
 
   // Given an array of authentication options, returns a boolean indicating whether or not the user can log in
   userHasLoginOption = (authOptions) => {
-    // It's the user's last authentication option
-    if (authOptions.length === 0) {
-      return false;
-    }
-
-    // If the user's only authentication options are email addresses, a password is required for login
+    // If it's the user's last authentication option or all of the user's authentication options are email addresses,
+    // a password is required to log in
     const allEmailOptions = _.every(authOptions, ['credentialType', 'email']);
-    if (allEmailOptions) {
+    if (authOptions.length === 0 || allEmailOptions) {
       return this.props.userHasPassword;
     }
 
