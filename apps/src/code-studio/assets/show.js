@@ -26,7 +26,12 @@ module.exports = function showAssetManager(assetChosen, typeFilter, onClose, opt
   var dialog = new Dialog({
     body: codeDiv,
     id: 'manageAssetsModal',
-    onHidden: () => {sounds.stopAllAudio(); onClose();}
+    onHidden: () => {
+      sounds.stopAllAudio();
+      if (onClose) {
+        onClose();
+      }
+    }
   });
 
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
