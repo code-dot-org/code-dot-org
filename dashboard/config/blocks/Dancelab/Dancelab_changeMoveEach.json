@@ -1,0 +1,67 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "changeMoveEach",
+    "blockText": "change {GROUP} dance move to {MOVE}",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "Alien",
+            "\"alien\""
+          ],
+          [
+            "MrWiggles",
+            "\"mrwiggles\""
+          ],
+          [
+            "Pizza",
+            "\"pizza\""
+          ],
+          [
+            "Unicorn",
+            "\"unicorn\""
+          ]
+        ]
+      },
+      {
+        "name": "MOVE",
+        "options": [
+          [
+            "Rest",
+            "0"
+          ],
+          [
+            "Breakdown",
+            "1"
+          ],
+          [
+            "Floss",
+            "2"
+          ],
+          [
+            "Fresh",
+            "3"
+          ],
+          [
+            "Next",
+            "\"next\""
+          ],
+          [
+            "Previous",
+            "\"prev\""
+          ],
+          [
+            "Random",
+            "\"rand\""
+          ]
+        ]
+      }
+    ]
+  }
+}

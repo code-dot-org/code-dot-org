@@ -412,7 +412,7 @@ he:
         
         זה קוד של צורה מיוחדת. מה קורה אם תחזור על זה מספר פעמים, עם פניה בכל פעם? שים לב שסך כל הזוויות מסתכמות ל420 מעלות, זאת אומרת שכשהאמן מסיים לצייר, הוא יפנה בכיוון אחר מזה שבו הוא התחיל. הכיוון הזה הוא בדיוק 60 מעלות ימינה מהמקום שבו התחלת.
       Course 4 Artist 12_instruction: |-
-        רוצה הזדמנות שנייה על העיצוב המנחה או ברמזים? לחץ כאן!
+        רוצה הזדמנות שנייה להציץ בעיצוב המנחה או ברמזים? לחץ כאן!
         
         אחרת, בצע את העיצוב כולו לבדך!
       Course 4 Artist 13_instruction: עדיין משחק? הנה קנבס ריק בו תוכל לצייר כל מה שבא לך!
@@ -424,7 +424,7 @@ he:
       Course 4 Artist Functions Inspiration_instruction: לחץ כאן כדי לראות שוב את הרמזים.
       Course 4 Artist Functions challenge_instruction: לחץ כאן כדי לראות שוב את הרמזים.
       Course 4 Artist Inspire_instruction: |-
-        רוצה הזדמנות שנייה על העיצוב המנחה או ברמזים? לחץ כאן!
+        רוצה הזדמנות שנייה להציץ בעיצוב המנחה או ברמזים? לחץ כאן!
         
         אחרת, בצע את העיצוב כולו לבדך!
       Course 4 Bee Params 5_instruction: 'בוא נתחיל מהתחלה: האם תוכל ליצור מתודה חדשה שנקראת "תביא 5 נקטר" שמקבלת את הכיוון כפרמטר?'
@@ -533,6 +533,7 @@ he:
       courseA_maze_seq_challenge2_2018_instruction: עקוב אחרי הנתיב והובל אותי אל החזיר. היזהר מ-TNT (חומר נפץ) או שנוצות יעופו לכל עבר!
       courseB_Scrat_ramp3b_2018_instruction: "גרור את הבלוק העודף בחזרה אל תיבת הכלים כדי להיפטר ממנו.\n\n"
       courseB_iceage_loops1_instruction: עזור לסקראט הסנאי לחצות את הקרח כדי להגיע לבלוט!
+      courseB_iceage_loops2_instruction: השתמש בשני בלוקים שונים של תזוזה כדי להגיע אל הבלוט!
       courseC_artist_prog5_instruction: |-
         הבית הזה זקוק לגג! צייר את המשולש. רמז:
         כל שלוש הצלעות באותו אורך.
@@ -606,6 +607,8 @@ he:
       courseD_farmer_until_challenge2_instruction: השתמש בבלוקים מסוג אם/אחרת כדי ללכת בדרך המפותלת. בכל פינה, השתמש בפקודה 'הסר 1' בלולאה כדי לנקות את המערומים.
       courseD_farmer_until_challenge2_2018_instruction: השתמש בבלוקים מסוג אם/אחרת כדי ללכת בדרך המפותלת. בכל פינה, השתמש בפקודה 'הסר 1' בלולאה כדי לנקות את המערומים.
       courseD_iceage_loops1_instruction: עזור לסקראט הסנאי לחצות את הקרח כדי להגיע לבלוט!
+      courseD_iceage_loops2_instruction: השתמש בבלוק 'פנה שמאלה' כדי להגיע אל הבלוט!
+      courseD_iceage_loops3_instruction: האם תוכל להגיע אל הבלוט רק בעזרת בלוק אחד של 'זוז קדימה'?
       courseD_maze_nestedLoops4_instruction: 'הבא אותי אל החמניה!'
       courseD_maze_nestedLoops4_2018_instruction: 'הבא אותי אל החמניה!'
       courseD_maze_nestedLoops6_instruction: הבא אותי אל החמניה!
@@ -852,9 +855,10 @@ he:
       grade5_artist_binary7_instruction: על איזה רצף בינארי קטן ביותר ניתן לחזור כדי לצייר תמונה זו?
       grade5_artist_binary8_instruction: השלם את הציור.
       grade5_artist_variables_freeplay15_instruction: |-
-        רוצה הזדמנות שנייה על העיצוב המנחה או ברמזים? לחץ כאן!
+        רוצה הזדמנות שנייה להציץ בעיצוב המנחה או ברמזים? לחץ כאן!
         
         אחרת, בצע את העיצוב כולו לבדך!
+      iceAgeLoopsforVideo_instruction: האם תוכל להגיע אל הבלוט רק בעזרת בלוק אחד של 'זוז קדימה'?
       level 'grade3_Loops_10_instruction: |-
         השתמש בלולאה דומה לזו מהתרגיל הקודם, 
         הוסף לה פנייה.

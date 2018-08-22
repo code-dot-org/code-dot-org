@@ -11,7 +11,7 @@
   "collectorCollectedSome": "เยี่ยมมาก! คุณได้เก็บสิ่งของ {count} ชิ้นแล้ว!",
   "collectorCollectedNotEnough": "เขียนโค้ดต่อไป! คุณต้องรวบรวมวัตถุให้ได้อย่างน้อย {goal, plural, one {1 ชิ้น} other {# ชิ้น}}",
   "collectorCollectedTooMany": "ไม่มีสมบัติพอให้ฉันเก็บ",
-  "collectorTooManyBlocks": "คุณสามารถใช้ได้แค่ {blockLimit} บล็อกเท่านั้น ตรวจเช็คโค้ดของคุณแล้วลองอีกครั้ง!",
+  "collectorTooManyBlocks": "คุณสามารถใช้ได้แค่บล็อก {blockLimit} เท่านั้น ตรวจเช็คโค้ดของคุณดู แล้วลองอีกครั้ง!",
   "continue": "ไปต่อ",
   "corn": "ข้าวโพด",
   "cornTooltip": "เก็บเกี่ยวข้าวโพด",

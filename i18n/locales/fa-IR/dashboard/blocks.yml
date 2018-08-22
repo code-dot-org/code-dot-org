@@ -1,0 +1,157 @@
+fa:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': بعدي
+            '"prev"': قبلی
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': بعدي
+            '"prev"': قبلی
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': سمت راست
+            '"left"': سمت چپ
+      Dancelab_randomColor:
+        text: رنگ تصادفی
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'صحیح'
+            'false': 'غلط'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": در هم
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': سمت راست
+            '"left"': سمت چپ
+      gamelab_randColor:
+        text: رنگ تصادفی
+      gamelab_randomColor:
+        text: رنگ تصادفی
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': در هم
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': سمت راست
+            '"left"': سمت چپ
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": بالا
+            "'down'": پایین
+            "'left'": سمت چپ
+            "'right'": سمت راست
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      Vanilla_randomColor:
+        text: رنگ تصادفی

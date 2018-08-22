@@ -51,7 +51,9 @@ class AccountPurger
 
   private def really_purge_data_for_account(user)
     ActiveRecord::Base.transaction do
-      DeleteAccountsHelper.new.purge_user user
+      PEGASUS_DB.transaction do
+        DeleteAccountsHelper.new.purge_user user
+      end
     end
   end
 end

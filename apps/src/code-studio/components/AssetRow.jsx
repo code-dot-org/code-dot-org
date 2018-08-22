@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
+import i18n from '@cdo/locale';
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -13,7 +14,8 @@ export default class AssetRow extends React.Component {
     size: PropTypes.number,
     useFilesApi: PropTypes.bool.isRequired,
     onChoose: PropTypes.func,
-    onDelete: PropTypes.func.isRequired
+    onDelete: PropTypes.func.isRequired,
+    soundPlayer: PropTypes.object
   };
 
   state = {
@@ -45,7 +47,7 @@ export default class AssetRow extends React.Component {
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     api.deleteFile(this.props.name, this.props.onDelete, () => {
       this.setState({action: 'confirming delete',
-          actionText: 'Error deleting file.'});
+        actionText: i18n.errorDeleting()});
     });
   };
 
@@ -53,30 +55,20 @@ export default class AssetRow extends React.Component {
     let actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
-      flex = <button onClick={this.props.onChoose}>Choose</button>;
+      flex = <button onClick={this.props.onChoose}>{i18n.choose()}</button>;
     } else {
       const size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';
     }
 
-    const api = this.props.useFilesApi ? filesApi : assetsApi;
-    const src = api.basePath(this.props.name);
     switch (this.state.action) {
       case 'normal':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <a
-              href={src}
-              target="_blank"
-              style={{backgroundColor: 'transparent'}}
-            >
-              <button><i className="fa fa-eye"></i></button>
-            </a>
             <button className="btn-danger" onClick={this.confirmDelete}>
-              <i className="fa fa-trash-o"></i>
+              <i className="fa fa-trash-o"/>
             </button>
-            {this.state.actionText}
           </td>
         );
         break;
@@ -100,7 +92,7 @@ export default class AssetRow extends React.Component {
                 fontSize: '32px',
                 marginRight: '15px'
               }}
-            ></i>
+            />
           </td>
         );
         break;
@@ -114,6 +106,7 @@ export default class AssetRow extends React.Component {
             name={this.props.name}
             timestamp={this.props.timestamp}
             useFilesApi={this.props.useFilesApi}
+            soundPlayer={this.props.soundPlayer}
           />
         </td>
         <td>{this.props.name}</td>
