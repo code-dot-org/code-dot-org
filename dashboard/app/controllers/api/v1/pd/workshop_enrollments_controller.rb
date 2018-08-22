@@ -1,11 +1,9 @@
 class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   include Api::CsvDownload
   include ::Pd::WorkshopConstants
-  load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel']
+  load_and_authorize_resource :workshop, class: 'Pd::Workshop', except: ['create', 'cancel', 'confirm_join_session']
 
   load_and_authorize_resource :session, class: 'Pd::Session', find_by: :code, id_param: :session_code,
-    only: [:confirm_join_session]
-  load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
     only: [:confirm_join_session]
 
   RESPONSE_MESSAGES = {
@@ -178,10 +176,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   # Gets the workshop enrollment associated with the current user id or email if one exists.
   # Otherwise returns a new enrollment for that user.
   def get_workshop_user_enrollment
-    @workshop.enrollments.where(
+    @session.workshop.enrollments.where(
       'user_id = ? OR email = ?', current_user.id, current_user.email
     ).first || Pd::Enrollment.new(
-      pd_workshop_id: @workshop.id,
+      pd_workshop_id: @session.pd_workshop_id,
       user_id: current_user.id,
       full_name: current_user.name,
       email: current_user.email
