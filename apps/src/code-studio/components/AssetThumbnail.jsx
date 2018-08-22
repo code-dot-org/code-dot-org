@@ -103,10 +103,10 @@ class AssetThumbnail extends React.Component {
     } = this.props;
 
     return (
-      <div>
+      <div className="assetThumbnail">
         {type === 'audio' ?
           <AudioThumbnail clickSoundControl={this.clickSoundControl} isPlaying={this.state.isPlayingAudio}/> :
-          <div className="assetThumbnail" style={[styles.wrapper, style, styles.background]}>
+          <div style={[styles.wrapper, style, styles.background]}>
             {type === 'image' ?
               <ImageThumbnail src={this.srcPath}/> :
               <DefaultThumbnail type={type} iconStyle={iconStyle}/>
@@ -148,7 +148,7 @@ const ImageThumbnail = Radium(class extends React.Component {
         href={this.props.src}
         target="_blank"
       >
-        <img src={this.props.src} style={assetThumbnailStyle}/>
+        <img src={this.props.src} style={assetThumbnailStyle} id="ui-image-thumbnail"/>
       </a>
     );
   }
