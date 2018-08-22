@@ -17,6 +17,7 @@ import {
   importableScreenShape,
   importableProjectShape
 } from './import';
+import Sounds from "../Sounds";
 
 const SCALE = 0.1;
 const MARGIN = 10;
@@ -98,10 +99,11 @@ class AssetListItemUnwrapped extends React.Component {
   static propTypes = {
     asset: importableAssetShape,
     projectId: PropTypes.string,
+    soundPlayer: PropTypes.object
   };
 
   render() {
-    const {asset, projectId} = this.props;
+    const {asset, projectId, soundPlayer} = this.props;
     return (
       <div style={styles.assetListItem}>
         <AssetThumbnail
@@ -110,6 +112,7 @@ class AssetListItemUnwrapped extends React.Component {
           iconStyle={styles.assetThumbnailIcon}
           style={styles.assetThumbnail}
           projectId={projectId}
+          soundPlayer={soundPlayer}
         />
         <div style={[styles.assetListItemText, styles.subtext]}>
           {asset.filename}
@@ -186,6 +189,10 @@ export class ImportScreensDialog extends React.Component {
     selectedAssets: [],
   };
 
+  componentDidMount() {
+    this.sounds = new Sounds();
+  }
+
   render() {
     if (!this.props.project) {
       return null;
@@ -217,6 +224,7 @@ export class ImportScreensDialog extends React.Component {
     return (
       <Dialog
         title={`Import from Project: ${this.props.project.name}`}
+        soundPlayer={this.sounds}
         {...this.props}
       >
         <Body>
@@ -245,6 +253,7 @@ export class ImportScreensDialog extends React.Component {
              >
                <AssetListItem
                  projectId={this.props.project.id}
+                 soundPlayer={this.sounds}
                />
              </MultiCheckboxSelector>}
             {nonImportableScreens.length > 0 &&
