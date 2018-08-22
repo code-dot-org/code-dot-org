@@ -62,6 +62,7 @@ class ManageLinkedAccounts extends React.Component {
     return authOption.credentialType === OAUTH_PROVIDERS.CLEVER && this.props.isCleverStudent;
   };
 
+  // Given an array of authentication options, returns a boolean indicating whether or not the user can log in
   userHasLoginOption = (authOptions) => {
     // It's the user's last authentication option
     if (authOptions.length === 0) {
