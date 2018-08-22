@@ -17,7 +17,7 @@ const styles = {
  * A component for displaying our level instructions text, and possibly also
  * authored hints UI and/or an anigif. These instructions can appear in the top
  * pane or in a modal dialog. In the latter case, we will sometimes show just
- * the hints or just the anigif (in this case instructions/markdown
+ * the hints or just the anigif (in this case instructions/longInstructions
  * props will be undefined).
  */
 class Instructions extends React.Component {
@@ -25,7 +25,7 @@ class Instructions extends React.Component {
     puzzleTitle: PropTypes.string,
     shortInstructions: PropTypes.string,
     instructions2: PropTypes.string,
-    markdown: PropTypes.string,
+    longInstructions: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(
@@ -48,16 +48,16 @@ class Instructions extends React.Component {
     // substituteInstructionImages
     return (
       <div style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}>
-        {this.props.markdown &&
+        {this.props.longInstructions &&
           <MarkdownInstructions
-            markdown={this.props.markdown}
+            markdown={this.props.longInstructions}
             onResize={this.props.onResize}
             inTopPane={this.props.inTopPane}
           />
         }
         { /* Note: In this case props.shortInstructions might be undefined, but we
           still want to render NonMarkdownInstructions to get the puzzle title */
-        !this.props.markdown &&
+        !this.props.longInstructions &&
           <NonMarkdownInstructions
             puzzleTitle={this.props.puzzleTitle}
             shortInstructions={this.props.shortInstructions}

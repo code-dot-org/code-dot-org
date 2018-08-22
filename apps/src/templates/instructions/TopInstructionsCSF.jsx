@@ -653,7 +653,7 @@ class TopInstructions extends React.Component {
             <ChatBubble ttsUrl={ttsUrl}>
               <Instructions
                 ref={(c) => { this.instructions = c; }}
-                markdown={markdown}
+                longInstructions={markdown}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                 imgURL={this.props.aniGifURL}
