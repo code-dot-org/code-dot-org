@@ -5,11 +5,12 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     @organizer = create :workshop_organizer
     @program_manager = create :program_manager
     @facilitator = create :facilitator
+    @teacher = create :teacher
 
     @organizer_workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator]
     @organizer_workshop_enrollment = create :pd_enrollment, workshop: @organizer_workshop
 
-    @workshop = create :pd_workshop, organizer: @program_manager, facilitators: [@facilitator]
+    @workshop = create :pd_workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
     @enrollment = create :pd_enrollment, workshop: @workshop
 
     @unrelated_workshop = create :pd_workshop
@@ -32,6 +33,11 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_routing(
       {method: :delete, path: "/api/v1/pd/enrollments/#{@enrollment.code}"},
       {controller: CONTROLLER_PATH, action: 'cancel', enrollment_code: @enrollment.code.to_s}
+    )
+
+    assert_routing(
+      {method: :post, path: "/api/v1/pd/attend/#{@workshop.sessions.first.code}/join"},
+      {controller: CONTROLLER_PATH, action: 'confirm_join_session', session_code: @workshop.sessions.first.code.to_s}
     )
   end
 
@@ -203,5 +209,95 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       delete :cancel, params: {enrollment_code: @enrollment.code}
       assert_response :success
     end
+  end
+
+  test 'confirm_join_session' do
+    @workshop.start!
+    sign_in @teacher
+
+    assert_creates Pd::Enrollment do
+      post :confirm_join_session,
+        params: {
+          session_code: @workshop.sessions.first.code,
+          school_info: school_info_params
+        }.merge(enrollment_test_params(@teacher))
+
+      assert_response :success
+      assert_equal "success", JSON.parse(@response.body)["workshop_enrollment_status"]
+    end
+  end
+
+  test 'confirm_join_session upgrades student account if emails match' do
+    @workshop.start!
+    email = 'accidental_student@example.net'
+    student = create :student, email: email
+    sign_in student
+
+    assert_creates Pd::Enrollment do
+      post :confirm_join_session,
+        params: enrollment_test_params(student).merge(
+          {
+            session_code: @workshop.sessions.first.code,
+            school_info: school_info_params,
+            email: email
+          }
+        )
+      assert_response :success
+      assert_equal "success", JSON.parse(@response.body)["workshop_enrollment_status"]
+    end
+
+    assert student.reload.teacher?
+  end
+
+  test 'confirm_join_session redirects student to upgrade account if emails dont match' do
+    @workshop.start!
+    email = 'mismatch@example.net'
+    student = create :student, email: 'accidental_student@example.net'
+    sign_in student
+
+    assert_creates Pd::Enrollment do
+      post :confirm_join_session,
+        params: enrollment_test_params(student).merge(
+          {
+            session_code: @workshop.sessions.first.code,
+            school_info: school_info_params,
+            email: email
+          }
+        )
+
+      assert_response :success
+      assert_equal "upgrade", JSON.parse(@response.body)["workshop_enrollment_status"]
+    end
+
+    # Still a student
+    assert student.reload.student?
+  end
+
+  private
+
+  def enrollment_test_params(teacher = nil)
+    if teacher
+      first_name, last_name = teacher.name.split(' ', 2)
+      email = teacher.email
+    else
+      first_name = "Teacher#{SecureRandom.hex(4)}"
+      last_name = 'Codeberg'
+      email = "#{first_name}@example.net".downcase
+    end
+    {
+      first_name: first_name,
+      last_name: last_name,
+      email: email,
+      email_confirmation: email
+    }
+  end
+
+  def school_info_params
+    {
+      school_type: 'private',
+      school_state: 'WA',
+      school_name: 'A Seattle private school',
+      school_zip: '98102'
+    }
   end
 end
