@@ -7,7 +7,9 @@ function setProp(sprite,  property, val) {
   }
   else if (property=="costume") {
    	sprite.setAnimation(val);
+  } else if (property=="tint" && typeof(val)=="number") {
+    sprite.tint = "hsb(" + (Math.round(val) % 360) + ", 100%, 100%)";
   } else {
-  sprite[property]=val;
+  	sprite[property]=val;
   }
 }

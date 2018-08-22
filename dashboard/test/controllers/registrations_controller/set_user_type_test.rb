@@ -273,31 +273,34 @@ module RegistrationsControllerTests
       assert_equal "0", preference.form_kind
     end
 
-    test "converting migrated student to teacher fails when email doesn't match" do
-      test_email = 'example@email.com'
+    test "converting migrated student to teacher succeeds when given new email" do
+      new_email = 'new_email@example.com'
       student = create :student, :multi_auth_migrated
-      create :authentication_option, user: student, email: test_email
-      original_hashed_email = student.hashed_email
+      create :authentication_option, user: student, email: 'example@email.com'
       sign_in student
 
       patch '/users/user_type', as: :json, params: {
         user: {
           user_type: 'teacher',
-          email: 'wrong_email@example.com',
-          hashed_email: student.hashed_email
+          email: new_email,
+          email_preference_opt_in: 'yes'
         }
       }
-      assert_response :unprocessable_entity
+      assert_response :success
 
       student.reload
-      assert_equal 'student', student.user_type
-      assert_empty student.email
-      assert_equal original_hashed_email, student.hashed_email
+      assert_equal 'teacher', student.user_type
+      assert_equal new_email, student.email
 
-      refute EmailPreference.find_by_email(test_email)
+      preference = EmailPreference.find_by_email(new_email)
+      refute_nil preference
+      assert preference.opt_in
+      assert_equal request.ip, preference.ip_address
+      assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, preference.source
+      assert_equal "0", preference.form_kind
     end
 
-    test "converting migrated student to teacher doesn't cause email opt-in when email doesn't match" do
+    test "converting migrated student to teacher doesn't cause email opt-in when email isn't provided" do
       test_email = 'example@email.com'
       student = create :student, :multi_auth_migrated
       create :authentication_option, user: student, email: test_email
@@ -306,7 +309,7 @@ module RegistrationsControllerTests
       patch '/users/user_type', as: :json, params: {
         user: {
           user_type: 'teacher',
-          email: 'wrong_email@example.com',
+          email: '',
           hashed_email: student.hashed_email,
           email_preference_opt_in: 'yes'
         }

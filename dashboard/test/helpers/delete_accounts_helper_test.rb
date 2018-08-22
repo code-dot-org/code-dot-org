@@ -19,20 +19,18 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
-  setup_all do
-    store_initial_pegasus_table_sizes %i{contacts forms form_geos}
+  def run(*_args, &_block)
+    PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) {super}
   end
 
   setup do
     # Skip real S3 operations in this test
     AWS::S3.stubs(:create_client)
-    [SourceBucket, AssetBucket].each do |bucket|
+    [SourceBucket, AssetBucket, AnimationBucket, FileBucket].each do |bucket|
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
-  end
-
-  teardown_all do
-    check_final_pegasus_table_sizes
+    # Skip real Firebase operations
+    FirebaseHelper.stubs(:delete_channel)
   end
 
   test 'sets purged_at' do
@@ -1173,20 +1171,44 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # S3: cdo-v3-sources
+  # S3: cdo-v3-assets
+  # S3: cdo-v3-animations
+  # S3: cdo-v3-files
+  #
+  # Tested together because they've been built to support the same
+  # hard_delete_channel_content interface.
   #
 
   test "SourceBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents SourceBucket
+  end
+
+  test "AssetBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents AssetBucket
+  end
+
+  test "AnimationBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents AnimationBucket
+  end
+
+  test "FileBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents FileBucket
+  end
+
+  def assert_bucket_hard_deletes_contents(bucket)
     # Here we are testing that for every one of the user's channels we
-    # ask SourceBucket to delete its contents.  To avoid interacting with S3
-    # in this test, we depend on the unit tests in test_source_bucket.rb to
+    # ask the bucket to delete its contents.  To avoid interacting with S3
+    # in this test, we depend on the unit tests for the particular buckets to
     # verify correct hard-delete behavior for that bucket.
     student = create :student
     with_channel_for student do |channel_id_a, _|
       with_channel_for student do |channel_id_b, storage_id|
-        SourceBucket.any_instance.
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
+
+        bucket.any_instance.
           expects(:hard_delete_channel_content).
           with(storage_encrypt_channel_id(storage_id, channel_id_a))
-        SourceBucket.any_instance.
+        bucket.any_instance.
           expects(:hard_delete_channel_content).
           with(storage_encrypt_channel_id(storage_id, channel_id_b))
 
@@ -1195,22 +1217,40 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  test "SourceBucket: hard-deletes soft-deleted channels" do
+  #
+  # Firebase
+  #
+
+  test "Firebase: deletes content for all of user's channels" do
     student = create :student
     with_channel_for student do |channel_id_a, _|
       with_channel_for student do |channel_id_b, storage_id|
-        storage_apps.where(id: [channel_id_a, channel_id_b]).update(state: 'deleted')
+        storage_apps.where(id: channel_id_a).update(state: 'deleted')
 
-        SourceBucket.any_instance.
-          expects(:hard_delete_channel_content).
+        FirebaseHelper.
+          expects(:delete_channel).
           with(storage_encrypt_channel_id(storage_id, channel_id_a))
-        SourceBucket.any_instance.
-          expects(:hard_delete_channel_content).
+        FirebaseHelper.
+          expects(:delete_channel).
           with(storage_encrypt_channel_id(storage_id, channel_id_b))
 
         purge_user student
       end
     end
+  end
+
+  #
+  # Solr
+  #
+
+  test "Solr: deletes user document" do
+    student = create :student
+    mock_solr = mock
+    CDO.stubs(:solr_server).returns('fake-solr-configuration')
+    Solr::Server.expects(:new).with(host: 'fake-solr-configuration').returns(mock_solr)
+    SolrHelper.expects(:delete_document).with(mock_solr, 'user', student.id)
+
+    DeleteAccountsHelper.new.purge_user student
   end
 
   #
@@ -1434,24 +1474,5 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   def user_storage_ids
     PEGASUS_DB[:user_storage_ids]
-  end
-
-  #
-  # Verify that tests clean up affected Pegasus tables properly, since we
-  # aren't depending on FactoryBot to do that for us.
-  #
-  def store_initial_pegasus_table_sizes(table_names)
-    @initial_pegasus_table_sizes = table_names.map do |table_name|
-      [table_name, PEGASUS_DB[table_name].count]
-    end.to_h
-  end
-
-  def check_final_pegasus_table_sizes
-    @initial_pegasus_table_sizes.each do |table_name, initial_size|
-      final_size = PEGASUS_DB[table_name].count
-      assert_equal initial_size, final_size,
-        "Expected pegasus.#{table_name} to contain #{initial_size} rows but " \
-        "it had #{final_size} rows"
-    end
   end
 end

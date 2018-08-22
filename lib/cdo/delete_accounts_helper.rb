@@ -34,10 +34,15 @@ class DeleteAccountsHelper
       where(id: channel_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
-    # Clear S3 sources for user's channels
-    source_bucket = SourceBucket.new
-    encrypted_channel_ids.map do |eid|
-      source_bucket.hard_delete_channel_content eid
+    # Clear S3 contents for user's channels
+    buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
+    buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
+      bucket.hard_delete_channel_content encrypted_channel_id
+    end
+
+    # Clear Firebase contents for user's channels
+    encrypted_channel_ids.each do |encrypted_channel_id|
+      FirebaseHelper.delete_channel encrypted_channel_id
     end
   end
 

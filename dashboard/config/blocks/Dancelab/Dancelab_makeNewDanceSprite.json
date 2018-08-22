@@ -14,16 +14,20 @@
         "name": "COSTUME",
         "options": [
           [
-            "Circle",
-            "\"circle\""
-          ],
-          [
-            "Wiggles",
-            "\"wiggles\""
-          ],
-          [
             "Alien",
             "\"alien\""
+          ],
+          [
+            "MrWiggles",
+            "\"mrwiggles\""
+          ],
+          [
+            "Pizza",
+            "\"pizza\""
+          ],
+          [
+            "Unicorn",
+            "\"unicorn\""
           ]
         ]
       },

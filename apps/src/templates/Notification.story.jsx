@@ -176,12 +176,14 @@ export default storybook => {
         )
       },
       {
-        name: 'Two buttons',
-        description: `Notification box that contains two buttons`,
+        name: 'Two buttons and a link',
+        description: `Notification box that contains two buttons and a link`,
         story: () => (
           <Notification
             type="bullhorn"
             {...announcement}
+            detailsLinkText="And here's an extra link."
+            detailsLink="/"
             buttons={[
               {
                 text: "Learn more",
