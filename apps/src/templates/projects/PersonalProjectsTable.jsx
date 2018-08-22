@@ -163,6 +163,7 @@ class PersonalProjectsTable extends React.Component {
       <PersonalProjectsTableActionsCell
         isPublishable={showPublishAction}
         isPublished={!!rowData.publishedAt}
+        publishMethod={publishMethod}
         projectId={rowData.channel}
         projectType={rowData.type}
         isEditing={rowData.isEditing}
