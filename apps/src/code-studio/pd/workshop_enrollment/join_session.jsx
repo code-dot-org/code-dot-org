@@ -13,6 +13,12 @@ const SUBMISSION_STATUSES = {
   ERROR: "error"
 };
 
+const styles = {
+  formStyle: {
+    marginLeft: '0px'
+  }
+};
+
 export default class JoinSession extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
@@ -55,10 +61,6 @@ export default class JoinSession extends React.Component {
   }
 
   render() {
-    const formStyle = {
-      marginLeft: '0px'
-    };
-
     if (this.state.workshopEnrollmentStatus === SUBMISSION_STATUSES.UNSUBMITTED) {
       return (
         <div>
@@ -67,12 +69,12 @@ export default class JoinSession extends React.Component {
           </h1>
           <WorkshopDetails
             workshop={this.props.workshop}
-            session_dates={this.props.session_dates}
+            sessionDates={this.props.session_dates}
           />
           <h2>Please complete and confirm the information below.</h2>
           <div
             className="span6"
-            style={formStyle}
+            style={styles.formStyle}
           >
             <EnrollForm
               workshop_id={this.props.workshop.id}

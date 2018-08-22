@@ -190,7 +190,7 @@ export default class WorkshopEnrollment extends React.Component {
                 <div className="span6">
                   <WorkshopDetails
                     workshop={this.props.workshop}
-                    session_dates={this.props.session_dates}
+                    sessionDates={this.props.session_dates}
                   />
                   <h2>Facilitators</h2>
                   {this.props.facilitators.map(facilitator => (

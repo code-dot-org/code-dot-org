@@ -16,7 +16,7 @@ const styles = {
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
-    session_dates: PropTypes.arrayOf(PropTypes.string)
+    sessionDates: PropTypes.arrayOf(PropTypes.string)
   };
 
   workshopCourse() {
@@ -39,11 +39,11 @@ export default class WorkshopDetails extends React.Component {
           style={styles.label}
         >
           <strong>
-            {this.props.session_dates.length === 1 ? 'Date:' : 'Dates:'}
+            {this.props.sessionDates.length === 1 ? 'Date:' : 'Dates:'}
           </strong>
         </div>
         <div className="span4">
-          {this.props.session_dates.map(date => (
+          {this.props.sessionDates.map(date => (
             <div key={date}>
               {date}
               <br/>
