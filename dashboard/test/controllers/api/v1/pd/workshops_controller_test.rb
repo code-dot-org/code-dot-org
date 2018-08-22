@@ -332,7 +332,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     earlier_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now
     later_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now + 1.week
 
-    sign_in @admin
+    sign_in @workshop_admin
     filters = {organizer_id: organizer.id.to_s, order_by: 'date desc'}
     get :filter, params: filters
     response = JSON.parse(@response.body)

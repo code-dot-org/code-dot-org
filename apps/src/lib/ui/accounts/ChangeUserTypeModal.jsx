@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import i18n from '@cdo/locale';
-import {hashEmail} from '../../../code-studio/hashEmail';
 import BaseDialog from '../../../templates/BaseDialog';
 import color from '../../../util/color';
 import {isEmail} from '../../../util/formatValidation';
@@ -13,9 +12,8 @@ const STATE_UNKNOWN_ERROR = 'unknown-error';
 
 export default class ChangeUserTypeModal extends React.Component {
   static propTypes = {
-    currentHashedEmails: PropTypes.arrayOf(PropTypes.string),
     /**
-     * @type {function({currentEmail: string}):Promise}
+     * @type {function({email: string, emailOptIn: string}):Promise}
      */
     handleSubmit: PropTypes.func.isRequired,
     /**
@@ -27,11 +25,11 @@ export default class ChangeUserTypeModal extends React.Component {
   state = {
     saveState: STATE_INITIAL,
     values: {
-      currentEmail: '',
+      email: '',
       emailOptIn: '',
     },
     serverErrors: {
-      currentEmail: undefined,
+      email: undefined,
       emailOptIn: undefined,
     },
   };
@@ -69,22 +67,18 @@ export default class ChangeUserTypeModal extends React.Component {
   getValidationErrors() {
     const {serverErrors} = this.state;
     return {
-      currentEmail: serverErrors.currentEmail || this.getCurrentEmailValidationError(),
+      email: serverErrors.email || this.getEmailValidationError(),
       emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError(),
     };
   }
 
-  getCurrentEmailValidationError = () => {
-    const {currentEmail} = this.state.values;
-    const {currentHashedEmails} = this.props;
-    if (currentEmail.trim().length === 0) {
-      return i18n.changeUserTypeModal_currentEmail_isRequired();
+  getEmailValidationError = () => {
+    const {email} = this.state.values;
+    if (email.trim().length === 0) {
+      return i18n.changeUserTypeModal_email_isRequired();
     }
-    if (!isEmail(currentEmail.trim())) {
-      return i18n.changeUserTypeModal_currentEmail_invalid();
-    }
-    if (!currentHashedEmails.includes(hashEmail(currentEmail))) {
-      return i18n.changeUserTypeModal_currentEmail_mustMatch();
+    if (!isEmail(email.trim())) {
+      return i18n.changeUserTypeModal_email_invalid();
     }
     return null;
   };
@@ -100,7 +94,7 @@ export default class ChangeUserTypeModal extends React.Component {
   onFormChange = (newValues) => {
     const {values: oldValues, serverErrors} = this.state;
     const newServerErrors = {...serverErrors};
-    ['currentEmail', 'emailOptIn'].forEach((fieldName) => {
+    ['email', 'emailOptIn'].forEach((fieldName) => {
       if (newValues[fieldName] !== oldValues[fieldName]) {
         newServerErrors[fieldName] = undefined;
       }
