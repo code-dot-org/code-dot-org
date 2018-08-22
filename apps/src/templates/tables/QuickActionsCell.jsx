@@ -50,11 +50,11 @@ export default class QuickActionsCell extends Component {
     ]).isRequired,
     type: PropTypes.oneOf(Object.keys(QuickActionsCellType)),
     experimentDetails: PropTypes.shape({
-      group: PropTypes.string,
-      event: PropTypes.string,
       study: PropTypes.string,
-      userId: PropTypes.number,
-      projectId: PropTypes.string,
+      study_group: PropTypes.string,
+      event: PropTypes.string,
+      user_id: PropTypes.number,
+      data_json: PropTypes.string,
     }),
   };
 
@@ -76,15 +76,7 @@ export default class QuickActionsCell extends Component {
     window.addEventListener("resize", throttle(this.updateMenuLocation, 50));
     this.setState({open: true, canOpen: false});
     if (this.props.experimentDetails) {
-      firehoseClient.putRecord(
-        {
-          study: this.props.experimentDetails.study,
-          study_group: this.props.experimentDetails.group,
-          event: this.props.experimentDetails.event,
-          user_id: this.props.experimentDetails.userId,
-          data_json: JSON.stringify({ channel_id: this.props.experimentDetails.projectId })
-        }
-      );
+      firehoseClient.putRecord(this.props.experimentDetails);
     }
   };
 
