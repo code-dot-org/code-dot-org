@@ -825,6 +825,30 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_regional_partner_program_registrations
+  #
+
+  test "clears form_data from pd_regional_partner_program_registrations" do
+    registration = create :pd_regional_partner_program_registration
+    refute_equal '{}', registration.form_data
+
+    purge_user registration.user
+
+    registration.reload
+    assert_equal '{}', registration.form_data
+  end
+
+  test "sets invalid teachercon from pd_regional_partner_program_registrations" do
+    registration = create :pd_regional_partner_program_registration
+    assert_includes 1..3, registration.teachercon
+
+    purge_user registration.user
+
+    registration.reload
+    assert_equal 0, registration.teachercon
+  end
+
+  #
   # Table: dashboard.pd_attendances
   #
 
