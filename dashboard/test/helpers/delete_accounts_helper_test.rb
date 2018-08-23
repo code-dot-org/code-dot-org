@@ -292,13 +292,34 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "revokes the user's permissions" do
+    safe_permissions = UserPermission::VALID_PERMISSIONS - [
+      UserPermission::FACILITATOR,
+      UserPermission::WORKSHOP_ORGANIZER,
+      UserPermission::PROGRAM_MANAGER
+    ]
+
     user = create :teacher
-    (UserPermission::VALID_PERMISSIONS - [UserPermission::FACILITATOR]).
-      each {|perm| user.permission = perm}
+    safe_permissions.each {|perm| user.permission = perm}
+    safe_permissions.each {|perm| assert user.permission? perm}
     refute_empty UserPermission.where(user_id: user.id)
 
     purge_user user
 
+    safe_permissions.each {|perm| refute user.permission? perm}
+    assert_empty UserPermission.where(user_id: user.id)
+  end
+
+  test 'revokes any and all permissions if bypassing safety constraints' do
+    all_permissions = UserPermission::VALID_PERMISSIONS
+
+    user = create :teacher
+    all_permissions.each {|perm| user.permission = perm}
+    all_permissions.each {|perm| assert user.permission? perm}
+    refute_empty UserPermission.where(user_id: user.id)
+
+    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+    all_permissions.each {|perm| refute user.permission? perm}
     assert_empty UserPermission.where(user_id: user.id)
   end
 
@@ -1308,13 +1329,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test 'refuses to delete facilitator accounts in normal conditions' do
     facilitator = create :facilitator
+    assert facilitator.permission? UserPermission::FACILITATOR
 
     err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
       purge_user facilitator
     end
 
     assert_equal <<~MESSAGE, err.message
-      Automated purging of facilitator accounts is not supported at this time.
+      Automated purging of accounts with FACILITATOR permission is not supported at this time.
       If you are a developer attempting to manually purge this account, run
 
         DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
@@ -1331,16 +1353,16 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil facilitator.purged_at
   end
 
-  test 'refuses to delete a regional partner contact account in normal conditions' do
-    regional_partner = create :regional_partner
-    contact = regional_partner.contact
+  test 'refuses to delete workshop organizer accounts in normal conditions' do
+    workshop_organizer = create :workshop_organizer
+    assert workshop_organizer.permission? UserPermission::WORKSHOP_ORGANIZER
 
     err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
-      purge_user contact
+      purge_user workshop_organizer
     end
 
     assert_equal <<~MESSAGE, err.message
-      Automated purging of regional partner contact accounts is not supported at this time.
+      Automated purging of accounts with WORKSHOP_ORGANIZER permission is not supported at this time.
       If you are a developer attempting to manually purge this account, run
 
         DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
@@ -1349,13 +1371,104 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     MESSAGE
   end
 
-  test 'can delete a regional partner contact account if bypassing safety constraints' do
+  test 'can delete workshop organizer account if bypassing safety constraints' do
+    workshop_organizer = create :workshop_organizer
+
+    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(workshop_organizer)
+
+    refute_nil workshop_organizer.purged_at
+  end
+
+  test 'refuses to delete program manager accounts in normal conditions' do
+    program_manager = create :program_manager
+    assert program_manager.permission? UserPermission::PROGRAM_MANAGER
+
+    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
+      purge_user program_manager
+    end
+
+    assert_equal <<~MESSAGE, err.message
+      Automated purging of accounts with PROGRAM_MANAGER permission is not supported at this time.
+      If you are a developer attempting to manually purge this account, run
+
+        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+      to bypass this constraint and purge the user from our system.
+    MESSAGE
+  end
+
+  test 'can delete program manager account if bypassing safety constraints' do
+    program_manager = create :program_manager
+
+    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(program_manager)
+
+    refute_nil program_manager.purged_at
+  end
+
+  test 'refuses to delete a RegionalPartner.contact account in normal conditions' do
+    regional_partner = create :regional_partner
+    contact = regional_partner.contact
+
+    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
+      purge_user contact
+    end
+
+    assert_equal <<~MESSAGE, err.message
+      Automated purging of an account listed as the contact for a regional partner is not supported at this time.
+      If you are a developer attempting to manually purge this account, run
+
+        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+      to bypass this constraint and purge the user from our system.
+    MESSAGE
+  end
+
+  test 'can delete a RegionalPartner.contact account if bypassing safety constraints' do
     regional_partner = create :regional_partner
     contact = regional_partner.contact
 
     DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(contact)
 
     refute_nil contact.purged_at
+  end
+
+  test 'refuses to delete a RegionalPartner.program_managers account in normal conditions' do
+    program_manager = create :program_manager
+
+    # Revoke the REGIONAL_PARTNER permission to show we catch this association
+    # even if the user doesn't have the related permission.
+    program_manager.delete_permission UserPermission::PROGRAM_MANAGER
+
+    assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
+    refute program_manager.permission? UserPermission::PROGRAM_MANAGER
+
+    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
+      purge_user program_manager
+    end
+
+    assert_equal <<~MESSAGE, err.message
+      Automated purging of an account listed as a program manager for a regional partner is not supported at this time.
+      If you are a developer attempting to manually purge this account, run
+
+        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+      to bypass this constraint and purge the user from our system.
+    MESSAGE
+  end
+
+  test 'can delete a RegionalPartner.program_managers account if bypassing safety constraints' do
+    program_manager = create :program_manager
+
+    # Revoke the REGIONAL_PARTNER permission to show we catch this association
+    # even if the user doesn't have the related permission.
+    program_manager.delete_permission UserPermission::PROGRAM_MANAGER
+
+    assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
+    refute program_manager.permission? UserPermission::PROGRAM_MANAGER
+
+    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(program_manager)
+
+    refute_nil program_manager.purged_at
   end
 
   private
