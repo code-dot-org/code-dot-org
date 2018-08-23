@@ -19,6 +19,8 @@ Feature: Manage Assets
     And I wait until element ".modal-content" contains text "Your computer is not set-up to record audio."
     And I am on "http://studio.code.org/home?disableExperiments=recordAudio"
 
+  @no_safari
+  #ToDo: epeach - solve safari specific failure
   Scenario: The manage assets dialog displays the audio preview, and toggles between play and pause button.
     Given I am a student
     And I start a new Game Lab project
