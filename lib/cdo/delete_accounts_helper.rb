@@ -115,6 +115,10 @@ class DeleteAccountsHelper
 
     pd_enrollment_id = Pd::Enrollment.where(user_id: user_id).pluck(:id).first
     if pd_enrollment_id
+      Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_id).each do |form|
+        form.clear_form_data
+        form.save!(validate: false)
+      end
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
       Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
       Pd::Enrollment.where(id: pd_enrollment_id).each(&:clear_data)
