@@ -130,6 +130,10 @@ class DeleteAccountsHelper
         form.clear_form_data
         form.save!(validate: false)
       end
+      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).each do |form|
+        form.clear_form_data
+        form.save!(validate: false)
+      end
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).each(&:clear_form_data)
       Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).each(&:clear_form_data)
       Pd::Enrollment.where(id: pd_enrollment_ids).each(&:clear_data)
