@@ -873,6 +873,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_teachercon_surveys
+  #
+
+  test "clears form_data from pd_teachercon_surveys" do
+    enrollment = create :pd_enrollment, :from_user
+    survey = create :pd_teachercon_survey,
+      pd_enrollment: enrollment
+    refute_equal '{}', survey.form_data
+
+    purge_user survey.pd_enrollment.user
+
+    survey.reload
+    assert_equal '{}', survey.form_data
+  end
+
+  #
   # Table: dashboard.pd_attendances
   #
 
