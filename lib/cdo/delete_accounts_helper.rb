@@ -102,7 +102,11 @@ class DeleteAccountsHelper
       form.clear_form_data
       form.save!(validate: false)
     end
-    Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
+    Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each do |form|
+      form.clear_form_data
+      form.teachercon = 0
+      form.save!(validate: false)
+    end
     Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
     Pd::InternationalOptIn.where(user_id: user_id).each(&:clear_form_data)
     Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
