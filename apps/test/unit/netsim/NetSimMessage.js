@@ -68,7 +68,7 @@ describe("NetSimMessage", function () {
     assert.equal(message.payload, "1001001");
   });
 
-  it("gracefully converts a malformed base64Payload to empty string", function () {
+  it.skip("gracefully converts a malformed base64Payload to empty string", function () {
     var message = new NetSimMessage(testShard, {
       base64Payload: {
         string: "totally not a base64 string",

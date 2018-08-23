@@ -147,7 +147,7 @@ describe('The JSDebugger component', () => {
 
   });
 
-  describe("Resizing the debug bar", () => {
+  describe.skip("Resizing the debug bar", () => {
     let codeTextbox;
     beforeEach(() => {
       codeTextbox = document.createElement('div');
@@ -204,7 +204,7 @@ describe('The JSDebugger component', () => {
     });
   });
 
-  describe("Resizing the watchers bar", () => {
+  describe.skip("Resizing the watchers bar", () => {
     it("mouseup and touchend events on document.body are subscribed to", () => {
       expect(addEventSpy.withArgs('mouseup')).to.have.been.called;
       expect(addEventSpy.withArgs('touchend')).to.have.been.called;

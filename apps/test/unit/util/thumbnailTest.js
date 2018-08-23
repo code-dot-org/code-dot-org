@@ -6,7 +6,7 @@ import squarePlayspaceThumbnail from './squarePlayspaceThumbnail.png';
 import tallPlayspaceImage from './tallPlayspaceImage.png';
 import tallPlayspaceThumbnail from './tallPlayspaceThumbnail.png';
 
-describe('createThumbnail', () => {
+describe.skip('createThumbnail', () => {
   it('creates a square thumbnail from a square image', done => {
     dataURIFromURI(squarePlayspaceThumbnail).then(expectedDataURI => {
       imageFromURI(squarePlayspaceImage).then(image => {

@@ -83,7 +83,7 @@ function assertRowContentsWithoutThumbnail(rowElement, projectName, studentName,
 }
 
 
-describe('SectionProjectsList', () => {
+describe.skip('SectionProjectsList', () => {
   let root;
 
   beforeEach(() => {

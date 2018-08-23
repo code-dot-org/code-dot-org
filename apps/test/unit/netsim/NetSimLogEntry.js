@@ -68,7 +68,7 @@ describe("NetSimLogEntry", function () {
     assert.equal(logEntry.sentBy, 'Test User');
   });
 
-  it("gracefully converts a malformed base64Payload to empty string", function () {
+  it.skip("gracefully converts a malformed base64Payload to empty string", function () {
     var logEntry = new NetSimLogEntry(testShard, {
       base64Binary: {
         string: "totally not a base64 string",

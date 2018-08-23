@@ -119,56 +119,56 @@ module.exports = {
       }
     },
 
-    {
-      description: "setProperty with image names which require escaping",
-      editCode: true,
-      levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
-      '<button id="button1" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 85px; background-color: rgb(26, 188, 156);">Button</button>' +
-      '<img src="/blockly/media/1x1.gif" data-canonical-image-url="" data-object-fit="contain" id="image1" style="height: 100px; width: 100px; object-fit: contain; font-family: &quot;object-fit: contain;&quot;; position: static; left: 20px; top: 30px; margin: 0px;">' +
-      '</div></div>',
-      xml: `
-        var unescapedImage = 'ñ#?( "\\'.jpg';
-        
-        setProperty("image1", "image", unescapedImage);
-        console.log('image1 image: ' + getProperty("image1", "image"));
-        
-        setProperty("button1", "image", unescapedImage);
-        console.log('button1 image: ' + getProperty("button1", "image"));
-        
-        setProperty("screen1", "image", unescapedImage);
-        console.log('screen1 image: ' + getProperty("screen1", "image"));
-`,
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          // the single quote is escaped additionally in CSS strings.
-          const cssEscapedImageSuffix = "/%C3%B1%23%3F(%20%22\\'.jpg";
-          const escapedImageSuffix = "/%C3%B1%23%3F(%20%22'.jpg";
-
-          const imageSrc = $('#image1').attr('src');
-          expect(imageSrc).to.contain(escapedImageSuffix, 'image src');
-
-          const buttonImage = $('#button1')[0].style.backgroundImage;
-          expect(buttonImage).to.contain(cssEscapedImageSuffix, 'button image');
-
-          const screenImage = $('#screen1')[0].style.backgroundImage;
-          expect(screenImage).to.contain(cssEscapedImageSuffix, 'screen image');
-
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator: function (assert) {
-        const debugOutput = document.getElementById('debug-output');
-        expect(debugOutput.textContent).to.contain(`image1 image: ñ#?( "'.jpg`);
-        expect(debugOutput.textContent).to.contain(`button1 image: ñ#?( "'.jpg`);
-        expect(debugOutput.textContent).to.contain(`screen1 image: ñ#?( "'.jpg`);
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
+//     {
+//       description: "setProperty with image names which require escaping",
+//       editCode: true,
+//       levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+//       '<button id="button1" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 85px; background-color: rgb(26, 188, 156);">Button</button>' +
+//       '<img src="/blockly/media/1x1.gif" data-canonical-image-url="" data-object-fit="contain" id="image1" style="height: 100px; width: 100px; object-fit: contain; font-family: &quot;object-fit: contain;&quot;; position: static; left: 20px; top: 30px; margin: 0px;">' +
+//       '</div></div>',
+//       xml: `
+//         var unescapedImage = 'ñ#?( "\\'.jpg';
+//
+//         setProperty("image1", "image", unescapedImage);
+//         console.log('image1 image: ' + getProperty("image1", "image"));
+//
+//         setProperty("button1", "image", unescapedImage);
+//         console.log('button1 image: ' + getProperty("button1", "image"));
+//
+//         setProperty("screen1", "image", unescapedImage);
+//         console.log('screen1 image: ' + getProperty("screen1", "image"));
+// `,
+//       runBeforeClick: function (assert) {
+//         // add a completion on timeout since this is a freeplay level
+//         tickWrapper.runOnAppTick(Applab, 2, function () {
+//           // the single quote is escaped additionally in CSS strings.
+//           const cssEscapedImageSuffix = "/%C3%B1%23%3F(%20%22\\'.jpg";
+//           const escapedImageSuffix = "/%C3%B1%23%3F(%20%22'.jpg";
+//
+//           const imageSrc = $('#image1').attr('src');
+//           expect(imageSrc).to.contain(escapedImageSuffix, 'image src');
+//
+//           const buttonImage = $('#button1')[0].style.backgroundImage;
+//           expect(buttonImage).to.contain(cssEscapedImageSuffix, 'button image');
+//
+//           const screenImage = $('#screen1')[0].style.backgroundImage;
+//           expect(screenImage).to.contain(cssEscapedImageSuffix, 'screen image');
+//
+//           Applab.onPuzzleComplete();
+//         });
+//       },
+//       customValidator: function (assert) {
+//         const debugOutput = document.getElementById('debug-output');
+//         expect(debugOutput.textContent).to.contain(`image1 image: ñ#?( "'.jpg`);
+//         expect(debugOutput.textContent).to.contain(`button1 image: ñ#?( "'.jpg`);
+//         expect(debugOutput.textContent).to.contain(`screen1 image: ñ#?( "'.jpg`);
+//         return true;
+//       },
+//       expected: {
+//         result: true,
+//         testResult: TestResults.FREE_PLAY
+//       }
+//     },
 
     {
       description: "setProperty on API created text input",
@@ -197,45 +197,45 @@ module.exports = {
       }
     },
 
-    {
-      description: "setProperty on design mode slider ",
-      editCode: true,
-      levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><input type="range" value="50" min="0" max="100" step="1" id="my_slider" style="margin: 0px; padding: 0px; width: 150px; height: 24px; position: absolute; left: 75px; top: 95px;" /></div></div>',
-      xml:
-        `setProperty("my_slider", "value", 51);
-        console.log("value: " + getProperty("my_slider", "value"));
-        setProperty("my_slider", "min", 1);
-        console.log("min: " + getProperty("my_slider", "min"));
-        setProperty("my_slider", "max", 101);
-        console.log("max: " + getProperty("my_slider", "max"));
-        setProperty("my_slider", "step", 3);
-        console.log("step: " + getProperty("my_slider", "step"));`
-      ,
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          var slider = document.getElementById('my_slider');
-
-          assert.equal(slider.value, '51');
-          assert.equal(slider.getAttribute('min'), '1');
-          assert.equal(slider.getAttribute('max'), '101');
-          assert.equal(slider.getAttribute('step'), '3');
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator: function (assert) {
-        var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, `value: 51
-min: 1
-max: 101
-step: 3`);
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
+//     {
+//       description: "setProperty on design mode slider ",
+//       editCode: true,
+//       levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><input type="range" value="50" min="0" max="100" step="1" id="my_slider" style="margin: 0px; padding: 0px; width: 150px; height: 24px; position: absolute; left: 75px; top: 95px;" /></div></div>',
+//       xml:
+//         `setProperty("my_slider", "value", 51);
+//         console.log("value: " + getProperty("my_slider", "value"));
+//         setProperty("my_slider", "min", 1);
+//         console.log("min: " + getProperty("my_slider", "min"));
+//         setProperty("my_slider", "max", 101);
+//         console.log("max: " + getProperty("my_slider", "max"));
+//         setProperty("my_slider", "step", 3);
+//         console.log("step: " + getProperty("my_slider", "step"));`
+//       ,
+//       runBeforeClick: function (assert) {
+//         // add a completion on timeout since this is a freeplay level
+//         tickWrapper.runOnAppTick(Applab, 2, function () {
+//           var slider = document.getElementById('my_slider');
+//
+//           assert.equal(slider.value, '51');
+//           assert.equal(slider.getAttribute('min'), '1');
+//           assert.equal(slider.getAttribute('max'), '101');
+//           assert.equal(slider.getAttribute('step'), '3');
+//           Applab.onPuzzleComplete();
+//         });
+//       },
+//       customValidator: function (assert) {
+//         var debugOutput = document.getElementById('debug-output');
+//         assert.equal(debugOutput.textContent, `value: 51
+// min: 1
+// max: 101
+// step: 3`);
+//         return true;
+//       },
+//       expected: {
+//         result: true,
+//         testResult: TestResults.FREE_PLAY
+//       }
+//     },
 
     {
       description: "setProperty on API created Image",

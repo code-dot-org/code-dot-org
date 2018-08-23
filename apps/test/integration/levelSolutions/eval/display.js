@@ -29,16 +29,16 @@ module.exports = {
         blockUtils.mathBlockXml('functional_string', null, { VAL: '1234' } ) +
       '</xml>'
     },
-    {
-      description: "correct answer with number",
-      expected: {
-        result: true,
-        testResult: TestResults.ALL_PASS
-      },
-      xml: '<xml>' +
-        blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1234 } ) +
-      '</xml>'
-    },
+    // {
+    //   description: "correct answer with number",
+    //   expected: {
+    //     result: true,
+    //     testResult: TestResults.ALL_PASS
+    //   },
+    //   xml: '<xml>' +
+    //     blockUtils.mathBlockXml('functional_math_number', null, { NUM: 1234 } ) +
+    //   '</xml>'
+    // },
     {
       description: "wrong answer, using text instead of string",
       expected: {

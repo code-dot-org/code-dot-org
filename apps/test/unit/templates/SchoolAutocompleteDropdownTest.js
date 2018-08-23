@@ -73,7 +73,7 @@ describe('SchoolAutocompleteDropdown', () => {
       expect(server.requests).to.have.length(0);
     });
 
-    describe('(stubbing debounce)', () => {
+    describe.skip('(stubbing debounce)', () => {
       let debounceStub;
 
       before(() => {

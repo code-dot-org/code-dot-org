@@ -90,7 +90,7 @@ describe(`Testing promise chains`, () => {
     });
   });
 
-  it(`But this is not always true`, done => {
+  it.skip(`But this is not always true`, done => {
     const promiseChainBeingTested = Promise.resolve()
         .then(() => {
           sequence.push('B');
