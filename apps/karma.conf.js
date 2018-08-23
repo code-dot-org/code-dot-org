@@ -14,7 +14,7 @@ if (envConstants.COVERAGE) {
 }
 
 module.exports = function (config) {
-  var browser = envConstants.BROWSER || 'PhantomJS';
+  var browser = envConstants.BROWSER || 'ChromeHeadless';
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
