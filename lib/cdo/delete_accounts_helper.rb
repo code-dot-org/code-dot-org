@@ -98,13 +98,7 @@ class DeleteAccountsHelper
       attendance.update!(marked_by_user_id: nil)
     end
 
-    application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
-
     Pd::FacilitatorProgramRegistration.where(user_id: user_id).each do |form|
-      form.clear_form_data
-      form.save!(validate: false)
-    end
-    Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).each do |form|
       form.clear_form_data
       form.save!(validate: false)
     end
@@ -113,15 +107,23 @@ class DeleteAccountsHelper
     Pd::InternationalOptIn.where(user_id: user_id).each(&:clear_form_data)
     Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
 
-    pd_enrollment_id = Pd::Enrollment.where(user_id: user_id).pluck(:id).first
-    if pd_enrollment_id
-      Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_id).each do |form|
+    application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
+    unless application_ids.empty?
+      Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).each do |form|
         form.clear_form_data
         form.save!(validate: false)
       end
-      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
-      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
-      Pd::Enrollment.where(id: pd_enrollment_id).each(&:clear_data)
+    end
+
+    pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
+    unless pd_enrollment_ids.empty?
+      Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).each do |form|
+        form.clear_form_data
+        form.save!(validate: false)
+      end
+      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).each(&:clear_form_data)
+      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).each(&:clear_form_data)
+      Pd::Enrollment.where(id: pd_enrollment_ids).each(&:clear_data)
     end
   end
 
