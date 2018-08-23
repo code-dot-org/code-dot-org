@@ -791,6 +791,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: dashboard.pd_fit_weekend1819_registrations
+  # Associated with user via application
   #
 
   test "clears form_data from pd_fit_weekend1819_registrations" do
@@ -801,6 +802,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     registration.reload
     assert_equal '{}', registration.form_data
+  end
+
+  #
+  # Table: dashboard.pd_pre_workshop_surveys
+  # Associated with user via enrollment
+  #
+
+  test "clears form_data from pd_pre_workshop_surveys" do
+    Pd::Workshop.any_instance.stubs(:pre_survey_units_and_lessons).returns([])
+
+    enrollment = create :pd_enrollment, :from_user
+    survey = create :pd_pre_workshop_survey,
+      pd_enrollment: enrollment,
+      form_data_hash: {unit: Pd::PreWorkshopSurvey::UNIT_NOT_STARTED}
+    refute_equal '{}', survey.form_data
+
+    purge_user survey.pd_enrollment.user
+
+    survey.reload
+    assert_equal '{}', survey.form_data
   end
 
   #
