@@ -103,6 +103,10 @@ class DeleteAccountsHelper
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::TeacherApplication.where(user_id: user_id).update_all(primary_email: '', secondary_email: '', application: '')
 
+    # Peer reviews might be associated with a purged submitter or viewer
+    PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
+    PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
+
     unless application_ids.empty?
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)

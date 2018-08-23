@@ -1122,6 +1122,61 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table dashboard.peer_reviews
+  # Could delete submitter or viewer
+  #
+
+  test "clears submitter_id from peer_reviews if submitter is purged" do
+    peer_review = create :peer_review
+    refute_nil peer_review.submitter_id
+
+    purge_user peer_review.submitter
+
+    peer_review.reload
+    assert_nil peer_review.submitter_id
+  end
+
+  test "clears audit_trail from peer_reviews if submitter is purged" do
+    peer_review = create :peer_review, audit_trail: 'fake audit trail'
+    refute_nil peer_review.audit_trail
+
+    purge_user peer_review.submitter
+
+    peer_review.reload
+    assert_nil peer_review.audit_trail
+  end
+
+  test "clears reviewer_id from peer_reviews if reviewer is purged" do
+    peer_review = create :peer_review, :reviewed
+    refute_nil peer_review.reviewer_id
+
+    purge_user peer_review.reviewer
+
+    peer_review.reload
+    assert_nil peer_review.reviewer_id
+  end
+
+  test "clears data from peer_reviews if reviewer is purged" do
+    peer_review = create :peer_review, :reviewed
+    refute_nil peer_review.data
+
+    purge_user peer_review.reviewer
+
+    peer_review.reload
+    assert_nil peer_review.data
+  end
+
+  test "clears audit_trail from peer_reviews if reviewer is purged" do
+    peer_review = create :peer_review, :reviewed
+    refute_nil peer_review.audit_trail
+
+    purge_user peer_review.reviewer
+
+    peer_review.reload
+    assert_nil peer_review.audit_trail
+  end
+
+  #
   # Table: dashboard.pd_attendances
   #
 
