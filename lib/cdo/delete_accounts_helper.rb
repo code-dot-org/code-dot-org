@@ -112,9 +112,14 @@ class DeleteAccountsHelper
       form.user_id = nil
       form.save!(validate: false)
     end
+    Pd::TeacherApplication.where(user_id: user_id).each do |application|
+      application.primary_email = ''
+      application.secondary_email = ''
+      application.application = ''
+      application.save!(validate: false)
+    end
     Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
     Pd::InternationalOptIn.where(user_id: user_id).each(&:clear_form_data)
-    Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
 
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     unless application_ids.empty?
