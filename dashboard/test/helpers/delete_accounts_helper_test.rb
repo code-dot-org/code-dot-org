@@ -849,6 +849,80 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_teachercon1819_registrations
+  #
+
+  test "clears form_data from pd_teachercon1819_registrations" do
+    registration = create :pd_teachercon1819_registration
+    refute_equal '{}', registration.form_data
+
+    purge_user registration.user
+
+    registration.reload
+    assert_equal '{}', registration.form_data
+  end
+
+  test "clears user_id from pd_teachercon1819_registrations" do
+    registration = create :pd_teachercon1819_registration
+    refute_nil registration.user_id
+
+    purge_user registration.user
+
+    registration.reload
+    assert_nil registration.user_id
+  end
+
+  #
+  # Table: dashboard.pd_teachercon_surveys
+  #
+
+  test "clears form_data from pd_teachercon_surveys" do
+    enrollment = create :pd_enrollment, :from_user
+    survey = create :pd_teachercon_survey,
+      pd_enrollment: enrollment
+    refute_equal '{}', survey.form_data
+
+    purge_user survey.pd_enrollment.user
+
+    survey.reload
+    assert_equal '{}', survey.form_data
+  end
+
+  #
+  # Table: dashboard.pd_teacher_applications
+  #
+
+  test "clears primary_email from pd_teacher_applications" do
+    application = create :pd_teacher_application
+    refute_empty application.primary_email
+
+    purge_user application.user
+
+    application.reload
+    assert_empty application.primary_email
+  end
+
+  test "clears secondary_email from pd_teacher_applications" do
+    application = create :pd_teacher_application
+    refute_empty application.secondary_email
+
+    purge_user application.user
+
+    application.reload
+    assert_empty application.secondary_email
+  end
+
+  test "clears application from pd_teacher_applications" do
+    application = create :pd_teacher_application
+    refute_empty application.application
+
+    purge_user application.user
+
+    application.reload
+    assert_empty application.application
+  end
+
+  #
   # Table: dashboard.pd_attendances
   #
 
