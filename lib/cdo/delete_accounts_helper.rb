@@ -98,14 +98,20 @@ class DeleteAccountsHelper
       attendance.update!(marked_by_user_id: nil)
     end
 
-    Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
+    application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
+
     Pd::FacilitatorProgramRegistration.where(user_id: user_id).each do |form|
+      form.clear_form_data
+      form.save!(validate: false)
+    end
+    Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).each do |form|
       form.clear_form_data
       form.save!(validate: false)
     end
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
     Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
     Pd::InternationalOptIn.where(user_id: user_id).each(&:clear_form_data)
+    Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
 
     pd_enrollment_id = Pd::Enrollment.where(user_id: user_id).pluck(:id).first
     if pd_enrollment_id
