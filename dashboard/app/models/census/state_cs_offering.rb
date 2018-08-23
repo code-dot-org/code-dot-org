@@ -61,6 +61,7 @@ class Census::StateCsOffering < ApplicationRecord
     CO
     ID
     MI
+    OH
   ).freeze
 
   def self.infer_no(state_code)
