@@ -931,6 +931,30 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.workshop_attendance
+  #
+
+  test "clears teacher_id from workshop_attendance" do
+    attendance = create :attendance
+    refute_nil attendance.teacher_id
+
+    purge_user attendance.teacher
+
+    attendance.reload
+    assert_nil attendance.teacher_id
+  end
+
+  test "clears notes from workshop_attendance" do
+    attendance = create :attendance, notes: 'non-nil notes'
+    refute_nil attendance.notes
+
+    purge_user attendance.teacher
+
+    attendance.reload
+    assert_nil attendance.notes
+  end
+
+  #
   # Table: pegasus.contacts
   #
 

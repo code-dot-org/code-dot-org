@@ -106,6 +106,7 @@ class DeleteAccountsHelper
     Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).each do |attendance|
       attendance.update!(marked_by_user_id: nil)
     end
+    WorkshopAttendance.where(teacher_id: user_id).update_all(teacher_id: nil, notes: nil)
 
     Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
     Pd::FacilitatorProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
