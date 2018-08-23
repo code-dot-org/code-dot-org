@@ -90,9 +90,9 @@ class DeleteAccountsHelper
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
   def clean_and_destroy_pd_content(user_id)
-    workshop_material_order_ids = []
-
-    Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).update_all(form_data: '{}', notes: nil)
+    application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
+    pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
+    workshop_material_order_ids = Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
 
     # Two different paths to anonymizing attendance records
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
@@ -102,14 +102,12 @@ class DeleteAccountsHelper
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::TeacherApplication.where(user_id: user_id).update_all(primary_email: '', secondary_email: '', application: '')
-    workshop_material_order_ids += Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
 
-    application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     unless application_ids.empty?
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
+      Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
     end
 
-    pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
     unless pd_enrollment_ids.empty?
       workshop_material_order_ids += Pd::WorkshopMaterialOrder.where(pd_enrollment_id: pd_enrollment_ids).pluck(:id)
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
@@ -117,15 +115,17 @@ class DeleteAccountsHelper
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
     end
 
-    Pd::WorkshopMaterialOrder.where(id: workshop_material_order_ids).update_all(
-      school_or_company: nil,
-      street: '',
-      apartment_or_suite: nil,
-      city: '',
-      state: '',
-      zip_code: '',
-      phone_number: ''
-    )
+    unless workshop_material_order_ids.empty?
+      Pd::WorkshopMaterialOrder.where(id: workshop_material_order_ids).update_all(
+        school_or_company: nil,
+        street: '',
+        apartment_or_suite: nil,
+        city: '',
+        state: '',
+        zip_code: '',
+        phone_number: ''
+      )
+    end
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII
