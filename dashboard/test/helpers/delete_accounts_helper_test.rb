@@ -293,7 +293,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "revokes the user's permissions" do
     user = create :teacher
-    UserPermission::VALID_PERMISSIONS.each {|perm| user.permission = perm}
+    (UserPermission::VALID_PERMISSIONS - [UserPermission::FACILITATOR]).
+      each {|perm| user.permission = perm}
     refute_empty UserPermission.where(user_id: user.id)
 
     purge_user user
@@ -1299,6 +1300,62 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     user_storage_ids.where(user_id: student.id).delete
     assert_empty user_storage_ids.where(user_id: student.id)
+  end
+
+  #
+  # Situations where we'd like to queue the account for manual review.
+  #
+
+  test 'refuses to delete facilitator accounts in normal conditions' do
+    facilitator = create :facilitator
+
+    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
+      purge_user facilitator
+    end
+
+    assert_equal <<~MESSAGE, err.message
+      Automated purging of facilitator accounts is not supported at this time.
+      If you are a developer attempting to manually purge this account, run
+
+        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+      to bypass this constraint and purge the user from our system.
+    MESSAGE
+  end
+
+  test 'can delete facilitator account if bypassing safety constraints' do
+    facilitator = create :facilitator
+
+    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(facilitator)
+
+    refute_nil facilitator.purged_at
+  end
+
+  test 'refuses to delete a regional partner contact account in normal conditions' do
+    regional_partner = create :regional_partner
+    contact = regional_partner.contact
+
+    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
+      purge_user contact
+    end
+
+    assert_equal <<~MESSAGE, err.message
+      Automated purging of regional partner contact accounts is not supported at this time.
+      If you are a developer attempting to manually purge this account, run
+
+        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+      to bypass this constraint and purge the user from our system.
+    MESSAGE
+  end
+
+  test 'can delete a regional partner contact account if bypassing safety constraints' do
+    regional_partner = create :regional_partner
+    contact = regional_partner.contact
+
+    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(contact)
+
+    refute_nil contact.purged_at
   end
 
   private
