@@ -81,8 +81,6 @@ class DeleteAccountsHelper
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
   def clean_and_destroy_pd_content(user_id)
-    PeerReview.where(reviewer_id: user_id).each(&:clear_data)
-
     Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).update_all(form_data: '{}', notes: nil)
 
     # Two different paths to anonymizing attendance records
@@ -93,8 +91,6 @@ class DeleteAccountsHelper
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::TeacherApplication.where(user_id: user_id).update_all(primary_email: '', secondary_email: '', application: '')
-    Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
-    Pd::InternationalOptIn.where(user_id: user_id).each(&:clear_form_data)
 
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     unless application_ids.empty?
@@ -105,9 +101,6 @@ class DeleteAccountsHelper
     unless pd_enrollment_ids.empty?
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).each(&:clear_form_data)
-      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).each(&:clear_form_data)
-      Pd::Enrollment.where(id: pd_enrollment_ids).each(&:clear_data)
     end
   end
 
