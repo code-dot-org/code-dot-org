@@ -5,6 +5,8 @@ require 'cdo/solr'
 require 'cdo/solr_helper'
 
 class DeleteAccountsHelper
+  class SafetyConstraintViolation < RuntimeError; end
+
   OPEN_ENDED_LEVEL_TYPES = %w(
     Applab
     FreeResponse
@@ -12,11 +14,18 @@ class DeleteAccountsHelper
     Weblab
   ).freeze
 
-  def initialize(solr: nil)
+  # @param [String] solr configuration for Solr server for this environment
+  # @param [Boolean] bypass_safety_constraints to purge accounts without the
+  #   usual checks on account type, row limits, etc.  For use only when an
+  #   engineer needs to purge an account manually after investigating whatever
+  #   prevented it from being automatically purged.
+  def initialize(solr: nil, bypass_safety_constraints: false)
     if solr || CDO.solr_server
       @solr = solr || Solr::Server.new(host: CDO.solr_server)
     end
     @pegasus_db = PEGASUS_DB
+
+    @bypass_safety_constraints = bypass_safety_constraints
   end
 
   # Deletes all project-backed progress associated with a user.
@@ -218,11 +227,33 @@ class DeleteAccountsHelper
     end
   end
 
+  def check_safety_constraints(user)
+    assert_constraint !user.facilitator?,
+      'Automated purging of facilitator accounts is not supported at this time.'
+    assert_constraint RegionalPartner.with_deleted.where(contact_id: user.id).empty?,
+      'Automated purging of regional partner contact accounts is not supported at this time.'
+  end
+
+  def assert_constraint(condition, message)
+    return if @bypass_safety_constraints
+    unless condition
+      raise SafetyConstraintViolation, <<~MESSAGE
+        #{message}
+        If you are a developer attempting to manually purge this account, run
+
+          DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+        to bypass this constraint and purge the user from our system.
+      MESSAGE
+    end
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
   def purge_user(user)
     return if user.purged_at
+    check_safety_constraints user
 
     user.revoke_all_permissions
     # NOTE: Calling user.destroy early assures the user is not able to access
