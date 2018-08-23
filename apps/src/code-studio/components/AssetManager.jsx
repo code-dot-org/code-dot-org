@@ -43,7 +43,8 @@ export default class AssetManager extends React.Component {
     uploadsEnabled: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool,
     //For logging upload failures
-    projectId: PropTypes.string
+    projectId: PropTypes.string,
+    soundPlayer: PropTypes.object
   };
 
   constructor(props) {
@@ -198,6 +199,7 @@ export default class AssetManager extends React.Component {
             useFilesApi={this.props.useFilesApi}
             onChoose={choose}
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
+            soundPlayer={this.props.soundPlayer}
           />
         );
       }.bind(this));

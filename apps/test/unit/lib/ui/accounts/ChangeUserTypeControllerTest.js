@@ -152,7 +152,6 @@ describe('ChangeUserTypeController', () => {
       </form>
     `);
     stub(form, 'submit');
-    const hashedEmails = [];
 
     dropdown = form.find('#change-user-type_user_user_type');
     dropdown.val(userType);
@@ -161,6 +160,6 @@ describe('ChangeUserTypeController', () => {
 
     status = form.find('#change-user-type-status');
 
-    controller = new ChangeUserTypeController(form, userType, hashedEmails);
+    controller = new ChangeUserTypeController(form, userType);
   }
 });

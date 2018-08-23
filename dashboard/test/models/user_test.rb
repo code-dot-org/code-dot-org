@@ -1672,13 +1672,22 @@ class UserTest < ActiveSupport::TestCase
     refute student.roster_managed_account?
   end
 
-  test 'roster_managed_account? is true for migrated student in an externally rostered section' do
-    student = create :student, :with_migrated_google_authentication_option
+  test 'roster_managed_account? is true for migrated student in an externally rostered section without a password' do
+    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
     section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
     section.students << student
     student.reload
 
     assert student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student in an externally rostered section with a password' do
+    student = create :student, :with_migrated_google_authentication_option, password: 'mypassword'
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
   end
 
   test 'roster_managed_account? is false for unmigrated student in an externally rostered section with a password' do

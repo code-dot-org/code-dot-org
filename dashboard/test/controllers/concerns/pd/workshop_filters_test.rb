@@ -131,6 +131,13 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.filter_workshops @workshop_query
   end
 
+  test 'filter_workshops with facilitator_id' do
+    User.stubs(:find_by).with(id: 789).returns(@user)
+    expects(:facilitated_by).with(@user)
+    params facilitator_id: 789
+    @controller.filter_workshops @workshop_query
+  end
+
   test 'filter_workshops with organizer id' do
     expects(:where).with(organizer_id: 123)
     params organizer_id: 123
