@@ -1,34 +1,15 @@
 require 'test_helper'
 
 class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
-  FORM_DATA = {
-    first_name: 'firstName',
-    last_name: 'lastName',
-    title: 'Dr.',
-    email: 'foo@bar.com',
-    role: 'School Administrator',
-    job_title: 'title',
-    grade_levels: ['High School'],
-    school_state: 'NY',
-    opt_in: 'Yes'
-  }
-
-  MATCHED_FORM_DATA = {
-    school_type: 'public',
-    school_district_other: false,
-    school_district: 'District',
-    school_state: 'OH',
-    school_zipcode: '45242'
-  }
-
   test 'Test district validation' do
     contact = build :pd_regional_partner_contact, form_data: {}.to_json
+    partial_form_data = build :pd_regional_partner_contact_hash
     refute contact.valid?
 
-    refute build(:pd_regional_partner_contact, form_data: FORM_DATA.to_json).valid?
+    refute build(:pd_regional_partner_contact, form_data: partial_form_data.to_json).valid?
 
     refute build(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      :pd_regional_partner_contact, form_data: partial_form_data.merge(
         {
           school_type: 'public',
         }
@@ -36,7 +17,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
 
     refute build(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      :pd_regional_partner_contact, form_data: partial_form_data.merge(
         {
           school_type: 'private',
         }
@@ -44,7 +25,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
 
     refute build(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      :pd_regional_partner_contact, form_data: partial_form_data.merge(
         {
           school_type: 'public',
           school_district_other: true
@@ -53,7 +34,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
 
     refute build(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      :pd_regional_partner_contact, form_data: partial_form_data.merge(
         {
           school_type: 'public',
           school_district_other: false
@@ -62,7 +43,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
 
     assert build(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      :pd_regional_partner_contact, form_data: partial_form_data.merge(
         {
           school_type: 'public',
           school_district_other: true,
@@ -72,7 +53,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
 
     assert build(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      :pd_regional_partner_contact, form_data: partial_form_data.merge(
         {
           school_type: 'public',
           school_district_other: false,
@@ -82,7 +63,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
 
     refute build(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      :pd_regional_partner_contact, form_data: partial_form_data.merge(
         {
           school_type: 'private',
           school_name: 'Name'
@@ -91,7 +72,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
 
     assert build(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      :pd_regional_partner_contact, form_data: partial_form_data.merge(
         {
           school_type: 'private',
           school_name: 'Name',
@@ -109,15 +90,16 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     regional_partner.mappings.find_or_create_by!(state: state)
     regional_partner.mappings.find_or_create_by!(zip_code: zip)
 
-    regional_partner_contact = create :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-      {
-        school_type: 'public',
-        school_district_other: false,
-        school_district: 'District',
-        school_state: state,
-        school_zipcode: zip
-      }
-    ).to_json
+    regional_partner_contact = create :pd_regional_partner_contact,
+      form_data: build(:pd_regional_partner_contact_hash).merge(
+        {
+          school_type: 'public',
+          school_district_other: false,
+          school_district: 'District',
+          school_state: state,
+          school_zipcode: zip
+        }
+      ).to_json
 
     assert_equal regional_partner.id, regional_partner_contact.regional_partner_id
   end
@@ -130,7 +112,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
 
     create :regional_partner_program_manager, regional_partner: regional_partner
 
-    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.first
 
     assert_equal 'A school administrator would like to connect with you', mail.subject
@@ -147,7 +129,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     create :regional_partner_program_manager, regional_partner: regional_partner
     create :regional_partner_program_manager, regional_partner: regional_partner
 
-    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.first
 
     assert_equal 'A school administrator would like to connect with you', mail.subject
@@ -161,7 +143,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     regional_partner.mappings.find_or_create_by!(state: 'OH')
     regional_partner.mappings.find_or_create_by!(zip_code: '45242')
 
-    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.first
 
     assert_equal ['tawny@code.org'], mail.to
@@ -171,7 +153,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
   end
 
   test 'Unmatched' do
-    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.first
 
     assert_equal ['tawny@code.org'], mail.to
@@ -181,7 +163,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
   end
 
   test 'Receipt email' do
-    create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
+    create :pd_regional_partner_contact, form_data: build(:pd_regional_partner_contact_hash, :matched).to_json
     mail = ActionMailer::Base.deliveries.last
 
     assert_equal ['foo@bar.com'], mail.to

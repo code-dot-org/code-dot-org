@@ -46,6 +46,12 @@ Scenario: Version warning announcement on course and unit overview pages
   And element "#version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
+  # The course overview warning banner also stays closed
+  When I am on "http://studio.code.org/courses/csp-2018"
+  And I wait to see ".uitest-CourseScript"
+  And element "#version-selector" is visible
+  Then element ".announcement-notification:contains(newer version)" does not exist
+
 @as_student
 @no_mobile
 Scenario: Versions warning announcement on script overview page

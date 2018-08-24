@@ -243,6 +243,7 @@ class ClassSubmission < Form
           4326
         )
       ) / 1000
+      query = query.where Sequel.lit(Forms.json('processed_data.location_p'))
       query = query.where {distance_query < distance}
       fl.push distance_query.as(:distance)
     end
