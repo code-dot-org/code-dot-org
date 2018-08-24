@@ -20,7 +20,7 @@ import {
 } from '../components/regional_partner_dropdown';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ConfirmationDialog from '../components/confirmation_dialog';
-import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import _ from 'lodash';
 import {
   ApplicationStatuses,

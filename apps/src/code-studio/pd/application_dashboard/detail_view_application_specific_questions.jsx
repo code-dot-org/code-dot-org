@@ -6,7 +6,7 @@ import {
   PageLabels as TeacherPageLabels,
   LabelOverrides as TeacherLabelOverrides,
   ValidScores as TeacherValidScores
-} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {
   SectionHeaders as FacilitatorSectionHeaders,
   PageLabels as FacilitatorPageLabels,
