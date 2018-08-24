@@ -26,6 +26,7 @@
     = render partial: 'levels/editors/craft', locals: {f: f} if @level.is_a? Craft
     = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
+    = render partial: 'levels/editors/cs_in_a', locals: {f: f} if (@level.is_a?(Calc) || @level.is_a?(Eval))
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
     = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a? Gamelab
     = render partial: 'levels/editors/gamelab_jr', locals: {f: f} if @level.is_a? GamelabJr

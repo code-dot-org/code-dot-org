@@ -1090,7 +1090,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
     return;
   }
 
-  this.gameLabP5.startExecution();
+  this.gameLabP5.startExecution(this.isDanceLab);
   this.gameLabP5.setLoop(keepTicking);
 
   if (!this.JSInterpreter ||
@@ -1115,7 +1115,7 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
     if (experiments.isEnabled('replay')) {
       wrap(this.gameLabP5.p5);
     }
-    const propList = this.gameLabP5.getGlobalPropertyList(this.isDanceLab);
+    const propList = this.gameLabP5.getGlobalPropertyList();
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
       // propListItem[0] - a native property value

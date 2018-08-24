@@ -248,9 +248,9 @@ sk:
         maze_wordsearch_k_15: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova ABOVE (nad)
         maze_wordsearch_k_16: Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova BELOW (pod)
         maze_wordsearch_k_20: Toto je test! Presuňte ma jedným smerom, potom druhým pre vyhláskovanie slova STORY (príbeh)
-        applab_ec_simple: Vytvorte si Vašu aplikáciu použitím blokov v nástrojovom paneli.
-        turtle_ec_1_2: 'Teraz nakreslite štvorec. POZNÁMKA: použite svoju obľúbenú farbu výberom z nového bloku "farbaPera".'
-        turtle_ec_1_10: 'Dokázali ste to! Teraz môžete nakresliť čo len chcete. Niektoré vtipné nápady: postavička z čiar, snehová vločka alebo špirála. Skúste aj blok "šírkaPera". Prajeme veľa zábavy!'
+        applab_ec_simple: Vytvor si aplikáciu použitím blokov v paneli nástrojov.
+        turtle_ec_1_2: 'Teraz nakresli štvorec. POZNÁMKA: použi svoju obľúbenú farbu výberom na novom bloku "farbaPera".'
+        turtle_ec_1_10: 'Dokázal si to! Teraz môžeš nakresliť čo len chceš. Niektoré vtipné nápady: postavička z čiar, snehová vločka alebo špirála. Skús použiť aj blok "šírkaPera". Prajeme veľa zábavy!'
         studio_ec_sandbox: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
     video:
       name:

@@ -6,38 +6,30 @@
   %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
   = f.number_field :slider_speed, :step => 0.1
 .field
-  = f.label :show_turtle_before_run, 'Show turtle before Run is pressed'
-  = boolean_check_box f, :show_turtle_before_run
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :show_turtle_before_run, description: "Show turtle before Run is pressed"}
 .field
-  = f.label :design_mode_at_start, 'Start in Design Mode'
-  = boolean_check_box f, :design_mode_at_start
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :design_mode_at_start, description: "Start in Design Mode"}
 .field
-  = f.label :hide_design_mode, 'Hide Design Mode'
-  = boolean_check_box f, :hide_design_mode
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_design_mode, description: "Hide Design Mode"}
 .field
-  = f.label :makerlab_enabled, 'Enable Maker APIs'
-  = boolean_check_box f, :makerlab_enabled
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}
 .field
-  = f.label :expand_debugger, 'Expand Debugger by Default'
-  = boolean_check_box f, :expand_debugger
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
+
 = render partial: 'levels/editors/watchers_ui', locals: {f: f}
 .field
-  = f.label :autocomplete_palette_apis_only, 'Autocomplete palette APIs only'
-  = boolean_check_box f, :autocomplete_palette_apis_only
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :autocomplete_palette_apis_only, description: "Autocomplete palette APIs only"}
 .field
-  = f.label :execute_palette_apis_only, 'Execute palette APIs only'
-  = boolean_check_box f, :execute_palette_apis_only
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :execute_palette_apis_only, description: "Execute palette APIs only"}
 .field
-  = f.label :beginner_mode, 'Beginner mode for loops'
-  = boolean_check_box f, :beginner_mode
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :beginner_mode, description: "Beginner mode for loops"}
 .field
-  = f.label :submittable, 'Submittable'
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :submittable, description: "Submittable"}
   %p
     If checked, students with teachers can "submit" a solution for
     grading. Submitting a solution means that it is marked as
     submitted and they can no longer edit it (unless a teacher returns
     it).
-  = boolean_check_box f, :submittable
 .field
   = f.label :start_html, 'Starting design mode html'
   %p
@@ -70,10 +62,9 @@
     levelbuilder.initializeCodeMirror('level_log_conditions', 'javascript');
 
 .field
-  = f.label :fail_on_lint_errors
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'fail_on_lint_errors', description: "Fail on lint errors"}
   %p
     Lint warnings and errors (in the editor's gutter area) will prevent the student from continuing when the Finish button is pressed.
-  = boolean_check_box f, :fail_on_lint_errors
 
 .field
   = f.label 'Table Data'
@@ -105,12 +96,11 @@
   :javascript
     levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
-.field
-  = f.label 'Hide Data Button'
-  = boolean_check_box f, :hide_view_data_button
 
 .field
-  =f.label 'Disable code debugger (Console is still enabled)'
-  = boolean_check_box f, :debugger_disabled
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_view_data_button, description: "Hide Data Button"}
+
+.field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :debugger_disabled, description: "Disable code debugger (Console is still enabled)"}
 
 = render partial: 'levels/editors/teacher_only_markdown', locals: {f: f}

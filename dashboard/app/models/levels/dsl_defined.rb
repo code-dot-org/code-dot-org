@@ -74,7 +74,9 @@ class DSLDefined < Level
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
         level.rewrite_dsl_file(text)
-        rewrite_i18n_file(i18n)
+        # Only bother saving levels in scripts that we want to internationalize.
+        # As of August 2018, that's just the CSF levels.
+        rewrite_i18n_file(i18n) if level.script_levels.any? {|sl| sl.script.csf?}
       end
 
       level

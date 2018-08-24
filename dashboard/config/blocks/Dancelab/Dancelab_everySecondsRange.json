@@ -2,11 +2,24 @@
   "category": "Events",
   "config": {
     "func": "everySecondsRange",
-    "blockText": "every {N} seconds from {START} to {STOP}",
+    "blockText": "every {N} {UNIT} from {START} to {STOP}",
     "args": [
       {
         "name": "N",
         "type": "Number"
+      },
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "Measures",
+            "measures"
+          ],
+          [
+            "Seconds",
+            "seconds"
+          ]
+        ]
       },
       {
         "name": "START",

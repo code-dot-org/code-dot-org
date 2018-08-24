@@ -71,7 +71,7 @@ FactoryGirl.define do
       workshop.sessions.map(&:save)
 
       evaluator.num_facilitators.times do
-        workshop.facilitators << (create :facilitator)
+        workshop.facilitators << (create :facilitator, course: workshop.course)
       end
 
       evaluator.num_completed_surveys.times do
@@ -540,7 +540,37 @@ FactoryGirl.define do
   factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
     user nil
     regional_partner nil
-    form_data nil
+    form_data {build(:pd_regional_partner_contact_hash, :matched).to_json}
+  end
+
+  factory :pd_regional_partner_contact_hash, class: 'Hash' do
+    initialize_with do
+      {
+        first_name: 'firstName',
+        last_name: 'lastName',
+        title: 'Dr.',
+        email: 'foo@bar.com',
+        role: 'School Administrator',
+        job_title: 'title',
+        grade_levels: ['High School'],
+        school_state: 'NY',
+        opt_in: 'Yes'
+      }
+    end
+
+    trait :matched do
+      after(:build) do |hash|
+        hash.merge!(
+          {
+            school_type: 'public',
+            school_district_other: false,
+            school_district: 'District',
+            school_state: 'OH',
+            school_zipcode: '45242',
+          }
+        )
+      end
+    end
   end
 
   factory :pd_international_opt_in, class: 'Pd::InternationalOptIn' do

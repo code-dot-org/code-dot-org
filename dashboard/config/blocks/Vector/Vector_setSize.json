@@ -1,0 +1,20 @@
+{
+  "category": "",
+  "config": {
+    "inline": false,
+    "func": "setSize",
+    "blockText": "set width {WIDTH} height {HEIGHT}",
+    "args": [
+      {
+        "name": "WIDTH",
+        "type": "Number"
+      },
+      {
+        "name": "HEIGHT",
+        "type": "Number"
+      }
+    ],
+    "methodCall": true,
+    "thisObject": "this"
+  }
+}

@@ -89,16 +89,16 @@ table.checkboxes {
       background-image: url('/blockly/media/skins/bee/honey.png');
     }
     &.flower-or-nothing {
-      background-image: url('/assets/editor/flower-or-nothing.png');
+      background-image: url('/levelbuilder/flower-or-nothing.png');
     }
     &.hive-or-nothing {
-      background-image: url('/assets/editor/hive-or-nothing.png');
+      background-image: url('/levelbuilder/hive-or-nothing.png');
     }
     &.flower-or-hive {
-      background-image: url('/assets/editor/hive-or-flower.png');
+      background-image: url('/levelbuilder/hive-or-flower.png');
     }
     &.flower-hive-or-nothing {
-      background-image: url('/assets/editor/flower-hive-or-nothing.png');
+      background-image: url('/levelbuilder/flower-hive-or-nothing.png');
     }
     &.playlab {
       &.none {
@@ -158,23 +158,30 @@ table.checkboxes {
    cursor: pointer;
    padding: 2%;
    padding-left: 0;
-   
+
   &:after {
-    content: "";
+    content: "\25B2";
     display: inline-block;
     width: 14px;
     height: 14px;
     line-height: 14px;
-    vertical-align: text-top;
-    background-image: url("/assets/glyphicons-halflings.png");
-    background-repeat: no-repeat;
-    margin-top: 1px;
     margin-left: 10px;
-     /* Icon when the collapsible content is shown */
-    background-position: -288px -120px;
   }
-   &.collapsed:after {
-    /* Icon when the collapsible content is hidden */
-    background-position: -313px -119px;
+  &.collapsed:after {
+    content: "\25BC";
   }
+}
+
+.aligned-input-group{
+  padding-top: 1%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  label {
+    padding-left: 1%;
+  }
+}
+.collapsed_area_header{
+  font-size: 1.5em;
 }

@@ -10,6 +10,7 @@ it:
       messages:
         blank: "è un dato obbligatorio"
         blank_plural: "sono richiesti"
+        invalid: "non è valido"
         invalid_plural: "non sono validi"
     attributes:
       user:
@@ -365,6 +366,7 @@ it:
     current_password_hint: '(inserisci la tua password corrente per confermare i cambiamenti)'
     delete: 'Elimina il tuo account'
     delete_text: "Cliccando sul pulsante qua sotto elimini il tuo account."
+    delete_text_teacher_managed_note: "Non hai i permessi per eliminare questo account perché è gestito dal tuo insegnante. Il/I tuo/i insegnante/i dovrà rimuoverti dalla sua sezione prima che tu possa eliminare il tuo account."
     delete_text_teacher_note: "Nota che eliminando il tuo account non verranno eliminati gli account dei tuoi studenti."
     delete_confirm: 'Sei sicuro di voler eliminare il tuo account?'
     deleted_user: 'utente eliminato'
@@ -472,7 +474,8 @@ it:
   gender:
     male: 'Maschile'
     female: 'Femminile'
-    non_binary: 'Non-binario'
+    non_binary: 'Non-binary'
+    not_listed: 'Termine preferito non in elenco'
     none: 'Preferisco non rispondere'
   user_type:
     student: 'Studente'
@@ -956,16 +959,17 @@ it:
       subjects: 'Quali materie insegni quest''anno?'
       resources: 'Quali delle seguenti risorse di informatica utilizzi?'
       robotics: 'Quali delle seguenti risorse di robotica utilizzi?'
-      workshop_organizer: 'Organizzatore del laboratorio'
-      workshop_facilitator: 'Moderatore del laboratorio'
-      workshop_course: 'Laboratorio'
+      workshop_organizer: 'Organizzatore del seminario'
+      workshop_facilitator: 'Formatore del seminario'
+      workshop_course: 'Seminario'
       email_opt_in: 'Acconsento che Code.org condivida i miei dati personali e i dati aggregati delle mie classi con il Partner Internazionale di Code.org nel mio paese.'
-      legal_opt_in: 'Inviando questo modulo, acconsenti che Code.org condivida i tuoi dati di utilizzo di Code.org e le risorse relative al Professional Learning con il Partner Internazionale di Code.org nel tuo paese, distretti scolastici e facilitatori. Condivideremo con questi partner i tuoi dati personali, quali corsi/lezioni stai usando e i dati aggregati delle tue classi. Ciò comprende il numero di studenti delle tue classi, la relativa situazione demografica e il nome della tua scuola. Non condivideremo alcun dato personale degli studenti con i nostri partner: tutti i dati degli studenti verranno resi anonimi e aggregati. I nostri Partner Internazionali e i facilitatori sono contrattualmente tenuti a trattare questi dati con il medesimo livello di confidenzialità di Code.org.'
+      legal_opt_in: 'Inviando questo modulo, acconsenti che Code.org condivida i tuoi dati di utilizzo di Code.org e le risorse relative alla formazione professionale con il Partner Internazionale di Code.org nel tuo paese (in Italia: Programma il Futuro), distretti scolastici e formatori. Condivideremo con questi partner i tuoi dati personali, quali corsi/lezioni stai usando e i dati aggregati delle tue classi. Ciò comprende il numero di studenti delle tue classi, la relativa situazione demografica e il nome della tua scuola. Non condivideremo alcun dato personale degli studenti con i nostri partner: tutti i dati degli studenti verranno resi anonimi e aggregati. I nostri Partner Internazionali e i formatori sono contrattualmente tenuti a trattare questi dati con il medesimo livello di confidenzialità di Code.org.'
     form_entries:
       gender:
         male: 'Maschile'
         female: 'Femminile'
-        non_binary: 'Non-binario'
+        non_binary: 'Non-binary'
+        not_listed: 'Termine preferito non in elenco'
         none: 'Preferisco non rispondere'
       school_country:
         canada: 'Canada'
@@ -985,7 +989,7 @@ it:
         ages_19_over: 'Più di 18 anni'
       subjects:
         cs: 'Informatica'
-        ict: 'Informatica'
+        ict: 'Informatica (ICT)'
         math: 'Matematica'
         science: 'Scienza'
         history: 'Storia'
@@ -1014,10 +1018,14 @@ it:
       workshop_course:
         csf_af: 'Fondamenti di Informatica (Corsi A-F)'
         csf_express: 'Fondamenti di Informatica (Corsi rapidi)'
-        csp: '''16-''17 principi d''informatica'
+        csp: 'CS Principles'
       email_opt_in:
         opt_in_yes: 'Sì'
         opt_in_no: 'No'
+    international_opt_in:
+      title: 'Partecipazione a Seminari'
+      intro: "Grazie per aver dedicato tempo nella formazione sui materiali didattici di Code.org. La nostra missione di rendere disponibile l'apprendimento dell'informatica a tutti i bambini in tutte le scuole del mondo non sarebbe possibile senza di te."
+      instructions: "Per favore, compila il seguente modulo per indicare che 1) hai partecipato ad un seminario di formazione gestito da uno dei partner internazionali di Code.org e 2) accetti di condividere i tuoi dati con il nostro partner internazionale nel tuo paese (in Italia: Programma il Futuro) in modo che possa aiutarti a sostenere il tuo viaggio come insegnante di informatica."
     no_teacher_email:
       body: 'Al tuo account non è associato alcun indirizzo email. Per favore, prima di completare questo modulo, <a href="%{user_registration}">vai alle impostazioni del tuo account</a> per aggiungere i tuoi indirizzi email.'
   courses_category: 'Corsi Avanzati'

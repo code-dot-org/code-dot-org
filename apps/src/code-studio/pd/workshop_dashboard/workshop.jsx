@@ -18,7 +18,7 @@ import {
   Button
 } from 'react-bootstrap';
 import {DATE_FORMAT} from './workshopConstants';
-import ConfirmationDialog from './components/confirmation_dialog';
+import ConfirmationDialog from '../components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import Spinner from '../components/spinner';
