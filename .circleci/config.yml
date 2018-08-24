@@ -211,10 +211,6 @@ jobs:
           destination: artifacts
 
       - store_artifacts:
-          path: /home/circleci/project/apps/coverage
-          destination: coverage
-
-      - store_artifacts:
           path: /home/circleci/project/apps/log
           destination: apps-test-logs
 
