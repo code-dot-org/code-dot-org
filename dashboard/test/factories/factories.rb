@@ -889,6 +889,10 @@ FactoryGirl.define do
     before :create do |peer_review|
       create :user_level, user: peer_review.submitter, level: peer_review.level
     end
+
+    trait :reviewed do
+      reviewer {create :teacher}
+    end
   end
 
   factory :level_group, class: LevelGroup do

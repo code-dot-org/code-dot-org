@@ -220,6 +220,10 @@ Then /^I wait until current URL contains "([^"]*)"$/ do |url|
   wait_until {@browser.current_url.include? url}
 end
 
+And /^check that the URL matches "([^"]*)"$/ do |regex_text|
+  expect(@browser.current_url.match(regex_text).nil?).to eq(false)
+end
+
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   wait_until {@browser.current_url == url}

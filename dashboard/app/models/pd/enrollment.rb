@@ -47,22 +47,22 @@ class Pd::Enrollment < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
-  validates_presence_of :first_name, unless: :owner_deleted?
+  validates_presence_of :first_name, unless: :deleted?
 
   # Some old enrollments, from before the first/last name split, don't have last names.
   # Require on all new enrollments.
-  validates_presence_of :last_name, unless: -> {owner_deleted? || created_before_name_split?}
+  validates_presence_of :last_name, unless: -> {deleted? || created_before_name_split?}
 
-  validates_presence_of :email, unless: :owner_deleted?
-  validates_confirmation_of :email, unless: :owner_deleted?
+  validates_presence_of :email, unless: :deleted?
+  validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
 
   validate :school_forbidden, if: -> {new_record? || school_changed?}
-  validates_presence_of :school_info, unless: -> {owner_deleted? || created_before_school_info?}
-  validate :school_info_country_required, if: -> {!owner_deleted? && (new_record? || school_info_id_changed?)}
+  validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}
+  validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
-  after_save :enroll_in_corresponding_online_learning, if: -> {!owner_deleted? && (user_id_changed? || email_changed?)}
+  after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
   after_save :authorize_teacher_account
 
   def self.for_user(user)
@@ -100,12 +100,6 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def has_user?
     user_id
-  end
-
-  # Returns whether the enrollment owner is deleted. If there is no owner, returns false.
-  # @return [Boolean] Whether the enrollment owner is deleted.
-  def owner_deleted?
-    user_id && User.with_deleted.find_by_id(user_id).deleted?
   end
 
   def completed_survey?
@@ -250,12 +244,15 @@ class Pd::Enrollment < ActiveRecord::Base
 
   # Removes the name and email information stored within this Pd::Enrollment.
   def clear_data
-    update!(
-      name: '',
-      first_name: nil,
-      last_name: nil,
-      email: ''
-    )
+    write_attribute :name, nil
+    self.first_name = nil
+    self.last_name = nil
+    self.email = ''
+    self.user_id = nil
+    self.school = nil
+    self.school_info_id = nil
+    self.deleted_at = Time.now
+    save!
   end
 
   protected
