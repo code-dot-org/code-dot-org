@@ -105,6 +105,7 @@ class DeleteAccountsHelper
     unless application_ids.empty?
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
     end
+    WorkshopAttendance.where(teacher_id: user_id).update_all(teacher_id: nil, notes: nil)
 
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
     unless pd_enrollment_ids.empty?
