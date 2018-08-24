@@ -24,6 +24,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   setup do
+    # Skip security logging to Slack in test
+    ChatClient.stubs(:message)
+
     # Skip real S3 operations in this test
     AWS::S3.stubs(:create_client)
     [SourceBucket, AssetBucket, AnimationBucket, FileBucket].each do |bucket|
