@@ -12,8 +12,11 @@ import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
+  remix,
 } from './projectsRedux';
+import {publishMethods} from './projectConstants';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 export const styles = {
   xIcon: {
@@ -23,7 +26,9 @@ export const styles = {
 
 class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
+    isPublishable: PropTypes.bool.isRequired,
     isPublished: PropTypes.bool.isRequired,
+    publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
     showPublishDialog: PropTypes.func.isRequired,
@@ -35,13 +40,33 @@ class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
+    remix: PropTypes.func.isRequired,
+    userId: PropTypes.number,
   };
 
   onPublish = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'project-publish',
+        study_group: 'publish-chevron',
+        event: 'publish',
+        user_id: this.props.userId,
+        data_json: JSON.stringify({ channel_id: this.props.projectId })
+      }
+    );
     this.props.showPublishDialog(this.props.projectId, this.props.projectType);
   };
 
   onUnpublish = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'project-publish',
+        study_group: 'publish-chevron',
+        event: 'unpublish',
+        user_id: this.props.userId,
+        data_json: JSON.stringify({ channel_id: this.props.projectId })
+      }
+    );
     this.props.unpublishProject(this.props.projectId);
   };
 
@@ -61,31 +86,47 @@ class PersonalProjectsTableActionsCell extends Component {
     this.props.saveProjectName(this.props.projectId, this.props.updatedName);
   };
 
+  onRemix = () => {
+    this.props.remix(this.props.projectId, this.props.projectType);
+  };
+
   render() {
-    const {isEditing, isSaving} = this.props;
+    const {isEditing, isSaving, isPublishable, isPublished, publishMethod, userId, projectId} = this.props;
+    const experimentGroup = publishMethod ===
+      publishMethods.CHEVRON ?
+      'publish-chevron' :
+      'publish-button';
 
     return (
       <div>
         {!isEditing  &&
-          <QuickActionsCell>
+          <QuickActionsCell
+            experimentDetails={{
+              study: 'project-publish',
+              study_group: experimentGroup,
+              event: 'chevron',
+              user_id: userId,
+              data_json: JSON.stringify({ channel_id: projectId }),
+            }}
+          >
             <PopUpMenu.Item
               onClick={this.onRename}
             >
               {i18n.rename()}
             </PopUpMenu.Item>
             <PopUpMenu.Item
-              onClick={() => console.log("Remix was clicked")}
+              onClick={this.onRemix}
             >
               {i18n.remix()}
             </PopUpMenu.Item>
-            {this.props.isPublished && (
+            {isPublished && isPublishable && (
               <PopUpMenu.Item
                 onClick={this.onUnpublish}
               >
                 {i18n.unpublish()}
               </PopUpMenu.Item>
             )}
-            {!this.props.isPublished && (
+            {!isPublished && isPublishable && (
               <PopUpMenu.Item
                 onClick={this.onPublish}
               >
@@ -140,7 +181,10 @@ export default connect(state => ({}), dispatch => ({
   cancelRenamingProject(projectId) {
     dispatch(cancelRenamingProject(projectId));
   },
-  saveProjectName(projectId, updatedName) {
-    dispatch(saveProjectName(projectId, updatedName));
+  saveProjectName(projectId, updatedName, lastUpdatedAt) {
+    dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
+  },
+  remix(projectId, projectType) {
+    dispatch(remix(projectId, projectType));
   },
 }))(PersonalProjectsTableActionsCell);

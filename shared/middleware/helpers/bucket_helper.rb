@@ -290,17 +290,67 @@ class BucketHelper
     s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
   end
 
+  #
+  # Irrevocably removes all objects from the channel.  If the bucket is
+  # versioned, this includes all past versions of objects and all delete
+  # markers, leaving no trace that the channel was ever used.
+  #
+  # @param [String] encrypted_channel_id for the channel to hard-delete
+  # @return [Integer] the number of objects deleted
+  def hard_delete_channel_content(encrypted_channel_id)
+    # TODO: Handle pagination in the S3 APIs
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    # Find all versions of all objects
+    channel_prefix = s3_path owner_id, channel_id
+    version_list = s3.list_object_versions(bucket: @bucket, prefix: channel_prefix)
+    return 0 if version_list.versions.empty? && version_list.delete_markers.empty?
+
+    # Delete all versions and delete markers
+    objects_to_delete = (version_list.versions + version_list.delete_markers).
+      map {|v| v.to_h.slice(:key, :version_id)}
+    result = s3.delete_objects(
+      bucket: @bucket,
+      delete: {
+        objects: objects_to_delete,
+        quiet: true
+      }
+    )
+    raise <<~ERROR unless result.errors.empty?
+      Error deleting channel content:
+      #{result.errors.map(&:to_s).join("\n      ")}
+    ERROR
+    result.deleted.count
+  end
+
   def list_versions(encrypted_channel_id, filename)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    s3.list_object_versions(bucket: @bucket, prefix: key).versions.map do |version|
-      {
-        versionId: version.version_id,
-        lastModified: version.last_modified,
-        isLatest: version.is_latest
-      }
-    end
+    s3.list_object_versions(bucket: @bucket, prefix: key).
+      versions.
+      map do |version|
+        {
+          versionId: version.version_id,
+          lastModified: version.last_modified,
+          isLatest: version.is_latest
+        }
+      end
+  end
+
+  # Used for testing
+  def list_delete_markers(encrypted_channel_id, filename)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    s3.list_object_versions(bucket: @bucket, prefix: key).
+      delete_markers.
+      map do |delete_marker|
+        {
+          versionId: delete_marker.version_id,
+          lastModified: delete_marker.last_modified,
+          isLatest: delete_marker.is_latest
+        }
+      end
   end
 
   # Copies the given version of the file to make it the current revision.

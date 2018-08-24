@@ -507,7 +507,7 @@ en:
         Course_4_Artist_Functions_challenge_c: Each iteration, you should draw a square then jump forward.
         Course_4_Artist_Functions_challenge_d: You will need to turn left by 90 degrees outside of your `repeat`, but still inside the `for loop`.
       Course 4 Artist Inspire_authored_hint:
-        Course_4_Artist_Inspire_a: After you complete one square, try jumping forward half of it's length before turning and making another.
+        Course_4_Artist_Inspire_a: After you complete one square, try jumping forward half of its length before turning and making another.
         Course_4_Artist_Inspire_b: Each square and jump is repeated four times (using a left turn inbetween) to make a full pinwheel-like unit.
         Course_4_Artist_Inspire_c: Each pinwheel is also repeated four times, with a right turn of **360/sides**.
         Course_4_Artist_Inspire_d: |-
@@ -14581,7 +14581,6 @@ en:
         repeat_pointer: You have to draw a side and turn 3 times...what block can you use to run the same instructions many times?
         repeat_bottom_out: Use a `repeat 3 times` block!
       farmer-test-lb_authored_hint:
-        hint_1: Testing 123
         hint_2: Pointing 123
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: You'll need three `repeat` loops to solve this puzzle.

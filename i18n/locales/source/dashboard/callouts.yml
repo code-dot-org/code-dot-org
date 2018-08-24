@@ -601,6 +601,7 @@ en:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: {}
       Fish Tank 2-validated_callout: {}
+      Fish Tank 2-validated_simple_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Use this drop-down to create different snowflakes!
       Frozen Project Toolbox (Old)_callout:

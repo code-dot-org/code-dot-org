@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -15,6 +16,15 @@ const styles = {
   dangerText: {
     color: color.red,
   },
+  studentBox: {
+    padding: GUTTER / 2,
+    marginBottom: GUTTER / 2,
+    backgroundColor: color.background_gray,
+    border: `1px solid ${color.lighter_gray}`,
+    borderRadius: 4,
+    height: 50,
+    overflowY: 'scroll',
+  },
   button: {
     display: 'block',
     textAlign: 'center',
@@ -22,15 +32,23 @@ const styles = {
   }
 };
 
+export const dependentStudentsShape = PropTypes.arrayOf(PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+})).isRequired;
+
 export default class PersonalLoginDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
+    dependentStudents: dependentStudentsShape,
     onCancel: PropTypes.func.isRequired,
     onConfirm: PropTypes.func.isRequired,
   };
 
   render() {
-    const {isOpen, onCancel, onConfirm} = this.props;
+    const {isOpen, dependentStudents, onCancel, onConfirm} = this.props;
+    const sortedStudents = _.sortBy(dependentStudents, ['name']);
 
     return (
       <BaseDialog
@@ -42,9 +60,18 @@ export default class PersonalLoginDialog extends React.Component {
         <div style={styles.container}>
           <Header text={i18n.deleteAccountDialog_header()}/>
           <p>
-            <strong style={styles.dangerText}>{i18n.personalLoginDialog_body1()}</strong>
-            {i18n.personalLoginDialog_body2()}
+            <strong style={styles.dangerText}>{i18n.personalLoginDialog_body1({numStudents: dependentStudents.length})}</strong>
+            {i18n.personalLoginDialog_body2({numStudents: dependentStudents.length})}
           </p>
+          <div style={styles.studentBox}>
+            {sortedStudents.map((student, index) => {
+              return (
+                <div key={student.id} className="uitest-dependent-student">
+                  {index + 1}. {student.name} ({student.username})
+                </div>
+              );
+            })}
+          </div>
           <p>
             {i18n.personalLoginDialog_body3()}
             <strong>{i18n.personalLoginDialog_body4()}</strong>

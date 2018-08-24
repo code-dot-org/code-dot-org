@@ -2,11 +2,24 @@
   "category": "Events",
   "config": {
     "func": "everySeconds",
-    "blockText": "every {N} seconds",
+    "blockText": "every {N} {UNIT} ",
     "args": [
       {
         "name": "N",
         "type": "Number"
+      },
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "measures",
+            "\"measures\""
+          ],
+          [
+            "seconds",
+            "\"seconds\""
+          ]
+        ]
       }
     ],
     "eventLoopBlock": true,

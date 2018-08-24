@@ -2,7 +2,6 @@
 <block type="behavior_definition" deletable="false" movable="false" editable="false">
   <mutation>
     <arg name="this sprite" type="Sprite"/>
-    <arg name="range" type="String"/>
     <description>Maps a sprite's x position to a given sound energy range</description>
   </mutation>
   <title name="NAME">mapping my x position to</title>
@@ -27,12 +26,8 @@
   </value>
   <statement name="DO0">
     <block type="Dancelab_setProp">
+      <title name="SPRITE">this_sprite</title>
       <title name="PROPERTY">"x"</title>
-      <value name="SPRITE">
-        <block type="sprite_parameter_get">
-          <title name="VAR">this sprite</title>
-        </block>
-      </value>
       <value name="VAL">
         <block type="Dancelab_getEnergy">
           <title name="RANGE">"low"</title>
@@ -58,12 +53,8 @@
   </value>
   <statement name="DO1">
     <block type="Dancelab_setProp">
+      <title name="SPRITE">this_sprite</title>
       <title name="PROPERTY">"x"</title>
-      <value name="SPRITE">
-        <block type="sprite_parameter_get">
-          <title name="VAR">this sprite</title>
-        </block>
-      </value>
       <value name="VAL">
         <block type="Dancelab_getEnergy">
           <title name="RANGE">"mid"</title>
@@ -73,12 +64,8 @@
   </statement>
   <statement name="ELSE">
     <block type="Dancelab_setProp">
+      <title name="SPRITE">this_sprite</title>
       <title name="PROPERTY">"x"</title>
-      <value name="SPRITE">
-        <block type="sprite_parameter_get">
-          <title name="VAR">this sprite</title>
-        </block>
-      </value>
       <value name="VAL">
         <block type="Dancelab_getEnergy">
           <title name="RANGE">"high"</title>

@@ -1,3 +1,3 @@
 function randomColor() {
-  return color(randomNumber(0, 255), randomNumber(0, 255), randomNumber(0, 255)).toString();
+  return color('hsb(' + randomNumber(0, 359) + ', 100%, 100%)').toString();
 }

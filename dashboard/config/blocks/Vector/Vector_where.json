@@ -1,0 +1,26 @@
+{
+  "category": "",
+  "config": {
+    "func": "where",
+    "inline": false,
+    "blockText": "each sprite where {PROPERTY} is {VALUE} do{STATEMENT}",
+    "args": [
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "color",
+            "'shapeColor'"
+          ]
+        ]
+      },
+      {
+        "name": "VALUE"
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ]
+  }
+}

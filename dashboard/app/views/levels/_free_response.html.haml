@@ -26,8 +26,8 @@
 .free-response{:class => ('left-aligned' if left_align)}
   - if level.title.present? && (!in_level_group || is_contained_level)
     %h1= level.title
-  - if level.markdown_instructions
-    %div= render(inline: level.markdown_instructions, type: :md)
+  - if level.long_instructions
+    %div= render(inline: level.long_instructions, type: :md)
 
   - if level.allow_user_uploads?
     %script{src: minifiable_asset_path('js/fileupload/jquery.iframe-transport.js')}

@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'timecop'
+require_relative '../../../shared/test/spy_newrelic_agent'
 
 class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
@@ -1589,6 +1590,23 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_delete_own_account?
   end
 
+  test 'can_create_personal_login? is false for teacher' do
+    refute @teacher.can_create_personal_login?
+  end
+
+  test 'can_create_personal_login? is true for student with teacher-managed account' do
+    student = create :student
+    student.stubs(:teacher_managed_account?).returns(true)
+    assert student.can_create_personal_login?
+  end
+
+  test 'can_create_personal_login? is true for migrated student with oauth-only account' do
+    student = create :student
+    student.stubs(:migrated?).returns(true)
+    student.stubs(:oauth_only?).returns(true)
+    assert student.can_create_personal_login?
+  end
+
   test 'teacher_managed_account? is false for teacher' do
     refute @teacher.teacher_managed_account?
   end
@@ -1654,13 +1672,22 @@ class UserTest < ActiveSupport::TestCase
     refute student.roster_managed_account?
   end
 
-  test 'roster_managed_account? is true for migrated student in an externally rostered section' do
-    student = create :student, :with_migrated_google_authentication_option
+  test 'roster_managed_account? is true for migrated student in an externally rostered section without a password' do
+    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
     section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
     section.students << student
     student.reload
 
     assert student.roster_managed_account?
+  end
+
+  test 'roster_managed_account? is false for migrated student in an externally rostered section with a password' do
+    student = create :student, :with_migrated_google_authentication_option, password: 'mypassword'
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+    student.reload
+
+    refute student.roster_managed_account?
   end
 
   test 'roster_managed_account? is false for unmigrated student in an externally rostered section with a password' do
@@ -1879,6 +1906,97 @@ class UserTest < ActiveSupport::TestCase
     assert_equal original_primary_contact_info, user.primary_contact_info
   end
 
+  def upgrade_to_personal_login_params(**args)
+    {
+      username: 'my_new_username',
+      parent_email: 'parent@email.com',
+      email: 'my@email.com',
+      password: 'mypassword',
+      password_confirmation: 'mypassword',
+      secret_words: 'secret words',
+    }.merge(args)
+  end
+
+  test 'upgrade_to_personal_login is false for teacher' do
+    refute @teacher.upgrade_to_personal_login(upgrade_to_personal_login_params)
+  end
+
+  test 'upgrade_to_personal_login is false for word account with empty secret words' do
+    word_student = create :student_in_word_section
+    word_student.update!(secret_words: 'secret words')
+    params = upgrade_to_personal_login_params(secret_words: '')
+
+    refute word_student.upgrade_to_personal_login(params)
+    assert_equal ['Secret words are required'], word_student.errors.full_messages
+  end
+
+  test 'upgrade_to_personal_login is false for word account with incorrect secret words' do
+    word_student = create :student_in_word_section
+    word_student.update!(secret_words: 'secret words')
+    params = upgrade_to_personal_login_params(secret_words: 'incorrect words')
+
+    refute word_student.upgrade_to_personal_login(params)
+    assert_equal ['Secret words are invalid'], word_student.errors.full_messages
+  end
+
+  test 'upgrade_to_personal_login is true for successfully updated non-migrated student' do
+    student = create :student, :unmigrated_google_sso
+    params = upgrade_to_personal_login_params
+
+    assert student.upgrade_to_personal_login(params)
+    student.reload
+    assert_nil student.provider
+    assert_equal User.hash_email(params[:email]), student.hashed_email
+    assert_equal params[:username], student.username
+    assert_equal params[:parent_email], student.parent_email
+    assert student.valid_password?(params[:password])
+  end
+
+  test 'upgrade_to_personal_login is false for migrated student if update_primary_contact_info fails' do
+    student = create :student, :with_migrated_google_authentication_option
+    student.stubs(:update_primary_contact_info!).raises(RuntimeError)
+    params = upgrade_to_personal_login_params
+    new_email = params[:email]
+
+    refute student.upgrade_to_personal_login(params)
+    student.reload
+    refute_nil student.provider
+    refute_equal User.hash_email(new_email), student.hashed_email
+    refute_equal params[:username], student.username
+    refute_equal params[:parent_email], student.parent_email
+    refute student.valid_password?(params[:password])
+  end
+
+  test 'upgrade_to_personal_login is false for migrated student if update fails' do
+    student = create :student, :with_migrated_google_authentication_option
+    student.stubs(:update!).raises(ActiveRecord::RecordInvalid)
+    params = upgrade_to_personal_login_params
+    new_email = params[:email]
+
+    refute student.upgrade_to_personal_login(params)
+    student.reload
+    refute_nil student.provider
+    refute_equal User.hash_email(new_email), student.hashed_email
+    refute_equal params[:username], student.username
+    refute_equal params[:parent_email], student.parent_email
+    refute student.valid_password?(params[:password])
+  end
+
+  test 'upgrade_to_personal_login is true for successfully updated migrated student' do
+    student = create :student, :with_migrated_google_authentication_option
+    params = upgrade_to_personal_login_params
+    new_email = params[:email]
+
+    assert student.upgrade_to_personal_login(params)
+    student.reload
+    refute_nil student.provider
+    assert_equal 2, student.authentication_options.count
+    assert_equal User.hash_email(new_email), student.hashed_email
+    assert_equal params[:username], student.username
+    assert_equal params[:parent_email], student.parent_email
+    assert student.valid_password?(params[:password])
+  end
+
   test 'downgrade_to_student sets user_type to student and clears cleartext emails' do
     user = create :teacher, :with_migrated_email_authentication_option
     assert user.downgrade_to_student
@@ -1887,28 +2005,75 @@ class UserTest < ActiveSupport::TestCase
     assert_empty user.email
   end
 
-  test 'upgrade_to_teacher is false if matching authentication option is not found' do
-    user = create :student, :with_migrated_google_authentication_option
-    refute user.upgrade_to_teacher('some_fake@email.com', {})
+  def email_preference_params(**args)
+    {
+      email_preference_opt_in: 'no',
+      email_preference_request_ip: '127.0.0.1',
+      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
+      email_preference_form_kind: '0',
+    }.merge(args)
+  end
+
+  test 'upgrade_to_teacher is false if updating primary contact info fails' do
+    user = create :student, :with_migrated_email_authentication_option
+    original_primary_contact_info = user.primary_contact_info
+    user.stubs(:update_primary_contact_info!).raises(RuntimeError)
+
+    assert_equal 1, user.authentication_options.count
+    refute_nil original_primary_contact_info
+
+    refute user.upgrade_to_teacher('example@email.com', email_preference_params)
     user.reload
-    assert_equal ["Email is invalid"], user.errors.full_messages
+    assert_equal 1, user.authentication_options.count
+    assert_equal original_primary_contact_info, user.primary_contact_info
+    assert_nil EmailPreference.find_by_email('example@email.com')
+  end
+
+  test 'upgrade_to_teacher is false if user update fails' do
+    user = create :student, :with_migrated_email_authentication_option
+    original_primary_contact_info = user.primary_contact_info
+    user.stubs(:update!).raises(ActiveRecord::RecordInvalid)
+
+    assert_equal 1, user.authentication_options.count
+    refute_nil original_primary_contact_info
+
+    refute user.upgrade_to_teacher('example@email.com', email_preference_params)
+    user.reload
+    assert_equal 1, user.authentication_options.count
+    assert_equal original_primary_contact_info, user.primary_contact_info
+    assert_nil EmailPreference.find_by_email('example@email.com')
+  end
+
+  test 'upgrade_to_teacher is true if new authentication option is created' do
+    user = create :student, :with_migrated_google_authentication_option
+
+    assert_equal 1, user.authentication_options.count
+
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
+    user.reload
+    assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal 2, user.authentication_options.count
+    assert_equal 'example@email.com', user.email
+    email_preference = EmailPreference.find_by_email('example@email.com')
+    refute email_preference.opt_in
+    assert_equal '127.0.0.1', email_preference.ip_address
+    assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, email_preference.source
+    assert_equal '0', email_preference.form_kind
   end
 
   test 'upgrade_to_teacher is true if matching authentication option is found' do
     user = create :student, :with_migrated_google_authentication_option
     auth_option = create :authentication_option, user: user, email: 'example@email.com'
-    email_preference_params = {
-      email_preference_opt_in: 'yes',
-      email_preference_request_ip: '127.0.0.1',
-      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
-      email_preference_form_kind: '0',
-    }
-    assert_empty auth_option.email
 
+    assert_empty auth_option.email
+    assert_equal 2, user.authentication_options.count
+
+    email_preference_params = email_preference_params(email_preference_opt_in: 'yes')
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
     user.reload
     auth_option.reload
     assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal 2, user.authentication_options.count
     assert_equal auth_option, user.primary_contact_info
     assert_equal 'example@email.com', auth_option.email
     email_preference = EmailPreference.find_by_email('example@email.com')
@@ -2668,6 +2833,35 @@ class UserTest < ActiveSupport::TestCase
     refute section.reload.deleted?
     assert follower.reload.deleted?
     assert student.reload.deleted?
+  end
+
+  test 'soft-deleting a user records a NewRelic metric' do
+    original_newrelic_logging = CDO.newrelic_logging
+    CDO.newrelic_logging = true
+
+    student = create :student
+
+    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1)
+    result = student.destroy
+
+    assert_equal student, result
+  ensure
+    CDO.newrelic_logging = original_newrelic_logging
+  end
+
+  test 'soft-deleting a group of users records NewRelic metrics' do
+    original_newrelic_logging = CDO.newrelic_logging
+    CDO.newrelic_logging = true
+
+    student_a = create :student
+    student_b = create :student
+
+    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1).twice
+    result = User.destroy [student_a.id, student_b.id]
+
+    assert_equal [student_a, student_b], result
+  ensure
+    CDO.newrelic_logging = original_newrelic_logging
   end
 
   test 'undestroy restores recent dependents only' do
@@ -3609,5 +3803,51 @@ class UserTest < ActiveSupport::TestCase
     another_section.students << student
 
     assert section.teacher.depended_upon_for_login?
+  end
+
+  test 'dependent_students for student: returns empty array' do
+    student = create :student
+    assert_empty student.dependent_students
+  end
+
+  test 'dependent_students for teacher: does not return other teachers' do
+    section = create :section
+    another_teacher = create :teacher
+    section.students << another_teacher
+
+    assert_empty section.teacher.dependent_students
+  end
+
+  test 'dependent_students for teacher: does not return students with personal logins' do
+    section = create :section
+    create(:follower, section: section)
+
+    assert_empty section.teacher.dependent_students
+  end
+
+  test 'dependent_students for teacher: does not return students without personal logins that have other teachers' do
+    student = create :student_in_word_section
+    teacher = student.teachers.first
+    another_section = create :section
+    another_section.students << student
+
+    assert_empty teacher.dependent_students
+  end
+
+  test 'dependent_students for teacher: returns students without personal logins that have no other teachers' do
+    student = create :student_in_word_section
+    teacher = student.teachers.first
+    another_word_section = create :section, user: teacher, login_type: Section::LOGIN_TYPE_WORD
+    another_word_section.students << student
+
+    assert_equal [student.summarize], teacher.dependent_students
+  end
+
+  test 'dependent_students for teacher: returns students in rostered sections without passwords that have no other teachers' do
+    student = create :student, :unmigrated_google_sso, encrypted_password: nil
+    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+    section.students << student
+
+    assert_equal [student.summarize], section.teacher.dependent_students
   end
 end

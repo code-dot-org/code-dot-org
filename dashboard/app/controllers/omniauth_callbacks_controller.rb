@@ -54,9 +54,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def login
     auth_hash = request.env['omniauth.auth']
     auth_params = request.env['omniauth.params']
+    provider = auth_hash.provider.to_s
 
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
-    if request.env["omniauth.auth"].provider.to_s == 'powerschool'
+    if provider == 'powerschool'
       auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
     end
 
@@ -74,8 +75,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
-    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(@user.provider) && @user.persisted?
-      handle_untrusted_email_signin(@user)
+    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
+      handle_untrusted_email_signin(@user, provider)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
       check_and_apply_oauth_takeover(@user)
@@ -85,9 +86,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
       # Note that @user.email is populated by User.from_omniauth even for students
       if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&useClever=true"
+        redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
       else
-        redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
+        redirect_to "/users/sign_in?providerNotLinked=#{provider}&email=#{@user.email}"
       end
     else
       # This is a new registration
@@ -133,7 +134,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
-  def handle_untrusted_email_signin(user)
+  def handle_untrusted_email_signin(user, provider)
     force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
 
     # We used to check this based on sign_in_count, but we're explicitly logging it now
@@ -145,9 +146,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       # Otherwise, it's either the first login, or a user who must connect -
       # offer to connect the Clever account to an existing one, or insist if needed
-      session['clever_link_flag'] = user.provider
-      session['clever_takeover_id'] = user.uid
-      session['clever_takeover_token'] = user.oauth_token
+      if user.migrated?
+        auth_option = user.authentication_options.find_by credential_type: provider
+        session['clever_link_flag'] = provider
+        session['clever_takeover_id'] = auth_option.authentication_id
+        session['clever_takeover_token'] = auth_option.data_hash[:oauth_token]
+      else
+        session['clever_link_flag'] = user.provider
+        session['clever_takeover_id'] = user.uid
+        session['clever_takeover_token'] = user.oauth_token
+      end
       session['force_clever_takeover'] = force_takeover
       user.seen_oauth_connect_dialog = true
       user.save!
@@ -189,7 +197,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           oauth_token: auth_hash.credentials&.token,
           oauth_token_expiration: auth_hash.credentials&.expires_at,
           oauth_refresh_token: auth_hash.credentials&.refresh_token
-        }
+        }.to_json
       )
       unless success
         # This should never happen if other logic is working correctly, so notify

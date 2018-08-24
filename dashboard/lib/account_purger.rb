@@ -1,3 +1,5 @@
+require 'cdo/delete_accounts_helper'
+
 #
 # Responsible for performing unrecoverable deletion of PII from our system.
 #
@@ -19,14 +21,27 @@ class AccountPurger
   attr_reader :dry_run
   alias :dry_run? :dry_run
 
-  def initialize(options = {})
-    @dry_run = options[:dry_run].nil? ? false : options[:dry_run]
-    raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
+  def initialize(dry_run: false, log: STDERR, bypass_safety_constraints: false)
+    @dry_run = dry_run
+    raise ArgumentError, 'dry_run must be boolean' unless [true, false].include? @dry_run
+
+    @log = log
+    raise ArgumentError, 'log must be an IO stream' unless @log.is_a?(IO) || @log.is_a?(StringIO)
+
+    @bypass_safety_constraints = bypass_safety_constraints
+    raise ArgumentError, 'bypass_safety_constraints must be boolean' unless [true, false].include? @bypass_safety_constraints
   end
 
   # Purge information for an individual user account.
-  def purge_data_for_account(_user)
-    raise 'Not implemented' unless @dry_run
+  def purge_data_for_account(user)
+    @log.puts "Purging user_id #{user.id}#{@dry_run ? ' (dry-run)' : ''}"
+    purged_account_log = PurgedAccountLog.new user,
+      reason: PurgedAccountLog::SOFT_DELETE_28_DAYS_AGO
+
+    really_purge_data_for_account user unless @dry_run
+
+    purged_account_log.purged_at = Time.now
+    purged_account_log.upload unless @dry_run
   end
 
   # Purge all information associated with an email address.
@@ -35,5 +50,15 @@ class AccountPurger
   # ensure the email is removed from mailing lists, etc.
   def purge_data_for_email(_email)
     raise 'Not implemented' unless @dry_run
+  end
+
+  private def really_purge_data_for_account(user)
+    ActiveRecord::Base.transaction do
+      PEGASUS_DB.transaction do
+        DeleteAccountsHelper.
+          new(bypass_safety_constraints: @bypass_safety_constraints).
+          purge_user user
+      end
+    end
   end
 end

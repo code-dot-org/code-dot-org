@@ -6,34 +6,35 @@
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "type": "Sprite",
+        "customInput": "spritePicker"
       },
       {
         "name": "MOVE",
         "options": [
           [
-            "Standing",
+            "Rest",
             "0"
           ],
           [
-            "Clap",
+            "Breakdown",
             "1"
           ],
           [
-            "Spin",
+            "Floss",
             "2"
           ],
           [
-            "Uprock",
+            "Fresh",
             "3"
-          ],
-          [
-            "Bboy",
-            "4"
           ],
           [
             "Next",
             "\"next\""
+          ],
+          [
+            "Previous",
+            "\"prev\""
           ],
           [
             "Random",

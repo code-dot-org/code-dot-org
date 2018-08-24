@@ -1,6 +1,6 @@
 import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import ConfirmationDialog from '@cdo/apps/code-studio/pd/workshop_dashboard/components/confirmation_dialog';
+import ConfirmationDialog from '@cdo/apps/code-studio/pd/components/confirmation_dialog';
 import {Button} from 'react-bootstrap';
 import React from 'react';
 import {expect} from 'chai';
@@ -15,9 +15,10 @@ from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 const defaultProps = {
   permission: new Permission(),
+  course: 'CS Principles',
   workshopId: 123,
   viewUrl: "viewUrl",
-  date: new Date().toISOString()
+  date: "2017-07-01"
 };
 
 describe("WorkshopManagement", () => {
@@ -67,6 +68,16 @@ describe("WorkshopManagement", () => {
       />, {context}
     ).instance().surveyUrl;
 
+    it("uses daily results for academic year workshop past August 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-09-01", subject: '1-day Academic Year, Units 1 and 2'});
+      expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
+    });
+
+    it("uses survey results for academic year workshop before August 2018", () => {
+      const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: '1-day Academic Year, Units 1 and 2'});
+      expect(surveyUrl).to.eql("/survey_results/123");
+    });
+
     it("uses daily results for local summer in 2018", () => {
       const surveyUrl = getSurveyUrlForProps({date: "2018-07-01", subject: WorkshopTypes.local_summer});
       expect(surveyUrl).to.eql("/local_summer_workshop_daily_survey_results/123");
@@ -78,7 +89,7 @@ describe("WorkshopManagement", () => {
     });
 
     it("uses local summer results for local summer in 2017", () => {
-      const surveyUrl = getSurveyUrlForProps({date: "2017-07-01", subject: WorkshopTypes.local_summer});
+      const surveyUrl = getSurveyUrlForProps({subject: WorkshopTypes.local_summer});
       expect(surveyUrl).to.eql("/local_summer_workshop_survey_results/123");
     });
 

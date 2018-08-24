@@ -49,7 +49,11 @@ def restore_redacted_files
       source_path = redacted_path.sub("redacted", "source")
       translated_path = redacted_path.sub("redacted", locale)
 
-      restore(source_path, translated_path, translated_path)
+      plugin = 'nonPedanticEmphasis'
+      if redacted_path == 'i18n/locales/redacted/dashboard/blocks.yml'
+        plugin = 'blockfield'
+      end
+      restore(source_path, redacted_path, translated_path, plugin)
     end
   end
 end

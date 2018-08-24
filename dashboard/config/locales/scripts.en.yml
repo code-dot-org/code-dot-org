@@ -9560,7 +9560,7 @@ en:
           description_short: FIT Training Course
           description: To be used to demonstrate how the PLC courses work.
         spritelab-simple:
-          title: Introduction to Sprite Lab (PILOT)
+          title: Introduction to Sprite Lab (EE)
           description: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
           description_audience: Course E/F Students
@@ -9577,3 +9577,23 @@ en:
               name: Virtual Pet - Interactions
               description_student: ''
               description_teacher: ''
+        spritelab-ee:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: Fish Tank - Creating Sprites
+            Alien Dance Party - Input:
+              name: Alien Dance Party - Input
+            Virtual Pet - Interactions:
+              name: Virtual Pet - Interactions
+          title: Introduction to Sprite Lab (EE)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        craft18:
+          stages:
+            craft18 levels:
+              name: craft18 levels
+          title: craft18 test script
+          description_audience: ''
+          description_short: ''
+          description: ''

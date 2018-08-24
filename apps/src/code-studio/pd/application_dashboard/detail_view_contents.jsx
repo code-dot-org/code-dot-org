@@ -19,7 +19,7 @@ import {
   UNMATCHED_PARTNER_LABEL
 } from '../components/regional_partner_dropdown';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
-import ConfirmationDialog from '../workshop_dashboard/components/confirmation_dialog';
+import ConfirmationDialog from '../components/confirmation_dialog';
 import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
 import _ from 'lodash';
 import {

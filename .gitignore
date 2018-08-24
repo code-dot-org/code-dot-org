@@ -23,6 +23,7 @@ npm-debug.log
 /apps/log
 /apps/newrelic_agent.log
 /apps/node_modules/
+/bin/i18n/node_modules/
 /apps/npm-debug.log
 /apps/src/generated/*
 !/apps/src/generated/README.md

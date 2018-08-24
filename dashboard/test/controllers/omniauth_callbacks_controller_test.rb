@@ -507,7 +507,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           oauth_token: 'fake_token',
           oauth_token_expiration: '999999',
           oauth_refresh_token: 'fake_refresh_token'
-        }
+        }.to_json
       }
     )
 
@@ -540,7 +540,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           oauth_token: 'fake_token',
           oauth_token_expiration: '999999',
           oauth_refresh_token: 'fake_refresh_token'
-        }
+        }.to_json
       }
     )
 

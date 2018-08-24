@@ -3,13 +3,18 @@ import React, {PropTypes} from 'react';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 
 import AssetRow from './AssetRow';
-import AssetUploader from './AssetUploader';
 import assetListStore from '../assets/assetListStore';
 import AudioRecorder from './AudioRecorder';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from "../../templates/Button";
+import AddAssetButtonRow from "./AddAssetButtonRow";
 import i18n from '@cdo/locale';
+
+export const AudioErrorType = {
+  NONE: 'none',
+  INITIALIZE: 'initialize',
+  SAVE: 'save'
+};
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -26,42 +31,11 @@ function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
 
-const RecordButton = ({onSelectRecord}) => (
-  <Button
-    onClick={onSelectRecord}
-    id="record-asset"
-    className="share"
-    text={i18n.recordAudio()}
-    icon="microphone"
-    style={assetButtonStyles.button}
-    size="large"
-  />
-);
-
-RecordButton.propTypes = {
-  onSelectRecord: PropTypes.func,
-};
-
-export const assetButtonStyles = {
-  button: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 5,
-    borderRadius: 4,
-    fontSize: 'large',
-    fontWeight: 'lighter',
-  }
-};
-
 const styles = {
   emptyText: {
     margin: '1em 0',
     fontSize: '16px',
     lineHeight: '20px'
-  },
-  buttonRow: {
-    display: 'flex',
-    flexFlow: 'row',
   }
 };
 
@@ -76,7 +50,8 @@ export default class AssetManager extends React.Component {
     uploadsEnabled: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool,
     //For logging upload failures
-    projectId: PropTypes.string
+    projectId: PropTypes.string,
+    soundPlayer: PropTypes.object
   };
 
   constructor(props) {
@@ -84,7 +59,8 @@ export default class AssetManager extends React.Component {
     this.state = {
       assets: null,
       statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
-      recordingAudio: false
+      recordingAudio: false,
+      audioErrorType: AudioErrorType.NONE
     };
   }
 
@@ -171,30 +147,36 @@ export default class AssetManager extends React.Component {
     });
   };
 
-  render() {
-    const uploadButton = (<div>
-      <AssetUploader
-        uploadsEnabled={this.props.uploadsEnabled}
-        allowedExtensions={this.props.allowedExtensions}
-        useFilesApi={this.props.useFilesApi}
-        onUploadStart={this.onUploadStart}
-        onUploadDone={this.onUploadDone}
-        onUploadError={this.onUploadError}
-      />
-      <span style={{margin: '0 10px'}} id="manage-asset-status">
-        {this.state.statusMessage}
-      </span>
-    </div>);
+  afterAudioSaved = (err) => {
+    this.setState({recordingAudio: false, audioErrorType: err});
+  };
 
+  render() {
+    const displayAudioRecorder = this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
+      experiments.isEnabled('recordAudio') && this.state.recordingAudio;
     const buttons = (
       <div>
-        {experiments.isEnabled('recordAudio') && this.state.recordingAudio &&
-          <AudioRecorder onUploadDone={this.onUploadDone}/>
+        {this.state.audioErrorType === AudioErrorType.SAVE &&
+          <div>{i18n.audioSaveError()}</div>
         }
-        <span style={styles.buttonRow}>
-          {uploadButton}
-          {experiments.isEnabled('recordAudio') && <RecordButton onSelectRecord={this.onSelectRecord}/>}
-        </span>
+        {this.state.audioErrorType === AudioErrorType.INITIALIZE &&
+          <div>{i18n.audioInitializeError()}</div>
+        }
+        {displayAudioRecorder &&
+          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved}/>
+        }
+        <AddAssetButtonRow
+          uploadsEnabled={this.props.uploadsEnabled}
+          allowedExtensions={this.props.allowedExtensions}
+          useFilesApi={this.props.useFilesApi}
+          onUploadStart={this.onUploadStart}
+          onUploadDone={this.onUploadDone}
+          onUploadError={this.onUploadError}
+          onSelectRecord={this.onSelectRecord}
+          statusMessage={this.state.statusMessage}
+          recordDisabled={this.state.recordingAudio}
+          recordEnabled={experiments.isEnabled('recordAudio')}
+        />
       </div>
     );
 
@@ -238,6 +220,7 @@ export default class AssetManager extends React.Component {
             useFilesApi={this.props.useFilesApi}
             onChoose={choose}
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
+            soundPlayer={this.props.soundPlayer}
           />
         );
       }.bind(this));

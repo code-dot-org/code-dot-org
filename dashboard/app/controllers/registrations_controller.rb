@@ -58,7 +58,8 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def users_to_destroy
     return head :bad_request unless current_user&.can_delete_own_account?
-    render json: get_users_to_destroy(current_user)
+    users = current_user.dependent_students << current_user.summarize
+    render json: users
   end
 
   def destroy
@@ -72,8 +73,9 @@ class RegistrationsController < Devise::RegistrationsController
       }, status: :bad_request
       return
     end
-    TeacherMailer.delete_teacher_email(current_user).deliver_now if current_user.teacher?
-    destroy_dependent_users(current_user)
+    dependent_students = current_user.dependent_students
+    destroy_users(dependent_students << current_user)
+    TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
     return head :no_content
   end
@@ -106,31 +108,13 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def upgrade
-    return head(:bad_request) if params[:user].nil?
-    params_to_pass = params.deep_dup
-    # Set provider to nil to mark the account as self-managed
-    user_params = params_to_pass[:user].merge!({provider: nil})
+    return head(:bad_request) unless params[:user].present? && current_user&.can_create_personal_login?
+    user_params = params[:user]
     # User model normalizes and hashes email _after_ validation **rage**
     user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
-    can_update =
-      if current_user.teacher_managed_account?
-        if current_user.secret_word_account?
-          secret_words_match = user_params[:secret_words] == current_user.secret_words
-          unless secret_words_match
-            error_string = user_params[:secret_words].blank? ? :blank_plural : :invalid_plural
-            current_user.errors.add(:secret_words, error_string)
-          end
-          secret_words_match
-        else
-          true
-        end
-      else
-        false
-      end
-
-    successfully_updated = can_update && current_user.update(upgrade_params(params_to_pass))
+    successfully_updated = current_user.upgrade_to_personal_login(upgrade_params)
     has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
     success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
 
@@ -304,7 +288,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   # Accept only whitelisted params for update and upgrade.
-  def upgrade_params(params)
+  def upgrade_params
     params.require(:user).permit(
       :username,
       :parent_email,
@@ -312,7 +296,7 @@ class RegistrationsController < Devise::RegistrationsController
       :hashed_email,
       :password,
       :password_confirmation,
-      :provider
+      :secret_words,
     )
   end
 
@@ -382,19 +366,8 @@ class RegistrationsController < Devise::RegistrationsController
       )
   end
 
-  def get_users_to_destroy(user)
-    users = []
-    if user.teacher?
-      user.students.uniq.each do |student|
-        users << student.summarize if student.depends_on_teacher_for_login?
-      end
-    end
-    users << user.summarize
-    users
-  end
-
-  def destroy_dependent_users(user)
-    user_ids_to_destroy = get_users_to_destroy(user).pluck(:id)
+  def destroy_users(users)
+    user_ids_to_destroy = users.pluck(:id)
     User.destroy(user_ids_to_destroy)
   end
 end

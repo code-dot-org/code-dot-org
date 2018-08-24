@@ -38,7 +38,6 @@ class PersonalProjectsNameCell extends Component {
               style={styles.inputBox}
               value={updatedName}
               onChange={this.onChangeName}
-              placeholder={projectName}
             />
           </div>
         }
