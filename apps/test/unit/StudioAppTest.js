@@ -165,6 +165,7 @@ describe("StudioApp", () => {
     it('calls a handler in response to a blockly change', () => {
       let changed = false;
       studioApp().usingBlockly_ = true;
+      studioApp().setupChangeHandlers();
 
       studioApp().addChangeHandler(() => changed = true);
       Blockly.mainBlockSpace.getCanvas()
@@ -178,6 +179,7 @@ describe("StudioApp", () => {
       studioApp().usingBlockly_ = false;
       studioApp().editor = $(document.createElement('div'));
       studioApp().editor.aceEditor = $(document.createElement('div'));
+      studioApp().setupChangeHandlers();
 
       studioApp().addChangeHandler(() => changed = true);
       studioApp().editor.trigger('change');
@@ -192,6 +194,7 @@ describe("StudioApp", () => {
       studioApp().usingBlockly_ = false;
       studioApp().editor = $(document.createElement('div'));
       studioApp().editor.aceEditor = $(document.createElement('div'));
+      studioApp().setupChangeHandlers();
 
       studioApp().addChangeHandler(() => changed = true);
       studioApp().editor.aceEditor.trigger('change');
@@ -203,6 +206,7 @@ describe("StudioApp", () => {
 
     it('calls multiple handlers in response to a blockly change', () => {
       let changed1 = false, changed2 = false;
+      studioApp().setupChangeHandlers();
 
       studioApp().addChangeHandler(() => changed1 = true);
       studioApp().addChangeHandler(() => changed2 = true);
