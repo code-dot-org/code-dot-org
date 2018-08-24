@@ -78,8 +78,6 @@ const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
 const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
-/** temporary flag to enable versionMenu experiment */
-const SET_SHOW_VERSION_MENU = 'teacherSections/SET_SHOW_VERSION_MENU';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -107,10 +105,6 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
   sectionId: sectionId,
   students: studentInfo
-});
-export const setShowVersionMenu = (enabled) => ({
-  type: SET_SHOW_VERSION_MENU,
-  enabled
 });
 
 /**
@@ -353,8 +347,6 @@ const initialState = {
   classrooms: null,
   // Error that occurred while loading oauth classrooms
   loadError: null,
-  // whether to show the new version menu
-  showVersionMenu: false,
 };
 
 /**
@@ -767,13 +759,6 @@ export default function teacherSections(state=initialState, action) {
         // explicitly unhide section after importing
         hidden: false
       },
-    };
-  }
-
-  if (action.type === SET_SHOW_VERSION_MENU) {
-    return {
-      ...state,
-      showVersionMenu: action.enabled
     };
   }
 
