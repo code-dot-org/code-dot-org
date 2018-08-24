@@ -90,6 +90,7 @@ class DeleteAccountsHelper
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
   def clean_and_destroy_pd_content(user_id)
+    remove_from_cohorts user_id
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
     workshop_material_order_ids = Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
@@ -141,6 +142,23 @@ class DeleteAccountsHelper
         zip_code: '',
         phone_number: ''
       )
+    end
+  end
+
+  def remove_from_cohorts(user_id)
+    delete_limit = 10
+    where_clause = "WHERE user_id='#{user_id}'"
+    %w(cohorts_users cohorts_deleted_users).each do |table|
+      result = ActiveRecord::Base.connection.exec_query <<-SQL
+        SELECT user_id FROM #{table} #{where_clause}
+      SQL
+      found_rows = result.rows.count
+      assert_constraint found_rows <= delete_limit,
+        "Safety constraints only permit deleting up to #{delete_limit} rows " \
+        "from #{table}, but found #{found_rows} rows."
+      ActiveRecord::Base.connection.execute <<-SQL
+        DELETE FROM #{table} #{where_clause}
+      SQL
     end
   end
 
