@@ -274,7 +274,7 @@ function installMathNumber(blockly, generator, gensym) {
   };
 
   generator.functional_math_number = function () {
-    return this.getTitleValue('NUM');
+    return +this.getTitleValue('NUM');
   };
 
   blockly.Blocks.functional_math_number_dropdown = {

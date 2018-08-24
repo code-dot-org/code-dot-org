@@ -83,7 +83,16 @@ module Pd::WorkshopFilters
       workshops = workshops.scheduled_start_on_or_before(ensure_date(params[:end])) if params[:end]
       workshops = workshops.where(course: params[:course]) if params[:course]
       workshops = workshops.where(subject: params[:subject]) if params[:subject]
-      workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
+
+      if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+        workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
+        workshops = workshops.facilitated_by(User.find_by(id: params[:facilitator_id])) if params[:facilitator_id]
+      end
+
+      if params[:regional_partner_id] && params[:regional_partner_id] != 'all'
+        regional_partner_id = params[:regional_partner_id] == 'none' ? nil : params[:regional_partner_id]
+        workshops = workshops.where(regional_partner_id: regional_partner_id)
+      end
 
       if current_user.permission?(UserPermission::WORKSHOP_ADMIN) && params[:teacher_email]
         teacher = User.find_by(email: params[:teacher_email])
@@ -138,10 +147,12 @@ module Pd::WorkshopFilters
       :end,
       :course,
       :subject,
+      :facilitator_id,
       :organizer_id,
       :teacher_email,
       :only_attended,
-      :order_by
+      :order_by,
+      :regional_partner_id
     )
   end
 

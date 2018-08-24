@@ -1,4 +1,3 @@
-# coding: utf-8
 # == Schema Information
 #
 # Table name: census_submissions
@@ -115,5 +114,9 @@ class Census::CensusSubmission < ApplicationRecord
     left_joins(:census_inaccuracy_investigations).
       where(inaccuracy_reported: true).
       where('census_inaccuracy_investigations.id is null')
+  end
+
+  def submitter_email_address=(value)
+    super(value&.strip&.downcase)
   end
 end

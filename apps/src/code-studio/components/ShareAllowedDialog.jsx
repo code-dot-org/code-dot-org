@@ -11,11 +11,12 @@ import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
-import { showPublishDialog } from '../../templates/publishDialog/publishDialogRedux';
-import PublishDialog from '../../templates/publishDialog/PublishDialog';
+import { showPublishDialog } from '../../templates/projects/publishDialog/publishDialogRedux';
+import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import DownloadAsGif from "./DownloadAsGif";
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -162,6 +163,7 @@ class ShareAllowedDialog extends React.Component {
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
+    getNextFrame: PropTypes.func,
   };
 
   state = {
@@ -260,7 +262,7 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {canPrint, canPublish, isPublished, userSharingDisabled, appType} = this.props;
+    const {canPrint, canPublish, isPublished, userSharingDisabled, appType, getNextFrame} = this.props;
     return (
       <div>
         <BaseDialog
@@ -326,6 +328,13 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 </div>
                 <div className="social-buttons">
+                  {window.createGifCapture && getNextFrame &&
+                    <DownloadAsGif
+                      getNextFrame={getNextFrame}
+                      styles={styles}
+                      className="no-mc"
+                    />
+                  }
                   <a id="sharing-phone" href="" onClick={wrapShareClick(this.showSendToPhone.bind(this), 'send-to-phone')}>
                     <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
                     <span>Send to phone</span>
@@ -417,6 +426,7 @@ export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
   isUnpublishPending: state.shareDialog.isUnpublishPending,
+  getNextFrame: state.shareDialog.getNextFrame,
 }), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog(projectId, projectType) {

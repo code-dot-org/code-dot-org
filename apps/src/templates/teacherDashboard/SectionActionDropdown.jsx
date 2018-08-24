@@ -141,7 +141,7 @@ class SectionActionDropdown extends Component {
           <PopUpMenu.Item
             onClick={this.onClickHideShow}
           >
-            {this.props.sectionData.hidden ? i18n.showSection() : i18n.hideSection()}
+            {this.props.sectionData.hidden ? i18n.restoreSection() : i18n.archiveSection()}
           </PopUpMenu.Item>
           {sectionData.studentCount === 0 &&
             <PopUpMenu.Item

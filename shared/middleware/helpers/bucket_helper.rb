@@ -175,27 +175,66 @@ class BucketHelper
     response
   end
 
-  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, user_id)
-    return unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
+  # When updating s3://cdo-v3-sources/.../main.json, checks that the
+  # current_version from the client is the latest version on the server. If a
+  # different client more recently wrote to this project, logs an event to
+  # firehose and halts with 409 Conflict.
+  #
+  # In some cases, S3 replication lag could cause the current_version not to
+  # even appear in the version list. In this case, do not log or halt.
+  #
+  # Clients displaying projects must obey the following rules:
+  # (1) When loading a project, read its latest version.
+  # (2) When saving a project for the first time, create a new version, but
+  #     do not replace any previous versions.
+  # (3) When saving a project subsequent times, create a new version, and
+  #     replace the "current version" (i.e. last known version that client wrote).
+  #
+  # Therefore, a project will only ever replace a version that it created, and
+  # we can say the client "owns" a particular version if that client created it.
+  def check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, user_id)
+    return true unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && current_version
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    # check current version id without pulling down the whole object.
-    current_version = s3.get_object_tagging(bucket: @bucket, key: key).version_id
+    # This is an Array of ObjectVersions, defined in:
+    # https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Types/ObjectVersion.html
+    versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
 
-    return if version_to_replace == current_version
+    target_version_metadata = versions.find {|v| v.version_id == current_version}
+
+    error_type =
+      if should_replace
+        # If we are replacing the target version, then we "own" it and don't have
+        # to worry about other clients replacing it. We *do* have to worry about
+        # the target version not being visible yet due to S3's read-after-write
+        # eventual consistency though, so allow the target version to either be
+        # (absent or (present and latest)).
+        return true unless target_version_metadata && !target_version_metadata.is_latest
+        'reject-replacing-older-main-json'
+      else
+        # Since we are not replacing the target version, we can conclude:
+        # (1) the client just loaded the project for the first time, meaning
+        #     the client recently successfully read this version, so we aren't
+        #     too worried about S3 inconsistency.
+        # (2) this version is owned by a different client, therefore another
+        #     client may have already replaced it.
+        # Guard against this scenario by requiring that the target version be
+        # both present and latest, without worrying about S3 inconsistency.
+        return true if target_version_metadata&.is_latest
+        'reject-comparing-older-main-json'
+      end
 
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
       study_group: 'v3',
-      event: 'replace-non-current-main-json',
+      event: error_type,
 
       project_id: encrypted_channel_id,
       user_id: user_id,
 
       data_json: {
-        replacedVersionId: version_to_replace,
         currentVersionId: current_version,
         tabId: tab_id,
         key: key,
@@ -203,15 +242,13 @@ class BucketHelper
         # Server timestamp indicating when the first version of main.json was saved by the browser
         # tab making this request. This is for diagnosing problems with writes from multiple browser
         # tabs.
-        firstSaveTimestamp: timestamp
+        firstSaveTimestamp: timestamp,
+
+        versions: versions,
       }.to_json
     )
-  rescue Aws::S3::Errors::NoSuchKey
-    # Because create and update operations are both handled as PUT OBJECT,
-    # we sometimes call this helper when we're creating a new object and there's
-    # no existing object to check against.  In such a case we can be confident
-    # that we're not replacing a non-current version so no logging needs to
-    # occur - we can ignore this exception.
+
+    return false
   end
 
   #
@@ -253,17 +290,67 @@ class BucketHelper
     s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
   end
 
+  #
+  # Irrevocably removes all objects from the channel.  If the bucket is
+  # versioned, this includes all past versions of objects and all delete
+  # markers, leaving no trace that the channel was ever used.
+  #
+  # @param [String] encrypted_channel_id for the channel to hard-delete
+  # @return [Integer] the number of objects deleted
+  def hard_delete_channel_content(encrypted_channel_id)
+    # TODO: Handle pagination in the S3 APIs
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    # Find all versions of all objects
+    channel_prefix = s3_path owner_id, channel_id
+    version_list = s3.list_object_versions(bucket: @bucket, prefix: channel_prefix)
+    return 0 if version_list.versions.empty? && version_list.delete_markers.empty?
+
+    # Delete all versions and delete markers
+    objects_to_delete = (version_list.versions + version_list.delete_markers).
+      map {|v| v.to_h.slice(:key, :version_id)}
+    result = s3.delete_objects(
+      bucket: @bucket,
+      delete: {
+        objects: objects_to_delete,
+        quiet: true
+      }
+    )
+    raise <<~ERROR unless result.errors.empty?
+      Error deleting channel content:
+      #{result.errors.map(&:to_s).join("\n      ")}
+    ERROR
+    result.deleted.count
+  end
+
   def list_versions(encrypted_channel_id, filename)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    s3.list_object_versions(bucket: @bucket, prefix: key).versions.map do |version|
-      {
-        versionId: version.version_id,
-        lastModified: version.last_modified,
-        isLatest: version.is_latest
-      }
-    end
+    s3.list_object_versions(bucket: @bucket, prefix: key).
+      versions.
+      map do |version|
+        {
+          versionId: version.version_id,
+          lastModified: version.last_modified,
+          isLatest: version.is_latest
+        }
+      end
+  end
+
+  # Used for testing
+  def list_delete_markers(encrypted_channel_id, filename)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    s3.list_object_versions(bucket: @bucket, prefix: key).
+      delete_markers.
+      map do |delete_marker|
+        {
+          versionId: delete_marker.version_id,
+          lastModified: delete_marker.last_modified,
+          isLatest: delete_marker.is_latest
+        }
+      end
   end
 
   # Copies the given version of the file to make it the current revision.

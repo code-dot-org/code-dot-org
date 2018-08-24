@@ -1,0 +1,18 @@
+{
+  "category": "Actions",
+  "config": {
+    "func": "jumpTo",
+    "blockText": "{SPRITE} jump to {LOCATION}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite",
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

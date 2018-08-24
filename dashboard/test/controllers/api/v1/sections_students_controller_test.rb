@@ -32,8 +32,68 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
     get :index, params: {section_id: @section.id}
     assert_response :success
-    expected_summary = [@student.summarize].to_json
+    expected_summary = [
+      @student.summarize.merge(depends_on_this_section_for_login: false)
+    ].to_json
     assert_equal expected_summary, @response.body
+  end
+
+  test "depends_on_this_section_for_login if this is sponsored student's only section" do
+    student = create :student_in_picture_section
+    assert student.teacher_managed_account?
+    assert_equal 1, student.sections_as_student.size
+
+    sign_in student.teachers.first
+    get :index, params: {section_id: student.sections_as_student.first.id}
+    assert_response :success
+
+    response = JSON.parse @response.body
+    assert response[0]['depends_on_this_section_for_login']
+  end
+
+  test "not depends_on_this_section_for_login if sponsored student has multiple sections" do
+    student = create :student_in_picture_section
+    second_section = create :section, login_type: Section::LOGIN_TYPE_PICTURE
+    create :follower, student_user: student, section: second_section
+    student.reload
+
+    assert student.teacher_managed_account?
+    assert_equal 2, student.sections_as_student.size
+
+    sign_in student.teachers.first
+    get :index, params: {section_id: student.sections_as_student.first.id}
+    assert_response :success
+
+    response = JSON.parse @response.body
+    refute response[0]['depends_on_this_section_for_login']
+  end
+
+  test "not depends_on_this_section_for_login if student is parent-managed" do
+    student = create :parent_managed_student, :in_picture_section
+
+    refute student.teacher_managed_account?
+    assert_equal 1, student.sections_as_student.size
+
+    sign_in student.teachers.first
+    get :index, params: {section_id: student.sections_as_student.first.id}
+    assert_response :success
+
+    response = JSON.parse @response.body
+    refute response[0]['depends_on_this_section_for_login']
+  end
+
+  test "not depends_on_this_section_for_login if student is in an email section" do
+    student = create :student, :in_email_section
+
+    refute student.teacher_managed_account?
+    assert_equal 1, student.sections_as_student.size
+
+    sign_in student.teachers.first
+    get :index, params: {section_id: student.sections_as_student.first.id}
+    assert_response :success
+
+    response = JSON.parse @response.body
+    refute response[0]['depends_on_this_section_for_login']
   end
 
   test 'calculates completed levels count for each new student' do

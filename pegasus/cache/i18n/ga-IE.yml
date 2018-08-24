@@ -1,4 +1,5 @@
-"ga-IE":
+---
+ga-IE:
   hour_of_code: An Uair Chódála
   hello: Dia dhuit a dhomhain
   'yes': Tá
@@ -29,7 +30,7 @@
     eile.'
   petition_join_others: 'Téir le # eile'
   name: Ainm
-  email: Seoladh ríomhphoist
+  email: Ríomhphost
   zipcode: Cód poist nó tír
   submit: Seol
   twentyhours_heading: Bain triail as ár gcúrsa Buntús na Ríomheolaíochta
@@ -95,18 +96,6 @@
   congratulations_on_completing_hoc: Comhghairdeas! Chríochnaigh tú Uair Amháin Chódála
   congratulations_volunteer: Comhghairdeas! Agus An Uair Chódála déanta agat, <a href="https://code.org/volunteer">cláraigh
     mar shaorálaí i seomra ranga</a> agus cabhraigh le daltaí Uair Chódála a fhoghlaim!
-  congratulations_on_completing_course1: Comhghairdeas as Cúrsa 1 a chríochnú
-  congratulations_on_completing_course2: Comhghairdeas as Cúrsa 2 a chríochnú
-  congratulations_on_completing_course3: Comhghairdeas as Cúrsa 3 a chríochnú
-  congratulations_on_completing_course4: Comhghairdeas as Cúrsa 4 a chríochnú
-  congratulations_on_completing_coursea: Comhghairdeas as Cúrsa A a chríochnú
-  congratulations_on_completing_courseb: Comhghairdeas as Cúrsa B a chríochnú
-  congratulations_on_completing_coursec: Comhghairdeas as Cúrsa C a chríochnú
-  congratulations_on_completing_coursed: Comhghairdeas as Cúrsa D a chríochnú
-  congratulations_on_completing_coursee: Comhghairdeas as Cúrsa E a chríochnú
-  congratulations_on_completing_coursef: Comhghairdeas as Cúrsa F a chríochnú
-  congratulations_on_completing_accelerated: Comhghairdeas as an gCúrsa Luathaithe
-    a chríochnú
   congrats_next_tutorials_title: Téigh ar aghaidh go dtí an chéad leibhéal eile
   congrats_next_tutorials_desc: Bain triail as na gearrchúrsaí teagaisc uair an chloig
     seo, nó <a href="%{current_path}/next">cúrsa beirte</a>.
@@ -295,28 +284,6 @@
     as! @codeorg
   just_did_hoc_donor: 'Tá mé go díreach tar éis an #HourOfCode a dhéanamh! (Tá mé
     buíoch de %{donor_twitter} as tacaíocht a thabhairt do @codeorg)'
-  just_did_course1_donor: Tá mé go díreach tar éis Cúrsa 1 a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_course2_donor: Tá mé go díreach tar éis Cúrsa 2 a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_course3_donor: Tá mé go díreach tar éis Cúrsa 3 a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_course4_donor: Tá mé go díreach tar éis Cúrsa 4 a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursea_donor: Tá mé go díreach tar éis Cúrsa A a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_courseb_donor: Tá mé go díreach tar éis Cúrsa B a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursec_donor: Tá mé go díreach tar éis Cúrsa C a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursed_donor: Tá mé go díreach tar éis Cúrsa D a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursee_donor: Tá mé go díreach tar éis Cúrsa E a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_coursef_donor: Tá mé go díreach tar éis Cúrsa F a chríochnú! Tá mé buíoch
-    de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
-  just_did_accelerated_donor: Tá mé go díreach tar éis an Cúrsa Luathaithe a chríochnú!
-    Tá mé buíoch de %{donor_twitter} as tacaíocht a thabhairt do @codeorg
   twitter_teach_cs: Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht
     a mhúineadh. http://youtu.be/nKIu9yen5nc. Féach https://code.org/.
   twitter_cs_foundational: Ba chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim.
@@ -391,7 +358,7 @@
     &ldquo;Computer science empowers
     students to create the world of tomorrow.&rdquo;
     Satya, Príomhoifigeach Mhicrosoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
     Chris Bosh
@@ -449,8 +416,6 @@
   homepage_banner_text_main: Code.org agus The College Board i gcomhar le chéile chun
     ilghnéitheacht sa ríomheolaíocht a fheabhsú.
   homepage_banner_text_link: Tuilleadh eolais
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Tuilleadh eolais
   homepage_banner_20k_teachers: 20,000 múinteoir a rinne traenáil agus atá ag múineadh
     na ríomheolaíochta sa seomra ranga anois.
@@ -461,7 +426,6 @@
   homepage_banner_emailprivacy: Seo é athrú tábhachtach ar an gcaoi a gcosnaímid príobháideachas
     na ndaltaí.
   homepage_banner_emailprivacy_link: Tuilleadh eolais
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Tuilleadh eolais
   homepage_slot_text_title_hoc: An Uair Chódála
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
@@ -495,8 +459,6 @@
   homepage_header_donors: Tá Code.org fíorbhuíoch dá thacadóirí
   homepage_donors_seall: Féach uile
   homepage_donors_donate: Bronn
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
   homepage_below_hero_announcement_link_text: Tuilleadh eolais
   contact_form_topic_student: Is dalta mé
   contact_form_topic_parent: Is tuismitheoir mé
@@ -547,7 +509,7 @@
   playlab_iceage_title: Ice Age - Ag teacht go luath
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Réaltra a Thógáil le Cód
-  starwars_javascript_title: Javascript
+  starwars_javascript_title: JavaScript
   starwars_javascript_description: Úsáid blocanna tarraingt-is-scaoileadh agus JavaScript.
   starwars_javascript_specs: Béarla amháin | Brabhsálaithe nua-aimseartha | Aois 11+
   starwars_blocks_title: Blocanna
@@ -570,8 +532,6 @@
   minecraft_tutorials: Cúrsaí Teagaisc Minecraft don Uair Chódála
   minecraft_specs: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid
     | Aois 7+
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
   minecraft_agent_button: Tosaigh
   minecraft_designer_description: Códáil ainmhithe agus créatúir eile i do leagan
     féin de Minecraft.
@@ -663,7 +623,6 @@
     agus curadh NBA, Dallas Mavericks
   watch_inspirational_videos: Sula dtosóidh tú, féach ar cheann de na físeáin spreagúla
     seo
-  video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Cuir misneach ar chailín
   video_title_cs_intro: Buntús na ríomheolaíochta
   video_title_schools_dont_teach: Na rudaí nach múintear i bhformhór na scoileanna
@@ -747,10 +706,6 @@
   volunteer_engineer_submission_field_email_desc: Ní fhoilseoimid do sheoladh ríomhphoist
     riamh, ach seolfaimid iarratais ó mhúinteoirí chugat.
   volunteer_engineer_submission_field_email_placeholder: Seoladh ríomhphoist
-  volunteer_engineer_submission_field_email_preference: Can we email you about updates
-    to our courses, volunteer opportunities, or other computer science news?
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy
-    policy)"
   volunteer_engineer_submission_field_email_preference_yes: Tá
   volunteer_engineer_submission_field_email_preference_no: Níl
   volunteer_engineer_submission_final_paragraph: Cuirfimid ar léarscáil thú atá dírithe
@@ -1258,11 +1213,8 @@
   flappy_name: Déan cluiche Flappy
   bitsbox_name: Bitsbox - cruthaigh cluiche
   makeschool_name: Tóg cluiche iPhone i do bhrabhsálaí!
-  touchdevelop_name: TouchDevelop
   appinventor_name: Uair Chódála AppInventor
   blockly_name: Blockly
-  thinkersmith2_name: Binary Baubles
-  kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Cloch, Páipéar, Siosúr
   hourofcode_name: Cathair Ghríobháin Chlasaiceach
   playlab_name: Spraotharlann
@@ -1272,7 +1224,6 @@
   allcancode_name: Rith a Mharcó!
   csfirst_name: CS First
   boxisland_name: Oileán na mBoscaí
-  codesters_name: Codesters
   texasinstruments_name: 10 Nóiméad Códála
   teacherled_name: Ceachtanna faoi cheannas múinteoirí
   course1_name: Cúrsa 1
@@ -1291,87 +1242,43 @@
   coursee_name: Cúrsa E
   coursef-draft_name: Cúrsa F
   coursef_name: Cúrsa F
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
   accelerated_name: Cúrsa Luathaithe
   express_name: Luaschúrsa
   pre-express_name: Luaschúrsa do Réamhléitheoirí
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
   cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
   cspunit2_name: 'Aonad 2: An tIdirlíon'
   cspunit3_name: 'Aonad 3: Ríomhchlárú'
   cspunit4_name: 'Aonad 4: Sonraí'
   cspunit5_name: 'Aonad 5: Taiscéaladh agus Cruthú (Tasc Feidhmíochta)'
   cspunit6_name: 'Tar Éis AP: Bunachair Sonraí in Aipeanna'
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Aonad 5: Sonraí agus Sochaí'
   csd6_name: 'Aonad 6: Ríomhaireacht Fisiceach'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
   csd5-2017_name: 'Aonad 5: Sonraí agus Sochaí'
   csd6-2017_name: 'Aonad 6: Ríomhaireacht Fisiceach'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
   csd5-2018_name: 'Aonad 5: Sonraí agus Sochaí'
   csd6-2018_name: 'Aonad 6: Ríomhaireacht Fisiceach'
   csp1-2017_name: 'Aonad 1: An tIdirlíon'
   csp2-2017_name: 'Aonad 2: Faisnéis dhigiteach'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
   csp-explore-2017_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
   csp-create-2017_name: 'AP: Ullmhú don Tasc Cruthaitheach'
   csppostap-2017_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
   csp1-2018_name: 'Aonad 1: An tIdirlíon'
   csp2-2018_name: 'Aonad 2: Faisnéis dhigiteach'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
   csp-explore-2018_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
   csp-create-2018_name: 'AP: Ullmhú don Tasc Cruthaitheach'
   csppostap-2018_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
   csp1_name: 'Aonad 1: An tIdirlíon'
   csp2_name: 'Aonad 2: Faisnéis dhigiteach'
-  csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Aonad 3: Buntús Ríomhchláraithe (leagan A)'
   csp3-research-mxghyt_name: 'Aonad 3: Buntús Ríomhchláraithe (Fospriocanna)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: Tascanna Gníomhaíochta AP
   csppostap_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
-  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: An Scrúdú Iomlán - 50 ceist
   csp-explore_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
   csp-create_name: 'AP: Ullmhú don Tasc Cruthaitheach'
   cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
   cspexam2-AKwgAh1ac5_name: Cuid 2 den Scrúdú - 25 ceist
   cspunit3_gradelevel: Blianta 9-12
-  cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
-    of computer programming, which unlocks the ability to make rich, interactive apps.
-    This course uses JavaScript as the programming language, and App Lab as the programming
-    environment to build apps, but the concepts learned in these lessons span all
-    programming languages and tools.
   20-hour_name: Cúrsa Luathaithe
   algebra_name: Ríomheolaíocht san Ailgéabar
   AlgebraA_name: Ríomheolaíocht san Ailgéabar, Cúrsa A
@@ -1381,24 +1288,16 @@
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocanna)
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Criptiú Simplí
-  text-compression_name: Text Compression
   math_category_name: Matamaitic
   hoc_category_name: An Uair Chódála
   csf_category_name: Buntús na Ríomheolaíochta
-  csf_2017_category_name: CS Fundamentals (2017)
-  csf_2018_category_name: CS Fundamentals (2018)
   csf_international_category_name: 'Buntús na Ríomheolaíochta: Idirnáisiúnta'
   csf2_draft_category_name: 'Á bhforbairt: Cúrsaí A-F'
   csd_category_name: Fionnachtana sa Ríomheolaíocht
-  csd_2018_category_name: CS Discoveries ('18-'19)
   csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
   csp17_category_name: Foras Feasa ar an Ríomheolaíocht
-  csp_2018_category_name: CS Principles ('18-'19)
   cspexams_category_name: 'Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht'
-  research_studies_category_name: Research Studies
   applab_name: Saotharlann Aipeanna
   gamelab_name: An tSaotharlann Cluichíochta
   basketball_name: Déan do chluiche cispheile féin
@@ -1409,7 +1308,6 @@
     í, ansin foilsigh an aip ar an toirt
   codeorg_gradelevel: Aois 4-104
   codeintl_gradelevel: Aois 4-104
-  thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Meánscoil +
   khanes_gradelevel: Meánscoil +
   khanpt_gradelevel: Meánscoil +
@@ -1467,6 +1365,18 @@
   coursed_gradelevel: Aois 13+
   coursee_gradelevel: Aois 14+
   coursef_gradelevel: Aois 9-13
+  coursea-2017_gradelevel: Aois 4-7
+  courseb-2017_gradelevel: Aois 5-8
+  coursec-2017_gradelevel: Aois 6-10
+  coursed-2017_gradelevel: Aois 13+
+  coursee-2017_gradelevel: Aois 8-12
+  coursef-2017_gradelevel: Aois 9-13
+  coursea-2018_gradelevel: Aois 4-7
+  courseb-2018_gradelevel: Aois 5-8
+  coursec-2018_gradelevel: Aois 6-10
+  coursed-2018_gradelevel: Aois 13+
+  coursee-2018_gradelevel: Aois 8-12
+  coursef-2018_gradelevel: Aois 9-13
   accelerated_gradelevel: Aois 10-18
   codeorg_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeintl_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -1512,7 +1422,7 @@
   monstercoding_platformtext: Brabhsálaithe nua-aimseartha, iOS, Android
   allcancode_platformtext: Brabhsálaithe nua-aimseartha, iOS
   csfirst_platformtext: Brabhsálaithe nua-aimseartha
-  boxisland_platformtext: Andoid, iOS
+  boxisland_platformtext: Android, iOS
   codesters_platformtext: Brabhsálaithe nua-aimseartha
   texasinstruments_platformtext: Áireamháin TI
   teacherled_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -1520,7 +1430,6 @@
     Birds!
   codeintl_shortdescription: Foghlaim an ríomhchlárú le Mark Zuckerberg agus Angry
     Birds!
-  thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
   khan_shortdescription: Foghlaim an líníocht in JavaScript
   khanes_shortdescription: Foghlaim an líníocht in JavaScript
   khanpt_shortdescription: Foghlaim an líníocht in JavaScript
@@ -1608,15 +1517,29 @@
     an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir
     a chomhroinnt le héinne. Dírithe ar aois 9-13.
   coursea_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
-  courseb_shortdescription_congrats: ''
   coursec_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus cruthaigh
     ealaín, scéalta, agus cluichí.
   coursed_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
     ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
     tuilleadh.
-  coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
     agus cruthaigh ealaín, scéal, nó cluiche.
+  coursea-2017_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  coursec-2017_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus
+    cruthaigh ealaín, scéalta, agus cluichí.
+  coursed-2017_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
+    ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
+    tuilleadh.
+  coursef-2017_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús
+    na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+  coursea-2018_shortdescription_congrats: Buntús na ríomheolaíochta do réamhléitheoirí.
+  coursec-2018_shortdescription_congrats: Foghlaim buntús na ríomheolaíochta agus
+    cruthaigh ealaín, scéalta, agus cluichí.
+  coursed-2018_shortdescription_congrats: Foghlaim na coincheapa ó Chúrsa C go tapaidh,
+    ansin téigh ar aghaidh le halgartaim, lúba neadaithe, ráitis choinníollacha, agus
+    tuilleadh.
+  coursef-2018_shortdescription_congrats: Foghlaim na coincheapa go léir i mBuntús
+    na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
   codeorg_longdescription: Foghlaim buntús na ríomheolaíochta trí ríomhchlárú "tarraingt
     is scaoileadh". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina
     bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants
@@ -1627,11 +1550,6 @@
     bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants
     vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34
     teanga.
-  thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
-    los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas
-    espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
-    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
-    como la valiosa habilidad de depuraci&oacute;n.
   khan_longdescription: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript
     agus déan líníochtaí taitneamhacha le do chód. Déan as do stuaim féin é, nó in
     éineacht le do rang!
@@ -1820,13 +1738,11 @@
   kodable_beyond_name: Kodable
   scratchjr_beyond_name: ScratchJR i gcomhair réamhléitheoirí
   hopscotch_beyond_name: 'Hopscotch: Ríomhchlárú ar an iPad'
-  pocketcode_beyond_name: Pocket Code
   groklearning_beyond_name: Foghlaim Python
   hacketyhack_beyond_name: Foghlaim Ruby
   robomind_beyond_name: Bí i gceannas ar róbat fíorúil
   makeschool_beyond_name: Tóg cluiche iPhone i do bhrabhsálaí!
   appinventor_beyond_name: Uair Chódála AppInventor
-  touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Foghlaim an Chódáil le Karel an Madra
   udemy_beyond_name: Ranganna Ríomhchláraithe Ar Líne
   lynda_beyond_name: Ranganna Ríomhchláraithe Ar Líne
@@ -1836,18 +1752,14 @@
   teachingtree_beyond_name: Cúrsaí ollscoile ar líne
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
-  kidsruby_beyond_name: KidsRuby
   w3schools_beyond_name: Foghlaim HTML
   codeavengers_beyond_name: Foghlaim le suímh Ghréasáin a chruthú
-  mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
-  finch_beyond_name: Finch
   arduino_beyond_name: Arduino le Sparkfun
   processing_beyond_name: Ríomhchlárú le Processing
   alice_beyond_name: Alice
-  sphero_beyond_name: SPRK
   codeorg_beyond_gradelevel: Aois 4-104
   khan_beyond_gradelevel: Meánscoil +
   tynker_beyond_gradelevel: Aois 5-13
@@ -2156,14 +2068,7 @@
     <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe
     tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans
     go mbeidh roinnt gnéithe ar an leathanach briste.
-  starwars_shortcode: sw
-  mc_shortcode: mc
-  frozen_shortcode: frzn
-  hourofcode_shortcode: code
   flappy_shortcode: gread
-  infinity_shortcode: inf
-  playlab_shortcode: play
-  artist_shortcode: art
   header_home: Baile
   header_my_dashboard: Mo Phainéal
   header_courses: Cúrsaí
@@ -2260,5 +2165,4 @@
     sa gcluaisín "Bainistigh Daltaí":'
   google_sign_in_instruct: 'Ansin ag an bpointe sin, roghnaigh “Sign in with Google
     Account”:'
-  hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Fáilte go dtí an tSaotharlann Aipeanna

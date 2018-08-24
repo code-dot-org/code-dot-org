@@ -19,18 +19,21 @@
     - else # most users are allowed to edit username
       = f.text_field :name, autofocus: true, maxlength: 255
   - if !f.object.teacher_managed_account?
-    - if current_user.parent_managed_account?
+    -# Temporary: Allow single-auth students with no email to add a parent email
+    - if current_user.parent_managed_account? || current_user.can_add_parent_email?
       .field
-        = f.label :parent_email, class: "label-bold"
+        = f.label t('user.parent_email_label'), class: "label-bold"
+        %em= t('user.parent_email_hint')
+        %br/
         = f.email_field :parent_email, autocomplete: 'off', maxlength: 255
-    - else
+    - if !current_user.parent_managed_account?
       .field
         = f.label :email, class: "label-bold"
         - if current_user.migrated? && !current_user.student?
           %em= t('user.new_email_hint')
           %br/
         %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
-        - if current_user.can_edit_email? && (!current_user.oauth? || current_user.migrated?)
+        - if current_user.should_see_edit_email_link?
           (
           %a#edit-email-link{href: '#'}= "Update"
           )
@@ -38,37 +41,19 @@
     .field
       = f.label :username, class: "label-bold"
       = f.object.username
-  - if f.object.migrated?
-    - if f.object.can_edit_password? && f.object.encrypted_password.present?
-      %div
-        = f.label :password, maxlength: 255, class: "label-bold"
-        %em= t('user.new_password_hint')
-        %br/
-        = f.password_field :password, autocomplete: 'off', maxlength: 255
-      %div
-        = f.label :password_confirmation, class: "label-bold"
-        = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
-    - if f.object.sponsored?
-      .field
-        = f.label :password, class: "label-bold"
-        = t('user.no_password_because_sponsored')
-  - else
-    - if f.object.can_edit_password?
-      %div
-        = f.label :password, maxlength: 255, class: "label-bold"
-        %em= t('user.new_password_hint')
-        %br/
-        = f.password_field :password, autocomplete: 'off', maxlength: 255
-      %div
-        = f.label :password_confirmation, class: "label-bold"
-        = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
-    - else
-      .field
-        = f.label :password, class: "label-bold"
-        - if f.object.oauth?
-          = t('user.no_password_because_oauth')
-        - else
-          = t('user.no_password_because_sponsored')
+  - if f.object.can_edit_password? && f.object.encrypted_password.present?
+    %div
+      = f.label :password, maxlength: 255, class: "label-bold"
+      %em= t('user.new_password_hint')
+      %br/
+      = f.password_field :password, autocomplete: 'off', maxlength: 255
+    %div
+      = f.label :password_confirmation, class: "label-bold"
+      = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
+  - if f.object.sponsored?
+    .field
+      = f.label :password, class: "label-bold"
+      = t('user.no_password_because_sponsored')
   - if f.object.encrypted_password.present?
     %div
       = f.label :current_password, class: "label-bold"
@@ -93,29 +78,33 @@
 
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
 
-- if current_user.migrated?
-  - if current_user.can_edit_password? && current_user.encrypted_password.blank?
-    -# Mount point for React AddPasswordForm component.
-    %div#add-password-fields
+- if current_user.should_see_add_password_form?
+  -# Mount point for React AddPasswordForm component.
+  %div#add-password-fields
 
-    -# Hidden form used to asynchronously submit a new password to Rails with the
-    -# appropriate authenticity tokens.  See AddPasswordForm.jsx for more details.
-    -# Currently hidden behind .migrated? flag until all users have been migrated.
-    - if current_user.can_edit_password? && current_user.encrypted_password.blank?
-      = form_for(resource,
-          as: resource_name,
-          url: '/users',
-          remote: true,
-          html: { id: 'add-password-form' },
-          namespace: 'add-password',
-        ) do |f|
-        = f.hidden_field :password
-        = f.hidden_field :password_confirmation
+  -# Hidden form used to asynchronously submit a new password to Rails with the
+  -# appropriate authenticity tokens.  See AddPasswordForm.jsx for more details.
+  -# Currently hidden behind .migrated? flag until all users have been migrated.
+  = form_for(resource,
+      as: resource_name,
+      url: '/users',
+      remote: true,
+      html: { id: 'add-password-form' },
+      namespace: 'add-password',
+    ) do |f|
+    = f.hidden_field :password
+    = f.hidden_field :password_confirmation
+
+- if current_user.migrated?
+  -# Mount point for React ManageLinkedAccounts component.
+  %div#manage-linked-accounts
 
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')
-  %p= no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+  %p
+    = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+    = t('user.create_personal_login_link_account') if current_user.migrated?
   = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
     = form.hidden_field :hashed_email
     %h3= t('user.enter_new_login_info')
@@ -163,7 +152,6 @@
       namespace: 'change-user-type',
     ) do |f|
     = f.hidden_field :email
-    = f.hidden_field :hashed_email
     = f.hidden_field :email_preference_opt_in
     %hr.account-page-section-break
     %h2= t('signup_form.user_type_label')
@@ -175,15 +163,12 @@
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
 
 - if current_user.can_delete_own_account?
+  -# Mount point for React DeleteAccount component.
+  %div#delete-account
+- else
   %hr.danger.account-page-section-break
   %h2.danger= t('user.delete')
-  %p
-    = t('user.delete_text')
-    - if current_user.teacher?
-      = t('user.delete_text_teacher_note')
-    .farSide
-      - data_hash = { confirm: t('user.delete_confirm') }
-      = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
+  %p= t('user.delete_text_teacher_managed_note')
 
 -# Hidden form used to asynchronously submit an email change to Rails with the
 -# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.
@@ -206,7 +191,12 @@
       userAge: current_user.age,
       userType: current_user.user_type,
       isOauth: current_user.oauth?,
-      isPasswordRequired: current_user.encrypted_password.present?
+      isPasswordRequired: current_user.encrypted_password.present?,
+      authenticationOptions: current_user.authentication_options.map(&:summarize),
+      isGoogleClassroomStudent: current_user.google_classroom_student?,
+      isCleverStudent: current_user.clever_student?,
+      dependentStudents: current_user.dependent_students,
+      studentCount: current_user.students.count,
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}

@@ -49,7 +49,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    expected = @teacher.sections.map {|section| section.summarize.with_indifferent_access}
+    expected = @teacher.sections.map(&:summarize).as_json
     assert_equal expected, returned_json
   end
 
@@ -64,7 +64,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in admin
     get :index
     assert_response :success
-    expected = admin.sections.map {|section| section.summarize.with_indifferent_access}
+    expected = admin.sections.map(&:summarize).as_json
     assert_equal expected, returned_json
   end
 

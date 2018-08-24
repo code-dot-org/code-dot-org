@@ -1,5 +1,5 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: <%= hoc_s(:title_hoc_advisory_committee) %>
 ---
 # Hour of Code and CSEdWeek Advisory Committee
 

@@ -1212,9 +1212,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     authorized_teacher = create(:teacher)
-    cohort = create(:cohort)
-    cohort.teachers << authorized_teacher
-    cohort.save!
+    authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert authorized_teacher.authorized_teacher?
     sign_in authorized_teacher
 
@@ -1590,6 +1588,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_stable: true
     get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
     assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+
+    # next redirects to latest version in a script family
+    get :next, params: {script_id: 'cats'}
+    assert_redirected_to "/s/cats2/next"
 
     # do not redirect within script family if the requested script exists
     cats = create :script, name: 'cats'

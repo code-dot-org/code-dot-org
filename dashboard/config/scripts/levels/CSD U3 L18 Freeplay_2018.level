@@ -40,7 +40,33 @@
       "bounce": null,
       "bounceOff": null,
       "collide": null,
-      "displace": null
+      "displace": null,
+      "rotation": null,
+      "isTouching": null,
+      "bounciness": null,
+      "x": null,
+      "y": null,
+      "scale": null,
+      "sprite.height": null,
+      "sprite.width": null,
+      "visible": null,
+      "debug": null,
+      "textFont": null,
+      "textSize": null,
+      "equalityOperator": null,
+      "greaterThanOperator": null,
+      "lessThanOperator": null,
+      "randomNumber_min_max": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
+      "World.frameRate": null,
+      "ifElseBlock": null,
+      "inequalityOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "console.log": null
     },
     "edit_code": true,
     "embed": "false",
@@ -80,11 +106,16 @@
     "display_name": "Free Play",
     "parent_level_id": 9375,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:47:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-28 23:26:29 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"markdown_instructions\",\"project_template_level_name\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-28 23:33:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:47:04 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-28 23:26:29 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"start_blocks\",\"markdown_instructions\",\"project_template_level_name\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-28 23:33:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-08-13 21:50:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-08-13 21:53:26 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

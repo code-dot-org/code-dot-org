@@ -49,15 +49,15 @@ module Pd
         raise "Unable to process matrix answer: #{answer}" unless answer.is_a? Hash
 
         # Matrix answer is a Hash of sub_question => string_answer
+        # Validate each answer and convert each key to sub_question_index
         answer.reject {|_, v| v.blank?}.map do |sub_question, sub_answer|
           sub_question_index = sub_questions.index(sub_question)
           raise "Unable to find sub-question '#{sub_question}' in matrix question #{id}" unless sub_question_index
 
-          sub_answer_index = options.index(sub_answer)
-          raise "Unable to find '#{sub_answer}' in the options for matrix question #{id}" unless sub_answer_index
+          raise "Unable to find '#{sub_answer}' in the options for matrix question #{id}" unless options.include? sub_answer
 
           # Return a 1-based value
-          [sub_question_index, sub_answer_index + 1]
+          [sub_question_index, sub_answer]
         end.to_h
       end
 
@@ -66,9 +66,11 @@ module Pd
           [
             generate_sub_question_key(i),
             {
+              parent: name,
+              max_value: options.length,
               text: "#{text} #{sub_question}",
-              answer_type: ANSWER_SELECT_VALUE,
-              max_value: options.length
+              answer_type: answer_type,
+              options: options
             }
           ]
         end.to_h
@@ -81,6 +83,11 @@ module Pd
 
       def generate_sub_question_key(sub_question_index)
         "#{name}_#{sub_question_index}"
+      end
+
+      # @override
+      def answer_type
+        ANSWER_SINGLE_SELECT
       end
     end
   end

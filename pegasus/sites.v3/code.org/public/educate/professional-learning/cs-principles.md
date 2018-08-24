@@ -20,16 +20,13 @@ theme: responsive
 
 [col-50]
 
-## Spots still open for 2018!
+Our CS Principles Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
 
-- **Step 1**: Check [the list below](#openings) to see if applications are still being accepted in your area.
-- **Step 2:** Read about the [Program Features and Commitments](#features).
-- **Step 3:** Check out the course page for [CS Principles](/educate/csp).
-- **Step 4:** Set aside 10 - 15 minutes to complete the application.
-[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
+The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp). For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). ​Print a <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">flyer</a> to share with teachers or administrators at your school. 
 
-Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
+**Applications for the 2019-20 CS Principles Professional Learning Program will open after October, 2018.** Want to get notified when applications open? Provide your contact information to a Regional Partner.
 
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
 
 [/col-50]
 
@@ -37,60 +34,10 @@ Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NAR
 
 <hr/>
 
-Our CS Principles Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
-
-The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). ​Print a [flyer](/files/PLProgramsOverview_1-Pager.pdf) to share with teachers or administrators at your school.
-
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
 {img: '/images/testimonials/fit-150/teacher-renee.jpg', text: '"I would absolutely recommend anything Code.org has to offer to any teacher. Period. The lesson plans are incredible."'},
 {img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
-
-## <a name="openings"></a>Applications are still being accepted in some states
-
-The priority deadline for 2018 has passed, but we still have openings for our CS Principles Professional Learning Program in the following states: 
-
-[col-33]
-
-Alabama<br>
-California<br>
-Florida<br>
-Idaho<br>
-Illinois<br>
-Indiana<br>
-Iowa<br>
-Kansas<br>
-
-[/col-33]
-
-[col-33]
-
-Maine<br>
-Maryland<br>
-Massachusetts<br>
-Mississippi<br>
-Missouri<br>
-Montana<br>
-New Jersey<br>
-Southeastern New York<br>
-
-[/col-33]
-
-[col-33]
-
-North Carolina<br>
-North Dakota<br>
-Oklahoma<br>
-South Dakota<br>
-Virginia<br>
-Wisconsin<br>
-Wyoming<br>
-
-[/col-33]
-
-<div style="clear: both;"></div>
-
-If applications for our professional learning program are now closed in your state, you can [join our interest list](https://studio.code.org/pd/regional_partner_contact/new) to be the first to hear about next year’s application. We also have a [list of 3rd party options](https://code.org/educate/curriculum/3rd-party) for computer science classes. And, all [our curriculum](https://code.org/educate/csp) is available at no cost to you and your school if you are comfortable teaching it without professional development.
 
 ## <a name="features"></a>Program Features
 
@@ -143,12 +90,11 @@ The Code.org Professional Learning Program has both in-person and online support
 
 **Ongoing Support, throughout following academic year:**  
 
-* Participants attend local, 1-day quarterly workshops hosted by Code.org Regional Partners
+* Participants attend local, follow up workshops hosted by Code.org Regional Partners
 * Usually held on Saturdays, these workshops are run by local Code.org-trained facilitators
 * They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continue to build pedagogical strategies.
 
-
-In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. Have more questions about which program is for you? Learn more about [implementation options](/files/PL-Program-for-Me.pdf) or <a href="mailto:teacher@code.org">contact us</a>.
+In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. Have more questions about which program is for you? Learn more about <a href="https://code.org/files/PL-Program-for-Me.pdf", target=_"blank">implementation options</a> or <a href="mailto:teacher@code.org">contact us</a>.
 
 ## What does a Code.org CS Principles educator do?
 If accepted into the Code.org CS Principles Professional Learning Program, you will:
@@ -159,7 +105,7 @@ If accepted into the Code.org CS Principles Professional Learning Program, you w
 
 ## <a name="locations"></a>Where is the program offered?
 
-The CS Principles Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located and when they will be hosting summer workshops (dates and locations subject to change).
+The CS Principles Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our map to learn more about where our Regional Partners are located.
 <br>
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
@@ -198,7 +144,7 @@ Meals and course materials will be provided to participants who attend the local
 
 [/col-20]
 
-Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, [we can offer an ISTE membership](https://www.iste.org/membership/code-org) exclusively to Code.org teachers at the special price of $99 (regularly $125).
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, <a href="https://www.iste.org/membership/code-org", target=_"blank">we can offer an ISTE membership</a> exclusively to Code.org teachers at the special price of $99 (regularly $125).
 
 Check out these 3 key benefits of ISTE membership:
 
@@ -208,19 +154,12 @@ Check out these 3 key benefits of ISTE membership:
 
 ## <a name="apply"></a>How to apply?
 
-Be sure to complete the following steps before you apply.
+**Applications for the 2019-20 CS Principles Professional Learning Program will open after October, 2018.** 
 
-- Step 1: Read about the [Program Features and Commitments](#features).
-- Step 2: Check out the course page for [CS Principles](/educate/csp).
-- Step 3: Set aside 10 - 15 minutes to complete the application.
+Want to get notified when applications open? Provide your contact information to a Regional Partner.
 
-**Ready to get started?**
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
 
-[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
-
-**Applications are still being accepted in some regions. Check [the list above](#openings) to see if applications are still being accepted in your area.**
-
-Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
 <!--
 ## <a name="components"></a>How does it work?
@@ -236,6 +175,22 @@ The program has two components:
 Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum.
 
 If you're interested in becoming a Code.org Facilitator, <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAq4l_1HsjdbtRBo7fggTrTZe0H9_tcRMBrxXA893QkP6MWA/viewform", target=_"blank">let us know!</a>
+
+Be sure to complete the following steps before you apply.
+
+- Step 1: Read about the [Program Features and Commitments](#features).
+- Step 2: Check out the course page for [CS Principles](/educate/csp).
+- Step 3: Set aside 10 - 15 minutes to complete the application.
+
+**Ready to get started?**
+
+[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
+
+Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
+
+**Applications are still being accepted in some regions. Check [the list above](#openings) to see if applications are still being accepted in your area.**
+
+Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
 -->
 

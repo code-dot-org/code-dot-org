@@ -7,9 +7,11 @@ import Hammer from "hammerjs";
 import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from './locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import GameController from '@code-dot-org/craft/src/js/game/GameController';
-import FacingDirection from '@code-dot-org/craft/src/js/game/LevelMVC/FacingDirection';
-import {convertActionPlaneEntitiesToConfig} from '@code-dot-org/craft/src/js/game/LevelMVC/Utils';
+import {
+  GameController,
+  FacingDirection,
+  utils as CraftUtils,
+} from '@code-dot-org/craft';
 import dom from '../../dom';
 import eventsLevelbuilderOverrides from './eventsLevelbuilderOverrides';
 import MusicController from '../../MusicController';
@@ -488,7 +490,7 @@ Craft.clearPlayerState = function () {
 };
 
 Craft.initializeAppLevel = function (levelConfig) {
-  convertActionPlaneEntitiesToConfig(levelConfig);
+  CraftUtils.convertActionPlaneEntitiesToConfig(levelConfig);
 
   // Fluff plane is no longer configured by level builders, pass in an empty plane
   const fluffPlane = [];
@@ -633,6 +635,7 @@ Craft.runButtonClick = function () {
   if (Craft.level.usePlayer) {
     Craft.showSoftButtons();
   }
+  Craft.gameController.game.input.touch.preventDefault = false;
 
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
@@ -694,27 +697,6 @@ Craft.executeUserCode = function () {
     moveForward: function (blockID) {
       appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID));
     },
-    onEventTriggered: function (type, eventType, callback, blockID) {
-      appCodeOrgAPI.registerEventCallback(studioApp().highlight.bind(studioApp(), blockID),
-          function (event) {
-            if (event.eventType !== eventType) {
-              return;
-            }
-            if (event.targetType !== type) {
-              return;
-            }
-            callback(event);
-          });
-    },
-    onGlobalEventTriggered: function (eventType, callback, blockID) {
-      appCodeOrgAPI.registerEventCallback(studioApp().highlight.bind(studioApp(), blockID),
-          function (event) {
-            if (event.eventType !== eventType) {
-              return;
-            }
-            callback(event);
-          });
-    },
     drop: function (blockType, targetEntity, blockID) {
       appCodeOrgAPI.drop(studioApp().highlight.bind(studioApp(), blockID), blockType, targetEntity);
     },
@@ -730,7 +712,7 @@ Craft.executeUserCode = function () {
     repeat: function (blockID, callback, iterations, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
       appCodeOrgAPI.repeat(studioApp().highlight.bind(studioApp(), blockID),
-          callback, iterations, targetEntity);
+          callback.bind(null, {targetIdentifier: targetEntity}), iterations, targetEntity);
     },
     repeatRandom: function (blockID, callback, targetEntity) {
       // if resurrected, move blockID be last parameter to fix "Show Code"
@@ -793,7 +775,46 @@ Craft.executeUserCode = function () {
     };
   });
 
-  CustomMarshalingInterpreter.evalWith(code, evalApiMethods, {legacy: true});
+  const userEvents = {};
+  const eventGenerationMethods = {
+    onEventTriggered: function (type, eventType, callback, blockID) {
+      userEvents[`event-${type}-${eventType}`] = {code: callback, args: ['event']};
+    },
+    onGlobalEventTriggered: function (eventType, callback, blockID) {
+      userEvents[`event--${eventType}`] = {code: callback, args: ['event']};
+    },
+  };
+
+  CustomMarshalingInterpreter.evalWith(code, eventGenerationMethods);
+
+  const customMarshalObjects = [
+    {
+      instance: evalApiMethods.repeat,
+      methodOpts: {
+        nativeCallsBackInterpreter: true,
+        run: true,
+      }
+    },
+  ];
+
+  const hooks = {};
+  CustomMarshalingInterpreter.evalWithEvents(evalApiMethods, userEvents, '', customMarshalObjects).hooks.forEach(hook => {
+    hooks[hook.name] = hook.func;
+  });
+
+  appCodeOrgAPI.registerEventCallback(() => {},
+    function (event) {
+      const type = event.targetType || '[^-]*';
+      const eventType = event.eventType;
+      const regex = new RegExp(`^event-${type}-${eventType}$`);
+
+      Object.keys(hooks).forEach(name => {
+        if (regex.test(name)) {
+          hooks[name](event);
+        }
+      });
+    });
+
   appCodeOrgAPI.startAttempt(function (success) {
     Craft.hideSoftButtons();
     if (Craft.level.freePlay) {

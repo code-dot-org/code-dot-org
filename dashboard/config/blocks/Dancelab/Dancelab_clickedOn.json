@@ -1,0 +1,21 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "clickedOn",
+    "blockText": "when {SPRITE} clicked",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite",
+        "customInput": "spritePicker",
+        "defer": true
+      }
+    ],
+    "eventBlock": true
+  }
+}

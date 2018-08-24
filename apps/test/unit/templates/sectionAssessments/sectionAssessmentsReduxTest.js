@@ -17,8 +17,16 @@ import sectionAssessments, {
   getCorrectAnswer,
   indexesToAnswerString,
   countSubmissionsForCurrentAssessment,
+  isCurrentAssessmentSurvey,
+  getExportableSurveyData,
+  getExportableAssessmentData,
+  setStudentId,
+  setQuestionIndex,
+  getCurrentQuestion,
+  getStudentAnswersForCurrentQuestion,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});
@@ -35,6 +43,21 @@ describe('sectionAssessmentsRedux', () => {
       const action = setSection(newSection);
       const nextState = sectionAssessments(currentState, action);
       assert.deepEqual(nextState, initialState);
+    });
+  });
+
+  describe('setScript', () => {
+    it('resets student filter to all students', () => {
+      const currentState = {
+        studentId: 489,
+        assessmentResponsesByScript: {
+          1: [{question: "a question", puzzle: 2}],
+        }
+      };
+      const action = setScriptId(2);
+      const nextState = sectionAssessments(currentState, action);
+      assert.deepEqual(nextState.studentId, 0);
+      assert.deepEqual(nextState.assessmentResponsesByScript, currentState.assessmentResponsesByScript);
     });
   });
 
@@ -83,6 +106,22 @@ describe('sectionAssessmentsRedux', () => {
       const action = setAssessmentId(456);
       const nextState = sectionAssessments(initialState, action);
       assert.deepEqual(nextState.assessmentId, 456);
+    });
+  });
+
+  describe('setStudentId', () => {
+    it('sets the id of the current student in view', () => {
+      const action = setStudentId(777);
+      const nextState = sectionAssessments(initialState, action);
+      assert.deepEqual(nextState.studentId, 777);
+    });
+  });
+
+  describe('setQuestionIndex', () => {
+    it('sets the index of the current question in view', () => {
+      const action = setQuestionIndex(2);
+      const nextState = sectionAssessments(initialState, action);
+      assert.deepEqual(nextState.questionIndex, 2);
     });
   });
 
@@ -208,7 +247,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getStudentMCResponsesForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getStudentMCResponsesForCurrentAssessment(rootState);
-        assert.deepEqual(result, []);
+        assert.deepEqual(result, {});
       });
 
       it('returns an array of objects of studentAnswerDataPropType', () => {
@@ -216,6 +255,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           sectionAssessments: {
             ...rootState.sectionAssessments,
+            studentId: 1,
             assessmentId: 123,
             assessmentResponsesByScript: {
               3: {
@@ -243,7 +283,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [{id: 1, name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]}]);
+        assert.deepEqual(result, {id: 1, name: 'Saira', studentResponses: [{responses: 'D', isCorrect: false}]});
       });
     });
 
@@ -281,6 +321,68 @@ describe('sectionAssessmentsRedux', () => {
                       level_results: [
                         {
                           student_result: 'Hello world',
+                          status: '',
+                          type: 'FreeResponse',
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+        const result = getAssessmentsFreeResponseResults(stateWithAssessment);
+        assert.deepEqual(result, [{
+          questionText: "Can you say hello?",
+          questionNumber: 1,
+          responses: [{id: 1, name: "Saira", response: "Hello world"}]
+        }]);
+      });
+
+      it('returns free response questions for selected student', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            studentId: 1,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  questions: [
+                    {
+                      type: 'FreeResponse',
+                      question_text: 'Can you say hello?',
+                      question_index: 0,
+                    }
+                  ]
+                }
+              }
+            },
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: 'Hello world',
+                          status: '',
+                          type: 'FreeResponse',
+                        }
+                      ]
+                    }
+                  }
+                },
+                2: {
+                  student_name: 'Sarah',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: 'Hi',
                           status: '',
                           type: 'FreeResponse',
                         }
@@ -388,6 +490,42 @@ describe('sectionAssessmentsRedux', () => {
             notAnswered: 0,
           },
         ]);
+      });
+    });
+
+    describe('isCurrentAssessmentSurvey', () => {
+      it('returns true when the current assessment is a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {}
+              }
+            }
+          }
+        };
+        const result = isCurrentAssessmentSurvey(stateWithSurvey);
+        assert.deepEqual(result, true);
+      });
+
+      it('returns false when the current assessment is not a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                234: {}
+              }
+            }
+          }
+        };
+        const result = isCurrentAssessmentSurvey(stateWithSurvey);
+        assert.deepEqual(result, false);
       });
     });
 
@@ -575,7 +713,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment, false);
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithAssessment);
         assert.deepEqual(totalSubmissions, 2);
       });
 
@@ -611,20 +749,229 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey, true);
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
         assert.deepEqual(totalSubmissions, 1);
+      });
+
+      it('returns 0 for 0 survey submissions', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [],
+                }
+              }
+            }
+          }
+        };
+
+        const totalSubmissions = countSubmissionsForCurrentAssessment(stateWithSurvey);
+        assert.deepEqual(totalSubmissions, 0);
+      });
+    });
+
+    describe('getExportableSurveyData', () => {
+      it('returns an array of objects', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [
+                    {
+                      type: 'multi',
+                      question_index: 0,
+                      question: 'question1',
+                      answer_texts: ['agree', 'disagree'],
+                      results: [{answer_index: 0}]
+                    },
+                    {
+                      type: 'multi',
+                      question_index: 1,
+                      question: 'question2',
+                      answer_texts: ['agree', 'disagree'],
+                      results: [{answer_index: 1}]
+                    },
+                  ],
+                }
+              }
+            }
+          }
+        };
+
+        const csvData = getExportableSurveyData(stateWithSurvey);
+        assert.deepEqual(csvData, [
+          {
+            "answer": "agree",
+            "numberAnswered": 1,
+            "questionNumber": 1,
+            "questionText": "question1",
+            "stage": "name",
+          },
+          {
+            "answer": "disagree",
+            "numberAnswered": 0,
+            "questionNumber": 1,
+            "questionText": "question1",
+            "stage": "name",
+          },
+          {
+            "answer": "agree",
+            "numberAnswered": 0,
+            "questionNumber": 2,
+            "questionText": "question2",
+            "stage": "name",
+          },
+          {
+            "answer": "disagree",
+            "numberAnswered": 1,
+            "questionNumber": 2,
+            "questionText": "question2",
+            "stage": "name",
+          }
+        ]);
+      });
+    });
+
+    describe('getExportableAssessmentData', () => {
+      it('returns an array of objects', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  id: 123,
+                  name: 'name',
+                  questions: []
+                }
+              }
+            },
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {student_result: [0], status: 'correct', type: 'Multi'},
+                        {student_result: [1], status: 'correct', type: 'Multi'},
+                        {student_result: [], status: 'unsubmitted', type: 'Multi'},
+                      ],
+                      stage: "stage 1",
+                      timestamp: '1',
+                    }
+                  },
+                },
+                2: {
+                  student_name: 'Rebecca',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {student_result: [0], status: 'correct', type: 'Multi'},
+                        {student_result: [1], status: 'correct', type: 'Multi'},
+                        {student_result: [1], status: 'incorrect', type: 'Multi'},
+                      ],
+                      stage: "stage 1",
+                      timestamp: '1',
+                    }
+                  },
+                }
+              }
+            }
+          }
+        };
+
+        const csvData = getExportableAssessmentData(stateWithAssessment);
+        assert.deepEqual(csvData, [
+          {
+            correct: "correct",
+            question: 1,
+            response: "A",
+            stage: "stage 1",
+            studentName: "Saira",
+            timestamp: '1',
+          },
+          {
+            correct: "correct",
+            question: 2,
+            response: "B",
+            stage: "stage 1",
+            studentName: "Saira",
+            timestamp: '1',
+          },
+          {
+            correct: "unsubmitted",
+            question: 3,
+            response: "",
+            stage: "stage 1",
+            studentName: "Saira",
+            timestamp: '1',
+          },
+          {
+            correct: "correct",
+            question: 1,
+            response: "A",
+            stage: "stage 1",
+            studentName: "Rebecca",
+            timestamp: '1',
+          },
+          {
+            correct: "correct",
+            question: 2,
+            response: "B",
+            stage: "stage 1",
+            studentName: "Rebecca",
+            timestamp: '1',
+          },
+          {
+            correct: "incorrect",
+            question: 3,
+            response: "B",
+            stage: "stage 1",
+            studentName: "Rebecca",
+            timestamp: '1',
+          }
+        ]);
       });
     });
 
     describe('getStudentsMCSummaryForCurrentAssessment', () => {
       it('returns an empty object when no assessments in redux', () => {
-        const result = getStudentsMCSummaryForCurrentAssessment(rootState);
+        const result = getStudentsMCSummaryForCurrentAssessment({
+          ...rootState,
+          sectionData: {
+            section: {
+              students: [],
+            }
+          }
+        });
         assert.deepEqual(result, []);
       });
 
       it('returns an array of objects of studentOverviewDataPropType', () => {
+        const date = new Date();
         const stateWithAssessment = {
           ...rootState,
+          sectionData: {
+            section: {
+              students: [{
+                name: "Issac",
+                id: 99,
+              }],
+            }
+          },
           sectionAssessments: {
             ...rootState.sectionAssessments,
             assessmentId: 123,
@@ -637,7 +984,8 @@ describe('sectionAssessmentsRedux', () => {
                       multi_correct: 4,
                       multi_count: 10,
                       submitted: true,
-                      timestamp: "2018-06-12 04:53:36 UTC",
+                      timestamp: date,
+                      url: "code.org",
                     }
                   }
                 }
@@ -654,10 +1002,178 @@ describe('sectionAssessmentsRedux', () => {
               numMultipleChoice: 10,
               numMultipleChoiceCorrect: 4,
               isSubmitted: true,
-              submissionTimeStamp: "2018-06-12 04:53:36 UTC"
-            }
+              submissionTimeStamp: date.toLocaleString(),
+              url: "code.org",
+            },
+            {
+              id: 99,
+              name: "Issac",
+              isSubmitted: false,
+              submissionTimeStamp: "Not started"
+            },
           ]
         );
+      });
+    });
+
+    it('returns summary data for specific student', () => {
+      const stateWithAssessment = {
+        ...rootState,
+        sectionData: {
+          section: {
+            students: [{
+              name: "Issac",
+              id: 99,
+            }],
+          }
+        },
+        sectionAssessments: {
+          ...rootState.sectionAssessments,
+          assessmentId: 123,
+          studentId: 99,
+          assessmentResponsesByScript: {
+            3: {
+              2: {
+                student_name: 'Ilulia',
+                responses_by_assessment: {
+                  123: {
+                    multi_correct: 4,
+                    multi_count: 10,
+                    submitted: true,
+                    timestamp: "2018-06-12 04:53:36 UTC",
+                    url: "code.org",
+                  }
+                }
+              }
+            }
+          }
+        }
+      };
+      const result = getStudentsMCSummaryForCurrentAssessment(stateWithAssessment);
+      assert.deepEqual(result,
+        [
+          {
+            id: 99,
+            name: "Issac",
+            isSubmitted: false,
+            submissionTimeStamp: "Not started"
+          },
+        ]
+      );
+    });
+
+    describe('getCurrentQuestion', () => {
+      it('returns the question text for a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 0,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                  levelgroup_results: [{
+                    question: 'What is a variable?',
+                    type: 'multi',
+                    answer_texts: ["a"],
+                  }],
+                }
+              }
+            }
+          }
+        };
+
+        const question = getCurrentQuestion(stateWithSurvey);
+        assert.deepEqual(question.question, 'What is a variable?');
+        assert.deepEqual(question.answers, [{text: 'a', correct: false, letter: 'A'}]);
+      });
+
+      it('returns the question text for an assessment', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 1,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  name: 'name',
+                  questions: [
+                    {question_text: 'What is a variable?', type: 'Multi', answers: [{text: "b", correct: false}]},
+                    {question_text: 'What is a function?', type: 'Multi', answers: [{text: "a", correct: true}]},
+                  ],
+                }
+              }
+            }
+          }
+        };
+
+        const question = getCurrentQuestion(stateWithAssessment);
+        assert.deepEqual(question.question, 'What is a function?');
+        assert.deepEqual(question.answers, [{text: 'a', correct: true, letter: 'A'}]);
+      });
+    });
+
+    describe('getStudentAnswersForCurrentQuestion', () => {
+      it('returns an empty array for a survey', () => {
+        const stateWithSurvey = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 0,
+            assessmentId: 123,
+            surveysByScript: {
+              3: {
+                123: {
+                  stage_name: 'name',
+                }
+              }
+            }
+          }
+        };
+
+        const answers = getStudentAnswersForCurrentQuestion(stateWithSurvey);
+        assert.deepEqual(answers, []);
+      });
+
+      it('returns an array of answers for an assessment', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            questionIndex: 0,
+            assessmentId: 123,
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: [3],
+                          status: 'incorrect',
+                          type: 'Multi'
+                        },
+                        {
+                          student_result: 'Hi',
+                          status: '',
+                          type: 'FreeResponse',
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+          }
+        };
+
+        const answers = getStudentAnswersForCurrentQuestion(stateWithAssessment);
+        assert.deepEqual(answers, [{id: 1, name: 'Saira', answer: 'D', correct: false}]);
       });
     });
   });

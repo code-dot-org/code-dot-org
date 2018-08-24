@@ -518,11 +518,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_course_unit_version_warning' do
-    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
@@ -530,47 +530,54 @@ class ScriptTest < ActiveSupport::TestCase
 
     user = create(:student)
     refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-
-    create(:user_script, user: user, script: csp1_2018)
-    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
     refute csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
 
     create(:user_script, user: user, script: csp1_2017)
-    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+
+    create(:user_script, user: user, script: csp1_2018)
+    refute csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
     assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
   end
 
   test 'summarize includes show_script_version_warning' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo')
-    foo18 = create(:script, name: 'foo-2018', family_name: 'foo')
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
     user = create(:student)
 
     refute foo17.summarize[:show_script_version_warning]
 
     refute foo17.summarize(true, user)[:show_script_version_warning]
-
-    create(:user_script, user: user, script: foo18)
-    assert foo17.summarize(true, user)[:show_script_version_warning]
     refute foo18.summarize(true, user)[:show_script_version_warning]
 
     create(:user_script, user: user, script: foo17)
-    assert foo17.summarize(true, user)[:show_script_version_warning]
+    refute foo17.summarize(true, user)[:show_script_version_warning]
     assert foo18.summarize(true, user)[:show_script_version_warning]
+
+    user_script_18 = create(:user_script, user: user, script: foo18)
+    refute foo17.summarize(true, user)[:show_script_version_warning]
+    assert foo18.summarize(true, user)[:show_script_version_warning]
+
+    # version warning can be dismissed
+    user_script_18.version_warning_dismissed = true
+    user_script_18.save!
+    refute foo18.summarize(true, user)[:show_script_version_warning]
   end
 
   test 'summarize only shows one version warning' do
-    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
+    csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', version_year: '2017')
     create(:course_script, course: csp_2017, script: csp1_2017, position: 1)
 
-    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
     create(:course_script, course: csp_2018, script: csp1_2018, position: 1)
 
     user = create(:student)
-    create(:user_script, user: user, script: csp1_2018)
-    assert csp1_2017.summarize(true, user)[:show_course_unit_version_warning]
-    refute csp1_2017.summarize(true, user)[:show_script_version_warning]
+    create(:user_script, user: user, script: csp1_2017)
+    assert csp1_2018.summarize(true, user)[:show_course_unit_version_warning]
+    refute csp1_2018.summarize(true, user)[:show_script_version_warning]
   end
 
   test 'summarize includes versions' do
@@ -1227,6 +1234,38 @@ endvariants
 
     assessment_script_levels = script.get_assessment_script_levels
     assert_equal assessment_script_levels[0], script_level
+  end
+
+  test "self.modern_elementary_courses_available?" do
+    course1_modern = create(:script, name: 'course1-modern', supported_locales: ["en-us", "it-it"])
+    course2_modern = create(:script, name: 'course2-modern', supported_locales: ["fr-fr", "en-us"])
+
+    Script.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
+
+    assert Script.modern_elementary_courses_available?("en-us")
+    assert_not Script.modern_elementary_courses_available?("ch-ch")
+    assert_not Script.modern_elementary_courses_available?("it-it")
+    assert_not Script.modern_elementary_courses_available?("fr-fr")
+  end
+
+  test 'supported_locale_names' do
+    script = create :script
+    assert_equal ['English'], script.supported_locale_names
+
+    script.supported_locales = ['en-US']
+    assert_equal ['English'], script.supported_locale_names
+
+    script.supported_locales = ['fr-FR']
+    assert_equal ['English', 'French'], script.supported_locale_names
+
+    script.supported_locales = ['fr-FR', 'ar-SA']
+    assert_equal ['Arabic', 'English', 'French'], script.supported_locale_names
+
+    script.supported_locales = ['en-US', 'fr-FR', 'ar-SA']
+    assert_equal ['Arabic', 'English', 'French'], script.supported_locale_names
+
+    script.supported_locales = ['fr-fr']
+    assert_equal ['English', 'fr-fr'], script.supported_locale_names
   end
 
   private

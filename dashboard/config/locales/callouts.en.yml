@@ -171,6 +171,7 @@ en:
       CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro predict_2018_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites intro sprites_2018 - Validation Test_callout: {}
       CSD U3 Sprites intro sprites_2018_callout: {}
       CSD U3 Sprites scene challenge_callout: {}
       CSD U3 Sprites scene challenge_2018_callout: {}
@@ -411,7 +412,6 @@ en:
         CSD_U3_rect_c2: Here is the "Run" button.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
@@ -600,6 +600,8 @@ en:
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: {}
+      Fish Tank 2-validated_callout: {}
+      Fish Tank 2-validated_simple_callout: {}
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Use this drop-down to create different snowflakes!
       Frozen Project Toolbox (Old)_callout:
@@ -986,8 +988,7 @@ en:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
-      courseB_artist_loops5_2018_callout:
-        courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
+      courseB_artist_loops5_2018_callout: {}
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_collector_loops1_2018_callout:
@@ -1031,7 +1032,7 @@ en:
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog1_2018_callout:
-        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them in another lesson.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog7_2018_callout:
@@ -1157,6 +1158,8 @@ en:
       courseD_collector_until_challenge1_callout: {}
       courseD_farmer_until_challenge2_callout: {}
       courseD_farmer_until_challenge2_2018_callout: {}
+      courseD_farmer_while7_2018_callout:
+        courseD_farmer_while7_2018_PathAhead: You'll need to use the `while path ahead` block in order to solve this puzzle.
       courseD_harvester_nested_loops_challenge1-broken_callout: {}
       courseD_maze_loops_challenge1_callout: {}
       courseD_maze_ramp1_callout:

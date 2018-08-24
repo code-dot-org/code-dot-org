@@ -78,7 +78,6 @@ class Script < ActiveRecord::Base
     }
 
   include SerializedProperties
-  include SerializedProperties
 
   after_save :generate_plc_objects
 
@@ -139,6 +138,7 @@ class Script < ActiveRecord::Base
     script_announcements
     version_year
     is_stable
+    supported_locales
   )
 
   def self.twenty_hour_script
@@ -218,7 +218,7 @@ class Script < ActiveRecord::Base
     if user_experiments_enabled
       scripts = scripts.map do |script|
         alternate_script = script.alternate_script(user)
-        alternate_script.present? ? alternate_script : script
+        alternate_script.presence || script
       end
     end
 
@@ -230,6 +230,20 @@ class Script < ActiveRecord::Base
   # @return [Boolean] Whether this is a valid script ID
   def self.valid_script_id?(user, script_id)
     valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
+  end
+
+  # @return [Array<Script>] An array of modern elementary scripts.
+  def self.modern_elementary_courses
+    Script::CATEGORIES[:csf].map {|name| Script.get_from_cache(name)}
+  end
+
+  # @param locale [String] An "xx-YY" locale string.
+  # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
+  def self.modern_elementary_courses_available?(locale)
+    @modern_elementary_courses_available = modern_elementary_courses.all? do |script|
+      supported_languages = script.supported_locales || []
+      supported_languages.any? {|s| locale.casecmp?(s)}
+    end
   end
 
   def starting_level
@@ -475,6 +489,48 @@ class Script < ActiveRecord::Base
     ScriptConstants.script_in_category?(:minecraft, name)
   end
 
+  def k5_draft_course?
+    ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
+  def csf_international?
+    ScriptConstants.script_in_category?(:csf_international, name)
+  end
+
+  def k5_course?
+    (
+      Script::CATEGORIES[:csf_international] +
+      Script::CATEGORIES[:csf] +
+      Script::CATEGORIES[:csf_2018]
+    ).include? name
+  end
+
+  def csf?
+    k5_course? || twenty_hour?
+  end
+
+  def cs_in_a?
+    name.match(Regexp.union('algebra', 'Algebra'))
+  end
+
+  def k1?
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
+      Script::COURSE1_NAME
+    ].include?(name)
+  end
+
+  def beta?
+    Script.beta? name
+  end
+
+  def self.beta?(name)
+    name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
+  end
+
   def get_script_level_by_id(script_level_id)
     script_levels.find {|sl| sl.id == script_level_id.to_i}
   end
@@ -507,24 +563,6 @@ class Script < ActiveRecord::Base
     end
 
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
-  end
-
-  def beta?
-    Script.beta? name
-  end
-
-  def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft'
-  end
-
-  def k1?
-    [
-      Script::COURSEA_DRAFT_NAME,
-      Script::COURSEB_DRAFT_NAME,
-      Script::COURSEA_NAME,
-      Script::COURSEB_NAME,
-      Script::COURSE1_NAME
-    ].include?(name)
   end
 
   private def csf_tts_level?
@@ -577,37 +615,24 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def k5_course?
-    %w(course1 course2 course3 course4 coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include? name
-  end
-
-  def k5_draft_course?
-    %w(coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include? name
-  end
-
-  def csf?
-    k5_course? || twenty_hour?
-  end
-
-  def csf_international?
-    %w(course1 course2 course3 course4).include? name
-  end
-
-  def cs_in_a?
-    name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
   def has_lesson_pdf?
-    return false if %w(coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include?(name)
+    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
 
     has_lesson_plan?
   end
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if %w(coursea-2017 courseb-2017 coursec-2017 coursed-2017 coursee-2017 coursef-2017 express-2017 pre-express-2017).include?(name)
+    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
 
-    k5_course? || %w(csp1-2017 csp2-2017 csp3-2017 cspunit1 cspunit2 cspunit3).include?(name)
+    k5_course? || [
+      Script::CSP17_UNIT1_NAME,
+      Script::CSP17_UNIT2_NAME,
+      Script::CSP17_UNIT3_NAME,
+      Script::CSP_UNIT1_NAME,
+      Script::CSP_UNIT2_NAME,
+      Script::CSP_UNIT3_NAME,
+    ].include?(name)
   end
 
   def freeplay_links
@@ -636,13 +661,15 @@ class Script < ActiveRecord::Base
 
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this script.
-  def has_other_version_progress?(user)
-    return nil unless user && family_name
+  def has_older_version_progress?(user)
+    return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Script.
       # select only scripts in the same script family.
       where(family_name: family_name).
+      # select only older versions.
+      where("properties -> '$.version_year' < ?", version_year).
       # exclude the current script.
       where.not(id: id).
       # select only scripts which the user has progress in.
@@ -1040,8 +1067,10 @@ class Script < ActiveRecord::Base
       }
     end
 
-    has_other_course_progress = course.try(:has_other_version_progress?, user)
-    has_other_script_progress = has_other_version_progress?(user)
+    has_older_course_progress = course.try(:has_older_version_progress?, user)
+    has_older_script_progress = has_older_version_progress?(user)
+    user_script = user && user_scripts.find_by(user: user)
+
     summary = {
       id: id,
       name: name,
@@ -1068,9 +1097,10 @@ class Script < ActiveRecord::Base
       curriculum_path: curriculum_path,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
-      show_course_unit_version_warning: has_other_course_progress,
-      show_script_version_warning: !has_other_course_progress && has_other_script_progress,
+      show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
+      show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
+      supported_locales: supported_locales
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1181,6 +1211,7 @@ class Script < ActiveRecord::Base
       script_announcements: script_data[:script_announcements] || false,
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
+      supported_locales: script_data[:supported_locales]
     }.compact
   end
 
@@ -1234,8 +1265,24 @@ class Script < ActiveRecord::Base
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
+    info[:supported_locales] = supported_locale_names
 
     info
+  end
+
+  def supported_locale_names
+    locales = supported_locales || []
+    locales = locales.map {|l| Script.locale_english_name_map[l] || l}
+    locales += ['English']
+    locales.sort.uniq
+  end
+
+  def self.locale_english_name_map
+    @@locale_english_name_map ||=
+      PEGASUS_DB[:cdo_languages].
+        select(:locale_s, :english_name_s).
+        map {|row| [row[:locale_s], row[:english_name_s]]}.
+        to_h
   end
 
   # Get all script levels that are level groups, and return a list of those that are

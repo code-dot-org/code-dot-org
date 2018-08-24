@@ -5,17 +5,19 @@
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
+
 require 'fileutils'
+require 'json'
 require 'tempfile'
+require 'yaml'
 
 require_relative 'i18n_script_utils'
-
-require_relative '../i18n-codeorg/lib/merge-translation'
 
 CLEAR = "\r\033[K"
 
 def sync_out
   rename_from_crowdin_name_to_locale
+  restore_redacted_files
   distribute_translations
   copy_untranslated_apps
   rebuild_blockly_js_files
@@ -35,6 +37,72 @@ def rename_from_crowdin_name_to_locale
   end
 end
 
+def restore_redacted_files
+  Languages.get_locale.each_with_index do |prop, i|
+    locale = prop[:locale_s]
+    print "#{CLEAR}Restoring #{locale} (#{i}/#{total_locales})"
+    $stdout.flush
+    next if locale == 'en-US'
+    next unless File.directory?("i18n/locales/#{locale}/")
+
+    Dir.glob("i18n/locales/redacted/**/*.*").each do |redacted_path|
+      source_path = redacted_path.sub("redacted", "source")
+      translated_path = redacted_path.sub("redacted", locale)
+
+      plugin = 'nonPedanticEmphasis'
+      if redacted_path == 'i18n/locales/redacted/dashboard/blocks.yml'
+        plugin = 'blockfield'
+      end
+      restore(source_path, redacted_path, translated_path, plugin)
+    end
+  end
+end
+
+# Recursively run through the data received from crowdin, sanitizing it for
+# consumption by our system.
+# Currently just restores carraige returns (since crowdin escapes them), but
+# could be expanded to do more.
+def sanitize!(data)
+  if data.is_a? Hash
+    data.values.each {|datum| sanitize!(datum)}
+  elsif data.is_a? Array
+    data.each {|datum| sanitize!(datum)}
+  elsif data.is_a? String
+    data.gsub!(/\\r/, "\r")
+  elsif data.nil?
+    # pass
+  else
+    raise "can't process unknown type: #{data}"
+  end
+end
+
+def sanitize_and_write(loc_path, dest_path)
+  loc_data = case File.extname(loc_path)
+             when '.yaml', '.yml'
+               YAML.load_file(loc_path)
+             when '.json'
+               JSON.parse(File.read(loc_path))
+             else
+               raise "do not know how to parse localization file from #{loc_path}"
+             end
+
+  sanitize! loc_data
+
+  dest_data = case File.extname(dest_path)
+              when '.yaml', '.yml'
+                loc_data.to_yaml
+              when '.json'
+                JSON.pretty_generate(loc_data)
+              else
+                raise "do not know how to serialize localization data to #{dest_path}"
+              end
+
+  FileUtils.mkdir_p(File.dirname(dest_path))
+  File.open(dest_path, 'w+') do |f|
+    f.write(dest_data)
+  end
+end
+
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations
@@ -49,42 +117,34 @@ def distribute_translations
     ### Dashboard
     Dir.glob("i18n/locales/#{locale}/dashboard/*.yml") do |loc_file|
       relname = File.basename(loc_file, '.yml')
-      source = "i18n/locales/source/dashboard/#{relname}.yml"
 
       # Special case the un-prefixed Yaml file.
       destination = (relname == "base") ?
         "dashboard/config/locales/#{locale}.yml" :
         "dashboard/config/locales/#{relname}.#{locale}.yml"
 
-      merge_translation 'yml', source, loc_file, destination
+      sanitize_and_write(loc_file, destination)
     end
 
     ### Apps
     js_locale = locale.tr('-', '_').downcase
     Dir.glob("i18n/locales/#{locale}/blockly-mooc/*.json") do |loc_file|
       relname = File.basename(loc_file, '.json')
-      source = "i18n/locales/source/blockly-mooc/#{relname}.json"
       destination = "apps/i18n/#{relname}/#{js_locale}.json"
-
-      merge_translation 'json', source, loc_file, destination
+      sanitize_and_write(loc_file, destination)
     end
 
     ### Blockly Core
     Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
       relname = File.basename(loc_file)
-      source = "i18n/locales/source/blockly-core/#{relname}"
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
-      FileUtils.mkdir_p(File.dirname(destination))
-
-      merge_translation 'json', source, loc_file, destination
+      sanitize_and_write(loc_file, destination)
     end
 
     ### Pegasus
     loc_file = "i18n/locales/#{locale}/pegasus/mobile.yml"
-    source = "i18n/locales/source/pegasus/mobile.yml"
     destination = "pegasus/cache/i18n/#{locale}.yml"
-
-    merge_translation 'yml', source, loc_file, destination
+    sanitize_and_write(loc_file, destination)
   end
 
   puts "#{CLEAR}Distribution finished!"

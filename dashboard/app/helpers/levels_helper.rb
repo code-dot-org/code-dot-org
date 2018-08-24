@@ -219,8 +219,19 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
+    # Temporary conversion from old instructions naming scheme to new
+    #TODO: elijah: remove this override once we have fully converted
+    if @app_options[:level]
+      # Level types are unfortunately inconsistent in their use of strings vs
+      # symbols for keys, forcing us to consider both here.
+      @app_options[:level]['shortInstructions'] = @app_options[:level].delete('instructions') if @app_options[:level]['instructions']
+      @app_options[:level]['longInstructions'] = @app_options[:level].delete('markdownInstructions') if @app_options[:level]['markdownInstructions']
+      @app_options[:level][:shortInstructions] = @app_options[:level].delete(:instructions) if @app_options[:level][:instructions]
+      @app_options[:level][:longInstructions] = @app_options[:level].delete(:markdownInstructions) if @app_options[:level][:markdownInstructions]
+    end
+
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
+    @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?) && I18n.en?
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -271,6 +282,7 @@ module LevelsHelper
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_dance = @level.is_a?(Gamelab) && @level.helper_libraries.try(:include?, 'DanceLab')
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
       locals: {
@@ -282,6 +294,7 @@ module LevelsHelper
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
+        use_dance: use_dance,
         hide_source: hide_source,
         static_asset_base_path: app_options[:baseUrl]
       }
@@ -451,12 +464,38 @@ module LevelsHelper
     # Locale-depdendent option
     # For historical reasons, `localized_instructions` and
     # `localized_authored_hints` should happen independent of `should_localize?`
-    set_unless_nil(level_options, 'instructions', l.localized_instructions)
+    # TODO: elijah: update these instructions values to new names once we
+    # migrate to the new keys
+    set_unless_nil(level_options, 'instructions', l.localized_short_instructions)
     set_unless_nil(level_options, 'authoredHints', l.localized_authored_hints)
     if l.should_localize?
-      set_unless_nil(level_options, 'markdownInstructions', l.localized_markdown_instructions)
+      # Don't ever show non-English markdown instructions for Course 1 - 4 or
+      # the 20-hour course. We're prioritizing translation of Course A - F.
+      if @script && (@script.csf_international? || @script.twenty_hour?)
+        level_options.delete('markdownInstructions')
+      else
+        set_unless_nil(level_options, 'markdownInstructions', l.localized_long_instructions)
+      end
       set_unless_nil(level_options, 'failureMessageOverride', l.localized_failure_message_override)
-      set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
+
+      # Unintuitively, it is completely possible for a Blockly level to use
+      # Droplet, so we need to confirm the editory style before assuming that
+      # these fields contain Blockly xml.
+      unless l.uses_droplet?
+        set_unless_nil(level_options, 'toolbox', l.localized_toolbox_blocks)
+
+        %w(
+          initializationBlocks
+          startBlocks
+          toolbox
+          levelBuilderRequiredBlocks
+          levelBuilderRecommendedBlocks
+          solutionBlocks
+        ).each do |xml_block_prop|
+          next unless level_options.key? xml_block_prop
+          set_unless_nil(level_options, xml_block_prop, l.localize_function_blocks(level_options[xml_block_prop]))
+        end
+      end
     end
 
     # Script-dependent option
@@ -469,56 +508,6 @@ module LevelsHelper
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
-
-    # Unused Blocks option
-    ## TODO (elijah) replace this with more-permanent level configuration
-    ## options once the experimental period is over.
-
-    ## allow unused blocks for all levels except Jigsaw
-    app_options[:showUnusedBlocks] = @game ? @game.name != 'Jigsaw' : true
-
-    ## Allow gatekeeper to disable otherwise-enabled unused blocks in a
-    ## cascading way; more specific options take priority over
-    ## less-specific options.
-    if script && script_level && app_options[:showUnusedBlocks] != false
-
-      # puzzle-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {
-          script_name: script.name,
-          stage: script_level.stage.absolute_position,
-          puzzle: script_level.position
-        },
-        default: nil
-      )
-
-      # stage-specific
-      if enabled.nil?
-        enabled = Gatekeeper.allows(
-          'showUnusedBlocks',
-          where: {
-            script_name: script.name,
-            stage: script_level.stage.absolute_position,
-          },
-          default: nil
-        )
-      end
-
-      # script-specific
-      if enabled.nil?
-        enabled = Gatekeeper.allows(
-          'showUnusedBlocks',
-          where: {script_name: script.name},
-          default: nil
-        )
-      end
-
-      # global
-      enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
-
-      app_options[:showUnusedBlocks] = enabled
-    end
 
     # Edit blocks-dependent options
     if level_view_options(@level.id)[:edit_blocks]
@@ -582,6 +571,10 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
+
+    if params[:blocks]
+      level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+    end
 
     unless params[:no_last_attempt]
       level_options[:lastAttempt] = @last_attempt

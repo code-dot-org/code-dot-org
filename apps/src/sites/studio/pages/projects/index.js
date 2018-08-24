@@ -3,44 +3,51 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
-import PublishDialog from '@cdo/apps/templates/publishDialog/PublishDialog';
+import experiments from '@cdo/apps/util/experiments';
+import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
+import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
+import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
-import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
+import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
+import {
+  MAX_PROJECTS_PER_CATEGORY,
+  Galleries,
+  publishMethods,
+} from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
   selectGallery,
   setProjectLists,
   prependProjects,
+  setPersonalProjectsList,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer, {
   showPublishDialog,
-} from '@cdo/apps/templates/publishDialog/publishDialogRedux';
+} from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import { AlwaysPublishableProjectTypes, AllPublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
-import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
   const projectsData = JSON.parse(script.dataset.projects);
 
-  registerReducers({projects, publishDialog: publishDialogReducer});
+  registerReducers({projects, publishDialog: publishDialogReducer, deleteDialog: deleteDialogReducer});
   const store = getStore();
   setupReduxSubscribers(store);
-  const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={store}>
-      <ProjectHeader/>
+      <GallerySwitcher/>
     </Provider>,
-    projectsHeader
+    document.getElementById('gallery-navigation')
   );
 
   ReactDOM.render(
     <Provider store={store}>
-      <StartNewProject
-        canViewFullList
+      <ProjectHeader
         canViewAdvancedTools={projectsData.canViewAdvancedTools}
       />
     </Provider>,
-    document.getElementById('new-project-buttons')
+    document.getElementById('projects-header')
   );
 
   const isPublic = window.location.pathname.startsWith('/projects/public');
@@ -64,6 +71,58 @@ $(document).ready(() => {
       publicGallery);
   });
 
+  // We're going to run an A/B experiment to compare (un)publishing from the
+  // quick actions dropdown and from a button in the published column.
+  // 50% of users will see the chevron variant.
+  // The other 50% of users will see the button variant.
+  // TODO (Erin B.) delete the duplicate table when we
+  // determine the experiment outcome.
+  if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE)) {
+
+    if (experiments.isEnabled(experiments.CHEVRON_PUBLISH_EXPERIMENT)) {
+      const personalProjectsUrl = `/api/v1/projects/personal`;
+
+      $.ajax({
+        method: 'GET',
+        url: personalProjectsUrl,
+        dataType: 'json'
+      }).done(personalProjectsList => {
+        store.dispatch(setPersonalProjectsList(personalProjectsList));
+        ReactDOM.render(
+          <Provider store={store}>
+            <PersonalProjectsTable
+              canShare={projectsData.canShare}
+              publishMethod={publishMethods.CHEVRON}
+              userId={projectsData.userId}
+            />
+          </Provider>,
+          document.getElementById('react-my-projects')
+        );
+      });
+
+    } else {
+      const personalProjectsUrl = `/api/v1/projects/personal`;
+
+      $.ajax({
+        method: 'GET',
+        url: personalProjectsUrl,
+        dataType: 'json'
+      }).done(personalProjectsList => {
+        store.dispatch(setPersonalProjectsList(personalProjectsList));
+        ReactDOM.render(
+          <Provider store={store}>
+            <PersonalProjectsTable
+              canShare={projectsData.canShare}
+              publishMethod={publishMethods.BUTTON}
+              userId={projectsData.userId}
+            />
+          </Provider>,
+          document.getElementById('react-my-projects')
+        );
+      });
+    }
+  }
+
   const publishConfirm = document.getElementById('publish-confirm');
 
   ReactDOM.render(
@@ -71,6 +130,15 @@ $(document).ready(() => {
       <PublishDialog/>
     </Provider>,
     publishConfirm
+  );
+
+  const deleteConfirm = document.getElementById('delete-confirm');
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <DeleteProjectDialog/>
+    </Provider>,
+    deleteConfirm
   );
 });
 

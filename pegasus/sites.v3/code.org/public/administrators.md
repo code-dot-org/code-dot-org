@@ -41,9 +41,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 ## Get started with curriculum and professional learning
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science.  Code.org's <a href='/educate/curriculum/elementary-school'>Computer Science Fundamentals courses</a> are designed for elementary school teachers. <a href='/educate/csd'>CS Discoveries</a> and <a href='/educate/csp'>CS Principles</a> are stand alone computer science courses for middle and high school. These high quality, semester or full year courses (including daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings) are free to use anywhere in the world.
-In the US, Code.org's network of regional partners work directly with teachers to prepare them to successfully lead computer science classrooms.
-Internationally, try <a href='/educate/professional-development-online'>our online self-paced courses</a>." %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/pd/regional_partner_contact/new'), cta_text: 'Contact a Regional Partner', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Grades K-12', description: "Code.org's professional development workshops support teachers with no background in computer science. We offer a high quality K-12 curriculum that can be used for a semester or full year. It includes daily lesson plans, detailed instructions, activity guides, assessments, and standards mappings, all free to use. In the U.S., Code.org's network of Regional Partners prepare teachers to successfully lead computer science classrooms." %>
 <div style="clear:both"></div>
 
 ## Start Planning Now
@@ -94,7 +92,7 @@ Internationally, try <a href='/educate/professional-development-online'>our onli
 <h3 style="font-family: 'Gotham 5r', sans-serif">Make computer science courses count</h3>
 
 - How you credit computer science can dramatically impact [who enrolls in computer science courses](http://blog.code.org/post/121123281798/md).
-- 36 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
+- 38 states allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 - If possible, we recommend allowing computer science courses to satisfy graduation requirements and exist as both an Academic and CTE course.
 
 [/col-80]
@@ -113,7 +111,7 @@ Internationally, try <a href='/educate/professional-development-online'>our onli
 
 - Identify teachers who will lead CS classes in your district next year.
 - Code.org's curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
-- 31 states have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
+- 32 states have some guidance around certification for computer science teachers, [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
 
 [/col-80]
 

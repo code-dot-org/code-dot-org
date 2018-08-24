@@ -31,6 +31,7 @@ en:
       messages:
         blank: "is required"
         blank_plural: "are required"
+        invalid: "is invalid"
         invalid_plural: "are invalid"
     attributes:
       user:
@@ -113,6 +114,7 @@ en:
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
     use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider}. Please try again."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
@@ -225,6 +227,7 @@ en:
     student_associated_subject: 'Login information for Code.org'
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
+    delete_teacher_subject: 'Code.org notification: Your account has been deleted'
   section:
     your_section:
       one: 'Your section:'
@@ -388,22 +391,27 @@ en:
     current_password_hint: '(we need your current password to confirm your changes)'
     delete: 'Delete Account'
     delete_text: "Deleting your account will erase all information and progress connected to this account."
+    delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
-    create_personal_login: 'Create a personal login'
+    create_personal_login: 'Create a personal password login'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_link_account: 'You can also instead choose to connect to a personal account under the “Manage Linked Accounts” section.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    parent_email_label: "Parent/guardian email (optional)"
+    parent_email_hint: "(this can be used for password recovery)"
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
+    account_successfully_updated: "Account successfully updated."
   user_level:
     completed: 'Completed'
     tried: 'Tried'
@@ -761,14 +769,14 @@ en:
     title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
-      - white: "White"
-      - black: "Black or African American"
-      - hispanic: "Hispanic or Latino"
-      - asian: "Asian"
-      - hawaiian: "Native Hawaiian or other Pacific Islander"
-      - american_indian: "American Indian/Alaska Native"
-      - other: "Other"
-      - opt_out: "Prefer not to say"
+      white: "White"
+      black: "Black or African American"
+      hispanic: "Hispanic or Latino"
+      asian: "Asian"
+      hawaiian: "Native Hawaiian or other Pacific Islander"
+      american_indian: "American Indian/Alaska Native"
+      other: "Other"
+      opt_out: "Prefer not to say"
     submit: "Submit"
     decline: "Close"
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
@@ -986,6 +994,7 @@ en:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
+  stage_extras_teacher_message: "You have Lesson Extras turned off for some of your sections. Your students won’t see this page unless you turn them on. You can turn Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher Dashboard</a>."
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
@@ -1021,6 +1030,100 @@ en:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+    form_labels:
+      first_name: 'First Name'
+      first_name_preferred: 'Preferred First Name'
+      last_name: 'Last Name'
+      email: 'Email'
+      email_alternate: 'Alternate Email'
+      gender: 'Gender Identity'
+      school_name: 'School Name'
+      school_city: 'School City'
+      school_country: 'School Country'
+      ages: 'Which age(s) do you teach this year?'
+      subjects: 'Which subject(s) do you teach this year?'
+      resources: 'Which of the following CS education resources do you use?'
+      robotics: 'Which of the following robotics resources do you use?'
+      workshop_organizer: 'Workshop Organizer'
+      workshop_facilitator: 'Workshop Facilitator'
+      workshop_course: 'Workshop Course'
+      email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
+    form_entries:
+      gender:
+        male: 'Male'
+        female: 'Female'
+        non_binary: 'Non-binary'
+        not_listed: 'Preferred term not listed'
+        none: 'Prefer not to answer'
+      school_country:
+        canada: 'Canada'
+        chile: 'Chile'
+        israel: 'Israel'
+        malaysia: 'Malaysia'
+        mexico: 'Mexico'
+        thailand: 'Thailand'
+      ages:
+        ages_under_6: '< 6 years old'
+        ages_7_8: '7-8 years old'
+        ages_9_10: '9-10 years old'
+        ages_11_12: '11-12 years old'
+        ages_13_14: '13-14 years old'
+        ages_15_16: '15-16 years old'
+        ages_17_18: '17-18 years old'
+        ages_19_over: '19+ years old'
+      subjects:
+        cs: 'Computer Science'
+        ict: 'ICT'
+        math: 'Math'
+        science: 'Science'
+        history: 'History / Social Studies'
+        la: 'Language Arts'
+        efl: 'English as a Foreign Language'
+        music: 'Music'
+        art: 'Art'
+        other: "Other:"
+      resources:
+        bootstrap: 'Bootstrap'
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
+        khan: 'Khan Academy'
+        kodable: 'Kodable'
+        lightbot: 'Lightbot'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "Other:"
+      robotics:
+        grok: 'Grok Learning'
+        kodable: 'Kodable'
+        lego: 'LEGO Education'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        wonder: 'Wonder Workshop'
+        other: "Other:"
+      workshop_course:
+        csf_af: 'CS Fundamentals (Courses A-F)'
+        csf_express: 'CS Fundamentals (Pre-Express or Express)'
+        csd: 'CS Discoveries'
+        csp: 'CS Principles'
+      email_opt_in:
+        opt_in_yes: 'Yes'
+        opt_in_no: 'No'
+    international_opt_in:
+      title: 'Workshop Attendance'
+      intro: "Thank you for taking time to receive training on Code.org’s curriculum. Our mission to bring computer science education opportunities to all children in all schools around the world would not be possible without you."
+      instructions: "Please fill out the form below to indicate that 1) you attended a training workshop run by one of Code.org’s international partners, and 2) you agree to share your information with our international partner in your country so that they can help to support your journey as a computer science teacher."
+      thanks: "Thank you for submitting! We look forward to supporting you as you get to know Code.org’s curriculum and tools. Please keep sharing your questions and feedback with us by writing to us at <a href='%{support_email_url}'>support@code.org</a> or by posting on the <a href='%{teacher_forum_url}' target='_blank'>teacher forum</a>!"
+    logged_out:
+      heading: 'Thanks for your interest in the Professional Learning Program!'
+      body: 'To get started, you first need to be logged into your Code.org account. If you’d like more information about the program before you start your application, please check out the <a href="%{url}">Professional Learning Program overview</a>.'
+    not_teacher:
+      body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
+      more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
+    no_teacher_email:
+      body: 'Your account doesn’t have an email address. Please <a href="%{user_registration}">visit your account settings</a> to add your email address before completing this form.'
   courses_category: 'Full Courses'
   cookie_banner:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'

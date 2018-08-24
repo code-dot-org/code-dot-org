@@ -13,10 +13,6 @@ steps:
         file: tables/quarterly_workshop_attendance.sql
       - name: csf_workshop_attendance
         file: tables/csf_workshop_attendance.sql
-      - name: csf_workshop_attendance
-        file: tables/csf_workshop_attendance.sql
-      - name: csf_workshops
-        file: tables/csf_workshops.sql
       - name: student-activity-csf
         file: tables/student_activity_csf.sql
       - name: student-activity-csp-csd
@@ -37,7 +33,7 @@ steps:
         file: tables/outreach_stats_by_year.sql
       - name: school-level-stats
         file: tables/school_activity_stats.sql
-   - name: regional-partner-roster
-     queries:
+  - name: regional-partner-roster
+    queries:
        - name: roster
          file: tables/regional_partner_stats_for_roster.sql

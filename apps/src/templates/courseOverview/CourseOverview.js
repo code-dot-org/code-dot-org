@@ -10,6 +10,7 @@ import * as utils from '../../utils';
 import { queryParams } from '../../code-studio/utils';
 import i18n from '@cdo/locale';
 import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   main: {
@@ -26,8 +27,16 @@ const styles = {
   title: {
     display: 'inline-block',
   },
+  versionWrapper: {
+    display: 'flex',
+    alignItems: 'baseline',
+  },
+  versionLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 15,
+    color: color.charcoal,
+  },
   versionDropdown: {
-    display: 'inline-block',
     marginBottom: 13,
   }
 };
@@ -64,6 +73,26 @@ export default class CourseOverview extends Component {
       const queryString = sectionId ? `?section_id=${sectionId}` : '';
       utils.navigateToHref(`/courses/${courseName}${queryString}`);
     }
+  };
+
+  onDismissVersionWarning = () => {
+    if (!this.props.scripts[0]) {
+      return;
+    }
+
+    // Because there is no user_course table, store the fact that the version
+    // dialog has been dismissed on the first user_script in the course.
+    const firstScriptId = this.props.scripts[0].id;
+
+    // Fire and forget. If this fails, we'll have another chance to
+    // succeed the next time the warning is dismissed.
+    $.ajax({
+      method: 'PATCH',
+      url: `/api/v1/user_scripts/${firstScriptId}`,
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({version_warning_dismissed: true}),
+    });
   };
 
   render() {
@@ -104,23 +133,27 @@ export default class CourseOverview extends Component {
             notice={i18n.wrongCourseVersionWarningNotice()}
             details={i18n.wrongCourseVersionWarningDetails()}
             dismissible={true}
+            onDismiss={this.onDismissVersionWarning}
           />
         }
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {versions.length > 1 &&
-            <select
-              onChange={this.onChangeVersion}
-              value={name}
-              style={styles.versionDropdown}
-              id="version-selector"
-            >
-              {versions.map(version => (
-                <option key={version.name} value={version.name}>
-                  {version.version_title}
-                </option>
-              ))}
-            </select>
+            <span style={styles.versionWrapper}>
+              <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
+              <select
+                onChange={this.onChangeVersion}
+                value={name}
+                style={styles.versionDropdown}
+                id="version-selector"
+              >
+                {versions.map(version => (
+                  <option key={version.name} value={version.name}>
+                    {version.version_title}
+                  </option>
+                ))}
+              </select>
+            </span>
           }
         </div>
         <div style={styles.description}>

@@ -21,17 +21,16 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
-experiments.PROGRESS_TAB = 'sectionProgressRedesign';
-experiments.TEXT_RESPONSES_TAB = 'textResponsesRedesign';
-experiments.ASSESSMENTS_TAB = 'assessmentsTab';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdownNewSearch';
+experiments.REACT_PROJECTS_TABLE = 'reactProjectsTable';
+experiments.CHEVRON_PUBLISH_EXPERIMENT = 'chevron-publish';
 
 // This is a per user experiment and is defined in experiments.rb
-// On the front end we are treating it as an experiment group that contains
-// PROGRESS_TAB.
+// On the front end we are treating it as an experiment group.
 experiments.TEACHER_EXP_2018 = '2018-teacher-experience';
-experiments.TEACHER_EXP_2018_LIST = [experiments.PROGRESS_TAB,
-  experiments.COMMENT_BOX_TAB, experiments.TEXT_RESPONSES_TAB];
+experiments.TEACHER_EXP_2018_LIST = [
+  experiments.COMMENT_BOX_TAB,
+];
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

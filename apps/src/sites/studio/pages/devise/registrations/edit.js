@@ -1,13 +1,27 @@
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
+import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
+import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
-const {userAge, userType, isPasswordRequired} = scriptData;
+const {
+  userAge,
+  userType,
+  isPasswordRequired,
+  authenticationOptions,
+  isGoogleClassroomStudent,
+  isCleverStudent,
+  dependedUponForLogin,
+  dependentStudents,
+  studentCount,
+} = scriptData;
 
 $(document).ready(() => {
   new ChangeEmailController({
@@ -20,15 +34,37 @@ $(document).ready(() => {
     emailChangedCallback: onEmailChanged,
   });
 
-  new ChangeUserTypeController(
-    $('#change-user-type-modal-form'),
-    userType,
-  );
+  new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
 
-  new AddPasswordController(
-    $('#add-password-form'),
-    document.getElementById('add-password-fields'),
-  );
+  const addPasswordMountPoint = document.getElementById('add-password-fields');
+  if (addPasswordMountPoint) {
+    new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
+  }
+
+  const manageLinkedAccountsMountPoint = document.getElementById('manage-linked-accounts');
+  if (manageLinkedAccountsMountPoint) {
+    new ManageLinkedAccountsController(
+      manageLinkedAccountsMountPoint,
+      authenticationOptions,
+      isPasswordRequired,
+      isGoogleClassroomStudent,
+      isCleverStudent,
+    );
+  }
+
+  const deleteAccountMountPoint = document.getElementById('delete-account');
+  if (deleteAccountMountPoint) {
+    ReactDOM.render(
+      <DeleteAccount
+        isPasswordRequired={isPasswordRequired}
+        isTeacher={userType === 'teacher'}
+        dependedUponForLogin={dependedUponForLogin}
+        dependentStudents={dependentStudents}
+        hasStudents={studentCount > 0}
+      />,
+      deleteAccountMountPoint
+    );
+  }
 
   initializeCreatePersonalAccountControls();
 });

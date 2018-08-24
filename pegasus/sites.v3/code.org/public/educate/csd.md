@@ -27,34 +27,13 @@ Computer Science Discoveries is appropriate for 6 - 10th grade students and can 
 <div style="clear:both"></div>
 
 <hr/>
-## <a name="what"></a>Professional Learning - Applications now available!
-
-Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
-
-**Applications for the [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) are now available!**
-
-[col-50]
-
-<center><img src="/images/recruitment_banner.png" width="90%"></center>
-
-[/col-50]
-
-<div class="col-50" style="padding-top:14px">
-  <a href="/educate/professional-learning/cs-discoveries">
-    <button>Learn more and apply now!</button>
-  </a>
-</div>
-
-<div style="clear:both"></div>
-
-<hr/>
 ## <a name="content"></a>Curriculum Resources and Features
 
 [col-33]
 
-[<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](/files/CSDiscoveries-Curriculum-Guide.pdf)</center>
+[<center><img src="/images/csd/CSD-crop-cover.png" width="90%">](https://docs.google.com/document/d/1hzG2yKUrvXKGq_ee0E1fAyxbzRL_8-bbldgyLG7m_X4/edit#)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">The  <a href="/files/CSDiscoveries-Curriculum-Guide.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
+<div style="margin-left: 15px; margin-top: 5px;">The  <a href="https://docs.google.com/document/d/1hzG2yKUrvXKGq_ee0E1fAyxbzRL_8-bbldgyLG7m_X4/edit#", target=_"blank">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
 
 [/col-33]
 
@@ -230,14 +209,16 @@ We have forums for educators to discuss and trade ideas about CS Discoveries and
 
 ## <a name="faq"></a>Frequently Asked Questions
 
-### <a name="timeline"></a>What is the timeline for CS Discoveries?
-
-All units are released at this time and can be used by teachers and classrooms. In early 2018, we will be releasing a revised version of Unit 6 to incorporate feedback from our Spring 2017 pilot.
-
 ### <a name="standards"></a>Will CS Discoveries be mapped to standards?
 
 CS Discoveries was written using both the K-12 Framework for Computer Science and the newly revised 2017 CSTA standards as guidance. Currently, every lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
  The summary of of all CSTA 2017 mappings can be found at [curriculum.code.org/csd/standards](https://curriculum.code.org/csd/standards)
+ 
+### How/Where can I get professional development for this course?
+
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and follow up workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. [Click here](/educate/professional-learning/cs-discoveries) to learn more.
+
+Want to get notified when applications open for the 2019-2020 school year? [Provide your contact information](https://studio.code.org/pd/regional_partner_contact/new) to a Regional Partner.
 
 ###  <a name="implementation"></a>I’m teaching CS Discoveries but have less than one semester with my students. What would you recommend?
 CS Discoveries consists of two semesters that build on each other.  Schools can choose to teach a single semester, two sequential semesters, or a single, year-long course.  For courses that meet fewer than three hours a week or last for less than a trimester, we recommend [CS Fundamentals Express](/educate/curriculum/express-course), a 30+ hour course that covers the foundational concepts of programming.
@@ -254,7 +235,7 @@ Some schools may want to use parts of the CS Discoveries curriculum without runn
 * Containers that can hold water
 * [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable.***
 
-\*** Participants in our 2018-19 Professional Learning Program who are teaching in schools with 50%+ free and reduced meal rates are eligible to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
+\*** Participants in our 2018-19 Professional Learning Program who are teaching in schools with 40%+ free and reduced meal rates are eligible to receive a subsidized Adafruit Circuit Playground classroom kit if they are implementing the full course. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
 
 ### <a name="pathway"></a>How does CS Discoveries fit with the other Code.org courses?
 
@@ -276,5 +257,25 @@ We are now accepting applications for the 2017-18 Professional Learning Program 
 Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
 [<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
+
+## <a name="what"></a>Professional Learning - Applications now available!
+
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
+
+**Applications for the [CS Discoveries Professional Learning Program](/educate/professional-learning/cs-discoveries) are now available!**
+
+[col-50]
+
+<center><img src="/images/recruitment_banner.png" width="90%"></center>
+
+[/col-50]
+
+<div class="col-50" style="padding-top:14px">
+  <a href="/educate/professional-learning/cs-discoveries">
+    <button>Learn more and apply now!</button>
+  </a>
+</div>
+
+<div style="clear:both"></div>
 
 -->
