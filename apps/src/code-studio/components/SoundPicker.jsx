@@ -36,7 +36,8 @@ export default class SoundPicker extends React.Component {
     showUnderageWarning: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
     //For logging upload failures
-    projectId: PropTypes.string
+    projectId: PropTypes.string,
+    soundPlayer: PropTypes.object
   };
 
   state = {mode: MODE.sounds};
@@ -95,6 +96,7 @@ export default class SoundPicker extends React.Component {
         uploadsEnabled={this.props.uploadsEnabled}
         useFilesApi={this.props.useFilesApi}
         projectId={this.props.projectId}
+        soundPlayer={this.props.soundPlayer}
       /> :
       <SoundLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 
