@@ -939,7 +939,9 @@ Artist.prototype.finishExecution_ = function () {
   if (this.level.freePlay) {
     window.dispatchEvent(utils.createEvent('artistDrawingComplete'));
   } else {
-    this.checkAnswer();
+    if (this.shouldAnimate_) {
+      this.checkAnswer();
+    }
   }
   setTimeout(() => {
     this.executing = false;
