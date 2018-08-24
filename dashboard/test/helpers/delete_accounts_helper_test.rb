@@ -852,6 +852,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_regional_partner_contacts
+  #
+
+  test "clears form_data from pd_regional_partner_contacts" do
+    teacher = create :teacher
+    contact = create :pd_regional_partner_contact, user: teacher
+    refute_equal '{}', contact.form_data
+
+    purge_user contact.user
+
+    contact.reload
+    assert_equal '{}', contact.form_data
+  end
+
+  #
   # Table: dashboard.pd_regional_partner_program_registrations
   #
 
@@ -953,6 +968,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: dashboard.pd_workshop_material_orders
+  # Associated directly and/or via enrollment
   #
 
   test "clears school_or_company from pd_workshop_material_orders by user_id" do
@@ -1102,6 +1118,77 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     order.reload
     assert_empty order.phone_number
+  end
+
+  #
+  # Table: dashboard.pd_workshop_surveys
+  # Associated via enrollment
+  #
+
+  test "clears form_data from pd_workshop_surveys" do
+    enrollment = create :pd_enrollment, :from_user
+    survey = create :pd_workshop_survey, pd_enrollment: enrollment
+    refute_equal '{}', survey.form_data
+
+    purge_user survey.pd_enrollment.user
+
+    survey.reload
+    assert_equal '{}', survey.form_data
+  end
+
+  #
+  # Table dashboard.peer_reviews
+  # Could delete submitter or viewer
+  #
+
+  test "clears submitter_id from peer_reviews if submitter is purged" do
+    peer_review = create :peer_review
+    refute_nil peer_review.submitter_id
+
+    purge_user peer_review.submitter
+
+    peer_review.reload
+    assert_nil peer_review.submitter_id
+  end
+
+  test "clears audit_trail from peer_reviews if submitter is purged" do
+    peer_review = create :peer_review, audit_trail: 'fake audit trail'
+    refute_nil peer_review.audit_trail
+
+    purge_user peer_review.submitter
+
+    peer_review.reload
+    assert_nil peer_review.audit_trail
+  end
+
+  test "clears reviewer_id from peer_reviews if reviewer is purged" do
+    peer_review = create :peer_review, :reviewed
+    refute_nil peer_review.reviewer_id
+
+    purge_user peer_review.reviewer
+
+    peer_review.reload
+    assert_nil peer_review.reviewer_id
+  end
+
+  test "clears data from peer_reviews if reviewer is purged" do
+    peer_review = create :peer_review, :reviewed
+    refute_nil peer_review.data
+
+    purge_user peer_review.reviewer
+
+    peer_review.reload
+    assert_nil peer_review.data
+  end
+
+  test "clears audit_trail from peer_reviews if reviewer is purged" do
+    peer_review = create :peer_review, :reviewed
+    refute_nil peer_review.audit_trail
+
+    purge_user peer_review.reviewer
+
+    peer_review.reload
+    assert_nil peer_review.audit_trail
   end
 
   #
@@ -1259,6 +1346,61 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     attendance.reload
     assert_nil attendance.notes
+  end
+
+  #
+  # Table: dashboard.survey_results
+  #
+
+  test "removes all rows for user from survey_results" do
+    teacher_a = create :teacher
+    teacher_b = create :teacher
+    survey_result_a = create :survey_result, user: teacher_a
+    survey_result_b = create :survey_result, user: teacher_a
+    survey_result_c = create :survey_result, user: teacher_b
+
+    assert_equal 2, SurveyResult.where(user_id: teacher_a.id).count
+    assert_equal 1, SurveyResult.where(user_id: teacher_b.id).count
+
+    purge_user teacher_a
+
+    assert_equal 0, SurveyResult.where(user_id: teacher_a.id).count
+    assert_equal 1, SurveyResult.where(user_id: teacher_b.id).count
+    refute SurveyResult.where(id: survey_result_a.id).exists?
+    refute SurveyResult.where(id: survey_result_b.id).exists?
+    assert SurveyResult.where(id: survey_result_c.id).exists?
+  end
+
+  #
+  # Table: dashboard.unexpected_teachers_workshops
+  #
+
+  test "removes all rows for user from unexpected_teachers_workshops" do
+    teacher_a = create :teacher
+    teacher_b = create :teacher
+    workshop_a = create :workshop
+    workshop_a.unexpected_teachers << teacher_a
+    workshop_a.unexpected_teachers << teacher_b
+    workshop_b = create :workshop
+    workshop_b.unexpected_teachers << teacher_a
+
+    workshop_a.reload
+    workshop_b.reload
+
+    assert_equal 2, workshop_a.unexpected_teachers.with_deleted.count
+    assert_equal 1, workshop_b.unexpected_teachers.with_deleted.count
+
+    purge_user teacher_a
+
+    workshop_a.reload
+    workshop_b.reload
+
+    assert_equal 1, workshop_a.unexpected_teachers.with_deleted.count
+    assert_equal 0, workshop_b.unexpected_teachers.with_deleted.count
+    assert_empty ActiveRecord::Base.connection.exec_query(<<-SQL).rows
+      SELECT workshop_id FROM unexpected_teachers_workshops
+      WHERE unexpected_teacher_id = #{teacher_a.id}
+    SQL
   end
 
   #
