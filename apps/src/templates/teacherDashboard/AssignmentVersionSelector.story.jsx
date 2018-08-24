@@ -36,17 +36,6 @@ export default storybook => {
     .storiesOf('AssignmentVersionSelector', module)
     .addStoryTable([
       {
-        name: 'with native dropdown',
-        story: () => {
-          return (
-            <AssignmentVersionSelector
-              dropdownStyle={styles.dropdown}
-              onChangeVersion={action('onChangeVersion')}
-              versions={defaultVersions}
-            />
-          );
-        }
-      }, {
         name: 'with popup menu',
         story: () => {
           return (
@@ -54,7 +43,6 @@ export default storybook => {
               dropdownStyle={styles.dropdown}
               onChangeVersion={action('onChangeVersion')}
               versions={defaultVersions}
-              showVersionMenu={true}
             />
           );
         }
@@ -66,7 +54,6 @@ export default storybook => {
               dropdownStyle={styles.dropdown}
               onChangeVersion={action('onChangeVersion')}
               versions={defaultVersions}
-              showVersionMenu
               disabled
             />
           );

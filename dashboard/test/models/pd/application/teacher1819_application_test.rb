@@ -3,7 +3,7 @@ require 'cdo/shared_constants/pd/teacher1819_application_constants'
 
 module Pd::Application
   class Teacher1819ApplicationTest < ActiveSupport::TestCase
-    include Teacher1819ApplicationConstants
+    include Pd::Teacher1819ApplicationConstants
     include ApplicationConstants
     include RegionalPartnerTeacherconMapping
 
