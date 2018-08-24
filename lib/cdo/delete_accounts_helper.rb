@@ -110,6 +110,13 @@ class DeleteAccountsHelper
 
     SurveyResult.where(user_id: user_id).destroy_all
 
+    # Most efficient query to find and remove records from many-to-many join
+    # table unexpected_teachers_workshops without a corresponding model
+    ActiveRecord::Base.connection.execute(<<-SQL)
+      DELETE FROM unexpected_teachers_workshops
+      WHERE unexpected_teacher_id = '#{user_id}'
+    SQL
+
     unless application_ids.empty?
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
