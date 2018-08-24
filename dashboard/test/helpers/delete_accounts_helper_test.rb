@@ -632,14 +632,30 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     cohort.teachers << user
     cohort.teachers << create(:teacher) # a second teacher
 
-    assert_equal 2, cohort.teachers.size
-    assert_equal 0, cohort.deleted_teachers.size
+    assert_equal 2, cohort.teachers.with_deleted.size
+    assert_equal 0, cohort.deleted_teachers.with_deleted.size
 
     purge_user user
     cohort.reload
 
-    assert_equal 1, cohort.teachers.size
-    assert_equal 0, cohort.deleted_teachers.size
+    assert_equal 1, cohort.teachers.with_deleted.size
+    assert_equal 0, cohort.deleted_teachers.with_deleted.size
+  end
+
+  test 'removes cohorts_deleted_users rows' do
+    user = create :teacher
+    cohort = create :cohort
+    cohort.deleted_teachers << user
+    cohort.deleted_teachers << create(:teacher) # a second teacher
+
+    assert_equal 0, cohort.teachers.with_deleted.size
+    assert_equal 2, cohort.deleted_teachers.with_deleted.size
+
+    purge_user user
+    cohort.reload
+
+    assert_equal 0, cohort.teachers.with_deleted.size
+    assert_equal 1, cohort.deleted_teachers.with_deleted.size
   end
 
   #
