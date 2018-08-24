@@ -95,3 +95,12 @@ Then /^I set the project version interval to (\d+) seconds?$/ do |seconds|
   code = "window.dashboard.project.__TestInterface.setSourceVersionInterval(#{seconds});"
   @browser.execute_script(code)
 end
+
+Then /^the project table contains ([\d]+) (?:row|rows)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('.ui-personal-projects-row').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
+
+Then /^there is a project in the table named "([^"]+)"$/ do |expected_name|
+  element_exists?(expected_name)
+end
