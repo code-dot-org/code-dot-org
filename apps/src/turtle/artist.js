@@ -56,6 +56,7 @@ import dom from '../dom';
 import {SignInState} from '../code-studio/progressRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
+import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -301,9 +302,8 @@ Artist.prototype.init = function (config) {
   });
 
   this.limitedAutoRun = experiments.isEnabled('limited-auto-artist') ||
-    this.level.limitedAutoRun;
-  this.autoRun = experiments.isEnabled('auto-artist') ||
-    this.level.autoRun || this.limitedAutoRun;
+    this.level.autoRun === ArtistAutorunOptions.limited_auto_run;
+  this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
