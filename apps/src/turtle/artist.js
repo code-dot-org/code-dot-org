@@ -259,7 +259,7 @@ Artist.prototype.preloadAllPatternImages = function () {
   });
 
   const patternOptions = (this.skin && this.skin.lineStylePatternOptions);
-  if (patternOptions.length) {
+  if (patternOptions && patternOptions.length) {
     return Promise.all(patternOptions.map(loadPattern));
   } else {
     return Promise.resolve();
@@ -343,25 +343,25 @@ Artist.prototype.init = function (config) {
     />
   );
 
+  if (this.autoRun) {
+    this.studioApp_.addChangeHandler(() => {
+      if (this.limitedAutoRun) {
+        if (this.studioApp_.isRunning() && !this.executing) {
+          this.execute();
+        }
+      } else {
+        if (!this.executing) {
+          this.execute();
+        }
+      }
+    });
+  }
+
   function onMount() {
     this.studioApp_.init(config);
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
-    }
-
-    if (this.autoRun) {
-      this.studioApp_.addChangeHandler(() => {
-        if (this.limitedAutoRun) {
-          if (this.studioApp_.isRunning() && !this.executing) {
-            this.execute();
-          }
-        } else {
-          if (!this.executing) {
-            this.execute();
-          }
-        }
-      });
     }
   }
 
