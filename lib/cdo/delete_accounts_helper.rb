@@ -131,12 +131,20 @@ class DeleteAccountsHelper
   end
 
   def remove_from_cohorts(user_id)
-    ActiveRecord::Base.connection.execute <<-SQL
-      DELETE FROM cohorts_users WHERE user_id='#{user_id}'
-    SQL
-    ActiveRecord::Base.connection.execute <<-SQL
-      DELETE FROM cohorts_deleted_users WHERE user_id='#{user_id}'
-    SQL
+    delete_limit = 10
+    where_clause = "WHERE user_id='#{user_id}'"
+    %w(cohorts_users cohorts_deleted_users).each do |table|
+      result = ActiveRecord::Base.connection.exec_query <<-SQL
+        SELECT user_id FROM #{table} #{where_clause}
+      SQL
+      found_rows = result.rows.count
+      assert_constraint found_rows <= delete_limit,
+        "Safety constraints only permit deleting up to #{delete_limit} rows " \
+        "from #{table}, but found #{found_rows} rows."
+      ActiveRecord::Base.connection.execute <<-SQL
+        DELETE FROM #{table} #{where_clause}
+      SQL
+    end
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII
