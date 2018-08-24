@@ -1,9 +1,12 @@
 module Api::V1::Pd::Application
   class TeacherApplicationsController < Api::V1::Pd::FormsController
+    include Pd::Application::ApplicationConstants
+    include Pd::Application::ActiveApplicationModels
+
     authorize_resource :teacher_application, class: 'Pd::Application::Teacher1819Application'
 
     def new_form
-      @application = Pd::Application::Teacher1819Application.new(
+      @application = TEACHER_APPLICATION_CLASS.new(
         user: current_user
       )
     end
@@ -21,7 +24,7 @@ module Api::V1::Pd::Application
       @application.assign_default_workshop!
       @application.update_user_school_info!
 
-      ::Pd::Application::Teacher1819ApplicationMailer.confirmation(@application).deliver_now
+      TEACHER_APPLICATION_MAILER_CLASS.confirmation(@application).deliver_now
 
       unless @application.regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
         ::Pd::Application::PrincipalApproval1819Application.create_placeholder_and_send_mail(@application)
