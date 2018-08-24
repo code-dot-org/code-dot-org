@@ -75,6 +75,26 @@ export default class CourseOverview extends Component {
     }
   };
 
+  onDismissVersionWarning = () => {
+    if (!this.props.scripts[0]) {
+      return;
+    }
+
+    // Because there is no user_course table, store the fact that the version
+    // dialog has been dismissed on the first user_script in the course.
+    const firstScriptId = this.props.scripts[0].id;
+
+    // Fire and forget. If this fails, we'll have another chance to
+    // succeed the next time the warning is dismissed.
+    $.ajax({
+      method: 'PATCH',
+      url: `/api/v1/user_scripts/${firstScriptId}`,
+      type: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({version_warning_dismissed: true}),
+    });
+  };
+
   render() {
     const {
       name,
@@ -113,6 +133,7 @@ export default class CourseOverview extends Component {
             notice={i18n.wrongCourseVersionWarningNotice()}
             details={i18n.wrongCourseVersionWarningDetails()}
             dismissible={true}
+            onDismiss={this.onDismissVersionWarning}
           />
         }
         <div style={styles.titleWrapper}>

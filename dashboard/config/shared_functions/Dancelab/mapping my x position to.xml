@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <block type="behavior_definition" deletable="false" movable="false" editable="false">
   <mutation>
-    <arg name="this_sprite" type="Sprite"/>
+    <arg name="this sprite" type="Sprite"/>
     <description>Maps a sprite's x position to a given sound energy range</description>
   </mutation>
   <title name="NAME">mapping my x position to</title>

@@ -26,7 +26,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 <br>
 <br>
 
-<a href=codeorg_url("/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button>
+<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button>
 <br>
 <br>
 

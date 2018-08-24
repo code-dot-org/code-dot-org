@@ -71,7 +71,7 @@ FactoryGirl.define do
       workshop.sessions.map(&:save)
 
       evaluator.num_facilitators.times do
-        workshop.facilitators << (create :facilitator)
+        workshop.facilitators << (create :facilitator, course: workshop.course)
       end
 
       evaluator.num_completed_surveys.times do
