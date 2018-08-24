@@ -3,20 +3,21 @@ require 'test_helper'
 module Api::V1::Pd::Application
   class TeacherApplicationsControllerTest < ::ActionController::TestCase
     include Pd::Application::ApplicationConstants
+    include Pd::Application::ActiveApplicationModels
 
     setup_all do
       @test_params = {
-        form_data: build(:pd_teacher1819_application_hash)
+        form_data: build(TEACHER_APPLICATION_HASH_FACTORY)
       }
 
       @applicant = create :teacher
     end
 
     setup do
-      Pd::Application::Teacher1819ApplicationMailer.stubs(:confirmation).returns(
+      TEACHER_APPLICATION_MAILER_CLASS.stubs(:confirmation).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
-      Pd::Application::Teacher1819ApplicationMailer.stubs(:principal_approval).returns(
+      TEACHER_APPLICATION_MAILER_CLASS.stubs(:principal_approval).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
     end
@@ -26,12 +27,12 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
     test 'sends email on successful create' do
-      Pd::Application::Teacher1819ApplicationMailer.expects(:confirmation).
-        with(instance_of(Pd::Application::Teacher1819Application)).
+      TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
-      Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval).
-        with(instance_of(Pd::Application::Teacher1819Application)).
+      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval).
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
       sign_in @applicant
@@ -48,13 +49,13 @@ module Api::V1::Pd::Application
           previous_yearlong_cdo_pd: YES,
           csp_how_offer: 2,
           taught_in_past: 2
-        }, Pd::Application::Teacher1819Application.last.response_scores_hash
+        }, TEACHER_APPLICATION_CLASS.last.response_scores_hash
       )
     end
 
     test 'does not send confirmation mail on unsuccessful create' do
-      Pd::Application::Teacher1819ApplicationMailer.expects(:confirmation).never
-      Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval).never
+      TEACHER_APPLICATION_MAILER_CLASS.expects(:principal_approval).never
+      TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).never
       sign_in @applicant
 
       put :create, params: {form_data: {firstName: ''}}
@@ -62,31 +63,31 @@ module Api::V1::Pd::Application
     end
 
     test 'submit is idempotent' do
-      create :pd_teacher1819_application, user: @applicant
+      create TEACHER_APPLICATION_FACTORY, user: @applicant
 
       sign_in @applicant
-      assert_no_difference 'Pd::Application::Teacher1819Application.count' do
+      assert_no_difference "#{TEACHER_APPLICATION_CLASS.name}.count" do
         put :create, params: {form_data: @test_params}
       end
       assert_response :success
     end
 
     test 'auto-scores on successful create' do
-      Pd::Application::Teacher1819Application.any_instance.expects(:auto_score!)
+      TEACHER_APPLICATION_CLASS.any_instance.expects(:auto_score!)
 
       sign_in @applicant
       put :create, params: @test_params
     end
 
     test 'assigns default workshop on successful create' do
-      Pd::Application::Teacher1819Application.any_instance.expects(:assign_default_workshop!)
+      TEACHER_APPLICATION_CLASS.any_instance.expects(:assign_default_workshop!)
 
       sign_in @applicant
       put :create, params: @test_params
     end
 
     test 'updates user school info on successful create' do
-      Pd::Application::Teacher1819Application.any_instance.expects(:update_user_school_info!)
+      TEACHER_APPLICATION_CLASS.any_instance.expects(:update_user_school_info!)
 
       sign_in @applicant
       put :create, params: @test_params

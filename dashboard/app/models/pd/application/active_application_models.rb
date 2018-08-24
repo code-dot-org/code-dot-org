@@ -1,0 +1,12 @@
+module Pd
+  module Application
+    module ActiveApplicationModels
+      # Active (this year's) application classes and factories
+      TEACHER_APPLICATION_CLASS = Teacher1920Application
+      TEACHER_APPLICATION_MAILER_CLASS = Teacher1920ApplicationMailer
+
+      TEACHER_APPLICATION_FACTORY = :pd_teacher1920_application
+      TEACHER_APPLICATION_HASH_FACTORY = :pd_teacher1920_application_hash
+    end
+  end
+end
