@@ -708,14 +708,7 @@ Artist.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   if (this.limitedAutoRun) {
-    this.immovableBlocks = [];
-    Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
-      if (!block.isMovable()) {
-        this.immovableBlocks.push(block);
-      } else {
-        block.setMovable(false);
-      }
-    });
+    Blockly.mainBlockSpace.blockSpaceEditor.lockMovement();
   }
   this.execute();
 };
@@ -723,11 +716,7 @@ Artist.prototype.runButtonClick = function () {
 Artist.prototype.resetButtonClick = function () {
   this.shouldAnimate_ = !this.instant_ && !this.autoRun;
   if (this.limitedAutoRun) {
-    Blockly.mainBlockSpace.getAllBlocks().forEach(block => {
-      if (!this.immovableBlocks.includes(block)) {
-        block.setMovable(true);
-      }
-    });
+    Blockly.mainBlockSpace.blockSpaceEditor.unlockMovement();
   }
 
   if (this.autoRun && !this.limitedAutoRun) {
