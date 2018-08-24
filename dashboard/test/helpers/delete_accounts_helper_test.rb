@@ -1372,6 +1372,38 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.unexpected_teachers_workshops
+  #
+
+  test "removes all rows for user from unexpected_teachers_workshops" do
+    teacher_a = create :teacher
+    teacher_b = create :teacher
+    workshop_a = create :workshop
+    workshop_a.unexpected_teachers << teacher_a
+    workshop_a.unexpected_teachers << teacher_b
+    workshop_b = create :workshop
+    workshop_b.unexpected_teachers << teacher_a
+
+    workshop_a.reload
+    workshop_b.reload
+
+    assert_equal 2, workshop_a.unexpected_teachers.with_deleted.count
+    assert_equal 1, workshop_b.unexpected_teachers.with_deleted.count
+
+    purge_user teacher_a
+
+    workshop_a.reload
+    workshop_b.reload
+
+    assert_equal 1, workshop_a.unexpected_teachers.with_deleted.count
+    assert_equal 0, workshop_b.unexpected_teachers.with_deleted.count
+    assert_empty ActiveRecord::Base.connection.exec_query(<<-SQL).rows
+      SELECT workshop_id FROM unexpected_teachers_workshops
+      WHERE unexpected_teacher_id = #{teacher_a.id}
+    SQL
+  end
+
+  #
   # Table: pegasus.contacts
   #
 
