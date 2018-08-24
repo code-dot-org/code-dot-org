@@ -479,16 +479,30 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert old_enrollment.valid?
   end
 
+  test 'enrollment is deleted after clear_data for deleted owner' do
+    enrollment = create :pd_enrollment, :from_user
+    enrollment.user.destroy!
+
+    enrollment.clear_data
+    enrollment.reload
+
+    assert enrollment.deleted?
+  end
+
   test 'enrollment is valid after clear_data for deleted owner' do
     enrollment = create :pd_enrollment, :from_user
     enrollment.user.destroy!
 
     enrollment.clear_data
 
+    assert_nil enrollment.read_attribute :name
     assert_equal '', enrollment.name
     assert_nil enrollment.first_name
     assert_nil enrollment.last_name
     assert_equal '', enrollment.email
+    assert_nil enrollment.user_id
+    assert_nil enrollment.school
+    assert_nil enrollment.school_info_id
     assert enrollment.reload.valid?, enrollment.errors.messages
   end
 

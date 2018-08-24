@@ -846,6 +846,91 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_enrollments
+  #
+
+  test "clears name from pd_enrollments" do
+    enrollment = create :pd_enrollment, :from_user
+    enrollment.write_attribute :name, 'test-name'
+    enrollment.save! validate: false
+
+    refute_nil enrollment.read_attribute :name
+
+    purge_user enrollment.user
+
+    enrollment.reload
+    assert_nil enrollment.read_attribute :name
+  end
+
+  test "clears first_name from pd_enrollments" do
+    enrollment = create :pd_enrollment, :from_user, first_name: 'test-name'
+
+    refute_nil enrollment.first_name
+
+    purge_user enrollment.user
+
+    enrollment.reload
+    assert_nil enrollment.first_name
+  end
+
+  test "clears last_name from pd_enrollments" do
+    enrollment = create :pd_enrollment, :from_user
+
+    refute_nil enrollment.last_name
+
+    purge_user enrollment.user
+
+    enrollment.reload
+    assert_nil enrollment.last_name
+  end
+
+  test "clears email from pd_enrollments" do
+    enrollment = create :pd_enrollment, :from_user
+
+    refute_empty enrollment.email
+
+    purge_user enrollment.user
+
+    enrollment.reload
+    assert_empty enrollment.email
+  end
+
+  test "clears school from pd_enrollments" do
+    enrollment = create :pd_enrollment, :from_user
+    enrollment.write_attribute :school, 'test-school'
+    enrollment.save! validate: false
+
+    refute_nil enrollment.school
+
+    purge_user enrollment.user
+
+    enrollment.reload
+    assert_nil enrollment.school
+  end
+
+  test "clears user_id from pd_enrollments" do
+    enrollment = create :pd_enrollment, :from_user
+
+    refute_nil enrollment.user_id
+
+    purge_user enrollment.user
+
+    enrollment.reload
+    assert_nil enrollment.user_id
+  end
+
+  test "clears school_info_id from pd_enrollments" do
+    enrollment = create :pd_enrollment, :from_user
+
+    refute_nil enrollment.school_info_id
+
+    purge_user enrollment.user
+
+    enrollment.reload
+    assert_nil enrollment.school_info_id
+  end
+
+  #
   # Table: pegasus.contacts
   #
 
