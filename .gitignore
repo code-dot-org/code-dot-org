@@ -6,6 +6,7 @@
 *_temp.json
 *~
 **/.bundle
+**/.vscode
 .DS_Store
 .dropbox
 .tmputils
