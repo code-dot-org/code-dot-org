@@ -90,34 +90,75 @@ class DeleteAccountsHelper
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
   def clean_and_destroy_pd_content(user_id)
-    PeerReview.where(reviewer_id: user_id).each(&:clear_data)
-
-    Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).each do |application|
-      application.form_data = '{}'
-      application.notes = nil
-      application.save! validate: false
-    end
+    remove_from_cohorts user_id
+    application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
+    pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
+    workshop_material_order_ids = Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
 
     # Two different paths to anonymizing attendance records
-    Pd::Attendance.with_deleted.where(teacher_id: user_id).each do |attendance|
-      attendance.destroy!
-      attendance.update!(teacher_id: nil)
+    Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
+    Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).update_all(marked_by_user_id: nil)
+
+    Pd::FacilitatorProgramRegistration.where(user_id: user_id).update_all(form_data: '{}')
+    Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
+    Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
+    Pd::TeacherApplication.where(user_id: user_id).update_all(primary_email: '', secondary_email: '', application: '')
+    Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
+
+    # Peer reviews might be associated with a purged submitter or viewer
+    PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
+    PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
+
+    SurveyResult.where(user_id: user_id).destroy_all
+
+    # Most efficient query to find and remove records from many-to-many join
+    # table unexpected_teachers_workshops without a corresponding model
+    ActiveRecord::Base.connection.execute(<<-SQL)
+      DELETE FROM unexpected_teachers_workshops
+      WHERE unexpected_teacher_id = '#{user_id}'
+    SQL
+
+    unless application_ids.empty?
+      Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
+      Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
     end
-    Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).each do |attendance|
-      attendance.update!(marked_by_user_id: nil)
+    WorkshopAttendance.where(teacher_id: user_id).update_all(teacher_id: nil, notes: nil)
+
+    unless pd_enrollment_ids.empty?
+      workshop_material_order_ids += Pd::WorkshopMaterialOrder.where(pd_enrollment_id: pd_enrollment_ids).pluck(:id)
+      Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
+      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
+      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
+      Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
     end
 
-    Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
-    Pd::FacilitatorProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
-    Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).each(&:clear_form_data)
-    Pd::WorkshopMaterialOrder.where(user_id: user_id).each(&:clear_data)
-    Pd::InternationalOptIn.where(user_id: user_id).each(&:clear_form_data)
+    unless workshop_material_order_ids.empty?
+      Pd::WorkshopMaterialOrder.where(id: workshop_material_order_ids).update_all(
+        school_or_company: nil,
+        street: '',
+        apartment_or_suite: nil,
+        city: '',
+        state: '',
+        zip_code: '',
+        phone_number: ''
+      )
+    end
+  end
 
-    pd_enrollment_id = Pd::Enrollment.where(user_id: user_id).pluck(:id).first
-    if pd_enrollment_id
-      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
-      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_id).each(&:clear_form_data)
-      Pd::Enrollment.where(id: pd_enrollment_id).each(&:clear_data)
+  def remove_from_cohorts(user_id)
+    delete_limit = 10
+    where_clause = "WHERE user_id='#{user_id}'"
+    %w(cohorts_users cohorts_deleted_users).each do |table|
+      result = ActiveRecord::Base.connection.exec_query <<-SQL
+        SELECT user_id FROM #{table} #{where_clause}
+      SQL
+      found_rows = result.rows.count
+      assert_constraint found_rows <= delete_limit,
+        "Safety constraints only permit deleting up to #{delete_limit} rows " \
+        "from #{table}, but found #{found_rows} rows."
+      ActiveRecord::Base.connection.execute <<-SQL
+        DELETE FROM #{table} #{where_clause}
+      SQL
     end
   end
 
@@ -229,9 +270,15 @@ class DeleteAccountsHelper
 
   def check_safety_constraints(user)
     assert_constraint !user.facilitator?,
-      'Automated purging of facilitator accounts is not supported at this time.'
+      'Automated purging of accounts with FACILITATOR permission is not supported at this time.'
+    assert_constraint !user.workshop_organizer?,
+      'Automated purging of accounts with WORKSHOP_ORGANIZER permission is not supported at this time.'
+    assert_constraint !user.program_manager?,
+      'Automated purging of accounts with PROGRAM_MANAGER permission is not supported at this time.'
     assert_constraint RegionalPartner.with_deleted.where(contact_id: user.id).empty?,
-      'Automated purging of regional partner contact accounts is not supported at this time.'
+      'Automated purging of an account listed as the contact for a regional partner is not supported at this time.'
+    assert_constraint RegionalPartnerProgramManager.where(program_manager_id: user.id).empty?,
+      'Automated purging of an account listed as a program manager for a regional partner is not supported at this time.'
   end
 
   def assert_constraint(condition, message)
