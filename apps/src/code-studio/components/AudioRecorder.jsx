@@ -88,7 +88,7 @@ export default class AudioRecorder extends React.Component {
   render() {
     return (
       <div style={styles.buttonRow}>
-        <input type="text" placeholder="Sound Name" onChange={this.onNameChange} value={this.state.audioName}/>
+        <input type="text" placeholder={i18n.soundName()} onChange={this.onNameChange} value={this.state.audioName}/>
         <span>
           <Button
             onClick={this.toggleRecord}
@@ -98,7 +98,7 @@ export default class AudioRecorder extends React.Component {
             icon={this.state.recording ? "stop" : "circle"}
             text={this.state.recording ? i18n.stop() : i18n.record()}
             size="large"
-            disabled={this.state.audioName.length <= 0}
+            disabled={this.state.audioName.length === 0}
           />
           <Button
             onClick={()=>{}}

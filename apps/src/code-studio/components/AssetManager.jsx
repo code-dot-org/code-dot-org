@@ -148,8 +148,7 @@ export default class AssetManager extends React.Component {
   };
 
   afterAudioSaved = (err) => {
-    this.setState({recordingAudio: false});
-    this.setState({audioErrorType: err});
+    this.setState({recordingAudio: false, audioErrorType: err});
   };
 
   render() {
