@@ -122,6 +122,12 @@ export default class AudioRecorder extends React.Component {
           <div style={styles.buttonRow}>
 
             <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}/>
+            {this.state.recording &&
+              <span style={assetButtonStyles.button}>
+                <i style={{color: 'red', margin: 5}} className="fa fa-circle"/>
+                {i18n.recording()}
+              </span>
+            }
             <span>
               <Button
                 onClick={this.toggleRecord}
