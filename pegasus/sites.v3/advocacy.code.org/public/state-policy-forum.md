@@ -21,13 +21,10 @@ The **main forum** begins at 2:00 pm on Thursday, September 27 and concludes at 
 ## Application Details
 
 * The pre-forum is for members of the [Code.org Advocacy Coalition](https://advocacy.code.org) and those interested in [joining](https://bit.ly/joinadvocacycoalition) the advocacy coalition.
-* All may apply to attend the main forum and applications will be approved on a rolling basis. Space is limited, so apply soon.
 * Conference fees and meals during the forum are provided at no-cost for participants by Code.org, but **travel, lodging, and expenses will be the responsibility of the attendee**.
 * A limited number of scholarships are available based on need and can be requested in the application form.
-* The application deadline is **August 3, 2018**.
+* Applications are currently closed.
 
-
-<a href="https://goo.gl/forms/EFcuR6C9Tf6m26AM2" target="_blank"><button type="button">Apply today!</button></a>
 
 ## Pictures From Previous Forums
 

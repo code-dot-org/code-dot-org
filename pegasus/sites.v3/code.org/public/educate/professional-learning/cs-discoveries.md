@@ -15,9 +15,7 @@ theme: responsive
 
 Our CS Discoveries Professional Learning program offers year round support for teachers. You don't need any prior computer science experience to get started! 
 
-The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csp) and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops.
-
-This program prepares educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd). 
+The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd) and meet other teachers from your area. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). ​Print a <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">flyer</a> to share with teachers or administrators at your school. 
 
 **Applications for the 2019-20 will open after October, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 
@@ -39,47 +37,10 @@ This program prepares educators to provide high quality instruction based on the
 
 <hr/>
 
-Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
-
-The program kicks off with 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). Print a <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">flyer</a> to share with teachers or administrators at your school.
-
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
 {img: '/images/testimonials/fit-150/teacher-renee.jpg', text: '"I would absolutely recommend anything Code.org has to offer to any teacher. Period. The lesson plans are incredible."'},
 {img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
-
-## <a name="openings"></a>Applications are still being accepted in some states
-
-The priority deadline for 2018 has passed, but we still have openings for our CS Discoveries Professional Learning Program in the following states: 
-
-[col-33]
-
-Idaho<br>
-Illinois<br>
-Iowa<br>
-Maine<br>
-
-[/col-33]
-
-[col-33]
-
-Maryland<br>
-Massachusetts<br>
-Montana<br>
-North Carolina<br>
-
-[/col-33]
-
-[col-33]
-
-Pennsylvania (central regions)<br>
-Wisconsin<br>
-
-[/col-33]
-
-<div style="clear: both;"></div>
-
-If applications for our professional learning program are now closed in your state, you can [join our interest list](https://studio.code.org/pd/regional_partner_contact/new) to be the first to hear about next year’s application. We also have a [list of 3rd party options](https://code.org/educate/curriculum/3rd-party) for computer science classes. And, all [our curriculum](https://code.org/educate/csd) is available at no cost to you and your school if you are comfortable teaching it without professional development.
 
 ## <a name="features"></a>Program Features
 
@@ -116,11 +77,9 @@ Participants will engage with the curriculum both as instructors and as learners
 ​Teachers and facilitators will have the opportunity to share their expertise from the field and collaborate on strategies to bring to the CS Principles and CS Discoveries classrooms, giving participants a chance to learn from everyone in the room. Facilitators model pedagogical strategies and participants share their own approaches by planning and delivering lessons.
 ​</p>
 ​</details>
-​
-​
+​​
 ## Program Commitments
-​ 
-The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Principles or CS Discoveries.
+​The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Principles or CS Discoveries.
 
 <img src="/images/professional-learning/pl_timeline.png" width="100%"/>
 
@@ -134,10 +93,9 @@ The Code.org Professional Learning Program has both in-person and online support
 
 **Ongoing Support, throughout following academic year:**  
 
-* Participants attend local, 1-day quarterly workshops hosted by Code.org Regional Partners
+* Participants attend local, follow up workshops hosted by Code.org Regional Partners
 * Usually held on Saturdays, these workshops are run by local Code.org-trained facilitators
 * They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continue to build pedagogical strategies.
-
 
 In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. Have more questions about which program is for you? Learn more about [implementation options](/files/PL-Program-for-Me.pdf) or <a href="mailto:teacher@code.org">contact us</a>.
 
@@ -234,6 +192,40 @@ Help bring professional learning opportunities to your community by becoming a C
 Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
 **Applications are still being accepted in some regions. Check [the list above](#openings) to see if applications are still being accepted in your area.** 
+
+## <a name="openings"></a>Applications are still being accepted in some states
+
+The priority deadline for 2018 has passed, but we still have openings for our CS Discoveries Professional Learning Program in the following states: 
+
+[col-33]
+
+Idaho<br>
+Illinois<br>
+Iowa<br>
+Maine<br>
+
+[/col-33]
+
+[col-33]
+
+Maryland<br>
+Massachusetts<br>
+Montana<br>
+North Carolina<br>
+
+[/col-33]
+
+[col-33]
+
+Pennsylvania (central regions)<br>
+Wisconsin<br>
+
+[/col-33]
+
+<div style="clear: both;"></div>
+
+If applications for our professional learning program are now closed in your state, you can [join our interest list](https://studio.code.org/pd/regional_partner_contact/new) to be the first to hear about next year’s application. We also have a [list of 3rd party options](https://code.org/educate/curriculum/3rd-party) for computer science classes. And, all [our curriculum](https://code.org/educate/csd) is available at no cost to you and your school if you are comfortable teaching it without professional development.
+
 -->
 
 <%= view :answerdash %>

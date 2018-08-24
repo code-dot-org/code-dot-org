@@ -1,0 +1,157 @@
+ms:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Seterusnya
+            '"prev"': Sebelumnya
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kiri
+      Dancelab_randomColor:
+        text: warna rawak
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'benar'
+            'false': 'palsu'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": rawak
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kiri
+      gamelab_randColor:
+        text: warna rawak
+      gamelab_randomColor:
+        text: warna rawak
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': rawak
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+            '"height"': ketinggian
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': saiz
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kiri
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": atas
+            "'down'": bawah
+            "'left'": kiri
+            "'right'": kanan
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': bawah
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': angkasa
+      Vanilla_randomColor:
+        text: warna rawak

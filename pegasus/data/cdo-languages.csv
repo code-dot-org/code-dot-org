@@ -38,7 +38,7 @@ kk,kk,kk,kk-KZ,Қазақша,Kazakh,TRUE,TRUE,kk,Kazakh,FALSE,FALSE,FALSE,FALSE
 km,km,km,km-KH,ភាសាខ្មែរ,Khmer,TRUE,TRUE,km,Khmer,TRUE,TRUE,FALSE,TRUE,FALSE
 ko,ko,ko,ko-KR,한국어,Korean,TRUE,TRUE,ko,Korean,FALSE,FALSE,TRUE,FALSE,TRUE
 ku,ku,ku,ku-IQ,Kurdí,Kurdish,FALSE,FALSE,ku,Kurdish,FALSE,TRUE,FALSE,TRUE,FALSE
-ky,ky,ky,ky-KG,Кыргызча,Kyrgyz,FALSE,TRUE,ky,Kyrgyz,FALSE,FALSE,FALSE,FALSE,FALSE
+ky,ky,ky,ky-KG,Кыргызча,Kyrgyz,TRUE,TRUE,ky,Kyrgyz,FALSE,FALSE,FALSE,FALSE,FALSE
 lt,lt,lt,lt-LT,Lietuvių,Lithuanian,TRUE,FALSE,lt,Lithuanian,FALSE,FALSE,FALSE,FALSE,TRUE
 lv,lv,lv,lv-LV,Latviešu,Latvian,TRUE,TRUE,lv,Latvian,FALSE,FALSE,FALSE,FALSE,FALSE
 mi,mi,mi,mi-NZ,Māori (NZ),Maori,TRUE,TRUE,mi,Maori,FALSE,FALSE,FALSE,FALSE,TRUE

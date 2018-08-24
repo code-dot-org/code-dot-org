@@ -1,0 +1,30 @@
+ku:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: رەنگێکی هەڕەمەکی
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'ڕاست'
+            'false': 'هەڵە'
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": هەڕەمەکی
+      gamelab_randColor:
+        text: رەنگێکی هەڕەمەکی
+      gamelab_randomColor:
+        text: رەنگێکی هەڕەمەکی
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': هەڕەمەکی
+      Vanilla_randomColor:
+        text: رەنگێکی هەڕەمەکی

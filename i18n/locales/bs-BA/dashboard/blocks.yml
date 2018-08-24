@@ -1,0 +1,157 @@
+bs:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Sljedeći
+            '"prev"': Prethodni
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Sljedeći
+            '"prev"': Prethodni
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': lijevo
+      Dancelab_randomColor:
+        text: nasumična boja
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'istinito'
+            'false': 'neistinito'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": slučajno odabran
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': lijevo
+      gamelab_randColor:
+        text: nasumična boja
+      gamelab_randomColor:
+        text: nasumična boja
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': slučajno odabran
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': lijevo
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": gore
+            "'down'": dolje
+            "'left'": lijevo
+            "'right'": desno
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+      Vanilla_randomColor:
+        text: nasumična boja

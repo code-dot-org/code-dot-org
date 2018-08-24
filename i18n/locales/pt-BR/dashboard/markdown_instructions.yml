@@ -92,6 +92,7 @@ pt-BR:
         Use
         o que você aprendeu para coletar todo o néctar e, então, produza o mel.
       2-3 Bee Conditionals 15_markdown_instruction: "Este padrão de degrau deve ser familiar.  \\r\n\\r\nVocê\nconsegue coletar néctar apenas das flores que têm néctar para oferecer, usando o menor número de\nblocos possível?"
+      2-3 Bee Conditionals 2_markdown_instruction: "Sou uma abelha faminta! \\r\nAjude-me a coletar\ntodo o néctar das flores usando o menor número possível de blocos."
       2-3 Bee Conditionals 3_markdown_instruction: "Olhe só todo esse néctar!\\r\n\\r\nAjude-me\na coletar todo o néctar e produzir mel usando o menor número possível de blocos.  "
       2-3 Bee Debugging 2_markdown_instruction: |-
         Você consegue encontrar o problema aqui?\r
@@ -662,6 +663,7 @@ pt-BR:
         Use o bloco "se/senão" para coletar néctar
         se houver uma flor.\r
         Caso contrário, produza mel (porque há uma colmeia).
+      grade3_Conditionals_1_markdown_instruction: "Sou uma abelha faminta! \\r\nAjude-me a coletar\ntodo o néctar das flores usando o menor número possível de blocos."
       grade3_Conditionals_10_markdown_instruction: |-
         Há muita coisa acontecendo por aqui!\r
         \r

@@ -1265,8 +1265,24 @@ class Script < ActiveRecord::Base
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
+    info[:supported_locales] = supported_locale_names
 
     info
+  end
+
+  def supported_locale_names
+    locales = supported_locales || []
+    locales = locales.map {|l| Script.locale_english_name_map[l] || l}
+    locales += ['English']
+    locales.sort.uniq
+  end
+
+  def self.locale_english_name_map
+    @@locale_english_name_map ||=
+      PEGASUS_DB[:cdo_languages].
+        select(:locale_s, :english_name_s).
+        map {|row| [row[:locale_s], row[:english_name_s]]}.
+        to_h
   end
 
   # Get all script levels that are level groups, and return a list of those that are

@@ -1,6 +1,6 @@
 .container
-  - if @level.markdown_instructions
-    %div= render(inline: @level.markdown_instructions, type: :md)
+  - if @level.long_instructions
+    %div= render(inline: @level.long_instructions, type: :md)
 
   %h4
     = link_to @level.url, target: '_blank' do

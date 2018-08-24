@@ -1,0 +1,185 @@
+ja:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': 次へ
+            '"prev"': 戻る
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': 次へ
+            '"prev"': 戻る
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: すべて
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 右 に
+            '"left"': 左 に
+      Dancelab_randomColor:
+        text: てきとうな色
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'true'
+            'false': 'false'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": ランダム に
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 右 に
+            '"left"': 左 に
+      gamelab_randColor:
+        text: てきとうな色
+      gamelab_randomColor:
+        text: てきとうな色
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': ランダム に
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"height"': 高さ
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': 右 に
+            '"left"': 左 に
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": 上 に
+            "'down'": 下 に
+            "'left'": 左 に
+            "'right'": 右 に
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+      Vanilla_randomColor:
+        text: てきとうな色

@@ -6,8 +6,9 @@ class ApiController < ApplicationController
   include LevelsHelper
 
   private def query_clever_service(endpoint)
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
     begin
-      auth = {authorization: "Bearer #{current_user.oauth_token}"}
+      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
       response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
     rescue RestClient::ExceptionWithResponse => e
       render status: e.response.code, json: {error: e.response.body}
@@ -48,14 +49,15 @@ class ApiController < ApplicationController
   ].freeze
 
   private def query_google_classroom_service
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)
     client = Signet::OAuth2::Client.new(
       authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
       token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
       client_id: CDO.dashboard_google_key,
       client_secret: CDO.dashboard_google_secret,
-      refresh_token: current_user.oauth_refresh_token,
-      access_token: current_user.oauth_token,
-      expires_at: current_user.oauth_token_expiration,
+      refresh_token: tokens[:oauth_refresh_token],
+      access_token: tokens[:oauth_token],
+      expires_at: tokens[:oauth_token_expiration],
       scope: GOOGLE_AUTH_SCOPES,
     )
     service = Google::Apis::ClassroomV1::ClassroomService.new

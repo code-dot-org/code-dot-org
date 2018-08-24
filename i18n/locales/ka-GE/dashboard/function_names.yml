@@ -2,7 +2,12 @@ ka:
   data:
     function_names:
       x: x
+      details: დეტალები
+      draw eyebrow: წარბის დახატვა
+      draw pupil: მოსწავლის დახატვა
       draw a circle: წრის დახატვა
+      draw a car: მანქანის დახატვა
+      draw square: კვადრატის დახატვა
       draw a hexagon: ექვსკუთხედის დახატვა
       draw a flower: ყვავილის დახატვა
       draw a square: კვადრატის დახატვა

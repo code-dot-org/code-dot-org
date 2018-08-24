@@ -1,0 +1,50 @@
+en-GB:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: random colour
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"space"': space
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"space"': space
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'true'
+            'false': 'false'
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": random
+      gamelab_randColor:
+        text: random colour
+      gamelab_randomColor:
+        text: random colour
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': random
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': height
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"space"': space
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"space"': space
+      Vanilla_randomColor:
+        text: random colour

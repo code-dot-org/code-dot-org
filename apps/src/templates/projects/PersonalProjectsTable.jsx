@@ -2,18 +2,24 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
   personalProjectDataPropType,
-  FEATURED_PROJECT_TYPE_MAP,
+  PROJECT_TYPE_MAP,
+  publishMethods,
 } from './projectConstants';
+import {
+  AlwaysPublishableProjectTypes,
+  ConditionallyPublishableProjectTypes,
+} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -24,8 +30,8 @@ export const COLUMNS = {
   THUMBNAIL: 0,
   PROJECT_NAME: 1,
   APP_TYPE: 2,
-  LAST_PUBLISHED: 3,
-  LAST_FEATURED: 4,
+  LAST_EDITED: 3,
+  LAST_PUBLISHED: 4,
   ACTIONS: 5,
 };
 
@@ -41,7 +47,8 @@ export const styles = {
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
-    padding: 2
+    padding: 2,
+    overflow: 'hidden'
   },
   headerCellThumbnail: {
     padding: 0
@@ -73,7 +80,7 @@ export const styles = {
 
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
-  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
+  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
     <a style={tableLayoutStyles.link} href={projectUrl} target="_blank">
@@ -87,6 +94,7 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
+  const updatedName = rowData.isEditing ? rowData.updatedName : '';
   return (
     <PersonalProjectsNameCell
       id={rowData.id}
@@ -94,25 +102,13 @@ const nameFormatter = (projectName, {rowData}) => {
       projectType={rowData.type}
       projectName={projectName}
       isEditing={rowData.isEditing}
-      updatedName={rowData.updatedName}
-    />
-  );
-};
-
-const actionsFormatter = (actions, {rowData}) => {
-  return (
-    <PersonalProjectsTableActionsCell
-      isPublished={!!rowData.publishedAt}
-      projectId={rowData.channel}
-      projectType={rowData.type}
-      isEditing={rowData.isEditing}
-      updatedName={rowData.updatedName}
+      updatedName={updatedName}
     />
   );
 };
 
 const typeFormatter = (type) => {
-  return FEATURED_PROJECT_TYPE_MAP[type];
+  return PROJECT_TYPE_MAP[type];
 };
 
 const dateFormatter = function (time) {
@@ -120,20 +116,64 @@ const dateFormatter = function (time) {
   return date.toLocaleDateString();
 };
 
-const publishedAtFormatter = (publishedAt) => {
-  return publishedAt ? (<FontAwesome icon="circle"/>) : '';
-};
-
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
+    canShare: PropTypes.bool.isRequired,
+    // We're going to run an A/B experiment to compare (un)publishing from the
+    // quick actions dropdown and from a button in the published column.
+    // TODO (Erin B.) delete this prop, userId prop (for logging),
+    // and the less effective variant when we determine the experiment outcome.
+    publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
+    userId: PropTypes.number,
   };
 
   state = {
-    [COLUMNS.PROJECT_NAME]: {
-      direction: 'desc',
-      position: 0
+    sortingColumns: {
+      [COLUMNS.LAST_EDITED]: {
+        direction: 'desc',
+        position: 0
+      }
     }
+  };
+
+  publishedAtFormatter = (publishedAt, {rowData}) => {
+    const {canShare, publishMethod, userId} = this.props;
+    const isPublishable =
+      AlwaysPublishableProjectTypes.includes(rowData.type) ||
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+
+    return (
+      <PersonalProjectsPublishedCell
+        isPublishable={isPublishable}
+        isPublished={!!rowData.publishedAt}
+        projectId={rowData.channel}
+        projectType={rowData.type}
+        publishMethod={publishMethod}
+        userId={userId}
+      />
+    );
+  };
+
+  actionsFormatter = (actions, {rowData}) => {
+    const {canShare, publishMethod, userId} = this.props;
+    const isPublishable =
+      AlwaysPublishableProjectTypes.includes(rowData.type) ||
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+    const showPublishAction = isPublishable && publishMethod === publishMethods.CHEVRON;
+
+    return (
+      <PersonalProjectsTableActionsCell
+        isPublishable={showPublishAction}
+        isPublished={!!rowData.publishedAt}
+        publishMethod={publishMethod}
+        projectId={rowData.channel}
+        projectType={rowData.type}
+        isEditing={rowData.isEditing}
+        updatedName={rowData.updatedName}
+        userId={userId}
+      />
+    );
   };
 
   getSortingColumns = () => {
@@ -185,6 +225,7 @@ class PersonalProjectsTable extends React.Component {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCellName,
           }},
+          transforms: [sortable],
         },
         cell: {
           format: nameFormatter,
@@ -229,7 +270,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable],
         },
         cell: {
-          format: publishedAtFormatter,
+          format: this.publishedAtFormatter,
           props: {style: {
             ...tableLayoutStyles.cell,
             ...styles.centeredCell
@@ -248,7 +289,7 @@ class PersonalProjectsTable extends React.Component {
           },
         },
         cell: {
-          format: actionsFormatter,
+          format: this.actionsFormatter,
           props: {style: {
             ...tableLayoutStyles.cell,
             ...styles.centeredCell
@@ -272,6 +313,17 @@ class PersonalProjectsTable extends React.Component {
     })(this.props.personalProjectsList);
 
     const noProjects = this.props.personalProjectsList.length === 0;
+
+    const studyGroup = this.props.publishMethod === publishMethods.CHEVRON ? 'publish-chevron' : 'publish-button';
+
+    firehoseClient.putRecord(
+      {
+        study: 'project-publish',
+        study_group: studyGroup,
+        event: 'page-load',
+        user_id: this.props.userId,
+      }
+    );
 
     return (
       <div>

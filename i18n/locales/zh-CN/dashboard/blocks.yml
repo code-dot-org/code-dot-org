@@ -1,0 +1,189 @@
+zh-CN:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': 下一项
+            '"prev"': 前一项
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': 下一项
+            '"prev"': 前一项
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: 所有
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 向右
+            '"left"': 向左
+      Dancelab_randomColor:
+        text: 随机颜色
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': 没有
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': '真'
+            'false': '错'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": 随机
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 向右
+            '"left"': 向左
+      gamelab_randColor:
+        text: 随机颜色
+      gamelab_randomColor:
+        text: 随机颜色
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': 随机
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"height"': 高度
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': 向右
+            '"left"': 向左
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": 向上
+            "'down'": 向下
+            "'left'": 向左
+            "'right'": 向右
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+      Vanilla_randomColor:
+        text: 随机颜色

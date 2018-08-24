@@ -83,10 +83,19 @@ FactoryGirl.define do
         end
       end
       factory :facilitator do
+        transient do
+          course nil
+        end
+
         sequence(:name) {|n| "Facilitator Person #{n}"}
         email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
-        after(:create) do |facilitator|
+
+        after(:create) do |facilitator, evaluator|
           facilitator.permission = UserPermission::FACILITATOR
+
+          if evaluator.course
+            create :pd_course_facilitator, facilitator: facilitator, course: evaluator.course
+          end
         end
       end
       factory :workshop_admin do
@@ -319,7 +328,12 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123'
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
         )
       end
     end
@@ -331,7 +345,12 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123'
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
         )
         user.update!(
           primary_contact_info: ao,
@@ -349,7 +368,31 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh'
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+      end
+    end
+
+    trait :with_migrated_clever_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
@@ -845,6 +888,10 @@ FactoryGirl.define do
     data "MyText"
     before :create do |peer_review|
       create :user_level, user: peer_review.submitter, level: peer_review.level
+    end
+
+    trait :reviewed do
+      reviewer {create :teacher}
     end
   end
 

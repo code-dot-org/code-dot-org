@@ -394,6 +394,7 @@ Dashboard::Application.routes.draw do
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+      delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
@@ -465,6 +466,7 @@ Dashboard::Application.routes.draw do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
+      get 'teacher_1920_preview', to: 'teacher_application#new_1920_preview'
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year

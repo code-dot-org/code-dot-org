@@ -1,0 +1,157 @@
+bn:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ডানে
+            '"left"': বামে
+      Dancelab_randomColor:
+        text: যেকোনো রঙ
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'সত্যি'
+            'false': 'মিথ্যা'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": এলোমেলো
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ডানে
+            '"left"': বামে
+      gamelab_randColor:
+        text: যেকোনো রঙ
+      gamelab_randomColor:
+        text: যেকোনো রঙ
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': এলোমেলো
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': ডানে
+            '"left"': বামে
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": উপরে
+            "'down'": নিচে
+            "'left'": বামে
+            "'right'": ডানে
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+      Vanilla_randomColor:
+        text: যেকোনো রঙ

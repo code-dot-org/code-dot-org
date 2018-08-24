@@ -1,0 +1,189 @@
+ga:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Ar Aghaidh
+            '"prev"': Siar
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Ar Aghaidh
+            '"prev"': Siar
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: uile
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ar dheis
+            '"left"': ar chlé
+      Dancelab_randomColor:
+        text: dath randamach
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Dada
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+            '"space"': spás
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+            '"space"': spás
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'fíor'
+            'false': 'bréagach'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": randamach
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ar dheis
+            '"left"': ar chlé
+      gamelab_randColor:
+        text: dath randamach
+      gamelab_randomColor:
+        text: dath randamach
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': randamach
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': ar dheis
+            '"left"': ar chlé
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+            '"space"': spás
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ag an mbarr
+            "'down'": ag an mbun
+            "'left'": ar chlé
+            "'right'": ar dheis
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+            '"space"': spás
+      Vanilla_randomColor:
+        text: dath randamach

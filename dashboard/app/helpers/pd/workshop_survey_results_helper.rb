@@ -38,6 +38,7 @@ module Pd::WorkshopSurveyResultsHelper
   TEACHERCON_FIELDS_IN_SUMMARY = (Pd::TeacherconSurvey.public_fields).freeze
 
   include Pd::JotForm
+  include Pd::WorkshopSurveyConstants
 
   # The output is a hash where
   # - Multiple choice answers (aka scored answers) that are not facilitator specific turn
@@ -163,7 +164,6 @@ module Pd::WorkshopSurveyResultsHelper
   end
 
   def generate_workshop_daily_session_summary(workshop)
-    # TODO: (mehal) - Logic to only allow this for selected summer workshops
     summary = {
       this_workshop: {},
     }
@@ -240,31 +240,35 @@ module Pd::WorkshopSurveyResultsHelper
   end
 
   def get_surveys_for_workshops(workshop)
-    responses = {
+    responses = workshop.summer? ? {
       'Pre Workshop' => {
         general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, day: 0).map(&:form_data_hash)
-      },
-      'Day 1' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_1'], day: 1).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 1).map {|x| x.form_data_hash(show_hidden_questions: true)}
-      },
-      'Day 2' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_2'], day: 2).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 2).map {|x| x.form_data_hash(show_hidden_questions: true)}
-      },
-      'Day 3' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_3'], day: 3).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 3).map {|x| x.form_data_hash(show_hidden_questions: true)}
-      },
-      'Day 4' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_4'], day: 4).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 4).map {|x| x.form_data_hash(show_hidden_questions: true)}
-      },
-      'Day 5' => {
-        general: Pd::WorkshopDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['day_5'], day: 5).map(&:form_data_hash),
-        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(pd_workshop: workshop, form_id: CDO.jotform_forms['local']['facilitator'], day: 5).map {|x| x.form_data_hash(show_hidden_questions: true)}
-      },
-    }
+      }
+    } : {}
+
+    workshop.sessions.each_with_index do |_, index|
+      day = index + 1
+      responses["Day #{day}"] = {
+        general: Pd::WorkshopDailySurvey.with_answers.where(
+          pd_workshop: workshop,
+          form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, day)
+        ).map(&:form_data_hash),
+        facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(
+          pd_workshop: workshop,
+          form_id: Pd::WorkshopFacilitatorDailySurvey.form_id(workshop.subject),
+          day: day
+        ).map {|x| x.form_data_hash(show_hidden_questions: true)}
+      }
+    end
+
+    unless workshop.summer?
+      responses["Post Workshop"] = {
+        general: Pd::WorkshopDailySurvey.with_answers.where(
+          pd_workshop: workshop,
+          form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY)
+        ).map(&:form_data_hash)
+      }
+    end
 
     responses.each do |k, v|
       responses[k][:response_count] = v[:general].size
@@ -274,31 +278,38 @@ module Pd::WorkshopSurveyResultsHelper
   end
 
   def get_questions_for_forms(workshop)
-    {
+    questions = workshop.summer? ? {
       'Pre Workshop' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_0'], workshop)
-      },
-      'Day 1' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_1'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
-      },
-      'Day 2' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_2'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
-      },
-      'Day 3' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_3'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
-      },
-      'Day 4' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_4'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
-      },
-      'Day 5' => {
-        general: get_summary_for_form(CDO.jotform_forms['local']['day_5'], workshop),
-        facilitator: get_summary_for_form(CDO.jotform_forms['local']['facilitator'], workshop)
+        general: get_summary_for_form(
+          Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 0),
+          workshop
+        )
       }
-    }
+    } : {}
+
+    workshop.sessions.each_with_index do |_, index|
+      day = index + 1
+      questions["Day #{day}"] = {
+        general: get_summary_for_form(
+          Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, day),
+          workshop
+        ),
+        facilitator: get_summary_for_form(
+          Pd::WorkshopFacilitatorDailySurvey.form_id(workshop.subject),
+          workshop
+        )
+      }
+    end
+
+    unless workshop.summer?
+      questions["Post Workshop"] = {
+        general: get_summary_for_form(
+          Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY), workshop
+        )
+      }
+    end
+
+    questions
   end
 
   private

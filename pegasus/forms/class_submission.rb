@@ -1,3 +1,5 @@
+require pegasus_dir 'helper_modules/forms'
+
 class ClassSubmission < Form
   def self.normalize(data)
     result = {}
@@ -144,64 +146,120 @@ class ClassSubmission < Form
 
     {}.tap do |results|
       location = search_for_address(data['school_address_s'])
-      results.merge! location.to_solr if location
+      results.merge! location.summarize if location
+
+      # Add additional data that was previously only used for indexing.
+      results.merge! additional_data(data)
     end
   end
 
-  def self.index(data)
+  # This is almost identical to the below function, but it's called by
+  # process_with_ip which is called by process_forms' process_batch_of_forms
+  # which writes to the database's processed_data column in the forms table.
+  # The fields stored by this function were previously only written to Solr.
+  def self.additional_data(data)
+    new_data = {}
+
     ['in_school', 'out_of_school', 'online'].each do |prefix|
       class_format = data['class_format_s']
       if class_format =~ /^#{prefix}_/
-        data['class_format_category_s'] = prefix
-        data['class_format_subcategory_s'] = class_format.sub(/^#{prefix}_/, '')
+        new_data['class_format_category_s'] = prefix
+        new_data['class_format_subcategory_s'] = class_format.sub(/^#{prefix}_/, '')
       end
     end
 
-    data['class_languages_all_ss'] = data['class_languages_ss'] - ['Other']
-    data['class_languages_all_ss'].concat(data['class_languages_other_ss'] || []).sort.uniq
+    new_data['class_languages_all_ss'] = data['class_languages_ss'] - ['Other']
+    new_data['class_languages_all_ss'].concat(data['class_languages_other_ss'] || []).sort.uniq
 
     # Create a case-insensitive version of the name for sorting.
-    data['school_name_sort_s'] = data['school_name_s'].downcase
+    new_data['school_name_sort_s'] = data['school_name_s'].downcase
 
-    data
+    new_data
   end
 
-  # OPTIONAL: Enable searching the SOLR index
-  def self.solr_query(params)
-    query = "kind_s:\"#{name}\" && (published_s:\"approved\" || review_s:\"approved\")"
+  def self.query(params)
+    query = ::PEGASUS_DB[:forms].
+      where(
+        {
+          kind: name,
+          review: "approved"
+        }
+      ).
+      exclude(
+        Sequel.function(:coalesce, Forms.json('processed_data.class_format_category_s'), '') => "online"
+      )
+
+    unless params['class_format_category_s'].nil_or_empty?
+      query = query.where(
+        Forms.json('processed_data.class_format_category_s') => params['class_format_category_s']
+      )
+    end
+
+    unless params['school_tuition_s'].nil_or_empty?
+      query = query.where(
+        Forms.json('data.school_tuition_s') => params['school_tuition_s']
+      )
+    end
 
     coordinates = params['coordinates']
     distance = 100
     rows = 500
 
-    fq = ["{!geofilt pt=#{coordinates} sfield=location_p d=#{distance}}"]
-
-    fq.push("-class_format_category_s:online")
-
-    fq.push("class_format_category_s:#{params['class_format_category_s']}") unless params['class_format_category_s'].nil_or_empty?
-    fq.push("school_tuition_s:#{params['school_tuition_s']}") unless params['school_tuition_s'].nil_or_empty?
-
     unless params['class_languages_all_ss'].nil_or_empty?
       params['class_languages_all_ss'].each do |language|
-        fq.push("class_languages_all_ss:#{language}")
+        query = query.where(
+          Forms.json('data.class_languages_all_ss') => language
+        )
       end
     end
 
     unless params['school_level_ss'].nil_or_empty?
       params['school_level_ss'].each do |level|
-        fq.push("school_level_ss:#{level}")
+        query = query.where(
+          Forms.json('data.school_level_ss') => level
+        )
       end
     end
 
-    fl = 'location_p,school_name_s,school_address_s,class_format_s,class_format_category_s,school_tuition_s,school_level_ss,class_languages_all_ss,school_website_s,class_description_s'
+    fl = 'location_p,school_name_s,school_address_s,class_format_s,school_tuition_s,school_level_ss,school_website_s,class_description_s'.split(',').map do |field|
+      Forms.json("data.#{field}").as(field)
+    end
+
+    fl += 'class_format_category_s,class_format_subcategory_s,class_languages_all_ss,school_name_sort_s'.split(',').map do |field|
+      Forms.json("processed_data.#{field}").as(field)
+    end
+
+    if coordinates && distance
+      distance_query = Sequel.function(:ST_Distance_Sphere,
+        Sequel.function(:ST_PointFromText, "POINT (#{coordinates.split(',').reverse.join(' ')})", 4326),
+        Sequel.function(:ST_PointFromText,
+          Sequel.function(:concat,
+            'POINT (',
+            Sequel.function(:substring_index, Forms.json('processed_data.location_p'), ',', -1),
+            ' ',
+            Sequel.function(:substring_index, Forms.json('processed_data.location_p'), ',', 1),
+            ')'
+          ),
+          4326
+        )
+      ) / 1000
+      query = query.where Sequel.lit(Forms.json('processed_data.location_p'))
+      query = query.where {distance_query < distance}
+      fl.push distance_query.as(:distance)
+    end
+
+    docs = query.select(
+      *fl,
+      Forms.json('processed_data.location_p').as(:location_p),
+      :id
+    ).limit(rows).to_a
+    docs.each do |doc|
+      doc[:school_level_ss] = JSON.parse(doc[:school_level_ss])
+      doc[:class_languages_all_ss] = JSON.parse(doc[:class_languages_all_ss])
+    end
     {
-      q: query,
-      fq: fq,
-      fl: fl,
-      facet: true,
-      'facet.field' => ['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
-      rows: rows,
-      sort: "school_name_s asc"
-    }
+      facet_counts: {facet_fields: {}},
+      response: {docs: docs}
+    }.to_json
   end
 end

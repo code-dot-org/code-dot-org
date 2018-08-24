@@ -1,0 +1,157 @@
+hy:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Next
+            '"prev"': Previous
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Next
+            '"prev"': Previous
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ճիշտ
+            '"left"': ձախ
+      Dancelab_randomColor:
+        text: կամայական գույն
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'ճիշտ'
+            'false': 'կեղծ'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": կամայական
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ճիշտ
+            '"left"': ձախ
+      gamelab_randColor:
+        text: կամայական գույն
+      gamelab_randomColor:
+        text: կամայական գույն
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': կամայական
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': ճիշտ
+            '"left"': ձախ
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": մինչեւ
+            "'down'": ներքեւ
+            "'left'": ձախ
+            "'right'": ճիշտ
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+      Vanilla_randomColor:
+        text: կամայական գույն

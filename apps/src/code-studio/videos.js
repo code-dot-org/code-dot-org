@@ -378,8 +378,11 @@ function upgradeInsecureOptions(options) {
  * @param inDialog {boolean} Whether this is part of the header of a dialog.
  */
 function showFallbackPlayerCaptionLink(inDialog) {
-  ReactDOM.render(
-    <FallbackPlayerCaptionDialogLink inDialog={inDialog}/>,
-    document.getElementById('fallback-player-caption-dialog-link')
-  );
+  const mountPoint = document.getElementById('fallback-player-caption-dialog-link');
+  if (mountPoint) {
+    ReactDOM.render(
+      <FallbackPlayerCaptionDialogLink inDialog={inDialog}/>,
+      mountPoint
+    );
+  }
 }

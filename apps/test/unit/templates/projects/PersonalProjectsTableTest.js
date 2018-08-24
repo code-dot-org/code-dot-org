@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
+import {publishMethods} from '@cdo/apps/templates/projects/projectConstants';
 
 describe('PersonalProjectsTable', () => {
   it('renders a table', () => {
@@ -12,6 +13,8 @@ describe('PersonalProjectsTable', () => {
       <Provider store={getStore()}>
         <PersonalProjectsTable
           personalProjectsList={stubFakePersonalProjectData}
+          canShare={true}
+          publishMethod={publishMethods.CHEVRON}
         />
       </Provider>
     );
@@ -23,6 +26,8 @@ describe('PersonalProjectsTable', () => {
       <Provider store={getStore()}>
         <PersonalProjectsTable
           personalProjectsList={stubFakePersonalProjectData}
+          canShare={true}
+          publishMethod={publishMethods.CHEVRON}
         />
       </Provider>
     );

@@ -88,14 +88,16 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   def cancel
     @enrollment = Pd::Enrollment.find_by_code params[:code]
     if @enrollment.nil?
-      render_404
+      render :not_found
     elsif @enrollment.attendances.any?
-      return render :attended
+      render :attended
     else
-      @enroll_url = url_for action: :new, workshop_id: @enrollment.pd_workshop_id
-      @enrollment.destroy!
-      Pd::WorkshopMailer.teacher_cancel_receipt(@enrollment).deliver_now
-      Pd::WorkshopMailer.organizer_cancel_receipt(@enrollment).deliver_now
+      @script_data = {
+        props: {
+          enrollmentCode: @enrollment.code,
+          workshopFriendlyName: @enrollment.workshop.friendly_name
+        }.to_json
+      }
     end
   end
 

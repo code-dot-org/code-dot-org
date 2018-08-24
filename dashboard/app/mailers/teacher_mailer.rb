@@ -7,8 +7,9 @@ class TeacherMailer < ActionMailer::Base
     mail to: teacher.email, subject: I18n.t('teacher_mailer.new_teacher_subject')
   end
 
-  def delete_teacher_email(teacher)
+  def delete_teacher_email(teacher, removed_students)
     @teacher = teacher
+    @removed_students = removed_students
     mail to: teacher.email, from: 'noreply@code.org', subject: I18n.t('teacher_mailer.delete_teacher_subject')
   end
 end

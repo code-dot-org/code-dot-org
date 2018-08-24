@@ -4,7 +4,7 @@ theme: responsive
 style_min: true
 ---
 
-[](If you update the resources here, don't forget to also update /educate/curriculum/xx-school for ES, MS, and HS)
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/elementary-school, /educate/curriculum/middle-school, and /educate/curriculum/high-school -->
 
 # 3rd Party Educator Resources
 
@@ -12,9 +12,9 @@ style_min: true
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
-| [Code.org](/educate/k5) | 6 courses, 15-30 hrs each, blending online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
 | [Code Red Education](http://www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
+| [Code.org](/educate/k5) | 6 courses, 15-30 hrs each, blending online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
@@ -28,9 +28,10 @@ style_min: true
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
-| [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. Intro CS JavaScript, Intro CS Python, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500. | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CS Principles, 30-40 hour course, $1500/teacher | Online PD for Teaching Intro CS 1, Teaching Intro CS 2, 30-40 hour course, $1500/teacher |
-| [Code.org](/educate/csd) | Year-long CS Discoveries introductory course that consists of six modular units, FREE  | In-person and online workshops available to partner districts, FREE |
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
+| [Code.org](/educate/csd) | Year-long CS Discoveries introductory course that consists of six modular units, FREE  | In-person and online workshops available to partner districts, FREE |
+| [CodeCombat](https://codecombat.com/) | 11 game-based courses teaching Python and JavaScript. Includes 5 game and web development courses. First course and teacher resources are free. School site licenses start at $2500 | Free onboarding call, $500/online PD |
+| [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. Intro CS JavaScript, Intro CS Python, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500. | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CS Principles, 30-40 hour course, $1500/teacher | Online PD for Teaching Intro CS 1, Teaching Intro CS 2, 30-40 hour course, $1500/teacher |
 | [Codesters](https://www.codesters.com/) |  5-lesson intro and project platform, FREE, 2 40-hr Intro to Python courses and 20-hr Intro to Game Design course, $20/student or a la carte pricing | Half day, 1-day, and 3-day workshops available, $500-$2,000 per teacher depending on length and location. |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
@@ -52,8 +53,9 @@ Looking for resources specifically for AP Computer Science Principles A in Java?
 |--------------|------------|---------------|--------------------------|------|
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
-| [CodeHS](https://codehs.com) | 4-year high school CS pathway. Intro CS JavaScript, Intro CS Python, AP CS Principles, AP CS in Java, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500 | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CSP, 30-40 hour course, $1500/teacher |
 | [Code.org](/educate) | Year-long CS Discoveries intro course that consists of six modular units, FREE. Year-long AP Computer Science Principles course, FREE | In-person and online workshops available to partner districts, FREE |
+| [CodeCombat](https://codecombat.com/) | 11 game-based courses teaching Python and JavaScript. Includes 5 game and web development courses. College Board endorsed provider of curriculum and PD for AP CS Principles. First course and teacher resources are free. School site licenses start at $2500 | Free onboarding call, $500/online PD |
+| [CodeHS](https://codehs.com) | 4-year high school CS pathway. Intro CS JavaScript, Intro CS Python, AP CS Principles, AP CS in Java, Computing Ideas, Web Design and more, FREE. Pro plans for schools start at $2500 | Online PD for Teaching Intro CS, Teaching AP Java, and Teaching AP CSP, 30-40 hour course, $1500/teacher |
 | [Edhesive](https://edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
 | [Exploring Computer Science](http://www.exploringcs.org/)| Year-long introductory high school course aimed at broadening participation in CS. 6 units, 6 weeks each | Week-long summer institute and quarterly one-day academic year workshops |
 | [Globaloria](http://globaloria.com/intro) | 6 game-design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
@@ -69,7 +71,7 @@ Looking for resources specifically for AP Computer Science Principles A in Java?
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
 
 ## For school counselors and administrators
-[NCWIT Counselors for Computing (C4C)](https://www.ncwit.org/c4c) provides school counselors with
+[NCWIT Counselors for Computing (C4C)](https://www.ncwit.org/project/counselors-computing-c4c) provides school counselors with
 up-to-date information and resources they can use to guide students toward education and
 careers in computing. Free professional development webinars and 1-day workshops are available
 across the US.   
@@ -116,9 +118,6 @@ Free curriculum from Google that uses online, project-based tutorials for elemen
 
 ### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
 Build the next generation of creators using free, open-source Java courseware.
-
-### [Teacher Led Hour of Code Lesson Plans](/teacher-led)
-Check out one-hour, teacher-led lesson and activity plans designed for different subject areas to teach the basics of computer science.
 
 ## Other lists of resources for curriculum or PD
 - AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)

@@ -1,0 +1,189 @@
+ka:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': შემდეგი
+            '"prev"': წინა
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': შემდეგი
+            '"prev"': წინა
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: ყველა
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': მარჯვნივ
+            '"left"': მარცხნივ
+      Dancelab_randomColor:
+        text: შემთხვევითი ფერი
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': არცერთი
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'ჭეშმარიტი'
+            'false': 'მცდარი'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": შემთხვევითი
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': მარჯვნივ
+            '"left"': მარცხნივ
+      gamelab_randColor:
+        text: შემთხვევითი ფერი
+      gamelab_randomColor:
+        text: შემთხვევითი ფერი
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': შემთხვევითი
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"height"': სიმაღლე
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': მარჯვნივ
+            '"left"': მარცხნივ
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ზემოთ
+            "'down'": ქვემოთ
+            "'left'": მარცხნივ
+            "'right'": მარჯვნივ
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': ზემოთ
+            '"down"': ქვემოთ
+            '"left"': მარცხნივ
+            '"right"': მარჯვნივ
+            '"space"': კოსმოსი
+      Vanilla_randomColor:
+        text: შემთხვევითი ფერი
