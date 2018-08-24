@@ -1,4 +1,5 @@
-import _ from 'lodash';
+// TODO: remove this
+// import _ from 'lodash';
 
 var jsInterpreter;
 module.exports.injectJSInterpreter = function (jsi) {
@@ -11,15 +12,17 @@ module.exports.setCreateWithDebug = function (debug) {
 };
 
 /** @type {GameLabLevel} */
-var level;
+// var level;
 /**
  * Provide the current Game Lab level because it can customize default
  * sprite behaviors.
  * @param {!GameLabLevel} lvl
  */
+/*
 module.exports.injectLevel = function (lvl) {
   level = lvl;
 };
+*/
 
 module.exports.createSprite = function (x, y, width, height) {
   /*
@@ -32,37 +35,45 @@ module.exports.createSprite = function (x, y, width, height) {
   if (createWithDebug) {
     s.debug = true;
   }
-  addPropertyAliases(s);
-  addMethodAliases(s);
+  // TODO p5-sync*
+  // addPropertyAliases(s);
+  // TODO p5-sync*
+  // addMethodAliases(s);
 
+  // TODO p5-sync*
   /*
    * @type {number}
    * @private
    * _horizontalStretch is the value to scale animation sprites in the X direction
    */
-  s._horizontalStretch = 1;
+  // s._horizontalStretch = 1;
 
+  // TODO p5-sync*
   /*
    * @type {number}
    * @private
    * _verticalStretch is the value to scale animation sprites in the Y direction
    */
-  s._verticalStretch = 1;
+  // s._verticalStretch = 1;
 
+  // TODO p5-sync*
   // Overriding these allows users to set a width and height for
   // an animated sprite the same way they would an unanimated sprite.
+  /*
   Object.defineProperty(s, 'width', {
     enumerable: true,
     configurable: true,
     get: getWidth,
     set: setWidth
   });
+  // TODO p5-sync*
   Object.defineProperty(s, 'height', {
     enumerable: true,
     configurable: true,
     get: getHeight,
     set: setHeight
   });
+  */
 
   // Define these native properties that may be called by the Sprite class
   // (ensures hasOwnProperty() will return true, signalling to CustomMarshaler
@@ -73,35 +84,44 @@ module.exports.createSprite = function (x, y, width, height) {
   s.onMouseReleased = undefined;
 
   // Attach our custom/override methods to the sprite
-  s.setAnimation = setAnimation.bind(s, this);
-  s.frameDidChange = frameDidChange;
-  s.pointTo = pointTo;
-  s._getScaleX = _getScaleX;
-  s._getScaleY = _getScaleY;
-  s._syncAnimationSizes = _syncAnimationSizes;
-  s.getScaledWidth = getScaledWidth;
-  s.getScaledHeight = getScaledHeight;
+  // TODO p5-sync*
+  // s.setAnimation = setAnimation.bind(s, this);
+  // TODO p5-sync*
+  // s.frameDidChange = frameDidChange;
+  // s.pointTo = pointTo;
+  // TODO p5-sync*
+  // s._getScaleX = _getScaleX;
+  // s._getScaleY = _getScaleY;
+  // s._syncAnimationSizes = _syncAnimationSizes;
+  // TODO p5-sync*
+  // s.getScaledWidth = getScaledWidth;
+  // s.getScaledHeight = getScaledHeight;
+  // TODO p5-sync*
   s._collideWith = _collideWith.bind(s, this);
   s._collideWithOne = _collideWithOne.bind(s, this);
   s.createGroupState = createGroupState;
+  // TODO p5-sync*
   s.bounceOff = bounceOff;
   s.isTouching = isTouching;
   // Overriding overlap, collide, displace, bounce, to work with our group states.
+  // TODO p5-sync*
   s.overlap = overlap;
   s.collide = collide;
   s.displace = displace;
   s.bounce = bounce;
-  s.play = play;
+  // s.play = play;
 
   // Set some initial property values
-  s.shapeColor = this.color(127, 127, 127);
-  s.depth = this.allSprites.maxDepth()+1;
+  // TODO p5-sync*
+  // s.shapeColor = this.color(127, 127, 127);
 
+  s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
 
   return s;
 };
 
+/*
 function getWidth() {
   if (this._internalWidth === undefined) {
     return 100;
@@ -111,7 +131,9 @@ function getWidth() {
     return this._internalWidth;
   }
 }
+*/
 
+/*
 function setWidth(value) {
   if (this.animation) {
     this._horizontalStretch = value / this._internalWidth;
@@ -119,7 +141,9 @@ function setWidth(value) {
     this._internalWidth = value;
   }
 }
+*/
 
+/*
 function getHeight() {
   if (this._internalHeight === undefined) {
     return 100;
@@ -129,7 +153,9 @@ function getHeight() {
     return this._internalHeight;
   }
 }
+*/
 
+/*
 function setHeight(value) {
   if (this.animation) {
     this._verticalStretch = value / this._internalHeight;
@@ -137,7 +163,9 @@ function setHeight(value) {
     this._internalHeight =  value;
   }
 }
+*/
 
+/*
 function setAnimation(p5Inst, animationName) {
   if (animationName === this.getAnimationLabel()) {
     return;
@@ -154,11 +182,15 @@ function setAnimation(p5Inst, animationName) {
     this.pause();
   }
 }
+*/
 
+/*
 function frameDidChange() {
   return this.animation ? this.animation.frameChanged : false;
 }
+*/
 
+/*
 function pointTo(x, y) {
   const yDelta = y - this.position.y;
   const xDelta = x - this.position.x;
@@ -167,34 +199,43 @@ function pointTo(x, y) {
     this.rotation = 360 * radiansAngle / (2 * Math.PI);
   }
 }
+*/
 
 // The scale value should include the horizontal stretch for animations.
+/*
 function _getScaleX() {
   return this.scale * this._horizontalStretch;
 }
+*/
 
 // The scale value should include the vertical stretch for animations.
+/*
 function _getScaleY() {
   return this.scale * this._verticalStretch;
 }
+*/
 
 /*
  * @private
  * For game lab, don't update the animation sizes because all frames are the same size.
  */
-function _syncAnimationSizes(animations, currentAnimation) {}
+// function _syncAnimationSizes(animations, currentAnimation) {}
 
 // p5.play stores width unscaled, but users in
 // Game Lab should have access to a scaled version.
+/*
 function getScaledWidth() {
   return this.width * this.scale;
 }
+*/
 
 // p5.play stores height unscaled, but users in
 // Game Lab should have access to a scaled version.
+/*
 function getScaledHeight() {
   return this.height * this.scale;
 }
+*/
 
 function createGroupState(type, target, callback) {
   if (target instanceof Array) {
@@ -261,6 +302,7 @@ function bounce(target, callback) {
  * If the animation has stopped at its last frame, this will start it over
  * at the beginning.
  */
+/*
 function play() {
   // Normally this just sets the 'playing' flag without changing the animation
   // frame, which will cause the animation to continue on the next update().
@@ -271,6 +313,7 @@ function play() {
   }
   this.animation.play();
 }
+*/
 
 /* eslint-disable */
 /*
@@ -362,6 +405,7 @@ var _collideWith = function (p5Inst, type, target, callback) {
  * @param {p5} p5Inst
  * @param {string} type - 'overlap', 'displace', 'collide' or 'bounce'
  *        +Code.org-specific modifictions:
+ *        'isTouching' is the same as 'overlap' (no callback expected)
  *        'bounceOff' is 'bounce' but with other treated as immovable.
  *        'collide' gets treated like 'bounce' when the other is immovable
  *            and using a restitution coefficient of zero.
@@ -416,6 +460,7 @@ function _collideWithOne(p5Inst, type, other, callback) {
     this.collider.updateFromSprite(this);
   }
 
+  // TODO p5-sync*
   // Code.org Customizations:
   // Create special behaviors for certain collision types by temporarily
   // overriding type and sprite properties.
@@ -473,6 +518,7 @@ function _collideWithOne(p5Inst, type, other, callback) {
     other.velocity.sub(otherInitialVelocity).add(otherFinalVelocity);
   }
 
+  // TODO p5-sync*
   // Code.org Customizations:
   // Restore sprite properties now that velocity changes have been made.
   // See another block before velocity changes that sets these up.
@@ -481,9 +527,9 @@ function _collideWithOne(p5Inst, type, other, callback) {
   other.immovable = originalOtherImmovable;
   other.restitution = originalOtherRestitution;
 
-  // Finally, for all collision types call the callback and record
-  // that collision occurred.
-  if (typeof callback === 'function') {
+  // Finally, for all collision types except 'isTouching', call the callback
+  // and record that collision occurred.
+  if (typeof callback === 'function' && type !== 'isTouching') {
     callback.call(this, this, other);
   }
   return true;
@@ -496,6 +542,7 @@ function _collideWithOne(p5Inst, type, other, callback) {
  * in GameLab.
  * @type {{string: string}}
  */
+/*
 const ALIASED_PROPERTIES = {
   'position.x': 'x',
   'position.y': 'y',
@@ -505,11 +552,13 @@ const ALIASED_PROPERTIES = {
   'restitution': 'bounciness',
   'animation.frameDelay': 'frameDelay',
 };
+*/
 
 /**
  * Alias p5.play sprite properties to new names
  * @param {Sprite} sprite
  */
+/*
 function addPropertyAliases(sprite) {
   for (const originalPropertyName in ALIASED_PROPERTIES) {
     const newPropertyName = ALIASED_PROPERTIES[originalPropertyName];
@@ -524,12 +573,14 @@ function addPropertyAliases(sprite) {
     });
   }
 }
+*/
 
 /**
  * Map from existing (deep) method names to new alias names we want to use
  * in GameLab.
  * @type {{string: string}}
  */
+/*
 const ALIASED_METHODS = {
   'remove': 'destroy',
   'setSpeed': 'setSpeedAndDirection',
@@ -538,11 +589,13 @@ const ALIASED_METHODS = {
   'animation.previousFrame': 'previousFrame',
   'animation.stop': 'pause'
 };
+*/
 
 /**
  * Alias p5.play sprite methods to new names
  * @param {Sprite} sprite
  */
+/*
 function addMethodAliases(sprite) {
   for (const originalMethodName in ALIASED_METHODS) {
     sprite[ALIASED_METHODS[originalMethodName]] = function () {
@@ -557,3 +610,4 @@ function addMethodAliases(sprite) {
     };
   }
 }
+*/

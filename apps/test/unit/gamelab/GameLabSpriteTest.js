@@ -342,13 +342,15 @@ describe('GameLabSprite', function () {
     beforeEach(function () {
       sprite = createSprite(0, 0);
 
-      // We manually preload animations onto p5.projectAnimations for the use of
+      // TODO: FIX THIS!
+
+      // We manually preload animations onto p5._predefinedSpriteAnimations for the use of
       // setAnimation.
       projectAnimations = {
         [ANIMATION_LABEL]: createTestAnimation(8),
         [SECOND_ANIMATION_LABEL]: createTestAnimation(10)
       };
-      gameLabP5.p5.projectAnimations = projectAnimations;
+      gameLabP5.p5._predefinedSpriteAnimations = projectAnimations;
     });
 
     it('throws if the named animation is not found in the project', function () {
@@ -460,8 +462,8 @@ describe('GameLabSprite', function () {
     beforeEach(function () {
       sprite = createSprite(0, 0);
 
-      // Manually preload animations onto p5.projectAnimations
-      gameLabP5.p5.projectAnimations = {
+      // Manually preload animations onto p5._predefinedSpriteAnimations
+      gameLabP5.p5._predefinedSpriteAnimations = {
         [LOOPING_ANIMATION]: createTestAnimation(3, true),
         [NON_LOOPING_ANIMATION]: createTestAnimation(3, false)
       };

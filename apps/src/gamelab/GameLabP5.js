@@ -76,7 +76,8 @@ GameLabP5.prototype.init = function (options) {
   this.onDraw = options.onDraw;
   this.scale = options.scale || 1;
 
-  var self = this;
+  // TODO: Remove this
+  // var self = this;
 
   // Override p5.loadImage so we can modify the URL path param
   if (!GameLabP5.baseP5loadImage) {
@@ -121,11 +122,15 @@ GameLabP5.prototype.init = function (options) {
   };
 
   // Disable fullscreen() method:
+  // (we don't make this change in our fork of p5.play, as we want this restriction
+  //  only while running within Code Studio)
   window.p5.prototype.fullscreen = function (val) {
     return false;
   };
 
   // Modify p5 to ignore out-of-bounds positions before setting touchIsDown
+  // TODO p5-sync*
+  /*
   window.p5.prototype._ontouchstart = function (e) {
     if (!this._curElement) {
       return;
@@ -159,6 +164,7 @@ GameLabP5.prototype.init = function (options) {
       //this._setMouseButton(e);
     }
   };
+  */
 
   // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
   // positions before reporting touch coordinates
@@ -166,6 +172,8 @@ GameLabP5.prototype.init = function (options) {
   // NOTE: _updateNextTouchCoords() is nearly identical, but calls a modified
   // getTouchInfo() function below that scales the touch postion with the play
   // space and can return undefined
+  // TODO p5-sync*
+  /*
   window.p5.prototype._updateNextTouchCoords = function (e) {
     var x = this.touchX;
     var y = this.touchY;
@@ -203,8 +211,10 @@ GameLabP5.prototype.init = function (options) {
       this._setProperty('_hasTouchInteracted', true);
     }
   };
-
+  */
   // NOTE: returns undefined if the position is outside of the valid range
+  // TODO p5-sync*
+  /*
   function getTouchInfo(canvas, e, i) {
     i = i || 0;
     var rect = canvas.getBoundingClientRect();
@@ -219,9 +229,12 @@ GameLabP5.prototype.init = function (options) {
       };
     }
   }
+  */
 
   // Modify p5 to ignore out-of-bounds positions before setting mouseIsPressed
   // and isMousePressed
+  // TODO p5-sync*
+  /*
   window.p5.prototype._onmousedown = function (e) {
     if (!this._curElement) {
       return;
@@ -249,6 +262,7 @@ GameLabP5.prototype.init = function (options) {
       }
     }
   };
+  */
 
   // Modify p5 to handle CSS transforms (scale) and ignore out-of-bounds
   // positions before reporting mouse coordinates
@@ -256,6 +270,8 @@ GameLabP5.prototype.init = function (options) {
   // NOTE: _updateNextMouseCoords() is nearly identical, but calls a modified
   // getMousePos() function below that scales the mouse position with the play
   // space and can return undefined.
+  // TODO p5-sync*
+  /*
   window.p5.prototype._updateNextMouseCoords = function (e) {
     var x = this.mouseX;
     var y = this.mouseY;
@@ -280,8 +296,11 @@ GameLabP5.prototype.init = function (options) {
       this._setProperty('_hasMouseInteracted', true);
     }
   };
+  */
 
   // NOTE: returns undefined if the position is outside of the valid range
+  // TODO p5-sync*
+  /*
   function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
     var xPos = evt.clientX - rect.left;
@@ -293,12 +312,18 @@ GameLabP5.prototype.init = function (options) {
       };
     }
   }
+  */
 
   // Add new p5 methods:
+  // TODO p5-sync*
+  /*
   window.p5.prototype.mouseDidMove = function () {
     return this.pmouseX !== this.mouseX || this.pmouseY !== this.mouseY;
   };
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.prototype.mouseIsOver = function (sprite) {
     if (!sprite) {
       return false;
@@ -317,13 +342,19 @@ GameLabP5.prototype.init = function (options) {
 
     return sprite.collider.overlap(new window.p5.PointCollider(mousePosition));
   };
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.prototype.mousePressedOver = function (sprite) {
     return (this.mouseIsPressed || this.touchIsDown) && this.mouseIsOver(sprite);
   };
 
   var styleEmpty = 'rgba(0,0,0,0)';
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.Renderer2D.prototype.regularPolygon = function (x, y, sides, size, rotation) {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
@@ -353,7 +384,10 @@ GameLabP5.prototype.init = function (options) {
       ctx.stroke();
     }
   };
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.prototype.regularPolygon = function (x, y, sides, size, rotation) {
     if (!this._renderer._doStroke && !this._renderer._doFill) {
       return this;
@@ -392,7 +426,10 @@ GameLabP5.prototype.init = function (options) {
     }
     return this;
   };
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.Renderer2D.prototype.shape = function () {
     var ctx = this.drawingContext;
     var doFill = this._doFill, doStroke = this._doStroke;
@@ -422,7 +459,10 @@ GameLabP5.prototype.init = function (options) {
       ctx.stroke();
     }
   };
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.prototype.shape = function () {
     if (!this._renderer._doStroke && !this._renderer._doFill) {
       return this;
@@ -455,7 +495,10 @@ GameLabP5.prototype.init = function (options) {
       this.originalRect_(x, y, w, h);
     };
   }
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.prototype.rgb = function (r, g, b, a) {
     // convert a from 0 to 255 to 0 to 1
     if (!a) {
@@ -465,13 +508,18 @@ GameLabP5.prototype.init = function (options) {
 
     return this.color(r, g, b, a);
   };
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.prototype.createGroup = function () {
     return new this.Group();
   };
+  */
 
   // Override p5.createSprite so we can replace the AABBops() function and add
   // some new methods that are animation shortcuts:
+  // TODO p5-sync*
   window.p5.prototype.createSprite = gameLabSprite.createSprite;
 
   // Override p5.Group so we can override the methods that take callback
@@ -484,6 +532,7 @@ GameLabP5.prototype.init = function (options) {
   }.bind(this);
 
   // Returns a constant for a mouse state given a string.
+  /*
   GameLabP5.prototype._clickKeyFromString = function (buttonCode) {
     if (this.CLICK_KEY[buttonCode]) {
       return this.CLICK_KEY[buttonCode];
@@ -491,20 +540,28 @@ GameLabP5.prototype.init = function (options) {
       return buttonCode;
     }
   };
+  */
 
   // Map of strings to constants for mouse states.
+  /*
   GameLabP5.prototype.CLICK_KEY = {
     'leftButton': window.p5.prototype.LEFT,
     'rightButton': window.p5.prototype.RIGHT,
     'centerButton': window.p5.prototype.CENTER
   };
+  */
 
   // Overrride p5.play so we can use strings in addition to constants.
+  // TODO p5-sync*
+  /*
   const p5IsMouseButtonInState = window.p5.prototype._isMouseButtonInState;
   window.p5.prototype._isMouseButtonInState = function (buttonCode, state) {
     return p5IsMouseButtonInState.call(this.p5, this._clickKeyFromString(buttonCode), state);
   }.bind(this);
+  */
 
+  // TODO p5-sync*
+  /*
   window.p5.prototype.createEdgeSprites = function () {
     this.leftEdge = this.createSprite(-50, 200, 100, 400);
     this.rightEdge = this.createSprite(450, 200, 100, 400);
@@ -519,6 +576,7 @@ GameLabP5.prototype.init = function (options) {
 
     return this.edges;
   };
+  */
 };
 
 /**
@@ -567,7 +625,12 @@ GameLabP5.prototype.drawDebugSpriteColliders = function () {
 GameLabP5.prototype.startExecution = function () {
   new window.p5(function (p5obj) {
       this.p5 = p5obj;
-      this.p5.useQuadTree(false);
+      // Tell p5.play that we don't want it to have Sprite do anything
+      // within _syncAnimationSizes()
+      this.p5._fixedSpriteAnimationFrameSizes = true;
+
+      // TODO p5-sync*
+      // this.p5.useQuadTree(false);
       this.setP5FrameRate();
       this.gameLabWorld = new GameLabWorld(p5obj);
 
@@ -686,34 +749,39 @@ GameLabP5.prototype.startExecution = function () {
 
       p5obj.preload = function () {
         // Create new camera.isActive() that maps to the readonly property:
-        p5obj.camera.isActive = function () {
-          return p5obj.camera.active;
-        };
+        // TODO p5-sync*
+        // p5obj.camera.isActive = function () {
+        //   return p5obj.camera.active;
+        // };
 
         // Create new camera.x and camera.y properties to alias camera.position:
-        Object.defineProperty(p5obj.camera, 'x', {
-          enumerable: true,
-          get: function () {
-            return p5obj.camera.position.x;
-          },
-          set: function (value) {
-            p5obj.camera.position.x = value;
-          }
-        });
+        // TODO p5-sync*
+        // Object.defineProperty(p5obj.camera, 'x', {
+        //   enumerable: true,
+        //   get: function () {
+        //     return p5obj.camera.position.x;
+        //   },
+        //   set: function (value) {
+        //     p5obj.camera.position.x = value;
+        //   }
+        // });
 
-        Object.defineProperty(p5obj.camera, 'y', {
-          enumerable: true,
-          get: function () {
-            return p5obj.camera.position.y;
-          },
-          set: function (value) {
-            p5obj.camera.position.y = value;
-          }
-        });
+        // TODO p5-sync*
+        // Object.defineProperty(p5obj.camera, 'y', {
+        //   enumerable: true,
+        //   get: function () {
+        //     return p5obj.camera.position.y;
+        //   },
+        //   set: function (value) {
+        //     p5obj.camera.position.y = value;
+        //   }
+        // });
 
-        p5obj.angleMode(p5obj.DEGREES);
+        // TODO p5-sync*
+        // p5obj.angleMode(p5obj.DEGREES);
         // Set default frameRate to 30 instead of 60.
-        p5obj.frameRate(defaultFrameRate);
+        // TODO p5-sync*
+        // p5obj.frameRate(defaultFrameRate);
 
         if (!this.onPreload()) {
           // If onPreload() returns false, it means that the preload phase has
@@ -726,8 +794,10 @@ GameLabP5.prototype.startExecution = function () {
       }.bind(this);
 
       p5obj.setup = function () {
-        p5obj.createCanvas(400, 400);
-        p5obj.fill(p5obj.color(127, 127, 127));
+        // TODO p5-sync*
+        // p5obj.createCanvas(400, 400);
+        // TODO p5-sync*
+        // p5obj.fill(p5obj.color(127, 127, 127));
 
         this.onSetup();
       }.bind(this);
@@ -977,12 +1047,15 @@ GameLabP5.prototype.afterSetupComplete = function () {
  * animation, loading it onto the p5 object for use by the setAnimation method
  * later.
  * @param {AnimationList} animationList
+ * @param {Boolean} pauseAnimationsByDefault whether animations should be paused
  *
  * @return {Promise} promise that resolves when all animations are loaded
  */
-GameLabP5.prototype.preloadAnimations = function (animationList) {
-  // Preload project animations:
-  this.p5.projectAnimations = {};
+GameLabP5.prototype.preloadAnimations = function (animationList, pauseAnimationsByDefault) {
+  // Preload project animations as _predefinedSpriteAnimations:
+  this.p5._predefinedSpriteAnimations = {};
+
+  this.p5._pauseSpriteAnimationsByDefault = pauseAnimationsByDefault;
   return Promise.all(animationList.orderedKeys.map(key => {
     const props = animationList.propsByKey[key];
     const frameCount = allAnimationsSingleFrameSelector(getStore().getState()) ? 1 : props.frameCount;
@@ -994,9 +1067,9 @@ GameLabP5.prototype.preloadAnimations = function (animationList) {
             props.frameSize.y,
             frameCount
         );
-        this.p5.projectAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
-        this.p5.projectAnimations[props.name].looping = props.looping;
-        this.p5.projectAnimations[props.name].frameDelay = props.frameDelay;
+        this.p5._predefinedSpriteAnimations[props.name] = this.p5.loadAnimation(spriteSheet);
+        this.p5._predefinedSpriteAnimations[props.name].looping = props.looping;
+        this.p5._predefinedSpriteAnimations[props.name].frameDelay = props.frameDelay;
         resolve();
       });
     });
