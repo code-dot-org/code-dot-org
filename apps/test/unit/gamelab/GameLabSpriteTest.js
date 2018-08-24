@@ -293,8 +293,6 @@ describe('GameLabSprite', function () {
     beforeEach(function () {
       sprite = createSprite(0, 0);
 
-      // TODO: FIX THIS!
-
       // We manually preload animations onto p5._predefinedSpriteAnimations for the use of
       // setAnimation.
       projectAnimations = {
