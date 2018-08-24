@@ -299,7 +299,7 @@
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
 
   map_title: "Hour of Code map"
-  map_header: '# events registered for Hour of Code 2017'
+  map_header: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
   map_header_country: '# in %{country}'
