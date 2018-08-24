@@ -29,8 +29,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     [SourceBucket, AssetBucket, AnimationBucket, FileBucket].each do |bucket|
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
+
     # Skip real Firebase operations
     FirebaseHelper.stubs(:delete_channel)
+
+    # Skip Geocoder check in WorkshopMaterialOrder
+    Pd::WorkshopMaterialOrder.any_instance.stubs(:valid_address?)
   end
 
   test 'sets purged_at' do
