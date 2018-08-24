@@ -802,7 +802,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_facilitator_program_registrations" do
-    registration = create :pd_facilitator_program_registration
+    teacher = create :teacher
+    registration = create :pd_facilitator_program_registration, user: teacher
     refute_equal '{}', registration.form_data
 
     purge_user registration.user
@@ -851,7 +852,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_regional_partner_program_registrations" do
-    registration = create :pd_regional_partner_program_registration
+    teacher = create :teacher
+    registration = create :pd_regional_partner_program_registration, user: teacher
     refute_equal '{}', registration.form_data
 
     purge_user registration.user
@@ -861,7 +863,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "sets invalid teachercon from pd_regional_partner_program_registrations" do
-    registration = create :pd_regional_partner_program_registration
+    teacher = create :teacher
+    registration = create :pd_regional_partner_program_registration, user: teacher
     assert_includes 1..3, registration.teachercon
 
     purge_user registration.user
