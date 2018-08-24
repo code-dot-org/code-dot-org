@@ -1349,6 +1349,29 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.survey_results
+  #
+
+  test "removes all rows for user from survey_results" do
+    teacher_a = create :teacher
+    teacher_b = create :teacher
+    survey_result_a = create :survey_result, user: teacher_a
+    survey_result_b = create :survey_result, user: teacher_a
+    survey_result_c = create :survey_result, user: teacher_b
+
+    assert_equal 2, SurveyResult.where(user_id: teacher_a.id).count
+    assert_equal 1, SurveyResult.where(user_id: teacher_b.id).count
+
+    purge_user teacher_a
+
+    assert_equal 0, SurveyResult.where(user_id: teacher_a.id).count
+    assert_equal 1, SurveyResult.where(user_id: teacher_b.id).count
+    refute SurveyResult.where(id: survey_result_a.id).exists?
+    refute SurveyResult.where(id: survey_result_b.id).exists?
+    assert SurveyResult.where(id: survey_result_c.id).exists?
+  end
+
+  #
   # Table: pegasus.contacts
   #
 
