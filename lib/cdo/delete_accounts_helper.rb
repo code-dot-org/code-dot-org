@@ -90,6 +90,7 @@ class DeleteAccountsHelper
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
   def clean_and_destroy_pd_content(user_id)
+    remove_from_cohorts user_id
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
     workshop_material_order_ids = Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
@@ -127,6 +128,15 @@ class DeleteAccountsHelper
         phone_number: ''
       )
     end
+  end
+
+  def remove_from_cohorts(user_id)
+    ActiveRecord::Base.connection.execute <<-SQL
+      DELETE FROM cohorts_users WHERE user_id='#{user_id}'
+    SQL
+    ActiveRecord::Base.connection.execute <<-SQL
+      DELETE FROM cohorts_deleted_users WHERE user_id='#{user_id}'
+    SQL
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII
