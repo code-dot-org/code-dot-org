@@ -1,0 +1,45 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "makeNewDanceSpriteSync",
+    "inline": false,
+    "blockText": "TEST SYNC \nmake a new {COSTUME} sprite \n called {NAME} at {LOCATION}",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "COSTUME",
+        "options": [
+          [
+            "Alien",
+            "\"alien\""
+          ],
+          [
+            "MrWiggles",
+            "\"mrwiggles\""
+          ],
+          [
+            "Pizza",
+            "\"pizza\""
+          ],
+          [
+            "Unicorn",
+            "\"unicorn\""
+          ]
+        ]
+      },
+      {
+        "name": "NAME",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

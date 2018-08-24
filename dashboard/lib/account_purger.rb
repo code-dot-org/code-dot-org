@@ -1,3 +1,5 @@
+require 'cdo/delete_accounts_helper'
+
 #
 # Responsible for performing unrecoverable deletion of PII from our system.
 #
@@ -19,12 +21,15 @@ class AccountPurger
   attr_reader :dry_run
   alias :dry_run? :dry_run
 
-  def initialize(dry_run: false, log: STDERR)
+  def initialize(dry_run: false, log: STDERR, bypass_safety_constraints: false)
     @dry_run = dry_run
     raise ArgumentError, 'dry_run must be boolean' unless [true, false].include? @dry_run
 
     @log = log
     raise ArgumentError, 'log must be an IO stream' unless @log.is_a?(IO) || @log.is_a?(StringIO)
+
+    @bypass_safety_constraints = bypass_safety_constraints
+    raise ArgumentError, 'bypass_safety_constraints must be boolean' unless [true, false].include? @bypass_safety_constraints
   end
 
   # Purge information for an individual user account.
@@ -48,6 +53,12 @@ class AccountPurger
   end
 
   private def really_purge_data_for_account(user)
-    raise 'Not implemented'
+    ActiveRecord::Base.transaction do
+      PEGASUS_DB.transaction do
+        DeleteAccountsHelper.
+          new(bypass_safety_constraints: @bypass_safety_constraints).
+          purge_user user
+      end
+    end
   end
 end

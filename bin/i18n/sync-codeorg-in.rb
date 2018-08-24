@@ -15,8 +15,10 @@ require_relative 'i18n_script_utils'
 
 def sync_in
   localize_level_content
+  localize_block_content
   run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
+  redact_block_content
 end
 
 def copy_to_yml(label, data)
@@ -32,6 +34,41 @@ def sanitize(string)
   return string.gsub(/\r(\n)?/, "\n")
 end
 
+def redact_block_content
+  source = 'i18n/locales/source/dashboard/blocks.yml'
+  dest = 'i18n/locales/redacted/dashboard/blocks.yml'
+  redact(source, dest, 'blockfield')
+end
+
+# Pull in various fields for custom blocks from .json files and save them to
+# blocks.en.yml.
+def localize_block_content
+  blocks = {}
+
+  Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
+    name = File.basename(file, '.*')
+    config = JSON.parse(File.read(file))['config']
+    blocks[name] = {
+      'text' => config['blockText'],
+    }
+
+    next unless config['args']
+
+    args_with_options = {}
+    config['args'].each do |arg|
+      next if !arg['options'] || arg['options'].empty?
+
+      options = args_with_options[arg['name']] = {}
+      arg['options'].each do |option_tuple|
+        options[option_tuple.last] = option_tuple.first
+      end
+    end
+    blocks[name]['options'] = args_with_options unless args_with_options.empty?
+  end
+
+  copy_to_yml('blocks', blocks)
+end
+
 def redact_level_content
   FileUtils.mkdir_p 'i18n/locales/redacted/dashboard'
   puts "Redacting"
@@ -43,7 +80,7 @@ def redact_level_content
     puts "\t#{content_type}"
     source = "i18n/locales/source/dashboard/#{content_type}.yml"
     dest = "i18n/locales/redacted/dashboard/#{content_type}.yml"
-    redact(source, dest)
+    redact(source, dest, 'nonPedanticEmphasis')
   end
 end
 

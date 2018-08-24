@@ -35,7 +35,6 @@ files: [
   #   rather than uploading the source directly
   "ignore" : [
     "/source/hourofcode/**",
-    "/source/dashboard/dsls.yml",
     "/source/dashboard/authored_hints.yml",
     "/source/dashboard/instructions.yml",
     "/source/dashboard/markdown_instructions.yml",

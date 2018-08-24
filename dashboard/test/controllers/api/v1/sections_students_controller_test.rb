@@ -40,7 +40,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test "depends_on_this_section_for_login if this is sponsored student's only section" do
     student = create :student_in_picture_section
-    assert student.can_create_personal_login?
+    assert student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
 
     sign_in student.teachers.first
@@ -57,7 +57,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     create :follower, student_user: student, section: second_section
     student.reload
 
-    assert student.can_create_personal_login?
+    assert student.teacher_managed_account?
     assert_equal 2, student.sections_as_student.size
 
     sign_in student.teachers.first
@@ -71,7 +71,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test "not depends_on_this_section_for_login if student is parent-managed" do
     student = create :parent_managed_student, :in_picture_section
 
-    refute student.can_create_personal_login?
+    refute student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
 
     sign_in student.teachers.first
@@ -85,7 +85,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test "not depends_on_this_section_for_login if student is in an email section" do
     student = create :student, :in_email_section
 
-    refute student.can_create_personal_login?
+    refute student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
 
     sign_in student.teachers.first
