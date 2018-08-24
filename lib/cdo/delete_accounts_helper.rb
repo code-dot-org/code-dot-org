@@ -108,6 +108,8 @@ class DeleteAccountsHelper
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
     PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
 
+    SurveyResult.where(user_id: user_id).destroy_all
+
     unless application_ids.empty?
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
