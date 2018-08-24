@@ -632,14 +632,72 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     cohort.teachers << user
     cohort.teachers << create(:teacher) # a second teacher
 
-    assert_equal 2, cohort.teachers.size
-    assert_equal 0, cohort.deleted_teachers.size
+    assert_equal 2, cohort.teachers.with_deleted.size
+    assert_equal 0, cohort.deleted_teachers.with_deleted.size
 
     purge_user user
     cohort.reload
 
-    assert_equal 1, cohort.teachers.size
-    assert_equal 0, cohort.deleted_teachers.size
+    assert_equal 1, cohort.teachers.with_deleted.size
+    assert_equal 0, cohort.deleted_teachers.with_deleted.size
+  end
+
+  test 'will not remove more than 10 cohorts_users rows' do
+    teacher = create :teacher
+    11.times do
+      cohort = create :cohort
+      cohort.teachers << teacher
+    end
+
+    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
+      purge_user teacher
+    end
+
+    assert_equal <<~MESSAGE, err.message
+      Safety constraints only permit deleting up to 10 rows from cohorts_users, but found 11 rows.
+      If you are a developer attempting to manually purge this account, run
+
+        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+      to bypass this constraint and purge the user from our system.
+    MESSAGE
+  end
+
+  test 'removes cohorts_deleted_users rows' do
+    user = create :teacher
+    cohort = create :cohort
+    cohort.deleted_teachers << user
+    cohort.deleted_teachers << create(:teacher) # a second teacher
+
+    assert_equal 0, cohort.teachers.with_deleted.size
+    assert_equal 2, cohort.deleted_teachers.with_deleted.size
+
+    purge_user user
+    cohort.reload
+
+    assert_equal 0, cohort.teachers.with_deleted.size
+    assert_equal 1, cohort.deleted_teachers.with_deleted.size
+  end
+
+  test 'will not remove more than 10 cohorts_deleted_users rows' do
+    teacher = create :teacher
+    11.times do
+      cohort = create :cohort
+      cohort.deleted_teachers << teacher
+    end
+
+    err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
+      purge_user teacher
+    end
+
+    assert_equal <<~MESSAGE, err.message
+      Safety constraints only permit deleting up to 10 rows from cohorts_deleted_users, but found 11 rows.
+      If you are a developer attempting to manually purge this account, run
+
+        DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+
+      to bypass this constraint and purge the user from our system.
+    MESSAGE
   end
 
   #
