@@ -65,7 +65,9 @@ module.exports.Group = function (baseConstructor) {
   array.collide = _groupCollideGameLab.bind(array, 'collide');
   array.displace = _groupCollideGameLab.bind(array, 'displace');
   array.bounce = _groupCollideGameLab.bind(array, 'bounce');
+  // TODO p5-sync*
   array.bounceOff = _groupCollideGameLab.bind(array, 'bounceOff');
+  array.isTouching = _groupCollideGameLab.bind(array, 'isTouching');
 
   /**
    * Test each member of group against the target using the isTouching sprite
@@ -77,6 +79,8 @@ module.exports.Group = function (baseConstructor) {
    * @param {Object} target Group or Sprite
    * @return {boolean} True if any touching occurred
    */
+  // TODO p5-sync*
+  /*
   array.isTouching = function (target) {
     var state = jsInterpreter.getCurrentState();
     if (!state.__i) {
@@ -101,6 +105,9 @@ module.exports.Group = function (baseConstructor) {
       return state.__didCollide;
     }
   };
+  */
+
+  /*
 
   array.setPropertyEach = function (propName, value) {
     for (var i = 0; i < this.length; i++) {
@@ -117,29 +124,32 @@ module.exports.Group = function (baseConstructor) {
       elements[i][methodName].apply(elements[i], methodArgs);
     }
   };
+  */
 
-  array.setDepthEach = array.setPropertyEach.bind(array, 'depth');
-  array.setLifetimeEach = array.setPropertyEach.bind(array, 'lifetime');
-  array.setRotateToDirectionEach = array.setPropertyEach.bind(array, 'rotateToDirection');
-  array.setRotationEach = array.setPropertyEach.bind(array, 'rotation');
-  array.setRotationSpeedEach = array.setPropertyEach.bind(array, 'rotationSpeed');
-  array.setScaleEach = array.setPropertyEach.bind(array, 'scale');
-  array.setColorEach = array.setPropertyEach.bind(array, 'shapeColor');
-  array.setTintEach = array.setPropertyEach.bind(array, 'tint');
-  array.setVisibleEach = array.setPropertyEach.bind(array, 'visible');
-  array.setVelocityXEach = array.setPropertyEach.bind(array, 'velocityX');
-  array.setVelocityYEach = array.setPropertyEach.bind(array, 'velocityY');
-  array.setHeightEach = array.setPropertyEach.bind(array, 'height');
-  array.setWidthEach = array.setPropertyEach.bind(array, 'width');
+  // TODO p5-sync*
+  // array.setDepthEach = array.setPropertyEach.bind(array, 'depth');
+  // array.setLifetimeEach = array.setPropertyEach.bind(array, 'lifetime');
+  // array.setRotateToDirectionEach = array.setPropertyEach.bind(array, 'rotateToDirection');
+  // array.setRotationEach = array.setPropertyEach.bind(array, 'rotation');
+  // array.setRotationSpeedEach = array.setPropertyEach.bind(array, 'rotationSpeed');
+  // array.setScaleEach = array.setPropertyEach.bind(array, 'scale');
+  // array.setColorEach = array.setPropertyEach.bind(array, 'shapeColor');
+  // array.setTintEach = array.setPropertyEach.bind(array, 'tint');
+  // array.setVisibleEach = array.setPropertyEach.bind(array, 'visible');
+  // array.setVelocityXEach = array.setPropertyEach.bind(array, 'velocityX');
+  // array.setVelocityYEach = array.setPropertyEach.bind(array, 'velocityY');
+  // array.setHeightEach = array.setPropertyEach.bind(array, 'height');
+  // array.setWidthEach = array.setPropertyEach.bind(array, 'width');
 
-  array.destroyEach = array.callMethodEach.bind(array, 'destroy');
-  array.pointToEach = array.callMethodEach.bind(array, 'pointTo');
-  array.setAnimationEach = array.callMethodEach.bind(array, 'setAnimation');
-  array.setColliderEach = array.callMethodEach.bind(array, 'setCollider');
-  array.setSpeedAndDirectionEach = array.callMethodEach.bind(array, 'setSpeedAndDirection');
-  array.setVelocityEach = array.callMethodEach.bind(array, 'setVelocity');
-  array.setMirrorXEach = array.callMethodEach.bind(array, 'mirrorX');
-  array.setMirrorYEach = array.callMethodEach.bind(array, 'mirrorY');
+  // TODO p5-sync*
+  // array.destroyEach = array.callMethodEach.bind(array, 'destroy');
+  // array.pointToEach = array.callMethodEach.bind(array, 'pointTo');
+  // array.setAnimationEach = array.callMethodEach.bind(array, 'setAnimation');
+  // array.setColliderEach = array.callMethodEach.bind(array, 'setCollider');
+  // array.setSpeedAndDirectionEach = array.callMethodEach.bind(array, 'setSpeedAndDirection');
+  // array.setVelocityEach = array.callMethodEach.bind(array, 'setVelocity');
+  // array.setMirrorXEach = array.callMethodEach.bind(array, 'mirrorX');
+  // array.setMirrorYEach = array.callMethodEach.bind(array, 'mirrorY');
 
   return array;
 };

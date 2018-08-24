@@ -214,7 +214,8 @@ GameLab.prototype.init = function (config) {
 
   config.usesAssets = true;
 
-  gameLabSprite.injectLevel(this.level);
+  // TODO: remove this
+  // gameLabSprite.injectLevel(this.level);
 
   this.studioApp_.labUserId = config.labUserId;
   this.studioApp_.storage = initFirebaseStorage({
@@ -227,6 +228,7 @@ GameLab.prototype.init = function (config) {
 
   this.gameLabP5.init({
     gameLab: this,
+    pauseAnimationsByDefault: this.level.pauseAnimationsByDefault,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
@@ -1200,7 +1202,7 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  */
 GameLab.prototype.onP5Preload = function () {
   Promise.all([
-      this.preloadAnimations_(),
+      this.preloadAnimations_(this.level.pauseAnimationsByDefault),
       this.runPreloadEventHandler_()
   ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
@@ -1211,13 +1213,14 @@ GameLab.prototype.onP5Preload = function () {
 /**
  * Wait for animations to be loaded into memory and ready to use, then pass
  * those animations to P5 to be loaded into the engine as animations.
+ * @param {Boolean} pauseAnimationsByDefault whether animations should be paused
  * @returns {Promise} which resolves once animations are in memory in the redux
  *          store and we've started loading them into P5.
  *          Loading to P5 is also an async process but it has its own internal
  *          effect on the P5 preloadCount, so we don't need to track it here.
  * @private
  */
-GameLab.prototype.preloadAnimations_ = function () {
+GameLab.prototype.preloadAnimations_ = function (pauseAnimationsByDefault) {
   let store = getStore();
   return new Promise(resolve => {
     if (this.areAnimationsReady_()) {
@@ -1233,7 +1236,9 @@ GameLab.prototype.preloadAnimations_ = function () {
     }
   }).then(() => {
     // Animations are ready - send them to p5 to be loaded into the engine.
-    return this.gameLabP5.preloadAnimations(store.getState().animationList);
+    return this.gameLabP5.preloadAnimations(
+      store.getState().animationList,
+      pauseAnimationsByDefault);
   });
 };
 
