@@ -102,6 +102,20 @@ class DeleteAccountsHelper
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::TeacherApplication.where(user_id: user_id).update_all(primary_email: '', secondary_email: '', application: '')
+    Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
+
+    # Peer reviews might be associated with a purged submitter or viewer
+    PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
+    PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
+
+    SurveyResult.where(user_id: user_id).destroy_all
+
+    # Most efficient query to find and remove records from many-to-many join
+    # table unexpected_teachers_workshops without a corresponding model
+    ActiveRecord::Base.connection.execute(<<-SQL)
+      DELETE FROM unexpected_teachers_workshops
+      WHERE unexpected_teacher_id = '#{user_id}'
+    SQL
 
     unless application_ids.empty?
       Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
@@ -112,6 +126,7 @@ class DeleteAccountsHelper
     unless pd_enrollment_ids.empty?
       workshop_material_order_ids += Pd::WorkshopMaterialOrder.where(pd_enrollment_id: pd_enrollment_ids).pluck(:id)
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
+      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
     end
