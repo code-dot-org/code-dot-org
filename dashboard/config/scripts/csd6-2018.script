@@ -9,7 +9,6 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
-script_announcements [{"notice"=>"Join our Teacher Insights Group!  ", "details"=>"Share your experiences and get support from other teachers and our team.", "link"=>"http://teacherblog.code.org/post/176699827304/join-the-codeorg-teacher-insight-group", "type"=>"bullhorn"}]
 family_name 'csd6'
 version_year '2018'
 is_stable true
