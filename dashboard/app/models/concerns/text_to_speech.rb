@@ -142,23 +142,23 @@ module TextToSpeech
     if I18n.locale == I18n.default_locale
       # We still have to try localized instructions here for the
       # levels.js-defined levels
-      tts_instructions_override || instructions || try(:localized_instructions) || ""
+      tts_instructions_override || short_instructions || try(:localized_short_instructions) || ""
     else
-      TextToSpeech.sanitize(try(:localized_instructions) || "")
+      TextToSpeech.sanitize(try(:localized_short_instructions) || "")
     end
   end
 
   def tts_should_update_instructions?
-    relevant_property = tts_instructions_override ? 'tts_instructions_override' : 'instructions'
+    relevant_property = tts_instructions_override ? 'tts_instructions_override' : 'short_instructions'
     return tts_should_update(relevant_property)
   end
 
   def tts_markdown_instructions_text
-    tts_markdown_instructions_override || TextToSpeech.sanitize(markdown_instructions || "")
+    tts_markdown_instructions_override || TextToSpeech.sanitize(long_instructions || "")
   end
 
   def tts_should_update_markdown_instructions?
-    relevant_property = tts_markdown_instructions_override ? 'tts_markdown_instructions_override' : 'markdown_instructions'
+    relevant_property = tts_markdown_instructions_override ? 'tts_markdown_instructions_override' : 'long_instructions'
     return tts_should_update(relevant_property)
   end
 

@@ -36,6 +36,6 @@ Code.org is interested in partnering with experienced [computer science educator
 Looking for other ways to get connected to computer science teachers around the world? Check out these great resources from our partners:
 
 - **[CS for all Teachers](https://csforallteachers.org/):** A nationwide virtual community for CS educators offering opportunities for sharing resources, developing leadership and connecting with peers.
-- **[NCWIT](http://ncwit.org):** Find your local NCWIT chapter - an organization working to correct the imbalance of gender diversity in technology.
+- **[NCWIT](https://ncwit.org):** Find your local NCWIT chapter - an organization working to correct the imbalance of gender diversity in technology.
 
 *Don't see your local CS community listed? Connect with [@TeachCode](http://twitter.com/TeachCode) on Twitter so we can get to know you!*

@@ -1,0 +1,157 @@
+ca:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Següent
+            '"prev"': Anterior
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Següent
+            '"prev"': Anterior
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dret
+            '"left"': esquerra
+      Dancelab_randomColor:
+        text: color aleatori
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'cert'
+            'false': 'fals'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": atzar
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dret
+            '"left"': esquerra
+      gamelab_randColor:
+        text: color aleatori
+      gamelab_randomColor:
+        text: color aleatori
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': atzar
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"height"': alçcada
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': dret
+            '"left"': esquerra
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": cap amunt
+            "'down'": avall
+            "'left'": esquerra
+            "'right'": dret
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      Vanilla_randomColor:
+        text: color aleatori

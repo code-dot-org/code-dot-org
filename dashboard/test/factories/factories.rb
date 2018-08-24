@@ -83,10 +83,19 @@ FactoryGirl.define do
         end
       end
       factory :facilitator do
+        transient do
+          course nil
+        end
+
         sequence(:name) {|n| "Facilitator Person #{n}"}
         email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
-        after(:create) do |facilitator|
+
+        after(:create) do |facilitator, evaluator|
           facilitator.permission = UserPermission::FACILITATOR
+
+          if evaluator.course
+            create :pd_course_facilitator, facilitator: facilitator, course: evaluator.course
+          end
         end
       end
       factory :workshop_admin do
@@ -879,6 +888,10 @@ FactoryGirl.define do
     data "MyText"
     before :create do |peer_review|
       create :user_level, user: peer_review.submitter, level: peer_review.level
+    end
+
+    trait :reviewed do
+      reviewer {create :teacher}
     end
   end
 

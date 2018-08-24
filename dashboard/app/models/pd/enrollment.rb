@@ -32,6 +32,7 @@ class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
   include Pd::SharedWorkshopConstants
+  include Pd::WorkshopSurveyConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -46,22 +47,22 @@ class Pd::Enrollment < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
-  validates_presence_of :first_name, unless: :owner_deleted?
+  validates_presence_of :first_name, unless: :deleted?
 
   # Some old enrollments, from before the first/last name split, don't have last names.
   # Require on all new enrollments.
-  validates_presence_of :last_name, unless: -> {owner_deleted? || created_before_name_split?}
+  validates_presence_of :last_name, unless: -> {deleted? || created_before_name_split?}
 
-  validates_presence_of :email, unless: :owner_deleted?
-  validates_confirmation_of :email, unless: :owner_deleted?
+  validates_presence_of :email, unless: :deleted?
+  validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
 
   validate :school_forbidden, if: -> {new_record? || school_changed?}
-  validates_presence_of :school_info, unless: -> {owner_deleted? || created_before_school_info?}
-  validate :school_info_country_required, if: -> {!owner_deleted? && (new_record? || school_info_id_changed?)}
+  validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}
+  validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
-  after_save :enroll_in_corresponding_online_learning, if: -> {!owner_deleted? && (user_id_changed? || email_changed?)}
+  after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
   after_save :authorize_teacher_account
 
   def self.for_user(user)
@@ -101,12 +102,6 @@ class Pd::Enrollment < ActiveRecord::Base
     user_id
   end
 
-  # Returns whether the enrollment owner is deleted. If there is no owner, returns false.
-  # @return [Boolean] Whether the enrollment owner is deleted.
-  def owner_deleted?
-    user_id && User.with_deleted.find_by_id(user_id).deleted?
-  end
-
   def completed_survey?
     return true if completed_survey_id.present?
 
@@ -137,14 +132,19 @@ class Pd::Enrollment < ActiveRecord::Base
     teachercon_enrollments, non_teachercon_enrollments = enrollments.partition do |enrollment|
       enrollment.workshop.teachercon?
     end
-    local_summer_enrollments, regular_enrollments = non_teachercon_enrollments.partition do |enrollment|
+
+    local_summer_enrollments, other_enrollments = non_teachercon_enrollments.partition do |enrollment|
       enrollment.workshop.local_summer?
+    end
+    new_academic_year_enrollments, other_enrollments = other_enrollments.partition do |enrollment|
+      [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(enrollment.workshop.course) && enrollment.workshop.workshop_starting_date > Date.new(2018, 8, 1)
     end
 
     (
-      filter_for_regular_survey_completion(regular_enrollments, select_completed) +
+      filter_for_regular_survey_completion(other_enrollments, select_completed) +
       filter_for_teachercon_survey_completion(teachercon_enrollments, select_completed) +
-      filter_for_local_summer_survey_completion(local_summer_enrollments, select_completed)
+      filter_for_local_summer_survey_completion(local_summer_enrollments, select_completed) +
+      filter_for_academic_year_survey_completion(new_academic_year_enrollments, select_completed)
     )
   end
 
@@ -165,8 +165,10 @@ class Pd::Enrollment < ActiveRecord::Base
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
-    elsif workshop.local_summer? || workshop.teachercon?
+    elsif workshop.summer?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
+    elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
+      CDO.studio_url "/pd/workshop_survey/day/#{workshop.sessions.size}?enrollmentCode=#{code}", CDO.default_scheme
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", CDO.default_scheme
     end
@@ -242,12 +244,15 @@ class Pd::Enrollment < ActiveRecord::Base
 
   # Removes the name and email information stored within this Pd::Enrollment.
   def clear_data
-    update!(
-      name: '',
-      first_name: nil,
-      last_name: nil,
-      email: ''
-    )
+    write_attribute :name, nil
+    self.first_name = nil
+    self.last_name = nil
+    self.email = ''
+    self.user_id = nil
+    self.school = nil
+    self.school_info_id = nil
+    self.deleted_at = Time.now
+    save!
   end
 
   protected
@@ -302,6 +307,15 @@ class Pd::Enrollment < ActiveRecord::Base
       workshop = enrollment.workshop
       user = enrollment.user
       Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: user, day: 5)
+    end
+
+    select_completed ? completed_surveys : uncompleted_surveys
+  end
+
+  private_class_method def self.filter_for_academic_year_survey_completion(academic_year_enrollments, select_completed)
+    completed_surveys, uncompleted_surveys = academic_year_enrollments.partition do |enrollment|
+      workshop = enrollment.workshop
+      Pd::WorkshopDailySurvey.exists?(pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, POST_WORKSHOP_FORM_KEY))
     end
 
     select_completed ? completed_surveys : uncompleted_surveys

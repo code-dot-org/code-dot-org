@@ -13,54 +13,25 @@
   = f.label :skin
   = f.select :skin, options_for_select(@level.class.skins, @level.skin)
 .field
-  = f.label :is_k1, 'Is K1 level'
-  = boolean_check_box f, :is_k1
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is K1 level"}
 .field
-  = f.label :never_autoplay_video, 'Never autoplay video'
-  = boolean_check_box f, :never_autoplay_video
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :never_autoplay_video, description: "Never autoplay video"}
 .field
-  = f.label :use_modal_function_editor, 'Use modal function editor'
-  = boolean_check_box f, :use_modal_function_editor
-.field
-  = f.label :use_contract_editor, 'Use MSM contract editor'
-  = boolean_check_box f, :use_contract_editor
-.field
-  = f.label :default_num_example_blocks, 'Default # of example blocks in contract editor'
-  = f.number_field :default_num_example_blocks
-.field
-  = f.label :disable_examples, 'Hide examples section in contract editor'
-  = boolean_check_box f, :disable_examples
-.field
-  = f.label :examples_required, 'Each function must have at least 1 example, and examples will be checked when hitting run'
-  = boolean_check_box f, :examples_required
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
 .field
   = f.label :open_function_definition, 'Auto-open function definition'
   = f.text_field :open_function_definition, placeholder: 'name of function to open'
-%table.contract-editor-config
-  %tr
-    %th Section
-    %th Highlight
-    %th Collapse
-  -%w(contract examples definition).each_with_index do |section, i|
-    %tr
-      %td #{i + 1}. #{section.titleize}
-      %td= boolean_check_box f, "#{section}_highlight".to_sym
-      %td= boolean_check_box f, "#{section}_collapse".to_sym
-
-.field
-  = f.label :disable_param_editing, 'Enable param editing in function blocks'
+.field.aligned-input-group
   = f.check_box :disable_param_editing, {}, 'false', 'true'
+  = f.label :disable_param_editing, 'Enable param editing in function blocks'
 .field
-  = f.label :disable_variable_editing, 'Disable editing of variable names and creation of new variables'
-  = boolean_check_box f, :disable_variable_editing
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
 .field
-  = f.label :disable_if_else_editing, 'Don\'t let users mutate (add or remove) branches to if/else blocks'
-  = boolean_check_box f, :disable_if_else_editing
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_if_else_editing, description: "Don\'t let users mutate (add or remove) branches to if/else blocks"}
 .field
-  = f.label :show_type_hints, 'Show a small visual hint for what type of block a connection accepts'
-  = boolean_check_box f, :show_type_hints
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
 .field
-  = f.label :disable_procedure_autopopulate, 'Disable autopopulation of Functions category with default toolbox blocks'
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :disable_procedure_autopopulate, description: "Disable autopopulation of Functions category with default toolbox blocks"}
   %p
     By default, Functions categories in Blockly will be automatically populated
     with blocks for three default procedure definitions (noreturn, return, and
@@ -71,18 +42,13 @@
     category and NOT the default definition blocks. Any XML manually included in
     the toolbox category will be included, allowing you to specify a subset of
     the definition blocks that you would like to include for this level.
-  = boolean_check_box f, :disable_procedure_autopopulate
 .field
-  = f.label :top_level_procedure_autopopulate, 'Autopopulate function call blocks for non-categorized toolboxes'
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :top_level_procedure_autopopulate, description: "Autopopulate function call blocks for non-categorized toolboxes"}
   %p
     This adds a call block to the end of the toolbox for each function defined
     in the workspace (including hidden start blocks).
-  = boolean_check_box f, :top_level_procedure_autopopulate
 .field
-  = f.label :include_shared_functions, 'Make shared functions and behaviors available'
-  = boolean_check_box f, :include_shared_functions
-
-
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
 
 .field
   = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
@@ -125,11 +91,6 @@
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
 
--if @level.respond_to? :input_output_table
-  = f.label :input_output_table, 'Input/Output Table'
-  %p An array of tuples where each tuple is [input, output].
-  %p i.e. The table for f(x) = x - 5 might look like: [ [15, 10], [10, 5], [25, 20] ]
-  = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
 -if @level.respond_to? :solution_blocks
   .field
     - if @level.uses_droplet?

@@ -1,0 +1,189 @@
+ko:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': 다음
+            '"prev"': 이전
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': 다음
+            '"prev"': 이전
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: 모두
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 오른쪽으로
+            '"left"': 왼쪽으로
+      Dancelab_randomColor:
+        text: 랜덤 색
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': 없음
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+            '"space"': 우주
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+            '"space"': 우주
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': '참'
+            'false': '거짓'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": random(랜덤)
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 오른쪽으로
+            '"left"': 왼쪽으로
+      gamelab_randColor:
+        text: 랜덤 색
+      gamelab_randomColor:
+        text: 랜덤 색
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': random(랜덤)
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"height"': '높이:'
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': 오른쪽으로
+            '"left"': 왼쪽으로
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+            '"space"': 우주
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": 위로
+            "'down'": 아래로
+            "'left'": 왼쪽으로
+            "'right'": 오른쪽으로
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+            '"space"': 우주
+      Vanilla_randomColor:
+        text: 랜덤 색

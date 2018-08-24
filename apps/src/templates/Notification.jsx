@@ -41,8 +41,12 @@ const styles = {
     fontSize: 14,
     lineHeight: 1.5,
     paddingTop: 6,
-    paddingBottom: 6,
+    paddingBottom: 16,
     color: color.charcoal,
+  },
+  detailsLink: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.teal
   },
   wordBox: {
     // flex priority
@@ -126,6 +130,8 @@ class Notification extends Component {
     type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
     notice: PropTypes.string.isRequired,
     details: PropTypes.string.isRequired,
+    detailsLinkText: PropTypes.string,
+    detailsLink: PropTypes.string,
     buttonText: PropTypes.string,
     buttonLink: PropTypes.string,
     dismissible: PropTypes.bool.isRequired,
@@ -184,6 +190,8 @@ class Notification extends Component {
     const {
       notice,
       details,
+      detailsLinkText,
+      detailsLink,
       type,
       buttonText,
       buttonLink,
@@ -230,6 +238,14 @@ class Notification extends Component {
               </div>
               <div style={styles.details}>
                 {details}
+                {detailsLinkText && detailsLink && (
+                  <span>
+                    &nbsp;
+                    <a href={detailsLink} style={styles.detailsLink}>
+                      {detailsLinkText}
+                    </a>
+                  </span>
+                )}
               </div>
             </div>
             <div style={desktop ? null : styles.buttonsMobile}>

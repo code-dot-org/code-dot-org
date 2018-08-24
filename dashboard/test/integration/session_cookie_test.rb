@@ -29,7 +29,9 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
 
   test 'session cookie is set in on non-cached level page' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
-    get '/hoc/1'
+    get '/hoc/1',
+      headers: {'Cache-Control' => 'no-cache'},
+      env: {'rack-cache.allow_reload' => true}
     assert_not_nil cookies['_learn_session_test']
   end
 end

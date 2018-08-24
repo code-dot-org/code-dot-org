@@ -19,6 +19,7 @@ const {
   isGoogleClassroomStudent,
   isCleverStudent,
   dependedUponForLogin,
+  dependentStudents,
   studentCount,
 } = scriptData;
 
@@ -33,12 +34,7 @@ $(document).ready(() => {
     emailChangedCallback: onEmailChanged,
   });
 
-  const hashedEmails = authenticationOptions.map(ao => ao.hashed_email);
-  new ChangeUserTypeController(
-    $('#change-user-type-modal-form'),
-    userType,
-    hashedEmails,
-  );
+  new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
 
   const addPasswordMountPoint = document.getElementById('add-password-fields');
   if (addPasswordMountPoint) {
@@ -63,6 +59,7 @@ $(document).ready(() => {
         isPasswordRequired={isPasswordRequired}
         isTeacher={userType === 'teacher'}
         dependedUponForLogin={dependedUponForLogin}
+        dependentStudents={dependentStudents}
         hasStudents={studentCount > 0}
       />,
       deleteAccountMountPoint
