@@ -57,6 +57,7 @@ const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS = 'sectionAssessments/START_LOADING_ASSESSMENTS';
 const FINISH_LOADING_ASSESSMENTS = 'sectionAssessments/FINISH_LOADING_ASSESSMENTS';
 const SET_ASSESSMENT_ID = 'sectionAssessments/SET_ASSESSMENT_ID';
+const SET_INITIAL_ASSESSMENT_ID = 'sectionAssessments/SET_INITIAL_ASSESSMENT_ID';
 const SET_STUDENT_ID = 'sectionAssessments/SET_STUDENT_ID';
 const SET_QUESTION_INDEX = 'sectionAssessments/SET_QUESTION_INDEX';
 
@@ -68,6 +69,7 @@ export const setAssessmentQuestions = (scriptId, assessments) =>
 export const startLoadingAssessments = () => ({ type: START_LOADING_ASSESSMENTS });
 export const finishLoadingAssessments = () => ({ type: FINISH_LOADING_ASSESSMENTS });
 export const setAssessmentId = (assessmentId) => ({ type: SET_ASSESSMENT_ID, assessmentId: assessmentId });
+export const setInitialAssessmentId = (scriptId) => ({ type: SET_INITIAL_ASSESSMENT_ID, scriptId: scriptId });
 export const setQuestionIndex = (questionIndex) => ({ type: SET_QUESTION_INDEX, questionIndex: questionIndex });
 export const setStudentId = (studentId) => ({ type: SET_STUDENT_ID, studentId: studentId });
 export const setSurveys = (scriptId, surveys) => ({ type: SET_SURVEYS, scriptId, surveys });
@@ -94,6 +96,7 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
       dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
       dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
       dispatch(setSurveys(scriptId, arrayOfValues[2]));
+      dispatch(setInitialAssessmentId(scriptId));
       dispatch(finishLoadingAssessments());
     }).catch((error) => {
       // If any return an error, the UI will show that there are no assessments.
@@ -126,6 +129,13 @@ export default function sectionAssessments(state=initialState, action) {
       assessmentId: action.assessmentId,
       questionIndex: 0,
       studentId: ALL_STUDENT_FILTER,
+    };
+  }
+  if (action.type === SET_INITIAL_ASSESSMENT_ID) {
+    const assessmentId = getFirstAssessmentId(state, action.scriptId);
+    return {
+      ...state,
+      assessmentId,
     };
   }
   if (action.type === SET_STUDENT_ID) {
@@ -189,25 +199,9 @@ export default function sectionAssessments(state=initialState, action) {
 
 // Returns an array of objects, each indicating an assessment name and it's id
 // for the assessments and surveys in the current script.
-export const getCurrentScriptAssessmentList = (state) => {
-  const assessmentStructure = state.sectionAssessments.assessmentQuestionsByScript[state.scriptSelection.scriptId] || {};
-  const assessments = Object.values(assessmentStructure).map(assessment => {
-    return {
-      id: assessment.id,
-      name: assessment.name,
-    };
-  });
-
-  const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
-  const surveys = Object.keys(surveysStructure).map(surveyId => {
-    return {
-      id: parseInt(surveyId),
-      name: surveysStructure[surveyId].stage_name,
-    };
-  });
-
-  return assessments.concat(surveys);
-};
+export const getCurrentScriptAssessmentList = (state) => (
+  computeScriptAssessmentList(state.sectionAssessments, state.scriptSelection.scriptId)
+);
 
 // Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentScript = (state) => {
@@ -493,7 +487,7 @@ export const isCurrentAssessmentSurvey = (state) => {
   const surveysStructure = state.sectionAssessments.surveysByScript[scriptId] || {};
 
   const currentAssessmentId = state.sectionAssessments.assessmentId;
-  return Object.keys(surveysStructure).includes(currentAssessmentId.toString());
+  return Object.keys(surveysStructure).includes(currentAssessmentId + '');
 };
 
 /** Get data for students assessments multiple choice table
@@ -769,6 +763,45 @@ export function indexesToAnswerString(answerArr) {
   }
   return answerArr.map(index => ANSWER_LETTERS[index]).join(', ');
 }
+
+/**
+ * Return the id of the first assessment or survey in the list.
+ *
+ * @param state {Object} the sectionAssessments branch of the redux state tree.
+ * @param scriptId
+ * @returns {number|undefined} The id of the first assessment or survey.
+ */
+const getFirstAssessmentId = (state, scriptId) => (
+  computeScriptAssessmentList(state, scriptId).map(a => a.id)[0]
+);
+
+/**
+ * Returns a list of ids and names of assessments and surveys.
+ *
+ * @param state {Object} the sectionAssessments branch of the redux state tree.
+ * @param scriptId {number|string}
+ * @returns {Array}
+ */
+const computeScriptAssessmentList = (state, scriptId) => {
+  const assessmentStructure = state.assessmentQuestionsByScript[scriptId] || {};
+  const assessments = Object.values(assessmentStructure).map(assessment => {
+    return {
+      id: assessment.id,
+      name: assessment.name,
+    };
+  });
+
+  const surveysStructure = state.surveysByScript[scriptId] || {};
+  const surveys = Object.keys(surveysStructure).map(surveyId => {
+    return {
+      id: parseInt(surveyId),
+      name: surveysStructure[surveyId].stage_name,
+    };
+  });
+
+  return assessments.concat(surveys);
+};
+
 
 // Requests to the server for assessment data
 

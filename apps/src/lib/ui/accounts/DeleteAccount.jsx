@@ -9,7 +9,7 @@ import {
 } from './DeleteAccountHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
-import PersonalLoginDialog from './PersonalLoginDialog';
+import PersonalLoginDialog, {dependentStudentsShape} from './PersonalLoginDialog';
 import DeleteAccountDialog from './DeleteAccountDialog';
 
 export const DELETE_VERIFICATION_STRING = i18n.deleteAccountDialog_verificationString();
@@ -44,26 +44,29 @@ const DEFAULT_STATE = {
   deleteError: '',
 };
 
+const dependedUponForLogin = ({isTeacher, hasStudents, dependentStudents}) => {
+  return isTeacher && hasStudents && (dependentStudents.length > 0);
+};
+
 export default class DeleteAccount extends React.Component {
   static propTypes = {
     isPasswordRequired: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    dependedUponForLogin: PropTypes.bool.isRequired,
+    dependentStudents: dependentStudentsShape,
     hasStudents: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
     super(props);
-    const checkboxes = getCheckboxes(props.dependedUponForLogin, props.hasStudents);
+    const checkboxes = getCheckboxes(dependedUponForLogin(props), props.hasStudents);
     this.state = {...DEFAULT_STATE, checkboxes};
   }
 
   componentDidUpdate = (prevProps) => {
-    // If dependedUponForLogin or hasStudents props have changed,
-    // checkboxes need to update accordingly.
-    const {dependedUponForLogin, hasStudents} = this.props;
-    if (dependedUponForLogin !== prevProps.dependedUponForLogin || hasStudents !== prevProps.hasStudents) {
-      const checkboxes = getCheckboxes(dependedUponForLogin, hasStudents);
+    // If dependedUponForLogin has changed, checkboxes need to update accordingly.
+    const isDependedUponForLogin = dependedUponForLogin(this.props);
+    if (isDependedUponForLogin !== dependedUponForLogin(prevProps)) {
+      const checkboxes = getCheckboxes(isDependedUponForLogin, this.props.hasStudents);
       this.setState({checkboxes});
     }
   };
@@ -155,7 +158,7 @@ export default class DeleteAccount extends React.Component {
   };
 
   render() {
-    const {isTeacher, dependedUponForLogin, isPasswordRequired} = this.props;
+    const {isTeacher, dependentStudents, isPasswordRequired} = this.props;
     const {
       isPersonalLoginDialogOpen,
       isDeleteAccountDialogOpen,
@@ -165,6 +168,7 @@ export default class DeleteAccount extends React.Component {
       deleteVerification,
       deleteError,
     } = this.state;
+    const isDependedUponForLogin = dependedUponForLogin(this.props);
 
     return (
       <div style={styles.container}>
@@ -180,11 +184,12 @@ export default class DeleteAccount extends React.Component {
           <BootstrapButton
             type="danger"
             text={i18n.deleteAccount()}
-            onClick={(isTeacher && dependedUponForLogin) ? this.togglePersonalLoginDialog : this.toggleDeleteAccountDialog}
+            onClick={isDependedUponForLogin ? this.togglePersonalLoginDialog : this.toggleDeleteAccountDialog}
           />
         </div>
         <PersonalLoginDialog
           isOpen={isPersonalLoginDialogOpen}
+          dependentStudents={dependentStudents}
           onCancel={this.togglePersonalLoginDialog}
           onConfirm={this.goToDeleteAccountDialog}
         />
@@ -192,7 +197,7 @@ export default class DeleteAccount extends React.Component {
           isOpen={isDeleteAccountDialogOpen}
           isTeacher={isTeacher}
           isPasswordRequired={isPasswordRequired}
-          warnAboutDeletingStudents={isTeacher && dependedUponForLogin}
+          warnAboutDeletingStudents={isDependedUponForLogin}
           checkboxes={checkboxes}
           password={password}
           passwordError={passwordError}

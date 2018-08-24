@@ -64,6 +64,7 @@ Feature: Using the teacher homepage sections feature
     And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
 
   Scenario: Assign a CSF course with multiple versions
+    Given I am on "http://studio.code.org/home"
     When I see the section set up box
     And I create a new section with course "Course A", version "2017"
     Then the section table should have 1 rows
@@ -72,7 +73,9 @@ Feature: Using the teacher homepage sections feature
     When I click selector ".ui-test-section-dropdown"
     And I click selector ".edit-section-details-link"
     And I wait until element "#assignment-version-year" is visible
-    And I select the "2018 (Recommended)" option in dropdown "assignment-version-year"
+    And element "#assignment-version-year" has value "2017"
+    And I click selector "#assignment-version-year"
+    And I click selector ".assignment-version-title:contains(2018)" once I see it
     And I press the first ".uitest-saveButton" element
     And I wait for the dialog to close
     Then I should see the section table
@@ -81,7 +84,7 @@ Feature: Using the teacher homepage sections feature
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'18-'19 (Recommended)" and unit "CSP Unit 1 - The Internet"
+    And I create a new section with course "Computer Science Principles", version "'18-'19" and unit "CSP Unit 1 - The Internet"
     Then the section table should have 1 rows
 
     # save the older section id, from the last row of the table

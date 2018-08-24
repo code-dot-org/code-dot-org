@@ -55,7 +55,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 ### [Do you teach elementary school? Learn more about our professional learning for grades K-5 here.](/educate/curriculum/elementary-school)
 
 ## Attendees love our professional learning!
-72,000 teachers have participated. 98% of attendees would recommend our program to another teacher. The majority of our workshop attendees rank it the **best professional development ever.**
+80,000 teachers have participated. 98% of attendees would recommend our program to another teacher. The majority of our workshop attendees rank it the **best professional development ever.**
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
