@@ -197,6 +197,9 @@ class SectionsAsStudentTable extends React.Component {
                 <a href={section.linkToAssigned} style={styles.link}>
                   {section.assignedTitle}
                 </a>
+                <p>Current unit:<br />
+                  <a href={section.linkToProgress} style={styles.link}>unit goes here</a>
+                </p>
               </td>
               {isTeacher && (
                 <td style={{...styles.col, ...styles.col3}}>
