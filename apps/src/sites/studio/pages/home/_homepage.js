@@ -13,7 +13,6 @@ import {
   setStageExtrasScriptIds,
   setAuthProviders,
   beginEditingNewSection,
-  setShowVersionMenu,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
@@ -35,7 +34,6 @@ function showHomepage() {
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
-  store.dispatch(setShowVersionMenu(true));
 
   let courseId;
   let scriptId;
