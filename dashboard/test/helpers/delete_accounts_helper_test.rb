@@ -798,6 +798,156 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_facilitator_program_registrations
+  #
+
+  test "clears form_data from pd_facilitator_program_registrations" do
+    teacher = create :teacher
+    registration = create :pd_facilitator_program_registration, user: teacher
+    refute_equal '{}', registration.form_data
+
+    purge_user registration.user
+
+    registration.reload
+    assert_equal '{}', registration.form_data
+  end
+
+  #
+  # Table: dashboard.pd_fit_weekend1819_registrations
+  # Associated with user via application
+  #
+
+  test "clears form_data from pd_fit_weekend1819_registrations" do
+    registration = create :pd_fit_weekend1819_registration
+    refute_equal '{}', registration.form_data
+
+    purge_user registration.pd_application.user
+
+    registration.reload
+    assert_equal '{}', registration.form_data
+  end
+
+  #
+  # Table: dashboard.pd_pre_workshop_surveys
+  # Associated with user via enrollment
+  #
+
+  test "clears form_data from pd_pre_workshop_surveys" do
+    Pd::Workshop.any_instance.stubs(:pre_survey_units_and_lessons).returns([])
+
+    enrollment = create :pd_enrollment, :from_user
+    survey = create :pd_pre_workshop_survey,
+      pd_enrollment: enrollment,
+      form_data_hash: {unit: Pd::PreWorkshopSurvey::UNIT_NOT_STARTED}
+    refute_equal '{}', survey.form_data
+
+    purge_user survey.pd_enrollment.user
+
+    survey.reload
+    assert_equal '{}', survey.form_data
+  end
+
+  #
+  # Table: dashboard.pd_regional_partner_program_registrations
+  #
+
+  test "clears form_data from pd_regional_partner_program_registrations" do
+    teacher = create :teacher
+    registration = create :pd_regional_partner_program_registration, user: teacher
+    refute_equal '{}', registration.form_data
+
+    purge_user registration.user
+
+    registration.reload
+    assert_equal '{}', registration.form_data
+  end
+
+  test "sets invalid teachercon from pd_regional_partner_program_registrations" do
+    teacher = create :teacher
+    registration = create :pd_regional_partner_program_registration, user: teacher
+    assert_includes 1..3, registration.teachercon
+
+    purge_user registration.user
+
+    registration.reload
+    assert_equal 0, registration.teachercon
+  end
+
+  #
+  # Table: dashboard.pd_teachercon1819_registrations
+  #
+
+  test "clears form_data from pd_teachercon1819_registrations" do
+    registration = create :pd_teachercon1819_registration
+    refute_equal '{}', registration.form_data
+
+    purge_user registration.user
+
+    registration.reload
+    assert_equal '{}', registration.form_data
+  end
+
+  test "clears user_id from pd_teachercon1819_registrations" do
+    registration = create :pd_teachercon1819_registration
+    refute_nil registration.user_id
+
+    purge_user registration.user
+
+    registration.reload
+    assert_nil registration.user_id
+  end
+
+  #
+  # Table: dashboard.pd_teachercon_surveys
+  #
+
+  test "clears form_data from pd_teachercon_surveys" do
+    enrollment = create :pd_enrollment, :from_user
+    survey = create :pd_teachercon_survey,
+      pd_enrollment: enrollment
+    refute_equal '{}', survey.form_data
+
+    purge_user survey.pd_enrollment.user
+
+    survey.reload
+    assert_equal '{}', survey.form_data
+  end
+
+  #
+  # Table: dashboard.pd_teacher_applications
+  #
+
+  test "clears primary_email from pd_teacher_applications" do
+    application = create :pd_teacher_application
+    refute_empty application.primary_email
+
+    purge_user application.user
+
+    application.reload
+    assert_empty application.primary_email
+  end
+
+  test "clears secondary_email from pd_teacher_applications" do
+    application = create :pd_teacher_application
+    refute_empty application.secondary_email
+
+    purge_user application.user
+
+    application.reload
+    assert_empty application.secondary_email
+  end
+
+  test "clears application from pd_teacher_applications" do
+    application = create :pd_teacher_application
+    refute_empty application.application
+
+    purge_user application.user
+
+    application.reload
+    assert_empty application.application
+  end
+
+  #
   # Table: dashboard.pd_attendances
   #
 
