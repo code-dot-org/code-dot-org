@@ -25,6 +25,13 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal @teacher.id, teacher_feedback.teacher_id
   end
 
+  test 'retrieves no content when no feedback is available' do
+    sign_in @teacher
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id}
+
+    assert_response :no_content
+  end
+
   test 'can be retrieved by teacher' do
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
     get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id}
@@ -106,6 +113,13 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_response :bad_request
   end
 
+  test 'empty array when no feedback available' do
+    sign_in @student
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
+
+    assert_equal [], parsed_response
+  end
+
   test 'bad request when student_id not provided - get_feedbacks' do
     teacher_sign_in_and_comment(@teacher, @student, @level, COMMENT1)
     get "#{API}/get_feedbacks", params: {level_id: @level.id}
@@ -171,6 +185,18 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
 
     assert_empty parsed_response
+  end
+
+  test 'serializer returns teacher name' do
+    @teacher1 = create :teacher, name: 'Test Name'
+    @section1 = create :section, user: @teacher1
+    @section1.add_student(@student)
+
+    teacher_sign_in_and_comment(@teacher1, @student, @level, COMMENT1)
+    sign_in @student
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id}
+
+    assert_equal 'Test Name', parsed_response[0]['teacher_name']
   end
 
   private

@@ -4,69 +4,36 @@ ga:
       Unplug1:
         title: Buntús na Ríomheolaíochta
         desc: Tá buneolas ar an ríomheolaíocht sa cheacht seo, agus míníonn sé na rudaí a dhéanann ríomheolaithe ina saol oibre. Tugann sé deis do na daltaí ról an ríomheolaí a ghlacadh freisin. Beidh cuimhneachán deas ag gach dalta ar an ábhar a d'fhoghlaim sé/sí fao i dheireadh na gníomhaíochta.  Seans nach bhfuil tú ag iarraidh an stór focal a bhaineann leis na ceachtanna seo a leanas a mhúineadh do pháistí óga, ach tá sé i bhfad níos tairbhí na focail a mhúineadh anois i gcomhthéacs sultmhar taitneamhach, in áit fanacht le deiseanna níos déanaí.
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: Smaointeoireacht Ríomhaireachtúil
         desc: Gan ach páipéar agus marcóirí, foghlaimeoidh na daltaí na ceithre chéim sa smaointeoireacht ríomhaireachtúil. Tar éis roinnt buneolais, beidh na daltaí roinnte ina ngrúpaí beaga, ansin caithfidh siad treoracha a chruthú faoin chaoi le harracht (ceann as catalóg réamhdhéanta) a tharraingt. Ní mór dóibh an tasc iomlán a mhiondealú, ansin déanfaidh an fhoireann anailís ar na harrachtaí go léir sa chatalóg, chun patrúin a aimsiú agus mionsonraí éagsúla i measc na n-arrachtaí a theibiú. Ansin, úsáidfidh an fhoireann an t-eolas sin chun algartam a chruthú, treoracha a úsáidfidh foireann eile chun an t-arracht a tharraingt. Ansin, malartóidh gach foireann a halgartam le foireann eile, agus déanfaidh siad iarracht an t-arracht sin a tharraingt, bunaithe ar an algartam amháin. An bhfuil an pictiúr ar aon dul le hintinn na foirne a chruthaigh an t-algartam?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: Ríomhchlárú ar Ghrafpháipéar
         desc: Sa cheacht seo, "ríomhchláraíonn" na daltaí a chéile le pictiúir a tharraingt, agus sa chaoi seo gheobhaidh siad tuiscint níos fearr ar an ríomhchlárú.  I dtús báire, tugann na daltaí treoracha dá chéile faoi phatrún cearnóg ar ghrafpháipéar, in iarracht ar phictiúr réamhshocraithe a atáirgeadh. Má tá go leor ama ag an rang, is féidir leis na daltaí a bpictiúir féin a dhéanamh freisin.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: Algartaim
         desc: Clúdaíonn an ceacht seo algartaim. Ag baint úsáide as tangraim agus grafpháipéar, taispeánann an chéad chuid den cheacht an tábhacht a bhaineann le treoracha soiléire. Tar éis sin, déanfaidh an rang staidéar ar cé mhéad bealach ar féidir píosa páipéir a fhilleadh ina dhronuilleog, ag tabhairt faoi deara gur gá níos mó fillteacha a dhéanamh le modhanna áirithe ná le modhanna eile.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: Feidhmeanna
         desc: Sa cheacht seo, déanfaidh na daltaí móibílí gréine as sreangáin, coirníní, agus briocht speisialta. Leanfaidh na daltaí sraith céimeanna timthriallacha, ansin iarrfar orthu "scileanna" atá déanta arís is arís eile a aithint. Nuair a bheidh na scileanna sin sainithe acu, bainfear úsáid astu ó phríomhchlár agus beidh an próiseas iomlán taifeadta ar leathanach páipéir amháin. Beidh an clár deiridh dírithe ar an rang iomlán, is cuma cén sórt sreangáin, coirníní, nó briochtaí atá acu. Chun é seo a dhéanamh go héifeachtach, caithfidh na daltaí mionsonraithe an ábhair atá acu a "theibiú", agus téarmaí éiginnte a cheapadh do na hacmhainní éagsúla. Is bealach iontach é seo buneolas ar athróga a thabhairt do na daltaí.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: Coinníollacha
         desc: Cluiche don rang iomlán é seo. Tar éis roinnt réamheolais ar ráitis choinníollacha, ráitis "má", agus lúba, déanann an rang cleachtadh le chéile, ag baint úsáide as ríomhchlár réamhdhéanta, deic cártaí, agus an t-ádh!
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: Cumadh Ceoil
         desc: Is minic a léann daoine óga liricí na n-amhrán a thaitníonn leo. Bainfimid tairbhe as an ngníomhaíocht choitianta seo chun buneolas faoi fheidhmeanna a mhúineadh do na daltaí. Tar éis do na daltaí dul i dtaithí ar an bpróiseas sainmhínithe/glaoite, cuirfimid cumas breise le feidhmeanna trí pharaiméadair a thabhairt dóibh.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: Teibíocht
         desc: Cuireann an ceacht seo an gnáthamh laethúil atá ag na daltaí le chéile le cluiche cosúil le Mad Libs, chun cabhrú leo foghlaim faoi cé chomh héifeachtach atá an teibiú.
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
-        title: Códáil Sealaíochta
+        title: Códáil sealaíochta
         desc: 'Glacann an ceacht seo smaoineamh ó ghníomhaíocht roimhe seo (4. Ríomhchlárú ar Ghrafpháipéar), agus úsáideann sé na scileanna sin chun béim a chur ar chúpla bunphrionsabal tábhachtach: ríomhchláir a scríobh a fheidhmíonn de réir oird, agus iad a sheiceáil le haghaidh "fabhtanna" go minic.'
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: An tIdirlíon
         desc: Sa cheacht seo, ligfidh na daltaí orthú féin go bhfuil siad ag sreabhadh tríd an Idirlíon, ag foghlaim san am céanna faoi sheoltaí Gréasáin, faoi sheoltaí IP, agus faoin Chóras Ainmneacha Fearainn (DNS).
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: Clabhsúr
         desc: Cuireann an ceacht seo clabhsúr leis an chéad sraith 20 uair an chloig. Tabharfaidh na daltaí na buaicphointí chun cuimhne, agus foghlaimeoidh siad faoi na chéad chéimeanna eile atá ar fáil dóibh más mian leo leanúint leis an ríomheolaíocht as a stuaim féin.
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Mapaí Meidhreacha
         desc: Cruthóidh na daltaí algartaim shimplí (treoracha) chun carachtar a threorú trí chathair ghríobháin le hordú amháin.
@@ -147,46 +114,26 @@ ga:
         desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap sin mar a thaispeánann sé an chaoi a stórálann an ríomhaire faisnéis níos casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.
       VideoGamesCoordinatePlanes:
         title: Físchluichí agus Plánaí Comhordanáidí
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
       Contracts:
         title: Conarthaí, Fearann, agus Raon
-        desc: Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function.
       DesignRecipe:
         title: Oideas Dearaidh
-        desc: In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.
       Booleans:
         title: Athróga Boole agus Loighic
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
       ConditionalsPiecewiseFunctions:
         title: Coinníollacha agus Feidhmeanna Breacleanúnacha
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
       CollisionDetection:
         title: Aimsiú Imbhuailte agus an teoirim Phíotagarásach
-        desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Gníomhaíocht Dhíphlugáilte
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Gníomhaíocht Dhíphlugáilte
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Gníomhaíocht Dhíphlugáilte
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Gníomhaíocht Dhíphlugáilte
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Gníomhaíocht Dhíphlugáilte
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algartaim Fhíorshaoil: Síol a Chur'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil, ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
@@ -218,7 +165,7 @@ ga:
         title: Ríomhchlárú ar Ghrafpháipéar
         desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a atáirgeadh.
       courseD_unplugged_relayProgramming:
-        title: Códáil Sealaíochta
+        title: Códáil sealaíochta
         desc: Glacfaidh na daltaí páirt i rás sealaíochta, ag rith trasna na páirce chun algartam a scríobh, bunaithe ar Ríomhchlárú ar Ghrafpháipéar. Ní féidir leo ach treoir amháin a scríobh sa turas, agus má tá botún ann, caithfidh siad gach rud a scriosadh agus tosú ón bpointe sin.
       courseD_unplugged_conditionalsCards:
         title: Coinníollacha le Cártaí
@@ -227,7 +174,6 @@ ga:
         title: Íomhánna Dénártha
         desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap sin mar a thaispeánann sé an chaoi a stórálann an ríomhaire faisnéis níos casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil. Mar chuid den cheacht seo, aithneoidh agus scríobhfaidh na daltaí an t-algartam taobh thiar de chluiche díslí.
       courseE_unplugged_songwritingParameters:
         title: Ceapadh Ceoil le Paraiméadair
@@ -253,54 +199,8 @@ ga:
       courseF_unplugged_songwritingParameters:
         title: Ceapadh Ceoil le Paraiméadair
         desc: 'Ceann de na struchtúir is iontaí sa ríomheolaíocht é an fheidhm. Is éard atá ann ná píosa cóid beag is féidir a úsáid arís is arís eile mar chuid de ríomhchlár níos mó. Tar éis an cheacht seo, tuigfidh na daltaí an fáth a bhfuil feidhmeanna chomh háisiúil.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Mo Chairde Róbatacha
       PlantASeed_2018:
         title: 'Algartaim Fhíorshaoil: Síol a Chur'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil, ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
@@ -310,9 +210,6 @@ ga:
       GoingPlacesSafely_2018:
         title: Ag Taisteal Slán Sábháilte
         desc: Tá an tIdirlíon cumhachtach, ach uaireanta contúirteach freisin. Foghlaimeoidh na daltaí conas is féidir fanacht slán sábháilte ar an Idirlíon.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: An Teagmhas Mór
         desc: Foghlaimeoidh na daltaí faoi "teagmhais" sa ríomhchlárú, gníomhartha a ndéanann an ríomhaire monatóireacht leanúnach orthu. Brúfaidh an múinteoir cnaipí ar chianrialtán páipéir, agus freagróidh na daltaí, ag brath ar an gcnaipe a bhí brúite.
@@ -321,10 +218,8 @@ ga:
         desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a atáirgeadh.
       courseD_unplugged_digitalCitizenship_2018:
         title: Gníomhaíocht Dhíphlugáilte
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Gníomhaíocht Dhíphlugáilte
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
         title: Coinníollacha
         desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."
@@ -345,13 +240,5 @@ ga:
         desc: Déanfaidh gach dalta bráisléad mar léiriú dénártha ar an chéad litir ina (h)ainm. Foghlaimeoidh na daltaí gur féidir sonraí a stóráil agus a léiriú ar níos mó ná bealach amháin.
       MoveItMoveIt_2018:
         title: Bog é, Bog é
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
-        title: Códáil Sealaíochta
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+        title: Códáil sealaíochta

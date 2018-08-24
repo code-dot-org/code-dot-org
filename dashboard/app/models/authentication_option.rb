@@ -26,8 +26,13 @@ class AuthenticationOption < ApplicationRecord
   belongs_to :user
 
   # These are duplicated from the user model, until we're ready to cut over and remove them from there
-  before_save :normalize_email, :hash_email, :remove_student_cleartext_email,
-    :fill_authentication_id
+  before_validation :normalize_email, :hash_email,
+    :remove_student_cleartext_email, :fill_authentication_id
+
+  after_create :set_primary_contact_info
+
+  validate :email_must_be_unique
+  validate :hashed_email_must_be_unique
 
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
@@ -45,6 +50,12 @@ class AuthenticationOption < ApplicationRecord
     OAUTH_CREDENTIAL_TYPES,
   ].flatten
 
+  SILENT_TAKEOVER_CREDENTIAL_TYPES = [
+    FACEBOOK,
+    GOOGLE,
+    WINDOWS_LIVE
+  ]
+
   def oauth?
     OAUTH_CREDENTIAL_TYPES.include? credential_type
   end
@@ -55,6 +66,10 @@ class AuthenticationOption < ApplicationRecord
 
   def fill_authentication_id
     self.authentication_id = hashed_email if EMAIL == credential_type
+  end
+
+  def set_primary_contact_info
+    user.update(primary_contact_info: self) if user.primary_contact_info.nil?
   end
 
   def normalize_email
@@ -69,5 +84,43 @@ class AuthenticationOption < ApplicationRecord
   def hash_email
     return unless email.present?
     self.hashed_email = AuthenticationOption.hash_email(email)
+  end
+
+  def data_hash
+    column_value = read_attribute(:data)
+    if column_value
+      JSON.parse(column_value).symbolize_keys
+    else
+      {}
+    end
+  end
+
+  def summarize
+    {
+      id: id,
+      credential_type: credential_type,
+      email: email,
+      hashed_email: hashed_email
+    }
+  end
+
+  private def email_must_be_unique
+    # skip the db lookup if possible
+    return unless email_changed? && email.present? && errors.blank?
+
+    other = User.find_by_email_or_hashed_email(email)
+    if other && other != user
+      errors.add :email, I18n.t('errors.messages.taken')
+    end
+  end
+
+  private def hashed_email_must_be_unique
+    # skip the db lookup if possible
+    return unless hashed_email_changed? && hashed_email.present? && errors.blank?
+
+    other = User.find_by_hashed_email(hashed_email)
+    if other && other != user
+      errors.add :email, I18n.t('errors.messages.taken')
+    end
   end
 end

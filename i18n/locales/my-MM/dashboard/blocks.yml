@@ -1,0 +1,30 @@
+my:
+  data:
+    blocks:
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_randomColor:
+        text: ကျဘန်းအရောင်
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'true'
+            'false': 'false'
+      gamelab_randColor:
+        text: ကျဘန်းအရောင်
+      gamelab_randomColor:
+        text: ကျဘန်းအရောင်
+      Vanilla_randomColor:
+        text: ကျဘန်းအရောင်

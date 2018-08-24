@@ -5,6 +5,7 @@ import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import Firebase from 'firebase';
 import MockFirebase from '../../util/MockFirebase';
+import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
@@ -113,7 +114,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
-  loadApp({
+  const options = {
     app,
     skinId: skinId,
     level: level,
@@ -172,7 +173,17 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
       // waitLong();
     },
     onAttempt: onAttempt
-  });
+  };
+
+  loadApp(options);
+
+  if (level.sharedBlocks) {
+    installCustomBlocks({
+      blockly: Blockly,
+      blockDefinitions: level.sharedBlocks,
+      customInputTypes: options.blocksModule.customInputTypes,
+    });
+  }
 }
 
 function setAppSpecificGlobals(app) {

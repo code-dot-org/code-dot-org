@@ -1,16 +1,13 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
-module OPS
-  API = 'api'.freeze unless defined? API
-  DASHBOARDAPI = 'dashboardapi'.freeze unless defined? DASHBOARDAPI
-end
-
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
 
   resources :user_levels, only: [:update, :destroy]
+
+  patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
   get '/download/:product', to: 'hoc_download#index'
 
@@ -143,6 +140,11 @@ Dashboard::Application.routes.draw do
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/clever_takeover', to: 'sessions#clever_takeover'
     get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
+    get '/users/auth/:provider/connect', to: 'authentication_options#connect'
+    delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
+    get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
+    get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
+    get '/users/to_destroy', to: 'registrations#users_to_destroy'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -206,8 +208,8 @@ Dashboard::Application.routes.draw do
   get '*i18npath/lang/:locale', to: 'home#set_locale'
 
   resources :blocks, constraints: {id: /[^\/]+/}
-
   resources :shared_blockly_functions, path: '/functions'
+  resources :libraries
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
@@ -352,44 +354,6 @@ Dashboard::Application.routes.draw do
   get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
   resources :peer_reviews
 
-  concern :ops_routes do
-    # /ops/district/:id
-    resources :districts do
-      member do
-        get 'teachers'
-      end
-    end
-    resources :cohorts do
-      member do
-        get 'teachers'
-        delete 'teachers/:teacher_id', action: 'destroy_teacher'
-      end
-    end
-    resources :workshops do
-      resources :segments, shallow: true do # See http://guides.rubyonrails.org/routing.html#shallow-nesting
-        resources :workshop_attendance, path: '/attendance', shallow: true do
-        end
-      end
-      member do
-        get 'teachers'
-      end
-    end
-
-    get 'attendance/download/:workshop_id', action: 'attendance', controller: 'workshop_attendance'
-    get 'attendance/teacher/:teacher_id', action: 'teacher', controller: 'workshop_attendance'
-    get 'attendance/cohort/:cohort_id', action: 'cohort', controller: 'workshop_attendance'
-    get 'attendance/workshop/:workshop_id', action: 'workshop', controller: 'workshop_attendance'
-    post 'segments/:segment_id/attendance/batch', action: 'batch', controller: 'workshop_attendance'
-  end
-
-  namespace :ops, path: ::OPS::API, shallow_path: ::OPS::API do
-    concerns :ops_routes
-  end
-
-  namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
-    concerns :ops_routes
-  end
-
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
   get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
 
@@ -430,6 +394,7 @@ Dashboard::Application.routes.draw do
       resources :course_facilitators, only: :index
       resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+      delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
@@ -447,6 +412,7 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+      post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
 
@@ -486,8 +452,10 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
+    post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
@@ -544,6 +512,9 @@ Dashboard::Application.routes.draw do
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
 
+    get 'international_workshop', to: 'international_opt_in#new'
+    get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
+
     # React-router will handle sub-routes on the client.
     get 'application_dashboard/*path', to: 'application_dashboard#index'
     get 'application_dashboard', to: 'application_dashboard#index'
@@ -551,9 +522,6 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
-  # Used in angular assessments tab
-  get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
-  get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes
@@ -611,6 +579,8 @@ Dashboard::Application.routes.draw do
       get 'regional_partners/capacity', to: 'regional_partners#capacity'
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+
+      get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

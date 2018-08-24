@@ -1,0 +1,9 @@
+{
+  "category": "",
+  "config": {
+    "expression": "mouseDown('leftButton')",
+    "name": "mouseDown",
+    "blockText": "mouse is down",
+    "returnType": "Boolean"
+  }
+}

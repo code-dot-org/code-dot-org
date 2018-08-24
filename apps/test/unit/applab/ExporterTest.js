@@ -378,6 +378,22 @@ describe('The Exporter,', function () {
           );
         });
 
+        it("should have added the appModernDesign class to the elements", () => {
+          assert.equal(
+            el.querySelector("#clickMeButton").className,
+            'appModernDesign',
+            'appModernDesign className should be set on elements'
+          );
+        });
+
+        it("should have added the appModernDesign class to the screen", () => {
+          assert.equal(
+            el.querySelector("#screen1").className,
+            'screen appModernDesign',
+            'appModernDesign className should be set on screen'
+          );
+        });
+
         it("should have removed all style attributes from the elements", () => {
           assert.isNull(
             el.querySelector("#clickMeButton").getAttribute('style'),
@@ -400,6 +416,17 @@ describe('The Exporter,', function () {
 
       it("should contain a style.css file", function () {
         assert.property(zipFiles, 'my-app/style.css');
+      });
+
+      it("style.css should contain appModernDesign classes for design mode elements", () => {
+        assert.include(
+          zipFiles['my-app/style.css'],
+          '#divApplab.appModern button.appModernDesign,\n' +
+          '#divApplab.appModern button.appModernDesign:hover {\n'
+        );
+      });
+
+      it("style.css should contain id specific styles for design mode elements", () => {
         assert.include(
           zipFiles['my-app/style.css'],
           '#divApplab.appModern #clickMeButton {\n' +
@@ -565,6 +592,22 @@ describe('The Exporter,', function () {
           );
         });
 
+        it("should have added the appModernDesign class to the elements", () => {
+          assert.equal(
+            el.querySelector("#clickMeButton").className,
+            'appModernDesign',
+            'appModernDesign className should be set on elements'
+          );
+        });
+
+        it("should have added the appModernDesign class to the screen", () => {
+          assert.equal(
+            el.querySelector("#screen1").className,
+            'screen appModernDesign',
+            'appModernDesign className should be set on screen'
+          );
+        });
+
         it("should have removed all style attributes from the elements", () => {
           assert.isNull(
             el.querySelector("#clickMeButton").getAttribute('style'),
@@ -587,6 +630,17 @@ describe('The Exporter,', function () {
 
       it("should contain a style.css file", function () {
         assert.property(zipFiles, 'my-app/assets/style.css');
+      });
+
+      it("style.css should contain appModernDesign classes for design mode elements", () => {
+        assert.include(
+          zipFiles['my-app/assets/style.css'],
+          '#divApplab.appModern button.appModernDesign,\n' +
+          '#divApplab.appModern button.appModernDesign:hover {\n'
+        );
+      });
+
+      it("style.css should contain id specific styles for design mode elements", () => {
         assert.include(
           zipFiles['my-app/assets/style.css'],
           '#divApplab.appModern #clickMeButton {\n' +

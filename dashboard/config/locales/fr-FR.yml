@@ -29,7 +29,7 @@ fr:
         personal_email: Email personnel <a href="%{url}">(click here if you don't
           have an email address)</a>
         username: nom d'utilisateur
-        password: mot de passe
+        password: Mot de passe
         password_confirmation: Confirmation du mot de passe
         current_password: Mot de passe actuel
         locale: Langue
@@ -47,7 +47,6 @@ fr:
   previous_page: Page précédente
   next_page: Page suivante
   next_resource: Ressource suivante
-  done_with_module: Done with this Learning Module
   cancel: Annuler
   okay: OK
   heading_x_of_y: "%{heading} (page %{x} sur %{y})"
@@ -99,13 +98,15 @@ fr:
     windowslive: Compte Microsoft
     clever: Compte Clever
     powerschool: Compte Powerschool
-    forgot_password: Mot de passe oublié?
+    forgot_password: Mot de passe oublié ?
     need_confirmation: Pas reçu les instructions de confirmation ?
     need_unlock: Pas reçu les instructions de déverrouillage?
     not_linked: Désolé, ton compte Code.org n'est pas lié à ton %{provider}. Tu dois
       t'identifier en tapant ton mot de passe ci-dessous.
     use_clever: Désolé, votre compte Code.org n'est pas lié à votre %{provider}. Veuillez-vous
       connecter avec votre compte Clever.
+    unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
+      %{provider}. Veuillez réessayer s'il vous plaît.
   signup_form:
     student_count: "%{count} élèves se sont déjà inscrits."
     teacher_count: "%{count} enseignants se sont déjà inscrits."
@@ -168,7 +169,7 @@ fr:
       pour continuer l’inscription.
     user_type_button: Mise à jour du type de compte
     user_type_label: Type de compte
-    user_type_teacher: Enseignant
+    user_type_teacher: Professeur
     user_type_student: Élève
     field_is_required: est obligatoire
     accept_terms: Vous devez accepter les conditions d'utilisation pour créer un compte
@@ -189,7 +190,7 @@ fr:
     public: Public
     homeschool: École à domicile
     after_school: Après l’école
-    other: Autres
+    other: Autre
     state: État
     district: Quartier
     other_district_not_listed: Autre quartier, non listé ci-dessus
@@ -368,10 +369,10 @@ fr:
       classroom: Page d'accueil de l'enseignant
       district_dashboard: Tableau de bord du district
       label: Bonjour %{username}
-      stats: Ma progression
+      stats: Code Studio
       settings: Mon compte
       logout: Déconnexion
-      signin: Authentification
+      signin: Connexion
       signup: Créer un compte
       already_registered: Déjà enregistré ?
       pair_programming: Programmation en Binôme
@@ -422,7 +423,8 @@ fr:
       :'
     email_confirm_wrong_email: "(Adresse e-mail invalide ?)"
     email_resend_confirm: Renvoyer les instructions de confirmation
-    new_email_hint: "(make sure you can receive emails to this email address)"
+    new_email_hint: "(veuillez vous assurer que vous pouvez recevoir des courriers
+      à cette adresse email)"
     new_password_hint: "(laisser vide si rien n’est à changer)"
     current_password_hint: "(nous avons besoin de votre mot de passe pour confirmer
       les modifications)"
@@ -459,6 +461,7 @@ fr:
     enter_parent_email: Entrez l'adresse e-mail de vos parents ou de votre tuteur
       (pour la récupération de mot de passe)
     update: Mise à jour du compte
+    account_successfully_updated: Compte actualisé avec succès.
   user_level:
     completed: Terminé
     tried: A essayé
@@ -481,8 +484,8 @@ fr:
     teacher_averages: En moyenne, vos élèves ont gagné  %{trophy_average} sur %{trophy_max}
       trophées «Maîtrise du Concept».
     teacher_print_certificates: Imprimer les certificats pour les élèves ayant terminé
-      ce cours.
-    teacher_read_blog: Lisez l'actualité et les mises à jour de nos matériels sur
+      ce cours
+    teacher_read_blog: Lisez l'actualité et les mises à jour de notre matériel sur
       notre Blog Enseignant
     classroom: Votre classe
     student_progress: Les progrès d’apprentissage
@@ -602,19 +605,25 @@ fr:
       Instagram ou Facebook en disant « Je passe l’examen #APCSP parce que... » Les
       meilleures propositions seront présentées dans notre vidéo et les étudiants
       gagnants recevront Code.org swag !"
-    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
-      you a gift</a>. Students can also encourage peers across the country in our
-      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
-    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
-      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
-      video</a> so your students can hear from their peers around the country who
-      are taking the exam.
+    announcement_apcsp_recruitment2: Cette année, l'examen pour le cours avancé sur
+      les principes des sciences informatiques est prêt à battre tous les records.
+      La participation des étudiants à celui-là pourrait drastiquement modifier la
+      diversité des cours avancés en sciences informatiques, mais nous avons besoin
+      de votre aide. Encouragez tous les étudiants du cours sur les Principes des
+      sciences informatiques à prendre l'examen du cours avancé et nous vous enverrons
+      <a href='%{gift_url}' target='_blank'>un cadeau</a>. Les étudiants peuvent également
+      encourager leurs pairs à travers le pays gràace à notre <a href='%{challenge_url}'
+      target='_blank'>#APCSP défi vidéo</a>.
+    announcement_apcsp_recruitment3: Cette année, l'examen pour le cours avancé sur
+      les principes des sciences informatiques est prêt à battre tous les records.
+      La participation des étudiants à celui-là pourrait drastiquement modifier la
+      diversité des cours avancés en sciences informatiques, mais nous avons besoin
+      de votre aide. Encouragez tous les étudiants du cours sur les Principes des
+      sciences informatiques à prendre l'examen du cours avancé et vous pourriez gagner
+      <a href='%{gift_url}' target='_blank'>a une carte cadeau, un ordinateur portable
+      et d'autres prix sympas</a>!  Partagé <a href='%{video_url}' target='_blank'>cette
+      vidéo</a> pour que vos étudiants entendent parler de ceux qui choisissent cet
+      examen.
     announcement_csp_deadline: Dernier appel pour les enseignants du lycée ! Menez
       l'enseignement de l’informatique dans votre école et demandez à participer à
       nos programmes d'enseignement de haute qualité <strong>absolument sans aucun
@@ -659,9 +668,8 @@ fr:
     try_hour_of_code: Essaie une Heure du Code !
   gender:
     male: Masculin
-    female: Femme
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
+    female: Féminin
+    non_binary: Non binaire
     none: Préfère ne pas répondre
   user_type:
     student: Élève
@@ -818,7 +826,7 @@ fr:
       body: Regarde une galerie des applications et des images d'artistes créées par
         nos utilisateurs.
     gamelab:
-      title: Game Lab (beta)
+      title: Game Lab
       body: Game Lab est un environnement de programmation où vous pouvez créer des
         animations simples et des jeux avec des objets et des personnages qui interagissent
         entre eux.
@@ -848,8 +856,8 @@ fr:
       body: Explore un monde Minecraft à travers son code.
     minecraft2016:
       title: Minecraft
-      body: Programmez des animaux et d'autres créatures Minecraft dans votre propre
-        version de Minecraft.
+      body: Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons,
+        des creepers, des zombies et bien d'autres encore.
     hero:
       title: Minecraft
       body: Minecraft est de retour dans l'Heure de Code avec une toute nouvelle activité!
@@ -858,7 +866,6 @@ fr:
       title: Sports
       body: Créer un jeu de basket ou un mélange avec d'autres sports.
     text-compression:
-      title: Text Compression
       body: Dans cette leçon, les élèves utiliseront le Widget de Compression de texte
         pour compresser le texte en remplaçant des schémas par des symboles.
     unplugged:
@@ -921,10 +928,10 @@ fr:
   multi:
     wrong_title: Réponse incorrecte
     wrong_body: La réponse que tu as saisie est incorrecte.  Merci de réessayer !
-    correct_title: Correcte
+    correct_title: Correct
     correct_body: C'est la bonne réponse.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    toofew_title: Trop peu de réponses.
+    toofew_body: S’il vous plaît sélectionnez deux réponses avant d'envoyer.
   multi-submittable:
     wrong_title: Merci
     wrong_body: Merci d'avoir envoyé une réponse.
@@ -951,7 +958,7 @@ fr:
     unsubmit-title: Retirer ton évaluation
     unsubmit-body: Retirer ton évaluation va réinitialiser l'heure et la date d'envoi.
       Es-tu sûr ?
-    submit-incomplete-title: Envoyer ton évaluation
+    submit-incomplete-title: Envoyer une évaluation
     submit-incomplete-body: Tu as laissé quelques questions sans réponse. Tu ne pourras
       plus modifier ton évaluation après l'avoir envoyée. Es-tu sûr ?
     submit-complete-title: Envoyer une évaluation
@@ -976,7 +983,7 @@ fr:
     placeholder: Entre ta réponse ici
     open_response_title: Merci
     open_response_body: Merci pour ta réponse !
-    correct_title: Correcte
+    correct_title: Correct
     correct_body: C'est la bonne réponse.
   dialog:
     ok: OK
@@ -1038,14 +1045,14 @@ fr:
       de la diversité en informatique'
     message: Veuillez nous dire votre ethnicité (plusieurs choix possibles)
     races:
-    - white: Blanc
-    - black: Noir ou afro-américain
-    - hispanic: Hispanique ou latino
-    - asian: Asiatique
-    - hawaiian: Hawaïen indigène ou autres îles du Pacifique
-    - american_indian: Indien d'Amérique ou Alaska
-    - other: Autres
-    - opt_out: Préfère ne pas le dire
+      white: Blanc
+      black: Noir ou afro-américain
+      hispanic: Hispanique ou latino
+      asian: Asiatique
+      hawaiian: Hawaïen indigène ou autres îles du Pacifique
+      american_indian: Indien d'Amérique ou Alaska
+      other: Autre
+      opt_out: Préfère ne pas le dire
     submit: Envoyer
     decline: Fermer
   zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas accéder
@@ -1155,7 +1162,7 @@ fr:
           harassment: Menaces, cyber-intimidation, harcèlement
           offensive: Contenu offensant
           infringement: Violation du droit d'auteur
-          other: Autres
+          other: Autre
         detail: Merci de fournir autant de détails que possible au sujet du contenu
           que tu signales.
         acknowledge: En envoyant ces informations, tu reconnais qu'elles seront traitées
@@ -1177,23 +1184,12 @@ fr:
     instructor_feedback: Commentaires de l’instructeur
     peer_feedback: Commentaire par les pairs
     outdated: Ce commentaire a été émis pour une version précédente
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Aperçu
     content: Contenu
     practice: Pratiques de l’enseignant
     peer_review: Commentaire par un pair
     ramp_up: Progression
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Cours Principal
     extra_course_content: Contenu de Cours Supplémentaire
     csf_e_1: Progression jusqu'au cours E (facultatif)
@@ -1212,7 +1208,7 @@ fr:
     csd5_2: 'Chapitre 2 : Résoudre des problèmes avec des données'
     csd6_1: 'Chapitre 1 : Matériel pour la sortie des données'
     csd6_2: 'Chapitre 2 : Matériel pour l''entrée des données'
-    csd_survey: Post-Course Survey
+    csd_survey: Suivi d'après cours
     csp1_1: 'Chapitre 1: Représentation et transmission de l''information'
     csp1_2: 'Chapitre 2: Créer l''Internet'
     csp2_1: 'Chapitre 1: Représentation et compression de données complexes'
@@ -1223,15 +1219,13 @@ fr:
     csp5_2: 'Chapitre 2 : Programmation avec des structures de données'
     cspSurvey: Sondage
     cspAssessment: Chapitre d'évaluation
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
+    csp_ap_1: 'Chapitre 1 : cours avancé Configuration Technique'
+    csp_ap_2: 'Chapitre 2 : cours avancé Explorer l''Evaluation des Connaissances'
+    csp_ap_3: 'Chapitre 3 : cours avancé Créer une Evaluation des Connaissances'
+    csp_postap_1: 'Chapitre1 : Manipulation et visualisation des données'
+    csp_postap_2: 'Chapitre 2 : Application et bases de données'
     csp2_1_2018: 'Unité 2: L’Information numérique'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
-    dlp: Reflection Prompts
+    csp3_1_2018: 'Unité 3 : Introduction à la programmation'
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas
@@ -1304,19 +1298,10 @@ fr:
     download_in_Vietnamese: 'Télécharger en Vietnamien:'
     windows: Windows (64 bits)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
+  stage_extras_teacher_message: Les leçons supplémentaires sont désactivées pour certains
+    de vos espaces. Vos étudiants ne verront pas cette page à moins de les réactiver.
+    Vous pouvez le faire en visitant votre <a href='http://code.org/teacher-dashboard'>Teacher
+    Dashboard</a>.
   locked_stage: Les contenus ne sont pas visibles car cette étape est verrouillée
     pour l'instant. Ton professeur la déverrouillera lorsqu'il sera temps de travailler
     dessus ou pour consulter tes réponses.
@@ -1328,64 +1313,47 @@ fr:
   return_course_overview: Accéder à la vue d'ensemble de l'unité
   view_all_units: Voir toutes les unités
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
+    form_labels:
+      first_name: Prénom
+      first_name_preferred: Prénom préféré
+      last_name: Nom
+      email: E-mail
+      email_alternate: Autre email
+      gender: Sexe
+      school_name: Nom de l'école
+      school_city: Ville de l’école
+      school_country: Pays de l’école
+      ages: Quel est l'âge de vos étudiants cette année ?
+      subjects: Quel(s) matière(s) enseignez-vous cette année ?
+    form_entries:
+      gender:
+        male: Masculin
+        female: Féminin
+        non_binary: Non binaire
+        none: Préfère ne pas répondre
+      subjects:
+        cs: Informatique/Sciences informatiques
+        math: Math
+        science: Sciences
+        la: Langues
+      resources:
+        kodable: Kodable
+      robotics:
+        kodable: Kodable
+      workshop_course:
+        csd: Découvertes de l'informatique
+        csp: Principes de CS 16-17
+      email_opt_in:
+        opt_in_yes: Oui
+        opt_in_no: Non
   courses_category: Cours complets
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
     accept: J'accepte
   gdpr_dialog:
     heading: Etes-vous d'accord pour utiliser un site internet situé aux Etats-Unis
       ?
-    message: Vos données de connexion sur ce site peuvent être envoyées et stockées
-      ou traitées aux Etats-Unis.
+    message: Des informations sur votre utilisation de ce site peuvent être envoyées
+      et enregistrées ou traitées aux États-Unis.
     link_intro: Pour plus de détails consultez notre
     privacy_policy: politique de confidentialité
     logout: Déconnexion

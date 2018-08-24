@@ -1,0 +1,189 @@
+fi:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: kaikki
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      Dancelab_randomColor:
+        text: satunnainen väri
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'tosi'
+            'false': 'epätosi'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": satunnainen
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      gamelab_randColor:
+        text: satunnainen väri
+      gamelab_randomColor:
+        text: satunnainen väri
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': satunnainen
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ylös
+            "'down'": alas
+            "'left'": vasemmalle
+            "'right'": oikealle
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      Vanilla_randomColor:
+        text: satunnainen väri

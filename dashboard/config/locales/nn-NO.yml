@@ -46,7 +46,6 @@ nn:
   previous_page: Forrige side
   next_page: Neste side
   next_resource: Neste ressurs
-  done_with_module: Done with this Learning Module
   cancel: Avbryt
   okay: OK
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
@@ -96,7 +95,6 @@ nn:
     facebook: Facebook
     windowslive: Microsoft-konto
     clever: Smartkonto
-    powerschool: Powerschool Account
     forgot_password: Har du gløymt passordet ditt?
     need_confirmation: Har du ikkje motteke instruksjonar om korleis du stadfester?
     need_unlock: Har du ikkje motteke instruksjonar om korleis du låser opp?
@@ -139,8 +137,6 @@ nn:
     valid_password: Gyldig passord!
     invalid_password: Passordet må ha minst seks teikn
     mismatch_password: Dei to passorda du skreiv inn er ikkje like
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
     under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine
       foreldre eller verge til å bruke tjenestene til Code.org.
     agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
@@ -156,7 +152,6 @@ nn:
       for personvern</a> for meir informasjon om personvern.
     additional_information: Vi treng nokre tilleggsopplysingar for å fortsette registreringa
       di.
-    user_type_button: Update Account Type
     user_type_label: Kontotype
     user_type_teacher: Lærar
     user_type_student: Elev
@@ -165,10 +160,8 @@ nn:
     error: Ein feil har oppstått.
     email_preference_question: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
       eller andre IT-relaterte nyheter?
-    email_preference_privacy: "(See our privacy policy)"
     email_preference_yes: Ja
     email_preference_no: Nei
-    email_preference_required: You must specify an email preference.
   school_info:
     title: Informasjon til skulen (valfritt)
     school_country: Landet til skulen
@@ -253,8 +246,8 @@ nn:
       picture: Bildepassord
       word: Hemmelege ord
       email: E-post
-      google_classroom: Google Klasserom
-      clever: Lur
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Invitasjon er sendt
     added_teacher: "%{name} er lagt til som læraren din"
@@ -308,7 +301,6 @@ nn:
       free_play:
         playlab: Lag ein app i Spel-lab
         artist: Teikn noko
-        calculate: Calculate Something
         applab: Lag ein app i Spel-lab
         gamelab: Lag eit prosjekt i Spel-lab
         weblab: Lag eit Nett-lab-prosjekt (beta)
@@ -353,7 +345,7 @@ nn:
       classroom: Side for lærarar
       district_dashboard: Distrikt dashboard
       label: Hei %{username}
-      stats: Framgangen min
+      stats: Code Studio
       settings: Kontoinnstillingar
       logout: Logg ut
       signin: Logg inn
@@ -405,7 +397,6 @@ nn:
     email_confirm_needed_required: 'E-postadressa di %{email} er ikkje blitt stadfesta:'
     email_confirm_wrong_email: "(Feil e-postadresse?)"
     email_resend_confirm: Send ny stadfesting
-    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "(la stå tomt dersom du ikkje vil forandre det)"
     current_password_hint: "(vi treng passordet ditt for å stadfeste endringane dine)"
     delete: Slett kontoen din
@@ -443,7 +434,7 @@ nn:
     completed: Fullført
     tried: Forsøkt
   home:
-    title: Kodestudio
+    title: Code Studio
     description: Code Studio er kvar Code.org sine online kurs finnast
     lines_of_code: "%{lines_count} LINJER MED KODE SKRIVNE AV ELEVAR"
     lines_of_code_linebreak: "%{lines_count} LINJER MED KODE<br/>SKRIVNE AV %{students_count}
@@ -476,7 +467,7 @@ nn:
     prize_info: 'Premier for deltaking (gjeld berre offentleg lærerarar i USA): opp
       til $1000 i klasseromsmidler.'
     tryfirst: 'Eller du kan prøve først og registrere deg seinare:'
-    trynow: Prøv no
+    trynow: Lær meir
     add_hint_help: Ver snill og hjelp oss med å legge inn smarte hint i Code.org-innføringskursa
     20hour_overview: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
       og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse og oppover,
@@ -507,7 +498,7 @@ nn:
       begreper? Vi har tatt de beste interaktive verktøy fra vårt informatikk-prinsipper-kurs,
       og utgitt frittstående moduler du kan bruke når som helst!
     announcement_learn_more_button: Lær meir
-    announcement_try_now_button: Prøv no
+    announcement_try_now_button: Lær meir
     announcement_host_an_hour_button: Ver vert for ein Kodetime
     announcement_watch_video_button: Sjå videoen
     announcement_petition: Som lærar, er du del av ei rørsle som ynskjer å gje alle
@@ -565,19 +556,6 @@ nn:
       eller Facebook hvor de sier "I''m taking the #APCSP exam because..." De beste
       videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i
       premie!'
-    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
-      you a gift</a>. Students can also encourage peers across the country in our
-      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
-    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
-      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
-      video</a> so your students can hear from their peers around the country who
-      are taking the exam.
     announcement_csp_deadline: Final call for high school teachers! Take the lead
       on computer science in your school and apply for our high-quality professional
       learning programs <strong>at absolutely no cost to you or your school</strong>.
@@ -585,12 +563,6 @@ nn:
     announcement_applab_export: App Lab, vårt web-baserte programmeringsmiljø, støtter
       nå export av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av JavaScript
       blokker, eksporter så koden for å fortsette kodingen i ditt favoritt utviklingsverktøy.
-    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your
-      CS Principles students taking the AP CS Exam will join over 50,000 other students
-      in the largest AP Exam launch in history. Now, let the voices of your students
-      be heard – remind them to complete the end-of-course survey! You'll be able
-      to review your students' responses and we'll also share an aggregate national
-      report with you."
     announcement_navigation_redesign: "<b> Endringer i nettstednavigering </b> <br/>Kommer
       i sommer, vi forbedrer navigasjonen på siden Code.org, slik at du alltid har
       tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart
@@ -608,8 +580,6 @@ nn:
     all_students_must_be_in_current_section: Alle elevar må vere registert i di gruppe.
     already_enrolled_in_new_section: Du kan ikkje flytte desse elevane fordi dei allereie
       er i den nye seksjonen.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
   share:
     title: Lær i Code Studio
     description: Alle kan lære programmering. Lag spel, appar og kunst med kode.
@@ -617,8 +587,6 @@ nn:
   gender:
     male: Mann
     female: Kvinne
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
     none: Foretrekker å ikkje svare
   user_type:
     student: Elev
@@ -767,8 +735,8 @@ nn:
       body: Sjå eit galleri av app- og artist-bilder laga av brukarane våre
     gamelab:
       title: Spel-lab
-      body: Spill Lab er et programmerings miljø der du kan lage enkle animasjoner
-        og spill med objekter og karakterer som samhandler med hverandre.
+      body: Spel-lab er eit programmeringsmiljø der du kan lage enkle animasjonar
+        og spel med objekter og figurar som samhandlar med kvarandre.
       audience: Alder 13+
       cta: Lær korleis
     hoc-encryption:
@@ -776,8 +744,8 @@ nn:
       body: Studentene lærer teknikker for å lage og knekke krypterte meldinger.
     weblab:
       title: Nett-lab (beta)
-      body: Web Lab er et programmeringsmiljø hvor du kan gjøre lage web-sider med
-        HTML og CSS. Design din webside og del siden din i løpet av sekunder.
+      body: Nett-lab er eit programmeringsmiljø der du kan lage nettsider mer HTML
+        og CSS. Lag ei nettside og del han med andre i løpet av sekunder.
       audience: Alder 13+
       cta: Lær korleis
     frozen:
@@ -789,7 +757,7 @@ nn:
       body: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
     minecraft:
       title: Minecraft
-      body: Utforsk ei Minecraft-verd gjennom kode.
+      body: Utforsk ei Minecraft-verd gjennom kode
     minecraft2016:
       title: Minecraft
       body: Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft.
@@ -802,7 +770,6 @@ nn:
       body: Velg mellom å lage et basketballspill eller miks og match på tvers av
         ulike sporter.
     text-compression:
-      title: Text Compression
       body: I denne leksjonen vil studentene bruke tekst comprimerings modulen til
         å komprimere tekst ved å estatte mønstre med symboler.
     unplugged:
@@ -863,15 +830,11 @@ nn:
     wrong_body: Svaret du har gitt er ikkje rett.  Prøv på nytt!
     correct_title: Rett
     correct_body: Det er rett svar.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Takk
     wrong_body: Tusen takk for svar.
     correct_title: Takk
     correct_body: Tusen takk for svar.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Takk
     wrong_body: Takk for dine svar.
@@ -880,9 +843,6 @@ nn:
     hide_survey_last_answer: Denne undersøkinga er anonym. Besøk gjerne læraroversikta
       for samla resultater. Merk at resultata kun er synlege dersom minst fem elevar
       har svart på undersøkinga.
-    survey_submission_thankyou: Thank you for submitting this survey! The survey has
-      been cleared so that your responses stay anonymous. Note that your teacher will
-      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Takk
     wrong_body: Takk for dine svar.
@@ -975,14 +935,14 @@ nn:
       programmering.'
     message: Oppgi din etnisitet (kryss av alle som passar)
     races:
-    - white: Kvit
-    - black: Afrikansk
-    - hispanic: Latinamerikansk
-    - asian: Asiatisk
-    - hawaiian: Hawaii eller Stillehavsøyane
-    - american_indian: Amerikansk urbefolkning
-    - other: Anna
-    - opt_out: Ynskjer ikkje å svare
+      white: Kvit
+      black: Afrikansk
+      hispanic: Latinamerikansk
+      asian: Asiatisk
+      hawaiian: Hawaii eller Stillehavsøyane
+      american_indian: Amerikansk urbefolkning
+      other: Anna
+      opt_out: Ynskjer ikkje å svare
     submit: Send inn
     decline: Lukk
   zendesk_too_young_message: Beklager, yngre brukarar kan ikkje logge inn på nettstaden
@@ -1106,23 +1066,11 @@ nn:
     instructor_feedback: Tilbakemelding frå instruktør
     peer_feedback: Tilbakemelding frå annan elev
     outdated: Denne tilbakemelding er gitt på eit tidlegare bidrag
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Oversyn
     content: Innhald
     practice: Undervisningspraksis
     peer_review: Gjennomgang av annan elev
-    ramp_up: Ramp-Up
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Hovedkurs
     extra_course_content: Ekstra kursinnhald
     csf_e_1: Oppgrader til Kurs E (Valgfritt)
@@ -1141,7 +1089,6 @@ nn:
     csd5_2: 'Kapittel 2: Problemløsing med data'
     csd6_1: 'Kapittel 1: Maskinvare utganger'
     csd6_2: 'Kapittel 2: Maskinvareinnganger'
-    csd_survey: Post-Course Survey
     csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
     csp1_2: 'Kapittel 2: Finne opp Internett'
     csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
@@ -1155,11 +1102,7 @@ nn:
     csp_ap_1: 'Kapittel 1: AP Tech oppsett'
     csp_ap_2: 'Kapittel 2: AP utforske ytelse oppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelse oppgave'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
     csp2_1_2018: 'Eining 2: Digital informasjon'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: Spørsmål til refleksjon
   external_links:
     disclaimer: Fråskrive seg ansvar
@@ -1228,21 +1171,8 @@ nn:
     download_in_Turkish: 'Last ned på tyrkisk:'
     download_in_Ukrainian: 'Last ned på ukrainsk:'
     download_in_Vietnamese: 'Last ned på vietnamesisk:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
   locked_stage: Innhaldet på dette nivået er ikkje synleg fordi dette nivået er låst.
     Læraren kan låse opp dette stadiet når det er tid for å arbeide med den eller
     sjå på svara.
@@ -1254,64 +1184,34 @@ nn:
   return_course_overview: Gå til oversikt over eininga
   view_all_units: Sjå alle einingane
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
+    form_labels:
+      email: E-post
+      school_name: Namn på skule
+      school_city: Skulen sin poststad
+      school_country: Landet til skulen
+    form_entries:
+      gender:
+        male: Mann
+        female: Kvinne
+        none: Foretrekker å ikkje svare
+      subjects:
+        cs: Informatikk
+        math: Matematikk
+        science: Vitskap
+        la: Språkfag
+      resources:
+        kodable: Kodable
+      robotics:
+        kodable: Kodable
+      workshop_course:
+        csp: Prinsipp i informatikk
+      email_opt_in:
+        opt_in_yes: Ja
+        opt_in_no: Nei
   courses_category: Alle kurs
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
     accept: Eg er einig
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
+    message: Dine data fra bruken av dette nettstedet kan sendes til, lagres eller
+      behandles i USA.
     true: Ja

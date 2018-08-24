@@ -39,7 +39,6 @@ es-MX:
       update_needs_confirmation: "Tu cuenta se ha actualizado correctamente, pero tenemos que verificar tu nueva dirección de correo electrónico. Revisa tu correo electrónico y haz clic en el enlace de confirmación para finalizar la confirmación de tu nueva dirección de correo electrónico."
       updated: "Tu cuenta se ha actualizado correctamente."
     sessions:
-      signed_in: ""
       signed_out: "Has cerrado tu sesión con éxito."
     unlocks:
       send_instructions: "Recibirás un correo electrónico con instrucciones para confirmar tu cuenta en pocos minutos."

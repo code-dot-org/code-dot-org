@@ -1,6 +1,58 @@
 require 'test_helper'
 
 class UserMultiAuthHelperTest < ActiveSupport::TestCase
+  test 'oauth_tokens_for_provider returns correct tokens for migrated teacher' do
+    user = create :teacher, :with_migrated_google_authentication_option, :with_migrated_clever_authentication_option
+    google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
+    google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
+    google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
+    clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
+    email_token = user.oauth_tokens_for_provider(AuthenticationOption::EMAIL)[:oauth_token]
+    garbage_token = user.oauth_tokens_for_provider('garbage_value')[:oauth_token]
+    assert_equal 'some-google-token', google_token
+    assert_equal '999999', google_expiration
+    assert_equal 'some-google-refresh-token', google_refresh_token
+    assert_equal 'some-clever-token', clever_token
+    assert_nil email_token
+    assert_nil garbage_token
+  end
+
+  test 'oauth_tokens_for_provider returns nil values for migrated email teacher' do
+    user = create :teacher, :with_migrated_email_authentication_option
+    google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
+    google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
+    google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
+    clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
+    email_token = user.oauth_tokens_for_provider(AuthenticationOption::EMAIL)[:oauth_token]
+    garbage_token = user.oauth_tokens_for_provider('garbage_value')[:oauth_token]
+    assert_nil google_token
+    assert_nil google_expiration
+    assert_nil google_refresh_token
+    assert_nil clever_token
+    assert_nil email_token
+    assert_nil garbage_token
+  end
+
+  # The following two tests check the oauth_tokens_for_provider logic for demigrated teachers, and
+  # can be deleted after we migrate all users to multiauth
+  test 'oauth_tokens_for_provider returns correct token for demigrated Google teacher' do
+    user = create :teacher, :with_migrated_google_authentication_option
+    user.demigrate_from_multi_auth
+    google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
+    google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
+    google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
+    assert_equal 'some-google-token', google_token
+    assert_equal '999999', google_expiration
+    assert_equal 'some-google-refresh-token', google_refresh_token
+  end
+
+  test 'oauth_tokens_for_provider returns correct token for demigrated Clever teacher' do
+    user = create :teacher, :with_migrated_clever_authentication_option
+    user.demigrate_from_multi_auth
+    clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
+    assert_equal 'some-clever-token', clever_token
+  end
+
   test 'does nothing if user is already migrated' do
     user = create :teacher, :with_migrated_email_authentication_option
     assert user.migrated?
@@ -34,7 +86,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     assert_user user,
       sponsored?: true,
-      primary_authentication_option: nil,
+      primary_contact_info: nil,
       authentication_options: :empty
   end
 
@@ -61,7 +113,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       hashed_email: '',
       username: :not_empty,
       encrypted_password: :not_empty,
-      primary_authentication_option: nil,
+      primary_contact_info: nil,
       authentication_options: :empty
   end
 
@@ -91,7 +143,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       username: :not_empty,
       encrypted_password: :not_empty,
       parent_email: :not_empty,
-      primary_authentication_option: nil,
+      primary_contact_info: nil,
       authentication_options: :empty
   end
 
@@ -100,7 +152,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_empty user.email
     assert_convert_email_user user
     assert_empty user.email
-    assert_empty user.primary_authentication_option.email
+    assert_empty user.primary_contact_info.email
   end
 
   test 'convert email+password teacher' do
@@ -108,7 +160,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     refute_empty user.email
     assert_convert_email_user user
     refute_empty user.email
-    refute_empty user.primary_authentication_option.email
+    refute_empty user.primary_contact_info.email
   end
 
   def assert_convert_email_user(user)
@@ -126,7 +178,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       email: original_email,
       hashed_email: original_hashed_email,
       encrypted_password: :not_empty,
-      primary_authentication_option: {
+      primary_contact_info: {
         credential_type: AuthenticationOption::EMAIL,
         authentication_id: original_hashed_email,
         email: original_email,
@@ -171,7 +223,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     assert_convert_sso_user_with_oauth_token user
 
-    assert_user user, primary_authentication_option: {
+    assert_user user, primary_contact_info: {
       data: {
         oauth_refresh_token: initial_oauth_refresh_token
       }
@@ -208,7 +260,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
     assert_convert_sso_user user
 
-    assert_user user, primary_authentication_option: {
+    assert_user user, primary_contact_info: {
       data: {
         oauth_token: initial_oauth_token,
         oauth_token_expiration: initial_oauth_token_expiration
@@ -258,7 +310,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   def assert_convert_lti_user(user)
     assert_convert_sso_user user
 
-    assert_user user, primary_authentication_option: {
+    assert_user user, primary_contact_info: {
       data: nil
     }
   end
@@ -289,7 +341,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_user user,
       email: expected_email,
       hashed_email: expected_hashed_email,
-      primary_authentication_option: {
+      primary_contact_info: {
         credential_type: provider,
         authentication_id: initial_authentication_id,
         email: expected_email,
@@ -297,82 +349,222 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       }
   end
 
+  test 'clear_single_auth_fields throws on unmigrated user' do
+    user = create :student
+    assert_raises {user.clear_single_auth_fields}
+  end
+
+  test 'clear_single_auth_fields clears all single-auth fields' do
+    user = create :teacher, :unmigrated_google_sso
+    user.migrate_to_multi_auth
+
+    assert_user user,
+      uid: :not_nil,
+      oauth_token: :not_nil,
+      oauth_token_expiration: :not_nil,
+      oauth_refresh_token: :not_nil
+    refute_empty user.read_attribute(:email)
+    refute_nil user.read_attribute(:hashed_email)
+
+    assert user.clear_single_auth_fields
+    user.reload
+
+    assert_user user,
+      uid: nil,
+      oauth_token: nil,
+      oauth_token_expiration: nil,
+      oauth_refresh_token: nil
+    assert_empty user.read_attribute(:email)
+    assert_nil user.read_attribute(:hashed_email)
+  end
+
+  test 'migrate and demigrate picture password student' do
+    round_trip_sponsored create :student_in_picture_section
+  end
+
+  test 'migrate and demigrate word password student' do
+    round_trip_sponsored create :student_in_word_section
+  end
+
+  def round_trip_sponsored(for_user)
+    round_trip for_user do |user|
+      assert_user user,
+        provider: User::PROVIDER_SPONSORED,
+        sponsored?: true
+    end
+  end
+
+  test 'migrate and demigrate sponsored username+password student' do
+    round_trip create(:manual_username_password_student) do |user|
+      assert_user user,
+        provider: User::PROVIDER_MANUAL,
+        sponsored?: false,
+        email: '',
+        hashed_email: nil,
+        username: :not_empty,
+        encrypted_password: :not_empty
+    end
+  end
+
+  test 'migrate and demigrate parent-managed student' do
+    round_trip create(:parent_managed_student) do |user|
+      assert_user user,
+        provider: nil,
+        sponsored?: false,
+        email: '',
+        hashed_email: nil,
+        username: :not_empty,
+        encrypted_password: :not_empty,
+        parent_email: :not_empty
+    end
+  end
+
+  test 'migrate and demigrate email+password student' do
+    round_trip_email create(:student) do |user|
+      assert_user user, email: :empty
+    end
+  end
+
+  test 'migrate and demigrate email+password teacher' do
+    round_trip_email create(:teacher) do |user|
+      assert_user user, email: :not_empty
+    end
+  end
+
+  def round_trip_email(for_user)
+    round_trip for_user do |user|
+      yield user
+      assert_user user,
+        provider: nil,
+        hashed_email: :not_empty,
+        encrypted_password: :not_empty,
+        primary_contact_info: nil
+    end
+  end
+
+  test 'migrate and demigrate Google OAuth student' do
+    round_trip_google_user create(:student, :unmigrated_google_sso)
+  end
+
+  test 'migrate and demigrate Google OAuth teacher' do
+    round_trip_google_user create(:teacher, :unmigrated_google_sso)
+  end
+
+  def round_trip_google_user(for_user)
+    initial_oauth_refresh_token = for_user.oauth_refresh_token
+    refute_nil initial_oauth_refresh_token
+    round_trip_sso_with_token for_user do |user|
+      assert_user user, oauth_refresh_token: initial_oauth_refresh_token
+    end
+  end
+
+  test 'migrate and demigrate Windows Live OAuth student' do
+    round_trip_sso_with_token create(:student, :unmigrated_windowslive_sso)
+  end
+
+  test 'migrate and demigrate Windows Live OAuth teacher' do
+    round_trip_sso_with_token create(:teacher, :unmigrated_windowslive_sso)
+  end
+
+  test 'migrate and demigrate Facebook OAuth student' do
+    round_trip_sso_with_token create(:student, :unmigrated_facebook_sso)
+  end
+
+  test 'migrate and demigrate Facebook OAuth teacher' do
+    round_trip_sso_with_token create(:teacher, :unmigrated_facebook_sso)
+  end
+
+  test 'migrate and demigrate Clever OAuth student' do
+    round_trip_sso_with_token create(:student, :unmigrated_clever_sso)
+  end
+
+  test 'migrate and demigrate Clever OAuth teacher' do
+    round_trip_sso_with_token create(:teacher, :unmigrated_clever_sso)
+  end
+
+  test 'migrate and demigrate Powerschool OAuth student' do
+    round_trip_sso_with_token create(:student, :unmigrated_powerschool_sso)
+  end
+
+  test 'migrate and demigrate Powerschool OAuth teacher' do
+    round_trip_sso_with_token create(:teacher, :unmigrated_powerschool_sso)
+  end
+
+  def round_trip_sso_with_token(for_user)
+    initial_oauth_token = for_user.oauth_token
+    initial_oauth_token_expiration = for_user.oauth_token_expiration
+    refute_nil initial_oauth_token
+    refute_nil initial_oauth_token_expiration
+    round_trip_sso for_user do |user|
+      yield user if block_given?
+      assert_user user,
+        oauth_token: initial_oauth_token,
+        oauth_token_expiration: initial_oauth_token_expiration
+    end
+  end
+
+  test 'migrate and demigrate The School Project student' do
+    round_trip_sso create(:student, :unmigrated_the_school_project_sso)
+  end
+
+  test 'migrate and demigrate The School Project teacher' do
+    round_trip_sso create(:teacher, :unmigrated_the_school_project_sso)
+  end
+
+  test 'migrate and demigrate Twitter student' do
+    round_trip_sso create(:student, :unmigrated_twitter_sso)
+  end
+
+  test 'migrate and demigrate Twitter teacher' do
+    round_trip_sso create(:teacher, :unmigrated_twitter_sso)
+  end
+
+  test 'migrate and demigrate Qwiklabs LTI student' do
+    round_trip_sso create(:student, :unmigrated_qwiklabs_sso)
+  end
+
+  test 'migrate and demigrate Qwiklabs LTI teacher' do
+    round_trip_sso create(:teacher, :unmigrated_qwiklabs_sso)
+  end
+
+  def round_trip_sso(for_user)
+    provider = for_user.provider
+    initial_email = for_user.email
+    initial_hashed_email = for_user.hashed_email
+    initial_authentication_id = for_user.uid
+
+    refute_nil provider
+    refute_nil initial_authentication_id
+
+    round_trip for_user do |user|
+      yield user if block_given?
+      assert_user user,
+        provider: provider,
+        email: initial_email,
+        hashed_email: initial_hashed_email,
+        uid: initial_authentication_id
+    end
+  end
+
   private
 
   #
   # Assert a set of attributes about a user.
   # See assert_attributes for details.
-  # Has special handling for :primary_authentication_option
+  # Has special handling for :primary_contact_info
   #
   def assert_user(user, expected_values)
     refute_nil user
-    expected_primary_option = expected_values.delete(:primary_authentication_option)
+    asserts_primary_contact_info = expected_values.key? :primary_contact_info
+    expected_primary_option = expected_values.delete(:primary_contact_info)
 
     assert_attributes user, expected_values
 
+    return unless asserts_primary_contact_info
     if expected_primary_option.nil?
-      assert_nil user.primary_authentication_option
+      assert_nil user.primary_contact_info
     elsif expected_primary_option
-      assert_authentication_option user.primary_authentication_option, expected_primary_option
-    end
-  end
-
-  #
-  # Assert a set of attributes about an authentication option.
-  # See assert_attributes for details.
-  # Has special handling for :data
-  #
-  def assert_authentication_option(actual_option, expected_values)
-    refute_nil actual_option
-    asserts_data = expected_values.key? :data
-    expected_data = expected_values.delete(:data)
-
-    assert_attributes actual_option, expected_values
-
-    return unless asserts_data
-    if expected_data.nil?
-      assert_nil actual_option.data
-    elsif expected_data
-      actual_data = JSON.parse(actual_option.data).symbolize_keys
-      assert_attributes actual_data, expected_data
-    end
-  end
-
-  #
-  # Given an object and a hash mapping method or attribute names to expected
-  # values, checks that each attribute has the expected value.
-  #
-  # Attribute names should all be symbols.  They can refer to attributes,
-  # attr_readers, or methods that don't require arguments on the object.
-  #
-  # Expected values can be any literal object.  There are also some special
-  # expected values that may be passed:
-  #
-  # :not_nil - refutes .nil? on the attribute.
-  # :empty - asserts .empty? on the attribute.
-  # :not_empty - refutes .empty? on the attribute.
-  #
-  def assert_attributes(obj, expected_values)
-    expected_values.each do |attribute, expected_value|
-      actual_value =
-        if obj.respond_to? attribute
-          obj.send attribute
-        else
-          obj[attribute]
-        end
-      failure_message = "Expected #{attribute} to be " \
-        "#{expected_value.inspect} but was #{actual_value.inspect}"
-      if expected_value == :not_nil
-        refute_nil actual_value, failure_message
-      elsif expected_value == :empty
-        assert_empty actual_value, failure_message
-      elsif expected_value == :not_empty
-        refute_empty actual_value, failure_message
-      elsif expected_value.nil?
-        assert_nil actual_value, failure_message
-      else
-        assert_equal expected_value, actual_value, failure_message
-      end
+      assert_authentication_option user.primary_contact_info, expected_primary_option
     end
   end
 
@@ -382,5 +574,24 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     user.reload
     assert result, 'Expected migration to multi-auth to succeed, but it failed'
     assert user.migrated?
+  end
+
+  # Migrates and then de-migrates a user
+  # Requires a block containing assertions to be run before and after the
+  # migration, showing that the user is returned to its initial state.
+  def round_trip(user)
+    yield user
+
+    refute user.migrated?
+    migration_result = user.migrate_to_multi_auth
+    clear_result = user.clear_single_auth_fields
+    demigration_result = user.demigrate_from_multi_auth
+    user.reload
+    assert migration_result
+    assert clear_result
+    assert demigration_result
+    refute user.migrated?
+
+    yield user
   end
 end

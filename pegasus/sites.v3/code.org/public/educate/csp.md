@@ -33,28 +33,6 @@ This year-long course can be taught as an AP or non-AP course - no prerequisites
 
 <hr/>
 
-## <a name="what"></a>Professional Learning - Applications now available!
-
-Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
-
-**Applications for the [CS Principles Professional Learning Program](/educate/professional-learning/cs-principles) are now available!**
-
-[col-50]
-
-<center><img src="/images/recruitment_banner.png" width="90%"></center>
-
-[/col-50]
-
-<div class="col-50" style="padding-top:15px">
-  <a href="/educate/professional-learning/cs-principles">
-    <button>Learn more and apply now!</button>
-  <a>
-</div>
-
-<div style="clear:both"></div>
-
-<hr/>
-
 ## Code.org's AP CS Principles Curriculum
 
 <img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the [College Board](http://collegeboard.org/APCSP) as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.
@@ -68,9 +46,9 @@ Our middle and high school programs offer year-round support. The program kicks 
 
 [col-33]
 
-[<center><img src="/images/csp/csp-crop-cover.png" width="90%">](/files/CSP_CurriculumGuide_2017_forWeb.pdf)</center>
+[<center><img src="/images/csp/csp-crop-cover.png" width="90%">](https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#)</center>
 
-<div style="margin-left: 15px; margin-top: 5px;">The <a href="/files/CSP_CurriculumGuide_2017_forWeb.pdf">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
+<div style="margin-left: 15px; margin-top: 5px;">The <a href="https://docs.google.com/document/d/1COu_fLJmAB4TAwvz1OC8G6mezYQ4T3Oift1pARKIs90/edit#", target=_"blank">Curriculum Guide</a> contains details on the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
 
 [/col-33]
 
@@ -271,7 +249,7 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 
 ## Frequently Asked Questions
 
-#### <a name="materials"></a>What materials do I need for this course?
+### <a name="materials"></a>What materials do I need for this course?
 **Required Materials:**
 
 This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, [here](/educate/it).
@@ -295,30 +273,32 @@ The following supplies are completely optional but will be useful to have on han
 - Markers
 - Post-it notes
 
-#### How can I access answer keys?
+### How can I access answer keys?
 With an approved teacher account you can find answer keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
 
 Teachers in our professional learning program will automatically be approved to view answer keys.  If you need an approved teacher account, any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
 
 <br />
 
-#### How can I communicate with other teachers who are using the curriculum?
+### How can I communicate with other teachers who are using the curriculum?
 Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
 
 <br />
-#### Can I give feedback on the lessons?
+### Can I give feedback on the lessons?
 
 Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CS Principles forum.
 
 <br />
 
-#### How/Where can I get professional development for this course?
-We have an in-person professional learning program...
-[click here](/educate/professional-learning/cs-principles) to learn more!
+### How/Where can I get professional development for this course?
+
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. [Click here](/educate/professional-learning/cs-principles) to learn more.
+
+Want to get notified when applications open for the 2019-2020 school year? [Provide your contact information](https://studio.code.org/pd/regional_partner_contact/new) to a Regional Partner.
 
 <br />
 
-#### How can I learn about what's new or changing with the curriculum?
+### How can I learn about what's new or changing with the curriculum?
 
 We send out monthly updates! [Sign up for future emails](http://code.org/educate/csp/CSPStatus_Signup).
 
@@ -330,6 +310,28 @@ Please see this page about [CS Principles Inspirations](/educate/csp/inspiration
 AP® is a registered trademark of the College Board.
 
 <!--
+## <a name="what"></a>Professional Learning - Applications now available!
+
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
+
+**Applications for the [CS Principles Professional Learning Program](/educate/professional-learning/cs-principles) are now available!**
+
+[col-50]
+
+<center><img src="/images/recruitment_banner.png" width="90%"></center>
+
+[/col-50]
+
+<div class="col-50" style="padding-top:15px">
+  <a href="/educate/professional-learning/cs-principles">
+    <button>Learn more and apply now!</button>
+  <a>
+</div>
+
+<div style="clear:both"></div>
+
+<hr/>
+
 ### Professional Learning 
 Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 

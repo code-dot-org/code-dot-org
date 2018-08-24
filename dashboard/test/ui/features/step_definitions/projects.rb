@@ -46,12 +46,19 @@ end
 Then /^I publish the project from the share dialog$/ do
   steps <<-STEPS
     And I click selector "#share-dialog-publish-button"
-    And I wait to see a dialog containing text "Publish to Public Gallery"
+    And I wait to see a publish dialog with title containing "Publish to Public Gallery"
     And element "#x-close" is visible
     And element "#publish-dialog-publish-button" is visible
     And I click selector "#publish-dialog-publish-button"
     And I wait for the dialog to close
   STEPS
+end
+
+Then /^I wait to see a publish dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see ".publish-dialog-title"
+    And element ".publish-dialog-title" contains text "#{expected_text}"
+  }
 end
 
 Then /^I unpublish the project from the share dialog$/ do

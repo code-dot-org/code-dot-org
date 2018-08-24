@@ -89,7 +89,7 @@ zh-CN:
       witch ending: 巫婆结尾
       story: 故事
       starting path: 起始路径
-      jump: 跳
+      jump: 跳跃
       patrol: 巡视
       fill in bg: 填充背景
       draw grid1: 画方格1
@@ -159,7 +159,6 @@ zh-CN:
       move: 移动
       function 1: 函数1
       function 2: 函数2
-      turn corner: 转弯
       destroy and move: 摧毁并移动
       clear path: 清除路径
       clear cacti: 清除仙人掌
@@ -172,6 +171,7 @@ zh-CN:
       fix right corner: 固定右拐角
       fix left corner: 固定左拐角
       make segment: 制作片段
+      turn corner: 转弯
       fix long path: 固定长路径
       fix short path: 固定短路径
       place 3 tracks: 放三条轨道
@@ -223,6 +223,7 @@ zh-CN:
       booster: 助推器
       draw line of triangles: 画一列三角形
       draw a window: 画一个窗口
+      stop_everything: 停止
       draw a plane of squares: 画一个正方形组成的平面
       draw hexagon: 画六边形
       draw line of hexagons: 画一列六边形

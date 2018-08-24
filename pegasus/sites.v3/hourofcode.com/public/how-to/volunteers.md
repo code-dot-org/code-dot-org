@@ -9,6 +9,8 @@ nav: how_to_nav
 # How-to Guide for Volunteers
 ### Make a difference in a classroom today!
 
+*** 
+
 ## Why volunteer?
 Check out some testimony from past volunteers:
 
@@ -17,19 +19,24 @@ Check out some testimony from past volunteers:
 - “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
 
 ## Anyone can volunteer
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+### Volunteers and speakers in tech: 
+Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
 
 You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+<br>
+<br>
 
-<a href=codeorg_url("/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button>
+<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button>
+<br>
+<br>
 
-**Anyone passionate about expanding opportunity**: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
+### Anyone passionate about expanding opportunity: 
+Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
 
-How do you get started?
+### How do you get started?
 
 1. [Send this email](<%= resolve_url('/promote/resources#help-schools') %>) to your child’s teacher offering to help them run an Hour of Code.
-
-1. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide](<%= resolve_url('/how-to') %>) to help you plan.
+2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide](<%= resolve_url('/how-to') %>) to help you plan.
 
 ## Recruit your co-workers to volunteer
 Tell your friends and co-workers about the Hour of Code. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](<%= resolve_url('/promote/resources#sample-email') %>) to your manager or the CEO to get everyone on board.
@@ -47,7 +54,7 @@ Tell your friends and co-workers about the Hour of Code. Thousands of teachers a
 ## Day-of Hour of Code Event
 When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
 
-### **Sample agenda:**
+### Sample agenda:
 
 |Time         |Agenda item                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,7 +64,7 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 |1-3 minutes  |Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
 |After|**Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.|
 
-### **After the Event:**
+### After the Event:
 - Share your photos and stories with Code.org at giving@code.org.
 - Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
 - Share about your experience on social media #HourOfCode!
@@ -72,14 +79,14 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 
 ## Volunteering during the Hour of Code FAQ
 
-### **I haven't been contacted by a teacher yet. How can I still volunteer?**
+### I haven't been contacted by a teacher yet. How can I still volunteer?
 Try searching for local schools and call the principal/teacher/front office and ask how you can help.
 
-### **How long do classroom visits last for?**
+### How long do classroom visits last for?
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
 
-### **What age group is the Hour of Code tutorial appropriate for?**
-Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
+### What age group is the Hour of Code activity appropriate for?
+Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 
 

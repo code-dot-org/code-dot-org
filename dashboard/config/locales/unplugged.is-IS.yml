@@ -11,9 +11,6 @@ is:
           Það gæti verið freistandi að sleppa því að kenna ungum börnum orðfærið sem
           tengist þessu námi, en það er mun árangursríkara að kynna það núna á skemmtilegan
           og leikrænan hátt heldur en að bíða með það þar til efnið er flóknara.
-        pdfs:
-        - unplug1
-        video: Unplug1
       Unplug2:
         title: Tölvunarmiðuð hugsun
         desc: Með ekkert annað en pappír og tússpenna munu nemendur læra fjögur þrep
@@ -26,9 +23,6 @@ is:
           farið eftir til að teikna tiltekið skrímsli. Hver hópur mun síðan skiptast
           á algrími við annan hóp og teikna skrímslið eftir algríminu frá honum. Er
           teikningin eitthvað lík því sem hinn hópurinn ætlaði?
-        pdfs:
-        - unplug2
-        video: Unplug2
       Unplug3:
         title: Forritun rúðublaða
         desc: Með því að forrita hvern annan til að teikna myndir munu nemendur byrja
@@ -36,9 +30,6 @@ is:
           hver öðrum fyrirmæli um að teikna litaða ferninga á rúðublöð í því skyni
           að endurgera tiltekna mynd. Ef tími vinnst til, má enda tímann á myndum
           sem nemendur teikna sjálfir.
-        pdfs:
-        - unplug3
-        video: Unplug3
       Unplug4:
         title: Algrím
         desc: Þessi kennslustund fjallar um algrím. Með því að nota tangram form og
@@ -46,9 +37,6 @@ is:
           eins skír og ótvíræð og hægt er. Á eftir mun bekkurinn kanna á hve marga
           vegu er hægt að brjóta saman pappír til að mynda ferning og athygli er dregin
           að því að sumar aðferðir nota færri brot en aðrar.
-        pdfs:
-        - unplug4
-        video: Unplug4
       Unplug5:
         title: Föll
         desc: Í þessari kennslustund munu nemendur búa til sólarskraut (suncatcher)
@@ -60,17 +48,11 @@ is:
           perla eða skrautmuna. Til að þetta takist verða nemendur að greina sameiginleg
           einkenni ólíkra efna og nota almenn orð yfir þau. Þessi notkun almennra
           heita er fínn inngangur að breytum (variables).
-        pdfs:
-        - unplug5
-        video: Unplug5
       Unplug6:
         title: Skilyrði
         desc: Þetta er bekkjarleikur. Eftir kynningu á skilyrðum, ef-setningum og
           lykkjum, getur bekkurinn æft saman með forskrifuðu forriti og spilum dregnum
           úr spilastokk.
-        pdfs:
-        - unplug6
-        video: Unplug6
       Unplug7:
         title: Lagasmíð
         desc: Að lesa söngtexta er nokkuð skiljanlegt viðfangsefni fyrir flesta nemendur.
@@ -78,40 +60,25 @@ is:
           kalla á föll (functions). Eftir að nemendur hafa lært að skilgreina og kalla
           á föll, munum við kynna þá auknu möguleika sem það gefur að kalla á föllin
           með stikum (parameters).
-        pdfs:
-        - unplug7
-        video: Unplug7
       Unplug8:
         title: Útdráttur
         desc: Í þessu verkefni er blandað saman hversdagslegri rútínu nemenda og eyðufyllingarleik
           til að hjálpa nemendum að skilja hve árangursrík aðferð útdráttur er.
-        pdfs:
-        - unplug8
-        video: Unplug8
       Unplug9:
         title: Boðhlaupsforritun
         desc: Þessi kennslustund notar hugmynd úr fyrra verkefni (forritun á rúðublöð)
           og notar færnina sem vannst þá til að undirstrika mikilvægi þess að ljúka
           forritum sem byggjast á röð aðgerða og að prófa forrit oft í leit að göllum.
-        pdfs:
-        - unplug9
-        video: Unplug9
       Unplug10:
         title: Internetið
         desc: Í þessari kennslustund munu nemendur þykjast fara í gegnum internetið
           og læra í leiðinni um vefslóðir, IP tölur og DNS kerfið.
-        pdfs:
-        - unplug10
-        video: Unplug10
       Unplug11:
         title: Samantekt
         desc: Lokasamantektin eftir fyrstu 20 klst. verkefnaröðina á að hjálpa nemendum
           að rifja upp það sem þeim fannst best en um leið beina þeim á brautir sem
           þeir geta farið sjálfir ef þeir hafa áhuga á að halda áfram könnunarleiðangri
           sínum um heim tölvunarfræðinnar.
-        pdfs:
-        - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Krúttleg kort
         desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern
@@ -293,14 +260,12 @@ is:
         title: Verkefni án tölvu
         desc: Í dag munt þú læra hvað það þýðir að hafa stafrænt ríkisfang.
       courseE_unplugged_privateInformation:
-        title: Verkefni án tölvu
         desc: Í dag munt þú læra muninn á persónulegum og ópersónulegum gögnum!
       courseF_unplugged_powerOfWords:
         title: Verkefni án tölvu
         desc: Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við
           þig á netinu.
       deeper learning description:
-        title: ''
         desc: 'þýðingu vantar: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algrím úr raunheimi: Sá fræi'
@@ -410,40 +375,6 @@ is:
           og aftur innan í stærra forriti. Þessi kennslustund mun hjálpa nemendum
           að öðlast skilning á því hvers vegna það er svona gagnlegt að setja kóðabúta
           í föll.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
@@ -452,44 +383,7 @@ is:
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
+        title: Vinir mínir vélmennin
       PlantASeed_2018:
         title: 'Algrím úr raunheimi: Sá fræi'
         desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
@@ -555,22 +449,5 @@ is:
           á ýmsa vegu.
       MoveItMoveIt_2018:
         title: Hreyfa sig, hreyfa sig
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Boðhlaupsforritun
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.

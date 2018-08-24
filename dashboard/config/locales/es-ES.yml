@@ -28,12 +28,12 @@ es:
         personal_email: Dirección de email personal <a href="%{url}">(haz click aquí
           si no tienes una dirección email)</a>
         username: nombre de usuario
-        password: contraseña
+        password: Contraseña
         password_confirmation: Confirmación de la contraseña
         current_password: Contraseña actual
         locale: Idioma
         age: Edad
-        gender: Género
+        gender: Sexo
         edit_header: Editar información de la cuenta
         error:
           future: No puede ser en el futuro
@@ -46,7 +46,6 @@ es:
   previous_page: Página anterior
   next_page: Siguiente pagina
   next_resource: Siguiente recurso
-  done_with_module: Done with this Learning Module
   cancel: Cancelar
   okay: De acuerdo
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
@@ -96,7 +95,7 @@ es:
     facebook: Facebook
     windowslive: Cuenta de Microsoft
     clever: Cuenta inteligente
-    powerschool: Powerschool Account
+    powerschool: Cuenta Powerschool
     forgot_password: "¿Olvidaste tu contraseña?"
     need_confirmation: "¿No recibiste las instrucciones de confirmación?"
     need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
@@ -140,8 +139,8 @@ es:
     valid_password: Contraseña válida!
     invalid_password: La Contraseña debe tener al menos 6 caracteres
     mismatch_password: Las dos contraseñas  introducidas no coinciden
-    agree_tos_privacy: I agree to the <a href='http://code.org/tos'>Terms of Service</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
+    agree_tos_privacy: Acepto los <a href='http://code.org/tos'>Términos de Servicio</a>
+      y la <a href='http://code.org/privacy'>Política de Privacidad</a>.
     under_13_consent: Si soy menor de 13 años, confirmo que tengo la autorización
       de mis padres o tutores legales para utilizar los servicios de Code.org.
     agree_us_website: Estoy de acuerdo con el uso de un sitio web con sede en los
@@ -161,7 +160,7 @@ es:
       de privacidad</a>.
     additional_information: Necesitamos alguna información adicional para continuar
       con tu registro.
-    user_type_button: Update Account Type
+    user_type_button: Actualizar tipo de cuenta de usuario
     user_type_label: Tipo de cuenta
     user_type_teacher: Profesor
     user_type_student: estudiante
@@ -173,7 +172,7 @@ es:
     email_preference_privacy: "(Vea nuestra política de privacidad)"
     email_preference_yes: Sí
     email_preference_no: 'No'
-    email_preference_required: You must specify an email preference.
+    email_preference_required: Debes especificar una preferencia de email.
   school_info:
     title: Información escolar (opcional)
     school_country: País de escuela
@@ -316,26 +315,25 @@ es:
       free_play:
         playlab: Hacer una aplicación para el laboratorio de juegos
         artist: Dibuja Algo
-        calculate: Calculate Something
         applab: Hacer una aplicación para el Laboratorio de Aplicaciones
         gamelab: Hacer un proyecto de laboratorio de Juegos
         weblab: Hacer un proyecto de laboratorio de Juegos (beta)
       home: Inicio
       my_dashboard: Mi Panel de Control
       courses: Cursos
-      course_catalog: Catálogo de cursos
+      course_catalog: Catalogo de cursos
       project_gallery: Proyectos
       sections: Secciones
       help_support: Ayuda y soporte
-      report_bug: Reportar un error
+      report_bug: Reporte los errores
       teacher_community: Comunidad de profesores
       professional_learning: Aprendizaje Profesional
-      documentation: Documentación
+      documentation: Documentacion
       tutorials: Tutoriales
       educate_overview: Resumen del docente
-      educate_elementary: Primaria
-      educate_middle: Secundaria
-      educate_high: Escuela Secundaria
+      educate_elementary: Escuela primaria
+      educate_middle: Escuela Secundaria
+      educate_high: Instituto
       educate_hoc: Hora del Código
       educate_partner: Asociese con nosotros
       educate_beyond: Más allá de Code.org
@@ -361,7 +359,7 @@ es:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de distrito
       label: Hola %{username}
-      stats: Mi progreso
+      stats: Code Studio
       settings: Mi cuenta
       logout: Cerrar sesión
       signin: Iniciar Sesión
@@ -414,7 +412,8 @@ es:
       ha sido confirmada:'
     email_confirm_wrong_email: "(¿Dirección de correo electrónico equivocada?)"
     email_resend_confirm: Reenviar las instrucciones de confirmación
-    new_email_hint: "(make sure you can receive emails to this email address)"
+    new_email_hint: "(asegúrate de que puedes recibir mensajes a esta dirección de
+      correo electrónico)"
     new_password_hint: "(déjalo en blanco si no quieres cambiarlo)"
     current_password_hint: "(necesitamos tu contraseña actual para confirmar los cambios)"
     delete: Eliminar tu cuenta
@@ -448,7 +447,7 @@ es:
     enter_new_login_info: Ingresa tu nueva información de inicio de sesión
     confirm_secret_words: Confirma que eres tú al ingresar tus palabras secretas actuales
     enter_parent_email: Ingresa el email de tu padre o tutor (para recuperar la clave)
-    update: Update Account
+    update: Actualizar cuenta de usuario
   user_level:
     completed: Completada
     tried: Prueba
@@ -494,7 +493,7 @@ es:
     20hour_overview: 'Este curso de 20 horas introduce los principios de la informática
       y los conceptos de programación. El curso está diseñado para su uso en aulas
       para los grados K-8, pero es divertido para todas las edades.  '
-    test_videos_help: Prueba nuestro nuevo reproductor de vídeo en tu escuela
+    test_videos_help: Pruebe nuestro nuevo reproductor de vídeo en su escuela
     try_beta_courses: "¡Nuevo! Prueba nuestros cursos en beta para estudiantes de
       6 a 11 años K-5"
     use_as_teacher: Utilizar sitio como profesor
@@ -640,18 +639,18 @@ es:
       estar inscritos en su sección.
     already_enrolled_in_new_section: No puedes mover estos estudiantes porque este
       profesor ya los tiene en otra sección.
-    third_party_login: You cannot move students to a section that is synced with a
-      third party tool.
+    third_party_login: No puedes mover estudiantes a un grupo que se sincroniza con
+      una herramienta de terceros.
   share:
     title: Aprender en Code Studio
     description: Cualquier persona puede aprender informática. Crear juegos, aplicaciones
       y gráficos con Code.
     try_hour_of_code: "¡Prueba una Hora de Code!"
   gender:
-    male: Varón
+    male: Hombre
     female: Mujer
-    non_binary: Non-binary
-    not_listed: Preferred term not listed
+    non_binary: No binario
+    not_listed: Término preferido no listado
     none: Prefiero no contestar
   user_type:
     student: estudiante
@@ -697,7 +696,7 @@ es:
     privacy: Política de Privacidad
     secure: Versión segura
     report_abuse: Reportar Abuso
-    built_on_code_studio: Construye en Code Studio
+    built_on_code_studio: Construido en Code Studio
     make_my_own_app: Haz tu propia aplicación
     how_it_works: Cómo funciona
     try_hour_of_code: "¡Prueba una Hora de Code!"
@@ -751,7 +750,7 @@ es:
     bounce_og_title: Revisa mi juego Bounce
     flappy_og_title: Échale un vistazo a mi juego Flappy Bird
     studio_og_title: Échale un vistazo a mi aplicación Play Lab
-    check_out_what_i_made: Mira lo que hice
+    check_out_what_i_made: Comprueba lo que hice
     og_description: Yo escribí el código con Code.org
     phone_number_not_allowed: Parece que hay un número de teléfono en el texto. Trata
       de cambiarlo.
@@ -831,15 +830,13 @@ es:
       body: Explora un mundo de Minecraft, a través de Code.
     minecraft2016:
       title: Minecraft
-      body: Construye tu propia versión de Minecraft. Crea tus propias versiones de
-        las gallinas, ovejas, Creepers, zombis y más.
+      body: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas,
+        ovejas, Creepers, zombis y más.
     hero:
       title: Minecraft
-      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
-        through Minecraft with code.
     sports:
       title: Спорт
-      body: Make a basketball game or mix and match across sports.
+      body: Crea un partido de baloncesto o una mezcla de otros deportes.
     text-compression:
       title: Compresión de texto
       body: En esta lección, los estudiantes usarán el Widget de Comprensión de Textos
@@ -895,22 +892,18 @@ es:
     support_url: "//support.code.org"
     help_resources: Ayuda y Recursos
     help_support: Ayuda y soporte
-    documentation: Documentación
+    documentation: Documentacion
     tutorials: Tutoriales
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. ¡Inténtalo de nuevo!
     correct_title: Correcto
-    correct_body: Esta respuesta es la correcta.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    correct_body: Esa respuesta es la correcta.
   multi-submittable:
     wrong_title: Gracias
     wrong_body: Gracias por enviarnos su respuesta.
     correct_title: Gracias
     correct_body: Gracias por enviarnos su respuesta.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Gracias
     wrong_body: Gracias por enviarnos su respuesta
@@ -956,7 +949,7 @@ es:
     open_response_title: Gracias
     open_response_body: "¡Gracias por tu respuesta!"
     correct_title: Correcto
-    correct_body: Esta respuesta es la correcta.
+    correct_body: Esa respuesta es la correcta.
   dialog:
     ok: OK
     startover_title: "¿Seguro que quieres empezar de nuevo?"
@@ -1018,14 +1011,14 @@ es:
       en informática'
     message: Por favor díganos su raza (marque todo lo que aplique)
     races:
-    - white: Blanco
-    - black: Negro o Afroamericano
-    - hispanic: Hispano o Latino
-    - asian: Asiático
-    - hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
-    - american_indian: Indio Americano/Nativo de Alaska
-    - other: Otros
-    - opt_out: Prefiero no decir
+      white: Blanco
+      black: Negro o Afroamericano
+      hispanic: Hispano o Latino
+      asian: Asiático
+      hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
+      american_indian: Indio Americano/Nativo de Alaska
+      other: Otros
+      opt_out: Prefiero no decir
     submit: Enviar
     decline: Cerrar
   zendesk_too_young_message: Lo sentimos, los usuarios más jóvenes no pueden registrarse
@@ -1152,23 +1145,12 @@ es:
     instructor_feedback: Retroalimentación del instructor
     peer_feedback: Retroalimentación de los compañeros
     outdated: Esta retroalimientación se añadió para una versión previamente presentada
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: Vista previa
     content: Contenido
     practice: El profesor practica
     peer_review: Revisión por pares
     ramp_up: Avanzar
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: Curso principal
     extra_course_content: Contenido adicional del curso
     csf_e_1: Aavnzar al Curso E (Opcional)
@@ -1187,7 +1169,7 @@ es:
     csd5_2: 'Capítulo 2: Resolviendo problemas de datos'
     csd6_1: 'Capítulo 1: Programación con Hardware'
     csd6_2: 'Capítulo 2: Construcción de prototipos físicos'
-    csd_survey: Post-Course Survey
+    csd_survey: Encuesta de final de curso
     csp1_1: 'Capítulo 1: Representación y transmisión de información'
     csp1_2: 'Capítulo 2: Inventando el Internet'
     csp2_1: 'Capítulo 1: Codificación y compresión de información compleja'
@@ -1204,9 +1186,8 @@ es:
     csp_postap_1: 'Capítulo 1: Manipulación y visualización de datos'
     csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
     csp2_1_2018: 'Unidad 2: Información Digital'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
-    dlp: Reflection Prompts
+    csp3_1_2018: 'Unidad 3: Introducción a la Programación'
+    dlp: Preguntas para Reflexionar
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia un sitio que no es operado
@@ -1276,21 +1257,8 @@ es:
     download_in_Turkish: 'Descargar en Turco:'
     download_in_Ukrainian: 'Descargar en ucraniano:'
     download_in_Vietnamese: 'Descargar en vietnamita:'
-    windows: Windows
+    windows: Windows (64-bit)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
   locked_stage: Los contenidos de esta etapa no son visibles ya que se encuentra actualmente
     bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar
     en ella o para revisar tus respuestas.
@@ -1302,64 +1270,45 @@ es:
   return_course_overview: Ir al resumen de la unidad
   view_all_units: Ver todas las unidades
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
-  courses_category: Full Courses
+    form_labels:
+      email: Correo electrónico
+      school_name: Nombre de la escuela
+      school_city: Ciudad de la escuela
+      school_country: País de escuela
+    form_entries:
+      gender:
+        male: Hombre
+        female: Mujer
+        non_binary: No binario
+        not_listed: Término preferido no listado
+        none: Prefiero no contestar
+      subjects:
+        cs: Ciencias de la computación
+        math: Matemáticas
+        science: Ciencia
+        la: Lengua
+      resources:
+        kodable: Kodable
+        lightbot: Lightbot
+      robotics:
+        kodable: Kodable
+      workshop_course:
+        csd: Descubrimientos de la informática
+        csp: "'16-'17 Principios de CS"
+      email_opt_in:
+        opt_in_yes: Sí
+        opt_in_no: 'No'
+  courses_category: Cursos Completos
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
+    message: Si continúas navegando en nuestro sitio web o haces clic en "Acepto",
+      aceptas que se almacenes cookies en tu ordenador o dispositivo.
+    more_information: Lee la Política de Privacidad de Code.org.
     accept: De acuerdo
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
-    privacy_policy: privacy policy
-    logout: Logout
+    heading: "¿Aceptas utilizar un sitio web con sede en los Estados Unidos?"
+    message: Los datos de su uso de este sitio pueden ser enviados y almacenados o
+      procesados en los Estados Unidos.
+    link_intro: Para más información, mira nuestra
+    privacy_policy: política de privacidad
+    logout: Cerrar sesión
     true: Sí

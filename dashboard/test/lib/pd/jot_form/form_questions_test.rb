@@ -11,11 +11,13 @@ module Pd
         @questions = [
           TextQuestion.new(
             id: 1,
+            order: 1,
             name: 'text',
             text: 'text label'
           ),
           SelectQuestion.new(
             id: 2,
+            order: 2,
             type: TYPE_RADIO,
             name: 'singleSelect',
             text: 'single select label',
@@ -23,6 +25,7 @@ module Pd
           ),
           SelectQuestion.new(
             id: 3,
+            order: 3,
             name: 'singleSelectWithOther',
             type: TYPE_RADIO,
             text: 'single select with other label',
@@ -32,6 +35,7 @@ module Pd
           ),
           SelectQuestion.new(
             id: 4,
+            order: 4,
             type: TYPE_CHECKBOX,
             name: 'multiSelect',
             text: 'multi select label',
@@ -39,6 +43,7 @@ module Pd
           ),
           SelectQuestion.new(
             id: 5,
+            order: 5,
             type: TYPE_CHECKBOX,
             name: 'multiSelectWithOther',
             text: 'multi select with other label',
@@ -48,6 +53,7 @@ module Pd
           ),
           ScaleQuestion.new(
             id: 6,
+            order: 6,
             name: 'scale',
             text: 'scale label',
             options: %w(From To),
@@ -55,6 +61,7 @@ module Pd
           ),
           MatrixQuestion.new(
             id: 7,
+            order: 7,
             name: 'matrix',
             text: 'How much do you agree or disagree with the following statements about this workshop?',
             options: %w(Disagree Neutral Agree),
@@ -66,6 +73,7 @@ module Pd
           ),
           TextQuestion.new(
             id: 8,
+            order: 8,
             name: 'hidden_text',
             text: 'This should be hidden',
             hidden: true
@@ -98,39 +106,54 @@ module Pd
           },
           'singleSelect' => {
             text: 'single select label',
-            answer_type: ANSWER_SELECT_VALUE,
-            max_value: 3
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(One Two Three),
+            other_text: nil
           },
           'singleSelectWithOther' => {
             text: 'single select with other label',
-            answer_type: ANSWER_SELECT_TEXT
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(One Two Three),
+            other_text: 'Other'
           },
           'multiSelect' => {
             text: 'multi select label',
-            answer_type: ANSWER_MULTI_SELECT
+            answer_type: ANSWER_MULTI_SELECT,
+            options: %w(One Two Three),
+            other_text: nil
           },
           'multiSelectWithOther' => {
             text: 'multi select with other label',
-            answer_type: ANSWER_MULTI_SELECT
+            answer_type: ANSWER_MULTI_SELECT,
+            options: %w(One Two Three),
+            other_text: 'Other'
           },
           'scale' => {
             text: 'scale label',
-            answer_type: ANSWER_SELECT_VALUE,
-            max_value: 3
+            answer_type: ANSWER_SCALE,
+            min_value: 1,
+            max_value: 3,
+            options: ['1 - From', '2', '3 - To']
           },
           'matrix_0' => {
             text: 'How much do you agree or disagree with the following statements about this workshop? I learned something',
-            answer_type: ANSWER_SELECT_VALUE,
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(Disagree Neutral Agree),
+            parent: 'matrix',
             max_value: 3
           },
           'matrix_1' => {
             text: 'How much do you agree or disagree with the following statements about this workshop? It was a good use of time',
-            answer_type: ANSWER_SELECT_VALUE,
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(Disagree Neutral Agree),
+            parent: 'matrix',
             max_value: 3
           },
           'matrix_2' => {
             text: 'How much do you agree or disagree with the following statements about this workshop? I enjoyed it',
-            answer_type: ANSWER_SELECT_VALUE,
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(Disagree Neutral Agree),
+            parent: 'matrix',
             max_value: 3
           }
         }
@@ -141,14 +164,14 @@ module Pd
       test 'process_answers' do
         expected_processed_answers = {
           'text' => 'this is my text answer',
-          'singleSelect' => 2,
+          'singleSelect' => 'Two',
           'singleSelectWithOther' => 'my other reason',
           'multiSelect' => %w(Two Three),
           'multiSelectWithOther' => ['Two', 'my other reason'],
           'scale' => 2,
-          'matrix_0' => 3,
-          'matrix_1' => 2,
-          'matrix_2' => 3
+          'matrix_0' => 'Agree',
+          'matrix_1' => 'Neutral',
+          'matrix_2' => 'Agree'
         }
 
         assert_equal expected_processed_answers, @form_questions.process_answers(@jotform_answers)
@@ -191,6 +214,13 @@ module Pd
         FormQuestions.expects(:new).with(@form_id, mock_constructed_questions)
 
         FormQuestions.deserialize(@form_id, fake_questions_array)
+      end
+
+      test 'question_ids' do
+        assert_equal(
+          [1, 2, 3, 4, 5, 6, 7, 8],
+          @form_questions.question_ids
+        )
       end
     end
   end

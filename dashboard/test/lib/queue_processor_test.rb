@@ -4,7 +4,7 @@
 # Rails logger.
 
 require 'test_helper'
-require 'aws-sdk'
+require 'aws-sdk-sqs'
 require 'securerandom'
 
 require 'sqs/messages_handler'

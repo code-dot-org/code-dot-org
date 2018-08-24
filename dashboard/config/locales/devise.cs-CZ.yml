@@ -51,7 +51,6 @@ cs:
         odkaz, prosím, aby jsi dokončil změnu své nové emailové adresy.
       updated: Tvůj účet byl úspěšně aktualizován.
     sessions:
-      signed_in: ''
       signed_out: Úspěšně odhlášen.
     unlocks:
       send_instructions: Obdržíš do několika minut email s pokyny, jak odemknout svůj

@@ -39,7 +39,6 @@ mi:
       update_needs_confirmation: "I angitu tō whakahou i tō pūkei, otirā, me manatoko mātou i tō wāhitau īmēra. Tēnā tirohia ō īmēra kātahi ka pāwhiri i te honongaitua whakaū ki te whakaoti i ngā mahi whakaū i tō wāhitau īmēra."
       updated: "I angitu te whakahoutanga o tō pūkei."
     sessions:
-      signed_in: ""
       signed_out: "I angitu tō takiputa."
     unlocks:
       send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu e whakamārama ana me pēhea te whakawātea i tō pūkete."

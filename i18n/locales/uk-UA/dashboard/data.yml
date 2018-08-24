@@ -52,7 +52,7 @@ uk:
         loop_until: Блок „Повторити до“
         loop_while: Блок "повторити поки"
         loop_for: Блок лічильника
-        function: Функції
+        function: функції
         parameters: Функції з параметрами
     level:
       instructions:
@@ -148,7 +148,7 @@ uk:
         maze_karel_debug_function_1: Що вам потрібно змінити у цій програмі, щоб допомогти мені видалити всі купи?
         maze_karel_debug_function_2: Можеш виправити цю програму так, щоби я змогла вирівняти своє поле?
         maze_karel_debug_function_3: 'Відредагуйте цю програму, щоб я видалила усі купи зі свого поля. '
-        turtle_5_1: Спробуй запустити програму, і внести зміни - подивись, що трапиться. Можеш здогадатись, що відбувається?  (Або видали код і заміни його на зовсім інший)
+        turtle_5_1: Спробуй запустити програму, і внести зміни - подивіться, що трапиться. Можеш здогадатись, що відбувається?  (Або видали код і заміни його на зовсім інший)
         turtle_5_2: Спробуй запустити програму, і внести зміни - подивіться, що трапиться. Можеш здогадатись, що відбувається?  (Або видали код і заміни його на зовсім інший)
         turtle_5_3: Спробуйте запустити програму, і внести зміни - подивіться, що трапиться. Можете здогадатись, що відбувається?  (Або видаліть код і замініть його на зовсім інший)
         turtle_5_4: Спробуйте запустити програму, і внести зміни - подивіться, що трапиться. Можете здогадатись, що відбувається?  (Або видаліть код і замініть його на зовсім інший)
@@ -161,7 +161,7 @@ uk:
         Custom_builder: Перетягуй блоки з панелі інструментів на робочу область для того, щоб створити бажаний рівень. Клацни "Запустити програму", коли все готово.
         jigsaw_1: Вибрати блок
         jigsaw_2: Перетягни блок до цілі
-        jigsaw_3: Склади блоки для формування зображення
+        jigsaw_3: Складіть блоки для формування зображення
         jigsaw_4: Складіть блоки для формування зображення
         jigsaw_5: Складіть блоки для формування зображення
         jigsaw_6: Складіть блоки для формування зображення
@@ -179,14 +179,14 @@ uk:
         mazestep_5: Опис кроку лабіринту
         studio_c2_1: Можете запрограмувати собаку, щоб він сказав "Привіт, світе"?
         studio_c2_2: Можете запрограмувати собаку, щоб він щось говорив, а потім, щоб щось говорив кіт?
-        studio_c2_3: Можеш написати програму, щоб змусити собаку переміститись до кота?
-        studio_c2_4: Можеш написати програму, щоб змусити собаку рухатись до кота, який скаже "привіт" при наближенні собаки?
+        studio_c2_3: Можеш написати програму, щоб собака перемістився до кота?
+        studio_c2_4: Можеш написати програму, в якій собака рухається до кота, а кіт говорить "привіт", коли до нього наближається собака?
         studio_c2_5: Можеш запрограмувати восьминога, щоб він говорив "Привіт", коли його клацають?
         studio_c2_6: Можеш написати програму, у якій Ведл рухатиметься за допомогою клавіш вгору / вниз / вправо / вліво до усіх цілей?
         studio_c2_7: Блок "повторювати завжди" дозволяє виконувати код безперервно. Можеш прикріпити такі блоки, щоб динозавр постійно рухався вгору та вниз?
         studio_c2_8: Можеш запрограмувати Ведла, щоб він сказав "Ой!" і програв звук "удар", якщо він натрапить на динозавра, а тоді перемістити його за допомогою стрілок, щоб переконатись, що так і станеться?
         studio_c2_9: Можеш додати блок "додати бал" коли Ведл натрапляє на восьминога і потім перемістити його стрілками поки не отримаєш бал?
-        studio_c2_10: Можеш додати блоки, щоб змінити фон і швидкість руху Ведла і потім перемістити його стрілками до отримання балу?
+        studio_c2_10: Можеш додати блоки, щоб змінити тло і швидкість руху Ведла і потім перемістити його стрілками до отримання балу?
         studio_c2_11: Створи власну історію. Коли завершиш, клацни Готово, щоб запросити друзів випробувати гру на своїх телефонах.
         studio_c3_story_1: Можеш запрограмувати собаку, щоб він сказав "Привіт, світе"?
         studio_c3_story_2: Можете запрограмувати собаку, щоб він щось говорив, а потім, щоб щось говорив кіт?
@@ -235,10 +235,10 @@ uk:
         studio_gumball_free_play: Створюй власну гру чи історію. Коли завершиш, клацай Готово, щоб твою гру могли спробувати на своїх телефонах, планшетах чи комп'ютерах твої друзі!
         studio_full_sandbox: Створи власну гру. Коли завершиш, натисни кнопку Готово, щоб поділитись грою з друзями.
         studio_k1_1: Можеш запрограмувати собаку, щоб він сказав "Привіт, світе"?
-        studio_k1_2: Можеш запрограмувати собаку, щоб він щось говорив, а потім, щоб щось говорив кіт?
+        studio_k1_2: Можеш змусити собаку щось сказати, а потім щоб щось сказав кіт?
         studio_k1_3: Можеш написати програму, щоб змусити собаку переміститись до кота?
         studio_k1_4: Запрограмуйте собаку так, щоб коли він переміститься до кота, кіт говорив йому ''привіт".
-        studio_k1_5: Можеш додати блок, щоб зробити восьминога щасливим?
+        studio_k1_5: Можеш додати блок для ощасливлення восьминога?
         studio_k1_6: Створи свою власну історію! Переміщуй кота і собаку та змусь їх говорити.
         maze_wordsearch_k_1: Переміщуйте мене, щоб написати слово EAST (СХІД)
         maze_wordsearch_k_2: Переміщуйте мене, щоб написати слово SOUTH (ПІВДЕНЬ)
@@ -333,7 +333,7 @@ uk:
         C3_functional_suncatchers: Функції для блискіток
         C3_songwriting_with_parameters: Пісні з параметрами
         C4_intro: Вступ
-        C4_loops_zombie: Цикли
+        C4_loops_zombie: петлі
         C4_bee_conditional: Бджола - умови
         C4_variables_artist: Змінні - Художник
         C4_variables_playlab: Змінні - Ігрова лабораторія
@@ -351,14 +351,11 @@ uk:
         C4_unplugged_forloops: Цикли For
         C4_unplugged_parameters: Пісні з параметрами
         C4_unplugged_binary: Двійкова система
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Кути в художника
         CSF_collector_k1_blocks: 'Основни комп''ютерної науки: Колектор'
         CSF_collector_repeat_loops: Колектор повторення петель
         CSF_collector_text_blocks: 'Основни комп''ютерної науки: Колектор'
         CSF_create_functions: Створення функцій
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Вступ до інформатики
         CSF_maze_intro_k1_blocks: Вступ до Студії коду
         CSF_maze_intro_text_blocks: Вступ до Студії коду
@@ -378,63 +375,20 @@ uk:
         infinity_playlab_intro: Ігрова лабораторія - Вступ
         infinity_playlab_events: Ігрова лабораторія - Події
         infinity_playlab_repeat_forever: Ігрова лабораторія - Повторювати завжди
-        csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: 'Як комп''ютери працюють: Що робить комп''ютер, комп''ютер?'
         csd_concept_binary_data: 'Як комп''ютери працюють: Двійкове кодування і дані'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input, & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
         csd_concept_search: Як працює пошук
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: Анімація
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Швидкість
         csd_weblab_intro_1: Основи у Веб лабораторії - частина 1
         csd_weblab_intro_2: Основи у Веб лабораторії - частина 2
         csd_weblab_css_1: Основи CSS - частина 1
         csd_weblab_css_2: Основи CSS - частина 2
         csd_weblab_intro_3: Основи у Веб лабораторії - частина 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Вступ до функцій
         csp_applab_functions_parameters: Функції з параметрами
-        csp_applab_loops: Цикли
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
+        csp_applab_loops: петлі
         csp_concept_rgb: Трохи про пікселі
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Інструмент пикселизации кольору - частина 1
         csp_pixelation_color_2: Інструмент пикселизации кольору - частина 2
         csp_pixelation_color_3: Інструмент пикселизации кольору - частина 3
@@ -442,9 +396,6 @@ uk:
         csp_U1L14_tipstricks: 'Модуль 1, урок 14: поради для вчителів'
         csp_textcompression: Віджет стиснення тексту
         csp_textcompression_new: Віджет стиснення тексту
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: Інформатика в Алгебрі - Введення
         alg_2_eval_block: Інформатика в Алгебрі - Блоки Оцінювання
         alg_3_pemdas: Інформатика в Алгебрі - Порядок Операцій
@@ -490,49 +441,8 @@ uk:
         applab_hoc_onevent: Додаток лабораторії "Година коду" - Події
         applab_hoc_designmode: Додаток лабораторії "Година коду" - Режим дизайну
         applab_hoc_share: Додаток лабораторії "Година коду" - Поширити
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
         mc_2017_congratulations: Година коду від Майнкрафт - Вітання
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
-        CSF_loops_AB: Цикли
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        CSF_loops_AB: петлі
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

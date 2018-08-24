@@ -1,0 +1,189 @@
+pl:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Następny
+            '"prev"': Poprzedni
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Następny
+            '"prev"': Poprzedni
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: wszystkie
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': w prawo
+            '"left"': w lewo
+      Dancelab_randomColor:
+        text: losowy kolor
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Żaden
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': do góry
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"space"': przestrzeń
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': do góry
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"space"': przestrzeń
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'prawda'
+            'false': 'fałsz'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": losowy
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': w prawo
+            '"left"': w lewo
+      gamelab_randColor:
+        text: losowy kolor
+      gamelab_randomColor:
+        text: losowy kolor
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': losowy
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"height"': wysokość
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': w prawo
+            '"left"': w lewo
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': do góry
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"space"': przestrzeń
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": do góry
+            "'down'": do dołu
+            "'left'": w lewo
+            "'right'": w prawo
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': do góry
+            '"down"': do dołu
+            '"left"': w lewo
+            '"right"': w prawo
+            '"space"': przestrzeń
+      Vanilla_randomColor:
+        text: losowy kolor

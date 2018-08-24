@@ -2,50 +2,47 @@ sk:
   data:
     block_categories:
       Actions: Akcie
-      Loops: Cykly
+      Loops: Slučky
       Functions: Funkcie
       Color: Farba
-      Brushes: Brushes
-      Math: Matematika
+      Brushes: Štetky
+      Math: Matematické
       Logic: Logické
       Variables: Premenné
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Číslo
+      String: Reťazec
+      Image: Obrázok
+      Boolean: Logická hodnota
       Conditionals: Podmienky
       Events: Udalosti
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Hry/skóre
+      Comments: Komentáre
+      Category: Kategória
+      Prebuilt: Vopred vytvorené
       Text: Text
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Nástroj výberu
+      Comment: Komentár
+      'Variables ': 'Premenné '
+      everythingelse: všetko ostatné
+      numbers: čisla
+      Numbers: Čísla
+      Default: Predvolené
+      World: Svet
+      Behaviors: Správanie
+      Advanced: Pokročilé
       Start: Spustiť
-      Groups: Groups
-      Booleans: Booleans
-      Functional: Functional
-      Predefined: Predefined
+      Music: Hudba
+      Sprite: Objekt
+      Brush: Štetka
+      Make Sprite: Vytvoriť objekt
+      Movement: Pohyb
+      Groups: Skupiny
+      Functional: Funkcie
+      Predefined: Preddefinované
       test: test
       test2: test2
-      Foo: Foo
       Name: Meno
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: NOVÉ BLOKY
+      'Functions ': 'Funkcie '
+      Game/Score: Hra/skóre
       Function: Funkcia

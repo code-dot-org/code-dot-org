@@ -564,6 +564,7 @@ function addPropertyAliases(sprite) {
     const newPropertyName = ALIASED_PROPERTIES[originalPropertyName];
     Object.defineProperty(sprite, newPropertyName, {
       enumerable: true,
+      configurable: true,
       get: function () {
         return _.get(sprite, originalPropertyName);
       },

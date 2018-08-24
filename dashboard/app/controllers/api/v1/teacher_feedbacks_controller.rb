@@ -10,7 +10,15 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       level_id: params.require(:level_id),
       teacher_id: params.require(:teacher_id)
     ).latest
-    render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+
+    # Setting custom header here allows us to access the csrf-token and manually use for create
+    headers['csrf-token'] = form_authenticity_token
+
+    if @feedback.nil?
+      head :no_content
+    else
+      render json: @feedback, serializer: Api::V1::TeacherFeedbackSerializer
+    end
   end
 
   # Use student_id and level_id to lookup the most recent feedback from each teacher who has provided feedback to that
@@ -28,7 +36,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   def create
     @teacher_feedback.teacher_id = current_user.id
     if @teacher_feedback.save
-      head :created
+      render json: @teacher_feedback, serializer: Api::V1::TeacherFeedbackSerializer, status: :created
     else
       head :bad_request
     end

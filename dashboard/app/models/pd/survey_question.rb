@@ -2,11 +2,12 @@
 #
 # Table name: pd_survey_questions
 #
-#  id         :integer          not null, primary key
-#  form_id    :integer
-#  questions  :text(65535)      not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                 :integer          not null, primary key
+#  form_id            :integer
+#  questions          :text(65535)      not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  last_submission_id :integer
 #
 # Indexes
 #
@@ -36,6 +37,16 @@ module Pd
 
     def form_questions
       @form_questions ||= JotForm::FormQuestions.deserialize(form_id, JSON.parse(questions))
+    end
+
+    def reload
+      super
+      @form_questions = nil
+    end
+
+    def questions=(value)
+      super(value)
+      @form_questions = nil
     end
 
     delegate :summarize, to: :form_questions

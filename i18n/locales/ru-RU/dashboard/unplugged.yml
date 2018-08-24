@@ -4,69 +4,36 @@ ru:
       Unplug1:
         title: Введение в Информатику
         desc: На этом уроке вы познакомитесь с таким понятием, как информатика, и узнаете, чем занимается специалист в области информатики.  Ученики также получат шанс попробовать себя в роли такого специалиста.  В конце занятия каждый ученик получит материалы для домашнего использования, напоминающие об изученных темах.  У вас может возникнуть искушение пропустить этап знакомства младших детей с терминологией, используемой на уроках, но такое знакомство в занимательной и игровой форме может оказаться намного продуктивнее, чем ожидание возможностей более серьезного знакомства с предметом.
-        pdfs:
-          - unplug1
-        video: Unplug1
       Unplug2:
         title: Вычислительное мышление
         desc: Используя только бумагу и маркер, ученики изучат четыре ступени вычислительного мышления. После краткого введения ученики делятся на группы, в которых они должны подготовить для других учеников инструкции по рисованию определенного монстра (из каталога заранее отобранных монстров). Задание делится на части, и команды анализируют всех монстров в каталоге для составления шаблонов, выделяют различные части монстров, а затем используют данную информацию для создания алгоритмов (инструкций) для другой команды, которая должна нарисовать определенного монстра. Затем команды обмениваются алгоритмами с другой группой и рисуют монстра по заданному алгоритму. Похож ли рисунок на то, что имела в виду первая команда?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: Программирование на бумаге в клеточку
         desc: Составляя друг для друга программы для рисования картинок, ученики начнут понимать суть программирования. Занятие начнется с того, что ученики будут давать друг другу команды раскрасить клеточки линованной бумаги для воспроизведения существующего рисунка.  Если останется время, урок можно будет завершить самостоятельным рисованием.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: Алгоритмы
         desc: Этот урок посвящен алгоритмам.  Первое упражнение, выполняемое с помощью фигур танграма и миллиметровой бумаги, покажет, как важно, чтобы каждая команда была максимально четкой и недвусмысленной.  Затем класс будет выяснять, сколькими способами можно сложить прямоугольник из бумаги, отмечая, при каком способе будет больше или меньше сгибов.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: функции
         desc: На этом уроке ученики будут делать ловца солнца из проволоки, бус и особой подвески. Ученики будут выполнять ряд повторяющихся шагов, и затем им будет предложено назвать определенные наборы «навыков», которые повторяются несколько раз. Как только эти навыки будут определены, они будут запускаться из основной программы, и весь интересный процесс создания будет записан на одном листе бумаги. Окончательная программа будет применима для всего класса независимо от типов проволоки, бус и подвесок. Чтобы продуктивно выполнить данное задание, ученикам потребуется «обобщить» свойства своих материалов и создать абстрактные обозначения предметов, используемых отдельными учениками.  Использование обобщенных обозначений предметов представляет собой прекрасное введение в переменные.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: Условия
         desc: Это игра для работы в классе.  После знакомства с понятием условных выражений, условных операторов и циклических алгоритмов класс может попрактиковаться, используя готовую программу, колоду карт и элемент случайности.
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: Написание песни
         desc: Чтение стихов является интуитивно понятным занятием для большинства учеников.  Теперь мы возьмем знакомую деятельность и заложим в ее основу твердое знание об определении и вызове функций. После того, как ученики познакомятся с процессом определения/вызова, мы добавим дополнительные возможности, которые дает передача параметров в рамках процедур вызова соответствующих функций.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: Абстракция
         desc: Это задание сочетает каждодневные задачи учащихся и игру в стиле мышления Mad Lib, и помогает классу узнать об эффективности и абстракции.
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
         title: Эстафетное программирование
         desc: Концепция этого урока будет аналогична идее одного из предыдущих занятий (4. Программирование на бумаге в клеточку), и эти навыки будут использоваться, чтобы подчеркнуть важность завершения программ, содержащих последовательности, а также частой проверки программ на наличие «ошибок».
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: Интернет
         desc: На этом уроке студенты будут передвигаться по интернету для знакомства с веб-адресацией, IP-адресами и DNS.
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: Итоги
         desc: Последнее итоговое занятие двадцатичасового цикла напомнит классу любимые моменты и поможет заинтересовавшимся информатикой в выборе последующих самостоятельных шагов.
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Весёлые карты
         desc: Ученики создают простые алгоритмы (наборы инструкций) для перемещения персонажа через лабиринт с помощью одной команды.
@@ -113,7 +80,7 @@ ru:
         title: Функциональные витражи
         desc: Студенты создадут алгоритм с переменными и функциями (фрагментами кода, которые можно использовать снова и снова) для создания витражей с использованием нити и бусин.
       SongwritingParameters:
-        title: Написание песен с параметрами
+        title: Написание песен
         desc: Ученики используют понятие припева для изучения того, как передаются параметры (которые позволяют изменять функцию без необходимости её полностью переписывать).
       DiceRace:
         title: 'Алгоритмы из повседневной жизни: Гонки кубиков'
@@ -163,30 +130,16 @@ ru:
       CollisionDetection:
         title: Обнаружение конфликтов и теорема Пифагора
         desc: Определение момента соприкосновения объектов на экране является важным пунктом большинства игр. На этом уроке мы рассмотрим, как теорема Пифагора и формула расстояния могут использоваться для измерения расстояния между двумя точками на плоскости, а затем решить, соприкасаются ли эти две точки (или игровые персонажи).
-      courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
         title: Урок без компьютера
-        desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Урок без компьютера
-        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Урок без компьютера
-        desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
         title: Урок без компьютера
-        desc: Today you will learn what it means to be a Digital Citizen.
-      courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
-        desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Урок без компьютера
-        desc: Today you will learn about what to do if someone is being mean online.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Алгоритмы из повседневной жизни: Посади семечко'
         desc: Этот урок покажет, как мы используем алгоритмы в нашей повседневной жизни на примере посева семян. Он также нацелен на то, чтобы дать более широкую картину информатики и обозначить, насколько важную роль играют алгоритмы.
@@ -227,7 +180,6 @@ ru:
         title: Двоичные образы
         desc: Хотя многие думают, что двоичная система — это только нули и единицы, наши предыдущие курсы показали ученикам, что информацию можно представить в различных вариантах двоичного счисления.  На этом уроке используется понятие пошаговых действий, иллюстрирующее, как компьютер может хранить сложные данные (изображения и цвета) в двоичном формате.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Этот урок посвящен способам использования нами алгоритмов в повседневной жизни. В ходе урока ученики должны будут придумать и записать алгоритм для игры в кубики.
       courseE_unplugged_songwritingParameters:
         title: Написание песен с параметрами
@@ -239,7 +191,7 @@ ru:
         title: Краудсорсинг
         desc: Студенты используют краудсорсинг, технологию совместного решения задач в области компьютерных наук, более эффективную, чем индивидуальная работа.
       courseE_unplugged_songwriting:
-        title: Написание песен с параметрами
+        title: Написание песен
         desc: Ученики используют понятие припева для изучения того, как передаются параметры (которые позволяют изменять функцию без необходимости её полностью переписывать).
       courseF_unplugged_tangrams:
         title: Танграм алгоритмы
@@ -253,54 +205,8 @@ ru:
       courseF_unplugged_songwritingParameters:
         title: Написание песен с использованием параметров
         desc: 'Одним из самых великолепных творений мира информатики является функция.  Функции (иногда называемые процедурами) — это мини-программы, которые можно использовать снова и снова внутри большой программы. Этот урок поможет ученикам интуитивно понять, почему объединение частей кода в функцию является такой полезной практикой.  '
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Мои друзья роботы
       PlantASeed_2018:
         title: 'Алгоритмы из повседневной жизни: Посади семечко'
         desc: Этот урок покажет, как мы используем алгоритмы в нашей повседневной жизни на примере посева семян. Он также нацелен на то, чтобы дать более широкую картину информатики и обозначить, насколько важную роль играют алгоритмы.
@@ -310,9 +216,6 @@ ru:
       GoingPlacesSafely_2018:
         title: Безопасное путешествие
         desc: Интернет — полезное, но иногда опасное место. Учитель знакомит с безопасными способами навигации в интернете.
-      courseA_unplugged_loops_2018:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: Большое Событие
         desc: 'Ученики знакомятся с понятием программирования «событий»: действий, которые компьютер постоянно отслеживает. Учитель будет нажимать кнопки на бумажном пульте, а ученики будут реагировать в соответствии с нажатой кнопкой.'
@@ -321,12 +224,10 @@ ru:
         desc: Ученики пишут алгоритм (набор инструкций), используя набор определённых заранее команд, чтобы управлять одноклассниками для воспроизведения рисунка.
       courseD_unplugged_digitalCitizenship_2018:
         title: Урок без компьютера
-        desc: Today you will learn what it means to be a Digital Citizen.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Урок без компьютера
-        desc: Today you will learn about what to do if someone is being mean online.
       Conditionals_2018:
-        title: Условные операторы
+        title: Условные команды
         desc: 'Чтобы узнать об условных операторах, студенты поиграют в карты и создадут правила, например: «Если я нарисовал красную карточку, я получаю очко» или «Если я нарисую черную карточку, вы получите очко».'
       DigitalFootprint_2018:
         title: Твой цифровой след
@@ -345,13 +246,5 @@ ru:
         desc: Ученики создают браслеты в виде двоичного представления первой буквы своего имени. Ученики узнают, что данные можно представлять и хранить несколькими способами.
       MoveItMoveIt_2018:
         title: Вперед, вперед
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
         title: Эстафетное программирование
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.

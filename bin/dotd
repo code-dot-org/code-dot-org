@@ -4,6 +4,7 @@
 # processes. As much of this process is automated, the script is now a menu driven script rather
 # than a linear workflow driven script.
 
+require_relative '../deployment'
 require 'cgi'
 require 'highline'
 require 'io/console'
@@ -235,12 +236,17 @@ def dotd_menu(dotd_name)
         end
       end
       menu.choice(:DTS) do
+        unless GitHub.compare(base: 'staging', head: 'levelbuilder').
+            any? {|message| message.include?('levelbuilder content changes')}
+          warn_and_confirm 'No content commit available to merge from levelbuilder to staging'
+          next
+        end
+
         dts_pr_number = GitHub.create_and_merge_pull_request(
           base: 'staging',
           head: 'levelbuilder',
           title: "DTS (Levelbuilder > Staging) [#{dotd_name}]"
         )
-
         puts <<-EOS.unindent
 
           DTS (Levelbuilder > Staging): #{GitHub.url(dts_pr_number)}
@@ -276,7 +282,7 @@ def dotd_menu(dotd_name)
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
       menu.choice(:L) do
-        if run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{@dotd_name}\""
+        if run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
           @logger.info 'commits content on levelbuilder'
         else
           @logger.info 'error attempting to commit content on levelbuilder'
@@ -382,6 +388,12 @@ def should_i(question)
   end
 end
 
+def warn_and_confirm(message)
+  puts red message
+  puts "Press enter to continue..."
+  gets
+end
+
 # Runs command on server_name.
 # @param server_name [String] The server to run the command on.
 # @param command [String] The command to be run.
@@ -390,7 +402,10 @@ end
 def run_on(server_name, command)
   # Double-escape the command string, once for each remote shell we're passing
   # through.
-  system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
+  return true if system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
+  # Non-zero exit code from the command
+  warn_and_confirm "There was an error running `#{command}` on #{server_name}"
+  return false
 end
 
 # Prints the DTP message, formatted based on its contents.
@@ -494,8 +509,13 @@ end
 def main
   check_for_cdo_keys
 
-  # auto-join deploy-status room
+  # auto-join Slack rooms where the DOTD might be @mentioned
+  # or need to affect the room topic.
+  Slack.join_room('developers')
   Slack.join_room('deploy-status')
+  Slack.join_room('infra-staging')
+  Slack.join_room('infra-test')
+  Slack.join_room('levelbuilder')
 
   puts_script_intro
   dotd_name = ask_for_name

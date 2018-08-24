@@ -56,6 +56,10 @@ class ScriptLevelsController < ApplicationController
   def next
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
+    if @script.redirect_to?
+      redirect_to "/s/#{@script.redirect_to}/next"
+      return
+    end
     configure_caching(@script)
     if @script.finish_url && current_user.try(:completed?, @script)
       redirect_to @script.finish_url
@@ -157,6 +161,10 @@ class ScriptLevelsController < ApplicationController
 
   def stage_extras
     authorize! :read, ScriptLevel
+
+    if current_user&.teacher? && !current_user&.sections&.all?(&:stage_extras)
+      flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
+    end
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
@@ -366,7 +374,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     if @level.try(:peer_reviewable?)
-      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
+      @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(data: nil, reviewer: nil)
     end
 
     @callback = milestone_script_level_url(

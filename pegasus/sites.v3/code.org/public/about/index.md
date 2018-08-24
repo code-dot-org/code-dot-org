@@ -66,9 +66,9 @@ See all past [news and announcements](/about/news).
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female)                                                                                                                                                                      |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org).                                                                                                                                                                                                                    |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled.                                                                    |
-| Prep new CS teachers | We've prepared 72,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).                                                                                                                                                                                    |
+| Prep new CS teachers | We've prepared 80,000 new teachers to teach CS across grades K-12. Learn about our [professional learning programs](/educate).                                                                                                                                                                                    |
 | Change school district curriculum | We've partnered with [180 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a regional partner](/educate/districts).|
-| Set up policies to support CS | Policies changed in 43 U.S. states to establish CS education standards, make CS courses count towards high school graduation, etc. (see [details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                          |
+| Set up policies to support CS | <a href="https://advocacy.code.org" target="_blank">Policies changed in 44 U.S. states</a> to establish CS education standards, make CS courses count towards high school graduation, etc. ([details](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit))                                                                          |
 | Go global | Our courses are available in over 50 languages, used in 180+ countries.                                                                                                                                                                                                                                           |
 <center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
 
@@ -113,7 +113,7 @@ Code’s accomplishments (above) demonstrate our ability to leverage those dolla
 
 Please [contact us](/contact) if you, your company, or your foundation is interested in talking with our leadership team further to better understand our program and to explore options for investing in our work.
 
-Code.org IRS form 990 for [2014](/files/irs-form.pdf), [2015](/files/irs-form-2015.pdf), and [2016](/files/irs-form-2016.pdf).
+Code.org IRS form 990 for [2014](/files/irs-form.pdf), [2015](/files/irs-form-2015.pdf), [2016](/files/irs-form-2016.pdf), and [2017](/files/irs-form-2017.pdf).
 
 <hr/>
 
@@ -121,34 +121,9 @@ Code.org IRS form 990 for [2014](/files/irs-form.pdf), [2015](/files/irs-form-20
 ## Follow us
 [Sign up to receive status updates](http://go.pardot.com/l/153401/2018-01-12/k555vp) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=544354895612633&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like" data-href="http://www.facebook.com/Code.org" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-<br/><br/>
-<a href="https://twitter.com/codeorg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @codeorg</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<br/><br/>
-
-<script src="//platform.linkedin.com/in.js" type="text/javascript">
-  lang: en_US
-</script>
-<!--  FOLLOW BUTTONS FOR GOOGLE PLUS OR TUMBLR ETC
-<script type="IN/FollowCompany" data-id="3129360" data-counter="none"></script>
-<br/>
-<iframe  frameborder="0" border="0" scrolling="no" allowtransparency="true" height="25" width="116" src="https://platform.tumblr.com/v1/follow_button.html?button_type=2&tumblelog=codeorg&color_scheme=dark"></iframe>
-<br/>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/113408212816493509628" data-rel="publisher"></div>
--->
+<%= view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg" %>
 
 <hr/>
-
 
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
     <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />

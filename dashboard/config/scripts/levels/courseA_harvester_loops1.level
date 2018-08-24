@@ -36,7 +36,7 @@
     "nectar_goal": "4",
     "instructions": "Help the harvester pick all the corn!",
     "markdown_instructions": "Help the harvester pick all the corn!",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Once you move to some corn, use this block to pick it!\\n<xml><block type=\\\"harvester_corn\\\"/></xml>\",\"hint_id\":\"courseA_harvester_loops1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9ac28fa4f80eaea8ef8f6bb95b0322a6/courseA_harvester_loops1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Once you move to some corn, use this block to pick it!\\n\\n<xml><block type=\\\"harvester_corn\\\"/></xml>\",\"hint_id\":\"courseA_harvester_loops1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9ac28fa4f80eaea8ef8f6bb95b0322a6/courseA_harvester_loops1.mp3\"}]",
     "parent_level_id": 11169,
     "ideal": "7",
     "contained_level_names": null

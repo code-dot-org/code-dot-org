@@ -7,11 +7,11 @@ GIT
 
 GIT
   remote: https://github.com/code-dot-org/petit.git
-  revision: 5833ab516d2bab0829693fc9331bebe2a0be8de8
+  revision: bbe411d61d3f78fff59d9fa79d21c14b1c635750
   specs:
     petit (0.3.0)
       activesupport
-      aws-sdk (~> 2)
+      aws-sdk-dynamodb (~> 1)
       jsonapi-serializers
       rack-parser
       rake
@@ -63,6 +63,14 @@ GIT
     geocoder (1.3.7)
 
 GIT
+  remote: https://github.com/wjordan/gnista.git
+  revision: 573e51812da662a48d272d79e855737eee31bd7d
+  ref: embed
+  submodules: true
+  specs:
+    gnista (1.0.1)
+
+GIT
   remote: https://github.com/wjordan/haml.git
   revision: 22739a012fb34765d9d4b733f997862547a2b9cf
   ref: cdo
@@ -70,6 +78,14 @@ GIT
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
+
+GIT
+  remote: https://github.com/wjordan/i18n.git
+  revision: f366d62ad73bd0fee939ed9aa38ab88c9f94a8df
+  branch: cdo
+  specs:
+    i18n (1.0.1)
+      concurrent-ruby (~> 1.0)
 
 GIT
   remote: https://github.com/wjordan/image_optim.git
@@ -110,6 +126,17 @@ GIT
     ims-lti (1.1.12)
       builder
       oauth (>= 0.4.5, < 0.6)
+
+GIT
+  remote: https://github.com/wjordan/lograge.git
+  revision: 1ef23fb6fe78e73e782e6393477a9953fb3f4515
+  ref: debug_exceptions
+  specs:
+    lograge (0.10.0)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
 
 GIT
   remote: https://github.com/wjordan/omniauth-openid-connect.git
@@ -164,51 +191,52 @@ GEM
   specs:
     Ascii85 (1.0.2)
     StreetAddress (1.0.6)
-    acme-client (0.3.7)
+    acme-client (1.0.0)
       faraday (~> 0.9, >= 0.9.1)
-      json-jwt (~> 1.2, >= 1.2.3)
-    acmesmith (0.4.1)
-      acme-client
-      aws-sdk (> 2)
+    acmesmith (0.11.1)
+      acme-client (~> 1)
+      aws-sdk-acm
+      aws-sdk-route53
+      aws-sdk-s3
       thor
-    actioncable (5.0.6)
-      actionpack (= 5.0.6)
+    actioncable (5.0.7)
+      actionpack (= 5.0.7)
       nio4r (>= 1.2, < 3.0)
       websocket-driver (~> 0.6.1)
-    actionmailer (5.0.6)
-      actionpack (= 5.0.6)
-      actionview (= 5.0.6)
-      activejob (= 5.0.6)
+    actionmailer (5.0.7)
+      actionpack (= 5.0.7)
+      actionview (= 5.0.7)
+      activejob (= 5.0.7)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 2.0)
-    actionpack (5.0.6)
-      actionview (= 5.0.6)
-      activesupport (= 5.0.6)
+    actionpack (5.0.7)
+      actionview (= 5.0.7)
+      activesupport (= 5.0.7)
       rack (~> 2.0)
       rack-test (~> 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (5.0.6)
-      activesupport (= 5.0.6)
+    actionview (5.0.7)
+      activesupport (= 5.0.7)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
     active_record_query_trace (1.5.3)
-    activejob (5.0.6)
-      activesupport (= 5.0.6)
+    activejob (5.0.7)
+      activesupport (= 5.0.7)
       globalid (>= 0.3.6)
-    activemodel (5.0.6)
-      activesupport (= 5.0.6)
-    activerecord (5.0.6)
-      activemodel (= 5.0.6)
-      activesupport (= 5.0.6)
+    activemodel (5.0.7)
+      activesupport (= 5.0.7)
+    activerecord (5.0.7)
+      activemodel (= 5.0.7)
+      activesupport (= 5.0.7)
       arel (~> 7.0)
     activerecord-import (0.22.0)
       activerecord (>= 3.2)
-    activesupport (5.0.6)
+    activesupport (5.0.7)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (~> 0.7)
+      i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     acts_as_list (0.7.6)
@@ -227,14 +255,55 @@ GEM
     attr_required (1.0.1)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
-    aws-sdk (2.10.79)
-      aws-sdk-resources (= 2.10.79)
-    aws-sdk-core (2.10.79)
+    aws-eventstream (1.0.1)
+    aws-partitions (1.96.0)
+    aws-sdk-acm (1.9.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-cloudformation (1.6.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-cloudfront (1.4.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-cloudwatch (1.6.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-cloudwatchlogs (1.4.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-core (3.22.1)
+      aws-eventstream (~> 1.0)
+      aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.10.79)
-      aws-sdk-core (= 2.10.79)
-    aws-sigv4 (1.0.2)
+    aws-sdk-dynamodb (1.9.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-ec2 (1.40.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-firehose (1.4.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-kms (1.6.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-rds (1.23.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-route53 (1.10.1)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-s3 (1.17.0)
+      aws-sdk-core (~> 3, >= 3.21.2)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-sqs (1.4.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sigv4 (1.0.3)
+    backports (3.11.3)
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -245,6 +314,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
+    brakeman (4.3.1)
     builder (3.2.3)
     cancancan (1.15.0)
     capybara (2.17.0)
@@ -273,23 +343,28 @@ GEM
       railties (>= 3.0, < 6.0)
     coderay (1.1.1)
     colorize (0.8.1)
-    composite_primary_keys (9.0.5)
-      activerecord (~> 5.0.0)
+    composite_primary_keys (9.0.10)
+      activerecord (~> 5.0.0, >= 5.0.7)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    crass (1.0.3)
-    cucumber (2.4.0)
+    crass (1.0.4)
+    cucumber (3.1.1)
       builder (>= 2.1.2)
-      cucumber-core (~> 1.5.0)
+      cucumber-core (~> 3.1.0)
+      cucumber-expressions (~> 6.0.0)
       cucumber-wire (~> 0.0.1)
-      diff-lcs (>= 1.1.3)
-      gherkin (~> 4.0)
+      diff-lcs (~> 1.3)
+      gherkin (~> 5.1.0)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
-    cucumber-core (1.5.0)
-      gherkin (~> 4.0)
+    cucumber-core (3.1.0)
+      backports (>= 3.8.0)
+      cucumber-tag_expressions (~> 1.1.0)
+      gherkin (>= 5.0.0)
+    cucumber-expressions (6.0.1)
+    cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
     daemons (1.2.6)
     dalli (2.7.6)
@@ -307,7 +382,7 @@ GEM
     devise_invitable (1.6.0)
       actionmailer (>= 3.2.6)
       devise (>= 3.2.0)
-    diff-lcs (1.2.5)
+    diff-lcs (1.3)
     docile (1.1.5)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
@@ -346,7 +421,7 @@ GEM
       railties (>= 3.2, < 5.1)
     fspath (3.1.0)
     gemoji (2.1.0)
-    gherkin (4.0.0)
+    gherkin (5.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     google-api-client (0.10.3)
@@ -382,9 +457,11 @@ GEM
       rake (>= 10, < 13)
       rubocop (>= 0.50.0)
       sysexits (~> 1.1)
+    hammerspace (0.1.7)
+      gnista (~> 1.0.1)
     hashdiff (0.3.7)
     hashery (2.1.2)
-    hashie (3.4.4)
+    hashie (3.4.6)
     highline (1.6.21)
     honeybadger (3.3.0)
     html2haml (2.2.0)
@@ -399,15 +476,13 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.8.2.2)
     hurley (0.2)
-    i18n (0.9.5)
-      concurrent-ruby (~> 1.0)
     image_size (1.5.0)
     in_threads (1.4.0)
     io-like (0.3.0)
     jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
-    jmespath (1.3.1)
+    jmespath (1.4.0)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -428,7 +503,7 @@ GEM
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.10.0)
+    kgio (2.11.1)
     launchy (2.4.3)
       addressable (~> 2.3)
     le (2.7.2)
@@ -441,10 +516,6 @@ GEM
     logging (2.2.2)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
-    lograge (0.4.1)
-      actionpack (>= 4, < 5.1)
-      activesupport (>= 4, < 5.1)
-      railties (>= 4, < 5.1)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -452,6 +523,7 @@ GEM
       mini_mime (>= 0.1.1)
     marked-rails (0.3.2.0)
     memoist (0.15.0)
+    memory_profiler (0.9.10)
     metaclass (0.0.4)
     method_source (0.9.0)
     mime-types (3.1)
@@ -470,7 +542,7 @@ GEM
       ruby-progressbar
     mocha (1.1.0)
       metaclass (~> 0.0.1)
-    multi_json (1.12.1)
+    multi_json (1.13.1)
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -483,8 +555,8 @@ GEM
     net-ssh (3.2.0)
     netrc (0.11.0)
     newrelic_rpm (4.8.0.341)
-    nio4r (2.2.0)
-    nokogiri (1.8.2)
+    nio4r (2.3.1)
+    nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     oauth (0.5.1)
     oauth2 (1.2.0)
@@ -498,7 +570,7 @@ GEM
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
     oj (3.3.10)
-    omniauth (1.3.1)
+    omniauth (1.3.2)
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
     omniauth-facebook (4.0.0)
@@ -551,10 +623,10 @@ GEM
       multi_json (~> 1.0)
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
-    rack (2.0.4)
+    rack (2.0.5)
     rack-cache (1.6.1)
       rack (>= 0.4)
-    rack-mini-profiler (0.10.1)
+    rack-mini-profiler (1.0.0)
       rack (>= 1.2.0)
     rack-oauth2 (1.5.1)
       activesupport (>= 2.3)
@@ -574,17 +646,17 @@ GEM
       rack (>= 1.0)
     rack_csrf (2.5.0)
       rack (>= 1.1.0)
-    rails (5.0.6)
-      actioncable (= 5.0.6)
-      actionmailer (= 5.0.6)
-      actionpack (= 5.0.6)
-      actionview (= 5.0.6)
-      activejob (= 5.0.6)
-      activemodel (= 5.0.6)
-      activerecord (= 5.0.6)
-      activesupport (= 5.0.6)
+    rails (5.0.7)
+      actioncable (= 5.0.7)
+      actionmailer (= 5.0.7)
+      actionpack (= 5.0.7)
+      actionview (= 5.0.7)
+      activejob (= 5.0.7)
+      activemodel (= 5.0.7)
+      activerecord (= 5.0.7)
+      activesupport (= 5.0.7)
       bundler (>= 1.3.0)
-      railties (= 5.0.6)
+      railties (= 5.0.7)
       sprockets-rails (>= 2.0.0)
     rails-controller-testing (0.1.1)
       actionpack (~> 5.x)
@@ -593,11 +665,11 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.3)
-      loofah (~> 2.0)
-    railties (5.0.6)
-      actionpack (= 5.0.6)
-      activesupport (= 5.0.6)
+    rails-html-sanitizer (1.0.4)
+      loofah (~> 2.2, >= 2.2.2)
+    railties (5.0.7)
+      actionpack (= 5.0.7)
+      activesupport (= 5.0.7)
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
@@ -619,6 +691,8 @@ GEM
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
       uber (< 0.2.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
     rerun (0.13.0)
       listen (~> 3.0)
     responders (2.4.0)
@@ -787,7 +861,7 @@ PLATFORMS
 
 DEPENDENCIES
   StreetAddress
-  acmesmith
+  acmesmith (~> 0)
   active_model_serializers!
   active_record_query_trace
   activerecord-import
@@ -795,11 +869,24 @@ DEPENDENCIES
   addressable
   annotate
   auto_strip_attributes (~> 2.1)
-  aws-sdk (~> 2)
+  aws-sdk-acm (~> 1)
+  aws-sdk-cloudformation (~> 1)
+  aws-sdk-cloudfront (~> 1)
+  aws-sdk-cloudwatch (~> 1)
+  aws-sdk-cloudwatchlogs (~> 1)
+  aws-sdk-core (~> 3)
+  aws-sdk-dynamodb (~> 1)
+  aws-sdk-ec2 (~> 1)
+  aws-sdk-firehose (~> 1)
+  aws-sdk-rds (~> 1)
+  aws-sdk-route53 (~> 1)
+  aws-sdk-s3 (~> 1)
+  aws-sdk-sqs (~> 1)
   bcrypt
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
+  brakeman
   cancancan (~> 1.15.0)
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
@@ -807,7 +894,7 @@ DEPENDENCIES
   codemirror-rails
   colorize
   composite_primary_keys
-  cucumber (~> 2.4.0)
+  cucumber
   daemons
   dalli
   dalli-elasticache
@@ -825,14 +912,17 @@ DEPENDENCIES
   gctools!
   gemoji
   geocoder!
+  gnista!
   google-api-client
   google_drive
   haml!
   haml-rails
   haml_lint
+  hammerspace
   highline (~> 1.6.21)
   honeybadger
   httparty
+  i18n!
   image_optim!
   image_optim_pack (~> 0.5.0)!
   image_optim_rails!
@@ -846,9 +936,10 @@ DEPENDENCIES
   kaminari
   launchy
   le (~> 2.2)
-  lograge
+  lograge!
   loofah (~> 2.2.1)
   marked-rails
+  memory_profiler
   mini_magick
   minitest (~> 5.5)
   minitest-around

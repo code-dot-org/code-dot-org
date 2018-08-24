@@ -83,10 +83,19 @@ FactoryGirl.define do
         end
       end
       factory :facilitator do
+        transient do
+          course nil
+        end
+
         sequence(:name) {|n| "Facilitator Person #{n}"}
-        sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
-        after(:create) do |facilitator|
+        email {("Facilitator_#{(User.maximum(:id) || 0) + 1}@code.org")}
+
+        after(:create) do |facilitator, evaluator|
           facilitator.permission = UserPermission::FACILITATOR
+
+          if evaluator.course
+            create :pd_course_facilitator, facilitator: facilitator, course: evaluator.course
+          end
         end
       end
       factory :workshop_admin do
@@ -97,7 +106,7 @@ FactoryGirl.define do
       end
       factory :workshop_organizer do
         sequence(:name) {|n| "Workshop Organizer Person #{n}"}
-        sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
+        email {("WorkshopOrganizer_#{(User.maximum(:id) || 0) + 1}@code.org")}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -220,7 +229,14 @@ FactoryGirl.define do
       factory :student_in_picture_section do
         encrypted_password nil
         provider 'sponsored'
+        in_picture_section
+      end
 
+      factory :old_student do
+        birthday Time.zone.today - 30.years
+      end
+
+      trait :in_picture_section do
         after(:create) do |user|
           picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
           create(:follower, student_user: user, section: picture_section)
@@ -228,8 +244,17 @@ FactoryGirl.define do
         end
       end
 
-      factory :old_student do
-        birthday Time.zone.today - 30.years
+      trait :in_email_section do
+        after(:create) do |user|
+          section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
+      trait :without_email do
+        email ''
+        hashed_email nil
       end
     end
 
@@ -303,7 +328,12 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123'
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
         )
       end
     end
@@ -315,11 +345,18 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123'
+          authentication_id: 'abcd123',
+          data: {
+            oauth_token: 'some-google-token',
+            oauth_refresh_token: 'some-google-refresh-token',
+            oauth_token_expiration: '999999'
+          }.to_json
         )
         user.update!(
-          primary_authentication_option: ao,
-          provider: User::PROVIDER_MIGRATED
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
@@ -331,7 +368,31 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh'
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+      end
+    end
+
+    trait :with_migrated_clever_authentication_option do
+      after(:create) do |user|
+        ao = create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: '456efgh',
+          data: {
+            oauth_token: 'some-clever-token'
+          }.to_json
+        )
+        user.update!(
+          primary_contact_info: ao,
+          provider: User::PROVIDER_MIGRATED,
+          email: '',
+          hashed_email: nil
         )
       end
     end
@@ -358,10 +419,21 @@ FactoryGirl.define do
           authentication_id: user.hashed_email
         )
         user.update!(
-          primary_authentication_option: ao,
+          primary_contact_info: ao,
           provider: User::PROVIDER_MIGRATED,
           email: '',
           hashed_email: nil
+        )
+      end
+    end
+
+    trait :multi_auth_migrated do
+      after(:create) do |user|
+        user.update_attributes(
+          provider: 'migrated',
+          uid: '',
+          email: '',
+          hashed_email: ''
         )
       end
     end
@@ -414,6 +486,14 @@ FactoryGirl.define do
 
     factory :google_authentication_option do
       credential_type AuthenticationOption::GOOGLE
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
+
+    factory :facebook_authentication_option do
+      credential_type AuthenticationOption::FACEBOOK
       sequence(:email) {|n| "testuser#{n}@example.com.xx"}
       after(:create) do |auth|
         auth.authentication_id = auth.hashed_email
@@ -592,7 +672,7 @@ FactoryGirl.define do
     end
     name {"gamelab_block#{index}"}
     category 'custom'
-    level_type 'fakeLevelType'
+    pool 'fakeLevelType'
     config do
       {
         func: "block#{index}",
@@ -808,6 +888,10 @@ FactoryGirl.define do
     data "MyText"
     before :create do |peer_review|
       create :user_level, user: peer_review.submitter, level: peer_review.level
+    end
+
+    trait :reviewed do
+      reviewer {create :teacher}
     end
   end
 

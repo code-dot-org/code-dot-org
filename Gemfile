@@ -13,6 +13,12 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
 
+# Add CacheFile backend module.
+# Ref: https://github.com/svenfuchs/i18n/pull/423
+# Support numeric keys in Simple backend.
+# Ref: https://github.com/svenfuchs/i18n/pull/422
+gem 'i18n', github: 'wjordan/i18n', branch: 'cdo'
+
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470
 gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
@@ -47,9 +53,13 @@ gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
 
+# Allow profiling in all environments (including production). It will only be enabled when
+# CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
+gem 'memory_profiler'
+gem 'rack-mini-profiler'
+
 group :development do
   gem 'annotate'
-  gem 'rack-mini-profiler'
   gem 'ruby-progressbar', require: false
   gem 'thin'
   gem 'web-console'
@@ -74,6 +84,7 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
@@ -90,7 +101,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'chromedriver-helper', '~> 0.0.7'
-  gem 'cucumber', '~> 2.4.0'
+  gem 'cucumber'
   gem 'eyes_selenium', '3.14.2'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
@@ -213,7 +224,21 @@ gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
-gem 'aws-sdk', '~> 2'
+
+# AWS SDK and associated service APIs.
+gem 'aws-sdk-acm', '~> 1'
+gem 'aws-sdk-cloudformation', '~> 1'
+gem 'aws-sdk-cloudfront', '~> 1'
+gem 'aws-sdk-cloudwatch', '~> 1'
+gem 'aws-sdk-cloudwatchlogs', '~> 1'
+gem 'aws-sdk-core', '~> 3'
+gem 'aws-sdk-dynamodb', '~> 1'
+gem 'aws-sdk-ec2', '~> 1'
+gem 'aws-sdk-firehose', '~> 1'
+gem 'aws-sdk-rds', '~> 1'
+gem 'aws-sdk-route53', '~> 1'
+gem 'aws-sdk-s3', '~> 1'
+gem 'aws-sdk-sqs', '~> 1'
 
 # Lint tools
 group :development, :staging do
@@ -223,7 +248,8 @@ group :development, :staging do
 end
 
 # Reduce volume of production logs
-gem 'lograge'
+# Ref: https://github.com/roidrage/lograge/pull/252
+gem 'lograge', github: 'wjordan/lograge', ref: 'debug_exceptions'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
@@ -242,7 +268,7 @@ gem 'oj'
 gem 'rest-client', '~> 2.0'
 
 # Generate SSL certificates.
-gem 'acmesmith'
+gem 'acmesmith', '~> 0'
 
 gem 'addressable'
 gem 'bcrypt'
@@ -298,3 +324,6 @@ end
 
 gem 'activerecord-import'
 gem 'colorize'
+
+gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
+gem 'hammerspace'

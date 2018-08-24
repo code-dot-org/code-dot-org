@@ -1,7 +1,5 @@
 %h1 Choose a type of level to build
 
-= link_to 'Script and Level builder how to', 'https://docs.google.com/a/code.org/document/d/1HcYloRHibxk0Axnuw3A3w_Ht3AEmBHO0IUCaYFfs838/edit?usp=sharing'
-
 %h2 Blockly
 %ul
   %li= link_to 'Build a Flappy Level', new_level_path(type: 'Flappy')
@@ -14,8 +12,13 @@
     =link_to 'Build a Sprite Lab Level', new_level_path(type: 'GamelabJr')
     %ul
       %li
-        Sprite Lab is still pre-alpha and subject to change. Anything you
+        Sprite Lab is still in beta and subject to change. Anything you
         build could break or be deleted without notice.
+  %li
+    =link_to 'Build a Dance Lab Level', new_level_path(type: 'Dancelab')
+    %ul
+      %li
+        Hour of Code 2018. Edit #{link_to 'library', edit_library_path(id: 'DanceLab')}, #{link_to 'blocks', blocks_path}.
   %li= link_to 'Build a Minecraft Level', new_level_path(type: 'Craft')
   %li= link_to 'Build a Star Wars Grid Level', new_level_path(type: 'StarWarsGrid')
 
@@ -31,6 +34,7 @@
   %li= link_to 'Build an Evaluation Multi Level', new_level_path(type: 'EvaluationMulti')
   %li= link_to 'Build a Text Match Level (for open-ended responses use the new Free Response level type)', new_level_path(type: 'TextMatch')
   %li= link_to 'Build a Contract Match Level', new_level_path(type: 'ContractMatch')
+  (The following level types are en_us only!)
   %li= link_to 'Build a Markdown Level', new_level_path(type: 'External')
   %li= link_to 'Build a CurriculumReference Level', new_level_path(type: 'CurriculumReference')
   %li= link_to 'Build a Map Level', new_level_path(type: 'Map')

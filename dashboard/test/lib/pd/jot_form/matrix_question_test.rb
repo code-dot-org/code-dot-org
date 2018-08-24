@@ -24,7 +24,7 @@ module Pd
         assert_equal 'sampleMatrix', question.name
         assert_equal 'This is a matrix label', question.text
         assert_equal 1, question.order
-        assert_equal ANSWER_SELECT_VALUE, question.answer_type
+        assert_equal ANSWER_SINGLE_SELECT, question.answer_type
         assert_equal ['Strongly Agree', 'Agree', 'Neutral', 'Disagree', 'Strongly Disagree'], question.options
         assert_equal ['Question 1', 'Question 2'], question.sub_questions
       end
@@ -43,7 +43,7 @@ module Pd
         }
 
         assert_equal(
-          {0 => 2, 2 => 1},
+          {0 => 'Neutral', 2 => 'Agree'},
           question.get_value(answer)
         )
       end
@@ -81,12 +81,16 @@ module Pd
         expected_summary = {
           'sampleMatrix_0' => {
             text: 'How much do you agree or disagree with the following statements about this workshop? I learned something',
-            answer_type: ANSWER_SELECT_VALUE,
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(Disagree Neutral Agree),
+            parent: 'sampleMatrix',
             max_value: 3
           },
           'sampleMatrix_1' => {
             text: 'How much do you agree or disagree with the following statements about this workshop? It was a good use of time',
-            answer_type: ANSWER_SELECT_VALUE,
+            answer_type: ANSWER_SINGLE_SELECT,
+            options: %w(Disagree Neutral Agree),
+            parent: 'sampleMatrix',
             max_value: 3
           }
         }
@@ -112,8 +116,8 @@ module Pd
 
         assert_equal(
           {
-            'sampleMatrix_0' => 3,
-            'sampleMatrix_1' => 2
+            'sampleMatrix_0' => 'Agree',
+            'sampleMatrix_1' => 'Neutral'
           },
           question.process_answer(answer)
         )

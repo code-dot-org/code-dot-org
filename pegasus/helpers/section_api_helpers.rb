@@ -487,66 +487,6 @@ class DashboardSection
     nil
   end
 
-  def self.fetch_if_teacher(id, user_id)
-    return nil unless row = Dashboard.db[:sections].
-      select(*fields).
-      where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
-      first
-    section = new(row)
-    return section
-  end
-
-  def self.fetch_user_sections(user_id)
-    return if user_id.nil?
-
-    Dashboard.db[:sections].
-      join(:users, id: :user_id).
-      select(*fields).
-      where(sections__user_id: user_id, sections__deleted_at: nil).
-      map {|row| new(row).to_owner_hash}
-  end
-
-  def add_student(student)
-    student_id = student[:id] || DashboardStudent.create(student)
-    return nil unless student_id
-    return nil if student[:admin]
-
-    time_now = DateTime.now
-
-    existing_follower = Dashboard.db[:followers].where(section_id: @row[:id], student_user_id: student_id).first
-    if existing_follower
-      Dashboard.db[:followers].where(id: existing_follower[:id]).update(deleted_at: nil, updated_at: time_now)
-      return student_id
-    end
-
-    Dashboard.db[:followers].insert(
-      {
-        section_id: @row[:id],
-        student_user_id: student_id,
-        created_at: time_now,
-        updated_at: time_now
-      }
-    )
-    student_id
-  end
-
-  def add_students(students)
-    student_ids = students.map {|i| add_student(i)}.compact
-    DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
-    return student_ids
-  end
-
-  # @param student_id [Integer] The user ID of the student to unenroll.
-  # @return [Boolean] Whether the student's enrollment was removed.
-  def remove_student(student_id)
-    # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
-
-    rows_deleted = Dashboard.db[:followers].
-      where(section_id: @row[:id], student_user_id: student_id, deleted_at: nil).
-      update(deleted_at: DateTime.now)
-    rows_deleted > 0
-  end
-
   def member?(user_id)
     return teacher?(user_id) || student?(user_id)
   end

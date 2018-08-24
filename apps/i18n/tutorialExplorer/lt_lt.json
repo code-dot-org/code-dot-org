@@ -1,7 +1,7 @@
 {
   "startButton": "Pradėti",
   "filterOrgNames": "Autorių",
-  "filterOrgNamesAll": "All",
+  "filterOrgNamesAll": "",
   "filterSortBy": "Rikiuoti pagal",
   "filterSortByDisplayWeight": "Rekomenduojama",
   "filterSortByPopularityRank": "Populiariausi",

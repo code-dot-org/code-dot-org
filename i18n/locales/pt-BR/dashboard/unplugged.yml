@@ -113,7 +113,7 @@ pt-BR:
         title: Caça-sóis funcionais
         desc: Os alunos criam um algoritmo com variáveis e funções (trechos de código que você usa várias vezes) para criar caça-sóis usando fios e contas.
       SongwritingParameters:
-        title: Composição de música com parâmetros
+        title: Composição
         desc: Os alunos usam o conceito de refrão em uma música para aprender sobre a passagem de parâmetros (os quais personalizam uma função sem a necessidade de reescrevê-la).
       DiceRace:
         title: 'Algoritmos da via real: jogo de dados'
@@ -185,7 +185,6 @@ pt-BR:
         title: Atividade off-line
         desc: Hoje você irá aprender o que fazer se alguém estiver sendo mau online.
       deeper learning description:
-        title: ''
         desc: 'tradução pendente: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos da vida real: plante uma semente'
@@ -215,10 +214,10 @@ pt-BR:
         title: Pulseiras binárias
         desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
       courseD_unplugged_graphPaperProgramming:
-        title: Programação em Papel Quadriculado
+        title: Programação em papel quadriculado
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
       courseD_unplugged_relayProgramming:
-        title: Programação Relay
+        title: Programação por revezamento
         desc: Os alunos participam de uma corrida de revezamento na qual devem atravessar o pátio para escrever um algoritmo baseado em uma imagem em "papel quadriculado de programação". Eles só podem escrever uma instrução por vez, e, se houver um erro em algum lugar, eles têm que apagar e refazer os passos a partir daquele ponto.
       courseD_unplugged_conditionalsCards:
         title: Condicionais com cartas
@@ -239,7 +238,7 @@ pt-BR:
         title: Crowdsourcing
         desc: Os alunos usam o crowdsourcing, uma técnica comum de resolução de problemas em ciência da computação, para concluir uma tarefa juntos, em sala de aula, de maneira mais eficiente do que se um aluno tentasse resolver sozinho.
       courseE_unplugged_songwriting:
-        title: Composição de música com parâmetros
+        title: Composição
         desc: Os alunos usam o conceito de refrão em uma música para aprender sobre a passagem de parâmetros (os quais personalizam uma função sem a necessidade de reescrevê-la).
       courseF_unplugged_tangrams:
         title: Algoritmos do tangram
@@ -255,52 +254,15 @@ pt-BR:
         desc: 'Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  '
       swipeRightPassThrough:
         title: Sessão de cenários de recrutamento
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
+        desc: "# Sessão de Cenários de Recrutamento\\r\n\\r\n## Deslize para Direita para CS\\r\nPara esta sessão, nós usaremos uma ferramenta chamada \"Deslize para Direita para CS\", a qual foi desenvolvida pelos nossos parceiros no MIT. Em Deslize para Direita para CS, você irá avaliar alguns perfis de estudantes e considerar declarações específicas que você poderá usar para convencer ele ou ela a se inscrever no seu curso de Princípios de CS.\\r\n\\r\n### Como Funciona\\r\nQuando estiver jogando o jogo Deslize para Direita para CS você verá uma série de citações que poderá dizer para cada estudante. Você irá deslizar para direita em citações que você achar que seriam efetivas no convencimento dos estudantes para se inscrever no curso e deslizar para esquerda em citações que você achar que não serão efetivas. Durante a sessão nós discutiremos em grupo seus pensamentos sobre os tipos de citações que são mais efetivas em fazer um estudante se inscrever em CS, e você terá uma chance de ver como outras pessoas no seu workshop deslizaram em cada um dos argumentos. \\r\n\\r\n\\r\nQuando você clicar em continuar abaixo, nós vamos te mandar para o jogo, e passar adiante o endereço de email do Code.org com o qual você logou."
       swipeRightPassThrough-test123:
         title: Sessão de cenários de recrutamento
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
+        desc: "# Sessão de Cenários de Recrutamento\\r\n\\r\n## Deslize para Direita para CS\\r\nPara esta sessão, nós usaremos uma ferramenta chamada \"Deslize para Direita para CS\", a qual foi desenvolvida pelos nossos parceiros no MIT. Em Deslize para Direita para CS, você irá avaliar alguns perfis de estudantes e considerar declarações específicas que você poderá usar para convencer ele ou ela a se inscrever no seu curso de Princípios de CS.\\r\n\\r\n### Como Funciona\\r\nQuando estiver jogando o jogo Deslize para Direita para CS você verá uma série de citações que poderá dizer para cada estudante. Você irá deslizar para direita em citações que você achar que seriam efetivas no convencimento dos estudantes para se inscrever no curso e deslizar para esquerda em citações que você achar que não serão efetivas. Durante a sessão nós discutiremos em grupo seus pensamentos sobre os tipos de citações que são mais efetivas em fazer um estudante se inscrever em CS, e você terá uma chance de ver como outras pessoas no seu workshop deslizaram em cada um dos argumentos. \\r\n\\r\n\\r\nQuando você clicar em continuar abaixo, nós vamos te mandar para o jogo, e passar adiante o endereço de email do Code.org com o qual você logou."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
         title: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
         desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
       PlantASeed_2018:
         title: 'Algoritmos da vida real: plante uma semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental.
@@ -311,13 +273,13 @@ pt-BR:
         title: Navegando com segurança
         desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram como navegar em segurança pela Internet.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
+        title: Loops off-line
         desc: Nesta aula, você vai aprender mais sobre os laços!
       BigEvent_2018:
         title: O grande evento
         desc: Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.
       GraphPaperProgramming_2018:
-        title: Programação em Papel Quadriculado
+        title: Programação em papel quadriculado
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
       courseD_unplugged_digitalCitizenship_2018:
         title: Atividade off-line
@@ -345,13 +307,5 @@ pt-BR:
         desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
       MoveItMoveIt_2018:
         title: Criando caminhos
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
-        title: Programação Relay
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+        title: Programação por revezamento

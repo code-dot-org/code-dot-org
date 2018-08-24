@@ -6,16 +6,20 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp-18/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
 has_verified_resources true
 has_lesson_plan true
+script_announcements [{"notice"=>"Join our Teacher Insights Group!  ", "details"=>"Share your experiences and get support from other teachers and our team.", "link"=>"http://teacherblog.code.org/post/176699827304/join-the-codeorg-teacher-insight-group", "type"=>"bullhorn"}]
 family_name 'csp1'
 version_year '2018'
 is_stable true
+
+stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
+assessment 'csp-pre-survey-2017-levelgroup_2018'
 
 stage 'Personal Innovations', flex_category: 'csp1_1'
 named_level 'CSP U1L01 SFLP'
 named_level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything'
 variants
-  level 'csp_socialBelonging_control_2018', active: true, experiments: ["rene-control-control","rene-control-affirmation"], progression: 'Reflection: starting out in computer science'
-  level 'csp_socialBelonging_intervention_2018', experiments: ["rene-belonging-control","rene-belonging-affirmation"], progression: 'Reflection: starting out in computer science'
+  level 'csp_socialBelonging_control_2018', active: false, progression: 'Reflection: starting out in computer science'
+  level 'csp_socialBelonging_intervention_2018', progression: 'Reflection: starting out in computer science'
 endvariants
 
 stage 'Sending Binary Messages', flex_category: 'csp1_1'
@@ -120,8 +124,4 @@ stage 'Practice PT - The Internet and Society', flex_category: 'csp1_2'
 named_level 'CSP U1L14 SFLP'
 
 stage 'Unit 1 Chapter 2 Assessment', lockable: true, flex_category: 'csp1_2'
-variants
-  level 'csp_affirmation_control_2018', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
-  level 'csp_affirmation_intervention_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
-endvariants
 assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018'

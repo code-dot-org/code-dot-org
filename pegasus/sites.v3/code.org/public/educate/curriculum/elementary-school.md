@@ -13,48 +13,42 @@ Elementary School
 
 [/solid-block-header]
 
-<div class="col-40" style="padding-right: 20px; float: left;">
+Our Computer Science Fundamentals courses are designed to be flexible for your classroom. How you implement the course is up to you - teach computer science for your next science unit, add technology time to your schedule once a week, or go deeper with extension activities and projects!
+</p>
+New to teaching computer science? No worries! Most of our teachers have never taught computer science before. Try one of our courses yourself to learn ahead of your students. 
+
+<br>
+
+<div style="clear:both"></div>
+
+<div class="col-50" style="padding-right: 20px; float: left; margin-top: 10px">
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
 <% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
 <%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
-
 </div>
 
-Our Computer Science Fundamentals courses have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
+<div class="col-50" style="float: left; padding-right: 20px;">
 
-If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
-
-Our curriculum aligns to the [2017 Computer Science Teachers Association (CSTA) standards](https://www.csteachers.org/page/standards), as well as relevant national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. [View the full standards alignment document](https://curriculum.code.org/csf/standards/) for CS Fundamentals Courses A-F.
-
-Our elementary school curriculum can also help students succeed in other subjects as well; a recent [research study by Outlier Research & Evaluation](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) found that 3rd–5th-grade Code.org classrooms with resourceful teachers see higher scores on English, math, and science standardized tests.
-
-Our courses are available at [no cost](/commitment) for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values).
-
-<div style="clear:both"></div>
-
-# New to teaching computer science?
-
-<div class="col-40" style="float: left;">
-<img src="/images/fit-370/CSFimages/PD_Review_Cyan.png"/>
-</div>
-
-<div class="col-60" style="float: left; margin-top: 15px; padding-right: 20px;">
-
-No worries! Most of our teachers have never taught computer science before. 
-
-Try one of our courses yourself to learn ahead of your students. Sign up as a teacher to see the lesson plans, join the teacher forums, and get access to all the resources you need.
-
-We also offer high-quality, 1-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on intro to computer science, pedagogy, teacher dashboard, and strategies for teaching “unplugged” classroom activities. 
-
-<br>
-<a href="/professional-development-workshops"><button>Find a workshop</button></a>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/professional-development-workshops'), cta_text: 'Find a workshop', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Support for teachers', ages: 'Professional Learning Opportunities', description: "<p>We offer high-quality, one-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on and fun intro to computer science, pedagogy, the teacher dashboard, and strategies for teaching 'unplugged' classroom activities.
+</p>
+Tens of thousands of teachers have participated and rate our workshops 4.8 on a 5 point scale. The majority say, 'It's the best professional development I've ever attended.'"%>
 
 </div>
 
 <div style="clear:both"></div>
 
-<br>
+## It's easy to get started.
+
+The courses include daily lesson plans, student activities, and answer keys for teachers. You don't even need a user account to try it out. <a href="https://studio.code.org/users/sign_up", target=_"blank">Sign up</a> as a teacher to see the lesson plans, join the teacher forums, and get access to all the resources you need. Then, set up a classroom section to view your students' progress, manage their accounts, and print certificates they can bring home when they finish the course.
+
+## It's relevant.
+
+Our curriculum was created with the <a href="https://www.csteachers.org/page/standards", target=_"blank">2017 Computer Science Teachers Association (CSTA) standards</a> in mind, but also includes opportunities to support national <a href="http://www.corestandards.org/Math/",  target=_"blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target=_"blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target=_"blank">Science</a> standards. In fact, <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e", target=_"blank">a recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. <a href="https://curriculum.code.org/csf/standards/", target=_"blank">Click here</a> to see more details on standards. 
+
+## It's fun.
+
+Your students will create their own games, art, and digital stories that they can share - all while developing problem-solving, collaboration, persistence, and computational thinking skills. Do your students love to get up and move around? Half of the lessons are "unplugged" activites that teach computational thinking and digital citizenship skills without computers.
 
 [solid-block-header]
 
@@ -66,9 +60,9 @@ Courses
 
 <img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
 
-For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download the 2018 version of the [curriculum guide for Courses A-F here](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf).
+For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). Explore the lesson plans and download the 2018 version of the <a href="https://curriculum.code.org/csf-18/", target=_"blank">curriculum guide for Courses A-F here</a>.
 
-If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our [Transition Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing).
+If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our <a href="https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing", target=_"blank">Transition Guide</a>.
 
 # Courses A-F
 
@@ -109,7 +103,7 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursef'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursef'), cta_text: 'View course', lesson_plans: curriculum_url('csf/coursef'), img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Recommended for 5th grade', description: 'Students review the use of loops, events, functions, and conditionals before learning about variables and for loops. They will investigate helpful problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
 
 [/col-50]
 
@@ -126,7 +120,7 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat concepts for students. This is also our recommended option for students studying computer science on their own, outside of a classroom.
+CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat concepts for students unnecessarily. This is also our recommended option for students studying computer science on their own, outside of a classroom.
 
 [/col-50]
 

@@ -37,7 +37,6 @@ zh-TW:
   previous_page: 上一頁
   next_page: 下一頁
   next_resource: 下一個資源
-  done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: "OK！"
   heading_x_of_y: "%{heading} （%{x} / %{y} 頁）"
@@ -60,7 +59,7 @@ zh-TW:
   courses_page:
     title_student: "在 Code Studio 上學習"
     title_teacher: "使用 Code Studio 教學"
-  unplugged_activity: '不插電活動'
+  unplugged_activity: '不插電的活動'
   of: "／"
   more: "更多"
   less: "更少"
@@ -85,8 +84,7 @@ zh-TW:
     facebook: 'Facebook'
     windowslive: '微軟帳戶'
     clever: 'Clever 帳號'
-    powerschool: 'Powerschool Account'
-    forgot_password: '忘了密碼？'
+    forgot_password: '忘記了您的密碼嗎？'
     need_confirmation: "沒有收到確認說明嗎？"
     need_unlock: "沒有收到解鎖說明嗎？"
     not_linked: "抱歉，你的 Code.org 帳戶未關聯到你的 %{provider}。請在下方輸入密碼後才能登入。"
@@ -115,14 +113,12 @@ zh-TW:
     valid_password: "密碼有效！"
     invalid_password: "密碼必須要 6 個字元以上"
     mismatch_password: "你輸入的兩次密碼不一致"
-    agree_tos_privacy: "I agree to the <a href='http://code.org/tos'>Terms of Service</a> and <a href='http://code.org/privacy'>Privacy Policy</a>."
     under_13_consent: "如果我未滿 13 歲，我確認已獲得我的父母或法定監護人的同意來使用 Code.org 服務。"
     agree_us_website: "我同意使用位於美國境內的網站。"
     my_data_to_us: "我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。"
     student_terms: "我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a href='http://code.org/privacy'>隱私權政策</a>。"
     teacher_terms: "我同意 Code.org 的服務條款約束。有關隱私的詳細資訊，請參閱我們的 <a href='Http://code.org/privacy'> 隱私政策</a>。"
     additional_information: "我們還需要一些其他資訊來完成你的註冊。"
-    user_type_button: "Update Account Type"
     user_type_label: "帳戶類型"
     user_type_teacher: "教師"
     user_type_student: "學生"
@@ -130,10 +126,9 @@ zh-TW:
     accept_terms: "你必須同意以建立一個帳戶"
     error: "發生錯誤。"
     email_preference_question: "我們是否可以透過電子郵件向您發送有關我們課程、當地機會或其它計算機科學資訊的一些更新？"
-    email_preference_privacy: "(See our privacy policy)"
+    email_preference_privacy: "(請參閱我們的隱私政策)"
     email_preference_yes: "是"
     email_preference_no: "否"
-    email_preference_required: "You must specify an email preference."
   school_info:
     title: '學校資訊（非必填）'
     school_country: '學校所屬國家'
@@ -179,10 +174,9 @@ zh-TW:
     reset_form:
       title: '忘記了您的密碼嗎？'
       instructions: "請在下方輸入您的電子郵件，我們發送重設密碼的指引給您"
-      email: '電子信箱地址'
+      email: '電子信箱'
       submit: '提交'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: '你註冊用的信箱似乎無效，請電郵 support@code.org 以取得密碼恢復的連結。'
     change_form:
       title: '更改您的密碼'
@@ -263,7 +257,6 @@ zh-TW:
       free_play:
         playlab: '製作一個 Play Lab App'
         artist: '畫些什麼'
-        calculate: 'Calculate something'
         applab: '製作一個 App Lab app'
         gamelab: '製作遊戲實驗室專案'
         weblab: '製作網路實驗室 (測試版) 專案'
@@ -360,7 +353,6 @@ zh-TW:
     email_confirm_needed_required: '您的信箱 %{email} 尚未驗證：'
     email_confirm_wrong_email: '（錯誤的電子信箱？）'
     email_resend_confirm: '重新發送確認說明'
-    new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "（如果你不想變更它就保留空白）"
     current_password_hint: '（我們需要你現在的密碼以確認變更）'
     delete: '刪除您的帳號'
@@ -380,7 +372,6 @@ zh-TW:
     enter_new_login_info: '輸入你新的登入資訊'
     confirm_secret_words: '為了確認是你本人請輸入目前的通關密語'
     enter_parent_email: "輸入你的家長或監護人的電子郵件位址 (用於密碼恢復)"
-    update: "Update Account"
   user_level:
     completed: '已完成'
     tried: '已體驗'
@@ -399,8 +390,8 @@ zh-TW:
     teacher_student_count_one: 您有 %{count} 個學生。
     teacher_student_count: 您有 %{count} 個學生。
     teacher_averages: 你的學生平均下來獲得了 %{trophy_average} / %{trophy_max} 的概念通（Concept Mastery）獎盃。
-    teacher_print_certificates: '為完成此課程的所有學生列印證書'
-    teacher_read_blog: 在 Educator Blog 上閱讀關於我們的新消息和教材更新訊息
+    teacher_print_certificates: '為完成此課程的學生列印證書'
+    teacher_read_blog: 在Educator Blog閱讀我們的最新資訊
     classroom: 你的教室
     student_progress: 你的學習進度
     student_stats: 你已經獲得了 %{trophy_count}/%{trophy_max} 的「概念通」獎盃了。
@@ -415,7 +406,7 @@ zh-TW:
     trynow: '快來試試'
     add_hint_help: '請協助我們添加小提示到 Code.org 的教程'
     20hour_overview: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
-    test_videos_help: '在學校試試我們的新影片播放器'
+    test_videos_help: '在你的學校測試我們新的影片播放器'
     try_beta_courses: '新課程！試試我們為 K-5 學生設計的課程（測試版）。'
     use_as_teacher: '以教師身份使用此站'
     heading_hoc2014: "<h2>一小時玩程式</h2> - <h1>所有年齡</h1>"
@@ -430,7 +421,7 @@ zh-TW:
     announcement_title: "公告"
     announcement_message_fall2016_features: "我們花了整個夏天設法將來各地的建議功能實踐，從現在起，你可以<a href=\"%{pp_url}\" target=\"_blank\">追蹤學生們的進度</a>，即使他們在同一台設備編程。你可以在計算機科學原理課程中使用<a href=\"%{csp_widgets_url}\" target=\"_blank\">最棒的互動工具</a>。同時，爲了鼓勵動手實驗，你的學生們可以在他們的工作區上<a href=\"%{unused_code_url}\" target=\"_blank\">保存未使用的代碼</a>。檢視所有的新功能，並且讓我們瞭解你的想法。"
     announcement_csp_widgets_message: "想找些有趣的方式來指導你的班級嗎？像是網際網路是怎麼運作的、讓資料變得安全的密碼學…我們已經從我們的計算機科學原理課程中使用了最棒的互動工具，並釋出了獨立的小工具方便你隨時使用！"
-    announcement_learn_more_button: "繼續學習"
+    announcement_learn_more_button: "進一步了解"
     announcement_try_now_button: "快來試試"
     announcement_host_an_hour_button: "舉辦一小時活動"
     announcement_watch_video_button: "觀看影片"
@@ -452,8 +443,6 @@ zh-TW:
     announcement_apcsp_recruitment3: "今年的 AP CS Principles考試有望打破記錄。參與 AP 電腦科學考試的學生中可能有極大轉變的多樣性，但我們需要您的幫助。鼓勵每個 CS Principles 學生參與 AP CSP 考試且你將可以贏得 <a href='%{gift_url}' target='_blank'> 一張禮品卡、 一台筆記本電腦或其他很酷的獎品</a> ！分享 <a href='%{video_url}' target='_blank'> 這部影片</a> 所以你的學生可以聽到來自全國各地參加考試的同年紀學生。"
     announcement_csp_deadline: "最後呼籲高中教師 ！請成為你的學校電腦科學領域的表率，使用我們高品質的專業學習程式，<strong>絕對不對你或你的學校收費</strong>。4 月 14 日截止申請。"
     announcement_applab_export: "應用實驗室，即我們的網頁式程式設計環境，現在支援匯出你的程式碼 ！你可以拖放 JavaScript 積木開始構建應用程式與，然後匯出以便在你所選擇的任何專業的開發環境中繼續編輯程式碼。"
-    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
-    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning."
   move_students:
     new_section_dne: "抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。"
     section_code_cant_be_current_section: "目前的學習小組不可以和新的學習小組相同。"
@@ -462,7 +451,6 @@ zh-TW:
     student_not_found: "無法找到其中的一個或多個學生。"
     all_students_must_be_in_current_section: "所有的學生都必須在你的學習小組中。"
     already_enrolled_in_new_section: "你無法移動這些學生，因為這個教師已經把他們放到另一個學習小組了。"
-    third_party_login: "You cannot move students to a section that is synced with a third party tool."
   share:
     title: "在 Code Studio 上學習"
     description: "任何人都可以學習計算機科學，用程式來建立遊戲、應用程式及藝術作品。"
@@ -470,8 +458,6 @@ zh-TW:
   gender:
     male: '男性'
     female: '女性'
-    non_binary: 'Non-binary'
-    not_listed: 'Preferred term not listed'
     none: '不想回答'
   user_type:
     student: '學生'
@@ -501,7 +487,7 @@ zh-TW:
     how_it_works: '它是如何運作的（檢視程式碼）'
     try_hour_of_code: '試試「一小時玩程式」！'
   reference_area:
-    title: '需要幫忙嗎？'
+    title: '需要幫忙？'
     subtitle: '看看這些影片和提示'
     teacher: '觀看解決方案'
     teacher_no_solution: '停止觀看解法'
@@ -519,7 +505,7 @@ zh-TW:
   compatibility:
     upgrade:
       unsupported_message: "您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}', target='_blank'>支援的瀏覽器版本之一</a>。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。"
-      link: "繼續學習"
+      link: "進一步了解"
       applab_unsupported_tablet: "在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       gamelab_unsupported_tablet: "在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       weblab_unsupported_browser: "很抱歉，在這個瀏覽器上讀取 Web Lab 時發生了一些問題，請換個瀏覽器試試，造成不便請見諒。"
@@ -539,7 +525,7 @@ zh-TW:
     bounce_og_title: "看看我的彈跳遊戲"
     flappy_og_title: "看看我的像素鳥遊戲"
     studio_og_title: "看看我的 Play Lab App"
-    check_out_what_i_made: "看看我的作品"
+    check_out_what_i_made: "看看我做的"
     og_description: "我在 Code.org 自己寫了個程式"
     phone_number_not_allowed: "看起來裡面有一組電話號碼。請試著改變文字。"
     address_not_allowed: "看起來裡面有一組地址。請試著改變文字。"
@@ -574,22 +560,18 @@ zh-TW:
       body: '這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。'
       body_short: '在速成課程的課程 2-4 中學習基本的計算機科學。'
     hoc2014:
-      try_new_tutorial: '試試我們新的一小時玩程式教程（測試版）'
+      try_new_tutorial: '試試我們新的、測試的一小時玩程式課程'
       try_frozen: '來自冰雪奇緣的安娜及艾莎。'
     gallery:
       title: "藝廊"
       body: "觀看由用戶建立的應用程式及藝術畫作"
     gamelab:
       title: "Game Lab"
-      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "年齡 13+"
       cta: "學習如何做"
     hoc-encryption:
       title: "簡單加密"
-      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
-      title: "Web Lab (beta)"
-      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "年齡 13+"
       cta: "學習如何做"
     frozen:
@@ -597,23 +579,16 @@ zh-TW:
     starwars:
       title: "星際大戰"
     infinity:
-      title: "迪士尼無限 Play Lab"
-      body: "用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。"
+      title: "Infinity Play Lab"
+      body: "用 Play Lab 來創造一個由《迪士尼無限世界》中的角色所主演的故事或遊戲。"
     minecraft:
       title: "Minecraft"
-      body: "從代碼的角度來探索 Minecraft 世界。"
+      body: "透過程式碼探索 Minecraft 世界。"
     minecraft2016:
       title: "Minecraft"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
     hero:
       title: "Minecraft"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
-    sports:
-      title: "Sports"
-      body: "Make a basketball game or mix and match across sports."
-    text-compression:
-      title: "Text Compression"
-      body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."
     unplugged:
       title: "不插電的教學活動"
       audience: "年齡 4+"
@@ -624,7 +599,6 @@ zh-TW:
       body: "在這個「不插電」活動中使用一副撲克牌學習演算法和條件判斷式"
     widgets:
       title: "視窗元件"
-      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
       audience: "14 歲以上"
       cta: "學習如何做"
   gallery:
@@ -656,22 +630,17 @@ zh-TW:
     wrong_body: "答錯囉！別氣餒，再接再厲！"
     correct_title: "正確"
     correct_body: "答對囉，太棒啦。"
-    toofew_title: "Too few answers."
-    toofew_body: "Please select two answers before submitting."
   multi-submittable:
     wrong_title: "謝謝"
     wrong_body: "感謝你提交這份答案。"
     correct_title: "謝謝"
     correct_body: "感謝你提交這份答案。"
-    toofew_title: "Too few answers."
-    toofew_body: "Please select two answers before submitting."
   level_group:
     wrong_title: "謝謝"
     wrong_body: "感謝你提交這份答案。"
     correct_title: "謝謝"
     correct_body: "感謝你提交這份答案。"
     hide_survey_last_answer: "這個調查是匿名的。請造訪教師控制台以匯整調查結果。注意，只有在至少五個學生提交了調查後，報告結果才會可見。"
-    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "謝謝"
     wrong_body: "感謝你提交這份答案。"
@@ -738,29 +707,21 @@ zh-TW:
     title: "非必填：幫助我們追蹤我們的進展以改善在計算機科學的多樣性"
     message: "請告訴我們你的種族（選擇）"
     races:
-      - 
-        white: "白人"
-      - 
-        black: "黑人/非裔美國人"
-      - 
-        hispanic: "西班牙裔或拉丁裔"
-      - 
-        asian: "亞裔"
-      - 
-        hawaiian: "夏威夷原住民或其他太平洋群島原住民"
-      - 
-        american_indian: "美國印地安人/阿拉斯加原住民"
-      - 
-        other: "其它"
-      - 
-        opt_out: "不想說"
+      white: "白人"
+      black: "黑人/非裔美國人"
+      hispanic: "西班牙裔或拉丁裔"
+      asian: "亞裔"
+      hawaiian: "夏威夷原住民或其他太平洋群島原住民"
+      american_indian: "美國印地安人/阿拉斯加原住民"
+      other: "其它"
+      opt_out: "不想說"
     submit: "提交"
     decline: "關閉"
   zendesk_too_young_message: '抱歉，年紀較小的用戶不能登入到我們的站台，詳情請參見<a href="http://support.code.org">support.code.org</a>，你可以請你的家長或是老師幫忙。'
   progress:
     not_started: 未開始
     in_progress: 正在進行
-    completed_too_many_blocks: 完成，過多積木
+    completed_too_many_blocks: 已完成，但用了太多的積木
     completed_perfect: 完成，非常完美
     furthest_level_attempted: 最高級別嘗試
     assessment: 評量
@@ -850,22 +811,11 @@ zh-TW:
     instructor_feedback: '教師回饋'
     peer_feedback: '同伴反饋'
     outdated: '這是先前版本的回饋內容'
-    review_in_progress: 'Ready to review'
-    link_to_submitted_review: 'Link to submitted review'
-    reviews_unavailable: 'Reviews unavailable at this time'
-    review_count: 'You must complete %{review_count} reviews for this unit'
-    must_be_enrolled: 'You must be enrolled in this course to review peers'
-    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
-    review_submitted: 'Your peer review was submitted'
-    review_new_submission: 'Review a new submission'
   flex_category:
     required: '概覽'
     content: '內容'
     practice: '老師的做法'
     peer_review: '同儕審查'
-    ramp_up: 'Ramp-Up'
-    end_of_course_project: 'End of Course Project'
-    optional_stages: 'Optional Stages'
     main_course: '主要課程'
     extra_course_content: '額外的課程內容'
     csf_e_1: '升至課程 E (可選擇的)'
@@ -884,25 +834,9 @@ zh-TW:
     csd5_2: '第 2 章：解決數據問題'
     csd6_1: '第 1 章：硬體輸出'
     csd6_2: '第 2 章：硬體輸入'
-    csd_survey: 'Post-Course Survey'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
     cspSurvey: '問卷'
     cspAssessment: '章節測驗'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
     csp2_1_2018: '單元 2：數位資訊'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
     dlp: '反射提示'
   external_links:
     disclaimer: 免責聲明
@@ -962,59 +896,38 @@ zh-TW:
     download_in_Vietnamese: '下載 Vietnamese 版：'
     windows: 'Windows（64 位元）'
     mac: 'Mac OS X'
-  plc:
-    preview_assignments:
-      content_focus_header: 'Content Focus Area'
-      practice_focus_header: 'Practice Focus Area'
-      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
-      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
-      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
-      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
-      confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: '此階段內容無法觀看，因為這個階段目前已上鎖。當老師設定的時間到了或是審閱了你的答案後，這個階段就會解鎖。'
   hidden_stage: "你的老師沒想到你會在這，問問你的老師你該上哪堂課。"
-  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
   return_unit_overview: '移至單元概覽'
   return_course_overview: '移至課程概覽'
   view_all_units: '查看所有單元'
   pd:
-    survey:
-      number_teachers: 'Number of attending teachers'
-      response_count: 'Number of survey responses'
-      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
-      teacher_engagement: 'Teacher Engagement (out of 5)'
-      overall_success: 'Overall Success Score (out of 6)'
-      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
-      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
-      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
-      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
-      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
-      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
-      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
-      how_much_participated_s: 'During your workshop, how much did you participate?'
-      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
-      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
-      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
-      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
-      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
-      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
-      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
-      would_recommend_s: 'I would recommend this professional development to others.'
-      part_of_community_s: 'I feel like I am a part of a community of teachers.'
-      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
-      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
-      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
-      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
-      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+    form_labels:
+      email: '電子信箱'
+      school_name: '學校名稱'
+      school_city: '學校所在城市'
+      school_country: '學校所屬國家'
+    form_entries:
+      gender:
+        male: '男性'
+        female: '女性'
+        none: '不想回答'
+      subjects:
+        cs: '計算機科學'
+        math: '運算'
+        science: '科學'
+        la: '語言藝術'
+      resources:
+        kodable: 'Kodable'
+      robotics:
+        kodable: 'Kodable'
+      workshop_course:
+        csp: 'CS 原理'
+      email_opt_in:
+        opt_in_yes: '是'
+        opt_in_no: '否'
   cookie_banner:
-    message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
-    more_information: "See Code.org's Privacy Policy."
     accept: '我同意'
   gdpr_dialog:
-    heading: 'Do you agree to using a web site based in the United States?'
-    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-    link_intro: 'For details see our'
-    privacy_policy: 'privacy policy'
-    logout: 'Logout'
+    message: '您在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。'
     yes: '是'

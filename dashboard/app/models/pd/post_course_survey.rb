@@ -9,6 +9,8 @@
 #  year          :string(255)
 #  user_id       :integer          not null
 #  course        :string(255)      not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
 #
 # Indexes
 #
@@ -62,23 +64,15 @@ module Pd
       [form_id]
     end
 
-    def self.response_exists?(user_id:, course:)
-      exists?(
-        user_id: user_id,
-        form_id: form_id,
-        year: CURRENT_YEAR,
-        course: course
-      )
+    def self.unique_attributes
+      [:user_id, :course]
     end
 
-    def self.create_placeholder!(user_id:, course:, submission_id:)
-      find_or_create_by!(
-        user_id: user_id,
-        form_id: form_id,
+    def self.static_attribute_values
+      {
         year: CURRENT_YEAR,
-        course: course,
-        submission_id: submission_id
-      )
+        form_id: form_id
+      }
     end
   end
 end

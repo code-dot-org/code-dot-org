@@ -3,11 +3,11 @@ es:
   data:
     game:
       name:
-        Unplug1: Introducción al Arte de las Ciencias de la Computación
-        Maze: El laberinto
+        Unplug1: Introducción a la informática
+        Maze: El Laberinto
         Multi: Materias de elección múltiple
         Unplug2: Pensamiento computacional
-        Unplug3: Programación de hoja cuadriculada
+        Unplug3: Programación en papel cuadriculado
         Artist: El artista
         Unplug4: Algoritmos
         Artist2: El artista 2
@@ -15,11 +15,11 @@ es:
         Farmer: El granjero
         Unplug6: Condicionales
         Artist3: El artista 3
-        Unplug7: Escribir canciones
+        Unplug7: Escritura de la canción
         Farmer2: El granjero 2
-        Unplug8: Liberación abstracta
+        Unplug8: Abstracción
         Artist4: El artista 4
-        Unplug9: Programación bajo presión
+        Unplug9: Programación de Relevos
         Farmer3: El granjero 3
         Unplug10: Internet
         Artist5: El artista 5
@@ -53,7 +53,7 @@ es:
         loop_until: Bloque repetir hasta que
         loop_while: Bloque mientras
         loop_for: Bloque contador
-        function: Funciones
+        function: funciones
         parameters: Funciones con parámetros
     level:
       instructions:
@@ -290,8 +290,8 @@ es:
           dejar mi campo plano?"
         maze_karel_debug_function_3: 'Edita este programa para que pueda eliminar
           todas las pilas de mi campo. '
-        turtle_5_1: Intenta ejecutar este programa y haz cambios para ver que ocurre.
-          ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo con algo totalmente
+        turtle_5_1: Intente ejecutar este programa y haga cambios para ver que ocurre.
+          ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
           diferente)
         turtle_5_2: Intente ejecutar este programa y haga cambios para ver que ocurre.
           ¿Puede averiguar cómo funciona? (o elimínalo y reemplazalo con algo totalmente
@@ -582,7 +582,7 @@ es:
         C2_graph_paper: Programación de hoja cuadriculada
         C2_conditionals_with_cards: Condicionales
         C2_binary_bracelets: Pulseras Binarias
-        C2_relay_programming: Programación bajo presión
+        C2_relay_programming: Programación de Relevos
         C2_paper_airplanes: Aviones de Papel
         C2_digital_footprint: Tu huella Digital
         C2_digital_footprint_v2: Tu huella Digital
@@ -605,7 +605,7 @@ es:
         C3_functional_suncatchers: Tragaluces Funcionales
         C3_songwriting_with_parameters: Composición Musical con Parámetros
         C4_intro: Introducción
-        C4_loops_zombie: Bucles
+        C4_loops_zombie: vuelta
         C4_bee_conditional: Condiciones de la Abeja
         C4_variables_artist: Variables - Artista
         C4_variables_playlab: Variables - Laboratorio de juego
@@ -623,16 +623,13 @@ es:
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
-        CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
+        CSF_artist_angles: Ángulos en Artist
         CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
           coleccionista'
-        CSF_collector_repeat_loops: Collector Repeat Loops
+        CSF_collector_repeat_loops: Bucles de Repetición en Collector
         CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación:
           El coleccionista'
         CSF_create_functions: Crear funciones
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Importancia de las Ciencias de la Computación
         CSF_maze_intro_k1_blocks: Introducción a Code Studio
         CSF_maze_intro_text_blocks: Introducción a Code Studio
@@ -669,53 +666,18 @@ es:
           televisión y películas?"
         csd_external_waze_data: "¿Por qué hay tantos usuarios obsesionados con Waze?"
         csd_gamelab_animation_tab: La pestaña de animación
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocidad
         csd_weblab_intro_1: Introducción a Laboratorio Web - Parte 1
-        csd_weblab_intro_2: Introducción a Laboratorio Web - Part 2
+        csd_weblab_intro_2: Introducción al Laboratorio Web - Parte 2
         csd_weblab_css_1: Introducción a CSS - Parte 1
         csd_weblab_css_2: Introducción a CSS - Parte 2
         csd_weblab_intro_3: Introducción a Laboratorio Web - Part 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introducción a las Funciones
         csp_applab_functions_parameters: Funciones con parámetros
-        csp_applab_loops: Bucles
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
+        csp_applab_loops: vuelta
         csp_concept_rgb: Un poco más de píxeles
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
+        csp_cs_is_changing_everything: Las Ciencias de la Computación están cambiando
+          todo
         csp_pixelation_color_1: Reproductor Color pixelación - parte 1
         csp_pixelation_color_2: Reproductor Color pixelación - parte 2
         csp_pixelation_color_3: Reproductor Color pixelación - parte 3
@@ -723,9 +685,6 @@ es:
         csp_U1L14_tipstricks: Unidad 1 lección 14 consejos para profesor & trucos
         csp_textcompression: Widget de compresión de texto
         csp_textcompression_new: Widget de compresión de texto
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS en álgebra - introducción
         alg_2_eval_block: CS en álgebra - bloques de evaluación
         alg_3_pemdas: CS en álgebra - orden de operaciones
@@ -801,26 +760,24 @@ es:
         applab_intro_sounds: App Lab - Imágenes y sonidos
         applab_intro_designmode: App Lab - Modo de diseño
         applab_intro_share: App Lab - Comparte tu aplicación
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
+        csd_applab_arrays: Introducción a los Arrays
+        CSF_skinOverview_Harvester: El Recolector
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
-        CSF_loops_AB: Bucles
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        CSF_harvester_skinOverview_K-1: El Recolector
+        CSF_scrat_loops_K1: Bucles en la Edad del Hielo
+        CSF_scrat_loops_CF: Bucles en la Edad del Hielo
+        CSF_if_allskins: El Bloque If
+        CSF_ifelse_allskins: Usando Bloques "If/Else"
+        CSF_ifelseifelse_allskins: Usando Bloques "If/ElseIf/Else"
+        CSF_loops_AB: vuelta
+        csd_gamelab_booleans: Expresiones Booleanas
+        csd_gamelab_conditional_statements: Sentencias Condicionales
+        csd_gamelab_if_else: Sentencias If/Else
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
-        run: Haz clic en "Ejecutar" para probar tu programa
+        run: Dale a "Ejecutar" para probar el programa.
         watch_again: Haz clic aquí para ver el vídeo otra vez
         gray_block_explanation: Los bloques que están de color gris no se pueden eliminar.
           ¿Puedes resolver el rompecabezas de todas formas?

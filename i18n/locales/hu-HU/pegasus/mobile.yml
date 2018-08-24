@@ -26,14 +26,9 @@
   twentyhours_heading: "Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat"
   twentyhours_text: "Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról és a programozási koncepciókról a következő tanfolyamon."
   og_title: 'Minden gyermek megérdemli lehetőséget'
-  og_title_soon: "The Hour of Code is coming"
-  og_title_here: "The Hour of Code is here!"
   og_description: "Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon."
-  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "A kódolás órája elérkezett"
   csedweek_og_description: "2017. december 4-10. A számítás tudomány minden diák számára fontos tudást ad."
-  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
-  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Csatlakozz a <a href=\"http://hourofcode.com\"> Kódolás Órájához</a><br/>2014. December 8-14.<br/>"
   hoc2014_students: "Tanuló"
   hoc2014_try: "Próbáld ki"
@@ -70,29 +65,12 @@
   congratulations: "Gratulálok!"
   congratulations_on_completing_hoc: "Gratulálunk egy Kód Órája befejezéséhez"
   congratulations_volunteer: 'Gratulálunk, most, hogy kipróbáltad a Kódolás óráját, <a href="https://code.org/volunteer">regisztrálj be egy osztállyal</a> és segíts a tanulóknak egy órán át a kódolásról tanulni!'
-  congratulations_on_completing_course1: "Gratulálok, teljesítetted az 1. Szintet!"
-  congratulations_on_completing_course2: "Gratulálok, teljesítetted a 2. Szintet"
-  congratulations_on_completing_course3: "Gratulálok, teljesítetted a 3. Szintet"
-  congratulations_on_completing_course4: "Gratulálok, teljesítetted a 4. Szintet"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
-  congratulations_on_completing_accelerated: "Gratulálok, teljesítetted a Nehezített szintet"
   congrats_next_tutorials_title: "Ezután próbálja meg ezeket a tanfolyamokat"
   congrats_next_tutorials_desc: "Próbáld ki ezeket a rövidebb, egy órás gyakorlatokat, vagy próbáld ki <a href=\"%{current_path}/next\">egy partnerünk gyakorlatát</a>."
   get_a_certificate_of_achievement: "Kapjon egy bízonyítványt teljesítményéért"
   view_course: "Tanfolyam megtekintése"
   view_unit: "Egység megtekintése"
   make_app: "Egy alkalmazás létrehozása"
-  congrats_guest_speaker_title: "Find a guest speaker for your classroom"
-  congrats_guest_speaker_desc: "Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat."
-  congrats_guest_speaker_cta: "Find a guest speaker"
-  congrats_third_party_title: "Use your new skills with these apps and websites"
-  third_party_gradelevel_kto8: "Grades K-8"
-  third_party_gradelevel_kto2: "Grades K-2"
   third_party_gradelevel_2to8: "2-8. évfolyam"
   third_party_gradelevel_4to12: "4-12. évfolyam"
   third_party_gradelevel_5to12: "5-12. évfolyam"
@@ -104,31 +82,11 @@
   third_party_price_varies: 'Ár: változtatás tervben'
   third_party_price_free: 'Ár: ingyenes'
   third_party_price_299: 'Ár: $2.99/letöltés'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
-  third_party_tynker_btn_site: "Visit Tynker"
-  third_party_scratchjr_desc: "Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life."
-  third_party_scratchjr_btn_curriculum: "Download Scratch Jr. Curriculum"
-  third_party_scratchjr_btn_site: "Visit Scratch Jr."
-  third_party_scratch_desc: "With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century."
-  third_party_scratch_btn_curriculum: "Download Scratch Curriculum"
-  third_party_scratch_btn_forum: "Scratch Educator Forum"
-  third_party_scratch_btn_site: "Visit Scratch"
-  third_party_lightbot_desc: "In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written."
   third_party_lightbot_btn_curriculum: "Töltse le a Lightbot tananyagot"
   third_party_lightbot_btn_site: "Látogasson el a Lightbot honlapjára"
   third_party_khan_desc: "Megtudhatja hogyan lehet képeket, animációkat és játékokat készíteni JavaScript és ProcessingJS segítségével, vagy hogy hogyan tud weblapokat létrehozni HTML és CSS segítségével. Ossza meg az elkészült alkotásait, és fedezze fel másokét, egyszóval tanuljunk egymástól!"
   third_party_khan_btn_learn: "Tanulj programozni a Khan Akadémián"
   third_party_khan_btn_forum: "Khan Akadémia Programozás Fórum"
-  third_party_appinv_desc: "MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages."
-  third_party_appinv_btn_curriculum: "Download App Inventor 2 Curriculum"
-  third_party_appinv_btn_forum: "App Inventor 2 Forum"
-  third_party_appinv_btn_site: "Visit App Inventor 2"
-  third_party_codehs_desc: "CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors."
-  third_party_codehs_btn_try: "Intro CS Learn More for Schools"
-  third_party_codecademy_desc: "We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education."
   third_party_codecademy_btn_curriculum: "Codecademy tananyag letöltése"
   third_party_codecademy_btn_site: "Codeacademy megtekintése"
   third_party_organization: "Szervezet"
@@ -140,17 +98,6 @@
   third_party_cost_free_399: "Ingyenesen kipróbálható, 399$/tanterem"
   third_party_cost_free_2: "Ingyenesen kipróbálható, 2$/tanuló"
   third_party_cost_free_10: "Ingyenesen kipróbálható, 9,99$/hó"
-  third_party_desc_5_4to8: "Approximately 5 lessons, geared toward grades 4-8"
-  third_party_desc_10to12_kto3: "Approximately 10-12 lessons, geared toward grades K-3"
-  third_party_desc_11_kto5: "Approximately 11 lessons, geared toward grades K-5"
-  third_party_desc_10to12_kto5: "Approximately 10-12 lessons, geared toward grades K-5"
-  third_party_desc_40_4to8: "More than 40 lessons, geared toward grades 4-8"
-  third_party_desc_dozens_kto8: "Dozens of lessons for all grades K-8"
-  third_party_desc_10to15_3to12: "Between 10 & 15 lessons, geared toward grades 3-12"
-  third_party_desc_25to40_3to12: "From 25 - 40 lessons, intended for grades 3-12"
-  third_party_desc_20_2to8: "About 20 lessons, geared toward grades 2-8"
-  third_party_desc_7to22_5to12: "Between 7 & 22 lessons, geared toward grades 5-12"
-  third_party_desc_20_4to12: "More than 20 lessons, geared toward grades 4-12"
   enter_valid_age: "Kérlek válassz egy érvényes életkort"
   enter_valid_email: "Adj meg egy érvényes e-mail címet"
   get_a_certificate_message: "Küldeni fogunk neked egy tanúsítványt, illetve információt arról, hogyan <a href='/learn/beyond'>tanulhatsz tovább az első óra után</a>"
@@ -199,33 +146,9 @@
   learn_online: "Megpróbáljon ki  más online tanfolyamokat"
   learn_classes: "Találjon helyi osztályokat"
   learn_back_to_minecraft: "Folytasd a tanulást a Minecrafttal"
-  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
-  just_did_course1: "I just finished Course 1 - check it out! @codeorg"
-  just_did_course2: "I just finished Course 2 - check it out! @codeorg"
-  just_did_course3: "I just finished Course 3 - check it out! @codeorg"
   just_did_course4: "Épp most csináltam végig a 4. tanfolyamot - nézd meg! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
-  just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "10-ből 9 ember szerint már az általános iskolában el kellene kezdeni az informatika tanítását. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
-  twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Ismerd meg a Kódolás Óráját"
   beyond_hoc: "Az első órán túl"
   what_gender: "Milyen nemű vagy?"
@@ -236,7 +159,6 @@
   lines_of_code: "<b># LINES OF CODE</b> SOR ALATT ÍRT A MAI NAPIG."
   lines_of_code_alt: "<b>#</b> SOR A KÓDBÓL MEGÍRVA TANULÓK ÁLTAL"
   who_has_done_hoc: 'Ki vett már részt a #HourOfCode programon? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "A Kódolás Órája ranglista"
   students_and_lines: "%{students} tanuló fejezte be a Kód Óráját, s írt %{lines} sort a kódból."
   start_hoc: "Kezdd el a Kódolás Órája programot most"
@@ -256,16 +178,10 @@
   studiobar_teacher_body: "Mutasd be a Kód stúdiót az osztályodnak"
   studiobar_frozen_title: "A kódolás órája"
   studiobar_frozen_body: "Hozz létre egy téli csodaországot Annával és Elsával!"
-  studiobar_donate_title: "Támogatás"
+  studiobar_donate_title: "Adományozz"
   studiobar_donate_body: "Egy gyermek tanulását támogatja minden egyes dollár adományozásával"
   studiobar_shop_title: "Áruház"
   studiobar_shop_body: "Számoljunk le az előítéletekkel. Viseld büszkén a logónkat."
-  homepage_stats_students: "of US students have accounts on Code.org"
-  homepage_stats_female: "of our students are female"
-  homepage_stats_teachers: "teachers use Code.org"
-  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
-  homepage_stats_policy: "states changed policy to support computer science"
-  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;Kihívom a lányokat a világ minden országában, hogy vegyenek részt a Kódolás óráján&rdquo; \nMalala, Nobel Békedíjas"
   homepage_hero_text_susan: |-
     &ldquo;Ha változtatni tudsz a technológián,
@@ -283,10 +199,6 @@
     &ldquo;A számítástechnika a világ
     legjobb lehetőségeit nyitja meg.&rdquo;
     Satya, a Microsoft vezérigazgatója
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Ha kódolsz, akkor életed legjobb tanfolyamán vehetsz részt.&rdquo;
     Chris Bosh
@@ -308,8 +220,6 @@
   homepage_hero_text_stat_loc: "#loc sor kód, amit a diákok írtak"
   homepage_hero_text_stat_students: "#student_count diák hozzáférés a Kód stúdió rendszerben"
   homepage_hero_text_stat_served: 'A Kódolás órája: #served megtartva'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "A kódolás órája"
   homepage_slot_text_frozen: "Jégvarázs Annával és Elzával"
   homepage_slot_text_teacher: "Tanári nyitólap"
@@ -329,27 +239,21 @@
   homepage_action_text_girlvideo: "Inspirálj egy lányt"
   homepage_action_text_learn: "Kezdj tanulni"
   homepage_action_text_signpetition: "Írd alá a petíciót"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "Írd alá a petíciót &#x25BE;"
   homepage_diversity_pledge: "Csatlakozz a diverzitási peticióhoz"
   homepage_banner_text_prizes: 'Újra közeledik a Kódolás órája, december 7-13. '
   homepage_banner_link_prizes: 'Csatlakozz a történelem legnagyobb tanulási eseményéhez!'
   homepage_banner_text_main: "A Code.org és a felsőoktatás összefog az informatika sokszínűségének javítása érdekében."
   homepage_banner_text_link: "Tudj meg többet"
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Tudj meg többet"
   homepage_banner_20k_teachers: "20.000 tanárt készítettünk fel, akik ma már informatikát oktatnak a jövő nemzedéknek."
   homepage_banner_20k_teachers_link: "Tudj meg többet"
-  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
-  homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "Egy fontos változást vezettünk be a tanulók adatainak védelme érdekében."
   homepage_banner_emailprivacy_link: "Tudj meg többet"
-  homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Tudj meg többet"
   homepage_slot_text_title_hoc: "A kódolás órája"
   homepage_slot_text_blurb_hoc: "Bárki megtanulhatja. Kezdd el ma"
   homepage_slot_text_link_hoc: "Próbáld ki a Kódolás Óráját"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Tarts egy Kódolás óráját"
   homepage_slot_text_link_hocserved: "# fő már kipróbálta"
   homepage_solot_text_link_volunteer: "Önkéntes az kódolás órájához"
@@ -373,12 +277,10 @@
   homepage_slot_text_link_buy: "Légy részese"
   homepage_slot_text_link_donate: "Adományozz"
   homepage_slot_text_link_shop: "Pólók, sapkák & egyéb"
-  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "Code.org tanulóinak alkotásai"
   homepage_header_donors: "A Code.org megköszöni a támogatókat"
   homepage_donors_seall: "Összes megtekintése"
-  homepage_donors_donate: "Támogatás"
-  homepage_below_hero_announcement_text: "We care about your privacy and are making some updates to our privacy policy, effective May 25."
+  homepage_donors_donate: "Adományozz"
   homepage_below_hero_announcement_link_text: "Tudj meg többet"
   contact_form_topic_student: "Diák vagyok"
   contact_form_topic_parent: "Szülő vagyok"
@@ -417,8 +319,6 @@
   class_submission_level_college: "Főiskola"
   class_submission_level_vocational: "Szakmai"
   class_submission_languages_other: "Egyéb nyelv(ek)"
-  videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
-  careers_page_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
   playlab_choose_theme: "Válaszd ki a Játéklabor témáját"
   playlab_classic_title: "Klasszikus"
   playlab_gumball_title: "Gumball csodálatos világa"
@@ -433,17 +333,15 @@
   starwars_blocks_specs: "Több nyelven | Modern böngészők, okostelefonok, táblagépek | 6-tól 106 éves korig"
   starwars_platform_text: "Modern böngészők, okostelefonok, tabletek"
   mc_name: "Minecraft Kódolás Órája"
-  mc_longdescription: "Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában."
-  mc_shortdescription: "Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában."
+  mc_longdescription: "Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába"
+  mc_shortdescription: "Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába"
   mc_gradelevel: "6-tól 106 éves korig"
   mc_platformtext: "Modern böngészők, okostelefonok, tabletek"
   mc_specs: "Több nyelven | Modern böngészők, táblagépek | 6-tól 106 éves korig"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "Minecraft tervező"
   minecraft_adventurer: "Minecraft kaland"
   minecraft_tutorials: "Minecraft Kódolás órája gyakorlatok"
   minecraft_specs: "Több nyelven | Modern böngészők, táblagépek | 2. osztálytól"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   minecraft_agent_button: "Kezdés"
   minecraft_designer_description: "Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban."
   minecraft_designer_button: "Kezdés"
@@ -452,41 +350,9 @@
   minecraft_no_internet: "Nincs internet?"
   minecraft_download_adventurer: "Töltsd le a Minecraft kaland offline verzióját!"
   minecraft_subtitle: "Minecraft Kódolás Órája"
-  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
-  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
-  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
-  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
-  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
-  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  minecraft_og_agent: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
-  sports_page_title: "Hour of Code Sports"
-  sports_og_title: "Push yourself. Anybody can learn."
-  sports_og_description: "Champions and gold medalists encourage you to try the Hour of Code. Code your own sports game."
   sports_title: "Kódold le a saját sportjátékodat"
   sports_watch_video: "Nézd meg a videót"
-  sports_video_title: "Push yourself. Anybody can learn."
-  sports_select_theme: "Select your tutorial theme"
-  sports_basketball_title: "Make a basketball game"
   sports_all_sports_title: "Kombinálj össze különböző sportágakat"
-  sports_featured_athletes: "See featured athletes"
-  sports_athletes_title: "Featured athletes"
-  sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
-  sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
-  sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
-  sports_athlete_Sergio: "Sergio Ramos, World Cup Champion and Soccer/Futbol Player, Real Madrid"
-  sports_athlete_Sue: "Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm"
-  sports_athlete_Alana: "Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles Sparks"
-  sports_athlete_Angelo: "Angelo Matthews, Captain of the Sri Lankan Cricket Team"
-  sports_athlete_Nneka: "Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP, Los Angeles Sparks"
-  sports_athlete_Carmelo: "Carmelo Anthony, Olympic Gold Medalist and NBA All-Star, New York Knicks"
-  sports_athlete_Marco: "Marco Belinelli, NBA Champion, Charlotte Hornets"
-  sports_athlete_Neymar: "Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player, FC Barcelona and Brazil National Team"
   sports_athlete_Sarah: "Sarah Quita Offringa, szörf bajnok"
   sports_athlete_Marcelo: "Marcelo, foci bajnok, a Real Madrid és a Brazil Nemzeti Csapat tagja"
   sports_athlete_Erika: "Erika Olivera, maraton futó bajnok"
@@ -494,23 +360,19 @@
   sports_athlete_Chris: "Chris Bosh, olimpiai aranyérmes és NBA bajnok, Miami Heat csapatában"
   sports_athlete_Harrison: "Harrison Barnes, olimpiai aranyérmes és NBA bajnok, Dallas Mavericks csapatában"
   watch_inspirational_videos: "Mielőtt elkezdenéd, nézd meg az egyik inspiráló videót"
-  video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "Inspirálj egy lányt"
   video_title_cs_intro: "Bevezetés a számítástechnikába"
   video_title_schools_dont_teach: "Amit a legtöbb iskola nem tanít"
   video_title_obama: "Obama, amerikai elnök, a számítógéptechnológiáról"
   video_title_hoc_is_here: "A Kódolás Órája elérkezett - Mindenki tanulhat"
   video_title_anybody_can_learn: "Mindenki tanulhat"
-  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Kódolás Órája Draymond Greennel"
   video_title_russell_okung: "Kódolás Órája Russell Okunggal"
   video_title_real_madrid: "Kódolás Órája a Real Madriddal"
   video_title_marco_belinelli: "Kódolás Órája Marco Belinellivel"
   video_title_chris_bosh: "Chris Bosh a számítógéptechnikáról"
-  video_title_my_name_is_aracely: "My Name is Aracely"
   video_1min: "1 perc"
   video_2min: "2 perc"
-  video_3min: "3 min"
   video_5min: "5 perc"
   speak_another_language: "Más nyelven beszélsz?"
   help_translate: "Segíts nekünk fordítani."
@@ -522,8 +384,6 @@
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját tartani idén az osztályában, 2015. december 7-13 között. Szükségük van a segítségedre! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} tanárnak van szüksége számítástechnikai oktatással lelkesedő önkéntesekre, akik segítenének nekik idén decemberben a Kódolás Órája lebonyolításában.<br>%{num_volunteers} önkéntes már csatlakozott. Csatlakozz hozzájuk."
   volunteer_engineer_submission_intro_background: "A Kódolás Órája egy globális mozgalom, amely abban segít, hogy kipróbáld egy órán keresztül a programozást, amely már diákok millióihoz jutott el már a világ több, mint 180 országban. Kérlek vegyél részt rajta a Számítástechnikai Oktatási Hét keretein belül december 7-13. között."
-  volunteer_engineer_submission_intro_recruit: 'Teachers would love to have somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).'
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
   volunteer_engineer_submission_intro_signup: "Kérjük add meg a következő információkat, ha szoftverfejlesztő-hallgató vagy -szakember vagy. A <span class=\"form-required-field\">*</span>-al jelölt mezők kitöltése kötelező."
   volunteer_engineer_submission_intro_links: "Önkéntest keresel? Nézd meg a közeledben lévő önkénteseket az <a href=\"%{volunteer_local}\">önkéntes térképen</a>."
   volunteer_engineer_submission_update_information: "Frissítse az adatait"
@@ -550,13 +410,10 @@
   volunteer_engineer_submission_field_email: "E-mail cím"
   volunteer_engineer_submission_field_email_desc: "Email-címedet soha nem osztjuk meg senkivel, de értesítést küldünk tanári felkérésekről."
   volunteer_engineer_submission_field_email_placeholder: "E-mail cím"
-  volunteer_engineer_submission_field_email_preference: "Can we email you about updates to our courses, volunteer opportunities, or other computer science news?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(See our privacy policy)"
   volunteer_engineer_submission_field_email_preference_yes: 'Igen'
   volunteer_engineer_submission_field_email_preference_no: 'Nem'
   volunteer_engineer_submission_final_paragraph: "A környékbeli oktatókat ábrázoló térképen meg leszel jelenítve, így azok a tanárok, amelyek egy Kódolás Óráját szerveznek fel tudják venni veled a kapcsolatot. Az email- és lakcímed SOHA, SENKINEK nem adjuk ki. Egyéb információ (beleértve a várost) publikusan meg lesz jelenítve."
   volunteer_engineer_submission_checkbox_contact: 'Egyetértek azzal, hogy a tanárok felvehetik a kapcsolatot velem az önkéntes feladatok elvégzése céljából (Megjegyzés: az e-mail címed nem kerül harmadik félhez)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
   volunteer_engineer_submission_submit: "Elküldés"
   volunteer_engineer_submission_thankyou: "Köszönjük, hogy részt veszel a Kódolás Órájában önkénteskét. Készülj fel a Kódolás Órájára és szerezz magadhoz még több önkéntest, amiről <a href=\"%{url}\">többet megtudhatsz itt.</a>"
   volunteer_engineer_submission_commitment_uncertain: "Bizonytalan"
@@ -587,7 +444,6 @@
   volunteer_engineer_submission_type_task_remote: "Szeretném, ha Skype-on mondanál pár inspiráló mondatot a diákjaimnak a tanórán"
   volunteer_engineer_submission_type_task_mentor: "Mentort keresek, aki segítene felkészülni, hogy a diákjaimat kódolásra taníthassam"
   petition_age: "Kor"
-  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
   dashboard_announce_learn_more_button: "Tudj meg többet"
   dashboard_landing_title: "Tanári kezdőlap"
   dashboard_landing_welcome: "Üdvözlünk az új és továbbfejlesztett tanári felületen."
@@ -600,7 +456,6 @@
   dashboard_landing_new_beta: "ÚJ! Próbáld ki az alsós diákoknak szánt béta kurzusokat."
   dashboard_landing_new_k5courses: "Új! Próbáld ki az alsós diákoknak szánt kurzusokat."
   dashboard_landing_useful_links: "Egyéb hasznos linkek (csak angol nyelven)"
-  dashboard_landing_classroom_resources: "Resources for your classroom"
   dashboard_landing_office_hours: "Kérdezz személyesen! Nézz be a havi videós irodai óránkra."
   dashboard_landing_print_certificates: "Nyomtasa ki a bizonyítványokat a diákoknak, akik befejezték a tanfolyamot"
   dashboard_landing_educator_blog: "Olvastam a híreket és frissítéseket az anyagokhoz  a Pedagógus Blog-ban"
@@ -613,25 +468,16 @@
   dashboard_landing_available_courses: "Ezek a jelenleg elérhető kurzusok Neked és diákjaid számára."
   dashboard_landing_more_tutorials: "Szeretnél még több gyakorlatot megnézni?"
   dashboard_landing_more_tutorials_desc: "<a href=\"/learn/beyond\">Partnereink még több</a> gyakorlatot kínálnak. Ezeken megtanulhatod a robotok programozását, weboldalt készíthetsz, elkészítheted saját alkalmazásodat, és felfedezhetsz olyan programnyelveket, mint a C++, a Ruby és a Python!"
-  dashboard_landing_inspire: "Inspire your students with posters, videos, and more."
-  dashboard_landing_video_library: "Use a video from the Video Library of computer science concepts."
-  dashboard_landing_report_bug: "Request a feature or report a bug."
-  dashboard_landing_teacher_forum: "Join the professional learning community."
   dashboard_hoc_courses: "A Kódolás órája minden életkornak szól"
   dashboard_hoc_courses_desc: "Próbáld ki az alábbi egy órás gyakorlatokat a diákjaiddal!"
   dashboard_hoc_courses_desc_and_cta: "Próbáld ki ezeket a rövid, egyórás tutoriálokat a diákjaiddal. <a href=\"https://hourofcode.com\">Csatlakozz a Kódolás Órája mozgalomhoz</a> egy Számítógép-tudomány Oktatás héten."
   dashboard_k5_courses: "20 órás tanfolyamok alsó tagozatosoknak"
-  dashboard_k5_courses_desc: "These courses blend online, self-guided and self-paced tutorials with \"unplugged\" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href=\"/professional-development-workshops\">Find one near you!</a>"
   dashboard_middle_courses: "20 órás tanfolyamok felső tagozatosoknak"
-  dashboard_middle_courses_desc: "Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href=\"/educate/districts\">district-wide partnership</a> with Code.org."
   dashboard_high_courses: "Éves középiskolás tanfolyamok"
-  dashboard_high_courses_desc: "Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href=\"/educate/districts\">district-wide partnership</a> with Code.org."
-  dashboard_course_csina: "Computer Science in Algebra"
   dashboard_course_csina_desc: "A Code.org partner kapcsolatban áll a a Bootstrap-al, amely kidolgozott egy tantervet, amely megtanítja az algebrai és geomertiai fogalmakat a számítógépes programozásban."
   dashboard_course_csins: "Számítógép-tudomány a tudományok között"
   dashboard_course_csins_desc: "A Code.org partner kapcsolatban áll a GUTS projekttel, amely bevezetést ad a számítógép tudomány fogalmak közé modellezés és szimuláció segítségével."
   dashboard_course_ecs: "A számítástechnika felfedezése"
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: "Az AP® számítástechnika alapelvei"
   dashboard_course_csp_desc: "A Code.org egy izgalmas, könnyen érthető és teljes tantervet dolgozott ki amely bemutatja a programozás alapjait."
   dashboard_landing_loading: "Betöltés..."
@@ -642,16 +488,6 @@
   dashboard_action_confirm: "Biztos törölni akarod?"
   dashboard_action_done: "Kész"
   dashboard_action_print_certificates: "Oklevelek nyomtatása"
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code.org to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
-  dashboard_assessments_summaries: "Assessment summaries"
-  dashboard_assessments_answers: "All assessment answers"
-  dashboard_surveys_answers: "Surveys"
-  dashboard_percent: "Percent"
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: "All"
-  dashboard_download_csv: "Download CSV"
   dashboard_navigation_home_page: "Tanári kezdőlap"
   dashboard_navigation_section_student_progress: "Diákok fiókja és haladása"
   dashboard_navigation_section_teacher_progress: "A tanfolyam haladás"
@@ -661,13 +497,9 @@
   dashboard_navigation_section_speakers: "Számítógép-tudomány <br/> vendég előadók"
   dashboard_navigation_all_sections: "Diákok fiókja és haladása"
   dashboard_navigation_view_progress: "Előmenetel"
-  dashboard_navigation_view_text_responses: "Text Responses"
-  dashboard_navigation_view_assessments: "Assessments"
-  dashboard_navigation_view_assessments_surveys: "Assessments/Surveys"
   dashboard_navigation_add_students: "Diákok hozzáadása"
   dashboard_navigation_manage_students: "Diákok kezelése"
-  dashboard_navigation_lesson_plans_resources: "Óravázlatok és erőforrások"
-  dashboard_navigation_view_stats: "Stats"
+  dashboard_navigation_lesson_plans_resources: "Tananyag "
   dashboard_navigation_section: 'Szekció: %{section_name}'
   dashboard_navigation_student: 'Diák: %{student_name}'
   dashboard_progress_not_started: "el nem kezdett"
@@ -677,13 +509,7 @@
   dashboard_progress_completed_perfect: "elkészült, tökéletes"
   dashboard_progress_furthest_level_attempted: "a legmagasabb szint megpróbálva"
   dashboard_progress_submitted: "elküldve"
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: "Progress information for %{student_name} in %{script_name}"
-  dashboard_progress_pair_programming: "pair programming"
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "Új csoport"
-  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Hozz létre új csoportokat és adj hozzá diákokat. Csoportok használatával a diákokat kisebb egységekbe szervezheted, így követheted nyomon fejlődésüket és kezelheted a fiókjukat."
   dashboard_sections_table_section: "Csoport"
   dashboard_sections_table_secret: "Bejelentkezés típusa"
@@ -712,12 +538,9 @@
   dashboard_sections_no_move: "Nem, a tanulót (tanulókat) csak az új szekcióba szeretném átmozgatni."
   dashboard_sections_move_students: "Tanulók mozgatása"
   dashboard_sections_assign_hoc_script_desc: "Részt veszel a Kódolás Óráján?"
-  dashboard_sections_assign_hoc_script_msg: "Please note that we will not be able to save progress in this course from December 3 - 11 due to the amount of traffic our site will receive for the Hour of Code.  Everything else in this tutorial will continue to work as expected.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)  We will save and report student progress for every other week of the year."
   dashboard_sections_assign_activity: "Tanfolyam kijelölése"
-  dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "Ha a tanulóidat másik csoportba szeretnéd tenni, válaszd ki a csoportot a legördülő listából. Válaszd ki a \"másik csoport\" lehetőséget, hogy áthelyezd a tanulókat egy másik tanári csoportba."
   dashboard_students_add_multiple: 'Írd vagy másold be diákjaid nevét, soronként egyet:'
-  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "Az új szekció létrehozása sikerült! Most vedd fel a diákokat a fenti <b>Diák hozzáadása</b> vagy a <b>Több diák hozzáadása</b> gombok használatával."
   dashboard_students_name: "Név"
   dashboard_students_progress: "Előmenetel"
@@ -726,7 +549,6 @@
   dashboard_students_completed_levels: "Befejezett szintek"
   dashboard_students_total_lines: "Kódsorok"
   dashboard_students_share_section: "Oszd meg a diákjaiddal ennek a szekciónak a belépési oldalát:"
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Nyomtasd ki a diákjaid belépési adatait tartalmazó kártyákat."
   dashboard_students_secret_picture_title: "Titkos kép"
   dashboard_students_secret_picture: "Ez a szakasz titkos típusú <b>képet</b> használ. Ez azt jelenti, hogy a diákok a képet jelszó segítségével tekinthetik meg. A diákoknak be kell hozzá jelentkezniük a fenti webcímen."
@@ -737,7 +559,6 @@
   dashboard_students_join_link: "Mondd meg a diákjaidnak, hogy hozzanak létre egy hozzáférést és csatlakozzanak a szekciódhoz"
   dashboard_students_no_email: "Ha a diákjaidnak nincs email címe, vagy Te szeretnéd létrehozni nekik a hozzáféréseket, akkor állítsd a szekció titkosítási típusát <b>szó</b> vagy <b>kép</b> típusúra."
   dashboard_students_print_page: "Nyomtasd ki ezt az oldalt"
-  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">Kattints ide</a> az adatkezelési dokumentumhoz, amit kinyomtathatsz a diákoknak, vagy megoszthatsz velük."
   dashboard_curriculum_k5_title: "K-5 pedagógus források"
@@ -749,16 +570,7 @@
   dashboard_course2: 'Második kurzus:'
   dashboard_course3: 'Harmadik kurzus:'
   dashboard_course4: '4. tanfolyam (béta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Ha nincs számítógép,  <a href='%{unplugged_url}'>próbálja ki ezeket az offline tanórákat </a> az osztályával!"
-  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Tanterv"
   dashboard_curriculum_overview: "K-5 (alsó tagozatos) tananyag áttekintés"
   dashboard_overview: "Összefoglaló"
@@ -776,8 +588,6 @@
   dashboard_curriculum_csins: 'A számítógép-tudomány a tudományok között:'
   dashboard_curriculum_csp: 'Az AP® számítástechnika alapelvei:'
   dashboard_curriculum_ecs: 'A számítástechnika felfedezése:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Egyéb"
   dashboard_login_word: "Szó"
@@ -787,18 +597,7 @@
   dashboard_puzzle: "Kirakós"
   dashboard_question: "Kérdés"
   dashboard_response: "Válasz"
-  dashboard_correctness: "Correctness"
-  dashboard_correctness_free_response: "Free response"
-  dashboard_correctness_unsubmitted: "Unsubmitted"
   dashboard_correctness_correct: "Helyes"
-  dashboard_correctness_incorrect: "Incorrect"
-  dashboard_submission_submitted: "Submitted"
-  dashboard_submission_in_progress: "In progress"
-  dashboard_status: "Status"
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: "Submission timestamp"
   stats_hoc_2013_heading: 'Szédületes statisztika a tavalyi Kódolás Órája programról. Egyetlen hét alatt:'
   stats_hoc_2013_image_alt: "Statisztika a 2013-as Kódolás Órája programról"
   dashboard_teacher: "Tanár"
@@ -817,11 +616,7 @@
   dashboard_faq_k5: "K-5 Gyakran Ismételt Kérdések"
   code_hoc_coming: "Megkezdődött a Kódolás Órája - December 8-14."
   code_sign_up: "Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás hete keretében"
-  host_an_hour: "Host an hour"
-  learn_banner_title: "Join us for the Hour of Code"
-  learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: "Tudj meg többet"
-  learn_sign_up_description: "Sign up to participate in the Hour of Code during CS Education Week"
   learn_sign_up_button: "Regisztrálás"
   learn_videos_watch: "Nézd meg ezt az inspiráló videót az osztályoddal"
   learn_videos_show: "Mutasd meg ezt az inspiráló videót az osztályodnak"
@@ -830,7 +625,6 @@
   learn_educator_resources_button: "Oktatói anyagok"
   learn_are_you_educator: "Tanító vagy? <a href=\"http://hourofcode.com/resources/how-to\">Tanulj meg Kódolás Óráján tanítani</a>"
   learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\">Keress egy környékbeli önkéntest</a> a Kódolás Órájádban segíteni"
-  learn_teacher_led_lesson_plans: "Be inspired by <a href=\"https://code.org/teacher-led\">teacher led Hour of Code lesson plans</a>"
   learn_how_to_hoc: "Kövesd a <a href=\"https://hourofcode.com/how-to\">leírásunk</a> egy Kódolás Órájának tartásához"
   learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\"> Tudj meg többet</a> a tanároknak szánt jutalmakról."
   learn_inspirational_videos: "Inspiráld diákjaidat <a href=\"https://code.org/educate/inspire\">ezekkel a videókkal</a>"
@@ -858,18 +652,10 @@
   carousel_heading_webpages: "Tanulj weblapkészítést"
   carousel_heading_robots: "Tanulj robotprogramozást"
   carousel_heading_ide: "A tanárok közt népszerű platformok"
-  carousel_heading_desktop: "Learn to code on a computer"
-  carousel_heading_mobtabelem: "For phones and tablets"
-  carousel_heading_prereader: "For pre-readers"
-  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
   educator_notes: "Oktatói jegyzetek"
   teach_led_lesson_plans: "Tanár által vezetett óratervek"
-  learn_footer_all_tutorials: "See the <a href=\"https://code.org/learn\">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href=\"https://hourofcode.com/activity-guidelines\">click here.</a>"
   how_to_teach_hoc: "Hogyan tarthatsz Kódolás óráját"
   more_resources_educators: "További segédletek tanárok és oktatók részére"
-  beyond_submission: "Want to submit a tutorial for Beyond an Hour? See the criteria and submission form."
-  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "résztvevők"
   teachers_notes: "Tanári jegyzetek"
   teachers_notes_hoc: 'Tanároknak: Kérjük olvassák el az itt lévő fontos oktatási instrukciókat'
@@ -882,7 +668,6 @@
   starwars_name: 'Star Wars: A galaxis építése kódolássa'
   codeorg_name: "Hagyományos Útvesztö"
   codeintl_name: "Hagyományos Útvesztö"
-  thinkersmithspanish_name: "Mis Amigos Roboticos"
   khan_name: "Bevezetés a JavaScriptbe"
   khanes_name: "Bevezetés a JavaScriptbe"
   khanpt_name: "Bevezetés a JavaScriptbe"
@@ -891,13 +676,9 @@
   khanpl_name: "Bevezetés a JavaScriptbe"
   tynker_name: "Készítsd el a saját játékod"
   scratch_name: "Legyél kreatív a kódolásban"
-  lightbot_name: "Lightbot"
   thinkersmith_name: "A robot barátaim"
   condcards_name: "Feltételek kártyákkal"
-  lightbotintl_name: "Lightbot"
   codehs_name: "Tanulj programozni Karellel a kutyával"
-  codecademy_name: "Codecademy"
-  codecombat_name: "CodeCombat"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "Építs játékot JavaScript használatával"
   processing_name: "Rajzolás kóddal"
@@ -911,11 +692,8 @@
   flappy_name: "Készíts egy Flappy játékot"
   bitsbox_name: "Bitsbox - készíts egy játékot"
   makeschool_name: "Készíts egy iPhone játékot a böngésződben!"
-  touchdevelop_name: "TouchDevelop"
   appinventor_name: "AppInventor Kódolás Órája"
   blockly_name: "Blockly"
-  thinkersmith2_name: "Binary Baubles"
-  kodableunplugged_name: "fuzzFamily Frenzy"
   projguts_name: "Kő, papír, olló"
   hourofcode_name: "Hagyományos Útvesztö"
   playlab_name: "Játéklabor"
@@ -925,138 +703,34 @@
   allcancode_name: "Fuss Marco!"
   csfirst_name: "CS First"
   boxisland_name: "Box Island"
-  codesters_name: "Codesters"
   texasinstruments_name: "10 Minutes of Code"
   teacherled_name: "Tanár által vezetett óratervek"
   course1_name: "1. tanfolyam"
   course2_name: "2. tanfolyam"
   course3_name: "3. tanfolyam"
   course4_name: "4. tanfolyam"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
-  courseb-draft_name: Course B
-  courseb_name: "Course B"
-  coursec-draft_name: Course C
-  coursec_name: "Course C"
-  coursed-draft_name: Course D
-  coursed_name: "Course D"
-  coursee-draft_name: Course E
-  coursee_name: "Course E"
-  coursef-draft_name: Course F
-  coursef_name: "Course F"
-  coursea-2017_name: Course A (2017)
-  courseb-2017_name: Course B (2017)
-  coursec-2017_name: Course C (2017)
-  coursed-2017_name: Course D (2017)
-  coursee-2017_name: Course E (2017)
-  coursef-2017_name: Course F (2017)
-  coursea-2018_name: Course A (2018)
-  courseb-2018_name: Course B (2018)
-  coursec-2018_name: Course C (2018)
-  coursed-2018_name: Course D (2018)
-  coursee-2018_name: Course E (2018)
-  coursef-2018_name: Course F (2018)
   accelerated_name: "Gyorsított tanfolyam"
-  express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: "(old) Unit 1: Digital Information"
-  cspunit2_name: "(old) Unit 2: The Internet"
-  cspunit3_name: "(old) Unit 3: Programming"
-  cspunit4_name: "(old) Unit 4: Data"
-  cspunit5_name: "(old) Unit 5: Explore and Create PT"
-  cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd5-2017_name: 'Unit 5: Data and Society'
-  csd6-2017_name: 'Unit 6: Physical Computing'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csd5-2018_name: 'Unit 5: Data and Society'
-  csd6-2018_name: 'Unit 6: Physical Computing'
   csp1-2017_name: '1. lecke: Az internet'
   csp2-2017_name: '2. fejezet: Digitális információ'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csppostap-2017_name: 'Post AP: Databases in Apps'
   csp1-2018_name: '1. lecke: Az internet'
   csp2-2018_name: '2. fejezet: Digitális információ'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csppostap-2018_name: 'Post AP: Databases in Apps'
   csp1_name: '1. lecke: Az internet'
   csp2_name: '2. fejezet: Digitális információ'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: Databases in Apps'
-  csp-post-survey_name: Student Post-Course Survey
   cspassessment_name: "Teljes teszt - 50 kérdés"
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Teszt 1. része - 25 kérdés
   cspexam2-AKwgAh1ac5_name: Teszt 2. része - 25 kérdés
   cspunit3_gradelevel: "9-12. évfolyam"
-  cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   20-hour_name: Gyorsított tanfolyam
-  algebra_name: "CS in Algebra"
-  AlgebraA_name: "CS in Algebra Course A"
-  AlgebraB_name: "CS in Algebra Course B"
-  gumball_name: "Gumball"
   classicmaze_name: "Hagyományos Útvesztö"
   iceage_name: "Jégkorszak"
   minecraft_name: "Minecraft"
-  starwarsblocks_name: "Star Wars (Blocks)"
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression
   math_category_name: "Matematika"
   hoc_category_name: "A kódolás órája"
-  csf_category_name: "CS Fundamentals"
-  csf_2017_category_name: "CS Fundamentals (2017)"
-  csf_2018_category_name: "CS Fundamentals (2018)"
-  csf_international_category_name: "CS Fundamentals International"
-  csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries ('17-'18)"
-  csd_2018_category_name: "CS Discoveries ('18-'19)"
-  csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "CS Principles ('17-'18)"
-  csp_2018_category_name: "CS Principles ('18-'19)"
-  cspexams_category_name: "CS Principles Practice Test"
-  research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
-  gamelab_name: "Game Lab"
-  basketball_name: "Make a basketball game"
   sports_name: "Kódold le a saját sportjátékodat"
   applab_gradelevel: "Kor 13+"
-  applab_shortdescription_congrats: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds"
   codeorg_gradelevel: "4-től 104 éves korig"
   codeintl_gradelevel: "4-től 104 éves korig"
-  thinkersmithspanish_gradelevel: "Por todos"
   khan_gradelevel: "Felső tagozattól felfelé"
   khanes_gradelevel: "Felső tagozattól felfelé"
   khanpt_gradelevel: "Felső tagozattól felfelé"
@@ -1108,12 +782,12 @@
   course2_gradelevel: "6-tól 18 éves korig"
   course3_gradelevel: "8-tól 18 éves korig"
   course4_gradelevel: "10-től 18 éves korig"
-  coursea_gradelevel: "Ages 4-7"
-  courseb_gradelevel: "Ages 5-8"
-  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "8+ évfolyam"
   coursee_gradelevel: "8-tól 12 éves korig"
-  coursef_gradelevel: "Ages 9-13"
+  coursed-2017_gradelevel: 8+ évfolyam
+  coursee-2017_gradelevel: 8-tól 12 éves korig
+  coursed-2018_gradelevel: 8+ évfolyam
+  coursee-2018_gradelevel: 8-tól 12 éves korig
   accelerated_gradelevel: "10-től 18 éves korig"
   codeorg_platformtext: "Modern böngészők, okostelefonok, tabletek"
   codeintl_platformtext: "Modern böngészők, okostelefonok, tabletek"
@@ -1140,7 +814,6 @@
   groklearning_platformtext: "Modern web böngészők"
   quorum_platformtext: "Modern webböngészők. Képernyő-olvasó támogatással"
   codespark_platformtext: "iOS, Android (vagy web böngésző)"
-  kodable_platformtext: "iPad"
   tynkerapp_platformtext: "iPad, Android táblagépek"
   robomindnl_platformtext: "Modern web böngészők, Mobil web"
   flappy_platformtext: "Modern böngészők, okostelefonok, tabletek"
@@ -1165,7 +838,6 @@
   teacherled_platformtext: "Modern böngészők, okostelefonok, tabletek"
   codeorg_shortdescription: "Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!"
   codeintl_shortdescription: "Tanulj programozni Mark Zuckerbergel  és Angry Birds-el!"
-  thinkersmithspanish_shortdescription: "Tutorial para un grupo sin computadoras"
   khan_shortdescription: "Tanulj JavaScriptben rajzolni"
   khanes_shortdescription: "Tanulj JavaScriptben rajzolni"
   khanpt_shortdescription: "Tanulj JavaScriptben rajzolni"
@@ -1207,21 +879,12 @@
   infinity_shortdescription: "Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel."
   artist_shortdescription: "Rajzolj menő rajzokat és dizájnokat a Művész segítségével!"
   monsterocding_shortdescription: "Egy színes, önálló programozási kaland gyerekeknek."
-  allcancode_shortdescription: "An immersive game to guide Marco with a visual programming language."
-  csfirst_shortdescription: "Animate a story about two characters on the ocean. Add your own style!"
   boxisland_shortdescription: "Menj kódolás-kirándulásra Box Island-re a bátor Hiro-val!"
   codesters_shortdescription: "Készítsd el a saját játékaidat, animációidat és mesterműveidet a Python segítségével."
   texasinstruments_shortdescription: "Tanuld meg a programozás alapjait a TI-84&#8482; Plus számológép segítségével."
   teacherled_shortdescription: "Tervezd meg a saját Kódolás Órádat a lecke-terveink segítségével."
-  course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Készen állsz a továbbhaladásra? A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amelyeket bárkivel megoszthatnak. 4-5. osztályosok számára ajánlott."
   course4_shortdescription_congrats: "Készen állsz a továbbhaladásra? A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amelyeket bárkivel megoszthatnak. 4.-8. osztályosok számára ajánlott."
-  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
-  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
-  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
-  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
-  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
-  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven."
   codeintl_longdescription: "Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven."
   thinkersmithspanish_longdescription: "Az előre meghatározott \"Robot Szótár\" használatával a diákok ki fogják találni hogyan segítsenek egymáson a speciális feladatok végrehajtásában, anélkül hogy azt előre megbeszélnék. Ez az oktatóanyag megtanítja a gyerekeknek a szimbólumok és műveletek közötti összefüggéseket, valamint felbecsülhetetlen értékű hibakeresési tapasztalatot nyújt."
@@ -1252,7 +915,6 @@
   robomindnl_longdescription: 'A diákok a saját virtuális robotjuk irányításán keresztül tanulják meg a programozás alapjait. Az online kurzus teljesen önállóan végezhető, a programozási gyakorlatok során rövid prezentációk, videók, kvízek és automatikus segédletek segítenek. '
   flappy_longdescription: "Húzd és dobd programozással készítsd el a saját Flappy Bird játékodat, és szabd át saját elképzelésed szerint (a figura lehet egy cápa, mikulás, vagy bármi más is). Egy kattintással akár a telefonodra is feltöltheted a kész játékot."
   bitsbox_longdescription: "Alakítsd át a saját virtuális tableted, majd alkoss meg egy sor játszható és megosztható appot. Az egyszerű bemutatók lehetővé teszik, hogy akár kicsi gyerekek is elkészíthessenek egy igazi JavaScipt programot. Minél többet tudsz, annál messzebb juthatsz."
-  makeschool_longdescription: "Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!"
   touchdevelop_longdescription: 'Az érintésbarát szerkesztő végigvezet majd a pixel alkotások elkészítésén, a medve puzzle megoldásán , vagy a saját ugrálós-madár játék megvalósításán. '
   appinventor_longdescription: "Rövid, szórakoztató videós oktatóanyagok segítségével három egyszerű alkalmazást fejleszthetsz Android telefonodra vagy táblagépedre. Ezzel a kezdőknek és haladóknak egyaránt alkalmas programmal a Kódolás Órája alatt azelőtt igazi app fejlesztő leszel, hogy észrevennéd. Gondolj bele, hogy milyen lenne a saját appodat megosztani a barátaiddal! Ezek a feladatok önállóan vagy osztályban tanárral együtt is megoldhatók."
   blockly_longdescription: "Lassú az internet vagy egyáltalán nincs? Töltsd le az eredetileg a Code.org alapját is képező Blocky oktatóanyagot. A 3MB-os ZIP fájl bármilyen számítógépre feltehető, de akár egy pendrive-ról is használható"
@@ -1263,19 +925,13 @@
   frozen_longdescription: "Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!"
   starwars_longdescription: "Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban."
   playlab_longdescription: "Hozz létre egy történetet, vagy készíts egy játékot a Play Lab-bal! Hozd mozgásba az állatokat, a kalózokat, a zombikat, nindzsákat, és a többi karaktert, adj hozzá hangot, pontozd az eredményt, és még dobálj tűzgolyókat is!"
-  monstercoding_longdescription: "The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions."
-  allcancode_longdescription: "Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it."
   csfirst_longdescription: "Kreálj történetet két tengeri szereplőről. Animáld a vizet és tedd egyedivé a környezetet a saját szájízed szerint. Használj programkódot, hogy elmesélhesd a Te történeted!"
-  boxisland_longdescription: "Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   codesters_longdescription: 'Készítsd el a saját játékaidat, animációidat és remekműveidet Python segítségével. Ha kész vagy, oszd meg őket a barátaiddal!  Próbáld ki a Pythont, egy igazi programozási nyelvet, amit naponta használnak cégeknél - a fogd-és-húzd felületünk igazán egyszerűvé teszi a megismerését! Készíts kosárlabda-játékot, tánc-koreográfiát, animált képeslapot! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used in class as a way to spark students'' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  '
   teacherled_longdescription: "Már több tízezer tanító próbálta ki a Kódolás Óráját, sok-sok osztály kész kreatívabb, kevésbé \"uniform\" foglalkozásokra, amelyek a szoftverfejlesztés alapjait mutatják be. Hogy segítsük a tanárokat, összeállítottunk egyórás, tanár által vezetett foglalkozásokat Kódolás Óráján részt vett diákoknak."
   codeorg_beyond_name: "Bevezetés a számítástechnikába (általános iskolai évfolyamok)"
   khan_beyond_name: "Tanulj programozni"
   tynker_beyond_name: "Tanulj programozni otthon"
   scratch_beyond_name: "Legyél kreatív a kódolásban"
-  lightbot_beyond_name: "LightBot"
-  codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "ScratchJR olvasni még nem tudóknak"
   hopscotch_beyond_name: 'Hopscotch: Programozás az iPadeden'
@@ -1285,28 +941,16 @@
   robomind_beyond_name: "Programozz egy virtuális robotot"
   makeschool_beyond_name: "Készíts egy iPhone játékot a böngésződben!"
   appinventor_beyond_name: "AppInventor Kódolás Órája"
-  touchdevelop_beyond_name: "TouchDevelop"
   codehs_beyond_name: "Tanulj programozni Karellel a kutyával"
   udemy_beyond_name: "Online programozás kurzusok"
   lynda_beyond_name: "Online programozás kurzusok"
   edx_beyond_name: "Harvard CS50 osztály"
   coursera_beyond_name: "Stanford CS 101 osztály"
-  udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "Egyetemi kurzusok online"
-  kodu_beyond_name: "Kodu"
-  cargobot_beyond_name: "Cargobot"
-  kidsruby_beyond_name: "KidsRuby"
   w3schools_beyond_name: "Tanulj HTML-t"
   codeavengers_beyond_name: "Tanuld meg weboldalak kódolását"
-  mozilla_beyond_name: "Webmaker"
-  codecombat_beyond_name: "CodeCombat"
-  codea_beyond_name: "Codea"
-  lego_beyond_name: "Mindstorms"
-  finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduino Sparkfunnal"
   processing_beyond_name: "Programozás a Processing segítségével"
-  alice_beyond_name: "Alice"
-  sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "4-től 104 éves korig"
   khan_beyond_gradelevel: "Felső tagozattól felfelé"
   tynker_beyond_gradelevel: "5-től 13 éves korig"
@@ -1350,9 +994,6 @@
   scratch_beyond_platformtext: "Bármilyen böngészővel"
   lightbot_beyond_platformtext: "iOS, Android (vagy web böngésző)"
   codecademy_beyond_platformtext: "Modern web böngésző. iOS, Android appok"
-  kodable_beyond_platformtext: "iPad"
-  scratchjr_beyond_platformtext: "iPad"
-  hopscotch_beyond_platformtext: "iPad"
   pocketcode_beyond_platformtext: "Mobil app"
   groklearning_beyond_platformtext: "Modern web böngészők"
   hacketyhack_beyond_platformtext: "Asztali telepítés"
@@ -1367,14 +1008,11 @@
   coursera_beyond_platformtext: "Modern böngészők"
   udacity_beyond_platformtext: "Modern böngészők"
   teachingtree_beyond_platformtext: "Web alapú"
-  kodu_beyond_platformtext: "Windows, xBox"
-  cargobot_beyond_platformtext: "iPad"
   kidsruby_beyond_platformtext: "Asztali telepítés"
   w3schools_beyond_platformtext: "Modern webböngészők"
   codeavengers_beyond_platformtext: "Modern webböngészők"
   mozilla_beyond_platformtext: "Modern webböngészők"
   codecombat_beyond_platformtext: "Web alapú (Firefox, Chrome, Safari, IE9+)"
-  codea_beyond_platformtext: "iPad"
   lego_beyond_platformtext: "Robot vásárlás"
   finch_beyond_platformtext: "Robot vásárlás"
   arduino_beyond_platformtext: "Web böngésző, majd kit vásárlás"
@@ -1455,20 +1093,9 @@
   processing_beyond_longdescription: "A Processing egy programozási nyelv, fejlesztési környezet és online közösség. 2001 óta a Processing a szoftveres ismereteket promótálja a vizuális művészetek terén és a vizuális művészeteket a technológia szintjén.  Eredetileg egy szoftveres jegyzettömbnek szánták, illetve hogy programozás alapokat tanítsanak egy vizuális környezetben, de a Processing profik fejlesztői eszközévé fejlődött. Napjainkban diákok, művészek, tervezők, kutatók és hobbisták tízezrei használják a Processinget tanulásra, prototípusok készítésére és gyártásra."
   alice_beyond_longdescription: "Az Alice projekt megfelelő eszközöket és anyagot biztosít - egy innovatív programozási környezet használatával támogatva a 3D-s animációk létrehozását - a számítástechnikai gondolkodás tanításához és elsajátításához, a probléma megoldáshoz, és a számítógép programozáshoz, széles korcsoport és tudásszint tartományban."
   sphero_beyond_longdescription: "Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai és tudományos képzettségük fejlesztése közben."
-  compatibility_hide_this_warning: "Hide this warning"
-  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-  starwars_shortcode: "star"
-  mc_shortcode: "mc"
-  frozen_shortcode: "frzn"
-  hourofcode_shortcode: "code"
   flappy_shortcode: "csapj"
-  infinity_shortcode: "inf"
-  playlab_shortcode: "lab"
-  artist_shortcode: "art"
   header_home: "Főmenü"
-  header_my_dashboard: "My Dashboard"
   header_courses: "tanfolyamok"
-  header_course_catalog: "Course Catalog"
   header_project_gallery: "Projektek"
   header_sections: "Csoportok"
   header_professional_learning: "Professzionális tanulás"
@@ -1494,7 +1121,6 @@
   header_about_faqs: "GYIK"
   header_learn: "Tanulj"
   header_teach: "Taníts"
-  header_stats: "Stats"
   header_help_us: "Támogass minket"
   header_about: "Rólunk"
   header_teacher_community: "Tanári közösség"
@@ -1502,40 +1128,7 @@
   header_report_bug: "Hiba jelentése"
   header_tutorials: "Gyakorlatok"
   header_documentation: "Dokumentáció"
-  csp_name: "CS Principles"
-  csd_name: "CS Discoveries"
-  csd_2018_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
   user_header_label: "Üdv %{username}"
   user_header_settings: "Profilom"
   user_header_logout: "Kijelentkezés"
   user_header_signin: "Bejelentkezés"
-  view_all_sections: "View all sections"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
-  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
-  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
-  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
-  reset_student_password: "Resetting student passwords"
-  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
-  login_cards: "Login Cards"
-  print_login_cards: "Print login cards"
-  joining_section: "Joining your section (one-time only)"
-  joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: "Sign in to their Code.org account."
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
-  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
-  signing_in_single_instruct: "Your students can sign in to their Code.org accounts by going to https://code.org/ and clicking on the “Sign in” button on the top right corner."
-  reset_student_password_email: "If your student created a Code.org account by using their email address and password (instead of signing in through their Google, Facebook, Microsoft, or Clever account), you can reset their password by going to the “Manage Students” tab for the section, and clicking the “Reset password” button under the “Password” column."
-  syncing_students: "Syncing your students"
-  syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
-  hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro

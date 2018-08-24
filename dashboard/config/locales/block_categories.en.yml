@@ -33,11 +33,13 @@ en:
       Sprites: Sprites
       Behaviors: Behaviors
       Advanced: Advanced
+      Start: Start
+      Locations: Locations
+      Music: Music
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite
       Movement: Movement
-      Start: Start
       Groups: Groups
       Booleans: Booleans
       Functional: Functional

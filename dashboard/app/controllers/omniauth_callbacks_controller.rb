@@ -1,15 +1,63 @@
 require 'cdo/shared_cache'
+require 'honeybadger'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
 
   # GET /users/auth/:provider/callback
   def all
+    if should_connect_provider?
+      connect_provider
+    else
+      login
+    end
+  end
+
+  # Call GET /users/auth/:provider/connect and the callback will trigger this code path
+  def connect_provider
+    return head(:bad_request) unless can_connect_provider?
+
+    auth_hash = request.env['omniauth.auth']
+    provider = auth_hash.provider.to_s
+    return head(:bad_request) unless AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
+
+    # TODO: some of this won't work right for non-Google providers, because info comes in differently
+    new_data = nil
+    if auth_hash.credentials && (auth_hash.credentials.token || auth_hash.credentials.expires_at || auth_hash.credentials.refresh_token)
+      new_data = {
+        oauth_token: auth_hash.credentials.token,
+        oauth_token_expiration: auth_hash.credentials.expires_at,
+        oauth_refresh_token: auth_hash.credentials.refresh_token
+      }.to_json
+    end
+    email = auth_hash.info.email
+    hashed_email = nil
+    hashed_email = User.hash_email(email) unless email.blank?
+    auth_option = AuthenticationOption.new(
+      user: current_user,
+      email: email,
+      hashed_email: hashed_email || '',
+      credential_type: provider,
+      authentication_id: auth_hash.uid,
+      data: new_data
+    )
+
+    if auth_option.save
+      flash.notice = I18n.t('user.account_successfully_updated')
+    else
+      flash.alert = get_connect_provider_errors(auth_option)
+    end
+
+    redirect_to edit_user_registration_path
+  end
+
+  def login
     auth_hash = request.env['omniauth.auth']
     auth_params = request.env['omniauth.params']
+    provider = auth_hash.provider.to_s
 
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
-    if request.env["omniauth.auth"].provider.to_s == 'powerschool'
+    if provider == 'powerschool'
       auth_hash = extract_powerschool_data(request.env["omniauth.auth"])
     end
 
@@ -27,20 +75,20 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
-    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(@user.provider) && @user.persisted?
-      handle_untrusted_email_signin(@user)
+    elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
+      handle_untrusted_email_signin(@user, provider)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
       check_and_apply_oauth_takeover(@user)
       sign_in_user
-    elsif allows_silent_takeover(@user)
-      silent_takeover(@user)
+    elsif allows_silent_takeover(@user, auth_hash)
+      silent_takeover(@user, auth_hash)
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
       # Note that @user.email is populated by User.from_omniauth even for students
       if looked_up_user.provider == 'clever'
-        redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&useClever=true"
+        redirect_to "/users/sign_in?providerNotLinked=#{provider}&useClever=true"
       else
-        redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
+        redirect_to "/users/sign_in?providerNotLinked=#{provider}&email=#{@user.email}"
       end
     else
       # This is a new registration
@@ -86,7 +134,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   # Clever/Powerschool signins have unique requirements, and must be handled a bit outside the normal flow
-  def handle_untrusted_email_signin(user)
+  def handle_untrusted_email_signin(user, provider)
     force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.oauthemailalreadytaken')
 
     # We used to check this based on sign_in_count, but we're explicitly logging it now
@@ -98,9 +146,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       # Otherwise, it's either the first login, or a user who must connect -
       # offer to connect the Clever account to an existing one, or insist if needed
-      session['clever_link_flag'] = user.provider
-      session['clever_takeover_id'] = user.uid
-      session['clever_takeover_token'] = user.oauth_token
+      if user.migrated?
+        auth_option = user.authentication_options.find_by credential_type: provider
+        session['clever_link_flag'] = provider
+        session['clever_takeover_id'] = auth_option.authentication_id
+        session['clever_takeover_token'] = auth_option.data_hash[:oauth_token]
+      else
+        session['clever_link_flag'] = user.provider
+        session['clever_takeover_id'] = user.uid
+        session['clever_takeover_token'] = user.oauth_token
+      end
       session['force_clever_takeover'] = force_takeover
       user.seen_oauth_connect_dialog = true
       user.save!
@@ -128,14 +183,36 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       scopes.include?('classroom.rosters.readonly')
   end
 
-  def silent_takeover(oauth_user)
+  def silent_takeover(oauth_user, auth_hash)
     # Copy oauth details to primary account
     @user = User.find_by_email_or_hashed_email(oauth_user.email)
-    @user.provider = oauth_user.provider
-    @user.uid = oauth_user.uid
-    @user.oauth_refresh_token = oauth_user.oauth_refresh_token
-    @user.oauth_token = oauth_user.oauth_token
-    @user.oauth_token_expiration = oauth_user.oauth_token_expiration
+    if @user.migrated?
+      success = AuthenticationOption.create(
+        user: @user,
+        email: oauth_user.email,
+        hashed_email: oauth_user.hashed_email,
+        credential_type: auth_hash.provider.to_s,
+        authentication_id: auth_hash.uid,
+        data: {
+          oauth_token: auth_hash.credentials&.token,
+          oauth_token_expiration: auth_hash.credentials&.expires_at,
+          oauth_refresh_token: auth_hash.credentials&.refresh_token
+        }.to_json
+      )
+      unless success
+        # This should never happen if other logic is working correctly, so notify
+        Honeybadger.notify(
+          error_class: 'Failed to create AuthenticationOption during silent takeover',
+          error_message: "Could not create AuthenticationOption during silent takeover for user with email #{oauth_user.email}"
+        )
+      end
+    else
+      @user.provider = oauth_user.provider
+      @user.uid = oauth_user.uid
+      @user.oauth_refresh_token = oauth_user.oauth_refresh_token
+      @user.oauth_token = oauth_user.oauth_token
+      @user.oauth_token_expiration = oauth_user.oauth_token_expiration
+    end
     sign_in_user
   end
 
@@ -144,11 +221,35 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     sign_in_and_redirect @user
   end
 
-  def allows_silent_takeover(oauth_user)
-    allow_takeover = oauth_user.provider.present?
-    allow_takeover &= %w(facebook google_oauth2 windowslive).include?(oauth_user.provider)
-    # allow_takeover &= oauth_user.email_verified # TODO (eric) - set up and test for different providers
+  def allows_silent_takeover(oauth_user, auth_hash)
+    allow_takeover = auth_hash.provider.present?
+    allow_takeover &= AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
     allow_takeover && lookup_user
+  end
+
+  def should_connect_provider?
+    return current_user && session[:connect_provider].present?
+  end
+
+  def can_connect_provider?
+    return false unless current_user&.migrated?
+
+    connect_flag_expiration = session.delete :connect_provider
+    connect_flag_expiration&.future?
+  end
+
+  def get_connect_provider_errors(auth_option)
+    errors = auth_option.errors.full_messages
+    Honeybadger.notify(
+      error_message: "Error connecting to provider",
+      context: {
+        authentication_option: auth_option,
+        errors: errors
+      }
+    )
+
+    return errors.first unless errors.empty?
+    I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.#{auth_option.credential_type}"))
   end
 end

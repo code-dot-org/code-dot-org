@@ -317,6 +317,7 @@
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
+  twitter_donor_text: "I'm participating in this year's #HourOfCode, are you? (Thanks %{random_donor} for supporting @codeorg)"
 
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'What is the Hour of Code?'
@@ -418,6 +419,7 @@
   videos_anybody_can_learn: Anybody Can Learn (1 min)
 
   title_country_resources: Country Specific Resources
+  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
   title_how_to_organizations: How to host an Hour of Code - Organizations
@@ -426,6 +428,7 @@
   title_how_to_volunteers: How-to guide for Hour of Code volunteers
   title_how_to_parents: How-to guide for parents
   title_how_to: How-to Guide
+  title_international_partners: Contact International Partners
   title_press_release: Hour of Code Press Release for Elected Officials
   title_op_ed: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
   title_press_kit: Press Kit

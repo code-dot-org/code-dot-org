@@ -4,69 +4,37 @@
       Unplug1:
         title: Introduksjon til informatikk
         desc: Denne leksjonen introduserer begrepet informatikk, og forklarer hva faget handler om. Den vil også gi elever muligheten til å prøve seg i rollen som programmerer. Etter aktiviteten vil eleven kunne ta med seg et minne om hva han eller hun har lært. Du kan bli fristet til å hoppe over å lære unge barn ordforrådet som trengs for å utføre oppgavene som kommer. Men ved å presentere dem på en morsom og leken måte allerede nå, vil du spare deg for mye tid senere.
-        pdfs:
-          - unplug1
         video: Koble fra 1
       Unplug2:
         title: Programmeringstenkning
         desc: Med kun penn og papir kan elevene lære seg de fire trinnene i programmeringstankegang. Etter en kort introduksjon deles elevene inn i grupper, hvor de skal lage kommandoer for å tegne et spesifikt monster fra en katalog av forhåndsbestemte monstre. Oppgaven må brytes opp i biter, slik at gruppene kan analysere alle monstrene i katalogen, abstrahere forskjellige detaljer av monstrene, for å så bruke den informasjonen til å lage en algoritme (en rekke kommandoer) for det laget som skal tegne monsteret. Lagene skal så bytte algoritmer hverandre og tegne monsteret basert på hva algoritmen sier. Er tegningen slik det opprinnelige laget tenkte seg den?
-        pdfs:
-          - unplug2
-        video: Unplug2
       Unplug3:
         title: Millimeterpapirprogrammering
         desc: Ved å programmere en annen til å tegne bilder vil elevene begynne å forstå hva programmering egentlig handler om. Klassen begynner med at elever instruerer hverandre til å fargelegge firkanter på millimeterpapir for å reprodusere et eksisterende bilde. Hvis det er tid kan timen avslutte med bilder som elevene lager selv.
-        pdfs:
-          - unplug3
-        video: Unplug3
       Unplug4:
         title: Algoritmer
         desc: Denne leksjonen er om algoritmer. Ved å bruke tangram figurer og millimeterpapir vil den første øvelsen vise hvor viktig det er å gjøre hver instruksjon som klar og utvetydig som mulig. Etterpå vil klassen utforske hvor mange måter du kan brette et papir til et rektangel, merke hvordan noen metoder bruker flere eller færre bretter enn andre.
-        pdfs:
-          - unplug4
-        video: Unplug4
       Unplug5:
         title: Funksjoner
         desc: I denne leksjonen vil elevene lage en solfanger av streng, perler og et spesielt smykke. Elevene vil følge en rekke gjentagende steg og vil bli bedt om å identifisere bestemte sett med "ferdigheter" som blir dupliserte flere ganger. Når disse ferdighetene er definert, vil de bli kalt fra en hovedprogram og hele den vakre prosessen med skapelse vil bli registrert på et enkelt papirark. Det endelige programmet vil involvere hele klassen, uansett hvilken type streng, perler og smykke. For å effektivt tillate dette, må elevene abstrahere bort fra detaljene i sine spesifikke materialer og bruke generelle begreper det en elev har. Denne bruken av generiske plassholdere er en flott introduksjon til variabler.
-        pdfs:
-          - unplug5
-        video: Unplug5
       Unplug6:
         title: Betingelser
         desc: Dette er et spill for hele klassen. Etter en innføring av betingelser, hvis-setninger og løkker, kan klassen øve sammen med et forhåndsskrevet program, en kortstokk, og litt flaks.
-        pdfs:
-          - unplug6
-        video: Unplug6
       Unplug7:
         title: Låtskriving
         desc: Å lese en tekst er en ganske kjent aktivitet for for de fleste elever. Vi vil ta en aktivitet som allerede er kjent, og benytte den for å gi en god opplæring i å definere og kalle funksjoner. Når elevene er blitt kjent med definere/kalle prosessen, vi vil legge til ekstra funksjoner, kombinert med med passerende parametre.
-        pdfs:
-          - unplug7
-        video: Unplug7
       Unplug8:
         title: Abstraksjon
         desc: Denne aktiviteten kombinerer elvenes daglige rutine og Mad Lib stil tenker spillet for å hjelpe klassen å lære om effektiviteten av det abstrakte. 
-        pdfs:
-          - unplug8
-        video: Unplug8
       Unplug9:
         title: Relé-programmering
         desc: Denne leksjonen vil ta en ide fra en tidligere aktivitet (4. Millimeterpapir programmering) og bruke disse ferdighetene til å understreke alvoret av å fullføre programmer som kjøres i sekvenser og ofte sjekke programmer for "bugs". 
-        pdfs:
-          - unplug9
-        video: Unplug9
       Unplug10:
         title: Internett
         desc: I denne leksjonen vil elevene late som de strømmer gjennom Internett, og samtidig lære om web-adresser, IP-adresser og DNS.
-        pdfs:
-          - unplug10
-        video: Unplug10
       Unplug11:
         title: Oppsummering
         desc: Den endelige Wrap-up i den første 20-timers-serien vil hjelpe klassen til å gjenoppleve alle sine favoritt øyeblikk, samtidig som det gir dem neste trinn som de kan ta sin egen vei hvis de er interessert i å fortsette sin informatikk reise. 
-        pdfs:
-          - unplug11
-        video: Unplug11
       UnplugHappyMaps:
         title: Glade Kart
         desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte en figur gjennom en labyrint med én kommando.
@@ -113,7 +81,7 @@
         title: Fungerende solfangere
         desc: Elevene lager en algoritme med variabler og funksjoner (biter med kode som du skal bruke mange ganger) for å lage solfangere ved bruk av tråder og perler.
       SongwritingParameters:
-        title: Låtskriving med parametere
+        title: Låtskriving
         desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele funksjonen).
       DiceRace:
         title: 'Virkelige algoritmer: Terningrace'
@@ -164,7 +132,6 @@
         title: Collision Detection og Pytagoras læresetning
         desc: Å finne ut når objekter på skjermen berører hverandre er et viktig aspekt i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører hverandre.
       courseA_unplugged_loops:
-        title: Loops Unplugged
         desc: I denne oppgaven skal du lære om løkker!
       courseB_unplugged_MRF:
         title: Frakoblet Aktivitet
@@ -184,9 +151,6 @@
       courseF_unplugged_powerOfWords:
         title: Frakoblet Aktivitet
         desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
-      deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Virkelige algoritmer: Plante et frø'
         desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv, ved hjelp av plante et frø som et eksempel. Det fokuserer også på det store bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
@@ -218,7 +182,7 @@
         title: Millimeterpapirprogrammering
         desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en samling med instruksjoner) for å styre klassekameratene sine til å lage en tegning.
       courseD_unplugged_relayProgramming:
-        title: Relé-programmering
+        title: Relé programmering
         desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov til å skrive en instruksjon om gangen og dersom det er en feil må de viske ut alt til der de gjorde feilen.
       courseD_unplugged_conditionalsCards:
         title: Betingelser med kort
@@ -239,7 +203,7 @@
         title: Crowdsourcing
         desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer effektivt enn hvis en elev prøvde det alene.
       courseE_unplugged_songwriting:
-        title: Låtskriving med parametere
+        title: Låtskriving
         desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele funksjonen).
       courseF_unplugged_tangrams:
         title: Tangram algoritmer
@@ -255,52 +219,10 @@
         desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen. Funksjoner (noen ganger kalt prosedyrer) er mini-programmer som du kan bruke igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig nyttig praksis.  '
       swipeRightPassThrough:
         title: Økt med rekruttering rekrutterings scenarier
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
       swipeRightPassThrough-test123:
         title: Økt med rekruttering rekrutterings scenarier
-        desc: "# Recruitment Scenarios Session\\r\n\\r\n## Swipe Right for CS\\r\nFor this session we'll use a tool called \"Swipe Right for CS\", which has been developed by our partners at MIT. In Swipe Right for CS, you will read through some student profiles and consider specific statements that you might use to convince him or her to enroll in your CS Principles course. \\r\n\\r\n### How it Works\\r\nWhen playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing students to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments. \\r\n\\r\n\\r\nWhen you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
       courseB_unplugged_MRF_2018:
-        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title:
-        desc:
-      courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
-      DiceRace_2018:
-        title:
-        desc:
-      courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
-      SongwritingParameters_2018:
-        title:
-        desc:
-      Internet_2018:
-        title:
-        desc:
-      Crowdsourcing_2018:
-        title:
-        desc:
-      TangramAlgorithms_2018:
-        title:
-        desc:
-      courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
-      EnvelopeVariables_2018:
-        title:
-        desc:
-      ForLoopFun_2018:
-        title:
-        desc:
-      SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: Mine robotliknende venner
       PlantASeed_2018:
         title: 'Virkelige algoritmer: Plante et frø'
         desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv, ved hjelp av plante et frø som et eksempel. Det fokuserer også på det store bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
@@ -311,7 +233,6 @@
         title: Trygg reise
         desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere hvordan å være trygg når du navigerer på Internett.
       courseA_unplugged_loops_2018:
-        title: Loops Unplugged
         desc: I denne oppgaven skal du lære om løkker!
       BigEvent_2018:
         title: Den store begivenheten
@@ -345,13 +266,5 @@
         desc: Elevene skal lage armbånd som en binær representasjon av den første bokstaven i navnet. Elevene lærer at data kan være representert og lagret på mer enn én måte.
       MoveItMoveIt_2018:
         title: Flytt den, flytt den
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
       RelayProgramming_2018:
-        title: Relé-programmering
-        desc: This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+        title: Relé programmering

@@ -1,4 +1,6 @@
+hidden false
 hideable_stages true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/express/standards/"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}'
@@ -7,6 +9,7 @@ project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses bullhorn", "type"=>"bullhorn"}]
 family_name 'express'
 version_year '2018'
+is_stable true
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
@@ -377,16 +380,18 @@ bonus 'courseF_artist_for_challenge1_2018'
 bonus 'courseF_artist_for_challenge2_2018'
 
 stage 'Learning Sprites with Sprite Lab'
-level 'Fish Tank 1'
-level 'Fish Tank 2'
-level 'Fish Tank 3'
-level 'Fish Tank 4'
-level 'Fish Tank 5'
-level 'Fish Tank 6'
-level 'Fish Tank 7'
+level 'CourseEF_video_IntroSpriteLab'
+level 'Fish Tank 1-validated'
+level 'Fish Tank 2-validated'
+level 'Fish Tank 3-validated'
+level 'Fish Tank 4-validated'
+level 'CourseEF_video_MakeSprite'
+level 'Fish Tank 5-validated'
+level 'Fish Tank 6-validated'
+level 'Fish Tank 7-validated'
 
 stage 'Alien Dance Party with Sprite Lab'
-level 'Dance Party 1'
+level 'Dance Party 1-validated'
 level 'Dance Party 2'
 level 'Dance Party 3'
 level 'Dance Party 4'
@@ -407,9 +412,7 @@ level 'Virtual Pet Freeplay'
 stage 'Explore Project Ideas'
 named_level 'courseF_video_csMatters_2018'
 named_level 'InspirationalArtwork_2018'
-named_level 'FoodFight_2018'
-named_level 'Guess The Number_2018'
-named_level 'Choose Your Own Adventure_2018'
+named_level 'courseF_project_1'
 
 stage 'The Design Process'
 named_level 'Begin planning your project_2018'

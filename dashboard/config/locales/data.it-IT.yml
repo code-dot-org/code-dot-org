@@ -4,7 +4,7 @@ it:
     game:
       name:
         Unplug1: Cos'è l'informatica
-        Maze: Il labirinto
+        Maze: Il Labirinto
         Multi: Materiale con Risposte Multiple
         Unplug2: Pensiero computazionale
         Unplug3: Programmazione su carta a quadretti
@@ -177,7 +177,7 @@ it:
         maze_karel_1_7: 'Wow, ho trovato una buca davvero profonda! Non so quante
           palate di terra saranno necessarie per riempirla completamente. Riesci a
           scrivere un programma che la riempie fino a quando il terreno è livellato?
-          Suggerimento: usa le opzioni nel menu a discesa del blocco "mentre".'
+          Suggerimento: usa le opzioni nel menù a discesa (▼) del blocco "mentre".'
         maze_karel_1_8: Aiutami a riempire la buca alla fine del mio terreno, utilizzando
           il minor numero possibile di blocchi.
         maze_karel_1_9: Fammi rimuovere tutti questi mucchi di terra. Prova ad usare
@@ -189,7 +189,7 @@ it:
           rimuovilo.
         maze_karel_1_11: 'È ancora buio fuori. Spostami lungo il terreno. Se c''è
           un mucchio, rimuovilo e se c''è una buca, riempila. Suggerimento: usa il
-          menu a discesa delle opzioni del blocco "se".'
+          menù a discesa (▼) delle opzioni del blocco "se".'
         turtle_2_1: 'Ciao. Io artista zombie. Mi piace disegnare! Aiutami a disegnare
           un quadrato con un colore speciale. Attenzione: ci sono sempre gli stessi
           blocchi, ma ora sono stati organizzati in categorie.'
@@ -351,13 +351,15 @@ it:
         studio_c2_1: |-
           Riesci a far dire a questo cane "Ciao a tutti"?<br>
           <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_c2_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
+        studio_c2_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
         studio_c2_3: Riesci a scrivere un programma che fa arrivare questo cane fino
           al gatto?
         studio_c2_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
           dica "Ciao" quando il cane lo raggiunge.
-        studio_c2_5: Riesci a scrivere un programma per far dire "Ciao" al polpo quando
-          viene cliccato?
+        studio_c2_5: |-
+          Riesci a scrivere un programma per far dire "Ciao" al polpo quando viene cliccato?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
         studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in
           tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
           / a destra in modo da fargli raggiungere tutte le bandierine?
@@ -378,9 +380,9 @@ it:
           per far provare la storia ai tuoi amici sui loro smartphone.
         studio_c3_story_1: |-
           Riesci a far dire a questo cane "Ciao a tutti"?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_c3_story_2: Fai in modo che il cane dica qualcosa e poi il gatto gli
-          risponda.
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
         studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane
           fino al gatto?
         studio_c3_story_4: Fai arrivare il cane fino al gatto e fai in modo che il
@@ -523,8 +525,9 @@ it:
           su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_k1_1: |-
           Riesci a far dire a questo cane "Ciao a tutti"?<br>
-          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-16#VIDEO" target="_blank">Video doppiato in italiano</a>
-        studio_k1_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
+          al gatto?
         studio_k1_3: Riesci a scrivere un programma che fa arrivare questo cane fino
           al gatto?
         studio_k1_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
@@ -560,7 +563,7 @@ it:
           "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
     video:
       name:
-        maze_intro: Introduzione a "Il Labirinto"
+        maze_intro: 'Labirinto - Corso 2: Introduzione'
         artist_intro: Artista - Introduzione
         farmer_intro: Introduzione a "La Contadina"
         flappy_intro: Introduzione a "Flappy"
@@ -624,7 +627,7 @@ it:
         C3_bee_functions: 'Ape: Funzioni'
         C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
         C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
-        C3_artist_nested_loops: Cicli Annidati
+        C3_artist_nested_loops: Cicli annidati
         C3_farmer_while: Cicli "Mentre"
         C3_bee_nested_loops: Cicli annidati
         C3_bee_debugging: 'Ape: Correzione di Errori'
@@ -657,21 +660,21 @@ it:
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Cicli con l'Artista
         CSF_artist_angles: Angoli con l'Artista
-        CSF_collector_k1_blocks: 'Fondamenti di Informatica: Il collezionista'
+        CSF_collector_k1_blocks: La Collezionista
         CSF_collector_repeat_loops: 'Collezionista: Cicli di Ripetizione'
-        CSF_collector_text_blocks: 'Fondamenti di Informatica: Il collezionista'
+        CSF_collector_text_blocks: La Collezionista
         CSF_create_functions: Creazione di funzioni
         CSF_debugging_k1_blocks: Correzione Errori (Debugging)
         CSF_debugging_text_blocks: Correzione Errori (Debugging)
-        CSF_EF_cs_matters: L'informatica conta
+        CSF_EF_cs_matters: L'informatica è importante
         CSF_maze_intro_k1_blocks: Introduzione a Code Studio
         CSF_maze_intro_text_blocks: Introduzione a Code Studio
-        CSF_my_robotic_friends: I miei amici robotici
+        CSF_my_robotic_friends: I Miei Amici Robotici
         CSF_Power_of_Words: Cittadinanza Digitale - Il Potere delle Parole
         CSF_Super_Digital_Citizen: Cittadinanza Digitale - Super Cittadino Digitale
         CSF_stevie_big_project: Stevie e il Grande Progetto
         CSF_unspotted_bugs: Errori Non Riconosciuti
-        CSF_zuck_loops_short: I cicli Repeat
+        CSF_zuck_loops_short: Cicli di Ripetizione
         frozen_intro: Introduzione all'Ora del Codice
         frozen_loops: Introduzione ai Cicli
         frozen_functions: Introduzione alle Funzioni
@@ -691,56 +694,16 @@ it:
           CPU, Ingressi e Uscite'
         csd_concept_hardware_software: 'Come Funzionano i Computer: Hardware e Software'
         csd_concept_search: Come Funziona la Ricerca
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems
-          To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
         csd_gamelab_animation_tab: La scheda dell'animazione
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocità
         csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
         csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
         csd_weblab_css_1: Introduzione a CSS - Parte 1
         csd_weblab_css_2: Introduzione a CSS - Parte 2
         csd_weblab_intro_3: Introduzione a Sviluppo Web - Parte 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduzione alle Funzioni
         csp_applab_functions_parameters: Funzioni con parametri
         csp_applab_loops: Ripetizioni
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Un po ' sui pixel
         csp_cs_is_changing_everything: L'informatica sta cambiando ogni cosa
         csp_pixelation_color_1: Color pixelation widget - parte 1
@@ -750,9 +713,6 @@ it:
         csp_U1L14_tipstricks: Unità 1 Lezione 14 consigli per l'insegnante
         csp_textcompression: Widget di compressione del testo
         csp_textcompression_new: Widget di compressione del testo
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - introduzione
         alg_2_eval_block: CS in Algebra - -Blocchi di valutazione
         alg_3_pemdas: CS in Algebra - ordine delle operazioni
@@ -813,7 +773,6 @@ it:
         mc_2017_puzzle_1: L'Ora del Codice con Minecraft - L'Agente
         mc_2017_puzzle_3: L'Ora del Codice con Minecraft - Cicli
         mc_2017_puzzle_8: L'Ora del Codice con Minecraft - Funzioni
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
         hint_videos_d_11_3_first: 'Video suggerimenti: D.11.3 Prima di tutto'
         hint_videos_d_11_3_last: 'Video suggerimenti: D.11.3 Infine'
         hint_videos_d_11_4_first: 'Video suggerimenti: D.11.4 Prima di tutto'
@@ -834,21 +793,25 @@ it:
         applab_intro_designmode: Sviluppo App - Modalità Interfaccia
         applab_intro_share: Sviluppo App - Condividi la tua app
         csd_applab_arrays: Introduzione agli array
-        CSF_skinOverview_Harvester: The Harvester
+        CSF_skinOverview_Harvester: La Contadina
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_skinOverview_K-1: La Contadina
         CSF_harvester_loops_K1: Cicli con la Contadina
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
+        CSF_scrat_loops_K1: Cicli con l'Era Glaciale
+        CSF_scrat_loops_CF: Cicli con l'Era Glaciale
         CSF_if_allskins: Il Blocco Se
         CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
         CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
         CSF_loops_AB: Ripetizioni
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
-        csd_gamelab_if_else: If/Else Statements
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratori dei Personaggi
+        CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio
+          dei Personaggi
+        CDEF_Video_SpritesInAction: Personaggi in Azione
+        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione
+        CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

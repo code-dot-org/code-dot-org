@@ -17,7 +17,7 @@ is:
         Artist3: Listamaðurinn 3
         Unplug7: Lagasmíð
         Farmer2: Bóndinn 2
-        Unplug8: Greining kjarna
+        Unplug8: Útdráttur
         Artist4: Listamaðurinn 4
         Unplug9: Boðhlaupsforritun
         Farmer3: Bóndinn 3
@@ -95,8 +95,8 @@ is:
         maze_2_17: '"Ef-annars" kubburinn athugar skilyrði og gerir svo annaðhvort
           eitt eða eitthvað annað. Prófaðu að nota þennan nýja kubb til að koma mér
           til sólblómsins.'
-        maze_2_18: Ein æfing í viðbót með "ef-annars" kubbinn. Geturðu leyst þrautina
-          í fyrstu tilraun?
+        maze_2_18: Enn ein æfing með "ef-annars" kubbinn. Geturðu leyst þetta í fyrstu
+          tilraun?
         maze_2_19: Getur þú bætt við bara 3 kubbum til að hjálpa mér að rata flóknari
           leið? Ef þú gerir það rétt, get ég gengið hvaða slóð sem er alveg sama hvað
           hún er löng.
@@ -153,8 +153,8 @@ is:
           að búa til mismunandi mynstur. Eða gerðu tilraunir með aðra hluta kóðans
           til að teikna hvað sem þú vilt.
         maze_karel_1_1: Hæ, ég er bóndi. Ég þarf hjálp þína við að slétta túnið á
-          jörðinni minni. Færðu mig að moldarhaugnum og notaðu "fjarlægja" kubbinn
-          til að fjarlægja hauginn.
+          jörðinni minni svo að ég geti ræktað það. Færðu mig að moldarhaugnum og
+          notaðu "fjarlægja" kubbinn til að fjarlægja hauginn.
         maze_karel_1_2: Færðu mig svo að holunni og fylltu hana með TVEIMUR skóflum
           af mold með því að nota "fylla" kubbinn.
         maze_karel_1_3: Færðu mig að moldarhaugnum og segðu mér hve margar skóflur
@@ -162,7 +162,7 @@ is:
         maze_karel_1_4: 'Getur þú hjálpað mér að fjarlægja alla fjóra moldarhaugana?
           Vísbending: Notaðu endurtekningarkubb ef þú getur.'
         maze_karel_1_5: 'Hjálpaðu mér að fylla allar þessar holur með 5 skóflum af
-          mold. Vísbending: Þú getur sett "endurtaka" blokk innan í "meðan" blokk.'
+          mold. Vísbending: Þú getur sett "endurtaka" kubb innan í "meðan" kubb.'
         maze_karel_1_6: Fjarlægðu alla moldarhaugana með sem fæstum kubbum. Nýju valkostirnir
           í fellilistanum á "meðan" kubbnum segja mér hvort ég standi á haug eða holu.
         maze_karel_1_7: Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur þarf
@@ -322,20 +322,20 @@ is:
         studio_c2_3: Getur þú skrifað forrit sem færir hundinn að kettinum?
         studio_c2_4: Getur þú skrifað forrit sem lætur hundinn færa sig að kettinum
           og látið köttinn segja "Hæ" þegar hundurinn kemur til hans?
-        studio_c2_5: Getur þú skrifað forrit sem lætur kolkrabbann segja "Hæ" þegar
+        studio_c2_5: Getur þú skrifað forrit sem lætur kolkrabbann segja "hæ" þegar
           smellt er á hann?
-        studio_c2_6: Getur þú skrifað forrit sem lætur þessa mörgæs hreyfast með því
-          að nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?
+        studio_c2_6: Getur þú skrifað forrit sem lætur Waddles hreyfast með því að
+          nota örvarlyklana upp / niður / vinstri / hægri til að snerta öll mörkin?
         studio_c2_7: Með kubbnum "endurtaka endalaust" getur þú látið kóða keyra án
           þess að stöðvast. Geturðu bætt við kubbum svo að risaeðlan hreyfist stanslaust
           upp og niður?
-        studio_c2_8: Getur þú látið mörgæsina segja "Ááá!" og spilað viðeigandi hljóð
-          þegar hún rekst á risaeðluna og notað örvarlykla til að færa hana svo það
+        studio_c2_8: Getur þú látið Waddles segja "Æ!" og spilað snertihljóð þegar
+          hann rekst á risaeðluna og síðan notað örvarlykla til að færa hann svo það
           geti orðið árekstur?
-        studio_c2_9: Getur þú bætt við kubbi til að skora stig þegar mörgæsin rekst
-          á kolkrabbann og síðan fært hana með örvarlyklunum þar til þú skorar?
-        studio_c2_10: Getur þú bætt við kubbum til að breyta bakgrunni og hraða mörgæsarinnar
-          og síðan fært hana með örvarlyklunum þar til þú skorar?
+        studio_c2_9: Getur þú bætt við kubbi til að skora stig þegar Waddles rekst
+          á kolkrabbann og síðan fært hann með örvarlyklunum þar til þú skorar?
+        studio_c2_10: Getur þú bætt við kubbum til að breyta bakgrunni og hraða Waddles
+          og síðan fært hann með örvarlyklunum þar til þú skorar?
         studio_c2_11: Búðu til sögu eftir eigin höfði. Smelltu svo á Ljúka til að
           leyfa vinum að prófa söguna í símum sínum.
         studio_c3_story_1: Getur þú látið hundinn segja "Halló heimur"?
@@ -526,10 +526,10 @@ is:
         C1_bee_level_intro: Býflugnaborð - kynning
         C1_artist_intro: Kynning á listamanni
         C1_spelling_bee_intro: Stafsetning - kynning
-        C1_zuck_repeat_loop: Völundarhús - lykkjur
+        C1_zuck_repeat_loop: Lykkjur völundarhúss
         C1_bee_loops: Býfluga - lykkjur
         C1_maze_loops: Lykkjur völundarhúss
-        C1_playlab_storytelling: Leikjasmiðja - Búa til sögu
+        C1_playlab_storytelling: Leikjasmiðja - búa til sögu
         C1_planting_seed: Fræsáning
         C1_building_foundation: Að byggja grunn
         C1_going_places_safely: Ferðast í öryggi
@@ -540,7 +540,7 @@ is:
         C2_artist_debugging: Villuleit listamanns
         C2_bee_loops: Býfluga - lykkjur
         C2_bee_debugging: Býfluga - villuleit
-        C2_bee_conditionals: Skilyrði býflugu
+        C2_bee_conditionals: Býfluga - skilyrði
         C2_playlab_createstory: Leikjasmiðja - búa til sögu
         C2_graph_paper: Forritun rúðublaða
         C2_conditionals_with_cards: Skilyrði
@@ -549,7 +549,7 @@ is:
         C2_paper_airplanes: Pappírsflaugar
         C2_digital_footprint: Stafræna fótsporið þitt
         C2_digital_footprint_v2: Stafræna fótsporið þitt
-        C3_maze_level_4: Völundarhús - lykkjur
+        C3_maze_level_4: Lykkjur völundarhúss
         C3_artist_intro: Kynning á listamanni
         C3_artist_functions: Listamaður - föll
         C3_bee_functions: Býfluga - föll
@@ -569,7 +569,7 @@ is:
         C3_songwriting_with_parameters: Lagasmíð með stikum
         C4_intro: Kynning
         C4_loops_zombie: Lykkjur
-        C4_bee_conditional: Skilyrði býflugu
+        C4_bee_conditional: Býfluga - skilyrði
         C4_variables_artist: Breytur - Listamaður
         C4_variables_playlab: Breytur - Leikjasmiðja
         C4_for_loops: Frá lykkjur
@@ -586,7 +586,6 @@ is:
         C4_unplugged_forloops: Frá lykkjur
         C4_unplugged_parameters: Lagasmíð með stikum
         C4_unplugged_binary: Tvíundir
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Listamaðurinn - Horn
         CSF_collector_k1_blocks: 'Grunnatriði tölvunarfræði: Safnarinn'
         CSF_collector_repeat_loops: Safnarinn - Lykkjur
@@ -628,52 +627,17 @@ is:
         csd_external_waze_data: Af hverju eru svo margir notendur með Waze á heilanum?
         csd_gamelab_animation_tab: Hreyfingasíðan
         csd_gamelab_conditionals_1: Kynning á skilyrðingum - 1. hluti
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Hraði
         csd_weblab_intro_1: Kynning á Vefsmiðju - 1. hluti
         csd_weblab_intro_2: Kynning á Vefsmiðju - 2. hluti
         csd_weblab_css_1: Kynning á tölvunarfræði - 1. hluti
         csd_weblab_css_2: Kynning á tölvunarfræði - 2. hluti
         csd_weblab_intro_3: Kynning á Vefsmiðju - 3. hluti
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
+        csp_applab_conditionals_1: Kynning á skilyrðingum - 1. hluti
         csp_applab_functions: Kynning á föllum
         csp_applab_functions_parameters: Föll með stikum
         csp_applab_loops: Lykkjur
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Svolítið bitastætt um díla
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Litadílamynstursgræja - 1. hluti
         csp_pixelation_color_2: Litadílamynstursgræja - 2. hluti
         csp_pixelation_color_3: Litadílamynstursgræja - 3. hluti
@@ -682,9 +646,6 @@ is:
           14
         csp_textcompression: Textaþjöppunargræja
         csp_textcompression_new: Textaþjöppunargræja
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: Tölvunarfræði (TF) í Algebru - Inngangur
         alg_2_eval_block: TF í Algebru - Matskubbar
         alg_3_pemdas: TF í Algebru - Röð aðgerða
@@ -761,18 +722,16 @@ is:
         CSF_skinOverview_Harvester: Sláttuvélin
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
         CSF_harvester_skinOverview_K-1: Sláttuvélin
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
+        CSF_scrat_loops_K1: Lykkjur í Ísöld
+        CSF_scrat_loops_CF: Lykkjur í Ísöld
+        CSF_if_allskins: Ef kubburinn
+        CSF_ifelse_allskins: Notkun Ef/Annars kubba
+        CSF_ifelseifelse_allskins: Notkun Ef/Annars Ef/Annars kubba
         CSF_loops_AB: Lykkjur
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        csd_gamelab_booleans: Rökyrðingar
+        csd_gamelab_conditional_statements: Skilyrðingar
+        csd_gamelab_if_else: Ef/Annars yrðingar
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

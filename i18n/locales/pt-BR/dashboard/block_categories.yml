@@ -2,13 +2,13 @@ pt-BR:
   data:
     block_categories:
       Actions: Ações
-      Loops: Laços
-      Functions: Funções
+      Loops: laços
+      Functions: funções
       Color: Cor
       Brushes: Pincéis
       Math: Matemática
       Logic: Lógica
-      Variables: Variáveis
+      Variables: variáveis
       Number: Número
       String: String
       Image: Imagem
@@ -26,17 +26,18 @@ pt-BR:
       everythingelse: variados
       numbers: números
       Numbers: Números
-      Input: Input
+      Input: Entrada
       Default: Padrão
       World: Mundo
-      Sprites: Sprites
+      Sprites: Sprite
       Behaviors: Comportamentos
-      Advanced: Advanced
+      Advanced: Avançado
+      Start: Começar
+      Music: Música
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Fazer Sprite
       Movement: Movimento
-      Start: Começar
       Groups: Grupos
       Booleans: Booleanos
       Functional: Funcional

@@ -8,7 +8,7 @@ zh-TW:
     failure:
       already_authenticated: 您已經登入。
       inactive: 您的帳戶尚未啟動。
-      invalid: 無效的電子信箱或密碼。
+      invalid: 無效的電子郵件或密碼。
       invalid_token: 無效的身份驗證碼。
       locked: 您的帳戶已被鎖住。
       not_found_in_database: 無效的電子郵件或密碼。
@@ -40,7 +40,6 @@ zh-TW:
       update_needs_confirmation: 你的帳戶已更新，不過我們必須驗證你的新電子信箱。請查收你的郵件，點擊通知信中的驗證連結。
       updated: 你的帳戶已更新。
     sessions:
-      signed_in: ''
       signed_out: 已成功登出。
     unlocks:
       send_instructions: 你會在幾分鐘內收到一封帳戶解鎖的指示信件。
@@ -71,7 +70,7 @@ zh-TW:
     mailer:
       invitation_instructions:
         subject: 邀請說明
-        hello: " %{email} 你好"
+        hello: Hello %{email}
         someone_invited_you: 有人邀請你到 %{url}，你可以透過下方連結接受邀請。
         accept: 接受邀請
         ignore: 如果你不想接收這個邀請，請忽略這封信件。<br />在你點擊上方的連結並設定好密碼之前，你的帳戶將不會建立。

@@ -3,11 +3,11 @@ zh-CN:
   data:
     game:
       name:
-        Unplug1: 计算机科学导论
+        Unplug1: 计算机概论
         Maze: 迷宫
         Multi: 多选项目
         Unplug2: 计算式思维技巧
-        Unplug3: 图纸上编程
+        Unplug3: 方格纸编程
         Artist: 小艺术家
         Unplug4: 算法
         Artist2: 小艺术家 2
@@ -15,7 +15,7 @@ zh-CN:
         Farmer: 农夫
         Unplug6: 条件语句
         Artist3: 小艺术家 3
-        Unplug7: 歌曲创作
+        Unplug7: 歌曲写作
         Farmer2: 农民 2
         Unplug8: 抽象化
         Artist4: 小艺术家 4
@@ -25,7 +25,7 @@ zh-CN:
         Artist5: 小艺术家 5
         Unplug11: 总结
         MazeEC: 迷宫
-        Bounce: 弹跳
+        Bounce: 跳
         Flappy: Flappy Bird
         Jigsaw: 拼图
         MazeStep: 单步迷宫模式
@@ -76,7 +76,7 @@ zh-CN:
         maze_2_15: 我想要向日葵 ！使用"如果"模块，让我用最少的模块到达那里。
         maze_2_16: 好啦，让我们再来练习一次 —— 这和之前的差不多，但是小心别被食人花吃了！
         maze_2_17: "“如果 - 否则”块检查当前是否满足一个条件，并根据结果执行相应模块。试试用这个新的模块让我得到那个向日葵。"
-        maze_2_18: 让我们来再练习一次使用“如果 - 否则”块，可以试一次就成功么？
+        maze_2_18: 让我们来再练习一次使用“如果/否则”块，你能第一次就成功么？
         maze_2_19: 能不能加三个块来帮我走出这个复杂的迷宫？如果你做对了，那我就可以通过任何长度的弯曲路径了。
         turtle_1_1: 你好，我是一个小艺术家。您可以用代码让我画任何东西。使用几个模块让我画出图中的灰色线条。
         turtle_1_2: 现在，让我们来画个正方形。注意： 你可以用新的"设置颜色"块选择你最喜欢的颜色。
@@ -183,28 +183,28 @@ zh-CN:
         mazestep_4: 迷宫步骤说明在这里
         mazestep_5: 迷宫步骤说明在这里
         studio_c2_1: 你可以让这个狗说"你好世界"吗？
-        studio_c2_2: 你可以让狗说些什么，然后让猫说些什么吗？
-        studio_c2_3: 你可以写一个程序来将这只狗移动到那只猫处吗？
+        studio_c2_2: 你可以让狗说些什么，接着让猫说些什么吗？
+        studio_c2_3: 你可以写一个程序来将这只狗移动到猫那里吗？
         studio_c2_4: 你可以写一个程序来将这只狗移动到那只猫处, 当狗到达时, 让猫对他说“你好”?
-        studio_c2_5: 你可以写一个程序来使章鱼被点击时说“你好”吗？
-        studio_c2_6: 你可以写一个程序，用上/下/左/右按键使这个企鹅到达所有目标吗？
-        studio_c2_7: '"一直重复"块允许您连续运行代码。您可以附加块来使这只恐龙反复向上向下移动吗？'
-        studio_c2_8: '如果他碰到恐龙时，你可以让企鹅说: "哎哟!" 并播放“打”的声音，然后将企鹅按照箭头移动使这种情况发生吗？'
-        studio_c2_9: 你可以添加一个模块, 当企鹅碰到章鱼时得一分点，然​​后将企鹅按照箭头移动，直到你获得分数?
-        studio_c2_10: 你可以添加模块, 以更改背景和企鹅的速度，然​​后将企鹅按照箭头移动，直到你获得分数?
+        studio_c2_5: 你能否写一个程序，让章鱼被点击时说“你好”吗？
+        studio_c2_6: 你能否写一个程序，用上/下/左/右按键使企鹅到达所有目标？
+        studio_c2_7: '"一直重复"模块允许你永远重复执行一段代码。你能再连接一些块来使这只恐龙反复向上向下移动吗？'
+        studio_c2_8: 你能否编程让企鹅撞到恐龙时，让它说"哎哟!" 同时播放一个“命中”的声音？然后试玩一下，用箭头移动企鹅来使这种情况发生。
+        studio_c2_9: 你能添加一个模块，在企鹅碰到章鱼时得1分吗？然​​后试玩一下，用箭头移动企鹅直到得分。
+        studio_c2_10: 你能否通过添加模块来改变背景和企鹅的速度，然后将它按箭头移动而最终得分？
         studio_c2_11: 创建你自己的故事。当你完成后，单击完成，让朋友在他们手机上试试你的故事.
         studio_c3_story_1: 你可以让这个狗说"你好世界"吗？
-        studio_c3_story_2: 你可以让狗说些什么，然后让猫说些什么吗？
-        studio_c3_story_3: 你可以写一个程序来将这只狗移动到那只猫处吗？
+        studio_c3_story_2: 你可以让狗说些什么，接着让猫说些什么吗？
+        studio_c3_story_3: 你可以写一个程序来将这只狗移动到猫那里吗？
         studio_c3_story_4: 你可以写一个程序来将这只狗移动到那只猫处, 当狗到达时, 让猫对他说“你好”?
-        studio_c3_story_5: 你可以添加一个能使章鱼快乐的模块吗？
+        studio_c3_story_5: 你能添加一个模块，让章鱼变得快乐吗？
         studio_c3_story_6: 创建你自己的故事。当你完成后，单击完成，让朋友在他们手机上试试你的故事.
-        studio_c3_game_1: 你可以写一个程序来使章鱼被点击时说“你好”吗？
-        studio_c3_game_2: 你可以写一个程序，用上/下/左/右按键使这个企鹅到达所有目标吗？
-        studio_c3_game_3: '"一直重复"块允许您连续运行代码。您可以附加块来使这只恐龙反复向上向下移动吗？'
-        studio_c3_game_4: '如果他碰到恐龙时，你可以让企鹅说: "哎哟!" 并播放“打”的声音，然后将企鹅按照箭头移动使这种情况发生吗？'
-        studio_c3_game_5: 你可以添加一个模块, 当企鹅碰到章鱼时得一分点，然​​后将企鹅按照箭头移动，直到你获得分数?
-        studio_c3_game_6: 你可以添加模块, 以更改背景和企鹅的速度，然​​后将企鹅按照箭头移动，直到你获得分数?
+        studio_c3_game_1: 你能否写一个程序，让章鱼被点击时说“你好”吗？
+        studio_c3_game_2: 你能否写一个程序，用上/下/左/右按键使企鹅到达所有目标？
+        studio_c3_game_3: '"一直重复"模块允许你永远重复执行一段代码。你能再连接一些块来使这只恐龙反复向上向下移动吗？'
+        studio_c3_game_4: 你能否编程让企鹅撞到恐龙时，让它说"哎哟!" 同时播放一个“命中”的声音？然后试玩一下，用箭头移动企鹅来使这种情况发生。
+        studio_c3_game_5: 你能添加一个模块，在企鹅碰到章鱼时得1分吗？然​​后试玩一下，用箭头移动企鹅直到得分。
+        studio_c3_game_6: 你能否通过添加模块来改变背景和企鹅的速度，然后将它按箭头移动而最终得分？
         studio_c3_game_7: 创建你自己的游戏。当你完成后时，单击完成，让朋友在他们手机上试试你的游戏。
         studio_playlab_1: 企鹅想要说"你好"— — 你能帮助他吗？
         studio_playlab_2: 洞穴男孩 （演员 1） 和洞穴女孩 （演员 2） 想向对方说"你好"。你能通过使用"说"块两次来帮助他们吗？
@@ -242,10 +242,10 @@ zh-CN:
         studio_gumball_free_play: 是时候创建你自己的游戏或故事啦！当你完成后时，单击“完成”来让你的朋友在他们的手机、 平板电脑或电脑试试你的游戏吧！
         studio_full_sandbox: 创建你自己的游戏。当你完成后时，单击完成，让朋友在他们手机上试试你的游戏。
         studio_k1_1: 你可以让这个狗说"你好世界"吗？
-        studio_k1_2: 你可以让狗说些什么，然后让猫说些什么吗？
-        studio_k1_3: 你可以写一个程序来将这只狗移动到那只猫处吗？
+        studio_k1_2: 你可以让狗说些什么，接着让猫说些什么吗？
+        studio_k1_3: 你可以写一个程序来将这只狗移动到猫那里吗？
         studio_k1_4: 把狗移动到猫那处, 当他到达时让猫说"你好".
-        studio_k1_5: 你可以添加一个能使章鱼快乐的模块吗？
+        studio_k1_5: 你能添加一个模块，让章鱼变得快乐吗？
         studio_k1_6: 创建你自己的故事 ！上下左右移动猫和狗，让他们说点什么。
         maze_wordsearch_k_1: 移动我拼写单词EAST
         maze_wordsearch_k_2: 移动我拼写单词SOUTH
@@ -256,7 +256,7 @@ zh-CN:
         maze_wordsearch_k_13: 把我向这边 然后向另一边移动来拼写单词DEBUG
         maze_wordsearch_k_15: 把我向这边 然后向另一边移动来拼写单词ABOVE
         maze_wordsearch_k_16: 把我向这边 然后向另一边移动来拼写单词BELOW
-        maze_wordsearch_k_20: 试验以下！先把我往一个方向移动，然后再往另一个方向移动，来拼写单词STORY
+        maze_wordsearch_k_20: 试验一下！先把我往一个方向移动，然后再往另一个方向移动，来拼写单词STORY
         applab_ec_simple: 使用工具箱中的积木块来创建您的应用程序吧。
         turtle_ec_1_2: 现在，画个正方形。注意：从新的《penColor》模块中选用你最喜欢的颜色。
         turtle_ec_1_10: 你成功了！现在任由你随意画你喜欢的东西。你可以尝试画个火柴人、雪花、旋螺型或其他有趣的图画。还有，可别忘了试用新的
@@ -373,7 +373,7 @@ zh-CN:
         CSF_my_robotic_friends: 我的机器人朋友
         CSF_Power_of_Words: 文字的力量
         CSF_Super_Digital_Citizen: 超级数字公民
-        CSF_stevie_big_project: 杰拉德和大项目
+        CSF_stevie_big_project: 斯蒂夫和大项目
         CSF_unspotted_bugs: 没有斑点的Bug
         CSF_zuck_loops_short: 重复循环
         frozen_intro: 编程一小时介绍
@@ -397,80 +397,15 @@ zh-CN:
         csd_external_netflix_data: Netflix（网飞）是如何生成电视和电影建议的？
         csd_external_waze_data: 为什么如此多的用户都着迷于Waze？
         csd_gamelab_animation_tab: 动画标签页
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: 矢量
         csd_weblab_intro_1: 网络实验室介绍-第 1 部分
         csd_weblab_intro_2: 网络实验室介绍-第 2 部分
         csd_weblab_css_1: CSS介绍 -第 1 部分
         csd_weblab_css_2: CSS介绍 -第 2 部分
         csd_weblab_intro_3: 网络实验室介绍-第 3 部分
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: 函数介绍
         csp_applab_functions_parameters: 有参数的函数
         csp_applab_loops: 循环
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
-        csp_concept_rgb: A Little Bit About Pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
-        csp_pixelation_color_1: Color pixelation widget - Part 1
-        csp_pixelation_color_2: Color pixelation widget - Part 2
-        csp_pixelation_color_3: Color pixelation widget - Part 3
-        csp_pixelation_bw: Black and white pixelation widget
-        csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
         starwars_intro: '星球大战: 用代码构建一个星系-介绍'
         starwars_typing: '星球大战: 用代码构建一个星系-JavaScript'
         starwars_events: '星球大战: 用代码构建一个星系-事件'
@@ -541,11 +476,11 @@ zh-CN:
         CSF_loops_AB: 循环
         csd_gamelab_booleans: 布尔表达式
         csd_gamelab_conditional_statements: 条件表达式
-        csd_gamelab_if_else: If/Else Statements
+        csd_gamelab_if_else: 如果/否则 语句
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面
-        run: 点击"运行"以尝试您的程序
+        run: 点击“运行”，试试你的程序
         watch_again: 单击此处可再次观看视频
         gray_block_explanation: 你不能删除灰色的积木块哦。 这样你还能解开这个谜题吗？
         show_code_explanation: 单击此处查看你的程序的代码

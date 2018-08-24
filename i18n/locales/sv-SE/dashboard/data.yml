@@ -18,7 +18,7 @@ sv:
         Farmer2: Bonden 2
         Unplug8: Abstraktion
         Artist4: Konstnären 4
-        Unplug9: Relä programmering
+        Unplug9: Stafettprogrammering
         Farmer3: Bonden 3
         Unplug10: Internet
         Artist5: Konstnären 5
@@ -37,7 +37,6 @@ sv:
         NetSim: Internet Simulator
         Custom: Konstnären
         CustomStudio: Spel-labb
-        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Brons
@@ -52,7 +51,7 @@ sv:
         loop_until: '"Upprepa tills"-Block'
         loop_while: '"Medan"-block'
         loop_for: '"Räknar"-block'
-        function: Funktioner
+        function: funktioner
         parameters: Funktioner med parametrar
     level:
       instructions:
@@ -178,28 +177,28 @@ sv:
         mazestep_4: Labyrint steg beskrivning här
         mazestep_5: Labyrint steg beskrivning här
         studio_c2_1: Kan du göra så att hunden säger "hello world"?
-        studio_c2_2: Kan du göra så att hunden säger något och så att katten säger något efteråt?
-        studio_c2_3: Kan du skriva ett program som gör att hunden flyttar till katten?
-        studio_c2_4: Kan du skriva ett program som gör att hunden flyttar till katten och så att katten säger "Hej" när hunden når honom?
-        studio_c2_5: Kan du skriva ett program så att bläckfisken säger "Hej" när den  klickas på?
-        studio_c2_6: Kan du skriva ett program som gör att denna pingvin flyttar runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål?
-        studio_c2_7: Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt. Kan du lägga till block för att flytta denna dinosaurie upp och ner om och om igen?
-        studio_c2_8: Kan du få pingvinen att säga "AJ!" och spela ett "hit" ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att få det att hända?
-        studio_c2_9: Kan du lägga till ett block för att en poäng när pingvinen kör in i bläckfisken, och sedan flytta honom med pilarna tills du får poäng?
-        studio_c2_10: Kan du lägga till block för att ändra bakgrunden och hastigheten på pingvinen och så flytta honom med pilarna tills du får poäng?
-        studio_c2_11: Skapa din egen berättelse. När du är klar, klicka på Slutför om du vill låta vänner prova din berättelse på sina telefoner.
+        studio_c2_2: Kan du å hunden att hunden att säga något och sen få katten att säga något efteråt?
+        studio_c2_3: Kan du skriva ett program som gör att hunden rör sig till katten?
+        studio_c2_4: Kan du skriva ett program som gör att hunden rör sig till katten och så att katten säger "Hej" när hunden når honom?
+        studio_c2_5: Kan du skriva ett program så att bläckfisken säger "Hej" när man klickar på den?
+        studio_c2_6: Skriv ett program som gör att pingvinen Waddles rör sig runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
+        studio_c2_7: Med "Upprepa för alltid" (repeat forever) blocket kan du köra kod oavbrutet. Kan du lägga till block för att flytta den här dinosaurien upp och ner om och om igen?
+        studio_c2_8: Kan du få pingvinen att säga "AJ!" och spela ett "träffad" ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att få det att hända?
+        studio_c2_9: "Kan du lägga till ett block för att räkna poäng när pingvinen krockar med Octavia (actor 3)? \\r \nSpela spelet och flytta pingvinen med pilarna tills du får poäng!"
+        studio_c2_10: "Kan du lägga till block för att ändra bakgrunden och hastigheten på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
+        studio_c2_11: Skapa din egen berättelse. När du är klar, klicka på Slutför/Finish om du vill låta kompisar prova din berättelse på sina telefoner.
         studio_c3_story_1: Kan du göra så att hunden säger "hello world"?
-        studio_c3_story_2: Kan du göra så att hunden säger något och så att katten säger något efteråt?
-        studio_c3_story_3: Kan du skriva ett program som gör att hunden flyttar till katten?
-        studio_c3_story_4: Kan du skriva ett program som gör att hunden flyttar till katten och så att katten säger "Hej" när hunden når honom?
-        studio_c3_story_5: Kan du lägga till ett block för att göra bläckfisken lycklig?
-        studio_c3_story_6: Skapa din egen berättelse. När du är klar, klicka på Slutför om du vill låta vänner prova din berättelse på sina telefoner.
-        studio_c3_game_1: Kan du skriva ett program så att bläckfisken säger "Hej" när den  klickas på?
-        studio_c3_game_2: Kan du skriva ett program som gör att denna pingvin flyttar runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål?
-        studio_c3_game_3: Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt. Kan du lägga till block för att flytta denna dinosaurie upp och ner om och om igen?
-        studio_c3_game_4: Kan du få pingvinen att säga "AJ!" och spela ett "hit" ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att få det att hända?
-        studio_c3_game_5: Kan du lägga till ett block för att en poäng när pingvinen kör in i bläckfisken, och sedan flytta honom med pilarna tills du får poäng?
-        studio_c3_game_6: Kan du lägga till block för att ändra bakgrunden och hastigheten på pingvinen och så flytta honom med pilarna tills du får poäng?
+        studio_c3_story_2: Kan du å hunden att hunden att säga något och sen få katten att säga något efteråt?
+        studio_c3_story_3: Kan du skriva ett program som gör att hunden rör sig till katten?
+        studio_c3_story_4: Kan du skriva ett program som gör att hunden rör sig till katten och så att katten säger "Hej" när hunden når honom?
+        studio_c3_story_5: Kan du lägga till ett block för att göra bläckfisken glad?
+        studio_c3_story_6: Skapa din egen berättelse. När du är klar, klicka på Slutför/Finish om du vill låta kompisar prova din berättelse på sina telefoner.
+        studio_c3_game_1: Kan du skriva ett program så att bläckfisken säger "Hej" när man klickar på den?
+        studio_c3_game_2: Skriv ett program som gör att pingvinen Waddles rör sig runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
+        studio_c3_game_3: Med "Upprepa för alltid" (repeat forever) blocket kan du köra kod oavbrutet. Kan du lägga till block för att flytta den här dinosaurien upp och ner om och om igen?
+        studio_c3_game_4: Kan du få pingvinen att säga "AJ!" och spela ett "träffad" ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att få det att hända?
+        studio_c3_game_5: "Kan du lägga till ett block för att räkna poäng när pingvinen krockar med Octavia (actor 3)? \\r \nSpela spelet och flytta pingvinen med pilarna tills du får poäng!"
+        studio_c3_game_6: "Kan du lägga till block för att ändra bakgrunden och hastigheten på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
         studio_c3_game_7: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
         studio_playlab_1: Pingvinen vill säga "Hej" - kan du hjälpa honom?
         studio_playlab_2: Grottpojken (skådespelare 1) och grottflickan (skådespelare 2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket "säg" två gånger?
@@ -235,10 +234,10 @@ sv:
         studio_gumball_free_play: Skapa ditt eget spel eller din egen berättelse. När du är klar, klicka på "Slutför" för att låta dina vänner prova ditt spel på sina telefoner, surfplattor eller datorer!
         studio_full_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
         studio_k1_1: Kan du göra så att hunden säger "hello world"?
-        studio_k1_2: Kan du göra så att hunden säger något och så att katten säger något efteråt?
-        studio_k1_3: Kan du skriva ett program som gör att hunden flyttar till katten?
+        studio_k1_2: Kan du å hunden att hunden att säga något och sen få katten att säga något efteråt?
+        studio_k1_3: Kan du skriva ett program som gör att hunden rör sig till katten?
         studio_k1_4: Gör så att hunden flyttar till katten och så att katten säger "Hej" när han kommer dit.
-        studio_k1_5: Kan du lägga till ett block för att göra bläckfisken lycklig?
+        studio_k1_5: Kan du lägga till ett block för att göra bläckfisken glad?
         studio_k1_6: Skapa din egen berättelse! Flytta runt katten och hunden och få dem att säga saker.
         maze_wordsearch_k_1: Flytta mig för att stava ordet EAST(öst)
         maze_wordsearch_k_2: Flytta mig för att stava ordet SOUTH(söder)
@@ -310,7 +309,7 @@ sv:
         C2_graph_paper: Kalkyleringsprogrammering
         C2_conditionals_with_cards: Villkor
         C2_binary_bracelets: Binära armband
-        C2_relay_programming: Relä programmering
+        C2_relay_programming: Stafettprogrammering
         C2_paper_airplanes: Pappersflygplan
         C2_digital_footprint: Ditt digitala fotavtryck
         C2_digital_footprint_v2: Ditt digitala fotavtryck
@@ -333,7 +332,7 @@ sv:
         C3_functional_suncatchers: Funktionella Solfångare
         C3_songwriting_with_parameters: Låtskrivande med parametrar
         C4_intro: Introduktion
-        C4_loops_zombie: Loopar
+        C4_loops_zombie: loopar
         C4_bee_conditional: 'Bi: Villkor'
         C4_variables_artist: Variabler - Konstnär
         C4_variables_playlab: Variabler - Play Lab
@@ -351,23 +350,7 @@ sv:
         C4_unplugged_forloops: '''För'' loopar'
         C4_unplugged_parameters: Låtskrivande Med parametrar
         C4_unplugged_binary: Binära
-        CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
-        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
-        CSF_collector_repeat_loops: Collector Repeat Loops
-        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
-        CSF_create_functions: Create Functions
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
-        CSF_EF_cs_matters: Computer Science Matters
-        CSF_maze_intro_k1_blocks: Intro to Code Studio
-        CSF_maze_intro_text_blocks: Intro to Code Studio
         CSF_my_robotic_friends: Mina Robotic- vänner
-        CSF_Power_of_Words: Power of Words
-        CSF_Super_Digital_Citizen: Super Digital Citizen
-        CSF_stevie_big_project: Stevie and the Big Project
-        CSF_unspotted_bugs: Unspotted Bugs
-        CSF_zuck_loops_short: Repeat Loops
         frozen_intro: Kodtimmen introduktion
         frozen_loops: Introduktion till loopar
         frozen_functions: Introduktion till funktioner
@@ -378,90 +361,20 @@ sv:
         infinity_playlab_intro: Play Lab - introduktion
         infinity_playlab_events: Play Lab - Händelser
         infinity_playlab_repeat_forever: Play Lab -  Upprepa för evigt
-        csd_concept_how_computers_work: Introducing How Computers Work
-        csd_concept_computer: 'How Computers Work: What Makes a Computer, a Computer?'
-        csd_concept_binary_data: 'How Computers Work: Binary & Data'
-        csd_concept_circuits_logic: 'How Computers Work: Circuits & Logic'
-        csd_concept_memory_cpu_input_output: 'How Computers Work: Memory, CPU, Input, & Output'
-        csd_concept_hardware_software: 'How Computers Work: Hardware & Software'
-        csd_concept_search: How Search Works
-        csd_external_amazon_data: How Big Data Is Used In Amazon Recommendation Systems To Change Our Lives
-        csd_external_netflix_data: How Does Netflix Make TV Show and Movie Suggestions?
-        csd_external_waze_data: Why Are So Many Users Obsessed With Waze?
-        csd_gamelab_animation_tab: The Animation Tab
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
-        csd_gamelab_velocity: Velocity
         csd_weblab_intro_1: Intro till Web Lab - Del 1
         csd_weblab_intro_2: Intro till Web Lab - Del 2
         csd_weblab_css_1: Intro till CSS - Del 1
         csd_weblab_css_2: Intro till CSS - Del 2
         csd_weblab_intro_3: Intro till Web Lab - Del 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduktion till funktioner
         csp_applab_functions_parameters: Funktioner med parametrar
-        csp_applab_loops: Loopar
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
+        csp_applab_loops: loopar
         csp_concept_rgb: Lite om pixlar
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Färg pixelerings widget - Del1
         csp_pixelation_color_2: Färg pixelerings widget - Del2
         csp_pixelation_color_3: Färg pixelerings widget - Del3
         csp_pixelation_bw: Svart och vit pixelerings widget
         csp_U1L14_tipstricks: Enhet 1 lektion 14 Lärare Tips & Tricks
-        csp_textcompression: Text compression widget
-        csp_textcompression_new: Text compression widget
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
-        alg_1_intro: CS in Algebra - Introduction
-        alg_2_eval_block: CS in Algebra - Evaluation Blocks
-        alg_3_pemdas: CS in Algebra - Order of Operations
-        alg_4_data_types: CS in Algebra - Data Types
-        alg_5_contracts: CS in Algebra - Contracts
-        alg_6_variables: CS in Algebra - Variables
-        alg_7_function: CS in Algebra - Functions
-        alg_8_design_recipe: CS in Algebra - Design Recipe
-        alg_9_booleans: CS in Algebra - Booleans
-        alg_10_conditionals: CS in Algebra - Conditionals
-        alg_11_coordinate_plane: CS in Algebra - Coordinate Plane
-        alg_12_biggame_variables: CS in Algebra - Big Game Variables
-        alg_13_biggame_animation: CS in Algebra - Big Game Animation
-        alg_14_biggame_booleans: CS in Algebra - Big Game Booleans
-        alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
-        alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
-        alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
         starwars_intro: 'Star Wars: Bygg en galax med kod - introduktion'
         starwars_typing: 'Star Wars: Bygg en galax med kod - JavaScript'
         starwars_events: 'Star Wars: Bygg en galax med kod - händelser'
@@ -480,63 +393,11 @@ sv:
         iceage_intro: Ice Age timme av kod - introduktion
         iceage_events: Ice Age Kodtimmen - händelser
         iceage_repeat: Ice Age timme av kod - upprepa påståeenden
-        mc_2016_intro: Minecraft Hour of Code - Introduction
-        mc_2016_loops: Minecraft Hour of Code - Loops
-        mc_2016_events: Minecraft Hour of Code - Events
-        mc_2016_spawn: Minecraft Hour of Code - Spawn
-        mc_2016_congrats: Minecraft Hour of Code - Congratulations
-        applab_hoc_welcome: App Lab Hour of Code - Welcome
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: AppLab Hour of Code - Design Mode
-        applab_hoc_share: AppLab Hour of Code - Share
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - Repeat Loops
-        mc_2017_functions: Minecraft Hour of Code - Functions
-        mc_2017_congratulations: Minecraft Hour of Code - Congratulations
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Repeat Loops
-        mc_2017_puzzle_8: Minecraft Hour of Code - Functions
-        mc_2017_puzzle_12: Minecraft Hour of Code - Freeplay
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
-        applab_intro_welcome: App Lab - Getting Started
-        applab_intro_events: App Lab - Make It Interactive
-        applab_intro_sounds: App Lab - Images and Sounds
-        applab_intro_designmode: App Lab - Design Mode
-        applab_intro_share: App Lab - Share Your App
-        csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
-        CSF_harvester_skinOverview_K-1: The Harvester
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
-        CSF_loops_AB: Loopar
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
+        CSF_loops_AB: loopar
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
-        run: Klicka på "Kör" för att prova ditt program
+        run: Tryck på "Kör" för att prova programmet
         watch_again: Klicka här för att titta på videon igen
         gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet ändå?
         show_code_explanation: Klicka här för att se koden till programmet du skriver

@@ -8,13 +8,13 @@ import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
-import PublishDialog from './templates/publishDialog/PublishDialog';
+import PublishDialog from './templates/projects/publishDialog/PublishDialog';
 import {
   showPublishDialog,
   PUBLISH_REQUEST,
   PUBLISH_SUCCESS,
   PUBLISH_FAILURE,
-} from './templates/publishDialog/publishDialogRedux';
+} from './templates/projects/publishDialog/publishDialogRedux';
 import {createHiddenPrintWindow} from './utils';
 import testImageAccess from './code-studio/url_test';
 import {TestResults, KeyCodes} from './constants';

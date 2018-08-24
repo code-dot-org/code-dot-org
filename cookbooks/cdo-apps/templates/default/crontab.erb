@@ -80,12 +80,13 @@
     end
 
     if node.chef_environment == 'production' # production daemon
-      cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
+      cronjob at:'20 */4 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
       cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
-      cronjob at:'* 14 * * 1', do:dashboard_dir('bin','scheduled_pd_application_emails')
+      cronjob at:'0 14 * * 1', do:dashboard_dir('bin','scheduled_pd_application_emails')
       cronjob at:'10 */12 * * *', do:dashboard_dir('bin','refresh_pd_workshop_material_orders')
-      cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
+      cronjob at:'*/1 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
+      cronjob at:'30 0 * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'index_users_in_solr')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'19 4 * * *', do:deploy_dir('bin', 'cron', 'update_census_map')
@@ -96,8 +97,12 @@
       cronjob at:'10 5 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_s3')
       cronjob at:'00 17 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
-      cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'regional_partner_reporting')
+      cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
+
+      # 4AM UTC is 8 or 9PM PT, a low traffic time when engineers are still awake to monitor any issues that occur
+      # during the automated restarts.
+      cronjob at:'00 4 * * *', do:deploy_dir('bin', 'cron', 'restart_high_memory_frontend_services')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')
@@ -116,6 +121,7 @@
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
       cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
+      cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'purge_expired_deleted_accounts')} --dry-run"
     end
   end
 

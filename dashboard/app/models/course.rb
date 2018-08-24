@@ -261,6 +261,15 @@ class Course < ApplicationRecord
     }
   end
 
+  def summarize_short
+    {
+      name: name,
+      title: I18n.t("data.course.name.#{name}.title", default: ''),
+      description: I18n.t("data.course.name.#{name}.description_short", default: ''),
+      link: Rails.application.routes.url_helpers.course_path(self),
+    }
+  end
+
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
   def summarize_versions
@@ -338,19 +347,32 @@ class Course < ApplicationRecord
 
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
-  def has_other_version_progress?(user)
-    return nil unless user && family_name
+  def has_older_version_progress?(user)
+    return nil unless user && family_name && version_year
     user_script_ids = user.user_scripts.pluck(:script_id)
 
     Course.
       joins(:default_course_scripts).
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
+      # select only older versions
+      where("properties -> '$.version_year' < ?", version_year).
       # exclude the current course.
       where.not(id: id).
       # select only courses with scripts which the user has progress in.
       where('course_scripts.script_id' => user_script_ids).
       count > 0
+  end
+
+  # returns whether a script in this course has version_warning_dismissed.
+  def has_dismissed_version_warning?(user)
+    return nil unless user
+    script_ids = default_scripts.pluck(:id)
+    user.
+      user_scripts.
+      where(script_id: script_ids).
+      select(&:version_warning_dismissed).
+      any?
   end
 
   @@course_cache = nil

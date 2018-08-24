@@ -3,10 +3,12 @@ function setProp(sprite,  property, val) {
     return;
   }
   if (property == "scale") {
-    sprite.scale=val/100;
+    sprite.setScale(val / 100);
   }
   else if (property=="costume") {
    	sprite.setAnimation(val);
+  } else if (property=="tint" && typeof(val)=="number") {
+    sprite.tint = "hsb(" + (Math.round(val) % 360) + ", 100%, 100%)";
   } else {
   sprite[property]=val;
   }

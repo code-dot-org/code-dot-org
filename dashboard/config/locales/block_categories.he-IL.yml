@@ -3,50 +3,46 @@ he:
   data:
     block_categories:
       Actions: פעולות
-      Loops: לולאות
+      Loops: חזרות
       Functions: פונקציות
       Color: צבע
-      Brushes: Brushes
+      Brushes: מברשות
       Math: מתמטיקה
-      Logic: הגיון
+      Logic: לוגיקה
       Variables: משתנים
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: מספר
+      String: מחרוזת
+      Image: תמונה
+      Boolean: ערך בוליאני
       Conditionals: תנאים
       Events: אירועים
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: משחק/נקודות
+      Comments: תגובות
+      Category: קטגוריות
+      Prebuilt: טרום בניה
       Text: טקסט
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: בוחר
+      Comment: תגובה
+      'Variables ': 'משתנים '
+      everythingelse: כלהשאר
+      numbers: מספרים
+      Numbers: מספרים
+      Default: ברירת מחדל
+      World: עולם
+      Behaviors: התנהגויות
+      Advanced: מתקדם
+      Sprite: מסך
+      Brush: מברשת
+      Make Sprite: צור מסך
+      Movement: תנועה
       Start: התחל
-      Groups: Groups
-      Booleans: Booleans
-      Functional: Functional
-      Predefined: Predefined
+      Groups: קבוצות
+      Functional: תפקוד
+      Predefined: מוגדרים מראש
       test: בדיקה
-      test2: test2
-      Foo: Foo
+      test2: בדיקה2
       Name: שם
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: בלוקים חדשים
+      'Functions ': 'פונקציות '
+      Game/Score: משחק/נקודות
       Function: פונקציה

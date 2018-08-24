@@ -13,7 +13,6 @@ es-MX:
           ahora es mucho más productivo que esperar otras oportunidades.
         pdfs:
         - unplug1-es-ES
-        video: Unplug1
       Unplug2:
         title: Pensamiento computacional
         desc: Sólo con papel y fibrones, los estudiantes aprenderán los 4 pasos del
@@ -29,7 +28,6 @@ es-MX:
           quiso conseguir?
         pdfs:
         - unplug2-es-ES
-        video: Unplug2
       Unplug3:
         title: Programación de hoja cuadriculada
         desc: Al programar algunos dibujos, los estudiantes empezarán a comprender
@@ -39,7 +37,6 @@ es-MX:
           exhibiendo los dibujos que los estudiantes realizaron.
         pdfs:
         - unplug3-es-ES
-        video: Unplug3
       Unplug4:
         title: Algoritmos
         desc: Esta clase cubre el tema algoritmos. El primer ejercicio muestra con
@@ -49,7 +46,6 @@ es-MX:
           algunos métodos requieren menos pliegues que otros.
         pdfs:
         - unplug4-es-ES
-        video: Unplug4
       Unplug5:
         title: Funciones
         desc: En esta clase, los estudiantes harán un collar con cuerdas, piedritas
@@ -64,7 +60,6 @@ es-MX:
           El uso de huecos genéricos es una maravillosa introducción a las variables.
         pdfs:
         - unplug5-es-ES
-        video: Unplug5
       Unplug6:
         title: Condicionales
         desc: En la clase se realizará un juego. Después de introducir la idea de
@@ -73,7 +68,6 @@ es-MX:
           suerte.
         pdfs:
         - unplug6-es-ES
-        video: Unplug6
       Unplug7:
         title: Escribir canciones
         desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes.
@@ -83,16 +77,14 @@ es-MX:
           agregar complicaciones como pasaje de parámetros en los llamados a funciones.
         pdfs:
         - unplug7-es-ES
-        video: Unplug7
       Unplug8:
         title: Liberación abstracta
         desc: Vamos a combinar la rutina diaria de los estudiantes y un juego de palabras,
           para que la clase aprenda sobre la efectividad que posee la abstracción.
         pdfs:
         - unplug8-es-ES
-        video: Unplug8
       Unplug9:
-        title: Programación bajo presión
+        title: Programación de relevos
         desc: Esta lección tomará una idea de una actividad anterior (4. Programación
           en hoja cuadriculada) y el uso de esas habilidades para hacer hincapié en
           la importancia de completar los programas que funcionan con una determinada
@@ -100,14 +92,12 @@ es-MX:
           errores (bugs) en los programas.
         pdfs:
         - unplug9-es-ES
-        video: Unplug9
       Unplug10:
         title: Internet
         desc: En esta clase, los alumnos seguirán el flujo de Internet, mientras aprenden
           sobre direcciones web, IP y DNS.
         pdfs:
         - unplug10-es-ES
-        video: Unplug10
       Unplug11:
         title: Cierre
         desc: El cierre final de la serie de 20 horas ayudará a la clase a revivir
@@ -116,7 +106,6 @@ es-MX:
           de la computación.
         pdfs:
         - unplug11-es-ES
-        video: Unplug11
       UnplugHappyMaps:
         title: Mapas felices
         desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones)
@@ -194,7 +183,7 @@ es-MX:
           de código que quieres usar una y otra vez) para crear un tragaluz con un
           hilo y pequeños cristales.
       SongwritingParameters:
-        title: Composicion musical con parámetros
+        title: Composición Musical
         desc: Los estudiantes usan el concepto del coro en una canción para aprender
           sobre el paso de parámetros (que personaliza una función sin tener que reescribir
           la función entera).
@@ -294,27 +283,26 @@ es-MX:
         title: Ciclos desconectados
         desc: "¡En esta lección aprenderas sobre ciclos!"
       courseB_unplugged_MRF:
-        title: Actividad fuera de línea
+        title: Actividad desconectada
         desc: "¡En esta lección 'programarás' a tus amigos!"
       courseB_unplugged_loopyMRF:
-        title: Actividad fuera de línea
+        title: Actividad desconectada
         desc: ¡Al igual que en "Mis amigos robóticos", "programarás" tus amigos, pero
           esta vez con ciclos!
       courseC_Unplugged_ScreenOutTheMean:
         title: Actividad desconectada
         desc: Hoy aprenderas que significa que alguién esté en linea.
       courseD_unplugged_digitalCitizenship:
-        title: Actividad fuera de línea
+        title: Actividad desconectada
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseE_unplugged_privateInformation:
-        title: Actividad fuera de línea
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Educación de Sentido Común: Información Privada y Personal '
+        desc: "¡Hoy aprenderás la diferencia entre información privada y personal!"
       courseF_unplugged_powerOfWords:
-        title: Actividad fuera de línea
+        title: Actividad desconectada
         desc: Hoy aprenderas que significa que alguién esté en linea.
       deeper learning description:
-        title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'falta la traducción: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos de la vida real: Planta una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra
@@ -367,7 +355,7 @@ es-MX:
           usando un conjunto de comandos predefinidos para dirigir a sus compañeros
           en la reproducción de un dibujo.
       courseD_unplugged_relayProgramming:
-        title: Programación bajo presión
+        title: Programación de relevos
         desc: Los estudiantes corren una carrera de relevos, donde aceleran por el
           camino para escribir un algoritmo basado en una imagen "Grafica en papel
           de programación". Ellos sólo pueden escribir una instrucción a la vez y
@@ -386,7 +374,6 @@ es-MX:
           puede almacenar información aún más compleja (por ejemplo, imágenes y colores)
           en binario.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
         desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida
           diaria. Como parte de eso, los estudiantes identificarán y escribirán el
           algoritmo de un juego de carrera con dados.
@@ -405,7 +392,7 @@ es-MX:
           problemas en informática, para completar una tarea juntos como un aula,
           más eficientemente que si un alumno lo intentara solo.
       courseE_unplugged_songwriting:
-        title: Composicion musical con parámetros
+        title: Composición Musical
         desc: Los estudiantes usan el concepto del coro en una canción para aprender
           sobre el paso de parámetros (que personaliza una función sin tener que reescribir
           la función entera).
@@ -433,86 +420,9 @@ es-MX:
           más grande. Esta clase ayudará a los alumnos a entender intuitivamente por
           qué la combinación de partes de código en funciones es una práctica tan
           útil.
-      swipeRightPassThrough:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
-        desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
-          this session we'll use a tool called \"Swipe Right for CS\", which has been
-          developed by our partners at MIT. In Swipe Right for CS, you will read through
-          some student profiles and consider specific statements that you might use
-          to convince him or her to enroll in your CS Principles course. \r\n\r\n###
-          How it Works\r\nWhen playing the Swipe Right for CS game you will see a
-          series of quotes that you might say to each student. You will swipe right
-          on quotes that you think would be effective in convincing students to enroll
-          in the course and swipe left on statements that you think will not be effective.
-          During the session we will discuss as a group your thoughts on the types
-          of statements that are most effective in getting a student to enroll in
-          CS, and you will have a chance to see how other people in your workshop
-          swiped on each of the arguments. \r\n\r\n\r\nWhen you click continue below,
-          we'll send you to the game, and pass along the Code.org email address you're
-          logged in with."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Attempt to recreate a bug Brooke reported\r\nprocess
-          as follows:\r\n1. started with an `unplugged` level. populated with info.
-          hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
-          level with the same content and same name. checked to box to encrypt it.
-          hit save and plush"
       courseB_unplugged_MRF_2018:
         title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         desc: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
-      BuildingAFoundation_2018:
-        title: ''
-        desc: ''
-      courseB_unplugged_loopyMRF_2018:
-        title: ''
-        desc: ''
-      DiceRace_2018:
-        title: ''
-        desc: ''
-      courseE_unplugged_privateInformation_2018:
-        title: ''
-        desc: ''
-      SongwritingParameters_2018:
-        title: ''
-        desc: ''
-      Internet_2018:
-        title: ''
-        desc: ''
-      Crowdsourcing_2018:
-        title: ''
-        desc: ''
-      TangramAlgorithms_2018:
-        title: ''
-        desc: ''
-      courseF_unplugged_powerOfWords_2018:
-        title: ''
-        desc: ''
-      EnvelopeVariables_2018:
-        title: ''
-        desc: ''
-      ForLoopFun_2018:
-        title: ''
-        desc: ''
-      SongwritingWithParameters_2018:
-        title: ''
-        desc: ''
       PlantASeed_2018:
         title: 'Algoritmos de la vida real: Planta una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra
@@ -542,10 +452,10 @@ es-MX:
           usando un conjunto de comandos predefinidos para dirigir a sus compañeros
           en la reproducción de un dibujo.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Actividad fuera de línea
+        title: Actividad desconectada
         desc: Hoy aprenderas lo que significa ser un ciudadano digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Actividad fuera de línea
+        title: Actividad desconectada
         desc: Hoy aprenderas que significa que alguién esté en linea.
       Conditionals_2018:
         title: Condicionales
@@ -582,22 +492,5 @@ es-MX:
           y guardar de más de una forma.
       MoveItMoveIt_2018:
         title: Muévelo, Muévelo
-        desc: ''
-      courseB_unplugged_CnC_2018:
-        title: It's Great to Create and Play Fair
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the creative
-          process of sharing and inspiration.  Along with that comes the promotion
-          of creative expression and the need to be fair with creative work.
-      courseE_unplugged_CnC_2018:
-        title: Digital Sharing
-        desc: Loaned to Computer Science Fundamentals by the team over at Copyright
-          and Creativity, this lesson exists to help students understand the challenges
-          and beneﬁts of respecting ownership and copyright, particularly in digital
-          environments. Students should be encouraged to respect artists’ rights as
-          an important part of being an ethical digital citizen.
       RelayProgramming_2018:
-        title: Programación bajo presión
-        desc: This activity will begin with a short lesson on debugging and persistence,
-          then will quickly move to a race against the clock as students break into
-          teams and work together to write a program one instruction at a time.
+        title: Programación de relevos

@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# -*- coding: utf-8 -*-
 require_relative '../../../deployment'
 
 ROOT = File.expand_path('../../../..', __FILE__)
@@ -93,6 +92,7 @@ def parse_options
     options.dashboard_domain = 'test-studio.code.org'
     options.hourofcode_domain = 'test.hourofcode.com'
     options.csedweek_domain = 'test.csedweek.org'
+    options.advocacy_domain = 'test-advocacy.code.org'
     options.local = nil
     options.html = nil
     options.maximize = nil
@@ -131,6 +131,7 @@ def parse_options
         options.dashboard_domain = 'localhost-studio.code.org:3000'
         options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
+        options.advocacy_domain = 'localhost-advocacy.code.org:3000'
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -577,29 +578,38 @@ def rerun_filename(test_run_string)
   "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}.rerun"
 end
 
+def tag(tag, run=true)
+  return skip_tag(tag) unless run
+  " -t #{tag}"
+end
+
+def skip_tag(tag)
+  " -t 'not #{tag}'"
+end
+
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
-  arguments += ' -t ~@skip'
-  arguments += " -t #{eyes? && !browser['mobile'] ? '' : '~'}@eyes"
-  arguments += " -t #{eyes? && browser['mobile'] ? '' : '~'}@eyes_mobile"
-  arguments += ' -t ~@local_only' unless options.local
-  arguments += ' -t ~@no_mobile' if browser['mobile']
-  arguments += ' -t ~@only_mobile' unless browser['mobile']
-  arguments += ' -t ~@no_circle' if options.is_circle
-  arguments += ' -t ~@no_ie' if browser['browserName'] == 'Internet Explorer'
+  arguments += skip_tag('@skip')
+  arguments += tag('@eyes', eyes? && !browser['mobile'])
+  arguments += tag('@eyes_mobile', eyes? && browser['mobile'])
+  arguments += skip_tag('@local_only') unless options.local
+  arguments += skip_tag('@no_mobile') if browser['mobile']
+  arguments += skip_tag('@only_mobile') unless browser['mobile']
+  arguments += skip_tag('@no_circle') if options.is_circle
+  arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
 
   # Only run in IE during a DTT. always run locally or during circle runs.
   # Note that you may end up running in more than one browser if you use flags
   # like [test safari], [test ie] or [test firefox] during a circle run.
-  arguments += ' -t ~@only_one_browser' if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
+  arguments += skip_tag('@only_one_browser') if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
 
-  arguments += ' -t ~@chrome' if browser['browserName'] != 'chrome' && !options.local
-  arguments += ' -t ~@chrome_before_62' if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
-  arguments += ' -t ~@no_safari' if browser['browserName'] == 'Safari'
-  arguments += ' -t ~@no_firefox' if browser['browserName'] == 'firefox'
-  arguments += ' -t ~@webpurify' unless CDO.webpurify_key
-  arguments += ' -t ~@pegasus_db_access' unless options.pegasus_db_access
-  arguments += ' -t ~@dashboard_db_access' unless options.dashboard_db_access
+  arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
+  arguments += skip_tag('@chrome_before_62') if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
+  arguments += skip_tag('@no_safari') if browser['browserName'] == 'Safari'
+  arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
+  arguments += skip_tag('@webpurify') unless CDO.webpurify_key
+  arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
+  arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments
 end
 
@@ -650,11 +660,13 @@ def run_feature(browser, feature, options)
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
+  run_environment['ADVOCACY_TEST_DOMAIN'] = options.advocacy_domain if options.advocacy_domain
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
   run_environment['FAIL_FAST'] = options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
+  run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.
@@ -774,7 +786,7 @@ def run_feature(browser, feature, options)
   if scenario_count == 0 && !ENV['CI']
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
     skip_warning += <<EOS
-Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
+Check the excluded @tags in the cucumber command line above and in the #{feature} file:
   - Do the feature or scenario tags exclude #{browser_name}?
 EOS
     unless eyes?

@@ -14,9 +14,10 @@ export default class AssessmentSelector extends Component {
     return (
       <div>
         <select
+          id="assessment-selector"
           value={assessmentId}
           onChange={event => onChange(parseInt(event.target.value))}
-          style={dropdownStyles.dropdown}
+          style={{...dropdownStyles.dropdown, width: 350}}
         >
           {Object.values(assessmentList).map((assessment, index) => (
             <option

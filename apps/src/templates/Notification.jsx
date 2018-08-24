@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from "./Button";
-import styleConstants from '../styleConstants';
 import trackEvent from '../util/trackEvent';
 
 export const NotificationType = {
@@ -21,17 +20,19 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     minHeight: 72,
-    width: styleConstants['content-width'],
+    width: '100%',
     backgroundColor: color.white,
     marginBottom: 20,
     display: 'flex',
     flexFlow: 'wrap',
+    boxSizing: 'border-box'
   },
   notice: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
     fontWeight: 'bold',
     letterSpacing: -0.2,
+    lineHeight: 1.5,
     marginTop: 16,
     backgroundColor: color.white,
   },
@@ -40,8 +41,12 @@ const styles = {
     fontSize: 14,
     lineHeight: 1.5,
     paddingTop: 6,
-    paddingBottom: 6,
+    paddingBottom: 16,
     color: color.charcoal,
+  },
+  detailsLink: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.teal
   },
   wordBox: {
     // flex priority
@@ -52,19 +57,30 @@ const styles = {
   dismiss: {
     color: color.lighter_gray,
     marginTop: 5,
-    marginRight: 10,
+    marginRight: 0,
     marginLeft: 10,
     cursor: 'pointer',
   },
   iconBox: {
     width: 72,
     backgroundColor: color.lightest_gray,
-    textAlign: 'center'
+    textAlign: 'center',
+    float: 'left',
+  },
+  contentBox: {
+    // The subtracted 100px leaves room for both the icon column on the left and
+    // the dismiss X icon column on the right.
+    width: 'calc(100% - 100px)',
+    display: 'flex',
+    flexFlow: 'wrap'
   },
   icon: {
     color: 'rgba(255,255,255, .8)',
     fontSize: 38,
     lineHeight: 2
+  },
+  buttonsMobile: {
+    width: '100%'
   },
   button: {
     marginLeft: 25,
@@ -114,14 +130,29 @@ class Notification extends Component {
     type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
     notice: PropTypes.string.isRequired,
     details: PropTypes.string.isRequired,
+    detailsLinkText: PropTypes.string,
+    detailsLink: PropTypes.string,
     buttonText: PropTypes.string,
     buttonLink: PropTypes.string,
     dismissible: PropTypes.bool.isRequired,
+    onDismiss: PropTypes.func,
     newWindow: PropTypes.bool,
+    // analyticId is only posted when a primary button is provided.
+    // It's not used by the array of buttons.
     analyticId: PropTypes.string,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
     isRtl: PropTypes.bool.isRequired,
     onButtonClick: PropTypes.func,
     buttonClassName: PropTypes.string,
+
+    // Optionally can provide an array of buttons.
+    buttons: PropTypes.arrayOf(PropTypes.shape({
+      text: PropTypes.string,
+      link: PropTypes.string,
+      newWindow: PropTypes.bool,
+      onClick: PropTypes.func,
+      className: PropTypes.string,
+    })),
 
     // Can be specified to override default width
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -133,6 +164,13 @@ class Notification extends Component {
     this.setState({open: !this.state.open});
   }
 
+  onDismiss = () => {
+    this.toggleContent();
+    if (this.props.onDismiss) {
+      this.props.onDismiss();
+    }
+  };
+
   onAnnouncementClick() {
     if (this.props.analyticId) {
       trackEvent('teacher_announcement','click', this.props.analyticId);
@@ -142,8 +180,31 @@ class Notification extends Component {
     }
   }
 
+  onButtonClick() {
+    if (this.onClick) {
+      this.onClick();
+    }
+  }
+
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow, isRtl, width, buttonClassName } = this.props;
+    const {
+      notice,
+      details,
+      detailsLinkText,
+      detailsLink,
+      type,
+      buttonText,
+      buttonLink,
+      dismissible,
+      newWindow,
+      isRtl,
+      width,
+      buttonClassName,
+      buttons,
+      responsiveSize
+    } = this.props;
+
+    const desktop = responsiveSize === undefined || responsiveSize === 'lg';
 
     const icons = {
       information: 'info-circle',
@@ -170,30 +231,54 @@ class Notification extends Component {
               <FontAwesome icon={icons[type]} style={styles.icon}/>
             </div>
           )}
-          <div style={styles.wordBox}>
-            <div style={[styles.colors[type], styles.notice]}>
-              {notice}
+          <div style={styles.contentBox}>
+            <div style={styles.wordBox}>
+              <div style={[styles.colors[type], styles.notice]}>
+                {notice}
+              </div>
+              <div style={styles.details}>
+                {details}
+                {detailsLinkText && detailsLink && (
+                  <span>
+                    &nbsp;
+                    <a href={detailsLink} style={styles.detailsLink}>
+                      {detailsLinkText}
+                    </a>
+                  </span>
+                )}
+              </div>
             </div>
-            <div style={styles.details}>
-              {details}
+            <div style={desktop ? null : styles.buttonsMobile}>
+              {buttonText && (
+                <Button
+                  href={buttonLink}
+                  color={Button.ButtonColor.gray}
+                  text={buttonText}
+                  style={styles.button}
+                  target={newWindow ? "_blank" : null}
+                  onClick={this.onAnnouncementClick.bind(this)}
+                  className={buttonClassName}
+                />
+              )}
+              {buttons && buttons.map((button, index) => (
+                <Button
+                  key={index}
+                  href={button.link}
+                  color={Button.ButtonColor.gray}
+                  text={button.text}
+                  style={styles.button}
+                  target={button.newWindow ? "_blank" : null}
+                  onClick={this.onButtonClick.bind(button)}
+                  className={button.className}
+                />
+              ))}
             </div>
           </div>
-          {buttonText && (
-            <Button
-              href={buttonLink}
-              color={Button.ButtonColor.gray}
-              text={buttonText}
-              style={styles.button}
-              target={newWindow ? "_blank" : null}
-              onClick={this.onAnnouncementClick.bind(this)}
-              className={buttonClassName}
-            />
-          )}
           {dismissible && (
             <div style={styles.dismiss}>
               <FontAwesome
                 icon="times"
-                onClick={this.toggleContent.bind(this)}
+                onClick={this.onDismiss}
               />
             </div>
           )}
@@ -205,5 +290,10 @@ class Notification extends Component {
 }
 
 export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(Notification));
+
+export const NotificationResponsive = connect(state => ({
   isRtl: state.isRtl,
+  responsiveSize: state.responsive.responsiveSize,
 }))(Radium(Notification));

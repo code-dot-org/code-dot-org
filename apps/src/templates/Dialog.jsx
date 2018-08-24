@@ -125,8 +125,9 @@ Icon.propTypes = {
   src: PropTypes.string.isRequired,
 };
 
-const Dialog = React.createClass({
-  propTypes: Object.assign({}, BaseDialog.propTypes, {
+export default class Dialog extends React.Component {
+  static propTypes = {
+    ...BaseDialog.propTypes,
     children: childrenOfType(
       Icon,
       Title,
@@ -143,9 +144,9 @@ const Dialog = React.createClass({
     confirmText: whenNoChildOfTypes(Buttons),
     onConfirm: whenNoChildOfTypes(Buttons),
     confirmType: whenNoChildOfTypes(Buttons),
-  }),
+  };
 
-  handleKeyDown(event) {
+  handleKeyDown = (event) => {
     // Focus the next button, input or link when tab is pressed, to prevent the
     // user from selecting elements outside of the dialog.
     if (event.key === 'Tab') {
@@ -158,7 +159,7 @@ const Dialog = React.createClass({
       }
       event.preventDefault();
     }
-  },
+  };
 
   render() {
     var children = [];
@@ -204,7 +205,4 @@ const Dialog = React.createClass({
       </BaseDialog>
     );
   }
-});
-
-
-export default Dialog;
+}

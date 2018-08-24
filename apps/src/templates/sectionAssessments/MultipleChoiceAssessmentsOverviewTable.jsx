@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import i18n from '@cdo/locale';
@@ -7,6 +8,8 @@ import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import styleConstants from "@cdo/apps/styleConstants";
 import { multipleChoiceDataPropType } from './assessmentDataShapes';
+import color from "@cdo/apps/util/color";
+import {setQuestionIndex} from "./sectionAssessmentsRedux";
 
 export const COLUMNS = {
   QUESTION: 0,
@@ -22,11 +25,20 @@ const styles = {
   },
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH,
+    padding: 0,
+    height: 40,
+  },
+  notAnsweredCell: {
+    padding: 0,
+    height: 40,
   },
   questionCell: {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
+  },
+  link: {
+    color: color.teal,
   }
 };
 
@@ -51,12 +63,6 @@ const answerColumnsFormatter = (percentAnswered, {rowData, columnIndex, rowIndex
   );
 };
 
-const questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
-  return (
-    <div>{`${rowData.questionNumber}. ${question}`}</div>
-  );
-};
-
 /**
  *  A single table that shows students' responses to each multiple choice question.
  * The table displays the percent of students that select an answer choice and
@@ -65,6 +71,8 @@ const questionFormatter = (question, {rowData, columnIndex, rowIndex, property})
 class MultipleChoiceAssessmentsOverviewTable extends Component {
   static propTypes= {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceDataPropType),
+    openDialog: PropTypes.func.isRequired,
+    setQuestionIndex: PropTypes.func.isRequired,
   };
 
   state = {
@@ -93,6 +101,21 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
     });
   };
 
+  selectQuestion = (index) => {
+    this.props.setQuestionIndex(index);
+    this.props.openDialog();
+  };
+
+  questionFormatter = (question, {rowData, columnIndex, rowIndex, property}) => {
+    return (
+      <div>
+        <a style={styles.link} onClick={()=>this.selectQuestion(rowData.questionNumber - 1)}>
+          {`${rowData.questionNumber}. ${question}`}
+        </a>
+      </div>
+    );
+  };
+
   getNotAnsweredColumn = () => (
     {
       property: NOT_ANSWERED,
@@ -107,7 +130,12 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       },
       cell: {
         format: answerColumnsFormatter,
-        props: {style: tableLayoutStyles.cell},
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...styles.notAnsweredCell,
+          }
+        },
       }
     }
   );
@@ -144,7 +172,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
         props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
-        format: questionFormatter,
+        format: this.questionFormatter,
         props: {
           style: {
             ...tableLayoutStyles.cell,
@@ -198,4 +226,10 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
   }
 }
 
-export default MultipleChoiceAssessmentsOverviewTable;
+export const UnconnectedMultipleChoiceAssessmentsOverviewTable = MultipleChoiceAssessmentsOverviewTable;
+
+export default connect(state => ({}), dispatch => ({
+  setQuestionIndex(questionIndex) {
+    dispatch(setQuestionIndex(questionIndex));
+  },
+}))(MultipleChoiceAssessmentsOverviewTable);

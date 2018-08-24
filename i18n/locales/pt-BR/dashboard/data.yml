@@ -5,8 +5,8 @@ pt-BR:
         Unplug1: Introdução à Ciência da Computação
         Maze: O Labirinto
         Multi: Material de múltipla escolha
-        Unplug2: Pensamento Computacional
-        Unplug3: Programação em Papel Quadriculado
+        Unplug2: Pensamento computacional
+        Unplug3: Programação em papel quadriculado
         Artist: O Artista
         Unplug4: Algoritmos
         Artist2: O Artista 2
@@ -18,7 +18,7 @@ pt-BR:
         Farmer2: A Fazendeira 2
         Unplug8: Abstração
         Artist4: O Artista 4
-        Unplug9: Programação Relay
+        Unplug9: Programação por revezamento
         Farmer3: A Fazendeira 3
         Unplug10: A Internet
         Artist5: O Artista 5
@@ -52,7 +52,7 @@ pt-BR:
         loop_until: Bloco "Repita até que"
         loop_while: Bloco "Enquanto"
         loop_for: Bloco "contador"
-        function: Funções
+        function: funções
         parameters: Funções com parâmetros
     level:
       instructions:
@@ -74,7 +74,7 @@ pt-BR:
         maze_2_15: Mim querer girassol! Use um bloco "se" para que eu chegue lá com o menor número de blocos possível.
         maze_2_16: Ok, vamos praticar mais uma vez. Essa parte não é muito diferente, mas fique de olho nos comilões!
         maze_2_17: O bloco "se-senão" verifica uma condição e, em seguida, faz uma coisa OU outra. Para me levar ao girassol, tente usar esse novo bloco.
-        maze_2_18: Vamos praticar o uso do bloco "se-senão" mais uma vez, você consegue na primeira tentativa?
+        maze_2_18: "Vamos praticar o uso do bloco \"se-senão\" mais uma vez. Você consegue\nacertar na primeira tentativa?"
         maze_2_19: Você consegue usar apenas 3 blocos para me ajudar a percorrer um labirinto mais complexo? Se fizer isso direito, eu posso percorrer qualquer caminho cheio de curvas, não importa o comprimento.
         turtle_1_1: Olá, eu sou um artista! Você pode escrever códigos para me fazer desenhar quase tudo. Use alguns blocos para me fazer desenhar sobre as linhas cinza da figura.
         turtle_1_2: 'Agora, desenhe um quadrado. NOTA: escolha sua cor preferida no novo bloco "defina a cor".'
@@ -117,7 +117,7 @@ pt-BR:
         turtle_2_7: Aqui temos um programa para desenhar uma espiral, mas os blocos estão desativados para que eles não sejam executados. Faça um novo programa usando um bloco "conte com" (na categoria Laços) e um bloco "contador" (na categoria Variáveis) para desenhar a mesma espiral.
         turtle_2_7_5: Há uma nova função "desenhe um boneco de neve" (na categoria Funções). Desenhe dois bonecos de neve, de 250 e 100 de altura.
         turtle_2_8: Esse desafio é um pouco complicado. Use a função "desenhe um boneco de neve" e o novo bloco "pule para a frente" (na categoria Ações). Desenhe 3 bonecos de neve com cores diferentes, separados por 100 pixels.
-        turtle_2_9: Use um laço "conte com" para desenhar uma família de bonecos de neve, com alturas de 110, 100, 90, 80 e 70. Os bonecos de neve devem ser separados por 60 pixels.
+        turtle_2_9: Use um laço "contar com" para desenhar uma família de bonecos de neve, com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem estar separados por 60 pixels.
         turtle_2_10: Aqui, temos alguns códigos para que você experimente em diferentes espirais. O que acontece se você alterar a quantidade de voltas? Ou definir uma cor aleatória no laço? Desenhe o que você quiser.
         maze_karel_2_1: 'Use os blocos para me ajudar a remover todos os montes de terra e preencher todos os buracos no chão. Tente usar laços ao invés de usar muitos blocos. Dica: você pode colocar um laço dentro de outro laço.'
         maze_karel_2_2: Definimos nosso próprio bloco chamado "preencha 5", que agora está na categoria de Funções. Use-o para me ajudar a preencher esse buraco.
@@ -179,15 +179,15 @@ pt-BR:
         mazestep_5: Descrição do labirinto aqui
         studio_c2_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
         studio_c2_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
-        studio_c2_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
-        studio_c2_4: Você consegue desenvolver um programa que faça com que o cachorro se mova em direção ao gato e que faça com que o gato diga "Olá" quando o cachorro o alcançar?
-        studio_c2_5: Você pode escrever um programa para fazer o polvo dizer "olá" quando clicarem nele?
-        studio_c2_6: Você pode desenvolver um programa que faça o pinguim se mover usando as teclas com as setas para cima / para baixo / à esquerda / à direita, para atingir todos os alvos?
-        studio_c2_7: O bloco "repita infinitamente" possibilita a execução contínua do programa. Você pode anexar blocos para mover esse dinossauro para cima e para baixo repetidamente?
-        studio_c2_8: Você pode fazer com que o pinguim diga "Ai!" e reproduza um som de "batida" se ele encontrar o dinossauro, e então movê-lo com as setas para fazer isso acontecer?
-        studio_c2_9: Você pode adicionar um bloco que some um ponto quando o pinguim se encontra com o polvo, e então movê-lo até que você consiga o ponto?
-        studio_c2_10: Você pode adicionar blocos para mudar o plano de fundo e a velocidade do pinguim, e então movê-lo com as setas até que você pontue?
-        studio_c2_11: Crie sua própria história. Quando tiver terminado, clique em Concluir para que seus amigos possam vê-la em seus celulares.
+        studio_c2_3: "Você consegue escrever um programa para fazer este\ncachorro se mover até o gato?"
+        studio_c2_4: "Você consegue escrever um programa que faça\no cachorro se mover até o gato e que faça o gato dizer \"Olá\" quando o cachorro o\nalcançar?"
+        studio_c2_5: "Você pode escrever um programa para fazer\no polvo dizer \"Olá\" quando clicarem nele?"
+        studio_c2_6: "Você pode escrever um programa que faça Valfredo\nse mover usando as as setas para cima / para baixo / à esquerda / à direita do teclado, para atingir todos os alvos?"
+        studio_c2_7: "O bloco \"repita infinitamente\" permite\nque você execute o código de maneira contínua. Você consegue conectar blocos para mover este dinossauro\npara cima e para baixo repetidamente?"
+        studio_c2_8: "Você pode fazer Valfredo dizer \"Ai!\"\ne reproduzir um som de \"batida\" se ele encontrar o dinossauro, e então movê-lo com\nas setas to teclado para fazer isso acontecer?"
+        studio_c2_9: "Você pode adicionar um bloco para marcar um ponto\nquando Valfredo se encontrar com o polvo, e então movê-lo com as setas do teclado até\nmarcar pontos?"
+        studio_c2_10: "Você pode adicionar blocos para mudar o plano de fundo\ne a velocidade de Valfredo, e então movê-lo com as setas do teclado até marcar pontos?"
+        studio_c2_11: "Crie sua própria história. Quando terminar,\nclique em \"Concluir\" para que seus amigos testem sua história em seus celulares."
         studio_c3_story_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
         studio_c3_story_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
         studio_c3_story_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
@@ -235,10 +235,10 @@ pt-BR:
         studio_gumball_free_play: Crie seu próprio jogo ou história. Ao terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus telefones, tablets ou computadores!
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: Você consegue fazer esse cachorro dizer "Olá, mundo"?
-        studio_k1_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
+        studio_k1_2: "Você pode fazer o cachorro dizer alguma coisa e,\ndepois, fazer a gata dizer alguma coisa?"
         studio_k1_3: Você consegue desenvolver um programa para fazer este cachorro se mover em direção ao gato?
         studio_k1_4: Faça o cachorro se mover até o gato e dizer "olá" quando chegar.
-        studio_k1_5: Você pode adicionar um bloco para deixar o polvo feliz?
+        studio_k1_5: "Você pode adicionar um bloco para deixar o polvo\nfeliz?"
         studio_k1_6: Crie sua própria história! Movimente o gato e o cachorro, e faça com que eles conversem.
         maze_wordsearch_k_1: Faça eu me mover para formar a palavra EAST
         maze_wordsearch_k_2: Faça eu me mover para formar a palavra SOUTH
@@ -310,7 +310,7 @@ pt-BR:
         C2_graph_paper: Programação em Papel Quadriculado
         C2_conditionals_with_cards: Condições
         C2_binary_bracelets: Pulseiras binárias
-        C2_relay_programming: Programação Relay
+        C2_relay_programming: Programação por revezamento
         C2_paper_airplanes: Aviões de papel
         C2_digital_footprint: Seu rastro digital
         C2_digital_footprint_v2: Seu rastro digital
@@ -333,7 +333,7 @@ pt-BR:
         C3_functional_suncatchers: Caça-sóis funcionais
         C3_songwriting_with_parameters: Escrevendo uma canção com parâmetros
         C4_intro: Introdução
-        C4_loops_zombie: Laços
+        C4_loops_zombie: laços
         C4_bee_conditional: Condicionais da abelha
         C4_variables_artist: Variáveis - Artista
         C4_variables_playlab: Variáveis - Laboratório
@@ -351,14 +351,13 @@ pt-BR:
         C4_unplugged_forloops: Laços para
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Ângulos em Artista
         CSF_collector_k1_blocks: 'Fundamentos do CS: O Coletor'
         CSF_collector_repeat_loops: Laços Repita em Coletor
         CSF_collector_text_blocks: 'Fundamentos do CS: O Coletor'
         CSF_create_functions: Criar Funções
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
+        CSF_debugging_k1_blocks: Analisando
+        CSF_debugging_text_blocks: Analisando
         CSF_EF_cs_matters: Questões de Ciência da Computação
         CSF_maze_intro_k1_blocks: Introdução para o Code Studio
         CSF_maze_intro_text_blocks: Introdução para o Code Studio
@@ -389,52 +388,16 @@ pt-BR:
         csd_external_netflix_data: Como a Netflix faz sugestões para programas de TV e filmes?
         csd_external_waze_data: Por que tantos usuários são obcecados com Waze?
         csd_gamelab_animation_tab: A Guia de Animação
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocidade
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução ao Web Lab - Parte 2
         csd_weblab_css_1: Introdução para CSS - Parte 1
         csd_weblab_css_2: Introdução para CSS - Parte 2
         csd_weblab_intro_3: Introdução ao Web Lab - Parte 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introdução às Funções
         csp_applab_functions_parameters: Funções com Parâmetros
-        csp_applab_loops: Laços
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
+        csp_applab_loops: laços
         csp_concept_rgb: Um pouco sobre pixels
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Widget de pixelização de cores - Parte 1
         csp_pixelation_color_2: Widget de pixelização de cores - Parte 2
         csp_pixelation_color_3: Widget de pixelização de cores - Parte 3
@@ -442,9 +405,6 @@ pt-BR:
         csp_U1L14_tipstricks: Unidade 1 - Lição 14 - Dicas e truques de professores
         csp_textcompression: Widget de compressão de texto
         csp_textcompression_new: Widget de compressão de texto
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: Ciência da computação em álgebra - introdução
         alg_2_eval_block: Ciência da computação em álgebra - blocos de cálculo
         alg_3_pemdas: Ciência da computação em álgebra - ordem de operações
@@ -521,22 +481,25 @@ pt-BR:
         CSF_skinOverview_Harvester: A Colheitadeira
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops with BB-8
         CSF_harvester_skinOverview_K-1: A Colheitadeira
-        CSF_harvester_loops_K1: Loops in Harvester
         CSF_scrat_loops_K1: Repetições na Era do gelo
         CSF_scrat_loops_CF: Repetições na Era do gelo
         CSF_if_allskins: O Bloco Se
         CSF_ifelse_allskins: Usando Blocos "Se/Senão"
         CSF_ifelseifelse_allskins: Usando Blocos "Se/SenãoSe/Senão"
-        CSF_loops_AB: Laços
+        CSF_loops_AB: laços
         csd_gamelab_booleans: Expressões Booleanas
         csd_gamelab_conditional_statements: Instruções Condicionais
-        csd_gamelab_if_else: If/Else Statements
+        csd_gamelab_if_else: Instrução Se/Senão
+        CSF_SpriteLabIntro_CDEF: Este é o Laboratório de Sprite
+        CSF_Spritelab_MakeSprite_CDEF: Como fazer um no Laboratório de Sprite
+        CDEF_Video_SpritesInAction: Sprites em Ação
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites em Ação
+        CSF_StarWars_ProjectIntro: Introdução para o Projeto Star Wars
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
-        run: Clique em "Executar" para iniciar seu programa
+        run: Selecione "Executar" para abrir seu programa
         watch_again: Clique aqui para assistir o vídeo novamente
         gray_block_explanation: Os blocos cinza não podem ser excluídos. Você consegue resolver o desafio assim mesmo?
         show_code_explanation: Clique aqui para ver o código do programa que você está criando

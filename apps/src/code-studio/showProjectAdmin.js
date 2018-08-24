@@ -81,4 +81,20 @@ export default () => {
       $('.admin-report-abuse').show();
     }
   }
+
+  $('#disable-auto-moderation').click(async function () {
+    await dashboard.project.disableAutoContentModeration();
+    alert("Our moderation filter is currently turned off for all projects, but your choice will be saved and applied when we re-enable the moderation service.");
+    $('#disable-auto-moderation').hide();
+    $('#moderation-explanation').hide();
+    $('#enable-auto-moderation').show();
+  });
+
+  $('#enable-auto-moderation').click(async function () {
+    await dashboard.project.enableAutoContentModeration();
+    alert("Our moderation filter is currently turned off for all projects, but your choice will be saved and applied when we re-enable the moderation service.");
+    $('#disable-auto-moderation').show();
+    $('#moderation-explanation').show();
+    $('#enable-auto-moderation').hide();
+  });
 };

@@ -60,10 +60,9 @@ function renderSectionAssessments(section, validScripts) {
   const store = getStore();
   store.dispatch(setSection(section));
 
-  const scriptId = store.getState().scriptSelection.scriptId;
-  store.dispatch(asyncLoadAssessments(section.id, scriptId));
-
   store.dispatch(loadValidScripts(section, validScripts)).then(() => {
+    const scriptId = store.getState().scriptSelection.scriptId;
+    store.dispatch(asyncLoadAssessments(section.id, scriptId));
     ReactDOM.render(
       <Provider store={store}>
         <SectionAssessments />
@@ -206,7 +205,7 @@ function main() {
   // Section service. see sites.v3/code.org/routes/v2_section_routes.rb
   services.factory('sectionsService', ['$resource',
     function ($resource) {
-      return $resource('/v2/sections/:id', {}, {
+      return $resource('/dashboardapi/sections/:id', {}, {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
       //  'save':   {method:'POST'},
@@ -216,8 +215,6 @@ function main() {
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
-         assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
-         surveys: {method:'GET', url:'/dashboardapi/section_surveys/:id', isArray: true},
          validScripts: {method:'GET', url:'/dashboardapi/sections/valid_scripts', isArray: true},
       });
     }]).config(['$httpProvider', function ($httpProvider) {
@@ -420,7 +417,7 @@ function main() {
         $scope.section.$promise.then(section =>
           renderSyncOauthSectionControl({
             sectionId: section.id,
-            provider: scriptData.provider
+            rosterProvider: section.login_type
           })
         );
       });
@@ -596,132 +593,12 @@ function main() {
 
     $scope.script_list = sectionsService.validScripts();
 
-    if (experiments.isEnabled(experiments.PROGRESS_TAB)) {
-      $scope.react_progress = true;
-      $scope.$on('section-progress-rendered', () => {
-        $scope.section.$promise.then(script =>
-          renderSectionProgress(script, $scope.script_list)
-        );
-      });
-      return;
-    }
-
-    // The below is not run if our experiments.PROGRESS_TAB experiment is not enabled
-
-    const paginatedPromise = paginatedSectionProgressService.get($routeParams.id)
-      .then(result => {
-        $scope.progress = result;
-      })
-      .catch($scope.genericError);
-
-    $scope.progressLoadedFirst = false;
-    $scope.progressLoaded = false;
-    $scope.progress_disabled_scripts = disabled_scripts;
-
-    // wait until we have both the students and the student progress
-    $q.all([paginatedPromise, $scope.section.$promise]).then(function () {
-      $scope.mergeProgress();
-      $scope.progressLoadedFirst = true;
-      $scope.progressLoaded = true;
+    $scope.react_progress = true;
+    $scope.$on('section-progress-rendered', () => {
+      $scope.section.$promise.then(script =>
+        renderSectionProgress(script, $scope.script_list)
+      );
     });
-
-    $scope.changeProgress = function (scriptId) {
-      $scope.progressLoadedFirst = false;
-      // $scope.progressLoaded = false;
-
-      // TODO: The hide/show behavior that uses progressLoaded is
-      // broken on Chrome 45. I am not sure why, but the hide/show
-      // behavior that uses progressLoadedFirst works fine, so switching
-      // to using that is a good rough fix. This changes the behavior so
-      // that the entire table disappears and reappears instead of just
-      // the progress bar when using the course dropdown.
-
-      paginatedSectionProgressService.get($routeParams.id, scriptId)
-        .then(result => {
-          $scope.progress = result;
-          $scope.mergeProgress();
-          $scope.progressLoadedFirst = true;
-          $scope.progressLoaded = true;
-        })
-        .catch($scope.genericError);
-    };
-
-    $scope.progressWidth = function () {
-      return $scope.page.zoom ? Math.max(34 * $scope.progress.script.levels_count, 770) : 770;
-    };
-
-    $scope.scrollToStage = function ($event) {
-      var doScroll = function () {
-        var element = $( $event.currentTarget );
-        var wrapper = $('.table-wrapper');
-        var LEFT_COLUMN_WIDTH = 200; // scrolling the entire table not just this col, so we have to know about the left col width
-        var LEFT_OFFSET = 20; // a little offset so we can see the previous stage
-        wrapper.animate({scrollLeft: (element.position().left - wrapper.position().left + wrapper.scrollLeft() - LEFT_COLUMN_WIDTH - LEFT_OFFSET)}, 500);
-      };
-
-      if ($scope.page.zoom) {
-        doScroll();
-      } else {
-        // if we weren't already zoomed we need to zoom and then wait for the zoom to finish
-        $scope.page.zoom = true;
-        $timeout(doScroll, 500);
-      }
-    };
-
-    var isInCategory = function (script_list, script_id, categoryName) {
-      for (var i = 0; i < script_list.length; i++) {
-        if (script_list[i].id === script_id) {
-          return categoryName === script_list[i].category;
-        }
-      }
-      return false;
-    };
-
-    // merge the data returned by progress api into the data returned by the section students api
-    $scope.mergeProgress = function () {
-      $scope.script_id = $scope.progress.script.id;
-      $scope.progress_disabled = $scope.progress_disabled_scripts.indexOf($scope.script_id) !== -1;
-      var hocCategoryName = i18n.hoc_category_name;
-      $scope.is_hoc_course = isInCategory($scope.script_list, $scope.script_id, hocCategoryName);
-      // calculate width of each level in the progress bar assuming the overall width is 780 px
-
-      // Takes the level's position in the script, and returns its level number in its stage
-      var getLevelNumberInStage = function (overallLevel) {
-        for (var i = 0; i < $scope.progress.script.stages.length; i++) {
-          var stage = $scope.progress.script.stages[i];
-          if (overallLevel < stage.length)            {return overallLevel + 1;}          else            {overallLevel -= stage.length;}
-        }
-        return 0;
-      };
-
-      // Put levels on the student object
-      for (var i = 0; i < $scope.section.students.length; i++) {
-        var student = $scope.section.students[i];
-
-        // default is no progress
-        student.levels = [];
-        student.highest_level = -1; // not started yet
-        student.highest_level_in_stage = 0;
-
-        // if we have progress
-        var progress_student = $.grep($scope.progress.students, function (e) { return e.id == student.id; })[0];
-        if (progress_student) {
-          student.levels = progress_student.levels;
-
-          // find the last level attempted
-          for (var l = student.levels.length - 1; l >= 0; l--) {
-            if (student.levels[l] && student.levels[l].class != 'not_tried') {
-              var delayedSetHighestLevel = function (student, l) {
-                student.highest_level = l;
-                student.highest_level_in_stage = getLevelNumberInStage(l);
-              };
-              $timeout(delayedSetHighestLevel.bind(this, student, l), 500); // add a delay so we get animation
-              break;
-            }
-          }
-        }
-      }
-    };
   }]);
 
   app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService',
@@ -746,70 +623,16 @@ function main() {
     $scope.script_list = sectionsService.validScripts();
     $scope.tab = 'responses';
 
-    if (experiments.isEnabled(experiments.TEXT_RESPONSES_TAB)) {
-      $scope.react_text_responses = true;
-      $scope.$on('text-responses-table-rendered', () => {
-        $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
-      });
-      return;
-    }
-
-    $scope.responses = sectionsService.responses({id: $routeParams.id});
-    // error handling
-    $scope.genericError = function (result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
-    $scope.section.$promise.catch($scope.genericError);
-    $scope.sections.$promise.catch($scope.genericError);
-    $scope.responses.$promise.catch($scope.genericError);
-
-    // fill in the course dropdown with the section's default course
-    $scope.section.$promise.then(
-      function (section) {
-        // TODO:(bjvanminnen) - also handle case where we have a course, but not
-        // a script assigned, likely by figuring out the first script in that course
-        if (section.script) {
-          $scope.script_id = section.script.id;
-        }
-      }
-    );
-
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
-    $scope.sections.$promise.then(
-      function ( sections ) {
-        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
-      }
-    );
-
-    $scope.responsesLoaded = false;
-    $scope.stages = [];
-
-    // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function () {
-      $scope.responsesLoaded = true;
-      $scope.findStages();
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
     });
 
-    $scope.changeScript = function (scriptId) {
-      $scope.responsesLoaded = false;
-      $scope.stages = [];
-
-      $scope.responses = sectionsService.responses({id: $routeParams.id, script_id: scriptId});
-
-      $scope.responses.$promise.then(function () {
-        $scope.responsesLoaded = true;
-        $scope.findStages();
-      });
-    };
-
-    $scope.findStages = function () {
-      $scope.stages = $.map($scope.responses, function (row) {
-        return row.stage;
-      }).filter(function (item, i, array) { // uniquify
-        return array.indexOf(item) == i;
-      });
-    };
+    $scope.react_text_responses = true;
+    $scope.$on('text-responses-table-rendered', () => {
+      $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
+    });
   }]);
 
 
@@ -848,223 +671,28 @@ function main() {
     $scope.sections = sectionsService.query();
     $scope.tab = 'assessments';
 
+    // the ng-select in the nav compares by reference not by value, so we can't just set
+    // selectedSection to section, we have to find it in sections.
+    $scope.sections.$promise.then(sections => {
+      $scope.selectedSection = sections.find(section => section.id.toString() === $routeParams.id);
+    });
+
     $scope.script_list = sectionsService.validScripts();
 
     $scope.assessmentsLoaded = false;
     $scope.assessmentStages = [];
-    $scope.assessments = sectionsService.assessments({id: $routeParams.id});
 
     $scope.surveysLoaded = false;
     $scope.surveyStages = [];
-    $scope.surveys = sectionsService.surveys({id: $routeParams.id});
 
-    if (experiments.isEnabled(experiments.ASSESSMENTS_TAB)) {
-      $scope.react_assessments = true;
-      $scope.$on('section-assessments-rendered', () => {
-        $scope.section.$promise.then(script =>
-          renderSectionAssessments(script, $scope.script_list)
-        );
+    $scope.react_assessments = true;
+    $scope.$on('section-assessments-rendered', () => {
+      $scope.section.$promise.then(script => {
+        $scope.script_list.$promise.then(scriptList => (
+          renderSectionAssessments(script, scriptList)
+        ));
       });
-      return;
-    }
-
-    // Error handling.
-    $scope.genericError = function (result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
-    $scope.section.$promise.catch($scope.genericError);
-    $scope.sections.$promise.catch($scope.genericError);
-    $scope.assessments.$promise.catch($scope.genericError);
-
-    // Fill in the course dropdown with the section's default script.
-    $scope.section.$promise.then(
-      function (section) {
-        $scope.scriptid = section.script.id;
-      }
-    );
-
-    // The ng-select in the nav compares by reference not by value, so we can't just set
-    // selectedSection to section, we have to find it in sections.
-    $scope.sections.$promise.then(
-      function ( sections ) {
-        $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
-      }
-    );
-
-    // Wait until we have initial section, assessment, and survey data.
-    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function () {
-      $scope.assessmentsLoaded = true;
-      $scope.surveysLoaded = true;
-      $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
-      $scope.assessmentStages = $scope.findStages($scope.assessments);
-      $scope.surveyLevels = $scope.getSurveyData($scope.surveys);
-      $scope.surveyStages = $scope.findStages($scope.surveys);
     });
-
-    // Re-retrieve assessment and survey data when the script is changed using the dropdown.
-    $scope.changeScript = function (scriptId) {
-
-      // Load assessments.
-      $scope.assessmentsLoaded = false;
-      $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
-      $scope.assessments.$promise.then(function () {
-        $scope.assessmentsLoaded = true;
-        $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
-        $scope.assessmentStages = $scope.findStages($scope.assessments);
-      });
-
-      // Load surveys.
-      $scope.surveysLoaded = false;
-      $scope.surveys = sectionsService.surveys({id: $routeParams.id, script_id: scriptId});
-      $scope.surveys.$promise.then(function () {
-        $scope.surveysLoaded = true;
-        $scope.surveyStages = $scope.findStages($scope.surveys);
-        $scope.surveyLevels = $scope.getSurveyData($scope.surveys);
-      });
-    };
-
-    $scope.findStages = function (source) {
-      return $.map(source, function (row) {
-        return row.stage;
-      }).filter(function (item, i, array) { // uniquify
-        return array.indexOf(item) == i;
-      });
-    };
-
-    $scope.getAssessmentData = function (assessments) {
-      var results = [];
-
-      $.each(assessments, function (index, assessment) {
-
-        if (assessment.multi_count === 0) {
-          assessment.multi_correct_percent = 0;
-        } else {
-          assessment.multi_correct_percent = assessment.multi_correct / assessment.multi_count * 100;
-        }
-        assessment.status = assessment.submitted ? submission_list.submitted : submission_list.in_progress;
-
-        // Don't show a timestamp for non-submittted assessments.
-        if (!assessment.submitted) {
-          assessment.timestamp = null;
-        }
-
-        // Each LevelGroup's result has a list of the results for the levels in that order.
-        // Because angular's nested iterators are kind of funky when trying to generate a table,
-        // let's just generate a flat list of the level results to go into $scope.
-        $.each(assessment.level_results, function (index, level_result) {
-          var levelResult = {
-            stage: assessment.stage,
-            puzzle: assessment.puzzle,
-            question: index + 1,
-            student: assessment.student,
-            studentResult: level_result.student_result,
-            correct: correctness_list[level_result.correct]
-          };
-          results.push(levelResult);
-        });
-      });
-
-      return results;
-    };
-
-    $scope.getSurveyData = function (surveys) {
-      // The ASCII value of A.  Used for rendering multiple choice captions.
-      var asciiForA = 65;
-
-      var surveyResults = [];
-
-      $.each($scope.surveys, function (surveyIndex, survey) {
-
-        survey.status = survey.submitted ? submission_list.submitted : submission_list.in_progress;
-
-        if (survey.levelgroup_results) {
-
-          // Each LevelGroup's result has a list of the results for the levels in that order.
-          // Because angular's nested iterators are kind of funky when trying to generate a table,
-          // let's just generate a flat list of the level results to go into $scope.
-          $.each(survey.levelgroup_results, function (sublevelIndex, sublevelResults) {
-            var questionText = sublevelResults.question;
-
-            // How many students answered this question?
-            var resultsLength = sublevelResults.results.length;
-
-            if (sublevelResults.type == "free_response") {
-              // Free response: just add all of the responses.
-              $.each(sublevelResults.results, function (sublevelResultIndex, sublevelResult) {
-                // Disambiguate free responses that are unsubmitted and that are empty strings.
-                if (sublevelResult.result === undefined || sublevelResult.result === "") {
-                  sublevelResult.result = null;
-                }
-
-                var questionFieldText = (parseInt(sublevelIndex) + 1) + (questionText ? ". " + questionText : "");
-                var resultFieldText = sublevelResult.result;
-
-                // Only create separate rows for answers which have a result to show.
-                if (resultFieldText !== null) {
-                  var levelResult = {
-                    stage: survey.stage,
-                    question: parseInt(sublevelIndex) + 1,
-                    questionText: questionFieldText,
-                    resultText: resultFieldText,
-                    count: 1
-                  };
-
-                  surveyResults.push(levelResult);
-                }
-              });
-
-            } else if (sublevelResults.type == "multi") {
-              // Multi: go through each answer and work out how many responses had that answer.
-
-              // Store one result per possible answer.
-              var multiResults = [];
-
-              // First, build a result entry for each possible answer.
-              $.each(sublevelResults.answer_texts, function (answerTextIndex, answerText) {
-                var questionFieldText = (parseInt(sublevelIndex) + 1) + (questionText ? ". " + questionText : "");
-                var answerFieldText = String.fromCharCode(asciiForA + answerTextIndex) + ". " + answerText;
-
-                var levelResult = {
-                  stage: survey.stage,
-                  question: parseInt(sublevelIndex) + 1,
-                  questionText: questionFieldText,
-                  resultText: answerFieldText,
-                  count: 0,
-                  percent: "0%"
-                };
-
-                multiResults[answerTextIndex] = levelResult;
-              });
-
-              // Second, go through each result and update the count for that result.
-              $.each(sublevelResults.results, function (sublevelResultIndex, sublevelResult) {
-                if ("answer_index" in sublevelResult) {
-                  var answerIndex = sublevelResult.answer_index;
-                  multiResults[answerIndex].count ++;
-                  multiResults[answerIndex].percent =
-                    (Math.round(multiResults[answerIndex].count / resultsLength * 100)) + "%";
-                }
-              });
-
-              surveyResults = surveyResults.concat(multiResults);
-            }
-          });
-        }
-      });
-
-      // Sort by stage, question, result text.
-      surveyResults.sort(function (a, b) {
-        if (a.stage !== b.stage) {
-          return a.stage.localeCompare(b.stage);
-        } else if (a.question !== b.question) {
-          return a.question - b.question;
-        } else {
-          return a.resultText.localeCompare(b.resultText);
-        }
-      });
-
-      return surveyResults;
-    };
   }]);
 
 }

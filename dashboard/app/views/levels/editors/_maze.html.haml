@@ -5,6 +5,5 @@
   = f.label :step_mode
   = f.select :step_mode, options_for_select(@level.class.step_modes, @level.step_mode)
 .field
-  = f.label :shape_shift
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :shape_shift, description: "Shape Shift"}
   %p Randomly rotate the puzzle to a new orientation each time it is loaded.
-  = boolean_check_box f, :shape_shift

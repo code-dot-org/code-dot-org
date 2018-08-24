@@ -31,7 +31,7 @@ ja:
         edit_header: アカウント詳細を編集する
         error:
           future: 現在までの日付にする
-  hello: 世界の皆さん、こんにちは
+  hello: Hello world
   welcome_back: Welcome Back, %{name}
   your_professional_learning_plan: プロフェッショナル学習計画
   see_your_learning_plan: 学習計画を参照してください。
@@ -40,7 +40,6 @@ ja:
   previous_page: 前のページ
   next_page: 次のページ
   next_resource: 次のリソース
-  done_with_module: Done with this Learning Module
   cancel: キャンセル
   okay: オッケー
   heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
@@ -63,7 +62,7 @@ ja:
   courses_page:
     title_student: コード スタジオで学ぶ
     title_teacher: コード スタジオで教えよう
-  unplugged_activity: コンピューターを使わない活動
+  unplugged_activity: アンプラグド　アクティビティ
   of: の
   more: くわしく
   less: かくす
@@ -227,8 +226,6 @@ ja:
       picture: 画像パスワード
       word: 秘密の言葉
       email: Eメール
-      google_classroom: Google Classroom
-      clever: Clever
   follower:
     invite_sent: 招待状を送信しました
     added_teacher: "%{name} あなたの先生として追加"
@@ -276,7 +273,6 @@ ja:
       free_play:
         playlab: プレイラボ で作る
         artist: アーティストで作る
-        calculate: Calculate Something
         applab: アプリラボ で作る
         gamelab: ゲームラボで作る
         weblab: Web 研究室 (ベータ版) のプロジェクトを作る
@@ -296,7 +292,7 @@ ja:
       educate_elementary: 小学校
       educate_middle: 中学校
       educate_high: 高校
-      educate_hoc: Hour of Code
+      educate_hoc: Hour of Code（アワー オブ コード）
       educate_partner: 私達のパートナー
       educate_beyond: Code.org を超えて
       educate_inspire: 生徒を応援する
@@ -373,7 +369,6 @@ ja:
     email_confirm_needed_required: あなたのメール アドレス %{email} はまだ確認されていません。
     email_confirm_wrong_email: メールアドレスをご確認ください
     email_resend_confirm: 確認手順の再送信
-    new_email_hint: "(make sure you can receive emails to this email address)"
     new_password_hint: "（変更したくない場合は空白のままにしてください）"
     current_password_hint: "(変更を確認するためにあなたの現在のパスワードが必要です)"
     delete: アカウントを削除
@@ -418,8 +413,8 @@ ja:
     teacher_student_count_one: あなたには %{count} 人の生徒がいます
     teacher_student_count: あなたには %{count} 人の生徒がいます
     teacher_averages: 平均であなたの学生は %{trophy_max}のうち%{trophy_average}　"コンセプト習得"のトロフィーを獲得しています
-    teacher_print_certificates: このコースを終了した生徒の証明書を印刷する
-    teacher_read_blog: ニュースと更新（教師用ブログ）を読む
+    teacher_print_certificates: このコースを終了した生徒の証明書を印刷します。
+    teacher_read_blog: ニュースと更新（教師用ブログ）を読みます
     classroom: あなたの教室
     student_progress: 進捗状況
     student_stats: '%{trophy_max}このうち%{trophy_count} の"コンセプト"習得のトロフィーを獲得しました'
@@ -435,7 +430,7 @@ ja:
     trynow: 今すぐ試す
     add_hint_help: Code.org のチュートリアルに、気の利いたヒントを充実させるため、ご協力をお願いします。
     20hour_overview: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
-    test_videos_help: 新しいビデオプレイヤーをテストする。
+    test_videos_help: 学校で新しいビデオプレイヤーを試す
     try_beta_courses: New! K-5生徒用のベータコースを試してみましょう
     use_as_teacher: このサイトを教師として使用
     heading_hoc2014: "<h2>Hour of Code（アワー オブ コード）</h2> <h1>全ねんれい向け</h1>"
@@ -521,7 +516,6 @@ ja:
     male: 男性
     female: 女性
     non_binary: 非バイナリ
-    not_listed: Preferred term not listed
     none: 答えたくない
   user_type:
     student: 生徒
@@ -557,8 +551,7 @@ ja:
     more: 見る
     feedback: フィードバックする
     translate: 翻訳にご協力ください
-    support: サポート
-    support_url: http://support.code.org
+    support: ヘルプとコミュニティ
     tos_short: 利用規約
     tos: 利用規約
     privacy: プライバシー ポリシー
@@ -572,7 +565,6 @@ ja:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
     teacher: 答えを見る
-    teacher_no_solution: Stop seeing solution
     auth_error: 解答を見る権限がありません
     submit: 制作者の居住地を変更する
     direction: 最初の方向 (度)
@@ -582,8 +574,6 @@ ja:
     notes_coming_soon: このビデオのノートがもうすぐ公開されます
     autoplay_option: 動画の自動再生
     download: ビデオのダウンロード
-    show_notes: Show Notes
-    show_video: Show Video
   compatibility:
     upgrade:
       unsupported_message: お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}',
@@ -636,15 +626,15 @@ ja:
       title: 古典的な迷路
       body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
     flappy:
-      title: Flappy Code
+      title: フラッピー コード
       body: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
     20-hour:
       title: 上級コース
       body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
       body_short: コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。
     hoc2014:
-      try_new_tutorial: 動作試験中の新しい Hour of Code チュートリアルをお試しください。
-      try_frozen: "「アナと雪の女王」から、アナとエルザとアーティスト"
+      try_new_tutorial: ベータ版の新しいHour of Codeのチュートリアルを試す
+      try_frozen: "「アナと雪の女王」から、アナとエルザと一緒のアーティスト"
     gallery:
       title: ギャラリー
       body: ユーザーが作成したアプリやアーティストの画像のギャラリーを見る
@@ -655,11 +645,8 @@ ja:
       cta: もっと知る
     hoc-encryption:
       title: 単純な暗号化
-      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web 研究室 (ベータ版)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: 13才以上
       cta: もっと知る
     frozen:
@@ -668,7 +655,6 @@ ja:
       title: スター・ウォーズ
     infinity:
       title: インフィニティ プレイ ラボ
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: マインクラフト
       body: プログラムを通して、Minecraftの世界を探検しましょう。
@@ -677,15 +663,9 @@ ja:
       body: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
     hero:
       title: マインクラフト
-      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
-        through Minecraft with code.
     sports:
       title: スポーツ
       body: バスケットボールゲームや、様々なスポーツの混合競技をつくろう！
-    text-compression:
-      title: Text Compression
-      body: In this lesson, students will use the Text Compression Widget to compress
-        text by substituting patterns with symbols.
     unplugged:
       title: アンプラグド・レッスン
       audience: 4才以上
@@ -721,7 +701,6 @@ ja:
     prerelease_hoc2014: このチュートリアルは<span class='betatext'>ベータ版</span>です。フィードバックによって改善と変更が行われることが想定されます。
     report_bug: バグを報告
     support: 説明を見る
-    support_url: "//support.code.org"
     help_resources: ヘルプとリソース
     help_support: ヘルプとサポート
     documentation: ドキュメント
@@ -731,24 +710,17 @@ ja:
     wrong_body: 不正解です。やりなおしてみてください。
     correct_title: 正解
     correct_body: 正解です。
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: ありがとうございます
     wrong_body: 回答していただきありがとうございました。
     correct_title: ありがとうございます
     correct_body: 回答していただきありがとうございました。
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: ありがとうございます
     wrong_body: 回答していただきありがとうございました。
     correct_title: ありがとうございます
     correct_body: 回答していただきありがとうございました。
     hide_survey_last_answer: アンケートは匿名です。 集計結果は先生用のダッシュ ボードを参照してください。 少なくとも 5 人の学生がアンケートに回答した場合のみ、結果が表示されることに注意してください。
-    survey_submission_thankyou: Thank you for submitting this survey! The survey has
-      been cleared so that your responses stay anonymous. Note that your teacher will
-      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: ありがとうございます
     wrong_body: 回答していただきありがとうございました。
@@ -823,14 +795,14 @@ ja:
     title: 'オプション: コンピュータ ・ サイエンスにおける多様性の向上の取り組みのため、ご協力ください'
     message: あなたの人種 (該当するものすべてチェック) を教えてください。
     races:
-    - white: 白人
-    - black: 黒人、またはアフリカ系アメリカ人
-    - hispanic: ヒスパニックまたはラテン系
-    - asian: アジア系
-    - hawaiian: ハワイおよび他の太平洋諸島系
-    - american_indian: アメリカインディアン/アラスカ ネイティブ
-    - other: その他
-    - opt_out: 答えたくない
+      white: 白人
+      black: 黒人、またはアフリカ系アメリカ人
+      hispanic: ヒスパニックまたはラテン系
+      asian: アジア系
+      hawaiian: ハワイおよび他の太平洋諸島系
+      american_indian: アメリカインディアン/アラスカ ネイティブ
+      other: その他
+      opt_out: 答えたくない
     submit: 送信
     decline: 閉じる
   zendesk_too_young_message: ご迷惑致しますが、若い方はこのサポートサイトのサインインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をサインインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。
@@ -893,9 +865,6 @@ ja:
     remix: リミックス
     click_to_remix: '"Remix" をクリックしてあなただけのバージョンを作成しましょう'
     edit_project: プロジェクトを編集します
-    sharing_disabled: Sorry, this project is not available for sharing. If this is
-      your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign
-      in</a> to your account to view the project.
     abuse:
       tos: このプロジェクトは、Code.org との <a href='http://code.org/tos'> サービス利用規約</a> に違反するという報告があったため、他のユーザーとは共有できません。
       policy_violation: このプロジェクトには、他の人と共有できない情報が含まれています。アプリの内容を修正するには、アプリ所有者にお問い合わせください。
@@ -931,29 +900,17 @@ ja:
     instructor_feedback: インストラクターからのフィードバック
     peer_feedback: ピア ・ フィードバック
     outdated: このフィードバックは、以前提出したバージョンに追加されました
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
-    review_count: You must complete %{review_count} reviews for this unit
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this
-      moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
   flex_category:
     required: 概要
     content: 内容
     practice: 授業実践
     peer_review: ピア ・ レビュー
-    ramp_up: Ramp-Up
-    end_of_course_project: End of Course Project
-    optional_stages: Optional Stages
     main_course: メイン コース
     extra_course_content: 追加のコース内容
-    csf_e_1: Ramp Up to Course E (Optional)
-    csf_e_2: Course E Content
-    csf_f_1: Ramp Up to Course F (Optional)
-    csf_f_2: Course F Content
+    csf_e_1: コースEへの強化（オプション）
+    csf_e_2: コースEの内容
+    csf_f_1: コースFへの強化（オプション）
+    csf_f_2: コースFの内容
     csd1_1: '第 1章: 問題解決プロセス'
     csd1_2: 第 2 章コンピューターと問題解決
     csd2_1: 第 1 章： Web コンテンツと HTML
@@ -966,26 +923,9 @@ ja:
     csd5_2: 第 2 章：データ問題を解決
     csd6_1: 第 1 章：ハードウェア出力
     csd6_2: 第 2 章：ハードウェア入力
-    csd_survey: Post-Course Survey
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csd_survey: コース終了後アンケート
     csp3_1: '章 1: プログラミング言語とアルゴリズム'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: Survey
-    cspAssessment: Chapter Assessment
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
-    csp_postap_1: 'Chapter 1: Manipulating and Visualizing Data'
-    csp_postap_2: 'Chapter 2: Apps and Databases'
     csp2_1_2018: '第 2 章: デジタル情報'
-    csp3_1_2018: 'Unit 3: Intro to Programming'
-    csp4_1_2018: 'Unit 4: Big Data and Privacy'
-    dlp: Reflection Prompts
   external_links:
     disclaimer: 免責事項
     leaving_domain: このドメインから離れ、Code.org が運営していないサイトに移動します。
@@ -1047,85 +987,41 @@ ja:
     download_in_Vietnamese: ベトナム語でダウンロード
     windows: Windows (64 ビット)
     mac: Mac OS X
-  plc:
-    preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content
-        focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching
-        practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think
-        that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other
-        resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
   locked_stage: このステージはロックされているために、このステージの内容は表示されません。あなたの先生は、作業やあなたの答えを確認する時に、このステージのロックを解除できます。
   hidden_stage: 先生は、あなたの参加を予想していませんでした。どのレッスンに参加すべきか、あなたの先生に尋ねてください。
-  hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
-    which unit you should be on.
-  return_unit_overview: Go to unit overview
   return_course_overview: ユニットの概要へ
-  view_all_units: View all units
   pd:
-    survey:
-      number_teachers: Number of attending teachers
-      response_count: Number of survey responses
-      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
-      teacher_engagement: Teacher Engagement (out of 5)
-      overall_success: Overall Success Score (out of 6)
-      how_much_learned_s: Overall, how much have you learned from your workshop about
-        computer science?
-      how_motivating_s: During your workshop, how motivating were the activities that
-        this program had you do?
-      how_clearly_presented_s: For this workshop, how clearly did your facilitator
-        present the information that you needed to learn?
-      how_interesting_s: How interesting did your facilitator make what you learned
-        in the workshop?
-      how_often_given_feedback_s: How often did your facilitator give you feedback
-        that helped you learn?
-      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
-        questions about what you were learning in his or her workshop?
-      how_often_taught_new_things_s: How often did your facilitator teach you things
-        that you didn't know before taking this workshop?
-      how_much_participated_s: During your workshop, how much did you participate?
-      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
-        how often do you talk about the ideas from the workshops?
-      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
-        workshop activities that you lost track of time?
-      how_excited_before_s: Before the workshop, how excited were you about going
-        to your Code.org workshop?
-      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
-        workshop?
-      more_prepared_than_before_s: I feel more prepared to teach the material covered
-        in this workshop than before I came.
-      know_where_to_go_for_help_s: I know where to go if I need help preparing to
-        teach this material.
-      suitable_for_my_experience_s: This professional development was suitable for
-        my level of experience with teaching CS.
-      would_recommend_s: I would recommend this professional development to others.
-      part_of_community_s: I feel like I am a part of a community of teachers.
-      things_facilitator_did_well_s: What were two things your facilitator(s) did
-        well?
-      things_facilitator_could_improve_s: What were two things your facilitator(s)
-        could do better?
-      things_you_liked_s: What were the two things you liked most about the activities
-        you did in this workshop and why?
-      things_you_would_change_s: What are the two things you would change about the
-        activities you did in this workshop?
-      anything_else_s: Is there anything else you’d like to tell us about your experience
-        at this workshop?
+    form_labels:
+      email: Eメール
+      school_name: 学校名
+      school_city: 学校の市町村名
+      school_country: 学校のある国
+    form_entries:
+      gender:
+        male: 男性
+        female: 女性
+        non_binary: 非バイナリ
+        none: 答えたくない
+      subjects:
+        cs: コンピュータサイエンス
+        math: 計算(けいさん)
+        science: 科学
+        la: 言語芸術
+      resources:
+        kodable: Kodable
+        lightbot: Lightbot
+      robotics:
+        kodable: Kodable
+      workshop_course:
+        csp: コンピューター・サイエンス入門
+      email_opt_in:
+        opt_in_yes: はい
+        opt_in_no: いいえ
   courses_category: すべてのコース
   cookie_banner:
-    message: By continuing to browse our site or clicking "I agree," you agree to
-      the storing of cookies on your computer or device.
-    more_information: See Code.org's Privacy Policy.
     accept: 賛成する
   gdpr_dialog:
-    heading: Do you agree to using a web site based in the United States?
-    message: Data from your use of this site may be sent to and stored or processed
-      in the United States.
-    link_intro: For details see our
+    message: 当サイトの利用に関するあなたの情報は、米国に送信され、米国にて保管または処理される場合があります。
     privacy_policy: プライバシーポリシー
     logout: ログアウト
     true: はい

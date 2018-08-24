@@ -1,51 +1,48 @@
 vi:
   data:
     block_categories:
-      Actions: Các hành động
+      Actions: hành động
       Loops: Vòng lặp
       Functions: Các hàm
       Color: Màu sắc
-      Brushes: Brushes
+      Brushes: Bàn chải
       Math: thuật toán
       Logic: Logic
       Variables: Các biến
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
+      Number: Số
+      String: Chuỗi
+      Image: Hình ảnh
+      Boolean: Luận lí
       Conditionals: Điều kiện
       Events: Các sự kiện
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
+      Games/Score: Trò chơi/Điểm
+      Comments: Bình luận
+      Category: Chuyên mục
+      Prebuilt: Dựng sẵn
       Text: văn bản
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
-      Advanced: Advanced
-      Sprite: Sprite
-      Brush: Brush
-      Make Sprite: Make Sprite
-      Movement: Movement
+      Picker: Chọn
+      Comment: Bình luận
+      'Variables ': 'Các biến '
+      everythingelse: thứ khác
+      numbers: các con số
+      Numbers: Các con số
+      Default: Mặc định
+      World: Thế giới
+      Behaviors: Hành vi
+      Advanced: Nâng cao
       Start: Bắt đầu
-      Groups: Groups
+      Sprite: Ma
+      Brush: Chải
+      Make Sprite: Tạo ma
+      Movement: Phong trào
+      Groups: Nhóm
       Booleans: Các toán tử
-      Functional: Functional
-      Predefined: Predefined
+      Functional: Chức năng
+      Predefined: Xác định trước
       test: kiểm thử
-      test2: test2
-      Foo: Foo
+      test2: bàikiểmtra2
       Name: Tên
-      NEW BLOCKS: NEW BLOCKS
-      'Functions ': 'Functions '
-      Game/Score: Game/Score
+      NEW BLOCKS: NHỮNG KHỐI MỚI
+      'Functions ': 'Chức năng '
+      Game/Score: Trò chơi/Điểm
       Function: Hàm

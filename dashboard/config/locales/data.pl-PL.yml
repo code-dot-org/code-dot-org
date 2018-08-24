@@ -3,12 +3,12 @@ pl:
   data:
     game:
       name:
-        Unplug1: Wprowadzenie do Informatyki
+        Unplug1: Wprowadzenie do informatyki
         Maze: Labirynt
         Multi: Wieloraki Wybór Rzeczy
         Unplug2: Myślenie komputacyjne
         Unplug3: Programowanie na papierze milimetrowym
-        Artist: Artysta
+        Artist: Artysta/Postać
         Unplug4: Algorytmy
         Artist2: Artysta 2
         Unplug5: Funkcje
@@ -19,7 +19,7 @@ pl:
         Farmer2: Rolnik 2
         Unplug8: Abstrakcja
         Artist4: Artysta 4
-        Unplug9: Programowanie przekaźnika
+        Unplug9: Sztafeta programowania
         Farmer3: Rolnik 3
         Unplug10: Internet
         Artist5: Artysta 5
@@ -30,7 +30,7 @@ pl:
         Jigsaw: Układanka
         MazeStep: Tryb Kroczenia po Labiryncie
         Wordsearch: WordSearch (Poszukiwanie słów)
-        Webapp: Webapp (aplikacje sieciowe)
+        Webapp: App Lab
         ArtistEC: Artysta/Postać
         TextMatch: Dopasowanie tekstu
         StudioEC: Lab Gier
@@ -95,8 +95,8 @@ pl:
         maze_2_17: Bloki jeśli-w przeciwnym razie sprawdzają warunek i wtedy wykonują
           pierwszą czynność ALBO drugą. Spróbuj doprowadzić mnie do słonecznika przy
           użyciu tego nowego bloku.
-        maze_2_18: Jeszcze jedno ćwiczenie z bloków jeśli-w przeciwnym razie. Czy
-          potrafisz użyć ich prawidłowo przy pierwszym podejściu?
+        maze_2_18: Jeszcze jedno ćwiczenie z blokiem "jeśli-w przeciwnym razie", czy
+          potrafisz je wykonać za pierwszym razem?
         maze_2_19: Czy potrafisz dodać 3 bloki, by pomóc mi przejść bardziej skomplikowany
           labirynt? Jeśli zrobisz to prawidłowo, to będę mógł przejść każdą krętą
           ścieżkę bez względu na jej długość.
@@ -334,21 +334,20 @@ pl:
           niego?
         studio_c2_5: Czy mógłbyś napisać program, który powoduje, że ośmiornica mówi
           "Hello!", po kliknięciu na niej?
-        studio_c2_6: Czy mógłbyś napisać program, który powoduje, że pingwin porusza
-          się za pomocą przycisków w górę / w dół / w lewo/w prawo, by uderzyć we
+        studio_c2_6: Czy mógłbyś napisać program, który powoduje, że pingwin Waddles
+          porusza się za pomocą klawiszy w górę/w dół /w lewo/w prawo, aby trafić
           wszystkie cele?
         studio_c2_7: Blok "powtarzaj w nieskończoność" umożliwia wykonywanie kodu
           bez przerwy. Czy mógłbyś dołączyć bloki powodujące, że ten dinozaur porusza
           się w górę i w dół w nieskończoność?
-        studio_c2_8: Czy mógłbyś spowodować, że Pingwin mówi "Och!" i gra dźwięk trafienia,
-          gdy wpadnie na dinozaura. Następnie przenieś go za pomocą strzałek, aby
-          się to stało?
-        studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin wpada
-          na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz
+        studio_c2_8: Czy mógłbyś spowodować, że Pingwin Waddles mówi "Och!" i gra
+          dźwięk trafienia, gdy wpadnie na dinozaura. Następnie przenoś go za pomocą
+          strzałek, aby się to stało?
+        studio_c2_9: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin Waddles
+          wpada na ośmiornicę, a następnie przenoś go za pomocą strzałek, aż zdobędziesz
           punkt?
-        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina,
-          a następnie poruszać nim za pomocą przycisków ze strzałkami, aż zdobędziesz
-          punkt?
+        studio_c2_10: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina Waddles,
+          a następnie przenoś go za pomocą strzałek, aż zdobędziesz punkt?
         studio_c2_11: Utwórz własną opowieść. Kiedy skończysz, kliknij przycisk "Zakończ",
           aby umożliwić znajomym wypróbowanie Twojej opowieści na swoich telefonach.
         studio_c3_story_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
@@ -376,8 +375,8 @@ pl:
           "hit", gdy wpadnie na dinozaura, następnie przenieś go za pomocą strzałek,
           aby się to stało?
         studio_c3_game_5: Czy mógłbyś dodać blok, aby liczyć punkty, kiedy pingwin
-          wpada na ośmiornicę, a następnie przenosić go za pomocą strzałek, aż zdobędziesz
-          punkt?
+          Waddles wpada na ośmiornicę, a następnie przenoś go za pomocą strzałek,
+          aż zdobędziesz punkt?
         studio_c3_game_6: Czy mógłbyś dodać bloki do zmiany tła i prędkości pingwina,
           a następnie poruszać nim za pomocą klawiszy ze strzałkami, aż osiągniesz
           wynik?
@@ -481,7 +480,7 @@ pl:
           tabletach lub komputerach!
         studio_full_sandbox: Utwórz własną grę. Kiedy skończysz, kliknij przycisk
           Zakończ, aby umożliwić znajomym wypróbowanie gry na swoich telefonach.
-        studio_k1_1: Czy mógłbyś spowodować, aby ten pies powiedział "hello world"?
+        studio_k1_1: Czy mógłbyś spowodować, by ten pies powiedział "hello world"?
         studio_k1_2: Czy mógłbyś spowodować, aby ten pies coś powiedzieć, a następnie,
           by kot coś powiedział po nim?
         studio_k1_3: Czy mógłbyś napisać program, który spowoduje, że ten pies przesunie
@@ -572,7 +571,7 @@ pl:
         C2_graph_paper: Programowanie na papierze milimetrowym
         C2_conditionals_with_cards: Warunkowe
         C2_binary_bracelets: Binarne bransoletki
-        C2_relay_programming: Programowanie przekaźnika
+        C2_relay_programming: Sztafeta programowania
         C2_paper_airplanes: Samoloty z papieru
         C2_digital_footprint: Twój cyfrowy ślad
         C2_digital_footprint_v2: Twój cyfrowy ślad
@@ -613,7 +612,6 @@ pl:
         C4_unplugged_forloops: Pętle dla (for)
         C4_unplugged_parameters: Pisanie piosenek z parametrami
         C4_unplugged_binary: Binarny
-        CSF_a_b_artist_loops: Loops in Artist
         CSF_artist_angles: Kąty w Artyście
         CSF_collector_k1_blocks: 'Podstawy Informatyki: Kolektor'
         CSF_collector_repeat_loops: Kolektor pętli powtórz
@@ -654,53 +652,16 @@ pl:
         csd_external_netflix_data: Jak NetFlix tworzy TV Show i Movie Suggestions?
         csd_external_waze_data: Dlaczego tylu użytkowników ma obsesję na punkcie Waze?
         csd_gamelab_animation_tab: Karta Animacji
-        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
-        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
-        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
-        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
-        csd_gamelab_drawloop: Introduction to the Draw Loop
-        csd_gamelab_sprites_1: Introduction to Sprites
-        csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_variables_1: Introduction to Variables - Part 1
-        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Prędkość
         csd_weblab_intro_1: Wprowadzenie do Web Lab - Część 1
         csd_weblab_intro_2: Wprowadzenie do Web Lab - Część 2
         csd_weblab_css_1: Wprowadzenie do CSS - Część 1
         csd_weblab_css_2: Wprowadzenie do CSS - Część 2
         csd_weblab_intro_3: Wprowadzenie do Web Lab - Część 3
-        csp_applab_objects: Introduction to Objects
-        csp_applab_databases_1: Introduction to Databases - Part 1
-        csp_applab_databases_2: Introduction to Databases - Part 2
-        csp_applab_processing_lists: Processing Lists with Loops
-        csp_applab_lists_1: Introduction to Lists - Part 1
-        csp_applab_lists_2: Introduction to Lists - Part 2
-        csp_applab_lists_3: Introduction to Lists - Part 3
-        csp_applab_lists_4: Introduction to Lists - Part 4
-        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
-        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
-        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
-        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
-        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
-        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
-        csp_applab_design: Introduction to Design Mode
-        csp_applab_variables_1: Introduction to Variables - Part 1
-        csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Wprowadzenie do Funkcji
         csp_applab_functions_parameters: Funkcje z parametrami
         csp_applab_loops: Pętle
-        csp_applab_turtle: Turtle Programming
-        csp_concept_bigdata_medicine: Data & Medicine
-        csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
-        csp_concept_encryption: 'The Internet: Encryption & Public Keys'
-        csp_concept_http_html: 'The Internet: HTTP & HTML'
-        csp_concept_what_is_internet: What is the Internet?
-        csp_concept_internet_ip_dns: 'The Internet: IP Addresses & DNS'
-        csp_concept_internet_packets_reliability: 'The Internet: Packets, Routing
-          & Reliability'
-        csp_concept_internet_wires_cables_wifi: 'The Internet: Wires, Cables & Wifi'
         csp_concept_rgb: Trochę o pikselach
-        csp_cs_is_changing_everything: Computer Science is Changing Everything
         csp_pixelation_color_1: Pokoloruj pikselowy gadżet - część 1
         csp_pixelation_color_2: Pokoloruj pikselowy gadżet - część 2
         csp_pixelation_color_3: Pokoloruj pikselowy gadżet - część 3
@@ -708,9 +669,6 @@ pl:
         csp_U1L14_tipstricks: Jednostka 1 lekcja 14 Porady & Sztuczki Nauczycieli
         csp_textcompression: Gadżet do kompresji tekstu
         csp_textcompression_new: Gadżet do kompresji tekstu
-        csp_internetsimulator_1: Internet Simulator - Part 1
-        csp_internetsimulator_2: Internet Simulator - Part 2
-        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: Informatyka w algebrze - wprowadzenie
         alg_2_eval_block: Informatyka w algebrze - bloki ewaluacji
         alg_3_pemdas: Informatyka w algebrze -  kolejność operacji
@@ -792,20 +750,9 @@ pl:
         applab_intro_share: App Lab - Udostępnij Swoją Apkę
         csd_applab_arrays: Wprowadzenie do tablic
         CSF_skinOverview_Harvester: Kombajn
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Pętle z BB-8
         CSF_harvester_skinOverview_K-1: Kombajn
-        CSF_harvester_loops_K1: Loops in Harvester
-        CSF_scrat_loops_K1: Loops in Ice Age
-        CSF_scrat_loops_CF: Loops in Ice Age
-        CSF_if_allskins: The If Block
-        CSF_ifelse_allskins: Using If/Else Blocks
-        CSF_ifelseifelse_allskins: Using If/ElseIf/Else Blocks
         CSF_loops_AB: Pętle
-        csd_gamelab_booleans: Boolean Expressions
-        csd_gamelab_conditional_statements: Conditional Statements
-        csd_gamelab_if_else: If/Else Statements
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
