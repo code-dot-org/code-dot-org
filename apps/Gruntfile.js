@@ -522,7 +522,6 @@ describe('entry tests', () => {
     'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
     'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
-    'pd/application/teacher_application/new_1920_preview': './src/sites/studio/pages/pd/application/teacher_application/new_1920_preview.js',
     'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/teachercon1819_registration/new': './src/sites/studio/pages/pd/teachercon1819_registration/new.js',
     'pd/fit_weekend1819_registration/new': './src/sites/studio/pages/pd/fit_weekend1819_registration/new.js',

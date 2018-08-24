@@ -739,7 +739,7 @@ FactoryGirl.define do
     end
 
     trait :csp do
-      program Pd::Application::Teacher1819Application::PROGRAMS[:csp]
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
       csp_which_grades ['11', '12']
       csp_course_hours_per_week 'More than 5 course hours per week'
       csp_course_hours_per_year 'At least 100 course hours'
@@ -749,7 +749,7 @@ FactoryGirl.define do
     end
 
     trait :csd do
-      program Pd::Application::Teacher1819Application::PROGRAMS[:csd]
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
       csd_which_grades ['6', '7']
       csd_course_hours_per_week '5 or more course hours per week'
       csd_course_hours_per_year 'At least 100 course hours'
@@ -780,6 +780,25 @@ FactoryGirl.define do
     course 'csp'
     transient do
       form_data_hash {build :pd_teacher1819_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+
+    trait :locked do
+      after(:create) do |application|
+        application.update!(status: 'accepted')
+        application.lock!
+      end
+    end
+  end
+
+  factory :pd_teacher1920_application_hash_common, parent: :pd_teacher1819_application_hash_common
+  factory :pd_teacher1920_application_hash, parent: :pd_teacher1819_application_hash
+
+  factory :pd_teacher1920_application, class: 'Pd::Application::Teacher1920Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher1920_application_hash_common, course.to_sym}
     end
     form_data {form_data_hash.to_json}
 
