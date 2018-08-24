@@ -29,7 +29,14 @@ class PersonalProjectsNameCell extends Component {
     return (
       <div>
         {!isEditing &&
-          <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>
+          <a
+            style={tableLayoutStyles.link}
+            href={url}
+            target="_blank"
+            className={`${projectName}`}
+          >
+            {projectName}
+          </a>
         }
         {isEditing &&
           <div>
