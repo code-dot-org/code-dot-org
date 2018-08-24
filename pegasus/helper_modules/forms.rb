@@ -51,6 +51,7 @@ module Forms
         ).
         where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
         where(review_approved ? {review: 'approved'} : {}).
+        exclude(json('processed_data.location_state_code_s') => nil).
         group_and_count(
           state_column.as(:state_code)
         ).
