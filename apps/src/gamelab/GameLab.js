@@ -239,9 +239,6 @@ GameLab.prototype.init = function (config) {
 
   config.usesAssets = true;
 
-  // TODO: remove this
-  // gameLabSprite.injectLevel(this.level);
-
   this.studioApp_.labUserId = config.labUserId;
   this.studioApp_.storage = initFirebaseStorage({
     channelId: config.channel,
@@ -253,7 +250,6 @@ GameLab.prototype.init = function (config) {
 
   this.gameLabP5.init({
     gameLab: this,
-    pauseAnimationsByDefault: this.level.pauseAnimationsByDefault,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
