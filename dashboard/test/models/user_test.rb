@@ -84,15 +84,30 @@ class UserTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
-  test 'normalize_email' do
+  test 'normalize_email for non-migrated user' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email
   end
 
-  test 'hash_email' do
+  test 'normalize_email for migrated user' do
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'OLD@EXAMPLE.COM'
+    teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
+    assert_equal 'new@example.com', teacher.primary_contact_info.email
+    assert_equal 'new@example.com', teacher.read_attribute(:email)
+  end
+
+  test 'hash_email for non-migrated user' do
     @teacher.update!(email: 'hash_email@example.com')
     assert_equal User.hash_email('hash_email@example.com'),
       @teacher.hashed_email
+  end
+
+  test 'hash_email for migrated user' do
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'OLD@EXAMPLE.COM'
+    teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
+    hashed_email = User.hash_email('new@example.com')
+    assert_equal hashed_email, teacher.primary_contact_info.hashed_email
+    assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
   test "log in with password with pepper" do
