@@ -852,6 +852,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_regional_partner_contacts
+  #
+
+  test "clears form_data from pd_regional_partner_contacts" do
+    teacher = create :teacher
+    contact = create :pd_regional_partner_contact, user: teacher
+    refute_equal '{}', contact.form_data
+
+    purge_user contact.user
+
+    contact.reload
+    assert_equal '{}', contact.form_data
+  end
+
+  #
   # Table: dashboard.pd_regional_partner_program_registrations
   #
 
