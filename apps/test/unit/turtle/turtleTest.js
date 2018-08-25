@@ -262,7 +262,7 @@ describe('Artist', () => {
   describe('autoArtist', () => {
     const studioApp = studioAppSingleton();
 
-    it('executes upon reset', () => {
+    it('executes upon reset', done => {
       const artist = new Artist();
       const execute = sinon.stub(artist, 'execute');
       artist.injectStudioApp(studioApp);
@@ -271,7 +271,7 @@ describe('Artist', () => {
         level: {
           autoRun: true,
         },
-      });
+      }).then(done).catch(() => done());
 
       artist.resetButtonClick();
 
@@ -279,7 +279,7 @@ describe('Artist', () => {
       execute.restore();
     });
 
-    it('executes upon code changes', () => {
+    it('executes upon code changes', done => {
       const artist = new Artist();
       const execute = sinon.stub(Artist.prototype, 'execute');
       const container = document.createElement('div');
@@ -292,7 +292,7 @@ describe('Artist', () => {
           autoRun: true,
         },
         containerId: 'artistContainer',
-      });
+      }).then(done).catch(() => done());
       studioApp.runChangeHandlers();
 
       expect(execute).to.have.been.called;
