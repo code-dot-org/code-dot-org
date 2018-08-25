@@ -33,7 +33,7 @@ class PersonalProjectsNameCell extends Component {
             style={tableLayoutStyles.link}
             href={url}
             target="_blank"
-            className={`${projectName}`}
+            className={projectName}
           >
             {projectName}
           </a>

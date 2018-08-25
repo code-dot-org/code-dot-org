@@ -116,7 +116,7 @@ $(document).ready(() => {
             userId={projectsData.userId}
           />
         </Provider>,
-        document.getElementById('react-my-projects')
+        document.getElementById('react-personal-projects')
       );
     });
   }

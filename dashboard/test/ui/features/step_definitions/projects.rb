@@ -101,6 +101,6 @@ Then /^the project table contains ([\d]+) (?:row|rows)$/ do |expected_num|
   expect(actual_num).to eq(expected_num.to_i)
 end
 
-Then /^there is a project in the table named "([^"]+)"$/ do |expected_name|
+Then /^there is a project in the table named "([^"]*)"$/ do |expected_name|
   element_exists?(expected_name)
 end
