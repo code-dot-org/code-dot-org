@@ -11,7 +11,7 @@ module Pd::Application
       )
     end
 
-    def local_summer_accepted(teacher_application)
+    def accepted(teacher_application)
       @application = teacher_application
       @workshop = Pd::Workshop.find(teacher_application.pd_workshop_id)
 
