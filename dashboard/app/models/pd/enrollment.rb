@@ -17,7 +17,6 @@
 #  completed_survey_id :integer
 #  school_info_id      :integer
 #  deleted_at          :datetime
-#  properties          :text(65535)
 #
 # Indexes
 #
