@@ -182,10 +182,9 @@ window.SignupManager = function (options) {
     updateAutocompleteSchoolFields(schoolData);
   }
 
-  // event has a label, school, value.  school has nces_id which is same as value.
   function onSchoolChange(_, event) {
     schoolData.nces = event ? event.value : '';
-    schoolData.label = event ? event.label : '';
+    schoolData.schoolLabel = event ? event.label : '';
     updateAutocompleteSchoolFields(schoolData);
   }
 
@@ -236,7 +235,7 @@ window.SignupManager = function (options) {
         {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType) &&
           <SchoolAutocompleteDropdownWithLabel
             setField={onSchoolChange}
-            schoolDropdownOption={{value: data.nces, label: data.label}}
+            schoolDropdownOption={{value: data.nces, label: data.schoolLabel}}
             showErrorMsg={false}
             singleLineLayout
             showRequiredIndicator={false}
