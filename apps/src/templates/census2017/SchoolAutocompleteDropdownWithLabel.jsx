@@ -63,7 +63,8 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
     const showError = this.props.showErrorMsg && !this.props.value && !this.props.schoolDropdownOption;
-    const schoolNotFound = !!((this.props.value === "-1") || (this.props.schoolDropdownOption && this.props.schoolDropdownOption.value === "-1"));    const errorDiv = (
+    const schoolNotFound = !!((this.props.value === "-1") || (this.props.schoolDropdownOption && this.props.schoolDropdownOption.value === "-1"));
+    const errorDiv = (
       <div style={styles.errors}>
         {i18n.censusRequiredSelect()}
       </div>
