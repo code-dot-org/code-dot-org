@@ -11,7 +11,8 @@ export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     // Value is the NCES id of the school
-    value: PropTypes.string,
+    value: PropTypes.object,
+    dropdownValue: PropTypes.object,
     fieldName: PropTypes.string,
     schoolDropdownOption: PropTypes.object,
     schoolFilter: PropTypes.func,
@@ -67,11 +68,11 @@ export default class SchoolAutocompleteDropdown extends Component {
 
   getOptions = (q) => {
     // Existing value? Construct the matching option for display.
-    if (q.length === 0 && this.props.value) {
-      if (this.props.value === '-1') {
+    if (q.length === 0 && this.props.dropdownValue) {
+      if (this.props.dropdownValue.value === '-1') {
         return Promise.resolve({options: [this.constructSchoolNotFoundOption()]});
       } else {
-        const getUrl = `/dashboardapi/v1/schools/${this.props.value}`;
+        const getUrl = `/dashboardapi/v1/schools/${this.props.dropdownValue.value}`;
         return fetch(getUrl)
           .then(response => response.ok ? response.json() : [])
           .then(json => ({options: [this.constructSchoolOption(json)]}));
