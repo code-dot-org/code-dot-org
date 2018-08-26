@@ -10,9 +10,6 @@ import experiments from '@cdo/apps/util/experiments';
 export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
-    // Value is the NCES id of the school
-    value: PropTypes.object,
-    dropdownValue: PropTypes.object,
     fieldName: PropTypes.string,
     schoolDropdownOption: PropTypes.object,
     schoolFilter: PropTypes.func,
@@ -68,11 +65,11 @@ export default class SchoolAutocompleteDropdown extends Component {
 
   getOptions = (q) => {
     // Existing value? Construct the matching option for display.
-    if (q.length === 0 && this.props.dropdownValue) {
-      if (this.props.dropdownValue.value === '-1') {
+    if (q.length === 0 && this.props.schoolDropdownOption) {
+      if (this.props.schoolDropdownOption.value === '-1') {
         return Promise.resolve({options: [this.constructSchoolNotFoundOption()]});
       } else {
-        const getUrl = `/dashboardapi/v1/schools/${this.props.dropdownValue.value}`;
+        const getUrl = `/dashboardapi/v1/schools/${this.props.schoolDropdownOption.value}`;
         return fetch(getUrl)
           .then(response => response.ok ? response.json() : [])
           .then(json => ({options: [this.constructSchoolOption(json)]}));
@@ -106,7 +103,7 @@ export default class SchoolAutocompleteDropdown extends Component {
         loadOptions={this.getOptions}
         cache={false}
         filterOption={() => true}
-        value={this.props.schoolDropdownOption ? this.props.schoolDropdownOption : this.props.value}
+        value={this.props.schoolDropdownOption}
         onChange={this.props.onChange}
         placeholder={i18n.searchForSchool()}
       />
