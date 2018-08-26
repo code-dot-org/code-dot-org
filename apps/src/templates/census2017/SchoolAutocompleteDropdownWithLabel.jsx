@@ -25,8 +25,6 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
   static propTypes = {
     setField: PropTypes.func,
     showErrorMsg: PropTypes.bool,
-    // old: Value is the NCES id of the school
-    dropdownValue: PropTypes.object,
     fieldName: PropTypes.string,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
@@ -62,8 +60,8 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     const {showRequiredIndicator, singleLineLayout} = this.props;
     const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
-    const showError = this.props.showErrorMsg && !this.props.dropdownValue.value && !this.props.schoolDropdownOption;
-    const schoolNotFound = !!((this.props.dropdownValue.value === "-1") || (this.props.schoolDropdownOption && this.props.schoolDropdownOption.value === "-1"));
+    const showError = this.props.showErrorMsg && !this.props.schoolDropdownOption;
+    const schoolNotFound = !!(this.props.schoolDropdownOption && this.props.schoolDropdownOption.value === "-1");
     const errorDiv = (
       <div style={styles.errors}>
         {i18n.censusRequiredSelect()}
@@ -82,10 +80,9 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
           </div>
           <SchoolAutocompleteDropdown
             ref={this.bindDropdown}
-            value={this.props.dropdownValue.value !== '' ? this.props.dropdownValue : null}
             fieldName={this.props.fieldName}
             onChange={this.sendToParent}
-            schoolDropdownOption={this.props.schoolDropdownOption}
+            schoolDropdownOption={this.props.schoolDropdownOption.value !== '' ? this.props.schoolDropdownOption : null}
             schoolFilter={this.props.schoolFilter}
           />
           <label>

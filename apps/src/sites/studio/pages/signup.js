@@ -236,7 +236,7 @@ window.SignupManager = function (options) {
         {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType) &&
           <SchoolAutocompleteDropdownWithLabel
             setField={onSchoolChange}
-            dropdownValue={{value: data.nces, label: data.label}}
+            schoolDropdownOption={{value: data.nces, label: data.label}}
             showErrorMsg={false}
             singleLineLayout
             showRequiredIndicator={false}
