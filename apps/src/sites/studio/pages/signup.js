@@ -61,7 +61,7 @@ window.SignupManager = function (options) {
     schoolState: '',
     schoolZip: '',
     schoolType: '',
-    showErrorMsg: false
+    showErrorMsg: false,
   };
 
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
