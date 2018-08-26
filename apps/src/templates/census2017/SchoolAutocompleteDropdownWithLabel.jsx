@@ -28,6 +28,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     fieldName: PropTypes.string,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
+    initialValue: PropTypes.string,
     schoolDropdownOption: PropTypes.object,
     schoolFilter: PropTypes.func,
   };
@@ -82,6 +83,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
             ref={this.bindDropdown}
             fieldName={this.props.fieldName}
             onChange={this.sendToParent}
+            initialValue={this.props.initialValue}
             schoolDropdownOption={this.props.schoolDropdownOption.value !== '' ? this.props.schoolDropdownOption : null}
             schoolFilter={this.props.schoolFilter}
           />
