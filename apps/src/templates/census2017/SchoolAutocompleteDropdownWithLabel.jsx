@@ -25,10 +25,11 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
   static propTypes = {
     setField: PropTypes.func,
     showErrorMsg: PropTypes.bool,
+    // Value is the NCES id of the school
+    value: PropTypes.string,
     fieldName: PropTypes.string,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
-    initialValue: PropTypes.string,
     schoolDropdownOption: PropTypes.object,
     schoolFilter: PropTypes.func,
   };
@@ -81,10 +82,10 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
           </div>
           <SchoolAutocompleteDropdown
             ref={this.bindDropdown}
+            value={this.props.value}
             fieldName={this.props.fieldName}
             onChange={this.sendToParent}
-            initialValue={this.props.initialValue}
-            schoolDropdownOption={this.props.schoolDropdownOption.value !== '' ? this.props.schoolDropdownOption : null}
+            schoolDropdownOption={this.props.schoolDropdownOption ? this.props.schoolDropdownOption : null}
             schoolFilter={this.props.schoolFilter}
           />
           <label>

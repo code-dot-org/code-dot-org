@@ -10,14 +10,16 @@ import experiments from '@cdo/apps/util/experiments';
 export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
+    // Value is the NCES id of the school
+    value: PropTypes.string,
     fieldName: PropTypes.string,
-    initialValue: PropTypes.string,
     schoolDropdownOption: PropTypes.object,
     schoolFilter: PropTypes.func,
   };
 
   state = {
-    initialValueLoaded: false
+    knownValue: null,
+    knownLabel: null
   };
 
   static defaultProps = {
@@ -68,21 +70,12 @@ export default class SchoolAutocompleteDropdown extends Component {
   }, 200);
 
   getOptions = (q) => {
-    let value;
-    if (this.props.initialValue && !this.state.initialValueLoaded) {
-      value = this.props.initialValue;
-    } else if (this.props.schoolDropdownOption && this.props.schoolDropdownOption.value !== '') {
-      value = this.props.schoolDropdownOption.value;
-    } else {
-      value = null;
-    }
-
     // Existing value? Construct the matching option for display.
-    if (q.length === 0 && value) {
-      if (value === '-1') {
+    if (q.length === 0 && this.props.value) {
+      if (this.props.value === '-1') {
         return Promise.resolve({options: [this.constructSchoolNotFoundOption()]});
       } else {
-        const getUrl = `/dashboardapi/v1/schools/${value}`;
+        const getUrl = `/dashboardapi/v1/schools/${this.props.value}`;
         return fetch(getUrl)
           .then(response => response.ok ? response.json() : [])
           .then(json => ({options: [this.constructSchoolOption(json)]}));
@@ -108,26 +101,28 @@ export default class SchoolAutocompleteDropdown extends Component {
   };
 
   onChange = (value) => {
-    this.setState({initialValueLoaded: true});
+    if (value) {
+      // Cache the label for this value in case we need it for the next render.
+      this.setState({knownValue: value.value, knownLabel: value.label});
+    }
     this.props.onChange(value);
   };
 
   render() {
-    // If we have an initial value, and we haven't manually changed away from it
-    // yet, then use that value.  It's passed into the VirtualizedSelect as a string,
-    // and the whole value will be retrieved asynchronously.
-    // In lieu of that, if we have a proper schoolDropdownOption (which is an object
-    // containing a value and a label to be displayed in the dropdown) then pass
-    // it into the VirtualizedSelect as an object.
-    // This different types of parameters are goofy but appear to be quirks of
-    // react-select 1.x.
+    // value will end up either an object or a string, depending whether we have
+    // a label or not.  It appears to be the quirky behavior of react-select 1.x.
     let value;
-    if (this.props.initialValue && !this.state.initialValueLoaded) {
-      value = this.props.initialValue;
-    } else if (this.props.schoolDropdownOption && this.props.schoolDropdownOption.value !== '') {
+    if (this.props.schoolDropdownOption &&
+        this.props.schoolDropdownOption.value !== '') {
+      // Use the provided value & label object.
       value = this.props.schoolDropdownOption;
+    } else if (this.props.value === this.state.knownValue) {
+      // Use the cached label for this value.
+      value = {value: this.props.value, label: this.state.knownLabel};
     } else {
-      value = null;
+      // Use this value (typically an initial value).  The label will be
+      // asychronously retrieved in this.getOptions().
+      value = this.props.value;
     }
 
     return (
