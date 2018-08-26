@@ -62,6 +62,7 @@ window.SignupManager = function (options) {
     schoolZip: '',
     schoolType: '',
     showErrorMsg: false,
+    schoolLabel: ''
   };
 
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
@@ -181,8 +182,10 @@ window.SignupManager = function (options) {
     updateAutocompleteSchoolFields(schoolData);
   }
 
+  // event has a label, school, value.  school has nces_id which is same as value.
   function onSchoolChange(_, event) {
     schoolData.nces = event ? event.value : '';
+    schoolData.label = event ? event.label : '';
     updateAutocompleteSchoolFields(schoolData);
   }
 
@@ -233,7 +236,7 @@ window.SignupManager = function (options) {
         {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(data.schoolType) &&
           <SchoolAutocompleteDropdownWithLabel
             setField={onSchoolChange}
-            value={data.nces}
+            dropdownValue={{value: data.nces, label: data.label}}
             showErrorMsg={false}
             singleLineLayout
             showRequiredIndicator={false}
