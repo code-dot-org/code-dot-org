@@ -112,8 +112,7 @@ export default class SchoolAutocompleteDropdown extends Component {
     // value will end up either an object or a string, depending whether we have
     // a label or not.  It appears to be the quirky behavior of react-select 1.x.
     let value;
-    if (this.props.schoolDropdownOption &&
-        this.props.schoolDropdownOption.value !== '') {
+    if (this.props.schoolDropdownOption) {
       // Use the provided value & label object.
       value = this.props.schoolDropdownOption;
     } else if (this.props.value === this.state.knownValue) {
