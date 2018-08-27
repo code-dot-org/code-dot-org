@@ -448,13 +448,13 @@ it:
       2-3 Maze 2_instruction: Questo maialino mi fa arricciare le penne. Aiutami a
         prenderlo!
       2-3 Maze 3_instruction: Fammi fare il percorso per arrivare a quello sciocco
-        maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
+        maialino. Evita la dinamite (TNT) o le mie piume salteranno in aria!
       2-3 Maze 4_instruction: Guidami verso quel cattivone verde! Fai attenzione alla
         dinamite (TNT)
       2-3 Maze 5_instruction: Guidami verso quel cattivone verde! Fai attenzione alla
         dinamite (TNT)
       2-3 Maze 6_instruction: Mantieni la calma e aiutami a trovare quel cattivone
-        di un maiale. Altrimenti potrei arrabbiarmi!
+        di un maialino. Altrimenti potrei arrabbiarmi!
       2-3 Maze 7_instruction: Guidami verso quel cattivone verde! Fai attenzione alla
         dinamite (TNT)
       2-3 Maze 8_instruction: Fammi arrivare al maialino!
@@ -477,11 +477,11 @@ it:
       2-3 Maze sq10_instruction: Fammi arrivare al maiale! Quale blocco viene ripetuto?
       2-3 Maze sq10v2_instruction: Fammi arrivare al maiale! Quale blocco viene ripetuto?
       2-3 Maze sq2_instruction: Fammi fare il percorso per arrivare a quello sciocco
-        maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
+        maialino. Evita la dinamite (TNT) o le mie piume salteranno in aria!
       2-3 Maze sq3_instruction: Guidami verso quel cattivone verde! Fai attenzione
         alla dinamite (TNT)
       2-3 Maze sq4_instruction: Mantieni la calma e aiutami a trovare quel cattivone
-        di un maiale. Altrimenti potrei arrabbiarmi!
+        di un maialino. Altrimenti potrei arrabbiarmi!
       2-3 Maze sq5_instruction: Portami dal maiale! Quante volte devi ripetere un
         blocco?
       2-3 Maze sq6_instruction: 'Puoi sostituire la precedente risposta con solo due
@@ -534,7 +534,7 @@ it:
         "mentre" e senza usare il blocco "ripeti"?
       20hr_maze_stage2_10_instruction: Ok, prova ad usare il nuovo blocco "ripeti
         fino a che". Esso mi farà "ripetere" le azioni "fino a che"  raggiungo quel
-        fastidioso maiale.
+        fastidioso maialino.
       20hr_maze_stage2_11_instruction: 'Ok, un''ultima volta per fare pratica: riesci
         a risolvere questo esercizio aggiungendo solo 4 blocchi?'
       20hr_maze_stage2_13_instruction: Ok, questo esercizio è simile, ma leggermente
@@ -561,16 +561,16 @@ it:
         uscire da un labirinto più complesso? Se lo fai correttamente, riuscirò a
         camminare lungo un percorso tortuoso di qualsiasi lunghezza.
       20hr_maze_stage2_3_instruction: Fammi fare il percorso per arrivare a quello
-        sciocco maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
+        sciocco maialino. Evita la dinamite (TNT) o le mie piume salteranno in aria!
       20hr_maze_stage2_4_instruction: Guidami verso quel cattivone verde! Fai attenzione
         alla dinamite (TNT)
       20hr_maze_stage2_5_instruction: Mantieni la calma e aiutami a trovare quel cattivone
-        di un maiale. Altrimenti potrei arrabbiarmi!
-      20hr_maze_stage2_6_instruction: C'è un modo per arrivare a quello sciocco maiale
+        di un maialino. Altrimenti potrei arrabbiarmi!
+      20hr_maze_stage2_6_instruction: C'è un modo per arrivare a quello sciocco maialino
         aggiungendo solo due blocchi. Riesci a trovarlo?
       20hr_maze_stage2_7_instruction: Prova a farmi arrivare all'intruso verde utilizzando
         solo tre blocchi.
-      20hr_maze_stage2_8_instruction: Aiutami a catturare questo maialaccio utilizzando
+      20hr_maze_stage2_8_instruction: Aiutami a catturare il maialino cattivo utilizzando
         il minor numero possibile di blocchi. Prova a utilizzare più di un blocco
         "ripeti ... volte".
       20hr_maze_stage2_9_instruction: 'Quando un blocco è grigio, significa che non
@@ -1908,6 +1908,45 @@ it:
         - Cosa succede se usi due angoli diversi nello schema a scalinata?
         - Cosa succede se rendi lo schema a rombo più lungo o più corto?
         - Cosa sembra se disegni due fiocchi di neve uno sopra l'altro?
+      Dance Party 2_instruction: Cambia il comportamento nel blocco `___begins___`
+        (*inizia*) per fare in modo che all'inizio l'alieno gironzoli qua e là.
+      Dance Party 2_simple_instruction: Cambia il comportamento nel blocco `___begins___`
+        (*inizia*) per fare in modo che all'inizio l'alieno gironzoli qua e là.
+      Dance Party 3 - Validated_instruction: Crea un nuovo personaggio chiamato `alien2`.  Fagli
+        fare un passo di danza diverso ogni volta che ci clicchi sopra.
+      Dance Party 3_instruction: Crea un nuovo personaggio chiamato `alien2`.  Fagli
+        fare un passo di danza diverso ogni volta che ci clicchi sopra.
+      Dance Party 3_simple_instruction: Crea un nuovo personaggio chiamato `alien2`.  Fagli
+        fare un passo di danza diverso ogni volta che ci clicchi sopra.
+      Dance Party 4 Validated_instruction: Crea un terzo personaggio chiamato `alien3`
+        e posiziona tutti gli alieni lungo una linea retta.
+      Dance Party 4_instruction: Crea un terzo personaggio chiamato `alien3` e posiziona
+        tutti gli alieni lungo una linea retta.
+      Dance Party 4_simple_instruction: Crea un terzo personaggio chiamato `alien3`
+        e posiziona tutti gli alieni lungo una linea retta.
+      Dance Party 5 - Validated_instruction: Aggiungi del codice per cambiare il colore
+        di ogni alieno quando si clicca su di esso.
+      Dance Party 5_instruction: Aggiungi del codice per cambiare il colore di ogni
+        alieno quando si clicca su di esso.
+      Dance Party 5_simple_instruction: Aggiungi del codice per cambiare il colore
+        di ogni alieno quando si clicca su di esso.
+      Dance Party 6 - Validated_instruction: Usa il blocco `stops everything`(*ferma
+        tutto*) per fermare ogni alieno quando viene cliccato.
+      Dance Party 6_instruction: Usa il blocco `stops everything`(*ferma tutto*) per
+        fermare ogni alieno quando viene cliccato.
+      Dance Party 6_simple_instruction: Usa il blocco `stops everything`(*ferma tutto*)
+        per fermare ogni alieno quando viene cliccato.
+      Dance Party 7 - Validated_instruction: Aggiungi un nuovo personaggio chiamato
+        'myBell' (*la mia campana*) che fa fare a tutti gli alieni la sua stessa danza
+        quando viene cliccata.
+      Dance Party 7_instruction: Aggiungi un nuovo personaggio chiamato 'myBell' (*la
+        mia campana*) che fa fare a tutti gli alieni la sua stessa danza quando viene
+        cliccata.
+      Dance Party 7_simple_instruction: Aggiungi un nuovo personaggio chiamato 'myBell'
+        (*la mia campana*) che fa fare a tutti gli alieni la sua stessa danza quando
+        viene cliccata.
+      Dance Party Freeplay_instruction: Ora crea la tua discoteca aliena!
+      Dance Party Freeplay_simple_instruction: Ora crea la tua discoteca aliena!
       Eval Contracts 4 A_instruction: 'La funzione "ridimensiona" restituisce l''immagine
         in ingresso ingrandita o rimpicciolita di un certo fattore. Prova a ridimensionare
         questo cerchio di un fattore 10: l''immagine che ne risulta quanto è diversa
@@ -1919,17 +1958,29 @@ it:
         gioco "Indovina che numero ho pensato!"
       Find the Wizard_2018_instruction: Costruisci quello che vuoi. Ecco un esempio
         del gioco "Indovina che numero ho pensato!"
+      Fish Tank 3-validated Ram_instruction: Modifica il comportamento del pesce in
+        modo che nuoti da una parta all'altra dell'acquario (cerca il blocco giusto
+        tra i tanti presenti nella cassetta degli attrezzi).
       Fish Tank 3-validated_instruction: Modifica il comportamento del pesce in modo
         che nuoti da una parta all'altra dell'acquario (cerca il blocco giusto tra
         i tanti presenti nella cassetta degli attrezzi).
+      Fish Tank 3-validated_simple_instruction: Modifica il comportamento del pesce
+        in modo che nuoti da una parta all'altra dell'acquario (cerca il blocco giusto
+        tra i tanti presenti nella cassetta degli attrezzi).
       Fish Tank 4-validated_instruction: Usa il blocco `imposta colore sfondo` per
         impostrare lo sfondo blu.
+      Fish Tank 4-validated_simple_instruction: Usa il blocco `imposta colore sfondo`
+        per impostrare lo sfondo blu.
       Fish Tank 5-validated_instruction: Il nostro pesce si sente un po' solo. Aggiungi
         un altro personaggio nell'acquario.
       Fish Tank 6-validated_instruction: Aggiungi un comportamento al nuovo amico
         del pesce.
+      Fish Tank 6-validated_simple_instruction: Aggiungi un comportamento al nuovo
+        amico del pesce.
       Fish Tank 7-validated_instruction: Usa qualche blocco nuovo dalla cassetta degli
         attrezzi per rendere l'acquario speciale!
+      Fish Tank 7-validated_simple_instruction: Usa qualche blocco nuovo dalla cassetta
+        degli attrezzi per rendere l'acquario speciale!
       Food Fight!_instruction: |-
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
         Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
@@ -1988,6 +2039,10 @@ it:
       Inspirational Artwork_instruction: |-
         <a href="https://studio.code.org/c/" target="_blank">Clicca qui</a> (LINK DA AGGIORNARE) e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
+      InspirationalArtwork_instruction: Se questa immagine ti ispira, prova a realizzare
+        qualcosa di simile. In caso contrario, crea qualcosa di tuo.
+      InspirationalArtwork_2018_instruction: Se questa immagine ti ispira, prova a
+        realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       K-1 Artist 1 Assessment 1_instruction: Disegna una linea breve verso l'alto
         e una lunga verso destra!
       K-1 Artist Loops 1_instruction: Disegna questa linea spostando 4 volte l'artista
@@ -2109,7 +2164,7 @@ it:
       K-1 Maze 10_instruction: Gira intorno alla dinamite (TNT) per farmi prendere
         il maialino!
       K-1 Maze 11_instruction: |-
-        Fammi fare il percorso per arrivare a quello sciocco maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!<br><br>
+        Fammi fare il percorso per arrivare a quello sciocco maialino. Evita la dinamite (TNT) o le mie piume salteranno in aria!<br><br>
         <b>Suggerimento</b>: si trova a Sud rispetto a me.
       K-1 Maze 2_instruction: Spostami verso Est per farmi prendere il maialino!
       K-1 Maze 3_instruction: Spostami verso Sud per farmi prendere il maialino!
@@ -2201,15 +2256,15 @@ it:
       K2.0 sequence 9_instruction: Gira intorno alla dinamite (TNT) per farmi prendere
         il maialino!
       K2.0 sequence pre_instruction: Gioca con questi blocchi per vedere se riesci
-        a farmi arrivare al maiale!
-      KTest2_instruction: Fammi fare il percorso per arrivare a quello sciocco maiale.
+        a farmi arrivare al maialino!
+      KTest2_instruction: Fammi fare il percorso per arrivare a quello sciocco maialino.
         Evita la dinamite (TNT) o le mie piume salteranno in aria!
       Kiki_StarWars_Test_3_instruction: Testo
       Kiki_StarWars_Test_4_instruction: Testo
       Kiki_StarWars_Test_5_instruction: Testo
       Kiki_StarWars_Test_5_Example_instruction: Testo
-      MC Agent Freeplay_instruction: "**Tempo di giocare:** ora tocca a te! Programma
-        l'Agente per farti aiutare ad esplorare questo mondo."
+      MC Agent Freeplay_instruction: "**Tempo di giocare:**  è ora di andare ad esplorare
+        da solo!"
       MC HOC 2016 Level 10_instruction: Ora puoi creare il tuo Minecraft! Inserisci
         le creature nello scenario del gioco e programma le loro azioni. Buon divertimento!
       MC HOC 2016 Level 2-2_instruction: Il pollo è immobile. Per farlo muovere, metti
@@ -2261,35 +2316,21 @@ it:
       MC_HOC_2017_01_RETRY_instruction: Scrivi del codice per far arrivare l'Agente
         sulla pedana a pressione, poi premi "Esegui" e usa le frecce per far uscire
         il giocatore dalla casa e raccogliere la cassa.
-      MC_HOC_2017_02_instruction: L'Agente può muoversi sull'acqua! Usa un ciclo `ripeti
-        ... volte` per risolvere questo esercizio e aiuta {currentPlayerName} a raggiungere
-        il **secchio** [bucket_empty] oltre la porta.
+      MC_HOC_2017_02_instruction: Porta l'Agente sulla pedana a pressione.
       MC_HOC_2017_02_Cole_instruction: Fai arrivare l'Agente sulla pedana a pressione
         in modo che {currentPlayerName} possa raggiungere la mappa.
       MC_HOC_2017_02_Kiki_instruction: Porta l'Agent sulla pedana a pressione, poi
         porta il giocatore sulla casella arancione.
-      MC_HOC_2017_02_Will_instruction: L'Agente può muoversi sull'acqua! Usa un ciclo
-        `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
-        a raggiungere il **secchio** [bucket_empty] oltre la porta.
-      MC_HOC_2017_03_Cole_instruction: "{currentPlayerName} prosegue la sua avventura
-        e ha bisogno della **bussola** [compass] per prepararsi per il viaggio. Programma
-        l'Agente per far aprire il cancello."
-      MC_HOC_2017_03_Kiki_instruction: L'Agente può muoversi sull'acqua! Usa un ciclo
-        `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
-        a raggiungere il **secchio** [bucket_empty] oltre la porta.
+      MC_HOC_2017_02_Will_instruction: Porta l'Agente sulla pedana a pressione.
+      MC_HOC_2017_03_Cole_instruction: Programma l'Agente per far aprire il cancello.
+      MC_HOC_2017_03_Kiki_instruction: Porta l'Agente sulla pedana a pressione.
       MC_HOC_2017_04_instruction: Modifica il ciclo dell'ultimo rompicapo per aiutare
         l'Agent a creare un sentiero sulla parte più larga di questo fiume.
-      MC_HOC_2017_04POINT5_Cole_instruction: L'Agente può muoversi sull'acqua! Usa
-        un ciclo `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
-        a raggiungere il **secchio** [bucket_empty] oltre la porta.
+      MC_HOC_2017_04POINT5_Cole_instruction: Porta l'Agente sulla pedana a pressione.
       MC_HOC_2017_04POINT5_RYAN_instruction: Sei riuscito a passare! Ora aiuta {currentPlayerName}
         a superare sano e salvo il labirinto e a raccogliere l'**ascia** [diamond_axe]
-      MC_HOC_2017_04_Cole_instruction: L'Agente può muoversi sull'acqua! Usa un ciclo
-        `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
-        a raggiungere il **secchio** [bucket_empty] oltre la porta.
-      MC_HOC_2017_04_Kiki_instruction: L'Agente può muoversi sull'acqua! Usa un ciclo
-        `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
-        a raggiungere il **secchio** [bucket_empty] oltre la porta.
+      MC_HOC_2017_04_Cole_instruction: Porta l'Agente sulla pedana a pressione.
+      MC_HOC_2017_04_Kiki_instruction: Porta l'Agente sulla pedana a pressione.
       MC_HOC_2017_05_instruction: Usa una funzione per aiutare l'Agent a raggiungere
         la pedana a pressione.
       MC_HOC_2017_05_Cole_instruction: Oh no, non c'è più il ponte! Programma l'Agente
@@ -2299,16 +2340,14 @@ it:
         per ricostruire il ponte usando il blocco `metti assi di quercia` in modo
         che {currentPlayerName} possa raggiungere la **pala** [diamond_shovel].
       MC_HOC_2017_05_Kiki_instruction: Porta il giocatore alla casella arancione.
-      MC_HOC_2017_06_Cole_instruction: Un altro fiume, ma questo è molto più largo!
-        Correggi questo codice per aiutare l'Agente a costruire un ponte in modo che
-        {currentPlayerName} possa raggiungere la **piccozza** [diamond_pickaxe].
+      MC_HOC_2017_06_Cole_instruction: Correggi il codice in modo che l'Agente costruisca
+        un ponte su questo fiume.
       MC_HOC_2017_06_Josh_instruction: Correggi il codice per aiutare l'Agent a costruire
         un ponte su questo fiume.
       MC_HOC_2017_06_Kiki_instruction: Correggi il codice per aiutare l'Agent a costruire
         un ponte su questo fiume.
-      MC_HOC_2017_07_Cole_instruction: C'è del ghiaccio che blocca il percorso! La
-        funzione `clear path` (*libera il passaggio*) può aiutarti a rimuovere il
-        ghiaccio e far arrivare {currentPlayerName} fino al vagonetto [minecart_normal]!
+      MC_HOC_2017_07_Cole_instruction: Distruggi il ghiaccio e fai arrivare {currentPlayerName}
+        fino al vagonetto.
       MC_HOC_2017_07_Kiki_instruction: Usa una funzione per liberare il sentiero fino
         alla casella arancione.
       MC_HOC_2017_07a_Kiki_instruction: Libera il sentiero fino alla casella arancione.
@@ -2316,14 +2355,8 @@ it:
         per questo bioma.
       MC_HOC_2017_08_Kiki_instruction: Modifica la funzione in modo che funzioni per
         questo rompicapo.
-      MC_HOC_2017_08_RY_instruction: Guarda queste funzioni.  Come puoi usarle per
-        evitare i Ghast e aiutare {currentPlayerName} a raggiungere sano e salvo il
-        **Libro incantato** [book_enchanted]? `build short bridge` = *costruisci un
-        ponte corto* `build long bridge` = *costruisci un ponte lungo*
-      MC_HOC_2017_08_Will_instruction: Guarda queste funzioni.  Come puoi usarle per
-        evitare i Ghast e aiutare {currentPlayerName} a raggiungere sano e salvo il
-        **Libro incantato** [book_enchanted]? `build short bridge` = *costruisci un
-        ponte corto* `build long bridge` = *costruisci un ponte lungo*
+      MC_HOC_2017_08_RY_instruction: Usa le funzioni per superare la lava.
+      MC_HOC_2017_08_Will_instruction: Usa le funzioni per superare la lava.
       MC_HOC_2017_09_Cole_instruction: Programma l'Agent per fargli liberare il sentiero
         del giocatore.
       MC_HOC_2017_09_Kiki_instruction: Programma l'Agent per fargli liberare il sentiero
@@ -2334,20 +2367,15 @@ it:
         questo vagonetto.
       MC_HOC_2017_10_Kiki_instruction: Crea una funzione che ti aiuti a terminare
         questo vagonetto.
-      MC_HOC_2017_10_RETRY_instruction: Riesci a trovare la differenza tra le due
-        funzioni nell'area di lavoro? `fix short path` = *prepara un percorso breve*
-        `fix long path` = *prepara un percorso lungo* Usa queste funzioni insieme
-        ad altri blocchi presi dalla cassetta degli attrezzi per liberare il passaggio
-        per il vagonetto, poi raccogli **Pietra focaia e acciarino**  [flint_and_steel].
+      MC_HOC_2017_10_RETRY_instruction: Crea una funzione che permetta di terminare
+        la rotaia del vagonetto.
       MC_HOC_2017_10_RYAN_instruction: Crea una funzione che ti aiuti a terminare
         questo vagonetto.
       MC_HOC_2017_10_RYAN2_instruction: Crea una funzione che ti aiuti a terminare
         questo vagonetto.
-      MC_HOC_2017_13_Cole_instruction: "**Tempo di giocare:** ora tocca a te! Programma
-        l'Agente per farti aiutare ad esplorare questo mondo."
-      MC_HOC_2017_4.5v2_instruction: L'Agente può muoversi sull'acqua! Usa un ciclo
-        `ripeti ... volte` per risolvere questo esercizio e aiuta {currentPlayerName}
-        a raggiungere il **secchio** [bucket_empty] oltre la porta.
+      MC_HOC_2017_13_Cole_instruction: "**Tempo di giocare:**  è ora di andare ad
+        esplorare da solo!"
+      MC_HOC_2017_4.5v2_instruction: Porta l'Agente sulla pedana a pressione.
       MC_HOC_2017_Ali_instruction: Guarda queste funzioni.  Come puoi usarle per evitare
         i Ghast e aiutare {currentPlayerName} a raggiungere sano e salvo il **Libro
         incantato** [book_enchanted]? `build short bridge` = *costruisci un ponte
@@ -2356,8 +2384,8 @@ it:
         e a raccogliere tutti i diamanti presenti in questo livello? "
       MC_HOC_2017_FP10x10_RE_instruction: "**Gioco:** sei pronto a sfidare te stesso
         e a raccogliere tutti i diamanti presenti in questo livello? "
-      MC_HOC_2017_FP20x20_instruction: "**Tempo di giocare:** ora tocca a te! Programma
-        l'Agente per farti aiutare ad esplorare questo mondo."
+      MC_HOC_2017_FP20x20_instruction: "**Tempo di giocare:**  è ora di andare ad
+        esplorare da solo!"
       MC_HOC_2017_Ryan_03_instruction: Ora usa i cicli per aiutare l'Agent a costruire
         un ponte sul fiume posizionando dei blocchi nell'acqua.
       MC_HOC_2017_Ryan_05_instruction: Distruggi questi cactus in modo che il giocatore
@@ -2635,7 +2663,8 @@ it:
         gli esercizi! Ora estrai e costruisci quello che vuoi, creando qualcosa di
         unico. Usa tutto ciò che hai imparato finora.
       Overworld House Frame Chosen_instruction: Costruisci il resto della casa con
-        qualunque materiale ti piace. Devi usare più volte il blocco `ripeti ... volte`.
+        qualunque materiale ti piaccia. Devi usare più volte il blocco `ripeti ...
+        volte`.
       Overworld House Frame Chosen_2018_instruction: Costruisci il resto della casa
         con qualunque materiale ti piace. Devi usare più volte il blocco `ripeti ...
         volte`.
@@ -2661,7 +2690,7 @@ it:
         sacco di risorse e hai costruito la tua casetta. Ora posa i binari dal bordo
         della mappa fino alla porta di casa tua. (Se ti va prova anche la versione
         più difficile: riesci a farcela usando solo 6 blocchi?)'
-      Overworld Shear Sheep_instruction: E' il momento di tosare le pecore! Usa l'istruzione
+      Overworld Shear Sheep_instruction: È il momento di tosare le pecore! Usa l'istruzione
         `tosa` per raccogliere la lana da entrambe le pecore.
       Overworld Shear Sheep_2018_instruction: E' il momento di tosare le pecore! Usa
         l'istruzione `tosa` per raccogliere la lana da entrambe le pecore.
@@ -2793,6 +2822,37 @@ it:
         di carbone.
       Unicorn Tag_instruction: Esamina questo progetto. Riesci a capire come è stato
         realizzato?
+      Virtual Pet 2 - Validated (Ram)_instruction: Crea un **evento** in modo che
+        quando la giraffa tocca la pozzanghera, il suo colore diventi marrone.
+      Virtual Pet 2 - Validated_instruction: Crea un **evento** in modo che quando
+        la giraffa tocca la pozzanghera, il suo colore diventi marrone.
+      Virtual Pet 2_instruction: Crea un **evento** in modo che quando la giraffa
+        tocca la pozzanghera, il suo colore diventi marrone.
+      Virtual Pet 3_instruction: Aggiungi un nuovo personaggio sapone allo schermo.
+        Puoi crearlo cosi che quando la giraffa e il sapone si toccano, la giraffa
+        ritorna al suo colore normale?
+      Virtual Pet 3_simple_instruction: Aggiungi un nuovo personaggio sapone allo
+        schermo. Puoi crearlo cosi che quando la giraffa e il sapone si toccano, la
+        giraffa ritorna al suo colore normale?
+      Virtual Pet 4_instruction: Aggiungi un comportamento al tuo sapone per renderlo
+        trascinabile, quindi trascinalo sopra la giraffa per pulirla!
+      Virtual Pet 4_simple_instruction: Aggiungi un comportamento al tuo sapone per
+        renderlo trascinabile, quindi trascinalo sopra la giraffa per pulirla!
+      Virtual Pet 5 - Validated_instruction: Aggiungi delle azioni ad ogni evento
+        cosi che quando la giraffa si scontra con ogni persanaggio, si restringa di
+        5.
+      Virtual Pet 5_instruction: Aggiungi delle azioni ad ogni evento cosi che quando
+        la giraffa si scontra con ogni persanaggio, si restringa di 5.
+      Virtual Pet 5_simple_instruction: Aggiungi delle azioni ad ogni evento cosi
+        che quando la giraffa si scontra con ogni persanaggio, si restringa di 5.
+      Virtual Pet 6_instruction: Aggiungi una mela che riporta la giraffa alla sua
+        dimensione regolare quando si toccano.
+      Virtual Pet 6_simple_instruction: Aggiungi una mela che riporta la giraffa alla
+        sua dimensione regolare quando si toccano.
+      Virtual Pet Freeplay_instruction: 'Tempo di giocare: Cos''altro puoi far fare
+        alla tua giraffa? '
+      Virtual Pet Freeplay_simple_instruction: 'Tempo di giocare: Cos''altro puoi
+        far fare alla tua giraffa? '
       aE7_instruction: |-
         Che cosa succede se aggiungi un ciclo uguale a quello che trovi già pronto, ma fai girare l'artista a sinistra invece che a destra?<br>
         Riesci a disegnare quest'onda ripetendo il tutto?
@@ -2946,16 +3006,21 @@ it:
       course1_maze_debugging_challenge2_instruction: Correggi questo esercizio. Ci
         sono già tutti i blocchi giusti, ma sono nell'ordine sbagliato!
       course1_maze_seq_challenge1_instruction: '"Fammi fare il percorso per arrivare
-        a quello sciocco maiale. Evita la dinamite (TNT) o ci lascio le penne!"'
+        a quello sciocco maialino. Evita la dinamite (TNT) o ci lascio le penne!"'
       course2_bee_conditionals_challenge1_instruction: Raccogli tutto il nettare o
         fai tutto il miele.
       course2_bee_conditionals_challenge2_instruction: Raccogli tutto il nettare o
         fai tutto il miele.
+      course2_harvester_loops_challenge1_instruction: Raccogli tutte le pannocchie.
+      course2_harvester_loops_challenge2_instruction: Raccogli tutte le lattughe evitando
+        gli alberi e i campi!
+      course2_maze_loops_challenge1_instruction: 'Ora Scrat vuole provare a usare
+        i cicli per cercare la sua ghianda! '
       course2_maze_programming_challenge2_instruction: Alcune volte ci sono diversi
         modi per risolvere lo stesso problema. Alcune volte è più veloce andare all'indietro,
         piuttosto che muoversi in avanti!
       course2_maze_seq_challenge1_instruction: Fammi fare il percorso per arrivare
-        a quello sciocco maiale. Evita la dinamite (TNT) o le mie piume salteranno
+        a quello sciocco maialino. Evita la dinamite (TNT) o le mie piume salteranno
         in aria!
       course2_playlab_stage17_1_instruction: Puoi far dire "Ciao" al cane (personaggio
         1)?
@@ -3250,7 +3315,7 @@ it:
         alla fine di questo programma per completare l'esercizio?
       courseA_maze_ramp5_2018_instruction: Evita la dinamite (TNT).
       courseA_maze_ramp5a_2018_instruction: Fai arrivare l'uccellino fino al maialino!
-      courseA_maze_seq1_instruction: Fai andare l'uccellino fino al maiale cattivo!
+      courseA_maze_seq1_instruction: Fai andare l'uccellino fino al maialino cattivo!
       courseA_maze_seq10_instruction: 'Sfida: aggira la dinamite (TNT) per far arrivare
         l''uccellino fino al maialino! '
       courseA_maze_seq10_2018_instruction: 'Sfida: Evita la dinamite (TNT) per far
@@ -3263,7 +3328,8 @@ it:
       courseA_maze_seq12_2018_instruction: 'Prendi quel maialino! '
       courseA_maze_seq13_instruction: Prendi quel maialino in qualsiasi modo!
       courseA_maze_seq13_2018_instruction: Prendi quel maialino in qualsiasi modo!
-      courseA_maze_seq1_2018_instruction: Fai andare l'uccellino fino al maiale cattivo!
+      courseA_maze_seq1_2018_instruction: Fai andare l'uccellino fino al maialino
+        cattivo!
       courseA_maze_seq2_instruction: Modifica il codice per farmi arrivare al maialino!
       courseA_maze_seq2_2018_instruction: Modifica il codice per farmi arrivare al
         maialino!
@@ -3626,10 +3692,10 @@ it:
         polpo "Novità?" quando viene cliccato.
       courseC_PlayLab_events6_instruction: Ora scrivi un programma per poter spostare
         il pinguino in tutte le direzioni usando i tasti freccia in alto / in basso
-        / a sinistra / a destra in modo da fargli raggiungere tutte le bandierine!
+        / a sinistra / a destra, in modo da fargli raggiungere tutte le bandierine!
       courseC_PlayLab_events6_2018_instruction: Ora scrivi un programma per poter
         spostare il pinguino in tutte le direzioni usando i tasti freccia in alto
-        / in basso / a sinistra / a destra in modo da fargli raggiungere tutte le
+        / in basso / a sinistra / a destra, in modo da fargli raggiungere tutte le
         bandierine!
       courseC_PlayLab_events7_instruction: Il blocco `ripeti per sempre` ti permette
         di ripetere del codice per sempre. Usa questo blocco per muovere ripetutamente
@@ -3644,10 +3710,10 @@ it:
         Puoi fare in modo che il pinguino (personaggio 1) riproduca il suono di "un colpo" e dica "Ahi!" quando sbatte contro il dinosauro?
         Quando hai finito, esegui il gioco e falli scontrare.
       courseC_PlayLab_events9_instruction: |-
-        Puoi aggiungere un blocco per segnare un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 2)?
+        Puoi aggiungere un blocco per segnare un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3)?
         Esegui il gioco e muovi il pinguino con le frecce fino a quando non fai un punto!
       courseC_PlayLab_events9_2018_instruction: |-
-        Puoi aggiungere un blocco per segnare un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 2)?
+        Puoi aggiungere un blocco per segnare un punto quando il pinguino (personaggio 1) sbatte contro il polpo (personaggio 3)?
         Esegui il gioco e muovi il pinguino con le frecce fino a quando non fai un punto!
       courseC_PlayLab_eventsA_instruction: |-
         Aggiungi dei blocchi all'evento `quando si clicca su "Esegui"` per cambiare lo sfondo e la velocità del pinguino.
@@ -3665,6 +3731,14 @@ it:
         clicca su "Termina" per farlo provare agli amici sui loro smartphone (devi
         inviargli il link sotto alla scritta "Condividi il tuo gioco:"). Guarda delle
         possibili idee nei suggerimenti.
+      courseC_PlayLab_events_challenge1_instruction: "Usa un nuovo blocco per fare
+        in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro
+        il dinosauro e quando segna un punto. \nGioca e muovi il pinguino con le frecce
+        fino a che non segni abbastanza punti."
+      courseC_PlayLab_events_challenge1_2018_instruction: "Usa un nuovo blocco per
+        fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte
+        contro il dinosauro e quando segna un punto. \nGioca e muovi il pinguino con
+        le frecce fino a che non segni abbastanza punti."
       courseC_artist_loop1_instruction: Aggiungiamo un po' di brio!
       courseC_artist_loop1_2018_instruction: Aggiungiamo un po' di brio!
       courseC_artist_loops1_instruction: "<b>\"Zombie. Disegnare!\"</b><br>\n<br>\nLo
@@ -3724,15 +3798,15 @@ it:
         centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
       courseC_artist_loopsTemplateA_2018_instruction: Fai in modo che l'artista vada
         al centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
-      courseC_artist_prog1_instruction: Gioca con i blocchi nella cassetta degli attrezzi
-        per capire cosa fanno!
-      courseC_artist_prog1_2018_instruction: Gioca con i blocchi nella cassetta degli
-        attrezzi per capire cosa fanno!
+      courseC_artist_prog1_instruction: Gioca con i blocchi che trovi nella cassetta
+        degli attrezzi per capire cosa fanno!
+      courseC_artist_prog1_2018_instruction: Gioca con i blocchi che trovi nella cassetta
+        degli attrezzi per capire cosa fanno!
       courseC_artist_prog2_instruction: Trascina i blocchi dalla cassetta degli attrezzi
-        per far in modo che l'artista disegni lungo le linee grige della figura. (Ogni
-        linea è lunga 100 pixel.)
+        per far in modo che l'artista disegni lungo le linee grigie della figura.
+        (Ogni linea è lunga 100 pixel.)
       courseC_artist_prog2_2018_instruction: Trascina i blocchi dalla cassetta degli
-        attrezzi per far in modo che l'artista disegni lungo le linee grige della
+        attrezzi per far in modo che l'artista disegni lungo le linee grigie della
         figura. (Ogni linea è lunga 100 pixel.)
       courseC_artist_prog3_instruction: Ogni lato del quadrato interno è lungo 100
         pixel e tutti gli angoli sono di 90 gradi.
@@ -3743,8 +3817,8 @@ it:
       courseC_artist_prog4_2018_instruction: Completa il razzo in modo che l'alieno
         possa seguire il suo mostriciattolo domestico.
       courseC_artist_prog5_instruction: |-
-        Questa casa ha bisogno di un tetto! Disegna un triangolo.<br><br>
-        <b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.
+        Completa questa targhetta disegnando un rettangolo sul contorno.
+        (I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)
       courseC_artist_prog5_2018_instruction: |-
         Questa casa ha bisogno di un tetto! Disegna un triangolo.<br><br>
         <b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.
@@ -3768,10 +3842,12 @@ it:
         gialla di questa strada!"*'
       courseC_artist_prog_challenge2a_2018_instruction: '*"Aiutami a disegnare la
         linea gialla di questa strada!"*'
-      courseC_collector_prog1_instruction: Gioca coi blocchi per vedere se riesci
+      courseC_collector_loops_challenge2_instruction: Raccogli almeno **5** diamanti!
+      courseC_collector_loops_challenge2_2018_instruction: Raccogli almeno **5** diamanti!
+      courseC_collector_prog1_instruction: Gioca con i blocchi per vedere se riesci
         ad aiutare Laura a raccogliere un po' di diamanti.
-      courseC_collector_prog1_2018_instruction: Gioca coi blocchi per vedere se riesci
-        ad aiutare Laura a raccogliere un po' di diamanti.
+      courseC_collector_prog1_2018_instruction: Gioca con i blocchi per vedere se
+        riesci ad aiutare Laura a raccogliere un po' di diamanti.
       courseC_collector_prog2_instruction: Fai muovere Laura fino al diamante, quindi
         usa il blocco `raccogli` per prenderlo.
       courseC_collector_prog2_2018_instruction: Fai muovere Laura fino al diamante,
@@ -3803,13 +3879,21 @@ it:
       courseC_collector_prog9_instruction: '*"Prendiamoli tutti ''sti diamanti!"*'
       courseC_collector_prog9_2018_instruction: '*"Prendiamoli tutti ''sti diamanti!"*'
       courseC_collector_progA_instruction: Aiuto Laura a raccogliere tutti i diamanti.
+      courseC_collector_prog_challenge1_instruction: Guarda bene! Riesci a raccogliere
+        tutti e **10** i diamanti?
+      courseC_collector_prog_challenge1_2018_instruction: Guarda bene! Riesci a raccogliere
+        tutti e **10** i diamanti?
+      courseC_collector_prog_challenge2_instruction: Raccogli almeno **10** diamanti
+        per completare questa sfida!
+      courseC_collector_prog_challenge2_2018_instruction: Raccogli almeno **10** diamanti
+        per completare questa sfida!
       courseC_flappy_events1_instruction: Collega il blocco `sbatti le ali per un
-        numero di volte normale` all'evento `quando ci clicca`, quindi premi "Esegui".
+        numero di volte normale` all'evento `quando si clicca`, quindi premi "Esegui".
         Clicca o tocca nello spazio di gioco per far volare Flappy verso la sua destinazione.
       courseC_flappy_events10_instruction: Crea la tua versione del gioco Flappy.
       courseC_flappy_events10_2018_instruction: Crea la tua versione del gioco Flappy.
       courseC_flappy_events1_2018_instruction: Collega il blocco `sbatti le ali per
-        un numero di volte normale` all'evento `quando ci clicca`, quindi premi "Esegui".
+        un numero di volte normale` all'evento `quando si clicca`, quindi premi "Esegui".
         Clicca o tocca nello spazio di gioco per far volare Flappy verso la sua destinazione.
       courseC_flappy_events2_instruction: Prova ad aggiungere un blocco che imposti
         la velocità quando viene premuto il pulsante "Esegui".  Gioca volando fino
@@ -3835,10 +3919,10 @@ it:
       courseC_flappy_events5_2018_instruction: Aggiungi un blocco all'evento `quando
         supera un ostacolo`, quindi premi "Esegui" per segnare un punto facendo volare
         Flappy oltre la prima serie di tubi.
-      courseC_flappy_events6_instruction: Vedi se, cambiando di quanto Flappy sbatte
-        le ali ogni volta che clicchi, riesci ancora a segnare un punto.
-      courseC_flappy_events6_2018_instruction: Vedi se, cambiando di quanto Flappy
-        sbatte le ali ogni volta che clicchi, riesci ancora a segnare un punto.
+      courseC_flappy_events6_instruction: Vedi se riesci ancora a segnare un punto,
+        cambiando di quanto Flappy sbatte le ali ogni volta che clicchi.
+      courseC_flappy_events6_2018_instruction: Vedi se riesci ancora a segnare un
+        punto, cambiando di quanto Flappy sbatte le ali ogni volta che clicchi.
       courseC_flappy_events7_instruction: Adesso, prova a cambiare la scena attaccando
         un blocco all'evento `quando si clicca su "Esegui"`.
       courseC_flappy_events7_2018_instruction: Adesso, prova a cambiare la scena attaccando
@@ -3893,6 +3977,13 @@ it:
         zucche.
       courseC_harvester_loops9_2018_instruction: Raccogli tutte le pannocchie e tutte
         le zucche.
+      courseC_harvester_loops_challenge1_instruction: Raccogli tutte le pannocchie.
+      courseC_harvester_loops_challenge1a_instruction: Raccogli tutte le pannocchie.
+      courseC_harvester_loops_challenge1a_2018_instruction: Raccogli tutte le pannocchie.
+      courseC_harvester_loops_challenge2_instruction: Raccogli tutte le lattughe evitando
+        gli alberi e i campi!
+      courseC_harvester_loops_challenge2_2018_instruction: Raccogli tutte le lattughe
+        evitando gli alberi e i campi!
       courseC_maze_debugging1_instruction: Correggi il codice per aiutare Scrat a
         raggiungere la ghianda.
       courseC_maze_debugging10_instruction: Correggi questo programma riordinando,
@@ -3945,6 +4036,12 @@ it:
       courseC_maze_loops8_instruction: 'Sfida: Metti a frutto ciò che hai imparato
         negli ultimi esercizi per completare questo livello.'
       courseC_maze_loops9_instruction: Stai andando alla grande! Continua così!
+      courseC_maze_loops_challenge1_instruction: 'Ora Scrat vuole provare a usare
+        i cicli per cercare la sua ghianda! '
+      courseC_maze_loops_challenge1a_instruction: 'Ora Scrat vuole provare a usare
+        i cicli per cercare la sua ghianda! '
+      courseC_maze_loops_challenge1a_2018_instruction: 'Ora Scrat vuole provare a
+        usare i cicli per cercare la sua ghianda! '
       courseC_maze_programming1_instruction: Per risolvere questo esercizio, collega
         tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseC_maze_programming1_2018_instruction: Per risolvere questo esercizio,
@@ -3981,10 +4078,10 @@ it:
         a trovare il maialino cattivo."*'
       courseC_maze_programming8_predict1_2018_instruction: '*"Mantieni la calma e
         aiutami a trovare il maialino cattivo."*'
-      courseC_maze_programming9_instruction: '*"Ora aiutami a sorprendere il maiale
+      courseC_maze_programming9_instruction: '*"Ora aiutami a sorprendere il maialino
         nel modo che preferisci!"*'
       courseC_maze_programming9_2018_instruction: '*"Ora aiutami a sorprendere il
-        maiale nel modo che preferisci!"*'
+        maialino nel modo che preferisci!"*'
       courseC_maze_programming_challenge1_instruction: Il maialino si sta nascondendo
         e l'obiettivo è trovarlo.
       courseC_maze_programming_challenge1_2018_instruction: Il maialino si sta nascondendo
@@ -4018,23 +4115,22 @@ it:
       courseC_starWars_loops11_2018_instruction: Ci sei quasi! Questa volta scegli
         il percorso che preferisci!
       courseC_starWars_loops1_2018_instruction: BB-8 recupererà tutti i rottami metallici
-        lungo la strada percorsa. Usa 5 blocchi uguali per far sì che BB-8 a recuperi
+        lungo la strada percorsa. Usa 5 blocchi uguali per far sì che BB-8 recuperi
         tutti i rottami nell'area di gioco.
       courseC_starWars_loops1_predict1_instruction: BB-8 recupererà tutti i rottami
         metallici lungo la strada percorsa. Usa 5 blocchi uguali per far sì che BB-8
-        a recuperi tutti i rottami nell'area di gioco.
+        recuperi tutti i rottami nell'area di gioco.
       courseC_starWars_loops1_predict1_2018_instruction: BB-8 recupererà tutti i rottami
         metallici lungo la strada percorsa. Usa 5 blocchi uguali per far sì che BB-8
         recuperi tutti i rottami nell'area di gioco.
       courseC_starWars_loops2_instruction: Per recuperare tutti i rottami metallici,
-        prova a creare un ciclo con un solo blocco all'interno del blocco `ripeti
-        ... volte`.
+        prova a creare un ciclo `ripeti ... volte` con un solo blocco all'interno.
       courseC_starWars_loops2_2018_instruction: Riesci a far recuperare a BB-8 tutti
         i rottami metallici creando un ciclo con un solo blocco all'interno del blocco
         "ripeti ... volte"?
       courseC_starWars_loops4_instruction: In questo esercizio, due cicli `ripeti
         ... volte` ti aiuteranno a far in modo che BB-8 recuperi tutti i rottami metallici
-        con il minor numero di blocchi possibile!
+        con il minor numero possibile di blocchi!
       courseC_starWars_loops4_2018_instruction: In questo esercizio, BB-8 deve recuperare
         tutti i rottami metallici con il minor numero di blocchi possibile! Usa due
         blocchi "ripeti ... volte".
@@ -4328,6 +4424,12 @@ it:
       courseD_bounce_events12_instruction: Crea la tua versione del Ping-Pong. È possibile
         modificare tutte le immagini e tutte le regole. Quando hai finito, clicca
         su Condividi per far provare agli amici il gioco sui loro smartphone.
+      courseD_bounce_events1s_instruction: Attacca un blocco al blocco verde `quando
+        si preme sulla freccia verso sinistra` e premi "Esegui". Poi sposta il giocatore
+        usando la freccia verso sinistra per raggiungere la bandierina.
+      courseD_bounce_events1s_2018_instruction: Attacca un blocco al blocco verde
+        `quando si preme sulla freccia verso sinistra` e premi "Esegui". Poi sposta
+        il giocatore usando la freccia verso sinistra per raggiungere la bandierina.
       courseD_bounce_events2_instruction: Attacca un blocco ai blocchi verdi `quando
         si preme la freccia verso destra` e `quando si preme la freccia verso sinistra`.
         Poi sposta la racchetta per raggiungere entrambe le bandierine.
@@ -4401,6 +4503,10 @@ it:
       courseD_collector_debugging6_2018_instruction: 'Sfida: tutti i blocchi che ti
         servono sono già qui... sfrutta tutte le tue abilità di debugging per capire
         come risolvere questo esercizio.'
+      courseD_collector_debugging6a_instruction: 'Sfida: Usa il codice che trovi già
+        pronto nell''area di lavoro per raccogliere almeno **6** diamanti!'
+      courseD_collector_debugging6a_2018_instruction: 'Sfida: Usa il codice che trovi
+        già pronto nell''area di lavoro per raccogliere almeno **6** diamanti!'
       courseD_collector_debugging7_instruction: 'Sfida: tutti i blocchi che ti servono
         sono già qui... sfrutta tutte le tue abilità di debugging per capire come
         risolvere questo esercizio.'
@@ -4952,16 +5058,16 @@ it:
       courseE_farmer_ramp12e_2018_instruction: Vai avanti fino a che raggiungi la
         lattuga, poi prendila tutta usando un ciclo `mentre`.
       courseE_farmer_ramp12f_instruction: Vai avanti fino a che raggiungi la lattuga,
-        poi gira a sinistra **se** c'è strada a sinistra. In caso contrario, gira
+        poi **se** c'è strada a sinistra, gira a sinistra. In caso contrario, gira
         a destra.
       courseE_farmer_ramp12f_2018_instruction: Vai avanti fino a che raggiungi la
-        lattuga, poi gira a sinistra **se** c'è strada a sinistra. In caso contrario,
+        lattuga, poi **se** c'è strada a sinistra, gira a sinistra. In caso contrario,
         gira a destra.
       courseE_farmer_ramp12g_instruction: Vai avanti fino a che raggiungi la lattuga,
-        poi gira a sinistra **se** c'è strada a sinistra. In caso contrario, gira
+        poi **se** c'è strada a sinistra, gira a sinistra. In caso contrario, gira
         a destra.
       courseE_farmer_ramp12g_2018_instruction: Vai avanti fino a che raggiungi la
-        lattuga, poi gira a sinistra **se** c'è strada a sinistra. In caso contrario,
+        lattuga, poi **se** c'è strada a sinistra, gira a sinistra. In caso contrario,
         gira a destra.
       courseE_maze_ramp1_instruction: Per risolvere questo esercizio, collega tutti
         i blocchi e clicca su "Esegui" per vederlo in funzione!
@@ -5056,7 +5162,7 @@ it:
         e imposta la velocità di Sid (personaggio 1) a veloce.
       courseF_IceAge_template_instruction: Scrivi il codice per aiutare Scrat a raccogliere
         tutte le ghiande!
-      courseF_artist_for1_instruction: Fai esperimenti con il *ciclo con contatore*
+      courseF_artist_for1_instruction: Fai esperimenti con il ciclo `ripeti con counter`
         e gioca con la variabile 'counter'.
       courseF_artist_for10_instruction: 'Tempo di giocare: Prova ad usare la variabile
         `counter` (*contatore*) con altri elementi grafici per creare immagini magiche
@@ -5064,8 +5170,8 @@ it:
       courseF_artist_for10_2018_instruction: 'Tempo di giocare: Prova ad usare la
         variabile `counter` (*contatore*) con altri elementi grafici per creare immagini
         magiche come questa.'
-      courseF_artist_for1_2018_instruction: Fai esperimenti con il *ciclo con contatore*
-        e gioca con la variabile 'counter'.
+      courseF_artist_for1_2018_instruction: Fai esperimenti con il ciclo `ripeti con
+        counter` e gioca con la variabile 'counter'.
       courseF_artist_for2_instruction: Crea questa pila di triangoli, i lati misurano
         da 50 a 100 pixel.
       courseF_artist_for2_2018_instruction: Crea questa pila di triangoli, i lati
@@ -5245,9 +5351,9 @@ it:
         in questo giardino usando il minor numero possibile di blocchi.
       courseF_bee_for9_2018_instruction: Usa la variabile `counter` (*contatore*)
         per muoverti in questo giardino usando il minor numero possibile di blocchi.
-      courseF_bee_for_challenge1_instruction: 'Usa questo `ciclo con contatore` per
-        raccogliere tutto il nettare. '
-      courseF_bee_for_challenge1_2018_instruction: 'Usa questo `ciclo con contatore`
+      courseF_bee_for_challenge1_instruction: 'Usa questo ciclo `ripeti con counter`
+        per raccogliere tutto il nettare. '
+      courseF_bee_for_challenge1_2018_instruction: 'Usa questo ciclo `ripeti con counter`
         per raccogliere tutto il nettare. '
       courseF_bee_for_challenge2_instruction: "<b>Super Sfida sui cicli con contatore:</b>
         Risolvi questo esercizio usando il minor numero possibile di blocchi."
@@ -5470,13 +5576,13 @@ it:
         quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!"'
       grade2_CaringForNewPet_5_instruction: Fammi arrivare al maialino!
       grade2_MakeDogTag_1_instruction: Trascina i blocchi dalla cassetta degli attrezzi
-        per far in modo che l'artista disegni lungo le linee grige della figura. (Ogni
-        linea è lunga 100 pixel.)
+        per far in modo che l'artista disegni lungo le linee grigie della figura.
+        (Ogni linea è lunga 100 pixel.)
       grade2_MakeDogTag_10_instruction: Disegna qualcosa che ti piace.
       grade2_MakeDogTag_3_instruction: Aiutami a completare la casa per questo gatto.
       grade2_MakeDogTag_4_instruction: |-
-        Questa casa ha bisogno di un tetto! Disegna un triangolo.<br><br>
-        <b>Suggerimento</b>: tutti e tre i lati hanno la stessa lunghezza.
+        Completa questa targhetta disegnando un rettangolo sul contorno.
+        (I lati lunghi sono di 200 pixel ognuno e quelli corti di 100 pixel)
       grade2_MakeDogTag_6_instruction: 'Tempo di giocare: disegna qualcosa che ti
         piace.'
       grade2_MakeDogTag_7_instruction: |-
@@ -6041,8 +6147,8 @@ it:
         Clicca su "Esegui" e guarda cosa succede quando cominciamo a essere creativi con i bit.
       grade5_artist_for_loops1_instruction: Usa il blocco "ripeti ... volte" per disegnare
         un triangolo equilatero con i lati di 50 pixel.
-      grade5_artist_for_loops1b_instruction: Fai esperimenti con il *ciclo con contatore*
-        e gioca con la variabile 'counter'.
+      grade5_artist_for_loops1b_instruction: Fai esperimenti con il ciclo `ripeti
+        con counter` e gioca con la variabile 'counter'.
       grade5_artist_for_loops3_instruction: 'I lati di questi triangoli misurano da
         20 a 200 pixel e ogni triangolo è largo 20 pixel più del precedente. '
       grade5_artist_for_loops5_instruction: |-
