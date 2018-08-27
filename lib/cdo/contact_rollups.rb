@@ -904,7 +904,7 @@ class ContactRollups
 
     # users = User.where("length(email) > 0") # original query, replaced by following for multiauth
     users = User.find_by_sql <<-eos
-      SELECT * FROM users
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM users
       LEFT JOIN authentication_options
         ON users.primary_contact_info_id = authentication_options.id
       WHERE
