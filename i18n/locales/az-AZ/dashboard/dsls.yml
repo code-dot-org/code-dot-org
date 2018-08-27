@@ -6,12 +6,53 @@ az:
       Prepare for your presentation:
         title: başlıq
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Rəqs hərəkətləri üçün düymə kombinasiyalarını cütləşdir.
+        Matching: Cütləşdirmə
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Cütləşdirmə
+      2-3 Graph Paper Match 1:
+        Matching: Cütləşdirmə
       2-3 Maze Match 2:
         Instructions: Təlimatlar
+      2-3 artist match 1:
+        Match the shape with the blocks that complete it.: Fiqurla onu tamamlayan blokları birləşdirin.
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        Matching: Cütləşdirmə
+      4-5 Computational Thinking Match 1:
+        Matching: Cütləşdirmə
+      4-5 Suncatchers Match 1:
+        Matching: Cütləşdirmə
       4-5 maze match 1:
         Instructions: Təlimatlar
+      K-1 Artist 2 Match 2:
+        Matching: Cütləşdirmə
+      K-1 Bee Loops Match 1:
+        Matching: Cütləşdirmə
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Rəqs hərəkətləri üçün düymə kombinasiyalarını cütləşdir.
+        Matching: Cütləşdirmə
       K-1 Maze Match 1:
         Instructions: Təlimatlar
+        Matching: Cütləşdirmə
     multi:
+      2-3 artist loops multi 1:
+        Which shape is made by this loop?: Bu dövrlə hansı fiqur alınır?
+      4-5 Algorithms Multi 1:
+        Banana: Banan
+      4-5 Computational Thinking Multi 1:
+        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Bakı böyük şəhərdir.<br/>Sumqayıt orta şəhərdir.<br/>Horadiz kiçik şəhərdir.
+      4-5 artist multi 2:
+        Which drawing is symmetric?: Hansı rəsm simmetrikdir?
       K-1 Maze Multiple Choice 2:
         Maze: Labirint
