@@ -22,6 +22,13 @@
     = f.text_area :notes, rows: 6, class: "input-block-level"
 
 .field
+  %legend.control-legend{data: {toggle: "collapse", target: "#audit_log_info"}}
+    Audit Log
+
+  #audit_log_info.in.collapse
+    = render partial: 'levels/editors/audit_log', locals: {f: f}
+
+.field
   = f.label 'concepts'
   %p
     Select
