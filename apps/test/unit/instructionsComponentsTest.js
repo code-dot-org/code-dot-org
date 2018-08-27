@@ -14,7 +14,7 @@ describe('MarkdownInstructions', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>
         <StatelessMarkdownInstructions
-          renderedMarkdown="md"
+          markdown="md"
           markdownClassicMargins={false}
           inTopPane={false}
           noInstructionsWhenCollapsed={true}
@@ -31,7 +31,7 @@ describe('MarkdownInstructions', function () {
     var dom = ReactTestUtils.renderIntoDocument(
       <div>
         <StatelessMarkdownInstructions
-          renderedMarkdown="md"
+          markdown="md"
           inTopPane={true}
           noInstructionsWhenCollapsed={true}
         />
