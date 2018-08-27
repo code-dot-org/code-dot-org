@@ -54,7 +54,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 [/col-50]
 
-### Have questions about which course is best for your students? <a href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit#", target=_"blank">Compare our course options</a> or [learn more](/professional-learning/details-2019) about the Professional Learning Program.
+### Have questions about which course is best for your students? <a href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit#", target=_"blank">Compare our course options</a> or [learn more](/educate/professional-learning/details-2019) about the Professional Learning Program.
 
 ## Program Commitments
 
