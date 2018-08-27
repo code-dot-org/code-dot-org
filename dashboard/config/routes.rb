@@ -374,7 +374,7 @@ Dashboard::Application.routes.draw do
           post :end
           get  :summary
         end
-        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
+        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
 
         get :attendance, action: 'index', controller: 'workshop_attendance'
         get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'

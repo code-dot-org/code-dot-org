@@ -13,23 +13,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     if @workshop.nil?
       render_404
     elsif workshop_closed?
-      @script_data = {
-        props: {
-          workshop: {
-            organizer: @workshop.organizer
-          },
-          workshop_enrollment_status: "closed"
-        }.to_json
-      }
+      render :closed
     elsif workshop_full?
-      @script_data = {
-        props: {
-          workshop: {
-            organizer: @workshop.organizer
-          },
-          workshop_enrollment_status: "full"
-        }.to_json
-      }
+      render :full
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
@@ -37,44 +23,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         @enrollment.email = current_user.email
         @enrollment.email_confirmation = current_user.email
       end
-
-      session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
-
-      facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO: Come up with more permanent solution that doesn't require cross-project file dependency.
-        bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
-        image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
-
-        {
-          id: facilitator.id,
-          name: facilitator.name,
-          email: facilitator.email,
-          image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil,
-          bio: File.exist?(bio_file) ? File.open(bio_file, "r").read : nil
-        }
-      end
-
-      sign_in_prompt_data = {
-        info_icon: ActionController::Base.helpers.asset_url("info_icon.png", type: :image),
-        sign_in_url: CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
-      }
-
-      @script_data = {
-        props: {
-          workshop: @workshop.attributes.merge(
-            {
-              organizer: @workshop.organizer,
-              regional_partner: @workshop.regional_partner,
-              course_url: @workshop.course_url
-            }
-          ),
-          session_dates: session_dates,
-          enrollment: @enrollment,
-          facilitators: facilitators,
-          sign_in_prompt_data: sign_in_prompt_data,
-          workshop_enrollment_status: "unsubmitted"
-        }.to_json
-      }
     end
   end
 
