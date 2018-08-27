@@ -18,7 +18,7 @@ social:
 ---
 <% facebook = {:u=>"http://#{request.host}/es"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HoraDeCódigo' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HoraDeCódigo' %>
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
@@ -39,7 +39,7 @@ Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](%= reso
 
 ## 2. Encuentre un voluntario local para ayudarte con tu evento.
 
-[Search our volunteer map](%= codeorg_url('/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Busque en nuestro mapa de voluntarios](%= codeorg_url('/volunteer/local') %) para que los voluntarios puedan visitar su clase o chatear por video de forma remota para inspirar a sus estudiantes sobre la amplitud de posibilidades de la informática.
 
 ## 3. Planifique su Hora del Código
 
