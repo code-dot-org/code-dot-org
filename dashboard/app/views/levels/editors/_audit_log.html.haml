@@ -1,0 +1,12 @@
+- aud_log = JSON.parse(@level.audit_log)
+
+%table.audit_log
+  %tr
+    %th Date
+    %th What Was Changed
+    %th Who Changed It
+  - aud_log.reverse_each do |log|
+    %tr
+      %td= "#{log["changed_at"]}"
+      %td= "#{log["changed"]}"
+      %td= "#{log["changed_by_email"]}"
