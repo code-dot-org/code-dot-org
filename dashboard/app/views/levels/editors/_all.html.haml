@@ -24,7 +24,7 @@
 .field
   %legend.control-legend{data: {toggle: "collapse", target: "#audit_log_info"}}
     Audit Log
-
+  %p A log of the people who most recently edited this level, when they did it, and what changes they made (up to the last 10 people)
   #audit_log_info.in.collapse
     = render partial: 'levels/editors/audit_log', locals: {f: f}
 
