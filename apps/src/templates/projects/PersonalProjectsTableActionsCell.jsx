@@ -14,6 +14,7 @@ import {
   saveProjectName,
   remix,
 } from './projectsRedux';
+import {publishMethods} from './projectConstants';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -27,6 +28,7 @@ class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
     isPublishable: PropTypes.bool.isRequired,
     isPublished: PropTypes.bool.isRequired,
+    publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
     showPublishDialog: PropTypes.func.isRequired,
@@ -89,12 +91,24 @@ class PersonalProjectsTableActionsCell extends Component {
   };
 
   render() {
-    const {isEditing, isSaving, isPublishable, isPublished} = this.props;
+    const {isEditing, isSaving, isPublishable, isPublished, publishMethod, userId, projectId} = this.props;
+    const experimentGroup = publishMethod ===
+      publishMethods.CHEVRON ?
+      'publish-chevron' :
+      'publish-button';
 
     return (
       <div>
         {!isEditing  &&
-          <QuickActionsCell>
+          <QuickActionsCell
+            experimentDetails={{
+              study: 'project-publish',
+              study_group: experimentGroup,
+              event: 'chevron',
+              user_id: userId,
+              data_json: JSON.stringify({ channel_id: projectId }),
+            }}
+          >
             <PopUpMenu.Item
               onClick={this.onRename}
             >

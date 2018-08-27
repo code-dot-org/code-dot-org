@@ -31,7 +31,6 @@ export default class AssignmentVersionSelector extends Component {
     onChangeVersion: PropTypes.func.isRequired,
     versions: PropTypes.arrayOf(assignmentVersionShape),
     disabled: PropTypes.bool,
-    showVersionMenu: PropTypes.bool,
   };
 
   state = {
@@ -41,17 +40,11 @@ export default class AssignmentVersionSelector extends Component {
   };
 
   handleMouseDown = e => {
-    if (this.props.showVersionMenu) {
-      // Prevent the native dropdown menu from opening.
-      e.preventDefault();
-    }
+    // Prevent the native dropdown menu from opening.
+    e.preventDefault();
   };
 
   handleClick = () => {
-    if (!this.props.showVersionMenu) {
-      return;
-    }
-
     if (!this.state.isMenuOpen && this.state.canMenuOpen) {
       this.openMenu();
     }
