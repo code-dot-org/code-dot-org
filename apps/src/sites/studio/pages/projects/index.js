@@ -77,50 +77,48 @@ $(document).ready(() => {
   // The other 50% of users will see the button variant.
   // TODO (Erin B.) delete the duplicate table when we
   // determine the experiment outcome.
-  if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE)) {
 
-    if (experiments.isEnabled(experiments.CHEVRON_PUBLISH_EXPERIMENT)) {
-      const personalProjectsUrl = `/api/v1/projects/personal`;
+  if (experiments.isEnabled(experiments.CHEVRON_PUBLISH_EXPERIMENT)) {
+    const personalProjectsUrl = `/api/v1/projects/personal`;
 
-      $.ajax({
-        method: 'GET',
-        url: personalProjectsUrl,
-        dataType: 'json'
-      }).done(personalProjectsList => {
-        store.dispatch(setPersonalProjectsList(personalProjectsList));
-        ReactDOM.render(
-          <Provider store={store}>
-            <PersonalProjectsTable
-              canShare={projectsData.canShare}
-              publishMethod={publishMethods.CHEVRON}
-              userId={projectsData.userId}
-            />
-          </Provider>,
-          document.getElementById('react-my-projects')
-        );
-      });
+    $.ajax({
+      method: 'GET',
+      url: personalProjectsUrl,
+      dataType: 'json'
+    }).done(personalProjectsList => {
+      store.dispatch(setPersonalProjectsList(personalProjectsList));
+      ReactDOM.render(
+        <Provider store={store}>
+          <PersonalProjectsTable
+            canShare={projectsData.canShare}
+            publishMethod={publishMethods.CHEVRON}
+            userId={projectsData.userId}
+          />
+        </Provider>,
+        document.getElementById('react-personal-projects')
+      );
+    });
 
-    } else {
-      const personalProjectsUrl = `/api/v1/projects/personal`;
+  } else {
+    const personalProjectsUrl = `/api/v1/projects/personal`;
 
-      $.ajax({
-        method: 'GET',
-        url: personalProjectsUrl,
-        dataType: 'json'
-      }).done(personalProjectsList => {
-        store.dispatch(setPersonalProjectsList(personalProjectsList));
-        ReactDOM.render(
-          <Provider store={store}>
-            <PersonalProjectsTable
-              canShare={projectsData.canShare}
-              publishMethod={publishMethods.BUTTON}
-              userId={projectsData.userId}
-            />
-          </Provider>,
-          document.getElementById('react-my-projects')
-        );
-      });
-    }
+    $.ajax({
+      method: 'GET',
+      url: personalProjectsUrl,
+      dataType: 'json'
+    }).done(personalProjectsList => {
+      store.dispatch(setPersonalProjectsList(personalProjectsList));
+      ReactDOM.render(
+        <Provider store={store}>
+          <PersonalProjectsTable
+            canShare={projectsData.canShare}
+            publishMethod={publishMethods.BUTTON}
+            userId={projectsData.userId}
+          />
+        </Provider>,
+        document.getElementById('react-personal-projects')
+      );
+    });
   }
 
   const publishConfirm = document.getElementById('publish-confirm');
@@ -143,7 +141,7 @@ $(document).ready(() => {
 });
 
 function showGallery(gallery) {
-  $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
+  $('#personal-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 
