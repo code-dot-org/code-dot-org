@@ -1,9 +1,131 @@
 uz:
   data:
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Tugma kombinatsiyasini raqs harakatlariga moslang.
+        Matching: Moslashmoqda
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Moslashmoqda
+        Use the key to match each code to its letter: Kod harflarini moslashtirish uchun kalitni ishlating
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Panjarani dasturga moslang.
+        Matching: Moslashmoqda
       2-3 Maze Match 2:
         Instructions: Qo'llanmalar
+        Match the puzzles to the blocks: Bloklarni boshqotirmaga moslang
+        Maze Match: Chigalni moslang
+      2-3 artist loops match 1:
+        Match the loop to the shape: Halqani shaklga moslashtiring
+      2-3 artist match 1:
+        Artist Matching: Artist mos keldi
+        Match the shape with the blocks that complete it.: Shaklni biror bir mos keladigan blokga moslashtiring.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Bloklarni boshqotirmaga moslang
+        Maze Match One: Chigal 1chi o'yin
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Oýinchi 1 ni qo'shish umumiy bahoga o'ting</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>O'yinchilar bahosini solishtiring<h4>"
+        Matching: Moslashmoqda
+      4-5 Computational Thinking Match 1:
+        Matching: Moslashmoqda
+      4-5 Suncatchers Match 1:
+        Matching: Moslashmoqda
       4-5 maze match 1:
         Instructions: Qo'llanmalar
+        Match the puzzles to the blocks: Bloklarni boshqotirmaga moslang
+        Maze Match: Chigalni moslang
+      K-1 Artist 2 Match 2:
+        Matching: Moslashmoqda
+      K-1 Bee Loops Match 1:
+        Match the blocks: Bloklarni moslashtiring
+        Matching: Moslashmoqda
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Tugma kombinatsiyasini raqs harakatlariga moslang.
+        Matching: Moslashmoqda
       K-1 Maze Match 1:
         Instructions: Qo'llanmalar
+        Matching: Moslashmoqda
+    multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Rasmga berilgan algoritmni tanlang.
+        Multiple Choice: Turlicha tanlash
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Turlicha tanlash
+      2-3 Conditionals Multi 1:
+        Multiple Choice: Turlicha tanlash
+      2-3 Getting Loopy Multi 1:
+        Multiple Choice: Turlicha tanlash
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Turlicha tanlash
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Turlicha tanlash
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Turlicha tanlash
+      4-5 Algorithms Multi 1:
+        Multiple Choice: Turlicha tanlash
+      4-5 Computational Thinking Multi 1:
+        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        Multiple Choice: Turlicha tanlash
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Turlicha tanlash
+      4-5 Crowdsourcing Multi 2:
+        Multiple Choice: Turlicha tanlash
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Turlicha tanlash
+      4-5 Internet Multi 1:
+        Multiple Choice: Turlicha tanlash
+      4-5 Internet Multi 2:
+        Multiple Choice: Turlicha tanlash
+      4-5 Songwriting Multi 1:
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        Multiple Choice: Turlicha tanlash
+        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Turlicha tanlash
+      K-1 Bee 1 Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Bee 1 Multi 2:
+        Multiple Choice: Turlicha tanlash
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Getting Loopy Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Turlicha tanlash
+      K-1 Move It Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Turlicha tanlash
+      K-1 Word Search Multi 1:
+        Multiple Choice: Turlicha tanlash
+      K-1 Word Search Multi 3:
+        Multiple Choice: Turlicha tanlash
