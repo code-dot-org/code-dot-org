@@ -12,7 +12,7 @@ sk:
       draw square: nakresliť štvorec
       jump to controller top left: prejsť na ovládači doľava hore
       jump to middle: prejsť do stredu
-      draw a button: nakresliť tlačidlo
+      draw a button: nakresliť gombík
       draw cord: nakresliť kábel
       draw R pad: nakresliť R podložku
       draw left leg: nakresliť ľavú nohu
@@ -39,18 +39,18 @@ sk:
       get 2 nectar: získať 2 nektáre
       collect purple nectar: pozbierať fialový nektár
       get 5: zobrať 5
-      move and get nectar: posunúť a zobrať nektár
-      move and get 4: posunúť a dostať 4
-      get 7 nectar make 7 honey: zobrať 7 nektárov a spraviť 7 medov
-      get 7 make 7: zobrať 7 a spraviť 7
+      move and get nectar: posunúť sa a zobrať nektár
+      move and get 4: posunúť sa a zobrať 4
+      get 7 nectar make 7 honey: zobrať 7 nektárov a vyrobiť 7 medov
+      get 7 make 7: zobrať 7 a vyrobiť 7
       get 7: zobrať 7
-      move and get 3: posunúť a dostať 3
+      move and get 3: posunúť sa a zobrať 3
       draw a tree: nakresli strom
       draw triangle: nakresliť trojuholník
       draw circle: nakresliť kruh
       draw goal: nakresliť cieľ
       graph: graf
-      draw waves: jnakresliť vlny
+      draw waves: nakresliť vlny
       draw a wave: nakresliť vlnu
       draw a small triangle: nakresliť malý trojuholník
       draw a medium triangle: nakresliť stredný trojuholník
@@ -60,13 +60,13 @@ sk:
       draw a house: nakresli dom
       check purple flower: skontrolovať fialovú kvetinu
       check flower make honey: skontrolovať kvetinu a spraviť med
-      get nectar or make honey: zobrať nektár alebo spraviť med
-      make 3 honey: vyrob 3 medy
-      get 5 nectar: získaj 5 nektárov
-      make all honey: vyrob všetok med
+      get nectar or make honey: zobrať nektár alebo vyrobiť med
+      make 3 honey: vyrobiť 3 medy
+      get 5 nectar: zobrať 5 nektárov
+      make all honey: vyrobiť všetok med
       draw a star: nakresli hviezdu
       game has been won: hra bola vyhraná
-      draw: nakresli
+      draw: nakresliť
       draw bit: nakresliť bit
       draw a polygon: nakresli mnohouholník
       draw a shape: nakresli tvar
