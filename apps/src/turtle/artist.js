@@ -815,7 +815,7 @@ Artist.prototype.execute = function () {
 
   // If this is a free play level, save the code every time the run button is
   // clicked rather than only on finish
-  if (this.level.freePlay && this.shouldAnimate_) {
+  if (this.level.freePlay && (this.shouldAnimate_ || this.instant_)) {
     this.levelComplete = true;
     this.testResults = TestResults.FREE_PLAY;
     this.report(false);
@@ -939,7 +939,7 @@ Artist.prototype.finishExecution_ = function () {
   if (this.level.freePlay) {
     window.dispatchEvent(utils.createEvent('artistDrawingComplete'));
   } else {
-    if (this.shouldAnimate_) {
+    if (this.shouldAnimate_ || this.instant_) {
       this.checkAnswer();
     }
   }
