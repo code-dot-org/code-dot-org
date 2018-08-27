@@ -8,7 +8,8 @@ var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+var { StatsWriterPlugin } = require('webpack-stats-plugin');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -619,6 +620,9 @@ describe('entry tests', () => {
             analyzerMode: 'static',
           }),
         ] : []),
+        new StatsWriterPlugin({
+          fields: ['assetsByChunkName', 'assets'],
+        }),
       ],
       minify: minify,
       watch: watch,
