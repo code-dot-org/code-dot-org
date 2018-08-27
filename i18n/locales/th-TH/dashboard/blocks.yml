@@ -1,14 +1,28 @@
 th:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': วินาที
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': ถัดไป
+            '"prev"': ก่อนหน้า
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: ทั้งหมด
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': ถัดไป
             '"prev"': ก่อนหน้า
       Dancelab_changePropBy:
@@ -20,13 +34,16 @@ th:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': ถัดไป
             '"prev"': ก่อนหน้า
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': วินาที
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -46,22 +63,28 @@ th:
       Dancelab_mirrorSprite:
         options:
           DIRECTION:
-            '"right"': ทางขวา
-            '"left"': ซ้าย
+            '"right"': ไว้ทางขวา
+            '"left"': ไว้ทางซ้าย
       Dancelab_randomColor:
         text: สุ่มสี
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': ธรรมดา
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': ขนาด
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: ทั้งหมด
       Dancelab_spritesWhere:
         options:
           PROPERTY:
@@ -85,16 +108,16 @@ th:
           KEY:
             '"up"': ขึ้นข้างบน
             '"down"': ลงข้างล่าง
-            '"left"': ซ้าย
-            '"right"': ทางขวา
+            '"left"': ไว้ทางซ้าย
+            '"right"': ไว้ทางขวา
             '"space"': อวกาศ
       Dancelab_whileKey:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
             '"down"': ลงข้างล่าง
-            '"left"': ซ้าย
-            '"right"': ทางขวา
+            '"left"': ไว้ทางซ้าย
+            '"right"': ไว้ทางขวา
             '"space"': อวกาศ
       gamelab_changePropBy:
         options:
@@ -120,8 +143,8 @@ th:
       gamelab_mirrorSprite:
         options:
           DIRECTION:
-            '"right"': ทางขวา
-            '"left"': ซ้าย
+            '"right"': ไว้ทางขวา
+            '"left"': ไว้ทางซ้าย
       gamelab_randColor:
         text: สุ่มสี
       gamelab_randomColor:
@@ -156,30 +179,30 @@ th:
       gamelab_turn:
         options:
           DIRECTION:
-            '"right"': ทางขวา
-            '"left"': ซ้าย
+            '"right"': ไว้ทางขวา
+            '"left"': ไว้ทางซ้าย
       gamelab_whenKey:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
             '"down"': ลงข้างล่าง
-            '"left"': ซ้าย
-            '"right"': ทางขวา
+            '"left"': ไว้ทางซ้าย
+            '"right"': ไว้ทางขวา
             '"space"': อวกาศ
       gamelab_whenPressedAndReleased:
         options:
           DIR:
             "'up'": ขึ้นข้างบน
             "'down'": ลงข้างล่าง
-            "'left'": ซ้าย
-            "'right'": ทางขวา
+            "'left'": ไว้ทางซ้าย
+            "'right'": ไว้ทางขวา
       gamelab_whileKey:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
             '"down"': ลงข้างล่าง
-            '"left"': ซ้าย
-            '"right"': ทางขวา
+            '"left"': ไว้ทางซ้าย
+            '"right"': ไว้ทางขวา
             '"space"': อวกาศ
       Vanilla_randomColor:
         text: สุ่มสี
