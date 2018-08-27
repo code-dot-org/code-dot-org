@@ -2350,12 +2350,12 @@ zh-CN:
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
               name: '注意: 已弃用。教师看不到结果。计算机科学原理最终评估'
         cspexam1-mWU7ilDYM9:
-          description_short: 这一多项选择评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第1部分。
+          description_short: 这一选择题评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第1部分。
           stages:
             CS Principles Culminating Assessment Part 1:
               name: 计算机科学原理最终评估第1部分
         cspexam2-AKwgAh1ac5:
-          description_short: 这一多项选择评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第2部分。
+          description_short: 这一选择题评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第2部分。
           stages:
             CS Principles Culminating Assessment Part 2:
               name: 计算机科学原理最终评估第2部分
