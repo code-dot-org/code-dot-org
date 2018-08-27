@@ -1,14 +1,28 @@
 tr:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': saniye
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Sonraki
+            '"prev"': Önceki
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tüm
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Sonraki
             '"prev"': Önceki
       Dancelab_changePropBy:
@@ -20,13 +34,16 @@ tr:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Sonraki
             '"prev"': Önceki
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': saniye
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -57,15 +74,25 @@ tr:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Hiçbiri
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': boyut
             '"x"': x konumu
             '"y"': y konumu
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: tüm
       Dancelab_spritesWhere:
         options:
           PROPERTY:
