@@ -6,7 +6,8 @@
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "type": "Sprite",
+        "customInput": "spritePicker"
       },
       {
         "name": "MOVE",
@@ -16,7 +17,7 @@
             "0"
           ],
           [
-            "Electro",
+            "Breakdown",
             "1"
           ],
           [
@@ -26,18 +27,6 @@
           [
             "Fresh",
             "3"
-          ],
-          [
-            "Breakdown",
-            "4"
-          ],
-          [
-            "March",
-            "5"
-          ],
-          [
-            "Wave",
-            "6"
           ],
           [
             "Next",

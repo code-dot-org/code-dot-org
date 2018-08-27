@@ -70,6 +70,8 @@ export class WorkshopFilter extends React.Component {
   };
 
   state = {
+    facilitatorsLoading: true,
+    facilitators: undefined,
     organizersLoading: true,
     organizers: undefined,
     limit: limitOptions[0]
@@ -78,6 +80,7 @@ export class WorkshopFilter extends React.Component {
   componentDidMount() {
     if (this.props.permission.has(WorkshopAdmin)) {
       this.loadOrganizers();
+      this.loadFacilitators();
     }
   }
 
@@ -101,9 +104,32 @@ export class WorkshopFilter extends React.Component {
     });
   }
 
+  loadFacilitators() {
+    this.facilitatorsLoadRequest = $.ajax({
+      method: 'GET',
+      url: '/api/v1/pd/course_facilitators',
+      dataType: 'json'
+    })
+    .done(data => {
+      this.setState({
+        facilitatorsLoading: false,
+        facilitators: data
+      });
+    })
+    .fail((data) => {
+      if (data.statusText !== "abort") {
+        console.log(`Failed to load available facilitators: ${data.statusText}`);
+        alert("We're sorry, we were unable to load available facilitators. Please refresh this page to try again");
+      }
+    });
+  }
+
   componentWillUnmount() {
     if (this.organizersLoadRequest) {
       this.organizersLoadRequest.abort();
+    }
+    if (this.facilitatorsLoadRequest) {
+      this.facilitatorsLoadRequest.abort();
     }
   }
 
@@ -138,6 +164,11 @@ export class WorkshopFilter extends React.Component {
   handleSubjectChange = (selected) => {
     const subject = selected ? selected.value : null;
     this.updateLocationAndSetFilters({subject});
+  };
+
+  handleFacilitatorChange = (selected) => {
+    const facilitator_id = selected ? selected.value : null;
+    this.updateLocationAndSetFilters({facilitator_id});
   };
 
   handleOrganizerChange = (selected) => {
@@ -223,6 +254,7 @@ export class WorkshopFilter extends React.Component {
       state: urlParams.state,
       course: urlParams.course,
       subject: urlParams.subject,
+      facilitator_id: urlParams.facilitator_id,
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,
       only_attended: urlParams.only_attended,
@@ -247,6 +279,17 @@ export class WorkshopFilter extends React.Component {
     if (!_.isEmpty(newFilters)) {
       this.context.router.replace(this.getUrl(newFilters));
     }
+  }
+
+  getFacilitatorOptions() {
+    if (!this.state.facilitators) {
+      return null;
+    }
+
+    return this.state.facilitators.map(facilitator => ({
+      value: facilitator.id,
+      label: `${facilitator.name} (${facilitator.email})`
+    }));
   }
 
   getOrganizerOptions() {
@@ -339,6 +382,23 @@ export class WorkshopFilter extends React.Component {
             </Col>
           }
           <Clearfix visibleSmBlock />
+          {
+            this.props.permission.has(WorkshopAdmin) &&
+            <Col md={6}>
+              <FormGroup>
+                <ControlLabel>Facilitator</ControlLabel>
+                <Select
+                  value={parseInt(filters.facilitator_id, 10)}
+                  options={this.getFacilitatorOptions()}
+                  onChange={this.handleFacilitatorChange}
+                  isLoading={this.state.facilitatorsLoading}
+                  matchProp="label"
+                  placeholder={null}
+                  {...SelectStyleProps}
+                />
+              </FormGroup>
+            </Col>
+          }
           {
             this.props.permission.has(WorkshopAdmin) &&
             <Col md={6}>

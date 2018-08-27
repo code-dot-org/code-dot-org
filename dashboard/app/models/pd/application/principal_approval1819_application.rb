@@ -34,8 +34,6 @@
 #  index_pd_applications_on_user_id              (user_id)
 #
 
-require 'cdo/shared_constants/pd/principal_approval1819_application_constants'
-
 module Pd::Application
   class PrincipalApproval1819Application < ApplicationBase
     include PrincipalApproval1819ApplicationConstants

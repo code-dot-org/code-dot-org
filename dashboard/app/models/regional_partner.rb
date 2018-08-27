@@ -43,6 +43,9 @@ class RegionalPartner < ActiveRecord::Base
   serialized_attrs %w(
     cohort_capacity_csd
     cohort_capacity_csp
+    apps_open_date
+    apps_close_date
+    principal_approval
   )
 
   # Upcoming and not ended
@@ -109,5 +112,38 @@ class RegionalPartner < ActiveRecord::Base
       }
       RegionalPartner.where(params).first_or_create!
     end
+  end
+
+  def get_apps_date(key:, course: nil, role: nil)
+    if key
+      date_string =
+        if key.is_a? Hash
+          if key[course]
+            key[course].is_a?(Hash) ? key[course][role] : key[course]
+          elsif key[role]
+            key[role]
+          else
+            raise "No date found for either course #{course || 'nil'} or role #{role || 'nil'} for regional partner id #{id}"
+          end
+        else
+          key
+        end
+
+      if date_string
+        Date.parse date_string
+      else
+        raise "No date found for either course #{course || 'nil'} or role #{role || 'nil'} for regional partner id #{id}"
+      end
+    else
+      raise "No date set for #{key} for regional partner id #{id}"
+    end
+  end
+
+  def get_apps_open_date(course: nil, role: nil)
+    get_apps_date(key: apps_open_date, course: course, role: role)
+  end
+
+  def get_apps_close_date(course: nil, role: nil)
+    get_apps_date(key: apps_close_date, course: course, role: role)
   end
 end

@@ -61,7 +61,6 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    showVersionMenu: PropTypes.bool,
   };
 
   /**
@@ -228,7 +227,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const { assignments, dropdownStyle, disabled, showVersionMenu } = this.props;
+    const { assignments, dropdownStyle, disabled } = this.props;
     let { assignmentFamilies } = this.props;
     const { selectedPrimaryId, selectedSecondaryId, selectedAssignmentFamily, versions } = this.state;
 
@@ -282,7 +281,6 @@ export default class AssignmentSelector extends Component {
             versions={versions}
             onChangeVersion={this.onChangeVersion}
             disabled={disabled}
-            showVersionMenu={showVersionMenu}
           />
         )}
         {secondaryOptions && (

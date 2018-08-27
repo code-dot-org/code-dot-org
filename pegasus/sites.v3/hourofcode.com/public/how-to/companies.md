@@ -14,11 +14,13 @@ nav: how_to_nav
 ## Connect with local classrooms and volunteer for the Hour of Code
 Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-**[Sign up](<%= codeorg_url('/volunteer') %>) to volunteer**.
+<a href=codeorg_url("/volunteer"><button>Sign up to volunteer!</button>
+<br>
+<br>
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
-## Additional ways companies can support the Hour of Code:
+## Additional ways companies can support the Hour of Code
 
 - Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).

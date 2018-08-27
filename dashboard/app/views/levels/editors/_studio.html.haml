@@ -13,9 +13,8 @@
   %p Number of 'ticks' to simulate before marking the level as failed. Default is unlimited.  Step speed (above) controls the length of a tick.
   = f.number_field :timeout_failure_tick
 .field
-  = f.label :timeout_after_when_run, 'Timeout after all blocks run'
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :timeout_after_when_run, description: "Timeout after all blocks run"}
   %p When set, if the only event block that had children is when_run, and those commands are finished executing, don't wait for the timeout. If we have additional event blocks that DO have children, we keeping running until timeoutFailureTick or a success/failure condition is met
-  = boolean_check_box f, :timeout_after_when_run
 .field
   = f.label :custom_game_type, 'Custom game type'
   %p Used to tell playlab we want to run some of our custom onTick logic.
@@ -38,17 +37,13 @@
     (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
   = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
 .field
-  = f.label :edge_collisions, 'Edge collisions'
-  = boolean_check_box f, :edge_collisions
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :edge_collisions, description: "Edge collisions"}
 .field
-  = f.label :projectile_collisions, 'Projectile collisions'
-  = boolean_check_box f, :projectile_collisions
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :projectile_collisions, description: "Projectile collisions"}
 .field
-  = f.label :allow_sprites_outside_playspace, 'Allow sprites outside playspace'
-  = boolean_check_box f, :allow_sprites_outside_playspace
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :allow_sprites_outside_playspace, description: "Allow sprites outside playspace"}
 .field
-  = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
-  = boolean_check_box f, :sprites_hidden_to_start
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :sprites_hidden_to_start, description: "Sprites hidden to start"}
 .field
   = f.label :remove_items_when_actor_collides, 'Remove an item (e.g. a stormtrooper) when the actor collides with it'
   = boolean_check_box f, :remove_items_when_actor_collides

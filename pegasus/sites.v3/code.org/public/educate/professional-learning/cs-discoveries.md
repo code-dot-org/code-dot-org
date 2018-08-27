@@ -15,7 +15,7 @@ theme: responsive
 
 Our CS Discoveries Professional Learning program offers year round support for teachers. You don't need any prior computer science experience to get started! 
 
-The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csp) and meet other teachers from your area. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). ​Print a <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">flyer</a> to share with teachers or administrators at your school. 
+The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd) and meet other teachers from your area. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). ​Print a <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">flyer</a> to share with teachers or administrators at your school. 
 
 **Applications for the 2019-20 will open after October, 2018.** Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
 

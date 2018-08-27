@@ -8,6 +8,15 @@ experimental:
 version: 2
 jobs:
   build:
+    # No Circle builds on pipeline branches because we depend on
+    # our own infrastructure for these parts of our deploy process.
+    branches:
+      ignore:
+        - production
+        - test
+        - levelbuilder
+        - /dtp_candidate_.*/
+        - /dtl_candidate_.*/
     parallelism: 2
     docker:
       - image: wjordan/code-dot-org:0.5
@@ -200,10 +209,6 @@ jobs:
       - store_artifacts:
           path: /home/circleci/project/artifacts
           destination: artifacts
-
-      - store_artifacts:
-          path: /home/circleci/project/apps/coverage
-          destination: coverage
 
       - store_artifacts:
           path: /home/circleci/project/apps/log

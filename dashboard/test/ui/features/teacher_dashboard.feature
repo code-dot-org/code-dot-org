@@ -57,8 +57,8 @@ Feature: Using the teacher dashboard
 
     # Assign a script with a survey but no assessment
     When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home?enableExperiments=versionMenu"
-    And I click selector ".ui-test-section-dropdown"
+    And I am on "http://studio.code.org/home"
+    And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-assignment-family" is visible
     And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
@@ -67,6 +67,7 @@ Feature: Using the teacher dashboard
     And I click selector ".assignment-version-title:contains('17-'18)" once I see it
     And I select the "CSP Student Post-Course Survey" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
+    And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
     When I click selector "a:contains('New Section')" once I see it
@@ -105,8 +106,8 @@ Feature: Using the teacher dashboard
 
     # Assign a script with an unlocked survey
     When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home?enableExperiments=versionMenu"
-    And I click selector ".ui-test-section-dropdown"
+    And I am on "http://studio.code.org/home"
+    And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-assignment-family" is visible
     And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
@@ -115,6 +116,7 @@ Feature: Using the teacher dashboard
     And I click selector ".assignment-version-title:contains('17-'18)" once I see it
     And I select the "CSP Student Post-Course Survey" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
+    And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
     When I click selector "a:contains('New Section')" once I see it

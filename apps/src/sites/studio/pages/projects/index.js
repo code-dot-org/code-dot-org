@@ -93,6 +93,7 @@ $(document).ready(() => {
             <PersonalProjectsTable
               canShare={projectsData.canShare}
               publishMethod={publishMethods.CHEVRON}
+              userId={projectsData.userId}
             />
           </Provider>,
           document.getElementById('react-my-projects')
@@ -113,6 +114,7 @@ $(document).ready(() => {
             <PersonalProjectsTable
               canShare={projectsData.canShare}
               publishMethod={publishMethods.BUTTON}
+              userId={projectsData.userId}
             />
           </Provider>,
           document.getElementById('react-my-projects')
