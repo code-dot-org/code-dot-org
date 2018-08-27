@@ -1589,6 +1589,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
     assert_redirected_to "/s/cats1/stage/1/puzzle/1"
 
+    # next redirects to latest version in a script family
+    get :next, params: {script_id: 'cats'}
+    assert_redirected_to "/s/cats2/next"
+
     # do not redirect within script family if the requested script exists
     cats = create :script, name: 'cats'
     create :script_level, script: cats

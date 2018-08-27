@@ -149,16 +149,30 @@ describe('ManageLinkedAccounts', () => {
     expect(cleverConnectButton).to.have.attr('disabled');
   });
 
-  it('disables disconnecting from the user\'s last authentication option', () => {
+  it('disables disconnecting from the user\'s last authentication option if the user does not have a password', () => {
     const authOptions = {1: {id: 1, credentialType: 'facebook'}};
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
+        userHasPassword={false}
         authenticationOptions={authOptions}
       />
     );
     const facebookConnectButton = wrapper.find('BootstrapButton').at(3);
     expect(facebookConnectButton).to.have.attr('disabled');
+  });
+
+  it('does not disable disconnecting from the user\'s last authentication option if the user has a password', () => {
+    const authOptions = {1: {id: 1, credentialType: 'facebook'}};
+    const wrapper = mount(
+      <ManageLinkedAccounts
+        {...DEFAULT_PROPS}
+        userHasPassword={true}
+        authenticationOptions={authOptions}
+      />
+    );
+    const facebookConnectButton = wrapper.find('BootstrapButton').at(3);
+    expect(facebookConnectButton).to.not.have.attr('disabled');
   });
 
   it('disables disconnecting from the user\'s last oauth authentication option if user doesn\'t have a password', () => {
