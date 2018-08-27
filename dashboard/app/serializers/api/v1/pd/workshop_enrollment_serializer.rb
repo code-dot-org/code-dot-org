@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :email, :district_name, :school, :user_id, :attended, :pre_workshop_survey
+  attributes :id, :first_name, :last_name, :email, :district_name, :school, :role, :grades_teaching, :user_id, :attended, :pre_workshop_survey
 
   def user_id
     user = object.resolve_user
