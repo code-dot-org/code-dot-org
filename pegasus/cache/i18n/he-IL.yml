@@ -510,7 +510,7 @@ he-IL:
   dashboard_sections_jumbotron_instruction: צור חלקים חדשים והוסף תלמידים אליהם. חלקים
     עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה שלהם ולנהל
     את המשתמשים שלהם.
-  dashboard_sections_table_section: סעיף
+  dashboard_sections_table_section: קבוצה
   dashboard_sections_table_secret: סוג התחברות
   dashboard_sections_table_grade: כיתה
   dashboard_sections_table_course: קורס

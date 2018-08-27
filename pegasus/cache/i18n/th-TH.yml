@@ -110,7 +110,7 @@ th-TH:
   third_party_platform_all: 'แพลตฟอร์ม: เว็บ iPad และ Android'
   third_party_platform_mobile: 'แพลตฟอร์ม: iPad และ Android'
   third_party_platform_web: 'แพลตฟอร์ม: เว็บ'
-  third_party_price_varies: 'ราคา: แตกต่างกันขึ้นอยู่กับแพลน'
+  third_party_price_varies: 'ราคา: แตกต่างกันขึ้นอยู่กับแพลนอะไร'
   third_party_price_free: 'ราคา: ฟรี'
   third_party_price_299: 'ราคา: $2.99 ต่อการดาวน์โหลด 1 ครั้ง'
   third_party_price_individual: 'ราคารายบุคคล : ทดลองใช้ฟรี และ $25 ต่อเดือน'
@@ -378,7 +378,7 @@ th-TH:
   playlab_classic_title: คลาสสิค
   playlab_gumball_title: โลกมหัศจรรย์ของ Gumball
   playlab_iceage_title: Ice Age - เร็วๆ นี้
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title_live: ยุคน้ำแข็ง (Ice Age)
   starwars_subtitle: การสร้าง Galaxy ด้วยโค้ด
   starwars_javascript_title: จาวาสคริปต์
   starwars_javascript_description: ใช้การลากวางบล็อคและจาวาสคริปต์
@@ -399,7 +399,7 @@ th-TH:
   minecraft_designer: นักออกแบบ Minecraft
   minecraft_adventurer: การผจญภัยในไมน์คราฟท์
   minecraft_tutorials: สอนชั่วโมงแห่งโค้ดด้วย Minecraft
-  minecraft_specs: หลายภาษา | เบราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2 +
+  minecraft_specs: หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+
   minecraft_agent_description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
     มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ
   minecraft_agent_button: เริ่มต้น
@@ -553,7 +553,10 @@ th-TH:
   dashboard_navigation_view_stats: สถิติ
   dashboard_navigation_section: กลุ่ม %{section_name}
   dashboard_navigation_student: นักเรียน %{student_name}
-  dashboard_progress_not_completed: ไม่สมบูรณ์
+  dashboard_progress_not_started: ยังไม่ได้เริ่ม
+  dashboard_progress_not_completed: ไม่เสร็จสมบูรณ์
+  dashboard_progress_completed_too_many_blocks: เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป
+  dashboard_progress_completed_perfect: เสร็จ สมบูรณ์
   dashboard_progress_view: ดูความคืบหน้า
   dashboard_sections_new_section: กลุ่มใหม่
   dashboard_sections_jumbotron_instruction: สร้างกลุ่มใหม่ และเพิ่มนักเรียนเข้ากลุ่ม
@@ -579,7 +582,7 @@ th-TH:
   dashboard_students_progress: ความคืบหน้า
   dashboard_students_male: ชาย
   dashboard_students_female: หญิง
-  dashboard_students_completed_levels: ระดับที่สำเร็จ
+  dashboard_students_completed_levels: ระดับความเสร็จสมบูรณ์
   dashboard_students_total_lines: บรรทัดของโค้ด
   dashboard_students_share_section: แชร์หน้าล็อกอินของกลุ่มนี้ให้แก่นักเรียน
   dashboard_students_print_info: พิมพ์ข้อมูลสำหรับใช้ล็อกอินให้แก่นักเรียน
@@ -633,8 +636,9 @@ th-TH:
   dashboard_correctness_unsubmitted: ยังไม่ส่ง
   dashboard_correctness_incorrect: ไม่ถูกต้อง
   dashboard_submission_submitted: ส่งแล้ว
-  dashboard_submission_in_progress: อยู่ในระหว่างความคืบหน้า
+  dashboard_submission_in_progress: อยู่ระหว่างการดำเนินการ
   dashboard_status: สถานะ
+  dashboard_multi_count: "# คำถามแบบปรนัย"
   stats_hoc_2013_heading: 'สถิติที่น่าทึ่งของ Hour of Code.  ในหนึ่งสัปดาห์ '
   stats_hoc_2013_image_alt: 'สถิติจาก Hour of Code ปี 2013 '
   dashboard_teacher: ครู
@@ -669,6 +673,7 @@ th-TH:
   carousel_heading_unplugged: ไม่มีอุปกรณ์ หรือ อินเทอร์เน็ตใช่หรือไม่? ให้ลองเรียน
     วิทยาการคอมพิวเตอร์สำหรับผู้ไม่มีคอมพิวเตอร์
   carousel_heading_devices: บทเรียนแอปพลิเคชันสำหรับโทรศัพท์มือถือและแท็บเล็ต
+  carousel_heading_beyond_devices: แอปสำหรับโทรศัพท์มือถือและแท็ปเล็ต
   carousel_heading_languages: บทเรียนภาษาโปรแกรมอื่น ๆ
   carousel_heading_apps_games: สร้างแอปหรือเกม ของคุณเอง
   carousel_heading_university: หลักสูตรมหาวิทยาลัยออนไลน์
@@ -732,7 +737,7 @@ th-TH:
   coursee_name: คอร์ส E
   coursef-draft_name: คอร์ส F
   coursef_name: คอร์ส F
-  iceage_name: Ice Age
+  iceage_name: ยุคน้ำแข็ง (Ice Age)
   starwarsblocks_name: สตาร์วอร์ส (บล็อก)
   math_category_name: คำนวณ
   hoc_category_name: ช่วงเวลาของ Code
@@ -1158,6 +1163,7 @@ th-TH:
   header_my_dashboard: แดชบอร์ดของฉัน
   header_courses: คอร์ส
   header_project_gallery: โปรเจกต์
+  header_professional_learning: การเรียนรู้อย่างมืออาชีพ
   header_educate_hoc: ช่วงเวลาของ Code
   header_stats: สถิติ
   header_help_us: ช่วยเรา
