@@ -26,6 +26,7 @@ class PersonalProjectsNameCell extends Component {
   render() {
     const {projectId, projectType, projectName, updatedName, isEditing} = this.props;
     const url = `/projects/${projectType}/${projectId}/edit`;
+
     return (
       <div>
         {!isEditing &&
@@ -33,7 +34,7 @@ class PersonalProjectsNameCell extends Component {
             style={tableLayoutStyles.link}
             href={url}
             target="_blank"
-            className={projectName}
+            className="ui-projects-table-project-name"
           >
             {projectName}
           </a>

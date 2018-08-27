@@ -16,4 +16,4 @@ Feature: Big Game Remix
     And check that the URL contains "http://studio.code.org/projects/algebra_game"
     Then I am on "http://studio.code.org/projects"
     And I wait until element ".ui-personal-projects-table" is visible
-    And there is a project in the table named "Remix Big Game Template"
+    And the first project in the table is named "Remix: Big Game Template"
