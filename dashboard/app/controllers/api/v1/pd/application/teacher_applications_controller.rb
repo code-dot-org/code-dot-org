@@ -16,7 +16,10 @@ module Api::V1::Pd::Application
       @application.update_user_school_info!
 
       ::Pd::Application::Teacher1819ApplicationMailer.confirmation(@application).deliver_now
-      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(@application).deliver_now
+
+      unless @application.regional_partner&.principal_approval == RegionalPartner::SELECTIVE_APPROVAL
+        ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(@application).deliver_now
+      end
     end
   end
 end

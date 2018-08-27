@@ -52,6 +52,19 @@ module Api::V1::Pd::Application
       )
     end
 
+    test 'do not send principal approval email on successful create' do
+      Pd::Application::Teacher1819ApplicationMailer.expects(:confirmation).
+        with(instance_of(Pd::Application::Teacher1819Application)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+
+      Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval).never
+
+      sign_in @applicant
+
+      put :create, params: @test_params
+      assert_response :success
+    end
+
     test 'does not send confirmation mail on unsuccessful create' do
       Pd::Application::Teacher1819ApplicationMailer.expects(:confirmation).never
       Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval).never
