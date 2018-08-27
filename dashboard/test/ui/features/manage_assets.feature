@@ -33,6 +33,7 @@ Feature: Manage Assets
     And element ".assetThumbnail" is visible
     And element ".fa-play-circle" is visible
 
+  @no_safari
   Scenario: The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
     Given I am a student
     And I start a new Game Lab project

@@ -14,7 +14,7 @@ module Metrics
   # @param name [String] The name of the metric.
   # @param metadata [String] Data relevant to the specific metric. For example, the commit hash for DTT metrics.
   # @param value [Float] Numerical value relevant to the specific metric. See constants above for examples.
-  # @param timestamp [Datetime] Only used if we want to explicitly set the created_at value for a particular metric.
+  # @param timestamp [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
   def self.write_metric(name, metadata, value, timestamp=nil)
     if DEVINTERNAL_DB
       dataset = DEVINTERNAL_DB[:metrics]
@@ -24,6 +24,21 @@ module Metrics
     data = {name: name, metadata: metadata, value: value}
     data[:created_at] = timestamp if timestamp
     dataset.insert(data)
+  end
+
+  # Insert multiple new rows into the metrics table.
+  # @param rows [Hash[]] The rows to insert
+  # @param row[:name] [String] The name of the metric.
+  # @param row[:metadata] [String] Data relevant to the specific metric. For example, the commit hash for DTT metrics.
+  # @param row[:value] [Float] Numerical value relevant to the specific metric. See constants above for examples.
+  # @param row[:timestamp] [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
+  def self.write_batch_metric(rows)
+    if DEVINTERNAL_DB
+      dataset = DEVINTERNAL_DB[:metrics]
+    else
+      raise "devinternal_db_writer not defined"
+    end
+    dataset.multi_insert(rows)
   end
 end
 
@@ -38,4 +53,6 @@ end
 # |                   |                             |  1 - if manual           |
 # |----------------------------------------------------------------------------|
 # |    dtt_red        |        commit hash          |  1 - always manual       |
+# |----------------------------------------------------------------------------|
+# |    bundle_size    |        bundle filename      |  size in bytes           |
 # |----------------------------------------------------------------------------|

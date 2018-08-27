@@ -35,7 +35,6 @@
 #
 
 require 'state_abbr'
-require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 
 module Pd::Application
   class Facilitator1819Application < WorkshopAutoenrolledApplication
