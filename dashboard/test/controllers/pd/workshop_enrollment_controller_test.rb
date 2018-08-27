@@ -34,12 +34,16 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     get :new, params: {workshop_id: @workshop.id}
     assert_response :success
     assert_template :new
+    # Should see this message if not logged in
+    assert_select 'span.info-box-message', text: 'Already have a Code.org account?'
   end
 
   test 'logged-in users can enroll' do
     sign_in @teacher
     get :new, params: {workshop_id: @workshop.id}
     assert_template :new
+    # Should NOT see this message if logged in
+    assert_select 'span.info-box-message', count: 0
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -77,8 +81,135 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :new
   end
 
+  test 'new action for closed workshops renders closed view' do
+    @workshop.start!
+    @workshop.end!
+    get :new, params: {workshop_id: @workshop.id}
+    assert_template :closed
+  end
+
+  test 'new action for full workshops renders full view' do
+    @workshop.capacity = 1
+    @workshop.save!
+    get :new, params: {workshop_id: @workshop.id}
+    assert_template :full
+  end
+
   test 'unknown workshop id responds with 404' do
     get :new, params: {workshop_id: 'nonsense'}
+    assert_response 404
+  end
+
+  test 'enroll post route' do
+    assert_routing(
+      {path: "/pd/workshops/#{@workshop.id}/enroll", method: :post},
+      {controller: 'pd/workshop_enrollment', action: 'create', workshop_id: @workshop.id.to_s}
+    )
+  end
+
+  test 'enrollments can be created' do
+    assert_creates(Pd::Enrollment) do
+      post :create, params: {
+        workshop_id: @workshop.id,
+        pd_enrollment: enrollment_test_params,
+        school_info: school_info_params
+      }
+    end
+    enrollment = Pd::Enrollment.last
+    refute_nil enrollment.code
+    assert_redirected_to action: :thanks, code: enrollment.code
+  end
+
+  test 'creating a duplicate enrollment renders duplicate view' do
+    params = enrollment_test_params.merge(
+      {
+        first_name: @existing_enrollment.first_name,
+        last_name: @existing_enrollment.last_name,
+        email: @existing_enrollment.email,
+        confirmation_email: @existing_enrollment.email,
+      }
+    )
+    post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
+    assert_template :duplicate
+  end
+
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'creating an enrollment with email match from organizer renders own view' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @workshop_organizer.name,
+        email: @workshop_organizer.email,
+        confirmation_email: @workshop_organizer.email,
+      }
+    )
+    post :create, params: {workshop_id: @organizer_workshop.id, pd_enrollment: params}
+    assert_template :own
+  end
+
+  test 'creating an enrollment with email match from program manager organizer renders own view' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @organizer.name,
+        email: @organizer.email,
+        confirmation_email: @organizer.email,
+      }
+    )
+    post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
+    assert_template :own
+  end
+
+  test 'creating an enrollment with email match from facilitator renders own view' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @facilitator.name,
+        email: @facilitator.email,
+        confirmation_email: @facilitator.email,
+      }
+    )
+    post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
+    assert_template :own
+  end
+
+  test 'creating an enrollment on a closed workshop renders new view' do
+    @workshop.start!
+    @workshop.end!
+    post :create, params: {
+      workshop_id: @workshop.id,
+      pd_enrollment: enrollment_test_params
+    }
+    assert_template :closed
+  end
+
+  test 'creating an enrollment on a full workshop renders full view' do
+    @workshop.capacity = 1
+    @workshop.save!
+    post :create, params: {
+      workshop_id: @workshop.id,
+      pd_enrollment: enrollment_test_params
+    }
+    assert_template :full
+  end
+
+  test 'creating an enrollment with errors renders new view' do
+    params = enrollment_test_params.merge(
+      {
+        first_name: '',
+        confirmation_email: nil
+      }
+    )
+    post :create, params: {
+      workshop_id: @workshop.id,
+      pd_enrollment: params,
+      school_info: school_info_params
+    }
+    assert_template :new
+  end
+
+  test 'creating an enrollment on an unknown workshop id returns 404' do
+    post :create, params: {
+      workshop_id: 'nonsense',
+      pd_enrollment: enrollment_test_params
+    }
     assert_response 404
   end
 

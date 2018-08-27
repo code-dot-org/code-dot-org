@@ -17,7 +17,6 @@
 #  completed_survey_id :integer
 #  school_info_id      :integer
 #  deleted_at          :datetime
-#  properties          :text(65535)
 #
 # Indexes
 #
@@ -34,7 +33,6 @@ class Pd::Enrollment < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   include Pd::SharedWorkshopConstants
   include Pd::WorkshopSurveyConstants
-  include SerializedProperties
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -66,11 +64,6 @@ class Pd::Enrollment < ActiveRecord::Base
   before_validation :autoupdate_user_field
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
   after_save :authorize_teacher_account
-
-  serialized_attrs %w(
-    role
-    grades_teaching
-  )
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)

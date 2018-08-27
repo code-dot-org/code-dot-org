@@ -95,3 +95,15 @@ Then /^I set the project version interval to (\d+) seconds?$/ do |seconds|
   code = "window.dashboard.project.__TestInterface.setSourceVersionInterval(#{seconds});"
   @browser.execute_script(code)
 end
+
+Then /^the project table contains ([\d]+) (?:row|rows)$/ do |expected_num|
+  actual_num = @browser.execute_script("return $('.ui-personal-projects-row').length;")
+  expect(actual_num).to eq(expected_num.to_i)
+end
+
+Then /^the first project in the table is named "([^"]*)"$/ do |expected_name|
+  steps %{
+    And I wait until element ".ui-projects-table-project-name" is visible
+    And I wait until the first ".ui-projects-table-project-name" contains text "#{expected_name}"
+  }
+end
