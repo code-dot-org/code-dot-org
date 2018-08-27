@@ -508,7 +508,7 @@ class User < ActiveRecord::Base
 
   def normalize_email
     return unless email.present?
-    self.email = migrated? ? '' : email.strip.downcase
+    self.email = email.strip.downcase
   end
 
   def self.hash_email(email)
@@ -517,7 +517,7 @@ class User < ActiveRecord::Base
 
   def hash_email
     return unless email.present?
-    self.hashed_email = migrated? ? nil : User.hash_email(email)
+    self.hashed_email = User.hash_email(email)
   end
 
   # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
