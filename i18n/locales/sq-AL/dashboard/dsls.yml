@@ -2,16 +2,258 @@ sq:
   data:
     external:
       Begin planning your project:
+        description here: përshkrimi këtu
         title: titull
+      Begin planning your project_2018:
+        description here: përshkrimi këtu
       Prepare for your presentation:
+        description here: përshkrimi këtu
         title: titull
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Lidh kombinimin e figurave me lëvizjet e kërcimit.
+        Matching: Lidhje
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Lidhje
+        Use the key to match each code to its letter: Përdor çelsin të koordinosh çdo kod me shkronjat e tij
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Lidhni rrjetin me programin.
+        Matching: Lidhje
       2-3 Maze Match 2:
         Instructions: Udhëzimet
+        Match the puzzles to the blocks: Koordino puzzle-at tek blloqet
+        Maze Match: Koordinimi i Labirintit
+      2-3 artist loops match 1:
+        Match the loop to the shape: Lidh ciklin me formën
+      2-3 artist match 1:
+        Artist Matching: Koordinimi i Artistit
+        Match the shape with the blocks that complete it.: Koordino format me blloqet që e përfundojnë atë.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Koordino puzzle-at tek blloqet
+        Maze Match One: Koordinimi i labirintit me një
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Shto rrotullimin e Lojtarit 1 në pikët totale</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Krahaso pikët e lojtarit për të parë kush fiton</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Lojtari 1 rrotullohet vdes</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Vendos Lojtarin 1 të shënojë te 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Koordino hapat në lojën Dice Race në rendin që duhen shfaqur në algoritëm.
+        Matching: Lidhje
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Rrotat/anët: 2<br/>Dritaret/anët: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Rrotat/anët: 2<br/>Dritaret/anët: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Rrotat/anët: 2<br/>Dritaret/anët: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Rrotat/anët: 2<br/>Dritaret/anët: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Secila nga këto automjete ka qënë ndarë në pjesë më të vogla. Bashko çdo mjet me atë të listës së ndarë.
+        Matching: Lidhje
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Koordino çdo program me funksionin që kryen, duke përdorur grupin e njohurive.
+        Matching: Lidhje
       4-5 maze match 1:
         Instructions: Udhëzimet
+        Match the puzzles to the blocks: Koordino puzzle-at tek blloqet
+        Maze Match: Koordinimi i Labirintit
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Koordino format bazuar në llojë.
+        Matching: Lidhje
+      K-1 Bee Loops Match 1:
+        Match the blocks: Lidh blloqet
+        Matching: Lidhje
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Lidh kombinimin e figurave me lëvizjet e kërcimit.
+        Matching: Lidhje
       K-1 Maze Match 1:
         Instructions: Udhëzimet
+        Match the puzzles and blocks: Koordino puzzle-at dhe blloqet
+        Matching: Lidhje
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Zgjidh një algoritëm për figurën që jepet.
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Fillo me një katror<br/>Vendos një paralelogram mbi katrorin<br/>Vendos një trekëndësh djathtas paralelogramit
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Fillo me një katror<br/>Vendos një trekëndësh mbi katrorin<br/>Vendos një trekëndësh poshtë katrorit
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Fillo me një katror<br/>Vendos një trekendësh poshtë katrorit<br/>Vendos një paralelogram djathtas trekëndesh
+        0: '? Fillo me një katror<br/>Vendos një trekëndësh djathtas katrorit<br/>Vendos një paralelogram poshtë katrorit<br/>Vendos trekëndorin djathtas paralelogramit'
+        1: ': Fillo me një katror<br/>Vendos një trekëndor djathtas katrorit<br/>Vendos një paralelogram poshtë katrorit<br/>Vendos trekëndor djathtas paralelogramit'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Fillo me një trekëndësh<br/>Vendos një katror poshtë trekëndëshit<br/>Vendos një trekëndësh tjetër poshtë katrorit
+        Which image does <em>not</em> follow this algorithm?: Cila figurë <em>nuk</em> e ndjek këtë algoritëm?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Duke u bazuar në rregullat e lojës, cili grup kartash është shënuar në mënyrë të saktë?
+        Multiple Choice: Zgjedhje e Shumëfishtë
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Si do ta thjeshtësoje këtë sekuencë me cikle?
+        Multiple Choice: Zgjedhje e Shumëfishtë
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which program makes this image?: Cili program e bën këtë figurë?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Zgjedhja e Shumëfishtë e Labirintit
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which image-program combo does not contain mistakes?: Cili kombinim figurë-program nuk ka gabime?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Funksionet e Artistit Një Zgjedhje me Shumë Mundësi
+        Pick the correct blocks to draw this image using the given functions: Zgjidh blloqet e sakta për të vizatuar këtë imazh duke përdorur funksionet e dhënë
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Ciklet e Artistit Zgjedhje me Shumë Mundësi
+        Which shape is made by this loop?: Cila formë bëhet nga ky cikël?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Ciklet e Artistit Zgjedhje me Shumë Mundësi
+        Which shape is made by this program?: Cila formë bëhet nga ky program?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Cili nga krahasimet e mëposhtme është i vërtetë?
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Zgjidh blloqet më të mira.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Ciklet e Bletëve Një Zgjedhje me Shumë Mundësi
+        Which blocks collect all of the nectar?: Cilat bllloqe e mbledhin të gjithë nektarin?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Maze me Zgjedhje Të Shumëfishtë Një
+        Which set of blocks is the correct answer?: Cili grup blloqesh është i saktë?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Biskota të pjekura
+        Banana: Banane
+        Brushing your teeth: Larja e dhëmbëve
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Shopping from a grocery list: Pazar nga një listë ushqimesh
+        Which one of these items is hardest to describe an algorithm for?: Cili nga këto produkte është më i vështiri për shprehur në një algoritëm?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene është një qytet ______.
+        0: '? Këtu jepen 3 fjali. Cila nga templatet më poshtë përmbledh saktë në mënyrë që të treja fjalitë të përshtatin të njëjtin model si template?'
+        1: ': Këtu jepen tre fjali. Cila nga template-t e mëposhtme përmbledh saktë, në mënyrë që të treja fjalitë të përshtatin të njëjtin model si template?'
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Seattle _____ a _____ _____.: Seattle____ një ___ ____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle është një qytet i madh. <br/> Eugene është një qytet mesatar <br/> Hillview është qytet i vogël.
+        _____ is _____ a _____.: ____ është ____ një ____.
+        _____ is a _____ city.: ____është një _____qytet.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which of these pictures best represents crowdsourcing?: Cila nga këto figura paraqet më mirë crowdsourcing?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Krehja e flokëve
+        Cleaning your room: Pastrimi i dhomës
+        Eating your dessert: Ngrënja e embëlsirës
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Washing your face: Larja e fytyrës
+        Which one of these activities would be best for practicing crowdsourcing?: Cila nga këto aktivitete do të ishte më mirë për të praktikuar crowdsourcing?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which piece of information listed below is okay to share on the internet?: Cili nga informacionet e listuara më poshtë nuk ka problem për ta shpërndarë në internet?
+        Your address: Adresa juaj
+        Your birthday: Ditëlindja juaj
+        Your favorite food: Ushqimi juaj i preferuar
+        Your parent's credit card number: Numri i kartës së kreditit të prindërve tuaj
+      4-5 Internet Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Kur përpiqesh te rregjistrohesh në code.org, cila adresë IP të çon në DNS-në më të preferuar?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Nëse DNS të ka dërguar ty tek faqja me adresë IP 100.42.50.110, në cilin website je?
+        Multiple Choice: Zgjedhje e Shumëfishtë
+      4-5 Songwriting Multi 1:
+        0: '? Miza është në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë,<br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë, <br/>Shoo. fluturo, shoo, <br/>Kalo te Lou im, i dashur.'
+        1: ': Miza është brenda në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është brenda në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë, <br/>Shoo, fluturo, shoo, <br/>Kalo te Lou im, i dashuri im.'
+        Lou, Lou, skip to my Lou,: Lou, lou, kalo te Lou im,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.
+        2: '? Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.<br/><br/><p> Miza është në dhallë, <br/> Shoo. fluturo, shoo,'
+        3: ': Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.<br/><br/><p> Miza është në dhallë, <br/> Shoo. fluturo, shoo,'
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        4: ë? Cila është pjesa më e madhe e kësaj kënge që ta përcaktosh si refren, në mënyrë që refreni të përsëritet ekzaktësisht çdo herë që thërritet?
+        5: ': Cila është pjesa më e madhe e kësaj kënge që ta përcaktosh si refren, në mënyrë që refreni të përsëritet ekzaktësisht çdo herë që thërritet?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Cili nga programet e mëposhtme <em>nuk</em> bën sekuencën e saktë si Programi 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Ciklet e Artistit Zgjedhje me Shumë Mundësi
+        Which blocks will create the design?: Cilat blloqe do të krijonin këtë dizajn?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Zgjedhjet e Shumëfishta të Artistit
+        Which blocks draw a rectangle with a perimeter of 100?: Cili bllok vizaton një drejtkëndësh me perimetër 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Zgjedhjet e Shumëfishta të Artistit
+        Which drawing is symmetric?: Cili vizatim është simetrik?
+      4-5 bee conditionals multi 1:
+        0: '? Një lule lejla mund të ketë 3, 2 ose 1 nektarë, por ti nuk e di se sa. Cili bllok kontrollon në mënyrë të saktë dhe mbledh gjithë nektarin nga lulja lejla?'
+        1: ': Një lule lejla mund të ketë 3, 2 ose 1 nektarë, por ti nuk e di se sa. Cili bllok kontrollon në mënyrë të saktë dhe mbledh gjithë nektarin nga lulja lejla?'
+        Bee Conditionals Multiple Choice: Kushtet Bletë me Zgjedhje të Shumëfishtë
+        Choose the best blocks.: Zgjidh blloqet më të mira.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Bletë Rregullim Gabimesh Zgjedhje të Shumëfishtë
+        Which version of the function will work?: Cili version i funksionit do funksionojë?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Ciklet Bletë me Mundësi të Shumëfishtë Zgjedhjeje
+        Which blocks will solve the puzzle?: Cili nga blloqet do zgjidhë formuesin?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Kushtet Maze me Zgjedhje të Shumëfishtë
+        Which blocks solve the puzzle?: Cili bllok zgjidh puzzle-in?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Zgjedhja e Shumëfishtë e Labirintit
+        Which blocks solve the puzzle?: Cili bllok zgjidh puzzle-in?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which blocks solve this puzzle?: Cili bllok zgjidh këtë puzzle?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which blocks draw the square?: Cili nga blloqet vizatoi katrorin?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Sa nektarë ka këtu?
+        Multiple Choice: Zgjedhje e Shumëfishtë
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Sa nektarë ka këtu?
+        Multiple Choice: Zgjedhje e Shumëfishtë
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Cila kafshë ka gjurmët dixhitale, që e bëjnë atë <të fortë>më të pasigurtë</të fortë>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Si do ta thjeshtësoje këtë sekuencë me cikle?
+        Multiple Choice: Zgjedhje e Shumëfishtë
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which arrow gets the Flurb to the treasure?: Cila shigjetë çon Flurb-in tek thesari?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which information should you <strong>not</strong> share online?: Cilin informacion <strong>nuk</strong> duhet shpërndarë online?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which choice should be the final block?: Cila zgjedhje duhet të jetë blloku përfundimtar?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which repeat block is the same?: Cili bllok "repeat" është i njëjtë?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Pick the correct repeat block.: Zgjidh bllokun e duhur repeat.
       K-1 Maze Multiple Choice 2:
         Maze: Labirint
+        Which answer solves this level?: Cila përgjijge zgjidh këtë nivel?
+      K-1 Move It Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which algorithm gets the Flurb to the flowers?: Cili algoritëm çon Flurb-in tek lulet?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which step should go at the beginning of this algorithm?: Çfarë hapi duhet të bëhet në fillim të këtij algoritmi?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which step should fill in the blank for this algorithm?: Cilin hap duhet të mbushi vendin bosh për këtë algoritëm?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        Which blocks spell "MOVE"?: Cili bllok gërmëzon "LËVIZ"?
+      K-1 Word Search Multi 3:
+        Multiple Choice: Zgjedhje e Shumëfishtë
+        SET: VENDOS
+        SOUTH: JUG
+        SQUARE: KATROR
+        Which word is spelled?: Cila fjalë është gërmëzuar?
