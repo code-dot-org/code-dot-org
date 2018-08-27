@@ -1,9 +1,15 @@
+:ruby
+  events_text = hoc_s(:map_header)
+  events_text.gsub!('%{event_count}', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
+  events_text.gsub!('%{year}', campaign_date('full-year'))
+
 -if @company
   -company_name = hoc_s("company_" + @company)
   -company_total = format_integer_with_commas(company_count)
+
   %h2.counter-title
     %a{href: resolve_url('/events/all')}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count'])) + ","
+      = events_text + ","
       = hoc_s(:map_header_company).gsub('#', company_total).gsub('company', company_name)
     -# Hide signup buttons during Hour of Code
       &nbsp;
@@ -13,7 +19,7 @@
   -country_total = format_integer_with_commas(country_count)
   %h2.counter-title
     %a{href: resolve_url("/events/all")}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count'])) + ","
+      = events_text + ","
     %a{href: resolve_url("/events/all/#{solr_country_code}")}
       = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
     -# Hide signup buttons during Hour of Code
@@ -23,7 +29,7 @@
 -else
   %h2.counter-title
     %a{href: resolve_url("/events/all")}
-      = hoc_s(:map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
+      = events_text
     -# Hide signup buttons during Hour of Code
       &nbsp;
       %a{onclick: "adjustScroll('join');"}
