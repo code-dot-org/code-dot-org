@@ -56,7 +56,7 @@ Scenario: Share and save an artist level to the project gallery
   Then I am on "http://studio.code.org/projects/"
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
-  And there is a project in the table named "Artist Project"
+  And the first project in the table is named "Artist Project"
 
   # Make sure the published project shows up in the public gallery
 
@@ -88,7 +88,7 @@ Scenario: Share and save a playlab level to the project gallery
   Then I am on "http://studio.code.org/projects/"
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
-  And there is a project in the table named "Play Lab Project"
+  And the first project in the table is named "Play Lab Project"
 
   # Make sure the published project shows up in the public gallery
 
