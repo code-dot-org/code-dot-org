@@ -2,16 +2,258 @@ fa:
   data:
     external:
       Begin planning your project:
+        description here: توضیحات اینجا
         title: عنوان
+      Begin planning your project_2018:
+        description here: توضیحات اینجا
       Prepare for your presentation:
+        description here: توضیحات اینجا
         title: عنوان
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: ترکیب دکمه ها را با حرکت های رقص تطبیق کن.
+        Matching: تطبیق کردن
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: تطبیق کردن
+        Use the key to match each code to its letter: از کلید برای تطبیق هر کد با حرفش استفاده کن
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: مختصات را با برنامه جور کنید.
+        Matching: تطبیق کردن
       2-3 Maze Match 2:
         Instructions: دستورالعمل ها
+        Match the puzzles to the blocks: پازل ها را با بلوکها تطبیق کن
+        Maze Match: تطبیق هزارتو
+      2-3 artist loops match 1:
+        Match the loop to the shape: حلقه را با شکل منطبق سازید
+      2-3 artist match 1:
+        Artist Matching: تطبیق هنرمند
+        Match the shape with the blocks that complete it.: اشکال را با بلوک هایی که آن را کامل میسازند،مرتبط کن.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: پازل ها را با بلوکها تطبیق کن
+        Maze Match One: بازی هزارتوی یک
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>شمارۀ تاس بازیکن 1 را به امتیاز کل اضافه کن</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>امتیاز بازیکنان را مقایسه کن تا ببینی کی برده</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>بازیکن 1 تاس میاندازد</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>امتیاز بازیکن 1 را 0 کن</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: مراحل مسابقه تاس انداختن را به ترتیبی که باید در الگوریتم ظاهر شوند مرتب کن.
+        Matching: تطبیق کردن
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>طرف/چرخها: 3<br/>طرف/پنجره ها: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: هر یک از این وسایل نقلیه به قطعات کوچکتر تجزیه شده است. هر خودرو را با لیست اجزایش تطبیق کن.
+        Matching: تطبیق کردن
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: هر برنامه را با کلمه ای که میسازد تطبیق کن، با استفاده از مجموعه مهارت های ارائه شده.
+        Matching: تطبیق کردن
       4-5 maze match 1:
         Instructions: دستورالعمل ها
+        Match the puzzles to the blocks: پازل ها را با بلوکها تطبیق کن
+        Maze Match: تطبیق هزارتو
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: اشکال را بر اساس نوع تطبیق کن.
+        Matching: تطبیق کردن
+      K-1 Bee Loops Match 1:
+        Match the blocks: بلوکها را تطبیق کن
+        Matching: تطبیق کردن
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: ترکیب دکمه ها را با حرکت های رقص تطبیق کن.
+        Matching: تطبیق کردن
       K-1 Maze Match 1:
         Instructions: دستورالعمل ها
+        Match the puzzles and blocks: پازل ها و بلوکها را تطبیق کن
+        Matching: تطبیق کردن
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: یک الگوریتم را برای تصویر ارائه شده انتخاب کنید.
+        Multiple Choice: انتخاب چندگانه
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: با یک مربع شروع کن<br/>یک متوازی الاضلاع بالای مربع قرار بده<br/>یک مثلث در راست متوازی الاضلاع قرار بده
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: با یک مربع شروع کن<br/>یک مثلث بالای مربع قرار بده<br/>یک مثلث زیر مربع قرار بده
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: با یک مربع شروع کن<br/>یک مثلث زیر مربع قرار بده<br/>یک متوازی الاضلاع در راست مثلث قرار بده
+        0: '؟ با یک مربع شروع کن<br/>یک مثلث در راست مربع قرار بده<br/>یک متوازی الاضلاع زیر مربع قرار بده<br/> یک مثلث در راست متوازی الاضلاع قرار بده'
+        1: ': با یک مربع شروع کن<br/>یک مثلث در راست مربع قرار بده<br/>یک متوازی الاضلاع زیر میدان قرار بده<br/> یک مثلث در راست متوازی الاضلاع قرار بده'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: انتخاب چندگانه
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: با یک مثلث شروع کن<br/>یک مربع زیر مثلث قرار بده<br/>مثلث دیگری زیر مربع قرار بده
+        Which image does <em>not</em> follow this algorithm?: کدام تصویر این الگوریتم را دنبال <em>نمی</em> کند؟
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: با توجه به قواعد بازی کدام دسته از کارتها به درستی امتیاز گرفته؟
+        Multiple Choice: انتخاب چندگانه
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: شما چگونه این توالی را با حلقه ها ساده میکنید؟
+        Multiple Choice: انتخاب چندگانه
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which program makes this image?: "کدام برنامه این تصویر را درست میکند؟\n"
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: چندگزینه ای هزارتو
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: انتخاب چندگانه
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: انتخاب چندگانه
+        Which image-program combo does not contain mistakes?: کدام زوج تصویر-برنامه اشتباه ندارد؟
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: چندگزینه ای توابع هنرمند یک
+        Pick the correct blocks to draw this image using the given functions: بلوک های صحیح را برای رسم این تصویر با استفاده از توابع داده شده انتخاب کن
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: چندگزینه ای حلقه‌های هنرمند
+        Which shape is made by this loop?: کدام شکل با این حلقه ساخته شده است؟
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: چندگزینه ای حلقه‌های هنرمند
+        Which shape is made by this program?: کدام شکل توسط این برنامه ساخته شده است؟
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: کدام مقایسه ی زیر درست است؟
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: بهترین بلوک ها را انتخاب کنید
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: چندگزینه ای حلقه‌های زنبور عسل یک
+        Which blocks collect all of the nectar?: کدام بلوک تمام شهد را جمع آوری میکند؟
+      2-3 maze multi 1:
+        Maze Multiple Choice One: چندگزینه ای هزارتوی یک
+        Which set of blocks is the correct answer?: کدام گروه از بلوک ها جواب صحیح است?
+      4-5 Algorithms Multi 1:
+        Baking cookies: پخت کلوچه
+        Banana: موز
+        Brushing your teeth: مسواک کردن دندان هایتان
+        Multiple Choice: انتخاب چندگانه
+        Shopping from a grocery list: خرید کردن از لیست مواد غذایی
+        Which one of these items is hardest to describe an algorithm for?: تعریف یک الگوریتم برای کدام یک از این موارد سختتر است؟
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: یوجین یک شهر_____ است.
+        0: '؟ اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را استخراج کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟'
+        1: ': اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را استخراج کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟'
+        Multiple Choice: انتخاب چندگانه
+        Seattle _____ a _____ _____.: سیاتل یک _____ _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: سیاتل یک شهر بزرگ است. <br/> یوجین یک شهر متوسط است<br/> هیل ویو یک شهر کوچک است.
+        _____ is _____ a _____.: _____ یک _____ _____ است.
+        _____ is a _____ city.: _____ یک شهر_____ است.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which of these pictures best represents crowdsourcing?: کدام یک از این تصاویر بهتر کمکگیری جمعی را نشان میدهد؟
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: شانه زدن موهایتان
+        Cleaning your room: تمیز کردن اتاقتان
+        Eating your dessert: خوردن دسرتان
+        Multiple Choice: انتخاب چندگانه
+        Washing your face: شستن صورتتان
+        Which one of these activities would be best for practicing crowdsourcing?: کدام یک از این فعالیت ها برای تمرین کمکگیری جمعی بهترین خواهد بود؟
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which piece of information listed below is okay to share on the internet?: کدام یک از اطلاعات ذکر شده در زیر برای اشتراک گذاری در اینترنت بلامانع است؟
+        Your address: آدرستان
+        Your birthday: تولدتان
+        Your favorite food: غذای موردعلاقه تان
+        Your parent's credit card number: شماره ی کارت اعتباری والدینتان
+      4-5 Internet Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: هنگامی که شما سعی می کنید به code.org وارد شوید، DNS شما را به احتمال زیاد به کدام آدرس آی پی خواهد برد؟
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: اگر DNS شما را به صفحه ای به آدرس آی پی 100.42.50.110 فرستاده است، در کدام وبسایت قرار دارید؟
+        Multiple Choice: انتخاب چندگانه
+      4-5 Songwriting Multi 1:
+        0: '؟ مگس روی دوغه، <br/>برو, مگس, برو، <br/>مگس روی دوغه، <br/>برو, مگس, برو، <br/>مگس روی دوغه، <br/>برو, مگس, برو، <br/>بپر به لوی من، عزیز من.'
+        1: ': مگس روی دوغه، <br/>برو, مگس, برو، <br/>مگس روی دوغه، <br/>برو, مگس, برو، <br/>مگس روی دوغه، <br/>برو, مگس, برو، <br/>بپر به لوی من، عزیز من.'
+        Lou, Lou, skip to my Lou,: لو، لو، بپر به لوی من
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>بپر به لوی من، عزیز من.
+        2: '؟ لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>بپر به لوی من، عزیز من. <br/> <br/><p>مگس توی دوغه، <br/>برو، مگس، برو،'
+        3: ': لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>بپر به لوی من، عزیز من. <br/> <br/><p>مگس توی دوغه، <br/>برو، مگس، برو،'
+        Multiple Choice: انتخاب چندگانه
+        4: '؟ بزرگترین تکه از این ترانه که می توانید به عنوان ترجیع بند آن را تعریف کنید کدام است به طوری که ترجیع بند هر بار که خوانده میشود کاملاً تکرار شود؟'
+        5: ': بزرگترین تکه از این ترانه که می توانید به عنوان ترجیع بند آن را تعریف کنید کدام است به طوری که ترجیع بند هر بار که خوانده میشود کاملاً تکرار شود؟'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: کدامیک از برنامه های زیر دقیقا همان دنباله ی برنامه ی 1 را <em> نمی سازد</em>?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: چندگزینه ای حلقه‌های هنرمند
+        Which blocks will create the design?: چه بلوکهایی طرح را ایجاد خواهند کرد؟
+      4-5 artist multi 1:
+        Artist Multiple Choice: چندگزینه ای هنرمند
+        Which blocks draw a rectangle with a perimeter of 100?: چه بلوکهایی مستطیلی با محیط 100 میکشند؟
+      4-5 artist multi 2:
+        Artist Multiple Choice: چندگزینه ای هنرمند
+        Which drawing is symmetric?: کدام نقاشی متقارن است؟
+      4-5 bee conditionals multi 1:
+        0: '؟ یک گل بنفش ممکن است که 3، 2، و یا 1 شهد داشته باشد، اما شما نمی دانید که چند تا. کدام بلوکها به درستی همۀ شهد یک گل بنفش را بررسی و جمع آوری میکنند؟'
+        1: '؟ یک گل بنفش ممکن است که 3، 2، و یا 1 شهد داشته باشد، اما شما نمی دانید که چند تا. کدام بلوکها به درستی همۀ شهد یک گل بنفش را بررسی و جمع آوری میکنند؟'
+        Bee Conditionals Multiple Choice: چندگزینه ای شرطی های زنبور عسل
+        Choose the best blocks.: بهترین بلوک ها را انتخاب کنید
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: چند گزینه ای اشکال زدایی زنبور عسل
+        Which version of the function will work?: کدام نسخۀ تابع کار خواهد کرد؟
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: چندگزینه ای حلقه های زنبور عسل
+        Which blocks will solve the puzzle?: چه بلوکهایی پازل را حل خواهد کرد؟
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: چندگزینه ای شرطی های هزارتو
+        Which blocks solve the puzzle?: کدام بلوک این معما را حل میکند؟?
+      4-5 maze multi 1:
+        Maze Multiple Choice: چندگزینه ای هزارتو
+        Which blocks solve the puzzle?: کدام بلوک این معما را حل میکند؟?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which blocks solve this puzzle?: کدام بلوک این معما را حل میکند؟
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: انتخاب چندگانه
+        Which blocks draw the square?: کدام بلوک مربع رسم میکند؟
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: چند تا شهد گل اینجاست؟
+        Multiple Choice: انتخاب چندگانه
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: چند تا شهد گل اینجاست؟
+        Multiple Choice: انتخاب چندگانه
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: کدام حیوان رد پای دیجیتالی دارد که او را <strong>نا امن ترین</strong>میکند؟
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: شما چگونه این توالی را با حلقه ها ساده میکنید؟
+        Multiple Choice: انتخاب چندگانه
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which arrow gets the Flurb to the treasure?: کدام جهت فِلِرب را به گنج میرساند؟
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which information should you <strong>not</strong> share online?: کدام اطلاعات را شما <strong>نباید</strong> بر روی اینترنت به اشتراک بگذارید؟
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which choice should be the final block?: کدام گزینه باید بلوک نهایی باشد؟
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which repeat block is the same?: کدام بلوک این اسم را تکرار میکند؟
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: انتخاب چندگانه
+        Pick the correct repeat block.: بلوک تکرار  کننده صحیح را انتخاب کنید.
       K-1 Maze Multiple Choice 2:
         Maze: پیچ و خم
+        Which answer solves this level?: کدام پاسخ  معمای این سطح را حل میکند؟
+      K-1 Move It Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which algorithm gets the Flurb to the flowers?: کدام الگوریتم فِلِرب را به گل ها میرساند؟
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which step should go at the beginning of this algorithm?: کدام مرحله باید در ابتدای این الگوریتم برود؟
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: انتخاب چندگانه
+        Which step should fill in the blank for this algorithm?: کدام مرحله باید جای خالی را برای این الگوریتم پر کند؟
+      K-1 Word Search Multi 1:
+        Multiple Choice: انتخاب چندگانه
+        Which blocks spell "MOVE"?: چه بلوکهایی "حرکت" را هجی میکنند؟
+      K-1 Word Search Multi 3:
+        Multiple Choice: انتخاب چندگانه
+        SET: مجموعه
+        SOUTH: جنوب
+        SQUARE: مربع
+        Which word is spelled?: کدام کلمه هجی شده است؟
