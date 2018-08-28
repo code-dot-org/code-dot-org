@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {assetButtonStyles} from "./AddAssetButtonRow";
 import {AudioErrorType} from "./AssetManager";
+import firehoseClient from "@cdo/apps/lib/util/firehose";
 
 const styles = {
   buttonRow: {
@@ -81,6 +82,15 @@ export default class AudioRecorder extends React.Component {
       this.recorder.stop();
     } else {
       this.recorder.start();
+      firehoseClient.putRecord(
+        {
+          study: 'sound-dialog',
+          study_group: 'files-tab',
+          event: 'record-sound',
+          data_json: this.state.audioName,
+        },
+        {includeUserId: true}
+      );
     }
     this.setState({recording: !this.state.recording});
   };
