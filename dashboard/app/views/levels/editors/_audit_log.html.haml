@@ -5,8 +5,12 @@
     %th Who Changed It
   - if(@level.audit_log != nil)
     - aud_log = JSON.parse(@level.audit_log)
-    - aud_log.last(10).each do |log|
+    - aud_log.last(10).reverse_each do |log|
       %tr
-        %td= log["changed_at"]
-        %td= log["changed"]
+        %td= DateTime.parse(log["changed_at"]).strftime("%v at: %r")
+        %td.colored_columns
+          %ul
+            -log["changed"].each_with_index do |change, i|
+              %li
+              = log["changed"][i]
         %td= log["changed_by_email"]
