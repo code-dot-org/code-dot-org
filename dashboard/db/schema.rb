@@ -523,7 +523,7 @@ ActiveRecord::Schema.define(version: 20180823163642) do
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
   end
 
-  create_table "libraries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+  create_table "libraries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name",                     null: false
     t.text     "content",    limit: 65535
     t.datetime "created_at",               null: false
@@ -1057,7 +1057,7 @@ ActiveRecord::Schema.define(version: 20180823163642) do
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
-  create_table "queued_account_purges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+  create_table "queued_account_purges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                         null: false
     t.text     "reason_for_review", limit: 65535
     t.datetime "created_at",                      null: false
