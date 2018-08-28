@@ -523,7 +523,7 @@ ActiveRecord::Schema.define(version: 20180823163642) do
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id", using: :btree
   end
 
-  create_table "libraries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "libraries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "name",                     null: false
     t.text     "content",    limit: 65535
     t.datetime "created_at",               null: false
@@ -637,11 +637,11 @@ ActiveRecord::Schema.define(version: 20180823163642) do
   end
 
   create_table "pd_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "pd_workshop_id",      null: false
+    t.integer  "pd_workshop_id",                    null: false
     t.string   "name"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "email",               null: false
+    t.string   "email",                             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "school"
@@ -651,6 +651,7 @@ ActiveRecord::Schema.define(version: 20180823163642) do
     t.integer  "completed_survey_id"
     t.integer  "school_info_id"
     t.datetime "deleted_at"
+    t.text     "properties",          limit: 65535
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["email"], name: "index_pd_enrollments_on_email", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
@@ -1056,7 +1057,7 @@ ActiveRecord::Schema.define(version: 20180823163642) do
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
-  create_table "queued_account_purges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "queued_account_purges", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer  "user_id",                         null: false
     t.text     "reason_for_review", limit: 65535
     t.datetime "created_at",                      null: false
