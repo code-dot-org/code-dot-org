@@ -57,7 +57,7 @@ Feature: Using the teacher dashboard
 
     # Assign a script with a survey but no assessment
     When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home?enableExperiments=versionMenu"
+    And I am on "http://studio.code.org/home"
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-assignment-family" is visible
@@ -106,8 +106,8 @@ Feature: Using the teacher dashboard
 
     # Assign a script with an unlocked survey
     When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home?enableExperiments=versionMenu"
-    And I click selector ".ui-test-section-dropdown"
+    And I am on "http://studio.code.org/home"
+    And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-assignment-family" is visible
     And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"

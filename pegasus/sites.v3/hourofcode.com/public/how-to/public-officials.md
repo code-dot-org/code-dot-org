@@ -13,7 +13,7 @@ nav: how_to_nav
 </br>
 
 ## Are you hosting an elected official at your Hour of Code?
-[View our toolkit](/files/elected-officials.pdf) with all the information you need to make their visit and your event great!
+[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
 
 <img src="/images/fit-800/hoc-govs.png"/>
 
