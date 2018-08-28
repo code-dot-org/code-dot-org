@@ -220,6 +220,10 @@ Then /^I wait until current URL contains "([^"]*)"$/ do |url|
   wait_until {@browser.current_url.include? url}
 end
 
+And /^check that the URL matches "([^"]*)"$/ do |regex_text|
+  expect(@browser.current_url.match(regex_text).nil?).to eq(false)
+end
+
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   wait_until {@browser.current_url == url}
@@ -1443,16 +1447,6 @@ When /^I switch to text mode$/ do
     When I press "show-code-header"
     And I wait to see Droplet text mode
   STEPS
-end
-
-Then /^the project list contains ([\d]+) (?:entry|entries)$/ do |expected_num|
-  actual_num = @browser.execute_script("return $('table.projects td.name').length;")
-  expect(actual_num).to eq(expected_num.to_i)
-end
-
-Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_name|
-  actual_name = @browser.execute_script("return $('table.projects td.name').eq(#{index}).text().trim();")
-  expect(actual_name).to eq(expected_name)
 end
 
 When /^I see the section set up box$/ do

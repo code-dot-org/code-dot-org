@@ -1909,12 +1909,9 @@ class User < ActiveRecord::Base
 
   def roster_managed_account?
     return false unless student?
-    if migrated?
-      return false unless authentication_options.one?
-      sections_as_student.any?(&:externally_rostered?)
-    else
-      sections_as_student.any?(&:externally_rostered?) && encrypted_password.blank?
-    end
+    return false if migrated? && authentication_options.many?
+
+    encrypted_password.blank? && sections_as_student.any?(&:externally_rostered?)
   end
 
   def parent_managed_account?
