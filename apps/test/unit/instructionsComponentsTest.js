@@ -24,7 +24,7 @@ describe('MarkdownInstructions', function () {
     var element = dom.children[0];
     assert.equal(element.style.paddingTop, '19px');
     assert.equal(element.style.marginLeft, '');
-    assert.equal(element.textContent, 'md');
+    assert.equal(element.textContent, 'md\n');
   });
 
   it('inTopPane has no top padding', function () {
