@@ -633,7 +633,11 @@ function main() {
 
     $scope.react_text_responses = true;
     $scope.$on('text-responses-table-rendered', () => {
-      $scope.section.$promise.then(section => renderTextResponsesTable(section, $scope.script_list));
+      $scope.section.$promise.then(section => {
+        $scope.script_list.$promise.then(validScripts => {
+          renderTextResponsesTable(section, validScripts);
+        });
+      });
     });
   }]);
 
