@@ -651,7 +651,6 @@ ActiveRecord::Schema.define(version: 20180823163642) do
     t.integer  "completed_survey_id"
     t.integer  "school_info_id"
     t.datetime "deleted_at"
-    t.text     "properties",          limit: 65535
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["email"], name: "index_pd_enrollments_on_email", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
