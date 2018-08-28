@@ -33,8 +33,7 @@ export default class AudioRecorder extends React.Component {
     this.slices = [];
     this.state = {
       audioName: "",
-      recording: false,
-      cancelling: false
+      recording: false
     };
   }
 
@@ -60,26 +59,21 @@ export default class AudioRecorder extends React.Component {
       this.slices.push(e.data);
     };
 
-    // Set method to create data blob after recording has stopped
-    this.recorder.onstop = (e) => {
-      const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
+    this.recorder.onstart = () => {
       this.slices = [];
-      this.saveAudio(blob);
     };
   };
 
   saveAudio = (blob) => {
-    if (!this.state.cancelling) {
-      assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-      (xhr) => {
-        this.setState({audioName: ""});
-        this.props.onUploadDone(JSON.parse(xhr.response));
-        this.props.afterAudioSaved(AudioErrorType.NONE);
-      }, error => {
-        console.error(`Audio Failed to Save: ${error}`);
-        this.props.afterAudioSaved(AudioErrorType.SAVE);
-      });
-    }
+    assetsApi.putAsset(this.state.audioName + ".mp3", blob,
+    (xhr) => {
+      this.setState({audioName: ""});
+      this.props.onUploadDone(JSON.parse(xhr.response));
+      this.props.afterAudioSaved(AudioErrorType.NONE);
+    }, error => {
+      console.error(`Audio Failed to Save: ${error}`);
+      this.props.afterAudioSaved(AudioErrorType.SAVE);
+    });
   };
 
   onNameChange = (event) => {
@@ -87,19 +81,19 @@ export default class AudioRecorder extends React.Component {
   };
 
   onCancel = () => {
-    this.setState({audioName: "", recording: false, cancelling: true}, () => {
+    this.setState({audioName: "", recording: false}, () => {
       this.props.afterAudioSaved(AudioErrorType.NONE);
       // Only stop recording if it's been started
       if (this.recorder.state !== "inactive") {
+        clearTimeout(this.recordTimeout);
         this.recorder.stop();
       }
-      this.setState({cancelling: false});
     });
   };
 
   toggleRecord = () => {
     if (this.state.recording) {
-      this.stopRecording();
+      this.stopRecordingAndSave();
     } else {
       this.startRecording();
     }
@@ -110,16 +104,33 @@ export default class AudioRecorder extends React.Component {
     this.setState({recording: !this.state.recording});
 
     //Stop recording after set amount of time
-    this.recordTimeout = setTimeout(this.stopRecording, RECORD_MAX_TIME);
+    this.recordTimeout = setTimeout(this.stopRecordingAndSave, RECORD_MAX_TIME);
   };
 
-  stopRecording = () => {
+  //Stop recording and save the final audio
+  stopRecordingAndSave = () => {
     if (this.state.recording) {
       clearTimeout(this.recordTimeout);
+      this.setStopAndSaveBehavior().then(data => {
+        this.recorder.onstop = (e) => {};
+      });
       this.recorder.stop();
       this.setState({recording: !this.state.recording});
     }
   };
+
+  //Set the recorder onstop behavior to save the final audio blob
+  setStopAndSaveBehavior = () => new Promise((resolve, reject) => {
+    this.recorder.onstop = (e) => {
+      if (e) {
+        reject(e);
+      }
+
+      const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
+      this.saveAudio(blob);
+      resolve();
+    };
+  });
 
   render() {
     return (
