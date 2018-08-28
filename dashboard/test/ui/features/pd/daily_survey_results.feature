@@ -1,7 +1,7 @@
 @dashboard_db_access
 @eyes
 
-Feature: Basic appearance for Facilitator Survey UI
+Feature: Basic appearance for Daily Survey UI
 
 Scenario: Results view for facilitator survey UI is as expected
   Given I am a workshop administrator

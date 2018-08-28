@@ -234,6 +234,27 @@ Resources:
             Resource: '*'
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/PowerUserAccess"
+  GlueRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [glue.amazonaws.com]}
+      Path: /
+      Policies:
+      - PolicyName: ELBLogsRolePolicy
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            - 's3:GetObject'
+            - 's3:PutObject'
+            Resource:
+            - !Sub 'arn:aws:s3:::cdo-logs/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/*'
+      ManagedPolicyArns:
+      - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
 Outputs:
   FrontendInstanceProfile:
     Description: Frontend Instance Profile
@@ -259,3 +280,7 @@ Outputs:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
+  GlueRoleARN:
+    Description: Glue Role ARN
+    Value: !GetAtt GlueRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-GlueRoleARN"}

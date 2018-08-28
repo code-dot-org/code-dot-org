@@ -164,7 +164,6 @@ module Pd::WorkshopSurveyResultsHelper
   end
 
   def generate_workshop_daily_session_summary(workshop)
-    # TODO: (mehal) - Logic to only allow this for selected summer workshops
     summary = {
       this_workshop: {},
     }
@@ -256,8 +255,9 @@ module Pd::WorkshopSurveyResultsHelper
         ).map(&:form_data_hash),
         facilitator: Pd::WorkshopFacilitatorDailySurvey.with_answers.where(
           pd_workshop: workshop,
-          form_id: Pd::WorkshopFacilitatorDailySurvey.form_id(workshop.subject)
-        ).map(&:form_data_hash)
+          form_id: Pd::WorkshopFacilitatorDailySurvey.form_id(workshop.subject),
+          day: day
+        ).map {|x| x.form_data_hash(show_hidden_questions: true)}
       }
     end
 

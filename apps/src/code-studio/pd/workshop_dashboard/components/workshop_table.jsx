@@ -275,6 +275,7 @@ export default class WorkshopTable extends React.Component {
     return (
       <WorkshopManagement
         workshopId={id}
+        course={course}
         subject={subject}
         viewUrl={`/workshops/${id}`}
         date={date}

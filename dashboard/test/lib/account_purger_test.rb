@@ -78,4 +78,31 @@ class AccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{@student.id} (dry-run)
     LOG
   end
+
+  test 'uses dashboard and pegasus transactions' do
+    test_name = 'Boaty McBoatface'
+
+    refute_equal test_name, @student.name
+    assert_empty PEGASUS_DB[:user_storage_ids].where user_id: @student.id
+
+    # Perform Dashboard (Activerecord) and Pegasus DB operations as
+    # a side effect, then raise, and prove the changes weren't saved
+    stub_code_ran = false
+    DeleteAccountsHelper.any_instance.stubs(:purge_user).with do |user|
+      user.update(name: test_name)
+      PEGASUS_DB[:user_storage_ids].insert(user_id: user.id)
+      stub_code_ran = true
+      raise 'Intentional failure during transaction'
+    end
+
+    assert_raise RuntimeError do
+      AccountPurger.new(log: NULL_STREAM).purge_data_for_account @student
+    end
+
+    @student.reload
+
+    assert stub_code_ran
+    assert_empty PEGASUS_DB[:user_storage_ids].where(user_id: @student.id)
+    refute_equal test_name, @student.name
+  end
 end

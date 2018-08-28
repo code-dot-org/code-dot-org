@@ -38,7 +38,7 @@ class HocSignup2014 < Form
   def self.process(data)
     {}.tap do |results|
       location = search_for_address(data['event_location_s'])
-      results.merge! location.to_solr if location
+      results.merge! location.summarize if location
     end
   end
 

@@ -48,7 +48,7 @@ export class WorkshopManagement extends React.Component {
           (
             ['CS Discoveries', 'CS Principles'].includes(props.course)
             && props.subject !== 'Code.org Facilitator Weekend'
-            && new Date(this.props.date) >= new Date(2018, 8, 1)
+            && new Date(this.props.date) >= new Date('2018-08-01')
           )
       ) {
         surveyBaseUrl = "local_summer_workshop_daily_survey_results";

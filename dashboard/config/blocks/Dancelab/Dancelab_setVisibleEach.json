@@ -12,16 +12,20 @@
             "sprites"
           ],
           [
-            "Circle",
-            "\"circle\""
-          ],
-          [
-            "Wiggles",
-            "\"wiggles\""
-          ],
-          [
-            "Alien",
+            "Aliens",
             "\"alien\""
+          ],
+          [
+            "MrWiggles",
+            "\"mrwiggles\""
+          ],
+          [
+            "Pizzas",
+            "\"pizza\""
+          ],
+          [
+            "Unicorns",
+            "\"unicorn\""
           ]
         ]
       },

@@ -1,3 +1,3 @@
 function createSpriteWith(callback) {
-  callback.apply(createSprite());
+  callback.apply(new Sprite());
 }

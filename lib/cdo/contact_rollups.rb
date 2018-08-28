@@ -342,9 +342,9 @@ class ContactRollups
     # to state name, so do this row-by-row using existing Ruby code for that
     # conversion.
     sql = "
-    SELECT users.email, schools.city, schools.state, schools.zip
+    SELECT users_view.email, schools.city, schools.state, schools.zip
     FROM users_view
-    INNER JOIN school_infos ON school_infos.id = users.school_info_id
+    INNER JOIN school_infos ON school_infos.id = users_view.school_info_id
     INNER JOIN schools ON schools.id = school_infos.school_id"
 
     dataset = DASHBOARD_REPORTING_DB_READER[sql]
@@ -903,8 +903,9 @@ class ContactRollups
     districts = District.all.index_by(&:id)
 
     # users = User.where("length(email) > 0") # original query, replaced by following for multiauth
+    # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
     users = User.find_by_sql <<-eos
-      SELECT * FROM users
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM users
       LEFT JOIN authentication_options
         ON users.primary_contact_info_id = authentication_options.id
       WHERE

@@ -9,6 +9,7 @@ new_name 'pre-express-2017'
 family_name 'pre-express'
 version_year '2017'
 is_stable true
+supported_locales ["es-ES", "es-MX"]
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'

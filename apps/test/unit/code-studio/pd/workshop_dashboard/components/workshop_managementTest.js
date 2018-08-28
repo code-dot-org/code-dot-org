@@ -18,7 +18,7 @@ const defaultProps = {
   course: 'CS Principles',
   workshopId: 123,
   viewUrl: "viewUrl",
-  date: new Date().toISOString()
+  date: "2017-07-01"
 };
 
 describe("WorkshopManagement", () => {
@@ -89,7 +89,7 @@ describe("WorkshopManagement", () => {
     });
 
     it("uses local summer results for local summer in 2017", () => {
-      const surveyUrl = getSurveyUrlForProps({date: "2017-07-01", subject: WorkshopTypes.local_summer});
+      const surveyUrl = getSurveyUrlForProps({subject: WorkshopTypes.local_summer});
       expect(surveyUrl).to.eql("/local_summer_workshop_survey_results/123");
     });
 

@@ -9,6 +9,7 @@ new_name 'coursed-2017'
 family_name 'coursed'
 version_year '2017'
 is_stable true
+supported_locales ["es-ES", "es-MX"]
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
