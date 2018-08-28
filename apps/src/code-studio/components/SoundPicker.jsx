@@ -3,6 +3,7 @@ import AssetManager from './AssetManager';
 import color from "../../util/color";
 import { SOUND_PREFIX, DEFAULT_SOUND_PATH_PREFIX } from '../../assetManagement/assetPrefix';
 import SoundLibrary from './SoundLibrary';
+import firehoseClient from "@cdo/apps/lib/util/firehose";
 
 const audioExtension = '.mp3';
 const styles = {
@@ -88,7 +89,18 @@ export default class SoundPicker extends React.Component {
       );
     }
 
-    const body = !this.props.assetChosen || this.state.mode === MODE.files ?
+    const displayFilesTab = !this.props.assetChosen || this.state.mode === MODE.files;
+
+    firehoseClient.putRecord(
+      {
+        study: 'sound-dialog',
+        study_group: displayFilesTab ? 'files-tab' : 'library-tab',
+        event: displayFilesTab ? 'open-files-tab' : 'open-library-tab'
+      },
+      {includeUserId: true}
+    );
+
+    const body = displayFilesTab ?
       <AssetManager
         assetChosen={this.props.assetChosen}
         assetsChanged={this.props.assetsChanged}
