@@ -62,10 +62,10 @@ Watch videos and read interviews with inspirational people working in a variety 
 ## 5. Grow participation by women
 
 - [Top 4 Ways to Recruit Girls to Try Computer Science](/girls)
-- [NCWIT outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
-- [Outreach guide for Latinas](http://www.ncwit.org/latinas-information-technology)
-- [Fact-sheet for participation by women](http://www.ncwit.org/infographic/3435)
-- [Awards and recognition for girls engaged in coding](http://www.aspirations.org)
+- [NCWIT outreach guide for computer science](https://www.ncwit.org/resources/outreach-box-discovering-it)
+- [Outreach guide for Latinas](https://www.ncwit.org/latinas-information-technology)
+- [Fact-sheet for participation by women](https://www.ncwit.org/infographic/3435)
+- [Awards and recognition for girls engaged in coding](https://www.aspirations.org)
 
 ## 6. Other Materials
 

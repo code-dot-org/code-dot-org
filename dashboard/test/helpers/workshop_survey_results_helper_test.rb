@@ -15,17 +15,18 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       day_5: 5,
       facilitator: 6
     },
-    academic_year_1: {
+    academic_year_1_2: {
       day_1: 7,
-      facilitator: 8,
-      post_workshop: 9
+      day_2: 8,
+      facilitator: 9,
+      post_workshop: 10
     }
   }
 
   self.use_transactional_test_case = true
   setup_all do
     @workshop = create :pd_workshop, :local_summer_workshop, course: COURSE_CSP, num_facilitators: 2, num_sessions: 5
-    @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1, num_facilitators: 2, num_sessions: 1
+    @academic_year_workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5, num_facilitators: 2, num_sessions: 2
 
     @pre_workshop_questions = [
       Pd::JotForm::MatrixQuestion.new(
@@ -73,10 +74,17 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       Pd::JotForm::ScaleQuestion.new(
         id: 2,
         name: 'sampleFacilitatorScale',
-        text: 'How confident do you feel about teaching CS?',
+        text: 'How do you rate the facilitators skills?',
         options: %w(Weak Amazing),
         values: (1..5).to_a,
         type: TYPE_SCALE
+      ),
+      Pd::JotForm::TextQuestion.new(
+        id: 3,
+        name: 'facilitatorId',
+        text: 'facilitatorId',
+        type: TYPE_TEXTBOX,
+        hidden: true
       )
     ]
 
@@ -133,18 +141,23 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     )
 
     Pd::SurveyQuestion.create(
-      form_id: FORM_IDS[:academic_year_1][:day_1],
-      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:academic_year_1][:day_1], @daily_questions).serialize.to_json
+      form_id: FORM_IDS[:academic_year_1_2][:day_1],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:academic_year_1_2][:day_1], @daily_questions).serialize.to_json
     )
 
     Pd::SurveyQuestion.create(
-      form_id: FORM_IDS[:academic_year_1][:facilitator],
-      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:academic_year_1][:facilitator], @daily_facilitator_questions).serialize.to_json
+      form_id: FORM_IDS[:academic_year_1_2][:day_2],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:academic_year_1_2][:day_2], @daily_questions).serialize.to_json
     )
 
     Pd::SurveyQuestion.create(
-      form_id: FORM_IDS[:academic_year_1][:post_workshop],
-      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:academic_year_1][:post_workshop], @post_workshop_questions).serialize.to_json
+      form_id: FORM_IDS[:academic_year_1_2][:facilitator],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:academic_year_1_2][:facilitator], @daily_facilitator_questions).serialize.to_json
+    )
+
+    Pd::SurveyQuestion.create(
+      form_id: FORM_IDS[:academic_year_1_2][:post_workshop],
+      questions: Pd::JotForm::FormQuestions.new(FORM_IDS[:academic_year_1_2][:post_workshop], @post_workshop_questions).serialize.to_json
     )
 
     expected_daily_questions = {
@@ -163,7 +176,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           answer_type: ANSWER_TEXT
         },
         'sampleFacilitatorScale' => {
-          text: 'How confident do you feel about teaching CS?',
+          text: 'How do you rate the facilitators skills?',
           answer_type: ANSWER_SCALE,
           min_value: 1,
           max_value: 5,
@@ -211,6 +224,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
     @expected_academic_year_questions = {
       'Day 1' => expected_daily_questions,
+      'Day 2' => expected_daily_questions,
       'Post Workshop' => {
         general: {
           'samplePostText' => {
@@ -389,12 +403,13 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'daily survey get_questions_for_forms gets academic year workshop questions' do
-    CDO.expects(:jotform_forms).times(6).returns(
+    CDO.expects(:jotform_forms).times(10).returns(
       {
-        'academic_year_1' => {
-          'day_1' => FORM_IDS[:academic_year_1][:day_1],
-          'facilitator' => FORM_IDS[:academic_year_1][:facilitator],
-          'post_workshop' => FORM_IDS[:academic_year_1][:post_workshop]
+        'academic_year_1_2' => {
+          'day_1' => FORM_IDS[:academic_year_1_2][:day_1],
+          'day_2' => FORM_IDS[:academic_year_1_2][:day_1],
+          'facilitator' => FORM_IDS[:academic_year_1_2][:facilitator],
+          'post_workshop' => FORM_IDS[:academic_year_1_2][:post_workshop]
         }
       }
     )
@@ -423,7 +438,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       day: 0
     }
 
-    Pd::WorkshopDailySurvey.new(
+    Pd::WorkshopDailySurvey.create(
       common_survey_hash.merge(
         {
           submission_id: (Pd::WorkshopDailySurvey.maximum(:id) || 0) + 1,
@@ -440,7 +455,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       )
     ).save(validate: false)
 
-    Pd::WorkshopDailySurvey.new(
+    Pd::WorkshopDailySurvey.create(
       common_survey_hash.merge(
         {
           submission_id: (Pd::WorkshopDailySurvey.maximum(:id) || 0) + 1,
@@ -457,7 +472,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       )
     ).save(validate: false)
 
-    Pd::WorkshopDailySurvey.new(
+    Pd::WorkshopDailySurvey.create(
       common_survey_hash.merge(
         {
           submission_id: (Pd::WorkshopDailySurvey.maximum(:id) || 0) + 1,
@@ -471,6 +486,38 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         }
       )
     ).save(validate: false)
+
+    Pd::WorkshopFacilitatorDailySurvey.create(
+      common_survey_hash.merge(
+        pd_session_id: @workshop.sessions.first.id,
+        form_id: CDO.jotform_forms['local_summer']['facilitator'],
+        day: 1,
+        facilitator_id: @workshop.facilitators.first.id,
+        user: create(:teacher),
+        submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:id) || 0) + 1,
+        answers: {
+          '1' => 'Great!',
+          '2' => '4',
+          '3' => @workshop.facilitators.first.id
+        }.to_json
+      )
+    )
+
+    Pd::WorkshopFacilitatorDailySurvey.create(
+      common_survey_hash.merge(
+        pd_session_id: @workshop.sessions.first.id,
+        form_id: CDO.jotform_forms['local_summer']['facilitator'],
+        day: 1,
+        facilitator_id: @workshop.facilitators.second.id,
+        user: create(:teacher),
+        submission_id: (Pd::WorkshopFacilitatorDailySurvey.maximum(:id) || 0) + 1,
+        answers: {
+          '1' => 'Bad!',
+          '2' => '2',
+          '3' => @workshop.facilitators.second.id
+        }.to_json
+      )
+    )
 
     daily_expected_results = {
       response_count: 0,
@@ -501,7 +548,18 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
             'sampleText' => ['Here are my thoughts', 'More thoughts']
           }
         },
-        'Day 1' => daily_expected_results,
+        'Day 1' => {
+          response_count: 0,
+          general: {
+            'sampleDailyScale' => {},
+          },
+          facilitator: {
+            'sampleFacilitatorText' => {
+              @workshop.facilitators.first.name => ['Great!'],
+              @workshop.facilitators.second.name => ['Bad!']
+            }
+          }
+        },
         'Day 2' => daily_expected_results,
         'Day 3' => daily_expected_results,
         'Day 4' => daily_expected_results,

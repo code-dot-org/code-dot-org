@@ -1,5 +1,8 @@
+/* global Maplace */
+
 var gmap;
 var gmap_loc;
+var selectize;
 
 $(function () {
   selectize = $('#class-search-facets select').selectize();
@@ -38,19 +41,6 @@ function submitForm() {
   sendQuery(params);
 }
 
-function getLatLng(address) {
-  var geocoder = new google.maps.Geocoder();
-
-  geocoder.geocode({'address': address}, function (results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-      loc = results[0].geometry.location;
-      gmap_loc = loc.d + ',' + loc.e;
-    } else {
-      displayQueryError();
-    }
-  });
-}
-
 function getParams(form_data) {
   var params = [];
 
@@ -60,7 +50,7 @@ function getParams(form_data) {
   });
 
   $.each(form_data, function (key, field) {
-    if (field.value != '' && field.name != 'location') {
+    if (field.value !== '' && field.name !== 'location') {
       params.push(field);
     }
   });
@@ -70,10 +60,8 @@ function getParams(form_data) {
 
 function sendQuery(params) {
   $.post('/forms/ClassSubmission/query', $.param(params), function (response) {
-    var results = JSON.parse(response); // Convert the JSON string to a JavaScript object.
-    var locations = getLocations(results);
+    var locations = getLocations(response);
     updateResults(locations);
-    updateFacets(results);
   }).fail(displayQueryError);
 }
 
@@ -123,17 +111,13 @@ function setFacetDefaults() {
   $.each(selectize, function (key, select) {
     // Class format dropdown selects "Out of school" by default
     // and all other dropdowns are cleared.
-    if (selectize[key].id == "class-format-category") {
+    if (selectize[key].id === "class-format-category") {
       select.selectize.setValue('out_of_school');
     } else {
       select.selectize.clear();
     }
     select.selectize.refreshOptions(false);
   });
-}
-
-function updateFacets(results) {
-  var facet_fields = results.facet_counts.facet_fields;
 }
 
 function displayNoResults() {
@@ -188,9 +172,9 @@ function compileHTML(index, location) {
 
   if (location.class_format_s) {
     line = '<strong>Format: </strong>' + i18n(location.class_format_category_s) + ' - ' + i18n(location.class_format_s);
-    if (location.school_tuition_s == 'yes') {
+    if (location.school_tuition_s === 'yes') {
       line += ' (private)';
-    } else if (location.school_tuition_s == 'no') {
+    } else if (location.school_tuition_s === 'no') {
       line += ' (public)';
     }
 
@@ -270,7 +254,7 @@ function compileDetails(index, location, lines) {
       location.school_website_s = 'http://' + location.school_website_s;
     }
 
-    line = '<strong>Website: </strong><a href="' + location.school_website_s + '" target="_blank">' + location.school_website_s + '</a>';
+    let line = '<strong>Website: </strong><a href="' + location.school_website_s + '" target="_blank">' + location.school_website_s + '</a>';
     lines.push(line);
   }
 

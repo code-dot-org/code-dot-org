@@ -10,11 +10,10 @@ class ApiController < ApplicationController
     begin
       auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
       response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
+      yield JSON.parse(response)['data']
     rescue RestClient::ExceptionWithResponse => e
       render status: e.response.code, json: {error: e.response.body}
     end
-
-    yield JSON.parse(response)['data']
   end
 
   def clever_classrooms

@@ -58,7 +58,6 @@ class EditSectionForm extends Component {
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
-    showVersionMenu: PropTypes.bool,
   };
 
   onSaveClick = () => {
@@ -79,7 +78,6 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
-      showVersionMenu,
     } = this.props;
     if (!section) {
       return null;
@@ -107,7 +105,6 @@ class EditSectionForm extends Component {
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
-            showVersionMenu={showVersionMenu}
           />
           {stageExtrasAvailable(section.scriptId) &&
             <LessonExtrasField
@@ -154,7 +151,6 @@ export default connect(state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-  showVersionMenu: state.teacherSections.showVersionMenu,
 }), {
   editSectionProperties,
   handleSave: finishEditingSection,
@@ -221,7 +217,6 @@ const AssignmentField = ({
   validAssignments,
   assignmentFamilies,
   disabled,
-  showVersionMenu,
 }) => (
   <div>
     <FieldName>
@@ -238,7 +233,6 @@ const AssignmentField = ({
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      showVersionMenu={showVersionMenu}
     />
   </div>
 );
@@ -248,7 +242,6 @@ AssignmentField.propTypes = {
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
-  showVersionMenu: PropTypes.bool,
 };
 
 const LessonExtrasField = ({value, onChange, disabled}) => (

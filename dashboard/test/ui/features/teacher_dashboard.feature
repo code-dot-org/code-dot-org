@@ -55,10 +55,10 @@ Feature: Using the teacher dashboard
     And I give user "Teacher_Sally" hidden script access
     And I sign out
 
-    # Assign csp1-2017
+    # Assign a script with a survey but no assessment
     When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home?enableExperiments=versionMenu"
-    And I click selector ".ui-test-section-dropdown"
+    And I am on "http://studio.code.org/home"
+    And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-assignment-family" is visible
     And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
@@ -67,6 +67,7 @@ Feature: Using the teacher dashboard
     And I click selector ".assignment-version-title:contains('17-'18)" once I see it
     And I select the "CSP Student Post-Course Survey" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
+    And I wait until element ".modal-backdrop" is gone
 
     # Progress tab
     When I click selector "a:contains('New Section')" once I see it
@@ -76,6 +77,55 @@ Feature: Using the teacher dashboard
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     Then I wait until element "h3:contains(this survey is anonymous)" is visible
+
+  Scenario: Assessments tab survey submissions
+    Given I create an authorized teacher-associated student named "Sally"
+    And I give user "Teacher_Sally" hidden script access
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I sign out
+
+    And I create a student named "Student2"
+    And I navigate to the section url
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I sign out
+
+    And I create a student named "Student3"
+    And I navigate to the section url
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I sign out
+
+    And I create a student named "Student4"
+    And I navigate to the section url
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I sign out
+
+    And I create a student named "Student5"
+    And I navigate to the section url
+    And I submit the assessment on "http://studio.code.org/s/csp-post-survey/stage/1/puzzle/1/page/5"
+    And I sign out
+
+    # Assign a script with an unlocked survey
+    When I sign in as "Teacher_Sally"
+    And I am on "http://studio.code.org/home"
+    And I click selector ".ui-test-section-dropdown" once I see it
+    And I click selector ".edit-section-details-link"
+    And I wait until element "#uitest-assignment-family" is visible
+    And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
+    And I wait until element "#assignment-version-year" is visible
+    And I click selector "#assignment-version-year"
+    And I click selector ".assignment-version-title:contains('17-'18)" once I see it
+    And I select the "CSP Student Post-Course Survey" option in dropdown "uitest-secondary-assignment"
+    And I press the first ".uitest-saveButton" element
+    And I wait until element ".modal-backdrop" is gone
+
+    # Progress tab
+    When I click selector "a:contains('New Section')" once I see it
+    And I wait until element "#uitest-course-dropdown" contains text "CSP Student Post-Course Survey"
+
+    # Assessments tab
+    When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
+    And I wait until element "#uitest-course-dropdown" is visible
+    Then I wait until element "h2:contains(Multiple choice questions overview)" is visible
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"

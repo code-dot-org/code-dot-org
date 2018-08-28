@@ -1,6 +1,6 @@
 .field
-  = f.label 'Use default sprites as starting animation JSON'
-  = boolean_check_box f, :use_default_sprites
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_default_sprites, description: "Use default sprites as starting animation JSON"}
+
 .field
   = f.label :custom_blocks, 'Custom block defintions'
   %p
@@ -27,9 +27,7 @@
   ~ f.text_area :custom_blocks, placeholder: 'Custom blocks', rows: 4, value: @level.custom_blocks
   #custom-blocks-validation
 .field
-  = f.label :hide_custom_blocks, 'Do not automatically add block pool and custom blocks to the toolbox'
-  = boolean_check_box f, :hide_custom_blocks
-
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_custom_blocks, description: "Do not automatically add block pool and custom blocks to the toolbox"}
 .field
   =f.label 'Custom helper library code'
   %p
