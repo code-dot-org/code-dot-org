@@ -1569,19 +1569,29 @@ en:
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
       Dance Party 1-validated_instruction: 'What do you think will happen when you click on the alien?  '
+      Dance Party 1-validated_simple_instruction: 'What do you think will happen when you click on the alien?  '
       Dance Party 2_instruction: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
+      Dance Party 2_simple_instruction: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
       Dance Party 3 - Validated_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 3 Ram_instruction: Make the sprite do something different when you press the up arrow.
       Dance Party 3_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_simple_instruction: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
       Dance Party 4 Validated_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
       Dance Party 4_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
+      Dance Party 4_simple_instruction: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
       Dance Party 5 - Validated_instruction: Add code to change the color of each alien when it gets clicked.
       Dance Party 5_instruction: Add code to change the color of each alien when it gets clicked.
+      Dance Party 5_simple_instruction: Add code to change the color of each alien when it gets clicked.
       Dance Party 6 - Validated_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
       Dance Party 6_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 6_simple_instruction: Use the `stops everything` block to make each alien stop moving when it is clicked.
       Dance Party 7 - Validated_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
       Dance Party 7_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
+      Dance Party 7_simple_instruction: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
       Dance Party Freeplay_instruction: Now create your own alien disco!
+      Dance Party Freeplay_simple_instruction: Now create your own alien disco!
       Dance Party Predict_instruction: 'What do you think will happen when you click on the alien?  '
+      Dance Party Predict_simple_instruction: 'What do you think will happen when you click on the alien?  '
       ECSPD Binary Odometer_instruction: This is another resource you could use with your students.
       Eval Booleans 1_instruction: Boolean operators (like >, <, =) allow us to compare different values, returning either true or false. Click "Run" to see how this expression evaluates.
       Eval Booleans 2_instruction: Can you set the values so that this expression evaluates as true?
@@ -1655,11 +1665,18 @@ en:
       Find the Wizard_instruction: Build whatever you want. This is an example of a number-guessing game!
       Find the Wizard_2018_instruction: Build whatever you want. This is an example of a number-guessing game!
       Fish Tank 2-validated_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 2-validated_simple_instruction: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 3-validated Ram_instruction: Change the fish's behavior so that it swims around the tank.
       Fish Tank 3-validated_instruction: Change the fish's behavior so that it swims around the tank.
+      Fish Tank 3-validated_simple_instruction: Change the fish's behavior so that it swims around the tank.
       Fish Tank 4-validated_instruction: Use the `set background color` block to make the background blue.
+      Fish Tank 4-validated_simple_instruction: Use the `set background color` block to make the background blue.
       Fish Tank 5-validated_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 5-validated_simple_instruction: The fish wants a friend.   Add a new sprite.
       Fish Tank 6-validated_instruction: Add a behavior to the fish's new friend.
+      Fish Tank 6-validated_simple_instruction: Add a behavior to the fish's new friend.
       Fish Tank 7-validated_instruction: Use some new blocks from the toolbox to make your fish tank special!
+      Fish Tank 7-validated_simple_instruction: Use some new blocks from the toolbox to make your fish tank special!
       Food Fight!_instruction: "We've added one last function for you. \n\nUse an \"if\" statement to program your game to call the \"level_up\" function only when \"player_score\" becomes greater than a certain number.\n\nFor example: \"player_score\" > 6\n\nPlay the game, and make it to level 3 to move to the next puzzle. "
       Food Fight_instruction: You can make whatever you want in play lab! This is an example of a game you can make in play lab.
       FoodFight_instruction: This is an example of a game you can make in play lab.
@@ -2190,6 +2207,7 @@ en:
       Prompt Test_instruction: Build whatever you want. This is an example of a number-guessing game!
       Quantum Bee - Ryan_instruction: These clouds are bugging me! Some of the clouds have flowers inside, and some don't. I should check each cloud, and only get nectar from the flowers.
       Quantum Bee_instruction: Purple flowers may have either 1 or 0 nectar, but you don't know which one! Be careful not to collect nectar from a purple flower if it doesn't have any. Check if the nectar is equal to 1 by using the if block.
+      Ram Spritelab Validation Test_instruction: Press the up arrow
       Robot Doodle_instruction: 'Project Idea: Create a picture of something familiar from the real world. This requires persistence and planning!'
       Robot Doodle_2018_instruction: 'Project Idea: Create a picture of something familiar from the real world. This requires persistence and planning!'
       Robot Drawing_instruction: 'Project Idea: Create a picture of something familiar from the real world. This requires persistence and planning!'
@@ -3077,16 +3095,25 @@ en:
       Valentine_playlab_01_instruction: 'Program Kiki (Actor 1) to move left and right when the left and right arrows are pressed. When Kiki is clicked, she should throw hearts towards her friends. '
       Vigenere_instruction: Test
       Virtual Pet 1 Predict_instruction: 'What do you think will happen when you click on the alien?  '
+      Virtual Pet 1 Predict_simple_instruction: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1_instruction: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 1_simple_instruction: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2 - Validated (Ram)_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2_instruction: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
+      Virtual Pet 2_simple_instruction: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
+      Virtual Pet 2_simple_clone_instruction: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
+      Virtual Pet 3_simple_instruction: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
+      Virtual Pet 4_simple_instruction: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
+      Virtual Pet 5_simple_instruction: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6_instruction: Add an apple that returns the giraffe back to regular size when they touch.
+      Virtual Pet 6_simple_instruction: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet Freeplay_instruction: 'Freeplay: What more can you make your giraffe do? '
+      Virtual Pet Freeplay_simple_instruction: 'Freeplay: What more can you make your giraffe do? '
       WhileAdventure_instruction: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018_instruction': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3891,7 +3918,7 @@ en:
         - What happens if you use two different angles in your stair step pattern?
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
-      courseD_artist_1_2018_instruction: "Draw a small square with **30** pixel long sides.  \n"
+      courseD_artist_1_2018_instruction: "Draw a hexagon with **50** pixel long sides.  \n"
       courseD_artist_2_2018_instruction: 'Now, turn right by **60** degrees, then draw a straight line **150** pixels long and jump back to the center of the play area.
 
 '

@@ -3494,18 +3494,18 @@ ka:
         first_hint: |-
           ეს არის პირველი მინიშნება.
           მას აქვს *რამდენიმე* **ძირითადი** `მარკირება`
-        second_hint: "ეს არის მეორე მინიშნება. მას აქვს სურათი.\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)"
+        second_hint: ეს მეორე მინიშნებაა. მას მინიშნების ვიდეო აქვს.
         last_hint: ეს არის მესამე და ბოლო მინიშნება. მას განსაკუთრებული მახასიათებელი არ აქვს.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
           ეს არის პირველი მინიშნება.
           მას აქვს *რამდენიმე* **ძირითადი** `მარკირება`
         second_hint: |-
-          ეს არის მეორე მინიშნება. მას აქვს სურათი.
+          ეს მეორე მინიშნებაა. მას სურათიც აქვს.
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: ეს არის მესამე და ბოლო მინიშნება. მას განსაკუთრებული მახასიათებელი არ აქვს.
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_a: თქვენს პროგრამაში ფუნქციის გამოძახება მრავალჯერ შეგიძლიათ! სცადეთ მისი ორჯერ გამოძახება ამ თავსატეხის ამოსახნსელად.
+        Function_intro_Ryan_a: პროგრამაში ფუნქციის გამოძახება ბევრჯერ შეგიძლიათ! ამ თავსატეხის ამოსახსნელად სცადეთ მისი ორჯერ გამოძახება.
       Harvesting_authored_hint:
         pointer_harvester_test: რა ტიპის ბლოკის გამოყენება შემიძლია იმისათვის, რომ რამე შევამოწმო და მივიღო გადაწყვეტილება?
       Inspirational Artwork_authored_hint:
@@ -3519,9 +3519,9 @@ ka:
           
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       MC_HOC_2017_01_Cole_authored_hint:
-        MC_HOC_2017_01_Cole_a: გამოიყენეთ ისრების ღილაკები, რათა მიმარტოთ მოთამაშე სახლისკენ. მოსაგებად მიიყვანეთ ის ნარინჯისფერ კვადრატამდე.
+        MC_HOC_2017_01_Cole_a: გამოიყენეთ ისრების ღილაკები, მოთამაშის სახლისკენ მისამართად. მოსაგებად, მიიყვანეთ ის ნარინჯისფერ კვადრატამდე.
       MC_HOC_2017_01_RETRY_authored_hint:
-        MC_HOC_2017_01_RETRY_b: არ დაგავიწყდეთ "გაშვების" ღილაკზე დაწკაპება, რათა გაუშვით აგენტის კოდი.
+        MC_HOC_2017_01_RETRY_b: აგენტის კოდის გასაშვებად, არ გამოგრჩეთ"გაშვების" ღილაკზე დაწკაპუნება.
       NEW Course 4 Artist Functions 13_authored_hint:
         NEW_Course_4_Artist_Functions_13_a: სცადეთ დაარედაქტირო ფუნქცია `კვადრატის ხაზის დახატვა`, ისე რომ ეს ფუნქცია 2-ჯერ არ გამოიძახოთ.
         NEW_Course_4_Artist_Functions_13_c: რომელი კოდის გამოყებნება დაგჭირდებოდათ იმ შემთხვევაში, თუ ყუთების ნაცვლად წესიერი ხაზების გამოყენებით დააპირებდით ვარსკვლავის გაკეთებას?
@@ -3662,16 +3662,16 @@ ka:
         mc_8_b: იმისათვის, რომ გაამარტივოთ კოდი, გამოიყენეთ `გამეორების` ციკლები.
         mc_8_c: თქვენი მიზანია შეაღწიოთ ეკრანის თავში მოთავსებული სახლის შესასვლელში.
       Overworld Chop Tree_authored_hint:
-        mc_2_a: 'იმისთვის, რომ ხის წინ დადგეთ, დაგჭირდება 2-ჯერ გამოიყენოთ ბლოკი`წინ გადაადგილდება`.'
+        mc_2_a: 'ხის წინ დასადგომად, დაგჭირდებათ ორჯერ გამოიყენოთ ბლოკი`წინ გადაადგილება`.  '
         mc_2_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
       Overworld Chop Tree_2018_authored_hint:
-        mc_2_a: 'იმისთვის, რომ ხის წინ დადგეთ, დაგჭირდება 2-ჯერ გამოიყენოთ ბლოკი`წინ გადაადგილდება`.'
+        mc_2_a: 'ხის წინ დასადგომად, დაგჭირდებათ ორჯერ გამოიყენოთ ბლოკი`წინ გადაადგილება`.  '
         mc_2_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
       Overworld Chop Trees_authored_hint:
-        mc_4_a: 'შეგიძლიათ, ხე მოჭრათ ნებისმიერი თანმიმდევრობით. რომელ ბილიკს დასჭირდება ბლოკების უმცირესი რაოდენობა?'
+        mc_4_a: 'ხეების მოჭრა ნებისმიერი თანმიმდევრობით შეგიძლიათ. რომელ ბილიკს დასჭირდება ბლოკების უმცირესი რაოდენობა?  '
         mc_4_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
       Overworld Chop Trees_2018_authored_hint:
-        mc_4_a: 'შეგიძლიათ, ხე მოჭრათ ნებისმიერი თანმიმდევრობით. რომელ ბილიკს დასჭირდება ბლოკების უმცირესი რაოდენობა?'
+        mc_4_a: 'ხეების მოჭრა ნებისმიერი თანმიმდევრობით შეგიძლიათ. რომელ ბილიკს დასჭირდება ბლოკების უმცირესი რაოდენობა?  '
         mc_4_b: ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის.
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: იმისათვის, რომ აირჩიოთ რისი განთავსება გინდათ, დააწექით ისარს ბლოკზე `განთავსება`.
@@ -3683,10 +3683,10 @@ ka:
         mc_6_c: ციკლში `გამეორება` შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი.
       Overworld Move to Sheep_authored_hint:
         mc_1_a: 'ბლოკი `წინ გადაადგილება` მოთავსებულია პანელის თავში.'
-        mc_1_b: 'დარწმუნდით, რომ `წინ გადაადგილების` ორივე ბლოკი მოთავსებულია გაშვების` ბლოკში.'
+        mc_1_b: 'დარწმუნდით, რომ `წინ გადაადგილების` ორივე ბლოკი მიმაგრებულია `გაშვების` ბლოკზე.  '
       Overworld Move to Sheep_2018_authored_hint:
         mc_1_a: 'ბლოკი `წინ გადაადგილება` მოთავსებულია პანელის თავში.'
-        mc_1_b: 'დარწმუნდით, რომ `წინ გადაადგილების` ორივე ბლოკი მოთავსებულია გაშვების` ბლოკში.'
+        mc_1_b: 'დარწმუნდით, რომ `წინ გადაადგილების` ორივე ბლოკი მიმაგრებულია `გაშვების` ბლოკზე.  '
       Overworld Place Wall_authored_hint:
         mc_5_a: ჯერ გამოიყენეთ ბლოკი `განთავსება` და შემდეგ ბლოკი `გადაადგილება`.
         mc_5_b: იმისათვის, რომ კოდი ერთზე მეტჯერ გაუშვათ, დარწმუნდით, რომ ორივე ბლოკი `გამეორების` ციკლის შიგნითაა მოქცეული.
@@ -3710,12 +3710,12 @@ ka:
         mc_13_a: გამოიყენეთ ბლოკი `რკინიგზის განთავსება` იმისათვის, რომ რკინიგზა განათავსოთ იმ კვადრატზე, რომელზეც დგახართ.
         mc_13_b: იმისათვის, რომ კოდი შეამოკლოთ, გამოიყენეთ ციკლები `გამეორება`.
       Overworld Shear Sheep_authored_hint:
-        mc_3_a: '`გაკრეჭვის` ბლოკი თქვენს წინ მოიყვანს ცხვრებს. ხედავთ ცხვრებს თქვენ წინ?'
-        mc_3_b: 'თუ გინდათ შეცვალოთ ცხვრებთან შეპირისპირების გზა, გამოიყენეთ `მობრუნების` ბლოკი.'
+        mc_3_a: '`გაკრეჭვის` ბლოკი მოქმედებს თქვენ პირისპირ მდგომ ცხვარზე. ხედავთ ცხვარს თქვენ წინ?  '
+        mc_3_b: 'თუ მოძრაობის მიმართულების შეცვლა გსურთ, გამოიყენეთ `მობრუნების` ბლოკი.  '
         mc_3_c: 'შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.'
       Overworld Shear Sheep_2018_authored_hint:
-        mc_3_a: '`გაკრეჭვის` ბლოკი თქვენს წინ მოიყვანს ცხვრებს. ხედავთ ცხვრებს თქვენ წინ?'
-        mc_3_b: 'თუ გინდათ შეცვალოთ ცხვრებთან შეპირისპირების გზა, გამოიყენეთ `მობრუნების` ბლოკი.'
+        mc_3_a: '`გაკრეჭვის` ბლოკი მოქმედებს თქვენ პირისპირ მდგომ ცხვარზე. ხედავთ ცხვარს თქვენ წინ?  '
+        mc_3_b: 'თუ მოძრაობის მიმართულების შეცვლა გსურთ, გამოიყენეთ `მობრუნების` ბლოკი.  '
         mc_3_c: 'შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.'
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
@@ -3752,11 +3752,11 @@ ka:
         mc_10_b: "როდესაც ლავის პირას დგახართ, გამოიყენეთ ბლოკი: `განათავსეთ რიყის ქვა წინ`, იმისათვის რომ უსაფრთხო გახადოთ ბილიკი.\nამის შემდგ შეგიძლიათ მასზე გაიაროთ!"
         mc_10_c: შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.
       Underground Mining Coal_authored_hint:
-        mc_9_a: სახით პირისპირ უყურებ სწორ გზას? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენს წინ.
+        mc_9_a: პირისპირ შეეჩეხე რაიმეს? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენ წინ.
         mc_9_b: კედელში შავი ლაქები ქვანახშირია! გამოიყენეთ `განადგურების ბლოკი` მათ გამოსათხრელად.
         mc_9_c: იმისათვის, რომ განათავსოთ ჩირაღდანი იმ სივრცეში, სადაც დგახართ, გამოიყენეთ ბლოკი `ჩირაღდნის განთავსება`.
       Underground Mining Coal_2018_authored_hint:
-        mc_9_a: სახით პირისპირ უყურებ სწორ გზას? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენს წინ.
+        mc_9_a: პირისპირ შეეჩეხე რაიმეს? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენ წინ.
         mc_9_b: კედელში შავი ლაქები ქვანახშირია! გამოიყენეთ `განადგურების ბლოკი` მათ გამოსათხრელად.
         mc_9_c: იმისათვის, რომ განათავსოთ ჩირაღდანი იმ სივრცეში, სადაც დგახართ, გამოიყენეთ ბლოკი `ჩირაღდნის განთავსება`.
       aE2_authored_hint:
@@ -3840,7 +3840,7 @@ ka:
         courseA_collector_loops_challenge1_b: თუ რამეს ერთჯერადად ასრულებთ, ციკლის გამოყენება არ გჭირდებათ.
         courseA_collector_loops_challenge1_c: გამოქვაბულის მარჯვენა მხარეს 6 ძვირფასი ქვაა, თუმცა თქვენ უნდა გადაადგილდეთ და შეაგროვოთ ისინი მხოლოდ 5-ჯერ. ხვდებით რატომ?
       course1_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: "ამ პრობლემის გადასაჭრელად თქვენ მხოლოდ ერთი ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) ბლოკის გამოყენება გჭირდებათ."
+        courseA_collector_loops_challenge2_b: "ამოცანის გადასაჭრელად მხოლოდ ერთი ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) ბლოკის გამოყენება გჭირდებათ.\n\n"
         courseA_collector_loops_challenge2_a: |-
           სამხრეთით მოძრაობის დაწყებამდე, შეგიძლიათ ბილიკზე მეორეჯერ გადაადგილდეთ უკან.
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
@@ -3991,7 +3991,7 @@ ka:
         courseA_playlab_events_challenge1_b: "გამოაჩინეთ მოჩვენება სახელად ბუა, როდესაც ვოდლსზე დააწკაპებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "გამოაჩინეთ ფუმფულა მონსტრი ჯეიდენი, როდესაც დააკლიკავთ ბუაზე!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "გამოაჩინეთ რობოტი სპიფი, როდესაც მონსტრზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააწკაპუნებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2_authored_hint:
         courseA_playlab_events_challenge2_a: "შეგიძლიათ ჩიტი აამღეროთ.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">ჭიკ-ჭიკ</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "შეგიძლიათ რობოტს ხმოვანი სიგნალი ამოაშვებინოთ.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
@@ -4020,7 +4020,7 @@ ka:
           </next>
           </block></xml>
       course2_artist_nestedLoops_challenge1_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: დაიწყეთ ჩასმული ციკლის შექმნით, რათა დახატოთ ოთხი რვაკუთხედი. მობრუნდით 45 გრადუსით რომ გააკეთოთ რვაკუთხედი. გადახტით და მობრუნდით 90 გრადუსით თითოეულის შემდეგ.
+        courseD_artist_nestedLoops_challenge1_a: ოთხი რვაკუთხედის დასახატად დაიწყეთ ჩასმული ციკლის შექმნა. რვაკუთხედის დასახატად მობრუნდით 45 გრადუსით. გადახტით და მობრუნდით 90 გრადუსით თითოეულის შემდეგ.
         courseD_artist_nestedLoops_challenge1_b: დაამატეთ კოდი, რომ დახატოთ სამკუთხედი ჩასმულ ციკლში. გამოიყენეთ 120 გრადუსიანი ბრუნები თქვენი სამკუთხედისათვის.
         courseD_artist_nestedLoops_challenge1_c: |-
           გამოიყენეთ ჩასმული ციკლი:
@@ -4057,9 +4057,9 @@ ka:
         courseC_maze_loops_challenge2_a: საწყისი კოდი მშვენივრად მუშაობს - მაშინმ როდესაც თითოეულ გროვაში მხოლოდ ერთი განძის ნაწილაკია!
         courseC_maze_loops_challenge2_b: გამოიყენეთ ციკლები, რათა გეყოთ `შეგროვების` ბლოკები!
       course2_collector_prog_challenge1_authored_hint:
-        courseC_collector_prog_challenge1_a: გამოიყენეთ `შეგროვების` ბრძანება უფრო ხშირად, რათა შეაგროვოთ დამატებითი განძი.
+        courseC_collector_prog_challenge1_a: დამატებითი განძის შესაგროვებლად, უფრო ხშირად გამოიყენეთ `შეგროვების` ბრძანება.
       course2_collector_prog_challenge2_authored_hint:
-        courseC_collector_prog_challenge1_a: გამოიყენეთ `შეგროვების` ბრძანება უფრო ხშირად, რათა შეაგროვოთ დამატებითი განძი.
+        courseC_collector_prog_challenge1_a: დამატებითი განძის შესაგროვებლად, უფრო ხშირად გამოიყენეთ `შეგროვების` ბრძანება.
       course2_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: არც კი იფიქროთ ამის ამოხსნა ციკლების გარეშე სცადოთ!
         courseC_harvester_loops_challenge1_b: თქვენ შეგიძლიათ გამოიყენოთ `წინ მოძრაობა` და `სიმინდის შეგროვება` იმდენჯერ, რამდენჯერაც დაგჭირდებათ, შემდეგ კი `შეტრიალდეთ მარჯვნივ` ყოველ კუთხესთან.
@@ -4257,7 +4257,7 @@ ka:
           </block>
           </xml>
       course3_collector_debugging_challenge2_authored_hint:
-        courseD_collector_debugging_challenge2_a: "ყურადღება გაამახვილეთ პირველი ორი გროვიდან ორი ძვირფასი ქვის შეგროვებაზე.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nგამოიყენეთ ეს ბლოკები.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">მოძრაობაწინ</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "ყურადღება გაამახვილეთ პირველი ორი გროვიდან ორ-ორი ძვირფასი ქვის შეგროვებაზე.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nგამოიყენეთ ეს ბლოკები.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">მოძრაობა წინ</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "შემდეგ, შეაგროვეთ ამ მწკრივში დარჩენილი ძვირფასი ქვები.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nდაამატეთ ეს ბლოკები თქვენს პროგრამაში.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">მოძრაობაუკან</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "საბოლოოდ, შეაგროვეთ დარჩენილი განძი. დაამატეთ ეს ბლოკები თქვენს პროგრამაში.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">მობრუნებამარჯვნივ</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
@@ -4312,11 +4312,11 @@ ka:
         courseD_farmer_condLoops_challenge2_a: ყოველ სივრცეში ბოსტნეულის სხვადასხვა რაოდენობაა. გამოიყენეთ `სანამ` ციკლი.
       course3_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_a: მარცხნივ თუ მარჯვნივ? ეს თქვენი გადასაწყვეტია!
-        courseC_maze_debugging_challenge1_b: ციყვის ბილიკს მართკუთხედის ფორმა აქვს! ყოველ ჯერზე ერთიდაიგივენაირად უნდა შეუხვიოთ!
-        courseC_maze_debugging_challenge1_c: თუ გაიჭედეთ, ყოველთვის შეგიძლიათ დაიწყოთ თავიდან, ან მოაშოროთ მთელი კოდი და იპოვოთ თქვენი გზა!
+        courseC_maze_debugging_challenge1_b: ციყვის ბილიკს მართკუთხედის ფორმა აქვს! მან ყოველ ჯერზე ერთ მხარეს უნდა მოუხვიოს!
+        courseC_maze_debugging_challenge1_c: თუ იჭედებით, ყოველთვის შეგიძლიათ თავიდან დაიწყოთ ან ამოიღოთ მთელი კოდი და საკუთარი გზა იპოვნოთ!
       course3_maze_debugging_challenge2_authored_hint:
         courseC_maze_debugging_challenge2_a: ამის ამოხსნის ერთ-ერთი გზაა წინ, მოხვევებს შორის დაამატოთ მეტი საფეხურები.
-        courseC_maze_debugging_challenge2_b: თუ გაიჭედეთ, ყოველთვის შეგიძლიათ დაიწყოთ თავიდან, ან მოაშოროთ მთელი კოდი და იპოვოთ თქვენი გზა!
+        courseC_maze_debugging_challenge2_b: თუ იჭედებით, ყოველთვის შეგიძლიათ თავიდან დაიწყოთ, ან მოაშოროთ მთელი კოდი და საკუთარი გზა იპოვნოთ!
         courseC_maze_debugging_challenge2_c: |-
           არსებობს ორი სხვადასხვა გზა, რომელთაც შეგიძლიათ გაჰყვეთ `წინ გადაადგილების` და მხოლოდ ოთხი მობრუნების გამოყენებით. თუ მოიფიქრებთ, როგორ გამოიყენოთ `გამეორების` ბლოკი, შესაძლოა მეტიც იყოს!
           
@@ -4740,7 +4740,7 @@ ka:
           თავიდან, დარწმუნდით იმაში, რომ გესმით, როგორ **უნდა** იმუშავოს ფუნქციამ. როდესაც ფერმერი იმოძრავებს ქვემოთ, ის უბრალოდ ცდის სიმინდის შეგროვებას. ამის მაგივრად, როგორ შეიძლება შევამოწმებინოთ მას ყოველი ადგილი 3-ივე ბოსტნეულის არსებობაზე და შევაგროვებინოთ მხოლოდ ისინი, რომლებსაც იპოვის?
           
           დაამატეთ პირობითი ბრძანებები ფუნქციაში, რათა შეამოწმოთ ადგილები სიმინდის, გოგრის და სალათის არსებობაზე.
-        courseF_bee_fwp_challenge2_b: "გითავდებათ `წინ გადაადგილების` ბლოკები?\nსცადეთ *მეორე* `for ციკლის` გამოყენება თქვენს მთავარი პროგრამაში.\n\n**მითითება:** არ აგერიოთ `მთვლელი` და `მთვლელი2`."
+        courseF_bee_fwp_challenge2_b: "გითავდებათ `წინ გადაადგილების` ბლოკები?\nსცადეთ ძირითად პროგრამაში *მეორე* `for ციკლის` გამოყენება.\n\n**მითითება:** არ აგერიოთ `მთვლელი` და `მთვლელი2`."
         courseF_bee_fwp_challenge2_c: |-
           **აი როგორ უნდა გამოიყურებოდეს თქვენი ფუნქცია:**
           
@@ -5016,8 +5016,8 @@ ka:
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: თუ გსურთ ამ ციკლის 4-ზე მეტჯერ გამეორება, შეგიძლიათ შეცვალოთ ბლოკის თავში განლაგებული რიცხვი.
         courseA_artist_loops4_b: |-
-          იქიდან გამომდინარე, რომ თქვენ შეგიძლიათ მხოლოდ ერთი <xml><block type="simple_move_right"/></xml>
-          ბლოკის გამოყენება, სცადეთ მისი მოთავსება <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> ციკლში.
+          რადგან თქვენ შეგიძლიათ მხოლოდ ერთი <xml><block type="simple_move_right"/></xml>
+          ბლოკის გამოყენება, სცადეთ მისი მოთავსება <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> ციკლში.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: თუ გსურთ ამ ციკლის 4-ზე მეტჯერ გამეორება, შეგიძლიათ შეცვალოთ ბლოკის თავში განლაგებული რიცხვი.
         courseA_artist_loops4_b: |-
@@ -5159,14 +5159,14 @@ ka:
           როდესაც მიაღწევთ განძის შემცველ კვადრატს, მის ასაღებად  გამოიყენეთ ეს ბლოკი.
           <xml>  <block type="collector_collect"/></xml>
       courseA_harvester_loops3_authored_hint:
-        courseA_harvester_loops3_b: "კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი."
+        courseA_harvester_loops3_b: "კოდის გასამეორებლად გადმოათრიეთ `გამეორების` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) ციკლი, შემდეგ კი მოათავსეთ მასში სასურველი ბლოკი. "
       courseA_harvester_loops5_authored_hint:
         courseA_harvester_loops5_a: თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად, ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ.
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: |-
           პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ ერთი `გამეორების` ციკლის გამოყენება.
       courseA_harvester_loops6_authored_hint:
-        courseA_harvester_loops6_a: თუ გაიჭედებით, სცადეთ ნაბიჯების ფურცელზე ჩანიშვნა და განმეორებადი კოდის მოძებნა.
+        courseA_harvester_loops6_a: თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა და განმეორებადი ნაწილების პოვნა.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -5378,13 +5378,13 @@ ka:
         courseA_playlab_events_challenge1_b: "გამოაჩინეთ მოჩვენება სახელად ბუა, როდესაც ვოდლსზე დააწკაპებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "გამოაჩინეთ ფუმფულა მონსტრი ჯეიდენი, როდესაც დააკლიკავთ ბუაზე!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "გამოაჩინეთ რობოტი სპიფი, როდესაც მონსტრზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააწკაპუნებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1_2018_authored_hint:
         courseA_playlab_events_challenge1_a: "გამოაჩინეთ პინგვინი ვოლდსი, როდესაც რობინზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "გამოაჩინეთ მოჩვენება სახელად ბუა, როდესაც ვოდლსზე დააწკაპებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "გამოაჩინეთ ფუმფულა მონსტრი ჯეიდენი, როდესაც დააკლიკავთ ბუაზე!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "გამოაჩინეთ რობოტი სპიფი, როდესაც მონსტრზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააწკაპუნებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1a_authored_hint:
         courseA_playlab_events_challenge1_a: "შეგიძლიათ ჩიტი აამღეროთ.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">ჭიკ-ჭიკ</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "შეგიძლიათ რობოტს ხმოვანი სიგნალი ამოაშვებინოთ.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
@@ -5471,7 +5471,7 @@ ka:
         courseA_playlab_events_challenge1_b: "გამოაჩინეთ მოჩვენება სახელად ბუა, როდესაც ვოდლსზე დააწკაპებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "გამოაჩინეთ ფუმფულა მონსტრი ჯეიდენი, როდესაც დააკლიკავთ ბუაზე!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "გამოაჩინეთ რობოტი სპიფი, როდესაც მონსტრზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააწკაპუნებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
         '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
@@ -5605,10 +5605,10 @@ ka:
         courseB_artist_loops_challenge1_b: როდესაც დაასრულებთ ერთ კამათელს, `გადახტით` შემდეგზე!
         courseB_artist_loops_challenge1_c: 'რამდენიმე ხაზზე თქვენ დაგჭირდებათ `გადაადგილდეთ` ან `ახტეთ` ორ-ორჯერ. '
       courseB_artist_loops_challenge2_authored_hint:
-        courseB_artist_loops_challenge2_a: თქვენ უკვე გაქვთ X-ის დასახატად საჭირო კოდი. ახლა მხოლოდ ის დაგრჩათ, რომ გაიმეოროთ X და მომდევნო ადგილზე გადახტომა.
+        courseB_artist_loops_challenge2_a: თქვენ უკვე გაქვთ X-ის დასახატად საჭირო კოდი. ახლა მხოლოდ ის დაგრჩათ, რომ გაიმეოროთ X და `გადახტეთ` მომდევნო ადგილზე.
         courseB_artist_loops_challenge2_b: თქვენ შეგიძლიათ `ახტომის` ბლოკების გამოყენება სხვა ადგილებზე მოსახვედრად.
       courseB_artist_loops_challenge2_2018_authored_hint:
-        courseB_artist_loops_challenge2_a: თქვენ უკვე გაქვთ X-ის დასახატად საჭირო კოდი. ახლა მხოლოდ ის დაგრჩათ, რომ გაიმეოროთ X და მომდევნო ადგილზე გადახტომა.
+        courseB_artist_loops_challenge2_a: თქვენ უკვე გაქვთ X-ის დასახატად საჭირო კოდი. ახლა მხოლოდ ის დაგრჩათ, რომ გაიმეოროთ X და `გადახტეთ` მომდევნო ადგილზე.
         courseB_artist_loops_challenge2_b: თქვენ შეგიძლიათ `ახტომის` ბლოკების გამოყენება სხვა ადგილებზე მოსახვედრად.
       courseB_collector_loops1_authored_hint:
         courseB_collector_loops1_a: 'ეს ბლოკი: <xml><block type="collector_collect_simplified"/></xml> შეგვიძლია გამვიყენოთ საგანძურის ასაღებად მაშინ, როდესაც განძის თავზე ვდგავართ.'
@@ -5629,10 +5629,12 @@ ka:
       courseB_collector_loops3_2018_authored_hint:
         courseB_collector_prog3_b: გახსოვდეთ გამეორების ციკლში შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი.
       courseB_collector_loops4_authored_hint:
-        courseB_collector_loops4_c: გამეორების ციკლის შემდეგ, ლორენი ფეხით უნდა დაუყვეს გზას ქვევით, იმისათვის რომ საგანძური აიღოს!
+        courseB_collector_loops4_c: '`გამეორების` ციკლის შემდეგ, ლორენი ფეხით უნდა დაუყვეს გზას, იმისათვის რომ საგანძური აიღოს!'
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_c: |-
-          გამეორების ციკლის შემდეგ, ლორენი ფეხით უნდა დაუყვეს გზას ქვევით, იმისათვის რომ საგანძური აიღოს!
+          `გამეორების` ციკლის შემდეგ ლორელი გზას უნდა გაუყვეს <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> და საგანძრი აიღოს!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_b: სცადეთ რამდენჯერმე გაუშვათ კოდი და რომ ნახოთ, რა მოხდება.
       courseB_collector_loops5_2018_authored_hint:
@@ -5915,13 +5917,15 @@ ka:
           </block>
           </xml>
       courseB_collector_loops_challenge`_authored_hint:
-        courseA_collector_loops_challenge2_b: "ამ პრობლემის გადასაჭრელად თქვენ მხოლოდ ერთი ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) ბლოკის გამოყენება გჭირდებათ."
+        courseA_collector_loops_challenge2_b: "ამოცანის გადასაჭრელად მხოლოდ ერთი ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) ბლოკის გამოყენება გჭირდებათ.\n\n"
         courseA_collector_loops_challenge2_a: |-
           სამხრეთით მოძრაობის დაწყებამდე, შეგიძლიათ ბილიკზე მეორეჯერ გადაადგილდეთ უკან.
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseB_iceage_loops3_authored_hint:
         courseB_iceage_loops3_b: |-
-          კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი.
+          კოდის გასამეორებლად გადაათრიეთ `გამეორების` <xml><block type="controls_repeat_simplified">
+          <title name="TIMES">???</title>
+          </block></xml> ციკლი, შემდეგ კი მოათავსეთ მასში სასურველი ბლოკი.
       courseB_maze_seq1_authored_hint:
         courseB_maze_seq1_a: დაუკავშირეთ ბლოკები <xml><block type="when_run"/></xml> ბლოკს, იმისათვის რომ აამოძრაოთ ჩიტი!
         courseB_maze_seq1_b: იმისათვის, რომ ჩიტი ღორთან მიიყვანოთ, გამოქაჩეთ სამი ამ <xml><block type="maze_moveSouth"/></xml> ისართაგან და დაუკავშირეთ ის <xml><block type="when_run"/></xml> ბლოკს.
@@ -5953,10 +5957,10 @@ ka:
         courseB_maze_seq5_a: თუ გაიჭედეთ, სცადეთ ბილიკი ფურცელზე გადმოხატოთ.
         courseB_maze_seq5_b: ამ თავსატეხის ამოხსნის 2 გზა არსებობს!
       courseB_maze_seq6_authored_hint:
-        courseB_maze_seq6_b: თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ორ ნაწილად ამოხსნა, პირველი ამონახსნი გვერდებზე განათავსეთ, ხოლო მეორე მაღლა და დაბლა.
+        courseB_maze_seq6_b: თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ორ ნაწილად ამოხსნა, პირველად გვერდულად მოძრაობით, ხოლო მეორედ მაღლა-დაბლა.
         courseB_maze_seq5_c: ამ თავსატეხის ამოხსნის 2 გზა არსებობს.
       courseB_maze_seq6_2018_authored_hint:
-        courseB_maze_seq6_b: თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ორ ნაწილად ამოხსნა, პირველი ამონახსნი გვერდებზე განათავსეთ, ხოლო მეორე მაღლა და დაბლა.
+        courseB_maze_seq6_b: თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ორ ნაწილად ამოხსნა, პირველად გვერდულად მოძრაობით, ხოლო მეორედ მაღლა-დაბლა.
         courseB_maze_seq5_c: ამ თავსატეხის ამოხსნის 2 გზა არსებობს.
       courseB_maze_seq7_authored_hint:
         courseB_maze_seq7_b: სცადეთ გამოიყენოთ მოცემული ბლოკი და ნახეთ, სად აღმოჩნდებით ბოლოს.
@@ -6057,7 +6061,7 @@ ka:
           </block>
           </xml>
       courseB_playlab_events_challenge2_authored_hint:
-        courseB_playlab_events_challenge2_a: ამ თამაშში დაკლიკვაზე თითოეული ცხოველი უნდა გაქრეს. გარდა ამისა, ის უკან უნდა დაბრუნდეს ორი ან სამი დაკლიკვის შემდეგ!
+        courseB_playlab_events_challenge2_a: ამ თამაშში ყველა ცხოველი უნდა გაქრეს მასზე დაწაპუნების შემდეგ და კვლავ უნდა გამოჩნდეს ერთი-ორი წამში!
         courseB_playlab_events_challenge2_b: |-
           გამოიყენეთ სხვა მოვლენის ბლოკი, იმისათვის რომ გააქროთ სხვა ცხოველები!
           <xml>
@@ -6079,7 +6083,7 @@ ka:
           გამოიყენეთ სხვადასხვა ხმები.
           შეცვალეთ ცხოველების ხასიათი!
       courseB_playlab_events_challenge2_2018_authored_hint:
-        courseB_playlab_events_challenge2_a: ამ თამაშში დაკლიკვაზე თითოეული ცხოველი უნდა გაქრეს. გარდა ამისა, ის უკან უნდა დაბრუნდეს ორი ან სამი დაკლიკვის შემდეგ!
+        courseB_playlab_events_challenge2_a: ამ თამაშში ყველა ცხოველი უნდა გაქრეს მასზე დაწაპუნების შემდეგ და კვლავ უნდა გამოჩნდეს ერთი-ორი წამში!
         courseB_playlab_events_challenge2_b: |-
           გამოიყენეთ სხვა მოვლენის ბლოკი, იმისათვის რომ გააქროთ სხვა ცხოველები!
           <xml>
@@ -6101,7 +6105,7 @@ ka:
           გამოიყენეთ სხვადასხვა ხმები.
           შეცვალეთ ცხოველების ხასიათი!
       courseB_playlab_events_challenge2_embed_authored_hint:
-        courseB_playlab_events_challenge2_a: ამ თამაშში დაკლიკვაზე თითოეული ცხოველი უნდა გაქრეს. გარდა ამისა, ის უკან უნდა დაბრუნდეს ორი ან სამი დაკლიკვის შემდეგ!
+        courseB_playlab_events_challenge2_a: ამ თამაშში ყველა ცხოველი უნდა გაუჩინარდეს მასთან შეხების შემდეგ და კვლავ გამოჩნდეს ერთი-ორი წამში!
         courseB_playlab_events_challenge2_b: |-
           გამოიყენეთ სხვა მოვლენის ბლოკი, იმისათვის რომ გააქროთ სხვა ცხოველები!
           <xml>
@@ -6123,7 +6127,7 @@ ka:
           გამოიყენეთ სხვადასხვა ხმები.
           შეცვალეთ ცხოველების ხასიათი!
       courseB_playlab_events_challenge2_template_authored_hint:
-        courseB_playlab_events_challenge2_a: ამ თამაშში დაკლიკვაზე თითოეული ცხოველი უნდა გაქრეს. გარდა ამისა, ის უკან უნდა დაბრუნდეს ორი ან სამი დაკლიკვის შემდეგ!
+        courseB_playlab_events_challenge2_a: ამ თამაშში ყველა ცხოველი უნდა გაუჩინარდეს მასთან შეხების შემდეგ და კვლავ გამოჩნდეს ერთი-ორი წამში!
         courseB_playlab_events_challenge2_b: |-
           გამოიყენეთ სხვა მოვლენის ბლოკი, იმისათვის რომ გააქროთ სხვა ცხოველები!
           <xml>
@@ -6145,7 +6149,7 @@ ka:
           გამოიყენეთ სხვადასხვა ხმები.
           შეცვალეთ ცხოველების ხასიათი!
       courseB_playlab_events_challenge2_template_2018_authored_hint:
-        courseB_playlab_events_challenge2_a: ამ თამაშში დაკლიკვაზე თითოეული ცხოველი უნდა გაქრეს. გარდა ამისა, ის უკან უნდა დაბრუნდეს ორი ან სამი დაკლიკვის შემდეგ!
+        courseB_playlab_events_challenge2_a: ამ თამაშში ყველა ცხოველი უნდა გაუჩინარდეს მასთან შეხების შემდეგ და კვლავ გამოჩნდეს ერთი-ორი წამში!
         courseB_playlab_events_challenge2_b: |-
           გამოიყენეთ სხვა მოვლენის ბლოკი, იმისათვის რომ გააქროთ სხვა ცხოველები!
           <xml>
@@ -6338,10 +6342,10 @@ ka:
       courseC_PlayLab_events7_2018_authored_hint:
         courseC_PlayLab_events7_b: ციკლს `გამეორება უსასრულოდ` არ სჭირდება რომელიმე სხვა მოვლენის ბლოკთან დაკავშირება. ის თავისით გააქტიურდება.
       courseC_PlayLab_events9_authored_hint:
-        courseC_PlayLab_events9_b: 'დარწმუნდით რომ თქვენი ახალი `როცა პერსონაჟი ეხება` ბლოკი ამბობს: მოქმედი პირი **1** და მოქმედი პირი **3**.'
+        courseC_PlayLab_events9_b: 'დარწმუნდით, რომ თქვენი ახალი `როცა პერსონაჟი ეხება` ბლოკი ამბობს: მოქმედი პირი **1** და მოქმედი პირი **3**.'
         courseC_PlayLab_events9_c: თქვენს სამუშაო სივრცეში ერთსა და იმავე დროს შეგიძლიათ, გქონდეთ ერთზე მეტი `როცა პერსონაჟი ეხება`მოვლენა, ასე რომ საჭირო არაა პირველი წაშალოთ!
       courseC_PlayLab_events9_2018_authored_hint:
-        courseC_PlayLab_events9_b: 'დარწმუნდით რომ თქვენი ახალი `როცა პერსონაჟი ეხება` ბლოკი ამბობს: მოქმედი პირი **1** და მოქმედი პირი **3**.'
+        courseC_PlayLab_events9_b: 'დარწმუნდით, რომ თქვენი ახალი `როცა პერსონაჟი ეხება` ბლოკი ამბობს: მოქმედი პირი **1** და მოქმედი პირი **3**.'
         courseC_PlayLab_events9_c: თქვენს სამუშაო სივრცეში ერთსა და იმავე დროს შეგიძლიათ, გქონდეთ ერთზე მეტი `როცა პერსონაჟი ეხება`მოვლენა, ასე რომ საჭირო არაა პირველი წაშალოთ!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_b: ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად გამოწიოთ და სამუშაო სივრცეში ჩააგდოთ მოვლენის ბლოკი`გაშვებისას`.
@@ -6451,10 +6455,10 @@ ka:
           </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: ციკლის შიგნით თქვენ დაგჭირდებათ ახტეთ 200-მდე სიგრძეზე ზემოთ და 200-მდე სიგრძეზე ქვემოთ, შემდეგ დახატოთ ჩიტის ეტიკეტი, შემდეგ შემობრუნდეთ 30 გრადუსით.
-        courseC_artist_loops2a_b: დააწექით რიცხვს `გამეორების` ციკლის თავზე, იმისათვის რომ შეცვალოთ ციკლის გამეორების რაოდენობა.
+        courseC_artist_loops2a_b: იმისთვის, რომ გამეორებების რაოდენობა შეცვალოთ, დააწკაპუნეთ რიცხვზე `გამეორების` ციკლის თავზე.
       courseC_artist_loops2a_2018_authored_hint:
         courseC_artist_loops2a_a: ციკლის შიგნით თქვენ დაგჭირდებათ ახტეთ 200-მდე სიგრძეზე ზემოთ და 200-მდე სიგრძეზე ქვემოთ, შემდეგ დახატოთ ჩიტის ეტიკეტი, შემდეგ შემობრუნდეთ 30 გრადუსით.
-        courseC_artist_loops2a_b: დააწექით რიცხვს `გამეორების` ციკლის თავზე, იმისათვის რომ შეცვალოთ ციკლის გამეორების რაოდენობა.
+        courseC_artist_loops2a_b: იმისთვის, რომ გამეორებების რაოდენობა შეცვალოთ, დააწკაპუნეთ რიცხვზე `გამეორების` ციკლის თავზე.
       courseC_artist_loops3a_authored_hint:
         courseC_artist_loops3a_a: ჩიტის სტიკერის შემდეგ, ციკლის შიგნით მხოლოდ ერთი ბლოკის განთავსება დაგჭირდებათ.
         courseC_artist_loops3a_b: ღამურის ეტიკეტის საპოვნელად გამოიყენეთ ბლოკის `დახატე ეტიკეტი` თავზე განთავსებული ჩამოსაშლელი მენიუ.
@@ -6617,9 +6621,9 @@ ka:
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: გამოიყენეთ 60 გრადუსიანი კუთხეები სახურავის ასაშენებლად.
       courseC_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: თქვენ შეგიძლიათ ამის დახატვა შუაში ხაზგასმული მართკუთხედის ან ორი განსხვავებული კვადრატის სახით!
+        courseC_artist_prog_challenge1_a: თქვენ ამის დახატვა შუაში ხაზგასმული მართკუთხედის ან ორი განსხვავებული კვადრატის სახით შეგიძლიათ!
       courseC_artist_prog_challenge1_2018_authored_hint:
-        courseC_artist_prog_challenge1_a: თქვენ შეგიძლიათ ამის დახატვა შუაში ხაზგასმული მართკუთხედის ან ორი განსხვავებული კვადრატის სახით!
+        courseC_artist_prog_challenge1_a: თქვენ ამის დახატვა შუაში ხაზგასმული მართკუთხედის ან ორი განსხვავებული კვადრატის სახით შეგიძლიათ!
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "თქვენ შეგიძლიათ განალაგოთ ბრძანებები `გამეორების` ციკლში, რათა მრავალჯერ გაიმეოროთ ისინი. სცადეთ!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">მოძრაობაწინ</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
       courseC_collector_loops_challenge2_authored_hint:
@@ -6651,17 +6655,17 @@ ka:
       courseC_collector_prog5_2018_authored_hint:
         courseC_collector_prog5_c: თუ გაიჭედეთ, სცადეთ ნაბიჯების ქაღალდზე ჩაწერა.
       courseC_collector_prog6_authored_hint:
-        courseC_collector_prog6_b: მთლიანი განძის შეგროვების მრავალი გზა არსებობს. არ შეგეშინდეთ თუ უმოკლესი ამონახსნის საპოვნელად ერთზე მეტი გზის ცდა მოგიწევთ.
+        courseC_collector_prog6_b: გაიჭედეთ? განძის შესაგროვებლად ეს ბილიკი სცადეთ.
       courseC_collector_prog6_2018_authored_hint:
-        courseC_collector_prog6_b: მთლიანი განძის შეგროვების მრავალი გზა არსებობს. არ შეგეშინდეთ თუ უმოკლესი ამონახსნის საპოვნელად ერთზე მეტი გზის ცდა მოგიწევთ.
+        courseC_collector_prog6_b: გაიჭედეთ? განძის შესაგროვებლად ეს ბილიკი სცადეთ.
       courseC_collector_prog_challenge1_authored_hint:
-        courseC_collector_prog_challenge1_a: გამოიყენეთ `შეგროვების` ბრძანება უფრო ხშირად, რათა შეაგროვოთ დამატებითი განძი.
+        courseC_collector_prog_challenge1_a: დამატებითი განძის შესაგროვებლად შეგიძლიათ `შეგროვების` ბრძანება უფრო ხშირად გამოიყენოთ.
       courseC_collector_prog_challenge1_2018_authored_hint:
-        courseC_collector_prog_challenge1_a: გამოიყენეთ `შეგროვების` ბრძანება უფრო ხშირად, რათა შეაგროვოთ დამატებითი განძი.
+        courseC_collector_prog_challenge1_a: დამატებითი განძის შესაგროვებლად შეგიძლიათ `შეგროვების` ბრძანება უფრო ხშირად გამოიყენოთ.
       courseC_collector_prog_challenge2_authored_hint:
-        courseC_collector_prog_challenge1_a: გამოიყენეთ `შეგროვების` ბრძანება უფრო ხშირად, რათა შეაგროვოთ დამატებითი განძი.
+        courseC_collector_prog_challenge1_a: თითოეულ სივრცეში შეგიძლიათ ერთზე მეტი`შეგროვების` ბლოკის გამოყენება.
       courseC_collector_prog_challenge2_2018_authored_hint:
-        courseC_collector_prog_challenge1_a: გამოიყენეთ `შეგროვების` ბრძანება უფრო ხშირად, რათა შეაგროვოთ დამატებითი განძი.
+        courseC_collector_prog_challenge1_a: თითოეულ სივრცეში შეგიძლიათ ერთზე მეტი`შეგროვების` ბლოკის გამოყენება.
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
@@ -6697,9 +6701,9 @@ ka:
       courseC_flappy_events8_2018_authored_hint:
         courseC_flappy_events8_a: სცადეთ მეორე `სცენის განსაზღვრის` ბლოკის დაკავშირება, `დაბრკოლების გავლისას` მოვლენასთან, რათა დაასრულოთ ეს დონე.
       courseC_flappy_events9_authored_hint:
-        courseC_flappy_events9_a: დააკავშირეთ `განსაზღვრე ქულა როგორ 0` ბლოკი, `როდესაც დაეჯახები დაბრკოლებას` მოვლენას, რათა დაასრულოთ ეს დონე.
+        courseC_flappy_events9_a: დონის დასასრულებლად დაუკავშირეთ `დააყენე 0 ქულა` ბლოკი `როდესაც დაბრკოლებას დაეჯახები` მოვლენას.
       courseC_flappy_events9_2018_authored_hint:
-        courseC_flappy_events9_a: დააკავშირეთ `განსაზღვრე ქულა როგორ 0` ბლოკი, `როდესაც დაეჯახები დაბრკოლებას` მოვლენას, რათა დაასრულოთ ეს დონე.
+        courseC_flappy_events9_a: დონის დასასრულებლად დაუკავშირეთ `დააყენე 0 ქულა` ბლოკი `როდესაც დაბრკოლებას დაეჯახები` მოვლენას.
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_a: როდესაც მიაღწევთ გოგრას, გამოიყენეთ <xml><block type="harvester_pumpkin"/></xml> ბლოკი მის შესაგროვებლად.
         courseC_harvester_loops1_b: თქვენ შეგიძლიათ ციკლის გამოყენება <xml><block type="harvester_pumpkin"/></xml> ბლოკთან ერთად, რათა შეაგროვოთ კვადრატიდან ერთზე მეტი გოგრა.
@@ -6707,11 +6711,11 @@ ka:
         courseC_harvester_loops1_a: როდესაც მიაღწევთ გოგრას, გამოიყენეთ <xml><block type="harvester_pumpkin"/></xml> ბლოკი მის შესაგროვებლად.
         courseC_harvester_loops1_b: თქვენ შეგიძლიათ ციკლის გამოყენება <xml><block type="harvester_pumpkin"/></xml> ბლოკთან ერთად, რათა შეაგროვოთ კვადრატიდან ერთზე მეტი გოგრა.
       courseC_harvester_loops2_authored_hint:
-        courseC_harvester_loops2_a: თუ გაიჭედებით, სცადეთ ნაბიჯების ფურცელზე ჩანიშვნა და განმეორებადი კოდის მოძებნა.
+        courseC_harvester_loops2_a: თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა და განმეორებადი ნაწილების პოვნა.
         courseC_harvester_loops2_b: პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ ერთი `გამეორების` ციკლის გამოყენება.
         courseC_harvester_loops2_c: ერთი ციკლი გაიმეორებს `წინ მოძრაობის` ბრძანებას, ხოლო მეორე გაიმეორებს `გოგრის შეგროვების` ბრძანებას.
       courseC_harvester_loops2_2018_authored_hint:
-        courseC_harvester_loops2_a: თუ გაიჭედებით, სცადეთ ნაბიჯების ფურცელზე ჩანიშვნა და განმეორებადი კოდის მოძებნა.
+        courseC_harvester_loops2_a: თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა და განმეორებადი ნაწილების პოვნა.
         courseC_harvester_loops2_b: პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ ერთი `გამეორების` ციკლის გამოყენება.
         courseC_harvester_loops2_c: ერთი ციკლი გაიმეორებს `წინ მოძრაობის` ბრძანებას, ხოლო მეორე გაიმეორებს `გოგრის შეგროვების` ბრძანებას.
       courseC_harvester_loops3_authored_hint:
@@ -6731,10 +6735,10 @@ ka:
         courseC_harvester_loops4_b: თქვენ შეგიძლიათ გაამრავლოთ გამეორების ციკლები კოდში, ზოგი გამოიყენოთ სიმინდის შესაგროვებლად, ხოლო ზოგი გოგრების შესაგროვებლად.
         courseC_harvester_loops4_c: თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**.
       courseC_harvester_loops5_authored_hint:
-        courseC_harvester_loops5_a: თუ გაიჭედებით, სცადეთ მთლიანი პროგრამის დახატვა და განმეორებადი კოდის მოძებნა.
+        courseC_harvester_loops5_a: თუ გაიჭედეთ, სცადეთ მთლიანი პროგრამის დახატვა, შემდეგ კი განმეორებადი ნაწილების პოვნა.
         courseC_harvester_loops5_b: გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან? მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება.
       courseC_harvester_loops5_2018_authored_hint:
-        courseC_harvester_loops5_a: თუ გაიჭედებით, სცადეთ მთლიანი პროგრამის დახატვა და განმეორებადი კოდის მოძებნა.
+        courseC_harvester_loops5_a: თუ გაიჭედეთ, სცადეთ მთლიანი პროგრამის დახატვა, შემდეგ კი განმეორებადი ნაწილების პოვნა.
         courseC_harvester_loops5_b: გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან? მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება.
       courseC_harvester_loops6_authored_hint:
         courseC_harvester_loops6_a: გახსოვდეთ, რომ ერთ გამეორების ციკლში რამდენიმე ბლოკის განლაგება შეგიძლიათ.
@@ -6867,9 +6871,9 @@ ka:
       courseC_maze_debugging1_2018_authored_hint:
         courseC_maze_debugging1_b: ამ თავსატეხის დასასრულებლად გჭირდებათ ერთი ბლოკის დამატება.
       courseC_maze_debugging4_authored_hint:
-        courseC_maze_debugging4_b: ერთ-ერთი ბრუნს ციყვი მიჰყავს მცდარი მიმართულებით, შეგიძლიათ გამოარკვიოთ, რომელია ეს ბრუნი?
+        courseC_maze_debugging4_b: ერთ-ერთ ბრუნს სკრატი მცდარი მიმართულებით მიჰყავს, შეგიძლიათ გამოარკვიოთ რომელს?
       courseC_maze_debugging4_2018_authored_hint:
-        courseC_maze_debugging4_b: ერთ-ერთი ბრუნს ციყვი მიჰყავს მცდარი მიმართულებით, შეგიძლიათ გამოარკვიოთ, რომელია ეს ბრუნი?
+        courseC_maze_debugging4_b: ერთ-ერთ ბრუნს სკრატი მცდარი მიმართულებით მიჰყავს, შეგიძლიათ გამოარკვიოთ რომელს?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_b: |-
           კოდში პირველი დეფექტის პოვნისა და არმოფხვრის შემდეგ, გააგრძელეთ კოდში შეცდომების ძიებისა და მათი აღმოფხვრის პროცესი, იმისათვის რომ იპოვოთ შემდეგი.
@@ -10380,11 +10384,11 @@ ka:
         courseF_bee_functions4_b: სცადეთ პროგრამის დაწერა და ფუნქციის ბლოკების გამოყენება ისე, რომ ისინი შეესაბამებოდნენ მოლოდინს, შემდეგ კი შექმენით ფუნქცია.
       courseF_bee_functions5a_authored_hint:
         courseF_bee_functions5a_a: "თქვენმა ფუნქციამ უნდა შეამოწმოს, არსებობს თუ არა მარჯვნივ მიმავალი გზა და თუ არსებობს, გაუყვეს გვერდითა გზებს და დააბრუნოს ფუტკარი მთავარ გზაზე.\n\nთქვენ არ გჭირდებათ თქვენს ძირითად პროგრამაში ამ ნაწილის დამატება."
-        courseF_bee_functions5a_b: გამოიყენეთ `სანამ` ციკლი, რათა მოიაროთ ყველა მთავარი გზა, რადგან ისინი სხვადასხვა სიგრძის არიან.
+        courseF_bee_functions5a_b: გამოიყენეთ `while` ციკლი ყველა მთავარი გზის მოსავლელად, რადგან ისინი სხვადასხვა სიგრძის არიან.
         courseF_bee_functions5a_c: თქვენს `სანამ` ციკლში იმოძრავეთ წინ, შემდეგ კი გამოიყენეთ თქვენი ფუნქცია გზის შესამოწმებლად.
       courseF_bee_functions5a_2018_authored_hint:
         courseF_bee_functions5a_a: "თქვენმა ფუნქციამ უნდა შეამოწმოს, არსებობს თუ არა მარჯვნივ მიმავალი გზა და თუ არსებობს, გაუყვეს გვერდითა გზებს და დააბრუნოს ფუტკარი მთავარ გზაზე.\n\nთქვენ არ გჭირდებათ თქვენს ძირითად პროგრამაში ამ ნაწილის დამატება."
-        courseF_bee_functions5a_b: გამოიყენეთ `სანამ` ციკლი, რათა მოიაროთ ყველა მთავარი გზა, რადგან ისინი სხვადასხვა სიგრძის არიან.
+        courseF_bee_functions5a_b: გამოიყენეთ `while` ციკლი ყველა მთავარი გზის მოსავლელად, რადგან ისინი სხვადასხვა სიგრძის არიან.
         courseF_bee_functions5a_c: თქვენს `სანამ` ციკლში იმოძრავეთ წინ, შემდეგ კი გამოიყენეთ თქვენი ფუნქცია გზის შესამოწმებლად.
       courseF_bee_functions6_authored_hint:
         courseF_bee_functions6_a: "თუ თავსატეხის ამოხსნა გერთულებათ, სცადეთ ააწყოთ თქვენი ფუნქცია ეტაპობრივად, პატარა ნაბიჯებით.\n\nდაამატეთ რამდენიმე ბლოკი, შემდეგ შეამოწმეთ. დაამატეთ კიდევ რამდენიმე და ისევ შეამოწმეთ. ასეთი მეთოდით, თქვენ მალევე ამოხსნით თავსატეხს!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
@@ -11060,9 +11064,7 @@ ka:
           დაამატეთ პირობითი ბრძანებები ფუნქციაში, რათა შეამოწმოთ ადგილები სიმინდის, გოგრის და სალათის არსებობაზე.
         courseF_bee_fwp_challenge2_b: |-
           გითავდებათ `წინ გადაადგილების` ბლოკები?
-          სცადეთ *მეორე* `for ციკლის` გამოყენება თქვენს მთავარი პროგრამაში.
-          
-          **მითითება:** არ აგერიოთ `მთვლელი` და `მთვლელი2`.
+          სცადეთ მთავარ პროგრამაში *მეორე* `for ციკლის` გამოყენება.
         courseF_bee_fwp_challenge2_c: |-
           **აი როგორ უნდა გამოიყურებოდეს თქვენი ფუნქცია:**
           
@@ -11204,9 +11206,7 @@ ka:
           დაამატეთ პირობითი ბრძანებები ფუნქციაში, რათა შეამოწმოთ ადგილები სიმინდის, გოგრის და სალათის არსებობაზე.
         courseF_bee_fwp_challenge2_b: |-
           გითავდებათ `წინ გადაადგილების` ბლოკები?
-          სცადეთ *მეორე* `for ციკლის` გამოყენება თქვენს მთავარი პროგრამაში.
-          
-          **მითითება:** არ აგერიოთ `მთვლელი` და `მთვლელი2`.
+          სცადეთ მთავარ პროგრამაში *მეორე* `for ციკლის` გამოყენება.
         courseF_bee_fwp_challenge2_c: |-
           **აი როგორ უნდა გამოიყურებოდეს თქვენი ფუნქცია:**
           
@@ -11477,7 +11477,7 @@ ka:
           </value>
           </block></xml>
       courseF_playlab_variables_challenge2_authored_hint:
-        courseF_playlab_variables_challenge2_a: დაამატეთ ქულების გამოკლება `ქულების` ცვლადში, როდესაც სპრაიტები დაეჯახებიან ერთმანეთს. 
+        courseF_playlab_variables_challenge2_a: დაამატეთ და გამოაკელით ქულები `ქულების`ცვლადს სპრაიტების შეჯახებისას.
         courseF_playlab_variables_challenge2_b: თქვენ შეგიძლიათ შეცვალოთ პარამეტრი იმისათვის, რომ განსაზღვროთ, როგორ იმოძრავებს სპრაიტი ისრების ღილაკებზე დაჭერის დროს.
         courseF_playlab_variables_challenge2_c: |-
           **ამოხსნა:**
@@ -11604,7 +11604,7 @@ ka:
           </block>
           </xml>
       courseF_playlab_variables_challenge2_2018_authored_hint:
-        courseF_playlab_variables_challenge2_a: დაამატეთ ქულების გამოკლება `ქულების` ცვლადში, როდესაც სპრაიტები დაეჯახებიან ერთმანეთს. 
+        courseF_playlab_variables_challenge2_a: დაამატეთ და გამოაკელით ქულები `ქულების`ცვლადს სპრაიტების შეჯახებისას.
         courseF_playlab_variables_challenge2_b: თქვენ შეგიძლიათ შეცვალოთ პარამეტრი იმისათვის, რომ განსაზღვროთ, როგორ იმოძრავებს სპრაიტი ისრების ღილაკებზე დაჭერის დროს.
         courseF_playlab_variables_challenge2_c: |-
           **ამოხსნა:**
@@ -11791,7 +11791,7 @@ ka:
         grade1_adventurer_loops7_challenge_a: 'თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ გამეორების ციკლები, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი. '
         grade1_adventurer_loops7_challenge_b: არ გეჩვენებათ, რომ ეს კოდი ძალიან გრძელია? თქვენ შეგიძლიათ შეამოკლოთ ის გარე ციკლში ორი `გამეორების` ციკლით განთავსებით.
       grade1_adventurer_loops9_authored_hint:
-        grade1_adventurer_loops9_a: 'არ გეჩვენებად ეს რთულად? დაშალეთ ის 4 მცირე პრობლემად, რათა გაამარტივოთ კოდი.'
+        grade1_adventurer_loops9_a: 'ეს ძალიან რთულად გეჩვენებათ? გასამარტივებლად, დაშალეთ ის ოთხ პატარა ამოცანად.  '
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: თუ გსურთ ამ ციკლის 4-ზე მეტჯერ გამეორება, შეგიძლიათ შეცვალოთ ბლოკის თავში განლაგებული რიცხვი.
       grade1_artist_loops6_authored_hint:

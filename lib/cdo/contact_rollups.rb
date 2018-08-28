@@ -278,7 +278,7 @@ class ContactRollups
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
     -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
     SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
-    user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users AS users
+    user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users_view AS users
     LEFT OUTER JOIN #{PEGASUS_DB_NAME}.contact_rollups_daily AS src ON src.email = users.email
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
     WHERE users.user_type = 'teacher' AND LENGTH(users.email) > 0
@@ -341,11 +341,10 @@ class ContactRollups
     # State for schools is stored in state abbreviation. We need to convert
     # to state name, so do this row-by-row using existing Ruby code for that
     # conversion.
-
     sql = "
-    SELECT users.email, schools.city, schools.state, schools.zip
-    FROM users
-    INNER JOIN school_infos ON school_infos.id = users.school_info_id
+    SELECT users_view.email, schools.city, schools.state, schools.zip
+    FROM users_view
+    INNER JOIN school_infos ON school_infos.id = users_view.school_info_id
     INNER JOIN schools ON schools.id = school_infos.school_id"
 
     dataset = DASHBOARD_REPORTING_DB_READER[sql]
@@ -471,7 +470,7 @@ class ContactRollups
   def self.append_to_role_list_from_permission(permission_name, dest_value)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
+    INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.user_permissions AS user_permissions ON user_permissions.user_id = users.id
     SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), '#{dest_value}')
     WHERE LENGTH(users.email) > 0
@@ -497,14 +496,14 @@ class ContactRollups
       select distinct id from (
         select users.id from #{DASHBOARD_DB_NAME}.sections as sections
           inner join #{DASHBOARD_DB_NAME}.courses as courses on courses.id = sections.course_id
-            inner join #{DASHBOARD_DB_NAME}.users as users on users.id = sections.user_id
+            inner join #{DASHBOARD_DB_NAME}.users_view as users on users.id = sections.user_id
          where courses.name = '#{course_name}'
         union
         select users.id from #{DASHBOARD_DB_NAME}.sections
           inner join #{DASHBOARD_DB_NAME}.scripts as scripts on scripts.id = sections.script_id
           inner join #{DASHBOARD_DB_NAME}.course_scripts as course_scripts on course_scripts.script_id = scripts.id
           inner join #{DASHBOARD_DB_NAME}.courses as courses on courses.id = course_scripts.course_id
-          inner join #{DASHBOARD_DB_NAME}.users as users on users.id = sections.user_id
+          inner join #{DASHBOARD_DB_NAME}.users_view as users on users.id = sections.user_id
         where courses.name = '#{course_name}'
       ) q
     ) user_ids ON user_ids.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
@@ -527,7 +526,7 @@ class ContactRollups
   def self.append_regional_partner_to_role_list
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
+    INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.regional_partners AS regional_partners ON regional_partners.contact_id = users.id
     SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), 'Regional Partner')
     WHERE LENGTH(users.email) > 0 AND #{DEST_TABLE_NAME}.id > 0"
@@ -622,7 +621,7 @@ class ContactRollups
           FROM #{DASHBOARD_DB_NAME}.pd_attendances AS pd_attendances
           INNER JOIN #{DASHBOARD_DB_NAME}.pd_sessions AS pd_sessions ON pd_sessions.id = pd_attendances.pd_session_id
           INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_sessions.pd_workshop_id
-          INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = pd_attendances.teacher_id
+          INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = pd_attendances.teacher_id
           WHERE course = '#{course}'
         ) src
       SET #{DEST_TABLE_NAME}.professional_learning_attended =
@@ -643,7 +642,7 @@ class ContactRollups
         FROM #{DASHBOARD_DB_NAME}.workshop_attendance AS workshop_attendance
           INNER JOIN #{DASHBOARD_DB_NAME}.segments AS segments ON segments.id = workshop_attendance.segment_id
           INNER JOIN #{DASHBOARD_DB_NAME}.workshops AS workshops ON workshops.id = segments.workshop_id
-          INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = workshop_attendance.teacher_id
+          INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = workshop_attendance.teacher_id
         WHERE program_type =
         CASE '#{course}'
           WHEN 'CS in Science' THEN 1
@@ -670,7 +669,7 @@ class ContactRollups
       (SELECT DISTINCT users.email
       FROM #{DASHBOARD_DB_NAME}.sections
         INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
-        INNER JOIN #{DASHBOARD_DB_NAME}.users ON users.id = followers.student_user_id
+        INNER JOIN #{DASHBOARD_DB_NAME}.users_view ON users.id = followers.student_user_id
       WHERE section_type =
       CASE '#{course}'
         WHEN 'CS in Science' THEN 'csins_workshop'
@@ -866,7 +865,7 @@ class ContactRollups
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}, (
     SELECT DISTINCT sections.user_id AS teacher_user_id
-    FROM #{DASHBOARD_DB_NAME}.users AS students
+    FROM #{DASHBOARD_DB_NAME}.users_view AS students
       INNER JOIN #{DASHBOARD_DB_NAME}.followers AS followers
         ON followers.student_user_id = students.id
       INNER JOIN #{DASHBOARD_DB_NAME}.sections AS sections
@@ -903,7 +902,20 @@ class ContactRollups
     # has district names like "open csp".
     districts = District.all.index_by(&:id)
 
-    users = User.where("length(email) > 0")
+    # users = User.where("length(email) > 0") # original query, replaced by following for multiauth
+    # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
+    users = User.find_by_sql <<-eos
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM users
+      LEFT JOIN authentication_options
+        ON users.primary_contact_info_id = authentication_options.id
+      WHERE
+        IF (
+          users.provider = 'migrated',
+          length(authentication_options.email),
+          length(users.email)
+        )
+        > 0
+    eos
 
     users.find_each do |user|
       unless user.ops_school.nil?

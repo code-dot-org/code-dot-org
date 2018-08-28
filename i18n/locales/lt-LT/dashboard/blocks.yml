@@ -1,0 +1,181 @@
+lt:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Kitas
+            '"prev"': Ankstesnis
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dešinėje
+            '"left"': kairėje
+      Dancelab_randomColor:
+        text: Atsitiktinė spalva
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': viršuje
+            '"down"': apačioje
+            '"left"': kairėje
+            '"right"': dešinėje
+            '"space"': kosmosas
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': viršuje
+            '"down"': apačioje
+            '"left"': kairėje
+            '"right"': dešinėje
+            '"space"': kosmosas
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'Taip'
+            'false': 'klaida'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": atsitiktinis
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dešinėje
+            '"left"': kairėje
+      gamelab_randColor:
+        text: Atsitiktinė spalva
+      gamelab_randomColor:
+        text: Atsitiktinė spalva
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': atsitiktinis
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': dešinėje
+            '"left"': kairėje
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': viršuje
+            '"down"': apačioje
+            '"left"': kairėje
+            '"right"': dešinėje
+            '"space"': kosmosas
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": viršuje
+            "'down'": apačioje
+            "'left'": kairėje
+            "'right'": dešinėje
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': viršuje
+            '"down"': apačioje
+            '"left"': kairėje
+            '"right"': dešinėje
+            '"space"': kosmosas
+      Vanilla_randomColor:
+        text: Atsitiktinė spalva

@@ -1,0 +1,129 @@
+mi:
+  data:
+    blocks:
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': whakamatau
+            '"left"': whakamauī
+      Dancelab_randomColor:
+        text: tae matapōkere
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'pono'
+            'false': 'hē'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': whakamatau
+            '"left"': whakamauī
+      gamelab_randColor:
+        text: tae matapōkere
+      gamelab_randomColor:
+        text: tae matapōkere
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': whakamatau
+            '"left"': whakamauī
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": whakarunga
+            "'down'": whakararo
+            "'left'": whakamauī
+            "'right'": whakamatau
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      Vanilla_randomColor:
+        text: tae matapōkere

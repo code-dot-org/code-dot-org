@@ -207,7 +207,7 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
     assert_response :bad_request
     assert_equal(
-      {'error' => 'Only call this route for 5 day summer workshops, local or TeacherCon'},
+      {'error' => 'Only call this route for new academic year workshops, 5 day summer workshops, local or TeacherCon'},
       JSON.parse(@response.body)
     )
   end

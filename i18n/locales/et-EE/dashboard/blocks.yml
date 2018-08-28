@@ -1,0 +1,189 @@
+et:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Järgmine
+            '"prev"': Eelmine
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Järgmine
+            '"prev"': Eelmine
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: kõik
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': paremale
+            '"left"': vasakule
+      Dancelab_randomColor:
+        text: juhuslik värv
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Pole
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': üles
+            '"down"': alla
+            '"left"': vasakule
+            '"right"': paremale
+            '"space"': kosmos
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': üles
+            '"down"': alla
+            '"left"': vasakule
+            '"right"': paremale
+            '"space"': kosmos
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'tõene'
+            'false': 'väär'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": juhuslik
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': paremale
+            '"left"': vasakule
+      gamelab_randColor:
+        text: juhuslik värv
+      gamelab_randomColor:
+        text: juhuslik värv
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': juhuslik
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"height"': kõrgus
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': paremale
+            '"left"': vasakule
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': üles
+            '"down"': alla
+            '"left"': vasakule
+            '"right"': paremale
+            '"space"': kosmos
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": üles
+            "'down'": alla
+            "'left'": vasakule
+            "'right'": paremale
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': üles
+            '"down"': alla
+            '"left"': vasakule
+            '"right"': paremale
+            '"space"': kosmos
+      Vanilla_randomColor:
+        text: juhuslik värv

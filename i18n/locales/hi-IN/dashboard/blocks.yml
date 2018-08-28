@@ -1,0 +1,50 @@
+hi:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: यादृच्छिक रंग
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'सही '
+            'false': 'गलत '
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": यादृच्छिक
+      gamelab_randColor:
+        text: यादृच्छिक रंग
+      gamelab_randomColor:
+        text: यादृच्छिक रंग
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': यादृच्छिक
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': ऊँचाई
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      Vanilla_randomColor:
+        text: यादृच्छिक रंग

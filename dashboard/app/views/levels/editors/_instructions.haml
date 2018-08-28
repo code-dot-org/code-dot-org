@@ -1,9 +1,9 @@
 %fieldset.control-group
 
-  %legend.control-legend.collapsed{data: {toggle: "collapse", target: "#instructions"}}
+  %legend.control-legend{data: {toggle: "collapse", target: "#instructions"}}
     Instructions
 
-  #instructions.collapse
+  #instructions.in.collapse
 
     %p
       Every level can have a combination of short and long instructions. When both
@@ -43,22 +43,21 @@
           ~ f.text_area :long_instructions, rows: 4
 
     .field
-      = f.label :instructions_important
+      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :instructions_important, description: "Mark Instructions as Important"}
       %p
         Are these instructions particularly important? Is this level
         introducing some new concept or is set up in some unusual way that
         would be particularly confusing if the student were to jump right in
         and start solving without looking at the instructions first?
-      = boolean_check_box f, :instructions_important
 
     = render partial: 'levels/editors/tts', locals: {f: f}
 
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', function (editor, change) {
-    localStorage.setItem('markdown_' + '#{@level.id || params[:type]}', editor.getValue());
+    localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
   }, true);
 
-  var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || params[:type]}');
+  var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || html_escape(params[:type])}');
   if (locallyStoredMarkdown) {
     mdEditor.setValue(locallyStoredMarkdown);
   }

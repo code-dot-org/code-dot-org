@@ -1,0 +1,189 @@
+vi:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Tiếp
+            '"prev"': Trước
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Tiếp
+            '"prev"': Trước
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: tất cả
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': phải
+            '"left"': trái
+      Dancelab_randomColor:
+        text: màu ngẫu nhiên
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Rỗng
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'đúng'
+            'false': 'sai'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": ngẫu nhiên
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': phải
+            '"left"': trái
+      gamelab_randColor:
+        text: màu ngẫu nhiên
+      gamelab_randomColor:
+        text: màu ngẫu nhiên
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': ngẫu nhiên
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"height"': chiều cao
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': phải
+            '"left"': trái
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": trên
+            "'down'": xuống
+            "'left'": trái
+            "'right'": phải
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      Vanilla_randomColor:
+        text: màu ngẫu nhiên

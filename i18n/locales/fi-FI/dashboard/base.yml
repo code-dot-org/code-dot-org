@@ -10,6 +10,7 @@ fi:
       messages:
         blank: "vaaditaan"
         blank_plural: "vaaditaan"
+        invalid: "ei kelpaa"
         invalid_plural: "eivät kelpaa"
     attributes:
       user:
@@ -83,6 +84,8 @@ fi:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft-tili'
+    clever: 'Clever-tili'
+    powerschool: 'Powerschool-tili'
     forgot_password: 'Unohditko salasanasi?'
     need_confirmation: "Etkö saanut vahvistusviestiä?"
     need_unlock: "Etkö saanut avausohjeita?"

@@ -765,15 +765,39 @@ it:
         - Cosa succede se usi due angoli diversi nello schema a scalinata?
         - Cosa succede se rendi lo schema a rombo più lungo o più corto?
         - Cosa sembra se disegni due fiocchi di neve uno sopra l'altro?
+      Dance Party 2_instruction: Cambia il comportamento nel blocco `___begins___` (*inizia*) per fare in modo che all'inizio l'alieno gironzoli qua e là.
+      Dance Party 2_simple_instruction: Cambia il comportamento nel blocco `___begins___` (*inizia*) per fare in modo che all'inizio l'alieno gironzoli qua e là.
+      Dance Party 3 - Validated_instruction: 'Crea un nuovo personaggio chiamato `alien2`.  Fagli fare un passo di danza diverso ogni volta che ci clicchi sopra.'
+      Dance Party 3_instruction: 'Crea un nuovo personaggio chiamato `alien2`.  Fagli fare un passo di danza diverso ogni volta che ci clicchi sopra.'
+      Dance Party 3_simple_instruction: 'Crea un nuovo personaggio chiamato `alien2`.  Fagli fare un passo di danza diverso ogni volta che ci clicchi sopra.'
+      Dance Party 4 Validated_instruction: 'Crea un terzo personaggio chiamato `alien3` e posiziona tutti gli alieni lungo una linea retta.'
+      Dance Party 4_instruction: 'Crea un terzo personaggio chiamato `alien3` e posiziona tutti gli alieni lungo una linea retta.'
+      Dance Party 4_simple_instruction: 'Crea un terzo personaggio chiamato `alien3` e posiziona tutti gli alieni lungo una linea retta.'
+      Dance Party 5 - Validated_instruction: Aggiungi del codice per cambiare il colore di ogni alieno quando si clicca su di esso.
+      Dance Party 5_instruction: Aggiungi del codice per cambiare il colore di ogni alieno quando si clicca su di esso.
+      Dance Party 5_simple_instruction: Aggiungi del codice per cambiare il colore di ogni alieno quando si clicca su di esso.
+      Dance Party 6 - Validated_instruction: Usa il blocco `stops everything`(*ferma tutto*) per fermare ogni alieno quando viene cliccato.
+      Dance Party 6_instruction: Usa il blocco `stops everything`(*ferma tutto*) per fermare ogni alieno quando viene cliccato.
+      Dance Party 6_simple_instruction: Usa il blocco `stops everything`(*ferma tutto*) per fermare ogni alieno quando viene cliccato.
+      Dance Party 7 - Validated_instruction: Aggiungi un nuovo personaggio chiamato 'myBell' (*la mia campana*) che fa fare a tutti gli alieni la sua stessa danza quando viene cliccata.
+      Dance Party 7_instruction: Aggiungi un nuovo personaggio chiamato 'myBell' (*la mia campana*) che fa fare a tutti gli alieni la sua stessa danza quando viene cliccata.
+      Dance Party 7_simple_instruction: Aggiungi un nuovo personaggio chiamato 'myBell' (*la mia campana*) che fa fare a tutti gli alieni la sua stessa danza quando viene cliccata.
+      Dance Party Freeplay_instruction: Ora crea la tua discoteca aliena!
+      Dance Party Freeplay_simple_instruction: Ora crea la tua discoteca aliena!
       Eval Contracts 4 A_instruction: 'La funzione "ridimensiona" restituisce l''immagine in ingresso ingrandita o rimpicciolita di un certo fattore. Prova a ridimensionare questo cerchio di un fattore 10: l''immagine che ne risulta quanto è diversa dall''immagine che avresti ottenuto disegnando subito un cerchio di quelle dimensioni?'
       Eval Free Play_instruction: 'Tempo di giocare: crea qualcosa di artistico col codice!'
       Find the Wizard_instruction: Costruisci quello che vuoi. Ecco un esempio del gioco "Indovina che numero ho pensato!"
       Find the Wizard_2018_instruction: Costruisci quello che vuoi. Ecco un esempio del gioco "Indovina che numero ho pensato!"
+      Fish Tank 3-validated Ram_instruction: Modifica il comportamento del pesce in modo che nuoti da una parta all'altra dell'acquario (cerca il blocco giusto tra i tanti presenti nella cassetta degli attrezzi).
       Fish Tank 3-validated_instruction: Modifica il comportamento del pesce in modo che nuoti da una parta all'altra dell'acquario (cerca il blocco giusto tra i tanti presenti nella cassetta degli attrezzi).
+      Fish Tank 3-validated_simple_instruction: Modifica il comportamento del pesce in modo che nuoti da una parta all'altra dell'acquario (cerca il blocco giusto tra i tanti presenti nella cassetta degli attrezzi).
       Fish Tank 4-validated_instruction: Usa il blocco `imposta colore sfondo` per impostrare lo sfondo blu.
+      Fish Tank 4-validated_simple_instruction: Usa il blocco `imposta colore sfondo` per impostrare lo sfondo blu.
       Fish Tank 5-validated_instruction: Il nostro pesce si sente un po' solo. Aggiungi un altro personaggio nell'acquario.
       Fish Tank 6-validated_instruction: Aggiungi un comportamento al nuovo amico del pesce.
+      Fish Tank 6-validated_simple_instruction: Aggiungi un comportamento al nuovo amico del pesce.
       Fish Tank 7-validated_instruction: Usa qualche blocco nuovo dalla cassetta degli attrezzi per rendere l'acquario speciale!
+      Fish Tank 7-validated_simple_instruction: Usa qualche blocco nuovo dalla cassetta degli attrezzi per rendere l'acquario speciale!
       Food Fight!_instruction: "Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>\nProgramma il tuo gioco in modo tale da chiamare la funzione \"sali di un livello\" (<i>level_up</i>) se la variabile \"punteggio\" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>\nClicca su \"Esegui\" per giocare e arriva al livello 3 per passare al prossimo esercizio."
       Food Fight_instruction: "Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>\nProgramma il tuo gioco in modo tale da chiamare la funzione \"sali di un livello\" (<i>level_up</i>) se la variabile \"punteggio\" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>\nClicca su \"Esegui\" per giocare e arriva al livello 3 per passare al prossimo esercizio."
       Function intro Ryan_instruction: Usa due volte la funzione `build bridge` (*costruisci ponte*) per creare un sentiero fino alla torcia di pietrarossa.
@@ -799,6 +823,8 @@ it:
       Infinity_touch_four_instruction: Muovi Anna su, giù, a sinistra e a destra per toccare ognuno dei quattro fiocchi di neve.
       Infinity_touch_score_instruction: Fai in modo che Anna segni un punto quando tocca un fiocco di neve. Poi clicca su "Esegui" e guidala in modo tale da farle toccare ogni fiocco di neve almeno una volta.
       Inspirational Artwork_instruction: "<a href=\"https://studio.code.org/c/\" target=\"_blank\">Clicca qui</a> (LINK DA AGGIORNARE) e poi su \"Esegui\". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>\nVuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>"
+      InspirationalArtwork_instruction: Se questa immagine ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
+      InspirationalArtwork_2018_instruction: Se questa immagine ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
       K-1 Artist 1 Assessment 1_instruction: Disegna una linea breve verso l'alto e una lunga verso destra!
       K-1 Artist Loops 1_instruction: Disegna questa linea spostando 4 volte l'artista verso Est.
       K-1 Artist Loops 2_instruction: Riesci adesso a disegnare la linea usando un blocco `ripeti` (detto anche <i>ciclo</i>)?
@@ -1128,6 +1154,11 @@ it:
       Underground Mining Coal_instruction: Nel sottosuolo trovi le risorse più preziose, ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Underground Mining Coal_2018_instruction: Nel sottosuolo trovi le risorse più preziose, ma è buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Unicorn Tag_instruction: Esamina questo progetto. Riesci a capire come è stato realizzato?
+      Virtual Pet 2 - Validated (Ram)_instruction: Crea un **evento** in modo che quando la giraffa tocca la pozzanghera, il suo colore diventi marrone.
+      Virtual Pet 2 - Validated_instruction: Crea un **evento** in modo che quando la giraffa tocca la pozzanghera, il suo colore diventi marrone.
+      Virtual Pet 2_instruction: Crea un **evento** in modo che quando la giraffa tocca la pozzanghera, il suo colore diventi marrone.
+      Virtual Pet Freeplay_instruction: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
+      Virtual Pet Freeplay_simple_instruction: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
       aE7_instruction: "Che cosa succede se aggiungi un ciclo uguale a quello che trovi già pronto, ma fai girare l'artista a sinistra invece che a destra?<br>\nRiesci a disegnare quest'onda ripetendo il tutto?"
       aE8_instruction: "Per creare questa cornice devi ripetere 4 volte tutto il codice che trovi già pronto. Attento agli spigoli, non basta girare di 90 gradi! <br>\n<br>\nSe, girando di 3 gradi per ciclo, hai bisogno di 60 ripetizioni per disegnare mezzo cerchio, quale di questi blocchi di codice ti permette di disegnare un quarto di cerchio per gli spigoli?"
       artistDebugVideo1_instruction: Usa il ciclo `ripeti` per aggiungere le onde all'acqua.
@@ -2250,10 +2281,10 @@ it:
       courseF_IceAge_8_instruction: 'Puoi completare questo codice per fare in modo che si riproduca un suono e si guadagni un punto quando Sid e la Nonnina si scontrano?'
       courseF_IceAge_9_instruction: Cambia lo sfondo impostandone uno con ghiaccio e imposta la velocità di Sid (personaggio 1) a veloce.
       courseF_IceAge_template_instruction: Scrivi il codice per aiutare Scrat a raccogliere tutte le ghiande!
-      courseF_artist_for1_instruction: Fai esperimenti con il *ciclo con contatore* e gioca con la variabile 'counter'.
+      courseF_artist_for1_instruction: Fai esperimenti con il ciclo `ripeti con counter` e gioca con la variabile 'counter'.
       courseF_artist_for10_instruction: 'Tempo di giocare: Prova ad usare la variabile `counter` (*contatore*) con altri elementi grafici per creare immagini magiche come questa.'
       courseF_artist_for10_2018_instruction: 'Tempo di giocare: Prova ad usare la variabile `counter` (*contatore*) con altri elementi grafici per creare immagini magiche come questa.'
-      courseF_artist_for1_2018_instruction: Fai esperimenti con il *ciclo con contatore* e gioca con la variabile 'counter'.
+      courseF_artist_for1_2018_instruction: Fai esperimenti con il ciclo `ripeti con counter` e gioca con la variabile 'counter'.
       courseF_artist_for2_instruction: Crea questa pila di triangoli, i lati misurano da 50 a 100 pixel.
       courseF_artist_for2_2018_instruction: Crea questa pila di triangoli, i lati misurano da 50 a 100 pixel.
       courseF_artist_for3_instruction: 'I lati di questi triangoli misurano da 20 a 200 pixel e ogni triangolo è largo 20 pixel più del precedente. '
@@ -2336,8 +2367,8 @@ it:
       courseF_bee_for8_2018_instruction: Questo codice è da completare! Quale deve essere il <i>passo</i> in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
       courseF_bee_for9_instruction: Usa la variabile `counter` (*contatore*) per muoverti in questo giardino usando il minor numero possibile di blocchi.
       courseF_bee_for9_2018_instruction: Usa la variabile `counter` (*contatore*) per muoverti in questo giardino usando il minor numero possibile di blocchi.
-      courseF_bee_for_challenge1_instruction: 'Usa questo `ciclo con contatore` per raccogliere tutto il nettare. '
-      courseF_bee_for_challenge1_2018_instruction: 'Usa questo `ciclo con contatore` per raccogliere tutto il nettare. '
+      courseF_bee_for_challenge1_instruction: 'Usa questo ciclo `ripeti con counter` per raccogliere tutto il nettare. '
+      courseF_bee_for_challenge1_2018_instruction: 'Usa questo ciclo `ripeti con counter` per raccogliere tutto il nettare. '
       courseF_bee_for_challenge2_instruction: <b>Super Sfida sui cicli con contatore:</b> Risolvi questo esercizio usando il minor numero possibile di blocchi.
       courseF_bee_for_challenge2_2018_instruction: <b>Super Sfida sui cicli con contatore:</b> Risolvi questo esercizio usando il minor numero di blocchi possibile.
       courseF_bee_for_challenge3_instruction: <b>Super Sfida sui cicli con contatore:</b> Risolvi questo esercizio usando il minor numero di blocchi possibile.
@@ -2701,7 +2732,7 @@ it:
         Ecco una griglia 16 x 16 di quadrati per disegnare con una risoluzione superiore!<br><br>
         Clicca su "Esegui" e guarda cosa succede quando cominciamo a essere creativi con i bit.
       grade5_artist_for_loops1_instruction: Usa il blocco "ripeti ... volte" per disegnare un triangolo equilatero con i lati di 50 pixel.
-      grade5_artist_for_loops1b_instruction: Fai esperimenti con il *ciclo con contatore* e gioca con la variabile 'counter'.
+      grade5_artist_for_loops1b_instruction: Fai esperimenti con il ciclo `ripeti con counter` e gioca con la variabile 'counter'.
       grade5_artist_for_loops3_instruction: 'I lati di questi triangoli misurano da 20 a 200 pixel e ogni triangolo è largo 20 pixel più del precedente. '
       grade5_artist_for_loops5_instruction: |-
         Per disegnare questa figura devi fare solo un piccolo cambiamento al codice del precedente esercizio. Riesci a capire di quale cambiamento si tratta?<br>

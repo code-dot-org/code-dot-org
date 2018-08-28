@@ -1,0 +1,185 @@
+el:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: όλα
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': δεξιά
+            '"left"': αριστερά
+      Dancelab_randomColor:
+        text: τυχαίο χρώμα
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'Αληθές'
+            'false': 'ψευδές'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": τυχαίο
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': δεξιά
+            '"left"': αριστερά
+      gamelab_randColor:
+        text: τυχαίο χρώμα
+      gamelab_randomColor:
+        text: τυχαίο χρώμα
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': τυχαίο
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"height"': ύψος
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': δεξιά
+            '"left"': αριστερά
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": επάνω
+            "'down'": κάτω
+            "'left'": αριστερά
+            "'right'": δεξιά
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
+      Vanilla_randomColor:
+        text: τυχαίο χρώμα

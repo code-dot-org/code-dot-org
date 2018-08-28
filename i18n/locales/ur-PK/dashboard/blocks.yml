@@ -1,0 +1,46 @@
+ur:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: بے ترتیب رنگ
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"space"': خلاء
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"space"': خلاء
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'True'
+            'false': 'غلط'
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": بےترتیب
+      gamelab_randColor:
+        text: بے ترتیب رنگ
+      gamelab_randomColor:
+        text: بے ترتیب رنگ
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': بےترتیب
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"space"': خلاء
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"space"': خلاء
+      Vanilla_randomColor:
+        text: بے ترتیب رنگ

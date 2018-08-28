@@ -1,0 +1,157 @@
+lv:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': pa labi
+            '"left"': pa kreisi
+      Dancelab_randomColor:
+        text: nejauša krāsa
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'patiess'
+            'false': 'nepatiess'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": nejaušs
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': pa labi
+            '"left"': pa kreisi
+      gamelab_randColor:
+        text: nejauša krāsa
+      gamelab_randomColor:
+        text: nejauša krāsa
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': nejaušs
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+            '"height"': augstums
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': pa labi
+            '"left"': pa kreisi
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": uz augšu
+            "'down'": uz leju
+            "'left'": pa kreisi
+            "'right'": pa labi
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+      Vanilla_randomColor:
+        text: nejauša krāsa

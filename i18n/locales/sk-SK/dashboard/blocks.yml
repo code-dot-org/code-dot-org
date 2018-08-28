@@ -1,0 +1,189 @@
+sk:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Ďalší
+            '"prev"': Predchádzajúci
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Ďalší
+            '"prev"': Predchádzajúci
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: všetky
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': vpravo
+            '"left"': vľavo
+      Dancelab_randomColor:
+        text: náhodná farba
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Žiadne
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': hore
+            '"down"': nadol
+            '"left"': vľavo
+            '"right"': vpravo
+            '"space"': vesmír
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': hore
+            '"down"': nadol
+            '"left"': vľavo
+            '"right"': vpravo
+            '"space"': vesmír
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'pravda'
+            'false': 'nepravda'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": náhodný
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': vpravo
+            '"left"': vľavo
+      gamelab_randColor:
+        text: náhodná farba
+      gamelab_randomColor:
+        text: náhodná farba
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': náhodný
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"height"': výška
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': vpravo
+            '"left"': vľavo
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': hore
+            '"down"': nadol
+            '"left"': vľavo
+            '"right"': vpravo
+            '"space"': vesmír
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": hore
+            "'down'": nadol
+            "'left'": vľavo
+            "'right'": vpravo
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': hore
+            '"down"': nadol
+            '"left"': vľavo
+            '"right"': vpravo
+            '"space"': vesmír
+      Vanilla_randomColor:
+        text: náhodná farba

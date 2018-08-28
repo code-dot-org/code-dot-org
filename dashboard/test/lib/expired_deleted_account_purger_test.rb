@@ -24,7 +24,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     PurgedAccountLog.any_instance.stubs :upload
 
     # Fake deletion behavior
-    DeleteAccountsHelper.stubs(:purge_user).with do |account|
+    DeleteAccountsHelper.any_instance.stubs(:purge_user).with do |account|
       account.update!(purged_at: Time.now); true
     end
   end
@@ -240,7 +240,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_after: 4.days.ago,
       deleted_before: 2.days.ago
 
-    DeleteAccountsHelper.stubs(:purge_user).with do |account|
+    DeleteAccountsHelper.any_instance.stubs(:purge_user).with do |account|
       raise 'Intentional failure' if account == student_b
       account.update!(purged_at: Time.now); true
     end

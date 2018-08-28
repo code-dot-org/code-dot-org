@@ -10,7 +10,11 @@ import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
-import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
+import {
+  MAX_PROJECTS_PER_CATEGORY,
+  Galleries,
+  publishMethods,
+} from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
   selectGallery,
   setProjectLists,
@@ -67,7 +71,14 @@ $(document).ready(() => {
       publicGallery);
   });
 
-  if (experiments.isEnabled(experiments.REACT_PROJECTS_TABLE)) {
+  // We're going to run an A/B experiment to compare (un)publishing from the
+  // quick actions dropdown and from a button in the published column.
+  // 50% of users will see the chevron variant.
+  // The other 50% of users will see the button variant.
+  // TODO (Erin B.) delete the duplicate table when we
+  // determine the experiment outcome.
+
+  if (experiments.isEnabled(experiments.CHEVRON_PUBLISH_EXPERIMENT)) {
     const personalProjectsUrl = `/api/v1/projects/personal`;
 
     $.ajax({
@@ -76,14 +87,36 @@ $(document).ready(() => {
       dataType: 'json'
     }).done(personalProjectsList => {
       store.dispatch(setPersonalProjectsList(personalProjectsList));
-
       ReactDOM.render(
         <Provider store={store}>
           <PersonalProjectsTable
             canShare={projectsData.canShare}
+            publishMethod={publishMethods.CHEVRON}
+            userId={projectsData.userId}
           />
         </Provider>,
-       document.getElementById('react-my-projects')
+        document.getElementById('react-personal-projects')
+      );
+    });
+
+  } else {
+    const personalProjectsUrl = `/api/v1/projects/personal`;
+
+    $.ajax({
+      method: 'GET',
+      url: personalProjectsUrl,
+      dataType: 'json'
+    }).done(personalProjectsList => {
+      store.dispatch(setPersonalProjectsList(personalProjectsList));
+      ReactDOM.render(
+        <Provider store={store}>
+          <PersonalProjectsTable
+            canShare={projectsData.canShare}
+            publishMethod={publishMethods.BUTTON}
+            userId={projectsData.userId}
+          />
+        </Provider>,
+        document.getElementById('react-personal-projects')
       );
     });
   }
@@ -108,7 +141,7 @@ $(document).ready(() => {
 });
 
 function showGallery(gallery) {
-  $('#angular-my-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
+  $('#personal-projects-wrapper').toggle(gallery === Galleries.PRIVATE);
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 

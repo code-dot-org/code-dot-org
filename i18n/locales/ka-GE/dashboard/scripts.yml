@@ -3082,6 +3082,8 @@ ka:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
+            Your Digital Footprint:
+              name: 'ციფრული მოქალაქეობა: ჩემი ციფრული ნაკვალევი'
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Programming in Maze:
@@ -3439,6 +3441,8 @@ ka:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
+            'Online Safety: Your Digital Footprint':
+              name: 'ციფრული მოქალაქეობა: ჩემი ციფრული ნაკვალევი'
             'Programming: My Robotic Friends':
               name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
             Programming in Maze:
@@ -4237,6 +4241,8 @@ ka:
               name: ჩაციკლვა
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
+            Copyright and Creativity:
+              name: საავტორო უფლებები და შემოქმედებითობა
             Nested Loops in Bee:
               name: ჩადგმული ციკლები ფუტკარში
             Conditionals with Cards:

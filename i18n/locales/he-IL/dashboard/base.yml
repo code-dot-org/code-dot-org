@@ -346,7 +346,7 @@ he:
       student: 'תלמיד'
       viewing_solution: 'הצג פתרון'
       try_it_yourself: 'נסה זאת בעצמך'
-      section: 'סעיף'
+      section: 'קבוצה'
       example: 'דוגמא לפתרון'
       example_with_number: 'דוגמה לפתרון %{solution_number}'
       submitted_on: 'הוגש ב-'

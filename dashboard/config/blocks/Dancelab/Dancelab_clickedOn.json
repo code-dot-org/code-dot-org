@@ -12,6 +12,7 @@
       {
         "name": "SPRITE",
         "type": "Sprite",
+        "customInput": "spritePicker",
         "defer": true
       }
     ],

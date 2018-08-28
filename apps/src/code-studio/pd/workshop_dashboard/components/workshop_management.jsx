@@ -20,6 +20,7 @@ export class WorkshopManagement extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
     workshopId: PropTypes.number.isRequired,
+    course: PropTypes.string,
     subject: PropTypes.string,
     viewUrl: PropTypes.string.isRequired,
     editUrl: PropTypes.string,
@@ -40,10 +41,16 @@ export class WorkshopManagement extends React.Component {
       let surveyBaseUrl;
 
       if (
-        [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(props.subject)
-        && new Date(this.props.date).getFullYear() >= 2018
+          (
+            [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(props.subject)
+            && new Date(this.props.date).getFullYear() >= 2018
+          ) ||
+          (
+            ['CS Discoveries', 'CS Principles'].includes(props.course)
+            && props.subject !== 'Code.org Facilitator Weekend'
+            && new Date(this.props.date) >= new Date('2018-08-01')
+          )
       ) {
-        // TODO(Andrew/Mehal): Now that this includes Teachercon it should be renamed
         surveyBaseUrl = "local_summer_workshop_daily_survey_results";
       } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = "local_summer_workshop_survey_results";
