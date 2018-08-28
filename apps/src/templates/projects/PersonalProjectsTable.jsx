@@ -331,9 +331,14 @@ class PersonalProjectsTable extends React.Component {
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}
+            className="ui-personal-projects-table"
           >
             <Table.Header />
-            <Table.Body rows={sortedRows} rowKey="channel" />
+            <Table.Body
+              rows={sortedRows}
+              rowKey="channel"
+              className="ui-personal-projects-row"
+            />
           </Table.Provider>
         }
         {noProjects &&

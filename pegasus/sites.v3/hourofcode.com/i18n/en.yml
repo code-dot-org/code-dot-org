@@ -300,6 +300,7 @@
 
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
+  map_header_count_year: '%{event_count} events registered for Hour of Code %{year}'
   see_all_events: 'See all events'
   map_header_company: '# by company organizers'
   map_header_country: '# in %{country}'
@@ -317,7 +318,7 @@
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
-  twitter_donor_text: "I'm participating in this year's #HourOfCode, are you? (Thanks %{random_donor} for supporting @codeorg)"
+  twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
 
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'What is the Hour of Code?'

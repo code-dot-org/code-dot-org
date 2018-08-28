@@ -11,8 +11,14 @@ const styles = {
     flexFlow: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
+  },
+  recordingIcon: {
+    color: 'red',
+    margin: 5
   }
 };
+
+const RECORD_MAX_TIME = 30000;
 
 export default class AudioRecorder extends React.Component {
   static propTypes = {
@@ -22,6 +28,7 @@ export default class AudioRecorder extends React.Component {
 
   constructor(props) {
     super(props);
+    this.timeout = null;
     this.recorder = null;
     this.slices = [];
     this.state = {
@@ -78,17 +85,38 @@ export default class AudioRecorder extends React.Component {
 
   toggleRecord = () => {
     if (this.state.recording) {
-      this.recorder.stop();
+      this.stopRecording();
     } else {
-      this.recorder.start();
+      this.startRecording();
     }
+  };
+
+  startRecording = () => {
+    this.recorder.start();
     this.setState({recording: !this.state.recording});
+
+    //Stop recording after set amount of time
+    this.recordTimeout = setTimeout(this.stopRecording, RECORD_MAX_TIME);
+  };
+
+  stopRecording = () => {
+    if (this.state.recording) {
+      clearTimeout(this.recordTimeout);
+      this.recorder.stop();
+      this.setState({recording: !this.state.recording});
+    }
   };
 
   render() {
     return (
       <div style={styles.buttonRow}>
         <input type="text" placeholder={i18n.soundName()} onChange={this.onNameChange} value={this.state.audioName}/>
+        {this.state.recording &&
+          <span style={assetButtonStyles.button}>
+            <i style={styles.recordingIcon} className="fa fa-circle"/>
+            {i18n.recording()}
+          </span>
+        }
         <span>
           <Button
             onClick={this.toggleRecord}
