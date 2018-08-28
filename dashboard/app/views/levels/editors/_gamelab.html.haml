@@ -8,20 +8,16 @@
   %script{src: minifiable_asset_path('js/levelbuilder_gamelab.js')}
 
 .field
-  = f.label :hide_animation_mode, 'Hide the Animation Tab (you can still seed a level with animations)'
-  = boolean_check_box f, :hide_animation_mode
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_animation_mode, description: "Hide the Animation Tab (you can still seed a level with animations)"}
 
 .field
-  = f.label :start_in_animation_tab, 'Start in the Animation Tab'
-  = boolean_check_box f, :start_in_animation_tab
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :start_in_animation_tab, description: "Start in the Animation Tab"}
 
 .field
-  = f.label :all_animations_single_frame, 'All animations should be a single frame. If it has multiple frames, only show the first frame as a still image.'
-  = boolean_check_box f, :all_animations_single_frame
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :all_animations_single_frame, description: "All animations should be a single frame. If it has multiple frames, only show the first frame as a still image."}
 
 .field
-  = f.label :expand_debugger, 'Expand Debugger by Default'
-  = boolean_check_box f, :expand_debugger
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
 
 = render partial: 'levels/editors/watchers_ui', locals: {f: f}
 
@@ -36,13 +32,12 @@
   = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
 
 .field
-  = f.label :submittable, 'Submittable'
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'submittable', description: "Submittable"}
   %p
     If checked, students with teachers can "submit" a solution for
     grading. Submitting a solution means that it is marked as
     submitted and they can no longer edit it (unless a teacher returns
     it).
-  = boolean_check_box f, :submittable
 
 .field
   = f.label 'Key-Value Data'
@@ -59,13 +54,13 @@
   :javascript
     levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
-.field
-  = f.label 'Hide View Data Button'
+.field.aligned-input-group
   = boolean_check_box f, :hide_view_data_button
+  = f.label 'Hide View Data Button'
 
-.field
-  =f.label 'Disable code debugger (Console is still enabled)'
+.field.aligned-input-group
   = boolean_check_box f, :debugger_disabled
+  =f.label 'Disable code debugger (Console is still enabled)'
 
 .field
   = f.label 'Immediately show the results of setup code changes in the playspace?'
@@ -97,11 +92,11 @@
   = f.text_area :validation_code
 
 .field
-  =f.label 'Animations are paused by default'
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
+
   %p
     If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
     Otherwise, it will be playing after a <tt>setAnimation</tt> call.
-  = boolean_check_box f, :pause_animations_by_default
 
 .field
   = f.label :start_animations, 'Starting animation list JSON'

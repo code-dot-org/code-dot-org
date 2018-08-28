@@ -4,6 +4,7 @@ import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
 import styleConstants from '../../styleConstants';
 import throttle from 'lodash/debounce';
 import FontAwesome from '../FontAwesome';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 export const QuickActionsCellType = {
   header: 'header',
@@ -47,7 +48,14 @@ export default class QuickActionsCell extends Component {
       PropTypes.node,
       PropTypes.array
     ]).isRequired,
-    type: PropTypes.oneOf(Object.keys(QuickActionsCellType))
+    type: PropTypes.oneOf(Object.keys(QuickActionsCellType)),
+    experimentDetails: PropTypes.shape({
+      study: PropTypes.string,
+      study_group: PropTypes.string,
+      event: PropTypes.string,
+      user_id: PropTypes.number,
+      data_json: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
@@ -67,6 +75,9 @@ export default class QuickActionsCell extends Component {
     this.updateMenuLocation();
     window.addEventListener("resize", throttle(this.updateMenuLocation, 50));
     this.setState({open: true, canOpen: false});
+    if (this.props.experimentDetails) {
+      firehoseClient.putRecord(this.props.experimentDetails);
+    }
   };
 
   // Menu closed

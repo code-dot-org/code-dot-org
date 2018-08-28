@@ -1,8 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import i18n from '@cdo/locale';
 import {assignmentVersionShape} from './shapes';
-import PopUpMenu from "../../lib/ui/PopUpMenu";
-import AssignmentVersionMenuItem from './AssignmentVersionMenuItem';
+import PopUpMenu, {STANDARD_PADDING} from "../../lib/ui/PopUpMenu";
+import AssignmentVersionMenuItem, {columnWidths} from './AssignmentVersionMenuItem';
+import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
+import _ from 'lodash';
+
+const menuItemWidth = _(columnWidths).values().reduce(_.add);
+const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
 const styles = {
   version: {
@@ -15,6 +20,8 @@ const styles = {
   popUpMenuStyle: {
     // must appear in front of .modal from application.scss
     zIndex: 1051,
+    maxWidth: null,
+    width: menuWidth,
   }
 };
 
@@ -22,10 +29,8 @@ export default class AssignmentVersionSelector extends Component {
   static propTypes = {
     dropdownStyle: PropTypes.object,
     onChangeVersion: PropTypes.func.isRequired,
-    selectedVersion: assignmentVersionShape,
     versions: PropTypes.arrayOf(assignmentVersionShape),
     disabled: PropTypes.bool,
-    showVersionMenu: PropTypes.bool,
   };
 
   state = {
@@ -35,17 +40,11 @@ export default class AssignmentVersionSelector extends Component {
   };
 
   handleMouseDown = e => {
-    if (this.props.showVersionMenu) {
-      // Prevent the native dropdown menu from opening.
-      e.preventDefault();
-    }
+    // Prevent the native dropdown menu from opening.
+    e.preventDefault();
   };
 
   handleClick = () => {
-    if (!this.props.showVersionMenu) {
-      return;
-    }
-
     if (!this.state.isMenuOpen && this.state.canMenuOpen) {
       this.openMenu();
     }
@@ -84,14 +83,15 @@ export default class AssignmentVersionSelector extends Component {
   };
 
   render() {
-    const {dropdownStyle, selectedVersion, versions, disabled} = this.props;
+    const {dropdownStyle, versions, disabled} = this.props;
+    const selectedVersionYear = versions.find(v => v.isSelected).year;
 
     return (
       <span style={styles.version}>
         <div style={styles.dropdownLabel}>{i18n.assignmentSelectorVersion()}</div>
         <select
           id="assignment-version-year"
-          value={selectedVersion.year}
+          value={selectedVersionYear}
           onChange={this.handleNativeDropdownChange}
           onMouseDown={this.handleMouseDown}
           onClick={this.handleClick}
@@ -117,6 +117,7 @@ export default class AssignmentVersionSelector extends Component {
           style={styles.popUpMenuStyle}
           beforeClose={this.beforeClose}
         >
+          <AssignmentVersionMenuHeader/>
           {
             versions.map(version => (
               <AssignmentVersionMenuItem

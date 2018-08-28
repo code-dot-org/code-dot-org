@@ -127,10 +127,18 @@ class TopInstructions extends Component {
     user: PropTypes.number
   };
 
-  state = {
-    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace ? TabType.COMMENTS : TabType.INSTRUCTIONS,
-    feedbacks: []
-  };
+  constructor(props) {
+    super(props);
+
+    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
+      (window.location.search).includes('user_id');
+
+    this.state = {
+      tabSelected: teacherViewingStudentWork ? TabType.COMMENTS : TabType.INSTRUCTIONS,
+      feedbacks: [],
+      displayFeedbackTeacherFacing: teacherViewingStudentWork,
+    };
+  }
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -267,14 +275,9 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
-
-    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
-
     const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
-
-    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && teacherViewingStudentWork;
-
-    const displayFeedback = teacherViewingStudentWork || displayFeedbackStudent;
+    const displayFeedback = displayFeedbackStudent || this.state.displayFeedbackTeacherFacing;
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && this.state.displayFeedbackTeacherFacing;
 
     return (
       <div style={mainStyle} className="editor-column">

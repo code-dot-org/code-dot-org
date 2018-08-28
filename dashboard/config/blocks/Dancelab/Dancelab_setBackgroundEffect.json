@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "World",
   "config": {
     "color": [
       240,
@@ -23,6 +23,10 @@
           [
             "Rainbow",
             "\"rainbow\""
+          ],
+          [
+            "Diamonds",
+            "\"diamonds\""
           ]
         ]
       }

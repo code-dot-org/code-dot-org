@@ -78,7 +78,7 @@
 
   %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
 
-- if current_user.can_edit_password? && current_user.encrypted_password.blank?
+- if current_user.should_see_add_password_form?
   -# Mount point for React AddPasswordForm component.
   %div#add-password-fields
 
@@ -102,7 +102,9 @@
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')
-  %p= no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+  %p
+    = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+    = t('user.create_personal_login_link_account') if current_user.migrated?
   = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
     = form.hidden_field :hashed_email
     %h3= t('user.enter_new_login_info')

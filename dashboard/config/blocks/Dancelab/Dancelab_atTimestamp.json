@@ -7,11 +7,24 @@
       0.74
     ],
     "func": "atTimestamp",
-    "blockText": "at {TIMESTAMP} seconds",
+    "blockText": "at {TIMESTAMP} {UNIT}",
     "args": [
       {
         "name": "TIMESTAMP",
         "type": "Number"
+      },
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "measures",
+            "\"measures\""
+          ],
+          [
+            "seconds",
+            "\"seconds\""
+          ]
+        ]
       }
     ],
     "eventBlock": true

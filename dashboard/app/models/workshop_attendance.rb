@@ -3,7 +3,7 @@
 # Table name: workshop_attendance
 #
 #  id         :integer          not null, primary key
-#  teacher_id :integer          not null
+#  teacher_id :integer
 #  segment_id :integer          not null
 #  status     :string(255)
 #  created_at :datetime
@@ -20,4 +20,5 @@ class WorkshopAttendance < ActiveRecord::Base
   self.table_name = 'workshop_attendance'
   belongs_to :segment
   belongs_to :teacher, class_name: 'User'
+  validates_presence_of :teacher
 end
