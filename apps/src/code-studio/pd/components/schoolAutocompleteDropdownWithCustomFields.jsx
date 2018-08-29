@@ -31,16 +31,16 @@ export default class SchoolAutocompleteDropdownWithCustomFields extends React.Co
   handleSchoolDropdownChange = (selection) => {
     const showCustomFields = !!(selection && selection.value === OTHER_SCHOOL_VALUE);
     this.setState({showCustomFields});
-    if (!showCustomFields) {
-      this.props.onSchoolInfoChange({
-        school_info: {
-          school_id: selection.school.nces_id,
-          school_name: selection.school.name,
-          school_state: selection.school.state,
-          school_zip: selection.school.zip,
-          school_type: selection.school.school_type
-        }
-      });
+    if (!showCustomFields && selection) {
+        this.props.onSchoolInfoChange({
+          school_info: {
+            school_id: selection.school.nces_id,
+            school_name: selection.school.name,
+            school_state: selection.school.state,
+            school_zip: selection.school.zip,
+            school_type: selection.school.school_type
+          }
+        });
     } else {
       this.props.onSchoolInfoChange({school_info: {}});
     }
