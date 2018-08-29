@@ -57,3 +57,12 @@ Scenario: UnPublished, Featured Projects Do Not Show
   Then I debug element ".ui-project-name:eq(2)" text content
   Then I debug element ".ui-project-name:eq(3)" text content
   And element ".ui-project-name:eq(0)" contains text "Published, Featured"
+
+Scenario: Can Toggle to the Personal Project Gallery
+  Given I am on "http://studio.code.org/projects/public"
+  And I wait until element "#public-gallery" is visible
+  And element "#react-personal-projects" is not visible
+  Then I click selector "#uitest-gallery-switcher div:contains(My Projects)"
+  Then check that I am on "http://studio.code.org/projects"
+  And I wait until element "#react-personal-projects" is visible
+  And element "#public-gallery" is not visible
