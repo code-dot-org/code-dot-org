@@ -240,8 +240,8 @@ module Api::V1::Pd
       csf_facilitators: Pd::Application::Facilitator1819Application,
       csd_facilitators: Pd::Application::Facilitator1819Application,
       csp_facilitators: Pd::Application::Facilitator1819Application,
-      csd_teachers: Pd::Application::Teacher1819Application,
-      csp_teachers: Pd::Application::Teacher1819Application
+      csd_teachers: Pd::Application::Teacher1920Application,
+      csp_teachers: Pd::Application::Teacher1920Application
     }
     ROLES = TYPES_BY_ROLE.keys
 
