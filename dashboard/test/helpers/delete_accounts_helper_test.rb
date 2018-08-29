@@ -775,6 +775,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     purge_user user
 
     assert_empty EmailPreference.where(email: email)
+
+    assert_logged "Removed 1 EmailPreference"
   end
 
   #
