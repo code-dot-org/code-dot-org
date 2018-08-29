@@ -1,0 +1,19 @@
+{
+  "category": "",
+  "config": {
+    "func": "eval",
+    "blockText": "Run some arbitrary code {CODE}",
+    "color": [
+      0,
+      0.9,
+      0.9
+    ],
+    "args": [
+      {
+        "name": "CODE",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}

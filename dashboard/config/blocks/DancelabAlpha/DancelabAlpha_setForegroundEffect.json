@@ -6,8 +6,8 @@
       0.45,
       0.65
     ],
-    "func": "setBackgroundEffect",
-    "blockText": "set background effect {EFFECT}",
+    "func": "setForegroundEffect",
+    "blockText": "set foreground effect {EFFECT}",
     "args": [
       {
         "name": "EFFECT",
@@ -27,10 +27,6 @@
           [
             "Diamonds",
             "\"diamonds\""
-          ],
-          [
-            "Strobe",
-            "\"strobe\""
           ]
         ]
       }
