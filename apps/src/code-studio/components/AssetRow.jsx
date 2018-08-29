@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
+import firehoseClient from "@cdo/apps/lib/util/firehose";
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -51,11 +52,24 @@ export default class AssetRow extends React.Component {
     });
   };
 
+  chooseAsset = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'sound-dialog',
+        study_group: 'files-tab',
+        event: 'choose-uploaded-sound',
+        data_json: this.props.name
+      },
+      {includeUserId: true}
+    );
+    this.props.onChoose();
+  };
+
   render() {
     let actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
-      flex = <button onClick={this.props.onChoose}>{i18n.choose()}</button>;
+      flex = <button onClick={this.chooseAsset}>{i18n.choose()}</button>;
     } else {
       const size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';
