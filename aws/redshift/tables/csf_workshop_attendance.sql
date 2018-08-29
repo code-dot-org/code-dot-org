@@ -67,7 +67,7 @@ SELECT se.id, ss_user.state as state, ss_user.zip as zip
 sections_geos AS (
 SELECT se.id, ug.state as state, ug.postal_code as zip 
 FROM dashboard_production.sections se 
-JOIN user_geos ug
+JOIN dashboard_production_pii.user_geos ug
  ON se.user_id = ug.user_id
 where se.section_type = 'csf_workshop'
 and se.id not in (SELECT id from sections_schools)
