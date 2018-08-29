@@ -182,14 +182,12 @@ class DeleteAccountsHelper
     Follower.with_deleted.where(student_user: user).each(&:really_destroy!)
   end
 
-  def remove_contacts(email)
-    @pegasus_db[:contacts].where(email: email).delete
-  end
-
   def remove_poste_data(email)
-    ids = @pegasus_db[:poste_deliveries].where(contact_email: email).map {|x| x[:id]}
-    @pegasus_db[:poste_opens].where(delivery_id: ids).delete
-    @pegasus_db[:poste_deliveries].where(contact_email: email).delete
+    contact_ids = @pegasus_db[:contacts].where(email: email).map(:id)
+    delivery_ids = @pegasus_db[:poste_deliveries].where(contact_id: contact_ids).map(:id)
+    @pegasus_db[:poste_opens].where(delivery_id: delivery_ids).delete
+    @pegasus_db[:poste_deliveries].where(id: delivery_ids).delete
+    @pegasus_db[:contacts].where(id: contact_ids).delete
   end
 
   def remove_from_pardot_and_contact_rollups(contact_rollups_recordset)
@@ -320,7 +318,6 @@ class DeleteAccountsHelper
     clean_and_destroy_pd_content(user.id)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
-    remove_contacts(user.email) if user.email
     remove_poste_data(user.email) if user.email
     remove_from_pardot_by_user_id(user.id)
     remove_from_solr(user.id)
