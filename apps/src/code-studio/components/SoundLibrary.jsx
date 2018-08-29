@@ -3,6 +3,7 @@ import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
 import * as color from "../../util/color";
 import Sounds from '../../Sounds';
+import firehoseClient from "@cdo/apps/lib/util/firehose";
 
 const SOUND_CATEGORIES = {
   category_animals: 'Animals',
@@ -91,6 +92,15 @@ export default class SoundLibrary extends React.Component {
   };
 
   onClickChoose = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'sound-dialog',
+        study_group: 'library-tab',
+        event: 'choose-library-sound',
+        data_json: this.state.selectedSound.sourceUrl
+      },
+      {includeUserId: true}
+    );
     this.sounds.stopAllAudio();
     this.props.assetChosen(this.state.selectedSound.sourceUrl);
   };

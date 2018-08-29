@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import * as color from "../../util/color";
+import firehoseClient from "@cdo/apps/lib/util/firehose";
 
 const styles = {
   root: {
@@ -65,6 +66,15 @@ class SoundListEntry extends React.Component {
       this.setState({isPlaying: false});
     } else {
       this.setState({isPlaying: true});
+      firehoseClient.putRecord(
+        {
+          study: 'sound-dialog',
+          study_group: 'library-tab',
+          event: 'play-library-sound',
+          data_json: this.props.soundMetadata.sourceUrl
+        },
+        {includeUserId: true}
+      );
       this.props.soundsRegistry.playURL(
         this.props.soundMetadata.sourceUrl, {
           onEnded: () => this.setState({isPlaying: false})
