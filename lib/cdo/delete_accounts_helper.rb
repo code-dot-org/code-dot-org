@@ -267,7 +267,11 @@ class DeleteAccountsHelper
   # Removes signature and school_id from applications for this user
   # @param [User] user
   def anonymize_circuit_playground_discount_application(user)
-    user.circuit_playground_discount_application&.anonymize
+    @log.puts "Anonymizing CircuitPlaygroundDiscountApplication"
+    if user.circuit_playground_discount_application
+      user.circuit_playground_discount_application.anonymize
+      @log.puts "Anonymized 1 CircuitPlaygroundDiscountApplication"
+    end
   end
 
   def purge_teacher_feedbacks(user_id)
