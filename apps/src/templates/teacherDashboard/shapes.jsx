@@ -34,6 +34,7 @@ export const assignmentShape = PropTypes.shape({
   version_year: PropTypes.string.isRequired,
   version_title: PropTypes.string.isRequired,
   is_stable: PropTypes.bool,
+  supported_locales: PropTypes.arrayOf(PropTypes.string),
 });
 
 // An assignment family is a collection of versions of a course or script like
@@ -59,6 +60,8 @@ export const assignmentVersionShape = PropTypes.shape({
   title: PropTypes.string.isRequired,
   isStable: PropTypes.bool.isRequired,
   isRecommended: PropTypes.bool,
+  isSelected: PropTypes.bool,
+  locales: PropTypes.arrayOf(PropTypes.string).isRequired,
 });
 
 export const classroomShape = PropTypes.shape({

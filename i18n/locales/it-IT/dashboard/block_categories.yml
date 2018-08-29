@@ -28,9 +28,10 @@ it:
       Default: Impostazione predefinita
       World: Mondo
       Behaviors: Comportamenti
+      Start: Inizia
+      Music: Musica
       Sprite: Personaggio
       Brush: Pennello
-      Start: Inizia
       Booleans: Valori Booleani
       test: test
       Name: Nome

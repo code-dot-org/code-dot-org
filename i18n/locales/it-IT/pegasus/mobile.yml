@@ -966,7 +966,7 @@
   csf_international_category_name: "Fondamenti di Informatica (in Italiano)"
   csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
   csp_category_name: "Princìpi dell'Informatica (versione 2015-16)"
-  csp17_category_name: "'16-'17 principi d'informatica"
+  csp17_category_name: "CS Principles ('17-'18)"
   csp_2018_category_name: "Principi di informatica ('18-'19)"
   cspexams_category_name: "Prova pratica di principi d'informatica"
   applab_name: "Sviluppo App"
@@ -1408,7 +1408,7 @@
   header_report_bug: "Report Bug"
   header_tutorials: "Corsi"
   header_documentation: "Documentazione"
-  csp_name: "'16-'17 principi d'informatica"
+  csp_name: "CS Principles"
   full_course_category_name: "Corsi Avanzati"
   user_header_label: "Ciao %{username}"
   user_header_settings: "Il mio account"

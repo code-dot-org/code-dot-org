@@ -1,0 +1,30 @@
+mt:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: kulur bl-addoċċ
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'veru/minnu'
+            'false': 'falz'
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": bl-addoċċ
+      gamelab_randColor:
+        text: kulur bl-addoċċ
+      gamelab_randomColor:
+        text: kulur bl-addoċċ
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': bl-addoċċ
+      Vanilla_randomColor:
+        text: kulur bl-addoċċ

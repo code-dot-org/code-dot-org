@@ -239,8 +239,6 @@ GameLab.prototype.init = function (config) {
 
   config.usesAssets = true;
 
-  gameLabSprite.injectLevel(this.level);
-
   this.studioApp_.labUserId = config.labUserId;
   this.studioApp_.storage = initFirebaseStorage({
     channelId: config.channel,
@@ -358,16 +356,7 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.shouldAutoRunSetup) {
-      const changeHandler = this.rerunSetupCode.bind(this);
-      if (this.studioApp_.isUsingBlockly()) {
-        const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
-        blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
-          changeHandler);
-      } else {
-        this.studioApp_.editor.on('change', changeHandler);
-        // Droplet doesn't automatically bubble up aceEditor changes
-        this.studioApp_.editor.aceEditor.on('change', changeHandler);
-      }
+      this.studioApp_.addChangeHandler(this.rerunSetupCode.bind(this));
     }
   };
 
@@ -1090,7 +1079,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
     return;
   }
 
-  this.gameLabP5.startExecution();
+  this.gameLabP5.startExecution(this.isDanceLab);
   this.gameLabP5.setLoop(keepTicking);
 
   if (!this.JSInterpreter ||
@@ -1115,7 +1104,7 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
     if (experiments.isEnabled('replay')) {
       wrap(this.gameLabP5.p5);
     }
-    const propList = this.gameLabP5.getGlobalPropertyList(this.isDanceLab);
+    const propList = this.gameLabP5.getGlobalPropertyList();
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
       // propListItem[0] - a native property value
@@ -1243,7 +1232,7 @@ GameLab.prototype.onP5ExecutionStarting = function () {
  */
 GameLab.prototype.onP5Preload = function () {
   Promise.all([
-      this.preloadAnimations_(),
+      this.preloadAnimations_(this.level.pauseAnimationsByDefault),
       this.runPreloadEventHandler_()
   ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
@@ -1286,13 +1275,14 @@ GameLab.prototype.loadLibrary_ = function (name) {
 /**
  * Wait for animations to be loaded into memory and ready to use, then pass
  * those animations to P5 to be loaded into the engine as animations.
+ * @param {Boolean} pauseAnimationsByDefault whether animations should be paused
  * @returns {Promise} which resolves once animations are in memory in the redux
  *          store and we've started loading them into P5.
  *          Loading to P5 is also an async process but it has its own internal
  *          effect on the P5 preloadCount, so we don't need to track it here.
  * @private
  */
-GameLab.prototype.preloadAnimations_ = function () {
+GameLab.prototype.preloadAnimations_ = function (pauseAnimationsByDefault) {
   let store = getStore();
   return new Promise(resolve => {
     if (this.areAnimationsReady_()) {
@@ -1308,7 +1298,9 @@ GameLab.prototype.preloadAnimations_ = function () {
     }
   }).then(() => {
     // Animations are ready - send them to p5 to be loaded into the engine.
-    return this.gameLabP5.preloadAnimations(store.getState().animationList);
+    return this.gameLabP5.preloadAnimations(
+      store.getState().animationList,
+      pauseAnimationsByDefault);
   });
 };
 

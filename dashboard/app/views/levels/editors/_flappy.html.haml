@@ -2,17 +2,13 @@
   = f.label :default_flap, 'Default Flap Amount'
   = f.select :default_flap, options_for_select(@level.class.flap_amounts, @level.default_flap || "NORMAL")
 .field
-  = f.label :ground, 'Include Ground?'
-  = boolean_check_box f, :ground
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :ground, description: "Include Ground?"}
 .field
-  = f.label :obstacles, 'Include Obstacles?'
-  = boolean_check_box f, :obstacles
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :obstacles, description: "Include Obstacles?"}
 .field
-  = f.label :score, 'Include Score?'
-  = boolean_check_box f, :score
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :score, description: "Include Score?"}
 .field
-  = f.label :shareable, 'Make Shareable?'
-  = boolean_check_box f, :shareable
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :shareable, description: "Make Shareable?"}
 
 .field
   = f.label :scale, 'Scalings'

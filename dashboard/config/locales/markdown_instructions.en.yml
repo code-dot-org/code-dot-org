@@ -19300,24 +19300,42 @@ en:
         - What happens if you make your diamond pattern longer or shorter?
         - What does it look like to draw two snowflakes on top of one another?
       Dance Party 1-validated_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! \n\nWhat do you think will happen when you click on it?  "
+      Dance Party 1-validated_simple_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! \n\nWhat do you think will happen when you click on it?  "
       Dance Party 1_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`! What do you think will happen when you click on her?"
       Dance Party 2 Validated_markdown_instruction: The alien was proud of her dancing skills on Mars, but now she can only move side-to-side. Can you change the behavior inside the `begins` block to make her start spinning around?
       Dance Party 2_markdown_instruction: "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> block to make it start spinning around?  "
+      Dance Party 2_simple_markdown_instruction: "The alien can only move left and right.\n\nChange the behavior inside the <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> block to make the alien start turning.  "
       Dance Party 3 - Validated_markdown_instruction: "Create a new sprite called `alien2`.  \n\nMake it do a different dance move when it's clicked.  "
       Dance Party 3_markdown_instruction: "Create a new sprite called `alien2`.  \n\nMake it do a different dance move when it's clicked.  "
+      Dance Party 3_simple_markdown_instruction: |-
+        Create a new sprite called `alien2`.
+
+        When the new sprite is clicked, it should do something.
       Dance Party 4 Validated_markdown_instruction: "Create a third sprite called `alien3`.  \n\nCan you set all of your aliens to stand in a straight line? It's an alien dance crew!"
       Dance Party 4_markdown_instruction: "Create a third sprite called `alien3`.  \n\nCan you set all of your aliens to stand in a straight line? It's an alien dance crew!"
+      Dance Party 4_simple_markdown_instruction: "Create a third sprite called `alien3`.  \n\nPlace all of your aliens in a straight line. It's an alien dance party!"
       Dance Party 5 - Validated_markdown_instruction: "We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  \n\n**Add code to change the color of each alien when it gets clicked.**"
       Dance Party 5_markdown_instruction: "We can change all kinds of things in this program when you click on the sprites.  Let’s change their color!  \n\n**Add code to change the color of each alien when it gets clicked.**"
+      Dance Party 5_simple_markdown_instruction: |-
+        You can change many things in this program.
+
+        Add code to change the color of each alien when it gets clicked.
       Dance Party 6 - Validated_markdown_instruction: "These aliens are running wild!  \n\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> block to make each alien stop moving when it is clicked."
       Dance Party 6_markdown_instruction: "These aliens are running wild!  \n\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> block to make each alien stop moving when it is clicked."
+      Dance Party 6_simple_markdown_instruction: "These aliens are too busy!  \n\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> block to make each alien stop moving when it is clicked."
       Dance Party 7 - Validated_markdown_instruction: "Finally, add a new bell sprite called `myBell`.  \n\nWhen you click on it, make all the aliens start doing the same dance move!"
       Dance Party 7_markdown_instruction: "Finally, add a new bell sprite called `myBell`.  \n\nWhen you click on it, make all the aliens start doing the same dance move!"
+      Dance Party 7_simple_markdown_instruction: "Finally, add a new bell sprite called `myBell`.  \n\nWhen you click on it, make all the aliens start doing the same dance move!"
       Dance Party Freeplay_markdown_instruction: |-
         Now create your own alien disco! Looking for inspiration? Try these ideas:
         * Create two bell sprites, and make the aliens do a different dance move for each
         * Make the aliens do a new dance move whenever they touch each other
+      Dance Party Freeplay_simple_markdown_instruction: |-
+        Now make a new alien dance party!  Here are some ideas:
+        * Create two bell sprites, and make the aliens do a different dance move for each
+        * Make the aliens do a new dance move whenever they touch each other
       Dance Party Predict_markdown_instruction: "**Make a prediction:** Here’s a sprite called `alien1`!   \n\nWhat do you think will happen when you click on it?  "
+      Dance Party Predict_simple_markdown_instruction: "**What do you think?** \n\nHere’s a sprite called `alien1`!   \n\nWhen you click on it, what will it do?  "
       Data Visualizations 101_markdown_instruction: |+
         ## Data Visualization 101: How to design charts and graphs
 
@@ -19562,21 +19580,34 @@ en:
           * **Note**: We'll revisit this game in the next lesson where you can improve it.  This is **just version 1**
 
       Fish Tank 1-validated_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
+      Fish Tank 1-validated_simple_markdown_instruction: "**What do you think?**: When you run this code, what will it do?"
       Fish Tank 1_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
       Fish Tank 2-validated_markdown_instruction: "Let's make a fish tank!  \n\nChange Dusty (the tumbleweed) to a fish."
+      Fish Tank 2-validated_simple_markdown_instruction: Change Petal (the flower) to a fish.
       Fish Tank 2_markdown_instruction: We're going to make a fish tank. Change the Dusty the tumbleweed to a fish.
+      Fish Tank 3-validated Ram_markdown_instruction: "The fish is getting dizzy! \n\nChange the fish's behavior so that it swims around the tank."
       Fish Tank 3-validated_markdown_instruction: "The fish is getting dizzy! \n\nChange the fish's behavior so that it swims around the tank."
+      Fish Tank 3-validated_simple_markdown_instruction: "The fish should swim! \n\nMake the fish swim around the tank."
       Fish Tank 3_markdown_instruction: All this spinning is going to make our fish dizzy! Change the fish's behavior to make it swim around the tank.
       Fish Tank 4-validated_markdown_instruction: "Our fish tank needs some water! \n\nUse <xml><block type=\"gamelab_setBackground\" inline=\"true\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> to make the background blue."
+      Fish Tank 4-validated_simple_markdown_instruction: "The fish needs water! \n\nUse <xml><block type=\"gamelab_setBackground\" inline=\"true\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> to make the background blue."
       Fish Tank 4_markdown_instruction: Our fish tank needs some water! Use the `set background color` block to make the background blue.
       Fish Tank 5-validated_markdown_instruction: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 5-validated_simple_markdown_instruction: The fish wants a friend.   Add a new sprite.
       Fish Tank 5_markdown_instruction: Our fish is getting a little lonely. Create a new sprite inside the fish tank.
       Fish Tank 6-validated_markdown_instruction: "What do you want your fish’s new friend to do?   \n\nAdd a behavior and watch them go!"
+      Fish Tank 6-validated_simple_markdown_instruction: "What should the new friend do?   \n\nGive the friend a new behavior!"
       Fish Tank 6_markdown_instruction: What do you want your fish’s friend to do? Add a behavior and watch them go!
       Fish Tank 7-validated_markdown_instruction: "We've added a lot of new blocks to the toolbox.   \n\nPlay with them to make your fish tank special!"
+      Fish Tank 7-validated_simple_markdown_instruction: "There are a lot of new blocks.   \n\nPlay with them to make your fish do new things!"
       Fish Tank 7_markdown_instruction: There are a lot of new blocks in the toolbox. Play with them to make your fish tank special.
       Fish Tank Predict_markdown_instruction: "**Make a prediction**: What do you think will happen when you run this code?"
+      Fish Tank Predict_simple_markdown_instruction: |-
+        **What do you think?**
+
+        When you run this code, what will it do?
       Fish Tank Template_markdown_instruction: Project Template
+      Fish Tank Template_simple_markdown_instruction: Project Template
       Food Fight!_markdown_instruction: |-
         We've added one last function for you.
         <hr/>
@@ -21090,7 +21121,7 @@ en:
 
 
       U1L14 Assessment 1_markdown_instruction: "Please answer the following 3 questions in the space below.\n\n1. What are the **dimensions** (width and height) of the **largest image** we can make with the pixelation widget? \n\n2. How many **total bits** would there be in the the largest possible image we could make with the pixelation widget (assuming 1 bit per pixel)?\n\n3. How many **total bits** bits would it take to represent **the smallest possible image** (i.e. an image with one pixel)?\n"
-      U1L14 Assessment 1_2018_markdown_instruction: "Please answer the following 3 questions in the space below.\n\n1. What are the **dimensions** (width and height) of the **largest image** we can make with the pixelation widget? \n\n2. How many **total bits** would there be in the the largest possible image we could make with the pixelation widget (assuming 1 bit per pixel)?\n\n3. How many **total bits** bits would it take to represent **the smallest possible image** (i.e. an image with one pixel)?\n"
+      U1L14 Assessment 1_2018_markdown_instruction: "Please answer the following 3 questions in the space below.\n\n1. What are the **dimensions** (width and height) of the **largest image** we can make with the pixelation widget? \n\n2. How many **total bits** would there be in the the largest possible image we could make with the pixelation widget (assuming 1 bit per pixel)?\n\n3. How many **total bits** would it take to represent **the smallest possible image** (i.e. an image with one pixel)?\n"
       U1L16 Reflection Free Response_markdown_instruction: |+
         Respond to this prompt or to another as directed by your teacher.
 
@@ -26978,17 +27009,35 @@ en:
         **Make a prediction:** This is Geraldine, your new pet giraffe.
 
         What do you think will happen if you press "▶ Run" and then click on her?
+      Virtual Pet 1 Predict_simple_markdown_instruction: "**What do you think?** \n\nThis giraffe is called Geraldine.  \n\nWhen you click on her, what will she do?"
       Virtual Pet 1-validated_markdown_instruction: This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?
       Virtual Pet 1_markdown_instruction: "This is Geraldine, your new pet giraffe.  \n\nWhat do you think will happen if you press \"▶ Run\" and then click on her?"
+      Virtual Pet 1_simple_markdown_instruction: "This is Geraldine, your new pet giraffe.  \n\nWhat do you think will happen if you press \"▶ Run\" and then click on her?"
       Virtual Pet 2 - Validated (Ram)_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
       Virtual Pet 2 - Validated_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
       Virtual Pet 2_markdown_instruction: "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
+      Virtual Pet 2_simple_markdown_instruction: |-
+        There is brown dirt in the corner.
+
+        Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
+      Virtual Pet 2_simple_clone_markdown_instruction: |-
+        There is brown dirt in the corner.
+
+        Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3_markdown_instruction: "We can’t have a dirty giraffe wandering around!  \n\n1)  Add a new soap sprite to the screen.  \n2)  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\n\n---\n\nTo reset the color, use this block:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
+      Virtual Pet 3_simple_markdown_instruction: "The giraffe is too dirty!  \n\n1)  Add a new soap sprite to the screen.\n2)  When the giraffe and the soap touch, change the giraffe to its normal color.\n\n---\n\nTo change to the giraffe's normal color, use this block:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
       Virtual Pet 4_markdown_instruction: "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!\n"
+      Virtual Pet 4_simple_markdown_instruction: |
+        We want to bring the soap to the giraffe.
+
+        Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
       Virtual Pet 5_markdown_instruction: "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  \n"
+      Virtual Pet 5_simple_markdown_instruction: "The giraffe is too big!  \n\nAdd actions to each event so the giraffe gets smaller each time it touches another sprite.  \n"
       Virtual Pet 6_markdown_instruction: "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  \n"
+      Virtual Pet 6_simple_markdown_instruction: "The giraffe is hungry!\n\nAdd an apple and use an action to make the giraffe its normal size when the apple and giraffe touch.  \n"
       Virtual Pet Freeplay_markdown_instruction: "Freeplay: What more can you make your giraffe do? \n\n- Can you add more special items for your virtual pet?  \n- Can you give her some friends?  "
+      Virtual Pet Freeplay_simple_markdown_instruction: "Freeplay: What more can you make your giraffe do? \n\n- Can you add more special items for your giraffe?  \n- Can you give her some friends?  "
       Virtual Pet Predict_markdown_instruction: "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?"
       Visual Accessibility_markdown_instruction: |-
         # Visual Accessibility: Color Contrast

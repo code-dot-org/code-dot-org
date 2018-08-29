@@ -1,0 +1,50 @@
+ta:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: ஏதாவது ஒரு நிறம்
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"space"': வெளி
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"space"': வெளி
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'மெய்'
+            'false': 'தவறு'
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": தொடர்பின்றி எடுக்கப்பட்ட
+      gamelab_randColor:
+        text: ஏதாவது ஒரு நிறம்
+      gamelab_randomColor:
+        text: ஏதாவது ஒரு நிறம்
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': உயரம்
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"space"': வெளி
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"space"': வெளி
+      Vanilla_randomColor:
+        text: ஏதாவது ஒரு நிறம்

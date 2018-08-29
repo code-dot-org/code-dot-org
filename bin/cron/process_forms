@@ -2,12 +2,10 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/chat_client'
 require 'cdo/only_one'
-require 'cdo/solr'
 require 'retryable'
 require src_dir 'forms'
 require src_dir 'abort_form_error'
 
-SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
 # As the NULLness of various date columns indicates further processing is
 # necessary, we use this date to represent that an unrecoverable error happened.
 DATE_FOR_ERRORS = '1980-01-01 00:00:00'.freeze
@@ -91,73 +89,9 @@ def process_batch_of_forms
   count
 end
 
-def index_batch_of_forms
-  documents = []
-
-  DB.transaction do
-    DB[:forms].where(indexed_at: nil).exclude(processed_at: nil).limit(BATCH_SIZE).each do |form|
-      kind = Object.const_get(form[:kind])
-
-      begin
-        index_data = JSON.load(form[:data]).merge(JSON.load(form[:processed_data]))
-        index_data = index_data.merge(
-          'id' => form[:id],
-          'kind_s' => form[:kind],
-          'review_s' => form[:review],
-          'user_i' => form[:user_id],
-          'parent_form_i' => form[:parent_id]
-        )
-        index_data = kind.index(index_data) if kind.respond_to?(:index)
-
-        address_to_search = index_data['school_address_s'].to_s.strip
-        address_to_search = index_data['zip_code_s'].to_s.strip if address_to_search.empty?
-        sleep(0.03) unless address_to_search.empty?
-        address_to_search = form[:created_ip].to_s.strip if address_to_search.empty?
-        location = Retryable.retryable(on: [Redis::CannotConnectError], tries: 2) do
-          Geocoder.search(address_to_search).first
-        end
-        if location
-          index_data['create_ip_city_s'] = location.city
-          index_data['create_ip_state_s'] = location.state
-          index_data['create_ip_country_s'] = location.country
-          index_data['create_ip_postal_code_s'] = location.postal_code
-          index_data['create_ip_location_p'] = "#{location.latitude},#{location.longitude}" if location.latitude && location.longitude
-        end
-
-        documents << index_data
-      rescue
-        ChatClient.log(
-          "Form #{form[:id]} couldn't be indexed "\
-            "(see <a href=\"http://wiki.code.org/display/Operations/Form+%23%23%23%23%23%23+Could+not+be+indexed\">here</a> "\
-            "for instructions)",
-          color: 'red',
-          notify: 1
-        )
-        raise
-      end
-
-      DB[:forms].where(id: form[:id]).update(indexed_at: DateTime.now)
-    end
-
-    begin
-      SOLR.update(documents) unless documents.empty? || !SOLR
-    rescue
-      documents.each do |document|
-        SOLR.update([document])
-      rescue => e
-        ChatClient.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color: 'red', notify: 1
-        raise
-      end
-    end
-  end
-
-  documents.count
-end
-
 def main
   process_batch_of_forms
   receipt_count = send_batch_of_receipts
-  index_batch_of_forms
 
   system "#{deploy_dir('bin/cron', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end

@@ -1,0 +1,185 @@
+da:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Næste
+            '"prev"': Forrige
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Næste
+            '"prev"': Forrige
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: alle
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': højre
+            '"left"': venstre
+      Dancelab_randomColor:
+        text: tilfældig farve
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': op
+            '"down"': ned
+            '"left"': venstre
+            '"right"': højre
+            '"space"': rummet
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': op
+            '"down"': ned
+            '"left"': venstre
+            '"right"': højre
+            '"space"': rummet
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'sandt'
+            'false': 'falsk'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": tilfældig
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': højre
+            '"left"': venstre
+      gamelab_randColor:
+        text: tilfældig farve
+      gamelab_randomColor:
+        text: tilfældig farve
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': tilfældig
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"height"': højde
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': højre
+            '"left"': venstre
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': op
+            '"down"': ned
+            '"left"': venstre
+            '"right"': højre
+            '"space"': rummet
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": op
+            "'down'": ned
+            "'left'": venstre
+            "'right'": højre
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': op
+            '"down"': ned
+            '"left"': venstre
+            '"right"': højre
+            '"space"': rummet
+      Vanilla_randomColor:
+        text: tilfældig farve

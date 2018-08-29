@@ -84,6 +84,7 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
@@ -247,7 +248,8 @@ group :development, :staging do
 end
 
 # Reduce volume of production logs
-gem 'lograge'
+# Ref: https://github.com/roidrage/lograge/pull/252
+gem 'lograge', github: 'wjordan/lograge', ref: 'debug_exceptions'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
@@ -325,3 +327,5 @@ gem 'colorize'
 
 gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
 gem 'hammerspace'
+
+gem 'require_all', require: false

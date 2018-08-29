@@ -1,0 +1,181 @@
+eu:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Hurrengoa
+            '"prev"': Aurrekoa
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': Hurrengoa
+            '"prev"': Aurrekoa
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': eskuinera
+            '"left"': ezkerrera
+      Dancelab_randomColor:
+        text: ausazko kolorea
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'egia'
+            'false': 'gezurra'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": ausazkoa
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': eskuinera
+            '"left"': ezkerrera
+      gamelab_randColor:
+        text: ausazko kolorea
+      gamelab_randomColor:
+        text: ausazko kolorea
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': ausazkoa
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"height"': Altuera
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': eskuinera
+            '"left"': ezkerrera
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": gora
+            "'down'": behera
+            "'left'": ezkerrera
+            "'right'": eskuinera
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': gora
+            '"down"': behera
+            '"left"': ezkerrera
+            '"right"': eskuinera
+            '"space"': espazioa
+      Vanilla_randomColor:
+        text: ausazko kolorea

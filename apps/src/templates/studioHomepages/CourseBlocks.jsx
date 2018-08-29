@@ -74,16 +74,19 @@ class CourseBlocksCsfModern extends Component {
           type="bullhorn"
           notice={i18n.courseBlocksLegacyNotificationHeading()}
           details={i18n.courseBlocksLegacyNotificationBody()}
+          detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
+          detailsLink="https://docs.google.com/document/d/1MVDfbEzr0o9DqaOYmOOYpsQPTfXUFvCx4Xs9uixrdBE/edit?usp=sharing"
+          detailsLinkNewWindow={true}
           dismissible={false}
           buttons={[
             {
-              text: i18n.courseBlocksLegacyNotificationButtonTransitionGuide(),
-              link: "https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing",
+              text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
+              link: pegasus("/educate/curriculum/cs-fundamentals-international"),
               newWindow: true,
             },
             {
-              text: i18n.courseBlocksLegacyNotificationButtonCourses(),
-              link: pegasus("/educate/curriculum/cs-fundamentals-international"),
+              text: i18n.courseBlocksLegacyNotificationButtonCoursesAccelerated(),
+              link: "/s/20-hour",
               newWindow: true,
             }
           ]}

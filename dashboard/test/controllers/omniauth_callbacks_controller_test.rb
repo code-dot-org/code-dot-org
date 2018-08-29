@@ -390,30 +390,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
-  test 'login: prefers migrated user to legacy user' do
-    legacy_student = create(:student, :unmigrated_google_sso)
-    migrated_student = create(:student, :with_google_authentication_option, :multi_auth_migrated)
-    migrated_student.primary_contact_info = migrated_student.authentication_options.first
-    migrated_student.primary_contact_info.update(authentication_id: legacy_student.uid)
-
-    auth = OmniAuth::AuthHash.new(
-      uid: legacy_student.uid,
-      provider: 'google_oauth2',
-      credentials: {
-        token: '123456'
-      }
-    )
-
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_does_not_create(User) do
-      get :google_oauth2
-    end
-
-    assert_equal migrated_student.id, signed_in_user_id
-  end
-
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -507,7 +483,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           oauth_token: 'fake_token',
           oauth_token_expiration: '999999',
           oauth_refresh_token: 'fake_refresh_token'
-        }
+        }.to_json
       }
     )
 
@@ -540,7 +516,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           oauth_token: 'fake_token',
           oauth_token_expiration: '999999',
           oauth_refresh_token: 'fake_refresh_token'
-        }
+        }.to_json
       }
     )
 

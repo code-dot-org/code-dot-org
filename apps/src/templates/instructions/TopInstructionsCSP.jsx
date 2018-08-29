@@ -4,8 +4,6 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import processMarkdown from 'marked';
-import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import FeedbacksList from "./FeedbacksList";
 import TeacherFeedback from "./TeacherFeedback";
@@ -109,7 +107,7 @@ class TopInstructions extends Component {
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    markdown: PropTypes.string,
+    longInstructions: PropTypes.string,
     collapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -127,10 +125,18 @@ class TopInstructions extends Component {
     user: PropTypes.number
   };
 
-  state = {
-    tabSelected: this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace ? TabType.COMMENTS : TabType.INSTRUCTIONS,
-    feedbacks: []
-  };
+  constructor(props) {
+    super(props);
+
+    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace &&
+      (window.location.search).includes('user_id');
+
+    this.state = {
+      tabSelected: teacherViewingStudentWork ? TabType.COMMENTS : TabType.INSTRUCTIONS,
+      feedbacks: [],
+      displayFeedbackTeacherFacing: teacherViewingStudentWork,
+    };
+  }
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -267,14 +273,9 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
-
-    const teacherViewingStudentWork = this.props.viewAs === ViewType.Teacher && this.props.readOnlyWorkspace;
-
     const displayFeedbackStudent = this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
-
-    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && teacherViewingStudentWork;
-
-    const displayFeedback = teacherViewingStudentWork || displayFeedbackStudent;
+    const displayFeedback = displayFeedbackStudent || this.state.displayFeedbackTeacherFacing;
+    const teacherOnly = this.state.tabSelected === TabType.COMMENTS && this.state.displayFeedbackTeacherFacing;
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -339,8 +340,7 @@ class TopInstructions extends Component {
                 <div>
                   <Instructions
                     ref="instructions"
-                    renderedMarkdown={processMarkdown(this.props.markdown,
-                      { renderer })}
+                    longInstructions={this.props.longInstructions}
                     onResize={this.adjustMaxNeededHeight}
                     inTopPane
                   />
@@ -392,7 +392,7 @@ export default connect(state => ({
   expandedHeight: state.instructions.expandedHeight,
   maxHeight: Math.min(state.instructions.maxAvailableHeight,
     state.instructions.maxNeededHeight),
-  markdown: state.instructions.longInstructions,
+  longInstructions: state.instructions.longInstructions,
   noVisualization: state.pageConstants.noVisualization,
   collapsed: state.instructions.collapsed,
   documentationUrl: state.pageConstants.documentationUrl,

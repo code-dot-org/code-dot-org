@@ -220,6 +220,10 @@ Then /^I wait until current URL contains "([^"]*)"$/ do |url|
   wait_until {@browser.current_url.include? url}
 end
 
+And /^check that the URL matches "([^"]*)"$/ do |regex_text|
+  expect(@browser.current_url.match(regex_text).nil?).to eq(false)
+end
+
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   wait_until {@browser.current_url == url}
@@ -846,6 +850,20 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
   }
 end
 
+Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
+  individual_steps %Q{
+    Given I am on "http://studio.code.org/reset_session"
+    And I wait for 5 seconds
+    Then I am on "http://studio.code.org/"
+    And I wait to see "#signin_button"
+    Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "#signin-button"
+    And I wait to see ".header_user"
+  }
+end
+
 Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
   steps %Q{
     And check that the url contains "/users/sign_in"
@@ -908,6 +926,7 @@ def create_section_and_join_as_student(name, email, password)
 
     Then I sign out
     And I navigate to the section url
+    And I wait until I am on the join page
     And I wait to see "#user_name"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
@@ -993,7 +1012,9 @@ And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and uni
     Then I wait to see "#uitest-assignment-family"
 
     When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
-    And I select the "#{version_year}" option in dropdown "assignment-version-year"
+
+    And I click selector "#assignment-version-year" once I see it
+    And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
   }
 
   if secondary
@@ -1134,6 +1155,9 @@ And(/^I navigate to the section url$/) do
   steps %Q{
     Given I am on "#{@section_url}"
   }
+end
+
+And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
 
@@ -1423,16 +1447,6 @@ When /^I switch to text mode$/ do
     When I press "show-code-header"
     And I wait to see Droplet text mode
   STEPS
-end
-
-Then /^the project list contains ([\d]+) (?:entry|entries)$/ do |expected_num|
-  actual_num = @browser.execute_script("return $('table.projects td.name').length;")
-  expect(actual_num).to eq(expected_num.to_i)
-end
-
-Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_name|
-  actual_name = @browser.execute_script("return $('table.projects td.name').eq(#{index}).text().trim();")
-  expect(actual_name).to eq(expected_name)
 end
 
 When /^I see the section set up box$/ do

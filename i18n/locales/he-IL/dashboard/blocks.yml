@@ -1,0 +1,189 @@
+he:
+  data:
+    blocks:
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': הבא
+            '"prev"': הקודם
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Standing
+            '1': Clap
+            '2': Spin
+            '3': Uprock
+            '4': Bboy
+            '"next"': הבא
+            '"prev"': הקודם
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: כל
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ימינה
+            '"left"': שמאלה
+      Dancelab_randomColor:
+        text: צבע אקראי
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': כלום
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': Fast
+            '2': Normal
+            '4': Slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'נכון'
+            'false': 'שגוי'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": אקראי
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ימינה
+            '"left"': שמאלה
+      gamelab_randColor:
+        text: צבע אקראי
+      gamelab_randomColor:
+        text: צבע אקראי
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': אקראי
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"height"': גובה
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': ימינה
+            '"left"': שמאלה
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": למעלה
+            "'down'": למטה
+            "'left'": שמאלה
+            "'right'": ימינה
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+      Vanilla_randomColor:
+        text: צבע אקראי

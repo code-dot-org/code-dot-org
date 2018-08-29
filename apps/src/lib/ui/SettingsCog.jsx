@@ -6,9 +6,10 @@ import FontAwesome from '../../templates/FontAwesome';
 import color from '../../util/color';
 import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
-import * as maker from '../kits/maker/toolkit';
+import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from "./ConfirmEnableMakerDialog";
+import {getStore} from '../../redux';
 
 const style = {
   iconContainer: {
@@ -69,7 +70,7 @@ class SettingsCog extends Component {
 
   toggleMakerToolkit = () => {
     this.close();
-    if (!maker.isEnabled()) {
+    if (!makerToolkitRedux.isEnabled(getStore().getState())) {
       // Pop a confirmation dialog when trying to enable maker,
       // because we've had several users do this accidentally.
       this.showConfirmation();
@@ -158,12 +159,13 @@ ManageAssets.propTypes = {
 };
 
 export function ToggleMaker(props) {
-  if (!maker.isAvailable()) {
+  const reduxState = getStore().getState();
+  if (!makerToolkitRedux.isAvailable(reduxState)) {
     return null;
   }
   return (
     <PopUpMenu.Item {...props}>
-      {maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
+      {makerToolkitRedux.isEnabled(reduxState) ? msg.disableMaker() : msg.enableMaker()}
     </PopUpMenu.Item>
   );
 }
