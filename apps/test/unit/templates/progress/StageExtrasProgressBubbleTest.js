@@ -11,6 +11,14 @@ const defaultProps = {
 };
 
 describe('StageExtrasProgressBubble', () => {
+  beforeEach(() => {
+    stub(utils, 'currentLocation').returns({search: ''});
+  });
+
+  afterEach(() => {
+    utils.currentLocation.restore();
+  });
+
   it('renders a link to given url', () => {
     const wrapper = shallow(
       <StageExtrasProgressBubble
@@ -22,6 +30,7 @@ describe('StageExtrasProgressBubble', () => {
   });
 
   it('preserves query params', () => {
+    utils.currentLocation.restore();
     stub(utils, 'currentLocation').returns({search: '?foo=1'});
 
     const wrapper = shallow(
@@ -31,7 +40,6 @@ describe('StageExtrasProgressBubble', () => {
     );
 
     assert.equal(wrapper.props().href, '/extras?foo=1');
-    utils.currentLocation.restore();
   });
 
   it('has a grey flag icon when not current level', () => {
