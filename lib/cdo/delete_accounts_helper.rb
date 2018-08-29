@@ -124,6 +124,7 @@ class DeleteAccountsHelper
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
   def clean_and_destroy_pd_content(user_id)
+    @log.puts "Cleaning PD content"
     remove_from_cohorts user_id
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
@@ -199,6 +200,7 @@ class DeleteAccountsHelper
   # Anonymizes the user by deleting various pieces of PII and PPII
   # @param [User] user to be anonymized.
   def anonymize_user(user)
+    @log.puts "Anonymizing user"
     UserGeo.where(user_id: user.id).each(&:clear_user_geo)
     SignIn.where(user_id: user.id).destroy_all
     user.clear_user_and_mark_purged
@@ -207,12 +209,14 @@ class DeleteAccountsHelper
   # Cleans all sections owned by the user.
   # @param [Integer] The ID of the user to anonymize the sections of.
   def clean_user_sections(user_id)
+    @log.puts "Cleaning Section"
     Section.with_deleted.where(user_id: user_id).each do |section|
       section.update! name: nil, code: nil
     end
   end
 
   def remove_user_from_sections_as_student(user)
+    @log.puts "Cleaning Follower"
     Follower.with_deleted.where(student_user: user).each(&:really_destroy!)
   end
 
@@ -248,6 +252,7 @@ class DeleteAccountsHelper
   # contact_rollups pegasus table (master and reporting)
   # @param [Integer] The user ID to purge from Pardot.
   def remove_from_pardot_by_user_id(user_id)
+    @log.puts "Removing from Pardot"
     remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id)
   end
 
@@ -260,6 +265,7 @@ class DeleteAccountsHelper
   # @param [Integer] The user ID to purge from SOLR.
   def remove_from_solr(user_id)
     return unless @solr
+    @log.puts "Removing from Solr"
     SolrHelper.delete_document(@solr, 'user', user_id)
   end
 
@@ -269,6 +275,7 @@ class DeleteAccountsHelper
   def purge_unshared_studio_person(user)
     return unless user.studio_person
     if user.studio_person.users.with_deleted.count <= 1
+      @log.puts "Removing StudioPerson"
       user.studio_person.destroy
     end
   end
