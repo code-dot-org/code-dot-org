@@ -331,7 +331,7 @@ describe('entry tests', () => {
   var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
-    generateSharedConstants: './script/generateSharedConstants.rb'
+    generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb'
   };
 
   var junitReporterBaseConfig = {
