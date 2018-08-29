@@ -26,10 +26,21 @@ import publishDialogReducer, {
 } from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import { AlwaysPublishableProjectTypes, AllPublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
   const projectsData = JSON.parse(script.dataset.projects);
+  const studyGroup = experiments.isEnabled(experiments.CHEVRON_PUBLISH_EXPERIMENT) ? 'publish-chevron' : 'publish-button';
+
+  firehoseClient.putRecord(
+    {
+      study: 'project-publish',
+      study_group: studyGroup,
+      event: 'page-load',
+      user_id: projectsData.userId,
+    }
+  );
 
   registerReducers({projects, publishDialog: publishDialogReducer, deleteDialog: deleteDialogReducer});
   const store = getStore();
