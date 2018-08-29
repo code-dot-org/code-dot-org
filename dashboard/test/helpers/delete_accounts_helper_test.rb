@@ -448,6 +448,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute Activity.where(user: user).any?(&:level_source),
       'Expected no activity record that references a level source to exist for this user'
+
+    assert_logged "Cleaned 1 Activity"
   end
 
   # Note: table overflow_activities only exists on production, which makes it
@@ -463,6 +465,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     gallery_activity.reload
 
     assert_nil gallery_activity.level_source_id
+
+    assert_logged "Cleaned 1 GalleryActivity"
   end
 
   #
@@ -478,6 +482,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user_level.reload
 
     assert_nil user_level.level_source_id
+
+    assert_logged "Cleaned 1 UserLevel"
   end
 
   #
@@ -534,6 +540,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute AuthoredHintViewRequest.where(user: user).any?(&:prev_level_source_id),
       "Expected none of user's AuthoredHintViewRequests to have a prev_level_source_id"
+
+    assert_logged "Cleaned 1 AuthoredHintViewRequest"
   end
 
   test "clears next_level_source_id from authored_hint_view_requests" do

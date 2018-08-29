@@ -63,26 +63,46 @@ class DeleteAccountsHelper
   # Removes the link between the user's level-backed progress and the progress itself.
   # @param [Integer] user_id The user to clean the LevelSource-backed progress of.
   def clean_level_source_backed_progress(user_id)
-    UserLevel.where(user_id: user_id).find_each do |user_level|
+    @log.puts "Cleaning UserLevel"
+    user_levels = UserLevel.where(user_id: user_id)
+    user_level_count = user_levels.count
+    user_levels.find_each do |user_level|
       user_level.update!(level_source_id: nil)
     end
+    @log.puts "Cleaned #{user_level_count} UserLevel" if user_level_count > 0
 
-    Activity.where(user_id: user_id).find_each do |activity|
+    @log.puts "Cleaning Activity"
+    activities = Activity.where(user_id: user_id)
+    activity_count = activities.count
+    activities.find_each do |activity|
       activity.update!(level_source_id: nil)
     end
+    @log.puts "Cleaned #{activity_count} Activity" if activity_count > 0
 
     # Note that the `overflow_activities` table exists only in the production environment.
     if ActiveRecord::Base.connection.data_source_exists? 'overflow_activities'
-      OverflowActivity.where(user_id: user_id).find_each do |activity|
+      @log.puts "Cleaning OverflowActivity"
+      overflow_activities = OverflowActivity.where(user_id: user_id)
+      overflow_activity_count = overflow_activities.count
+      overflow_activities.find_each do |activity|
         activity.update!(level_source_id: nil)
       end
+      @log.puts "Cleaned #{overflow_activity_count} OverflowActivity" if overflow_activity_count > 0
     end
 
-    GalleryActivity.where(user_id: user_id).each do |gallery_activity|
+    @log.puts "Cleaning GalleryActivity"
+    gallery_activities = GalleryActivity.where(user_id: user_id)
+    gallery_activity_count = gallery_activities.count
+    gallery_activities.each do |gallery_activity|
       gallery_activity.update!(level_source_id: nil)
     end
+    @log.puts "Cleaned #{gallery_activity_count} GalleryActivity" if gallery_activity_count > 0
 
-    AuthoredHintViewRequest.where(user_id: user_id).each(&:clear_level_source_associations)
+    @log.puts "Cleaning AuthoredHintViewRequest"
+    authored_hint_view_requests = AuthoredHintViewRequest.where(user_id: user_id)
+    authored_hint_view_request_count = authored_hint_view_requests.count
+    authored_hint_view_requests.each(&:clear_level_source_associations)
+    @log.puts "Cleaned #{authored_hint_view_request_count} AuthoredHintViewRequest" if authored_hint_view_request_count > 0
   end
 
   # Cleans the responses for all surveys associated with the user.
