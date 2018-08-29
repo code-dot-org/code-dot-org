@@ -583,6 +583,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Expected no CensusSubmissions under this email"
     assert_empty Census::CensusSubmission.where(id: id),
       "Rows are actually gone, not just anonymized"
+
+    assert_logged "Removed 1 CensusSubmission"
   end
 
   test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
