@@ -15,17 +15,22 @@ class DeleteAccountsHelper
   ).freeze
 
   # @param [String] solr configuration for Solr server for this environment
+  # @param [IO|StringIO] log to record granular activity while deleting accounts.
   # @param [Boolean] bypass_safety_constraints to purge accounts without the
   #   usual checks on account type, row limits, etc.  For use only when an
   #   engineer needs to purge an account manually after investigating whatever
   #   prevented it from being automatically purged.
-  def initialize(solr: nil, bypass_safety_constraints: false)
+  def initialize(solr: nil, log: STDERR, bypass_safety_constraints: false)
     if solr || CDO.solr_server
       @solr = solr || Solr::Server.new(host: CDO.solr_server)
     end
     @pegasus_db = PEGASUS_DB
 
+    @log = log
+    raise ArgumentError, 'log must be an IO stream' unless @log.is_a?(IO) || @log.is_a?(StringIO)
+
     @bypass_safety_constraints = bypass_safety_constraints
+    raise ArgumentError, 'bypass_safety_constraints must be boolean' unless [true, false].include? @bypass_safety_constraints
   end
 
   # Deletes all project-backed progress associated with a user.
@@ -258,14 +263,23 @@ class DeleteAccountsHelper
   end
 
   def purge_teacher_feedbacks(user_id)
+    @log.puts "Removing TeacherFeedback"
+
     # Purge feedback written by target user
-    TeacherFeedback.with_deleted.where(teacher_id: user_id).each(&:really_destroy!)
+    as_teacher = TeacherFeedback.with_deleted.where(teacher_id: user_id)
+    as_teacher_count = as_teacher.count
+    as_teacher.each(&:really_destroy!)
+    @log.puts "Deleted #{as_teacher_count} TeacherFeedback" if as_teacher_count > 0
+
     # Soft-delete feedback written to target user
-    TeacherFeedback.with_deleted.where(student_id: user_id).each do |feedback|
+    as_student = TeacherFeedback.with_deleted.where(student_id: user_id)
+    as_student_count = as_student.count
+    as_student.each do |feedback|
       feedback.student = nil
       feedback.destroy
       feedback.save!
     end
+    @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
   end
 
   def check_safety_constraints(user)
@@ -299,16 +313,23 @@ class DeleteAccountsHelper
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
   def purge_user(user)
-    return if user.purged_at
+    if user.purged_at
+      @log.puts "User is already purged."
+      return
+    end
     check_safety_constraints user
 
+    @log.puts "Revoking all user permissions"
     user.revoke_all_permissions
+
     # NOTE: Calling user.destroy early assures the user is not able to access
     # an account in a partially purged state should an exception occur
     # somewhere in this method.
     # NOTE: Do not gate any deletion logic on `user.user_type`: A student
     # account may be a former teacher account, or vice-versa.
+    @log.puts "Soft-deleting user"
     user.destroy
+
     purge_teacher_feedbacks(user.id)
     remove_census_submissions(user.email) if user.email
     remove_email_preferences(user.email) if user.email
