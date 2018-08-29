@@ -56,7 +56,7 @@ class AccountPurger
     ActiveRecord::Base.transaction do
       PEGASUS_DB.transaction do
         DeleteAccountsHelper.
-          new(bypass_safety_constraints: @bypass_safety_constraints).
+          new(bypass_safety_constraints: @bypass_safety_constraints, log: @log).
           purge_user user
       end
     end
