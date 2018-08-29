@@ -10,29 +10,49 @@ theme: responsive
   }
 </style>
 
-# Code.org Professional Learning Program
+# Code.org Professional Learning Program for Middle and High School
+
+Our Professional Learning Program for middle and high school teachers offers year round support for educators as they prepare to teach our CS Discoveries or CS Principles courses. We designed the Professional Learning Program to make the content of our courses more approachable and accessible to educators from various backgrounds.  You don’t need any prior computer science experience to get started!
 
 <div class="col-50" style="padding-right: 20px;">
+
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "uQim0hBHco0", play_button: 'center' %>
+
+</div>
+
+[col-50]
+ 
+<div style="margin-left: 20px;">
 
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center' %>
 
 </div>
 
-[col-50]
-
-Our CS Principles Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
-
-The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp). For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). ​Print a <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">flyer</a> to share with teachers or administrators at your school. 
-
-**Applications for the 2019-20 CS Principles Professional Learning Program will open after October, 2018.** Want to get notified when applications open? Provide your contact information to a Regional Partner.
-
-<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
-
 [/col-50]
 
 <div style="clear: both;"></div>
 
+[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Want to share details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
+
 <hr/>
+
+## Program Commitments 
+The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles.
+
+<img src="/images/professional-learning/pl_timeline.png" width="100%"/>
+
+<br/>
+
+**Summer Workshop:**
+
+* Participants explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
+* With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.
+
+**Ongoing Support, throughout following academic year:**  
+
+* Usually held on Saturdays, these workshops  focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continue to build pedagogical strategies.
+
+In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. Have more questions about which program is for you? Learn more about <a href="https://code.org/files/PL-Program-for-Me.pdf", target=_"blank">course offerings</a> or <a href="mailto:teacher@code.org">contact us</a>.
 
 ## <a name="features"></a>Program Features
 
@@ -60,33 +80,12 @@ Participants will engage with the curriculum both as instructors and as learners
 ​</p>
 ​</details>
 
-## Program Commitments: 
-The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Principles or CS Discoveries.
-
-<img src="/images/professional-learning/pl_timeline.png" width="100%"/>
-
-<br/>
-
-**Summer Workshop:**
-
-* Participants kick off the Professional Learning Program with a 5-day workshop
-* Explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
-* With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.<br/>
-
-**Ongoing Support, throughout following academic year:**  
-
-* Participants attend local, follow up workshops hosted by Code.org Regional Partners
-* Usually held on Saturdays, these workshops are run by local Code.org-trained facilitators
-* They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continue to build pedagogical strategies.
-
-In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. Have more questions about which program is for you? Learn more about <a href="https://code.org/files/PL-Program-for-Me.pdf", target=_"blank">implementation options</a> or <a href="mailto:teacher@code.org">contact us</a>.
-
 ## What does a Code.org educator do?
 If accepted into the Code.org Professional Learning Program, you will:
 
 - Join a nationwide community of educators working to change the face of computer science education
 - Participate in in-person and online professional development
-- Plan and deliver the CS Discoveries or CS Principles curriculum to your students
+- Plan and deliver the [CS Discoveries](/csd) or [CS Principles](/csp) curriculum to your students
 
 ## <a name="participate"></a>Who can participate?
 
@@ -95,23 +94,19 @@ The Code.org Professional Learning Program is open to educators who are interest
 * Commit to participating in the full, year-long professional learning program
 * Work with their school administration to ensure that this course will be offered on the school's 2018-19 master schedule
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
-* Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please see our  [Regional Partner Map](#locations).
+* Teach the course in a school served by one of Code.org's Regional Partners.
 
-Not sure if this is the right Code.org program for you? <a href="/files/PL-Program-for-Me.pdf" target=_"blank">Check out our program recommendations</a> to determine the best fit for your teaching situation.
+Not sure if this is the right Code.org program for you? <a href="/files/PL-Program-for-Me.pdf" target=_"blank">Check out our course offerings</a> to determine the best fit for your teaching situation.
 
 ## <a name="cost"></a>What does the program cost?
 
-We are a nonprofit dedicated to helping schools teach computer science. We want to make sure all our students have access to a high quality education. In most states, our professional learning is offered at no cost to you or your school.
+Generous scholarships and grants are available across the country to cover the partial or full cost of the program (valued at $3,000).
 
-In New York and North Carolina, there is a fee to cover the costs of the workshop. But, we have worked with many school districts in these regions and they have allocated funds to cover the costs for you and your school. If your principal or administration has any questions around the costs to support this, please encourage them to reach out to our partners in <a href="mailto:programs@codeinteractive.org">New York</a> and <a href="mailto:srmorri3@ncsu.edu">North Carolina</a> so we can help you.
+Enter your school’s zip code below to find out your cost.
 
-**5-day Summer Workshop Expenses**
-In some cases, travel may be required to attend your five-day summer workshop. Participants who are assigned to attend a Code.org-hosted Teacher Conference (TeacherCon) will have flights, lodging, and meals provided at no cost.
 
-**Local Academic Year Workshop Expenses**
-Meals and course materials will be provided to participants who attend the local follow-up workshops. Your Regional Partner will schedule and lead these workshops, and will provide more details.
 
-## Additional benefits
+## Additional Benefits
 
 [col-20]
 
@@ -127,9 +122,13 @@ Check out these 3 key benefits of ISTE membership:
 - Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
 - Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
 
-## <a name="apply"></a>How to apply?
+## <a name="apply"></a>Ready to apply?
 
-**Applications for the 2019-20 CS Principles Professional Learning Program will open after October, 2018.** 
+Regional Partners throughout the US are hosting the Professional Learning Program in your area
+
+Enter your zip code below to get details about the Professional Learning Program in your local region.
+
+
 
 Want to get notified when applications open? Provide your contact information to a Regional Partner.
 

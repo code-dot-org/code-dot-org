@@ -76,6 +76,7 @@ class CourseBlocksCsfModern extends Component {
           details={i18n.courseBlocksLegacyNotificationBody()}
           detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
           detailsLink="https://docs.google.com/document/d/1MVDfbEzr0o9DqaOYmOOYpsQPTfXUFvCx4Xs9uixrdBE/edit?usp=sharing"
+          detailsLinkNewWindow={true}
           dismissible={false}
           buttons={[
             {

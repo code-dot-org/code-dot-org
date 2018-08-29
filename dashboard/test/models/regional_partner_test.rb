@@ -214,4 +214,46 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     assert_equal partner_organizer, regional_partner.contact
   end
+
+  test 'apps_open_date works for regional partners with one date for everything' do
+    regional_partner = create :regional_partner, apps_open_date: Date.new(2018, 7, 1)
+    assert_equal Date.new(2018, 7, 1), regional_partner.get_apps_open_date
+    assert_equal Date.new(2018, 7, 1), regional_partner.get_apps_open_date(course: 'csd')
+    assert_equal Date.new(2018, 7, 1), regional_partner.get_apps_open_date(role: 'facilitator')
+    assert_equal Date.new(2018, 7, 1), regional_partner.get_apps_open_date(course: 'csd', role: 'facilitator')
+  end
+
+  test 'apps_open_date works for regional partners with one date for course' do
+    regional_partner = create :regional_partner, apps_open_date: {'csd' => Date.new(2018, 8, 1)}
+    assert_equal Date.new(2018, 8, 1), regional_partner.get_apps_open_date(course: 'csd')
+    assert_equal Date.new(2018, 8, 1), regional_partner.get_apps_open_date(course: 'csd', role: 'facilitator')
+    error = assert_raises do
+      regional_partner.get_apps_open_date(course: 'csp')
+    end
+    assert_equal "No date found for either course csp or role nil for regional partner id #{regional_partner.id}", error.message
+  end
+
+  test 'apps_open_date works for regional partners with one date for role' do
+    regional_partner = create :regional_partner, apps_open_date: {'facilitator' => Date.new(2018, 9, 1)}
+    assert_equal Date.new(2018, 9, 1), regional_partner.get_apps_open_date(role: 'facilitator')
+    error = assert_raises do
+      regional_partner.get_apps_open_date(role: 'teacher')
+    end
+    assert_equal "No date found for either course nil or role teacher for regional partner id #{regional_partner.id}", error.message
+  end
+
+  test 'apps_open_date works for regional partners with one date for course and role' do
+    regional_partner = create :regional_partner, apps_open_date: {'csd' => {'facilitator' => Date.new(2018, 10, 1)}}
+    assert_equal Date.new(2018, 10, 1), regional_partner.get_apps_open_date(course: 'csd', role: 'facilitator')
+
+    error = assert_raises do
+      regional_partner.get_apps_open_date(course: 'csd', role: 'teacher')
+    end
+    assert_equal "No date found for either course csd or role teacher for regional partner id #{regional_partner.id}", error.message
+
+    error = assert_raises do
+      regional_partner.get_apps_open_date(course: 'csp', role: 'facilitator')
+    end
+    assert_equal "No date found for either course csp or role facilitator for regional partner id #{regional_partner.id}", error.message
+  end
 end
