@@ -408,6 +408,7 @@ class DeleteAccountsHelper
   private
 
   def clean_pegasus_forms_for_user(user)
+    @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
 
