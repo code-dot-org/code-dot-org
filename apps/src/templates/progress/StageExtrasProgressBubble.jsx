@@ -35,7 +35,7 @@ class StageExtrasProgressBubble extends Component {
     const tooltipId = _.uniqueId();
     return (
       <a
-        href={stageExtrasUrl}
+        href={stageExtrasUrl + window.location.search}
         style={{
           ...styles.main,
           ...(onStageExtras && styles.focused)
