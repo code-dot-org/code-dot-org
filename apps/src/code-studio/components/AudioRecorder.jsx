@@ -33,7 +33,8 @@ export default class AudioRecorder extends React.Component {
     this.slices = [];
     this.state = {
       audioName: "",
-      recording: false
+      recording: false,
+      cancelling: false
     };
   }
 
@@ -68,19 +69,32 @@ export default class AudioRecorder extends React.Component {
   };
 
   saveAudio = (blob) => {
-    assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-    (xhr) => {
-      this.setState({audioName: ""});
-      this.props.onUploadDone(JSON.parse(xhr.response));
-      this.props.afterAudioSaved(AudioErrorType.NONE);
-    }, error => {
-      console.error(`Audio Failed to Save: ${error}`);
-      this.props.afterAudioSaved(AudioErrorType.SAVE);
-    });
+    if (!this.state.cancelling) {
+      assetsApi.putAsset(this.state.audioName + ".mp3", blob,
+      (xhr) => {
+        this.setState({audioName: ""});
+        this.props.onUploadDone(JSON.parse(xhr.response));
+        this.props.afterAudioSaved(AudioErrorType.NONE);
+      }, error => {
+        console.error(`Audio Failed to Save: ${error}`);
+        this.props.afterAudioSaved(AudioErrorType.SAVE);
+      });
+    }
   };
 
   onNameChange = (event) => {
     this.setState({audioName: event.target.value});
+  };
+
+  onCancel = () => {
+    this.setState({audioName: "", recording: false, cancelling: true}, () => {
+      this.props.afterAudioSaved(AudioErrorType.NONE);
+      // Only stop recording if it's been started
+      if (this.recorder.state !== "inactive") {
+        this.recorder.stop();
+      }
+      this.setState({cancelling: false});
+    });
   };
 
   toggleRecord = () => {
@@ -129,7 +143,7 @@ export default class AudioRecorder extends React.Component {
             disabled={this.state.audioName.length === 0}
           />
           <Button
-            onClick={()=>{}}
+            onClick={this.onCancel}
             id="cancel-record"
             style={assetButtonStyles.button}
             color={Button.ButtonColor.gray}
