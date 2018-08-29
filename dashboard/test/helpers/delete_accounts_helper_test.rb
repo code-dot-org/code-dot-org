@@ -1468,6 +1468,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute SurveyResult.where(id: survey_result_a.id).exists?
     refute SurveyResult.where(id: survey_result_b.id).exists?
     assert SurveyResult.where(id: survey_result_c.id).exists?
+
+    assert_logged "Cleaned 2 SurveyResult"
   end
 
   #

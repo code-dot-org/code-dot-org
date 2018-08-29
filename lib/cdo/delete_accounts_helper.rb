@@ -108,7 +108,11 @@ class DeleteAccountsHelper
   # Cleans the responses for all surveys associated with the user.
   # @param [Integer] user_id The user to clean the surveys of.
   def clean_survey_responses(user_id)
-    SurveyResult.where(user_id: user_id).each(&:clear_open_ended_responses)
+    @log.puts "Cleaning SurveyResult"
+    survey_results = SurveyResult.where(user_id: user_id)
+    survey_result_count = survey_results.count
+    survey_results.each(&:clear_open_ended_responses)
+    @log.puts "Cleaned #{survey_result_count} SurveyResult" if survey_result_count > 0
   end
 
   # Remove all user generated content associated with any PD the user has been through, as well as
