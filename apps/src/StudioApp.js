@@ -837,6 +837,32 @@ StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
  */
 StudioApp.prototype.runButtonClick = function () {};
 
+StudioApp.prototype.addChangeHandler = function (newHandler) {
+  if (!this.changeHandlers) {
+    this.changeHandlers = [];
+  }
+  this.changeHandlers.push(newHandler);
+};
+
+StudioApp.prototype.runChangeHandlers = function () {
+  if (!this.changeHandlers) {
+    return;
+  }
+  this.changeHandlers.forEach(handler => handler());
+};
+
+StudioApp.prototype.setupChangeHandlers = function () {
+  const runAllHandlers = this.runChangeHandlers.bind(this);
+  if (this.isUsingBlockly()) {
+    const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
+    blocklyCanvas.addEventListener('blocklyBlockSpaceChange', runAllHandlers);
+  } else {
+    this.editor.on('change', runAllHandlers);
+    // Droplet doesn't automatically bubble up aceEditor changes
+    this.editor.aceEditor.on('change', runAllHandlers);
+  }
+};
+
 /**
  * Toggle whether run button or reset button is shown
  * @param {string} button Button to show, either "run" or "reset"
@@ -2062,6 +2088,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       !!config.level.textModeAtStart
     ),
   });
+  this.setupChangeHandlers();
 
   if (config.level.paletteCategoryAtStart) {
     this.editor.changePaletteGroup(config.level.paletteCategoryAtStart);
@@ -2449,6 +2476,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     });
   this.inject(div, options);
   this.onResize();
+  this.setupChangeHandlers();
 
   if (config.afterInject) {
     config.afterInject();

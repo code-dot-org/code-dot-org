@@ -19,7 +19,6 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -314,26 +313,20 @@ class PersonalProjectsTable extends React.Component {
 
     const noProjects = this.props.personalProjectsList.length === 0;
 
-    const studyGroup = this.props.publishMethod === publishMethods.CHEVRON ? 'publish-chevron' : 'publish-button';
-
-    firehoseClient.putRecord(
-      {
-        study: 'project-publish',
-        study_group: studyGroup,
-        event: 'page-load',
-        user_id: this.props.userId,
-      }
-    );
-
     return (
       <div>
         {!noProjects &&
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}
+            className="ui-personal-projects-table"
           >
             <Table.Header />
-            <Table.Body rows={sortedRows} rowKey="channel" />
+            <Table.Body
+              rows={sortedRows}
+              rowKey="channel"
+              className="ui-personal-projects-row"
+            />
           </Table.Provider>
         }
         {noProjects &&
