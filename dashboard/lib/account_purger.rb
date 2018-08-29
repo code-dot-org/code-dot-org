@@ -42,6 +42,8 @@ class AccountPurger
 
     purged_account_log.purged_at = Time.now
     purged_account_log.upload unless @dry_run
+
+    @log.puts "Done purging user_id #{user.id}#{@dry_run ? ' (dry-run)' : ''}"
   end
 
   # Purge all information associated with an email address.
