@@ -257,7 +257,11 @@ class DeleteAccountsHelper
   # Removes EmailPreference records associated with this email address.
   # @param [String] email An email address
   def remove_email_preferences(email)
-    EmailPreference.where(email: email).each(&:destroy)
+    @log.puts "Removing EmailPreference"
+    records = EmailPreference.where(email: email)
+    record_count = records.count
+    records.each(&:destroy)
+    @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
   end
 
   # Removes signature and school_id from applications for this user
