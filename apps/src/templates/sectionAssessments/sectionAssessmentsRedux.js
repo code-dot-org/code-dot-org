@@ -625,6 +625,9 @@ export const getMultipleChoiceSectionSummary = (state) => {
  */
 export const countSubmissionsForCurrentAssessment = (state) => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
+  if (!currentAssessmentId) {
+    return 0;
+  }
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
     const surveysStructure = state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] || {};
