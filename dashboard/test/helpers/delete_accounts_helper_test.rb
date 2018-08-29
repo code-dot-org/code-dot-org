@@ -616,6 +616,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     application.reload
 
     assert_equal '(anonymized signature)', application.signature
+
+    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   test 'leaves blank signature blank on circuit_playground_discount_application' do
@@ -628,6 +630,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     application.reload
 
     assert_nil application.signature
+
+    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   test 'removes school id from circuit_playground_discount_application' do
@@ -640,6 +644,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     application.reload
 
     assert_nil application.school_id
+
+    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   #
