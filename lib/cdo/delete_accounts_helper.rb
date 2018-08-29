@@ -38,7 +38,10 @@ class DeleteAccountsHelper
   def delete_project_backed_progress(user)
     return unless user.user_storage_id
 
+    @log.puts "Deleting project backed progress"
+
     channel_ids = @pegasus_db[:storage_apps].where(storage_id: user.user_storage_id).map(:id)
+    channel_count = channel_ids.count
     encrypted_channel_ids = channel_ids.map do |id|
       storage_encrypt_channel_id user.user_storage_id, id
     end
@@ -58,6 +61,8 @@ class DeleteAccountsHelper
     encrypted_channel_ids.each do |encrypted_channel_id|
       FirebaseHelper.delete_channel encrypted_channel_id
     end
+
+    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.

@@ -1681,6 +1681,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         assert_equal 'deleted', app[:state]
       end
     end
+
+    assert_logged "Deleted 1 channels"
   end
 
   test "does not soft-delete anyone else's projects" do
