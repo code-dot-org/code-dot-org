@@ -1,4 +1,8 @@
 module UserMultiAuthHelper
+  def set_multi_auth_status
+    migrate_to_multi_auth if CDO.new_users_use_multi_auth
+  end
+
   def oauth_tokens_for_provider(provider)
     if migrated?
       authentication_option = AuthenticationOption.find_by(
@@ -62,8 +66,6 @@ module UserMultiAuthHelper
 
   def clear_single_auth_fields
     raise "Single auth fields may not be cleared on an unmigrated user" unless migrated?
-    self.email = ''
-    self.hashed_email = nil
     self.uid = nil
     self.oauth_token = nil
     self.oauth_token_expiration = nil

@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -10,6 +9,7 @@ import orderBy from 'lodash/orderBy';
 import {
   personalProjectDataPropType,
   PROJECT_TYPE_MAP,
+  publishMethods,
 } from './projectConstants';
 import {
   AlwaysPublishableProjectTypes,
@@ -18,6 +18,7 @@ import {
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -28,8 +29,8 @@ export const COLUMNS = {
   THUMBNAIL: 0,
   PROJECT_NAME: 1,
   APP_TYPE: 2,
-  LAST_PUBLISHED: 3,
-  LAST_FEATURED: 4,
+  LAST_EDITED: 3,
+  LAST_PUBLISHED: 4,
   ACTIONS: 5,
 };
 
@@ -114,36 +115,62 @@ const dateFormatter = function (time) {
   return date.toLocaleDateString();
 };
 
-const publishedAtFormatter = (publishedAt) => {
-  return publishedAt ? (<FontAwesome icon="check"/>) : '';
-};
-
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
-    canShare: PropTypes.bool.isRequired
+    canShare: PropTypes.bool.isRequired,
+    // We're going to run an A/B experiment to compare (un)publishing from the
+    // quick actions dropdown and from a button in the published column.
+    // TODO (Erin B.) delete this prop, userId prop (for logging),
+    // and the less effective variant when we determine the experiment outcome.
+    publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
+    userId: PropTypes.number,
   };
 
   state = {
-    [COLUMNS.PROJECT_NAME]: {
-      direction: 'desc',
-      position: 0
+    sortingColumns: {
+      [COLUMNS.LAST_EDITED]: {
+        direction: 'desc',
+        position: 0
+      }
     }
   };
 
-  actionsFormatter = (actions, {rowData}) => {
-    const {canShare} = this.props;
+  publishedAtFormatter = (publishedAt, {rowData}) => {
+    const {canShare, publishMethod, userId} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
       (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+
     return (
-      <PersonalProjectsTableActionsCell
+      <PersonalProjectsPublishedCell
         isPublishable={isPublishable}
         isPublished={!!rowData.publishedAt}
         projectId={rowData.channel}
         projectType={rowData.type}
+        publishMethod={publishMethod}
+        userId={userId}
+      />
+    );
+  };
+
+  actionsFormatter = (actions, {rowData}) => {
+    const {canShare, publishMethod, userId} = this.props;
+    const isPublishable =
+      AlwaysPublishableProjectTypes.includes(rowData.type) ||
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
+    const showPublishAction = isPublishable && publishMethod === publishMethods.CHEVRON;
+
+    return (
+      <PersonalProjectsTableActionsCell
+        isPublishable={showPublishAction}
+        isPublished={!!rowData.publishedAt}
+        publishMethod={publishMethod}
+        projectId={rowData.channel}
+        projectType={rowData.type}
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
+        userId={userId}
       />
     );
   };
@@ -197,6 +224,7 @@ class PersonalProjectsTable extends React.Component {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCellName,
           }},
+          transforms: [sortable],
         },
         cell: {
           format: nameFormatter,
@@ -241,7 +269,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable],
         },
         cell: {
-          format: publishedAtFormatter,
+          format: this.publishedAtFormatter,
           props: {style: {
             ...tableLayoutStyles.cell,
             ...styles.centeredCell
@@ -291,9 +319,14 @@ class PersonalProjectsTable extends React.Component {
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}
+            className="ui-personal-projects-table"
           >
             <Table.Header />
-            <Table.Body rows={sortedRows} rowKey="channel" />
+            <Table.Body
+              rows={sortedRows}
+              rowKey="channel"
+              className="ui-personal-projects-row"
+            />
           </Table.Provider>
         }
         {noProjects &&

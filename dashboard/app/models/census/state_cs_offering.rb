@@ -44,9 +44,13 @@ class Census::StateCsOffering < ApplicationRecord
     NY
     OH
     OK
+    OR
+    PA
+    RI
     SC
     UT
     VA
+    WI
   ).freeze
 
   # By default we treat the lack of state data for high schools as an
@@ -57,6 +61,7 @@ class Census::StateCsOffering < ApplicationRecord
     CO
     ID
     MI
+    OH
   ).freeze
 
   def self.infer_no(state_code)
@@ -108,13 +113,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'MT'
       row_hash['state_school_id']
     when 'NC'
-      # School code in the spreadsheet from North Carolina is prefixed with the district code
-      # but our schools data imported from NCES is not.
-      district_code = row_hash['NC LEA Code']
-      school_code = row_hash['NC School Code']
-      # Remove district code prefix from school code.
-      school_code.slice!(district_code)
-      School.construct_state_school_id('NC', district_code, school_code)
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['NCES ID'])&.state_school_id
     when 'ND'
       row_hash['state_school_id']
     when 'NY'
@@ -123,6 +123,12 @@ class Census::StateCsOffering < ApplicationRecord
       row_hash['State School ID']
     when 'OK'
       row_hash['State School ID']
+    when 'OR'
+      row_hash['state_school_id']
+    when 'PA'
+      row_hash['state_school_id']
+    when 'RI'
+      row_hash['School ID']
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
     when 'UT'
@@ -130,6 +136,9 @@ class Census::StateCsOffering < ApplicationRecord
       School.find_by(id: row_hash['NCES ID'])&.state_school_id
     when 'VA'
       row_hash['state_school_id']
+    when 'WI'
+      # Don't raise an error if school does not exist because the logic that invokes this method skips these.
+      School.find_by(id: row_hash['SCHOOL_NCES_CODE'])&.state_school_id
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
@@ -332,27 +341,38 @@ class Census::StateCsOffering < ApplicationRecord
   ).freeze
 
   NC_COURSE_CODES = %w(
-    BL03
-    BL08
-    BL14
     BP10
     BP12
-    BP22
-    BW35
-    BW36
-    BW38
-    BW40
-    BW41
-    BW44
-    BX32
-    BX46
-    CS95
-    CU00
     II21
     II22
-    TP01
+    BL08
+    BP20
+    BW40
+    BW44
+    BW36
+    CS95
+    TW24
     WC21
     WC22
+    WC06
+    BW38
+    BX46
+    IN29
+    TW42
+    BU10
+    BL03
+    CU00
+    BW41
+    BL14
+    TP01
+    BW35
+    TW34
+    IN42
+    BP22
+    BW97
+    CN32
+    BW56
+    BP01
   ).freeze
 
   ND_COURSE_CODES = %w(
@@ -398,6 +418,47 @@ class Census::StateCsOffering < ApplicationRecord
     2536
   ).freeze
 
+  OR_COURSE_CODES = %w(
+    10152
+    10155
+    10157
+    10156
+    10154
+    10153
+    10112
+  ).freeze
+
+  RI_COURSE_CODES = [
+    '7th Grade Computer Science',
+    '8th Grade Computer Science',
+    'AP Computer Science A',
+    'AP Computer Science Principles',
+    'Block-Based Coding',
+    'Bootstrap: Algebra',
+    'Bootstrap: Data Science',
+    'Coding integrated into other course',
+    'Computer Science Elective',
+    'Creative Computing with Scratch',
+    'CS Discoveries',
+    'CS Fundamentals',
+    'Cubetto',
+    'GameSalad',
+    'Intro to Computer Science and Robotics',
+    'Introduction to Computer Science',
+    'Introduction to Computing and Data Science',
+    'JavaScript Programming',
+    'PLTW Computer Science Essentials',
+    'PLTW Computer Science Principles',
+    'PLTW Gateway: Computer Science for Innovators and Makers',
+    'PLTW Gateway: App Creators',
+    'Programming: Visual Basic',
+    'Python I',
+    'Python II',
+    'Robotics & Coding',
+    'TEALS Introducting to Programming',
+    'URI Introduction to Computing'
+  ].freeze
+
   # Utah did not provide codes, but did provide course titles.
   UT_COURSE_CODES = [
     'A.P.  Computer Science',
@@ -424,6 +485,49 @@ class Census::StateCsOffering < ApplicationRecord
     '10157',
     '10159'
   ].freeze
+
+  WI_COURSE_CODES = %w(
+    6490
+    6464
+    6467
+    6476
+    6485
+    6665
+    6466
+    6480
+    6458
+    6492
+    6475
+    6491
+    6660
+    6650
+    6470
+    6664
+    6488
+    6667
+    6484
+    6666
+    6644
+    6661
+    6662
+    6487
+    6471
+    6655
+    6478
+    6645
+    6659
+    6486
+    6489
+    6653
+    6465
+    6457
+    6474
+    6479
+    6481
+    6646
+    6472
+    6482
+  ).freeze
 
   def self.get_courses(state_code, row_hash)
     case state_code
@@ -484,7 +588,7 @@ class Census::StateCsOffering < ApplicationRecord
     when 'MT'
       MT_COURSE_CODES.select {|course| course == row_hash['NCES Course Code']}
     when 'NC'
-      NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
+      NC_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'ND'
       ND_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'NY'
@@ -493,13 +597,22 @@ class Census::StateCsOffering < ApplicationRecord
       OH_COURSE_CODES.select {|course| course == row_hash['Course']}
     when 'OK'
       OK_COURSE_CODES.select {|course| course == row_hash['ClassCode']}
-    when 'UT'
-      UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
+    when 'OR'
+      OR_COURSE_CODES.select {|course| course == row_hash['Course']}
+    when 'PA'
+      # One source per row
+      [UNSPECIFIED_COURSE]
+    when 'RI'
+      RI_COURSE_CODES.select {|course| course == row_hash['course']}
     when 'SC'
       # One source per row
       [UNSPECIFIED_COURSE]
+    when 'UT'
+      UT_COURSE_CODES.select {|course| row_hash[course] == '1'}
     when 'VA'
       VA_COURSE_CODES.select {|course| course == row_hash['course']}
+    when 'WI'
+      WI_COURSE_CODES.select {|course| course == row_hash['course']}
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end

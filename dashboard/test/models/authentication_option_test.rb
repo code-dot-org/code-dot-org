@@ -42,6 +42,15 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     assert_equal student.hashed_email, email_auth.hashed_email
   end
 
+  test 'invalid if credential_type and authentication_id combo is not unique' do
+    cred_type = AuthenticationOption::GOOGLE
+    auth_id = '54321'
+    create :authentication_option, credential_type: cred_type, authentication_id: auth_id
+    new_auth_option = build :authentication_option, credential_type: cred_type, authentication_id: auth_id
+    refute new_auth_option.valid?
+    assert_equal ['Credential type has already been taken'], new_auth_option.errors.full_messages
+  end
+
   test 'user can have multiple authentication options' do
     assert_creates(User) do
       user = create(:user, :with_google_authentication_option, :with_clever_authentication_option)

@@ -75,8 +75,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.destroy!
 
     assert enrollment.reload.deleted?
-    refute Pd::Enrollment.exists? enrollment.attributes
-    assert Pd::Enrollment.with_deleted.exists? enrollment.attributes
+    refute Pd::Enrollment.exists? enrollment.id
+    assert Pd::Enrollment.with_deleted.exists? enrollment.id
   end
 
   test 'for_school_district' do
@@ -88,8 +88,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'exit_survey_url' do
-    normal_workshop = create :pd_ended_workshop
-    normal_enrollment = create :pd_enrollment, workshop: normal_workshop
+    csf_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF
+    csf_enrollment = create :pd_enrollment, workshop: csf_workshop
+
+    csp_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSP
+    csp_enrollment = create :pd_enrollment, workshop: csp_workshop
 
     counselor_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
     counselor_enrollment = create :pd_enrollment, workshop: counselor_workshop
@@ -104,13 +107,14 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teachercon_enrollment = create :pd_enrollment, workshop: teachercon_workshop
 
     code_org_url = ->(path) {CDO.code_org_url(path, CDO.default_scheme)}
-    assert_equal code_org_url["/pd-workshop-survey/#{normal_enrollment.code}"], normal_enrollment.exit_survey_url
+    assert_equal code_org_url["/pd-workshop-survey/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"], counselor_enrollment.exit_survey_url
     assert_equal code_org_url["/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"], admin_enrollment.exit_survey_url
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{teachercon_enrollment.code}"], teachercon_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do
@@ -298,6 +302,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
+  test 'academic year survey filter' do
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, num_sessions: 1
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
+
+    assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+
+    # complete survey
+    create :pd_workshop_daily_survey, pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 'post_workshop'), day: 1
+    assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
+  end
+
   test 'enrolling in class automatically enrolls in online learning' do
     Pd::Workshop::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
       workshop = create :pd_workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first
@@ -463,16 +479,30 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert old_enrollment.valid?
   end
 
+  test 'enrollment is deleted after clear_data for deleted owner' do
+    enrollment = create :pd_enrollment, :from_user
+    enrollment.user.destroy!
+
+    enrollment.clear_data
+    enrollment.reload
+
+    assert enrollment.deleted?
+  end
+
   test 'enrollment is valid after clear_data for deleted owner' do
     enrollment = create :pd_enrollment, :from_user
     enrollment.user.destroy!
 
     enrollment.clear_data
 
+    assert_nil enrollment.read_attribute :name
     assert_equal '', enrollment.name
     assert_nil enrollment.first_name
     assert_nil enrollment.last_name
     assert_equal '', enrollment.email
+    assert_nil enrollment.user_id
+    assert_nil enrollment.school
+    assert_nil enrollment.school_info_id
     assert enrollment.reload.valid?, enrollment.errors.messages
   end
 

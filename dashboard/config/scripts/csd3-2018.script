@@ -9,7 +9,6 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
-script_announcements [{"notice"=>"Join our Teacher Insights Group!", "details"=>"Share your experiences and get support from other teachers and our team.", "link"=>"http://teacherblog.code.org/post/176699827304/join-the-codeorg-teacher-insight-group", "type"=>"bullhorn"}]
 family_name 'csd3'
 version_year '2018'
 is_stable true
@@ -256,7 +255,7 @@ level 'CSD U3 collisions flyman displace coin_2018', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman change colliders_2018', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman make it your own_2018', progression: 'Flyer Game'
 named_level 'CSD U3 interactions map_2018'
-named_level 'CSD U3 L18 Freeplay_2018'
+bonus 'CSD U3 L18 Freeplay_2018'
 
 stage 'Functions', flex_category: 'csd3_2'
 named_level 'CSD U3L19 TFMD_2018'
@@ -271,7 +270,7 @@ level 'CSD U3 Functions Write Reset_2018', progression: 'Collector Game'
 level 'CSD U3 Functions Add IsTouching_2018', progression: 'Collector Game'
 level 'CSD U3 Functions Add Change Background_2018', progression: 'Collector Game'
 named_level 'CSD U3 functions review_2018'
-named_level 'CSD U3 L19 Freeplay_2018'
+bonus 'CSD U3 L19 Freeplay_2018'
 
 stage 'The Game Design Process', flex_category: 'csd3_2'
 named_level 'CSD U3L20 TFMD_2018'

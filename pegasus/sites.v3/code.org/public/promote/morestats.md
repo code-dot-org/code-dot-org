@@ -25,7 +25,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * Women who learn computer science in high school are   [10 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to study it in university.
 * When computer science counts for graduation, [diversity increases] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407). 
 * The [underrepresentation of minorities in computer science isn't about lack of interest](https://medium.com/@codeorg/with-code-orgs-6d43964e3fff) but lack of access. 
-* Girls set AP Computer Science record: [skyrocketing growth](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) outpaces boys. 
+* Girls set AP Computer Science record: skyrocketing growth outpaces boys [in 2017](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) and [in 2018](https://medium.com/@codeorg/girls-and-minorities-break-records-in-computer-science-as-fastest-growing-groups-39d23425810e). 
 * [Maryland makes a simple policy change to boost diversity in computer science.](http://blog.code.org/post/121123281798/md)
 * 20% more high school girls like computer science [after an Hour of Code](https://medium.com/anybody-can-learn/study-shows-20-more-high-school-girls-like-computer-science-after-an-hour-of-code-2ebb704bf04). 
 * Reporting on [Code.org's successful efforts](/diversity) to increase diversity in computer science.

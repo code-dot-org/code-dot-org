@@ -3,12 +3,7 @@ import Button from "../../templates/Button";
 import i18n from '@cdo/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {assetButtonStyles} from "./AddAssetButtonRow";
-
-const ErrorType = {
-  NONE: 'none',
-  INITIALIZE: 'initialize',
-  SAVE: 'save'
-};
+import {AudioErrorType} from "./AssetManager";
 
 const styles = {
   buttonRow: {
@@ -16,22 +11,30 @@ const styles = {
     flexFlow: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
+  },
+  recordingIcon: {
+    color: 'red',
+    margin: 5
   }
 };
+
+const RECORD_MAX_TIME = 30000;
 
 export default class AudioRecorder extends React.Component {
   static propTypes = {
     onUploadDone: PropTypes.func,
+    afterAudioSaved: PropTypes.func
   };
 
   constructor(props) {
     super(props);
+    this.timeout = null;
     this.recorder = null;
     this.slices = [];
     this.state = {
-      audioName: 'mysound',
+      audioName: "",
       recording: false,
-      error: ErrorType.NONE
+      cancelling: false
     };
   }
 
@@ -41,9 +44,9 @@ export default class AudioRecorder extends React.Component {
     if (navigator.mediaDevices) {
       navigator.mediaDevices.getUserMedia({audio: true})
         .then(this.initializeMediaRecorder)
-        .catch(this.recordInitializationError);
+        .catch(() => this.props.afterAudioSaved(AudioErrorType.INITIALIZE));
     } else {
-      this.recordInitializationError();
+      this.props.afterAudioSaved(AudioErrorType.INITIALIZE);
     }
   };
 
@@ -66,68 +69,88 @@ export default class AudioRecorder extends React.Component {
   };
 
   saveAudio = (blob) => {
-    assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-    (xhr) => {
-      this.setState({error: ErrorType.NONE});
-      this.props.onUploadDone(JSON.parse(xhr.response));
-    }, error => {
-      this.setState({error: ErrorType.SAVE});
-      console.error(`Audio Failed to Save: ${error}`);
-    });
-  };
-
-  recordInitializationError = (err) => {
-    console.error('Audio Recorder Failed to Initialize: ' + err);
-    this.setState({error: ErrorType.INITIALIZE});
+    if (!this.state.cancelling) {
+      assetsApi.putAsset(this.state.audioName + ".mp3", blob,
+      (xhr) => {
+        this.setState({audioName: ""});
+        this.props.onUploadDone(JSON.parse(xhr.response));
+        this.props.afterAudioSaved(AudioErrorType.NONE);
+      }, error => {
+        console.error(`Audio Failed to Save: ${error}`);
+        this.props.afterAudioSaved(AudioErrorType.SAVE);
+      });
+    }
   };
 
   onNameChange = (event) => {
     this.setState({audioName: event.target.value});
   };
 
+  onCancel = () => {
+    this.setState({audioName: "", recording: false, cancelling: true}, () => {
+      this.props.afterAudioSaved(AudioErrorType.NONE);
+      // Only stop recording if it's been started
+      if (this.recorder.state !== "inactive") {
+        this.recorder.stop();
+      }
+      this.setState({cancelling: false});
+    });
+  };
+
   toggleRecord = () => {
     if (this.state.recording) {
-      this.recorder.stop();
+      this.stopRecording();
     } else {
-      this.recorder.start();
+      this.startRecording();
     }
+  };
+
+  startRecording = () => {
+    this.recorder.start();
     this.setState({recording: !this.state.recording});
+
+    //Stop recording after set amount of time
+    this.recordTimeout = setTimeout(this.stopRecording, RECORD_MAX_TIME);
+  };
+
+  stopRecording = () => {
+    if (this.state.recording) {
+      clearTimeout(this.recordTimeout);
+      this.recorder.stop();
+      this.setState({recording: !this.state.recording});
+    }
   };
 
   render() {
     return (
-      <div>
-        {this.state.error === ErrorType.SAVE &&
-          <div>{i18n.audioSaveError()}</div>
+      <div style={styles.buttonRow}>
+        <input type="text" placeholder={i18n.soundName()} onChange={this.onNameChange} value={this.state.audioName}/>
+        {this.state.recording &&
+          <span style={assetButtonStyles.button}>
+            <i style={styles.recordingIcon} className="fa fa-circle"/>
+            {i18n.recording()}
+          </span>
         }
-        {this.state.error !== ErrorType.INITIALIZE &&
-          <div style={styles.buttonRow}>
-
-            <input type="text" placeholder="mysound1.mp3" onChange={this.onNameChange} value={this.state.audioName}/>
-            <span>
-              <Button
-                onClick={this.toggleRecord}
-                id="start-stop-record"
-                style={assetButtonStyles.button}
-                color={Button.ButtonColor.blue}
-                icon={this.state.recording ? "stop" : "circle"}
-                text={this.state.recording ? i18n.stop() : i18n.record()}
-                size="large"
-              />
-              <Button
-                onClick={()=>{}}
-                id="cancel-record"
-                style={assetButtonStyles.button}
-                color={Button.ButtonColor.gray}
-                text={i18n.cancel()}
-                size="large"
-              />
-            </span>
-          </div>
-        }
-        {this.state.error === ErrorType.INITIALIZE &&
-          <div>{i18n.audioInitializeError()}</div>
-        }
+        <span>
+          <Button
+            onClick={this.toggleRecord}
+            id="start-stop-record"
+            style={assetButtonStyles.button}
+            color={Button.ButtonColor.blue}
+            icon={this.state.recording ? "stop" : "circle"}
+            text={this.state.recording ? i18n.stop() : i18n.record()}
+            size="large"
+            disabled={this.state.audioName.length === 0}
+          />
+          <Button
+            onClick={this.onCancel}
+            id="cancel-record"
+            style={assetButtonStyles.button}
+            color={Button.ButtonColor.gray}
+            text={i18n.cancel()}
+            size="large"
+          />
+        </span>
       </div>
     );
   }

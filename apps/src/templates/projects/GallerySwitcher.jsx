@@ -58,10 +58,12 @@ class GallerySwitcher extends Component {
   }
 
   toggleToGallery() {
+    window.history.pushState(null, null, '/projects/public');
     this.props.selectGallery(Galleries.PUBLIC);
   }
 
   toggleToMyProjects() {
+    window.history.pushState(null, null, '/projects');
     this.props.selectGallery(Galleries.PRIVATE);
   }
 

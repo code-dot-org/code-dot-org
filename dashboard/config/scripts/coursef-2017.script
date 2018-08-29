@@ -5,11 +5,11 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"An Update is Coming for CS Fundamentals!", "details"=>"We're getting ready to roll out updated curriculum for the '18-'19 school year - check out the details on our teacher blog.", "link"=>"http://teacherblog.code.org/post/174407664924/updates-to-cs-fundamentals-a-f-are-coming", "type"=>"bullhorn"}]
 new_name 'coursef-2017'
 family_name 'coursef'
 version_year '2017'
 is_stable true
+supported_locales ["es-ES", "es-MX"]
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_MRF'

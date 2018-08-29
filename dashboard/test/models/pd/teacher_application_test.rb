@@ -551,15 +551,6 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     )
   end
 
-  test 'application is valid for deleted owner after clear_data' do
-    application = create :pd_teacher_application
-    application.user.destroy!
-
-    application.clear_data
-
-    assert application.reload.valid?, application.errors.messages
-  end
-
   private
 
   # @param application_id [Integer] teacher application id

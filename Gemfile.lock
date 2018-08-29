@@ -128,6 +128,17 @@ GIT
       oauth (>= 0.4.5, < 0.6)
 
 GIT
+  remote: https://github.com/wjordan/lograge.git
+  revision: 1ef23fb6fe78e73e782e6393477a9953fb3f4515
+  ref: debug_exceptions
+  specs:
+    lograge (0.10.0)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
+
+GIT
   remote: https://github.com/wjordan/omniauth-openid-connect.git
   revision: 2397b1415896e2639a7582a36e26c90b9211f99f
   ref: cdo
@@ -303,6 +314,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
+    brakeman (4.3.1)
     builder (3.2.3)
     cancancan (1.15.0)
     capybara (2.17.0)
@@ -504,10 +516,6 @@ GEM
     logging (2.2.2)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
-    lograge (0.4.1)
-      actionpack (>= 4, < 5.1)
-      activesupport (>= 4, < 5.1)
-      railties (>= 4, < 5.1)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -683,6 +691,9 @@ GEM
       declarative (< 0.1.0)
       declarative-option (< 0.2.0)
       uber (< 0.2.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
+    require_all (2.0.0)
     rerun (0.13.0)
       listen (~> 3.0)
     responders (2.4.0)
@@ -876,6 +887,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
+  brakeman
   cancancan (~> 1.15.0)
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
@@ -925,7 +937,7 @@ DEPENDENCIES
   kaminari
   launchy
   le (~> 2.2)
-  lograge
+  lograge!
   loofah (~> 2.2.1)
   marked-rails
   memory_profiler
@@ -970,6 +982,7 @@ DEPENDENCIES
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)
   redis-slave-read!
+  require_all
   rerun
   responders (~> 2.0)
   rest-client (~> 2.0)
