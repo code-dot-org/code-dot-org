@@ -4,6 +4,7 @@ import _ from 'lodash';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import i18n from '@cdo/locale';
 import TooltipWithIcon from './TooltipWithIcon';
+import { currentLocation } from '../../utils';
 
 const styles = {
   main: {
@@ -35,7 +36,7 @@ class StageExtrasProgressBubble extends Component {
     const tooltipId = _.uniqueId();
     return (
       <a
-        href={stageExtrasUrl + window.location.search}
+        href={stageExtrasUrl + currentLocation().search}
         style={{
           ...styles.main,
           ...(onStageExtras && styles.focused)
