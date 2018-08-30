@@ -111,26 +111,20 @@ export default class AudioRecorder extends React.Component {
   stopRecordingAndSave = () => {
     if (this.state.recording) {
       clearTimeout(this.recordTimeout);
-      this.setStopAndSaveBehavior().then(data => {
-        this.recorder.onstop = (e) => {};
-      });
+      this.setStopAndSaveBehavior();
       this.recorder.stop();
       this.setState({recording: !this.state.recording});
     }
   };
 
   //Set the recorder onstop behavior to save the final audio blob
-  setStopAndSaveBehavior = () => new Promise((resolve, reject) => {
-    this.recorder.onstop = (e) => {
-      if (e) {
-        reject(e);
-      }
-
+  setStopAndSaveBehavior = () => {
+    this.recorder.onstop = () => {
       const blob = new Blob(this.slices, {'type': 'audio/mpeg'});
       this.saveAudio(blob);
-      resolve();
+      this.recorder.onstop = () => {};
     };
-  });
+  };
 
   render() {
     return (
