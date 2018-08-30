@@ -474,7 +474,7 @@ it:
   gender:
     male: 'Maschile'
     female: 'Femminile'
-    non_binary: 'Non-binary'
+    non_binary: 'Non-binario'
     not_listed: 'Termine preferito non in elenco'
     none: 'Preferisco non rispondere'
   user_type:
@@ -968,7 +968,7 @@ it:
       gender:
         male: 'Maschile'
         female: 'Femminile'
-        non_binary: 'Non-binary'
+        non_binary: 'Non-binario'
         not_listed: 'Termine preferito non in elenco'
         none: 'Preferisco non rispondere'
       school_country:

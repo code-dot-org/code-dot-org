@@ -1207,7 +1207,7 @@ it:
         text: Un ultima cosa, puoi mettere quanti blocchi vuoi all'interno di un blocco
           "ripeti ... volte". In questo esempio, gli dici di avanzare di una casella
           e poi girare a sinistra, e gli dici che vuoi che lo faccia cinque volte.
-          E' tutto, buon lavoro e buon divertimento!
+          È tutto, buon lavoro e buon divertimento!
     C3_artist_functions:
       1:
         text: Una delle cose più utili della programmazione è che una volta che hai

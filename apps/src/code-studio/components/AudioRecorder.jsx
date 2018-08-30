@@ -73,7 +73,9 @@ export default class AudioRecorder extends React.Component {
       assetsApi.putAsset(this.state.audioName + ".mp3", blob,
       (xhr) => {
         this.setState({audioName: ""});
-        this.props.onUploadDone(JSON.parse(xhr.response));
+        let result = JSON.parse(xhr.response);
+        result.filename = decodeURI(result.filename);
+        this.props.onUploadDone(result);
         this.props.afterAudioSaved(AudioErrorType.NONE);
       }, error => {
         console.error(`Audio Failed to Save: ${error}`);

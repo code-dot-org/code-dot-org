@@ -2241,7 +2241,7 @@ zh-CN:
         - 如果你在台阶上使用两个不同的角度, 会发生什么？\r
         - 如果你把你的钻石图案变长或变短, 会发生什么？\r
         - 如果把两片雪花叠起来是什么样的？
-      courseD_artist_1_2018_instruction: "画一个**30**像素边长的小正方形。\\r\n"
+      courseD_artist_1_2018_instruction: "画一个**50**像素边长的六边形。\\r\n"
       courseD_artist_2_2018_instruction: "现在，向右转**60**度，然后画一条**150**像素长的直线，并跳回到区域中心。\\r\n"
       courseD_artist_3_2018_instruction: '将所有代码嵌入到另一个`重复`循环中，并运行**6**次。 '
       courseD_artist_4_2018_instruction: 在线的末尾增加一个小形状！

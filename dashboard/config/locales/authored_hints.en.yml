@@ -438,6 +438,7 @@ en:
         Course_4_Artist_Functions_Inspiration_b: Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.
         Course_4_Artist_Functions_Inspiration_c: |-
           **Solution:**
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -3951,6 +3952,7 @@ en:
         Valentine_artist2_01_b: 'Do you see any patterns repeating? You should be using two `move forward` blocks and two different `turn` blocks inside a loop. '
         Valentine_artist2_01_c: |-
           Try this loop
+
           <xml><block type="controls_repeat">
                       <title name="TIMES">8</title>
                       <statement name="DO">
@@ -4095,19 +4097,22 @@ en:
       course1_collector_loops_challenge3_authored_hint:
         courseB_collector_loops_challenge1_b: |
           Start by looping the commands `move south` and `get treasure`.
+
           <xml>
             <block type="maze_moveSouth"/><next>
             <block type="collector_collect"/></next>
             </xml>
         courseB_collector_loops_challenge1_a: |
           The north pattern is a little different than the south pattern.
+
           <xml>
             <block type="collector_collect"/><next>
             <block type="maze_moveNorth"/></next>next>
             </xml>
-        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
+        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
         courseB_collector_loops_challenge1_d: |-
           Try this!
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -4189,6 +4194,7 @@ en:
         courseB_collector_loops_challenge2_c: Try using a `repeat` block to collect the final pile of treasure!
         courseB_collector_loops_challenge2_d: |-
           Try this solution:
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -4236,14 +4242,14 @@ en:
         courseB_maze_seq_challenge1_a: The shortest path might not work this time.
         courseB_maze_seq_challenge1_b: Try moving west to start.
       course1_playlab_events_challenge1_authored_hint:
-        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           You can make an angry monster growl.
 
@@ -4284,7 +4290,7 @@ en:
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 'The rectangle is 200 pixels wide and 100 pixels tall. '
       course2_artist_prog_challenge2_authored_hint:
-        courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+        courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
       course2_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
           Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.
@@ -4372,7 +4378,7 @@ en:
       course3_artist_functions_challenge1_authored_hint:
         courseE_artist_functions_challenge1_a: If you call the function one more time, you can create the same design in the final corner. You can also `jump to` other positions or change the whole thing around however you want!
       course3_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course3_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?
         courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the same pattern. How much honey does the bee need to make each time it moves over a honey comb?
@@ -4509,9 +4515,9 @@ en:
             </block>
           </xml>
       course3_collector_debugging_challenge2_authored_hint:
-        courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
-        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           Here is the complete solution for this puzzle.
 
@@ -4614,8 +4620,8 @@ en:
                         </block>
                       </value>
                     </block></xml>
-        courseE_playlab_challenge2_b: "It will feel like the game starts all over if you call the `ask a question` function again below the list of conditionals.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
-        courseE_playlab_challenge2_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseE_playlab_challenge2_b: "It will feel like the game starts all over if you call the `ask a question` function again below the list of conditionals.\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
+        courseE_playlab_challenge2_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
         courseE_playlab_challenge2_d: |-
           Once you understand all of the code that relates to Actor 1, you can try re-writing the same code, but this time for Actor 2.
 
@@ -4633,11 +4639,12 @@ en:
         courseE_artist_concept_challenge2_a: Once you define a function, you can call it over and over again - whenever and wherever you want!
         courseE_artist_concept_challenge2_b: |-
           You can jump to different positions on the canvas using this command:
+
           <xml>  <block type="jump_to">
               <title name="VALUE">???</title>
             </block></xml>
       course4_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       course4_artist_fwp_challenge1_authored_hint: {}
       course4_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_a: Each vertical line has a length of `10`. Each horizontal line should have a length of `length`.
@@ -4807,6 +4814,7 @@ en:
       course4_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           The main program should look something like this:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
               <next>
@@ -5140,6 +5148,7 @@ en:
         courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solution:**
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -5198,6 +5207,7 @@ en:
       course4_playlab_variables_challenge1_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
           You will need additional blocks from the tool box to get the actors to talk.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
                 <value name="SPRITE">
                   <block type="math_number">
@@ -5229,6 +5239,7 @@ en:
                     </block></xml>
         courseF_playlab_variables_challenge3_b: |-
           It will feel like the game starts all over if you call the `ask a question` function again after the actor says the fortune.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
                           <value name="SPRITE">
                             <block type="math_number">
@@ -5249,7 +5260,7 @@ en:
           <block type="procedures_callnoreturn">
                   <mutation name="Ask a question"/>
                   </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
         courseF_playlab_variables_challenge3_d: |-
           Once you understand all of the code that relates to Actor 1, you can try re-writing the same code, but this time for Actor 2.
 
@@ -5287,20 +5298,22 @@ en:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
         courseA_artist_loops4_b: |-
           Since you can only use one <xml><block type="simple_move_right"/></xml>
+
           block, try putting it inside of the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
         courseA_artist_loops4_b: |-
           Since you can only use one <xml><block type="simple_move_right"/></xml>
+
           block, try putting it inside of the <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: Try using what you've learned about <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> blocks to complete this puzzle!
         courseA_artist_loops5_b: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
-        courseA_artist_loops5_c: "Since you can only use one <xml><block type=\"simple_move_right\"/></xml> block, try putting it inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nloop."
+        courseA_artist_loops5_c: "Since you can only use one <xml><block type=\"simple_move_right\"/></xml> block, try putting it inside of the \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nloop."
       courseA_artist_loops5_2018_authored_hint:
         courseA_artist_loops5_a: Try using what you've learned about <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> blocks to complete this puzzle!
         courseA_artist_loops5_b: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
-        courseA_artist_loops5_c: "Since you can only use one <xml><block type=\"simple_move_right\"/></xml> block, try putting it inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nloop."
+        courseA_artist_loops5_c: "Since you can only use one <xml><block type=\"simple_move_right\"/></xml> block, try putting it inside of the \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nloop."
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.
         courseA_artist_loops6_b: You will need 2 blocks in 2 directions to solve this puzzle.
@@ -5338,11 +5351,11 @@ en:
         courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to do?  \nWhat does that tell you?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
-        courseA_artist_loops9_b: "The block you add should go inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
+        courseA_artist_loops9_b: "The block you add should go inside of the \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
         courseA_artist_loops9_c: If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Add another block to the code you are given to draw the rest of the stairs.
-        courseA_artist_loops9_b: "The block you add should go inside of the \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
+        courseA_artist_loops9_b: "The block you add should go inside of the \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> loop."
         courseA_artist_loops9_c: If you can't figure out where to put the loop, try writing your code step-by-step and look for patterns.
       courseA_artist_loops_challenge1_authored_hint: {}
       courseA_artist_loops_challenge1_2018_authored_hint: {}
@@ -5389,6 +5402,7 @@ en:
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
           After you have moved to a square with treasure, use this block to pick it up.
+
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: A simple solution would be to move East 2 times, then get the treasure.
       courseA_collector_loops10_authored_hint: {}
@@ -5399,23 +5413,26 @@ en:
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
           After you have moved to a square with treasure, use this block to pick it up.
+
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: A simple solution would be to move East 2 times, then get the treasure.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: You'll have to move before you can collect any treasure.
         courseA_collector_loops2_b: |-
           After you have moved to a square with treasure, use this block to pick it up.
+
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: You'll have to move before you can collect any treasure.
         courseA_collector_loops2_b: |-
           After you have moved to a square with treasure, use this block to pick it up.
+
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
-        courseA_collector_loops3_a: "Try using a \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
+        courseA_collector_loops3_a: "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
         courseA_collector_loops3_b: Remember, you can put more than 1 block inside a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop.
       courseA_collector_loops3_2018_authored_hint:
-        courseA_collector_loops3_a: "Try using a \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
+        courseA_collector_loops3_a: "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
         courseA_collector_loops3_b: Remember, you can put more than 1 block inside a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> loop.
       courseA_collector_loops3_predict1_authored_hint: {}
       courseA_collector_loops4_authored_hint:
@@ -5462,6 +5479,7 @@ en:
         courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave when you start, but you only need to get treasure 5 times moving South. Do you know why?
         courseA_collector_loops_challenge1_d: |-
           The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
+
           <xml><block type="maze_moveEast">
                                   <next>
                                     <block type="collector_collect_simplified">
@@ -5481,6 +5499,7 @@ en:
         courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave when you start, but you only need to get treasure 5 times moving South. Do you know why?
         courseA_collector_loops_challenge1_d: |-
           The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
+
           <xml><block type="maze_moveEast">
                                   <next>
                                     <block type="collector_collect_simplified">
@@ -5515,25 +5534,29 @@ en:
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
           After you have moved to a square with treasure, use this block to pick it up.
+
           <xml>  <block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: {}
       courseA_harvester_forVideo_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
+
           <xml><block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="2-10">3</title>
             </block></xml>
       courseA_harvester_loops1_authored_hint:
         courseA_harvester_loops1_a: |-
           Once you move to some corn, use this block to pick it!
+
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops10_authored_hint: {}
       courseA_harvester_loops11_authored_hint: {}
       courseA_harvester_loops2_authored_hint:
-        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n<xml><block type=\"maze_moveWest\"/></xml>\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
+        courseA_harvester_loops2_a: "Your code will have **four** `move west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. "
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           Use a `repeat` block like this to help you!
+
           <xml><block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="2-10">4</title>
             </block></xml>
@@ -5582,6 +5605,7 @@ en:
           </xml>
         courseA_harvester_seq1_b: |-
           The harvester will need to move East three times to get to the corn. Use this block:
+
           <xml>
             <block type="maze_moveEast"/>
           </xml>
@@ -5604,18 +5628,21 @@ en:
       courseA_harvester_seq3_authored_hint:
         courseA_harvester_seq3_a: |-
           Did you remember to use this block?
+
           <xml><block type="harvester_corn"/></xml>
         courseA_harvester_seq3_b: Say the steps out loud and see if it helps you figure out the answer.
       courseA_harvester_seq4_authored_hint:
         courseA_harvester_seq4_a: How many spaces are between the Harvester and the corn? How many blocks are already in your workspace?
         courseA_harvester_seq4_b: |-
           You will need five `Move East` blocks and one `Pick Corn` block:
+
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq5_authored_hint:
         courseA_harvester_seq5_a: Which block moves the harvester the wrong way?
         courseA_harvester_seq5_b: You need to remove one block.
         courseA_harvester_seq5_c: |-
           Throw this block in the trash!
+
           <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq6_authored_hint:
         courseA_harvester_seq6_a: If you're stuck, try saying the steps out loud. It could help you figure out the right path.
@@ -5734,6 +5761,7 @@ en:
           </xml>
         courseA_maze_seq1_b: |-
           The bird will need to move West 3 times to get to the pig. Use this block:
+
           <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq10_authored_hint:
         courseA_maze_seq10_a: If you're having trouble, try writing down the steps on a piece of paper first.
@@ -5751,12 +5779,14 @@ en:
         courseA_maze_seq13_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.
         courseA_maze_seq13_c: |-
           These <xml><block type="maze_moveNorth"/></xml>
+
           <xml><block type="maze_moveEast"/></xml> blocks will help you move closer to the pig.
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
         courseA_maze_seq13_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.
         courseA_maze_seq13_c: |-
           These <xml><block type="maze_moveNorth"/></xml>
+
           <xml><block type="maze_moveEast"/></xml> blocks will help you move closer to the pig.
       courseA_maze_seq1_2018_authored_hint:
         courseA_maze_seq1_a: |-
@@ -5765,6 +5795,7 @@ en:
           </xml>
         courseA_maze_seq1_b: |-
           The bird will need to move West 3 times to get to the pig. Use this block:
+
           <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: This program is missing 1 block. Can you figure out which one?
@@ -5917,13 +5948,13 @@ en:
               <title name="DIR">2</title>
             </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
-        courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nand \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?
 
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events5_2018_authored_hint:
-        courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nand \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?
 
@@ -5984,20 +6015,20 @@ en:
             </block></xml>
       courseA_playlab_challengeTemplate_authored_hint: {}
       courseA_playlab_events_challenge1_authored_hint:
-        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1_2018_authored_hint:
-        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1a_authored_hint:
-        courseA_playlab_events_challenge1_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "You can make a bird sing.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "You can make a robot beep.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: |-
           You can make an angry monster growl.
 
@@ -6023,8 +6054,8 @@ en:
               </next>
             </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           You can make an angry monster growl.
 
@@ -6050,8 +6081,8 @@ en:
               </next>
             </block></xml>
       courseA_playlab_events_challenge2_2018_authored_hint:
-        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           You can make an angry monster growl.
 
@@ -6077,11 +6108,11 @@ en:
               </next>
             </block></xml>
       courseA_playlab_events_challengeClone_authored_hint:
-        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_toMakeLoopsVideo_Collector_authored_hint: {}
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
@@ -6339,9 +6370,10 @@ en:
               </next>
               </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
+        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
         courseB_collector_loops_challenge1_d: |-
           Try this!
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -6409,9 +6441,10 @@ en:
               </next>
               </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
+        courseB_collector_loops_challenge1_c: "Move East twice between each path.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. \n"
         courseB_collector_loops_challenge1_d: |-
           Try this!
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -6493,6 +6526,7 @@ en:
         courseB_collector_loops_challenge2_c: Try using a `repeat` block to collect the final pile of treasure!
         courseB_collector_loops_challenge2_d: |-
           Try this solution:
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -6554,6 +6588,7 @@ en:
         courseB_collector_loops_challenge2_c: Try using a `repeat` block to collect the final pile of treasure!
         courseB_collector_loops_challenge2_d: |-
           Try this solution:
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -6610,6 +6645,7 @@ en:
         courseB_iceage_loops1_a: Watch out for broken ice! Scrat will fall right through!
         courseB_iceage_loops1_b: |-
           You will have to use this block:
+
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: Watch out for broken ice! Scrat will fall into the water!
@@ -6950,9 +6986,10 @@ en:
 
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseB_playlab_events_challenge1_authored_hint:
-        courseB_playlab_events_challenge1_a: "Make the other animals move down when you press `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        courseB_playlab_events_challenge1_a: "Make the other animals move down when you press `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
         courseB_playlab_events_challenge1_b: |
           Change the speed of the animals by using this block:
+
           <xml>
             <block type="studio_setSpriteSpeed">
               <title name="SPRITE">0</title>
@@ -6960,6 +6997,7 @@ en:
             </block></xml>
         courseB_playlab_events_challenge1_c: |-
           What will the everyone say when the race is over? Make them talk with this event:
+
           <xml>
             <block type="studio_whenSpriteClicked">
               <title name="SPRITE">2</title>
@@ -6972,9 +7010,10 @@ en:
             </block>
           </xml>
       courseB_playlab_events_challenge1_2018_authored_hint:
-        courseB_playlab_events_challenge1_a: "Make the other animals move down when you press `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        courseB_playlab_events_challenge1_a: "Make the other animals move down when you press `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
         courseB_playlab_events_challenge1_b: |
           Change the speed of the animals by using this block:
+
           <xml>
             <block type="studio_setSpriteSpeed">
               <title name="SPRITE">0</title>
@@ -6982,6 +7021,7 @@ en:
             </block></xml>
         courseB_playlab_events_challenge1_c: |-
           What will the everyone say when the race is over? Make them talk with this event:
+
           <xml>
             <block type="studio_whenSpriteClicked">
               <title name="SPRITE">2</title>
@@ -7005,6 +7045,7 @@ en:
             </xml>
         courseB_playlab_events_challenge2_c: |-
           Use extra commands to play sounds or score points when you click the animals!
+
           <xml>
             <block type="studio_playSound">
               <title name="SOUND">slap</title>
@@ -7028,6 +7069,7 @@ en:
             </xml>
         courseB_playlab_events_challenge2_c: |-
           Use extra commands to play sounds or score points when you click the animals!
+
           <xml>
             <block type="studio_playSound">
               <title name="SOUND">slap</title>
@@ -7051,6 +7093,7 @@ en:
             </xml>
         courseB_playlab_events_challenge2_c: |-
           Use extra commands to play sounds or score points when you click the animals!
+
           <xml>
             <block type="studio_playSound">
               <title name="SOUND">slap</title>
@@ -7074,6 +7117,7 @@ en:
             </xml>
         courseB_playlab_events_challenge2_c: |-
           Use extra commands to play sounds or score points when you click the animals!
+
           <xml>
             <block type="studio_playSound">
               <title name="SOUND">slap</title>
@@ -7097,6 +7141,7 @@ en:
             </xml>
         courseB_playlab_events_challenge2_c: |-
           Use extra commands to play sounds or score points when you click the animals!
+
           <xml>
             <block type="studio_playSound">
               <title name="SOUND">slap</title>
@@ -7113,6 +7158,7 @@ en:
         courseB_starWars_prog1_a: Try adding blocks one at a time, then click "Run" to see what happens.
         courseB_starWars_prog1_b: |
           You will want to move East to solve this puzzle. How far do you need to move?
+
           <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog10_authored_hint: {}
       courseB_starWars_prog10_2018_authored_hint: {}
@@ -7122,6 +7168,7 @@ en:
         courseB_starWars_prog1_a: Try adding blocks one at a time, then click "Run" to see what happens.
         courseB_starWars_prog1_b: |
           You will want to move East to solve this puzzle. How far do you need to move?
+
           <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2_authored_hint:
         courseB_starWars_prog2_a: Split this problem into two parts. Get one one pile of scrap metal, then figure out how to get to the other one.
@@ -7137,6 +7184,7 @@ en:
         courseB_starWars_prog4_a: Build one piece of code at a time. Run it to figure out where to go from there.
         courseB_starWars_prog4_b: |-
           Try using the `repeat` block for shorter code.
+
           <xml>  <block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block>
@@ -7145,6 +7193,7 @@ en:
         courseB_starWars_prog4_a: Build one piece of code at a time. Run it to figure out where to go from there.
         courseB_starWars_prog4_b: |-
           Try using the `repeat` block for shorter code.
+
           <xml>  <block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block>
@@ -7169,6 +7218,7 @@ en:
         courseB_starWars_prog6_a: This pattern is just a stair step with two moves per direction!
         courseB_starWars_prog6_b: |-
           Try using the `repeat` block for shorter code.
+
           <xml>  <block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block>
@@ -7177,6 +7227,7 @@ en:
         courseB_starWars_prog6_a: This pattern is just a stair step with two moves per direction!
         courseB_starWars_prog6_b: |-
           Try using the `repeat` block for shorter code.
+
           <xml>  <block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block>
@@ -7372,6 +7423,7 @@ en:
       courseC_PlayLab_events_challenge1_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           You can use this block to move actors to different places on the game space.
+
           <xml> <block type="studio_setSpritePosition">
               <title name="SPRITE">0</title>
               <title name="VALUE">12</title>
@@ -7379,6 +7431,7 @@ en:
         courseC_PlayLab_events_challenge_b: Try using `set actor 1 to the middle left position` when it touches either of the other actors. This will reset the game so the player can keep trying!
         courseC_PlayLab_events_challenge_c: |-
           You might also want to try changing the speed of the different actors to make the game easier or more challenging!
+
           <xml>  <block type="studio_setSpriteSpeed">
               <title name="SPRITE">0</title>
               <title name="VALUE">Studio.SpriteSpeed.FAST</title>
@@ -7386,6 +7439,7 @@ en:
       courseC_PlayLab_events_challenge1_2018_authored_hint:
         courseC_PlayLab_events_challenge_a: |
           You can use this block to move actors to different places on the game space.
+
           <xml> <block type="studio_setSpritePosition">
               <title name="SPRITE">0</title>
               <title name="VALUE">12</title>
@@ -7393,6 +7447,7 @@ en:
         courseC_PlayLab_events_challenge_b: Try using `set actor 1 to the middle left position` when it touches either of the other actors. This will reset the game so the player can keep trying!
         courseC_PlayLab_events_challenge_c: |-
           You might also want to try changing the speed of the different actors to make the game easier or more challenging!
+
           <xml>  <block type="studio_setSpriteSpeed">
               <title name="SPRITE">0</title>
               <title name="VALUE">Studio.SpriteSpeed.FAST</title>
@@ -7401,6 +7456,7 @@ en:
         courseC_PlayLab_events_challenge_a: The two values on this block allow you to move an actor to any pixel in the game area. You can choose any number from 0-400.
         courseC_PlayLab_events_challenge_b: |-
           You can decide which numbers to use, by thinking about how far over from the top left corner you'd like to move. The first number is the number of pixels from the left. The second number is the number of pixels from the top.
+
           <xml><block type="studio_setSpriteXY" inline="true">
               <value name="SPRITE">
                 <block type="math_number" movable="false">
@@ -7418,6 +7474,7 @@ en:
                 </block>
               </value>
             </block></xml>
+
           ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
       courseC_artist_loop1_authored_hint:
         courseC_artist_loop1_a: You don't need to make any changes to the loop, just put one block above it.
@@ -7586,6 +7643,7 @@ en:
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           The first block you will need is:
+
           <xml>  <block type="jump_to_xy" id="callMe">
               <title name="XPOS">200</title>
               <title name="YPOS">200</title>
@@ -7706,7 +7764,7 @@ en:
       courseC_artist_prog_challenge1_2018_authored_hint:
         courseC_artist_prog_challenge1_a: You can draw this as a rectangle with a line in the middle or two different squares!
       courseC_artist_prog_challenge2_authored_hint:
-        courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+        courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
       courseC_artist_prog_challenge2a_authored_hint:
         courseC_artist_prog_challenge2_a: After you draw the first line, turn left before you draw your second line.
         courseC_artist_prog_challenge2_b: After you draw the second line, turn right before you draw your third line.
@@ -8252,11 +8310,13 @@ en:
         courseC_maze_programming_challenge2_a: '*"If you send me backwards, be extra careful that I turn the correct way!"*'
         courseC_maze_programming_challenge2_b: |-
           The shortest solution uses only 5 blocks, but it uses this block:
+
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018_authored_hint:
         courseC_maze_programming_challenge2_a: '*"If you send me backwards, be extra careful that I turn the correct way!"*'
         courseC_maze_programming_challenge2_b: |-
           The shortest solution uses only 5 blocks, but it uses this block:
+
           <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_playLab_embedded_authored_hint: {}
       courseC_puppy_loops10_authored_hint:
@@ -9154,10 +9214,12 @@ en:
       courseD_bounce_events10s_authored_hint:
         courseD_bounce_events10s_a: |-
           You should have both of these events in your code:
+
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events10s_2018_authored_hint:
         courseD_bounce_events10s_a: |-
           You should have both of these events in your code:
+
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
         courseD_bounce_events11s_a: You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball.
@@ -9211,20 +9273,24 @@ en:
         courseD_bounce_events5s_a: You do not need to move the hand to solve this puzzle.
         courseD_bounce_events5s_b: |-
           Make sure you have added this code to your workspace:
+
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2018_authored_hint:
         courseD_bounce_events5s_a: You do not need to move the hand to solve this puzzle.
         courseD_bounce_events5s_b: |-
           Make sure you have added this code to your workspace:
+
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events6s_authored_hint:
         courseD_bounce_events6s_a: |-
           Do you have an event that looks like this?
+
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: If you've written the code correctly, you don't have to move the hand to win.
       courseD_bounce_events6s_2018_authored_hint:
         courseD_bounce_events6s_a: |-
           Do you have an event that looks like this?
+
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: If you've written the code correctly, you don't have to move the hand to win.
       courseD_bounce_events7s_authored_hint:
@@ -9443,9 +9509,9 @@ en:
       courseD_collector_debugging9a_authored_hint: {}
       courseD_collector_debugging9a_2018_authored_hint: {}
       courseD_collector_debugging_challenge2_authored_hint:
-        courseD_collector_debugging_challenge2_a: "Start by collecting just **two** gems from each of the first **two** piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "Start by collecting just **two** gems from each of the first **two** piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
-        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           Here is the complete solution for this puzzle.
 
@@ -9492,9 +9558,9 @@ en:
             </block>
           </xml>
       courseD_collector_debugging_challenge2_2018_authored_hint:
-        courseD_collector_debugging_challenge2_a: "Start by collecting just **two** gems from each of the first **two** piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "Start by collecting just **two** gems from each of the first **two** piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
-        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_d: |-
           Here is the complete solution for this puzzle.
 
@@ -9546,6 +9612,7 @@ en:
         courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solution:**
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -9605,6 +9672,7 @@ en:
         courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all the treasure uses only one `collect` block and two turns.
         courseD_bee_nested_loops_challenge2_d: |-
           **Solution:**
+
           <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
@@ -9664,6 +9732,7 @@ en:
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
+
           <xml><block type="controls_repeat">
                                                       <title name="TIMES">4</title>
                                                       <statement name="DO">
@@ -9943,6 +10012,7 @@ en:
         courseD_iceage_loops1_a: Watch out for broken ice! Scrat will fall right through!
         courseD_iceage_loops1_b: |-
           You will have to use this block:
+
           <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops10_authored_hint:
         courseB_iceage_loops10_a: Watch out for broken ice! Scrat will fall into the water!
@@ -10306,6 +10376,7 @@ en:
         courseE_artist_concept_challenge2_a: Once you define a function, you can call it over and over again - whenever and wherever you want!
         courseE_artist_concept_challenge2_b: |-
           You can jump to different positions on the canvas using this command:
+
           <xml>  <block type="jump_to">
               <title name="VALUE">???</title>
             </block></xml>
@@ -10313,6 +10384,7 @@ en:
         courseE_artist_concept_challenge2_a: Once you define a function, you can call it over and over again - whenever and wherever you want!
         courseE_artist_concept_challenge2_b: |-
           You can jump to different positions on the canvas using this command:
+
           <xml>  <block type="jump_to">
               <title name="VALUE">???</title>
             </block></xml>
@@ -10343,6 +10415,7 @@ en:
         courseD_artist_functions2_b: The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.
         courseD_artist_functions2_c: |-
           Use the green `draw a square` block to "call" your function under the `when run` block. Otherwise, the code in your function will not run.
+
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Your program should:
@@ -10353,6 +10426,7 @@ en:
         courseD_artist_functions2_b: The function should not contain your whole program, just the part that draws a square with 100 pixel sides.
         courseD_artist_functions2_c: |-
           Make sure that you use the green `draw a square` block to "call" your function. Otherwise, the code in your function will not run.
+
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           Your program should:
@@ -10499,9 +10573,9 @@ en:
         courseE_artist_functions_challenge1_a: If you call the function one more time, you can create the same design in the final corner.
         courseE_artist_functions_challenge1_b: You can also `jump to` other positions or change the whole design however you want!
       courseE_artist_functions_challenge2_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_challenge2_2018_authored_hint:
-        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        courseE_artist_functions_challenge1_a: "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\n  \nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_predict1_authored_hint: {}
       courseE_artist_functions_predict1_2018_authored_hint: {}
       courseE_artist_functions_predict2_authored_hint: {}
@@ -10728,6 +10802,7 @@ en:
       courseE_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
+
           <xml><block type="controls_repeat">
                                                       <title name="TIMES">4</title>
                                                       <statement name="DO">
@@ -11106,8 +11181,8 @@ en:
                         </block>
                       </value>
                     </block></xml>
-        courseE_playlab_challenge2_b: "It will feel like the game starts all over if you call the `ask a question` function again below the list of conditionals.\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
-        courseE_playlab_challenge2_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseE_playlab_challenge2_b: "It will feel like the game starts all over if you call the `ask a question` function again below the list of conditionals.\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n               \n<block type=\"procedures_callnoreturn\">\n<mutation name=\"Ask a question\"></mutation>\n        </block></block></xml>"
+        courseE_playlab_challenge2_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <value name=\"TEXT\">\n              <block type=\"text\">\n                <title name=\"TEXT\">???</title>\n              </block>\n            </value>\n            <value name=\"TIME\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n          </block>\n              </statement></block></xml>\n\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
         courseE_playlab_challenge2_d: |-
           Once you understand all of the code that relates to Actor 1, you can try re-writing the same code, but this time for Actor 2.
 
@@ -11130,6 +11205,7 @@ en:
                     </block></xml>
         courseF_playlab_variables_challenge3_b: |-
           It will feel like the game starts all over if you call the `ask a question` function again after the actor says the fortune.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
                           <value name="SPRITE">
                             <block type="math_number">
@@ -11150,7 +11226,7 @@ en:
           <block type="procedures_callnoreturn">
                   <mutation name="Ask a question"/>
                   </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
         courseF_playlab_variables_challenge3_d: |-
           Once you understand all of the code that relates to Actor 1, you can try re-writing the same code, but this time for Actor 2.
 
@@ -13124,7 +13200,7 @@ en:
         courseF_bee_functions5a_b: Use a `while` loop to travel down all of the main paths, since they are different lengths.
         courseF_bee_functions5a_c: Within your `while` loop, make sure to move forward, then use your function to check for a path.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n\n    </statement>\n  </block>\n</xml>"
+        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n    </statement>\n  </block>\n</xml>"
         courseF_bee_functions6_b: Your function should check if there is a flower or honeycomb, get nectar or make honey, then turn.
         courseF_bee_functions6_c: Since you are turning within your function, you only need one `while` loop to get you through this maze.
       courseF_bee_functions6_2018_authored_hint:
@@ -13153,7 +13229,6 @@ en:
               <mutation/>
               <title name="NAME">get nectar make honey</title>
               <statement name="STACK">
-
               </statement>
             </block>
           </xml>
@@ -13455,6 +13530,7 @@ en:
       courseF_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           The main program should look something like this:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
               <next>
@@ -13642,6 +13718,7 @@ en:
       courseF_bee_fwp_challenge1_2018_authored_hint:
         courseF_bee_fwp_challenge1_a: |-
           The main program should look something like this:
+
           <xml>
           <block type="when_run" deletable="false" movable="false">
               <next>
@@ -14233,6 +14310,7 @@ en:
       courseF_playlab_variables_challenge1_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
           You will need additional blocks from the tool box to get the actors to talk.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
                 <value name="SPRITE">
                   <block type="math_number">
@@ -14253,6 +14331,7 @@ en:
       courseF_playlab_variables_challenge1_2018_authored_hint:
         courseF_playlab_variables_challenge1_a: |-
           You will need additional blocks from the tool box to get the actors to talk.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
                 <value name="SPRITE">
                   <block type="math_number">
@@ -14538,6 +14617,7 @@ en:
                     </block></xml>
         courseF_playlab_variables_challenge3_b: |-
           It will feel like the game starts all over if you call the `ask a question` function again after the actor says the fortune.
+
           <xml><block type="studio_saySpriteParamsTime" inline="true">
                           <value name="SPRITE">
                             <block type="math_number">
@@ -14558,7 +14638,7 @@ en:
           <block type="procedures_callnoreturn">
                   <mutation name="Ask a question"/>
                   </block></next></block></xml>
-        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
+        courseF_playlab_variables_challenge3_c: "You will need to add more conditional statements to give the actors more things to say.\n\n<xml><block type=\"studio_ifActorHasEmotionParams\" inline=\"true\">\n            <title name=\"EMOTION\">2</title>\n            <value name=\"SPRITE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">1</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">fortune</title>\n                <value name=\"VALUE\">\n                  <block type=\"text\" movable=\"false\">\n                    <title name=\"TEXT\">???</title>\n                  </block>\n                </value>\n              </block>\n              </statement></block></xml>\n\n              \nDon't forget to change which moods the actor will show inside of the `repeat forever` loop. You can also set the moods randomly!"
         courseF_playlab_variables_challenge3_d: |-
           Once you understand all of the code that relates to Actor 1, you can try re-writing the same code, but this time for Actor 2.
 

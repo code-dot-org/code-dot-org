@@ -10,7 +10,7 @@ it:
         csp_category_name: Princìpi dell'Informatica (versione 2015-16)
         csp_2018_category_name: Principi di informatica ('18-'19)
         cspexams_category_name: Prova pratica di principi d'informatica
-        csp17_category_name: "'16-'17 principi d'informatica"
+        csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Corsi Avanzati
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
@@ -1621,6 +1621,8 @@ it:
               name: Valutazioni dei parigrado
         artist-and-bb8:
           stages:
+            Loops with BB-8:
+              name: Cicli con BB-8
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Bounce:
