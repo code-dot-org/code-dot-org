@@ -4,6 +4,7 @@ import color from "../../util/color";
 import { SOUND_PREFIX, DEFAULT_SOUND_PATH_PREFIX } from '../../assetManagement/assetPrefix';
 import SoundLibrary from './SoundLibrary';
 import firehoseClient from "@cdo/apps/lib/util/firehose";
+import experiments from '@cdo/apps/util/experiments';
 
 const audioExtension = '.mp3';
 const styles = {
@@ -41,7 +42,7 @@ export default class SoundPicker extends React.Component {
     soundPlayer: PropTypes.object
   };
 
-  state = {mode: MODE.sounds};
+  state = {mode: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? MODE.sounds : MODE.files};
 
   getAssetNameWithPrefix = (sound) => {
     const soundName = sound.replace(DEFAULT_SOUND_PATH_PREFIX, SOUND_PREFIX);
@@ -94,7 +95,7 @@ export default class SoundPicker extends React.Component {
     firehoseClient.putRecord(
       {
         study: 'sound-dialog',
-        study_group: displayFilesTab ? 'files-tab' : 'library-tab',
+        study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
         event: displayFilesTab ? 'open-files-tab' : 'open-library-tab'
       },
       {includeUserId: true}

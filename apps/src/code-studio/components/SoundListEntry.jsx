@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import Radium from 'radium';
 import * as color from "../../util/color";
 import firehoseClient from "@cdo/apps/lib/util/firehose";
+import experiments from "@cdo/apps/util/experiments";
 
 const styles = {
   root: {
@@ -69,7 +70,7 @@ class SoundListEntry extends React.Component {
       firehoseClient.putRecord(
         {
           study: 'sound-dialog',
-          study_group: 'library-tab',
+          study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
           event: 'play-library-sound',
           data_json: this.props.soundMetadata.sourceUrl
         },
