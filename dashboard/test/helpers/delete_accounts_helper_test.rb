@@ -610,6 +610,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Expected no SchoolInfos referring back to this CensusSubmission"
   end
 
+  test "Never remove census submissions if user has blank email" do
+    student = create :student
+    assert_equal '', student.email
+
+    Census::CensusSubmission.expects(:where).never
+
+    purge_user student
+  end
+
   #
   # Table: dashboard.circuit_playground_discount_applications
   #
