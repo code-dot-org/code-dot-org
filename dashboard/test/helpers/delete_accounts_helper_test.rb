@@ -487,6 +487,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Cleaned 1 GalleryActivity"
   end
 
+  test "Queries: Does gallery_activities in 1 query" do
+    # Baseline: Number of queries when clearing one GalleryActivity
+    student = create :student
+    create :gallery_activity, user: student
+    baseline_queries = capture_queries do
+      purge_user student
+    end
+    assert_logged "Cleaned 1 GalleryActivity"
+
+    # Compare: Make lots of GalleryActivity and make sure it doesn't take more queries to purge them
+    student = create :student
+    5.times {create :gallery_activity, user: student}
+    assert_queries baseline_queries.count do
+      purge_user student
+    end
+    assert_logged "Cleaned 5 GalleryActivity"
+  end
+
   #
   # Table: dashboard.user_levels
   #
