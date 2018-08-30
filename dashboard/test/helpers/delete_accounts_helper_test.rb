@@ -1937,6 +1937,62 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Pardot
+  # pegasus.contact_rollups
+  #
+
+  test "Pardot: Calls delete_pardot_prospects" do
+    teacher = create :teacher
+
+    CDO.stubs(:rack_env?).with(:production).returns(true)
+
+    with_contact_rollup_for(teacher) do |_, pardot_id|
+      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([])
+      purge_user teacher
+    end
+  end
+
+  test "Pardot: Raises if Pardot reports issues deleting prospects" do
+    teacher = create :teacher
+
+    CDO.stubs(:rack_env?).with(:production).returns(true)
+
+    with_contact_rollup_for(teacher) do |_, pardot_id|
+      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([pardot_id])
+      assert_raises RuntimeError do
+        purge_user teacher
+      end
+    end
+  end
+
+  test "Pardot: Does not contact Pardot outside of production" do
+    teacher = create :teacher
+
+    CDO.stubs(:rack_env?).with(:production).returns(false)
+
+    with_contact_rollup_for(teacher) do
+      Pardot.expects(:delete_pardot_prospects).never
+      purge_user teacher
+    end
+  end
+
+  test "contact_rollups: Deletes user records" do
+    teacher_a = create :teacher
+    teacher_b = create :teacher
+    with_contact_rollup_for(teacher_a) do |contact_rollups_id_a|
+      with_contact_rollup_for(teacher_b) do |contact_rollups_id_b|
+        refute_empty contact_rollups.where(id: contact_rollups_id_a)
+        refute_empty contact_rollups.where(id: contact_rollups_id_b)
+
+        purge_user teacher_a
+
+        assert_empty contact_rollups.where(id: contact_rollups_id_a)
+        refute_empty contact_rollups.where(id: contact_rollups_id_b)
+      end
+    end
+  end
+
+  #
   # Testing our utilities
   #
 
@@ -2167,6 +2223,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_equal user_storage_ids_count_before, user_storage_ids.count
   end
 
+  def with_contact_rollup_for(user)
+    pardot_id = user.id
+    contact_rollups_id = contact_rollups.insert(
+      {
+        email: user.email,
+        dashboard_user_id: user.id,
+        pardot_id: pardot_id,
+        name: user.name
+      }
+    )
+    yield contact_rollups_id, pardot_id
+  ensure
+    contact_rollups.where(id: contact_rollups_id).delete if contact_rollups_id
+  end
+
   #
   # Helper to make this specific set of tests more readable
   # Performs our account purge on the provided user instance, and then reloads
@@ -2317,5 +2388,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   def user_storage_ids
     PEGASUS_DB[:user_storage_ids]
+  end
+
+  def contact_rollups
+    PEGASUS_DB[:contact_rollups]
   end
 end
