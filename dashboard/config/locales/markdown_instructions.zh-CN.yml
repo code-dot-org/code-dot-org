@@ -270,9 +270,9 @@ zh-CN:
         \"完成\" 继续前进!"
       AppLab Intro 2 - Template_markdown_instruction: "# 开始-尝试这个应用程序\r\n\r\n在你建立自己的《惊险岔路口》之前，用应用程序实验室来实践，来创建这个关于参观宠物店的项目。开始先点击
         \"运行\", 然后导航到 \"狗\" 屏幕。一旦你完成了, 点击 \"完成\" 继续前进。"
-      AppLab Intro 2 - Try App_markdown_instruction: "<img src=\"https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg\",\nstyle=\"float:right;width:200px\">\r\n\r\n#
-        开始-尝试此应用程序 \r\n\r\n你将要通过扩展这个项目来建立一个《惊险岔路口》应用程序。开始时, 你已经有了蓝色的项目概览部分。点击 \"运行\"
-        并单击已为您创建的内容。\n\r\n\r\n一旦看到项目已经对了，就可以点击 \"完成\"来开始创造自己的。"
+      AppLab Intro 2 - Try App_markdown_instruction: "<img src=\"https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg\"
+        style=\"float:right;width:200px\">\n\n# 开始 - 尝试此应用程序 \n\n你将要通过扩展这个项目来构建一个《惊险岔路口》应用程序。开始时，你已经有了蓝色的项目概览部分。点击
+        \"运行\" 并单击已创建的内容。\n\n\n一旦看到项目已经对了，就可以点击 \"完成\"来开始创造自己的。"
       AppLab Intro 2 - Try Cat Commander_markdown_instruction: "猫司令的代码看起来是这样的。花一分钟滚动代码,
         看看你是否能理解它是如何工作的。和一个搭档谈谈你看到了什么模式？\r\n\r\n一旦你完成了, 点击 \"运行\" 然后 \"完成\", 来学习建立自己的冒险。"
       AppLab Intro 2 - add Button_markdown_instruction: "现在你有两个屏幕, 但没有办法在两者之间作业。是时候添加按钮了！\r\n\r\n1.
@@ -808,24 +808,55 @@ zh-CN:
       CSD U2 Project Start_2018_markdown_instruction: "# 开始你的项目\r\n\r\n现在你计划好要如何设计你的个人网页，就可以在这里开始了。不要担心如果你无法做完你所要的一切。
         在你学到更多关于网页开发的知识后，你有足够的机会可以改善你的作业。 \r\n\r\n#\n这样做\r\n* 使用HTML来创建你计划的页面。 请确保它含：\r\n
         * 至少**两个不同大小的标头*\r\n * 至少**一个段落**\r\n* 比对你的草图，**反想**你做出的网页，并把它给你的伙伴看。\n"
-      CSD U2 RGB intro_2018_markdown_instruction: "# RGB（红绿蓝）颜色\r\n\r\n所有的颜色，不管它们有没有名字，都可以用不同水平的红、绿、蓝色的光混合起来显示。这叫做RGB值（这是Red-Green-Blue，也就是红-绿-蓝的简称）。你可以用左边的小部件来试试不同的RGB值，看看能做出什么样的颜色。\r\n\r\n*
-        **点击\"运行\"来开始左边的小部件**，并用滑动条来改变红、绿、蓝光的水平。\r\n* 对于下面每个颜色，用RGB值来匹配它。\r\n\r\nA)
-        红: 216, 绿: 191, 蓝: 216 - rgb(216,191,216)\r\n\r\nB)\n红: 255, 绿: 239, 蓝: 213
-        - rgb(255,239,213)\r\n\r\nC) 红: 250, 绿:\n128, 蓝: 114 - rgb(250,128,114)\r\n\r\nD)
-        红: 70, 绿: 130, 蓝: 180\n- rgb(70, 130, 180)\r\n\r\nE) 红: 107, 绿: 142, 蓝: 35
-        - rgb(107,142,35)\r\n\r\n\r\n<div\nstyle=\"font-size: 16px\">\r\n<br />\r\n<details>\r\n<summary>**为什么红色和绿色能组合出黄色？**</summary>\r\n<p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a
+      CSD U2 RGB intro_2018_markdown_instruction: "# RGB（红绿蓝）颜色\n\n所有的颜色，不管它们有没有名字，都可以用不同水平的红、绿、蓝色的光混合起来显示。这叫做RGB值（这是Red-Green-Blue，也就是红-绿-蓝的简称）。你可以用左边的小部件来试试不同的RGB值，看看能做出什么样的颜色。\n\n*
+        **点击\"运行\"来开始左边的小部件**，并用滑动条来改变红、绿、蓝光的水平。\r\n* 对于下面每个颜色，用RGB值来匹配它。\n\nA) 红:
+        216, 绿: 191, 蓝: 216 - rgb(216,191,216)\n\nB) 红: 255, 绿: 239, 蓝: 213 - rgb(255,239,213)\n\nC)
+        红: 250, 绿:128, 蓝: 114 - rgb(250,128,114)\n\nD) 红: 70, 绿: 130, 蓝: 180 - rgb(70,
+        130, 180)\n\nE) 红: 107, 绿: 142, 蓝: 35 - rgb(107,142,35)\n\n\n<div\nstyle=\"font-size:
+        16px\">\n<br />\n<details>\n<summary>**为什么红色和绿色能组合出黄色？**</summary>\n<p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a
         href=\"https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95\">维基百科 -
-        加色法</a>\r\n</p> </details>\r\n<details>\r\n<summary>**我能用RGB组合出多少种颜色？**</summary>\r\n<p>\r\n用RGB大概能组合出一千六百万种不同的颜色。\r\n</p></details>\r\n</div>"
-      CSD U2 RGB summer_2018_markdown_instruction: "# 夏天的颜色\r\n\r\n找到夏天的黄色的RGB值。\r\n\r\n*
-        点击\"运行\"来启动小部件。\r\n* 调节小部件下的水平值，直到找到和夏天的黄色一样的颜色。\r\n* 在你的活动指南上写上RGB值，你会在下个活动中需要它。\r\n\r\n\r\n<div
-        style=\"font-size: 16px\">\r\n<br\n/>\r\n<details>\r\n<summary>**为什么红色和绿色能组合出黄色？**</summary>\r\n<p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a
-        href=\"https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95\">维基百科 -
-        加色法</a></p> </details>\r\n<details>\r\n<summary>**我能用RGB组合出多少种颜色？**</summary>\r\n<p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>\r\n</div>"
-      CSD U2 RGB winter_2018_markdown_instruction: "# 冬天的颜色\r\n\r\n在接下来的几关中，你会为一个网站找到季节的颜色。这里，你需要找到冬天蓝色的RGB值。r\n\r\n*
-        点击\"运行\"来启动这个小部件。\r\n* 调节小部件下的水平值，让它的颜色时冬天的蓝色。\r\n* 将RGB值写到你的活动指南里。你会在下一个活动中用到它们。\r\n\r\n\r\n<div\nstyle=\"font-size:
-        16px\">\r\n<br />\r\n<details><summary>**如何让颜色变浅?**</summary>\r\n<p>为了让颜色变浅，需要让它更淡（增加滑块的水平值)。如果你已经将蓝光增加到了最大值，你需要增加更多的红色和绿色来让蓝色更淡。</p></details>\r\n<details>\r\n<summary>**为什么红色和绿色能组合出黄色？**</summary>\r\n<p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a
-        href=\"https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95\">维基百科 -
-        加色法</a></p> </details>\r\n<details>\r\n<summary>**我能用RGB组合出多少种颜色？**</summary>\r\n<p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>\r\n</div>"
+        加色法</a>\n</p> </details>\n<details>\n<summary>**我能用RGB组合出多少种颜色？**</summary>\n<p>\n用RGB大概能组合出一千六百万种不同的颜色。\n</p></details>\n</div>"
+      CSD U2 RGB summer_2018_markdown_instruction: |-
+        # 夏天的颜色
+
+        找到夏天的黄色的RGB值。
+
+        * 点击"运行"来启动小部件。
+        * 调节小部件下的水平值，直到找到和夏天的黄色一样的颜色。
+        * 在活动指南上写上RGB值，会在下个活动中需要它。
+
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
+        <details>
+        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
+        </div>
+      CSD U2 RGB winter_2018_markdown_instruction: |-
+        # 冬天的颜色
+
+        在接下来的几关中，你会为一个网站找到季节的颜色。这里，你需要找到冬天蓝色的RGB值。
+
+        * 点击"运行"来启动这个小部件。
+        * 调节小部件下的水平值，让它的颜色时冬天的蓝色。
+        * 将RGB值写到你的活动指南里。你会在下一个活动中用到它们。
+
+
+        <div
+        style="font-size: 16px">
+        <br />
+        <details><summary>**如何让颜色变浅?**</summary>
+        <p>为了让颜色变浅，需要让它更淡（增加滑块的水平值)。如果你已经将蓝光增加到了最大值，你需要增加更多的红色和绿色来让蓝色更淡。</p></details>
+        <details>
+        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
+        <details>
+        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
+        </div>
       CSD U2 add content_markdown_instruction: "# 添加 HTML\r\n\r\n接下来，你要添加HTML 到你的网页中。\r\n\r\n#
         这样做\r\n* 在你创建的每一新网页上添加HTML 来做你在你的项目指南中画的页面草图。 \r\n* 你也可能要在你已经创建的页面上多添加一些HTML。\r\n"
       CSD U2 add content_2018_markdown_instruction: "# 添加 HTML\r\n\r\n接下来，你要添加HTML
@@ -875,9 +906,18 @@ zh-CN:
       CSD U2 challenge_markdown_instruction: "# 挑战\r\n\r\n在开始这一挑战之前与您的老师进行核对。\r\n\r\n此页仅完成了一部分，并且有一些
         bug。幸运的是, 有些注释应该能帮助你按照作者的意图来完成这个页面。\r\n\r\n# 这样做\r\n\r\n* 与您的伙伴一起查看该代码, 并讨论该页面应是什么样子。\r\n*
         请共同完成页面, 注意格式化。\r\n* 与另一组对比看看页面是否相同。\r\n"
-      CSD U2 challenge_2018_markdown_instruction: "# 挑战\r\n\r\n在开始这一挑战之前与您的老师进行核对。\r\n\r\n此页仅完成了一部分，并且有一些
-        bug。幸运的是, 有些注释应该能帮助你按照作者的意图来完成这个页面。\r\n\r\n# 这样做\r\n\r\n* 与您的伙伴一起查看该代码, 并讨论该页面应是什么样子。\r\n*
-        请共同完成页面, 注意格式化。\r\n* 与另一组对比看看页面是否相同。\r\n"
+      CSD U2 challenge_2018_markdown_instruction: |
+        # 挑战
+
+        在开始这一挑战之前与老师确认一下。
+
+        此页仅完成了一部分，并且有一些缺陷。幸运的是, 有些注释应该能帮助你按照作者的意图来完成这个页面。
+
+        # 这样做
+
+        * 与您的伙伴一起查看该代码, 并讨论该页面应是什么样子。
+        * 请共同完成页面, 注意格式化。
+        * 与另一组对比看看页面是否相同。
       CSD U2 classes modify_markdown_instruction: "<div style=\"float: right;\nheight:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\r\n<details>\r\n<summary>**代码是如何起作用的？**</summary>\r\n为了让代码起作用，你需要创建一个winter（冬天）的类（class），并将元素加到这个类中。\r\n\r\n样式表中的类是像下面的代码。\r\n\r\n<pre>.winter
         {\r\n  color: rgb(195,230,255);\r\n}</pre>\r\n\r\n这段代码创建了一个叫做`winter`的类。并在类中放上了冬天蓝的元素，即RGB值(195,230,255)。\r\n\r\n将winter类加到一个`h5`元素的代码是`<h5
@@ -3528,6 +3568,7 @@ zh-CN:
         \ _\"现在，我们应该做什么？让我们浏览并创造自己的冬季仙境！\"_\r\n\r\n试着摆弄你自己创建的。画自己喜欢的！\r\n- 如果你在楼梯图案那里转两个不同的角度会发生什么？\r\n-
         如果你的钻石图案长一点或短一点会发生什么？\r\n- 如果在一个雪花上画另一个雪花看起来会是什么样子？\n"
       Dance Party 1-validated_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
+      Dance Party 1-validated_simple_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Dance Party 1_markdown_instruction: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Dance Party 2 Validated_markdown_instruction: 这个外星人对自己在火星上的舞技非常自信，但现在她只能左右移动了。你能在
         ‘开始’ 模块中改变行为让她可以旋转吗？
@@ -3564,6 +3605,10 @@ zh-CN:
         最后一步，创建一个新的钟形图形，命名为`我的钟`。
 
         当点击这个钟时，所有的外星人会跳同一支舞！
+      Dance Party 7_simple_markdown_instruction: |
+        最后一步，创建一个新的钟形图形，命名为`我的钟`。
+
+        当点击这个钟时，所有的外星人会跳同一支舞！
       Dance Party Freeplay_markdown_instruction: |-
         现在可以创建自己的外星人迪斯科啦！想找点灵感？试试这些：
         * 创建两个时钟，让外星人在不同时钟的控制下完成不同的舞步
@@ -3582,6 +3627,7 @@ zh-CN:
 
         把灰蒙蒙的风滚草变成一条鱼。
       Fish Tank 2_markdown_instruction: 我们要做一个鱼缸。将达斯提草变成一条鱼。
+      Fish Tank 3-validated Ram_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
       Fish Tank 3-validated_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
       Fish Tank 3_markdown_instruction: 这些旋转会让鱼变得头晕！改变鱼的行为，让它沿着水箱游动。
       Fish Tank 4-validated_markdown_instruction: 鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。
@@ -3594,6 +3640,7 @@ zh-CN:
       Fish Tank 7_markdown_instruction: 工具箱里有许多新的模块。用它们来让你的鱼缸变得特别。
       Fish Tank Predict_markdown_instruction: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank Template_markdown_instruction: 项目模版
+      Fish Tank Template_simple_markdown_instruction: 项目模版
       Food Fight!_markdown_instruction: "我们已为你添加了上一关的函数。\r\n<hr/>\r\n\r\n<h4>\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数)
         大于某个值时，调用level_up(升级) 函数。<br/><br/>\r\n</h4>\r\n<i>例如：“play_score” > 6</i>\r\n\r\n\r\n<hr/>\r\n<i>玩游戏，并且达到第3级来到达下一关。
         </i>"
@@ -4706,6 +4753,10 @@ zh-CN:
         这是杰拉尔丁，你的宠物长颈鹿。
 
         你觉得在按下"▶ 运行"之后点击她会发生什么事？
+      Virtual Pet 1_simple_markdown_instruction: |-
+        这是杰拉尔丁，你的宠物长颈鹿。
+
+        你觉得在按下"▶ 运行"之后点击她会发生什么事？
       Virtual Pet 2 - Validated (Ram)_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个
         **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
       Virtual Pet 2 - Validated_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件**
@@ -5220,7 +5271,10 @@ zh-CN:
       courseC_PlayLab_events_challenge1_markdown_instruction: "用这个新模块，在当企鹅碰到龙或者得分时，让它自动的走回开始的地方。这会让你的游戏更有挑战，更好玩！\r\n\r\n玩游戏，并用方向控制企鹅，直到得到了足够的分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。"
       courseC_PlayLab_events_challenge1_2018_markdown_instruction: "用这个新模块，在当企鹅碰到龙或者得分时，让它自动的走回开始的地方。这会让你的游戏更有挑战，更好玩！\r\n\r\n玩游戏，并用方向控制企鹅，直到得到了足够的分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。"
       courseC_artist_loop1_markdown_instruction: "太棒了！\r\n\r\n在开始循环前，让我们用`设置图案`模块来改变刷子的样式。"
-      courseC_artist_loop1_2018_markdown_instruction: "太棒了！\r\n\r\n在开始循环前，让我们用`设置图案`模块来改变刷子的样式。"
+      courseC_artist_loop1_2018_markdown_instruction: |-
+        "太棒了！"
+
+        在开始循环前，让我们用<xml><block type="draw_line_style_pattern"><title name="VALUE">默认</title></block></xml>模块来添加一些样式。
       courseC_artist_loops1a_markdown_instruction: "**自由发挥：** 让我们创建一些更大的，一次一步的东西！你能创造任何想要的事物，但先看看如何创造这样的！\r\n\r\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\r\n\r\n用`往上跳200再下200`来让小艺术家到达游戏区域中心，然后用`画一个贴画`模块来让一只鸟出现。\r\n\r\n---\r\n\r\n当你对做的结果满意时，点击\"完成\"。"
       courseC_artist_loops1a_2018_markdown_instruction: "**自由发挥：** 让我们创建一些更大的，一次一步的东西！\r\n\r\n用`往上跳200再下200`来让小艺术家到达游戏区域中心，然后用`画一个贴画`模块来让一只鸟出现。\r\n\r\n---\r\n\r\n当你对做的结果满意时，点击\"完成\"。"
       courseC_artist_loops2_markdown_instruction: "现在，僵尸知道了他的路，帮他沿着路挖**20像素长**的洞，来种更多的花！\r\n-\n每个洞应该是25像素长\r\n-
@@ -5667,8 +5721,14 @@ zh-CN:
       courseD_bee_debugging_challenge1_2018_markdown_instruction: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂酿造所有的蜂蜜吗？
       courseD_bee_debugging_challenge1a_markdown_instruction: "*\"嗡嗡嗡！我知道怎么采花蜜，现在帮我酿蜂蜜！\"*\r\n\r\n看看蜜蜂是怎么得到花蜜的。你能用同样的规律帮蜜蜂酿造所有蜂蜜吗？"
       courseD_bee_debugging_challenge2_markdown_instruction: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
-      courseD_bee_nestedLoops1_markdown_instruction: "*\"这会非常棒！\"*\r\n\r\n帮蜜蜂收集所有花蜜。"
-      courseD_bee_nestedLoops1_2018_markdown_instruction: "*\"这会非常棒！\"*\r\n\r\n帮蜜蜂收集所有花蜜。"
+      courseD_bee_nestedLoops1_markdown_instruction: |-
+        "_这会非常棒！_"
+
+        帮蜜蜂收集所有花蜜。
+      courseD_bee_nestedLoops1_2018_markdown_instruction: |-
+        "_这会非常棒！_"
+
+        帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops1a_markdown_instruction: "*\"这会非常棒！\"*\r\n\r\n帮蜜蜂收集所有花蜜。"
       courseD_bee_nestedLoops1a_2018_markdown_instruction: "*\"这会非常棒！\"*\r\n\r\n帮蜜蜂收集所有花蜜。"
       courseD_bee_nestedLoops2_markdown_instruction: 这一次, 使用尽可能少的模块帮助蜜蜂收集所有的花蜜。

@@ -2,16 +2,256 @@ el:
   data:
     external:
       Begin planning your project:
+        description here: περιγραφή εδώ
         title: τίτλος
+      Begin planning your project_2018:
+        description here: περιγραφή εδώ
       Prepare for your presentation:
+        description here: περιγραφή εδώ
         title: τίτλος
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Ταίριαξε τον συνδυασμό των κουμπιών με τις χορευτικές κινήσεις.
+        Matching: Ταίριαξε
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>Ο</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Ταίριαξε
+        Use the key to match each code to its letter: Χρησιμοποιήστε το πλήκτρο για να ταιριάξεις  κάθε κωδικό στο γράμμα του
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Ταίριαξε  το πλέγμα στο πρόγραμμα.
+        Matching: Ταίριαξε
       2-3 Maze Match 2:
         Instructions: Οδηγίες
+        Match the puzzles to the blocks: Ταίριαξε  τα παζλ στα μπλοκς
+        Maze Match: Λαβύρινθο ταίριαξε
+      2-3 artist loops match 1:
+        Match the loop to the shape: Ταιριάξτε το βρόχο με το σχήμα
+      2-3 artist match 1:
+        Artist Matching: Καλλιτέχνης που ταιριάζουν
+        Match the shape with the blocks that complete it.: Ταιριάξε  το σχήμα με τα μπλοκς που το ολοκληρώνουν.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Ταίριαξε  τα παζλ στα μπλοκς
+        Maze Match One: Λαβύρινθο ταίριαξε  ένα
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Προσθέστε τη βαθμολογία του Παίκτη 1 στο συνοικό σκορ</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Συγκρίνετε βαθμολογίες παικτών για να δούμε ποιος κερδίζει</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Παίκτης 1 ρίξε τα ζάρια</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Κάνε Παίκτης 1 σκορ σε 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Ταίριαξε  τα βήματα στο παιχνίδι αγώνα Ζάρια με τη σειρά που πρέπει να εμφανίζονται στον αλγόριθμο.
+        Matching: Ταίριαξε
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Τροχούς/πλευρά: 3 <br/>Παράθυρα/πλευρά: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Κάθε ένα από αυτά τα οχήματα έχει διαλυθεί σε μικρότερα κομμάτια. Ταίριαξε  κάθε όχημα με την λίστα αποσύνθεσης.
+        Matching: Ταίριαξε
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Ταίριαξε  κάθε πρόγραμμα με τη λέξη που σχηματίζει , χρησιμοποιώντας την  παρεχόμενη ομάδα δεξιοτήτων.
+        Matching: Ταίριαξε
       4-5 maze match 1:
         Instructions: Οδηγίες
+        Match the puzzles to the blocks: Ταίριαξε  τα παζλ στα μπλοκς
+        Maze Match: Λαβύρινθο ταίριαξε
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Ταίριαξε τα σχήματα βασιζόμενος στο είδος.
+        Matching: Ταίριαξε
+      K-1 Bee Loops Match 1:
+        Match the blocks: Ταίριαξε  τα μπλοκ
+        Matching: Ταίριαξε
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Ταίριαξε τον συνδυασμό των κουμπιών με τις χορευτικές κινήσεις.
+        Matching: Ταίριαξε
       K-1 Maze Match 1:
         Instructions: Οδηγίες
+        Match the puzzles and blocks: Ταίριαξε τα πάζλ και τα μπλοκ
+        Matching: Ταίριαξε
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Διάλεξε έναν αλγόριθμο για την εικόνα που δίνεται.
+        Multiple Choice: Πολλαπλή Επιλογή
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα παραλληλόγραμμο πάνω από το τετράγωνο <br/> Βάλε ένα τρίγωνο δεξιά του παραλληλογράμμου
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο πάνω από το τετράγωνο <br/> Βάλε ένα τρίγωνο κάτω από το από το τετράγωνο
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο κάτω από το τετράγωνο <br/> Βάλε ένα παραλληλόγραμμο δεξιά του τριγώνου
+        0: '? Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο δεξιά του τετραγώνου <br/> Βάλε ένα παραλληλόγραμμο κάτω από το τετράγωνο <br/> Βάλε τρίγωνο δεξιά του παραλληλογράμμου'
+        1: ': Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο δεξιά του τετραγώνου <br/> Βάλε ένα παραλληλόγραμμο κάτω από το τετράγωνο <br/> Βάλε τρίγωνο δεξιά του παραλληλογράμμου'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Ξεκίνα με ένα τρίγωνο <br/> Βάλε ένα τετράγωνο κάτω από το τρίγωνο <br/> Βάλε ένα άλλο τρίγωνο κάτω από το τετράγωνο
+        Which image does <em>not</em> follow this algorithm?: Ποια εικόνα <em>δεν </em> ταιριάζει με τον αλγόριθμο;
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Σύμφωνα με τους κανόνες του παιχνιδιού, ποιο σύνολο καρτών έχει βαθμολογηθεί σωστά;
+        Multiple Choice: Πολλαπλή Επιλογή
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Πως θα απλοποιούσες αυτή την ακολουθία βρόχων;
+        Multiple Choice: Πολλαπλή Επιλογή
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which program makes this image?: Ποιο πρόγραμμα δημιουργεί την εικόνα;
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Λαβύρινθος Πολλαπλή Επιλογή
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which image-program combo does not contain mistakes?: Ποιος συνδυασμός εικόνας - προγράμματος δεν έχει λάθη;
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Καλλιτέχνης Συναρτήσεις Πολλαπλή Επιλογή Ένα
+        Pick the correct blocks to draw this image using the given functions: Πάρε τα σωστά μπλοκ για να σχεδιάσεις αυτήν την εικόνα με χρήση των δεδομένων συναρτήσεων
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
+        Which shape is made by this loop?: Ποιο σχήμα δημιουργείται από αυτόν τον βρόχο;
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
+        Which shape is made by this program?: Ποιο σχήμα δημιουργείται από αυτό το πρόγραμμα;
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Ποια από τις παρακάτω συγκρίσεις είναι αληθής;
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Επιλέξτε τα καλύτερα μπλοκ.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Μέλισσα Επαναλήψεις Πολλαπλή Επιλογή Ένα
+        Which blocks collect all of the nectar?: Ποια μπλοκ συλλέγουν όλο το νέκταρ;
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Λαβύρινθος Πολλαπλή Επιλογή Ένα
+        Which set of blocks is the correct answer?: Ποιό σύνολο μπλοκς είναι η σωστή απάντηση;
+      4-5 Algorithms Multi 1:
+        Baking cookies: Ψήνοντας μπισκότα
+        Banana: Μπανάνα
+        Brushing your teeth: Βουρτσίζοντας τα δόντια σας
+        Multiple Choice: Πολλαπλή Επιλογή
+        Shopping from a grocery list: Αγοράζοντας από μια λίστα του μπακάλη
+        Which one of these items is hardest to describe an algorithm for?: Ποιο από αυτά τα αντικείμενα είναι δύσκολο να περιγραφεί με αλγόριθμο;
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene είναι μια _____ πόλη.
+        0: '? Εδώ είναι τρεις προτάσεις. Ποιο από τα παρακάτω πρότυπα είναι κατάλληλα αφαιρετικό ώστε και οι τρεις να ταιριάζουν με το ίδιο μοτίβο όπως το πρότυπο;'
+        1: ': Εδώ είναι τρεις προτάσεις. Ποιο από τα παρακάτω πρότυπα είναι κατάλληλα αφαιρετικό ώστε και οι τρεις να ταιριάζουν με το ίδιο μοτίβο όπως το πρότυπο;'
+        Multiple Choice: Πολλαπλή Επιλογή
+        Seattle _____ a _____ _____.: Seattle _____ μια _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Το Σιάτλ είναι μια μεγάλη πόλη. <br/> Eugene είναι μια πόλη μεσαίου <br/> Hillview είναι μια μικρή πόλη.
+        _____ is _____ a _____.: _____ είναι μια _____ _____.
+        _____ is a _____ city.: _____ είναι μια _____ πόλη.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which of these pictures best represents crowdsourcing?: Ποια από τις παρακάτω εικόνες αναπαριστά καλύτερα το crowdsourcing;
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Βουρτσίζοντας τα μαλλιά σου
+        Cleaning your room: καθαρίζοντας το δωμάτιο σου
+        Eating your dessert: Τρώγοντας το επίδόρπιο σου
+        Multiple Choice: Πολλαπλή Επιλογή
+        Washing your face: Πλένοντας το πρόσωπό σου
+        Which one of these activities would be best for practicing crowdsourcing?: Ποια από αυτές τις δραστηριότητες θα ήταν καλύτερη για την πραγματοποίηση του crowdsourcing;
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which piece of information listed below is okay to share on the internet?: Ποια από τις παρακάτω πληροφορίες μπορούμε άνετα να μοιραστούμε στο διαδίκτυο;
+        Your address: Η διεύθυνση σου
+        Your birthday: Τα γενέθλιά σου
+        Your favorite food: Η αγαπημένη σου τροφή
+        Your parent's credit card number: Ο αριθμός πιστωτικής κάρτας των γονιών σου
+      4-5 Internet Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Όταν συνδέεστε στο code.org, σε ποια διεύθυνση IP είναι πιθανότερο να σας οδηγήσει το DNS;
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Αν το DNS σας έστειλε στη σελίδα με διεύθυνση IP 100.42.50.110, σε ποιον ιστότοπο είστε;
+        Multiple Choice: Πολλαπλή Επιλογή
+      4-5 Songwriting Multi 1:
+        0: '; Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Πάμε στη Λου, αγάπη μου.'
+        1: '; Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Πάμε στη Λου, αγάπη μου.'
+        Lou, Lou, skip to my Lou,: Λου, Λου, πάμε στη Λου,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.
+        2: '; Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.<br/><br/><p>Η μύγα είν'' στο γάλα,<br/>Μπου! μύγα, μπου!'
+        3: ': Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.<br/><br/>Η μύγα είν'' στο βούτυρο,<br/>Μπου! μύγα, μπου!'
+        Multiple Choice: Πολλαπλή Επιλογή
+        4: '; Ποιο είναι το μεγαλύτερο τμήμα αυτού του τραγουδιού που μπορείς να ορίσεις ως χορωδία, ώστε η χορωδία να επαναλαμβάνεται ακριβώς μία φορά κάθε φορά που καλείται;'
+        5: ': Ποιο είναι το μεγαλύτερο τμήμα αυτού του τραγουδιού που μπορείς να ορίσεις ως χορωδία, ώστε η χορωδία να επαναλαμβάνεται ακριβώς μία φορά κάθε φορά που καλείται;'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Ποιά από τα παρακάτω προγράμματα <em> δεν κάνουν </em> ακριβώς την ίδια ακολουθία με το πρόγραμμα 1;
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
+        Which blocks will create the design?: Ποια μπλοκ θα δημιουργήσουν το σχέδιο;
+      4-5 artist multi 1:
+        Artist Multiple Choice: Καλλιτέχνης Πολλαπλή Επιλογή
+        Which blocks draw a rectangle with a perimeter of 100?: Ποια μπλοκ σχεδιάζουν ένα ορθογώνιο με περίμετρο από 100;
+      4-5 artist multi 2:
+        Artist Multiple Choice: Καλλιτέχνης Πολλαπλή Επιλογή
+        Which drawing is symmetric?: Ποιο σχέδιο είναι συμμετρικό;
+      4-5 bee conditionals multi 1:
+        0: '? Ένα πορφυρό άνθος μπορεί να έχει 3, 2, ή 1 χυμούς, αλλά δεν ξέρεις πόσους. Ποια μπλοκ ελέγχουν σωστά και συλλέγουν όλο το νέκταρ;'
+        1: ': Ένα μωβ λουλούδι μπορεί να έχει 3, 2, ή 1 νέκταρ αλλά δεν ξέρετε πόσα. Ποια μπλοκ εξετάζουν και συλλέγουν σωστά όλο το νέκταρ ενός μωβ λουλουδιού;'
+        Bee Conditionals Multiple Choice: Μέλισσα Συνθήκες Πολλαπλή Επιλογή
+        Choose the best blocks.: Επιλέξτε τα καλύτερα μπλοκ.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Πολλαπλές επιλογές εκσφαλμάτωσης (debug) της μέλισσας
+        Which version of the function will work?: Ποια εκδοχή της συνάρτησης δουλεύει;
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Πολλαπλές επιλογές βρόχων μέλισσας
+        Which blocks will solve the puzzle?: Ποια μπλοκ θα λύσουν το γρίφο;
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Πολλαπλές επιλογές συνθηκών λαβυρίνθου
+        Which blocks solve the puzzle?: Ποια μπλοκ λύνουν το γρίφο;
+      4-5 maze multi 1:
+        Maze Multiple Choice: Λαβύρινθος Πολλαπλή Επιλογή
+        Which blocks solve the puzzle?: Ποια μπλοκ λύνουν το γρίφο;
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which blocks solve this puzzle?: Ποια μπλοκ λύνουν αυτό το παζλ;
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which blocks draw the square?: Ποια μπλοκ σχεδιάζουν το τετράγωνο;
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Πόσο νέκταρ είναι αυτό;
+        Multiple Choice: Πολλαπλή Επιλογή
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Πόσο νέκταρ είναι αυτό;
+        Multiple Choice: Πολλαπλή Επιλογή
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Ποιο ζώο έχει το ψηφιακό αποτύπωμα που το αφήνει <strong>πιο ανασφαλές</strong>;
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Πως θα απλοποιούσες αυτή την ακολουθία βρόχων;
+        Multiple Choice: Πολλαπλή Επιλογή
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which arrow gets the Flurb to the treasure?: Ποιο βέλος πάει τον Flurb στο θησαυρό;
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which information should you <strong>not</strong> share online?: Ποια πληροφορία <strong>δεν</strong> πρέπει να μοιράζεσαι στο Internet;
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which choice should be the final block?: Ποια επιλογή πρέπει να είναι το τελικό μπλοκ;
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which repeat block is the same?: Ποιο μπλοκ επανάληψης είναι το ίδιο;
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Pick the correct repeat block.: Επιλέξετε το σωστό μπλοκ επανάληψης.
       K-1 Maze Multiple Choice 2:
         Maze: Λαβύρινθος
+        Which answer solves this level?: Ποια απάντηση λύνει αυτό το επίπεδο;
+      K-1 Move It Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which algorithm gets the Flurb to the flowers?: Ποιος αλγόριθος πάει τον Flurb στα λουλούδια;
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which step should go at the beginning of this algorithm?: Ποιο βήμα πρέπει να πάει στην αρχή αυτού του αλγόριθμου;
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which step should fill in the blank for this algorithm?: Ποιο βήμα πρέπει να συμπληρώσεις στο κενό αυτού του αλγόριθμου;
+      K-1 Word Search Multi 1:
+        Multiple Choice: Πολλαπλή Επιλογή
+        Which blocks spell "MOVE"?: Ποια μπλοκ σημαίνουν "ΜΕΤΑΚΙΝΗΣΗ";
+      K-1 Word Search Multi 3:
+        Multiple Choice: Πολλαπλή Επιλογή
+        SOUTH: ΝΟΤΙΑ
+        Which word is spelled?: Ποια λέξη σχηματίζεται;

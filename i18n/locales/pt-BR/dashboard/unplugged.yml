@@ -260,6 +260,7 @@ pt-BR:
         desc: "# Sessão de Cenários de Recrutamento\\r\n\\r\n## Deslize para Direita para CS\\r\nPara esta sessão, nós usaremos uma ferramenta chamada \"Deslize para Direita para CS\", a qual foi desenvolvida pelos nossos parceiros no MIT. Em Deslize para Direita para CS, você irá avaliar alguns perfis de estudantes e considerar declarações específicas que você poderá usar para convencer ele ou ela a se inscrever no seu curso de Princípios de CS.\\r\n\\r\n### Como Funciona\\r\nQuando estiver jogando o jogo Deslize para Direita para CS você verá uma série de citações que poderá dizer para cada estudante. Você irá deslizar para direita em citações que você achar que seriam efetivas no convencimento dos estudantes para se inscrever no curso e deslizar para esquerda em citações que você achar que não serão efetivas. Durante a sessão nós discutiremos em grupo seus pensamentos sobre os tipos de citações que são mais efetivas em fazer um estudante se inscrever em CS, e você terá uma chance de ver como outras pessoas no seu workshop deslizaram em cada um dos argumentos. \\r\n\\r\n\\r\nQuando você clicar em continuar abaixo, nós vamos te mandar para o jogo, e passar adiante o endereço de email do Code.org com o qual você logou."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
+        desc: "# Brad Repro Bug 000\\r\n## Tentativa de recriar um defeito reportado por Brooke\\r\nproceda conforme o seguinte:\\r\n1. começou um nível `offline`. populou com informações. clicou em salvar e publicar.\\r\n2. “destruiu” o nível\\r\n3. criou um nível `markdown`com o mesmo conteúdo e o mesmo nome. marcou a caixa para encriptá-lo. clicou em salvar e publicar"
       courseB_unplugged_MRF_2018:
         title: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
         desc: 'tradução pendente: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
@@ -307,5 +308,12 @@ pt-BR:
         desc: Os alunos criam pulseiras como representações binárias da primeira letra de seus nomes. Os alunos aprendem que os dados podem ser representados e armazenados de mais de uma forma.
       MoveItMoveIt_2018:
         title: Criando caminhos
+      courseB_unplugged_CnC_2018:
+        title: É Ótimo Criar e Jogar Limpo
+        desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em Direitos Autorais e Criatividade, esta aula existe para ajudar os estudantes a entenderem o processo criativo de compartilhar e inspiração. Junto disso vem a promoção da expressão criativa e a necessidade de ser justo com o trabalho criativo.
+      courseE_unplugged_CnC_2018:
+        title: Compartilhamento Digital
+        desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em Direitos Autorais e Criatividade, esta aula existe para ajudar os estudantes a entenderem os desafios e benefícios de respeitar posse e direitos autorais, particularmente em ambientes digitais. Estudantes deveriam ser encorajados a respeitar os direitos dos artistas como uma parte importante de ser um cidadão digital ético.
       RelayProgramming_2018:
         title: Programação por revezamento
+        desc: Esta atividade começará com uma pequena aula sobre depuração e persistência, então irá mudar rapidamente para uma corrida contra o tempo à medida que os alunos se dividem em times e trabalham juntos para escrever um programa uma instrução por vez.

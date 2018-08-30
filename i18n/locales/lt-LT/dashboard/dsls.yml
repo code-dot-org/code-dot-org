@@ -2,16 +2,258 @@ lt:
   data:
     external:
       Begin planning your project:
+        description here: aprašymas čia
         title: pavadinimas
+      Begin planning your project_2018:
+        description here: aprašymas čia
       Prepare for your presentation:
+        description here: aprašymas čia
         title: pavadinimas
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Susiek ženklų kombinaciją su šokio judesio kombinacijomis.
+        Matching: Sujungimas
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Sujungimas
+        Use the key to match each code to its letter: Kiekviena raidė turi savo kodavimo raktą. Susiek jį su kiekviena raide apačioje.
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Priderink tinklelį prie programos.
+        Matching: Sujungimas
       2-3 Maze Match 2:
         Instructions: Instrukcijos
+        Match the puzzles to the blocks: Pritaikyk kiekvienam galvosūkiui teisingus sprendimus
+        Maze Match: 'Labirintas: sujungimas'
+      2-3 artist loops match 1:
+        Match the loop to the shape: Priderink ciklą (kartojimą) prie figūros
+      2-3 artist match 1:
+        Artist Matching: 'Menininkas: sujungimo užduotis'
+        Match the shape with the blocks that complete it.: Parink tinkamus blokelius, kurie pabaigs piešinį.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Pritaikyk kiekvienam galvosūkiui teisingus sprendimus
+        Maze Match One: Labirinto sujungimo užduotis 1
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Pridėk pirmo žaidėjo išridentą akučių skaičių prie visų jo išridentų taškų</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Palygink žaidėjų taškus ir pažiūrėk, kuris laimėjo</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>1 žaidėjas ridena kauliuką</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Nustatyk pirmo žaidėjo taškus į 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Sudėliok veiksmus, kurie seka vienas po kito, žaidžiant žaidimą „ridenk kauliuką“.
+        Matching: Sujungimas
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Ratai/iš_šono: 3<br/>Langai/iš_šono: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Kiekviena pavaizduota transporto priemonė gali būti išskaidyta į smulkesnes dalis. Sudėliok transporto priemones taip, kad jos atitiktų tai, kas yra užrašyta kairėje pusėje.
+        Matching: Sujungimas
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Sudėliok dešinėje esančius žodžius prie kairėje esančių programų taip, kad įvykdžius kairėje esančias programas, jos sudėliotų dešinėje esantį žodį.
+        Matching: Sujungimas
       4-5 maze match 1:
         Instructions: Instrukcijos
+        Match the puzzles to the blocks: Pritaikyk kiekvienam galvosūkiui teisingus sprendimus
+        Maze Match: 'Labirintas: sujungimas'
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Sujunk figūras pagal tipą.
+        Matching: Sujungimas
+      K-1 Bee Loops Match 1:
+        Match the blocks: Susiek blokelius
+        Matching: Sujungimas
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Susiek ženklų kombinaciją su šokio judesio kombinacijomis.
+        Matching: Sujungimas
       K-1 Maze Match 1:
         Instructions: Instrukcijos
+        Match the puzzles and blocks: Sujunkite dėliones ir blokelius
+        Matching: Sujungimas
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Pasirink tinkamą algoritmą, su kuriuo gausis duotasis vaizdas.
+        Multiple Choice: Parink teisingą atsakymą
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Pirmiausia padėk kvadratą<br/>Virš jo padėk lygiagretainį<br/>Lygiagretainio dešinėje padėk trikampį
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Pradėk nuo kvadrato<br/>Padėk trikampį virš kvadrato<br/>Padėk trikampį po kvadratu
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Pradėk nuo kvadrato<br/>Padėk trikampį po kvadratu<br/>Padėk lygiagretainį trikampio dešinėje
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        1: ': Pradėk nuo kvadrato<br/>Padėk trikampį kvadrato dešinėje<br/>Po trikampiu padėk lygiagretainį<br/>Lygiagretainio dešinėje padėk dar vieną trikampį.'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Pradėk nuo trikampio<br/>Padėk kvadratą po trikampiu<br/>Padėk kitą trikampį po kvadratu
+        Which image does <em>not</em> follow this algorithm?: Kuris paveikslėlis <em>nesigaus</em> naudojant šį algoritmą?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Kuri kortų grupė turi teisingą taškų kiekį (pagal žaidimo taisykles kairėje)?
+        Multiple Choice: Parink teisingą atsakymą
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Kaip supaprastinti šią kartojimo seką?
+        Multiple Choice: Parink teisingą atsakymą
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which program makes this image?: Kuri programa sukuria šį vaizdą?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: 'Labirintas:  parink teisingą atsakymą'
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Which image-program combo does not contain mistakes?: Kuriame paveikslėlyje nėra klaidų?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: 'Menininkas ir funkcijos: parink teisingą atsakymą'
+        Pick the correct blocks to draw this image using the given functions: Pasirink teisingą blokelių seką, kad būtų gautas parodytas vaizdas. Ką daro sudėtinė komanda, yra pavaizduota kairėje pusėje
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which shape is made by this loop?: Kuri figūra yra nupiešiama su šiomis kartojimo komandomis?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which shape is made by this program?: Kuri figūra bus nubrėžta, įvykdžius šią programą?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Kuri lygybė teisinga?
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Pasirink geriausią atsakymą, kuris išsprendžia galvosūkį.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: 'Bitė: parink teisingą atsakymą'
+        Which blocks collect all of the nectar?: Su kuriais blokeliais galima surinkti visą nektarą?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: 'Labirintas: parink teisingą atsakymą'
+        Which set of blocks is the correct answer?: Kuris blokų derinys yra teisingas?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Sausainių kepimas
+        Banana: Bananas
+        Brushing your teeth: Dantų valymasis
+        Multiple Choice: Parink teisingą atsakymą
+        Shopping from a grocery list: Apsipirkimas pagal duotą prekių sąrašą
+        Which one of these items is hardest to describe an algorithm for?: Kurį veiksmą yra sunkiausia išskaidyti į veiksmų seką?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene is a _____ city.
+        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Yra duoti trys sakiniai. Kuris iš pateiktų atsakymų su praleistais žodžiais tinka visiems duotiesiems sakiniams?'
+        Multiple Choice: Parink teisingą atsakymą
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
+        _____ is _____ a _____.: _____ is _____ a _____.
+        _____ is a _____ city.: _____ is a _____ city.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which of these pictures best represents crowdsourcing?: Kuris iš šių paveiksliukų geriausiai atitinka minios bendradarbiavimą („crowdsourcing“)?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Tavo plaukų šukavimas
+        Cleaning your room: Tavo kambario tvarkymas
+        Eating your dessert: Tavo deserto valgymas
+        Multiple Choice: Parink teisingą atsakymą
+        Washing your face: Tavo veido prausimas
+        Which one of these activities would be best for practicing crowdsourcing?: Kuri iš šių veiklų gali būti vadinama minios bendradarbiavimu (angl. „crowdsourcing“)?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which piece of information listed below is okay to share on the internet?: Kokią informaciją iš žemiau pateiktų variantų internete galima skelbti viešai?
+        Your address: Tavo adresą
+        Your birthday: Tavo gimtadienį
+        Your favorite food: Tavo mėgstamiausią patiekalą
+        Your parent's credit card number: Tavo tėvų kreditinės kortelės numerį
+      4-5 Internet Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Kai bandote prisijungti prie svetainės code.org, kuriuo IP adresu kreipsis DNS, kad patektumėte į šią svetainę?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jei DNS nukreipė Jus į svetainę pagal IP adresą 100.42.50.110, kurioje svetainėje Jūs atsidursite?
+        Multiple Choice: Parink teisingą atsakymą
+      4-5 Songwriting Multi 1:
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        Multiple Choice: Parink teisingą atsakymą
+        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kuri iš pateiktų programų žemiau <em>neatitinka</em> tos pačios sekos, kokia yra programoje Program 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which blocks will create the design?: Kurie blokeliai sukurs šį piešinį?
+      4-5 artist multi 1:
+        Artist Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which blocks draw a rectangle with a perimeter of 100?: Su kuriais blokeliais galima nupiešti stačiakampį, kurio perimetras lygus 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: 'Menininkas: parink teisingą atsakymą'
+        Which drawing is symmetric?: Kuris piešinys yra simetriškas?
+      4-5 bee conditionals multi 1:
+        0: '? Violetinė gėlė gali turėti 3, 2 arba 1 nektarą, tačiau nėra žinoma, kiek tiksliai. Kurie blokeliai teisingai patikrina ir surenka visą nektarą iš violetinės gėlės?'
+        1: ': Violetinė gėlė gali turėti 3, 2 arba 1 nektarą, tačiau nėra žinoma, kiek tiksliai. Kurie blokeliai teisingai patikrina ir surenka visą nektarą iš violetinės gėlės?'
+        Bee Conditionals Multiple Choice: 'Bitė: parink teisingą atsakymą'
+        Choose the best blocks.: Pasirink geriausią atsakymą, kuris išsprendžia galvosūkį.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: 'Bitė: klaidų ieškojimas. Parink teisingą atsakymą'
+        Which version of the function will work?: Kurią sudėtinę komandą panaudojus bus išspręstas galvosūkis?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: 'Bitė: parink teisingą atsakymą'
+        Which blocks will solve the puzzle?: Su kuriais blokeliais galima išspręsti šią užduotį?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: 'Labirintas: parink teisingą atsakymą'
+        Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
+      4-5 maze multi 1:
+        Maze Multiple Choice: 'Labirintas:  parink teisingą atsakymą'
+        Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which blocks solve this puzzle?: Kurie blokeliai išspręs šią užduotį?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Which blocks draw the square?: Kurie blokeliai nubrėš kvadratą?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Kiek sudėjus gausime nektaro?
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Kiek sudėjus gausime nektaro?
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Kuris gyvūnas palieka skaitmeninius pirštų antspaudus, kurie jam gali sukelti <strong>didžiausią grėsmę</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Kaip supaprastinti šią kartojimo seką?
+        Multiple Choice: Parink teisingą atsakymą
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which arrow gets the Flurb to the treasure?: Kuri rodyklė nuveda pabaisiuką prie lobio?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which information should you <strong>not</strong> share online?: Kurios informacijos <strong>nederėtų</strong>skelbti internete?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which choice should be the final block?: Kuris blokelis turėtų būti paskutinis?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which repeat block is the same?: Kurie kartojimo blokeliai atlieka tą patį?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Pick the correct repeat block.: Pasirink teisingą kartojimo blokelį.
       K-1 Maze Multiple Choice 2:
         Maze: Labirintas
+        Which answer solves this level?: Kuris atsakymas išsprendžia šią užduotį?
+      K-1 Move It Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which algorithm gets the Flurb to the flowers?: Kuris algoritmas nuveda Flurbą prie gėlių?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which step should go at the beginning of this algorithm?: Kuris žingsnis turėtų būti pačioje algoritmo pradžioje?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Parink teisingą atsakymą
+        Which step should fill in the blank for this algorithm?: Kuris žingsnis turėtų užpildyti tuščia algoritmo vietą?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Parink teisingą atsakymą
+        Which blocks spell "MOVE"?: Kurie blokeliai surenka žodį „MOVE“?
+      K-1 Word Search Multi 3:
+        Multiple Choice: Parink teisingą atsakymą
+        SET: SET
+        SOUTH: SOUTH
+        SQUARE: SQUARE
+        Which word is spelled?: Kuris žodis yra surinktas?
