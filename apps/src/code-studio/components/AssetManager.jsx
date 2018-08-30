@@ -5,7 +5,6 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetRow from './AssetRow';
 import assetListStore from '../assets/assetListStore';
 import AudioRecorder from './AudioRecorder';
-import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AddAssetButtonRow from "./AddAssetButtonRow";
 import i18n from '@cdo/locale';
@@ -152,8 +151,7 @@ export default class AssetManager extends React.Component {
   };
 
   render() {
-    const displayAudioRecorder = this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
-      experiments.isEnabled('recordAudio') && this.state.recordingAudio;
+    const displayAudioRecorder = this.state.audioErrorType !== AudioErrorType.INITIALIZE && this.state.recordingAudio;
     const buttons = (
       <div>
         {this.state.audioErrorType === AudioErrorType.SAVE &&
@@ -175,7 +173,6 @@ export default class AssetManager extends React.Component {
           onSelectRecord={this.onSelectRecord}
           statusMessage={this.state.statusMessage}
           recordDisabled={this.state.recordingAudio}
-          recordEnabled={experiments.isEnabled('recordAudio')}
         />
       </div>
     );
