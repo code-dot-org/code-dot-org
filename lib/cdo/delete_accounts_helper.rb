@@ -80,12 +80,8 @@ class DeleteAccountsHelper
     # Note that the `overflow_activities` table exists only in the production environment.
     if ActiveRecord::Base.connection.data_source_exists? 'overflow_activities'
       @log.puts "Cleaning OverflowActivity"
-      overflow_activities = OverflowActivity.where(user_id: user_id)
-      overflow_activity_count = overflow_activities.count
-      overflow_activities.find_each do |activity|
-        activity.update!(level_source_id: nil)
-      end
-      @log.puts "Cleaned #{overflow_activity_count} OverflowActivity" if overflow_activity_count > 0
+      updated_rows = OverflowActivity.where(user_id: user_id).update_all(level_source_id: nil)
+      @log.puts "Cleaned #{updated_rows} OverflowActivity" if updated_rows > 0
     end
 
     @log.puts "Cleaning GalleryActivity"
