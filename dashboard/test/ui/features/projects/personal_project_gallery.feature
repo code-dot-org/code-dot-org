@@ -50,3 +50,17 @@ Scenario: Can Remix a Project
   Then I click selector ".ui-projects-table-dropdown"
   And I press the child number 1 of class ".pop-up-menu-item"
   And I wait until current URL contains "/edit"
+
+Scenario: Can Delete a Project
+  Given I make a playlab project named "To Be Deleted"
+  Given I am on "http://studio.code.org/projects"
+  And I wait until element "#react-personal-projects" is visible
+  And I wait until element ".ui-personal-projects-table" is visible
+  And the project table contains 1 row
+  And the first project in the table is named "To Be Deleted"
+  Then I click selector ".ui-projects-table-dropdown"
+  And I press the child number 2 of class ".pop-up-menu-item"
+  And I wait until element ".ui-confirm-project-delete-button" is visible
+  Then I click selector ".ui-confirm-project-delete-button"
+  And I wait for 5 seconds
+  And the project table contains 0 rows
