@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
+import SectionSelector from './SectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
@@ -13,6 +14,17 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
+
+const styles = {
+  sectionSelector: {
+    display: 'block',
+    // offset selector's margin so that we're aligned flush right
+    margin: 10,
+    right: 0,
+    // vertically center
+    bottom: 4,
+  },
+};
 
 /**
  * Stage progress component used in level header and script overview.
@@ -86,6 +98,10 @@ class ScriptOverview extends React.Component {
               showScriptVersionWarning={showScriptVersionWarning}
               versions={versions}
             />
+            {!professionalLearningCourse && viewAs === ViewType.Teacher &&
+                (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+              <SectionSelector style={styles.sectionSelector}/>
+            }
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
               professionalLearningCourse={professionalLearningCourse}
@@ -97,8 +113,6 @@ class ScriptOverview extends React.Component {
               viewAs={viewAs}
               isRtl={isRtl}
               resources={teacherResources}
-              scriptHasLockableStages={scriptHasLockableStages}
-              scriptAllowsHiddenStages={scriptAllowsHiddenStages}
             />
           </div>
         )}
