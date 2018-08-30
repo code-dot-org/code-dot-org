@@ -2,6 +2,7 @@
  * Form to create a workshop enrollment
  */
 import React, {PropTypes} from 'react';
+import $ from 'jquery';
 import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';
@@ -302,6 +303,7 @@ export default class EnrollForm extends React.Component {
           confidentiality as Code.org.
         </p>
         <Button
+          id="submit"
           onClick={this.handleClickRegister}
         >
           Register
