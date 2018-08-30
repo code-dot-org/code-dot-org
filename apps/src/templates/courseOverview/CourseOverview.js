@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import $ from 'jquery';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
-import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import { resourceShape } from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -39,19 +39,6 @@ const styles = {
   },
   versionDropdown: {
     marginBottom: 13,
-  },
-  selectSectionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
-    color: color.dark_charcoal,
-    marginTop: 15,
-    marginBottom: 4,
-  },
-  sectionSelector: {
-    width: 350,
-    height: 45,
-    fontSize: 18,
-    marginBottom: 15,
   },
 };
 
@@ -176,8 +163,7 @@ export default class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification/>}
         {isTeacher &&
           <div>
-            <div style={styles.selectSectionLabel}>{i18n.selectSectionLabel()}</div>
-            <SectionSelector style={styles.sectionSelector}/>
+            <LabeledSectionSelector/>
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
               id={id}

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import SectionSelector from './SectionSelector';
+import LabeledSectionSelector from './LabeledSectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
@@ -14,24 +14,6 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
-import i18n from '@cdo/locale';
-import color from '../../../util/color';
-
-const styles = {
-  selectSectionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
-    color: color.dark_charcoal,
-    marginTop: 15,
-    marginBottom: 4,
-  },
-  sectionSelector: {
-    width: 350,
-    height: 45,
-    fontSize: 18,
-    marginBottom: 15,
-  },
-};
 
 /**
  * Stage progress component used in level header and script overview.
@@ -107,10 +89,7 @@ class ScriptOverview extends React.Component {
             />
             {!professionalLearningCourse && viewAs === ViewType.Teacher &&
                 (scriptHasLockableStages || scriptAllowsHiddenStages) &&
-              <div>
-                <div style={styles.selectSectionLabel}>{i18n.selectSectionLabel()}</div>
-                <SectionSelector style={styles.sectionSelector}/>
-              </div>
+              <LabeledSectionSelector/>
             }
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
