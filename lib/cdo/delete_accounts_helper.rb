@@ -111,16 +111,6 @@ class DeleteAccountsHelper
     @log.puts "Cleaned #{authored_hint_view_request_count} AuthoredHintViewRequest" if authored_hint_view_request_count > 0
   end
 
-  # Cleans the responses for all surveys associated with the user.
-  # @param [Integer] user_id The user to clean the surveys of.
-  def clean_survey_responses(user_id)
-    @log.puts "Cleaning SurveyResult"
-    survey_results = SurveyResult.where(user_id: user_id)
-    survey_result_count = survey_results.count
-    survey_results.each(&:clear_open_ended_responses)
-    @log.puts "Cleaned #{survey_result_count} SurveyResult" if survey_result_count > 0
-  end
-
   # Remove all user generated content associated with any PD the user has been through, as well as
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
@@ -382,7 +372,6 @@ class DeleteAccountsHelper
     remove_email_preferences(user.email) if user.email
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
-    clean_survey_responses(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
     clean_and_destroy_pd_content(user.id)
