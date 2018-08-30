@@ -60,6 +60,6 @@ th:
       draw hexagon: วาดรูปหกเหลี่ยม
       draw a square2: วาดสี่เหลี่ยมจตุรัส2
       collect: เก็บ
-      turn left: เลี้ยวซ้าย
-      move forward: ไปข้างหน้า
+      turn left: หันซ้าย
+      move forward: ไว้ข้างหน้า
       turn right: หันขวา

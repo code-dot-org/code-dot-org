@@ -1,9 +1,133 @@
 ur:
   data:
     match:
+      2-3 Big Event Match 1:
+        Matching: مشابہ
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>ن</strong>"
+        "<strong>O</strong>": "<strong>و</strong>"
+        "<strong>P</strong>": "<strong>پ</strong>"
+        "<strong>Q</strong>": "<strong>ق</strong>"
+        Matching: مشابہ
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: اس پروگرام کے لیے گرڈ مشابہ کریں.
+        Matching: مشابہ
       2-3 Maze Match 2:
         Instructions: ہدایات
+      2-3 artist match 1:
+        Artist Matching: فن کارانہ مشابہت
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        Matching: مشابہ
+      4-5 Computational Thinking Match 1:
+        Matching: مشابہ
+      4-5 Suncatchers Match 1:
+        Matching: مشابہ
       4-5 maze match 1:
         Instructions: ہدایات
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: قسم کی بناء پر اشکال سے مشابہ کریں.
+        Matching: مشابہ
+      K-1 Bee Loops Match 1:
+        Match the blocks: بلاک مشابہ کریں
+        Matching: مشابہ
+      K-1 Big Event Match 1:
+        Matching: مشابہ
       K-1 Maze Match 1:
         Instructions: ہدایات
+        Match the puzzles and blocks: پہیلیاں اور بلاکس کو مشابہ کریں
+        Matching: مشابہ
+    multi:
+      2-3 Algorithms Multi 1:
+        Multiple Choice: کثیر انتخاب
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: کثیر انتخاب
+      2-3 Conditionals Multi 1:
+        Multiple Choice: کثیر انتخاب
+      2-3 Getting Loopy Multi 1:
+        Multiple Choice: کثیر انتخاب
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: کثیر انتخاب
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: کثیر انتخاب
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: کثیر انتخاب
+      4-5 Algorithms Multi 1:
+        Banana: کیلا
+        Brushing your teeth: اپنے دانتوں کو برش کرنا
+        Multiple Choice: کثیر انتخاب
+      4-5 Computational Thinking Multi 1:
+        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        Multiple Choice: کثیر انتخاب
+        _____ is _____ a _____.: _____ _____ ایک _____ ہے.
+        _____ is a _____ city.: _____ ایک _____ شہر ہے ۔
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: کثیر انتخاب
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: اپنے بالوں کو برش کرنا
+        Cleaning your room: اپنے کمرے کی صفائی کرنا
+        Eating your dessert: اپنا میٹھا کھائیے
+        Multiple Choice: کثیر انتخاب
+        Washing your face: اپنا چہرہ دھوئیے
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: کثیر انتخاب
+        Your address: آپ کا پتہ
+        Your birthday: آپ کی سالگرہ
+        Your favorite food: آپ کا پسندیدہ کھانا
+        Your parent's credit card number: اپنے والدین کے کریڈٹ کارڈ نمبر
+      4-5 Internet Multi 1:
+        Multiple Choice: کثیر انتخاب
+      4-5 Internet Multi 2:
+        Multiple Choice: کثیر انتخاب
+      4-5 Songwriting Multi 1:
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        Multiple Choice: کثیر انتخاب
+        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: کثیر انتخاب
+      4-5 artist multi 1:
+        Artist Multiple Choice: فن کار کثیر انتخاب
+      4-5 artist multi 2:
+        Artist Multiple Choice: فن کار کثیر انتخاب
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: کثیر انتخاب
+      K-1 Bee 1 Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Bee 1 Multi 2:
+        Multiple Choice: کثیر انتخاب
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Getting Loopy Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: کثیر انتخاب
+      K-1 Move It Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: کثیر انتخاب
+      K-1 Word Search Multi 1:
+        Multiple Choice: کثیر انتخاب
+      K-1 Word Search Multi 3:
+        Multiple Choice: کثیر انتخاب

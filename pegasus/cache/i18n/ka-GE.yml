@@ -25,9 +25,9 @@ ka-GE:
   petition_message: ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს
     პროგრამირება
   petition_sign_message: 'თუ გვეთანხმებით, ჩაწერეთ თქვენი სახელი. შუერთდით #სხვებს
-    ჩვენი ელ-ფოსტის ადრესატების სიაში.'
+    ჩვენი ელფოსტის ადრესატების სიაში.'
   petition_sign_message_support: 'თუ გვიჭერთ მხარს, მაშინ ჩაწერეთ თქვენი სახელი. შეუერთდით
-    #სხვებს ჩვენი ელ-ფოსტის ადრესატების სიაში.'
+    #სხვებს ჩვენი ელფოსტის ადრესატების სიაში.'
   petition_join_others: 'შეუერთდით #სხვებს'
   name: სახელი
   email: ელექტრონული ფოსტა
@@ -474,20 +474,20 @@ ka-GE:
   starwars_blocks_specs: ბევრი სხვადასხვა ენა | თანამედროვე ბრაუზერები, სმარტფონები,
     ტაბლეტები | ასაკი 6-106
   starwars_platform_text: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
-  mc_name: მაინკრაფტის კოდის ერთი საათი
-  mc_longdescription: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს მაინკრაფტის
+  mc_name: Minecraft-ის კოდის ერთი საათი
+  mc_longdescription: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს Minecraft-ის
     თავგადასავლებში.
-  mc_shortdescription: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს მაინკრაფტის
+  mc_shortdescription: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს Minecraft-ის
     თავგადასავლებში.
   mc_gradelevel: ასაკი 6-106
   mc_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   mc_specs: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6+
-  minecraft_designer: მაინკრაფტის დიზაინერი
-  minecraft_adventurer: მაინკრაფტის თავაგადასავლები
-  minecraft_tutorials: 'მაინკრაფტის კოდის ერთი საათი: ტუტორიალები'
+  minecraft_designer: Minecraft-ის დიზაინერი
+  minecraft_adventurer: Minecraft-ის თავაგადასავლები
+  minecraft_tutorials: 'Minecraft-ის კოდის ერთი საათი: ტუტორიალები'
   minecraft_specs: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+ კლასი
   minecraft_agent_button: დაწყება
-  minecraft_designer_description: დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის
+  minecraft_designer_description: დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის
     საკუთარ სამყაროში.
   minecraft_designer_button: დაწყება
   minecraft_adventurer_description: გამოიყენეთ კოდი და შექმენით ალექსის ან სტივის
@@ -495,7 +495,7 @@ ka-GE:
   minecraft_adventurer_button: დაწყება
   minecraft_no_internet: არ გაქვთ ინტერნეტი?
   minecraft_download_adventurer: მაინკრაფთის ოფლაინ–ვერსიის გადმოწერა.
-  minecraft_subtitle: მაინკრაფტის კოდის ერთი საათი
+  minecraft_subtitle: Minecraft-ის კოდის ერთი საათი
   sports_page_title: 'კოდის ერთი საათი: სპორტი'
   sports_og_title: აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია.
   sports_og_description: ჩემპიონები და ოქროს მედლების მფლობელები მოგიწოდებენ, სცადო
@@ -617,6 +617,8 @@ ka-GE:
   volunteer_engineer_submission_field_email_desc: თქვენი ელ. ფოსტის მისამართი ინახება
     კონფიდენციალურად, მაგრამ ჩვენ გამოგიგზავნით მასწავლებლების შეტყობინებებს.
   volunteer_engineer_submission_field_email_placeholder: ელ.ფოსტის მისამართი
+  volunteer_engineer_submission_field_email_preference_privacy: "(იხილეთ ჩვენი კონფიდენციალურობის
+    დებულება)"
   volunteer_engineer_submission_field_email_preference_yes: დიახ
   volunteer_engineer_submission_field_email_preference_no: არა
   volunteer_engineer_submission_final_paragraph: თქვენ იქნებით აღნიშნული რუკაზე, რათა
@@ -1160,7 +1162,7 @@ ka-GE:
   gumball_name: გამბოლი
   classicmaze_name: ლაბირინთი
   iceage_name: გამყინვარების პერიოდი
-  minecraft_name: მაინკრაფტი
+  minecraft_name: Minecraft
   starwarsblocks_name: ვარსკვალვური ომები (ბლოკები)
   hoc-encryption_name: მარტივი შიფრირება
   math_category_name: მათემატიკა

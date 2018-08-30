@@ -378,9 +378,16 @@ ka:
         infinity_playlab_intro: თამაშების ლაბი - შესავალი
         infinity_playlab_events: თამაშების ლაბი - მოვლენები
         infinity_playlab_repeat_forever: თამაშების ლაბი - გამეორება უსასრულოდ
+        csd_concept_how_computers_work: გაეცანით, როგორ მუშაობს კომპიუტერი
         csd_concept_computer: 'როგორ მუშაობს კომპიუტერი: რა არის კომპიუტერი?'
         csd_concept_binary_data: 'როგორ მუშაობს კომპიუტერები: ბინარული სისტემა და მონაცემები'
+        csd_concept_circuits_logic: 'როგორ მუშაობს კომპიუტერი: სქემები და ლოგიკა'
+        csd_concept_memory_cpu_input_output: 'როგორ მუშაობს კომპიუტერი: მეხსიერება, ცენტრალური პროცესორი, შეყვანა და გამოტანა'
+        csd_concept_hardware_software: 'როგორ მუშაობს კომპიუტერი: აპარატული და პროგრამული უზრუნველყოფა'
         csd_concept_search: როგორ მუშაობს ძებნა
+        csd_external_amazon_data: როგორ გამოიყენება დიდი მონაცემები (Big Data), Amazon-ს რეკომენდაციებში ჩვენი ცხოვრების შესაცვლელად
+        csd_external_netflix_data: როგორ ახდენს Netflix-ი სატელევიზიო შოუებისა და ფილმების შემოთავაზებებს?
+        csd_external_waze_data: რატომ არის ამდენი მომხმარებელი აღტაცებული Waze-ით?
         csd_gamelab_animation_tab: ანიმაციის ტაბი
         csd_gamelab_velocity: სიჩქარე
         csd_weblab_intro_1: შესავალი ვებ ლაბში - ნაწილი 1
@@ -398,31 +405,73 @@ ka:
         starwars_blocks_intro: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - შესავალი'
         starwars_blocks_events: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - მოვლენები'
         starwars_blocks_congrats: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - გილოცავთ'
-        mc_intro: მაინკრაფტი - შესავალი
-        mc_repeat: მაინკრაფტი - გამეორება
-        mc_if_statements: მაინკრაფტი - "თუ" დებულებები
-        mc_congrats_share: მაინკრაფტი - გილოცავთ
-        mc_congrats_no_share: მაინკრაფტი - გილოცავთ
+        mc_intro: Minecraft - შესავალი
+        mc_repeat: Minecraft - გამეორება
+        mc_if_statements: Minecraft - "თუ" დებულებები
+        mc_congrats_share: Minecraft - გილოცავთ
+        mc_congrats_no_share: Minecraft - გილოცავთ
         gumball_intro: 'კოდის ერთი საათი: გამბოლი - შესავალი'
         gumball_events: 'კოდის ერთი საათი: გამბოლი - მოვლენები'
         gumball_repeat: 'კოდის ერთი საათი: გამბოლი - ბრძანებების გამეორება'
         iceage_intro: გამყინვარების პერიოდის კოდის ერთი საათი - შესავალი
         iceage_events: გამყინვარების პერიოდის კოდის ერთი საათი - მოვლენები
         iceage_repeat: გამყინვარების პერიოდის კოდის ერთი საათი - ბრძანებების გამეორება
-        mc_2016_intro: მაინკრაფტის კოდის ერთი საათი - შესავალი
-        mc_2016_loops: 'მაინკრაფტის კოდის ერთი საათი: ციკლები'
-        mc_2016_events: 'მაინკრაფტის კოდის ერთი საათი: მოვლენები'
-        mc_2016_spawn: 'მაინკრაფტის კოდის ერთი საათი: შექმნა'
-        mc_2016_congrats: მაინკრაფტის კოდის ერთი საათი - გილოცავთ
+        mc_2016_intro: Minecraft-ის კოდის ერთი საათი - შესავალი
+        mc_2016_loops: 'Minecraft-ის კოდის ერთი საათი: ციკლები'
+        mc_2016_events: 'Minecraft-ის კოდის ერთი საათი: მოვლენები'
+        mc_2016_spawn: 'Minecraft-ის კოდის ერთი საათი: შექმნა'
+        mc_2016_congrats: Minecraft-ის კოდის ერთი საათი - გილოცავთ
         applab_hoc_welcome: აპლიკაციების ლაბორატორიის კოდის საათი - კეთილი იყოს თქვენი მობრძანება
         applab_hoc_setproperty: აპლიკაციების ლაბორატორიის კოდის საათი - setProperty
         applab_hoc_onevent: აპლიკაციების ლაბორატორიის კოდის საათი - onEvent
         applab_hoc_designmode: აპლიკაციების ლაბორატორიის კოდის საათი - დიზაინის რეჟიმი
         applab_hoc_share: აპლიკაციების ლაბორატორიის კოდის საათი - გაზიარება
-        mc_2017_congratulations: მაინკრაფტის კოდის ერთი საათი - გილოცავთ
+        mc_2017_agent_intro: Minecraft კოდის ერთი საათი - აგენტი
+        mc_2017_repeat: Minecraft კოდის ერთი საათი - გაიმეორეთ ციკლებში
+        mc_2017_functions: Minecraft კოდის ერთი საათი - ფუნქციები
+        mc_2017_congratulations: Minecraft-ის კოდის ერთი საათი - გილოცავთ
+        mc_2017_puzzle_1: Minecraft კოდის ერთი საათი - აგენტი
+        mc_2017_puzzle_3: Minecraft კოდის ერთი საათი - გაიმეორეთ ციკლებში
+        mc_2017_puzzle_8: Minecraft კოდის ერთი საათი - ფუნქციები
+        mc_2017_puzzle_12: Minecraft კოდის ერთი საათი - თავისუფალი თამაში
+        hint_videos_d_11_3_first: 'მინიშნების ვიდეოები: D.11.3 პირველი'
+        hint_videos_d_11_3_last: 'მინიშნების ვიდეოები: D.11.3 ბოლო'
+        hint_videos_d_11_4_first: 'მინიშნების ვიდეოები: D.11.4 პირველი'
+        hint_videos_d_11_4_last: 'მინიშნების ვიდეოები: D.11.4 ბოლო'
+        hint_videos_d_11_5_first: 'მინიშნების ვიდეოები: D.11.5 პირველი'
+        hint_videos_d_11_5_last: 'მინიშნების ვიდეოები: D.11.5 ბოლო'
+        hint_videos_d_11_6_first: 'მინიშნების ვიდეოები: D.11.6 პირველი'
+        hint_videos_d_11_6_last: 'მინიშნების ვიდეოები: D.11.6 ბოლო'
+        hint_videos_d_11_7_first: 'მინიშნების ვიდეოები: D.11.7 პირველი'
+        hint_videos_d_11_7_last: 'მინიშნების ვიდეოები: D.11.7 ბოლო'
+        hint_videos_d_11_9_first: 'მინიშნების ვიდეოები: D.11.9 პირველი'
+        hint_videos_d_11_9_last: 'მინიშნების ვიდეოები: D.11.9 ბოლო'
+        hint_videos_d_11_11_first: 'მინიშნების ვიდეოები: D.11.11 პირველი'
+        hint_videos_d_11_11_last: 'მინიშნების ვიდეოები: D.11.11 ბოლო'
+        applab_intro_welcome: აპების ლაბი - დასაწყისი
+        applab_intro_events: აპების ლაბი - შესძინე ინტერაქტიულობა
+        applab_intro_sounds: აპების ლაბი - სურათები და ხმები
+        applab_intro_designmode: აპების ლაბი - დიზაინის რეჟიმი
+        applab_intro_share: აპების ლაბი - გააზიარეთ თქვენი აპი
         csd_applab_arrays: შესავალი მასივებში
+        CSF_skinOverview_Harvester: მოსავლის ამღები
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: ციკლები BB-8-სთან ერთად
+        CSF_harvester_skinOverview_K-1: მოსავლის ამღები
+        CSF_scrat_loops_K1: ციკლები გამყინვარების პერიოდში
+        CSF_scrat_loops_CF: ციკლები გამყინვარების პერიოდში
+        CSF_if_allskins: ბლოკი „თუ“
+        CSF_ifelse_allskins: '„თუ/სხვაგვარად“ ბლოკების გამოყენება'
         CSF_loops_AB: ციკლები
+        csd_gamelab_booleans: ბულის ტიპის გამოთქმები
+        csd_gamelab_conditional_statements: პირობითი დებულებები
+        csd_gamelab_if_else: '„თუ/სხვაგვარად“ დებულებები'
+        CSF_SpriteLabIntro_CDEF: ეს სპრაიტების ლაბია
+        CSF_Spritelab_MakeSprite_CDEF: როგორ შევქმნათ სპრაიტი სპრაიტების ლაბში
+        CDEF_Video_SpritesInAction: სპრაიტები მოქმედებაში
+        CSF_SpriteLab_SpritesInAction_CDEF: სპრაიტები მოქმედებაში
+        CSF_StarWars_ProjectIntro: შესავალი ვარსკვლავური ომების პროექტში
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ
