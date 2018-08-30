@@ -2347,12 +2347,12 @@ zh-CN:
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
               name: '注意: 已弃用。教师看不到结果。计算机科学原理最终评估'
         cspexam1-mWU7ilDYM9:
-          description_short: 这一多项选择评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第1部分。
+          description_short: 这一选择题评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第1部分。
           stages:
             CS Principles Culminating Assessment Part 1:
               name: 计算机科学原理最终评估第1部分
         cspexam2-AKwgAh1ac5:
-          description_short: 这一多项选择评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第2部分。
+          description_short: 这一选择题评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第2部分。
           stages:
             CS Principles Culminating Assessment Part 2:
               name: 计算机科学原理最终评估第2部分
@@ -3131,8 +3131,8 @@ zh-CN:
                 学生检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
             Processing:
               name: 正在处理中
-              description_student: 这一课深入探讨了作为计算机定义一部分引入的处理概念。 结对一起工作, 把一副牌按顺序排列, 一个形式的处理信息。
-                最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
+              description_student: 这一课深入探讨了作为计算机定义的一部分引入的处理的含义。 结对一起工作, 把一副牌按顺序排列,
+                一个处理信息的表单。 最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
               description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个约束很少, 用于引入一个高级的处理定义。接下来的会引入更多的约束,
                 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法,
                 以及产生解决问题的算法的价值。
@@ -7165,7 +7165,7 @@ zh-CN:
             Nested Loops in Bee:
               name: 蜜蜂里的嵌套循环
             Nested Loops in Frozen:
-              name: 冰雪奇缘里的嵌套循环
+              name: 嵌套循环与安娜和爱莎
             Conditionals with Cards:
               name: 用 扑克牌 的 条件子句
             Conditionals & Loops in Harvester:
@@ -7829,8 +7829,8 @@ zh-CN:
                 学生检查在计算设备上所做的常见活动, 并从图表中选择用于该活动的输入和输出。
             Processing:
               name: 正在处理中
-              description_student: 这一课深入探讨了作为计算机定义一部分引入的处理概念。 结对一起工作, 把一副牌按顺序排列, 一个形式的处理信息。
-                最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
+              description_student: 这一课深入探讨了作为计算机定义的一部分引入的处理的含义。 结对一起工作, 把一副牌按顺序排列,
+                一个处理信息的表单。 最后, 课堂讨论了在解决信息问题的上下文中的处理方法。
               description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个活动的约束很少,
                 用于引入一个高级的处理定义。接下来的会引入更多的约束, 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法,
                 以及产生解决问题的算法的价值。
@@ -8621,3 +8621,22 @@ zh-CN:
           stages:
             Deeper Learning Overview:
               name: 更深的学习概览
+        spritelab-simple:
+          description: 这是为code.org新的精灵实验室工具准备的试验课程E/F。
+          description_short: 这是为code.org新的精灵实验室工具准备的试验课程E/F。
+          description_audience: 课程E/F学生
+          stages:
+            Fish Tank - Creating Sprites:
+              name: 鱼缸 - 创建精灵
+            Alien Dance Party - Input:
+              name: 外星人舞蹈派对 - 输入
+            Virtual Pet - Interactions:
+              name: 虚拟宠物 - 交互
+        spritelab-ee:
+          stages:
+            Fish Tank - Creating Sprites:
+              name: 鱼缸 - 创建精灵
+            Alien Dance Party - Input:
+              name: 外星人舞蹈派对 - 输入
+            Virtual Pet - Interactions:
+              name: 虚拟宠物 - 交互
