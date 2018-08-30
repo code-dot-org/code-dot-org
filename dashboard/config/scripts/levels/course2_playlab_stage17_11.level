@@ -43,7 +43,7 @@
       "upButton"
     ],
     "first_sprite_index": "0",
-    "markdown_instructions": "Create your own story. When you're done, click Finish to let friends try your story on their phones.\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary><b>Need some ideas?</b></summary>\r\n\t<br/>\r\n\t<h5>\r\n\t\t<ul>\r\n        \t<li><strong>Who's there?</strong> - Make characters appear with random images, so no one knows who's showing up next.</li>\r\n            <li><strong>Going on an Adventure</strong> - Change the background, then have the characters talk about where they are now. </li>\r\n            <li><strong>Pinball</strong> - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen. </li>\r\n        </ul>\r\n\t</h5>\r\n</details>\r\n</h5>\r\n",
+    "markdown_instructions": "Create your own story. When you're done, click Finish to let friends try your story on their phones.\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary>\n\n<b>Need some ideas?</b>\n\n</summary>\r\n\t<br/>\r\n\t<h5>\r\n\t\t<ul>\r\n        \t<li><strong>Who's there?</strong> - Make characters appear with random images, so no one knows who's showing up next.</li>\r\n            <li><strong>Going on an Adventure</strong> - Change the background, then have the characters talk about where they are now. </li>\r\n            <li><strong>Pinball</strong> - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen. </li>\r\n        </ul>\r\n\t</h5>\r\n</details>\r\n</h5>\r\n",
     "contained_level_names": null
   },
   "published": true,

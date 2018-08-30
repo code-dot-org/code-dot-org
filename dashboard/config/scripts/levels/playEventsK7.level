@@ -36,7 +36,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "markdown_instructions": "What else can you do in this fun scene?\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary><b>Need some ideas?</b></summary>\r\n\t<br/>\r\n\t<h5>\r\n\t\t<ul>\r\n        \t<li><strong>Conversation</strong> - Have the sprites talk to eachother when you click on them.</li>\r\n            <li><strong>Pinball</strong> - Make one sprite play a noise when the other runs into it.</li>\r\n            <li><strong>Arrows</strong> - Write a program so when each arrow key is pressed, the sprite moves in that direction!</li>\r\n        </ul>\r\n\t</h5>\r\n</details>\r\n</h5>",
+    "markdown_instructions": "What else can you do in this fun scene?\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary>\n\n<b>Need some ideas?</b>\n\n</summary>\r\n\t<br/>\r\n\t<h5>\r\n\t\t<ul>\r\n        \t<li><strong>Conversation</strong> - Have the sprites talk to eachother when you click on them.</li>\r\n            <li><strong>Pinball</strong> - Make one sprite play a noise when the other runs into it.</li>\r\n            <li><strong>Arrows</strong> - Write a program so when each arrow key is pressed, the sprite moves in that direction!</li>\r\n        </ul>\r\n\t</h5>\r\n</details>\r\n</h5>",
     "contained_level_names": null
   },
   "published": true,
