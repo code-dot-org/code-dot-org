@@ -67,4 +67,14 @@ class AuthoredHintViewRequest < ActiveRecord::Base
       Gatekeeper.allows('authored_hint_view_request', default: true)
     end
   end
+
+  #
+  # Part of the account purge operation
+  #
+  def clear_level_source_associations
+    self.prev_level_source_id = nil
+    self.next_level_source_id = nil
+    self.final_level_source_id = nil
+    save!
+  end
 end
