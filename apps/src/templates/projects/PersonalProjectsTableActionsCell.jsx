@@ -151,6 +151,7 @@ class PersonalProjectsTableActionsCell extends Component {
               text={i18n.save()}
               style={styles.saveButton}
               disabled={isSaving}
+              className="ui-projects-rename-save"
             />
             <br/>
             <Button
