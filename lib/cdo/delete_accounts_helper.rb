@@ -1,6 +1,7 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
 require 'cdo/db'
+require 'cdo/pardot'
 require 'cdo/solr'
 require 'cdo/solr_helper'
 
@@ -234,7 +235,7 @@ class DeleteAccountsHelper
     #       For now this is unsafe to run while contact rollups is itself running.
     # Though we have the DB tables in all environments, we only sync data from the production
     # environment with Pardot.
-    if rack_env == :production
+    if CDO.rack_env? :production
       pardot_ids = contact_rollups_recordset.
         select(:pardot_id).
         map {|contact_rollup| contact_rollup[:pardot_id]}
