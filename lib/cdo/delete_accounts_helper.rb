@@ -15,17 +15,22 @@ class DeleteAccountsHelper
   ).freeze
 
   # @param [String] solr configuration for Solr server for this environment
+  # @param [IO|StringIO] log to record granular activity while deleting accounts.
   # @param [Boolean] bypass_safety_constraints to purge accounts without the
   #   usual checks on account type, row limits, etc.  For use only when an
   #   engineer needs to purge an account manually after investigating whatever
   #   prevented it from being automatically purged.
-  def initialize(solr: nil, bypass_safety_constraints: false)
+  def initialize(solr: nil, log: STDERR, bypass_safety_constraints: false)
     if solr || CDO.solr_server
       @solr = solr || Solr::Server.new(host: CDO.solr_server)
     end
     @pegasus_db = PEGASUS_DB
 
+    @log = log
+    raise ArgumentError, 'log must be an IO stream' unless @log.is_a?(IO) || @log.is_a?(StringIO)
+
     @bypass_safety_constraints = bypass_safety_constraints
+    raise ArgumentError, 'bypass_safety_constraints must be boolean' unless [true, false].include? @bypass_safety_constraints
   end
 
   # Deletes all project-backed progress associated with a user.
@@ -33,7 +38,10 @@ class DeleteAccountsHelper
   def delete_project_backed_progress(user)
     return unless user.user_storage_id
 
+    @log.puts "Deleting project backed progress"
+
     channel_ids = @pegasus_db[:storage_apps].where(storage_id: user.user_storage_id).map(:id)
+    channel_count = channel_ids.count
     encrypted_channel_ids = channel_ids.map do |id|
       storage_encrypt_channel_id user.user_storage_id, id
     end
@@ -53,43 +61,70 @@ class DeleteAccountsHelper
     encrypted_channel_ids.each do |encrypted_channel_id|
       FirebaseHelper.delete_channel encrypted_channel_id
     end
+
+    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
   # @param [Integer] user_id The user to clean the LevelSource-backed progress of.
   def clean_level_source_backed_progress(user_id)
-    UserLevel.where(user_id: user_id).find_each do |user_level|
+    @log.puts "Cleaning UserLevel"
+    user_levels = UserLevel.where(user_id: user_id)
+    user_level_count = user_levels.count
+    user_levels.find_each do |user_level|
       user_level.update!(level_source_id: nil)
     end
+    @log.puts "Cleaned #{user_level_count} UserLevel" if user_level_count > 0
 
-    Activity.where(user_id: user_id).find_each do |activity|
+    @log.puts "Cleaning Activity"
+    activities = Activity.where(user_id: user_id)
+    activity_count = activities.count
+    activities.find_each do |activity|
       activity.update!(level_source_id: nil)
     end
+    @log.puts "Cleaned #{activity_count} Activity" if activity_count > 0
 
     # Note that the `overflow_activities` table exists only in the production environment.
     if ActiveRecord::Base.connection.data_source_exists? 'overflow_activities'
-      OverflowActivity.where(user_id: user_id).find_each do |activity|
+      @log.puts "Cleaning OverflowActivity"
+      overflow_activities = OverflowActivity.where(user_id: user_id)
+      overflow_activity_count = overflow_activities.count
+      overflow_activities.find_each do |activity|
         activity.update!(level_source_id: nil)
       end
+      @log.puts "Cleaned #{overflow_activity_count} OverflowActivity" if overflow_activity_count > 0
     end
 
-    GalleryActivity.where(user_id: user_id).each do |gallery_activity|
+    @log.puts "Cleaning GalleryActivity"
+    gallery_activities = GalleryActivity.where(user_id: user_id)
+    gallery_activity_count = gallery_activities.count
+    gallery_activities.each do |gallery_activity|
       gallery_activity.update!(level_source_id: nil)
     end
+    @log.puts "Cleaned #{gallery_activity_count} GalleryActivity" if gallery_activity_count > 0
 
-    AuthoredHintViewRequest.where(user_id: user_id).each(&:clear_level_source_associations)
+    @log.puts "Cleaning AuthoredHintViewRequest"
+    authored_hint_view_requests = AuthoredHintViewRequest.where(user_id: user_id)
+    authored_hint_view_request_count = authored_hint_view_requests.count
+    authored_hint_view_requests.each(&:clear_level_source_associations)
+    @log.puts "Cleaned #{authored_hint_view_request_count} AuthoredHintViewRequest" if authored_hint_view_request_count > 0
   end
 
   # Cleans the responses for all surveys associated with the user.
   # @param [Integer] user_id The user to clean the surveys of.
   def clean_survey_responses(user_id)
-    SurveyResult.where(user_id: user_id).each(&:clear_open_ended_responses)
+    @log.puts "Cleaning SurveyResult"
+    survey_results = SurveyResult.where(user_id: user_id)
+    survey_result_count = survey_results.count
+    survey_results.each(&:clear_open_ended_responses)
+    @log.puts "Cleaned #{survey_result_count} SurveyResult" if survey_result_count > 0
   end
 
   # Remove all user generated content associated with any PD the user has been through, as well as
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
   def clean_and_destroy_pd_content(user_id)
+    @log.puts "Cleaning PD content"
     remove_from_cohorts user_id
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
@@ -165,6 +200,7 @@ class DeleteAccountsHelper
   # Anonymizes the user by deleting various pieces of PII and PPII
   # @param [User] user to be anonymized.
   def anonymize_user(user)
+    @log.puts "Anonymizing user"
     UserGeo.where(user_id: user.id).each(&:clear_user_geo)
     SignIn.where(user_id: user.id).destroy_all
     user.clear_user_and_mark_purged
@@ -173,12 +209,14 @@ class DeleteAccountsHelper
   # Cleans all sections owned by the user.
   # @param [Integer] The ID of the user to anonymize the sections of.
   def clean_user_sections(user_id)
+    @log.puts "Cleaning Section"
     Section.with_deleted.where(user_id: user_id).each do |section|
       section.update! name: nil, code: nil
     end
   end
 
   def remove_user_from_sections_as_student(user)
+    @log.puts "Cleaning Follower"
     Follower.with_deleted.where(student_user: user).each(&:really_destroy!)
   end
 
@@ -212,6 +250,7 @@ class DeleteAccountsHelper
   # contact_rollups pegasus table (master and reporting)
   # @param [Integer] The user ID to purge from Pardot.
   def remove_from_pardot_by_user_id(user_id)
+    @log.puts "Removing from Pardot"
     remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id)
   end
 
@@ -224,6 +263,7 @@ class DeleteAccountsHelper
   # @param [Integer] The user ID to purge from SOLR.
   def remove_from_solr(user_id)
     return unless @solr
+    @log.puts "Removing from Solr"
     SolrHelper.delete_document(@solr, 'user', user_id)
   end
 
@@ -233,6 +273,7 @@ class DeleteAccountsHelper
   def purge_unshared_studio_person(user)
     return unless user.studio_person
     if user.studio_person.users.with_deleted.count <= 1
+      @log.puts "Removing StudioPerson"
       user.studio_person.destroy
     end
   end
@@ -240,30 +281,51 @@ class DeleteAccountsHelper
   # Removes CensusSubmission records associated with this email address.
   # @param [String] email An email address
   def remove_census_submissions(email)
-    Census::CensusSubmission.where(submitter_email_address: email).each(&:destroy)
+    @log.puts "Removing CensusSubmission"
+    records = Census::CensusSubmission.where(submitter_email_address: email)
+    record_count = records.count
+    records.each(&:destroy)
+    @log.puts "Removed #{record_count} CensusSubmission" if record_count > 0
   end
 
   # Removes EmailPreference records associated with this email address.
   # @param [String] email An email address
   def remove_email_preferences(email)
-    EmailPreference.where(email: email).each(&:destroy)
+    @log.puts "Removing EmailPreference"
+    records = EmailPreference.where(email: email)
+    record_count = records.count
+    records.each(&:destroy)
+    @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
   end
 
   # Removes signature and school_id from applications for this user
   # @param [User] user
   def anonymize_circuit_playground_discount_application(user)
-    user.circuit_playground_discount_application&.anonymize
+    @log.puts "Anonymizing CircuitPlaygroundDiscountApplication"
+    if user.circuit_playground_discount_application
+      user.circuit_playground_discount_application.anonymize
+      @log.puts "Anonymized 1 CircuitPlaygroundDiscountApplication"
+    end
   end
 
   def purge_teacher_feedbacks(user_id)
+    @log.puts "Removing TeacherFeedback"
+
     # Purge feedback written by target user
-    TeacherFeedback.with_deleted.where(teacher_id: user_id).each(&:really_destroy!)
+    as_teacher = TeacherFeedback.with_deleted.where(teacher_id: user_id)
+    as_teacher_count = as_teacher.count
+    as_teacher.each(&:really_destroy!)
+    @log.puts "Deleted #{as_teacher_count} TeacherFeedback" if as_teacher_count > 0
+
     # Soft-delete feedback written to target user
-    TeacherFeedback.with_deleted.where(student_id: user_id).each do |feedback|
+    as_student = TeacherFeedback.with_deleted.where(student_id: user_id)
+    as_student_count = as_student.count
+    as_student.each do |feedback|
       feedback.student = nil
       feedback.destroy
       feedback.save!
     end
+    @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
   end
 
   def check_safety_constraints(user)
@@ -297,16 +359,23 @@ class DeleteAccountsHelper
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
   def purge_user(user)
-    return if user.purged_at
+    if user.purged_at
+      @log.puts "User is already purged."
+      return
+    end
     check_safety_constraints user
 
+    @log.puts "Revoking all user permissions"
     user.revoke_all_permissions
+
     # NOTE: Calling user.destroy early assures the user is not able to access
     # an account in a partially purged state should an exception occur
     # somewhere in this method.
     # NOTE: Do not gate any deletion logic on `user.user_type`: A student
     # account may be a former teacher account, or vice-versa.
+    @log.puts "Soft-deleting user"
     user.destroy
+
     purge_teacher_feedbacks(user.id)
     remove_census_submissions(user.email) if user.email
     remove_email_preferences(user.email) if user.email
@@ -348,6 +417,7 @@ class DeleteAccountsHelper
   private
 
   def clean_pegasus_forms_for_user(user)
+    @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
 
