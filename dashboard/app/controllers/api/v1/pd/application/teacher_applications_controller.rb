@@ -8,6 +8,10 @@ module Api::V1::Pd::Application
       )
     end
 
+    def resend_principal_approval
+      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(Pd::Application::Teacher1819Application.find(params[:id])).deliver_now
+    end
+
     protected
 
     def on_successful_create

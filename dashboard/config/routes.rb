@@ -419,6 +419,7 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
         post :teacher, to: 'teacher_applications#create'
+        post 'resend_principal_approval/:id', to: 'teacher_applications#resend_principal_approval'
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 
