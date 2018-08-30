@@ -17,11 +17,15 @@ export default class SchoolAutocompleteDropdown extends Component {
     schoolFilter: PropTypes.func,
   };
 
+  state = {
+    knownValue: null,
+    knownLabel: null
+  };
+
   static defaultProps = {
     fieldName: "nces_school_s",
     schoolFilter: () => true,
   };
-
 
   constructSchoolOption = school => ({
     value: school.nces_id.toString(),
@@ -96,7 +100,31 @@ export default class SchoolAutocompleteDropdown extends Component {
     });
   };
 
+  onChange = (value) => {
+    if (value) {
+      // Cache the label for this value in case we need it for the next render.
+      this.setState({knownValue: value.value, knownLabel: value.label});
+    }
+    this.props.onChange(value);
+  };
+
   render() {
+    // value will end up either an object or a string, depending whether we have
+    // a label or not.  It appears to be the quirky behavior of react-select 1.x.
+    // See https://github.com/JedWatson/react-select/issues/865.
+    let value;
+    if (this.props.schoolDropdownOption) {
+      // Use the provided value & label object.
+      value = this.props.schoolDropdownOption;
+    } else if (this.props.value === this.state.knownValue) {
+      // Use the cached label for this value.
+      value = {value: this.props.value, label: this.state.knownLabel};
+    } else {
+      // Use this value (typically an initial value).  The label will be
+      // asychronously retrieved in this.getOptions().
+      value = this.props.value;
+    }
+
     return (
       <VirtualizedSelect
         id="nces_school"
@@ -105,8 +133,8 @@ export default class SchoolAutocompleteDropdown extends Component {
         loadOptions={this.getOptions}
         cache={false}
         filterOption={() => true}
-        value={this.props.schoolDropdownOption ? this.props.schoolDropdownOption : this.props.value}
-        onChange={this.props.onChange}
+        value={value}
+        onChange={this.onChange}
         placeholder={i18n.searchForSchool()}
       />
     );

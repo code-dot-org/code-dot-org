@@ -55,6 +55,14 @@
     = render partial: 'csd_pre_course_reading'
   - elsif @workshop.course == Pd::Workshop::COURSE_CSP
     = render partial: 'csp_pre_course_reading'
+
+%p
+  If you have any questions or need to request special accommodations, please reach out to your
+  workshop organizer directly:
+  = @workshop.organizer.name
+  at
+  = mail_to(@workshop.organizer.email) + '.'
+
 %p
   Thank you,
   %br

@@ -55,6 +55,8 @@ import ArtistSkins from './skins';
 import dom from '../dom';
 import {SignInState} from '../code-studio/progressRedux';
 import Visualization from '@code-dot-org/artist';
+import experiments from '../util/experiments';
+import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -179,6 +181,8 @@ var Artist = function () {
 
   // these get set by init based on skin.
   this.speedSlider = null;
+
+  this.immovableBlocks = [];
 };
 
 module.exports = Artist;
@@ -190,7 +194,7 @@ module.exports.Visualization = Visualization;
  */
 Artist.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
-  this.studioApp_.reset = _.bind(this.reset, this);
+  this.studioApp_.reset = _.bind(this.resetButtonClick, this);
   this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
 
   this.studioApp_.setCheckForEmptyBlocks(true);
@@ -256,7 +260,7 @@ Artist.prototype.preloadAllPatternImages = function () {
   });
 
   const patternOptions = (this.skin && this.skin.lineStylePatternOptions);
-  if (patternOptions.length) {
+  if (patternOptions && patternOptions.length) {
     return Promise.all(patternOptions.map(loadPattern));
   } else {
     return Promise.resolve();
@@ -297,6 +301,10 @@ Artist.prototype.init = function (config) {
     showDecoration: () => this.skin.id === "elsa",
   });
 
+  this.limitedAutoRun = experiments.isEnabled('limited-auto-artist') ||
+    this.level.autoRun === ArtistAutorunOptions.limited_auto_run;
+  this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
+
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
@@ -334,6 +342,20 @@ Artist.prototype.init = function (config) {
       iconPath={iconPath}
     />
   );
+
+  if (this.autoRun) {
+    this.studioApp_.addChangeHandler(() => {
+      if (this.limitedAutoRun) {
+        if (this.studioApp_.isRunning() && !this.executing) {
+          this.execute();
+        }
+      } else {
+        if (!this.executing) {
+          this.execute();
+        }
+      }
+    });
+  }
 
   function onMount() {
     this.studioApp_.init(config);
@@ -461,9 +483,11 @@ Artist.prototype.afterInject_ = function (config) {
     this.speedSlider.setValue(config.level.sliderSpeed);
   }
 
+  this.shouldAnimate_ = true;
   // Do not animate drawing, used for tests
   if (config.level.instant) {
     this.instant_ = true;
+    this.shouldAnimate_ = false;
   }
 
   if (this.studioApp_.isUsingBlockly()) {
@@ -536,7 +560,7 @@ Artist.prototype.drawAnswer = function (canvas) {
  * composited over the scratch canvas.
  */
 Artist.prototype.drawLogOnCanvas = function (log, canvas) {
-  this.studioApp_.reset();
+  this.reset();
   while (log.length) {
     var tuple = log.shift();
     this.step(tuple[0], tuple.slice(1), {smoothAnimate: false});
@@ -676,13 +700,30 @@ Artist.prototype.reset = function (ignore) {
  * Click the run button.  Start the program.
  */
 Artist.prototype.runButtonClick = function () {
+  this.shouldAnimate_ = !this.instant_;
   this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);
   }
   this.studioApp_.attempts++;
+  if (this.limitedAutoRun) {
+    Blockly.mainBlockSpace.blockSpaceEditor.lockMovement();
+  }
   this.execute();
+};
+
+Artist.prototype.resetButtonClick = function () {
+  this.shouldAnimate_ = !this.instant_ && !this.autoRun;
+  if (this.limitedAutoRun) {
+    Blockly.mainBlockSpace.blockSpaceEditor.unlockMovement();
+  }
+
+  if (this.autoRun && !this.limitedAutoRun) {
+    this.execute();
+  } else {
+    this.reset();
+  }
 };
 
 Artist.prototype.evalCode = function (code) {
@@ -745,10 +786,11 @@ Artist.prototype.handleExecutionError = function (err, lineNumber, outputString)
  * Execute the user's code.  Heaven help us...
  */
 Artist.prototype.execute = function () {
+  this.executing = true;
   this.api.log = [];
 
   // Reset the graphic.
-  this.studioApp_.reset();
+  this.reset();
 
   if (this.studioApp_.hasUnwantedExtraTopBlocks() ||
       this.studioApp_.hasDuplicateVariablesInForLoops()) {
@@ -773,7 +815,7 @@ Artist.prototype.execute = function () {
 
   // If this is a free play level, save the code every time the run button is
   // clicked rather than only on finish
-  if (this.level.freePlay) {
+  if (this.level.freePlay && (this.shouldAnimate_ || this.instant_)) {
     this.levelComplete = true;
     this.testResults = TestResults.FREE_PLAY;
     this.report(false);
@@ -789,23 +831,21 @@ Artist.prototype.execute = function () {
 
     // Then, reset our state and draw the user's actions in a visible, animated
     // way
-    this.studioApp_.reset();
+    this.reset();
   }
 
-  this.studioApp_.playAudio('start', {loop : true});
-
-  // animate the transcript.
-
-  if (this.instant_) {
-    while (this.animate()) {}
-  } else {
+  if (this.shouldAnimate_) {
+    this.studioApp_.playAudio('start', {loop : true});
+    // animate the transcript.
     this.pid = window.setTimeout(_.bind(this.animate, this), 100);
+    if (this.studioApp_.isUsingBlockly()) {
+      // Disable toolbox while running
+      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+    }
+  } else {
+    while (this.animate()) {}
   }
 
-  if (this.studioApp_.isUsingBlockly()) {
-    // Disable toolbox while running
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-  }
 };
 
 /**
@@ -843,6 +883,9 @@ Artist.prototype.checkforTurnAndMove_ = function () {
  */
 Artist.prototype.executeTuple_ = function () {
   if (this.api.log.length === 0) {
+    if (!this.shouldAnimate_) {
+      this.visualization.display();
+    }
     return false;
   }
 
@@ -856,7 +899,9 @@ Artist.prototype.executeTuple_ = function () {
     var command = tuple[0];
     var id = tuple[tuple.length-1];
 
-    this.studioApp_.highlight(String(id));
+    if (this.shouldAnimate_) {
+      this.studioApp_.highlight(String(id));
+    }
 
     // Should we execute another tuple in this frame of animation?
     if (this.skin.consolidateTurnAndMove && this.checkforTurnAndMove_()) {
@@ -865,7 +910,9 @@ Artist.prototype.executeTuple_ = function () {
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
     var tupleDone = this.step(command, tuple.slice(1), {smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple});
-    this.visualization.display();
+    if (this.shouldAnimate_) {
+      this.visualization.display();
+    }
 
     if (tupleDone) {
       this.api.log.shift();
@@ -892,8 +939,14 @@ Artist.prototype.finishExecution_ = function () {
   if (this.level.freePlay) {
     window.dispatchEvent(utils.createEvent('artistDrawingComplete'));
   } else {
-    this.checkAnswer();
+    if (this.shouldAnimate_ || this.instant_) {
+      this.checkAnswer();
+    }
   }
+  setTimeout(() => {
+    this.executing = false;
+    this.shouldAnimate_ = !this.instant_ && !this.autoRun;
+  }, 0);
 };
 
 /**
@@ -945,7 +998,7 @@ Artist.prototype.animate = function () {
     }
   }
 
-  if (!this.instant_) {
+  if (this.shouldAnimate_) {
     this.pid = window.setTimeout(_.bind(this.animate, this), stepSpeed);
   }
   return true;
