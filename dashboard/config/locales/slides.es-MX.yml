@@ -3002,16 +3002,16 @@ es-MX:
           evento que se hace clic en el botón se ejecuta todo este código."'
       6:
         image: notes/applab_intro_events_6.png
-        text: Probémoslo. Bloques afuera de un onEvent todavía se ejecutan justo después
-          así que la pantalla empieza azul.
+        text: Probémoslo. Bloques afuera de un onEvent se ejecutan justo después así
+          que la pantalla empieza azul.
       7:
         image: notes/applab_intro_events_7.png
         text: Y cuando hago clic en el botón grande se ejecuta el código dentro de
           mi onEvent y mi pantalla se pone verde.
       8:
         image: notes/applab_intro_events_8.png
-        text: Si desea cambiar más cosas después de este evento, como el texto en
-          la pantalla sólo añada más código para el onEvent
+        text: Si deseas cambiar más cosas después de este evento, como el texto en
+          la pantalla sólo añade más código al evento
       9:
         image: notes/applab_intro_events_9.png
         text: Para hacer que su programa responda a más eventos añada mas bloques
@@ -3125,7 +3125,8 @@ es-MX:
       12: 
     mc_2017_repeat:
       1: 
-      2: 
+      2:
+        text: 'Stacy: Woah, creo que estoy en el lugar correcto. ¡Esto es increíble!'
       3: 
       4:
         image: notes/mc_2017_repeat_4.png

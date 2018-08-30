@@ -46,7 +46,7 @@
     "hide_custom_blocks": "false",
     "parent_level_id": 14369,
     "custom_helper_library": "function spriteCostume(costume) {\r\n  \r\n  return costume;\r\n}",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"spriteCostume\",\r\n    \"inline\": false,\r\n    \"blockText\": \"{COSTUME}\",\r\n    \"returnType\": \"None\",\r\n    \"color\": [\r\n      355,\r\n      \".7\",\r\n      \".7\"\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"COSTUME\",\r\n        \"customInput\": \"costumePicker\"\r\n      }\r\n    ]\r\n  }\r\n]",
+    "custom_blocks": "[]\n",
     "contained_level_names": null
   },
   "published": true,

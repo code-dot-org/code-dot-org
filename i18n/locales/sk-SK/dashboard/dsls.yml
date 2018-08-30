@@ -6,12 +6,241 @@ sk:
       Prepare for your presentation:
         title: nadpis
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Spoj kombináciu tlačidiel k tanečným pohybom.
+        Matching: Zodpovedajúce
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Zodpovedajúce
+        Use the key to match each code to its letter: Použi kľúč na spojenie každého kódu s jeho písmenom
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Spoj mirežku s programom.
+        Matching: Zodpovedajúce
       2-3 Maze Match 2:
         Instructions: Inštrukcie
+        Match the puzzles to the blocks: Spoj úlohu s blokmi
+        Maze Match: Spájanie s bludiskom
+      2-3 artist loops match 1:
+        Match the loop to the shape: Spoj cyklus s tvarom
+      2-3 artist match 1:
+        Artist Matching: Umelcovo párovanie
+        Match the shape with the blocks that complete it.: Spoj tvary s blokmi, ktoré ich dokončia.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Spoj úlohu s blokmi
+        Maze Match One: Spájanie s bludiskom 1
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Pričítaj výsledok hodu Hráča 1 k celkovému skóre</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Porovnaj skóre hráčov, aby si zistil, kto vyhral</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Hráč 1 hodí kockou</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Nastav skóre Hráča 1 na 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Spoj kroky v hre Závod kociek s poradím, v akom by sa mali objaviť v algoritme.
+        Matching: Zodpovedajúce
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Kolesá/strana: 2<br/>Okná/strana: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Kolesá/strana: 2<br/>Okná/strana: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Kolesá/strana: 2<br/>Okná/strana: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Kolesá/strana: 3<br/>Okná/strana: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Každé z týchto vozidiel je rozložené na malé súčiastky. Spoj každé vozidlo so zoznamom jeho súčiastok.
+        Matching: Zodpovedajúce
+      4-5 Suncatchers Match 1:
+        Match each program to the word it makes, using the provided group of skills.: Spárujte každý z programov so slovom ktoré ho daný program vytvorí použitím danej skupiny vlastností a schopností.
+        Matching: Zodpovedajúce
       4-5 maze match 1:
         Instructions: Inštrukcie
+        Match the puzzles to the blocks: Spoj úlohu s blokmi
+        Maze Match: Spájanie s bludiskom
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Spárujte tvary podľa ich typu.
+        Matching: Zodpovedajúce
+      K-1 Bee Loops Match 1:
+        Match the blocks: Spárujt bloky
+        Matching: Zodpovedajúce
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Spoj kombináciu tlačidiel k tanečným pohybom.
+        Matching: Zodpovedajúce
       K-1 Maze Match 1:
         Instructions: Inštrukcie
+        Match the puzzles and blocks: Spárujte hádanky a bloky
+        Matching: Zodpovedajúce
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Vyberte algoritmus pre daný obrázok.
+        Multiple Choice: Viacnásobný výber
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Začite štvorcom<br/>Vložte rovnobežník nad štvorec<br/>Vložte trojuholník napravo od rovnobežníka
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Začite štvorcom<br/>Vložte trojuholník nad štvorec<br/>Vložte trojuholník pod štvorec
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Začite štvorcom<br/>Vložte trojuholník pod štvorec<br/>Vložte rovnobežník napravo od trojuholníka
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Viacnásobný výber
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Začite trojuholníkom<br/>Vložte štvorec pod trojuholník<br />Vložte ďaľší trojuholník pod štvorec
+        Which image does <em>not</em> follow this algorithm?: Ktorý obrázok <em>nie je</em> podľa tohto algoritmu?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Ktorá sada kariet je správne ohodnotená podľa pravidiel hry?
+        Multiple Choice: Viacnásobný výber
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Ako by ste zjednodušili toto poradie slučiek?
+        Multiple Choice: Viacnásobný výber
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which program makes this image?: Ktorý program vytvorí tento obrázok?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Bludisko s viacerými možnými odpoveďami
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Viacnásobný výber
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Viacnásobný výber
+        Which image-program combo does not contain mistakes?: Ktorý pár obrázok-program je bez chýb?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Funkcie Umelca - viaceré možné odpovede Jeden
+        Pick the correct blocks to draw this image using the given functions: Vyberte správne bloky pre nakreslenie tohto obrázku použitím daných funkcií
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Slučky Umelca - viaceré možné odpovede
+        Which shape is made by this loop?: Ktorý geometrický tvar je vytvorený touto slučkou?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Slučky Umelca - viaceré možné odpovede
+        Which shape is made by this program?: Ktorý geometrický tvar je vytvorený týmto programom?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Ktoré porovnanie je pravdivé?
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Vyber najlepší z blokov.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Slučky Včely - viaceré možné odpovede Jeden
+        Which blocks collect all of the nectar?: Ktorý z blokov pomôže zozbierať všetok nektár?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Bludisko s viacerými možnými odpoveďami Jeden
+        Which set of blocks is the correct answer?: Ktorá sada blokov je správnou odpoveďou?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Pečenie koláčov
+        Banana: Banán
+        Brushing your teeth: Čistenie si Vašich zubov
+        Multiple Choice: Viacnásobný výber
+        Shopping from a grocery list: Nakupovanie podľa nákupného zoznamu
+        Which one of these items is hardest to describe an algorithm for?: Pre ktorý z týchto predmetov je najťažšie definovať algoritmus?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene je _____ mesto.
+        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Tu sú tri vety. Ktorá z týchto šablon uvedených nižšie správne abstrahuje tak, že všetky tri pasuj do rovnakého vzorca ako šablóna?'
+        Multiple Choice: Viacnásobný výber
+        Seattle _____ a _____ _____.: Seatlle _____ _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle je veľké mesto.<br/>Eugene je stredne veľké mesto<br/>Hillview je malé mesto.
+        _____ is _____ a _____.: _____ je _____ _____.
+        _____ is a _____ city.: _____ je _____ mesto.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which of these pictures best represents crowdsourcing?: Ktorý z týchto obrázkov najviac vystihuje crowdsourcing?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Česanie Vašich vlasov
+        Cleaning your room: Upratovanie Vašej izby
+        Eating your dessert: Jedenie Vášho dezertu
+        Multiple Choice: Viacnásobný výber
+        Washing your face: Umývanie si Vašej tváre
+        Which one of these activities would be best for practicing crowdsourcing?: Ktorá z týchto aktivít by bola najvhodnejšia pre crowdsourcing?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which piece of information listed below is okay to share on the internet?: Ktoré z nižšie uvedených informácií môžeš bezpečne zdieľať na internete?
+        Your address: Tvoja adresa
+        Your birthday: Dátum tvojich narodenín
+        Your favorite food: Tvoje obľúbené jedlo
+        Your parent's credit card number: Číslo kreditnej karty tvojich rodičov
+      4-5 Internet Multi 1:
+        Multiple Choice: Viacnásobný výber
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Ked sa snažíte pripojiť na code.org, na ktorú IP adresu Vám s najväčšou pravdepodobnosťou nasmeruje DNS?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Ak Vás DNS nasmerovalo na stránku na IP adrese 100.43.50.110, na ktorej webstránke sa nachádzate?
+        Multiple Choice: Viacnásobný výber
+      4-5 Songwriting Multi 1:
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        Multiple Choice: Viacnásobný výber
+        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Ktoré z programov nižšie <em>nevytvoria</em> totožnú sekvenciu ako Program 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Slučky Umelca - viaceré možné odpovede
+        Which blocks will create the design?: Ktoré bloky vytvoria dizajn?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Umelec - viaceré možné odpovede
+        Which blocks draw a rectangle with a perimeter of 100?: Ktorý blok nakreslí obdĺžnik s obvodom 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Umelec - viaceré možné odpovede
+        Which drawing is symmetric?: Ktorá kresba je symetrická?
+      4-5 bee conditionals multi 1:
+        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        1: ': Fialová kvetina môže mať 3, 2 alebo 1 nektár, ale neviete koľko presne. Ktoré bloky správne skontrolujú a pozbierajú všetok nektár z fialovej kvetiny?'
+        Bee Conditionals Multiple Choice: Včela s podmienkami - viaceré možné odpovede
+        Choose the best blocks.: Vyber najlepší z blokov.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Ladenie včely - viaceré možné odpovede
+        Which version of the function will work?: Ktorá verzia funkcie bude fungovať správne?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Slučky včely - viaceré možné odpovede
+        Which blocks will solve the puzzle?: Ktoré bloky sú riešením úlohy?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Bludisko s podmienkami - viaceré možné odpovede
+        Which blocks solve the puzzle?: Ktorý z blokov vyrieši rébus?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Bludisko s viacerými možnými odpoveďami
+        Which blocks solve the puzzle?: Ktorý z blokov vyrieši rébus?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which blocks solve this puzzle?: Ktoré bloky sú riešením tejto úlohy?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Viacnásobný výber
+        Which blocks draw the square?: Ktoré bloky nakreslia štvorec?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Koľko je toto nektárov?
+        Multiple Choice: Viacnásobný výber
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Koľko je toto nektárov?
+        Multiple Choice: Viacnásobný výber
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Ktoré zviera má digitálnu stopu, ktorá ho zanechá v <strong>najväčšom nebezpečí</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Ako by ste zjednodušili toto poradie slučiek?
+        Multiple Choice: Viacnásobný výber
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which arrow gets the Flurb to the treasure?: Ktorá šípka dostane Flurba k pokladu?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which information should you <strong>not</strong> share online?: Ktoré informácie by ste <strong>nemali</strong> zdieľať online?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which choice should be the final block?: Ktorá z možností by mala byť posledným blokom?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which repeat block is the same?: Ktorý opakujúci sa blok je ten istý?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Viacnásobný výber
+        Pick the correct repeat block.: Vyberte správny opakujúci sa blok.
       K-1 Maze Multiple Choice 2:
         Maze: Bludisko
+        Which answer solves this level?: Ktorá odpoveď rieši túto úroveň?
+      K-1 Move It Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which algorithm gets the Flurb to the flowers?: Akým algoritmom sa Flurb dostane ku kvetinám?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which step should go at the beginning of this algorithm?: Ktorý krok by mal ísť na začiatok tohoto algoritmu?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Viacnásobný výber
+        Which step should fill in the blank for this algorithm?: Ktorý krok má vyplniť prázdne miesto tohto algoritmu?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Viacnásobný výber
+        Which blocks spell "MOVE"?: Ktoré bloky vyhláskujú "MOVE"?
+      K-1 Word Search Multi 3:
+        Multiple Choice: Viacnásobný výber
+        Which word is spelled?: Ktoré slovo je vyhláskované?

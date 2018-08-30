@@ -6,12 +6,250 @@ id:
       Prepare for your presentation:
         title: judul
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Pasangkanlah kombinasi tombol untuk gerakan tari.
+        Matching: Mencocokan
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Mencocokan
+        Use the key to match each code to its letter: Gunakan kunci untuk mencocokkan setiap kode dengan hurufnya
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Cocokkan grid dengan programnya.
+        Matching: Mencocokan
       2-3 Maze Match 2:
         Instructions: instruksi
+        Match the puzzles to the blocks: Cocokkan teka-teki pada blok
+        Maze Match: Pertandingan labirin
+      2-3 artist loops match 1:
+        Match the loop to the shape: cocokan putaran dengan bentuk
+      2-3 artist match 1:
+        Artist Matching: Mencocokan Artis
+        Match the shape with the blocks that complete it.: Sesuai bentuk dengan blok yang lengkap.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Cocokkan teka-teki pada blok
+        Maze Match One: Labirin Pertandingan Satu
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Tambahkan pemain 1 roll untuk total Skor</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Bandingkan Skor pemain untuk melihat siapa yang menang</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Pemain 1 menggulung mati</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Set pemain 1 Skor 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Sesuai langkah-langkah dalam permainan dadu ras dalam urutan dimana mereka harus muncul dalam algoritma.
+        Matching: Mencocokan
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Sisi Roda: 2 <br/>Sisi Windows: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Sisi Roda: 2 <br/>Sisi Windows: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Sisi Roda: 2 <br/>Sisi Windows: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Sisi Roda: 3 <br/>Sisi Windows: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Masing-masing kendaraan ini telah dibagi menjadi bagian-bagian yang lebih kecil. Cocokkan setiap kendaraan dengan daftar bagiannya.
+        Matching: Mencocokan
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>Bintang</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Cocokkan setiap program dengan kata yang dibuat, gunakan kelompok keterampilan yang telah disediakan.
+        Matching: Mencocokan
       4-5 maze match 1:
         Instructions: instruksi
+        Match the puzzles to the blocks: Cocokkan teka-teki pada blok
+        Maze Match: Pertandingan labirin
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Cocokkan bentuk berdasarkan jenisnya.
+        Matching: Mencocokan
+      K-1 Bee Loops Match 1:
+        Match the blocks: Cocokkan blok
+        Matching: Mencocokan
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Pasangkanlah kombinasi tombol untuk gerakan tari.
+        Matching: Mencocokan
       K-1 Maze Match 1:
         Instructions: instruksi
+        Match the puzzles and blocks: Cocokkan teka-teki dengan blok
+        Matching: Mencocokan
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Pilihlah sebuah algoritma untuk gambar berikut.
+        Multiple Choice: Pilihan Berganda
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Mulailah dengan sebuah persegi <br/> Letakkan suatu jajar genjang di atas persegi <br/> Letakkan sebuah segitiga sebelah kanan jajaran genjang
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Mulailah dengan sebuah persegi<br/>Letakkan sebuah segitiga di atas persegi<br/>Letakkan sebuah segitiga di bawah persegi
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Mulailah dengan sebuah persegi <br/> Letakkan segitiga bawah persegi <br/> Letakkan genjang sebelah kanan segitiga
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Pilihan Berganda
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Mulailah dengan sebuah segitiga<br/>Letakkan persegi di bawah segitiga<br/>Letakkan sebuah segitiga lain di bawah persegi
+        Which image does <em>not</em> follow this algorithm?: Gambar manakah yang <em>tidak</em> sesuai dengan algoritma ini?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Sesuai peraturan permainan, kumpulan kartu manakah yang dicetak dengan benar?
+        Multiple Choice: Pilihan Berganda
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Bagaimana Anda akan menyederhanakan urutan ini dengan perulangan?
+        Multiple Choice: Pilihan Berganda
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which program makes this image?: Program apakah yang membuat gambar ini?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Pilihan Ganda Labirin
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Pilihan Berganda
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Pilihan Berganda
+        Which image-program combo does not contain mistakes?: Combo program-gambar/image-program mana yang tidak mengandung kesalahan?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Fungsi Artis Pilihan  Berganda Satu
+        Pick the correct blocks to draw this image using the given functions: Pilihlah blok-blok yang benar untuk menggambar gambar ini dengan fungsi yang diberikan
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Artis loop pilihan ganda
+        Which shape is made by this loop?: Bentuk apa yang dibuat oleh putaran ini?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Artis loop pilihan ganda
+        Which shape is made by this program?: Bentuk apa yang dibuat oleh program ini?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Manakah perbandingan di bawah ini yang benar?
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Pilih blok terbaik.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Lebah Loop Pilihan Berganda Satu
+        Which blocks collect all of the nectar?: Blok manakah yang mengumpulkan semua nektar ?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Pilihan Ganda Labirin Satu
+        Which set of blocks is the correct answer?: Kumpulan blok mana yang merupakan jawaban yang tepat?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Memanggang kue
+        Banana: Pisang
+        Brushing your teeth: Menyikat gigi
+        Multiple Choice: Pilihan Berganda
+        Shopping from a grocery list: Belanja dari daftar belanjaan
+        Which one of these items is hardest to describe an algorithm for?: item manakah yang paling sulit untuk menjelaskan suatu algoritma ?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene adalah kota _____.
+        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Berikut adalah tiga kalimat. Manakah dari template di bawah ini secara benar mengabstraksi sehingga ketiga cocok dengan pola yang sama seperti template?'
+        Multiple Choice: Pilihan Berganda
+        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle adalah kota besar. <br/> Eugene adalah kota menengah <br/> Hillview adalah sebuah kota kecil.
+        _____ is _____ a _____.: _____ adalah _____ _____.
+        _____ is a _____ city.: _____adalah sebuah kota _____ .
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which of these pictures best represents crowdsourcing?: Manakah dari foto-foto ini yang terbaik merepresentasikan crowdsourcing?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: sikat rambut Anda
+        Cleaning your room: bersihankan kamar Anda
+        Eating your dessert: Makan makanan penutup Anda
+        Multiple Choice: Pilihan Berganda
+        Washing your face: Mencuci wajah Anda
+        Which one of these activities would be best for practicing crowdsourcing?: Apakah salah satu kegiatan ini akan lebih baik untuk berlatih crowdsourcing?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which piece of information listed below is okay to share on the internet?: Manakah dari Sepotong informasi yang tercantum di bawah ini yang baik untuk berbagi di internet?
+        Your address: Alamat Anda
+        Your birthday: Hari ulang tahun Anda
+        Your favorite food: Makanan favorit Anda
+        Your parent's credit card number: nomor kartu kredit Orangtua Anda
+      4-5 Internet Multi 1:
+        Multiple Choice: Pilihan Berganda
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Ketika Anda mencoba untuk log on ke code.org, alamat IP mana yang merupakan DNS yang paling mungkin untuk membawa Anda?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jika DNS telah mengirim Anda ke halaman di alamat IP 100.42.50.110, situs mana yang sedang Anda masuki?
+        Multiple Choice: Pilihan Berganda
+      4-5 Songwriting Multi 1:
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        1: ': Terbang di buttermilk, <br/> Suh, terbang, Suh, <br/> terbang di buttermilk, <br/> Suh, terbang, Suh, <br/> terbang di buttermilk, <br/> Suh, terbang, Suh, <br/> Loncat ke aku Lou , Sayang Ku.'
+        Lou, Lou, skip to my Lou,: Lou, Lou, lewati untuk ke Lou saya,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> melompat ke saya Lou, Sayang Ku.
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> melompat ke saya Lou, Sayang Ku. <br/> <br/> Terbang <p>dalam buttermilk, <br/> Suh, terbang, Suh,'
+        Multiple Choice: Pilihan Berganda
+        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        5: ': Apa potongan terbesar dari lagu ini yang dapat Anda mendefinisikan sebagai bagian chorus sehingga bagian chorus mengulangi persis setiap kali hal itu dipanggil?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: program yang manakah di bawah ini yang <em>tidak</em> membuat urutan yang persis sama seperti Program 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Artis loop pilihan ganda
+        Which blocks will create the design?: Blok-blok manakah yang akan membuat bentuk itu?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Artis pilihan ganda
+        Which blocks draw a rectangle with a perimeter of 100?: Blok manakah yang menggambar persegi panjang dengan keliling 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Artis pilihan ganda
+        Which drawing is symmetric?: Gambar manakah yang simetris?
+      4-5 bee conditionals multi 1:
+        0: '? Sebuah bunga ungu dapat memiliki 3, 2 atau 1 sari bunga, tetapi Anda tidak mengetahui seberapa banyak. Blok manakah yang dapat memeriksa dan mengumpulkan semua sari bunga dari sebuah bunga ungu dengan benar?'
+        1: ': Sebuah bunga ungu dapat memiliki 3, 2 atau 1 sari bunga, tetapi Anda tidak mengetahui seberapa banyak. Blok manakah yang dapat memeriksa dan mengumpulkan semua sari bunga dari sebuah bunga ungu dengan benar?'
+        Bee Conditionals Multiple Choice: Kondisional Lebah Pilihan Berganda
+        Choose the best blocks.: Pilih blok terbaik.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Lebah Debug Pilihan Berganda
+        Which version of the function will work?: Versi dari fungsi manakah yang dapat berjalan?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Loop Lebah Pilihan Berganda
+        Which blocks will solve the puzzle?: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Kondisional Labirin Pilihan Berganda
+        Which blocks solve the puzzle?: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Pilihan Ganda Labirin
+        Which blocks solve the puzzle?: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which blocks solve this puzzle?: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Pilihan Berganda
+        Which blocks draw the square?: Blok mana yang menarik alun-alun?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: berapa banyak kah jumlah madu?
+        Multiple Choice: Pilihan Berganda
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: berapa banyak kah jumlah madu?
+        Multiple Choice: Pilihan Berganda
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Hewan yang mana yang memiliki tapak digital yang meninggalkan Dia. <strong> yang paling aman</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Bagaimana Anda akan menyederhanakan urutan ini dengan perulangan?
+        Multiple Choice: Pilihan Berganda
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which arrow gets the Flurb to the treasure?: Panah mana yang mendapatkan Flurb untuk harta?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which information should you <strong>not</strong> share online?: Informasi mana yang harus Anda <strong>tidak</strong> berbagi online?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which choice should be the final block?: Pilihan mana yang harus menjadi blok akhir?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which repeat block is the same?: blok pengulangan mana yang sama?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Pilihan Berganda
+        Pick the correct repeat block.: Pilih blok pengulangan yang benar.
       K-1 Maze Multiple Choice 2:
         Maze: Labirin
+        Which answer solves this level?: Jawaban mana yang memecahkan tingkat ini?
+      K-1 Move It Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which algorithm gets the Flurb to the flowers?: Algoritma mana yang mendapatkan Flurb untuk bunga?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which step should go at the beginning of this algorithm?: Langkah mana yang  harus masuk pada awal algoritma ini?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Pilihan Berganda
+        Which step should fill in the blank for this algorithm?: Langkah mana yang harus mengisi kekosongan untuk algoritma ini?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Pilihan Berganda
+        Which blocks spell "MOVE"?: Blok mana yang mengeja "MOVE" /  "Bergerak"?
+      K-1 Word Search Multi 3:
+        Multiple Choice: Pilihan Berganda
+        SET: SET
+        SOUTH: SELATAN
+        SQUARE: KOTAK
+        Which word is spelled?: Kata yang dieja?

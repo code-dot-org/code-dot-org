@@ -1,6 +1,7 @@
 es-MX:
   data:
     markdown_instructions:
+      "'pre-assessment survey q25A'_markdown_instruction": "En caso de, ¿qué curso(s) de computación habría tomado antes de su actual clase de cómputo? \n"
       2-3 Artist 1 new_markdown_instruction: "Hola, soy un artista. Puedes escribir código para hacerme dibujar cualquier cosa. Usa algunos bloques para hacerme dibujar sobre las líneas grises en la imagen. (Cada línea tiene 100 píxeles de largo)\n"
       2-3 Artist 11_markdown_instruction: 'Ponle un borde a la señal de stop creando un octógono con lados de 100 píxeles. '
       2-3 Artist 12_markdown_instruction: "¡Crea un círculo para completar el globo ocular!\n\\r\n\\r\nSi el artista gira un grado en cada ciclo, ¿cuántas veces necesitas repetir el código para dibujar un círculo? "
@@ -36,11 +37,13 @@ es-MX:
       2-3 Artist Functions 1_markdown_instruction: "\"Yo artista zombie. ¡Me encanta dibujar!\"\n\\ r \n\\ r \nAyuda al zombie a dibujar gafas cuadradas.  \\ r \n\\ r \nEl puente entre las gafas es 25 píxeles más corto que el ancho de los cuadrados, que es de 100 píxeles. \\ r \n\\ r\n"
       2-3 Artist Functions 10_markdown_instruction: "** Freeplay: ** Aquí hay dos funciones, una para dibujar un gran engranaje y otra para dibujar un pequeño engranaje.  \\ r \n\\ r ¡ \nÚselos para\n dibujar el interior de una máquina!"
       2-3 Artist Functions 11 a_markdown_instruction: "Hemos cambiado el nombre de la función \"dibujar un cuadrado\" a \"dibujar un hexágono\", pero todavía nos está dando cuadrados!  \\r\n\\r\n¿Se puede modificar la función ` dibujar un hexagon` para dibujar un hexágono con 50 píxeles  lados?\n\\r\n\\r\nDibuje la imagen usando la nueva función!"
+      2-3 Artist Functions 11.5 a_markdown_instruction: "Esta es la misma función 'dibujar un hexágono'. \n\n¿Qué pasaría si enlazo el programa principal ** 6 ** veces, convirtiendo ** 60 ** grados en cada enlace?"
       2-3 Artist Functions 11.5_markdown_instruction: "Aquí está la misma función `dibujar un hexagon`. \\r\n\\r\n¿Qué pasa si colocas un ciclo al programa principal por 6 veces, dan vuelta 60 grados cada vez que se ejecuta el ciclo?"
       2-3 Artist Functions 11_markdown_instruction: "Hemos cambiado el nombre de la función \"dibujar un cuadrado\" a \"dibujar un hexágono\", pero todavía nos está dando cuadrados!  \\r\n\\r\n¿Se puede modificar la función ` dibujar un hexagon` para dibujar un hexágono con 50 píxeles  lados?\n\\r\n\\r\nDibuje la imagen usando la nueva función!"
       2-3 Artist Functions 12 Mike_markdown_instruction: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
       2-3 Artist Functions 12 a_markdown_instruction: "Las funciones son geniales para dibujar las cosas complejas varias veces. Puedes utilizar la función \"dibujar una flor\" para llenar el resto de la caja del jardinero. (Pista: las plantas están separadas por una longitud de 100 píxeles)  "
       2-3 Artist Functions 12_markdown_instruction: "Las funciones son realmente geniales para \ndibujar cosas complejas varias veces. \\r\n\\r\n¿Se puede utilizar la función` dibujar una flor`\npara llenar el resto de la maceta? \\ r \nLas plantas son todos los 100 píxeles \nde diferencia."
+      2-3 Artist Functions 2 a_markdown_instruction: "¡Las funciones te permiten definir nuevos\n bloques! \\r\n\\r\nMovimos los bloques necesarios para dibujar un cuadro con una\n función llamada ` dibujar un cuadro`. Ahora, utiliza la función ` dibujar un cuadro`\npara crear las gafas \\r\n\\r\nLos cuadros están separados por 75 píxeles."
       2-3 Artist Functions 2_markdown_instruction: "¡Las funciones te permiten definir nuevos\n bloques! \\r\n\\r\nHemos movido los bloques necesarios para dibujar un cuadrado en una\n función llamada ` dibujar un cuadrado`. Esta vez, utilice el ` dibujar un square` función \npara crear las gafas \\r\n\\r\nLos cuadrados están separados por 75 píxeles."
       2-3 Artist Functions 3_markdown_instruction: "Edita la función para dibujar un cuadrado con una longitud lateral de 115 para dibujar los vasos más grandes. \\r\n\\r\nLos cuadrados están ahora a 45 píxeles de distancia."
       2-3 Artist Functions 4_markdown_instruction: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
@@ -80,10 +83,10 @@ es-MX:
       2-3 Artist Nested Loops 11_markdown_instruction: Itera este código 4 veces para completar el patrón, gire 90 grados después de cada círculo.
       2-3 Artist Nested Loops 12_markdown_instruction: Itera este código 12 veces para completar las curvas.
       2-3 Artist Nested Loops 2_markdown_instruction: "Ahora haga un bucle del triángulo 6 veces. Después de cada triángulo, usted necesitará girar 60 grados antes de dibujar el siguiente."
-      2-3 Artist Nested Loops 3_markdown_instruction: "Necesitaras hacer un bucle en tu triagulo 12 veces paradibujar este patrón.\\r\n\\r\nDivide el número de grados \nen un círculo(360) porel número de figuras que estás dibujando (12) para saber que tan tanto debes girar alrededor de cada figura."
+      2-3 Artist Nested Loops 3_markdown_instruction: "Necesitaras un enlace que repita tu triangulo 12 veces para dibujar este patrón.\\r\n\\r\nDivide el número de grados \nde un círculo(360) entre el número de figuras que debes dibujar (12) para saber cuantos grados debes girar antes de repetir cada triangulo."
       2-3 Artist Nested Loops 4_markdown_instruction: "Haga un bucle de este diamante 12 veces para dibujar una flor. Sugerencia: 12 diamantes es igual a los 12 triángulos que hiciste - ¿cuánto necesitas para girar después de cada forma?"
       2-3 Artist Nested Loops 5_markdown_instruction: "Llenar en las ventanas del edificio con un bucle anidado. Las ventanas son 20 píxeles largos y 20 píxeles aparte."
-      2-3 Artist Nested Loops 6_markdown_instruction: "Este dinosaurio tiene 4 pinchos a lo largo de su cola.\\r\n\\r\nCada pincho tiene 30 pixels de largo. \\r\n\\r\nHaz un bucle con el triángulo 8 veces, pero asegúrate de saltar hacia delante después de cada uno!"
+      2-3 Artist Nested Loops 6_markdown_instruction: "Este dinosaurio tiene 4 picos a lo largo de su cola.\\r\n\\r\nCada pico tiene 30 pixels de largo. \\r\n\\r\nHaz un enlace que repita el triangulo 8 veces, pero asegúrate de saltar hacia delante entre cada repetición!"
       2-3 Artist Nested Loops 7_markdown_instruction: "Bucle este triángulo 10 veces para dibujar el sol, necesitarás moverte y girar después de cada triángulo. Puedes averiguar cuánto girar dividiendo la cantidad de grados en un círculo por la cantidad de figuras que lo componen."
       2-3 Artist Nested Loops 8_markdown_instruction: "Ahora vamos a agregar un poco de hierba a nuestra imagen. Cada penacho de césped es 50 píxeles aparte."
       2-3 Artist Nested Loops 9_markdown_instruction: "Terminaremos esta foto agregándole una flor. Enrolle el diamante 12 veces para dibujar su flor."
@@ -91,34 +94,32 @@ es-MX:
       2-3 Bee Conditionals 11_markdown_instruction: "Ayúdame a recolectar néctar, pero solo de las flores que tienen néctar."
       2-3 Bee Conditionals 13_markdown_instruction: |-
         Recoge néctar y haz miel. Pista: ¿Qué ocurre si usas el condicional "Si néctar" en una flor roja? ¿Puedes completar esto con un bucle (loop)?
-      2-3 Bee Conditionals 14_markdown_instruction: "Vamos a juntar todo!\\r\n\\r\nUsa lo que has aprendido para ayudarme a recolectar néctar sólo de las flores que tienen néctar, utilizando el menor número de bloques posible.  \\r\n\\r\nNo olvides hacer la miel al final."
+      2-3 Bee Conditionals 14_markdown_instruction: "Vamos a juntar todo!\\r\n\\r\nUsa lo aprendido para ayudarme a recolectar néctar sólo de las flores con néctar, utiliza el menor número de bloques posible.  \\r\n\\r\nNo olvides hacer miel al final."
       2-3 Bee Conditionals 15_markdown_instruction: "Recoge néctar de las cuatro flores."
-      2-3 Bee Conditionals 2_markdown_instruction: "Soy una abeha hambrienta! \\r\n\\r\n\\r\nAyudame a recolectar todo el néctar de las flores utilizando el menor número de flores."
+      2-3 Bee Conditionals 2_markdown_instruction: "Soy una abeja hambrienta! \\r\n\\r\n\\r\nAyúdame a recolectar todo el néctar de las flores utilizando el menor número de bloques."
       2-3 Bee Conditionals 3_markdown_instruction: "Ayúdame a recoger todo el néctar de las flores y a hacer miel. Usa un bucle (loop)."
-      2-3 Bee Conditionals 5_markdown_instruction: "Estas flores púrpura cambian!\\r\n\\r\nCada vez que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero no sabrás el número hasta que ejecutes el código! \\r\n\\r\nTen cuidado de no recolectar néctar de una flor púrpura si no tiene. \\r\nPrimero deberás comprobar si el néctar es igual a 1 usando el bloque `si hay néctar`."
-      2-3 Bee Conditionals Assessment 1_markdown_instruction: "**Assessment:** Recolecta todo el néctar.  \\r\nTen cuidado de no recolectar néctar de de una flor púrpura que no tiene nada de néctar."
+      2-3 Bee Conditionals 5_markdown_instruction: "¡Estas flores púrpuras son mágicas y cambian!\n\nCada que intenta jugar, las flores púrpura pueden tener 1 néctar o nada en absoluto... pero no sabrá el número hasta que ejecute el código! \n\nTen cuidado de no intentar recoger néctar de una flor morada sin nectar. \ndebe comprobar primero si el néctar es igual a 1 usando el bloque ' si néctar '."
+      2-3 Bee Conditionals Assessment 1_markdown_instruction: "Evaluación: Colecta todo el néctar. \nTenga cuidado de no intentar recoger néctar de una flor morada que no tenga."
       2-3 Bee Debugging 1_markdown_instruction: |-
-        ¡Estos bloques me están molestando!\r
+        ¡Estos bloques en verdad molestan!\r
         \r
-        Arregle el/los error (s) para recoger todo el néctar.
-      2-3 Bee Debugging 10_markdown_instruction: "¡Este rompecabezas me está volviendo loco!\n\\ r\n\\ r\nArregle el/los error (s) para recolectar todo el néctar y hacer \ntoda la miel."
+        Arregle el/los error (es) para recoger todo el néctar.
+      2-3 Bee Debugging 10_markdown_instruction: "¡Este juego me está volviendo loco!\n\\ r\n\\ r\nArregle el/los error (es) para recolectar todo el néctar y hacer \ntoda la miel."
       2-3 Bee Debugging 2_markdown_instruction: |-
-        ¿Puedes encontrar el problema aquí?\r
+        ¿Puedes encontrar el problemaí?\r
         \r
-        Arregla el/los error(s) para recolectar todo el nectar.
+        Arregla el/los error(es) para recolectar todo el nectar.
       2-3 Bee Debugging 3_markdown_instruction: |-
         Estos bloques realmente me molestan. Corregir el (los) error(es) para recoger todo el néctar y hacer todo de la miel.
-      2-3 Bee Debugging 5_markdown_instruction: "¡Esa flor se ve deliciosa! \\r\n\\r\nArregle el/los error (s) para recoger todo el néctar. \\r\nAhora puede usar tanto la ejecución como el paso."
+      2-3 Bee Debugging 5_markdown_instruction: "¡Esa flor se ve sabrosa! \n\ncorrige el (los) error (es) para recoger todo el néctar.  \nahora puede utilizar ambos ejecutar y paso."
       2-3 Bee Debugging 6_markdown_instruction: |-
         Estos bloques realmente me molestan. Corregir el (los) error(es) para recoger todo el néctar y hacer toda la miel.
       2-3 Bee Debugging 9_markdown_instruction: |-
         Estos bloques realmente me molestan. Corregir el (los) error(es) para recoger todo el néctar y hacer todo de la miel.
       2-3 Bee Debugging Assessment 1_markdown_instruction: |-
-        ** Evaluación: ** Ahora
-        es tiempo de mostrar lo que sabes!\r
-        \r
-        Repare el error(s) para recojer todo
-        el néctar y hacer toda la miel.
+        ** Evaluación de: ** ahora es momento de mostrar lo que sabes!
+        
+        corrige los error (es) para recoger todo el néctar y hacer toda la miel.
       2-3 Bee Functions 1_markdown_instruction: "Las funciones son bloques de códigos que realizan una tarea. \\r\n\\r\nUsa la función 'llegar al néctar' para recoger el néctar de cada flor."
       2-3 Bee Functions 10_markdown_instruction: "Las flores moradas pueden tener 1 o 0 néctar. Crea una función que recoja el néctar solo de aquellas flores que lo tengan."
       2-3 Bee Functions 2_markdown_instruction: "Las funciones son bloques de código que realizan una tarea. Utilice la función \"get 5\" para obtener 5 néctares a cada momento. Asegúrese de utilizar un bucle para obtener un recuento ideal de bloque, también."
@@ -1060,7 +1061,7 @@ es-MX:
       MC_HOC_2017_Ryan_05_markdown_instruction: "A veces necesitas derribar cosas que estén en el camino de tu jugador.  \\r\nUsa el bloque \"destruir\" para eliminar todos los cactus entre el Agent y la placa de presión."
       MC_HOC_Kiki_02_markdown_instruction: Alguien debe estar en la placa de presión antes de que se abra la puerta lateral.  Ayuda al Agent a llegar a la placa para que el jugador pueda salir de la casa.
       Mike Test Bee Conditionals 1_markdown_instruction: "¡Esta nube está bloqueando mi vista!\n\\r\n\\r\nComprueba si hay una flor debajo de la nube, y solo consigue el néctar\nsi hay una flor.  \\r\n¡Ten cuidado, esta puede cambiar!"
-      Mike Test Bee Conditionals 2_markdown_instruction: "**Assessment:** Recolecta todo el néctar.  \\r\nTen cuidado de no recolectar néctar de de una flor púrpura que no tiene nada de néctar."
+      Mike Test Bee Conditionals 2_markdown_instruction: "Evaluación: Colecta todo el néctar. \nTenga cuidado de no intentar recoger néctar de una flor morada que no tenga."
       NEW Course 4 Artist Functions 10.1_markdown_instruction: Use las funciones de los puzzles anteriores para dibujar este patrón.
       NEW Course 4 Artist Functions 12_markdown_instruction: Utiliza la función "trazar una línea de cuadrados" del rompecabezas anterior para trazar este patrón.
       NEW Course 4 Artist Functions 3_markdown_instruction: "Aquí está el nuevo tipo de Bloque. Es llamado \"Bloque función\". Haga clic en \"Ejecutar\" para ver qué pasa."
@@ -1072,7 +1073,7 @@ es-MX:
       New Minecraft Hero Project_markdown_instruction: "**Improvisación:** ¡Ahora es cosa tuya! Usa el código del Agent para ayudarte a explorar este mundo."
       Overworld Move to Sheep_markdown_instruction: Añade un segundo comando "avanzar" para llegar a la oveja.
       Overworld Move to Sheep_2018_markdown_instruction: Añade un segundo comando "avanzar" para llegar a la oveja.
-      PS copy 2-3 Bee Conditionals 5_markdown_instruction: "Estas flores púrpura cambian!\\r\n\\r\nCada vez que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero no sabrás el número hasta que ejecutes el código! \\r\n\\r\nTen cuidado de no recolectar néctar de una flor púrpura si no tiene. \\r\nPrimero deberás comprobar si el néctar es igual a 1 usando el bloque `si hay néctar`."
+      PS copy 2-3 Bee Conditionals 5_markdown_instruction: "¡Estas flores púrpuras son mágicas y cambian!\n\nCada que intenta jugar, las flores púrpura pueden tener 1 néctar o nada en absoluto... pero no sabrá el número hasta que ejecute el código! \n\nTen cuidado de no intentar recoger néctar de una flor morada sin nectar. \ndebe comprobar primero si el néctar es igual a 1 usando el bloque ' si néctar '."
       Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       Pixelation - Lesson 15 - Complete 3-bit color_2018_markdown_instruction: "#\nColor de Pixelacion: Tarea 1\n**Direcciones:**\n\n* Comenzamos con la imagen de 4x2\nMaddie estaba creando, pero hemos omitido las dos últimas cuadriculas.\n* Terminar\nla imagen al descubrir qué dos colores faltan y codificarlos.\n"
       Testing Quantum Farmer_markdown_instruction: "¡Wow, encontré un agujero realmente profundo! no sé cuántas paleadas de tierra necesita. ¿Puedes escribir un programa que llene hasta que el suelo esté parejo? Sugerencia: trata usando el bucle mientras."
@@ -3941,20 +3942,20 @@ es-MX:
       grade3_ConditionalsElse_9_markdown_instruction: "Evaluación: Este código está errado. Completa la función \"consigue néctar o produce miel\", entonces llámalo para recolectar todo el néctar y la miel. Recuerda que las rosas púrpuras pueden tener 3, 2 o 1 néctares."
       grade3_ConditionalsElse_TeacherIDo_markdown_instruction: |-
         Puede haber una flor o un panal bajo esas nubes. Usa el bloque if/else para recoger néctar si hay una flor, si no haz miel (porque hay un panal de abejas).
-      grade3_Conditionals_1_markdown_instruction: "Soy una abeha hambrienta! \\r\n\\r\n\\r\nAyudame a recolectar todo el néctar de las flores utilizando el menor número de flores."
+      grade3_Conditionals_1_markdown_instruction: "Soy una abeja hambrienta! \\r\n\\r\n\\r\nAyúdame a recolectar todo el néctar de las flores utilizando el menor número de bloques."
       grade3_Conditionals_10_markdown_instruction: |-
         Recoge néctar y haz miel. Pista: ¿Qué ocurre si usas el condicional "Si néctar" en una flor roja? ¿Puedes completar esto con un bucle (loop)?
       grade3_Conditionals_11 BAD_markdown_instruction: "** Evaluación: ** Use un bucle `siempre que`\npara recoger todo el néctar de estas flores."
-      grade3_Conditionals_11_markdown_instruction: "Vamos a juntar todo!\\r\n\\r\nUsa lo que has aprendido para ayudarme a recolectar néctar sólo de las flores que tienen néctar, utilizando el menor número de bloques posible.  \\r\n\\r\nNo olvides hacer la miel al final."
+      grade3_Conditionals_11_markdown_instruction: "Vamos a juntar todo!\\r\n\\r\nUsa lo aprendido para ayudarme a recolectar néctar sólo de las flores con néctar, utiliza el menor número de bloques posible.  \\r\n\\r\nNo olvides hacer miel al final."
       grade3_Conditionals_12_markdown_instruction: "Recoge néctar de las cuatro flores."
-      grade3_Conditionals_13_markdown_instruction: "**Assessment:** Recolecta todo el néctar.  \\r\nTen cuidado de no recolectar néctar de de una flor púrpura que no tiene nada de néctar."
+      grade3_Conditionals_13_markdown_instruction: "Evaluación: Colecta todo el néctar. \nTenga cuidado de no intentar recoger néctar de una flor morada que no tenga."
       grade3_Conditionals_2_markdown_instruction: "Ayúdame a recoger todo el néctar de las flores y a hacer miel. Usa un bucle (loop)."
-      grade3_Conditionals_3_markdown_instruction: "Estas flores púrpura cambian!\\r\n\\r\nCada vez que intentas el puzzle, las flores púrpura pueden tener nectar o no... pero no sabrás el número hasta que ejecutes el código! \\r\n\\r\nTen cuidado de no recolectar néctar de una flor púrpura si no tiene. \\r\nPrimero deberás comprobar si el néctar es igual a 1 usando el bloque `si hay néctar`."
+      grade3_Conditionals_3_markdown_instruction: "¡Estas flores púrpuras son mágicas y cambian!\n\nCada que intenta jugar, las flores púrpura pueden tener 1 néctar o nada en absoluto... pero no sabrá el número hasta que ejecute el código! \n\nTen cuidado de no intentar recoger néctar de una flor morada sin nectar. \ndebe comprobar primero si el néctar es igual a 1 usando el bloque ' si néctar '."
       grade3_Conditionals_8_markdown_instruction: "Ayúdame a recolectar néctar, pero solo de las flores que tienen néctar."
       grade3_Debugging_1_markdown_instruction: |-
-        ¡Estos bloques me están molestando!\r
+        ¡Estos bloques en verdad molestan!\r
         \r
-        Arregle el/los error (s) para recoger todo el néctar.
+        Arregle el/los error (es) para recoger todo el néctar.
       grade3_Debugging_10_markdown_instruction: |-
         **Desafío:** *"¡Este rompecabezas me está volviendo loco!"*\r
         \r
@@ -3972,7 +3973,7 @@ es-MX:
         *"Estos bloques realmente me molestan."*\r
         \r
         Arregla el o los errores para recoger todo el néctar y hacer toda la miel.
-      grade3_Debugging_5_markdown_instruction: "¡Esa flor se ve deliciosa! \\r\n\\r\nArregle el/los error (s) para recoger todo el néctar. \\r\nAhora puede usar tanto la ejecución como el paso."
+      grade3_Debugging_5_markdown_instruction: "¡Esa flor se ve sabrosa! \n\ncorrige el (los) error (es) para recoger todo el néctar.  \nahora puede utilizar ambos ejecutar y paso."
       grade3_Debugging_6_markdown_instruction: |-
         Estos bloques realmente me molestan. Corregir el (los) error(es) para recoger todo el néctar y hacer toda la miel.
       grade3_Debugging_8_markdown_instruction: |-
@@ -4078,8 +4079,8 @@ es-MX:
         Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado.
       grade4_artist_nested_loop_triangles6_markdown_instruction: '¿Puedes dibujar estos 36 triángulos utilizando un bucle anidado?'
       grade4_artist_parameters_triangles2_markdown_instruction: '¿Notas algo diferente en estos bloques de función? Haz clic en "Ejecutar" para ver qué pasa.'
-      grade4_bee_conditionals_nested_loops_markdown_instruction: "**Assessment:** Recolecta todo el néctar.  \\r\nTen cuidado de no recolectar néctar de de una flor púrpura que no tiene nada de néctar."
-      grade4_bee_conditionals_new1_markdown_instruction: "**Assessment:** Recolecta todo el néctar.  \\r\nTen cuidado de no recolectar néctar de de una flor púrpura que no tiene nada de néctar."
+      grade4_bee_conditionals_nested_loops_markdown_instruction: "Evaluación: Colecta todo el néctar. \nTenga cuidado de no intentar recoger néctar de una flor morada que no tenga."
+      grade4_bee_conditionals_new1_markdown_instruction: "Evaluación: Colecta todo el néctar. \nTenga cuidado de no intentar recoger néctar de una flor morada que no tenga."
       grade4_bee_conditionals_quantum1_markdown_instruction: "¡Esta nube está bloqueando mi vista!\n\\r\n\\r\nComprueba si hay una flor debajo de la nube, y solo consigue el néctar\nsi hay una flor.  \\r\n¡Ten cuidado, esta puede cambiar!"
       grade4_bee_conditionals_quantum2_markdown_instruction: "La abeja sólo quiere néctar ahora. Recuerda que no todos los objetos son flores, recoge néctar solamente de las flores."
       grade4_bee_conditionals_quantum4_markdown_instruction: "A veces, esta nube cubre una\nflor, y a veces cubre un panal! \\r\n\\r\nUse el bloque `si/no`\npara recolectar néctar solo si es una flor. \\r\nDe lo contrario, haz miel (porque\nes un panal de miel)."

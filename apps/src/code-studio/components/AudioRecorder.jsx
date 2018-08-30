@@ -13,8 +13,14 @@ const styles = {
     flexFlow: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
+  },
+  recordingIcon: {
+    color: 'red',
+    margin: 5
   }
 };
+
+const RECORD_MAX_TIME = 30000;
 
 export default class AudioRecorder extends React.Component {
   static propTypes = {
@@ -27,11 +33,13 @@ export default class AudioRecorder extends React.Component {
 
   constructor(props) {
     super(props);
+    this.timeout = null;
     this.recorder = null;
     this.slices = [];
     this.state = {
       audioName: "",
-      recording: false
+      recording: false,
+      cancelling: false
     };
   }
 
@@ -66,46 +74,81 @@ export default class AudioRecorder extends React.Component {
   };
 
   saveAudio = (blob) => {
-    assetsApi.putAsset(this.state.audioName + ".mp3", blob,
-    (xhr) => {
-      this.setState({audioName: ""});
-      this.props.onUploadDone(JSON.parse(xhr.response));
-      this.props.afterAudioSaved(AudioErrorType.NONE);
-    }, error => {
-      console.error(`Audio Failed to Save: ${error}`);
-      this.props.afterAudioSaved(AudioErrorType.SAVE);
-    });
+    if (!this.state.cancelling) {
+      assetsApi.putAsset(this.state.audioName + ".mp3", blob,
+      (xhr) => {
+        this.setState({audioName: ""});
+        let result = JSON.parse(xhr.response);
+        result.filename = decodeURI(result.filename);
+        this.props.onUploadDone(result);
+        this.props.afterAudioSaved(AudioErrorType.NONE);
+      }, error => {
+        console.error(`Audio Failed to Save: ${error}`);
+        this.props.afterAudioSaved(AudioErrorType.SAVE);
+      });
+    }
   };
 
   onNameChange = (event) => {
     this.setState({audioName: event.target.value});
   };
 
+  onCancel = () => {
+    this.setState({audioName: "", recording: false, cancelling: true}, () => {
+      this.props.afterAudioSaved(AudioErrorType.NONE);
+      // Only stop recording if it's been started
+      if (this.recorder.state !== "inactive") {
+        this.recorder.stop();
+      }
+      this.setState({cancelling: false});
+    });
+  };
+
   toggleRecord = () => {
+    if (this.state.recording) {
+      this.stopRecording();
+    } else {
+      this.startRecording();
+    }
+  };
+
+  startRecording = () => {
     const studyGroup = this.props.manageAssetsChosen ? 'manage-assets' :
       (experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab');
-
-    if (this.state.recording) {
-      this.recorder.stop();
-    } else {
-      this.recorder.start();
-      firehoseClient.putRecord(
-        {
-          study: 'sound-dialog',
-          study_group: studyGroup,
-          event: 'record-sound',
-          data_json: this.state.audioName,
-        },
-        {includeUserId: true}
-      );
-    }
+    this.recorder.start();
+    firehoseClient.putRecord(
+      {
+        study: 'sound-dialog',
+        study_group: studyGroup,
+        event: 'record-sound',
+        data_json: this.state.audioName,
+      },
+      {includeUserId: true}
+    );
     this.setState({recording: !this.state.recording});
+
+    //Stop recording after set amount of time
+    this.recordTimeout = setTimeout(this.stopRecording, RECORD_MAX_TIME);
+  };
+
+  stopRecording = () => {
+    if (this.state.recording) {
+      clearTimeout(this.recordTimeout);
+      this.recorder.stop();
+      this.setState({recording: !this.state.recording});
+    }
   };
 
   render() {
     return (
       <div style={styles.buttonRow}>
         <input type="text" placeholder={i18n.soundName()} onChange={this.onNameChange} value={this.state.audioName}/>
+        {this.state.recording &&
+          <span style={assetButtonStyles.button}>
+            <i style={styles.recordingIcon} className="fa fa-circle"/>
+            {i18n.recording()}
+          </span>
+        }
         <span>
           <Button
             onClick={this.toggleRecord}
@@ -118,7 +161,7 @@ export default class AudioRecorder extends React.Component {
             disabled={this.state.audioName.length === 0}
           />
           <Button
-            onClick={()=>{}}
+            onClick={this.onCancel}
             id="cancel-record"
             style={assetButtonStyles.button}
             color={Button.ButtonColor.gray}
