@@ -14,8 +14,17 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
 import { hasLockableStages } from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
+import i18n from '@cdo/locale';
+import color from '../../../util/color';
 
 const styles = {
+  selectSectionLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+    color: color.dark_charcoal,
+    marginTop: 15,
+    marginBottom: 4,
+  },
   sectionSelector: {
     width: 350,
     height: 45,
@@ -98,7 +107,10 @@ class ScriptOverview extends React.Component {
             />
             {!professionalLearningCourse && viewAs === ViewType.Teacher &&
                 (scriptHasLockableStages || scriptAllowsHiddenStages) &&
-              <SectionSelector style={styles.sectionSelector}/>
+              <div>
+                <div style={styles.selectSectionLabel}>{i18n.selectSectionLabel()}</div>
+                <SectionSelector style={styles.sectionSelector}/>
+              </div>
             }
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
