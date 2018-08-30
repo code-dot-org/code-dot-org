@@ -1529,6 +1529,11 @@ class User < ActiveRecord::Base
     all_sections.map(&:course).compact.uniq
   end
 
+  # return the id of the section the user most recently created.
+  def last_section_id
+    teacher? ? sections.last&.id : nil
+  end
+
   # The section which the user most recently joined as a student, or nil if none exists.
   # @return [Section|nil]
   def last_joined_section
