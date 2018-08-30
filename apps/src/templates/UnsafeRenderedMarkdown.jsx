@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import reactRenderer from 'remark-react';
 
 import Parser from '@code-dot-org/redactable-markdown/src/redactableMarkdownParser';
 
@@ -16,8 +15,7 @@ remarkParser.parser.use([
   fixTightLists
 ]);
 
-// TODO recreate stipStyles as a plugin compatible with remark-react
-//remarkParser.compilerPlugins.push(stripStyles);
+remarkParser.compilerPlugins.push(stripStyles);
 
 /**
  * Basic component for rendering a markdown string as HTML.
@@ -33,10 +31,14 @@ export default class UnsafeRenderedMarkdown extends React.Component {
   };
 
   render() {
-    return remarkParser
-      .getParser()
-      .use(reactRenderer)
-      .processSync(this.props.markdown)
-      .contents;
+    const processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
+
+    /* eslint-disable react/no-danger */
+    return (
+      <div
+        dangerouslySetInnerHTML={{ __html: processedMarkdown }}
+      />
+    );
+    /* eslint-enable react/no-danger */
   }
 }
