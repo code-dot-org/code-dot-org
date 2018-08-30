@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>\n\n**Why is the style sheet not working? **\n\n</summary>\r\nCheck in the HTML of the records page to make sure that your link (`<link rel=\"stylesheet\" href=\"nameofstylesheet.css\">`) is linking to the correct CSS file.\r\n</details>\r\n</div>\r\n# Making a Multi-page Site\r\n\r\nYou may notice that your styles for your Guinness Book of World Records don't seem to be working. Can you figure out why? \r\n\r\n**Hint:** When you brought over your code you had to change the name of the style sheet from \"style.css\" to something else.",
+    "markdown_instructions": "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\n\n<summary>\n\n**Why is the style sheet not working? **\n\n</summary>\n\nCheck in the HTML of the records page to make sure that your link (`<link rel=\"stylesheet\" href=\"nameofstylesheet.css\">`) is linking to the correct CSS file.\r\n\n\n</details>\r\n</div>\r\n# Making a Multi-page Site\r\n\r\nYou may notice that your styles for your Guinness Book of World Records don't seem to be working. Can you figure out why? \r\n\r\n**Hint:** When you brought over your code you had to change the name of the style sheet from \"style.css\" to something else.",
     "project_template_level_name": "CSDU2 - Odd Stuff Site Template",
     "instructions_important": "false"
   },
