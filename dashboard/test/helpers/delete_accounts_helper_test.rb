@@ -486,6 +486,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Cleaned 1 UserLevel"
   end
 
+  test "Queries: Does user_levels in 1 query" do
+    # Baseline: Number of queries when clearing one UserLevel
+    student = create :student
+    create :user_level, user: student
+    baseline_queries = capture_queries do
+      purge_user student
+    end
+    assert_logged "Cleaned 1 UserLevel"
+
+    # Compare: Make lots of UserLevels and make sure it doesn't take more queries to purge them
+    student = create :student
+    5.times {create :user_level, user: student}
+    assert_queries baseline_queries.count do
+      purge_user student
+    end
+    assert_logged "Cleaned 5 UserLevel"
+  end
+
   #
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
