@@ -812,9 +812,9 @@ zh-CN:
   dashboard_submission_submitted: 已提交
   dashboard_submission_in_progress: 进行中
   dashboard_status: 状态
-  dashboard_multi_correct: "# 多项选择正确"
-  dashboard_multi_count: "# 多项选择"
-  dashboard_multi_correct_percent: "% 多项选择正确"
+  dashboard_multi_correct: "# 选择题正确"
+  dashboard_multi_count: "# 选择题"
+  dashboard_multi_correct_percent: "% 选择题正确"
   dashboard_submission_timestamp: 提交时间戳
   stats_hoc_2013_heading: 在去年的编程一小时活动中的惊人数据。在一周之内：
   stats_hoc_2013_image_alt: 2013年编程一小时统计数据
