@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/d257d0b06a24195a40adc60e4c96c0e1-image-1505759167176.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Making a Search Box\r\n\r\nThe search box in our prototype can be created using a \"Text Input\" element. This is a box that your user can type into, and later your software can read what was entered and do something with it.\r\n\r\n# Do This\r\n\r\n* **Add a Text Input** element.\r\n* **Change the id** to match the prototype.\r\n* **Add a Label** with the text \"Location\" next to your text input.",
+    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/d257d0b06a24195a40adc60e4c96c0e1-image-1505759167176.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n</div>\r\n\r\n# Making a Search Box\r\n\r\nThe search box in our prototype can be created using a \"Text Input\" element. This is a box that your user can type into, and later your software can read what was entered and do something with it.\r\n\r\n# Do This\r\n\r\n* **Add a Text Input** element.\r\n* **Change the id** to match the prototype.\r\n* **Add a Label** with the text \"Location\" next to your text input.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

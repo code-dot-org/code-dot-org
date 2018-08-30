@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Using Board Events\r\n\r\nRight now the LED turns on when the left button (`buttonL`) is pressed down. It should turn off when the right button (buttonR) is pressed down.\r\n\r\n<div style=\"float:right;\" markdown=1> \r\n\r\n![expandable](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png) \r\n\r\n</div>\r\n\r\n# Do this\r\n\r\n* Add another `onBoardEvent()` block to turn the LED off when the right button is pressed down.",
+    "markdown_instructions": "# Using Board Events\r\n\r\nRight now the LED turns on when the left button (`buttonL`) is pressed down. It should turn off when the right button (buttonR) is pressed down.\r\n\r\n<div style=\"float:right;\" markdown=1> \r\n\r\n![expandable](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png) \r\n</div>\r\n\r\n# Do this\r\n\r\n* Add another `onBoardEvent()` block to turn the LED off when the right button is pressed down.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

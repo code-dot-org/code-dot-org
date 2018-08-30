@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/7c8f4893c0b1f4bcd2280c950e389c95-image-1505759396699.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Checkboxes\r\n\r\nThe type of recyclables you're searching for can be set using \"Checkbox\" elements. We already added a checkbox and label for glass, so you just need to add ones for paper and plastic.\r\n\r\n# Do This\r\n\r\n* **Add a Checkbox** for each of the options.\r\n* **Change the ids** to match the prototype.\r\n* **Add labels** to describe each checkbox.",
+    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/7c8f4893c0b1f4bcd2280c950e389c95-image-1505759396699.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n</div>\r\n\r\n# Checkboxes\r\n\r\nThe type of recyclables you're searching for can be set using \"Checkbox\" elements. We already added a checkbox and label for glass, so you just need to add ones for paper and plastic.\r\n\r\n# Do This\r\n\r\n* **Add a Checkbox** for each of the options.\r\n* **Change the ids** to match the prototype.\r\n* **Add labels** to describe each checkbox.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

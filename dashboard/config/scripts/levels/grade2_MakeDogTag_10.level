@@ -15,7 +15,7 @@
     "free_play": "true",
     "slider_speed": "0.8",
     "embed": "false",
-    "markdown_instructions": "Now, draw anything you like!\r\n<br/><br/>\r\nHere are some ideas you could try if you get stuck (the last one is a challenge):\r\n<br/>\r\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img src=\"https://images.code.org/c8748bea36ec8ea92ceb13d86cd862d2-image-1471033427162.13.51 PM.png\" width=\"150\"/><br/>\r\n</td>\r\n\r\n<td>\r\n<img src=\"https://images.code.org/57c582dca6126e30de36b5bef5517f78-image-1471033432715.03.46 PM.png\" width=\"150\"/><br/>\r\n</td>\r\n\r\n<td>\r\n<img src=\"https://images.code.org/9df13dec95da560686472580304d9ee3-image-1471033275008.55.15 PM.png\" width=\"150\"/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r\n\r\n\r\n",
+    "markdown_instructions": "Now, draw anything you like!\r\n<br/><br/>\r\nHere are some ideas you could try if you get stuck (the last one is a challenge):\r\n<br/>\r\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img src=\"https://images.code.org/c8748bea36ec8ea92ceb13d86cd862d2-image-1471033427162.13.51 PM.png\" width=\"150\"/><br/>\r\n</td>\r\n\r\n<td>\r\n<img src=\"https://images.code.org/57c582dca6126e30de36b5bef5517f78-image-1471033432715.03.46 PM.png\" width=\"150\"/><br/>\r\n</td>\r\n\r\n<td>\r\n<img src=\"https://images.code.org/9df13dec95da560686472580304d9ee3-image-1471033275008.55.15 PM.png\" width=\"150\"/><br/>\r\n</td>\r\n</tr>\r\n</table>\r\n\r\n\r\n",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

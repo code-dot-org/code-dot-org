@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://curriculum.code.org/media/screen_model.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Finishing Touches\r\n\r\nBy now you should have a fairly complete (though non-functional) digital version of the paper prototype we started with. All that's left to do is check back over your paper prototype and add any final touches you might have missed.\r\n\r\n# Do This\r\n\r\n* **Check over the prototype** to make sure you've included everything.\r\n* **Read through your IDs** and fix any that aren't descriptive.\r\n* **Clean up** any rough edges by resizing or moving around elements.",
+    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://curriculum.code.org/media/screen_model.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n</div>\r\n\r\n# Finishing Touches\r\n\r\nBy now you should have a fairly complete (though non-functional) digital version of the paper prototype we started with. All that's left to do is check back over your paper prototype and add any final touches you might have missed.\r\n\r\n# Do This\r\n\r\n* **Check over the prototype** to make sure you've included everything.\r\n* **Read through your IDs** and fix any that aren't descriptive.\r\n* **Clean up** any rough edges by resizing or moving around elements.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
