@@ -40,6 +40,13 @@ const styles = {
   versionDropdown: {
     marginBottom: 13,
   },
+  selectSectionLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+    color: color.dark_charcoal,
+    marginTop: 15,
+    marginBottom: 4,
+  },
   sectionSelector: {
     width: 350,
     height: 45,
@@ -169,6 +176,7 @@ export default class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification/>}
         {isTeacher &&
           <div>
+            <div style={styles.selectSectionLabel}>{i18n.selectSectionLabel()}</div>
             <SectionSelector style={styles.sectionSelector}/>
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
