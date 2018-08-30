@@ -2,25 +2,13 @@ import React, { Component, PropTypes } from 'react';
 import AssignToSection from './AssignToSection';
 import Button from '@cdo/apps/templates/Button';
 import { stringForType, resourceShape } from './resourceType';
-import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 
 const styles = {
   main: {
     marginBottom: 10,
     position: 'relative',
   },
-  right: {
-    position: 'absolute',
-    right: 0,
-    top: 0
-  },
-  sectionSelector: {
-    // offset selector's margin so that we're aligned flush right
-    position: 'relative',
-    right: 0,
-    // vertically center
-    top: 2
-  },
+
 };
 
 export default class CourseOverviewTopRow extends Component {
@@ -53,9 +41,6 @@ export default class CourseOverviewTopRow extends Component {
             color={Button.ButtonColor.blue}
           />
         )}
-        <div style={styles.right}>
-          <SectionSelector style={styles.sectionSelector}/>
-        </div>
       </div>
     );
   }
