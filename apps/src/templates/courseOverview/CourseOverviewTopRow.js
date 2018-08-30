@@ -8,7 +8,6 @@ const styles = {
     marginBottom: 10,
     position: 'relative',
   },
-
 };
 
 export default class CourseOverviewTopRow extends Component {
