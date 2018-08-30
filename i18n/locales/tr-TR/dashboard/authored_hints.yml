@@ -2123,11 +2123,11 @@ tr:
         harvey_tictactoe: Atla bloğu ile başka alanlara gidebilirsiniz.
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
-          Hazine olan bir kareye geldiğinde, onu almak için <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+          Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi Al' bloğunu kullanmayı unutmayın.
         courseA_collector_loops1_b: Hazineye gitmek için Doğuya doğru iki kere ilerlemek basit bir çözüm olur.
       courseA_collector_loops1_2018_authored_hint:
         courseA_collector_loops1_a: |-
-          Hazine olan bir kareye geldiğinde, onu almak için <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+          Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi Al' bloğunu kullanmayı unutmayın.
         courseA_collector_loops1_b: Hazineye gitmek için Doğuya doğru iki kere ilerlemek basit bir çözüm olur.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: Herhangi bir hazine toplamadan önce ilerlemeniz gerekir.
@@ -2136,7 +2136,7 @@ tr:
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: Herhangi bir hazine toplamadan önce ilerlemeniz gerekir.
         courseA_collector_loops2_b: |-
-          Hazine olan bir kareye geldiğinde, onu almak için <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+          Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi Al' bloğunu kullanmayı unutmayın.
       courseA_collector_loops3_authored_hint:
         courseA_collector_loops3_a: "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> döngüsünü kullanmayı dene!"
         courseA_collector_loops3_b: ' <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> gibi bir döngüye birden fazla blok yerleştirebileceğinizi unutmayın.'
@@ -2228,7 +2228,7 @@ tr:
         courseA_collector_preLoops6_a: Bu bulmacayı çözmek için ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) karelerini kullanmanız gerekir.
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
-          Hazine olan bir kareye geldiğinde, onu almak için <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+          Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi Al' bloğunu kullanmayı unutmayın.
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_b: "Tekrar etmek için, bir 'tekrar' döngüsü sürükle, sonra içine istediğin bloğu koy."
       courseA_harvester_loops5_authored_hint:

@@ -497,6 +497,8 @@ ro:
         Course_4_Artist_Functions_challenge_d: Va trebui să întoarceți la stânga cu 90 de grade în afara repetării dvs., dar totuși în interiorul casetei `buclă pentru`.
       Course 4 Artist Inspire_authored_hint:
         Course_4_Artist_Inspire_a: După ce ați terminat un pătrat, încercați să săriți înainte cu jumătate din lungimea laturii acestuia înainte de a vă întoarce și a face altul.
+        Course_4_Artist_Inspire_b: Fiecare pătrat și salt se repetă de patru ori (folosindu-se o întoarcere la stânga între ele) pentru a realiza o formă de tip morișcă.
+        Course_4_Artist_Inspire_c: Fiecare morișcă este, de asemenea, repetată de patru ori, cu o rotire la drapta de **360/laturi**.
         Course_4_Artist_Inspire_d: |-
           **Soluție:**
           
@@ -670,8 +672,231 @@ ro:
           </next>
           </block>
           </xml>
+      Course 4 Artist Vars 13_authored_hint:
+        Course_4_Artist_Vars_13_a: Aveți nevoie de două bucle de repetiție (una în interiorul celeilalte) ambele repetând de atâtea ori cât numărul de`laturi`.
+        Course_4_Artist_Vars_13_b: "Bucla interioară de repetiție desenează un octogon (întorcând către stânga).   \n\nDupă aceea, este necesar să mutați înainte și să întoarceți la dreaptă doar în cadrul buclei exterioare."
+        Course_4_Artist_Vars_13_c: Pentru a ajusta forma ca aceasta să rămână la aceeași dimensiune atunci când numărul de laturi se schimbă, utilizați blocul de matematică pentru a împărți lungimea în pixeli la numărul de laturi.
+      Course 4 Artist Vars 6_authored_hint:
+        Course_4_Artist_Vars_6_a: Pentru a desena un poligon regulat, întoarceți cu **360/laturi** de fiecare dată.
+      Course 4 Artist Vars 8_authored_hint:
+        Course_4_Artist_Vars_8_a: Dacă împărțiți lungimea cu care începeți la numărul de laturi, lungimea fiecărei laturi se va scurta pe măsură ce numărul laturilor va crește.
+      Course 4 Bee Params 7_authored_hint:
+        notice_pattern: 'Vedeți un model structural în modul în care se schimbă numărul de nectare? '
+        count_with_for: Observați că nectarul crește în pași. Ce fel de bloc puteți folosi pentru a face același lucru de mai multe ori numărând în ordine crescătoare?
+      Course 4 Bee Params 8_authored_hint:
+        Course_4_Bee_Params_8_a: Este bine să cereți de fiecare dată câte un număr de miere și un număr de nectar. Dacă nu există nimic, numărul poate fi 0.
+      Course 4 Play Lab Params 2_authored_hint:
+        Course_4_Play_Lab_Params_2_a: Va trebui să faceți clic pe "editare" la funcția de salt și să o actualizați astfel încât aceasta să utilizeze parametrul "înălțime".
+      Course 4 Play Lab Vars 2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Asigurați-vă că setați numărul pentru "viteză_câine" la ceva mai mare decât "viteză_pisică".
       Course 4 Play Labs For Loops 2_authored_hint:
         Course_4_Play_Labs_For_Loops_2_a: Ce ați adăuga la bucla dvs. `pentru` de fiecare dată ca aceasta să sară peste numerele pare?
+      Course 4 Playlab For Loops 4b_authored_hint:
+        Course_4_Playlab_For_Loops_4b_a: Steagurile se află la aproximativ 330 de pixeli distanță de personaje.
+        Course_4_Playlab_For_Loops_4b_b: Cum puteți face ca fiecare personaj să parcurgă 330 de pixeli în același număr de mișcări cu numere diferite de pornire și oprire?
+        Course_4_Playlab_For_Loops_4b_c: Amintiți-vă, nu contează cu cât de mult un personaj trece steagul în ultimul său pas, atâta timp cât fiecare caracter face același număr de pași pentru a ajunge la steag.
+      Course 4 Playlab For Loops 5b_authored_hint:
+        Course_4_Playlab_For_Loops_5b_a: Personajele se află la aproximativ 330 de pixeli distanță de centru.
+        Course_4_Playlab_For_Loops_5b_b: Amintiți-vă că pasul următor al unui personaj va fi mai lung decât ultimul efectuat, din moment ce numărătoarea crește din ce în ce mai mult.
+      Course 4 SCF 1_authored_hint:
+        Course_4_SCF_1_a: Fiecare hexagon are laturi de 40 de pixeli.
+        Course_4_SCF_1_b: În fiecare linie orizontală, există un salt de 120 de pixeli între fiecare hexagon.
+        Course_4_SCF_1_c: "Înainte de a desena al doilea rând de hexagoane, trebuie să rotiți la dreapta cu 60 de grade și să săriți 40 de pixeli înainte.  \n\nOdată ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul înapoi din nou și să-l faceți să sară înapoi 320 de pixeli."
+        Course_4_SCF_1_d: "Înainte de a desena al treilea rând de hexagoane, e necesar să rotiți la dreapta cu 60 de grade și să săriți 40 de pixeli înainte.  \n\nOdată ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul înapoi din nou și să-l faceți să sară înapoi 440 de pixeli (120 de pixeli mai departe decât funcția dvs. de \"deplasare în față / înainte\". "
+        Course_4_SCF_1_e: |-
+          **Soluție:**
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="procedures_callnoreturn">
+          <mutation name="draw a line of hexagons"></mutation>
+          <next>
+          <block type="procedures_callnoreturn">
+          <mutation name="shift down/forward"></mutation>
+          <next>
+          <block type="procedures_callnoreturn">
+          <mutation name="draw a line of hexagons"></mutation>
+          <next>
+          <block type="procedures_callnoreturn">
+          <mutation name="shift down/backward"></mutation>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          <block type="procedures_defnoreturn">
+          <mutation></mutation>
+          <title name="NAME">desenează un hexagon</title>
+          <statement name="STACK">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">mutăÎnainte</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">40</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">60</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          <block type="procedures_defnoreturn">
+          <mutation></mutation>
+          <title name="NAME">deplasare în jos/înapoi</title>
+          <statement name="STACK">
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">60</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">săriÎnainte</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">40</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceStânga</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">60</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">săriÎnapoi</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">440</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          <block type="procedures_defnoreturn">
+          <mutation></mutation>
+          <title name="NAME">desenează o line de hexagoane</title>
+          <statement name="STACK">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="procedures_callnoreturn">
+          <mutation name="draw a hexagon"></mutation>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">săriÎnainte</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">120</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          <block type="procedures_defnoreturn">
+          <mutation></mutation>
+          <title name="NAME">deplasare în jos/înainte</title>
+          <statement name="STACK">
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceDreapta</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">60</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">săriÎnainte</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">40</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">întoarceStânga</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">60</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">săriÎnapoi</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">320</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </xml>
+      Course 4 SCF 1a_authored_hint:
+        Course_4_SCF_1a_a: Aduceți-vă aminte de funcțiile din etapa 16.
+        Course_4_SCF_1a_c: Ar trebui să luați în considerare utilizarea unei "bucle pentru". Nu pentru pași, ci pentru parametrul funcției.
+      Course 4 SCF 1b_authored_hint:
+        Course_4_SCF_1b_c: Ar trebui să luați în considerare utilizarea unei "bucle for" pentru distanța parcursă de albine.
+      Course 4 SCF 2_authored_hint:
+        Course_4_SCF_2_a: Fiecare octogon are laturi de 40 de pixeli.
+        Course_4_SCF_2_b: În fiecare linie orizontală, există un salt de 136 de pixeli între fiecare octogon.
+        Course_4_SCF_2_c: "Înainte de a desena al doilea rând de octogoane, trebuie să rotiți la dreapta cu 45 de grade și să săriți 96 de pixeli înainte.  \n\nOdată ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul înapoi din nou și să-l faceți să sară înapoi 408 de pixeli. "
       Course 4 SCFL 1_authored_hint:
         Course_4_SCFL_1_b: 'Încercați să folosiți două bucle `pentru`: una pentru a urca și a aduna nectar, iar cealaltă pentru a coborî și a face miere.'
         Course_4_SCFL_1_c: "Notați că o buclă `pentru` are nevoie de mai multe bucle obișnuite în interiorul acelei repetări de atîtea ori valoarea din`numărător` pentru a face modelul crescător al scărilor.\n\nCelălaltă buclă \"pentru\" are nevoie doar de o buclă obișnuită pentru a face cantitatea de \"miez\" indicată de numărător."
@@ -1304,6 +1529,8 @@ ro:
           </next>
           </block>
           </xml>
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Asigurați-vă că setați numărul pentru "viteză_câine" la ceva mai mare decât "viteză_pisică".
       D_Frozen_nested3_authored_hint:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.  \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n- Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       Inspirational Artwork_authored_hint:
@@ -2042,9 +2269,9 @@ ro:
       courseF_artist_for4_2018_authored_hint:
         courseF_artist_for4_a: "**Care este cel mai mic număr de care aveți nevoie? \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru a completa spațiile goale din interiorul  buclei imbricate `pentru`."
       courseF_bee_conditionals5_authored_hint:
-        courseF_bee_conditionals5_c: 'Exista 3 laturi ale dreptunghiului cu flori, Deci, codul trebuie să se "repete de 3 ori". La fiecare repetare, albina va trebui să continue drumul, "în timp ce există o cale înainte". '
+        courseF_bee_conditionals5_c: 'Există 3 laturi cu flori ale dreptunghiului, deci, codul trebuie să se "repete de 3 ori". La fiecare repetare, albina va trebui să continue drumul, "în timp ce există o cale înainte". '
       courseF_bee_conditionals5_2018_authored_hint:
-        courseF_bee_conditionals5_c: 'Exista 3 laturi ale dreptunghiului cu flori, Deci, codul trebuie să se "repete de 3 ori". La fiecare repetare, albina va trebui să continue drumul, "în timp ce există o cale înainte". '
+        courseF_bee_conditionals5_c: 'Există 3 laturi cu flori ale dreptunghiului, deci, codul trebuie să se "repete de 3 ori". La fiecare repetare, albina va trebui să continue drumul, "în timp ce există o cale înainte". '
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional (\"dacă\" sau \"dacă/altfel\") pentru a rezolva provocarea."
       courseF_bee_conditionals8_2018_authored_hint:
@@ -2200,6 +2427,16 @@ ro:
           - Utilizeze funcția
           - Mute înainte cu 100 + 75 pixeli
           - Utilizeze funcția
+      grade4_artist_functions_challenge_authored_hint:
+        Course_4_SCF_1_a: Fiecare hexagon are laturi de 40 de pixeli.
+        Course_4_SCF_1_b: În fiecare linie orizontală, există un salt de 120 de pixeli între fiecare hexagon.
+        Course_4_SCF_1_c: "Înainte de a desena al doilea rând de hexagoane, trebuie să rotiți la dreapta cu 60 de grade și să săriți 40 de pixeli înainte.  \n\nOdată ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul înapoi din nou și să-l faceți să sară înapoi 320 de pixeli."
+        Course_4_SCF_1_d: "Înainte de a desena al treilea rând de hexagoane, e necesar să rotiți la dreapta cu 60 de grade și să săriți 40 de pixeli înainte.  \n\nOdată ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul înapoi din nou și să-l faceți să sară înapoi 440 de pixeli (120 de pixeli mai departe decât funcția dvs. de \"deplasare în față / înainte\". "
+      grade4_artist_functions_challenge2_authored_hint:
+        Course_4_SCF_1_a: Fiecare hexagon are laturi de 40 de pixeli.
+        Course_4_SCF_1_b: În fiecare linie orizontală, există un salt de 120 de pixeli între fiecare hexagon.
+        Course_4_SCF_1_c: "Înainte de a desena al doilea rând de hexagoane, trebuie să rotiți la dreapta cu 60 de grade și să săriți 40 de pixeli înainte.  \n\nOdată ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul înapoi din nou și să-l faceți să sară înapoi 320 de pixeli."
+        Course_4_SCF_1_d: "Înainte de a desena al treilea rând de hexagoane, e necesar să rotiți la dreapta cu 60 de grade și să săriți 40 de pixeli înainte.  \n\nOdată ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul înapoi din nou și să-l faceți să sară înapoi 440 de pixeli (120 de pixeli mai departe decât funcția dvs. de \"deplasare în față / înainte\". "
       grade4_artist_functions_windows2_authored_hint:
         grade4_artist_functions_windows2_b: Nu trebuie să adăugați bucle suplimentare. Doar faceți artistul să sară cu 100 de pixeli înainte pentru fiecare fereastră de sus și 150 de pixeli în jos pentru a ajunge la ferestrele din partea de jos.
       grade4_artist_nestedLoops_challenge2_authored_hint:
@@ -2270,8 +2507,20 @@ ro:
         double_loop: Încercați să puneți o buclă "pentru" în interiorul unei bucle "repetă".
         specifics: "Bucla \"pentru\" rulează de la trei la șaptesprezece pentru fiecare dintre cele șase \"petale\" înainte de a trece la următoarea, desenând forme doar cu un număr impar de laturi.\n        \nBlocul `setează alfa` folosește diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine mai mare."
         after: După ce ați terminat cu fiecare "petală", asigurați-vă că "mutați înainte" cu 20 de pixeli înainte de a efectua o rotație de 60 de grade.
+      grade5_artist_variables_freeplay10_authored_hint:
+        Course_4_Artist_Vars_8_a: Dacă împărțiți lungimea cu care începeți la numărul de laturi, lungimea fiecărei laturi se va scurta pe măsură ce numărul laturilor va crește.
       grade5_artist_variables_freeplay15_authored_hint:
         Course_4_Artist_Inspire_a: După ce ați terminat un pătrat, încercați să săriți înainte cu jumătate din lungimea laturii acestuia înainte de a vă întoarce și a face altul.
+        Course_4_Artist_Inspire_b: Fiecare pătrat și salt se repetă de patru ori (folosindu-se o întoarcere la stânga între ele) pentru a realiza o formă de tip morișcă.
+        Course_4_Artist_Inspire_c: Fiecare morișcă este, de asemenea, repetată de patru ori, cu o rotire la drapta de **360/laturi**.
+      grade5_artist_variables_octagons13_authored_hint:
+        Course_4_Artist_Vars_13_a: Aveți nevoie de două bucle de repetiție (una în interiorul celeilalte) ambele repetând de atâtea ori cât numărul de`laturi`.
+        Course_4_Artist_Vars_13_b: "Bucla interioară de repetiție desenează un octogon (întorcând către stânga).   \n\nDupă aceea, este necesar să mutați înainte și să întoarceți la dreaptă doar în cadrul buclei exterioare."
+        Course_4_Artist_Vars_13_c: Pentru a ajusta forma ca aceasta să rămână la aceeași dimensiune atunci când numărul de laturi se schimbă, utilizați blocul de matematică pentru a împărți lungimea în pixeli la numărul de laturi.
+      grade5_artist_variables_square7_authored_hint:
+        Course_4_Artist_Vars_6_a: Pentru a desena un poligon regulat, întoarceți cu **360/laturi** de fiecare dată.
+      grade5_playlab_variables2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Asigurați-vă că setați numărul pentru "viteză_câine" la ceva mai mare decât "viteză_pisică".
       gradek_adventurer_loops4_authored_hint:
         gradek_adventurer_loops4_a: Dacă nu reușiți să găsiți răspunsul imediat, încercați să folosiți o foaie de hârtie pentru a vă da seama de ce săgeți veți avea nevoie și căutați un model structural.
       gradek_artist_loops6_authored_hint:

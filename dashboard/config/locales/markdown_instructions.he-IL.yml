@@ -545,10 +545,17 @@ he:
         *"לך בנתיב הזה כדי להביא אותי אל החזיר!"*
 
         הישמר מפני חומר הנפץ (TNT).
+      courseB_Scrat_ramp1_2018_markdown_instruction: כדי להביא את סקראט הסנאי אל הבלוט
+        חבר את הבלוק <xml><block type="maze_moveEast"/></xml> אל החלק התחתון של הבלוק
+        <xml><block type="when_run"/></xml> ואז לחץ על "הרץ ▶"!
       courseB_Scrat_ramp3b_2018_markdown_instruction: "ישנו בלוק עודף בסוף הקוד הזה!
         \n\nגרור אותו בחזרה אל תיבת הכלים כדי להיפטר ממנו."
       courseB_iceage_loops1_markdown_instruction: עזור לסקראט הסנאי לחצות את הקרח
         החלקלק כדי להגיע לבלוט!
+      courseB_iceage_loops2_markdown_instruction: השתמש גם בבלוק <xml><block type="maze_moveWest"/></xml>
+        וגם בבלוק <xml><block type="maze_moveSouth"/></xml> כדי להגיע אל הבלוט!
+      courseB_iceage_loops3_markdown_instruction: האם תוכל להשתמש רק בבלוק אחד מסוג
+        <xml><block type="maze_moveWest"/></xml> כדי להגיע אל הבלוט? נסה להשתמש בלולאה!
       courseB_playLab_events1_markdown_instruction: "משחק זה נקרא \"מעבדת הצעצועים\".
         \n\nנסה לראות אם תבין מה עושה בדיוק כל בלוק."
       courseB_playLab_events1_2018_markdown_instruction: "משחק זה נקרא \"מעבדת הצעצועים\".
