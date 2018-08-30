@@ -122,7 +122,7 @@ class ExpiredDeletedAccountPurger
     @log.puts summary
 
     log_link = upload_activity_log
-    say "#{summary} #{log_link}"
+    say "#{summary} #{log_link}" if rack_env? :production
 
     upload_metrics metrics
   end

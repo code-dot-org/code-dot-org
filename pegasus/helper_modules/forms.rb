@@ -72,7 +72,11 @@ module Forms
     )
       FORMS.
         select(
-          json('data.organization_name_s').as(:name),
+          Sequel.function(:coalesce,
+            Sequel.function(:nullif, json('data.organization_name_s'), ''),
+            Sequel.function(:nullif, json('processed_data.nces_school_name_s'), ''),
+            Sequel.function(:nullif, json('data.school_name_s'), ''),
+          ).as(:name),
           city_column.as(:city)
         ).
         where(

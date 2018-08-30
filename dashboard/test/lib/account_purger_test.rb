@@ -67,6 +67,7 @@ class AccountPurgerTest < ActiveSupport::TestCase
       purge_data_for_account @student
     assert_equal <<~LOG, log.string
       Purging user_id #{@student.id}
+      Done purging user_id #{@student.id}
     LOG
   end
 
@@ -76,6 +77,7 @@ class AccountPurgerTest < ActiveSupport::TestCase
       purge_data_for_account @student
     assert_equal <<~LOG, log.string
       Purging user_id #{@student.id} (dry-run)
+      Done purging user_id #{@student.id} (dry-run)
     LOG
   end
 

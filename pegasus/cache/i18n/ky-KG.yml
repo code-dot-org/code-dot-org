@@ -60,6 +60,14 @@ ky-KG:
   thank_you_: Рахмат!
   congratulations: Куттуктайбыз!
   congratulations_on_completing_hoc: Бир сааттык Код саатын бүтүрүшүңүз менен куттуктайбыз
+  third_party_gradelevel_kto8: 8-класстарга
+  third_party_gradelevel_kto2: 2-класстарга
+  third_party_gradelevel_2to8: 2-8-класстарга
+  third_party_gradelevel_4to12: 4-12-класстарга
+  third_party_gradelevel_5to12: 5-12-класстарга
+  third_party_gradelevel_6plus: 6+ класстарга
+  get_started: Башта
+  start_hoc: Код саатын азыр башта
   studiobar_hoc_title: Код сааты
   studiobar_flappy_title: Flappy Code
   studiobar_frozen_title: Код сааты
@@ -189,14 +197,44 @@ ky-KG:
   homepage_donors_seall: Баарын көрүү
   homepage_donors_donate: Колдоо
   homepage_below_hero_announcement_link_text: Дагы кара
+  contact_form_topic_other: Башка
   class_submission_level_middle_school: Орто мектеп
   class_submission_level_high_school: Жогорку мектеп
+  videos_more: Белгилүү кишилер жана жылдыздар катышкан <a href='%{inspiring_videos_playlist}'>шыктандыруучу
+    видеолор</a>
+  careers_page_more: Технологиялар жаатындагы адистер катышкан <a href='%{careers_url}'
+    target='_blank'>шыктандыруучу видеолор</a>
   mc_name: Minecraft код сааты
+  minecraft_agent: 'Minecraft: Баатырдын сапары'
+  minecraft_designer: Minecraft дизайнери
+  minecraft_adventurer: Minecraft тентек
+  minecraft_tutorials: Код сааты, Minecraft жетектемелери
+  minecraft_specs: Көп тилдүү | Заманбап браузерлер жана планшеттер | 2-класс +
   minecraft_agent_description: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
     Код жазып Minecraft өткүлө.
+  minecraft_agent_button: Башта
+  minecraft_designer_button: Башта
+  minecraft_adventurer_description: Код жазып Алекс менен Стивди окуяларга кабылткыла.
+  minecraft_adventurer_button: Башта
+  minecraft_no_internet: Интернет жокпу?
+  minecraft_download_adventurer: Minecraft тентектин орнотмо версиясын жүктөп алгыла.
   minecraft_subtitle: Minecraft код сааты
+  minecraft_og_designer: Minecraft Minecraft Код саатына жаңы тапшырма менен кайтып
+    келди! Жеке Minecraft версияңарда жаныбарларды жана башка нерселерди програмдагыла.
+  sports_og_title: Өзүңдү түрткүлө. Ар ким үйрөнө алат.
   sports_watch_video: Видео көргүлө
+  sports_video_title: Өзүңдү түрткүлө. Ар ким үйрөнө алат.
+  watch_inspirational_videos: Баштаардан мурда шыктандыруучу видеолордун бирин көргүлө
+  video_title_cs_is_everything: Компүтер илими баарын өзгөртүүдө
   video_title_inspire_girl: Кызды шыктандыр
+  video_title_cs_intro: Компүтер илимине киришүү
+  video_title_schools_dont_teach: Мектептердин үйрөтпөгөн нерсе
+  video_title_obama: Президент Обама компүтердик илим жөнүндө
+  video_title_hoc_is_here: Код сааты бул жерде - Каалаган киши үйрөнө алат
+  video_title_anybody_can_learn: Ар ким үйрөнө алат
+  video_title_steph_curry: Код сааты Стеф Карри менен
+  video_title_my_name_is_aracely: Менин атым Арасели
+  no_internet: Интернет жокпу?
   volunteer_engineer_submission_field_name: Аты
   volunteer_engineer_submission_field_description: Түшүндүрмөсү
   volunteer_engineer_submission_field_email_preference_privacy: "(Купуялуулук саясатыбызды
@@ -204,16 +242,23 @@ ky-KG:
   volunteer_engineer_submission_field_email_preference_yes: Ооба
   volunteer_engineer_submission_field_email_preference_no: Жок
   volunteer_engineer_submission_submit: Кошуу
+  volunteer_engineer_submission_commitment_annually: жылына 2-3 жолу
   dashboard_announce_learn_more_button: Дагы кара
   dashboard_action_cancel: Жок кыл
   dashboard_action_delete_yes: Ооба
   dashboard_action_delete_no: Жок
+  dashboard_filter_all: Баары
+  dashboard_progress_not_started: баштала элек
   dashboard_sections_table_section: Секция
   dashboard_sections_table_students: Студенттер
   dashboard_sections_close: Жабуу
   dashboard_students_name: Аты
   dashboard_sequence: Ирет
+  dashboard_grade_other: Башка
   learn_sign_up_button: Катталуу
+  learn_footer_all_tutorials: 'Бул жерден <a href="https://code.org/learn">Код сааты
+    жетектемелеринин толук тизмесин көргүлө</a>. Код сааты критерийлерин жана кошуу
+    жетектемелерибизди көрүү үчүн мында баскыла: <a href="https://hourofcode.com/activity-guidelines">.</a>'
   frozen_name: Анна жана Элза менен код жазгыла
   codeorg_name: Классикалык лабиринт
   codeintl_name: Классикалык лабиринт
@@ -237,6 +282,8 @@ ky-KG:
   makeschool_gradelevel: Жогорку мектеп
   touchdevelop_gradelevel: Жогорку мектеп
   blockly_gradelevel: Бардык курак
+  allcancode_gradelevel: 5-10 жаштагылар
+  touchdevelop_platformtext: Жаңы браузерлер, смартфондор, бардык түзмөктөр
   infinity_shortdescription: Play Lab колдонуп, Disney Infinity каармандары катышкан
     окуя же оюн түзгүлө.
   artist_shortdescription: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
@@ -250,7 +297,13 @@ ky-KG:
   touchdevelop_beyond_gradelevel: Жогорку мектеп
   codehs_beyond_gradelevel: Жогорку мектеп
   processing_beyond_gradelevel: Жогорку мектеп
+  hacketyhack_beyond_platformtext: Компүтерге орнотуу
+  touchdevelop_beyond_platformtext: Жаңы браузерлер, смартфондор, бардык түзмөктөр
+  kidsruby_beyond_platformtext: Компүтерге орнотуу
+  alice_beyond_platformtext: Windows же Mac (орнотуу керек)
   flappy_shortcode: серпүү
   header_my_dashboard: Менин тактам
   header_educate_hoc: Код сааты
+  header_about_news: Жаңылыктар
+  user_header_signin: Кирүү
   view_all_sections: Секциялардын баарын көрүү
