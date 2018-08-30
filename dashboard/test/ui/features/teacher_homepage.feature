@@ -63,6 +63,25 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".header_popup_body .uitest-ProgressBubble:first" is visible
     And the href of selector ".header_popup_body .uitest-ProgressBubble:first" contains the section id
 
+    # Save the newer section id
+    Given I am on "http://studio.code.org/home"
+    Then the section table should have 2 rows
+    And I save the section id from row 0 of the section table
+
+    # Test that the overview pages add the newer section id to the url
+
+    When I am on "http://studio.code.org/courses/csp-2018"
+    And I wait until element ".uitest-CourseScript" is visible
+    Then the url contains the section id
+
+    When I am on "http://studio.code.org/s/csp1-2018"
+    And I wait until element "#script-title" is visible
+    Then the url contains the section id
+
+    When I am on "http://studio.code.org/s/coursea-2018"
+    And I wait until element "#script-title" is visible
+    Then the url contains the section id
+
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box

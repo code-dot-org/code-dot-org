@@ -21,7 +21,6 @@
   %h2.counter-title
     %a{href: resolve_url("/events/all")}
       = events_text + ","
-    %a{href: resolve_url("/events/all/#{solr_country_code}")}
       = hoc_s(:map_header_country).gsub('#', format_integer_with_commas(country_total)).gsub('%{country}', country_full_name)
     -# Hide signup buttons during Hour of Code
       &nbsp;
