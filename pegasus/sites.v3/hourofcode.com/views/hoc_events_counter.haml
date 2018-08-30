@@ -17,7 +17,7 @@
         %button.signup-button= hoc_s(:signup_host_an_hour)
 -elsif @country != 'us'
   -country_total = format_integer_with_commas(country_count)
-  -country_total = "0" if country_total = ""
+  -country_total = "0" if country_total == ""
   %h2.counter-title
     %a{href: resolve_url("/events/all")}
       = events_text + ","
