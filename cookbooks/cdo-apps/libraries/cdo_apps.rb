@@ -31,19 +31,37 @@ module CdoApps
       only_if {node['cdo-apps']['local_mysql'] || node['cdo-apps']['daemon']}
     end
 
+    socket_path = node['cdo-apps']['nginx_enabled'] && node['cdo-nginx']['socket_path']
+
     template init_script do
-      source 'unicorn.sh.erb'
+      app_server = node['cdo-apps']['app_server']
+      src_file = "#{app_root}/config/#{app_server}.rb"
+
+      source "#{app_server}.sh.erb"
       user 'root'
       group 'root'
       mode '0755'
-      variables src_file: "#{app_root}/config/unicorn.rb",
+      variables src_file: src_file,
         app_root: app_root,
-        pid_file: "#{app_root}/config/unicorn.rb.pid",
+        pid_file: "#{src_file}.pid",
+        socket_path: socket_path,
         user: user,
         env: node.chef_environment,
         export_env: node['cdo-apps']['bundle_env'].
           merge(node['cdo-apps'][app_name]['env'] || {})
       notifies :reload, "service[#{app_name}]", :delayed
+    end
+
+    # Stop before and start after changes to significant init-script attributes.
+    file "#{app_name}_app_server" do
+      action :nothing
+      path "#{Chef::Config[:file_cache_path]}/#{app_name}_app_server"
+      content "#{node['cdo-apps']['app_server']}:#{socket_path}"
+
+      # Stop service before init-script update, and start service afterwards.
+      subscribes :create, "template[#{init_script}]", :before
+      notifies :stop, "service[#{app_name}]", :immediately
+      notifies :start, "service[#{app_name}]", :delayed
     end
 
     log_dir = File.join app_root, 'log'
@@ -79,7 +97,7 @@ module CdoApps
       action [:enable]
 
       # Restart when Ruby is upgraded.
-      # Full restart needed because the path to Unicorn executable changed.
+      # Full restart needed because the path to app-server executable changed.
       subscribes :restart, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
 
       # Reload when gem bundle is updated.
