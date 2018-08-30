@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { UnconnectedScriptOverview as ScriptOverview } from
   '@cdo/apps/code-studio/components/progress/ScriptOverview';
 import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
 
 const defaultProps = {
   onOverviewPage: true,
@@ -57,7 +57,7 @@ describe('ScriptOverview', () => {
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <SectionSelector/>
+      <LabeledSectionSelector/>
     );
   });
 
@@ -69,7 +69,7 @@ describe('ScriptOverview', () => {
       />
     );
     expect(wrapper).to.containMatchingElement(
-      <SectionSelector/>
+      <LabeledSectionSelector/>
     );
   });
 
