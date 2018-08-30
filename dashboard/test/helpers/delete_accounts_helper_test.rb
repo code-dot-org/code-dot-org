@@ -452,6 +452,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Cleaned 1 Activity"
   end
 
+  test "Queries: Does activities in 1 query" do
+    # Baseline: Number of queries when clearing one Activity
+    student = create :student
+    create :activity, user: student
+    baseline_queries = capture_queries do
+      purge_user student
+    end
+    assert_logged "Cleaned 1 Activity"
+
+    # Compare: Make lots of Activities and make sure it doesn't take more queries to purge them
+    student = create :student
+    5.times {create :activity, user: student}
+    assert_queries baseline_queries.count do
+      purge_user student
+    end
+    assert_logged "Cleaned 5 Activity"
+  end
+
   # Note: table overflow_activities only exists on production, which makes it
   # difficult to test.
 
