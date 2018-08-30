@@ -85,12 +85,8 @@ class DeleteAccountsHelper
     end
 
     @log.puts "Cleaning GalleryActivity"
-    gallery_activities = GalleryActivity.where(user_id: user_id)
-    gallery_activity_count = gallery_activities.count
-    gallery_activities.each do |gallery_activity|
-      gallery_activity.update!(level_source_id: nil)
-    end
-    @log.puts "Cleaned #{gallery_activity_count} GalleryActivity" if gallery_activity_count > 0
+    updated_rows = GalleryActivity.where(user_id: user_id).update_all(level_source_id: nil)
+    @log.puts "Cleaned #{updated_rows} GalleryActivity" if updated_rows > 0
 
     @log.puts "Cleaning AuthoredHintViewRequest"
     authored_hint_view_requests = AuthoredHintViewRequest.where(user_id: user_id)
