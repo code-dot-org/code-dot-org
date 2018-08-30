@@ -17,12 +17,10 @@ import ScriptOverviewHeader from './ScriptOverviewHeader';
 
 const styles = {
   sectionSelector: {
-    display: 'block',
-    // offset selector's margin so that we're aligned flush right
-    margin: 10,
-    right: 0,
-    // vertically center
-    bottom: 4,
+    width: 350,
+    height: 45,
+    fontSize: 18,
+    marginBottom: 15,
   },
 };
 
