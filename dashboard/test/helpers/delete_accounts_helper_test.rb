@@ -19,6 +19,8 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # reviewed by the product team.
 #
 class DeleteAccountsHelperTest < ActionView::TestCase
+  NULL_STREAM = File.open File::NULL, 'w'
+
   def run(*_args, &_block)
     PEGASUS_DB.transaction(rollback: :always, auto_savepoint: true) {super}
   end
@@ -38,6 +40,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     # Skip Geocoder check in WorkshopMaterialOrder
     Pd::WorkshopMaterialOrder.any_instance.stubs(:valid_address?)
+
+    # Global log used to check expected log output
+    @log = StringIO.new
   end
 
   test 'sets purged_at' do
@@ -47,6 +52,17 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     purge_user user
 
     refute_nil user.purged_at
+  end
+
+  test 'skips previously purged user' do
+    user = create :student, purged_at: Time.now
+    refute_nil user.purged_at
+
+    user.expects(:destroy).never
+    purge_user user
+
+    refute_nil user.purged_at
+    assert_logged 'User is already purged'
   end
 
   test 'purges all accounts associated with email' do
@@ -324,7 +340,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     all_permissions.each {|perm| assert user.permission? perm}
     refute_empty UserPermission.where(user_id: user.id)
 
-    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(user)
+    unsafe_purge_user user
 
     all_permissions.each {|perm| refute user.permission? perm}
     assert_empty UserPermission.where(user_id: user.id)
@@ -432,6 +448,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute Activity.where(user: user).any?(&:level_source),
       'Expected no activity record that references a level source to exist for this user'
+
+    assert_logged "Cleaned 1 Activity"
   end
 
   # Note: table overflow_activities only exists on production, which makes it
@@ -447,6 +465,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     gallery_activity.reload
 
     assert_nil gallery_activity.level_source_id
+
+    assert_logged "Cleaned 1 GalleryActivity"
   end
 
   #
@@ -462,6 +482,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user_level.reload
 
     assert_nil user_level.level_source_id
+
+    assert_logged "Cleaned 1 UserLevel"
   end
 
   #
@@ -518,6 +540,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute AuthoredHintViewRequest.where(user: user).any?(&:prev_level_source_id),
       "Expected none of user's AuthoredHintViewRequests to have a prev_level_source_id"
+
+    assert_logged "Cleaned 1 AuthoredHintViewRequest"
   end
 
   test "clears next_level_source_id from authored_hint_view_requests" do
@@ -567,6 +591,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Expected no CensusSubmissions under this email"
     assert_empty Census::CensusSubmission.where(id: id),
       "Rows are actually gone, not just anonymized"
+
+    assert_logged "Removed 1 CensusSubmission"
   end
 
   test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
@@ -598,6 +624,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     application.reload
 
     assert_equal '(anonymized signature)', application.signature
+
+    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   test 'leaves blank signature blank on circuit_playground_discount_application' do
@@ -610,6 +638,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     application.reload
 
     assert_nil application.signature
+
+    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   test 'removes school id from circuit_playground_discount_application' do
@@ -622,6 +652,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     application.reload
 
     assert_nil application.school_id
+
+    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   #
@@ -757,6 +789,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     purge_user user
 
     assert_empty EmailPreference.where(email: email)
+
+    assert_logged "Removed 1 EmailPreference"
   end
 
   #
@@ -803,6 +837,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     purge_user feedback.teacher
 
     refute TeacherFeedback.with_deleted.exists? id: feedback.id
+
+    assert_logged 'Deleted 1 TeacherFeedback'
   end
 
   test "soft-deletes and disassociates feedback written to purged student" do
@@ -825,6 +861,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     deleted_feedback.reload
     assert deleted_feedback.deleted?
     assert_nil deleted_feedback.student_id
+
+    assert_logged 'Cleared 2 TeacherFeedback'
   end
 
   #
@@ -1641,6 +1679,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         assert_equal 'deleted', app[:state]
       end
     end
+
+    assert_logged "Deleted 1 channels"
   end
 
   test "does not soft-delete anyone else's projects" do
@@ -1891,7 +1931,63 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     Solr::Server.expects(:new).with(host: 'fake-solr-configuration').returns(mock_solr)
     SolrHelper.expects(:delete_document).with(mock_solr, 'user', student.id)
 
-    DeleteAccountsHelper.new.purge_user student
+    DeleteAccountsHelper.new(log: NULL_STREAM).purge_user student
+  end
+
+  #
+  # Pardot
+  # pegasus.contact_rollups
+  #
+
+  test "Pardot: Calls delete_pardot_prospects" do
+    teacher = create :teacher
+
+    CDO.stubs(:rack_env?).with(:production).returns(true)
+
+    with_contact_rollup_for(teacher) do |_, pardot_id|
+      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([])
+      purge_user teacher
+    end
+  end
+
+  test "Pardot: Raises if Pardot reports issues deleting prospects" do
+    teacher = create :teacher
+
+    CDO.stubs(:rack_env?).with(:production).returns(true)
+
+    with_contact_rollup_for(teacher) do |_, pardot_id|
+      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([pardot_id])
+      assert_raises RuntimeError do
+        purge_user teacher
+      end
+    end
+  end
+
+  test "Pardot: Does not contact Pardot outside of production" do
+    teacher = create :teacher
+
+    CDO.stubs(:rack_env?).with(:production).returns(false)
+
+    with_contact_rollup_for(teacher) do
+      Pardot.expects(:delete_pardot_prospects).never
+      purge_user teacher
+    end
+  end
+
+  test "contact_rollups: Deletes user records" do
+    teacher_a = create :teacher
+    teacher_b = create :teacher
+    with_contact_rollup_for(teacher_a) do |contact_rollups_id_a|
+      with_contact_rollup_for(teacher_b) do |contact_rollups_id_b|
+        refute_empty contact_rollups.where(id: contact_rollups_id_a)
+        refute_empty contact_rollups.where(id: contact_rollups_id_b)
+
+        purge_user teacher_a
+
+        assert_empty contact_rollups.where(id: contact_rollups_id_a)
+        refute_empty contact_rollups.where(id: contact_rollups_id_b)
+      end
+    end
   end
 
   #
@@ -1967,7 +2063,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'can delete facilitator account if bypassing safety constraints' do
     facilitator = create :facilitator
 
-    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(facilitator)
+    unsafe_purge_user facilitator
 
     refute_nil facilitator.purged_at
   end
@@ -1993,7 +2089,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'can delete workshop organizer account if bypassing safety constraints' do
     workshop_organizer = create :workshop_organizer
 
-    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(workshop_organizer)
+    unsafe_purge_user workshop_organizer
 
     refute_nil workshop_organizer.purged_at
   end
@@ -2019,7 +2115,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'can delete program manager account if bypassing safety constraints' do
     program_manager = create :program_manager
 
-    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(program_manager)
+    unsafe_purge_user program_manager
 
     refute_nil program_manager.purged_at
   end
@@ -2046,7 +2142,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     regional_partner = create :regional_partner
     contact = regional_partner.contact
 
-    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(contact)
+    unsafe_purge_user contact
 
     refute_nil contact.purged_at
   end
@@ -2085,12 +2181,16 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert RegionalPartnerProgramManager.where(program_manager_id: program_manager.id).exists?
     refute program_manager.permission? UserPermission::PROGRAM_MANAGER
 
-    DeleteAccountsHelper.new(bypass_safety_constraints: true).purge_user(program_manager)
+    unsafe_purge_user program_manager
 
     refute_nil program_manager.purged_at
   end
 
   private
+
+  def assert_logged(expected_message)
+    assert_includes @log.string, expected_message
+  end
 
   def with_channel_for(owner)
     channels_before = storage_apps.count
@@ -2121,6 +2221,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_equal user_storage_ids_count_before, user_storage_ids.count
   end
 
+  def with_contact_rollup_for(user)
+    pardot_id = user.id
+    contact_rollups_id = contact_rollups.insert(
+      {
+        email: user.email,
+        dashboard_user_id: user.id,
+        pardot_id: pardot_id,
+        name: user.name
+      }
+    )
+    yield contact_rollups_id, pardot_id
+  ensure
+    contact_rollups.where(id: contact_rollups_id).delete if contact_rollups_id
+  end
+
   #
   # Helper to make this specific set of tests more readable
   # Performs our account purge on the provided user instance, and then reloads
@@ -2130,7 +2245,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     SolrHelper.stubs(:delete_document)
     unpurged_users_before = User.with_deleted.where(purged_at: nil).count
 
-    DeleteAccountsHelper.new(solr: {}).purge_user(user)
+    DeleteAccountsHelper.new(solr: {}, log: @log).purge_user(user)
 
     # Never allow more than one user to be purged by this operation
     unpurged_users_after = User.with_deleted.where(purged_at: nil).count
@@ -2142,9 +2257,17 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user.reload
   end
 
+  def unsafe_purge_user(user)
+    SolrHelper.stubs(:delete_document)
+
+    DeleteAccountsHelper.new(solr: {}, log: @log, bypass_safety_constraints: true).purge_user(user)
+
+    user.reload
+  end
+
   def purge_all_accounts_with_email(email)
     SolrHelper.stubs(:delete_document)
-    DeleteAccountsHelper.new(solr: {}).purge_all_accounts_with_email(email)
+    DeleteAccountsHelper.new(solr: {}, log: @log).purge_all_accounts_with_email(email)
   end
 
   def assert_removes_field_from_forms(field, expect: :nil)
@@ -2263,5 +2386,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   def user_storage_ids
     PEGASUS_DB[:user_storage_ids]
+  end
+
+  def contact_rollups
+    PEGASUS_DB[:contact_rollups]
   end
 end
