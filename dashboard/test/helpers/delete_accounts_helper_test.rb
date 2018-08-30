@@ -624,6 +624,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Expected none of user's AuthoredHintViewRequests to have a final_level_source_id"
   end
 
+  test "Queries: Does authored_hint_view_requests in 1 query" do
+    # Baseline: Number of queries when clearing one AuthoredHintViewRequest
+    student = create :student
+    create :authored_hint_view_request, user: student
+    baseline_queries = capture_queries do
+      purge_user student
+    end
+    assert_logged "Cleaned 1 AuthoredHintViewRequest"
+
+    # Compare: Make lots of AuthoredHintViewRequest and make sure it doesn't take more queries to purge them
+    student = create :student
+    5.times {create :authored_hint_view_request, user: student}
+    assert_queries baseline_queries.count do
+      purge_user student
+    end
+    assert_logged "Cleaned 5 AuthoredHintViewRequest"
+  end
+
   #
   # Table: dashboard.census_submissions
   # These aren't tied directly to the user model.  Instead, we look them up

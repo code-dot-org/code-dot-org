@@ -89,10 +89,12 @@ class DeleteAccountsHelper
     @log.puts "Cleaned #{updated_rows} GalleryActivity" if updated_rows > 0
 
     @log.puts "Cleaning AuthoredHintViewRequest"
-    authored_hint_view_requests = AuthoredHintViewRequest.where(user_id: user_id)
-    authored_hint_view_request_count = authored_hint_view_requests.count
-    authored_hint_view_requests.each(&:clear_level_source_associations)
-    @log.puts "Cleaned #{authored_hint_view_request_count} AuthoredHintViewRequest" if authored_hint_view_request_count > 0
+    updated_rows = AuthoredHintViewRequest.where(user_id: user_id).update_all(
+      prev_level_source_id: nil,
+      next_level_source_id: nil,
+      final_level_source_id: nil
+    )
+    @log.puts "Cleaned #{updated_rows} AuthoredHintViewRequest" if updated_rows > 0
   end
 
   # Remove all user generated content associated with any PD the user has been through, as well as
