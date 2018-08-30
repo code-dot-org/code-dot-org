@@ -1504,6 +1504,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: pegasus.contacts
+  # Table: pegasus.poste_deliveries
+  # Table: pegasus.poste_opens
   #
 
   test "removes contacts rows for email" do
@@ -1547,6 +1549,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
     assert_empty DB[:poste_opens].where(delivery_id: id)
+  end
+
+  test "Never removes poste data if user has empty email address" do
+    student = create :student
+    assert_equal '', student.email
+
+    DeleteAccountsHelper.any_instance.expects(:remove_poste_data).never
+
+    purge_user student
   end
 
   #
