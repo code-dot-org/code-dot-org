@@ -41,11 +41,10 @@ const styles = {
     marginBottom: 13,
   },
   sectionSelector: {
-    // offset selector's margin so that we're aligned flush right
-    position: 'relative',
-    right: 0,
-    // vertically center
-    top: 2
+    width: 350,
+    height: 45,
+    fontSize: 18,
+    marginBottom: 15,
   },
 };
 
