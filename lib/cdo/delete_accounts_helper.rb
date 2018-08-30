@@ -74,12 +74,8 @@ class DeleteAccountsHelper
     @log.puts "Cleaned #{updated_rows} UserLevel" if updated_rows > 0
 
     @log.puts "Cleaning Activity"
-    activities = Activity.where(user_id: user_id)
-    activity_count = activities.count
-    activities.find_each do |activity|
-      activity.update!(level_source_id: nil)
-    end
-    @log.puts "Cleaned #{activity_count} Activity" if activity_count > 0
+    updated_rows = Activity.where(user_id: user_id).update_all(level_source_id: nil)
+    @log.puts "Cleaned #{updated_rows} Activity" if updated_rows > 0
 
     # Note that the `overflow_activities` table exists only in the production environment.
     if ActiveRecord::Base.connection.data_source_exists? 'overflow_activities'
