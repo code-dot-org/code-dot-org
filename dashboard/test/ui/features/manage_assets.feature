@@ -12,12 +12,10 @@ Feature: Manage Assets
   Scenario: With the experiment flag on, the manage assets dialog contains the option to record audio.
     Given I am a student
     And I start a new Game Lab project
-    And I append "?enableExperiments=recordAudio" to the URL
     And I wait for the page to fully load
     And I open the Manage Assets dialog
     Then I click selector "#record-asset" once I see it
     And I wait until element ".modal-content" contains text "Your computer is not set-up to record audio."
-    And I am on "http://studio.code.org/home?disableExperiments=recordAudio"
 
   @no_safari
   #ToDo: epeach - solve safari specific failure
