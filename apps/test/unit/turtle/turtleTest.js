@@ -2,6 +2,7 @@ import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {Position} from '@cdo/apps/constants';
+import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 const Artist = require('@cdo/apps/turtle/artist');
 
 const SHORT_DIAGONAL = 50 * Math.sqrt(2);
@@ -255,6 +256,47 @@ describe('Artist', () => {
         expect(artist.visualization.x).to.equal(x);
         expect(artist.visualization.y).to.equal(y);
       });
+    });
+  });
+
+  describe('autoArtist', () => {
+    const studioApp = studioAppSingleton();
+
+    it('executes upon reset', done => {
+      const artist = new Artist();
+      const execute = sinon.stub(artist, 'execute');
+      artist.injectStudioApp(studioApp);
+      artist.init({
+        skin: {},
+        level: {
+          autoRun: true,
+        },
+      }).then(done).catch(() => done());
+
+      artist.resetButtonClick();
+
+      expect(execute).to.have.been.called;
+      execute.restore();
+    });
+
+    it('executes upon code changes', done => {
+      const artist = new Artist();
+      const execute = sinon.stub(Artist.prototype, 'execute');
+      const container = document.createElement('div');
+      container.id = 'artistContainer';
+      document.body.appendChild(container);
+      artist.injectStudioApp(studioApp);
+      artist.init({
+        skin: {},
+        level: {
+          autoRun: true,
+        },
+        containerId: 'artistContainer',
+      }).then(done).catch(() => done());
+      studioApp.runChangeHandlers();
+
+      expect(execute).to.have.been.called;
+      execute.restore();
     });
   });
 

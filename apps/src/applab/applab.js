@@ -60,6 +60,7 @@ import {
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
+import * as makerToolkitRedux from '../lib/kits/maker/redux';
 import project from '../code-studio/initApp/project';
 import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
@@ -1009,7 +1010,7 @@ Applab.execute = function () {
     }
   }
 
-  if (makerToolkit.isEnabled()) {
+  if (makerToolkitRedux.isEnabled(getStore().getState())) {
     makerToolkit.connect({
       interpreter: Applab.JSInterpreter,
       onDisconnect: () => studioApp().resetButtonClick(),
