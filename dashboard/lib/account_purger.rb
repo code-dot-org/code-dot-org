@@ -42,6 +42,8 @@ class AccountPurger
 
     purged_account_log.purged_at = Time.now
     purged_account_log.upload unless @dry_run
+
+    @log.puts "Done purging user_id #{user.id}#{@dry_run ? ' (dry-run)' : ''}"
   end
 
   # Purge all information associated with an email address.
@@ -56,7 +58,7 @@ class AccountPurger
     ActiveRecord::Base.transaction do
       PEGASUS_DB.transaction do
         DeleteAccountsHelper.
-          new(bypass_safety_constraints: @bypass_safety_constraints).
+          new(bypass_safety_constraints: @bypass_safety_constraints, log: @log).
           purge_user user
       end
     end
