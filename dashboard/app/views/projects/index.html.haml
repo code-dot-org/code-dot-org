@@ -27,10 +27,13 @@
 
   #gallery-navigation
 
-  #react-my-projects
+  #personal-projects-wrapper{'style' => ('display: none;' if is_public)}
+    #react-personal-projects
+    .project-course-blocks.center{style: 'width: 720px;'}
+      = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
+      = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
+      = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
 
-  #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
-    %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
   #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
     #public-gallery
   #publish-confirm
