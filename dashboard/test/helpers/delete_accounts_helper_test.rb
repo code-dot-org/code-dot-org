@@ -802,6 +802,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Removed 1 EmailPreference"
   end
 
+  test "Never remove email preferences if user has blank email" do
+    student = create :student
+    assert_equal '', student.email
+
+    EmailPreference.expects(:where).never
+
+    purge_user student
+  end
+
   #
   # Table: dashboard.studio_people
   #
