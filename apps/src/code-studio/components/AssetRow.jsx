@@ -3,6 +3,7 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 import firehoseClient from "@cdo/apps/lib/util/firehose";
+import experiments from "@cdo/apps/util/experiments";
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -56,7 +57,7 @@ export default class AssetRow extends React.Component {
     firehoseClient.putRecord(
       {
         study: 'sound-dialog',
-        study_group: 'files-tab',
+        study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
         event: 'choose-uploaded-sound',
         data_json: this.props.name
       },
