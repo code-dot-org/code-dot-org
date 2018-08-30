@@ -74,7 +74,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element ".uitest-CourseScript" is visible
     Then the url contains the section id
 
-    When I am on "http://studio.code.org/s/csd1-2018"
+    When I am on "http://studio.code.org/s/csp1-2018"
     And I wait until element "#script-title" is visible
     Then the url contains the section id
 
