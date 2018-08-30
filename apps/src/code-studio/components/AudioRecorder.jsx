@@ -28,7 +28,7 @@ export default class AudioRecorder extends React.Component {
     afterAudioSaved: PropTypes.func,
 
     //Temporary prop for logging - indicates user chose 'Manage Assets'
-    manageAssetsChosen: PropTypes.bool
+    imagePicker: PropTypes.bool
   };
 
   constructor(props) {
@@ -113,7 +113,7 @@ export default class AudioRecorder extends React.Component {
   };
 
   startRecording = () => {
-    const studyGroup = this.props.manageAssetsChosen ? 'manage-assets' :
+    const studyGroup = this.props.imagePicker ? 'manage-assets' :
       (experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab');
     this.recorder.start();
     firehoseClient.putRecord(
