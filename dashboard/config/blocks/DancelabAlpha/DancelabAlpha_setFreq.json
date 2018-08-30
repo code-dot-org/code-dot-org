@@ -1,0 +1,12 @@
+{
+  "category": "",
+  "config": {
+    "func": "setFreq",
+    "blockText": "set frequency {FREQ}",
+    "args": [
+      {
+        "name": "FREQ"
+      }
+    ]
+  }
+}
