@@ -369,7 +369,7 @@ class DeleteAccountsHelper
 
     purge_teacher_feedbacks(user.id)
     remove_census_submissions(user.email) if user.email&.present?
-    remove_email_preferences(user.email) if user.email
+    remove_email_preferences(user.email) if user.email&.present?
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
