@@ -2,9 +2,9 @@
 <block type="behavior_definition" deletable="false" movable="false" editable="false">
   <mutation>
     <arg name="this sprite" type="Sprite"/>
-    <description>randomly change the size of a sprite</description>
+    <description>change the size of a sprite</description>
   </mutation>
-  <title name="NAME">jittering</title>
+  <title name="NAME">shrinking</title>
   <statement name="STACK">
     <block type="gamelab_changePropBy">
       <title name="PROPERTY">"scale"</title>
@@ -14,17 +14,8 @@
         </block>
       </value>
       <value name="VAL">
-        <block type="math_random_int">
-          <value name="FROM">
-            <block type="math_number">
-              <title name="NUM">-1</title>
-            </block>
-          </value>
-          <value name="TO">
-            <block type="math_number">
-              <title name="NUM">1</title>
-            </block>
-          </value>
+        <block type="math_number">
+          <title name="NUM">-1</title>
         </block>
       </value>
     </block>
