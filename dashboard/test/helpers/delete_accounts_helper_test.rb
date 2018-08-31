@@ -452,24 +452,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Cleaned 1 Activity"
   end
 
-  test "Queries: Does activities in 1 query" do
-    # Baseline: Number of queries when clearing one Activity
-    student = create :student
-    create :activity, user: student
-    baseline_queries = capture_queries do
-      purge_user student
-    end
-    assert_logged "Cleaned 1 Activity"
-
-    # Compare: Make lots of Activities and make sure it doesn't take more queries to purge them
-    student = create :student
-    5.times {create :activity, user: student}
-    assert_queries baseline_queries.count do
-      purge_user student
-    end
-    assert_logged "Cleaned 5 Activity"
-  end
-
   # Note: table overflow_activities only exists on production, which makes it
   # difficult to test.
 
@@ -487,24 +469,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_logged "Cleaned 1 GalleryActivity"
   end
 
-  test "Queries: Does gallery_activities in 1 query" do
-    # Baseline: Number of queries when clearing one GalleryActivity
-    student = create :student
-    create :gallery_activity, user: student
-    baseline_queries = capture_queries do
-      purge_user student
-    end
-    assert_logged "Cleaned 1 GalleryActivity"
-
-    # Compare: Make lots of GalleryActivity and make sure it doesn't take more queries to purge them
-    student = create :student
-    5.times {create :gallery_activity, user: student}
-    assert_queries baseline_queries.count do
-      purge_user student
-    end
-    assert_logged "Cleaned 5 GalleryActivity"
-  end
-
   #
   # Table: dashboard.user_levels
   #
@@ -520,24 +484,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_nil user_level.level_source_id
 
     assert_logged "Cleaned 1 UserLevel"
-  end
-
-  test "Queries: Does user_levels in 1 query" do
-    # Baseline: Number of queries when clearing one UserLevel
-    student = create :student
-    create :user_level, user: student
-    baseline_queries = capture_queries do
-      purge_user student
-    end
-    assert_logged "Cleaned 1 UserLevel"
-
-    # Compare: Make lots of UserLevels and make sure it doesn't take more queries to purge them
-    student = create :student
-    5.times {create :user_level, user: student}
-    assert_queries baseline_queries.count do
-      purge_user student
-    end
-    assert_logged "Cleaned 5 UserLevel"
   end
 
   #
@@ -622,24 +568,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute AuthoredHintViewRequest.where(user: user).any?(&:final_level_source_id),
       "Expected none of user's AuthoredHintViewRequests to have a final_level_source_id"
-  end
-
-  test "Queries: Does authored_hint_view_requests in 1 query" do
-    # Baseline: Number of queries when clearing one AuthoredHintViewRequest
-    student = create :student
-    create :authored_hint_view_request, user: student
-    baseline_queries = capture_queries do
-      purge_user student
-    end
-    assert_logged "Cleaned 1 AuthoredHintViewRequest"
-
-    # Compare: Make lots of AuthoredHintViewRequest and make sure it doesn't take more queries to purge them
-    student = create :student
-    5.times {create :authored_hint_view_request, user: student}
-    assert_queries baseline_queries.count do
-      purge_user student
-    end
-    assert_logged "Cleaned 5 AuthoredHintViewRequest"
   end
 
   #
