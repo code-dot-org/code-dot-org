@@ -108,13 +108,29 @@ describe('SectionsAsStudentTable', () => {
           </div>
         </td>
       );
-      expect(wrapper).to.containMatchingElement(
-        <td>
-          <a>
-            {section.assignedTitle}
-          </a>
-        </td>
-      );
+      if (section.currentUnitTitle) {
+        expect(wrapper).to.containMatchingElement(
+            <td>
+              <a href={section.linkToAssigned}>
+                {section.assignedTitle}
+              </a>
+              <div>
+                <div>Current unit:</div>
+                <a href={section.linkToCurrentUnit}>
+                  {section.currentUnitTitle}
+                </a>
+              </div>
+            </td>
+        );
+      } else {
+        expect(wrapper).to.containMatchingElement(
+          <td>
+            <a href={section.linkToAssigned}>
+              {section.assignedTitle}
+            </a>
+          </td>
+        );
+      }
       expect(wrapper).to.containMatchingElement(
         <td>
           {section.teacherName}
