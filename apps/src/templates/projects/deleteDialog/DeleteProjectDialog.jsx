@@ -52,8 +52,7 @@ class DeleteProjectDialog extends Component {
             text={i18n.delete()}
             onClick={this.delete}
             color={Button.ButtonColor.orange}
-            className="no-mc"
-            className="ui-confirm-project-delete-button"
+            className="no-mc ui-confirm-project-delete-button"
             isPending={this.props.isDeletePending}
             pendingText={i18n.deleting()}
           />
