@@ -136,6 +136,7 @@ export default class SchoolAutocompleteDropdown extends Component {
         value={value}
         onChange={this.onChange}
         placeholder={i18n.searchForSchool()}
+        searchPromptText={i18n.searchForSchoolPrompt()}
       />
     );
   }
