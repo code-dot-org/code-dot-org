@@ -43,7 +43,6 @@ class AuthenticationOption < ApplicationRecord
     THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',
-    MICROSOFT = 'microsoft_v2_auth',
   ]
 
   CREDENTIAL_TYPES = [

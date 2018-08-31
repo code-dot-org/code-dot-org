@@ -28,13 +28,6 @@ GIT
       redis
 
 GIT
-  remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
-  revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
-  specs:
-    omniauth-microsoft_v2_auth (0.1.0)
-      omniauth-oauth2
-
-GIT
   remote: https://github.com/grosser/sort_alphabetical.git
   revision: f8eea712e236df6ba60839ead116f40094266c08
   specs:
@@ -966,7 +959,6 @@ DEPENDENCIES
   omniauth-clever (~> 1.2.1)!
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.3.1)
-  omniauth-microsoft_v2_auth!
   omniauth-openid
   omniauth-openid-connect!
   omniauth-windowslive (~> 0.0.11)!
@@ -1039,4 +1031,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.2
+   1.16.1
