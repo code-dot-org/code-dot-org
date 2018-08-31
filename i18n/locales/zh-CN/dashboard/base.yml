@@ -201,7 +201,7 @@ zh-CN:
     student_associated_subject: 'Code.org的登录信息'
   teacher_mailer:
     new_teacher_subject: '欢迎来到 Code.org ！'
-    delete_teacher_subject: 'Code.org 发来通知: 您的帐户已被删除'
+    delete_teacher_subject: 'Code.org 通知: 你的帐户已被删除'
   section:
     your_section:
       one: '你的小组：'
@@ -369,12 +369,12 @@ zh-CN:
     deleted_user: '已删除的用户'
     no_password_because_oauth: '无需密码，因为你使用第三方账号登录。'
     no_password_because_sponsored: '告诉你的老师来管理你的密码。'
-    create_personal_login: '创建个人账户'
+    create_personal_login: '创建个人的密码登录'
     create_personal_login_under_13_info: '如果您想在学年结束后依然保留您的账号，请您的父母/监护人帮您在下面创建您自己的账号。'
     create_personal_login_under_13_username: "用户名(请不要使用您的真名！)"
     create_personal_login_under_13_parent_email: '父母/监护人电子邮箱地址'
     create_personal_login_info: '如果想将你的Code.org账户在学年完成后也还保留，你需要在下面创建自己的账户。'
-    create_personal_login_terms: "通过创建个人账户，我同意接受Code.org的<a href='%{terms_of_service_url}', target='_blank'>服务条款</a>。如果我在13岁以下，我已经确定了我的父母或法定监护人已经允许我在没有老师的情况下来使用Code.org的服务。"
+    create_personal_login_terms: "通过创建个人账户，我同意接受Code.org的<a href='%{terms_of_service_url}', target='_blank'>服务条款</a>。我确认我的父母或法定监护人已经允许我在没有老师的情况下使用Code.org的服务。"
     create_personal_login_email_note: "注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。"
     enter_new_login_info: '输入新的登录信息'
     confirm_secret_words: '输入你当前的秘密单词来确认你的身份'
@@ -1023,15 +1023,15 @@ zh-CN:
         opt_in_no: '不'
     international_opt_in:
       intro: "非常感谢您抽出时间接受Code.org的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。"
-      instructions: "请填写下方的表格，该行为表明 1)您参加了一个由Code.org的国际合作伙伴运作的培训工坊，并且 2)您同意我们将您的情况告知我们在您所在国家的国际合作伙伴，以便他们在计算机教学方面帮助您。"
+      instructions: "请填写下方的表格，表明 1) 你参加了一个由 Code.org 的国际合作伙伴运作的培训研讨班，并且 2) 你同意我们将你的情况告知我们在你所在国家的国际合作伙伴，以便他们支持你作为计算机科学教师的工作。"
       thanks: "感谢您的提交！我们期待着能帮助您熟悉Code.org的课程及教学工具。请与我们分享你的问题和反馈，可发邮件至<a href='%{support_email_url}'>support@code.org</a>，或在<a href='%{teacher_forum_url}' target='_blank'>教师论坛</a>上发帖！"
     logged_out:
       heading: '感谢您对专业学习计划的兴趣！'
-      body: '要开始, 首先需要登录到您的 Code.org 帐户。如果您希望在启动应用程序之前了解有关该程序的更多信息, 请查看 <a href="%{url}">专业学习计划概述</a>。'
+      body: '开始前，首先需要登录到 Code.org 帐户。如果希望在启动应用程序之前了解有关该程序的更多信息，请查看 <a href="%{url}">专业学习计划概述</a>。'
     not_teacher:
-      body: '感谢您对Code.org的专业学习项目抱有兴趣。现在您已经注册了一个学生账户，请创建教师账户或<a href="%{user_settings}">转到用户设置</a>将您的账户升级为教师账户。'
+      body: '感谢对 Code.org 专业学习项目的兴趣。现在已经注册了一个学生账户，请创建教师账户或<a href="%{user_settings}">转到用户设置</a>将账户升级为教师账户。'
     no_teacher_email:
-      body: '您的帐户还没有填写电子邮件地址。请 <a href="%{user_registration}">访问您的帐户设置</a> 以在填写此表单之前添加您的电子邮件地址。'
+      body: '账号还没有填写电子邮件地址。请 <a href="%{user_registration}">访问帐户设置</a> 以在完成表单前添加电子邮件地址。'
   courses_category: '完整课程'
   cookie_banner:
     message: '通过继续浏览我们的网站或单击 "我同意", 您同意在你的计算机或设备上存储 cookie。'

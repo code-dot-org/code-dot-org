@@ -40,7 +40,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     assert_equal false, edap.dry_run?
     assert_equal Time.parse('2018-07-31 4:18pm PDT'), edap.deleted_after
     assert_equal 28.days.ago, edap.deleted_before
-    assert_equal 100, edap.max_accounts_to_purge
+    assert_equal 200, edap.max_accounts_to_purge
   end
 
   test 'raises ArgumentError unless dry_run is boolean' do
@@ -220,9 +220,11 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
-      max_accounts_to_purge: 100
+      max_accounts_to_purge: 200
       Purging user_id #{student_b.id}
+      Done purging user_id #{student_b.id}
       Purging user_id #{student_c.id}
+      Done purging user_id #{student_c.id}
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 2
       Custom/DeletedAccountPurger/AccountsQueued: 0
@@ -266,8 +268,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
-      max_accounts_to_purge: 100
+      max_accounts_to_purge: 200
       Purging user_id #{student_a.id}
+      Done purging user_id #{student_a.id}
       Purging user_id #{student_b.id}
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 1
@@ -310,10 +313,12 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
-      max_accounts_to_purge: 100
+      max_accounts_to_purge: 200
       (dry-run)
       Purging user_id #{student_b.id} (dry-run)
+      Done purging user_id #{student_b.id} (dry-run)
       Purging user_id #{student_c.id} (dry-run)
+      Done purging user_id #{student_c.id} (dry-run)
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
       Custom/DeletedAccountPurger/AccountsPurged: 0
       Custom/DeletedAccountPurger/AccountsQueued: 0
@@ -364,7 +369,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
-      max_accounts_to_purge: 100
+      max_accounts_to_purge: 200
       (dry-run)
       Purging user_id #{student_a.id} (dry-run)
       Purging user_id #{student_b.id} (dry-run)

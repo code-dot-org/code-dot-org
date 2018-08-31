@@ -6,12 +6,230 @@ sl:
       Prepare for your presentation:
         title: naslov
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Poveži kombinacije gumbov s plesnimi gibi.
+        Matching: Ujemanje
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Ujemanje
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Poveži mrežo s programom.
+        Matching: Ujemanje
       2-3 Maze Match 2:
         Instructions: Navodila
+        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
+        Maze Match: Labirint povezovanje
+      2-3 artist loops match 1:
+        Match the loop to the shape: Poveži zanke z ustrezno obliko
+      2-3 artist match 1:
+        Artist Matching: Ujemanje umetnikov
+        Match the shape with the blocks that complete it.: Ustrezno poveži bloke z liki.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Dodaj Igralcu ena njegov rezultat k skupnemu rezultatu</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Primerjaj rezultate igralcev, da vidiš, kdo zmaga</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Igralec 1 vrže kocko</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Postavi rezultat Igralca 1 na 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Poveži korake v Igri s kocko po vrstnem redu, kot se morajo pojaviti v algoritmu.
+        Matching: Ujemanje
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Kolesa/strani: 2 <br/> Okna/stran: 1</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Vsako od teh vozil je bilo razstavljeno na manjše dele. Poveži vsako od vozil s seznamom delov.
+        Matching: Ujemanje
+      4-5 Suncatchers Match 1:
+        Match each program to the word it makes, using the provided group of skills.: Poveži vsak program z besedo, ki ga naredi. Uporabi podane skupine spretnosti.
+        Matching: Ujemanje
       4-5 maze match 1:
         Instructions: Navodila
+        Match the puzzles to the blocks: Poveži ustrezne bloke z rešitvami
+        Maze Match: Labirint povezovanje
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Poveži like glede na njihovo obliko.
+        Matching: Ujemanje
+      K-1 Bee Loops Match 1:
+        Match the blocks: Poveži bloke
+        Matching: Ujemanje
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Poveži kombinacije gumbov s plesnimi gibi.
+        Matching: Ujemanje
       K-1 Maze Match 1:
         Instructions: Navodila
+        Match the puzzles and blocks: Poveži ustrezene puzle in bloke
+        Matching: Ujemanje
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Izberi algoritem za dano sliko.
+        Multiple Choice: Izbirno vprašanje
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Začni s kvadratom<br/>Postavi paralelogram nad kvadrat<br/>Postavi trikotnik desno od paralelograma
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Začni s kvadratom<br/>Postavi trikotnik nad kvadrat<br/>Postavi trikotnik pod kvadrat
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Začni s kvadratom<br/>Postavi trikotnik pod kvadrat<br/>Postavi paralelogram desno od trikotnika
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Izbirno vprašanje
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Začni s trikotnikom<br/>Postavi kvadrat pod trikotnik<br/>Postavi še en trikotnik pod kvadrat
+        Which image does <em>not</em> follow this algorithm?: Katera slika <em>ne</em> ustreza algoritmu?
+      2-3 Conditionals Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      2-3 Getting Loopy Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which program makes this image?: Kateri program naredi to sliko?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Labirint izbirno vprašanje
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Izbirno vprašanje
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Umetnik funkcije izbirno vprašanje ena
+        Pick the correct blocks to draw this image using the given functions: Ozači pravi blok z dano funkcijo, ki bo narisal dva pravokotnika
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
+        Which shape is made by this loop?: Katera oblika nastane s to zanko?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
+        Which shape is made by this program?: Katera oblika nastane s tem programom?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Katera spodnja primerjava velja?
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Izberi najboljše bloke.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Čebelica zanke izbirno vprašanje ena
+        Which blocks collect all of the nectar?: S katerim blokom lahko nabereš ves nektar?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Labirint izbirno vprašanje ena
+      4-5 Algorithms Multi 1:
+        Baking cookies: Peka piškotov
+        Banana: Banana
+        Brushing your teeth: Umivanje zob
+        Multiple Choice: Izbirno vprašanje
+        Shopping from a grocery list: Nakupovanje stvari s seznama
+        Which one of these items is hardest to describe an algorithm for?: Katere od teh stvari je najtežje predstaviti z algoritmom?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene je _____ mesto.
+        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        Multiple Choice: Izbirno vprašanje
+        Seattle _____ a _____ _____.: Seattle je _____ _______.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle je veliko mesto.<br/>Eugene je srednje mesto.<br/>Hillview je majhno mesto.
+        _____ is _____ a _____.: _____ _____ je _____.
+        _____ is a _____ city.: _____ je _____ mesto.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which of these pictures best represents crowdsourcing?: Katera od spodnjih slik najbolje predstavlja "crowdsourcing"?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Česanje tvojih las
+        Cleaning your room: Čiščenje tvoje sobe
+        Eating your dessert: Jesti tvojo sladico
+        Multiple Choice: Izbirno vprašanje
+        Washing your face: Umivanje tvojega obraza
+        Which one of these activities would be best for practicing crowdsourcing?: Katera od teh aktivnosti bi bila najboljša za izvajanje "crowdsourcinga"?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which piece of information listed below is okay to share on the internet?: Katere od navedenih informacij je v redu deliti na internetu?
+        Your address: Tvoj naslov
+        Your birthday: Tvoj rojstni dan
+        Your favorite food: Tvoja najljubša hrana
+        Your parent's credit card number: Številko kreditne kartice tvojih staršev
+      4-5 Internet Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Ko se poskušaš prijaviti na code.org, na kateri IP naslov te bo DNS najverjetneje pripeljal?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Če te je DNS poslal na stran z IP naslovom 100.42.50.110, na kateri spletni strani se nahajaš?
+        Multiple Choice: Izbirno vprašanje
+      4-5 Songwriting Multi 1:
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        Multiple Choice: Izbirno vprašanje
+        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kateri od spodnjih programov <em>ne</em> naredi enakega zaporedja kot Program 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Umetnik zanke izbirno vprašanje
+        Which blocks will create the design?: Kateri bloki bodo ustvarili to sliko?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Umetnik izbirno vprašanje
+        Which blocks draw a rectangle with a perimeter of 100?: Kateri bloki narišejo pravokotnik z obsegom 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Umetnik izbirno vprašanje
+        Which drawing is symmetric?: Katera risba je simetrična?
+      4-5 bee conditionals multi 1:
+        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        1: ': Vijolična roža ima lahko 3, 2 ali 1 nektar, ampak ne veš, koliko. Kateri blok pravilno preveri in dobi ves nektar iz vijoličnega cveta?'
+        Bee Conditionals Multiple Choice: Čebelica pogoji izbirno vprašanje
+        Choose the best blocks.: Izberi najboljše bloke.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Čebelica razhroščevanje izbirno vprašanje
+        Which version of the function will work?: Katera verzija funkcije bo delovala?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Čebelica zanke izbirno vprašanje
+        Which blocks will solve the puzzle?: Kateri bloki rešijo to uganko?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Labirint pogoji izbirno vprašanje
+        Which blocks solve the puzzle?: Kateri bloki rešijo uganko?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Labirint izbirno vprašanje
+        Which blocks solve the puzzle?: Kateri bloki rešijo uganko?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which blocks solve this puzzle?: Kateri bloki rešijo to uganko?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Izbirno vprašanje
+        Which blocks draw the square?: Kateri bloki narišejo kvadrat?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Koliko nektarjev je to?
+        Multiple Choice: Izbirno vprašanje
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Koliko nektarjev je to?
+        Multiple Choice: Izbirno vprašanje
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      K-1 Getting Loopy Multi 1:
+        Multiple Choice: Izbirno vprašanje
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which arrow gets the Flurb to the treasure?: Katera puščica pripelje Flurba do zaklada?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which information should you <strong>not</strong> share online?: Katere informacije <strong>ne</strong> smeš deliti na internetu?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which choice should be the final block?: Katera izbira bi moral biti zadnji blok?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which repeat block is the same?: Kateri blok za ponavljanje je isti?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Izbirno vprašanje
+        Pick the correct repeat block.: Označi pravi blok za ponavljanje.
       K-1 Maze Multiple Choice 2:
         Maze: Labirint
+        Which answer solves this level?: Kateri odgovor reši to uganko?
+      K-1 Move It Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which algorithm gets the Flurb to the flowers?: Kateri algoritem pripelje Furba do cvetja?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which step should go at the beginning of this algorithm?: Kateri korak bi moral biti na začetku tega algoritma?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Izbirno vprašanje
+        Which step should fill in the blank for this algorithm?: Kateri korak bi moral zapolniti praznino v algoritmu?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Izbirno vprašanje
+        Which blocks spell "MOVE"?: Kateri bloki črkujejo "MOVE"?
+      K-1 Word Search Multi 3:
+        Multiple Choice: Izbirno vprašanje
+        Which word is spelled?: Katera beseda je črkovana?

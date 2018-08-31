@@ -2237,13 +2237,23 @@ is:
       Find the Wizard_2018_instruction: Búðu til hvað sem þú vilt. Þetta er dæmi um
         giska-á-tölu leik!
       Fish Tank 2-validated_instruction: Breyttu Dusty (fokurtinni) í fisk.
+      Fish Tank 2-validated_simple_instruction: Breyttu Dusty (fokurtinni) í fisk.
+      Fish Tank 3-validated Ram_instruction: Breyttu hegðun fisksins svo hann syndi
+        um í búrinu.
       Fish Tank 3-validated_instruction: Breyttu hegðun fisksins svo hann syndi um
         í búrinu.
+      Fish Tank 3-validated_simple_instruction: Breyttu hegðun fisksins svo hann syndi
+        um í búrinu.
       Fish Tank 4-validated_instruction: Notaðu kubbinn `stilla bakgrunnslit` til
         að lita bakgrunninn bláan.
+      Fish Tank 4-validated_simple_instruction: Notaðu kubbinn `stilla bakgrunnslit`
+        til að lita bakgrunninn bláan.
       Fish Tank 6-validated_instruction: Bættu hegðun við nýja vin fisksins.
+      Fish Tank 6-validated_simple_instruction: Bættu hegðun við nýja vin fisksins.
       Fish Tank 7-validated_instruction: Notaðu nýja kubba úr verkfærakassanum til
         að gera fiskbúrið sérstakt!
+      Fish Tank 7-validated_simple_instruction: Notaðu nýja kubba úr verkfærakassanum
+        til að gera fiskbúrið sérstakt!
       Food Fight!_instruction: "Við höfum bætt síðasta fallinu fyrir þig.\r\n\r\nNotaðu
         \"ef\" setningu til að forrita leikinn svo hann kalli á fallið \"næsta_borð\"
         aðeins ef \"stig_leikmanns\" fer upp fyrir tiltekna tölu.\r\n\r\nTil dæmis
@@ -3522,6 +3532,8 @@ is:
         er á Kiki, ætti hún að kasta hjörtum í átt til vina sinna. '
       Virtual Pet 1_instruction: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra"
         og smellir svo á hana?
+      Virtual Pet 1_simple_instruction: Hvað heldur þú að muni gerast ef þú ýtir á
+        "Keyra" og smellir svo á hana?
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf
       aE7_instruction: "Hvað gerist ef þú notar sömu lykkju, en snýrð til vinstri
         í stað hægri? \r\n\r\nGetur þú endurtekið þetta og teiknað þessa bylgju?"

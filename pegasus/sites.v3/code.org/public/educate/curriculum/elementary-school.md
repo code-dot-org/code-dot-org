@@ -30,7 +30,7 @@ New to teaching computer science? No worries! Most of our teachers have never ta
 
 <div class="col-50" style="float: left; padding-right: 20px;">
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/professional-development-workshops'), cta_text: 'Find a workshop', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Support for teachers', ages: 'Professional Learning Opportunities', description: "<p>We offer high-quality, one-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on and fun intro to computer science, pedagogy, the teacher dashboard, and strategies for teaching 'unplugged' classroom activities.
+<%= view :course_wide_block, cta_link: CDO.code_org_url('/professional-development-workshops'), cta_text: 'Find a workshop', img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Support for teachers', ages: 'Professional Learning Opportunities', description: "<p>We offer high-quality, one-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on and fun intro to computer science, pedagogy, the teacher dashboard, and strategies for teaching 'unplugged' classroom activities.
 </p>
 Tens of thousands of teachers have participated and rate our workshops 4.8 on a 5 point scale. The majority say, 'It's the best professional development I've ever attended.'"%>
 
@@ -40,11 +40,18 @@ Tens of thousands of teachers have participated and rate our workshops 4.8 on a 
 
 ## It's easy to get started.
 
-The courses include daily lesson plans, student activities, and answer keys for teachers. You don't even need a user account to try it out. <a href="https://studio.code.org/users/sign_up", target=_"blank">Sign up</a> as a teacher to see the lesson plans, join the teacher forums, and get access to all the resources you need. Then, set up a classroom section to view your students' progress, manage their accounts, and print certificates they can bring home when they finish the course.
+The courses include daily lesson plans, student activities, and answer keys for teachers. You don't even need a user account to try it out. Once you get a feel for the courses, <a href="https://studio.code.org/users/sign_up", target=_"blank">sign up as a teacher</a> to see the lesson plans, join the teacher forums, and get access to all the resources you need. Next, quickly set up a classroom section from your roster or sync with tools like Clever or Google Classroom to view your students' progress and manage their accounts. Then celebrate your students' learning by printing certificates they can bring home when they finish the course.
 
 ## It's relevant.
 
-Our curriculum was created with the <a href="https://www.csteachers.org/page/standards", target=_"blank">2017 Computer Science Teachers Association (CSTA) standards</a> in mind, but also includes opportunities to support national <a href="http://www.corestandards.org/Math/",  target=_"blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target=_"blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target=_"blank">Science</a> standards. In fact, <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e", target=_"blank">a recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. <a href="https://curriculum.code.org/csf/standards/", target=_"blank">Click here</a> to see more details on standards. 
+Our curriculum was created with the 2017 Computer Science Teachers Association (CSTA) standards</a> in mind, but also includes opportunities to support national Math, English Language Arts, and Science standards. In fact, <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e", target=_"blank">a recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. <a href="https://curriculum.code.org/csf/standards/", target=_"blank">Click here</a> to see more details on standards.
+
+### Supported Standards
+
+* <a href="https://www.csteachers.org/page/standards", target=_"blank">Computer Science Teachers Association (CSTA)</a>
+* <a href="http://www.corestandards.org/ELA-Literacy/" target=_"blank">Common Core English Language Arts</a>
+* <a href="http://www.corestandards.org/Math/",  target=_"blank">Common Core Math</a>
+* <a href="http://www.nextgenscience.org/next-generation-science-standards" target=_"blank">Next Generation Science</a>
 
 ## It's fun.
 

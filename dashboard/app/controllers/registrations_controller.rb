@@ -213,20 +213,18 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/migrate_to_multi_auth
   #
   def migrate_to_multi_auth
-    was_migrated = current_user.migrated?
     current_user.migrate_to_multi_auth
-    redirect_to after_update_path_for(current_user),
-      notice: "Multi-auth is #{was_migrated ? 'still' : 'now'} enabled on your account."
+    redirect_to edit_registration_path(current_user),
+      notice: I18n.t('auth.migration_success')
   end
 
   #
   # GET /users/demigrate_from_multi_auth
   #
   def demigrate_from_multi_auth
-    was_migrated = current_user.migrated?
     current_user.demigrate_from_multi_auth
-    redirect_to after_update_path_for(current_user),
-      notice: "Multi-auth is #{was_migrated ? 'now' : 'still'} disabled on your account."
+    redirect_to edit_registration_path(current_user),
+      notice: I18n.t('auth.demigration_success')
   end
 
   private

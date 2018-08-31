@@ -618,6 +618,7 @@ GEM
     powerpack (0.1.1)
     progress (3.3.1)
     public_suffix (3.0.2)
+    puma (3.12.0)
     pusher (1.3.1)
       httpclient (~> 2.7)
       multi_json (~> 1.0)
@@ -693,6 +694,7 @@ GEM
       uber (< 0.2.0)
     request_store (1.4.1)
       rack (>= 1.4)
+    require_all (2.0.0)
     rerun (0.13.0)
       listen (~> 3.0)
     responders (2.4.0)
@@ -969,6 +971,7 @@ DEPENDENCIES
   petit!
   pg
   phantomjs (~> 1.9.7.1)
+  puma
   pusher (~> 1.3.1)
   rack-cache
   rack-mini-profiler
@@ -981,6 +984,7 @@ DEPENDENCIES
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)
   redis-slave-read!
+  require_all
   rerun
   responders (~> 2.0)
   rest-client (~> 2.0)

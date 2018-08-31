@@ -35,6 +35,7 @@ sk-SK:
   twentyhours_text: Hotový s prvou Hodinou programovania? Nauč sa viac o základoch
     počítačovej vedy a programovacích konceptoch  v nasledujúcom kurze.
   og_title: 'Code.org: Ktokoľvek sa môže naučiť'
+  og_title_soon: Hodina kódu sa blíži
   og_title_here: Hour of Code je tu!
   og_description: Každý študent v každej škole si zaslúži možnosť študovať informatiku.
   csedweek_og_title: Vzdelávací týždeň počítačovej vedy
@@ -234,6 +235,12 @@ sk-SK:
   studiobar_donate_body: Za každý darovaný dolár sa naučí jedno dieťa
   studiobar_shop_title: Obchod
   studiobar_shop_body: Prelom stereotypy. Nos naše logo s hrdosťou.
+  homepage_stats_students: amerických študenov má účet na Code.org
+  homepage_stats_female: našich študenov sú dievčatá
+  homepage_stats_teachers: učiteľov používa Code.org
+  homepage_stats_hourofcodde: študentov z celého sveta vyskúšalo Hodinu Kódu
+  homepage_stats_policy: štátov zmenilo školské osnovy na podporu výučby informatiky
+  homepage_stats_title: Meníme svet k lepšiemu
   homepage_hero_text_malala: "&ldquo;Vyzývam dievčatá v každej krajiny, sa aby naučili
     jednu Hodinu Kódu&rdquo;  Malala, nositeľ Nobelovej ceny mieru"
   homepage_hero_text_susan: |-
@@ -249,6 +256,8 @@ sk-SK:
     Sheryl, COO Facebook
   homepage_hero_text_satya: "&ldquo;Počítačová veda odomyká \ntie najlepšie príležitosti
     sveta.&rdquo;\nSatya, CEO Microsoft"
+  homepage_hero_text_satya_new: "&ldquo;Informatika dáva študentom \nschopnosť vytvárať
+    svet budúcnosti.&rdquo;\nSatya, generálny riaditeľ spoločnosti Microsoft"
   homepage_hero_text_bosh: |-
     &ldquo;Ak programuješ, môžeš si zvoliť
     smer svojho života.&rdquo;
@@ -276,9 +285,11 @@ sk-SK:
     &ldquo;Tento  program mojich žiakov na 100%
     zaujal, zapojili sa a prispeli svojím dielom.&rdquo;
     Adam, učiteľ
-  homepage_hero_text_stat_loc: "#loc riadkov kódu vytvorených študentmi"
-  homepage_hero_text_stat_students: "#student_count študentských účtov v Code Studiu"
+  homepage_hero_text_stat_loc: 8,5 milióna dievčat má účet na Code.org
+  homepage_hero_text_stat_students: "#student_count študentských účtov na code.org"
   homepage_hero_text_stat_served: 'Hodina kódu: #served účastníkov'
+  homepage_hero_hoc_is_coming: Hodina kódu sa blíži
+  homepage_hero_hoc_is_here: Hodina Kódu je tu
   homepage_slot_text_hoc: Hodina Kódu
   homepage_slot_text_frozen: Frozen s Annou a Elsou
   homepage_slot_text_studio: Všetky naše tutoriály
@@ -297,6 +308,7 @@ sk-SK:
   homepage_action_text_girlvideo: Inšpirujte dievčatá
   homepage_action_text_learn: Spustiť
   homepage_action_text_signpetition: Podpísať petíciu
+  homepage_action_text_wincelebritychat: Vyhraj rozhovor s celebritou
   homepage_signpetition_dropdown: Súhlasím &#x25BE;
   homepage_diversity_pledge: Zajistite rozmanitosť
   homepage_banner_text_prizes: 'Hour of Code príde znova, 7 - 13 decembra. '
@@ -307,18 +319,21 @@ sk-SK:
   homepage_banner_privacy_link: Dozvedieť sa viac
   homepage_banner_20k_teachers_link: Dozvedieť sa viac
   homepage_banner_congress_link: Pridaj svoju podporu
+  homepage_banner_emailprivacy: Robíme dôležitú zmenu na zvýšenie ochrany študentských
+    dát.
   homepage_banner_emailprivacy_link: Prečítaj si viac
   homepage_banner_40k_teachers_link: Dozvedieť sa viac
   homepage_slot_text_title_hoc: Hodina kódovania
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni dnes
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
+  homepage_slot_text_link_about_hoc: O Hodine kódu
   homepage_slot_text_link_host: Usporiadajte u vás Hodinu kódu
   homepage_slot_text_link_hocserved: "# účastníkov"
   homepage_solot_text_link_volunteer: Dobrovoľník pre Hodinu kódu
   homepage_slot_text_title_students: Študenti
   homepage_slot_text_blurb_students: Preskúmaj všetky naše tutoriály
   homepage_slot_text_blurb_students_courses: Preskúmaj naše kurzy
-  homepage_slot_text_link_codestudio: Skúsiť Code Studio
+  homepage_slot_text_link_codestudio: Vyskúšaj Code Studio
   homepage_slot_text_link_local: Nájdi triedu v tvojej lokalite
   homepage_slot_text_link_othercourses: Iné kurzy online
   homepage_slot_text_title_educators: Učitelia
@@ -941,12 +956,24 @@ sk-SK:
   course1_gradelevel: Vek 4-6
   course2_gradelevel: Vek 6-18
   course3_gradelevel: Vek 8-18
+  coursea_gradelevel: Vek 4-7
+  courseb_gradelevel: Vek 5-8
+  coursec_gradelevel: Vek 6-10
   coursed_gradelevel: Vek 8+
   coursee_gradelevel: Vek 8-12
+  coursef_gradelevel: Vek 9-13
+  coursea-2017_gradelevel: Vek 4-7
+  courseb-2017_gradelevel: Vek 5-8
+  coursec-2017_gradelevel: Vek 6-10
   coursed-2017_gradelevel: Vek 8+
   coursee-2017_gradelevel: Vek 8-12
+  coursef-2017_gradelevel: Vek 9-13
+  coursea-2018_gradelevel: Vek 4-7
+  courseb-2018_gradelevel: Vek 5-8
+  coursec-2018_gradelevel: Vek 6-10
   coursed-2018_gradelevel: Vek 8+
   coursee-2018_gradelevel: Vek 8-12
+  coursef-2018_gradelevel: Vek 9-13
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
   thinkersmithspanish_platformtext: Unplugged

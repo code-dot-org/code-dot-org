@@ -802,18 +802,26 @@ zh-CN:
       D_Frozen_nested9_instruction: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
         会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
       Dance Party 1-validated_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Dance Party 1-validated_simple_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party Freeplay_instruction: 现在来一段你自创的外星迪斯科吧！
+      Dance Party Freeplay_simple_instruction: 现在来一段你自创的外星迪斯科吧！
       Dance Party Predict_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Dance Party Predict_simple_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       Eval Free Play_instruction: 自由发挥： 用代码来创造艺术吧！
       Eval Strings Images .1_instruction: 到目前为止我们仅处理单一类型的数据，就是数字。 另一种数据类型是字符串，它可以是字母、
         数字或其他用引号引起来的字符的任意组合。运行字符串"你好, 世界！"，看看会发生什么。
       Find the Wizard_instruction: 随便创造一个东西。这是一个猜数游戏的例子！
       Find the Wizard_2018_instruction: 随便创造一个东西。这是一个猜数游戏的例子！
+      Fish Tank 3-validated Ram_instruction: 改动一下鱼的行为，让它沿着水缸边缘游。
       Fish Tank 3-validated_instruction: 改动一下鱼的行为，让它沿着水缸边缘游。
+      Fish Tank 3-validated_simple_instruction: 改动一下鱼的行为，让它沿着水缸边缘游。
       Fish Tank 4-validated_instruction: 加入`"background-color"`（背景颜色）模块将背景改为蓝色。
+      Fish Tank 4-validated_simple_instruction: 加入`"background-color"`（背景颜色）模块将背景改为蓝色。
       Fish Tank 5-validated_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
       Fish Tank 6-validated_instruction: 给鱼的新朋友添加一种新行为。
+      Fish Tank 6-validated_simple_instruction: 给鱼的新朋友添加一种新行为。
       Fish Tank 7-validated_instruction: 使用一些新的模块让鱼缸变得与众不同！
+      Fish Tank 7-validated_simple_instruction: 使用一些新的模块让鱼缸变得与众不同！
       Food Fight!_instruction: "我们已为你添加了上一关的函数。\r\n\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数)
         大于某个值时，调用level_up(升级) 函数。\r\n\r\n例如：“play_score” > 6\r\n\r\n玩游戏，并且达到第3级来到达下一关。 "
       FoodFight_instruction: 这是一个可以在游戏实验室里玩的游戏的示例。
@@ -1383,8 +1391,11 @@ zh-CN:
       Valentine_playlab_01_instruction: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时,
         她应该把心投向她的朋友们。 '
       Virtual Pet 1 Predict_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Virtual Pet 1 Predict_simple_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 4_instruction: 为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。
+      Virtual Pet 4_simple_instruction: 为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。
       Virtual Pet Freeplay_instruction: '自由发挥：你的长颈鹿还能做些什么呢？ '
+      Virtual Pet Freeplay_simple_instruction: '自由发挥：你的长颈鹿还能做些什么呢？ '
       aE3alternate_instruction: 交替
       aE3alternateB_instruction: 交替
       aE4_instruction: 交替
@@ -1864,10 +1875,11 @@ zh-CN:
       courseB_playlab_events6_instruction: "帮助你的骑士得到所有的旗帜！\r\n\r\n要做到这个，你需要添加事件来帮助骑士上下左右移动。"
       courseB_playlab_events6_2018_instruction: "帮助骑士得到所有的旗子!\r\n\r\n要做到这些，需要添加事件来帮助骑士向上、向下、向左和向右移动。"
       courseB_playlab_events7_instruction: 让这个游戏有趣，设置骑士在去往旗子的路上碰到龙的时候消失！当他们碰撞时播放声音使感觉更真实。
-      courseB_playlab_events7_2018_instruction: 让这个游戏有趣，设置骑士在去往旗子的路上碰到龙的时候消失！当他们碰撞时播放声音使感觉更真实。
+      courseB_playlab_events7_2018_instruction: "1) 设置骑士，让他碰到龙时消失。 \n2) 当他们碰撞时播放声音，这样感觉更真实。
+        \ "
       courseB_playlab_events8_instruction: 运用你的想象力。你能做些什么让这个游戏更有趣？
       courseB_playlab_eventsFP_instruction: 运用你的想象力。你能做些什么让这个游戏更有趣？
-      courseB_playlab_eventsFP_2018_instruction: 运用你的想象力。你能做些什么让这个游戏更有趣？
+      courseB_playlab_eventsFP_2018_instruction: "**自由发挥：** 运用你的想象力。你能做些什么让这个游戏更有趣？"
       courseB_playlab_eventsToolbox_instruction: 在骑士碰到龙的时候，播放声音并让骑士消失！
       courseB_playlab_events_challenge1_instruction: '当你按下时, 让动物们往下移动。 '
       courseB_playlab_events_challenge1_2018_instruction: '当你按下时, 让动物们往下移动。 '
@@ -2175,7 +2187,7 @@ zh-CN:
       courseD_Frozen_nested8_instruction: 在一个圆圈内旋转该形状大约5或6次。
       courseD_Frozen_nested9_instruction: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
         会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
-      courseD_artist_1_2018_instruction: "画一个**30**像素边长的小正方形。\r\n"
+      courseD_artist_1_2018_instruction: "画一个**50**像素边长的六边形。\r\n"
       courseD_artist_2_2018_instruction: "现在，向右转**60**度，然后画一条**150**像素长的直线，并跳回到区域中心。\r\n"
       courseD_artist_3_2018_instruction: '将所有代码嵌入到另一个`重复`循环中，并运行**6**次。 '
       courseD_artist_4_2018_instruction: 在线的末尾增加一个小形状！

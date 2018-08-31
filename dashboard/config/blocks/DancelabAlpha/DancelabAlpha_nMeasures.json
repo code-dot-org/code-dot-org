@@ -1,0 +1,14 @@
+{
+  "category": "Music",
+  "config": {
+    "func": "nMeasures",
+    "blockText": "{N} measures",
+    "returnType": "Number",
+    "args": [
+      {
+        "name": "N",
+        "type": "Number"
+      }
+    ]
+  }
+}

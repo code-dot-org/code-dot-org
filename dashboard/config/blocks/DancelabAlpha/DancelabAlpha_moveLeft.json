@@ -1,0 +1,16 @@
+{
+  "category": "Sprites",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "moveLeft",
+    "blockText": "{THIS} move left",
+    "args": [
+
+    ],
+    "methodCall": true
+  }
+}
