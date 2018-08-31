@@ -1,0 +1,51 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "layoutSprites",
+    "blockText": "layout {GROUP} sprites as a {FORMAT}",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "Alien",
+            "\"alien\""
+          ],
+          [
+            "MrWiggles",
+            "\"mrwiggles\""
+          ],
+          [
+            "Pizza",
+            "\"pizza\""
+          ],
+          [
+            "Unicorn",
+            "\"unicorn\""
+          ]
+        ]
+      },
+      {
+        "name": "FORMAT",
+        "options": [
+          [
+            "grid",
+            "\"grid\""
+          ],
+          [
+            "row",
+            "\"row\""
+          ],
+          [
+            "column",
+            "\"column\""
+          ]
+        ]
+      }
+    ]
+  }
+}

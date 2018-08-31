@@ -1,0 +1,14 @@
+{
+  "category": "Start",
+  "config": {
+    "color": [
+      39,
+      1,
+      0.99
+    ],
+    "func": "initialize",
+    "name": "setup",
+    "blockText": "setup",
+    "eventBlock": true
+  }
+}
