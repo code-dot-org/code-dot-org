@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<block type="behavior_definition" deletable="false" movable="false" editable="false">
-  <mutation>
-    <arg name="this sprite" type="Sprite"/>
-    <description/>
-  </mutation>
-  <title name="NAME">growing</title>
-  <statement name="STACK"/>
-</block>
