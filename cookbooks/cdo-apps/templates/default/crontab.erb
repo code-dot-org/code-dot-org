@@ -121,7 +121,7 @@
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
       cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
-      cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'purge_expired_deleted_accounts')} --dry-run"
+      cronjob at:"0 8 * * *", do:deploy_dir('bin', 'cron', 'purge_expired_deleted_accounts')
     end
   end
 
