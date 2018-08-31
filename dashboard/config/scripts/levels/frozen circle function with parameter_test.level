@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?",
+    "instructions": "Use the new function to create a small circle of size **5** and a larger circle of size **10**.",
     "x": "200",
     "y": "150",
     "start_direction": "90",
@@ -19,12 +19,12 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "ideal": "7",
+    "ideal": "5",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"frozen_circle_function_with_parameter_circle\",\"callout_text\":\"Use the \\\"create a circle\\\" block and change the size.\",\"element_id\":\"#create_circle_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"frozen_circle_function_with_parameter_circle\",\r\n  \"callout_text\": \"Use the `create a circle` block and change the size.\",\r\n  \"element_id\": \"#create_circle_qtip\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?",
+    "markdown_instructions": "Now the `create a circle` block can make circles of different sizes!  \r\n  \r\nUse the new function to create a small circle of size **5** and a larger circle of size **10**.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -37,10 +37,20 @@
     "discard_background": "false",
     "parent_level_id": 1246,
     "name_suffix": "_test",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-31 17:57:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:58:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:59:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -50,26 +60,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant_dropdown">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE" config="50,100,150,200,300">100</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="jump_by_constant_dropdown">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE" config="50,100,150,200,300">100</title>
-        </block>
         <block type="create_a_circle_size" inline="false" id="create_circle_qtip">
           <value name="VALUE">
             <block type="math_number_dropdown">
-              <title name="NUM" config="1-10">???</title>
+              <title name="NUM" config="5-10">???</title>
             </block>
           </value>
         </block>
@@ -80,10 +74,36 @@
             </block>
           </value>
         </block>
-        <block type="draw_colour" inline="true">
+        <block type="draw_colour" id="draw-color">
           <value name="COLOUR">
             <block type="colour_random"/>
           </value>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE" config="1, 2,50,100,150,200,300">1</title>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveBackward</title>
+          <title name="VALUE" config="1,2,50,100,150,200,300">1</title>
+        </block>
+        <block type="jump_to">
+          <title name="VALUE">13</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpBackward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="1,2,4,12,18,36, 45,60,90,120,180">1</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="1,2,4,12,18,36,45,60,90,120,180">1</title>
+        </block>
+        <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
+          <title name="TIMES" config="2, 4, 6, 8, 10,20,90,180,360">???</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -92,14 +112,14 @@
         <block type="create_a_circle_size" inline="false">
           <value name="VALUE">
             <block type="math_number_dropdown">
-              <title name="NUM" config="1-10">5</title>
+              <title name="NUM" config="5-10">5</title>
             </block>
           </value>
         </block>
         <block type="create_a_circle_size" inline="false">
           <value name="VALUE">
             <block type="math_number_dropdown">
-              <title name="NUM" config="1-10">10</title>
+              <title name="NUM" config="5-10">10</title>
             </block>
           </value>
         </block>
