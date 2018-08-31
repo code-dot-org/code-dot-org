@@ -40,7 +40,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 ### [CS Discoveries (Grades 6-10)](/educate/csd)
 * An introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun
-* Can be taught either as a semester or full-year offering
+* Takes a wide lens on CS by covering topics such as programming, physical computing, HTML/CSS, and data
 
 [/col-50]
 
