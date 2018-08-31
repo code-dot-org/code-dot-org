@@ -41,7 +41,7 @@ class ExpiredDeletedAccountPurger
 
     # Do nothing if more than this number of accounts would be purged.
     # We'll want to adjust this over time to match activity on our site.
-    @max_accounts_to_purge = options[:max_accounts_to_purge] || 100
+    @max_accounts_to_purge = options[:max_accounts_to_purge] || 200
     raise ArgumentError.new('max_accounts_to_purge must be Integer') unless @max_accounts_to_purge.is_a? Integer
 
     reset
