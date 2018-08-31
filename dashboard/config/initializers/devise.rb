@@ -292,6 +292,8 @@ Devise.setup do |config|
   }
   config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, scope: 'wl.basic wl.emails'
 
+  config.omniauth :microsoft_v2_auth, CDO.dashboard_microsoft_key, CDO.dashboard_microsoft_secret
+
   # for clever (and only clever) we ignore state because clever
   # initiates the oauth flow (instead of us as we do with facebook
   # with a log in with facebook button)
