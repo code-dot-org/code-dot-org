@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
+    "instructions": "Now, create two lines with a 90 degree turn between them.",
     "x": "150",
     "y": "180",
     "start_direction": "90",
@@ -19,12 +19,12 @@
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"turn_elsa\",\"callout_text\":\"Use the \\\"Turn\\\" block to make Elsa turn. The number in the drop-down determines how much Elsa turns\",\"element_id\":\"#turn_elsa\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"turn_elsa\",\r\n  \"callout_text\": \"Use the `turn` block to make Elsa turn. \",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "ideal": "4",
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
+    "markdown_instructions": "*\"Let's keep going!\"*\r\n\r\n&nbsp;\r\n\r\nAdd a <xml><block type=\"draw_turn_by_constant_dropdown\" id=\"turn_elsa\">\r\n    <title name=\"DIR\">turnRight</title>\r\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\r\n  </block>\r\n</xml> block and another <xml>\r\n  <block type=\"draw_move_by_constant_dropdown\">\r\n    <title name=\"DIR\">moveForward</title>\r\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\r\n  </block>\r\n</xml> block to make this icy shape.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -48,14 +48,26 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-30 20:27:24 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-30 20:27:24 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-30 22:21:01 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-30 22:22:20 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\",\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_move_by_constant_dropdown">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE" config="50,100,150,200,300">100</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant_dropdown">
+        <block type="draw_move_by_constant_dropdown" id="callMe">
           <title name="DIR">moveForward</title>
           <title name="VALUE" config="50,100,150,200,300">100</title>
         </block>
