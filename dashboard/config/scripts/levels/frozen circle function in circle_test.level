@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now let's create 20 overlapping circles, turning 18 degrees between each circle.",
+    "instructions": "Now let's create **20** overlapping circles, turning **18 degrees** between each circle.",
     "x": "350",
     "y": "180",
     "start_direction": "180",
@@ -19,12 +19,12 @@
     "impressive": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "ideal": "8",
+    "ideal": "9",
     "embed": "false",
     "disable_sharing": "false",
     "shapeways_url": "https://www.shapeways.com/model/2925886/",
     "permitted_errors": "0",
-    "markdown_instructions": "Now let's create 20 overlapping circles, turning 18 degrees between each circle.",
+    "markdown_instructions": "Now let's create **20** overlapping circles, jumping **50** pixels and turning **18 degrees** between each circle.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -37,55 +37,66 @@
     "discard_background": "false",
     "parent_level_id": 1245,
     "name_suffix": "_test",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-31 17:42:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:44:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:45:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:48:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:50:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:50:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:51:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 17:52:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ideal\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="create_a_circle" editable="false">
-              <next>
-                <block type="jump_by_constant_dropdown">
-                  <title name="DIR">jumpForward</title>
-                  <title name="VALUE" config="50,100,150,200,300">???</title>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="10-20">10</title>
+              <statement name="DO">
+                <block type="create_a_circle" editable="false">
                   <next>
-                    <block type="draw_turn_by_constant_dropdown">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="18,45,60,90,120,180">???</title>
+                    <block type="jump_by_constant_dropdown">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE" config="25,50,100,150,200,300">25</title>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" movable="false" editable="false" x="250" y="250">
+          <mutation/>
+          <title name="NAME">create a circle</title>
+          <statement name="STACK">
+            <block type="controls_repeat_dropdown" editable="false" can_disconnect_from_parent="false" id="repeat_toolbox_qtip1">
+              <title name="TIMES" config="2, 4, 6, 8, 10,20,90,180,360">360</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant_dropdown" editable="false" can_disconnect_from_parent="false">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE" config="1, 2,50,100,150,200,300">1</title>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown" editable="false" can_disconnect_from_parent="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="1,2,4,12,18,36, 45,60,90,120,180">1</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
         </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant_dropdown">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE" config="50,100,150,200,300">100</title>
-        </block>
-        <block type="jump_by_constant_dropdown">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE" config="50,100,150,200,300">50</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="18,45,60,90,120,180">18</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="18,45,60,90,120,180">18</title>
-        </block>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="2, 5, 10, 20">20</title>
-        </block>
         <block type="create_a_circle"/>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
@@ -94,10 +105,36 @@
             </block>
           </value>
         </block>
-        <block type="draw_colour" inline="true">
+        <block type="draw_colour" id="draw-color">
           <value name="COLOUR">
             <block type="colour_random"/>
           </value>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE" config="1, 2,50,100,150,200,300">1</title>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveBackward</title>
+          <title name="VALUE" config="1,2,50,100,150,200,300">1</title>
+        </block>
+        <block type="jump_to">
+          <title name="VALUE">13</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpBackward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="1,2,4,12,18,36, 45,60,90,120,180">1</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="1,2,4,12,18,36,45,60,90,120,180">1</title>
+        </block>
+        <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
+          <title name="TIMES" config="2, 4, 6, 8, 10,20,90,180,360">???</title>
         </block>
       </xml>
     </toolbox_blocks>
