@@ -368,8 +368,8 @@ class DeleteAccountsHelper
     user.destroy
 
     purge_teacher_feedbacks(user.id)
-    remove_census_submissions(user.email) if user.email
-    remove_email_preferences(user.email) if user.email
+    remove_census_submissions(user.email) if user.email&.present?
+    remove_email_preferences(user.email) if user.email&.present?
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
@@ -377,7 +377,7 @@ class DeleteAccountsHelper
     clean_and_destroy_pd_content(user.id)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
-    remove_poste_data(user.email) if user.email
+    remove_poste_data(user.email) if user.email&.present?
     remove_from_pardot_by_user_id(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)
