@@ -10,7 +10,9 @@ var sprites_by_type = {};
 var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites";
 var song_meta = {
   bpm: 146,
-  delay: 0.2
+  delay: 0.2, // Seconds to delay before calculating measures
+  verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+  chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
 };
 var score = 0;
 var game_over = false;
@@ -136,6 +138,27 @@ function Effects(alpha, blend) {
         rect(0, 0, i * 100 + 50, i * 100 + 50);
       }
       pop();
+    }
+  };
+  this.strobe={
+    waitTime: 0,
+    flashing: false,
+    update: function () {
+      this.flashing=true;
+      this.waitTime=6;
+    },
+    draw: function () {
+      var bgcolor = rgb(1,1,1);
+      if (Dance.fft.isPeak()) this.update();
+      if (this.flashing) {
+	      bgcolor=rgb(255,255,255);
+	      this.waitTime--;
+      }
+      if (this.waitTime<=0) {
+       bgcolor=rgb(1,1,1);
+       this.flashing=false;
+     }
+      background(bgcolor);
     }
   };
 }

@@ -1,0 +1,27 @@
+{
+  "category": "Music",
+  "config": {
+    "func": "getEnergy",
+    "blockText": "get {RANGE} energy",
+    "args": [
+      {
+        "name": "RANGE",
+        "options": [
+          [
+            "low",
+            "\"low\""
+          ],
+          [
+            "mid",
+            "\"mid\""
+          ],
+          [
+            "high",
+            "\"high\""
+          ]
+        ]
+      }
+    ],
+    "returnType": "Number"
+  }
+}

@@ -20,7 +20,7 @@ export const assetButtonStyles = {
   }
 };
 
-const RecordButton = ({onSelectRecord}) => (
+const RecordButton = ({onSelectRecord, disabled}) => (
   <span>
     <Button
       onClick={onSelectRecord}
@@ -30,12 +30,14 @@ const RecordButton = ({onSelectRecord}) => (
       icon="microphone"
       style={assetButtonStyles.button}
       size="large"
+      disabled={disabled}
     />
   </span>
 );
 
 RecordButton.propTypes = {
   onSelectRecord: PropTypes.func,
+  disabled: PropTypes.bool
 };
 
 /**
@@ -51,8 +53,7 @@ export default class AddAssetButtonRow extends React.Component {
     onUploadError: PropTypes.func.isRequired,
     onSelectRecord: PropTypes.func.isRequired,
     statusMessage: PropTypes.string,
-    // Temporary prop until recording audio is widely released
-    recordEnabled: PropTypes.bool
+    recordDisabled: PropTypes.bool,
   };
 
   render() {
@@ -66,7 +67,7 @@ export default class AddAssetButtonRow extends React.Component {
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
-        {this.props.recordEnabled && <RecordButton onSelectRecord={this.props.onSelectRecord}/>}
+        <RecordButton onSelectRecord={this.props.onSelectRecord} disabled={this.props.recordDisabled}/>
         <span id="manage-asset-status">
           {this.props.statusMessage}
         </span>
