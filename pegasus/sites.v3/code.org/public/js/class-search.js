@@ -5,7 +5,7 @@ var gmap_loc;
 var selectize;
 
 $(function () {
-  selectize = $('#class-search-facets select').selectize();
+  selectize = $('#class-search-facets select').selectize({plugins: ["remove_button"]});
 
   setFacetDefaults();
 
