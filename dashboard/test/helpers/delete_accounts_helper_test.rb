@@ -610,6 +610,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Expected no SchoolInfos referring back to this CensusSubmission"
   end
 
+  test "Never remove census submissions if user has blank email" do
+    student = create :student
+    assert_equal '', student.email
+
+    Census::CensusSubmission.expects(:where).never
+
+    purge_user student
+  end
+
   #
   # Table: dashboard.circuit_playground_discount_applications
   #
@@ -791,6 +800,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty EmailPreference.where(email: email)
 
     assert_logged "Removed 1 EmailPreference"
+  end
+
+  test "Never remove email preferences if user has blank email" do
+    student = create :student
+    assert_equal '', student.email
+
+    EmailPreference.expects(:where).never
+
+    purge_user student
   end
 
   #
@@ -1504,6 +1522,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: pegasus.contacts
+  # Table: pegasus.poste_deliveries
+  # Table: pegasus.poste_opens
   #
 
   test "removes contacts rows for email" do
@@ -1547,6 +1567,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
     assert_empty DB[:poste_opens].where(delivery_id: id)
+  end
+
+  test "Never removes poste data if user has empty email address" do
+    student = create :student
+    assert_equal '', student.email
+
+    DeleteAccountsHelper.any_instance.expects(:remove_poste_data).never
+
+    purge_user student
   end
 
   #
