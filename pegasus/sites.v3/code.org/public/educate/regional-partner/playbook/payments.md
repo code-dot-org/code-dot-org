@@ -45,6 +45,7 @@ ________________
 - Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. (Note: this includes any out of region facilitators).
 - Code.org will directly pay facilitators for any work they do at TeacherCon.
 - Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.
+- See CS Discoveries and CS Principles Facilitator Travel Policy <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>here</a>.
 
 **CS Fundamentals Facilitator Payments**
 
