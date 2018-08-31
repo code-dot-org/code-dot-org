@@ -13,10 +13,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  AuthenticationOption::OAUTH_CREDENTIAL_TYPES.each do |provider|
-    alias_method provider.to_sym, :all
-  end
-
   # Call GET /users/auth/:provider/connect and the callback will trigger this code path
   def connect_provider
     return head(:bad_request) unless can_connect_provider?
@@ -98,6 +94,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # This is a new registration
       register_new_user(@user)
     end
+  end
+
+  User::OAUTH_PROVIDERS.each do |provider|
+    alias_method provider.to_sym, :all
   end
 
   OAUTH_PARAMS_TO_STRIP = %w{oauth_token oauth_refresh_token}.freeze

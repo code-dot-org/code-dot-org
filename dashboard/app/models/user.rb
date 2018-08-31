@@ -166,7 +166,6 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
-    microsoft_v2_auth
     powerschool
   ).freeze
 
