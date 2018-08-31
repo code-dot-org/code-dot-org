@@ -44,7 +44,7 @@ The courses include daily lesson plans, student activities, and answer keys for 
 
 ## It's relevant.
 
-Our curriculum was created with the 2017 Computer Science Teachers Association (CSTA) standards</a> in mind, but also includes opportunities to support national Math, English Language Arts, and Science standards. In fact, <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e", target=_"blank">a recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. <a href="https://curriculum.code.org/csf/standards/", target=_"blank">Click here</a> to see more details on standards.
+Our curriculum was created with the 2017 Computer Science Teachers Association (CSTA) standards</a> in mind, but also includes opportunities to support national Math, English Language Arts, and Science standards. In fact, <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e", target=_"blank">a recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. Click <a href="https://curriculum.code.org/csf/standards/", target=_"blank">here</a> to see how CS Fundamentals lessons support standards.
 
 ### Supported Standards
 
