@@ -135,8 +135,7 @@ export default class QuickActionsCell extends Component {
           icon={icons[type]}
           style={iconStyle}
           onClick={this.state.canOpen ? this.open : undefined}
-          className="ui-test-section-dropdown"
-          className="ui-projects-table-dropdown"
+          className="ui-test-section-dropdown ui-projects-table-dropdown"
         />
         <PopUpMenu
           targetPoint={targetPoint}
