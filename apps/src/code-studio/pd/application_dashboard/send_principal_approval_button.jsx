@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import Spinner from '../components/spinner.jsx'
+import Spinner from '../components/spinner.jsx';
 import $ from 'jquery';
 import {Button} from 'react-bootstrap';
 
@@ -14,24 +14,23 @@ export class SendPrincipalApprovalButton extends React.Component {
     this.state = {
       requestSending: false,
       requestSent: false
-    }
+    };
   }
 
   sendPrincipalApproval = () => {
     this.setState({
       requestSending: true
-    })
+    });
 
     $.ajax({
       method: 'POST',
       url: `/api/v1/pd/application/resend_principal_approval/${this.props.id}`
-    }).
-    done(data => {
+    }).done(data => {
       this.setState({
         requestSent: true
-      })
+      });
     });
-  }
+  };
 
   render() {
     if (this.state.requestSent) {
@@ -39,9 +38,9 @@ export class SendPrincipalApprovalButton extends React.Component {
         <span>
           Email sent!
         </span>
-      )
+      );
     } else if (this.state.requestSending) {
-      return (<Spinner size="small"/>)
+      return (<Spinner size="small"/>);
     } else {
       return (
         <Button
@@ -49,9 +48,9 @@ export class SendPrincipalApprovalButton extends React.Component {
           target="_blank"
           onClick={this.sendPrincipalApproval}
         >
-          Send Principal Approval
+          Send email to principal
         </Button>
-      )
+      );
     }
   }
 }

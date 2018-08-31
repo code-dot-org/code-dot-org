@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
-import {Button, ButtonGroup} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import { StatusColors } from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
