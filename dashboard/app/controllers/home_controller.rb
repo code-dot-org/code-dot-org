@@ -42,7 +42,7 @@ class HomeController < ApplicationController
   # Signed out: redirect to /courses
   def index
     if current_user
-      if current_user.student? && current_user.assigned_course_or_script? && !session['clever_link_flag'] && current_user.primary_script
+      if current_user.student? && current_user.assigned_course_or_script? && !account_takeover_in_progress? && current_user.primary_script
 
         # Send students in course experiments (such as the subgoals experiment)
         # to the right place when they end up on the wrong version of their script.
