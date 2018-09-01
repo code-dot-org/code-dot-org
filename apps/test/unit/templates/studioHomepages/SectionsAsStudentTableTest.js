@@ -100,6 +100,7 @@ describe('SectionsAsStudentTable', () => {
       />, {context: {store}},
     ).dive();
     expect(wrapper.find('.test-row')).to.have.length(4);
+    expect(wrapper).toContainMatchingElement(<div>Current unit:</div>);
     joinedSections.forEach((section) => {
       expect(wrapper).to.containMatchingElement(
         <td>
