@@ -9625,3 +9625,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        frozen-2018-test-b:
+          title: New Frozen Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            Artist:
+              name: Artist
+              description_student: ''
+              description_teacher: ''

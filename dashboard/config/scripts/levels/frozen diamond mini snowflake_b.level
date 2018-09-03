@@ -1,7 +1,7 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2018-08-28T23:23:28.000Z",
+  "created_at": "2018-08-31T21:49:35.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -33,8 +33,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "parent_level_id": 1253,
-    "name_suffix": "_test",
+    "parent_level_id": 14492,
+    "name_suffix": "_b",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -47,7 +47,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-30 20:28:52 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 06:12:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 06:20:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 20:06:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-30 20:28:52 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 06:12:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 06:20:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 20:06:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 21:53:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

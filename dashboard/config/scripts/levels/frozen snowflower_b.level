@@ -1,0 +1,189 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2018-08-31T21:49:35.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "elsa",
+    "instructions": "Can you make a new snowflake by repeating this code **5** times and turning **72** degrees between each set?",
+    "x": "200",
+    "y": "200",
+    "start_direction": "180",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "free_play": "false",
+    "impressive": "true",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "ideal": "9",
+    "embed": "false",
+    "disable_sharing": "false",
+    "shapeways_url": "https://www.shapeways.com/model/2925862/",
+    "permitted_errors": "0",
+    "markdown_instructions": "Intricate snow patterns can be created with very simple shapes!  \r\n\r\nCan you make a new snowflake by repeating this code **5** times and turning **72 degrees** between each set?",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "parent_level_id": 14498,
+    "name_suffix": "_b",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-04-20 22:57:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-31 18:02:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 18:04:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 21:53:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="create_a_circle_size" inline="false">
+              <value name="VALUE">
+                <block type="math_number_dropdown">
+                  <title name="NUM" config="5-10">5</title>
+                </block>
+              </value>
+              <next>
+                <block type="create_a_circle_size" inline="false">
+                  <value name="VALUE">
+                    <block type="math_number_dropdown">
+                      <title name="NUM" config="5-10">10</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="create_a_circle_size" inline="false" id="create_circle_qtip">
+          <value name="VALUE">
+            <block type="math_number_dropdown">
+              <title name="NUM" config="5-10">???</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE" config="1, 2,50,100,150,200,300">1</title>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveBackward</title>
+          <title name="VALUE" config="1,2,50,100,150,200,300">1</title>
+        </block>
+        <block type="jump_to">
+          <title name="VALUE">13</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpBackward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="1,2,4,12,18,36,45,60,72,90,120,180">1</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="1,2,4,12,18,36,45,60,72,90,120,180">1</title>
+        </block>
+        <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
+          <title name="TIMES" config="2, 4, 5, 6, 8, 10,20,90,180,360">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="create_a_circle_size" inline="false">
+          <value name="VALUE">
+            <block type="math_number_dropdown">
+              <title name="NUM" config="5-10">5</title>
+            </block>
+          </value>
+        </block>
+        <block type="create_a_circle_size" inline="false">
+          <value name="VALUE">
+            <block type="math_number_dropdown">
+              <title name="NUM" config="5-10">10</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="1,2,4,12,18,36,45,60,72,90,120,180">72</title>
+        </block>
+        <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
+          <title name="TIMES" config="2, 4, 5, 6, 8, 10,20,90,180,360">???</title>
+        </block>
+      </xml>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              <statement name="DO">
+                <block type="create_a_circle_size" inline="false">
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="create_a_circle_size" inline="false">
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">10</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,72,90,120,180">72</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>
