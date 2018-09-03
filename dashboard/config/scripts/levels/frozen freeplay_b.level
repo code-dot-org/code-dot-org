@@ -46,7 +46,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-31 19:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 21:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-31 19:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 21:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 23:25:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -58,18 +58,18 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="create_a_circle_size" inline="false">
+        <block type="create_a_snowflake_branch" id="create_branch_qtip"/>
+        <block type="create_snowflake_dropdown" id="create_snowflake_qtip">
+          <title name="TYPE">square</title>
+        </block>
+        <block type="create_a_circle_size">
           <value name="VALUE">
             <block type="math_number">
               <title name="NUM">0</title>
             </block>
           </value>
         </block>
-        <block type="create_snowflake_dropdown" id="create_snowflake_qtip">
-          <title name="TYPE">square</title>
-        </block>
-        <block type="create_a_snowflake_branch" id="create_branch_qtip"/>
-        <block type="draw_colour" inline="true">
+        <block type="draw_colour">
           <value name="COLOUR">
             <block type="colour_picker">
               <title name="COLOUR">#ffffff</title>
