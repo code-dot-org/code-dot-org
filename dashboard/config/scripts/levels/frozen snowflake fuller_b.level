@@ -1,19 +1,19 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2018-08-28T23:23:29.000Z",
+  "created_at": "2018-08-31T22:28:41.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now let's repeat it **8** times to make a beautiful snowflake!",
+    "instructions": "What happens if you jump back before you draw each branch?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
-    "free_play": "false",
+    "free_play": "true",
     "start_direction": "180",
-    "x": "200",
+    "x": "175",
     "y": "200",
     "slider_speed": "0.8",
     "impressive": "true",
@@ -23,7 +23,7 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Now let's repeat it **8** times to make a beautiful snowflake!",
+    "markdown_instructions": "What happens if you jump backward by **25** pixels before you draw each branch?",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -33,8 +33,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "parent_level_id": 1262,
-    "name_suffix": "_test",
+    "parent_level_id": 14557,
+    "name_suffix": "_b",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -43,11 +43,13 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "discard_background": "false",
+    "project_template_level_name": "frozen snowflake branch_template",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/8354a56b15808eb3dba8e3d1b8930660=levelbuilder/38911.png",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-30 20:29:23 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 19:19:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 19:20:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-30 20:29:23 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 19:19:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 19:20:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 21:53:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 22:10:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 22:26:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 22:29:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 23:16:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 23:16:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 23:20:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"x\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 23:21:45 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,7 +59,7 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
-              <title name="TIMES" config="3-10">3</title>
+              <title name="TIMES" config="3-10">8</title>
               <statement name="DO">
                 <block type="create_a_snowflake_branch" id="create_branch_qtip">
                   <next>
@@ -101,7 +103,7 @@
         </block>
         <block type="jump_by_constant">
           <title name="DIR">jumpBackward</title>
-          <title name="VALUE">100</title>
+          <title name="VALUE">25</title>
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
@@ -144,11 +146,17 @@
             <block type="controls_repeat_dropdown">
               <title name="TIMES" config="3-10">8</title>
               <statement name="DO">
-                <block type="create_a_snowflake_branch">
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpBackward</title>
+                  <title name="VALUE">25</title>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="45,60,90,120,180">45</title>
+                    <block type="create_a_snowflake_branch">
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
