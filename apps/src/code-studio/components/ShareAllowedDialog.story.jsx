@@ -29,6 +29,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -52,6 +53,7 @@ export default storybook => {
       story: () => {
         return (
             <ShareAllowedDialog
+              allowExportExpo={false}
               isOpen={true}
               canPrint={true}
               canPublish={false}
@@ -78,6 +80,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -97,11 +100,12 @@ export default storybook => {
           );
         }
       }, {
-        name: 'with export',
-        description: `This feature has not yet shipped.`,
+        name: 'with export for web',
+        description: `The Export for Web section appears in advanced options with an Export button.`,
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -117,7 +121,33 @@ export default storybook => {
                 appType="applab"
                 canShareSocial={true}
                 onClickPopup={action('onClickPopup')}
-                onClickExport={action('onClickExport')}
+                exportApp={action('onClickExport')}
+              />
+          );
+        }
+      }, {
+        name: 'with export for expo',
+        description: `The Run Natively section appears in advanced options with two buttons.`,
+        story: () => {
+          return (
+              <ShareAllowedDialog
+                allowExportExpo={true}
+                isOpen={true}
+                canPublish={false}
+                isPublished={false}
+                isUnpublishPending={false}
+                onClose={action('close')}
+                onShowPublishDialog={action('show publish dialog')}
+                onUnpublish={action('unpublish')}
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={false}
+                channelId="some-id"
+                appType="applab"
+                canShareSocial={true}
+                onClickPopup={action('onClickPopup')}
+                exportApp={action('onClickExport')}
               />
           );
         }
@@ -127,6 +157,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -151,6 +182,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -175,6 +207,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={false}
                 isPublished={false}
@@ -199,6 +232,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={true}
                 isPublished={false}
@@ -223,6 +257,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={true}
                 isPublished={false}
@@ -246,6 +281,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={true}
                 isPublished={true}
@@ -269,6 +305,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={true}
                 isPublished={true}
@@ -292,6 +329,7 @@ export default storybook => {
         story: () => {
           return (
               <ShareAllowedDialog
+                allowExportExpo={false}
                 isOpen={true}
                 canPublish={true}
                 isPublished={true}

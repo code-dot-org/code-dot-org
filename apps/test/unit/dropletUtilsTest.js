@@ -3,6 +3,7 @@ import {assert, expect} from '../util/configuredChai';
 import sinon from 'sinon';
 import * as testUtils from './../util/testUtils';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
+import {globalFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
 import * as mazeDropletConfig from '@cdo/apps/maze/dropletConfig';
 import color from '@cdo/apps/util/color';
 
@@ -144,7 +145,7 @@ describe('dropletUtils', () => {
       const prompt = sinon.stub(window, 'prompt');
       prompt.returns('123');
 
-      const val = dropletUtils.globalFunctions.promptNum('Enter a value');
+      const val = globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 1);
       assert.strictEqual(val, 123);
     });
@@ -153,7 +154,7 @@ describe('dropletUtils', () => {
       const prompt = sinon.stub(window, 'prompt');
       prompt.returns('1.23');
 
-      const val = dropletUtils.globalFunctions.promptNum('Enter a value');
+      const val = globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 1);
       assert.strictEqual(val, 1.23);
     });
@@ -163,7 +164,7 @@ describe('dropletUtils', () => {
       prompt.onCall(0).returns('onetwothree');
       prompt.onCall(1).returns('123');
 
-      const val = dropletUtils.globalFunctions.promptNum('Enter a value');
+      const val = globalFunctions.promptNum('Enter a value');
       assert.strictEqual(prompt.callCount, 2);
       assert.strictEqual(val, 123);
     });
