@@ -9,7 +9,9 @@ module Api::V1::Pd::Application
     end
 
     def resend_principal_approval
-      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(Pd::Application::Teacher1819Application.find(params[:id])).deliver_now
+      ::Pd::Application::PrincipalApproval1819Application.create_placeholder_and_send_mail(
+        Pd::Application::Teacher1819Application.find(params[:id])
+      )
     end
 
     protected
@@ -22,7 +24,7 @@ module Api::V1::Pd::Application
       ::Pd::Application::Teacher1819ApplicationMailer.confirmation(@application).deliver_now
 
       unless @application.regional_partner&.principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(@application).deliver_now
+        ::Pd::Application::PrincipalApproval1819Application.create_placeholder_and_send_mail(@application)
       end
     end
   end

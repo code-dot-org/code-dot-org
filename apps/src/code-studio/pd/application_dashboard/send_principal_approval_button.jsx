@@ -3,9 +3,9 @@ import Spinner from '../components/spinner.jsx';
 import $ from 'jquery';
 import {Button} from 'react-bootstrap';
 
-export class SendPrincipalApprovalButton extends React.Component {
+export default class SendPrincipalApprovalButton extends React.Component {
   static propTypes = {
-    id: PropTypes.number.isRequired
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
   };
 
   constructor(props) {

@@ -7,7 +7,7 @@ import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import { StatusColors } from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
-import {SendPrincipalApprovalButton} from "./send_principal_approval_button";
+import SendPrincipalApprovalButton from './send_principal_approval_button';
 
 const styles = {
   table: {

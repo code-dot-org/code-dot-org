@@ -13,6 +13,7 @@ import {
   LabelOverrides as FacilitatorLabelOverrides,
   NumberedQuestions
 } from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+import SendPrincipalApprovalButton from './send_principal_approval_button';
 
 const TEACHER = 'Teacher';
 const FACILITATOR = 'Facilitator';
@@ -27,12 +28,14 @@ const paneledQuestions = {
 
 export default class DetailViewApplicationSpecificQuestions extends React.Component {
   static propTypes = {
+    id: PropTypes.string,
     formResponses: PropTypes.object.isRequired,
     applicationType: PropTypes.oneOf([TEACHER, FACILITATOR]).isRequired,
     editing: PropTypes.bool,
     scores: PropTypes.object,
     handleScoreChange: PropTypes.func,
-    applicationGuid: PropTypes.string
+    applicationGuid: PropTypes.string,
+    principalApprovalState: PropTypes.oneOf(['not_sent', 'sent', 'received'])
   };
 
   constructor(props) {
@@ -60,18 +63,31 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
   renderResponsesForSection(section) {
     // Lame edge case but has to be done
     if (section === 'detailViewPrincipalApproval' && !this.props.formResponses['principalApproval']) {
-      return (
-        <span>
-          <h4>
-            Not yet submitted
-          </h4>
+      if (this.props.principalApprovalState === 'not_sent') {
+        return (
+          <div>
+            <h4>
+              Not required - request not sent to principal
+            </h4>
+            <SendPrincipalApprovalButton
+              id={this.props.id}
+            />
+          </div>
+        );
+      } else {
+        return (
           <span>
-            Link to principal approval form: (<a href={`/pd/application/principal_approval/${this.props.applicationGuid}`} target="_blank">
-             {`http://studio.code.org/pd/application/principal_approval/${this.props.applicationGuid}`}
-            </a>)
+            <h4>
+              Not yet submitted
+            </h4>
+            <span>
+              Link to principal approval form: (<a href={`/pd/application/principal_approval/${this.props.applicationGuid}`} target="_blank">
+               {`http://studio.code.org/pd/application/principal_approval/${this.props.applicationGuid}`}
+              </a>)
+            </span>
           </span>
-        </span>
-      );
+        );
+      }
     } else {
       return Object.keys(this.pageLabels[section]).map((question, j) => {
         return (
