@@ -15,7 +15,7 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.8",
-    "instructions": "Let's repeat the line 90 times!",
+    "instructions": "Let's repeat the line **90** times!",
     "impressive": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -24,7 +24,7 @@
     "disable_sharing": "false",
     "shapeways_url": "https://www.shapeways.com/model/2925814/",
     "permitted_errors": "0",
-    "markdown_instructions": "Try repeating the line 90 times!  \r\n\r\nHow far do you need to turn each time?  \r\nHint: It's a small number **(360÷90)**.",
+    "markdown_instructions": "Try repeating the line **90** times!  \r\n\r\nHow far do you need to turn each time?  \r\nHint: It's a small number **(360÷90)**.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -48,7 +48,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-30 20:28:19 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 05:45:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:47:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:49:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:51:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:53:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 06:22:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-30 20:28:19 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 05:45:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:47:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:49:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:51:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:53:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 06:22:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 20:00:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 20:03:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -122,18 +122,18 @@
           <statement name="PICK">
             <block type="draw_turn_by_constant_dropdown">
               <title name="DIR">turnRight</title>
-              <title name="VALUE" config="4,45,60,90,120,180">4</title>
+              <title name="VALUE" config="4, 12, 36, 45,60,90,120,180">4</title>
               <next>
                 <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE" config="4,45,60,90,120,180">4</title>
+                  <title name="VALUE" config="4, 12, 36, 45,60,90,120,180">4</title>
                 </block>
               </next>
             </block>
           </statement>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="10, 50, 90, 100">90</title>
+          <title name="TIMES" config="4, 10, 20, 50, 90">90</title>
         </block>
       </xml>
     </recommended_blocks>

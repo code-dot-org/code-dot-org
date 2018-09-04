@@ -31,10 +31,19 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "discard_background": "false",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "auto_run": "FULL_AUTO_RUN",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-04 15:52:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-04 15:52:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-04 15:53:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -295,9 +304,9 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="controls_repeat_ext" inline="true">
+        <block type="controls_repeat_ext">
           <value name="TIMES">
-            <block type="math_arithmetic" inline="true">
+            <block type="math_arithmetic">
               <title name="OP">MINUS</title>
               <value name="A">
                 <block type="math_number">
@@ -312,7 +321,7 @@
             </block>
           </value>
         </block>
-        <block type="controls_for_counter" inline="true">
+        <block type="controls_for_counter">
           <mutation counter="counter"/>
           <value name="FROM">
             <block type="math_number">
@@ -333,7 +342,7 @@
         <block type="variables_get">
           <title name="VAR">counter</title>
         </block>
-        <block type="math_arithmetic" inline="true">
+        <block type="math_arithmetic">
           <title name="OP">MULTIPLY</title>
           <value name="A">
             <block type="variables_get">
@@ -349,13 +358,15 @@
         <block type="math_number">
           <title name="NUM">0</title>
         </block>
-        <block type="text">
-          <title name="TEXT">0</title>
-        </block>
-        <block type="procedures_callnoreturn" inline="true">
+        <block type="procedures_callnoreturn">
           <mutation name="draw">
             <arg name="binary"/>
           </mutation>
+          <value name="ARG0">
+            <block type="text">
+              <title name="TEXT">0</title>
+            </block>
+          </value>
         </block>
       </xml>
     </toolbox_blocks>
