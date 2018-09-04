@@ -9,12 +9,19 @@
     %li if start_blocks are defined in the project template level, use those instead of the start blocks for this level
     %li if toolbox_blocks are defined in the project template level, use those instead of the toolbox blocks for this level
     %li autocreate a project that is shared with all levels with the same project template level
-  %p (Leave blank if you do not want all of this)
+  %p
+    (Leave blank if you do not want all of this)
+  %p
+    To learn how to make and use project templates
+    =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-and-Using-Templates', target: '_blank'
   = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
 
 .field
   = f.label :contained_level_names, 'Contained Level Names'
-  %p Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
+  %p The text area to add contained levels to create predict levels. Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
+  %p
+    Learn how to create predict levels
+    =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-a-Predict-Level', target: '_blank'
   - @level.contained_level_names = [''] unless @level.contained_level_names.try(:present?)
   - @level.contained_level_names.each do |level_name|
     = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
