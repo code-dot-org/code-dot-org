@@ -902,20 +902,7 @@ class ContactRollups
     # has district names like "open csp".
     districts = District.all.index_by(&:id)
 
-    # users = User.where("length(email) > 0") # original query, replaced by following for multiauth
-    # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
-    users = User.find_by_sql <<-eos
-      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM users
-      LEFT JOIN authentication_options
-        ON users.primary_contact_info_id = authentication_options.id
-      WHERE
-        IF (
-          users.provider = 'migrated',
-          length(authentication_options.email),
-          length(users.email)
-        )
-        > 0
-    eos
+    users = MultiAuthUserView.where("length(email) > 0")
 
     users.find_each do |user|
       unless user.ops_school.nil?
