@@ -1,4 +1,39 @@
 displayweight_i,displayweight_pre_i,displayweight_25_i,displayweight_middle_i,displayweight_high_i,code_s,name_s,orgname_s,url_s,shortdescription_s,longdescription_t,platformtext_s,gradelevel_s,image_s,tags_s,teachers_notes_s,language_s,languages_supported_s,short_code_s,tags_grade_s,string_detail_grades_s,tags_teacher_experience_s,tags_student_experience_s,tags_activity_type_s,tags_subject_s,tags_platform_s,string_platforms_s,string_detail_platforms_s,tags_length_s,tags_programming_language_s,string_detail_programming_languages_s,string_standards_t,popularityrank_i,popularityrank_pre_i,popularityrank_25_i,popularityrank_middle_i,popularityrank_high_i
+1950,2000,1955,1,1,codespark,codeSpark Academy with The Foos,codeSpark,http://thefoos.com/hour-of-code/,"""The Foos"" is a fun, pre-reader friendly game to learn about programming.","Code the adorable Foos to solve puzzles that teach fundamental computer science concepts like sequencing and loops. Everyone everywhere can learn to code with codeSpark Academy's award-winning ""no words"" interface. Beginner coders and pre-readers welcome!","iOS, Android (or web browser).",Elementary,/images/tutorials/new/codeSpark_foos_puzzles.jpg,"Apps,Mobile,International,Beginner",http://bit.ly/HoCpuzzles,"English, Arabic, Azerbaijani, Chinese, Dutch, French, German, Greek, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Spanish, Swedish, Turkish, Ukrainian","ar,az,de,el,en,es,fa,fr,id,is,it,ko,nl,no,pl,pt,pt-br,ro,ru,sr,sv,tr,uk,zh,hi,ja,hu",foos,"all,pre,2-5",Pre-reader - Grade 5,beginner,beginner,online-tutorial,art,"computers,android,ios,no-internet","All modern browsers, Android tablet, iPad, Android phone, iPhone",,1hour,blocks,Blocks,"CSTA:
+CSTA 1A-A-5-2
+CSTA 1A-A-4-4
+CSTA 1A-A-3-5
+CSTA 1A-A-3-6
+CSTA 1A-A-3-7
+CSTA 1A-C-7-9
+CSTA 1A-N-2-16
+CSTA 1B-A-5-4
+CSTA 1B-A-3-7
+Common Core Math:
+CCSS.Math.Practice.MP1
+CCSS.Math.Practice.MP2
+CCSS.Math.Practice.MP4
+CCSS.Math.Practice.MP6
+CCSS.Math.Practice.MP7
+CCSS.Math.Practice.MP8
+CCSS.Math.Content.K.MD.B.3
+National Core Arts Standards:
+MA:Cr1.1.K
+MA:Cr2.1.K
+MA:Cr3.1.1.a
+MA:Cr3.1.1.b
+MA:Pr5.1.1.a
+MA:Pr5.1.1.b
+ISTE:
+EmpoweredLearner-a1
+EmpoweredLearner-4d
+EmpoweredLearner-c1
+ComputationalThinker-5a
+ComputationalThinker-5c
+ComputationalThinker-5d
+CreativeCommunicator-6b
+CreativeCommunicator-6d
+GlobalCollaborator-7a",11,4,19,221,183
 1940,1,1960,1950,2000,sw,Star Wars: Building a Galaxy with Code,Code.org,https://code.org/starwars,"Learn to program droids, and create your own Star Wars game in a galaxy far, far away.","Learn to program droids, and create your own Star Wars game in a galaxy far, far away.","Modern browsers, smartphones, tablets.",Ages 6+,/images/tutorials/resubmission/starwars.png,"starwars,2015-tutorial",https://code.org/hourofcode/starwars,"English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more","ar,bg,ca,cs,da,de,en,es,el,fa,fi,fr,hr,hu,is,id,it,ja,ko,lt,nl,nn,no,pl,pt,pt-br,pt-pt,ro,ru,sl,sv,tr,uk,vi,zh,zh-tw,zh-cn",star-wars,"all,2-5,6-8,9+",Grades 2+,beginner,beginner,online-tutorial,cs-only,"computers,android,ios,no-internet","All modern browsers, Android tablet, iPad, Android phone, iPhone",,"1hour,1hour-follow",blocks,"Blocks, JavaScript",,5,36,5,10,5
 1980,1,1990,1990,1990,google_logo,Create your own Google logo,Google,https://g.co/csfirst/logo,Bring the Google logo to life using your imagination and a bit of code.,"Use your creativity and imagination to bring the Google logo to life using code. Make the letters dance, tell a story or create a game. With Scratch and CS First, anyone can become a designer and programmer for the day!",All modern browsers,Grades 2+,/images/tutorials/hoc2017/google_logo.png,2017-tutorial,https://g.co/csfirst/logo-teachers,English only,en,googlelogo,"all,2-5,6-8,9+",Grades 2+,beginner,beginner,online-tutorial,art,computers,All modern browsers,,1hour,blocks,"Blocks, Scratch",,3,999,3,2,3
 1950,1,1,1980,1970,mobilecsp_tune,Play That Tune App,Mobile Computer Science Principles Project,http://www.mobile-csp.org/hourofcode,Use coding skills to solve musical puzzles and create an Android app,"A blocks language is used to solve musical puzzles by writing code to match tunes played on a piano keyboard. Sequence, selection, and repetition algorithms are needed to solve the puzzles. After the 9th level, users can create their own tune and download it as an app for an Android device. Students can also modify the app by following a link to the App Inventor source code.","Chrome, Firefox, Safari",Grades 6+,/images/tutorials/hoc2017/mobilecsp_tune.png,2017-tutorial,https://docs.google.com/document/d/1mX0cGhy8rI6DC34tn3hp0IPkfphaoswkzcIceETIGv0,English only,en,playtune,"all,6-8,9+",Grades 6+,beginner,beginner,online-tutorial,art,computers,"Chrome, Firefox, Safari",,1hour,blocks,Blocks,"Addresses CSTA standards 1B-AP-10, 1B-AP-12 and 3A-AP-16",22,999,999,15,13
@@ -32,7 +67,7 @@ NGSS-MS-ETS1-2.    Evaluate competing design solutions using a systematic proces
 NGSS-MS-ETS1-3.    Analyze data from tests to determine similarities and differences among several design solutions to identify the best characteristics of each that can be combined into a new solution to better meet the criteria for success.
 NGSS-MS-ETS1-4.    Develop a model to generate data for iterative testing and modification of a proposed object, tool, or process such that an optimal design can be achieved.
 
-Employs the “Parts, Purposes, Complexities” thinking routine from Harvard Graduate School of Education’s Project Zero. http://www.pz.harvard.edu/sites/default/files/AbD_PPC.pdf",127,999,999,72,47
+Employs the ""Parts, Purposes, Complexities"" thinking routine from Harvard Graduate School of Education's Project Zero. http://www.pz.harvard.edu/sites/default/files/AbD_PPC.pdf",127,999,999,72,47
 1790,1,1,1658,1800,codeclub_binary,Binary Hero,Code Club,https://projects.raspberrypi.org/en/projects/binary-hero,Make a Scratch game in which you play the notes of a song as they scroll down the stage.,Make a Scratch game in which you play the notes of a song as they scroll down the stage. You'll score ten points for every correct note you play. Each note corresponds to a binary number.,"Internet Explorer 11, Microsoft Edge, Chrome",Grades 6+,/images/tutorials/hoc2017/codeclub_binary.png,2017-tutorial,,English only,en,ccbinary,"all,6-8,9+",Grades 6+,beginner,comfortable,online-tutorial,math,computers,"Internet Explorer 11, Microsoft Edge, Chrome",,"1hour,1hour-follow",blocks,Blocks,,239,999,999,150,98
 1621,1,1,1621,1621,pac_man_zero,Pac-Man ZERO,University of Colorado and Pädagogische Hochschule FHNW (Switzerland),https://www.cs.colorado.edu/~ralex/hourofcode/pac-man/,Create and program a 3D Pac-Man Maze World,In one hour you create a simple version of a Pac-Man game. You draw the characters in 2D and turn them into 3D. You create your own maze. Then you program the game using AgentCubes. With only 11 IF/THEN rules you create sophisticated AI. Even with just two smart ghosts you will have your hands full to win the game.,All modern browsers,Grades 6+,/images/tutorials/hoc2017/pac_man_zero.png,2017-tutorial,https://sgd.cs.colorado.edu/wiki/images/f/f9/T3_5_ACO_Pacman_Master_v3.0.pdf,English only,"en,en-GB",pmzero,"all,6-8,9+",Grades 6+,comfortable,beginner,online-tutorial,"art,science",computers,All modern browsers,,"1hour,1hour-follow",blocks,Blocks,CSTA: Computational Thinking; NGSS: Diffusion; Common Core: Math/Average,13,999,999,4,6
 1595,1,1,1,1595,gamefroot_crossy_road,Learn to Code with Crossy Road,Gamefroot,http://make.gamefroot.com/activity/code-with-crossy-road,Code your own Crossy Road mini-game and learn to think like a computer,"In this suite of introductory coding lessons you will learn about making your own Crossy Road style mini-game.

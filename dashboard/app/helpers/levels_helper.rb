@@ -574,6 +574,7 @@ module LevelsHelper
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
+      level_options[:sharedFunctions] = nil # TODO: handle non-standard pools
     end
 
     unless params[:no_last_attempt]

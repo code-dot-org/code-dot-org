@@ -10,9 +10,7 @@ theme: responsive
   }
 </style>
 
-# Code.org Professional Learning Program for Middle and High School
-
-Our Professional Learning Program for middle and high school teachers offers year round support for educators as they prepare to teach our CS Discoveries or CS Principles courses. We designed the Professional Learning Program to make the content of our courses more approachable and accessible to educators from various backgrounds.  You don’t need any prior computer science experience to get started!
+# Professional Learning for Middle and High School
 
 <div class="col-50" style="padding-right: 20px;">
 
@@ -32,9 +30,35 @@ Our Professional Learning Program for middle and high school teachers offers yea
 
 <div style="clear: both;"></div>
 
-[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Want to share details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
+## New to computer science? No worries!
 
-<hr/>
+Whether you are new to teaching computer science (CS) or have experience teaching other CS courses, the Code.org Professional Learning Program offers year round support. We’ve designed this program to promote growth by providing space for you to become comfortable with curricular materials, CS content, and pedagogy.
+
+[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Interested in sharing details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
+
+## Find the right course for your classroom
+
+The program supports teachers with diverse teaching backgrounds as they prepare to teach either of the following courses:
+
+[col-50]
+
+### [CS Discoveries (Grades 6-10)](/educate/csd)
+* An introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun
+* Can be taught as a 1 or 2 semester course (or 50+ course hours)
+
+[/col-50]
+
+[col-50]
+
+### [CS Principles (Grades 9-12)](/educate/csp)
+* A higher level introductory course that introduces the foundational concepts of computer science while challenging students to explore how computing and technology can impact the world
+* Can be taught as an AP or non-AP class
+* Requires a full year to teach (or 100+ course hours)
+<br/>
+
+[/col-50]
+
+Teach a different grade level or have fewer hours available with your students? <a href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit#", target=_"blank">Find the right course for your classroom.</a>
 
 ## Program Commitments 
 The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles.
@@ -43,16 +67,12 @@ The Code.org Professional Learning Program has both in-person and online support
 
 <br/>
 
-**Summer Workshop:**
+**Workshop experience:**
 
 * Participants explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
 * With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.
 
-**Ongoing Support, throughout following academic year:**  
-
-* Usually held on Saturdays, these workshops  focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continue to build pedagogical strategies.
-
-In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. Have more questions about which program is for you? Learn more about <a href="https://code.org/files/PL-Program-for-Me.pdf", target=_"blank">course offerings</a> or <a href="mailto:teacher@code.org">contact us</a>.
+ or <a href="mailto:teacher@code.org">contact us</a>.
 
 ## <a name="features"></a>Program Features
 
@@ -79,6 +99,29 @@ Participants will engage with the curriculum both as instructors and as learners
 ​Teachers and facilitators will have the opportunity to share their expertise from the field and collaborate on strategies to bring to the CS Principles and CS Discoveries classrooms, giving participants a chance to learn from everyone in the room. Facilitators model pedagogical strategies and participants share their own approaches by planning and delivering lessons.
 ​</p>
 ​</details>
+​
+​<details>
+​ <summary>**Join the community of educators**</summary>
+​ <p>
+​<br>
+​In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. 
+​</p>
+​ <p>
+​Make in person connections with local teachers to support you throughout the school year. And, to help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time.
+​</p>
+​ <p>
+<img style="margin-top:-8px;margin-bottom:-20px;margin-left:-25px;float:left" src="/images/avatars/fit-200/iste.png"/>
+
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, <a href="https://www.iste.org/membership/code-org", target=_"blank">we can offer an ISTE membership</a> exclusively to Code.org teachers at the special price of $99 (regularly $125).
+
+Check out these 3 key benefits of ISTE membership:
+
+- Professional Learning Networks made up of peer experts, including computer science educators
+- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
+- Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
+
+</details>
+​
 
 ## What does a Code.org educator do?
 If accepted into the Code.org Professional Learning Program, you will:
@@ -104,23 +147,6 @@ Generous scholarships and grants are available across the country to cover the p
 
 Enter your school’s zip code below to find out your cost.
 
-
-
-## Additional Benefits
-
-[col-20]
-
-<img style="margin-top:-20px;margin-bottom:-30px" src="/images/avatars/fit-200/iste.png"/>
-
-[/col-20]
-
-Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, <a href="https://www.iste.org/membership/code-org", target=_"blank">we can offer an ISTE membership</a> exclusively to Code.org teachers at the special price of $99 (regularly $125).
-
-Check out these 3 key benefits of ISTE membership:
-
-- Professional Learning Networks made up of peer experts, including computer science educators
-- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
-- Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
 
 ## <a name="apply"></a>Ready to apply?
 

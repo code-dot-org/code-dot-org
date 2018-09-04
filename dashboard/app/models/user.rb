@@ -166,6 +166,7 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
+    microsoft_v2_auth
     powerschool
   ).freeze
 
@@ -1527,6 +1528,11 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # return the id of the section the user most recently created.
+  def last_section_id
+    teacher? ? sections.last&.id : nil
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
