@@ -202,7 +202,7 @@ WebLab.prototype.init = function (config) {
       dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
         showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
         useFilesApi: config.useFilesApi,
-        allowAudioRecording: false
+        disableAudioRecording: true
       });
     });
   }
