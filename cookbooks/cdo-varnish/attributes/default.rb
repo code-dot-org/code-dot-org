@@ -26,14 +26,6 @@ default['cdo-varnish'] = {
     'csedweek.net'        => 'csedweek.org',
     'cseducationweek.com' => 'csedweek.org',
     'cseducationweek.org' => 'csedweek.org',
-    'ar.code.org'         => 'http://program.ar/la-hora-del-codigo',
-    'br.code.org'         => 'http://programae.org.br',
-    'italia.code.org'     => 'programmailfuturo.it',
-    'ro.code.org'         => 'adfaber.org/HourofCode',
-    'sg.code.org'         => 'code.org',
-    'tr.code.org'         => 'http://robincode.org',
-    'uk.code.org'         => 'code.org',
-    'za.code.org'         => 'codeforchange.co.za',
   }
 }
 # Varnish memory allocation = 1/16 total available memory.
