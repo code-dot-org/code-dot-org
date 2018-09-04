@@ -4,6 +4,8 @@ var gmap;
 var gmap_loc;
 var selectize;
 
+var firstRetrievalDone = false;
+
 $(document).ready(function () {
   initializeMap();
   $('#contact-volunteer-form select').selectize();
@@ -99,6 +101,16 @@ function updateResults(locations) {
     $('#controls').html('');
   } else {
     displayNoResults();
+  }
+
+  // First retrieval shows pins across the entire US.  Subsequent retrievals
+  // show pins much closer to a specified location.  For this reason, we don't
+  // want to show the filter options at first, but only after a location has
+  // been specified by the user.
+  if (firstRetrievalDone) {
+    $('.filter-options').fadeIn();
+  } else {
+    firstRetrievalDone = true;
   }
 
   loadMap(locations);
