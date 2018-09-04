@@ -22,6 +22,7 @@ export default class ImagePicker extends React.Component {
     showUnderageWarning: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
+    allowAudioRecording: PropTypes.bool,
     //For logging upload failures
     projectId: PropTypes.string
   };
@@ -90,6 +91,7 @@ export default class ImagePicker extends React.Component {
         useFilesApi={this.props.useFilesApi}
         projectId={this.props.projectId}
         soundPlayer={this.props.soundPlayer}
+        allowAudioRecording={this.props.allowAudioRecording}
       /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 

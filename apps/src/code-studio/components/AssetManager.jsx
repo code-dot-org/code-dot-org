@@ -51,7 +51,8 @@ export default class AssetManager extends React.Component {
     useFilesApi: PropTypes.bool,
     //For logging upload failures
     projectId: PropTypes.string,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
+    allowAudioRecording: PropTypes.bool
   };
 
   constructor(props) {
@@ -162,7 +163,7 @@ export default class AssetManager extends React.Component {
         {this.state.audioErrorType === AudioErrorType.INITIALIZE &&
           <div>{i18n.audioInitializeError()}</div>
         }
-        {displayAudioRecorder &&
+        {displayAudioRecorder && this.props.allowAudioRecording &&
           <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved}/>
         }
         <AddAssetButtonRow
