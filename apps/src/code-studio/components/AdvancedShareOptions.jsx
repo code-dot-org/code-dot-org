@@ -90,8 +90,8 @@ const style = {
 class AdvancedShareOptions extends React.Component {
   static propTypes = {
     shareUrl: PropTypes.string.isRequired,
-    onClickExport: PropTypes.func,
-    onClickExportExpo: PropTypes.func,
+    allowExportExpo: PropTypes.bool.isRequired,
+    exportApp: PropTypes.func,
     onExpand: PropTypes.func.isRequired,
     expanded: PropTypes.bool.isRequired,
     i18n: PropTypes.object.isRequired,
@@ -105,8 +105,8 @@ class AdvancedShareOptions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: props.onClickExportExpo ? 'exportExpo' :
-          (props.onClickExport ? 'export' : 'embed'),
+      selectedOption: props.exportApp ?
+        (props.allowExportExpo ? 'exportExpo' : 'export') : 'embed',
       exportedExpoZip: false,
       exporting: false,
       exportingExpo: null,
@@ -118,7 +118,7 @@ class AdvancedShareOptions extends React.Component {
 
   downloadExport = () => {
     this.setState({exporting: true});
-    this.props.onClickExport().then(
+    this.props.exportApp().then(
       this.setState.bind(this, {exporting: false}),
       () => {
         this.setState({
@@ -135,7 +135,7 @@ class AdvancedShareOptions extends React.Component {
       exportingExpo: 'zip'
     });
     try {
-      await this.props.onClickExportExpo({ mode: 'zip'});
+      await this.props.exportApp({ mode: 'expoZip' });
       this.setState({
         exportingExpo: null,
       });
@@ -150,7 +150,7 @@ class AdvancedShareOptions extends React.Component {
   publishExpoExport = async () => {
     this.setState({exportingExpo: 'publish'});
     try {
-      const expoUri = await this.props.onClickExportExpo({ mode: 'publish'});
+      const expoUri = await this.props.exportApp({ mode: 'expoPublish' });
       this.setState({
         exportingExpo: null,
         expoUri,
@@ -322,8 +322,8 @@ class AdvancedShareOptions extends React.Component {
     if (this.props.expanded) {
       let exportTab = null;
       let exportExpoTab = null;
-      if (this.props.onClickExport) {
-        if (this.props.onClickExportExpo) {
+      if (this.props.exportApp) {
+        if (this.props.allowExportExpo) {
           exportExpoTab = (
             <li
               style={[

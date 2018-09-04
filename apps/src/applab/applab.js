@@ -66,6 +66,8 @@ import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import experiments from '../util/experiments';
+
 
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
@@ -580,6 +582,8 @@ Applab.init = function (config) {
   studioApp().setPageConstants(config, {
     playspacePhoneFrame: !config.share,
     channelId: config.channel,
+    allowExportExpo: experiments.isEnabled('exportExpo'),
+    exportApp: Applab.exportApp,
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: !config.level.hideViewDataButton,

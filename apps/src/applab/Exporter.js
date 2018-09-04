@@ -5,6 +5,7 @@ import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
 import {SnackSession} from '@code-dot-org/snack-sdk';
 
+import * as applabConstants from './constants';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
@@ -294,6 +295,7 @@ export default {
     var html;
     if (expoMode) {
       html = exportExpoIndexEjs({
+        appName,
         exportConfigPath: exportConfig.path,
         htmlBody: outerHTML,
         applabApiPath: "applab-api.j",
@@ -307,6 +309,7 @@ export default {
       });
     } else {
       html = exportProjectEjs({
+        appName,
         exportConfigPath: exportConfig.path,
         htmlBody: outerHTML,
         fontPath: fontAwesomeWOFFPath,
@@ -373,6 +376,8 @@ export default {
       const { shareWarningInfo = {} } = getAppOptions();
       const { hasDataAPIs } = shareWarningInfo;
       const appJs = exportExpoAppEjs({
+        appHeight: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
+        appWidth: applabConstants.APP_WIDTH,
         hasDataAPIs: hasDataAPIs && hasDataAPIs(),
       });
 
@@ -485,10 +490,10 @@ export default {
 
   async exportApp(appName, code, levelHtml, suppliedExpoOpts) {
     const expoOpts = suppliedExpoOpts || {};
-    if (expoOpts.mode === 'publish') {
+    if (expoOpts.mode === 'expoPublish') {
       return await this.publishToExpo(appName, code, levelHtml);
     }
-    return this.exportAppToZip(appName, code, levelHtml, expoOpts.mode === 'zip')
+    return this.exportAppToZip(appName, code, levelHtml, expoOpts.mode === 'expoZip')
       .then(function (zip) {
         zip.generateAsync({type:"blob"}).then(function (blob) {
           saveAs(blob, appName + ".zip");
@@ -532,6 +537,7 @@ export default {
         `${origin}/blockly/js/applab-api.js` :
         `${origin}/blockly/js/applab-api.min.js`;
     const html = exportExpoIndexEjs({
+      appName,
       exportConfigPath: exportConfig.path,
       htmlBody: outerHTML,
       commonLocalePath: `${origin}/blockly/js/en_us/common_locale.js`,
@@ -546,6 +552,8 @@ export default {
     const { shareWarningInfo = {} } = getAppOptions();
     const { hasDataAPIs } = shareWarningInfo;
     const appJs = exportExpoAppEjs({
+      appHeight: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
+      appWidth: applabConstants.APP_WIDTH,
       hasDataAPIs: hasDataAPIs && hasDataAPIs(),
     });
 

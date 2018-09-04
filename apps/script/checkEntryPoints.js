@@ -57,6 +57,7 @@ const SILENCED = [
   'eval',
   'flappy',
   'gamelab',
+  'gamelab-api',
   'jigsaw',
   'levelbuilder',
   'levelbuilder_applab',

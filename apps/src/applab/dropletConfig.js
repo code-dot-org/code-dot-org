@@ -4,6 +4,7 @@ import * as api from './api';
 import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
@@ -85,8 +86,8 @@ export var blocks = [
   {func: 'image', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
   {func: 'getImageURL', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("img") }, type: 'value' },
   {func: 'setImageURL', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 0: idDropdownWithSelector("img"), 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
-  {...audioApi.dropletConfig.playSound, category: 'UI controls'},
-  {...audioApi.dropletConfig.stopSound, category: 'UI controls'},
+  {...audioApiDropletConfig.playSound, category: 'UI controls'},
+  {...audioApiDropletConfig.stopSound, category: 'UI controls'},
   {func: 'showElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'hideElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
