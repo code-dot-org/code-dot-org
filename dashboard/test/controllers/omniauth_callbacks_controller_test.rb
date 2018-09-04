@@ -381,10 +381,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       sections_as_student = oauth_student.sections_as_student.to_ary
 
       @request.cookies[:pm] = 'clever_takeover'
-      @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-      @request.session[ACCT_TAKEOVER_PROVIDER] = provider
-      @request.session[ACCT_TAKEOVER_UID] = oauth_student.uid
-      @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+      set_oauth_takeover_session_variables(provider, oauth_student)
       check_and_apply_oauth_takeover(student)
 
       assert_equal sections_as_student, student.sections_as_student
@@ -405,10 +402,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       sections_as_student = oauth_student.sections_as_student.to_ary
 
       @request.cookies[:pm] = 'clever_takeover'
+      set_oauth_takeover_session_variables(provider, oauth_student)
       @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.ago
-      @request.session[ACCT_TAKEOVER_PROVIDER] = provider
-      @request.session[ACCT_TAKEOVER_UID] = oauth_student.uid
-      @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
       check_and_apply_oauth_takeover(student)
 
       assert_equal sections_as_student, oauth_student.sections_as_student
@@ -421,11 +416,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       oauth_student = create :student, provider: provider, uid: '12345'
       student = create :student
 
-      @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-      @request.session[ACCT_TAKEOVER_PROVIDER] = provider
-      @request.session[ACCT_TAKEOVER_UID] = oauth_student.uid
-      @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
-
+      set_oauth_takeover_session_variables(provider, oauth_student)
       check_and_apply_oauth_takeover(student)
 
       oauth_student.reload
@@ -448,11 +439,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       Honeybadger.expects(:notify).at_least_once
 
-      @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-      @request.session[ACCT_TAKEOVER_PROVIDER] = provider
-      @request.session[ACCT_TAKEOVER_UID] = oauth_student.uid
-      @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
-
+      set_oauth_takeover_session_variables(provider, oauth_student)
       check_and_apply_oauth_takeover(student)
 
       oauth_student.reload
@@ -739,6 +726,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   private
+
+  def set_oauth_takeover_session_variables(provider, user)
+    @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
+    @request.session[ACCT_TAKEOVER_PROVIDER] = provider
+    @request.session[ACCT_TAKEOVER_UID] = user.uid
+    @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+  end
 
   def generate_auth_user_hash(args)
     OmniAuth::AuthHash.new(
