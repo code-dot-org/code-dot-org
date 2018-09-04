@@ -33,11 +33,9 @@ Scenario: Can Rename a Project
   Then I click selector ".ui-projects-table-dropdown"
   And I press the child number 0 of class ".pop-up-menu-item"
   And I wait until element ".ui-project-rename-input" is visible
-  And I wait for 5 seconds
   And I press keys "New Name" for element ".ui-project-rename-input"
-  And I wait for 5 seconds
   Then I click selector ".ui-projects-rename-save"
-  And I wait for 5 seconds
+  And I wait until element ".ui-projects-rename-save" is not visible
   And the first project in the table is named "New Name"
 
 Scenario: Can Remix a Project
@@ -62,5 +60,5 @@ Scenario: Can Delete a Project
   And I press the child number 2 of class ".pop-up-menu-item"
   And I wait until element ".ui-confirm-project-delete-button" is visible
   Then I click selector ".ui-confirm-project-delete-button"
-  And I wait for 5 seconds
+  And I wait until element ".ui-confirm-project-delete-button" is not visible
   And the project table contains 0 rows
