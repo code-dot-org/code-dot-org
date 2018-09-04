@@ -166,6 +166,7 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
+    microsoft_v2_auth
     powerschool
   ).freeze
 
@@ -1531,7 +1532,7 @@ class User < ActiveRecord::Base
 
   # return the id of the section the user most recently created.
   def last_section_id
-    teacher? ? sections.last&.id : nil
+    teacher? ? sections.where(hidden: false).last&.id : nil
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.

@@ -25,11 +25,7 @@ class SessionsController < Devise::SessionsController
 
   # GET /resource/clever_takeover
   def clever_takeover
-    clever_takeover_id = session['clever_takeover_id']
-    clever_takeover_token = session['clever_takeover_token']
-    sign_out(current_user)
-    session['clever_takeover_id'] = clever_takeover_id
-    session['clever_takeover_token'] = clever_takeover_token
+    sign_out_but_preserve_takeover_state
     redirect_to action: :new
   end
 

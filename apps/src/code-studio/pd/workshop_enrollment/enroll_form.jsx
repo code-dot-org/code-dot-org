@@ -2,6 +2,7 @@
  * Form to create a workshop enrollment
  */
 import React, {PropTypes} from 'react';
+import $ from 'jquery';
 import {FormGroup, Button, ControlLabel, HelpBlock} from 'react-bootstrap';
 import Select from "react-select";
 import {ButtonList} from '../form_components/ButtonList.jsx';
@@ -132,19 +133,24 @@ export default class EnrollForm extends React.Component {
   }
 
   submit() {
-    const params = {
-      first_name: this.state.first_name,
-      last_name: this.state.last_name,
-      email: this.state.email,
-      school_info: {
-        school_id: this.state.school_info.school_id,
+    let schoolInfo = {};
+    if (this.state.school_info.school_id) {
+      schoolInfo = {school_id: this.state.school_info.school_id};
+    } else {
+      schoolInfo = {
         school_district_name: this.state.school_info.school_district_name,
         school_district_other: this.state.school_info.school_district_other,
         school_name: this.state.school_info.school_name,
         school_state: this.state.school_info.school_state,
         school_zip: this.state.school_info.school_zip,
-        school_type: this.schoolType(),
-      },
+        school_type: this.schoolType()
+      };
+    }
+    const params = {
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      school_info: schoolInfo,
       role: this.state.role,
       grades_teaching: this.gradesTeaching(),
       explain_teaching_other: this.state.explain_teaching_other,
@@ -297,6 +303,7 @@ export default class EnrollForm extends React.Component {
           confidentiality as Code.org.
         </p>
         <Button
+          id="submit"
           onClick={this.handleClickRegister}
         >
           Register
