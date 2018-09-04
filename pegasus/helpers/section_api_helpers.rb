@@ -426,7 +426,7 @@ class DashboardSection
   def self.create(params)
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
 
-    name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Section'
+    name = !params[:name].to_s.empty? ? params[:name].to_s : 'Untitled Section'
     login_type =
       params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s
     login_type = 'word' unless valid_login_type?(login_type)

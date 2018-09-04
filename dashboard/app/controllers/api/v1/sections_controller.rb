@@ -43,7 +43,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.create(
       {
         user_id: current_user.id,
-        name: !params[:name].to_s.empty? ? params[:name].to_s : 'New Section',
+        name: !params[:name].to_s.empty? ? params[:name].to_s : 'Untitled Section',
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
