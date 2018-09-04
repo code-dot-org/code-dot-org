@@ -539,7 +539,8 @@ class Level < ActiveRecord::Base
   # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
   def clone_with_name(new_name)
     level = dup
-    level.update!(name: new_name, parent_level_id: id)
+    # specify :published to make should_write_custom_level_file? return true
+    level.update!(name: new_name, parent_level_id: id, published: true)
     level
   end
 
