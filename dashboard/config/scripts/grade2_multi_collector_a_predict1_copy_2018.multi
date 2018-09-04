@@ -1,4 +1,4 @@
-name 'grade2_multi_collector_A_predict1_2018'
+name 'grade2_multi_collector_A_predict1_copy_2018'
 question 'text text text'
 wrong 'Laurel will collect 4 pieces of treasure using this code.', feedback: 'Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.'
 right 'Laurel will try to collect treasure where there is not any and it causes an error.', feedback: 'Correct!'
