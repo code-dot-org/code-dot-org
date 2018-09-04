@@ -544,6 +544,7 @@ describe('entry tests', () => {
     brambleHost: './src/weblab/brambleHost.js',
 
     'applab-api': './src/applab/api-entry.js',
+    'gamelab-api': './src/gamelab/api-entry.js',
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 

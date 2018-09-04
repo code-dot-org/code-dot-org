@@ -8,8 +8,8 @@ import packagedFiles from './packagedFiles';
 
 export default class App extends React.Component {
 
-  static APPLAB_HEIGHT = 450;
-  static APPLAB_WIDTH = 320;
+  static APP_HEIGHT = <%- appHeight %>;
+  static APP_WIDTH = <%- appWidth %>;
 
   constructor(props) {
     super(props);
@@ -59,8 +59,8 @@ export default class App extends React.Component {
   webViewScale() {
     const { height, width } = this.state;
 
-    const heightScale = height / App.APPLAB_HEIGHT;
-    const widthScale = width / App.APPLAB_WIDTH;
+    const heightScale = height / App.APP_HEIGHT;
+    const widthScale = width / App.APP_WIDTH;
     return Math.min(heightScale, widthScale);
   }
 
@@ -68,8 +68,8 @@ export default class App extends React.Component {
     const scale = this.webViewScale();
 
     return {
-      height: App.APPLAB_HEIGHT * scale,
-      width: App.APPLAB_WIDTH * scale,
+      height: App.APP_HEIGHT * scale,
+      width: App.APP_WIDTH * scale,
     };
   }
 
