@@ -1566,3 +1566,7 @@ Then /^I open the Manage Assets dialog$/ do
     And I click selector ".pop-up-menu-item"
   STEPS
 end
+
+Then /^I wait for the section save to complete$/ do
+  wait_short_until {!@browser.execute_script('return window.__TestInterface.getStore().getState().teacherSections.saveInProgress;')}
+end

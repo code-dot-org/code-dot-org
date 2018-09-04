@@ -18,6 +18,10 @@ import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
 
+window.__TestInterface = {
+  getStore,
+};
+
 $(document).ready(showHomepage);
 
 function showHomepage() {
