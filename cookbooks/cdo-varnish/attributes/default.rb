@@ -27,7 +27,6 @@ default['cdo-varnish'] = {
     'cseducationweek.com' => 'csedweek.org',
     'cseducationweek.org' => 'csedweek.org',
     'ar.code.org'         => 'http://program.ar/la-hora-del-codigo',
-    'staging-ar.code.org' => 'http://program.ar/la-hora-del-codigo',
     'br.code.org'         => 'http://programae.org.br',
     'italia.code.org'     => 'programmailfuturo.it',
     'ro.code.org'         => 'adfaber.org/HourofCode',
