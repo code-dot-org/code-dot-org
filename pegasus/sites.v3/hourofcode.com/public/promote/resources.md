@@ -23,16 +23,17 @@ nav: promote_nav
 
 <a id="social"></a>
 ## Post these on social media
-[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/bill-gates.png)](/images/social-media/bill-gates.png)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/social-media/fit-250/malala-yousafzai.png)](/images/social-media/malala-yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/social-media/fit-250/chris-bosh.png)](/images/social-media/chris-bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/karlie-kloss.png)](/images/social-media/karlie-kloss.png)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/social-media/fit-250/satya-nadella.png)](/images/social-media/satya-nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; 
+[![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; 
+[![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp; 
 
 <a id="logo"></a>
 ## Use the Hour of Code logo to spread the word

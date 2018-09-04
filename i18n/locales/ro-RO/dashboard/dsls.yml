@@ -2,16 +2,258 @@ ro:
   data:
     external:
       Begin planning your project:
+        description here: descrierea aici
         title: titlu
+      Begin planning your project_2018:
+        description here: descrierea aici
       Prepare for your presentation:
+        description here: descrierea aici
         title: titlu
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Potrivește combinația de butoane cu mișcările de dans.
+        Matching: Potrivire
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Potrivire
+        Use the key to match each code to its letter: Folosește tasta pentru a asocia fiecare cod literei corespunzătoare
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Asociază grila programului corespunzător.
+        Matching: Potrivire
       2-3 Maze Match 2:
         Instructions: Instrucţiuni
+        Match the puzzles to the blocks: Potrivește puzzle-ul cu blocurile
+        Maze Match: Potrivire labirint
+      2-3 artist loops match 1:
+        Match the loop to the shape: Potrivește bucla cu forma
+      2-3 artist match 1:
+        Artist Matching: Potrivire Artist
+        Match the shape with the blocks that complete it.: Potrivește forma cu blocul care o completează.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Potrivește puzzle-ul cu blocurile
+        Maze Match One: Potrivire Labirint Unu
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Adăugă runda jucătorului 1 la scorul total</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Compară scorurile jucătorilor pentru a vedea cine câştigă</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>S-au epuizat rundele jucătorului 1</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Setează scorul jucătorului 1 la 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Potrivește pașii din jocul Cursa de Zaruri ordinii în care ar trebui să apară în algoritm.
+        Matching: Potrivire
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Jante/latură: 2 <br/>Ferestre/latură: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Jante/latură: 2 <br/>Ferestre/latură: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Jante/latură: 2 <br/>Ferestre/latură: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Jante/latură: 3<br/>Ferestre/latură: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Fiecare dintre aceste vehicule a fost descompus în bucăţi mai mici. Asociază fiecărui vehicul lista corespunzătoare.
+        Matching: Potrivire
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Asociază fiecare program cuvântului pe care îl face, folosind grupul de deprinderi oferite.
+        Matching: Potrivire
       4-5 maze match 1:
         Instructions: Instrucţiuni
+        Match the puzzles to the blocks: Potrivește puzzle-ul cu blocurile
+        Maze Match: Potrivire labirint
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Potrivește formele pe baza tipului acestora.
+        Matching: Potrivire
+      K-1 Bee Loops Match 1:
+        Match the blocks: Potrivește blocurile
+        Matching: Potrivire
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Potrivește combinația de butoane cu mișcările de dans.
+        Matching: Potrivire
       K-1 Maze Match 1:
         Instructions: Instrucţiuni
+        Match the puzzles and blocks: Potriveste puzzle-urile şi blocurile
+        Matching: Potrivire
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Alege un algoritm pentru imaginea dată.
+        Multiple Choice: Alegere multiplă
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Începe cu un pătrat<br/>Pune un paralelogram deasupra pătratului<br/>Pune un triunghi în dreapta paralelogramului
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Începe cu un pătrat<br/>Pune un triunghi deasupra pătratului<br/>Pune un triunghi sub pătrat
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Începe cu un pătrat<br/>Pune un triunghi sub pătrat<br/>Pune un paralelogram în dreapta triunghiului
+        0: '? Începeți cu un pătrat<br/>Puneți un triunghi în dreapta pătratului<br/>Puneți un paralelogram sub pătrat<br/>Puneți un triunghi în dreapta paralelogramului'
+        1: ': Începeți cu un pătrat<br/>Puneți un triunghi în dreapta pătratului<br/>Puneți un paralelorgram sub pătrat<br/>Puneți un triunghi în dreapta paralelogramului'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Alegere multiplă
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Începe cu un triunghi<br/>Pune un pătrat sub triunghi<br/>Pune un alt triunghi sub pătrat
+        Which image does <em>not</em> follow this algorithm?: Care imagine <em>nu</em> urmăreşte acest algoritm?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Conform regulilor jocului, care set de cărți este punctat corect?
+        Multiple Choice: Alegere multiplă
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Cum ai simplifica tu această secvență cu bucle?
+        Multiple Choice: Alegere multiplă
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which program makes this image?: Care program realizează această imagine?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Labirint cu opțiuni multiple
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Alegere multiplă
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Alegere multiplă
+        Which image-program combo does not contain mistakes?: Care pereche imagine-program nu conține greșeli?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Funcții Artist Opțiune Multiplă Unu
+        Pick the correct blocks to draw this image using the given functions: Alege blocurile corecte pentru a desena această imagine, folosind funcțiile date
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Artist Bucle Variante Multiple
+        Which shape is made by this loop?: Ce formă este generată de această buclă?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Artist Bucle Variante Multiple
+        Which shape is made by this program?: Ce formă este creată de acest program?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Care comparație de mai jos este adevărată?
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Alege cele mai bune blocuri.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Albină Bucle Algere multiplă Unu
+        Which blocks collect all of the nectar?: Care blocuri colectează tot nectarul?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Labirint Algere multiplă Unu
+        Which set of blocks is the correct answer?: Care set de blocuri reprezintă răspunsul corect?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Coacere prijituri
+        Banana: Banană
+        Brushing your teeth: Spălarea pe dinți
+        Multiple Choice: Alegere multiplă
+        Shopping from a grocery list: Cumpărături de pe o listă de cumpărături
+        Which one of these items is hardest to describe an algorithm for?: Pentru care dintre aceste lucruri este mai greu să descriem un algoritm?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene este un oraș _____ .
+        0: '? Se dau trei propoziţii. Care dintre șabloanele de mai jos abstractizează corect astfel încât toate trei să se potrivească aceluiaşi model ca şablon?'
+        1: ': Ai aici trei propoziţii. Care dintre șabloanele de mai jos abstractizează corect astfel încât toate trei să se potrivească aceluiaşi model ca şablon?'
+        Multiple Choice: Alegere multiplă
+        Seattle _____ a _____ _____.: Seattle _____ un _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle este un oraș mare.<br/>Eugene este un oraș mediu<br/>Hillview este un oraş mic.
+        _____ is _____ a _____.: _____ este _____ un(o) _____.
+        _____ is a _____ city.: _____ este un oraș _____.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which of these pictures best represents crowdsourcing?: Care dintre aceste imagini reprezintă cel mai bine crowdsourcing?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Perierea părului
+        Cleaning your room: Curățarea camerei tale
+        Eating your dessert: Consumului desertului
+        Multiple Choice: Alegere multiplă
+        Washing your face: Spălarea pe față
+        Which one of these activities would be best for practicing crowdsourcing?: Care dintre aceste activități este cea mai bună pentru a exersa crowdsourcing?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which piece of information listed below is okay to share on the internet?: Care dintre informațiile de mai jos este în regulă să se distribuie pe Internet?
+        Your address: Adresa ta
+        Your birthday: Ziua ta de naștere
+        Your favorite food: Mâncarea ta preferată
+        Your parent's credit card number: Numărul cardului de credit al părintelui tău
+      4-5 Internet Multi 1:
+        Multiple Choice: Alegere multiplă
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Când încerci să te conectezi la code.org, la care adresă de IP este cel mai probabil să te ducă DNS-ul?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Dacă DNS-ul te-a trimis la pagina de la adresa IP 100.42.50.110, pe care site ești?
+        Multiple Choice: Alegere multiplă
+      4-5 Songwriting Multi 1:
+        0: '? Musca-i în laptele bătut, <br/>Uș, muscă, uș, <br/>Musca-i în laptele bătut, <br/>Uș, muscă, uș, <br/>Musca-i în laptele bătut, <br/>Uș, muscă, uș, <br/>Du-mă la al meu Lou, dragul meu/draga mea.'
+        1: ': Musca e-n laptele bătut,<br/>Shoo, muscă, shoo <br/>Musca e-n laptele bătut,<br/>Shoo, muscă, shoo, <br/>Musca e-n laptele bătut, <br/>Shoo,muscă, shoo, <br/>Du-mă la al meu Lou, dragul meu/draga mea.'
+        Lou, Lou, skip to my Lou,: Lou, Lou, du-mă la al meu Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul meu/draga mea.
+        2: '? Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul meu/draga mea.<br/><br/><p>Musca-i în laptele bătut, <br/>Uș, muscă, uș,'
+        3: ': Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul meu/draga mea.<br/><br/><p>Musca e-n laptele bătut, <br/>Shoo, muscă, shoo,'
+        Multiple Choice: Alegere multiplă
+        4: '? Care este cel mai mare fragment din acest cântec pe care îl puteți defini drept refren așa încât corul să îl repete exact de fiecare dată când este apelat?'
+        5: ': Care este cel mai mare fragment din acest cântec pe care îl poți defini astfel încât corul să îl repete exact de fiecare dată când este apelat?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Care dintre programele de mai jos <em>nu</em> are exact aceeaşi secvență de acțiuni ca programul 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Artist Bucle Variante Multiple
+        Which blocks will create the design?: Care blocuri vor crea design-ul?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Artist Alegere multiplă
+        Which blocks draw a rectangle with a perimeter of 100?: Care blocuri desenează un dreptunghi cu perimetrul de 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Artist Alegere multiplă
+        Which drawing is symmetric?: Care desen este simetric?
+      4-5 bee conditionals multi 1:
+        0: '? O floare violet poate avea 3, 2, sau 1 nectar, dar nu ști exact câte. Care blocuri fac verificarea corectă și colectează toate nectarurile dintr-o floare violet?'
+        1: ': O floare violet poate avea 3, 2 sau 1 nectaruri, dar nu ști exact câte. Care blocuri fac verificarea corectă și colectează tot nectarul dintr-o floare violet?'
+        Bee Conditionals Multiple Choice: Albină Condiționale Alegere multiplă
+        Choose the best blocks.: Alege cele mai bune blocuri.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Albină Depanare Alegere multiplă
+        Which version of the function will work?: Care versiune a funcției va merge?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Albină Bucle Alegere multiplă
+        Which blocks will solve the puzzle?: Care blocuri vor rezolva puzzle-ul?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Labirint Condiționale Alegere multiplă
+        Which blocks solve the puzzle?: Care blocuri rezolvă puzzle-ul?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Labirint cu opțiuni multiple
+        Which blocks solve the puzzle?: Care blocuri rezolvă puzzle-ul?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which blocks solve this puzzle?: Care blocuri rezolvă acest puzzle?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Alegere multiplă
+        Which blocks draw the square?: Care blocuri desenează pătratul?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Câte nectaruri reprezintă aceasta?
+        Multiple Choice: Alegere multiplă
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Câte nectaruri reprezintă aceasta?
+        Multiple Choice: Alegere multiplă
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Care animal are amprenta digitală  care îl pune pe el sau o pune pe ea în situația<strong>cea mai vulnerabilă</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Cum ai simplifica tu această secvență cu bucle?
+        Multiple Choice: Alegere multiplă
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which arrow gets the Flurb to the treasure?: Care săgeată îl duce pe Flurb la comoară?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which information should you <strong>not</strong> share online?: Ce informaţie <strong>nu</strong> ar trebui să distribui online?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which choice should be the final block?: Care bloc ar trebui să fie opțiunea finală?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which repeat block is the same?: Care bloc "repetă" este la fel?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Alegere multiplă
+        Pick the correct repeat block.: Alegeți blocul "repetă" corect.
       K-1 Maze Multiple Choice 2:
         Maze: Labirint
+        Which answer solves this level?: Care răspuns rezolvă acest nivel?
+      K-1 Move It Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which algorithm gets the Flurb to the flowers?: Care algoritm îl duce pe Flurb la flori?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which step should go at the beginning of this algorithm?: Care pas ar trebui să fie primul în acest algoritm?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Alegere multiplă
+        Which step should fill in the blank for this algorithm?: Care pas ar trebui să completeze spațiul din acest algoritm?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Alegere multiplă
+        Which blocks spell "MOVE"?: Care blocuri scriu literele cuvântului ”MOVE”?
+      K-1 Word Search Multi 3:
+        Multiple Choice: Alegere multiplă
+        SET: MULȚIME
+        SOUTH: SUD
+        SQUARE: PĂTRAT
+        Which word is spelled?: Care cuvânt este scris pe litere?

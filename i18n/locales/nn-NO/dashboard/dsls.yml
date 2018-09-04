@@ -2,16 +2,258 @@ nn:
   data:
     external:
       Begin planning your project:
+        description here: forklaring her
         title: tittel
+      Begin planning your project_2018:
+        description here: forklaring her
       Prepare for your presentation:
+        description here: forklaring her
         title: tittel
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Kombiner knappane så dei passar til dansetrinna.
+        Matching: Samansetting
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Samansetting
+        Use the key to match each code to its letter: Bruk nøkkelen til å setje saman koden med brevet som høyrer til
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Få rutenettet til å passe med programmet.
+        Matching: Samansetting
       2-3 Maze Match 2:
         Instructions: Instruksjonar
+        Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkane
+        Maze Match: Set saman labyrintane
+      2-3 artist loops match 1:
+        Match the loop to the shape: Finn figuren som passar til løkka
+      2-3 artist match 1:
+        Artist Matching: Kunstnar-samansetjing
+        Match the shape with the blocks that complete it.: Set figuren saman med dei blokkene som fullfører forma.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkane
+        Maze Match One: Labyrint-samansetjing
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Legg Spelar 1 sitt resultat til totalscore</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Samanlign poengsummane til spelarane for å sjå kven som vinn</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>Spelar 1 kastar terning</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Set Spelar 1 sin poengsum til 0</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Set saman stega i Terningkappløpet med rekkefølgen dei skal ha i algoritma.
+        Matching: Samansetting
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Hjul/side: 2<br/>Vindauge/side: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Hjul/side: 2<br/>Vindauge/side: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Hjul/side: 2<br/>Vindauge/side: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Hjul/side: 3<br/>Vindauge/side: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Kvart av desse køyretya har blitt delt opp i mindre delar. Vel den delelista som passar til kvart køyrety.
+        Matching: Samansetting
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: Set saman kvart program med det ordet det lagar og bruk den gitte gruppa av fedigheiter.
+        Matching: Samansetting
       4-5 maze match 1:
         Instructions: Instruksjonar
+        Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkane
+        Maze Match: Set saman labyrintane
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: Vel figurar basert på type.
+        Matching: Samansetting
+      K-1 Bee Loops Match 1:
+        Match the blocks: Vel blokker som passar saman
+        Matching: Samansetting
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Kombiner knappane så dei passar til dansetrinna.
+        Matching: Samansetting
       K-1 Maze Match 1:
         Instructions: Instruksjonar
+        Match the puzzles and blocks: Vel dei oppgåvene og blokkene som passar saman
+        Matching: Samansetting
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: Vel ei algoritme for det vedlagte bildet.
+        Multiple Choice: Fleirval
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start med ein firkant<br/>Sett eit parallellogram over firkanten<br/>Sett ein trekant til høgre for parallellogrammet
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start med eit kvadrat<br/>Set  ein trekant over kvadratet<br/>Set ein trekant under kvadratet
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start med ein firkant<br/>Sett ein trekant under firkanten<br/>Sett eit parallellogram til høgre for trekanten
+        0: '? Start med ein firkant<br/>Sett ein trekant til høgre for firkanten<br/>Sett eit parallellogram under firkanten<br/>Sett ein trekant til høgre for parallellogrammet'
+        1: ': Start med ein firkant<br/>Sett ein trekant til høgre for firkanten<br/>Sett eit parallellogram under firkanten<br/>Set ein trekant til høgre for parallellogrammet'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: Fleirval
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start med ein trekant<br/>Set eit kvadrat under trekanten<br/>Set ein trekant til under kvadratet
+        Which image does <em>not</em> follow this algorithm?: Kva for eit bilde fylgjer <em>ikkje</em> denne algoritma?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: Ifølge spelereglane, kva for sett av kort er rett sortert?
+        Multiple Choice: Fleirval
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Korleis kan du forenkle denne sekvensen med å bruke løkker?
+        Multiple Choice: Fleirval
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: Fleirval
+        Which program makes this image?: Kva for eit program lagar dette bildet?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Labyrint Fleirval
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: Fleirval
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: Fleirval
+        Which image-program combo does not contain mistakes?: Kva for billed-program-kombinasjon inneheld ikkje feil?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: Kunstnar Funksjonar Fleirval Ein
+        Pick the correct blocks to draw this image using the given functions: Vel dei rette blokkene for å teikne dette bildet ved hjelp av dei gitte funksjonane
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: Kunstnar Løkker Fleirval
+        Which shape is made by this loop?: Kva for figur er laga av denne løkka?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: Kunstnar Løkker Fleirval
+        Which shape is made by this program?: Kva for figur er laga av dette programmet?
+      2-3 bee conditionals multi 1:
+        Which comparison below is true?: Kva for ei av samanlikningane under er sann?
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: Vel dei beste blokkene!
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: Bier Løkker Fleirval Ein
+        Which blocks collect all of the nectar?: Kva for blokker samler all nektaren?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: Labyrint Fleirval Ein
+        Which set of blocks is the correct answer?: Kva for sett av blokker er det rette svaret?
+      4-5 Algorithms Multi 1:
+        Baking cookies: Bake kaker
+        Banana: Banan
+        Brushing your teeth: Pusse tenna
+        Multiple Choice: Fleirval
+        Shopping from a grocery list: Handle med ei handleliste
+        Which one of these items is hardest to describe an algorithm for?: Kva for eit av desse elementa er det vansklegast å beskrive ei algoritme til?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: Eugene er ein _____ by.
+        0: '? Her er tre setningar. Kva for ein av malane under abstraherer rett, slik at alle tre passar i det samme mønsteret som malen?'
+        1: ': Her er tre setningar. Kva for ein av malane under abstraherer rett, slik at alle tre passar i det samme mønsteret som malen?'
+        Multiple Choice: Fleirval
+        Seattle _____ a _____ _____.: Seattle _____ ein _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle er ein stor by.<br/>Eugene er ein mellomstor by<br/>Hillview er ein liten by.
+        _____ is _____ a _____.: _____ er _____ ein _____.
+        _____ is a _____ city.: _____ er ein _____ by.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: Fleirval
+        Which of these pictures best represents crowdsourcing?: Kva for eit av desse bilda illustrerer crowdsourcing best?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: Børste håret
+        Cleaning your room: Rydde rommet ditt
+        Eating your dessert: Spise desserten din
+        Multiple Choice: Fleirval
+        Washing your face: Vaske andletet ditt
+        Which one of these activities would be best for practicing crowdsourcing?: Kva for ein av desse aktivitetane vil vere best for å øve på crowdsourcing?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: Fleirval
+        Which piece of information listed below is okay to share on the internet?: Kva for ei av opplysningane nedanfor er det greit å dele på internett?
+        Your address: Adressa di
+        Your birthday: Fødselsdagen din
+        Your favorite food: Favorittmaten din
+        Your parent's credit card number: Kredittkortnummeret til foreldra dine
+      4-5 Internet Multi 1:
+        Multiple Choice: Fleirval
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Når du prøver å logge deg på code.org, kva for IP-adresse vil DNS'en sannsynligvis ta deg til?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Hvis DNS'en har sendt deg til sida på IP-adressa 100.42.50.110, kva for nettside er du på?
+        Multiple Choice: Fleirval
+      4-5 Songwriting Multi 1:
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        Multiple Choice: Fleirval
+        4: '? Kva er den største delen av denne sangen, som du kan definere som refrenget, slik at refrenget blir gjentatt nøyaktig kvar gong det blir kalla?'
+        5: ': Kva er den største delen av denne sangen, som du kan definere som refrenget, slik at refrenget blir gjentatt nøyaktig kvar gong det blir kalla?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: Fleirval
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kva for eit av programma under <em>vil ikkje</em> lage nøyaktig den same sekvensen som Program 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: Kunstnar Løkker Fleirval
+        Which blocks will create the design?: Kva for blokker vil lage denne figuren?
+      4-5 artist multi 1:
+        Artist Multiple Choice: Kunstnar Fleirval
+        Which blocks draw a rectangle with a perimeter of 100?: Kva for blokker teiknar eit rektangel med ein omkrets på 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: Kunstnar Fleirval
+        Which drawing is symmetric?: Kva for teikning er symmetrisk?
+      4-5 bee conditionals multi 1:
+        0: '? Ein lilla blomst har 3, 2 eller 1 nektar, men du veit ikkje kor mange. Kva for blokker vil korrekt sjekke og samle inn all nektaren frå ein lilla blomst?'
+        1: ': En lilla blomst har 3, 2 eller 1 nektar, men du veit ikkje kor mange. Kva for blokker vil korrekt sjekke og samle inn all nektaren frå ein lilla blomst?'
+        Bee Conditionals Multiple Choice: Bier Vilkår Fleirval
+        Choose the best blocks.: Vel dei beste blokkene!
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: Bier Feilsøking Fleirval
+        Which version of the function will work?: Kva for versjon av funksjonen vil fungere?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: Bier Løkker Fleirval
+        Which blocks will solve the puzzle?: Kva for blokker løyser oppgåva?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: Labyrint Vilkår Fleirval
+        Which blocks solve the puzzle?: Kva for blokker løyser oppgåva?
+      4-5 maze multi 1:
+        Maze Multiple Choice: Labyrint Fleirval
+        Which blocks solve the puzzle?: Kva for blokker løyser oppgåva?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: Fleirval
+        Which blocks solve this puzzle?: Kva for blokker vil løyse denne oppgåva?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: Fleirval
+        Which blocks draw the square?: Kva for blokker teiknar kvadratet?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: Kor mange nektar er dette?
+        Multiple Choice: Fleirval
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: Kor mange nektar er dette?
+        Multiple Choice: Fleirval
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: Fleirval
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Kva for dyr har det digitale fotsporet som gjer han eller henne <strong>mest utrygg</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Korleis kan du forenkle denne sekvensen med å bruke løkker?
+        Multiple Choice: Fleirval
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: Fleirval
+        Which arrow gets the Flurb to the treasure?: Kva for pil flytter Flurb til skatten?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: Fleirval
+        Which information should you <strong>not</strong> share online?: Kva for informasjon skal du <strong>ikkje</strong> dele på nettet?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: Fleirval
+        Which choice should be the final block?: Kva for val skal vere den siste blokka?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: Fleirval
+        Which repeat block is the same?: Kva for "gjenta"-blokk er den same?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: Fleirval
+        Pick the correct repeat block.: Vel den rette "gjenta"-blokka!
       K-1 Maze Multiple Choice 2:
         Maze: Labyrint
+        Which answer solves this level?: Kva for svar løyser dette nivået?
+      K-1 Move It Multi 1:
+        Multiple Choice: Fleirval
+        Which algorithm gets the Flurb to the flowers?: Kva for algoritme flyttar Flurb til blomstrane?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: Fleirval
+        Which step should go at the beginning of this algorithm?: Kva for steg skal vere i starten av denne algoritma?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: Fleirval
+        Which step should fill in the blank for this algorithm?: Kva for steg skal fylle tomrommet i denne algoritma?
+      K-1 Word Search Multi 1:
+        Multiple Choice: Fleirval
+        Which blocks spell "MOVE"?: Kva for blokker stavar "MOVE"?
+      K-1 Word Search Multi 3:
+        Multiple Choice: Fleirval
+        SET: SET
+        SOUTH: SOUTH
+        SQUARE: SQUARE
+        Which word is spelled?: Kva for ord blir stava?

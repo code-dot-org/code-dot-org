@@ -40,7 +40,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 ### [CS Discoveries (Grades 6-10)](/educate/csd)
 * An introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun
-* Can be taught either as a semester or full-year offering
+* Takes a wide lens on CS by covering topics such as programming, physical computing, HTML/CSS, and data
 
 [/col-50]
 
@@ -48,7 +48,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 ### [CS Principles (Grades 9-12)](/educate/csp)
 * A higher level introductory course that introduces the foundational concepts of computer science while challenging students to explore how computing and technology can impact the world
-* Recommended for students in with stronger reading and writing skills and is a good next step for students who have previously taken CS courses
+* Recommended for students with stronger reading and writing skills and is a good next step for students who have previously taken CS courses
 * Can be taught as an AP or intro-level class, and can be taught as either a semester or full-year course
 <br/>
 
@@ -67,10 +67,10 @@ The Code.org Professional Learning Program is open to teachers who are intereste
 
 <img src="/images/professional-learning/pl_timeline.png" width="100%"/>
 
-## Apply today!
-Regional Partners throughout the US are hosting the professional learning program in your local region. 
+## Ready to apply?
+Regional Partners throughout the US are hosting the professional learning program in your area. 
 
-Enter your zip code below to get details about the professional learning program in your region.
+Enter your zip code below to get details about the professional learning program in your local region.
 <br/>
 
 <%= view :answerdash %>

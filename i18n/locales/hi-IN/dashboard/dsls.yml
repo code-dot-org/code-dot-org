@@ -7,3 +7,10 @@ hi:
         Instructions: निर्देश
       K-1 Maze Match 1:
         Instructions: निर्देश
+    multi:
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: सर्वश्रेष्ठ ब्लॉक का चयन करें।
+      4-5 bee conditionals multi 1:
+        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        Choose the best blocks.: सर्वश्रेष्ठ ब्लॉक का चयन करें।

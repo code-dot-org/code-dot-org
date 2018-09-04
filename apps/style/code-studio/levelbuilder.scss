@@ -2,8 +2,6 @@
 @import "codemirror/addon/lint/lint";
 @import "codemirror-spell-checker/src/css/spell-checker";
 @import 'json_editor';
-@import 'plc/content_creation';
-@import 'plc/common';
 
 .CodeMirror {
   border: 1px solid #eee;
@@ -190,16 +188,19 @@ table.checkboxes {
 }
 .audit_log{
   width: 100%;
-
+  
   tr:nth-child(odd){
     background-color: #f9cb81;
   }
+  
   td{
     padding: 2%;
   }
+  
   .aud_date{
     width: 25%;
   }
+  
   .aud_person{
     width: 43%;
   }

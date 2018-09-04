@@ -41,6 +41,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
   };
 
   sendToParent = (selectValue) => {
+    // selectValue has a label, school, value.  school has nces_id which is same as value.
     this.props.setField("nces", selectValue);
   };
 

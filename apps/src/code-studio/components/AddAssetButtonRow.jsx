@@ -54,8 +54,6 @@ export default class AddAssetButtonRow extends React.Component {
     onSelectRecord: PropTypes.func.isRequired,
     statusMessage: PropTypes.string,
     recordDisabled: PropTypes.bool,
-    // Temporary prop until recording audio is widely released
-    recordEnabled: PropTypes.bool
   };
 
   render() {
@@ -69,7 +67,7 @@ export default class AddAssetButtonRow extends React.Component {
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
-        {this.props.recordEnabled && <RecordButton onSelectRecord={this.props.onSelectRecord} disabled={this.props.recordDisabled}/>}
+        <RecordButton onSelectRecord={this.props.onSelectRecord} disabled={this.props.recordDisabled}/>
         <span id="manage-asset-status">
           {this.props.statusMessage}
         </span>
