@@ -3,7 +3,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
@@ -163,32 +162,6 @@ describe('ScriptOverviewTopRow', () => {
           </span>
         </div>
       </div>
-    );
-  });
-
-  it('renders section selector if script has lockable stages', () => {
-    const wrapper = shallow(
-      <ScriptOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-        scriptHasLockableStages={true}
-      />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <SectionSelector/>
-    );
-  });
-
-  it('renders section selector if script allows hidden stages', () => {
-    const wrapper = shallow(
-      <ScriptOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-        scriptAllowsHiddenStages={true}
-      />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <SectionSelector/>
     );
   });
 
