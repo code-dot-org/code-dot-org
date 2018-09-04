@@ -734,7 +734,7 @@ Artist.prototype.evalCode = function (code) {
     // stop further execution, animate what occurred before the infinite loop,
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
-    if (e !== 'Infinity') {
+    if (e.message !== 'Infinity') {
       // call window.onerror so that we get new relic collection.  prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
