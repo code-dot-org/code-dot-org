@@ -23,7 +23,8 @@ module Pd::Application
         principal_email: application_hash[:principal_email]
       }
 
-      if Pd::Application::PrincipalApproval1819Application.exists?(application_guid: params[:application_guid])
+      # Submitted only if answers are nonempty
+      unless Pd::Application::PrincipalApproval1819Application.find_by(application_guid: params[:application_guid])&.placeholder?
         return render :submitted
       end
 
