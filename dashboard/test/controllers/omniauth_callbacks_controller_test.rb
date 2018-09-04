@@ -455,6 +455,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
       check_and_apply_oauth_takeover(student)
 
+      oauth_student.reload
       assert_nil oauth_student.deleted_at
       assert_nil student.provider
     end
