@@ -181,8 +181,6 @@ var Artist = function () {
 
   // these get set by init based on skin.
   this.speedSlider = null;
-
-  this.immovableBlocks = [];
 };
 
 module.exports = Artist;
@@ -742,7 +740,9 @@ Artist.prototype.evalCode = function (code) {
       if (window.onerror) {
         window.onerror("UserCode:" + e.message, document.URL, 0);
       }
-      window.alert(e);
+      if (this.shouldAnimate_) {
+        window.alert(e);
+      }
     }
   }
 };
