@@ -3865,4 +3865,28 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal [student.summarize], section.teacher.dependent_students
   end
+
+  test 'last section id' do
+    teacher = create :teacher
+    section1 = create :section, teacher: teacher
+    assert_equal section1.id, teacher.last_section_id
+
+    create :follower, section: section1
+    assert_nil section1.students.first.last_section_id
+
+    # selects the most recently created section
+    section2 = create :section, teacher: teacher
+    assert_equal section2.id, teacher.last_section_id
+
+    # ignores hidden sections
+    section2.hidden = true
+    section2.save!
+    assert_equal section1.id, teacher.last_section_id
+
+    # ignores deleted sections
+    section3 = create :section, teacher: teacher
+    assert_equal section3.id, teacher.last_section_id
+    section3.delete
+    assert_equal section1.id, teacher.last_section_id
+  end
 end
