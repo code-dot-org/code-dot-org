@@ -724,10 +724,11 @@ Artist.prototype.resetButtonClick = function () {
   }
 };
 
-Artist.prototype.evalCode = function (code) {
+Artist.prototype.evalCode = function (code, interpreterScope={}) {
   try {
     CustomMarshalingInterpreter.evalWith(code, {
-      Turtle: this.api
+      Turtle: this.api,
+      ...interpreterScope,
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
