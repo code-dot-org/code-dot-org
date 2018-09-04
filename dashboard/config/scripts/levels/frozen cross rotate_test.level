@@ -15,7 +15,7 @@
     "disable_variable_editing": "false",
     "free_play": "false",
     "slider_speed": "0.5",
-    "instructions": "Now try repeating it 10 times. How many degrees do you need to turn between each line?",
+    "instructions": "Now try repeating it **10** times. **How many degrees** do you need to turn between each line?",
     "impressive": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -24,7 +24,7 @@
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"replace_questions_degree\",\"callout_text\":\"Use the drop-down to replace \\\"???\\\" with a number\",\"element_id\":\"#turn_right_qtip > .blocklyEditableText:eq(1)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "permitted_errors": "0",
-    "markdown_instructions": "Now try repeating it 10 times. How many degrees do you need to turn between each line?",
+    "markdown_instructions": "Now try repeating it **10** times. **How many degrees** do you need to turn between each line?",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -48,7 +48,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-08-30 20:28:17 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 05:34:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:35:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:37:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-08-30 20:28:17 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2018-08-31 05:34:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:35:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 05:37:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 19:56:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-31 19:57:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -104,7 +104,7 @@
         </block>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="36,45,60,90,120,180">90</title>
+          <title name="VALUE" config="36, 45,60,90,120,180">90</title>
         </block>
         <block type="controls_repeat_dropdown" id="repeat_toolbox_qtip1">
           <title name="TIMES" config="3-10">4</title>
@@ -117,11 +117,11 @@
           <statement name="PICK">
             <block type="draw_turn_by_constant_dropdown">
               <title name="DIR">turnRight</title>
-              <title name="VALUE" config="36,45,60,90,120,180">36</title>
+              <title name="VALUE" config="36, 45,60,90,120,180">36</title>
               <next>
                 <block type="draw_turn_by_constant_dropdown">
                   <title name="DIR">turnLeft</title>
-                  <title name="VALUE" config="36,45,60,90,120,180">36</title>
+                  <title name="VALUE" config="36, 45,60,90,120,180">36</title>
                 </block>
               </next>
             </block>
