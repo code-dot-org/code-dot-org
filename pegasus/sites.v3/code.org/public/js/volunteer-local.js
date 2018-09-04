@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 $(function () {
-  selectize = $('#volunteer-search-facets select').selectize();
+  selectize = $('#volunteer-search-facets select').selectize({plugins: ["remove_button"]});
 
   $("#location").geocomplete()
     .bind("geocode:result", function (event, result) {
