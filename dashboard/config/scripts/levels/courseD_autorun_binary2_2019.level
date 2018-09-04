@@ -1,13 +1,13 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2018-03-26T16:35:59.000Z",
+  "created_at": "2018-09-04T14:29:06.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "x": "12",
-    "y": "12",
+    "x": "4",
+    "y": "4",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -17,9 +17,10 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
+    "instructions": "Run this code to see how the artist uses binary to draw this pattern.",
     "embed": "false",
-    "instructions": "What is the shortest binary string that you can repeat to draw this image?",
     "disable_sharing": "false",
+    "markdown_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \r\n___\r\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \r\n___\r\n**Run this code to see how the artist uses binary to draw this pattern.**",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -32,16 +33,23 @@
     "examples_required": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Start at the top left. How far do you have to read before the pattern starts to repeat?\",\"hint_id\":\"courseD_artist_binary7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0f3be9e51aa73013422c98c8c5fff1cb/courseD_artist_binary7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try writing binary and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseD_artist_binary7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c8854cf9390f36d26c02fcd459ba4252/courseD_artist_binary7.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "parent_level_id": 7921,
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Just click `Run` to see this program in action!\",\"hint_id\":\"courseD_artist_binary2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/77cdae1ba79061009e611c10d805e53e/courseD_artist_binary2.mp3\"}]",
+    "parent_level_id": 11904,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "auto_run": "LIMITED_AUTO_RUN"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 19:21:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 03:26:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-09-04 15:01:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-04 15:02:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:14:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 19:07:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-06-01 02:47:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-09-04 14:29:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-09-04 14:32:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"x\",\"y\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -49,7 +57,31 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">13</title>
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn" inline="true">
+                  <mutation name="draw">
+                    <arg name="binary"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="text">
+                      <title name="TEXT">10101010</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="true">
+                      <mutation name="draw">
+                        <arg name="binary"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="text">
+                          <title name="TEXT">01010101</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
             </block>
           </next>
         </block>
@@ -224,30 +256,77 @@
           <mutation/>
           <title name="NAME">draw bit</title>
           <statement name="STACK">
-            <block type="draw_colour" inline="true" id="draw-color">
+            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
               <value name="COLOUR">
-                <block type="colour_picker">
+                <block type="colour_picker" uservisible="false">
                   <title name="COLOUR">#ffffff</title>
                 </block>
               </value>
               <next>
-                <block type="draw_width_inline">
-                  <title name="WIDTH">25</title>
+                <block type="jump_by_constant" uservisible="false">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">21</title>
                   <next>
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">25</title>
+                    <block type="draw_turn_by_constant" uservisible="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                      <next>
+                        <block type="jump_by_constant" uservisible="false">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">21</title>
                           <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">90</title>
+                            <block type="draw_width_inline" uservisible="false">
+                              <title name="WIDTH">50</title>
+                              <next>
+                                <block type="draw_move_by_constant" uservisible="false">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">0</title>
+                                  <next>
+                                    <block type="jump_by_constant" uservisible="false">
+                                      <title name="DIR">jumpBackward</title>
+                                      <title name="VALUE">21</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant" uservisible="false">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
+                                          <next>
+                                            <block type="jump_by_constant" uservisible="false">
+                                              <title name="DIR">jumpBackward</title>
+                                              <title name="VALUE">21</title>
+                                              <next>
+                                                <block type="draw_width_inline" uservisible="false">
+                                                  <title name="WIDTH">8</title>
+                                                  <next>
+                                                    <block type="controls_repeat" uservisible="false">
+                                                      <title name="TIMES">4</title>
+                                                      <statement name="DO">
+                                                        <block type="draw_move_by_constant" uservisible="false">
+                                                          <title name="DIR">moveForward</title>
+                                                          <title name="VALUE">42</title>
+                                                          <next>
+                                                            <block type="draw_turn_by_constant" uservisible="false">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE">90</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </statement>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
-                      </statement>
+                      </next>
                     </block>
                   </next>
                 </block>
@@ -262,13 +341,19 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="procedures_callnoreturn">
+        <block type="procedures_callnoreturn" inline="true">
           <mutation name="draw">
             <arg name="binary"/>
           </mutation>
         </block>
         <block type="text">
           <title name="TEXT">0</title>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation>
+            <arg name="binary"/>
+          </mutation>
+          <title name="NAME">draw</title>
         </block>
         <block type="comment">
           <title name="TEXT"/>
@@ -277,22 +362,10 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false">
-          <next>
-            <block type="variables_set" inline="false" uservisible="false">
-              <title name="VAR">bit</title>
-              <value name="VALUE">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">13</title>
+              <title name="TIMES">4</title>
               <statement name="DO">
                 <block type="procedures_callnoreturn" inline="true">
                   <mutation name="draw">
@@ -300,48 +373,25 @@
                   </mutation>
                   <value name="ARG0">
                     <block type="text">
-                      <title name="TEXT">10110</title>
+                      <title name="TEXT">10101010</title>
                     </block>
                   </value>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="true">
+                      <mutation name="draw">
+                        <arg name="binary"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="text">
+                          <title name="TEXT">01010101</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
                 </block>
               </statement>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation/>
-          <title name="NAME">draw bit</title>
-          <statement name="STACK">
-            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
-              <value name="COLOUR">
-                <block type="colour_picker" uservisible="false">
-                  <title name="COLOUR">#ffff00</title>
-                </block>
-              </value>
-              <next>
-                <block type="draw_width_inline" uservisible="false">
-                  <title name="WIDTH">25</title>
-                  <next>
-                    <block type="controls_repeat" uservisible="false">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="draw_move_by_constant" uservisible="false">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">25</title>
-                          <next>
-                            <block type="draw_turn_by_constant" uservisible="false">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">90</title>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
@@ -505,6 +555,88 @@
                       </next>
                     </block>
                   </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">draw bit</title>
+          <statement name="STACK">
+            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker" uservisible="false">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="jump_by_constant" uservisible="false">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">21</title>
+                  <next>
+                    <block type="draw_turn_by_constant" uservisible="false">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                      <next>
+                        <block type="jump_by_constant" uservisible="false">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">21</title>
+                          <next>
+                            <block type="draw_width_inline" uservisible="false">
+                              <title name="WIDTH">50</title>
+                              <next>
+                                <block type="draw_move_by_constant" uservisible="false">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">0</title>
+                                  <next>
+                                    <block type="jump_by_constant" uservisible="false">
+                                      <title name="DIR">jumpBackward</title>
+                                      <title name="VALUE">21</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant" uservisible="false">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
+                                          <next>
+                                            <block type="jump_by_constant" uservisible="false">
+                                              <title name="DIR">jumpBackward</title>
+                                              <title name="VALUE">21</title>
+                                              <next>
+                                                <block type="draw_width_inline" uservisible="false">
+                                                  <title name="WIDTH">8</title>
+                                                  <next>
+                                                    <block type="controls_repeat" uservisible="false">
+                                                      <title name="TIMES">4</title>
+                                                      <statement name="DO">
+                                                        <block type="draw_move_by_constant" uservisible="false">
+                                                          <title name="DIR">moveForward</title>
+                                                          <title name="VALUE">42</title>
+                                                          <next>
+                                                            <block type="draw_turn_by_constant" uservisible="false">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE">90</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </statement>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
