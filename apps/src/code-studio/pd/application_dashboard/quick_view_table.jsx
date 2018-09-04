@@ -249,7 +249,7 @@ export class QuickViewTable extends React.Component {
         </Button>
         <br/>
         {
-          ['waitlisted', 'pending', 'unreviewed'].includes(props['rowData']['status']) && (
+          props['rowData']['principal_approval'] === 'No approval sent' && (
             <SendPrincipalApprovalButton id={id}/>
           )
         }
