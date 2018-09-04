@@ -163,7 +163,7 @@ export default class AssetManager extends React.Component {
         {this.state.audioErrorType === AudioErrorType.INITIALIZE &&
           <div>{i18n.audioInitializeError()}</div>
         }
-        {displayAudioRecorder && !this.props.disableAudioRecording &&
+        {displayAudioRecorder &&
           <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved} imagePicker={this.props.imagePicker}/>
         }
         <AddAssetButtonRow
@@ -176,6 +176,7 @@ export default class AssetManager extends React.Component {
           onSelectRecord={this.onSelectRecord}
           statusMessage={this.state.statusMessage}
           recordDisabled={this.state.recordingAudio}
+          hideAudioRecording={this.props.disableAudioRecording}
         />
       </div>
     );
