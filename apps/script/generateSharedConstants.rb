@@ -66,6 +66,7 @@ end
 
 def main
   shared_content = generate_multiple_constants %w(
+    ARTIST_AUTORUN_OPTIONS
     GAMELAB_AUTORUN_OPTIONS
     LEVEL_KIND
     LEVEL_STATUS

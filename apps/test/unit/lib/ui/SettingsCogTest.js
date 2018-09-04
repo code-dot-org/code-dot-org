@@ -7,7 +7,7 @@ import {expect} from '../../../util/configuredChai';
 import SettingsCog, {ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
+import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
 import * as assets from '@cdo/apps/code-studio/assets';
 
 describe('SettingsCog', () => {
@@ -120,18 +120,18 @@ describe('SettingsCog', () => {
 
     describe('maker toggle', () => {
       beforeEach(() => {
-        sinon.stub(maker, 'isAvailable');
-        sinon.stub(maker, 'isEnabled');
+        sinon.stub(makerRedux, 'isAvailable');
+        sinon.stub(makerRedux, 'isEnabled');
       });
 
       afterEach(() => {
-        maker.isEnabled.restore();
-        maker.isAvailable.restore();
+        makerRedux.isEnabled.restore();
+        makerRedux.isAvailable.restore();
       });
 
       it('renders with enable maker option if maker is available and disabled', () => {
-        maker.isAvailable.returns(true);
-        maker.isEnabled.returns(false);
+        makerRedux.isAvailable.returns(true);
+        makerRedux.isEnabled.returns(false);
         const wrapper = mount(
           <ToggleMaker onClick={() => {}}/>
         );
@@ -139,8 +139,8 @@ describe('SettingsCog', () => {
       });
 
       it('renders with disable maker option if maker is available and enabled', () => {
-        maker.isAvailable.returns(true);
-        maker.isEnabled.returns(true);
+        makerRedux.isAvailable.returns(true);
+        makerRedux.isEnabled.returns(true);
         const wrapper = mount(
           <ToggleMaker onClick={() => {}}/>
         );
@@ -148,7 +148,7 @@ describe('SettingsCog', () => {
       });
 
       it('hides maker toggle if maker is not available', () => {
-        maker.isAvailable.returns(false);
+        makerRedux.isAvailable.returns(false);
         const wrapper = mount(
           <ToggleMaker onClick={() => {}}/>
         );
@@ -156,8 +156,8 @@ describe('SettingsCog', () => {
       });
 
       it('calls handleToggleMaker when clicked', () => {
-        maker.isAvailable.returns(true);
-        maker.isEnabled.returns(false);
+        makerRedux.isAvailable.returns(true);
+        makerRedux.isEnabled.returns(false);
         const handleToggleMaker = sinon.spy();
         const wrapper = mount(
           <ToggleMaker onClick={handleToggleMaker}/>
