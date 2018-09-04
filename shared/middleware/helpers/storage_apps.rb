@@ -14,7 +14,7 @@ class StorageApps
     @table = PEGASUS_DB[:storage_apps]
   end
 
-  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil)
+  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
@@ -27,6 +27,7 @@ class StorageApps
       published_at: published_at,
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
+      standalone: standalone,
     }
     row[:id] = @table.insert(row)
 
