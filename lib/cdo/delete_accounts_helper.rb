@@ -70,55 +70,31 @@ class DeleteAccountsHelper
   # @param [Integer] user_id The user to clean the LevelSource-backed progress of.
   def clean_level_source_backed_progress(user_id)
     @log.puts "Cleaning UserLevel"
-    user_levels = UserLevel.where(user_id: user_id)
-    user_level_count = user_levels.count
-    user_levels.find_each do |user_level|
-      user_level.update!(level_source_id: nil)
-    end
-    @log.puts "Cleaned #{user_level_count} UserLevel" if user_level_count > 0
+    updated_rows = UserLevel.where(user_id: user_id).update_all(level_source_id: nil)
+    @log.puts "Cleaned #{updated_rows} UserLevel" if updated_rows > 0
 
     @log.puts "Cleaning Activity"
-    activities = Activity.where(user_id: user_id)
-    activity_count = activities.count
-    activities.find_each do |activity|
-      activity.update!(level_source_id: nil)
-    end
-    @log.puts "Cleaned #{activity_count} Activity" if activity_count > 0
+    updated_rows = Activity.where(user_id: user_id).update_all(level_source_id: nil)
+    @log.puts "Cleaned #{updated_rows} Activity" if updated_rows > 0
 
     # Note that the `overflow_activities` table exists only in the production environment.
     if ActiveRecord::Base.connection.data_source_exists? 'overflow_activities'
       @log.puts "Cleaning OverflowActivity"
-      overflow_activities = OverflowActivity.where(user_id: user_id)
-      overflow_activity_count = overflow_activities.count
-      overflow_activities.find_each do |activity|
-        activity.update!(level_source_id: nil)
-      end
-      @log.puts "Cleaned #{overflow_activity_count} OverflowActivity" if overflow_activity_count > 0
+      updated_rows = OverflowActivity.where(user_id: user_id).update_all(level_source_id: nil)
+      @log.puts "Cleaned #{updated_rows} OverflowActivity" if updated_rows > 0
     end
 
     @log.puts "Cleaning GalleryActivity"
-    gallery_activities = GalleryActivity.where(user_id: user_id)
-    gallery_activity_count = gallery_activities.count
-    gallery_activities.each do |gallery_activity|
-      gallery_activity.update!(level_source_id: nil)
-    end
-    @log.puts "Cleaned #{gallery_activity_count} GalleryActivity" if gallery_activity_count > 0
+    updated_rows = GalleryActivity.where(user_id: user_id).update_all(level_source_id: nil)
+    @log.puts "Cleaned #{updated_rows} GalleryActivity" if updated_rows > 0
 
     @log.puts "Cleaning AuthoredHintViewRequest"
-    authored_hint_view_requests = AuthoredHintViewRequest.where(user_id: user_id)
-    authored_hint_view_request_count = authored_hint_view_requests.count
-    authored_hint_view_requests.each(&:clear_level_source_associations)
-    @log.puts "Cleaned #{authored_hint_view_request_count} AuthoredHintViewRequest" if authored_hint_view_request_count > 0
-  end
-
-  # Cleans the responses for all surveys associated with the user.
-  # @param [Integer] user_id The user to clean the surveys of.
-  def clean_survey_responses(user_id)
-    @log.puts "Cleaning SurveyResult"
-    survey_results = SurveyResult.where(user_id: user_id)
-    survey_result_count = survey_results.count
-    survey_results.each(&:clear_open_ended_responses)
-    @log.puts "Cleaned #{survey_result_count} SurveyResult" if survey_result_count > 0
+    updated_rows = AuthoredHintViewRequest.where(user_id: user_id).update_all(
+      prev_level_source_id: nil,
+      next_level_source_id: nil,
+      final_level_source_id: nil
+    )
+    @log.puts "Cleaned #{updated_rows} AuthoredHintViewRequest" if updated_rows > 0
   end
 
   # Remove all user generated content associated with any PD the user has been through, as well as
@@ -378,17 +354,16 @@ class DeleteAccountsHelper
     user.destroy
 
     purge_teacher_feedbacks(user.id)
-    remove_census_submissions(user.email) if user.email
-    remove_email_preferences(user.email) if user.email
+    remove_census_submissions(user.email) if user.email&.present?
+    remove_email_preferences(user.email) if user.email&.present?
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
-    clean_survey_responses(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
     clean_and_destroy_pd_content(user.id)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
-    remove_poste_data(user.email) if user.email
+    remove_poste_data(user.email) if user.email&.present?
     remove_from_pardot_by_user_id(user.id)
     remove_from_solr(user.id)
     purge_unshared_studio_person(user)

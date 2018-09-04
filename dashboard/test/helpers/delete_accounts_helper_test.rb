@@ -610,6 +610,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Expected no SchoolInfos referring back to this CensusSubmission"
   end
 
+  test "Never remove census submissions if user has blank email" do
+    student = create :student
+    assert_equal '', student.email
+
+    Census::CensusSubmission.expects(:where).never
+
+    purge_user student
+  end
+
   #
   # Table: dashboard.circuit_playground_discount_applications
   #
@@ -791,6 +800,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty EmailPreference.where(email: email)
 
     assert_logged "Removed 1 EmailPreference"
+  end
+
+  test "Never remove email preferences if user has blank email" do
+    student = create :student
+    assert_equal '', student.email
+
+    EmailPreference.expects(:where).never
+
+    purge_user student
   end
 
   #
@@ -1468,8 +1486,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute SurveyResult.where(id: survey_result_a.id).exists?
     refute SurveyResult.where(id: survey_result_b.id).exists?
     assert SurveyResult.where(id: survey_result_c.id).exists?
-
-    assert_logged "Cleaned 2 SurveyResult"
   end
 
   #
@@ -1506,6 +1522,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   #
   # Table: pegasus.contacts
+  # Table: pegasus.poste_deliveries
+  # Table: pegasus.poste_opens
   #
 
   test "removes contacts rows for email" do
@@ -1549,6 +1567,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     assert_empty PEGASUS_DB[:poste_deliveries].where(contact_email: email)
     assert_empty DB[:poste_opens].where(delivery_id: id)
+  end
+
+  test "Never removes poste data if user has empty email address" do
+    student = create :student
+    assert_equal '', student.email
+
+    DeleteAccountsHelper.any_instance.expects(:remove_poste_data).never
+
+    purge_user student
   end
 
   #
@@ -2195,7 +2222,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def with_channel_for(owner)
-    channels_before = storage_apps.count
     with_storage_id_for owner do |storage_id|
       encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
       _, id = storage_decrypt_channel_id encrypted_channel_id
@@ -2203,12 +2229,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ensure
       storage_apps.where(id: id).delete if id
     end
-  ensure
-    assert_equal channels_before, storage_apps.count
   end
 
   def with_storage_id_for(user)
-    user_storage_ids_count_before = user_storage_ids.count
     owns_storage_id = false
 
     storage_id = user_storage_ids.where(user_id: user.id).first&.[](:id)
@@ -2220,7 +2243,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     yield storage_id
   ensure
     user_storage_ids.where(id: storage_id).delete if owns_storage_id
-    assert_equal user_storage_ids_count_before, user_storage_ids.count
   end
 
   def with_contact_rollup_for(user)

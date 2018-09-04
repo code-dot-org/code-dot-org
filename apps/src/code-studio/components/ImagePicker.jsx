@@ -92,6 +92,7 @@ export default class ImagePicker extends React.Component {
         projectId={this.props.projectId}
         soundPlayer={this.props.soundPlayer}
         allowAudioRecording={this.props.allowAudioRecording}
+        imagePicker={true}
       /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 

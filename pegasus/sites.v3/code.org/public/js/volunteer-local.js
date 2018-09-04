@@ -4,13 +4,15 @@ var gmap;
 var gmap_loc;
 var selectize;
 
+var firstRetrievalDone = false;
+
 $(document).ready(function () {
   initializeMap();
   $('#contact-volunteer-form select').selectize();
 });
 
 $(function () {
-  selectize = $('#volunteer-search-facets select').selectize();
+  selectize = $('#volunteer-search-facets select').selectize({plugins: ["remove_button"]});
 
   $("#location").geocomplete()
     .bind("geocode:result", function (event, result) {
@@ -99,6 +101,16 @@ function updateResults(locations) {
     $('#controls').html('');
   } else {
     displayNoResults();
+  }
+
+  // First retrieval shows pins across the entire US.  Subsequent retrievals
+  // show pins much closer to a specified location.  For this reason, we don't
+  // want to show the filter options at first, but only after a location has
+  // been specified by the user.
+  if (firstRetrievalDone) {
+    $('.filter-options').fadeIn();
+  } else {
+    firstRetrievalDone = true;
   }
 
   loadMap(locations);
@@ -196,7 +208,7 @@ function compileHTML(index, location) {
   var line;
 
   // Compile HTML.
-  var html = '<h3>' + location.name_s + '</h3>';
+  var html = '<h3 class="entry-detail">' + location.name_s + '</h3>';
 
   if (location.company_s) {
     line = location.company_s;
@@ -241,7 +253,7 @@ function compileHTML(index, location) {
   }
 
   $.each(lines, function (key, field) {
-    html += '<div class="profile-detail">' + field + '</div>';
+    html += '<div class="profile-detail entry-detail">' + field + '</div>';
   });
 
   return html;

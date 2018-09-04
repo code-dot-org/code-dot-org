@@ -17,7 +17,6 @@ export default storybook => storybook
             onUploadError={() => console.log("onUploadError")}
             onSelectRecord={() => console.log("onSelectRecord")}
             statusMessage=""
-            recordEnabled={true}
           />
         </div>
       )
@@ -35,7 +34,6 @@ export default storybook => storybook
             onUploadError={() => console.log("onUploadError")}
             onSelectRecord={() => console.log("onSelectRecord")}
             statusMessage="This is a status message"
-            recordEnabled={true}
           />
         </div>
       )
