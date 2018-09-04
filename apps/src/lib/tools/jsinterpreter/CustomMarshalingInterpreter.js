@@ -4,8 +4,7 @@ const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 
 const DEFAULT_MAX_STEPS = 5e5;
-
-const defaultExecutionInfo = {
+export const DEFAULT_EXECUTION_INFO = {
   ticks: DEFAULT_MAX_STEPS,
   checkTimeout: function () {
     if (this.ticks-- < 0) {
@@ -33,7 +32,7 @@ function isCanvasImageData(nativeVar) {
   return nativeVar instanceof CanvasPixelArray;
 }
 
-module.exports = class CustomMarshalingInterpreter extends Interpreter {
+export default class CustomMarshalingInterpreter extends Interpreter {
   constructor(code, customMarshaler, opt_initFunc) {
     super(code, (thisInterpreter, scope) => {
       if (!(customMarshaler instanceof CustomMarshaler)) {
@@ -411,7 +410,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
     let interpreter, currentCallback, lastReturnValue;
     const hooks = [];
     const apis = {
-      executionInfo: defaultExecutionInfo,
+      executionInfo: DEFAULT_EXECUTION_INFO,
       ...scope,
     };
 
@@ -588,7 +587,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
    */
   static evalWith(code, scope, {asyncFunctionList, legacy}={}) {
     const globals = {
-      executionInfo: defaultExecutionInfo,
+      executionInfo: DEFAULT_EXECUTION_INFO,
       ...scope,
     };
 
@@ -806,5 +805,4 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       );
     };
   }
-
-};
+}
