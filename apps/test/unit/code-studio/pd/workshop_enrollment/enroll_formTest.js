@@ -67,7 +67,7 @@ describe("Enroll Form", () => {
 
   describe("Enroll Form", () => {
     let enrollForm;
-    before(() => {
+    beforeEach(() => {
       sinon.spy(jQuery, "ajax");
 
       enrollForm = shallow(
@@ -80,8 +80,35 @@ describe("Enroll Form", () => {
         />
       );
     });
-    after(() => {
+    afterEach(() => {
       jQuery.ajax.restore();
+    });
+
+    it("submits other school_info fields when no school_id", () => {
+      const school_info = {
+        school_name: "Hogwarts School of Witchcraft and Wizardry",
+        school_state: "Washington",
+        school_zip: "12345",
+        school_type: "Private school"
+      };
+
+      const params = {
+        first_name: "Rubeus",
+        last_name: "Hagrid",
+        email: props.email,
+        school_info: school_info,
+        role: "Librarian",
+        grades_teaching: ["Kindergarten"]
+      };
+      enrollForm.setState(params);
+
+      const expectedSchoolInfo = {...school_info, school_type: "private"};
+      let expectedData = {...params, school_info: expectedSchoolInfo};
+
+      enrollForm.find("#submit").simulate("click");
+
+      expect(jQuery.ajax.calledOnce).to.be.true;
+      expect(jQuery.ajax.getCall(0).args[0].data).to.equal(JSON.stringify(expectedData));
     });
 
     it("doesn't submit other school_info fields when school_id is selected", () => {
@@ -105,7 +132,8 @@ describe("Enroll Form", () => {
       enrollForm.find("#submit").simulate("click");
 
       expect(jQuery.ajax.calledOnce).to.be.true;
-      expect(JSON.stringify(expectedData)).to.equal(jQuery.ajax.getCall(0).args[0].data);
+      expect(jQuery.ajax.getCall(0).args[0].data).to.equal(JSON.stringify(expectedData));
     });
+
   });
 });
