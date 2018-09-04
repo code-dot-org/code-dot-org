@@ -47,6 +47,12 @@ ________________
 - Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.
 - See CS Discoveries and CS Principles Facilitator Travel Policy <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>here</a>.
 
+**CS Principles and CS Discoveries Facilitator Travel Policy**
+
+- Please be sure to review the CS Discoveries and CS Principles Code.org Travel policy <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>here</a>.
+- Facilitators will be responsible for booking travel according to the Code.org policy (if travel is covered by Code.org) or the Regional Partner’s own travel policy (if travel is covered by the Regional Partner).
+
+
 **CS Fundamentals Facilitator Payments**
 
 - CS Fundamentals facilitators are paid $400 for workshop facilitation.****
