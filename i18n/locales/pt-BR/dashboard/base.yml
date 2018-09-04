@@ -378,6 +378,7 @@ pt-BR:
     create_personal_login_under_13_username: "Nome de usuário (não use seu nome verdadeiro!)"
     create_personal_login_under_13_parent_email: 'E-mail dos pais ou responsáveis'
     create_personal_login_info: 'Se você quiser continuar usando sua conta do Code.org mesmo após o fim do ano letivo, você pode criar seu próprio login abaixo.'
+    create_personal_login_link_account: 'Ao invés disso, você também pode escolher se conectar a uma conta pessoal debaixo da seção "Gerenciar Contas Vinculadas".'
     create_personal_login_terms: "Ao criar uma conta individual, eu concordo com os <a href='%{terms_of_service_url}', target='_blank'>termos de serviço</a> do Code.org. Se tenho menos de 13 anos de idade, eu confirmo que tenho permissão dos meus pais ou responsável legal para usar os serviços do Code.org mesmo sem o acompanhamento de um professor."
     create_personal_login_email_note: "Nota: Os endereços de E-mail não são armazenados de forma que nos permita permita entrar em contato com os alunos. Os alunos nunca irão receber e-mails do Code.org exceto para recuperação de senha. Consulte nossa <a href='%{privacy_policy_url}', target='_blank'>política de privacidade</a> para obter mais informações."
     enter_new_login_info: 'Digite sua nova conta individual'

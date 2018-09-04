@@ -5,6 +5,15 @@ ky:
         title: титул
       Prepare for your presentation:
         title: титул
+    match:
+      K-1 Bee Loops Match 1:
+        Match the blocks: Блокторду келиштирүү
+      K-1 Maze Match 1:
+        Match the puzzles and blocks: Табышмактарды жана блокторду келиштирүү
     multi:
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: Лабиринт суроолору
+      4-5 maze multi 1:
+        Maze Multiple Choice: Лабиринт суроолору
       K-1 Maze Multiple Choice 2:
         Maze: Лабиринт

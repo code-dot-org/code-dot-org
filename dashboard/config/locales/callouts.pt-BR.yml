@@ -3,9 +3,11 @@ pt-BR:
   data:
     callouts:
       AppLab Intro 2 - Edit place1 2_callout:
-        screenSelectorCallout3: Escolher a tela que você fez
+        dragTextAreaIn: Clique e arraste a "área de texto" para a tela
+        screenSelectorCallout3: Escolha a tela que você fez
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: Este é o seletor de tela
+        screenSelectorCallout2: Este é o seletor da tela
+        changePlace1ID: Mude o Id da sua tela aqui.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Clique no título de seu app
       AppLab Intro 2 - Edit startScreen2_callout:

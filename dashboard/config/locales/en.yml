@@ -110,6 +110,8 @@ en:
     clever: 'Clever Account'
     powerschool: 'Powerschool Account'
     forgot_password: 'Forgot your password?'
+    migration_success: 'Success! You have updated to our new account experience.'
+    demigration_success: 'The new account experience is now disabled on your account.'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
     not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."

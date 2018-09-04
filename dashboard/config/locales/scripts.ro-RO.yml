@@ -3144,3 +3144,22 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+        spritelab-simple:
+          stages:
+            Fish Tank - Creating Sprites:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Alien Dance Party - Input:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Virtual Pet - Interactions:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        spritelab-ee:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        craft18:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"

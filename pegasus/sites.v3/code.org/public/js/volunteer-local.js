@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 $(function () {
-  selectize = $('#volunteer-search-facets select').selectize();
+  selectize = $('#volunteer-search-facets select').selectize({plugins: ["remove_button"]});
 
   $("#location").geocomplete()
     .bind("geocode:result", function (event, result) {
@@ -196,7 +196,7 @@ function compileHTML(index, location) {
   var line;
 
   // Compile HTML.
-  var html = '<h3>' + location.name_s + '</h3>';
+  var html = '<h3 class="entry-detail">' + location.name_s + '</h3>';
 
   if (location.company_s) {
     line = location.company_s;
@@ -241,7 +241,7 @@ function compileHTML(index, location) {
   }
 
   $.each(lines, function (key, field) {
-    html += '<div class="profile-detail">' + field + '</div>';
+    html += '<div class="profile-detail entry-detail">' + field + '</div>';
   });
 
   return html;

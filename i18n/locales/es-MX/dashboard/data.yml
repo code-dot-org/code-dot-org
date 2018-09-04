@@ -493,6 +493,11 @@ es-MX:
         csd_gamelab_booleans: Expresiones Booleanas
         csd_gamelab_conditional_statements: Sentencias Condicionales
         csd_gamelab_if_else: Sentencias If/Else
+        CSF_SpriteLabIntro_CDEF: Este es el Sprite lab
+        CSF_Spritelab_MakeSprite_CDEF: Como hacer un Sprite en el Sprite lab
+        CDEF_Video_SpritesInAction: Sprites en accion
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en accion
+        CSF_StarWars_ProjectIntro: Introducción al proyecto de Star Wars
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
