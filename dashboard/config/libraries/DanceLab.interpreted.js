@@ -140,6 +140,27 @@ function Effects(alpha, blend) {
       pop();
     }
   };
+  this.strobe={
+    waitTime: 0,
+    flashing: false,
+    update: function () {
+      this.flashing=true;
+      this.waitTime=6;
+    },
+    draw: function () {
+      var bgcolor = rgb(1,1,1);
+      if (Dance.fft.isPeak()) this.update();
+      if (this.flashing) {
+	      bgcolor=rgb(255,255,255);
+	      this.waitTime--;
+      }
+      if (this.waitTime<=0) {
+       bgcolor=rgb(1,1,1);
+       this.flashing=false;
+     }
+      background(bgcolor);
+    }
+  };
 }
 var bg_effects = new Effects(1);
 var fg_effects = new Effects(0.2);

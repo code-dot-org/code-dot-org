@@ -40,7 +40,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     assert_equal false, edap.dry_run?
     assert_equal Time.parse('2018-07-31 4:18pm PDT'), edap.deleted_after
     assert_equal 28.days.ago, edap.deleted_before
-    assert_equal 100, edap.max_accounts_to_purge
+    assert_equal 200, edap.max_teachers_to_purge
+    assert_equal 4000, edap.max_accounts_to_purge
   end
 
   test 'raises ArgumentError unless dry_run is boolean' do
@@ -64,6 +65,16 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     ExpiredDeletedAccountPurger.new deleted_before: Time.parse('2018-07-30 4:18pm PDT')
     assert_raises ArgumentError do
       ExpiredDeletedAccountPurger.new deleted_before: '2018-07-31'
+    end
+  end
+
+  test 'raises ArgumentError unless max_teachers_to_purge is an Integer' do
+    ExpiredDeletedAccountPurger.new max_teachers_to_purge: 50
+    assert_raises ArgumentError do
+      ExpiredDeletedAccountPurger.new max_teachers_to_purge: '50'
+    end
+    assert_raises ArgumentError do
+      ExpiredDeletedAccountPurger.new max_teachers_to_purge: 2.5
     end
   end
 
@@ -220,7 +231,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
-      max_accounts_to_purge: 100
+      max_teachers_to_purge: #{edap.max_teachers_to_purge}
+      max_accounts_to_purge: #{edap.max_accounts_to_purge}
       Purging user_id #{student_b.id}
       Done purging user_id #{student_b.id}
       Purging user_id #{student_c.id}
@@ -268,7 +280,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
-      max_accounts_to_purge: 100
+      max_teachers_to_purge: #{edap.max_teachers_to_purge}
+      max_accounts_to_purge: #{edap.max_accounts_to_purge}
       Purging user_id #{student_a.id}
       Done purging user_id #{student_a.id}
       Purging user_id #{student_b.id}
@@ -313,7 +326,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
-      max_accounts_to_purge: 100
+      max_teachers_to_purge: #{edap.max_teachers_to_purge}
+      max_accounts_to_purge: #{edap.max_accounts_to_purge}
       (dry-run)
       Purging user_id #{student_b.id} (dry-run)
       Done purging user_id #{student_b.id} (dry-run)
@@ -369,7 +383,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{4.days.ago}
       deleted_before: #{2.days.ago}
-      max_accounts_to_purge: 100
+      max_teachers_to_purge: #{edap.max_teachers_to_purge}
+      max_accounts_to_purge: #{edap.max_accounts_to_purge}
       (dry-run)
       Purging user_id #{student_a.id} (dry-run)
       Purging user_id #{student_b.id} (dry-run)
@@ -385,10 +400,102 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     LOG
   end
 
-  test 'when number of accounts to delete exceeds safety constraint' do
-    6.times do
-      create :student, deleted_at: 20.days.ago
+  test 'when number of teachers to delete exceeds safety constraint' do
+    create_list :teacher, 6, deleted_at: 20.days.ago
+
+    edap = ExpiredDeletedAccountPurger.new \
+      deleted_after: 25.days.ago,
+      deleted_before: 15.days.ago,
+      max_teachers_to_purge: 5
+
+    # Does not purge any accounts
+    AccountPurger.expects(:new).never
+
+    # Still sends metrics to New Relic
+    NewRelic::Agent.expects(:record_metric).
+        with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
+    # Records no purged accounts
+    NewRelic::Agent.expects(:record_metric).
+        with("Custom/DeletedAccountPurger/AccountsPurged", 0)
+    # Records no queued accounts (we don't queue individual accounts for review
+    # when the problem is that there's too many accounts)
+    NewRelic::Agent.expects(:record_metric).
+        with("Custom/DeletedAccountPurger/AccountsQueued", 0)
+    # Nothing moved to manual review queue
+    NewRelic::Agent.expects(:record_metric).
+        with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+
+    raised = assert_raises ExpiredDeletedAccountPurger::SafetyConstraintViolation do
+      edap.purge_expired_deleted_accounts!
     end
+    assert_equal \
+      "Found 6 teachers to purge, which exceeds the configured limit of 5. Abandoning run.",
+      raised.message
+
+    assert_equal <<~LOG, edap.log.string
+      Starting purge_expired_deleted_accounts!
+      deleted_after: #{25.days.ago}
+      deleted_before: #{15.days.ago}
+      max_teachers_to_purge: 5
+      max_accounts_to_purge: #{edap.max_accounts_to_purge}
+      Found 6 teachers to purge, which exceeds the configured limit of 5. Abandoning run.
+      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      Custom/DeletedAccountPurger/AccountsPurged: 0
+      Custom/DeletedAccountPurger/AccountsQueued: 0
+      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      Purged 0 account(s).
+      🕐 00:00:00
+    LOG
+  end
+
+  test 'max teachers safety constraint does not limit number of students' do
+    students = create_list :student, 6, deleted_at: 20.days.ago
+
+    edap = ExpiredDeletedAccountPurger.new \
+      deleted_after: 25.days.ago,
+      deleted_before: 15.days.ago,
+      max_teachers_to_purge: 5
+
+    NewRelic::Agent.expects(:record_metric).
+        with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
+    NewRelic::Agent.expects(:record_metric).
+        with("Custom/DeletedAccountPurger/AccountsPurged", 6)
+    NewRelic::Agent.expects(:record_metric).
+        with("Custom/DeletedAccountPurger/AccountsQueued", 0)
+    NewRelic::Agent.expects(:record_metric).
+        with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+
+    edap.purge_expired_deleted_accounts!
+
+    assert_equal <<~LOG, edap.log.string
+      Starting purge_expired_deleted_accounts!
+      deleted_after: #{25.days.ago}
+      deleted_before: #{15.days.ago}
+      max_teachers_to_purge: 5
+      max_accounts_to_purge: #{edap.max_accounts_to_purge}
+      Purging user_id #{students[0].id}
+      Done purging user_id #{students[0].id}
+      Purging user_id #{students[1].id}
+      Done purging user_id #{students[1].id}
+      Purging user_id #{students[2].id}
+      Done purging user_id #{students[2].id}
+      Purging user_id #{students[3].id}
+      Done purging user_id #{students[3].id}
+      Purging user_id #{students[4].id}
+      Done purging user_id #{students[4].id}
+      Purging user_id #{students[5].id}
+      Done purging user_id #{students[5].id}
+      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      Custom/DeletedAccountPurger/AccountsPurged: 6
+      Custom/DeletedAccountPurger/AccountsQueued: 0
+      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      Purged 6 account(s).
+      🕐 00:00:00
+    LOG
+  end
+
+  test 'when number of accounts to delete exceeds safety constraint' do
+    create_list :student, 6, deleted_at: 20.days.ago
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 25.days.ago,
@@ -424,6 +531,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Starting purge_expired_deleted_accounts!
       deleted_after: #{25.days.ago}
       deleted_before: #{15.days.ago}
+      max_teachers_to_purge: #{edap.max_teachers_to_purge}
       max_accounts_to_purge: 5
       Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
       Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}

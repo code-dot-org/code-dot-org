@@ -60,11 +60,4 @@ class SurveyResult < ActiveRecord::Base
     NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze
   ].freeze
   validates :kind, inclusion: {in: KINDS}, allow_nil: false
-
-  def clear_open_ended_responses
-    FREE_RESPONSE_ATTRS.each do |free_response_attr|
-      send("#{free_response_attr}=", SYSTEM_DELETED)
-    end
-    save! if changed?
-  end
 end
