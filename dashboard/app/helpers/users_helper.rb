@@ -13,8 +13,16 @@ module UsersHelper
       uid = session['clever_takeover_id']
       provider = session['clever_link_flag']
 
-      # TODO: validate that we're not destroying an active account?
       existing_account = User.find_by_credential(type: provider, id: uid)
+      if existing_account.has_activity?
+        # We don't want to destroy an account with progress.
+        # In theory this should not happen, so we log a Honeybadger error and return.
+        Honeybadger.notify(
+          error_class: 'Oauth takeover called for user with progress',
+          error_message: "Attempted to take over account with id #{existing_account.id}, which has activity"
+        )
+        return
+      end
 
       # Move over sections that students follow
       if user.student? && existing_account

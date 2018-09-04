@@ -390,6 +390,48 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
   end
 
+  test 'login: oauth takeover takes over account when account has no activity' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
+
+      @request.cookies[:pm] = 'clever_takeover'
+      @request.session['clever_link_flag'] = provider
+      @request.session['clever_takeover_id'] = oauth_student.uid
+      @request.session['clever_takeover_token'] = '54321'
+      check_and_apply_oauth_takeover(student)
+
+      oauth_student.reload
+      refute_nil oauth_student.deleted_at
+      assert_equal provider, student.provider
+      assert_equal oauth_student.uid, student.uid
+      assert_equal '54321', student.oauth_token
+      assert_nil @request.session['clever_link_flag']
+    end
+  end
+
+  test 'login: oauth takeover does nothing if account has activity' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
+      level = create(:level)
+      create :user_level, user: oauth_student, level: level, attempts: 1, best_result: 1
+
+      assert oauth_student.has_activity?
+
+      Honeybadger.expects(:notify).at_least_once
+
+      @request.cookies[:pm] = 'clever_takeover'
+      @request.session['clever_link_flag'] = provider
+      @request.session['clever_takeover_id'] = oauth_student.uid
+      @request.session['clever_takeover_token'] = '54321'
+      check_and_apply_oauth_takeover(student)
+
+      assert_nil oauth_student.deleted_at
+      assert_nil student.provider
+    end
+  end
+
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
