@@ -395,6 +395,7 @@ class ProjectsController < ApplicationController
       data: data,
       type: params[:key],
       remix_parent_id: remix_parent_id,
+      standalone: false,
     )
     render json: {channel_id: new_channel_id}
   end
