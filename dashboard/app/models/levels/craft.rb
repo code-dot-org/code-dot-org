@@ -50,6 +50,7 @@ class Craft < Blockly
     :use_score,
     :is_event_level,
     :is_agent_level,
+    :is_aquatic_level,
     :is_connection_level,
     :special_level_type,
     :grid_width,
@@ -446,15 +447,15 @@ class Craft < Blockly
 
   def self.create_from_level_builder(params, level_params)
     default_game_params = {}
-    default_game_params[:ground_plane] = '[' + ([(['"grass"'] * 10).join(',')] * 10).join(",\n") + ']'
-    default_game_params[:ground_decoration_plane] = '[' + ([(['""'] * 10).join(',')] * 10).join(",\n") + ']'
-    default_game_params[:action_plane] = '[' + ([(['""'] * 10).join(',')] * 10).join(",\n") + ']'
+    default_game_params[:ground_plane] = '[' + ([(['"grass"'] * 12).join(',')] * 12).join(",\n") + ']'
+    default_game_params[:ground_decoration_plane] = '[' + ([(['""'] * 12).join(',')] * 12).join(",\n") + ']'
+    default_game_params[:action_plane] = '[' + ([(['""'] * 12).join(',')] * 12).join(",\n") + ']'
     default_game_params[:player_start_position] = '[4, 4]'
-    default_game_params[:grid_width] = '10'
-    default_game_params[:grid_height] = '10'
+    default_game_params[:grid_width] = '12'
+    default_game_params[:grid_height] = '12'
     default_game_params[:player_start_direction] = 1
     default_game_params[:is_daytime] = true
-    default_game_params[:is_event_level] = true
+    default_game_params[:is_aquatic_level] = true
     default_game_params[:use_player] = true
     default_game_params[:use_score] = false
 

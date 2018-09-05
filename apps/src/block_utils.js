@@ -390,14 +390,14 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
   for (let func of functions) {
     const name = func.ownerDocument.evaluate(
-      'title[@name="NAME"]/text()', func, null, XPathResult.STRING_TYPE,
+      'title[@name="NAME"]/text()', func, null, XPathResult.STRING_TYPE, null
     ).stringValue;
     const type = func.ownerDocument.evaluate(
-      '@type', func, null, XPathResult.STRING_TYPE,
+      '@type', func, null, XPathResult.STRING_TYPE, null
     ).stringValue;
     const alreadyPresent = startBlocksDom.ownerDocument.evaluate(
       `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
-      startBlocksDom, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+      startBlocksDom, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null
     ).snapshotLength > 0;
     if (!alreadyPresent) {
       startBlocksDom.ownerDocument.firstChild.appendChild(func);

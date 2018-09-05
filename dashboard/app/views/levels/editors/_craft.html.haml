@@ -21,6 +21,9 @@
   = f.label :is_agent_level, 'Is an "Agent" (HoC 2017) level'
   = boolean_check_box(f, :is_agent_level)
 .field
+  = f.label :is_agent_level, 'Is an "Aquatic" (HoC 2018) level'
+  = boolean_check_box(f, :is_aquatic_level)
+.field
   = f.label :agent_start_position, 'Agent Start Position in format [x, y]'
   = f.text_field :agent_start_position
 .field

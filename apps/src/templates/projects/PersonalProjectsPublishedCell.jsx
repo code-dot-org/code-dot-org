@@ -62,6 +62,7 @@ class PersonalProjectsPublishedCell extends Component {
             onClick={this.onPublish}
             color={Button.ButtonColor.gray}
             text={i18n.publish()}
+            className="ui-personal-projects-publish-button"
           />
         }
         {showUnpublishButton &&
@@ -69,6 +70,7 @@ class PersonalProjectsPublishedCell extends Component {
             onClick={this.onUnpublish}
             color={Button.ButtonColor.gray}
             text={i18n.unpublish()}
+            className="ui-personal-projects-unpublish-button"
           />
         }
       </div>

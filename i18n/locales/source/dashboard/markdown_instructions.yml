@@ -2860,7 +2860,7 @@ en:
         For example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>
 
         <pre>
-        &lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;
+        &lt;a href="houses.html"&gt; Unique Houses &lt;/a&gt;
         </pre>
 
         </details>
@@ -2871,7 +2871,7 @@ en:
         For example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>
 
         <pre>
-        &lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;
+        &lt;a href="houses.html"&gt; Unique Houses &lt;/a&gt;
         </pre>
 
         </details>
@@ -3027,7 +3027,7 @@ en:
         For example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>
 
         <pre>
-        &lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;
+        &lt;a href="houses.html"&gt; Unique Houses &lt;/a&gt;
         </pre>
 
         </details>
@@ -3038,7 +3038,7 @@ en:
         For example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>
 
         <pre>
-        &lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;
+        &lt;a href=&#34;houses.htm&#34;&gt; Unique Houses &lt;/a&gt;
         </pre>
 
         </details>
@@ -4770,7 +4770,7 @@ en:
         # Do This
 
         * Add a `console.log` statement.
-        * Add a Boolean expression inside the `console.log` that checks whether the `apple.scale` is greater than 2.
+        * Add a Boolean expression inside the `console.log` that checks whether the `fruit.scale` is greater than 2.
       CSD U3 Counters assigning an expression_markdown_instruction: |-
         # Assignment and Expressions
 
@@ -27439,6 +27439,7 @@ en:
       course3_artist_functions_challenge1_markdown_instruction: Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!
       course3_artist_functions_challenge2_markdown_instruction: |-
         Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!
+
         <xml>
           <block type="jump_to_xy">
             <title name="XPOS">???</title>
@@ -27475,6 +27476,7 @@ en:
       course4_artist_concept_challenge2_markdown_instruction: Create five pinwheel designs using the code below.
       course4_artist_functions_challenge2_markdown_instruction: |-
         Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!
+
         <xml>
           <block type="jump_to_xy">
             <title name="XPOS">???</title>
@@ -28156,7 +28158,7 @@ en:
       courseC_artist_prog6_2018_markdown_instruction: |-
         *"Now a tag for Belle!"*
 
-        Draw this diamond with 200 pixel sides.
+        Draw this square with 200 pixel sides.
       courseC_artist_prog7_markdown_instruction: "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
       courseC_artist_prog7_2018_markdown_instruction: "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
       courseC_artist_prog8_markdown_instruction: "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)"
@@ -29388,6 +29390,7 @@ en:
       courseE_artist_functions_challenge1_2018_markdown_instruction: Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!
       courseE_artist_functions_challenge2_markdown_instruction: |-
         Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!
+
         <xml>
           <block type="jump_to_xy">
             <title name="XPOS">???</title>
@@ -29395,6 +29398,7 @@ en:
             </block></xml>
       courseE_artist_functions_challenge2_2018_markdown_instruction: |-
         Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!
+
         <xml>
           <block type="jump_to_xy">
             <title name="XPOS">???</title>
@@ -31753,10 +31757,12 @@ en:
         * Make sure your image **fits** entirely on the canvas
         * Use just **black lines** on a white background.
         * Jump the artist off the top left corner (-10 over, -10 down) at the end of your program:
+
         <xml>    <block type="jump_to_xy"><title name="XPOS">-10</title><title name="YPOS">-10</title>
             </block>
             <block type="jump_to"><title name="VALUE">7</title>
             </block></xml>
+
             When you are finished, right-click to save the image, then send it to me on <a href="https://classroom.google.com">Google Classroom</a>.
       harvey_snowflake_artist2_markdown_instruction: |-
         *It's time to get your snowflake ready for 3d printing!*
@@ -31767,10 +31773,12 @@ en:
         * Make sure your image **fits** entirely on the canvas
         * Use just **black lines** on a white background.
         * Jump the artist off the top left corner (-10 over, -10 down) at the end of your program:
+
         <xml>    <block type="jump_to_xy"><title name="XPOS">-10</title><title name="YPOS">-10</title>
             </block>
             <block type="jump_to"><title name="VALUE">7</title>
             </block></xml>
+
         When you are finished, right-click to save the image, then send it to me on <a href="https://classroom.google.com">Google Classroom</a>.
       iceAgeLoopsforVideo_markdown_instruction: Can you get to the acorn with just one <xml><block type="maze_moveForward"/></xml> block? Try using a loop!
       iceage_click_hello_markdown_instruction: "Can you help Sid call for his friends when you click on him? \nOnce you're done, press \"Run\" to play.  Click on Sid to see your code work!"

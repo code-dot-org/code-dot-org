@@ -27,7 +27,7 @@ function stringContainsIgnoredString(s) {
   return ignoreList.some(i => s.includes(i));
 }
 
-function logTextToSlack(text) {
+function logTextToSlack(text, callback) {
   const slackReqOpts = url.parse(slackUrl);
   slackReqOpts.method = 'POST';
   slackReqOpts.headers = {
@@ -72,8 +72,11 @@ let siteChecker = new blc.SiteChecker(options, {
       totalLinkCount.toLocaleString() + " links in " +
       totalPageCount.toLocaleString() + " pages, " +
       brokenLinkCount.toLocaleString() + " were broken, and " +
-      ignoredLinkCount.toLocaleString() + " were skipped due to ignore list.)_");
-    process.exit();
+      ignoredLinkCount.toLocaleString() + " were skipped due to ignore list.)_",
+      function () {
+        process.exit();
+      }
+    );
   }
 });
 
