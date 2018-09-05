@@ -10,7 +10,9 @@ class PublicThumbnailsTest < FilesApiTestBase
     Aws::S3::Client.expects(:new).never
   end
 
+  #Disabled while we gather Azure moderation stats. (PR 24626)'
   def test_adult_thumbnail
+    skip
     ImageModeration.stubs(:rate_image).once.returns :adult
 
     with_project_type('applab') do |channel_id|
@@ -38,7 +40,9 @@ class PublicThumbnailsTest < FilesApiTestBase
     end
   end
 
+  #Disabled while we gather Azure moderation stats. (PR 24626)'
   def test_racy_thumbnail
+    skip
     ImageModeration.stubs(:rate_image).once.returns :racy
 
     with_project_type('applab') do |channel_id|
