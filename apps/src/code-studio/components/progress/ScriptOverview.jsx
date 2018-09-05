@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
+import LabeledSectionSelector from './LabeledSectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
@@ -86,6 +87,10 @@ class ScriptOverview extends React.Component {
               showScriptVersionWarning={showScriptVersionWarning}
               versions={versions}
             />
+            {!professionalLearningCourse && viewAs === ViewType.Teacher &&
+                (scriptHasLockableStages || scriptAllowsHiddenStages) &&
+              <LabeledSectionSelector/>
+            }
             <ScriptOverviewTopRow
               sectionsInfo={sectionsInfo}
               professionalLearningCourse={professionalLearningCourse}
@@ -97,8 +102,6 @@ class ScriptOverview extends React.Component {
               viewAs={viewAs}
               isRtl={isRtl}
               resources={teacherResources}
-              scriptHasLockableStages={scriptHasLockableStages}
-              scriptAllowsHiddenStages={scriptAllowsHiddenStages}
             />
           </div>
         )}
