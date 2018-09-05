@@ -181,8 +181,9 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      # only one per teacher application (guid)
-      !Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid).placeholder?
+      existing_application = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
+
+      (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
   end
 end
