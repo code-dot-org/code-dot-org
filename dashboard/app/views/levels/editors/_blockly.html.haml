@@ -47,8 +47,6 @@
   %p
     This adds a call block to the end of the toolbox for each function defined
     in the workspace (including hidden start blocks).
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
 
 .field
   = link_to 'Edit Toolbox Blocks', level_edit_blocks_path( @level, :toolbox_blocks) unless @level.new_record?
