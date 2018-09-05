@@ -30,10 +30,9 @@ module Api::V1::Pd::Application
         assert_response :success
       end
 
-      application = Pd::Application::PrincipalApproval1819Application.find_by!(
+      Pd::Application::PrincipalApproval1819Application.find_by!(
         application_guid: @teacher_application.application_guid
       )
-      assert_equal principal, application.user
 
       @teacher_application.reload
       expected_principal_fields = {
