@@ -214,6 +214,7 @@ th:
         CSF_maze_intro_k1_blocks: โค้ดสตูดิโอเบื้องต้น
         CSF_maze_intro_text_blocks: โค้ดสตูดิโอเบื้องต้น
         CSF_my_robotic_friends: เพื่อนหุ่นยนต์
+        CSF_stevie_big_project: สตีวี่และโครงการใหญ่
         CSF_unspotted_bugs: บั๊กที่รอดหูรอดตาไป
         CSF_zuck_loops_short: ลูปทำซ้ำ (Repeat Loop)
         frozen_loops: ลูปเบื้องต้น
@@ -246,7 +247,13 @@ th:
         mc_2016_events: ชั่วโมงแห่งโค้ดด้วย Minecraft - เหตุการณ์ หรือ Events
         mc_2016_spawn: Minecraft ชั่วโมงแห่งการเขียนโค้ด - การเกิด หรือ Spawn
         mc_2016_congrats: ชั่วโมงแห่งโค้ดด้วย Minecraft - ยินดีด้วย
+        mc_2017_agent_intro: ชั่วโมงแห่งการเขียนโค้ด ไมน์คราฟท์ - พบกับเอเจนท์
+        mc_2017_functions: ไมน์คราฟท์ ชั่วโมงของการเขียนโค้ด - ฟังก์ชั่น
         mc_2017_congratulations: ชั่วโมงแห่งโค้ดด้วย Minecraft - ยินดีด้วย
+        mc_2017_puzzle_1: ชั่วโมงแห่งการเขียนโค้ด ไมน์คราฟท์ - พบกับเอเจนท์
+        mc_2017_puzzle_8: ไมน์คราฟท์ ชั่วโมงของการเขียนโค้ด - ฟังก์ชั่น
+        CSF_scrat_loops_K1: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
+        CSF_scrat_loops_CF: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_loops_AB: ลูป
     callout:
       text:

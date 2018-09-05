@@ -1378,26 +1378,26 @@ zh-CN:
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
       CSD U2 RGB winter_2018_markdown_instruction: |-
-        # 冬天的颜色\r
-        \r
-        在接下来的几关中，你会为一个网站找到季节的颜色。这里，你需要找到冬天蓝色的RGB值。r
-        \r
-        * 点击"运行"来启动这个小部件。\r
-        * 调节小部件下的水平值，让它的颜色时冬天的蓝色。\r
-        * 将RGB值写到你的活动指南里。你会在下一个活动中用到它们。\r
-        \r
-        \r
+        # 冬天的颜色
+        
+        在接下来的几关中，你会为一个网站找到季节的颜色。这里，你需要找到冬天蓝色的RGB值。
+        
+        * 点击"运行"来启动这个小部件。
+        * 调节小部件下的水平值，让它的颜色时冬天的蓝色。
+        * 将RGB值写到你的活动指南里。你会在下一个活动中用到它们。
+        
+        
         <div
-        style="font-size: 16px">\r
-        <br />\r
-        <details><summary>**如何让颜色变浅?**</summary>\r
-        <p>为了让颜色变浅，需要让它更淡（增加滑块的水平值)。如果你已经将蓝光增加到了最大值，你需要增加更多的红色和绿色来让蓝色更淡。</p></details>\r
-        <details>\r
-        <summary>**为什么红色和绿色能组合出黄色？**</summary>\r
-        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>\r
-        <details>\r
-        <summary>**我能用RGB组合出多少种颜色？**</summary>\r
-        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>\r
+        style="font-size: 16px">
+        <br />
+        <details><summary>**如何让颜色变浅?**</summary>
+        <p>为了让颜色变浅，需要让它更淡（增加滑块的水平值)。如果你已经将蓝光增加到了最大值，你需要增加更多的红色和绿色来让蓝色更淡。</p></details>
+        <details>
+        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
+        <details>
+        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
       CSD U2 add content_markdown_instruction: |
         # 添加 HTML\r
@@ -1593,18 +1593,17 @@ zh-CN:
         * 与另一组对比看看页面是否相同。\r
         
       CSD U2 challenge_2018_markdown_instruction: |
-        # 挑战\r
-        \r
-        在开始这一挑战之前与您的老师进行核对。\r
-        \r
-        此页仅完成了一部分，并且有一些 bug。幸运的是, 有些注释应该能帮助你按照作者的意图来完成这个页面。\r
-        \r
-        # 这样做\r
-        \r
-        * 与您的伙伴一起查看该代码, 并讨论该页面应是什么样子。\r
-        * 请共同完成页面, 注意格式化。\r
-        * 与另一组对比看看页面是否相同。\r
+        # 挑战
         
+        在开始这一挑战之前与老师确认一下。
+        
+        此页仅完成了一部分，并且有一些缺陷。幸运的是, 有些注释应该能帮助你按照作者的意图来完成这个页面。
+        
+        # 这样做
+        
+        * 与您的伙伴一起查看该代码, 并讨论该页面应是什么样子。
+        * 请共同完成页面, 注意格式化。
+        * 与另一组对比看看页面是否相同。
       CSD U2 classes modify_markdown_instruction: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -12967,7 +12966,7 @@ zh-CN:
         \r
         玩游戏，并用方向控制企鹅，直到得到了足够的分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。
       courseC_artist_loop1_markdown_instruction: "太棒了！\\r\n\\r\n在开始循环前，让我们用`设置图案`模块来改变刷子的样式。"
-      courseC_artist_loop1_2018_markdown_instruction: "太棒了！\\r\n\\r\n在开始循环前，让我们用`设置图案`模块来改变刷子的样式。"
+      courseC_artist_loop1_2018_markdown_instruction: "\"太棒了！\"\n\n在开始循环前，让我们用<xml><block type=\"draw_line_style_pattern\"><title name=\"VALUE\">默认</title></block></xml>模块来添加一些样式。"
       courseC_artist_loops1a_markdown_instruction: "**自由发挥：** 让我们创建一些更大的，一次一步的东西！你能创造任何想要的事物，但先看看如何创造这样的！\\r\n\\r\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\\r\n\\r\n用`往上跳200再下200`来让小艺术家到达游戏区域中心，然后用`画一个贴画`模块来让一只鸟出现。\\r\n\\r\n---\\r\n\\r\n当你对做的结果满意时，点击\"完成\"。"
       courseC_artist_loops1a_2018_markdown_instruction: "**自由发挥：** 让我们创建一些更大的，一次一步的东西！\\r\n\\r\n用`往上跳200再下200`来让小艺术家到达游戏区域中心，然后用`画一个贴画`模块来让一只鸟出现。\\r\n\\r\n---\\r\n\\r\n当你对做的结果满意时，点击\"完成\"。"
       courseC_artist_loops2_markdown_instruction: |-
@@ -13759,12 +13758,12 @@ zh-CN:
         看看蜜蜂是怎么得到花蜜的。你能用同样的规律帮蜜蜂酿造所有蜂蜜吗？
       courseD_bee_debugging_challenge2_markdown_instruction: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
       courseD_bee_nestedLoops1_markdown_instruction: |-
-        *"这会非常棒！"*\r
-        \r
+        "_这会非常棒！_"
+        
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops1_2018_markdown_instruction: |-
-        *"这会非常棒！"*\r
-        \r
+        "_这会非常棒！_"
+        
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops1a_markdown_instruction: |-
         *"这会非常棒！"*\r

@@ -166,6 +166,7 @@ class User < ActiveRecord::Base
     the_school_project
     twitter
     windowslive
+    microsoft_v2_auth
     powerschool
   ).freeze
 
@@ -1064,6 +1065,10 @@ class User < ActiveRecord::Base
     )
   end
 
+  def has_activity?
+    user_levels.attempted.exists?
+  end
+
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
@@ -1527,6 +1532,11 @@ class User < ActiveRecord::Base
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:course).compact.uniq
+  end
+
+  # return the id of the section the user most recently created.
+  def last_section_id
+    teacher? ? sections.where(hidden: false).last&.id : nil
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.

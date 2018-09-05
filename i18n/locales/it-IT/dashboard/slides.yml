@@ -578,7 +578,7 @@ it:
       4:
         text: "Oppure puoi dare al computer l'istruzione \"vai avanti\" una sola volta, e poi dargli l'istruzione \"ripeti 5 volte\" (repeat 5 times), per ottenere lo stesso risultato. Per fare questo, devi trascinare il blocco \"vai avanti\" all'interno del blocco \"ripeti ... volte\". Puoi cliccare sul numero per dirgli quante volte ripetere il blocco al suo interno, cioè per dirgli - in questo caso - di quante posizioni vuoi avanzare."
       5:
-        text: "Un ultima cosa, puoi mettere quanti blocchi vuoi all'interno di un blocco \"ripeti ... volte\". In questo esempio, gli dici di avanzare di una casella e poi girare a sinistra, e gli dici che vuoi che lo faccia cinque volte. E' tutto, buon lavoro e buon divertimento!"
+        text: "Un ultima cosa, puoi mettere quanti blocchi vuoi all'interno di un blocco \"ripeti ... volte\". In questo esempio, gli dici di avanzare di una casella e poi girare a sinistra, e gli dici che vuoi che lo faccia cinque volte. È tutto, buon lavoro e buon divertimento!"
     C3_artist_functions:
       1:
         text: "Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella \"funzione\" (function). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
