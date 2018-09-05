@@ -15733,7 +15733,16 @@ en:
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
         Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
         Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
-        Look closely at the code below.  What will happen when the program runs?: Look closely at the code below.  What will happen when the program runs?
+        Look at this code carefully. What do you think will happen when the program runs?: Look at this code carefully. What do you think will happen when the program runs?
+      grade2_multi_collector_A_predict1_copy_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
+        Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
+        text text text: text text text
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
