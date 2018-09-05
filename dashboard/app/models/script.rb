@@ -1100,7 +1100,8 @@ class Script < ActiveRecord::Base
       show_course_unit_version_warning: !course&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
-      supported_locales: supported_locales
+      supported_locales: supported_locales,
+      hidden_from_section_ids: hidden_from_section_ids,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1109,6 +1110,10 @@ class Script < ActiveRecord::Base
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
     summary
+  end
+
+  def hidden_from_section_ids
+    SectionHiddenScript.where(script_id: id).pluck(:section_id)
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted

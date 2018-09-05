@@ -81,6 +81,31 @@ describe('AssignToSection', () => {
     const confirm = wrapper.find('ConfirmAssignment');
     assert.equal(confirm.props().assignmentName, 'Computer Science Principles');
     assert.equal(confirm.props().sectionName, 'brent_section');
+    assert.equal(confirm.find('Button').at(1).text(), 'Assign');
+  });
+
+  it('shows a warning when clicking a hidden section', () => {
+    const props = {
+      ...defaultProps,
+      hiddenFromSectionIds: [11],
+    };
+    const wrapper = mount(
+      <AssignToSection {...props}/>
+    );
+    wrapper.find('Button').simulate('click');
+    const firstSection = wrapper.find('a').at(1);
+    assert.equal(firstSection.props()['data-section-index'], 0);
+    // Enzyme simulate doesn't set target for us automatically, so we fake one.
+    const target = {
+      getAttribute: () => 0
+    };
+    firstSection.simulate('click', {target});
+
+    assert.strictEqual(wrapper.state().sectionIndexToAssign, 0);
+    const confirm = wrapper.find('ConfirmAssignment');
+    assert.equal(confirm.props().assignmentName, 'Computer Science Principles');
+    assert.equal(confirm.props().sectionName, 'brent_section');
+    assert.equal(confirm.find('Button').at(1).text(), 'Unhide unit and assign');
   });
 
   it('shows an error dialog when we have an error', () => {
