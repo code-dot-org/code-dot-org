@@ -10,6 +10,66 @@ class PublicThumbnailsTest < FilesApiTestBase
     Aws::S3::Client.expects(:new).never
   end
 
+  #Disabled while we gather Azure moderation stats. (PR 24626)'
+  def test_adult_thumbnail
+    skip
+    ImageModeration.stubs(:rate_image).once.returns :adult
+
+    with_project_type('applab') do |channel_id|
+      get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
+
+      # Responds with a 404, like we do for flagged content
+      assert not_found?
+
+      # Includes content rating metadata in the response that the client can read
+      assert_equal 'adult', last_response['x-cdo-content-rating']
+
+      # Response is cached for an hour
+      assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+
+      # Flags the project as abusive.
+      get "/v3/channels/#{channel_id}/abuse"
+      assert successful?
+      assert_equal 15, JSON.parse(last_response.body)['abuse_score']
+
+      # Flags the thumbnail as abusive
+      thumbnail = FileBucket.new.get(channel_id, @thumbnail_filename)
+      metadata = thumbnail[:metadata]
+      thumbnail_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+      assert_equal 15, thumbnail_abuse
+    end
+  end
+
+  #Disabled while we gather Azure moderation stats. (PR 24626)'
+  def test_racy_thumbnail
+    skip
+    ImageModeration.stubs(:rate_image).once.returns :racy
+
+    with_project_type('applab') do |channel_id|
+      get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
+
+      # Responds with a 404, like we do for flagged content
+      assert not_found?
+
+      # Includes content rating metadata in the response that the client can read
+      assert_equal 'racy', last_response['x-cdo-content-rating']
+
+      # Response is cached for an hour
+      assert_equal 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+
+      # Flags the project as abusive.
+      get "/v3/channels/#{channel_id}/abuse"
+      assert successful?
+      assert_equal 15, JSON.parse(last_response.body)['abuse_score']
+
+      # Flags the thumbnail as abusive
+      thumbnail = FileBucket.new.get(channel_id, @thumbnail_filename)
+      metadata = thumbnail[:metadata]
+      thumbnail_abuse = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+      assert_equal 15, thumbnail_abuse
+    end
+  end
+
   def test_everyone_thumbnail
     ImageModeration.stubs(:rate_image).once.returns(:everyone).with do |file, _, _|
       # Real ImageModeration reads the IO stream in order to do its work.
