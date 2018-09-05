@@ -1065,6 +1065,10 @@ class User < ActiveRecord::Base
     )
   end
 
+  def has_activity?
+    user_levels.attempted.exists?
+  end
+
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
@@ -1532,7 +1536,7 @@ class User < ActiveRecord::Base
 
   # return the id of the section the user most recently created.
   def last_section_id
-    teacher? ? sections.last&.id : nil
+    teacher? ? sections.where(hidden: false).last&.id : nil
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
