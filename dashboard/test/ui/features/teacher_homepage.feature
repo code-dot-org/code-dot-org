@@ -82,6 +82,11 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#script-title" is visible
     Then the url contains the section id
 
+    # loading non-existent section succeeds, with no section selected
+    When I am on "http://studio.code.org/s/coursea-2018?section_id=99999"
+    And I wait until element "#script-title" is visible
+    And element ".uitest-sectionselect" has value ""
+
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box

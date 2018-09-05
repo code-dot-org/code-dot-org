@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import SectionSelector from './SectionSelector';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
@@ -23,14 +22,6 @@ const styles = {
     // ensure we have height when we only have our toggle (which is floated)
     minHeight: 50,
     position: 'relative',
-  },
-  sectionSelector: {
-    // offset selector's margin so that we're aligned flush right
-    position: 'relative',
-    margin: 10,
-    right: 0,
-    // vertically center
-    bottom: 4,
   },
   right: {
     position: 'absolute',
@@ -63,8 +54,6 @@ export default class ScriptOverviewTopRow extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
-    scriptHasLockableStages: PropTypes.bool.isRequired,
-    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -79,8 +68,6 @@ export default class ScriptOverviewTopRow extends React.Component {
       viewAs,
       isRtl,
       resources,
-      scriptHasLockableStages,
-      scriptAllowsHiddenStages,
     } = this.props;
 
     return (
@@ -129,10 +116,6 @@ export default class ScriptOverviewTopRow extends React.Component {
           </div>
         }
         <div style={isRtl ? styles.left : styles.right}>
-          {viewAs === ViewType.Teacher &&
-            (scriptHasLockableStages || scriptAllowsHiddenStages) &&
-            <SectionSelector style={styles.sectionSelector}/>
-          }
           <span>
             <ProgressDetailToggle/>
           </span>
