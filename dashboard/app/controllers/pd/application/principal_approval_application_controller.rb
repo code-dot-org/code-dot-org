@@ -23,7 +23,12 @@ module Pd::Application
         principal_email: application_hash[:principal_email]
       }
 
-      if Pd::Application::PrincipalApproval1819Application.exists?(application_guid: params[:application_guid])
+      # Return submitted if the approval exists and is not a placeholder
+      # Rather annoyingly, we can't say "unless existing_approval&.placeholder?" because
+      # if there is no approval, (handling legacy case and proper fallback behavior
+      # in case we fail to create placeholders) we'd be rendering submitted
+      existing_approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: params[:application_guid])
+      if existing_approval && !existing_approval.placeholder?
         return render :submitted
       end
 

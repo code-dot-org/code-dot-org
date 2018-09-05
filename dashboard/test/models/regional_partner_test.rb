@@ -256,4 +256,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     end
     assert_equal "No date found for either course csp or role facilitator for regional partner id #{regional_partner.id}", error.message
   end
+
+  test 'principal_approval must be valid' do
+    regional_partner = build :regional_partner, principal_approval: 'Invalid principal_approval'
+    refute regional_partner.valid?
+    assert_equal ["Principal approval is not included in the list"], regional_partner.errors.full_messages
+  end
 end
