@@ -1255,6 +1255,8 @@ def press_keys(element, key)
   end
 end
 
+# Known issue: ie does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip ie when using this step
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
