@@ -14,15 +14,15 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csd", video_code: "uQim0hBHco0", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "uQim0hBHco0", play_button: 'center', letterbox: "false" %>
 
 </div>
 
 [col-50]
  
-<div style="margin-left: 20px;">
+<div style="width: 96%;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "DMr1iFYacGQ", play_button: 'center', letterbox: "false" %>
 
 </div>
 
@@ -60,6 +60,14 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 Teach a different grade level or have fewer hours available with your students? <a href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit#", target=_"blank">Find the right course for your classroom.</a>
 
+## Apply for professional learning
+
+The Professional Learning Program is hosted by Code.org Regional Partners across the US.
+
+Want to get notified when applications open? Provide your contact information to your local Regional Partner.
+
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
+
 ## Program Commitments 
 The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles.
 
@@ -71,8 +79,6 @@ The Code.org Professional Learning Program has both in-person and online support
 
 * Participants explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
 * With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.
-
- or <a href="mailto:teacher@code.org">contact us</a>.
 
 ## <a name="features"></a>Program Features
 
@@ -107,7 +113,7 @@ Participants will engage with the curriculum both as instructors and as learners
 ​In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. 
 ​</p>
 ​ <p>
-​Make in person connections with local teachers to support you throughout the school year. And, to help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time.
+To help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time.
 ​</p>
 ​ <p>
 <img style="margin-top:-8px;margin-bottom:-20px;margin-left:-25px;float:left" src="/images/avatars/fit-200/iste.png"/>
@@ -121,32 +127,30 @@ Check out these 3 key benefits of ISTE membership:
 - Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
 
 </details>
-​
-
-## What does a Code.org educator do?
-If accepted into the Code.org Professional Learning Program, you will:
-
-- Join a nationwide community of educators working to change the face of computer science education
-- Participate in in-person and online professional development
-- Plan and deliver the [CS Discoveries](/csd) or [CS Principles](/csp) curriculum to your students
 
 ## <a name="participate"></a>Who can participate?
 
 The Code.org Professional Learning Program is open to educators who are interested in teaching Code.org courses - no prior experience required! In order to participate in this program, we ask that applicants:
 
 * Commit to participating in the full, year-long professional learning program
-* Work with their school administration to ensure that this course will be offered on the school's 2018-19 master schedule
-* Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
-* Teach the course in a school served by one of Code.org's Regional Partners.
-
-Not sure if this is the right Code.org program for you? <a href="/files/PL-Program-for-Me.pdf" target=_"blank">Check out our course offerings</a> to determine the best fit for your teaching situation.
+* Plan to teach the course in the 2019-20 school year
+* For CS Discoveries, teach students between 6th and 10th grade
+* For CS Principles, teach students between 9th and 12th grade
+* Support the recruitment and enrollment of a diverse group of stuents in the course, representative of the school's student population
 
 ## <a name="cost"></a>What does the program cost?
 
-Generous scholarships and grants are available across the country to cover the partial or full cost of the program (valued at $3,000).
+Generous scholarships and grants are available across the country to cover the partial or full cost of the program. Costs in each region will be available when applications open
 
-Enter your school’s zip code below to find out your cost.
+Want to get notified when applications open? Provide your contact information to your local Regional Partner.
 
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
+
+## Have questions?
+
+We're here to help! 
+
+Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vSxBryx0io9I8VE5PtBmmaLaVUlorblmLBmZ9FYLV_sqse86stk_WHidIUjsyCptR7itNfqPrVJlTx0/pub", target=_"blank">Professional Learning Program FAQs</a> or write to us at <a href="mailto:teacher@code.org">teacher@code.org</a>.
 
 ## <a name="apply"></a>Ready to apply?
 
@@ -162,35 +166,12 @@ Want to get notified when applications open? Provide your contact information to
 
 
 <!--
-## <a name="components"></a>How does it work?
-The program has two components:
-
-- **5-day Summer Workshop** (dates and locations vary by district) - An intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum. Educators who plan to deliver the course as an AP will dive into the College Board requirements that come with an AP course.
-- **Continuing Professional Development** (held over 4 days, totaling 24 professional development hours; local, in-person workshops take place throughout the following academic year, usually on Saturdays) - A menu of online and local in-person professional development options from which educators can build a customized personal learning pathway. This phase of the program is blended, with ongoing in-person meetings as well as online activities.
-  - The in-person meetings are run by local facilitators. They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continuing to build pedagogical strategies.
-  - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further exploring the curriculum.
 
 ### <a name="facilitate"></a>How do I become a CS Discoveries Facilitator?
 
 Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum.
 
 If you're interested in becoming a Code.org Facilitator, <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAq4l_1HsjdbtRBo7fggTrTZe0H9_tcRMBrxXA893QkP6MWA/viewform", target=_"blank">let us know!</a>
-
-Be sure to complete the following steps before you apply.
-
-- Step 1: Read about the [Program Features and Commitments](#features).
-- Step 2: Check out the course page for [CS Principles](/educate/csp).
-- Step 3: Set aside 10 - 15 minutes to complete the application.
-
-**Ready to get started?**
-
-[<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
-
-Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
-
-**Applications are still being accepted in some regions. Check [the list above](#openings) to see if applications are still being accepted in your area.**
-
-Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
 -->
 
