@@ -81,12 +81,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to '/home?open=rosterDialog'
     elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
       handle_untrusted_email_signin(@user, provider)
+    elsif allows_silent_takeover(@user, auth_hash) || google_classroom_student_takeover(@user)
+      silent_takeover(@user, auth_hash)
+      sign_in_user
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
       check_and_apply_oauth_takeover(@user)
       sign_in_user
-    elsif allows_silent_takeover(@user, auth_hash)
-      silent_takeover(@user, auth_hash)
     elsif (looked_up_user = User.find_by_email_or_hashed_email(@user.email))
       # Note that @user.email is populated by User.from_omniauth even for students
       if looked_up_user.provider == 'clever'
@@ -186,14 +187,25 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       scopes.include?('classroom.rosters.readonly')
   end
 
+  def google_classroom_student_takeover(user)
+    # Google Classroom does not provide student email addresses, so we want to perform
+    # silent takeover on these accounts, but *only if* the student hasn't made progress
+    # with the account created during the Google Classroom import.
+    user.persisted? && user.google_classroom_student? &&
+      user.email.blank? && user.hashed_email.blank? &&
+      !user.has_activity?
+  end
+
   def silent_takeover(oauth_user, auth_hash)
     # Copy oauth details to primary account
-    @user = User.find_by_email_or_hashed_email(oauth_user.email)
+    lookup_email = oauth_user.email || auth_hash.info.email
+    @user = User.find_by_email_or_hashed_email(lookup_email)
+    return unless @user.present?
+
     if @user.migrated?
       success = AuthenticationOption.create(
         user: @user,
-        email: oauth_user.email,
-        hashed_email: oauth_user.hashed_email,
+        email: lookup_email,
         credential_type: auth_hash.provider.to_s,
         authentication_id: auth_hash.uid,
         data: {
@@ -206,17 +218,25 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # This should never happen if other logic is working correctly, so notify
         Honeybadger.notify(
           error_class: 'Failed to create AuthenticationOption during silent takeover',
-          error_message: "Could not create AuthenticationOption during silent takeover for user with email #{oauth_user.email}"
+          error_message: "Could not create AuthenticationOption during silent takeover for user with email #{lookup_email}"
         )
       end
     else
-      @user.provider = oauth_user.provider
-      @user.uid = oauth_user.uid
-      @user.oauth_refresh_token = oauth_user.oauth_refresh_token
-      @user.oauth_token = oauth_user.oauth_token
-      @user.oauth_token_expiration = oauth_user.oauth_token_expiration
+      success = @user.update(
+        provider: auth_hash.provider.to_s,
+        uid: auth_hash.uid,
+        oauth_token: auth_hash.credentials&.token,
+        oauth_token_expiration: auth_hash.credentials&.expires_at,
+        oauth_refresh_token: auth_hash.credentials&.refresh_token
+      )
+      unless success
+        # This should never happen if other logic is working correctly, so notify
+        Honeybadger.notify(
+          error_class: 'Failed to update User during silent takeover',
+          error_message: "Could not update user during silent takeover for user with email #{lookup_email}"
+        )
+      end
     end
-    sign_in_user
   end
 
   def sign_in_user
@@ -228,7 +248,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     allow_takeover = auth_hash.provider.present?
     allow_takeover &= AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
-    allow_takeover && lookup_user
+
+    allow_takeover && lookup_user && !oauth_user.persisted?
   end
 
   def should_connect_provider?
