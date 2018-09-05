@@ -13,6 +13,12 @@ class AzureContentModerator
   class RequestFailed < AzureError; end
   class UnsupportedContentType < AzureError; end
 
+  # Keys for the response object
+  ADULT_SCORE = 'AdultClassificationScore'
+  RACY_SCORE = 'RacyClassificationScore'
+  IS_ADULT = 'IsImageAdultClassified'
+  IS_RACY = 'IsImageRacyClassified'
+
   def initialize(endpoint:, api_key:)
     @endpoint = endpoint
     @api_key = api_key
@@ -87,9 +93,9 @@ class AzureContentModerator
   # @returns [:everyone|:racy|:adult]
   #
   def rating_from_azure_result(result)
-    if result['AdultClassificationScore'] >= adult_threshold
+    if result[ADULT_SCORE] >= adult_threshold
       :adult
-    elsif result['RacyClassificationScore'] >= racy_threshold
+    elsif result[RACY_SCORE] >= racy_threshold
       :racy
     else
       :everyone
@@ -116,12 +122,7 @@ class AzureContentModerator
       event: 'moderation-result',
       data_string: rating.to_s,
       data_json: data.
-        slice(
-          'AdultClassificationScore',
-          'IsImageAdultClassified',
-          'RacyClassificationScore',
-          'IsImageRacyClassified'
-        ).
+        slice(ADULT_SCORE, IS_ADULT, RACY_SCORE, IS_RACY).
         merge(
           RequestDuration: request_duration,
           ImageUrl: image_url,
