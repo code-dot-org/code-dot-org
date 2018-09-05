@@ -69,6 +69,7 @@ class WebLabView extends React.Component {
                     label={weblabMsg.addCSSButton()}
                   />
                   <PaneButton
+                    id="ui-test-add-image"
                     iconClass="fa fa-plus-circle"
                     leftJustified={true}
                     headerHasFocus={true}
