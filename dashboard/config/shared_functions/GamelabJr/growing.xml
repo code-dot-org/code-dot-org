@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<block type="behavior_definition" deletable="false" movable="false" editable="false">
+  <mutation>
+    <arg name="this sprite" type="Sprite"/>
+    <description>change the size of a sprite</description>
+  </mutation>
+  <title name="NAME">growing</title>
+  <statement name="STACK">
+    <block type="gamelab_changePropBy">
+      <title name="PROPERTY">"scale"</title>
+      <value name="SPRITE">
+        <block type="sprite_parameter_get">
+          <title name="VAR">this sprite</title>
+        </block>
+      </value>
+      <value name="VAL">
+        <block type="math_number">
+          <title name="NUM">1</title>
+        </block>
+      </value>
+    </block>
+  </statement>
+</block>
