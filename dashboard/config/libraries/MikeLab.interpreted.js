@@ -176,6 +176,15 @@ function whenTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event});
 }
 
+function whenTouchesAny(a, b, event) {
+  //collisionEvents.push({a: a, b: World.allSprites, event: event});
+  console.log("test");
+  register(function () {
+    console.log("frame");
+    
+  });
+}
+
 function whileTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
 }
