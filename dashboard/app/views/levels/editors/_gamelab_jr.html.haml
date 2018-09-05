@@ -1,4 +1,7 @@
 .field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
+
+.field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_default_sprites, description: "Use default sprites as starting animation JSON"}
 
 .field
