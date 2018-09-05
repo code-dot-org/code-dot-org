@@ -1,0 +1,14 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "whenTouchesAny",
+    "blockText": "when{TARGET} touches any sprite",
+    "args": [
+      {
+        "name": "TARGET",
+        "type": "Sprite"
+      }
+    ],
+    "eventBlock": true
+  }
+}
