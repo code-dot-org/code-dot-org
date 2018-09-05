@@ -538,9 +538,9 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === SELECT_SECTION) {
-    const sectionId = action.sectionId;
+    let sectionId = action.sectionId;
     if (sectionId !== NO_SECTION && !state.sectionIds.includes(parseInt(sectionId, 10))) {
-      throw new Error(`Unknown sectionId ${sectionId}`);
+      sectionId = NO_SECTION;
     }
     return {
       ...state,

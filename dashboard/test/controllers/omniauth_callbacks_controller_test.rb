@@ -381,10 +381,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       sections_as_student = oauth_student.sections_as_student.to_ary
 
       @request.cookies[:pm] = 'clever_takeover'
-      @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-      @request.session[ACCT_TAKEOVER_PROVIDER] = provider
-      @request.session[ACCT_TAKEOVER_UID] = oauth_student.uid
-      @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+      set_oauth_takeover_session_variables(provider, oauth_student)
       check_and_apply_oauth_takeover(student)
 
       assert_equal sections_as_student, student.sections_as_student
@@ -405,14 +402,49 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       sections_as_student = oauth_student.sections_as_student.to_ary
 
       @request.cookies[:pm] = 'clever_takeover'
+      set_oauth_takeover_session_variables(provider, oauth_student)
       @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.ago
-      @request.session[ACCT_TAKEOVER_PROVIDER] = provider
-      @request.session[ACCT_TAKEOVER_UID] = oauth_student.uid
-      @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
       check_and_apply_oauth_takeover(student)
 
       assert_equal sections_as_student, oauth_student.sections_as_student
       refute_equal sections_as_student, student.sections_as_student
+    end
+  end
+
+  test 'login: oauth takeover takes over account when account has no activity' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
+
+      set_oauth_takeover_session_variables(provider, oauth_student)
+      check_and_apply_oauth_takeover(student)
+
+      oauth_student.reload
+      refute_nil oauth_student.deleted_at
+      assert_equal provider, student.provider
+      assert_equal oauth_student.uid, student.uid
+      assert_equal '54321', student.oauth_token
+      assert_nil @request.session['clever_link_flag']
+    end
+  end
+
+  test 'login: oauth takeover does nothing if account has activity' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
+      level = create(:level)
+      create :user_level, user: oauth_student, level: level, attempts: 1, best_result: 1
+
+      assert oauth_student.has_activity?
+
+      Honeybadger.expects(:notify).at_least_once
+
+      set_oauth_takeover_session_variables(provider, oauth_student)
+      check_and_apply_oauth_takeover(student)
+
+      oauth_student.reload
+      assert_nil oauth_student.deleted_at
+      assert_nil student.provider
     end
   end
 
@@ -694,6 +726,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   private
+
+  def set_oauth_takeover_session_variables(provider, user)
+    @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
+    @request.session[ACCT_TAKEOVER_PROVIDER] = provider
+    @request.session[ACCT_TAKEOVER_UID] = user.uid
+    @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+  end
 
   def generate_auth_user_hash(args)
     OmniAuth::AuthHash.new(

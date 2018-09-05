@@ -51,7 +51,7 @@ export default class AssetManager extends React.Component {
     //For logging upload failures
     projectId: PropTypes.string,
     soundPlayer: PropTypes.object,
-
+    disableAudioRecording: PropTypes.bool,
     //Temp prop for logging - identifies if displayed by 'Manage Assets' flow
     imagePicker: PropTypes.bool
   };
@@ -176,6 +176,7 @@ export default class AssetManager extends React.Component {
           onSelectRecord={this.onSelectRecord}
           statusMessage={this.state.statusMessage}
           recordDisabled={this.state.recordingAudio}
+          hideAudioRecording={this.props.disableAudioRecording}
         />
       </div>
     );

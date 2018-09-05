@@ -37,3 +37,9 @@ Feature: Manage Assets
     And I click selector "#ui-image-thumbnail"
     And I go to the newly opened tab
     And check that the URL matches "/v3/assets/.*/artist_image_1.png"
+
+  Scenario: From WebLab, the manage assets dialog does not contain the option to record audio.
+    Given I am a student
+    And I am on "http://studio.code.org/projects/weblab/new"
+    Then I click selector "#ui-test-add-image" once I see it
+    Then I wait until element "#record-asset" is not visible
