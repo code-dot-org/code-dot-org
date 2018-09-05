@@ -28,6 +28,7 @@ class AssignToSection extends Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     })).isRequired,
+    hiddenFromSectionIds: PropTypes.arrayOf(PropTypes.number),
   };
 
   state = {
@@ -74,10 +75,12 @@ class AssignToSection extends Component {
   };
 
   render() {
-    const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;
+    const { courseId, scriptId, assignmentName, sectionsInfo, hiddenFromSectionIds } = this.props;
     const { sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
     const queryParams = queryString.stringify({courseId, scriptId});
+    const isHiddenFromSection = section && hiddenFromSectionIds &&
+      hiddenFromSectionIds.includes(section.id);
 
     return (
       <div style={styles.main}>
@@ -108,6 +111,7 @@ class AssignToSection extends Component {
             assignmentName={assignmentName}
             onClose={this.onCloseDialog}
             onConfirm={this.updateCourse}
+            isHiddenFromSection={isHiddenFromSection}
           />
         )}
         {errorString && (

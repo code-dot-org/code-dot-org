@@ -146,6 +146,7 @@ progress.renderCourseProgress = function (scriptData) {
         showCourseUnitVersionWarning={scriptData.show_course_unit_version_warning}
         showScriptVersionWarning={scriptData.show_script_version_warning}
         versions={scriptData.versions}
+        hiddenFromSectionIds={scriptData.hidden_from_section_ids}
       />
     </Provider>,
     mountPoint

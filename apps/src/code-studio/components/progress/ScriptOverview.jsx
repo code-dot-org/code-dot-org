@@ -22,6 +22,7 @@ class ScriptOverview extends React.Component {
   static propTypes = {
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
+    hiddenFromSectionIds: PropTypes.arrayOf(PropTypes.number),
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
@@ -53,6 +54,7 @@ class ScriptOverview extends React.Component {
     const {
       onOverviewPage,
       excludeCsfColumnInLegend,
+      hiddenFromSectionIds,
       teacherResources,
       perLevelProgress,
       scriptCompleted,
@@ -102,6 +104,7 @@ class ScriptOverview extends React.Component {
               viewAs={viewAs}
               isRtl={isRtl}
               resources={teacherResources}
+              hiddenFromSectionIds={hiddenFromSectionIds}
             />
           </div>
         )}

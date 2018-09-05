@@ -46,6 +46,7 @@ export default class ScriptOverviewTopRow extends React.Component {
       name: PropTypes.string.isRequired,
     })).isRequired,
     currentCourseId: PropTypes.number,
+    hiddenFromSectionIds: PropTypes.arrayOf(PropTypes.number),
     professionalLearningCourse: PropTypes.bool,
     scriptProgress: PropTypes.oneOf([NOT_STARTED, IN_PROGRESS, COMPLETED]),
     scriptId: PropTypes.number.isRequired,
@@ -58,6 +59,7 @@ export default class ScriptOverviewTopRow extends React.Component {
 
   render() {
     const {
+      hiddenFromSectionIds,
       sectionsInfo,
       currentCourseId,
       professionalLearningCourse,
@@ -94,6 +96,7 @@ export default class ScriptOverviewTopRow extends React.Component {
             courseId={currentCourseId}
             scriptId={scriptId}
             assignmentName={scriptTitle}
+            hiddenFromSectionIds={hiddenFromSectionIds}
           />
         )}
         {!professionalLearningCourse && viewAs === ViewType.Teacher &&
