@@ -7,14 +7,19 @@ nav: how_to_nav
 
 # Cómo llevar acabo la Hora de Código en su empresa
 
-## Motive a los estudiantes y voluntarios para la Hora de Código
+### Find out how you and your employees can inspire students to try computer science!
 
-Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+---
 
-- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
-- Para obtener más instrucciones sobre cómo alentar a sus empleados y cómo conectarlos con las aulas, consulte nuestra [guía para socios corporativos](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
+## Connect with local classrooms and volunteer for the Hour of Code
 
-## Otras maneras en que las empresas pueden apoyar la Hora Code:
+Code.org ofrece la oportunidad para que sus empleados [se conecten](<%= codeorg_url('/volunteer') %>) con las aulas locales impartiendo la Hora del Código donde puedan compartir su experiencia profesional en tecnología e inspirar estudiantes a estudiar ciencias de la computación.
+
+<button>Sign up to volunteer!</button> <br /> <br /></p> 
+
+Para más instrucciones sobre como alentar a sus empleados y cómo conectarlos con las aulas, consulte nuestra [guía para socios corporativos](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
+
+## Otras maneras en que las empresas pueden apoyar la Hora Code
 
 - Pídale a su CEO que [envíe un correo electrónico a toda la empresa](<%= resolve_url('/promote/resources#sample-emails') %>) que enfatice la importancia de la informática y anime a los empleados a difundir la palabra.
 - Organice una Hora Feliz del Codigo con sus compañeros de trabajo para probar las [actividades](<%= resolve_url('/learn') %>).
@@ -24,8 +29,8 @@ Code.org offers the opportunity for your employees to [connect](<%= codeorg_url(
 
 ## 1. Promociona tu Hora del Código
 
-- Promueva su [Hora del Código](<%= resolve_url('/promote') %>) y anime a otros a que realicen un evento.
-- Aliente a los ingenieros de software de su empresa a visitar un aula local para ayudar a dirigir una Hora del Código e inspirar a los estudiantes a estudiar informática. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
+- Promocionar su evento [Hora Code](<%= resolve_url('/promote') %>) y alentar a otros a ser ponentes del mismo.
+- Aliente a los ingenieros de software de su empresa a visitar un aula local para ayudar a dirigir una Hora del Código e inspirar a los estudiantes a estudiar informática. Pueden [registrarse](<%= codeorg_url('/volunteer/engineer') %>) para conectarse con un aula.
 
 ## 2. Mira este vídeo explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -39,7 +44,7 @@ Ofrecemos una variedad de [actividades divertidas](<%= resolve_url('/learn') %>)
 
 ## 4. Planifica tus necesidades tecnológicas - los ordenadores son opcionales
 
-La mejor experiencia de Hora Code incluye computadoras con conexión a internet. Pero tú **no** necesitas una computadora para cada participante, y puedes incluso hacer la Hora Code sin contar con alguna en lo absoluto.
+La mejor experiencia de Hora Code incluye computadoras con conexión a internet. Pero **no** necesita una computadora para cada niño y puede hacer la Hora del Código incluso sin computadoras.
 
 **¡Planee con anticipación!** Haz lo siguiente antes de iniciar el evento:
 
@@ -48,8 +53,6 @@ La mejor experiencia de Hora Code incluye computadoras con conexión a internet.
 - **¿No cuenta con suficientes dispositivos? ** Utilice [programación en pareja](https://www.youtube.com/watch?v=vgkahOzFH2Q). Cuando los participantes forman equipos, se ayudan mutuamente y dependen menos del organizador. También observarán que las ciencias de la computación es sociable y cooperativa.
 - **¿Tienes un ancho de banda bajo?** Planifica mostrar videos en la parte delantera del evento, de modo que cada participante no descargue sus propios videos. O prueba las actividades sin conexión.
 
-<img src="/images/fit-350/group_ipad.jpg" />
-
 ## 5. Comienza tu Hora del Código con un vídeo inspirador
 
 Empiece su Hora del Código inspirando a los participantes y comentando cómo las Ciencias de la Computación tienen impacto en cada parte de nuestras vidas. Comparta más acerca de lo que lo inspiró para perseguir a las ciencias de la computación y su papel en su empresa.
@@ -57,7 +60,7 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 **Muestre un video inspirador:**
 
 - El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- No body cares
+- El [vídeo mundial de la Hora del Código](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [El presidente Obama llama a todos los estudiantes a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encuentra más videos inspiradores [aquí](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -67,7 +70,7 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 - Si pertenece a una empresa de tecnología, demuestre productos innovadores y divertidos en los que su empresa trabaja.
 - Si no está en una empresa de tecnología, discuta las formas en las que su empresa usa la tecnología para resolver problemas y cumplir objetivos.
 - Invite a ingenieros de software de su empresa a hablar acerca de por qué decidieron estudiar computación y de los proyectos en los que trabajan.
-- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
+- Vea consejos para que las chicas se interesen en la informática [aquí](<%= codeorg_url('/girls') %>).
 
 ## 6. ¡A Programar!
 
@@ -79,53 +82,18 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 **Cuando los participantes encuentran dificultades, está bien responder:**
 
 - "No lo sé. Vamos a averiguarlo juntos."
-- "La tecnología no siempre funciona de la manera que queremos."
 - "Aprender a programar es como aprender un nuevo idioma; No tendrás fluidez de inmediato."
 
 **¿Qué hacer si alguien termina antes?**
 
-- Puede probar otra actividad de Hora de Código en hourofcode.com/learn
+- Puede probar otra actividad de Hora de Código en hourofcode.com/learn.
 - O pídale que ayude a un amigo que tenga problemas para resolver la actividad.
-
-[col-33]
-
-![](/images/fit-250/highschoolgirls.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/group_ar.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 ## 7) A Celebrar
 
-- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
+- [Imprimir certificados](<%= codeorg_url('/certificates') %>) para participantes y estudiantes.
 - [Imprima etiquetas de "¡Yo hice una Hora de Código!"](<%= resolve_url('/promote/resources#stickers') %>).
 - [Ordene camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sus empleados.
 - Comparte fotos y vídeos del evento de la Hora del Código en las redes sociales. ¡Utilice #HourOfCode y @codeorg para que también podamos resaltar tu éxito!
-
-[col-33]
-
-![](/images/fit-250/celebrate2.jpeg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-[col-33]
-
-![](/images/fit-300/boy-certificate.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
 
 <%= view :signup_button %>
