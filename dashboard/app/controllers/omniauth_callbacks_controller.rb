@@ -198,9 +198,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def silent_takeover(oauth_user, auth_hash)
     # Copy oauth details to primary account
-    lookup_email = oauth_user.email || auth_hash.info.email
+    lookup_email = oauth_user.email.presence || auth_hash.info.email
     @user = User.find_by_email_or_hashed_email(lookup_email)
     return unless @user.present?
+    if google_classroom_student_takeover(oauth_user)
+      return unless move_sections_and_destroy_old_user(oauth_user, @user)
+    end
 
     if @user.migrated?
       success = AuthenticationOption.create(
