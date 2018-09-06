@@ -40,7 +40,7 @@
     "@cdo/apps": "file:src",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "3.1.1",
+    "@code-dot-org/blockly": "3.1.2",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "0.1.4",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
