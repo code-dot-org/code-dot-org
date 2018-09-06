@@ -480,6 +480,8 @@ nn:
         Du kan også dra ein kode innanfor ei 'påHending'-blokk for å spele lyd berre
         når ei hending skjer. Kortare lydar passer betre her.\r\n\r\nKøyr appen din.
         No skal den spele lyd!"
+      Artist Autorun Test_markdown_instruction: Sett funksjonen inni ein løkke for
+        å teikne desse tre kvadrata.
       Bergeron Robot Maze1_markdown_instruction: "Kan du hjelpe meg å fange den slemme
         grisen? \r\n\r\nSett saman eit par \"flytt fram\"-blokker og trykk \"Køyr\".\n"
       CSD U2 HTML Debug Paragraphs_markdown_instruction: |-
