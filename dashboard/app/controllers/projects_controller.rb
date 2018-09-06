@@ -135,7 +135,7 @@ class ProjectsController < ApplicationController
   # GET /projects/public
   def public
     if current_user
-      render template: 'projects/index', locals: {is_public: true}
+      render template: 'projects/index', locals: {is_public: true, limited_gallery: limited_gallery?}
     else
       render template: 'projects/public'
     end
@@ -411,6 +411,12 @@ class ProjectsController < ApplicationController
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
+  end
+
+  def limited_gallery?
+    limited_project_gallery = DCDO.get('image_moderation', {})['limited_project_gallery'] || true
+    project_validator = current_user.permission? UserPermission::PROJECT_VALIDATOR
+    !project_validator && limited_project_gallery
   end
 
   private
