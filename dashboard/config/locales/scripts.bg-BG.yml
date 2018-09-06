@@ -2229,3 +2229,15 @@ bg:
               name: Вашите дигитални отпечатъци
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стив и Големият проект
+        frozen-2018:
+          stages:
+            Artist:
+              name: Художник
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Художник
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Художник
