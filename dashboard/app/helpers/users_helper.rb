@@ -12,6 +12,29 @@ module UsersHelper
   ACCT_TAKEOVER_OAUTH_TOKEN = 'clever_takeover_token'
   ACCT_TAKEOVER_FORCE_TAKEOVER = 'force_clever_takeover'
 
+  # Move followed sections from old_user to new_user and destroy old_user
+  def move_sections_and_destroy_old_user(old_user, new_user)
+    # No-op if old_user is nil
+    return true unless old_user.present?
+
+    if old_user.has_activity?
+      # We don't want to destroy an account with progress.
+      # In theory this should not happen, so we log a Honeybadger error and return.
+      Honeybadger.notify(
+        error_class: 'Oauth takeover called for user with progress',
+        error_message: "Attempted to take over account with id #{old_user.id}, which has activity"
+      )
+      return false
+    end
+
+    # Move over sections that old_user follows
+    if new_user.student?
+      Follower.where(student_user_id: old_user.id).update_all(student_user_id: new_user.id)
+    end
+
+    old_user.destroy! ? true : false
+  end
+
   # If Clever takeover flags are present, the current account (user) is the one that the person just
   # logged into (to prove ownership), and all the Clever details are migrated over, including sections.
   def check_and_apply_oauth_takeover(user)
@@ -22,24 +45,9 @@ module UsersHelper
       clear_takeover_session_variables
 
       existing_account = User.find_by_credential(type: provider, id: uid)
-      if existing_account.has_activity?
-        # We don't want to destroy an account with progress.
-        # In theory this should not happen, so we log a Honeybadger error and return.
-        Honeybadger.notify(
-          error_class: 'Oauth takeover called for user with progress',
-          error_message: "Attempted to take over account with id #{existing_account.id}, which has activity"
-        )
-        return
-      end
+      # No-op if move_sections_and_destroy_old_user fails
+      return unless move_sections_and_destroy_old_user(existing_account, user)
 
-      # Move over sections that students follow
-      if user.student? && existing_account
-        Follower.where(student_user_id: existing_account.id).each do |follower|
-          follower.update(student_user_id: user.id)
-        end
-      end
-
-      existing_account.destroy! if existing_account
       if user.migrated?
         success = user.add_credential(
           type: provider,
