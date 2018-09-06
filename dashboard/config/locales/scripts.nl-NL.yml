@@ -1890,3 +1890,15 @@ nl:
               name: Jouw Digitale Voetafdruk
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
+        frozen-2018:
+          stages:
+            Artist:
+              name: Kunstenaar
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Kunstenaar
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Kunstenaar
