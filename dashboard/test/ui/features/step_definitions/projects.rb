@@ -43,6 +43,7 @@ Then(/^I make an App Lab project named "([^"]*)" with thumbnail "([^"]*)"$/) do 
     And I switch to text mode
     And I add code "image('id', '#{thumbnail_url}')" to ace editor
     And I press "runButton"
+    And I wait until element ".project_updated_at" contains text "Saved"
   }
 end
 
