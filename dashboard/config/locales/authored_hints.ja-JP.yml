@@ -213,6 +213,10 @@ ja:
         4-5_Artist_Patterns_3_b: ぐちゃぐちゃになったら、「最初からやりなおす」で、最初からやりなおして下さい。
       4-5 Artist Patterns 5_authored_hint:
         4-5_Artist_Patterns_5_a: ひとつのひし形を書き終えたとき、アーティストは進むべき方向と、180度反対を向いています。
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: 360÷36＝？
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: このデザインを完成させるためには、アーティストはそれぞれの四角形の間に120度回転する必要があります。
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
         Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
@@ -894,6 +898,8 @@ ja:
         2-3_Bee_Loops_2_a: 繰り返しの中には４つのブロックが必要です。
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: 360÷36＝？
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: その四角形にはそれぞれ100ピクセルの側面があります。これは、2番目の四角形を描く前に175ピクセル前に動かす必要があるという事です。
         2-3_Artist_Functions_1_b: メガネを作るために、重なり合う線を描いても大丈夫です。
@@ -906,6 +912,8 @@ ja:
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: '前にうごく30ピクセル、右にまがる60度を使って、六角形の半分を書いてみてね。  '
         Course_4_Artist_11_b: '前にうごく80ピクセル、右にまがる80度を使って、三角形の3分の2を書いてみてね。 '
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: 360÷36＝？
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: |-
           パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。
