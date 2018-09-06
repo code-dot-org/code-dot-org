@@ -6,14 +6,19 @@ es-MX:
         description here: descripción aquí
         title: Título
       Begin planning your project_2018:
+        Begin planning your project: Empieza a planificar tú proyecto
         description here: descripción aquí
       Prepare for your presentation:
         description here: descripción aquí
         title: Título
+      Prepare for your presentation_2018:
+        Prepare for yur presentation: Prepararse para la presentación
       courseD_external_binary1:
         Binary Drawing: Dibujo binario
       courseD_external_binary1_2018:
         Binary Drawing: Dibujo binario
+      gradek1_activity_beNice:
+        The computer is your friend: El ordenador es tu amigo
     match:
       2-3 Big Event Match 1:
         Match the button combination to the dance moves.: Hacé que coincidan las combinaciones
@@ -139,12 +144,19 @@ es-MX:
         Which program makes this image?: "¿Cuál programa hace esta imagen?"
       2-3 Maze Multi 2:
         Maze Multiple Choice: Laberinto - Opción Múltiple
+        Which set of blocks will get me to the pig?: Que conjunto de bloques me llevará
+          al cerdo?
       2-3 Relay Programming Multi 1:
         Multiple Choice: Opción Múltiple
+        Which program **does not** create this image?: "¿Qué programa **no** crea
+          esta imagen?"
       2-3 Relay Programming Multi 2:
         Multiple Choice: Opción Múltiple
         Which image-program combo does not contain mistakes?: "¿Qué combinación imagen-programa
           no tiene errores?"
+      2-3 artist debug multi 1:
+        What would you need to fix to make this a finished circle?: "¿Que necesitarás
+          para hacer de esto un círculo terminado?"
       2-3 artist functions multi 1:
         Artist Functions Multiple Choice One: Funciones del Artista - Opción Múltiple
           Uno
@@ -261,8 +273,8 @@ es-MX:
         Artist Multiple Choice: El Artista - Opción Múltiple
         Which drawing is symmetric?: "¿Qué dibujo es simétrico?"
       4-5 bee conditionals multi 1:
-        0: "? Una flor morada puede tener 3, 2 o 1 néctares, pero no se sabe cuántos.
-          ¿Qué bloques correctamente comprueban y recogen todo el néctar de una flor
+        0: "? Una flor morada puede tener 3, 2 o 1 néctares, pero tú no sabes cuántos.
+          ¿Qué bloques comprueban y recogen correctamente todo el néctar de una flor
           morada?"
         1: ": Una flor morada puede tener 3, 2 o 1 néctares, pero no se sabe cuántos.
           ¿Qué bloques correctamente comprueban y recogen todo el néctar de una flor
