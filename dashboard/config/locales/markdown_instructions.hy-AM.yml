@@ -279,6 +279,9 @@ hy:
       4-5 While Loops 4_markdown_instruction: "Wow, look at that! \r\n\r\nI don't
         know how\nmany shovelfuls of dirt this hole needs.  \r\nCan you write a program
         that\nkeeps using the `fill` block until the ground is even?  "
+      Artist Autorun Test_markdown_instruction: |-
+        Now, put the function inside of a loop
+        to draw these three squares.
       Course 4 Artist 13_markdown_instruction: |-
         Still playing?  Here is a blank canvas where
         you can design anything you want!

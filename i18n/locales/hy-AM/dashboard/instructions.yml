@@ -473,6 +473,7 @@ hy:
       Artist - Nested Loops 6_instruction: "Can you draw a hexagon by looping the triangle\ncode?"
       Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
       Artist - Nested Loops Assessment 1_instruction: "Use a nested loop to complete\nthe design."
+      Artist Autorun Test_instruction: "Now, put the function inside of a loop\nto draw these three squares."
       Artist Inspiration_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
       Auto Open Function Editor_instruction: "You can call functions from inside\nother functions! Using your \"shape\" function as a base, create 3 house shapes\neach 20 pixels larger than the last starting at 50 pixels in length. Using\na counter loop might be helpful."
       Bee Recommended Blocks test_instruction: "Purple flowers may have either 1\nor 0 nectar, but you don't know which one! Be careful not to collect nectar\nfrom a purple flower if it doesn't have any. Check if the nectar is equal\nto 1 by using the if block."
@@ -1185,6 +1186,9 @@ hy:
       courseD_artist_binary6_2018_instruction: "Which 6 digit binary string, repeated\n11 times, will draw this image?"
       courseD_artist_binary7_instruction: "What is the shortest binary string that\nyou can repeat to draw this image?"
       courseD_artist_binary7_2018_instruction: "What is the shortest binary string that\nyou can repeat to draw this image?"
+      courseD_autorun_binary4_2019_instruction: "Can you draw this pattern by looping\njust three binary digits (0s and 1s)?"
+      courseD_autorun_binary6_2019_instruction: "Which 6 digit binary string, repeated\n11 times, will draw this image?"
+      courseD_autorun_binary7_2019_instruction: "What is the shortest binary string that\nyou can repeat to draw this image?"
       courseD_bee_debugging3_instruction: "Fix the error(s) to collect all of the nectar\nand make all of the honey."
       courseD_bee_nestedLoops3_instruction: "Collect all of the nectar from each flower.\nUse a nested loop."
       courseD_bee_nestedLoops5_instruction: "Collect all of the nectar from each flower\nand make honey at the honeycomb. \\\\r\n\\\\r\nUse a nested loop. "
