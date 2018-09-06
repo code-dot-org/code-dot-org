@@ -272,6 +272,8 @@ zh-TW:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: 每個項目都需要有自己的`當…`迴圈。
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: 藝術家需要在每個正方形之間轉 120 度才能完成這個設計。
       Artist Inspiration_authored_hint:
         brush_width: 在我們開始前，先將筆刷的寬度設為 1，顏色設為藍色。
         double_loop: 試著放置一個`計數迴圈`到`重複`積木裡頭。
