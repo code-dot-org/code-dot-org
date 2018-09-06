@@ -237,6 +237,8 @@ sv:
         hål! Jag vet inte hur många spadtag med jord som krävs.  Kan du skriva ett
         program som fyller det tills marken är jämn?  Tips: Försök att använda en
         ''medan''-slinga denna gång.'
+      Artist Autorun Test_markdown_instruction: Använd blocket "Upprepa" för att rita
+        dessa 3 kvadrater.
       Course 4 Artist 13_markdown_instruction: Spelar fortfarande?  Här är en tom
         duk där du kan designa vad du vill!
       Course 4 Artist 6_markdown_instruction: 'Slutför koden för att rita dessa trianglar.
