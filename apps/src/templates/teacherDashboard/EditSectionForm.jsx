@@ -13,6 +13,7 @@ import {
   cancelEditingSection,
   stageExtrasAvailable,
 } from './teacherSectionsRedux';
+import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const style = {
   root: {
@@ -58,10 +59,20 @@ class EditSectionForm extends Component {
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
   };
 
   onSaveClick = () => {
-    this.handleSave();
+    const {section, hiddenStageState} = this.props;
+    const sectionId = section.id.toString();
+    const scriptId = section.scriptId.toString();
+    const isScriptHidden = isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
+
+    if (isScriptHidden) {
+      window.alert('are you sure?');
+    } else {
+      this.handleSave();
+    }
   };
 
   handleSave = () => {
@@ -155,6 +166,7 @@ export default connect(state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+  hiddenStageState: state.hiddenStage,
 }), {
   editSectionProperties,
   handleSave: finishEditingSection,
