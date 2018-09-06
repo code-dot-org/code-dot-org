@@ -20,17 +20,14 @@ module.exports = function fixTightLists() {
     if (result && !result.loose && result.children) {
       result.children.forEach(function (listItem) {
         if (listItem.children) {
-          listItem.children.forEach(function (content, i) {
-            if (
-              content &&
-              content.type === 'paragraph' &&
-              content.children &&
-              content.children.length === 1 &&
-              content.children[0].type === 'text'
-            ) {
-              listItem.children[i] = content.children[0];
+          listItem.children = listItem.children.reduce(function (children, child) {
+            if (child.type === "paragraph") {
+              children = children.concat(child.children);
+            } else {
+              children.push(child);
             }
-          });
+            return children;
+          }, []);
         }
       });
     }
