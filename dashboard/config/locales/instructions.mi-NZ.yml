@@ -735,6 +735,8 @@ mi:
         tā mā te koromeke tauroto?
       Artist - Nested Loops 6_instruction: Ka taea rānei e koe te tā tapaono mā te
         koromeke i te waehere tapatoru?
+      Artist Autorun Test_instruction: Nā, meatia atu te taumahi ki roto i tētehi
+        koromeke hei tā i ngā tapawhā e toru nei.
       Bergeron Robot Maze1_instruction: 'E taea tēnei e koe te āwhina ki te hopu i
         te poaka hīanga. Putuhia ētahi paraka ‘neke whakamua’ i raro i te paraka ‘ka
         oma ana’ me te paraka ‘whakahaere’. '
