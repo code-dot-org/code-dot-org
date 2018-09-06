@@ -187,10 +187,21 @@ table.checkboxes {
   padding-top: 2%;
 }
 .audit_log{
+  width: 100%;
+  
   tr:nth-child(odd){
     background-color: #f9cb81;
   }
+  
   td{
-    padding: 5%;
+    padding: 2%;
+  }
+  
+  .aud_date{
+    width: 25%;
+  }
+  
+  .aud_person{
+    width: 43%;
   }
 }
