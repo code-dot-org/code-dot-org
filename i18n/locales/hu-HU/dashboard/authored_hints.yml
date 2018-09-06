@@ -145,6 +145,8 @@ hu:
         4-5_Maze_5_b: Több `repeat` ciklust is használhatsz a feladványban.
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: "Próbáld követni az utat az ujjaddal!\nEz a legrövidebb út, amit találhatsz?"
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: A művész el kell fordítani 120 fokkal minden négyzet között, hogy elkészüljön a design.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy funkciót.  A kirakós megoldásához próbáld kétszer meghívni!
       MC Agent Freeplay_authored_hint:
