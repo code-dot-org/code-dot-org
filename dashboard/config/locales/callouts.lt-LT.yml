@@ -92,22 +92,48 @@ lt:
           ir pakeisk dydį.
       frozen cross rotate_callout:
         replace_questions_degree: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
       frozen cross_callout:
         repeat_blocks_1: "(1) Panaudok šį blokelį ir apgaubk juo pilkus blokelius"
         repeat_blocks_2: "(2) Perkelk kartojimo blokelį čia ir įdėk į jį pilkus blokelius"
       frozen freeplay_callout:
         snowflake_dropdown: Panaudok šį išsiskleidžiantį sąrašą, kad sukurtum įvairesnių
           snaigių!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Panaudok šį išsiskleidžiantį sąrašą, kad sukurtum įvairesnių
+          snaigių!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Panaudok šį išsiskleidžiantį sąrašą, kad sukurtum įvairesnių
+          snaigių!
       frozen line_callout:
+        move_elsa_forward: Prijunk blokelį „eik į priekį“  prie blokelio  „paleidus“
+      frozen line_b_callout:
+        move_elsa_forward: Prijunk blokelį „eik į priekį“  prie blokelio  „paleidus“
+      frozen line_test_callout:
         move_elsa_forward: Prijunk blokelį „eik į priekį“  prie blokelio  „paleidus“
       frozen perpendicular_callout:
         turn_elsa: Panaudok blokelį „pasisuk“, kad Elsa galėtų pasisukti. Skaičius,
           esantis šiame blokelyje, parodo Elsos pasisukimo kampą
       frozen square loop 3x_callout:
         replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+      frozen square loop 3x_b_callout:
+        replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+      frozen square loop 3x_test_callout:
+        replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
       frozen square loop_callout:
         replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+      frozen square loop_b_callout:
+        replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+      frozen square loop_test_callout:
+        replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
       frozen square snowflake_callout:
+        replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+      frozen square snowflake_b_callout:
+        replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
+      frozen square snowflake_test_callout:
         replace_questions: Nuspausk rodyklę, kad pakeistum „???“ skaičiumi
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Panaudok šį išsiskleidžiantį sąrašą, kad sukurtum įvairesnių
