@@ -1548,3 +1548,15 @@ ga:
               name: Do Lorg Digiteach
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stiofán agus an Tionscadal Mór
+        frozen-2018:
+          stages:
+            Artist:
+              name: Ealaíontóir
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Ealaíontóir
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Ealaíontóir
