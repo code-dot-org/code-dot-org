@@ -164,8 +164,15 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   touchEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
-function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+function clickedOn(spriteGetter, event) {
+  var sprite = spriteGetter();
+  register(function () {
+    if (mouseWentDown('leftButton') && mousePressedOver(sprite)) {
+      event();
+    }
+  });
+  //touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+  //touchEvents.push({type: mouseWentDown, event: event, param: 'leftButton'});
 }
 
 function spriteDestroyed(sprite, event) {
@@ -176,12 +183,14 @@ function whenTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event});
 }
 
-function whenTouchesAny(a, b, event) {
-  //collisionEvents.push({a: a, b: World.allSprites, event: event});
-  console.log("test");
+function whenTouchesAny(spriteGetter, event) {
   register(function () {
-    console.log("frame");
-    
+    var sprite = spriteGetter();
+    sprite.overlap(World.allSprites,function (a,b){
+      b.tint = "red";
+      a.tint = "blue";
+      event();
+    });
   });
 }
 

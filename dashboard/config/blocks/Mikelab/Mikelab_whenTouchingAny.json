@@ -6,12 +6,16 @@
       1,
       0.74
     ],
-    "func": "whenTouchesAny",
-    "blockText": "when{TARGET} touches any sprite",
+    "func": "whenTouchingAny",
+    "blockText": "when {SPRITE} touches any {GROUP}",
     "args": [
       {
-        "name": "TARGET",
+        "name": "SPRITE",
         "type": "Sprite",
+        "defer": true
+      },
+      {
+        "name": "GROUP",
         "defer": true
       }
     ],
