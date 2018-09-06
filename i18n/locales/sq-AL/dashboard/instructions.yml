@@ -438,6 +438,7 @@ sq:
       Artist - Nested Loops 8_instruction: "Ciklo këtë dizenjim 6 herë. Sa\nduhet të kthehesh çdo herë që ti ciklon? (Ndihmë: Sa është 360 pjestuar me 6?)"
       Artist - Nested Loops 9_instruction: Vizato dhëmbët në gojën e krokodilit!
       Artist - Nested Loops Assessment 1_instruction: "Përdor një cikël të mbivendosur për të përfunduar\ndizenjimin."
+      Artist Autorun Test_instruction: "Përdor bllokun \"repeat\" për të vizatuar këto\n3 katrorë."
       Artist Inspiration_instruction: "Frymëzimi i Lojës së Lirë: Tani ke mësuar gjithçka që ke nevojë për të bërë një model si ky! Nëse kjo figurë të inspiron, mundohu të bësh diçka të ngjashme. Në të kundërt, krijo diçka sipas dëshirës.\\r\n\\r\nDo të dish se si modeli ynë është bërë? "
       Auto Open Function Editor_instruction: 'Mund te therrasesh komanda nga brenda komandave te tjera! Duke perdorur "formen" tende si baze komande, krijo siluetat e 3 shtepive secila 20 piksel me e madhe se e fundit duke filluar me 50 piksel gjatesi. Perdorimi i nje litar te kundert mund te te vije mjaft ne ndihme. '
       Bergeron Robot Maze1_instruction: "A mund të më ndihmosh mua të kap derrkucin e inatosur? Grumbullo \ndisa blloqe \"move forward\" së bashku dhe shtyp \"Lësho\". "
@@ -1189,6 +1190,9 @@ sq:
       courseD_artist_binary6_2018_instruction: Cili varg 6 shifror binar i përsëritur 11 herë do t'a vizatojë këtë figurë?
       courseD_artist_binary7_instruction: Cili është vargu më i shkurtër binar që ti mund të përsërisësh për të vizatuar këtë figurë?
       courseD_artist_binary7_2018_instruction: Cili është vargu më i shkurtër binar që ti mund të përsërisësh për të vizatuar këtë figurë?
+      courseD_autorun_binary4_2019_instruction: Mund t'a bësh këtë model duke e lidhur një varg 3 shifror binar?
+      courseD_autorun_binary6_2019_instruction: Cili varg 6 shifror binar i përsëritur 11 herë do t'a vizatojë këtë figurë?
+      courseD_autorun_binary7_2019_instruction: Cili është vargu më i shkurtër binar që ti mund të përsërisësh për të vizatuar këtë figurë?
       courseD_bee_debugging3_instruction: "Këto blloqet janë duke më bezdisur vërtet. Rregullo\ngabimin (et) për të mbledhur gjithë nektarin dhe bëj gjithë mjaltin."
       courseD_bee_nestedLoops3_instruction: "Mblidh gjithë nektarin nga secila lule.\nPërdor një cikël të mbivendosur. "
       courseD_bee_nestedLoops5_instruction: "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. "
