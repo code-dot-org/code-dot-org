@@ -1177,3 +1177,15 @@ lv:
               name: Ej, ej
             Your Digital Footprint:
               name: Tavs digitālais nospiedums
+        frozen-2018:
+          stages:
+            Artist:
+              name: Mākslinieks
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Mākslinieks
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Mākslinieks
