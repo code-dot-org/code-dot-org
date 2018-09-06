@@ -135,7 +135,7 @@ class ProjectsController < ApplicationController
   # GET /projects/public
   def public
     if current_user
-      render template: 'projects/index', locals: {is_public: true}
+      render template: 'projects/index', locals: {is_public: true, limited_gallery: limited_gallery?}
     else
       render template: 'projects/public'
     end
@@ -412,6 +412,16 @@ class ProjectsController < ApplicationController
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
+  end
+
+  # Due to risk of inappropriate content, we can hide non-featured Applab
+  # and Gamelab projects via DCDO. Internally, project_validators should
+  # always have access to all Applab and Gamelab projects, even if there is a
+  # limited gallery for others.
+  def limited_gallery?
+    limited_project_gallery = DCDO.get('image_moderation', {})['limited_project_gallery'] || true
+    project_validator = current_user.permission? UserPermission::PROJECT_VALIDATOR
+    !project_validator && limited_project_gallery
   end
 
   private
