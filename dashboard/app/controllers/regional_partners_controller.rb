@@ -53,6 +53,16 @@ class RegionalPartnersController < ApplicationController
 
   # PATCH /regional_partners/:id
   def update
+    # Verify that the update dates are a valid format
+    update_params = regional_partner_params.to_h
+
+    update_params[:apps_open_date] = JSON.parse update_params[:apps_open_date]
+    if update_params[:apps_open_date]&.is_a? Hash
+      update_params[:apps_open_date] = sanitize_date_hash(update_params[:apps_open_date])
+    elsif update_params[:apps_open_date]&.is_a? String
+      update_params[:apps_open_date] = Date.parse update_params[:apps_open_date]
+    end
+
     if @regional_partner.update(regional_partner_params)
       flash[:notice] = "Regional Partner updated successfully"
       redirect_to @regional_partner
@@ -104,6 +114,9 @@ class RegionalPartnersController < ApplicationController
       urban
       cohort_capacity_csd
       cohort_capacity_csp
+      apps_open_date
+      apps_close_date
+      principal_approval
       attention
       street
       apartment_or_suite
@@ -118,5 +131,15 @@ class RegionalPartnersController < ApplicationController
 
   def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
+  end
+
+  def sanitize_date_hash(date_hash)
+    date_hash.transform_values do |v|
+      if v.is_a? Hash
+        v.transform_values {|w| Date.parse w}
+      else
+        Date.parse v
+      end
+    end
   end
 end
