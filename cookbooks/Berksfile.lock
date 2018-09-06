@@ -43,8 +43,6 @@ DEPENDENCIES
     path: cdo-ruby
   cdo-secrets
     path: cdo-secrets
-  cdo-solr
-    path: cdo-solr
   cdo-users
     path: cdo-users
   cdo-varnish
@@ -89,7 +87,6 @@ GRAPH
     cdo-repository (>= 0.0.0)
     cdo-ruby (>= 0.0.0)
     cdo-secrets (>= 0.0.0)
-    cdo-solr (>= 0.0.0)
     cdo-varnish (>= 0.0.0)
     chef_client_updater (>= 0.0.0)
     chef_hostname (>= 0.0.0)
@@ -134,11 +131,6 @@ GRAPH
     apt (~> 2.6.0)
     sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
-  cdo-solr (0.1.8)
-    apt (>= 0.0.0)
-    ark (>= 0.0.0)
-    cdo-java-7 (>= 0.0.0)
-    poise-service (>= 0.0.0)
   cdo-users (0.1.20)
   cdo-varnish (0.3.187)
     apt (>= 0.0.0)
