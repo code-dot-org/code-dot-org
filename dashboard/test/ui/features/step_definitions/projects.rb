@@ -40,6 +40,9 @@ Then(/^I make an App Lab project named "([^"]*)" with thumbnail "([^"]*)"$/) do 
     And I click selector ".project_save"
     And I wait until element ".project_edit" is visible
     Then I should see title "#{name} - App Lab"
+    And I switch to text mode
+    And I add code "image('id', '#{thumbnail_url}')" to ace editor
+    And I press "runButton"
   }
 end
 
