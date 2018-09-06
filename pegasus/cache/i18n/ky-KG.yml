@@ -18,6 +18,7 @@ ky-KG:
     кошулгула.'
   petition_join_others: "# Башкаларга кошулгула"
   name: Аты
+  email: Эмейл
   zipcode: Почта индекси же өлкөсү
   submit: Кошуу
   twentyhours_heading: Компүтер курсуна киришмебизди байкап көргүлө
@@ -243,6 +244,7 @@ ky-KG:
   volunteer_engineer_submission_field_email_preference_no: Жок
   volunteer_engineer_submission_submit: Кошуу
   volunteer_engineer_submission_commitment_annually: жылына 2-3 жолу
+  petition_age: Жашы
   dashboard_announce_learn_more_button: Дагы кара
   dashboard_action_cancel: Жок кыл
   dashboard_action_delete_yes: Ооба
@@ -255,6 +257,7 @@ ky-KG:
   dashboard_students_name: Аты
   dashboard_sequence: Ирет
   dashboard_grade_other: Башка
+  dashboard_login_none: Эмейл
   learn_sign_up_button: Катталуу
   learn_footer_all_tutorials: 'Бул жерден <a href="https://code.org/learn">Код сааты
     жетектемелеринин толук тизмесин көргүлө</a>. Код сааты критерийлерин жана кошуу

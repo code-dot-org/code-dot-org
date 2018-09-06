@@ -218,6 +218,7 @@ zh-CN:
   just_did_coursef: 我刚完成了课程F - 来看看吧！ @codeorg
   just_did_accelerated: 我刚完成加速课程- 来看看！ @codeorg
   just_did_hoc_donor: 我刚刚参加了#HourOfCode - 来看看吧！（感谢 %{donor_twitter} 支持 @codeorg)
+  just_did_course_donor: 我刚完成 %{course} - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg
   twitter_teach_cs: 90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。
   twitter_cs_foundational: 计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。
   learn_hoc: 学习编程一小时
