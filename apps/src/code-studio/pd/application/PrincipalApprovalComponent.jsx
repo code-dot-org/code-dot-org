@@ -4,10 +4,10 @@ import {
   PageLabels,
   TextFields
 } from '@cdo/apps/generated/pd/principalApproval1819ApplicationConstants';
-import LabeledFormComponent from '../../form_components/LabeledFormComponent';
+import LabeledFormComponent from '../form_components/LabeledFormComponent';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
-import {styles} from '../teacher1819/TeacherApplicationConstants';
+import {styles} from './teacher1819/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = ['schoolName', 'schoolAddress', 'schoolCity',
   'schoolState', 'schoolZipCode', 'schoolType'];

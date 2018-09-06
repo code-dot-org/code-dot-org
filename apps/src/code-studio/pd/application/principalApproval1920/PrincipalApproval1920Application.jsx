@@ -2,7 +2,7 @@ import {PropTypes} from 'react';
 import FormController from '../../form_components/FormController';
 import PrincipalApprovalComponent from '../PrincipalApprovalComponent';
 
-export default class PrincipalApproval1819Application extends FormController {
+export default class PrincipalApproval1920Application extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     teacherApplication: PropTypes.shape({
