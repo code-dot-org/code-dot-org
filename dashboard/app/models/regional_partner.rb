@@ -146,10 +146,10 @@ class RegionalPartner < ActiveRecord::Base
   end
 
   def get_apps_open_date(course: nil, role: nil)
-    get_apps_date(key: apps_open_date, course: course, role: role)
+    get_apps_date(key: 'apps_open_date', course: course, role: role)
   end
 
   def get_apps_close_date(course: nil, role: nil)
-    get_apps_date(key: apps_close_date, course: course, role: role)
+    get_apps_date(key: 'apps_close_date', course: course, role: role)
   end
 end

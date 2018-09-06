@@ -16,10 +16,31 @@
     = f.check_box :urban
   .field
     = f.label :cohort_capacity_csd
-    = f.text_field :cohort_capacity_csd
+    = f.text_area :cohort_capacity_csd
   .field
     = f.label :cohort_capacity_csp
-    = f.text_field :cohort_capacity_csp
+    = f.text_area :cohort_capacity_csp
+  - if @regional_partner.apps_open_date.is_a? Hash
+    - [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].each do |course|
+      %li
+        = course
+        - ['facilitator', 'teacher'].each do |role|
+          = "Apps Open Date for #{course} and #{role} - #{@regional_partner.get_apps_open_date(course: course, role: role)}"
+  .field
+    = f.label 'Apps Open Date - YYYY-MM-DD'
+    = f.text_area :apps_open_date
+  - if @regional_partner.apps_open_date.is_a? Hash
+    - [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].each do |course|
+      %li
+        = course
+        - ['facilitator', 'teacher'].each do |role|
+          = "Apps Close Date for #{course} and #{role} - #{@regional_partner.get_apps_close_date(course: course, role: role)}"
+  .field
+    = f.label 'Apps Close Date - YYYY-MM-DD'
+    = f.text_area :apps_close_date
+  .field
+    = f.label :principal_approval
+    = f.select :principal_approval, options_for_select(RegionalPartner::PRINCIPAL_APPROVAL_TYPES.map {|x| [x.titleize, x]})
   .field
     = f.label :attention
     = f.text_field :attention
