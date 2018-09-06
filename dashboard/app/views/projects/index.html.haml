@@ -8,7 +8,7 @@
   // always have access to all Applab and Gamelab projects, even if there is a // limited gallery for others.
   - limited_project_gallery = DCDO.get('image_moderation', {})['limited_project_gallery']
   - project_validator = current_user.permission?  UserPermission::PROJECT_VALIDATOR
-  - projects_data[:limitedGallery] = project_validator ? !project_validator : limited_project_gallery
+  - projects_data[:limitedGallery] = !project_validator && limited_project_gallery
   - projects_data[:canShare] = !current_user.sharing_disabled?
   // We're going to run an A/B experiment to compare (un)publishing from the
   // quick actions dropdown and from a button in the published column.
