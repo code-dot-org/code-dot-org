@@ -16,9 +16,8 @@ module Api::V1::Pd::Application
       Pd::Application::Teacher1819ApplicationMailer.stubs(:confirmation).returns(
         mock {|mail| mail.stubs(:deliver_now)}
       )
-      Pd::Application::Teacher1819ApplicationMailer.stubs(:principal_approval).returns(
-        mock {|mail| mail.stubs(:deliver_now)}
-      )
+
+      Pd::Application::PrincipalApproval1819Application.stubs(:create_placeholder_and_send_mail)
     end
 
     test_redirect_to_sign_in_for :create
@@ -30,9 +29,7 @@ module Api::V1::Pd::Application
         with(instance_of(Pd::Application::Teacher1819Application)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
-      Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval).
-        with(instance_of(Pd::Application::Teacher1819Application)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
+      Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail)
 
       sign_in @applicant
 
@@ -52,9 +49,27 @@ module Api::V1::Pd::Application
       )
     end
 
+    test 'do not send principal approval email on successful create if RP has selective principal approval' do
+      Pd::Application::Teacher1819ApplicationMailer.expects(:confirmation).
+        with(instance_of(Pd::Application::Teacher1819Application)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+
+      Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
+
+      regional_partner = create :regional_partner, principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+
+      Pd::Application::Teacher1819Application.any_instance.stubs(:regional_partner).returns(regional_partner)
+
+      sign_in @applicant
+
+      put :create, params: @test_params
+      assert_response :success
+    end
+
     test 'does not send confirmation mail on unsuccessful create' do
       Pd::Application::Teacher1819ApplicationMailer.expects(:confirmation).never
-      Pd::Application::Teacher1819ApplicationMailer.expects(:principal_approval).never
+      Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
+
       sign_in @applicant
 
       put :create, params: {form_data: {firstName: ''}}
