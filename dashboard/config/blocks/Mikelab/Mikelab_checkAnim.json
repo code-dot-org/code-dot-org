@@ -1,0 +1,23 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "checkAnim",
+    "blockText": "{SPRITE} is a {COSTUME}",
+    "returnType": "Boolean",
+    "color": [
+      258,
+      "0.35",
+      "0.62"
+    ],
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}
