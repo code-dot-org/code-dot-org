@@ -247,6 +247,10 @@ et:
         frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja muuda suurus.
       frozen cross rotate_callout:
         replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ numbriga
       frozen cross_callout:
         repeat_blocks_1: "(1) Kasuta seda plokki ja pane see tööruumis hallide plokkide ümber"
         repeat_blocks_2: (2) Teisalda plokk „Korda“ siia ja pane hallid plokid selle sisse
@@ -256,19 +260,45 @@ et:
         frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
       frozen freeplay_callout:
         snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
       frozen line_callout:
+        move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“ alla, et Elsa liiguks edasi
+      frozen line_b_callout:
+        move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“ alla, et Elsa liiguks edasi
+      frozen line_test_callout:
         move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“ alla, et Elsa liiguks edasi
       frozen perpendicular_callout:
         turn_elsa: Kasuta plokki „Pööra“, et Elsa pööraks. Rippmenüüs valitud number näitab, mitu korda Elsa pöörab
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki
       frozen square iterative_callout:
+        frozen_create_square: Lisa rohkem plokke, et luua ruut
+      frozen square iterative_b_callout:
+        frozen_create_square: Lisa rohkem plokke, et luua ruut
+      frozen square iterative_test_callout:
         frozen_create_square: Lisa rohkem plokke, et luua ruut
       frozen square loop 3x_callout:
         replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop 3x_b_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop 3x_test_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
       frozen square loop_callout:
         replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop_b_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square loop_test_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
       frozen square snowflake_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square snowflake_b_callout:
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+      frozen square snowflake_test_callout:
         replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima.
