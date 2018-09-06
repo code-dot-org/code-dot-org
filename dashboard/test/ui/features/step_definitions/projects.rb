@@ -28,6 +28,21 @@ Then(/^I make a playlab project named "([^"]*)"$/) do |name|
   }
 end
 
+Then(/^I make an App Lab project named "([^"]*)" with thumbnail "([^"]*)"$/) do |name, thumbnail_url|
+  steps %Q{
+    Given I am on "http://studio.code.org/projects/applab"
+    And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
+    And I wait for the page to fully load
+    And element "#runButton" is visible
+    And element ".project_updated_at" eventually contains text "Saved"
+    And I click selector ".project_edit"
+    And I type "#{name}" into "input.project_name"
+    And I click selector ".project_save"
+    And I wait until element ".project_edit" is visible
+    Then I should see title "#{name} - App Lab"
+  }
+end
+
 Then(/^I publish the project$/) do
   steps %Q{
     Given I open the project share dialog
