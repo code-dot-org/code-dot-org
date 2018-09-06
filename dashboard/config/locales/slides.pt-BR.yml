@@ -3426,7 +3426,191 @@ pt-BR:
           você poderá juntar vários desses somadores para somar números maiores.
 
 '
-      8: 
-      9: 
-      10: 
-      11: 
+      8:
+        text: Por exemplo, aqui está como um adicionador de 8-bits adiciona os números
+          25 e 50. Cada número é representado usando 8 bits, resultando em 16 sinais
+          elétricos diferentes que vão no circuito. O circuito para um adicionador
+          de 8-bits tem vários pequenos adicionadores dentro dele, que juntos, calculam
+          a soma.
+      9:
+        text: Diferentes circuitos elétricos podem realizar outros cálculos simples
+          como subtração ou multiplicação. De fato, todo o processamento de informações
+          que seu computador faz são apenas lotes e lotes de pequenas operações juntas.
+          Cada operação individual feita por um computador é tão, tão simples que
+          poderia ser feita por um humano, mas estes circuitos dentro dos computadores
+          são muito mais rápidos.
+      10:
+        text: Naquela época, estes circuitos eram grandes e desajeitados, e um adicionador
+          de 8-bits poderia ser tão grande quanto uma geladeira, e ele levaria minutos
+          para realizar um cálculo simples. Hoje, os circuitos de computadores são
+          microscópicos em tamanho, e muito, muito mais rápidos. Porque computadores
+          menores também são mais rápidos? Bem, porque quanto menor o circuito é,
+          menor é a distância que o sinal elétrico precisa percorrer. A eletricidade
+          se move quase na velocidade da luz, é por isto que circuitos modernos podem
+          realizar bilhões de cálculos por segundo.
+      11:
+        text: Então se você está jogando um jogo, gravando um vídeo, ou explorando
+          o cosmo, tudo que você poderia fazer com tecnologia requer que muita informação
+          seja processada extremamente rápido. Por baixo de toda esta complexidade
+          é só um monte de circuitos minúsculos que transformam sinais binários em
+          websites, vídeos, música, e jogos. Estes circuitos podem até mesmo nos ajudar
+          a decodificar DNA para diagnosticar e curar doença. Então o que você gostaria
+          de fazer com todos estes circuitos?
+    csd_concept_memory_cpu_input_output:
+      1:
+        text: Olá, meu nome é Madison Maxey. Eu tenho uma empresa chamada Loomia,
+          e nós focamos em fazer tecidos inteligentes para roupas inteligentes e para
+          produtos têxteis inteligentes. O céu é o limite quando se trata de materiais
+          têxteis.
+      2:
+        text: Meu nome é Danielle Applestone, e sou a Diretora Executiva da Empresa
+          Othermachine. Nós construímos máquinas de perfuração de área de trabalho.
+          A máquina de perfuração pega uma ferramenta de corte rotativa e move através
+          do material para criar um objeto 3D.
+      3:
+        text: Sob o capô, todos os computadores fazem as mesmas quatro coisas básicas.
+          Eles recebem informação de entrada, armazenam e processam a informação,
+          e então, liberam informação de saída. Cada uma dessas coisas é feita por
+          uma parte diferente do computador.
+      4:
+        text: Existem dispositivos de entrada que pegam entradas do mundo exterior
+          e convertem em informação binária. Existe memória para guardar essa informação.
+          Existe uma unidade de processamento central ou CPU, onde todos os cálculos
+          são realizados. E, finalmente, existem os dispositivos de saída que pegam
+          informação e convertem-na em uma saída física.
+      5:
+        text: Vamos falar primeiro sobre entrada. Computadores pode receber muitos
+          tipos diferentes de entrada, como o teclado de um computador, o touchpad
+          de um telefone, uma câmera, um microfone, ou um GPS. Mas até os sensores
+          de um carro, um termostato, ou um drone também são diferentes dispositivos
+          de entrada.
+      6:
+        text: Agora, vamos olhar um exemplo simples de como entradas viajam através
+          de um computador e se tornam saída. Quando você pressiona uma tecla em seu
+          teclado - vamos dizer a letra "B". O teclado converte esta letra para um
+          número. Este número é enviado como binário, uns e zeros, dentro do computador.
+      7:
+        text: A partir deste número, a CPU calcula como exibir a letra "B" pixel por
+          pixel. A CPU solicita instruções passo-a-passo da memória, que diz à CPU
+          como desenhar a letra "B". A CPU executa estas instruções e armazena o resultado
+          em pixels na memória.
+      8:
+        text: Finalmente, esta informação de pixel é enviada em binário para a tela.
+          A tela é um dispositivo de saída, que converte os sinais binários em pequenas
+          luzes e cores que compõem o que você vê.
+      9:
+        text: Isto tudo acontece tão rápido que parece instantâneo, mas para exibir
+          cada letra o computador executa milhares de instruções, a partir do momento
+          que o seu dedo pressiona a tecla.
+      10:
+        text: Neste exemplo, o dispositivo de saída era a tela, mas há vários tipos
+          diferentes de saída que pegam um sinal binário do computador e fazem algo
+          no mundo físico. Por exemplo, uma caixa de som irá tocar som, e uma impressora
+          3D irá imprimir um objeto. Dispositivos de saída também podem controlar
+          movimentos físicos como um braço robótico, o motor de um carro, ou a ferramenta
+          de corte da máquina de trituração que a minha empresa faz. Novos tipos de
+          entrada e saída permitem que computadores interajam com o mundo de maneiras
+          inteiramente novas. Isto tem sido ajudado pelas melhorias na velocidade
+          e tamanho da memória e CPU.
+      11:
+        text: Quanto mais complicada é uma tarefa e quanto mais informação existe
+          para entrada ou saída, maior é o poder de processamento e memória que um
+          computador precisa. Digitar letras em uma tela pode ser fácil mas para fazer
+          gráficos 3D complexos ou gravar um filme em alta definição, computadores
+          modernos frequentemente têm múltiplas CPUs para processar toda esta informação
+          e muitos gigabytes de memória para armazená-la.
+      12:
+        text: 'Não importa o que você queira fazer com o computador, cada ação individual
+          se resume em: inserir informações do mundo físico, armazenar e processar
+          esta informação, e obter alguma saída de volta ao mundo físico.'
+    csd_concept_hardware_software:
+      1:
+        text: Oi, meu nome é Erica Gomez e eu sou uma gerente de engenharia na Amazon.com.
+          Uma das melhores coisas sobre trabalhar com tecnologia, e na Amazon em particular,
+          é que eu posso trazer o meu cachorro comigo para o trabalho todos os dias.
+          O meu trabalho é certificar de que software saia pela porta e o trabalho
+          dela é tirar uma soneca embaixo da minha mesa e roncar bem alto.
+      2:
+        text: 'O meu nome é Jerome Holman, e eu sou um Gerente de Programa na Equipe
+          Xbox e eu tenho um trabalho bem divertido: Basicamente fazer o hardware
+          e software trabalharem juntos para te entregar todos os jogos que você ama
+          em seu Xbox.'
+      3:
+        text: Quando você olha dentro de um dispositivo de computação você vê um monte
+          de circuitos, chips, fios, auto-falantes, plugues, e toda sorte de outras
+          coisas. Este é o hardware.
+      4:
+        text: Mas o que você não vê é o software. Software são todos os programas
+          de computador, ou código, executando nesta máquina. Software pode ser qualquer
+          coisa desde apps e jogos até páginas web e o software de ciência de dados
+          que eu e meus times usam na Amazon para entender como os consumidores se
+          comportam.
+      5:
+        text: Mas como o hardware e software interagem um com o outro? Vamos começar
+          olhando na unidade central de processamento do computador, ou CPU.
+      6:
+        text: A CPU é o chip mestre que controla todas as outras partes do computador.
+          Uma CPU precisa fazer diferentes coisas, então dentro dela ela possui partes
+          menores e mais simples que lidam com tarefas específicas. Ela tem circuitos
+          para realizar matemática e lógica simples. Ela tem outros circuitos para
+          enviar e receber informações de e para diferentes partes do computador.
+      7:
+        text: A verdadeira mágica da CPU é como ela sabe quais circuitos usar e quando
+          utilizá-los. A CPU recebe comandos simples que a dizem qual circuito utilizar
+          para realizar um trabalho específico. Por exemplo, um comando "adicionar"
+          diz à CPU para usar o seu circuito externo para calcular um novo número.
+          E então o comando "armazenar" diz à CPU para usar um circuito diferente
+          para salvar aquele resultado na memória.
+      8:
+        text: Como números, todos estes comandos simples podem ser representados em
+          uns e zeros binários ou sinais elétricos ligados ou desligados. Os comandos
+          binários são armazenados na memória e a CPU os busca e executa em sequência
+          um após o outro. Esta sequência de comandos é, de fato, um programa de computador
+          bem simples.
+      9:
+        text: Código binário é a forma mais básica de software e ele controla todo
+          o hardware de um computador. Hoje em dia, ninguém escreve software em binário.
+          Levaria para sempre!
+      10:
+        text: Hoje, o software que nós escrevemos se parece mais como isto (Python),
+          ou isto (Ruby), ou até mesmo isto (Blocky). Linguagens de programação como
+          estas permitem que você digite comandos em algo que se parece muito com
+          Inglês.
+      11:
+        text: Para desenhar um retângulo na tela, você só precisa de um único comando.
+          Este comando em alto-nível é convertido em centenas, ou milhares, de comandos
+          binários mais simples que a CPU entende. O Software diz à CPU o que fazer,
+          mas quando você está ouvindo música, e navegando na web, e conversando com
+          um amigo, o seu computador está executando múltiplos pedaços de software
+          tudo ao mesmo tempo.
+      12:
+        text: Então, como todos estes programas entram no computador em primeiro lugar,
+          e como a CPU é capaz de executá-los todos de uma vez? Para descobrir vamos
+          ter que dar uma olhada no sistema operacional.
+      13:
+        text: O sistema operacional de um computador é o programa mestre que gerencia
+          como o software pode usar o hardware do computador. Por exemplo, eu ajudei
+          a criar o sistema operacional Windows que é executado na maioria dos computadores
+          pessoais.
+      14:
+        text: O sistema operacional é um programa com habilidades especiais que permite
+          que ele controle outros softwares no computador. Ele permite que você instale
+          novos programas ao carregá-los para a memória do computador. Ele decide
+          quando um programa é executado pela unidade central de processamento, e
+          se um programa pode acessar os dispositivos de entrada e saída do computador.
+          E quando você acha que o computador está executando vários programas de
+          uma vez, na verdade, é o sistema operacional que está rapidamente alternando
+          entre os programas que estão compartilhando aquela CPU em frações de um
+          segundo.
+      15:
+        text: Dentro de cada computador há um sistema operacional gerenciando os softwares
+          que controlam o hardware do computador.
+      16:
+        text: O software é uma série de comandos feitos de código binário simples,
+          e este código binário é simplesmente sinais elétricos fluindo através de
+          bilhões de circuitos minúsculos.
+      17:
+        text: Computadores tem o potencial de fazer todo o tipo de coisas incríveis.
+          Mas a única coisa que faz de um computador inteligente, ou útil, é você.
+          Quando você aprende a programar você consegue definir o problema que você
+          quer resolver, e escrever o software que torna estas ideias realidade.
