@@ -21,7 +21,7 @@
     "encrypted_examples": "FwAFQH+MEbYxq4/EjyaM5XE9qRNxcBYqiMKgxiIAuKLVE2zWEo/Nc7wKvHQx\n2fVF\n",
     "embed": "false",
     "instructions": "Add a large red button to your screen using Design Mode. (Click for full instructions.)",
-    "markdown_instructions": "<img src=\"https://images.code.org/5e6fa5738796d69775c0786ca9b4a076-image-1476735925167.png\" style=\"float: right\">\r\n# Design Mode\r\n\r\n**You Try it:** Add a large red button to your app using Design Mode.\r\n\r\n* Switch to Design Mode\r\n* Drag a button onto the app screen\r\n* Change the text to say \"Click Me!\"\r\n* Make the color of the button red.\r\n\r\n\r\n",
+    "markdown_instructions": "<img src=\"https://images.code.org/5e6fa5738796d69775c0786ca9b4a076-image-1476735925167.png\" style=\"float: right\">\r\n\r\n# Design Mode\r\n\r\n**You Try it:** Add a large red button to your app using Design Mode.\r\n\r\n* Switch to Design Mode\r\n* Drag a button onto the app screen\r\n* Change the text to say \"Click Me!\"\r\n* Make the color of the button red.\r\n\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
