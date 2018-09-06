@@ -993,6 +993,9 @@ gl:
       Artist - Nested Loops Assessment 1_instruction: |-
         Usa un bucle aniñado para completar
         o debuxo.
+      Artist Autorun Test_instruction: |-
+        Usa o bloque "repita" para debuxar estes
+        3 cadrados.
       Artist Inspiration_instruction: "Actividade libre - Inspiración: agora\naprendiches
         todo o que necesitas saber para crear un padrón como este! Se esta\nimaxe
         te inspira tenta facer algo similar. Caso contrario, crea algo\nti mesmo.\r\n
@@ -2623,6 +2626,15 @@ gl:
         Cal é a menor tira binaria que
         podes repetir para debuxar esta imaxe?
       courseD_artist_binary7_2018_instruction: |-
+        Cal é a menor tira binaria que
+        podes repetir para debuxar esta imaxe?
+      courseD_autorun_binary4_2019_instruction: |-
+        Podes debuxar este padrón usando
+        a repetición dunha tira binaria de 3 díxitos?
+      courseD_autorun_binary6_2019_instruction: |-
+        Que tira binaria de 6 díxitos, repetida
+        11 veces, vai debuxar esta imaxe?
+      courseD_autorun_binary7_2019_instruction: |-
         Cal é a menor tira binaria que
         podes repetir para debuxar esta imaxe?
       courseD_bee_debugging3_instruction: |-
