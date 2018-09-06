@@ -155,6 +155,10 @@ cs:
           a změň velikost.
       frozen cross rotate_callout:
         replace_questions_degree: Použij drop-down k nahrazení "???" číslem
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Použij drop-down k nahrazení "???" číslem
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Použij drop-down k nahrazení "???" číslem
       frozen cross_callout:
         repeat_blocks_1: "(1) Použij tento blok a polož je kolem šedých bloků v pracovním
           prostoru"
@@ -165,7 +169,17 @@ cs:
         frozen_diamond_repeat: Použij k vytvoření tohoto tvaru bloku opakování.
       frozen freeplay_callout:
         snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
       frozen line_callout:
+        move_elsa_forward: Přetáhni blok "Posunout vpřed" a umístěte ho pod blok "Při
+          spuštění", aby se Elsa posunula vpřed
+      frozen line_b_callout:
+        move_elsa_forward: Přetáhni blok "Posunout vpřed" a umístěte ho pod blok "Při
+          spuštění", aby se Elsa posunula vpřed
+      frozen line_test_callout:
         move_elsa_forward: Přetáhni blok "Posunout vpřed" a umístěte ho pod blok "Při
           spuštění", aby se Elsa posunula vpřed
       frozen perpendicular_callout:
@@ -173,13 +187,31 @@ cs:
           se Elsa otočí
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Použij blok "vytvořit větev vločky"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Použij blok "vytvořit větev vločky"
       frozen square iterative_callout:
+        frozen_create_square: Přidej více bloků k vytvoření čtverce
+      frozen square iterative_b_callout:
+        frozen_create_square: Přidej více bloků k vytvoření čtverce
+      frozen square iterative_test_callout:
         frozen_create_square: Přidej více bloků k vytvoření čtverce
       frozen square loop 3x_callout:
         replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop 3x_b_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop 3x_test_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
       frozen square loop_callout:
         replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop_b_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square loop_test_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
       frozen square snowflake_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square snowflake_b_callout:
+        replace_questions: Použij drop-down k nahrazení "???" číslem
+      frozen square snowflake_test_callout:
         replace_questions: Použij drop-down k nahrazení "???" číslem
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Klepni na tlačítko Upravit k přidání parametru do funkce
