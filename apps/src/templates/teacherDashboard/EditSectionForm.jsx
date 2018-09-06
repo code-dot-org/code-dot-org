@@ -14,7 +14,7 @@ import {
   cancelEditingSection,
   stageExtrasAvailable,
 } from './teacherSectionsRedux';
-import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { isScriptHiddenForSection, updateHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmAssignment from '../courseOverview/ConfirmAssignment';
 
 const style = {
@@ -63,6 +63,7 @@ class EditSectionForm extends Component {
     stageExtrasAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
+    updateHiddenScript: PropTypes.func.isRequired,
   };
 
   state = {
@@ -82,8 +83,17 @@ class EditSectionForm extends Component {
     }
   };
 
-  handleSave = () => {
+  handleConfirmAssign = () => {
+    const { section, updateHiddenScript } = this.props;
+
+    // Avoid incorrectly showing the hidden unit warning twice.
+    updateHiddenScript(section.id.toString(), section.scriptId, false);
+
     this.setState({showHiddenUnitWarning: false});
+    this.handleSave();
+  };
+
+  handleSave = () => {
     this.props.handleSave().catch(status => {
       alert(i18n.unexpectedError());
       console.error(status);
@@ -165,7 +175,7 @@ class EditSectionForm extends Component {
             sectionName={section.name}
             assignmentName={assignedScriptName}
             onClose={handleClose}
-            onConfirm={this.handleSave}
+            onConfirm={this.handleConfirmAssign}
             isHiddenFromSection={true}
           />
         }
@@ -188,6 +198,7 @@ export default connect(state => ({
   assignedScriptName: assignedScriptName(state),
 }), {
   editSectionProperties,
+  updateHiddenScript,
   handleSave: finishEditingSection,
   handleClose: cancelEditingSection,
 })(EditSectionForm);
