@@ -8,12 +8,14 @@ import { sectionShape, assignmentShape, assignmentFamilyShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
+  assignedScriptName,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
   stageExtrasAvailable,
 } from './teacherSectionsRedux';
 import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import ConfirmAssignment from '../courseOverview/ConfirmAssignment';
 
 const style = {
   root: {
@@ -60,6 +62,11 @@ class EditSectionForm extends Component {
     isSaveInProgress: PropTypes.bool.isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
+    assignedScriptName: PropTypes.string.isRequired,
+  };
+
+  state = {
+    showHiddenUnitWarning: false,
   };
 
   onSaveClick = () => {
@@ -69,13 +76,14 @@ class EditSectionForm extends Component {
     const isScriptHidden = isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
 
     if (isScriptHidden) {
-      window.alert('are you sure?');
+      this.setState({showHiddenUnitWarning: true});
     } else {
       this.handleSave();
     }
   };
 
   handleSave = () => {
+    this.setState({showHiddenUnitWarning: false});
     this.props.handleSave().catch(status => {
       alert(i18n.unexpectedError());
       console.error(status);
@@ -93,6 +101,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
+      assignedScriptName,
     } = this.props;
     if (!section) {
       return null;
@@ -151,6 +160,15 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
           />
         </DialogFooter>
+        {this.state.showHiddenUnitWarning &&
+          <ConfirmAssignment
+            sectionName={section.name}
+            assignmentName={assignedScriptName}
+            onClose={handleClose}
+            onConfirm={this.handleSave}
+            isHiddenFromSection={true}
+          />
+        }
       </div>
     );
   }
@@ -167,6 +185,7 @@ export default connect(state => ({
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
   hiddenStageState: state.hiddenStage,
+  assignedScriptName: assignedScriptName(state),
 }), {
   editSectionProperties,
   handleSave: finishEditingSection,
