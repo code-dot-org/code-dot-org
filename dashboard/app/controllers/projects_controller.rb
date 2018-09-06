@@ -413,6 +413,10 @@ class ProjectsController < ApplicationController
     @game = @level.game
   end
 
+  # Due to risk of inappropriate content, we can hide non-featured Applab
+  # and Gamelab projects via DCDO. Internally, project_validators should
+  # always have access to all Applab and Gamelab projects, even if there is a
+  # limited gallery for others.
   def limited_gallery?
     limited_project_gallery = DCDO.get('image_moderation', {})['limited_project_gallery'] || true
     project_validator = current_user.permission? UserPermission::PROJECT_VALIDATOR

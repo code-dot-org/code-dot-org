@@ -4,9 +4,6 @@
 - projects_data = {}
 - if current_user
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
-  // Due to risk of inappropriate content, we can hide non-featured Applab
-  // and Gamelab projects via DCDO. Internally, project_validators should
-  // always have access to all Applab and Gamelab projects, even if there is a // limited gallery for others.
   - projects_data[:limitedGallery] = limited_gallery
   - projects_data[:canShare] = !current_user.sharing_disabled?
   // We're going to run an A/B experiment to compare (un)publishing from the
