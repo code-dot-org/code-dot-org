@@ -6,11 +6,11 @@
       1,
       0.74
     ],
-    "func": "whenTouchesAny",
-    "blockText": "when{TARGET} touches any sprite",
+    "func": "clickedOn",
+    "blockText": "when {SPRITE} clicked",
     "args": [
       {
-        "name": "TARGET",
+        "name": "SPRITE",
         "type": "Sprite",
         "defer": true
       }
