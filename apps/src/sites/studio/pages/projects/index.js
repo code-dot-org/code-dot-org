@@ -73,7 +73,7 @@ $(document).ready(() => {
     ReactDOM.render(
       <Provider store={store}>
         <PublicGallery
-          projectValidator={projectsData.projectValidator}
+          limitedGallery={projectsData.limitedGallery}
         />
       </Provider>,
       publicGallery);
