@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://curriculum.code.org/media/screen_model_about.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Design the About Screen\r\n\r\nTo add elements to your new About screen, you'll need to first select it from the screens dropdown.\r\n\r\n# Do This\r\n\r\n* **Complete the About screen** using the prototype to the right.\r\n* **Use the screens dropdown** to switch between your Home and About screens.",
+    "markdown_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://curriculum.code.org/media/screen_model_about.png)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n</div>\r\n\r\n# Design the About Screen\r\n\r\nTo add elements to your new About screen, you'll need to first select it from the screens dropdown.\r\n\r\n# Do This\r\n\r\n* **Complete the About screen** using the prototype to the right.\r\n* **Use the screens dropdown** to switch between your Home and About screens.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "This brief activity allows you to reflect about what you have learned in this course so far. It is provided to you by your teacher, but *you will not be graded on this.*\r\n\r\nSome topics in the course may be interesting to you, others may be less interesting.\r\n\r\n<strong>\r\n&#49;. Write down 1 or 2 topics that are most interesting to you:\r\n\r\n</strong>\r\n\r\n<input type=text><br>\r\n<input type=text>\r\n<br><br>\r\n\r\n<strong>\r\n&#50;. How did you prepare for taking this test? Do you feel more or less prepared to answer questions about the topics that interest you?\r\n</strong>\r\n\r\n*Write a few sentences, focusing on your thoughts and feelings, don't worry about how well written it is.*",
+    "markdown_instructions": "This brief activity allows you to reflect about what you have learned in this course so far. It is provided to you by your teacher, but *you will not be graded on this.*\r\n\r\nSome topics in the course may be interesting to you, others may be less interesting.\r\n\r\n<strong>\r\n&#49;. Write down 1 or 2 topics that are most interesting to you:\r\n</strong>\r\n\r\n<input type=text><br>\r\n<input type=text>\r\n<br><br>\r\n\r\n<strong>\r\n&#50;. How did you prepare for taking this test? Do you feel more or less prepared to answer questions about the topics that interest you?\r\n</strong>\r\n\r\n*Write a few sentences, focusing on your thoughts and feelings, don't worry about how well written it is.*",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
