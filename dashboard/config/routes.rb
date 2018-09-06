@@ -467,6 +467,7 @@ Dashboard::Application.routes.draw do
       get 'facilitator', to: 'facilitator_application#new'
       get 'teacher', to: 'teacher_application#new'
       get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
+      get 'principal_approval_1920_preview/:application_guid', to: 'principal_approval_application#new_1920_preview'
       get 'teacher_1920_preview', to: 'teacher_application#new_1920_preview'
     end
 
