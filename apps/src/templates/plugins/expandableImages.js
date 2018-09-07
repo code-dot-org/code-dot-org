@@ -1,3 +1,12 @@
+/**
+ * "Expandable Images" are simply images we want to include as thumbnails, which
+ * will pop out into a modal when clicked on. The trigger for an image to be
+ * treated as expandable is if the image's alt text ends with the string
+ * "expandable".
+ *
+ * See https://github.com/code-dot-org/code-dot-org/pull/16676 for original
+ * implementation.
+ */
 module.exports = function expandableImages() {
   const Parser = this.Parser;
   const tokenizers = Parser.prototype.inlineTokenizers;
