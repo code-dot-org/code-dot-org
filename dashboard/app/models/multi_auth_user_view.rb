@@ -5,5 +5,6 @@
 # This model can be used by reporting clients, such as Contact Rollups, for read-only access to Users via the multi
 # auth view.
 class MultiAuthUserView < User
+  establish_connection("read_pool")
   self.table_name = 'users_view'
 end
