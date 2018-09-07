@@ -158,6 +158,8 @@ lt:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Susidūrei su sunkumais? Pamėgink su rausva gėle elgtis taip pat, kaip ir su violetine!
         2-3_Bee_Conditionals_14_b: Jei rausva gėlė būtų violetinė, ar sugalvotum, kaip reikia panaudoti dar vieną kartojimo blokelį?
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Menininkas turi pasisukti 120 laipsnių, prieš piešdamas naują kvadratą.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:

@@ -1158,6 +1158,12 @@ is:
       frozen cross rotate_callout:
         replace_questions_degree: Notaðu fellilistann til að skipta "???" út fyrir
           tölu
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Notaðu fellilistann til að skipta "???" út fyrir
+          tölu
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Notaðu fellilistann til að skipta "???" út fyrir
+          tölu
       frozen cross_callout:
         repeat_blocks_1: "(1) Notaðu þennan kubb og settu hann utan um gráu kubbana
           á vinnusvæðinu"
@@ -1169,7 +1175,19 @@ is:
         frozen_diamond_repeat: Notaðu endurtaka kubbinn til að gera þetta form.
       frozen freeplay_callout:
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
       frozen line_callout:
+        run: Smelltu á "Keyra" til að prófa forritið!
+        move_elsa_forward: Dragðu "Færa áfram" kubb og festu hann við "Þegar keyrt"
+          kubbinn til að láta Elsu fara áfram
+      frozen line_b_callout:
+        run: Smelltu á "Keyra" til að prófa forritið!
+        move_elsa_forward: Dragðu "Færa áfram" kubb og festu hann við "Þegar keyrt"
+          kubbinn til að láta Elsu fara áfram
+      frozen line_test_callout:
         run: Smelltu á "Keyra" til að prófa forritið!
         move_elsa_forward: Dragðu "Færa áfram" kubb og festu hann við "Þegar keyrt"
           kubbinn til að láta Elsu fara áfram
@@ -1178,13 +1196,31 @@ is:
           stjórnar því hve mikið Elsa snýr
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Notaðu "búa til grein snjókorns" kubbinn
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Notaðu "búa til grein snjókorns" kubbinn
       frozen square iterative_callout:
+        frozen_create_square: Bættu við fleiri kubbum hér til að búa til ferning
+      frozen square iterative_b_callout:
+        frozen_create_square: Bættu við fleiri kubbum hér til að búa til ferning
+      frozen square iterative_test_callout:
         frozen_create_square: Bættu við fleiri kubbum hér til að búa til ferning
       frozen square loop 3x_callout:
         replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
+      frozen square loop 3x_b_callout:
+        replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
+      frozen square loop 3x_test_callout:
+        replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
       frozen square loop_callout:
         replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
+      frozen square loop_b_callout:
+        replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
+      frozen square loop_test_callout:
+        replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
       frozen square snowflake_callout:
+        replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
+      frozen square snowflake_b_callout:
+        replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
+      frozen square snowflake_test_callout:
         replace_questions: Notaðu fellilistann til að skipta "???" út fyrir tölu
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig

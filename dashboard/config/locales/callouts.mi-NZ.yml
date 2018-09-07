@@ -148,6 +148,12 @@ mi:
       frozen cross rotate_callout:
         replace_questions_degree: Whakamahia te pouaka takaiho ki te whakakapi i te
           "???" ki tētahi tau
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Whakamahia te pouaka takaiho ki te whakakapi i te
+          "???" ki tētahi tau
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Whakamahia te pouaka takaiho ki te whakakapi i te
+          "???" ki tētahi tau
       frozen cross_callout:
         repeat_blocks_1: "(1) Whakamahia tēnei paraka, ā, hoatu kia karapotia ngā
           paraka kiwikiwi i te papamahi"
@@ -160,7 +166,19 @@ mi:
       frozen freeplay_callout:
         snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka
           rerekē!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka
+          rerekē!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka
+          rerekē!
       frozen line_callout:
+        move_elsa_forward: Tōia te paraka "Neke ki Mua" ka whakpiri ki raro i te paraka
+          "Ina Whakahaerehia" kia neke a Elsa ki mua
+      frozen line_b_callout:
+        move_elsa_forward: Tōia te paraka "Neke ki Mua" ka whakpiri ki raro i te paraka
+          "Ina Whakahaerehia" kia neke a Elsa ki mua
+      frozen line_test_callout:
         move_elsa_forward: Tōia te paraka "Neke ki Mua" ka whakpiri ki raro i te paraka
           "Ina Whakahaerehia" kia neke a Elsa ki mua
       frozen perpendicular_callout:
@@ -168,16 +186,42 @@ mi:
           takaiho e tohu ka pēhea te nui o tana huri
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Whakamahia te paraka "waihangahia he peka tarahīhuka"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Whakamahia te paraka "waihangahia he peka tarahīhuka"
       frozen square iterative_callout:
+        frozen_create_square: Whakapiri i ētahi atu paraka ki konei ki te waihanga
+          i tētahi tapawhā
+      frozen square iterative_b_callout:
+        frozen_create_square: Whakapiri i ētahi atu paraka ki konei ki te waihanga
+          i tētahi tapawhā
+      frozen square iterative_test_callout:
         frozen_create_square: Whakapiri i ētahi atu paraka ki konei ki te waihanga
           i tētahi tapawhā
       frozen square loop 3x_callout:
         replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
           ki tētahi tau
+      frozen square loop 3x_b_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
+          ki tētahi tau
+      frozen square loop 3x_test_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
+          ki tētahi tau
       frozen square loop_callout:
         replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
           ki tētahi tau
+      frozen square loop_b_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
+          ki tētahi tau
+      frozen square loop_test_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
+          ki tētahi tau
       frozen square snowflake_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
+          ki tētahi tau
+      frozen square snowflake_b_callout:
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
+          ki tētahi tau
+      frozen square snowflake_test_callout:
         replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
           ki tētahi tau
       grade4_artist_parameters_squares1_callout:

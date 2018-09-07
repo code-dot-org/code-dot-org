@@ -331,6 +331,8 @@ ko:
           ** 360 / 6 =? **
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: 각 아이템은 각자의 '반복(~인 동안)'문이 필요합니다.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: 이 디자인을 완성하기 위해, 화가는 각 사각형 사이에서 120도 회전해야만 합니다.
       Artist Inspiration_authored_hint:
         brush_width: 붓의 두께를 1로 설정 한 다음 색상을 파란색으로 먼저 설정 했습니다.
         double_loop: "'카운트'문 안에 'for loop'를 사용해보세요."

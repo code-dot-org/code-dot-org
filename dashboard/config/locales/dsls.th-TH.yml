@@ -6,6 +6,8 @@ th:
         title: ชื่อเรื่อง
       Prepare for your presentation:
         title: ชื่อเรื่อง
+      courseD_external_binary1_2018:
+        Binary Drawing: การวาดไบนารี
     match:
       2-3 Big Event Match 1:
         Matching: การจับคู่
@@ -24,10 +26,11 @@ th:
         Match the puzzles to the blocks: จับคู่ปริศนากับบล็อก
         Maze Match: จับคู่เขาวงกต
       2-3 artist loops match 1:
+        Artist Loops Matching 1: ศิลปินกับการจับคู่ลูป 1
         Match the loop to the shape: จับคู่ลูปกับรูปภาพ
       2-3 artist match 1:
-        Artist Matching: การจับคู่ ศิสำหรับ ศิลปิน
-        Match the shape with the blocks that complete it.: จับคู่รูปทรงเลขาคณิต กับ
+        Artist Matching: การจับคู่ สำหรับ ศิลปิน
+        Match the shape with the blocks that complete it.: จับคู่รูปทรงเรขาคณิต กับ
           บล๊อก ที่เข้ากันได้
       2-3 maze match 1:
         Match the puzzles to the blocks: จับคู่ปริศนากับบล็อก
@@ -84,10 +87,21 @@ th:
         Which program makes this image?: โปรแกรมไหนใช้สร้างรูปนี้?
       2-3 Maze Multi 2:
         Maze Multiple Choice: เขาวงกต คำถามแบบปรนัย
+        Which set of blocks will get me to the pig?: บล็อกชุดไหนที่จะพาฉันไปให้ถึงเจ้าหมูนั่น?
       2-3 Relay Programming Multi 1:
         Multiple Choice: คำถามแบบปรนัย
       2-3 Relay Programming Multi 2:
         Multiple Choice: คำถามแบบปรนัย
+      2-3 artist debug multi 1:
+        Artist Debugging Multiple Choice 1: ศิลปิน คำถามแบบปรนัยในเรื่องการดีบั๊ก
+          1
+        What would you need to fix to make this a finished circle?: |-
+          คุณต้องแก้ไขอะไรบ้่าง เพื่อวาดวงกลมนี้ให้เสร็จสมบูรณ์
+
+          block set color คือบล็อกที่ ตั้งค่าสี
+          block repeat 10 times คือบล็อกที่ลูป 10 ครั้ง (ลูปบล็อกสีฟ้าที่อยู่ภายในลูป
+          block move backward by 10 pixels คือบล็อกที่ถอยหลังไป 10 พิกเซล
+          block turn left by 18 degrees คือบล็อกที่หันซ้ายไป 18 องศา
       2-3 artist functions multi 1:
         Artist Functions Multiple Choice One: ฟังก์ชั่นกับศิลปิน คำถามแบบปรนัย หนึ่ง
         Pick the correct blocks to draw this image using the given functions: เลือกบล็อกที่ถูกต้องเพื่อวาดรูปนี้โดยใช้ฟังก์ชันที่กำหนด
@@ -101,7 +115,12 @@ th:
         Choose the best blocks.: เลือกบล็อกที่ดีที่สุด
       2-3 bee loops multi 1:
         Bee Loops Multiple Choice One: ลูปกับผึ้ง คำถามแบบปรนัย หนึ่ง
-        Which blocks collect all of the nectar?: บล็อกไหนบ้างที่เก็บน้ำหวานจากเกสรดอกไม้ทั้งหมด
+        Which blocks collect all of the nectar?: |-
+          บล็อกกลุ่มไหนบ้างที่เก็บน้ำหวานจากเกสรดอกไม้มาทั้งหมด
+
+          block: repeat 3 times เป็น บล็อก ลูปทำซ้ำ 3 ครั้ง
+          block: move forward เป็น บล็อก ไปข้างหน้า
+          block: get nectar เป็น บล็อก เก็บน้ำหวาน
       2-3 maze multi 1:
         Maze Multiple Choice One: เขาวงกต คำถามแบบปรนัย หนึ่ง
         Which set of blocks is the correct answer?: กลุ่มบล๊อกไหนเป็นคำตอบที่ถูกต้อง?
@@ -210,7 +229,7 @@ th:
         Which repeat block is the same?: บล็อกทำซ้ำ(Repeat block) อันไหนที่เหมือนกัน?.
       K-1 Maze Loops Multi 2:
         Multiple Choice: คำถามแบบปรนัย
-        Pick the correct repeat block.: เลือบล็อกทำซ้ำ(Repeat block) ที่ถูกต้อง
+        Pick the correct repeat block.: เลือกบล็อกทำซ้ำ(Repeat block) ที่ถูกต้อง
       K-1 Maze Multiple Choice 2:
         Maze: เขาวงกต
         Which answer solves this level?: คำถามอันไหนแก้ปริศนาในด่านนี้ได้?

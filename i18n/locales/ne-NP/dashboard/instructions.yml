@@ -433,6 +433,7 @@ ne:
       Artist - Nested Loops 12_instruction: "Can you draw these 36 triangles using a nested\nloop?"
       Artist - Nested Loops 6_instruction: "Can you draw a hexagon by looping the triangle\ncode?"
       Artist - Nested Loops Assessment 1_instruction: "Use a nested loop to complete\nthe design."
+      Artist Autorun Test_instruction: "Now, put the function inside of a loop\nto draw these three squares."
       Artist Inspiration_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
       Bergeron Robot Maze1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof `move forward` blocks below the `when run` block and press \"Run\". "
       Brad Spooky House Copy_instruction: "Freeplay: Here are the functions\nyou've written, and some more for you to play with. Draw something awesome!\nPlay with the pen width to see how different your drawings look!"
@@ -1077,6 +1078,9 @@ ne:
       courseD_artist_binary6_2018_instruction: "Which 6 digit binary string, repeated\n11 times, will draw this image?"
       courseD_artist_binary7_instruction: "What is the shortest binary string that\nyou can repeat to draw this image?"
       courseD_artist_binary7_2018_instruction: "What is the shortest binary string that\nyou can repeat to draw this image?"
+      courseD_autorun_binary4_2019_instruction: "Can you draw this pattern by looping\njust three binary digits (0s and 1s)?"
+      courseD_autorun_binary6_2019_instruction: "Which 6 digit binary string, repeated\n11 times, will draw this image?"
+      courseD_autorun_binary7_2019_instruction: "What is the shortest binary string that\nyou can repeat to draw this image?"
       courseD_bee_debugging3_instruction: "Fix the error(s) to collect all of the nectar\nand make all of the honey."
       courseD_bounce_events10_instruction: There is now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.
       courseD_bounce_events11_instruction: You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.

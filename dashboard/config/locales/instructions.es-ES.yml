@@ -903,6 +903,8 @@ es:
       Artist - Nested Loops 9_instruction: Dibujar los dientes en la boca del cocodrilo!
       Artist - Nested Loops Assessment 1_instruction: Utiliza un circuito anidado
         para completar el diseño.
+      Artist Autorun Test_instruction: Usa el bloque "repetir" para dibujar estos
+        3 cuadrados.
       Artist Inspiration_instruction: "Inspiración de juego libre: Ahora has aprendido
         todo lo que necesitas saber para hacer un patrón como este! Si te inspira
         esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por
@@ -2731,6 +2733,12 @@ es:
       courseD_artist_binary7_instruction: "¿Cuál es la secuencia binaria más corta
         que puede repetir para dibujar esta imagen?"
       courseD_artist_binary7_2018_instruction: "¿Cuál es la secuencia binaria más
+        corta que puede repetir para dibujar esta imagen?"
+      courseD_autorun_binary4_2019_instruction: "¿Puede dibujar este molde enlazando
+        una secuencia binaria de tres dígitos?"
+      courseD_autorun_binary6_2019_instruction: "¿Cual de las secuencias binarias
+        de 6 dígitos, repetidas 11 veces, dibujará esta imagen?"
+      courseD_autorun_binary7_2019_instruction: "¿Cuál es la secuencia binaria más
         corta que puede repetir para dibujar esta imagen?"
       courseD_bee_debugging3_instruction: Estos bloques realmente me molesta. Corregir
         el error(s) para recoger todo el néctar y hacer todo de la miel.

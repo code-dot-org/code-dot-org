@@ -139,7 +139,7 @@
   "whenLeft": "keď šípka vľavo",
   "whenLeftTooltip": "Vykonať akcie nižšie pri stlačení šípky vľavo.",
   "whenPaddleCollided": "keď lopta trafí pálku",
-  "whenPaddleCollidedTooltip": "Keď lopta sa trafí pálku, vykonaj nasledujúce príkazy.",
+  "whenPaddleCollidedTooltip": "Keď lopta trafí pálku, vykonaj nasledujúce príkazy.",
   "whenPlayerCollided": "keď lopta zasiahne hráča",
   "whenPlayerCollidedTooltip": "Spustiť nižšie uvedené akcie, keď sa lopta dotkne hráča.",
   "whenRight": "keď šípka vpravo",

@@ -444,6 +444,7 @@ nn:
       Artist - Nested Loops 6_instruction: Klarar du å teikne ein sekskant ved å få trekantkoden i løkke?
       Artist - Nested Loops 9_instruction: Teikn tennene i munnen til alligatoren!
       Artist - Nested Loops Assessment 1_instruction: Bruk ei løkke i løkke for å fullføre designet.
+      Artist Autorun Test_instruction: Sett funksjonen inni ein løkke for å teikne desse tre kvadrata.
       Artist Inspiration_instruction: "Inspirasjon til fri oppgåve: No har du lært alt du treng å vite for å lage slike mønster! Viss du blir inspirert av dette biletet, kan du prøve å lage noko liknande. Du kan òg lage noko heilt anna.\\r\\rVil du lære korleis inspirasjonsmønsteret vårt blei laga? "
       Auto Open Function Editor_instruction: 'Du kan kalle funksjonar frå innsida av andre funksjonar. Bruk "Form"-funksjonen din som utgangspunkt, og lag tre husformer. Det første kan vere 50 pikslar langt, medan dei andre aukar med 20 pikslar for kvar gong. Å nytte ei teljeløkke kan vere ein god idé.'
       Bee Recommended Blocks test_instruction: Lilla blomar har anten 1 eller 0 nektar, men du veit ikkje kva blome? Pass på at du ikkje prøver å samle inn nektar frå blomar som ikkje har nektar. Sjekk om nektar er lik 1 ved å bruke ein "viss" blokk.
@@ -1769,6 +1770,11 @@ nn:
       courseD_artist_project5_2018_instruction: Leik med snøflak!
       courseD_artist_project_embedded_instruction: Dette er kva du snart skal gjere!
       courseD_artist_ramp12_instruction: Bruk det du har lært til å teikne denne trekanten inne i firkanten.
+      courseD_autorun_binary4_2019_instruction: Kan du teikne dette mønsteret ved å køyre ei løkke over ein tresifra binærstreng(0 og 1)?
+      courseD_autorun_binary6_2019_instruction: Kva 6 sifra binærstreng, repetert 11 gongar, vil teikne dette biletet?
+      courseD_autorun_binary7_2019_instruction: Kva er den kortaste binærstrengen du kan repetere for å teikne dette biletet?
+      courseD_autorun_binary8_2019_instruction: Gjer ferdig koden for å lage teikninga.
+      courseD_autorun_binary8_predict1_2019_instruction: Gjer ferdig koden for å lage teikninga.
       courseD_bee_conditionals1_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
       courseD_bee_conditionals1_predict1_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.
       courseD_bee_conditionals1_predict1_2018_instruction: Kontroller om det er ein blome under skya. Om det er ein blome, få nektar.

@@ -946,6 +946,8 @@ fr:
         Code Mode add a new `onEvent()` to your program for your \"Right!\" button.\nAdd
         a `setScreen()` block inside of it that switches screens to `\"rightScreen\"`.\\\r\n\\\r\n**Stuck?\nClick
         here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)"
+      Artist Autorun Test_markdown_instruction: Utilise le bloc « Répéter » pour dessiner
+        ces 3 carrés.
       Artist Inspiration_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\r\n\r\n**Free-Play
         Inspiration:** You've now learned everything\nyou need to know to make a pattern
         like this! \r\n\r\nIf this picture inspires\nyou, try to make something similar.

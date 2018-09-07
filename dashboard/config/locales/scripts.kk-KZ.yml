@@ -1434,3 +1434,15 @@ kk:
               name: Қозғал, Қозғал
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
+        frozen-2018:
+          stages:
+            Artist:
+              name: Кейіпкер
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Кейіпкер
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Кейіпкер

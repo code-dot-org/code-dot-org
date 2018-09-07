@@ -939,6 +939,9 @@ id:
       Artist - Nested Loops 9_instruction: Gambarkan gigi di mulut buaya!
       Artist - Nested Loops Assessment 1_instruction: Gunakan putaran bersarang untuk
         menyelesaikan rancangan.
+      Artist Autorun Test_instruction: |-
+        Sekarang, letakkan fungsinya ke dalam
+        sebuah lingkaran untuk menggambar tiga kotak yang ini.
       Bergeron Robot Maze1_instruction: 'Dapatkah kamu membantuku untuk menangkap
         babi nakal? Susunlah beberapa blok "gerak maju" dan tekan "Jalankan". '
       Building a Foundation Assessment_instruction: Bangunlah piramida tiga tingkat,
@@ -2370,6 +2373,13 @@ id:
       courseD_artist_binary7_instruction: String biner terpendek apakah yang dapat
         Anda ulangi untuk membuat gambar ini?
       courseD_artist_binary7_2018_instruction: String biner terpendek apakah yang
+        dapat Anda ulangi untuk membuat gambar ini?
+      courseD_autorun_binary4_2019_instruction: |-
+        Bisakah Anda menggambar pola ini dengan putaran
+         hanya tiga angka biner (0s dan 1s)?
+      courseD_autorun_binary6_2019_instruction: String biner 6 digit yang manakah,
+        yang diulangi 11 kali yang akan menghasilkan gambar ini?
+      courseD_autorun_binary7_2019_instruction: String biner terpendek apakah yang
         dapat Anda ulangi untuk membuat gambar ini?
       courseD_bee_debugging3_instruction: Blok ini benar-benar menggangguku. Perbaiki
         yang salah untuk mengumpulkan semua nektar dan membuat madu.

@@ -1279,6 +1279,12 @@ id:
       frozen cross rotate_callout:
         replace_questions_degree: Gunakan drop-down untuk menggantikan "???" dengan
           sebuah angka
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Gunakan drop-down untuk menggantikan "???" dengan
+          sebuah angka
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Gunakan drop-down untuk menggantikan "???" dengan
+          sebuah angka
       frozen cross_callout:
         repeat_blocks_1: "(1) Gunakan blok ini dan Letakkan di sekitar blok abu-abu
           didalam ruang kerja"
@@ -1290,7 +1296,19 @@ id:
         frozen_diamond_repeat: Gunakan blok ulangi untuk membuat bentuk ini.
       frozen freeplay_callout:
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
       frozen line_callout:
+        run: Tekan "Run" untuk mencoba program anda!
+        move_elsa_forward: Tarik blok "Maju" dan pasang di bawah blok "Jalankan" untuk
+          membuat Elsa maju
+      frozen line_b_callout:
+        run: Tekan "Run" untuk mencoba program anda!
+        move_elsa_forward: Tarik blok "Maju" dan pasang di bawah blok "Jalankan" untuk
+          membuat Elsa maju
+      frozen line_test_callout:
         run: Tekan "Run" untuk mencoba program anda!
         move_elsa_forward: Tarik blok "Maju" dan pasang di bawah blok "Jalankan" untuk
           membuat Elsa maju
@@ -1299,15 +1317,39 @@ id:
           drop-down menentukan berapa banyak putaran Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Menggunakan blok "create a snowflake branch"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Menggunakan blok "create a snowflake branch"
       frozen square iterative_callout:
         frozen_create_square: lampirkan lebih banyak blok di sini untuk membuat persegi
+      frozen square iterative_b_callout:
+        frozen_create_square: lampirkan lebih banyak blok di sini untuk membuat persegi
+      frozen square iterative_test_callout:
+        frozen_create_square: lampirkan lebih banyak blok di sini untuk membuat persegi
       frozen square loop 3x_callout:
+        replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
+          angka
+      frozen square loop 3x_b_callout:
+        replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
+          angka
+      frozen square loop 3x_test_callout:
         replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
           angka
       frozen square loop_callout:
         replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
           angka
+      frozen square loop_b_callout:
+        replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
+          angka
+      frozen square loop_test_callout:
+        replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
+          angka
       frozen square snowflake_callout:
+        replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
+          angka
+      frozen square snowflake_b_callout:
+        replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
+          angka
+      frozen square snowflake_test_callout:
         replace_questions: Gunakan drop-down untuk menggantikan "???" dengan sebuah
           angka
       grade1_artist_loops2_callout:

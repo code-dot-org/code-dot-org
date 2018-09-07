@@ -51,25 +51,55 @@ sl:
         frozen_circle_function_with_parameter_circle: Uporabi blok "ustvari krog" in mu spremeni velikost.
       frozen cross rotate_callout:
         replace_questions_degree: Namesto "???" vnesi številko iz spustnega menuja
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Namesto "???" vnesi številko iz spustnega menuja
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Namesto "???" vnesi številko iz spustnega menuja
       frozen diamond snowflake_callout:
         frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
       frozen diamond_callout:
         frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
       frozen freeplay_callout:
         snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
       frozen line_callout:
+        move_elsa_forward: Pod blok "Ko zaženeš" povleci blok "premakni naprej", da boš premaknil/a Elso
+      frozen line_b_callout:
+        move_elsa_forward: Pod blok "Ko zaženeš" povleci blok "premakni naprej", da boš premaknil/a Elso
+      frozen line_test_callout:
         move_elsa_forward: Pod blok "Ko zaženeš" povleci blok "premakni naprej", da boš premaknil/a Elso
       frozen perpendicular_callout:
         turn_elsa: Uporabi blok "obrni se", da boš obrnil/a Elso. S številko povej še za koliko stopinj naj se obrne
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Uporabi blok "ustvari snežinkino vejo"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Uporabi blok "ustvari snežinkino vejo"
       frozen square iterative_callout:
+        frozen_create_square: Dodaj več blokov, da bo nastal kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Dodaj več blokov, da bo nastal kvadrat
+      frozen square iterative_test_callout:
         frozen_create_square: Dodaj več blokov, da bo nastal kvadrat
       frozen square loop 3x_callout:
         replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop 3x_b_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop 3x_test_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
       frozen square loop_callout:
         replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop_b_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square loop_test_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
       frozen square snowflake_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square snowflake_b_callout:
+        replace_questions: Namesto "???" vnesi številko iz spustnega menuja
+      frozen square snowflake_test_callout:
         replace_questions: Namesto "???" vnesi številko iz spustnega menuja
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!

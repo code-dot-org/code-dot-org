@@ -47,7 +47,7 @@
     "CONTROLS_IF_ELSEIF_TOOLTIP": "Thêm một điều kiện vào khối Điều kiện.",
     "CONTROLS_IF_ELSE_TOOLTIP": "Thêm vào điều kiện cuối, điều kiện giúp tóm gọn các trường hợp của khối nếu.",
     "CONTROLS_IF_HELPURL": "",
-    "CONTROLS_IF_IF_TOOLTIP": "Thêm, bỏ, hoặc đổi thứ tự các mảnh con để tạo cấu trúc mới cho mảnh nếu.",
+    "CONTROLS_IF_IF_TOOLTIP": "Thêm, bỏ, hoặc đổi thứ tự các phần để chỉnh lại khối lệnh \"nếu\" này.",
     "CONTROLS_IF_MSG_ELSE": "khác",
     "CONTROLS_IF_MSG_ELSEIF": "hoặc nếu",
     "CONTROLS_IF_MSG_IF": "nếu",

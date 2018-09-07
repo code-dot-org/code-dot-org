@@ -1276,3 +1276,15 @@ mi:
               name: E Neke, E Neke
             Your Digital Footprint:
               name: Tō Tapuwae Matihiko
+        frozen-2018:
+          stages:
+            Artist:
+              name: Rehetoi
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Rehetoi
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Rehetoi

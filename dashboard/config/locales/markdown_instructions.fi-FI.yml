@@ -248,6 +248,8 @@ fi:
       4-5 While Loops 4_markdown_instruction: "Vau, katsohan!\r\n\r\nEn tiedä, kuinka
         monta multalapiollista tähän kuoppaan tarvitaan.\r\nOsaatko kirjoittaa ohjelman,
         joka käyttää 'täytä'-palikkaa, kunnes maa on tasainen?  "
+      Artist Autorun Test_markdown_instruction: Käytä "toista" lohkoa piirtääksesi
+        nämä 3 neliötä.
       Course 4 Artist 13_markdown_instruction: Pelaatko edelleen? Tässä sinulle tyhjä
         maalauspohja, jolle voit piirtää, mitä haluat!
       Course 4 Artist 6_markdown_instruction: "Täydennä koodi ja piirrä nämä kolmiot.

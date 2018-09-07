@@ -4790,3 +4790,19 @@ ka:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
             'Persistence & Frustration: Stevie and the Big Project':
               name: სტივი და დიდი პროექტი
+        frozen-2018:
+          stages:
+            Artist:
+              name: მხატვარი
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: მხატვარი
+        dance:
+          stages:
+            new stage:
+              name: ახალი დონე
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: მხატვარი

@@ -167,6 +167,8 @@ ar:
         2-3_Bee_Debugging_1_a: عندما تجد القطعة الخاطئة وتصلحها, هل ترى النمط الذي يمكن أن يكون أبسط باستخدام `repeat`و loop ?
       2-3 Bee Debugging 2_authored_hint:
         2-3_Bee_Debugging_2_a: عندما تجد القطعة الخاطئة وتصلحها, هل ترى النمط الذي يمكن أن يكون أبسط باستخدام `repeat`و loop ?
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: الفنان يحتاج إلى الدوران 120 درجة بين كل مربع لإكمال التصميم.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:

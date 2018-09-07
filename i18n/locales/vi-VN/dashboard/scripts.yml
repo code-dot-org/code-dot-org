@@ -4669,3 +4669,19 @@ vi:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+        frozen-2018:
+          stages:
+            Artist:
+              name: Họa sĩ
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Họa sĩ
+        dance:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Họa sĩ

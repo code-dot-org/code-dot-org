@@ -266,6 +266,8 @@ es:
           ** 360/6 =? **
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Cada elemento necesitara su propio bucle 'mientras'.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: El artista necesita girar 120 grados entre cada cuadrado para completar este diseño.
       Artist Inspiration_authored_hint:
         brush_width: Establecemos el grosor del pincel a 1, luego el color a azul antes de hacer cualquier otra cosa.
         double_loop: Intenta colocar un 'bucle para' dentro de un bucle 'repetir '.

@@ -463,6 +463,8 @@
         i Play Lab!"
       Alien Defender_2018_markdown_instruction: "**Prosjektide**: Lag et forsvarsspill
         i Play Lab!"
+      Artist Autorun Test_markdown_instruction: Plasser funksjonen inni en løkke for
+        å tegne disse kvadratene.
       Bergeron Robot Maze1_markdown_instruction: "Kan du hjelpe meg med å fange den
         slemme grisen? \r\n\r\nSett sammen et par 'gå framover'-blokker under 'når
         kjører'-blokka og trykk på 'Kjør'.\n"

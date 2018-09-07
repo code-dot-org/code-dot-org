@@ -110,6 +110,10 @@ gl:
         frozen_circle_function_with_parameter_circle: Use o bloque "cree un círculo" e mude o tamaño.
       frozen cross rotate_callout:
         replace_questions_degree: Use o menu suspenso para substituír "???" por un número
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Use o menu suspenso para substituír "???" por un número
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Use o menu suspenso para substituír "???" por un número
       frozen cross_callout:
         repeat_blocks_1: "(1) Use este bloque e colóqueo en torno aos bloques cinza na área de traballo"
         repeat_blocks_2: (2) Traia o bloque "repita" aquí e coloque os bloques cinza dentro del
@@ -119,19 +123,45 @@ gl:
         frozen_diamond_repeat: Use o bloque "repita" para crear esta forma.
       frozen freeplay_callout:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de neve!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de neve!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de neve!
       frozen line_callout:
+        move_elsa_forward: Arrastre un bloque "Avance" e encáixeo baixo o bloque "Cando o xogo comeza" para que Elsa avance
+      frozen line_b_callout:
+        move_elsa_forward: Arrastre un bloque "Avance" e encáixeo baixo o bloque "Cando o xogo comeza" para que Elsa avance
+      frozen line_test_callout:
         move_elsa_forward: Arrastre un bloque "Avance" e encáixeo baixo o bloque "Cando o xogo comeza" para que Elsa avance
       frozen perpendicular_callout:
         turn_elsa: Use o bloque "Vire" para que Elsa vire. O número no menu suspenso determina canto vai virar Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Use o bloque "cree unha parte da folerpa"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Use o bloque "cree unha parte da folerpa"
       frozen square iterative_callout:
+        frozen_create_square: Conecte máis bloques aquí para crear un cadrado
+      frozen square iterative_b_callout:
+        frozen_create_square: Conecte máis bloques aquí para crear un cadrado
+      frozen square iterative_test_callout:
         frozen_create_square: Conecte máis bloques aquí para crear un cadrado
       frozen square loop 3x_callout:
         replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square loop 3x_b_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square loop 3x_test_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
       frozen square loop_callout:
         replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square loop_b_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square loop_test_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
       frozen square snowflake_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square snowflake_b_callout:
+        replace_questions: Use o menu suspenso para substituír "???" por un número
+      frozen square snowflake_test_callout:
         replace_questions: Use o menu suspenso para substituír "???" por un número
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Clic en editar para agregar un par

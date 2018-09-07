@@ -140,6 +140,12 @@ si:
       frozen cross rotate_callout:
         replace_questions_degree: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු
           එක ඔබන්න'
+      frozen cross rotate_b_callout:
+        replace_questions_degree: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු
+          එක ඔබන්න'
+      frozen cross rotate_test_callout:
+        replace_questions_degree: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු
+          එක ඔබන්න'
       frozen cross_callout:
         repeat_blocks_1: "(1) මෙම කොටස අලු පැහැති කොටස් මතින් යොදන්න"
         repeat_blocks_2: (2) "Repeat" කොටස මෙතැනට ගෙනැවිත් අනිත් කොටස් එය ඇතුලට ඇතුලු
@@ -151,7 +157,19 @@ si:
       frozen freeplay_callout:
         snowflake_dropdown: විවිධ හිම කැබැලි නිර්මාණය කිරීමට මෙම ඩ්‍රොප් ඩවුන් මෙනු
           එක භාවිත කරන්න!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: විවිධ හිම කැබැලි නිර්මාණය කිරීමට මෙම ඩ්‍රොප් ඩවුන් මෙනු
+          එක භාවිත කරන්න!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: විවිධ හිම කැබැලි නිර්මාණය කිරීමට මෙම ඩ්‍රොප් ඩවුන් මෙනු
+          එක භාවිත කරන්න!
       frozen line_callout:
+        move_elsa_forward: එල්සා ව ඉදිරියට ගමන් කරවීම සඳහා "When Run" කොටස යටට "Move
+          Forward" කොටසක් රැගෙන විත් දමන්න
+      frozen line_b_callout:
+        move_elsa_forward: එල්සා ව ඉදිරියට ගමන් කරවීම සඳහා "When Run" කොටස යටට "Move
+          Forward" කොටසක් රැගෙන විත් දමන්න
+      frozen line_test_callout:
         move_elsa_forward: එල්සා ව ඉදිරියට ගමන් කරවීම සඳහා "When Run" කොටස යටට "Move
           Forward" කොටසක් රැගෙන විත් දමන්න
       frozen perpendicular_callout:
@@ -159,13 +177,31 @@ si:
           හැරවිය යුතුද යන්න තෝරන්න
       frozen snowflake branch_callout:
         frozen_snowflake_branch: '"create a snowflake branch" කොටස පාවිච්චි කරන්න'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"create a snowflake branch" කොටස පාවිච්චි කරන්න'
       frozen square iterative_callout:
+        frozen_create_square: මෙතන තවත් බ්ලොක් අමුණන්න සමචතුරශ්‍රයක් නිර්මාණය කිරීමට
+      frozen square iterative_b_callout:
+        frozen_create_square: මෙතන තවත් බ්ලොක් අමුණන්න සමචතුරශ්‍රයක් නිර්මාණය කිරීමට
+      frozen square iterative_test_callout:
         frozen_create_square: මෙතන තවත් බ්ලොක් අමුණන්න සමචතුරශ්‍රයක් නිර්මාණය කිරීමට
       frozen square loop 3x_callout:
         replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
+      frozen square loop 3x_b_callout:
+        replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
+      frozen square loop 3x_test_callout:
+        replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
       frozen square loop_callout:
         replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
+      frozen square loop_b_callout:
+        replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
+      frozen square loop_test_callout:
+        replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
       frozen square snowflake_callout:
+        replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
+      frozen square snowflake_b_callout:
+        replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
+      frozen square snowflake_test_callout:
         replace_questions: '"???" ඉලක්කමකින් වෙනස් කිරීමට ඩ්‍රොප් ඩවුන් මෙනු එක ඔබන්න'
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: ඔබගේ ක්‍රියාකාරකමට පරාමිතීයක් එකතු කිරීම සදහා සංස්කරණය

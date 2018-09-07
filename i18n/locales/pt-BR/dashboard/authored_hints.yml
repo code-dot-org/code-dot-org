@@ -296,6 +296,8 @@ pt-BR:
           Você vai estar repetindo essa forma 6 vezes para cobrir os 360 graus
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Cada item vai precisar da sua própria repetição 'Enquanto'.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: A artista precisa girar 120 graus entre cada quadrado para concluir este projeto.
       Artist Inspiration_authored_hint:
         brush_width: Nós escolhemos a largura do pincel para 1, e depois a cor azul antes de fazer qualquer outra coisa.
         double_loop: Tente colocar uma 'repetição para' dentro de uma repetição 'repetir'.
@@ -475,7 +477,9 @@ pt-BR:
           </xml>
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: Parte da compreensão de como usar funções é descobrir quais você precisa, e quais você não precisa.
+        Course_4_Artist_Functions_challenge_b: Use um `laço for`, então use sua variável contadora dentro de um laço `repeat` aninhado.
         Course_4_Artist_Functions_challenge_c: A cada iteração, você deve desenhar um quadrado e então pular para frente.
+        Course_4_Artist_Functions_challenge_d: Você precisará virar 90 graus à esquerda do lado de fora de seu `repeat`, mas ainda dentro do `laço for`.
       Course 4 Artist Inspire_authored_hint:
         Course_4_Artist_Inspire_a: Depois que você completar um quadrado, tente pular metade do seu comprimento para frente antes de virar e fazer outro.
         Course_4_Artist_Inspire_b: Cada quadrado e pulo é repetido quatro vezes (usando um giro para a esquerda entre eles) para criar uma unidade completa semelhante a um cata-vento.
@@ -655,8 +659,34 @@ pt-BR:
           </xml>
       Course 4 Artist Vars 13_authored_hint:
         Course_4_Artist_Vars_13_a: Você precisa de dois laços de repetição (um dentro do outro) ambos repetindo `quantidade de lados` vezes.
+        Course_4_Artist_Vars_13_b: "O laço de repetição interior desenha um octógono (virando para a esquerda).   \n\nPosteriormente, você precisa mover para frente e virar para a direita apenas dentro do laço exterior."
+        Course_4_Artist_Vars_13_c: Para ajustar a forma para que permaneça com o mesmo tamanho quando o número de lados muda, use o bloco de matemática para dividir o comprimento em pixels pelo número de lados.
+      Course 4 Artist Vars 6_authored_hint:
+        Course_4_Artist_Vars_6_a: Para desenhar um polígono regular, vire **360/lados** cada vez.
+      Course 4 Artist Vars 8_authored_hint:
+        Course_4_Artist_Vars_8_a: Se você dividir seu comprimento inicial pelo número de lados, o comprimento de cada lado ficará menor a medida que o número de lados fica maior.
+      Course 4 Bee Params 7_authored_hint:
+        notice_pattern: 'Você vê um padrão em como o número de néctar muda? '
+        count_with_for: Note que o néctar sobe em etapas. Que tipo de bloco você pode usar para realizar a mesma coisa várias vezes enquanto vai contando?
+      Course 4 Bee Params 8_authored_hint:
+        Course_4_Bee_Params_8_a: Está tudo bem em pedir por um número de mel e um número de néctar cada vez. Se não houver nenhum de algo, o número pode ser 0.
+      Course 4 Play Lab Params 2_authored_hint:
+        Course_4_Play_Lab_Params_2_a: Você precisará clicar em "editar" na função de pulo e atualizá-la para que ela use o parâmetro `altura`.
+      Course 4 Play Lab Vars 2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro` como sendo maior do que o de `velocidade_do_gato`.
+      Course 4 Play Labs For Loops 2_authored_hint:
+        Course_4_Play_Labs_For_Loops_2_a: O que você adicionaria no seu laço `for` toda vez para ele ignorar os números pares?
+      Course 4 Playlab For Loops 4b_authored_hint:
+        Course_4_Playlab_For_Loops_4b_a: As bandeiras estão em torno de 330 pixels de distância dos personagens.
+        Course_4_Playlab_For_Loops_4b_b: Como você pode fazer cada personagem alcançar 330 pixels no mesmo número de movimentos com diferentes números de partida e parada?
+        Course_4_Playlab_For_Loops_4b_c: Lembre-se, não importa o quanto um personagem passe da bandeira no seu último passo, contanto que cada personagem use o mesmo número de passos para chegar à bandeira.
+      Course 4 Playlab For Loops 5b_authored_hint:
+        Course_4_Playlab_For_Loops_5b_a: Os personagens estão em torno de 175 pixels longe do centro.
+        Course_4_Playlab_For_Loops_5b_b: Lembre-se, o próximo passo de um personagem será maior que seu último, já que o contador continua aumentando.
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
+        Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha horizontal.
+        Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que você estiver na localização vertical correta, você tem que virar seu artista novamente para trás e pular para trás 320 pixels."
         Course_4_SCF_1_e: |-
           **Solução:**
           
@@ -3180,6 +3210,8 @@ pt-BR:
           </next>
           </block>
           </xml>
+      CourseF_PlayLab_vars2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro` como sendo maior do que o de `velocidade_do_gato`.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de seu programa! Tente executá-la duas vezes para resolver este enigma.
       Inspirational Artwork_authored_hint:
@@ -7125,8 +7157,12 @@ pt-BR:
           - Usar função
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
+        Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha horizontal.
+        Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que você estiver na localização vertical correta, você tem que virar seu artista novamente para trás e pular para trás 320 pixels."
       grade4_artist_functions_challenge2_authored_hint:
         Course_4_SCF_1_a: Cada hexágono tem 40 pixels de lado.
+        Course_4_SCF_1_b: Há um salto de 120 pixels entre cada hexágono em cada linha horizontal.
+        Course_4_SCF_1_c: "Antes de você desenhar a segunda linha de hexágonos, você precisa virar à direita 60 graus e pular adiante 40 pixels. \n\nAssim que você estiver na localização vertical correta, você tem que virar seu artista novamente para trás e pular para trás 320 pixels."
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: 'O metade-hexágono tem um ** comprimento de 30 ** e gira para a direita em ** 60 graus **.  '
         Course_4_Artist_11_b: 'Os 2/3 do triângulo tem um ** comprimento de 80 ** e gira para a direita em ** 120 graus **. '
@@ -7187,12 +7223,18 @@ pt-BR:
         double_loop: Tente colocar uma 'repetição para' dentro de uma repetição 'repetir'.
         specifics: "A `repetição para` é executada entre 3 e 17 para cada uma das seis \"pétalas\" antes de passar para criar a próxima, desenhando formas com apenas um número ímpar de lados.\n\nO bloco `escolher alfa` usa divisão para enfraquecer a cor quando o contador aumenta."
         after: Quando você acabar com cada "pétala", certifique-se de 'Avançar' 20 pixels antes de você fazer uma rotação de 60 graus.
+      grade5_artist_variables_freeplay10_authored_hint:
+        Course_4_Artist_Vars_8_a: Se você dividir seu comprimento inicial pelo número de lados, o comprimento de cada lado ficará menor a medida que o número de lados fica maior.
       grade5_artist_variables_freeplay15_authored_hint:
         Course_4_Artist_Inspire_a: Depois que você completar um quadrado, tente pular metade do seu comprimento para frente antes de virar e fazer outro.
         Course_4_Artist_Inspire_b: Cada quadrado e pulo é repetido quatro vezes (usando um giro para a esquerda entre eles) para criar uma unidade completa semelhante a um cata-vento.
         Course_4_Artist_Inspire_c: Cada cata-vento também é repetido quatro vezes, com um giro para a direita de **360/lados**.
       grade5_artist_variables_octagons13_authored_hint:
         Course_4_Artist_Vars_13_a: Você precisa de dois laços de repetição (um dentro do outro) ambos repetindo `quantidade de lados` vezes.
+        Course_4_Artist_Vars_13_b: "O laço de repetição interior desenha um octógono (virando para a esquerda).   \n\nPosteriormente, você precisa mover para frente e virar para a direita apenas dentro do laço exterior."
+        Course_4_Artist_Vars_13_c: Para ajustar a forma para que permaneça com o mesmo tamanho quando o número de lados muda, use o bloco de matemática para dividir o comprimento em pixels pelo número de lados.
+      grade5_artist_variables_square7_authored_hint:
+        Course_4_Artist_Vars_6_a: Para desenhar um polígono regular, vire **360/lados** cada vez.
       grade5_artist_variables_triangles1_authored_hint:
         grade5_artist_variables_triangles1_a: Para fazer um ângulo interno de 60 graus nesse triângulo, se lembre de virar o artista 120 graus.
         grade5_artist_variables_triangles1_b: Use a repetição `repetir` para encurtar o seu código.
@@ -7201,6 +7243,8 @@ pt-BR:
         grade5_artist_variables_triangles1_a: Para fazer um ângulo interno de 60 graus nesse triângulo, se lembre de virar o artista 120 graus.
         grade5_artist_variables_triangles1_b: Use a repetição `repetir` para encurtar o seu código.
         grade5_artist_variables_triangles1_c: Dentro da sua repetição, você vai querer avançar 50 pixels, então virar a esquerda 120 graus.
+      grade5_playlab_variables2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro` como sendo maior do que o de `velocidade_do_gato`.
       gradeK_sequence_4_authored_hint:
         gradeK_sequence_4_a: Tente escrever os passos no papel para encontrar uma solução!
       gradek_adventurer_loops3_authored_hint:

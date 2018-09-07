@@ -414,6 +414,7 @@ ro:
       Artist - Nested Loops 6_instruction: Poţi desena un hexagon folosind buclarea codului pentru desenarea unui triunghi?
       Artist - Nested Loops 9_instruction: Desenează dinţii în gura aligatorului!
       Artist - Nested Loops Assessment 1_instruction: Utilizaţi o buclă imbricată pentru a finaliza proiectul.
+      Artist Autorun Test_instruction: Utilizaţi blocul "repetă" pentru a desena aceste trei pătrate.
       Artist Inspiration_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine te inspiră, încearcă să faci ceva similar. Altfel, creează ceva propriu și personal.\\r\n\\r\nVrei să știi cum a fost făcut modelul nostru de inspirație? "
       Auto Open Function Editor_instruction: 'Poți apela funcții din interiorul altor funcții! Folosind ca bază funcția ta de "formă", creează 3 forme de casă fiecare mai mare cu 20 de pixeli decat precedenta, începând cu 50 de pixeli în lungime. Ar putea fi de ajutor folosirea unei bucle numărătoare. '
       Bee Recommended Blocks test_instruction: "Florile violete pot avea ori 1 ori 0 \nnectar, dar nu știi exact care din ele! Ai grijă să nu colectezi nectar dintr-o \nfloare violetă dacă aceasta nu are deloc. Verifică dacă nectarul este egal cu 1 \nfolosind blocul \"dacă\"."
@@ -1088,6 +1089,9 @@ ro:
       courseD_artist_binary6_2018_instruction: Care şir binar de 6 caractere, repetat de 11 ori va desena această imagine?
       courseD_artist_binary7_instruction: Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?
       courseD_artist_binary7_2018_instruction: Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?
+      courseD_autorun_binary4_2019_instruction: Poţi desena acest model prin rularea în buclă a unui şir binar de trei digiți?
+      courseD_autorun_binary6_2019_instruction: Care şir binar de 6 caractere, repetat de 11 ori va desena această imagine?
+      courseD_autorun_binary7_2019_instruction: Care este cel mai scurt şir binar pe care tu poţi să-l rulezi repetat pentru a desena această imagine?
       courseD_bee_debugging3_instruction: "Repară \neroarea(erorile) pentru a colecta tot nectarul şi a face toată mierea."
       courseD_bee_nestedLoops3_instruction: Colectează tot nectarul din fiecare floare. Folosește o buclă imbricată. 
       courseD_bee_nestedLoops5_instruction: 'Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. '
