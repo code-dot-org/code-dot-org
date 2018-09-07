@@ -1193,3 +1193,15 @@ sr:
               name: Пчелица словарица
             Your Digital Footprint:
               name: Твој дигитални траг
+        frozen-2018:
+          stages:
+            Artist:
+              name: Уметник
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Уметник
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Уметник

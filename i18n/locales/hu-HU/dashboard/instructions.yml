@@ -405,6 +405,7 @@ hu:
       Artist - Nested Loops 8_instruction: 'Ismételd meg azt az alakzatot hatszor. Hány fokot kell elfordulnod ismétlésenként? (Tipp: Mennyi 360 osztva 6-tal?)'
       Artist - Nested Loops 9_instruction: Rajzold meg az alligátor alsó fogsorát!
       Artist - Nested Loops Assessment 1_instruction: Használj egymásba ágyazott ciklust az ábra befejezéséhez!
+      Artist Autorun Test_instruction: Használd az "ismételd" blokkot a három négyzet megrajzolásához.
       Artist Inspiration_instruction: "Szabad játék ihlet: Mindent megtanultál ahhoz, hogy egy ilyen mintát rajzolj. Ha ez ihletet ad neked, akkor rajzolj egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\\r\n\\r\nSzeretnéd tudni, hogyan készült az ihletül szolgáló minta? "
       Bee Recommended Blocks test_instruction: A lila virágokban 1 vagy 0 nektár lehet, de pontosan nem tudjuk. Vigyázz, ne gyűjts nektárt a lila virágból, ha nincs benne nektár! A "ha" blokkal ellenőrizd, hogy a nektárok száma egyenlő-e 1.
       Bergeron Robot Maze1_instruction: 'Tudsz segíteni nekem elkapni azt a rossz disznót? Pakolj egymás alá néhány "előrelépni" blokkot, és kattints a "Futtatás"-ra. '
@@ -1063,6 +1064,9 @@ hu:
       courseD_artist_binary6_2018_instruction: Melyik 6 jegyből álló bináris számsorozatot kell 11 alkalommal ismételned ennek a képnek a megrajzolásához?
       courseD_artist_binary7_instruction: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed, kirajzolja ezt a képet?
       courseD_artist_binary7_2018_instruction: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed, kirajzolja ezt a képet?
+      courseD_autorun_binary4_2019_instruction: Meg tudod rajzolni ezt a mintát mindössze három bináris számjegy (0 és 1) ismétlésével?
+      courseD_autorun_binary6_2019_instruction: Melyik 6 jegyből álló bináris számsorozatot kell 11 alkalommal ismételned ennek a képnek a megrajzolásához?
+      courseD_autorun_binary7_2019_instruction: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed, kirajzolja ezt a képet?
       courseD_bee_debugging3_instruction: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
       courseD_bee_nestedLoops3_instruction: Gyűjtsd össze az összes nektárt az összes virágról! Használj egymásba ágyazott ciklusokat!
       courseD_bee_nestedLoops5_instruction: 'Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden lépbe. Használj beágyazott ciklust!'

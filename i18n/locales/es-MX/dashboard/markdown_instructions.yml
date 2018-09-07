@@ -351,6 +351,7 @@ es-MX:
         texto para cuando el usuario haga clic en los diferentes botones. ¡Personaliza los colores
         o si quieres también puedes agregar imágenes!
       AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**Meta:**\nAgregar un segundo botón a la pantalla que dice \"¡Bien!\"\\r\n\\r\n**Cómo:** En\nmodo de diseño arrastrar en un nuevo botón. Posicionar y redimensionarlo. Luego configure su `\" texto \"`,\n`\" color de fondo \"`, y `\" tamaño de fuente \"\\r`\n\\r\n**Muéstrame:** "
+      Artist Autorun Test_markdown_instruction: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       Bergeron Robot Maze1_markdown_instruction: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \\r\n\\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona \"Ejecutar\". "
       CSD U3 - conditionals - arrows and gears_markdown_instruction: |-
         # Engranajes con Condicionales\r
@@ -2348,6 +2349,7 @@ es-MX:
         Usa lo que has aprendido para dibujar este triángulo deltro de un cuadrado.\r
         ___\r
         ##### Los lados son cada uno de 200 pixeles. Necesitarás girar en 90 grados para hacer el cuadrado y 120 grados para hacer el triángulo.
+      courseD_autorun_binary2_2019_markdown_instruction: "Aquí hay una función que toma un hilo binario de 1s y 0s e instruye al artista para que los siga de izquierda a derecha, de arriba hacia abajo.  \\r\n___\\r\nEl artista llenará los cuadrados cuando vea un 1 e ignorará el cuadrado cuando vea un 0. \\r\n___\\r\n**Ejecute este código para ver cómo el artista usa los binarios para dibujar este patrón.**"
       courseD_bee_conditionals1_markdown_instruction: |-
         *"¡Esta nube está bloqueando mi vista!"*\r
         \r

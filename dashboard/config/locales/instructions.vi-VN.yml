@@ -454,6 +454,8 @@ vi:
       4-5 Maze 8_instruction: Sử dụng khối "lặp lại" để đưa con zombie tới chỗ hoa
         hướng dương. (Tránh các Chompers!)
       App Lab test_instruction: kiểm thử
+      Artist Autorun Test_instruction: Bây giờ, đặt hàm vào trong một vòng lặp để
+        vẽ ba hình vuông.
       Auto Open Function Editor_instruction: 'Bạn có thể sử dụng chức năng từ bên
         trong các chức năng khác! Sử dụng chức năng "hình dạng" làm cơ sở, tạo ra
         3 nền nhà mỗi nền rộng 2o điểm ảnh, dài 50 điểm ảnh. Sử dụng một vòng lặp

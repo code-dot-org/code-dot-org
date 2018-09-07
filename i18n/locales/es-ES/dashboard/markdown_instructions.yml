@@ -368,6 +368,7 @@ es:
         texto para cuando el usuario haga clic en los diferentes botones. ¡Personaliza los colores
         o si quieres también puedes agregar imágenes!
       AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**Meta:**\nAgregar un segundo botón a la pantalla que dice \"¡Bien!\"\\r\n\\r\n**Cómo:** En\nmodo de diseño arrastrar en un nuevo botón. Posicionar y redimensionarlo. Luego configure su `\" texto \"`,\n`\" color de fondo \"`, y `\" tamaño de fuente \"\\r`\n\\r\n**Muéstrame:** "
+      Artist Autorun Test_markdown_instruction: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       Bergeron Robot Maze1_markdown_instruction: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso? \\r\n\\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea y presiona \"Ejecutar\". "
       CSD U3 - conditionals - arrows and gears_markdown_instruction: |-
         # Engranajes con Condicionales\r

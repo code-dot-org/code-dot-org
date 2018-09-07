@@ -901,6 +901,8 @@ pl:
       Artist - Nested Loops 9_instruction: Narysuj zęby w paszczy aligatora!
       Artist - Nested Loops Assessment 1_instruction: Użyj zagnieżdżonej pętli, aby
         ukończyć projekt.
+      Artist Autorun Test_instruction: Teraz, umieść funkcję w pętli, aby narysować
+        te 3 kwadraty.
       Artist Inspiration_instruction: "Dowolne inspiracje: Nauczyłeś się wszystkiego,
         co musisz wiedzieć, aby utworzyć podobny wzór! Jeśli ten obraz Cię inspiruje,
         to spróbuj utworzyć coś podobnego. W przeciwnym razie, utwórz coś według własnego
@@ -3116,6 +3118,15 @@ pl:
         lub trzy z rzędu!
       courseD_artist_project2_2018_instruction: Teraz weź swój kształt i narysuj go
         dwa lub trzy z rzędu!
+      courseD_autorun_binary4_2019_instruction: Czy potrafisz narysować ten wzorek
+        powtarzając binarny łańcuch złożony z trzech cyfr (0 lub 1)?
+      courseD_autorun_binary6_2019_instruction: Który 6-cyfrowy binarny łańcuch, powtórzony
+        11 razy, narysuje ten obraz?
+      courseD_autorun_binary7_2019_instruction: Jaki jest najkrótszy łańcuch binarny,
+        który możesz powtórzyć, by narysować ten obraz?
+      courseD_autorun_binary8_2019_instruction: Ukończ kod, aby utworzyć ten rysunek.
+      courseD_autorun_binary8_predict1_2019_instruction: Ukończ kod, aby utworzyć
+        ten rysunek.
       courseD_bee_conditionals1_instruction: Sprawdź, czy pod chmurką jest kwiat.
         Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_instruction: Sprawdź, czy pod chmurką jest

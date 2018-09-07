@@ -262,6 +262,10 @@ uk:
         frozen_circle_function_with_parameter_circle: Використай блок "створити коло" та зміни розмір фігури.
       frozen cross rotate_callout:
         replace_questions_degree: Скористайтесь розкривним списком, щоб змінити "???" на число
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Скористайтесь розкривним списком, щоб змінити "???" на число
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Скористайтесь розкривним списком, щоб змінити "???" на число
       frozen cross_callout:
         repeat_blocks_1: "(1) Використай цей блок, і розмісти його біля сірих блоків у робочій області"
         repeat_blocks_2: (2) Перемісти сюди блок "повторити", і розмісти у ньому сірі блоки
@@ -271,19 +275,45 @@ uk:
         frozen_diamond_repeat: Скористайтесь блоком повторення для створення цієї фігури.
       frozen freeplay_callout:
         snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні сніжинки!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні сніжинки!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні сніжинки!
       frozen line_callout:
+        move_elsa_forward: Перемісти блок "Рухатися вперед" та прикріпи його під блоком "Коли гра починається", щоб змусити Ельзу рухатися вперед
+      frozen line_b_callout:
+        move_elsa_forward: Перемісти блок "Рухатися вперед" та прикріпи його під блоком "Коли гра починається", щоб змусити Ельзу рухатися вперед
+      frozen line_test_callout:
         move_elsa_forward: Перемісти блок "Рухатися вперед" та прикріпи його під блоком "Коли гра починається", щоб змусити Ельзу рухатися вперед
       frozen perpendicular_callout:
         turn_elsa: Використайте блок "Повернути", щоб змусити Ельзу розвернутись. Число у розкривному списку визначає, наскільки повернеться Ельза
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Скористайтесь блоком "створити гілочку сніжинки"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Скористайтесь блоком "створити гілочку сніжинки"
       frozen square iterative_callout:
+        frozen_create_square: Додайте більше блоків, щоб вийшов квадрат
+      frozen square iterative_b_callout:
+        frozen_create_square: Додайте більше блоків, щоб вийшов квадрат
+      frozen square iterative_test_callout:
         frozen_create_square: Додайте більше блоків, щоб вийшов квадрат
       frozen square loop 3x_callout:
         replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
+      frozen square loop 3x_b_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
+      frozen square loop 3x_test_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
       frozen square loop_callout:
         replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
+      frozen square loop_b_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
+      frozen square loop_test_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
       frozen square snowflake_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
+      frozen square snowflake_b_callout:
+        replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
+      frozen square snowflake_test_callout:
         replace_questions: Скористайтесь розкривним списком, щоб змінити "???" на число
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту.

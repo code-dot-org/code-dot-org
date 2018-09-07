@@ -340,6 +340,10 @@ ru:
         frozen_circle_function_with_parameter_circle: Используй блок «создать круг» и меняй размер.
       frozen cross rotate_callout:
         replace_questions_degree: Используй раскрывающийся список, чтобы заменить «???» на число
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Используй раскрывающийся список, чтобы заменить «???» на число
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Используй раскрывающийся список, чтобы заменить «???» на число
       frozen cross_callout:
         repeat_blocks_1: "(1) Перемести этот блок на рабочее пространство и расположи его вокруг серых блоков"
         repeat_blocks_2: (2) Передвинь сюда блок «повторить» и расположи его вокруг серых блоков
@@ -349,20 +353,48 @@ ru:
         frozen_diamond_repeat: Используй блок «повторить» для создания этой фигуры.
       frozen freeplay_callout:
         snowflake_dropdown: Используй данный раскрывающийся список для создания разных снежинок!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Используй данный раскрывающийся список для создания разных снежинок!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Используй данный раскрывающийся список для создания разных снежинок!
       frozen line_callout:
+        run: Нажмите "Выполнить", чтобы запустить вашу программу!
+        move_elsa_forward: Возьми блок «двигаться вперед» и прицепи его к блоку «При запуске», чтобы Эльза пошла вперед
+      frozen line_b_callout:
+        run: Нажмите "Выполнить", чтобы запустить вашу программу!
+        move_elsa_forward: Возьми блок «двигаться вперед» и прицепи его к блоку «При запуске», чтобы Эльза пошла вперед
+      frozen line_test_callout:
         run: Нажмите "Выполнить", чтобы запустить вашу программу!
         move_elsa_forward: Возьми блок «двигаться вперед» и прицепи его к блоку «При запуске», чтобы Эльза пошла вперед
       frozen perpendicular_callout:
         turn_elsa: Используй блок «поворот», чтобы Эльза повернулась. Число в раскрывающемся списке означает, сколько раз Эльза повернется.
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Используй блок «создать ветвь снежинки»
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Используй блок «создать ветвь снежинки»
       frozen square iterative_callout:
+        frozen_create_square: Присоедини больше блоков, чтобы создать квадрат
+      frozen square iterative_b_callout:
+        frozen_create_square: Присоедини больше блоков, чтобы создать квадрат
+      frozen square iterative_test_callout:
         frozen_create_square: Присоедини больше блоков, чтобы создать квадрат
       frozen square loop 3x_callout:
         replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
+      frozen square loop 3x_b_callout:
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
+      frozen square loop 3x_test_callout:
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
       frozen square loop_callout:
         replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
+      frozen square loop_b_callout:
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
+      frozen square loop_test_callout:
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
       frozen square snowflake_callout:
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
+      frozen square snowflake_b_callout:
+        replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
+      frozen square snowflake_test_callout:
         replace_questions: Используй раскрывающийся список, чтобы заменить «???» на число
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет свой цветок. Вам вовсе не нужно проверять для этого соты.

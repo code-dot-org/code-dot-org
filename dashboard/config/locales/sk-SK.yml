@@ -400,7 +400,7 @@ sk:
       student: Študent
       viewing_solution: Prehliadnuť riešenie
       try_it_yourself: Skúste to sami
-      section: Sekcia
+      section: Trieda
       example: Príklad riešenia
       example_with_number: Príklad riešenia %{solution_number}
       submitted_on: 'Dátum odoslania:'
@@ -1330,6 +1330,8 @@ sk:
       workshop_course:
         csf_af: Základy informatiky (kurzy A-F)
         csf_express: Základy informatiky (skrátená verzia)
+        csd: Objavujeme Informatiku
+        csp: Princípy Informatiky
       email_opt_in:
         opt_in_yes: Áno
         opt_in_no: Nie

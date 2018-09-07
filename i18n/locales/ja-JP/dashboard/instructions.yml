@@ -406,6 +406,7 @@ ja:
       Artist - Nested Loops 6_instruction: 三角形のコードを繰り返す事で六角形を描けますか？
       Artist - Nested Loops 9_instruction: ワニの歯を書いてください！
       Artist - Nested Loops Assessment 1_instruction: 入れ子型の繰り返しを使ってこの絵を完成させてください。
+      Artist Autorun Test_instruction: この 3 つの正方形を「繰り返し」のブロックを使って描いてみましょう。
       Artist Inspiration_instruction: "自由に作ってみよう！あなたは、このようなパターンの作りかたを、すべて学びました。この絵が気に入ったら、にたデザインを作ってみて。自分のすきなように、作り直してもいいよ。\nヒントがほしいときは、ランプをクリックしてね。 "
       Bee Recommended Blocks test_instruction: 紫の花の蜜は、1（ある）か 0（ない） かのどちらかですが、どのお花に蜜がある（1である）のかは分かりません！蜜のない花から蜜を集めないように気をつけてください。蜜が 1 かどうかは、「もし」ブロックを使って確認しましょう。
       Bergeron Robot Maze1_instruction: 'いじわるなぶたを捕まえるのを手伝ってくれる? 「前に進む」をふたつ一緒に重ねて「実行」を押してみましょう。 '
@@ -1081,6 +1082,9 @@ ja:
       courseD_artist_binary7_2018_instruction: 一番短いバイナリ文字で、このイメージが書けるように考えて下さい。
       courseD_artist_embed_frozen_instruction: 雪の結晶のデザインを見るには実行を押しましょう！
       courseD_artist_embed_frozen2_instruction: 雪の結晶のデザインを見るには実行を押しましょう。
+      courseD_autorun_binary4_2019_instruction: 3ケタのバイナリ文字列（0と1が三つ）で、このパターンを書いて下さい。
+      courseD_autorun_binary6_2019_instruction: 6ケタのバイナリ文字列を、11回くりかして書けば、このイメージを書くことが出来ますよ。
+      courseD_autorun_binary7_2019_instruction: 一番短いバイナリ文字で、このイメージが書けるように考えて下さい。
       courseD_bee_debugging3_instruction: このブロックが気になります。蜜を集めてはちみつを作るためにエラーを直してください。
       courseD_bee_nestedLoops3_instruction: 入れ子の繰り返し（ネスト・ループ）を使って、それぞれの花からすべての花のみつを集めてください。　 
       courseD_bee_nestedLoops5_instruction: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "

@@ -250,6 +250,9 @@ fr:
           debout? '
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Chaque élément devra sa propre boucle « while ».
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque
+          carré pour compléer ce design.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Dans votre programme, vous pouvez appeler une fonction
           autant de fois que vous le voulez !  Essayez de l'appeler deux fois pour

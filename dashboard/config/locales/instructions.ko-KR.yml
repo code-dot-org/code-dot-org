@@ -681,6 +681,7 @@ ko:
       Artist - Nested Loops 6_instruction: 삼각형 코드를 반복시켜서 육각형을 그려 주세요.
       Artist - Nested Loops 9_instruction: 악어 입 안에 이빨을 그려주세요!
       Artist - Nested Loops Assessment 1_instruction: 중첩 반복을 사용해서 디자인을 완성시켜주세요.
+      Artist Autorun Test_instruction: 이제, 함수를 "반복" 블록 안에 넣고 3개의 사각형을 그려보세요.
       Artist Inspiration_instruction: "멋진 자유 플레이: 여러분들은 이런 패턴을 만들기 위해 필요한 모든 것들을 배웠습니다.\n이
         그림이 멋지다고 생각하면, 비슷하게 다른 것을 만들어보세요. 아니면, 만들고 싶은 것을\n만들어보세요.\r\n\r\n이런 멋진 패턴이
         어떻게 만들어졌는지 궁금한가요? "
@@ -1975,6 +1976,11 @@ ko:
       courseD_artist_binary7_instruction: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진 문자열은
         어떤 것 일까요?
       courseD_artist_binary7_2018_instruction: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진
+        문자열은 어떤 것 일까요?
+      courseD_autorun_binary4_2019_instruction: 3개의 2진수(0 또는 1) 를 반복시켜서 이 패턴을 그려주세요.
+      courseD_autorun_binary6_2019_instruction: 이 이미지를 그리기 위해 11번을 반복 시킬 수 있는 6자리
+        2진 문자열은 어떤 것 일까요?
+      courseD_autorun_binary7_2019_instruction: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진
         문자열은 어떤 것 일까요?
       courseD_bee_debugging3_instruction: 모든 꽃꿀들을 모아 꿀을 만들 수 있도록 오류(들)을 고쳐주세요.
       courseD_bee_nestedLoops3_instruction: "각 꽃에서 꽃꿀을 모두 모아주세요.\n반복을 중첩해서 사용하면 됩니다. "

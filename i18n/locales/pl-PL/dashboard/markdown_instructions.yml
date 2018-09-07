@@ -195,6 +195,7 @@ pl:
       4-5 While Loops 4_markdown_instruction: "Wow, popatrz! \\r \\r Nie wiem, ile szufelek śmieci potrzebuje ten otwór.  \\r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\" aż wypełni ten otwór do poziomu ziemi?  "
       Alien Defender_markdown_instruction: "**Idea projektu**: Stwórz grę obronną w Play Lab!"
       Alien Defender_2018_markdown_instruction: "**Idea projektu**: Stwórz grę obronną w Play Lab!"
+      Artist Autorun Test_markdown_instruction: Teraz, umieść funkcję w pętli, aby narysować te 3 kwadraty.
       CSD U3 Entertainment Sample 3_markdown_instruction: |
         # Animowany Komiks\r 
         \r 

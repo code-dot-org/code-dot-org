@@ -3563,3 +3563,19 @@ zh-TW:
               name: 你的數位足跡
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie 和 Big Project
+        frozen-2018:
+          stages:
+            Artist:
+              name: 藝術家
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: 藝術家
+        dance:
+          stages:
+            new stage:
+              name: 新的階段
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: 藝術家

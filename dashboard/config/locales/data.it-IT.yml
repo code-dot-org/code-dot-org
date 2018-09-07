@@ -321,7 +321,7 @@ it:
           sostituiscilo con qualcosa di totalmente diverso)
         maze_3_1: Ho bisogno di arrivare a quel maiale! Digita un paio di volte l'istruzione
           "avanza()" in modo da riprendere le mie uova.
-        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maiale.
+        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maialino.
         maze_3_3: Come posso arrivare al maiale? Assicurati che non vada a sbattere
           contro la cassetta di dinamite (TNT)!
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della
@@ -807,7 +807,7 @@ it:
         CSF_loops_AB: Ripetizioni
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
-        CSF_SpriteLabIntro_CDEF: Questo è il Laboratori dei Personaggi
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei Personaggi
         CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio
           dei Personaggi
         CDEF_Video_SpritesInAction: Personaggi in Azione

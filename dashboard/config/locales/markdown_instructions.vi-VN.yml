@@ -2,6 +2,10 @@
 vi:
   data:
     markdown_instructions:
+      "'pre-assessment survey q25A'_markdown_instruction": 'Nếu đã từng học, bạn
+        đã tham gia khóa Khoa Học Máy Tính nào trước khóa học hiện tại?
+
+'
       2-3 Artist 1 new_markdown_instruction: "Chào, tôi là một họa sĩ. Tôi có thể
         vẽ hầu như mọi thứ theo những dòng lệnh bạn viết. Hãy sử dụng các khối lệnh
         để giúp tôi vẽ các đường thẳng màu xám. (Mỗi đường dài 100 pixel)\r \n\r\n"
@@ -201,6 +205,8 @@ vi:
         cung cấp?
       4-5 Artist 6_markdown_instruction: Tam giác đều này có các góc là 60, 60, và
         60 độ. Mỗi cạnh là 200 pixel. Hoàn tất bản vẽ.
+      Artist Autorun Test_markdown_instruction: Bây giờ, đặt hàm vào trong một vòng
+        lặp để vẽ ba hình vuông.
       K-1 Bee Loops 2_markdown_instruction: Sử dụng một vòng lặp để di chuyển và sau
         đó lấy mật hoa và làm mật ong!
       K-1 Bee Loops 3_markdown_instruction: Sử dụng vòng để lấy mật hoa và làm mật

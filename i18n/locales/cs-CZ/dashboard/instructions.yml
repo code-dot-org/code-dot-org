@@ -401,6 +401,7 @@ cs:
       Artist - Nested Loops 6_instruction: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
       Artist - Nested Loops 9_instruction: Nakresli zuby v tlamě aligátora!
       Artist - Nested Loops Assessment 1_instruction: Použij vnořené cykly k dokončení návrhu.
+      Artist Autorun Test_instruction: Použij blok "opakování" k nakreslení těchto 3 čtverců.
       Artist Inspiration_instruction: "Volná hra inspirace: Nyní už víš vše, co potřebuješ vědět, abys udělal tento vzor! Pokud tento obrázek tě inspiruje, pokus se provést něco podobného. Jinak, vytvoř něco, co všechny vlastníš. \\r \\r Chtěj vědět, jak náš vzor byl udělán pro inspiraci? "
       Auto Open Function Editor_instruction: 'Můžeš volat funkci uvnitř jiné funkce! Pomocí funkce "tvar" jako základ, vytvoř 3 tvary domu každý o 20 pixelů větší než poslední, začíná se na délce 50 pixelů. Použití čítače cyklu mohlo by být užitečné. '
       Bee Recommended Blocks test_instruction: Fialové květiny mohou mít buď 1 nebo 0 nektaru, ale neznáš, který je z nich! Buď opatrný nesbírej nektar z fialového květu, nemá-li jej. Zkontroluj, zda nektar je roven 1 pomocí if bloku.
@@ -1140,6 +1141,9 @@ cs:
       courseD_artist_binary6_2018_instruction: Který 6 číslicový binární řetězec 11 krát opakovaný nakreslí tento obrázek?
       courseD_artist_binary7_instruction: Jaký je nejkratší binární řetězec, který lze opakovat k nakreslení tohoto obrázku?
       courseD_artist_binary7_2018_instruction: Jaký je nejkratší binární řetězec, který lze opakovat k nakreslení tohoto obrázku?
+      courseD_autorun_binary4_2019_instruction: Mohl bys nakreslit tento vzor opakováním tří číslicovým binárním řetězcem?
+      courseD_autorun_binary6_2019_instruction: Který 6 číslicový binární řetězec 11 krát opakovaný nakreslí tento obrázek?
+      courseD_autorun_binary7_2019_instruction: Jaký je nejkratší binární řetězec, který lze opakovat k nakreslení tohoto obrázku?
       courseD_bee_debugging3_instruction: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
       courseD_bee_nestedLoops3_instruction: Sesbírat všechen nektar z každého květu. Použij vnořené cykly. 
       courseD_bee_nestedLoops5_instruction: 'Sesbírat všechen nektar z každého květu a udělat med na každé plástvi. Použij vnořené cykly. '

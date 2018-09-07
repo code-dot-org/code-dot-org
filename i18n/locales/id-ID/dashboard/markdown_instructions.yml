@@ -301,6 +301,7 @@ id:
       AppLab Intro 2 - Try Cat Commander_markdown_instruction: "Inilah kode seperti untuk Kucing Komandan. Luangkan waktu satu menit untuk membaca kode\ndan melihat jika anda dapat memahami cara kerjanya. Berbicara tentang hal itu dengan pasangan programer.\nPola kerjakan apa yang anda ihat? \\r\n\\r\nSetelah anda selesai, lanjutkan dengan mengklik \"Run\"\nlalu \"Finish\", untuk belajar membangun petualangan anda sendiri."
       AppLab Intro 4 - Video share your work_markdown_instruction: "# buat dan bagikan aplikasi anda!"
       AppLab Intro 4 - Video share_markdown_instruction: "# buat dan bagikan aplikasi anda!"
+      Artist Autorun Test_markdown_instruction: "Sekarang, letakkan fungsinya ke dalam\nsebuah lingkaran untuk menggambar tiga kotak yang ini."
       Bergeron Robot Maze1_markdown_instruction: "Dapatkah Anda membantu saya menangkap babi nakal ? \\ r \n\\ r \nStack \nsebuah beberapa ` langkah forward` blok  bawah yang` ketika run` blok dan tekan \"Run\".\n \n"
       CSD U3 Keypress Watchers Predict_markdown_instruction: |-
         Membuat sebua Prediksi:

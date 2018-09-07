@@ -903,6 +903,12 @@ fil:
       frozen cross rotate_callout:
         replace_questions_degree: Gamitin ang drop-down para mapalitan ang "???" na
           isang numero
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Gamitin ang drop-down para mapalitan ang "???" na
+          isang numero
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Gamitin ang drop-down para mapalitan ang "???" na
+          isang numero
       frozen cross_callout:
         repeat_blocks_1: "(1) Gamitin ang blokeng ito at ilagay sa paligid ng mga
           abong bloke sa loob ng workspace"
@@ -917,7 +923,21 @@ fil:
       frozen freeplay_callout:
         snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
           mga snowflakes!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
       frozen line_callout:
+        run: Pindutin ang "Run" para masubukan ang iyong programa!
+        move_elsa_forward: Mag-drag ng "Move Forward" na bloke at daklutin ito sa
+          baba ng "When Run" na bloke para mapasulong si Elsa
+      frozen line_b_callout:
+        run: Pindutin ang "Run" para masubukan ang iyong programa!
+        move_elsa_forward: Mag-drag ng "Move Forward" na bloke at daklutin ito sa
+          baba ng "When Run" na bloke para mapasulong si Elsa
+      frozen line_test_callout:
         run: Pindutin ang "Run" para masubukan ang iyong programa!
         move_elsa_forward: Mag-drag ng "Move Forward" na bloke at daklutin ito sa
           baba ng "When Run" na bloke para mapasulong si Elsa
@@ -926,16 +946,42 @@ fil:
           nasa drop-down ang magtutukoy kung ilang ulit iikot si Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Gamitin ang "create a snowflake brach" na bloke
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Gamitin ang "create a snowflake brach" na bloke
       frozen square iterative_callout:
+        frozen_create_square: Maglakip ng marami pang mga bloke dito para makalikha
+          ng isang parisukat
+      frozen square iterative_b_callout:
+        frozen_create_square: Maglakip ng marami pang mga bloke dito para makalikha
+          ng isang parisukat
+      frozen square iterative_test_callout:
         frozen_create_square: Maglakip ng marami pang mga bloke dito para makalikha
           ng isang parisukat
       frozen square loop 3x_callout:
         replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
           numero
+      frozen square loop 3x_b_callout:
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
+      frozen square loop 3x_test_callout:
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       frozen square loop_callout:
         replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
           numero
+      frozen square loop_b_callout:
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
+      frozen square loop_test_callout:
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
       frozen square snowflake_callout:
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
+      frozen square snowflake_b_callout:
+        replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
+          numero
+      frozen square snowflake_test_callout:
         replace_questions: Gamitin ang drop-down para mapalitan ang "???" na isang
           numero
       grade1_artist_loops2_callout:
