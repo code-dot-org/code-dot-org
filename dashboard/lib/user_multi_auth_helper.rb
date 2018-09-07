@@ -3,6 +3,44 @@ module UserMultiAuthHelper
     migrate_to_multi_auth if CDO.new_users_use_multi_auth
   end
 
+  def create_or_update_oauth_tokens(provider:, oauth_token:, oauth_token_expiration:, oauth_refresh_token:, uid:, email:)
+    if migrated?
+      authentication_option = AuthenticationOption.find_by(
+        credential_type: provider,
+        user_id: id
+      )
+
+      data_json = {
+        oauth_token: oauth_token,
+        oauth_token_expiration: oauth_token_expiration,
+        oauth_refresh_token: oauth_refresh_token
+      }.to_json
+
+      if authentication_option
+        return authentication_option.update(
+          data: data_json
+        )
+      else
+        return authentication_option.create(
+          user: self,
+          email: email,
+          credential_type: provider,
+          authentication_id: uid,
+          data: data_json
+        )
+      end
+    else
+      return false unless self.provider == provider
+      update(
+        provider: auth_hash.provider.to_s,
+        uid: auth_hash.uid,
+        oauth_token: oauth_token,
+        oauth_token_expiration: oauth_token_expiration,
+        oauth_refresh_token: oauth_refresh_token
+      )
+    end
+  end
+
   def oauth_tokens_for_provider(provider)
     if migrated?
       authentication_option = AuthenticationOption.find_by(

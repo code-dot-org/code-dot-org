@@ -205,40 +205,20 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return unless move_sections_and_destroy_source_user(oauth_user, @user)
     end
 
-    if @user.migrated?
-      success = AuthenticationOption.create(
-        user: @user,
-        email: lookup_email,
-        credential_type: auth_hash.provider.to_s,
-        authentication_id: auth_hash.uid,
-        data: {
-          oauth_token: auth_hash.credentials&.token,
-          oauth_token_expiration: auth_hash.credentials&.expires_at,
-          oauth_refresh_token: auth_hash.credentials&.refresh_token
-        }.to_json
+    success = create_or_update_oauth_tokens(
+      provider: auth_hash.provider.to_s,
+      oauth_token: auth_hash.credentials&.token,
+      oauth_token_expiration: auth_hash.credentials&.expires_at,
+      oauth_refresh_token: auth_hash.credentials&.refresh_token,
+      uid: auth_hash.uid,
+      email: lookup_email
+    )
+
+    unless success
+      Honeybadger.notify(
+        error_class: 'Failed to save credentials during silent takeover',
+        error_message: "Could not save oauth credentials during silent takeover for user with email #{lookup_email} and user ID #{@user.id}"
       )
-      unless success
-        # This should never happen if other logic is working correctly, so notify
-        Honeybadger.notify(
-          error_class: 'Failed to create AuthenticationOption during silent takeover',
-          error_message: "Could not create AuthenticationOption during silent takeover for user with email #{lookup_email}"
-        )
-      end
-    else
-      success = @user.update(
-        provider: auth_hash.provider.to_s,
-        uid: auth_hash.uid,
-        oauth_token: auth_hash.credentials&.token,
-        oauth_token_expiration: auth_hash.credentials&.expires_at,
-        oauth_refresh_token: auth_hash.credentials&.refresh_token
-      )
-      unless success
-        # This should never happen if other logic is working correctly, so notify
-        Honeybadger.notify(
-          error_class: 'Failed to update User during silent takeover',
-          error_message: "Could not update user during silent takeover for user with email #{lookup_email}"
-        )
-      end
     end
   end
 
