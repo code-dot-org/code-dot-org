@@ -8,7 +8,7 @@ export const DEFAULT_EXECUTION_INFO = {
   ticks: DEFAULT_MAX_STEPS,
   checkTimeout: function () {
     if (this.ticks-- < 0) {
-      throw 'Infinity';
+      throw new Error('Infinity');
     }
   },
   isTerminated: () => false,
