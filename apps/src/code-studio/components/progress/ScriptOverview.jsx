@@ -48,13 +48,14 @@ class ScriptOverview extends React.Component {
     currentCourseId: PropTypes.number,
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
   };
 
   render() {
     const {
       onOverviewPage,
       excludeCsfColumnInLegend,
-      hiddenFromSectionIds,
+      hiddenStageState,
       teacherResources,
       perLevelProgress,
       scriptCompleted,
@@ -104,7 +105,7 @@ class ScriptOverview extends React.Component {
               viewAs={viewAs}
               isRtl={isRtl}
               resources={teacherResources}
-              hiddenFromSectionIds={hiddenFromSectionIds}
+              hiddenStageState={hiddenStageState}
             />
           </div>
         )}
@@ -132,4 +133,5 @@ export default connect(state => ({
   currentCourseId: state.progress.courseId,
   scriptHasLockableStages: state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
   scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
+  hiddenStageState: state.hiddenStage,
 }))(UnconnectedScriptOverview);

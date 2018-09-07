@@ -262,5 +262,5 @@ function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
     sectionId = STUDENT_SECTION_ID;
   }
   const bySection = state.get(bySectionKey);
-  return !!bySection.getIn([sectionId, itemId.toString()]);
+  return !!bySection.getIn([sectionId.toString(), itemId.toString()]);
 }

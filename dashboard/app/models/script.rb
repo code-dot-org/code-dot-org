@@ -1101,7 +1101,7 @@ class Script < ActiveRecord::Base
       show_script_version_warning: !user_script&.version_warning_dismissed && !has_older_course_progress && has_older_script_progress,
       versions: summarize_versions,
       supported_locales: supported_locales,
-      hidden_from_section_ids: hidden_from_section_ids,
+      section_hidden_unit_info: section_hidden_unit_info,
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -1112,8 +1112,9 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  def hidden_from_section_ids
-    SectionHiddenScript.where(script_id: id).pluck(:section_id)
+  def section_hidden_unit_info
+    hidden_section_ids = SectionHiddenScript.where(script_id: id).pluck(:section_id)
+    hidden_section_ids.map {|section_id| [section_id, [id]]}.to_h
   end
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted
