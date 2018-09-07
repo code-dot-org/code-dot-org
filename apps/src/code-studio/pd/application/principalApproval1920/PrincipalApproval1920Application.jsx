@@ -1,6 +1,6 @@
 import {PropTypes} from 'react';
 import FormController from '../../form_components/FormController';
-import PrincipalApprovalComponent from '../PrincipalApprovalComponent';
+import PrincipalApproval1920Component from './PrincipalApproval1920Component';
 
 export default class PrincipalApproval1920Application extends FormController {
   static propTypes = {
@@ -34,7 +34,7 @@ export default class PrincipalApproval1920Application extends FormController {
    */
   getPageComponents() {
     return [
-      PrincipalApprovalComponent
+      PrincipalApproval1920Component
     ];
   }
 
