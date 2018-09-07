@@ -12,27 +12,35 @@ module UsersHelper
   ACCT_TAKEOVER_OAUTH_TOKEN = 'clever_takeover_token'
   ACCT_TAKEOVER_FORCE_TAKEOVER = 'force_clever_takeover'
 
-  # Move followed sections from old_user to new_user and destroy old_user
-  def move_sections_and_destroy_old_user(old_user, new_user)
-    # No-op if old_user is nil
-    return true unless old_user.present?
+  # Move followed sections from source_user to destination_user and destroy source_user.
+  # Returns a boolean - true if all steps were successful, false otherwise.
+  def move_sections_and_destroy_source_user(source_user, destination_user)
+    # No-op if source_user is nil
+    return true unless source_user.present?
 
-    if old_user.has_activity?
+    if source_user.has_activity?
       # We don't want to destroy an account with progress.
       # In theory this should not happen, so we log a Honeybadger error and return.
       Honeybadger.notify(
         error_class: 'Oauth takeover called for user with progress',
-        error_message: "Attempted to take over account with id #{old_user.id}, which has activity"
+        errors_message: "Attempted takeover for account with progress. Cancelling takeover of account with id #{source_user.id} by id #{destination_user.id}"
       )
       return false
     end
 
-    # Move over sections that old_user follows
-    if new_user.student?
-      Follower.where(student_user_id: old_user.id).update_all(student_user_id: new_user.id)
-    end
+    ActiveRecord::Base.transaction do
+      # Move over sections that source_user follows
+      if destination_user.student?
+        Follower.where(student_user_id: source_user.id).each do |followed|
+          followed.update!(student_user_id: destination_user.id)
+        end
+      end
 
-    old_user.destroy! ? true : false
+      source_user.destroy!
+      true
+    end
+  rescue
+    false
   end
 
   # If Clever takeover flags are present, the current account (user) is the one that the person just
@@ -45,8 +53,8 @@ module UsersHelper
       clear_takeover_session_variables
 
       existing_account = User.find_by_credential(type: provider, id: uid)
-      # No-op if move_sections_and_destroy_old_user fails
-      return unless move_sections_and_destroy_old_user(existing_account, user)
+      # No-op if move_sections_and_destroy_source_user fails
+      return unless move_sections_and_destroy_source_user(existing_account, user)
 
       if user.migrated?
         success = user.add_credential(
