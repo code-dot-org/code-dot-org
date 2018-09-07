@@ -467,10 +467,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:student, email: email)
-    google_classroom_student = create(:student, :unmigrated_google_sso, uid: uid)
-    google_classroom_student.update!(hashed_email: '')
-    google_classroom_section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
-    google_classroom_section.students << google_classroom_student
+    google_classroom_student = create(:student, :imported_from_google_classroom, uid: uid)
+    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -481,7 +479,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'google_oauth2', user.provider
     assert_equal user.uid, uid
-    assert_equal [google_classroom_section.id], user.sections_as_student.pluck(:id)
+    assert_equal [google_classroom_section&.id], user.sections_as_student.pluck(:id)
   end
 
   test 'login: google_oauth2 silently takes over unmigrated teacher with matching email' do
@@ -519,10 +517,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:student, :with_migrated_email_authentication_option, email: email)
-    google_classroom_student = create(:student, :with_migrated_google_authentication_option, uid: uid)
-    google_classroom_student.primary_contact_info.update!(email: '', hashed_email: '')
-    google_classroom_section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
-    google_classroom_section.students << google_classroom_student
+    google_classroom_student = create(:student, :migrated_imported_from_google_classroom, uid: uid)
+    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -534,7 +530,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
     assert found_google
-    assert [google_classroom_section.id], user.sections_as_student.pluck(:id)
+    assert [google_classroom_section&.id], user.sections_as_student.pluck(:id)
   end
 
   test 'login: google_oauth2 silently adds authentication_option to migrated teacher with matching email' do

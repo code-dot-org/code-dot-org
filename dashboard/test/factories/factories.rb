@@ -252,6 +252,26 @@ FactoryGirl.define do
         end
       end
 
+      trait :imported_from_google_classroom do
+        unmigrated_google_sso
+        after(:create) do |user|
+          user.update!(email: '', hashed_email: '')
+          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
+      trait :migrated_imported_from_google_classroom do
+        with_migrated_google_authentication_option
+        after(:create) do |user|
+          user.primary_contact_info.update!(email: '', hashed_email: '')
+          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :without_email do
         email ''
         hashed_email nil
