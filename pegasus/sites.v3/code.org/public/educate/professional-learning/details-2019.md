@@ -110,7 +110,7 @@ Participants will engage with the curriculum both as instructors and as learners
 ​ <summary>**Join the community of educators**</summary>
 ​ <p>
 ​<br>
-​In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. 
+​All teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. 
 ​</p>
 ​ <p>
 To help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time.
@@ -154,11 +154,7 @@ Be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX-1vS
 
 ## <a name="apply"></a>Ready to apply?
 
-Regional Partners throughout the US are hosting the Professional Learning Program in your area
-
-Enter your zip code below to get details about the Professional Learning Program in your local region.
-
-
+The Professional Learning Program is hosted by Code.org Regional Partners across the US.
 
 Want to get notified when applications open? Provide your contact information to a Regional Partner.
 
