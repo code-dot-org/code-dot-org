@@ -86,6 +86,7 @@ include_recipe 'cdo-varnish'
 include_recipe 'cdo-cloudwatch-extra-metrics'
 include_recipe 'cdo-cloudwatch-logger' if node[:ec2]
 
+include_recipe 'cdo-apps::jemalloc' if node['cdo-apps']['jemalloc']
 include_recipe 'cdo-apps::bundle_bootstrap'
 include_recipe 'cdo-apps::build'
 
