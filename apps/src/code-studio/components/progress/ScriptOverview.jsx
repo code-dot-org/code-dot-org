@@ -22,7 +22,6 @@ class ScriptOverview extends React.Component {
   static propTypes = {
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
-    hiddenFromSectionIds: PropTypes.arrayOf(PropTypes.number),
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
