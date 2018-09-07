@@ -1,0 +1,24 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenTouchesAny",
+    "blockText": "while{TARGET} is touching any sprite\n{STATEMENT}",
+    "args": [
+      {
+        "name": "TARGET",
+        "type": "Sprite",
+        "defer": true
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ],
+    "eventBlock": true
+  }
+}

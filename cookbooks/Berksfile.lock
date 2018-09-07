@@ -1,5 +1,6 @@
 DEPENDENCIES
   apt (~> 2.6.0)
+  ark (< 4.0.0)
   build-essential (~> 2.1.3)
   cdo-analytics
     path: cdo-analytics
@@ -23,6 +24,8 @@ DEPENDENCIES
     path: cdo-i18n
   cdo-java-7
     path: cdo-java-7
+  cdo-jemalloc
+    path: cdo-jemalloc
   cdo-mysql
     path: cdo-mysql
   cdo-networking
@@ -72,7 +75,7 @@ GRAPH
   cdo-analytics (0.0.0)
     apt (~> 2.6.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.312)
+  cdo-apps (0.2.313)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
@@ -80,6 +83,7 @@ GRAPH
     cdo-cloudwatch-logger (>= 0.0.0)
     cdo-i18n (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
+    cdo-jemalloc (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
     cdo-networking (>= 0.0.0)
     cdo-nginx (>= 0.0.0)
@@ -112,6 +116,8 @@ GRAPH
     cdo-java-7 (>= 0.0.0)
   cdo-java-7 (0.1.1)
     build-essential (>= 0.0.0)
+  cdo-jemalloc (0.1.1)
+    ark (>= 0.0.0)
   cdo-mysql (0.1.11)
     apt (~> 2.6.0)
   cdo-networking (0.1.1)
