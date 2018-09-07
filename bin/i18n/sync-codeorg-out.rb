@@ -38,6 +38,7 @@ def rename_from_crowdin_name_to_locale
 end
 
 def restore_redacted_files
+  total_locales = Languages.get_locale.count
   Languages.get_locale.each_with_index do |prop, i|
     locale = prop[:locale_s]
     print "#{CLEAR}Restoring #{locale} (#{i}/#{total_locales})"
@@ -53,7 +54,7 @@ def restore_redacted_files
       if redacted_path == 'i18n/locales/redacted/dashboard/blocks.yml'
         plugin = 'blockfield'
       end
-      restore(source_path, redacted_path, translated_path, plugin)
+      restore(source_path, translated_path, translated_path, plugin)
     end
   end
 end
