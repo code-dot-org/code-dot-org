@@ -16,6 +16,13 @@ var songs = {
     verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
     chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
   },
+  macklemore90: {
+    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/hold.mp3',
+    bpm: 146,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
+    chorus: [65.75] // Array of timestamps in seconds where choruses occur
+  },
   hammer: {
     url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/touch.mp3',
     bpm: 133,
