@@ -877,6 +877,8 @@ ka:
       Artist - Nested Loops 9_instruction: დახატეთ კბილები ალიგატორის პირში!
       Artist - Nested Loops Assessment 1_instruction: დიზაინის დასამთავრებლად გამოიყენეთ
         ჩასმული ციკლი.
+      Artist Autorun Test_instruction: ახლა კი ჩასვით ფუნქცია ციკლში ამ 3 კვადრატის
+        დასახატად.
       Artist Inspiration_instruction: "თავისუფალი შთაგონება:\nუკვე ყველაფერი იცით
         იმისთვის, რომ ასეთი ნიმუშები შექმნათ! თუ ეს სურათი შთაგაგონებთ, სცადეთ შექმნათ
         რამე მსგავსი. ან გააკეთეთ რამე თქვენი ფანტაზიის მიხედვით.\r\n\r\nგაინტერესებთ,
@@ -4052,6 +4054,23 @@ ka:
       courseD_artist_ramp11_instruction: ახლა კი მხატვრის გამოყენებით შექმენით კვადრატი!
       courseD_artist_ramp12_instruction: ნასწავლი მასალის გამოყენებით ჩახატეთ კვადრატში
         სამკუთხედი.
+      courseD_autorun_binary2_2019_instruction: გაუშვით ეს კოდი და ნახეთ როგორ იყენებს
+        მხატვარი ორობითს ამ შაბლონის დასახატად.
+      courseD_autorun_binary3_2019_instruction: რომელი ორობითი სტრიქონი უნდა გაატაროთ
+        ციკლში 8-ჯერ ამ სურათის დასახატად?
+      courseD_autorun_binary4_2019_instruction: შეგიძლიათ დახატოთ ეს ნიმუში სამი ორობითი
+        რიცხვის (0 და 1) ციკლში გატარებით?
+      courseD_autorun_binary5_2019_instruction: "თითოეული ორობითი ხაზი წარმოადგენს
+        ამ სურათის ერთ სტრიქონს. \n\nშეგიძლიათ მათი გადანაცვლება ისე, რომ მოწყენილი
+        სახის მაგივრად გაღიმებული დაიხატოს?"
+      courseD_autorun_binary6_2019_instruction: რომელი ექვსნიშნა ორობითი ხაზი დახატავს
+        ამ სურათს 11-ჯერ გამეორებით?
+      courseD_autorun_binary7_2019_instruction: რომელია უმოკლესი ორობითი ხაზი, რომელიც
+        შეგიძლიათ გაიმეოროთ ამ სურათის დასახატად?
+      courseD_autorun_binary8_2019_instruction: ამ ნახატის შესაქმნელად დაასრულეთ მოცემული
+        კოდი.
+      courseD_autorun_binary8_predict1_2019_instruction: ამ ნახატის შესაქმნელად დაასრულეთ
+        მოცემული კოდი.
       courseD_bee_conditionals1_instruction: შეამოწმეთ არის თუ არა ღრუბლის ქვეშ ყვავილი.
         თუ არის, შეაგროვეთ ნექტარი.
       courseD_bee_conditionals1_predict1_instruction: შეამოწმეთ არის თუ არა ღრუბლის

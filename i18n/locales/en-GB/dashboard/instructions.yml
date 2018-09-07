@@ -149,6 +149,7 @@ en-GB:
       4-5 Maze 13_instruction: Get me to the pig!
       4-5 Maze 6_instruction: "Get me to the sunflower using the fewest number\nof blocks possible!"
       App Lab test_instruction: test
+      Artist Autorun Test_instruction: "Now, put the function inside of a loop\nto draw these three squares."
       Bergeron Robot Maze1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof `move forward` blocks below the `when run` block and press \"Run\". "
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar from these flowers? "
       Function intro Ryan_instruction: Use the `build bridge` function twice to make a path to the torch.

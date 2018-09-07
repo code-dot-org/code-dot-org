@@ -296,6 +296,9 @@ en-GB:
         Get me to the sunflower using the fewest number
         of blocks possible!
       App Lab test_instruction: test
+      Artist Autorun Test_instruction: |-
+        Now, put the function inside of a loop
+        to draw these three squares.
       Bergeron Robot Maze1_instruction: "Can you help me catch the naughty pig? Stack
         a couple\nof `move forward` blocks below the `when run` block and press \"Run\". "
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar

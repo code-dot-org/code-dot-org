@@ -159,6 +159,8 @@ ca:
         tenir 1, 2 o 3 nèctars. Completa la funció "comprovar la flor lila" i utilitzar-la
         per recollir tots els nèctar de les flors.
       4-5 Maze 9_markdown_instruction: crea un bucle amb el bloc "repeteix fins que".
+      Artist Autorun Test_markdown_instruction: Usa el bloc "repeteix" per dibuixar
+        aquests tres quadrats.
       Course 4 Artist 13_markdown_instruction: Tens encara ganes de jugar? Aquí hi
         ha un llenç en blanc perquè hi dissenyis el que prefereixis!
       Course 4 Artist 6_markdown_instruction: Acaba el programa per dibuixar aquests

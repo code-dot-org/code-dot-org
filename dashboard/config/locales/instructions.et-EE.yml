@@ -830,6 +830,8 @@ et:
       Artist - Nested Loops 9_instruction: Joonista alligaatori suhu hambad!
       Artist - Nested Loops Assessment 1_instruction: Kasuta projekti lõpetamiseks
         pesastatud tsüklit.
+      Artist Autorun Test_instruction: Nüüd pane funktsioon tsükli sisse, et joonistada
+        3 ruutu.
       Artist Inspiration_instruction: "Vaba mängu inspiratsioon: oled nüüd õppinud
         kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib,
         proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\r
@@ -2414,6 +2416,12 @@ et:
       courseD_artist_binary7_instruction: Milline on lühim kahendstring, mida sa saad
         selle pildi joonistamiseks korrata?
       courseD_artist_binary7_2018_instruction: Milline on lühim kahendstring, mida
+        sa saad selle pildi joonistamiseks korrata?
+      courseD_autorun_binary4_2019_instruction: Kas oskad selle mustri joonistada,
+        korrates kolme kahekohalist arvu?
+      courseD_autorun_binary6_2019_instruction: Milline kuuekohaline kahendstring
+        joonistab 11 korda korratuna selle pildi?
+      courseD_autorun_binary7_2019_instruction: Milline on lühim kahendstring, mida
         sa saad selle pildi joonistamiseks korrata?
       courseD_bee_debugging3_instruction: Parandage viga(vead) ja koguge kokku kogu
         õietolm ning tehke kogu mesi.

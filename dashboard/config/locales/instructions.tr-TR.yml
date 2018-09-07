@@ -847,6 +847,8 @@ tr:
       Artist - Nested Loops 9_instruction: Timsahın ağzına dişleri çiz!
       Artist - Nested Loops Assessment 1_instruction: Tasarımı tamamlamak için iç
         içe geçmiş bir döngü kullanmayı deneyin.
+      Artist Autorun Test_instruction: Şimdi bu üç kareyi çizmek için fonksiyonu döngü
+        içine koy.
       Artist Inspiration_instruction: "Serbest ilham zamanı. Bu deseni oluşturmak
         için gerekli herşeyi öğrendin. Eğer bu resim ilham veriyorsa benzer birşeyler
         yapmaya çalış. Yoksa kendi tasarımını yap.\r\n\r\nİlham alınan tasarımın kodunu
@@ -3772,6 +3774,16 @@ tr:
       courseD_artist_ramp11_instruction: Şimdi sanatçıyı kullanarak bir kare oluşturun!
       courseD_artist_ramp12_instruction: Bu üçgeni içinde bir kare çizmek öğrendiklerini
         kullanın.
+      courseD_autorun_binary4_2019_instruction: Bu deseni çizmek için 3 basamaklı
+        diziyi döngü de kullanabilir misin?
+      courseD_autorun_binary6_2019_instruction: Hangi 6 basamaklı ikili dizgi 11 kez
+        tekrarlandığında bu resim oluşacak?
+      courseD_autorun_binary7_2019_instruction: Bu şekli tamamlamak için gerekli en
+        kısa ikili dizge hangisidir?
+      courseD_autorun_binary8_2019_instruction: Bu çizimi oluşturmak için bu kodu
+        bitir.
+      courseD_autorun_binary8_predict1_2019_instruction: Bu çizimi oluşturmak için
+        bu kodu bitir.
       courseD_bee_conditionals1_instruction: Bulut altında çiçek olup olmadığını kontrol
         edin. eğer çiçek varsa, nektar alın.
       courseD_bee_conditionals1_predict1_instruction: Bulut altında çiçek olup olmadığını

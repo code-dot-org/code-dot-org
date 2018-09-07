@@ -270,6 +270,7 @@ is:
         **Markmið:** Þetta er algjörlega tómt Appsmiðjuapp. Smíðaðu það sem þú vilt frá grunni!\r
         \r
         **Hvernig:** Þú stjórnar hér. Þú ákveður hvað þú vilt búa til!
+      Artist Autorun Test_markdown_instruction: Settu nú fallið í lykkju til að teikna þessa 3 ferninga.
       Artist Inspiration_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n**Hugmyndir fyrir frjálsa æfingu:** Nú hefur þú lært allt sem þú þarft að kunna til að búa til svona mynstur! \\r\n\\r\nEf þér finnst þessi mynd áhugaverð getur þú reynt að gera eitthvað svipað. Eða búið til eitthvað sem er alfarið þitt eigið.\\r\n\\r\nAthugaðu:\nVið höfum notað `stilla alfa` kubbinn til að láta lit krónublaðanna dofna þegar utar dregur."
       Bergeron Robot Maze1_markdown_instruction: "Getur þú hjálpað mér að ná óþekka svíninu? \\r\n\\r\nSmelltu saman tveimur `færa áfram` kubbum fyrir neðan `þegar keyrt` kubbinn og ýttu svo á \"Keyra\". "
       Big Game Animation 1_markdown_instruction: Nú þegar þú hefur lært að skrifa einföld línuleg föll, skulum við nýta þau til að bæta hreyfingu í leikinn. Smelltu á "Keyra" til að sjá hvað leikurinn getur gert nú (ekki margt!), uppfærðu þær breytur sem þú vilt og smelltu svo á "Ljúka" til að halda áfram.

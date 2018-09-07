@@ -85,10 +85,10 @@ it:
         realizza ancora quadrati! Puoi modificare la funzione `disegna un esagono`
         in modo che produca un esagono con i lati lunghi 50 pixel, e riprodurre poi
         tutta la figura usando la nuova funzione?
-      2-3 Artist Functions 11.5 a_markdown_instruction: "Qui abbiamo sempre la funzione
-        `draw a hexagon` (*disegna un esagono*).\r\n\r\nCosa succede se nel ripetere
-        l'esecuzione della funzione come nell'esercizio precedente adesso giri ogni
-        volta solo di **60** gradi?"
+      2-3 Artist Functions 11.5 a_markdown_instruction: |-
+        Qui abbiamo la stessa funzione `disegna un esagono`.
+
+        Cosa succede se ripeti l'esecuzione della funzione **6** volte e giri ogni volta solo di **60** gradi?
       2-3 Artist Functions 11.5_markdown_instruction: |-
         Qui abbiamo sempre la funzione `draw a hexagon` (<i>disegna un esagono</i>).<br>
         <br>
@@ -676,6 +676,8 @@ it:
         **Come:** In Modalità Codice aggiungi un nuovo blocco `onEvent()` al tuo programma relativo al pulsante "Right!" (*destra*). Poi aggiungi al suo interno un blocco `setScreen()` che permetta di commutare alla schermata `"rightScreen"`.
 
         **Sei bloccato? Clicca qui:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
+      Artist Autorun Test_markdown_instruction: Usa il blocco `ripeti ... volte` per
+        disegnare questi tre quadrati.
       Artist Inspiration_markdown_instruction: |-
         <img src="https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png"
         width="250px"/><br>
@@ -1295,18 +1297,51 @@ it:
         il blocco <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n
         \     <value name=\"SPRITE\"/>\n    </block></xml> per fare in modo che ogni
         alieno si fermi quando si clicca su di esso."
-      Dance Party 7 - Validated_markdown_instruction: Infine, aggiungi un nuovo personaggio
-        campana chiamato `myBell`.
-      Dance Party 7_markdown_instruction: Infine, aggiungi un nuovo personaggio campana
-        chiamato `myBell`.
-      Dance Party 7_simple_markdown_instruction: Infine, aggiungi un nuovo personaggio
-        campana chiamato `myBell`.
+      Dance Party 7 - Validated_markdown_instruction: "Infine, aggiungi un nuovo personaggio
+        a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti
+        gli alieni la sua stessa danza!"
+      Dance Party 7_markdown_instruction: "Infine, aggiungi un nuovo personaggio a
+        campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti
+        gli alieni la sua stessa danza!"
+      Dance Party 7_simple_markdown_instruction: "Infine, aggiungi un nuovo personaggio
+        a campanella chiamato `myBell`.  \n\nQuando viene cliccata, fa fare a tutti
+        gli alieni la sua stessa danza!"
+      Dance Party Freeplay_markdown_instruction: |-
+        Ora crea la tua discoteca aliena! Cerchi un'ispirazione? Prova queste idee:
+
+        * crea due personaggi a campanella e fai fare agli alieni una danza differente per ognuna di esse
+        * fai fare agli alieni un nuovo passo di danza ogni volta che si toccano tra loro
+      Dance Party Predict_markdown_instruction: "**Fai una previsione:** Ecco un personaggio
+        chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Fish Tank 1-validated_markdown_instruction: "**Fai una previsione**: Che cosa
         pensi accadrà quando eseguirai questo codice?"
       Fish Tank 1_markdown_instruction: "**Fai una previsione**: Che cosa pensi accadrà
         quando eseguirai questo codice?"
+      Fish Tank 2-validated_markdown_instruction: "Facciamo un acquario!  \n\nTrasforma
+        Dusty (il cespuglio rotolante) in un pesce."
+      Fish Tank 3-validated Ram_markdown_instruction: "Così, al pesce gira la testa!
+        \n\nModifica il comportamento del pesce, in modo che nuoti avanti e indietro
+        nell'acquario."
+      Fish Tank 3-validated_markdown_instruction: "Così, al pesce gira la testa! \n\nModifica
+        il comportamento del pesce, in modo che nuoti avanti e indietro nell'acquario."
+      Fish Tank 4-validated_markdown_instruction: |-
+        Serve un po' d'acqua nel nostro acquario!
+
+        Usa il blocco <xml><block type="gamelab_setBackground" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#0000ff</title>
+              </block>
+            </value>
+          </block></xml> per impostare lo sfondo blu.
       Fish Tank 5-validated_markdown_instruction: Il nostro pesce si sente un po'
         solo. Aggiungi un altro personaggio nell'acquario.
+      Fish Tank 6-validated_markdown_instruction: "Cosa vuoi che faccia il nuovo amico
+        del pesce?  \n\nAggiungi un comportamento al nuovo amico del pesce!"
+      Fish Tank 7-validated_markdown_instruction: |-
+        Abbiamo aggiunto molti nuovi blocchi nella cassetta degli attrezzi.
+
+        Sperimentali per rendere speciale il tuo acquario!
       Fish Tank Predict_markdown_instruction: "**Fai una previsione**: Che cosa pensi
         accadrà quando eseguirai questo codice?"
       Food Fight!_markdown_instruction: |-
@@ -1336,6 +1371,10 @@ it:
         <img src="https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png"
         width="250px"/><br>
         Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
+      InspirationalArtwork_markdown_instruction: Hai imparato tutto quello che devi
+        sapere per creare uno schema come questo!
+      InspirationalArtwork_2018_markdown_instruction: Hai imparato tutto quello che
+        devi sapere per creare uno schema come questo!
       K-1 Bee Loops 2_markdown_instruction: |-
         Usa un blocco `ripeti` (detto anche <i>ciclo</i>) per muoverti, quindi raccogli il nettare e produci il miele!<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-14#VIDEO" target="_blank">Video doppiato in italiano</a>
@@ -1775,7 +1814,7 @@ it:
       Testing Quantum Farmer_markdown_instruction: |-
         Wow, ho trovato una buca davvero profonda! Non so quante palate di terra saranno necessarie per riempirla completamente. Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?<br>
         <br>
-        <b>Suggerimento</b>: usa le opzioni nel menu a discesa del blocco `mentre`.
+        <b>Suggerimento</b>: usa le opzioni nel menù a discesa del blocco `mentre`.
       Underground Avoiding Lava_markdown_instruction: Sotto alcuni di questi blocchi
         c'è la lava, che devi coprire per poter andare avanti. L'istruzione `se` ti
         è utile in questi casi. Aggiungi un istruzione `vai avanti` nel posto giusto
@@ -1790,7 +1829,60 @@ it:
       Underground If Statements_2018_markdown_instruction: Ora la situazione si fa
         un po' più difficile. Estrai tre blocchi di pietrarossa, ma non cadere nella
         lava. Usa un'istruzione `se` per posizionare dei ciottoli se scopri la lava.
+      Virtual Pet 1 Predict_markdown_instruction: |
+        **Fai una previsione:** Questa è Geraldine, la tua nuova giraffa domestica.
+
+        Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai su di lei?
+      Virtual Pet 1-validated_markdown_instruction: Questa è Geraldine, la tua nuova
+        giraffa domestica. Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai
+        su di lei?
+      Virtual Pet 1_markdown_instruction: "Questa è Geraldine, la tua nuova giraffa
+        domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e cliccherai
+        su di lei?"
+      Virtual Pet 1_simple_markdown_instruction: "Questa è Geraldine, la tua nuova
+        giraffa domestica.  \n\nCosa pensi accadrà quando premerai  \"▶ Esegui\" e
+        cliccherai su di lei?"
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "Nell'angolo c'è una pozzanghera
+        fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca
+        la pozzanghera, il suo colore diventi marrone."
+      Virtual Pet 2 - Validated_markdown_instruction: "Nell'angolo c'è una pozzanghera
+        fangosa.  \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca
+        la pozzanghera, il suo colore diventi marrone."
+      Virtual Pet 2_markdown_instruction: "Nell'angolo c'è una pozzanghera fangosa.
+        \ \n\nCrea un **evento** in modo che quando la giraffa Geraldine tocca la
+        pozzanghera, il suo colore diventi marrone."
+      Virtual Pet 3_markdown_instruction: "Non possiamo lasciare in giro una giraffa
+        tutta sporca!  \n\n1)  Aggiungi sullo schermo un nuovo personaggio Sapone.\n2)
+        \ Puoi crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa
+        ritorni al suo colore normale?\n\n---\n\nPer ripristinare il colore, usa il
+        blocco:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value
+        name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title
+        name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
+      Virtual Pet 4_markdown_instruction: "Non vogliamo aspettare che la giraffa si
+        pulisca da sola ogni volta che si sporca.  \n\nAggiungi un comportamento al
+        tuo Sapone per renderlo trascinabile, quindi trascinalo sopra la giraffa per
+        pulirla!\n"
+      Virtual Pet 5 - Validated_markdown_instruction: "Tutta questa attività consuma
+        energia!  \n\nAggiungi delle azioni ad ogni evento in modo che la giraffa
+        diventi un po' più piccola (si restringa di 5) ogni volta che si scontra con
+        un altro personaggio.  \n"
+      Virtual Pet 5_markdown_instruction: "Tutta questa attività consuma energia!
+        \ \n\nAggiungi delle azioni ad ogni evento in modo che la giraffa diventi
+        un po' più piccola (si restringa di 5) ogni volta che si scontra con un altro
+        personaggio.  \n"
+      Virtual Pet 6_markdown_instruction: "Una dieta bilanciata è molto importante!
+        Dobbiamo alimentare la giraffa per ridarle forza.  \n\nAggiungi una mela che
+        riporti la giraffa alla sua dimensione originale quando i due personaggi si
+        toccano.\n"
+      Virtual Pet Freeplay_markdown_instruction: "Tempo di giocare: Cos'altro puoi
+        far fare alla tua giraffa? \n\n- Puoi aggiungere altri elementi caratteristici
+        al tuo animaletto virtuale?\n- Puoi procurarle degli amici?  "
+      Virtual Pet Predict_markdown_instruction: '**Fai una previsione:** Questa è
+        Geraldine, la tua nuova giraffa domestica. Cosa pensi accadrà quando premerai  "▶
+        Esegui" e cliccherai su di lei?'
       beeDebugVideo1_markdown_instruction: Raccogli tutto il nettare.
+      comment_intro_maze_2018_markdown_instruction: '*"Sono confuso. Ricordami come
+        uscire da questo labirinto."* '
       conditionals_forvideo_harvester_markdown_instruction: Raccogli tutte le pannocchie
         e le lattughe, poi conquista la zucca finale.
       course1_artist_loops_challenge4_markdown_instruction: '*"È il momento di lanciare
@@ -1800,6 +1892,15 @@ it:
         Fai arrivare l'uccellino fino al maialino!
       course1_maze_debugging_challenge2_markdown_instruction: Correggi questo esercizio.
         Ci sono già tutti i blocchi giusti, ma sono nell'ordine sbagliato!
+      course2_artist_nestedLoops_challenge1_markdown_instruction: |-
+        Riesci a scoprire come realizzare un'immagine come questa?
+
+        - Entrambe le forme hanno **lati di 50 pixel**.
+        - Gli *ottagoni* si realizzano con angoli di **45 gradi**.
+        - I *triangoli* si realizzano con angoli di **120 gradi**.
+      course2_bee_conditionals_challenge2_markdown_instruction: Raccogli tutto il
+        nettare e fai tutto il miele. Puoi raccogliere tutto il nettare da un fiore
+        usando il blocco `mentre nettare > 0`.
       course2_collector_prog_challenge1_markdown_instruction: Guarda bene! Riesci
         a raccogliere tutti e **10** i diamanti?
       course2_collector_prog_challenge2_markdown_instruction: In questa grotta ci
@@ -1843,6 +1944,13 @@ it:
         Ecco un gioco già impostato! Giocaci un po' per vedere come funziona.
 
         Bisognerebbe far succedere qualcosa di particolare quando superi un certo punteggio e quando vai sotto zero. Aggiungi del codice alle funzioni `win game` (*vittoria*) e `lose game` (*sconfitta*) per far funzionare il gioco come si deve. Fai clic sui suggerimenti per avere qualche idea!
+      course4_artist_binary_challenge1_markdown_instruction: In questo esercizio,
+        puoi usare solo una volta ogni valore binario (0 o 1). Prova ad usare dei
+        cicli annidati per completare questo disegno.
+      course4_artist_binary_challenge2_markdown_instruction: |-
+        Questa griglia è costituita da 256 bit - questo significa che poche modifiche possono causare grandi problemi. Sei abbastanza perseverante per risistemare questo logo?
+
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       course4_artist_concept_challenge2_markdown_instruction: Crea cinque girandole
         usando il codice riportato di seguito.
       course4_artist_functions_challenge2_markdown_instruction: |-
@@ -1861,6 +1969,13 @@ it:
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png" width="250px"/>
 
         Ora hai imparato tutto quello che ti serve per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
+      course4_collector_nested_loops_challenge2_markdown_instruction: "*\"A caccia
+        di diamanti - usando i cicli!\"* \n\nAiuta la collezionista a raggiungere
+        almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
+        È possibile raccoglierli tutti e 4."
+      course4_harvester_nested_loops_challenge1_markdown_instruction: '*"Ho bisogno
+        di aiuto nella fattoria! Aiutami a raccogliere queste pannocchie usando solo
+        i blocchi presenti nella cassetta degli attrezzi."*'
       courseA_artist_loops10_markdown_instruction: |-
         ## È ora di tornare a terra. Aiutami a posizionare le pietre così non cado in acqua!
 
@@ -2611,11 +2726,11 @@ it:
         Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.
         Quindi disegna una linea lunga 50 pixel con il blocco  <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
       courseC_artist_prog1_markdown_instruction: |-
-        *"Ciao, sono un artista. puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
+        *"Ciao, sono un artista. Puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
 
         Gioca con i blocchi che trovi nella cassetta degli attrezzi per capire cosa fanno!
       courseC_artist_prog1_2018_markdown_instruction: |-
-        *"Ciao, sono un artista. puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
+        *"Ciao, sono un artista. Puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
 
         Gioca con i blocchi che trovi nella cassetta degli attrezzi per capire cosa fanno!
       courseC_artist_prog2_markdown_instruction: |-
@@ -3177,6 +3292,52 @@ it:
         - Cosa succede se usi due angoli diversi nello schema a scalinata?
         - Cosa succede se rendi lo schema a rombo più lungo o più corto?
         - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
+      courseD_artist_1_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ciao, sono elsa di Arendelle, aiutami a disegnare una forma.\"_\n\n\nDisegna
+        un esagono con lati lunghi 50 pixel. \n\n\n---\n\nPer disegare un esagono
+        dovrai:\n- andare avanti di **50** pixel\n- girare a destra di **60** gradi\n-
+        ripetere per un totale di **6** volte\n\n"
+      courseD_artist_2_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Buon lavoro!\"_\n\nDopo l' esagono, gira a destra di ** 60 ** gradi, quindi
+        disegna una linea lunga ** 150 ** pixel.\n\nTermina riportando Elsa al centro
+        dell'area di gioco, usando il blocco  <xml><block type=\"jump_to\"><title
+        name=\"VALUE\"> nel mezzo al centro</title></block></xml>. \n\n\n"
+      courseD_artist_3_2018_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Creiamo un fiocco di neve."_
+
+
+        Per trasformare questo codice in un fiocco di neve, annida tutto il codice all'interno di un ciclo `ripeti ... volte` ed eseguilo per un totale di **6** volte. Dovresti aggiungere solo un blocco.
+      courseD_artist_4_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Rendiamo i fiocchi di neve speciali!"_
+
+
+        ** Ispirazione: ** Dove devi aggiungere il codice se vuoi disegnare un piccolo quadrato sulla punta di ogni linea lunga?
+
+        ---
+        Puoi provare quello che vuoi in questo esercizio, ma ecco un'idea:
+
+        Prova a creare un piccolo quadrato alla fine di ogni riga
+        - Ogni lato dovrebbe essere lungo 15 pixel
+        - Dovresti girare di 90 gradi
+        - Ripeti queste azioni per un totale di 4 volte
+      courseD_artist_5_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Prova a modificare le forme o le lunghezze delle linee per farne una tua! "_
+
+        <br/>
+
+        ** Ispirazione: ** Puoi modificare il disegno come preferisci, ma ecco un'idea:
+
+        - Prova a modificare i tipi di forma nel mezzo del fiocco di neve con quello alla fine di ogni linea!
+      courseD_artist_6_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag".
+
+        <br/>
+
+        ** Ispirazione: ** Prova a modificare la tua  linea lunga 150 pixel in 6 linee corte di **25** pixel
+
+        - Ruota di **45** gradi in direzioni alternate dopo ogni linea corta per ottenere un effetto a zig-zag
+        - Dove devii mettere un nuovo blocco `ripeti ... volte` per farlo accadere?
+        - Quante volte devi ripetere lo schema di 2 linee brevi per ottenerne 6 in totale?
       courseD_artist_7_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Ora girati e torna da dove siamo venuti."_
 
@@ -3227,6 +3388,24 @@ it:
         L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".
         ___
         **Clicca su "Esegui" per vedere come l'artista usa le sequenze binarie per disegnare questa figura.**
+      courseD_artist_binary_challenge1_markdown_instruction: In questo esercizio,
+        puoi usare solo una volta ogni valore binario (0 o 1). Prova ad usare dei
+        cicli annidati per completare questo disegno.
+      courseD_artist_binary_challenge1_2018_markdown_instruction: In questo esercizio,
+        puoi usare solo una volta ogni valore binario (0 o 1). Prova ad usare dei
+        cicli annidati per completare questo disegno.
+      courseD_artist_binary_challenge2_markdown_instruction: |-
+        Questa griglia è costituita da 256 bit - questo significa che poche modifiche possono causare grandi problemi. Sei abbastanza perseverante per risistemare questo logo?
+
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      courseD_artist_binary_challenge2_2018_markdown_instruction: |-
+        Questa griglia è costituita da 256 bit - questo significa che poche modifiche possono causare grandi problemi. Sei abbastanza perseverante per risistemare questo logo?
+
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      courseD_artist_binary_challenge3_markdown_instruction: |-
+        Questa griglia è costituita da 256 bit - questo significa che poche modifiche possono causare grandi problemi. Sei abbastanza perseverante per risistemare questo logo?
+
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_functions2_markdown_instruction: |-
         Le funzioni ti permettono di definire nuovi blocchi!
 
@@ -3258,10 +3437,9 @@ it:
         ci serve disegnare una finestra senza dover scrivere nuovamente il codice.\n\n<img
         src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\"
         width=\"450px\"/>\n<br/> \n\nProva a risolvere questo esercizio creando la
-        funzione `draw a window` (*disegna una finestra*) e richiamandola cinque volte.
-        Stai attento alla porta!\n\n- Le finestre del piano di sopra distano 50 pixel
-        una dall'altra.\n- Le finestre del piano terra si trovano 100 pixel al di
-        sotto delle precedenti."
+        funzione `disegna una finestra` e richiamandola cinque volte. Stai attento
+        alla porta!\n\n- Le finestre del piano di sopra distano 50 pixel una dall'altra.\n-
+        Le finestre del piano terra si trovano 100 pixel al di sotto delle precedenti."
       courseD_artist_functions9_markdown_instruction: |-
         Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
@@ -3348,6 +3526,18 @@ it:
         ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
         ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
         ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoops_challenge1_markdown_instruction: |-
+        Riesci a scoprire come realizzare un'immagine come questa?
+
+        - Entrambe le forme hanno **lati di 50 pixel**.
+        - Gli *ottagoni* si realizzano con angoli di **45 gradi**.
+        - I *triangoli* si realizzano con angoli di **120 gradi**.
+      courseD_artist_nestedLoops_challenge1_2018_markdown_instruction: |-
+        Riesci a scoprire come realizzare un'immagine come questa?
+
+        - Entrambe le forme hanno **lati di 50 pixel**.
+        - Gli *ottagoni* si realizzano con angoli di **45 gradi**.
+        - I *triangoli* si realizzano con angoli di **120 gradi**.
       courseD_artist_project1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao,
         sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola
         figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n<hr/>\n\nPotresti
@@ -3541,14 +3731,20 @@ it:
         Usa ciò che hai imparato per disegnare questo triangolo all'interno di un quadrato.
         ___
         ##### Ogni lato è lungo 200 pixel. Devi girare di 90 gradi per disegnare un quadrato e di 120 gradi per disegnare un triangolo.
+      courseD_autorun_binary2_2019_markdown_instruction: |-
+        La funzione `draw binary` (*disegna in binario*) prende in ingresso una sequenza binaria, cioè fatta di caratteri "1" e "0" e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.
+        ___
+        L'artista quindi colora di bianco i quadrati quando incontra un "1" mentre non li colora quando incontra uno "0".
+        ___
+        **Clicca su "Esegui" per vedere come l'artista usa le sequenze binarie per disegnare questa figura.**
       courseD_bee_conditionals10_markdown_instruction: |-
         Le istruzioni condizionali posso essere utili anche quando sai esattamente cosa c'è in ogni casella.
 
-        Raccogli tutto il nettare o fai tutto il miele.
+        Raccogli tutto il nettare e fai tutto il miele.
       courseD_bee_conditionals10_2018_markdown_instruction: |-
         Le istruzioni condizionali posso essere utili anche quando sai esattamente cosa c'è in ogni casella.
 
-        Raccogli tutto il nettare o fai tutto il miele.
+        Raccogli tutto il nettare e fai tutto il miele.
       courseD_bee_conditionals2_markdown_instruction: |-
         Ancora più nuvole!
 
@@ -3592,11 +3788,11 @@ it:
 
         Alcune di queste nubi potrebbero nascondere dei favi. Controlla sotto ogni nuvola se c'è un favo! Se c'è, l'ape deve semplicemente fare *una* dose di miele.
       courseD_bee_conditionals7_markdown_instruction: |-
-        A volte una nuvola può coprire un fiore, altre volte nasconde un favo!
+        D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nasconde un favo!
 
         Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere solo *una* dose di nettare. E se c'è un favo, l'ape deve produrre *una* sola dose di miele.
       courseD_bee_conditionals7_2018_markdown_instruction: |-
-        A volte una nuvola può coprire un fiore, altre volte nasconde un favo!
+        D'ora in poi, a volte una nuvola può coprire un fiore e altre volte nasconde un favo!
 
         Usa il blocco `se/altrimenti` per raccogliere il nettare dai fiori e fare il miele nei favi. Ricorda: se c'è un fiore, l'ape deve raccogliere solo *una* dose di nettare. E se c'è un favo, l'ape deve produrre *una* sola dose di miele.
       courseD_bee_conditionals8_markdown_instruction: |-
@@ -3607,6 +3803,15 @@ it:
         **Sfida:** C'è sicuramente un fiore o un favo sotto ad ognuna di quelle nuvole!
 
         Se c'è un fiore, raccogli il nettare. In caso contrario, fai il miele perché c'è sicuramente un favo.
+      courseD_bee_conditionals9_markdown_instruction: Raccogli tutto il nettare o
+        fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il miele
+        solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo. Sotto
+        ogni nuvola, ci sarà sempre solo una dose di nettare oppure una dose di miele.
+      courseD_bee_conditionals9_2018_markdown_instruction: Raccogli tutto il nettare
+        o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e fare il
+        miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o un favo.
+        Sotto ogni nuvola, ci sarà sempre solo una dose di nettare oppure una dose
+        di miele.
       courseD_bee_conditionals_challenge1_markdown_instruction: Raccogli tutto il
         nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori e
         fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore o
@@ -3615,6 +3820,15 @@ it:
         il nettare o fai tutto il miele. Puoi raccogliere il nettare solo dai fiori
         e fare il miele solo nei favi. Controlla sotto ogni nuvola se c'è un fiore
         o un favo.
+      courseD_bee_conditionals_challenge2_markdown_instruction: Raccogli tutto il
+        nettare e fai tutto il miele. Puoi raccogliere tutto il nettare da un fiore
+        usando il blocco `mentre nettare > 0`.
+      courseD_bee_conditionals_challenge2_2018_markdown_instruction: Raccogli tutto
+        il nettare e fai tutto il miele. Puoi raccogliere tutto il nettare da un fiore
+        usando il blocco `mentre nettare > 0`.
+      courseD_bee_conditionals_challenge3_markdown_instruction: Raccogli tutto il
+        nettare e fai tutto il miele. Puoi raccogliere tutto il nettare da un fiore
+        usando il blocco `mentre nettare > 0`.
       courseD_bee_nestedLoops1_markdown_instruction: |-
         *"Ora facciamo qualcosa di grandioso!"*
 
@@ -3661,13 +3875,61 @@ it:
       courseD_bee_nestedLoops9_2018_markdown_instruction: Fai tutto il miele.
       courseD_bee_nestedLoops9_predict2_markdown_instruction: Fai tutto il miele.
       courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Fai tutto il miele.
+      courseD_bee_nested_loops_challenge1_markdown_instruction: A caccia di diamanti
+        - usando i cicli! Aiuta la collezionista a raggiungere almeno due diamanti
+        usando solo i blocchi che trovi nella cassetta degli attrezzi. È possibile
+        raccoglierli tutti e 4.
+      courseD_bee_nested_loops_challenge2_markdown_instruction: A caccia di diamanti
+        - usando i cicli! Aiuta la collezionista a raggiungere almeno due diamanti
+        usando solo i blocchi che trovi nella cassetta degli attrezzi. È possibile
+        raccoglierli tutti e 4.
       courseD_bounce_events1_markdown_instruction: |-
         Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
         Poi sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina.
+      courseD_bounce_events10s_markdown_instruction: "Ora c'è un canestro in alto.
+        \ \n\n\nAttacca il blocco `aggiungi punto` all'evento `quando la palla va
+        in rete` e il blocco `aggiungi un punto all'avversario` all'evento `quando
+        la palla manca la mano` per creare un gioco."
+      courseD_bounce_events10s_2018_markdown_instruction: "Ora c'è un canestro in
+        alto.  \n\n\nAttacca il blocco `aggiungi punto` all'evento `quando la palla
+        va in rete` e il blocco `aggiungi un punto all'avversario` all'evento `quando
+        la palla manca la mano` per creare un gioco."
+      courseD_bounce_events11s_markdown_instruction: Ora hai il controllo della palla!
+        Attacca il blocco `lancia una nuova palla` in tutti i punti in cui il gioco
+        ha bisogno di una nuova palla.
+      courseD_bounce_events11s_2018_markdown_instruction: Ora hai il controllo della
+        palla! Attacca il blocco `lancia una nuova palla` in tutti i punti in cui
+        il gioco ha bisogno di una nuova palla.
       courseD_bounce_events1s_2018_markdown_instruction: "Vai a canestro!     \n\nAttacca
-        un blocco al blocco evento`quando si preme sulla freccia verso sinistra` e
-        premi \"Esegui\".\n\nPoi sposta il giocatore usando la freccia verso sinistra
+        un blocco al blocco evento `quando si preme sulla freccia verso sinistra`
+        e premi \"Esegui\".\n\nPoi sposta il giocatore usando la freccia verso sinistra
         per raggiungere la bandierina."
+      courseD_bounce_events2s_markdown_instruction: Ora, attacca un blocco al blocco
+        evento `quando si preme sulla freccia verso destra` affinché la mano possa
+        arrivare ad entrambi i canestri.
+      courseD_bounce_events2s_2018_markdown_instruction: Ora, attacca un blocco al
+        blocco evento `quando si preme sulla freccia verso destra` affinché la mano
+        possa arrivare ad entrambi i canestri.
+      courseD_bounce_events5s_markdown_instruction: Stiamo per lanciarti una palla
+        verso la mano. Attacca un blocco al blocco verde `quando la palla colpisce
+        la mano` per permettere alla palla di raggiungere il canestro.
+      courseD_bounce_events5s_2018_markdown_instruction: Stiamo per lanciarti una
+        palla verso la mano. Attacca un blocco al blocco verde `quando la palla colpisce
+        la mano` per permettere alla palla di raggiungere il canestro.
+      courseD_bounce_events6s_markdown_instruction: "Ora il canestro è in alto.  \n\nPer
+        risolvere l'esercizio, aggiungi dei blocchi per fare in modo che la palla
+        rimbalzi quando colpisce il muro."
+      courseD_bounce_events6s_2018_markdown_instruction: "Ora il canestro è in alto.
+        \ \n\nPer risolvere l'esercizio, aggiungi dei blocchi per fare in modo che
+        la palla rimbalzi quando colpisce il muro."
+      courseD_bounce_events7s_markdown_instruction: "Attacca i blocchi riproduci suono
+        per riprodurre il fruscio della rete quando colpisci il canestro e il suono
+        di un fischio quando la palla manca la mano.  \n\n---\n\n\nFai rimbalzare
+        la palla finché non colpisce il bersaglio finale."
+      courseD_bounce_events7s_2018_markdown_instruction: "Attacca i blocchi riproduci
+        suono per riprodurre il fruscio della rete quando colpisci il canestro e il
+        suono di un fischio quando la palla manca la mano.  \n\n---\n\n\nFai rimbalzare
+        la palla finché non colpisce il bersaglio finale."
       courseD_collector_debugging1_markdown_instruction: |-
         *"Oh no! C'è un problema."*
 
@@ -3798,6 +4060,14 @@ it:
         *"È l'isola dei diamanti!"*
 
         Aiuta Laura a correggere il codice per raccogliere tutti i diamanti.
+      courseD_collector_nested_loops_challenge2_markdown_instruction: "*\"A caccia
+        di diamanti - usando i cicli!\"* \n\nAiuta la collezionista a raggiungere
+        almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
+        È possibile raccoglierli tutti e 4."
+      courseD_collector_nested_loops_challenge2_2018_markdown_instruction: "*\"A caccia
+        di diamanti - usando i cicli!\"* \n\nAiuta la collezionista a raggiungere
+        almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
+        È possibile raccoglierli tutti e 4."
       courseD_collector_ramp10_markdown_instruction: Fai camminare Laura intorno a
         questo quadrato per raccogliere i diamanti che trova.
       courseD_collector_ramp8_markdown_instruction: |
@@ -3844,6 +4114,12 @@ it:
         La contadina vuole raccogliere tutte le lattughe disponibili. In corrispondenza di ogni pianta, c'è più di una lattuga, quindi la contadina deve continuare a raccogliere mentre c'è ancora lattuga disponibile.
 
         ##### (Ricorda: in questo orto ci sono solo lattughe!)
+      courseD_farmer_condLoops4_2018_markdown_instruction: |-
+        *"Caspita! Ora crescono più lattughe da ogni pianta!"*
+
+        La contadina vuole raccogliere tutte le lattughe disponibili. In corrispondenza di ogni pianta, c'è più di una lattuga, quindi la contadina deve continuare a raccogliere mentre c'è ancora lattuga disponibile.
+
+        ##### (Ricorda: in questo orto ci sono solo lattughe!)
       courseD_farmer_condLoops5_markdown_instruction: |-
         *"Che raccolto abbondante!"*
 
@@ -3876,6 +4152,22 @@ it:
         e le lattughe, poi conquista la zucca finale.
       courseD_farmer_condLoops9_predict1_2018_markdown_instruction: Raccogli tutte
         le pannocchie e le lattughe, poi conquista la zucca finale.
+      courseD_farmer_condLoops_challenge1_markdown_instruction: |-
+        Le zucche sono tutte posizionate nel punto in cui occorre girare a destra. Altrove puoi andare sempre dritto, ma ricorda di raccogliere tutte le lattughe e le pannocchie lungo il percorso.
+
+        **Ogni pianta nasconde una pannocchia o una lattuga.**
+      courseD_farmer_condLoops_challenge1_2018_markdown_instruction: |-
+        Le zucche sono tutte posizionate nel punto in cui occorre girare a destra. Altrove puoi andare sempre dritto, ma ricorda di raccogliere tutte le lattughe e le pannocchie lungo il percorso.
+
+        **Ogni pianta nasconde una pannocchia o una lattuga.**
+      courseD_farmer_condLoops_challenge2_markdown_instruction: |-
+        *"Mi trovo in un labirinto con tanti ortaggi differenti!"*
+
+        `Gira a destra` in corrispondenza delle zucche, `gira a sinistra` se trovi una lattuga. Raccogli tutto per completare l'esercizio.
+      courseD_farmer_condLoops_challenge2_2018_markdown_instruction: |-
+        *"Mi trovo in un labirinto con tanti ortaggi differenti!"*
+
+        `Gira a destra` in corrispondenza delle zucche, `gira a sinistra` se trovi una lattuga. Raccogli tutto per completare l'esercizio.
       courseD_farmer_conditionals1_markdown_instruction: |-
         *"Ciao, sono una contadina. Ho bisogno del tuo aiuto per livellare il terreno nella mia fattoria, in modo che sia pronto per la semina."*
 
@@ -3946,6 +4238,15 @@ it:
         e rimuovi tutti i mucchi.
       courseD_farmer_while_challenge2_2018_markdown_instruction: Riempi tutte le buche
         e rimuovi tutti i mucchi.
+      courseD_harvester_nested_loops_challenge1-broken_markdown_instruction: '*"Ho
+        bisogno di aiuto nella fattoria! Aiutami a raccogliere queste pannocchie usando
+        solo i blocchi presenti nella cassetta degli attrezzi."*'
+      courseD_harvester_nested_loops_challenge1_markdown_instruction: '*"Ho bisogno
+        di aiuto nella fattoria! Aiutami a raccogliere queste pannocchie usando solo
+        i blocchi presenti nella cassetta degli attrezzi."*'
+      courseD_harvester_nested_loops_challenge1_2018_markdown_instruction: '*"Ho bisogno
+        di aiuto nella fattoria! Aiutami a raccogliere queste pannocchie usando solo
+        i blocchi presenti nella cassetta degli attrezzi."*'
       courseD_iceage_loops1_markdown_instruction: Aiuta Scrat a raggiungere la ghianda
         attraversando queste lastre di ghiaccio!
       courseD_iceage_loops10_markdown_instruction: Aiuta Scrat a percorrere tutto
@@ -3953,6 +4254,13 @@ it:
       courseD_iceage_loops11_markdown_instruction: Aiuta Scrat a raggiungere la ghianda!
       courseD_iceage_loops12_markdown_instruction: Prendi quella ghianda in qualunque
         modo!
+      courseD_iceage_loops2_markdown_instruction: |-
+        Usa un blocco <xml><block type="maze_turn">
+        <title name="DIR">turnLeft</title>
+        </block></xml> per raggiungere la ghianda!
+      courseD_iceage_loops3_markdown_instruction: Riesci a raggiungere la ghianda
+        con un solo blocco <xml><block type="maze_moveForward"/></xml>? Prova con
+        un ciclo!
       courseD_iceage_loops4_markdown_instruction: Aggiungi un blocco per far percorrere
         a Scrat tutto il tragitto per raggiungere la ghianda!
       courseD_iceage_loops6_markdown_instruction: Puoi aggiungere un ciclo per raggiungere
@@ -3961,6 +4269,10 @@ it:
       courseD_iceage_loops8_markdown_instruction: Potresti correggere questo programma?
       courseD_iceage_loops9_markdown_instruction: La ghianda è così lontana! Riesci
         ad aiutare Scrat ad arrivarci usando i cicli?
+      courseD_maze_loops_challenge1_markdown_instruction: A caccia di diamanti - usando
+        i cicli! Aiuta la collezionista a raggiungere almeno due diamanti usando solo
+        i blocchi che trovi nella cassetta degli attrezzi. È possibile raccoglierli
+        tutti e 4.
       courseD_maze_nestedLoops3_markdown_instruction: |-
         *"Zombie affamato!"*
 
@@ -3969,12 +4281,10 @@ it:
         *"Zombie affamato!"*
 
         Fai arrivare lo zombie fino al girasole usando il minor numero possibile di blocchi.
-      courseD_maze_nestedLoops4_markdown_instruction: |-
-        Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>
-        Prova ad usare un blocco "ripeti ... volte" (ciclo) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
-      courseD_maze_nestedLoops4_2018_markdown_instruction: |-
-        Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>
-        Prova ad usare un blocco "ripeti ... volte" (ciclo) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
+      courseD_maze_nestedLoops4_markdown_instruction: 'Fammi arrivare al girasole
+        usando il minor numero possibile di blocchi!  '
+      courseD_maze_nestedLoops4_2018_markdown_instruction: 'Fammi arrivare al girasole
+        usando il minor numero possibile di blocchi!  '
       courseD_maze_nestedLoops6_markdown_instruction: |-
         *"Dovere mangiare girasole!"*
 
@@ -4149,6 +4459,16 @@ it:
         Non vogliamo che il pirata stia troppo a lungo nella "zona di sicurezza"!
 
         Aggiungi del codice all'istruzione condizionale `se` in modo che, se il pirata (personaggio 1) è nella "zona di sicurezza", il programma aspetti un secondo, poi tolga un punto ogni secondo che il pirata trascorre al di sotto della linea dei polpi.
+      courseD_playLab_condFP_2018_markdown_instruction: |-
+        Ora costruisci il tuo gioco personale da mostrare a tutti i tuoi amici!
+
+        ---
+
+        Potresti:
+        - fare in modo che il pirata e il ninja collaborino per fare punti nei confronti del polpo
+        - fare in modo che entrambi i polpi inseguano il pirata, danneggiando doppiamente il ninja quando si scontrano
+        - fare in modo che ogni personaggio scompaia quando viene toccato dal ninja
+        - inventare completamente il tuo gioco!
       courseD_scrat_ramp1_markdown_instruction: Per risolvere questo esercizio, collega
         tutti i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseD_scrat_ramp1_2018_markdown_instruction: Per risolvere questo esercizio,
@@ -4247,10 +4567,21 @@ it:
         ___
 
         I quadrati sono distanti 75 pixel.
+      courseE_artist_functions2_2018_markdown_instruction: "Ecco una funzione `draw
+        a square` (*disegna un quadrato*). Usala per completare questo disegno. \n\n___\n\nI
+        quadrati sono 75 pixel di distanza."
       courseE_artist_functions3_markdown_instruction: |-
         Torneremo alle funzioni tra poco. Ora facciamo una breve pausa esercitandoci a disegnare questa stella.
 
         Puoi realizzare questo disegno aggiungendo un blocco `ripeti ... volte`.
+      courseE_artist_functions3_2018_markdown_instruction: |-
+        Costruisci una funzione che creerà questa stella.
+
+        ---
+
+        - Ogni braccio della stella ha una lunghezza di 25 pixel
+        - È necessario ruotare di 45 gradi per ottenere 8 braccia
+        - Va bene andare avanti e indietro sullo stesso braccio
       courseE_artist_functions4_markdown_instruction: |-
         Ora che sai disegnare una stella, prova a disegnarne quattro!
 
@@ -4285,7 +4616,7 @@ it:
 
         Crea questa finestra disegnando un quadrato e ruotandolo di 90 gradi prima di disegnarne un altro e così via.
       courseE_artist_functions7_markdown_instruction: |-
-        Sposta il codice che disegna la finestra all'interno del blocco che definisce la funzione `draw a window` (*disegna una finestra*). Ora, potremo richiamare la funzione ogni volta che ci serve disegnare una finestra senza dover scrivere nuovamente il codice.
+        Sposta il codice che disegna la finestra all'interno del blocco che definisce la funzione `disegna una finestra`. Ora, potremo richiamare la funzione ogni volta che ci serve disegnare una finestra senza dover scrivere nuovamente il codice.
 
         ![](https://images.code.org/615a5e93abdaffeed438a976a56fc1f5-image-1497998528859.gif)
 
@@ -4297,6 +4628,21 @@ it:
         **Sfida:** Sai che puoi anche richiamare le funzioni *dall'interno* di altre funzioni?
 
         Crea tutte le funzioni che ritieni necessarie per realizzare questo disegno fatto da quadrati di 50 pixel.
+      courseE_artist_functions8a_2018_markdown_instruction: |-
+        * "Funzioni facili!" *
+
+        Stiamo per costruire qualcosa di stravagante! Inizia creando una funzione per questo quadrato.
+      courseE_artist_functions8b_2018_markdown_instruction: |-
+        *"Zombie diventa vertiginoso."*
+
+        Chiama la funzione `draw a square` (*disegna un quadrato*) dalla tua funzione`draw a line of squares` (*disegna una fila di quadrati*) per renderla ancora più semplice!
+
+        ---
+
+        - I quadrati sono distanti *50* pixel.
+      courseE_artist_functions8c_2018_markdown_instruction: Aggiungi un'altra funzione
+        che crea questa pila di quadrati sfalsati usando la funzione `draw a line
+        of squares` (*disegna una fila di quadrati*).
       courseE_artist_functions9_markdown_instruction: |-
         Crea questa immagine usando solo i blocchi disponibili nella cassetta degli attrezzi.
 
@@ -4307,6 +4653,10 @@ it:
 
         - Ogni triangolo ha i lati lunghi **50 pixel**.
         - Per disegnare un rombo, dovrai alternare svolte a 60 gradi con svolte a 120 gradi.
+      courseE_artist_functionsProj_2018_markdown_instruction: |-
+        **Ispirazione:** Usa quello che hai imparato per fare quello che vuoi!
+
+        Puoi creare qualcosa come questa girandola?
       courseE_artist_functions_challenge_markdown_instruction: Dopo aver definito
         una funzione, la puoi richiamare più e più volte - quando e dove vuoi! Prova
         questo codice per scoprire come funziona, dopo di che modificalo per creare
@@ -4383,6 +4733,14 @@ it:
         Aiuta l'ape a produrre tutto il miele.
 
         Visto che puoi fare il miele solo sui favi, devi prima controllare in ogni casella se c'è un favo.
+      courseE_bee_concept5_markdown_instruction: |-
+        Aiuta l'ape a raccogliere tutto il nettare.
+
+        Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore.
+      courseE_bee_concept5_2018_markdown_instruction: |-
+        Aiuta l'ape a raccogliere tutto il nettare.
+
+        Visto che puoi raccogliere il nettare solo dai fiori, devi prima controllare in ogni casella se c'è un fiore.
       courseE_bee_functions10_markdown_instruction: |-
         *"Vai con il MIELE!"*
 
@@ -4441,12 +4799,20 @@ it:
         *"Ci siamo già incontrati? Sono la contadina!"*
 
         Aiuta la contadina a raggiungere la zucca e raccoglierla.
+      courseE_farmer_functions10a1_2018_markdown_instruction: "**Sfida:** Usa tutto
+        quello che hai imparato fino ad ora per risolvere questo esercizio con 19
+        blocchi o meno!"
       courseE_farmer_functions10b_markdown_instruction: Se metti il codice dell'esercizio
         precedente in una funzione, poi potrai usarla due volte per risolvere questo
         esercizio.
       courseE_farmer_functions10b_2018_markdown_instruction: Se metti il codice dell'esercizio
         precedente in una funzione, poi potrai usarla due volte per risolvere questo
         esercizio.
+      courseE_farmer_functions13_2018_markdown_instruction: |-
+        Risolvi questo puzzle in 23 blocchi o meno.
+        ___
+
+        ##### Ogni germoglio farà crescere *una* pannocchia o niente. Per trovare la soluzione migliore, è necessario modificare direttamente le funzioni.
       courseE_farmer_functions1_2018_markdown_instruction: |-
         *"Ci siamo già incontrati? Sono la contadina!"*
 
@@ -4457,10 +4823,20 @@ it:
         Ora aiuta la contadina a raccogliere tutte le pannocchie lungo il percorso **e** la zucca finale.
         ___
         ##### Nota: In ogni casella del percorso che porta alla zucca possiamo avere *una* o nessuna pannocchia. Prima di provare a raccogliere, dovrai usare un'istruzione condizionale `se` per controllare se sei su una pannocchia!
+      courseE_farmer_functions1a_2018_markdown_instruction: |-
+        *"Oooh, ci sono ortaggi pronti ovunque!"*
+
+        Ora aiuta la contadina a raccogliere tutte le pannocchie lungo il percorso che porta alla zucca finale.
+        ___
+        ##### Nota: In ogni casella del percorso che porta alla zucca possiamo avere *una* o nessuna pannocchia. Usa la funzione `controlla pannocchie` che trovi già pronta, per assicurarti di raccogliere tutto.
       courseE_farmer_functions2b_markdown_instruction: |-
         Aiuta la contadina a raccogliere pannocchie e zucche.
         ___
         ##### Ogni germoglio contiene *una* o nessuna pannocchia.
+      courseE_farmer_functions2b_2018_markdown_instruction: |-
+        Usa la funzione per aiutare la contadina a raccogliere le pannocchie e le zucche.
+        ___
+        ##### Ogni germoglio contiene *una* pannocchia o niente.
       courseE_farmer_functions2ba_markdown_instruction: |-
         *"Oggi mi sento molto funzionale!"*
 
@@ -4469,10 +4845,22 @@ it:
         In questo esercizio, abbiamo spostato il codice ripetuto in una funzione denominata `corn and pumpkin` (*pannocchie e zucca*). Ora basta mettere il piccolo blocco verde che richiama la funzione `corn and pumpkin` ovunque ti serva.
         ___
         ##### Ogni germoglio farà crescere *una* o nessuna pannocchia.
+      courseE_farmer_functions2ba_2018_markdown_instruction: |-
+        *"Mi sento così funzionale!"*
+
+        Ora ci sono più zucche in ogni terreno! Osserva attentamente le definizioni delle funzioni qui di seguito  per capire come utilizzare ciascuna di esse.
+        ___
+        ##### Ogni germoglio farà crescere *una* pannocchia o niente.
       courseE_farmer_functions3c_markdown_instruction: |-
         Ora, inserisci tu il codice all'interno della funzione, trascinando i blocchi dal programma principale e rilasciandoli nel blocco verde che **definisce la funzione**.
 
         Dopo di che, non dimenticarti di aggiungere il piccolo blocco verde che **richiama la funzione** per usarla dove ti serve.
+      courseE_farmer_functions3c1_2018_markdown_instruction: |-
+        Hai notato che c'era un sacco di codice ripetuto in quest'ultimo esercizio? Possiamo risparmiare spazio chiamando quel codice con `raccogli lungo il percorso` e usando una nuova funzione per chiamare le altre funzioni!
+
+        Usa `raccogli lungo il percorso`per risolvere di nuovo questo esercizio usando meno blocchi.
+      courseE_farmer_functions3c_2018_markdown_instruction: Grandioso!  Prova le tue
+        funzioni su un percorso più lungo.
       courseE_farmer_functions4b_markdown_instruction: Usa la tua nuova funzione per
         risolvere questo esercizio.
       courseE_farmer_functions4b_2018_markdown_instruction: Usa la tua nuova funzione
@@ -4495,6 +4883,10 @@ it:
 
         ___
         ##### Nota: Ogni germoglio può racchiudere **una** pannocchia o **una** lattuga.
+      courseE_farmer_functions7a1_2018_markdown_instruction: |-
+        * "Funzioni __lattuga__ fai di più con meno lavoro!" *
+
+        Crea una funzione che invia la contadina lungo un percorso quadrato per prelevare una singola testa di lattuga dal centro di ogni riga.
       courseE_farmer_functions7b_markdown_instruction: |-
         *"Questo raccolto è un labirinto!"*
 
@@ -4507,6 +4899,8 @@ it:
         Aiuta la contadina a trovare un percorso in questa confusione: bisogna arrivare alla zucca svoltando a **sinistra** in corrispondenza delle pannocchie e a **destra** quando c'è una lattuga.
 
         *(Non dimenticare di raccogliere tutti gli ortaggi che trovi lungo il percorso!)*
+      courseE_farmer_functions8a1_2018_markdown_instruction: Provare a riscrivere
+        la funzione. È ancora utile?  Come si puoi farla funzionare per questo esercizio?
       courseE_farmer_functions8b_markdown_instruction: |-
         **Sfida:** Le curve dopo le zucche non sono nella stessa direzione, quindi dovrai usare più di una volta il codice dell'esercizio precedente.
 
@@ -4758,6 +5152,14 @@ it:
         solo tre piccole modifiche al codice del precedente esercizio!
       courseF_artist_for7_2018_markdown_instruction: Per ottenere questo disegno bastano
         solo tre piccole modifiche al codice del precedente esercizio!
+      courseF_artist_for9_markdown_instruction: "**Ispirazione:** Usa il contatore
+        all'interno del blocco `set alpha` per ottenere qualcosa come questo centro
+        sbiadito.  \n(Questo schema con esagono è stato creato usando un angolo di
+        60 gradi.)"
+      courseF_artist_for9_2018_markdown_instruction: "**Ispirazione:** Usa il contatore
+        all'interno del blocco `set alpha` per ottenere qualcosa come questo centro
+        sbiadito.  \n(Questo schema con esagono è stato creato usando un angolo di
+        60 gradi.)"
       courseF_artist_for_challenge1_markdown_instruction: |-
         Riesci a ricreare questo disegno?
 
@@ -4810,6 +5212,12 @@ it:
       courseF_artist_variables4_2018_markdown_instruction: Ora, usa la variabile `length`
         (*lunghezza*) per fare in modo che l'artista disegni i vari triangoli spostati
         ognuno in avanti di `length` pixel e verso il basso di `length` pixel.
+      courseF_artist_variables6_markdown_instruction: "**OOPS!**  \n\nAbbiamo effettivamente
+        bisogno di triangoli larghi 60 pixel, con salti di 60 pixel.  \n\nNon sei
+        contento di usare questa variabile?"
+      courseF_artist_variables6_2018_markdown_instruction: "**OOPS!**  \n\nAbbiamo
+        effettivamente bisogno di triangoli larghi 60 pixel, con salti di 60 pixel.
+        \ \n\nNon sei contento di usare questa variabile?"
       courseF_artist_variables6a_markdown_instruction: Usa ciò che hai imparato per
         costruire questo progetto in cui i quadrati hanno lati di 80 pixel e l'artista
         salta di 80 pixel in avanti e altrettanti verso il basso tra uno e l'altro.
@@ -4937,11 +5345,11 @@ it:
       courseF_bee_conditionals10_markdown_instruction: |-
         Le istruzioni condizionali posso essere utili anche quando sai esattamente cosa c'è in ogni casella.
 
-        Raccogli tutto il nettare o fai tutto il miele.
+        Raccogli tutto il nettare e fai tutto il miele.
       courseF_bee_conditionals10_2018_markdown_instruction: |-
         Le istruzioni condizionali posso essere utili anche quando sai esattamente cosa c'è in ogni casella.
 
-        Raccogli tutto il nettare o fai tutto il miele.
+        Raccogli tutto il nettare e fai tutto il miele.
       courseF_bee_conditionals4_markdown_instruction: |-
         In questo esercizio, sappiamo che ogni fiore ha esattamente una dose di nettare, ma i fiori non sono distanziati in modo uniforme.
 
@@ -5143,7 +5551,7 @@ it:
       grade2_CaringForNewPet_11_markdown_instruction: '*"Mantieni la calma e aiutami
         a trovare il maialino cattivo."*'
       grade2_CaringForNewPet_4_markdown_instruction: '"Mantieni la calma e aiutami
-        a trovare quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!"'
+        a trovare quel cattivone di un maialino. Altrimenti potrei arrabbiarmi!"'
       grade2_MakeDogTag_1_markdown_instruction: |-
         *"Fammi costruire una gabbia per il mio mostriciattolo domestico!"*
 
@@ -5176,7 +5584,7 @@ it:
         all'interno del blocco `ripeti ... volte`. Poi, ripeti il ciclo 24 volte invece
         che 8.
       grade2_MakeDogTag_BFP_markdown_instruction: |-
-        *"Ciao, sono un artista. puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
+        *"Ciao, sono un artista. Puoi scrivere del codice per farmi disegnare quasi qualunque cosa."*
 
         Gioca con i blocchi che trovi nella cassetta degli attrezzi per capire cosa fanno!
       grade2_PuppyLoops_10_markdown_instruction: La mia girandola non è finita. Riesci
@@ -5339,7 +5747,7 @@ it:
       grade3_bee_conditionals_new3b_markdown_instruction: |-
         Le istruzioni condizionali posso essere utili anche quando sai esattamente cosa c'è in ogni casella.
 
-        Raccogli tutto il nettare o fai tutto il miele.
+        Raccogli tutto il nettare e fai tutto il miele.
       grade3_bee_conditionals_quantum2_markdown_instruction: |-
         Adesso ci sono più nuvole!<br><br>
         Controlla ognuna di esse e verifica se c'è un fiore. Solo in tal caso raccogli il nettare.<br><br>
@@ -5348,9 +5756,8 @@ it:
         *"Adesso voglio solo fare il miele."*
 
         Alcune di queste nubi potrebbero nascondere dei favi. Controlla sotto ogni nuvola se c'è un favo!
-      grade3_maze_loops2_markdown_instruction: |-
-        Fammi arrivare al girasole usando il minor numero possibile di blocchi!<br><br>
-        Prova ad usare un blocco "ripeti ... volte" (ciclo) all'interno di un altro ciclo, per diminuire il numero di blocchi che usi.
+      grade3_maze_loops2_markdown_instruction: 'Fammi arrivare al girasole usando
+        il minor numero possibile di blocchi!  '
       grade3_maze_loops2a_markdown_instruction: |-
         *"Zombie affamato!"*
 
@@ -5445,10 +5852,9 @@ it:
         volta che ci serve disegnare una finestra senza dover scrivere nuovamente
         il codice.\n\n<img src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\"
         width=\"450px\"/>\n<br/> \n\nProva a risolvere questo esercizio creando la
-        funzione `draw a window` (*disegna una finestra*) e richiamandola cinque volte.
-        Stai attento alla porta!\n\n- Le finestre del piano di sopra distano 50 pixel
-        una dall'altra.\n- Le finestre del piano terra si trovano 100 pixel al di
-        sotto delle precedenti."
+        funzione `disegna una finestra` e richiamandola cinque volte. Stai attento
+        alla porta!\n\n- Le finestre del piano di sopra distano 50 pixel una dall'altra.\n-
+        Le finestre del piano terra si trovano 100 pixel al di sotto delle precedenti."
       grade4_artist_nestedLoops_challenge_markdown_instruction: |-
         <img src="https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png"
         width="150px;" style="mix-blend-mode: multiply;" /><br>
@@ -5771,6 +6177,8 @@ it:
         viene **sottratto** dalla variabile `counter` (*contatore*) ad ogni ripetizione.
         \n\nQuale dovrebbe essere il valore del passo per raccogliere prima 15, poi
         12, poi 9, 6, 3 dosi di nettare?"
+      grade5_bee_for_loops4_markdown_instruction: Aiuta l'ape a raccogliere tutto
+        il nettare.
       grade5_bee_for_loops5_markdown_instruction: Ora bisogna spostarsi in avanti
         di `counter` (<i>contatore</i>) volte, e poi raccogliere il nettare `counter`
         volte. Riesci a svolgere questo compito usando due cicli?
@@ -5863,6 +6271,8 @@ it:
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       gradek_playlab_events1c_markdown_instruction: Il cane, vuole dire "Ciao". Riesci
         ad aiutarlo?
+      iceAgeLoopsforVideo_markdown_instruction: Riesci a raggiungere la ghianda con
+        un solo blocco <xml><block type="maze_moveForward"/></xml>? Prova con un ciclo!
       iceage_click_hello_markdown_instruction: Puoi aiutare Sid a chiamare i suoi
         amici quando si clicca su di lui? Quando hai finito, premi "Esegui" e clicca
         su Sid per vedere il tuo codice al lavoro!

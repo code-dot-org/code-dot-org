@@ -487,6 +487,10 @@ zh-TW:
         frozen_circle_function_with_parameter_circle: 使用「建立一個圓形」積木並修改它的尺寸。
       frozen cross rotate_callout:
         replace_questions_degree: 使用下拉清單，把「???」換成一個數字。
+      frozen cross rotate_b_callout:
+        replace_questions_degree: 使用下拉清單，把「???」換成一個數字。
+      frozen cross rotate_test_callout:
+        replace_questions_degree: 使用下拉清單，把「???」換成一個數字。
       frozen cross_callout:
         repeat_blocks_1: "(1) 使用這個積木，把它放到在工作區上的灰色積木周圍。"
         repeat_blocks_2: (2) 將「重複」積木移到這裡，並將灰色積木放到它裡面。
@@ -496,20 +500,48 @@ zh-TW:
         frozen_diamond_repeat: 使用重複積木來創建這個圖形。
       frozen freeplay_callout:
         snowflake_dropdown: 使用下拉清單來創建不同的雪花！
+      frozen freeplay_b_callout:
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
+      frozen freeplay_test_callout:
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
       frozen line_callout:
+        run: 點擊「運行」以試試你的程式！
+        move_elsa_forward: 拖曳一個「移動-向前」積木，將它貼在「當點擊運行時」積木下方，讓艾莎向前移動。
+      frozen line_b_callout:
+        run: 點擊「運行」以試試你的程式！
+        move_elsa_forward: 拖曳一個「移動-向前」積木，將它貼在「當點擊運行時」積木下方，讓艾莎向前移動。
+      frozen line_test_callout:
         run: 點擊「運行」以試試你的程式！
         move_elsa_forward: 拖曳一個「移動-向前」積木，將它貼在「當點擊運行時」積木下方，讓艾莎向前移動。
       frozen perpendicular_callout:
         turn_elsa: 使用「轉向」積木讓艾莎轉彎。下接清單中的數字可以決定艾莎轉向的角度。
       frozen snowflake branch_callout:
         frozen_snowflake_branch: 使用「建立雪花分支」積木
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: 使用「建立雪花分支」積木
       frozen square iterative_callout:
+        frozen_create_square: 添加更多積木到這兒以建立一個正方形
+      frozen square iterative_b_callout:
+        frozen_create_square: 添加更多積木到這兒以建立一個正方形
+      frozen square iterative_test_callout:
         frozen_create_square: 添加更多積木到這兒以建立一個正方形
       frozen square loop 3x_callout:
         replace_questions: 使用下拉清單，把「???」換成一個數字。
+      frozen square loop 3x_b_callout:
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
+      frozen square loop 3x_test_callout:
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       frozen square loop_callout:
         replace_questions: 使用下拉清單，把「???」換成一個數字。
+      frozen square loop_b_callout:
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
+      frozen square loop_test_callout:
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
       frozen square snowflake_callout:
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
+      frozen square snowflake_b_callout:
+        replace_questions: 使用下拉清單，把「???」換成一個數字。
+      frozen square snowflake_test_callout:
         replace_questions: 使用下拉清單，把「???」換成一個數字。
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: 這些灰色的積木是用石頭做的！這表示他們不能被打掉。

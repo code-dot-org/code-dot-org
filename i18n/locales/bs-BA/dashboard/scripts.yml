@@ -1888,3 +1888,15 @@ bs:
               name: Digitalni otisak stopala
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stivi i veliki projekat
+        frozen-2018:
+          stages:
+            Artist:
+              name: Umjetnik
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Umjetnik
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Umjetnik

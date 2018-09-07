@@ -577,7 +577,7 @@ zh-CN:
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: '使用此块收集一块宝藏。  '
       courseD_farmer_while7_2018_callout:
-        courseD_farmer_while7_2018_PathAhead: 要解决这个迷题，你会需要用到“当前进时”语块。
+        courseD_farmer_while7_2018_PathAhead: 要解决这个迷题，会用到`当前面有路时`模块。
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseD_maze_ramp1_2018_callout:
@@ -898,6 +898,10 @@ zh-CN:
         frozen_circle_function_with_parameter_circle: 用“创建圆圈”模块，并且改变大小。
       frozen cross rotate_callout:
         replace_questions_degree: 使用下拉菜单来将"???"替换为数字
+      frozen cross rotate_b_callout:
+        replace_questions_degree: 使用下拉菜单来将"???"替换为数字
+      frozen cross rotate_test_callout:
+        replace_questions_degree: 使用下拉菜单来将"???"替换为数字
       frozen cross_callout:
         repeat_blocks_1: "(1) 使用这个模块将工作区的灰色模块包围起来。"
         repeat_blocks_2: (2) 移动"重复"块到这里, 然后将灰色方块放到它里面.
@@ -907,20 +911,48 @@ zh-CN:
         frozen_diamond_repeat: 用重复模块来创建这个形状。
       frozen freeplay_callout:
         snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
+      frozen freeplay_b_callout:
+        snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
+      frozen freeplay_test_callout:
+        snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
       frozen line_callout:
+        run: 点击 "运行" 来尝试你的程序!
+        move_elsa_forward: 拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。
+      frozen line_b_callout:
+        run: 点击 "运行" 来尝试你的程序!
+        move_elsa_forward: 拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。
+      frozen line_test_callout:
         run: 点击 "运行" 来尝试你的程序!
         move_elsa_forward: 拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。
       frozen perpendicular_callout:
         turn_elsa: 用“转”模块来让艾莎转方向。下拉菜单里的数字决定了艾莎转多少度。
       frozen snowflake branch_callout:
         frozen_snowflake_branch: 用“创建一个雪花分支”模块
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: 用“创建一个雪花分支”模块
       frozen square iterative_callout:
+        frozen_create_square: 添加更多模块来创造一个正方形
+      frozen square iterative_b_callout:
+        frozen_create_square: 添加更多模块来创造一个正方形
+      frozen square iterative_test_callout:
         frozen_create_square: 添加更多模块来创造一个正方形
       frozen square loop 3x_callout:
         replace_questions: 使用下拉菜单来将"???"替换为数字
+      frozen square loop 3x_b_callout:
+        replace_questions: 使用下拉菜单来将"???"替换为数字
+      frozen square loop 3x_test_callout:
+        replace_questions: 使用下拉菜单来将"???"替换为数字
       frozen square loop_callout:
         replace_questions: 使用下拉菜单来将"???"替换为数字
+      frozen square loop_b_callout:
+        replace_questions: 使用下拉菜单来将"???"替换为数字
+      frozen square loop_test_callout:
+        replace_questions: 使用下拉菜单来将"???"替换为数字
       frozen square snowflake_callout:
+        replace_questions: 使用下拉菜单来将"???"替换为数字
+      frozen square snowflake_b_callout:
+        replace_questions: 使用下拉菜单来将"???"替换为数字
+      frozen square snowflake_test_callout:
         replace_questions: 使用下拉菜单来将"???"替换为数字
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: 工具箱中只有一个这样的模块。你将如何使用它？

@@ -431,6 +431,7 @@ es:
       Artist - Nested Loops 6_instruction: "¿Puedes dibujar un hexágono haciendo un enlace\ncon el código triangular?"
       Artist - Nested Loops 9_instruction: Dibujar los dientes en la boca del cocodrilo!
       Artist - Nested Loops Assessment 1_instruction: Utiliza un circuito anidado para completar el diseño.
+      Artist Autorun Test_instruction: Usa el bloque "repetir" para dibujar estos 3 cuadrados.
       Artist Inspiration_instruction: "Inspiración de juego libre: Ahora has aprendido todo lo que necesitas saber para hacer un patrón como este! Si te inspira esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por tu cuenta. \\r \\r quieres saber cómo se hizo nuestro patron de inspiración? Visita https://studio.code.org/c/106387604 para la solución."
       Auto Open Function Editor_instruction: '¡Puedes llamar una función dentro de otra función! Utilizando tu función "shape" como base, crea 3 formas de casa cada una de 20 píxeles mas larga que la anterior, empezando con 50 píxeles de longitud. Usar un circuito de contar puede ser útil.'
       Bee Recommended Blocks test_instruction: Las flores moradas pueden tener 1 o 0 néctar, ¡Pero tu no sabes cual de los dos! Ten cuidado de no recolectar néctar de una flor morada que no tenga. Comprueba que el néctar es igual a 1 utilizando un bloque si-entonces.
@@ -1202,6 +1203,9 @@ es:
       courseD_artist_binary6_2018_instruction: '¿Cual de las secuencias binarias de 6 dígitos, repetidas 11 veces, dibujará esta imagen?'
       courseD_artist_binary7_instruction: '¿Cuál es la secuencia binaria más corta que puede repetir para dibujar esta imagen?'
       courseD_artist_binary7_2018_instruction: '¿Cuál es la secuencia binaria más corta que puede repetir para dibujar esta imagen?'
+      courseD_autorun_binary4_2019_instruction: '¿Puede dibujar este molde enlazando una secuencia binaria de tres dígitos?'
+      courseD_autorun_binary6_2019_instruction: '¿Cual de las secuencias binarias de 6 dígitos, repetidas 11 veces, dibujará esta imagen?'
+      courseD_autorun_binary7_2019_instruction: '¿Cuál es la secuencia binaria más corta que puede repetir para dibujar esta imagen?'
       courseD_bee_debugging3_instruction: Estos bloques realmente me molesta. Corregir el error(s) para recoger todo el néctar y hacer todo de la miel.
       courseD_bee_nestedLoops3_instruction: Recolecta todo el néctar de cada flor. Utiliza un bucle anidado. 
       courseD_bee_nestedLoops5_instruction: 'Recolecta todo el néctar de cada flor y haz miel en cada panel. Utiliza un bucle anidado. '

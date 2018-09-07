@@ -181,6 +181,12 @@ el:
       frozen cross rotate_callout:
         replace_questions_degree: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
+          το "???" με έναν αριθμό
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
+          το "???" με έναν αριθμό
       frozen cross_callout:
         repeat_blocks_1: "(1) Χρησιμοποίησε αυτό το μπλοκ και βάλε το γύρω από τα
           γκρι μπλοκ στο χώρο εργασίας"
@@ -193,7 +199,19 @@ el:
       frozen freeplay_callout:
         snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
           διαφορετικές χιονονιφάδες!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
+          διαφορετικές χιονονιφάδες!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
+          διαφορετικές χιονονιφάδες!
       frozen line_callout:
+        move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το
+          "Όταν Εκτελείται" μπλοκ για να κάνεις την Έλσα να πάει μπροστά
+      frozen line_b_callout:
+        move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το
+          "Όταν Εκτελείται" μπλοκ για να κάνεις την Έλσα να πάει μπροστά
+      frozen line_test_callout:
         move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το
           "Όταν Εκτελείται" μπλοκ για να κάνεις την Έλσα να πάει μπροστά
       frozen perpendicular_callout:
@@ -202,15 +220,40 @@ el:
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Χρησιμοποιήστε το μπλοκ "δημιουργία κλαδιού νιφάδας
           χιονιού"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Χρησιμοποιήστε το μπλοκ "δημιουργία κλαδιού νιφάδας
+          χιονιού"
       frozen square iterative_callout:
         frozen_create_square: Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο
+      frozen square iterative_b_callout:
+        frozen_create_square: Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο
+      frozen square iterative_test_callout:
+        frozen_create_square: Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο
       frozen square loop 3x_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
+          το "???" με έναν αριθμό
+      frozen square loop 3x_b_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
+          το "???" με έναν αριθμό
+      frozen square loop 3x_test_callout:
         replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
       frozen square loop_callout:
         replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
+      frozen square loop_b_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
+          το "???" με έναν αριθμό
+      frozen square loop_test_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
+          το "???" με έναν αριθμό
       frozen square snowflake_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
+          το "???" με έναν αριθμό
+      frozen square snowflake_b_callout:
+        replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
+          το "???" με έναν αριθμό
+      frozen square snowflake_test_callout:
         replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
       grade4_artist_parameters_squares1_callout:

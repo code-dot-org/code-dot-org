@@ -1168,3 +1168,15 @@ ca:
               name: Mou-lo, Mou-lo
             Your Digital Footprint:
               name: La vostra empremta digital
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

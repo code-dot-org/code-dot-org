@@ -404,6 +404,7 @@ fi:
       Artist - Nested Loops 6_instruction: Osaatko piirtää kuusikulmion kolmiokoodia toistamalla?
       Artist - Nested Loops 9_instruction: Piirrä alligaattorin suuhun hampaat!
       Artist - Nested Loops Assessment 1_instruction: Tee kuvio valmiiksi. Käytä sisäkkäistä silmukkaa.
+      Artist Autorun Test_instruction: Käytä "toista" lohkoa piirtääksesi nämä 3 neliötä.
       Bee Recommended Blocks test_instruction: Violeteilla kukilla on joko 1 tai 0 mettä, mutta sitä ei voi tietää! Varo, ettet kerää mettä violetista kukasta, jos sillä ei ole mettä. Tarkista, että meden määrä on 1 käyttämällä 'jos-palikkaa.
       Bergeron Robot Maze1_instruction: 'Auttaisitko minua pyydystämään ilkeän possun? Pinoa muutama "liiku eteenpäin"-lohko yhteen ja paina "Suorita"-painiketta. '
       Busy Bee 2_instruction: Tällä mehiläisellä on paljon puuhaa! Huomaatko malleja, joiden avulla voi yksinkertaistaa koodia?

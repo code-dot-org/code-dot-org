@@ -126,6 +126,10 @@ ro:
         frozen_circle_function_with_parameter_circle: Utilizaţi blocul "crează un cerc" şi modificaţi dimensiunea.
       frozen cross rotate_callout:
         replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
       frozen cross_callout:
         repeat_blocks_1: "(1) Folosește acest bloc și pune-l în jurul blocurilor gri în spațiul de lucru"
         repeat_blocks_2: (2) Mută blocul ”Repetă” aici, și plasează blocurile gri în interior
@@ -135,19 +139,45 @@ ro:
         frozen_diamond_repeat: Utilizaţi blocul se repetă pentru a crea această formă.
       frozen freeplay_callout:
         snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți fulgi de zăpadă!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți fulgi de zăpadă!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți fulgi de zăpadă!
       frozen line_callout:
+        move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
+      frozen line_b_callout:
+        move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
+      frozen line_test_callout:
         move_elsa_forward: Trageţi un bloc de "Mutare înainte" şi fixaţi-l sub blocul "Atunci când rulaţi" pentru a o face pe Elsa să avanseze
       frozen perpendicular_callout:
         turn_elsa: Utilizaţi blocul "Întoarce" pentru a o face pe Elsa să se întoarcă. Numărul din listă determină de câte ori se întoarce Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Utilizaţi blocul "creaţi o ramură de fulg de Nea"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Utilizaţi blocul "creaţi o ramură de fulg de Nea"
       frozen square iterative_callout:
+        frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
+      frozen square iterative_test_callout:
         frozen_create_square: Ataşează aici mai multe blocuri pentru a crea un pătrat
       frozen square loop 3x_callout:
         replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
+      frozen square loop 3x_b_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
+      frozen square loop 3x_test_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
       frozen square loop_callout:
         replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
+      frozen square loop_b_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
+      frozen square loop_test_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
       frozen square snowflake_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
+      frozen square snowflake_b_callout:
+        replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
+      frozen square snowflake_test_callout:
         replace_questions: Utilizaţi meniul derulant pentru a înlocui "???" cu un număr
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Clic editare pentru a adăuga un parametru în funcția ta
