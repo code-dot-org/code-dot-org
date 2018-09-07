@@ -1,5 +1,5 @@
 import React from 'react';
-import AssignToSection from './AssignToSection';
+import {UnconnectedAssignToSection as AssignToSection} from './AssignToSection';
 
 const defaultProps = {
   courseId: 30,

@@ -128,4 +128,6 @@ class AssignToSection extends Component {
   }
 }
 
-export default Radium(AssignToSection);
+export const UnconnectedAssignToSection = Radium(AssignToSection);
+
+export default UnconnectedAssignToSection;
