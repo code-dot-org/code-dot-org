@@ -8,7 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ConfirmAssignment from './ConfirmAssignment';
-import { isScriptHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { isScriptHiddenForSection, updateHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   main: {
@@ -31,6 +31,7 @@ class AssignToSection extends Component {
       name: PropTypes.string.isRequired,
     })).isRequired,
     hiddenStageState: PropTypes.object,
+    updateHiddenScript: PropTypes.func.isRequired,
   };
 
   state = {
@@ -50,7 +51,8 @@ class AssignToSection extends Component {
   };
 
   updateCourse = () => {
-    const section = this.props.sectionsInfo[this.state.sectionIndexToAssign];
+    const { sectionsInfo, updateHiddenScript, scriptId } = this.props;
+    const section = sectionsInfo[this.state.sectionIndexToAssign];
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
       method: 'PATCH',
@@ -60,6 +62,7 @@ class AssignToSection extends Component {
         script_id: this.props.scriptId,
       }),
     }).done(result => {
+      updateHiddenScript(section.id, scriptId, false);
       this.setState({
         sectionIndexToAssign: null
       });
@@ -133,4 +136,6 @@ export const UnconnectedAssignToSection = Radium(AssignToSection);
 
 export default connect(state => ({
   hiddenStageState: state.hiddenStage,
+}), ({
+  updateHiddenScript,
 }))(UnconnectedAssignToSection);

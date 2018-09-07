@@ -80,7 +80,7 @@ export default function reducer(state = new HiddenState(), action) {
 
   if (action.type === UPDATE_HIDDEN_SCRIPT) {
     const { sectionId, scriptId, hidden } = action;
-    const nextState = state.setIn(['scriptsBySection', sectionId, scriptId.toString()], hidden);
+    const nextState = state.setIn(['scriptsBySection', sectionId.toString(), scriptId.toString()], hidden);
     validateSectionIds(nextState);
     return nextState;
   }
