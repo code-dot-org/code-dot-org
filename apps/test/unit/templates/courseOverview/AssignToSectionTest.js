@@ -1,7 +1,7 @@
 import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
+import {UnconnectedAssignToSection as AssignToSection} from '@cdo/apps/templates/courseOverview/AssignToSection';
 
 const defaultProps = {
   courseId: 30,
