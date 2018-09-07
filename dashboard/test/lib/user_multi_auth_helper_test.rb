@@ -354,7 +354,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_raises {user.clear_single_auth_fields}
   end
 
-  test 'clear_single_auth_fields clears all single-auth fields' do
+  test 'clear_single_auth_fields clears single-auth fields' do
     user = create :teacher, :unmigrated_google_sso
     user.migrate_to_multi_auth
 
@@ -374,8 +374,9 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
       oauth_token: nil,
       oauth_token_expiration: nil,
       oauth_refresh_token: nil
-    assert_empty user.read_attribute(:email)
-    assert_nil user.read_attribute(:hashed_email)
+    # Does not clear email or hashed_email fields
+    refute_empty user.read_attribute(:email)
+    refute_nil user.read_attribute(:hashed_email)
   end
 
   test 'migrate and demigrate picture password student' do

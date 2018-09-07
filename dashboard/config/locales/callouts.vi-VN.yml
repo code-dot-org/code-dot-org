@@ -278,6 +278,12 @@ vi:
       frozen cross rotate_callout:
         replace_questions_degree: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???"
           với một số
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???"
+          với một số
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???"
+          với một số
       frozen cross_callout:
         repeat_blocks_1: "(1) sử dụng khối này và đặt nó bao quanh các khối màu xám"
         repeat_blocks_2: (2) di chuyển các khối "Lặp lại" ở đây, và đặt các khối màu
@@ -288,7 +294,17 @@ vi:
         frozen_diamond_repeat: Sử dụng các khối lặp lại để vẽ ra hình này.
       frozen freeplay_callout:
         snowflake_dropdown: Sử dụng cái này để thả xuống tạo các bông tuyết khác nhau!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Sử dụng cái này để thả xuống tạo các bông tuyết khác nhau!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Sử dụng cái này để thả xuống tạo các bông tuyết khác nhau!
       frozen line_callout:
+        move_elsa_forward: Kéo một khối lệnh "Di chuyển về phía trước" và gắn nó ngay
+          dưới khối "Khi chạy" để làm cho Elsa di chuyển về phía trước
+      frozen line_b_callout:
+        move_elsa_forward: Kéo một khối lệnh "Di chuyển về phía trước" và gắn nó ngay
+          dưới khối "Khi chạy" để làm cho Elsa di chuyển về phía trước
+      frozen line_test_callout:
         move_elsa_forward: Kéo một khối lệnh "Di chuyển về phía trước" và gắn nó ngay
           dưới khối "Khi chạy" để làm cho Elsa di chuyển về phía trước
       frozen perpendicular_callout:
@@ -296,16 +312,42 @@ vi:
           sẽ xác định Elsa quay một góc bao nhiêu độ
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Sử dụng khối "tạo ra một nhánh bông tuyết"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Sử dụng khối "tạo ra một nhánh bông tuyết"
       frozen square iterative_callout:
+        frozen_create_square: Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình
+          vuông
+      frozen square iterative_b_callout:
+        frozen_create_square: Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình
+          vuông
+      frozen square iterative_test_callout:
         frozen_create_square: Đính kèm thêm nhiều khối lệnh ở đây để tạo ra một hình
           vuông
       frozen square loop 3x_callout:
         replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
           một số
+      frozen square loop 3x_b_callout:
+        replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
+          một số
+      frozen square loop 3x_test_callout:
+        replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
+          một số
       frozen square loop_callout:
         replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
           một số
+      frozen square loop_b_callout:
+        replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
+          một số
+      frozen square loop_test_callout:
+        replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
+          một số
       frozen square snowflake_callout:
+        replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
+          một số
+      frozen square snowflake_b_callout:
+        replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
+          một số
+      frozen square snowflake_test_callout:
         replace_questions: Sử dụng tùy chọn ở trong khối lệnh để thay thế "???" với
           một số
       grade3_Conditionals_3_callout:

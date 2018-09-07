@@ -2,16 +2,311 @@ ka:
   data:
     external:
       Begin planning your project:
+        description here: მიუთითეთ აღწერა
         title: დასახელება
+      Begin planning your project_2018:
+        Begin planning your project: დაიწწყეთ პროექტის დაგეგმვა
+        description here: მიუთითეთ აღწერა
       Prepare for your presentation:
+        description here: მიუთითეთ აღწერა
         title: დასახელება
+      Prepare for your presentation_2018:
+        Prepare for yur presentation: მოამზადეთ თქვენი პრეზენტაცია
+      courseD_external_binary1:
+        Binary Drawing: ორობითი ხატვა
+      courseD_external_binary1_2018:
+        Binary Drawing: ორობითი ხატვა
+      courseF_markdown_algorithms_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_algorithms_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_conditionals_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_conditionals_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_debugging_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_debugging_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_forloops_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_forloops_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_loops_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_loops_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_nestedloops_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_nestedloops_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_variables_end:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_markdown_variables_intro:
+        Test Markdown Textbook Page: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      gradek1_activity_beNice:
+        The computer is your friend: კომპიუტერი შენი მეგობარია
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: შეუსაბამეთ ღილაკების კომბინაციები ცეკვის მოძრაობებს.
+        Matching: შესაბამისობა
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: შესაბამისობა
+        Use the key to match each code to its letter: გამოიყენეთ ცხრილი და შეუსაბამეთ ერთმანეთს კოდი და ასო
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: შეუსაბამეთ ბადე პროგრამას.
+        Matching: შესაბამისობა
       2-3 Maze Match 2:
         Instructions: ინსტრუქციები
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
+        Maze Match: ლაბირინთი შესაბამისობა
+      2-3 artist loops match 1:
+        Artist Loops Matching 1: 'მხატვარი: ციკლების შესაბამისობა 1'
+        Match the loop to the shape: შეუსაბამე ფორმას ციკლი
+      2-3 artist match 1:
+        Artist Matching: 'მხატვარი: შესაბამისობა'
+        Match the shape with the blocks that complete it.: შეუსაბამეთ ფორმა და ბლოკები, რომელიც მას ასრულებს.
+      2-3 maze match 1:
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
+        Maze Match One: 'ლაბირინთი: შესაბამისობა 1'
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>დაუმატე მოთამაშე 1-ის გაგორების შედეგი სართო ჯამს</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>გამარჯვებულის გამოსავლენად შეადარეთ მოთამაშეების შედეგები</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>მოთამაშე 1 აგორებს კამათელს</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4> დააყენეთ 1 მოთამაშის ქულა 0-ზე</h4>"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: შეუსაბამეთ ნაბიჯები კამათლის თამაშში იმ თანმიმდევრობას, რომლის მიხედვითაც ისინი ალგორითმში უნდა გამოჩდნენ.
+        Matching: შესაბამისობა
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>ბორბლები/მხარე: 2<br/> ფანჯრები/ მხარე: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>ბორბლები/მხარე: 2<br/> ფანჯრები/მხარე: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>ბორბლები/მხარე: 2<br/>ფანჯრები/ მხარე: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>ბორბლები/მხარე: 3<br/>ფანჯრები/მხარე: 2</h3>"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: ყველა ეს სატრანსპორტო საშუალება პატარა ნაწილებად დაშალეს. დაუკავშირეთ ყოველი ტრანსპორტი მისი ნაწილების სიას.
+        Matching: შესაბამისობა
+      4-5 Suncatchers Match 1:
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        Match each program to the word it makes, using the provided group of skills.: შეუსაბამეთ ყოველი პროგრამა სიტყვას, რომელსაც იგი ქმნის, უნარების ჯგუფების გამოყენებით.
+        Matching: შესაბამისობა
       4-5 maze match 1:
         Instructions: ინსტრუქციები
+        Match the puzzles to the blocks: შეუსაბამეთ ბლოკები თავსატეხებს
+        Maze Match: ლაბირინთი შესაბამისობა
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: დააკავშირეთ ფიგურები ტიპის მიხედვით.
+        Matching: შესაბამისობა
+      K-1 Bee Loops Match 1:
+        Match the blocks: ბლოკების დაკავშირება
+        Matching: შესაბამისობა
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: შეუსაბამეთ ღილაკების კომბინაციები ცეკვის მოძრაობებს.
+        Matching: შესაბამისობა
       K-1 Maze Match 1:
         Instructions: ინსტრუქციები
+        Match the puzzles and blocks: დააკავშირეთ თავსატეხები და ბლოკები
+        Matching: შესაბამისობა
     multi:
+      2-3 Algorithms Multi 1:
+        Choose an algorithm for the image provided.: აირჩიეთ ნახატის შესამაბისი ალგორითმი.
+        Multiple Choice: მრავლობითი არჩევანი
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: დაიწყეთ კვადრატით <br/>კვადრატის ზემოთ დასვით პარალელოგრამი<br/>პარალელოგრამის მარჯვნივ დასვით სამკუთხედი
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: დაიწყეთ კვადრატით<br/>კვადრატის ზემოთ დასვით სამკუთხედი<br/>კვადრატის ქვემოთ დასვით სამკუთხედი
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: დაიწყეთ კვადრატით<br/>კვადრატის ქვემოთ დასვით სამკუთხედი<br/> სამკუთხედის მარჯვნივ დასვით პარალელოგრამი
+        0: '? დაიწყეთ კვადრატით<br/>კვადრატის მარჯვნივ დასვით სამკუთხედი<br/>კვადრატის ქვემოთ დასვით პარალელოგრამი<br/>პარალელოგრამის მარჯვნივ დასვით სამკუთხედი'
+        1: '? დაიწყეთ კვადრატით<br/>კვადრატის მარჯვნივ დასვით სამკუთხედი<br/>კვადრატის ქვემოთ დასვით პარალელოგრამი<br/>პარალელოგრამის მარჯვნივ დასვით სამკუთხედი'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: დაიწყეთ სამკუთხედით<br/>სამკუთხედის ქვეშ დასვით კვადრატი<br/>კვადრატის ქვეშ დასვით კიდევ ერთი სამკუთხედი
+        Which image does <em>not</em> follow this algorithm?: რომელი ნახატი <em>არ</em> შეესაბამება ამ ალგორითმს?
+      2-3 Conditionals Multi 1:
+        According to the rules of the game, which set of cards is scored correctly?: თამაშის წესების მიხედვით, კარტების რომელი დასტაა სწორად დათვლილი?
+        Multiple Choice: მრავლობითი არჩევანი
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: როგორ გაამარტივებდით ამ თანმიმდევრობას ციკლების მეშვეობით?
+        Multiple Choice: მრავლობითი არჩევანი
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which program makes this image?: რომელი პროგრამა ქმნის ამ სურათს?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: 'ლაბირინთი: მრავლობითი არჩევანი'
+        Which set of blocks will get me to the pig?: ბლოკების რომელი ნაკრები მიმიყვანს ღორამდე?
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which program **does not** create this image?: რომელი პროგრამა **არ ქმნის** ამ სურათს?
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which image-program combo does not contain mistakes?: რომელი სურათისა და პროგრამის წყვილი არ შეიცავს შეცდომებს?
+      2-3 artist debug multi 1:
+        Artist Debugging Multiple Choice 1: 'მხატვარი, შეცდომების გასწორება: მრავლობითი არჩევანი 1'
+        What would you need to fix to make this a finished circle?: რა უნდა შეასწოროთ, რომ ეს წრე დაასრულოთ?
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: 'მხატვარი, ფუნქციები: მრავლობითი არჩევანი 1'
+        Pick the correct blocks to draw this image using the given functions: აირჩიეთ შესაბამისი ბლოკები, მოცემული ფუნქციების გამოყენებით ამ ნახატის დასახატად
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        Which shape is made by this loop?: რომელი ფიგურაა შექმნილი ამ ციკლით?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        Which shape is made by this program?: რომელი ფიგურაა შექმნილი ამ პროგრამით?
+      2-3 bee conditionals multi 1:
+        Bee Conditionals Multiple Choice 1: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი 1'
+        Which comparison below is true?: ქვემოთ მოყვანილი შედარებებიდან რომელია სწორი?
+      2-3 bee conditionals multi 3:
+        Bee Conditionals Multiple Choice 2: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი 2'
+        Choose the best blocks.: აირჩიეთ საუკეთესო ბლოკები.
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: 'ფუტკარი, ციკლები: მრავლობითი არჩევანი 1'
+        Which blocks collect all of the nectar?: რომელი ბლოკები მოაგროვებენ მთელ ნექტარს?
+      2-3 maze multi 1:
+        Maze Multiple Choice One: 'ლაბირინთი: მრავლობითი არჩევანი 1'
+        Which set of blocks is the correct answer?: ბლოკების რომელი ნაკრები წარმოადგენს სწორ პასუხს?
+      4-5 Algorithms Multi 1:
+        Baking cookies: ორცხობილების გამოცხობა
+        Banana: ბანანი
+        Brushing your teeth: კბილების გახეხვა
+        Multiple Choice: მრავლობითი არჩევანი
+        Shopping from a grocery list: საყიდლები სიის მიხედვით
+        Which one of these items is hardest to describe an algorithm for?: ამ ელემენტებიდან, რომლის ალგორითმის აღწერაა ყველაზე რთული?
+      4-5 Computational Thinking Multi 1:
+        Eugene is a _____ city.: ეუგენი არის _____ ქალაქი.
+        0: '? მოცემულია სამი წინადადება. ქვემოთ ჩამოთვლილთაგან, რომელი შაბლონია განზოგადებული იმგვარად, რომ სამივე წინადადება ერგება?'
+        1: ': მოცემულია სამი წინადადება. ქვემოთ ჩამოთვლილთაგან, რომელი შაბლონია განზოგადებული იმგვარად, რომ სამივე წინადადება ერგება?'
+        Multiple Choice: მრავლობითი არჩევანი
+        Seattle _____ a _____ _____.: სიეტლი _____ _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: სიეტლი დიდი ქალაქია.<br/>ეუგენი არის საშუალო ქალაქი<br/>ჰილვიუ პატარა ქალაქია.
+        _____ is _____ a _____.: _____ არის _____ _____.
+        _____ is a _____ city.: _____ არის _____ ქალაქი.
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which of these pictures best represents crowdsourcing?: ამ სურათებიდან რომელი ასახავს ქრაუდსორსინგს ყველაზე კარგად?
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: თმის დავარცხნა
+        Cleaning your room: ოთახის დალაგება
+        Eating your dessert: დესერტის მირთმევა
+        Multiple Choice: მრავლობითი არჩევანი
+        Washing your face: სახის დაბანა
+        Which one of these activities would be best for practicing crowdsourcing?: ამ აქტივობებიდან, რომელი იქნებოდა საუკეთესო ქრაუდსორსინგის გამოსაყენებლად?
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which piece of information listed below is okay to share on the internet?: ქვემოთ ჩამოთვლილი ინფორმაციიდან, ინტერნეტში რომლის გაზიარებაა მისაღები?
+        Your address: თქვენი მისამართი
+        Your birthday: დაბადების თარიღი
+        Your favorite food: თქვენი საყვარელი საჭმელი
+        Your parent's credit card number: მშობლების საკრედიტო ბარათის ნომერი
+      4-5 Internet Multi 1:
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        54.243.71.82: 54.243.71.82
+        64.14.68.10: 64.14.68.10
+        Multiple Choice: მრავლობითი არჩევანი
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: რომელ IP მისამართზე გადაგიყვანთ DNS-ი ყველაზე დიდი ალბათობით, როცა code.org-ზე შედიხართ?
+      4-5 Internet Multi 2:
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: თუ DNS-ი გაგზავნით გვერდზე IP მისამართით 100.42.50.110, რომელ ვებ-საიტზე იმყოფებით?
+        Multiple Choice: მრავლობითი არჩევანი
+        code.org: code.org
+        csisfun.com: csisfun.com
+        khanacademy.org: khanacademy.org
+        thinkersmith.org: thinkersmith.org
+      4-5 Songwriting Multi 1:
+        0: '? ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>გადახტი ჩემს სიყვარულზე ძვირფასო.'
+        1: ': ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>ბუზები დოში, <br/>ფრი ბუზო, ფრი, <br/>გადახტი ჩემს სიყვარულზე ძვირფასო.'
+        Lou, Lou, skip to my Lou,: ლუ, ლუ, გადახტი ჩემს სიყვარულზე,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>გადახტი ძვირფასო.
+        2: '? ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>გადახტი ძვირფასო.<br/><br/><p>ბუზები დოში, <br/>ფრი ბუზო, ფრი,'
+        3: ': ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>ლუ, ლუ, გადახტი ჩემს სიყვარულზე, <br/>გადახტი ძვირფასო.<br/><br/><p>ბუზები დოში, <br/>ფრი ბუზო, ფრი,'
+        Multiple Choice: მრავლობითი არჩევანი
+        4: '? რომელია ამ სიმღერის ყველაზე დიდი ნაწილი, რომელიც შეიძლება მისამღერად განსაზღვროთ ისე, რომ ყოველ გამოძახებაზე მისამღერი ზუსტად გამეორდეს?'
+        5: ': რომელია ამ სიმღერის ყველაზე დიდი ნაწილი, რომელიც შეიძლება მისამღერად განსაზღვროთ ისე, რომ ყოველ გამოძახებაზე მისამღერი ზუსტად გამეორდეს?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: რომელი პროგრამა <em>არ</em> ქმნის იგივე თანმიმდევრობას რაც პროგრამა 1?
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: 'მხატვარი, ციკლები: მრავლობითი არჩევანი'
+        Which blocks will create the design?: რომელი ბლოკები ქმნიან ასეთ დიზაინს?
+      4-5 artist multi 1:
+        Artist Multiple Choice: 'მხატვარი: მრავლობითი არჩევანი'
+        Which blocks draw a rectangle with a perimeter of 100?: რომელი ბლოკები ხატავენ მართკუთხედს პერიმეტრით 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: 'მხატვარი: მრავლობითი არჩევანი'
+        Which drawing is symmetric?: რომელი ნახატია სიმეტრიული?
+      4-5 bee conditionals multi 1:
+        0: '? იასამნისფერ ყვავილს შესაძლოა ჰქონდეს 3, 2 ან 1 ნექტარი, მაგრამ თქვენ არ იცით რამდენი. რომელი ბლოკები შეამოწმებენ რაოდენობას სწორად და მთლიანად მოაგროვებენ ნექტარს?'
+        1: ': იასამნისფერ ყვავილს შესაძლოა ჰქონდეს 3, 2 ან 1 ნექტარი, მაგრამ თქვენ არ იცით რამდენი. რომელი ბლოკები შეამოწმებენ რაოდენობას სწორად და მთლიანად მოაგროვებენ ნექტარს?'
+        Bee Conditionals Multiple Choice: 'ფუტკარი, პირობითები: მრავლობითი არჩევანი'
+        Choose the best blocks.: აირჩიეთ საუკეთესო ბლოკები.
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: 'ფუტკარი, შეცდომების გასწორება: მრავლობითი არჩევანი'
+        Which version of the function will work?: ფუნქციის რომელი ვერსია იმუშავებს?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: 'ფუტკარი, ციკლები: მრავლობითი არჩევანი'
+        Which blocks will solve the puzzle?: რომელი ბლოკები ამოხსნის თავსატეხს?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: 'ლაბირინთი, პირობითები: მრავლობითი არჩევანი'
+        Which blocks solve the puzzle?: რომელი ბლოკებით ამოიხსნება თავსატეხი?
+      4-5 maze multi 1:
+        Maze Multiple Choice: 'ლაბირინთი: მრავლობითი არჩევანი'
+        Which blocks solve the puzzle?: რომელი ბლოკებით ამოიხსნება თავსატეხი?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which blocks solve this puzzle?: რომელი ბლოკებით ამოიხსნება ეს თავსატეხი?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which blocks draw the square?: რომელი ბლოკებით იხატება კვადრატი?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: რამდენი პორცია ნექტარია აქ?
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: რამდენი პორცია ნექტარია აქ?
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: რომელ ცხოველს ეკუთვნის ციფრული კვალი, რომლის გამოც ის <strong>ყველაზე დიდ საფრთხეშია</strong>?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: როგორ გაამარტივებდით ამ თანმიმდევრობას ციკლების მეშვეობით?
+        Multiple Choice: მრავლობითი არჩევანი
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which arrow gets the Flurb to the treasure?: რომელი ისარი მიიყვანს ფლარბის განძამდე?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which information should you <strong>not</strong> share online?: რომელი ინფორმაცია <strong>არ</strong> უნდა გააზიაროთ ონლაინ?
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which choice should be the final block?: რომელი ბლოკი უნდა იყოს ბოლო?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which repeat block is the same?: Which repeat block is the same?
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Pick the correct repeat block.: აირჩიეთ გამეორების სწორი ბლოკი.
       K-1 Maze Multiple Choice 2:
         Maze: ლაბირინთი
+        Which answer solves this level?: რომელი პასუხი ამოხსნის ამ დონეს?
+      K-1 Move It Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which algorithm gets the Flurb to the flowers?: რომელი ალგორითმი მიიყვანს ფლარბის ყვავილებამდე?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which step should go at the beginning of this algorithm?: რომელი ნაბიჯი უნდა გადავიდეს ამ ალგორითმში პირველ ადგილზე?
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which step should fill in the blank for this algorithm?: რომელი ნაბიჯი უნდა ჩაისვას ამ ალგორითმში გამოტოვებულ ადგილზე?
+      K-1 Word Search Multi 1:
+        Multiple Choice: მრავლობითი არჩევანი
+        Which blocks spell "MOVE"?: რომელი ბლოკი ჰყოფს სიტყვას "MOVE" ასო-ასო?
+      K-1 Word Search Multi 3:
+        Multiple Choice: მრავლობითი არჩევანი
+        SET: SET
+        SOUTH: SOUTH
+        SQUARE: SQUARE
+        Which word is spelled?: რომელი სიტყვაა ჩაწერილი?

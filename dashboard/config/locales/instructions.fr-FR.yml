@@ -940,6 +940,8 @@ fr:
         !
       Artist - Nested Loops Assessment 1_instruction: Utilise une boucle imbriquée
         pour terminer le dessin.
+      Artist Autorun Test_instruction: Utilise le bloc « Répéter » pour dessiner ces
+        3 carrés.
       Artist Inspiration_instruction: |-
         Inspiration pour les Activités libres : Tu as maintenant appris tout ce que tu as besoin de savoir pour faire un motif comme ça ! Si cette photo t’inspire, essaie de faire quelque chose de similaire. Autrement, crée quelque chose d’unique.
 
@@ -2889,6 +2891,12 @@ fr:
       courseD_artist_binary7_instruction: Quelle est la chaîne binaire la plus courte
         que tu peux répéter pour dessiner cette image ?
       courseD_artist_binary7_2018_instruction: Quelle est la chaîne binaire la plus
+        courte que tu peux répéter pour dessiner cette image ?
+      courseD_autorun_binary4_2019_instruction: Peux-tu dessiner ce modèle en bouclant
+        une chaîne binaire à trois chiffres ?
+      courseD_autorun_binary6_2019_instruction: Quelle chaîne binaire de 6 chiffres
+        répétée 11 fois dessinera cette image ?
+      courseD_autorun_binary7_2019_instruction: Quelle est la chaîne binaire la plus
         courte que tu peux répéter pour dessiner cette image ?
       courseD_bee_debugging3_instruction: Ces blocs-là me gênent vraiment. Corrige
         l’erreur ou les erreurs afin de récolter tout le nectar et fabriquer tout

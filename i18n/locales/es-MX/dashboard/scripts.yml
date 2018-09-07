@@ -2758,8 +2758,12 @@ es-MX:
               name: '¡Participe en un estudio longitudinal!'
         express-2017:
           stages:
+            'Programming Unplugged: My Robotic Friends':
+              name: 'Programando Sin Conexión: Mis Amigos Robóticos'
             Introduction:
               name: Introducción
+            Debugging in Collector:
+              name: Introducción a la Depuración
             'Loops: My Loopy Robotic Friends':
               name: 'Ciclos: Mis amigos roboticos'
             Nested Loops Project in Artist:
@@ -2832,6 +2836,9 @@ es-MX:
               name: Bucles anidados
             Conditionals & Loops in Harvester:
               name: Condicionales y ciclos en Harvester
+          title: Curso Rápido
+          description_audience: 'Edades: 9 a 18'
+          description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
           description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
         pre-express-2017:
           stages:
@@ -2849,6 +2856,9 @@ es-MX:
               name: 'Ciclos: Mis amigos roboticos'
             Spelling Bee:
               name: Concurso de ortografía
+          title: Curso rápido prescolar
+          description_audience: 'Edades: 4 a 8'
+          description_short: 'Una introducción a las ciencias de la computación para preescolar: combina lo mejor de nuestros cursos de jardín de niños y primer grado.'
           description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
         subgoal-labels-opt-in:
           stages:
@@ -3908,6 +3918,7 @@ es-MX:
               name: Verifica tus suposiciones
         pre-express-2018:
           description: Aprende los basicos de las ciencias de la compuación y el internet. Al final del curso, crea tu propio juego o historia para compartir.
+          description_short: 'Introducción a las ciencias de la computación para preescolar: combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
           stages:
             'Debugging: Unspotted Bugs':
               name: Errores desapercibidos
@@ -3941,3 +3952,15 @@ es-MX:
               name: Ciclos en Ice Age
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie y el gran proyecto
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

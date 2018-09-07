@@ -1319,6 +1319,7 @@
   header_course_catalog: "Catálogo do Curso"
   header_project_gallery: "Projetos"
   header_sections: "Seções"
+  header_professional_learning: "Aprendizado Profissional"
   header_educate_overview: "Visão Geral do Educador"
   header_educate_elementary: "Ensino Fundamental"
   header_educate_middle: "Ensino Fundamental II"
@@ -1363,3 +1364,4 @@
   sign_in_instruct_name: "Escolha o nome de exibição deles."
   sign_in_instruct_secret: "Escolha o segredo deles %{secret}."
   sign_in_instruct_button: "Clique no botão \"Login\"."
+  hero_name: 'Minecraft: Jornada do Herói'

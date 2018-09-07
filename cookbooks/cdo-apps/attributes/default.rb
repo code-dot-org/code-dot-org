@@ -11,6 +11,7 @@ default['cdo-apps'] = {
 
   'pegasus' => {
     'port' => 8081,
+    'env' => {}
   },
 
   'i18n' => {
@@ -18,6 +19,8 @@ default['cdo-apps'] = {
       'en' => 'English',
     },
   },
-  'nginx_enabled' => true
+  'nginx_enabled' => true,
+  'app_server' => 'unicorn',
+  'jemalloc' => false
 }
 default['omnibus_updater']['version'] = '12.7.2'

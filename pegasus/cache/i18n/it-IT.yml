@@ -63,7 +63,7 @@ it-IT:
   csedweek_map_signup: Iscrivi il tuo evento
   csedweek_map_search_placeholder: Cerca eventi per l'Ora del codice
   csedweek_map_search_search: Cerca
-  csedweek_map_search_reset: Ricomincia
+  csedweek_map_search_reset: Ripristina
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Eventi de L'Ora del Codice
   csedweek_map_legend_cs_tech_jam: Eventi speciali
@@ -1300,7 +1300,7 @@ it-IT:
   csf_international_category_name: Fondamenti di Informatica (in Italiano)
   csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
   csp_category_name: Princìpi dell'Informatica (versione 2015-16)
-  csp17_category_name: "'16-'17 principi d'informatica"
+  csp17_category_name: CS Principles ('17-'18)
   csp_2018_category_name: Principi di informatica ('18-'19)
   cspexams_category_name: Prova pratica di principi d'informatica
   applab_name: Sviluppo App
@@ -2098,7 +2098,7 @@ it-IT:
   header_report_bug: Report Bug
   header_tutorials: Corsi
   header_documentation: Documentazione
-  csp_name: "'16-'17 principi d'informatica"
+  csp_name: CS Principles
   full_course_category_name: Corsi Avanzati
   user_header_label: Ciao %{username}
   user_header_settings: Il mio account

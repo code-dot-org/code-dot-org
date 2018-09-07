@@ -246,6 +246,8 @@ bs:
         Ne znam koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji
         je popunjava sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti "dok"
         petlju ovaj put.'
+      Artist Autorun Test_markdown_instruction: Iskoristi blok "ponavljaj" da bi se
+        dobila ova 3 kvadrata.
       Big Game Booleans 1_markdown_instruction: Kada si zadnji put radio/la na tvojoj
         igrici imali smo da naša meta i opasnost lete preko ekrana, ali se nikada
         ne vrate. Klikni na "Pokreni" da vidiš kako tvoja igra radi u ovom trenutku,

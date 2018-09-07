@@ -58,14 +58,14 @@ it:
       instructions:
         maze_2_2: 'Puoi aiutarmi a catturare il maialino cattivo? Accosta due blocchi "vai avanti" uno sopra l''altro e poi premi "Esegui" per aiutarmi a raggiungerlo. '
         maze_2_1: Questo maialino mi fa arricciare le penne. Aiutami a prenderlo!
-        maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
+        maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maialino. Evita la dinamite (TNT) o le mie piume salteranno in aria!
         maze_2_3: Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
-        maze_2_4: Mantieni la calma e aiutami a trovare quel cattivone di un maiale. Altrimenti potrei arrabbiarmi!
-        maze_2_5: C'è un modo per arrivare a quello sciocco maiale aggiungendo solo due blocchi. Riesci a trovarlo?
+        maze_2_4: Mantieni la calma e aiutami a trovare quel cattivone di un maialino. Altrimenti potrei arrabbiarmi!
+        maze_2_5: C'è un modo per arrivare a quello sciocco maialino aggiungendo solo due blocchi. Riesci a trovarlo?
         maze_2_6: Prova a farmi arrivare all'intruso verde utilizzando solo tre blocchi.
-        maze_2_7: Aiutami a catturare questo maialaccio utilizzando il minor numero possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".
+        maze_2_7: Aiutami a catturare il maialino cattivo utilizzando il minor numero possibile di blocchi. Prova a utilizzare più di un blocco "ripeti ... volte".
         maze_2_8: 'Quando un blocco è grigio, significa che non puoi eliminarlo. In questo esercizio il blocco grigio "ripeti 3 volte" fa ripetere per 3 volte le azioni che contiene. Prova ad inserire in esso questi blocchi: "vai avanti", "vai avanti", "gira a destra".'
-        maze_2_9: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maiale.
+        maze_2_9: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maialino.
         maze_2_10: 'Ok, un''ultima volta per fare pratica: riesci a risolvere questo esercizio aggiungendo solo 4 blocchi?'
         maze_2_11: Caro umano. Io zombie. Io affamato. Devo ... arrivare ... al girasole. Riesci a farmi arrivare là aggiungendo solo 5 blocchi?
         maze_2_12: Ok, questo esercizio è simile, ma leggermente diverso. Riesci a farlo aggiungendo solo cinque blocchi?
@@ -155,7 +155,7 @@ it:
         turtle_5_5: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
         turtle_5_6: Prova ad eseguire questo programma e ad apportare modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure cancellalo e sostituiscilo con qualcosa di totalmente diverso)
         maze_3_1: Ho bisogno di arrivare a quel maiale! Digita un paio di volte l'istruzione "avanza()" in modo da riprendere le mie uova.
-        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maiale.
+        maze_3_2: Scrivi un programma che mi fa fare tutta la strada verso il maialino.
         maze_3_3: Come posso arrivare al maiale? Assicurati che non vada a sbattere contro la cassetta di dinamite (TNT)!
         maze_3_4: Argh! Scrivi un programma che mi faccia girare alla larga della dinamite (TNT) ed arrivare al maiale.
         Custom_builder: Sposta i blocchi dalla cassetta degli attrezzi all'area di lavoro per disegnare il livello che vuoi creare. Premi "Esegui" quando hai fatto.
@@ -479,6 +479,7 @@ it:
         CSF_skinOverview_Harvester: La Contadina
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Cicli con BB-8
         CSF_harvester_skinOverview_K-1: La Contadina
         CSF_harvester_loops_K1: Cicli con la Contadina
         CSF_scrat_loops_K1: Cicli con l'Era Glaciale
@@ -489,7 +490,7 @@ it:
         CSF_loops_AB: Ripetizioni
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
-        CSF_SpriteLabIntro_CDEF: Questo è il Laboratori dei Personaggi
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei Personaggi
         CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio dei Personaggi
         CDEF_Video_SpritesInAction: Personaggi in Azione
         CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione

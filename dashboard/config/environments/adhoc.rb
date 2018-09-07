@@ -13,8 +13,9 @@ Dashboard::Application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  # Show full error reports
-  config.consider_all_requests_local = true
+  # Disable full error reports for profiling/load-testing, due to memory leak:
+  # https://github.com/rails/rails/issues/27273
+  config.consider_all_requests_local = false
 
   # Use digests.
   config.assets.digest = true

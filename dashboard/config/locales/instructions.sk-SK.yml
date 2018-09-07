@@ -705,6 +705,8 @@ sk:
       App Lab test_instruction: test
       Artist - Nested Loops Assessment 1_instruction: Použite vnorené slučky pre dokončenie
         dizajnu.
+      Artist Autorun Test_instruction: Teraz vlož funkciu do cyklu, aby si nakreslil
+        tri štvorce.
       Bergeron Robot Maze1_instruction: 'Viete mi pomôcť chytiť nezbedné prasiatko?
         Navrstvite niekoľko blokov "posunúť dopredu" pod blok "po spustení" a stlačte
         "Spustiť". '
@@ -819,12 +821,21 @@ sk:
       Crack a Caesar Cipher_2018_instruction: Inštrukcie
       Dance Party 1-validated_instruction: 'Čo si myslíte, že sa stane, keď kliknete
         na mimozemšťana?  '
+      Dance Party 1-validated_simple_instruction: 'Čo si myslíte, že sa stane, keď
+        kliknete na mimozemšťana?  '
       Dance Party Freeplay_instruction: A teraz si vytvorte vlastnú mimozemšťanskú
+        diskotéku!
+      Dance Party Freeplay_simple_instruction: A teraz si vytvorte vlastnú mimozemšťanskú
         diskotéku!
       Dance Party Predict_instruction: 'Čo si myslíte, že sa stane, keď kliknete na
         mimozemšťana?  '
+      Dance Party Predict_simple_instruction: 'Čo si myslíte, že sa stane, keď kliknete
+        na mimozemšťana?  '
       Fish Tank 2-validated_instruction: Zmeňte Pracháča (kôpku slamy) na rybu.
+      Fish Tank 2-validated_simple_instruction: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 6-validated_instruction: Pridajte správanie k novému rybkinmu kamarátovi.
+      Fish Tank 6-validated_simple_instruction: Pridajte správanie k novému rybkinmu
+        kamarátovi.
       FoodFight_instruction: Toto je príklad hry, ktorú môžete vytvoriť v hernom laboratóriu.
       FoodFight_2018_instruction: Toto je príklad hry, ktorú môžete vytvoriť v hernom
         laboratóriu.
@@ -1082,6 +1093,8 @@ sk:
       Underground Mining Coal_2018_instruction: Najcennejšie zdroje nájdete v podzemí,
         ale môže sa tam stmievať. Polož tam aspoň 2 fakľe a vyťaž aspoň 2 kusy uhlia.
       Virtual Pet 1 Predict_instruction: 'Čo si myslíte, že sa stane, keď kliknete
+        na mimozemšťana?  '
+      Virtual Pet 1 Predict_simple_instruction: 'Čo si myslíte, že sa stane, keď kliknete
         na mimozemšťana?  '
       aE7_instruction: "Ak spravíte ďaľšiu takúto slučku, ale zabočíte doľava namiesto
         doprava, čo sa stane? \n\nViete to celé zopakovať pre nakreslenie tejto vlny?"

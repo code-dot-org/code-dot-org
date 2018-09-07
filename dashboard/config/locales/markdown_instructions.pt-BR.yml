@@ -177,6 +177,8 @@ pt-BR:
       2-3 Bee Conditionals 15_markdown_instruction: "Este padrão de degrau deve ser
         familiar.  \r\n\r\nVocê\nconsegue coletar néctar apenas das flores que têm
         néctar para oferecer, usando o menor número de\nblocos possível?"
+      2-3 Bee Conditionals 2_markdown_instruction: "Sou uma abelha faminta! \r\nAjude-me
+        a coletar\ntodo o néctar das flores usando o menor número possível de blocos."
       2-3 Bee Conditionals 3_markdown_instruction: "Olhe só todo esse néctar!\r\n\r\nAjude-me\na
         coletar todo o néctar e produzir mel usando o menor número possível de blocos.
         \ "
@@ -362,6 +364,9 @@ pt-BR:
         de quantas\npás cheias de terra esse buraco precisa.  \r\nVocê pode escrever
         um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?
         \ "
+      Artist Autorun Test_markdown_instruction: |-
+        Agora coloque a função dentro de um laço
+        para desenhar esses três quadrados.
       Big Game Animation 1_markdown_instruction: |-
         Agora que você aprendeu a escrever funções lineares
         simples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.
@@ -785,6 +790,13 @@ pt-BR:
       course1_artist_loops_challenge3_markdown_instruction: |-
         * * Piu! * *
         * "Pode me ajudar fazer duas casas de pássaro?" *
+      course1_maze_debugging_challenge1_markdown_instruction: Depure esse nível. Remova
+        blocos extras, e adicione blocos que estão faltando. Leve o pássaro até o
+        porco!
+      course1_maze_debugging_challenge2_markdown_instruction: Analise este nível.
+        Estes são os blocos corretos, mas eles estão colocados na ordem errada!
+      course2_collector_prog_challenge1_markdown_instruction: Preste atenção! Você
+        consegue coletar todas as **10** peças do tesouro?
       course4_artist_fwp_challenge1_markdown_instruction: Execute este programa e
         faça alterações para ver o que acontece. Você pode descobrir como ele funciona?
         (Ou exclua-o e substitua-o por algo totalmente diferente)
@@ -971,9 +983,19 @@ pt-BR:
         Esta é Laurel, a Aventureira!
 
         Pressione "Run" para vê-la andar até o tesouro e pegá-lo
+      courseA_collector_preLoops2_markdown_instruction: |
+        Ótimo! Agora, adicione o código você mesmo!
+
+        Mova um ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) bloco para o final do programa e clique em "Executar"!
+      courseA_collector_preLoops3_markdown_instruction: "Para pegar o tesouro, encaixe
+        dois blocos ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+        blocks and one ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        no final do programa e clique em \"Executar\"!\n\n"
       courseA_collector_preLoops7_markdown_instruction: "Pegue todas as três pilhas!
         Mova Laurel para cada peça do tesouro, e então use esse block: \n<xml><block
         type=\"collector_collect\"/></xml>"
+      courseA_forVideoTest_artist_markdown_instruction: Loops de repetição funcionam
+        para o Artista também!
       courseA_harvester_forVideo_markdown_instruction: Você consegue pegar todo o
         milho usando apenas ** um ** bloco de movimento?
       courseA_harvester_loops1_markdown_instruction: Ajude a colheitadeira a pegar
@@ -981,43 +1003,274 @@ pt-BR:
       courseA_harvester_loops10_markdown_instruction: Ajude a colheitadeira a pegar
         todas as cinco espigas de milho!
       courseA_harvester_loops11_markdown_instruction: 'Tente mais um por sua conta! '
+      courseA_harvester_loops2_markdown_instruction: A colheitadeira precisa coletar
+        todo o milho! Você vê um padrão?
       courseA_harvester_loops3_markdown_instruction: Você consegue pegar todo o milho
         usando apenas ** um ** bloco de movimento?
+      courseA_harvester_loops4_markdown_instruction: |-
+        * "Eu preciso de ajuda para encontrar o erro!"
+
+        Você pode ajudar a colheitadeira a encontrar o bug em seu código?
       courseA_harvester_loops5_markdown_instruction: Tente você mesmo! Você consegue
         pegar o milho que está no final também?
+      courseA_harvester_loops5a_markdown_instruction: Olha todo este milho! Você coletar
+        tudo sozinho?
       courseA_harvester_loops5b_markdown_instruction: Você consegue modificar seu
         código para fazer a colheitadeira pegar todo o milho?
+      courseA_harvester_loops6_markdown_instruction: Você vai precisar de * * um *
+        * <xml><block type="maze_moveWest"></block></xml> bloco e de * * um * * <xml><block
+        type="maze_moveNorth"></block></xml> bloco para terminar este enigma!
       courseA_harvester_loops7_markdown_instruction: 'Tente você mesmo! '
+      courseA_harvester_loops8_markdown_instruction: |-
+        Este é o mesmo enigma, mas agora você tem que repetir * * três * * vezes em vez de dua! Use este bloco:
+
+        <xml><block type="controls_repeat_simplified_dropdown">
+        <title name="TIMES" config="2-10">3</title>
+        </block></xml>
+      courseA_harvester_loops9_markdown_instruction: Você consegue descobrir como
+        pegar *todo* o milho?
+      courseA_harvester_seq1_markdown_instruction: Ajude a colheitadeira a pegar a
+        espiga de milho!
+      courseA_harvester_seq10_markdown_instruction: A colheitadeira precisa coletar
+        todo o milho! Você vê um padrão?
       courseA_harvester_seq11_markdown_instruction: Tente você mesmo! Pegue todo o
         milho.
+      courseA_harvester_seq12_markdown_instruction: "* Obrigada por me ajudar! * \n\nColher
+        todo o milho."
+      courseA_harvester_seq13_markdown_instruction: Ajude a colheitadeira a pegar
+        o milho!
+      courseA_harvester_seq2_markdown_instruction: 'Use <xml><block type="maze_moveWest"/></xml>
+        * * três * vezes para levar a colhedora até o milho! '
+      courseA_harvester_seq3_markdown_instruction: Use <xml><block type="maze_moveNorth"/></xml>
+        **três** vezes para levar a colheitadeira até o milho! Não se esqueça de pegar
+        o milho no final.
+      courseA_harvester_seq4_markdown_instruction: Adicione *um* bloco para ajudar
+        a colheitadeira a pegar o milho.
+      courseA_harvester_seq5_markdown_instruction: Você consegue descobrir o que há
+        de errado com este código? Ajude a colheitadora a pegar o milho!
       courseA_harvester_seq6_markdown_instruction: Tente você mesmo!
+      courseA_harvester_seq7_markdown_instruction: Você tem que se mover em duas direções
+        para chegar até o milho! Ajuda a colhedora a escolher a direção certa.
       courseA_harvester_seq8_markdown_instruction: Agora a colheitadeira precisa pegar
         o milho duas vezes!
       courseA_harvester_seq9_markdown_instruction: Adicione dois blocos para terminar
         este enigma!
+      courseA_maze_ramp2_2018_markdown_instruction: Anexe os dois <xml> <block type="maze_moveEast"/></xml>
+        blocos <xml><block type="when_run"/></xml> para terminar seu código, em seguida,
+        clique em "Executar ▶".
+      courseA_maze_ramp2a_2018_markdown_instruction: Anexe os dois <xml><block type="maze_moveEast"/></xml>
+        blocos <xml><block type="when_run"/></xml> para finalizar seu código e clique
+        ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+      courseA_maze_ramp3a_2018_markdown_instruction: Pegue um <xml><block type="maze_moveNorth"/></xml>
+        da caixa de ferramentas e adicione-o no final dos outros blocos para finalizar
+        o código, e então clique em "▶ Executar".
+      courseA_maze_ramp3b_2018_markdown_instruction: |-
+        Há um bloco extra no final desse código!
+
+        Arrate-o de volta para a caixa de ferramentas para jogá-lo fora.
       courseA_maze_ramp4a_2018_markdown_instruction: Você consegue descobrir qual
         bloco você precisa adicionar aos outros blocos para terminar este código?
+      courseA_maze_ramp5a_2018_markdown_instruction: Tente este sozinho!
+      courseA_maze_seq1_markdown_instruction: '*"Brinque com esses blocos e tente
+        me levar até o porco malvado!"*'
+      courseA_maze_seq10_markdown_instruction: |-
+        * * Desafio: * * circundar a TNT para levar o pássaro até o porco!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+      courseA_maze_seq10_2018_markdown_instruction: "**Desafio:** Evite a TNT para
+        levar o pássaro até o porco! "
+      courseA_maze_seq11_markdown_instruction: |-
+        Hora para um quebra-cabeça menor!  Mova um caminho e, em seguida, mov outro para levar o pássaro até o porco.
+
+        ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
+      courseA_maze_seq11_2018_markdown_instruction: 'Hora para um quebra-cabeça menor!  Mova
+        um caminho e, em seguida, mova outro para levar o pássaro até o porco.  '
+      courseA_maze_seq12_markdown_instruction: |-
+        Pegue aquele porco!
+
+        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+      courseA_maze_seq12_2018_markdown_instruction: Pegue aquele porco!
+      courseA_maze_seq1_2018_markdown_instruction: '*"Brinque com esses blocos e tente
+        me levar até o porco malvado!"*'
+      courseA_maze_seq2_markdown_instruction: |-
+        * "Um bug! Corrija o código para levar-me até o porco."
+
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+      courseA_maze_seq2_2018_markdown_instruction: |-
+        * "Um bug! Corrija o código para levar-me até o porco."
+
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+      courseA_maze_seq3_markdown_instruction: |-
+        * "Corrija o código para levar-me ao porco!"
+
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+      courseA_maze_seq3_2018_markdown_instruction: |-
+        * "Corrija o código para levar-me ao porco!"
+
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+      courseA_maze_seq4_markdown_instruction: "* \"Algo não está certo.\" \n\nRETIRE
+        um bloco para levar o pássaro até o porco!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+      courseA_maze_seq4_2018_markdown_instruction: "* \"Algo não está certo.\" \n\nRETIRE
+        um bloco para levar o pássaro até o porco!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+      courseA_maze_seq5_markdown_instruction: |-
+        Tente este você mesmo desde o início.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
       courseA_maze_seq5_2018_markdown_instruction: Dê uma chance a este.
+      courseA_maze_seq5a_2018_markdown_instruction: |-
+        *"Aqui, porquinho, porquinho!"*
+
+        O que você pode adicionar no final desse código para levar o pássaro até o porco?
+      courseA_maze_seq6_markdown_instruction: |-
+        Mova um caminho, então mova o outro para levar o pássaro até o porco!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
       courseA_maze_seq6_2018_markdown_instruction: Mova-me por um caminho, e então
         por outro para levar o pássaro até o porco!
+      courseA_maze_seq7_markdown_instruction: |-
+        Descubra o que está faltando e então adicione blcoos para levar o pássaro até o porco!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq7_2018_markdown_instruction: |-
+        Descubra o que está faltando e então adicione blcoos para levar o pássaro até o porco!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq8_markdown_instruction: |-
+        Resolva este nível e leve o pássaro até o porco!
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
       courseA_maze_seq8_2018_markdown_instruction: Resolva este nível e leve o pássaro
         até o porco!
+      courseA_maze_seq9_markdown_instruction: |-
+        **Desafio:** Depure esse código adicionando blocos para levar o pássaro até o porco!
+
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+      courseA_maze_seq9_2018_markdown_instruction: |-
+        **Desafio:** Depure esse código adicionando blocos para levar o pássaro até o porco!
+
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+      courseA_maze_seq_challenge1_markdown_instruction: Depure esse nível. Remova
+        blocos extras, e adicione blocos que estão faltando. Leve o pássaro até o
+        porco!
+      courseA_maze_seq_challenge1_2018_markdown_instruction: Depure esse nível. Remova
+        blocos extras, e adicione blocos que estão faltando. Leve o pássaro até o
+        porco!
+      courseA_playLab_events3_markdown_instruction: |-
+        Ajude Jorge, o cachorro, a mover-se conectando o <xml><block type="studio_move">
+        <title name="SPRITE">1</title>
+        <title name="DIR">8</title>
+        </block></xml> bloco à<xml><block type="studio_whenArrow">
+        <title name="VALUE">esquerda </title>
+        </block></xml> onde já se encontra o bloco de evento na área de trabalho.
+
+        Leve Jorge até a bandeira para passar de nível!
+      courseA_playLab_events3_2018_markdown_instruction: |-
+        Ajude Jorge, o cachorro, a mover-se conectando o <xml><block type="studio_move">
+        <title name="SPRITE">1</title>
+        <title name="DIR">8</title>
+        </block></xml> bloco à<xml><block type="studio_whenArrow">
+        <title name="VALUE">esquerda </title>
+        </block></xml> onde já se encontra o bloco de evento na área de trabalho.
+
+        Leve Jorge até a bandeira para passar de nível!
+      courseA_playLab_events4_markdown_instruction: Agora, adicione mais blcoos para
+        fazer Jorge se mover para a direita quando a seta para direita for clicada.
+      courseA_playLab_events4_2018_markdown_instruction: Agora, adicione um outro
+        bloco de evento para fazer Jorge mover-se para a direita quando a seta para
+        direita for clicada.
+      courseA_playLab_events5_markdown_instruction: Adcione eventos para fazer com
+        que Jorge mova-se para cima e para baixo quando a seta para cima e para baixo
+        forem pressionadas.
+      courseA_playLab_events5_2018_markdown_instruction: Adcione eventos para fazer
+        com que Jorge mova-se para cima e para baixo quando a seta para cima e para
+        baixo forem pressionadas.
+      courseA_playLab_events7_2018_markdown_instruction: "*Jogo Livre:* Adicione qualquer
+        coisa nesse jogo. Você consegue fazer o dinossauro desaparecer  quando Jorge
+        correr em direção a ele?"
+      courseA_playlab_events_challenge1_markdown_instruction: |-
+        Clicar em Olive irá fazer Robin aparecer! Você consegue escrever código que faça o restante dos personagens aparecerem?
+
+        Nesse quebra-cabeça, certifique-se de clicar nas dicas! As dicas irão te ajudar a completar esse desafio passo-a-passo!
+
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
+      courseA_playlab_events_challenge1_2018_markdown_instruction: |-
+        Clicar em Olive irá fazer Robin aparecer! Você consegue escrever código que faça o restante dos personagens aparecerem?
+
+        Nesse quebra-cabeça, certifique-se de clicar nas dicas! As dicas irão te ajudar a completar esse desafio passo-a-passo!
+
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
+      courseA_playlab_events_challenge1a_markdown_instruction: |-
+        Onde estão meus amigos escondidos? Neste jogo, clique em mim para mostrar meu amigo Olive, o gato! Clicando em Olive fará com que Robin apareça! Você consegue escrever um código para mostrar o resto dos meus amigos também?
+
+
+        Neste quebra-cabeça, certifique-se de clicar nas dicas! As dicas irão ajudá-lo a fazer esse projeto passo a passo!
+
+        ! [a] (https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
+      courseA_playlab_events_challenge2_markdown_instruction: |-
+        Dê algo para cada um fazer quando clicar neles. O que os animais irão dizer? O que mais vai acontecer?
+
+        Nesse desafio, certifique-se de clicar nas dicas. As dicas irão te dar coisas legais para tentar!
+
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
+      courseA_playlab_events_challenge2_2018_markdown_instruction: |-
+        Dê algo para cada um fazer quando clicar neles. O que os animais irão dizer? O que mais vai acontecer?
+
+        Nesse desafio, certifique-se de clicar nas dicas. As dicas irão te dar coisas legais para tentar!
+
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
+      courseA_playlab_events_challengeClone_markdown_instruction: |-
+        Onde estão meus amigos escondidos? Neste jogo, clique em mim para mostrar meu amigo Olive, o gato! Clicando em Olive fará com que Robin apareça! Você consegue escrever um código para mostrar o resto dos meus amigos também?
+
+
+        Neste quebra-cabeça, certifique-se de clicar nas dicas! As dicas irão ajudá-lo a fazer esse projeto passo a passo!
+
+        ! [a] (https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)
+      courseB_Scrat_ramp3a_2018_markdown_instruction: Pegue um <xml><block type="maze_moveNorth"/></xml>
+        da caixa de ferramentas e adicione-o no final dos outros blocos para finalizar
+        o código, e então clique em "▶ Executar".
       courseB_Scrat_ramp4a_2018_markdown_instruction: Você consegue descobrir qual
         bloco você precisa adicionar aos outros blocos para terminar este código?
+      courseB_Scrat_ramp5a_2018_markdown_instruction: Tente este sozinho!
       courseB_collector_loops1_markdown_instruction: |-
         * * Jogo gratuito: * * Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
+      courseB_iceage_loops10_markdown_instruction: Ajude Scrat a chegar até a noz!
       courseB_iceage_loops12_markdown_instruction: Pegue a noz da maneira que você
         conseguir!
+      courseB_iceage_loops4_markdown_instruction: Adicione mais um bloco para levar
+        Scrat até a noz!
+      courseB_iceage_loops5_markdown_instruction: Você consegue adicionar mais um
+        laço para chegar até a noz?
+      courseB_iceage_loops6_markdown_instruction: Você consegue adicionar um laço
+        para chegar até a noz?
       courseB_iceage_loops7_markdown_instruction: 'Scrat realmente quer aquela noz! '
       courseB_iceage_loops8_markdown_instruction: 'Você consegue corrigir este código? '
+      courseB_iceage_loops9_markdown_instruction: A noz está tão longe! Você pode
+        usar laços para ajudar o Scrat a chegar lá?
+      courseB_playlab_events6_markdown_instruction: |-
+        Ajude o seu cavaleiro a pegar todas as bandeiras!
+
+        Para fazer isso, você precisará adicionar eventos que ajudem o cavaleiro a mover-se para cima, para baixo, para esquerda e para a direita.
+      courseB_playlab_events6_2018_markdown_instruction: |-
+        Ajude o seu cavaleiro a pegar todas as bandeiras!
+
+        Para fazer isso, você precisará adicionar eventos que ajudem o cavaleiro a mover-se para cima, para baixo, para esquerda e para a direita.
       courseC_collector_prog9_markdown_instruction: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_prog9_2018_markdown_instruction: '*"Vamos pegar todo o tesouro!"*'
       courseC_collector_progA_markdown_instruction: Ajude Laurel a coletar todo o
         tesouro.
       courseC_harvester_loops3_markdown_instruction: Colete todas as abóboras.
       courseC_harvester_loops3_2018_markdown_instruction: Colete todas as abóboras.
+      courseC_maze_programming8_markdown_instruction: '*" Mantenha a calma e ajude-me
+        a encontrar o porco mal."*'
+      courseC_maze_programming8_2018_markdown_instruction: '*" Mantenha a calma e
+        ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_markdown_instruction: '*" Mantenha a calma
+        e ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '*" Mantenha a
+        calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming_challenge1_markdown_instruction: 'O pássaro precisa
         de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge1_2018_markdown_instruction: 'O pássaro precisa
@@ -1039,10 +1292,17 @@ pt-BR:
       courseD_bounce_events1_markdown_instruction: Vá até a bandeira! Anexe um bloco
         ao bloco "quando seta para esquerda" e clique em "Executar" para mover o jogador
         até a bandeira.
+      courseD_iceage_loops10_markdown_instruction: Ajude Scrat a chegar até a noz!
       courseD_iceage_loops12_markdown_instruction: Pegue a noz da maneira que você
         conseguir!
+      courseD_iceage_loops4_markdown_instruction: Adicione mais um bloco para levar
+        Scrat até a noz!
+      courseD_iceage_loops6_markdown_instruction: Você consegue adicionar um laço
+        para chegar até a noz?
       courseD_iceage_loops7_markdown_instruction: 'Scrat realmente quer aquela noz! '
       courseD_iceage_loops8_markdown_instruction: 'Você consegue corrigir este código? '
+      courseD_iceage_loops9_markdown_instruction: A noz está tão longe! Você pode
+        usar laços para ajudar o Scrat a chegar lá?
       courseD_maze_nestedLoops4_markdown_instruction: "Leve-me até o girassol usando
         o menor número de blocos\npossível! \r\n\r\nUse um laço \"repita\" dentro
         de outro para diminuir\na quantidade de códigos que você precisa."
@@ -1068,6 +1328,9 @@ pt-BR:
       courseF_bee_for_challenge2_2018_markdown_instruction: |-
         Resolva este desafio com o menor número de blocos
         possível.
+      coursea_maze_ramp1_2018_markdown_instruction: Para levar o pássaro até o porco,
+        encaixe o <xml><block type="maze_moveEast"/></xml> bloco no final do <xml><block
+        type="when_run"/></xml> bloco e aperte "▶ Executar"!
       csd-pulse-check-survey-1-free-response U1Ch2_markdown_instruction: Mais alguma
         coisa que você gostaria que o professor soubesse?
       csd-pulse-check-survey-1-free-response U1Ch2_2018_markdown_instruction: Mais
@@ -1206,6 +1469,8 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      grade2_CaringForNewPet_11_markdown_instruction: '*" Mantenha a calma e ajude-me
+        a encontrar o porco mal."*'
       grade2_MakeDogTag_8_markdown_instruction: |-
         Agora vamos conectar um monte de "V"
         em um laço.
@@ -1253,6 +1518,8 @@ pt-BR:
         ou uma colmeia\natrás de cada uma dessas nuvens!\r\n\r\nUse o bloco \"se/senão\"
         para coletar néctar\nse houver uma flor.\r\nCaso contrário, produza mel (porque
         há uma colmeia)."
+      grade3_Conditionals_1_markdown_instruction: "Sou uma abelha faminta! \r\nAjude-me
+        a coletar\ntodo o néctar das flores usando o menor número possível de blocos."
       grade3_Conditionals_10_markdown_instruction: "Há muita coisa acontecendo por
         aqui!\r\n\r\nUse\no que você aprendeu para coletar todo o néctar e, então,
         produza o mel."

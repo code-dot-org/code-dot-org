@@ -59,10 +59,13 @@ th:
       2-3 Artist Loops New 12_markdown_instruction: 'วาดเพชรที่มีด้านยาว 100 พิกเซล '
       2-3 Artist Loops New 13_markdown_instruction: "เราจะเริ่มต้นด้วยโค้ดบางอย่าง (เป็นสีเทา) เพื่อทำเพชรเม็ดหนึ่ง. \n\nลูปโค้ดสีเทาเพื่อสร้างรูปแบบที่สนุกสนาน!"
       2-3 Artist Loops New 14_markdown_instruction: "เล่นกับโค้ดที่ใช้สำหรับวาดเพชรและดูว่ามีรูปแบบอื่นๆที่คุณสามารถทำได้ไหม ลองเปลี่ยนองศาที่คุณหันไปและจำนวนครั้งที่คุณวนลูป"
+      2-3 Artist Loops New 15_markdown_instruction: |+
+        ตอนนี้ ให้วาดอะไรก็ได้ที่คุณชอบ!
+        <br/><br/>
       2-3 Artist Loops New 2_markdown_instruction: |-
-        "นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`ไปข้างหน้า` เพียงหนึ่งบล็อกและบล็อก` หัน... ไป ` ได้อีกเพียงหนึ่งบล็อกเท่านั้น
+        "นี่คือปริศนาเดียวกันที่เราเพิ่งแก้ไขไป แต่ครั้งนี้เราสามารถใช้บล็อก`ไปข้างหน้า` ได้เพียงหนึ่งบล็อก รวมทั้งบล็อก` หัน... ไป ` ได้อีกเพียงหนึ่งบล็อกเช่นกัน
         
-        คุณสามารถใช้ ` ทำซ้ำ ` เพื่อแก้ปริศนานี้ได้ไหม?"
+        คุณสามารถใช้บล็อกลูป ` ทำซ้ำ ` เพื่อแก้ปริศนานี้ได้ไหม?"
       2-3 Artist Loops New 9_markdown_instruction: วาดตัว V อย่างง่ายๆ (โดยที่ทั้งสองด้านยาว 50 พิกเซล) เพื่อทำลูกศรให้เสร็จ
       2-3 Artist Nested Loops 1_markdown_instruction: |+
         คุณใช้ลูปเพื่อวาดรูปร่างมาก่อนแล้ว แต่ตอนนี้เรากำลังจะวางลูปไว้ภายในลูปอื่นๆ!
@@ -86,7 +89,7 @@ th:
         ใช้สิ่งที่คุณได้เรียนรู้มา เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผึ้งให้หมด
       2-3 Bee Conditionals 3_markdown_instruction: "มองไปที่น้ำหวานจากเกสรเหล่านี้!\n\nช่วยฉันเก็บน้ำหวานจากเกสรและทำน้ำผึ้ง โดยใช้บล็อกเพียงสองสามบล็อก เท่าที่คุณสามารถทำได้  "
       2-3 Bee Conditionals Assessment 1_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด ให้ระวังที่จะไม่เก็บน้ำหวานจากเกสรดอกไม้สีม่วง ถ้าดอกไม้เหล่านั้นไม่มีน้ำหวานเลย"
-      2-3 Bee Debugging 10_markdown_instruction: "ปริศนานี้จะทำให้ฉันหมุนเป็นวงเลย! แก้ไขข้อผิดพลาดเพื่อเก็บรวบรวมน้ำหวานจากเกสรทั้งหมดและทำน้ำผึ้งให้หมด"
+      2-3 Bee Debugging 10_markdown_instruction: "ปริศนานี้จะทำให้ฉันหมุนเป็นวงเลย! แก้ไขข้อผิดพลาดเพื่อเก็บรวบรวมน้ำหวานจากเกสรได้ทั้งหมดและเอาไปทำน้ำผึ้งให้หมด"
       2-3 Bee Debugging 2_markdown_instruction: |-
         คุณพบปัญหาที่นี่ไหม? แก้ไขข้อผิดพลาดเพื่อเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด
       2-3 Bee Debugging 3_markdown_instruction: |-
@@ -97,31 +100,31 @@ th:
       2-3 Bee Debugging 6_markdown_instruction: |-
         ความท้าทายที่หวานหอมจริงๆ!
         
-        แก้ไขข้อผิดพลาดเพื่อเก็บรวบรวมน้ำหวานทั้งหมด
+        แก้ไขข้อผิดพลาดเพื่อให้สามารถเก็บรวบรวมน้ำหวานได้ทั้งหมด
       2-3 Bee Debugging 9_markdown_instruction: |-
-        คุณจะต้องแก้สองสามอย่างในโปรแกรมนี้ เพื่อให้สามารถเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผึ้งให้หมด
+        คุณจะต้องแก้สองสามอย่างในโปรแกรมนี้ เพื่อให้สามารถเก็บน้ำหวานจากเกสรได้ทั้งหมดและเอาไปทำน้ำผึ้งให้หมด
       2-3 Bee Debugging Assessment 1_markdown_instruction: |-
-        **การประเมินผล:** ตอนนี้ถึงเวลาแล้ว ที่จะแสดงให้เห็นว่าคุณได้เรียนรู้อะไรบ้าง
-        แก้ที่ผิด เพื่อเก็บน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งให้หมด
+        **การประเมินผล:** ต ตอนนี้ถึงเวลาแล้ว ที่จะแสดงให้เห็นว่าคุณได้เรียนรู้อะไรบ้าง
+        แก้ที่ผิด เพื่อให้สามารถเก็บน้ำหวานจากเกสรได้ทั้งหมด และเอาไปทำน้ำผึ้งให้หมด
       2-3 Bee Functions 10_markdown_instruction: "ดอกไม้สีม่วงเปลี่ยนไปมาระหว่าง การมีน้ำหวานจากเกสรให้ 1 ครั้งหรือ 0 ครั้ง ทุกครั้งที่คุณเรียกใช้ปริศนา\n\nสร้างฟังก์ชั่นที่จะเก็บรวบรวมจากดอกไม้สีม่วงที่มีน้ำหวานเท่านั้น"
       2-3 Bee Functions 2_markdown_instruction: "ฟังก์ชันเป็นบล็อกของโค้ดที่ทำภารกิจอย่างใดอย่างหนึ่ง\n\nใช้ฟังก์ชัน `เก็บ 5` เพื่อเก็บ นำหวานจากเกสรทีละ 5 ครั้ง"
       2-3 Bee Functions 4_markdown_instruction: "ฟังก์ชั่น `บินไปและเก็บน้ำหวาน`หันทิศทางการบินของผึ้ง เก็บรวบรวมน้ำหวานและจากนั้นพาผึ้งบินกลับไปที่จุดเริ่มต้น\n\nให้ใช้ฟังก์ชั่นนี้ในการเก็บรวบรวมน้ำหวานทั้งหมด"
       2-3 Bee Functions Assessment 1_markdown_instruction: "**การประเมิน:** ใช้ฟังก์ชันที่กำหนดเพื่อเก็บรวบรวมน้ำหวานจากเกสรดอกไม้แต่ละดอก"
       2-3 Bee Functions Assessment 2_markdown_instruction: "**การประเมิน:** สร้างฟังก์ชั่นที่จะหันหน้าไป, บินไปข้างหน้าและทำน้ำผึ้ง 3 ครั้ง, แล้ว พาผึ้งกลับไปที่มันเริ่มต้นและหันกลับ."
       2-3 Bee Loops 1_markdown_instruction: |-
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers.
+        Xx
       2-3 Bee Loops 13_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด โดยใช้บล็อกจำนวนน้อยที่สุด เท่าที่จะเป็นไปได้"
+      2-3 Bee Loops 3A_markdown_instruction: ให้ใช้บล็อกลูป `ทำซ้ำ` เพื่อรวบรวมน้ำหวานทั้งหมด
       2-3 Bee Loops 3B_markdown_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
       2-3 Bee Loops 4_markdown_instruction: |-
         เป็นผึ้งที่ขยันจริงๆ!
         ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
-      2-3 Bee Loops 4A_markdown_instruction: "กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา ลูปเป็นเพื่อนของคุณ ใช้ลูปสักสองสามลูปแก้ปริศนานี้ด้วยบล็อกที่น้อยที่สุดเท่าที่จะเป็นไปได้"
+      2-3 Bee Loops 4A_markdown_instruction: "กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา? ลูปเป็นเพื่อนของคุณ ใช้ลูปสักสองสามลูปช่วยแก้ปริศนานี้ โดยใช้บล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้"
       2-3 Bee Loops 7_markdown_instruction: "โอ้ ทุ่งดอกไม้ที่ช่างสวยงาม! ช่วยผี้งให้เข้าไปเก็บน้ำหวานจากเกสรดอกไม้แต่ละดอก โดยที่คุณสามารถใช้บล็อกให้น้อยกว่า 7 บล็อกได้ไหม"
       2-3 Bee Loops 8_markdown_instruction: "ดอกไม้สีม่วงเหล่านี้มีจำนวนของน้ำหวานให้เก็บที่แตกต่างกันในแต่ละครั้งที่คุณเรียกใช้ปริศนา\n\nใช้ `ในขณะที่ น้ำหวาน`ใเพื่อเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด\n\nการวนลูปนี้จะทำงานตราบเท่าที่เงื่อนไขเป็นจริงในกรณีนี้คือ น้ำหวาน > 1"
       2-3 Maze 13_markdown_instruction: พาฉันไปจัดการเจ้าหมูนั่น! คราวนี้คุณสามารถใช้บล็อกเดินไปข้างหน้าได้เพียงครั้งเดียวเท่านั้น
-      2-3 Maze 15_markdown_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
-      2-3 Maze Loops 18_markdown_instruction: "พาฉันไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนน้อยที่สุดเท่าที่จะเป็นไปได้ \nลองใช้ ลูป`ทำซ้ำ` ภายในอีกลูปหนึ่ง เพื่อลดจำนวนโค้ดที่คุณต้องใช้"
+      2-3 Maze 15_markdown_instruction: สำหรับปริศนาด่านนี้ บล็อกลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
+      2-3 Maze Loops 18_markdown_instruction: "พาฉันไปยังดอกทานตะวัน โดยใช้บล็อกจำนวนน้อยที่สุดเท่าที่จะเป็นไปได้ \nลองวางบล็อกลูป`ทำซ้ำ` ไว้ภายในบล็อกลูป`ทำซ้ำ`อีกลูปหนึ่ง เพื่อลดจำนวนโค้ดที่คุณต้องใช้"
       2-3 Maze Loops 19_markdown_instruction: "ตอนนี้ผ่านด่านนี้ขึ้นไปอีกระดับหนึ่ง!\n ให้ใช้ลูปเพื่อพาฉันไปหาดอกทานตะวัน โดยใช้ลูปให้น้อยที่สุดเท่าที่จะเป็นไปได้"
       2-3 Maze Loops Assessment 1_markdown_instruction: "**การประเมินผล:**  พาฉันไปหาดอกทานตะวัน ให้ใช้บล็อกเพียง 5 บล็อกเท่านั้น "
       4-5 Artist 1_markdown_instruction: "ช่วยฉันวาดภาพกล่อง ของฉันให้เสร็จ (แต่ละด้านมีความยาว 300 พิกเซล)\n\n"
@@ -196,6 +199,7 @@ th:
       4-5 While Loops 1_markdown_instruction: พาฉันไปที่หลุมและกลบหลุมด้วยการตักดินสองครั้ง ใช้บล็อก `กลบหลุม 1 ครั้ง`
       4-5 While Loops 2_markdown_instruction: พาฉันไปกองดินและตักเอาดินออกไป 5 ครั้งโดยใช้บล็อก `ตักดินออก 1 ครั้ง`
       4-5 While Loops 4_markdown_instruction: "ว้าว, ดูที่นี่ซิ!\n\nฉันไม่รู้ว่าต้องกลบหลุมนี่ใช้พลั่วตักดินใส่กี่ครั้ง  \nคุณสามารถเขียนโปรแกรมที่ใช้บล็อก ' กลบหลุม..' กี่ครั้งจนกว่าหน้าดินจะราบเรียบได้ไหม  "
+      Artist Autorun Test_markdown_instruction: ตอนนี้, ใส่ฟังก์ชั่นไว้ภายในของลูปเพื่อวาดสี่เหลี่ยมจตุรัสสามรูปนี้.
       Course 4 Artist 1_markdown_instruction: "ช่วยฉันวาดกล่องที (แต่ละด้านมีความยาว 200 พิกเซล)\n\n"
       Course 4 Artist 13_markdown_instruction: ยังเล่นอยู่หรือเปล่า? นี่คือผืนผ้าใบเปล่าที่คุณสามารถใช้ออกแบบอะไรก็ได้ที่คุณต้องการ!
       Course 4 Artist 2_markdown_instruction: "คุณสามารถใช้ลูปเพื่อวาดสี่เหลี่ยมจตุรัสสีเทาที่อยู้ด้านนอก ได้ไหม? (แต่ละด้านมีความยาว 300 พิกเซล)"
@@ -206,28 +210,28 @@ th:
       Course 4 Artist 8a_markdown_instruction: "จำรูปร่างนี้ได้ใช่ไหม?  ตอนนี้เรากำลังจะให้คุณสร้างมันโดยไม่ให้บล็อกใดๆ กับคุณเพื่อที่จะใช้เริ่มต้น!\n\n"
       Course 4 Artist 9_markdown_instruction: 'ลูปรอบแบบนี้ 10 ครั้งและให้แน่ใจว่าคุณได้หันไประหว่างรูปแบบที่วาดเสร็จในแต่ละครั้ง '
       Course 4 Artist Binary pre1_markdown_instruction: |-
-        ไบนารีเป็นวิธีการแสดงข้อมูลโดยใช้เพียงสองตัวเลือก ที่นี่, เรากำลังจะใช้ตัวเลือก <b>ปิด<b> และ <b>เปิด<b> <br/>
+        ไบนารีเป็นวิธีการแสดงข้อมูลโดยใช้เพียงสองตัวเลือก กรณ๊นี้ เราจะใช้ตัวเลือก <b>ปิด<b> และ <b>เปิด<b> <br/>
         ตอนนี้เรากำลังจะใช้หมายเลข<b>0</b>เป็นโค้ดสำหรับ "ปิด" และหมายเลข<b>1</b>เป็นโค้ดสำหรับ "เปิด"<hr/>
-        เราจะให้คุณมีตารางของ "พิกเซล " ที่คุณสามารถใช้และทำการออกแบบโดยการเปิดเฉพาะสี่เหลี่ยมบางอัน คุณให้มีศิลปินวาด "01010101" ในไบนารีในแถวแรกได้ไหม?<b>
+        สำหรับด่านนี้ เราจะมีตารางของ "พิกเซล " ให้ที่คุณสามารถใช้และทำการออกแบบโดยการเปิดเฉพาะสี่เหลี่ยมจตุรัสบางอัน <b>ให้ศิลปินวาด "01010101" เป็นไบนารีในแถวแรก<b>
       Course 4 Artist Binary ryan_markdown_instruction: "ไบนารีเป็นวิธีการแสดงข้อมูลโดยใช้เพียงสองตัวเลือก  ที่นี่, เรากำลังจะใช้ตัวเลือก  \"ปิด \" (แสดงด้วยหมายเลข 0) และ  \"เปิด\" (แสดงด้วยหมายเลข 1).  \n\nเราจะให้คุณมีตารางของ  \"พิกเซล \" ที่คุณสามารถใช้และทำการออกแบบโดยการเปิดเฉพาะสี่เหลี่ยมบางอัน  คุณให้มีศิลปินวาด  \"01010101\" ในไบนารีในแถวแรกได้ไหม?"
       Course 4 Artist Vars 1_markdown_instruction: "มาลองวาดรูปสามเหลี่ยมด้านเท่ากัน\n\nโดยจะต้องมีความยาวแต่ละด้านที่ 100 พิกเซล\n"
       Course 4 Artist Vars 3_markdown_instruction: "Here's a loop that draws a square, but\nsomething's missing. Can you fix it so that it uses the variable \"length\"\nto figure out how long each side should be?"
       Course 4 Bee 3_markdown_instruction: "วัตถุที่ไม่สามารถทราบได้นี้อาจจะเป็นดอกไม้หรือรังผึ้งก็ได้ \n\nตอนนี้ให้ใช้ บล็อก `ถ้า/อย่างอื่น (if/else block) ` ในการเก็บรวบรวมน้ำหวานจากเกสรหนึ่งครั้ง **ถ้า** มันเป็นดอกไม้ ` อย่างอื่น `ทำน้ำผึ้งหนึ่งครั้ง (เพราะว่ามันควรที่จะเป็นรังผึ้ง)"
-      K-1 Bee Loops 2_markdown_instruction: ใช้ลูป `ทำซ้ำ` เพื่อบินมาและจากนั้นเก็บน้ำหวานจากเกสรและทำน้ำผึ้ง!
-      K-1 Bee Loops 3_markdown_instruction: ใช้ลูป`ทำซ้ำ` สามลูปเพื่อที่จะเก็บน้ำหวานจากเกสรและมาทำน้ำผึ้ง!
-      K-1 Bee Loops 4_markdown_instruction: ใช้ลูป `ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสร ทำน้ำผึัง และบินไปมา!
-      K-1 Bee Loops 5_markdown_instruction: ใช้ลูป`ทำซ้ำ` เพื่อที่จะเก็บน้ำหวานจากเกสรและทำน้ำผึ้ง!
-      K-1 Bee Loops 6_markdown_instruction: ใช้ลูป `ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสร เก็บน้ำผึัง และบินไปมา!
-      K-1 Maze Loops 10_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น! ใช้ลูป `ทำซ้ำ` จะทำให้มันง่ายขึ้นมาก"
-      K-1 Maze Loops 11_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!\nใช้ลูป `ทำซ้ำ` จะทำให้มันง่ายขึ้นมาก"
-      K-1 Maze Loops 12_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!\nใช้ลูป `ทำซ้ำ` จะทำให้มันง่ายขึ้นมาก"
+      K-1 Bee Loops 2_markdown_instruction: ใช้บล็อกลูป `ทำซ้ำ` เพื่อบินมาและจากนั้นเก็บน้ำหวานและทำน้ำผึ้ง!
+      K-1 Bee Loops 3_markdown_instruction: ใช้บล็อกลูป`ทำซ้ำ` สามลูปเพื่อที่จะเก็บน้ำหวานและมาทำน้ำผึ้ง!
+      K-1 Bee Loops 4_markdown_instruction: ใช้บล็อกลูป `ทำซ้ำ` เพื่อเก็บน้ำหวาน ทำน้ำผี้ง และบินไปมา!
+      K-1 Bee Loops 5_markdown_instruction: ใช้บล็อกลูป`ทำซ้ำ` เพื่อที่จะเก็บน้ำหวานและทำน้ำผึ้ง!
+      K-1 Bee Loops 6_markdown_instruction: ใช้บล็อกลูป `ทำซ้ำ` เพื่อเก็บน้ำหวาน เก็บน้ำผึ้ง และบินไปมา!
+      K-1 Maze Loops 10_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น! ใช้บล็อกลูป `ทำซ้ำ` จะทำให้มันง่ายขึ้นมาก"
+      K-1 Maze Loops 11_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!\nใช้บล็อกลูป `ทำซ้ำ` จะทำให้มันง่ายขึ้นมาก"
+      K-1 Maze Loops 12_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!\nใช้บล็อกลูป `ทำซ้ำ` จะทำให้มันง่ายขึ้นมาก"
       K-1 Maze Loops 2_markdown_instruction: ใช้บล็อก `ทำซ้ำ` เพื่อพาฉันไปจัดการเจ้าหมูนั่น
-      K-1 Maze Loops 3_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!  ให้แน่ใจว่าใช้ลูป`ทำซ้ำ` นะ"
-      K-1 Maze Loops 5_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!  ให้แน่ใจว่าใช้ลูป`ทำซ้ำ` นะ"
-      K-1 Maze Loops 6_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!  ให้แน่ใจว่าใช้ลูป`ทำซ้ำ` นะ"
-      K-1 Maze Loops 7_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!  ให้แน่ใจว่าใช้ลูป`ทำซ้ำ` นะ"
-      K-1 Maze Loops 8_markdown_instruction: ใช้ลูป `ทำซ้ำ` เพื่อพาฉันไปจัดการเจ้าหมูตัวนั้น
-      K-1 Maze Loops Assessment 1_markdown_instruction: "ดูจากที่เราได้เรียนรู้มาทั้งหมด! ใช้ลูป`ทำซ้ำ`เพื่อพาฉันไปจัดการเจ้าหมูนั่น!"
+      K-1 Maze Loops 3_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!  ให้แน่ใจว่าใช้บล็อกลูป`ทำซ้ำ` นะ"
+      K-1 Maze Loops 5_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!  ให้แน่ใจว่าใช้บล็อกลูป`ทำซ้ำ` นะ"
+      K-1 Maze Loops 6_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!  ให้แน่ใจว่าใช้บล็อกลูป`ทำซ้ำ` นะ"
+      K-1 Maze Loops 7_markdown_instruction: "พาฉันไปจัดการเจ้าหมูตัวนั้น!  ให้แน่ใจว่าใช้บล็อกลูป`ทำซ้ำ` นะ"
+      K-1 Maze Loops 8_markdown_instruction: ใช้บล็อกลูป `ทำซ้ำ` เพื่อพาฉันไปจัดการเจ้าหมูตัวนั้น
+      K-1 Maze Loops Assessment 1_markdown_instruction: "ดูจากที่เราได้เรียนรู้มาทั้งหมด! ใช้บล็อกลูป`ทำซ้ำ`เพื่อพาฉันไปจัดการเจ้าหมูนั่น!"
       K2.0 sequence 3_markdown_instruction: |-
         มีบางสิ่งที่ยังไม่ค่อยจะถูกต้องนัก ต้องลบบล็อกออกไปเพื่อที่จะได้พาฉันไปจัดการกับเจ้าหมูนั่นได้!
         
@@ -236,19 +240,35 @@ th:
         คิดให้ออกว่าอะไรคือสิ่งที่ขาดหายไป และเพิ่มบล็อกเพื่อที่จะพาฉันไปจัดการกับเจ้าหมูนั่น!
         
         ![](https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif)
+      MC Agent Freeplay_markdown_instruction: "**เล่นตามใจชอบ:** ตอนนี้ก็แล้วแต่คุณ! ใช้โค้ดของเอเจนท์เพื่อช่วยคุณสำรวจโลกใบนี้"
       MC_HOC_2017_01_RETRY_markdown_instruction: |2
-        ประตูถูกล็อคอยู่ แต่เรามีเอเจนท์ ที่เป็นฮีโร่คอยช่วยเหลือเราอยู่!
+        ประตูถูกล็อคอยู่ แต่เรามีเอเจนท์คอยช่วยเหลือเราอยู่!
         
         ให้ลากบล็อกคำสั่ง ` ไปข้างหน้า ` ไปวางต่อไว้ด้านล่างของบล็อกคำสั่ง
-        ` เมื่อเรียกใช้งาน ` ที่อยู่ภายในพื้นที่ทำงานเพื่อพาเอเจนท์ไปที่แป้นกด
-         [PressurePlate_Up] เพื่อปลดล็อคประตูให้เปิดออก, จากนั้นกดที่ปุ่ม “เริ่ม”
-        และใช้แป้นลูกศรเพื่อพาผู้เล่นให้เดินออกมาจากบ้าน เพื่อไปเก็บ**หีบสมบัติ**
+        ` เมื่อเรียกใช้งาน ` ที่อยู่ภายในพื้นที่ทำงาน เพื่อพาเอเจนท์ไปอยู่บนแป้นกด
+         [PressurePlate_Up] เพื่อปลดล็อคประตูให้เปิดออก จากนั้นกดที่ปุ่ม “เริ่ม”
+        และใช้แป้นลูกศรเพื่อพาผู้เล่นให้เดินออกมาจากบ้าน เพื่อไปเก็บ**หีบสมบัติ** [chest]
+      MC_HOC_2017_05_Cole_markdown_instruction: "โอ ไม่นะ สะพานพังเสียแล้ว!\n\nเขียนโค้ดเพื่อสร้างสะพานขึ้นมาใหม่อีกครั้ง โดยใช้บล็อก  <xml>  <block type=\"craft_placeBlock\">\n    <title name=\"TYPE\">       </title>\n  </block></xml>เพื่อให้ {currentPlayerName} เดินไปเอา **เสียม**  [diamond_shovel]"
+      MC_HOC_2017_05_Josh_markdown_instruction: |-
+        โอ ไม่นะ สะพานพังเสียแล้ว!
+        
+        ช่วยเอเจนท์สร้างสะพานขึ้นมาใหม่อีกครั้ง เพื่อให้ผู้เล่นเดินไปเอา **เสียม** มา
+      MC_HOC_2017_06_Cole_markdown_instruction: "มีแม่น้ำอีกสายหนึ่ง แต่อันนี้กว้างกว่ามาก!\n\nซ่อมโค้ดนี้เพื่อช่วยเอเจนท์สร้างสะพาน โดยให้ {currentPlayerName} สามารถข้ามไปเอาอีเต้อมาใช้ "
+      MC_HOC_2017_06_Josh_markdown_instruction: "มีแม่น้ำอีกสายหนึ่ง แต่อันนี้กว้างกว่ามาก!\n\nซ่อมโค้ดนี้เพื่อช่วยเอเจนท์สร้างสะพานข้ามแม่น้ำนี้"
+      MC_HOC_2017_06_Kiki_markdown_instruction: "มีแม่น้ำอีกสายหนึ่ง แต่อันนี้กว้างกว่ามาก!\n\nซ่อมโค้ดนี้เพื่อช่วยเอเจนท์สร้างสะพานข้ามน้ำนี้ไปให้ได้"
       MC_HOC_2017_07_Cole_markdown_instruction: "นั่นมันมีน้าแข็งขวางอยู่บนทางนี่!\n\nฟังก์ชั่น`เคลียร์เส้นทาง `สามารถช่วยคุณทำลายน้าแข็ง และช่วยให้ {currentPlayerName} สามารถไปถึง รถเหมือง [minecart_normal]! ได้ "
+      MC_HOC_2017_13_Cole_markdown_instruction: "**เล่นตามใจชอบ:** ตอนนี้ก็แล้วแต่คุณ! ใช้โค้ดของเอเจนท์เพื่อช่วยคุณสำรวจโลกใบนี้"
+      MC_HOC_2017_Ali_markdown_instruction: 'ดูฟังก์ชันด้านล่าง คุณสามารถใช้ฟังก์ชันเหล่านี้เพื่อหลีกเลี่ยงเจ้าภูตเหล่านี้และช่วย {currentPlayerName} ให้เกินทางอย่างปลอดภัยไปยัง ** คัมภีร์เวทย์มนต์ ** [book_enchanted]  '
+      MC_HOC_2017_FP10x10_markdown_instruction: "**เล่นตามใจชอบ:** ตอนนี้ก็แล้วแต่คุณ! คุณจะสามารถท้าทายตนเองได้ไหม ให้เก็บเพชรทั้งหมดในด่านนี้? "
+      MC_HOC_2017_FP10x10_RE_markdown_instruction: "**เล่นตามใจชอบ:** ตอนนี้ก็แล้วแต่คุณ! คุณจะสามารถท้าทายตนเองได้ไหม ให้เก็บเพชรทั้งหมดในด่านนี้? "
+      MC_HOC_2017_FP20x20_markdown_instruction: "**เล่นตามใจชอบ:** ตอนนี้ก็แล้วแต่คุณ! ใช้โค้ดของเอเจนท์เพื่อช่วยคุณสำรวจโลกใบนี้"
       Mike Test Bee Conditionals 1_markdown_instruction: "เมฆก้อนนี้กำลังบังมุมมองของฉัน! \n\nตรวจสอบดูว่ามีดอกไม้ที่อยู่ภายใต้เมฆ และเก็บน้ำหวานเพียงอย่างเดียวถ้ามีดอกไม้อยู่ ระวังให้ดี เพราะมันสามารถเปลี่ยนแปลงได้ตลอด!"
       Mike Test Bee Conditionals 2_markdown_instruction: "**การประเมินผล:** เก็บน้ำหวานจากเกสรทั้งหมด ให้ระวังที่จะไม่เก็บน้ำหวานจากเกสรดอกไม้สีม่วง ถ้าดอกไม้เหล่านั้นไม่มีน้ำหวานเลย"
       NEW Course 4 Artist Functions 3_markdown_instruction: "Here is a new type of Block.\nIt is called a \"Function block.\" Click \"Run\" to see what it can do."
+      New Minecraft Hero Project_markdown_instruction: "**เล่นตามใจชอบ:** ตอนนี้ก็แล้วแต่คุณ! ใช้โค้ดของเอเจนท์เพื่อช่วยคุณสำรวจโลกใบนี้"
       Overworld Move to Sheep_markdown_instruction: เพิ่มคำสั่งที่สอง "เคลื่อนไปข้างหน้า" เพื่อไปหาแกะ
       Overworld Move to Sheep_2018_markdown_instruction: เพิ่มคำสั่งที่สอง "เคลื่อนไปข้างหน้า" เพื่อไปหาแกะ
+      Test embedded K1 Blockly in instructions_markdown_instruction: ให้ใช้บล็อกนี้ <xml><block type="maze_moveWest"/></xml> **สาม**ครั้งเพื่อพาเกษตรกรไปเก็บฝักข้าวโพด! อย่าลืมใช้ <xml><block type="harvester_corn"/></xml> เพื่อเก็บข้าวโพด!
       Testing Quantum Farmer_markdown_instruction: "ว้าว, ดูที่นี่ซิ!\n\nฉันไม่รู้ว่าต้องกลบหลุมนี่ใช้พลั่วตักดินใส่กี่ครั้ง  \nคุณสามารถเขียนโปรแกรมที่ใช้บล็อก ' กลบหลุม..' กี่ครั้งจนกว่าหน้าดินจะราบเรียบได้ไหม  "
       artistLoopsK2_markdown_instruction: |
         <div style="color: #7665a0; font-size: 1.6em; line-height: 1.4em;" >
@@ -268,9 +288,10 @@ th:
       collectorSkinVideo2_markdown_instruction: |-
         พาลอเรลไปให้ถึงสมบัติแล้วใช้ `เก็บ`เพื่อเก็บมันขึ้นมา
         เก็บทั้งกองสมบัติ เพื่อที่จะให้ผ่านด่านนี้
+      course1_artist_loops_challenge2_markdown_instruction: น้องๆ มาเล่นเกมกัน! ให้น้องๆ วาดรูปตัว X ให้ได้มากที่สุดเท่าที่น้องๆ จะทำได้! น้องๆ สามารถวาด X สามตัวเรียงกันได้ไหมครับ?
       course2_harvester_loops_challenge1_markdown_instruction: เก็บรวบรวม ข้าวโพด
       courseA_artist_loops10_markdown_instruction: |-
-        # ถึงเวลาที่จะหันกลับไปที่ฝั่ง ช่วยฉันวางก้อนหิน เพื่อให้ฉันไม่ตกน้ำ!
+        # ถึงเวลาที่จะหันกลับไปที่ฝั่ง ช่วยฉันวางก้อนหิน เพื่อช่วยให้ฉันไม่ต้องตกน้ำ!
         
         ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
       courseA_artist_loops10_2018_markdown_instruction: |-
@@ -286,7 +307,7 @@ th:
         
         ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops12_markdown_instruction: |-
-        ศิลปินเห็นบางสิ่งบางอย่างที่ตลกในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
+        ศิลปินเห็นบางสิ่งบางอย่างที่น่าขบขันในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
         
         
         ___
@@ -297,7 +318,7 @@ th:
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops12_2018_markdown_instruction: |-
-        ศิลปินเห็นบางสิ่งบางอย่างที่ตลกในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
+        ศิลปินเห็นบางสิ่งบางอย่างที่น่าขบขันในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
         
         
         ___
@@ -315,6 +336,14 @@ th:
         ช่วยให้ศิลปินวาดเส้นไปข้างหน้าสองครั้ง
         
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops3_markdown_instruction: |-
+        ศิลปินของเราพยายามที่จะวาดเส้นห้าครั้ง แต่ไม่สามารถทำได้อย่างถูกต้อง คุณสามารถช่วยได้ไหม?
+        
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2018_markdown_instruction: |-
+        ศิลปินของเราพยายามที่จะวาดเส้นห้าครั้ง แต่ไม่สามารถทำได้อย่างถูกต้อง คุณสามารถช่วยได้ไหม?
+        
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
         ตอนนี้ใช้ลูป <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> เพื่อวาดลายนี้ 5 ครั้ง
         
@@ -324,11 +353,11 @@ th:
         
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
-        วาดเส้นยาวเจ็ดขั้นตอน เส้นนี้จะกลายเป็นขอบฟ้าของเรา.
+        วาดเส้นยาวเจ็ดขั้นตอน เส้นนี้จะกลายเป็นขอบฟ้าของเรา
         
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops5_2018_markdown_instruction: |-
-        วาดเส้นยาวเจ็ดขั้นตอน เส้นนี้จะกลายเป็นขอบฟ้าของเรา.
+        วาดเส้นยาวเจ็ดขั้นตอน เส้นนี้จะกลายเป็นขอบฟ้าของเรา
         
         ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6_markdown_instruction: |-
@@ -355,22 +384,139 @@ th:
         เราต้องมีบันไดเพื่อใช้ปีนขึ้นเรือ
       courseA_artist_loops8_2018_markdown_instruction: |-
         เราต้องมีบันไดเพื่อใช้ปีนขึ้นเรือ
+      courseA_artist_loops9_markdown_instruction: |-
+        ##**การท้าทาย**บันไดที่พาดลงไปยังท่าเทียบเรือพังเสียหาย ช่วยฉันซ่อมมันที
+        
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2018_markdown_instruction: |-
+        ##**การท้าทาย**บันไดที่พาดลงไปยังท่าเทียบเรือพังเสียหาย ช่วยฉันซ่อมมันที
+        
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_bee_seq4_markdown_instruction: คราวนี้คุณลองทำดูเองบ้าง
+      courseA_bee_seq7_markdown_instruction: ต่อบล็อกเพิ่มอีกสองบล็อกเพื่อทำให้ปริศนานี้เสร็จสมบูรณ์
+      courseA_collector_loops1_markdown_instruction: |-
+        **เล่นตามใจคุณ** นี่คือลอเรลนักผจญภัย! ขยับเธอไปรอบๆ และให้เธอเก็บสมบัติให้ได้มากเท่าที่คุณสามารถทำได้
+        
+        ลากบล็อกไปไว้ในพื้นที่ทำงานและพยายามหาวิธีที่จะไปเอาสมบัติมาให้ได้ จะผ่านด่านนี้ได้ต้องไปเอาสมบัติมาอย่างน้อยหนึ่งชิ้น
+      courseA_collector_loops12_markdown_instruction: "*\"โอ้ ว้าว! เก็บรวบรวมสมบัติให้มากที่สุดเท่าที่คุณสามารถทำได้!\"*  \n(คุณไม่จำเป็นต้องเก็บให้ได้ทั้งหมด)"
+      courseA_collector_loops12_2018_markdown_instruction: "*\"โอ้ ว้าว! เก็บรวบรวมสมบัติให้มากที่สุดเท่าที่คุณสามารถทำได้!\"*  \n(คุณไม่จำเป็นต้องเก็บให้ได้ทั้งหมด)"
+      courseA_collector_loops1_2018_markdown_instruction: |-
+        **เล่นตามใจคุณ** นี่คือลอเรลนักผจญภัย! ขยับเธอไปรอบๆ และให้เธอเก็บสมบัติให้ได้มากเท่าที่คุณสามารถทำได้
+        
+        ลากบล็อกไปไว้ในพื้นที่ทำงานและพยายามหาวิธีที่จะไปเอาสมบัติมาให้ได้ จะผ่านด่านนี้ได้ต้องไปเอาสมบัติมาอย่างน้อยหนึ่งชิ้น
+      courseA_collector_loops2_markdown_instruction: |-
+        เก็บให้หมดทั้งสามกอง! พาลอเรลไปที่สมบัติแต่ละชิ้น แล้วใช้บล็อกนี้: 
+        <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018_markdown_instruction: |-
+        เก็บให้หมดทั้งสามกอง! พาลอเรลไปที่สมบัติแต่ละชิ้น แล้วใช้บล็อกนี้: 
+        <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops3_markdown_instruction: ลอเรลเก็บสมบัติทั้งห้ากองใข้เพียงแค่บล็อก<xml><block type="maze_moveEast"/></xml> เพียงบล็อกเดียว ได้อย่างไร??
+      courseA_collector_loops3_2018_markdown_instruction: ลอเรลเก็บสมบัติทั้งห้ากองใข้เพียงแค่บล็อก<xml><block type="maze_moveEast"/></xml> เพียงบล็อกเดียว ได้อย่างไร?
+      courseA_collector_preLoops7_markdown_instruction: |-
+        เก็บให้หมดทั้งสามกอง! พาลอเรลไปที่สมบัติแต่ละชิ้น แล้วใช้บล็อกนี้: 
+        <xml><block type="collector_collect"/></xml>
+      courseA_harvester_forVideo_markdown_instruction: คุณสามารถเก็บข้าวโพดทั้งหมด โดยใช้้บล็อกเพื่อเคลื่อนไหวเพียง**หนึ่ง**บล็อกเท่านั้น ได้หรือไม่?
+      courseA_harvester_loops1_markdown_instruction: ช่วยเกษตรกรเก็บข้าวโพดให้หมด!
+      courseA_harvester_loops10_markdown_instruction: ช่วยเกษตรกรเก็บข้าวโพดทั้งห้าฝัก!
+      courseA_harvester_loops11_markdown_instruction: 'ลองทำอีกด่านหนึ่งด้วยตัวของคุณเอง '
+      courseA_harvester_loops2_markdown_instruction: เกษตรกรต้องเก็บข้าวโพดทั้งหมดให้ได้! คุณเห็นรูปแบบไหม?
+      courseA_harvester_loops3_markdown_instruction: คุณสามารถเก็บข้าวโพดทั้งหมด โดยใช้้บล็อกเพื่อเคลื่อนไหวเพียง**หนึ่ง**บล็อกเท่านั้น ได้หรือไม่?
+      courseA_harvester_loops4_markdown_instruction: |-
+        *"ฉันต้องการความช่วยเหลือเพื่อหาว่ามีอะไรที่ไม่ถูกต้อง!"*
+        
+        คุณสามารถช่วยเกษตรกรหาจุดบกพร่องในโค้ดของเธอ ได้ไหม?
+      courseA_harvester_loops5_markdown_instruction: ลองเขียนโค้ดด้วยตัวคุณเอง! คุณสามารถเก็บข้าวโพด ที่อยู่ฝักสุดท้ายด้วย ได้ไหม?
+      courseA_harvester_loops5a_markdown_instruction: มองดูข้าวโพดทั้งหมดนี่ซิ? คุณสามารถเก็บข้าวโพดทั้งหมดด้วยตัวคุณเองได้ไหม?
+      courseA_harvester_loops5b_markdown_instruction: คุณเปลี่ยนแก้ไขโค้ดของคุณเพื่อทำให้เกษตรกรเก็บข้าวโพดให้หมด ได้หรือไม่?
+      courseA_harvester_loops6_markdown_instruction: คุณต้องใช้บล็อก <xml><block type="maze_moveWest"></block></xml> **หนึ่ง**บล็อกและบล็อก<xml><block type="maze_moveNorth"></block></xml>อีก**หนึ่ง**บล็อกเพื่อทำปริศนานี้ให้เสร็จสมบูรณ์
+      courseA_harvester_loops7_markdown_instruction: 'ให้คุณลองทำดูเองบ้าง! '
+      courseA_harvester_loops9_markdown_instruction: คุณสามารถบอกวิธีที่จะเก็บข้าวโพดให้ได้ *ทั้งหมด* ได้ไหม?
+      courseA_harvester_seq1_markdown_instruction: ช่วยเกษตรกรเก็บเกี่ยวฝักข้าวโพด!
+      courseA_harvester_seq10_markdown_instruction: เกษตรกรต้องเก็บข้าวโพดทั้งหมดให้ได้! คุณเห็นรูปแบบไหม?
+      courseA_harvester_seq11_markdown_instruction: "ลองทำดูเองไหม!\n\nเก็บข้าวโพดทั้งหมด"
+      courseA_harvester_seq12_markdown_instruction: "\" ขอบคุณที่ช่วยฉัน! \"\n\nเก็บข้าวโพดทั้งหมด"
+      courseA_harvester_seq13_markdown_instruction: ช่วยเกษตรกรเก็บข้าวโพด!
+      courseA_harvester_seq2_markdown_instruction: 'ให้ใช้บล็อกนี้ <xml><block type="maze_moveWest"/></xml> **สาม**ครั้งเพื่อพาเกษตรกรไปเก็บฝักข้าวโพด! '
+      courseA_harvester_seq3_markdown_instruction: ให้ใช้บล็อกนี้ <xml><block type="maze_moveNorth"/></xml> **สาม**ครั้งเพื่อพาเกษตรกรไปเก็บฝักข้าวโพด! อย่าลืมเก็บข้าวโพดในขั้นตอนสุดท้ายด้วย
+      courseA_harvester_seq4_markdown_instruction: ต่อบล็อกเพิ่มอีก **หนึ่ง** บล็อกเพื่อช่วยเกษตรกรเก็บข้าวโพด
+      courseA_harvester_seq5_markdown_instruction: คุณบอกได้ไหมว่าโค้ดนี้มีอะไรผิด? ช่วยเกษตรกรเก็บข้าวโพดหน่อย!
+      courseA_harvester_seq6_markdown_instruction: คราวนี้คุณลองทำดูเองบ้าง
+      courseA_harvester_seq7_markdown_instruction: คุณต้องเคลื่อนไหวไปสองทิศสองทางเพื่อไปเก็บข้าวโพด! ให้ช่วยเกษตรกรเลือกทิศทางที่ถูกต้องด้วย
+      courseA_harvester_seq8_markdown_instruction: ตอนนี้ เกษตรกรต้องเก็บข้าวโพดสองครั้ง!
+      courseA_harvester_seq9_markdown_instruction: ต่อบล็อกเพิ่มอีกสองบล็อกเพื่อทำให้ปริศนานี้เสร็จสมบูรณ์
+      courseA_maze_ramp2_2018_markdown_instruction: ต่อบล็อก <xml><block type="maze_moveEast"/></xml> เข้ากับบล็อก <xml><block type="when_run"/></xml> เป็นอันว่าโค้ดของคุณเสร็จสมบูรณ์ แล้วคลิก "▶ เริ่ม "
+      courseA_maze_ramp2a_2018_markdown_instruction: ต่อบล็อก <xml><block type="maze_moveEast"/></xml> เข้ากับบล็อก <xml><block type="when_run"/></xml> เป็นอันว่าโค้ดของคุณเสร็จสมบูรณ์ แล้วคลิก "▶ เริ่ม "
       courseA_maze_ramp3_2018_markdown_instruction: "*\" หมูตัวนี้กวนประสาทฉันจริงๆ \"* \nมีบล็อกเกินมาบล็อกหนึ่ง ที่จะทำให้เจ้านกวิ่งไปชนสิ่งกีดขวาง ลากมันไปทิ้งเสีย โดยปลดมันออกมาจากบล็อกอื่นๆ และลากมันกลับไปที่กล่องเครื่องมือ"
+      courseA_maze_ramp3a_2018_markdown_instruction: หยิบ <xml><block type="maze_moveNorth"/></xml> จากกล่องเครื่องมือและต่อเข้าไปที่ด้านล่างของบล็อกอื่นๆ ถือว่าโค้ดของคุณเสร็จสมบูรณ์ แล้วให้คลิก "▶ เริ่ม "
+      courseA_maze_ramp3b_2018_markdown_instruction: "มีบล็อกเกินมาบล็อกหนึ่ง ที่อยู่ตอนท้ายของโค้ดนี้!\n\nลากมันกลับไปที่กล่องเครื่องมือเพื่อโยนมันทิ้งไป"
       courseA_maze_ramp4_2018_markdown_instruction: "แกะรอยเส้นทางให้ดีนะ และพาฉันไปจัดการเจ้าหมูซื่อบื้อนั่น"
+      courseA_maze_ramp4a_2018_markdown_instruction: คุณบอกได้ไหมว่า บล็อกอันไหนที่คุณต้องต่อเข้าไปตอนท้ายของบล็อคอื่นๆเพื่อทำให้โค้ดของคุณเสร็จสมบูรณ์
       courseA_maze_ramp5_2018_markdown_instruction: |-
         *"ตามทางนี้ไป เพื่อพาฉันไปจัดการเจ้าหมูนั่น"* 
         
         อยู่ห่างๆระเบิดไว้
+      courseA_maze_ramp5a_2018_markdown_instruction: ลองแก้ปริศนานี้ด้วยตัวของคุณเอง!
+      courseA_maze_seq1_markdown_instruction: '*"เล่นกับบล็อกเหล่านี้และพยายามช่วยพาฉันไปที่เจ้าหมูตัวร้ายนั่นที!"*'
       courseA_maze_seq10_2018_markdown_instruction: "**การท้าทาย:** อยู่ห่างๆระเบิดไว้ ในระหว่างที่พาฉันไปจัดการเจ้าหมูนั่น"
       courseA_maze_seq11_markdown_instruction: |-
-        เวลาสำหรับปริศนาที่สั้นลง!  
+        ตอนนี้ก็เป็นปริศนาที่สั้นลง!  
         
         ขยับฉันไปทางหนึ่ง แล้วก็ไปอีกทางหนึ่ง เพื่อที่จะพาเจ้านกไปจัดการเจ้าหมูนั่น
         
         ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
       courseA_maze_seq11_2018_markdown_instruction: "เวลาสำหรับปริศนาที่สั้นลง!  \n\nขยับฉันไปทางหนึ่ง แล้วก็ไปอีกทางหนึ่ง เพื่อที่จะพาเจ้านกไปจัดการเจ้าหมูนั่น  "
+      courseA_maze_seq12_2018_markdown_instruction: จัดการเจ้าหมูนั่นเลย!
+      courseA_maze_seq1_2018_markdown_instruction: '*"เล่นกับบล็อกเหล่านี้และพยายามช่วยพาฉันไปที่เจ้าหมูตัวร้ายนั่นที!"*'
       courseA_maze_seq4_markdown_instruction: "*\"มีบางสิ่งที่ยังไม่ค่อยจะถูกต้องนัก\"*\n\n ต้องลบบล็อกออกไปเพื่อที่จะได้พาฉันไปจัดการกับเจ้าหมูนั่นได้!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
       courseA_maze_seq4_2018_markdown_instruction: "*\"มีบางสิ่งที่ยังไม่ค่อยจะถูกต้องนัก\"*\n\n ต้องลบบล็อกออกไปเพื่อที่จะได้พาฉันไปจัดการกับเจ้าหมูนั่นได้!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+      courseA_maze_seq5_2018_markdown_instruction: มาลองแก้ปัญหา ด่านนี้ดู
+      courseA_maze_seq5a_2018_markdown_instruction: |-
+        *" อยู่นี่เอง อยู่นี่เองนะ เจ้าหมูตัวแสบ! "*
+        
+        อะไรที่คุณสามารถเพิ่มไปที่ตอนท้ายของโค้ดเพื่อพาเจ้านกไปให้ถึงเจ้าหมูนั่น?
+      courseA_maze_seq6_markdown_instruction: |-
+        ขยับไปทางนี้ที ขยับไปทางนั้นที เพื่อพาเจ้านกไปให้ถึงเจ้าหมูนั่น!
+        
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+      courseA_maze_seq6_2018_markdown_instruction: ขยับไปทางนี้ที ขยับไปทางนั้นที เพื่อพาเจ้านกไปให้ถึงเจ้าหมูนั่น!
+      courseA_maze_seq8_markdown_instruction: |-
+        แก้ปัญหาด่านนี้ให้ได้ และพาเจ้านกไปให้ถึงเจ้าหมูนั่น!
+        
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
+      courseA_maze_seq8_2018_markdown_instruction: แก้ปัญหาด่านนี้ให้ได้ และพาเจ้านกไปให้ถึงเจ้าหมูนั่น!
+      courseB_Scrat_ramp3a_2018_markdown_instruction: หยิบ <xml><block type="maze_moveNorth"/></xml> จากกล่องเครื่องมือและต่อเข้าไปที่ด้านล่างของบล็อกอื่นๆ ถือว่าโค้ดของคุณเสร็จสมบูรณ์ แล้วให้คลิก "▶ เริ่ม "
+      courseB_Scrat_ramp3b_2018_markdown_instruction: |-
+        มีบล็อกเกินมาบล็อกหนึ่ง ที่อยู่ตอนท้ายของโค้ดนี้!
+        
+        ลากมันกลับไปที่กล่องเครื่องมือเพื่อโยนมันทิ้งไป
+      courseB_Scrat_ramp4a_2018_markdown_instruction: คุณบอกได้ไหมว่า บล็อกอันไหนที่คุณต้องต่อเข้าไปตอนท้ายของบล็อคอื่นๆเพื่อทำให้โค้ดของคุณเสร็จสมบูรณ์
+      courseB_Scrat_ramp5a_2018_markdown_instruction: ลองแก้ปริศนานี้ด้วยตัวของคุณเอง!
+      courseB_collector_loops1_markdown_instruction: |-
+        **เล่นตามใจคุณ** นี่คือลอเรลนักผจญภัย! ขยับเธอไปรอบๆ และให้เธอเก็บสมบัติให้ได้มากเท่าที่คุณสามารถทำได้
+        
+        ลากบล็อกไปไว้ในพื้นที่ทำงานและพยายามหาวิธีที่จะไปเอาสมบัติมาให้ได้ จะผ่านด่านนี้ได้ต้องไปเอาสมบัติมาอย่างน้อยหนึ่งชิ้น
+      courseB_collector_loops2_markdown_instruction: |-
+        พาลอเรลไปให้ถึงสมบัติแล้วใช้บล็อก<xml><block type="collector_collect"/></xml>เพื่อเก็บสมบัติขึ้นมา
+        
+        เพื่อที่จะให้ผ่านด่านนี้ ให้เก็บสมบัติมาทั้งสี่กอง
+      courseB_collector_loops2_2018_markdown_instruction: |-
+        พาลอเรลไปให้ถึงสมบัติแล้วใช้บล็อก<xml><block type="collector_collect"/></xml>เพื่อเก็บสมบัติขึ้นมา
+        
+        เพื่อที่จะให้ผ่านด่านนี้ ให้เก็บสมบัติมาทั้งสี่กอง
+      courseB_collector_loops3_markdown_instruction: ลอเรลเก็บสมบัติทั้งห้ากองใข้เพียงแค่บล็อก<xml><block type="maze_moveEast"/></xml> เพียงบล็อกเดียว ได้อย่างไร??
+      courseB_collector_loops3_2018_markdown_instruction: ลอเรลเก็บสมบัติทั้งห้ากองใข้เพียงแค่บล็อก<xml><block type="maze_moveEast"/></xml> เพียงบล็อกเดียว ได้อย่างไร?
+      courseB_iceage_loops1_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบสแกรทข้ามลานน้ำแข็งสุดลื่น เพื่อไปให้ถึงลูกโอ๊ค!
+      courseB_iceage_loops10_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบตัวนี้ให้เดินทางไปให้ถึงลูกโอ็คให้ได้!
+      courseB_iceage_loops11_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบสแกรทไปให้ถึงลูกโอ็คนั่น!
+      courseB_iceage_loops11_forVideo_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบสแกรทไปให้ถึงลูกโอ็คนั่น!
+      courseB_iceage_loops12_markdown_instruction: ทำอย่างไรก็ได้ เพื่อไปให้ถึงลูกโอ็คนั่นให้ได้!
+      courseB_iceage_loops3_markdown_instruction: คุณสามารถไปให้ถึงลูกโอ็ค โดยใช้บล็อก <xml><block type="maze_moveWest"/></xml> เพียงบล็อกเดียว ได้หรือไม่? ลองใช้ลูปดู!
+      courseB_iceage_loops4_markdown_instruction: ให้เพิ่มบล็อกอีกหนึ่งบล็อก เพื่อพาเจ้ากระรอกเขี้ยวดาบสแครทไปให้ถึงลูกโอ๊ค!
+      courseB_iceage_loops5_markdown_instruction: คุณสามารถเพิ่มลูปเข้าไปอีกลูปหนึ่ง เพื่อไปให้ถึงลูกโอ็คได้ไหม?
+      courseB_iceage_loops6_markdown_instruction: คุณสามารถเพิ่มลูปเข้าไป เพื่อไปให้ถึงลูกโอ็คได้ไหม?
+      courseB_iceage_loops7_markdown_instruction: 'เจ้ากระรอกเขี้ยวดาบสแกรทอยากจะได้ลูกโอ็คเม็ดนั้นจริงๆ! '
+      courseB_iceage_loops8_markdown_instruction: 'คุณช่วยแก้โค้ดนี้ ให้หน่อยได้ไหม? '
+      courseB_iceage_loops9_markdown_instruction: ลูกโอ็คเม็ดนั้นอยู่ไกลเสียเหลือเกิน! คุณใช้ลูปเพื่อช่วยเจ้ากระรอกเขี้ยวดาบสแกรทไปให้ถึงลูกโอ็คหน่อยได้ไหม?
       courseB_maze_seq3_markdown_instruction: '*"ซ่อมโค้ดเสียที เพื่อพาฉันไปจัดการเจ้าหมูนั่น"*'
       courseB_starWars_prog1_markdown_instruction: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"ไปเก็บเศษโลหะมาได้เลย บีบี-8!"_
@@ -378,14 +524,26 @@ th:
         ระวังจะไปชนกำแพงและลังไม้เข้า เศษโลหะมีลักษณะแบบนี้: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog10_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"จัดการให้หมดเลยได้ไหม?"_'
       courseB_starWars_prog10_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"จัดการให้หมดเลยได้ไหม?"'
+      courseB_starWars_prog11_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ทำต่อไปเลย!"_'
+      courseB_starWars_prog11_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ทำต่อไปเลย!"_'
       courseB_starWars_prog1_2018_markdown_instruction: |-
         ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"ไปเก็บเศษโลหะมาได้เลย บีบี-8!"_
         
         ระวังจะไปชนกำแพงและลังไม้เข้า เศษโลหะมีลักษณะแบบนี้: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
       courseB_starWars_prog2_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปเอาโลหะมาให้หมด"_'
       courseB_starWars_prog2_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปเอาโลหะมาให้หมด"_'
+      courseB_starWars_prog3_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปจัดการให้หมดเลย บีบี-8!"_'
+      courseB_starWars_prog3_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปจัดการให้หมดเลย บีบี-8!"_'
+      courseB_starWars_prog4_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปจัดการเลย บีบี-8!"_'
+      courseB_starWars_prog4_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปจัดการเลย บีบี-8!"_'
       courseB_starWars_prog5_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"จัดการให้หมดเลยได้ไหม?"'
       courseB_starWars_prog5_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"จัดการให้หมดเลยได้ไหม?"'
+      courseB_starWars_prog6_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"คุณทำได้แน่!"_'
+      courseB_starWars_prog6_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"คุณทำได้แน่!"_'
+      courseB_starWars_prog7_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปเอามันมาเลย!"_'
+      courseB_starWars_prog7_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปเอามันมาเลย!"_'
+      courseB_starWars_prog9_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"คุณทำได้แน่!"_'
+      courseB_starWars_prog9_2018_markdown_instruction: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"คุณทำได้แน่!"_'
       courseC_PlayLab_events7_markdown_instruction: |-
         บล็อก `ทำซ้ำไปตลอดกาล `ช่วยให้คุณสามารถเรียกใช้โค้ดครั้งแล้วครั้งเล่าตลอดไป ใช้บล็อกนี้เพื่อย้ายเจ้าไดโนจอมเขมือบ(นักแสดงที่ 2) ขึ้นและลง 400 พิกเซลตลอดไป
         
@@ -399,31 +557,47 @@ th:
       courseC_artist_loops2a_markdown_instruction: ตอนนี้ใช้ลูปเพื่อหมุนนกของคุณไปรอบ ๆ 12 ครั้งด้วยการหันไป 30 องศา
       courseC_artist_loops2a_2018_markdown_instruction: ตอนนี้ใช้ลูปเพื่อหมุนนกของคุณไปรอบ ๆ 12 ครั้งด้วยการหันไป 30 องศา
       courseC_artist_prog1_markdown_instruction: |-
-        *"สวัสดี ฉันเป็นศิลปิน คุณสามารถเขียนโค้ดที่จะทำให้ฉันวาดได้เกือบทุกสิ่ง "*
+        *"สวัสดี ฉันเป็นศิลปิน คุณสามารถเขียนโค้ดที่จะทำให้ฉันวาดได้เกือบทุกสิ่ง"*
         
-        เล่นกับบล็อกในกล่องเครื่องมือเพื่อดูสิ่งที่บล็อกเหล่านั้นทำ!
+        เล่นกับบล็อกในกล่องเครื่องมือเพื่อดูสิ่งที่บล็อกเหล่านั้นสามารถทำได้!
       courseC_artist_prog1_2018_markdown_instruction: |-
-        *"สวัสดี ฉันเป็นศิลปิน คุณสามารถเขียนโค้ดที่จะทำให้ฉันวาดได้เกือบทุกสิ่ง "*
+        *"สวัสดี ฉันเป็นศิลปิน คุณสามารถเขียนโค้ดที่จะทำให้ฉันวาดได้เกือบทุกสิ่ง"*
         
-        เล่นกับบล็อกในกล่องเครื่องมือเพื่อดูสิ่งที่บล็อกเหล่านั้นทำ!
-      courseC_artist_prog2_markdown_instruction: "*\"มาทำกรงสำหรับมอนสเตอร์สัตว์เลี้ยงของฉัน! \"*\n\nลากบล็อกบนหน้าจอเพื่อให้ศิลปินวาดเหนือเส้นสีเทาในรูปภาพ  \n(แต่ละเส้นมีความยาว 100 พิกเซล)"
-      courseC_artist_prog2_2018_markdown_instruction: "*\"มาทำกรงสำหรับมอนสเตอร์สัตว์เลี้ยงของฉัน! \"*\n\nลากบล็อกบนหน้าจอเพื่อให้ศิลปินวาดเหนือเส้นสีเทาในรูปภาพ  \n(แต่ละเส้นมีความยาว 100 พิกเซล)"
+        เล่นกับบล็อกในกล่องเครื่องมือเพื่อดูสิ่งที่บล็อกเหล่านั้นสามารถทำได้!
+      courseC_artist_prog2_markdown_instruction: "*\"มาทำกรงสำหรับมอนสเตอร์สัตว์เลี้ยงของฉัน!\"*\n\nลากบล็อกมาไว้บนหน้าจอเพื่อให้ศิลปินวาดทับเส้นสีเทาในรูปภาพ  \n(แต่ละเส้นมีความยาว 100 พิกเซล)"
+      courseC_artist_prog2_2018_markdown_instruction: "*\"มาทำกรงสำหรับมอนสเตอร์สัตว์เลี้ยงของฉัน!\"*\n\nลากบล็อกมาไว้บนหน้าจอเพื่อให้ศิลปินวาดทับเส้นสีเทาในรูปภาพ  \n(แต่ละเส้นมีความยาว 100 พิกเซล)"
       courseC_artist_prog3_markdown_instruction: |-
         *"ยานอวกาศนี้ต้องการหน้าต่าง! "*
         
-        แต่ละด้านของสี่เหฃี่ยมจตุรัสที่อยู่ภายในนั้นเท่ากับ 100 พิกเซลและมุมทั้งหมดเป็นมุม 90 องศา.
+        แต่ละด้านของสี่เหฃี่ยมจตุรัสที่อยู่ภายในนั้นเท่ากับ 100 พิกเซลและมุมทั้งหมดเป็นมุม 90 องศา
       courseC_artist_prog3_2018_markdown_instruction: |-
         *"ยานอวกาศนี้ต้องการหน้าต่าง! "*
         
-        แต่ละด้านของสี่เหฃี่ยมจตุรัสที่อยู่ภายในนั้นเท่ากับ 100 พิกเซลและมุมทั้งหมดเป็นมุม 90 องศา.
+        แต่ละด้านของสี่เหฃี่ยมจตุรัสที่อยู่ภายในนั้นเท่ากับ 100 พิกเซลและมุมทั้งหมดเป็นมุม 90 องศา
+      courseC_artist_prog4_markdown_instruction: "*\"โอ้ ไม่นะ!  เจ้าสัตว์เลี้ยงจากต่างดาวของสเตลล่าเพิ่งจะบินหนีไป! เรามาช่วยมนุษย์อวกาศสาวกันเถอะ!\"*\n\nวาดจรวดของสเตลล่า เพื่อให้เธอสามารถไล่จับสัตว์เลี้ยงของเธอ\n(จรวดแต่ละด้านมีความยาวด้านละ 100 พิกเซล และมุมภายนอกมีขนาดเท่ากับ 120 องศา)"
+      courseC_artist_prog4_2018_markdown_instruction: "*\"โอ้ ไม่นะ!  เจ้าสัตว์เลี้ยงจากต่างดาวของสเตลล่าเพิ่งจะบินหนีไป! เรามาช่วยมนุษย์อวกาศสาวกันเถอะ!\"*\n\nวาดจรวดของสเตลล่า เพื่อให้เธอสามารถไล่จับสัตว์เลี้ยงของเธอ\n(จรวดแต่ละด้านมีความยาวด้านละ 100 พิกเซล และมุมภายนอกมีขนาดเท่ากับ 120 องศา)"
       courseC_artist_prog6_markdown_instruction: |-
-        *"ตอนนี้เป็นป้ายสำหรับ Belle!"* 
+        *"อันนี้เป็นป้ายสำหรับ Belle!"* 
         
-        วาดรูปทรงเพชรนี้ มีด้านขนาด 200 พิกเซล
+        วาดรูปทรงเพชรนี้ ให้มีด้านขนาดความยาวด้านละ 200 พิกเซล
       courseC_artist_prog6_2018_markdown_instruction: |-
-        *"ตอนนี้เป็นป้ายสำหรับ Belle!"* 
+        *"อันนี้เป็นป้ายสำหรับ Belle!"* 
         
-        วาดรูปทรงเพชรนี้ มีด้านขนาด 200 พิกเซล
+        วาดรูปทรงสี่เหลี่ยมจตุรัสนี้ ให้มีด้านขนาดความยาวด้านละ 200 พิกเซล
+      courseC_artist_prog7_markdown_instruction: "**การท้าทาย** ป้ายอันนี้เป็นป้ายพิเศษ!\n\nคุณบอกวิธีวาดขอบป้ายได้ไหม?\n(ด้านยาวมีขนาด 150 พิกเซล และด้านสั้นแต่ละด้านมีขนาด 75 พิกเซล)"
+      courseC_artist_prog7_2018_markdown_instruction: "**การท้าทาย** ป้ายอันนี้เป็นป้ายพิเศษ!\n\nคุณบอกวิธีวาดขอบป้ายได้ไหม?\n(ด้านยาวมีขนาด 150 พิกเซล และด้านสั้นแต่ละด้านมีขนาด 75 พิกเซล)"
+      courseC_artist_prog8_markdown_instruction: "อีกสักป้ายหนึ่ง นี่คือป้ายสามเหลี่ยมสำหรับ Pi\n\n(แต่ละด้านมีขนาด 150 พิกเซล)"
+      courseC_artist_prog8_2018_markdown_instruction: "อีกสักป้ายหนึ่ง นี่คือป้ายสามเหลี่ยมสำหรับ Pi\n\n(แต่ละด้านมีขนาด 150 พิกเซล)"
+      courseC_collector_prog1_markdown_instruction: |-
+        **เล่นตามใจคุณ** นี่คือลอเรลนักผจญภัย! ขยับเธอไปรอบๆ และให้เธอเก็บสมบัติให้ได้มากเท่าที่คุณสามารถทำได้ ใช้บล็อก `เก็บสมบัติ` เพื่อรวบรวมสมบัติ!
+        
+        ลากบล็อกไปไว้ในพื้นที่ทำงานและพยายามหาวิธีที่จะไปเอาสมบัติมาให้ได้ จะผ่านด่านนี้ได้ต้องไปเอาสมบัติมาอย่างน้อยหนึ่งชิ้น
+      courseC_collector_prog1_2018_markdown_instruction: |-
+        **เล่นตามใจคุณ** นี่คือลอเรลนักผจญภัย! ขยับเธอไปรอบๆ และให้เธอเก็บสมบัติให้ได้มากเท่าที่คุณสามารถทำได้ ใช้บล็อก `เก็บสมบัติ` เพื่อรวบรวมสมบัติ!
+        
+        ลากบล็อกไปไว้ในพื้นที่ทำงานและพยายามหาวิธีที่จะไปเอาสมบัติมาให้ได้ จะผ่านด่านนี้ได้ต้องไปเอาสมบัติมาอย่างน้อยหนึ่งชิ้น
+      courseC_collector_prog2_markdown_instruction: พาลอเรลไปให้ถึงสมบัติแล้วใช้บล็อก<xml><block type="collector_collect"/></xml>เพื่อเก็บสมบัติขึ้นมา
+      courseC_collector_prog2_2018_markdown_instruction: พาลอเรลไปให้ถึงสมบัติแล้วใช้บล็อก<xml><block type="collector_collect"/></xml>เพื่อเก็บสมบัติขึ้นมา
       courseC_collector_prog3_markdown_instruction: "*\"ลำดับมีความสำคัญ! \"* บล็อกที่คุณต้องการนั้นมีอยู่แล้วในพื้นที่ทำงาน แต่ไม่ได้เชื่อมต่อ  \nจัดบล็อกเหล่านี้ตามลำดับเพื่อเก็บรวบรวมสมบัติและแก้ปริศนา"
       courseC_collector_prog3_2018_markdown_instruction: "*\"ลำดับมีความสำคัญ! \"* บล็อกที่คุณต้องการนั้นมีอยู่แล้วในพื้นที่ทำงาน แต่ไม่ได้เชื่อมต่อ  \nจัดบล็อกเหล่านี้ตามลำดับเพื่อเก็บรวบรวมสมบัติและแก้ปริศนา"
       courseC_collector_prog4_markdown_instruction: "*\"ลำดับมีความสำคัญ! \"* บล็อกที่คุณต้องการนั้นมีอยู่แล้วในพื้นที่ทำงาน แต่ไม่ได้เชื่อมต่อ  \nจัดบล็อกเหล่านี้ตามลำดับเพื่อเก็บรวบรวมสมบัติและแก้ปริศนา"
@@ -497,6 +671,8 @@ th:
       courseC_harvester_loops_forVid_markdown_instruction: เก็บรวบรวม ข้าวโพดทั้งหมด แล้วคว้าฟักทองทั้งหมดด้วย
       courseC_maze_debugging1_markdown_instruction: "โค้ดนี้ยังไม่ค่อยถูกต้อง แก้ไขโค้ดเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค"
       courseC_maze_debugging1_2018_markdown_instruction: "โค้ดนี้ยังไม่ค่อยถูกต้อง แก้ไขโค้ดเพื่อช่วยให้สแครทไปให้ถึงลูกโอ๊ค"
+      courseC_maze_debugging3_markdown_instruction: "มีบางสิ่งที่ยังไม่ค่อยถูกต้องนัก\n\nเอาบล็อกที่ไม่ถูกต้องออก เพื่อช่วยสแกรทไปให้ถึงลูกโอ็ค!"
+      courseC_maze_debugging3_2018_markdown_instruction: "มีบางสิ่งที่ยังไม่ค่อยถูกต้องนัก\n\nเอาบล็อกที่ไม่ถูกต้องออก เพื่อช่วยสแกรทไปให้ถึงลูกโอ็ค!"
       courseC_maze_loops4_markdown_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
       courseC_maze_programming1_markdown_instruction: สำหรับปริศนานี้ ให้ลากบล็อกทั้งหมดมาต่อกันและคลิก "เริ่ม" เพื่อดูมันทำงาน!
       courseC_maze_programming1_2018_markdown_instruction: สำหรับปริศนานี้ ให้ลากบล็อกทั้งหมดมาต่อกันและคลิก "เริ่ม" เพื่อดูมันทำงาน!
@@ -529,6 +705,14 @@ th:
       courseC_maze_programming9_markdown_instruction: '"ตอนนี้ช่วยฉันแอบไปหาเจ้าหมูนั่น ตามแบบที่คุณต้องการได้เลย! "'
       courseC_maze_programming9_2018_markdown_instruction: '"ตอนนี้ช่วยฉันแอบไปหาเจ้าหมูนั่น ตามแบบที่คุณต้องการได้เลย! "'
       courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"ไปเก็บเศษโลหะมาได้เลย บีบี-8!\"_ \n\nใช้บล็อกแบบเดียวกันห้าบล็อกเพื่อเก็บเศษโลหะ เศษโลหะจะเรืองแสงแบบนี้: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops11_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปจัดการให้หมดเลย บีบี-8!"_
+        
+        เกือบเสร็จแล้ว! คราวนี้ ให้เลือกเส้นทางตามใจเจ้า!
+      courseC_starWars_loops11_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ไปจัดการให้หมดเลย บีบี-8!"_
+        
+        เกือบเสร็จแล้ว! คราวนี้ ให้เลือกเส้นทางตามใจเจ้า!
       courseC_starWars_loops1_2018_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"ไปเก็บเศษโลหะมาได้เลย บีบี-8!\"_ \n\nใช้บล็อกแบบเดียวกันห้าบล็อกเพื่อเก็บเศษโลหะ เศษโลหะจะเรืองแสงแบบนี้: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
       courseC_starWars_loops4_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"พยายามต่อไปนะ บีบี-8."_
@@ -542,6 +726,18 @@ th:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"จัดการให้หมดเลยได้ไหม?"
       courseC_starWars_loops6_2018_markdown_instruction: |-
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"จัดการให้หมดเลยได้ไหม?"
+      courseC_starWars_loops9_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ทำต่อไปเลย!"_
+      courseC_starWars_loops9_2018_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"ทำต่อไปเลย!"_
+      courseD_artist_binary1_markdown_instruction: |-
+        คุณมีตารางของ "พิกเซล " ที่เรามอบให้ ที่คุณสามารถใช้และทำการออกแบบโดยการเปิดเฉพาะสี่เหลี่ยมบางอัน 
+        
+        ให้ใช้บล็อกด้านล่าง โดยให้ศิลปินวาด "01010101" เป็นไบนารีในแถวแรก
+      courseD_artist_binary1_2018_markdown_instruction: |-
+        คุณมีตารางของ "พิกเซล " ที่เรามอบให้ ที่คุณสามารถใช้และทำการออกแบบโดยการเปิดเฉพาะสี่เหลี่ยมบางอัน 
+        
+        ให้ใช้บล็อกด้านล่าง เพื่อให้ศิลปินวาด "01010101" เป็นไบนารีในแถวแรก
       courseD_artist_functions2_markdown_instruction: "ฟังก์ชั่นช่วยให้คุณกำหนดบล็อกใหม่ๆ! \n\nเราได้ย้ายบล็อกที่จำเป็นสำหรับการวาดรูปสี่เหลี่ยมเป็นฟังก์ชั่นที่เรียกว่า ` วาดสี่เหลี่ยมจัตุรัส `ในตอนนี้ให้ใช้ฟังก์ชั่น ` วาดสี่เหลี่ยมจัตุรัส ` เพื่อสร้างแว่นตา \n<hr/>\n\nสี่เหลี่ยมอยู่ห่างกัน 75 พิกเซล"
       courseD_artist_nestedLoops1a_markdown_instruction: "ตอนนี้ลูปรูปสามเหลี่ยมนี้ 6 ครั้ง\n\nหลังจากวาดสามเหลี่ยมแต่ละรูป คุณจะต้องหันไป 60 องศาก่อนวาดสามเหลี่ยมรูปต่อไป "
       courseD_artist_nestedLoops1a_2018_markdown_instruction: "ตอนนี้ลูปรูปสามเหลี่ยมนี้ 6 ครั้ง\n\nหลังจากวาดสามเหลี่ยมแต่ละรูป คุณจะต้องหันไป 60 องศาก่อนวาดสามเหลี่ยมรูปต่อไป "
@@ -639,9 +835,9 @@ th:
         เก็บน้าหวานจากเกสรถ้ามีดอกไม้
         ไม่เช่นนั้น ทำน้ำหวาน(เพราะมีรวงผึ้ง)
       courseD_bee_debugging2_markdown_instruction: |-
-        โอ, นี่ต่อยเจ็บนะ!
+        โอย ตัวนี้ต่อยเจ็บนะ!
         
-        แก้ไขข้อผิดพลาด เพื่อเก็บน้ำหวานจากเกสรทั้งหมด
+        แก้ไขข้อผิดพลาด เพื่อให้สามารถเก็บน้ำหวานจากเกสรทั้งหมดได้
       courseD_bee_debugging5_markdown_instruction: |-
         **การท้าทาย** *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
@@ -747,9 +943,9 @@ th:
       courseD_collector_debugging7_markdown_instruction: "**การท้าทาย** คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้"
       courseD_collector_ramp9_markdown_instruction: ตอนนี้มีสมบัติเพิ่มเข้ามาอีก คุณช่วยลอเรลเก็บสมบัติทั้งหมดหน่อยได้ไหม?
       courseD_debugging_2_markdown_instruction: |-
-        โอ, นี่ต่อยเจ็บนะ!
+        **โอย ตัวนี้ต่อยเจ็บนะ!**
         
-        แก้ไขข้อผิดพลาด เพื่อเก็บน้ำหวานจากเกสรทั้งหมด
+        แก้ไขข้อผิดพลาด เพื่อให้สามารถเก็บน้ำหวานจากเกสรทั้งหมดได้
       courseD_debugging_5_markdown_instruction: |-
         **การท้าทาย** *"ปริศนานี้ทำให้ฉันต้องลูปไปลูปมา"*
         
@@ -780,6 +976,20 @@ th:
         "พาฉันไปที่กองดินและบอกฉันว่าต้องใช้ดินที่ตักด้วยพลั่วจำนวนกี่ครั้ง ถึงจะปรับหน้าดินให้เรียบได้" *
         
         ให้ใช้บล็อกสองสามบล็อกถ้าเป็นไปไปได้เพื่อแก้ปริศนานี้
+      courseD_iceage_loops1_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบสแกรทข้ามลานน้ำแข็งสุดลื่น เพื่อไปให้ถึงลูกโอ๊ค!
+      courseD_iceage_loops10_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบตัวนี้ให้เดินทางไปให้ถึงลูกโอ็คให้ได้!
+      courseD_iceage_loops11_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบสแกรทไปให้ถึงลูกโอ็คนั่น!
+      courseD_iceage_loops12_markdown_instruction: ทำอย่างไรก็ได้ เพื่อไปให้ถึงลูกโอ็คนั่นให้ได้!
+      courseD_iceage_loops2_markdown_instruction: |-
+        ใช้บล็อก <xml><block type="maze_turn">
+        <title name="DIR">หันซ้าย</title>
+        </block></xml>เพื่อไปให้ถึงลูกโอ็ค!
+      courseD_iceage_loops3_markdown_instruction: คุณสามารถไปให้ถึงลูกโอ็ค โดยใช้บล็อก <xml><block type="maze_moveForward"/></xml> เพียงบล็อกเดียว ได้หรือไม่? ลองใช้ลูปดู!
+      courseD_iceage_loops4_markdown_instruction: ให้เพิ่มบล็อกอีกหนึ่งบล็อก เพื่อพาเจ้ากระรอกเขี้ยวดาบสแครทไปให้ถึงลูกโอ๊ค!
+      courseD_iceage_loops6_markdown_instruction: คุณสามารถเพิ่มลูปเข้าไป เพื่อไปให้ถึงลูกโอ็คได้ไหม?
+      courseD_iceage_loops7_markdown_instruction: 'เจ้ากระรอกเขี้ยวดาบสแกรทอยากจะได้ลูกโอ็คเม็ดนั้นจริงๆ! '
+      courseD_iceage_loops8_markdown_instruction: 'คุณช่วยแก้โค้ดนี้ ให้หน่อยได้ไหม? '
+      courseD_iceage_loops9_markdown_instruction: ลูกโอ็คเม็ดนั้นอยู่ไกลเสียเหลือเกิน! คุณใช้ลูปเพื่อช่วยเจ้ากระรอกเขี้ยวดาบสแกรทไปให้ถึงลูกโอ็คหน่อยได้ไหม?
       courseD_maze_nestedLoops3_markdown_instruction: |-
         ให้พาเจ้าซอมบี้ไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนสองสามบล็อกให้น้อยที่สุด เท่าที่จะเป็นไปได้
       courseD_maze_nestedLoops3_2018_markdown_instruction: |-
@@ -830,10 +1040,14 @@ th:
       courseD_maze_until8_2018_markdown_instruction: ให้ช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน
       courseD_maze_until9_markdown_instruction: "** การท้าทาย ** หลีกเลี่ยงเจ้าจอมเขมือบแลช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน"
       courseD_maze_until9_2018_markdown_instruction: "** การท้าทาย ** หลีกเลี่ยงเจ้าจอมเขมือบแลช่วยพาเจ้าซอมบี้ไปหาดอกทานตะวัน"
-      courseD_playLab_cond3_markdown_instruction: 'ใช้ลูป `ซ้ำตลอดกาล"`เพื่อให้เจ้ามังกร (นักแสดง 2) เปลี่ยนแปลงอารมณ์แบบสุ่มทุกวินาที    '
-      courseD_playLab_cond3_2018_markdown_instruction: 'ใช้ลูป `ซ้ำตลอดกาล"`เพื่อให้เจ้ามังกร (นักแสดง 2) เปลี่ยนแปลงอารมณ์แบบสุ่มทุกวินาที    '
-      courseD_playLab_cond3a_markdown_instruction: "เพิ่มโค้ด เมื่อเจ้าโจรสลัดขาไม้ไปถึงเจ้ามังกร, เขาได้รับ 2 คะแนน *ถ้า* มังกรมีความสุข และได้เคะแนนเพิ่มพียง 1 คะแนนในกรณีอื่น"
-      courseD_playLab_cond3a_2018_markdown_instruction: "เพิ่มโค้ด เมื่อเจ้าโจรสลัดขาไม้ไปถึงเจ้ามังกร, เขาได้รับ 2 คะแนน *ถ้า* มังกรมีความสุข และได้เคะแนนเพิ่มพียง 1 คะแนนในกรณีอื่น"
+      courseD_playLab_cond1_markdown_instruction: "ในการเริ่มต้นเกมของเรานั้น เจ้าโจรสลัดขาไม้ (นักแสดงที่ 1) ต้องสามารถเคลื่อนไหวไปรอบๆ ในทุกทิศทาง   เชื่อมต่อบล็อกเข้ากับเหตุการณ์ที่ถูกต้องเพื่อที่จะให้เจ้าโจรสลัดขาไม้เคลื่อนไหวไปมาได้ \n\n---\nช่วยเจ้าโจรสลัดขาไม้รวบรวมธงเพื่อแก้ปริศนาด่านนี้"
+      courseD_playLab_cond1_2018_markdown_instruction: "ในการเริ่มต้นเกมของเรานั้น เจ้าโจรสลัดขาไม้ (นักแสดงที่ 1) ต้องสามารถเคลื่อนไหวไปรอบๆ ในทุกทิศทาง   เชื่อมต่อบล็อกเข้ากับเหตุการณ์ที่ถูกต้องเพื่อที่จะให้เจ้าโจรสลัดขาไม้เคลื่อนไหวไปมาได้ \n\n---\nช่วยเจ้าโจรสลัดขาไม้รวบรวมธงเพื่อแก้ปริศนาด่านนี้"
+      courseD_playLab_cond2_markdown_instruction: "ถึงเวลามาทำแต้มเพิ่มกันแล้ว!\n\nแก้ไขโค้ดเพื่อให้เจ้าโจรสลัดขาไม้ (นักแสดงที่ 1) ทำแต้มได้เมื่อเขาสัมผัสตัวเจ้ามังกร (นักแสดงที่ 2) "
+      courseD_playLab_cond2_2018_markdown_instruction: "ถึงเวลาทำแต้มเพิ่มกันแล้ว!\n\nแก้ไขโค้ดเพื่อให้เจ้าโจรสลัดขาไม้ (นักแสดงที่ 1) ทำแต้มได้เมื่อเขาสัมผัสตัวเจ้ามังกร (นักแสดงที่ 2) "
+      courseD_playLab_cond3_markdown_instruction: 'ใช้ลูป ` ทำซ้ำตลอดไป ` เพื่อให้เจ้ามังกร (นักแสดงที่ 2) เปลี่ยนแปลงอารมณ์แบบสุ่มทุกวินาที  '
+      courseD_playLab_cond3_2018_markdown_instruction: 'ใช้ลูป ` ทำซ้ำตลอดไป ` เพื่อให้เจ้ามังกร (นักแสดงที่ 2) เปลี่ยนแปลงอารมณ์แบบสุ่มทุกวินาที  '
+      courseD_playLab_cond3a_markdown_instruction: "เพิ่มโค้ด โดยที่เมื่อใดก็ตามที่เจ้าโจรสลัดขาไม้สัมผัสเจ้ามังกร เขาจะได้รับแต้ม 2 คะแนน *ถ้าหากว่า* มังกรอยู่ในอารมณ์ดี มีความสุข และได้คะแนนเพิ่มพียง 1 คะแนนสำหรับกรณีอื่นๆ"
+      courseD_playLab_cond3a_2018_markdown_instruction: "เพิ่มโค้ด โดยที่เมื่อใดก็ตามที่เจ้าโจรสลัดขาไม้สัมผัสเจ้ามังกร เขาจะได้รับแต้ม 2 คะแนน *ถ้าหากว่า* มังกรอยู่ในอารมณ์ดี มีความสุข และได้คะแนนเพิ่มพียง 1 คะแนนสำหรับกรณีอื่นๆ"
       courseD_playLab_cond4_markdown_instruction: |-
         เรื่องกำลังน่าสนใจมากขึ้น!
         
@@ -850,24 +1064,26 @@ th:
         ตอนนี้เราต้องมีวิธีที่จะชนะ
         
         เพิ่มลูป `ทำซ้ำไปตลอดกาลของ` ทีทำการตรวจสอบอย่างต่อเนื่อง ** ถ้า ** คะแนนมากกว่า 5 แล้วจบเกมเป็น ** ชนะ ** เมื่อมันเป็นไปตามเงื่อนไขนั้น
-      courseD_playLab_cond6_markdown_instruction: "ว้าว, เกมนี้เป็นเรื่องยากที่จะเอาชนะ!\n\nลองปรับแต่งเกมนี้เพื่อให้สนุกมากขึ้น  ความท้าทายนี้มีสองส่วน:\n___\n\n1) ทำให้ตัวนินจา (นักแสดงที่ 3) ช้าลงก่อนที่คุณจะให้เขาไล่โจรสลัด (ตัวละครที่ 1).  \n\n2) ใช้ลูป` ทำซ้ำไปตลอดกาล`เพื่อตรวจสอบดูว่าโจรสลัดอยู่ใน  \"โซนปลอดภัย \" ใต้เส้นของเจ้าปลาหมึก (มากกว่า 225 พิกเซลลงไป).  ถ้าเป็นเช่นนั้น, ตั้งนินจาให้ **หลบหนี ** เจ้าโจรสลัด.  มิฉะนั้นตั้งนินจาให้ ** ไล่ล่า ** โจรสลัด  "
-      courseD_playLab_cond6_2018_markdown_instruction: "ว้าว, เกมนี้เป็นเรื่องยากที่จะเอาชนะ!\n\nลองปรับแต่งเกมนี้เพื่อให้สนุกมากขึ้น  ความท้าทายนี้มีสองส่วน:\n___\n\n1) ทำให้ตัวนินจา (นักแสดงที่ 3) ช้าลงก่อนที่คุณจะให้เขาไล่โจรสลัด (ตัวละครที่ 1).  \n\n2) ใช้ลูป` ทำซ้ำไปตลอดกาล`เพื่อตรวจสอบดูว่าโจรสลัดอยู่ใน  \"โซนปลอดภัย \" ใต้เส้นของเจ้าปลาหมึก (มากกว่า 225 พิกเซลลงไป).  ถ้าเป็นเช่นนั้น, ตั้งนินจาให้ **หลบหนี ** เจ้าโจรสลัด.  มิฉะนั้นตั้งนินจาให้ ** ไล่ล่า ** โจรสลัด  "
-      courseD_playLab_cond6a_markdown_instruction: "เราไม่ต้องการให้เจ้าโจรสลัดอยู่ใน  \"โซนที่ปลอดภัย \" นานเกินไป!  \n\nเพิ่มรหัสไปยังคำสั่ง ' ถ้า(if) ' ด้านล่างเพื่อให้เจ้าโจรสลัด (นักแสดงที่ 1) ถ้าเขาอยู่ในโซนที่ปลอดภัย, โปรแกรมจะรอหนึ่งวินาที, แล้วหักคะแนน ตราบใดที่เขาอยู่ต่ำกว่าเขตปลาหมึกยักษ์."
-      courseD_playLab_cond6a_2018_markdown_instruction: "เราไม่ต้องการให้เจ้าโจรสลัดอยู่ใน  \"โซนที่ปลอดภัย \" นานเกินไป!  \n\nเพิ่มรหัสไปยังคำสั่ง ' ถ้า(if) ' ด้านล่างเพื่อให้เจ้าโจรสลัด (นักแสดงที่ 1) ถ้าเขาอยู่ในโซนที่ปลอดภัย, โปรแกรมจะรอหนึ่งวินาที, แล้วหักคะแนน ตราบใดที่เขาอยู่ต่ำกว่าเขตปลาหมึกยักษ์."
+      courseD_playLab_cond6_markdown_instruction: "ว้าว, เกมนี้ยากที่จะเอาชนะได้!\n\nลองปรับแต่งเกมนี้เพื่อให้สนุกมากขึ้น  โดยความท้าทายนั้นมีอยู่สองส่วนคือ:\n___\n\n1) ทำให้เจ้านินจา (นักแสดงที่ 3) เคลื่อนไหวช้าลงก่อนที่คุณให้เขาไล่ล่าเจ้าโจรสลัด (ตัวละครที่ 1).  \n\n2) ใช้ลูป` ทำซ้ำตลอดไป`เพื่อตรวจดูว่าโจรสลัดอยู่ใน  \"โซนปลอดภัย \" ในเขตของเจ้าปลาหมึกยักษ์ (ลึกกว่า 225 พิกเซลลงไป) หรือไม่  ถ้าเป็นเช่นนั้น ทำให้เจ้านินจา **เผ่นหนี ** ให้ห่างไกลจากเจ้าโจรสลัด  มิฉะนั้นให้เจ้่่านินจาให้ ** ไล่ล่า ** เจ้าโจรสลัด  "
+      courseD_playLab_cond6_2018_markdown_instruction: "ว้าว, เกมนี้ยากที่จะเอาชนะได้!\n\nลองปรับแต่งเกมนี้เพื่อให้สนุกมากขึ้น  โดยความท้าทายนั้นมีอยู่สองส่วนคือ:\n___\n\n1) ทำให้เจ้านินจา (นักแสดงที่ 3) เคลื่อนไหวช้าลงก่อนที่คุณให้เขาไล่ล่าเจ้าโจรสลัด (ตัวละครที่ 1).  \n\n2) ใช้ลูป` ทำซ้ำตลอดไป`เพื่อตรวจดูว่าโจรสลัดอยู่ใน  \"โซนปลอดภัย \" ในเขตของเจ้าปลาหมึกยักษ์ (ลึกกว่า 225 พิกเซลลงไป) หรือไม่  ถ้าเป็นเช่นนั้น ทำให้เจ้านินจา **เผ่นหนี ** ให้ห่างไกลจากเจ้าโจรสลัด  มิฉะนั้นให้เจ้่่านินจาให้ ** ไล่ล่า ** เจ้าโจรสลัด  "
+      courseD_playLab_cond6a_markdown_instruction: "เราไม่ต้องการให้เจ้าโจรสลัดอยู่ใน  \"โซนปลอดภัย \" นานเกินไป!  \n\nเพิ่มโค้ดให้กับคำสั่ง ' ถ้า(if) ' ด้านล่างเพื่อที่ว่า หากเจ้าโจรสลัด (นักแสดงที่ 1) อยู่ในโซนปลอดภัย โปรแกรมจะรอหนึ่งวินาที แล้วหักคะแนน ตราบใดที่เขาอยู่ต่ำกว่าเส้นเขตของเจ้าปลาหมึกยักษ์"
+      courseD_playLab_cond6a_2018_markdown_instruction: "เราไม่ต้องการให้เจ้าโจรสลัดอยู่ใน  \"โซนปลอดภัย \" นานเกินไป!  \n\nเพิ่มโค้ดให้กับคำสั่ง ' ถ้า(if) ' ด้านล่างเพื่อที่ว่า หากเจ้าโจรสลัด (นักแสดงที่ 1) อยู่ในโซนปลอดภัย โปรแกรมจะรอหนึ่งวินาที แล้วหักคะแนน ตราบใดที่เขาอยู่ต่ำกว่าเส้นเขตของเจ้าปลาหมึกยักษ์"
       courseD_playLab_condFP_2018_markdown_instruction: |-
-        ตอนนี้มาสร้างเกมของคุณเองเพื่ออวดเพื่อนๆ ของคุณ!
+        ตอนนี้มาสร้างเกมของคุณเองเพื่ออวดเพื่อนๆ ของคุณกัน!
         
         ---
         
         คุณสามารถ:
-        -ให้โจรสลัดและนินจาทำงานร่วมกันที่จะเอาคะแนนจากฉ
-        -มีทั้งปลาหมึกยักษ์ตามโจรสลัด ทำความเสียหายเป็นสองเท่าให้กับนินจาเมื่อพวกเขาชนกัน
-        -มีแต่ละอักษรหายไปเมื่อสัมผัสโดยนินจา
-        -ประดิษฐ์เกมของคุณเอง!
+        - ให้โจรสลัดและนินจาทำงานร่วมกัน เพื่อที่จะเอาแต้มมาจากเจ้าปลาหมึกยักษ์
+        - ให้ปลาหมึกยักษ์ไล่ตามโจรสลัด ทำความเสียหายกับนินจาเป็นทวีคุณเมื่อพวกเขามาชนกัน
+        - ให้ผู้เล่นแต่ละคนหายไปเมื่อถูกนินจาสัมผัส
+        - ประดิษฐ์สร้างสรรค์เกมของคุณขึ้นเอง!
       courseD_scrat_ramp1_markdown_instruction: สำหรับปริศนาข้อนี้ ต่อบล็อกทั้งหมดเข้าด้วยกัน แล้วคลิก " เริ่ม " เพื่อดูมันเริ่มทำงาน!
       courseD_scrat_ramp1_2018_markdown_instruction: สำหรับปริศนาข้อนี้ ต่อบล็อกทั้งหมดเข้าด้วยกัน แล้วคลิก " เริ่ม " เพื่อดูมันเริ่มทำงาน!
       courseD_scrat_ramp2_markdown_instruction: ลากบล็อก ` ไปข้างหน้า` อีกบล็อกหนึ่งจากกล่องเครื่องมือมาเพิ่ม แล้วต่อบล็อกทั้งหมดเข้ากับ ` เมื่อเรียกใช้งาน ` ก็ถือว่าเป็นอันสิ้นสุดการโค้ดของคุณ
       courseD_scrat_ramp2_2018_markdown_instruction: ลากบล็อก ` ไปข้างหน้า` อีกบล็อกหนึ่งจากกล่องเครื่องมือมาเพิ่ม แล้วต่อบล็อกทั้งหมดเข้ากับ ` เมื่อเรียกใช้งาน ` ก็ถือว่าเป็นอันสิ้นสุดการโค้ดของคุณ
+      courseD_scrat_ramp7_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบสแกรทไปให้ถึงลูกโอ็คนั่น!
+      courseD_scrat_ramp7_2018_markdown_instruction: ช่วยเจ้ากระรอกเขี้ยวดาบสแกรทไปให้ถึงลูกโอ็คนั่น!
       courseE_artist_functions1_markdown_instruction: "\"ฉัน ผีดิบ.. ศิลปิน ฉันรักการวาดภาพ!  \"\n\nช่วยเจ้าผีดิบวาดกรอบแว่นตา เป็นกรอบสี่เหลี่ยมซึ่งมีด้านเท่ากับ 100 พิกเซล\n\nส่วนต่อระหว่างกรอบแว่นตายาว 75 พิกเซล\n\n"
       courseE_artist_functions1_2018_markdown_instruction: "\"ฉัน ผีดิบ.. ศิลปิน ฉันรักการวาดภาพ!  \"\n\nช่วยเจ้าผีดิบวาดกรอบแว่นตา เป็นกรอบสี่เหลี่ยมซึ่งมีด้านเท่ากับ 100 พิกเซล\n\nส่วนต่อระหว่างกรอบแว่นตายาว 75 พิกเซล\n\n"
       courseE_artist_functions2_markdown_instruction: "ฟังก์ชั่นช่วยให้คุณกำหนดบล็อกใหม่ๆ! \n\nเราได้ย้ายบล็อกที่จำเป็นสำหรับการวาดรูปสี่เหลี่ยมเป็นฟังก์ชั่นที่เรียกว่า ` วาดสี่เหลี่ยมจัตุรัส `ในตอนนี้ให้ใช้ฟังก์ชั่น ` วาดสี่เหลี่ยมจัตุรัส ` เพื่อสร้างแว่นตา \n___\n\nสี่เหลี่ยมอยู่ห่างกัน 75 พิกเซล"
@@ -968,29 +1184,56 @@ th:
       courseF_maze_ramp6_2018_markdown_instruction: |-
         "ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น ไม่อย่างนั้นฉันอาจอารมณ์เสียได้!"*
         เมื่อคุณมีบล็อคเป็นแถว ลองย้ายบล็อกเหล่านี้เข้าไปไว้ในลูป <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml> เพื่อทำอย่างเดียวกันโดยใช้โค้ดน้อยกว่า!
+      coursea_maze_ramp1_2018_markdown_instruction: ให้พาเจ้านกนั่นไปหาเจ้าหมู โดยการต่อบล็อก <xml><block type="maze_moveEast"/></xml> เข้ากับด้านล่างของบล็อก <xml><block type="when_run"/></xml> แล้วกดปุ่ม "▶ เริ่ม "!
       grade2_CaringForNewPet_0_markdown_instruction: สำหรับปริศนานี้ ให้ลากบล็อกทั้งหมดมาต่อกันและคลิก "เริ่ม" เพื่อดูมันทำงาน!
       grade2_CaringForNewPet_11_markdown_instruction: '"ใจเย็นๆไว้ ช่วยฉันหาเจ้าหมูตัวแสบนั่น"*'
       grade2_CaringForNewPet_6_markdown_instruction: "**การท้าทาย:** พาฉันใปหาเจ้าชั่วร้ายตัวเขียวนั่น! (ระวังระเบิดหน่อยนะ)"
-      grade2_MakeDogTag_1_markdown_instruction: "*\"มาทำกรงสำหรับมอนสเตอร์สัตว์เลี้ยงของฉัน! \"*\n\nลากบล็อกบนหน้าจอเพื่อให้ศิลปินวาดเหนือเส้นสีเทาในรูปภาพ  \n(แต่ละเส้นมีความยาว 100 พิกเซล)"
+      grade2_MakeDogTag_1_markdown_instruction: "*\"มาทำกรงสำหรับมอนสเตอร์สัตว์เลี้ยงของฉัน!\"*\n\nลากบล็อกมาไว้บนหน้าจอเพื่อให้ศิลปินวาดทับเส้นสีเทาในรูปภาพ  \n(แต่ละเส้นมีความยาว 100 พิกเซล)"
+      grade2_MakeDogTag_10_markdown_instruction: |+
+        ตอนนี้ ให้วาดอะไรก็ได้ที่คุณชอบ!
+        <br/><br/>
+        ที่เห็นนี่ เป็นตัวอย่างความคิดให้คุณได้ลองดู ถ้าหากคุณคิดอะไรไม่ออกตอนนี้ (อันสุดท้ายค่อนข้างท้าทาย)
+        <br/>
+        <hr/>
+        <h3>Ideas</h3>
+        <table>
+        <tr>
+        <td>
+        <img src="https://images.code.org/c8748bea36ec8ea92ceb13d86cd862d2-image-1471033427162.13.51 PM.png" width="150"/><br/>
+        </td>
+        
+        <td>
+        <img src="https://images.code.org/57c582dca6126e30de36b5bef5517f78-image-1471033432715.03.46 PM.png" width="150"/><br/>
+        </td>
+        
+        <td>
+        <img src="https://images.code.org/9df13dec95da560686472580304d9ee3-image-1471033275008.55.15 PM.png" width="150"/><br/>
+        </td>
+        
+        </tr>
+        </table>
       grade2_MakeDogTag_2_markdown_instruction: |-
         *"ยานอวกาศนี้ต้องการหน้าต่าง! "*
         
-        แต่ละด้านของสี่เหฃี่ยมจตุรัสที่อยู่ภายในนั้นเท่ากับ 100 พิกเซลและมุมทั้งหมดเป็นมุม 90 องศา.
+        แต่ละด้านของสี่เหฃี่ยมจตุรัสที่อยู่ภายในนั้นเท่ากับ 100 พิกเซลและมุมทั้งหมดเป็นมุม 90 องศา
+      grade2_MakeDogTag_3_markdown_instruction: "*\"โอ้ ไม่นะ!  เจ้าสัตว์เลี้ยงจากต่างดาวของสเตลล่าเพิ่งจะบินหนีไป! เรามาช่วยมนุษย์อวกาศสาวกันเถอะ!\"*\n\nวาดจรวดของสเตลล่า เพื่อให้เธอสามารถไล่จับสัตว์เลี้ยงของเธอ\n(จรวดแต่ละด้านมีความยาวด้านละ 100 พิกเซล และมุมภายนอกมีขนาดเท่ากับ 120 องศา)"
       grade2_MakeDogTag_5_markdown_instruction: |-
-        *"ตอนนี้เป็นป้ายสำหรับ Belle!"* 
+        *"อันนี้เป็นป้ายสำหรับ Belle!"* 
         
-        วาดรูปทรงเพชรนี้ มีด้านขนาด 200 พิกเซล
+        วาดรูปทรงเพชรนี้ ให้มีด้านขนาดความยาวด้านละ 200 พิกเซล
+      grade2_MakeDogTag_6_markdown_instruction: "**การท้าทาย** ป้ายอันนี้เป็นป้ายพิเศษ!  คุณบอกวิธีวาดขอบป้ายได้ไหม?\n(ด้านยาวมีขนาด 150 พิกเซล และด้านสั้นแต่ละด้านมีขนาด 75 พิกเซล)"
+      grade2_MakeDogTag_7_markdown_instruction: "อีกสักป้ายหนึ่ง นี่คือป้ายสามเหลี่ยมสำหรับ Pi\n\n(แต่ละด้านมีขนาด 150 พิกเซล)"
       grade2_MakeDogTag_8_markdown_instruction: ตอนนี้เรามาเชื่อมต่อกลุ่มของ V เข้าด้วยกันด้วยการใช้ลูป
       grade2_MakeDogTag_9_markdown_instruction: "ถึงเวลาที่จะมาทำบางอย่างที่เก๋ไก๋กัน \n\nสร้างโค้ดจากปริศนาล่าสุดอีกครั้ง แต่ตอนนี้เพิ่มหันไปทางซ้าย 30 องศาภายในลูป และ ทำซ้ำ 24 ครั้งแทนที่จะเป็น 8 ครั้ง"
       grade2_MakeDogTag_BFP_markdown_instruction: |-
-        *"สวัสดี ฉันเป็นศิลปิน คุณสามารถเขียนโค้ดที่จะทำให้ฉันวาดได้เกือบทุกสิ่ง "*
+        *"สวัสดี ฉันเป็นศิลปิน คุณสามารถเขียนโค้ดที่จะทำให้ฉันวาดได้เกือบทุกสิ่ง"*
         
-        เล่นกับบล็อกในกล่องเครื่องมือเพื่อดูสิ่งที่บล็อกเหล่านั้นทำ!
+        เล่นกับบล็อกในกล่องเครื่องมือเพื่อดูสิ่งที่บล็อกเหล่านั้นสามารถทำได้!
       grade2_PuppyLoops_10_markdown_instruction: |-
         ครูของฉันบอกว่าอะไรก็ตามที่ฉันเริ่มต้นทำไว้ ควรทำให้สำเร็จลุล่วงไป!
         
         ช่วยฉันวาดกังหันลมอันนี้ของฉันให้เสร็จที คุณบอกได้ไหมว่ามีอะไรไม่ถูกต้อง?
-      grade2_PuppyLoops_4_markdown_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
+      grade2_PuppyLoops_4_markdown_instruction: สำหรับปริศนาด่านนี้ บล็อกลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
       grade2_PuppyLoops_8_markdown_instruction: "โค้ดนี้วาดหนวดแมวไม่ถูกต้อง\n\nแก้ไขโค้ดนี้ เพื่อวาดหนวดให้มีความยาวเท่ากันทั้งหมด"
       grade2_PuppyLoops_9_markdown_instruction: |-
         ดูเหมือนว่าตัวอักษร C ของคำว่า Code จะถูกวาดกลับหลัง!
@@ -1008,7 +1251,7 @@ th:
       grade2_collector_A_2018_markdown_instruction: ช่วยลอเรลเก็บสมบัติให้หมด
       grade2_maze_debuggingFP_markdown_instruction: '"ตอนนี้ช่วยฉันแอบไปหาเจ้าหมูนั่น ตามแบบที่คุณต้องการได้เลย! "'
       grade2_playlab_project_3_markdown_instruction: "คุณสามารถทำให้เจ้าแวดเดิล (นักแสดงที่ 1) เล่นเสียง \"ของชนกัน\" และพูดว่า \" โอ๊ย!\" ถ้าเขาวิ่งไปขนเจ้าไดโนจอมเขมือบ? \nเมื่อคุณดำเนินการเสร็จแล้ว ให้ลองเล่นเกมดูเพื่อดูว่าอะไรจะเกิดขึ้น\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
-      grade2_puppy_loops4_markdown_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
+      grade2_puppy_loops4_markdown_instruction: สำหรับปริศนาด่านนี้ บล็อกลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
       grade3_ConditionalsElse_1_markdown_instruction: "เมฆก้อนนี้กำลังบังมุมมองของฉัน! \n\nตรวจสอบดูว่ามีดอกไม้ที่อยู่ภายใต้เมฆ และเก็บน้ำหวานเพียงอย่างเดียวถ้ามีดอกไม้อยู่ ระวังให้ดี เพราะมันสามารถเปลี่ยนแปลงได้ตลอด!"
       grade3_ConditionalsElse_2_markdown_instruction: "มีเมฆมาเพิ่มอีกแล้ว! \n\nเช็คดูใต้เมฆทุกๆ ก้อน ว่ามันซ่อนดอกไม้ไว้หรือเปล่า ก่อนที่คุณจะทำการเก็บน้ำหวานจากเกสร  \n\nจำไว้ว่าเมฆทุกๆก้อน ไม่ได้ซ่อนของอย่างเดียวกัน"
       grade3_ConditionalsElse_4_markdown_instruction: "บางครั้งเมฆนี้ปกคลุมดอกไม้และบางครั้งมันก็ปกคลุมรังผึ้ง! \n\nใช้บล็อกถ้า/อย่างอื่น เพื่อเก็บรวบรวมน้ำหวานถ้ามันเป็นดอกไม้ อย่างอื่นให้ทำน้ำผึ้ง (เพราะมันเป็นรังผึ้ง)"
@@ -1037,27 +1280,26 @@ th:
         
         คำสั่งทั้งหมดที่จำเป็นนั้นมีอยู่แล้ว... ตอนนี้ใช้ทักษะในการดีบั๊กของคุณเพื่อหาวิธีแก้ไขปริศนานี้
       grade3_Debugging_3_markdown_instruction: |-
-        โอ, นี่ต่อยเจ็บนะ!
+        **โอย ตัวนี้ต่อยเจ็บนะ!**
         
-        แก้ไขข้อผิดพลาด เพื่อเก็บน้ำหวานจากเกสรทั้งหมด
+        แก้ไขข้อผิดพลาด เพื่อให้สามารถเก็บน้ำหวานจากเกสรทั้งหมดได้
       grade3_Debugging_5_markdown_instruction: "ดอกไม้นี่ดูน่าอร่อย!\n\nแก้ไขข้อผิดพลาดในการเก็บรวบรวมน้ำหวานทั้งหมด \nขณะนี้คุณสามารถใช้ทั้งเรียกใช้งานรวดเดียวและเรียกใช้งานทีละขั้นตอน"
       grade3_Debugging_6_markdown_instruction: |-
         ความท้าทายที่หวานหอมจริงๆ!
         
-        แก้ไขข้อผิดพลาดเพื่อเก็บรวบรวมน้ำหวานทั้งหมด
+        แก้ไขข้อผิดพลาดเพื่อให้สามารถเก็บรวบรวมน้ำหวานได้ทั้งหมด
       grade3_Debugging_9_markdown_instruction: |-
-        คุณจะต้องแก้สองสามอย่างในโปรแกรมนี้ เพื่อให้สามารถเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผึ้งให้หมด
+        คุณจะต้องแก้สองสามอย่างในโปรแกรมนี้ เพื่อให้สามารถเก็บน้ำหวานจากเกสรได้ทั้งหมดและเอาไปทำน้ำผึ้งให้หมด
       grade3_Loops_10_markdown_instruction: |-
         เป็นผึ้งที่ขยันจริงๆ!
         ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
+      grade3_Loops_3_markdown_instruction: ให้ใช้บล็อกลูป `ทำซ้ำ` เพื่อรวบรวมน้ำหวานทั้งหมด
       grade3_Loops_4_markdown_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
-      grade3_Loops_6_markdown_instruction: "กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา ลูปเป็นเพื่อนของคุณ ใช้ลูปสักสองสามลูปแก้ปริศนานี้ด้วยบล็อกที่น้อยที่สุดเท่าที่จะเป็นไปได้"
+      grade3_Loops_6_markdown_instruction: "กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา? ลูปเป็นเพื่อนของคุณ ใช้ลูปสักสองสามลูปช่วยแก้ปริศนานี้ โดยใช้บล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้"
       grade3_Loops_7_markdown_instruction: |-
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers.
+        Xx.
       grade3_Loops_TeacherIDo_markdown_instruction: |-
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers.
+        Xx
       grade3_RunningFarm_6_markdown_instruction: |-
         *"ขอขยับขึ้นไปอีกขั้นหนึ่ง! "*
         
@@ -1069,7 +1311,7 @@ th:
       grade3_maze_loops2a_markdown_instruction: |-
         ให้พาเจ้าซอมบี้ไปหาดอกทานตะวัน โดยใช้บล็อกจำนวนสองสามบล็อกให้น้อยที่สุด เท่าที่จะเป็นไปได้
       grade3_maze_nestedLoops3_markdown_instruction: พาฉันไปจัดการเจ้าหมูนั่น! คราวนี้คุณสามารถใช้บล็อกเดินไปข้างหน้าได้เพียงครั้งเดียวเท่านั้น
-      grade3_maze_nestedLoops4_markdown_instruction: สำหรับปริศนาด่านนี้ ลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
+      grade3_maze_nestedLoops4_markdown_instruction: สำหรับปริศนาด่านนี้ บล็อกลูป `ทำซ้ำ` สองลูปจะช่วยคุณพาเจ้านกไปหาเจ้าหมูได้ โดยใช้บล็อกจำนวนน้อยที่สุด!
       grade4_arist_nested_loop_circles1_markdown_instruction: "**การประเมินผล:** ใช้ลูปซ้อนลูปในการออกแบบให้เสร็จสมบูรณ์"
       grade4_artist_functions1_markdown_instruction: "\"ฉัน ผีดิบ.. ศิลปิน ฉันรักการวาดภาพ!  \"\n\nช่วยเจ้าผีดิบวาดกรอบแว่นตา เป็นกรอบสี่เหลี่ยมซึ่งมีด้านเท่ากับ 100 พิกเซล\n\nส่วนต่อระหว่างกรอบแว่นตายาว 75 พิกเซล\n\n"
       grade4_artist_functions2_markdown_instruction: "ฟังก์ชั่นช่วยให้คุณกำหนดบล็อกใหม่ๆ! \n\nเราได้ย้ายบล็อกที่จำเป็นสำหรับการวาดรูปสี่เหลี่ยมเป็นฟังก์ชั่นที่เรียกว่า ` วาดสี่เหลี่ยมจัตุรัส `ในตอนนี้ให้ใช้ฟังก์ชั่น ` วาดสี่เหลี่ยมจัตุรัส ` เพื่อสร้างแว่นตา \n\nสี่เหลี่ยมอยู่ห่างกัน 75 พิกเซล"
@@ -1091,8 +1333,19 @@ th:
       grade4_review_bee3_markdown_instruction: |-
         เป็นผึ้งที่ขยันจริงๆ!
         ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
+      grade5_artist_binary1_markdown_instruction: "ไบนารีเป็นวิธีการแสดงข้อมูลโดยใช้เพียงสองตัวเลือก  กรณ๊นี้ เราจะใช้ตัวเลือก  \"ปิด \" (แสดงด้วยหมายเลข 0) และ  \"เปิด\" (แสดงด้วยหมายเลข 1).  \n\nคุณมีตารางของ  \"พิกเซล \" ที่เรามอบให้ ที่คุณสามารถใช้และทำการออกแบบโดยการเปิดเฉพาะสี่เหลี่ยมบางอัน \n\n**ให้ศิลปินวาด  \"01010101\" เป็นไบนารีในแถวแรกได้ไหม?**"
+      gradek_artist_loops2_markdown_instruction: |-
+        ศิลปินของเราพยายามที่จะวาดเส้นห้าครั้ง แต่ไม่สามารถทำได้อย่างถูกต้อง คุณสามารถช่วยได้ไหม?
+        
+        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      gradek_artist_loops8_markdown_instruction: |
+        <div style="color: #7665a0; font-size: 1.6em; line-height: 1.4em;" >
+        **การท้าทาย** บันไดที่พาดลงไปยังท่าเทียบเรือพังเสียหาย ช่วยฉันซ่อมมันที<br/>
+        </div>
+        
+        <img src="https://images.code.org/53c68133f897895caa0369b4afa3ec3b-image-1470789463684.gif" width="300"/>
       gradek_artist_loopsFP_markdown_instruction: |
-        ศิลปินเห็นบางสิ่งบางอย่างที่ตลกในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
+        ศิลปินเห็นบางสิ่งบางอย่างที่น่าขบขันในระยะไกล วาดสิ่งที่คุณคิดว่าเขาเห็น
         
         <hr/>
         <h3>Ideas</h3>
@@ -1120,12 +1373,48 @@ th:
         
         </tr>
         </table>
+      iceAgeLoopsforVideo_markdown_instruction: คุณสามารถไปให้ถึงลูกโอ็ค โดยใช้บล็อก <xml><block type="maze_moveForward"/></xml> เพียงบล็อกเดียว ได้หรือไม่? ลองใช้ลูปดู!
       level 'grade3_Loops_10_markdown_instruction: |-
         เป็นผึ้งที่ขยันจริงๆ!
         ช่วยผึ้งเก็บรวบรวมน้ำหวานจากเกสรทั้งหมด และทำน้ำผึ้งทั้งหมด โดยใช้บล็อกจำนวนที่น้อยที่สุดเท่าที่จะเป็นไปได้
+      level 'grade3_Loops_3_markdown_instruction: ให้ใช้บล็อกลูป `ทำซ้ำ` เพื่อรวบรวมน้ำหวานทั้งหมด
       level 'grade3_Loops_4_markdown_instruction: ตอนนี้ใช้บล็อก`ทำซ้ำ` เพื่อเก็บน้ำหวานจากเกสรทั้งหมดและทำน้ำผี้งให้หมดด้วย
       level 'grade3_Loops_5_markdown_instruction: "โอ้ ทุ่งดอกไม้ที่ช่างสวยงาม! ช่วยผี้งให้เข้าไปเก็บน้ำหวานจากเกสรดอกไม้แต่ละดอก โดยที่คุณสามารถใช้บล็อกให้น้อยกว่า 7 บล็อกได้ไหม"
-      level 'grade3_Loops_6_markdown_instruction: "กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา ลูปเป็นเพื่อนของคุณ ใช้ลูปสักสองสามลูปแก้ปริศนานี้ด้วยบล็อกที่น้อยที่สุดเท่าที่จะเป็นไปได้"
+      level 'grade3_Loops_6_markdown_instruction: "กี่ครั้งแล้วที่ลูปช่วยคุณแก้ปริศนา? ลูปเป็นเพื่อนของคุณ ใช้ลูปสักสองสามลูปช่วยแก้ปริศนานี้ โดยใช้บล็อกให้น้อยที่สุดเท่าที่จะเป็นไปได้"
       level 'grade3_Loops_7_markdown_instruction: |-
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers.
+        Xx
+      ramp_artist_loops1_markdown_instruction: "ช่างเป็นวันที่งดงามเสียจริงๆ!\n\nช่วยศิลปินคลุมดอกไม้ของเขาก่อนที่ฤดูหนาวจะมาเยือน โดยการเคลื่อนที่ไปข้างหน้า 60 พิกเซล"
+      ramp_artist_loops1_2018_markdown_instruction: "ช่างเป็นวันที่งดงามเสียจริงๆ!\n\nช่วยศิลปินคลุมดอกไม้ของเขาก่อนที่ฤดูหนาวจะมาเยือน โดยการเคลื่อนที่ไปข้างหน้า 60 พิกเซล"
+      ramp_artist_loops2_markdown_instruction: เพิ่มความสวยงามด้วยการทำขั้นตอนนี้ซ้ำห้าครั้ง เปลี่ยนสีอย่างสุ่มระหว่างการเคลื่อนไปข้างหน้าแต่ละครั้ง
+      ramp_artist_loops2_2018_markdown_instruction: เพิ่มความสวยงามด้วยการทำขั้นตอนนี้ซ้ำห้าครั้ง เปลี่ยนสีอย่างสุ่มระหว่างการเคลื่อนไปข้างหน้าแต่ละครั้ง
+      ramp_artist_loops3_markdown_instruction: วาดเส้นอย่างเป็นสีสรรค์อีกที 5 ครั้ง คราวนี้ให้ใช้ลูป `ทำซ้ำ`
+      ramp_artist_loops3_2018_markdown_instruction: วาดเส้นอย่างเป็นสีสันอีกที 5 ครั้ง คราวนี้ให้ใช้ลูป `ทำซ้ำ`
+      ramp_artist_loops4_markdown_instruction: เกิดอะไรขึ้น ถ้าคุณจะเพิ่มบล็อก หันขวาไป 72 องศาเป็นบล็อกสุดท้ายภายในลูปของคุณ?
+      ramp_artist_loops4_2018_markdown_instruction: เกิดอะไรขึ้น ถ้าคุณจะเพิ่มบล็อก หันขวาไป 72 องศาเป็นบล็อกสุดท้ายภายในลูปของคุณ?
+      ramp_artist_loops5_markdown_instruction: |-
+        ลูปนี่ทำให้การเขียนโค้ดง่ายขึ้นจริงๆ!
+        
+        ใช้ลูปเพื่อวาดบันไดอันนี้
+        -แต่ละก้าวบันไดมีขนาดกว้าง 50 พิกเซลยาวและสูง 50 พิกเซล
+        -คุณจะต้องหัน 90 องศาไปทั้งสองทิศทาง
+      ramp_artist_loops5_2018_markdown_instruction: |-
+        ลูปนี่ทำให้การเขียนโค้ดง่ายขึ้นจริงๆ!
+        
+        ใช้ลูปเพื่อวาดบันไดอันนี้
+        -แต่ละก้าวบันไดมีขนาดกว้าง 50 พิกเซลยาวและสูง 50 พิกเซล
+        -คุณจะต้องหัน 90 องศาไปทั้งสองทิศทาง
+      ramp_artist_loops6_markdown_instruction: |-
+        บันไดชุดนี้มีขนาดใหญ่มากกว่าชุดก่อน แต่จะใช้โค้ดจำนวนเดียวกันกับปริศนาชุดก่อนหน้านี้!
+        
+        แก้ไขลูปนี้เพื่อให้ปริศนาเสร็จสมบูรณ์
+      ramp_artist_loops6_2018_markdown_instruction: |-
+        บันไดชุดนี้มีขนาดใหญ่มากกว่าชุดก่อน แต่จะใช้โค้ดจำนวนเดียวกันกับปริศนาชุดก่อนหน้านี้!
+        
+        แก้ไขลูปนี้เพื่อให้ปริศนาเสร็จสมบูรณ์
+      ramp_artist_loops7_markdown_instruction: มองหารูปแบบและทำให้โค้ดนี้สั้นลงด้วยการใช้ลูป!
+      ramp_artist_loops7_2018_markdown_instruction: มองหารูปแบบและทำให้โค้ดนี้สั้นลงด้วยการใช้ลูป!
+      ramp_artist_loops8_markdown_instruction: "**การท้าทาย** ﻿มองหารูปแบบและทำให้โค้ดนี้สั้นลงด้วยการใช้ลูป"
+      ramp_artist_loops8_2018_markdown_instruction: "**การท้าทาย** ﻿มองหารูปแบบและทำให้โค้ดนี้สั้นลงด้วยการใช้ลูป"
+      ramp_artist_loops8_clone_markdown_instruction: "**การท้าทาย** ﻿มองหารูปแบบและทำให้โค้ดนี้สั้นลงด้วยการใช้ลูป"
+      ramp_artist_loops9_markdown_instruction: แก้ปริศนานี้ ด้วยการวาดสี่เหลี่ยมจัตุรัสที่มีความยาวด้านเท่ากับ 200 พิกเซล
+      ramp_artist_loops9_2018_markdown_instruction: แก้ปริศนานี้ ด้วยการวาดสี่เหลี่ยมจัตุรัสที่มีความยาวด้านเท่ากับ 200 พิกเซล

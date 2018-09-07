@@ -203,6 +203,7 @@
   just_did_coursef: "我刚完成了课程F - 来看看吧！ @codeorg"
   just_did_accelerated: "我刚完成加速课程- 来看看！ @codeorg"
   just_did_hoc_donor: '我刚刚参加了#HourOfCode - 来看看吧！（感谢 %{donor_twitter} 支持 @codeorg)'
+  just_did_course_donor: "我刚完成 %{course} - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
   twitter_teach_cs: "90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。"
   twitter_cs_foundational: "计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。"
   learn_hoc: "学习编程一小时"
@@ -765,9 +766,9 @@
   dashboard_submission_submitted: "已提交"
   dashboard_submission_in_progress: "进行中"
   dashboard_status: "状态"
-  dashboard_multi_correct: "# 多项选择正确"
-  dashboard_multi_count: "# 多项选择"
-  dashboard_multi_correct_percent: "% 多项选择正确"
+  dashboard_multi_correct: "# 选择题正确"
+  dashboard_multi_count: "# 选择题"
+  dashboard_multi_correct_percent: "% 选择题正确"
   dashboard_submission_timestamp: "提交时间戳"
   stats_hoc_2013_heading: '在去年的编程一小时活动中的惊人数据。在一周之内：'
   stats_hoc_2013_image_alt: "2013年编程一小时统计数据"

@@ -6,7 +6,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
     :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
     :fit_workshop_id, :fit_workshop_name, :fit_workshop_url, :application_guid,
-    :registered_teachercon, :registered_fit_weekend, :attending_teachercon
+    :registered_teachercon, :registered_fit_weekend, :attending_teachercon,
+    :principal_approval_state
 
   def email
     object.user.email
@@ -69,5 +70,14 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def attending_teachercon
     object&.workshop&.teachercon?
+  end
+
+  def principal_approval_state
+    approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: object.application_guid)
+    if approval
+      approval.placeholder? ? 'sent' : 'received'
+    else
+      'not_sent'
+    end
   end
 end

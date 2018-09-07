@@ -21,8 +21,8 @@ require 'cdo/chat_client'
 class ExpiredDeletedAccountPurger
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :deleted_after, :deleted_before, :max_accounts_to_purge,
-    :log
+  attr_reader :dry_run, :deleted_after, :deleted_before, :max_teachers_to_purge,
+    :max_accounts_to_purge, :log
   alias :dry_run? :dry_run
 
   def initialize(options = {})
@@ -39,9 +39,19 @@ class ExpiredDeletedAccountPurger
     @deleted_before = options[:deleted_before] || 28.days.ago
     raise ArgumentError.new('deleted_before must be Time') unless @deleted_before.is_a? Time
 
-    # Do nothing if more than this number of accounts would be purged.
-    # We'll want to adjust this over time to match activity on our site.
-    @max_accounts_to_purge = options[:max_accounts_to_purge] || 100
+    # Do nothing if more than this number of teachers would be purged.
+    # We can keep a much tighter control on this because teacher deletes are much more stable than
+    # student deletes, which may spike dramatically due to cascading delete rules.
+    # We expect this to stay below 100 during September 2018.
+    @max_teachers_to_purge = options[:max_teachers_to_purge] || 200
+    raise ArgumentError.new('max_teachers_to_purge must be Integer') unless @max_teachers_to_purge.is_a? Integer
+
+    # Do nothing if more than this number of accounts would be purged in total.
+    # We may need to adjust this over time as activity increases on our site.
+    # This is a loose constraint because cascading student deletes make this a very spiky metric.
+    # 4000 is ~0.01% of our user rows.
+    # We expect this to stay below 1500 during September 2018.
+    @max_accounts_to_purge = options[:max_accounts_to_purge] || 4000
     raise ArgumentError.new('max_accounts_to_purge must be Integer') unless @max_accounts_to_purge.is_a? Integer
 
     reset
@@ -85,11 +95,18 @@ class ExpiredDeletedAccountPurger
     @log.puts "Starting purge_expired_deleted_accounts!"
     @log.puts "deleted_after: #{@deleted_after}"
     @log.puts "deleted_before: #{@deleted_before}"
+    @log.puts "max_teachers_to_purge: #{@max_teachers_to_purge}"
     @log.puts "max_accounts_to_purge: #{@max_accounts_to_purge}"
     @log.puts "(dry-run)" if @dry_run
   end
 
   def check_constraints
+    if expired_soft_deleted_accounts.select(&:teacher?).count > @max_teachers_to_purge
+      raise SafetyConstraintViolation, "Found #{expired_soft_deleted_accounts.count} " \
+        "teachers to purge, which exceeds the configured limit of " \
+        "#{@max_teachers_to_purge}. Abandoning run."
+    end
+
     if expired_soft_deleted_accounts.count > @max_accounts_to_purge
       raise SafetyConstraintViolation, "Found #{expired_soft_deleted_accounts.count} " \
         "accounts to purge, which exceeds the configured limit of " \
@@ -122,7 +139,7 @@ class ExpiredDeletedAccountPurger
     @log.puts summary
 
     log_link = upload_activity_log
-    say "#{summary} #{log_link}"
+    say "#{summary} #{log_link}" if rack_env? :production
 
     upload_metrics metrics
   end

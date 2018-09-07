@@ -7,6 +7,8 @@ th:
         Course 4 Maze 1_callout1: กด "รัน" เพื่อลองใช้โปรแกรมของคุณ
       Course 4 Maze 4_callout:
         repeat: ใส่บล็อกไว้ข้างในลูปเพื่อทำซ้ำคำสั่งต่าง ๆ
+      MC_HOC_2017_Ali_callout:
+        MC_HOC_2017_08_RY_1: 'เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับอะเล็กซ์ไม่สามารถทำเช่นนั้นได้!  '
       Overworld Chop Trees_callout:
         craft_callout_preplaced: เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น
       Overworld Chop Trees_2018_callout:
@@ -23,6 +25,8 @@ th:
         craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
       Overworld Place Wall_2018_callout:
         craft_inside_repeat: ทำซ้ำโดยวางบล็อกไที่นี่
+      Quantum Bee - Ryan_callout:
+        feeling_stuck_callout_test: " ถ้าติดขัด ไม่รู้ว่าจะทำอย่างไร<br />ให้คลิกที่หลอดไฟเพื่อดูคำบอกใบ้!"
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม
       Underground Avoiding Lava_2018_callout:
@@ -39,12 +43,42 @@ th:
         courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_artist_loops4_2018_callout:
         courseA_artist_loops4_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      courseA_collector_loops1_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_loops1_2018_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
       courseA_collector_loops3_2018_callout:
         gradek_adventurer_loops2_1: หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้
+      courseA_collector_preLoops2_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_preLoops3_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_preLoops4_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_preLoops5_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_collector_preLoops6_callout:
+        courseA_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseA_maze_seq1_callout:
+        courseA_maze_seq1_1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
       courseB_Scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
+      courseB_collector_loops1_callout:
+        courseB_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseB_maze_seq1_callout:
+        courseB_maze_seq1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!
+      courseC_collector_prog1_callout:
+        courseC_collector_prog1_1: คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง
+      courseC_maze_debugging5_callout:
+        courseC_maze_debugging5_1: คุณไม่สามารถลบ บล็อกสีเทาทิ้งไปได้
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด " เริ่ม " เพื่อให้โปรแรมของคุณเริ่มทำงาน
       courseC_maze_programming1_2018_callout:

@@ -101,43 +101,43 @@ module Pd::Application
       }
     end
 
-    def self.required_fields
-      %i(
-        first_name
-        last_name
-        email
-        do_you_approve
-        confirm_principal
-      )
-    end
-
     def dynamic_required_fields(hash)
       [].tap do |required|
-        unless hash[:do_you_approve] == NO
+        unless hash.empty?
           required.concat [
-            :total_student_enrollment,
-            :free_lunch_percent,
-            :white,
-            :black,
-            :hispanic,
-            :asian,
-            :pacific_islander,
-            :american_indian,
-            :other,
-            :committed_to_master_schedule,
-            :hours_per_year,
-            :terms_per_year,
-            :replace_course,
-            :committed_to_diversity,
-            :understand_fee,
-            :pay_fee
+            :first_name,
+            :last_name,
+            :email,
+            :do_you_approve,
+            :confirm_principal
           ]
 
-          if hash[:replace_course] == YES
-            if course == 'csd'
-              required << :replace_which_course_csd
-            elsif course == 'csp'
-              required << :replace_which_course_csp
+          unless hash[:do_you_approve] == NO
+            required.concat [
+              :total_student_enrollment,
+              :free_lunch_percent,
+              :white,
+              :black,
+              :hispanic,
+              :asian,
+              :pacific_islander,
+              :american_indian,
+              :other,
+              :committed_to_master_schedule,
+              :hours_per_year,
+              :terms_per_year,
+              :replace_course,
+              :committed_to_diversity,
+              :understand_fee,
+              :pay_fee
+            ]
+
+            if hash[:replace_course] == YES
+              if course == 'csd'
+                required << :replace_which_course_csd
+              elsif course == 'csp'
+                required << :replace_which_course_csp
+              end
             end
           end
         end
@@ -166,10 +166,24 @@ module Pd::Application
       end.values.map(&:to_f).reduce(:+)
     end
 
+    def self.create_placeholder_and_send_mail(teacher_application)
+      ::Pd::Application::Teacher1819ApplicationMailer.principal_approval(teacher_application).deliver_now
+
+      Pd::Application::PrincipalApproval1819Application.create(
+        form_data: {}.to_json,
+        application_guid: teacher_application.application_guid
+      )
+    end
+
+    def placeholder?
+      JSON.parse(form_data).empty?
+    end
+
     # @override
     def check_idempotency
-      # only one per teacher application (guid)
-      Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
+      existing_application = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
+
+      (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
   end
 end

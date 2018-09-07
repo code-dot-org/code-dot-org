@@ -1006,6 +1006,8 @@ zh-CN:
               name: 独立视频
             Curriculum Reference:
               name: 教案参考
+            Sprite Lab:
+              name: 精灵实验室
         algebraPD2b:
           description: '第二阶段在线：混合的暑期学习'
           description_short: '第二阶段在线：混合的暑期学习'
@@ -1758,6 +1760,7 @@ zh-CN:
             'Unplugged: The Design Recipe':
               name: '离线：食谱设计'
         AlgebraB:
+          title: '代数中的计算机科学：课程 B'
           description: 通过代数学习函数编程
           description_short: 通过代数学习函数编程
           stages:
@@ -1858,6 +1861,9 @@ zh-CN:
             Post-Course Survey:
               name: 课后问卷
         csp2-2017:
+          title: 计算机科学原理单元2 - 数字信息
+          description: 本单元进一步探讨了数字信息如何被编码、表示和操作的。能够数字化的操作数据，可视化它，并找到规律、趋势以及可能的含义，这是计算机科学家非常重要的实践技能，每天都要用到。本单元要讨论的主要技能包括：理解数据来自何处，通过直觉从中学习或提取信息，能够使用计算工具来操作数据和通讯。
+          description_short: 通过计算和可视化来探索数字信息的表示和操作有多复杂。
           stages:
             Bytes and File Sizes:
               name: 字节和文件大小
@@ -1902,6 +1908,7 @@ zh-CN:
             Post-Course Survey:
               name: 课后问卷
         csp3-2017:
+          title: 计算机科学原理单元3 - 编程介绍
           description: "这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。\\r\n\\r\n这个课程最后更新于2017年10月30日。访问 forum.code.org/c/csp/updates 获取更多的教案更新。"
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           stages:
@@ -1946,7 +1953,9 @@ zh-CN:
             Post-Course Survey:
               name: 课后问卷
         csp4-2017:
+          title: 计算机科学原理单元4 - 大数据和隐私
           description: "我们生活的世界有丰富的数据，引入了许多关于公共政策、法律、道德和社会影响的复杂问题。本单元的目标是开发一个全面而平衡的方法看待数据，包括正面和负面的影响，以及理解加密工作的基础原理和原因。\\r\n\\r\n本单元最后更新于2017年11月。访问forum.code.org/c/csp/updates获取更多的教案更新。"
+          description_short: 探索我们生活的数据丰富的世界，以及数据如何影响公共政策，个人隐私，安全，法律和道德。
           stages:
             Alice and Bob and Asymmetric Keys:
               name: 爱丽丝和鲍勃与非对称密钥
@@ -1987,6 +1996,9 @@ zh-CN:
             Student Post-Course Survey:
               name: 学生课程后调查
         csp5-2017:
+          title: 计算机科学原理单元5 - 构建应用
+          description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
+          description_short: 通过制作丰富，有交互能力的JavaScript应用来继续学习计算机编程的基础概念。
           stages:
             Beyond Buttons Toward Apps:
               name: 超越应用的按钮
@@ -2350,12 +2362,12 @@ zh-CN:
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
               name: '注意: 已弃用。教师看不到结果。计算机科学原理最终评估'
         cspexam1-mWU7ilDYM9:
-          description_short: 这一多项选择评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第1部分。
+          description_short: 这一选择题评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第1部分。
           stages:
             CS Principles Culminating Assessment Part 1:
               name: 计算机科学原理最终评估第1部分
         cspexam2-AKwgAh1ac5:
-          description_short: 这一多项选择评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第2部分。
+          description_short: 这一选择题评估涵盖了计算机科学的7大概念的问题。这是第二部分50题考试的第2部分。
           stages:
             CS Principles Culminating Assessment Part 2:
               name: 计算机科学原理最终评估第2部分
@@ -3354,6 +3366,7 @@ zh-CN:
               name: AP 准备和支持
         csd4-2017:
           title: 计算机科学发现单元4 - 设计过程
+          description_short: "  学习如何设计一个能满足用户需要的程序。"
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
           stages:
             Analysis of Design:
@@ -6745,6 +6758,7 @@ zh-CN:
               name: 艺术家里的循环
               description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             'Events: The Big Event':
+              name: 大事件少儿版。
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
               name: 游戏实验室中的事件
@@ -6912,6 +6926,7 @@ zh-CN:
           title: 课程 B （2018）
           assignment_family_title: 课程 B
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
+          description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
           description_audience: '年龄： 5-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -6936,6 +6951,8 @@ zh-CN:
               name: 收集器中的循环
             Loops in Artist:
               name: 用循环来画花园
+            'Events: The Big Event':
+              name: 大事件少儿版。
             Events in Play Lab:
               name: 游戏实验室中的事件
             Programming in Ice Age:
@@ -6951,6 +6968,8 @@ zh-CN:
         coursed-2018:
           title: 新的课程D脚本
           assignment_family_title: 课程 D
+          description: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
+          description_short: 学习条件语句，并创建自己的艺术，故事或游戏。
           description_audience: '年龄：7-11'
           stages:
             'Algorithms: Graph Paper Programming':
@@ -7206,6 +7225,7 @@ zh-CN:
           title: 课程 E （2018）
           assignment_family_title: 课程 E
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
+          description_short: 回顾课程 C 和 D 中的概念，然后继续学习函数。
           description_audience: '年龄：8-12'
           stages:
             'Programming: My Robotic Friends':
@@ -7519,9 +7539,11 @@ zh-CN:
             Apps and Storage:
               name: 应用程序和存储
               description_student: '本课程涵盖了计算机在上下文中的输入和输出方面。这对学生来说是相关而又熟悉的：应用程序。课堂评估各种网络应用程序, 以分析它们设计要解决的特定问题、它们需要工作的输入以及它们为用户提供的输出。 课程总结了对这些应用程序的观察，以及老师主导的关于应用程序对社会影响的讨论。 '
+              description_teacher: '本课程基于学生们熟悉的应用，回顾了计算机的输入、输出、存储和处理的概念。同时，学生评估了智能手机应用来分析被设计用来解决的特定的问题，需要的输入，然后将输入处理成需要的输出，并将信息存储起来稍后使用。最后结束于讨论，来将课程联系到学生们熟悉的应用上。 '
         csd4-2018:
           title: 计算机科学发现单元4 - 设计过程
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
+          description_short: "  学习如何设计一个能满足用户需要的程序。"
           stages:
             Analysis of Design:
               name: 设计分析
@@ -7653,6 +7675,9 @@ zh-CN:
               description_student: 要结束此课程，班级学生必须设计出使用数据建议或预测来帮助解决问题的途径。最开始的步骤是让班级同学对问题进行头脑风暴，做简单的调研，并定义他们所选的问题。 然后，他们要在交换各自回馈以及做最后演示之前，决定他们要收集的数据类型， 收集方法，以及使用方法。
               description_teacher: 要结束此单元，学生们要在他们所收集的数据和班级分析结果的基础上设计一个推荐引擎。在看完一个推荐应用程序的示范后， 学生们要参照项目指南来完成多天的活动目标。开始的几个步骤是让学生们选择他们要帮助用户做什么样的选择，运用什么数据来做推荐，创建一份调查，并收集全班的选择结果。然后，他们要分析数据并用他们所学到的知识来创建推荐算法。最后，他们要利用这些算法来给一些同学做推荐。在把他们的成果演示给整个班级之前， 学生们要相互进行审核，并对他们的项目做必要的修改。
         csp2-2018:
+          title: 计算机科学原理单元2 - 数字信息
+          description: 本单元进一步探讨了数字信息如何被编码、表示和操作的。能够数字化的操作数据，可视化它，并找到规律、趋势以及可能的含义，这是计算机科学家非常重要的实践技能，每天都要用到。本单元要讨论的主要技能包括：理解数据来自何处，通过直觉从中学习或提取信息，能够使用计算工具来操作数据和通讯。
+          description_short: 通过计算和可视化来探索数字信息的表示和操作有多复杂。
           stages:
             Bytes and File Sizes:
               name: 字节和文件大小
@@ -7692,7 +7717,10 @@ zh-CN:
               name: 快速研究 - 格式对决
             Lossy vs Lossless Compression:
               name: 有损和无损压缩
+            Unit 2 Assessment:
+              name: 第2单元评估
         csp3-2018:
+          title: 计算机科学原理单元3 - 编程介绍
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           stages:
@@ -7745,6 +7773,9 @@ zh-CN:
             Create PT - Complete the Task:
               name: 创建 表演任务- 完成任务
         csp4-2018:
+          title: 计算机科学原理单元4 - 大数据和隐私
+          description: 我们生活的数据丰富的世界，同时也带来了很多复杂的问题，如公共政策，法律，道德和社会影响。本单元的目标是发展全面平衡的视角，来看待全球的数据，它的正面和反面影响，并理解现代加密技术工作的基础。
+          description_short: 探索我们生活的数据丰富的世界，以及数据如何影响公共政策，个人隐私，安全，法律和道德。
           stages:
             What is Big Data?:
               name: 什么是大数据？
@@ -7772,7 +7803,12 @@ zh-CN:
               name: 通过可视化发现趋势
             Check Your Assumptions:
               name: 检查您的假设
+            Unit 4 Assessment:
+              name: 第4单元评估
         csp5-2018:
+          title: 计算机科学原理单元5 - 构建应用
+          description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
+          description_short: 通过制作丰富，有交互能力的JavaScript应用来继续学习计算机编程的基础概念。
           stages:
             Buttons and Events:
               name: 按钮和事件
@@ -8172,6 +8208,8 @@ zh-CN:
               name: 收集器中的循环
             Loops in Artist:
               name: 用循环来画花园
+            'Events: The Big Event':
+              name: 大事件少儿版。
             Events in Play Lab:
               name: 游戏实验室中的事件
             Spelling Bee:
@@ -8191,7 +8229,7 @@ zh-CN:
             Loops in Ice Age:
               name: 斯奎特和循环
             'Persistence & Frustration: Stevie and the Big Project':
-              name: 坚持与挫折：史蒂夫和大项目。
+              name: 史蒂夫和大项目
         spritelab-validated:
           stages:
             Fish Tank - Creating Sprites:
@@ -8200,11 +8238,29 @@ zh-CN:
               name: 外星人舞蹈派对 - 输入
             Virtual Pet - Interactions:
               name: 虚拟宠物 - 交互
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: 迷津园
+        deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: 为 AB 教育者的调试
+            Debugging for CDEF Educators:
+              name: 为 CDEF 教育者的调试
+          title: 为教育者的调试课程
         fit-test:
           stages:
             Deeper Learning Overview:
               name: 更深的学习概览
+            Complete Practice Question:
+              name: 完成实践问题
+          title: FIT 教育实践的 PLC 课程
+          description_audience: 培训中的引导员
+          description_short: FIT 培训课程
+          description: 用来演示 PLC 课程是如何起作用的。
         spritelab-simple:
+          title: 精灵实验室介绍 (EE)
           description: 这是为code.org新的精灵实验室工具准备的试验课程E/F。
           description_short: 这是为code.org新的精灵实验室工具准备的试验课程E/F。
           description_audience: 课程E/F学生
@@ -8223,3 +8279,25 @@ zh-CN:
               name: 外星人舞蹈派对 - 输入
             Virtual Pet - Interactions:
               name: 虚拟宠物 - 交互
+          title: 精灵实验室介绍 (EE)
+        craft18:
+          stages:
+            craft18 levels:
+              name: craft18 级别
+          title: craft18 测试脚本
+        frozen-2018:
+          stages:
+            Artist:
+              name: 小艺术家
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: 小艺术家
+        dance:
+          stages:
+            new stage:
+              name: 新的阶段
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: 小艺术家

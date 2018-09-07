@@ -6,12 +6,51 @@ sr:
       Prepare for your presentation:
         title: наслов
     match:
+      2-3 Big Event Match 1:
+        Match the button combination to the dance moves.: Уклопи дугме комбинацијом на плес потезе.
+        Matching: Упаривање
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Упаривање
+        Use the key to match each code to its letter: Користи кључ да укомбинујес сваки код његовом писму
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: Уклопи координатну мрежу са програмом.
+        Matching: Упаривање
       2-3 Maze Match 2:
         Instructions: Упутства
+        Match the puzzles to the blocks: Уклопи слагалице са блоковима
+      2-3 maze match 1:
+        Match the puzzles to the blocks: Уклопи слагалице са блоковима
+      4-5 Algorithms Match 1:
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        Matching: Упаривање
+      4-5 Computational Thinking Match 1:
+        Matching: Упаривање
+      4-5 Suncatchers Match 1:
+        Matching: Упаривање
       4-5 maze match 1:
         Instructions: Упутства
+        Match the puzzles to the blocks: Уклопи слагалице са блоковима
+      K-1 Artist 2 Match 2:
+        Matching: Упаривање
+      K-1 Bee Loops Match 1:
+        Matching: Упаривање
+      K-1 Big Event Match 1:
+        Match the button combination to the dance moves.: Уклопи дугме комбинацијом на плес потезе.
+        Matching: Упаривање
       K-1 Maze Match 1:
         Instructions: Упутства
+        Matching: Упаривање
     multi:
+      2-3 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Како би поједноставио овај програм користећи петље?
+      K-1 Getting Loopy Multi 1:
+        How would you simplify this sequence with loops?: Како би поједноставио овај програм користећи петље?
       K-1 Maze Multiple Choice 2:
         Maze: Лавиринт

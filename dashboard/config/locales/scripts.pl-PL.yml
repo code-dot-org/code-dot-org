@@ -4150,3 +4150,19 @@ pl:
               name: Twój cyfrowy ślad
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie i Duży Projekt (the Big Project)
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artysta
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artysta
+        dance:
+          stages:
+            new stage:
+              name: nowy etap
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artysta

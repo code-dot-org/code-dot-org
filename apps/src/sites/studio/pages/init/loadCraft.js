@@ -9,6 +9,11 @@ import levels from "@cdo/apps/craft/simple/levels";
 import skins from "@cdo/apps/craft/simple/skins";
 
 /**
+ * Underwater Minecraft (maze-style, control avatar with blocks)
+ */
+import AquaticCraft from '@cdo/apps/craft/aquatic/craft';
+
+/**
  * Minecraft Designer ("events" style, program entities & player controls character)
  */
 import DesignerCraft from '@cdo/apps/craft/designer/craft';
@@ -54,6 +59,11 @@ export default function loadCraft(options) {
     options.skinsModule = designerSkins;
     options.blocksModule = designerBlocks;
     appMain(window.Craft, designerLevels, options);
+  } else if (options.level.isAquaticLevel) {
+    window.Craft = AquaticCraft;
+    options.skinsModule = skins;
+    options.blocksModule = {install: () => {}};
+    appMain(window.Craft, levels, options);
   } else {
     window.Craft = Craft;
     options.skinsModule = skins;

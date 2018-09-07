@@ -356,16 +356,7 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.shouldAutoRunSetup) {
-      const changeHandler = this.rerunSetupCode.bind(this);
-      if (this.studioApp_.isUsingBlockly()) {
-        const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
-        blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
-          changeHandler);
-      } else {
-        this.studioApp_.editor.on('change', changeHandler);
-        // Droplet doesn't automatically bubble up aceEditor changes
-        this.studioApp_.editor.aceEditor.on('change', changeHandler);
-      }
+      this.studioApp_.addChangeHandler(this.rerunSetupCode.bind(this));
     }
   };
 

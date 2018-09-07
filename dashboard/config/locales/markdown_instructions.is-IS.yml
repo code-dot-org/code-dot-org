@@ -500,6 +500,8 @@ is:
       AppLab Intro 6 - blankApp_markdown_instruction: "**Markmið:** Þetta er algjörlega
         tómt Appsmiðjuapp. Smíðaðu það sem þú vilt frá grunni!\r\n\r\n**Hvernig:**
         Þú stjórnar hér. Þú ákveður hvað þú vilt búa til!"
+      Artist Autorun Test_markdown_instruction: Settu nú fallið í lykkju til að teikna
+        þessa 3 ferninga.
       Artist Inspiration_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\r\n\r\n**Hugmyndir
         fyrir frjálsa æfingu:** Nú hefur þú lært allt sem þú þarft að kunna til að
         búa til svona mynstur! \r\n\r\nEf þér finnst þessi mynd áhugaverð getur þú

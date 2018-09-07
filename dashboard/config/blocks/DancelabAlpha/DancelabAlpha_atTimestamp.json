@@ -1,0 +1,32 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "atTimestamp",
+    "blockText": "at {TIMESTAMP} {UNIT}",
+    "args": [
+      {
+        "name": "TIMESTAMP",
+        "type": "Number"
+      },
+      {
+        "name": "UNIT",
+        "options": [
+          [
+            "measures",
+            "\"measures\""
+          ],
+          [
+            "seconds",
+            "\"seconds\""
+          ]
+        ]
+      }
+    ],
+    "eventBlock": true
+  }
+}

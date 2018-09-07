@@ -470,6 +470,7 @@ is:
       Artist - Nested Loops 8_instruction: 'Endurtaktu þetta 6 sinnum í lykkju. Hvað þarf að snúa mikið í hverri umferð? (Vísbending: Hvað er 360 deilt með 6?)'
       Artist - Nested Loops 9_instruction: Teiknaðu tennur krókódílsins!
       Artist - Nested Loops Assessment 1_instruction: Notaðu faldaða lykkju til að ljúka teikningunni.
+      Artist Autorun Test_instruction: Settu nú fallið í lykkju til að teikna þessa 3 ferninga.
       Artist Inspiration_instruction: "Frjáls æfing með innblæstri: Þú hefur nú lært allt sem þarf til að búa til svona mynstur! Ef þessi mynd veitir þér innblástur, reyndu þá að búa til eitthvað líkt henni. Ef ekki, búðu þá til þína eigin mynd.\\r\n\\r\nViltu vita hvernig þetta innblásturmynstur var búið til? "
       Auto Open Function Editor_instruction: 'Þú getur kallað á föll innan úr öðrum föllum! Notaðu "form" fallið þitt sem grunn og búðu til 3 hús sem byrja með lengdina 50 og stækka um 20 í hvert sinn. Hér gæti verið gagnlegt að nota lykkju með teljara. '
       Bee Recommended Blocks test_instruction: Fjólublá blóm geta haft 1 eða 0 af blómasafa, en þú veist ekki hvaða blóm! Gættu þess að safna ekki safa frá fjólubláu blómi ef það hefur engan. Athugaðu hvort safinn er 1 með því að nota "ef" kubbinn.
@@ -2320,6 +2321,11 @@ is:
       courseD_artist_project_embedded_instruction: Þetta er það sem þú ert að fara að búa til!
       courseD_artist_ramp11_instruction: Búðu nú til ferning með listamanninum!
       courseD_artist_ramp12_instruction: Notaðu það sem þú hefur lært til að teikna þennan þríhyrning innan í ferningi.
+      courseD_autorun_binary4_2019_instruction: Getur þú teiknað þetta mynstur með því að endurtaka 3 tvíundartölur (0 og 1)?
+      courseD_autorun_binary6_2019_instruction: Hvaða 6 stafa tvíundarstrengur, endurtekinn 11 sinnum, mun teikna þessa mynd?
+      courseD_autorun_binary7_2019_instruction: Hver er stysti tvíundarstrengur sem endurtekinn mundi teikna þessa mynd?
+      courseD_autorun_binary8_2019_instruction: Ljúktu við kóðann sem býr til þessa mynd.
+      courseD_autorun_binary8_predict1_2019_instruction: Ljúktu við kóðann sem býr til þessa mynd.
       courseD_bee_conditionals1_instruction: Gáðu hvort skýið feli blóm. Sæktu blómasafann, ef svo er.
       courseD_bee_conditionals1_predict1_instruction: Gáðu hvort skýið feli blóm. Sæktu blómasafann, ef svo er.
       courseD_bee_conditionals1_predict1_2018_instruction: Gáðu hvort skýið feli blóm. Sæktu blómasafann, ef svo er.

@@ -1407,3 +1407,15 @@ da:
               name: Flyt det, flyt det
             Your Digital Footprint:
               name: Dit digitale fodspor
+        frozen-2018:
+          stages:
+            Artist:
+              name: Kunstner
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Kunstner
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Kunstner

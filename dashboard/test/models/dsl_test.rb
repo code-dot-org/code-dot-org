@@ -59,7 +59,7 @@ class DslTest < ActiveSupport::TestCase
   test 'should encrypt when saving in levelbuilder and decrypt when parsing from file' do
     # don't actually write a file, but check that we are writing the encrypted version
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    File.expects(:write).once.with do |pathname, contents|
+    File.expects(:write).twice.with do |pathname, contents|
       if pathname.basename.to_s == 'test_external_3.external'
         # make sure we're encrypting the .external file
         contents =~ /^encrypted/

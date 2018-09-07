@@ -887,6 +887,8 @@ is:
       Artist - Nested Loops 9_instruction: Teiknaðu tennur krókódílsins!
       Artist - Nested Loops Assessment 1_instruction: Notaðu faldaða lykkju til að
         ljúka teikningunni.
+      Artist Autorun Test_instruction: Settu nú fallið í lykkju til að teikna þessa
+        3 ferninga.
       Artist Inspiration_instruction: "Frjáls æfing með innblæstri: Þú hefur nú lært
         allt sem þarf til að búa til svona mynstur! Ef þessi mynd veitir þér innblástur,
         reyndu þá að búa til eitthvað líkt henni. Ef ekki, búðu þá til þína eigin
@@ -2237,13 +2239,23 @@ is:
       Find the Wizard_2018_instruction: Búðu til hvað sem þú vilt. Þetta er dæmi um
         giska-á-tölu leik!
       Fish Tank 2-validated_instruction: Breyttu Dusty (fokurtinni) í fisk.
+      Fish Tank 2-validated_simple_instruction: Breyttu Dusty (fokurtinni) í fisk.
+      Fish Tank 3-validated Ram_instruction: Breyttu hegðun fisksins svo hann syndi
+        um í búrinu.
       Fish Tank 3-validated_instruction: Breyttu hegðun fisksins svo hann syndi um
         í búrinu.
+      Fish Tank 3-validated_simple_instruction: Breyttu hegðun fisksins svo hann syndi
+        um í búrinu.
       Fish Tank 4-validated_instruction: Notaðu kubbinn `stilla bakgrunnslit` til
         að lita bakgrunninn bláan.
+      Fish Tank 4-validated_simple_instruction: Notaðu kubbinn `stilla bakgrunnslit`
+        til að lita bakgrunninn bláan.
       Fish Tank 6-validated_instruction: Bættu hegðun við nýja vin fisksins.
+      Fish Tank 6-validated_simple_instruction: Bættu hegðun við nýja vin fisksins.
       Fish Tank 7-validated_instruction: Notaðu nýja kubba úr verkfærakassanum til
         að gera fiskbúrið sérstakt!
+      Fish Tank 7-validated_simple_instruction: Notaðu nýja kubba úr verkfærakassanum
+        til að gera fiskbúrið sérstakt!
       Food Fight!_instruction: "Við höfum bætt síðasta fallinu fyrir þig.\r\n\r\nNotaðu
         \"ef\" setningu til að forrita leikinn svo hann kalli á fallið \"næsta_borð\"
         aðeins ef \"stig_leikmanns\" fer upp fyrir tiltekna tölu.\r\n\r\nTil dæmis
@@ -3522,6 +3534,8 @@ is:
         er á Kiki, ætti hún að kasta hjörtum í átt til vina sinna. '
       Virtual Pet 1_instruction: Hvað heldur þú að muni gerast ef þú ýtir á "Keyra"
         og smellir svo á hana?
+      Virtual Pet 1_simple_instruction: Hvað heldur þú að muni gerast ef þú ýtir á
+        "Keyra" og smellir svo á hana?
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf
       aE7_instruction: "Hvað gerist ef þú notar sömu lykkju, en snýrð til vinstri
         í stað hægri? \r\n\r\nGetur þú endurtekið þetta og teiknað þessa bylgju?"
@@ -4790,6 +4804,16 @@ is:
       courseD_artist_ramp11_instruction: Búðu nú til ferning með listamanninum!
       courseD_artist_ramp12_instruction: Notaðu það sem þú hefur lært til að teikna
         þennan þríhyrning innan í ferningi.
+      courseD_autorun_binary4_2019_instruction: Getur þú teiknað þetta mynstur með
+        því að endurtaka 3 tvíundartölur (0 og 1)?
+      courseD_autorun_binary6_2019_instruction: Hvaða 6 stafa tvíundarstrengur, endurtekinn
+        11 sinnum, mun teikna þessa mynd?
+      courseD_autorun_binary7_2019_instruction: Hver er stysti tvíundarstrengur sem
+        endurtekinn mundi teikna þessa mynd?
+      courseD_autorun_binary8_2019_instruction: Ljúktu við kóðann sem býr til þessa
+        mynd.
+      courseD_autorun_binary8_predict1_2019_instruction: Ljúktu við kóðann sem býr
+        til þessa mynd.
       courseD_bee_conditionals1_instruction: Gáðu hvort skýið feli blóm. Sæktu blómasafann,
         ef svo er.
       courseD_bee_conditionals1_predict1_instruction: Gáðu hvort skýið feli blóm.

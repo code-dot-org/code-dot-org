@@ -750,6 +750,7 @@ en:
       Applab AllTheThings ResourcesTab ReferenceLinks_markdown_instruction: "<img src=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\" align=right>\n\nGiven only 4 turtle commands, write code in App Lab to complete the drawings in each of the challenges below.  Your goal is to write code that solves the problem as efficiently as possible using only the commands provided.\n\nWhat does “efficient” mean?  In computer science it can actually mean several different things depending on what you’re talking about.  Work on these challenges, try to solve them in a way that you think is best and we’ll ask about efficiency at the end.\n\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\" align=right>\n# Do This: \nDraw a 1 x 1 square to the front and left of the turtle as efficiently as possible. The program should stop with turtle in its original position, facing its original direction.\n\nOnce you think you have a solution, click the Finish button - it will appear once you run the program."
       Applab allthethings onRecordEvent_markdown_instruction: Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
       Applab test_markdown_instruction: This level is submittable. For testing only! Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).
+      Artist Autorun Test_markdown_instruction: Now, put the function inside of a loop to draw these three squares.
       Artist Inspiration_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\" width=\"250px\"/>\n\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! \n\nIf this picture inspires you, try to make something similar. Otherwise, create something all your own.\n\nNotice: We've used the `set alpha` block to make the \"petals\" fade toward the outside."
       Bergeron Robot Maze1_markdown_instruction: "Can you help me catch the naughty pig? \n\nStack a couple of `move forward` blocks below the `when run` block and press \"Run\". "
       Big Game Animation 1_markdown_instruction: Now that you've learned to write simple linear functions, let's work on using them to add some movement to our game. Click "Run" to see what your game can currently do (not much!), update any variables you like, and then click finish to move on.
@@ -2860,7 +2861,7 @@ en:
         For example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>
 
         <pre>
-        &lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;
+        &lt;a href="houses.html"&gt; Unique Houses &lt;/a&gt;
         </pre>
 
         </details>
@@ -2871,7 +2872,7 @@ en:
         For example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>
 
         <pre>
-        &lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;
+        &lt;a href="houses.html"&gt; Unique Houses &lt;/a&gt;
         </pre>
 
         </details>
@@ -3027,7 +3028,7 @@ en:
         For example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>
 
         <pre>
-        &lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;
+        &lt;a href="houses.html"&gt; Unique Houses &lt;/a&gt;
         </pre>
 
         </details>
@@ -3038,7 +3039,7 @@ en:
         For example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>
 
         <pre>
-        &lt;a href=”houses.html”&gt; Unique Houses &lt;/a&gt;
+        &lt;a href=&#34;houses.htm&#34;&gt; Unique Houses &lt;/a&gt;
         </pre>
 
         </details>
@@ -4770,7 +4771,7 @@ en:
         # Do This
 
         * Add a `console.log` statement.
-        * Add a Boolean expression inside the `console.log` that checks whether the `apple.scale` is greater than 2.
+        * Add a Boolean expression inside the `console.log` that checks whether the `fruit.scale` is greater than 2.
       CSD U3 Counters assigning an expression_markdown_instruction: |-
         # Assignment and Expressions
 
@@ -19674,6 +19675,15 @@ en:
       Geometric Sun_markdown_instruction: "**Project Idea:** Create a pattern using geometric ideas like shapes. This requires persistence and planning!"
       Geometric Sun_2018_markdown_instruction: "**Project Idea:** Create a pattern using geometric ideas like shapes. This requires persistence and planning!"
       Glossary O_markdown_instruction: "## Vocabulary\n\nEncouraging students to learn and use 'professional' terms enables them to communicate correctly and efficiently with others and builds their knowledge such that it can be further developed without having to relearn terms and concepts at a later time. The terms and concepts used in the unplugged lessons are defined using words that young students can understand.\n\n# TEACHING TIP\nBest practice is to introduce the terms with easy-to-understand language, relate the terms to previous experiences, use the terms repeatedly beyond the lesson itself throughout the entire course (and in other situations) when appropriate, and reinforce students' use in oral and written communication.\n\nThe following terms are introduced in an unplugged lesson as either a Vocabulary word or as a term related to the online Blockly programming interface. Terms are subsequently reinforced in the following online puzzles and activities. Most terms appear multiple times throughout the courses and lessons providing the students with many opportunities to deepen their understanding and assimilate the words into conversations, both in and outside of the classroom.\n\nThe course and lesson numbers after each term indicate the unplugged lessons in which the term is emphasized.\n\n# Look through this list of vocabulary words and then answer the prompt at the bottom of the page. You don't have to learn all the vocabulary words all right now, but you they are here so you can refer back them during this online course. \n\nabstraction\n\nPulling out specific differences to make one solution work for multiple problems students.\n\n(Course 3: Lesson 1)\n\nalgorithm\n\nA list of steps to finish a task. A set of instructions that can be performed with or without a computer. For example, the collection of steps to make a peanut butter and jelly sandwich is an algorithm.\n\n(Course 1: Lessons 1, 6 | Course 2: Lessons 1, 2 | Course 3: Lessons 1, 10)\n\nbinary\n\nA way of representing information using only two options.\n\n(Course 2: Lesson 14)\n\nBlockly\n\nThe visual programming language used in Code.org's online learning system for K-5 students. (Course 1: Lesson 3)\n\nbug\n\nAn error in a program that prevents the program from running as expected. (Course 2: Lesson 9)\n\ncode\n\nOne or more commands or algorithm(s) designed to be carried out by a computer. See Program. (Course 1: Lesson 2)\n\ncommand\n\nAn instruction for the computer. Many commands put together make up algorithms and computer programs. (Course 1: Lesson 2)\n\ncomputational thinking\n\nMental processes and strategies that include: decomposition, pattern matching, abstraction, algorithms (decomposing problems into smaller, more manageable problems, finding repeating patterns, abstracting specific differences to make one solution work for multiple problems, and creating step-by-step algorithms). (Course 3: Lesson 1)\n\ncomputer science\n\nA field in which people use the power of computers to solve big problems. (Course 1: Lesson 2)\n\nconditionals\n\nStatements that only run under certain conditions or situations. (Course 2: Lesson 12)\n\ncrowdsourcing\n\nGetting help from a large group of people to finish something faster. (Course 3: Lesson 19)\n\ndata\n\nQuantities, characters, or symbols that are the inputs and outputs of computer programs. (Course 2: Lesson 14 | Course 3: Lessons 1)\n\ndebugging\n\nFinding and fixing errors in programs. (Course 2: Lesson 9)\n\ndecompose\n\nBreak a problem down into smaller pieces. (Course 3: Lesson 1)\n\ndigital citizen\n\nSomeone who acts safely, responsibly, and respectfully online. (Course 3: Lesson 20)\n\ndigital footprint\n\nThe information about someone on the Internet. (Course 2: Lesson 18)\n\nDNS (domain name service)\n\nThe service that translates URLs to IP addresses. (Course 3: Lesson 18)\n\nDSL/cable\n\nA method of sending information using telephone or television cables. (Course 3: Lesson 18)\n\nevent\n\nAn action that causes something to happen. (Course 1: Lesson 15 | Course 2: Lesson 15)\n\nevent-handler\n\nAn action or event that is being constantly monitored for by the computer. When you write code for the computer to perform after that an action occurs, that code, the event-handler, will run every time the action is performed without having to put the commands inside of a loop. Many event-handlers are human-initiated. For example: an event handler might respond when the user clicks the mouse by making the bird flap its wings. \"When the mouse is clicked\" is an event-handler. (Course 1: Lesson 15 | Course 2: Lesson 15)\n\nfiber optic cable\n\nA connection that uses light to transmit information. (Course 3: Lesson 18)\n\nfunction\n\nA piece of code that you can easily call over and over again. Functions are sometimes called 'procedures.' A function definition is a segment of code that includes the steps performed in the function. A function call is the code segment, typically within the main logic of the program, which invokes the function. (Course 3: Lesson 4, 9)\n\nInternet\n\nA group of computers and servers that are connected to each other. (Course 1: Lesson 17 | Course 3: Lessons 18, 20)\n\nIP address\n\nA number assigned to any item that is connected to the Internet. (Course 3: Lesson 18)\n\niteration\n\nA repetitive action or command typically created with programming loops. (Course 1: Lesson 12 | Course 2: Lesson 5)\n\nloop\n\nThe action of doing something over and over again. (Course 1: Lesson 12 | Course 2: Lesson 5)\n\npackets\n\nSmall chunks of information that have been carefully formed from larger chunks of information. (Course 3: Lesson 18)\n\npattern matching\n\nFinding similarities between things. (Course 3: Lesson 1)\n\npersistence\n\nTrying again and again, even when something is very hard. (Course 1: Lesson 9)\n\nprogram\n\nA program is an algorithm that has been coded into something that can be run by a machine. (Course 1: Lesson 2 | Course 2: Lesson 1 | Course 3: Lesson 10)\n\nrun program\n\nTo have the computer execute the commands you've written in your program. (Course 1: Lesson 4)\n\nservers\n\nComputers that exist only to provide things to others. (Course 3: Lesson 18)\n\ntoolbox\n\nThe tall grey bar in the middle section of Code.org's online learning system where all the commands you can use to write your program are displayed. (Course 1: Lesson 4)\n\nURL (universal resource locator)\n\nAn easy-to-remember address for calling a web page (like www.code.org). (Course 3: Lesson 18)\n\nusername\n\nA name you make up so that you can see or do things on a website, sometimes called a \"screen name.\" (Course 1: Lesson 18)\n\nvariable\n\nA placeholder for a piece of information that can change. (Course 3: Lesson 4)\n\nWi-Fi\n\nA wireless method of sending information using radio waves. (Course 3: Lesson 18)\n\nworkspace\n\nThe white area on the right side of Code.org's online learning system where you drag and drop commands to build your program. (Course 1: Lesson 4)\n\n### What is one way you can include computer science vocabulary terms in your class?\n"
+      HOC Dance 1_markdown_instruction: Let's get Mr. Wiggles dancing! Click the `Change "dancer1" Dance Move to Floss` block onto the "at 4 measures" block to make him start flossing at the second measure.
+      HOC Dance 2_markdown_instruction: Now we're grooving! Now use the `at 6 measures` to make Alien start a new move after 6 measures.
+      HOC Dance 3_markdown_instruction: This song needs some flash! Use the `set background effect` block to make the stage come alive.
+      HOC Dance 4_markdown_instruction: You can also make your dancer move through all the dance moves using the `every 2 measures` block. Put the `Change "dancer1" dance move to "Next"` block inside it and press run to see what this Pizza can do!
+      HOC Dance 5_markdown_instruction: '"I''m just dancing on my own!" Add a backup dancer to dance with the pizza, and make it change dance moves when the bass hits.'
+      HOC Dance 6_markdown_instruction: It's time to take control! Use the `when up pressed` to make the Pizza do a dance move once whenever you press the up arrow.
+      HOC Dance 7_markdown_instruction: Now we have a few backup dancers. Make them do their next move when the bass peaks.
+      HOC Dance 8_markdown_instruction: Every song is different. Use the `begins size following bass` block to make your background dancers shrink and grow with the music. Try a few different songs and see what happens!
+      HOC Dance Freeplay_markdown_instruction: Get your groove on! Create a dance of your own to share with your friends.
       Hardware Accessibility_markdown_instruction: |-
         # Hardware Accessibility: Screen Size
 
@@ -27439,6 +27449,7 @@ en:
       course3_artist_functions_challenge1_markdown_instruction: Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!
       course3_artist_functions_challenge2_markdown_instruction: |-
         Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!
+
         <xml>
           <block type="jump_to_xy">
             <title name="XPOS">???</title>
@@ -27475,6 +27486,7 @@ en:
       course4_artist_concept_challenge2_markdown_instruction: Create five pinwheel designs using the code below.
       course4_artist_functions_challenge2_markdown_instruction: |-
         Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!
+
         <xml>
           <block type="jump_to_xy">
             <title name="XPOS">???</title>
@@ -28156,7 +28168,7 @@ en:
       courseC_artist_prog6_2018_markdown_instruction: |-
         *"Now a tag for Belle!"*
 
-        Draw this diamond with 200 pixel sides.
+        Draw this square with 200 pixel sides.
       courseC_artist_prog7_markdown_instruction: "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
       courseC_artist_prog7_2018_markdown_instruction: "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)"
       courseC_artist_prog8_markdown_instruction: "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)"
@@ -28697,6 +28709,7 @@ en:
         Use what you've learned to draw this triangle inside of a square.
         ___
         ##### The sides are each 200 pixels long. You will need to turn 90 degrees to make the square and 120 degrees to make the triangle.
+      courseD_autorun_binary2_2019_markdown_instruction: "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \n___\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n___\n**Run this code to see how the artist uses binary to draw this pattern.**"
       courseD_bee_conditionals1_markdown_instruction: |-
         *"This cloud is blocking my view!"*
 
@@ -29388,6 +29401,7 @@ en:
       courseE_artist_functions_challenge1_2018_markdown_instruction: Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!
       courseE_artist_functions_challenge2_markdown_instruction: |-
         Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!
+
         <xml>
           <block type="jump_to_xy">
             <title name="XPOS">???</title>
@@ -29395,6 +29409,7 @@ en:
             </block></xml>
       courseE_artist_functions_challenge2_2018_markdown_instruction: |-
         Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!
+
         <xml>
           <block type="jump_to_xy">
             <title name="XPOS">???</title>
@@ -30950,24 +30965,100 @@ en:
       fit-dlp-example-2_markdown_instruction: "<br><br>\n\n# FIT Deeper Learning Example\n\nThis is where instructions for the prompt will be.\n\n> **Prompt:** Would you rather dance every time music came on or sing?\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       fit-dlp-example_markdown_instruction: "<br><br>\n\n# FIT Deeper Learning Example\n\nThis is where instructions for the prompt will be.\n\n> **Prompt:** Is a hotdog a sandwich?\n\n## Getting Credit for Completing this Reflection \n\n- Once you submit your reflection, your response to the prompt above will be shared anonymously and read by your peers, and you will read the work done by other facilitators. This give facilitators a chance to learn from each other.\n- Your submission will also be given to an expert reviewer. Expert reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering the reflection questions listed above. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit.\n- In order to get credit for completing this prompt, your expert review needs to say \"Yes\" responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to an instructor for review. You will always have a chance to address feedback from your reviewers and resubmit your reflections! Reviewer feedback will show up at the bottom of this page, once it’s available."
       frozen circle function in circle_markdown_instruction: Now let's create 20 overlapping circles, turning 18 degrees between each circle.
+      frozen circle function in circle_b_markdown_instruction: Now let's create **20** overlapping circles, jumping **50** pixels and turning **18 degrees** between each circle.
+      frozen circle function in circle_test_markdown_instruction: Now let's create **20** overlapping circles, jumping **50** pixels and turning **18 degrees** between each circle.
       frozen circle function with parameter_markdown_instruction: Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?
+      frozen circle function with parameter_b_markdown_instruction: "Now the `create a circle` block can make circles of different sizes!  \n  \nUse the new function to create a small circle of size **5** and a larger circle of size **10**."
+      frozen circle function with parameter_test_markdown_instruction: "Now the `create a circle` block can make circles of different sizes!  \n  \nUse the new function to create a small circle of size **5** and a larger circle of size **10**."
       frozen circle function_markdown_instruction: Use the new “Create a circle” block to create 10 overlapping circles. Don't forget to jump forward between circles.
+      frozen circle function_b_markdown_instruction: "We've moved the code from the last puzzle into a function!  \n  \nCan you use the new `create a circle` block to finish this drawing? Don't forget to jump forward by **25** pixels between each of the **10** circles!"
+      frozen circle function_test_markdown_instruction: "We've moved the code from the last puzzle into a function!  \n  \nCan you use the new `create a circle` block to finish this drawing? Don't forget to jump forward by **25** pixels between each of the **10** circles!"
       frozen circle_markdown_instruction: A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?
+      frozen circle_b_markdown_instruction: "A circle is a special shape.  \n   \nCan you figure out what **\"???\"** should become to draw a circle?"
+      frozen circle_test_markdown_instruction: "A circle is a special shape.  \n   \nCan you figure out what **\"???\"** should become to draw a circle?"
       frozen cross rotate dense_markdown_instruction: 'Let''s repeat it 90 times! How many times does 90 go into 360? Hint: It''s a really small number.'
+      frozen cross rotate dense_b_markdown_instruction: "Try repeating the line **90** times!  \n\nHow far do you need to turn each time?  \nHint: It's a small number **(360÷90)**."
+      frozen cross rotate dense_test_markdown_instruction: "Try repeating the line **90** times!  \n\nHow far do you need to turn each time?  \nHint: It's a small number **(360÷90)**."
       frozen cross rotate_markdown_instruction: Now try repeating it 10 times. How many degrees do you need to turn between each line?
+      frozen cross rotate_b_markdown_instruction: Now try repeating it **10** times. **How many degrees** do you need to turn between each line?
+      frozen cross rotate_test_markdown_instruction: Now try repeating it **10** times. **How many degrees** do you need to turn between each line?
       frozen cross_markdown_instruction: Wrap a “Repeat” block around these commands to create a plus sign. Did you notice Elsa can move forward and backward?
+      frozen cross_b_markdown_instruction: "*\"Time to make something new!\"*  \n  \nDraw a line that is **100** pixels long, then move back to the center before turning **90 degrees**.  \nRepeat the instructions **4** times to make this shape.\n  \n"
+      frozen cross_test_markdown_instruction: "*\"Time to make something new!\"*  \n  \nDraw a line that is **100** pixels long, then move back to the center before turning **90 degrees**.  \nRepeat the instructions **4** times to make this shape.\n  \n"
       frozen diamond mini snowflake_markdown_instruction: Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.
+      frozen diamond mini snowflake_b_markdown_instruction: |-
+        *"Snowflakes take lots of different shapes!"*
+
+        Make a snowflake out of diamonds by repeating all of this code **4** times and turning **90 degrees** between each one.
+      frozen diamond mini snowflake_test_markdown_instruction: |-
+        *"Snowflakes take lots of different shapes!"*
+
+        Make a snowflake out of diamonds by repeating all of this code **4** times and turning **90 degrees** between each one.
       frozen diamond snowflake_markdown_instruction: Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one.
+      frozen diamond snowflake_b_markdown_instruction: "*\"Do you want to make a snowflake?\"*  \n\nTry repeating the diamond **10 times** to make your drawing amazing.  \nTurn right by **36 degrees** between each one."
+      frozen diamond snowflake_test_markdown_instruction: "*\"Do you want to make a snowflake?\"*  \n\nTry repeating the diamond **10 times** to make your drawing amazing.  \nTurn right by **36 degrees** between each one."
       frozen diamond_markdown_instruction: Use a repeat around these blocks to create a parallelogram. It's just like a rectangle but has different angles. This one has 60 degree and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_b_markdown_instruction: "Add one block to this code to create a parallelogram.  \n\nThis one should have **60 degree** and **120 degree** angles instead of 90 degree angles."
+      frozen diamond_test_markdown_instruction: "Add one block to this code to create a parallelogram.  \n\nThis one should have **60 degree** and **120 degree** angles instead of 90 degree angles."
       frozen freeplay_markdown_instruction: You've officially become a master artist! Create a winter wonderland.
+      frozen freeplay_b_markdown_instruction: "*\"You're a master ice artist!\"*  \n  \nHere's everything you need to create your own winter wonderland!"
+      frozen freeplay_test_markdown_instruction: "*\"You're a master ice artist!\"*  \n  \nHere's everything you need to create your own winter wonderland!"
+      frozen line_b_markdown_instruction: "*\"Hi! I'm Elsa of Arendelle. Help me create a line.\"*  \n&nbsp;\n\nConnect the <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> to the <xml>\n    <block type=\"when_run\"/></xml> block to help Elsa draw a line that is 100 pixels long."
+      frozen line_test_markdown_instruction: "*\"Hi! I'm Elsa of Arendelle. Help me create a line.\"*  \n&nbsp;\n\nConnect the <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> to the <xml>\n    <block type=\"when_run\"/></xml> block to help Elsa draw a line that is 100 pixels long."
       frozen perpendicular_markdown_instruction: Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the "Turn" block as well as the "Move" block.
+      frozen perpendicular_b_markdown_instruction: |-
+        *"Let's keep going!"*
+
+        &nbsp;
+
+        Add a <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
+            <title name="DIR">turnRight</title>
+            <title name="VALUE" config="45,60,90,120,180">90</title>
+          </block>
+        </xml> block and another <xml>
+          <block type="draw_move_by_constant_dropdown">
+            <title name="DIR">moveForward</title>
+            <title name="VALUE" config="50,100,150,200,300">100</title>
+          </block>
+        </xml> block to make this icy shape.
+      frozen perpendicular_test_markdown_instruction: |-
+        *"Let's keep going!"*
+
+        &nbsp;
+
+        Add a <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
+            <title name="DIR">turnRight</title>
+            <title name="VALUE" config="45,60,90,120,180">90</title>
+          </block>
+        </xml> block and another <xml>
+          <block type="draw_move_by_constant_dropdown">
+            <title name="DIR">moveForward</title>
+            <title name="VALUE" config="50,100,150,200,300">100</title>
+          </block>
+        </xml> block to make this icy shape.
       frozen snowflake branch_markdown_instruction: Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.
+      frozen snowflake branch_b_markdown_instruction: "Try using the new `create a snowflake branch` function to create three legs of a snowflake.  \n\nMake sure to turn **45 degrees** between each branch."
+      frozen snowflake branch_template_markdown_instruction: "Try using the new `create a snowflake branch` function to create three legs of a snowflake.  \n\nMake sure to turn **45 degrees** between each branch."
+      frozen snowflake branch_test_markdown_instruction: "Try using the `create a snowflake branch` block to create three legs of a snowflake.  \n\nMake sure to turn **45 degrees** between each branch."
       frozen snowflake full_markdown_instruction: Now let's repeat it 8 times to make a beautiful snowflake!
+      frozen snowflake full_b_markdown_instruction: Now let's repeat it **8** times to make a beautiful snowflake!
+      frozen snowflake full_test_markdown_instruction: Now let's repeat it **8** times to make a beautiful snowflake!
+      frozen snowflake fuller_b_markdown_instruction: What happens if you jump backward by **25** pixels before you draw each branch?
       frozen snowflower_markdown_instruction: Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?
+      frozen snowflower_b_markdown_instruction: "Intricate snow patterns can be created with very simple shapes!  \n\nCan you make a new snowflake by repeating this code **5** times and turning **72 degrees** between each set?"
+      frozen snowflower_test_markdown_instruction: "Intricate snow patterns can be created with very simple shapes!  \n\nCan you make a new snowflake by repeating this code **5** times and turning **72 degrees** between each set?"
       frozen square iterative_markdown_instruction: It seems like we're halfway to making a square. Let's put 4 lines together to create a square.
+      frozen square iterative_b_markdown_instruction: "*\"It looks like we're halfway to making a square!\"* \n\n&nbsp;\n\nAdd four more blocks of code to finish the shape."
+      frozen square iterative_test_markdown_instruction: "*\"It looks like we're halfway to making a square!\"* \n\n&nbsp;\n\nAdd four more blocks of code to finish the shape."
       frozen square loop 3x_markdown_instruction: Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.
+      frozen square loop 3x_b_markdown_instruction: "Did you know that you can put a repeat loop inside of another repeat loop?  \n  \nHelp Anna draw three squares, turning **120 degrees** after each one. "
+      frozen square loop 3x_test_markdown_instruction: "Did you know that you can put a repeat loop inside of another repeat loop?  \n  \nHelp Anna draw three squares, turning **120 degrees** after each one. "
       frozen square loop_markdown_instruction: Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?
+      frozen square loop_b_markdown_instruction: "*\"Hi, I’m Anna of Arendelle! Let’s make a square with the `repeat` block!\"* \n\nHow many times (???) should the `repeat` block run the code inside to make a square?"
+      frozen square loop_test_markdown_instruction: "*\"Hi, I’m Anna of Arendelle! Let’s make a square with the `repeat` block!\"* \n\nHow many times (???) should the `repeat` block run the code inside to make a square?"
       frozen square snowflake_markdown_instruction: Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?
+      frozen square snowflake_b_markdown_instruction: "Change the code from the last puzzle to make this snowflake. \n   \nHint, it uses **10** squares with **36 degree** turns."
+      frozen square snowflake_test_markdown_instruction: "Change the code from the last puzzle to make this snowflake. \n   \nHint, it uses **10** squares with **36 degree** turns."
       getting-buy-in-wednesday_markdown_instruction: |
         # Day 3: Getting Buy In
 
@@ -31753,10 +31844,12 @@ en:
         * Make sure your image **fits** entirely on the canvas
         * Use just **black lines** on a white background.
         * Jump the artist off the top left corner (-10 over, -10 down) at the end of your program:
+
         <xml>    <block type="jump_to_xy"><title name="XPOS">-10</title><title name="YPOS">-10</title>
             </block>
             <block type="jump_to"><title name="VALUE">7</title>
             </block></xml>
+
             When you are finished, right-click to save the image, then send it to me on <a href="https://classroom.google.com">Google Classroom</a>.
       harvey_snowflake_artist2_markdown_instruction: |-
         *It's time to get your snowflake ready for 3d printing!*
@@ -31767,10 +31860,12 @@ en:
         * Make sure your image **fits** entirely on the canvas
         * Use just **black lines** on a white background.
         * Jump the artist off the top left corner (-10 over, -10 down) at the end of your program:
+
         <xml>    <block type="jump_to_xy"><title name="XPOS">-10</title><title name="YPOS">-10</title>
             </block>
             <block type="jump_to"><title name="VALUE">7</title>
             </block></xml>
+
         When you are finished, right-click to save the image, then send it to me on <a href="https://classroom.google.com">Google Classroom</a>.
       iceAgeLoopsforVideo_markdown_instruction: Can you get to the acorn with just one <xml><block type="maze_moveForward"/></xml> block? Try using a loop!
       iceage_click_hello_markdown_instruction: "Can you help Sid call for his friends when you click on him? \nOnce you're done, press \"Run\" to play.  Click on Sid to see your code work!"

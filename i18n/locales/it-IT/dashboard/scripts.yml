@@ -1110,6 +1110,8 @@ it:
               name: Funzioni
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
         grade2:
@@ -1452,6 +1454,8 @@ it:
           stages:
             Introduction:
               name: Introduzione
+            Sprites:
+              name: Personaggi
         applab-1hour:
           stages:
             Extra:
@@ -1488,6 +1492,8 @@ it:
               name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -1512,6 +1518,8 @@ it:
               name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -1536,6 +1544,8 @@ it:
               name: Valutazioni dei parigrado
         artist-and-bb8:
           stages:
+            Loops with BB-8:
+              name: Cicli con BB-8
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
             Bounce:
@@ -2416,6 +2426,8 @@ it:
               name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -2430,6 +2442,8 @@ it:
               name: Disegnare in Sviluppo Giochi
             Variables:
               name: Variabili
+            Sprites:
+              name: Personaggi
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
@@ -2839,6 +2853,8 @@ it:
               name: Discoteca Aliena
             Pet Giraffe with Sprite Lab:
               name: Giraffa Domestica
+            Copyright and Creativity:
+              name: Condivisione Digitale
         coursef-2018:
           title: Corso F (2018)
           assignment_family_title: Corso F
@@ -3007,3 +3023,15 @@ it:
           stages:
             Labyrinth:
               name: Labirinto
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

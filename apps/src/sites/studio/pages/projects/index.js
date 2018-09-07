@@ -18,18 +18,26 @@ import {
 import projects, {
   selectGallery,
   setProjectLists,
-  prependProjects,
   setPersonalProjectsList,
 } from '@cdo/apps/templates/projects/projectsRedux';
-import publishDialogReducer, {
-  showPublishDialog,
-} from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
-import { AlwaysPublishableProjectTypes, AllPublishableProjectTypes } from '@cdo/apps/util/sharedConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
   const projectsData = JSON.parse(script.dataset.projects);
+  const studyGroup = experiments.isEnabled(experiments.CHEVRON_PUBLISH_EXPERIMENT) ? 'publish-chevron' : 'publish-button';
+
+  firehoseClient.putRecord(
+    {
+      study: 'project-publish',
+      study_group: studyGroup,
+      event: 'page-load',
+      user_id: projectsData.userId,
+    }
+  );
 
   registerReducers({projects, publishDialog: publishDialogReducer, deleteDialog: deleteDialogReducer});
   const store = getStore();
@@ -65,7 +73,7 @@ $(document).ready(() => {
     ReactDOM.render(
       <Provider store={store}>
         <PublicGallery
-          projectValidator={projectsData.projectValidator}
+          limitedGallery={projectsData.limitedGallery}
         />
       </Provider>,
       publicGallery);
@@ -145,38 +153,11 @@ function showGallery(gallery) {
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 
-// Make these available to angularProjects.js. These can go away
-// once My Projects is moved to React.
-
-window.onShowConfirmPublishDialog = function (projectId, projectType) {
-  getStore().dispatch(showPublishDialog(projectId, projectType));
-};
-
-window.AlwaysPublishableProjectTypes = AlwaysPublishableProjectTypes;
-
-window.AllPublishableProjectTypes = AllPublishableProjectTypes;
-
 function setupReduxSubscribers(store) {
   let state = {};
   store.subscribe(() => {
     let lastState = state;
     state = store.getState();
-
-    // Update the project state and immediately add it to the public gallery
-    // when a PublishDialog state transition indicates that a project has just
-    // been published.
-    if (
-      lastState.publishDialog &&
-      lastState.publishDialog.lastPublishedAt !==
-        state.publishDialog.lastPublishedAt
-    ) {
-      window.setProjectPublishedAt(
-        state.publishDialog.projectId,
-        state.publishDialog.lastPublishedAt);
-      const projectData = state.publishDialog.lastPublishedProjectData;
-      const projectType = state.publishDialog.projectType;
-      store.dispatch(prependProjects([projectData], projectType));
-    }
 
     if (
       (lastState.projects && lastState.projects.selectedGallery) !==
@@ -184,6 +165,5 @@ function setupReduxSubscribers(store) {
     ) {
       showGallery(state.projects.selectedGallery);
     }
-
   });
 }

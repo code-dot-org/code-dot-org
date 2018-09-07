@@ -827,6 +827,8 @@ hu:
       Artist - Nested Loops 9_instruction: Rajzold meg az alligátor alsó fogsorát!
       Artist - Nested Loops Assessment 1_instruction: Használj egymásba ágyazott ciklust
         az ábra befejezéséhez!
+      Artist Autorun Test_instruction: Használd az "ismételd" blokkot a három négyzet
+        megrajzolásához.
       Artist Inspiration_instruction: "Szabad játék ihlet: Mindent megtanultál ahhoz,
         hogy egy ilyen mintát rajzolj. Ha ez ihletet ad neked, akkor rajzolj egy hasonlót.
         Vagy készíthetsz bármilyen más ábrát.\r\n\r\nSzeretnéd tudni, hogyan készült
@@ -2246,6 +2248,12 @@ hu:
       courseD_artist_binary7_instruction: Mi az a legrövidebb bináris karakterlánc,
         ami ha megismételed, kirajzolja ezt a képet?
       courseD_artist_binary7_2018_instruction: Mi az a legrövidebb bináris karakterlánc,
+        ami ha megismételed, kirajzolja ezt a képet?
+      courseD_autorun_binary4_2019_instruction: Meg tudod rajzolni ezt a mintát mindössze
+        három bináris számjegy (0 és 1) ismétlésével?
+      courseD_autorun_binary6_2019_instruction: Melyik 6 jegyből álló bináris számsorozatot
+        kell 11 alkalommal ismételned ennek a képnek a megrajzolásához?
+      courseD_autorun_binary7_2019_instruction: Mi az a legrövidebb bináris karakterlánc,
         ami ha megismételed, kirajzolja ezt a képet?
       courseD_bee_debugging3_instruction: Ezek a blokkok igazán bogarasak. Javítsd
         ki a kódot, hogy összegyűjtsük az összes nektárt és elkészítsük az összes

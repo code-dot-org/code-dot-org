@@ -27,9 +27,11 @@ it:
       Numbers: Numeri
       Default: Impostazione predefinita
       World: Mondo
+      Sprites: Personaggi
       Behaviors: Comportamenti
       Start: Inizia
       Music: Musica
+      Dancing: Danza
       Sprite: Personaggio
       Brush: Pennello
       Booleans: Valori Booleani

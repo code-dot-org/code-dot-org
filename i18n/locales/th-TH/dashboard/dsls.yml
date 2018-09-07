@@ -5,13 +5,206 @@ th:
         title: ชื่อเรื่อง
       Prepare for your presentation:
         title: ชื่อเรื่อง
+      courseD_external_binary1_2018:
+        Binary Drawing: การวาดไบนารี
     match:
+      2-3 Big Event Match 1:
+        Matching: การจับคู่
+      2-3 Binary Match 1:
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: การจับคู่
+        Use the key to match each code to its letter: ใช้คีย์เพื่อจับคู่โค้ดแต่ละอันกับตัวอักษร
+      2-3 Graph Paper Match 1:
+        Match the grid to the program.: จับคู่ตารางกับโปรแกรม
+        Matching: การจับคู่
       2-3 Maze Match 2:
         Instructions: คำแนะนำ
+        Match the puzzles to the blocks: จับคู่ปริศนากับบล็อก
+        Maze Match: จับคู่เขาวงกต
+      2-3 artist loops match 1:
+        Artist Loops Matching 1: ศิลปินกับการจับคู่ลูป 1
+        Match the loop to the shape: จับคู่ลูปกับรูปภาพ
+      2-3 artist match 1:
+        Artist Matching: การจับคู่ สำหรับ ศิลปิน
+        Match the shape with the blocks that complete it.: จับคู่รูปทรงเรขาคณิต กับ บล๊อก ที่เข้ากันได้
+      2-3 maze match 1:
+        Match the puzzles to the blocks: จับคู่ปริศนากับบล็อก
+        Maze Match One: จับคู่เขาวงกต หนึ่ง
+      4-5 Algorithms Match 1:
+        "<h4>Compare player scores to see who wins</h4>": "<h4>เปรียบเทียบคะแนนของผู้เล่น เพื่อดูว่าใครเป็นฝ่ายชนะ</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>ผู้เล่นคนแรกแพ้แล้ว</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>ตั้งค่าคะแนนของผู้เล่นคนแรกเป็น 0</h4>"
+        Matching: การจับคู่
+      4-5 Computational Thinking Match 1:
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>ลูกล้อ/side: 2<br/>หน้าต่าง/side: 0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>ลูกล้อ/side: 2<br/>หน้าต่าง/side: 1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>ลูกล้อ/side: 2<br/>หน้าต่าง/side: 6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>ลูกล้อ/side: 3<br/>หน้าต่าง/side: 2</h3>"
+        Matching: การจับคู่
+      4-5 Suncatchers Match 1:
+        Matching: การจับคู่
       4-5 maze match 1:
         Instructions: คำแนะนำ
+        Match the puzzles to the blocks: จับคู่ปริศนากับบล็อก
+        Maze Match: จับคู่เขาวงกต
+      K-1 Artist 2 Match 2:
+        Match the shapes based on type.: จับคู่รูปทรงเลขาคณิตตามชนิดของมัน.
+        Matching: การจับคู่
+      K-1 Bee Loops Match 1:
+        Match the blocks: จับคู่บล๊อก
+        Matching: การจับคู่
+      K-1 Big Event Match 1:
+        Matching: การจับคู่
       K-1 Maze Match 1:
         Instructions: คำแนะนำ
+        Match the puzzles and blocks: จับคู่ปริศนากับบล๊อก
+        Matching: การจับคู่
     multi:
+      2-3 Algorithms Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+      2-3 Algorithms Multi 2:
+        Multiple Choice: คำถามแบบปรนัย
+      2-3 Conditionals Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      2-3 Getting Loopy Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      2-3 Graph Paper Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        Which program makes this image?: โปรแกรมไหนใช้สร้างรูปนี้?
+      2-3 Maze Multi 2:
+        Maze Multiple Choice: เขาวงกต คำถามแบบปรนัย
+        Which set of blocks will get me to the pig?: บล็อกชุดไหนที่จะพาฉันไปให้ถึงเจ้าหมูนั่น?
+      2-3 Relay Programming Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      2-3 Relay Programming Multi 2:
+        Multiple Choice: คำถามแบบปรนัย
+      2-3 artist debug multi 1:
+        Artist Debugging Multiple Choice 1: ศิลปิน คำถามแบบปรนัยในเรื่องการดีบั๊ก 1
+        What would you need to fix to make this a finished circle?: "คุณต้องแก้ไขอะไรบ้่าง เพื่อวาดวงกลมนี้ให้เสร็จสมบูรณ์\n\nblock set color คือบล็อกที่ ตั้งค่าสี\nblock repeat 10 times คือบล็อกที่ลูป 10 ครั้ง (ลูปบล็อกสีฟ้าที่อยู่ภายในลูป\nblock move backward by 10 pixels คือบล็อกที่ถอยหลังไป 10 พิกเซล\nblock turn left by 18 degrees คือบล็อกที่หันซ้ายไป 18 องศา"
+      2-3 artist functions multi 1:
+        Artist Functions Multiple Choice One: ฟังก์ชั่นกับศิลปิน คำถามแบบปรนัย หนึ่ง
+        Pick the correct blocks to draw this image using the given functions: เลือกบล็อกที่ถูกต้องเพื่อวาดรูปนี้โดยใช้ฟังก์ชันที่กำหนด
+      2-3 artist loops multi 1:
+        Artist Loops Multiple Choice: ลูปกับศิลปิน คำถามแบบปรนัย
+        Which shape is made by this loop?: ลูปนี้ทำให้เกิดรูปร่างแบบไหน?
+      2-3 artist loops multi 2:
+        Artist Loops Multiple Choice: ลูปกับศิลปิน คำถามแบบปรนัย
+        Which shape is made by this program?: โปรแกรมนี้ทำให้เกิดรูปร่างแบบไหน
+      2-3 bee conditionals multi 3:
+        Choose the best blocks.: เลือกบล็อกที่ดีที่สุด
+      2-3 bee loops multi 1:
+        Bee Loops Multiple Choice One: ลูปกับผึ้ง คำถามแบบปรนัย หนึ่ง
+        Which blocks collect all of the nectar?: "บล็อกกลุ่มไหนบ้างที่เก็บน้ำหวานจากเกสรดอกไม้มาทั้งหมด\n\nblock: repeat 3 times เป็น บล็อก ลูปทำซ้ำ 3 ครั้ง\nblock: move forward เป็น บล็อก ไปข้างหน้า\nblock: get nectar เป็น บล็อก เก็บน้ำหวาน"
+      2-3 maze multi 1:
+        Maze Multiple Choice One: เขาวงกต คำถามแบบปรนัย หนึ่ง
+        Which set of blocks is the correct answer?: กลุ่มบล๊อกไหนเป็นคำตอบที่ถูกต้อง?
+      4-5 Algorithms Multi 1:
+        Banana: กล้วยหอม
+        Multiple Choice: คำถามแบบปรนัย
+      4-5 Computational Thinking Multi 1:
+        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        Multiple Choice: คำถามแบบปรนัย
+      4-5 Crowdsourcing Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      4-5 Crowdsourcing Multi 2:
+        Brushing your hair: หวีผมของคุณ
+        Cleaning your room: ทำความสะอาดห้องของคุณ
+        Eating your dessert: กินขนมหวานของคุณ
+        Multiple Choice: คำถามแบบปรนัย
+        Washing your face: ล้างหน้าของคุณ
+      4-5 Digital Footprint Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        Your address: ที่อยู่ของคุณ
+        Your birthday: วัดเกิดของคุณ
+        Your favorite food: อาหารที่คุณโปรดปราน
+      4-5 Internet Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      4-5 Internet Multi 2:
+        Multiple Choice: คำถามแบบปรนัย
+      4-5 Songwriting Multi 1:
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
+        Multiple Choice: คำถามแบบปรนัย
+        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+      4-5 Suncatchers Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      4-5 artist loops multi 1:
+        Artist Loops Multiple Choice: ลูปกับศิลปิน คำถามแบบปรนัย
+      4-5 artist multi 1:
+        Artist Multiple Choice: คำถามแบบปรนัย เรื่องศิลปิน
+        Which blocks draw a rectangle with a perimeter of 100?: บล็อกใดวาดสี่เหลี่ยมผืนผ้าที่มีเส้นรอบรูปเท่ากับ 100?
+      4-5 artist multi 2:
+        Artist Multiple Choice: คำถามแบบปรนัย เรื่องศิลปิน
+        Which drawing is symmetric?: รูปวาดใดเป็นแบบสมมาตร
+      4-5 bee conditionals multi 1:
+        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        Bee Conditionals Multiple Choice: เงื่อนไขกับผึ้ง คำถามแบบปรนัย
+        Choose the best blocks.: เลือกบล็อกที่ดีที่สุด
+      4-5 bee debug multi 1:
+        Bee Debug Multiple Choice: การดีบั๊ก ของผึ้ง คำถามแบบปรนัย
+        Which version of the function will work?: ฟังก์ชั่นอันไหนทำงานตามภาพ?
+      4-5 bee loops multi 1:
+        Bee Loops Multiple Choice: ลูป สำหรับผึ้ง คำถามแบบปรนัย
+        Which blocks will solve the puzzle?: บล็อกไหนบ้างที่จะแก้ปริศนาอันนี้?
+      4-5 maze conditionals multi 1:
+        Maze Conditionals Multiple Choice: เงื่อนไข สำหรับเขาวงกต คำถามแบบปรนัย
+        Which blocks solve the puzzle?: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
+      4-5 maze multi 1:
+        Maze Multiple Choice: เขาวงกต คำถามแบบปรนัย
+        Which blocks solve the puzzle?: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
+      K-1 Artist 1 Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        Which blocks solve this puzzle?: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
+      K-1 Artist 1 Multi 2:
+        Multiple Choice: คำถามแบบปรนัย
+        Which blocks draw the square?: บล็อกอันไหนบ้าง ที่วาดออกมาเป็นรูปสี่เหลี่ยมจตุรัส?
+      K-1 Bee 1 Multi 1:
+        How many nectars is this?: มีน้ำหวานจากเกสรดอกไม้อยู่จำนวนเท่าใด?
+        Multiple Choice: คำถามแบบปรนัย
+      K-1 Bee 1 Multi 2:
+        How many nectars is this?: มีน้ำหวานจากเกสรดอกไม้อยู่จำนวนเท่าใด?
+        Multiple Choice: คำถามแบบปรนัย
+      K-1 Digital Footprint Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      K-1 Getting Loopy Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      K-1 Happy Maps Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        Which arrow gets the Flurb to the treasure?: ลูกศรอันไหนที่จะพาเจ้าเฉิ่มนี่ไปยังสมบัติได้?
+      K-1 Keep it Private Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      K-1 Maze Debugging Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        Which choice should be the final block?: ทางเลือกใดที่ควรจะเป็นบล็อกสุดท้าย?
+      K-1 Maze Loops Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        Which repeat block is the same?: บล็อกทำซ้ำ(Repeat block) อันไหนที่เหมือนกัน?.
+      K-1 Maze Loops Multi 2:
+        Multiple Choice: คำถามแบบปรนัย
+        Pick the correct repeat block.: เลือกบล็อกทำซ้ำ(Repeat block) ที่ถูกต้อง
       K-1 Maze Multiple Choice 2:
         Maze: เขาวงกต
+        Which answer solves this level?: คำถามอันไหนแก้ปริศนาในด่านนี้ได้?
+      K-1 Move It Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        Which algorithm gets the Flurb to the flowers?: อัลกอลิทึมอันไหนที่ช่วยพาเจ้าเฉิ่มนี่ไปที่ดอกไม้ได้?
+      K-1 Plant a Seed Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+      K-1 Plant a Seed Multi 2:
+        Multiple Choice: คำถามแบบปรนัย
+      K-1 Word Search Multi 1:
+        Multiple Choice: คำถามแบบปรนัย
+        Which blocks spell "MOVE"?: บล็อกกลุ่มไหนสะกดคำว่า "MOVE"?
+      K-1 Word Search Multi 3:
+        Multiple Choice: คำถามแบบปรนัย
+        Which word is spelled?: สะกดเป็นคำว่าอะไร?

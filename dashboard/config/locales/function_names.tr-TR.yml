@@ -58,20 +58,35 @@ tr:
       check flower make honey: çiçeğe bak bal yap
       get nectar or make honey: nektar al veya bal yap
       make 3 honey: 3 bal yap
+      get 5 nectar: 5 nektar al
+      make all honey: bütün balı yap
       draw a star: bir yıldız çiz
+      draw: çiz
+      drawTree: ağaç çiz
+      drawHouse: ev çiz
       do something: bir şeyler yap
+      story: hikaye
       jump: zıpla
+      cube: küp
       Draw a Square: Kare çiz
       triangle: üçgen
+      draw an octagon: bir sekizgen çiz
       set score: skor ayarla
       get nectar: nektarı al
+      Jump: Zıpla
       test: dene
+      build bridge: köprü kur
       diamond: elmas
       move: hareket et
+      draw eye: göz çiz
       move right: sağa ilerle
       move up: yukarı hareket et
       move down: aşağı yönde ilerle
       move left: sola ilerle
+      kill alien: uzaylıyı öldür
+      click: tıkla
+      draw hexagon: altıgen çiz
+      honey nectar: bal nektar
       collect: topla
       Stop Dragon: Ejderhayı durdur
       follow path: yolu takip et
