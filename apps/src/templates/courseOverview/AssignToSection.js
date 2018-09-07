@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import $ from 'jquery';
 import queryString from 'query-string';
 import i18n from '@cdo/locale';
@@ -130,4 +131,6 @@ class AssignToSection extends Component {
 
 export const UnconnectedAssignToSection = Radium(AssignToSection);
 
-export default UnconnectedAssignToSection;
+export default connect(state => ({
+  hiddenStageState: state.hiddenStage,
+}))(UnconnectedAssignToSection);
