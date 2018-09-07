@@ -2,6 +2,7 @@ import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import {UnconnectedAssignToSection as AssignToSection} from '@cdo/apps/templates/courseOverview/AssignToSection';
+import Immutable from 'immutable';
 
 const defaultProps = {
   courseId: 30,
@@ -23,7 +24,8 @@ const defaultProps = {
       id: 338,
       name: "section_with_course"
     }
-  ]
+  ],
+  updateHiddenScript: () => {},
 };
 
 describe('AssignToSection', () => {
@@ -85,9 +87,17 @@ describe('AssignToSection', () => {
   });
 
   it('shows a warning when clicking a hidden section', () => {
+    const scriptId = 99;
+    const sectionId = defaultProps.sectionsInfo[0].id;
+    const hiddenStageState = Immutable.fromJS({
+      scriptsBySection: { [sectionId]: {[scriptId]: true} }
+    });
+
     const props = {
       ...defaultProps,
-      hiddenFromSectionIds: [11],
+      courseId: undefined,
+      scriptId,
+      hiddenStageState,
     };
     const wrapper = mount(
       <AssignToSection {...props}/>
