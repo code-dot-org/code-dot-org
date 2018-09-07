@@ -29,10 +29,10 @@ class AuthenticationOption < ApplicationRecord
   before_validation :normalize_email, :hash_email,
     :remove_student_cleartext_email, :fill_authentication_id
 
-  after_create :set_primary_contact_info
+  validate :email_must_be_unique, :hashed_email_must_be_unique,
+    :cred_type_and_auth_id_must_be_unique
 
-  validate :email_must_be_unique
-  validate :hashed_email_must_be_unique
+  after_create :set_primary_contact_info
 
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
@@ -43,6 +43,7 @@ class AuthenticationOption < ApplicationRecord
     THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',
+    MICROSOFT = 'microsoft_v2_auth',
   ]
 
   CREDENTIAL_TYPES = [
@@ -121,6 +122,18 @@ class AuthenticationOption < ApplicationRecord
     other = User.find_by_hashed_email(hashed_email)
     if other && other != user
       errors.add :email, I18n.t('errors.messages.taken')
+    end
+  end
+
+  private def cred_type_and_auth_id_must_be_unique
+    # skip the db lookup if possible
+    return unless authentication_id.present? &&
+      (credential_type_changed? || authentication_id_changed?) &&
+      errors.blank?
+
+    other = User.find_by_credential(type: credential_type, id: authentication_id)
+    if other && other != user
+      errors.add :credential_type, I18n.t('errors.messages.taken')
     end
   end
 end

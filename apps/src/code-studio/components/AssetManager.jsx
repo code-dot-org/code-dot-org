@@ -5,7 +5,6 @@ import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import AssetRow from './AssetRow';
 import assetListStore from '../assets/assetListStore';
 import AudioRecorder from './AudioRecorder';
-import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AddAssetButtonRow from "./AddAssetButtonRow";
 import i18n from '@cdo/locale';
@@ -51,7 +50,10 @@ export default class AssetManager extends React.Component {
     useFilesApi: PropTypes.bool,
     //For logging upload failures
     projectId: PropTypes.string,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
+    disableAudioRecording: PropTypes.bool,
+    //Temp prop for logging - identifies if displayed by 'Manage Assets' flow
+    imagePicker: PropTypes.bool
   };
 
   constructor(props) {
@@ -152,8 +154,7 @@ export default class AssetManager extends React.Component {
   };
 
   render() {
-    const displayAudioRecorder = this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
-      experiments.isEnabled('recordAudio') && this.state.recordingAudio;
+    const displayAudioRecorder = this.state.audioErrorType !== AudioErrorType.INITIALIZE && this.state.recordingAudio;
     const buttons = (
       <div>
         {this.state.audioErrorType === AudioErrorType.SAVE &&
@@ -163,7 +164,7 @@ export default class AssetManager extends React.Component {
           <div>{i18n.audioInitializeError()}</div>
         }
         {displayAudioRecorder &&
-          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved}/>
+          <AudioRecorder onUploadDone={this.onUploadDone} afterAudioSaved={this.afterAudioSaved} imagePicker={this.props.imagePicker}/>
         }
         <AddAssetButtonRow
           uploadsEnabled={this.props.uploadsEnabled}
@@ -175,7 +176,7 @@ export default class AssetManager extends React.Component {
           onSelectRecord={this.onSelectRecord}
           statusMessage={this.state.statusMessage}
           recordDisabled={this.state.recordingAudio}
-          recordEnabled={experiments.isEnabled('recordAudio')}
+          hideAudioRecording={this.props.disableAudioRecording}
         />
       </div>
     );
@@ -221,6 +222,7 @@ export default class AssetManager extends React.Component {
             onChoose={choose}
             onDelete={this.deleteAssetRow.bind(this, asset.filename)}
             soundPlayer={this.props.soundPlayer}
+            imagePicker={this.props.imagePicker}
           />
         );
       }.bind(this));

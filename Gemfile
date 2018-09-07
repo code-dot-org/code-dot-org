@@ -47,7 +47,7 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
-gem 'google-api-client'
+gem 'google-api-client', '~> 0.23'
 gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
 
 # CSRF protection for Sinatra.
@@ -61,7 +61,6 @@ gem 'rack-mini-profiler'
 group :development do
   gem 'annotate'
   gem 'ruby-progressbar', require: false
-  gem 'thin'
   gem 'web-console'
 end
 
@@ -78,6 +77,7 @@ group :development, :test do
   gem 'ruby_dep', '~> 1.3.1'
 
   gem 'shotgun'
+  gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
 
@@ -131,6 +131,7 @@ gem 'open_uri_redirections', require: false, group: [:development, :staging, :te
 
 # Ref: https://github.com/tmm1/gctools/pull/17
 gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
+gem 'puma'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
@@ -164,6 +165,7 @@ gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.3.1'
+gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
 gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'

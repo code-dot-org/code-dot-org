@@ -22,6 +22,8 @@ class AzureContentModeratorTest < Minitest::Test
       endpoint: CDO.azure_content_moderation_endpoint,
       api_key: CDO.azure_content_moderation_key
     )
+
+    DCDO.stubs(:get).with('image_moderation', {}).returns({})
   end
 
   def test_checks_jpg_image
@@ -91,6 +93,8 @@ class AzureContentModeratorTest < Minitest::Test
           IsImageRacyClassified
           RequestDuration
           ImageUrl
+          RacyThresholdUsed
+          AdultThresholdUsed
         )
     end
   end

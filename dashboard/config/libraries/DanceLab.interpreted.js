@@ -8,12 +8,30 @@ var loops = [];
 var sprites = createGroup();
 var sprites_by_type = {};
 var img_base = "https://s3.amazonaws.com/cdo-curriculum/images/sprites";
-var song_meta = {
-  bpm: 146,
-  delay: 0.2, // Seconds to delay before calculating measures
-  verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
-  chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+var songs = {
+  macklemore: {
+    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/chu.mp3',
+    bpm: 146,
+    delay: 0.2, // Seconds to delay before calculating measures
+    verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
+    chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
+  },
+  hammer: {
+    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/touch.mp3',
+    bpm: 133,
+    delay: 2.32, // Seconds to delay before calculating measures
+    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+  },
+  peas: {
+    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/feeling.mp3',
+    bpm: 128,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [1.5, 15.2], // Array of timestamps in seconds where verses occur
+    chorus: [5.5, 22.1] // Array of timestamps in seconds where choruses occur
+  }
 };
+var song_meta = songs.macklemore;
 var score = 0;
 var game_over = false;
 var show_score = false;
@@ -28,7 +46,7 @@ bg_sprite.tint = "white";
 bg_sprite.visible = false;
 
 function preload() {
-  Dance.song.load('https://s3.amazonaws.com/cdo-curriculum/media/uploads/chu.mp3');
+  Dance.song.load(song_meta.url);
   //Dance.song.load('/api/v1/sound-library/category_background/jazzy_beats.mp3');
 }
 
@@ -138,6 +156,27 @@ function Effects(alpha, blend) {
         rect(0, 0, i * 100 + 50, i * 100 + 50);
       }
       pop();
+    }
+  };
+  this.strobe={
+    waitTime: 0,
+    flashing: false,
+    update: function () {
+      this.flashing=true;
+      this.waitTime=6;
+    },
+    draw: function () {
+      var bgcolor = rgb(1,1,1);
+      if (Dance.fft.isPeak()) this.update();
+      if (this.flashing) {
+	      bgcolor=rgb(255,255,255);
+	      this.waitTime--;
+      }
+      if (this.waitTime<=0) {
+       bgcolor=rgb(1,1,1);
+       this.flashing=false;
+     }
+      background(bgcolor);
     }
   };
 }

@@ -381,37 +381,71 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       sections_as_student = oauth_student.sections_as_student.to_ary
 
       @request.cookies[:pm] = 'clever_takeover'
-      @request.session['clever_link_flag'] = provider
-      @request.session['clever_takeover_id'] = oauth_student.uid
-      @request.session['clever_takeover_token'] = '54321'
+      set_oauth_takeover_session_variables(provider, oauth_student)
       check_and_apply_oauth_takeover(student)
 
       assert_equal sections_as_student, student.sections_as_student
     end
   end
 
-  test 'login: prefers migrated user to legacy user' do
-    legacy_student = create(:student, :unmigrated_google_sso)
-    migrated_student = create(:student, :with_google_authentication_option, :multi_auth_migrated)
-    migrated_student.primary_contact_info = migrated_student.authentication_options.first
-    migrated_student.primary_contact_info.update(authentication_id: legacy_student.uid)
+  test 'login: oauth takeover does not happen if takeover is expired' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      teacher = create :teacher
+      section = create :section, user: teacher, login_type: 'clever'
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
 
-    auth = OmniAuth::AuthHash.new(
-      uid: legacy_student.uid,
-      provider: 'google_oauth2',
-      credentials: {
-        token: '123456'
-      }
-    )
+      oauth_students = [oauth_student]
+      section.set_exact_student_list(oauth_students)
 
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
+      # Pull sections_as_student from the database and store them in an array to compare later
+      sections_as_student = oauth_student.sections_as_student.to_ary
 
-    assert_does_not_create(User) do
-      get :google_oauth2
+      @request.cookies[:pm] = 'clever_takeover'
+      set_oauth_takeover_session_variables(provider, oauth_student)
+      @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.ago
+      check_and_apply_oauth_takeover(student)
+
+      assert_equal sections_as_student, oauth_student.sections_as_student
+      refute_equal sections_as_student, student.sections_as_student
     end
+  end
 
-    assert_equal migrated_student.id, signed_in_user_id
+  test 'login: oauth takeover takes over account when account has no activity' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
+
+      set_oauth_takeover_session_variables(provider, oauth_student)
+      check_and_apply_oauth_takeover(student)
+
+      oauth_student.reload
+      refute_nil oauth_student.deleted_at
+      assert_equal provider, student.provider
+      assert_equal oauth_student.uid, student.uid
+      assert_equal '54321', student.oauth_token
+      assert_nil @request.session['clever_link_flag']
+    end
+  end
+
+  test 'login: oauth takeover does nothing if account has activity' do
+    User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.each do |provider|
+      oauth_student = create :student, provider: provider, uid: '12345'
+      student = create :student
+      level = create(:level)
+      create :user_level, user: oauth_student, level: level, attempts: 1, best_result: 1
+
+      assert oauth_student.has_activity?
+
+      Honeybadger.expects(:notify).at_least_once
+
+      set_oauth_takeover_session_variables(provider, oauth_student)
+      check_and_apply_oauth_takeover(student)
+
+      oauth_student.reload
+      assert_nil oauth_student.deleted_at
+      assert_nil student.provider
+    end
   end
 
   test 'login: google_oauth2 silently takes over unmigrated student with matching email' do
@@ -427,6 +461,25 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'google_oauth2', user.provider
     assert_equal user.uid, uid
+  end
+
+  test 'login: google_oauth2 silently takes over unmigrated Google Classroom student with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, email: email)
+    google_classroom_student = create(:student, :imported_from_google_classroom, uid: uid)
+    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_destroys(User) do
+      get :google_oauth2
+    end
+    user.reload
+    assert_equal 'google_oauth2', user.provider
+    assert_equal user.uid, uid
+    assert_equal [google_classroom_section&.id], user.sections_as_student.pluck(:id)
   end
 
   test 'login: google_oauth2 silently takes over unmigrated teacher with matching email' do
@@ -458,6 +511,26 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
     assert found_google
+  end
+
+  test 'login: google_oauth2 silently takes over migrated Google Classroom student with matching email' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    user = create(:student, :with_migrated_email_authentication_option, email: email)
+    google_classroom_student = create(:student, :migrated_imported_from_google_classroom, uid: uid)
+    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_destroys(User) do
+      get :google_oauth2
+    end
+    user.reload
+    assert_equal 'migrated', user.provider
+    found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
+    assert found_google
+    assert [google_classroom_section&.id], user.sections_as_student.pluck(:id)
   end
 
   test 'login: google_oauth2 silently adds authentication_option to migrated teacher with matching email' do
@@ -692,6 +765,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   private
+
+  def set_oauth_takeover_session_variables(provider, user)
+    @request.session[ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
+    @request.session[ACCT_TAKEOVER_PROVIDER] = provider
+    @request.session[ACCT_TAKEOVER_UID] = user.uid
+    @request.session[ACCT_TAKEOVER_OAUTH_TOKEN] = '54321'
+  end
 
   def generate_auth_user_hash(args)
     OmniAuth::AuthHash.new(

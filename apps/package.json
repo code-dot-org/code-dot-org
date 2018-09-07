@@ -32,9 +32,6 @@
     "storybook": "start-storybook -p 9001 -s build/package/,../dashboard/public,../",
     "storybook:deploy": "./script/deploy-storybook.sh"
   },
-  "browser": {
-    "blockly": "./build/package/js/blockly.js"
-  },
   "resolutions": {
     "eshost": "github:pcardune/eshost#f3fa7fa",
     "test262-compiler": "github:pcardune/test262-compiler#ffa0dff"
@@ -43,9 +40,9 @@
     "@cdo/apps": "file:src",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "3.0.2",
+    "@code-dot-org/blockly": "3.1.1",
     "@code-dot-org/bramble": "0.1.26",
-    "@code-dot-org/craft": "0.1.3",
+    "@code-dot-org/craft": "0.1.4",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",

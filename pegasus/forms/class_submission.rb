@@ -206,19 +206,33 @@ class ClassSubmission < Form
     rows = 500
 
     unless params['class_languages_all_ss'].nil_or_empty?
-      params['class_languages_all_ss'].each do |language|
-        query = query.where(
-          Forms.json('data.class_languages_all_ss') => language
+      language_choices = params['class_languages_all_ss'].map do |language|
+        "\"#{language}\""
+      end.join(',')
+
+      language_choices = "[#{language_choices}]"
+
+      query = query.where(
+        Sequel.function(:json_contains,
+          Forms.json('processed_data.class_languages_all_ss'),
+          language_choices
         )
-      end
+      )
     end
 
     unless params['school_level_ss'].nil_or_empty?
-      params['school_level_ss'].each do |level|
-        query = query.where(
-          Forms.json('data.school_level_ss') => level
+      level_choices = params['school_level_ss'].map do |level|
+        "\"#{level}\""
+      end.join(',')
+
+      level_choices = "[#{level_choices}]"
+
+      query = query.where(
+        Sequel.function(:json_contains,
+          Forms.json('data.school_level_ss'),
+          level_choices
         )
-      end
+      )
     end
 
     fl = 'location_p,school_name_s,school_address_s,class_format_s,school_tuition_s,school_level_ss,school_website_s,class_description_s'.split(',').map do |field|

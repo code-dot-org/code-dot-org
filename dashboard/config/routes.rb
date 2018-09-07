@@ -374,7 +374,7 @@ Dashboard::Application.routes.draw do
           post :end
           get  :summary
         end
-        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
+        resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 
         get :attendance, action: 'index', controller: 'workshop_attendance'
         get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
@@ -419,6 +419,7 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
         post :teacher, to: 'teacher_applications#create'
+        post 'resend_principal_approval/:id', to: 'teacher_applications#resend_principal_approval'
         post :principal_approval, to: 'principal_approval_applications#create'
       end
 

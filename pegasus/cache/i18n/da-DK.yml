@@ -110,6 +110,7 @@ da-DK:
   third_party_price_299: 'Pris: $2.99/download'
   third_party_price_individual: 'Individuel Pris: Gratis prøveperiode & $25/month'
   third_party_price_school: 'Skolepris: Frie abonnementer & Pro for $2500+'
+  third_party_scratch_btn_site: Besøg Scratch
   third_party_curriculum: Læseplan
   enter_valid_age: Angiv venligst en gyldig alder
   enter_valid_email: Angiv en gyldig emailadresse
@@ -371,6 +372,7 @@ da-DK:
   mc_gradelevel: Alder 6+
   mc_platformtext: Moderne browsere, smartphones, tabletter
   mc_specs: Mange sprog | Moderne browsere og tablets | Alder 6+
+  minecraft_designer: Minecraft Designer
   minecraft_agent_button: Start
   minecraft_designer_button: Start
   minecraft_adventurer_button: Start
@@ -379,6 +381,11 @@ da-DK:
   sports_watch_video: Se videoen
   watch_inspirational_videos: Før du går i gang, se så én af disse inspirerende videoer
   video_title_inspire_girl: Inspirer en pige
+  video_title_anybody_can_learn: Alle Kan Lære
+  video_1min: 1 min
+  video_2min: 2 min
+  video_3min: 3 min
+  video_5min: 5 min
   speak_another_language: Taler du et andet sprog?
   help_translate: Hjælp os med at oversætte.
   no_internet: Har du ikke internet?
@@ -664,6 +671,7 @@ da-DK:
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
   dashboard_course4: 'Kursus 4 (beta): '
+  dashboard_tools: 'Værktøjer: '
   dashboard_curriculum: Læseplan
   dashboard_curriculum_overview: Indskoling og mellemtrin (0.-5. klasse)
   dashboard_overview: Oversigt
@@ -839,6 +847,8 @@ da-DK:
   classicmaze_name: Klassisk labyrint
   iceage_name: Is-tid
   minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (Blocks)
+  hoc-encryption_name: Enkel kryptering
   math_category_name: Matematik
   hoc_category_name: Hour of Code
   applab_name: App Lab
@@ -896,12 +906,24 @@ da-DK:
   course2_gradelevel: Fra 6 år (læsning nødvendigt)
   course3_gradelevel: Fra 8 år (efter kursus 2)
   course4_gradelevel: Fra 10 år (efter kursus 3)
+  coursea_gradelevel: Alder 4-7
+  courseb_gradelevel: Alder 5-8
+  coursec_gradelevel: Alder 6-10
   coursed_gradelevel: 8. klasse+
   coursee_gradelevel: Alder 8-12
+  coursef_gradelevel: Alder 9 -13
+  coursea-2017_gradelevel: Alder 4-7
+  courseb-2017_gradelevel: Alder 5-8
+  coursec-2017_gradelevel: Alder 6-10
   coursed-2017_gradelevel: 8. klasse+
   coursee-2017_gradelevel: Alder 8-12
+  coursef-2017_gradelevel: Alder 9 -13
+  coursea-2018_gradelevel: Alder 4-7
+  courseb-2018_gradelevel: Alder 5-8
+  coursec-2018_gradelevel: Alder 6-10
   coursed-2018_gradelevel: 8. klasse+
   coursee-2018_gradelevel: Alder 8-12
+  coursef-2018_gradelevel: Alder 9 -13
   accelerated_gradelevel: Fra 10 år (efter kursus 3)
   codeorg_platformtext: Moderne browsere, smartphones, tabletter
   codeintl_platformtext: Moderne browsere, smartphones, tabletter
@@ -1514,6 +1536,7 @@ da-DK:
   header_teach: Undervis
   header_help_us: Hjælp os
   header_about: Om
+  header_report_bug: Rapporter fejl
   user_header_label: Hej %{username}
   user_header_settings: Min konto
   user_header_logout: Log ud
