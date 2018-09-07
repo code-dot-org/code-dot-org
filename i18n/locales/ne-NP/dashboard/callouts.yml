@@ -110,6 +110,10 @@ ne:
         frozen_circle_function_with_parameter_circle: Use the "create a circle" block and change the size.
       frozen cross rotate_callout:
         replace_questions_degree: Use the drop-down to replace "???" with a number
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Use the drop-down to replace "???" with a number
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Use the drop-down to replace "???" with a number
       frozen cross_callout:
         repeat_blocks_1: "(1) Use this block and put it around the grey blocks in the workspace"
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks inside
@@ -119,19 +123,45 @@ ne:
         frozen_diamond_repeat: Use the repeat block to create this shape.
       frozen freeplay_callout:
         snowflake_dropdown: Use this drop-down to create different snowflakes!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
       frozen line_callout:
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward
+      frozen line_b_callout:
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward
+      frozen line_test_callout:
         move_elsa_forward: Drag a "Move Forward" block and snap it below the "When Run" block to make Elsa move forward
       frozen perpendicular_callout:
         turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Use the "create a snowflake branch" block
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
       frozen square iterative_callout:
+        frozen_create_square: Attach more blocks here to create a square
+      frozen square iterative_b_callout:
+        frozen_create_square: Attach more blocks here to create a square
+      frozen square iterative_test_callout:
         frozen_create_square: Attach more blocks here to create a square
       frozen square loop 3x_callout:
         replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop 3x_b_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop 3x_test_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
       frozen square loop_callout:
         replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop_b_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square loop_test_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
       frozen square snowflake_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square snowflake_b_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      frozen square snowflake_test_callout:
         replace_questions: Use the drop-down to replace "???" with a number
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Click edit to add a parameter in your function

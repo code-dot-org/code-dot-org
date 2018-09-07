@@ -1346,3 +1346,15 @@ ar:
               name: حركها , حركها
             Your Digital Footprint:
               name: البصمة الرقمية الخاصة بك
+        frozen-2018:
+          stages:
+            Artist:
+              name: الرسام
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: الرسام
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: الرسام

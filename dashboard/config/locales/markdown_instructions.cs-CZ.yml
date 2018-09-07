@@ -235,6 +235,8 @@ cs:
       4-5 While Loops 4_markdown_instruction: 'Wow,  našel jsem opravdu hluboké díry!
         Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který
         ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus.'
+      Artist Autorun Test_markdown_instruction: Použij blok "opakování" k nakreslení
+        těchto 3 čtverců.
       Calc Circles of Eval 2_markdown_instruction: K provedení tohoto kódu použijte
         blok násobení.
       Calc Circles of Eval 3_markdown_instruction: Spojte "výpočetní bloky" tak aby

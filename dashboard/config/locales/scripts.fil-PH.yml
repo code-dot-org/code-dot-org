@@ -11028,3 +11028,19 @@ fil:
           stages:
             Deeper Learning Overview:
               name: Buod ng Mas Malalim na Pag-aaral
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        dance:
+          stages:
+            new stage:
+              name: bagong yugto
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

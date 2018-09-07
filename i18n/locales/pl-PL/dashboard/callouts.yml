@@ -663,6 +663,10 @@ pl:
         frozen_circle_function_with_parameter_circle: Użyj bloku "utwórz okrąg" i zmień rozmiar okręgu.
       frozen cross rotate_callout:
         replace_questions_degree: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
       frozen cross_callout:
         repeat_blocks_1: "(1) Użyj tego bloku i umieść go dookoła szarych bloków w obszarze roboczym"
         repeat_blocks_2: (2) Przesuń blok "powtórz" tutaj i umieść szare bloki wewnątrz niego
@@ -672,20 +676,48 @@ pl:
         frozen_diamond_repeat: Użyj bloku "powtórz", aby utworzyć ten kształt.
       frozen freeplay_callout:
         snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
       frozen line_callout:
+        run: Kliknij "Uruchom", aby uruchomić swój program!
+        move_elsa_forward: Złap blok "idź do przodu" i dołącz poniżej bloku "po uruchomieniu", aby Elsa poszła naprzód
+      frozen line_b_callout:
+        run: Kliknij "Uruchom", aby uruchomić swój program!
+        move_elsa_forward: Złap blok "idź do przodu" i dołącz poniżej bloku "po uruchomieniu", aby Elsa poszła naprzód
+      frozen line_test_callout:
         run: Kliknij "Uruchom", aby uruchomić swój program!
         move_elsa_forward: Złap blok "idź do przodu" i dołącz poniżej bloku "po uruchomieniu", aby Elsa poszła naprzód
       frozen perpendicular_callout:
         turn_elsa: Użyj bloku "skręć", aby Elsa obróciła się. Liczba wybrana z listy rozwijanej, określa o ile stopni Elsa ma się obrócić
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Użyj bloku "utwórz ramię śnieżynki"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Użyj bloku "utwórz ramię śnieżynki"
       frozen square iterative_callout:
+        frozen_create_square: Dołącz tutaj więcej bloków, aby utworzyć kwadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Dołącz tutaj więcej bloków, aby utworzyć kwadrat
+      frozen square iterative_test_callout:
         frozen_create_square: Dołącz tutaj więcej bloków, aby utworzyć kwadrat
       frozen square loop 3x_callout:
         replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+      frozen square loop 3x_b_callout:
+        replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+      frozen square loop 3x_test_callout:
+        replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
       frozen square loop_callout:
         replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+      frozen square loop_b_callout:
+        replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+      frozen square loop_test_callout:
+        replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
       frozen square snowflake_callout:
+        replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+      frozen square snowflake_b_callout:
+        replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
+      frozen square snowflake_test_callout:
         replace_questions: Użyj rozwijanego menu, aby zastąpić "???" przez liczbę
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Te szare bloki są z kamienia! To oznacza, że nie mogą iść do śmieci.

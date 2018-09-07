@@ -3,7 +3,7 @@ th:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
         2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
-        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้ปุ่ม `หันขวาไป 90 องศา`
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้บล็อก `หันขวาไป 90 องศา`
       2-3 Artist 11_authored_hint:
         2-3_Artist_11_a: 'มีปัญหากับมุมหรือไม่? คุณต้องสร้างมุมรวมกัน 360 องศาด้วยการหัน 8 ครั้ง ดังนั้น 360/8 ได้เท่าไร? '
       2-3 Artist 12_authored_hint:
@@ -261,6 +261,8 @@ th:
         4-5_Maze_7_a: "** ต้องการให้โค้ดของคุณมีขนาดเล็กที่สุดเท่าที่จะทำได้ ใช่ไหม? ** \n\nค้นหารูปแบบในบล็อกของคุณ คุณเห็นสิ่งที่ซ้ำๆ กันไหม?  ลองวางลูปไว้รอบมันแทน!"
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: แต่ละรายการจะต้องมีลูป ` ในขณะที่` ของมันเอง.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: ศิลปินต้องหัน 120 องศาระหว่างการวาดรูปสี่เหลี่ยมจตุรัสแต่ละรูปเพื่อให้การออกแบบนี้เสร็จสมบูรณ์
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`
       Course 4 Artist 11_authored_hint:
@@ -282,6 +284,14 @@ th:
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: ถ้าคุณเรียกใช้งานฟังก์ชั่นอย่างถูกต้อง นี่คือเส้นทางที่คุณจะเดินทางไป
         Function_intro_Ryan_a: คุณสามารถเรียกฟังก์ชั่นได้หลายครั้งในโปรแกรมของคุณ ลองเรียกใช้งานดูสักสองครั้งเพื่อพิชิตปริศนาด่านนี้ให้สาเร็จ
+      K2.0 sequence 10_authored_hint:
+        K2.0_sequence_10_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+      K2.0 sequence 7_authored_hint:
+        K2.0_sequence_7_a: ถ้าหากคุณติดขัด ลองวาดเป็นภาพลงบนกระดาษเพื่อดูว่าจะให้เจ้านกเคลื่อนที่อย่างไร
+      K2.0 sequence 9_authored_hint:
+        K2.0_sequence_9_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+      K2.0 sequence FP_authored_hint:
+        K2.0_sequence_FP_a: หากเส้นทางที่คุณต้องใช้ไม่ชัดเจน ลองใช้นิ้วลากเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: ลองให้เอเจนท์สร้างรางสำหรับรถเหมืองเพื่อช่วยให้คุณสามารถสำรวจโลกได้!
       MC_HOC_2017_01_RETRY_authored_hint:
@@ -382,33 +392,47 @@ th:
       course3_bee_functions_challenge2_authored_hint:
         courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
       courseA_artist_loops2_authored_hint:
-        courseA_artist_loops2_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  เริ่มด้วยการต่อบล็อกเข้าไปกับบล็อก<xml><block type="" เมื่อเรียกใช้งาน"/></xml>เพื่อดูว่าเกิดอะไรขึ้น
+        courseA_artist_loops2_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type="when_run"/></xml>เพื่อดูว่าเกิดอะไรขึ้น
+        courseA_artist_loops2_b: ใช้บล็อกนี้ <xml><block type="simple_move_right"/></xml>เพื่อแก้ปริศนาในด่านนี้
       courseA_artist_loops2_2018_authored_hint:
-        courseA_artist_loops2_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  เริ่มด้วยการต่อบล็อกเข้าไปกับบล็อก<xml><block type="" เมื่อเรียกใช้งาน"/></xml>เพื่อดูว่าเกิดอะไรขึ้น
+        courseA_artist_loops2_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type="when_run"/></xml>เพื่อดูว่าเกิดอะไรขึ้น
+        courseA_artist_loops2_b: ใช้บล็อกนี้ <xml><block type="simple_move_right"/></xml>เพื่อแก้ปริศนาในด่านนี้
       courseA_artist_loops3_authored_hint:
+        courseA_artist_loops3_a: ลองสกดรอยช้าๆด้วยการใช้นิ้วมือของคุณลากไปตามโปรแกรม เพื่อดูว่ามีอะไรไม่ถูกต้อง
         courseA_artist_loops3_b: |-
           คุณต้องใช้บล็อกแบบนี้เพื่อแก้ปริศนา
           
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops3_2018_authored_hint:
+        courseA_artist_loops3_a: ลองสกดรอยช้าๆด้วยการใช้นิ้วมือของคุณลากไปตามโปรแกรม เพื่อดูว่ามีอะไรไม่ถูกต้อง
         courseA_artist_loops3_b: |-
           คุณต้องใช้บล็อกแบบนี้เพื่อแก้ปริศนา
           
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
+        courseA_artist_loops4_b: |-
+          เนื่องจากคุณสามารถใข้บล็อก<xml><block type="simple_move_right"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
+        courseA_artist_loops4_b: |-
+          เนื่องจากคุณสามารถใข้บล็อก<xml><block type="simple_move_right"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!
         courseA_artist_loops5_b: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
+        courseA_artist_loops5_c: "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops5_2018_authored_hint:
         courseA_artist_loops5_a: ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!
         courseA_artist_loops5_b: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
+        courseA_artist_loops5_c: "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: คิดไม่ออกวิธีที่จะวาดเนินเขา?  ลองเล่นกับบล็อกดูสักนิด เพื่อดูว่าแต่ละบล็อกวาดอย่างไร
+        courseA_artist_loops6_b: คุณต้องใช้บล็อก 2 บล็อกที่วาดไปสองทิศทางเพื่อแก้ปริศนานี้
       courseA_artist_loops6_2018_authored_hint:
         courseA_artist_loops6_a: คิดไม่ออกวิธีที่จะวาดเนินเขา?  ลองเล่นกับบล็อกดูสักนิด เพื่อดูว่าแต่ละบล็อกวาดอย่างไร
+        courseA_artist_loops6_b: คุณต้องใช้บล็อก 2 บล็อกที่วาดไปสองทิศทางเพื่อแก้ปริศนานี้
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
         courseA_artist_loops7_b: เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม
@@ -431,17 +455,19 @@ th:
           <title name=""TIMES"">???</title>
           </block></xml>
       courseA_artist_loops8_authored_hint:
-        courseA_artist_loops8_a: ลองเรียกใช้งานโค้ดเพื่อดูสิ่งที่ถูกเขียนขึ้นมาว่าทำอะไรให้คุณ
+        courseA_artist_loops8_a: ลองเรียกใช้งานโค้ด เพื่อดูสิ่งที่ถูกเขียนขึ้นไว้แล้วว่า ทำอะไรให้คุณบ้าง
         courseA_artist_loops8_b: คุณจะวนลูปโค้ดที่คุณได้รับมาอย่างไร
         courseA_artist_loops8_c: "โค้ดทำอะไรได้บ้าง\nมันควรจะทำอะไร?\nมันบอกอะไรแก่คุณ?\n\n"
       courseA_artist_loops8_2018_authored_hint:
-        courseA_artist_loops8_a: ลองเรียกใช้งานโค้ดเพื่อดูสิ่งที่ถูกเขียนขึ้นมาว่าทำอะไรให้คุณ
+        courseA_artist_loops8_a: ลองเรียกใช้งานโค้ด เพื่อดูสิ่งที่ถูกเขียนขึ้นไว้แล้วว่า ทำอะไรให้คุณบ้าง
         courseA_artist_loops8_b: คุณจะวนลูปโค้ดที่คุณได้รับมาอย่างไร
         courseA_artist_loops8_c: "โค้ดทำอะไรได้บ้าง\nมันควรจะทำอะไร?\nมันบอกอะไรแก่คุณ?\n\n"
       courseA_artist_loops9_authored_hint:
+        courseA_artist_loops9_a: เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได
         courseA_artist_loops9_b: "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml><block type=\"\"controls_repeat_simplified_dropdown\"\"><title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> "
         courseA_artist_loops9_c: ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ
       courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได
         courseA_artist_loops9_b: "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml><block type=\"\"controls_repeat_simplified_dropdown\"\"><title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> "
         courseA_artist_loops9_c: ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ
       courseA_collector_loops1_authored_hint:
@@ -455,51 +481,173 @@ th:
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: วิธีการแก้ปัญหาง่ายๆ คือไปทางตะวันออก 2 ครั้งแล้วเก็บสมบัติ
       courseA_collector_loops2_authored_hint:
-        courseA_collector_loops2_a: ต้องขยับเดินไปก่อนที่จะเก็บรวบรวมสมบัติได้
+        courseA_collector_loops2_a: คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้
         courseA_collector_loops2_b: |-
           หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ
           <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018_authored_hint:
-        courseA_collector_loops2_a: ต้องขยับเดินไปก่อนที่จะเก็บรวบรวมสมบัติได้
+        courseA_collector_loops2_a: คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้
         courseA_collector_loops2_b: |-
           หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ
           <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops3_authored_hint:
+        courseA_collector_loops3_a: "ลองใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>ดู!"
+        courseA_collector_loops3_b: โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseA_collector_loops3_2018_authored_hint:
+        courseA_collector_loops3_a: "ลองใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>ดู!"
+        courseA_collector_loops3_b: โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseA_collector_loops4_authored_hint:
+        courseA_collector_loops4_a: เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ
+        courseA_collector_loops4_b: อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>เรียบร้อยแล้ว!
+      courseA_collector_loops4_2018_authored_hint:
+        courseA_collector_loops4_a: เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ
+        courseA_collector_loops4_b: อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>เรียบร้อยแล้ว!
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด
-        courseA_collector_loops5_b: ลองแยกปัญหาออกเป็น 2 ส่วนเคลื่อนไหวด้านข้างแล้วเคลื่อนไหวด้านล่าง
+        courseA_collector_loops5_b: ลองแยกปัญหาออกเป็น 2 ส่วน ส่วนที่เคลื่อนไหวไปทางด้านข้างและส่วนที่เคลื่อนไหวไปทางด้านล่าง
         courseA_collector_loops5_c: คุณจะต้องเริ่มต้นด้วยลูปที่พาลอเรลไปทางทิศตะวันตกและเก็บรวบรวมสมบัติไปตลอดทาง
       courseA_collector_loops5_2018_authored_hint:
         courseA_collector_loops5_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด
-        courseA_collector_loops5_b: ลองแยกปัญหาออกเป็น 2 ส่วนเคลื่อนไหวด้านข้างแล้วเคลื่อนไหวด้านล่าง
+        courseA_collector_loops5_b: ลองแยกปัญหาออกเป็น 2 ส่วน ส่วนที่เคลื่อนไหวไปทางด้านข้างและส่วนที่เคลื่อนไหวไปทางด้านล่าง
         courseA_collector_loops5_c: คุณจะต้องเริ่มต้นด้วยลูปที่พาลอเรลไปทางทิศตะวันตกและเก็บรวบรวมสมบัติไปตลอดทาง
       courseA_collector_loops6_authored_hint:
-        courseA_collector_loops6_a: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseA_collector_loops6_a: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseA_collector_loops6_b: โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา
       courseA_collector_loops6_2018_authored_hint:
-        courseA_collector_loops6_a: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseA_collector_loops6_a: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseA_collector_loops6_b: โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา
       courseA_collector_loops7_authored_hint:
-        courseA_collector_loops7_a: ถ้าคุณไม่สามารถคิดออกว่าสิ่งที่มาถัดไปคือะไร ลองเรียกใช้งานโค้ดเพื่อดูว่าจบแล้วลอเรลได้อะไร
+        courseA_collector_loops7_a: ถ้าคุณไม่สามารถคิดออกว่าอะไรจะเกิดขึ้นถัดมา ลองเรียกใช้งานโค้ดเพื่อดูว่าเมื่อจบแล้วลอเรลได้อะไรบ้าง
       courseA_collector_loops7_2018_authored_hint:
-        courseA_collector_loops7_a: ถ้าคุณไม่สามารถคิดออกว่าสิ่งที่มาถัดไปคือะไร ลองเรียกใช้งานโค้ดเพื่อดูว่าจบแล้วลอเรลได้อะไร
+        courseA_collector_loops7_a: ถ้าคุณไม่สามารถคิดออกว่าอะไรจะเกิดขึ้นถัดมา ลองเรียกใช้งานโค้ดเพื่อดูว่าเมื่อจบแล้วลอเรลได้อะไรบ้าง
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: หากคุณมีปัญหาในการแก้ปริศนานี้ให้ ลองเขียนสิ่งที่คุณคิดลงบนกระดาษและมองหารูปแบบดู
+        courseA_collector_loops8_b: ลองแยกปริศนานี้ออกเป็นปัญหาสามส่วน และใช้บล็อกลูปสำหรับการเคลื่อนไหวแต่ละทิศทาง
         courseA_collector_loops8_c: จำไว้ว่าคุณสามารถเขียนโค้ดทีละหนึ่งชิ้นแล้วกด " เริ่ม" เพื่อดูว่าคุณควรจะทำอะไรต่อไป
       courseA_collector_loops8_2018_authored_hint:
         courseA_collector_loops8_a: หากคุณมีปัญหาในการแก้ปริศนานี้ให้ ลองเขียนสิ่งที่คุณคิดลงบนกระดาษและมองหารูปแบบดู
+        courseA_collector_loops8_b: ลองแยกปริศนานี้ออกเป็นปัญหาสามส่วน และใช้บล็อกลูปสำหรับการเคลื่อนไหวแต่ละทิศทาง
         courseA_collector_loops8_c: จำไว้ว่าคุณสามารถเขียนโค้ดทีละหนึ่งชิ้นแล้วกด " เริ่ม" เพื่อดูว่าคุณควรจะทำอะไรต่อไป
+      courseA_collector_loops9_authored_hint:
+        courseA_collector_loops9_a: 'ถ้าคุณไม่สามารถหาได้ว่า จุดที่ดีที่สุดที่จะใช้ลูปอยู่ที่ใด ให้ลองเขียนโค้ดออกมาทีละขั้นตอนและมองหารูปแบบ '
+      courseA_collector_loops9_2018_authored_hint:
+        courseA_collector_loops9_a: 'ถ้าคุณไม่สามารถหาได้ว่า จุดที่ดีที่สุดที่จะใช้ลูปอยู่ที่ใด ให้ลองเขียนโค้ดออกมาทีละขั้นตอนและมองหารูปแบบ '
       courseA_collector_preLoops7_authored_hint:
         courseA_collector_loops2_b: |-
           หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ
           <xml>  <block type="collector_collect"/></xml>
+      courseA_harvester_forVideo_authored_hint:
+        courseA_harvester_loops3_a: |-
+          ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!
+          
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+          </block></xml>
+      courseA_harvester_loops1_authored_hint:
+        courseA_harvester_loops1_a: |-
+          เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด
+          
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops2_authored_hint:
+        courseA_harvester_loops2_a: "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> "
+      courseA_harvester_loops3_authored_hint:
+        courseA_harvester_loops3_a: |-
+          ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!
+          
+          <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">4</title>
+          </block></xml>
+        courseA_harvester_loops3_b: "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
+      courseA_harvester_loops4_authored_hint:
+        courseA_harvester_loops4_a: ไม่ต้องกังวลที่จะกดปุ่ม `เริ่ม` เพื่อดูว่าจะเกิดอะไรขึ้น!
+        courseA_harvester_loops4_b: ดูว่าข้าวโพดมีกี่ฝัก? แล้วดูว่าโค้ดของคุณจะทำซ้ำกี่ครั้ง?
+      courseA_harvester_loops5_authored_hint:
+        courseA_harvester_loops5_a: หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะจะถึงมุม และอีกส่วนหนึ่งหลังจากที่ถึงมุมแล้ว
+        courseA_harvester_loops5_b: |-
+          โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">6</title>
+          </block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type="maze_moveSouth" limit="1"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type="maze_moveEast" limit="1"/> </xml> อีก **หนึ่ง** บล็อก
+        courseA_harvester_loops5_c: ใช้เส้นทางนี้เพื่อเดินไปเก็บข้าวโพดให้หมด
       courseA_harvester_loops5a_authored_hint:
         courseA_harvester_loops5a_a: |-
           คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว
+        courseA_harvester_loops5a_b: ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้`<xml><block type="maze_moveSouth" limit="1"/></xml> และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` <xml><block type="maze_moveEast" limit="1"/></xml>
+        courseA_harvester_loops5a_c: ใช้เส้นทางนี้เพื่อเดินไปตามเส้นทางสองทิศทาง
+      courseA_harvester_loops5b_authored_hint:
+        courseA_harvester_loops5b_a: กดปุ่ม `เริ่ม` และดูว่าเกิดอะไรขึ้น!
+        courseA_harvester_loops5b_b: ลูปของคุณมีการทำซ้ำด้วยจำนวนครั้งที่ถูกต้องหรือไม่?
+        courseA_harvester_loops5b_c: เดินไปตามเส้นทางที่ให้มานี้ ทิศทางหนึ่งและก็เปลี่ยนไปอีกทิศทางหนึ่ง
       courseA_harvester_loops6_authored_hint:
         courseA_harvester_loops6_a: หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน
+        courseA_harvester_loops6_b: นี่คือเส้นทางที่คุณควรใช้ เพื่อเก็บข้าวโพดทั้งหมด
+      courseA_harvester_loops7_authored_hint:
+        courseA_harvester_loops7_a: |-
+          คุณต้องใช้บล็อกลูป `ทำซ้ำ` <xml><block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-10">5</title>
+          </block></xml>สองบล็อกมาต่อกัน!
+        courseA_harvester_loops7_b: ให้ใช้ลูปสองลูปเพื่อเดินไปตามเส้นทางที่ให้มานี้
       courseA_harvester_loops9_authored_hint:
+        courseA_harvester_loops9_a: แบ่งปริศนานี้ออกเป็นสามส่วนที่แตกต่างกัน ส่วนหนึ่งสำหรับการเดินไปจนถึงหัวมุมแรก ส่วนหนึ่งสำหรับการเดินไปจนถึงหัวมุมที่สอง และส่วนหนึ่งสำหรับการเดินไปจนถึงหัวมุมสุดท้าย
         courseA_harvester_loops9_b: อย่ากลัวที่จะเรียกใช้งานโค้ดแต่ละส่วนของคุณ และดูว่าจะเกิดอะไรขึ้น!
+        courseA_harvester_loops9_c: เดินไปตามเส้นทางนี้เพื่อไปเก็บข้าวโพดให้หมด
+      courseA_harvester_seq1_authored_hint:
+        courseA_harvester_seq1_a: |-
+          ใช้บล็อกนี้ในการเก็บข้าวโพดเมื่อเกษตรกรเดินไปเจอฝักข้าวโพด!
+          
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          เกษตรกรต้องเดินไปทางทิศตะวันออกสามครั้งเพื่อไปให้ถึงฝักข้าวโพด ให้ใช้บล็อกนี้
+          
+          <xml>
+          <block type="maze_moveEast"/>
+          </xml>
+      courseA_harvester_seq10_authored_hint:
+        courseA_harvester_seq10_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+        courseA_harvester_seq10_c: ลองใช้เส้นทางนี้ในการเก็บข้าวโพดทั้งหมด
+      courseA_harvester_seq13_authored_hint:
+        courseA_bee_seq1_a: |-
+          ใช้บล็อกอันนี้เพื่อให้เกษตรกรเก็บข้าวโพด
+          
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq2_authored_hint:
+        courseA_harvester_seq2_a: อย่าลืมใช้บล็อก <xml><block type="harvester_corn"/></xml> เพื่อเก็บข้าวโพด!
+        courseA_harvester_seq2_b: ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!
+      courseA_harvester_seq3_authored_hint:
+        courseA_harvester_seq3_a: |-
+          คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วย?
+          
+          <xml><block type="harvester_corn"/></xml>
+        courseA_harvester_seq3_b: ลองเปล่งเสียงขั้นตอนออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ไหม
+      courseA_harvester_seq4_authored_hint:
+        courseA_harvester_seq4_a: ช่องว่างระหว่างเกษตรกรกับฝักข้าวโพดมีด้วยกันกี่ช่อง? บล็อกที่ต่อกันอยู่แล้วในที่พื้นที่ทำงานของคุณมีอยู่แล้วกี่บล็อก?
+        courseA_harvester_seq4_b: |-
+          คุณต้องใช้บล็อก ` เคลื่อนที่ไปทางทิศตะวันออก ` ห้าบล็อ
+          <xml><block type="maze_moveEast"/></xml>
+          กและบล็อก ` เก็บข้าวโพด ` หนึ่งบล็อก
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq5_authored_hint:
+        courseA_harvester_seq5_a: บล็อกไหนที่ทำให้เกษตรกรเคลื่อนที่ไปผิดทิศทาง
+        courseA_harvester_seq5_b: คุณต้องเอาบล็อกออกไปบล็อกหนึ่ง
+        courseA_harvester_seq5_c: |-
+          โยนบล็อกนี้ทิ้งขยะไป
+          
+          <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq6_authored_hint:
+        courseA_harvester_seq6_a: หากคุณคิดไม่ออก ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ มันอาจจะช่วยให้คุณหาเส้นทางที่ถูกต้องได้
+      courseA_harvester_seq7_authored_hint:
+        courseA_harvester_seq7_a: ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะจะถึงมุม และอีกส่วนหนึ่งหลังจากที่ถึงมุมแล้ว
+        courseA_harvester_seq7_b: มีปัญหาอะไรไหมครับ? นี่คือเส้นทางที่เกษตรกรควรใช้
+      courseA_harvester_seq9_authored_hint:
+        courseA_harvester_seq9_a: เรียกใช้งานโค้ดสักสองสามครั้งเพื่อดูว่าเกิดอะไรขึ้น ดูว่าเกษตรกรหยุดตรงไหน?
+        courseA_harvester_seq9_b: อย่าลืมเก็บข้าวโพดทั้งหมดด้วย คุณต้องใช้บล็อกเก็บข้าวโพด **3** บล็อก
+        courseA_harvester_seq9_c: คุณควรใช้เส้นทางนี้เพื่อเก็บข้าวโพดทั้งหมด
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          โค้ดของคุณควรเป็นแบบนี้:
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -517,8 +665,7 @@ th:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |
-          Your code should look like this:
-          
+          โค้ดของคุณควรเป็นแบบนี้:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -536,7 +683,7 @@ th:
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          โค้ดของคุณควรเป็นแบบนี้:
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -555,8 +702,7 @@ th:
           </xml>
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
-          
+          โค้ดของคุณควรเป็นแบบนี้:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -564,7 +710,7 @@ th:
           <next>
           <block type="maze_moveEast">
           <next>
-          <block type="maze_moveSouth"/>
+          <block type="maze_moveNorth"/>
           </next>
           </block>
           </next>
@@ -573,10 +719,10 @@ th:
           </block>
           </xml>
       courseA_maze_ramp5_2018_authored_hint:
-        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          โค้ดของคุณควรเป็นแบบนี้:
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -590,24 +736,73 @@ th:
           </next>
           </block>
           </xml>
+      courseA_maze_seq1_authored_hint:
+        courseA_maze_seq1_a: |-
+          หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างเข้าที่เข้าทางกับบล็อก<xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          เจ้านกต้องเคลื่อนที่ไปทางท้ศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น. shใช้บล็อกอันนี้: 
+          
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq10_authored_hint:
+        courseA_maze_seq10_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+      courseA_maze_seq10_2018_authored_hint:
+        courseA_maze_seq10_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+        courseA_maze_seq10_b: คุณต้องเคลื่อนไหวไปถึงสามทิศทางที่ต่างกันเพื่อแก้ปริศนาข้อนี้
+      courseA_maze_seq13_authored_hint:
+        courseA_maze_seq13_a: หากเส้นทางที่คุณต้องใช้ไม่ชัดเจน ลองใช้นิ้วลากเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู
+        courseA_maze_seq13_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น
+        courseA_maze_seq13_c: |-
+          บล็อก <xml><block type="maze_moveNorth"/></xml>
+          
+          <xml><block type="maze_moveEast"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น
+      courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_a: หากเส้นทางที่คุณต้องใช้ไม่ชัดเจน ลองใช้นิ้วลากเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู
+        courseA_maze_seq13_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น
+        courseA_maze_seq13_c: |-
+          บล็อก <xml><block type="maze_moveNorth"/></xml>
+          
+          <xml><block type="maze_moveEast"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูยื่งขึ้น
+      courseA_maze_seq1_2018_authored_hint:
+        courseA_maze_seq1_a: |-
+          หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างเข้าที่เข้าทางกับบล็อก<xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          เจ้านกต้องเคลื่อนที่ไปทางท้ศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น ให้ใช้บล็อกอันนี้: 
+          
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq5_authored_hint:
+        courseA_maze_seq5_a: ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!
       courseA_maze_seq5_2018_authored_hint:
-        '1': Try writing down the steps on paper to find a solution!
+        '1': ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!
         '2': |-
-          You will need to use this block:
+          คุณต้องใช้บล็อกนี้ดู:
           
           <xml><block type="maze_moveSouth"/></xml>
       courseA_maze_seq5a_2018_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
+        '1': ลองเปล่งเสียงขั้นตอนออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ไหม
+      courseA_maze_seq6_authored_hint:
+        courseA_maze_seq6_a: โค้ดที่คุณเขียนเสร็จควรประกอบด้วยบล็อกที่ช่วยในการเคลื่อนไหว 3 บล็อกด้วยกัน
+        courseA_maze_seq6_b: หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะจะถึงมุม และอีกส่วนหนึ่งหลังจากที่ถึงมุมแล้ว
+      courseA_maze_seq6_2018_authored_hint:
+        courseA_maze_seq6_a: โค้ดที่คุณเขียนเสร็จควรประกอบด้วยบล็อกที่ช่วยในการเคลื่อนไหว 3 บล็อกด้วยกัน
+        courseA_maze_seq6_b: หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะจะถึงมุม และอีกส่วนหนึ่งหลังจากที่ถึงมุมแล้ว
+      courseA_maze_seq8_authored_hint:
+        courseA_maze_seq8_a: ถ้าหากคุณติดขัด ลองวาดเป็นภาพลงบนกระดาษเพื่อดูว่าจะให้เจ้านกเคลื่อนที่อย่างไร
+      courseA_maze_seq8_2018_authored_hint:
+        courseA_maze_seq8_a: ถ้าหากคุณติดขัด ลองวาดเป็นภาพลงบนกระดาษเพื่อดูว่าจะให้เจ้านกเคลื่อนที่อย่างไร
       courseA_maze_seq_challenge2_authored_hint:
         courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!
       courseA_maze_seq_challenge2_2018_authored_hint:
         courseA_maze_seq_challenge2_a: ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!
       courseB_Scrat_ramp1_2018_authored_hint:
         '1': If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!
+        '2': ไม่ต้องกลัวว่าคุณจะทำผิด! ลองทำบางอย่างดู และถ้ามันไม่ได้ผล ลองทำอย่างอื่นดู!
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          โค้ดของคุณควรเป็นแบบนี้:
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -623,8 +818,7 @@ th:
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |
-          Your code should look like this:
-          
+          โค้ดของคุณควรเป็นแบบนี้:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -642,7 +836,7 @@ th:
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |
-          Your code should look like this:
+          โค้ดของคุณควรเป็นแบบนี้:
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -661,8 +855,7 @@ th:
           </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
-          
+          โค้ดของคุณควรเป็นแบบนี้:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
@@ -670,7 +863,7 @@ th:
           <next>
           <block type="maze_moveEast">
           <next>
-          <block type="maze_moveSouth"/>
+          <block type="maze_moveNorth"/>
           </next>
           </block>
           </next>
@@ -680,7 +873,7 @@ th:
           </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
-          Your code should look like this:
+          โค้ดของคุณควรเป็นแบบนี้:
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -703,13 +896,17 @@ th:
       courseB_artist_loops9_2018_authored_hint:
         courseB_artist_loops9_c: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
       courseB_collector_loops2_authored_hint:
-        courseB_collector_loops2_a: ต้องขยับเดินไปก่อนที่จะเก็บรวบรวมสมบัติได้
+        courseB_collector_loops2_a: คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้
       courseB_collector_loops2_2018_authored_hint:
-        courseB_collector_loops2_a: ต้องขยับเดินไปก่อนที่จะเก็บรวบรวมสมบัติได้
+        courseB_collector_loops2_a: คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้
       courseB_collector_loops3_authored_hint:
         courseB_collector_prog3_b: โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกในลูปที่ทำซ้ำ
       courseB_collector_loops3_2018_authored_hint:
         courseB_collector_prog3_b: โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกในลูปที่ทำซ้ำ
+      courseB_collector_loops4_authored_hint:
+        courseB_collector_loops4_b: เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ
+      courseB_collector_loops4_2018_authored_hint:
+        courseB_collector_loops4_b: เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ
       courseB_iceage_loops1_authored_hint:
         courseB_iceage_loops1_a: ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!
         courseB_iceage_loops1_b: |-
@@ -747,6 +944,8 @@ th:
         courseB_iceage_loops9_c: เจ้ากระรอกเขี้ยวดาบควรลองใช้เส้นทางนี้ดู เพื่อไปให้ถึงลูกโอ๊ค
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_b: มีวิธีแก้ปริศนานี้สองวิธี
+      courseB_maze_seqOld_authored_hint:
+        courseB_maze_seqOld_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
       courseB_starWars_prog1_authored_hint:
         courseB_starWars_prog1_a: ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น
         courseB_starWars_prog1_b: |
@@ -770,7 +969,7 @@ th:
       courseB_starWars_prog4_authored_hint:
         courseB_starWars_prog4_a: สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป
         courseB_starWars_prog4_b: |-
-          ลองใช้บล็อก `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
+          ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -778,7 +977,7 @@ th:
       courseB_starWars_prog4_2018_authored_hint:
         courseB_starWars_prog4_a: สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป
         courseB_starWars_prog4_b: |-
-          ลองใช้บล็อก `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
+          ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -786,21 +985,23 @@ th:
       courseB_starWars_prog5_authored_hint:
         courseB_starWars_prog5_a: รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม
         courseB_starWars_prog5_b: บีบี-8 จะคว้าเศษซากโลหะตอนที่เขากลิ้งผ่านและทับมันไป
+        courseB_starWars_prog5_c: แกะรอยเส้นทางโดยใช้นิ้วของคุณลากผ่านไป นับจำนวนเศษโลหะไปด้วย
         courseB_starWars_prog5_da: |-
-          ดูสิ่งที่เกิดขึ้นถ้าคุณใช้วิธีการแก้ปัญหาเดียวกันเป็นปริศนาขั้นบันได:
+          ดูสิ่งที่เกิดขึ้น หากว่าคุณใช้วิธีการแก้ปัญหาเดียวกัน เป็นปริศนาขั้นบันได:
           
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog5_2018_authored_hint:
         courseB_starWars_prog5_a: รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม
         courseB_starWars_prog5_b: บีบี-8 จะคว้าเศษซากโลหะตอนที่เขากลิ้งผ่านและทับมันไป
+        courseB_starWars_prog5_c: แกะรอยเส้นทางโดยใช้นิ้วของคุณลากผ่านไป นับจำนวนเศษโลหะไปด้วย
         courseB_starWars_prog5_da: |-
-          ดูสิ่งที่เกิดขึ้นถ้าคุณใช้วิธีการแก้ปัญหาเดียวกันเป็นปริศนาขั้นบันได:
+          ดูสิ่งที่เกิดขึ้น หากว่าคุณใช้วิธีการแก้ปัญหาเดียวกัน เป็นปริศนาขั้นบันได:
           
           ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
       courseB_starWars_prog6_authored_hint:
         courseB_starWars_prog6_a: รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง
         courseB_starWars_prog6_b: |-
-          ลองใช้บล็อก `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
+          ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -808,7 +1009,7 @@ th:
       courseB_starWars_prog6_2018_authored_hint:
         courseB_starWars_prog6_a: รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง
         courseB_starWars_prog6_b: |-
-          ลองใช้บล็อก `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
+          ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง
           <xml>  <block type="controls_repeat_simplified">
           <title name="TIMES">3</title>
           </block>
@@ -1043,34 +1244,36 @@ th:
           ย้ายไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:
           ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: 'หากคุณใช้บล็อก "วาดเส้นไปด้านหน้ายาว 100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ'
+        courseC_artist_prog2_a: '**หากคุณใช้บล็อก<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**'
+        courseC_artist_prog2_b: มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>
       courseC_artist_prog2_2018_authored_hint:
-        courseC_artist_prog2_a: 'หากคุณใช้บล็อก "วาดเส้นไปด้านหน้ายาว 100 พิกเซล" ฉันก็จะวาดเส้นให้โดยอัตโนมัติ'
+        courseC_artist_prog2_a: '**หากคุณใช้บล็อก<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**'
+        courseC_artist_prog2_b: มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
-          เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มี้านยาวด้านละ 100 พิกเซล
-          -ย้ายไปข้างหน้า
-          -เลี้ยว
-          -ย้ายไปข้างหน้า
-          -เลี้ยว
-          -ย้ายไปข้างหน้า
-          -เลี้ยว
-          -ย้ายไปข้างหน้า
-        courseC_artist_prog3_b: ต้องการทำให้โค้ดสั้นลงหรือไม่ ลองใช้ลูปในปริศนานี้ดู
+          เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มีด้านยาวด้านละ 100 พิกเซล
+          -ไปข้างหน้า
+          -หัน
+          -ไปข้างหน้า
+          -หัน
+          -ไปข้างหน้า
+          -หัน
+          -ไปข้างหน้า
+        courseC_artist_prog3_b: ต้องการทำให้โค้ดสั้นลงหรือไม่ ลองใช้บล็อกลูปในปริศนานี้ดู
       courseC_artist_prog3_2018_authored_hint:
         courseC_artist_prog3_a: |-
-          เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มี้านยาวด้านละ 100 พิกเซล
-          -ย้ายไปข้างหน้า
-          -เลี้ยว
-          -ย้ายไปข้างหน้า
-          -เลี้ยว
-          -ย้ายไปข้างหน้า
-          -เลี้ยว
-          -ย้ายไปข้างหน้า
-        courseC_artist_prog3_b: ต้องการทำให้โค้ดสั้นลงหรือไม่ ลองใช้ลูปในปริศนานี้ดู
+          เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มีด้านยาวด้านละ 100 พิกเซล
+          -ไปข้างหน้า
+          -หัน
+          -ไปข้างหน้า
+          -หัน
+          -ไปข้างหน้า
+          -หัน
+          -ไปข้างหน้า
+        courseC_artist_prog3_b: ต้องการทำให้โค้ดสั้นลงหรือไม่ ลองใช้บล็อกลูปในปริศนานี้ดู
       courseC_artist_prog4_authored_hint:
         courseC_artist_prog4_a: เพื่อให้เสร็จสิ้นการวาดจรวด เพียงแค่คุณวาดรูปสามเหลี่ยมไว้ด้านบน!
-        courseC_artist_prog4_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseC_artist_prog4_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
         courseC_artist_prog4_c: |-
           เมื่อต้องการวาดรูปสามเหลี่ยมคุณจะต้อง:
           -ย้ายไปข้างหน้า
@@ -1080,7 +1283,7 @@ th:
           -ย้ายไปข้างหน้า
       courseC_artist_prog4_2018_authored_hint:
         courseC_artist_prog4_a: เพื่อให้เสร็จสิ้นการวาดจรวด เพียงแค่คุณวาดรูปสามเหลี่ยมไว้ด้านบน!
-        courseC_artist_prog4_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseC_artist_prog4_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
         courseC_artist_prog4_c: |-
           เมื่อต้องการวาดรูปสามเหลี่ยมคุณจะต้อง:
           -ย้ายไปข้างหน้า
@@ -1089,23 +1292,23 @@ th:
           -เลี้ยวซ้าย ๑๒๐ องศา
           -ย้ายไปข้างหน้า
       courseC_artist_prog5_authored_hint:
-        courseC_artist_prog5_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
-        courseC_artist_prog5_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseC_artist_prog5_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_artist_prog5_c: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
       courseC_artist_prog5_2018_authored_hint:
-        courseC_artist_prog5_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
-        courseC_artist_prog5_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseC_artist_prog5_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_artist_prog5_c: "คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!\nคุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกเพื่อเปลี่ยนขนาดให้เป็นไปตามที่คุณต้องการ!"
       courseC_artist_prog6_authored_hint:
-        courseC_artist_prog6_a: ศิลปินได้หันหน้าไปทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
-        courseC_artist_prog6_b: ทรงรูปเพชรนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเอง
-        courseC_artist_prog6_c: เนื่องจากรูปทรงเพชรนี้ยังเป็นสี่เหลี่ยมจตุรัสอีกด้วย อย่าลืมหัน 90 องศาที่มุม
+        courseC_artist_prog6_a: ศิลปินได้หันหน้าไปในทิศทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
+        courseC_artist_prog6_b: เพชรเม็ดนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเองเท่านั้น
+        courseC_artist_prog6_c: เนื่องจากรูปทรงเพชรนี้ก็คือสี่เหลี่ยมจตุรัสนั่นเอง อย่าลืมหัน 90 องศาในแต่ละมุมด้วย
       courseC_artist_prog6_2018_authored_hint:
-        courseC_artist_prog6_a: ศิลปินได้หันหน้าไปทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
-        courseC_artist_prog6_b: ทรงรูปเพชรนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเอง
-        courseC_artist_prog6_c: เนื่องจากรูปทรงเพชรนี้ยังเป็นสี่เหลี่ยมจตุรัสอีกด้วย อย่าลืมหัน 90 องศาที่มุม
+        courseC_artist_prog6_a: ศิลปินได้หันหน้าไปในทิศทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
+        courseC_artist_prog6_b: เพชรเม็ดนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเองเท่านั้น
+        courseC_artist_prog6_c: เนื่องจากรูปทรงเพชรนี้ก็คือสี่เหลี่ยมจตุรัสนั่นเอง อย่าลืมหัน 90 องศาในแต่ละมุมด้วย
       courseC_artist_prog7_authored_hint:
         courseC_artist_prog7_a: ทุกมุมไม่ 45 ก็ 90 องศา
         courseC_artist_prog7_b: "มันทำงานขั้นตอนแรกไหม?  \nขั้นตอนที่สองทำงานไหม?  \nผิดตรงไหน?"
-        courseC_artist_prog7_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseC_artist_prog7_c: "คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!\nคุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกหันไป เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!"
         courseC_artist_prog7_d: |-
           คุณต้องการ:
           -ย้ายไปข้างหน้า
@@ -1116,11 +1319,11 @@ th:
           -เลี้ยวขวา 45 องศา
           
           ทำซ้ำรูปแบบนี้ 2 ครั้ง!
-        courseC_artist_prog7_e: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_artist_prog7_e: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_artist_prog7_2018_authored_hint:
         courseC_artist_prog7_a: ทุกมุมไม่ 45 ก็ 90 องศา
         courseC_artist_prog7_b: "มันทำงานขั้นตอนแรกไหม?  \nขั้นตอนที่สองทำงานไหม?  \nผิดตรงไหน?"
-        courseC_artist_prog7_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseC_artist_prog7_c: "คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!\nคุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกหันไป เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!"
         courseC_artist_prog7_d: |-
           คุณต้องการ:
           -ย้ายไปข้างหน้า
@@ -1131,11 +1334,13 @@ th:
           -เลี้ยวขวา 45 องศา
           
           ทำซ้ำรูปแบบนี้ 2 ครั้ง!
-        courseC_artist_prog7_e: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_artist_prog7_e: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_collector_prog2_authored_hint:
-        courseC_collector_prog2_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_collector_prog2_a: คุณสามารถใช้บล็อก <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง
+        courseC_collector_prog2_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_collector_prog2_2018_authored_hint:
-        courseC_collector_prog2_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_collector_prog2_a: คุณสามารถใช้บล็อก <xml><block type="maze_move"><title name="DIR">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง
+        courseC_collector_prog2_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_collector_prog3_authored_hint:
         courseC_collector_prog3_a: โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml><block type=""เมื่อเรียกใช้งาน"/"></block></xml>เท่านั้น
         courseC_collector_prog3_b: ลองใช้ปุ่ม  "ขั้นตอน " เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?
@@ -1146,10 +1351,10 @@ th:
         courseC_collector_prog3_c: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ
       courseC_collector_prog4_authored_hint:
         courseC_collector_prog4_a: หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ
-        courseC_collector_prog4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_collector_prog4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_collector_prog4_2018_authored_hint:
         courseC_collector_prog4_a: หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ
-        courseC_collector_prog4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_collector_prog4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_collector_prog5_authored_hint:
         courseC_collector_prog5_b: ถ้าคุณแก้ไขข้อผิดพลาดหนึ่งและโปรแกรมยังคงไม่ทำงาน ให้ใช้ขั้นตอนข้างต้นเพื่อค้นหาบั๊กเพิ่มเติม
         courseC_collector_prog5_c: หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ
@@ -1207,15 +1412,17 @@ th:
         courseC_harvester_loops2_b: คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว
         courseC_harvester_loops2_c: ลูปหนึ่งจะทำซ้ำคำสั่ง `ย้ายไปข้างหน้า` และอีกลูปหนึ่งจะทำซ้ำคำสั่ง `เก็บฟักทอง`
       courseC_harvester_loops3_authored_hint:
+        courseC_harvester_loops3_a: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
         courseC_harvester_loops3_b: สำหรับฟักทองลูกแรก คุณสามารถใช้โค้ดที่คล้ายกับของปริศนาสุดท้าย ซึ่งขึ้นอยู่กับว่าคุณต้องการที่จะหันไปทางไหนหลังจากนั้น
       courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_a: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
         courseC_harvester_loops3_b: สำหรับฟักทองลูกแรก คุณสามารถใช้โค้ดที่คล้ายกับของปริศนาสุดท้าย ซึ่งขึ้นอยู่กับว่าคุณต้องการที่จะหันไปทางไหนหลังจากนั้น
       courseC_harvester_loops4_authored_hint:
         courseC_harvester_loops4_a: ใช้บล็อกใหม่ ` เก็บข้าวโพด `เพื่อเก็บรวบรวมข้าวโพด
-        courseC_harvester_loops4_b: คุณสามารถใช้ลูปทำซ้ำหลายครั้งในโค้ดของคุณ บางอันใช้เก็บข้าวโพดและบางอันใช้เก็บฟักทอง
+        courseC_harvester_loops4_b: คุณสามารถใช้บล็อกลูปทำซ้ำหลายครั้งในโค้ดของคุณ บางอันใช้เก็บข้าวโพดและบางอันใช้เก็บฟักทอง
       courseC_harvester_loops4_2018_authored_hint:
         courseC_harvester_loops4_a: ใช้บล็อกใหม่ ` เก็บข้าวโพด `เพื่อเก็บรวบรวมข้าวโพด
-        courseC_harvester_loops4_b: คุณสามารถใช้ลูปทำซ้ำหลายครั้งในโค้ดของคุณ บางอันใช้เก็บข้าวโพดและบางอันใช้เก็บฟักทอง
+        courseC_harvester_loops4_b: คุณสามารถใช้บล็อกลูปทำซ้ำหลายครั้งในโค้ดของคุณ บางอันใช้เก็บข้าวโพดและบางอันใช้เก็บฟักทอง
       courseC_harvester_loops5_authored_hint:
         courseC_harvester_loops5_a: ถ้าคุณเกิดติดขัดขึ้นมา ให้ลองวาดโปรแกรมทั้งหมด แล้วมองหารูปแบบการทำซ้ำ
         courseC_harvester_loops5_b: ขั้นบันไดนี้ดูคุ้นๆ จากปริศนาอื่นๆหรือไม่ การเคลื่อนไหวควรจะคล้ายกัน ขอให้จำไว้ว่าให้เก็บรวบรวมพืชผลไปตลอดเส้นทาง
@@ -1238,34 +1445,50 @@ th:
         courseC_harvester_loops8_b: ถ้าคุณต้องการที่จะทำให้รหัสของคุณง่ายขึ้นไปอีก คุณยังสามารถใส่ลูป`ทำซ้ำ` ภายในของอีกลูปหนึ่ง! ซึ่งเรียกว่า ** ลูปซ้อนลูป **
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
-          ทุกอย่างทำงานหลังจากขั้นตอนแรกหรือไม่?
-          มันยังคงทำงานอยู่หลังจากที่สองหรือไม่?
+          ทุกอย่างทำงานด้วยดีหลังจากขั้นตอนแรกหรือไม่?
+          มันยังคงทำงานอยู่หลังจากขั้นตอนที่สองหรือไม่?
           ตรงไหนที่ผิด?
-        courseC_maze_debugging1_b: มีบล็อก1 บล็อกที่คุณต้องเพิ่มเพื่อให้ปริศนานี้เสร็จสมบูรณ์
+        courseC_maze_debugging1_b: มีบล็อก 1 บล็อกที่คุณต้องเพิ่มเพื่อให้ปริศนานี้เสร็จสมบูรณ์
       courseC_maze_debugging1_2018_authored_hint:
         courseC_maze_debugging1_a: |-
-          ทุกอย่างทำงานหลังจากขั้นตอนแรกหรือไม่?
-          มันยังคงทำงานอยู่หลังจากที่สองหรือไม่?
+          ทุกอย่างทำงานด้วยดีหลังจากขั้นตอนแรกหรือไม่?
+          มันยังคงทำงานอยู่หลังจากขั้นตอนที่สองหรือไม่?
           ตรงไหนที่ผิด?
-        courseC_maze_debugging1_b: มีบล็อก1 บล็อกที่คุณต้องเพิ่มเพื่อให้ปริศนานี้เสร็จสมบูรณ์
+        courseC_maze_debugging1_b: มีบล็อก 1 บล็อกที่คุณต้องเพิ่มเพื่อให้ปริศนานี้เสร็จสมบูรณ์
       courseC_maze_debugging2_authored_hint:
         courseC_maze_debugging2_a: มีโค้ดที่มีคุณค่าในพื้นที่ทำงานเป็นจำนวนมาก อย่าเพียงแค่ลบออกทั้งหมดแล้วเริ่มต้นใหม่!
         courseC_maze_debugging2_b: |-
-          ทุกอย่างทำงานหลังจากขั้นตอนแรกหรือไม่?
-          มันยังคงทำงานอยู่หลังจากที่สองหรือไม่?
+          ทุกอย่างทำงานด้วยดีหลังจากขั้นตอนแรกหรือไม่?
+          มันยังคงทำงานอยู่หลังจากขั้นตอนที่สองหรือไม่?
           ตรงไหนที่ผิด?
-        courseC_maze_debugging2_c: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseC_maze_debugging2_c: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_a: มีโค้ดที่มีคุณค่าในพื้นที่ทำงานเป็นจำนวนมาก อย่าเพียงแค่ลบออกทั้งหมดแล้วเริ่มต้นใหม่!
         courseC_maze_debugging2_b: |-
-          ทุกอย่างทำงานหลังจากขั้นตอนแรกหรือไม่?
-          มันยังคงทำงานอยู่หลังจากที่สองหรือไม่?
+          ทุกอย่างทำงานด้วยดีหลังจากขั้นตอนแรกหรือไม่?
+          มันยังคงทำงานอยู่หลังจากขั้นตอนที่สองหรือไม่?
           ตรงไหนที่ผิด?
-        courseC_maze_debugging2_c: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseC_maze_debugging2_c: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
       courseC_maze_debugging3_authored_hint:
-        courseC_maze_debugging3_b: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseC_maze_debugging3_a: |-
+          เมื่อต้องการลบบล็อกใดบล็อคหนึ่งออกจากตรงกลางของโค้ด ให้ลากบล็อกทั้งหมดไปยังส่วนอื่นของพื้นที่ทำงาน
+          
+          แล้วลากบล็อกที่คุณต้องการลบกลับไปยังกล่องเครื่องมือ
+          
+          สุดท้าย ให้ใส่บล็อกอื่นๆของคุณกลับเข้าที่
+          
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_b: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
       courseC_maze_debugging3_2018_authored_hint:
-        courseC_maze_debugging3_b: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
+        courseC_maze_debugging3_a: |-
+          เมื่อต้องการลบบล็อกใดบล็อคหนึ่งออกจากตรงกลางของโค้ด ให้ลากบล็อกทั้งหมดไปยังส่วนอื่นของพื้นที่ทำงาน
+          
+          แล้วลากบล็อกที่คุณต้องการลบกลับไปยังกล่องเครื่องมือ
+          
+          สุดท้าย ให้ใส่บล็อกอื่นๆของคุณกลับเข้าที่
+          
+          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_b: ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น
       courseC_maze_debugging4_authored_hint:
         courseC_maze_debugging4_a: ใช้ปุ่ม  "ขั้นตอน " เพื่อเรียกใช้งานผ่านคำสั่งทีละครั้ง คุณคิดว่าจะช่วยให้คุณค้นหาบรรทัดที่ผิดได้หรือไม่
       courseC_maze_debugging4_2018_authored_hint:
@@ -1303,6 +1526,24 @@ th:
       courseC_maze_programming2_2018_authored_hint:
         courseC_maze_programming2_a: การใช้บล็อก <xml><block type="maze_moveForward"/></xml> นั้นให้ลากบล็อกจากพื้นที่บริเวณกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก<xml><block type="when_run"/></xml>
         courseC_maze_programming2_b: ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก "เริ่ม" อีกครั้งหนึ่ง
+      courseC_maze_programming3_authored_hint:
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          
+          เมื่อต้องการลบบล็อกใดบล็อคหนึ่งออกจากตรงกลางของโค้ด ให้ลากบล็อกทั้งหมดไปยังส่วนอื่นของพื้นที่ทำงาน
+          
+          แล้วลากบล็อกที่คุณต้องการลบกลับไปยังกล่องเครื่องมือ
+          
+          สุดท้าย ให้ใส่บล็อกอื่นๆของคุณกลับเข้าที่
+      courseC_maze_programming3_2018_authored_hint:
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+          
+          เมื่อต้องการลบบล็อกใดบล็อคหนึ่งออกจากตรงกลางของโค้ด ให้ลากบล็อกทั้งหมดไปยังส่วนอื่นของพื้นที่ทำงาน
+          
+          แล้วลากบล็อกที่คุณต้องการลบกลับไปยังกล่องเครื่องมือ
+          
+          สุดท้าย ให้ใส่บล็อกอื่นๆของคุณกลับเข้าที่
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: มีวิธีแก้ปริศนานี้สองวิธี
         courseC_maze_programming6_b: ตามนิ้วของคุณไป จากเจ้านกตัวนั้นไปยังเจ้าหมูนั่น ก้าวไหนบ้างที่คุณต้องใช้
@@ -1318,9 +1559,9 @@ th:
       courseC_maze_programming7_2018_authored_hint:
         courseC_maze_programming7_b: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ
       courseC_maze_programming8_authored_hint:
-        courseC_maze_programming8_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming8_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_maze_programming8_2018_authored_hint:
-        courseC_maze_programming8_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming8_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseC_starWars_loops1_authored_hint:
         courseC_starWars_loops1_b: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       courseC_starWars_loops10_authored_hint:
@@ -1331,6 +1572,8 @@ th:
         courseC_starWars_loops10_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       courseC_starWars_loops1_2018_authored_hint:
         courseC_starWars_loops1_b: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
+      courseC_starWars_loops2_2018_authored_hint:
+        courseC_starWars_loops2_a: ในการทำซ้ำโค้ดนั้น ให้ลากลูป `ทำซ้ำ`ออกมาจากกล่องเครื่องมือ แล้วใส่บล็อกที่คุณต้องการทำซ้ำไว้ภายใน
       courseC_starWars_loops4_authored_hint:
         courseC_starWars_loops4_b: 'แต่ละลูป `ทำซ้ำ` จะมีเพียงหนึ่งคำสั่งอยู่ภายใน คือ` เลื่อนไปข้างหน้า `.'
       courseC_starWars_loops4_2018_authored_hint:
@@ -1341,38 +1584,62 @@ th:
         courseC_starWars_loops7_c: ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to switch their angles, too!
+      courseD_artist_binary1_authored_hint:
+        courseD_artist_binary1_a: ใส่ค่าไบนารีที่เป็นเลข 0 (ศูนย์) หรือ 1(หนึ่ง) ที่คุณต้องการ ลงไปแทน "???"
+        courseD_artist_binary1_b: ศิลปินจะวาดช่องเป็นสีขาวแทนค่า 1 และวาดช่องเป็นสีดำแทนค่า 0 ทุกๆตัวเลข
+        courseD_artist_binary1_c: |-
+          ต่อไปนี้คือวิธีที่คุณใส่ข้อมูลไบนารีโค้ดของคุณ:
+          
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+      courseD_artist_binary1_2018_authored_hint:
+        courseD_artist_binary1_a: ใส่ค่าไบนารีที่เป็นเลข 0 (ศูนย์) หรือ 1(หนึ่ง) ที่คุณต้องการ ลงไปแทน "???"
+        courseD_artist_binary1_b: ศิลปินจะวาดช่องเป็นสีขาวแทนค่า 1 และวาดช่องเป็นสีดำแทนค่า 0 ทุกๆตัวเลข
+        courseD_artist_binary1_c: |-
+          ต่อไปนี้คือวิธีที่คุณใส่ข้อมูลไบนารีโค้ดของคุณ:
+          
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary2_authored_hint:
         courseD_artist_binary2_a: เพียงคลิก ` เริ่ม `เพื่อดูโปรแกรมนี้ทำงาน
       courseD_artist_binary2_2018_authored_hint:
         courseD_artist_binary2_a: เพียงคลิก ` เริ่ม `เพื่อดูโปรแกรมนี้ทำงาน
+      courseD_artist_binary3_authored_hint:
+        courseD_artist_binary3_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseD_artist_binary3_2018_authored_hint:
+        courseD_artist_binary3_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseD_artist_binary4_authored_hint:
-        courseD_artist_binary4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโต้ด เพื่อดูสิ่งที่จะเกิดขึ้นแม้ว่าคุณจะไม่คิดว่าคุณได้แก้ไขปริศนาแล้วหรือไม่ก็ตาม
+        courseD_artist_binary4_a: ให้มองดูที่สี่เหลี่ยมจตุรัสสามอันแรกแถวบนสุด คุณสามารถทำรูปทั้งสามเหล่านี้ซ้ำแล้วซ้ำอีกเพื่อให้ได้รูปแบบทั้งผืนตามที่คุณต้องการ ได้หรือไม่?
+        courseD_artist_binary4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณเองจะไม่ได้คิดว่าคุณจะสามารถแก้ไขปริศนาได้แล้วก็ตาม
       courseD_artist_binary4_2018_authored_hint:
-        courseD_artist_binary4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโต้ด เพื่อดูสิ่งที่จะเกิดขึ้นแม้ว่าคุณจะไม่คิดว่าคุณได้แก้ไขปริศนาแล้วหรือไม่ก็ตาม
+        courseD_artist_binary4_a: ให้มองดูที่สี่เหลี่ยมจตุรัสสามอันแรกแถวบนสุด คุณสามารถทำรูปทั้งสามเหล่านี้ซ้ำแล้วซ้ำอีกเพื่อให้ได้รูปแบบทั้งผืนตามที่คุณต้องการ ได้หรือไม่?
+        courseD_artist_binary4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณเองจะไม่ได้คิดว่าคุณจะสามารถแก้ไขปริศนาได้แล้วก็ตาม
       courseD_artist_binary5_authored_hint:
-        courseD_artist_binary5_a: ลองเรียกใช้รหัสดูก่อนเพื่อดูว่าสิ่งที่คุณต้องทำงานด้วยเป็นอย่างไร?
-        courseD_artist_binary5_c: "หากคุณมีปัญหาในการแก้ปริศนานี้ให้ออก ลองเขียนไบนารีนั้นลงบนกระดาษและมองหารูปแบบดู\n"
+        courseD_artist_binary5_a: ลองเรียกใช้งานโค้ดดูก่อน เพื่อดูว่า มีอะไรที่คุณใช้ได้บ้าง
+        courseD_artist_binary5_b: คุณแค่สลับแถว เพียงสองแถวเพื่อสร้างรอยยิ้ม
+        courseD_artist_binary5_c: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนโค้ดไบนารีแถวนั้นลงบนกระดาษสักแผ่น แล้วมองหาดูว่ามีรูปแบบอะไร
       courseD_artist_binary5_2018_authored_hint:
-        courseD_artist_binary5_a: ลองเรียกใช้รหัสดูก่อนเพื่อดูว่าสิ่งที่คุณต้องทำงานด้วยเป็นอย่างไร?
-        courseD_artist_binary5_c: "หากคุณมีปัญหาในการแก้ปริศนานี้ให้ออก ลองเขียนไบนารีนั้นลงบนกระดาษและมองหารูปแบบดู\n"
+        courseD_artist_binary5_a: ลองเรียกใช้งานโค้ดดูก่อน เพื่อดูว่า มีอะไรที่คุณใช้ได้บ้าง
+        courseD_artist_binary5_b: คุณแค่สลับแถว เพียงสองแถวเพื่อสร้างรอยยิ้ม
+        courseD_artist_binary5_c: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนโค้ดไบนารีแถวนั้นลงบนกระดาษสักแผ่น แล้วมองหาดูว่ามีรูปแบบอะไร
       courseD_artist_binary6_authored_hint:
-        courseD_artist_binary6_a: เริ่มต้นที่ด้านซ้ายบน คุณต้องอ่านไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มที่จะทำซ้ำ?
-        courseD_artist_binary6_b: คุณสามารถสร้างสตริงที่ไบนารีของคุณทีละเล็กทีละน้อย และทำการทดสอบไปเรื่อยๆ!
+        courseD_artist_binary6_a: เริ่มต้นที่ด้านซ้ายบนสุด สังเกตุว่ามันจะไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มซ้ำไปซ้ำมา?
+        courseD_artist_binary6_b: คุณสามารถสร้างสายอัขระไบนารีทีละเล็กทีละน้อย และทำการทดสอบไปเรื่อยๆ!
       courseD_artist_binary6_2018_authored_hint:
-        courseD_artist_binary6_a: เริ่มต้นที่ด้านซ้ายบน คุณต้องอ่านไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มที่จะทำซ้ำ?
-        courseD_artist_binary6_b: คุณสามารถสร้างสตริงที่ไบนารีของคุณทีละเล็กทีละน้อย และทำการทดสอบไปเรื่อยๆ!
+        courseD_artist_binary6_a: เริ่มต้นที่ด้านซ้ายบนสุด สังเกตุว่ามันจะไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มซ้ำไปซ้ำมา?
+        courseD_artist_binary6_b: คุณสามารถสร้างสายอัขระไบนารีทีละเล็กทีละน้อย และทำการทดสอบไปเรื่อยๆ!
       courseD_artist_binary7_authored_hint:
-        courseD_artist_binary7_a: เริ่มต้นที่ด้านซ้ายบน คุณต้องอ่านไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มที่จะทำซ้ำ?
-        courseD_artist_binary7_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโต้ด เพื่อดูสิ่งที่จะเกิดขึ้นแม้ว่าคุณจะไม่คิดว่าคุณได้แก้ไขปริศนาแล้วหรือไม่ก็ตาม
+        courseD_artist_binary7_a: เริ่มต้นที่ด้านซ้ายบนสุด สังเกตุว่ามันจะไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มซ้ำไปซ้ำมา?
+        courseD_artist_binary7_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณเองจะไม่ได้คิดว่าคุณจะสามารถแก้ไขปริศนาได้แล้วก็ตาม
       courseD_artist_binary7_2018_authored_hint:
-        courseD_artist_binary7_a: เริ่มต้นที่ด้านซ้ายบน คุณต้องอ่านไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มที่จะทำซ้ำ?
-        courseD_artist_binary7_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโต้ด เพื่อดูสิ่งที่จะเกิดขึ้นแม้ว่าคุณจะไม่คิดว่าคุณได้แก้ไขปริศนาแล้วหรือไม่ก็ตาม
+        courseD_artist_binary7_a: เริ่มต้นที่ด้านซ้ายบนสุด สังเกตุว่ามันจะไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มซ้ำไปซ้ำมา?
+        courseD_artist_binary7_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณเองจะไม่ได้คิดว่าคุณจะสามารถแก้ไขปริศนาได้แล้วก็ตาม
       courseD_artist_binary8_authored_hint:
         courseD_artist_binary8_a: รูปเกลียวนั้นสามารถสร้างความสับสนในบางครั้ง. แยกเส้นแนวนอนแต่ละเส้นไว้ในใจของคุณในขณะที่คุณออกแบบ
-        courseD_artist_binary8_b: ลองเรียกใช้รหัสดูก่อนเพื่อดูว่าสิ่งที่คุณต้องทำงานด้วยเป็นอย่างไร?
+        courseD_artist_binary8_b: ลองเรียกใช้งานโค้ดดูก่อน เพื่อดูว่า มีอะไรที่คุณใช้ได้บ้าง
+        courseD_artist_binary8_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseD_artist_binary8_2018_authored_hint:
         courseD_artist_binary8_a: รูปเกลียวนั้นสามารถสร้างความสับสนในบางครั้ง. แยกเส้นแนวนอนแต่ละเส้นไว้ในใจของคุณในขณะที่คุณออกแบบ
-        courseD_artist_binary8_b: ลองเรียกใช้รหัสดูก่อนเพื่อดูว่าสิ่งที่คุณต้องทำงานด้วยเป็นอย่างไร?
+        courseD_artist_binary8_b: ลองเรียกใช้งานโค้ดดูก่อน เพื่อดูว่า มีอะไรที่คุณใช้ได้บ้าง
+        courseD_artist_binary8_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |2
           โปรแกรมของคุณควร:
@@ -1489,7 +1756,28 @@ th:
           
           รูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำรูปห้าเหลี่ยมด้านเท่า (ที่มีด้าน 50 px) 15 ครั้งโดยใช้การหันไป 48 องศา
       courseD_artist_ramp12_authored_hint:
-        courseD_artist_ramp12_c: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseD_artist_ramp12_c: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
+      courseD_autorun_binary2_2019_authored_hint:
+        courseD_artist_binary2_a: เพียงคลิก ` เริ่ม `เพื่อดูโปรแกรมนี้ทำงาน
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseD_autorun_binary4_2019_authored_hint:
+        courseD_artist_binary4_a: ให้มองดูที่สี่เหลี่ยมจตุรัสสามอันแรกแถวบนสุด คุณสามารถทำรูปทั้งสามเหล่านี้ซ้ำแล้วซ้ำอีกเพื่อให้ได้รูปแบบทั้งผืนตามที่คุณต้องการ ได้หรือไม่?
+        courseD_artist_binary4_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณเองจะไม่ได้คิดว่าคุณจะสามารถแก้ไขปริศนาได้แล้วก็ตาม
+      courseD_autorun_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: ลองเรียกใช้งานโค้ดดูก่อน เพื่อดูว่า มีอะไรที่คุณใช้ได้บ้าง
+        courseD_artist_binary5_b: คุณแค่สลับแถว เพียงสองแถวเพื่อสร้างรอยยิ้ม
+        courseD_artist_binary5_c: หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนโค้ดไบนารีแถวนั้นลงบนกระดาษสักแผ่น แล้วมองหาดูว่ามีรูปแบบอะไร
+      courseD_autorun_binary6_2019_authored_hint:
+        courseD_artist_binary6_a: เริ่มต้นที่ด้านซ้ายบนสุด สังเกตุว่ามันจะไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มซ้ำไปซ้ำมา?
+        courseD_artist_binary6_b: คุณสามารถสร้างสายอัขระไบนารีทีละเล็กทีละน้อย และทำการทดสอบไปเรื่อยๆ!
+      courseD_autorun_binary7_2019_authored_hint:
+        courseD_artist_binary7_a: เริ่มต้นที่ด้านซ้ายบนสุด สังเกตุว่ามันจะไปไกลเท่าไหร่ ก่อนที่รูปแบบจะเริ่มซ้ำไปซ้ำมา?
+        courseD_artist_binary7_b: อย่ากลัวที่จะทำผิดพลาด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณเองจะไม่ได้คิดว่าคุณจะสามารถแก้ไขปริศนาได้แล้วก็ตาม
+      courseD_autorun_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: รูปเกลียวนั้นสามารถสร้างความสับสนในบางครั้ง. แยกเส้นแนวนอนแต่ละเส้นไว้ในใจของคุณในขณะที่คุณออกแบบ
+        courseD_artist_binary8_b: ลองเรียกใช้งานโค้ดดูก่อน เพื่อดูว่า มีอะไรที่คุณใช้ได้บ้าง
+        courseD_artist_binary8_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเขียนไบนารีและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_hintVid1: ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!
         courseD_bee_conditionals2_a: บางทีดอกไม้ก็จะอยู่ตรงนั้น บางทีก็ไม่อยู่ ถ้าคุณต้องการให้โค้ดของคุณทำงานได้ทั้งสองกรณ๊ ให้แน่ใจว่าคุณใช้ คำสั่ง `ถ้า(if)`
@@ -1503,10 +1791,12 @@ th:
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_hintVid1: ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!
         courseD_bee_conditionals3_a: ให้แน่ใจว่าคุณใช้ คำสั่ง`ถ้า(if)`เพื่อเช็คพื้นที่ว่างแต่ละอันว่ามีดอกไม้อยู่หรือไม่
+        courseD_bee_conditionals3_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
         courseD_bee_conditionals3_hintVid2: ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา
       courseD_bee_conditionals3_2018_authored_hint:
         courseD_bee_conditionals3_hintVid1: ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!
         courseD_bee_conditionals3_a: ให้แน่ใจว่าคุณใช้ คำสั่ง`ถ้า(if)`เพื่อเช็คพื้นที่ว่างแต่ละอันว่ามีดอกไม้อยู่หรือไม่
+        courseD_bee_conditionals3_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
         courseD_bee_conditionals3_hintVid2: ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_hintVid1: ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!
@@ -1587,10 +1877,10 @@ th:
           มันควรจะทำอะไร?
           มันบอกอะไรแก่คุณ?
       courseD_farmer_condLoops1_authored_hint:
-        courseD_farmer_condLoops1_a: คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้ลูปทำซ้ำ
+        courseD_farmer_condLoops1_a: คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้บล็อกลูปทำซ้ำ
         courseD_farmer_condLoops1_b: ให้แน่ใจว่าได้ใช้บล็อก `ถ้า นี่คือข้าวโพด` ไม่อย่างนั้นคุณอาจจะพยายามเก็บบางอย่างที่ไม่ได้ปลูกอยู่ตรงนั้น
       courseD_farmer_condLoops1_2018_authored_hint:
-        courseD_farmer_condLoops1_a: คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้ลูปทำซ้ำ
+        courseD_farmer_condLoops1_a: คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้บล็อกลูปทำซ้ำ
         courseD_farmer_condLoops1_b: ให้แน่ใจว่าได้ใช้บล็อก `ถ้า นี่คือข้าวโพด` ไม่อย่างนั้นคุณอาจจะพยายามเก็บบางอย่างที่ไม่ได้ปลูกอยู่ตรงนั้น
       courseD_farmer_condLoops2_authored_hint:
         courseD_farmer_condLoops2_a: 'วิธีการทำที่ดีที่สุด ด้วยการซ้อนคำสั่ง `ถ้า(if)` โดยการวางอันหนึ่งไว้ภายในอีกอันหนึ่ง  '
@@ -1670,10 +1960,10 @@ th:
         courseD_maze_nestedLoops5_a: มองหาขั้นตอนที่เป็นรูปแบบบันไดในเขาวงกตนี้ เพื่อค้นหาที่ที่สามารถนำเอาลูปซ้อนลูปมาใช้
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_a: ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกได้รับการคลิกเอามาต่อเข้าด้วยกันแล้วคลิก "เริ่ม" อีกครั้ง
-        courseC_maze_programming1_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming1_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_maze_ramp1_2018_authored_hint:
         courseC_maze_programming1_a: ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกได้รับการคลิกเอามาต่อเข้าด้วยกันแล้วคลิก "เริ่ม" อีกครั้ง
-        courseC_maze_programming1_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming1_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_maze_ramp2_authored_hint:
         courseC_maze_programming2_a: การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`
         courseC_maze_programming2_b: ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกถูกคลิกเอามาต่อเข้ากันกับบล็อก `เมื่อเรียกใช้งาน`
@@ -1681,17 +1971,17 @@ th:
         courseC_maze_programming2_a: การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`
         courseC_maze_programming2_b: ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกถูกคลิกเอามาต่อเข้ากันกับบล็อก `เมื่อเรียกใช้งาน`
       courseD_maze_ramp5_authored_hint:
-        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_maze_ramp5_2018_authored_hint:
-        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_maze_ramp5a_authored_hint:
-        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_maze_ramp5a_2018_authored_hint:
-        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_maze_ramp5b_authored_hint:
-        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_maze_ramp5b_2018_authored_hint:
-        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming5_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: มีวิธีแก้ปริศนานี้สองวิธี
         courseC_maze_programming6_c: จำไว้ว่าคุณสามารถเขียนโค้ดทีละหนึ่งชิ้นแล้วกด " เริ่ม" เพื่อดูว่าคุณควรจะทำอะไรต่อไป
@@ -1779,13 +2069,13 @@ th:
       courseD_playLab_cond2_2018_authored_hint:
         courseD_playLab_cond2_a: เพื่อที่จะประสบความสำเร็จกับปริศนานี้, ใช้ บล็อก`ทำคะแนน`ไว้ด้านล่างของเหตุการณ์ ` เมื่อนักแสดง 1 สัมผัสนักแสดงที่ 2 `
       courseD_playLab_cond3_authored_hint:
-        courseD_playLab_cond3_a: คุณจะต้องเพิ่มบล็อกสองบล็อกให้กับลูป `ซ้ำตลอดกาล `  อันที่หนึ่งจะเลือกอารมณ์ที่สุ่มสำหรับมังกร (นักแสดงที่ 2) และอีกอันจะรอ1 วินาทีก่อนที่จะผ่านลูปอีกครั้ง.
+        courseD_playLab_cond3_a: คุณจะต้องเพิ่มบล็อกสองบล็อกให้กับลูป ` ทำซ้ำตลอดไป `  บล็อกอันที่หนึ่งจะเลือกอารมณ์แบบสุ่มให้กับเจ้ามังกร (นักแสดงที่ 2) และสำหรับบล็อกอีกอันจะให้รอ 1 วินาทีก่อนที่จะวนลูปอีกครั้งหนึ่ง
       courseD_playLab_cond3_2018_authored_hint:
-        courseD_playLab_cond3_a: คุณจะต้องเพิ่มบล็อกสองบล็อกให้กับลูป `ซ้ำตลอดกาล `  อันที่หนึ่งจะเลือกอารมณ์ที่สุ่มสำหรับมังกร (นักแสดงที่ 2) และอีกอันจะรอ1 วินาทีก่อนที่จะผ่านลูปอีกครั้ง.
+        courseD_playLab_cond3_a: คุณจะต้องเพิ่มบล็อกสองบล็อกให้กับลูป ` ทำซ้ำตลอดไป `  บล็อกอันที่หนึ่งจะเลือกอารมณ์แบบสุ่มให้กับเจ้ามังกร (นักแสดงที่ 2) และสำหรับบล็อกอีกอันจะให้รอ 1 วินาทีก่อนที่จะวนลูปซ้ำอีกครั้งหนึ่ง
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_c: "`ถ้า`มังกรมีความสุข\n   - `ทำคะแนน`\n   - `ทำคะแนน`\nนอกจากนั้น\n  - `ทำคะแนน`"
+        courseD_playLab_cond3_c: "` ถ้า (if) ` มังกรมีอารมณ์ดี\n   - `ทำแต้ม`\n   - `ทำแต้ม`\nไม่เช่นนั้น\n  - `ทำแต้ม`"
       courseD_playLab_cond3a_2018_authored_hint:
-        courseD_playLab_cond3_c: "`ถ้า`มังกรมีความสุข\n   - `ทำคะแนน`\n   - `ทำคะแนน`\nนอกจากนั้น\n  - `ทำคะแนน`"
+        courseD_playLab_cond3_c: "` ถ้า (if) ` มังกรมีอารมณ์ดี\n   - `ทำแต้ม`\n   - `ทำแต้ม`\nไม่เช่นนั้น\n  - `ทำแต้ม`"
       courseD_playLab_cond4_authored_hint:
         courseD_playLab_cond4_a: "คุณต้องการที่จะใช้เหตุการณ์ ` เมื่อเรียกใช้งาน` ที่จะได้รับนินจาไล่ล่าเจ้าโจรสลัด.\nเพื่อให้"
         courseD_playLab_cond4_b: มีบล็อกพิเศษที่เรียกว่า ' กำหนดให้นินจาใส่หน้ากากทั้งหมดไล่ล่าผู้เล่น... ' ที่จะทำให้นินจาร้อนรนในการติดตามไล่ล่าไม่ว่าโจรสลัดจะไปไหน!
@@ -1795,47 +2085,47 @@ th:
         courseD_playLab_cond4_b: มีบล็อกพิเศษที่เรียกว่า ' กำหนดให้นินจาใส่หน้ากากทั้งหมดไล่ล่าผู้เล่น... ' ที่จะทำให้นินจาร้อนรนในการติดตามไล่ล่าไม่ว่าโจรสลัดจะไปไหน!
         courseD_playLab_cond4_c: ใส่บล็อก ' จบเกมพร้อมความพ่ายแพ้ ` ภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1สัมผัสที่ นักแสดงที่ 3`
       courseD_playLab_cond5_authored_hint:
-        courseD_playLab_cond5_a: ใช้คำสั่ง` ถ้า(if) ` ที่เปรียบเทียบว่า ` ทำคะแนน ' นั้น ` > ` 5 หรือไม่เพื่อจบการท้าทายนี้ลง
-        courseD_playLab_cond5_b: คุณสามารถมีลูป` ทำซ้ำไปตลอดกาล` มากกว่าหนึ่ง ในพื้นที่ทำงาน
+        courseD_playLab_cond5_a: ใช้คำสั่ง` ถ้า (if) ` ที่เปรียบเทียบว่า ` ทำแต้ม ' นั้น ` > ` 5 โดยให้ถือว่าการท้าทายนี้ได้จบลงแล้ว
+        courseD_playLab_cond5_b: คุณสามารถมีลูป` ทำซ้ำตลอดไป` มากกว่าหนึ่งลูปในพื้นที่ทำงาน
       courseD_playLab_cond5_2018_authored_hint:
-        courseD_playLab_cond5_a: ใช้คำสั่ง` ถ้า(if) ` ที่เปรียบเทียบว่า ` ทำคะแนน ' นั้น ` > ` 5 หรือไม่เพื่อจบการท้าทายนี้ลง
-        courseD_playLab_cond5_b: คุณสามารถมีลูป` ทำซ้ำไปตลอดกาล` มากกว่าหนึ่ง ในพื้นที่ทำงาน
+        courseD_playLab_cond5_a: ใช้คำสั่ง` ถ้า (if) ` ที่เปรียบเทียบว่า ` ทำแต้ม ' นั้น ` > ` 5 โดยให้ถือว่าการท้าทายนี้ได้จบลงแล้ว
+        courseD_playLab_cond5_b: คุณสามารถมีลูป` ทำซ้ำตลอดไป` มากกว่าหนึ่งลูปในพื้นที่ทำงาน
       courseD_playLab_cond6_authored_hint:
         courseD_playLab_cond6_a: เพิ่มเติมบล็อก ' ตั้งความเร็วสำหรับทุกๆ นินจาใส่หน้ากาก' ตอนเริ่มต้นของโปรแกรมที่จะช่วยให้นินจาช้าลง
-        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า นักแสดง 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
+        courseD_playLab_cond6_b: คุณต้องใช้บล็อก ` ถ้า นักแสดง 1 อยู่ที่แกน Y ที่ > 255 ` ภายในบล็อก ` ทำซ้ำตลอดไป ` เพื่อตรวจสอบตลอดเวลาว่าเจ้าโจรสลัดอยู่ต่ำกว่าเจ้าปลาหมึกยักษ์หรือไม่
       courseD_playLab_cond6_2018_authored_hint:
         courseD_playLab_cond6_a: เพิ่มเติมบล็อก ' ตั้งความเร็วสำหรับทุกๆ นินจาใส่หน้ากาก' ตอนเริ่มต้นของโปรแกรมที่จะช่วยให้นินจาช้าลง
-        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า นักแสดง 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
+        courseD_playLab_cond6_b: คุณต้องใช้บล็อก ` ถ้า นักแสดง 1 อยู่ที่แกน Y ที่ > 255 ` ภายในบล็อก ` ทำซ้ำตลอดไป ` เพื่อตรวจสอบตลอดเวลาว่าเจ้าโจรสลัดอยู่ต่ำกว่าเจ้าปลาหมึกยักษ์หรือไม่
       courseD_playLab_cond6a_authored_hint:
-        courseD_playLab_cond6_c: เพิ่ม ` รอ 1 วินาที `บล็อกไปยังด้านบนของ ลูป`ทำซ้ำไปตลอดกาล ` ที่ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ไม่อยู่ภายในคำสั่ง ` ถ้า` ) เพื่อไม่ให้คะแนนถูกลบออกอย่างรวดเร็วเกินไป.
+        courseD_playLab_cond6_c: เพิ่มบล็อก ` รอ 1 วินาที ` ไปไว้ด้านบนของ ลูป ` ทำซ้ำตลอดไป ` ที่ใช้ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ต้องไม่อยู่ภายในคำสั่ง ` ถ้า (if) `) เพื่อไม่ให้เสียคะแนนเร็วเกินไป
       courseD_playLab_cond6a_2018_authored_hint:
-        courseD_playLab_cond6_c: เพิ่ม ` รอ 1 วินาที `บล็อกไปยังด้านบนของ ลูป`ทำซ้ำไปตลอดกาล ` ที่ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ไม่อยู่ภายในคำสั่ง ` ถ้า` ) เพื่อไม่ให้คะแนนถูกลบออกอย่างรวดเร็วเกินไป.
+        courseD_playLab_cond6_c: เพิ่มบล็อก ` รอ 1 วินาที ` ไปไว้ด้านบนของ ลูป ` ทำซ้ำตลอดไป ` ที่ใช้ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ต้องไม่อยู่ภายในคำสั่ง ` ถ้า (if) `) เพื่อไม่ให้เสียคะแนนเร็วเกินไป
       courseD_playLab_cond6cloneForTest_authored_hint:
         courseD_playLab_cond6_a: เพิ่มเติมบล็อก ' ตั้งความเร็วสำหรับทุกๆ นินจาใส่หน้ากาก' ตอนเริ่มต้นของโปรแกรมที่จะช่วยให้นินจาช้าลง
-        courseD_playLab_cond6_b: คุณจะต้องใช้ ' ถ้า นักแสดง 1 ตามแนวแกนตั้ง > 255' บล็อกภายใน ' ทำซ้ำไปตลอดกาล ' บล็อกเพื่อตรวจสอบเสมอว่าโจรสลัดอยู่ต่ำกว่า เจ้าปลาหมึกหรือไม่.
-        courseD_playLab_cond6_c: เพิ่ม ` รอ 1 วินาที `บล็อกไปยังด้านบนของ ลูป`ทำซ้ำไปตลอดกาล ` ที่ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ไม่อยู่ภายในคำสั่ง ` ถ้า` ) เพื่อไม่ให้คะแนนถูกลบออกอย่างรวดเร็วเกินไป.
+        courseD_playLab_cond6_b: คุณต้องใช้บล็อก ` ถ้า นักแสดง 1 อยู่ที่แกน Y ที่ > 255 ` ภายในบล็อก ` ทำซ้ำตลอดไป ` เพื่อตรวจสอบตลอดเวลาว่าเจ้าโจรสลัดอยู่ต่ำกว่าเจ้าปลาหมึกยักษ์หรือไม่
+        courseD_playLab_cond6_c: เพิ่มบล็อก ` รอ 1 วินาที ` ไปไว้ด้านบนของ ลูป ` ทำซ้ำตลอดไป ` ที่ใช้ตรวจสอบตำแหน่งของเจ้าโจรสลัด (แต่ต้องไม่อยู่ภายในคำสั่ง ` ถ้า (if) `) เพื่อไม่ให้เสียคะแนนเร็วเกินไป
       courseD_scrat_ramp1_authored_hint:
-        courseC_maze_programming1_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming1_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_scrat_ramp1_2018_authored_hint:
-        courseC_maze_programming1_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming1_b: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_scrat_ramp2_authored_hint:
         courseC_maze_programming2_a: การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`
       courseD_scrat_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`
       courseD_scrat_ramp4_authored_hint:
-        courseC_maze_programming4_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming4_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_scrat_ramp4_2018_authored_hint:
-        courseC_maze_programming4_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming4_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: มีวิธีแก้ปริศนานี้สองวิธี
-        courseD_scrat_programming6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseD_scrat_programming6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: มีวิธีแก้ปริศนานี้สองวิธี
-        courseD_scrat_programming6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseD_scrat_programming6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_scrat_ramp8_authored_hint:
-        courseD_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseD_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseD_scrat_ramp8_2018_authored_hint:
-        courseD_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseD_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'รูปครึ่ง-หกเหลี่ยมมี ** ความยาว 30 ** และหันขวาไป ** 60 องศา ***  '
         courseE_artist_concept_challenge1_b: 'รูป 2/3 สามเหลี่ยม มี ** ความยาว 80 ** และหันขวาไป ** 120 องศา ** '
@@ -1862,16 +2152,20 @@ th:
            - ใช้ฟังก์ชัน
            - ย้ายไปข้างหน้า 100+75 พิกเซล
            - ใช้ฟังก์ชัน
+      courseE_artist_functions6_authored_hint:
+        grade4_artist_functions_windows0_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseE_artist_functions6_2018_authored_hint:
+        grade4_artist_functions_windows0_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseE_artist_ramp10_authored_hint:
-        courseD_artist_ramp10_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseD_artist_ramp10_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
       courseE_artist_ramp9_authored_hint:
-        courseD_artist_ramp12_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseD_artist_ramp12_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
       courseE_artist_ramp9_2_authored_hint:
-        courseD_artist_ramp12_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseD_artist_ramp12_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
       courseE_artist_ramp9_2018_authored_hint:
-        courseD_artist_ramp12_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseD_artist_ramp12_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
       courseE_artist_ramp9_2_2018_authored_hint:
-        courseD_artist_ramp12_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseD_artist_ramp12_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
       courseE_bee_concept3_authored_hint:
         courseE_bee_concept3a_a: ลองใช้ลูปซ้อนลูป `ทำซ้ำ`พื่อแก้ปริศนานี้
       courseE_bee_concept3_2018_authored_hint:
@@ -1894,6 +2188,20 @@ th:
         courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
       courseE_bee_functions_challenge2_2018_authored_hint:
         courseE_bee_functions_challenge1_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
+      courseE_bee_ramp17_authored_hint:
+        courseE_bee_ramp17_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseE_farmer_functions4b_authored_hint:
+        courseE_farmer_functions4b_a: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseE_farmer_functions4b_2018_authored_hint:
+        courseE_farmer_functions4b_a: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseE_farmer_functions5c_authored_hint:
+        courseE_farmer_functions5c_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseE_farmer_functions5c_2018_authored_hint:
+        courseE_farmer_functions5c_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseE_farmer_ramp12a_2018_authored_hint:
+        courseE_farmer_ramp12c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกได้รับการคลิกเอามาต่อเข้าด้วยกันแล้วคลิก "เริ่ม" อีกครั้ง
       courseE_maze_ramp1_2018_authored_hint:
@@ -1903,25 +2211,33 @@ th:
       courseE_maze_ramp2_2018_authored_hint:
         courseC_maze_programming2_a: การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`
       courseE_maze_ramp4_authored_hint:
-        courseC_maze_programming4_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming4_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseE_maze_ramp4_2018_authored_hint:
-        courseC_maze_programming4_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming4_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: มีวิธีแก้ปริศนานี้สองวิธี
-        courseC_maze_programming6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: มีวิธีแก้ปริศนานี้สองวิธี
-        courseC_maze_programming6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseC_maze_programming6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseE_maze_ramp7_authored_hint:
-        courseD_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseD_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseE_maze_ramp7_2018_authored_hint:
-        courseD_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseD_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseF_IceAge_8_authored_hint:
-        iceage_sound_and_points_a: คุณจะต้องเพิ่มบล็อกสองบล็อกภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1 สัมผัสนักแสดงที่ 2 `.
+        iceage_sound_and_points_a: คุณจะต้องเพิ่มบล็อกสองบล็อกภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1 สัมผัสนักแสดงที่ 2 `
+      courseF_artist_for3_authored_hint:
+        courseF_artist_for3_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseF_artist_for3_2018_authored_hint:
+        courseF_artist_for3_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseF_artist_for4_authored_hint:
+        courseF_artist_for4_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseF_artist_for4_2018_authored_hint:
+        courseF_artist_for4_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseF_artist_ramp9_authored_hint:
-        courseF_artist_ramp9_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseF_artist_ramp9_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกหันไป เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
       courseF_artist_ramp9_2018_authored_hint:
-        courseF_artist_ramp9_b: คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!
+        courseF_artist_ramp9_b: คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกหันไป เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!
       courseF_bee_conditionals2_authored_hint:
         courseF_bee_conditionals2_a: บางทีดอกไม้ก็จะอยู่ตรงนั้น บางทีก็ไม่อยู่ ถ้าคุณต้องการให้โค้ดของคุณทำงานได้ทั้งสองกรณ๊ ให้แน่ใจว่าคุณใช้ คำสั่ง `ถ้า(if)`
       courseF_bee_conditionals2_2018_authored_hint:
@@ -1944,6 +2260,10 @@ th:
         courseF_bee_conditionals8_a: "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้"
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้"
+      courseF_bee_for5_authored_hint:
+        courseF_bee_for5_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseF_bee_for5_2018_authored_hint:
+        courseF_bee_for5_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseF_bee_functions6_authored_hint:
         courseF_bee_functions6_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n\n    </statement>\n  </block>\n</xml>"
       courseF_bee_functions6_2018_authored_hint:
@@ -1958,16 +2278,38 @@ th:
         courseF_bee_functions7_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
       courseF_bee_functions_challenge2_recursion_authored_hint:
         courseF_bee_functions8a_a: "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
+      courseF_maze_ramp1_authored_hint:
+        courseF_maze_ramp1_a: ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น ให้แน่ใจว่าบล็อกทั้งหมดได้มีการต่อเข้าด้วยกันอย่างสมบูรณ์ แล้วคลิกปุ่ม " เริ่ม " อีกครั้ง
+      courseF_maze_ramp13_authored_hint:
+        courseF_maze_ramp13_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseF_maze_ramp1_2018_authored_hint:
+        courseF_maze_ramp1_a: ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น ให้แน่ใจว่าบล็อกทั้งหมดได้มีการต่อเข้าด้วยกันอย่างสมบูรณ์ แล้วคลิกปุ่ม " เริ่ม " อีกครั้ง
+      courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
+      courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_c: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกใช้งานโค้ด เพื่อดูว่าจะเกิดอะไรขึ้น ถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: มีวิธีแก้ปริศนานี้สองวิธี
-        courseF_maze_ramp6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseF_maze_ramp6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseF_maze_ramp6_2018_authored_hint:
         courseF_maze_ramp6_a: มีวิธีแก้ปริศนานี้สองวิธี
-        courseF_maze_ramp6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseF_maze_ramp6_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
       courseF_maze_ramp7_authored_hint:
-        courseF_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกและเรียกใช้โค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+        courseF_maze_ramp7_c: อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม
+      coursea_maze_ramp1_2018_authored_hint:
+        courseC_maze_programming1_b: ไม่ต้องกลัวว่าคุณจะทำผิด! ลองทำบางอย่างดู และถ้ามันไม่ได้ผล ลองทำอย่างอื่นดู!
       grade1_artist_loops1_authored_hint:
         grade1_artist_loops1_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
+      grade1_maze_sequence10_authored_hint:
+        grade1_maze_sequence10_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+      grade1_maze_sequence9_authored_hint:
+        grade1_maze_sequence9_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+      grade1_maze_sequenceA_authored_hint:
+        grade1_maze_sequence10_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+      grade1_maze_sequenceB_authored_hint:
+        grade1_maze_sequenceB_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
+      grade1_maze_sequenceC_authored_hint:
+        grade1_maze_sequenceC_a: ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน
       grade2_CaringForNewPet_0_authored_hint:
         grade2_CaringForNewPet_0: ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกได้รับการคลิกเอามาต่อเข้าด้วยกันแล้วคลิก "เริ่ม" อีกครั้ง
       grade2_CaringForNewPet_1_authored_hint:
@@ -1976,13 +2318,13 @@ th:
         2-3_Maze_6_a: มีวิธีแก้ปริศนานี้สองวิธี
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
-        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้ปุ่ม `หันขวาไป 90 องศา`
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้บล็อก `หันขวาไป 90 องศา`
       grade2_MakeDogTag_3_authored_hint:
         2-3_Artist_4_a: เพื่อให้เสร็จสิ้นการวาดจรวด เพียงแค่คุณวาดรูปสามเหลี่ยมไว้ด้านบน!
       grade2_MakeDogTag_5_authored_hint:
-        grade2_MakeDogTag_5a: ศิลปินได้หันหน้าไปทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
-        grade2_MakeDogTag_5b: ทรงรูปเพชรนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเอง
-        grade2_MakeDogTag_5c: เนื่องจากรูปทรงเพชรนี้ยังเป็นสี่เหลี่ยมจตุรัสอีกด้วย อย่าลืมหัน 90 องศาที่มุม
+        grade2_MakeDogTag_5a: ศิลปินได้หันหน้าไปในทิศทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา
+        grade2_MakeDogTag_5b: เพชรเม็ดนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเองเท่านั้น
+        grade2_MakeDogTag_5c: เนื่องจากรูปทรงเพชรนี้ก็คือสี่เหลี่ยมจตุรัสนั่นเอง อย่าลืมหัน 90 องศาในแต่ละมุมด้วย
       grade2_MakeDogTag_6_authored_hint:
         grade2_MakeDogTag_6a: ทุกมุมไม่ 45 ก็ 90 องศา
         grade2_MakeDogTag_6b: "มันทำงานขั้นตอนแรกไหม?  \nขั้นตอนที่สองทำงานไหม?  \nผิดตรงไหน?"
@@ -2062,7 +2404,7 @@ th:
       grade3_Loops_9_authored_hint:
         2-3_Bee_Loops_3_a: คุณควรมีบล็อก 6 บล็อกอยู่ภายในลูปของคุณ
       grade3_RunningFarm_1_authored_hint:
-        grade3_RunningFarm_1_a: คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้ลูปทำซ้ำ
+        grade3_RunningFarm_1_a: คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้บล็อกลูปทำซ้ำ
         grade3_RunningFarm_1_b: ให้แน่ใจว่าได้ใช้บล็อก `ถ้า นี่คือข้าวโพด` ไม่อย่างนั้นคุณอาจจะพยายามเก็บบางอย่างที่ไม่ได้ปลูกอยู่ตรงนั้น
       grade3_RunningFarm_2_authored_hint:
         grade3_RunningFarm_2_a: 'วิธีการทำที่ดีที่สุด ด้วยการซ้อนคำสั่ง `ถ้า(if)` โดยการวางอันหนึ่งไว้ภายในอีกอันหนึ่ง  '
@@ -2113,7 +2455,7 @@ th:
         grade4_bee_nestedLoops2a_a: ลองใช้ลูปซ้อนลูป `ทำซ้ำ`พื่อแก้ปริศนานี้
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: หากคุณใช้บล็อก "ย้ายไปด้านหน้า 100 พิกเซล" ฉันก็จะวาดเส้นให้หนึ่งเส้นโดยอัตโนมัติ
-        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้ปุ่ม `หันขวาไป 90 องศา`
+        2-3_Artist_1_new_b: มีปัญหากับการเลี้ยวที่หัวมุมหรือเปล่า? ให้ใช้บล็อก `หันขวาไป 90 องศา`
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'เพื่อที่จะสร้างมุมเล็ก ๆ เหล่านี้ คุณต้องหัน *ไปให้ไกลกว่านี้* แต่ละครั้งให้มากกว่าตอนที่คุณทำกับสี่เหลี่ยมจัตุรัส   '
         2-3_Artist_6_b: เนื่องจากตอนนี้หันไปทางขวาแล้ว จะง่ายกว่าถ้าเริ่มต้นด้วยการก้าวไปข้างหน้า แล้วหันซ้ายไปเพื่อสร้างรูปสามเหลี่ยม
@@ -2124,17 +2466,19 @@ th:
         2-3_Bee_Loops_3_a: คุณควรมีบล็อก 6 บล็อกอยู่ภายในลูปของคุณ
       grade4_review_bee3_authored_hint:
         2-3_Bee_Loops_4_a: คุณควรจบด้วย บล็อก 5 บล็อกอยู่ภายในลูปของคุณ
+      gradeK_sequence_4_authored_hint:
+        gradeK_sequence_4_a: ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!
       gradek_adventurer_loops3_authored_hint:
         gradek_adventurer_loops3_a: หากต้องการเปลี่ยนระยะทางที่นักผจญภัยต้องเดิน ก็ให้เปลี่ยนจำนวนครั้งที่ต้องลูป
         gradek_adventurer_loops3_b: อย่าลืมว่านักผจญภัยต้องเดินลงไปข้างล่างและเก็บสมบัติหลังจากที่เธอเสร็จสิ้นการลูปแล้ว
       gradek_adventurer_loops4_authored_hint:
         gradek_adventurer_loops4_a: ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด
       gradek_adventurer_loops5_authored_hint:
-        gradek_adventurer_loops5_a: ถ้าคุณไม่สามารถคิดออกว่าสิ่งที่มาถัดไปคือะไร ลองเรียกใช้งานโค้ดเพื่อดูว่าจบแล้วลอเรลได้อะไร
+        gradek_adventurer_loops5_a: ถ้าคุณไม่สามารถคิดออกว่าอะไรจะเกิดขึ้นถัดมา ลองเรียกใช้งานโค้ดเพื่อดูว่าเมื่อจบแล้วลอเรลได้อะไรบ้าง
       gradek_adventurer_loops7_challenge_authored_hint:
         gradek_adventurer_loops7_challenge_a: รู้สึกว่าโค้ดยาวจริงๆ ใช่หรือไม่? ลองใช้ลูปสองลูปซ้อนกันจะทำให้โค้ดสั้นลงมาก!
       gradek_artist_loops1_authored_hint:
-        gradek_artist_loops1_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  เริ่มด้วยการต่อบล็อกเข้าไปกับบล็อกเรียก`เมื่อเรียกใช้งาน`  เพื่อ ดูว่าเกิดอะไรขึ้น`
+        gradek_artist_loops1_a: ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อกเรียก`เมื่อเรียกใช้งาน`  เพื่อ ดูว่าเกิดอะไรขึ้น`
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้
       gradek_artist_loops4_authored_hint:
@@ -2144,15 +2488,15 @@ th:
       gradek_artist_loops6_authored_hint:
         gradek_artist_loops6_a: คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู
       gradek_artist_loops7_authored_hint:
-        gradek_artist_loops7_a: ลองเรียกใช้งานโค้ดเพื่อดูสิ่งที่ถูกเขียนขึ้นมาว่าทำอะไรให้คุณ
+        gradek_artist_loops7_a: ลองเรียกใช้งานโค้ด เพื่อดูสิ่งที่ถูกเขียนขึ้นไว้แล้วว่า ทำอะไรให้คุณบ้าง
         gradek_artist_loops7_b: คุณจะวนลูปโค้ดที่คุณได้รับมาอย่างไร
         gradek_artist_loops7_c: "โค้ดทำอะไรได้บ้าง\nมันควรจะทำอะไร?\nมันบอกอะไรแก่คุณ?\n\n"
       gradek_artist_loops8_authored_hint:
         gradek_artist_loops8_a: 'คุณไม่จำเป็นต้องลบทุกอย่าง!  บางส่วนของโค้ดใช้งานได้ดี คุณควรใช้มันเพื่อสร้างส่วนที่เหลือของบันได '
       iceage_sound_and_points_authored_hint:
-        iceage_sound_and_points_a: คุณจะต้องเพิ่มบล็อกสองบล็อกภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1 สัมผัสนักแสดงที่ 2 `.
+        iceage_sound_and_points_a: คุณจะต้องเพิ่มบล็อกสองบล็อกภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1 สัมผัสนักแสดงที่ 2 `
       iceage_sound_and_points_2018_authored_hint:
-        iceage_sound_and_points_a: คุณจะต้องเพิ่มบล็อกสองบล็อกภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1 สัมผัสนักแสดงที่ 2 `.
+        iceage_sound_and_points_a: คุณจะต้องเพิ่มบล็อกสองบล็อกภายใต้เหตุการณ์ `เมื่อนักแสดงที่ 1 สัมผัสนักแสดงที่ 2 `
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: คุณควรจบด้วย บล็อก 5 บล็อกอยู่ภายในลูปของคุณ
       level 'grade3_Loops_11_authored_hint:

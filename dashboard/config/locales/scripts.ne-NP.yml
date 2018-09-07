@@ -1282,3 +1282,15 @@ ne:
               name: Move It, Move It
             Your Digital Footprint:
               name: Your Digital Footprint
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artist
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artist
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artist

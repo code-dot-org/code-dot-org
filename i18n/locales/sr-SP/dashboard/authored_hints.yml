@@ -141,6 +141,8 @@ sr:
         2-3_Artist_Loops_New_9_b: Ово V је само половина квадрата. Какав би програм написали за пола квадрата?
       2-3 Artist Nested Loops 1_authored_hint:
         2-3_Artist_Nested_Loops_1_a: Не заборави да све сиве потпрограме ставиш унутар петље.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Уметник треба да направи испуни 120 степени између сваког квадрата пре него заврши цртеж.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:

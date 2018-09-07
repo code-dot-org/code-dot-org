@@ -687,6 +687,8 @@ sl:
       Artist - Nested Loops 6_instruction: Lahko narišeš šestkotnik s pomočjo zanke
         s kodo za trikotnik?
       Artist - Nested Loops 9_instruction: Nariši zobe v krokodilovih ustih!
+      Artist Autorun Test_instruction: Uporabi "Ponovi" bloke za risanje teh treh
+        kvadratov.
       Bergeron Robot Maze1_instruction: 'Mi pomagaš ujeti prašička? Poskusi z večimi
         ukazi "Premakni se", da me premakneš v smeri prašička in klikni "Zaženi". '
       Building a Foundation Assessment_instruction: Izgradi piramido z višino treh

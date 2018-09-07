@@ -175,6 +175,10 @@ ja:
         frozen_circle_function_with_parameter_circle: '"円を描く"ブロックを使い、そして大きさを変えてください。'
       frozen cross rotate_callout:
         replace_questions_degree: ドロップダウンを使って"???"を数字に変えてください
+      frozen cross rotate_b_callout:
+        replace_questions_degree: ドロップダウンを使って"???"を数字に変えてください
+      frozen cross rotate_test_callout:
+        replace_questions_degree: ドロップダウンを使って"???"を数字に変えてください
       frozen cross_callout:
         repeat_blocks_1: "(1)このブロックを使います。作業領域にある灰色のブロック達のあたりに置いてください"
         repeat_blocks_2: (2)"繰り返し"ブロックをここに移動させて、灰色のブロック達を内側に置いてください
@@ -184,19 +188,45 @@ ja:
         frozen_diamond_repeat: 繰り返しブロックを使ってこの形を作ってください
       frozen freeplay_callout:
         snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
       frozen line_callout:
+        move_elsa_forward: エルサをまえにすすませるために、"まえにうごく"ブロックをドラッグして"実行時"ブロックにくっつけてください。
+      frozen line_b_callout:
+        move_elsa_forward: エルサをまえにすすませるために、"まえにうごく"ブロックをドラッグして"実行時"ブロックにくっつけてください。
+      frozen line_test_callout:
         move_elsa_forward: エルサをまえにすすませるために、"まえにうごく"ブロックをドラッグして"実行時"ブロックにくっつけてください。
       frozen perpendicular_callout:
         turn_elsa: '"回転"ブロックを使ってエルサの向きを変えてください。ドロップダウンの数字でどれくらいエルサを回転させるかを決めます。'
       frozen snowflake branch_callout:
         frozen_snowflake_branch: '"雪の結晶の枝を描く"ブロックを使ってください'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"雪の結晶の枝を描く"ブロックを使ってください'
       frozen square iterative_callout:
+        frozen_create_square: 四角形を描くためにもっとブロックをくっつけてください
+      frozen square iterative_b_callout:
+        frozen_create_square: 四角形を描くためにもっとブロックをくっつけてください
+      frozen square iterative_test_callout:
         frozen_create_square: 四角形を描くためにもっとブロックをくっつけてください
       frozen square loop 3x_callout:
         replace_questions: ドロップダウンを使って"???"を数字に変えてください
+      frozen square loop 3x_b_callout:
+        replace_questions: ドロップダウンを使って"???"を数字に変えてください
+      frozen square loop 3x_test_callout:
+        replace_questions: ドロップダウンを使って"???"を数字に変えてください
       frozen square loop_callout:
         replace_questions: ドロップダウンを使って"???"を数字に変えてください
+      frozen square loop_b_callout:
+        replace_questions: ドロップダウンを使って"???"を数字に変えてください
+      frozen square loop_test_callout:
+        replace_questions: ドロップダウンを使って"???"を数字に変えてください
       frozen square snowflake_callout:
+        replace_questions: ドロップダウンを使って"???"を数字に変えてください
+      frozen square snowflake_b_callout:
+        replace_questions: ドロップダウンを使って"???"を数字に変えてください
+      frozen square snowflake_test_callout:
         replace_questions: ドロップダウンを使って"???"を数字に変えてください
       grade3_Conditionals_3_callout:
         Bee_Cond_5_1a: むらさき色の花は、1 または 0 の、みつ をもっていますが、プログラムを動かすまでは、わからないんです！

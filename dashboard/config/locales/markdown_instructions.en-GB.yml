@@ -93,6 +93,9 @@ en-GB:
       2-3 Maze Loops 18_markdown_instruction: "Get me to the sunflower using the fewest
         blocks\npossible!  \r\n\r\nTry using one `repeat` loop inside of another to
         cut down\non the amount of code you need."
+      Artist Autorun Test_markdown_instruction: |-
+        Now, put the function inside of a loop
+        to draw these three squares.
       Function intro Ryan_markdown_instruction: "A **function** named `build bridge`
         is in your workspace.  All the code you need to cross the river is built in!
         \r\n \r\nSnap the small, green block twice into your workspace to fix the

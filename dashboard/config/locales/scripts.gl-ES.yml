@@ -1390,3 +1390,15 @@ gl:
               name: Creando camiños
             Your Digital Footprint:
               name: A túa pegada dixital
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

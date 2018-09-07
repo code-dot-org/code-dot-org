@@ -881,6 +881,8 @@ ro:
       Artist - Nested Loops 9_instruction: Desenează dinţii în gura aligatorului!
       Artist - Nested Loops Assessment 1_instruction: Utilizaţi o buclă imbricată
         pentru a finaliza proiectul.
+      Artist Autorun Test_instruction: Utilizaţi blocul "repetă" pentru a desena aceste
+        trei pătrate.
       Artist Inspiration_instruction: "Inspiraţie pentru joc liber: Acum ai învăţat
         tot ce ai nevoie să ştii pentru a crea un model ca acesta! Dacă această imagine
         te inspiră, încearcă să faci ceva similar. Altfel, creează ceva propriu și
@@ -2498,6 +2500,12 @@ ro:
         tu poţi să-l rulezi repetat pentru a desena această imagine?
       courseD_artist_binary7_2018_instruction: Care este cel mai scurt şir binar pe
         care tu poţi să-l rulezi repetat pentru a desena această imagine?
+      courseD_autorun_binary4_2019_instruction: Poţi desena acest model prin rularea
+        în buclă a unui şir binar de trei digiți?
+      courseD_autorun_binary6_2019_instruction: Care şir binar de 6 caractere, repetat
+        de 11 ori va desena această imagine?
+      courseD_autorun_binary7_2019_instruction: Care este cel mai scurt şir binar
+        pe care tu poţi să-l rulezi repetat pentru a desena această imagine?
       courseD_bee_debugging3_instruction: "Repară \neroarea(erorile) pentru a colecta
         tot nectarul şi a face toată mierea."
       courseD_bee_nestedLoops3_instruction: Colectează tot nectarul din fiecare floare.

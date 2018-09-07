@@ -136,6 +136,7 @@ ro:
       4-5 While Loops 2_markdown_instruction: Mută-mă la grămada de pământ şi apoi înlătur-o cu 5 lopeți, folosind blocul "elimină".
       4-5 While Loops 3_markdown_instruction: "Mută-mă pe grămadă şi mută grămada toată, apoi umple complet gaura. Indicaţie: Foloseşte cât mai puţine blocuri."
       4-5 While Loops 4_markdown_instruction: "Oau, am găsit o gaură foarte adâncă! Nu ştiu de câte lopeţi cu pământ am nevoie pentru a o umple. Poţi scrie un program care să umple gaura până la nivelul solului? Indicaţie: Încearcă să foloseşti bucla \"în timp ce\" de data asta."
+      Artist Autorun Test_markdown_instruction: Utilizaţi blocul "repetă" pentru a desena aceste trei pătrate.
       Course 4 Artist 13_markdown_instruction: Joci? Aici este o pânză albă unde poţi schiţa orice doreşti!
       Course 4 Artist 6_markdown_instruction: "Completează codul pentru a desena aceste triunghiuri.\nIndicaţie: Există 3 triunghiuri care se rotesc 360 grade...de câte ori intră 3 în 360?"
       Course 4 Artist 8_markdown_instruction: Desenează acest soare prin buclarea întregii secvențe de cod, de mai multe ori.

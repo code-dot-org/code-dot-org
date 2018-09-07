@@ -1402,3 +1402,15 @@ si:
               name: එය ගෙන යන්න, ගෙන යන්න
             Your Digital Footprint:
               name: ඔබේ ඩිජිටල් පා සටහන
+        frozen-2018:
+          stages:
+            Artist:
+              name: කලාකරු
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: කලාකරු
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: කලාකරු

@@ -119,19 +119,13 @@ Trabajo y dedicación comités han contribuido al éxito de la hora del código 
 
 ---
 
-# Principales socios promocionales
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
-
----
-
 # Socios internacionales
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 ---
 
-# Socios afiliados
+# Curriculum and Tutorial Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 

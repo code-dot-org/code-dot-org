@@ -1508,3 +1508,15 @@ fi:
               name: Digitaalinen jalanjälkesi
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie ja iso projekti
+        frozen-2018:
+          stages:
+            Artist:
+              name: Taiteilija
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Taiteilija
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Taiteilija
