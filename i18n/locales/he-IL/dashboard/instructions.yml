@@ -379,6 +379,7 @@ he:
       Alien Defender_2018_instruction: 'רעיון לפרויקט: צור משחק מגן במעבדת הצעצועים!'
       App Lab test_instruction: בדיקה
       Artist - Nested Loops 9_instruction: צייר את השיניים בפה של התנין!
+      Artist Autorun Test_instruction: השתמש בבלוק "חזור שוב" כדי לצייר 3 ריבועים.
       Bergeron Robot Maze1_instruction: 'תוכל לעזור לי לתפוס את החזיר השובב ? השתמש בכמה בלוקים של "לזוז קדימה" ביחד ולחץ על הרץ. '
       CSD U5 black white images pixelation 5_instruction: צייר מה שבא לך
       CSD U5 black white images pixelation 5_2018_instruction: צייר מה שבא לך
@@ -559,6 +560,8 @@ he:
       courseD_artist_binary6_2018_instruction: איזה רצף בינארי בין 6 ספרות, אשר חוזר על עצמו 11 פעם, יצור את התמונה הזו?
       courseD_artist_binary7_instruction: על איזה רצף בינארי קטן ביותר ניתן לחזור כדי לצייר תמונה זו?
       courseD_artist_binary7_2018_instruction: על איזה רצף בינארי קטן ביותר ניתן לחזור כדי לצייר תמונה זו?
+      courseD_autorun_binary6_2019_instruction: איזה רצף בינארי בין 6 ספרות, אשר חוזר על עצמו 11 פעם, יצור את התמונה הזו?
+      courseD_autorun_binary7_2019_instruction: על איזה רצף בינארי קטן ביותר ניתן לחזור כדי לצייר תמונה זו?
       courseD_bee_debugging3_instruction: "הבלוקים בתוכנית ממש מפריעים לי.\nתקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש."
       courseD_bee_debugging5_instruction: 'אתגר: כל הפקודות שאתה צריך כבר נמצאים כאן...עכשיו השתמש ביכולות ניפוי השגיאות שלך כדי להבין כיצד לפתור את החידה.'
       courseD_bee_nestedLoops3_instruction: "אספו את כל הצוף מכל פרח.\nהשתמשו בלולאות מקוננות. "

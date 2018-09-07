@@ -307,6 +307,9 @@ pt:
         Uau, eu encontrei um buraco realmente fundo! Eu não
         sei quantas pás de terra são necessárias. Você pode escrever um programa que preencha-o
         até que o solo fique nivelado? Dica: dessa vez, tente usar o laço enquanto.
+      Artist Autorun Test_markdown_instruction: |-
+        Use o bloco "repita" para desenhar esses
+        3 quadrados.
       Course 4 Artist 13_markdown_instruction: |-
         Ainda jogando?  Temos aqui uma tela em branco
         na qual você pode projetar o que quiser!

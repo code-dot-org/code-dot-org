@@ -299,6 +299,9 @@ sq:
         Nuk e di sa lopata balte nevojiten. Mund te shkruash nje program qe e mbush
         derisa toka te jete e sheshte? Shenim: Provo te perdoresh nje litar tek kesaj
         here.'
+      Artist Autorun Test_markdown_instruction: |-
+        Përdor bllokun "repeat" për të vizatuar këto
+        3 katrorë.
       Big Game Booleans 1_markdown_instruction: |-
         Kur ti punove për herë të fundit me lojën tënde
         ne pamë targetin tonë dhe zanën e rrezikut që fluturonin në ekran, por ato kurrë

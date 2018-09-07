@@ -374,6 +374,7 @@ zh-CN:
     create_personal_login_under_13_username: "用户名(请不要使用您的真名！)"
     create_personal_login_under_13_parent_email: '父母/监护人电子邮箱地址'
     create_personal_login_info: '如果想将你的Code.org账户在学年完成后也还保留，你需要在下面创建自己的账户。'
+    create_personal_login_link_account: '也可以在"管理连接的账号"部分下连接到个人账户。'
     create_personal_login_terms: "通过创建个人账户，我同意接受Code.org的<a href='%{terms_of_service_url}', target='_blank'>服务条款</a>。我确认我的父母或法定监护人已经允许我在没有老师的情况下使用Code.org的服务。"
     create_personal_login_email_note: "注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。"
     enter_new_login_info: '输入新的登录信息'
@@ -1007,21 +1008,29 @@ zh-CN:
         csfirst: 'Google CS First'
         khan: '可汗学院'
         kodable: 'Kodable'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
         other: "其他："
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
         lego: '乐高教育'
         microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
         raspberry: '树莓派'
+        wonder: '工作坊'
         other: "其他："
       workshop_course:
+        csf_af: '计算机科学基本原理 (课程 A - F)'
+        csf_express: '计算机科学基础课程（预快速或快速）'
         csd: '计算机科学发现'
         csp: '计算机科学原理'
       email_opt_in:
         opt_in_yes: '对'
         opt_in_no: '不'
     international_opt_in:
+      title: '工作坊参与者'
       intro: "非常感谢您抽出时间接受Code.org的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。"
       instructions: "请填写下方的表格，表明 1) 你参加了一个由 Code.org 的国际合作伙伴运作的培训研讨班，并且 2) 你同意我们将你的情况告知我们在你所在国家的国际合作伙伴，以便他们支持你作为计算机科学教师的工作。"
       thanks: "感谢您的提交！我们期待着能帮助您熟悉Code.org的课程及教学工具。请与我们分享你的问题和反馈，可发邮件至<a href='%{support_email_url}'>support@code.org</a>，或在<a href='%{teacher_forum_url}' target='_blank'>教师论坛</a>上发帖！"
@@ -1030,6 +1039,7 @@ zh-CN:
       body: '开始前，首先需要登录到 Code.org 帐户。如果希望在启动应用程序之前了解有关该程序的更多信息，请查看 <a href="%{url}">专业学习计划概述</a>。'
     not_teacher:
       body: '感谢对 Code.org 专业学习项目的兴趣。现在已经注册了一个学生账户，请创建教师账户或<a href="%{user_settings}">转到用户设置</a>将账户升级为教师账户。'
+      more: '如果在开始申请前希望看到更多信息，点击 <a href="%{pl_overview}">专业学习计划概述</a>。'
     no_teacher_email:
       body: '账号还没有填写电子邮件地址。请 <a href="%{user_registration}">访问帐户设置</a> 以在完成表单前添加电子邮件地址。'
   courses_category: '完整课程'

@@ -847,3 +847,15 @@ bn:
           stages:
             Spelling Bee:
               name: বানান মৌমাছি
+        frozen-2018:
+          stages:
+            Artist:
+              name: শিল্পী
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: শিল্পী
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: শিল্পী

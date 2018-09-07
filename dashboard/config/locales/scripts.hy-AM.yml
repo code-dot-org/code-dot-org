@@ -1438,3 +1438,15 @@ hy:
               name: Տեղափոխել այն, տեղափոխել այն
             Your Digital Footprint:
               name: Your Digital Footprint
+        frozen-2018:
+          stages:
+            Artist:
+              name: Արտիստ
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Արտիստ
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Արտիստ

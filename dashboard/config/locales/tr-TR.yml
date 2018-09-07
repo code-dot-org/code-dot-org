@@ -166,6 +166,7 @@ tr:
     error: Bir hata oluştu.
     email_preference_question: Size kurslarımızdaki yenilikler, yerel fırsatlar veya
       diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
+    email_preference_privacy: "(Bkz: Gizlilik İlkelerimiz)"
     email_preference_yes: Evet
     email_preference_no: Hayır
   school_info:

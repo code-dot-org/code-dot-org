@@ -136,6 +136,7 @@ hu:
       4-5 While Loops 2_markdown_instruction: Vigyél el a földkupachoz, és távolítsd el azt 5 lapátolással. Használd a "távolítsd el" blokkot.
       4-5 While Loops 3_markdown_instruction: "Vigyél el a földkupacig, és távolítsd el az egészet, aztán vigyél a lyukhoz, és töltsd azt fel teljesen. Tipp: A lehető legkevesebb blokkot használd fel."
       4-5 While Loops 4_markdown_instruction: "Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az \"amíg van\" ciklust használd."
+      Artist Autorun Test_markdown_instruction: Használd az "ismételd" blokkot a három négyzet megrajzolásához.
       CSD U2 create page_markdown_instruction: |+
         # Hozd létre, és nevezd el az új oldaladat\r
         \r

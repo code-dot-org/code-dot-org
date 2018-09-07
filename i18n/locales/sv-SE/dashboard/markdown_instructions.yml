@@ -119,6 +119,7 @@ sv:
       4-5 While Loops 2_markdown_instruction: Flytta mig till jordhögen och ta bort den med 5 spadtag, använd blocket "ta bort".
       4-5 While Loops 3_markdown_instruction: "Flytta mig till högen och ta bort hela, gå sedan till hålet och fyll det helt.  Tips: Använd så få block som möjligt."
       4-5 While Loops 4_markdown_instruction: "Wow, jag hittade ett riktigt djupt hål! Jag vet inte hur många spadtag med jord som krävs.  Kan du skriva ett program som fyller det tills marken är jämn?  Tips: Försök att använda en 'medan'-slinga denna gång."
+      Artist Autorun Test_markdown_instruction: Använd blocket "Upprepa" för att rita dessa 3 kvadrater.
       Course 4 Artist 13_markdown_instruction: Spelar fortfarande?  Här är en tom duk där du kan designa vad du vill!
       Course 4 Artist 6_markdown_instruction: 'Slutför koden för att rita dessa trianglar. Tips: Det finns 3 trianglar inom 360 graders rotation... hur många gånger går 3 i 360?'
       Course 4 Artist 8_markdown_instruction: Rita denna sol genom att upprepa hela detta kodblock flera gånger.

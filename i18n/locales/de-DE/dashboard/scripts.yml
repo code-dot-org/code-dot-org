@@ -1646,3 +1646,15 @@ de:
               name: Bewegung, Bewegung
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+        frozen-2018:
+          stages:
+            Artist:
+              name: Künstler
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Künstler
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Künstler

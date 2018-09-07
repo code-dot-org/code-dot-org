@@ -236,6 +236,7 @@ vi:
       4-5 Maze 3_instruction: Phải... đạt được... hoa hướng dương.
       4-5 Maze 8_instruction: "Sử dụng khối \"lặp lại\" để đưa con zombie tới chỗ hoa hướng dương. (Tránh các Chompers!)"
       App Lab test_instruction: kiểm thử
+      Artist Autorun Test_instruction: Bây giờ, đặt hàm vào trong một vòng lặp để vẽ ba hình vuông.
       Auto Open Function Editor_instruction: 'Bạn có thể sử dụng chức năng từ bên trong các chức năng khác! Sử dụng chức năng "hình dạng" làm cơ sở, tạo ra 3 nền nhà mỗi nền rộng 2o điểm ảnh, dài 50 điểm ảnh. Sử dụng một vòng lặp sẽ có ích. '
       Bergeron Robot Maze1_instruction: 'Bạn có thể giúp tôi bắt chú heo nghịch ngợm không? Sử dụng một vài lệch "di chuyển về phía trước" (move forward), nằm dưới lệnh "khi chạy chương trình" (when run), sau đó nhấn vào lệnh "Chạy chương trình" (run). '
       Course 2 Bee Loops 1_instruction: 'Xin chào, tôi là một chú ong. Bạn có thể giúp tôi thu thập phấn hoa từ những bông hoa này không? '

@@ -199,6 +199,10 @@ fi:
           muuta kokoa.
       frozen cross rotate_callout:
         replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Käytä alasvetovalikkoa ja korvaa "???" numerolla
       frozen cross_callout:
         repeat_blocks_1: "(1) Käytä tätä lohkoa ja laita se harmaiden lohkojen ympärille
           työtilassa"
@@ -210,7 +214,17 @@ fi:
         frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
       frozen freeplay_callout:
         snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
       frozen line_callout:
+        move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
+          -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
+      frozen line_b_callout:
+        move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
+          -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
+      frozen line_test_callout:
         move_elsa_forward: Saat Elsan siirtymään eteenpäin, kun vedät "liiku eteenpäin"
           -lohkoa ja kiinnität sen "suoritettaessa" -lohkon alle
       frozen perpendicular_callout:
@@ -218,13 +232,31 @@ fi:
           oleva numero määrittää kuinka paljon Elsa kääntyy
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa
       frozen square iterative_callout:
+        frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
+      frozen square iterative_b_callout:
+        frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
+      frozen square iterative_test_callout:
         frozen_create_square: Luo neliö liittämällä tähän lisää lohkoja
       frozen square loop 3x_callout:
         replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop 3x_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop 3x_test_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
       frozen square loop_callout:
         replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square loop_test_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
       frozen square snowflake_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square snowflake_b_callout:
+        replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
+      frozen square snowflake_test_callout:
         replace_questions: Käytä alasvetovalikkoa ja korvaa "???" numerolla
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Lisää funktioosi parametreja napsauttamalla muokkaa

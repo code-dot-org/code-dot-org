@@ -433,6 +433,7 @@ id:
       Artist - Nested Loops 6_instruction: Bisakah Anda menggambar sebuah segi enam dengan loop kode segitiga?
       Artist - Nested Loops 9_instruction: Gambarkan gigi di mulut buaya!
       Artist - Nested Loops Assessment 1_instruction: Gunakan putaran bersarang untuk menyelesaikan rancangan.
+      Artist Autorun Test_instruction: "Sekarang, letakkan fungsinya ke dalam\nsebuah lingkaran untuk menggambar tiga kotak yang ini."
       Bergeron Robot Maze1_instruction: 'Dapatkah kamu membantuku untuk menangkap babi nakal? Susunlah beberapa blok "gerak maju" dan tekan "Jalankan". '
       Building a Foundation Assessment_instruction: Bangunlah piramida tiga tingkat, tidak ada arahan lain, jadi hanya mainkan potongannya sampai Anda bisa melakukannya!
       Busy Bee 2_instruction: "Lebah ini punya banyak tugas yang harus dikerjakan! Apakah Anda melihat \npola apapun yang dapat digunakan untuk menyederhanakan kode?"
@@ -1076,6 +1077,9 @@ id:
       courseD_artist_binary6_2018_instruction: String biner 6 digit yang manakah, yang diulangi 11 kali yang akan menghasilkan gambar ini?
       courseD_artist_binary7_instruction: String biner terpendek apakah yang dapat Anda ulangi untuk membuat gambar ini?
       courseD_artist_binary7_2018_instruction: String biner terpendek apakah yang dapat Anda ulangi untuk membuat gambar ini?
+      courseD_autorun_binary4_2019_instruction: "Bisakah Anda menggambar pola ini dengan putaran\n hanya tiga angka biner (0s dan 1s)?"
+      courseD_autorun_binary6_2019_instruction: String biner 6 digit yang manakah, yang diulangi 11 kali yang akan menghasilkan gambar ini?
+      courseD_autorun_binary7_2019_instruction: String biner terpendek apakah yang dapat Anda ulangi untuk membuat gambar ini?
       courseD_bee_debugging3_instruction: Blok ini benar-benar menggangguku. Perbaiki yang salah untuk mengumpulkan semua nektar dan membuat madu.
       courseD_bee_nestedLoops3_instruction: "Kumpulkan semua nektar nya dari setiap bunga.\nGunakan loop bersarang. "
       courseD_bee_nestedLoops5_instruction: 'Kumpulkan semua nektar dari setiap bunga dan buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '

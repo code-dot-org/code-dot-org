@@ -894,6 +894,10 @@ sk:
         frozen_circle_function_with_parameter_circle: Použite blok "Vytvoriť kruh" a zmeňte veľkost.
       frozen cross rotate_callout:
         replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen cross_callout:
         repeat_blocks_1: "(1) Použite tento blok a pridajte ho okolo šedých blokov na pracovnej ploche"
         repeat_blocks_2: (2) Presuňte sem blok "Zopakovať" a umiestnite šedé bloky do jeho vnútra
@@ -903,20 +907,48 @@ sk:
         frozen_diamond_repeat: Použite blok s opakovaním pre vytvorenie tohto tvaru.
       frozen freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       frozen line_callout:
+        run: Kliknite na "Spustiť" pre spustenie Vášho programu!
+        move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
+      frozen line_b_callout:
+        run: Kliknite na "Spustiť" pre spustenie Vášho programu!
+        move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
+      frozen line_test_callout:
         run: Kliknite na "Spustiť" pre spustenie Vášho programu!
         move_elsa_forward: Presuňte blok "Posunúť dopredu" a pripojte ho pod blok "Po spustení", aby sa Elsa pohla dopredu
       frozen perpendicular_callout:
         turn_elsa: Použite blok "Otočiť" pre otočenie Elsy. Číslo vo vyberacom poli určí, koľkokrát sa Elsa otočí
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Použite blok "Vytvoriť časť snehovej vločky"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Použite blok "Vytvoriť časť snehovej vločky"
       frozen square iterative_callout:
+        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
+      frozen square iterative_b_callout:
+        frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
+      frozen square iterative_test_callout:
         frozen_create_square: Pridajte sem viac blokov pre vytvorenie štvorca
       frozen square loop 3x_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square loop 3x_b_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square loop 3x_test_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen square loop_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square loop_b_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square loop_test_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       frozen square snowflake_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square snowflake_b_callout:
+        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+      frozen square snowflake_test_callout:
         replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: Iba jeden z týchto blokov je v paneli s nástrojmi. Ako ho použijete?

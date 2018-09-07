@@ -199,6 +199,7 @@ pt-BR:
       4-5 While Loops 2_markdown_instruction: "Mova-me para o monte de terra e remova-o com\n5 pás, usando o bloco \"remova 1\"."
       4-5 While Loops 3_markdown_instruction: "Use o menor número possível de blocos para completar\neste desafio!  \\r\n\\r\nMova-me para o monte e remova toda a terra, então mova-me para\no buraco e preencha-o completamente."
       4-5 While Loops 4_markdown_instruction: "Uau, que demais! \\r\n\\r\nEu não sei de quantas\npás cheias de terra esse buraco precisa.  \\r\nVocê pode escrever um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?  "
+      Artist Autorun Test_markdown_instruction: "Agora coloque a função dentro de um laço\npara desenhar esses três quadrados."
       Big Game Animation 1_markdown_instruction: "Agora que você aprendeu a escrever funções lineares\nsimples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.\nClique em \"Executar\" para ver o que seu jogo pode fazer (não muito!), atualizar as variáveis que\nvocê quiser e depois clique em Concluir para seguir em frente."
       Big Game Booleans 1_markdown_instruction: "Da última vez que você trabalhou em seu jogo fizemos\nnossos alvo e inimigo voarem pela tela, mas eles nunca\nvoltaram. Clique em \"Executar\" para ver como seu jogo está funcionando agora e depois clique\nem concluir. Vamos fazer os gráficos reaparecerem na tela depois que eles tiverem\nsaído."
       Big Game Booleans 5_markdown_instruction: "Nesse ponto do seu jogo, seu inimigo deve percorrer\na tela da direita para a esquerda, seu alvo deve percorrer a tela da esquerda para\na direita e eles devem retornar para o lado oposto, repetidamente. Veja\nse seu jogo está funcionando como você gostaria e então clique em\nConcluir para seguir em frente."
@@ -355,6 +356,7 @@ pt-BR:
         * "Pode me ajudar fazer duas casas de pássaro?" *
       course1_maze_debugging_challenge1_markdown_instruction: Depure esse nível. Remova blocos extras, e adicione blocos que estão faltando. Leve o pássaro até o porco!
       course1_maze_debugging_challenge2_markdown_instruction: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
+      course2_collector_prog_challenge1_markdown_instruction: Preste atenção! Você consegue coletar todas as **10** peças do tesouro?
       course4_artist_fwp_challenge1_markdown_instruction: Execute este programa e faça alterações para ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo totalmente diferente)
       courseA_artist_loops10_markdown_instruction: |-
         ## Hora de voltar à terra. Me ajude a colocar pedras para que eu não caia na água!
@@ -738,6 +740,10 @@ pt-BR:
       courseC_collector_progA_markdown_instruction: Ajude Laurel a coletar todo o tesouro.
       courseC_harvester_loops3_markdown_instruction: Colete todas as abóboras.
       courseC_harvester_loops3_2018_markdown_instruction: Colete todas as abóboras.
+      courseC_maze_programming8_markdown_instruction: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_2018_markdown_instruction: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_markdown_instruction: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming_challenge1_markdown_instruction: 'O pássaro precisa de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge1_2018_markdown_instruction: 'O pássaro precisa de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
       courseD_bee_conditionals3_markdown_instruction: Você só pode coletar nectar das flores, mas você pode verificar qualquer espaço para ver se há uma flor. Se existe uma flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar *uma vez*.
@@ -818,6 +824,7 @@ pt-BR:
       frozen square loop 3x_markdown_instruction: "Vamos criar três quadrados, virando depois\nde cada quadrado. Lembre-se de virar 120 graus antes de cada novo quadrado."
       frozen square loop_markdown_instruction: "Oi, eu sou Anna de Arendelle! Vamos fazer um quadrado\ncom o bloco \"repita\", que usa menos blocos. Quantas vezes (???) o bloco\n\"repita\" deve repetir os blocos dentro dele para fazer um quadrado?"
       frozen square snowflake_markdown_instruction: "Você consegue criar um floco de neve usando o bloco\n\"repita\" para criar um quadrado 10 vezes e o bloco \"vire\" para virar 36\ngraus entre cada quadrado?"
+      grade2_CaringForNewPet_11_markdown_instruction: '*" Mantenha a calma e ajude-me a encontrar o porco mal."*'
       grade2_MakeDogTag_8_markdown_instruction: "Agora vamos conectar um monte de \"V\"\nem um laço."
       grade2_PuppyLoops_10_markdown_instruction: |-
         Meu professor diz que eu devo terminar o que

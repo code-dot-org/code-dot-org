@@ -385,6 +385,9 @@ pl:
           się o 360 stopni. \n\n** 360 / 6 =? **"
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Każdy element musi zawierać własną pętlę 'dopóki'.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Aby stworzyć ten wzór artysta musi obrócić się o
+          120 stopni pomiędzy każdym bokiem.
       Artist Inspiration_authored_hint:
         brush_width: Ustawiamy szerokość pędzla do 1, a następnie kolor na niebieski,
           zanim zrobimy cokolwiek innego.
@@ -2111,6 +2114,9 @@ pl:
           albo odwrotnie!
         courseD_artist_ramp12_b: Spróbuj podzielić problem na 2 części wykorzystując
           2 pętle.
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: Jeden z czterech binarnych wzorów w przyborniku
+          rozwiąże tą zagadkę!
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_hintVid1: Potrzebujesz pomocy, aby zacząć? Obejrzyj
           film!

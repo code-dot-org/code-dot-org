@@ -1074,3 +1074,15 @@ ky:
               name: Циклдар менен бакчаларды тартуу
             Spelling Bee:
               name: Spelling Bee
+        frozen-2018:
+          stages:
+            Artist:
+              name: Сүрөтчү
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Сүрөтчү
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Сүрөтчү

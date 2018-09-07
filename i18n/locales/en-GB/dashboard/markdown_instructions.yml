@@ -65,6 +65,7 @@ en-GB:
       2-3 Bee Loops 8_markdown_instruction: "These purple flowers have a different amount of\nnectar each time you run the puzzle. \\r\n\\r\nUse the `while nectar` loop to\ncollect all of the nectar. \\r\n\\r\nThis loop will run as long as the condition\nis true, in this case `nectar > 0`."
       2-3 Maze 15_markdown_instruction: "In this puzzle, two `repeat` loops will help you\nget to the pig with the fewest number of blocks!"
       2-3 Maze Loops 18_markdown_instruction: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need."
+      Artist Autorun Test_markdown_instruction: "Now, put the function inside of a loop\nto draw these three squares."
       Function intro Ryan_markdown_instruction: "A **function** named `build bridge` is in your workspace.  All the code you need to cross the river is built in! \\r\n \\r\nSnap the small, green block twice into your workspace to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch]."
       MC Agent Freeplay_markdown_instruction: "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world."
       MC_HOC_2017 Agent Test_markdown_instruction: "Click \"Run\" to move the player using the **arrow keys**.  \\r\n\\r\nTo pass this level, you will need to get to the door and open it (using the **space bar**) so you can get to the orange square inside."

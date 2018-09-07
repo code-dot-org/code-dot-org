@@ -400,6 +400,7 @@ eu:
       Artist - Nested Loops 6_instruction: Marraztu dezakezu hexagono bat triangeluaren kodea errepikatuz?
       Artist - Nested Loops 9_instruction: Marraztu krokodiloaren ahoko hortzak!
       Artist - Nested Loops Assessment 1_instruction: Erabili kabiatutako begizta bat diseinua osatzeko.
+      Artist Autorun Test_instruction: '"Errepikatu" blokea erabili 3 karratu hauek marrazteko.'
       Artist Inspiration_instruction: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\r\n\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
       Auto Open Function Editor_instruction: 'Funtzioen barrenetik beste funtzio batzuk deitu ditzakezu! Zure "forma" funtzioa oinarri moduan erabiliz, 3 etxe irudi edo forma sortu, bakoitza aurrekoa baino 20 pixel luzeagoa eta 50 pixeleko luzerarekin hasiz. Kontagailu begizta bat erabiltzea lagungarria izan liteke. '
       Bee Recommended Blocks test_instruction: Lore moreek 1 edo 0 nektar izan dezakete, baina ez dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea erabiliz.
@@ -1041,6 +1042,9 @@ eu:
       courseD_artist_binary6_2018_instruction: 6 digituko zein kate edo segida bitarrak, 11 aldiz errepikatuta, marraztuko du honako irudia?
       courseD_artist_binary7_instruction: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
       courseD_artist_binary7_2018_instruction: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
+      courseD_autorun_binary4_2019_instruction: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
+      courseD_autorun_binary6_2019_instruction: 6 digituko zein kate edo segida bitarrak, 11 aldiz errepikatuta, marraztuko du honako irudia?
+      courseD_autorun_binary7_2019_instruction: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
       courseD_bee_debugging3_instruction: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
       courseD_bee_nestedLoops3_instruction: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
       courseD_bee_nestedLoops5_instruction: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '

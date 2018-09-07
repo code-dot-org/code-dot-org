@@ -417,6 +417,7 @@ fil:
       Artist - Nested Loops 6_instruction: Maaari mo bang maiguhit ang hexagon sa pamamagitan ng pag-loop sa tatsulok na code?
       Artist - Nested Loops 9_instruction: Iguhit ang ngipin sa loob ng bibig ng buwaya!
       Artist - Nested Loops Assessment 1_instruction: Gumamit ng naka-nest na loop para makumpleto ang disenyo.
+      Artist Autorun Test_instruction: Ngayon, ilagay ang function sa loob ng isang loop para maiguhit ang tatlong mga parisukat na ito.
       Artist Inspiration_instruction: "Libreng Laro na Inspirasyon: Natutunan mo na ang lahat ng kailangan mong malaman para makagawa ng pattern na gaya nito! Kung ang mga larawang ito ay nagbigay-inspirasyon sa iyo, subukang gumawa ng isang bagay na kapareha. Kung hindi, lumikha ng isang bagay na lahat ay ikaw lang.\\r\n\\r\nGustong malaman kung paano nagawa ang aming inspirasyon na pattern? "
       Bergeron Robot Maze1_instruction: 'Matutulungan mo ba ako na hulihin ang malaikot na baboy? Magsalansan ng iilang `move forward` na mga bloke sa baba ng `when run` na bloke at pindutin ang "Run". '
       Brad Spooky House Copy_instruction: 'Libreng Laro: Narito ang mga function na naisulat mo, at ilang higit pa para iyong mapaglaruan. Gumuhit ng isang bahay na kamangha-mangha! Paglaruan ang mga lapad ng pen para makita kung paano nagkaiba ang iyong mga drowing!'
@@ -2013,6 +2014,14 @@ fil:
       courseD_artist_project_embedded_instruction: Narito ang gagawin mo mamaya!
       courseD_artist_ramp11_instruction: Ngayon ay gumawa ng isang parisukat gamit ang Artist!
       courseD_artist_ramp12_instruction: Gamitin ang natutunan mo para iguhit ang tatsulok na ito sa loob ng isang parisukat.
+      courseD_autorun_binary2_2019_instruction: Patakbuhin ang code na ito para makita kung paano gumagamit ng binary ang artista para iguhit ang pattern na ito.
+      courseD_autorun_binary3_2019_instruction: Alin sa mga binary na mga string sa baba ang maaari mong i-loop nang 8 beses para maiguhit ang larawang ito?
+      courseD_autorun_binary4_2019_instruction: Maaari mo bang iguhit ang pattern na ito sa pamamagitan ng pagloop ng tatlong binary na digits (mga 0 at mga 1) lang?
+      courseD_autorun_binary5_2019_instruction: "Bawat binary string sa baba ay kinakatawan ng isang hanay ng larawang ito. \\r\n\\r\nMaaari mo bang baguhin ang pagkakaayos sa mga ito para guguhit ito ng isang smiley na mukha sa halip na ang isang nakasimangot?"
+      courseD_autorun_binary6_2019_instruction: Aling 6 digit na binary string, na kung uulitin nang 11 na beses ay makakaguhit sa larawang ito?
+      courseD_autorun_binary7_2019_instruction: Ano ang pinakamaikling binary na string ang maaari mong ulit-ulitin para maiguhit ang larawang ito?
+      courseD_autorun_binary8_2019_instruction: Tapusin ang code para malikha ang drowing na ito.
+      courseD_autorun_binary8_predict1_2019_instruction: Tapusin ang code para malikha ang drowing na ito.
       courseD_bee_conditionals1_instruction: Suriin kung makita mo kung may bulaklak ba sa ilalim ng ulap. Kung mayroong bulaklak, kumuha ng nektar.
       courseD_bee_conditionals10_instruction: Kolektahin ang lahat ng nektar at gawin ang lahat ng mga pulot.
       courseD_bee_conditionals10_2018_instruction: Kolektahin ang lahat ng nektar at gawin ang lahat ng mga pulot.

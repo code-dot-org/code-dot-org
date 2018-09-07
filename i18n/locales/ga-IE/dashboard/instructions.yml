@@ -369,6 +369,7 @@ ga:
       Artist - Nested Loops 6_instruction: An féidir leat an cód a dhéanann triantán a chur isteach i lúb chun heicseagán a tharraingt?
       Artist - Nested Loops 9_instruction: Tarraing na fiacla i mbéal an ailigéadair!
       Artist - Nested Loops Assessment 1_instruction: Bain úsáid as lúb neadaithe chun an dearadh a chur i gcrích.
+      Artist Autorun Test_instruction: Anois, cuir an fheidhm isteach i lúb chun na trí chearnóg seo a tharraingt.
       Artist Inspiration_instruction: "Spreagadh Saorimeartha: Tá gach eolas a theastaíonn uait chun pictiúr cosúil leis seo a dhéanamh agat! Má spreagann an pictiúr seo thú, déan iarracht rud éigin cosúil leis a chruthú. Nó, cruthaigh cibé is rogha leat. An bhfuil tú ag iarraidh fáil amach conas a rinneamar ár bpatrún? "
       Bergeron Robot Maze1_instruction: "An féidir leat cabhrú liom greim a fháil ar an muc dhána sin? Ceangail cúpla bloc \"téigh ar aghaidh\" leis an mbloc \"nuair a ritear é\" agus cliceáil \"Rith\".\n"
       Brad Spooky House Copy_instruction: 'Saorimirt: Seo dhuit na feidhmeanna atá scríofa agat go dtí seo, chomh maith le roinnt eile. Tarraing rud éigin iontach leo! Athraigh leithead an phinn chun cuma dhifriúil a chur ar do chuid pictiúr!'
@@ -1514,6 +1515,13 @@ ga:
       courseD_artist_project5_2018_instruction: Imir leis na calóga sneachta!
       courseD_artist_ramp11_instruction: Anois déan cearnóg leis an Ealaíontóir!
       courseD_artist_ramp12_instruction: Úsáid ar fhoghlaim tú go dtí seo chun an triantán seo a tharraingt laistigh de chearnóg.
+      courseD_autorun_binary3_2019_instruction: Cad é an teaghrán dénártha a dhéanfadh an patrún seo dá n-athdhéanfaí ocht n-uaire é?
+      courseD_autorun_binary4_2019_instruction: An féidir leat an patrún seo a tharraingt gan ach trí dhigit dhénártha (0 nó 1) a athdhéanamh?
+      courseD_autorun_binary5_2019_instruction: "Freagraíonn gach teaghrán dénártha do ró amháin sa bpictiúr seo. \n\nAn féidir leat iad a athordú chun gáire seachas grainc a chur ar an aghaidh?"
+      courseD_autorun_binary6_2019_instruction: Cé acu an teaghrán dénártha, athdhéanta 11 uair, a dhéanfadh an pictiúr seo?
+      courseD_autorun_binary7_2019_instruction: Cad é an teaghrán dénártha is giorra a dhéanfadh an pictiúr seo dá n-athdhéanfaí 13 uair é?
+      courseD_autorun_binary8_2019_instruction: Cuir an cód i gcrích chun an pictiúr seo a dhéanamh.
+      courseD_autorun_binary8_predict1_2019_instruction: Cuir an cód i gcrích chun an pictiúr seo a dhéanamh.
       courseD_bee_conditionals1_instruction: Féach an bhfuil bláth faoin scamall. Má tá, bailigh an neachtar.
       courseD_bee_conditionals10_instruction: Bailigh an neachtar go léir agus déan an mhil go léir.
       courseD_bee_conditionals10_2018_instruction: Bailigh an neachtar go léir agus déan an mhil go léir.

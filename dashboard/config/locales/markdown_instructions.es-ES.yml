@@ -606,6 +606,8 @@ es:
         de diseño arrastrar en un nuevo botón. Posicionar y redimensionarlo. Luego
         configure su `\" texto \"`,\n`\" color de fondo \"`, y `\" tamaño de fuente
         \"\r`\n\r\n**Muéstrame:** "
+      Artist Autorun Test_markdown_instruction: Usa el bloque "repetir" para dibujar
+        estos 3 cuadrados.
       Bergeron Robot Maze1_markdown_instruction: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso?
         \r\n\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea
         y presiona \"Ejecutar\". "
