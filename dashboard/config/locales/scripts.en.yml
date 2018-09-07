@@ -9637,3 +9637,11 @@ en:
               name: Artist
               description_student: ''
               description_teacher: ''
+        aquatic:
+          stages:
+            Aquatic:
+              name: Aquatic
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
