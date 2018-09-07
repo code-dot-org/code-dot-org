@@ -151,11 +151,6 @@ def country_count
   return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
 end
 
-def solr_country_code
-  code = HOC_COUNTRIES[@country]['country_code'] || @country
-  return code
-end
-
 def country_full_name
   return HOC_COUNTRIES[@country]['full_name']
 end
