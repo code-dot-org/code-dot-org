@@ -35,6 +35,7 @@ export default class EligibilityChecklist extends Component {
     initialDiscountCode: PropTypes.string,
     initialExpiration: PropTypes.string,
     adminSetStatus: PropTypes.bool.isRequired,
+    currentlyDistributingDiscountCodes: PropTypes.bool,
   };
 
   state = {
@@ -109,6 +110,17 @@ export default class EligibilityChecklist extends Component {
           fullDiscount={this.props.getsFullDiscount}
           expiration={this.state.expiration}
         />
+      );
+    }
+
+    if (!this.props.currentlyDistributingDiscountCodes) {
+      return (
+        <div style={styles.main}>
+          <h2>Discount codes are no longer available</h2>
+          <p>
+            Sorry, we are no longer distributing Adafruit discount codes at this time.
+          </p>
+        </div>
       );
     }
 
