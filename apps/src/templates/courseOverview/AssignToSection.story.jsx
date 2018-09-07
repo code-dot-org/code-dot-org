@@ -21,7 +21,8 @@ const defaultProps = {
       id: 338,
       name: "section_with_course"
     }
-  ]
+  ],
+  updateHiddenScript: () => {},
 };
 
 export default storybook => {
