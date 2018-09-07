@@ -690,7 +690,6 @@ GameLab.prototype.rerunSetupCode = function () {
       !this.areAnimationsReady_()) {
     return;
   }
-  this.gameLabP5.resetWorld();
   this.gameLabP5.p5.allSprites.removeSprites();
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);

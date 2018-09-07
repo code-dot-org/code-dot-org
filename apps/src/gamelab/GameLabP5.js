@@ -3,7 +3,6 @@ import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 import * as assetPrefix from '../assetManagement/assetPrefix';
-var GameLabWorld = require('./GameLabWorld');
 import {createDanceAPI, teardown} from './DanceLabP5';
 
 const defaultFrameRate = 30;
@@ -14,7 +13,6 @@ const defaultFrameRate = 30;
  */
 var GameLabP5 = function () {
   this.p5 = null;
-  this.gameLabWorld = null;
   this.danceAPI = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
@@ -150,7 +148,6 @@ GameLabP5.prototype.resetExecution = function () {
     this.p5.remove();
     this.p5 = null;
     this.p5decrementPreload = null;
-    this.gameLabWorld = null;
   }
 
   // Important to reset these after this.p5 has been removed above
@@ -190,7 +187,6 @@ GameLabP5.prototype.startExecution = function (dancelab) {
       this.p5._fixedSpriteAnimationFrameSizes = true;
 
       this.setP5FrameRate();
-      this.gameLabWorld = new GameLabWorld(p5obj);
       if (dancelab) {
         this.danceAPI = createDanceAPI(this.p5);
       }
@@ -442,7 +438,6 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
   return [
-    { instance: GameLabWorld },
     {
       instance: this.p5.Sprite,
       ensureIdenticalMarshalInstances: true,
@@ -510,11 +505,8 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   propList.p5 = [{ Vector: window.p5.Vector }, window];
 
   // Create a 'Game' object in the global namespace
-  // to make older blocks compatible:
-  propList.Game = [this.gameLabWorld, this];
-
-  // Create a 'World' object in the global namespace:
-  propList.World = [this.gameLabWorld, this];
+  // to make older blocks compatible (alias to p5.World):
+  propList.Game = [this.p5.World, this.p5];
 
   if (this.danceAPI) {
     // Create a 'Dance' object in the global namespace:
@@ -600,14 +592,4 @@ GameLabP5.prototype.preloadAnimations = function (animationList, pauseAnimations
       });
     });
   }));
-};
-
-/**
- * Reset just the world object without reloading the rest of p5
- */
-GameLabP5.prototype.resetWorld = function () {
-  if (!this.p5) {
-    return;
-  }
-  this.gameLabWorld = new GameLabWorld(this.p5);
 };
