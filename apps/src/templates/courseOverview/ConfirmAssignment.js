@@ -60,6 +60,7 @@ export default class ConfirmAssignment extends Component {
             color={Button.ButtonColor.gray}
           />
           <Button
+            id="confirm-assign"
             text={buttonText}
             style={{marginLeft: 5}}
             onClick={onConfirm}
