@@ -1,5 +1,10 @@
 import React, { PropTypes } from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
+
+import processMarkdown from 'marked';
+import renderer from "../util/StylelessRenderer";
+
 import Parser from '@code-dot-org/redactable-markdown/src/redactableMarkdownParser';
 
 import expandableImages from './plugins/expandableImages';
@@ -31,7 +36,12 @@ export default class UnsafeRenderedMarkdown extends React.Component {
   };
 
   render() {
-    const processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
+    let processedMarkdown;
+    if (experiments.isEnabled('remark')) {
+      processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
+    } else {
+      processedMarkdown = processMarkdown(this.props.markdown, { renderer });
+    }
 
     /* eslint-disable react/no-danger */
     return (
