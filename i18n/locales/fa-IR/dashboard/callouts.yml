@@ -102,6 +102,10 @@ fa:
         frozen_circle_function_with_parameter_circle: استفاده از بلوک "ایجاد یک دایره" و تغییر سایز.
       frozen cross rotate_callout:
         replace_questions_degree: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen cross rotate_b_callout:
+        replace_questions_degree: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen cross rotate_test_callout:
+        replace_questions_degree: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
       frozen cross_callout:
         repeat_blocks_1: "(1) از این بلوک استفاده کنید و آن را دور بلوک های خاکستری در فضای کار بگذارید"
         repeat_blocks_2: (2) بلوک "Repeat" را به اینجا حرکت دهید، و بلوک های خاکستری را داخلش قرار دهید
@@ -111,19 +115,45 @@ fa:
         frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
       frozen freeplay_callout:
         snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
       frozen line_callout:
+        move_elsa_forward: یک بلوک "move forward" را بکشید و آن را زیر بلوک "when run" بیندازید تا السا را به جلو حرکت دهید
+      frozen line_b_callout:
+        move_elsa_forward: یک بلوک "move forward" را بکشید و آن را زیر بلوک "when run" بیندازید تا السا را به جلو حرکت دهید
+      frozen line_test_callout:
         move_elsa_forward: یک بلوک "move forward" را بکشید و آن را زیر بلوک "when run" بیندازید تا السا را به جلو حرکت دهید
       frozen perpendicular_callout:
         turn_elsa: از بلوک "Turn" برای چرخاندن السا استفاده کنید. شماره ی منوی کشویی تعیین می کند که السا چقدر می چرخد
       frozen snowflake branch_callout:
         frozen_snowflake_branch: استفاده از بلوک "ایجاد شعبه برف ریزه"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: استفاده از بلوک "ایجاد شعبه برف ریزه"
       frozen square iterative_callout:
+        frozen_create_square: برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید
+      frozen square iterative_b_callout:
+        frozen_create_square: برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید
+      frozen square iterative_test_callout:
         frozen_create_square: برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید
       frozen square loop 3x_callout:
         replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop 3x_b_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop 3x_test_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
       frozen square loop_callout:
         replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop_b_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square loop_test_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
       frozen square snowflake_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square snowflake_b_callout:
+        replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
+      frozen square snowflake_test_callout:
         replace_questions: از منوی کشویی برای جایگزین کردن "???" با یک عدد استفاده کنید
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید

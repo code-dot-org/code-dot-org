@@ -307,6 +307,8 @@ nn:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Kvar ting treng si eida medan-løkke.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: For å gjere ferdig designet må teiknaren rotere 120 grader mellom kvar firkant.
       Artist Inspiration_authored_hint:
         brush_width: Vi sette penselbreidda til 1 og fargen til blå før vi gjorde noko anna.
         double_loop: Prøv å sette ei for-løkke i ei gjenta-løkke.

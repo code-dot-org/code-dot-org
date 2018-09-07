@@ -1572,3 +1572,15 @@
               name: Dine digitale fotavtrykk
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og det Store Prosjektet
+        frozen-2018:
+          stages:
+            Artist:
+              name: Kunstner
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Kunstner
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Kunstner

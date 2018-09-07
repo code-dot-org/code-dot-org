@@ -713,6 +713,7 @@ ka:
         CSF_scrat_loops_CF: ციკლები გამყინვარების პერიოდში
         CSF_if_allskins: ბლოკი „თუ“
         CSF_ifelse_allskins: "„თუ/სხვაგვარად“ ბლოკების გამოყენება"
+        CSF_ifelseifelse_allskins: თუ/სხვაგვარად/სხვა ბლოკების გაოყენება
         CSF_loops_AB: ციკლები
         csd_gamelab_booleans: ბულის ტიპის გამოთქმები
         csd_gamelab_conditional_statements: პირობითი დებულებები

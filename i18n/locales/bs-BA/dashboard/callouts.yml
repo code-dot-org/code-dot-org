@@ -238,6 +238,10 @@ bs:
         frozen_circle_function_with_parameter_circle: Koristi blok "napravi krug" i promijeni veličinu.
       frozen cross rotate_callout:
         replace_questions_degree: Koristi padajući meni za zamjenu "???" sa brojem
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Koristi padajući meni za zamjenu "???" sa brojem
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Koristi padajući meni za zamjenu "???" sa brojem
       frozen cross_callout:
         repeat_blocks_1: "(1) Koristi ovaj blok i stavi ga oko sivih blokova na radnoj površini"
         repeat_blocks_2: (2) Pomakni blok "Ponovi" ovamo i stavi sive blokove unutar njega
@@ -247,20 +251,48 @@ bs:
         frozen_diamond_repeat: Koristi blok za ponovljanje da napraviš ovaj oblik.
       frozen freeplay_callout:
         snowflake_dropdown: Koristi ovaj padajući meni za stvaranje različitih pahuljica!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Koristi ovaj padajući meni za stvaranje različitih pahuljica!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Koristi ovaj padajući meni za stvaranje različitih pahuljica!
       frozen line_callout:
+        run: Klikni "Run" da pokrenete vas program!
+        move_elsa_forward: Dovuci blok "Idi Naprijed" i zakači ga ispod bloka "Pri Pokretanju" da bi Elsa išla naprijed
+      frozen line_b_callout:
+        run: Klikni "Run" da pokrenete vas program!
+        move_elsa_forward: Dovuci blok "Idi Naprijed" i zakači ga ispod bloka "Pri Pokretanju" da bi Elsa išla naprijed
+      frozen line_test_callout:
         run: Klikni "Run" da pokrenete vas program!
         move_elsa_forward: Dovuci blok "Idi Naprijed" i zakači ga ispod bloka "Pri Pokretanju" da bi Elsa išla naprijed
       frozen perpendicular_callout:
         turn_elsa: Koristi blok "Okreni" da bi se Elsa okrenula. Broj na padajućem meniju određuje za koliko će se Elsa okrenuti
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Koristi blok "napravi krak pahuljice"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Koristi blok "napravi krak pahuljice"
       frozen square iterative_callout:
+        frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
+      frozen square iterative_test_callout:
         frozen_create_square: Dodaj ovdje još blokova da napraviš kvadrat
       frozen square loop 3x_callout:
         replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
+      frozen square loop 3x_b_callout:
+        replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
+      frozen square loop 3x_test_callout:
+        replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
       frozen square loop_callout:
         replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
+      frozen square loop_b_callout:
+        replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
+      frozen square loop_test_callout:
+        replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
       frozen square snowflake_callout:
+        replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
+      frozen square snowflake_b_callout:
+        replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
+      frozen square snowflake_test_callout:
         replace_questions: Koristi padajući meni za zamjenu "???" sa brojem
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju

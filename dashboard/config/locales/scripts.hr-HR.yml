@@ -1340,3 +1340,15 @@ hr:
               name: Pomakni, pomakni
             Your Digital Footprint:
               name: Tvoj digitalni trag
+        frozen-2018:
+          stages:
+            Artist:
+              name: Umjetnik
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Umjetnik
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Umjetnik

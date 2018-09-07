@@ -540,6 +540,9 @@ id:
         aplikasi anda!"
       AppLab Intro 4 - Video share_markdown_instruction: "# buat dan bagikan aplikasi
         anda!"
+      Artist Autorun Test_markdown_instruction: |-
+        Sekarang, letakkan fungsinya ke dalam
+        sebuah lingkaran untuk menggambar tiga kotak yang ini.
       Bergeron Robot Maze1_markdown_instruction: "Dapatkah Anda membantu saya menangkap
         babi nakal ? \\ r \n\\ r \nStack \nsebuah beberapa ` langkah forward` blok
         \ bawah yang` ketika run` blok dan tekan \"Run\".\n \n"

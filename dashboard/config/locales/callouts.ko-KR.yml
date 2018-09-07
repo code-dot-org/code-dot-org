@@ -206,6 +206,10 @@ ko:
         frozen_circle_function_with_parameter_circle: '"원 만들기" 블럭을 사용하고 그 크기를 바꾸세요.'
       frozen cross rotate_callout:
         replace_questions_degree: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen cross rotate_b_callout:
+        replace_questions_degree: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen cross rotate_test_callout:
+        replace_questions_degree: '"???" 부분에 수를 입력하면 됩니다.'
       frozen cross_callout:
         repeat_blocks_1: "(1) 이 블럭을 회색 블럭들에 사용하세요."
         repeat_blocks_2: (2) "반복(Repeat)" 블럭을 여기에 이동시킨 후, 회색 블럭들의 안에 넣어주세요.
@@ -215,20 +219,46 @@ ko:
         frozen_diamond_repeat: 반복 블럭을 사용해 이 모양을 만들어보세요.
       frozen freeplay_callout:
         snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      frozen freeplay_b_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
+      frozen freeplay_test_callout:
+        snowflake_dropdown: 다른 모양의 눈송이를 만들기 위해서 사용해 보세요.
       frozen line_callout:
+        move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
+      frozen line_b_callout:
+        move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
+      frozen line_test_callout:
         move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
       frozen perpendicular_callout:
         turn_elsa: '"돌기(회전)" 블럭을 사용해 엘사가 방향을 바꾸도록 해보세요. 선택 메뉴에서의 수는 엘사가 회전해야할 정도를
           의미합니다.'
       frozen snowflake branch_callout:
         frozen_snowflake_branch: '"가지치기 눈송이 만들기(create a snowflake branch)" 블럭을 사용하세요.'
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: '"가지치기 눈송이 만들기(create a snowflake branch)" 블럭을 사용하세요.'
       frozen square iterative_callout:
+        frozen_create_square: 사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요.
+      frozen square iterative_b_callout:
+        frozen_create_square: 사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요.
+      frozen square iterative_test_callout:
         frozen_create_square: 사각형을 만들기 위해서 여기에 블럭들을 더 붙여주세요.
       frozen square loop 3x_callout:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop 3x_b_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop 3x_test_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
       frozen square loop_callout:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop_b_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square loop_test_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
       frozen square snowflake_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square snowflake_b_callout:
+        replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
+      frozen square snowflake_test_callout:
         replace_questions: '"???" 부분에 수를 입력하면 됩니다.'
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: 모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.

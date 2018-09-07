@@ -426,6 +426,7 @@ nl:
       Artist - Nested Loops 6_instruction: Kan je een zeskant tekenen met een lus rond de driehoek-code?
       Artist - Nested Loops 9_instruction: Teken de tanden in de mond van de krokodil!
       Artist - Nested Loops Assessment 1_instruction: Gebruik een geneste lus om de tekening af te maken.
+      Artist Autorun Test_instruction: Plaats de functie nu in de herhaling om deze 3 vierkanten te tekenen.
       Artist Inspiration_instruction: "Vrij spel inspiratie. Je hebt alles geleerd dat je nodig hebt om een patroon als dit te maken! Als dit je inspireert, probeer dan ook zoiets te maken. Of bedenk zelf iets heel anders.\\r\n\\r\nWil je weten hoe wij ons patroon hebben gemaakt? "
       Auto Open Function Editor_instruction: "In een functie kun je andere functies aanroepen!\nGebruik je \"vorm\" functie als basis, maak 3 huizen. Ek volgende huis moet 20 pixels groter zijn.\nHet eerste huis moet 50 pixels zijn.\nTip: een for-lus kan handig zijn. "
       Bee Recommended Blocks test_instruction: Paarse bloemen hebben 1 of 0 nectar, maar je weet niet welke. Je moet alleen nectar verzamelen als dat er is. Controleer of de nectar gelijk is aan 1 met een "als blok".
@@ -1697,6 +1698,11 @@ nl:
       courseD_artist_project_embedded_instruction: Hier is wat je zo dadelijk zal maken!
       courseD_artist_ramp11_instruction: Teken nu een vorm met de artiest!
       courseD_artist_ramp12_instruction: Gebruik wat je geleerd hebt om deze driehoek binnenin een vierkant te tekenen.
+      courseD_autorun_binary4_2019_instruction: Kan jij dit patroon tekenen met een lus van een drie-cijferige binaire tekenreeks?
+      courseD_autorun_binary6_2019_instruction: Welke 6 cijferige binaire reeks, 11 keer herhaald, tekent dit plaatje?
+      courseD_autorun_binary7_2019_instruction: Wat is de korste binaire reeks die je kan gebruiken om dit plaatje te tekenen?
+      courseD_autorun_binary8_2019_instruction: Voltooi de code om deze afbeelding te tekenen.
+      courseD_autorun_binary8_predict1_2019_instruction: Voltooi de code om deze afbeelding te tekenen.
       courseD_bee_conditionals1_instruction: Controleer of er een bloem onder de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseD_bee_conditionals1_predict1_instruction: Controleer of er een bloem onder de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseD_bee_conditionals1_predict1_2018_instruction: Controleer of er een bloem onder de wolken zit. Als zich een bloem bevindt, verzamel dan nectar.

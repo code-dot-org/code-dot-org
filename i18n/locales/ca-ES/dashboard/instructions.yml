@@ -287,6 +287,7 @@ ca:
       4-5 Maze 9_instruction: "crea un bucle amb el bloc \"repeteix fins que\"."
       4-5 Maze Assessment 1_instruction: 'Avaluació: Arriba al gira-sol.'
       App Lab test_instruction: prova
+      Artist Autorun Test_instruction: Usa el bloc "repeteix" per dibuixar aquests tres quadrats.
       Bergeron Robot Maze1_instruction: 'Pots ajudar-me a atrapar el porc dolent? Apila un parell de blocs "avança" i prem "Executar". '
       Course 2 Bee Loops 1_instruction: 'Hola, sóc una abella. Em pots ajudar a recollir el nèctar de les flors? '
       Course 4 Artist 1_instruction: 'Ajuda''m a acabar de dibuixar la capsa. (Cada línia fa 200 píxels de llarg) '

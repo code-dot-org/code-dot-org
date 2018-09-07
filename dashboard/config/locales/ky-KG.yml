@@ -1,9 +1,26 @@
 ---
 ky:
+  errors:
+    messages:
+      not_saved: 'Кийинки каталарды оңдогула:'
   activerecord:
+    errors:
+      messages:
+        blank: милдеттүү
+        blank_plural: милдеттүү
+        invalid: жараксыз
+        invalid_plural: жараксыз
     attributes:
       user:
+        name: Атын көрсөт
+        name_example: Атын көрсөт<br/>(м. Мыкты кодер же Жаңыл)
+        email: Эмейл
+        username: Колдонуучунун аты
+        password: Сырсөз
+        password_confirmation: Сырсөздү тастыктоо
+        current_password: Учурдагы сырсөз
         locale: Тили
+        age: Жашы
   submit: Кошуу
   cancel: Жок кыл
   okay: Окай
@@ -13,14 +30,18 @@ ky:
     signed_in: Киргенсиңер!
   signup_form:
     hoc_already_signed_up_heading: Кирбей баштоо
+    age: Жашы
     submit: Катталуу
     additional_information: Каттооңорду улантуу үчүн кошумча маалымат керек.
+    field_is_required: милдеттүү
     email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
     email_preference_yes: Ооба
     email_preference_no: Жок
   school_info:
     other: Башка
   signin_form:
+    login: Эмейл
+    password: Сырсөз
     submit: Кирүү
   signinsection:
     login: Кирүү
@@ -34,6 +55,7 @@ ky:
     new_teacher_subject: Code.org сайтына кош келиңиз!
   section:
     type:
+      email: Эмейл
       google_classroom: Google Classroom
   crud:
     new_model: Жаңы %{model}
@@ -55,6 +77,9 @@ ky:
       түзүүгө жол берет. Алар толугу менен жаңы Minecraft түзүп, аны достору бөлүшүп
       же телефонунан ойной алышат. Код саатында ушуну классыңар менен чогуу кылып
       көргүлө.
+  video:
+    notes: Видео жокпу? Эскертмелери көрсөт.
+    show_notes: Эскертмелери көрсөт
   compatibility:
     upgrade:
       link: Дагы кара
@@ -77,6 +102,8 @@ ky:
         өткүлө.
     unplugged_conditionals:
       title: Шартуулар
+  landing:
+    support: Жардам ал
   multi-submittable:
     wrong_title: Рахмат
     correct_title: Рахмат
@@ -119,6 +146,7 @@ ky:
   view_all_units: Бардык бирдиктерди көрүү
   pd:
     form_labels:
+      email: Эмейл
       school_city: Мектеп жайгашкан шаар
     form_entries:
       subjects:

@@ -240,6 +240,7 @@ th:
         C4_for_loops: การวนรอบ
         C4_for_loops_bee: การวนรอบ
         C4_for_loops_no_bee: การวนรอบ
+        C4_math_artist: การเขียนโปรแกรมให้กับศิลปินด้วยคณิตฯ
         C4_function_parameters: ฟังก์ชันกับพารามิเตอร์
         C4_conditionals: เงื่อนไข
         C4_unplugged_algorithms: อัลกอริทึมกับแทนแกรม

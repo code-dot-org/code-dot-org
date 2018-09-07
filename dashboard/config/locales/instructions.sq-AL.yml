@@ -1029,6 +1029,9 @@ sq:
       Artist - Nested Loops Assessment 1_instruction: |-
         Përdor një cikël të mbivendosur për të përfunduar
         dizenjimin.
+      Artist Autorun Test_instruction: |-
+        Përdor bllokun "repeat" për të vizatuar këto
+        3 katrorë.
       Artist Inspiration_instruction: "Frymëzimi i Lojës së Lirë: Tani ke mësuar gjithçka
         që ke nevojë për të bërë një model si ky! Nëse kjo figurë të inspiron, mundohu
         të bësh diçka të ngjashme. Në të kundërt, krijo diçka sipas dëshirës.\r\n\r\nDo
@@ -2867,6 +2870,12 @@ sq:
       courseD_artist_binary7_instruction: Cili është vargu më i shkurtër binar që
         ti mund të përsërisësh për të vizatuar këtë figurë?
       courseD_artist_binary7_2018_instruction: Cili është vargu më i shkurtër binar
+        që ti mund të përsërisësh për të vizatuar këtë figurë?
+      courseD_autorun_binary4_2019_instruction: Mund t'a bësh këtë model duke e lidhur
+        një varg 3 shifror binar?
+      courseD_autorun_binary6_2019_instruction: Cili varg 6 shifror binar i përsëritur
+        11 herë do t'a vizatojë këtë figurë?
+      courseD_autorun_binary7_2019_instruction: Cili është vargu më i shkurtër binar
         që ti mund të përsërisësh për të vizatuar këtë figurë?
       courseD_bee_debugging3_instruction: |-
         Këto blloqet janë duke më bezdisur vërtet. Rregullo

@@ -2855,3 +2855,15 @@ es:
               name: Tu huella Digital
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie y el gran proyecto
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

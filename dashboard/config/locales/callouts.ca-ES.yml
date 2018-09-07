@@ -138,6 +138,12 @@ ca:
       frozen cross rotate_callout:
         replace_questions_degree: Utilitza la llista desplegable per substituir "???"
           per un valor
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Utilitza la llista desplegable per substituir "???"
+          per un valor
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Utilitza la llista desplegable per substituir "???"
+          per un valor
       frozen cross_callout:
         repeat_blocks_1: "(1) Utilitza aquest bloc i posa-ho al voltant dels blocs
           grisos en l'àrea de treball"
@@ -149,7 +155,19 @@ ca:
       frozen freeplay_callout:
         snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents
           flocs de neu!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents
+          flocs de neu!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents
+          flocs de neu!
       frozen line_callout:
+        move_elsa_forward: Arrossega un bloc "Avança" i col·loca'l sota el bloc "Quan
+          s'executi" per fer avançar l'Elsa
+      frozen line_b_callout:
+        move_elsa_forward: Arrossega un bloc "Avança" i col·loca'l sota el bloc "Quan
+          s'executi" per fer avançar l'Elsa
+      frozen line_test_callout:
         move_elsa_forward: Arrossega un bloc "Avança" i col·loca'l sota el bloc "Quan
           s'executi" per fer avançar l'Elsa
       frozen perpendicular_callout:
@@ -158,15 +176,40 @@ ca:
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Utilitza el bloc "crear una branca de floquet de
           neu"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Utilitza el bloc "crear una branca de floquet de
+          neu"
       frozen square iterative_callout:
         frozen_create_square: Uniu més blocs aquí per crear un quadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Uniu més blocs aquí per crear un quadrat
+      frozen square iterative_test_callout:
+        frozen_create_square: Uniu més blocs aquí per crear un quadrat
       frozen square loop 3x_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per
+          un valor
+      frozen square loop 3x_b_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per
+          un valor
+      frozen square loop 3x_test_callout:
         replace_questions: Utilitza la llista desplegable per substituir "???" per
           un valor
       frozen square loop_callout:
         replace_questions: Utilitza la llista desplegable per substituir "???" per
           un valor
+      frozen square loop_b_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per
+          un valor
+      frozen square loop_test_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per
+          un valor
       frozen square snowflake_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per
+          un valor
+      frozen square snowflake_b_callout:
+        replace_questions: Utilitza la llista desplegable per substituir "???" per
+          un valor
+      frozen square snowflake_test_callout:
         replace_questions: Utilitza la llista desplegable per substituir "???" per
           un valor
       grade4_artist_parameters_squares1_callout:

@@ -793,6 +793,10 @@ ka:
           და შეცვალეთ ზომა.
       frozen cross rotate_callout:
         replace_questions_degree: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
+      frozen cross rotate_b_callout:
+        replace_questions_degree: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
+      frozen cross rotate_test_callout:
+        replace_questions_degree: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       frozen cross_callout:
         repeat_blocks_1: "(1) გამოიყენეთ ეს ბლოკი და ჩასვით მასში სამუშაო სივრცეში
           მდებარე ნაცრისფერი ბლოკები"
@@ -805,7 +809,21 @@ ka:
       frozen freeplay_callout:
         snowflake_dropdown: გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
           შესაქმნელად!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
+          შესაქმნელად!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: გამოიყენეთ ეს ჩამოსაშლელი მენიუ სხვადასხვანაირი ფიფქების
+          შესაქმნელად!
       frozen line_callout:
+        run: პროგრამის გამოსაცდელად დააჭირეთ "გაშვებას"!
+        move_elsa_forward: გადმოიტანე ბლოკი "წინ მოძრაობა" "გაშვებისას" ბლოკის ქვემოთ
+          და ელზა გაიქცევა წინ
+      frozen line_b_callout:
+        run: პროგრამის გამოსაცდელად დააჭირეთ "გაშვებას"!
+        move_elsa_forward: გადმოიტანე ბლოკი "წინ მოძრაობა" "გაშვებისას" ბლოკის ქვემოთ
+          და ელზა გაიქცევა წინ
+      frozen line_test_callout:
         run: პროგრამის გამოსაცდელად დააჭირეთ "გაშვებას"!
         move_elsa_forward: გადმოიტანე ბლოკი "წინ მოძრაობა" "გაშვებისას" ბლოკის ქვემოთ
           და ელზა გაიქცევა წინ
@@ -814,13 +832,31 @@ ka:
           მენიუში განსაზღვრავს იმას, თუ რამდენჯერ მოტრიალდება ელზა
       frozen snowflake branch_callout:
         frozen_snowflake_branch: გამოიყენეთ ბლოკი "ფიფქის ტოტის შექმნა"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: გამოიყენეთ ბლოკი "ფიფქის ტოტის შექმნა"
       frozen square iterative_callout:
+        frozen_create_square: კვადრატის დასახატად მიამაგრეთ კიდევ რამდენიმე ბლოკი
+      frozen square iterative_b_callout:
+        frozen_create_square: კვადრატის დასახატად მიამაგრეთ კიდევ რამდენიმე ბლოკი
+      frozen square iterative_test_callout:
         frozen_create_square: კვადრატის დასახატად მიამაგრეთ კიდევ რამდენიმე ბლოკი
       frozen square loop 3x_callout:
         replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
+      frozen square loop 3x_b_callout:
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
+      frozen square loop 3x_test_callout:
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       frozen square loop_callout:
         replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
+      frozen square loop_b_callout:
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
+      frozen square loop_test_callout:
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       frozen square snowflake_callout:
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
+      frozen square snowflake_b_callout:
+        replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
+      frozen square snowflake_test_callout:
         replace_questions: გამოიყენეთ ჩამოსაშლელი მენიუ და ჩაანაცვლეთ??? რიცხვით
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: ეს ნაცრისფერი ბლოკები ქვისგან შედგება! ეს იმას ნიშნავს,

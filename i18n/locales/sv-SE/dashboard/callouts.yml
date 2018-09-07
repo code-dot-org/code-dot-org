@@ -184,6 +184,10 @@ sv:
         frozen_circle_function_with_parameter_circle: Använd blocket "skapa en cirkel"  och ändra storleken.
       frozen cross rotate_callout:
         replace_questions_degree: Använd rullistan för att ersätta "???" med en siffra
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Använd rullistan för att ersätta "???" med en siffra
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Använd rullistan för att ersätta "???" med en siffra
       frozen cross_callout:
         repeat_blocks_1: "(1) använd detta block och lägga det runt de grå blocken på arbetsytan"
         repeat_blocks_2: (2) flytta blocket "Upprepa" hit, och placera de grå blocken inuti
@@ -193,19 +197,45 @@ sv:
         frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
       frozen freeplay_callout:
         snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
       frozen line_callout:
+        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start" blocket för att få Elsa att gå framåt
+      frozen line_b_callout:
+        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start" blocket för att få Elsa att gå framåt
+      frozen line_test_callout:
         move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start" blocket för att få Elsa att gå framåt
       frozen perpendicular_callout:
         turn_elsa: Använd "sväng" blocket för att få Elsa att vända sig. Siffran i rullistan bestämmer hur mycket hon svänger
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
       frozen square iterative_callout:
+        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
+      frozen square iterative_b_callout:
+        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
+      frozen square iterative_test_callout:
         frozen_create_square: Lägg till fler block här för att skapa en kvadrat
       frozen square loop 3x_callout:
         replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop 3x_b_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop 3x_test_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
       frozen square loop_callout:
         replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop_b_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square loop_test_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
       frozen square snowflake_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square snowflake_b_callout:
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+      frozen square snowflake_test_callout:
         replace_questions: Använd rullistan för att ersätta "???" med en siffra
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din funktion
