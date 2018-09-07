@@ -7,6 +7,7 @@ import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import { StatusColors } from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import SendPrincipalApprovalButton from './send_principal_approval_button';
 
 const styles = {
   table: {
@@ -179,10 +180,10 @@ export class QuickViewTable extends React.Component {
     },{
       property: 'id',
       header: {
-        label: 'View Application',
+        label: 'Actions',
       },
       cell: {
-        format: this.formatViewButton
+        format: this.formatActionsCell
       }
     });
 
@@ -236,15 +237,23 @@ export class QuickViewTable extends React.Component {
     );
   };
 
-  formatViewButton = (id) => {
+  formatActionsCell = (id, props) => {
     return (
-      <Button
-        bsSize="xsmall"
-        target="_blank"
-        href={this.context.router.createHref(`/${this.props.path}/${id}`)}
-      >
-        View Application
-      </Button>
+      <div>
+        <Button
+          bsSize="xsmall"
+          target="_blank"
+          href={this.context.router.createHref(`/${this.props.path}/${id}`)}
+        >
+          View Application
+        </Button>
+        <br/>
+        {
+          props['rowData']['principal_approval'] === 'No approval sent' && (
+            <SendPrincipalApprovalButton id={id}/>
+          )
+        }
+      </div>
     );
   };
 

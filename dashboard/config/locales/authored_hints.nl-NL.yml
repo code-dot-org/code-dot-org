@@ -420,6 +420,9 @@ nl:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Elk item heeft zijn eigen `herhaal` loop nodig.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: De kunstenaar moet 120 graden draaien tussen elk
+          vierkant om dit ontwerp te voltooien.
       Artist Inspiration_authored_hint:
         brush_width: We zetten de penseelbreedte op 1 en de kleur op blauw vooraleer
           iets anders te doen.

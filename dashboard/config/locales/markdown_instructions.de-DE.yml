@@ -312,6 +312,8 @@ de:
         gefunden! Ich weiß nicht, wie viele Schaufeln Erde ich brauche.  Kannst du
         ein Programm schreiben, mit dem das Loch gefüllt wird, bis der Boden eben
         ist?  Hinweis:  Versuche es diesmal mit der Solange-Schleife.'
+      Artist Autorun Test_markdown_instruction: Verwende den „Wiederholen"-Block,
+        um diese 3 Quadrate zu zeichnen.
       Course 4 Artist 13_markdown_instruction: Soll es noch weiter gehen?  Hier ist
         eine leere Fläche, die Du frei gestalten kannst!
       Course 4 Artist 6_markdown_instruction: 'Vervollständige den Code, um diese

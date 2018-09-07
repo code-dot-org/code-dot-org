@@ -880,6 +880,8 @@ nl:
       Artist - Nested Loops 9_instruction: Teken de tanden in de mond van de krokodil!
       Artist - Nested Loops Assessment 1_instruction: Gebruik een geneste lus om de
         tekening af te maken.
+      Artist Autorun Test_instruction: Plaats de functie nu in de herhaling om deze
+        3 vierkanten te tekenen.
       Artist Inspiration_instruction: "Vrij spel inspiratie. Je hebt alles geleerd
         dat je nodig hebt om een patroon als dit te maken! Als dit je inspireert,
         probeer dan ook zoiets te maken. Of bedenk zelf iets heel anders.\r\n\r\nWil
@@ -3741,6 +3743,16 @@ nl:
       courseD_artist_ramp11_instruction: Teken nu een vorm met de artiest!
       courseD_artist_ramp12_instruction: Gebruik wat je geleerd hebt om deze driehoek
         binnenin een vierkant te tekenen.
+      courseD_autorun_binary4_2019_instruction: Kan jij dit patroon tekenen met een
+        lus van een drie-cijferige binaire tekenreeks?
+      courseD_autorun_binary6_2019_instruction: Welke 6 cijferige binaire reeks, 11
+        keer herhaald, tekent dit plaatje?
+      courseD_autorun_binary7_2019_instruction: Wat is de korste binaire reeks die
+        je kan gebruiken om dit plaatje te tekenen?
+      courseD_autorun_binary8_2019_instruction: Voltooi de code om deze afbeelding
+        te tekenen.
+      courseD_autorun_binary8_predict1_2019_instruction: Voltooi de code om deze afbeelding
+        te tekenen.
       courseD_bee_conditionals1_instruction: Controleer of er een bloem onder de wolken
         zit. Als zich een bloem bevindt, verzamel dan nectar.
       courseD_bee_conditionals1_predict1_instruction: Controleer of er een bloem onder

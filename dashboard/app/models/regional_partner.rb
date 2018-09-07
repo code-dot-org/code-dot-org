@@ -48,6 +48,11 @@ class RegionalPartner < ActiveRecord::Base
     principal_approval
   )
 
+  PRINCIPAL_APPROVAL_TYPES = [
+    ALL_REQUIRE_APPROVAL = 'all_teachers_required'.freeze,
+    SELECTIVE_APPROVAL = 'required_per_teacher'.freeze
+  ].freeze
+
   # Upcoming and not ended
   def future_pd_workshops_organized
     pd_workshops_organized.future
@@ -62,6 +67,7 @@ class RegionalPartner < ActiveRecord::Base
   validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
   validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
   validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
+  validates_inclusion_of :principal_approval, in: PRINCIPAL_APPROVAL_TYPES, if: -> {principal_approval.present?}
 
   # assign a program manager to a regional partner
   def program_manager=(program_manager_id)

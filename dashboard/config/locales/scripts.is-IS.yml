@@ -4068,3 +4068,19 @@ is:
               name: Stafræna fótsporið þitt
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og Stóra verkefnið
+        frozen-2018:
+          stages:
+            Artist:
+              name: Listamaður
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Listamaður
+        dance:
+          stages:
+            new stage:
+              name: nýr áfangi
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Listamaður

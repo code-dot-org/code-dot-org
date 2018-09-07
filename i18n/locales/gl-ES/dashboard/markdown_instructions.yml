@@ -134,6 +134,7 @@ gl:
       4-5 While Loops 2_markdown_instruction: "Móveme para o monte de terra e remóveo\ncon 5 pás de terra, usando o bloque \"remova\"."
       4-5 While Loops 3_markdown_instruction: "Móveme para o monte e remove toda a\nterra, entón móveme para o buraco e cúbreo completamente. Pista: usa o menor número de bloques posíbel."
       4-5 While Loops 4_markdown_instruction: "Uau, atopei un buraco realmente fondo! Non\nsei cantas pás de terra son necesarias. Podes escribir un programa que o cubra até que o solo fique nivelado? Pista: desta vez tenta usar o bucle \"mentres\"."
+      Artist Autorun Test_markdown_instruction: "Usa o bloque \"repita\" para debuxar estes\n3 cadrados."
       Course 4 Artist 13_markdown_instruction: "Aínda xogando?  Temos aquí unha pantalla en branco\nna cal podes debuxar o que queiras!"
       Course 4 Artist 6_markdown_instruction: "Completa o código para debuxar estes triángulos.\nPista: hai 3 triángulos nunha rotación de 360 graos... cantas veces o número\n3 cabe en 360?"
       Course 4 Artist 8_markdown_instruction: "Debuxa este sol repetindo todo este bloque de código\nvarias veces."

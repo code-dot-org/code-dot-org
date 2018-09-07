@@ -245,6 +245,7 @@ zh-TW:
         \ "
       Alien Defender_markdown_instruction: "**專案點子**：在 Play Lab 裡設計一個獨一無二的遊戲！"
       Alien Defender_2018_markdown_instruction: "**專案點子**：在 Play Lab 裡設計一個獨一無二的遊戲！"
+      Artist Autorun Test_markdown_instruction: 現在，把這個函式放進迴圈來畫出這 3 個正方形。
       Artist Inspiration_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\r\n\r\n**自由發揮靈感：**你已經學會了製作這樣的圖案所需的知識了！\r\n\r\n如果這個圖案讓你有些聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。
         \r\n\r\n注意：我們用了`設定透明度`積木來製作 petals（花瓣）向外褪色的效果。"
       Bergeron Robot Maze1_markdown_instruction: "你可以幫我抓住那頑皮的豬嗎？\r\n\r\n把幾個`移動-向前`積木放到`當運行時`積木的下面，然後點擊「運行」。 "

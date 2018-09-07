@@ -4428,3 +4428,15 @@ id:
               name: Gerakkan itu, Gerakkan itu
             Your Digital Footprint:
               name: Digital Footprint Kamu
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artis
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artis
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artis

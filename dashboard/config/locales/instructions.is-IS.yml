@@ -887,6 +887,8 @@ is:
       Artist - Nested Loops 9_instruction: Teiknaðu tennur krókódílsins!
       Artist - Nested Loops Assessment 1_instruction: Notaðu faldaða lykkju til að
         ljúka teikningunni.
+      Artist Autorun Test_instruction: Settu nú fallið í lykkju til að teikna þessa
+        3 ferninga.
       Artist Inspiration_instruction: "Frjáls æfing með innblæstri: Þú hefur nú lært
         allt sem þarf til að búa til svona mynstur! Ef þessi mynd veitir þér innblástur,
         reyndu þá að búa til eitthvað líkt henni. Ef ekki, búðu þá til þína eigin
@@ -4802,6 +4804,16 @@ is:
       courseD_artist_ramp11_instruction: Búðu nú til ferning með listamanninum!
       courseD_artist_ramp12_instruction: Notaðu það sem þú hefur lært til að teikna
         þennan þríhyrning innan í ferningi.
+      courseD_autorun_binary4_2019_instruction: Getur þú teiknað þetta mynstur með
+        því að endurtaka 3 tvíundartölur (0 og 1)?
+      courseD_autorun_binary6_2019_instruction: Hvaða 6 stafa tvíundarstrengur, endurtekinn
+        11 sinnum, mun teikna þessa mynd?
+      courseD_autorun_binary7_2019_instruction: Hver er stysti tvíundarstrengur sem
+        endurtekinn mundi teikna þessa mynd?
+      courseD_autorun_binary8_2019_instruction: Ljúktu við kóðann sem býr til þessa
+        mynd.
+      courseD_autorun_binary8_predict1_2019_instruction: Ljúktu við kóðann sem býr
+        til þessa mynd.
       courseD_bee_conditionals1_instruction: Gáðu hvort skýið feli blóm. Sæktu blómasafann,
         ef svo er.
       courseD_bee_conditionals1_predict1_instruction: Gáðu hvort skýið feli blóm.

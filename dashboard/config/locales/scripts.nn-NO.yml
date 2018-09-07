@@ -2137,3 +2137,15 @@ nn:
               name: Dine digitale fotspor
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og det store prosjektet
+        frozen-2018:
+          stages:
+            Artist:
+              name: Kunstnar
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Kunstnar
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Kunstnar

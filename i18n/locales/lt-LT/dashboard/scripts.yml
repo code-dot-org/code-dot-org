@@ -1488,3 +1488,15 @@ lt:
               name: Judėk, judėk
             Your Digital Footprint:
               name: Virtualūs pirštų antspaudai
+        frozen-2018:
+          stages:
+            Artist:
+              name: Menininkas
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Menininkas
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Menininkas

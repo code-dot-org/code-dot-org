@@ -86,6 +86,12 @@ az:
       frozen line_callout:
         move_elsa_forward: Elzanı irəli aparmaq üçün "irəli get" blokunu sürükləyib
           şıqqıltı ilə "icra etdikdə" blokunun aşağısına yapışdırın
+      frozen line_b_callout:
+        move_elsa_forward: Elzanı irəli aparmaq üçün "irəli get" blokunu sürükləyib
+          şıqqıltı ilə "icra etdikdə" blokunun aşağısına yapışdırın
+      frozen line_test_callout:
+        move_elsa_forward: Elzanı irəli aparmaq üçün "irəli get" blokunu sürükləyib
+          şıqqıltı ilə "icra etdikdə" blokunun aşağısına yapışdırın
       grade4_playLab_proj_example1_callout:
         New Play Lab Project_callout2: Öz proqramını yadda saxlamaq və işlətmek üçün
           Qaç düyməsinə vur

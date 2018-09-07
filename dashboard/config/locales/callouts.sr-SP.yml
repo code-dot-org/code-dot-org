@@ -86,7 +86,13 @@ sr:
         frozen_diamond_repeat: Користите понављај блок да направите овај облик.
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Користите блок "Направи грану пахуљице"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Користите блок "Направи грану пахуљице"
       frozen square iterative_callout:
+        frozen_create_square: Додајте више блокова да направите квадрат
+      frozen square iterative_b_callout:
+        frozen_create_square: Додајте више блокова да направите квадрат
+      frozen square iterative_test_callout:
         frozen_create_square: Додајте више блокова да направите квадрат
       grade4_frozen_functions3_callout:
         frozen_circle_function_with_parameter_circle: Користите блок "направи круг"

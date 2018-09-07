@@ -112,6 +112,10 @@ ar:
         frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة" و غيّر الحجم.
       frozen cross rotate_callout:
         replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen cross rotate_b_callout:
+        replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen cross rotate_test_callout:
+        replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
       frozen cross_callout:
         repeat_blocks_1: "(1) استخدام هذه الكتلة لوضعها حول الكتل الرمادية في مساحة العمل"
         repeat_blocks_2: أنقل المقطع "كرر" هنا، وضع المقاطع الرمادية بداخلهاا
@@ -121,19 +125,45 @@ ar:
         frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
       frozen freeplay_callout:
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات الثلج!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات الثلج!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات الثلج!
       frozen line_callout:
+        move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
+      frozen line_b_callout:
+        move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
+      frozen line_test_callout:
         move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
       frozen perpendicular_callout:
         turn_elsa: إستخدم القطعة البرمجية "اتجه" لجعل إلسا تدور. العدد الموجود في القائمة يحدد الزاوية التي ستستدرها
       frozen snowflake branch_callout:
         frozen_snowflake_branch: إستخدم قطعة "إنشاء فرع رقاقة الثلج"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: إستخدم قطعة "إنشاء فرع رقاقة الثلج"
       frozen square iterative_callout:
+        frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
+      frozen square iterative_b_callout:
+        frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
+      frozen square iterative_test_callout:
         frozen_create_square: ركّب المزيد من القطع هنا لإنشاء مربع
       frozen square loop 3x_callout:
         replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen square loop 3x_b_callout:
+        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen square loop 3x_test_callout:
+        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
       frozen square loop_callout:
         replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen square loop_b_callout:
+        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen square loop_test_callout:
+        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
       frozen square snowflake_callout:
+        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen square snowflake_b_callout:
+        replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      frozen square snowflake_test_callout:
         replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك

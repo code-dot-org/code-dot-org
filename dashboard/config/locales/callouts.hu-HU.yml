@@ -231,6 +231,12 @@ hu:
       frozen cross rotate_callout:
         replace_questions_degree: Használd a legördülő menüt hogy helyettesítsd a
           "???" egy számmal
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Használd a legördülő menüt hogy helyettesítsd a
+          "???" egy számmal
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Használd a legördülő menüt hogy helyettesítsd a
+          "???" egy számmal
       frozen cross_callout:
         repeat_blocks_1: "(1) Használd ezt a blokkot és tedd a munkaterületen levő
           szürke blokkok köré"
@@ -244,7 +250,17 @@ hu:
           a formát.
       frozen freeplay_callout:
         snowflake_dropdown: Használd ezt a legördülő menüt különféle hópelyhek létrehozásához!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Használd ezt a legördülő menüt különféle hópelyhek létrehozásához!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Használd ezt a legördülő menüt különféle hópelyhek létrehozásához!
       frozen line_callout:
+        move_elsa_forward: Húzd a "menj előre" blokkot és illeszd azt a "futtatáskor"
+          blokk alá ahhoz, hogy Elsa előre lépjen
+      frozen line_b_callout:
+        move_elsa_forward: Húzd a "menj előre" blokkot és illeszd azt a "futtatáskor"
+          blokk alá ahhoz, hogy Elsa előre lépjen
+      frozen line_test_callout:
         move_elsa_forward: Húzd a "menj előre" blokkot és illeszd azt a "futtatáskor"
           blokk alá ahhoz, hogy Elsa előre lépjen
       frozen perpendicular_callout:
@@ -252,15 +268,39 @@ hu:
           menüben lévő szám határozza meg, hogy Elsa mennyire fordul el
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Használd a "hozz létre egy hópehely ágat" blokkot
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Használd a "hozz létre egy hópehely ágat" blokkot
       frozen square iterative_callout:
         frozen_create_square: Csatolj több blokkot ide egy négyzet  létrehozásához
+      frozen square iterative_b_callout:
+        frozen_create_square: Csatolj több blokkot ide egy négyzet  létrehozásához
+      frozen square iterative_test_callout:
+        frozen_create_square: Csatolj több blokkot ide egy négyzet  létrehozásához
       frozen square loop 3x_callout:
+        replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
+          számmal
+      frozen square loop 3x_b_callout:
+        replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
+          számmal
+      frozen square loop 3x_test_callout:
         replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
           számmal
       frozen square loop_callout:
         replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
           számmal
+      frozen square loop_b_callout:
+        replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
+          számmal
+      frozen square loop_test_callout:
+        replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
+          számmal
       frozen square snowflake_callout:
+        replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
+          számmal
+      frozen square snowflake_b_callout:
+        replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
+          számmal
+      frozen square snowflake_test_callout:
         replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
           számmal
       grade3_ConditionalsElse_2_callout:

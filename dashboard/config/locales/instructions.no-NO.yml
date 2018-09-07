@@ -820,6 +820,8 @@
       Artist - Nested Loops 9_instruction: Tegn tennene i alligatoren sin munn!
       Artist - Nested Loops Assessment 1_instruction: Bruk en løkke i løkke for å
         fullføre designet.
+      Artist Autorun Test_instruction: Plasser funksjonen inni en løkke for å tegne
+        disse kvadratene.
       Artist Inspiration_instruction: "Inspirasjon til fritt spill: Du har nå lært
         alt du trenger å vite for å lage et mønster som dette! Hvis dette bildet inspirerer
         deg, kan du prøve å lage noe lignende, ellers du kan skape noe helt eget.
@@ -2484,6 +2486,12 @@
         repetere for å tegne dette bildet?
       courseD_artist_binary7_2018_instruction: Hva er den korteste binærstrengen du
         kan repetere for å tegne dette bildet?
+      courseD_autorun_binary4_2019_instruction: Kan du tegne dette mønsteret ved å
+        kjøre en løkke over en tresifret binærstreng?
+      courseD_autorun_binary6_2019_instruction: Hvilken 6-siftret binærstreng, repetert
+        11 ganger, vil tegne dette bildet?
+      courseD_autorun_binary7_2019_instruction: Hva er den korteste binærstrengen
+        du kan repetere for å tegne dette bildet?
       courseD_bee_debugging3_instruction: Disse blokkene plager meg. Fiks feilene
         og samle inn nektaren for å lage all honningen.
       courseD_bee_nestedLoops3_instruction: Samle inn all nektaren fra alle blomstene.

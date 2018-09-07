@@ -291,6 +291,8 @@ hu:
         Nem tudom, hány lapátnyi földre van szükségem. Tudsz olyan programot írni,
         ami teljesen feltölti a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust
         használd.'
+      Artist Autorun Test_markdown_instruction: Használd az "ismételd" blokkot a három
+        négyzet megrajzolásához.
       CSD U2 create page_markdown_instruction: "# Hozd létre, és nevezd el az új oldaladat\r\n\r\nMielőtt\nelkezdesz
         kódolni, meg kell bizonyosodnod róla, hogy minden lap megvan,\namire szükséged
         lesz a projektben.\r\n\r\n# Tedd a következőt\r\n* Hozz létre egy új HTML

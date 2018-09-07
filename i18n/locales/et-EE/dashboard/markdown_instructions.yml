@@ -128,6 +128,7 @@ et:
       4-5 While Loops 2_markdown_instruction: Liiguta mind mullahunniku juurde ja eemalda see viie labidatäiega, kasutades plokki „eemalda“.
       4-5 While Loops 3_markdown_instruction: "Kasuta võimalikult vähe plokke, et seda ülesannet täita.\\r\\r Liiguta mind hunniku juurde ja eemalda see täielikult, seejärel liigu augu juurde ja täida auk."
       4-5 While Loops 4_markdown_instruction: "Uskumatu, ma leidsin tõeliselt sügava augu!\\r\\rMa ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \\r Kas sa saaksid kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje: proovi see kord kasutada tsüklit „kuni“?  "
+      Artist Autorun Test_markdown_instruction: Nüüd pane funktsioon tsükli sisse, et joonistada 3 ruutu.
       Course 4 Artist 13_markdown_instruction: Kas mängid ikka veel? Siin on tühi lõuend, kus saad disainida ükskõik mida!
       Course 4 Artist 6_markdown_instruction: Lõpeta kood nende võrdkülgsete kolmnurkade joonistamiseks.
       Course 4 Artist 8_markdown_instruction: Joonista see päike, korrates seda koodiplokki mitu korda.

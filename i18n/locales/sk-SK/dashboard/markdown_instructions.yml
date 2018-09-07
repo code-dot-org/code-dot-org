@@ -129,6 +129,7 @@ sk:
       4-5 While Loops 2_markdown_instruction: Dostaňte ma ku kope hliny a odstráňte ju pomocou 5 plných lopát použitím bloku "odstrániť 1".
       4-5 While Loops 3_markdown_instruction: "Použite čo možno najmenej blokov pre dokončenie tejto úlohy!  \n\nDostaňte ma ku kope a odstráňte všetku hlinu, potom ma posuňte k jame a celú ju zasypte."
       4-5 While Loops 4_markdown_instruction: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude zasypávať jamu až kým nebude zem vyrovnaná?  "
+      Artist Autorun Test_markdown_instruction: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
       Function intro Ryan_markdown_instruction: "V pracovnom priestore je **funkcia** s názvom „vybudovať most“. Je v nej zabudovaný celý kód, ktorý potrebujete na prekročenie rieky. \\r\n \\r\nDvakrát prichyťte malý, zelený blok do pracovného priestoru, aby ste opravili cestu a dostali hráča {currentPlayerName} k ruditovej fakli [redstone_torch]."
       MC Agent Freeplay_markdown_instruction: "**Voľná hra:** Teraz je to na vás. Pomocou kódu agenta preskúmajte tento svet."
       MC_HOC_2017 Agent Test_markdown_instruction: "Kliknite na oranžové tlačidlo Spustiť, aby ste mohli presúvať hráča pomocou **klávesov so šípkami**. \\r\n\\r\nAk chcete prejsť túto úroveň, musíte prejsť k dverám a otvoriť ich (pomocou **medzerníka**), aby ste sa dostali na oranžové políčko vo vnútri."

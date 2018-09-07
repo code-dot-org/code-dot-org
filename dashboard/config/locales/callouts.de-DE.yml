@@ -268,6 +268,12 @@ de:
       frozen cross rotate_callout:
         replace_questions_degree: Verwende den Dropdown-Pfeil, um  "???" mit einer
           Zahl zu ersetzen.
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Verwende den Dropdown-Pfeil, um  "???" mit einer
+          Zahl zu ersetzen.
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Verwende den Dropdown-Pfeil, um  "???" mit einer
+          Zahl zu ersetzen.
       frozen cross_callout:
         repeat_blocks_1: "(1) Nutze diesen Baustein und platziere ihn um die grauen
           Bausteine im Arbeitsraum."
@@ -282,7 +288,19 @@ de:
       frozen freeplay_callout:
         snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
           zu erstellen!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
       frozen line_callout:
+        move_elsa_forward: Ziehe einen "Vorwärts bewegen"-Baustein unter den "Ausführen"-Baustein,
+          um Elsa vorwärts zu bewegen.
+      frozen line_b_callout:
+        move_elsa_forward: Ziehe einen "Vorwärts bewegen"-Baustein unter den "Ausführen"-Baustein,
+          um Elsa vorwärts zu bewegen.
+      frozen line_test_callout:
         move_elsa_forward: Ziehe einen "Vorwärts bewegen"-Baustein unter den "Ausführen"-Baustein,
           um Elsa vorwärts zu bewegen.
       frozen perpendicular_callout:
@@ -290,15 +308,39 @@ de:
           der Dropdown-Liste bestimmt, wie weit Elsa sich dreht.
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Verwende den Baustein "Erstelle einen Schneeflocken-Zweig"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Verwende den Baustein "Erstelle einen Schneeflocken-Zweig"
       frozen square iterative_callout:
         frozen_create_square: Füge hier mehr Bausteine an, um ein Quadrat zu erstellen
+      frozen square iterative_b_callout:
+        frozen_create_square: Füge hier mehr Bausteine an, um ein Quadrat zu erstellen
+      frozen square iterative_test_callout:
+        frozen_create_square: Füge hier mehr Bausteine an, um ein Quadrat zu erstellen
       frozen square loop 3x_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square loop 3x_b_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square loop 3x_test_callout:
         replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
           ersetzen.
       frozen square loop_callout:
         replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
           ersetzen.
+      frozen square loop_b_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square loop_test_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
       frozen square snowflake_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square snowflake_b_callout:
+        replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
+          ersetzen.
+      frozen square snowflake_test_callout:
         replace_questions: Verwende den Dropdown-Pfeil, um  "???" mit einer Zahl zu
           ersetzen.
       grade3_ConditionalsElse_2_callout:
