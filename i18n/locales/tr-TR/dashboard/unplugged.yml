@@ -227,6 +227,7 @@ tr:
         desc: "# Öğrenci Alım Senaryoları Oturumu\\r\n\\r\n## Bilgisayar Bilimi için Sağa Kaydır\\r\nBu oturumda, MIT'deki ortaklarımız tarafından geliştirilmiş olan \"Bilgisayar Bilimi için Sağa Kaydır\" adında bir araç kullanacağız. Bilgisayar Bilimi için Sağa Kaydır'da, birkaç öğrenci profili okuyacaksınız ve öğrencinin sizin Bilgisayar Bilimi İlkeleri kursunuza kaydolması için öğrenciyi ikna etmede kullanılabilecek özel ifadeleri düşüneceksiniz.\\r\n\\r\n### Nasıl Çalışır\\r\nBilgisayar Bilimi için Sağa Kaydır oynarken, öğrenciye söyleyebileceğiniz bir dizi alıntı göreceksiniz. Öğrenciyi kursa kaydolmaya ikna etmek için etkili olacağını düşündüğünüz alıntıları sağa kaydıracaksınız ve etkili olmayacağını düşündüğünüz ifadeleri sola kaydıracaksınız. Oturum sırasında grup olarak, bir öğrenciyi Bilgisayar Bilimlerine kaydolmasını sağlayacak en etkili ifade türleri üzerine sizin düşüncelerinizi tartışacağız ve atölyenizdeki diğer insanların her argümanı hangi yöne kaydırdıklarını görme şansınız olacak.\\r\n\\r\n\\r\nAşağıda devama tıkladığınızda, size oyunu göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz."
       courseB_unplugged_MRF_2018:
         title: Robot dostlarım
+        desc: Arkadaşların için kod yazarak programlamayı öğren!
       PlantASeed_2018:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların bilgisayar bilimindeki önemini göreceğiz.
@@ -271,5 +272,7 @@ tr:
         desc: Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik oluşturuyor. Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
       MoveItMoveIt_2018:
         title: Çabuk, Çabuk Taşı
+      courseE_unplugged_CnC_2018:
+        title: Dijital Paylaşım
       RelayProgramming_2018:
         title: Röle Programlama

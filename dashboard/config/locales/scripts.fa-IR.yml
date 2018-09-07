@@ -1464,3 +1464,15 @@ fa:
               name: حرکت کن، حرکت کن
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
+        frozen-2018:
+          stages:
+            Artist:
+              name: هنرمند
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: هنرمند
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: هنرمند

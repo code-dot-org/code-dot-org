@@ -1570,3 +1570,15 @@ ko:
               name: 디지털 개인정보 흔적
             'Persistence & Frustration: Stevie and the Big Project':
               name: 스티비와 큰 프로젝트
+        frozen-2018:
+          stages:
+            Artist:
+              name: 화가
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: 화가
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: 화가

@@ -1759,3 +1759,15 @@ sv:
               name: Flytta det, flytta den
             Your Digital Footprint:
               name: Ditt digitala fotavtryck
+        frozen-2018:
+          stages:
+            Artist:
+              name: Konstnären
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Konstnären
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Konstnären

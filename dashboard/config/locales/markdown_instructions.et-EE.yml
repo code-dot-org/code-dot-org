@@ -261,6 +261,8 @@ et:
         augu!\r\rMa ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \r
         Kas sa saaksid kirjutada programmi, millega täidetakse auk, kuni maapind on
         tasane? Vihje: proovi see kord kasutada tsüklit „kuni“?  "
+      Artist Autorun Test_markdown_instruction: Nüüd pane funktsioon tsükli sisse,
+        et joonistada 3 ruutu.
       Course 4 Artist 13_markdown_instruction: Kas mängid ikka veel? Siin on tühi
         lõuend, kus saad disainida ükskõik mida!
       Course 4 Artist 6_markdown_instruction: Lõpeta kood nende võrdkülgsete kolmnurkade

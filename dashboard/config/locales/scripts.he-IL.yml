@@ -1592,3 +1592,15 @@ he:
               name: זוזו, זוזו
             Loops in Ice Age:
               name: לולאות עם סקראט
+        frozen-2018:
+          stages:
+            Artist:
+              name: אמן
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: אמן
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: אמן

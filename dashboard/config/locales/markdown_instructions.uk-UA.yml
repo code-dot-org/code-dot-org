@@ -358,6 +358,8 @@ uk:
         новий блок `onEvent()`для кнопки \"Right!\" \nВсередину додати блок `setScreen()`
         де відбуватиметься перемикання на `\"rightScreen\"`.\r\n\r\n**Stuck?\nClick
         here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)"
+      Artist Autorun Test_markdown_instruction: Використовуй блок "повторити", щоб
+        намалювати ці 3 квадрати.
       Big Game Booleans 1_markdown_instruction: Коли ми востаннє працювали над грою,
         ми дістались до цілі, і спрайти літали по екрану, але ніколи не повертались.
         Клацни "Запустити", щоб переглянути, як гра працює на даний момент, а тоді

@@ -780,6 +780,8 @@ cs:
       Artist - Nested Loops 9_instruction: Nakresli zuby v tlamě aligátora!
       Artist - Nested Loops Assessment 1_instruction: Použij vnořené cykly k dokončení
         návrhu.
+      Artist Autorun Test_instruction: Použij blok "opakování" k nakreslení těchto
+        3 čtverců.
       Artist Inspiration_instruction: "Volná hra inspirace: Nyní už víš vše, co potřebuješ
         vědět, abys udělal tento vzor! Pokud tento obrázek tě inspiruje, pokus se
         provést něco podobného. Jinak, vytvoř něco, co všechny vlastníš. \r \r Chtěj
@@ -2425,6 +2427,12 @@ cs:
       courseD_artist_binary7_instruction: Jaký je nejkratší binární řetězec, který
         lze opakovat k nakreslení tohoto obrázku?
       courseD_artist_binary7_2018_instruction: Jaký je nejkratší binární řetězec,
+        který lze opakovat k nakreslení tohoto obrázku?
+      courseD_autorun_binary4_2019_instruction: Mohl bys nakreslit tento vzor opakováním
+        tří číslicovým binárním řetězcem?
+      courseD_autorun_binary6_2019_instruction: Který 6 číslicový binární řetězec
+        11 krát opakovaný nakreslí tento obrázek?
+      courseD_autorun_binary7_2019_instruction: Jaký je nejkratší binární řetězec,
         který lze opakovat k nakreslení tohoto obrázku?
       courseD_bee_debugging3_instruction: Tyto bloky mě opravdu štvou. Oprav chybu(y),
         aby se sesbíral všechen nektar a udělal všechen med.

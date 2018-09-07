@@ -1022,6 +1022,8 @@ tr:
         modunda \"Doğru!\" butonu için programınıza yeni bir `onEvent()` ekleyin.\nİçine,
         Ekranları `\"rightScreen\"` 'e değiştiren bir `setScreen ()` bloğu ekleyin.\r\n\r\n**Takıldınız
         mı? Buraya tıklayınız:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)"
+      Artist Autorun Test_markdown_instruction: Şimdi bu üç kareyi çizmek için fonksiyonu
+        döngü içine koy.
       Artist Inspiration_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
         width=\"250px\"/> \r \r ** Serbest ilham: ** Şimdi böyle bir model yapmak
         için bilmeniz gereken her şeyi öğrendin! \r \r bu resimden ilham almayı deneyin

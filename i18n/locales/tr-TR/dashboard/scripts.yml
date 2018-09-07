@@ -6453,6 +6453,8 @@ tr:
               name: Kartlarla Koşullu Önermeler
             Minecraft Hour of Code:
               name: Minecraft Kod Saati
+            Copyright and Creativity:
+              name: Dijital Paylaşım
         coursef-2018:
           assignment_family_title: Kurs F
           description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
@@ -7090,3 +7092,19 @@ tr:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+        frozen-2018:
+          stages:
+            Artist:
+              name: Sanatçı
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Sanatçı
+        dance:
+          stages:
+            new stage:
+              name: yeni kademe
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Sanatçı

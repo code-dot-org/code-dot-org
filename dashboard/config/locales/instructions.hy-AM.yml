@@ -992,6 +992,9 @@ hy:
       Artist - Nested Loops Assessment 1_instruction: |-
         Use a nested loop to complete
         the design.
+      Artist Autorun Test_instruction: |-
+        Now, put the function inside of a loop
+        to draw these three squares.
       Artist Inspiration_instruction: "Free Play Inspiration: You've\nnow learned
         everything you need to know to make a pattern like this! If this\npicture
         inspires you, try to make something similar. Otherwise, create something\nall
@@ -2705,6 +2708,15 @@ hy:
         What is the shortest binary string that
         you can repeat to draw this image?
       courseD_artist_binary7_2018_instruction: |-
+        What is the shortest binary string that
+        you can repeat to draw this image?
+      courseD_autorun_binary4_2019_instruction: |-
+        Can you draw this pattern by looping
+        just three binary digits (0s and 1s)?
+      courseD_autorun_binary6_2019_instruction: |-
+        Which 6 digit binary string, repeated
+        11 times, will draw this image?
+      courseD_autorun_binary7_2019_instruction: |-
         What is the shortest binary string that
         you can repeat to draw this image?
       courseD_bee_debugging3_instruction: |-

@@ -399,6 +399,9 @@ ru:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: У каждого элемента должен быть свой цикл "пока".
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Художник должен повернуться на 120 градусов между
+          каждым квадратом, чтобы завершить эту задачу.
       Artist Inspiration_authored_hint:
         brush_width: Мы установили ширину кисти на 1, а цвет - на синий, прежде чем
           начать делать что-то.

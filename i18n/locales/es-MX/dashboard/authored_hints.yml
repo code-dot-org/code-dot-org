@@ -261,6 +261,8 @@ es-MX:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Cada elemento necesitará su propio "while" loop.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: El artista debe girar 120 grados entre cada cuadrado para completar este diseño.
       Artist Inspiration_authored_hint:
         brush_width: Establecemos el grosor del pincel a 1, luego el color azul antes de hacer cualquier otra cosa.
         double_loop: Trate de poner un "for loop" dentro de un loop de "repetición".
@@ -7874,12 +7876,16 @@ es-MX:
         courseD_artist_binary1_a: Reemplace la "???" en el bloque de texto con la imagen binaria que quieras, en ceros y unos.
         courseD_artist_binary1_b: El artista dibujará un espacio en blanco por cada 1 y un espacio en negro por cada 0.
         courseD_artist_binary1_c: |-
-          Así es como puede ingresar su código binario:! [] (Https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+          Así es como puede ingresar su código binario:
+          
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary1_2018_authored_hint:
         courseD_artist_binary1_a: Reemplace la "???" en el bloque de texto con la imagen binaria que quieras, en ceros y unos.
         courseD_artist_binary1_b: El artista dibujará un espacio en blanco por cada 1 y un espacio en negro por cada 0.
         courseD_artist_binary1_c: |-
-          Así es como puede ingresar su código binario:! [] (Https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+          Así es como puede ingresar su código binario:
+          
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
       courseD_artist_binary2_authored_hint:
         courseD_artist_binary2_a: '¡Simplemente haga clic en ''Ejecutar'' para ver este programa en acción!'
       courseD_artist_binary2_2018_authored_hint:
@@ -8190,6 +8196,28 @@ es-MX:
         courseD_artist_ramp12_a: '¡Puedes dibujar primero el cuadrado, luego el triángulo o hacerlo al revés!'
         courseD_artist_ramp12_b: Intenta dividir el problema en 2 partes y usando 2 ciclos.
         courseD_artist_ramp12_c: '¡Puedes utilizar el menú desplegable en los bloques de ''giro'' para ver qué ángulo necesitas!'
+      courseD_autorun_binary2_2019_authored_hint:
+        courseD_artist_binary2_a: '¡Simplemente haga clic en ''Ejecutar'' para ver este programa en acción!'
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: '¡Uno de los cuatro patrones binarios en la caja de herramientas resolverá este rompecabezas!'
+        courseD_artist_binary3_b: '¡No tengas miedo de cometer un error! Intenta escribir binario y ejecuta el código para ver qué sucederá, incluso si aún no has resuelto el acertijo.'
+      courseD_autorun_binary4_2019_authored_hint:
+        courseD_artist_binary4_a: Mira los primeros tres cuadrados en la fila superior. ¿Podría repetir estos tres para obtener el patrón completo?
+        courseD_artist_binary4_b: '¡No tengas miedo de cometer un error! Intenta escribir código binario y ejecuta el código para ver qué sucederá, incluso si no crees que ya has resuelto el enigma.'
+      courseD_autorun_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: Intenta ejecutar el código primero para ver con qué tienes que trabajar.
+        courseD_artist_binary5_b: Solo necesita cambiar dos filas para hacer una sonrisa.
+        courseD_artist_binary5_c: Si tiene problemas para descifrar este enigma, intente escribir las líneas binarias en un pedazo de papel y busque un patrón.
+      courseD_autorun_binary6_2019_authored_hint:
+        courseD_artist_binary6_a: Comience en la parte superior izquierda. ¿Qué tan lejos debe leer antes de que el patrón comience a repetirse?
+        courseD_artist_binary6_b: '¡Puedes construir tu cadena binaria un poquito a la vez y seguir probando!'
+      courseD_autorun_binary7_2019_authored_hint:
+        courseD_artist_binary7_a: Comience en la parte superior izquierda. ¿Qué tan lejos debe leer antes de que el patrón comience a repetirse?
+        courseD_artist_binary7_b: '¡No tengas miedo de cometer un error! Intenta escribir código binario y ejecuta el código para ver qué sucederá, incluso si no crees que ya has resuelto el enigma.'
+      courseD_autorun_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: La espiral puede ser confusa a veces. Aísle cada línea horizontal en su mente mientras crea este diseño.
+        courseD_artist_binary8_b: Intenta ejecutar el código primero para ver con qué tienes que trabajar.
+        courseD_artist_binary8_c: '¡No tengas miedo de cometer un error! Intenta escribir binario y ejecuta el código para ver qué sucederá, incluso si aún no has resuelto el acertijo.'
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: Usted tendrá que utilizar un bloque ` si ` para comprobar si hay una flor debajo de la nube antes de tratar de obtener el néctar.
       courseD_bee_conditionals1_predict1_authored_hint:

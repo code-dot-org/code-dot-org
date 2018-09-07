@@ -705,6 +705,8 @@ sk:
       App Lab test_instruction: test
       Artist - Nested Loops Assessment 1_instruction: Použite vnorené slučky pre dokončenie
         dizajnu.
+      Artist Autorun Test_instruction: Teraz vlož funkciu do cyklu, aby si nakreslil
+        tri štvorce.
       Bergeron Robot Maze1_instruction: 'Viete mi pomôcť chytiť nezbedné prasiatko?
         Navrstvite niekoľko blokov "posunúť dopredu" pod blok "po spustení" a stlačte
         "Spustiť". '

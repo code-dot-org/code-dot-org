@@ -471,6 +471,9 @@ ro:
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Fiecare element va avea nevoie de o buclă "în timp ce"
           proprie.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Artistul trebuie să întoarcă la 120 de grade între
+          fiecare pătrat pentru a finaliza acest design.
       Artist Inspiration_authored_hint:
         brush_width: Am setat lățimea periei la 1 apoi culoarea la albastru, înainte
           de a face orice altceva.

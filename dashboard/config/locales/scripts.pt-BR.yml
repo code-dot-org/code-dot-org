@@ -1785,6 +1785,10 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             Unit 4 Chapter 1 Assessment:
               name: Unidade 4 Capítulo 1 Avaliação
+        csd1-2017:
+          stages:
+            Processing:
+              name: Processando
         basketball:
           title: Escolha seu time e faça um jogo de basquete
           description_short: Escolha seu time e faça um jogo de basquete
@@ -1807,6 +1811,8 @@ pt-BR:
           stages:
             Peer Review:
               name: Revisão em grupo
+            Headers:
+              name: Cabeçalhos
             Lists:
               name: Listas
         csd4-2017:
@@ -2048,8 +2054,16 @@ pt-BR:
               name: funções
         csd2-draft:
           stages:
+            Images:
+              name: Imagens
+            Headers:
+              name: Cabeçalhos
             Lists:
               name: Listas
+        csd1-draft:
+          stages:
+            Processing:
+              name: Processando
         csd3-chapters:
           stages:
             Variables:
@@ -2389,6 +2403,7 @@ pt-BR:
           stages:
             Minecraft Hour of Code:
               name: Hora do Código Minecraft
+          title: 'Minecraft: Jornada do Herói'
         csp-explore-2017:
           stages:
             Post-Course Survey:
@@ -2631,6 +2646,8 @@ pt-BR:
               name: Programação no labirinto
             Loops in Collector:
               name: Repetições com Laurel
+            Loops in Ice Age:
+              name: Repetições com Scrat
             Move It, Move It:
               name: Criando caminhos
             Copyright and Creativity:
@@ -2659,6 +2676,28 @@ pt-BR:
               name: Programação em papel quadriculado
             Relay Programming:
               name: Programação por revezamento
+        csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: Unidade 1 - Avaliação 1
+            Unit 1 - Assessment 2:
+              name: Unidade 1 - Avaliação 2
+            Unit 2 - Assessment 1:
+              name: Unidade 2 - Avaliação 1
+            Unit 2 - Assessment 2:
+              name: Unidade 2 - Avaliação 2
+            Unit 3 - Assessment 1:
+              name: Unidade 3 - Avaliação 1
+            Unit 4 - Assessment 1:
+              name: Unidade 4 - Avaliação 1
+            Unit 5 - Assessment 1:
+              name: Unidade 5 - Avaliação 1
+            Unit 5 - Assessment 2:
+              name: Unidade 5 - Avaliação 2
+            Unit 2 - Assessment 3:
+              name: Unidade 2 - Avaliação 3
+            Unit 2 - Assessment 4:
+              name: Unidade 2 - Avaliação 4
         coursec-2018:
           title: Curso C (2018)
           assignment_family_title: Curso C
@@ -2737,6 +2776,10 @@ pt-BR:
               name: A Necessidade de Endereçar
             The Need for DNS:
               name: A Necessidade de DNS
+        csd1-2018:
+          stages:
+            Processing:
+              name: Processando
         csd4-2018:
           stages:
             User Interfaces:
@@ -2868,5 +2911,19 @@ pt-BR:
               name: Seu rastro digital
             Copyright and Creativity:
               name: É Ótimo Criar e Jogar Limpo
+            Loops in Ice Age:
+              name: Repetições com Scrat
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie e o Grande Projeto
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

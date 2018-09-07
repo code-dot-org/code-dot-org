@@ -364,6 +364,9 @@ pt-BR:
         de quantas\npás cheias de terra esse buraco precisa.  \r\nVocê pode escrever
         um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?
         \ "
+      Artist Autorun Test_markdown_instruction: |-
+        Agora coloque a função dentro de um laço
+        para desenhar esses três quadrados.
       Big Game Animation 1_markdown_instruction: |-
         Agora que você aprendeu a escrever funções lineares
         simples, vamos usá-las para adicionar um pouco de movimento ao nosso jogo.
@@ -792,6 +795,8 @@ pt-BR:
         porco!
       course1_maze_debugging_challenge2_markdown_instruction: Analise este nível.
         Estes são os blocos corretos, mas eles estão colocados na ordem errada!
+      course2_collector_prog_challenge1_markdown_instruction: Preste atenção! Você
+        consegue coletar todas as **10** peças do tesouro?
       course4_artist_fwp_challenge1_markdown_instruction: Execute este programa e
         faça alterações para ver o que acontece. Você pode descobrir como ele funciona?
         (Ou exclua-o e substitua-o por algo totalmente diferente)
@@ -1258,6 +1263,14 @@ pt-BR:
         tesouro.
       courseC_harvester_loops3_markdown_instruction: Colete todas as abóboras.
       courseC_harvester_loops3_2018_markdown_instruction: Colete todas as abóboras.
+      courseC_maze_programming8_markdown_instruction: '*" Mantenha a calma e ajude-me
+        a encontrar o porco mal."*'
+      courseC_maze_programming8_2018_markdown_instruction: '*" Mantenha a calma e
+        ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_markdown_instruction: '*" Mantenha a calma
+        e ajude-me a encontrar o porco mal."*'
+      courseC_maze_programming8_predict1_2018_markdown_instruction: '*" Mantenha a
+        calma e ajude-me a encontrar o porco mal."*'
       courseC_maze_programming_challenge1_markdown_instruction: 'O pássaro precisa
         de sua ajuda! O porco está escondido, e o objetivo é encontrá-lo. '
       courseC_maze_programming_challenge1_2018_markdown_instruction: 'O pássaro precisa
@@ -1456,6 +1469,8 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      grade2_CaringForNewPet_11_markdown_instruction: '*" Mantenha a calma e ajude-me
+        a encontrar o porco mal."*'
       grade2_MakeDogTag_8_markdown_instruction: |-
         Agora vamos conectar um monte de "V"
         em um laço.
