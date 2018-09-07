@@ -1112,7 +1112,7 @@ class Script < ActiveRecord::Base
     summary
   end
 
-  # @return {Hash<string,number[]>|number[]}
+  # @return {Hash<string,number[]>}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section, filtered so that the only script id which appears
   #   is the current script id. This mirrors the output format of
