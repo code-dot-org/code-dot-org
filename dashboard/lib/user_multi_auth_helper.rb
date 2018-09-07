@@ -32,8 +32,8 @@ module UserMultiAuthHelper
     else
       return false unless self.provider == provider
       update(
-        provider: auth_hash.provider.to_s,
-        uid: auth_hash.uid,
+        provider: provider,
+        uid: uid,
         oauth_token: oauth_token,
         oauth_token_expiration: oauth_token_expiration,
         oauth_refresh_token: oauth_refresh_token
