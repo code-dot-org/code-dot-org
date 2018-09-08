@@ -150,7 +150,7 @@ class ExpiredDeletedAccountPurger
   end
 
   def build_metrics(review_queue_depth)
-    metrics = {
+    {
       # Number of soft-deleted accounts in system after this run
       SoftDeletedAccounts: soft_deleted_accounts.count,
       # Number of accounts purged during this run
@@ -160,12 +160,6 @@ class ExpiredDeletedAccountPurger
       # Depth of manual review queue after this run
       ManualReviewQueueDepth: review_queue_depth,
     }
-    # Dry-run metrics
-    if @dry_run
-      metrics[:DryRunAccountsPurged] = @num_accounts_purged
-      metrics[:DryRunAccountsQueued] = @num_accounts_queued
-    end
-    metrics
   end
 
   def metric_name(name)
