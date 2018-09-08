@@ -1,17 +1,11 @@
 require 'test_helper'
 require 'account_purger'
 require 'expired_deleted_account_purger'
-require_relative '../../../shared/test/spy_newrelic_agent'
 
 class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   freeze_time
 
   def setup
-    # Enable New Relic logging for these tests to test metrics
-    @@original_newrelic_logging = CDO.newrelic_logging
-    CDO.newrelic_logging = true
-    # Force tests to fail unless they explicitly expect every call to record_metric
-    NewRelic::Agent.expects(:record_metric).never
     # Force tests to fail unless they explicitly expect every call to Cdo::Metrics.push
     Cdo::Metrics.expects(:push).never
 
@@ -32,7 +26,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   def teardown
-    CDO.newrelic_logging = @@original_newrelic_logging
     CDO.hip_chat_logging = @@original_hip_chat_logging
     CDO.slack_endpoint = @@original_slack_endpoint
   end
@@ -212,15 +205,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_after: 4.days.ago,
       deleted_before: 2.days.ago
 
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsPurged", 2)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsQueued", 0)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
-
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
@@ -270,15 +254,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       raise 'Intentional failure' if account == student_b
       account.update!(purged_at: Time.now); true
     end
-
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsPurged", 1)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsQueued", 1)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
@@ -403,20 +378,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     # Does not purge any accounts
     AccountPurger.expects(:new).never
 
-    # Still sends metrics to New Relic
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
-    # Records no purged accounts
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsPurged", 0)
-    # Records no queued accounts (we don't queue individual accounts for review
-    # when the problem is that there's too many accounts)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsQueued", 0)
-    # Nothing moved to manual review queue
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
-
+    # Still sends metrics
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
@@ -458,14 +420,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_before: 15.days.ago,
       max_teachers_to_purge: 5
 
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsPurged", 6)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsQueued", 0)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
@@ -516,20 +470,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     # Does not purge any accounts
     AccountPurger.expects(:new).never
 
-    # Still sends metrics to New Relic
-    # Finds 6 soft-deleted accounts since we didn't delete any
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
-    # Records no purged accounts
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsPurged", 0)
-    # Records no queued accounts (we don't queue individual accounts for review
-    # when the problem is that there's too many accounts)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsQueued", 0)
-    # Nothing moved to manual review queue
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+    # Still sends metrics
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
       includes_metrics(
