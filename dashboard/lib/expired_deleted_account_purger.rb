@@ -1,4 +1,5 @@
 require 'stringio'
+require 'cdo/aws/metrics'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
 
@@ -151,18 +152,18 @@ class ExpiredDeletedAccountPurger
   def build_metrics(review_queue_depth)
     metrics = {
       # Number of soft-deleted accounts in system after this run
-      metric_name('SoftDeletedAccounts') => soft_deleted_accounts.count,
+      SoftDeletedAccounts: soft_deleted_accounts.count,
       # Number of accounts purged during this run
-      metric_name('AccountsPurged') => @dry_run ? 0 : @num_accounts_purged,
+      AccountsPurged: @dry_run ? 0 : @num_accounts_purged,
       # Number of accounts queued for manual review during this run
-      metric_name('AccountsQueued') => @dry_run ? 0 : @num_accounts_queued,
+      AccountsQueued: @dry_run ? 0 : @num_accounts_queued,
       # Depth of manual review queue after this run
-      metric_name('ManualReviewQueueDepth') => review_queue_depth,
+      ManualReviewQueueDepth: review_queue_depth,
     }
     # Dry-run metrics
     if @dry_run
-      metrics[metric_name('DryRunAccountsPurged')] = @num_accounts_purged
-      metrics[metric_name('DryRunAccountsQueued')] = @num_accounts_queued
+      metrics[:DryRunAccountsPurged] = @num_accounts_purged
+      metrics[:DryRunAccountsQueued] = @num_accounts_queued
     end
     metrics
   end
@@ -178,10 +179,22 @@ class ExpiredDeletedAccountPurger
   end
 
   def upload_metrics(metrics)
-    return unless CDO.newrelic_logging
-    metrics.each do |key, value|
-      NewRelic::Agent.record_metric key, value
+    if CDO.newrelic_logging
+      metrics.each do |key, value|
+        NewRelic::Agent.record_metric metric_name(key), value
+      end
     end
+
+    aws_metrics = metrics.map do |key, value|
+      {
+        metric_name: key,
+        dimensions: [
+          {name: "Environment", value: CDO.rack_env},
+        ],
+        value: value
+      }
+    end
+    Cdo::Metrics.push('DeletedAccountPurger', aws_metrics)
   end
 
   def build_summary(review_queue_depth)
