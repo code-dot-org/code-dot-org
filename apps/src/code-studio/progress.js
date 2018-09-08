@@ -13,7 +13,7 @@ import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
 import { authorizeLockable } from './stageLockRedux';
 import { setViewType, ViewType } from './viewAsRedux';
-import { getHiddenStages } from './hiddenStageRedux';
+import { getHiddenStages, initializeHiddenScripts } from './hiddenStageRedux';
 import { TestResults } from '@cdo/apps/constants';
 import {
   initProgress,
@@ -134,6 +134,8 @@ progress.renderCourseProgress = function (scriptData) {
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link}));
+
+  store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);

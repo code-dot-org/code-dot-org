@@ -635,6 +635,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.script_id
   end
 
+  test "update: hidden script is unhidden when assigned" do
+    sign_in @teacher
+    @section.toggle_hidden_script @csp_script, true
+    refute_nil SectionHiddenScript.find_by(script: @csp_script, section: @section)
+    post :update, params: {
+      id: @section.id,
+      script_id: @csp_script.id,
+    }
+    assert_nil SectionHiddenScript.find_by(script: @csp_script, section: @section)
+  end
+
   test "update: cannot update section you dont own" do
     other_teacher = create(:teacher)
     sign_in other_teacher

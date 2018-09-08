@@ -1268,6 +1268,38 @@ endvariants
     assert_equal ['English', 'fr-fr'], script.supported_locale_names
   end
 
+  test 'section_hidden_unit_info' do
+    teacher = create :teacher
+    section1 = create :section, user: teacher
+    assert_equal({}, @script_in_course.section_hidden_unit_info(teacher))
+
+    create :section_hidden_script, section: section1, script: @script_in_course
+    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+
+    # other script has no effect
+    other_script = create :script
+    create :section_hidden_script, section: section1, script: other_script
+    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+
+    # other teacher's sections have no effect
+    other_teacher = create :teacher
+    other_teacher_section = create :section, user: other_teacher
+    create :section_hidden_script, section: other_teacher_section, script: @script_in_course
+    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+
+    # other section for same teacher hidden for same script appears in list
+    section2 = create :section, user: teacher
+    assert_equal({section1.id => [@script_in_course.id]}, @script_in_course.section_hidden_unit_info(teacher))
+    create :section_hidden_script, section: section2, script: @script_in_course
+    assert_equal(
+      {
+        section1.id => [@script_in_course.id],
+        section2.id => [@script_in_course.id]
+      },
+      @script_in_course.section_hidden_unit_info(teacher)
+    )
+  end
+
   private
 
   def has_hidden_script?(scripts)
