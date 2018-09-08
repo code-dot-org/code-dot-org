@@ -2123,7 +2123,6 @@ class User < ActiveRecord::Base
 
   def destroy
     super.tap do
-      NewRelic::Agent.record_metric("Custom/User/SoftDelete", 1) if CDO.newrelic_logging
       Cdo::Metrics.push(
         'User',
         [
