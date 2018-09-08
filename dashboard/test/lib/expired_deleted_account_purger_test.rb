@@ -12,6 +12,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     CDO.newrelic_logging = true
     # Force tests to fail unless they explicitly expect every call to record_metric
     NewRelic::Agent.expects(:record_metric).never
+    # Force tests to fail unless they explicitly expect every call to Cdo::Metrics.push
+    Cdo::Metrics.expects(:push).never
 
     # Disable other logging
     @@original_hip_chat_logging = CDO.hip_chat_logging
@@ -219,6 +221,16 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
+    Cdo::Metrics.expects(:push).with(
+      'DeletedAccountPurger',
+      includes_metrics(
+        SoftDeletedAccounts: is_a(Integer),
+        AccountsPurged: 2,
+        AccountsQueued: 0,
+        ManualReviewQueueDepth: is_a(Integer)
+      )
+    )
+
     edap.purge_expired_deleted_accounts!
 
     purged = User.with_deleted.where.not(purged_at: nil)
@@ -237,10 +249,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{student_b.id}
       Purging user_id #{student_c.id}
       Done purging user_id #{student_c.id}
-      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 2
-      Custom/DeletedAccountPurger/AccountsQueued: 0
-      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      AccountsPurged: 2
+      AccountsQueued: 0
+      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
       Purged 2 account(s).
       🕐 00:00:00
     LOG
@@ -268,6 +280,16 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
 
+    Cdo::Metrics.expects(:push).with(
+      'DeletedAccountPurger',
+      includes_metrics(
+        SoftDeletedAccounts: is_a(Integer),
+        AccountsPurged: 1,
+        AccountsQueued: 1,
+        ManualReviewQueueDepth: is_a(Integer)
+      )
+    )
+
     assert_creates QueuedAccountPurge do
       edap.purge_expired_deleted_accounts!
     end
@@ -285,10 +307,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_a.id}
       Done purging user_id #{student_a.id}
       Purging user_id #{student_b.id}
-      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 1
-      Custom/DeletedAccountPurger/AccountsQueued: 1
-      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      AccountsPurged: 1
+      AccountsQueued: 1
+      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
       Purged 1 account(s).
       Queued 1 account(s) for manual review.
       1 account(s) require review.
@@ -320,6 +342,18 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/DryRunAccountsQueued", 0)
 
+    Cdo::Metrics.expects(:push).with(
+      'DeletedAccountPurger',
+      includes_metrics(
+        SoftDeletedAccounts: is_a(Integer),
+        AccountsPurged: 0,
+        AccountsQueued: 0,
+        ManualReviewQueueDepth: is_a(Integer),
+        DryRunAccountsPurged: 2,
+        DryRunAccountsQueued: 0,
+      )
+    )
+
     edap.purge_expired_deleted_accounts!
 
     assert_equal <<~LOG, edap.log.string
@@ -333,12 +367,12 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{student_b.id} (dry-run)
       Purging user_id #{student_c.id} (dry-run)
       Done purging user_id #{student_c.id} (dry-run)
-      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 0
-      Custom/DeletedAccountPurger/AccountsQueued: 0
-      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
-      Custom/DeletedAccountPurger/DryRunAccountsPurged: 2
-      Custom/DeletedAccountPurger/DryRunAccountsQueued: 0
+      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      AccountsPurged: 0
+      AccountsQueued: 0
+      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      DryRunAccountsPurged: 2
+      DryRunAccountsQueued: 0
       Would have purged 2 account(s).
       🕐 00:00:00
     LOG
@@ -371,6 +405,18 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/DryRunAccountsQueued", 1)
 
+    Cdo::Metrics.expects(:push).with(
+      'DeletedAccountPurger',
+      includes_metrics(
+        SoftDeletedAccounts: is_a(Integer),
+        AccountsPurged: 0,
+        AccountsQueued: 0,
+        ManualReviewQueueDepth: is_a(Integer),
+        DryRunAccountsPurged: 1,
+        DryRunAccountsQueued: 1,
+      )
+    )
+
     refute_creates QueuedAccountPurge do
       edap.purge_expired_deleted_accounts!
     end
@@ -388,12 +434,12 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       (dry-run)
       Purging user_id #{student_a.id} (dry-run)
       Purging user_id #{student_b.id} (dry-run)
-      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 0
-      Custom/DeletedAccountPurger/AccountsQueued: 0
-      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.count}
-      Custom/DeletedAccountPurger/DryRunAccountsPurged: 1
-      Custom/DeletedAccountPurger/DryRunAccountsQueued: 1
+      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      AccountsPurged: 0
+      AccountsQueued: 0
+      ManualReviewQueueDepth: #{QueuedAccountPurge.count}
+      DryRunAccountsPurged: 1
+      DryRunAccountsQueued: 1
       Would have purged 1 account(s).
       Would have queued 1 account(s) for manual review.
       🕐 00:00:00
@@ -413,17 +459,27 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
 
     # Still sends metrics to New Relic
     NewRelic::Agent.expects(:record_metric).
-        with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
+      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
     # Records no purged accounts
     NewRelic::Agent.expects(:record_metric).
-        with("Custom/DeletedAccountPurger/AccountsPurged", 0)
+      with("Custom/DeletedAccountPurger/AccountsPurged", 0)
     # Records no queued accounts (we don't queue individual accounts for review
     # when the problem is that there's too many accounts)
     NewRelic::Agent.expects(:record_metric).
-        with("Custom/DeletedAccountPurger/AccountsQueued", 0)
+      with("Custom/DeletedAccountPurger/AccountsQueued", 0)
     # Nothing moved to manual review queue
     NewRelic::Agent.expects(:record_metric).
-        with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+
+    Cdo::Metrics.expects(:push).with(
+      'DeletedAccountPurger',
+      includes_metrics(
+        SoftDeletedAccounts: is_a(Integer),
+        AccountsPurged: 0,
+        AccountsQueued: 0,
+        ManualReviewQueueDepth: is_a(Integer),
+      )
+    )
 
     raised = assert_raises ExpiredDeletedAccountPurger::SafetyConstraintViolation do
       edap.purge_expired_deleted_accounts!
@@ -439,10 +495,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       max_teachers_to_purge: 5
       max_accounts_to_purge: #{edap.max_accounts_to_purge}
       Found 6 teachers to purge, which exceeds the configured limit of 5. Abandoning run.
-      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 0
-      Custom/DeletedAccountPurger/AccountsQueued: 0
-      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      AccountsPurged: 0
+      AccountsQueued: 0
+      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
       Purged 0 account(s).
       🕐 00:00:00
     LOG
@@ -457,13 +513,22 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       max_teachers_to_purge: 5
 
     NewRelic::Agent.expects(:record_metric).
-        with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
+      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
     NewRelic::Agent.expects(:record_metric).
-        with("Custom/DeletedAccountPurger/AccountsPurged", 6)
+      with("Custom/DeletedAccountPurger/AccountsPurged", 6)
     NewRelic::Agent.expects(:record_metric).
-        with("Custom/DeletedAccountPurger/AccountsQueued", 0)
+      with("Custom/DeletedAccountPurger/AccountsQueued", 0)
     NewRelic::Agent.expects(:record_metric).
-        with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+    Cdo::Metrics.expects(:push).with(
+      'DeletedAccountPurger',
+      includes_metrics(
+        SoftDeletedAccounts: is_a(Integer),
+        AccountsPurged: 6,
+        AccountsQueued: 0,
+        ManualReviewQueueDepth: is_a(Integer),
+      )
+    )
 
     edap.purge_expired_deleted_accounts!
 
@@ -485,10 +550,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Done purging user_id #{students[4].id}
       Purging user_id #{students[5].id}
       Done purging user_id #{students[5].id}
-      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 6
-      Custom/DeletedAccountPurger/AccountsQueued: 0
-      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      AccountsPurged: 6
+      AccountsQueued: 0
+      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
       Purged 6 account(s).
       🕐 00:00:00
     LOG
@@ -519,6 +584,15 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
     # Nothing moved to manual review queue
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
+    Cdo::Metrics.expects(:push).with(
+      'DeletedAccountPurger',
+      includes_metrics(
+        SoftDeletedAccounts: is_a(Integer),
+        AccountsPurged: 0,
+        AccountsQueued: 0,
+        ManualReviewQueueDepth: is_a(Integer),
+      )
+    )
 
     raised = assert_raises ExpiredDeletedAccountPurger::SafetyConstraintViolation do
       edap.purge_expired_deleted_accounts!
@@ -534,12 +608,40 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       max_teachers_to_purge: #{edap.max_teachers_to_purge}
       max_accounts_to_purge: 5
       Found 6 accounts to purge, which exceeds the configured limit of 5. Abandoning run.
-      Custom/DeletedAccountPurger/SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      Custom/DeletedAccountPurger/AccountsPurged: 0
-      Custom/DeletedAccountPurger/AccountsQueued: 0
-      Custom/DeletedAccountPurger/ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
+      SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
+      AccountsPurged: 0
+      AccountsQueued: 0
+      ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
       Purged 0 account(s).
       🕐 00:00:00
     LOG
+  end
+end
+
+# Custom matcher
+module Mocha
+  module ParameterMatchers
+    def includes_metrics(metrics)
+      IncludesMetrics.new(metrics)
+    end
+
+    class IncludesMetrics < Base
+      def initialize(metrics)
+        @expected_metrics = metrics
+      end
+
+      def matches?(available_parameters)
+        actual_metrics = available_parameters.shift
+        @expected_metrics.all? do |expected_metric_name, expected_value|
+          sought_metric = actual_metrics.find {|m| m[:metric_name] == expected_metric_name}
+          actual_value = sought_metric&.[](:value)
+          actual_value && expected_value.to_matcher.matches?([actual_value])
+        end
+      end
+
+      def mocha_inspect
+        "includes_metrics(#{@expected_metrics.mocha_inspect})"
+      end
+    end
   end
 end
