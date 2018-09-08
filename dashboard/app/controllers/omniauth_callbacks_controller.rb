@@ -205,7 +205,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return unless move_sections_and_destroy_source_user(oauth_user, @user)
     end
 
-    success = create_or_update_oauth_tokens(
+    success = @user.create_or_update_oauth_tokens(
       provider: auth_hash.provider.to_s,
       oauth_token: auth_hash.credentials&.token,
       oauth_token_expiration: auth_hash.credentials&.expires_at,
