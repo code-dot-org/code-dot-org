@@ -329,25 +329,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       deleted_before: 2.days.ago,
       dry_run: true
 
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsPurged", 0)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsQueued", 0)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
-
-    Cdo::Metrics.expects(:push).with(
-      'DeletedAccountPurger',
-      includes_metrics(
-        SoftDeletedAccounts: is_a(Integer),
-        AccountsPurged: 0,
-        AccountsQueued: 0,
-        ManualReviewQueueDepth: is_a(Integer),
-      )
-    )
-
     edap.purge_expired_deleted_accounts!
 
     assert_equal <<~LOG, edap.log.string
@@ -362,7 +343,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_c.id} (dry-run)
       Done purging user_id #{student_c.id} (dry-run)
       SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      AccountsPurged: 0
+      AccountsPurged: 2
       AccountsQueued: 0
       ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
       Would have purged 2 account(s).
@@ -384,25 +365,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       raise 'Intentional failure' if account.id == student_b.id; true
     end
 
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/SoftDeletedAccounts", is_a(Integer))
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsPurged", 0)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/AccountsQueued", 0)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
-
-    Cdo::Metrics.expects(:push).with(
-      'DeletedAccountPurger',
-      includes_metrics(
-        SoftDeletedAccounts: is_a(Integer),
-        AccountsPurged: 0,
-        AccountsQueued: 0,
-        ManualReviewQueueDepth: is_a(Integer),
-      )
-    )
-
     refute_creates QueuedAccountPurge do
       edap.purge_expired_deleted_accounts!
     end
@@ -421,8 +383,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purging user_id #{student_a.id} (dry-run)
       Purging user_id #{student_b.id} (dry-run)
       SoftDeletedAccounts: #{edap.send(:soft_deleted_accounts).count}
-      AccountsPurged: 0
-      AccountsQueued: 0
+      AccountsPurged: 1
+      AccountsQueued: 1
       ManualReviewQueueDepth: #{QueuedAccountPurge.count}
       Would have purged 1 account(s).
       Would have queued 1 account(s) for manual review.

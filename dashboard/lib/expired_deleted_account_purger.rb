@@ -142,7 +142,7 @@ class ExpiredDeletedAccountPurger
     log_link = upload_activity_log
     say "#{summary} #{log_link}" if rack_env? :production
 
-    upload_metrics metrics
+    upload_metrics metrics unless @dry_run
   end
 
   def manual_review_queue_depth
@@ -154,9 +154,9 @@ class ExpiredDeletedAccountPurger
       # Number of soft-deleted accounts in system after this run
       SoftDeletedAccounts: soft_deleted_accounts.count,
       # Number of accounts purged during this run
-      AccountsPurged: @dry_run ? 0 : @num_accounts_purged,
+      AccountsPurged: @num_accounts_purged,
       # Number of accounts queued for manual review during this run
-      AccountsQueued: @dry_run ? 0 : @num_accounts_queued,
+      AccountsQueued: @num_accounts_queued,
       # Depth of manual review queue after this run
       ManualReviewQueueDepth: review_queue_depth,
     }
