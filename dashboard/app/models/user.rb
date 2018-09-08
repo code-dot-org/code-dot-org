@@ -2121,21 +2121,20 @@ class User < ActiveRecord::Base
     end
   end
 
-  def destroy
-    super.tap do
-      Cdo::Metrics.push(
-        'User',
-        [
-          {
-            metric_name: :SoftDelete,
-            dimensions: [
-              {name: "Environment", value: CDO.rack_env},
-            ],
-            value: 1
-          }
-        ]
-      )
-    end
+  after_destroy :record_soft_delete
+  def record_soft_delete
+    Cdo::Metrics.push(
+      'User',
+      [
+        {
+          metric_name: :SoftDelete,
+          dimensions: [
+            {name: "Environment", value: CDO.rack_env},
+          ],
+          value: 1
+        }
+      ]
+    )
   end
 
   # Called before_destroy.
