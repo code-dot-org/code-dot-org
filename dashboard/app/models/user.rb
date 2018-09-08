@@ -2130,6 +2130,7 @@ class User < ActiveRecord::Base
           metric_name: :SoftDelete,
           dimensions: [
             {name: "Environment", value: CDO.rack_env},
+            {name: "UserType", value: user_type},
           ],
           value: 1
         }
