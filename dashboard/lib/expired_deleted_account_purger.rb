@@ -9,9 +9,10 @@ require 'cdo/chat_client'
 # data from our system.  Adds accounts to manual review queue if an automatic
 # delete encounters problems or exceeds some safety limit.
 #
-# Sends metrics to New Relic:
+# Sends metrics to Cloudwatch:
 # - Number of soft-deleted accounts in system
 # - Number of accounts purged
+# - Number of accounts queued for manual review
 # - Depth of manual review queue
 #
 # Logs activity to Slack #cron-daily room.
@@ -173,12 +174,6 @@ class ExpiredDeletedAccountPurger
   end
 
   def upload_metrics(metrics)
-    if CDO.newrelic_logging
-      metrics.each do |key, value|
-        NewRelic::Agent.record_metric metric_name(key), value
-      end
-    end
-
     aws_metrics = metrics.map do |key, value|
       {
         metric_name: key,
