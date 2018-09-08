@@ -337,10 +337,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       with("Custom/DeletedAccountPurger/AccountsQueued", 0)
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/DryRunAccountsPurged", 2)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/DryRunAccountsQueued", 0)
 
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
@@ -349,8 +345,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
         AccountsPurged: 0,
         AccountsQueued: 0,
         ManualReviewQueueDepth: is_a(Integer),
-        DryRunAccountsPurged: 2,
-        DryRunAccountsQueued: 0,
       )
     )
 
@@ -371,8 +365,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       AccountsPurged: 0
       AccountsQueued: 0
       ManualReviewQueueDepth: #{QueuedAccountPurge.all.count}
-      DryRunAccountsPurged: 2
-      DryRunAccountsQueued: 0
       Would have purged 2 account(s).
       🕐 00:00:00
     LOG
@@ -400,10 +392,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       with("Custom/DeletedAccountPurger/AccountsQueued", 0)
     NewRelic::Agent.expects(:record_metric).
       with("Custom/DeletedAccountPurger/ManualReviewQueueDepth", is_a(Integer))
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/DryRunAccountsPurged", 1)
-    NewRelic::Agent.expects(:record_metric).
-      with("Custom/DeletedAccountPurger/DryRunAccountsQueued", 1)
 
     Cdo::Metrics.expects(:push).with(
       'DeletedAccountPurger',
@@ -412,8 +400,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
         AccountsPurged: 0,
         AccountsQueued: 0,
         ManualReviewQueueDepth: is_a(Integer),
-        DryRunAccountsPurged: 1,
-        DryRunAccountsQueued: 1,
       )
     )
 
@@ -438,8 +424,6 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       AccountsPurged: 0
       AccountsQueued: 0
       ManualReviewQueueDepth: #{QueuedAccountPurge.count}
-      DryRunAccountsPurged: 1
-      DryRunAccountsQueued: 1
       Would have purged 1 account(s).
       Would have queued 1 account(s) for manual review.
       🕐 00:00:00
