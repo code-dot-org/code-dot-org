@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'testing/includes_metrics'
 require 'account_purger'
 require 'expired_deleted_account_purger'
 
@@ -502,33 +503,5 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       Purged 0 account(s).
       🕐 00:00:00
     LOG
-  end
-end
-
-# Custom matcher
-module Mocha
-  module ParameterMatchers
-    def includes_metrics(metrics)
-      IncludesMetrics.new(metrics)
-    end
-
-    class IncludesMetrics < Base
-      def initialize(metrics)
-        @expected_metrics = metrics
-      end
-
-      def matches?(available_parameters)
-        actual_metrics = available_parameters.shift
-        @expected_metrics.all? do |expected_metric_name, expected_value|
-          sought_metric = actual_metrics.find {|m| m[:metric_name] == expected_metric_name}
-          actual_value = sought_metric&.[](:value)
-          actual_value && expected_value.to_matcher.matches?([actual_value])
-        end
-      end
-
-      def mocha_inspect
-        "includes_metrics(#{@expected_metrics.mocha_inspect})"
-      end
-    end
   end
 end
