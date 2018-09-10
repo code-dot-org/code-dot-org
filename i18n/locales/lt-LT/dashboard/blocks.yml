@@ -315,5 +315,13 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
       Vanilla_randomColor:
         text: Atsitiktinė spalva
+      craft_moveForward:
+        text: judėk į priekį
