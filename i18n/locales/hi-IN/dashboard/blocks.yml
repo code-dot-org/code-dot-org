@@ -1,3 +1,4 @@
+---
 hi:
   data:
     blocks:
@@ -6,14 +7,34 @@ hi:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_whenKey:
         options:
           KEY:
             '"space"': अंतरिक्ष
       Dancelab_whileKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      DancelabAlpha_randomColor:
+        text: यादृच्छिक रंग
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"space"': अंतरिक्ष
+      DancelabAlpha_whileKey:
         options:
           KEY:
             '"space"': अंतरिक्ष
