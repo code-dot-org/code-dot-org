@@ -86,6 +86,7 @@ class CourseScript extends Component {
           ...(isHidden && styles.hidden)
         }}
         className="uitest-CourseScript"
+        data-visibility={isHidden ? 'hidden' : 'visible'}
       >
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>

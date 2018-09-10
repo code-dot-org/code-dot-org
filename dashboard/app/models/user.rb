@@ -1192,8 +1192,8 @@ class User < ActiveRecord::Base
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section.
   #   For students this will just be a list of script ids that are hidden for them.
-  def get_hidden_script_ids(course)
-    return [] if course.nil?
+  def get_hidden_script_ids(course = nil)
+    return [] if !teacher? && course.nil?
 
     teacher? ? get_teacher_hidden_ids(false) : get_student_hidden_ids(course.id, false)
   end
