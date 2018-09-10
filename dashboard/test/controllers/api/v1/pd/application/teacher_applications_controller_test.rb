@@ -56,7 +56,7 @@ module Api::V1::Pd::Application
 
       Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
 
-      regional_partner = create :regional_partner, principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
 
       Pd::Application::Teacher1819Application.any_instance.stubs(:regional_partner).returns(regional_partner)
 
