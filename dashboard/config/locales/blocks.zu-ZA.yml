@@ -22,3 +22,5 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      craft_moveForward:
+        text: qubekela phambili
