@@ -273,5 +273,11 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
       Vanilla_randomColor:
         text: ngjyrë e rastësishme
+      craft_moveForward:
+        text: lëviz përpara
