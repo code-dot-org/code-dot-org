@@ -1,14 +1,29 @@
-"no":
+---
+'no':
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Neste
+            '"prev"': Forrige
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: alle
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Neste
             '"prev"': Forrige
       Dancelab_changePropBy:
@@ -20,13 +35,16 @@
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Neste
             '"prev"': Forrige
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekunder
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -57,15 +75,25 @@
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ingen
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': størrelse
             '"x"': x-posisjon
             '"y"': y-posisjon
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: alle
       Dancelab_spritesWhere:
         options:
           PROPERTY:
@@ -100,6 +128,132 @@
             '"left"': venstre
             '"right"': høyre
             '"space"': verdensrommmet
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekunder
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Neste
+            '"prev"': Forrige
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: alle
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Neste
+            '"prev"': Forrige
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Neste
+            '"prev"': Forrige
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekunder
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: alle
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': høyre
+            '"left"': venstre
+      DancelabAlpha_randomColor:
+        text: tilfeldig farge
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ingen
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ingen
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: alle
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høyre
+            '"space"': verdensrommmet
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': opp
+            '"down"': ned
+            '"left"': venstre
+            '"right"': høyre
+            '"space"': verdensrommmet
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -109,8 +263,8 @@
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'sann'
-            'false': 'usann'
+            'true': sann
+            'false': usann
       gamelab_getProp:
         options:
           PROPERTY:
@@ -185,5 +339,17 @@
             '"left"': venstre
             '"right"': høyre
             '"space"': verdensrommmet
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
       Vanilla_randomColor:
         text: tilfeldig farge
