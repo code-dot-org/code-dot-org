@@ -351,5 +351,13 @@ tr:
             '"scale"': boyut
             '"x"': x konumu
             '"y"': y konumu
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+            '"x"': x konumu
+            '"y"': y konumu
       Vanilla_randomColor:
         text: rastgele renk
+      craft_moveForward:
+        text: ilerle
