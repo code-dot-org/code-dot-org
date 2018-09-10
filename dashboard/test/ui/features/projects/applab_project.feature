@@ -13,9 +13,8 @@ Scenario: Applab Flow
   And I rotate to landscape
   And I wait for the page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
-  # TODO  ideally we should probably create some code and/or design elements here
-  # looks like we have add_code_to_editor
-  And element "#runButton" is visible
+  And I switch to text mode
+  And I add code "image('id', 'https://code.org/images/logo.png')" to ace editor
   And element ".project_updated_at" eventually contains text "Saved"
   And I click selector ".project_edit"
   And I type "Code Ninja" into "input.project_name"
@@ -89,8 +88,8 @@ Scenario: Applab Flow
 
   # TODO - maybe we do a remix and/or create new as well
 
-  @no_mobile
-  Scenario: Save Project After Signing Out
+@no_mobile
+Scenario: Save Project After Signing Out
   Given I create a student named "Sally Student"
   And I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
