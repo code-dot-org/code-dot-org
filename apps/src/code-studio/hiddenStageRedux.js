@@ -215,6 +215,10 @@ function initializeHiddenStages(data, canHideStages) {
  */
 export function initializeHiddenScripts(data) {
   return dispatch => {
+    if (!data) {
+      return;
+    }
+
     // For a teacher, we get back a map of section id to hidden script ids
     // For a student, we just get back a list of hidden script ids. Turn that
     // into an object, under the 'sectionId' of STUDENT_SECTION_ID
