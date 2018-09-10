@@ -1,4 +1,5 @@
 /* global dashboard */
+/* eslint no-unused-vars: ["error", { "ignoreRestSiblings": true }] */
 import $ from 'jquery';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
@@ -24,7 +25,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {GAME_WIDTH, GAME_HEIGHT} from './constants';
 
 export default {
-  async exportAppToZip(appName, code, expoMode) {
+  async exportAppToZip(appName, code, animationOpts, expoMode) {
 
     const jQueryBaseName = 'jquery-1.12.1.min';
     var html;
@@ -41,17 +42,21 @@ export default {
         appName,
       });
     }
-    const exportCode = exportGamelabCodeEjs({ code });
     const cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
 
     const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
     const zipAssetPrefix = appName + '/assets/';
 
     const appAssets = generateAppAssets({
-      code: exportCode,
+      code,
+      animationOpts,
       rootRelativeAssetPrefix,
       zipAssetPrefix,
     });
+    animationOpts.animationListJSON = this.rewriteAnimationListSourceUrls(
+      animationOpts.animationListJSON,
+      appAssets);
+    const exportCode = exportGamelabCodeEjs({ code, animationOpts });
 
     if (expoMode) {
       appAssets.push({
@@ -152,13 +157,56 @@ export default {
     });
   },
 
-  async exportApp(appName, code, suppliedExpoOpts) {
+  generateExportableAnimationListJSON(animationList) {
+    const { pendingFrames, propsByKey, orderedKeys, ...rest} = animationList;
+    const exportAnimationList = {
+      orderedKeys,
+      propsByKey: {},
+      ...rest
+    };
+    orderedKeys.map(key => {
+      const props = propsByKey[key];
+      const { blob, dataURI, ...otherProps } = props;
+      exportAnimationList.propsByKey[key] = otherProps;
+    });
+    return JSON.stringify(exportAnimationList);
+  },
+
+  rewriteAnimationListSourceUrls(animationListJSON, appAssets) {
+    const animationList = JSON.parse(animationListJSON);
+    const { propsByKey, ...rest } = animationList;
+    const rewrittenAnimationList = { propsByKey: {}, ...rest };
+    Object.entries(propsByKey).forEach(([key, anim]) => {
+      const { sourceUrl } = anim;
+      const appAsset = appAssets.find(asset => asset.sourceUrl === sourceUrl);
+      const { rootRelativePath } = appAsset || {};
+      rewrittenAnimationList.propsByKey[key] = {
+        ...anim,
+        rootRelativePath,
+      };
+    });
+    return JSON.stringify(rewrittenAnimationList);
+  },
+
+  async exportApp(appName, code, animationOpts, suppliedExpoOpts) {
     const expoOpts = suppliedExpoOpts || {};
+    const { animationList } = animationOpts;
+    const expandedAnimationOpts = {
+      ...animationOpts,
+      animationListJSON: this.generateExportableAnimationListJSON(animationList),
+    };
     if (expoOpts.mode === 'expoPublish') {
-      return await this.publishToExpo(appName, code);
+      return await this.publishToExpo(
+          appName,
+          code,
+          expandedAnimationOpts);
     }
-    return this.exportAppToZip(appName, code, expoOpts.mode === 'expoZip')
-      .then(function (zip) {
+    return this.exportAppToZip(
+        appName,
+        code,
+        expandedAnimationOpts,
+        expoOpts.mode === 'expoZip'
+      ).then(function (zip) {
         zip.generateAsync({type:"blob"}).then(function (blob) {
           saveAs(blob, appName + ".zip");
         });
@@ -191,7 +239,7 @@ export default {
     return exportExpoPackagedFilesEjs({ entries });
   },
 
-  async publishToExpo(appName, code) {
+  async publishToExpo(appName, code, animationOpts) {
     const { origin } = window.location;
     const gamelabApiPath = getEnvironmentPrefix() === 'cdo-development' ?
       `${origin}/blockly/js/gamelab-api.js` :
@@ -205,14 +253,17 @@ export default {
       p5Path,
       p5playPath,
     });
-    const exportCode = exportGamelabCodeEjs({ code });
     const appJs = exportExpoAppEjs({
       appHeight: GAME_HEIGHT,
       appWidth: GAME_WIDTH,
       hasDataAPIs: false,
     });
 
-    const appAssets = generateAppAssets({ code: exportCode });
+    const appAssets = generateAppAssets({ code, animationOpts });
+    animationOpts.animationListJSON = this.rewriteAnimationListSourceUrls(
+      animationOpts.animationListJSON,
+      appAssets);
+    const exportCode = exportGamelabCodeEjs({ code, animationOpts });
 
     const files = {
       'App.js': { contents: appJs, type: 'CODE'},
@@ -282,15 +333,37 @@ export default {
 };
 
 function generateAppAssets(params) {
-  const { code = '', rootRelativeAssetPrefix = '', zipAssetPrefix = '' } = params;
+  const {
+    animationOpts,
+    code = '',
+    rootRelativeAssetPrefix = '',
+    zipAssetPrefix = ''
+  } = params;
+  const { animationList } = animationOpts;
+  const { propsByKey: animationPropsByKey } = animationList;
 
-  const appAssets = dashboard.assets.listStore.list().map(asset => ({
-    url: assetPrefix.fixPath(asset.filename),
-    rootRelativePath: rootRelativeAssetPrefix + asset.filename,
-    zipPath: zipAssetPrefix + asset.filename,
-    dataType: 'binary',
-    filename: asset.filename,
-  }));
+  const appAssets = dashboard.assets.listStore.list().map(asset => {
+    const filename = asset.filename.replace(/^\/+/g, '');
+    return {
+      url: assetPrefix.fixPath(asset.filename),
+      rootRelativePath: rootRelativeAssetPrefix + filename,
+      zipPath: zipAssetPrefix + filename,
+      dataType: 'binary',
+      filename: filename,
+    };
+  });
+
+  const animAssets = Object.values(animationPropsByKey).map(anim => {
+    const filename = anim.sourceUrl.replace(/^\/+/g, '');
+    return {
+      sourceUrl: anim.sourceUrl,
+      url: assetPrefix.fixPath(anim.sourceUrl),
+      rootRelativePath: rootRelativeAssetPrefix + filename,
+      zipPath: zipAssetPrefix + filename,
+      dataType: 'binary',
+      filename,
+    };
+  });
 
   const soundRegex = /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
   const allSounds = code.match(soundRegex) || [];
@@ -310,6 +383,7 @@ function generateAppAssets(params) {
 
   return [
     ...appAssets,
+    ...animAssets,
     ...soundAssets,
   ];
 }

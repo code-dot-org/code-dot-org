@@ -37,6 +37,7 @@ var dom = require('../dom');
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 import {getStore} from '../redux';
 import {
+  allAnimationsSingleFrameSelector,
   setInitialAnimationList,
   saveAnimations,
   withAbsoluteSourceUrls
@@ -435,11 +436,43 @@ GameLab.prototype.init = function (config) {
  * Export the project for web or use within Expo.
  * @param {Object} expoOpts
  */
-GameLab.prototype.exportApp = function (expoOpts) {
+GameLab.prototype.exportApp = async function (expoOpts) {
+  const store = getStore();
+  if (this.areAnimationsReady_()) {
+    return this.exportAppWithAnimations(store.getState().animationList, expoOpts);
+  }
+  return new Promise(resolve => {
+    // Watch store changes until all the animations are ready.
+    const unsubscribe = store.subscribe(() => {
+      if (this.areAnimationsReady_()) {
+        unsubscribe();
+        const exportResult = this.exportAppWithAnimations(
+            store.getState().animationList,
+            expoOpts
+        );
+        resolve(exportResult);
+      }
+    });
+  });
+};
+
+/**
+ * Export the project for web or use within Expo.
+ * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
+ * @param {Object} expoOpts
+ */
+GameLab.prototype.exportAppWithAnimations = function (animationList, expoOpts) {
+  const { pauseAnimationsByDefault } = this.level;
+  const allAnimationsSingleFrame = allAnimationsSingleFrameSelector(getStore().getState());
   return Exporter.exportApp(
     // TODO: find another way to get this info that doesn't rely on globals.
     window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
     this.studioApp_.editor.getValue(),
+    {
+      animationList,
+      allAnimationsSingleFrame,
+      pauseAnimationsByDefault,
+    },
     expoOpts
   );
 };
