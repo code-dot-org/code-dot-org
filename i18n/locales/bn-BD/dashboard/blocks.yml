@@ -1,14 +1,27 @@
+---
 bn:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
       Dancelab_changePropBy:
@@ -18,13 +31,16 @@ bn:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': পরবর্তী
             '"prev"': পূর্ববর্তী
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -43,9 +59,11 @@ bn:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -78,6 +96,100 @@ bn:
             '"left"': বামে
             '"right"': ডানে
             '"space"': স্থান
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': পরবর্তী
+            '"prev"': পূর্ববর্তী
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ডানে
+            '"left"': বামে
+      DancelabAlpha_randomColor:
+        text: যেকোনো রঙ
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -85,8 +197,8 @@ bn:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'সত্যি'
-            'false': 'মিথ্যা'
+            'true': সত্যি
+            'false': মিথ্যা
       gamelab_getProp:
         options:
           PROPERTY:
@@ -153,5 +265,13 @@ bn:
             '"left"': বামে
             '"right"': ডানে
             '"space"': স্থান
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
       Vanilla_randomColor:
         text: যেকোনো রঙ
