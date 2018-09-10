@@ -351,5 +351,13 @@ bg:
             '"scale"': размер
             '"x"': x позиция
             '"y"': y позиция
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': x позиция
+            '"y"': y позиция
       Vanilla_randomColor:
         text: случаен цвят
+      craft_moveForward:
+        text: върви напред
