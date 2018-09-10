@@ -273,5 +273,11 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
       Vanilla_randomColor:
         text: կամայական գույն
+      craft_moveForward:
+        text: առաջ ընթանալ
