@@ -351,5 +351,13 @@ ko:
             '"scale"': 크기
             '"x"': x 좌표
             '"y"': y 좌표
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
       Vanilla_randomColor:
         text: 랜덤 색
+      craft_moveForward:
+        text: move forward
