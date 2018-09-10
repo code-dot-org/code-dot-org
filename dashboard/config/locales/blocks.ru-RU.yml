@@ -1,0 +1,355 @@
+---
+ru:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Вперед
+            '"prev"': Назад
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: все
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Вперед
+            '"prev"': Назад
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Вперед
+            '"prev"': Назад
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: все
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': вправо
+            '"left"': влево
+      Dancelab_randomColor:
+        text: случайный цвет
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Отсутствует
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': норма
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Отсутствует
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: все
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Вперед
+            '"prev"': Назад
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: все
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Вперед
+            '"prev"': Назад
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Вперед
+            '"prev"': Назад
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: все
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': вправо
+            '"left"': влево
+      DancelabAlpha_randomColor:
+        text: случайный цвет
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Отсутствует
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': норма
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Отсутствует
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: все
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': истина
+            'false': ложь
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": случайный
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': вправо
+            '"left"': влево
+      gamelab_randColor:
+        text: случайный цвет
+      gamelab_randomColor:
+        text: случайный цвет
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': случайный
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': высота
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': вправо
+            '"left"': влево
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": вверх
+            "'down'": вниз
+            "'left'": влево
+            "'right'": вправо
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': вверх
+            '"down"': вниз
+            '"left"': влево
+            '"right"': вправо
+            '"space"': космос
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
+      Vanilla_randomColor:
+        text: случайный цвет

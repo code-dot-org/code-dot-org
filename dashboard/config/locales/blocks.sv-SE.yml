@@ -1,0 +1,339 @@
+---
+sv:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekunder
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nästa
+            '"prev"': Föregående
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: alla
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nästa
+            '"prev"': Föregående
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nästa
+            '"prev"': Föregående
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekunder
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: alla
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': höger
+            '"left"': vänster
+      Dancelab_randomColor:
+        text: slumpad färg
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: alla
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekunder
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nästa
+            '"prev"': Föregående
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: alla
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nästa
+            '"prev"': Föregående
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nästa
+            '"prev"': Föregående
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekunder
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: alla
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': höger
+            '"left"': vänster
+      DancelabAlpha_randomColor:
+        text: slumpad färg
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: alla
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': sant
+            'false': falskt
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": slumpad
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': höger
+            '"left"': vänster
+      gamelab_randColor:
+        text: slumpad färg
+      gamelab_randomColor:
+        text: slumpad färg
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': slumpad
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"height"': höjd
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': höger
+            '"left"': vänster
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": upp
+            "'down'": ner
+            "'left'": vänster
+            "'right'": höger
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': upp
+            '"down"': ner
+            '"left"': vänster
+            '"right"': höger
+            '"space"': rymden
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
+      Vanilla_randomColor:
+        text: slumpad färg

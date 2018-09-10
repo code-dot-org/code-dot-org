@@ -1,0 +1,305 @@
+---
+ky:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: баары
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: баары
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': оңго
+            '"left"': солго
+      Dancelab_randomColor:
+        text: кокус түс
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Жок
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': кадимки
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Жок
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: баары
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: баары
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: баары
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': оңго
+            '"left"': солго
+      DancelabAlpha_randomColor:
+        text: кокус түс
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Жок
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': кадимки
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Жок
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: баары
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': туура
+            'false': жалган
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": туш келди
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': оңго
+            '"left"': солго
+      gamelab_randColor:
+        text: кокус түс
+      gamelab_randomColor:
+        text: кокус түс
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': туш келди
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"height"': бийиктиги
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': оңго
+            '"left"': солго
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": өйдө
+            "'down'": ылдый
+            "'left'": солго
+            "'right'": оңго
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': өйдө
+            '"down"': ылдый
+            '"left"': солго
+            '"right"': оңго
+            '"space"': космос
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
+      Vanilla_randomColor:
+        text: кокус түс

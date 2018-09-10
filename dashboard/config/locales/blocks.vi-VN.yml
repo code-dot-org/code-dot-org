@@ -1,0 +1,355 @@
+---
+vi:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': vài giây
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Tiếp
+            '"prev"': Trước
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tất cả
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Tiếp
+            '"prev"': Trước
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Tiếp
+            '"prev"': Trước
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': vài giây
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: tất cả
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': phải
+            '"left"': trái
+      Dancelab_randomColor:
+        text: màu ngẫu nhiên
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Rỗng
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': bình thường
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Rỗng
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: tất cả
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': vài giây
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Tiếp
+            '"prev"': Trước
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tất cả
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Tiếp
+            '"prev"': Trước
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Tiếp
+            '"prev"': Trước
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': vài giây
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: tất cả
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': phải
+            '"left"': trái
+      DancelabAlpha_randomColor:
+        text: màu ngẫu nhiên
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Rỗng
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': bình thường
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Rỗng
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: tất cả
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': đúng
+            'false': sai
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": ngẫu nhiên
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': phải
+            '"left"': trái
+      gamelab_randColor:
+        text: màu ngẫu nhiên
+      gamelab_randomColor:
+        text: màu ngẫu nhiên
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': ngẫu nhiên
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"height"': chiều cao
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': phải
+            '"left"': trái
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": trên
+            "'down'": xuống
+            "'left'": trái
+            "'right'": phải
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': trên
+            '"down"': xuống
+            '"left"': trái
+            '"right"': phải
+            '"space"': vũ trụ
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
+      Vanilla_randomColor:
+        text: màu ngẫu nhiên

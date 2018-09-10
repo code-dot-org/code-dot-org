@@ -1,0 +1,355 @@
+---
+fi:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: kaikki
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: kaikki
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      Dancelab_randomColor:
+        text: satunnainen väri
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normaali
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: kaikki
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: kaikki
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seuraava
+            '"prev"': Edellinen
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekuntia
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: kaikki
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      DancelabAlpha_randomColor:
+        text: satunnainen väri
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normaali
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: kaikki
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': tosi
+            'false': epätosi
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": satunnainen
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      gamelab_randColor:
+        text: satunnainen väri
+      gamelab_randomColor:
+        text: satunnainen väri
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': satunnainen
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"height"': korkeus
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': oikealle
+            '"left"': vasemmalle
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ylös
+            "'down'": alas
+            "'left'": vasemmalle
+            "'right'": oikealle
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': ylös
+            '"down"': alas
+            '"left"': vasemmalle
+            '"right"': oikealle
+            '"space"': avaruus
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
+      Vanilla_randomColor:
+        text: satunnainen väri

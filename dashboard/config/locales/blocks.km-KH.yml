@@ -1,0 +1,305 @@
+---
+km:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ស្តាំ
+            '"left"': ឆ្វេង
+      Dancelab_randomColor:
+        text: ពណ៌​ព្រាវ
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': ធម្មតា
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: ទាំងអស់
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ស្តាំ
+            '"left"': ឆ្វេង
+      DancelabAlpha_randomColor:
+        text: ពណ៌​ព្រាវ
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': ធម្មតា
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': គ្មាន
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: ទាំងអស់
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': ពិត
+            'false': មិន​ពិត
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": ព្រាវ
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ស្តាំ
+            '"left"': ឆ្វេង
+      gamelab_randColor:
+        text: ពណ៌​ព្រាវ
+      gamelab_randomColor:
+        text: ពណ៌​ព្រាវ
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': ព្រាវ
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': ស្តាំ
+            '"left"': ឆ្វេង
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ឡើង
+            "'down'": ចុះ
+            "'left'": ឆ្វេង
+            "'right'": ស្តាំ
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
+      Vanilla_randomColor:
+        text: ពណ៌​ព្រាវ

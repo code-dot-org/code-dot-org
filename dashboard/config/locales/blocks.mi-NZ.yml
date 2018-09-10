@@ -1,0 +1,215 @@
+---
+mi:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': whakamatau
+            '"left"': whakamauī
+      Dancelab_randomColor:
+        text: tae matapōkere
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ngā hēkona
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': whakamatau
+            '"left"': whakamauī
+      DancelabAlpha_randomColor:
+        text: tae matapōkere
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': pono
+            'false': hē
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': whakamatau
+            '"left"': whakamauī
+      gamelab_randColor:
+        text: tae matapōkere
+      gamelab_randomColor:
+        text: tae matapōkere
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+            '"height"': teitei
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': whakamatau
+            '"left"': whakamauī
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": whakarunga
+            "'down'": whakararo
+            "'left'": whakamauī
+            "'right'": whakamatau
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': whakarunga
+            '"down"': whakararo
+            '"left"': whakamauī
+            '"right"': whakamatau
+            '"space"': tuarangi
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
+      Vanilla_randomColor:
+        text: tae matapōkere

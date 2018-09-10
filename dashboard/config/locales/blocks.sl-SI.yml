@@ -1,0 +1,319 @@
+---
+sl:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': levo
+      Dancelab_randomColor:
+        text: naključna barva
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Naslednja
+            '"prev"': Prejšnje
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': levo
+      DancelabAlpha_randomColor:
+        text: naključna barva
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': velja
+            'false': ne velja
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": naključno
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': levo
+      gamelab_randColor:
+        text: naključna barva
+      gamelab_randomColor:
+        text: naključna barva
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': naključno
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': desno
+            '"left"': levo
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": gor
+            "'down'": dol
+            "'left'": levo
+            "'right'": desno
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': x položaj
+            '"y"': y položaj
+      Vanilla_randomColor:
+        text: naključna barva

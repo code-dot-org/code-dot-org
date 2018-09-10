@@ -1,0 +1,297 @@
+---
+cs:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekundy
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Další
+            '"prev"': Předchozí
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: vše
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Další
+            '"prev"': Předchozí
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Další
+            '"prev"': Předchozí
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekundy
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: vše
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': vpravo
+            '"left"': vlevo
+      Dancelab_randomColor:
+        text: náhodná barva
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normální
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: vše
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekundy
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Další
+            '"prev"': Předchozí
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: vše
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Další
+            '"prev"': Předchozí
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Další
+            '"prev"': Předchozí
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekundy
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: vše
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': vpravo
+            '"left"': vlevo
+      DancelabAlpha_randomColor:
+        text: náhodná barva
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normální
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: vše
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': pravda
+            'false': záporné
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": náhodně
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': vpravo
+            '"left"': vlevo
+      gamelab_randColor:
+        text: náhodná barva
+      gamelab_randomColor:
+        text: náhodná barva
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': náhodně
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': výška
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': vpravo
+            '"left"': vlevo
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": nahoru
+            "'down'": dolů
+            "'left'": vlevo
+            "'right'": vpravo
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': nahoru
+            '"down"': dolů
+            '"left"': vlevo
+            '"right"': vpravo
+            '"space"': vesmír
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+      Vanilla_randomColor:
+        text: náhodná barva

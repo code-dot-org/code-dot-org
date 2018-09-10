@@ -1,0 +1,277 @@
+---
+fa:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': بعدي
+            '"prev"': قبلی
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': بعدي
+            '"prev"': قبلی
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': بعدي
+            '"prev"': قبلی
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': سمت راست
+            '"left"': سمت چپ
+      Dancelab_randomColor:
+        text: رنگ تصادفی
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': بعدي
+            '"prev"': قبلی
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': بعدي
+            '"prev"': قبلی
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': بعدي
+            '"prev"': قبلی
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': سمت راست
+            '"left"': سمت چپ
+      DancelabAlpha_randomColor:
+        text: رنگ تصادفی
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': صحیح
+            'false': غلط
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": در هم
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': سمت راست
+            '"left"': سمت چپ
+      gamelab_randColor:
+        text: رنگ تصادفی
+      gamelab_randomColor:
+        text: رنگ تصادفی
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': در هم
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+            '"height"': ارتفاع
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': سمت راست
+            '"left"': سمت چپ
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": بالا
+            "'down'": پایین
+            "'left'": سمت چپ
+            "'right'": سمت راست
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': بالا
+            '"down"': پایین
+            '"left"': سمت چپ
+            '"right"': سمت راست
+            '"space"': فضا
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+      Vanilla_randomColor:
+        text: رنگ تصادفی

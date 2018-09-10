@@ -1,0 +1,277 @@
+---
+kk:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Келесі
+            '"prev"': Алдыңғы
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Келесі
+            '"prev"': Алдыңғы
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Келесі
+            '"prev"': Алдыңғы
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': оңға
+            '"left"': солға
+      Dancelab_randomColor:
+        text: кездейсоқ түс
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Келесі
+            '"prev"': Алдыңғы
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Келесі
+            '"prev"': Алдыңғы
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Келесі
+            '"prev"': Алдыңғы
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': оңға
+            '"left"': солға
+      DancelabAlpha_randomColor:
+        text: кездейсоқ түс
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': дұрыс
+            'false': Жалған
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": кездейсоқ
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': оңға
+            '"left"': солға
+      gamelab_randColor:
+        text: кездейсоқ түс
+      gamelab_randomColor:
+        text: кездейсоқ түс
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': кездейсоқ
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': оңға
+            '"left"': солға
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": жоғары
+            "'down'": төмен
+            "'left'": солға
+            "'right'": оңға
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Vanilla_randomColor:
+        text: кездейсоқ түс

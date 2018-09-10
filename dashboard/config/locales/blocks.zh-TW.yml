@@ -1,0 +1,355 @@
+---
+zh-TW:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': 秒
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 下一個
+            '"prev"': 上一個
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: 全部
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 下一個
+            '"prev"': 上一個
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 下一個
+            '"prev"': 上一個
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': 秒
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: 全部
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 向右
+            '"left"': 到左方
+      Dancelab_randomColor:
+        text: 隨機顏色
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': 無
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': 普通
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': 無
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: 全部
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 向右
+            '"space"': 太空
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 向右
+            '"space"': 太空
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': 秒
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 下一個
+            '"prev"': 上一個
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: 全部
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 下一個
+            '"prev"': 上一個
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 下一個
+            '"prev"': 上一個
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': 秒
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: 全部
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 向右
+            '"left"': 到左方
+      DancelabAlpha_randomColor:
+        text: 隨機顏色
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': 無
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': 普通
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': 無
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: 全部
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 向右
+            '"space"': 太空
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 向右
+            '"space"': 太空
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': 'true'
+            'false': 'false'
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": 隨機
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 向右
+            '"left"': 到左方
+      gamelab_randColor:
+        text: 隨機顏色
+      gamelab_randomColor:
+        text: 隨機顏色
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': 隨機
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"height"': 高度
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': 向右
+            '"left"': 到左方
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 向右
+            '"space"': 太空
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": 到上方
+            "'down'": 到下方
+            "'left'": 到左方
+            "'right'": 向右
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': 到上方
+            '"down"': 到下方
+            '"left"': 到左方
+            '"right"': 向右
+            '"space"': 太空
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
+      Vanilla_randomColor:
+        text: 隨機顏色

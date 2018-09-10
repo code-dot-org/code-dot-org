@@ -1,0 +1,277 @@
+---
+sr:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': секунде
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Следећи
+            '"prev"': Претходни
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Следећи
+            '"prev"': Претходни
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Следећи
+            '"prev"': Претходни
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунде
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': десно
+            '"left"': лево
+      Dancelab_randomColor:
+        text: насумична боја
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': секунде
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Следећи
+            '"prev"': Претходни
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Следећи
+            '"prev"': Претходни
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Следећи
+            '"prev"': Претходни
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунде
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': десно
+            '"left"': лево
+      DancelabAlpha_randomColor:
+        text: насумична боја
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': тачно
+            'false': нетачно
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": насумичан
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': десно
+            '"left"': лево
+      gamelab_randColor:
+        text: насумична боја
+      gamelab_randomColor:
+        text: насумична боја
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': насумичан
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': десно
+            '"left"': лево
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": горе
+            "'down'": доле
+            "'left'": лево
+            "'right'": десно
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Vanilla_randomColor:
+        text: насумична боја

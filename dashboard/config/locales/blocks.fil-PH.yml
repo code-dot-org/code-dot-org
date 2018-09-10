@@ -1,0 +1,355 @@
+---
+fil:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segundo
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Susunod
+            '"prev"': Nakaraan
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: lahat
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Susunod
+            '"prev"': Nakaraan
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Susunod
+            '"prev"': Nakaraan
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundo
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: lahat
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kaliwa
+      Dancelab_randomColor:
+        text: iba-ibang kulay
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Wala
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Wala
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: lahat
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segundo
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Susunod
+            '"prev"': Nakaraan
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: lahat
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Susunod
+            '"prev"': Nakaraan
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Susunod
+            '"prev"': Nakaraan
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundo
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: lahat
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kaliwa
+      DancelabAlpha_randomColor:
+        text: iba-ibang kulay
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Wala
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Wala
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: lahat
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': tama
+            'false': mali
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": nang hindi pinipili
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kaliwa
+      gamelab_randColor:
+        text: iba-ibang kulay
+      gamelab_randomColor:
+        text: iba-ibang kulay
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': nang hindi pinipili
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"height"': taas
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kaliwa
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": taas
+            "'down'": baba
+            "'left'": kaliwa
+            "'right'": kanan
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': taas
+            '"down"': baba
+            '"left"': kaliwa
+            '"right"': kanan
+            '"space"': space
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
+      Vanilla_randomColor:
+        text: iba-ibang kulay

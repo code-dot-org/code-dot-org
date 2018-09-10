@@ -1,0 +1,586 @@
+---
+id:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': detik
+      Dancelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': Corak warna warni
+            '"saturation"': Saturasi
+            '"brightness"': Kecerahan
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Selanjutnya
+            '"prev"': Sebelumnya
+            '"rand"': Acak
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"alien"': Alien
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Selanjutnya
+            '"prev"': Sebelumnya
+            '"rand"': Acak
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Selanjutnya
+            '"prev"': Sebelumnya
+            '"rand"': Acak
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': detik
+      Dancelab_getEnergy:
+        options:
+          RANGE:
+            '"low"': Kecil
+            '"mid"': Sedang
+            '"high"': Besar
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      Dancelab_helloWorld:
+        text: Halo dunia
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: semua
+            '"alien"': Alien
+          FORMAT:
+            '"grid"': Kisi
+            '"row"': baris
+            '"column"': kolom
+      Dancelab_locationCenter:
+        text: Tengah
+      Dancelab_locationPointer:
+        text: Posisi tengah
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"alien"': Alien
+      Dancelab_makeNewDanceSpriteSync:
+        options:
+          COSTUME:
+            '"alien"': Alien
+      Dancelab_makeNewGroupSprite:
+        options:
+          COSTUME:
+            '"circle"': Putaran
+            '"wiggles"': Berliat-liut
+          GROUP:
+            lead_dancers: Memimpin
+            backup_dancers: Cadangkan
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Bass
+            '"mid"': Sedang
+            '"treble"': Trebel
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kiri
+      Dancelab_randomColor:
+        text: warna acak
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"tint"': Mewarnai
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: semua
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Bass
+            '"mid"': Sedang
+            '"treble"': Trebel
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Bass
+            '"mid"': Sedang
+            '"treble"': Trebel
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
+      Dancelab_whenPeak:
+        options:
+          RANGE:
+            '0': Bass
+            '1': Sedang
+            '2': Trebel
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': detik
+      DancelabAlpha_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': Corak warna warni
+            '"saturation"': Saturasi
+            '"brightness"': Kecerahan
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Selanjutnya
+            '"prev"': Sebelumnya
+            '"rand"': Acak
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: semua
+            '"alien"': Alien
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Selanjutnya
+            '"prev"': Sebelumnya
+            '"rand"': Acak
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Selanjutnya
+            '"prev"': Sebelumnya
+            '"rand"': Acak
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': detik
+      DancelabAlpha_getEnergy:
+        options:
+          RANGE:
+            '"low"': Kecil
+            '"mid"': Sedang
+            '"high"': Besar
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      DancelabAlpha_helloWorld:
+        text: Halo dunia
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: semua
+            '"alien"': Alien
+          FORMAT:
+            '"grid"': Kisi
+            '"row"': baris
+            '"column"': kolom
+      DancelabAlpha_locationCenter:
+        text: Tengah
+      DancelabAlpha_locationPointer:
+        text: Posisi tengah
+      DancelabAlpha_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"alien"': Alien
+      DancelabAlpha_makeNewDanceSpriteSync:
+        options:
+          COSTUME:
+            '"alien"': Alien
+      DancelabAlpha_makeNewGroupSprite:
+        options:
+          COSTUME:
+            '"circle"': Putaran
+            '"wiggles"': Berliat-liut
+          GROUP:
+            lead_dancers: Memimpin
+            backup_dancers: Cadangkan
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Bass
+            '"mid"': Sedang
+            '"treble"': Trebel
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kiri
+      DancelabAlpha_randomColor:
+        text: warna acak
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Tidak ada
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"tint"': Mewarnai
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: semua
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Bass
+            '"mid"': Sedang
+            '"treble"': Trebel
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+          RANGE:
+            '"bass"': Bass
+            '"mid"': Sedang
+            '"treble"': Trebel
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
+      DancelabAlpha_whenPeak:
+        options:
+          RANGE:
+            '0': Bass
+            '1': Sedang
+            '2': Trebel
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
+      gamelab_changeColor:
+        options:
+          METHOD:
+            '"tint"': Mewarnai
+            '"tone"': Nada
+            '"shade"': Corak
+      gamelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': Corak warna warni
+            '"saturation"': Saturasi
+            '"brightness"': Kecerahan
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': Benar
+            'false': Salah
+      gamelab_enableDebug:
+        text: mengaktifkan debugging
+      gamelab_firstTouched:
+        text: Sentuhan pertama sprite
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      gamelab_hideTitleScreen:
+        text: menyembunyikan judul layar
+      gamelab_joystickDirection:
+        text: Arah joystick
+      gamelab_locationConstant:
+        options:
+          DIR:
+            "'north'": Utara
+            "'south'": Selatan
+            "'east'": Timur
+            "'west'": Barat
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'north'": Utara
+            "'south'": Selatan
+            "'east'": Timur
+            "'west'": Barat
+            "'random'": acak
+      gamelab_locationEast:
+        text: Timur
+      gamelab_locationMouse:
+        text: Lokasi tetikus
+      gamelab_locationNorth:
+        text: Utara
+      gamelab_locationSouth:
+        text: Selatan
+      gamelab_locationWest:
+        text: Barat
+      gamelab_makeNewGroup:
+        text: Buat grup baru
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kiri
+      gamelab_mouseDown:
+        text: mouse turun
+      gamelab_mouseLocation:
+        text: Lokasi tetikus
+      gamelab_randColor:
+        text: warna acak
+      gamelab_randomColor:
+        text: warna acak
+      gamelab_secondTouched:
+        text: Sentuhan kedua sprite
+      gamelab_setPosition:
+        options:
+          POSITION:
+            "{x: 200, y: 200}": Tengah
+            '"random"': acak
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"height"': tinggi
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': kanan
+            '"left"': kiri
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": atas
+            "'down'": turun
+            "'left'": kiri
+            "'right'": kanan
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': atas
+            '"down"': turun
+            '"left"': kiri
+            '"right"': kanan
+            '"space"': luar angkasa
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
+      Vanilla_randomColor:
+        text: warna acak
+      Vector_positionCenter:
+        text: Tengah
+      Vector_vectorNorth:
+        text: Utara

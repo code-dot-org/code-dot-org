@@ -1,0 +1,355 @@
+---
+nl:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': seconden
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Volgende
+            '"prev"': Vorige
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: alles
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Volgende
+            '"prev"': Vorige
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Volgende
+            '"prev"': Vorige
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': seconden
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: alles
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': rechts
+            '"left"': links
+      Dancelab_randomColor:
+        text: willekeurige kleur
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Geen
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normaal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Geen
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: alles
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': seconden
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Volgende
+            '"prev"': Vorige
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: alles
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Volgende
+            '"prev"': Vorige
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Volgende
+            '"prev"': Vorige
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': seconden
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: alles
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': rechts
+            '"left"': links
+      DancelabAlpha_randomColor:
+        text: willekeurige kleur
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Geen
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normaal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Geen
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: alles
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': waar
+            'false': onwaar
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": willekeurig
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': rechts
+            '"left"': links
+      gamelab_randColor:
+        text: willekeurige kleur
+      gamelab_randomColor:
+        text: willekeurige kleur
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': willekeurig
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"height"': hoogte
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': rechts
+            '"left"': links
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": omhoog
+            "'down'": omlaag
+            "'left'": links
+            "'right'": rechts
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': omhoog
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"space"': ruimte
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+      Vanilla_randomColor:
+        text: willekeurige kleur

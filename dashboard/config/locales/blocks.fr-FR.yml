@@ -1,0 +1,355 @@
+---
+fr:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': des secondes
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Suivant
+            '"prev"': Précédent
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tout
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Suivant
+            '"prev"': Précédent
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Suivant
+            '"prev"': Précédent
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': des secondes
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: tout
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': vers la droite
+            '"left"': vers la gauche
+      Dancelab_randomColor:
+        text: couleur aléatoire
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Aucun
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Aucun
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: tout
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': des secondes
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Suivant
+            '"prev"': Précédent
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tout
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Suivant
+            '"prev"': Précédent
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Suivant
+            '"prev"': Précédent
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': des secondes
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: tout
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': vers la droite
+            '"left"': vers la gauche
+      DancelabAlpha_randomColor:
+        text: couleur aléatoire
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Aucun
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Aucun
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: tout
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': vrai
+            'false': faux
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": aléatoire
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': vers la droite
+            '"left"': vers la gauche
+      gamelab_randColor:
+        text: couleur aléatoire
+      gamelab_randomColor:
+        text: couleur aléatoire
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': aléatoire
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"height"': hauteur
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': vers la droite
+            '"left"': vers la gauche
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": vers le haut
+            "'down'": vers le bas
+            "'left'": vers la gauche
+            "'right'": vers la droite
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': vers le haut
+            '"down"': vers le bas
+            '"left"': vers la gauche
+            '"right"': vers la droite
+            '"space"': espace
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': taille
+            '"x"': position x
+            '"y"': position y
+      Vanilla_randomColor:
+        text: couleur aléatoire

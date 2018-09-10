@@ -1,0 +1,339 @@
+---
+ar:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': ثوان
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': التالي
+            '"prev"': السابق
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: الكل
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': التالي
+            '"prev"': السابق
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': التالي
+            '"prev"': السابق
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ثوان
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Dancelab_layoutSprites:
+        options:
+          GROUP:
+            sprites: الكل
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': اليمين
+            '"left"': اليسار
+      Dancelab_randomColor:
+        text: لون عشوائي
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': عادي
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: الكل
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': ثوان
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': التالي
+            '"prev"': السابق
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: الكل
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': التالي
+            '"prev"': السابق
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': التالي
+            '"prev"': السابق
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ثوان
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: الكل
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': اليمين
+            '"left"': اليسار
+      DancelabAlpha_randomColor:
+        text: لون عشوائي
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': عادي
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: الكل
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': صحيح
+            'false': خطأ
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": عشوائي
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': اليمين
+            '"left"': اليسار
+      gamelab_randColor:
+        text: لون عشوائي
+      gamelab_randomColor:
+        text: لون عشوائي
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': عشوائي
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"height"': الارتفاع
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': اليمين
+            '"left"': اليسار
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": الأعلى
+            "'down'": الأسفل
+            "'left'": اليسار
+            "'right'": اليمين
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': الأعلى
+            '"down"': الأسفل
+            '"left"': اليسار
+            '"right"': اليمين
+            '"space"': الفضاء
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
+      Vanilla_randomColor:
+        text: لون عشوائي

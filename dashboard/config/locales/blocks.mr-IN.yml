@@ -1,0 +1,34 @@
+---
+mr:
+  data:
+    blocks:
+      Dancelab_randomColor:
+        text: कोणताही रंग
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_randomColor:
+        text: कोणताही रंग
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': बरोबर
+      gamelab_randColor:
+        text: कोणताही रंग
+      gamelab_randomColor:
+        text: कोणताही रंग
+      Vanilla_randomColor:
+        text: कोणताही रंग

@@ -1,0 +1,277 @@
+---
+ca:
+  data:
+    blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segons
+      Dancelab_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Següent
+            '"prev"': Anterior
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Següent
+            '"prev"': Anterior
+      Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Següent
+            '"prev"': Anterior
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segons
+      Dancelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dret
+            '"left"': esquerra
+      Dancelab_randomColor:
+        text: color aleatori
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Dancelab_whenKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      Dancelab_whileKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segons
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Següent
+            '"prev"': Anterior
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Següent
+            '"prev"': Anterior
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Següent
+            '"prev"': Anterior
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segons
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dret
+            '"left"': esquerra
+      DancelabAlpha_randomColor:
+        text: color aleatori
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_debugSprite:
+        options:
+          VAL:
+            'true': cert
+            'false': fals
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_locationDelta:
+        options:
+          DIR:
+            "'random'": atzar
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dret
+            '"left"': esquerra
+      gamelab_randColor:
+        text: color aleatori
+      gamelab_randomColor:
+        text: color aleatori
+      gamelab_setPosition:
+        options:
+          POSITION:
+            '"random"': atzar
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': mida
+            '"height"': alçcada
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': dret
+            '"left"': esquerra
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": cap amunt
+            "'down'": avall
+            "'left'": esquerra
+            "'right'": dret
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': cap amunt
+            '"down"': avall
+            '"left"': esquerra
+            '"right"': dret
+            '"space"': espai
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
+      Vanilla_randomColor:
+        text: color aleatori
