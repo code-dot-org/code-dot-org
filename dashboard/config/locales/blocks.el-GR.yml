@@ -335,5 +335,13 @@ el:
             '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
       Vanilla_randomColor:
         text: τυχαίο χρώμα
+      craft_moveForward:
+        text: προχώρησε μπροστά
