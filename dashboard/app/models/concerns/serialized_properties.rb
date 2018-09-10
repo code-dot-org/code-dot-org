@@ -56,6 +56,7 @@ module SerializedProperties
     end
 
     def define_methods_for_property(property_name)
+      puts property_name
       # NOTE: To remove `property_name` from the key space, simply set the value to `nil`. The
       # `before_save` then removes `property_name` from the key space.
       define_method(property_name) {read_attribute('properties')[property_name]}

@@ -16,31 +16,52 @@
     = f.check_box :urban
   .field
     = f.label :cohort_capacity_csd
-    = f.text_area :cohort_capacity_csd
+    = f.text_field :cohort_capacity_csd
   .field
     = f.label :cohort_capacity_csp
-    = f.text_area :cohort_capacity_csp
-  - if @regional_partner.apps_open_date.is_a? Hash
-    - [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].each do |course|
-      %li
-        = course
-        - ['facilitator', 'teacher'].each do |role|
-          = "Apps Open Date for #{course} and #{role} - #{@regional_partner.get_apps_open_date(course: course, role: role)}"
+    = f.text_field :cohort_capacity_csp
+  - %w(csd csp).each do |course|
+    - %w(teacher facilitator).each do |role|
+      .field
+        = f.label nil, "Apps Open Date for #{course.upcase} #{role} (YYYY-MM-DD)"
+        = f.text_field "apps_open_date_#{course}_#{role}".to_sym
+      .field
+        = f.label nil, "Apps Close Date for #{course.upcase} #{role} (YYYY-MM-DD)"
+        = f.text_field "apps_close_date_#{course}_#{role}".to_sym
   .field
-    = f.label 'Apps Open Date - YYYY-MM-DD'
-    = f.text_area :apps_open_date
-  - if @regional_partner.apps_open_date.is_a? Hash
-    - [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].each do |course|
-      %li
-        = course
-        - ['facilitator', 'teacher'].each do |role|
-          = "Apps Close Date for #{course} and #{role} - #{@regional_partner.get_apps_close_date(course: course, role: role)}"
+    = f.label nil, "Applications Principal Approval"
+    .applications_principal_approval
+      %label
+        = f.radio_button :applications_principal_approval, RegionalPartner::ALL_REQUIRE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::ALL_REQUIRE_APPROVAL
+        != 'All apps require principal approval'
+      %label
+        = f.radio_button :applications_principal_approval, RegionalPartner::SELECTIVE_APPROVAL, checked: @regional_partner.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
+        != 'Selectively require some apps to have principal approval'
   .field
-    = f.label 'Apps Close Date - YYYY-MM-DD'
-    = f.text_area :apps_close_date
+    = f.label nil, "Applications Decision Emails"
+    .applications_decision_emails
+      %label
+        = f.radio_button :applications_decision_emails, RegionalPartner::SENT_BY_PARTNER, checked: @regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER
+        != 'Partner sends decision emails'
+      %label
+        = f.radio_button :applications_decision_emails, RegionalPartner::SENT_BY_SYSTEM, checked: @regional_partner.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM
+        != 'System sends decision emails'
   .field
-    = f.label :principal_approval
-    = f.select :principal_approval, options_for_select(RegionalPartner::PRINCIPAL_APPROVAL_TYPES.map {|x| [x.titleize, x]})
+    = f.label :link_to_application
+    = f.text_field :link_to_application
+  -%w(csd csp).each do |course|
+    .field
+      = f.label nil, "#{course.upcase} Cost"
+      = f.text_field "#{course}_cost".to_sym
+    .field
+      = f.label nil, "#{course.upcase} Cost Description"
+      = f.text_field "#{course}_cost_description".to_sym
+  .field
+    = f.label :contact_name
+    = f.text_field :contact_name
+  .field
+    = f.label :contact_email
+    = f.text_field :contact_email
   .field
     = f.label :attention
     = f.text_field :attention
