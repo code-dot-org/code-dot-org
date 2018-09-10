@@ -211,5 +211,11 @@ mi:
         options:
           PROPERTY:
             '"scale"': rahinga
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rahinga
       Vanilla_randomColor:
         text: tae matapōkere
+      craft_moveForward:
+        text: neke ki mua
