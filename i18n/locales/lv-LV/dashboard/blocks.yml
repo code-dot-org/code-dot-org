@@ -1,14 +1,27 @@
+---
 lv:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Nākamā
             '"prev"': Iepriekšējā
       Dancelab_changePropBy:
@@ -18,13 +31,16 @@ lv:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Nākamā
             '"prev"': Iepriekšējā
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -43,9 +59,11 @@ lv:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -78,6 +96,100 @@ lv:
             '"left"': pa kreisi
             '"right"': pa labi
             '"space"': telpa
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Nākamā
+            '"prev"': Iepriekšējā
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': pa labi
+            '"left"': pa kreisi
+      DancelabAlpha_randomColor:
+        text: nejauša krāsa
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': uz augšu
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -85,8 +197,8 @@ lv:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'patiess'
-            'false': 'nepatiess'
+            'true': patiess
+            'false': nepatiess
       gamelab_getProp:
         options:
           PROPERTY:
@@ -153,5 +265,13 @@ lv:
             '"left"': pa kreisi
             '"right"': pa labi
             '"space"': telpa
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
       Vanilla_randomColor:
         text: nejauša krāsa
