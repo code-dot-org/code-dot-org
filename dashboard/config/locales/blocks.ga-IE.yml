@@ -351,5 +351,13 @@ ga:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
       Vanilla_randomColor:
         text: dath randamach
+      craft_moveForward:
+        text: téigh ar aghaidh
