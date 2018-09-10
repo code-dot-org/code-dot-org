@@ -273,5 +273,11 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
       Vanilla_randomColor:
         text: насумична боја
+      craft_moveForward:
+        text: помери се напред
