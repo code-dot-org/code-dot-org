@@ -65,3 +65,5 @@ ur:
             '"space"': خلاء
       Vanilla_randomColor:
         text: بے ترتیب رنگ
+      craft_moveForward:
+        text: آگے چلیں
