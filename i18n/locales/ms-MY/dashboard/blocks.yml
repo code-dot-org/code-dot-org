@@ -257,5 +257,11 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': saiz
       Vanilla_randomColor:
         text: warna rawak
+      craft_moveForward:
+        text: bergerak ke hadapan
