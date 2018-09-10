@@ -335,5 +335,13 @@ hu:
             '"scale"': méret
             '"x"': x pozíció
             '"y"': y-pozíció
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': méret
+            '"x"': x pozíció
+            '"y"': y-pozíció
       Vanilla_randomColor:
         text: Véletlen szín
+      craft_moveForward:
+        text: előrelépni
