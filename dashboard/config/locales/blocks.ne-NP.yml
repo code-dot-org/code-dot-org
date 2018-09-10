@@ -265,5 +265,11 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': size
       Vanilla_randomColor:
         text: कुनै एक  रङ
+      craft_moveForward:
+        text: move forward
