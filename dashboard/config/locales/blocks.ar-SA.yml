@@ -335,5 +335,13 @@ ar:
             '"scale"': الحجم
             '"x"': موضع س
             '"y"': موضع ص
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+            '"x"': موضع س
+            '"y"': موضع ص
       Vanilla_randomColor:
         text: لون عشوائي
+      craft_moveForward:
+        text: تحريك إلى الأمام
