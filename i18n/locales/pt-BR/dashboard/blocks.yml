@@ -767,6 +767,19 @@ pt-BR:
             '"y"': posição y
             '"direction"': direção do movimento
             '"tint"': tinta
+      Mikelab_isAnim:
+        options:
+          COSTUME:
+            '"costume"': fantasia
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
       Vanilla_randomColor:
         text: cor aleatória
       Vector_positionCenter:
@@ -775,3 +788,5 @@ pt-BR:
         text: posição aleatória
       Vector_vectorNorth:
         text: norte
+      craft_moveForward:
+        text: avance
