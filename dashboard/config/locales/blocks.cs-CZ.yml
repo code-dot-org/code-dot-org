@@ -30,6 +30,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Dancelab_doMoveOnce:
         options:
           MOVE:
@@ -47,6 +49,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -55,6 +59,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Dancelab_mirrorSprite:
         options:
           DIRECTION:
@@ -74,6 +80,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -82,14 +90,20 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Dancelab_whenKey:
         options:
           KEY:
@@ -134,6 +148,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       DancelabAlpha_doMoveOnce:
         options:
           MOVE:
@@ -151,6 +167,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       DancelabAlpha_layoutSprites:
         options:
           GROUP:
@@ -159,6 +177,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       DancelabAlpha_mirrorSprite:
         options:
           DIRECTION:
@@ -178,6 +198,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       DancelabAlpha_setVisibleEach:
         options:
           THIS:
@@ -186,14 +208,20 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       DancelabAlpha_startMapping:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       DancelabAlpha_stopMapping:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       DancelabAlpha_whenKey:
         options:
           KEY:
@@ -214,6 +242,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       gamelab_debugSprite:
         options:
           VAL:
@@ -223,6 +253,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       gamelab_locationDelta:
         options:
           DIR:
@@ -244,6 +276,8 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -253,10 +287,14 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       gamelab_spritesWhereGenerator:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       gamelab_turn:
         options:
           DIRECTION:
@@ -289,9 +327,21 @@ cs:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+            '"x"': souřadnice X
+            '"y"': souřadnice Y
       Vanilla_randomColor:
         text: náhodná barva
+      craft_moveForward:
+        text: posunout vpřed
