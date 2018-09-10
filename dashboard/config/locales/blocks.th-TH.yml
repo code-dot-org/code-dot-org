@@ -64,8 +64,8 @@ th:
       Dancelab_mirrorSprite:
         options:
           DIRECTION:
-            '"right"': ไว้ทางขวา
-            '"left"': ไว้ทางซ้าย
+            '"right"': ไปทางขวา
+            '"left"': ไปทางซ้าย
       Dancelab_randomColor:
         text: สุ่มสี
       Dancelab_setDanceSpeed:
@@ -108,17 +108,17 @@ th:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
-            '"down"': ลงข้างล่าง
-            '"left"': ไว้ทางซ้าย
-            '"right"': ไว้ทางขวา
+            '"down"': เป็นตำแหน่ง
+            '"left"': ไปทางซ้าย
+            '"right"': ไปทางขวา
             '"space"': อวกาศ
       Dancelab_whileKey:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
-            '"down"': ลงข้างล่าง
-            '"left"': ไว้ทางซ้าย
-            '"right"': ไว้ทางขวา
+            '"down"': เป็นตำแหน่ง
+            '"left"': ไปทางซ้าย
+            '"right"': ไปทางขวา
             '"space"': อวกาศ
       DancelabAlpha_atTimestamp:
         options:
@@ -182,8 +182,8 @@ th:
       DancelabAlpha_mirrorSprite:
         options:
           DIRECTION:
-            '"right"': ไว้ทางขวา
-            '"left"': ไว้ทางซ้าย
+            '"right"': ไปทางขวา
+            '"left"': ไปทางซ้าย
       DancelabAlpha_randomColor:
         text: สุ่มสี
       DancelabAlpha_setDanceSpeed:
@@ -226,17 +226,17 @@ th:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
-            '"down"': ลงข้างล่าง
-            '"left"': ไว้ทางซ้าย
-            '"right"': ไว้ทางขวา
+            '"down"': เป็นตำแหน่ง
+            '"left"': ไปทางซ้าย
+            '"right"': ไปทางขวา
             '"space"': อวกาศ
       DancelabAlpha_whileKey:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
-            '"down"': ลงข้างล่าง
-            '"left"': ไว้ทางซ้าย
-            '"right"': ไว้ทางขวา
+            '"down"': เป็นตำแหน่ง
+            '"left"': ไปทางซ้าย
+            '"right"': ไปทางขวา
             '"space"': อวกาศ
       gamelab_changePropBy:
         options:
@@ -262,8 +262,8 @@ th:
       gamelab_mirrorSprite:
         options:
           DIRECTION:
-            '"right"': ไว้ทางขวา
-            '"left"': ไว้ทางซ้าย
+            '"right"': ไปทางขวา
+            '"left"': ไปทางซ้าย
       gamelab_randColor:
         text: สุ่มสี
       gamelab_randomColor:
@@ -298,30 +298,30 @@ th:
       gamelab_turn:
         options:
           DIRECTION:
-            '"right"': ไว้ทางขวา
-            '"left"': ไว้ทางซ้าย
+            '"right"': ไปทางขวา
+            '"left"': ไปทางซ้าย
       gamelab_whenKey:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
-            '"down"': ลงข้างล่าง
-            '"left"': ไว้ทางซ้าย
-            '"right"': ไว้ทางขวา
+            '"down"': เป็นตำแหน่ง
+            '"left"': ไปทางซ้าย
+            '"right"': ไปทางขวา
             '"space"': อวกาศ
       gamelab_whenPressedAndReleased:
         options:
           DIR:
             "'up'": ขึ้นข้างบน
-            "'down'": ลงข้างล่าง
-            "'left'": ไว้ทางซ้าย
-            "'right'": ไว้ทางขวา
+            "'down'": เป็นตำแหน่ง
+            "'left'": ไปทางซ้าย
+            "'right'": ไปทางขวา
       gamelab_whileKey:
         options:
           KEY:
             '"up"': ขึ้นข้างบน
-            '"down"': ลงข้างล่าง
-            '"left"': ไว้ทางซ้าย
-            '"right"': ไว้ทางขวา
+            '"down"': เป็นตำแหน่ง
+            '"left"': ไปทางซ้าย
+            '"right"': ไปทางขวา
             '"space"': อวกาศ
       Mikelab_changePropBy:
         options:
@@ -335,5 +335,13 @@ th:
             '"scale"': ขนาด
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+            '"x"': ตามแนวแกนนอน
+            '"y"': ตามแนวแกนตั้ง
       Vanilla_randomColor:
         text: สุ่มสี
+      craft_moveForward:
+        text: ไปข้างหน้า
