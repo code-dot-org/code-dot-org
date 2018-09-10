@@ -351,5 +351,13 @@ is:
             '"scale"': stærð
             '"x"': x staða
             '"y"': y staða
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+            '"x"': x staða
+            '"y"': y staða
       Vanilla_randomColor:
         text: einhver litur
+      craft_moveForward:
+        text: færa áfram
