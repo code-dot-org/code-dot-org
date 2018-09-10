@@ -1092,9 +1092,9 @@ var projects = module.exports = {
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
+    current.projectType = this.getStandaloneApp();
     if (shouldPublish) {
       current.shouldPublish = true;
-      current.projectType = this.getStandaloneApp();
     }
     this.setName(newName);
     return new Promise((resolve, reject) => {

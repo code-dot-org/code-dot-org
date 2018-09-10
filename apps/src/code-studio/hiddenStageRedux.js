@@ -80,7 +80,7 @@ export default function reducer(state = new HiddenState(), action) {
 
   if (action.type === UPDATE_HIDDEN_SCRIPT) {
     const { sectionId, scriptId, hidden } = action;
-    const nextState = state.setIn(['scriptsBySection', sectionId, scriptId.toString()], hidden);
+    const nextState = state.setIn(['scriptsBySection', sectionId.toString(), scriptId.toString()], hidden);
     validateSectionIds(nextState);
     return nextState;
   }
@@ -215,6 +215,10 @@ function initializeHiddenStages(data, canHideStages) {
  */
 export function initializeHiddenScripts(data) {
   return dispatch => {
+    if (!data) {
+      return;
+    }
+
     // For a teacher, we get back a map of section id to hidden script ids
     // For a student, we just get back a list of hidden script ids. Turn that
     // into an object, under the 'sectionId' of STUDENT_SECTION_ID
@@ -262,5 +266,5 @@ function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
     sectionId = STUDENT_SECTION_ID;
   }
   const bySection = state.get(bySectionKey);
-  return !!bySection.getIn([sectionId, itemId.toString()]);
+  return !!bySection.getIn([sectionId.toString(), itemId.toString()]);
 }

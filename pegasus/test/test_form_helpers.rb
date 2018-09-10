@@ -21,7 +21,6 @@ class FormHelpersTest < SequelTestCase
     DEFAULT_SECRET = 'default_secret'.freeze
 
     it 'deletes existing form' do
-      # TODO(asher): This does not test SOLR. Fix this.
       DB[:forms].insert(
         {
           kind: DEFAULT_KIND,
@@ -42,7 +41,6 @@ class FormHelpersTest < SequelTestCase
     end
 
     it 'returns false on bad secret' do
-      # TODO(asher): This does not test SOLR. Fix this.
       return_value = delete_form DEFAULT_KIND, 'not_a_secret'
 
       refute return_value
