@@ -5,41 +5,31 @@
 
 require File.expand_path('../../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
+require_relative '../../../lib/cdo/shared_constants'
 
-PROJECT_TYPES = %w(
-  algebra_game
-  applab
-  artist
-  calc
-  eval
-  gamelab
-  makerlab
-  playlab
-  starwars
-  weblab
-).freeze
+include SharedConstants
 
 # @param [String] value_parsed the parsed JSON blob in `pegasus.storage_apps.value`.
 # @return [String | nil] the project type of the storage_app.
 def project_type_from_value(value_parsed)
   level = value_parsed['level']
   if level
-    PROJECT_TYPES.each do |type|
-      return type if level.include? type
+    ALL_PUBLISHABLE_PROJECT_TYPES.each do |type|
+      return type if level.include? "/projects/#{type}"
     end
   end
 
   level_id = value_parsed['levelId']
   if level_id
-    PROJECT_TYPES.each do |type|
-      return type if level_id.include? type
+    ALL_PUBLISHABLE_PROJECT_TYPES.each do |type|
+      return type if level_id.include? "/projects/#{type}"
     end
   end
 
   level_url = value_parsed['levelUrl']
   if level_url
-    PROJECT_TYPES.each do |type|
-      return type if level_url.include? type
+    ALL_PUBLISHABLE_PROJECT_TYPES.each do |type|
+      return type if level_url.include? "/projects/#{type}"
     end
   end
 
