@@ -1,14 +1,29 @@
+---
 he:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': שניות
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': הבא
+            '"prev"': הקודם
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: כל
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': הבא
             '"prev"': הקודם
       Dancelab_changePropBy:
@@ -20,13 +35,16 @@ he:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': הבא
             '"prev"': הקודם
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': שניות
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -57,15 +75,25 @@ he:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': רגיל
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': כלום
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': גודל
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: כל
       Dancelab_spritesWhere:
         options:
           PROPERTY:
@@ -100,6 +128,132 @@ he:
             '"left"': שמאלה
             '"right"': ימינה
             '"space"': חלל
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': שניות
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': הבא
+            '"prev"': הקודם
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: כל
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': הבא
+            '"prev"': הקודם
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': הבא
+            '"prev"': הקודם
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': שניות
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: כל
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ימינה
+            '"left"': שמאלה
+      DancelabAlpha_randomColor:
+        text: צבע אקראי
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': כלום
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': רגיל
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': כלום
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: כל
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': למעלה
+            '"down"': למטה
+            '"left"': שמאלה
+            '"right"': ימינה
+            '"space"': חלל
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -109,8 +263,8 @@ he:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'נכון'
-            'false': 'שגוי'
+            'true': נכון
+            'false': שגוי
       gamelab_getProp:
         options:
           PROPERTY:
@@ -185,5 +339,17 @@ he:
             '"left"': שמאלה
             '"right"': ימינה
             '"space"': חלל
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
       Vanilla_randomColor:
         text: צבע אקראי
