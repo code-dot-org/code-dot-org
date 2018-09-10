@@ -351,5 +351,13 @@ fil:
             '"scale"': sukat
             '"x"': x na posisyon
             '"y"': y na posisyon
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+            '"x"': x na posisyon
+            '"y"': y na posisyon
       Vanilla_randomColor:
         text: iba-ibang kulay
+      craft_moveForward:
+        text: umabante
