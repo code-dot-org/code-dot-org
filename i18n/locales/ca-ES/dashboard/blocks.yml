@@ -273,5 +273,11 @@ ca:
         options:
           PROPERTY:
             '"scale"': mida
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': mida
       Vanilla_randomColor:
         text: color aleatori
+      craft_moveForward:
+        text: avança
