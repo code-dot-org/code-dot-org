@@ -301,5 +301,13 @@ km:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"x"': គូល​x
+            '"y"': គូល​y
       Vanilla_randomColor:
         text: ពណ៌​ព្រាវ
+      craft_moveForward:
+        text: រំកិល​ទៅមុខ
