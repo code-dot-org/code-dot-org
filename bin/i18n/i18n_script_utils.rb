@@ -74,8 +74,11 @@ def restore(source, redacted, dest, *plugins)
   source_json = Tempfile.new(['source', '.json'])
   redacted_json = Tempfile.new(['redacted', '.json'])
 
-  source_json.write(JSON.generate(source_data))
-  redacted_json.write(JSON.generate(redacted_data))
+  source_json.write(JSON.generate(source_data.values.first))
+  redacted_json.write(JSON.generate(redacted_data.values.first))
+
+  source_json.flush
+  redacted_json.flush
 
   stdout, _status = Open3.capture2(
     [
@@ -86,7 +89,9 @@ def restore(source, redacted, dest, *plugins)
       "-r #{redacted_json.path}",
     ].join(" ")
   )
-  restored_data = JSON.parse(stdout)
+  redacted_key = redacted_data.keys.first
+  restored_data = {}
+  restored_data[redacted_key] = JSON.parse(stdout)
   File.open(dest, "w+") do |file|
     file.write(restored_data.to_yaml(line_width: -1))
   end

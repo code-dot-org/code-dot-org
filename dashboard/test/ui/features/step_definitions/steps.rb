@@ -1513,6 +1513,15 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
 end
 
+Then /^I hide unit "([^"]+)"$/ do |unit_name|
+  @browser.execute_script("$('.uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash').click();")
+end
+
+Then /^unit "([^"]+)" is marked as (not )?visible$/ do |unit_name, negation|
+  visibility = @browser.execute_script("return $('.uitest-CourseScript:contains(#{unit_name})').attr('data-visibility');")
+  expect(visibility).to eq(negation ? 'hidden' : 'visible')
+end
+
 # @return [Number] the section id for the corresponding row in the sections table
 def get_section_id_from_table(row_index)
   # e.g. https://code.org/teacher-dashboard#/sections/54
