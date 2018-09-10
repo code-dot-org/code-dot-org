@@ -1515,6 +1515,9 @@ end
 
 Then /^I hide unit "([^"]+)"$/ do |unit_name|
   @browser.execute_script("$('.uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash').click();")
+  wait_short_until do
+    @browser.execute_script("return window.__TestInterface.toggleHiddenUnitComplete;")
+  end
 end
 
 Then /^unit "([^"]+)" is marked as (not )?visible$/ do |unit_name, negation|

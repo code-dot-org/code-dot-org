@@ -16,6 +16,13 @@ var songs = {
     verse: [26.5, 118.56], // Array of timestamps in seconds where verses occur
     chorus: [92.25, 158] // Array of timestamps in seconds where choruses occur
   },
+  macklemore90: {
+    url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/hold.mp3',
+    bpm: 146,
+    delay: 0.0, // Seconds to delay before calculating measures
+    verse: [0, 26.3], // Array of timestamps in seconds where verses occur
+    chorus: [65.75] // Array of timestamps in seconds where choruses occur
+  },
   hammer: {
     url: 'https://s3.amazonaws.com/cdo-curriculum/media/uploads/touch.mp3',
     bpm: 133,
@@ -70,12 +77,6 @@ var dancers = {
   	loadS3Animation("/48frames/Alien_Floss/Alien_Floss_", 48),
   	loadS3Animation("/48frames/Alien_Fresh/Alien_Fresh_", 48)
     ],
-  mrwiggles: [
-  	loadS3Animation("/48frames/MrWiggles_Rest/MrWiggles_Rest_", 48),
-  	loadS3Animation("/48frames/MrWiggles_Breakdown/MrWiggles_Breakdown", 48),
-  	loadS3Animation("/48frames/MrWiggles_Floss/MrWiggles_Floss_", 48),
-  	loadS3Animation("/48frames/MrWiggles_Fresh/MrWiggles_Fresh_", 48)
-    ],
   pizza: [
   	loadS3Animation("/48frames/Pizza_Rest/Pizza_Rest_", 48),
   	loadS3Animation("/48frames/Pizza_Breakdown/Pizza_Breakdown_", 48),
@@ -83,10 +84,60 @@ var dancers = {
   	loadS3Animation("/48frames/Pizza_Fresh/Pizza_Fresh_", 48)
     ],
   unicorn: [
-  	loadS3Animation("/48frames/Unicorn_Rest/Unicorn_Rest_", 48),
-  	loadS3Animation("/48frames/Unicorn_Breakdown/Unicorn_Breakdown_", 48),
-  	loadS3Animation("/48frames/Unicorn_Floss/Unicorn_Floss_", 48),
-  	loadS3Animation("/48frames/Unicorn_Fresh/Unicorn_Fresh_", 48)
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Rest/UNICORN - Rest_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_ClapHigh/UNICORN - Clap High_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Clown/UNICORN - Clown_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Dab/UNICORN - Dab_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_DoubleJam/UNICORN - DoubleJam_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Drop/UNICORN - Drop_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Floss/UNICORN - Floss_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Fresh/UNICORN - Fresh_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Roll/UNICORN - Roll_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_ThisOrThat/UNICORN - Thisorthat_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Kick/UNICORN - Kick_", 48),
+  	loadS3Animation("/CHARACTERS/UNICORN/UNICORN_Thriller/UNICORN - Thriller_", 48)
+    ],
+  moose: [
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Rest/MOOSE - Rest_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_ClapHigh/MOOSE - ClapHigh_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Clown/MOOSE - Clown_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Dab/MOOSE - Dab_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_DoubleJam/MOOSE - Double Jam_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Drop/MOOSE - Drop_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Floss/MOOSE - Floss_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Fresh/MOOSE - Fresh_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Roll/MOOSE - Roll_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_ThisOrThat/MOOSE - Thisorthat_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Kick/MOOSE - Kick_", 48),
+  	loadS3Animation("/CHARACTERS/MOOSE/MOOSE_Thriller/MOOSE - Thriller_", 48)
+    ],
+  mrwiggles: [
+  	loadS3Animation("/CHARACTERS/MODEL/Model_Rest/MODEL - Rest_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_ClapHigh/MODEL - Top Clap_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_Clown/MODEL - Clown_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_Dab/MODEL - Dab_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_DoubleJam/MODEL - Double Jam_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_Drop/MODEL - Drop_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_Floss/MODEL - Floss_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_Fresh/MODEL - Fresh_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_Roll/MODEL - Roll_", 48),
+  	loadS3Animation("/CHARACTERS/MODEL/Model_Thisorthat/MODEL - Thisorthat_", 48),
+  	// loadS3Animation("/CHARACTERS/MODEL/Model_Kick/MODEL - Kick_", 48),
+  	// loadS3Animation("/CHARACTERS/MODEL/Model_Thriller/MODEL - Thriller_", 48)
+    ],
+  duck: [
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_Rest/DUCK - Rest_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_ClapHigh/DUCK - Clap High_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_Clown/DUCK - Clown_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_Dab/DUCK - Dab_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_DoubleJam/DUCK - DoubleJam_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/Duck_Drop/DUCK - Drop_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_Floss/DUCK - Floss_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_Fresh/DUCK - Fresh_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_Roll/DUCK - Roll_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_ThisOrThat/DUCK - Thisorthat_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/DUCK_Kick/DUCK - Kick_", 48),
+  	loadS3Animation("/CHARACTERS/DUCK/Duck_Thriller/DUCK - Thriller_", 48)
     ]
 };
 
