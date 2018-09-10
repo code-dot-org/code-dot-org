@@ -369,5 +369,13 @@ es:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"x"': posición x
+            '"y"': posición y
       Vanilla_randomColor:
         text: color aleatorio
+      craft_moveForward:
+        text: avanzar
