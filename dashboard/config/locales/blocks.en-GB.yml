@@ -69,3 +69,5 @@ en-GB:
             '"space"': space
       Vanilla_randomColor:
         text: random colour
+      craft_moveForward:
+        text: move forward
