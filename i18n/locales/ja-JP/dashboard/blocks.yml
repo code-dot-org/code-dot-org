@@ -335,5 +335,13 @@ ja:
             '"scale"': おおきさ
             '"x"': x 位置
             '"y"': y 位置
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': おおきさ
+            '"x"': x 位置
+            '"y"': y 位置
       Vanilla_randomColor:
         text: てきとうな色
+      craft_moveForward:
+        text: 前方に移動します。
