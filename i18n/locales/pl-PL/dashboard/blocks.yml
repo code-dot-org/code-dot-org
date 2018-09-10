@@ -351,5 +351,13 @@ pl:
             '"scale"': rozmiar
             '"x"': współrzędna x
             '"y"': współrzędna y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': rozmiar
+            '"x"': współrzędna x
+            '"y"': współrzędna y
       Vanilla_randomColor:
         text: losowy kolor
+      craft_moveForward:
+        text: idź do przodu
