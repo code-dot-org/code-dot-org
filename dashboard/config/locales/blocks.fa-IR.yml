@@ -273,5 +273,11 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
       Vanilla_randomColor:
         text: رنگ تصادفی
+      craft_moveForward:
+        text: برو جلو
