@@ -1,14 +1,27 @@
+---
 si:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': ඊළඟ
             '"prev"': පෙරට
       Dancelab_changePropBy:
@@ -18,13 +31,16 @@ si:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': ඊළඟ
             '"prev"': පෙරට
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -43,9 +59,11 @@ si:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -78,6 +96,100 @@ si:
             '"left"': වම
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': ඊළඟ
+            '"prev"': පෙරට
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': දකුණ
+            '"left"': වම
+      DancelabAlpha_randomColor:
+        text: අහඹු වර්ණයක්
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -85,7 +197,7 @@ si:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'සත්‍ය'
+            'true': සත්‍ය
             'false': 'false'
       gamelab_getProp:
         options:
@@ -153,5 +265,13 @@ si:
             '"left"': වම
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
       Vanilla_randomColor:
         text: අහඹු වර්ණයක්
