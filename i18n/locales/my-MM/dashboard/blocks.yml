@@ -1,6 +1,11 @@
+---
 my:
   data:
     blocks:
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -14,9 +19,49 @@ my:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': ပုံမှန်
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: အားလုံး
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      DancelabAlpha_randomColor:
+        text: ကျဘန်းအရောင်
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': ပုံမှန်
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: အားလုံး
       gamelab_debugSprite:
         options:
           VAL:
