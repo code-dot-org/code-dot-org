@@ -70,6 +70,7 @@
 #
 
 require 'digest/md5'
+require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 require 'cdo/shared_cache'
@@ -2120,10 +2121,21 @@ class User < ActiveRecord::Base
     end
   end
 
-  def destroy
-    super.tap do
-      NewRelic::Agent.record_metric("Custom/User/SoftDelete", 1) if CDO.newrelic_logging
-    end
+  after_destroy :record_soft_delete
+  def record_soft_delete
+    Cdo::Metrics.push(
+      'User',
+      [
+        {
+          metric_name: :SoftDelete,
+          dimensions: [
+            {name: "Environment", value: CDO.rack_env},
+            {name: "UserType", value: user_type},
+          ],
+          value: 1
+        }
+      ]
+    )
   end
 
   # Called before_destroy.
