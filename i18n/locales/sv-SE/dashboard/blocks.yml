@@ -335,5 +335,13 @@ sv:
             '"scale"': storlek
             '"x"': x-position
             '"y"': y-position
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': storlek
+            '"x"': x-position
+            '"y"': y-position
       Vanilla_randomColor:
         text: slumpad färg
+      craft_moveForward:
+        text: gå framåt
