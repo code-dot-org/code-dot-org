@@ -230,9 +230,40 @@ function Effects(alpha, blend) {
       background(bgcolor);
     }
   };
+  this.rain={
+    drops: [],
+    init: function() {
+      for (var i=0; i < 20; i++) {
+        this.drops.push({
+          x: randomNumber(0, 380),
+          y: randomNumber(0, 380),
+          length: randomNumber(10, 20)
+        });
+      }
+    },
+    color: rgb(127, 127, 255, 0.5),
+    update: function() {
+      this.color = rgb(127, 127, randomNumber(127, 255), 0.5);
+  	},
+    draw: function() {
+      if (this.drops.length < 1) this.init();
+      strokeWeight(3);
+      stroke(this.color);
+      push();
+      for (var i=0; i<this.drops.length; i++) {
+        push();
+        translate(this.drops[i].x - 20, this.drops[i].y - 20);
+        line(0, 0, this.drops[i].length, this.drops[i].length * 2);
+        pop();
+        this.drops[i].y = (this.drops[i].y + this.drops[i].length) % 420;
+        this.drops[i].x = (this.drops[i].x + (this.drops[i].length / 2)) % 420;
+      }
+      pop();
+    }
+  };
 }
 var bg_effects = new Effects(1);
-var fg_effects = new Effects(0.2);
+var fg_effects = new Effects(0.8);
 
 World.bg_effect = bg_effects.none;
 World.fg_effect = fg_effects.none;
