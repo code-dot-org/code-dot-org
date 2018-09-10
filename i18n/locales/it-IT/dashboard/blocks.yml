@@ -1,48 +1,147 @@
+---
 it:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"measures"': misure
+            '"seconds"': secondi
+      Dancelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': tonalità
+            '"saturation"': saturazione
+            '"brightness"': luminosità
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Dormi
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Seguente
             '"prev"': Precedente
+            '"rand"': Casuale
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tutto
+            '"alien"': Alieno
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizza
+            '"unicorn"': Unicorno
+          MOVE:
+            '0': Dormi
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seguente
+            '"prev"': Precedente
+            '"rand"': Casuale
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+      Dancelab_distance:
+        text: distanza tra {LOCATION1} e {LOCATION2}
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Dormi
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Seguente
             '"prev"': Precedente
+            '"rand"': Casuale
+      Dancelab_everySeconds:
+        text: 'ogni {N} {UNIT} '
+        options:
+          UNIT:
+            '"measures"': misure
+            '"seconds"': secondi
+      Dancelab_everySecondsRange:
+        options:
+          UNIT:
+            measures: Misure
+            seconds: Secondi
+      Dancelab_everyVerseChorus:
+        text: 'ogni {UNIT} '
+      Dancelab_frameRate:
+        text: imposta il framerate a {RATE}
+      Dancelab_getEnergy:
+        options:
+          RANGE:
+            '"low"': basso
+            '"mid"': medio
+            '"high"': alto
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"measures"': Misure
+            '"seconds"': Secondi
+      Dancelab_helloWorld:
+        text: ciao mondo
+      Dancelab_isTouching:
+        text: "{THIS} sta toccando {TARGET}"
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: tutto
+            '"alien"': Alieno
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizza
+            '"unicorn"': Unicorno
+          FORMAT:
+            '"grid"': griglia
+            '"column"': colonna
+      Dancelab_locationCenter:
+        text: centro
+      Dancelab_locationPointer:
+        text: posizione del puntatore
+      Dancelab_location_picker:
+        text: "{LOCATION}"
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"alien"': Alieno
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizza
+            '"unicorn"': Unicorno
+      Dancelab_makeNewDanceSpriteSync:
+        options:
+          COSTUME:
+            '"alien"': Alieno
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizza
+            '"unicorn"': Unicorno
       Dancelab_mappingProp:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+          RANGE:
+            '"mid"': medio
       Dancelab_mirrorSprite:
         options:
           DIRECTION:
@@ -54,37 +153,91 @@ it:
         options:
           EFFECT:
             '"none"': Nessuno
+            '"rainbow"': Arcobaleno
+            '"diamonds"': Diamanti
       Dancelab_setDanceSpeed:
+        text: cambia la velocità di ballo di {SPRITE} a {SPEED}
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normale
+            '2': veloce
+            '4': molto veloce
+            '0.5': lento
+            '0.25': molto lento
+      Dancelab_setForegroundEffect:
+        text: imposta effetto di primo piano {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nessuno
+            '"rainbow"': Arcobaleno
+            '"diamonds"': Diamanti
+      Dancelab_setFreq:
+        text: imposta frequenza {FREQ}
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"tint"': tinta
+            '"dance_speed"': velocità di ballo
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: tutto
+            '"alien"': Alieni
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizze
+            '"unicorn"': Unicorni
+          VISIBILITY:
+            'true': visibile
+            'false': invisibile
       Dancelab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': dimensione
             '"x"': posizione x
             '"y"': posizione y
+            '"costume"': costume
+            '"direction"': direzione di movimento
+            '"rotation"': rotazione o direzione
+            '"tint"': tinta
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+          RANGE:
+            '"mid"': medio
+      Dancelab_startOscillator:
+        text: avvia oscillatore
+      Dancelab_startVisualizer:
+        text: mostra visualizzatore
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+            '"dance_speed"': velocità di ballo
+          RANGE:
+            '"mid"': medio
+      Dancelab_stopOscillator:
+        text: ferma oscillatore
       Dancelab_whenKey:
+        text: quando {KEY} è premuto
         options:
           KEY:
             '"up"': in alto
@@ -92,7 +245,20 @@ it:
             '"left"': a sinistra
             '"right"': a destra
             '"space"': spaziale
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Dancelab_whenPeak:
+        options:
+          RANGE:
+            '0': bass
+            '1': medio
+            '2': treble
+      Dancelab_whenTouching:
+        text: quando {SPRITE1} tocca {SPRITE2}
       Dancelab_whileKey:
+        text: quando {KEY} è premuto
         options:
           KEY:
             '"up"': in alto
@@ -100,27 +266,328 @@ it:
             '"left"': a sinistra
             '"right"': a destra
             '"space"': spaziale
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Dancelab_whileTouching:
+        text: quando {SPRITE1} sta toccando {SPRITE2}
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"measures"': misure
+            '"seconds"': secondi
+      DancelabAlpha_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': tonalità
+            '"saturation"': saturazione
+            '"brightness"': luminosità
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Dormi
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seguente
+            '"prev"': Precedente
+            '"rand"': Casuale
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tutto
+            '"alien"': Alieno
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizza
+            '"unicorn"': Unicorno
+          MOVE:
+            '0': Dormi
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seguente
+            '"prev"': Precedente
+            '"rand"': Casuale
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+      DancelabAlpha_distance:
+        text: distanza tra {LOCATION1} e {LOCATION2}
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Dormi
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seguente
+            '"prev"': Precedente
+            '"rand"': Casuale
+      DancelabAlpha_everySeconds:
+        text: 'ogni {N} {UNIT} '
+        options:
+          UNIT:
+            '"measures"': misure
+            '"seconds"': secondi
+      DancelabAlpha_everySecondsRange:
+        options:
+          UNIT:
+            measures: Misure
+            seconds: Secondi
+      DancelabAlpha_everyVerseChorus:
+        text: 'ogni {UNIT} '
+      DancelabAlpha_frameRate:
+        text: imposta il framerate a {RATE}
+      DancelabAlpha_getEnergy:
+        options:
+          RANGE:
+            '"low"': basso
+            '"mid"': medio
+            '"high"': alto
+      DancelabAlpha_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+      DancelabAlpha_getTime:
+        options:
+          UNIT:
+            '"measures"': Misure
+            '"seconds"': Secondi
+      DancelabAlpha_helloWorld:
+        text: ciao mondo
+      DancelabAlpha_isTouching:
+        text: "{THIS} sta toccando {TARGET}"
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: tutto
+            '"alien"': Alieno
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizza
+            '"unicorn"': Unicorno
+          FORMAT:
+            '"grid"': griglia
+            '"column"': colonna
+      DancelabAlpha_locationCenter:
+        text: centro
+      DancelabAlpha_locationPointer:
+        text: posizione del puntatore
+      DancelabAlpha_location_picker:
+        text: "{LOCATION}"
+      DancelabAlpha_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"alien"': Alieno
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizza
+            '"unicorn"': Unicorno
+      DancelabAlpha_makeNewDanceSpriteSync:
+        options:
+          COSTUME:
+            '"alien"': Alieno
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizza
+            '"unicorn"': Unicorno
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+          RANGE:
+            '"mid"': medio
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': a destra
+            '"left"': a sinistra
+      DancelabAlpha_randomColor:
+        text: colore scelto a caso
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Nessuno
+            '"rainbow"': Arcobaleno
+            '"diamonds"': Diamanti
+      DancelabAlpha_setDanceSpeed:
+        text: cambia la velocità di ballo di {SPRITE} a {SPEED}
+        options:
+          SPEED:
+            '1': normale
+            '2': veloce
+            '4': molto veloce
+            '0.5': lento
+            '0.25': molto lento
+      DancelabAlpha_setForegroundEffect:
+        text: imposta effetto di primo piano {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nessuno
+            '"rainbow"': Arcobaleno
+            '"diamonds"': Diamanti
+      DancelabAlpha_setFreq:
+        text: imposta frequenza {FREQ}
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"tint"': tinta
+            '"dance_speed"': velocità di ballo
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: tutto
+            '"alien"': Alieni
+            '"mrwiggles"': MrOndulino
+            '"pizza"': Pizze
+            '"unicorn"': Unicorni
+          VISIBILITY:
+            'true': visibile
+            'false': invisibile
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"costume"': costume
+            '"direction"': direzione di movimento
+            '"rotation"': rotazione o direzione
+            '"tint"': tinta
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+          RANGE:
+            '"mid"': medio
+      DancelabAlpha_startOscillator:
+        text: avvia oscillatore
+      DancelabAlpha_startVisualizer:
+        text: mostra visualizzatore
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+            '"dance_speed"': velocità di ballo
+          RANGE:
+            '"mid"': medio
+      DancelabAlpha_stopOscillator:
+        text: ferma oscillatore
+      DancelabAlpha_whenKey:
+        text: quando {KEY} è premuto
+        options:
+          KEY:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+            '"space"': spaziale
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      DancelabAlpha_whenPeak:
+        options:
+          RANGE:
+            '0': bass
+            '1': medio
+            '2': treble
+      DancelabAlpha_whenTouching:
+        text: quando {SPRITE1} tocca {SPRITE2}
+      DancelabAlpha_whileKey:
+        text: quando {KEY} è premuto
+        options:
+          KEY:
+            '"up"': in alto
+            '"down"': in basso
+            '"left"': a sinistra
+            '"right"': a destra
+            '"space"': spaziale
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      DancelabAlpha_whileTouching:
+        text: quando {SPRITE1} sta toccando {SPRITE2}
+      gamelab_changeColor:
+        options:
+          METHOD:
+            '"tint"': tinta
+            '"tone"': tonalità
+      gamelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': tonalità
+            '"saturation"': saturazione
+            '"brightness"': luminosità
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"direction"': direzione di movimento
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'vero'
-            'false': 'falso'
+            'true': vero
+            'false': falso
+      gamelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': costume
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+      gamelab_isTouching:
+        text: "{THIS} sta toccando {TARGET}"
       gamelab_locationDelta:
         options:
           DIR:
             "'random'": un oggetto a caso
+      gamelab_location_picker:
+        text: "{LOCATION}"
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -133,13 +600,17 @@ it:
       gamelab_setPosition:
         options:
           POSITION:
+            "{x: 200, y: 200}": centro
             '"random"': un oggetto a caso
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': dimensione
+            '"rotation"': rotazione
             '"x"': posizione x
             '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -151,18 +622,31 @@ it:
             '"scale"': dimensione
             '"x"': posizione x
             '"y"': posizione y
+            '"costume"': costume
+            '"direction"': direzione di movimento
+            '"rotation"': rotazione o direzione
+            '"tint"': tinta
       gamelab_spritesWhereGenerator:
         options:
           PROPERTY:
             '"scale"': dimensione
             '"x"': posizione x
             '"y"': posizione y
+            '"costume"': costume
+            '"direction"': direzione di movimento
+            '"rotation"': rotazione o direzione
+            '"tint"': tinta
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': a destra
             '"left"': a sinistra
       gamelab_whenKey:
+        text: quando {KEY} è premuto
         options:
           KEY:
             '"up"': in alto
@@ -170,6 +654,10 @@ it:
             '"left"': a sinistra
             '"right"': a destra
             '"space"': spaziale
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -177,7 +665,10 @@ it:
             "'down'": in basso
             "'left'": a sinistra
             "'right'": a destra
+      gamelab_whenTouching:
+        text: quando {SPRITE1} tocca {SPRITE2}
       gamelab_whileKey:
+        text: quando {KEY} è premuto
         options:
           KEY:
             '"up"': in alto
@@ -185,5 +676,48 @@ it:
             '"left"': a sinistra
             '"right"': a destra
             '"space"': spaziale
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileTouching:
+        text: quando {SPRITE1} sta toccando {SPRITE2}
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+      Mikelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': costume
+      Mikelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Vanilla_randomColor:
         text: colore scelto a caso
+      Vector_positionCenter:
+        text: centro
+      Vector_push:
+        text: imposta velocità {VECTOR}
+      Vector_setColor:
+        text: imposta colore a {COLOR}
+      Vector_setSize:
+        text: imposta larghezza {WIDTH} altezza {HEIGHT}
+      Vector_where:
+        text: per ogni personaggio dove {PROPERTY} è {VALUE} esegui {STATEMENT}
+        options:
+          PROPERTY:
+            "'shapeColor'": colore
