@@ -9,7 +9,6 @@ import orderBy from 'lodash/orderBy';
 import {
   personalProjectDataPropType,
   PROJECT_TYPE_MAP,
-  publishMethods,
 } from './projectConstants';
 import {
   AlwaysPublishableProjectTypes,
@@ -119,11 +118,6 @@ class PersonalProjectsTable extends React.Component {
   static propTypes = {
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
     canShare: PropTypes.bool.isRequired,
-    // We're going to run an A/B experiment to compare (un)publishing from the
-    // quick actions dropdown and from a button in the published column.
-    // TODO (Erin B.) delete this prop, userId prop (for logging),
-    // and the less effective variant when we determine the experiment outcome.
-    publishMethod: PropTypes.oneOf([publishMethods.CHEVRON, publishMethods.BUTTON]).isRequired,
     userId: PropTypes.number,
   };
 
@@ -137,7 +131,7 @@ class PersonalProjectsTable extends React.Component {
   };
 
   publishedAtFormatter = (publishedAt, {rowData}) => {
-    const {canShare, publishMethod, userId} = this.props;
+    const {canShare, userId} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
       (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
@@ -148,24 +142,16 @@ class PersonalProjectsTable extends React.Component {
         isPublished={!!rowData.publishedAt}
         projectId={rowData.channel}
         projectType={rowData.type}
-        publishMethod={publishMethod}
         userId={userId}
       />
     );
   };
 
   actionsFormatter = (actions, {rowData}) => {
-    const {canShare, publishMethod, userId} = this.props;
-    const isPublishable =
-      AlwaysPublishableProjectTypes.includes(rowData.type) ||
-      (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
-    const showPublishAction = isPublishable && publishMethod === publishMethods.CHEVRON;
+    const {userId} = this.props;
 
     return (
       <PersonalProjectsTableActionsCell
-        isPublishable={showPublishAction}
-        isPublished={!!rowData.publishedAt}
-        publishMethod={publishMethod}
         projectId={rowData.channel}
         projectType={rowData.type}
         isEditing={rowData.isEditing}
