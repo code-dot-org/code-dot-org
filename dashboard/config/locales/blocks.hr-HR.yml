@@ -315,5 +315,13 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"x"': x pozicija
+            '"y"': y pozicija
       Vanilla_randomColor:
         text: nasumično odabrana boja
+      craft_moveForward:
+        text: idi naprijed
