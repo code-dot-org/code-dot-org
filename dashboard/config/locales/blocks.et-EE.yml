@@ -351,5 +351,13 @@ et:
             '"scale"': suurus
             '"x"': x asukoht
             '"y"': y asukoht
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+            '"x"': x asukoht
+            '"y"': y asukoht
       Vanilla_randomColor:
         text: juhuslik värv
+      craft_moveForward:
+        text: liigu edasi
