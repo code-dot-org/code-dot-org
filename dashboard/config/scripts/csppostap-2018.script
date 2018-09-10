@@ -5,7 +5,7 @@ student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}'
-script_announcements [{"notice"=>"No Lesson Plans for Chapter 2", "details"=>"Chapter 2 of this unit does not currently have lesson plans available. \"Lesson Plan\" links for that chapter will not work as expected.", "link"=>"", "type"=>"information"}, {"notice"=>"Join our Teacher Insights Group!  ", "details"=>"Share your experiences and get support from other teachers and our team.", "link"=>"http://teacherblog.code.org/post/176699827304/join-the-codeorg-teacher-insight-group", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"No Lesson Plans for Chapter 2", "details"=>"Chapter 2 of this unit does not currently have lesson plans available. \"Lesson Plan\" links for that chapter will not work as expected.", "link"=>"", "type"=>"information"}, {"notice"=>"Survey: What assessment tool would you be the most excited about?", "details"=>"Click \"Learn more\" to take the survey.", "link"=>"bit.ly/green-bubbles-survey", "type"=>"bullhorn"}]
 family_name 'csppostap'
 version_year '2018'
 is_stable true
