@@ -335,5 +335,13 @@ uk:
             '"scale"': розмір
             '"x"': позиція по осі x
             '"y"': позиція по осі y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+            '"x"': позиція по осі x
+            '"y"': позиція по осі y
       Vanilla_randomColor:
         text: випадковий колір
+      craft_moveForward:
+        text: рухатись вперед
