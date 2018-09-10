@@ -1,14 +1,29 @@
+---
 pt:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segundos
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seguinte
+            '"prev"': Anterior
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tudo
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Seguinte
             '"prev"': Anterior
       Dancelab_changePropBy:
@@ -20,13 +35,16 @@ pt:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Seguinte
             '"prev"': Anterior
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundos
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -53,15 +71,21 @@ pt:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: tudo
       Dancelab_spritesWhere:
         options:
           PROPERTY:
@@ -96,6 +120,124 @@ pt:
             '"left"': para a esquerda
             '"right"': para a direita
             '"space"': espaço
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seguinte
+            '"prev"': Anterior
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: tudo
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seguinte
+            '"prev"': Anterior
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Seguinte
+            '"prev"': Anterior
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: tudo
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': para a direita
+            '"left"': para a esquerda
+      DancelabAlpha_randomColor:
+        text: cor aleatória
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: tudo
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para a esquerda
+            '"right"': para a direita
+            '"space"': espaço
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para a esquerda
+            '"right"': para a direita
+            '"space"': espaço
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -105,8 +247,8 @@ pt:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'verdadeiro'
-            'false': 'falso'
+            'true': verdadeiro
+            'false': falso
       gamelab_getProp:
         options:
           PROPERTY:
@@ -181,5 +323,17 @@ pt:
             '"left"': para a esquerda
             '"right"': para a direita
             '"space"': espaço
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
       Vanilla_randomColor:
         text: cor aleatória
