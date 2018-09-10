@@ -351,5 +351,13 @@ vi:
             '"scale"': kích thước
             '"x"': hoành độ
             '"y"': tung độ
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': kích thước
+            '"x"': hoành độ
+            '"y"': tung độ
       Vanilla_randomColor:
         text: màu ngẫu nhiên
+      craft_moveForward:
+        text: đi thẳng
