@@ -351,5 +351,13 @@ he:
             '"scale"': גודל
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+            '"x"': מיקום בציר x
+            '"y"': מיקום בציר y
       Vanilla_randomColor:
         text: צבע אקראי
+      craft_moveForward:
+        text: לזוז קדימה
