@@ -567,6 +567,7 @@ it:
             'true': vero
             'false': falso
       gamelab_getAnim:
+        text: "{SPRITE} {COSTUME}"
         options:
           COSTUME:
             '"costume"': costume
@@ -593,6 +594,8 @@ it:
           DIRECTION:
             '"right"': a destra
             '"left"': a sinistra
+      gamelab_moveInDirection2:
+        text: sposta {SPRITE} di {DISTANCE} pixel verso {DIRECTION}
       gamelab_randColor:
         text: colore scelto a caso
       gamelab_randomColor:
@@ -691,6 +694,7 @@ it:
             '"y"': posizione y
             '"direction"': direzione di movimento
       Mikelab_getAnim:
+        text: "{SPRITE} {COSTUME}"
         options:
           COSTUME:
             '"costume"': costume
@@ -704,8 +708,22 @@ it:
             '"y"': posizione y
             '"direction"': direzione di movimento
             '"tint"': tinta
+      Mikelab_isAnim:
+        text: "{SPRITE} {COSTUME}"
+        options:
+          COSTUME:
+            '"costume"': costume
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensione
+            '"rotation"': rotazione
+            '"x"': posizione x
+            '"y"': posizione y
+            '"direction"': direzione di movimento
+            '"tint"': tinta
       Vanilla_randomColor:
         text: colore scelto a caso
       Vector_positionCenter:
@@ -721,3 +739,5 @@ it:
         options:
           PROPERTY:
             "'shapeColor'": colore
+      craft_moveForward:
+        text: vai avanti
