@@ -3379,6 +3379,10 @@ class UserTest < ActiveSupport::TestCase
       section2.save!
       student.reload
       assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
     end
 
     test "user in two sections, both attached to course but no script" do
@@ -3397,6 +3401,10 @@ class UserTest < ActiveSupport::TestCase
       section2.save!
       student.reload
       assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
     end
 
     test "user in two sections, neither attached to script" do
