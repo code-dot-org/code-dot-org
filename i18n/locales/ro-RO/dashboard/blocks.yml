@@ -1,85 +1,229 @@
+---
 ro:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': secunde
+      Dancelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': nuanță
+            '"saturation"': saturație
+            '"brightness"': luminozitate
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Următor
             '"prev"': Anterior
+            '"rand"': Aleatoriu
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: toate
+            '"alien"': Extraterestru
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Următor
+            '"prev"': Anterior
+            '"rand"': Aleatoriu
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Următor
             '"prev"': Anterior
+            '"rand"': Aleatoriu
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': secunde
+      Dancelab_getEnergy:
+        options:
+          RANGE:
+            '"low"': mic
+            '"mid"': mediu
+            '"high"': mare
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+      Dancelab_helloWorld:
+        text: salutare tuturor
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: toate
+            '"alien"': Extraterestru
+          FORMAT:
+            '"grid"': rețea
+            '"row"': rând
+            '"column"': coloană
+      Dancelab_locationCenter:
+        text: centru
+      Dancelab_locationPointer:
+        text: poziţia cursorului
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"alien"': Extraterestru
+      Dancelab_makeNewDanceSpriteSync:
+        options:
+          COSTUME:
+            '"alien"': Extraterestru
+      Dancelab_makeNewGroupSprite:
+        options:
+          COSTUME:
+            '"circle"': Cerc
+            '"wiggles"': Striații
+          GROUP:
+            lead_dancers: Conducători
+            backup_dancers: Copie de rezervă
       Dancelab_mappingProp:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+          RANGE:
+            '"bass"': bas
+            '"mid"': mediu
+            '"treble"': înalte
       Dancelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': dreapta
             '"left"': stânga
+      Dancelab_onPointerDown:
+        text: pe indicatorul în jos
+      Dancelab_onPointerDrag:
+        text: pe indicatorul glisare
+      Dancelab_onPointerUp:
+        text: pe indicatorul în sus
+      Dancelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       Dancelab_randomColor:
         text: culoare aleatorie
+      Dancelab_randomLocation:
+        text: locație aleatorie
+      Dancelab_secondsInMeasure:
+        text: secunde într-o măsură
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"disco"': Discotecă
+            '"rainbow"': Curcubeu
+            '"diamonds"': Diamante
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"disco"': Discotecă
+            '"rainbow"': Curcubeu
+            '"diamonds"': Diamante
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"tint"': tentă
+            '"dance_speed"': viteză de dans
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: toate
+      Dancelab_setup:
+        text: configurare
       Dancelab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': dimensiune
             '"x"': poziţie x
             '"y"': poziţie y
+            '"costume"': costum
+            '"direction"': direcţie de mişcare
+            '"rotation"': rotire sau direcţie
+            '"tint"': tentă
+          OP:
+            '"="': "="
+            '">"': ">"
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+          RANGE:
+            '"bass"': bas
+            '"mid"': mediu
+            '"treble"': înalte
+      Dancelab_startOscillator:
+        text: pornește oscilator
+      Dancelab_startSong:
+        text: pornește cântecul
+      Dancelab_startVisualizer:
+        text: arată vizualizatorul
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+            '"dance_speed"': viteză de dans
+          RANGE:
+            '"bass"': bas
+            '"mid"': mediu
+            '"treble"': înalte
+      Dancelab_stopOscillator:
+        text: oprește oscilatorul
       Dancelab_whenKey:
         options:
           KEY:
@@ -88,6 +232,18 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Dancelab_whenPeak:
+        options:
+          RANGE:
+            '0': bas
+            '1': mediu
+            '2': înalte
+      Dancelab_whenSetup:
+        text: configurare
       Dancelab_whileKey:
         options:
           KEY:
@@ -96,68 +252,437 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': secunde
+      DancelabAlpha_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': nuanță
+            '"saturation"': saturație
+            '"brightness"': luminozitate
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Următor
+            '"prev"': Anterior
+            '"rand"': Aleatoriu
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: toate
+            '"alien"': Extraterestru
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Următor
+            '"prev"': Anterior
+            '"rand"': Aleatoriu
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Următor
+            '"prev"': Anterior
+            '"rand"': Aleatoriu
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': secunde
+      DancelabAlpha_getEnergy:
+        options:
+          RANGE:
+            '"low"': mic
+            '"mid"': mediu
+            '"high"': mare
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+      DancelabAlpha_helloWorld:
+        text: salutare tuturor
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: toate
+            '"alien"': Extraterestru
+          FORMAT:
+            '"grid"': rețea
+            '"row"': rând
+            '"column"': coloană
+      DancelabAlpha_locationCenter:
+        text: centru
+      DancelabAlpha_locationPointer:
+        text: poziţia cursorului
+      DancelabAlpha_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"alien"': Extraterestru
+      DancelabAlpha_makeNewDanceSpriteSync:
+        options:
+          COSTUME:
+            '"alien"': Extraterestru
+      DancelabAlpha_makeNewGroupSprite:
+        options:
+          COSTUME:
+            '"circle"': Cerc
+            '"wiggles"': Striații
+          GROUP:
+            lead_dancers: Conducători
+            backup_dancers: Copie de rezervă
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+          RANGE:
+            '"bass"': bas
+            '"mid"': mediu
+            '"treble"': înalte
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': dreapta
+            '"left"': stânga
+      DancelabAlpha_onPointerDown:
+        text: pe indicatorul în jos
+      DancelabAlpha_onPointerDrag:
+        text: pe indicatorul glisare
+      DancelabAlpha_onPointerUp:
+        text: pe indicatorul în sus
+      DancelabAlpha_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
+      DancelabAlpha_randomColor:
+        text: culoare aleatorie
+      DancelabAlpha_randomLocation:
+        text: locație aleatorie
+      DancelabAlpha_secondsInMeasure:
+        text: secunde într-o măsură
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"disco"': Discotecă
+            '"rainbow"': Curcubeu
+            '"diamonds"': Diamante
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"disco"': Discotecă
+            '"rainbow"': Curcubeu
+            '"diamonds"': Diamante
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"tint"': tentă
+            '"dance_speed"': viteză de dans
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: toate
+      DancelabAlpha_setup:
+        text: configurare
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"costume"': costum
+            '"direction"': direcţie de mişcare
+            '"rotation"': rotire sau direcţie
+            '"tint"': tentă
+          OP:
+            '"="': "="
+            '">"': ">"
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+          RANGE:
+            '"bass"': bas
+            '"mid"': mediu
+            '"treble"': înalte
+      DancelabAlpha_startOscillator:
+        text: pornește oscilator
+      DancelabAlpha_startSong:
+        text: pornește cântecul
+      DancelabAlpha_startVisualizer:
+        text: arată vizualizatorul
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+            '"dance_speed"': viteză de dans
+          RANGE:
+            '"bass"': bas
+            '"mid"': mediu
+            '"treble"': înalte
+      DancelabAlpha_stopOscillator:
+        text: oprește oscilatorul
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      DancelabAlpha_whenPeak:
+        options:
+          RANGE:
+            '0': bas
+            '1': mediu
+            '2': înalte
+      DancelabAlpha_whenSetup:
+        text: configurare
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': sus
+            '"down"': jos
+            '"left"': stânga
+            '"right"': dreapta
+            '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_changeColor:
+        options:
+          METHOD:
+            '"tint"': tentă
+            '"tone"': ton
+            '"shade"': umbră
+      gamelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': nuanță
+            '"saturation"': saturație
+            '"brightness"': luminozitate
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"direction"': direcţie de mişcare
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'adevărat'
-            'false': 'fals'
+            'true': adevărat
+            'false': fals
+      gamelab_enableDebug:
+        text: activează depanare
+      gamelab_firstTouched:
+        text: primul spiriduș atins
+      gamelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': costum
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
+      gamelab_hideTitleScreen:
+        text: ascend ecranul cu titlu
+      gamelab_joystickDirection:
+        text: direcția joystick-ului
+      gamelab_locationConstant:
+        options:
+          DIR:
+            "'north'": nord
+            "'south'": sud
+            "'east'": est
+            "'west'": vest
       gamelab_locationDelta:
         options:
           DIR:
+            "'north'": nord
+            "'south'": sud
+            "'east'": est
+            "'west'": vest
             "'random'": aleator
+      gamelab_locationEast:
+        text: est
+      gamelab_locationMouse:
+        text: locația mouse-ului
+      gamelab_locationNorth:
+        text: nord
+      gamelab_locationSouth:
+        text: sud
+      gamelab_locationWest:
+        text: vest
+      gamelab_makeNewGroup:
+        text: creează un grup nou
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': dreapta
             '"left"': stânga
+      gamelab_mouseDown:
+        text: mouse-ul este jos
+      gamelab_mouseLocation:
+        text: locația mouse-ului
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       gamelab_randColor:
         text: culoare aleatorie
       gamelab_randomColor:
         text: culoare aleatorie
+      gamelab_randomLocation:
+        text: locație aleatorie
+      gamelab_secondTouched:
+        text: al doilea spiriduș atins
       gamelab_setPosition:
         options:
           POSITION:
+            "{x: 50, y: 50}": stânga sus
+            "{x: 200, y: 50}": centru sus
+            "{x: 350, y: 50}": dreapta sus
+            "{x: 50, y: 200}": centru stânga
+            "{x: 200, y: 200}": centru
+            "{x: 350, y: 200}": centru dreapta
+            "{x: 50, y: 350}": stânga jos
+            "{x: 200, y: 350}": centru jos
+            "{x: 350, y: 350}": dreapta jos
             '"random"': aleator
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţie x
             '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
       gamelab_setSizes:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"width"': lăţime
             '"height"': înălțime
+      gamelab_setup:
+        text: configurare
+      gamelab_spriteDirection:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       gamelab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': dimensiune
             '"x"': poziţie x
             '"y"': poziţie y
+            '"costume"': costum
+            '"direction"': direcţie de mişcare
+            '"rotation"': rotire sau direcţie
+            '"tint"': tentă
       gamelab_spritesWhereGenerator:
         options:
           PROPERTY:
             '"scale"': dimensiune
             '"x"': poziţie x
             '"y"': poziţie y
+            '"costume"': costum
+            '"direction"': direcţie de mişcare
+            '"rotation"': rotire sau direcţie
+            '"tint"': tentă
+          OP:
+            '"="': "="
+            '">"': ">"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': dreapta
             '"left"': stânga
+      gamelab_whenDownArrow:
+        text: când săgeata jos este apăsată
+      gamelab_whenJoystick:
+        text: când joystick-ul
       gamelab_whenKey:
         options:
           KEY:
@@ -166,6 +691,14 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: când săgeata stânga este apăsată
+      gamelab_whenMouseClicked:
+        text: când se face clic cu mouse-ul
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -173,6 +706,14 @@ ro:
             "'down'": jos
             "'left'": stânga
             "'right'": dreapta
+      gamelab_whenRightArrow:
+        text: când săgeata dreapta este apăsată
+      gamelab_whenUpArrow:
+        text: când săgeata sus este apăsată
+      gamelab_whileDownArrow:
+        text: în timp ce săgeata jos este apăsată
+      gamelab_whileJoystick:
+        text: în timp ce joystick-ul
       gamelab_whileKey:
         options:
           KEY:
@@ -181,5 +722,42 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: în timp ce săgeata stânga este apăsată
+      gamelab_whileRightArrow:
+        text: în timp ce săgeata dreapta este apăsată
+      gamelab_whileUpArrow:
+        text: în timp ce săgeata sus este apăsată
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+      Mikelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': costum
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
       Vanilla_randomColor:
         text: culoare aleatorie
+      Vector_positionCenter:
+        text: centru
+      Vector_randomLocation:
+        text: locație aleatorie
+      Vector_vectorNorth:
+        text: nord
