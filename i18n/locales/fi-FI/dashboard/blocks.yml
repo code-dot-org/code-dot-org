@@ -351,5 +351,13 @@ fi:
             '"scale"': koko
             '"x"': x:än paikka
             '"y"': y:n paikka
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': koko
+            '"x"': x:än paikka
+            '"y"': y:n paikka
       Vanilla_randomColor:
         text: satunnainen väri
+      craft_moveForward:
+        text: siirry eteenpäin
