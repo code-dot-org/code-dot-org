@@ -1,14 +1,27 @@
+---
 hy:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Next
+            '"prev"': Previous
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Next
             '"prev"': Previous
       Dancelab_changePropBy:
@@ -18,13 +31,16 @@ hy:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Next
             '"prev"': Previous
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -43,9 +59,11 @@ hy:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -78,6 +96,100 @@ hy:
             '"left"': ձախ
             '"right"': ճիշտ
             '"space"': տարածություն
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Next
+            '"prev"': Previous
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Next
+            '"prev"': Previous
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Next
+            '"prev"': Previous
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': ճիշտ
+            '"left"': ձախ
+      DancelabAlpha_randomColor:
+        text: կամայական գույն
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -85,8 +197,8 @@ hy:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'ճիշտ'
-            'false': 'կեղծ'
+            'true': ճիշտ
+            'false': կեղծ
       gamelab_getProp:
         options:
           PROPERTY:
@@ -153,5 +265,13 @@ hy:
             '"left"': ձախ
             '"right"': ճիշտ
             '"space"': տարածություն
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
       Vanilla_randomColor:
         text: կամայական գույն
