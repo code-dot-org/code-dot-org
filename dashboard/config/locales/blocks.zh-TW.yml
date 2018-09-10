@@ -351,5 +351,13 @@ zh-TW:
             '"scale"': 尺寸
             '"x"': x 座標
             '"y"': y 座標
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+            '"x"': x 座標
+            '"y"': y 座標
       Vanilla_randomColor:
         text: 隨機顏色
+      craft_moveForward:
+        text: 移動-向前
