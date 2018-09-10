@@ -2230,10 +2230,9 @@ class User < ActiveRecord::Base
     sections = sections_as_student
     return [] if sections.empty?
 
+    sections = sections.reject(&:hidden)
     assigned_sections = sections.select do |section|
-      hidden_stages ?
-        section.script_id == assign_id :
-        !section.hidden && section.course_id == assign_id
+      hidden_stages ? section.script_id == assign_id : section.course_id == assign_id
     end
 
     if assigned_sections.empty?
