@@ -1,90 +1,345 @@
+---
 zh-CN:
   data:
     blocks:
+      Dancelab_addBehavior:
+        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+      Dancelab_atTimestamp:
+        text: 在 {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': 衡量
+            '"seconds"': " 秒"
+      Dancelab_changeColorBy:
+        text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': 色调
+            '"saturation"': 饱和度
+            '"brightness"': 亮度
       Dancelab_changeMove:
+        text: 将 {SPRITE} 舞蹈改到 {MOVE}
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
             '"next"': 下一项
             '"prev"': 前一项
-      Dancelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"x"': x位置
-            '"y"': y位置
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
-            '"next"': 下一项
-            '"prev"': 前一项
-      Dancelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"x"': x位置
-            '"y"': y位置
-      Dancelab_layoutSprites:
+            '"rand"': 随机
+      Dancelab_changeMoveEach:
+        text: 将 {GROUP} 舞蹈改为 {MOVE}
         options:
           GROUP:
             sprites: 所有
-      Dancelab_mappingProp:
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+      Dancelab_changePropBy:
+        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
+            '"rotation"': 旋转
             '"x"': x位置
             '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+      Dancelab_clickedOn:
+        text: 当 {SPRITE} 被点击时
+      Dancelab_distance:
+        text: "{LOCATION1} 和 {LOCATION2} 的距离"
+      Dancelab_doMoveOnce:
+        text: "{SPRITE} 移动 {MOVE} 一次"
+        options:
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+      Dancelab_eval:
+        text: 执行一些随意的代码 {CODE}
+      Dancelab_everySeconds:
+        text: '每次 {N} {UNIT} '
+        options:
+          UNIT:
+            '"measures"': 衡量
+            '"seconds"': " 秒"
+      Dancelab_everySecondsRange:
+        text: 每个 {N} {UNIT} 要从 {START} 到 {STOP}
+        options:
+          UNIT:
+            measures: 衡量
+            seconds: 秒
+      Dancelab_everyVerseChorus:
+        text: '每个 {UNIT} '
+        options:
+          UNIT:
+            '"verse"': 诗歌
+            '"chorus"': 合唱
+      Dancelab_frameRate:
+        text: 设置帧率为 {RATE}
+      Dancelab_getEnergy:
+        text: 获得 {RANGE} 的能量
+        options:
+          RANGE:
+            '"low"': 低
+            '"mid"': 中
+            '"high"': 高
+      Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+      Dancelab_getTime:
+        text: "{UNIT} 消失"
+        options:
+          UNIT:
+            '"measures"': 衡量
+            '"seconds"': 秒
+      Dancelab_helloWorld:
+        text: 你好，世界
+      Dancelab_isTouching:
+        text: "{THIS} 正在触碰 {TARGET}"
+      Dancelab_jumpTo:
+        text: "{SPRITE} 跳到 {LOCATION}"
+      Dancelab_layoutSprites:
+        text: 输出 {GROUP} 精灵为 {FORMAT}
+        options:
+          GROUP:
+            sprites: 所有
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+          FORMAT:
+            '"grid"': 网格
+            '"row"': 行
+            '"column"': 列
+      Dancelab_locationCenter:
+        text: 中央
+      Dancelab_locationPointer:
+        text: 点的位置
+      Dancelab_location_picker:
+        text: "{LOCATION}"
+      Dancelab_log:
+        text: 日志消息 {MESSAGE}
+      Dancelab_makeNewDanceSprite:
+        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
+        options:
+          COSTUME:
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+      Dancelab_makeNewDanceSpriteSync:
+        text: |-
+          测试同步
+          在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
+        options:
+          COSTUME:
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+      Dancelab_makeNewGroupSprite:
+        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} {GROUP} 跳舞者
+        options:
+          COSTUME:
+            '"circle"': 圆形
+            '"wiggles"': 扭动
+          GROUP:
+            lead_dancers: 领导
+            backup_dancers: 备份
+      Dancelab_mapper:
+        text: 从 {RANGE} 到 {DOMAIN} 映射 map {VALUE}
+      Dancelab_mappingProp:
+        text: "{PROPERTY} 位于 {RANGE}"
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中
+            '"treble"': 高音
       Dancelab_mirrorSprite:
+        text: "{SPRITE} 面向 {DIRECTION}"
         options:
           DIRECTION:
             '"right"': 向右
             '"left"': 向左
+      Dancelab_mixColors:
+        text: 混合 {COLOR1} 和 {COLOR2}
+      Dancelab_moveDown:
+        text: "{THIS} 向下移动"
+      Dancelab_moveForward:
+        text: 向前移动 {SPRITE} {DISTANCE} 像素
+      Dancelab_moveLeft:
+        text: "{THIS} 向左移动"
+      Dancelab_moveRight:
+        text: "{THIS} 向右移动"
+      Dancelab_moveUp:
+        text: "{THIS} 向上移动"
+      Dancelab_nMeasures:
+        text: "{N} 测量"
+      Dancelab_onPointerDown:
+        text: 当指针按下时
+      Dancelab_onPointerDrag:
+        text: 当指针拖动时
+      Dancelab_onPointerUp:
+        text: 当指针向上时
+      Dancelab_pointInDirection:
+        text: 指向 {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
+      Dancelab_pointToward:
+        text: 将 {SPRITE} 朝向 {LOCATION}
       Dancelab_randomColor:
         text: 随机颜色
+      Dancelab_randomLocation:
+        text: 随机位置
+      Dancelab_range:
+        text: "{RANGE} ... {DOMAIN}"
+      Dancelab_removeAllBehaviors:
+        text: "{SPRITE} 停止所有事情"
+      Dancelab_removeBehavior:
+        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
+      Dancelab_secondsInMeasure:
+        text: 一次测量中的秒数
+      Dancelab_setBackground:
+        text: 设置背景颜色为 {COLOR}
       Dancelab_setBackgroundEffect:
+        text: 设置背景效果为 {EFFECT}
         options:
           EFFECT:
             '"none"': 没有
+            '"disco"': 迪斯科
+            '"rainbow"': 彩虹
+            '"diamonds"': 菱形
       Dancelab_setDanceSpeed:
+        text: 将 {SPRITE} 跳舞速度改为 {SPEED}
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': 正常
+            '2': 快
+            '4': 非常快
+            '0.5': 慢
+            '0.25': 非常慢
+      Dancelab_setForegroundEffect:
+        text: 设置前景效果为 {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"disco"': 迪斯科
+            '"rainbow"': 彩虹
+            '"diamonds"': 菱形
+      Dancelab_setFreq:
+        text: 设置频率为 {FREQ}
       Dancelab_setProp:
+        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
+            '"rotation"': 旋转
             '"x"': x位置
             '"y"': y位置
+            '"tint"': 色调
+            '"dance_speed"': 跳舞速度
+      Dancelab_setVisibleEach:
+        text: 设置 {THIS} 为 {VISIBILITY}
+        options:
+          THIS:
+            sprites: 所有
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+          VISIBILITY:
+            'true': 可见
+            'false': 隐藏
+      Dancelab_setup:
+        text: 设置
       Dancelab_spritesWhere:
+        text: 精灵的 {PROPERTY} {OP} {VALUE}
         options:
           PROPERTY:
             '"scale"': 大小
             '"x"': x位置
             '"y"': y位置
+            '"costume"': 服装
+            '"direction"': 移动方向
+            '"rotation"': 旋转或方向
+            '"tint"': 色调
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
       Dancelab_startMapping:
+        text: "{SPRITE} 开始 {PROPERTY} 为 {RANGE}"
         options:
           PROPERTY:
             '"scale"': 大小
+            '"rotation"': 旋转
             '"x"': x位置
             '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中
+            '"treble"': 高音
+      Dancelab_startOscillator:
+        text: 开始振动器
+      Dancelab_startSong:
+        text: 开始歌曲
+      Dancelab_startVisualizer:
+        text: 开始可见
       Dancelab_stopMapping:
+        text: "{SPRITE} 停止 {PROPERTY} 为 {RANGE}"
         options:
           PROPERTY:
             '"scale"': 大小
+            '"rotation"': 旋转
             '"x"': x位置
             '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+            '"dance_speed"': 跳舞速度
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中
+            '"treble"': 高音
+      Dancelab_stopOscillator:
+        text: 停止振动器
       Dancelab_whenKey:
+        text: 当 {KEY} 按下时
         options:
           KEY:
             '"up"': 向上
@@ -92,7 +347,23 @@ zh-CN:
             '"left"': 向左
             '"right"': 向右
             '"space"': 空间
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Dancelab_whenPeak:
+        text: 当 {RANGE} 达到最高
+        options:
+          RANGE:
+            '0': 低音
+            '1': 中
+            '2': 高音
+      Dancelab_whenSetup:
+        text: 设置
+      Dancelab_whenTouching:
+        text: 当 {SPRITE1} 碰到 {SPRITE2}
       Dancelab_whileKey:
+        text: 当 {KEY} 按下时
         options:
           KEY:
             '"up"': 向上
@@ -100,69 +371,682 @@ zh-CN:
             '"left"': 向左
             '"right"': 向右
             '"space"': 空间
-      gamelab_changePropBy:
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Dancelab_whileTouching:
+        text: 当 {SPRITE1} 碰到 {SPRITE2}
+      DancelabAlpha_addBehavior:
+        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+      DancelabAlpha_atTimestamp:
+        text: 在 {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': 衡量
+            '"seconds"': " 秒"
+      DancelabAlpha_changeColorBy:
+        text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': 色调
+            '"saturation"': 饱和度
+            '"brightness"': 亮度
+      DancelabAlpha_changeMove:
+        text: 将 {SPRITE} 舞蹈改到 {MOVE}
+        options:
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+      DancelabAlpha_changeMoveEach:
+        text: 将 {GROUP} 舞蹈改为 {MOVE}
+        options:
+          GROUP:
+            sprites: 所有
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+      DancelabAlpha_changePropBy:
+        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
+            '"rotation"': 旋转
             '"x"': x位置
             '"y"': y位置
-      gamelab_debugSprite:
+            '"direction"': 移动方向
+            '"tint"': 色调
+      DancelabAlpha_clickedOn:
+        text: 当 {SPRITE} 被点击时
+      DancelabAlpha_distance:
+        text: "{LOCATION1} 和 {LOCATION2} 的距离"
+      DancelabAlpha_doMoveOnce:
+        text: "{SPRITE} 移动 {MOVE} 一次"
         options:
-          VAL:
-            'true': '真'
-            'false': '错'
-      gamelab_getProp:
+          MOVE:
+            '0': 休息
+            '1': 分解
+            '2': 丝线
+            '3': 新鲜
+            '"next"': 下一项
+            '"prev"': 前一项
+            '"rand"': 随机
+      DancelabAlpha_eval:
+        text: 执行一些随意的代码 {CODE}
+      DancelabAlpha_everySeconds:
+        text: '每次 {N} {UNIT} '
+        options:
+          UNIT:
+            '"measures"': 衡量
+            '"seconds"': " 秒"
+      DancelabAlpha_everySecondsRange:
+        text: 每个 {N} {UNIT} 要从 {START} 到 {STOP}
+        options:
+          UNIT:
+            measures: 衡量
+            seconds: 秒
+      DancelabAlpha_everyVerseChorus:
+        text: '每个 {UNIT} '
+        options:
+          UNIT:
+            '"verse"': 诗歌
+            '"chorus"': 合唱
+      DancelabAlpha_frameRate:
+        text: 设置帧率为 {RATE}
+      DancelabAlpha_getEnergy:
+        text: 获得 {RANGE} 的能量
+        options:
+          RANGE:
+            '"low"': 低
+            '"mid"': 中
+            '"high"': 高
+      DancelabAlpha_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': 大小
+            '"rotation"': 旋转
             '"x"': x位置
             '"y"': y位置
-      gamelab_locationDelta:
+            '"direction"': 移动方向
+            '"tint"': 色调
+      DancelabAlpha_getTime:
+        text: "{UNIT} 消失"
         options:
-          DIR:
-            "'random'": 随机
-      gamelab_mirrorSprite:
+          UNIT:
+            '"measures"': 衡量
+            '"seconds"': 秒
+      DancelabAlpha_helloWorld:
+        text: 你好，世界
+      DancelabAlpha_isTouching:
+        text: "{THIS} 正在触碰 {TARGET}"
+      DancelabAlpha_jumpTo:
+        text: "{SPRITE} 跳到 {LOCATION}"
+      DancelabAlpha_layoutSprites:
+        text: 输出 {GROUP} 精灵为 {FORMAT}
+        options:
+          GROUP:
+            sprites: 所有
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+          FORMAT:
+            '"grid"': 网格
+            '"row"': 行
+            '"column"': 列
+      DancelabAlpha_locationCenter:
+        text: 中央
+      DancelabAlpha_locationPointer:
+        text: 点的位置
+      DancelabAlpha_location_picker:
+        text: "{LOCATION}"
+      DancelabAlpha_log:
+        text: 日志消息 {MESSAGE}
+      DancelabAlpha_makeNewDanceSprite:
+        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
+        options:
+          COSTUME:
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+      DancelabAlpha_makeNewDanceSpriteSync:
+        text: |-
+          测试同步
+          在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
+        options:
+          COSTUME:
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+      DancelabAlpha_makeNewGroupSprite:
+        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} {GROUP} 跳舞者
+        options:
+          COSTUME:
+            '"circle"': 圆形
+            '"wiggles"': 扭动
+          GROUP:
+            lead_dancers: 领导
+            backup_dancers: 备份
+      DancelabAlpha_mapper:
+        text: 从 {RANGE} 到 {DOMAIN} 映射 map {VALUE}
+      DancelabAlpha_mappingProp:
+        text: "{PROPERTY} 位于 {RANGE}"
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中
+            '"treble"': 高音
+      DancelabAlpha_mirrorSprite:
+        text: "{SPRITE} 面向 {DIRECTION}"
         options:
           DIRECTION:
             '"right"': 向右
             '"left"': 向左
+      DancelabAlpha_mixColors:
+        text: 混合 {COLOR1} 和 {COLOR2}
+      DancelabAlpha_moveDown:
+        text: "{THIS} 向下移动"
+      DancelabAlpha_moveForward:
+        text: 向前移动 {SPRITE} {DISTANCE} 像素
+      DancelabAlpha_moveLeft:
+        text: "{THIS} 向左移动"
+      DancelabAlpha_moveRight:
+        text: "{THIS} 向右移动"
+      DancelabAlpha_moveUp:
+        text: "{THIS} 向上移动"
+      DancelabAlpha_nMeasures:
+        text: "{N} 测量"
+      DancelabAlpha_onPointerDown:
+        text: 当指针按下时
+      DancelabAlpha_onPointerDrag:
+        text: 当指针拖动时
+      DancelabAlpha_onPointerUp:
+        text: 当指针向上时
+      DancelabAlpha_pointInDirection:
+        text: 指向 {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
+      DancelabAlpha_pointToward:
+        text: 将 {SPRITE} 朝向 {LOCATION}
+      DancelabAlpha_randomColor:
+        text: 随机颜色
+      DancelabAlpha_randomLocation:
+        text: 随机位置
+      DancelabAlpha_range:
+        text: "{RANGE} ... {DOMAIN}"
+      DancelabAlpha_removeAllBehaviors:
+        text: "{SPRITE} 停止所有事情"
+      DancelabAlpha_removeBehavior:
+        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
+      DancelabAlpha_secondsInMeasure:
+        text: 一次测量中的秒数
+      DancelabAlpha_setBackground:
+        text: 设置背景颜色为 {COLOR}
+      DancelabAlpha_setBackgroundEffect:
+        text: 设置背景效果为 {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"disco"': 迪斯科
+            '"rainbow"': 彩虹
+            '"diamonds"': 菱形
+      DancelabAlpha_setDanceSpeed:
+        text: 将 {SPRITE} 跳舞速度改为 {SPEED}
+        options:
+          SPEED:
+            '1': 正常
+            '2': 快
+            '4': 非常快
+            '0.5': 慢
+            '0.25': 非常慢
+      DancelabAlpha_setForegroundEffect:
+        text: 设置前景效果为 {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"disco"': 迪斯科
+            '"rainbow"': 彩虹
+            '"diamonds"': 菱形
+      DancelabAlpha_setFreq:
+        text: 设置频率为 {FREQ}
+      DancelabAlpha_setProp:
+        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"tint"': 色调
+            '"dance_speed"': 跳舞速度
+      DancelabAlpha_setVisibleEach:
+        text: 设置 {THIS} 为 {VISIBILITY}
+        options:
+          THIS:
+            sprites: 所有
+            '"alien"': 外星人
+            '"mrwiggles"': MrWiggles
+            '"pizza"': 比萨
+            '"unicorn"': 独角兽
+          VISIBILITY:
+            'true': 可见
+            'false': 隐藏
+      DancelabAlpha_setup:
+        text: 设置
+      DancelabAlpha_spritesWhere:
+        text: 精灵的 {PROPERTY} {OP} {VALUE}
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"x"': x位置
+            '"y"': y位置
+            '"costume"': 服装
+            '"direction"': 移动方向
+            '"rotation"': 旋转或方向
+            '"tint"': 色调
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
+      DancelabAlpha_startMapping:
+        text: "{SPRITE} 开始 {PROPERTY} 为 {RANGE}"
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中
+            '"treble"': 高音
+      DancelabAlpha_startOscillator:
+        text: 开始振动器
+      DancelabAlpha_startSong:
+        text: 开始歌曲
+      DancelabAlpha_startVisualizer:
+        text: 开始可见
+      DancelabAlpha_stopMapping:
+        text: "{SPRITE} 停止 {PROPERTY} 为 {RANGE}"
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+            '"dance_speed"': 跳舞速度
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中
+            '"treble"': 高音
+      DancelabAlpha_stopOscillator:
+        text: 停止振动器
+      DancelabAlpha_whenKey:
+        text: 当 {KEY} 按下时
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      DancelabAlpha_whenPeak:
+        text: 当 {RANGE} 达到最高
+        options:
+          RANGE:
+            '0': 低音
+            '1': 中
+            '2': 高音
+      DancelabAlpha_whenSetup:
+        text: 设置
+      DancelabAlpha_whenTouching:
+        text: 当 {SPRITE1} 碰到 {SPRITE2}
+      DancelabAlpha_whileKey:
+        text: 当 {KEY} 按下时
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      DancelabAlpha_whileTouching:
+        text: 当 {SPRITE1} 碰到 {SPRITE2}
+      gamelab_add:
+        text: 将 {SPRITE} 加入组 {THIS}
+      gamelab_addBehaviorSimple:
+        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+      gamelab_bounceOff:
+        text: "{SPRITE} 弹离 {TARGET}"
+      gamelab_bounceOffEdges:
+        text: "{SPRITE} 弹离边缘"
+      gamelab_changeColor:
+        text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
+        options:
+          METHOD:
+            '"tint"': 色调
+            '"tone"': 语气
+            '"shade"': 色度
+      gamelab_changeColorBy:
+        text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': 色调
+            '"saturation"': 饱和度
+            '"brightness"': 亮度
+      gamelab_changePropBy:
+        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+      gamelab_clickedOn:
+        text: 当 {SPRITE} 被点击时
+      gamelab_comment:
+        text: '注释: {COMMENT}'
+      gamelab_console.log:
+        text: 日志消息 {MESSAGE}
+      gamelab_createNewSprite:
+        text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
+      gamelab_debugSprite:
+        text: 调试 {SPRITE} {VAL}
+        options:
+          VAL:
+            'true': 真
+            'false': 错
+      gamelab_destroy:
+        text: 移除 {THIS}
+      gamelab_displace:
+        text: "{THIS} 阻止了 {SPRITE} 移动"
+      gamelab_distance:
+        text: 从 {LOCATION1} 到 {LOCATION2} 的距离
+      gamelab_edgesDisplace:
+        text: 边缘阻止了 {SPRITE} 移动
+      gamelab_enableDebug:
+        text: 启用调试
+      gamelab_firstTouched:
+        text: 首先碰到的精灵
+      gamelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': 服装
+      gamelab_getDirection:
+        text: "{SPRITE} 移动方向"
+      gamelab_getFrameDelay:
+        text: "{THIS} 帧延迟"
+      gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+      gamelab_groupLength:
+        text: "{THIS} 中的精灵数量"
+      gamelab_hasBehavior:
+        text: "{SPRITE} 当前在 {BEHAVIOR}"
+      gamelab_hideTitleScreen:
+        text: 隐藏标题屏幕
+      gamelab_hsbColor:
+        text: |-
+          HSB 颜色
+          H{HUE}S{SATURATION}B{BRIGHTNESS}
+      gamelab_isTouching:
+        text: "{THIS} 正在触碰 {TARGET}"
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} 正在触碰边缘"
+      gamelab_joystickDirection:
+        text: 游戏杆方向
+      gamelab_jumpTo:
+        text: "{SPRITE} 跳到 {LOCATION}"
+      gamelab_keyDown:
+        text: 键被按下 {KEY}
+      gamelab_locationAdd:
+        text: "{LOC1} {OPERATOR} {LOC2}"
+        options:
+          OPERATOR:
+            "'plus'": "\\+"
+            "'minus'": "\\-"
+      gamelab_locationAt:
+        text: '位置 x: {X} y: {Y}'
+      gamelab_locationConstant:
+        text: "{DIR}"
+        options:
+          DIR:
+            "'north'": 北
+            "'south'": 南
+            "'east'": 东
+            "'west'": 西
+      gamelab_locationDelta:
+        text: "{LOCATION} 的 {DIR} {DISTANCE} 像素"
+        options:
+          DIR:
+            "'north'": 北
+            "'south'": 南
+            "'east'": 东
+            "'west'": 西
+            "'random'": 随机
+      gamelab_locationEast:
+        text: 东
+      gamelab_locationMouse:
+        text: 鼠标位置
+      gamelab_locationNorth:
+        text: 北
+      gamelab_locationOf:
+        text: "{SPRITE} 的位置"
+      gamelab_locationSouth:
+        text: 南
+      gamelab_locationWest:
+        text: 西
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_location_variable_get:
+        text: "{VAR} 的位置"
+      gamelab_location_variable_set:
+        text: 设置 {VAR} 的位置到 {VAL}
+      gamelab_makeNewGroup:
+        text: 创建新组
+      gamelab_mirrorSprite:
+        text: "{SPRITE} 面向 {DIRECTION}"
+        options:
+          DIRECTION:
+            '"right"': 向右
+            '"left"': 向左
+      gamelab_mixColors:
+        text: 混合 {COLOR1} 和 {COLOR2}
+      gamelab_mouseDown:
+        text: 鼠标已按下
+      gamelab_mouseLocation:
+        text: 鼠标位置
+      gamelab_moveDown:
+        text: "{THIS} 向下移动"
+      gamelab_moveForward:
+        text: 向前移动 {SPRITE} {DISTANCE} 像素
+      gamelab_moveInDirection:
+        text: 移动 {SPRITE} {DISTANCE} 像素 {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
+      gamelab_moveLeft:
+        text: "{THIS} 向左移动"
+      gamelab_moveRight:
+        text: "{THIS} 向右移动"
+      gamelab_moveToward:
+        text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
+      gamelab_moveUp:
+        text: "{THIS} 向上移动"
+      gamelab_pointInDirection:
+        text: 指向 {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
+      gamelab_pointToward:
+        text: 将 {SPRITE} 朝向 {LOCATION}
       gamelab_randColor:
         text: 随机颜色
       gamelab_randomColor:
         text: 随机颜色
+      gamelab_randomLocation:
+        text: 随机位置
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} 停止所有事情"
+      gamelab_removeBehaviorSimple:
+        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
+      gamelab_removeTint:
+        text: 从 {THIS} 删除颜色
+      gamelab_secondTouched:
+        text: 第二次碰到精灵
+      gamelab_setAnimation:
+        text: 将 {THIS} 的服装改为 {ANIMATION}
+      gamelab_setBackground:
+        text: 设置背景颜色为 {COLOR}
+      gamelab_setDirection:
+        text: 设置 {SPRITE} 移动方向为 {DIRECTION}
+      gamelab_setFrameDelay:
+        text: 设置 {THIS} 帧延迟 {VAL}
       gamelab_setPosition:
+        text: 将 {THIS} 移动到 {POSITION} 位置
         options:
           POSITION:
+            "{x: 50, y: 50}": 左上
+            "{x: 200, y: 50}": 顶部居中
+            "{x: 350, y: 50}": 右上
+            "{x: 50, y: 200}": 中上
+            "{x: 200, y: 200}": 中央
+            "{x: 350, y: 200}": 中间右方
+            "{x: 50, y: 350}": 左下
+            "{x: 200, y: 350}": 底部居中
+            "{x: 350, y: 350}": 右下
             '"random"': 随机
       gamelab_setProp:
+        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
+            '"rotation"': 旋转
             '"x"': x位置
             '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
       gamelab_setSizes:
+        text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
           PROPERTY:
             '"scale"': 大小
+            '"width"': 宽度
             '"height"': 高度
+      gamelab_setTint:
+        text: 将 {THIS} 的颜色改为 {COLOR}
+      gamelab_setup:
+        text: 设置
+      gamelab_showTitleScreen:
+        text: 显示标题屏幕 {BREAK} 标题 {TITLE} 文本 {SUBTITLE}
+      gamelab_spriteCostume:
+        text: "{COSTUME}"
+      gamelab_spriteDirection:
+        text: "{DIRECTION}"
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
       gamelab_spritesWhere:
+        text: 精灵的 {PROPERTY} 为 {VALUE}
         options:
           PROPERTY:
             '"scale"': 大小
             '"x"': x位置
             '"y"': y位置
+            '"costume"': 服装
+            '"direction"': 移动方向
+            '"rotation"': 旋转或方向
+            '"tint"': 色调
+      gamelab_spritesWhereFirst:
+        text: 第一个 {VALUE}
       gamelab_spritesWhereGenerator:
+        text: 精灵的 {PROPERTY} {OP} {VALUE}
         options:
           PROPERTY:
             '"scale"': 大小
             '"x"': x位置
             '"y"': y位置
+            '"costume"': 服装
+            '"direction"': 移动方向
+            '"rotation"': 旋转或方向
+            '"tint"': 色调
+          OP:
+            '"="': "="
+            '">"': ">"
+            '"<"': "\\<"
+      gamelab_spritesWhereLast:
+        text: 最后一个 {VALUE}
+      gamelab_spritesWhereRandom:
+        text: 在组 {VALUE} 中随机
       gamelab_turn:
+        text: "{SPRITE} 转 {DIRECTION} {N} 度"
         options:
           DIRECTION:
             '"right"': 向右
             '"left"': 向左
+      gamelab_whenDownArrow:
+        text: 当下方向键按下时
+      gamelab_whenJoystick:
+        text: 当使用游戏杆时
       gamelab_whenKey:
+        text: 当 {KEY} 按下时
         options:
           KEY:
             '"up"': 向上
@@ -170,14 +1054,42 @@ zh-CN:
             '"left"': 向左
             '"right"': 向右
             '"space"': 空间
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: 当按左方向键时
+      gamelab_whenMouseClicked:
+        text: 当鼠标点击时
       gamelab_whenPressedAndReleased:
+        text: "当 {DIR} 按下\n{STATEMENT1} 当释放 \n{STATEMENT2}"
         options:
           DIR:
             "'up'": 向上
             "'down'": 向下
             "'left'": 向左
             "'right'": 向右
+      gamelab_whenRightArrow:
+        text: 当按右方向键时
+      gamelab_whenStartAndStopTouching:
+        text: |-
+          当 {SPRITE1} 开始碰到 {SPRITE2} {STATEMENT1} 当它们不再接触
+          {STATEMENT2}
+      gamelab_whenTouching:
+        text: 当 {SPRITE1} 碰到 {SPRITE2}
+      gamelab_whenTouchingAny:
+        text: 当 {SPRITE} 碰到任何 {GROUP}
+      gamelab_whenTrue:
+        text: 当 {CONDITION} 为真时
+      gamelab_whenUpArrow:
+        text: 当上方向键按下时
+      gamelab_whileDownArrow:
+        text: 当下方向键按下时
+      gamelab_whileJoystick:
+        text: 当使用游戏杆时
       gamelab_whileKey:
+        text: 当 {KEY} 按下时
         options:
           KEY:
             '"up"': 向上
@@ -185,5 +1097,79 @@ zh-CN:
             '"left"': 向左
             '"right"': 向右
             '"space"': 空间
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: 当按左方向键时
+      gamelab_whileRightArrow:
+        text: 当按右方向键时
+      gamelab_whileTouching:
+        text: 当 {SPRITE1} 碰到 {SPRITE2}
+      gamelab_whileUpArrow:
+        text: 当上方向键按下时
+      gamelab_xLocationOf:
+        text: "{SPRITE} 的x轴坐标"
+      gamelab_yLocationOf:
+        text: "{SPRITE} 的y坐标"
+      Mikelab_addBehaviorSimple:
+        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+      Mikelab_changePropBy:
+        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+      Mikelab_createNewSprite:
+        text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
+      Mikelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': 服装
+      Mikelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+      Mikelab_hasBehavior:
+        text: "{SPRITE} 当前在 {BEHAVIOR}"
+      Mikelab_location_picker:
+        text: "{LOCATION}"
+      Mikelab_removeBehaviorSimple:
+        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
       Vanilla_randomColor:
         text: 随机颜色
+      Vector_createSpriteWith:
+        text: |-
+          创建精灵
+          执行 {STATEMENT}
+      Vector_log:
+        text: 日志消息 {MESSAGE}
+      Vector_positionCenter:
+        text: 中央
+      Vector_push:
+        text: 设置速度为 {VECTOR}
+      Vector_randomLocation:
+        text: 随机位置
+      Vector_setColor:
+        text: 设置颜色为 {COLOR}
+      Vector_setSize:
+        text: 设置宽度为 {WIDTH} 高度为 {HEIGHT}
+      Vector_teleportTo:
+        text: 设置位置为 {POSITION}
+      Vector_vectorNorth:
+        text: 北
+      Vector_where:
+        text: 当每个的 {PROPERTY} 为 {VALUE} 时执行 {STATEMENT}
+        options:
+          PROPERTY:
+            "'shapeColor'": 颜色
