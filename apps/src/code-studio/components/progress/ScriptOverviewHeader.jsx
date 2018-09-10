@@ -73,6 +73,7 @@ class ScriptOverviewHeader extends Component {
       version_year: PropTypes.string.isRequired,
       version_title: PropTypes.string.isRequired,
     })).isRequired,
+    showHiddenUnitWarning: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -113,6 +114,7 @@ class ScriptOverviewHeader extends Component {
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
       versions,
+      showHiddenUnitWarning,
     } = this.props;
 
     let verifiedResourcesAnnounce = [];
@@ -154,6 +156,15 @@ class ScriptOverviewHeader extends Component {
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
             onDismiss={this.onDismissVersionWarning}
+          />
+        }
+        {showHiddenUnitWarning &&
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.hiddenUnitWarningNotice()}
+            details={i18n.hiddenUnitWarningDetails()}
+            dismissible={false}
+            width={SCRIPT_OVERVIEW_WIDTH}
           />
         }
         <div id="lesson">
