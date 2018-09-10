@@ -1,3 +1,4 @@
+---
 en-GB:
   data:
     blocks:
@@ -6,14 +7,34 @@ en-GB:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_whenKey:
         options:
           KEY:
             '"space"': space
       Dancelab_whileKey:
+        options:
+          KEY:
+            '"space"': space
+      DancelabAlpha_randomColor:
+        text: random colour
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"space"': space
+      DancelabAlpha_whileKey:
         options:
           KEY:
             '"space"': space
