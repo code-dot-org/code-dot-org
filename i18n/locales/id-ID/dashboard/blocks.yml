@@ -578,9 +578,20 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"tint"': Mewarnai
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+            '"rotation"': Perputaran
+            '"x"': posisi x
+            '"y"': posisi y
+            '"direction"': Arah pergerakan
+            '"tint"': Mewarnai
       Vanilla_randomColor:
         text: warna acak
       Vector_positionCenter:
         text: Tengah
       Vector_vectorNorth:
         text: Utara
+      craft_moveForward:
+        text: Gerak maju
