@@ -351,5 +351,13 @@ nn:
             '"scale"': størrelse
             '"x"': x-posisjon
             '"y"': y-posisjon
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-posisjon
+            '"y"': y-posisjon
       Vanilla_randomColor:
         text: tilfeldig farge
+      craft_moveForward:
+        text: gå framover
