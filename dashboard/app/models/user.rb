@@ -716,22 +716,6 @@ class User < ActiveRecord::Base
     omniauth_user
   end
 
-  def update_oauth_credential_tokens(auth)
-    # No-op if auth hash does not contain credentials
-    return unless auth.credentials.present?
-
-    if migrated?
-      auth_option = authentication_options.find_by(credential_type: auth.provider, authentication_id: auth.uid)
-      auth_option.update_oauth_credential_tokens(auth)
-    else
-      self.oauth_refresh_token = auth.credentials.refresh_token if auth.credentials.refresh_token.present?
-      self.oauth_token = auth.credentials.token
-      self.oauth_token_expiration = auth.credentials.expires_at
-
-      save if changed?
-    end
-  end
-
   def self.initialize_new_oauth_user(user, auth, params)
     user.provider = auth.provider
     user.uid = auth.uid

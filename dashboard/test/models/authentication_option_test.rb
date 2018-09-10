@@ -139,15 +139,13 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     new_token = 'fedcba'
     new_refresh_token = '654321'
     new_expiration = Time.now.to_i + 100
-    auth_hash = OmniAuth::AuthHash.new(
-      credentials: {
-        token: new_token,
-        refresh_token: new_refresh_token,
-        expires_at: new_expiration
-      }
-    )
+    credentials = {
+      token: new_token,
+      refresh_token: new_refresh_token,
+      expires_at: new_expiration
+    }
 
-    auth_option.update_oauth_credential_tokens(auth_hash)
+    auth_option.update_oauth_credential_tokens(credentials)
     auth_option.reload
     new_data = {
       oauth_token: new_token,
