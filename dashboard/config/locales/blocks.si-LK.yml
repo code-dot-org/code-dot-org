@@ -273,5 +273,11 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
       Vanilla_randomColor:
         text: අහඹු වර්ණයක්
+      craft_moveForward:
+        text: ඉදිරියට යන්න
