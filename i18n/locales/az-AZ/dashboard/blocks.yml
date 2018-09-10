@@ -309,5 +309,11 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
       Vanilla_randomColor:
         text: ixtiyari rəng
+      craft_moveForward:
+        text: irəli get
