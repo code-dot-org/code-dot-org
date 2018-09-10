@@ -3148,7 +3148,7 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'omniauth login stores auth token' do
+  test 'from_omniauth: creates new non-migrated user if user with matching credentials does not exist' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',
       uid: '123456',
@@ -3157,14 +3157,72 @@ class UserTest < ActiveSupport::TestCase
         expires_at: Time.now.to_i + 3600,
         refresh_token: 'fake refresh token',
       },
-      info: {},
+      info: {
+        name: {first: 'Some', last: 'User'},
+        user_type: 'student'
+      },
     )
-
     params = {}
 
-    user = User.from_omniauth(auth, params)
-    assert_equal('fake oauth token', user.oauth_token)
-    assert_equal('fake refresh token', user.oauth_refresh_token)
+    assert_creates(User) do
+      user = User.from_omniauth(auth, params)
+      user.reload
+      assert_equal 'fake oauth token', user.oauth_token
+      assert_equal 'fake refresh token', user.oauth_refresh_token
+      assert_equal 'google_oauth2', user.provider
+      assert_equal 'Some User', user.name
+      assert_equal User::TYPE_STUDENT, user.user_type
+    end
+  end
+
+  test 'from_omniauth: updates non-migrated user oauth tokens if user with matching credentials exists' do
+    uid = '123456'
+    provider = 'google_oauth2'
+    create :user, uid: uid, provider: provider
+    auth = OmniAuth::AuthHash.new(
+      provider: provider,
+      uid: uid,
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+    params = {}
+
+    assert_does_not_create(User) do
+      user = User.from_omniauth(auth, params)
+      user.reload
+      assert_equal 'fake oauth token', user.oauth_token
+      assert_equal 'fake refresh token', user.oauth_refresh_token
+      assert_equal 'google_oauth2', user.provider
+    end
+  end
+
+  test 'from_omniauth: updates migrated user oauth tokens if authentication option with matching credentials exists' do
+    uid = '123456'
+    create :user, :with_migrated_google_authentication_option, uid: uid
+    auth = OmniAuth::AuthHash.new(
+      provider: 'google_oauth2',
+      uid: uid,
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+    params = {}
+
+    assert_does_not_create(User) do
+      user = User.from_omniauth(auth, params)
+      user.reload
+      google_auth_option = user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::GOOGLE}
+      refute_nil google_auth_option
+      assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
+      assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
+    end
   end
 
   test 'summarize' do
