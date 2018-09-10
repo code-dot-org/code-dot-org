@@ -351,5 +351,13 @@ nl:
             '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
       Vanilla_randomColor:
         text: willekeurige kleur
+      craft_moveForward:
+        text: beweeg vooruit
