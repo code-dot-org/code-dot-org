@@ -9,7 +9,7 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
-script_announcements [{"notice"=>"Survey: What assessment tool would you be the most excited about?", "details"=>"Click \"Learn more\" to take the survey.", "link"=>"bit.ly/green-bubbles-survey", "type"=>"information"}]
+script_announcements [{"notice"=>"Survey: What assessment tool would you be the most excited about?", "details"=>"Click \"Learn more\" to take the survey.", "link"=>"https://bit.ly/green-bubbles-survey", "type"=>"information"}]
 family_name 'csd3'
 version_year '2018'
 is_stable true
