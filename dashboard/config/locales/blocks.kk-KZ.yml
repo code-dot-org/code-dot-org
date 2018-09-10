@@ -273,5 +273,11 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
       Vanilla_randomColor:
         text: кездейсоқ түс
+      craft_moveForward:
+        text: алдыға қозғалу
