@@ -273,5 +273,11 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
       Vanilla_randomColor:
         text: nejauša krāsa
+      craft_moveForward:
+        text: pārvietot uz priekšu
