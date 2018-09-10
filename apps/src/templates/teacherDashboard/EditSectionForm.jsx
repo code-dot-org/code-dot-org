@@ -72,9 +72,10 @@ class EditSectionForm extends Component {
 
   onSaveClick = () => {
     const {section, hiddenStageState} = this.props;
-    const sectionId = section.id.toString();
-    const scriptId = section.scriptId.toString();
-    const isScriptHidden = isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
+    const sectionId = section.id;
+    const scriptId = section.scriptId;
+    const isScriptHidden = sectionId && scriptId &&
+      isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
 
     if (isScriptHidden) {
       this.setState({showHiddenUnitWarning: true});
