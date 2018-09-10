@@ -301,5 +301,13 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+            '"x"': x позиция
+            '"y"': у позиция
       Vanilla_randomColor:
         text: кокус түс
+      craft_moveForward:
+        text: алдыга жылдыр
