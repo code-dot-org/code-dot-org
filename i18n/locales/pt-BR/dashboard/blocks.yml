@@ -1,89 +1,236 @@
+---
 pt-BR:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': tonalidade
+            '"saturation"': saturação
+            '"brightness"': brilho
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Próximo
             '"prev"': Anterior
+            '"rand"': Aleatório
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: todos
+            '"alien"': Alienígena
+            '"pizza"': Pizza
+            '"unicorn"': Unicórnio
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Próximo
+            '"prev"': Anterior
+            '"rand"': Aleatório
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Próximo
             '"prev"': Anterior
+            '"rand"': Aleatório
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      Dancelab_getEnergy:
+        options:
+          RANGE:
+            '"low"': baixa
+            '"mid"': média
+            '"high"': alta
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+      Dancelab_helloWorld:
+        text: olá, mundo
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: todos
+            '"alien"': Alienígena
+            '"pizza"': Pizza
+            '"unicorn"': Unicórnio
+          FORMAT:
+            '"grid"': grade
+            '"row"': linha
+            '"column"': coluna
+      Dancelab_locationCenter:
+        text: centro
+      Dancelab_locationPointer:
+        text: posição do ponteiro
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"alien"': Alienígena
+            '"pizza"': Pizza
+            '"unicorn"': Unicórnio
+      Dancelab_makeNewDanceSpriteSync:
+        options:
+          COSTUME:
+            '"alien"': Alienígena
+            '"pizza"': Pizza
+            '"unicorn"': Unicórnio
+      Dancelab_makeNewGroupSprite:
+        options:
+          COSTUME:
+            '"circle"': Círculo
+            '"wiggles"': Memes
+          GROUP:
+            lead_dancers: Conduza
+            backup_dancers: Para trás
       Dancelab_mappingProp:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+          RANGE:
+            '"bass"': grave
+            '"mid"': média
+            '"treble"': agudo
       Dancelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': para direita
             '"left"': para esquerda
+      Dancelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Leste
+            '"South"': Sul
+            '"West"': Oeste
       Dancelab_randomColor:
         text: cor aleatória
+      Dancelab_randomLocation:
+        text: posição aleatória
+      Dancelab_secondsInMeasure:
+        text: segundos em uma medida
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
             '"none"': Nenhum
+            '"disco"': Disco
+            '"rainbow"': Arco-íris
+            '"diamonds"': Diamantes
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': devagar
+            '0.25': muito lento
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Nenhum
+            '"disco"': Disco
+            '"rainbow"': Arco-íris
+            '"diamonds"': Diamantes
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"tint"': tinta
+            '"dance_speed"': velocidade da dança
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: todos
+          VISIBILITY:
+            'true': visível
+            'false': invisível
+      Dancelab_setup:
+        text: configuração
       Dancelab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
+            '"costume"': fantasia
+            '"direction"': direção do movimento
+            '"rotation"': rotação ou direção
+            '"tint"': tinta
+          OP:
+            '"="': "="
+            '">"': ">"
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+          RANGE:
+            '"bass"': grave
+            '"mid"': média
+            '"treble"': agudo
+      Dancelab_startOscillator:
+        text: iniciar o oscilador
+      Dancelab_startSong:
+        text: começar a música
+      Dancelab_startVisualizer:
+        text: mostrar visualizador
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+            '"dance_speed"': velocidade da dança
+          RANGE:
+            '"bass"': grave
+            '"mid"': média
+            '"treble"': agudo
+      Dancelab_stopOscillator:
+        text: parar o oscilador
       Dancelab_whenKey:
         options:
           KEY:
@@ -92,6 +239,18 @@ pt-BR:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Dancelab_whenPeak:
+        options:
+          RANGE:
+            '0': grave
+            '1': média
+            '2': agudo
+      Dancelab_whenSetup:
+        text: configuração
       Dancelab_whileKey:
         options:
           KEY:
@@ -100,68 +259,444 @@ pt-BR:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      DancelabAlpha_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': tonalidade
+            '"saturation"': saturação
+            '"brightness"': brilho
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Próximo
+            '"prev"': Anterior
+            '"rand"': Aleatório
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: todos
+            '"alien"': Alienígena
+            '"pizza"': Pizza
+            '"unicorn"': Unicórnio
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Próximo
+            '"prev"': Anterior
+            '"rand"': Aleatório
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Próximo
+            '"prev"': Anterior
+            '"rand"': Aleatório
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      DancelabAlpha_getEnergy:
+        options:
+          RANGE:
+            '"low"': baixa
+            '"mid"': média
+            '"high"': alta
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+      DancelabAlpha_helloWorld:
+        text: olá, mundo
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: todos
+            '"alien"': Alienígena
+            '"pizza"': Pizza
+            '"unicorn"': Unicórnio
+          FORMAT:
+            '"grid"': grade
+            '"row"': linha
+            '"column"': coluna
+      DancelabAlpha_locationCenter:
+        text: centro
+      DancelabAlpha_locationPointer:
+        text: posição do ponteiro
+      DancelabAlpha_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"alien"': Alienígena
+            '"pizza"': Pizza
+            '"unicorn"': Unicórnio
+      DancelabAlpha_makeNewDanceSpriteSync:
+        options:
+          COSTUME:
+            '"alien"': Alienígena
+            '"pizza"': Pizza
+            '"unicorn"': Unicórnio
+      DancelabAlpha_makeNewGroupSprite:
+        options:
+          COSTUME:
+            '"circle"': Círculo
+            '"wiggles"': Memes
+          GROUP:
+            lead_dancers: Conduza
+            backup_dancers: Para trás
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+          RANGE:
+            '"bass"': grave
+            '"mid"': média
+            '"treble"': agudo
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': para direita
+            '"left"': para esquerda
+      DancelabAlpha_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Leste
+            '"South"': Sul
+            '"West"': Oeste
+      DancelabAlpha_randomColor:
+        text: cor aleatória
+      DancelabAlpha_randomLocation:
+        text: posição aleatória
+      DancelabAlpha_secondsInMeasure:
+        text: segundos em uma medida
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Nenhum
+            '"disco"': Disco
+            '"rainbow"': Arco-íris
+            '"diamonds"': Diamantes
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': devagar
+            '0.25': muito lento
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Nenhum
+            '"disco"': Disco
+            '"rainbow"': Arco-íris
+            '"diamonds"': Diamantes
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"tint"': tinta
+            '"dance_speed"': velocidade da dança
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: todos
+          VISIBILITY:
+            'true': visível
+            'false': invisível
+      DancelabAlpha_setup:
+        text: configuração
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"x"': posição x
+            '"y"': posição y
+            '"costume"': fantasia
+            '"direction"': direção do movimento
+            '"rotation"': rotação ou direção
+            '"tint"': tinta
+          OP:
+            '"="': "="
+            '">"': ">"
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+          RANGE:
+            '"bass"': grave
+            '"mid"': média
+            '"treble"': agudo
+      DancelabAlpha_startOscillator:
+        text: iniciar o oscilador
+      DancelabAlpha_startSong:
+        text: começar a música
+      DancelabAlpha_startVisualizer:
+        text: mostrar visualizador
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+            '"dance_speed"': velocidade da dança
+          RANGE:
+            '"bass"': grave
+            '"mid"': média
+            '"treble"': agudo
+      DancelabAlpha_stopOscillator:
+        text: parar o oscilador
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para esquerda
+            '"right"': para direita
+            '"space"': espaço
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      DancelabAlpha_whenPeak:
+        options:
+          RANGE:
+            '0': grave
+            '1': média
+            '2': agudo
+      DancelabAlpha_whenSetup:
+        text: configuração
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': para cima
+            '"down"': para baixo
+            '"left"': para esquerda
+            '"right"': para direita
+            '"space"': espaço
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_changeColor:
+        options:
+          METHOD:
+            '"tint"': tinta
+            '"tone"': tonalidade
+            '"shade"': sombra
+      gamelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': tonalidade
+            '"saturation"': saturação
+            '"brightness"': brilho
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"direction"': direção do movimento
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'verdadeiro'
-            'false': 'falso'
+            'true': verdadeiro
+            'false': falso
+      gamelab_enableDebug:
+        text: habilitar a depuração
+      gamelab_firstTouched:
+        text: primeira fada a ser tocada
+      gamelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': fantasia
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
+      gamelab_hideTitleScreen:
+        text: esconder título
+      gamelab_joystickDirection:
+        text: direção do joystick
+      gamelab_locationConstant:
+        options:
+          DIR:
+            "'north'": norte
+            "'south'": sul
+            "'east'": leste
+            "'west'": oeste
       gamelab_locationDelta:
         options:
           DIR:
+            "'north'": norte
+            "'south'": sul
+            "'east'": leste
+            "'west'": oeste
             "'random'": aleatório
+      gamelab_locationEast:
+        text: leste
+      gamelab_locationMouse:
+        text: posição do mouse
+      gamelab_locationNorth:
+        text: norte
+      gamelab_locationSouth:
+        text: sul
+      gamelab_locationWest:
+        text: oeste
+      gamelab_makeNewGroup:
+        text: criar um novo grupo
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': para direita
             '"left"': para esquerda
+      gamelab_mouseDown:
+        text: mouse está parado
+      gamelab_mouseLocation:
+        text: posição do mouse
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Leste
+            '"South"': Sul
+            '"West"': Oeste
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Leste
+            '"South"': Sul
+            '"West"': Oeste
       gamelab_randColor:
         text: cor aleatória
       gamelab_randomColor:
         text: cor aleatória
+      gamelab_randomLocation:
+        text: posição aleatória
+      gamelab_secondTouched:
+        text: segunda fada a ser tocada
       gamelab_setPosition:
         options:
           POSITION:
+            "{x: 50, y: 50}": superior esquerdo
+            "{x: 200, y: 50}": superior central
+            "{x: 350, y: 50}": superior direito
+            "{x: 50, y: 200}": centro a esquerda
+            "{x: 200, y: 200}": centro
+            "{x: 350, y: 200}": centro a direita
+            "{x: 50, y: 350}": inferior esquerdo
+            "{x: 200, y: 350}": inferior central
+            "{x: 350, y: 350}": inferior direito
             '"random"': aleatório
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
       gamelab_setSizes:
         options:
           PROPERTY:
             '"scale"': tamanho
+            '"width"': largura
             '"height"': altura
+      gamelab_setup:
+        text: configuração
+      gamelab_spriteDirection:
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Leste
+            '"South"': Sul
+            '"West"': Oeste
       gamelab_spritesWhere:
         options:
           PROPERTY:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
+            '"costume"': fantasia
+            '"direction"': direção do movimento
+            '"rotation"': rotação ou direção
+            '"tint"': tinta
       gamelab_spritesWhereGenerator:
         options:
           PROPERTY:
             '"scale"': tamanho
             '"x"': posição x
             '"y"': posição y
+            '"costume"': fantasia
+            '"direction"': direção do movimento
+            '"rotation"': rotação ou direção
+            '"tint"': tinta
+          OP:
+            '"="': "="
+            '">"': ">"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': para direita
             '"left"': para esquerda
+      gamelab_whenDownArrow:
+        text: quando a seta para baixo for pressionada
+      gamelab_whenJoystick:
+        text: quando for o joystick
       gamelab_whenKey:
         options:
           KEY:
@@ -170,6 +705,14 @@ pt-BR:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: quando a seta para esquerda for pressionada
+      gamelab_whenMouseClicked:
+        text: quando o personagem for clicado
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -177,6 +720,14 @@ pt-BR:
             "'down'": para baixo
             "'left'": para esquerda
             "'right'": para direita
+      gamelab_whenRightArrow:
+        text: quando a seta para baixo for pressionada
+      gamelab_whenUpArrow:
+        text: quando a seta para cima for pressionada
+      gamelab_whileDownArrow:
+        text: enquanto a seta para baixo estiver pressionada
+      gamelab_whileJoystick:
+        text: quando for o joystick
       gamelab_whileKey:
         options:
           KEY:
@@ -185,5 +736,42 @@ pt-BR:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: enquanto a seta para a esquerda estiver pressionada
+      gamelab_whileRightArrow:
+        text: enquanto a seta para a direita estiver pressionada
+      gamelab_whileUpArrow:
+        text: enquanto a seta para cima estiver pressionada
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+      Mikelab_getAnim:
+        options:
+          COSTUME:
+            '"costume"': fantasia
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+            '"rotation"': rotação
+            '"x"': posição x
+            '"y"': posição y
+            '"direction"': direção do movimento
+            '"tint"': tinta
       Vanilla_randomColor:
         text: cor aleatória
+      Vector_positionCenter:
+        text: centro
+      Vector_randomLocation:
+        text: posição aleatória
+      Vector_vectorNorth:
+        text: norte
