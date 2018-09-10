@@ -1,24 +1,32 @@
+---
 uz:
   data:
     blocks:
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Keyingi
+            '"prev"': Avvalgi
+      Dancelab_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Keyingi
             '"prev"': Avvalgi
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Keyingi
             '"prev"': Avvalgi
       Dancelab_randomColor:
@@ -26,9 +34,11 @@ uz:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_whenKey:
         options:
           KEY:
@@ -37,11 +47,56 @@ uz:
         options:
           KEY:
             '"space"': koinot
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Keyingi
+            '"prev"': Avvalgi
+      DancelabAlpha_changeMoveEach:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Keyingi
+            '"prev"': Avvalgi
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Keyingi
+            '"prev"': Avvalgi
+      DancelabAlpha_randomColor:
+        text: tasodifiy rang
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"space"': koinot
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"space"': koinot
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'rost'
-            'false': 'yolgʻon'
+            'true': rost
+            'false': yolgʻon
       gamelab_locationDelta:
         options:
           DIR:
