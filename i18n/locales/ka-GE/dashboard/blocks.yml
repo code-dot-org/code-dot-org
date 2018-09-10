@@ -727,6 +727,19 @@ ka:
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
             '"tint"': შეფერადება
+      Mikelab_isAnim:
+        options:
+          COSTUME:
+            '"costume"': კოსტუმი
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+            '"rotation"': შებრუნება
+            '"x"': x პოზიცია
+            '"y"': y პოზიცია
+            '"direction"': მოძრაობის მიმართულება
+            '"tint"': შეფერადება
       Vanilla_randomColor:
         text: შემთხვევითი ფერი
       Vector_positionCenter:
@@ -735,3 +748,5 @@ ka:
         text: შემთხვევითი მდებარეობა
       Vector_vectorNorth:
         text: ჩრდილოეთი
+      craft_moveForward:
+        text: წინ გადაადგილება
