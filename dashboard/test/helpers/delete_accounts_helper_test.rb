@@ -1950,20 +1950,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Solr
-  #
-
-  test "Solr: deletes user document" do
-    student = create :student
-    mock_solr = mock
-    CDO.stubs(:solr_server).returns('fake-solr-configuration')
-    Solr::Server.expects(:new).with(host: 'fake-solr-configuration').returns(mock_solr)
-    SolrHelper.expects(:delete_document).with(mock_solr, 'user', student.id)
-
-    DeleteAccountsHelper.new(log: NULL_STREAM).purge_user student
-  end
-
-  #
   # Pardot
   # pegasus.contact_rollups
   #
@@ -2266,10 +2252,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # that instance so we can assert things about its final state.
   #
   def purge_user(user)
-    SolrHelper.stubs(:delete_document)
     unpurged_users_before = User.with_deleted.where(purged_at: nil).count
 
-    DeleteAccountsHelper.new(solr: {}, log: @log).purge_user(user)
+    DeleteAccountsHelper.new(log: @log).purge_user(user)
 
     # Never allow more than one user to be purged by this operation
     unpurged_users_after = User.with_deleted.where(purged_at: nil).count
@@ -2282,16 +2267,13 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   def unsafe_purge_user(user)
-    SolrHelper.stubs(:delete_document)
-
-    DeleteAccountsHelper.new(solr: {}, log: @log, bypass_safety_constraints: true).purge_user(user)
+    DeleteAccountsHelper.new(log: @log, bypass_safety_constraints: true).purge_user(user)
 
     user.reload
   end
 
   def purge_all_accounts_with_email(email)
-    SolrHelper.stubs(:delete_document)
-    DeleteAccountsHelper.new(solr: {}, log: @log).purge_all_accounts_with_email(email)
+    DeleteAccountsHelper.new(log: @log).purge_all_accounts_with_email(email)
   end
 
   def assert_removes_field_from_forms(field, expect: :nil)
