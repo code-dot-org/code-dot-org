@@ -753,6 +753,19 @@ ro:
             '"y"': poziţie y
             '"direction"': direcţie de mişcare
             '"tint"': tentă
+      Mikelab_isAnim:
+        options:
+          COSTUME:
+            '"costume"': costum
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+            '"rotation"': rotație
+            '"x"': poziţie x
+            '"y"': poziţie y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
       Vanilla_randomColor:
         text: culoare aleatorie
       Vector_positionCenter:
@@ -761,3 +774,5 @@ ro:
         text: locație aleatorie
       Vector_vectorNorth:
         text: nord
+      craft_moveForward:
+        text: mută înainte
