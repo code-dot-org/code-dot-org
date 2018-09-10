@@ -145,14 +145,4 @@ class RegionalPartnersController < ApplicationController
   def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
-
-  def sanitize_date_hash(date_hash)
-    date_hash.transform_values do |v|
-      if v.is_a? Hash
-        v.transform_values {|w| Date.parse w}
-      else
-        Date.parse v
-      end
-    end
-  end
 end
