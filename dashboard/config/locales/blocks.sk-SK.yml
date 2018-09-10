@@ -351,5 +351,13 @@ sk:
             '"scale"': veľkosť
             '"x"': pozícia x
             '"y"': pozícia y
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+            '"x"': pozícia x
+            '"y"': pozícia y
       Vanilla_randomColor:
         text: náhodná farba
+      craft_moveForward:
+        text: posunúť dopredu
