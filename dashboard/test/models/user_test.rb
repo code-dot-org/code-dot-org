@@ -3373,6 +3373,12 @@ class UserTest < ActiveSupport::TestCase
 
       # when attached to course, we should hide only if hidden in every section
       assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
     end
 
     test "user in two sections, neither attached to script" do
