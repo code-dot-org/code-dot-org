@@ -86,6 +86,9 @@ export default storybook => storybook
         section={testSection}
         isSaveInProgress={false}
         stageExtrasAvailable={() => false}
+        hiddenStageState={{}}
+        updateHiddenScript={() => {}}
+        assignedScriptName="script name"
       />
     );
   })
@@ -103,6 +106,9 @@ export default storybook => storybook
         section={testSection}
         isSaveInProgress={true}
         stageExtrasAvailable={() => false}
+        hiddenStageState={{}}
+        updateHiddenScript={() => {}}
+        assignedScriptName="script name"
       />
     );
   });

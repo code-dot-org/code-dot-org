@@ -104,9 +104,9 @@ const createCommonStore = function (options = {}) {
     // Grab some arbitrary preexisting audio files for this test; they will not
     // match the displayed text for this test, but that doesn't seem necessary
     // enough to justify generating custom audio just for this storybook
-    pageConstants.ttsInstructionsUrl =
+    pageConstants.ttsShortInstructionsUrl =
       'https://tts.code.org/sharon22k/180/100/045539bb7fc9812eec4024867ac56d61/courseC_maze_programming8.mp3';
-    pageConstants.ttsMarkdownInstructionsUrl =
+    pageConstants.ttsLongInstructionsUrl =
       'https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3';
   }
 
