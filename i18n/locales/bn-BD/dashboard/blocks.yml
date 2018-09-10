@@ -273,5 +273,11 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
       Vanilla_randomColor:
         text: যেকোনো রঙ
+      craft_moveForward:
+        text: সামনে এগিয়ে যান
