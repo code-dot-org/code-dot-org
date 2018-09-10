@@ -69,3 +69,5 @@ hi:
             '"space"': अंतरिक्ष
       Vanilla_randomColor:
         text: यादृच्छिक रंग
+      craft_moveForward:
+        text: आगे जाएं
