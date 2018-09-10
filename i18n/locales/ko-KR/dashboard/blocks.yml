@@ -1,14 +1,29 @@
+---
 ko:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 다음
+            '"prev"': 이전
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: 모두
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': 다음
             '"prev"': 이전
       Dancelab_changePropBy:
@@ -20,13 +35,16 @@ ko:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': 다음
             '"prev"': 이전
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -57,15 +75,25 @@ ko:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': 보통
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': 없음
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': 크기
             '"x"': x 좌표
             '"y"': y 좌표
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: 모두
       Dancelab_spritesWhere:
         options:
           PROPERTY:
@@ -100,6 +128,132 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 다음
+            '"prev"': 이전
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: 모두
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 다음
+            '"prev"': 이전
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': 다음
+            '"prev"': 이전
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: 모두
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': 오른쪽으로
+            '"left"': 왼쪽으로
+      DancelabAlpha_randomColor:
+        text: 랜덤 색
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': 없음
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': 보통
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': 없음
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: 모두
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+            '"space"': 우주
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': 위로
+            '"down"': 아래로
+            '"left"': 왼쪽으로
+            '"right"': 오른쪽으로
+            '"space"': 우주
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -109,8 +263,8 @@ ko:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': '참'
-            'false': '거짓'
+            'true': 참
+            'false': 거짓
       gamelab_getProp:
         options:
           PROPERTY:
@@ -185,5 +339,17 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+            '"x"': x 좌표
+            '"y"': y 좌표
       Vanilla_randomColor:
         text: 랜덤 색
