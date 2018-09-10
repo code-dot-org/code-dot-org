@@ -902,21 +902,36 @@ class ContactRollups
     # has district names like "open csp".
     districts = District.all.index_by(&:id)
 
-    users = MultiAuthUserView.where("length(email) > 0")
+    # Use optimizer hint to set a custom query execution timeout
+    users_query = <<-END_OF_STRING
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */
+             JSON_EXTRACT(properties, '$.ops_school') AS ops_school
+           , JSON_EXTRACT(properties, '$.district_id') AS district_id
+      FROM users_view
+      WHERE deleted_at IS NULL
+        AND (length(email) > 0)
+    END_OF_STRING
 
-    users.find_each do |user|
-      unless user.ops_school.nil?
-        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).
-            update(school_name: user.ops_school)
+    users = PEGASUS_REPORTING_DB_READER[users_query]
+    # Create iterator for query using the #stream method so we stream the results back rather than
+    # trying to load everything in memory
+    users_iterator = users.stream.to_enum
+    user = grab_next(users_iterator)
+    until user.nil?
+      unless user[:ops_school].nil?
+        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).
+            update(school_name: user[:ops_school])
       end
 
-      unless user.district_id.nil?
-        district = districts[user.district_id]
+      unless user[:district_id].nil?
+        district = districts[user[:district_id]]
         unless district.nil?
-          PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).update(district_name: district.name)
+          PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).update(district_name: district.name)
         end
       end
+      user = grab_next(users_iterator)
     end
+
     log_completion(start)
 
     start = Time.now
@@ -949,5 +964,7 @@ class ContactRollups
     s.next
   rescue StopIteration
     nil
+  rescue StandardError => error
+    log "Error iterating over stream #{s} - #{error}"
   end
 end
