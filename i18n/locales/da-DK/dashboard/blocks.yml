@@ -335,5 +335,13 @@ da:
             '"scale"': størrelse
             '"x"': x-position
             '"y"': y-position
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"x"': x-position
+            '"y"': y-position
       Vanilla_randomColor:
         text: tilfældig farve
+      craft_moveForward:
+        text: flyt fremad
