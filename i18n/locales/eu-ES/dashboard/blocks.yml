@@ -315,5 +315,13 @@ eu:
             '"scale"': tamaina
             '"x"': x posizioa
             '"y"': y posizioa
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+            '"x"': x posizioa
+            '"y"': y posizioa
       Vanilla_randomColor:
         text: ausazko kolorea
+      craft_moveForward:
+        text: mugitu aurrera
