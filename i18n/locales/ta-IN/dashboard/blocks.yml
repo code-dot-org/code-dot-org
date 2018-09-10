@@ -1,3 +1,4 @@
+---
 ta:
   data:
     blocks:
@@ -6,9 +7,11 @@ ta:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_whenKey:
         options:
           KEY:
@@ -17,11 +20,29 @@ ta:
         options:
           KEY:
             '"space"': வெளி
+      DancelabAlpha_randomColor:
+        text: ஏதாவது ஒரு நிறம்
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"space"': வெளி
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"space"': வெளி
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'மெய்'
-            'false': 'தவறு'
+            'true': மெய்
+            'false': தவறு
       gamelab_locationDelta:
         options:
           DIR:
