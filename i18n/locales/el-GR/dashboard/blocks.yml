@@ -1,14 +1,29 @@
+---
 el:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: όλα
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Επόμενο
             '"prev"': Προηγούμενο
       Dancelab_changePropBy:
@@ -20,13 +35,16 @@ el:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Επόμενο
             '"prev"': Προηγούμενο
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -53,15 +71,21 @@ el:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': κανονικό
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: όλα
       Dancelab_spritesWhere:
         options:
           PROPERTY:
@@ -96,6 +120,124 @@ el:
             '"left"': αριστερά
             '"right"': δεξιά
             '"space"': διάστημα
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: όλα
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Επόμενο
+            '"prev"': Προηγούμενο
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: όλα
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': δεξιά
+            '"left"': αριστερά
+      DancelabAlpha_randomColor:
+        text: τυχαίο χρώμα
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': κανονικό
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: όλα
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': επάνω
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"space"': διάστημα
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -105,8 +247,8 @@ el:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'Αληθές'
-            'false': 'ψευδές'
+            'true': Αληθές
+            'false': ψευδές
       gamelab_getProp:
         options:
           PROPERTY:
@@ -181,5 +323,17 @@ el:
             '"left"': αριστερά
             '"right"': δεξιά
             '"space"': διάστημα
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
       Vanilla_randomColor:
         text: τυχαίο χρώμα
