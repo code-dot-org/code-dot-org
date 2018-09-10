@@ -644,6 +644,8 @@
   "helpTips": "Help & Tips",
   "hidden": "Hidden",
   "hiddenScriptTooltip": "Please select a section before trying to toggle whether or not the unit is visible to your students.",
+  "hiddenUnitWarningNotice": "The unit is hidden for this section",
+  "hiddenUnitWarningDetails": "Go to the course overview page to update which units are visible to your students by clicking \"View all units.\"",
   "hide": "Hide",
   "hideArchivedSections": "Hide archived sections",
   "hideFullList": "Hide full list",
