@@ -351,5 +351,13 @@ ru:
             '"scale"': размер
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': размер
+            '"x"': позиция абсцисс (x)
+            '"y"': позиция ординат (y)
       Vanilla_randomColor:
         text: случайный цвет
+      craft_moveForward:
+        text: двигаться вперед
