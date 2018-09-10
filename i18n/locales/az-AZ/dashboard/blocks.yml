@@ -1,14 +1,29 @@
+---
 az:
   data:
     blocks:
+      Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
       Dancelab_changeMove:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Növbəti
+            '"prev"': Əvvəlki
+      Dancelab_changeMoveEach:
+        options:
+          GROUP:
+            sprites: bütün
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Növbəti
             '"prev"': Əvvəlki
       Dancelab_changePropBy:
@@ -18,13 +33,16 @@ az:
       Dancelab_doMoveOnce:
         options:
           MOVE:
-            '0': Standing
-            '1': Clap
-            '2': Spin
-            '3': Uprock
-            '4': Bboy
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
             '"next"': Növbəti
             '"prev"': Əvvəlki
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -51,13 +69,23 @@ az:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Heç biri
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': ölçü
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: bütün
       Dancelab_spritesWhere:
         options:
           PROPERTY:
@@ -86,6 +114,118 @@ az:
             '"left"': sola
             '"right"': sağa
             '"space"': kosmos
+      DancelabAlpha_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
+      DancelabAlpha_changeMove:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Növbəti
+            '"prev"': Əvvəlki
+      DancelabAlpha_changeMoveEach:
+        options:
+          GROUP:
+            sprites: bütün
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Növbəti
+            '"prev"': Əvvəlki
+      DancelabAlpha_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      DancelabAlpha_doMoveOnce:
+        options:
+          MOVE:
+            '0': Rest
+            '1': Breakdown
+            '2': Floss
+            '3': Fresh
+            '"next"': Növbəti
+            '"prev"': Əvvəlki
+      DancelabAlpha_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
+      DancelabAlpha_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      DancelabAlpha_layoutSprites:
+        options:
+          GROUP:
+            sprites: bütün
+      DancelabAlpha_mappingProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      DancelabAlpha_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': sağa
+            '"left"': sola
+      DancelabAlpha_randomColor:
+        text: ixtiyari rəng
+      DancelabAlpha_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Heç biri
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Heç biri
+      DancelabAlpha_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      DancelabAlpha_setVisibleEach:
+        options:
+          THIS:
+            sprites: bütün
+      DancelabAlpha_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      DancelabAlpha_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      DancelabAlpha_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -93,8 +233,8 @@ az:
       gamelab_debugSprite:
         options:
           VAL:
-            'true': 'doğru'
-            'false': 'yalan'
+            'true': doğru
+            'false': yalan
       gamelab_getProp:
         options:
           PROPERTY:
@@ -161,5 +301,13 @@ az:
             '"left"': sola
             '"right"': sağa
             '"space"': kosmos
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
       Vanilla_randomColor:
         text: ixtiyari rəng
