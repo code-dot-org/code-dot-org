@@ -165,6 +165,9 @@ function postToggleHidden(scriptName, sectionId, stageId, hidden) {
     dataType: 'json',
     contentType: 'application/json',
     data: JSON.stringify(data)
+  }).success(() => {
+    window.__TestInterface = window.__TestInterface || {};
+    window.__TestInterface.toggleHiddenUnitComplete = true;
   });
 }
 
