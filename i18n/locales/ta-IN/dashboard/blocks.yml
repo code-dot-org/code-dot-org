@@ -69,3 +69,5 @@ ta:
             '"space"': வெளி
       Vanilla_randomColor:
         text: ஏதாவது ஒரு நிறம்
+      craft_moveForward:
+        text: முன்னோக்கி நகர்த்த
