@@ -1,3 +1,4 @@
+---
 ur:
   data:
     blocks:
@@ -6,9 +7,11 @@ ur:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': Fast
-            '2': Normal
-            '4': Slow
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_whenKey:
         options:
           KEY:
@@ -17,11 +20,29 @@ ur:
         options:
           KEY:
             '"space"': خلاء
+      DancelabAlpha_randomColor:
+        text: بے ترتیب رنگ
+      DancelabAlpha_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      DancelabAlpha_whenKey:
+        options:
+          KEY:
+            '"space"': خلاء
+      DancelabAlpha_whileKey:
+        options:
+          KEY:
+            '"space"': خلاء
       gamelab_debugSprite:
         options:
           VAL:
             'true': 'True'
-            'false': 'غلط'
+            'false': غلط
       gamelab_locationDelta:
         options:
           DIR:
