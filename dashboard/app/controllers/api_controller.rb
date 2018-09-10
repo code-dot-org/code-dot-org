@@ -65,12 +65,14 @@ class ApiController < ApplicationController
     begin
       yield service
 
-      if client.access_token != current_user.oauth_token
-        current_user.update!(
-          oauth_token: client.access_token,
-          oauth_token_expiration: client.expires_in + Time.now.to_i,
-        )
-      end
+      current_user.update_oauth_credential_tokens(
+        provider: AuthenticationOption::GOOGLE,
+        credentials: {
+          token: client.access_token,
+          refresh_token: client.refresh_token,
+          expires_at: client.expires_at + Time.now.to_i,
+        }
+      )
     rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
       render status: :forbidden, json: {error: error}
     end
