@@ -543,6 +543,7 @@ Craft.executeUserCode = function () {
     turnRight: function (blockID) {
       appCodeOrgAPI.turnRight(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
+    api: appCodeOrgAPI,
   });
 
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
