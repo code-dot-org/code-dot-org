@@ -118,7 +118,6 @@ class PersonalProjectsTable extends React.Component {
   static propTypes = {
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
     canShare: PropTypes.bool.isRequired,
-    userId: PropTypes.number,
   };
 
   state = {
@@ -131,7 +130,7 @@ class PersonalProjectsTable extends React.Component {
   };
 
   publishedAtFormatter = (publishedAt, {rowData}) => {
-    const {canShare, userId} = this.props;
+    const {canShare} = this.props;
     const isPublishable =
       AlwaysPublishableProjectTypes.includes(rowData.type) ||
       (ConditionallyPublishableProjectTypes.includes(rowData.type) && canShare);
@@ -142,13 +141,11 @@ class PersonalProjectsTable extends React.Component {
         isPublished={!!rowData.publishedAt}
         projectId={rowData.channel}
         projectType={rowData.type}
-        userId={userId}
       />
     );
   };
 
   actionsFormatter = (actions, {rowData}) => {
-    const {userId} = this.props;
 
     return (
       <PersonalProjectsTableActionsCell
@@ -156,7 +153,6 @@ class PersonalProjectsTable extends React.Component {
         projectType={rowData.type}
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
-        userId={userId}
       />
     );
   };

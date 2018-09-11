@@ -1,7 +1,6 @@
 import React from 'react';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './PersonalProjectsTable';
 import {stubFakePersonalProjectData} from './generateFakeProjects';
-import {publishMethods} from './projectConstants';
 
 export default storybook => {
   storybook
@@ -9,24 +8,12 @@ export default storybook => {
     .withReduxStore()
     .addStoryTable([
       {
-        name: 'Personal Project Table - (un)publish via buttons',
+        name: 'Personal Project Table',
         description: 'Table of personal projects',
         story: () => (
           <PersonalProjectsTable
             personalProjectsList={stubFakePersonalProjectData}
             canShare={true}
-            publishMethod={publishMethods.BUTTON}
-          />
-        )
-      },
-      {
-        name: 'Personal Project Table - (un)publish via dropdown action',
-        description: 'Table of personal projects',
-        story: () => (
-          <PersonalProjectsTable
-            personalProjectsList={stubFakePersonalProjectData}
-            canShare={true}
-            publishMethod={publishMethods.CHEVRON}
           />
         )
       },
@@ -37,7 +24,6 @@ export default storybook => {
           <PersonalProjectsTable
             personalProjectsList={[]}
             canShare={true}
-            publishMethod={publishMethods.CHEVRON}
           />
         )
       },
