@@ -912,7 +912,7 @@ class ContactRollups
         AND (length(email) > 0)
     END_OF_STRING
 
-    users = PEGASUS_REPORTING_DB_READER[users_query]
+    users = DASHBOARD_REPORTING_DB_READER[users_query]
     # Create iterator for query using the #stream method so we stream the results back rather than
     # trying to load everything in memory
     users_iterator = users.stream.to_enum
