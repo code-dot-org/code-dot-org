@@ -21,7 +21,7 @@ module UserMultiAuthHelper
           data: data_json
         )
       else
-        return authentication_option.create(
+        return AuthenticationOption.create(
           user: self,
           email: email,
           credential_type: provider,
