@@ -3454,7 +3454,7 @@ it:
       MC_HOC_2017_01_RETRY_authored_hint:
         MC_HOC_2017_01_RETRY_a: Trascina un blocco `vai avanti` dalla cassetta degli
           attrezzi all'area di lavoro e aggancialo sotto al blocco `quando si clicca
-          su "Esegui".
+          su "Esegui"`.
         MC_HOC_2017_01_RETRY_b: Ricorda di cliccare il pulsante "Esegui" per far eseguire
           il codice all'Agente.
         MC_HOC_2017_01_RETRY_c: Quando l'Agente ha terminato di eseguire il suo codice,
@@ -3522,8 +3522,8 @@ it:
         MC_HOC_2017_07_Cole_c: Tutto ciò che deve fare l'Agente è distruggere il ghiaccio
           per liberare la strada che porta al vagonetto.
         MC_HOC_2017_07_Cole_a: Per risolvere questo esercizio, scopri cosa fa la funzione
-          `clear path` (*libera il passaggio*) e richiamala il numero di volte necessario
-          usando il piccolo blocco verde `clear path` presente nella cassetta degli
+          `libera il passaggio` e richiamala il numero di volte necessario usando
+          il piccolo blocco verde `libera il passaggio` presente nella cassetta degli
           attrezzi.
         MC_HOC_2017_07_Cole_b: Per risolvere questo esercizio, prova a mescolare i
           blocchi delle funzioni con altri blocchi presenti nella cassetta degli attrezzi.
@@ -8341,7 +8341,7 @@ it:
           per scegliere l'angolo che ti serve!
       courseD_artist_5_2018_authored_hint:
         '1': Se stai cambiando le forme, non dimenticare che dovrai cambiare anche
-          loro gli angoli!
+          i relativi angoli!
       courseD_artist_7_2018_authored_hint:
         courseD_artist_project2a_a: |
           Questa figura è stata creata annidando un ciclo di 4 scalini seguito da un blocco `gira a destra di 180 gradi` all'interno di un ciclo `ripeti 2 volte`.
@@ -9299,21 +9299,23 @@ it:
 
           <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block</xml>
       courseD_bounce_events11s_authored_hint:
-        courseD_bounce_events11s_a: Dovrai lanciare la palla quando il gioco comincia,
-          quando colpisci il canestro e quando la mano manca la palla.
+        courseD_bounce_events11s_a: Sarà necessario lanciare una palla quando il gioco
+          comincia, quando fai canestro e quando la mano manca la palla.
       courseD_bounce_events11s_2018_authored_hint:
-        courseD_bounce_events11s_a: Dovrai lanciare la palla quando il gioco comincia,
-          quando colpisci il canestro e quando la mano manca la palla.
+        courseD_bounce_events11s_a: Sarà necessario lanciare una palla quando il gioco
+          comincia, quando fai canestro e quando la mano manca la palla.
       courseD_bounce_events12s_authored_hint:
-        courseD_bounce_events12s_a: Puoi rendere più veloce la palla o la mano attaccando
-          questi blocchi all'evento `quando esegui`.
-        courseD_bounce_events12s_b: Prova a fare ogni tiro da 2 punti e modifice il
-          logo della squadra con quello della tua città!
+        courseD_bounce_events12s_a: 'Puoi rendere più veloce la palla o la mano attaccando
+          all''evento `quando si clicca su "Esegui"` i seguenti blocchi: `imposta
+          la velocità della mano a ...` e `imposta per la palla un velocità ...`.'
+        courseD_bounce_events12s_b: Prova a fare in modo che ogni tiro valga 2 punti
+          e modifica il logo della squadra con quello di una città a tua scelta!
       courseD_bounce_events12s_2018_authored_hint:
-        courseD_bounce_events12s_a: Puoi rendere più veloce la palla o la mano attaccando
-          questi blocchi all'evento `quando esegui`.
-        courseD_bounce_events12s_b: Prova a fare ogni tiro da 2 punti e modifice il
-          logo della squadra con quello della tua città!
+        courseD_bounce_events12s_a: 'Puoi rendere più veloce la palla o la mano attaccando
+          all''evento `quando si clicca su "Esegui"` i seguenti blocchi: `imposta
+          la velocità della mano a ...` e `imposta per la palla un velocità ...`.'
+        courseD_bounce_events12s_b: Prova a fare in modo che ogni tiro valga 2 punti
+          e modifica il logo della squadra con quello di una città a tua scelta!
       courseD_bounce_events1s_authored_hint:
         courseD_bounce_events1s_a: "Per far funzionare questo gioco, devi aggiungere
           il blocco `vai a sinistra` al blocco evento `quando si preme sulla freccia
@@ -9391,9 +9393,11 @@ it:
         courseD_bounce_events6s_b: Se hai scritto il programma correttamente, non
           avrai bisogno di muovere la mano per vincere.
       courseD_bounce_events7s_authored_hint:
-        courseD_bounce_events7s_a: Puoi aggiungere suoni in più posti se ne hai voglia!
+        courseD_bounce_events7s_a: Se ne hai voglia, puoi aggiungere dei suoni anche
+          in altri punti del programma!
       courseD_bounce_events7s_2018_authored_hint:
-        courseD_bounce_events7s_a: Puoi aggiungere suoni in più posti se ne hai voglia!
+        courseD_bounce_events7s_a: Se ne hai voglia, puoi aggiungere dei suoni anche
+          in altri punti del programma!
       courseD_collector_debugging1_authored_hint:
         courseD_collector_debugging1_a: |-
           Usa il pulsante "Fai un passo" per vedere se è tutto giusto al primo passo.
@@ -11035,6 +11039,8 @@ it:
       courseE_artist_functions8c_2018_authored_hint:
         courseD_artist_functions8_f: Questo è più facile di quanto sembri! Non dovresti
           aver bisogno dei blocchi `vai avanti` o` salta`!
+        courseD_artist_functions8_a: La seconda fila di quadrati può essere disegnata
+          proprio come la prima, dopo che l'artista si è girato di 180 gradi!
         courseD_artist_functions8_c: Alla fine di ogni linea di quadrati, l'artista
           deve solo ruotare di 180 gradi prima di disegnare la successiva linea di
           quadrati. Metti il tutto in un ciclo`ripeti ... volte` per iniziare il prossimo
@@ -11570,8 +11576,8 @@ it:
         courseE_farmer_functions1a_b: Usa un blocco `ripeti fino a che` per arrivare
           fino alla zucca!
       courseE_farmer_functions1a_2018_authored_hint:
-        courseE_farmer_functions1a_a: Assicurati i leggere la definizione della funzione.
-          Puoi dire cosa fa?
+        courseE_farmer_functions1a_a: Leggi attentamente la definizione della funzione.
+          Riesci a dire che cosa fa?
         courseE_farmer_functions1a_b: Usa un blocco `ripeti fino a che` per arrivare
           fino alla zucca!
       courseE_farmer_functions2b_authored_hint:
@@ -11598,7 +11604,7 @@ it:
           sparpagliati nell'area di lavoro.
       courseE_farmer_functions2ba_2018_authored_hint:
         courseE_farmer_functions2ba_a: Usa il blocco verde `prendi tutte le zucche`
-          per essere sicuro di raccogliere tutte le zucche!
+          per essere sicuro di raccoglierle tutte!
       courseE_farmer_functions3c_authored_hint:
         courseE_farmer_functions3c_a: Quale sequenza si ripete spesso in questo programma?
           Riesci a trascinare questi blocchi nella funzione?

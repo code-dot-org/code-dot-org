@@ -155,10 +155,9 @@ sk:
               name: Bludisko
         frozen:
           title: Programuj s Annou a Elsou
-          description: Použime kódovanie pre pridanie sa sa k Anne a Else k ich skúmaniu
-            krás a čarov ľadu. Vytvoríte snehové vločky a vzory počas korčuľovania
-            a spravte zimnú krajinu zázrakov, ktorú môžete následne zdieľať s Vašimi
-            kamarítmi!
+          description: Pridajme sa pomocou kódovania k Anne a Else a preskúmajme spolu
+            krásu a čaro ľadu. Korčuľovaním v ľade vykreslíš snehové vločky a krásne
+            vzory a vytvoríš tak zázračnú zimnú krajinu, ktorú môžeš zdieľať s priateľmi!
           description_short: S pomocou kódu sa pridajme k Anne a Elze, ktoré skúmajú
             kúzlo a krásu ľadu.
           stages:
@@ -443,6 +442,10 @@ sk:
           stages:
             While Loops:
               name: Podmieňovacie slučky While
+        starwars:
+          title: 'Star Wars: Budovanie galaxie pomocou Kódu'
+        starwarsblocks:
+          title: 'Star Wars: Budovanie galaxie pomocou Kódu'
         mc:
           title: Minecraft Hodina kódu
           description: Použi bloky kódov aby si vzal Steva alebo Alex na dobrodúžstvo
@@ -1085,7 +1088,7 @@ sk:
             'Loops: Getting Loopy':
               name: Neustále opakovanie
             Nested Loops in Frozen:
-              name: Vnorené slučky vo Frozen
+              name: Vnorené slučky s Annou a Elsou
             Conditionals with Cards:
               name: Podmienky s kartami
             'Functions: Songwriting':
@@ -1229,11 +1232,14 @@ sk:
           stages:
             Artist:
               name: Umelec
+          title: Nový Frozen Skript
         frozen-2018-test:
+          title: Nový Frozen Skript
           stages:
             Artist:
               name: Umelec
         frozen-2018-test-b:
+          title: Nový Frozen Skript
           stages:
             Artist:
               name: Umelec
