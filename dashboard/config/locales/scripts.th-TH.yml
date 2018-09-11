@@ -114,6 +114,8 @@ th:
               name: คิดคำนวณ
             Digital Citizenship:
               name: พลเมืองดิจิทัล
+            'Farmer: While Loops':
+              name: 'เกษตรกร: ลูปขณะที่ (while loops)'
             Internet:
               name: อินเทอร์เน็ต
             Maze:
@@ -183,6 +185,8 @@ th:
               name: 'ผึ้ง: การดีบั๊ก'
             'Bee: Nested Loops':
               name: 'ผึ้ง: ลูปซ้อนลูป'
+            'Farmer: While Loops':
+              name: 'เกษตรกร: ลูปขณะที่ (while loops)'
             'Maze: Sequence':
               name: 'เขาวงกต: การจัดลำดับ'
         usability:
@@ -542,6 +546,8 @@ th:
               name: การดีบั๊ก (Debugging) ผึ้ง
             Bounce:
               name: กระเด้ง
+            'Farmer: While Loops':
+              name: 'เกษตรกร: ลูปขณะที่ (while loops)'
             'Maze: Nested Loops':
               name: 'เขาวงกต: ลูปซ้อนลูป'
         csd3-2017:
@@ -603,6 +609,8 @@ th:
               name: ใช้ลูปกับนักสะสม
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Events in Play Lab:
+              name: อีเวนต์กับเพลย์แลป
             Going Places Safely:
               name: ไปที่ไหนให้ปลอดภัย
             'Debugging: Unspotted Bugs':
@@ -617,6 +625,8 @@ th:
               name: ใช้ลูปกับนักสะสม
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Events in Play Lab:
+              name: อีเวนต์กับเพลย์แลป
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
         coursec-draft:
@@ -625,6 +635,8 @@ th:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
+            Events in Play Lab:
+              name: อีเวนต์กับเพลย์แลป
             Building a Foundation:
               name: สร้างพื้นฐาน
             Debugging in Maze:
@@ -824,6 +836,7 @@ th:
                 บางครั้งคุณต้องการให้โปรแกรมของคุณสามารถตอบสนองต่อผู้ใช้ได้งานได้อย่างเฉพาะเจาะจงตามที่ผู้ใช้งานต้องการ
                 นั่นคือการที่อีเวนท์หรือเหตุการณ์มีไว้ใช้เพื่อทำอะไร
             Events in Play Lab:
+              name: อีเวนต์กับเพลย์แลป
               description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์หรือเหตุการณ์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว
                 ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างเป็นเรื่องราวในเพลย์แลป!
           title: คอร์ส A
@@ -840,6 +853,8 @@ th:
               name: ใช้ลูปกับนักสะสม
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Events in Play Lab:
+              name: อีเวนต์กับเพลย์แลป
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
           title: คอร์ส B
@@ -854,6 +869,8 @@ th:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
+            Events in Play Lab:
+              name: อีเวนต์กับเพลย์แลป
             Loops in Artist:
               name: ลูปกับศิลปิน
           title: คอร์ส C
@@ -953,6 +970,8 @@ th:
               name: ใช้ลูปกับนักสะสม
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Events in Play Lab:
+              name: อีเวนต์กับเพลย์แลป
             Spelling Bee:
               name: ผึ้งนักสะกดคำ
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
