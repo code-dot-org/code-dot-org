@@ -666,10 +666,10 @@ class ContactRollups
   def self.update_professional_learning_attendance_for_course_from_sections(course)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT DISTINCT users.email
+      (SELECT DISTINCT users_view.email
       FROM #{DASHBOARD_DB_NAME}.sections
         INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
-        INNER JOIN #{DASHBOARD_DB_NAME}.users_view ON users.id = followers.student_user_id
+        INNER JOIN #{DASHBOARD_DB_NAME}.users_view ON users_view.id = followers.student_user_id
       WHERE section_type =
       CASE '#{course}'
         WHEN 'CS in Science' THEN 'csins_workshop'
