@@ -98,8 +98,12 @@ Feature: Using the teacher homepage sections feature
 
     # Hide a unit from the section
     When I hide unit "CSP Unit 2 - Digital Information"
-    And I wait for 5 seconds
     And unit "CSP Unit 2 - Digital Information" is marked as not visible
+
+    # Verify hidden unit warning banner appears
+    When I am on "http://studio.code.org/s/csp2-2017"
+    And I wait until element "#script-title" is visible
+    Then I wait until element ".announcement-notification:contains(unit is hidden)" is visible
 
     # Try to assign the unit
     Given I am on "http://studio.code.org/home"
