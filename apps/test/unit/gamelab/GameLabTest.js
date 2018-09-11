@@ -50,6 +50,7 @@ describe("GameLab", () => {
         setPageConstants: sinon.spy(),
         init: sinon.spy(),
         isUsingBlockly: () => false,
+        loadLibraries_: () => Promise.resolve(),
       };
     });
 
