@@ -388,6 +388,7 @@ class RegistrationsController < Devise::RegistrationsController
         data_string: user.provider,
         data_json: {
           user_type: user.user_type,
+          deleted_by_id: current_user.id,
         }.to_json
       )
     end
