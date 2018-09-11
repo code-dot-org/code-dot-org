@@ -182,6 +182,9 @@
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
     window.signupManager = new SignupManager({
+      signUpType: "#{session[:sign_up_type]}",
+      signUpUID: "#{session[:sign_up_uid]}",
+      signUpTrackingExpiration: "#{session[:sign_up_tracking_expiration]}",
       isTeacher: "#{resource.teacher?}",
       returnToUrl: "#{user_return_to_url}",
       teacherDashboardUrl: "#{teacher_dashboard_url}",

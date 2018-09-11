@@ -5,10 +5,22 @@ class RegistrationsController < Devise::RegistrationsController
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_age]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :create]
 
   def new
     session[:user_return_to] ||= params[:user_return_to]
     @already_hoc_registered = params[:already_hoc_registered]
+
+    unless session[:sign_up_tracking_expiration]&.future?
+      session[:sign_up_uid] = SecureRandom.uuid.to_s
+      session[:sign_up_tracking_expiration] = 5.minutes.from_now
+      FirehoseClient.instance.put_record(
+        study: 'account-sign-up',
+        event: 'load-sign-up-page',
+        data_string: session[:sign_up_uid]
+      )
+    end
+
     super
   end
 
@@ -48,6 +60,22 @@ class RegistrationsController < Devise::RegistrationsController
     if current_user
       storage_id = take_storage_id_ownership_from_cookie(current_user.id)
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
+    end
+
+    sign_up_type = session[:sign_up_type]
+    sign_up_type ||= resource.email ? 'email' : 'other'
+    if session[:sign_up_tracking_expiration]&.future?
+      result = resource.persisted? ? 'success' : 'error'
+      tracking_data = {
+        study: 'account-sign-up',
+        event: "#{sign_up_type}-sign-up-#{result}",
+        data_string: session[:sign_up_uid],
+        data_json: {
+          detail: resource.to_json,
+          errors: resource.errors&.messages
+        }.to_json
+      }
+      FirehoseClient.instance.put_record(tracking_data)
     end
   end
 
