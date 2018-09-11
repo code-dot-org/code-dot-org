@@ -391,29 +391,15 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
   switch (levelNumber) {
-    case 1:
-      return ['adventurerLevelOneAssets'];
-    case 2:
-      return ['adventurerLevelTwoAssets'];
-    case 3:
-      return ['adventurerLevelThreeAssets'];
     default:
-      return ['adventurerAllAssetsMinusPlayer'];
+      return ['heroAllAssetsMinusPlayer'];
   }
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
   // After level loads & player starts playing, kick off further asset downloads
-  switch (levelNumber) {
-    case 1:
-      // can disable if performance issue on early level 1
-      return Craft.minAssetsForLevelNumber(2);
-    case 2:
-      return Craft.minAssetsForLevelNumber(3);
-    default:
-      // May want to push this to occur on level with video
-      return ['adventurerAllAssetsMinusPlayer'];
-  }
+  // TODO
+  return [];
 };
 
 Craft.earlyLoadAssetsForLevel = function (levelNumber) {
