@@ -2935,8 +2935,8 @@ StudioApp.prototype.isResponsiveFromConfig = function (config) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    ttsInstructionsUrl: level.ttsInstructionsUrl,
-    ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
+    ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
+    ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     locale: config.locale,

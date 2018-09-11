@@ -804,6 +804,16 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
+export function assignedScriptName(state) {
+  const { sectionBeingEdited, validAssignments } = getRoot(state);
+  if (!sectionBeingEdited) {
+    return '';
+  }
+  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  const assignment = validAssignments[assignId];
+  return assignment ? assignment.name : '';
+}
+
 /**
  * Gets the data needed by Reacttabular to show a sortable table
  * @param {object} state - Full store state

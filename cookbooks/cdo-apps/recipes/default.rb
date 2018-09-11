@@ -110,10 +110,6 @@ include_recipe 'cdo-apps::process_queues'
 node.default['cdo-apps']['local_redis'] = !node['cdo-secrets']['redis_primary']
 include_recipe 'cdo-redis' if node['cdo-apps']['local_redis']
 
-# non-production daemons run self-hosted solr.
-node.default['cdo-apps']['solr'] = node['cdo-apps']['daemon'] && node.chef_environment != 'production'
-include_recipe 'cdo-solr' if node['cdo-apps']['solr']
-
 # only the i18n server needs the i18n recipe
 include_recipe 'cdo-i18n' if node.name == 'i18n'
 

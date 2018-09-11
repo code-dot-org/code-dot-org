@@ -2,8 +2,6 @@ require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
 require 'cdo/db'
 require 'cdo/pardot'
-require 'cdo/solr'
-require 'cdo/solr_helper'
 
 class DeleteAccountsHelper
   class SafetyConstraintViolation < RuntimeError; end
@@ -15,16 +13,12 @@ class DeleteAccountsHelper
     Weblab
   ).freeze
 
-  # @param [String] solr configuration for Solr server for this environment
   # @param [IO|StringIO] log to record granular activity while deleting accounts.
   # @param [Boolean] bypass_safety_constraints to purge accounts without the
   #   usual checks on account type, row limits, etc.  For use only when an
   #   engineer needs to purge an account manually after investigating whatever
   #   prevented it from being automatically purged.
-  def initialize(solr: nil, log: STDERR, bypass_safety_constraints: false)
-    if solr || CDO.solr_server
-      @solr = solr || Solr::Server.new(host: CDO.solr_server)
-    end
+  def initialize(log: STDERR, bypass_safety_constraints: false)
     @pegasus_db = PEGASUS_DB
 
     @log = log
@@ -235,15 +229,6 @@ class DeleteAccountsHelper
     remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(email: email)
   end
 
-  # Removes the SOLR record associated with the user.
-  # WARNING: This does not remove SOLR records associated with forms for the user.
-  # @param [Integer] The user ID to purge from SOLR.
-  def remove_from_solr(user_id)
-    return unless @solr
-    @log.puts "Removing from Solr"
-    SolrHelper.delete_document(@solr, 'user', user_id)
-  end
-
   # Removes the StudioPerson record associated with the user IF it is not
   # associated with any other users.
   # @param [User] user The user whose studio person we will delete if it's not shared
@@ -365,7 +350,6 @@ class DeleteAccountsHelper
     remove_user_from_sections_as_student(user)
     remove_poste_data(user.email) if user.email&.present?
     remove_from_pardot_by_user_id(user.id)
-    remove_from_solr(user.id)
     purge_unshared_studio_person(user)
     anonymize_user(user)
 
