@@ -120,7 +120,6 @@ var GameLab = function () {
   this.Globals = {};
   this.btnState = {};
   this.dPadState = {};
-  this.libraries = {};
   this.currentCmdQueue = null;
   this.interpreterStarted = false;
   this.globalCodeRunsDuringPreload = false;
@@ -404,7 +403,8 @@ GameLab.prototype.init = function (config) {
     config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
-  const loader = this.loadLibraries_().then(() => ReactDOM.render((
+  this.loadValidationCodeIfNeeded_();
+  const loader = this.studioApp_.loadLibraries_(this.level.helperLibraries).then(() => ReactDOM.render((
     <Provider store={getStore()}>
       <GameLabView
         showFinishButton={finishButtonFirstLine && showFinishButton}
@@ -1139,7 +1139,7 @@ GameLab.prototype.initInterpreter = function (attachDebugger=true) {
   let code = '';
   if (this.level.helperLibraries) {
     code += this.level.helperLibraries
-      .map((lib) => this.libraries[lib])
+      .map((lib) => this.studioApp_.libraries[lib])
       .join("\n") + '\n';
   }
   if (this.level.sharedBlocks) {
@@ -1244,32 +1244,6 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function () {
   if (this.level.validationCode && !this.level.helperLibraries.some(name => name === validationLibraryName)) {
     this.level.helperLibraries.unshift(validationLibraryName);
   }
-};
-
-let libraryPreload;
-GameLab.prototype.loadLibraries_ = function () {
-  if (!libraryPreload) {
-    this.loadValidationCodeIfNeeded_();
-    libraryPreload = Promise.all(this.level.helperLibraries.map(this.loadLibrary_.bind(this)));
-  }
-  return libraryPreload;
-};
-
-GameLab.prototype.loadLibrary_ = function (name) {
-  if (this.libraries[name]) {
-    return Promise.resolve();
-  }
-
-  return new Promise((resolve, error) => {
-    $.ajax({
-      url: '/libraries/' + name,
-      success: response => {
-        this.libraries[name] = response;
-        resolve();
-      },
-      error,
-    });
-  });
 };
 
 /**
