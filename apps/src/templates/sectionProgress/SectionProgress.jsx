@@ -109,8 +109,8 @@ class SectionProgress extends Component {
   afterScroll = _.debounce(ReactTooltip.rebuild, 10);
 
   getLinkToOverview() {
-    const { scriptData } = this.props;
-    return scriptData ? scriptData.path : null;
+    const { scriptData, section } = this.props;
+    return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
 
   render() {
