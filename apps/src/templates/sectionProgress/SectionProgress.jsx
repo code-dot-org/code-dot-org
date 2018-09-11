@@ -108,6 +108,11 @@ class SectionProgress extends Component {
   // target cells to be created or destroyed.
   afterScroll = _.debounce(ReactTooltip.rebuild, 10);
 
+  getLinkToOverview() {
+    const { scriptData } = this.props;
+    return scriptData ? scriptData.path : null;
+  }
+
   render() {
     const {
       section,
@@ -119,7 +124,7 @@ class SectionProgress extends Component {
     } = this.props;
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
-    const linkToOverview = scriptData ? scriptData.path : null;
+    const linkToOverview = this.getLinkToOverview();
     const lessons = scriptData ? scriptData.stages : [];
 
     return (
