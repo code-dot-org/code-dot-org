@@ -499,8 +499,7 @@ class NetSimApi < Sinatra::Base
     message_table.delete(message_ids) unless message_ids.empty?
   end
 
-  # Record a custom metric that will be aggregated and sent to New Relic about
-  # once a minute.
+  # Record a custom metric that will be sent to Cloudwatch.
   # @private
   # @param [String] event_type - unique metric key within NetSimApi
   # @param [Number] value (default 1) value of measurement, omit if we only care
