@@ -4,6 +4,8 @@ require 'honeybadger'
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
 
+  skip_before_action :clear_sign_up_session_vars
+
   # GET /users/auth/:provider/callback
   def all
     if should_connect_provider?
@@ -59,6 +61,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth_hash = request.env['omniauth.auth']
     auth_params = request.env['omniauth.params']
     provider = auth_hash.provider.to_s
+    session[:sign_up_type] = provider
 
     # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
     if provider == 'powerschool'
@@ -112,6 +115,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def register_new_user(user)
     move_oauth_params_to_cache(user)
     session["devise.user_attributes"] = user.attributes
+
+    # For some providers, signups can happen without ever having hit the sign_up page, where
+    # our tracking data is usually populated, so do it here
+    unless session[:sign_up_tracking_expiration]&.future?
+      session[:sign_up_uid] = SecureRandom.uuid.to_s
+      session[:sign_up_tracking_expiration] = 5.minutes.from_now
+    end
+
     redirect_to new_user_registration_url
   end
 
@@ -244,6 +255,20 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def sign_in_user
     flash.notice = I18n.t('auth.signed_in')
+
+    sign_up_type = session[:sign_up_type]
+    sign_up_type ||= resource.email ? 'email' : 'other'
+    provider = request.env['omniauth.auth'].provider.to_s
+    if session[:sign_up_tracking_expiration]&.future? || User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider)
+      result = resource.persisted? ? 'success' : 'error'
+      tracking_data = {
+        study: 'account-sign-up',
+        event: "#{sign_up_type}-sign-in-#{result}",
+        data_string: session[:sign_up_uid]
+      }
+      FirehoseClient.instance.put_record(tracking_data)
+    end
+
     sign_in_and_redirect @user
   end
 

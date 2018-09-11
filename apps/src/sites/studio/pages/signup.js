@@ -6,6 +6,7 @@ import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocomplete
 import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
+import firehoseClient from "../../../lib/util/firehose";
 
 const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -139,12 +140,23 @@ window.SignupManager = function (options) {
 
   $("#user_user_type").change(function () {
     var value = $(this).val();
+    trackUserTypeSelected(value);
     if (value === "student") {
       showStudent();
     } else if (value === "teacher") {
       showTeacher();
     }
   });
+
+  function trackUserTypeSelected(type) {
+    const eventName = "select-" + type;
+    firehoseClient.putRecord({
+      study: 'account-sign-up',
+      study_group: 'control',
+      event: eventName,
+      data_string: self.options.signUpUID,
+    });
+  }
 
   function setSchoolInfoVisibility(state) {
     if (state) {
