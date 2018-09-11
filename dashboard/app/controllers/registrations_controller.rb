@@ -369,7 +369,7 @@ class RegistrationsController < Devise::RegistrationsController
     # Log event for user initiating account deletion.
     FirehoseClient.instance.put_record(
       study: 'user-soft-delete-audit',
-      event: 'manual-account-deletion',
+      event: 'initiated-account-deletion',
       user_id: current_user.id,
       data_string: current_user.provider,
       data_json: {
@@ -383,7 +383,7 @@ class RegistrationsController < Devise::RegistrationsController
     dependent_users.each do |user|
       FirehoseClient.instance.put_record(
         study: 'user-soft-delete-audit',
-        event: 'manual-account-deletion',
+        event: 'dependent-account-deletion',
         user_id: user.id,
         data_string: user.provider,
         data_json: {
