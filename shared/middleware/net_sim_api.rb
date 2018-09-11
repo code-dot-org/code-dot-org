@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'cdo/aws/metrics'
 require 'cdo/sinatra'
 require 'cdo/db'
 require 'cdo/rack/request'
@@ -505,8 +506,18 @@ class NetSimApi < Sinatra::Base
   # @param [Number] value (default 1) value of measurement, omit if we only care
   #   about event counts.
   def record_metric(event_type, value = 1)
-    return unless CDO.newrelic_logging
-    NewRelic::Agent.record_metric("Custom/NetSimApi/#{event_type}", value)
+    return unless CDO.netsim_enable_metrics
+    Cdo::Metrics.push('NetSimApi',
+      [
+        {
+          metric_name: event_type,
+          dimensions: [
+            {name: "Environment", value: CDO.rack_env},
+          ],
+          value: value
+        }
+      ]
+    )
   end
 end
 
