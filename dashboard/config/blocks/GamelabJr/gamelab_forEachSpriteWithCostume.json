@@ -1,0 +1,22 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "forEachSpriteWithCostume",
+    "blockText": "for each {VALUE} sprite\n do {STATEMENT}",
+    "color": [
+      200,
+      "0.8",
+      "0.5"
+    ],
+    "args": [
+      {
+        "name": "STATEMENT",
+        "statement": true
+      },
+      {
+        "name": "VALUE",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}
