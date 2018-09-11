@@ -106,6 +106,10 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
 
+  if (testData.libraries) {
+    studioApp().libraries = testData.libraries;
+  }
+
   if (level.editCode) {
     assert(window.droplet, 'droplet is in global');
   }
