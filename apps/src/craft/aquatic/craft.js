@@ -513,6 +513,18 @@ Craft.executeUserCode = function () {
       .join("\n") + '\n';
   }
 
+  const asyncMethods = {
+    moveForward: function (callback) {
+      appCodeOrgAPI.moveForward(null, 'Player', callback);
+    },
+    turnLeft: function (callback) {
+      appCodeOrgAPI.turnLeft(null, 'Player', callback);
+    },
+    turnRight: function (callback) {
+      appCodeOrgAPI.turnRight(null, 'Player', callback);
+    },
+  };
+
   // Run user code.
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
@@ -520,19 +532,13 @@ Craft.executeUserCode = function () {
     console: {
       log: console.log,
     },
-    moveForward: function (blockID) {
-      appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID), 'Player');
-    },
-    turnLeft: function (blockID) {
-      appCodeOrgAPI.turnLeft(studioApp().highlight.bind(studioApp(), blockID), 'Player');
-    },
-    turnRight: function (blockID) {
-      appCodeOrgAPI.turnRight(studioApp().highlight.bind(studioApp(), blockID), 'Player');
-    },
+    ...asyncMethods,
     api: appCodeOrgAPI,
     getForwardBlockType: () => Craft.gameController.levelModel.getForwardBlockType(),
     getStandingOnBlockType: () => Craft.gameController.levelModel.groundPlane.getBlockAt(
       Craft.gameController.getEntity().position).blockType,
+  }, {
+    asyncFunctionList: Object.values(asyncMethods),
   });
 
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
