@@ -1,13 +1,13 @@
 {
-  "category": "Behaviors",
+  "category": "Sprites",
   "config": {
-    "func": "removeBehavior",
-    "blockText": "sprite {SPRITE} stops {BEHAVIOR}",
+    "func": "beginBehavior",
+    "blockText": "begin {BEHAVIOR}",
     "inline": false,
     "args": [
       {
         "name": "SPRITE",
-        "customInput": "spritePicker"
+        "type": "Sprite"
       },
       {
         "name": "BEHAVIOR",
