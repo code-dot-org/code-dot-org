@@ -5,7 +5,7 @@ import experiments from '@cdo/apps/util/experiments';
 import processMarkdown from 'marked';
 import renderer from "../util/StylelessRenderer";
 
-import Parser from '@code-dot-org/redactable-markdown/src/redactableMarkdownParser';
+import Parser from '@code-dot-org/redactable-markdown';
 
 import expandableImages from './plugins/expandableImages';
 import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
