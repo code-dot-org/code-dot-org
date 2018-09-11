@@ -117,7 +117,7 @@ UNION ALL
          'CS Fundamentals' as course,
          se.id as workshop_id, -- is workshop id in the other table (above)
          'Intro Workshop' as subject,
-         se.created_at as started_at,
+         se.created_at as workshop_date,
          0 AS trained_by_regional_partner,
          rpm.regional_partner_id AS regional_partner_id,
          sy.school_year, 
