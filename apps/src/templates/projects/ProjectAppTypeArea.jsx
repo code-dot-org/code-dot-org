@@ -7,6 +7,7 @@ import styleConstants from '../../styleConstants';
 import Button from "../Button";
 import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
+import i18n from "@cdo/locale";
 
 const styles = {
   grid: {
@@ -194,7 +195,7 @@ class ProjectAppTypeArea extends React.Component {
             onClick={this.loadMore}
             color={Button.ButtonColor.gray}
             icon="plus-circle"
-            text="View more"
+            text={i18n.viewMore()}
             style={styles.buttonRightMargin}
           />
         }
@@ -202,7 +203,7 @@ class ProjectAppTypeArea extends React.Component {
           href="#top"
           color={Button.ButtonColor.gray}
           icon="chevron-circle-up"
-          text="Back to top"
+          text={i18n.backToTop()}
         />
       </div>
     );
