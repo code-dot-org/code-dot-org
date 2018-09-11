@@ -202,6 +202,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.find_by_email_or_hashed_email(lookup_email)
     return unless @user.present?
     if google_classroom_student_takeover(oauth_user)
+      log_account_takeover_to_firehose(
+        source_user: oauth_user,
+        destination_user: @user,
+        type: 'silent',
+        provider: auth_hash.provider
+      )
       return unless move_sections_and_destroy_source_user(oauth_user, @user)
     end
 

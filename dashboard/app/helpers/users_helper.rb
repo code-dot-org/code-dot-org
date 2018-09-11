@@ -53,6 +53,14 @@ module UsersHelper
       clear_takeover_session_variables
 
       existing_account = User.find_by_credential(type: provider, id: uid)
+      if existing_account.present?
+        log_account_takeover_to_firehose(
+          source_user: existing_account,
+          destination_user: user,
+          type: 'oauth',
+          provider: auth_hash.provider
+        )
+      end
       # No-op if move_sections_and_destroy_source_user fails
       return unless move_sections_and_destroy_source_user(existing_account, user)
 
@@ -80,6 +88,17 @@ module UsersHelper
         user.save
       end
     end
+  end
+
+  def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:)
+    FirehoseClient.instance.put_record(
+      study: 'user-soft-delete-audit',
+      event: "#{type}-account-takeover",
+      source_user_id: source_user.id,
+      destination_user_id: destination_user.id,
+      provider: provider,
+      user_type: destination_user.user_type,
+    )
   end
 
   def begin_account_takeover(provider:, uid:, oauth_token:, force_takeover:)
