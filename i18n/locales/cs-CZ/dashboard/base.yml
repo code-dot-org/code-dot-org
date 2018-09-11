@@ -115,6 +115,7 @@ cs:
     user_type_student: "student"
     field_is_required: "je požadováno"
     accept_terms: "Musíte souhlasit pro vytvoření účtu"
+    email_preference_privacy: "(Viz Zásady ochrany osobních údajů)"
     email_preference_yes: "Ano"
     email_preference_no: "Ne"
   school_info:

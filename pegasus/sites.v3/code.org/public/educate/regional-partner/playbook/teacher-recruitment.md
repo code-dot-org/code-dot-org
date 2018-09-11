@@ -18,6 +18,10 @@ ________________
 <a id="teachapp"></a>
 ## Teacher Applications and Recruitment
 
+**Note:** The Teacher Application Process Document will be updated for the teachers in the 2019-2020 Professional Learning Program soon.  In the meantime, please note that the teacher application rubrics have been updated and are available here:
+- <a href="https://drive.google.com/open?id=1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd" target=_blank>CS Principles Teacher Application Rubric (PDF)</a>
+- <a href="https://drive.google.com/open?id=12Ntxq7TV1XYsD2eaZJVt5DqSctqR2hUj" target=_blank>CS Discoveries Teacher Application Rubric (PDF)</a>
+
 ### What does the application process look like and how is my organization involved?
 Review the [2018 Teacher Application Process Document](https://docs.google.com/document/d/10fGyKGqX9ybLn8zaSDFcYZWdIsGELFflLsNyi1llbtM/edit#heading=h.9egyv1wsx26t) for everything you need to know about the Code.org teacher application process including a timeline, how to use the tools, and copies of the communications applicants will receive.
 

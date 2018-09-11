@@ -359,6 +359,13 @@ en:
             '2': treble
       Dancelab_whenSetup:
         text: setup
+      Dancelab_whenSetupSong:
+        text: 'setup {SONG} '
+        options:
+          SONG:
+            '"macklemore"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       Dancelab_whenTouching:
         text: when {SPRITE1} touches {SPRITE2}
       Dancelab_whileKey:
@@ -1115,6 +1122,8 @@ en:
         text: y coordinate of {SPRITE}
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
+      Mikelab_changeAnim:
+        text: "change sprite called {NAME} \n to costume {COSTUME}"
       Mikelab_changePropBy:
         text: change {SPRITE} {PROPERTY} by {VAL}
         options:
@@ -1124,6 +1133,10 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+      Mikelab_checkAnim:
+        text: "{SPRITE} is a {COSTUME}"
+      Mikelab_clickedOn:
+        text: when {SPRITE} clicked
       Mikelab_createNewSprite:
         text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
       Mikelab_getAnim:
@@ -1143,10 +1156,33 @@ en:
             '"tint"': tint
       Mikelab_hasBehavior:
         text: "{SPRITE} is currently {BEHAVIOR}"
+      Mikelab_isAnim:
+        text: "{SPRITE} {COSTUME}"
+        options:
+          COSTUME:
+            '"costume"': costume
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} stops {BEHAVIOR}
+      Mikelab_setProp:
+        text: set {SPRITE} {PROPERTY} to {VAL}
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"rotation"': rotation
+            '"x"': x position
+            '"y"': y position
+            '"direction"': movement direction
+            '"tint"': tint
+      Mikelab_whenTouchesAny:
+        text: when{TARGET} touches any sprite
+      Mikelab_whenTouchingAny:
+        text: when {SPRITE} touches any {GROUP}
+      Mikelab_whileTouchingAny:
+        text: |-
+          while{TARGET} is touching any sprite
+          {STATEMENT}
       Vanilla_randomColor:
         text: random color
       Vector_createSpriteWith:
@@ -1174,3 +1210,7 @@ en:
         options:
           PROPERTY:
             "'shapeColor'": color
+      craft_log:
+        text: log message {MESSAGE}
+      craft_moveForward:
+        text: move forward

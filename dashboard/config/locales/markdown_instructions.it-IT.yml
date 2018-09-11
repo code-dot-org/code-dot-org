@@ -1353,11 +1353,11 @@ it:
         <br>
         Nota: nella funzione `level_up` viene usata la variabile `enemy_speed` che significa <i>velocità del nemico</i>.
       Function intro Ryan_markdown_instruction: |-
-        Usa due volte la funzione `build bridge` (*costruisci ponte*) per creare un sentiero fino alla torcia di pietrarossa.
+        Usa due volte la funzione `costruisci ponte` per creare un sentiero fino alla torcia di pietrarossa.
 
-        Nella tua area di lavoro c'è una **funzione** chiamata `build bridge` (*costruisci ponte*).  Tutto il codice che ti serve per attraversare il fiume è lì dentro!
+        Nella tua area di lavoro c'è una **funzione** chiamata `costruisci ponte`.  Tutto il codice che ti serve per attraversare il fiume è lì dentro!
 
-        Trascina due volte il piccolo blocco verde <xml> <block type="procedures_callnoreturn" id="callMe"><mutation name="build bridge"/></block></xml> nell'area di lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia di pietrarossa [redstone_torch].
+        Trascina due volte il piccolo blocco verde <xml> <block type="procedures_callnoreturn" id="callMe"><mutation name="costruisci ponte"/></block></xml> nell'area di lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia di pietrarossa [redstone_torch].
       Geometric Pattern_markdown_instruction: "**Idea per un progetto:** Crea un modello
         utilizzando idee geometriche come forme. Realizzarlo richiede pianificazione
         e persistenza!"
@@ -1415,8 +1415,8 @@ it:
       MC_HOC_2017_01_RETRY_markdown_instruction: "La porta è bloccata, ma l'Agente
         è pronto per venire in aiuto! \n\nAggancia un blocco `vai avanti` al blocco
         `quando si clicca su \"Esegui\"` per far arrivare l'Agente sulla pedana a
-        pressione [PressurePlate_Up], poi premi \"Esegui\" e usa le frecce per uscire
-        di casa il giocatore e raccogliere la **cassa** [chest]."
+        pressione [PressurePlate_Up], poi premi \"Esegui\" e usa le frecce per far
+        uscire di casa il giocatore e raccogliere la **cassa** [chest]."
       MC_HOC_2017_02_markdown_instruction: Il giocatore deve entrare in quel Bosco
         Segreto.  Aiuta l'Agent ad aprire il cancello scrivendo il codice necessario
         a farlo arrivare alla pedana a pressione.
@@ -1525,11 +1525,9 @@ it:
         funzione che aiuti l'Agent a terminare questo vagonetto e a portare il giocatore
         fino alla casella arancione.
       MC_HOC_2017_10_RETRY_markdown_instruction: "Riesci a trovare la differenza tra
-        le due funzioni nell'area di lavoro? \r\n \r\n`fix short path` = *prepara
-        un percorso breve* `fix long path` = *prepara un percorso lungo* \r\n \r\nUsa
-        queste funzioni insieme ad altri blocchi presi dalla cassetta degli attrezzi
-        per liberare il passaggio per il vagonetto, poi raccogli **Pietra focaia e
-        acciarino** [flint_and_steel]."
+        le due funzioni nell'area di lavoro? \n \nUsa queste funzioni insieme ad altri
+        blocchi presi dalla cassetta degli attrezzi per liberare il passaggio per
+        il vagonetto, poi raccogli **Pietra focaia e acciarino** [flint_and_steel]. "
       MC_HOC_2017_10_RYAN_markdown_instruction: Prova a costruire dal principio delle
         funzioni che aiutino l'Agent a terminare questo vagonetto e a portare il giocatore
         fino alla casella arancione.
@@ -1544,10 +1542,9 @@ it:
         \ Ora conduci il giocatore in salvo fino alla casella arancione. \n\n\nAiuta
         l'Agent a liberare il sentiero trovando uno schema semplice e usando i cicli
         per passare sulle prime due pedane a pressione."
-      MC_HOC_2017_Ali_markdown_instruction: "Guarda queste funzioni.  Come puoi usarle
+      MC_HOC_2017_Ali_markdown_instruction: 'Guarda queste funzioni.  Come puoi usarle
         per evitare i Ghast e aiutare {currentPlayerName} a raggiungere sano e salvo
-        il **Libro incantato** [book_enchanted]? \n\r\n`build short bridge` = *costruisci
-        un ponte corto* `build long bridge` = *costruisci un ponte lungo* "
+        il **Libro incantato** [book_enchanted]?  '
       MC_HOC_2017_FP10x10_markdown_instruction: "**Tempo di giocare:** ora tocca a
         te! Riesci a superare te stesso raccogliendo tutti i diamanti di questo livello?"
       MC_HOC_2017_FP10x10_RE_markdown_instruction: "**Tempo di giocare:** ora tocca
@@ -1881,8 +1878,13 @@ it:
         Geraldine, la tua nuova giraffa domestica. Cosa pensi accadrà quando premerai  "▶
         Esegui" e cliccherai su di lei?'
       beeDebugVideo1_markdown_instruction: Raccogli tutto il nettare.
-      comment_intro_maze_2018_markdown_instruction: '*"Sono confuso. Ricordami come
-        uscire da questo labirinto."* '
+      comment_intro_maze_2018_markdown_instruction: "*\"Sono confuso. Ricordami come
+        uscire da questo labirinto.\"* \n\n---\n\nPer risolvere questo esercizio,
+        completa il codice usando anche il nuovo blocco  <xml><block type=\"comment\">\n<title
+        name=\"TEXT\"> </title>\n</block></xml> per lasciarti qualche veloce promemoria.
+        Questi possono aiutarti a ricordarti cosa hai fatto e perché!  \n  \n\nQuesti
+        commenti sono solo per **te**, non influiscono in nessun modo sull'area di
+        gioco."
       conditionals_forvideo_harvester_markdown_instruction: Raccogli tutte le pannocchie
         e le lattughe, poi conquista la zucca finale.
       course1_artist_loops_challenge4_markdown_instruction: '*"È il momento di lanciare
@@ -3293,15 +3295,15 @@ it:
         - Cosa succede se rendi lo schema a rombo più lungo o più corto?
         - Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
       courseD_artist_1_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“Ciao, sono elsa di Arendelle, aiutami a disegnare una forma.\"_\n\n\nDisegna
-        un esagono con lati lunghi 50 pixel. \n\n\n---\n\nPer disegare un esagono
-        dovrai:\n- andare avanti di **50** pixel\n- girare a destra di **60** gradi\n-
-        ripetere per un totale di **6** volte\n\n"
+        _“Ciao, sono Elsa di Arendelle, aiutami a disegnare una bella forma.\"_\n\nDisegna
+        un esagono con lati lunghi 50 pixel. \n\n---\n\nPer disegnare un esagono dovrai:\n-
+        andare avanti di **50** pixel\n- girare a destra di **60** gradi\n- ripetere
+        per un totale di **6** volte\n\n"
       courseD_artist_2_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“Buon lavoro!\"_\n\nDopo l' esagono, gira a destra di ** 60 ** gradi, quindi
-        disegna una linea lunga ** 150 ** pixel.\n\nTermina riportando Elsa al centro
-        dell'area di gioco, usando il blocco  <xml><block type=\"jump_to\"><title
-        name=\"VALUE\"> nel mezzo al centro</title></block></xml>. \n\n\n"
+        _“Buon lavoro!\"_\n\nDopo l'esagono, gira a destra di **60** gradi, quindi
+        disegna una linea lunga **150** pixel.\n\nTermina riportando Elsa al centro
+        dell'area di gioco, usando il blocco <xml><block type=\"jump_to\"><title name=\"VALUE\">nel
+        mezzo al centro</title></block></xml>. \n\n\n"
       courseD_artist_3_2018_markdown_instruction: |
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Creiamo un fiocco di neve."_
 
@@ -3310,33 +3312,32 @@ it:
       courseD_artist_4_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Rendiamo i fiocchi di neve speciali!"_
 
-
-        ** Ispirazione: ** Dove devi aggiungere il codice se vuoi disegnare un piccolo quadrato sulla punta di ogni linea lunga?
+        **Ispirazione:** Dove devi aggiungere il codice se vuoi disegnare un piccolo quadrato sulla punta di ogni linea lunga?
 
         ---
-        Puoi provare quello che vuoi in questo esercizio, ma ecco un'idea:
+        Puoi provare quello che vuoi in questo esercizio, ma qui trovi una possibile idea.
 
-        Prova a creare un piccolo quadrato alla fine di ogni riga
-        - Ogni lato dovrebbe essere lungo 15 pixel
-        - Dovresti girare di 90 gradi
-        - Ripeti queste azioni per un totale di 4 volte
+        Prova a creare un piccolo quadrato alla fine di ogni riga:
+        - ogni lato dovrebbe essere lungo 15 pixel
+        - dovresti girare di 90 gradi
+        - ripeti queste azioni per un totale di 4 volte
       courseD_artist_5_2018_markdown_instruction: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Prova a modificare le forme o le lunghezze delle linee per farne una tua! "_
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Prova a modificare le forme o le lunghezze delle linee per personalizzare il tuo fiocco di neve! "_
 
         <br/>
 
-        ** Ispirazione: ** Puoi modificare il disegno come preferisci, ma ecco un'idea:
+        **Ispirazione:** Puoi modificare il disegno come preferisci, ma ecco qui una possibile idea:
 
-        - Prova a modificare i tipi di forma nel mezzo del fiocco di neve con quello alla fine di ogni linea!
+        - prova a invertire la forma nel mezzo del fiocco di neve con quella alla termine di ogni linea!
       courseD_artist_6_2018_markdown_instruction: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag".
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Proviamo qualcosa di nuovo. Questa volta, pattina a zig-zag."_
 
         <br/>
 
-        ** Ispirazione: ** Prova a modificare la tua  linea lunga 150 pixel in 6 linee corte di **25** pixel
+        **Ispirazione:** Prova a modificare la tua  linea lunga 150 pixel in 6 linee corte di **25** pixel
 
-        - Ruota di **45** gradi in direzioni alternate dopo ogni linea corta per ottenere un effetto a zig-zag
-        - Dove devii mettere un nuovo blocco `ripeti ... volte` per farlo accadere?
+        - Gira di **45** gradi in direzioni alternate dopo ogni linea corta per ottenere un effetto a zig-zag
+        - Dove devi mettere un nuovo blocco `ripeti ... volte` per realizzare questo nuovo effetto?
         - Quante volte devi ripetere lo schema di 2 linee brevi per ottenerne 6 in totale?
       courseD_artist_7_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Ora girati e torna da dove siamo venuti."_
@@ -3887,19 +3888,23 @@ it:
         Attacca un blocco al blocco verde `quando si preme sulla freccia verso sinistra` e premi "Esegui". <br>
         Poi sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina.
       courseD_bounce_events10s_markdown_instruction: "Ora c'è un canestro in alto.
-        \ \n\n\nAttacca il blocco `aggiungi punto` all'evento `quando la palla va
-        in rete` e il blocco `aggiungi un punto all'avversario` all'evento `quando
-        la palla manca la mano` per creare un gioco."
+        \ \n\nPer creare un gioco, attacca il blocco `aggiungi un punto` all'evento
+        `quando la palla va in rete` e il blocco `aggiungi un punto all'avversario`
+        all'evento `quando la palla manca la mano`.  \n\n---\n\nVedi quanti punti
+        riesci a raggiungere prima che il tuo avversario ne faccia due."
       courseD_bounce_events10s_2018_markdown_instruction: "Ora c'è un canestro in
-        alto.  \n\n\nAttacca il blocco `aggiungi punto` all'evento `quando la palla
-        va in rete` e il blocco `aggiungi un punto all'avversario` all'evento `quando
-        la palla manca la mano` per creare un gioco."
-      courseD_bounce_events11s_markdown_instruction: Ora hai il controllo della palla!
-        Attacca il blocco `lancia una nuova palla` in tutti i punti in cui il gioco
-        ha bisogno di una nuova palla.
-      courseD_bounce_events11s_2018_markdown_instruction: Ora hai il controllo della
-        palla! Attacca il blocco `lancia una nuova palla` in tutti i punti in cui
-        il gioco ha bisogno di una nuova palla.
+        alto.  \n\nPer creare un gioco, attacca il blocco `aggiungi un punto` all'evento
+        `quando la palla va in rete` e il blocco `aggiungi un punto all'avversario`
+        all'evento `quando la palla manca la mano`.  \n\n---\n\nVedi quanti punti
+        riesci a raggiungere prima che il tuo avversario ne faccia due."
+      courseD_bounce_events11s_markdown_instruction: "Ora hai il controllo della palla!
+        Attacca il blocco `lancia una nuova palla` in tutti i punti del programma
+        in cui serve per far funzionare bene il gioco. \n\n---\n\nVedi quanti punti
+        riesci a raggiungere prima che il tuo avversario ne faccia due!"
+      courseD_bounce_events11s_2018_markdown_instruction: "Ora hai il controllo della
+        palla! Attacca il blocco `lancia una nuova palla` in tutti i punti del programma
+        in cui serve per far funzionare bene il gioco. \n\n---\n\nVedi quanti punti
+        riesci a raggiungere prima che il tuo avversario ne faccia due!"
       courseD_bounce_events1s_2018_markdown_instruction: "Vai a canestro!     \n\nAttacca
         un blocco al blocco evento `quando si preme sulla freccia verso sinistra`
         e premi \"Esegui\".\n\nPoi sposta il giocatore usando la freccia verso sinistra
@@ -3922,13 +3927,13 @@ it:
       courseD_bounce_events6s_2018_markdown_instruction: "Ora il canestro è in alto.
         \ \n\nPer risolvere l'esercizio, aggiungi dei blocchi per fare in modo che
         la palla rimbalzi quando colpisce il muro."
-      courseD_bounce_events7s_markdown_instruction: "Attacca i blocchi riproduci suono
-        per riprodurre il fruscio della rete quando colpisci il canestro e il suono
-        di un fischio quando la palla manca la mano.  \n\n---\n\n\nFai rimbalzare
+      courseD_bounce_events7s_markdown_instruction: "Attacca dei blocchi `riproduci
+        il ...` per riprodurre il fruscio della rete quando la palla colpisce il canestro
+        e il suono di un fischio quando manca la mano.  \n\n---\n\nFai rimbalzare
         la palla finché non colpisce il bersaglio finale."
-      courseD_bounce_events7s_2018_markdown_instruction: "Attacca i blocchi riproduci
-        suono per riprodurre il fruscio della rete quando colpisci il canestro e il
-        suono di un fischio quando la palla manca la mano.  \n\n---\n\n\nFai rimbalzare
+      courseD_bounce_events7s_2018_markdown_instruction: "Attacca dei blocchi `riproduci
+        il ...` per riprodurre il fruscio della rete quando la palla colpisce il canestro
+        e il suono di un fischio quando manca la mano.  \n\n---\n\nFai rimbalzare
         la palla finché non colpisce il bersaglio finale."
       courseD_collector_debugging1_markdown_instruction: |-
         *"Oh no! C'è un problema."*
@@ -4848,7 +4853,7 @@ it:
       courseE_farmer_functions2ba_2018_markdown_instruction: |-
         *"Mi sento così funzionale!"*
 
-        Ora ci sono più zucche in ogni terreno! Osserva attentamente le definizioni delle funzioni qui di seguito  per capire come utilizzare ciascuna di esse.
+        Ora ci sono più zucche in ogni casella! Osserva attentamente le definizioni delle funzioni qui di seguito  per capire come utilizzare ciascuna di esse.
         ___
         ##### Ogni germoglio farà crescere *una* pannocchia o niente.
       courseE_farmer_functions3c_markdown_instruction: |-
@@ -4909,6 +4914,10 @@ it:
         **Sfida:** Le curve dopo le zucche non sono nella stessa direzione, quindi dovrai usare più di una volta il codice dell'esercizio precedente.
 
         Riesci a scoprire cosa fare?
+      courseE_farmer_functions9a1_2018_markdown_instruction: |-
+        **Questo esercizio è labirinticamente fantastico!**
+
+        La funzione che hai creato può essere utile anche per questo esercizio?
       courseE_farmer_functions9b_markdown_instruction: Dai un'occhiata a questo esercizio.
         Riesci a capire lo schema per risolverlo nel modo migliore?
       courseE_farmer_functions9b_2018_markdown_instruction: Dai un'occhiata a questo
@@ -5406,6 +5415,14 @@ it:
         Questo codice è da completare!
 
         Quale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
+      courseF_bee_for_challenge1_markdown_instruction: |-
+        Usa questo ciclo `ripeti con counter` per raccogliere tutto il nettare.
+
+        Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
+      courseF_bee_for_challenge1_2018_markdown_instruction: |-
+        Usa questo ciclo `ripeti con counter` per raccogliere tutto il nettare.
+
+        Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
       courseF_bee_for_challenge2_markdown_instruction: "<b>Super Sfida sulle variabili:</b>
         risolvi questo esercizio con il minore numero possibile di blocchi!"
       courseF_bee_for_challenge2_2018_markdown_instruction: "<b>Super Sfida sulle
@@ -5414,6 +5431,14 @@ it:
       courseF_bee_for_challenge3_markdown_instruction: "<b>Super Sfida sui cicli con
         contatore:</b> Risolvi questo esercizio usando il minor numero possibile di
         blocchi."
+      courseF_bee_functions_3_2018_markdown_instruction: |-
+        *"Che giardino fantastico!"*
+
+        In questo esercizio, ogni zona necessita che la variabile sia 1 in meno rispetto alla zona precedente. Per poter usare la stessa funzione per risolvere questo esercizio, sottrai 1 dalla variabile `gather` (*che rappresenta la quantità di nettare e di miele da gestire*) ogni volta che si esegue il ciclo.
+      courseF_bee_variables_3_2018_markdown_instruction: |-
+        *"Che giardino fantastico!"*
+
+        In questo esercizio, ogni zona necessita che la variabile sia 1 in meno rispetto alla zona precedente. Per poter usare la stessa funzione per risolvere questo esercizio, sottrai 1 dalla variabile `gather` (*che rappresenta la quantità di nettare e di miele da gestire*) ogni volta che si esegue il ciclo.
       courseF_bee_variables_4_2018_markdown_instruction: |-
         "Incredibile!"
 

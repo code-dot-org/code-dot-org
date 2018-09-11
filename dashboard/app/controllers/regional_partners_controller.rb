@@ -53,7 +53,16 @@ class RegionalPartnersController < ApplicationController
 
   # PATCH /regional_partners/:id
   def update
-    if @regional_partner.update(regional_partner_params)
+    update_params = regional_partner_params.to_h
+    %w(csd csp).each do |course|
+      %w(teacher facilitator).each do |role|
+        %w(open close).each do |state|
+          key = "apps_#{state}_date_#{course}_#{role}".to_sym
+          update_params[key] == Date.parse(regional_partner_params[key]) if regional_partner_params[key].presence
+        end
+      end
+    end
+    if @regional_partner.update(update_params)
       flash[:notice] = "Regional Partner updated successfully"
       redirect_to @regional_partner
     else
@@ -104,6 +113,23 @@ class RegionalPartnersController < ApplicationController
       urban
       cohort_capacity_csd
       cohort_capacity_csp
+      apps_open_date_csd_teacher
+      apps_open_date_csd_facilitator
+      apps_open_date_csp_teacher
+      apps_open_date_csp_facilitator
+      apps_close_date_csd_teacher
+      apps_close_date_csd_facilitator
+      apps_close_date_csp_teacher
+      apps_close_date_csp_facilitator
+      applications_principal_approval
+      applications_decision_emails
+      link_to_application
+      csd_cost
+      csp_cost
+      csd_cost_description
+      csp_cost_description
+      contact_name
+      contact_email
       attention
       street
       apartment_or_suite

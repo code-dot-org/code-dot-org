@@ -30,6 +30,12 @@ theme: responsive
 
 <div style="clear: both;"></div>
 
+## Apply for professional learning
+
+Want to get notified when applications open? Provide your contact information to a Code.org Regional Partner.
+
+<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
+
 ## New to computer science? No worries!
 
 Whether you are new to teaching computer science (CS) or have experience teaching other CS courses, the Code.org Professional Learning Program offers year round support. We’ve designed this program to promote growth by providing space for you to become comfortable with curricular materials, CS content, and pedagogy.
@@ -60,15 +66,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 Teach a different grade level or have fewer hours available with your students? <a href="https://docs.google.com/document/d/1ASRRQ8Cloyp9kXPBtxa8j5xmXQ0SgLyUCGx2h26WrkQ/edit#", target=_"blank">Find the right course for your classroom.</a>
 
-## Apply for professional learning
-
-The Professional Learning Program is hosted by Code.org Regional Partners across the US.
-
-Want to get notified when applications open? Provide your contact information to your local Regional Partner.
-
-<a href="https://studio.code.org/pd/regional_partner_contact/new"><button>Tell me when applications open</button>
-
-## Program Commitments 
+## Program commitments 
 The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles.
 
 <img src="/images/professional-learning/pl_timeline.png" width="100%"/>
@@ -80,7 +78,7 @@ The Code.org Professional Learning Program has both in-person and online support
 * Participants explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
 * With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.
 
-## <a name="features"></a>Program Features
+## <a name="features"></a>Program features
 
 <details>
   <summary>**One cohesive set of resources**</summary>

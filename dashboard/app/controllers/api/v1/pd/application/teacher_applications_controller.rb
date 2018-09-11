@@ -23,7 +23,7 @@ module Api::V1::Pd::Application
 
       ::Pd::Application::Teacher1819ApplicationMailer.confirmation(@application).deliver_now
 
-      unless @application.regional_partner&.principal_approval == RegionalPartner::SELECTIVE_APPROVAL
+      unless @application.regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
         ::Pd::Application::PrincipalApproval1819Application.create_placeholder_and_send_mail(@application)
       end
     end
