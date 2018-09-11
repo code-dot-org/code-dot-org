@@ -544,6 +544,9 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.turnRight(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     api: appCodeOrgAPI,
+    getForwardBlockType: () => Craft.gameController.levelModel.getForwardBlockType(),
+    getStandingOnBlockType: () => Craft.gameController.levelModel.groundPlane.getBlockAt(
+      Craft.gameController.getEntity().position).blockType,
   });
 
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
