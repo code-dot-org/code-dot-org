@@ -419,7 +419,8 @@ class ProjectsController < ApplicationController
   # always have access to all Applab and Gamelab projects, even if there is a
   # limited gallery for others.
   def limited_gallery?
-    limited_project_gallery = DCDO.get('image_moderation', {})['limited_project_gallery'] || true
+    dcdo_flag = DCDO.get('image_moderation', {})['limited_project_gallery']
+    limited_project_gallery = dcdo_flag.nil? ? true : dcdo_flag
     project_validator = current_user&.permission? UserPermission::PROJECT_VALIDATOR
     !project_validator && limited_project_gallery
   end
