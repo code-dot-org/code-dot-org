@@ -527,6 +527,7 @@ describe('entry tests', () => {
     'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
     'pd/application/facilitator_application/new': './src/sites/studio/pages/pd/application/facilitator_application/new.js',
     'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
+     // Rename preview route when 19-20 principal approval goes live
     'pd/application/teacher_application/new_1920_preview': './src/sites/studio/pages/pd/application/teacher_application/new_1920_preview.js',
     'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/application/principal_approval_application/new_1920_preview': './src/sites/studio/pages/pd/application/principal_approval_application/new_1920_preview.js',
