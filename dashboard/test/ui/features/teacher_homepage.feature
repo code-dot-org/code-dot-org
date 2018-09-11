@@ -87,6 +87,43 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#script-title" is visible
     And element ".uitest-sectionselect" has value ""
 
+  Scenario: Assign hidden unit to section
+    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet"
+    Then the section table should have 1 rows
+    And I save the section id from row 0 of the section table
+
+    When I am on "http://studio.code.org/courses/csp-2017"
+    And I wait until element ".uitest-CourseScript" is visible
+    Then the url contains the section id
+
+    # Hide a unit from the section
+    When I hide unit "CSP Unit 2 - Digital Information"
+    And unit "CSP Unit 2 - Digital Information" is marked as not visible
+
+    # Verify hidden unit warning banner appears
+    When I am on "http://studio.code.org/s/csp2-2017"
+    And I wait until element "#script-title" is visible
+    Then I wait until element ".announcement-notification:contains(unit is hidden)" is visible
+
+    # Try to assign the unit
+    Given I am on "http://studio.code.org/home"
+    And I click selector ".ui-test-section-dropdown"
+    And I click selector ".edit-section-details-link"
+    And I wait until element "#uitest-secondary-assignment" is visible
+    And I select the "CSP Unit 2 - Digital Information" option in dropdown "uitest-secondary-assignment"
+    And I press the first ".uitest-saveButton" element
+    Then I wait to see a dialog containing text "unit is currently hidden"
+
+    # Confirm the assignment
+    When I click selector "#confirm-assign"
+    And I wait for the dialog to close
+    And the section table row at index 0 has secondary assignment path "/s/csp2-2017"
+
+    # Verify the unit was unhidden
+    When I am on "http://studio.code.org/courses/csp-2017"
+    And I wait until element ".uitest-CourseScript" is visible
+    Then unit "CSP Unit 2 - Digital Information" is marked as visible
+
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box

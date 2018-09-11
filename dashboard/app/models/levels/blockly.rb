@@ -411,19 +411,17 @@ class Blockly < Level
     end
   end
 
-  def localized_toolbox_blocks
-    if should_localize? && toolbox_blocks
-      block_xml = Nokogiri::XML(localize_function_blocks(toolbox_blocks), &:noblanks)
-      block_xml.xpath('//../category').each do |category|
-        name = category.attr('name')
-        localized_name = I18n.t("data.block_categories.#{name}", default: nil)
-        category.set_attribute('name', localized_name) if localized_name
-      end
-      return block_xml.serialize(save_with: XML_OPTIONS).strip
+  def self.localize_toolbox_blocks(blocks)
+    block_xml = Nokogiri::XML(localize_function_blocks(blocks), &:noblanks)
+    block_xml.xpath('//../category').each do |category|
+      name = category.attr('name')
+      localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+      category.set_attribute('name', localized_name) if localized_name
     end
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  def localize_function_blocks(blocks)
+  def self.localize_function_blocks(blocks)
     block_xml = Nokogiri::XML(blocks, &:noblanks)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
       name = function.at_xpath('./title[@name="NAME"]')

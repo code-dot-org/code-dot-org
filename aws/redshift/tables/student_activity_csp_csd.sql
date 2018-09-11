@@ -22,7 +22,7 @@ CREATE table analysis.student_activity_csp_csd AS
       ON u_students.id = us.user_id AND u_students.user_type = 'student'
     JOIN dashboard_production_pii.users u_teachers
       ON u_teachers.id = se.user_id
-   JOIN school_years sy on  us.started_at between sy.started_at and sy.ended_at
+   JOIN analysis.school_years sy on  us.started_at between sy.started_at and sy.ended_at
   GROUP BY 1, 2;
 
 GRANT ALL PRIVILEGES ON analysis.student_activity_csp_csd TO GROUP admin;

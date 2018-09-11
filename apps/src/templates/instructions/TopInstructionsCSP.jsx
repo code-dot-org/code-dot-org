@@ -115,7 +115,7 @@ class TopInstructions extends Component {
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
-    ttsMarkdownInstructionsUrl:  PropTypes.string,
+    ttsLongInstructionsUrl:  PropTypes.string,
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
@@ -263,7 +263,7 @@ class TopInstructions extends Component {
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
     ];
-    const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
+    const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
 
     // Only display the help tab when there are one or more videos or
@@ -396,7 +396,7 @@ export default connect(state => ({
   noVisualization: state.pageConstants.noVisualization,
   collapsed: state.instructions.collapsed,
   documentationUrl: state.pageConstants.documentationUrl,
-  ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+  ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
   levelVideos: state.instructions.levelVideos,
   mapReference: state.instructions.mapReference,
   referenceLinks: state.instructions.referenceLinks,

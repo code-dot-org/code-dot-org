@@ -14,6 +14,7 @@ import {
   setAuthProviders,
   beginEditingNewSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import { initializeHiddenScripts } from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {measureVideoConnectivity} from '@cdo/apps/code-studio/measureVideoConnectivity';
 import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
@@ -34,6 +35,7 @@ function showHomepage() {
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
+  store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
 
   let courseId;
   let scriptId;
