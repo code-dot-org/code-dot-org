@@ -194,7 +194,10 @@ class ProjectAppTypeArea extends React.Component {
 
   render() {
     return (
-      <div style={styles.grid}>
+      <div
+        style={styles.grid}
+        className="ui-project-app-type-area"
+      >
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
         {!this.props.hideViewMoreLink &&
           <span
