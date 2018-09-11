@@ -30,7 +30,6 @@ module UserMultiAuthHelper
         )
       end
     else
-      return false unless self.provider == provider
       update(
         provider: provider,
         uid: uid,
