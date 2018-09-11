@@ -1,0 +1,22 @@
+{
+  "category": "",
+  "config": {
+    "func": "turn",
+    "blockText": "turn {DIR}",
+    "args": [
+      {
+        "name": "DIR",
+        "options": [
+          [
+            "right ↻",
+            "right"
+          ],
+          [
+            "left ↺",
+            "left"
+          ]
+        ]
+      }
+    ]
+  }
+}
