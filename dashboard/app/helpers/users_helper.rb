@@ -78,11 +78,13 @@ module UsersHelper
   def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:)
     FirehoseClient.instance.put_record(
       study: 'user-soft-delete-audit',
-      event: "#{type}-account-takeover",
-      source_user_id: source_user.id,
-      destination_user_id: destination_user.id,
-      provider: provider,
-      user_type: destination_user.user_type,
+      event: "#{type}-account-takeover", # Silent or OAuth takeover
+      user_id: source_user.id, # User account being "taken over" (deleted)
+      data_int: destination_user.id, # User account after takeover
+      data_string: provider, # OAuth provider
+      data_json: {
+        user_type: destination_user.user_type,
+      }.to_json
     )
   end
 
