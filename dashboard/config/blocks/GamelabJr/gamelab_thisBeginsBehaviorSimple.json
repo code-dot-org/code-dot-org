@@ -1,13 +1,18 @@
 {
-  "category": "Behaviors",
+  "category": "Sprites",
   "config": {
-    "func": "addBehavior",
+    "func": "thisBeginsBehaviorSimple",
     "blockText": "sprite {SPRITE} begins {BEHAVIOR}",
     "inline": false,
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite"
+        "options": [
+          [
+            "this sprite",
+            "abc"
+          ]
+        ]
       },
       {
         "name": "BEHAVIOR",
