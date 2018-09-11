@@ -2,9 +2,10 @@ module ImageModerationSampleDataSet
   def self.make_thumbnails_arrays
     @inappropriate_thumbnail_urls = []
     @appropriate_thumbnail_urls = []
-    File.open("image_mod_data_set.txt").each do |line|
-      thumbnail_url = line.split(',')[0].split(':')[1] + line.split(',')[0].split(':')[2].gsub(/\A"|"\z/, '')
-      category = line.split(',')[2].split(':')[1].gsub(/"|\[|\]/, '').delete('}')
+    File.open(dashboard_dir("test/ui/features/step_definitions/image_mod_data_set.txt")).each do |line|
+      parsed_line = JSON.parse(line)
+      thumbnail_url = parsed_line["content"]
+      category = parsed_line["annotation"]["labels"].first
       if category == "Nude"
         @inappropriate_thumbnail_urls.push(thumbnail_url)
       elsif category == "NonNude"

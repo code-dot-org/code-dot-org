@@ -30,7 +30,7 @@ end
 
 Then(/^I make an App Lab project named "([^"]*)" with thumbnail "([^"]*)"$/) do |name, thumbnail_url|
   steps %Q{
-    Given I am on "http://studio.code.org/projects/applab"
+    Given I am on "http://studio.code.org/projects/applab/new"
     And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
     And I wait for the page to fully load
     And element "#runButton" is visible
@@ -44,6 +44,9 @@ Then(/^I make an App Lab project named "([^"]*)" with thumbnail "([^"]*)"$/) do 
     And I add code "image('id', '#{thumbnail_url}')" to ace editor
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
+    And I switch to block mode
+    And I press "resetButton"
+    Then I publish the project
   }
 end
 

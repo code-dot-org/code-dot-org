@@ -8,5 +8,5 @@ Scenario: Generate Inappropriate Projects
   Given I generate inappropriate App Lab projects from the data set
 
 # Projects should be flagged as 'everyone'
-Scenario: Generate Appropriate Projects
-  Given I generate appropriate App Lab projects from the data set
+#Scenario: Generate Appropriate Projects
+  #Given I generate appropriate App Lab projects from the data set
