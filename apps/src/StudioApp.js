@@ -189,6 +189,10 @@ class StudioApp extends EventEmitter {
 
     this.MIN_WORKSPACE_HEIGHT = undefined;
 
+    /**
+     * Levelbuilder-defined helper libraries.
+     */
+    this.libraries = {};
   }
 }
 
@@ -2997,6 +3001,31 @@ StudioApp.prototype.showRateLimitAlert = function () {
     isEditing: project.isEditing(),
     isOwner: project.isOwner(),
     share: !!this.share,
+  });
+};
+
+let libraryPreload;
+StudioApp.prototype.loadLibraries_ = function (helperLibraryNames) {
+  if (!libraryPreload) {
+    libraryPreload = Promise.all(helperLibraryNames.map(this.loadLibrary_.bind(this)));
+  }
+  return libraryPreload;
+};
+
+StudioApp.prototype.loadLibrary_ = function (name) {
+  if (this.libraries[name]) {
+    return Promise.resolve();
+  }
+
+  return new Promise((resolve, error) => {
+    $.ajax({
+      url: '/libraries/' + name,
+      success: response => {
+        this.libraries[name] = response;
+        resolve();
+      },
+      error,
+    });
   });
 };
 
