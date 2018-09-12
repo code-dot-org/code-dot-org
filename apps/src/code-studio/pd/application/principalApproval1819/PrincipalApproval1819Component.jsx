@@ -18,7 +18,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = ['school', 'totalStudentEnrollment',
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 
-export default class PrincipalApprovalComponent extends LabeledFormComponent {
+export default class PrincipalApproval1819Component extends LabeledFormComponent {
   static labels = PageLabels;
 
   static associatedFields = Object.keys(PageLabels);
