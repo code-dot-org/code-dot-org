@@ -1,0 +1,30 @@
+{
+  "category": "",
+  "config": {
+    "func": "ifStandingOn",
+    "blockText": "if standing on {TYPE}\n{STATEMENT}",
+    "args": [
+      {
+        "name": "TYPE",
+        "options": [
+          [
+            "sand",
+            "'sand'"
+          ],
+          [
+            "deep water",
+            "'wool_blue'"
+          ],
+          [
+            "oak planks",
+            "'planksOak'"
+          ]
+        ]
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ]
+  }
+}
