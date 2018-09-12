@@ -3199,10 +3199,11 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'from_omniauth: updates migrated user oauth tokens if authentication option with matching credentials exists' do
-    uid = '123456'
-    create :user, :with_migrated_google_authentication_option, uid: uid
+    uid = '654321'
+    user = create :user, :multi_auth_migrated
+    google_auth_option = create :authentication_option, credential_type: AuthenticationOption::GOOGLE, authentication_id: uid, user: user
     auth = OmniAuth::AuthHash.new(
-      provider: 'google_oauth2',
+      provider: AuthenticationOption::GOOGLE,
       uid: uid,
       credentials: {
         token: 'fake oauth token',
@@ -3213,9 +3214,10 @@ class UserTest < ActiveSupport::TestCase
     )
     params = {}
 
-    user = User.from_omniauth(auth, params)
-    google_auth_option = user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::GOOGLE}
-    refute_nil google_auth_option
+    assert_does_not_create(User) do
+      User.from_omniauth(auth, params)
+    end
+    google_auth_option.reload
     assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
