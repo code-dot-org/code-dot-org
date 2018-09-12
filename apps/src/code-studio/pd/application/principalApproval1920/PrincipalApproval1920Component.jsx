@@ -17,6 +17,7 @@ const REQUIRED_SCHOOL_INFO_FIELDS = ['school', 'totalStudentEnrollment',
   'termsPerYear', 'replaceCourse', 'committedToDiversity', 'understandFee', 'payFee'
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
+const YEAR = "2019-20";
 
 export default class PrincipalApproval1920Component extends LabeledFormComponent {
   static labels = PageLabels;
@@ -28,7 +29,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   };
 
   renderSchoolSection() {
-    // TODO: Mehal - this should be a seperate component
+    // TODO: Mehal - this should be a separate component
     return (
       <div>
         <FormGroup
@@ -96,13 +97,11 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
             [TextFields.otherWithText]: "other"
           }, {
             label: `Are you committed to including ${this.props.teacherApplication.course}
-                    on the master schedule in 2018-19 if accepted into the program? Note:
+                    on the master schedule in ${YEAR} if accepted into the program? Note:
                     the program may be listed under a different course name as determined
                     by your district.`
           })
         }
-        {this.radioButtonsFor('hoursPerYear')}
-        {this.radioButtonsFor('termsPerYear')}
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
           [TextFields.dontKnowExplain] : "other"
         })}
@@ -167,9 +166,9 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         <p>
           Thank you for your support of computer science education! A teacher at your
           school, {this.props.teacherApplication.name} has applied to be a part of
-          Code.org’s Professional Learning Program in order to teach the {' '}
-          {this.props.teacherApplication.course} curriculum during the 2018-19  school
-          year. Your completion of this survey is required for the teacher’s application
+          Code.org’s Professional Learning Program to teach the {' '}
+          {this.props.teacherApplication.course} curriculum during the {YEAR} school
+          year. Your approval is required for the teacher’s application
           to be considered.
         </p>
         {this.inputFor('firstName')}
@@ -186,7 +185,7 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
             [TextFields.otherWithText]: "other"
           }, {
             label: `Do you approve of ${this.props.teacherApplication.name} participating
-                    in Code.org's 2018 - 19 Professional Learning Program?`,
+                    in Code.org's ${YEAR} Professional Learning Program?`,
           })
         }
         {this.props.data.doYouApprove !== 'No' && this.renderSchoolInfoSection()}
