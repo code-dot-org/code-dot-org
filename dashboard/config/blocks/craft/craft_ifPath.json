@@ -25,6 +25,11 @@
         "name": "STATEMENT",
         "statement": true
       }
+    ],
+    "color": [
+      197,
+      0.88,
+      0.78
     ]
   }
 }
