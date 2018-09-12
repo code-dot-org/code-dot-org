@@ -22,7 +22,6 @@ experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdownNewSearch';
-experiments.CHEVRON_PUBLISH_EXPERIMENT = 'chevron-publish-v2';
 experiments.AUDIO_LIBRARY_DEFAULT = 'audioLibraryDefault';
 
 // This is a per user experiment and is defined in experiments.rb

@@ -541,9 +541,23 @@ Craft.executeUserCode = function () {
     },
     ...asyncMethods,
     api: appCodeOrgAPI,
-    getForwardBlockType: () => Craft.gameController.levelModel.getForwardBlockType(),
+    walkableAhead: () => Craft.gameController.levelModel.getForwardBlock().isWalkable,
+    walkableToRight: () => {
+      Craft.gameController.levelModel.turnRight();
+      const value = Craft.gameController.levelModel.getForwardBlock().isWalkable;
+      Craft.gameController.levelModel.turnLeft();
+      return value;
+    },
+    walkableToLeft: () => {
+      Craft.gameController.levelModel.turnLeft();
+      const value = Craft.gameController.levelModel.getForwardBlock().isWalkable;
+      Craft.gameController.levelModel.turnRight();
+      return value;
+    },
     getStandingOnBlockType: () => Craft.gameController.levelModel.groundPlane.getBlockAt(
       Craft.gameController.getEntity().position).blockType,
+    isStandingOnMiniBlock: () => Craft.gameController.levelModel.actionPlane.getBlockAt(
+      Craft.gameController.getEntity().position).getIsMiniblock(),
   }, {
     asyncFunctionList: Object.values(asyncMethods),
   });
