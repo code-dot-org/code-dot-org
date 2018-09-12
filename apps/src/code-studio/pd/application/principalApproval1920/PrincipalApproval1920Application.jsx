@@ -1,8 +1,8 @@
 import {PropTypes} from 'react';
 import FormController from '../../form_components/FormController';
-import PrincipalApproval1819Component from './PrincipalApproval1819Component';
+import PrincipalApproval1920Component from './PrincipalApproval1920Component';
 
-export default class PrincipalApproval1819Application extends FormController {
+export default class PrincipalApproval1920Application extends FormController {
   static propTypes = {
     ...FormController.propTypes,
     teacherApplication: PropTypes.shape({
@@ -34,7 +34,7 @@ export default class PrincipalApproval1819Application extends FormController {
    */
   getPageComponents() {
     return [
-      PrincipalApproval1819Component
+      PrincipalApproval1920Component
     ];
   }
 
