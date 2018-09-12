@@ -45,7 +45,34 @@ class RegionalPartner < ActiveRecord::Base
   serialized_attrs %w(
     cohort_capacity_csd
     cohort_capacity_csp
+    apps_open_date_csd_teacher
+    apps_open_date_csd_facilitator
+    apps_open_date_csp_teacher
+    apps_open_date_csp_facilitator
+    apps_close_date_csd_teacher
+    apps_close_date_csd_facilitator
+    apps_close_date_csp_teacher
+    apps_close_date_csp_facilitator
+    applications_principal_approval
+    applications_decision_emails
+    link_to_application
+    csd_cost
+    csp_cost
+    csd_cost_description
+    csp_cost_description
+    contact_name
+    contact_email
   )
+
+  PRINCIPAL_APPROVAL_TYPES = [
+    ALL_REQUIRE_APPROVAL = 'all_teachers_required'.freeze,
+    SELECTIVE_APPROVAL = 'required_per_teacher'.freeze
+  ].freeze
+
+  APPLICATION_DECISION_EMAILS = [
+    SENT_BY_PARTNER = 'sent_by_partner'.freeze,
+    SENT_BY_SYSTEM = 'sent_by_system'.freeze
+  ].freeze
 
   # Upcoming and not ended
   def future_pd_workshops_organized
@@ -61,6 +88,10 @@ class RegionalPartner < ActiveRecord::Base
   validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
   validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
   validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
+  validates_inclusion_of :applications_principal_approval, in: PRINCIPAL_APPROVAL_TYPES, if: -> {applications_principal_approval.present?}
+  validates_inclusion_of :applications_decision_emails, in: APPLICATION_DECISION_EMAILS, if: -> {applications_decision_emails.present?}
+  validates :csd_cost, numericality: {greater_than: 0}, if: -> {csd_cost.present?}
+  validates :csp_cost, numericality: {greater_than: 0}, if: -> {csp_cost.present?}
 
   # assign a program manager to a regional partner
   def program_manager=(program_manager_id)

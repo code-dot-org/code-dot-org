@@ -66,6 +66,7 @@ end
 
 def main
   shared_content = generate_multiple_constants %w(
+    ARTIST_AUTORUN_OPTIONS
     GAMELAB_AUTORUN_OPTIONS
     LEVEL_KIND
     LEVEL_STATUS
@@ -115,6 +116,15 @@ def main
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApproval1819ApplicationConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_multiple_constants(
+      %w(PAGE_LABELS TEXT_FIELDS),
+      source_module: Pd::PrincipalApproval1920ApplicationConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1920ApplicationConstants.js"
   )
 
   generate_shared_js_file(

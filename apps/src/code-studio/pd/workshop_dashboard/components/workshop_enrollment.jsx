@@ -45,6 +45,7 @@ export default class WorkshopEnrollment extends React.Component {
         enrollments={sortedEnrollments}
         accountRequiredForAttendance={this.props.accountRequiredForAttendance}
         onDelete={this.props.onDelete}
+        workshopCourse={this.props.workshopCourse}
       />
     );
 

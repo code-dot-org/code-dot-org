@@ -1,6 +1,6 @@
 require 'test_helper'
+require 'testing/includes_metrics'
 require 'timecop'
-require_relative '../../../shared/test/spy_newrelic_agent'
 
 class UserTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
@@ -84,15 +84,30 @@ class UserTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
-  test 'normalize_email' do
+  test 'normalize_email for non-migrated user' do
     teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
     assert_equal 'caps@example.com', teacher.email
   end
 
-  test 'hash_email' do
+  test 'normalize_email for migrated user' do
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'OLD@EXAMPLE.COM'
+    teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
+    assert_equal 'new@example.com', teacher.primary_contact_info.email
+    assert_equal 'new@example.com', teacher.read_attribute(:email)
+  end
+
+  test 'hash_email for non-migrated user' do
     @teacher.update!(email: 'hash_email@example.com')
     assert_equal User.hash_email('hash_email@example.com'),
       @teacher.hashed_email
+  end
+
+  test 'hash_email for migrated user' do
+    teacher = create :teacher, :with_migrated_email_authentication_option, email: 'OLD@EXAMPLE.COM'
+    teacher.update!(primary_contact_info: create(:authentication_option, user: teacher, email: 'NEW@EXAMPLE.COM'))
+    hashed_email = User.hash_email('new@example.com')
+    assert_equal hashed_email, teacher.primary_contact_info.hashed_email
+    assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
   test "log in with password with pepper" do
@@ -2835,33 +2850,23 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.deleted?
   end
 
-  test 'soft-deleting a user records a NewRelic metric' do
-    original_newrelic_logging = CDO.newrelic_logging
-    CDO.newrelic_logging = true
-
+  test 'soft-deleting a user records a metric' do
     student = create :student
 
-    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1)
+    Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1))
     result = student.destroy
 
     assert_equal student, result
-  ensure
-    CDO.newrelic_logging = original_newrelic_logging
   end
 
-  test 'soft-deleting a group of users records NewRelic metrics' do
-    original_newrelic_logging = CDO.newrelic_logging
-    CDO.newrelic_logging = true
-
+  test 'soft-deleting a group of users records metrics' do
     student_a = create :student
     student_b = create :student
 
-    NewRelic::Agent.expects(:record_metric).with("Custom/User/SoftDelete", 1).twice
+    Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1)).twice
     result = User.destroy [student_a.id, student_b.id]
 
     assert_equal [student_a, student_b], result
-  ensure
-    CDO.newrelic_logging = original_newrelic_logging
   end
 
   test 'undestroy restores recent dependents only' do
@@ -3300,7 +3305,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     def put_student_in_section(student, teacher, script, course=nil)
-      section = create :section, user_id: teacher.id, script_id: script.id, course_id: course.try(:id)
+      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: course.try(:id)
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
       section
     end
@@ -3358,6 +3363,38 @@ class UserTest < ActiveSupport::TestCase
 
       # when attached to course, we should hide only if hidden in every section
       assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
+    end
+
+    test "user in two sections, both attached to course but no script" do
+      student = create :student
+
+      section1 = put_student_in_section(student, @teacher, nil, @course)
+      section2 = put_student_in_section(student, @teacher, nil, @course)
+
+      hide_scripts_in_sections(section1, section2)
+
+      # when attached to course, we should hide only if hidden in every section
+      assert_equal [@script.id], student.get_hidden_script_ids(@course)
+
+      # ignore any archived sections
+      section2.hidden = true
+      section2.save!
+      student.reload
+      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+      section1.hidden = true
+      section1.save!
+      student.reload
+      assert_equal [], student.get_hidden_script_ids(@course)
     end
 
     test "user in two sections, neither attached to script" do
@@ -3849,5 +3886,29 @@ class UserTest < ActiveSupport::TestCase
     section.students << student
 
     assert_equal [student.summarize], section.teacher.dependent_students
+  end
+
+  test 'last section id' do
+    teacher = create :teacher
+    section1 = create :section, teacher: teacher
+    assert_equal section1.id, teacher.last_section_id
+
+    create :follower, section: section1
+    assert_nil section1.students.first.last_section_id
+
+    # selects the most recently created section
+    section2 = create :section, teacher: teacher
+    assert_equal section2.id, teacher.last_section_id
+
+    # ignores hidden sections
+    section2.hidden = true
+    section2.save!
+    assert_equal section1.id, teacher.last_section_id
+
+    # ignores deleted sections
+    section3 = create :section, teacher: teacher
+    assert_equal section3.id, teacher.last_section_id
+    section3.delete
+    assert_equal section1.id, teacher.last_section_id
   end
 end

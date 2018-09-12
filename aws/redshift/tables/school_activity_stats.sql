@@ -48,7 +48,7 @@ hoc_event as (
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (223, 187, 181, 169, 221, 189) THEN u.studio_person_id ELSE NULL END) teachers_csd_l365,          
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (122,123,124,125,126,127) THEN u.studio_person_id ELSE NULL END) teachers_csp_l365,
          -- pd'd teacher counts
-         COUNT(DISTINCT CASE WHEN ttf.user_id IS NOT NULL THEN ttpd.studio_person_id ELSE NULL END) teachers_csf_pd,        
+         COUNT(DISTINCT CASE WHEN ttf.user_id IS NOT NULL THEN ttf.user_id ELSE NULL END) teachers_csf_pd,        
          COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Discoveries' THEN ttpd.studio_person_id ELSE NULL END) teachers_csd_pd,
          COUNT(DISTINCT CASE WHEN ttpd.studio_person_id IS NOT NULL AND ttpd.course = 'CS Principles' THEN ttpd.studio_person_id ELSE NULL END) teachers_csp_pd,
          --student counts

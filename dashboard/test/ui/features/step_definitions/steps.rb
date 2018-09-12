@@ -1255,6 +1255,8 @@ def press_keys(element, key)
   end
 end
 
+# Known issue: ie does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip ie when using this step
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
@@ -1449,16 +1451,6 @@ When /^I switch to text mode$/ do
   STEPS
 end
 
-Then /^the project list contains ([\d]+) (?:entry|entries)$/ do |expected_num|
-  actual_num = @browser.execute_script("return $('table.projects td.name').length;")
-  expect(actual_num).to eq(expected_num.to_i)
-end
-
-Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_name|
-  actual_name = @browser.execute_script("return $('table.projects td.name').eq(#{index}).text().trim();")
-  expect(actual_name).to eq(expected_name)
-end
-
 When /^I see the section set up box$/ do
   steps 'When I wait to see ".uitest-set-up-sections"'
 end
@@ -1519,6 +1511,18 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
 
   # make sure the query params do not come after the # symbol
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
+end
+
+Then /^I hide unit "([^"]+)"$/ do |unit_name|
+  @browser.execute_script("$('.uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash').click();")
+  wait_short_until do
+    @browser.execute_script("return window.__TestInterface.toggleHiddenUnitComplete;")
+  end
+end
+
+Then /^unit "([^"]+)" is marked as (not )?visible$/ do |unit_name, negation|
+  visibility = @browser.execute_script("return $('.uitest-CourseScript:contains(#{unit_name})').attr('data-visibility');")
+  expect(visibility).to eq(negation ? 'hidden' : 'visible')
 end
 
 # @return [Number] the section id for the corresponding row in the sections table

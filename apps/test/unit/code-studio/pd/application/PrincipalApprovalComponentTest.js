@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import PrincipalApprovalComponent, {RACE_LIST, MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS} from '@cdo/apps/code-studio/pd/application/principalApproval1819/PrincipalApprovalComponent';
+import PrincipalApprovalComponent, {RACE_LIST, MANUAL_SCHOOL_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS} from '@cdo/apps/code-studio/pd/application/principalApproval1819/PrincipalApproval1819Component';
 
 describe("Principal Approval Component", () => {
   it("Requires only the top few fields if application is rejected", () => {

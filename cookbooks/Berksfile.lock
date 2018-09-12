@@ -1,5 +1,6 @@
 DEPENDENCIES
   apt (~> 2.6.0)
+  ark (< 4.0.0)
   build-essential (~> 2.1.3)
   cdo-analytics
     path: cdo-analytics
@@ -23,6 +24,8 @@ DEPENDENCIES
     path: cdo-i18n
   cdo-java-7
     path: cdo-java-7
+  cdo-jemalloc
+    path: cdo-jemalloc
   cdo-mysql
     path: cdo-mysql
   cdo-networking
@@ -43,8 +46,6 @@ DEPENDENCIES
     path: cdo-ruby
   cdo-secrets
     path: cdo-secrets
-  cdo-solr
-    path: cdo-solr
   cdo-users
     path: cdo-users
   cdo-varnish
@@ -72,7 +73,7 @@ GRAPH
   cdo-analytics (0.0.0)
     apt (~> 2.6.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.309)
+  cdo-apps (0.2.316)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
@@ -80,6 +81,7 @@ GRAPH
     cdo-cloudwatch-logger (>= 0.0.0)
     cdo-i18n (>= 0.0.0)
     cdo-java-7 (>= 0.0.0)
+    cdo-jemalloc (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
     cdo-networking (>= 0.0.0)
     cdo-nginx (>= 0.0.0)
@@ -89,7 +91,6 @@ GRAPH
     cdo-repository (>= 0.0.0)
     cdo-ruby (>= 0.0.0)
     cdo-secrets (>= 0.0.0)
-    cdo-solr (>= 0.0.0)
     cdo-varnish (>= 0.0.0)
     chef_client_updater (>= 0.0.0)
     chef_hostname (>= 0.0.0)
@@ -112,13 +113,15 @@ GRAPH
     cdo-java-7 (>= 0.0.0)
   cdo-java-7 (0.1.1)
     build-essential (>= 0.0.0)
+  cdo-jemalloc (0.1.1)
+    ark (>= 0.0.0)
   cdo-mysql (0.1.11)
     apt (~> 2.6.0)
   cdo-networking (0.1.1)
     ixgbevf (>= 0.0.0)
   cdo-newrelic (0.1.18)
     apt (>= 0.0.0)
-  cdo-nginx (0.0.12)
+  cdo-nginx (0.0.13)
     apt (>= 0.0.0)
     ssl_certificate (>= 0.0.0)
   cdo-nodejs (0.2.24)
@@ -134,13 +137,8 @@ GRAPH
     apt (~> 2.6.0)
     sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
-  cdo-solr (0.1.8)
-    apt (>= 0.0.0)
-    ark (>= 0.0.0)
-    cdo-java-7 (>= 0.0.0)
-    poise-service (>= 0.0.0)
   cdo-users (0.1.20)
-  cdo-varnish (0.3.185)
+  cdo-varnish (0.3.187)
     apt (>= 0.0.0)
   chef-client (4.2.4)
     cron (>= 1.2.0)

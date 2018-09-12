@@ -7,72 +7,72 @@
   <title name="NAME">mapping my y position to</title>
   <statement name="STACK">
     <block type="controls_if">
-  <mutation elseif="1" else="1"/>
-  <value name="IF0">
-    <block type="logic_compare">
-      <title name="OP">EQ</title>
-      <value name="A">
-        <block type="parameters_get">
-          <mutation output="String"/>
-          <title name="VAR">range</title>
+      <mutation elseif="1" else="1"/>
+      <value name="IF0">
+        <block type="logic_compare">
+          <title name="OP">EQ</title>
+          <value name="A">
+            <block type="parameters_get">
+              <mutation output="String"/>
+              <title name="VAR">range</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="text">
+              <title name="TEXT">low</title>
+            </block>
+          </value>
         </block>
       </value>
-      <value name="B">
-        <block type="text">
-          <title name="TEXT">low</title>
+      <statement name="DO0">
+        <block type="Dancelab_setProp">
+          <title name="SPRITE">this_sprite</title>
+          <title name="PROPERTY">"y"</title>
+          <value name="VAL">
+            <block type="Dancelab_getEnergy">
+              <title name="RANGE">"low"</title>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <value name="IF1">
+        <block type="logic_compare">
+          <title name="OP">EQ</title>
+          <value name="A">
+            <block type="parameters_get">
+              <mutation output="String"/>
+              <title name="VAR">range</title>
+            </block>
+          </value>
+          <value name="B">
+            <block type="text">
+              <title name="TEXT">med</title>
+            </block>
+          </value>
         </block>
       </value>
+      <statement name="DO1">
+        <block type="Dancelab_setProp">
+          <title name="SPRITE">this_sprite</title>
+          <title name="PROPERTY">"y"</title>
+          <value name="VAL">
+            <block type="Dancelab_getEnergy">
+              <title name="RANGE">"mid"</title>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <statement name="ELSE">
+        <block type="Dancelab_setProp">
+          <title name="SPRITE">this_sprite</title>
+          <title name="PROPERTY">"y"</title>
+          <value name="VAL">
+            <block type="Dancelab_getEnergy">
+              <title name="RANGE">"high"</title>
+            </block>
+          </value>
+        </block>
+      </statement>
     </block>
-  </value>
-  <statement name="DO0">
-    <block type="Dancelab_setProp">
-      <title name="SPRITE">this_sprite</title>
-      <title name="PROPERTY">"y"</title>
-      <value name="VAL">
-        <block type="Dancelab_getEnergy">
-          <title name="RANGE">"low"</title>
-        </block>
-      </value>
-    </block>
-  </statement>
-  <value name="IF1">
-    <block type="logic_compare">
-      <title name="OP">EQ</title>
-      <value name="A">
-        <block type="parameters_get">
-          <mutation output="String"/>
-          <title name="VAR">range</title>
-        </block>
-      </value>
-      <value name="B">
-        <block type="text">
-          <title name="TEXT">med</title>
-        </block>
-      </value>
-    </block>
-  </value>
-  <statement name="DO1">
-    <block type="Dancelab_setProp">
-      <title name="SPRITE">this_sprite</title>
-      <title name="PROPERTY">"y"</title>
-      <value name="VAL">
-        <block type="Dancelab_getEnergy">
-          <title name="RANGE">"mid"</title>
-        </block>
-      </value>
-    </block>
-  </statement>
-  <statement name="ELSE">
-    <block type="Dancelab_setProp">
-      <title name="SPRITE">this_sprite</title>
-      <title name="PROPERTY">"y"</title>
-      <value name="VAL">
-        <block type="Dancelab_getEnergy">
-          <title name="RANGE">"high"</title>
-        </block>
-      </value>
-    </block>
-  </statement>
-</block>
   </statement>
 </block>

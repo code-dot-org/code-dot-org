@@ -5,33 +5,25 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
-import {publishMethods} from '@cdo/apps/templates/projects/projectConstants';
 
 describe('PersonalProjectsTable', () => {
-  it('renders a table', () => {
+  // In the fake data used, the recency of the projects' updatedAt field is consistent with the numbering in the name; for example, the project named "Personal Project 1" has the most recent updatedAt time.
+  it('renders project rows in order of recency of updatedAt ', () => {
     const wrapper = mount(
       <Provider store={getStore()}>
         <PersonalProjectsTable
           personalProjectsList={stubFakePersonalProjectData}
           canShare={true}
-          publishMethod={publishMethods.CHEVRON}
         />
       </Provider>
     );
-    expect(wrapper.find('table').exists()).to.be.true;
-  });
-
-  it('renders projects as table rows', () => {
-    const wrapper = mount(
-      <Provider store={getStore()}>
-        <PersonalProjectsTable
-          personalProjectsList={stubFakePersonalProjectData}
-          canShare={true}
-          publishMethod={publishMethods.CHEVRON}
-        />
-      </Provider>
-    );
-    const projectRows = wrapper.find('tbody').find('tr');
-    expect(projectRows).to.have.length(stubFakePersonalProjectData.length);
+    const firstProjectName = wrapper.find('PersonalProjectsNameCell').at(0).find('a');
+    const secondProjectName = wrapper.find('PersonalProjectsNameCell').at(1).find('a');
+    const thirdProjectName = wrapper.find('PersonalProjectsNameCell').at(2).find('a');
+    const fourthProjectName = wrapper.find('PersonalProjectsNameCell').at(3).find('a');
+    expect(firstProjectName.text()).to.equal(stubFakePersonalProjectData[0].name);
+    expect(secondProjectName.text()).to.equal(stubFakePersonalProjectData[1].name);
+    expect(thirdProjectName.text()).to.equal(stubFakePersonalProjectData[2].name);
+    expect(fourthProjectName.text()).to.equal(stubFakePersonalProjectData[3].name);
   });
 });
