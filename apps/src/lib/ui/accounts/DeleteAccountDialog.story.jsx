@@ -6,7 +6,7 @@ const DELETE_VERIFICATION = 'DELETE MY ACCOUNT';
 
 export default storybook => {
   storybook
-    .storiesOf('DeleteAccountDialog', module)
+    .storiesOf('Dialogs/DeleteAccountDialog', module)
     .addStoryTable([
       {
         name: 'Delete Student Account',
