@@ -12,9 +12,8 @@ import {styles} from '../teacher1920/TeacherApplicationConstants';
 const MANUAL_SCHOOL_FIELDS = ['schoolName', 'schoolAddress', 'schoolCity',
   'schoolState', 'schoolZipCode', 'schoolType'];
 const RACE_LIST = ['white', 'black', 'hispanic', 'asian', 'pacificIslander', 'americanIndian', 'other'];
-const REQUIRED_SCHOOL_INFO_FIELDS = ['school', 'totalStudentEnrollment',
-  'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'hoursPerYear',
-  'termsPerYear', 'replaceCourse', 'committedToDiversity', 'understandFee', 'payFee'
+const REQUIRED_SCHOOL_INFO_FIELDS = ['goingToTeach', 'school', 'totalStudentEnrollment',
+  'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'replaceCourse', 'committedToDiversity', 'understandFee', 'payFee'
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 const YEAR = "2019-20";
@@ -72,6 +71,14 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
   renderSchoolInfoSection() {
     return (
       <div>
+        {
+          this.radioButtonsWithAdditionalTextFieldsFor('goingToTeach', {
+            [TextFields.otherWithText]: "other"
+          }, {
+            label: `Is ${this.props.teacherApplication.name} going to teach this course in
+                    the ${YEAR} school year?`,
+          })
+        }
         {this.renderSchoolSection()}
         {this.inputFor('totalStudentEnrollment')}
         {this.numberInputFor('freeLunchPercent', {
@@ -97,9 +104,9 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
             [TextFields.otherWithText]: "other"
           }, {
             label: `Are you committed to including ${this.props.teacherApplication.course}
-                    on the master schedule in ${YEAR} if accepted into the program? Note:
-                    the program may be listed under a different course name as determined
-                    by your district.`
+                    on the master schedule in ${YEAR} if ${this.props.teacherApplication.name}
+                    is accepted into the program? Note: the program may be listed under a different
+                    course name as determined by your district.`
           })
         }
         {this.radioButtonsWithAdditionalTextFieldsFor('replaceCourse', {
@@ -108,9 +115,17 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
         {
           this.props.data.replaceCourse === 'Yes' && this.renderCourseReplacementSection()
         }
-        {this.radioButtonsWithAdditionalTextFieldsFor('committedToDiversity', {
-          [TextFields.otherPleaseExplain] : "other"
-        })}
+        {
+          this.radioButtonsWithAdditionalTextFieldsFor('committedToDiversity', {
+            [TextFields.otherPleaseExplain] : "other"
+          }, {
+            label: `A key part of Code.org's mission is to increase and diversify participation
+                    in computer science, especially among female students and underrepresented
+                    minorities. To that end, do you commit to recruiting and enrolling a diverse
+                    group of students in this course, representative of the overall demographics
+                    of your school?`
+          })
+        }
         <p>
           There may be a fee associated with your teacher’s summer workshop. Please
           carefully <a href="https://docs.google.com/spreadsheets/d/1YFrTFp-Uz0jWk9-UR9JVuXfoDcCL6J0hxK5CYldv_Eo" target="_blank">
@@ -186,14 +201,6 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           }, {
             label: `Do you approve of ${this.props.teacherApplication.name} participating
                     in Code.org's ${YEAR} Professional Learning Program?`,
-          })
-        }
-        {
-          this.radioButtonsWithAdditionalTextFieldsFor('goingToTeach', {
-            [TextFields.otherWithText]: "other"
-          }, {
-            label: `Is ${this.props.teacherApplication.name} going to teach this course in
-                    the ${YEAR} school year?`,
           })
         }
         {this.props.data.doYouApprove !== 'No' && this.renderSchoolInfoSection()}
