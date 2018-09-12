@@ -1,0 +1,30 @@
+{
+  "category": "",
+  "config": {
+    "func": "ifPath",
+    "blockText": "if path {DIR}\n{STATEMENT}",
+    "args": [
+      {
+        "name": "DIR",
+        "options": [
+          [
+            "ahead",
+            "'ahead'"
+          ],
+          [
+            "to the right",
+            "'right'"
+          ],
+          [
+            "to the left",
+            "'left'"
+          ]
+        ]
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ]
+  }
+}
