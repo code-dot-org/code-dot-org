@@ -504,6 +504,8 @@ class NetSimApi < Sinatra::Base
   # @param [String] event_type - unique metric key within NetSimApi
   # @param [Number] value (default 1) value of measurement, omit if we only care
   #   about event counts.
+  # @param [String] unit (default 'Count') unit of measurement. For allowed units,
+  #   see https://docs.aws.amazon.com/sdkforruby/api/Aws/CloudWatch/Types/MetricDatum.html#unit-instance_method
   def record_metric(event_type, value = 1, unit = 'Count')
     return unless CDO.netsim_enable_metrics
     Cdo::Metrics.push('NetSimApi',
