@@ -666,10 +666,10 @@ class ContactRollups
   def self.update_professional_learning_attendance_for_course_from_sections(course)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT DISTINCT users.email
+      (SELECT DISTINCT users_view.email
       FROM #{DASHBOARD_DB_NAME}.sections
         INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
-        INNER JOIN #{DASHBOARD_DB_NAME}.users_view ON users.id = followers.student_user_id
+        INNER JOIN #{DASHBOARD_DB_NAME}.users_view ON users_view.id = followers.student_user_id
       WHERE section_type =
       CASE '#{course}'
         WHEN 'CS in Science' THEN 'csins_workshop'
@@ -902,34 +902,37 @@ class ContactRollups
     # has district names like "open csp".
     districts = District.all.index_by(&:id)
 
-    # users = User.where("length(email) > 0") # original query, replaced by following for multiauth
-    # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
-    users = User.find_by_sql <<-eos
-      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM users
-      LEFT JOIN authentication_options
-        ON users.primary_contact_info_id = authentication_options.id
-      WHERE
-        IF (
-          users.provider = 'migrated',
-          length(authentication_options.email),
-          length(users.email)
-        )
-        > 0
-    eos
+    # Use optimizer hint to set a custom query execution timeout
+    users_query = <<-END_OF_STRING
+      SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */
+             email
+           , JSON_EXTRACT(properties, '$.ops_school') AS ops_school
+           , JSON_EXTRACT(properties, '$.district_id') AS district_id
+      FROM #{DASHBOARD_DB_NAME}.users_view
+      WHERE deleted_at IS NULL
+        AND (length(email) > 0)
+    END_OF_STRING
 
-    users.find_each do |user|
-      unless user.ops_school.nil?
-        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).
-            update(school_name: user.ops_school)
+    users = DASHBOARD_REPORTING_DB_READER[users_query]
+    # Create iterator for query using the #stream method so we stream the results back rather than
+    # trying to load everything in memory
+    users_iterator = users.stream.to_enum
+    user = grab_next(users_iterator)
+    until user.nil?
+      unless user[:ops_school].nil?
+        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).
+            update(school_name: user[:ops_school])
       end
 
-      unless user.district_id.nil?
-        district = districts[user.district_id]
+      unless user[:district_id].nil?
+        district = districts[user[:district_id]]
         unless district.nil?
-          PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).update(district_name: district.name)
+          PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user[:email]).update(district_name: district.name)
         end
       end
+      user = grab_next(users_iterator)
     end
+
     log_completion(start)
 
     start = Time.now
@@ -962,5 +965,7 @@ class ContactRollups
     s.next
   rescue StopIteration
     nil
+  rescue StandardError => error
+    log "Error iterating over stream #{s} - #{error}"
   end
 end
