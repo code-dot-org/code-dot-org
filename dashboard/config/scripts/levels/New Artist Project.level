@@ -39,14 +39,14 @@
     "discard_background": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "show_type_hints": "false",
     "include_shared_functions": "false",
-    "auto_run": "FULL_AUTO_RUN"
+    "auto_run": "FULL_AUTO_RUN",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 21:38:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:47:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-03-14 18:04:47 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"nkiru.onwuneme+teacher@code.org\"},{\"changed_at\":\"2018-03-29 00:16:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-04-11 23:13:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-08-29 21:52:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":286,\"changed_by_email\":\"ram+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 21:38:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:47:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-03-14 18:04:47 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"nkiru.onwuneme+teacher@code.org\"},{\"changed_at\":\"2018-03-29 00:16:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-04-11 23:13:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-08-29 21:52:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":286,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-09-12 00:36:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -459,7 +459,7 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="draw_move" inline="true">
+          <block type="draw_move">
             <title name="DIR">moveForward</title>
             <value name="VALUE">
               <block type="math_number">
@@ -467,7 +467,7 @@
               </block>
             </value>
           </block>
-          <block type="draw_turn" inline="true">
+          <block type="draw_turn">
             <title name="DIR">turnRight</title>
             <value name="VALUE">
               <block type="math_number">
@@ -475,7 +475,7 @@
               </block>
             </value>
           </block>
-          <block type="draw_turn" inline="true">
+          <block type="draw_turn">
             <title name="DIR">turnLeft</title>
             <value name="VALUE">
               <block type="math_number">
@@ -483,7 +483,7 @@
               </block>
             </value>
           </block>
-          <block type="jump" inline="true">
+          <block type="jump">
             <title name="DIR">jumpForward</title>
             <value name="VALUE">
               <block type="math_number">
@@ -498,7 +498,7 @@
             <title name="XPOS">0</title>
             <title name="YPOS">0</title>
           </block>
-          <block type="point_to_param" inline="true">
+          <block type="point_to_param">
             <value name="VALUE">
               <block type="math_number">
                 <title name="NUM">???</title>
@@ -507,21 +507,21 @@
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_colour" inline="false" id="draw-color">
+          <block type="draw_colour" id="draw-color">
             <value name="COLOUR">
               <block type="colour_picker">
                 <title name="COLOUR">#ff0000</title>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="false" id="draw-color">
+          <block type="draw_colour" id="draw-color">
             <value name="COLOUR">
               <block type="colour_random"/>
             </value>
           </block>
-          <block type="draw_colour" inline="false" id="draw-color">
+          <block type="draw_colour" id="draw-color">
             <value name="COLOUR">
-              <block type="colour_rgb" inline="false">
+              <block type="colour_rgb">
                 <value name="RED">
                   <block type="math_number">
                     <title name="NUM">255</title>
@@ -540,14 +540,14 @@
               </block>
             </value>
           </block>
-          <block type="alpha" inline="false">
+          <block type="alpha">
             <value name="VALUE">
               <block type="math_number">
                 <title name="NUM">???</title>
               </block>
             </value>
           </block>
-          <block type="draw_width" inline="false">
+          <block type="draw_width">
             <value name="WIDTH">
               <block type="math_number">
                 <title name="NUM">???</title>
@@ -560,7 +560,7 @@
           <block type="sticker">
             <title name="VALUE">Elephant</title>
           </block>
-          <block type="turtle_sticker_with_size" inline="true">
+          <block type="turtle_sticker_with_size">
             <title name="VALUE">Alien</title>
             <value name="SIZE">
               <block type="math_number">
@@ -570,7 +570,7 @@
           </block>
         </category>
         <category name="Loops">
-          <block type="controls_for" inline="true">
+          <block type="controls_for">
             <title name="VAR">i</title>
             <value name="FROM">
               <block type="math_number">
@@ -588,7 +588,7 @@
               </block>
             </value>
           </block>
-          <block type="controls_repeat_ext" inline="true">
+          <block type="controls_repeat_ext">
             <value name="TIMES">
               <block type="math_number">
                 <title name="NUM">???</title>
@@ -600,7 +600,7 @@
           <block type="math_number">
             <title name="NUM">0</title>
           </block>
-          <block type="math_arithmetic" inline="true">
+          <block type="math_arithmetic">
             <title name="OP">ADD</title>
             <value name="A">
               <block type="math_number">
@@ -615,43 +615,43 @@
           </block>
         </category>
         <category name="Logic">
-          <block type="controls_if" inline="false">
+          <block type="controls_if">
             <value name="IF0">
-              <block type="logic_compare" inline="true">
+              <block type="logic_compare">
                 <title name="OP">EQ</title>
               </block>
             </value>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_callnoreturn" inline="false">
+          <block type="procedures_callnoreturn">
             <mutation name="draw a square">
               <arg name="length"/>
               <arg name="sides"/>
             </mutation>
           </block>
-          <block type="procedures_callnoreturn" inline="false">
+          <block type="procedures_callnoreturn">
             <mutation name="draw a triangle">
               <arg name="length"/>
             </mutation>
           </block>
-          <block type="procedures_callnoreturn" inline="false">
+          <block type="procedures_callnoreturn">
             <mutation name="draw a circle">
               <arg name="radius"/>
             </mutation>
           </block>
-          <block type="procedures_callnoreturn" inline="false">
+          <block type="procedures_callnoreturn">
             <mutation name="draw a shape">
               <arg name="sides"/>
               <arg name="length"/>
             </mutation>
           </block>
-          <block type="procedures_callnoreturn" inline="false">
+          <block type="procedures_callnoreturn">
             <mutation name="draw a house">
               <arg name="length"/>
             </mutation>
           </block>
-          <block type="procedures_callnoreturn" inline="false">
+          <block type="procedures_callnoreturn">
             <mutation name="draw a pinwheel">
               <arg name="sides"/>
               <arg name="length"/>

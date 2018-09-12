@@ -275,6 +275,42 @@ function Effects(alpha, blend) {
       pop();
     }
   };
+  this.raining_tacos={
+    tacos: [],
+    size: 50,
+    init: function() {
+      for (var i=0; i < 20; i++) {
+        this.tacos.push({
+          x: randomNumber(20, 380),
+          y: randomNumber(20, 380),
+          rot: randomNumber(0, 359),
+    	  speed: randomNumber(2,5)
+        });
+      }
+    },
+    update: function() {
+      this.size += randomNumber(-5, 5);
+    },
+    draw: function() {
+      if (this.tacos.length < 1) this.init();
+      for(var i=0; i<this.tacos.length; i++){
+        push();
+        var taco = this.tacos[i];
+        translate(taco.x, taco.y);
+        rotate(taco.rot);
+        textAlign(CENTER, CENTER);
+        textSize(this.size);
+        text('taco', 0, 0);
+        taco.y += taco.speed;
+        taco.rot++;
+        if (taco.y > 450) {
+          taco.x = randomNumber(20, 380);
+          taco.y = -50;
+        }
+        pop();
+      }
+    }
+  };
 }
 var bg_effects = new Effects(1);
 var fg_effects = new Effects(0.8);

@@ -23,6 +23,14 @@
           [
             "Rain",
             "\"rain\""
+          ],
+          [
+            "Tacos",
+            "\"raining_tacos\""
+          ],
+          [
+            "Random",
+            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]"
           ]
         ]
       }
