@@ -22,7 +22,7 @@ module Pd
       replace_course: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
       replace_which_course_csp: 'Which existing course or curriculum will CS Principles replace? Mark all that apply.',
       replace_which_course_csd: 'Which existing course or curriculum will CS Discoveries replace? Mark all that apply.',
-      committed_to_diversity: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of  the overall demographics of your school?',
+      committed_to_diversity: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
       understand_fee: 'By checking this box, you indicate that you understand there may be a program fee for the summer workshop your teacher attends.',
       pay_fee: 'If there is a fee for the summer workshop, will your teacher or your school be able to pay for the fee?',
       want_funding: 'Yes, I would like to be considered for funding support.',
