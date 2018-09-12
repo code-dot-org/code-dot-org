@@ -42,11 +42,6 @@ export const Galleries = {
   PRIVATE: 'PRIVATE',
 };
 
-export const publishMethods = {
-  BUTTON: 'button',
-  CHEVRON: 'chevron'
-};
-
 export const featuredProjectTableTypes = {
   current: 'currentFeatured',
   archived: 'archivedUnfeatured'
