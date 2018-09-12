@@ -1,3 +1,5 @@
+require 'cdo/firehose'
+
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
