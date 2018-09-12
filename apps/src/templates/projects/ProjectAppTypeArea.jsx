@@ -7,6 +7,7 @@ import styleConstants from '../../styleConstants';
 import Button from "../Button";
 import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
+import i18n from "@cdo/locale";
 
 const styles = {
   grid: {
@@ -37,7 +38,23 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap'
-  }
+  },
+  viewMoreButtons: {
+    float: "right",
+    marginRight: 22
+  },
+  buttonRightMargin: {
+    marginRight: 20
+  },
+  iconPaddingLeft: {
+    paddingLeft: 6
+  },
+  iconPaddingRight: {
+    paddingRight: 6
+  },
+  clear: {
+    clear: 'both'
+  },
 };
 
 const NUM_PROJECTS_TO_ADD = 12;
@@ -171,22 +188,22 @@ class ProjectAppTypeArea extends React.Component {
     const showViewMore = maxNumProjects >= numProjects || hasOlderProjects;
 
     return (
-      <div style={{float: "right", marginRight: 22}}>
+      <div style={styles.viewMoreButtons}>
         {
           showViewMore &&
           <Button
             onClick={this.loadMore}
             color={Button.ButtonColor.gray}
             icon="plus-circle"
-            text="View more"
-            style={{marginRight: 20}}
+            text={i18n.viewMore()}
+            style={styles.buttonRightMargin}
           />
         }
         <Button
           href="#top"
           color={Button.ButtonColor.gray}
           icon="chevron-circle-up"
-          text="Back to top"
+          text={i18n.backToTop()}
         />
       </div>
     );
@@ -205,12 +222,12 @@ class ProjectAppTypeArea extends React.Component {
             style={styles.viewMore}
             onClick={this.viewMore}
           >
-            {this.props.isDetailView && <i className="fa fa-angle-left" style={{paddingRight: 6}} ></i>}
+            {this.props.isDetailView && <i className="fa fa-angle-left" style={styles.iconPaddingRight} ></i>}
             {this.props.labViewMoreString}
-            {!this.props.isDetailView && <i className="fa fa-angle-right" style={{paddingLeft: 6}} ></i>}
+            {!this.props.isDetailView && <i className="fa fa-angle-right" style={styles.iconPaddingLeft}></i>}
           </span>
         }
-        <div style={{clear: 'both'}}></div>
+        <div style={styles.clear}></div>
         {this.renderProjectCardList(this.props.projectList, this.state.numProjects)}
         {this.props.isDetailView && this.renderViewMoreButtons()}
       </div>
