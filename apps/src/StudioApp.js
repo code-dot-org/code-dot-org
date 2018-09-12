@@ -3005,7 +3005,7 @@ StudioApp.prototype.showRateLimitAlert = function () {
 };
 
 let libraryPreload;
-StudioApp.prototype.loadLibraries_ = function (helperLibraryNames) {
+StudioApp.prototype.loadLibraries_ = function (helperLibraryNames = []) {
   if (!libraryPreload) {
     libraryPreload = Promise.all(helperLibraryNames.map(this.loadLibrary_.bind(this)));
   }
