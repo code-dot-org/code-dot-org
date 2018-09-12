@@ -364,6 +364,7 @@ Craft.initializeAppLevel = function (levelConfig) {
   };
 
   Craft.gameController.loadLevel({
+    isAquaticLevel: levelConfig.isAquaticLevel,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
     groundDecorationPlane: levelConfig.groundDecorationPlane,
@@ -489,6 +490,7 @@ Craft.executeUserCode = function () {
   }
 
   studioApp().playAudio('start');
+  let interpreter;
 
   // Start tracing calls.
   Blockly.mainBlockSpace.traceOn(true);
@@ -513,22 +515,27 @@ Craft.executeUserCode = function () {
       .join("\n") + '\n';
   }
 
+  const resume = callback => () => {
+    callback();
+    interpreter.run();
+  };
+
   const asyncMethods = {
     moveForward: function (callback) {
-      appCodeOrgAPI.moveForward(null, 'Player', callback);
+      appCodeOrgAPI.moveForward(null, 'Player', resume(callback));
     },
     turnLeft: function (callback) {
-      appCodeOrgAPI.turnLeft(null, 'Player', callback);
+      appCodeOrgAPI.turnLeft(null, 'Player', resume(callback));
     },
     turnRight: function (callback) {
-      appCodeOrgAPI.turnRight(null, 'Player', callback);
+      appCodeOrgAPI.turnRight(null, 'Player', resume(callback));
     },
   };
 
   // Run user code.
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-  CustomMarshalingInterpreter.evalWith(code, {
+  interpreter = CustomMarshalingInterpreter.evalWith(code, {
     console: {
       log: console.log,
     },
