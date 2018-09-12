@@ -1,8 +1,23 @@
 import React from 'react';
 import DeleteAccountDialog from './DeleteAccountDialog';
+import {action} from '@storybook/addon-actions';
 
 const PASSWORD = 'MY_PASSWORD';
 const DELETE_VERIFICATION = 'DELETE MY ACCOUNT';
+
+const DEFAULT_PROPS = {
+  isOpen: true,
+  isPasswordRequired: true,
+  checkboxes: ({}),
+  password: PASSWORD,
+  deleteVerification: DELETE_VERIFICATION,
+  onCheckboxChange: action('Checkbox'),
+  onPasswordChange: action('Change password'),
+  onDeleteVerificationChange: action('Verify'),
+  onCancel: action('Cancel'),
+  disableConfirm: false,
+  deleteUser: action('Delete my Account')
+};
 
 export default storybook => {
   storybook
@@ -13,19 +28,9 @@ export default storybook => {
         description: 'Warning message for student account deletion',
         story: () => (
           <DeleteAccountDialog
-            isOpen={true}
+            {...DEFAULT_PROPS}
             isTeacher={false}
-            isPasswordRequired={true}
             warnAboutDeletingStudents={false}
-            checkboxes={({})}
-            password={PASSWORD}
-            deleteVerification={DELETE_VERIFICATION}
-            onCheckboxChange={() => {}}
-            onPasswordChange={() => {}}
-            onDeleteVerificationChange={() => {}}
-            onCancel={() => {}}
-            disableConfirm={false}
-            deleteUser={() => console.log("Delete my Account")}
           />
         )
       },
@@ -34,19 +39,9 @@ export default storybook => {
         description: 'Warning message for teacher account deletion',
         story: () => (
           <DeleteAccountDialog
-            isOpen={true}
+            {...DEFAULT_PROPS}
             isTeacher={true}
-            isPasswordRequired={true}
             warnAboutDeletingStudents={true}
-            checkboxes={({})}
-            password={PASSWORD}
-            deleteVerification={DELETE_VERIFICATION}
-            onCheckboxChange={() => {}}
-            onPasswordChange={() => {}}
-            onDeleteVerificationChange={() => {}}
-            onCancel={() => {}}
-            disableConfirm={false}
-            deleteUser={() => console.log("Delete my Account")}
           />
         )
       },
