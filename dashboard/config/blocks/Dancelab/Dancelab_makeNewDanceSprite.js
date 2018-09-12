@@ -22,6 +22,7 @@ function makeNewDanceSprite(costume, name, location) {
   sprite.speed = 10;
   sprite.sinceLastFrame = 0;
   sprite.dance_speed = 1;
+  sprite.previous_speed = 1;
   sprite.behaviors = [];
 
   // Add behavior to control animation
@@ -38,6 +39,7 @@ function makeNewDanceSprite(costume, name, location) {
         sprite.mirrorX(-sprite.mirrorX());
       } else if (currentFrame === sprite.animation.getLastFrame() && !sprite.animation.looping) {
         changeMove(sprite, sprite.current_move);
+        sprite.dance_speed = sprite.previous_speed;
         sprite.animation.looping = true;
       }
     }

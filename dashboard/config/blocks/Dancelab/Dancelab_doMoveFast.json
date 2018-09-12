@@ -1,8 +1,8 @@
 {
   "category": "Moves",
   "config": {
-    "func": "doMoveOnce",
-    "blockText": "{SPRITE} do move {MOVE} once",
+    "func": "doMoveFast",
+    "blockText": "{SPRITE} do move {MOVE} once [FAST]",
     "args": [
       {
         "name": "SPRITE",
