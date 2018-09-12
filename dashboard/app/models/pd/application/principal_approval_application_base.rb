@@ -50,18 +50,6 @@ module Pd::Application
       self.application_year = year
     end
 
-    def additional_text_fields
-      [
-        [:committed_to_master_schedule],
-        [:replace_course, TEXT_FIELDS[:dont_know_explain], :replace_course_other],
-        [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
-        [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
-        [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
-        [:do_you_approve],
-        [:going_to_teach]
-      ]
-    end
-
     def underrepresented_minority_percent
       sanitize_form_data_hash.select do |k, _|
         [
