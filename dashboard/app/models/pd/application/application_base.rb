@@ -90,11 +90,19 @@ module Pd::Application
         '2 trimesters',
         'Full year'
       ],
+
       school_type: [
         'Public school',
         'Private school',
         'Charter school',
         'Other'
+      ],
+
+      how_heard: [
+        'Code.org Website',
+        'Code.org Email',
+        'Regional Partner website',
+        'Regional Partner Email',
       ]
     }
 
