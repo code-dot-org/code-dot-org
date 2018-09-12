@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
-import experiments from '@cdo/apps/util/experiments';
 import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
@@ -13,7 +12,6 @@ import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjects
 import {
   MAX_PROJECTS_PER_CATEGORY,
   Galleries,
-  publishMethods,
 } from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
   selectGallery,
@@ -22,22 +20,11 @@ import projects, {
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-projects]');
   const projectsData = JSON.parse(script.dataset.projects);
-  const studyGroup = experiments.isEnabled(experiments.CHEVRON_PUBLISH_EXPERIMENT) ? 'publish-chevron' : 'publish-button';
-
-  firehoseClient.putRecord(
-    {
-      study: 'project-publish',
-      study_group: studyGroup,
-      event: 'page-load',
-      user_id: projectsData.userId,
-    }
-  );
 
   registerReducers({projects, publishDialog: publishDialogReducer, deleteDialog: deleteDialogReducer});
   const store = getStore();
@@ -79,55 +66,24 @@ $(document).ready(() => {
       publicGallery);
   });
 
-  // We're going to run an A/B experiment to compare (un)publishing from the
-  // quick actions dropdown and from a button in the published column.
-  // 50% of users will see the chevron variant.
-  // The other 50% of users will see the button variant.
-  // TODO (Erin B.) delete the duplicate table when we
-  // determine the experiment outcome.
+  const personalProjectsUrl = `/api/v1/projects/personal`;
 
-  if (experiments.isEnabled(experiments.CHEVRON_PUBLISH_EXPERIMENT)) {
-    const personalProjectsUrl = `/api/v1/projects/personal`;
+  $.ajax({
+    method: 'GET',
+    url: personalProjectsUrl,
+    dataType: 'json'
+  }).done(personalProjectsList => {
+    store.dispatch(setPersonalProjectsList(personalProjectsList));
+    ReactDOM.render(
+      <Provider store={store}>
+        <PersonalProjectsTable
+          canShare={projectsData.canShare}
+        />
+      </Provider>,
+      document.getElementById('react-personal-projects')
+    );
+  });
 
-    $.ajax({
-      method: 'GET',
-      url: personalProjectsUrl,
-      dataType: 'json'
-    }).done(personalProjectsList => {
-      store.dispatch(setPersonalProjectsList(personalProjectsList));
-      ReactDOM.render(
-        <Provider store={store}>
-          <PersonalProjectsTable
-            canShare={projectsData.canShare}
-            publishMethod={publishMethods.CHEVRON}
-            userId={projectsData.userId}
-          />
-        </Provider>,
-        document.getElementById('react-personal-projects')
-      );
-    });
-
-  } else {
-    const personalProjectsUrl = `/api/v1/projects/personal`;
-
-    $.ajax({
-      method: 'GET',
-      url: personalProjectsUrl,
-      dataType: 'json'
-    }).done(personalProjectsList => {
-      store.dispatch(setPersonalProjectsList(personalProjectsList));
-      ReactDOM.render(
-        <Provider store={store}>
-          <PersonalProjectsTable
-            canShare={projectsData.canShare}
-            publishMethod={publishMethods.BUTTON}
-            userId={projectsData.userId}
-          />
-        </Provider>,
-        document.getElementById('react-personal-projects')
-      );
-    });
-  }
 
   const publishConfirm = document.getElementById('publish-confirm');
 
