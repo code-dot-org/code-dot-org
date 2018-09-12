@@ -2,15 +2,15 @@ default['cdo-jemalloc']['version'] = '5.1.0'
 default['cdo-jemalloc']['checksum'] = '5396e61cc6103ac393136c309fae09e44d74743c86f90e266948c50f3dbb7268'
 default['cdo-jemalloc']['lib'] = '/usr/local/lib/libjemalloc.so.2'
 
-# See: https://github.com/jemalloc/jemalloc/blob/dev/TUNING.md
+# See:
+# https://github.com/jemalloc/jemalloc/blob/dev/TUNING.md
+# http://jemalloc.net/jemalloc.3.html
 # To convert this attributes hash to a malloc_conf string, run:
 # node['cdo-jemalloc']['malloc_conf'].map {|x| x.join(':')}.join(',')
 default['cdo-jemalloc']['malloc_conf'] = {
-  # Enable dynamic thread to arena association based on running CPU.
-  # This has the potential to improve locality, e.g. when thread to CPU affinity is present.
-  #
-  # Suggested: try percpu_arena:percpu or percpu_arena:phycpu if thread migration between processors is expected to be infrequent.
-  percpu_arena: 'percpu',
+  # Maximum number of arenas to use for automatic multiplexing of threads and arenas.
+  # The default is four times the number of CPUs, or one if there is a single CPU.
+  narenas: 2,
 
   # Enabling jemalloc background threads generally improves the tail latency for application threads,
   # since unused memory purging is shifted to the dedicated background threads.
