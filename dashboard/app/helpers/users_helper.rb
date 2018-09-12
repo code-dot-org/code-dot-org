@@ -33,7 +33,15 @@ module UsersHelper
         return
       end
 
-      if existing_account.present?
+      # Move over sections that students follow
+      if user.student? && existing_account
+        Follower.where(student_user_id: existing_account.id).each do |follower|
+          follower.update(student_user_id: user.id)
+        end
+      end
+
+      if existing_account
+        existing_account.destroy!
         log_account_takeover_to_firehose(
           source_user: existing_account,
           destination_user: user,
@@ -42,14 +50,6 @@ module UsersHelper
         )
       end
 
-      # Move over sections that students follow
-      if user.student? && existing_account
-        Follower.where(student_user_id: existing_account.id).each do |follower|
-          follower.update(student_user_id: user.id)
-        end
-      end
-
-      existing_account.destroy! if existing_account
       if user.migrated?
         success = user.add_credential(
           type: provider,

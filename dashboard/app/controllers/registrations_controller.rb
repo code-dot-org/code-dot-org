@@ -76,8 +76,7 @@ class RegistrationsController < Devise::RegistrationsController
       return
     end
     dependent_students = current_user.dependent_students
-    log_account_deletion_to_firehose(current_user, dependent_students)
-    destroy_users(dependent_students << current_user)
+    destroy_users(current_user, dependent_students)
     TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
     return head :no_content
@@ -373,7 +372,6 @@ class RegistrationsController < Devise::RegistrationsController
       study: 'user-soft-delete-audit',
       event: 'initiated-account-deletion',
       user_id: current_user.id,
-      data_string: current_user.provider,
       data_json: {
         user_type: current_user.user_type,
         dependent_user_ids: dependent_users.pluck(:id),
@@ -386,18 +384,20 @@ class RegistrationsController < Devise::RegistrationsController
       FirehoseClient.instance.put_record(
         study: 'user-soft-delete-audit',
         event: 'dependent-account-deletion',
-        user_id: user.id,
-        data_string: user.provider,
+        user_id: user[:id],
         data_json: {
-          user_type: user.user_type,
+          user_type: user[:user_type],
           deleted_by_id: current_user.id,
         }.to_json
       )
     end
   end
 
-  def destroy_users(users)
+  def destroy_users(current_user, dependent_users)
+    users = [current_user] + dependent_users
     user_ids_to_destroy = users.pluck(:id)
     User.destroy(user_ids_to_destroy)
+
+    log_account_deletion_to_firehose(current_user, dependent_users)
   end
 end
