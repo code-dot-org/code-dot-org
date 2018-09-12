@@ -364,6 +364,7 @@ Craft.initializeAppLevel = function (levelConfig) {
   };
 
   Craft.gameController.loadLevel({
+    isAquaticLevel: levelConfig.isAquaticLevel,
     isDaytime: levelConfig.isDaytime,
     groundPlane: levelConfig.groundPlane,
     groundDecorationPlane: levelConfig.groundDecorationPlane,
@@ -391,29 +392,15 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
   switch (levelNumber) {
-    case 1:
-      return ['adventurerLevelOneAssets'];
-    case 2:
-      return ['adventurerLevelTwoAssets'];
-    case 3:
-      return ['adventurerLevelThreeAssets'];
     default:
-      return ['adventurerAllAssetsMinusPlayer'];
+      return ['heroAllAssetsMinusPlayer'];
   }
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
   // After level loads & player starts playing, kick off further asset downloads
-  switch (levelNumber) {
-    case 1:
-      // can disable if performance issue on early level 1
-      return Craft.minAssetsForLevelNumber(2);
-    case 2:
-      return Craft.minAssetsForLevelNumber(3);
-    default:
-      // May want to push this to occur on level with video
-      return ['adventurerAllAssetsMinusPlayer'];
-  }
+  // TODO
+  return [];
 };
 
 Craft.earlyLoadAssetsForLevel = function (levelNumber) {
@@ -503,6 +490,7 @@ Craft.executeUserCode = function () {
   }
 
   studioApp().playAudio('start');
+  let interpreter;
 
   // Start tracing calls.
   Blockly.mainBlockSpace.traceOn(true);
@@ -527,22 +515,37 @@ Craft.executeUserCode = function () {
       .join("\n") + '\n';
   }
 
+  const resume = callback => () => {
+    callback();
+    interpreter.run();
+  };
+
+  const asyncMethods = {
+    moveForward: function (callback) {
+      appCodeOrgAPI.moveForward(null, 'Player', resume(callback));
+    },
+    turnLeft: function (callback) {
+      appCodeOrgAPI.turnLeft(null, 'Player', resume(callback));
+    },
+    turnRight: function (callback) {
+      appCodeOrgAPI.turnRight(null, 'Player', resume(callback));
+    },
+  };
+
   // Run user code.
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-  CustomMarshalingInterpreter.evalWith(code, {
+  interpreter = CustomMarshalingInterpreter.evalWith(code, {
     console: {
       log: console.log,
     },
-    moveForward: function (blockID) {
-      appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID), 'Player');
-    },
-    turnLeft: function (blockID) {
-      appCodeOrgAPI.turnLeft(studioApp().highlight.bind(studioApp(), blockID), 'Player');
-    },
-    turnRight: function (blockID) {
-      appCodeOrgAPI.turnRight(studioApp().highlight.bind(studioApp(), blockID), 'Player');
-    },
+    ...asyncMethods,
+    api: appCodeOrgAPI,
+    getForwardBlockType: () => Craft.gameController.levelModel.getForwardBlockType(),
+    getStandingOnBlockType: () => Craft.gameController.levelModel.groundPlane.getBlockAt(
+      Craft.gameController.getEntity().position).blockType,
+  }, {
+    asyncFunctionList: Object.values(asyncMethods),
   });
 
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
