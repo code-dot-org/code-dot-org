@@ -427,6 +427,7 @@ gl:
       Artist - Nested Loops 6_instruction: "Podes debuxar un hexágono repetindo o\ncódigo do triángulo?"
       Artist - Nested Loops 9_instruction: Debuxa o dente na boca do crocodilo!
       Artist - Nested Loops Assessment 1_instruction: "Usa un bucle aniñado para completar\no debuxo."
+      Artist Autorun Test_instruction: "Usa o bloque \"repita\" para debuxar estes\n3 cadrados."
       Artist Inspiration_instruction: "Actividade libre - Inspiración: agora\naprendiches todo o que necesitas saber para crear un padrón como este! Se esta\nimaxe te inspira tenta facer algo similar. Caso contrario, crea algo\nti mesmo.\\r\n \\r\nQueres saber como se fixo o noso padrón de inspiración? "
       Auto Open Function Editor_instruction: "Podes chamar a funcións dentro\nde outras funcións! Usando a túa función \"forma\" como base, crea 3 formas\nde casa, cada unha 20 pixels maior que a anterior, comezando cunha lonxitude de 50 pixels. Pode ser útil usar un bucle con contador. "
       Bee Recommended Blocks test_instruction: "As flores moradas poden ter 1 ou 0\nnéctar, pero non sabes canto! Ten coidado de non recoller néctar de\nunha flor morada se ela non tivese néctar. Verifica se o néctar é igual a 1\nusando o bloque \"se\"."
@@ -1089,6 +1090,9 @@ gl:
       courseD_artist_binary6_2018_instruction: "Que tira binaria de 6 díxitos, repetida\n11 veces, vai debuxar esta imaxe?"
       courseD_artist_binary7_instruction: "Cal é a menor tira binaria que\npodes repetir para debuxar esta imaxe?"
       courseD_artist_binary7_2018_instruction: "Cal é a menor tira binaria que\npodes repetir para debuxar esta imaxe?"
+      courseD_autorun_binary4_2019_instruction: "Podes debuxar este padrón usando\na repetición dunha tira binaria de 3 díxitos?"
+      courseD_autorun_binary6_2019_instruction: "Que tira binaria de 6 díxitos, repetida\n11 veces, vai debuxar esta imaxe?"
+      courseD_autorun_binary7_2019_instruction: "Cal é a menor tira binaria que\npodes repetir para debuxar esta imaxe?"
       courseD_bee_debugging3_instruction: "Estes bloques estanme incomodando. Corrixe o(s)\nerro(s) para recoller todo o néctar e producir todo o mel."
       courseD_bee_nestedLoops3_instruction: "Recolle todo o néctar de cada flor.\nUsa un bucle aniñado. "
       courseD_bee_nestedLoops5_instruction: "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. "

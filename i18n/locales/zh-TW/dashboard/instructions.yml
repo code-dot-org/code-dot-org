@@ -448,6 +448,7 @@ zh-TW:
       Artist - Nested Loops 6_instruction: 你可以藉由重複畫三角形的程式碼來畫出一個六邊形嗎？
       Artist - Nested Loops 9_instruction: 在鱷魚的嘴內畫出牙齒!
       Artist - Nested Loops Assessment 1_instruction: 用一個巢狀迴圈來完成這個圖案。
+      Artist Autorun Test_instruction: 現在，把這個函式放進迴圈來畫出這 3 個正方形。
       Artist Inspiration_instruction: "自由發揮靈感：你已經學會了所有需要創建這個模式的知識了！如果這個圖形引起了你的聯想，試試畫出一些類似的圖像。要不然，就畫畫你想畫的一些東西。 \\r\n\\r \n想要知道我們的這些創意圖案是怎麼做出來的嗎？ "
       Bergeron Robot Maze1_instruction: '你可以幫我抓住那頑皮的豬嗎？把幾個`移動-向前`積木放到`當運行時`積木的下面，然後點擊「運行」。 '
       Big Game Complete_instruction: 在 CS 代數 - Big Game 專案的完成範例
@@ -1488,6 +1489,11 @@ zh-TW:
       courseD_artist_nestedLoops9_predict1_2018_instruction: "**挑戰：**想的到要怎麼製作出這樣的圖像嗎？"
       courseD_artist_ramp11_instruction: 現在用小藝術家來畫出一個正方形！
       courseD_artist_ramp12_instruction: 使用你學到的方法，在正方形裡頭畫出這個三角形。
+      courseD_autorun_binary4_2019_instruction: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
+      courseD_autorun_binary6_2019_instruction: 用怎樣的六位數的二進制字符串，在重複 11 次後將能畫出這個圖案？
+      courseD_autorun_binary7_2019_instruction: 能讓你重複畫出這個圖案的最短的二進制字符串是什麼？
+      courseD_autorun_binary8_2019_instruction: 完成這些程式來畫出圖案。
+      courseD_autorun_binary8_predict1_2019_instruction: 完成這些程式來畫出圖案。
       courseD_bee_conditionals1_instruction: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。
       courseD_bee_conditionals1_predict1_instruction: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。
       courseD_bee_conditionals1_predict1_2018_instruction: 檢查看看雲裡面是不是有花朵，如果有的話，就採集花蜜。

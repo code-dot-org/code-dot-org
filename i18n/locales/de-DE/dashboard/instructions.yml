@@ -405,6 +405,7 @@ de:
       Artist - Nested Loops 6_instruction: Kannst Du ein Sechseck zeichnen, indem Du den Dreieck-Code in einer Schleife verwendest?
       Artist - Nested Loops 9_instruction: Zeichne die Zähne im Mund des Alligators!
       Artist - Nested Loops Assessment 1_instruction: Verwende eine verschachtelte Schleife um das Design fertigzustellen.
+      Artist Autorun Test_instruction: Verwende den „Wiederholen"-Block, um diese 3 Quadrate zu zeichnen.
       Artist Inspiration_instruction: "Freies Spiel Inspiration: Du hast jetzt alles gelernt, um so ein Muster zu machen! Wenn dich das Bild inspiriert, versuche etwas Ähnliches zu machen. Wenn nicht, mach etwas ganz alleine.\n\nMöchtest du wissen, wie unser Inspirationsmuster gemacht wurde?"
       Auto Open Function Editor_instruction: 'Du kannst Funktionen innerhalb anderer Funktionen aufrufen! Ausgehend von der „Form" -Funktion, erstelle 3 Haus-Formen, von denen jede 20 Pixel größer als die vorherige sein soll. Beginne mit einer Länge von 50 Pixeln. Eine Zähl-Schleife könnte hier hilfreich sein. '
       Bee Recommended Blocks test_instruction: Eine lila Blume kann entweder 1 oder 0 Portion Nektar haben, aber du weißt nicht genau, welche. Achte darauf, nicht von einer lila Blume Nektar zu sammeln, wenn sie keinen hat. Überprüfe, ob die Nektarmenge gleich 1 ist, indem du einen „Wenn“-Baustein benutzt.
@@ -1252,6 +1253,9 @@ de:
       courseD_artist_binary6_2018_instruction: Welche sechsstellige Binärzeichenfolge wird dieses Bild zeichnen, wenn sie 11 Mal wiederholt wird?
       courseD_artist_binary7_instruction: Was ist die kürzeste binäre Zeichenfolge, die du wiederholen kannst, um dieses Bild zu zeichnen?
       courseD_artist_binary7_2018_instruction: Was ist die kürzeste binäre Zeichenfolge, die du wiederholen kannst, um dieses Bild zu zeichnen?
+      courseD_autorun_binary4_2019_instruction: Kannst du dieses Muster zeichnen, indem du eine dreistellige Binärzeichenfolge durchlaufen lässt?
+      courseD_autorun_binary6_2019_instruction: Welche sechsstellige Binärzeichenfolge wird dieses Bild zeichnen, wenn sie 11 Mal wiederholt wird?
+      courseD_autorun_binary7_2019_instruction: Was ist die kürzeste binäre Zeichenfolge, die du wiederholen kannst, um dieses Bild zu zeichnen?
       courseD_bee_debugging3_instruction: Diese Bausteine nerven mich wirklich. Korrigiere den/die Fehler, sammle den ganzen Nektar und erzeuge den ganzen Honig.
       courseD_bee_nestedLoops3_instruction: Sammle den ganzen Nektar von allen Blumen. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops5_instruction: 'Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.'

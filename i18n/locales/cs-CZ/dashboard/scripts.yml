@@ -1459,3 +1459,15 @@ cs:
               name: Pohyb, pohyb
             Your Digital Footprint:
               name: Tvé digitální stopy
+        frozen-2018:
+          stages:
+            Artist:
+              name: Umělec
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Umělec
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Umělec

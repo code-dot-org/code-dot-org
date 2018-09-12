@@ -4,8 +4,6 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import processMarkdown from 'marked';
-import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import FeedbacksList from "./FeedbacksList";
 import TeacherFeedback from "./TeacherFeedback";
@@ -109,7 +107,7 @@ class TopInstructions extends Component {
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    markdown: PropTypes.string,
+    longInstructions: PropTypes.string,
     collapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -117,7 +115,7 @@ class TopInstructions extends Component {
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
-    ttsMarkdownInstructionsUrl:  PropTypes.string,
+    ttsLongInstructionsUrl:  PropTypes.string,
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
@@ -265,7 +263,7 @@ class TopInstructions extends Component {
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
     ];
-    const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
+    const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
 
     // Only display the help tab when there are one or more videos or
@@ -342,8 +340,7 @@ class TopInstructions extends Component {
                 <div>
                   <Instructions
                     ref="instructions"
-                    renderedMarkdown={processMarkdown(this.props.markdown,
-                      { renderer })}
+                    longInstructions={this.props.longInstructions}
                     onResize={this.adjustMaxNeededHeight}
                     inTopPane
                   />
@@ -395,11 +392,11 @@ export default connect(state => ({
   expandedHeight: state.instructions.expandedHeight,
   maxHeight: Math.min(state.instructions.maxAvailableHeight,
     state.instructions.maxNeededHeight),
-  markdown: state.instructions.longInstructions,
+  longInstructions: state.instructions.longInstructions,
   noVisualization: state.pageConstants.noVisualization,
   collapsed: state.instructions.collapsed,
   documentationUrl: state.pageConstants.documentationUrl,
-  ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+  ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
   levelVideos: state.instructions.levelVideos,
   mapReference: state.instructions.mapReference,
   referenceLinks: state.instructions.referenceLinks,

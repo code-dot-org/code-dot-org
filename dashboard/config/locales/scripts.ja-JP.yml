@@ -1427,3 +1427,15 @@ ja:
               name: あなたのデジタルフットプリント
             'Persistence & Frustration: Stevie and the Big Project':
               name: スティーヴィーと大きなプロジェクト
+        frozen-2018:
+          stages:
+            Artist:
+              name: アーティスト
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: アーティスト
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: アーティスト

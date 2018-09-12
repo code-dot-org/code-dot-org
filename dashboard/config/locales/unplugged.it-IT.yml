@@ -491,5 +491,17 @@ it:
           Code.org e serve per aiutare gli studenti a capire il processo di condivisione
           e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
           di essere corretti con coloro che danno vita ai contenuti creativi.
+      courseE_unplugged_CnC_2018:
+        title: Condivisione Digitale
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
+          Code. org e serve per aiutare gli studenti a capire le sfide e i benefici
+          del rispetto della prprietà e del copyright, in particolare negli ambienti
+          digitali. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti
+          degli artisti come una parte importante dell'essere un cittadino digitale
+          etico.
       RelayProgramming_2018:
         title: Programmazione a Staffetta
+        desc: 'Questa attività inizierà con una breve lezione sulla correzione degli
+          errori (debugging) e sulla persistenza, poi partirà una corsa contro il
+          tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere
+          un programma un''istruzione alla volta.'

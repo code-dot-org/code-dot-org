@@ -408,6 +408,7 @@ tr:
           göndereceğiz ve oturum açtığınız Code.org eposta adresinizi ileteceğiz."
       courseB_unplugged_MRF_2018:
         title: Robot dostlarım
+        desc: Arkadaşların için kod yazarak programlamayı öğren!
       PlantASeed_2018:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
         desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın
@@ -473,5 +474,7 @@ tr:
           Öğrenciler verinin farklı biçimlerde temsil edilebileceğini öğrenirler.
       MoveItMoveIt_2018:
         title: Çabuk, Çabuk Taşı
+      courseE_unplugged_CnC_2018:
+        title: Dijital Paylaşım
       RelayProgramming_2018:
         title: Röle Programlama

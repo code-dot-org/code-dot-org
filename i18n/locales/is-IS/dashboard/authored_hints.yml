@@ -309,6 +309,8 @@ is:
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Hvert atriði mun þurfa sína eigin `meðan` lykkju.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Listamaðurinn þarf að snúa um 120 gráður á milli ferninga til að teikna þetta mynstur.
       Artist Inspiration_authored_hint:
         brush_width: Við stilltum þykkt pensils á 1 og litinn á blátt áður en við gerðum nokkuð annað.
         double_loop: Prófaðu að nota `frá` lykkju innan í `endurtaka` lykkju.
@@ -5216,6 +5218,28 @@ is:
         courseD_artist_ramp12_a: Þú getur annað hvort teiknað ferninginn fyrst, síðan þríhyrninginn, eða öfugt!
         courseD_artist_ramp12_b: Prófaðu að skipta þrautinni í 2 hluta og nota 2 lykkjur.
         courseD_artist_ramp12_c: Þú getur notað fellilistann á `snúa` kubbunum til að sjá hvaða horn þú þarft að nota!
+      courseD_autorun_binary2_2019_authored_hint:
+        courseD_artist_binary2_a: Smelltu bara á `Keyra` til að sjá þetta forrit virka!
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: Eitt af fjórum tvíundarmynstrunum í verkfærakassanum mun leysa þessa þraut!
+        courseD_artist_binary3_b: Ekki hræðast að gera mistök! Prófaðu að skrifa tvíundir og keyra svo kóðann til að sjá hvað gerist. Prófaðu þig áfram.
+      courseD_autorun_binary4_2019_authored_hint:
+        courseD_artist_binary4_a: Skoðaðu fyrstu þrjá reitina í efstu röðinni. Gætir þú endurtekið þessa þrjá til að fá allt mynstrið?
+        courseD_artist_binary4_b: Ekki hræðast að gera mistök! Prófaðu að skrifa tvíundir og keyra svo kóðann til að sjá hvað gerist. Prófaðu þig áfram.
+      courseD_autorun_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: Prófaðu að keyra kóðann fyrst til að sjá hvað þú ert með í höndunum.
+        courseD_artist_binary5_b: Þú þarft aðeins að víxla tveimur röðum til að búa til bros.
+        courseD_artist_binary5_c: Ef þú átt í erfiðleikum með þraut er ráð að skrifa tvíundarraðirnar á blað og leita svo að endurtekningum.
+      courseD_autorun_binary6_2019_authored_hint:
+        courseD_artist_binary6_a: Byrjaðu efst til vinstri. Hve langt þarftu að lesa þangað til mynstrið fer að endurtaka sig?
+        courseD_artist_binary6_b: Þú getur byggt upp tvíundarstrenginn bita fyrir bita og prófað þig áfram!
+      courseD_autorun_binary7_2019_authored_hint:
+        courseD_artist_binary7_a: Byrjaðu efst til vinstri. Hve langt þarftu að lesa þangað til mynstrið fer að endurtaka sig?
+        courseD_artist_binary7_b: Ekki hræðast að gera mistök! Prófaðu að skrifa tvíundir og keyra svo kóðann til að sjá hvað gerist. Prófaðu þig áfram.
+      courseD_autorun_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: Spírallinn getur verið þvælinn. Skoðaðu hverja lárétta línu fyrir sig til að skapa þessa hönnun.
+        courseD_artist_binary8_b: Prófaðu að keyra kóðann fyrst til að sjá hvað þú ert með í höndunum.
+        courseD_artist_binary8_c: Ekki hræðast að gera mistök! Prófaðu að skrifa tvíundir og keyra svo kóðann til að sjá hvað gerist. Prófaðu þig áfram.
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_b: Þú getur notað `endurtaka` lykkju eða `meðan slóð framundan` til að fara í gegnum þetta völundarhús.
         courseD_bee_conditionals2_c: Þú þarft ekki að athuga með býkúpur. Undir skýi eru annað hvort blóm eða ekkert.

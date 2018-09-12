@@ -275,7 +275,7 @@ zh-CN:
       Alien Defender_markdown_instruction: "**项目想法**: 在游戏实验室创建一个防守游戏！"
       Alien Defender_2018_markdown_instruction: "**项目想法**: 在游戏实验室创建一个防守游戏！"
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_markdown_instruction': "<img\nalign=\"right\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"\nhspace=\"20\">\\r\n#任务1： 做一个3x5的字母 \"A\"\\r\n从试着用像素化的小工具来重建3x5的字母\"A\"开始\\r\n\\r\n这幅图从*不正确*的维度开始的。你的第一个任务是将第二个字节设置成5，即：0000 0101，然后你能开始键入像素数据来创建A。\\r            "
-      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction': "# 像素: 任务 3 \\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20> \\r\n* * 方向: ** 我们开始让你看麦迪在视频中创建的4x4 图像.\\r\n\\r\n您的任务是用 *每像素12位* 来填充 4x4 网格的颜色。最后的结果应该看起来像是 (但不完全一样) 显示在右边的图像。 \\r\n\\r\n有以下要求: \\r\n \\r\n\n* 第1行-用红色填充阴影。\\r\n* 第2行-填充绿色阴影。\\r\n* 第3行-填充蓝色阴影。\\r\n* 第4行-填充灰色阴影。\\r\n"
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction': "# 像素: 任务 3 \n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20> \n* * 方向: ** 开始先看麦迪在视频中创建的 4x4 图像。\n\n任务是用 *每像素12位* 来填充 4x4 网格的颜色。最后的结果应该看起来像是 (但不完全一样) 显示在右边的图像。 \n\n有以下要求: \n \n\n* 第1行-用红色填充阴影。\n* 第2行-填充绿色阴影。\n* 第3行-填充蓝色阴影。\n* 第4行-填充灰色阴影。\n"
       'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': "#\n颜色像素: 任务 1 \n** 方向: **\n\n* 我们请您以玛蒂创建的 4x2 图像开始， 但我们已经把最后两个方块拿掉。\n* 找到丢失的两个颜色并对其进行编码来完成图像。\n"
       AppLab Intro 1 - Add Button_markdown_instruction: "# 开始-添加一个按钮\\r\n\\r\n你需要主屏幕上有一个按钮来进入你的新屏幕。您可以通过两种方式来制作一个新按钮。\\r\n\\r\n1. 如果你喜欢的 \"狗\" 按钮的风格, 你可以做一个副本。单击该按钮, 然后单击 \"复制\"。\\r\n\\t![](https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10 AM.png)\\r\n\\r\n2.也可以从头开始，通过从 \"设计工具箱\" 中拖进新按钮来制作。\\r\n\\r\n\\t![](https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09 AM.png) \\r\n\\r\n3. 单击并拖动新按钮到你所需的位置. \\r\n \\r\n3.\n一旦你有一个新的按钮，给它一个清楚的名称, \"猫按钮\"。您也可以将改为 \"猫\"!\\r\n\\r\n\\t![](https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14 AM.png)\\r\n\\r\n4.还有很多其他的方法可以改变你的按钮的外观。使用完整的选项菜单进行试验. \n5. 一旦你做完了，运行你的应用程序来确保你的按钮出现。然后单击 \"完成\" 并继续学习如何使您的按钮真正工作。"
       AppLab Intro 1 - Add Event_markdown_instruction: "# 开始- onEvent（当事件发生时）\\r\n\\r\n你回到了 \"代码模式\"。您会发现这个应用程序中已经有了一些代码。此`onEvent()`（当事件发生时）模块在单击 \"狗按钮\" 时运行一些代码。您需要第二个`onEvent()`（当事件发生时）模块来使按钮正常工作。有两种方法可以做到这一点. \\r\n\\r\n1. 从代码模式中, 您可以把模块拉进来\\r\n\\r\n\\t![](https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56 AM.png) \\r\n \\r\n2. 从设计模式中, 您的按钮有一个 \"事件\" 选项卡. 单击 \"插入并显示代码\" 来添加代码。\\r\n\\r\n\\t![](https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18 AM.png)\\r\n\\r\n3. 运用下拉, 以确保您正在使事件回应 \"猫按钮\"。\\r\n\\r\n\\t![](https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03 AM.png) \\r\n\\r\n4. `setScreen()`（设置屏幕）模块更改屏幕。将此块拖到`onEvent()`（当事件发生时）模块里, 然后从列表中选择您的 \"猫屏幕\"。\\r\n\\r\n\\t![](https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02 AM.png)\\r\n\\r\n5. 运行您的应用程序。如果一切正常, 当你点击它的时候，你的猫按钮现在应该带你到你的猫屏幕, 。当您准备好，继续学习如何添加声音到您的应用程序!"
@@ -794,6 +794,7 @@ zh-CN:
       Applab AllTheThings ResourcesTab AllResources_markdown_instruction: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       Applab AllTheThings ResourcesTab MapReference_markdown_instruction: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
       Applab AllTheThings ResourcesTab ReferenceLinks_markdown_instruction: "<img\nsrc=\"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\"\nalign=right>\\r\n\\r\n只用4个乌龟命令，在应用实验室写代码来完成下面每个画图挑战。目标是用尽可能高效的代码，只用提供的命令来解决问题。\\r\n\\r\n\"高效\"的意思是什么？在计算机科学中，根据不同的出发点，这意味着不同的事情。在这些挑战上，用你觉得最好的方法来解决，我们会在最后来提出关于效率的问题。\\r\n\\r\n<img src=\"https://images.code.org/d26ed114448c5ffe75a75ed761fab5f0-image-1447888033281.gif\"\nalign=right>\\r\n# 这样做：\\r\n用尽可能高效的办法在乌龟的左前方画一个1x1的正方形。程序在停止时，乌龟应该在出发的位置，并面朝原来的方向。\\r\n\\r\n一旦你觉得找到了解决方案，点击完成 - 它会在你运行了程序之后出现。"
+      Artist Autorun Test_markdown_instruction: 现在，将函数放到循环里来画这三个正方形。
       Artist Inspiration_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！\\r\n\\r\n如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 \n\\r\n\\r\n注意：我们已经用`set alpha`（设置透明度）模块来让花瓣慢慢淡出。"
       Bergeron Robot Maze1_markdown_instruction: "可以帮我抓住这只顽皮的猪吗？\\r\n\\r\n在“当运行时”模块下放几个“向前移动”的模块，然后点击“运行”。 "
       CDU U6 Playground Sound Board_markdown_instruction: |-
@@ -1358,6 +1359,27 @@ zh-CN:
         用RGB大概能组合出一千六百万种不同的颜色。
         </p></details>
         </div>
+      CSD U2 RGB others_2018_markdown_instruction: |-
+        # 春天和秋天的颜色
+        
+        选择春天和秋天颜色的RBG值。
+        
+        * 点击"运行"来启动小部件。
+        * 调节小部件的水平值，直到找到喜欢的春天的颜色，然后在活动指南上写下这些值。
+        * 用同样的方法为秋天找到颜色。会在下个活动中用到这些RBG值。
+        
+        
+        <div style="font-size: 16px">
+        <br />
+        <details><summary>**哪里能看到所有颜色类型的范围？**</summary>
+        可以在 <a href="http://www.w3schools.com/colors/colors_picker.asp" target="_new">W3Schools - HTML颜色选择器</a> 找到可选择的很多颜色。</details>
+        <details>
+        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
+        <details>
+        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
+        </div>
       CSD U2 RGB summer_2018_markdown_instruction: |-
         # 夏天的颜色
         
@@ -1378,26 +1400,26 @@ zh-CN:
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
       CSD U2 RGB winter_2018_markdown_instruction: |-
-        # 冬天的颜色\r
-        \r
-        在接下来的几关中，你会为一个网站找到季节的颜色。这里，你需要找到冬天蓝色的RGB值。r
-        \r
-        * 点击"运行"来启动这个小部件。\r
-        * 调节小部件下的水平值，让它的颜色时冬天的蓝色。\r
-        * 将RGB值写到你的活动指南里。你会在下一个活动中用到它们。\r
-        \r
-        \r
+        # 冬天的颜色
+        
+        在接下来的几关中，你会为一个网站找到季节的颜色。这里，你需要找到冬天蓝色的RGB值。
+        
+        * 点击"运行"来启动这个小部件。
+        * 调节小部件下的水平值，让它的颜色时冬天的蓝色。
+        * 将RGB值写到你的活动指南里。你会在下一个活动中用到它们。
+        
+        
         <div
-        style="font-size: 16px">\r
-        <br />\r
-        <details><summary>**如何让颜色变浅?**</summary>\r
-        <p>为了让颜色变浅，需要让它更淡（增加滑块的水平值)。如果你已经将蓝光增加到了最大值，你需要增加更多的红色和绿色来让蓝色更淡。</p></details>\r
-        <details>\r
-        <summary>**为什么红色和绿色能组合出黄色？**</summary>\r
-        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>\r
-        <details>\r
-        <summary>**我能用RGB组合出多少种颜色？**</summary>\r
-        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>\r
+        style="font-size: 16px">
+        <br />
+        <details><summary>**如何让颜色变浅?**</summary>
+        <p>为了让颜色变浅，需要让它更淡（增加滑块的水平值)。如果你已经将蓝光增加到了最大值，你需要增加更多的红色和绿色来让蓝色更淡。</p></details>
+        <details>
+        <summary>**为什么红色和绿色能组合出黄色？**</summary>
+        <p>当你用颜料画画时，红色和绿色混合出棕色，但RGB颜色用来直接发光，而不是颜料的反光，因此混合起来的颜色是完全不同的。RGB用_加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色当你将这三个三原色（红绿蓝）混合到一起，就会出现白色。了解更多知识，可以打开<a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">维基百科 - 加色法</a></p> </details>
+        <details>
+        <summary>**我能用RGB组合出多少种颜色？**</summary>
+        <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
       CSD U2 add content_markdown_instruction: |
         # 添加 HTML\r
@@ -1593,18 +1615,17 @@ zh-CN:
         * 与另一组对比看看页面是否相同。\r
         
       CSD U2 challenge_2018_markdown_instruction: |
-        # 挑战\r
-        \r
-        在开始这一挑战之前与您的老师进行核对。\r
-        \r
-        此页仅完成了一部分，并且有一些 bug。幸运的是, 有些注释应该能帮助你按照作者的意图来完成这个页面。\r
-        \r
-        # 这样做\r
-        \r
-        * 与您的伙伴一起查看该代码, 并讨论该页面应是什么样子。\r
-        * 请共同完成页面, 注意格式化。\r
-        * 与另一组对比看看页面是否相同。\r
+        # 挑战
         
+        在开始这一挑战之前与老师确认一下。
+        
+        此页仅完成了一部分，并且有一些缺陷。幸运的是, 有些注释应该能帮助你按照作者的意图来完成这个页面。
+        
+        # 这样做
+        
+        * 与您的伙伴一起查看该代码, 并讨论该页面应是什么样子。
+        * 请共同完成页面, 注意格式化。
+        * 与另一组对比看看页面是否相同。
       CSD U2 classes modify_markdown_instruction: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -2032,118 +2053,110 @@ zh-CN:
       CSD U2 layout style bgcolor_2018_markdown_instruction: |2
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**代码如何起作用？**</summary>\r
-        这是让页面背景变成蓝色的代码：\r
-        \r
+        markdown="1">
+        <details>
+        <summary>**代码如何起作用？**</summary>
+        这是让页面背景变成蓝色的代码：
+        
         <pre>body
-        {\r
-          background-color: lightblue;\r
-        }</pre>\r
-        \r
-        * `body`是一个_选择器_。它指定了哪些元素应该遵循花括号里的规则。在这里，body（正文）元素是整个页面。\r
-        * `background-color: lightblue;`是让整个页面变成淡蓝色的规则。\r
-         * `background-color`（背景-颜色）是_属性_。它解释了这条是什么规则。在这里，表示背景的颜色。\r
-         * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。\r
-        </details>\r
-        <details>\r
-        <summary>**我能在CSS中使用什么颜色？**</summary>\r
+        {
+          background-color: lightblue;
+        }</pre>
+        
+        * `body`是一个_选择器_。它指定了哪些元素应该遵循花括号里的规则。在这里，body（正文）元素是整个页面。
+        * `background-color: lightblue;`是让整个页面变成淡蓝色的规则。
+         * `background-color`（背景-颜色）是_属性_。它解释了这条是什么规则。在这里，表示背景的颜色。
+         * `lightblue`是_值_。它解释了这条规则会被怎么应用，在这里，表示背景的淡蓝色。
+        </details>
+        <details>
+        <summary>**我能在CSS中使用什么颜色？**</summary>
         CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
         - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS正确的颜色值</a>查看更多信息。\r
-        </details>\r
-        <details>\r
-        <summary>**`background-color`属性做了什么？**</summary>\r
+        - CSS正确的颜色值</a>查看更多信息。
+        </details>
+        <details>
+        <summary>**`background-color`属性做了什么？**</summary>
         `background-color`属性决定了一个元素的背景颜色。可以在<a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools
-        - CSS background-color 属性</a>查看关于这个属性的更多信息。\r
-        </details>\r
-        <details>\r
-        <summary>**如果页面里的元素有着与body不同的背景颜色会怎样？**</summary>\r
-        你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是样式表？**</summary>\r
-        样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。\r
-        </details>\r
-        <details>\r
-        <summary>**CSS是什么？**</summary>\r
-        CSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。\r
-        \r
-        \r
-        这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：\r
-        \r
+        - CSS background-color 属性</a>查看关于这个属性的更多信息。
+        </details>
+        <details>
+        <summary>**如果页面里的元素有着与body不同的背景颜色会怎样？**</summary>
+        你可以通过为`p`标签增加一个`background-color`规则来寻找答案。这个段落会有`p`标签上的颜色，而页面的剩余部分会遵循`body`标签的规则。
+        </details>
+        <details>
+        <summary>**什么是样式表？**</summary>
+        样式表是一个控制网页如何显示的文档。外部样式表会作为单独的文件，并被链接到HTML页面上。
+        </details>
+        <details>
+        <summary>**CSS是什么？**</summary>
+        CSS是一个控制网站上的内容如何显示的语言。它通过规则集（rule-set）来改变页面的外观。每个规则集都有一个选择器（selector），它会指定页面上的哪些元素会被影响，以及包含用来解释如何显示元素的规则。 每条规则由一个属性和属性值组成。
+        
+        
+        这是一个规则集的例子，它让`h2`标签里的文本成为蓝色，并采用了草书：
+        
         <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        </pre>\r
-        \r
-        在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。\r
-        </details>\r
-        </div>\r
-        \r
-        #
-        背景颜色\r
-        \r
-        * 在岩石表中找到让整个页面背景是蓝色的代码。\r
-        * 改动代码，让页面成为不同的颜色。\r
+        {
+           color: blue;
+           font-family: cursive;
+        </pre>
+        
+        在这个例子中，`h2`是选择器，`color`和`font-family`是属性，而`blue`和`cursive`是对应属性的值。
+        </details>
+        </div>
+        
+        # 背景颜色
+        
+        * 在岩石表中找到让整个页面背景是蓝色的代码。
+        * 改动代码，让页面成为不同的颜色。
         * 试着只改动这些段落的背景颜色。
       CSD U2 layout style border_2018_markdown_instruction: |2
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**我能在CSS里使用什么颜色？**</summary>\r
+        markdown="1">
+        <details>
+        <summary>**我能在CSS里使用什么颜色？**</summary>
         CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
         - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS正确的颜色值</a>查看更多信息。\r
-        </details>\r
-        <details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
-        这是实现图片边框的代码：\r
-        \r
-        <pre>img {\r
-          border-color: saddlebrown;\r
-          border-width:
-        4px;\r
-          border-style: solid;\r
-          border-radius: 10px;\r
-        }</pre>\r
-        \r
+        - CSS正确的颜色值</a>查看更多信息。
+        </details>
+        <details>
+        <summary>**这些代码是如何起作用的？**</summary>
+        这是实现图片边框的代码：
+        
+        <pre>img {
+          border-color: saddlebrown;
+          border-width: 4px;
+          border-style: solid;
+          border-radius: 10px;
+        }</pre>
+        
         *
-        `img`是一个_选择器_。它指定了哪些元素上会应用花括号里的规则，在这里，指定的是图片。\r
+        `img`是一个_选择器_。它指定了哪些元素上会应用花括号里的规则，在这里，指定的是图片。
         * `border-color:
-        saddlebrown;`,`border-width: 4px;`,`border-style: solid;`，和`border-radius:
-        10px;`是制作边框的规则。\r
-        </details>\r
-        <details>\r
-        <summary>**`border-style`（边框-样式）属性有什么用？**</summary>\r
-        `border-style`属性决定了元素使用什么种类的边框（实线、点线，等等）。可以阅读<a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools
-        - CSS border-style属性</a>了解更多。\r
-        </details>\r
-        <details>\r
-        <summary>**`border-radius`属性有什么用？**</summary>\r
+        saddlebrown;`,`border-width: 4px;`,`border-style: solid;`，和`border-radius: 10px;`是制作边框的规则。
+        </details>
+        <details>
+        <summary>**`border-style`（边框-样式）属性有什么用？**</summary>
+        `border-style`属性决定了元素使用什么种类的边框（实线、点线，等等）。可以阅读<a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style属性</a>了解更多。
+        </details>
+        <details>\
+        <summary>**`border-radius`属性有什么用？**</summary>
         `border-radius`属性决定了元素角上的圆弧的半径。大一点的半径会形成大一点的，软一点的曲线。零半径意味着正常的直角。可以阅读<a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools
-        - CSS3 border-radius属性</a>了解更多。\r
-        </details>\r
-        <details>\r
-        <summary>**`float`属性有什么用？**</summary>\r
-        `float`属性会让元素"浮动"，意思是这个元素会往某个方向流动一点。如果`float`是`left`（左），那么元素会往左边浮动，并且它之后的元素会在它右边显示出来。如果`float`值是`right`（右），那么元素会往右边浮动，它之后的元素会在它左边显示出来。可以阅读<a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools
-        - CSS float 属性</a>了解更多。\r
-        </details>\r
-        </div>\r
-        \r
-        # 边框\r
-        \r
-        *
-        在样式表中找到设置图片边框颜色和宽度的规则。\r
-        *
-        改变边框的颜色和宽度。\r
-        * 试试不同的边框样式。\r
-          * 从`dotted`, `dashed`, `solid`, 和`double`中选择。\r
-        *
-        将边框应用到另一种页面元素上，比如某个标题或段落。
+        - CSS3 border-radius属性</a>了解更多。
+        </details>
+        <details>
+        <summary>**`float`属性有什么用？**</summary>
+        `float`属性会让元素"浮动"，意思是这个元素会往某个方向流动一点。如果`float`是`left`（左），那么元素会往左边浮动，并且它之后的元素会在它右边显示出来。如果`float`值是`right`（右），那么元素会往右边浮动，它之后的元素会在它左边显示出来。可以阅读<a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float 属性</a>了解更多。
+        </details>
+        </div>
+        
+        # 边框
+        
+        * 在样式表中找到设置图片边框颜色和宽度的规则。
+        * 改变边框的颜色和宽度。
+        * 试试不同的边框样式。
+        * 从`dotted`, `dashed`, `solid`, 和`double`中选择。
+        * 将边框应用到另一种页面元素上，比如某个标题或段落。
       CSD U2 layout style freeplay - OLD_markdown_instruction: |-
         # 客人网站\r
         \r
@@ -2168,43 +2181,39 @@ zh-CN:
         \r
         \r
         如果你从列表中用了至少三种属性，你可以浏览一下其它的CSS属性了，并将它们加到你的关于我页面中。
-      CSD U2 layout style margin_2018_markdown_instruction: "<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**这些代码如何起作用？**</summary>\\r\n这是在图片周围产生一定宽度的空白的代码：\\r\n\\r\n<pre>img\n{\\r\n\\tmargin: 10px;\\r\n}</pre>\\r\n\\r\n* `img`是_选择器_ 。它指定了元素必须遵循花括号里的规则，在这里是图片。\\r\n* `margin: 10px;`是一条规则，它会在图片周围留出10像素的空间。\\r\n</details>\\r\n<details>\\r\n<summary>**`margin`属性有什么用？**</summary>\\r\n`margin`（边缘）属性决定了图片周围有多少空间。大多数情况下，需要用像素来定义边缘属性。阅读<a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools\n- CSS margin 属性</a>来了解更多。\\r\n</details>\\r\n<details>\\r\n<summary>**`px`是什么意思？什么是像素？**</summary>\\r\nPixel（像素）的缩写是`px`，这是在CSS中丈量元素的单位。这是屏幕上的一个点的尺寸。\\r\n</details>\\r\n</div>\\r\n# 边缘\\r\n\\r\n边缘指定了一个元素周围应该有多少空间。\\r\n\\r\n* 在`img`规则集中找到`margin`属性。\\r\n* 将边缘改大点，然后和同伴讨论一下影响。\\r\n* 改变另一个元素类型，并也给它加上边缘属性。"
+      CSD U2 layout style margin_2018_markdown_instruction: "<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>**这些代码如何起作用？**</summary>\n这是在图片周围产生一定宽度的空白的代码：\n\n<pre>img\n{\n\\tmargin: 10px;\n}</pre>\n\n* `img`是_选择器_ 。它指定了元素必须遵循花括号里的规则，在这里是图片。\n* `margin: 10px;`是一条规则，它会在图片周围留出10像素的空间。\n</details>\n<details>\n<summary>**`margin`属性有什么用？**</summary>\n`margin`（边缘）属性决定了图片周围有多少空间。大多数情况下，需要用像素来定义边缘属性。阅读<a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools\n- CSS margin 属性</a>来了解更多。\n</details>\n<details>\n<summary>**`px`是什么意思？什么是像素？**</summary>\nPixel（像素）的缩写是`px`，这是在CSS中丈量元素的单位。这是屏幕上的一个点的尺寸。\n</details>\n</div>\n# 边缘\n\n边缘指定了一个元素周围应该有多少空间。\n\n* 在`img`规则集中找到`margin`属性。\n* 将边缘改大点，然后和同伴讨论一下影响。\n* 改变另一个元素类型，并也给它加上边缘属性。"
       CSD U2 layout style sample_2018_markdown_instruction: |2
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**`body`选择器做了什么？**</summary>\r
-        因为网页的所有内容都在`body`（正文）标签里，正文选择器能为网页中所有内容应用样式规则。\r
-        </details>\r
-        <details>\r
-        <summary>**`border-style`属性有什么用？ **</summary>\r
+        markdown="1">
+        <details>
+        <summary>**`body`选择器做了什么？**</summary>
+        因为网页的所有内容都在`body`（正文）标签里，正文选择器能为网页中所有内容应用样式规则。
+        </details>
+        <details>
+        <summary>**`border-style`属性有什么用？ **</summary>
         `border-style`属性决定了元素使用什么种类的边框（实线、点线，等等）。可以阅读<a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools
-        - CSS border-style属性</a>了解更多。\r
-        </details>\r
-        <details>\r
-        <summary>**`border-radius`属性有什么用？**</summary>\r
-        `border-radius`属性决定了元素角上的圆弧的半径。大一点的半径会形成大一点的，软一点的曲线。零半径意味着正常的直角。可以阅读<a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools
-        - CSS3 border-radius属性</a>了解更多。\r
-        </details>\r
-        <details>\r
-        <summary>**`float`属性有什么用？**</summary>\r
-        `float`属性会让元素"浮动"，意思是这个元素会往某个方向流动一点。如果`float`是`left`（左），那么元素会往左边浮动，并且它之后的元素会在它右边显示出来。如果`float`值是`right`（右），那么元素会往右边浮动，它之后的元素会在它左边显示出来。可以阅读<a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools
-        - CSS float 属性</a>了解更多。\r
-        </details>\r
-        </div>\r
-        \r
-        # 布局和样式\r
-        \r
-        *
-        浏览一下下面网页的新样式。\r
-        * 打开样式表\r
-        *
-        和你的伙伴讨论一下，你认为CSS代码中的哪部分让页面显示得不同。\r
-         * 如何让整个页面变蓝？\r
-         * 如何让图片放在所有内容的左边？\r
-         * 什么让图片的角是圆的？\r
-        \r
+        - CSS border-style属性</a>了解更多。
+        </details>
+        <details>
+        <summary>**`border-radius`属性有什么用？**</summary>
+        `border-radius`属性决定了元素角上的圆弧的半径。大一点的半径会形成大一点的，软一点的曲线。零半径意味着正常的直角。可以阅读<a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius属性</a>了解更多。
+        </details>
+        <details>
+        <summary>**`float`属性有什么用？**</summary>
+        `float`属性会让元素"浮动"，意思是这个元素会往某个方向流动一点。如果`float`是`left`（左），那么元素会往左边浮动，并且它之后的元素会在它右边显示出来。如果`float`值是`right`（右），那么元素会往右边浮动，它之后的元素会在它左边显示出来。可以阅读<a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float 属性</a>了解更多。
+        </details>
+        </div>
+        
+        # 布局和样式
+        
+        * 浏览一下下面网页的新样式。
+        * 打开样式表。
+        * 和你的伙伴讨论一下，你认为CSS代码中的哪部分让页面显示得不同。
+         * 如何让整个页面变蓝？
+         * 如何让图片放在所有内容的左边？
+         * 什么让图片的角是圆的？
+        
         在下一关中，你会更改并添加这个页面中的新样式。
       CSD U2 link demo_markdown_instruction: |-
         # 制作多个网页的网站\r
@@ -2556,112 +2565,110 @@ zh-CN:
       CSD U2 text style decoration_2018_markdown_instruction: |2
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
-        这是让`h1`元素有下划线的代码：\r
-        \r
-        <pre>h1 {\r
+        markdown="1">
+        <details>
+        <summary>**这些代码是如何起作用的？**</summary>
+        这是让`h1`元素有下划线的代码：
+        
+        <pre>h1 {
           text-decoration:
-        underline;\r
-        }</pre>\r
-        \r
-        * `h1`是_选择器_。它指定了哪些元素要使用花括号里的规则。这里的`p`表示段落（paragraph）。\r
-        * `text-decoration: underline;`是一条规则，它能让`h1`标签里的文本有下划线。\r
-         * `text-decoration`是_属性_。它解释了这是什么规则，在这里，表示用什么修饰。\r
-         * `underline`是_值_。它解释了这条规则如何应用，在这里，表示用下划线。\r
-        </details>\r
-        <details>\r
-        <summary>**文本修饰都有什么可用的值？**</summary>\r
+        underline;
+        }</pre>
+        
+        * `h1`是_选择器_。它指定了哪些元素要使用花括号里的规则。这里的`p`表示段落（paragraph）。
+        * `text-decoration: underline;`是一条规则，它能让`h1`标签里的文本有下划线。
+         * `text-decoration`是_属性_。它解释了这是什么规则，在这里，表示用什么修饰。
+         * `underline`是_值_。它解释了这条规则如何应用，在这里，表示用下划线。
+        </details>
+        <details>
+        <summary>**文本修饰都有什么可用的值？**</summary>
         可选的项目有"underline", "overline", 和"line-through"。你可以阅读<a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools
-        - CSS text-decoration 属性</a>来了解更多。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么我要所有这些符号？**</summary>\r
-        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是样式表？**</summary>\r
-        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
-        </details>\r
-        <details>\r
-        <summary>**什么是CSS？**</summary>\r
-        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
-        \r
-        \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
-        \r
+        - CSS text-decoration 属性</a>来了解更多。
+        </details>
+        <details>
+        <summary>**为什么我要所有这些符号？**</summary>
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。
+        </details>
+        <details>
+        <summary>**什么是样式表？**</summary>
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
+        </details>
+        <details>
+        <summary>**什么是CSS？**</summary>
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
+        
+        
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：
+        
         <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        </pre>\r
-        \r
-        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
-        </details>\r
-        </div>\r
+        {
+           color: blue;
+           font-family: cursive;
+        </pre>
+        
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
+        </details>
+        </div>
         #
-        下划线\r
-        \r
-        * 找到样式表中，让h1标签有下划线的代码。\r
-        * 改动文本修饰，选择一个你喜欢的值。\r
-          *
-        从"underline"，"overline"，和"line-through"中选一个\r
+        下划线
+        
+        * 找到样式表中，让h1标签有下划线的代码。
+        * 改动文本修饰，选择一个你喜欢的值。
+        * 从"underline"，"overline"，和"line-through"中选一个。
         * 为段落或h3标签添加一个文本修饰规则。
       CSD U2 text style font family_2018_markdown_instruction: |2
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
-        这是控制段落字体的代码：\r
-        \r
-        <pre>p {\r
+        markdown="1">
+        <details>
+        <summary>**这些代码是如何起作用的？**</summary>
+        这是控制段落字体的代码：
+        
+        <pre>p {
           font-family:
-        cursive;\r
-        }</pre>\r
-        \r
-        * `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。\r
-        * `font-family: cursive;`是一条规则，它让`p`标签里的文本采用某种字体。\r
-         * `font-family`是_属性_。它解释了这条规则是关于什么的，这条是关于字体的。\r
-         * `cursive`是_值_。它解释了规则是如何被应用的，在这里，会让文本成为草书。\r
-        </details>\r
-        <details>\r
-        <summary>**有哪些可用的字体族？**</summary>\r
+        cursive;
+        }</pre>
+        
+        * `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。
+        * `font-family: cursive;`是一条规则，它让`p`标签里的文本采用某种字体。
+         * `font-family`是_属性_。它解释了这条规则是关于什么的，这条是关于字体的。
+         * `cursive`是_值_。它解释了规则是如何被应用的，在这里，会让文本成为草书。
+        </details>
+        <details>
+        <summary>**有哪些可用的字体族？**</summary>
         你可以从"serif"，"sans-serif"，"cursive"，"fantasy"和"monospace"中选择。也可以从<a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools
-        - CSS 网页安全字体组合</a>里选一种字体。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么我要所有这些符号？**</summary>\r
-        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是样式表？**</summary>\r
-        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
-        </details>\r
-        <details>\r
-        <summary>**什么是CSS？**</summary>\r
-        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
-        \r
-        \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
-        \r
+        - CSS 网页安全字体组合</a>里选一种字体。
+        </details>
+        <details>
+        <summary>**为什么我要所有这些符号？**</summary>
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。
+        </details>
+        <details>
+        <summary>**什么是样式表？**</summary>
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
+        </details>
+        <details>
+        <summary>**什么是CSS？**</summary>
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
+        
+        
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：
+        
         <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        </pre>\r
-        \r
-        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
-        </details>\r
-        </div>\r
+        {
+           color: blue;
+           font-family: cursive;
+        </pre>
+        
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
+        </details>
+        </div>
         #
-        改变字体\r
-        \r
-        * 在样式表中找到决定段落标签样式的CSS规则集。\r
-        * 选择一种最喜欢的字体族，并改变原来的值。\r
-          * 从"serif"，"sans-serif"，"cursive"，
-        "fantasy"和"monospace"中选择\r
+        改变字体
+        
+        * 在样式表中找到决定段落标签样式的CSS规则集。
+        * 选择一种最喜欢的字体族，并改变原来的值。
+        * 从"serif"，"sans-serif"，"cursive"，"fantasy"和"monospace"中选择
         * 为h1或h3标签增加一条字体族规则。
       CSD U2 text style freeplay - OLD_markdown_instruction: |-
         # 添加样式\r
@@ -2684,58 +2691,58 @@ zh-CN:
       CSD U2 text style h1_2018_markdown_instruction: |2
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**我能在CSS里使用什么颜色？**</summary>\r
+        markdown="1">
+        <details>
+        <summary>**我能在CSS里使用什么颜色？**</summary>
         CSS包括了大部分常用的颜色名字（red - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools
         - HTML颜色名称</a>找到CSS颜色的完整列表。你还能用没有包括在这里的颜色，但需要用它们的RGB颜色。关于CSS中的颜色，可以在<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools
-        - CSS正确的颜色值</a>查看更多信息。\r
-        </details><details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
-        这是让`h1`标题变红的代码：\r
-        \r
-        <pre>h1 {\r
-          color: red;\r
-        }</pre>\r
-        \r
-        * `h1`是_选择器_。它指定了哪些元素上会应用花括号里的规则。\r
-        *
-        `color: red;`是让`h1`标签里的文本变红的规则。\r
+        - CSS正确的颜色值</a>查看更多信息。
+        </details><details>
+        <summary>**这些代码是如何起作用的？**</summary>
+        这是让`h1`标题变红的代码：
         
-        * `color` 是_属性_。它解释了这是关于什么的规则，在这里，表示文本颜色。\r
-         * `red`是_值_。它解释了规则如何被应用，在这里，会让文本变红。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么我要所有这些符号？**</summary>\r
-        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是样式表？**</summary>\r
-        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
-        </details>\r
-        <details>\r
-        <summary>**什么是CSS？**</summary>\r
-        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
-        \r
-        \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
-        \r
+        <pre>h1 {
+          color: red;
+        }</pre>
+        
+        * `h1`是_选择器_。它指定了哪些元素上会应用花括号里的规则。
+        *
+        `color: red;`是让`h1`标签里的文本变红的规则。
+        
+        * `color` 是_属性_。它解释了这是关于什么的规则，在这里，表示文本颜色。
+         * `red`是_值_。它解释了规则如何被应用，在这里，会让文本变红。
+        </details>
+        <details>
+        <summary>**为什么我要所有这些符号？**</summary>
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。
+        </details>
+        <details>
+        <summary>**什么是样式表？**</summary>
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
+        </details>
+        <details>
+        <summary>**什么是CSS？**</summary>
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
+        
+        
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：
+        
         <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        }\r
-        </pre>\r
-        \r
-        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
-        </details>\r
-        </div>\r
+        {
+           color: blue;
+           font-family: cursive;
+        }
+        </pre>
+        
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
+        </details>
+        </div>
         #
-        CSS和文本颜色\r
-        \r
-        这个HTML文件使用了一个样式表（"style.css"）来给页面一个特定的样式。这个样式表包含了关于每个HTML元素应该看起来是什么样子的信息。\r
-        \r
-        * 找到样式表（点击文件列表中的"sytle.css"）中让h1变红的代码。\r
+        CSS和文本颜色
+        
+        这个HTML文件使用了一个样式表（"style.css"）来给页面一个特定的样式。这个样式表包含了关于每个HTML元素应该看起来是什么样子的信息。
+        
+        * 找到样式表（点击文件列表中的"sytle.css"）中让h1变红的代码。
         * 将h1的颜色从`red`改变成另一种颜色。
       CSD U2 text style h3_markdown_instruction: |2
         <div style="float: right;
@@ -2992,65 +2999,64 @@ zh-CN:
       CSD U2 text style text align_2018_markdown_instruction: |2
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
-        markdown="1">\r
-        <details>\r
-        <summary>**这些代码是如何起作用的？**</summary>\r
-        这是控制段落文本对齐的代码：\r
-        \r
-        <pre>p
-        {\r
-          text-align: left;\r
-        }</pre>\r
-        \r
-        * `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。\r
-        * `text-align: left;`是一条规则，它让`p`标签里的文本在段落中左对齐。\r
+        markdown="1">
+        <details>
+        <summary>**这些代码是如何起作用的？**</summary>
+        这是控制段落文本对齐的代码：
         
-        * `text-align`是_属性_。它解释了这条规则是关于什么的，这条是关于文本对齐的。\r
-         * `left`是_值_。它解释了规则是如何被应用的，在这里，它让文本对齐到段落的左边。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么`text-align: left;`看起来什么都没改变？**</summary>\r
-        大多数属性都有默认值。这些默认值是一个元素自动会应用上的样式，不需要加到样式表中。`text-align`的默认值是`left`，因此它没有改变任何样式。\r
-        </details>\r
-        <details>\r
-        <summary>**文本对齐都有哪些可能的值？**</summary>\r
+        <pre>p
+        {
+          text-align: left;
+        }</pre>
+        
+        * `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。
+        * `text-align: left;`是一条规则，它让`p`标签里的文本在段落中左对齐。
+        
+        * `text-align`是_属性_。它解释了这条规则是关于什么的，这条是关于文本对齐的。
+         * `left`是_值_。它解释了规则是如何被应用的，在这里，它让文本对齐到段落的左边。
+        </details>
+        <details>
+        <summary>**为什么`text-align: left;`看起来什么都没改变？**</summary>
+        大多数属性都有默认值。这些默认值是一个元素自动会应用上的样式，不需要加到样式表中。`text-align`的默认值是`left`，因此它没有改变任何样式。
+        </details>
+        <details>
+        <summary>**文本对齐都有哪些可能的值？**</summary>
         你可以在"left"，"right"，和"center"中选一个。阅读<a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools
-        - CSS text-align属性</a>了解更多关于文本对齐的内容。\r
-        </details>\r
-        <details>\r
-        <summary>**为什么我要所有这些符号？**</summary>\r
-        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。\r
-        </details>\r
-        <details>\r
-        <summary>**什么是样式表？**</summary>\r
-        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 \r
-        </details>\r
-        <details>\r
-        <summary>**什么是CSS？**</summary>\r
-        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 \r
-        \r
-        \r
-        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：\r
-        \r
+        - CSS text-align属性</a>了解更多关于文本对齐的内容。
+        </details>
+        <details>
+        <summary>**为什么我要所有这些符号？**</summary>
+        这些标点符号，例如花括号`{}`，冒号`:`，以及分号`;`，帮助计算机理解样式表中的规则。花括号将某个选择器的规则都保持在一起。每条规则应该用分毫来结束，并在属性和值之间用冒号来分隔。
+        </details>
+        <details>
+        <summary>**什么是样式表？**</summary>
+        样式表是一个控制网页要如何显示的文档。 外部格式表是连接到HTML网页的单独文档。 
+        </details>
+        <details>
+        <summary>**什么是CSS？**</summary>
+        CSS是控制网页上内容出现格式的语言。 它通过规则集来改变网页的外观。 每个规则集都有一个选择器，它指定在哪个元素上起作用，而规则解释了如何显示这个元素。每个规则都含有一个属性及它的取值。 
+        
+        
+        这里是一个规则集的例子。它让`h2` 标签中的文体变蓝并变成草书：
+        
         <pre>h2
-        {\r
-           color: blue;\r
-           font-family: cursive;\r
-        </pre>\r
-        \r
-        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 \r
-        </details>\r
-        </details>\r
-        </div>\r
+        {
+           color: blue;
+           font-family: cursive;
+        </pre>
+        
+        在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。 
+        </details>
+        </details>
+        </div>
         #
-        文本对齐\r
-        \r
-        `text-align`属性设置了文本在每一行上，水平（从一边到另一边）方向的位置。\r
-        \r
-        * 找到段落标签中的"text-align"属性\r
-        * 改变段落的对齐方式。\r
-          *
-        从"left"，"right"，和"center"中选择一个。
+        文本对齐
+        
+        `text-align`属性设置了文本在每一行上，水平（从一边到另一边）方向的位置。
+        
+        * 找到段落标签中的"text-align"属性
+        * 改变段落的对齐方式。
+        * 从"left"，"right"，和"center"中选择一个。
       CSD U2 unordered list_markdown_instruction: |-
         # 无序列表\r
         <div
@@ -3709,94 +3715,86 @@ zh-CN:
         
       CSD U3 Draw Loop Plugged wiggle sprite rotation_markdown_instruction: |-
         <img
-        src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif",
-        style="float:right;height:150px">\r
-        # Updating Properties\r
-        \r
-        这个关组合了一些你已经见过的技能。这会在背景绘制椭圆，还会更新精灵的属性。这次，它会改变精灵的`sprite.rotation`属性。\r
-        \r
-        # 这样做\r
-        \r
-        这个动画已经更新了精灵的一个旋转属性，使它看起来像是在晃动。\r
-        \r
-        * 运行一下程序，看看它是如何工作的。\r
-        * 加入代码让其它外星人也像第一个一样晃动。\r
+        src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif" style="float:right;height:150px">
+        # 更新属性
+        
+        这个关组合了一些已经见过的技能。这会在背景绘制椭圆，还会更新精灵的属性。这次，它会改变精灵的`sprite.rotation`属性。
+        
+        # 这样做
+        
+        这个动画已经更新了精灵的一个旋转属性，使它看起来像是在晃动。
+        
+        * 运行一下程序，看看它是如何工作的。
+        * 加入代码让其它外星人也像第一个一样晃动。
         * 当你的程序和右边的图片一样时就可以进入下一步了。
       CSD U3 Draw Loop Plugged wiggle sprite rotation_2018_markdown_instruction: |-
         <img
-        src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif",
-        style="float:right;height:150px">\r
-        # Updating Properties\r
-        \r
-        这个关组合了一些你已经见过的技能。这会在背景绘制椭圆，还会更新精灵的属性。这次，它会改变精灵的`sprite.rotation`属性。\r
-        \r
-        # 这样做\r
-        \r
-        这个动画已经更新了精灵的一个旋转属性，使它看起来像是在晃动。\r
-        \r
-        * 运行一下程序，看看它是如何工作的。\r
-        * 加入代码让其它外星人也像第一个一样晃动。\r
+        src="https://images.code.org/03f98fedbe59ceb5ef0a8530cb81c367-image-1492040405357.gif" style="float:right;height:150px">
+        # 更新属性
+        
+        这个关组合了一些已经见过的技能。这会在背景绘制椭圆，还会更新精灵的属性。这次，它会改变精灵的`sprite.rotation`属性。
+        
+        # 这样做
+        
+        这个动画已经更新了精灵的一个旋转属性，使它看起来像是在晃动。
+        
+        * 运行一下程序，看看它是如何工作的。
+        * 加入代码让其它外星人也像第一个一样晃动。
         * 当你的程序和右边的图片一样时就可以进入下一步了。
       CSD U3 Draw Loop Plugged wiggle sprite x_markdown_instruction: |+
-        <img src="https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif",
-        style="float:right;height:150px">\r
-        # Updating Properties\r
-        \r
-        精灵上的属性让计算机知道在何处，如何画它们。两个通用的属性是`sprite.x`和`sprite.y`，用来控制精灵的位置。给这些属性赋值，会让你的精灵移动到屏幕上新的位置。\r
-        \r
-        # 这样做\r
-        \r
-        这个动画已经更新了一个精灵的x属性，让它看起来像是在晃动。\r
-        \r
-        *
-        运行程序来看看它是如何工作的。\r
-        * 编辑程序代码，让第二个精灵也像第一个一样晃动。\r
-        * 当你的程序看起来像右边的图片时，就可以开始下一步了。\r
-        \r
+        <img src="https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif"
+        style="float:right;height:150px">
+        # 更新属性
         
+        精灵上的属性让计算机知道在何处，如何画它们。两个通用的属性是`sprite.x`和`sprite.y`，用来控制精灵的位置。给这些属性赋值，会让你的精灵移动到屏幕上新的位置。
+        
+        # 这样做
+        
+        这个动画已经更新了一个精灵的x属性，让它看起来像是在晃动。
+        
+        *
+        运行程序来看看它是如何工作的。
+        * 编辑程序代码，让第二个精灵也像第一个一样晃动。
+        * 当你的程序看起来像右边的图片时，就可以开始下一步了。
       CSD U3 Draw Loop Plugged wiggle sprite x_2018_markdown_instruction: |+
-        <img src="https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif",
-        style="float:right;height:150px">\r
-        # Updating Properties\r
-        \r
-        精灵上的属性让计算机知道在何处，如何画它们。两个通用的属性是`sprite.x`和`sprite.y`，用来控制精灵的位置。给这些属性赋值，会让你的精灵移动到屏幕上新的位置。\r
-        \r
-        # 这样做\r
-        \r
-        这个动画已经更新了一个精灵的x属性，让它看起来像是在晃动。\r
-        \r
+        <img src="https://images.code.org/71ae26edcc3286ff4d7697aaffecf144-image-1492036602240.gif"
+        style="float:right;height:150px">
+        # 更新属性
+        
+        精灵上的属性让计算机知道在何处，如何画它们。两个通用的属性是`sprite.x`和`sprite.y`，用来控制精灵的位置。给这些属性赋值，会让你的精灵移动到屏幕上新的位置。
+        
+        # 这样做
+        
+        这个动画已经更新了一个精灵的x属性，让它看起来像是在晃动。
+        
         *
-        运行程序来看看它是如何工作的。\r
-        * 编辑程序代码，让第二个精灵也像第一个一样晃动。\r
-        * 当你的程序看起来像右边的图片时，就可以开始下一步了。\r
-        \r
-        
+        运行程序来看看它是如何工作的。
+        * 编辑程序代码，让第二个精灵也像第一个一样晃动。
+        * 当你的程序看起来像右边的图片时，就可以开始下一步了。
       CSD U3 Draw Loop Plugged wiggle sprite y_markdown_instruction: |
-        <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif",
-        style="float:right;height:150px">\r
-        # 更新属性\r
-        \r
-        这和上一关非常类似。但是这次，你要自己加一个画图循环。\r
-        \r
-        #
-        这样做\r
-        * 在程序的最底部添加画图循环模块。\r
-        * 将所有模块都挪到画图循环里。\r
-        * 当你的程序和右边的图片一样时就可以进入下一步了。\r
+        <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif"
+        style="float:right;height:150px">
+        # 更新属性
         
+        这和上一关非常类似。但是这次，你要自己加一个画图循环。
+        
+        #
+        这样做
+        * 在程序的最底部添加画图循环模块。
+        * 将所有模块都挪到画图循环里。
+        * 当你的程序和右边的图片一样时就可以进入下一步了。
       CSD U3 Draw Loop Plugged wiggle sprite y_2018_markdown_instruction: |
-        <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif",
-        style="float:right;height:150px">\r
-        # 更新属性\r
-        \r
-        这和上一关非常类似。但是这次，你要自己加一个画图循环。\r
-        \r
-        #
-        这样做\r
-        * 在程序的最底部添加画图循环模块。\r
-        * 将所有模块都挪到画图循环里。\r
-        * 当你的程序和右边的图片一样时就可以进入下一步了。\r
+        <img src="https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif"
+        style="float:right;height:150px">
+        # 更新属性
         
+        这和上一关非常类似。但是这次，你要自己加一个画图循环。
+        
+        #
+        这样做
+        * 在程序的最底部添加画图循环模块。
+        * 将所有模块都挪到画图循环里。
+        * 当你的程序和右边的图片一样时就可以进入下一步了。
       CSD U3 Drawing Squares to Corners_markdown_instruction: |-
         <img src="https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12
         AM.png" style="float:right;width:150px">\r
@@ -4373,9 +4371,9 @@ zh-CN:
       CSD U3 Mouse Input Bee 2_markdown_instruction: "# 随机围绕某点\\r\n\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\r\n\\r\n现在你能让蜜蜂跟随鼠标了，让我们像右边的图一样，让蜜蜂在鼠标周围飞行。要做到这样，你需要**增加一个-50到50的随机数到`mouseX`或`mouseY`上**。\\r\n\\r\n# 这样做\\r\n你已经有了一个跟随鼠标的蜜蜂精灵了。\\r\n\\r\n* 更新x和y的位置，让它随机的靠近鼠标。\\r\n\\t* 添加一个-50到50的随机数到`World.mouseX`和`World.mouseY`。\\r\n* 如果需要的话，可以用`World.frameRate`模块来减缓动画，找到最佳帧率。\\r\n\\r\n_挑战\n再**增加3只蜜蜂**以同样的方法来跟随鼠标，从而形成蜂群。_"
       CSD U3 Mouse Input Bee 2_2018_markdown_instruction: "# 随机围绕某点\\r\n\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\r\n\\r\n现在你能让蜜蜂跟随鼠标了，让我们像右边的图一样，让蜜蜂在鼠标周围飞行。要做到这样，你需要**增加一个-50到50的随机数到`mouseX`或`mouseY`上**。\\r\n\\r\n# 这样做\\r\n你已经有了一个跟随鼠标的蜜蜂精灵了。\\r\n\\r\n* 更新x和y的位置，让它随机的靠近鼠标。\\r\n\\t* 添加一个-50到50的随机数到`World.mouseX`和`World.mouseY`。\\r\n* 如果需要的话，可以用`World.frameRate`模块来减缓动画，找到最佳帧率。\\r\n\\r\n_挑战\n再**增加3只蜜蜂**以同样的方法来跟随鼠标，从而形成蜂群。_"
       CSD U3 Movement Fish challenge_2018_markdown_instruction: |-
-        # 更多鱻!
+        # 更多鱼!
         
-        调整鱼在游动时的旋转，让它看起来更像是在游动而不是平移。你还可以通过加入新特性（比如鱼缸中上升的泡泡）来让这个场景更逼真。
+        调整鱼在游动时的旋转，让它看起来更像是在游动。你还可以通过加入新特性（比如鱼缸中上升的泡泡）来让这个场景更逼真。
       CSD U3 Movement Fish_markdown_instruction: |-
         <img src="https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif"
         style="float: right; margin-left: 20px;">\r
@@ -10404,13 +10402,13 @@ zh-CN:
       Dance Party 3_markdown_instruction: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。  "
       Dance Party 4 Validated_markdown_instruction: "创造一个叫`外星人3`的精灵。 \n\n你能让所有外星人排成一条直线吗？现在你有一个外星人舞蹈团了！"
       Dance Party 4_markdown_instruction: "创造一个叫`外星人3`的精灵。 \n\n你能让所有外星人排成一条直线吗？现在你有一个外星人舞蹈团了！"
-      Dance Party 5 - Validated_markdown_instruction: "可以在点击精灵时，做出任何的改变。现在来换个颜色吧！\n\n**在这里添加代码，使每个外星人在被单击时改变自己的颜色**\n"
-      Dance Party 5_markdown_instruction: "可以在点击精灵时，做出任何的改变。现在来换个颜色吧！\n\n**在这里添加代码，使每个外星人在被单击时改变自己的颜色**\n"
-      Dance Party 6 - Validated_markdown_instruction: "这些外星人太调皮了！\n\n用<xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\"><value name=\"SPRITE\"/></block></xml>模块来在每个外星人被单击时停下来。\n"
-      Dance Party 6_markdown_instruction: "这些外星人太调皮了！\n\n用<xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\"><value name=\"SPRITE\"/></block></xml>模块来在每个外星人被单击时停下来。\n"
-      Dance Party 7 - Validated_markdown_instruction: "最后一步，创建一个新的钟形图形，命名为`我的钟`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！\n"
-      Dance Party 7_markdown_instruction: "最后一步，创建一个新的钟形图形，命名为`我的钟`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！\n"
-      Dance Party 7_simple_markdown_instruction: "最后一步，创建一个新的钟形图形，命名为`我的钟`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！\n"
+      Dance Party 5 - Validated_markdown_instruction: "可以在点击精灵时，在程序中做出任何的改变。现在来换个颜色吧！\n\n**在这里添加代码，使每个外星人在被单击时改变自己的颜色。**"
+      Dance Party 5_markdown_instruction: "可以在点击精灵时，在程序中做出任何的改变。现在来换个颜色吧！\n\n**在这里添加代码，使每个外星人在被单击时改变自己的颜色。**"
+      Dance Party 6 - Validated_markdown_instruction: "这些外星人太调皮了！ \n\n用<xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\"><value name=\"SPRITE\"/></block></xml>模块来让每个外星人被单击时停下来。"
+      Dance Party 6_markdown_instruction: "这些外星人太调皮了！ \n\n用<xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\"><value name=\"SPRITE\"/></block></xml>模块来让每个外星人被单击时停下来。"
+      Dance Party 7 - Validated_markdown_instruction: "最后一步，创建一个新的钟形精灵，命名为`myBell`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！"
+      Dance Party 7_markdown_instruction: "最后一步，创建一个新的钟形精灵，命名为`myBell`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！"
+      Dance Party 7_simple_markdown_instruction: "最后一步，创建一个新的钟形精灵，命名为`myBell`。\n\n当点击这个钟时，所有的外星人会跳同一支舞！"
       Dance Party Freeplay_markdown_instruction: |-
         现在可以创建自己的外星人迪斯科啦！想找点灵感？试试这些：
         * 创建两个时钟，让外星人在不同时钟的控制下完成不同的舞步
@@ -10438,6 +10436,7 @@ zh-CN:
       Fish Tank 4-validated_markdown_instruction: "鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。"
       Fish Tank 4_markdown_instruction: 鱼缸需要一些水！用`设置背景颜色`模块来让背景为绿色。
       Fish Tank 5-validated_markdown_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
+      Fish Tank 5-validated_simple_markdown_instruction: 鱼想要一个朋友。  添加新的精灵。
       Fish Tank 5_markdown_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
       Fish Tank 6-validated_markdown_instruction: "想让鱼的朋友做什么？增加一个行为，然后看看他们做了什么！"
       Fish Tank 6_markdown_instruction: 想让鱼的朋友做什么？增加一个行为，然后看看他们做了什么！
@@ -10482,9 +10481,7 @@ zh-CN:
       HoCAB_labyrinth1_markdown_instruction: |-
         用这些模块通过迷宫！
         
-        <xml><block type="simple_move_down"/></xml><xml><block type="simple_move_up"/></xml><xml><block type="simple_move_right"/></xml><xml><block type="simple_move_left"/></xml>   
-        
-        ---
+        <xml><block type="simple_move_down"/></xml><xml><block type="simple_move_up"/></xml><xml><block type="simple_move_right"/></xml><xml><block type="simple_move_left"/></xml>
       Inspirational Artwork_markdown_instruction: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"\nwidth=\"250px\"/>\\r\n\\r\n自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！\\r\n\\r\n如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 \n\\r\n\\r\n注意：我们已经用`set alpha`（设置透明度）模块来让花瓣慢慢淡出。"
       InspirationalArtwork_markdown_instruction: "现在你已经学到了所有你需要知道的东西来做这样的图案\\r\n\\r\n如果这张照片启发了你, 请试着制做一些类似的东西。要不然，就创建自己的。"
       InspirationalArtwork_2018_markdown_instruction: "现在你已经学到了所有你需要知道的东西来做这样的图案\\r\n\\r\n如果这张照片启发了你, 请试着制做一些类似的东西。要不然，就创建自己的。"
@@ -10541,7 +10538,7 @@ zh-CN:
         循环并非总是有用的。 \r
         \r
         这些仙人掌的生长并不具有明显的模式，所以循环无法将它们正确地清空。因此，我们为您提供了一个叫做"摧毁并移动"的函数，每当代理人遇到障碍时，它可以为您做一些脏活累活。
-      MC_HOC_2017_05_Cole_markdown_instruction: "哦不，桥没了！ \\r\n\\r\n为 代理人编写代码，使用\"放置\"模块重新建造桥梁，以便让{currentPlayerName} 抵达**铲子**[diamond_shovel]。"
+      MC_HOC_2017_05_Cole_markdown_instruction: "哦不，桥没了！ \n\n为 代理人编写代码，使用<xml> <block type=\"craft_placeBlock\">\n<title name=\"TYPE\"> </title>\n</block></xml> 模块重新建造桥梁，以便让{currentPlayerName} 抵达**铲子**[diamond_shovel]。"
       MC_HOC_2017_05_Josh_markdown_instruction: |-
         哦不，桥没了！ \r
         \r
@@ -10682,8 +10679,8 @@ zh-CN:
         这个像素化关卡演示了"Hide sliders"（隐藏滑动条）选项。注意，快读和高度滑动条都不可用，并且宽和高值都不可编辑。
       Pixelation - Lesson 14 - Fix bit offset_markdown_instruction: "# 哦，不！图片在传输时被弄乱了！\\r\n\\r\n<img src = \"https://images.code.org/1f78b53ad4892dc8f9b50111fce35c7e-image-1439474859998.17.43 PM.png\" align=right width=200 hspace=20>\\r\n\\r\n**问题：** 在code.org标志的C的数据流中多了额外的一个比特。<br>这个比特让其它比特串行了，让标志看起来乱了。\\r\n<br>**你的任务:** 找到这个额外的比特并移除它，从而修好Code.org的标志。 \\r\n<br>**提示:** 这个比特位置越靠前，被破坏的比特就越多。 \\r\n"
       Pixelation - Lesson 14 - Fix bit offset_2018_markdown_instruction: "# 哦，不！图片在传输时被弄乱了！\\r\n\\r\n<img src = \"https://images.code.org/1f78b53ad4892dc8f9b50111fce35c7e-image-1439474859998.17.43 PM.png\" align=right width=200 hspace=20>\\r\n\\r\n**问题：** 在code.org标志的C的数据流中多了额外的一个比特。<br>这个比特让其它比特串行了，让标志看起来乱了。\\r\n<br>**你的任务:** 找到这个额外的比特并移除它，从而修好Code.org的标志。 \\r\n<br>**提示:** 这个比特位置越靠前，被破坏的比特就越多。 \\r\n"
-      Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction: "# 像素: 任务 3 \\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20> \\r\n* * 方向: ** 我们开始让你看麦迪在视频中创建的4x4 图像.\\r\n\\r\n您的任务是用 *每像素12位* 来填充 4x4 网格的颜色。最后的结果应该看起来像是 (但不完全一样) 显示在右边的图像。 \\r\n\\r\n有以下要求: \\r\n \\r\n\n* 第1行-用红色填充阴影。\\r\n* 第2行-填充绿色阴影。\\r\n* 第3行-填充蓝色阴影。\\r\n* 第4行-填充灰色阴影。\\r\n"
-      Pixelation - Lesson 15 - Color Shades 4x4_2018_markdown_instruction: "# 像素: 任务 3 \\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20> \\r\n* * 方向: ** 我们开始让你看麦迪在视频中创建的4x4 图像.\\r\n\\r\n您的任务是用 *每像素12位* 来填充 4x4 网格的颜色。最后的结果应该看起来像是 (但不完全一样) 显示在右边的图像。 \\r\n\\r\n有以下要求: \\r\n \\r\n\n* 第1行-用红色填充阴影。\\r\n* 第2行-填充绿色阴影。\\r\n* 第3行-填充蓝色阴影。\\r\n* 第4行-填充灰色阴影。\\r\n"
+      Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction: "# 像素: 任务 3 \n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20> \n* * 方向: ** 开始先看麦迪在视频中创建的 4x4 图像。\n\n任务是用 *每像素12位* 来填充 4x4 网格的颜色。最后的结果应该看起来像是 (但不完全一样) 显示在右边的图像。 \n\n有以下要求: \n \n\n* 第1行-用红色填充阴影。\n* 第2行-填充绿色阴影。\n* 第3行-填充蓝色阴影。\n* 第4行-填充灰色阴影。\n"
+      Pixelation - Lesson 15 - Color Shades 4x4_2018_markdown_instruction: "# 像素: 任务 3 \n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20> \n* * 方向: ** 开始先看麦迪在视频中创建的 4x4 图像。\n\n任务是用 *每像素12位* 来填充 4x4 网格的颜色。最后的结果应该看起来像是 (但不完全一样) 显示在右边的图像。 \n\n有以下要求: \n \n\n* 第1行-用红色填充阴影。\n* 第2行-填充绿色阴影。\n* 第3行-填充蓝色阴影。\n* 第4行-填充灰色阴影。\n"
       Pixelation - Lesson 15 - Color Shades_markdown_instruction: |-
         # 颜色像素: 任务 2\r
         **方向:**\r
@@ -11020,7 +11017,7 @@ zh-CN:
         \r *一旦你的循环可以工作，就试着用随机的`red`、`green`、 `blue`参数调用`drawFish`来得到不同颜色的鱼。\r
         \r
         ![](https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35 PM.png)
-      SG U3L07 - introSquare_markdown_instruction: "#开始学习循环\\r\n\\r\n一个**循环**是程序中一段重复的或者\"循环的\"代码。你要用`计数循环`模块创建循环。\\r\n\\r\n我们开始用一个类似于你在视频中看到的程序做实验。\\r\n\\r\n#\n这样做：\\r\n* **拖**出一个`计数循环`模块。这将实现子目标 `//Write a loop`（写一个循环）。跟子目标 `//Define function`（定义函数）很相似，你需要填写这个循环，包括更多的子目标，比如`//Move turtle`（移动乌龟）\n和`//Orient turtle`（面向乌龟）\\r\n\\r\n* **在循环内部：**\\r\n\\t* **增加**一个`moveForward()`（向前移动）的调用。\\r\n    * **增加**一个 `turnLeft()`（向左转）的调用。（提示：先试着转动137度。以后可以更改。）\\r\n\\r\n![](https://images.code.org/4da4a0c8a10a3c9637df96507fece183-image-1443038466204.gif)\\r\n\\r\n*\n**运行**这个程序看循环如何运作。\\r\n* **实验：**\\r\n *\n**改变**运行循环的次数。\\r\n * **增加**运行速度看可以运行多快。\\r\n * 循环运行**多少次**你才看不出图像的区别？\\r\n \\r\n如果你认为已经掌握了`for`循环：设置重复次数，运行程序，设置运行速度，那么请**继续**。\\r\n"
+      SG U3L07 - introSquare_markdown_instruction: "#开始学习循环\n\n一个**循环**是程序中一段重复的或者\"循环的\"代码。你要用`计数循环`模块创建循环。\n\n我们开始用一个类似于你在视频中看到的程序做实验。\n\n#\n这样做：\n* **拖**出一个`计数循环`模块。这将实现子目标 `//Write a loop`（写一个循环）。跟子目标 `//Define function`（定义函数）很相似，你需要填写这个循环，包括更多的子目标，比如`//Move turtle`（移动乌龟）\n和`//Orient turtle`（面向乌龟）\n\n* **在循环内部：**\n\\t* **增加**一个`moveForward()`（向前移动）的调用。\n    * **增加**一个 `turnLeft()`（向左转）的调用。（提示：先试着转动137度。以后可以更改。）\n\n![](https://images.code.org/4da4a0c8a10a3c9637df96507fece183-image-1443038466204.gif)\n\n* **运行**这个程序看循环如何运作。\n* **实验：**\n* **改变**运行循环的次数。\n* **增加**运行速度看可以运行多快。\n* 循环运行**多少次**你才看不出图像的区别？\n \n如果你认为已经掌握了`for`循环：设置重复次数，运行程序，设置运行速度，那么请**继续**。\n"
       SG U3L07 - loopsWithRandom_markdown_instruction: "#使用多重循环\\r\n\\r\n有些复杂的任务不容易用一个循环解决。你需要用**一个接一个的循环**，每一个结局一部分问题。\n\\r\n\\r\n#这样做：\\r\n\\r\n增加一个循环来用半透明的白点覆盖屏幕直到原来的点都被\"擦掉\"。\\r\n\\r\n<img src=\"https://images.code.org/329912b3c61cc62acbd36035ff4b823a-image-1443109101866.gif\"\nstyle=\"float: right; width: 100px\">\\r\n* **拖动**第二个循环到你的代码里。这个将在第一个之后运行。\\r\n* **增加**命令来在随机的位置画点。这些点是白色的，不透明度设置为0.5.\\r\n* **增加重复次数**直到有颜色的点完全被擦除。需要多少次？\\r\n\\r\n提示：你可以复制／粘贴原来的循环，只需要改变点的颜色和重复的次数。"
       SG U3L07 - randomDots1_markdown_instruction: |-
         # 用随机值循环\r
@@ -12019,18 +12016,35 @@ zh-CN:
         **做预测：**这是杰拉尔丁，你的宠物长颈鹿。
         
         你觉得在按下"▶ 运行"之后点击她会发生什么事？
+      Virtual Pet 1 Predict_simple_markdown_instruction: "**你觉得会怎样？** \n\n这只长颈鹿名字叫杰拉尔丁。  \n\n当你点击她后，她会做什么？"
       Virtual Pet 1-validated_markdown_instruction: 这是杰拉尔丁，你的宠物长颈鹿。你觉得按下运行之后点击她会发生什么事？
       Virtual Pet 1_markdown_instruction: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       Virtual Pet 1_simple_markdown_instruction: "这是杰拉尔丁，你的宠物长颈鹿。\n\n你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
-      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
-      Virtual Pet 2 - Validated_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
-      Virtual Pet 2_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。  \n\n---"
-      Virtual Pet 3_markdown_instruction: "我们不能让脏兮兮的长颈鹿到处走来走去!  \n\n1) 在屏幕上添加一个新的 肥皂 精灵。  \n2) 你能否使长颈鹿和肥皂接触的时候变回正常的颜色？ \n\n---\n\n要重置颜色, 请使用此模块:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
+      Virtual Pet 2 - Validated (Ram)_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
+      Virtual Pet 2 - Validated_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
+      Virtual Pet 2_markdown_instruction: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
+      Virtual Pet 2_simple_markdown_instruction: |-
+        那边角落里有一堆灰尘。 
+        
+        创建一个 **事件** 使得杰拉尔丁碰到灰尘的时候，她的颜色会变成棕色。
+      Virtual Pet 2_simple_clone_markdown_instruction: |-
+        那边角落里有一堆灰尘。 
+        
+        创建一个 **事件** 使得杰拉尔丁碰到灰尘的时候，她的颜色会变成棕色。
+      Virtual Pet 3_markdown_instruction: "我们不能让脏兮兮的长颈鹿到处走来走去!  \n\n1) 在屏幕上添加一个新的肥皂精灵。  \n2) 你能否使长颈鹿和肥皂接触的时候变回正常的颜色？ \n\n---\n\n要重置颜色, 请使用此模块:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n<value name=\"THIS\">\n<block type=\"sprite_variables_get\">\n<title name=\"VAR\">mySprite</title>\n</block>\n</value>\n</block></xml>\n"
+      Virtual Pet 3_simple_markdown_instruction: "长颈鹿好脏!  \n\n1) 在屏幕上添加一个新的 肥皂 精灵。  \n2) 当长颈鹿和肥皂接触的时候她变回正常的颜色。 \n\n---\n\n要重置颜色, 请使用此模块:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>\n"
       Virtual Pet 4_markdown_instruction: "我们不希望每次都要等着长颈鹿花时间清理它自己。  \n\n为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。\n"
+      Virtual Pet 4_simple_markdown_instruction: |
+        我们不希望每次都要等着长颈鹿花时间清理它自己。 
+        
+        为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。
       Virtual Pet 5 - Validated_markdown_instruction: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵碰撞时，她的尺寸减小5.\n"
       Virtual Pet 5_markdown_instruction: "玩耍是需要能量的！  \n\n对每个事件添加一个操作，使得长颈鹿每次和其他精灵碰撞时，她的尺寸减小5.\n"
+      Virtual Pet 5_simple_markdown_instruction: "长颈鹿太大了！ \n\n在每个事件中添加动作，使长颈鹿在和其他精灵碰撞时变小。 \n"
       Virtual Pet 6_markdown_instruction: "均衡的饮食非常重要，我们需要给长颈鹿喂食好让她恢复体力。  \n\n在屏幕上添加一个苹果，并使得苹果和长颈鹿相碰时，长颈鹿变回原来的大小。\n"
-      Virtual Pet Freeplay_markdown_instruction: "自由发挥：你还能让长颈鹿做些什么？ \n\n-你能添加更多特殊组件吗？  \n-你能为她找几个朋友吗？  "
+      Virtual Pet 6_simple_markdown_instruction: "长颈鹿饿了！ \n\n在每个事件中添加动作，使长颈鹿在和苹果碰撞时变回普通的大小。\n"
+      Virtual Pet Freeplay_markdown_instruction: "自由发挥：还能让长颈鹿做些什么？ \n\n- 能添加更多特殊组件吗？  \n- 能为她找到朋友吗？  "
+      Virtual Pet Freeplay_simple_markdown_instruction: "自由发挥：你还能让长颈鹿做些什么？ \n\n-你能为长颈鹿添加更多特殊组件吗？  \n-你能为她找几个朋友吗？  "
       Virtual Pet Predict_markdown_instruction: "**做预测：**这是杰拉尔丁，你的宠物长颈鹿。你觉得在按下\"▶ 运行\"之后点击她会发生什么事？"
       What is the difference between formative and summative assessment?_markdown_instruction: '下面的连接提供了正式的和总结性的评估的定义和示例的资源：'
       aE1_markdown_instruction: |+
@@ -12284,7 +12298,7 @@ zh-CN:
         移动罗瑞尔来到达宝藏，然后用`收集`来捡起它。\r
         \r
         收集一堆宝藏来通过这关。
-      comment_intro_maze_2018_markdown_instruction: "*\"我糊涂了。帮助我记住如何通过这个迷宫。\"*\\r\n\\r\n使用新的`comment`（注释）模块来给自己留下快速提醒。它们可以帮助你记起你在做什么以及原因！\\r\n\\r\n注释只用于**你**使用。你的游戏区域不会因为注释看起来不一样。"
+      comment_intro_maze_2018_markdown_instruction: "*\"我糊涂了。帮助我记住如何通过这个迷宫。\"*\n\n---\n\n要通过这关，解决谜题，并使用新的<xml><block type=\"comment\"><title name=\"TEXT\"></title></block></xml>注释模块来给自己留下快速提醒。它们可以帮助记起在做什么以及原因！\n\n注释只用于**你自己**使用。游戏区域不会因为注释看起来不一样。"
       conditionals_forvideo_harvester_markdown_instruction: 收集所有的玉米和莴苣，然后捡起南瓜。
       course1_artist_loops_challenge2_markdown_instruction: 让我们玩游戏吧! 尽可能多地画 X。你能一排放3个吗？
       course1_artist_loops_challenge3_markdown_instruction: |-
@@ -12345,15 +12359,14 @@ zh-CN:
       course2_playlab_stage17_11_markdown_instruction: "创建自己的故事。完成后, 单击 \"完成\", 让朋友们在他们的手机上试用你的故事。\\r\n<br/>\\r\n\\r\n<h5>\\r\n<details>\\r\n<summary><b>需要一些点子吗？</b></summary>\\r\n\\t<br/>\\r\n\\t<h5>\\r\n\\t<ul>\\r\n\\t<li><strong>谁在那里呢？</strong> -使角色和随机图像一起出现，这样没有人知道下一个显示的是谁。</li>\\r\n<li><strong>去冒险</strong>\n- 改变背景，然后让角色谈论他们现在在哪里。</li>\\r\n<li><strong>弹球</strong> - 使用箭头键 (使用`当上方向键按下时`，`当下方向键按下时`模块）来移动角色。然后当他和其他人物在屏幕上发生碰撞时播放随机的声音。\n</li>\\r\n</ul>\\r\n\\t</h5>\\r\n</details>\\r\n</h5>\\r\n"
       course3_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\n挑战的时候到了！\\r\n\\r\n这个设计只使用了你见过的模块。你能想出如何再次创建出它吗？随便试错。没有人期待第一次就能做好。\\r\n\\r\n重复的形状基本和上一关的一样，只有第一个的循环的长度要小一点。 "
       course3_artist_functions_challenge1_markdown_instruction: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
-      course3_artist_functions_challenge2_markdown_instruction: |2
-        你不仅能跳到一些预先设定的位置，比如画布的角落，你还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！\r
-        <xml>\r
-          <block
-        type="jump_to_xy">\r
-            <title name="XPOS">???</title>\r
-            <title
-        name="YPOS">???</title>\r
-            </block></xml>
+      course3_artist_functions_challenge2_markdown_instruction: |-
+        你不仅能跳到一些预先设定的位置，比如画布的角落，你还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！
+        
+        <xml>
+        <block type="jump_to_xy">
+        <title name="XPOS">???</title>
+        <title name="YPOS">???</title>
+        </block></xml>
       course3_bee_debugging_challenge1_markdown_instruction: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂酿造所有的蜂蜜吗？
       course3_bee_functions_challenge1_markdown_instruction: 你得自己独立接受这个挑战。这可能比看起来更难！
       course3_bee_functions_challenge2_markdown_instruction: 你得自己独立面对这个挑战。
@@ -12366,7 +12379,7 @@ zh-CN:
       course3_maze_debugging_challenge1_markdown_instruction: '*"我只是绕圈子走吗？"*'
       course3_maze_debugging_challenge2_markdown_instruction: '*"如果我转得太频繁, 我可能会头晕! 帮助我只通过四个`转向`命令来到达猪那里。"*'
       course3_maze_until_challenge1_markdown_instruction: 没有提示，只有挑战。把僵尸带到向日葵那里。
-      course3_playLab_challenge1_markdown_instruction: "* **松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？*\\r\n\\r\n规则：\\r\n1. *碰到松鼠得分。*\\r\n2. *碰到恐龙丢很多分。*\\r\n\\r\n这是一种和已经开始的不同的游戏！玩一玩，看看它是如何工作的。 \\r\n\\r\n\\r\n当你有足够的分数或者分数太低时，会发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照它的方法工作。 \\r\n点击提示获得主意！"
+      course3_playLab_challenge1_markdown_instruction: "* **松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？*\n\n规则：\n1. *碰到松鼠得分。*\n2. *碰到恐龙丢很多分。*\n\n这是和玩过的不同的游戏！玩一玩，看看它是如何工作的。 \n\n\n当你有足够的分数或者分数太低时，会发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照它的方法工作。 \n点击提示获得主意！"
       course3_playlab_challenge2_markdown_instruction: |-
         你能指出"Fortune Teller"（预言家）应用如何工作的吗？试着将下面的功能加到游戏中：\r
         \r
@@ -12384,15 +12397,14 @@ zh-CN:
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       course4_artist_concept_challenge2_markdown_instruction: 使用下面的代码创建五个风车的设计。
-      course4_artist_functions_challenge2_markdown_instruction: |2
-        你不仅能跳到一些预先设定的位置，比如画布的角落，你还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！\r
-        <xml>\r
-          <block
-        type="jump_to_xy">\r
-            <title name="XPOS">???</title>\r
-            <title
-        name="YPOS">???</title>\r
-            </block></xml>
+      course4_artist_functions_challenge2_markdown_instruction: |-
+        你不仅能跳到一些预先设定的位置，比如画布的角落，你还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！
+        
+        <xml>
+        <block type="jump_to_xy">
+        <title name="XPOS">???</title>
+        <title name="YPOS">???</title>
+        </block></xml>
       course4_artist_fwp_challenge1_markdown_instruction: 请尝试运行此程序，并进行更改，看看会发生什么。你能弄清楚它是如何工作的吗？（或者你可以把这段程序删掉并且重写成其他任何你想要的程序）
       course4_artist_variables_challenge1_markdown_instruction: 你能创建一个`length`（长度）变量，并用它来创建这个图案吗？
       course4_artist_variables_challenge2_markdown_instruction: |-
@@ -12529,8 +12541,8 @@ zh-CN:
         \r
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops9_2018_markdown_instruction: |-
-        ##** 挑战: ** 通向码头的楼梯坏了。 帮我修好它。\r
-        \r
+        ## ** 挑战: ** 通向码头的楼梯坏了。 帮我修好它。
+        
         ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1_markdown_instruction: |-
         可以使用循环在一行中绘制多条线。\r
@@ -12887,8 +12899,8 @@ zh-CN:
       courseB_playlab_events3_2018_markdown_instruction: 当你点击黛西龙时，用事件让她切换到随机的![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)表情。
       courseB_playlab_events4_markdown_instruction: "骑士时间!  \\r\n\\r\n添加一个事件，当点击左箭头时，让骑士移向龙。"
       courseB_playlab_events4_2018_markdown_instruction: |-
-        骑士时间!  \r
-        \r
+        骑士时间！到达龙来完成这关。
+        
         添加一个事件，当点击左箭头时，让骑士移向龙。
       courseB_playlab_events6_markdown_instruction: |-
         帮助你的骑士得到所有的旗帜！\r
@@ -12963,11 +12975,11 @@ zh-CN:
         \r
         玩游戏，并用方向控制企鹅，直到得到了足够的分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。
       courseC_PlayLab_events_challenge1_2018_markdown_instruction: |-
-        用这个新模块，在当企鹅碰到龙或者得分时，让它自动的走回开始的地方。这会让你的游戏更有挑战，更好玩！\r
-        \r
-        玩游戏，并用方向控制企鹅，直到得到了足够的分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。
+        用这个新模块，在当企鹅碰到龙或者得分时，让它自动的走回开始的地方。这会让你的游戏更有挑战，更好玩！
+        
+        玩游戏，并用方向控制企鹅，直到得到了5分或更多分数。企鹅必须被移动到屏幕的`左中`的位置来结束这关。
       courseC_artist_loop1_markdown_instruction: "太棒了！\\r\n\\r\n在开始循环前，让我们用`设置图案`模块来改变刷子的样式。"
-      courseC_artist_loop1_2018_markdown_instruction: "太棒了！\\r\n\\r\n在开始循环前，让我们用`设置图案`模块来改变刷子的样式。"
+      courseC_artist_loop1_2018_markdown_instruction: "\"太棒了！\"\n\n在开始循环前，让我们用<xml><block type=\"draw_line_style_pattern\"><title name=\"VALUE\">默认</title></block></xml>模块来添加一些样式。"
       courseC_artist_loops1a_markdown_instruction: "**自由发挥：** 让我们创建一些更大的，一次一步的东西！你能创造任何想要的事物，但先看看如何创造这样的！\\r\n\\r\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\\r\n\\r\n用`往上跳200再下200`来让小艺术家到达游戏区域中心，然后用`画一个贴画`模块来让一只鸟出现。\\r\n\\r\n---\\r\n\\r\n当你对做的结果满意时，点击\"完成\"。"
       courseC_artist_loops1a_2018_markdown_instruction: "**自由发挥：** 让我们创建一些更大的，一次一步的东西！\\r\n\\r\n用`往上跳200再下200`来让小艺术家到达游戏区域中心，然后用`画一个贴画`模块来让一只鸟出现。\\r\n\\r\n---\\r\n\\r\n当你对做的结果满意时，点击\"完成\"。"
       courseC_artist_loops2_markdown_instruction: |-
@@ -13052,7 +13064,7 @@ zh-CN:
         现在, 将此代码放入一个`重复`模块中, 并循环**6**次。\r
         - 请注意，我们在循环代码的末尾添加了一个60度的转弯，以获得完整的旋转。
       courseC_artist_loopsPrePre1a_markdown_instruction: "使用<xml><block type=\"jump_to_xy\"\nid=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>\n模块把艺术家带到游戏区的中心。\\r\n然后用 <xml><block type=\"draw_move_by_constant\"><title\nname=\"DIR\">向前移动</title><title name=\"VALUE\">50</title></block></xml>\n模块来画一条50 像素的线。"
-      courseC_artist_loopsPrePre1a_2018_markdown_instruction: "使用<xml><block\ntype=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>\n模块把艺术家带到游戏区的中心。\\r\n然后用 <xml><block type=\"draw_move_by_constant\"><title\nname=\"DIR\">向前移动</title><title name=\"VALUE\">50</title></block></xml>\n模块来画一条50 像素的线。"
+      courseC_artist_loopsPrePre1a_2018_markdown_instruction: "### 艺术家在错误的点上！\n\n使用<xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>模块把艺术家带到游戏区的中心。 \n然后用 <xml><block type=\"draw_move_by_constant\"><title\nname=\"DIR\">向前移动</title><title name=\"VALUE\">50</title></block></xml>\n模块来画一条50 像素的线。"
       courseC_artist_loopsTemplateA_markdown_instruction: '使用 `跳到200超过200下来`，让艺术家来到游戏区的中心, 然后使用`画一个标签`模块来使一只鸟出现。 '
       courseC_artist_loopsTemplateA_2018_markdown_instruction: '使用 `跳到200超过200下来`，让艺术家来到游戏区的中心, 然后使用`画一个标签`模块来使一只鸟出现。 '
       courseC_artist_prog1_markdown_instruction: |-
@@ -13656,6 +13668,7 @@ zh-CN:
         用你学过的知识在三角形里画个正方形。\r
         ___\r
         ##### 每条边都是200像素长。需要转90度来画正方形，转120度来画三角形。
+      courseD_autorun_binary2_2019_markdown_instruction: "这个函数从一个二进制的字符串里面获得1和0，然后指导小艺术家根据它们来从左到右，从上到下。\\r\n___\\r\n当小艺术家看到1时，就会填满正方形，当看到0时，则什么也不做。\\r\n___\\r\n**运行一下代码，看看小艺术家是怎样用二进制来画出这个图形的。**"
       courseD_bee_conditionals1_markdown_instruction: |-
         *"这朵云挡住了我的视线！"*\r
         \r
@@ -13759,20 +13772,20 @@ zh-CN:
         看看蜜蜂是怎么得到花蜜的。你能用同样的规律帮蜜蜂酿造所有蜂蜜吗？
       courseD_bee_debugging_challenge2_markdown_instruction: 看蜜蜂如何得到花蜜。你能用同一种图案来帮助蜜蜂制造所有的蜂蜜吗？
       courseD_bee_nestedLoops1_markdown_instruction: |-
-        *"这会非常棒！"*\r
-        \r
+        "_这会非常棒！_"
+        
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops1_2018_markdown_instruction: |-
-        *"这会非常棒！"*\r
-        \r
+        "_这会非常棒！_"
+        
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops1a_markdown_instruction: |-
-        *"这会非常棒！"*\r
-        \r
+        *"这会非常棒！"*
+        
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops1a_2018_markdown_instruction: |-
-        *"这会非常棒！"*\r
-        \r
+        *"这会非常棒！"*
+        
         帮蜜蜂收集所有花蜜。
       courseD_bee_nestedLoops2_markdown_instruction: 这一次, 使用尽可能少的模块帮助蜜蜂收集所有的花蜜。
       courseD_bee_nestedLoops2_2018_markdown_instruction: 这一次, 使用尽可能少的模块帮助蜜蜂收集所有的花蜜。
@@ -13811,7 +13824,7 @@ zh-CN:
         \r
         看看在对手得分两次前，你能得多少分！
       courseD_bounce_events1s_markdown_instruction: "把球投到篮框里！ \\r\n加一个模块到`当按左方向键时`事件，并点击\"运行\"来将玩家移动到网那里。"
-      courseD_bounce_events1s_2018_markdown_instruction: "把球投到篮框里！ \\r\n加一个模块到`当按左方向键时`事件，并点击\"运行\"来将玩家移动到网那里。"
+      courseD_bounce_events1s_2018_markdown_instruction: "把球投到篮框里！ \n\n加一个模块到`当按左方向键时`事件，并点击\"运行\"来将玩家移动到网那里。"
       courseD_bounce_events2s_markdown_instruction: 现在, 在 `当向右时`中附加一个模块, 这样手就可以够到两个篮子。
       courseD_bounce_events2s_2018_markdown_instruction: 现在, 在 `当向右时`中附加一个模块, 这样手就可以够到两个篮子。
       courseD_bounce_events5s_markdown_instruction: 我们会朝着手发一个球。在`当球碰到手时`事件中加一个模块来确保球到达篮筐。
@@ -14331,24 +14344,22 @@ zh-CN:
       courseE_artist_functions_challenge_markdown_instruction: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
       courseE_artist_functions_challenge1_markdown_instruction: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
       courseE_artist_functions_challenge1_2018_markdown_instruction: 一旦你定义了一个函数, 你可以随心所欲一次又一次地调用它! 尝试此代码, 看看它是如何工作的, 然后改变它, 让您自己的设计更出色！
-      courseE_artist_functions_challenge2_markdown_instruction: |2
-        你不仅能跳到一些预先设定的位置，比如画布的角落，你还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！\r
-        <xml>\r
-          <block
-        type="jump_to_xy">\r
-            <title name="XPOS">???</title>\r
-            <title
-        name="YPOS">???</title>\r
-            </block></xml>
-      courseE_artist_functions_challenge2_2018_markdown_instruction: |2
-        你不仅能跳到一些预先设定的位置，比如画布的角落，你还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！\r
-        <xml>\r
-          <block
-        type="jump_to_xy">\r
-            <title name="XPOS">???</title>\r
-            <title
-        name="YPOS">???</title>\r
-            </block></xml>
+      courseE_artist_functions_challenge2_markdown_instruction: |-
+        你不仅能跳到一些预先设定的位置，比如画布的角落，你还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！
+        
+        <xml>
+        <block type="jump_to_xy">
+        <title name="XPOS">???</title>
+        <title name="YPOS">???</title>
+        </block></xml>
+      courseE_artist_functions_challenge2_2018_markdown_instruction: |-
+        不仅能跳到一些预先设定的位置，比如画布的角落，还能用`跳到`命令来到任何想去的绝对位置上！试试看这个代码，理解它的原理，并做出自己的程序！
+        
+        <xml>
+        <block type="jump_to_xy">
+        <title name="XPOS">???</title>
+        <title name="YPOS">???</title>
+        </block></xml>
       courseE_artist_functions_predict1_markdown_instruction: "这是用了我们已经定义过的程序的关卡。 \\r\n"
       courseE_artist_functions_predict1_2018_markdown_instruction: '这是用了我们已经定义过的程序的关卡。 '
       courseE_artist_ramp10_markdown_instruction: |-
@@ -14515,8 +14526,8 @@ zh-CN:
         #####
         主意，每个菜苗都会变成**一个**玉米或**一个**莴苣。
       courseE_farmer_functions7a1_2018_markdown_instruction: |-
-        *"莴苣函数用更少的代码做更多的事情！"*\r
-        \r
+        *"__lettuce__函数用更少的代码做更多的事情！"*
+        
         创建函数来让收割者走到正方形路径上，从每行的中间采摘单个莴苣。
       courseE_farmer_functions7b_markdown_instruction: "*\"收成太棒了！\"*\\r\n\\r\n帮助收割者在蜿蜒的路里找到方向，并在南瓜那里**左**转，在莴苣那里**右**转。 \\r\n\\r\n*（别忘了采摘沿途所有的作物！）*"
       courseE_farmer_functions7b_2018_markdown_instruction: "*\"收成太棒了！\"*\\r\n\\r\n帮助收割者在蜿蜒的路里找到方向，并在南瓜那里**左**转，在莴苣那里**右**转。 \\r\n\\r\n*（别忘了采摘沿途所有的作物！）*"
@@ -14609,8 +14620,8 @@ zh-CN:
         *"沿着这条路，让我到猪那里！"*\r
         \r
         躲开TNT炸药。
-      courseE_playLab_challenge1_markdown_instruction: "* **松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？*\\r\n\\r\n规则：\\r\n1. *碰到松鼠得分。*\\r\n2. *碰到恐龙丢很多分。*\\r\n\\r\n这是一种和已经开始的不同的游戏！玩一玩，看看它是如何工作的。 \\r\n\\r\n\\r\n当你有足够的分数或者分数太低时，会发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照它的方法工作。 \\r\n点击提示获得主意！"
-      courseE_playLab_challenge1_2018_markdown_instruction: "* **松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？*\\r\n\\r\n规则：\\r\n1. *碰到松鼠得分。*\\r\n2. *碰到恐龙丢很多分。*\\r\n\\r\n这是一种和已经开始的不同的游戏！玩一玩，看看它是如何工作的。 \\r\n\\r\n\\r\n当你有足够的分数或者分数太低时，会发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照它的方法工作。 \\r\n点击提示获得主意！"
+      courseE_playLab_challenge1_markdown_instruction: "* **松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？*\n\n规则：\n1. *碰到松鼠得分。*\n2. *碰到恐龙丢很多分。*\n\n这是和玩过的不同的游戏！玩一玩，看看它是如何工作的。 \n\n\n当你有足够的分数或者分数太低时，会发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照它的方法工作。 \n点击提示获得主意！"
+      courseE_playLab_challenge1_2018_markdown_instruction: "_**松鼠**很害怕看到**恐龙**来到镇上！勇敢的**骑士**能帮忙赶走恐惧吗？_\n\n规则：\n1. *碰到松鼠得分。*\n2. *碰到恐龙丢很多分。*\n\n这是一种和已经开始的不同的游戏！玩一玩，看看它是如何工作的。 \n\n\n当有足够的分数或者分数太低时，应该发生一些事情。添加一些代码到`游戏胜利`和`游戏失败`函数中，来让游戏按照想法工作。 \n点击提示获得主意！"
       courseE_playLab_scaffold1_markdown_instruction: |-
         你学到的大量知识太令人惊奇了！让我们一步步做个游戏。\r
         \r
@@ -15471,14 +15482,14 @@ zh-CN:
         \r
         
       csp-wednesday-unit2_markdown_instruction: "# 星期三单元反思第二部分r\n\\r\n## 解释互联网模拟器\\r\n\\r\n你应该如何向一个有兴趣使用互联网模拟器的教师来介绍它？\\r\n\\r\n*\n在哪些方面，互联网模拟器是一个教育的，而不是专业的工具？\\r\n* 什么教育哲学看起来对互联网模拟器最有效？\\r\n"
-      csp1dlp-assessment_markdown_instruction: "\\r\n\\r\n<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第1单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第1单元的评估\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第1单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1.\n在这个单元里，练习表演任务的角色是什么？\n\\r\n - 哪个表演任务正在被练习？\\r\n - 表演任务练习如何建立在这个单元发展到的内容和技能上？ \\r\n2. 这个单元里有什么样的总结和正式的评估机会？ \\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\\r\n \\r\n\\r\n\\r\n"
-      csp1dlp-lessons_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第1单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n#\n第1单元课程联系和理念\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第1单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1. 学完这个单元，学生们应该有什么样的技能和知识？\\r\n - 学生们学到最大的思想是什么？这些大的思想在哪里，并如何被学到的？\\r\n - 通过这些活动和项目，哪些计算式的练习或技能得到了磨练？\n\\r\n\\r\n2. 前后的课程间有什么联系？\\r\n\n- 这单元的内容是如何一步步递进的？ \\r\n - 什么基础内容在开始就铺垫了，如何又在整个单元中层层提高？为什么？ \\r\n\n- 如果教师说\"第4课有什么意义\"，你该怎样回答？ \\r\n\\r\n3. 这个单元中哪堂课比较难教，为什么？ \\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \\r\n \\r\n\\r\n\\r\n"
+      csp1dlp-assessment_markdown_instruction: "\n\n<br><br>\n\n> **注意：在你开始这个反思之前，确保回顾了第1单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\n\n\n# 第1单元的评估\n\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第1单元课程的理解。你的答复应该清楚的达到以下目标： \n\n1.\n在这个单元里，练习表演任务的角色是什么？\n- 哪个表演任务正在被练习？\n- 表演任务练习如何建立在这个单元发展到的内容和技能上？ \n2. 这个单元里有什么样的总结和正式的评估机会？ \n\n\n>## 完成反思获得分数 \n\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\n \n\n\n"
+      csp1dlp-lessons_markdown_instruction: "<br><br>\n\n> **注意：在你开始这个反思之前，确保回顾了第1单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\n\n\n#\n第1单元课程联系和理念\n\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第1单元课程的理解。你的答复应该清楚的达到以下目标： \n\n1. 学完这个单元，学生们应该有什么样的技能和知识？\n- 学生们学到最大的思想是什么？这些大的思想在哪里，并如何被学到的？\n- 通过这些活动和项目，哪些计算式的练习或技能得到了磨练？\n2. 前后的课程间有什么联系？\n- 这单元的内容是如何一步步递进的？ \n- 什么基础内容在开始就铺垫了，如何又在整个单元中层层提高？为什么？ \n- 如果教师说\"第4课有什么意义\"，你该怎样回答？ \n3. 这个单元中哪堂课比较难教，为什么？ \n\n>## 完成反思获得分数 \n\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \n \n\n\n"
       csp1dlp-tools_markdown_instruction: "\\r\n\\r\n<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第1单元的课程，并对课程中工具的角色有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第1单元工具理念和使用\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第1单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n- 为什么我们要使用互联网模拟器？ \\r\n- 互联网模拟器为什么是教育工具，而不是专业工具？ \\r\n- 用互联网模拟器的教育理念是什么？ \\r\n- 这是一个互联网模拟器很重的单元。学生在学完这个单元后感到心力交瘁，应该用什么策略？ \\r\n- 很多课程在开始的那年都会遇到技术问题（如计算机没准备好，等等）。如果一个教师在第1单元遇到了技术问题，你会推荐他用什么方法来解决？\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\\r\n\n\\r\n\\r\n\\r\n"
-      csp2dlp-assessment_markdown_instruction: "\\r\n\\r\n<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第2单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第2单元里的评估\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第2单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1.\n在这个单元里，练习表演任务的角色是什么？\n\\r\n - 表演任务练习如何建立在这个单元发展到的内容和技能上？ \\r\n2. 这个单元里有什么样的总结和正式的评估机会？ \\r\n\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\n\\r\n \\r\n\\r\n\\r\n"
-      csp2dlp-lessons_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第2单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n#\n第2单元课程联系和理念\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第2单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1. 学完这个单元，学生们应该有什么样的技能和知识？\\r\n - 在数据的大思想下，第二单元的第2章节讲述了哪个学习目标？这些数据相关的学习目标在探索任务中有准备的兴趣。你该如何解释第二章中用来查看数据的透镜，和这与探索任务之间的关系？\\r\n - 通过这些活动和项目，哪些技能或计算式练习得到了磨练？ \\r\n2. 前后课程之间有什么联系？\\r\n - 第1单元中哪些连接可以用在第2单元前面的课程里来作为激励？ \\r\n - 你会如何给教师描述第1章和第2章之间的联系？ \\r\n\n- 什么基础内容在开始就铺垫了，如何又在整个单元中层层提高？为什么？ \\r\n3. 这个单元中哪堂课特别难教，为什么？ \\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \\r\n\n\\r\n\\r\n\\r\n\\r\n"
+      csp2dlp-assessment_markdown_instruction: "\n\n<br><br>\n\n> **注意：在你开始这个反思之前，确保回顾了第2单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\n\n\n# 第2单元里的评估\n\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第2单元课程的理解。你的答复应该清楚的达到以下目标： \n\n1. 在这个单元里，练习表演任务的角色是什么？\n- 表演任务练习如何建立在这个单元发展到的内容和技能上？ \n2. 这个单元里有什么样的总结和正式的评估机会？ \n\n\n\n>## 完成反思获得分数 \n\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\n\n \n\n\n"
+      csp2dlp-lessons_markdown_instruction: "<br><br>\n\n> **注意：在你开始这个反思之前，确保回顾了第2单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\n\n\n#\n第2单元课程联系和理念\n\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第2单元课程的理解。你的答复应该清楚的达到以下目标： \n\n1. 学完这个单元，学生们应该有什么样的技能和知识？\n - 在数据的大思想下，第二单元的第2章节讲述了哪个学习目标？这些数据相关的学习目标在探索任务中有准备的兴趣。你该如何解释第二章中用来查看数据的透镜，和这与探索任务之间的关系？\n- 通过这些活动和项目，哪些技能或计算式练习得到了磨练？ \n2. 前后课程之间有什么联系？\n- 第1单元中哪些连接可以用在第2单元前面的课程里来作为激励？ \n- 你会如何给教师描述第1章和第2章之间的联系？ \n- 什么基础内容在开始就铺垫了，如何又在整个单元中层层提高？为什么？ \n3. 这个单元中哪堂课特别难教，为什么？ \n\n\n>## 完成反思获得分数 \n\n\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \n\n\n\n"
       csp2dlp-tools_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第2单元的课程，并对课程中工具的角色有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第2单元工具理念和使用\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第2单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n- 为什么在单元中我们用了一些工具，而不是空手教学呢？ \\r\n- 从哪些方面来看，这个单元中的工具是教育用的，而不是专业的？ \\r\n- 用这些工具教课的理念是什么？ \\r\n\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \n\\r\n \\r\n"
-      csp3dlp-assessment_markdown_instruction: "\\r\n\\r\n<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第3单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第3单元里的评估\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第3单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1.\n在这个单元里，练习表演任务的角色是什么？\n\\r\n - 创建表演任务如何建立在这个单元发展到的内容和技能上？ \\r\n2. 这个单元里有什么样的总结和正式的评估机会？\\r\n\\r\n\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \n\\r\n \\r\n\\r\n\\r\n"
-      csp3dlp-lessons_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第3单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n#\n第3单元课程联系和理念\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第3单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1. 学完这单元后，学生们会获得什么样的技能和知识？\\r\n - 学生们学到最大的思想是什么？这些大的思想在哪里，并如何被学到的？ \\r\n - 通过这些活动和项目，哪些计算式的练习或技能得到了磨练？\n\\r\n2. 前后的课程间有什么联系？\\r\n\n- 这单元的内容是如何一步步递进的？ \\r\n - 如果教师说\"第1-3课有什么意义\"，你该怎样回答？ \\r\n\n- 第3单元从序列，函数，有参数的函数开始，而这不是典型的开始编程的单元（比如，很多是从变量开始的）。这样安排的潜在的原因和益处是什么？\\r\n - 什么基础内容在开始就铺垫了，如何又在整个单元中层层提高？为什么？ \\r\n - 这个单元中哪堂课特别难教，为什么？ \\r\n3. 如果某位教师的学生有着非常不同的编程背景，你如何推荐教师对这单元做区别式的说明？\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\n\\r\n \\r\n\\r\n\\r\n"
+      csp3dlp-assessment_markdown_instruction: "\n\n<br><br>\n\n> **注意：在你开始这个反思之前，确保回顾了第3单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\n\n\n# 第3单元里的评估\n\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第3单元课程的理解。你的答复应该清楚的达到以下目标： \n\n1. 在这个单元里，练习表演任务的角色是什么？\n- 创建表演任务如何建立在这个单元发展到的内容和技能上？ \n2. 这个单元里有什么样的总结和正式的评估机会？\n\n\n\n\n>## 完成反思获得分数 \n\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。 \n\n \n\n\n"
+      csp3dlp-lessons_markdown_instruction: "<br><br>\n\n> **注意：在你开始这个反思之前，确保回顾了第3单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\n\n\n#\n第3单元课程联系和理念\n\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第3单元课程的理解。你的答复应该清楚的达到以下目标： \n\n1. 学完这单元后，学生们会获得什么样的技能和知识？\n- 学生们学到最大的思想是什么？这些大的思想在哪里，并如何被学到的？ \n- 通过这些活动和项目，哪些计算式的练习或技能得到了磨练？\n2. 前后的课程间有什么联系？\n- 这单元的内容是如何一步步递进的？ \n- 如果教师说\"第1-3课有什么意义\"，你该怎样回答？ \n- 第3单元从序列，函数，有参数的函数开始，而这不是典型的开始编程的单元（比如，很多是从变量开始的）。这样安排的潜在的原因和益处是什么？\n- 什么基础内容在开始就铺垫了，如何又在整个单元中层层提高？为什么？ \n- 这个单元中哪堂课特别难教，为什么？ \n3. 如果某位教师的学生有着非常不同的编程背景，你如何推荐教师对这单元做区别式的说明？\n\n\n>## 完成反思获得分数 \n\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\n\n \n\n\n"
       csp3dlp-tools_markdown_instruction: "\\r\n<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第3单元的课程，并对课程中工具的角色有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第3单元工具理念和使用\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第3单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n- 为什么我们要在代码工作室里用应用实验室，而不是其它工具？ \\r\n- 应用实验室如何是一个教育工具，而不是专业工具？ \\r\n- 这个单元中，教师的角色是什么？计算机科学内容是如何嵌入导这些关卡中的？\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\\r\n \\r\n"
       csp4dlp-assessment_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第4单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n# 第4单元的评估\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第4单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1. 在这个单元里，练习表演任务的角色是什么？ \\r\n2. 这个单元里有什么样的总结和正式的评估机会？\\r\n\\r\n\\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\\r\n \\r\n\\r\n"
       csp4dlp-lessons_markdown_instruction: "<br><br>\\r\n\\r\n> **注意：在你开始这个反思之前，确保回顾了第4单元的课程，并对课程间的联系有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\\r\n\\r\n\\r\n#\n第4单元课程联系和理念\\r\n\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第4单元课程的理解。你的答复应该清楚的达到以下目标： \\r\n\\r\n1. 学生们学到最大的思想是什么？这些大的思想在哪里，并如何被学到的？\n\\r\n2. 通过这些活动和项目，哪些计算式的练习或技能得到了磨练？\\r\n3. 你对这个单元的可选课程有何推荐？（什么时候为什么教师应该选择使用它们？）\\r\n4. 前面单元的覆盖的内容如何与第4单元的主题联系起来？（特别是互联网和数据） \\r\n5. 这个单元中哪堂课比较难教，为什么？ \\r\n \\r\n\\r\n>## 完成反思获得分数 \\r\n\\r\n>- 一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\r\n- 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。\n\\r\n "
@@ -16311,44 +16322,40 @@ zh-CN:
         现在帮农夫捡起路上的所有玉米，直到最后的南瓜。\r
         ___\r
         ##### 主意：路上的每个通往南瓜的正方形上都有最多*一个*玉米。你需要用`如果`语句在采摘玉米前判断一下！
-      harvey_snowflake_artist1_markdown_instruction: |2
-        *是时候让你的的雪花为3D打印准备好了！*\r
-        \r
+      harvey_snowflake_artist1_markdown_instruction: |-
+        *是时候让雪花准备好3D打印了！*
+        
         ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
-        PM.png)为了让你的图片能够被正确的打印，遵循下面的规则：\r
-        \r
-        *
-        确保你的图片只有**一块**！分开的部分会被分开打印。\r
-        *
-        确保你的整个图片能完全**放进**这张画布中\r
-        * 只在白背景上用**黑色的线**。\r
-        * 在程序结束时，让小艺术家跳回左上角(-10 左方, -10 下)：\r
-        <xml>    <block type="jump_to_xy"><title
-        name="XPOS">-10</title><title name="YPOS">-10</title>\r
-            </block>\r
-            <block
-        type="jump_to"><title name="VALUE">7</title>\r
-            </block></xml>\r
-            完成后，右击来保存图片，然后将它通过<a
+        PM.png) 为了让图片能够正确打印，要遵循下面的规则：
+        
+        * 确保你的图片只有**一整块**！分开的部分会被分开打印。
+        * 确保你的整个图片能完全**放进**这张画布中。
+        * 只在白背景上用**黑色的线**。
+        * 在程序结束时，让小艺术家跳回左上角(-10 左方, -10 下)：
+        
+        <xml> <block type="jump_to_xy"><title name="XPOS">-10</title><title name="YPOS">-10</title>
+        </block>
+        <block type="jump_to"><title name="VALUE">7</title>
+        </block></xml>
+        
+        完成后，右击来保存图片，然后将它通过<a
         href="https://classroom.google.com">Google课堂</a>发给我。
       harvey_snowflake_artist2_markdown_instruction: |2
-        *是时候让你的的雪花为3D打印准备好了！*\r
-        \r
+        *是时候让雪花准备好3D打印了！*
+        
         ![](https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
-        PM.png)为了让你的图片能够被正确的打印，遵循下面的规则：\r
-        \r
-        *
-        确保你的图片只有**一块**！分开的部分会被分开打印。\r
-        *
-        确保你的整个图片能完全**放进**这张画布中\r
-        * 只在白背景上用**黑色的线**。\r
-        * 在程序结束时，让小艺术家跳回左上角(-10 左方, -10 下)：\r
-        <xml>    <block type="jump_to_xy"><title
-        name="XPOS">-10</title><title name="YPOS">-10</title>\r
-            </block>\r
-            <block
-        type="jump_to"><title name="VALUE">7</title>\r
-            </block></xml>\r
+        PM.png) 为了让图片能够正确打印，要遵循下面的规则：
+        
+        * 确保你的图片只有**一整块**！分开的部分会被分开打印。
+        * 确保你的整个图片能完全**放进**这张画布中。
+        * 只在白背景上用**黑色的线**。
+        * 在程序结束时，让小艺术家跳回左上角(-10 左方, -10 下)：
+        
+        <xml> <block type="jump_to_xy"><title name="XPOS">-10</title><title name="YPOS">-10</title>
+        </block>
+        <block type="jump_to"><title name="VALUE">7</title>
+        </block></xml>
+        
             完成后，右击来保存图片，然后将它通过<a
         href="https://classroom.google.com">Google课堂</a>发给我。
       iceAgeLoopsforVideo_markdown_instruction: 你能只用一个 <xml><block type="maze_moveForward"/></xml>模块来获得橡子吗？试试用循环！

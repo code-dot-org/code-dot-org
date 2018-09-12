@@ -1462,3 +1462,15 @@ el:
               name: Το Ψηφιακό σου Αποτύπωμα
             'Persistence & Frustration: Stevie and the Big Project':
               name: Ο Στίβι και το Μεγάλο Πρότζεκτ
+        frozen-2018:
+          stages:
+            Artist:
+              name: Καλλιτέχνης
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Καλλιτέχνης
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Καλλιτέχνης

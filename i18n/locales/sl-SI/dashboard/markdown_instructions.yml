@@ -121,6 +121,7 @@ sl:
       4-5 While Loops 2_markdown_instruction: Premakni me do kupa zemlje in ga odstrani s petimi zajemi z lopato, pri čemer uporabi blok "odstrani 1".
       4-5 While Loops 3_markdown_instruction: "Uporabi minimalno število blokov! Premakni me do kupa in odstrani zemjo, potem pa me premakni do luknje in jo do konca zapolni."
       4-5 While Loops 4_markdown_instruction: "Vau, poglej to! Ne vem, koliko lopat zemlje potrebuje ta luknja. Lahko napišeš program, ki uporablja blok \"zapolni\" dokler niso tla ravna? "
+      Artist Autorun Test_markdown_instruction: Uporabi "Ponovi" bloke za risanje teh treh kvadratov.
       Course 4 Artist 1_markdown_instruction: "Pomagaj mi narisati kvadrat. (Vsaka stranica je dolga 200 pikslov)"
       Course 4 Artist 13_markdown_instruction: Bi se še igral?  Tukaj je prazno platno, kjer lahko ustvariš karkoli želiš!
       Course 4 Artist 2_markdown_instruction: "Ali lahko uporabiš zanko tako, da narišeš siv kvadrat? (Vsaka stranica je 300 piksov dolga)"

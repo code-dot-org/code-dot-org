@@ -97,12 +97,19 @@ cs:
       2-3 Artist Functions 13_instruction: Poskytli jsme ti čtyři funkce. Používej
         je jakýmkoli způsobem uvnitř jednoho nebo více cyklů k tvorbě obrázků, které
         můžeš sdílet se svými přáteli. Stisknutím tlačítka run uvidíš příklad.
+      2-3 Artist Functions 2 a_instruction: 'Použijte malý zelený blok "nakreslit
+        čtverec" k zavolání této nové funkce a vytvořte brýle. '
       2-3 Artist Functions 2_instruction: Funkce ti umožňují definovat nové bloky!
         Přemístili jsme bloky k nakreslení čtverce do funkce nazvané "nakreslit čtverec".
         Můžeš použít funkci "nakreslit čtverec" k vytvoření brýlí? Čtverce jsou od
         sebe 75 pixelů.
+      2-3 Artist Functions 3 a_instruction: "Upravte funkci \"nakreslit čtverec\"
+        tak, aby nakreslila brýle s rámy, které jsou velké 115px po obou stranách.
+        \n\nČtverce jsou nyní od sebe vzdálené 45 pixelů."
       2-3 Artist Functions 3_instruction: Uprav funkci nakreslit čtverec s délkou
         strany 115 a nakresli větší brýle. Čtverce jsou teď od sebe 45 pixelů.
+      2-3 Artist Functions 4 a_instruction: Nyní vložte funkci dovnitř smyčky a přidejte
+        tah navíc pro vykreslení těchto tří čtverců.
       2-3 Artist Functions 4_instruction: Použij blok "opakování" k nakreslení těchto
         3 čtverců.
       2-3 Artist Functions 7_instruction: 'Použij funkci "nakreslit dům" k nakreslení
@@ -161,8 +168,8 @@ cs:
         vzoru, otoč o 90 ° po každém průchodu.
       2-3 Artist Nested Loops 12_instruction: Opakovat tento kód 12 krát dokončit
         kudrlinek.
-      2-3 Artist Nested Loops 2_instruction: Nyní cykluj trojúhelník 6 krát. Po každém
-        trojúhelníku je třeba se otočit o 60 stupňů před kreslením dalšího.
+      2-3 Artist Nested Loops 2_instruction: Nyní zopakuj trojúhelník 6 krát. Po nakreslení
+        každého trojúhelníku je třeba se otočit o 60 stupňů před kreslením dalšího.
       2-3 Artist Nested Loops 3_instruction: Potřebujeme opakovat 12 krát trojúhelník
         k nakreslení tohoto vzoru. Počet stupňů v kruhu (360) se vydělí počtem tvarů
         kreslení (12), zjistí se, o kolik se otočí po každém tvaru.
@@ -171,17 +178,17 @@ cs:
         co jsi udělal - kolik musíš otočit po každém tvaru?'
       2-3 Artist Nested Loops 5_instruction: Vyplň okna budovy vnořeným cyklem. Okna
         jsou dlouhá 20 pixelů a od sebe 20 pixelů.
-      2-3 Artist Nested Loops 6_instruction: Tento dinosaurus má 8 hrotů stoupající
-        po ocasu; Každý hrot je dlouhý 30 pixelů. Cykluj trojúhelník 8 krát, aby si
-        se ujistil, že je pohyb vpřed po každém průchodu.
+      2-3 Artist Nested Loops 6_instruction: Tento dinosaurus má 8 hrotů na ocasu.
+        Každý hrot je dlouhý 30 pixelů. Zopakuj trojúhelník 8 krát a po nakreslení
+        každého skoč vpřed.
       2-3 Artist Nested Loops 7_instruction: Opakovat 10 krát tento trojúhelník k
         nakreslené slunce. Budeš se muset přesunout a otočit po každém trojúhelníku.
         Můžeš zjistit, kolik se musíš otočit vydělením počtu stupňů v kruhu počtem
         vytvořených obrazců.
       2-3 Artist Nested Loops 8_instruction: Přidejme nyní trochu trávy na náš obrázek.
         Každý trs trávy je od sebe 50 pixelů.
-      2-3 Artist Nested Loops 9_instruction: Dokončíme tento obrázek přidáním květ.
-        Cykluj kosodélník 12 krát k nakreslení tvé květiny.
+      2-3 Artist Nested Loops 9_instruction: Nyní dokončíme obrázek přidáním květiny.
+        Květinu nakreslíš pomoci 12 diamantů.
       2-3 Artist Nested Loops Free Play_instruction: Zahraj si zdarma, nakresli něco
         cool s vnořenými cykly.
       2-3 Bee Conditionals 1_instruction: Ahoj! Já jsem včela. Pomoz mi dostat nektar
@@ -286,8 +293,10 @@ cs:
         všechen nektar a všechen med.
       2-3 Bee Loops 4_instruction: Použij podobný cyklus jako v poslední puzzlu, ale
         zapracuj do něj otočku.
-      2-3 Bee Loops 4A_instruction: Co se stane, když zacykluješ 3 krát posloupnost?
-        Nezapomeň si na konci udělat med!
+      2-3 Bee Loops 4A_instruction: |-
+        Kolik smyček potřebuješ v této hádance?
+
+        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       2-3 Bee Loops 5_instruction: Použijte cyklus projít dolů po krocích a sesbírat
         nektar.
       2-3 Bee Loops 6_instruction: Použij cyklus ke sběru nektaru z každého květu
@@ -326,7 +335,8 @@ cs:
       2-3 Maze 15_instruction: Použij dva cykly se dostat k prasátku pomocí méně bloků.
       2-3 Maze 16 (old)_instruction: Dostaň mne k prasátku s blokem Opakuj až do!
       2-3 Maze 16 before_instruction: Dostaň mne k prasátku.
-      2-3 Maze 16_instruction: Dostaň mne ke slunečnici. Cykluj posloupnost!
+      2-3 Maze 16_instruction: Uvnitř smyčky může být více bloků! Dokážeš vykonat
+        tuto posloupnost bloků tak, aby se zombie dostal ke slunečnici?
       2-3 Maze 2_instruction: Toto prasátko mne štve. Pomoz mi se dostat k němu!
       2-3 Maze 3_instruction: Sleduj cestu a veď mne k tomu hloupému prasátku. Vyhni
         se TNT nebo bude peří létat!
@@ -763,6 +773,13 @@ cs:
         Použij cyklus while pro obě strany."
       4-5 While Loops Assessment 1_instruction: Existuje mnoho děr a hromad.  Pomoz
         mi vyplnit a odstranit je aby země plochá.
+      AB_Debug_PlayLab2_instruction: |-
+        Proč tato hra nic nedělá?
+
+        Najdete nějaké "skryté" chyby?  Některé se dají najít snadně než ostatní.
+      Alien Defender_instruction: 'Nápad na projekt: Vytvořte obranou hru v Play Lab!'
+      Alien Defender_2018_instruction: 'Nápad na projekt: Vytvořte obranou hru v Play
+        Lab!'
       App Lab test_instruction: otestuj
       Artist - Nested Loops 1_instruction: 'Dokonči kód k nakreslení těchto trojúhelníků.  První
         z nich jsme udělali za tebe.  Rada: 3 trojúhelníky v otáčení 360 stupňů.'
@@ -780,6 +797,8 @@ cs:
       Artist - Nested Loops 9_instruction: Nakresli zuby v tlamě aligátora!
       Artist - Nested Loops Assessment 1_instruction: Použij vnořené cykly k dokončení
         návrhu.
+      Artist Autorun Test_instruction: Použij blok "opakování" k nakreslení těchto
+        3 čtverců.
       Artist Inspiration_instruction: "Volná hra inspirace: Nyní už víš vše, co potřebuješ
         vědět, abys udělal tento vzor! Pokud tento obrázek tě inspiruje, pokus se
         provést něco podobného. Jinak, vytvoř něco, co všechny vlastníš. \r \r Chtěj
@@ -813,6 +832,7 @@ cs:
         napsat program, který odstraní každou z nich?
       C3-Farmer While Loops Assessment 1_instruction: Existuje mnoho děr a hromad.  Pomoz
         mi vyplnit a odstranit je aby země plochá.
+      CDEF_debugging_flappy2_instruction: Proč tato hra nefunguje?
       CSD U5 black white images pixelation 2_instruction: Namaluj usměváka (klikni
         sem pro zobrazení obrázku)
       CSD U5 black white images pixelation 2_2018_instruction: Namaluj usměváka (klikni
@@ -832,7 +852,51 @@ cs:
         a jedniček
       CSD U5 black white images pixelation_2018_instruction: Dokonči tvar X vepsáním
         nul a jedniček
+      CSD U6 params modify clouds_instruction: |-
+        # Mraky
+
+        Tento program rozpohybuje mraky, když zafoukáte do mikrofonu. Není však dokončen.
+
+        # Udělejte následující:
+        * Vytvořit novou funkci "moveCloud(name)", která pohne libovolným mrakem.
+        * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
+        * Zavolejte vaši novou funkci "moveCloud(name)" uvnitř bloku události jednou pro každý název mraku.
+        * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
+      CSD U6 params modify clouds_2018_instruction: |-
+        # Mraky
+
+        Tento program rozpohybuje mraky, když zafoukáte do mikrofonu. Není však dokončen.
+
+        # Udělejte následující:
+        * Vytvořit novou funkci "moveCloud(name)", která pohne libovolným mrakem.
+        * (Tip: použijete téměř stejný kód jako ve funkci "moveCloud0")
+        * Zavolejte vaši novou funkci "moveCloud(name)" uvnitř bloku události jednou pro každý název mraku.
+        * (Tip: je to podobné tomu, jak je 'loopCloud(name)' funkce volána mnohokrát.
+      CSD U6 params modify planes_instruction: |-
+        # Ovladání letadel
+
+        Tento program pohybuje třemi letadly pomocí kontrolky zrychlení a zaškrtávacích tlačítek na obrazovce. Zatím funguje pouze červené letadlo.
+
+        # Udělejte následující:
+        * Vytvořte novou funkci "movePlane(name)", která bude pohybovat libovolným letadlem.
+        * Zavolejte funkci "movePlane(name)" zevnitř bloku události tak, aby se letadlo pohybovalo jen tehdy, když je zaškrtnuto zaškrtávací tlačítko.
+
+        _Výzva: letadla se momentálně pohybují příliš rychle. Podaří se vám změnit kód tak, aby se pohybala pomaleji? _
+      CSD U6 params modify planes_2018_instruction: |-
+        # Ovladání letadel
+
+        Tento program pohybuje třemi letadly pomocí kontrolky zrychlení a zaškrtávacích tlačítek na obrazovce. Zatím funguje pouze červené letadlo.
+
+        # Udělejte následující:
+        * Vytvořte novou funkci "movePlane(name)", která bude pohybovat libovolným letadlem.
+        * Zavolejte funkci "movePlane(name)" zevnitř bloku události tak, aby se letadlo pohybovalo jen tehdy, když je zaškrtnuto zaškrtávací tlačítko.
+
+        _Výzva: letadla se momentálně pohybují příliš rychle. Podaří se vám změnit kód tak, aby se pohybala pomaleji? _
       CSP student contact info_instruction: Zadejte svou e-mailovou adresu.
+      CSPU5_U3 - Loops - 4_instruction: Použijte Debug příkazy k vytvoření seznamu
+        všech hodnot, které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
+      CSPU5_U3 - Loops - 4_2018_instruction: Použijte Debug příkazy k vytvoření seznamu
+        všech hodnot, které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
       Calc Circles of Eval 2_instruction: K provedení tohoto kódu použijte blok násobení.
       Calc Circles of Eval 3_instruction: Spojte "výpočetní bloky" tak aby odpovídaly
         tomuto výrazu.
@@ -1507,6 +1571,8 @@ cs:
       Course 4 Variables Assessment_instruction: Dovedeš vytvořit tento obraz pomocí
         proměnné pro strany? Každý řádek by měl být dlouhý 50 pixelů.
       Course1BeePuzzle12_instruction: Získej tři nektary a pak udělej dva medy
+      CourseF_PlayLab_vars1_instruction: 'Chcete-li hrát tuto hru, není nutné napsat
+        žádný kód, stačí kliknout na "Spustit"! '
       CourseF_PlayLab_vars10_instruction: "Čas k volnému hraní! Zde jsou všechny proměnné,
         se kterými jsme hráli až dosud v této fázi, stejně jako pár dalších v případě,
         že je chcete. \r \r Všimni si, že zde nyní máme tolik bloků v našem panelu
@@ -1553,6 +1619,24 @@ cs:
       Crack Random Substitution_2018_instruction: Pokyny
       Crack a Caesar Cipher_instruction: Pokyny
       Crack a Caesar Cipher_2018_instruction: Pokyny
+      Dance Party 1-validated_instruction: 'Co si myslíte, že se stane, když kliknete
+        na mimozemšťana?  '
+      Dance Party 1-validated_simple_instruction: 'Co si myslíte, že se stane, když
+        kliknete na mimozemšťana?  '
+      Dance Party 2_instruction: Změňte chování uvnitř bloku "___ begins ___" tak,
+        aby se mimozemšťan roztočil.
+      Dance Party 2_simple_instruction: Změňte chování uvnitř bloku "___ begins ___"
+        tak, aby se mimozemšťan roztočil.
+      Dance Party 3 - Validated_instruction: 'Vytvořit nový sprite pojmenovaný "alien2",
+        který bude po kliknutí dělat různé taneční pohyby.  '
+      Dance Party 3_instruction: 'Vytvořit nový sprite pojmenovaný "alien2", který
+        bude po kliknutí dělat různé taneční pohyby.  '
+      Dance Party 3_simple_instruction: 'Vytvořit nový sprite pojmenovaný "alien2",
+        který bude po kliknutí dělat různé taneční pohyby.  '
+      Dance Party Predict_instruction: 'Co si myslíte, že se stane, když kliknete
+        na mimozemšťana?  '
+      Dance Party Predict_simple_instruction: 'Co si myslíte, že se stane, když kliknete
+        na mimozemšťana?  '
       Eval Define Funcs 2_instruction: Pojďme se podívat dovnitř funkce "zelený trojúhelník"
         abychom viděli, jak funguje. Můžete ji upravit tak, aby funkce "zelený trojúhelník"
         vždy nakreslila obrys zeleného trojúhelníku?
@@ -2255,6 +2339,10 @@ cs:
         ale je tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Underground Mining Coal_2018_instruction: Nejcennější suroviny najdeš v podzemí,
         ale je tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
+      Virtual Pet 1 Predict_instruction: 'Co si myslíte, že se stane, když kliknete
+        na mimozemšťana?  '
+      Virtual Pet 1 Predict_simple_instruction: 'Co si myslíte, že se stane, když
+        kliknete na mimozemšťana?  '
       aE7_instruction: Když zkopíruješ tento cyklus a otočíš vlevo místo vpravo, co
         se stane? Můžeš to zopakovat k kreslení této vlny?
       aE8_instruction: Teď musíme opakovat to celé čtyřikrát k vytvoření tento rámečku
@@ -2425,6 +2513,12 @@ cs:
       courseD_artist_binary7_instruction: Jaký je nejkratší binární řetězec, který
         lze opakovat k nakreslení tohoto obrázku?
       courseD_artist_binary7_2018_instruction: Jaký je nejkratší binární řetězec,
+        který lze opakovat k nakreslení tohoto obrázku?
+      courseD_autorun_binary4_2019_instruction: Mohl bys nakreslit tento vzor opakováním
+        tří číslicovým binárním řetězcem?
+      courseD_autorun_binary6_2019_instruction: Který 6 číslicový binární řetězec
+        11 krát opakovaný nakreslí tento obrázek?
+      courseD_autorun_binary7_2019_instruction: Jaký je nejkratší binární řetězec,
         který lze opakovat k nakreslení tohoto obrázku?
       courseD_bee_debugging3_instruction: Tyto bloky mě opravdu štvou. Oprav chybu(y),
         aby se sesbíral všechen nektar a udělal všechen med.
@@ -2758,8 +2852,10 @@ cs:
         nektar a všechen med.
       grade3_Loops_5_instruction: Vlož tyto bloky do cyklu ke sběru nektaru z každého
         květu.
-      grade3_Loops_6_instruction: Co se stane, když zacykluješ 3 krát posloupnost?
-        Nezapomeň si na konci udělat med!
+      grade3_Loops_6_instruction: |-
+        Kolik smyček potřebuješ v této hádance?
+
+        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       grade3_Loops_7_instruction: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej
         nektar z každého květu. '
       grade3_Loops_8_instruction: Použij cyklus pro sběr nektaru a udělat med.

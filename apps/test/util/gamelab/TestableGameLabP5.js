@@ -4,8 +4,7 @@ import "script-loader!@code-dot-org/p5.play/lib/p5.play";
 import {expect} from '../configuredChai';
 import GameLabP5 from '@cdo/apps/gamelab/GameLabP5';
 import {
-  injectJSInterpreter as injectJSInterpreterToSprite,
-  injectLevel as injectLevelToSprite
+  injectJSInterpreter as injectJSInterpreterToSprite
 } from '@cdo/apps/gamelab/GameLabSprite';
 import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/gamelab/GameLabGroup';
 
@@ -29,7 +28,6 @@ function createGameLabP5WithInterpreter(interpreter) {
 
   injectJSInterpreterToSprite(interpreter);
   injectJSInterpreterToGroup(interpreter);
-  injectLevelToSprite({});
   return gameLabP5;
 }
 

@@ -1461,3 +1461,15 @@ pt:
               name: Criando caminhos
             Your Digital Footprint:
               name: Seu rastro digital
+        frozen-2018:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Artista
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Artista

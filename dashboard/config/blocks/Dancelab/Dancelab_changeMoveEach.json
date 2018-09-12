@@ -12,20 +12,24 @@
             "sprites"
           ],
           [
-            "Alien",
-            "\"alien\""
+            "Duck",
+            "\"duck\""
+          ],
+          [
+            "Moose",
+            "\"moose\""
+          ],
+          [
+            "Unicorn",
+            "\"unicorn\""
           ],
           [
             "MrWiggles",
             "\"mrwiggles\""
           ],
           [
-            "Pizza",
-            "\"pizza\""
-          ],
-          [
-            "Unicorn",
-            "\"unicorn\""
+            "Cat",
+            "\"cat\""
           ]
         ]
       },
@@ -37,16 +41,48 @@
             "0"
           ],
           [
-            "Breakdown",
+            "Clap High",
             "1"
           ],
           [
-            "Floss",
+            "Clown",
             "2"
           ],
           [
-            "Fresh",
+            "Dab",
             "3"
+          ],
+          [
+            "Double Jam",
+            "4"
+          ],
+          [
+            "Drop",
+            "5"
+          ],
+          [
+            "Floss",
+            "6"
+          ],
+          [
+            "Fresh",
+            "7"
+          ],
+          [
+            "Roll",
+            "8"
+          ],
+          [
+            "This or That",
+            "9"
+          ],
+          [
+            "Kick",
+            "10"
+          ],
+          [
+            "Thiller",
+            "11"
           ],
           [
             "Next",

@@ -303,6 +303,10 @@ nl:
         frozen_circle_function_with_parameter_circle: Gebruik de "maak en cirkel" blok en wijzig de grootte.
       frozen cross rotate_callout:
         replace_questions_degree: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
       frozen cross_callout:
         repeat_blocks_1: "(1) gebruik dit blok en zet het rond de grijze blokken in de werkruimte"
         repeat_blocks_2: (2) Verplaats het "Herhaal" blok naar hier en plaats de grijze blokken er in
@@ -312,20 +316,48 @@ nl:
         frozen_diamond_repeat: Gebruik het herhaal blok om deze vorm te maken.
       frozen freeplay_callout:
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken te maken!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken te maken!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken te maken!
       frozen line_callout:
+        run: Klik op "Start" om je programma te testen!
+        move_elsa_forward: Sleep een "ga vooruit" blok en hang het onder de "als gestart" blok om Elsa vooruit te laten bewegen
+      frozen line_b_callout:
+        run: Klik op "Start" om je programma te testen!
+        move_elsa_forward: Sleep een "ga vooruit" blok en hang het onder de "als gestart" blok om Elsa vooruit te laten bewegen
+      frozen line_test_callout:
         run: Klik op "Start" om je programma te testen!
         move_elsa_forward: Sleep een "ga vooruit" blok en hang het onder de "als gestart" blok om Elsa vooruit te laten bewegen
       frozen perpendicular_callout:
         turn_elsa: Gebruik het "Draai" blok om Elsa te laten draaien. Het getal in het keuzemenu bepaalt hoeveel Elsa draait
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Gebruik de "Maak een sneeuwvlok-tak" blok
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Gebruik de "Maak een sneeuwvlok-tak" blok
       frozen square iterative_callout:
+        frozen_create_square: Hang hier meer blokken aan vast om een vierkant te maken
+      frozen square iterative_b_callout:
+        frozen_create_square: Hang hier meer blokken aan vast om een vierkant te maken
+      frozen square iterative_test_callout:
         frozen_create_square: Hang hier meer blokken aan vast om een vierkant te maken
       frozen square loop 3x_callout:
         replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
+      frozen square loop 3x_b_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
+      frozen square loop 3x_test_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
       frozen square loop_callout:
         replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
+      frozen square loop_b_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
+      frozen square loop_test_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
       frozen square snowflake_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
+      frozen square snowflake_b_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
+      frozen square snowflake_test_callout:
         replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door een getal
       grade2_collector_7_callout:
         grade2_collector_7_1: Je kunt meer blokken uit het menu gebruiken als je ze nodig hebt!

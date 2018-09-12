@@ -1648,3 +1648,15 @@ hu:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+        frozen-2018:
+          stages:
+            Artist:
+              name: Művész
+        frozen-2018-test:
+          stages:
+            Artist:
+              name: Művész
+        frozen-2018-test-b:
+          stages:
+            Artist:
+              name: Művész

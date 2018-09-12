@@ -2,9 +2,11 @@ pt-BR:
   data:
     callouts:
       AppLab Intro 2 - Edit place1 2_callout:
-        screenSelectorCallout3: Escolher a tela que você fez
+        dragTextAreaIn: Clique e arraste a "área de texto" para a tela
+        screenSelectorCallout3: Escolha a tela que você fez
       AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: Este é o seletor de tela
+        screenSelectorCallout2: Este é o seletor da tela
+        changePlace1ID: Mude o Id da sua tela aqui.
       AppLab Intro 2 - Edit startScreen_callout:
         applabIntro2_1: Clique no título de seu app
       AppLab Intro 2 - Edit startScreen2_callout:
@@ -443,6 +445,10 @@ pt-BR:
         frozen_circle_function_with_parameter_circle: Use o bloco "crie um círculo" e mude o tamanho.
       frozen cross rotate_callout:
         replace_questions_degree: Use o menu suspenso para substituir "???" por um número
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Use o menu suspenso para substituir "???" por um número
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Use o menu suspenso para substituir "???" por um número
       frozen cross_callout:
         repeat_blocks_1: "(1) Use este bloco e coloque-o em torno dos blocos cinza na área de trabalho"
         repeat_blocks_2: (2) Traga o bloco "repita" aqui e coloque os blocos cinza dentro dele
@@ -452,20 +458,48 @@ pt-BR:
         frozen_diamond_repeat: Use o bloco "repita" para criar esta forma.
       frozen freeplay_callout:
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de neve!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de neve!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de neve!
       frozen line_callout:
+        run: Clique em "Executar" para testar seu programa!
+        move_elsa_forward: Arraste um bloco "Avance" e encaixe-o sob o bloco "Quando o jogo começa" para que Elsa avance
+      frozen line_b_callout:
+        run: Clique em "Executar" para testar seu programa!
+        move_elsa_forward: Arraste um bloco "Avance" e encaixe-o sob o bloco "Quando o jogo começa" para que Elsa avance
+      frozen line_test_callout:
         run: Clique em "Executar" para testar seu programa!
         move_elsa_forward: Arraste um bloco "Avance" e encaixe-o sob o bloco "Quando o jogo começa" para que Elsa avance
       frozen perpendicular_callout:
         turn_elsa: Use o bloco "Vire" para que Elsa vire. O número no menu suspenso determina o quanto Elsa vai virar
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Use o bloco "crie uma parte do floco de neve"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Use o bloco "crie uma parte do floco de neve"
       frozen square iterative_callout:
+        frozen_create_square: Conecte mais blocos aqui para criar um quadrado
+      frozen square iterative_b_callout:
+        frozen_create_square: Conecte mais blocos aqui para criar um quadrado
+      frozen square iterative_test_callout:
         frozen_create_square: Conecte mais blocos aqui para criar um quadrado
       frozen square loop 3x_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square loop 3x_b_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square loop 3x_test_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
       frozen square loop_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square loop_b_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square loop_test_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
       frozen square snowflake_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square snowflake_b_callout:
+        replace_questions: Use o menu suspenso para substituir "???" por um número
+      frozen square snowflake_test_callout:
         replace_questions: Use o menu suspenso para substituir "???" por um número
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Esses blocos cinza são feitos de pedras! Isso significa que eles não podem ser jogados no lixo.

@@ -1,7 +1,8 @@
 import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
+import {UnconnectedAssignToSection as AssignToSection} from '@cdo/apps/templates/courseOverview/AssignToSection';
+import Immutable from 'immutable';
 
 const defaultProps = {
   courseId: 30,
@@ -23,7 +24,8 @@ const defaultProps = {
       id: 338,
       name: "section_with_course"
     }
-  ]
+  ],
+  updateHiddenScript: () => {},
 };
 
 describe('AssignToSection', () => {
@@ -81,6 +83,39 @@ describe('AssignToSection', () => {
     const confirm = wrapper.find('ConfirmAssignment');
     assert.equal(confirm.props().assignmentName, 'Computer Science Principles');
     assert.equal(confirm.props().sectionName, 'brent_section');
+    assert.equal(confirm.find('Button').at(1).text(), 'Assign');
+  });
+
+  it('shows a warning when clicking a hidden section', () => {
+    const scriptId = 99;
+    const sectionId = defaultProps.sectionsInfo[0].id;
+    const hiddenStageState = Immutable.fromJS({
+      scriptsBySection: { [sectionId]: {[scriptId]: true} }
+    });
+
+    const props = {
+      ...defaultProps,
+      courseId: undefined,
+      scriptId,
+      hiddenStageState,
+    };
+    const wrapper = mount(
+      <AssignToSection {...props}/>
+    );
+    wrapper.find('Button').simulate('click');
+    const firstSection = wrapper.find('a').at(1);
+    assert.equal(firstSection.props()['data-section-index'], 0);
+    // Enzyme simulate doesn't set target for us automatically, so we fake one.
+    const target = {
+      getAttribute: () => 0
+    };
+    firstSection.simulate('click', {target});
+
+    assert.strictEqual(wrapper.state().sectionIndexToAssign, 0);
+    const confirm = wrapper.find('ConfirmAssignment');
+    assert.equal(confirm.props().assignmentName, 'Computer Science Principles');
+    assert.equal(confirm.props().sectionName, 'brent_section');
+    assert.equal(confirm.find('Button').at(1).text(), 'Unhide unit and assign');
   });
 
   it('shows an error dialog when we have an error', () => {

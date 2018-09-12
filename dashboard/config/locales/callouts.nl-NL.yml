@@ -388,6 +388,12 @@ nl:
       frozen cross rotate_callout:
         replace_questions_degree: Gebruik de vervolgkeuzelijst om "???" te vervangen
           door een getal
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Gebruik de vervolgkeuzelijst om "???" te vervangen
+          door een getal
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Gebruik de vervolgkeuzelijst om "???" te vervangen
+          door een getal
       frozen cross_callout:
         repeat_blocks_1: "(1) gebruik dit blok en zet het rond de grijze blokken in
           de werkruimte"
@@ -400,7 +406,21 @@ nl:
       frozen freeplay_callout:
         snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken
           te maken!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken
+          te maken!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Gebruik deze vervolgkeuzelijst om verschillende sneeuwvlokken
+          te maken!
       frozen line_callout:
+        run: Klik op "Start" om je programma te testen!
+        move_elsa_forward: Sleep een "ga vooruit" blok en hang het onder de "als gestart"
+          blok om Elsa vooruit te laten bewegen
+      frozen line_b_callout:
+        run: Klik op "Start" om je programma te testen!
+        move_elsa_forward: Sleep een "ga vooruit" blok en hang het onder de "als gestart"
+          blok om Elsa vooruit te laten bewegen
+      frozen line_test_callout:
         run: Klik op "Start" om je programma te testen!
         move_elsa_forward: Sleep een "ga vooruit" blok en hang het onder de "als gestart"
           blok om Elsa vooruit te laten bewegen
@@ -409,15 +429,39 @@ nl:
           het keuzemenu bepaalt hoeveel Elsa draait
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Gebruik de "Maak een sneeuwvlok-tak" blok
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Gebruik de "Maak een sneeuwvlok-tak" blok
       frozen square iterative_callout:
         frozen_create_square: Hang hier meer blokken aan vast om een vierkant te maken
+      frozen square iterative_b_callout:
+        frozen_create_square: Hang hier meer blokken aan vast om een vierkant te maken
+      frozen square iterative_test_callout:
+        frozen_create_square: Hang hier meer blokken aan vast om een vierkant te maken
       frozen square loop 3x_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
+          een getal
+      frozen square loop 3x_b_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
+          een getal
+      frozen square loop 3x_test_callout:
         replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
           een getal
       frozen square loop_callout:
         replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
           een getal
+      frozen square loop_b_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
+          een getal
+      frozen square loop_test_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
+          een getal
       frozen square snowflake_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
+          een getal
+      frozen square snowflake_b_callout:
+        replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
+          een getal
+      frozen square snowflake_test_callout:
         replace_questions: Gebruik de vervolgkeuzelijst om "???" te vervangen door
           een getal
       grade2_collector_7_callout:

@@ -47,8 +47,13 @@ cs:
         bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané "nakreslit
         čtverec". Můžeš použít funkci "nakreslit čtverec" k vytvoření brýlí? Čtverce
         jsou od sebe 75 pixelů.
+      2-3 Artist Functions 3 a_markdown_instruction: "Upravte funkci \"nakreslit čtverec\"
+        tak, aby nakreslila brýle s rámy, které jsou velké 115px po obou stranách.
+        \n\nČtverce jsou nyní od sebe vzdálené 45 pixelů."
       2-3 Artist Functions 3_markdown_instruction: Uprav funkci nakreslit čtverec
         s délkou strany 115 a nakresli větší brýle. Čtverce jsou teď od sebe 45 pixelů.
+      2-3 Artist Functions 4 a_markdown_instruction: Nyní vložte funkci dovnitř smyčky
+        a přidejte tah navíc pro vykreslení těchto tří čtverců.
       2-3 Artist Functions 4_markdown_instruction: Použij blok "opakování" k nakreslení
         těchto 3 čtverců.
       2-3 Artist Loops 1_markdown_instruction: Můžeš udělat šestiúhelník se stranami
@@ -235,6 +240,8 @@ cs:
       4-5 While Loops 4_markdown_instruction: 'Wow,  našel jsem opravdu hluboké díry!
         Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který
         ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus.'
+      Artist Autorun Test_markdown_instruction: Použij blok "opakování" k nakreslení
+        těchto 3 čtverců.
       Calc Circles of Eval 2_markdown_instruction: K provedení tohoto kódu použijte
         blok násobení.
       Calc Circles of Eval 3_markdown_instruction: Spojte "výpočetní bloky" tak aby
@@ -646,8 +653,10 @@ cs:
         nektar?
       grade3_Loops_4_markdown_instruction: Nyní pomocí nového bloku opakování shromáždit
         všechen nektar a všechen med.
-      grade3_Loops_6_markdown_instruction: Co se stane, když zacykluješ 3 krát posloupnost?
-        Nezapomeň si na konci udělat med!
+      grade3_Loops_6_markdown_instruction: |-
+        Kolik smyček potřebuješ v této hádance?
+
+        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       grade3_Loops_7_markdown_instruction: 'Každý květ obsahuje jednu jednotku nektaru.
         Sbírej nektar z každého květu. '
       grade3_Loops_TeacherIDo_markdown_instruction: 'Každý květ obsahuje jednu jednotku
@@ -776,7 +785,9 @@ cs:
         tento nektar?
       level 'grade3_Loops_4_markdown_instruction: Nyní pomocí nového bloku opakování
         shromáždit všechen nektar a všechen med.
-      level 'grade3_Loops_6_markdown_instruction: Co se stane, když zacykluješ 3 krát
-        posloupnost? Nezapomeň si na konci udělat med!
+      level 'grade3_Loops_6_markdown_instruction: |-
+        Kolik smyček potřebuješ v této hádance?
+
+        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       level 'grade3_Loops_7_markdown_instruction: 'Každý květ obsahuje jednu jednotku
         nektaru. Sbírej nektar z každého květu. '

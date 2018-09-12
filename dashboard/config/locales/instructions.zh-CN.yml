@@ -388,6 +388,10 @@ zh-CN:
       4-5 While Loops 7_instruction: 哇，这里有三堆土！你能写一个程序，将它们一铲铲移除，直到地面平整吗？
       4-5 While Loops 8_instruction: " 这里有一个很深的坑，和一个很大的土堆。需要移动多少土才能将地面弄平整呢？"
       4-5 While Loops Assessment 1_instruction: 这里有好多坑和土堆。帮我填满或移除它们来让地面平整。
+      AB_Debug_PlayLab2_instruction: |-
+        为什么这个游戏不能做任何事情？
+
+        你能找到"隐藏"的缺陷吗？有些会比较简单。
       Alien Defender_instruction: 项目创意：在游戏实验室里制作一个塔防游戏！
       Alien Defender_2018_instruction: 项目创意：在游戏实验室里制作一个塔防游戏！
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': 制作一个3x5的字母A。部件的设定尺寸是错误的。你的第一个任务是将第二个字节设置为5的8位二进制码：00000101。然后开始输入像素数据。
@@ -406,6 +410,7 @@ zh-CN:
       Artist - Nested Loops 6_instruction: 你可以通过循环三角形代码来画一个六边形吗?
       Artist - Nested Loops 9_instruction: 在鳄鱼嘴里画上牙齿！
       Artist - Nested Loops Assessment 1_instruction: 用嵌套循环来完成这幅画。
+      Artist Autorun Test_instruction: 现在，将函数放到循环里来画这三个正方形。
       Artist Inspiration_instruction: '自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。 '
       Auto Open Function Editor_instruction: '你能用一个函数里调用其它函数！用你的“形状”函数作为基础，创建三个房子图形，第一个是50像素宽，而每个都比前一个大20像素。用一个计数循环可能会方便一些。 '
       Bee Recommended Blocks test_instruction: 紫色的话可能有一个花蜜，也可能一个都没有，但是你不知道有没有！小心不要从没有花蜜的紫花里收集花蜜。用“如果”模块来检查是否花蜜等于1。
@@ -419,6 +424,7 @@ zh-CN:
       C3-Farmer While Loops 6_instruction: 哇，现在这里有一大堆土！你能写个程序来移除土，直到它和地面一样平吗？
       C3-Farmer While Loops 7_instruction: 哇，这里有三堆土！你能写一个程序，将它们一铲铲移除，直到地面平整吗？
       C3-Farmer While Loops Assessment 1_instruction: 这里有好多坑和土堆。帮我填满或移除它们来让地面平整。
+      CDEF_debugging_flappy2_instruction: 为什么这个游戏不能玩？
       CSD Hackathon Pt 1_instruction: "（点击以查看完整的说明）"
       CSD Hackathon Pt 2_instruction: "（点击以查看完整的说明）"
       CSD Hackathon Week 1_instruction: "（点击以查看完整的说明）"
@@ -802,18 +808,47 @@ zh-CN:
       D_Frozen_nested9_instruction: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
         会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
       Dance Party 1-validated_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Dance Party 1-validated_simple_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Dance Party 2_instruction: 改变 `___ begins ___` 模块内的行为, 使外星人开始旋转。
+      Dance Party 2_simple_instruction: 改变 `___ begins ___` 模块内的行为, 使外星人开始旋转。
+      Dance Party 3 - Validated_instruction: '先创造一个叫`外星人2`的图形，然后让它在被点击时完成一个新的舞步。  '
+      Dance Party 3 Ram_instruction: 当按向上箭头的时候让精灵做一些不同的事情。
+      Dance Party 3_instruction: '先创造一个叫`外星人2`的图形，然后让它在被点击时完成一个新的舞步。  '
+      Dance Party 3_simple_instruction: '先创造一个叫`外星人2`的图形，然后让它在被点击时完成一个新的舞步。  '
+      Dance Party 4 Validated_instruction: '创建一个名为 `alien3` 的第三个精灵, 并让所有的外星人站在一条线上。 '
+      Dance Party 4_instruction: '创建一个名为 `alien3` 的第三个精灵, 并让所有的外星人站在一条线上。 '
+      Dance Party 4_simple_instruction: '创建一个名为 `alien3` 的第三个精灵, 并让所有的外星人站在一条线上。 '
+      Dance Party 5 - Validated_instruction: 添加代码以在单击时更改每个外星人的颜色。
+      Dance Party 5_instruction: 添加代码以在单击时更改每个外星人的颜色。
+      Dance Party 5_simple_instruction: 添加代码以在单击时更改每个外星人的颜色。
+      Dance Party 6 - Validated_instruction: 这些外星人太调皮了！使用`停止所有`模块，在点击时让每个外星人都停下来。
+      Dance Party 6_instruction: 这些外星人太调皮了！使用`停止所有`模块，在点击时让每个外星人都停下来。
+      Dance Party 6_simple_instruction: 这些外星人太调皮了！使用`停止所有`模块，在点击时让每个外星人都停下来。
+      Dance Party 7 - Validated_instruction: 添加一个样子是钟，名字叫 `myBell` 的精灵, 功能是在被点击时使所有的外星人开始跳同样的舞蹈。
+      Dance Party 7_instruction: 添加一个样子是钟，名字叫 `myBell` 的精灵, 功能是在被点击时使所有的外星人开始跳同样的舞蹈。
+      Dance Party 7_simple_instruction: 添加一个样子是钟，名字叫 `myBell` 的精灵, 功能是在被点击时使所有的外星人开始跳同样的舞蹈。
       Dance Party Freeplay_instruction: 现在来一段你自创的外星迪斯科吧！
+      Dance Party Freeplay_simple_instruction: 现在来一段你自创的外星迪斯科吧！
       Dance Party Predict_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Dance Party Predict_simple_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
       Eval Free Play_instruction: 自由发挥： 用代码来创造艺术吧！
       Eval Strings Images .1_instruction: 到目前为止我们仅处理单一类型的数据，就是数字。 另一种数据类型是字符串，它可以是字母、
         数字或其他用引号引起来的字符的任意组合。运行字符串"你好, 世界！"，看看会发生什么。
       Find the Wizard_instruction: 随便创造一个东西。这是一个猜数游戏的例子！
       Find the Wizard_2018_instruction: 随便创造一个东西。这是一个猜数游戏的例子！
+      Fish Tank 2-validated_instruction: 改变达斯汀（风滚草）为鱼。
+      Fish Tank 2-validated_simple_instruction: 改变达斯汀（风滚草）为鱼。
+      Fish Tank 3-validated Ram_instruction: 改动一下鱼的行为，让它沿着水缸边缘游。
       Fish Tank 3-validated_instruction: 改动一下鱼的行为，让它沿着水缸边缘游。
+      Fish Tank 3-validated_simple_instruction: 改动一下鱼的行为，让它沿着水缸边缘游。
       Fish Tank 4-validated_instruction: 加入`"background-color"`（背景颜色）模块将背景改为蓝色。
+      Fish Tank 4-validated_simple_instruction: 加入`"background-color"`（背景颜色）模块将背景改为蓝色。
       Fish Tank 5-validated_instruction: 鱼有些孤单。在鱼缸内创造一个新的精灵。
+      Fish Tank 5-validated_simple_instruction: 鱼想要一个朋友。  添加新的精灵。
       Fish Tank 6-validated_instruction: 给鱼的新朋友添加一种新行为。
+      Fish Tank 6-validated_simple_instruction: 给鱼的新朋友添加一种新行为。
       Fish Tank 7-validated_instruction: 使用一些新的模块让鱼缸变得与众不同！
+      Fish Tank 7-validated_simple_instruction: 使用一些新的模块让鱼缸变得与众不同！
       Food Fight!_instruction: "我们已为你添加了上一关的函数。\r\n\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数)
         大于某个值时，调用level_up(升级) 函数。\r\n\r\n例如：“play_score” > 6\r\n\r\n玩游戏，并且达到第3级来到达下一关。 "
       FoodFight_instruction: 这是一个可以在游戏实验室里玩的游戏的示例。
@@ -838,6 +873,7 @@ zh-CN:
       Guess The Number 2_instruction: 随便创造一个东西。这是一个猜数游戏的例子！
       Guess The Number_instruction: 随便创造一个东西。这是一个猜数游戏的例子！
       Guess The Number_2018_instruction: 随便创造一个东西。这是一个猜数游戏的例子！
+      HoCAB_labyrinth1_instruction: 使用箭头模块来解决这个迷宫!
       Infinity_catch_instruction: 你能用方向键让爱莎（演员2）追上安娜吗？
       Infinity_finale_instruction: 创建并分享你想的任何东西！
       Infinity_move_collide_instruction: 阿宽是演员1。让他向右走到大白那里，当他们碰到一起时播放声音。
@@ -1169,6 +1205,7 @@ zh-CN:
       Prompt Test_instruction: 创建任何想象的东西。这是一个猜数游戏的例子 ！
       Quantum Bee - Ryan_instruction: 这些云正在打搅我！在这些云里，一部分有花，而另一部分没有花。我需要从这些有花的云里采集到蜂蜜。
       Quantum Bee_instruction: 紫色的花里可能会有一个花蜜，但也可能没有花蜜，而且你不知道哪些花有花蜜！请注意不要从没有花蜜的紫花里收集花蜜。你可以用“如果”模块来检查（花朵里的）花蜜是否等于1。
+      Ram Spritelab Validation Test_instruction: 按上方向键
       Robot Doodle_instruction: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Robot Doodle_2018_instruction: 项目想法：创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！
       Robot Drawing_instruction: '项目理念: 创建一个真实世界中熟悉的事物的图片。这需要坚持和规划!'
@@ -1383,8 +1420,25 @@ zh-CN:
       Valentine_playlab_01_instruction: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时,
         她应该把心投向她的朋友们。 '
       Virtual Pet 1 Predict_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Virtual Pet 1 Predict_simple_instruction: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Virtual Pet 1_instruction: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
+      Virtual Pet 1_simple_instruction: 你觉得如果你按下 "运行" 然后点击她，会发生什么？
+      Virtual Pet 2 - Validated (Ram)_instruction: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
+      Virtual Pet 2 - Validated_instruction: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
+      Virtual Pet 2_instruction: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
+      Virtual Pet 2_simple_instruction: 创建 **事件** 使杰拉尔丁接触到土尘时, 她的颜色变成褐色。
+      Virtual Pet 2_simple_clone_instruction: 创建 **事件** 使杰拉尔丁接触到土尘时, 她的颜色变成褐色。
+      Virtual Pet 3_instruction: 在屏幕上添加一个肥皂。 是否能实现当长颈鹿和肥皂接触时，长颈鹿变回原有的颜色？
+      Virtual Pet 3_simple_instruction: 在屏幕上添加一个肥皂。 是否能实现当长颈鹿和肥皂接触时，长颈鹿变回原有的颜色？
       Virtual Pet 4_instruction: 为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。
+      Virtual Pet 4_simple_instruction: 为肥皂添加行为使其变得可拖动，完成后拖动它来清洁长颈鹿。
+      Virtual Pet 5 - Validated_instruction: 向每个事件添加动作, 使长颈鹿与每个精灵碰撞时, 它的尺寸会收缩5。
+      Virtual Pet 5_instruction: 向每个事件添加动作, 使长颈鹿与每个精灵碰撞时, 它的尺寸会收缩5。
+      Virtual Pet 5_simple_instruction: 向每个事件添加动作, 使长颈鹿与每个精灵碰撞时, 它的尺寸会收缩5。
+      Virtual Pet 6_instruction: 添加一个苹果，这个苹果可以在与长颈鹿相碰时使长颈鹿回到原来的尺寸。
+      Virtual Pet 6_simple_instruction: 添加一个苹果，这个苹果可以在与长颈鹿相碰时使长颈鹿回到原来的尺寸。
       Virtual Pet Freeplay_instruction: '自由发挥：你的长颈鹿还能做些什么呢？ '
+      Virtual Pet Freeplay_simple_instruction: '自由发挥：你的长颈鹿还能做些什么呢？ '
       aE3alternate_instruction: 交替
       aE3alternateB_instruction: 交替
       aE4_instruction: 交替
@@ -1832,6 +1886,7 @@ zh-CN:
       courseB_maze_seq1_2018_instruction: "玩一玩这些模块, 看看他们能让斯奎特做什么吧! \r\n\r\n把斯奎特送到橡子那里来完成这关。"
       courseB_maze_seq2_instruction: "\"有错误! 修复代码把我带到猪那里。*"
       courseB_maze_seq2_2018_instruction: 有错误! 修复代码把斯奎特带到橡子那里！
+      courseB_maze_seq3_instruction: '"修复代码来让我到达那只猪！"'
       courseB_maze_seq4_instruction: 添加两个模块, 让鸟到猪那。
       courseB_maze_seq4_2018_instruction: 添加**两个**移动模块, 让斯奎特到达橡子那里。
       courseB_maze_seq5_instruction: 现在从开始试试这一关！
@@ -1864,10 +1919,11 @@ zh-CN:
       courseB_playlab_events6_instruction: "帮助你的骑士得到所有的旗帜！\r\n\r\n要做到这个，你需要添加事件来帮助骑士上下左右移动。"
       courseB_playlab_events6_2018_instruction: "帮助骑士得到所有的旗子!\r\n\r\n要做到这些，需要添加事件来帮助骑士向上、向下、向左和向右移动。"
       courseB_playlab_events7_instruction: 让这个游戏有趣，设置骑士在去往旗子的路上碰到龙的时候消失！当他们碰撞时播放声音使感觉更真实。
-      courseB_playlab_events7_2018_instruction: 让这个游戏有趣，设置骑士在去往旗子的路上碰到龙的时候消失！当他们碰撞时播放声音使感觉更真实。
+      courseB_playlab_events7_2018_instruction: "1) 设置骑士，让他碰到龙时消失。 \n2) 当他们碰撞时播放声音，这样感觉更真实。
+        \ "
       courseB_playlab_events8_instruction: 运用你的想象力。你能做些什么让这个游戏更有趣？
       courseB_playlab_eventsFP_instruction: 运用你的想象力。你能做些什么让这个游戏更有趣？
-      courseB_playlab_eventsFP_2018_instruction: 运用你的想象力。你能做些什么让这个游戏更有趣？
+      courseB_playlab_eventsFP_2018_instruction: "**自由发挥：** 运用你的想象力。你能做些什么让这个游戏更有趣？"
       courseB_playlab_eventsToolbox_instruction: 在骑士碰到龙的时候，播放声音并让骑士消失！
       courseB_playlab_events_challenge1_instruction: '当你按下时, 让动物们往下移动。 '
       courseB_playlab_events_challenge1_2018_instruction: '当你按下时, 让动物们往下移动。 '
@@ -2175,7 +2231,7 @@ zh-CN:
       courseD_Frozen_nested8_instruction: 在一个圆圈内旋转该形状大约5或6次。
       courseD_Frozen_nested9_instruction: "试着改动一下你所创造的东西。画任何你喜欢的东西! \r\n- 如果你在台阶上使用两个不同的角度,
         会发生什么？\r\n- 如果你把你的钻石图案变长或变短, 会发生什么？\r\n- 如果把两片雪花叠起来是什么样的？"
-      courseD_artist_1_2018_instruction: "画一个**30**像素边长的小正方形。\r\n"
+      courseD_artist_1_2018_instruction: "画一个**50**像素边长的六边形。\r\n"
       courseD_artist_2_2018_instruction: "现在，向右转**60**度，然后画一条**150**像素长的直线，并跳回到区域中心。\r\n"
       courseD_artist_3_2018_instruction: '将所有代码嵌入到另一个`重复`循环中，并运行**6**次。 '
       courseD_artist_4_2018_instruction: 在线的末尾增加一个小形状！
@@ -2282,6 +2338,14 @@ zh-CN:
       courseD_artist_project_embedded_instruction: 这是你即将要做的！
       courseD_artist_ramp11_instruction: 现在用艺术家做一个正方形!
       courseD_artist_ramp12_instruction: 用你学过的东西在正方形里面画这个三角形。
+      courseD_autorun_binary2_2019_instruction: 运行代码来看看小艺术家如何用二进制画出这幅图案。
+      courseD_autorun_binary3_2019_instruction: 哪个二进制字符串能让你循环8次来画出这个图像？
+      courseD_autorun_binary4_2019_instruction: 你能通过循环3个二进制位（0和1）来画出这个图形吗？
+      courseD_autorun_binary5_2019_instruction: "下面的每个二进制字符串表达了这个图片的一行。\r\n\r\n你能重新排列它们，用笑脸代替皱眉吗？"
+      courseD_autorun_binary6_2019_instruction: 哪个6位的二进制字符串重复11次后能够画出这个图形?
+      courseD_autorun_binary7_2019_instruction: 能让你重复并画出这个图形的最短的二进制字符串是什么?
+      courseD_autorun_binary8_2019_instruction: 完成代码来创建此图。
+      courseD_autorun_binary8_predict1_2019_instruction: 完成代码来创建此图。
       courseD_bee_conditionals1_instruction: 查看这朵云下面有没有一朵花。如果有花，就采花蜜。
       courseD_bee_conditionals10_instruction: 收集所有的花蜜并制作蜂蜜。
       courseD_bee_conditionals10_2018_instruction: 收集所有的花蜜并制作蜂蜜。

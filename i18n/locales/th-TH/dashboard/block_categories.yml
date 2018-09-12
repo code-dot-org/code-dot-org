@@ -11,7 +11,9 @@ th:
       Variables: ตัวแปร
       Conditionals: เงื่อนไข 
       Events: เหตุการณ์
+      Comments: หมายเหตุ (Comment)
       Text: ข้อความ
+      Comment: หมายเหตุ (Comment)
       Start: เริ่มต้น
       test: ทดสอบ
       Name: ชื่อ

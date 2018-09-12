@@ -12,6 +12,7 @@ describe('EligibilityChecklist', () => {
     statusStudentCount: Status.SUCCEEDED,
     hasConfirmedSchool: false,
     adminSetStatus: false,
+    currentlyDistributingDiscountCodes: true,
   };
 
   it('renders a div if we have no discountCode', () => {

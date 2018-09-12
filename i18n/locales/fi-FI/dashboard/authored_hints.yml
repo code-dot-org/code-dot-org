@@ -136,6 +136,8 @@ fi:
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: "Jokaisen timantin lopussa taiteilija on jo oikeassa suunnassa alkaakseen seuraavan. \n\nTämän vuoksi meidän ei tarvitse lisätä ylimääräistä `käänny vasemmalle` lohkoa, ennen kuin aloitamme uudelleen."
         2-3_Artist_Loops_New_13_b: "Saadakseen jokaisen timantin tehtyä taiteilijan tarvitsee: \n- siirtyä \n- kääntyä oikealle 120 astetta \n- siirtyä \n- kääntyä oikealle 60 astetta \n\nSitten tee kaikki uudelleen!"
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Taiteilijan on käännyttävä 120 astetta jokaisen neliön välissä, jotta se voi suorittaa loppuun tämän mallin.
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Voit kutsua toimintoa ohjelmassasi monta kertaa! Kokeile tehtävän selvittämistä kutsumalla sitä kaksi kertaa.
       MC Agent Freeplay_authored_hint:

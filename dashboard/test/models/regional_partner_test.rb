@@ -214,4 +214,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     assert_equal partner_organizer, regional_partner.contact
   end
+
+  test 'principal_approval must be valid' do
+    regional_partner = build :regional_partner, applications_principal_approval: 'Invalid principal_approval'
+    refute regional_partner.valid?
+    assert_equal ["Applications principal approval is not included in the list"], regional_partner.errors.full_messages
+  end
 end

@@ -578,7 +578,7 @@ it:
       4:
         text: "Oppure puoi dare al computer l'istruzione \"vai avanti\" una sola volta, e poi dargli l'istruzione \"ripeti 5 volte\" (repeat 5 times), per ottenere lo stesso risultato. Per fare questo, devi trascinare il blocco \"vai avanti\" all'interno del blocco \"ripeti ... volte\". Puoi cliccare sul numero per dirgli quante volte ripetere il blocco al suo interno, cioè per dirgli - in questo caso - di quante posizioni vuoi avanzare."
       5:
-        text: "Un ultima cosa, puoi mettere quanti blocchi vuoi all'interno di un blocco \"ripeti ... volte\". In questo esempio, gli dici di avanzare di una casella e poi girare a sinistra, e gli dici che vuoi che lo faccia cinque volte. E' tutto, buon lavoro e buon divertimento!"
+        text: "Un ultima cosa, puoi mettere quanti blocchi vuoi all'interno di un blocco \"ripeti ... volte\". In questo esempio, gli dici di avanzare di una casella e poi girare a sinistra, e gli dici che vuoi che lo faccia cinque volte. È tutto, buon lavoro e buon divertimento!"
     C3_artist_functions:
       1:
         text: "Una delle cose più utili della programmazione è che una volta che hai insegnato ad un computer come fare un'azione, puoi richiamare nuovamente quella \"funzione\" (function). Le dai un nome e dopo puoi richiamarla. È proprio come ampliare il linguaggio."
@@ -1099,7 +1099,7 @@ it:
       11:
         text: "Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro e rimetterlo nella cassetta degli attrezzi."
       12:
-        text: "Per annullare le modifiche e tornare nella situazione iniziale, usa il pulsante \"Ripristina\" che trovi sull'angolo in alto a destra della tua area di lavoro. Un'ultima cosa: hai notato il triangolino con la punta verso il basso nei blocchi \"gira a ....\"? Ogni volta che vedi questi triangolini, significa che puoi selezionare una tra più opzioni a tua disposizione. Inizia a programmare!"
+        text: "Per annullare le modifiche e tornare nella situazione iniziale, usa il pulsante \"Ripristina\" che trovi sull'angolo in alto a destra della tua area di lavoro. Un'ultima cosa: hai notato il triangolino con la punta verso il basso nei blocchi \"gira a ...\"? Ogni volta che vedi questi triangolini, significa che puoi selezionare una tra più opzioni a tua disposizione. Inizia a programmare!"
     mc_repeat:
       1:
         text: "Sono Lydia Winters, sono \"brand director\" alla Mojang, che ha realizzato questo gioco chiamato Minecraft."
@@ -1254,7 +1254,7 @@ it:
         text: "Visto che gli zombie devono comparire di notte, inseriamo il blocco \"crea zombie\" nel blocco \"di notte\". Appena viene creato, ciascuno zombie eseguirà il codice che hai inserito nel gestore di evento \"quando viene creato\". Buon divertimento con gli zombie!"
     mc_2016_congrats:
       1:
-        text: "Congratulazioni! Hai imparato a utilizzare la programmazione per dare vita a nuovi mondi di Minecraft. Ora sei tu lo sviluppatore. Hai a disposizione tutti i comandi e le creature. Ora sei tu a stabilire cosa accadrà."
+        text: "Congratulazioni! Hai imparato a utilizzare la programmazione per dare vita a nuovi mondi di Minecraft. Ora sei tu lo sviluppatore. Hai a disposizione tutte le istruzioni e le creature. Ora sei tu a stabilire cosa accadrà."
       2:
         text: "Quando hai completato il tuo gioco, clicca su \"Termina\" per ottenere un link per condividerlo con gli amici o provare il tuo gioco su smartphone. Buon divertimento! Non vedo l’ora di giocare la tua versione di Minecraft."
     applab_intro_welcome:
@@ -1370,9 +1370,9 @@ it:
       7:
         text: "Per completare questa sfida dell'Ora del Codice, dovrai scrivere del codice per programmare l'Agente. Lavorerai insieme all'Agente per eliminare ogni ostacolo sul tuo passaggio, così potrai raccogliere tutti gli oggetti di cui avrai bisogno nel tuo viaggio. Solo l'Agente può posizionare e rompere i blocchi e solo tu puoi collezionare oggetti. Lo schermo è diviso in tre pari. Sulla sinistra Minecraft."
       8:
-        text: "La zona centrale è la cassetta degli attrezzi con i comandi che conosce l'Agente."
+        text: "La zona centrale è la cassetta degli attrezzi con le istruzioni che conosce l'Agente."
       9:
-        text: "Sulla destra l'area di lavoro. Qui è dove concateni i comandi per creare il tuo programma per controllare l'Agente."
+        text: "Sulla destra l'area di lavoro. Qui è dove concateni le istruzioni per creare il tuo programma per controllare l'Agente."
       10:
         text: "L'Agente può camminare, girarsi e attivare le pedane a pressione. Può anche distruggere e posizionare blocchi. Quando posa blocchi come queste rotaie, le posiziona sotto di sé."
       11:
@@ -1395,7 +1395,7 @@ it:
       7:
         text: "Nel prossimo esercizio, puoi usare un ciclo per muovere l'Agente lungo il percorso. Trascina il blocco \"ripeti...volte\" nell'area di lavoro e posiziona il blocco \"vai avanti\" dentro al blocco \"ripeti...volte\". Questo dice al computer di fare alcune cose molte volte di seguito, senza dover trascinare un mucchio di blocchi nell'area di lavoro. Puoi scegliere quante volte ripetere, scrivendo un numero nel blocco \"ripeti...volte\"."
       8:
-        text: "Puoi anche mettere molti comandi diversi all'interno del blocco \"ripeti...volte\", ma per ora prova ad usarlo per far avanzare l'Agente di pochi passi. Ricorda, se ti blocchi su un esercizio, puoi sempre premere il pulsante blu \"ricomincia\" e provare di nuovo."
+        text: "Puoi anche mettere molte istruzioni diverse all'interno del blocco `ripeti ... volte`, ma per ora prova ad usarlo per far avanzare l'Agente di pochi passi. Ricorda, se ti blocchi su un esercizio, puoi sempre premere il pulsante blu \"ricomincia\" e provare di nuovo."
       9:
         text: "Stacy: Se stai pensando che ti piacerebbe fare un lavoro come quello di Katie, vai avanti e clicca sul pulsante \"mostra il codice\" alla fine di ogni esercizio. Potrai vedere il codice JavaScript che qualcuno come Katie usa quando programma veramente Minecraft. Perfetto, grazie mille! Katie: Prego, buona fortuna a tutti!"
     mc_2017_functions:

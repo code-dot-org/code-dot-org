@@ -34,9 +34,9 @@ oldsig () {
 
 run () {
 <% if node['cdo-apps']['nginx_enabled'] %>
-  if [ ! -d "/run/unicorn" ]
+  if [ ! -d "<%= @socket_path %>" ]
   then
-      mkdir -p /run/unicorn; chown ${AS_USER}: /run/unicorn
+      mkdir -p <%= @socket_path %>; chown ${AS_USER}: <%= @socket_path %>
   fi
 <% end %>
   if [ "$(id -un)" = "$AS_USER" ]; then

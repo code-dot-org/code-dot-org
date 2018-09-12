@@ -95,6 +95,7 @@ da:
       4-5 Bee Nested Loops 4_markdown_instruction: "Indsaml al nektar fra alle blomster, og lav honning i alle bikuber. Brug indlejrede løkker. "
       4-5 Bee Nested Loops Assessment 1_markdown_instruction: "** Vurdering: ** Saml al nektaren og lav al honningen ved hjælp af løkker."
       4-5 Nested Loops 9_markdown_instruction: Tegn tænderne i alligatorens mund!
+      Artist Autorun Test_markdown_instruction: Brug "gentagelsesblokken" til at tegne disse tre firkanter.
       Function intro Ryan_markdown_instruction: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over floden! \\r\n \\r\nKlik den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
       K-1 Maze Loops 11_markdown_instruction: "Få mig hen til grisen! Brug gentag-blokken."
       K-1 Maze Loops 12_markdown_instruction: "Få mig hen til grisen! Brug gentag-blokken."

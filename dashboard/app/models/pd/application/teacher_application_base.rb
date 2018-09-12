@@ -500,7 +500,17 @@ module Pd::Application
     end
 
     def principal_approval
-      sanitize_form_data_hash[:principal_approval] || ''
+      principal_approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
+
+      if principal_approval
+        if principal_approval.placeholder?
+          'Sent'
+        else
+          sanitize_form_data_hash[:principal_approval]
+        end
+      else
+        'No approval sent'
+      end
     end
 
     # @override

@@ -147,13 +147,8 @@ def company_count
 end
 
 def country_count
-  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+  code = HOC_COUNTRIES[@country]['country_code'] || @country
   return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
-end
-
-def solr_country_code
-  code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
-  return code
 end
 
 def country_full_name

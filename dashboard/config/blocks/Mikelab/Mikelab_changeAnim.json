@@ -1,0 +1,24 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "changeAnim",
+    "inline": false,
+    "blockText": "change sprite called {NAME} \n to costume {COSTUME}",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "NAME",
+        "assignment": true,
+        "customInput": "spritePicker"
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

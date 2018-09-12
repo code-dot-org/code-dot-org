@@ -1317,26 +1317,306 @@ pt-BR:
         image: 'notes/applab_intro_welcome_1.png'
         text: "Meu nome é Mei'lani. Eu faço estágio no code.org e também sou estudante de ciência da computação. Eu gosto de ciência da computação porque é muito criativo. Eu posso ser a solucionadora de problemas. Eu posso fazer tudo funcionar da maneira como eu quero. Mas eu também posso ser a designer. Eu posso ser a artista e escolher tudo no âmbito criativo da ciência da computação."
       2:
+        text: "Fazer seus próprios aplicativos é fácil com o Laboratório de Apps! Tanto se você for novo em programação ou se você já tiver alguma experiência. O Laboratório de Apps é uma ótima ferramenta para construir novos apps e compartilhá-los com seus amigos."
       3:
+        text: "Este é o Laboratório de Apps. No lado esquerdo está o seu app. No lado direito está o código que irá fazê-lo rodar. Você pode construir o seu programa arrastando blocos da caixa de ferramentas. Para começar você terá apenas um bloco chamado 'definirPropriedade'."
       4:
+        text: "O bloco de definir prioridade muda a aparência dos elementos na sua tela. Como os botões, rótulos, ou mesmo a própria tela. Primeiro você precisa decidir qual elemento você deseja alterar. Se você passar o mouse por cima de um elemento no seu app você pode ver o nome ou ID aqui. Então selecione aquele ID na primeira lista de seleção."
       5:
+        text: "Elementos têm muitas propriedades que você pode mudar como a cor de seu texto, cor de fundo ou tamanho da fonte. Você pode ver a lista completa e escolher qual propriedade você deseja alterar na segunda lista de seleção."
       6:
+        text: "A última lista é onde você irá escrever o valor que você deseja usar. O bloco irá fazer sugestões para você. Mas você mesmo sempre pode digitar cores ou números diferentes."
       7:
+        text: "Assim que você terminar, o bloco se lê como uma sentença: 'Defina a cor de fundo do botão 1 para verde'. Clique em executar para ver as mudanças que você está construindo no código. Se você redefinir você poderá arrastar mais blocos para alterar outras coisas sobre o seu app. Como o texto!"
       8:
+        text: "Para este tutorial vamos trabalhar no modo de blocos mas o Laboratório de Apps também suporte trabalhar com texto."
       9:
+        text: "De qualquer maneira você vai estar programando em JavaScript, a linguagem da web. Cada nível tem um objetivo, instruções e uma imagem do que você pretende criar."
       10:
+        text: "Se você ficar preso, clique nesta imagem e ela irá te mostrar exatamente como completar o nível. Mas veja se você consegue fazê-lo sozinho primeiro."
       11:
+        text: "Assim que você tiver completado o objetivo para este nível clique em Terminar para seguir em frente. Isto é tudo! Aperte o botão laranja \"continue\" para ir para o próximo nível e comece sua aventura com um Laboratório de Apps!"
+    applab_intro_events:
+      1:
+        text: "Apps são muito legais porque é como começar o seu próprio negócio. Quero dizer, você projeta tudo a partir do zero, você gerencia tudo, e você é o proprietário deste pedaço de trabalho que você acabou de criar com código."
+      2:
+        text: "Agora que você pode alterar a aparência do seu app vamos torná-lo interativo respondendo a eventos! Eventos são ações de usuário como clicar em um botão, rolar por um menu, ou passar o mouse sobre uma imagem. Apps interativos precisam de maneiras para responder a eventos, como tocar um som quando eu clico neste botão. Para fazer isto no Laboratório de Apps você vai precisar usar um novo bloco chamado 'noEvento'."
+      3:
+        text: "Este programa define a tela para azul. Eu quero que a tela fique verde quando eu clicar neste botão. Primeiro eu vou precisar arrastar um bloco noEvento. Ao arrastar o mouse eu sei que o ID do botão é \"bigButton\" então irei selecionar este ID na primeira lista de seleção."
+      4:
+        text: "Em seguida vou escolher o tipo de evento. Existem muitas opções que você pode escolher mas agora vou deixá-lo como o bom e velho clique."
+      5:
+        text: "Finalmente vou adicionar código ao evento que irá alterar a cor de fundo da tela. Você pode ler este bloco como uma frase: \"No evento em que o botão é clicado execute todo este código.\""
+      6:
+        text: "Vamos testá-lo. Blocos fora de um noEvento ainda executam imediatamente para que a tela inicie azul."
+      7:
+        text: "E quando eu clico no botão grande o código dentro do meu noEvento é executado e a minha tela fica verde."
+      8:
+        text: "Se você quiser alterar mais coisas depois do evento, como o texto na tela, apenas adicione mais código no noEvento"
+      9:
+        text: "Para fazer o seu programa responder a mais eventos, adicione mais blocos noEvento. Apenas certifique-se de não colocá-los um dentro do outro. Agora é hora de tentar você mesmo. Divirta-se!"
+    applab_intro_sounds:
+      1:
+        text: "Em seguida você irá aprender sobre adicionar imagens e sons para o seu app. Vamos começar verificando as opções de som."
+      2:
+        text: "Na caixa de ferramentas você irá encontrar um novo bloco chamado \"tocarSom\". Arraste-o para o espaço de trabalho. Você pode escolher um som para ser tocado clicando na lista de seleção e clicando em \"Escolher\"."
+      3:
+        text: "A partir daqui você pode fazer o upload de um arquivo de som do seu computador, ou procurar por um som na biblioteca de sons. A biblioteca de sons tem várias categorias diferentes como instrumentos, músicas de fundo ou animais."
+      4:
+        text: "Assim que você tiver o som que você quiser, clique em \"Escolher\". Quando este bloco é executado, ele irá tocar o som que você escolher."
+      5:
+        text: "Para adicionar imagens aos seus elementos você pode simplesmente usar o bloco definirPropriedade. Selecione a propriedade imagem na segunda lista de seleção"
+      6:
+        text: "Então selecione \"Escolher\" na terceira lista de seleção."
+      7:
+        text: "A partir daqui você pode fazer upload de uma imagem do seu computador ou você pode olhar por uma vasta biblioteca de ícones na biblioteca de ícones."
+      8:
+        text: "De volta ao modo de código você pode usar o bloco \"definirPropriedade\" para alterar a cor do ícone do seu ícone. Uma vez que você escolher qual imagem utilizar em seu ícone, clique em \"Executar\" para ver como fica."
+      9:
+        text: "Isto é tudo! Agora você pode começar a adicionar imagens e sons para tornar os seus apps ainda mais divertidos e dinâmicos."
+    applab_intro_designmode:
+      1:
+        text: "Para construir seus próprios apps você vai precisar começar a desenhar telas e elementos do zero. O Laboratório de Apps torna isto fácil de fazer com o Modo de Desenho."
+      2:
+        text: "Use o interruptor no topo do seu app para ir para o Modo de Desenho."
+      3:
+        text: "Você pode adicionar novos elementos arrastando-os para a tela. Você pode movê-los para diferentes locais e alterar o seu tamanho arrastando o canto inferior direito."
+      4:
+        text: "Para alterar as propriedades de um elemento use os controles no lado direito. Por exemplo, é muito fácil alterar o texto, cor e tamanho da fonte deste botão."
+      5:
+        text: "Quando você adiciona um novo elemento à sua tela ele ganhará um ID genérico como botao1. É uma boa ideia mudar o ID deste botão para algo mais significativo como \"botaoDireita\". Para que você saiba qual é este botão quando você ir para o programa."
+      6:
+        text: "Se você adicionar um elemento para seu app por engano, apenas arraste-o para fora ou aperte delete."
+      7:
+        text: "Você pode adicionar telas inteiras para o seu app arrastando um elemento de tela"
+      8:
+        text: "A partir da lista de seleção no topo você pode rapidamente alternar entre as telas que você criar."
+      9:
+        text: "Dentro do sue app, você precisará de uma forma para alternar entre todas estas telas, então o bloco definirTela foi adicionado à caixa de ferramentas. Use \"definirTela\" dentro do bloco \"noEvento\" para alterar telas com o clique de um botão."
+      10:
+        text: "Nos próximos níveis você irá trabalhar em um único projeto. Primeiro você irá adicionar um botão e então você irá adicionar uma nova tela e finalmente você vai escrever código para que o botão alterne para a nova tela."
+    applab_intro_share:
+      1:
+        text: "Agora que você aprendeu algumas noções básicas do Laboratório de Apps como adicionar botões, sons, imagens, texto e novas telas, você pode criar todos os tipos de aplicativos."
+      2:
+        text: "No próximo nível você irá encontrar o app que você acabou de terminar de construir. Com um pouco de criatividade, você pode transformar isto em um quiz de personalidade para seus amigos, um cartão que você pode compartilhar com sua família ou um jogo escolha-sua-própria-aventura. Todos estes apps são apenas combinações das habilidades que você já aprendeu, e eu aposto que você pode criar ainda mais."
+      3:
+        text: "Assim que você tiver terminado o seu app você pode facilmente enviá-lo para seu telefone para ver como fica. Apenas clique em \"Compartilhar\" e insira o seu número de telefone aqui."
+      4:
+        text: "Você irá receber uma mensagem de texto que permitirá que você abra o seu app instantaneamente."
+      5:
+        text: "Você também pode compartilhar um link para o seu app em mídias sociais ou postar o link na galeria pública do code.org para que outras pessoas possam jogar e compartilhar."
+      6:
+        text: "Você apenas arranhou a superfície do que o Laboratório de Apps pode fazer. O Laboratório de Apps Completo tem interações de usuário ainda mais avançadas, novos elementos de telas e até mesmo um banco de dados interno para que você possa rapidamente construir aplicativos completos. Em \"code.org/applab\" você irá encontrar a ferramenta completa e um monte de ideias caso você deseje continuar."
+      7:
+        text: "Obrigado por ter vindo ao longo do passeio. Agora vá construir e compartilhar o seu primeiro app, e continue construindo apps com o Laboratório de Apps!"
     mc_2017_agent_intro:
       1:
+        text: "Stacy: Stampy, Lizzy, Preston - obrigado por ter vindo comigo. O que eu quero mostrar a vocês está logo sobre este platô de mesa. Eu acho que vocês vão adorar!"
       2:
+        text: "Espere um minuto - tem um buraco na pista! (gritando)"
       3:
+        text: "Estão todos bem? Stampy: Ah, eu vejo o problema. Olhe! Tinha um buraco na pista. Stacy: Sério, Stampy? Lizzy: Talvez nós devêssemos juntar blocos para consertá-lo. Preston: Vamos fazer uma corrida. O primeiro a chegar ao topo vence. Stacy: Ok, em sua marca, preparar, aprontar, VAI! Ok, eu vou apenas recolher um pouco desta terra queimada. Espere. Pessoal, não consigo minerar! Preston: mesma coisa. Lizzy: eu também não consigo. Stacy: Ok, isto é muito estranho. Stampy, você consegue minerar? Stampy: Eu não consigo minerar! Stacy: Ok, fiquem todos calmos. Stampy: O jogo está quebrado? Stacy: Se estiver, como podemos consertá-lo? Lizzy: Eu não sei. Stampy: Alguém sabe como escrever código de Minecraft?"
       4:
+        text: "(puf!) Preston: O que é isto? Stampy: Eu nunca vi um destes antes. Lizzy: é tão adorável! Stacy: É...é domável? Preston: Ok, o que está acontecendo? Alguém precisa voltar ao mundo real e consertar isto. Todos: Eu não! Stacy: Eu n-(suspiro) Ok, eu vou."
       5:
+        text: "Oh, ok, ei, então agora eu estou no mundo real. Eu vou tentar encontrar os escritórios do Minecraft."
       6:
+        text: "Mas, eu vou precisar de sua ajuda. Comece fazendo o tutorial, comece aprendendo como codificar, e eu vou alcançar vocês após alguns níveis, ok? Desejem-me sorte! Eu acho que é por este caminho. Ai! Cactus! Eu estou bem!"
       7:
+        text: "Para completar o desafio da Hora do Código, você precisará escrever código para programar o agente. Você vai trabalhar em conjunto com O Agente para limpar quaisquer obstáculos em seu caminho, para que você possa coletar os itens que você irá precisar para sua viagem. Apenas o Agente pode colocar e quebrar blocos, e apenas você pode coletar itens. Sua tela está dividida em três partes principais. No lado esquerdo está o Minecraft."
       8:
+        text: "A área do meio é a caixa de ferramentas com comandos que o Agente consegue entender."
       9:
+        text: "E no lado direito está a área de trabalho. É onde você irá empilhar os comandos para construir o seu programa para controlar o Agente."
       10:
+        text: "O Agente pode andar, virar e ativar placas de pressão. Ele também pode destruir blocos e colocar blocos. Quando ele coloca um bloco como estes trilhos de carrinho de mineração, ele o coloca debaixo dele mesmo."
       11:
         text: "Se você se esquecer do que deve fazer, as instruções para cada nível estão no topo da página."
       12:
+        text: "Se você quiser tentar novamente, você pode apertar o botão azul de redefinir para redefinir tudo para como começou. E se você precisar remover um bloco de código, arraste-o da sua área de trabalho para a caixa de ferramentas. Lembre-se de apertar executar para fazer o Agente se mover. Ok, vá em frente e teste os primeiros níveis. Boa sorte!"
+    mc_2017_repeat:
+      1:
+        text: "Stampy: Eu me pergunto o que Stacy está tramando?"
+      2:
+        text: "Stacy: Uau, eu acho que estou no lugar certo. Isto é incrível!"
+      3:
+        text: "Sinto que estou de volta ao Minecraft! Olá. Como vai você? Olá?"
+      4:
+        text: "Oh, há um creeper. Você não faz nada, faz? Katie: Stacy? Stacy: Oi, Katie?\nKatie: Sim, bem-vindo(a) ao Minecraft!"
+      5:
+        text: "Stacy: Isto é incrível. Então você trabalha aqui todos os dias como uma desenvolvedora, certo? Katie: Sim, é muito legal. Eu sou uma desenvolvedora na equipe de mercado do Minecraft. Stacy: Quantas linguagens de programação você conhece? Katie: Em minha carreira eu já trabalhei com provavelmente mais de uma dúzia. Stacy: Uma dúzia? Katie: Sim. Stacy: Agora, você por acaso não sabe algo sobre este pequeno cara que se chama de o Agente? Katie: Nós usamos o Agente para fazer coisas que Steve ou Alex não conseguem fazer, como andar através de lava. Stacy: Bem, eu quero aprender a programar, e eles querem aprender a programar, então qual é uma das primeiras coisas que você precisa saber quando você está aprendendo?"
+      6:
+        text: "Katie: Bem, você precisa aprender a usar as repetições. Repetições são coisas que os desenvolvedores escrevem para dar comandos para um computador que podem ser executados várias vezes. Stacy: Entendi, então acho que, na verdade, um pouco sobre isto está chegando nos próximos níveis, então vá em frente e experimente as repetições."
+      7:
+        text: "No próximo nível, você pode usar uma repetição para mover o Agente ao longo do caminho. Arraste o bloco de repetição para a área de trabalho e coloque o bloco de movimento para a frente dentro do bloco de repetição. Isto diz ao computador para fazer a mesma coisa várias vezes seguidas sem que seja necessário arrastar um monte de blocos para a área de trabalho. Você pode escolher quantas vezes repetir colocando um número no bloco de repetição."
+      8:
+        text: "Você pode colocar voltas e múltiplos comandos no bloco de repetição também, mas por agora tente usar uma repetição para mover o Agente para a frente quatro passos. Lembre-se, se você ficar preso em um quebra-cabeça você sempre pode apertar o botão azul de redefinir e tentar novamente."
+      9:
+        text: "Se você está pensando sobre ter um emprego legal como o de Katie, vá em frente e clique no botão mostrar código assim que terminar cada nível. Isto irá realmente te mostrar o código Javascript que alguém como Katie usa quando ela está realmente programando Minecraft. Katie: Sim, boa sorte pessoal!"
+    mc_2017_functions:
+      1:
+        text: "Preston: Não quero me gabar, mas eu sou muito bom no parkour. Lizzy: Vamos dormir para que seja dia quando Stacy voltar."
+      2:
+        text: "Stacy: Ok pessoal, estou de volta dos escritórios Minecraft, e eu acho que eu sei como resolver o problema que estou tendo em meu jogo. Eu acho que posso usar uma função. Deixe-me apenas abrir isto."
+      3:
+        text: "Então uma função é um conjunto específico de instruções para realizar uma determinada tarefa, como se fosse uma receita. Nos próximos níveis, você terá acesso às funções que você pode usar para resolver os quebra-cabeças."
+      4:
+        text: "Veja o código na função quando ela estiver na área de trabalho para ver o que ela faz."
+      5:
+        text: "Então, encontre o bloco com este nome na caixa de ferramentas e arraste-o da caixa de ferramentas para o bloco \"quando executar\"."
+      6:
+        text: "Lembre-se, você pode usar a mesma função toda vez que você precisar executar o mesmo conjunto de instruções para fazer algo, como construir uma ponte. Boa sorte, eu sei que você consegue fazê-lo!"
+    mc_2017_congratulations:
+      1:
+        text: "Preston: Parabéns!"
+      2:
+        text: "Lizzy: Parabéns!"
+      3:
+        text: "Stampy: Parabéns, você conseguiu!"
+      4:
+        text: "Stacy: Parabéns pessoal, vocês arrasaram! E agora que vocês completaram a Hora do Código, vocês podem começar a programar em Minecraft. Vocês aprenderam sobre repetições, funções, e o que um Agente de software faz."
+      5:
+        text: "Agora, é hora do nível de jogo livre, onde você é o desenvolvedor. Use qualquer tempo restante para escrever suas próprias funções para explorar, minerar, e construir."
+      6:
+        text: "Você pode levar o código que você escrever neste código para o seu mundo de Minecraft em Minecraft: Edição de Educação. Apenas clique em 'Concluir' e siga as instruções para obter o link para usar em seu mundo, para continuar programando com o Agente. Divirta-se, e bom trabalho!"
+      7:
+        text: "Stacy: E eu estou de volta! Ok, pessoal, este é o Agente! Deixe-me te mostrar o que ele pode fazer. Veja, ele esta fazendo! Eu lhe disse para construir uma escada fora destes blocos de terra queimada, agora nós podemos simplesmente usar esta escada para sair daqui. E, pessoal, não são apenas escadas. Eu posso dizer ao Agente para fazer qualquer coisa que eu quiser, e ele irá fazê-lo por mim."
+      8:
+        text: "Stampy: Como você fez isto? Stacy: foi fácil, na verdade. Eu apenas usei código!"
+    csd_concept_how_computers_work:
+      1:
+        text: "Onde quer que você olhe, computadores estão mudando o mundo. Seja nos nossos computadores de mesa, em nossas casas, nossos bolsos, ou em qualquer outro lugar. Mas enquanto a maior parte de nós usa esta tecnologia revolucionária diariamente, nós não perguntamos: \"Como os computadores funcionam?\" Nesta série, você irá aprender como os computadores realmente funcionam, começando com o que faz um computador ser um computador. Então, você irá ver como a informação é representada dentro do computador usando minúsculos sinais elétricos entrando e saindo em velocidades incompreensíveis."
+      2:
+        text: "Depois disto, você irá aprender como computadores usam circuitos para fazer tudo desde matemática simples até simular mundos virtuais completos. Em seguida, você irá diminuir o zoom e olhar para as diferentes partes de um computador que realmente inserem, retiram e armazenam toda esta informação. Finalmente, você vai dar uma olhada em o que programação realmente é e como o software controla o hardware. Então se você é apenas curioso sobre os dispositivos que você usa todos os dias ou se você quer desenhar as inovações do futuro, o primeiro passo é aprender como computadores funcionam."
+    csd_concept_computer:
+      1:
+        text: "Meu nome é May-Li Khoe e eu sou uma desenhista e inventora. Então, algumas das coisas que eu desenhei foram na Apple, e agora eu desenho produtos para crianças usarem para que elas possam ter um momento mais fácil na escola. Meus outros empregos incluem ser DJ e dançar."
+      2:
+        text: "Computadores estão em toda parte! Eles estão nos bolsos das pessoas, estão nos carros das pessoas, as pessoas os têm em seus pulsos. Talvez eles estejam em sua mochila bem agora. Mas o que faz um computador ser um computador? O que realmente faz de um computador, um computador? E ainda como ele funciona?"
+      3:
+        text: "Oi eu sou o Nat! Eu fui um dos desenhistas originais do Xbox. Tenho trabalhado com computadores desde que eu tinha talvez sete anos de idade e agora eu trabalho em uma realidade virtual. Como humanos, nós sempre construímos ferramentas para nos ajudar a resolver problemas. Ferramentas como um carrinho de mão, um martelo, ou uma prensa, ou um trator-reboque."
+      4:
+        text: "Todas estas invenções nos ajudaram com o trabalho manual. Ao longo do tempo, as pessoas começaram a se perguntar se uma máquina poderia ser projetada e construída para nos ajudar com o trabalho de pensar que fazemos, como resolver equações ou rastrear as estrelas no céu. Ao invés de mover ou manipular as coisas físicas, como sujeira e pedra, estas máquinas precisariam ter sido projetadas para manipular informações. Como os pioneiros da ciência da computação exploraram como projetar uma máquina pensante, eles perceberam que ela teria que executar quatro tarefas diferentes."
+      5:
+        text: "Será preciso receber entrada de dados, armazenar informação, processá-la e então retornar os resultados. Agora, isto pode parecer simples, mas estas quatro coisas são comuns a todos os computadores. Isto é o que faz de um computador um computador."
+      6:
+        text: "Computadores começaram como calculadoras básicas, o que já era realmente incrível para a época, e eles apenas manipulavam números naquela época. Mas agora podemos usá-los para conversar um com o outro, podemos usá-los para jogar jogos, controlar robôs, e fazer qualquer coisa maluca que você pode possivelmente imaginar. Computadores modernos não se parecem em nada com aquelas máquinas antigas desajeitadas mas eles ainda fazem as mesmas quatro coisas."
+      7:
+        text: "Primeiro, vamos falar sobre a entrada. Você pode dizer aos computadores o que fazer com o teclado, você pode dizer a eles o que fazer com o mouse, o microfone, a câmera. Todas estas diferentes entradas dão informação ao computador, que então é armazenada na memória."
+      8:
+        text: "O processador do computador pega informação da memória. Ele a manipula ou altera usando um algoritmo, que é simplesmente uma sequência de comandos. E então ele envia a informação processada de volta para ser armazenada na memória novamente. Isto continua até a informação processada estar pronta para ser retornada para a saída."
+      9:
+        text: "Como um computador retorna a informação para a saída depende do que o computador foi desenhado para fazer. Um monitor pode exibir texto, fotos, vídeos, ou jogos interativos - até mesmo realidade virtual! A saída de um computador pode até mesmo incluir sinais para controlar um robô."
+      10:
+        text: "E quem sabe como os computadores de amanhã serão? Minha esperança é que você ajude a decidir como você quer que os computadores de amanhã sejam. Mas entre todos os computadores, independentemente dos diferentes tipos de tecnologia que eles usam, eles sempre estarão fazendo as mesmas quatro coisas. Eles pegam informação de entrada, armazenam como dados, eles a processam, e então retornam os resultados."
+    csd_concept_binary_data:
+      1:
+        text: "Oi! Meu nome é Limor Fried, e eu sou uma engenheira aqui nas Industrias Adafruit. E aqui é onde eu faço a engenharia e desenho, e eu desenho circuitos para moda e música e tecnologia."
+      2:
+        text: "Meu nome é Frederico Gomez Suarez, e eu sou um desenvolvedor de software com o Microsoft Hack para o Bem. E eu penso em usar a tecnologia para nos ajudar a resolver alguns dos grandes problemas sociais de nosso tempo."
+      3:
+        text: "Você pode ter ouvido que computadores trabalham com uns e zeros. Mas quase ninguém hoje em dia realmente lida diretamente com estes uns e zeros. Mas uns e zeros realmente desempenham um grande papel em como os computadores funcionam por dentro."
+      4:
+        text: "Dentro de um computador existem fios e circuitos que carregam toda a informação em um computador. Como você armazena ou representa informação usando eletricidade?"
+      5:
+        text: "Bem, se você tem um único fio com eletricidade fluindo através dele, o sinal pode estar ligado ou desligado. Não são muitas opções, mas é um começo muito importante. Com um fio, nós podemos representar um sim ou não, verdadeiro ou falso, um ou zero, ou qualquer coisa com apenas duas opções. Este estado de ligado/desligado de um único fio é chamado de bit, e é o menor pedaço de informação que um computador pode armazenar."
+      6:
+        text: "Se você usar mais fios você terá mais bits: mais uns e zeros. Com mais bits você pode representar informações mais complexas. Mas para entender isto, precisamos aprender sobre algo chamado o sistema numérico binário."
+      7:
+        text: "No sistema numérico decimal, nós temos dez dígitos de zero até nove, e é assim que todos nós aprendemos a contar. No sistema numérico binário, nós temos apenas dois dígitos: zero e um. Com estes dois dígitos, nós podemos contar até qualquer número."
+      8:
+        text: "Aqui está como funciona. Em um sistema número decimal que todos estamos acostumados, cada posição em um número tem um valor diferente. Tem a posição do 1, a posição do 10, a posição do 100, e assim por diante. Por exemplo, um 9 na posição do 100 é 900. Em binário, cada posição também representa um valor. Mas ao invés de multiplicar por 10 cada vez, nós multiplicamos por 2. Então tem a posição do 2, a posição do 4, a posição do 8, e assim por diante. Por exemplo, o número 9 em binário é 1001. Para calcular o valor, nós adicionamos 1 vezes 8, mais 0 vezes 4, mais 0 vezes 2, mais 1 vezes 1. Quase ninguém faz esta conta porque os computadores a fazem para nós. O que é importante é que qualquer número pode ser representado apenas com uns e zeros, ou por um monte de fios que estão ligados ou desligados. Quanto mais fios você utilizar, maiores são os números que você pode armazenar. Com 8 fios, você pode armazenar números entre 0 e 255. São 8 uns. Com apenas 32 fios, você pode armazenar todos os números de 0 até mais de 4 bilhões. Usando o sistema numérico binário, você pode representar qualquer número que você quiser."
+      9:
+        text: "Mas e quanto a outros tipos de informação? Como texto, imagens, ou som? Acontece que todas estas coisas também podem ser representadas com números. Pense em todas as letras do alfabeto. Você pode atribuir um número para cada letra. A poderia ser 1, B poderia ser 2, e assim por diante. Então você pode representar qualquer palavra ou parágrafo como uma sequência de números. Como vimos, estes números podem ser armazenados como sinais elétricos ligados ou desligados. Cada palavra que você vê em cada página web ou em seu telefone é representado usando um sistema como este."
+      10:
+        text: "Agora, vamos considerar fotos, vídeos, e todos os gráficos que você vê em uma tela."
+      11:
+        text: "Todas estas imagens são feitas de pequeninos pontos chamados pixels, e cada pixel tem uma cor. Cada cor pode ser representada com números. Quando você considera que uma imagem típica tem milhões destes pixels, e um vídeo típico exibe 30 imagens por segundo, agora estamos falando sobre um monte de dados aqui."
+      12:
+        text: "Cada som é basicamente uma série de vibrações no ar. Vibrações podem ser representadas graficamente como uma forma de onda. Qualquer ponto nesta forma de onda pode ser representado por um número. E desta forma, qualquer som pode ser dividido em uma série de números. Se você quiser um som de alta qualidade, você vai escolher áudio de 32-bits ou um áudio de 8-bits. Mais bits significam uma maior gama de números."
+      13:
+        text: "Quando você usa um computador para escrever código ou fazer o seu próprio aplicativo, você não está lidando diretamente com estes uns e zeros. Mas você estará lidando com imagens ou sons ou vídeo. Então se você quiser entender como computadores funcionam por dentro, tudo se resume a estes simples uns e zeros e os sinais elétricos nos circuitos por trás deles."
+    csd_concept_circuits_logic:
+      1:
+        text: "Uma das coisas mais legais que eu descobri sobre circuitos é que circuitos podem ser uma forma de arte, por exemplo, se eu tiver uma ideai criativa, eu posso colocar esta ideia em execução utilizando circuitos. Então se você tem ideias, você pode usar tecnologia para dar vida a estas ideias."
+      2:
+        text: "Cada entrada ou saída de um computador é efetivamente um tipo de informação, que pode ser representado por ligado ou desligado em sinais elétricos ou uns e zeros."
+      3:
+        text: "A fim de processar a informação que vêm como entrada, e para criar a informação que é a saída, um computador precisa modificar e combinar sinais de entrada. Para fazer isto, um computador usa milhões de pequeninos componentes eletrônicos, que se reúnem para formar circuitos."
+      4:
+        text: "Vamos dar uma olhada como circuitos podem modificar e processar informações são representadas em uns e zeros. Este é um circuito muito simples. É preciso um sinal elétrico, ligado ou desligado e que possa ser alterado. Então se o sinal que você dá é um 1, o circuito dá-lhe um 0, e se você der o circuito um 0, ele irá lhe dar um 1. O sinal que entra não é o mesmo que o sinal que vem de fora, e então nós vamos chamar este circuito de NÃO."
+      5:
+        text: "Circuitos mais complicados podem ter múltiplos sinais e combiná-los pode lhe dar diferentes resultados. Neste exemplo, um circuito irá receber dois sinais elétricos, podendo ser cada um o valor 0 ou 1. Se um dos sinais de entrada forem 0, o sinal resultante será 0. O circuito só dará o resultado 1, se o primeiro e segundo sinais forem ambos 1. Chamamos este circuito então de E."
+      6:
+        text: "Há vários circuitos pequenos que nem este que realizam cálculos lógicos simples. Conectando estes circuitos, nós podemos criar circuitos mais complexos que podem fazer cálculos mais complicados."
+      7:
+        text: "Por exemplo, você pode fazer um circuito que soma 2 bits juntos e chamá-lo de somador. Este circuito recebe 2 bits individuais, cada um 1 ou 0 e adiciona-os para formar uma soma. A soma pode ser 0 mais 0 igual a 0, 0 mais 1 igual a 1 ou 1 mais 1 igual a 2. Você precisa de dois fios vindo de fora porque eles poderão receber até dois dígitos binários para representar a soma. Assim que você obter um somador para adicionar dois bits de informação, você poderá juntar vários desses somadores para somar números maiores.\n"
+      8:
+        text: "Por exemplo, aqui está como um adicionador de 8-bits adiciona os números 25 e 50. Cada número é representado usando 8 bits, resultando em 16 sinais elétricos diferentes que vão no circuito. O circuito para um adicionador de 8-bits tem vários pequenos adicionadores dentro dele, que juntos, calculam a soma."
+      9:
+        text: "Diferentes circuitos elétricos podem realizar outros cálculos simples como subtração ou multiplicação. De fato, todo o processamento de informações que seu computador faz são apenas lotes e lotes de pequenas operações juntas. Cada operação individual feita por um computador é tão, tão simples que poderia ser feita por um humano, mas estes circuitos dentro dos computadores são muito mais rápidos."
+      10:
+        text: "Naquela época, estes circuitos eram grandes e desajeitados, e um adicionador de 8-bits poderia ser tão grande quanto uma geladeira, e ele levaria minutos para realizar um cálculo simples. Hoje, os circuitos de computadores são microscópicos em tamanho, e muito, muito mais rápidos. Porque computadores menores também são mais rápidos? Bem, porque quanto menor o circuito é, menor é a distância que o sinal elétrico precisa percorrer. A eletricidade se move quase na velocidade da luz, é por isto que circuitos modernos podem realizar bilhões de cálculos por segundo."
+      11:
+        text: "Então se você está jogando um jogo, gravando um vídeo, ou explorando o cosmo, tudo que você poderia fazer com tecnologia requer que muita informação seja processada extremamente rápido. Por baixo de toda esta complexidade é só um monte de circuitos minúsculos que transformam sinais binários em websites, vídeos, música, e jogos. Estes circuitos podem até mesmo nos ajudar a decodificar DNA para diagnosticar e curar doença. Então o que você gostaria de fazer com todos estes circuitos?"
+    csd_concept_memory_cpu_input_output:
+      1:
+        text: "Olá, meu nome é Madison Maxey. Eu tenho uma empresa chamada Loomia, e nós focamos em fazer tecidos inteligentes para roupas inteligentes e para produtos têxteis inteligentes. O céu é o limite quando se trata de materiais têxteis."
+      2:
+        text: "Meu nome é Danielle Applestone, e sou a Diretora Executiva da Empresa Othermachine. Nós construímos máquinas de perfuração de área de trabalho. A máquina de perfuração pega uma ferramenta de corte rotativa e move através do material para criar um objeto 3D."
+      3:
+        text: "Sob o capô, todos os computadores fazem as mesmas quatro coisas básicas. Eles recebem informação de entrada, armazenam e processam a informação, e então, liberam informação de saída. Cada uma dessas coisas é feita por uma parte diferente do computador."
+      4:
+        text: "Existem dispositivos de entrada que pegam entradas do mundo exterior e convertem em informação binária. Existe memória para guardar essa informação. Existe uma unidade de processamento central ou CPU, onde todos os cálculos são realizados. E, finalmente, existem os dispositivos de saída que pegam informação e convertem-na em uma saída física."
+      5:
+        text: "Vamos falar primeiro sobre entrada. Computadores pode receber muitos tipos diferentes de entrada, como o teclado de um computador, o touchpad de um telefone, uma câmera, um microfone, ou um GPS. Mas até os sensores de um carro, um termostato, ou um drone também são diferentes dispositivos de entrada."
+      6:
+        text: "Agora, vamos olhar um exemplo simples de como entradas viajam através de um computador e se tornam saída. Quando você pressiona uma tecla em seu teclado - vamos dizer a letra \"B\". O teclado converte esta letra para um número. Este número é enviado como binário, uns e zeros, dentro do computador."
+      7:
+        text: "A partir deste número, a CPU calcula como exibir a letra \"B\" pixel por pixel. A CPU solicita instruções passo-a-passo da memória, que diz à CPU como desenhar a letra \"B\". A CPU executa estas instruções e armazena o resultado em pixels na memória."
+      8:
+        text: "Finalmente, esta informação de pixel é enviada em binário para a tela. A tela é um dispositivo de saída, que converte os sinais binários em pequenas luzes e cores que compõem o que você vê."
+      9:
+        text: "Isto tudo acontece tão rápido que parece instantâneo, mas para exibir cada letra o computador executa milhares de instruções, a partir do momento que o seu dedo pressiona a tecla."
+      10:
+        text: "Neste exemplo, o dispositivo de saída era a tela, mas há vários tipos diferentes de saída que pegam um sinal binário do computador e fazem algo no mundo físico. Por exemplo, uma caixa de som irá tocar som, e uma impressora 3D irá imprimir um objeto. Dispositivos de saída também podem controlar movimentos físicos como um braço robótico, o motor de um carro, ou a ferramenta de corte da máquina de trituração que a minha empresa faz. Novos tipos de entrada e saída permitem que computadores interajam com o mundo de maneiras inteiramente novas. Isto tem sido ajudado pelas melhorias na velocidade e tamanho da memória e CPU."
+      11:
+        text: "Quanto mais complicada é uma tarefa e quanto mais informação existe para entrada ou saída, maior é o poder de processamento e memória que um computador precisa. Digitar letras em uma tela pode ser fácil mas para fazer gráficos 3D complexos ou gravar um filme em alta definição, computadores modernos frequentemente têm múltiplas CPUs para processar toda esta informação e muitos gigabytes de memória para armazená-la."
+      12:
+        text: "Não importa o que você queira fazer com o computador, cada ação individual se resume em: inserir informações do mundo físico, armazenar e processar esta informação, e obter alguma saída de volta ao mundo físico."
+    csd_concept_hardware_software:
+      1:
+        text: "Oi, meu nome é Erica Gomez e eu sou uma gerente de engenharia na Amazon.com. Uma das melhores coisas sobre trabalhar com tecnologia, e na Amazon em particular, é que eu posso trazer o meu cachorro comigo para o trabalho todos os dias. O meu trabalho é certificar de que software saia pela porta e o trabalho dela é tirar uma soneca embaixo da minha mesa e roncar bem alto."
+      2:
+        text: "O meu nome é Jerome Holman, e eu sou um Gerente de Programa na Equipe Xbox e eu tenho um trabalho bem divertido: Basicamente fazer o hardware e software trabalharem juntos para te entregar todos os jogos que você ama em seu Xbox."
+      3:
+        text: "Quando você olha dentro de um dispositivo de computação você vê um monte de circuitos, chips, fios, auto-falantes, plugues, e toda sorte de outras coisas. Este é o hardware."
+      4:
+        text: "Mas o que você não vê é o software. Software são todos os programas de computador, ou código, executando nesta máquina. Software pode ser qualquer coisa desde apps e jogos até páginas web e o software de ciência de dados que eu e meus times usam na Amazon para entender como os consumidores se comportam."
+      5:
+        text: "Mas como o hardware e software interagem um com o outro? Vamos começar olhando na unidade central de processamento do computador, ou CPU."
+      6:
+        text: "A CPU é o chip mestre que controla todas as outras partes do computador. Uma CPU precisa fazer diferentes coisas, então dentro dela ela possui partes menores e mais simples que lidam com tarefas específicas. Ela tem circuitos para realizar matemática e lógica simples. Ela tem outros circuitos para enviar e receber informações de e para diferentes partes do computador."
+      7:
+        text: "A verdadeira mágica da CPU é como ela sabe quais circuitos usar e quando utilizá-los. A CPU recebe comandos simples que a dizem qual circuito utilizar para realizar um trabalho específico. Por exemplo, um comando \"adicionar\" diz à CPU para usar o seu circuito externo para calcular um novo número. E então o comando \"armazenar\" diz à CPU para usar um circuito diferente para salvar aquele resultado na memória."
+      8:
+        text: "Como números, todos estes comandos simples podem ser representados em uns e zeros binários ou sinais elétricos ligados ou desligados. Os comandos binários são armazenados na memória e a CPU os busca e executa em sequência um após o outro. Esta sequência de comandos é, de fato, um programa de computador bem simples."
+      9:
+        text: "Código binário é a forma mais básica de software e ele controla todo o hardware de um computador. Hoje em dia, ninguém escreve software em binário. Levaria para sempre!"
+      10:
+        text: "Hoje, o software que nós escrevemos se parece mais como isto (Python), ou isto (Ruby), ou até mesmo isto (Blocky). Linguagens de programação como estas permitem que você digite comandos em algo que se parece muito com Inglês."
+      11:
+        text: "Para desenhar um retângulo na tela, você só precisa de um único comando. Este comando em alto-nível é convertido em centenas, ou milhares, de comandos binários mais simples que a CPU entende. O Software diz à CPU o que fazer, mas quando você está ouvindo música, e navegando na web, e conversando com um amigo, o seu computador está executando múltiplos pedaços de software tudo ao mesmo tempo."
+      12:
+        text: "Então, como todos estes programas entram no computador em primeiro lugar, e como a CPU é capaz de executá-los todos de uma vez? Para descobrir vamos ter que dar uma olhada no sistema operacional."
+      13:
+        text: "O sistema operacional de um computador é o programa mestre que gerencia como o software pode usar o hardware do computador. Por exemplo, eu ajudei a criar o sistema operacional Windows que é executado na maioria dos computadores pessoais."
+      14:
+        text: "O sistema operacional é um programa com habilidades especiais que permite que ele controle outros softwares no computador. Ele permite que você instale novos programas ao carregá-los para a memória do computador. Ele decide quando um programa é executado pela unidade central de processamento, e se um programa pode acessar os dispositivos de entrada e saída do computador. E quando você acha que o computador está executando vários programas de uma vez, na verdade, é o sistema operacional que está rapidamente alternando entre os programas que estão compartilhando aquela CPU em frações de um segundo."
+      15:
+        text: "Dentro de cada computador há um sistema operacional gerenciando os softwares que controlam o hardware do computador."
+      16:
+        text: "O software é uma série de comandos feitos de código binário simples, e este código binário é simplesmente sinais elétricos fluindo através de bilhões de circuitos minúsculos."
+      17:
+        text: "Computadores tem o potencial de fazer todo o tipo de coisas incríveis. Mas a única coisa que faz de um computador inteligente, ou útil, é você. Quando você aprende a programar você consegue definir o problema que você quer resolver, e escrever o software que torna estas ideias realidade."

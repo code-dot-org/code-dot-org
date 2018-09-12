@@ -1,19 +1,11 @@
 - @page_title = t('project.project_gallery')
 - is_public = local_assigns[:is_public]
+- limited_gallery = local_assigns[:limited_gallery]
 - projects_data = {}
+- projects_data[:limitedGallery] = limited_gallery
 - if current_user
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
-  // Due to inappropriate content, we're only showing non-featured Applab and Gamelab
-  // projects internally to project_validators via the view more link.
-  // TODO Erin B - remove when we have enough featured Applab and Gamelab projects and/or profanity filter in place.
-  - projects_data[:projectValidator] = current_user.permission?  UserPermission::PROJECT_VALIDATOR
   - projects_data[:canShare] = !current_user.sharing_disabled?
-  // We're going to run an A/B experiment to compare (un)publishing from the
-  // quick actions dropdown and from a button in the published column.
-  // As part of the experiment, we want to log user's id.
-  // TODO (Erin B.) delete this data when we
-  // determine the experiment outcome.
-  - projects_data[:userId] = current_user.id
 
 = render partial: 'shared/angular'
 
@@ -27,10 +19,13 @@
 
   #gallery-navigation
 
-  #react-my-projects
+  #personal-projects-wrapper{'style' => ('display: none;' if is_public)}
+    #react-personal-projects
+    .project-course-blocks.center{style: 'width: 720px;'}
+      = render partial: 'shared/course_tall_block', locals: { id: 'applab' }
+      = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
+      = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
 
-  #angular-my-projects-wrapper{'style' => ('display: none;' if is_public)}
-    %div{'ng-app' => 'projectsApp', 'ng-view' => ''}
   #public-gallery-wrapper{'style' => ('display: none;' unless is_public)}
     #public-gallery
   #publish-confirm

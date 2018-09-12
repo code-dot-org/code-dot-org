@@ -381,6 +381,9 @@ tr:
           / 6 =? **
       4-5 While Loops 8_authored_hint:
         4-5_While_Loops_8_a: Her öğe kendi 'süresince' döngüsüne ihtiyaç duymaktadır.
+      Artist Autorun Test_authored_hint:
+        2-3_Artist_Functions_4_a: Sanatçının bu tasarımı tamamlaması için her kare
+          arasında 120 derece dönmesi gerekiyor.
       Artist Inspiration_authored_hint:
         brush_width: Fırça kalınlığını 1 yap ve başka bir hamle yapmadan rengini maviye
           ayarla.
@@ -2740,13 +2743,13 @@ tr:
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: Atla bloğu ile başka alanlara gidebilirsiniz.
       courseA_collector_loops1_authored_hint:
-        courseA_collector_loops1_a: Hazine olan bir kareye geldiğinde, onu almak için
-          <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+        courseA_collector_loops1_a: Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi
+          Al' bloğunu kullanmayı unutmayın.
         courseA_collector_loops1_b: Hazineye gitmek için Doğuya doğru iki kere ilerlemek
           basit bir çözüm olur.
       courseA_collector_loops1_2018_authored_hint:
-        courseA_collector_loops1_a: Hazine olan bir kareye geldiğinde, onu almak için
-          <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+        courseA_collector_loops1_a: Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi
+          Al' bloğunu kullanmayı unutmayın.
         courseA_collector_loops1_b: Hazineye gitmek için Doğuya doğru iki kere ilerlemek
           basit bir çözüm olur.
       courseA_collector_loops2_authored_hint:
@@ -2757,8 +2760,8 @@ tr:
       courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: Herhangi bir hazine toplamadan önce ilerlemeniz
           gerekir.
-        courseA_collector_loops2_b: Hazine olan bir kareye geldiğinde, onu almak için
-          <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+        courseA_collector_loops2_b: Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi
+          Al' bloğunu kullanmayı unutmayın.
       courseA_collector_loops3_authored_hint:
         courseA_collector_loops3_a: <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> döngüsünü kullanmayı
@@ -2897,8 +2900,8 @@ tr:
         courseA_collector_preLoops6_a: Bu bulmacayı çözmek için ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
           karelerini kullanmanız gerekir.
       courseA_collector_preLoops7_authored_hint:
-        courseA_collector_loops2_b: Hazine olan bir kareye geldiğinde, onu almak için
-          <xml>  <block type="collector_collect"/></xml> bloğunu kullan.
+        courseA_collector_loops2_b: Bir Hazineye ulaşıldığında, onu almak için 'Hazineyi
+          Al' bloğunu kullanmayı unutmayın.
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_b: Tekrar etmek için, bir 'tekrar' döngüsü sürükle,
           sonra içine istediğin bloğu koy.
@@ -5574,6 +5577,47 @@ tr:
           döngüsü kullanmayı deneyin.
         courseD_artist_ramp12_c: Hangi açıya ihtiyacın olduğunu görmek için 'dön'
           bloğu üzerindeki açılır menüyü kullanabilirsin!
+      courseD_autorun_binary2_2019_authored_hint:
+        courseD_artist_binary2_a: Bu programı çalışırken görmek için sadece 'Çalıştır'
+          ı tıklayın!
+      courseD_autorun_binary3_2019_authored_hint:
+        courseD_artist_binary3_a: Araç kutusundaki dört ikili desenden bir tanesi
+          bu bulmacayı çözecek!
+        courseD_artist_binary3_b: Hata yapmaktan korkma! Bulmacanın henüz çözülmediğini
+          düşünüyor olsan bile ikili kodlarını yazmayı ve neler olacağını görmek için
+          kodlarını çalıştırmayı dene.
+      courseD_autorun_binary4_2019_authored_hint:
+        courseD_artist_binary4_a: Üst sıradaki ilk üç kareye bak. Tüm desene ulaşmak
+          için bu üçünü tekrar edebilir misin?
+        courseD_artist_binary4_b: Hata yapmaktan korkma! Bulmacanın henüz çözülmediğini
+          düşünüyor olsan bile ikili sistem kodlarını yazmayı ve neler olacağını görmek
+          için kodlarını çalıştırmayı dene.
+      courseD_autorun_binary5_2019_authored_hint:
+        courseD_artist_binary5_a: Ne ile çalışmak zorunda olduğunu görmek için önce
+          kodu çalıştırmayı deneyin.
+        courseD_artist_binary5_b: Bir gülümseme yapmak için yalnızca iki sırayı değiştirmeniz
+          gerekir.
+        courseD_artist_binary5_c: Eğer bu bulmacayı çözmekte zorlanıyorsanız, bir
+          kağıda ikili sistemde satırı yazmayı ve tekrar eden bir desen bulmayı deneyin.
+      courseD_autorun_binary6_2019_authored_hint:
+        courseD_artist_binary6_a: Sol üstten başla. desen tekrar etmeye başlamadan
+          önce ne kadar okumalısın?
+        courseD_artist_binary6_b: İkili dizeyi her seferinde biraz oluşturmaya ve
+          test etmeye devam edebilirsin!
+      courseD_autorun_binary7_2019_authored_hint:
+        courseD_artist_binary7_a: Sol üstten başla. desen tekrar etmeye başlamadan
+          önce ne kadar okumalısın?
+        courseD_artist_binary7_b: Hata yapmaktan korkma! Bulmacanın henüz çözülmediğini
+          düşünüyor olsan bile ikili sistem kodlarını yazmayı ve neler olacağını görmek
+          için kodlarını çalıştırmayı dene.
+      courseD_autorun_binary8_2019_authored_hint:
+        courseD_artist_binary8_a: Sarmal kafa karıştırıcı olabilir. Bu tasarımı oluştururken
+          kafanda her yatay çizgiyi ayrı düşün.
+        courseD_artist_binary8_b: Ne ile çalışmak zorunda olduğunu görmek için önce
+          kodu çalıştırmayı deneyin.
+        courseD_artist_binary8_c: Hata yapmaktan korkma! Bulmacanın henüz çözülmediğini
+          düşünüyor olsan bile ikili kodlarını yazmayı ve neler olacağını görmek için
+          kodlarını çalıştırmayı dene.
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!

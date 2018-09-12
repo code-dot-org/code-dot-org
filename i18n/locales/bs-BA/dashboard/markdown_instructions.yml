@@ -118,6 +118,7 @@ bs:
       4-5 While Loops 2_markdown_instruction: Pomjeri me do hrpe zemlje i ukloni je sa 5 zahvata lopate koristeći "ukloni" blok.
       4-5 While Loops 3_markdown_instruction: "Pokreni me do hrpe i ukloni je do kraja, a onda se pomjeri do rupe i popuni je do kraja. Savjet: Koristi što manje blokova."
       4-5 While Loops 4_markdown_instruction: "Wow, pronašao sam stvarno duboku rupu! Ne znam koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti \"dok\" petlju ovaj put."
+      Artist Autorun Test_markdown_instruction: Iskoristi blok "ponavljaj" da bi se dobila ova 3 kvadrata.
       Big Game Booleans 1_markdown_instruction: Kada si zadnji put radio/la na tvojoj igrici imali smo da naša meta i opasnost lete preko ekrana, ali se nikada ne vrate. Klikni na "Pokreni" da vidiš kako tvoja igra radi u ovom trenutku, i onda klikni na završi. Kasnije ćemo raditi na tome da se tvoji likovi pojave opet na ekranu nakon što su otišli.
       Big Game Vars 1_markdown_instruction: Hajde da počnemo sa svojom Velikom Igrom! Ovdje ćeš naći puno baznog koda kojeg češ eventualno zamijeniti svojim kodom, ali za sada ćemo samo brinuti oko toga kako definirati varijable. Klikni na "Pokreni" da vidiš kako igra izgleda sa podrazumijevanim vrijednostima.
       Calc Circles of Eval .2_markdown_instruction: Ovaj Blok Izvršenja je funkcija za množenje koja uzima dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako da pomnoži 2 * 5

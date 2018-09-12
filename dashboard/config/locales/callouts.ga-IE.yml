@@ -836,8 +836,6 @@ ga:
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
           an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
-        4_5_Bee_Conditionals_2_2: An bhfuil cúnamh uait? Cliceáil anseo chun leid
-          FÍSE a fháil!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Ba chóir duit GACH scamall a iniúchadh le féachaint
           an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.
@@ -1346,6 +1344,12 @@ ga:
       frozen cross rotate_callout:
         replace_questions_degree: Úsáid an roghchlár anuas chun uimhir a chur in áit
           "???"
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Úsáid an roghchlár anuas chun uimhir a chur in áit
+          "???"
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Úsáid an roghchlár anuas chun uimhir a chur in áit
+          "???"
       frozen cross_callout:
         repeat_blocks_1: "(1) Cuir an bloc seo timpeall na mblocanna liatha sa spás
           oibre"
@@ -1358,7 +1362,21 @@ ga:
       frozen freeplay_callout:
         snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
           a chruthú!
+      frozen freeplay_b_callout:
+        snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
+          a chruthú!
+      frozen freeplay_test_callout:
+        snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
+          a chruthú!
       frozen line_callout:
+        run: Cliceáil "Rith" chun triail a bhaint as!
+        move_elsa_forward: Tarraing bloc "téigh ar aghaidh" agus ceangail leis an
+          mbloc "nuair a ritear é" é chun Elsa a chur ar aghaidh
+      frozen line_b_callout:
+        run: Cliceáil "Rith" chun triail a bhaint as!
+        move_elsa_forward: Tarraing bloc "téigh ar aghaidh" agus ceangail leis an
+          mbloc "nuair a ritear é" é chun Elsa a chur ar aghaidh
+      frozen line_test_callout:
         run: Cliceáil "Rith" chun triail a bhaint as!
         move_elsa_forward: Tarraing bloc "téigh ar aghaidh" agus ceangail leis an
           mbloc "nuair a ritear é" é chun Elsa a chur ar aghaidh
@@ -1367,13 +1385,31 @@ ga:
           an uillinn a shocrú leis an uimhir sa roghchlár anuas
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Úsáid an bloc "cruthaigh craobh de chalóg shneachta"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Úsáid an bloc "cruthaigh craobh de chalóg shneachta"
       frozen square iterative_callout:
+        frozen_create_square: Ceangail níos mó blocanna anseo le cearnóg a chruthú
+      frozen square iterative_b_callout:
+        frozen_create_square: Ceangail níos mó blocanna anseo le cearnóg a chruthú
+      frozen square iterative_test_callout:
         frozen_create_square: Ceangail níos mó blocanna anseo le cearnóg a chruthú
       frozen square loop 3x_callout:
         replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
+      frozen square loop 3x_b_callout:
+        replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
+      frozen square loop 3x_test_callout:
+        replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
       frozen square loop_callout:
         replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
+      frozen square loop_b_callout:
+        replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
+      frozen square loop_test_callout:
+        replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
       frozen square snowflake_callout:
+        replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
+      frozen square snowflake_b_callout:
+        replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
+      frozen square snowflake_test_callout:
         replace_questions: Úsáid an roghchlár anuas chun uimhir a chur in áit "???"
       grade1_artist_loops2_callout:
         grade1_artist_loops2_1: Níl ach bloc amháin den sórt seo sa mbosca uirlisí.

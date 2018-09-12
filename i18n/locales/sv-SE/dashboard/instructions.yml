@@ -402,6 +402,7 @@ sv:
       Artist - Nested Loops 6_instruction: Kan du rita en hexagon genom att upprepa triangelkoden?
       Artist - Nested Loops 9_instruction: Rita tänderna i alligatorns mun!
       Artist - Nested Loops Assessment 1_instruction: Använd en kapslad loop för att slutföra designen.
+      Artist Autorun Test_instruction: Använd blocket "Upprepa" för att rita dessa 3 kvadrater.
       Artist Inspiration_instruction: "Fritt spel - Inspiration: Du har nu lärt dig allt du behöver veta för att göra ett mönster som detta! Om denna bild inspirerar dig, försök att göra något liknande. Annars skapa något alldeles eget. \\r \\r Vill du veta hur våra inspirationsmönster gjordes? "
       Auto Open Function Editor_instruction: 'Du kan anropa funktioner från inuti andra funktioner! Med din "form" funktion som bas, skapa 3 hus former varav varje är 20 pixlar större än den förra. Den första ska vara 50 pixlar i längd. Att använda en ''räknare'' loop kan vara till hjälp. '
       Bee Recommended Blocks test_instruction: Lila blommor kan ha antingen 1 eller 0 nektar, men du vet inte vilket det är! Var försiktig med att samla nektar från en lila blomma om den inte har några. Kontrollera om nektar är lika med 1 genom att använda om-blocket.
@@ -1080,6 +1081,9 @@ sv:
       courseD_artist_binary6_2018_instruction: Vilken 6-siffriga binära sträng upprepad 11 gånger kommer att rita denna bild?
       courseD_artist_binary7_instruction: Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?
       courseD_artist_binary7_2018_instruction: Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?
+      courseD_autorun_binary4_2019_instruction: Kan du rita detta mönster genom att upprepa en tresiffrig binär sträng?
+      courseD_autorun_binary6_2019_instruction: Vilken 6-siffriga binära sträng upprepad 11 gånger kommer att rita denna bild?
+      courseD_autorun_binary7_2019_instruction: Vilken är den kortaste binära stäng som du kan upprepa för att rita denna bild?
       courseD_bee_debugging3_instruction: Dessa block irriterar mig. Åtgärda felen för att samla all nektar och göra all honung.
       courseD_bee_nestedLoops3_instruction: Samla nektar från alla blommor. Använd en nästlad lopp. 
       courseD_bee_nestedLoops5_instruction: 'Samla all nektar från varje blomma och gör honung vid varje bivaxkaka. Använd en nästlad loop. '

@@ -17,16 +17,20 @@
             "\"none\""
           ],
           [
-            "Disco",
+            "Squares",
             "\"disco\""
           ],
           [
-            "Rainbow",
+            "Colors",
             "\"rainbow\""
           ],
           [
             "Diamonds",
             "\"diamonds\""
+          ],
+          [
+            "Random",
+            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]"
           ]
         ]
       }

@@ -678,6 +678,9 @@ km:
         in your stair step pattern?\\\r\n- What happens if you make your diamond\npattern
         longer or shorter?\\\r\n- What does it look like to draw two snowflakes\non
         top of one another?"
+      courseD_autorun_binary5_2019_instruction: "Each binary string below represents
+        one\nrow of this picture. \r\n\r\nCan you rearrange them so it draws a smiley
+        face\ninstead of a frown?"
       courseD_bee_conditionals3_instruction: "Help the bee collect all of the nectar.\n\r\n\r\nYou
         can only collect nectar from flowers, but you can check any space\nto see
         if there is a flower."

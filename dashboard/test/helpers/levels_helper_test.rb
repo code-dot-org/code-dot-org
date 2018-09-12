@@ -604,4 +604,34 @@ class LevelsHelperTest < ActionView::TestCase
   test 'data_t resolves localized key with trailing dot correctly' do
     assert_equal 'Test trailing dot in value.', data_t('multi.random question', 'Test trailing dot in key.')
   end
+
+  test 'block options are localized' do
+    toolbox = "<xml><category name=\"Actions\"/></xml>"
+    @level.toolbox_blocks = toolbox
+
+    start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+    @level.start_blocks = start
+
+    I18n.locale = :'it-IT'
+    options = blockly_options
+    new_toolbox = toolbox.sub("Actions", I18n.t("data.block_categories.Actions"))
+    new_start = start.sub("details", I18n.t("data.function_names.details"))
+    assert_equal new_toolbox, options[:level]["toolbox"]
+    assert_equal new_start, options[:level]["startBlocks"]
+  end
+
+  test 'block options are localized in project-backed levels' do
+    toolbox = "<xml><category name=\"Actions\"/></xml>"
+    start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+
+    project_level = create :maze, toolbox_blocks: toolbox, start_blocks: start
+    @level.project_template_level_name = project_level.name
+
+    I18n.locale = :'it-IT'
+    options = blockly_options
+    new_toolbox = toolbox.sub("Actions", I18n.t("data.block_categories.Actions"))
+    new_start = start.sub("details", I18n.t("data.function_names.details"))
+    assert_equal new_toolbox, options[:level]["toolbox"]
+    assert_equal new_start, options[:level]["startBlocks"]
+  end
 end

@@ -502,7 +502,6 @@ es:
         4_5_Bee_Conditionals_2_2: '¿Necesitas ayuda? ¡Haga clic aquí para obtener una VíDEO sugerencia!'
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Recuerde, consulte si cada nube tiene una flor. No tienes que comprobar los paneles en todos.
-        4_5_Bee_Conditionals_2_2: '¿Necesitas ayuda? ¡Haga clic aquí para obtener una VíDEO sugerencia!'
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Recuerde, consulte si cada nube tiene una flor. No tienes que comprobar los paneles en todos.
         4_5_Bee_Conditionals_2_2: '¿Necesitas un poco de ayuda? ¡Haga clic aquí para ver nuestras nuevas VÍDEO SUGERENCIAS!'
@@ -664,6 +663,10 @@ es:
         frozen_circle_function_with_parameter_circle: Utiliza el bloque de "crear un círculo" y cambia su tamaño.
       frozen cross rotate_callout:
         replace_questions_degree: Usa el menú desplegable para reemplazar "???" con un número
+      frozen cross rotate_b_callout:
+        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con un número
+      frozen cross rotate_test_callout:
+        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con un número
       frozen cross_callout:
         repeat_blocks_1: "(1) Usa este bloque y ponlo alrededor de los bloques grises en el espacio de trabajo."
         repeat_blocks_2: (2) Mueve el bloque "Repetir" aquí, y coloca los bloques grises dentro
@@ -673,20 +676,48 @@ es:
         frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
       frozen freeplay_callout:
         snowflake_dropdown: '¡Usa este menú desplegable para crear diferentes copos de nieve!'
+      frozen freeplay_b_callout:
+        snowflake_dropdown: '¡Usa este menú desplegable para crear diferentes copos de nieve!'
+      frozen freeplay_test_callout:
+        snowflake_dropdown: '¡Usa este menú desplegable para crear diferentes copos de nieve!'
       frozen line_callout:
+        run: Dale a "Ejecutar" para probar el programa.
+        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
+      frozen line_b_callout:
+        run: Dale a "Ejecutar" para probar el programa.
+        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
+      frozen line_test_callout:
         run: Dale a "Ejecutar" para probar el programa.
         move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
       frozen perpendicular_callout:
         turn_elsa: Usa el bloque de "Girar" para que Elsa gire. El número en el menú desplegable determina cuánto gira Elsa
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
+      frozen snowflake branch_test_callout:
+        frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
       frozen square iterative_callout:
+        frozen_create_square: Añade más bloques aquí para crear un cuadrado
+      frozen square iterative_b_callout:
+        frozen_create_square: Añade más bloques aquí para crear un cuadrado
+      frozen square iterative_test_callout:
         frozen_create_square: Añade más bloques aquí para crear un cuadrado
       frozen square loop 3x_callout:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square loop 3x_b_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square loop 3x_test_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
       frozen square loop_callout:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square loop_b_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square loop_test_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
       frozen square snowflake_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square snowflake_b_callout:
+        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
+      frozen square snowflake_test_callout:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: '¡Estos bloques grises están hechos de piedra! Eso significa que no pueden ser destruidos.'
