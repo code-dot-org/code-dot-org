@@ -302,6 +302,14 @@ module Pd::Application
           'Not applicable: there is no fee for the summer workshop for teachers in my region.'
         ],
 
+        how_heard: COMMON_OPTIONS[:how_heard].concat(
+          [
+            'From a teacher that has participated in a Code.org program',
+            'From an administrator',
+            TEXT_FIELDS[:other_with_text]
+          ]
+        ),
+
         committed: [
           YES,
           'No (Please Explain):'

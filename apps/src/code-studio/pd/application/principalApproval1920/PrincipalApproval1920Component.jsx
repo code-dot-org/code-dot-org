@@ -13,7 +13,8 @@ const MANUAL_SCHOOL_FIELDS = ['schoolName', 'schoolAddress', 'schoolCity',
   'schoolState', 'schoolZipCode', 'schoolType'];
 const RACE_LIST = ['white', 'black', 'hispanic', 'asian', 'pacificIslander', 'americanIndian', 'other'];
 const REQUIRED_SCHOOL_INFO_FIELDS = ['goingToTeach', 'school', 'totalStudentEnrollment',
-  'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'replaceCourse', 'committedToDiversity', 'understandFee', 'payFee'
+  'freeLunchPercent', ...RACE_LIST, 'committedToMasterSchedule', 'replaceCourse', 'committedToDiversity',
+  'understandFee', 'payFee', 'howHeard'
 ];
 const REPLACE_COURSE_FIELDS = ['replaceWhichCourseCsp', 'replaceWhichCourseCsd'];
 const YEAR = "2019-20";
@@ -144,6 +145,9 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
             )
           }
         </div>
+        {this.radioButtonsWithAdditionalTextFieldsFor('howHeard', {
+          [TextFields.otherWithText] : "other"
+        })}
         <p>
           Code.org works closely with local Regional Partners to organize and deliver the
           Professional Learning Program.  By submitting this form, teachers are

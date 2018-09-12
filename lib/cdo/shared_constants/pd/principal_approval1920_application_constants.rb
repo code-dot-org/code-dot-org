@@ -26,6 +26,7 @@ module Pd
       understand_fee: 'By checking this box, you indicate that you understand there may be a program fee for the summer workshop your teacher attends.',
       pay_fee: 'If there is a fee for the summer workshop, will your teacher or your school be able to pay for the fee?',
       want_funding: 'Yes, I would like to be considered for funding support.',
+      how_heard: 'How did you hear about Code.org’s Professional Learning program?',
       confirm_principal: 'By submitting this application, I confirm I am the principal of this school.',
 
       school: 'School',

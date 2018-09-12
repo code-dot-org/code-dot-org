@@ -72,8 +72,6 @@ module Pd::Application
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
         going_to_teach: [YES, NO, TEXT_FIELDS[:other_with_text]],
         committed_to_master_schedule: [YES, NO, TEXT_FIELDS[:other_with_text]],
-        hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
-        terms_per_year: COMMON_OPTIONS[:terms_per_year],
         replace_course: [
           YES,
           REPLACE_COURSE_NO,
@@ -114,7 +112,14 @@ module Pd::Application
           'Yes, my school or teacher will be able to pay the full program fee.',
           'No, my school or teacher will not be able to pay the program fee. We would like to be considered for a full or partial scholarship.',
           'Not applicable: there is no fee for the progam for teachers in my region.'
-        ]
+        ],
+        how_heard: COMMON_OPTIONS[:how_heard].concat(
+          [
+            'Regional Partner Event/Workshop',
+            'From a teacher who is applying',
+            TEXT_FIELDS[:other_with_text]
+          ]
+        )
       }
     end
 
@@ -126,7 +131,6 @@ module Pd::Application
             :last_name,
             :email,
             :do_you_approve,
-            :going_to_teach,
             :confirm_principal
           ]
 
@@ -141,13 +145,15 @@ module Pd::Application
               :pacific_islander,
               :american_indian,
               :other,
+              :going_to_teach,
               :committed_to_master_schedule,
               :hours_per_year,
               :terms_per_year,
               :replace_course,
               :committed_to_diversity,
               :understand_fee,
-              :pay_fee
+              :pay_fee,
+              :how_heard
             ]
 
             if hash[:replace_course] == YES
