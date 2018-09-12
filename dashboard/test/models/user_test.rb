@@ -3166,7 +3166,6 @@ class UserTest < ActiveSupport::TestCase
 
     assert_creates(User) do
       user = User.from_omniauth(auth, params)
-      user.reload
       assert_equal 'fake oauth token', user.oauth_token
       assert_equal 'fake refresh token', user.oauth_refresh_token
       assert_equal 'google_oauth2', user.provider
@@ -3193,7 +3192,6 @@ class UserTest < ActiveSupport::TestCase
 
     assert_does_not_create(User) do
       user = User.from_omniauth(auth, params)
-      user.reload
       assert_equal 'fake oauth token', user.oauth_token
       assert_equal 'fake refresh token', user.oauth_refresh_token
       assert_equal 'google_oauth2', user.provider
@@ -3217,7 +3215,6 @@ class UserTest < ActiveSupport::TestCase
 
     assert_does_not_create(User) do
       user = User.from_omniauth(auth, params)
-      user.reload
       google_auth_option = user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::GOOGLE}
       refute_nil google_auth_option
       assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
