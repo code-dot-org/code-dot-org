@@ -37,7 +37,7 @@ module UsersHelper
           source_user: existing_account,
           destination_user: user,
           type: 'oauth',
-          provider: auth_hash.provider
+          provider: user.provider
         )
       end
 
