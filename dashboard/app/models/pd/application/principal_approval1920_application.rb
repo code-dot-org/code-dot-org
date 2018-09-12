@@ -70,6 +70,7 @@ module Pd::Application
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
+        going_to_teach: [YES, NO, TEXT_FIELDS[:other_with_text]],
         committed_to_master_schedule: [YES, NO, TEXT_FIELDS[:other_with_text]],
         hours_per_year: COMMON_OPTIONS[:course_hours_per_year],
         terms_per_year: COMMON_OPTIONS[:terms_per_year],
@@ -125,6 +126,7 @@ module Pd::Application
             :last_name,
             :email,
             :do_you_approve,
+            :going_to_teach,
             :confirm_principal
           ]
 
