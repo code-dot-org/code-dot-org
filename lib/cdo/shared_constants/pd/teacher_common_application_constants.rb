@@ -7,7 +7,7 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
-    SECTION_HEADERS = {
+    BASE_SECTION_HEADERS = {
       section_1_about_you: 'About You',
       section_2_your_school: 'Your School',
       section_3_choose_your_program: 'Choose Your Program',
@@ -16,7 +16,7 @@ module Pd
       detail_view_principal_approval: 'Principal Approval'
     }.freeze
 
-    PAGE_LABELS = {
+    BASE_PAGE_LABELS = {
       section_1_about_you: {
         country: 'Country',
         title: 'Title',
@@ -202,9 +202,6 @@ module Pd
       taught_in_past: [2, 0],
       csp_how_offer: [2, 0]
     }.freeze
-
-    ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
-    ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
 
     CRITERIA_SCORE_QUESTIONS_CSP = (
       VALID_SCORES.select {|_, v| v == YES_NO}.keys - [:csd_which_grades, :csd_terms_per_year]
