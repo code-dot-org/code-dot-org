@@ -3213,13 +3213,11 @@ class UserTest < ActiveSupport::TestCase
     )
     params = {}
 
-    assert_does_not_create(User) do
-      user = User.from_omniauth(auth, params)
-      google_auth_option = user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::GOOGLE}
-      refute_nil google_auth_option
-      assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
-      assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
-    end
+    user = User.from_omniauth(auth, params)
+    google_auth_option = user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::GOOGLE}
+    refute_nil google_auth_option
+    assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
+    assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
 
   test 'summarize' do
