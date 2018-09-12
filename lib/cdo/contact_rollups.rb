@@ -905,9 +905,10 @@ class ContactRollups
     # Use optimizer hint to set a custom query execution timeout
     users_query = <<-END_OF_STRING
       SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */
-             JSON_EXTRACT(properties, '$.ops_school') AS ops_school
+             email
+           , JSON_EXTRACT(properties, '$.ops_school') AS ops_school
            , JSON_EXTRACT(properties, '$.district_id') AS district_id
-      FROM users_view
+      FROM #{DASHBOARD_DB_NAME}.users_view
       WHERE deleted_at IS NULL
         AND (length(email) > 0)
     END_OF_STRING
