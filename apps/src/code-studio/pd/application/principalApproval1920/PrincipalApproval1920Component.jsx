@@ -188,6 +188,14 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
                     in Code.org's ${YEAR} Professional Learning Program?`,
           })
         }
+        {
+          this.radioButtonsWithAdditionalTextFieldsFor('goingToTeach', {
+            [TextFields.otherWithText]: "other"
+          }, {
+            label: `Is ${this.props.teacherApplication.name} going to teach this course in
+                    the ${YEAR} school year?`,
+          })
+        }
         {this.props.data.doYouApprove !== 'No' && this.renderSchoolInfoSection()}
         {this.singleCheckboxFor('confirmPrincipal')}
       </FormGroup>

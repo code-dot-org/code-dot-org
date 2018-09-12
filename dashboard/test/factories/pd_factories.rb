@@ -857,6 +857,7 @@ FactoryGirl.define do
     title 'Dr.'
     email 'albus@hogwarts.edu'
     confirm_principal true
+    going_to_teach 'Yes'
 
     trait :approved_no do
       do_you_approve 'No'

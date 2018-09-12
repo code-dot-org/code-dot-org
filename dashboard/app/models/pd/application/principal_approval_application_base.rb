@@ -57,7 +57,8 @@ module Pd::Application
         [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
         [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
-        [:do_you_approve]
+        [:do_you_approve],
+        [:going_to_teach]
       ]
     end
 
