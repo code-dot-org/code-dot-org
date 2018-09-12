@@ -8,6 +8,14 @@
         "name": "TYPE",
         "options": [
           [
+            "blue coral",
+            "'blueCoralBlock'"
+          ],
+          [
+            "red coral",
+            "'redCoralBlock'"
+          ],
+          [
             "sand",
             "'sand'"
           ],
@@ -18,6 +26,10 @@
           [
             "oak planks",
             "'planksOak'"
+          ],
+          [
+            "sea lantern",
+            "'seaLantern'"
           ]
         ]
       },
@@ -25,6 +37,11 @@
         "name": "STATEMENT",
         "statement": true
       }
+    ],
+    "color": [
+      197,
+      0.88,
+      0.78
     ]
   }
 }
