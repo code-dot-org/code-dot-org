@@ -37,6 +37,13 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
     assert_select 'td', text: @teacher.email
   end
 
+  test 'find multi-auth user by email for existing user displays user email' do
+    multi_auth_teacher = create :teacher, :with_migrated_email_authentication_option
+    sign_in @workshop_admin
+    post :facilitator_courses_form, params: {search_term: multi_auth_teacher.email}
+    assert_select 'td', text: multi_auth_teacher.email
+  end
+
   test 'find user by email for existing user displays user id' do
     sign_in @workshop_admin
     post :facilitator_courses_form, params: {search_term: @teacher.email}
