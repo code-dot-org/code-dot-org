@@ -154,9 +154,7 @@ export function captureThumbnailFromElement(element) {
   }).catch(e => {
     console.log(`error capturing screenshot: ${e}`);
   }).then(() => {
-    setTimeout(() => {
-      isCapturePending = false;
-    }, 100);
+    isCapturePending = false;
   });
 }
 
