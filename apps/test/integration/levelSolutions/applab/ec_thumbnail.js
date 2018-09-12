@@ -87,7 +87,7 @@ export default {
       xml: `write('hello');`,
       runBeforeClick(assert) {
         sinon.stub(htmlToCanvasWrapper, 'html2canvas').callsFake(() =>
-          new Promise((resolve, reject) => setTimeout(() => reject('foobar'), 100))
+          new Promise((resolve, reject) => setTimeout(() => reject('foobar'), 0))
         );
         sinon.stub(console, 'log');
 
