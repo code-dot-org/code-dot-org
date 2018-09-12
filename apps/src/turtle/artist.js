@@ -57,6 +57,7 @@ import {SignInState} from '../code-studio/progressRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
 import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
+import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -302,6 +303,11 @@ Artist.prototype.init = function (config) {
   this.limitedAutoRun = experiments.isEnabled('limited-auto-artist') ||
     this.level.autoRun === ArtistAutorunOptions.limited_auto_run;
   this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
+
+  this.executionInfo = DEFAULT_EXECUTION_INFO;
+  if (this.level.maxTickCount !== undefined) {
+    this.executionInfo.ticks = this.level.maxTickCount;
+  }
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
@@ -724,11 +730,14 @@ Artist.prototype.resetButtonClick = function () {
   }
 };
 
-Artist.prototype.evalCode = function (code, interpreterScope={}) {
+Artist.prototype.evalCode = function (code, executionInfo=this.executionInfo) {
   try {
     CustomMarshalingInterpreter.evalWith(code, {
       Turtle: this.api,
-      ...interpreterScope,
+      // The default executionInfo modifies itself, make a fresh copy each run
+      executionInfo: {
+        ...executionInfo,
+      },
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll

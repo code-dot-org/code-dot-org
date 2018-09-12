@@ -407,10 +407,8 @@ describe('Artist', () => {
     const alertStub = sinon.stub(window, 'alert');
 
     artist.evalCode('while(true) executionInfo.checkTimeout();', {
-      executionInfo: {
-        ...DEFAULT_EXECUTION_INFO,
-        ticks: 10, // Declare an infinite loop after 10 ticks
-      },
+      ...DEFAULT_EXECUTION_INFO,
+      ticks: 10, // Declare an infinite loop after 10 ticks
     });
 
     expect(alertStub).to.not.have.been.called;

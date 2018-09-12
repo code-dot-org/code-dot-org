@@ -57,6 +57,10 @@ module.exports = {
     if (testCollection.levelFile) {
       var levels = data.levels[testCollection.levelFile];
       level = _.cloneDeep(levels[testCollection.levelId]);
+      level = {
+        ...level,
+        ...testData.levelDefinitionOverrides,
+      };
     } else {
       if (!testCollection.levelDefinition && !testData.delayLoadLevelDefinition) {
         logError('testCollection requires levelFile or levelDefinition');
