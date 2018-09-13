@@ -55,30 +55,25 @@
   = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'toolbox'}
 
 .field
-  - if @level.uses_droplet?
-    = f.label :start_blocks, 'Edit Starting JavaScript Program'
-  - else
-    = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'start'}
+  = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
+  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'start'}
 
 .field
-  - if @level.uses_droplet?
-    = f.label :required_blocks,'Edit Required Blocks'
-  - else
-    = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
+  = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
+  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'required'}
 
 .field
-  - if @level.uses_droplet?
-    = f.label :recommended_blocks, 'Edit Recommended Blocks'
-  - else
-    = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
+  = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
+  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'recommended'}
 
-- unless @level.uses_droplet?
+.field
+  = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
+  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
+
+-if @level.respond_to? :solution_blocks
   .field
-    = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
-    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'initialization'}
+    = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
+    = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'solution'}
 
 .field
   = f.label :ideal, 'Ideal block number'
@@ -90,14 +85,6 @@
   = f.label :step_speed, 'Step speed'
   %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
   = f.number_field :step_speed
-
--if @level.respond_to? :solution_blocks
-  .field
-    - if @level.uses_droplet?
-      = f.label :solution_blocks, 'Edit Solution Blocks'
-    - else
-      = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
-      = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'solution'}
 
 :ruby
   script_data = {

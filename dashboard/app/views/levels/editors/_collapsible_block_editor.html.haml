@@ -3,7 +3,7 @@
 
 %div{data: {toggle: "collapse", target: "##{collapse_xml}"}}
   Open/Close
-.row.collapse.in{id: collapse_xml}
+.row.collapse{id: collapse_xml}
   .span8
     ~ f.text_area :"#{xml_id}_blocks", placeholder: "#{xml_id} blocks", rows: 4, value: @level.pretty_block(xml_id)
   .span4{id: xml_id + '-preview'}
