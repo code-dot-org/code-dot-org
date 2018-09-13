@@ -201,8 +201,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     lookup_user = User.find_by_email_or_hashed_email(lookup_email)
 
     unless lookup_user.present?
-      # For Google Classroom student takeover, we want to update User/AuthenticationOption
-      # with email provided from Google in auth_hash
+      # Even if silent takeover is not available for student imported from Google Classroom, we still want
+      # to attach the email received from Google login to the student's account since GC imports do not provide emails.
       if allows_google_classroom_takeover(oauth_user)
         oauth_user.update_email_for(
           provider: auth_hash.provider.to_s,
