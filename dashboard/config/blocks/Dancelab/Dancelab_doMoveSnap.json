@@ -1,8 +1,8 @@
 {
   "category": "Moves",
   "config": {
-    "func": "doMoveOnce",
-    "blockText": "{SPRITE} do move {MOVE} once",
+    "func": "doMoveSnap",
+    "blockText": "{SPRITE} do move {MOVE} once [SNAP TO MID]",
     "args": [
       {
         "name": "SPRITE",

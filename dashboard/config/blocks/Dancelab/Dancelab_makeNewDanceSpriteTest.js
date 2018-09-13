@@ -1,22 +1,25 @@
 
-function makeNewDanceSprite(costume, name, location) {
+function makeNewDanceSpriteTest(costume, name, location) {
   if (!location) {
     location = {x: 200, y: 200};
   }
 
   var sprite = createSprite(location.x, location.y);
 
-  sprite.maxSpeed = 0;
   sprite.style = costume;
   if (!sprites_by_type.hasOwnProperty(costume)) {
     sprites_by_type[costume] = createGroup();
   }
-  sprites_by_type[costume].add(sprite);
+ 
+  sprite.looping_move = 0;
+  sprite.looping_frame = 0;
   sprite.current_move = 0;
   sprite.previous_move = 0;
+  
   for (var i=0; i < dancers[costume].length; i++) {
     sprite.addAnimation("anim" + i, dancers[costume][i]);
   }
+  
   sprite.animation.stop();
   sprites.add(sprite);
   sprite.speed = 10;
@@ -33,7 +36,12 @@ function makeNewDanceSprite(costume, name, location) {
     var msPerFrame = msPerBeat / 48;
     while (sprite.sinceLastFrame > msPerFrame) {
       sprite.sinceLastFrame -= msPerFrame;
-      sprite.animation.nextFrame();
+      sprite.looping_frame++;
+      if (sprite.animation.looping) {
+        sprite.animation.changeFrame(sprite.looping_frame % sprite.animation.images.length);
+      } else {
+        sprite.animation.nextFrame();
+      }
       var currentFrame = sprite.animation.getFrame();
       if (currentFrame === 0) {
         sprite.mirrorX(-sprite.mirrorX());
@@ -45,25 +53,6 @@ function makeNewDanceSprite(costume, name, location) {
     }
   });
 
-  sprite.setSpeed = function (speed) {
-    sprite.speed = speed;
-  };
-
-  sprite.moveUp = function () {
-    sprite.y = sprite.y - sprite.speed;
-  };
-  sprite.moveDown = function () {
-    sprite.y = sprite.y + sprite.speed;
-  };
-  sprite.moveLeft = function () {
-    sprite.x = sprite.x - sprite.speed;
-  };
-  sprite.moveRight = function () {
-    sprite.x = sprite.x + sprite.speed;
-  };
-  sprite.jump = function () {
-    sprite.velocityY = -7;
-  };
   sprite.setTint = function (color) {
     sprite.tint = color;
   };
