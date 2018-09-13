@@ -19,6 +19,8 @@ module Api::V1::Pd::Application
       )
 
       TEACHER_APPLICATION_MAILER_CLASS.stubs(:principal_approval).returns(
+        mock {|mail| mail.stubs(:deliver_now)}
+      )
     end
 
     test_redirect_to_sign_in_for :create
@@ -53,8 +55,8 @@ module Api::V1::Pd::Application
     end
 
     test 'do not send principal approval email on successful create if RP has selective principal approval' do
-      Pd::Application::Teacher1819ApplicationMailer.expects(:confirmation).
-        with(instance_of(Pd::Application::Teacher1819Application)).
+      TEACHER_APPLICATION_MAILER_CLASS.expects(:confirmation).
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
 
       Pd::Application::PrincipalApproval1819Application.expects(:create_placeholder_and_send_mail).never
