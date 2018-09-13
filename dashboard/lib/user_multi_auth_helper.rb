@@ -24,6 +24,23 @@ module UserMultiAuthHelper
     end
   end
 
+  def update_oauth_credential_tokens(auth_hash)
+    # No-op if auth_hash does not contain credentials
+    return unless auth_hash.key?(:credentials)
+
+    credentials_hash = auth_hash[:credentials]
+    if migrated?
+      auth_option = authentication_options.find_by(credential_type: auth_hash[:provider], authentication_id: auth_hash[:uid])
+      auth_option&.update_oauth_credential_tokens(credentials_hash)
+    else
+      self.oauth_refresh_token = credentials_hash[:refresh_token] if credentials_hash[:refresh_token].present?
+      self.oauth_token = credentials_hash[:token]
+      self.oauth_token_expiration = credentials_hash[:expires_at]
+
+      save if changed?
+    end
+  end
+
   def migrate_to_multi_auth
     raise "Migration not implemented for provider #{provider}" unless
       provider.nil? ||
