@@ -412,6 +412,8 @@ class Blockly < Level
   end
 
   def self.localize_toolbox_blocks(blocks)
+    return nil if blocks.nil?
+
     block_xml = Nokogiri::XML(localize_function_blocks(blocks), &:noblanks)
     block_xml.xpath('//../category').each do |category|
       name = category.attr('name')
@@ -422,6 +424,8 @@ class Blockly < Level
   end
 
   def self.localize_function_blocks(blocks)
+    return nil if blocks.nil?
+
     block_xml = Nokogiri::XML(blocks, &:noblanks)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
       name = function.at_xpath('./title[@name="NAME"]')
