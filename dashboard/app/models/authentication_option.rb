@@ -105,6 +105,24 @@ class AuthenticationOption < ApplicationRecord
     }
   end
 
+  # Given credentials from OmniAuth::AuthHash or a similarly-formatted hash, updates the OAuth tokens on the AuthenticationOption.
+  # Expected formatting:
+  # credentials = {
+  #   token: 'some-token',
+  #   refresh_token: 'some-refresh-token',
+  #   expires_at: 123456,
+  # }
+  def update_oauth_credential_tokens(credentials)
+    raise 'AuthenticationOption#update_oauth_credential_tokens can only be called on an OAuth credential type.' unless oauth?
+
+    new_data = data_hash
+    new_data[:oauth_refresh_token] = credentials[:refresh_token] if credentials[:refresh_token].present?
+    new_data[:oauth_token] = credentials[:token]
+    new_data[:oauth_token_expiration] = credentials[:expires_at]
+
+    update(data: new_data.to_json)
+  end
+
   private def email_must_be_unique
     # skip the db lookup if possible
     return unless email_changed? && email.present? && errors.blank?

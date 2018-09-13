@@ -713,17 +713,7 @@ class User < ActiveRecord::Base
       initialize_new_oauth_user(user, auth, params)
     end
 
-    if auth.credentials
-      if auth.credentials.refresh_token
-        omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
-      end
-
-      omniauth_user.oauth_token = auth.credentials.token
-      omniauth_user.oauth_token_expiration = auth.credentials.expires_at
-
-      omniauth_user.save if omniauth_user.changed?
-    end
-
+    omniauth_user.update_oauth_credential_tokens(auth)
     omniauth_user
   end
 
