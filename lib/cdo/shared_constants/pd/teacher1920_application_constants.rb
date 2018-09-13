@@ -93,7 +93,8 @@ module Pd
           :have_cs_license,
           :subjects_licensed_to_teach,
           :taught_in_past,
-          :cs_offered_at_school
+          :cs_offered_at_school,
+          :previous_yearlong_cdo_pd
         ).merge({subjects_teaching: BASE_PAGE_LABELS[:section_2_your_school][:subjects_teaching].gsub('17-18', '18-19')}),
       section_4_professional_learning_program_requirements:
         BASE_PAGE_LABELS[:section_4_summer_workshop].slice(
@@ -108,7 +109,7 @@ module Pd
       section_5_additional_demographic_information:
         BASE_PAGE_LABELS[:section_1_about_you].slice(:gender_identity, :race).merge(
           {
-            how_heard: 'HOw did you hear about this program?'
+            how_heard: 'How did you hear about this program?'
           }
         ),
       section_6_submission: BASE_PAGE_LABELS[:section_5_submission]
