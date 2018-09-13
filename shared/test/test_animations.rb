@@ -173,8 +173,8 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(filename)
 
     # Ask for an invalid version
-    # No Honeybadger notification on this case - it's an expected 404.
     Honeybadger.expects(:notify).never
+    # No Firehose notification on this case - it's an expected 404.
     FirehoseClient.any_instance.expects(:put_record).never
     @api.get_object_version(filename, v1_version_id)
     assert not_found?

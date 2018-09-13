@@ -47,10 +47,11 @@ class AnimationBucket < BucketHelper
     # Try getting the first (non-delete-marker) version
     s3_object = super(key, if_modified_since, versions.first.version_id)
 
-    # If the fallback is successful, let's notify Honeybadger, because we'd
+    # If the fallback is successful, let's notify Firehose, because we'd
     # like these to go down over time.
     FirehoseClient.instance.put_record(
-      study: 'animation-bucket-warning',
+      study: 'bucket-warning',
+      study_group: self.class.name,
       event: 'served-latest-version',
       data_string: 'AnimationBucket served latest version instead of requested version',
       data_json: {
