@@ -81,7 +81,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to '/home?open=rosterDialog'
     elsif User::OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(provider) && @user.persisted?
       handle_untrusted_email_signin(@user, provider)
-    elsif allows_silent_takeover(@user, auth_hash) || google_classroom_student_takeover(@user)
+    elsif allows_silent_takeover(@user, auth_hash) || allows_google_classroom_takeover(@user)
       silent_takeover(@user, auth_hash)
       sign_in_user
     elsif @user.persisted?
@@ -187,7 +187,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       scopes.include?('classroom.rosters.readonly')
   end
 
-  def google_classroom_student_takeover(user)
+  def allows_google_classroom_takeover(user)
     # Google Classroom does not provide student email addresses, so we want to perform
     # silent takeover on these accounts, but *only if* the student hasn't made progress
     # with the account created during the Google Classroom import.
@@ -197,11 +197,27 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def silent_takeover(oauth_user, auth_hash)
-    # Copy oauth details to primary account
     lookup_email = oauth_user.email.presence || auth_hash.info.email
-    @user = User.find_by_email_or_hashed_email(lookup_email)
-    return unless @user.present?
-    if google_classroom_student_takeover(oauth_user)
+    lookup_user = User.find_by_email_or_hashed_email(lookup_email)
+
+    unless lookup_user.present?
+      # For Google Classroom student takeover, we want to update User/AuthenticationOption
+      # with email provided from Google in auth_hash
+      if allows_google_classroom_takeover(oauth_user)
+        oauth_user.update_email_for(
+          provider: auth_hash.provider.to_s,
+          uid: auth_hash.uid,
+          email: lookup_email
+        )
+      end
+      return
+    end
+
+    # Continue with silent takeover
+    @user = lookup_user
+
+    # Transfer sections and destroy Google Classroom user if takeover is possible
+    if allows_google_classroom_takeover(oauth_user)
       return unless move_sections_and_destroy_source_user(oauth_user, @user)
     end
 
@@ -223,6 +239,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           error_class: 'Failed to create AuthenticationOption during silent takeover',
           error_message: "Could not create AuthenticationOption during silent takeover for user with email #{lookup_email}"
         )
+        return
       end
     else
       success = @user.update(
@@ -238,17 +255,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           error_class: 'Failed to update User during silent takeover',
           error_message: "Could not update user during silent takeover for user with email #{lookup_email}"
         )
+        return
       end
     end
 
-    if @user.present?
-      log_account_takeover_to_firehose(
-        source_user: oauth_user,
-        destination_user: @user,
-        type: 'silent',
-        provider: auth_hash.provider
-      )
-    end
+    log_account_takeover_to_firehose(
+      source_user: oauth_user,
+      destination_user: @user,
+      type: 'silent',
+      provider: auth_hash.provider
+    )
   end
 
   def sign_in_user

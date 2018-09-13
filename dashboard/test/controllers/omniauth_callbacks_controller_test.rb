@@ -549,6 +549,43 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert found_google
   end
 
+  test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    google_classroom_student = create(:student, :imported_from_google_classroom, uid: uid)
+    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_destroy(User) do
+      get :google_oauth2
+    end
+    google_classroom_student.reload
+    assert_equal 'google_oauth2', google_classroom_student.provider
+    assert_equal User.hash_email(email), google_classroom_student.hashed_email
+    assert [google_classroom_section&.id], google_classroom_student.sections_as_student.pluck(:id)
+  end
+
+  test 'login: google_oauth2 updates migrated Google Classroom student AuthenticationOption email if silent takeover not available' do
+    email = 'test@foo.xyz'
+    uid = '654321'
+    google_classroom_student = create(:student, :migrated_imported_from_google_classroom, uid: uid)
+    google_auth_option = google_classroom_student.primary_contact_info
+    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_destroy(User) do
+      get :google_oauth2
+    end
+    google_classroom_student.reload
+    google_auth_option.reload
+    assert_equal 'migrated', google_classroom_student.provider
+    assert_equal User.hash_email(email), google_auth_option.hashed_email
+    assert [google_classroom_section&.id], google_classroom_student.sections_as_student.pluck(:id)
+  end
+
   test 'login: clever does not silently add authentication_option to migrated student with matching email' do
     email = 'test@foo.xyz'
     uid = '654321'
