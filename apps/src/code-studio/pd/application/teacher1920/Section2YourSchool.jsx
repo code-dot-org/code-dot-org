@@ -6,11 +6,7 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {
-  Row,
-  Col,
-  ControlLabel,
   FormGroup
 } from 'react-bootstrap';
 import {styles} from './TeacherApplicationConstants';
@@ -56,64 +52,7 @@ export default class Section2YourSchool extends LabeledFormComponent {
       <FormGroup>
         <h3>Section 2: {SectionHeaders.section2YourSchool}</h3>
 
-        <p>
-          If you work in a school district, please select your district and school below:
-        </p>
 
-        <FormGroup
-          id="school"
-          controlId="school"
-          validationState={this.getValidationState("school")}
-        >
-          <Row>
-            <Col md={6}>
-              <ControlLabel>
-                School
-                <span style={{color: 'red'}}> *</span>
-              </ControlLabel>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <SchoolAutocompleteDropdown
-                value={this.props.data.school}
-                onChange={this.handleSchoolChange}
-              />
-            </Col>
-          </Row>
-        </FormGroup>
-
-        {this.props.data.school && this.props.data.school === '-1' &&
-          <div style={styles.indented}>
-            {this.inputFor("schoolName")}
-            {this.inputFor("schoolDistrictName")}
-            {this.inputFor("schoolAddress")}
-            {this.inputFor("schoolCity")}
-            {this.selectFor("schoolState", {placeholder: "Select a state"})}
-            {this.inputFor("schoolZipCode")}
-            {this.radioButtonsFor("schoolType")}
-          </div>
-        }
-
-        {
-          // Disable auto complete for principal fields, so they are not filled with the teacher's details.
-          // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
-          // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
-        }
-        {this.inputFor("principalFirstName", {autoComplete: "never"})}
-        {this.inputFor("principalLastName", {autoComplete: "never"})}
-        {this.selectFor("principalTitle", {
-          placeholder: "Select a title",
-          required: false,
-          autoComplete: "never"
-        })}
-        {this.inputFor("principalEmail", {autoComplete: "never"})}
-        {this.inputFor("principalConfirmEmail", {autoComplete: "never"})}
-        {this.usPhoneNumberInputFor("principalPhoneNumber", {autoComplete: "never"})}
-
-        {this.radioButtonsWithAdditionalTextFieldsFor("currentRole", {
-          [TextFields.otherPleaseList] : "other"
-        })}
 
         {this.checkBoxesFor("gradesAtSchool")}
 

@@ -1,10 +1,6 @@
 import {PropTypes} from 'react';
 import FormController from '../../form_components/FormController';
 import Section1AboutYou from './Section1AboutYou';
-import Section2YourSchool from './Section2YourSchool';
-import Section3ChooseYourProgram from './Section3ChooseYourProgram';
-import Section4SummerWorkshop from './Section4SummerWorkshop';
-import Section5Submission from './Section5Submission';
 
 export default class Teacher1920Application extends FormController {
   static propTypes = {
@@ -21,11 +17,7 @@ export default class Teacher1920Application extends FormController {
    */
   getPageComponents() {
     return [
-      Section1AboutYou,
-      Section2YourSchool,
-      Section3ChooseYourProgram,
-      Section4SummerWorkshop,
-      Section5Submission
+      Section1AboutYou
     ];
   }
 
