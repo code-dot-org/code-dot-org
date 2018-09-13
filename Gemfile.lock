@@ -165,6 +165,13 @@ GIT
       omniauth-oauth2 (~> 1.4)
 
 GIT
+  remote: https://github.com/wjordan/puma.git
+  revision: 2ab96d67341a0ae1a4baf6bf80790389abc159ac
+  ref: out_of_band
+  specs:
+    puma (3.12.0)
+
+GIT
   remote: https://github.com/wjordan/sass-rails.git
   revision: 06e833d92d083fbcb137364ffebc597b2577db23
   ref: frozen-array-fix
@@ -553,6 +560,7 @@ GEM
     multipart-post (2.0.0)
     mustermann (1.0.1)
     mysql2 (0.3.21)
+    nakayoshi_fork (0.0.4)
     naturally (2.1.0)
     net-http-persistent (2.9.4)
     net-scp (1.2.1)
@@ -623,7 +631,6 @@ GEM
     powerpack (0.1.1)
     progress (3.3.1)
     public_suffix (3.0.3)
-    puma (3.12.0)
     pusher (1.3.1)
       httpclient (~> 2.7)
       multi_json (~> 1.0)
@@ -953,6 +960,7 @@ DEPENDENCIES
   minitest-reporters (~> 1.2.0.beta3)
   mocha
   mysql2 (~> 0.3.13)
+  nakayoshi_fork
   naturally
   net-http-persistent
   net-scp
@@ -977,7 +985,7 @@ DEPENDENCIES
   petit!
   pg
   phantomjs (~> 1.9.7.1)
-  puma
+  puma!
   pusher (~> 1.3.1)
   rack-cache
   rack-mini-profiler
