@@ -14,7 +14,7 @@ include SharedConstants
 def project_type_from_value(value_parsed)
   level = value_parsed['level']
   project_type = value_parsed['projectType'] || project_type_from_level(level)
-  ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type) ? project_type : nil
+  ALL_PROJECT_TYPES.include?(project_type) ? project_type : nil
 end
 
 def project_type_from_level(level)
