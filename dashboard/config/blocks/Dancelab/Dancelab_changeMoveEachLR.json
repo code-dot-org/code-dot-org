@@ -1,0 +1,116 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "changeMoveEachLR",
+    "blockText": "{GROUP} do {MOVE} {DIR} forever",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "all ducks",
+            "\"duck\""
+          ],
+          [
+            "all moose",
+            "\"moose\""
+          ],
+          [
+            "all unicorn",
+            "\"unicorn\""
+          ],
+          [
+            "all Mr Wiggles",
+            "\"mrwiggles\""
+          ],
+          [
+            "all cat",
+            "\"cat\""
+          ]
+        ]
+      },
+      {
+        "name": "MOVE",
+        "options": [
+          [
+            "Rest",
+            "0"
+          ],
+          [
+            "Clap High",
+            "1"
+          ],
+          [
+            "Clown",
+            "2"
+          ],
+          [
+            "Dab",
+            "3"
+          ],
+          [
+            "Double Jam",
+            "4"
+          ],
+          [
+            "Drop",
+            "5"
+          ],
+          [
+            "Floss",
+            "6"
+          ],
+          [
+            "Fresh",
+            "7"
+          ],
+          [
+            "Roll",
+            "8"
+          ],
+          [
+            "This or That",
+            "9"
+          ],
+          [
+            "Kick",
+            "10"
+          ],
+          [
+            "Thiller",
+            "11"
+          ],
+          [
+            "Next",
+            "\"next\""
+          ],
+          [
+            "Previous",
+            "\"prev\""
+          ],
+          [
+            "Random",
+            "\"rand\""
+          ]
+        ]
+      },
+      {
+        "name": "DIR",
+        "options": [
+          [
+            "←",
+            "-1"
+          ],
+          [
+            "→",
+            "1"
+          ]
+        ]
+      }
+    ]
+  }
+}
