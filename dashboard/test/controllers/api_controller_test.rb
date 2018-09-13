@@ -428,6 +428,8 @@ class ApiControllerTest < ActionController::TestCase
 
       # update from editable to locked
       user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
       updates = [
         {
           user_level_data: user_level_data,
@@ -441,9 +443,13 @@ class ApiControllerTest < ActionController::TestCase
       assert_equal true, user_level.submitted?
       assert_equal false, user_level.readonly_answers?
       assert_nil user_level.unlocked_at
+      # update_lockable_state does not modify updated_at
+      assert_equal expected_updated_at, user_level.updated_at
 
       # update from editable to readonly_answers
       user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
       updates = [
         {
           user_level_data: user_level_data,
@@ -457,9 +463,12 @@ class ApiControllerTest < ActionController::TestCase
       assert_equal true, user_level.submitted?
       assert_equal true, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
 
       # update from readonly_answers to locked
       user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
       updates = [
         {
           user_level_data: user_level_data,
@@ -473,9 +482,12 @@ class ApiControllerTest < ActionController::TestCase
       assert_equal true, user_level.submitted?
       assert_equal false, user_level.readonly_answers?
       assert_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
 
       # update from readonly_answers to editable
       user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+      expected_updated_at = user_level.updated_at
+      Timecop.travel 1
       updates = [
         {
           user_level_data: user_level_data,
@@ -489,6 +501,7 @@ class ApiControllerTest < ActionController::TestCase
       assert_equal false, user_level.submitted?
       assert_equal false, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at
+      assert_equal expected_updated_at, user_level.updated_at
     end
   end
 
