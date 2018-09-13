@@ -86,7 +86,7 @@ def load_configuration
     'localize_apps'               => false,
     'name'                        => hostname,
     'newrelic_logging'            => rack_env == :production,
-    'netsim_enable_metrics'       => [:staging, :test, :production].include?(rack_env),
+    'netsim_enable_metrics'       => [:staging, :test].include?(rack_env),
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'partners'                    => %w(),
