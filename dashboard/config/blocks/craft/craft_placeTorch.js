@@ -1,3 +1,3 @@
-function torch() {
+function placeTorch() {
   api.placeBlock(null, "torch", "Player");
 }
