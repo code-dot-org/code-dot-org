@@ -218,7 +218,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # Transfer sections and destroy Google Classroom user if takeover is possible
     if allows_google_classroom_takeover(oauth_user)
-      return unless move_sections_and_destroy_source_user(oauth_user, @user)
+      return unless move_sections_and_destroy_source_user(
+        source_user: oauth_user,
+        destination_user: @user,
+        takeover_type: 'silent'
+      )
     end
 
     if @user.migrated?
@@ -258,13 +262,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         return
       end
     end
-
-    log_account_takeover_to_firehose(
-      source_user: oauth_user,
-      destination_user: @user,
-      type: 'silent',
-      provider: auth_hash.provider
-    )
   end
 
   def sign_in_user

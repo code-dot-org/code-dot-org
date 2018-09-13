@@ -15,7 +15,7 @@ module UsersHelper
 
   # Move followed sections from source_user to destination_user and destroy source_user.
   # Returns a boolean - true if all steps were successful, false otherwise.
-  def move_sections_and_destroy_source_user(source_user, destination_user)
+  def move_sections_and_destroy_source_user(source_user:, destination_user:, takeover_type:)
     # No-op if source_user is nil
     return true unless source_user.present?
 
@@ -38,8 +38,15 @@ module UsersHelper
       end
 
       source_user.destroy!
-      true
     end
+
+    log_account_takeover_to_firehose(
+      source_user: source_user,
+      destination_user: destination_user,
+      type: takeover_type,
+      provider: destination_user.provider
+    )
+    true
   rescue
     false
   end
@@ -55,17 +62,11 @@ module UsersHelper
 
       existing_account = User.find_by_credential(type: provider, id: uid)
       # No-op if move_sections_and_destroy_source_user fails
-      return unless move_sections_and_destroy_source_user(existing_account, user)
-
-      if existing_account
-        existing_account.destroy!
-        log_account_takeover_to_firehose(
-          source_user: existing_account,
-          destination_user: user,
-          type: 'oauth',
-          provider: user.provider
-        )
-      end
+      return unless move_sections_and_destroy_source_user(
+        source_user: existing_account,
+        destination_user: user,
+        takeover_type: 'oauth'
+      )
 
       if user.migrated?
         success = user.add_credential(
