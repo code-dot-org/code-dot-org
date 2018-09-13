@@ -49,7 +49,7 @@ class AnimationBucket < BucketHelper
 
     # If the fallback is successful, let's notify Honeybadger, because we'd
     # like these to go down over time.
-    FirehoseClient.put_record(
+    FirehoseClient.instance.put_record(
       study: 'animation-bucket-warning',
       event: 'served-latest-version',
       data_string: 'AnimationBucket served latest version instead of requested version',
@@ -57,7 +57,7 @@ class AnimationBucket < BucketHelper
         s3_key: key,
         requested_version: version,
         served_version: s3_object.version_id
-      }
+      }.to_json
     )
     s3_object
   end
