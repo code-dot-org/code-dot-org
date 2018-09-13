@@ -95,7 +95,7 @@ export default class SoundPicker extends React.Component {
 
     firehoseClient.putRecord(
       {
-        study: 'sound-dialog-1M',
+        study: 'sound-dialog-1',
         study_group: experiments.isEnabled(experiments.AUDIO_LIBRARY_DEFAULT) ? 'library-tab' : 'files-tab',
         event: displayFilesTab ? 'open-files-tab' : 'open-library-tab'
       },
