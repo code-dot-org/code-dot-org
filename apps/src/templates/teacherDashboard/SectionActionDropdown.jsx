@@ -17,6 +17,8 @@ import BaseDialog from '../BaseDialog';
 import Button from '../Button';
 import DialogFooter from "./DialogFooter";
 import QuickActionsCell from "@cdo/apps/templates/tables/QuickActionsCell";
+import {getStore} from "@cdo/apps/redux";
+import {setRosterProvider} from "@cdo/apps/templates/teacherDashboard/teacherSectionsRedux";
 
 const styles = {
   xIcon: {
@@ -45,11 +47,18 @@ class SectionActionDropdown extends Component {
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
     updateRoster: PropTypes.func.isRequired,
+    setRosterProvider: PropTypes.func
   };
 
   state = {
     deleting: false,
   };
+
+  componentDidMount() {
+    if (this.props.sectionData.loginType === "google_classroom" || this.props.sectionData.loginType === "clever") {
+      getStore().dispatch(this.props.setRosterProvider(this.props.sectionData.loginType));
+    }
+  }
 
   onConfirmDelete = () => {
       const {removeSection } = this.props;
@@ -192,4 +201,5 @@ export default connect((state, props) => ({
   removeSection,
   toggleSectionHidden,
   updateRoster: importOrUpdateRoster,
+  setRosterProvider,
 })(SectionActionDropdown);
