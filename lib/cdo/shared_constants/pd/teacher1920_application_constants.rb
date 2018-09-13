@@ -18,7 +18,7 @@ module Pd
     }
 
     PAGE_LABELS = {
-      section_1_about_you: BASE_PAGE_LABELS.slice(
+      section_1_about_you: BASE_PAGE_LABELS[:section_1_about_you].slice(
         :country,
         :title,
         :first_name,

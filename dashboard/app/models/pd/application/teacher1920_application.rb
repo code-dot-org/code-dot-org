@@ -39,6 +39,15 @@ module Pd::Application
     include Pd::Teacher1920ApplicationConstants
 
     # @override
+    def self.options
+      super.merge(
+        {
+          completing_on_behalf_of_someone_else: [YES, NO]
+        }
+      )
+    end
+
+    # @override
     def year
       YEAR_19_20
     end
