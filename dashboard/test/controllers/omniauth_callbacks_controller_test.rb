@@ -72,6 +72,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
     assert_nil user.gender
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: authorizing with unknown clever district admin account creates teacher" do
@@ -100,6 +101,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
     assert_nil user.gender
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: authorizing with unknown clever school admin account creates teacher" do
@@ -128,6 +130,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
     assert_nil user.gender
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: authorizing with unknown clever teacher account needs additional information" do
@@ -182,6 +185,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User::TYPE_STUDENT, user.user_type
     assert_equal 10, user.age
     assert_equal 'f', user.gender
+    assert_equal user.id, signed_in_user_id
   end
 
   # NOTE: Though this test really tests the User model, specifically the
@@ -210,6 +214,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     user = User.last
     assert_equal '', user.email
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: authorizing with unknown powerschool student account does not save email" do
@@ -241,6 +246,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     user = User.last
     assert_equal '', user.email
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: authorizing with known clever student account does not alter email or hashed email" do
@@ -269,6 +275,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = User.last
     assert_equal '', user.email
     assert_equal student_hashed_email, user.hashed_email
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: adding google classroom permissions redirects to the homepage with a param to open the roster dialog" do
@@ -308,6 +315,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user = User.last
     assert_equal auth[:credentials][:token], user.oauth_token
+    assert_equal user.id, signed_in_user_id
   end
 
   # The following tests actually test the user model, but relate specifically to
@@ -316,7 +324,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "login: omniauth student is checked for email uniqueness against student" do
     email = 'duplicate@email.com'
-    create(:user, email: email)
+    user = create(:user, email: email)
 
     auth = generate_auth_user_hash(email: email, user_type: User::TYPE_STUDENT)
 
@@ -326,11 +334,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: omniauth teacher is checked for email uniqueness against student" do
     email = 'duplicate@email.com'
-    create(:user, email: email)
+    user = create(:user, email: email)
 
     auth = generate_auth_user_hash(email: email, user_type: User::TYPE_TEACHER)
     @request.env['omniauth.auth'] = auth
@@ -339,11 +348,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: omniauth student is checked for email uniqueness against teacher" do
     email = 'duplicate@email.com'
-    create(:teacher, email: email)
+    user = create(:teacher, email: email)
 
     auth = generate_auth_user_hash(email: email, user_type: User::TYPE_STUDENT)
     @request.env['omniauth.auth'] = auth
@@ -352,11 +362,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
+    assert_equal user.id, signed_in_user_id
   end
 
   test "login: omniauth teacher is checked for email uniqueness against teacher" do
     email = 'duplicate@email.com'
-    create(:teacher, email: email)
+    user = create(:teacher, email: email)
 
     auth = generate_auth_user_hash(email: email, user_type: User::TYPE_TEACHER)
     @request.env['omniauth.auth'] = auth
@@ -365,6 +376,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_create(User) do
       get :facebook
     end
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: oauth takeover transfers sections to taken over account' do
@@ -461,6 +473,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'google_oauth2', user.provider
     assert_equal user.uid, uid
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: google_oauth2 silently takes over unmigrated Google Classroom student with matching email' do
@@ -480,6 +493,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'google_oauth2', user.provider
     assert_equal user.uid, uid
     assert_equal [google_classroom_section&.id], user.sections_as_student.pluck(:id)
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: google_oauth2 silently takes over unmigrated teacher with matching email' do
@@ -495,6 +509,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'google_oauth2', user.provider
     assert_equal user.uid, uid
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: google_oauth2 silently adds authentication_option to migrated student with matching email' do
@@ -511,6 +526,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
     assert found_google
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: google_oauth2 silently takes over migrated Google Classroom student with matching email' do
@@ -531,6 +547,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
     assert found_google
     assert [google_classroom_section&.id], user.sections_as_student.pluck(:id)
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: google_oauth2 silently adds authentication_option to migrated teacher with matching email' do
@@ -547,31 +564,33 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
     assert found_google
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
     email = 'test@foo.xyz'
     uid = '654321'
-    google_classroom_student = create(:student, :imported_from_google_classroom, uid: uid)
-    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
+    user = create(:student, :imported_from_google_classroom, uid: uid)
+    google_classroom_section = user.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
     assert_does_not_destroy(User) do
       get :google_oauth2
     end
-    google_classroom_student.reload
-    assert_equal 'google_oauth2', google_classroom_student.provider
-    assert_equal User.hash_email(email), google_classroom_student.hashed_email
-    assert [google_classroom_section&.id], google_classroom_student.sections_as_student.pluck(:id)
+    user.reload
+    assert_equal 'google_oauth2', user.provider
+    assert_equal User.hash_email(email), user.hashed_email
+    assert [google_classroom_section&.id], user.sections_as_student.pluck(:id)
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: google_oauth2 updates migrated Google Classroom student AuthenticationOption email if silent takeover not available' do
     email = 'test@foo.xyz'
     uid = '654321'
-    google_classroom_student = create(:student, :migrated_imported_from_google_classroom, uid: uid)
-    google_auth_option = google_classroom_student.primary_contact_info
-    google_classroom_section = google_classroom_student.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
+    user = create(:student, :migrated_imported_from_google_classroom, uid: uid)
+    google_auth_option = user.primary_contact_info
+    google_classroom_section = user.sections_as_student.find {|s| s.login_type == Section::LOGIN_TYPE_GOOGLE_CLASSROOM}
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -579,11 +598,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_does_not_destroy(User) do
       get :google_oauth2
     end
-    google_classroom_student.reload
+    user.reload
     google_auth_option.reload
-    assert_equal 'migrated', google_classroom_student.provider
+    assert_equal 'migrated', user.provider
     assert_equal User.hash_email(email), google_auth_option.hashed_email
-    assert [google_classroom_section&.id], google_classroom_student.sections_as_student.pluck(:id)
+    assert [google_classroom_section&.id], user.sections_as_student.pluck(:id)
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'login: clever does not silently add authentication_option to migrated student with matching email' do
@@ -599,8 +619,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'migrated', user.provider
     found_clever = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::CLEVER}
-    assert !found_clever
+    refute found_clever
     assert_equal 'clever', User.last.provider # NOTE: this will fail when we create migrated users by default
+    assert_equal User.last.id, signed_in_user_id
   end
 
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
