@@ -221,7 +221,8 @@ module Pd
       unable_to_attend: "No, I'm unable to attend (Please Explain):".freeze,
       able_to_attend_single: "Yes, I'm able to attend".freeze,
       no_explain: "No (Please Explain):".freeze,
-      no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze
+      no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze,
+      i_dont_know_explain: "I don't know (Please Explain):"
     }.freeze
   end
 end

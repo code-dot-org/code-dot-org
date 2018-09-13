@@ -169,11 +169,6 @@ export default class Section1AboutYou extends LabeledFormComponent {
         }
         {this.inputFor("principalFirstName", {autoComplete: "never"})}
         {this.inputFor("principalLastName", {autoComplete: "never"})}
-        {this.selectFor("principalTitle", {
-          placeholder: "Select a title",
-          required: false,
-          autoComplete: "never"
-        })}
         {this.inputFor("principalEmail", {autoComplete: "never"})}
         {this.inputFor("principalConfirmEmail", {autoComplete: "never"})}
         {this.usPhoneNumberInputFor("principalPhoneNumber", {autoComplete: "never"})}
@@ -193,6 +188,26 @@ export default class Section1AboutYou extends LabeledFormComponent {
   /**
    * @override
    */
+  static getDynamicallyRequiredFields(data) {
+    const requiredFields = [];
+
+    if (data.completingOnBehalfOfSomeoneElse === 'Yes') {
+      requiredFields.push('completingOnBehalfOfName');
+    }
+
+    return requiredFields;
+  }
+
+  static processPageData(data) {
+    const changes = {};
+    if (data.completingOnBehalfOfSomeoneElse === 'No') {
+      changes.completingOnBehalfOfName = undefined;
+    }
+  }
+
+  /**
+   * @override
+   */
   static getErrorMessages(data) {
     const formatErrors = {};
 
@@ -207,6 +222,10 @@ export default class Section1AboutYou extends LabeledFormComponent {
     if (!UsPhoneNumberInput.isValid(data.phone)) {
       formatErrors.phone = "Must be a valid phone number including area code";
     }
+
+    /**
+     * TODO (mehal): Add ones for principal
+     */
 
     return formatErrors;
   }
