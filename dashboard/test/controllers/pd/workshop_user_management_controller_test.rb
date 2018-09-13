@@ -5,6 +5,7 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
   setup_all do
     @workshop_admin = create :workshop_admin
     @teacher = create :teacher
+    @multi_auth_teacher = create :teacher, :with_migrated_email_authentication_option
     @student = create :student
     @facilitator = create :facilitator
     @facilitator_with_course = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
@@ -18,6 +19,30 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for :facilitator_courses_form
   test_workshop_admin_only :get, :facilitator_courses_form
+
+  test 'get user by email for existing user displays user id' do
+    sign_in @workshop_admin
+    get :facilitator_courses_form, params: {search_term: @teacher.email}
+    assert_select 'td', text: @teacher.id.to_s
+  end
+
+  test 'get multi-auth user by email for existing user displays user id' do
+    sign_in @workshop_admin
+    get :facilitator_courses_form, params: {search_term: @multi_auth_teacher.email}
+    assert_select 'td', text: @multi_auth_teacher.id.to_s
+  end
+
+  test 'get user by id for existing user displays user email' do
+    sign_in @workshop_admin
+    get :facilitator_courses_form, params: {search_term: @teacher.id}
+    assert_select 'td', text: @teacher.email
+  end
+
+  test 'get multi-auth user by id for existing user displays user email' do
+    sign_in @workshop_admin
+    get :facilitator_courses_form, params: {search_term: @multi_auth_teacher.id}
+    assert_select 'td', text: @multi_auth_teacher.email
+  end
 
   test 'find user for non-existent email displays no user error' do
     sign_in @workshop_admin
@@ -37,17 +62,22 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
     assert_select 'td', text: @teacher.email
   end
 
-  test 'find multi-auth user by email for existing user displays user email' do
-    multi_auth_teacher = create :teacher, :with_migrated_email_authentication_option
+  test 'find multi-auth user by id for existing user displays user email' do
     sign_in @workshop_admin
-    post :facilitator_courses_form, params: {search_term: multi_auth_teacher.email}
-    assert_select 'td', text: multi_auth_teacher.email
+    post :facilitator_courses_form, params: {search_term: @multi_auth_teacher.id}
+    assert_select 'td', text: @multi_auth_teacher.email
   end
 
   test 'find user by email for existing user displays user id' do
     sign_in @workshop_admin
     post :facilitator_courses_form, params: {search_term: @teacher.email}
     assert_select 'td', text: @teacher.id.to_s
+  end
+
+  test 'find multi-auth user by email for existing user displays user id' do
+    sign_in @workshop_admin
+    post :facilitator_courses_form, params: {search_term: @multi_auth_teacher.email}
+    assert_select 'td', text: @multi_auth_teacher.id.to_s
   end
 
   test 'assign course to facilitator assigns course' do
