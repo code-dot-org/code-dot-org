@@ -56,17 +56,17 @@ export function renderTextResponsesTable(section, validScripts) {
   registerReducers({textResponses, scriptSelection, sectionData});
   const store = getStore();
   store.dispatch(setSection(section));
-  store.dispatch(loadValidScripts(section, validScripts)).then(() => {
-    const scriptId = store.getState().scriptSelection.scriptId;
-    store.dispatch(asyncLoadTextResponses(section.id, scriptId, () => {
-      ReactDOM.render(
-        <Provider store={store}>
-          <TextResponses sectionId={section.id}/>
-        </Provider>,
-        element
-      );
-    }));
-  });
+  store.dispatch(loadValidScripts(section, validScripts));
+
+  const scriptId = store.getState().scriptSelection.scriptId;
+  store.dispatch(asyncLoadTextResponses(section.id, scriptId, () => {
+    ReactDOM.render(
+      <Provider store={store}>
+        <TextResponses sectionId={section.id}/>
+      </Provider>,
+      element
+    );
+  }));
 }
 
 export function renderStatsTable(section) {
