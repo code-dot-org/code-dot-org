@@ -2,7 +2,7 @@ DROP TABLE if exists analysis_pii.regional_partner_stats_for_roster;
 
 CREATE TABLE analysis_pii.regional_partner_stats_for_roster
 AS
-WITH csf_courses
+WITH csf_courses -- creates a list of the CSF courses a person taught
 AS
 (SELECT studio_person_id,
        school_year_trained AS school_year,
