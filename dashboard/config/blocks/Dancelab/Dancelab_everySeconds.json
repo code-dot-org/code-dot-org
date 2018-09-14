@@ -6,7 +6,8 @@
     "args": [
       {
         "name": "N",
-        "type": "Number"
+        "type": "Number",
+        "field": true
       },
       {
         "name": "UNIT",

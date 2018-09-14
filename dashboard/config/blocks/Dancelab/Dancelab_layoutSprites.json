@@ -2,7 +2,7 @@
   "category": "Groups",
   "config": {
     "func": "layoutSprites",
-    "blockText": "layout {GROUP} sprites as a {FORMAT}",
+    "blockText": "layout {GROUP} as a {FORMAT}",
     "args": [
       {
         "name": "GROUP",
@@ -12,23 +12,23 @@
             "sprites"
           ],
           [
-            "Duck",
+            "all ducks",
             "\"duck\""
           ],
           [
-            "Moose",
+            "all moose",
             "\"moose\""
           ],
           [
-            "Unicorn",
+            "all unicorns",
             "\"unicorn\""
           ],
           [
-            "MrWiggles",
+            "all Mr. Wiggles",
             "\"mrwiggles\""
           ],
           [
-            "Cat",
+            "all cats",
             "\"cat\""
           ]
         ]
